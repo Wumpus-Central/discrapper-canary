@@ -31,8 +31,8 @@ var r = n(951288),
     P = n(274459),
     N = n(314897),
     Z = n(857192),
-    T = n(77498),
-    w = n(131951),
+    w = n(77498),
+    T = n(131951),
     A = n(158776),
     R = n(979651),
     D = n(574254),
@@ -51,7 +51,7 @@ var r = n(951288),
     Y = n(524484),
     q = n(65154),
     X = n(388032),
-    Q = n(400872);
+    Q = n(7504);
 let J = [K.fO.ACTIVITY],
     $ = i.memo((e) => {
         var t, n, l, s, c, b, _;
@@ -90,9 +90,9 @@ let J = [K.fO.ACTIVITY],
             eP = (0, a.e7)([N.default], () => N.default.getId()),
             eN = D.type === K.fO.ACTIVITY ? null : D.user,
             eZ = null != (l = null == eN ? void 0 : eN.id) ? l : null,
-            [eT] = (0, h.Z)(D.type === K.fO.ACTIVITY ? [D.applicationId] : []),
-            ew = (0, a.e7)([w.Z], () => null != eZ && w.Z.isLocalVideoDisabled(eZ, (0, g.Z)(D.type)), [eZ, D.type]),
-            eA = (0, a.e7)([w.Z], () => (null != eZ ? w.Z.getVideoToggleState(eZ, (0, g.Z)(D.type)) : W.ZUi.NONE), [
+            [ew] = (0, h.Z)(D.type === K.fO.ACTIVITY ? [D.applicationId] : []),
+            eT = (0, a.e7)([T.Z], () => null != eZ && T.Z.isLocalVideoDisabled(eZ, (0, g.Z)(D.type)), [eZ, D.type]),
+            eA = (0, a.e7)([T.Z], () => (null != eZ ? T.Z.getVideoToggleState(eZ, (0, g.Z)(D.type)) : W.ZUi.NONE), [
                 eZ,
                 D.type,
             ]),
@@ -112,7 +112,7 @@ let J = [K.fO.ACTIVITY],
                             voiceChannelId: null == i ? void 0 : i.channelId,
                         };
                     }),
-                    u = (0, a.cj)([w.Z], () => {
+                    u = (0, a.cj)([T.Z], () => {
                         let n = (0, g.Z)(t.type);
                         return e === s
                             ? {
@@ -120,9 +120,9 @@ let J = [K.fO.ACTIVITY],
                                   deafened: !1,
                               }
                             : {
-                                  muted: w.Z.isLocalMute(s, n),
-                                  localVideoDisabled: w.Z.isLocalVideoDisabled(s, n),
-                                  localVideoAutoDisabled: w.Z.isLocalVideoAutoDisabled(s, n),
+                                  muted: T.Z.isLocalMute(s, n),
+                                  localVideoDisabled: T.Z.isLocalVideoDisabled(s, n),
+                                  localVideoAutoDisabled: T.Z.isLocalVideoAutoDisabled(s, n),
                               };
                     }, [e, t.type, s]);
                 return {
@@ -151,8 +151,8 @@ let J = [K.fO.ACTIVITY],
                         : null,
                 [eV, eZ],
             ),
-            ez = (0, a.e7)([T.Z], () =>
-                (null == eH ? void 0 : eH.application_id) != null ? T.Z.getDetectableGame(eH.application_id) : null,
+            ez = (0, a.e7)([w.Z], () =>
+                (null == eH ? void 0 : eH.application_id) != null ? w.Z.getDetectableGame(eH.application_id) : null,
             ),
             eW = (0, a.e7)([f.Z], () =>
                 null != ez && (null == eH ? void 0 : eH.application_id) != null
@@ -219,7 +219,7 @@ let J = [K.fO.ACTIVITY],
                         idle: ev,
                         premiumIndicator: !1,
                     })),
-                    (e4 = X.intl.formatToPlainString(X.t.gHPz3d, { streamerName: D.user.username }));
+                    (e4 = X.intl.formatToPlainString(X.t.gHPz3Q, { streamerName: D.user.username }));
                 break;
             case K.fO.USER:
                 (e0 = (0, r.jsx)(V.Z, {
@@ -241,7 +241,7 @@ let J = [K.fO.ACTIVITY],
                         participant: D,
                         channelId: el.id,
                     })),
-                    (e4 = X.intl.formatToPlainString(X.t["iC/x/f"], { username: D.user.username }));
+                    (e4 = X.intl.formatToPlainString(X.t["iC/x/Q"], { username: D.user.username }));
                 break;
             case K.fO.ACTIVITY:
                 (e0 = (0, r.jsx)(U.ZP, {
@@ -251,7 +251,7 @@ let J = [K.fO.ACTIVITY],
                     channel: el,
                     width: eo,
                 })),
-                    (e4 = X.intl.formatToPlainString(X.t.YCvOsL, { activityName: null == eT ? void 0 : eT.name }));
+                    (e4 = X.intl.formatToPlainString(X.t.YCvOsO, { activityName: null == ew ? void 0 : ew.name }));
                 break;
             case K.fO.HIDDEN_STREAM:
                 e0 = (0, r.jsx)(F.Z, {
@@ -402,7 +402,7 @@ let J = [K.fO.ACTIVITY],
                                                       title: (0, k.Z)(el, D),
                                                       blocked: eh,
                                                       ignored: eg,
-                                                      localVideoDisabled: ew,
+                                                      localVideoDisabled: eT,
                                                       videoToggleState: eA,
                                                       hideAudioIcon: eU,
                                                       onContextMenu: e$,
@@ -524,9 +524,9 @@ let en = i.memo((e) => {
             serverDeafened: P,
             hasVideo: N,
             hideAudioIcon: Z,
-            onToggleMute: T,
+            onToggleMute: w,
         } = e,
-        A = (0, a.e7)([w.Z], () => null != O && w.Z.isLocalVideoAutoDisabled(O, (0, g.Z)(m)), [O, m]),
+        A = (0, a.e7)([T.Z], () => null != O && T.Z.isLocalVideoAutoDisabled(O, (0, g.Z)(m)), [O, m]),
         R = (0, b.Z)({
             userId: O,
             guildId: y.getGuildId(),
@@ -581,7 +581,7 @@ let en = i.memo((e) => {
                                       (0, r.jsx)(u.Text, {
                                           variant: "text-sm/normal",
                                           className: Q.overlayTitleText,
-                                          children: X.intl.string(X.t.m2Hyj4),
+                                          children: X.intl.string(X.t.m2Hyj0),
                                       }),
                                   ],
                               })
@@ -655,14 +655,14 @@ let en = i.memo((e) => {
                                         onClick: (e) => {
                                             e.stopPropagation(), U(!0), x(e, !0, K.A5.THREE_DOT);
                                         },
-                                        tooltipText: X.intl.string(X.t["+1H47u"]),
+                                        tooltipText: X.intl.string(X.t["+1H47t"]),
                                         icon: u.xhG,
                                         hideWhenInactive: !G,
                                     }),
                                     B &&
                                         (0, r.jsx)(et, {
-                                            onClick: T,
-                                            tooltipText: S ? X.intl.string(X.t.YqAjX1) : X.intl.string(X.t["w4m94+"]),
+                                            onClick: w,
+                                            tooltipText: S ? X.intl.string(X.t.YqAjXy) : X.intl.string(X.t.w4m945),
                                             icon: S ? u.OyP : u.gj8,
                                             hideWhenInactive: !S && !G,
                                         }),

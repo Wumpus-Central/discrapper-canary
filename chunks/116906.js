@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ });
+t.d(n, { Z: () => Z });
 var l = t(951288);
 t(647438);
 var i = t(442837),
@@ -19,35 +19,35 @@ var i = t(442837),
     g = t(228168),
     b = t(981631),
     I = t(388032),
-    y = t(847540),
-    Z = t(883172);
-function _(e) {
-    let { user: n, currentUser: t, guildId: _, subsection: O, onClose: N } = e,
+    y = t(7994),
+    _ = t(878449);
+function Z(e) {
+    let { user: n, currentUser: t, guildId: Z, subsection: O, onClose: N } = e,
         { voiceActivityStatusEnabled: A } = (0, r.U)({ location: "UserProfileModalActivity" }),
         T = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: P, recent: E, stream: C } = (0, m.Z)(n.id),
         { voiceChannel: S, voiceActivity: w } = (0, p.Z)({
             userId: n.id,
-            guildId: _,
+            guildId: Z,
         }),
-        R = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
-        D = n.id === t.id,
+        D = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
+        R = n.id === t.id,
         L = (0, i.e7)([c.Z, a.Z], () => {
-            let e = D ? c.Z.getStatus() : a.Z.getStatus(n.id);
+            let e = R ? c.Z.getStatus() : a.Z.getStatus(n.id);
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
         M = P.length > 0 || null != C,
         B = A && null == C && null == w && null != S,
         U = !L && (M || B),
         k = E.length > 0;
-    return U || k || !R
+    return U || k || !D
         ? (0, l.jsxs)(o.zJl, {
               className: y.scroller,
               fade: !0,
               children: [
                   U
                       ? (0, l.jsx)(f.Z, {
-                            "aria-label": I.intl.string(I.t.J6STd3),
+                            "aria-label": I.intl.string(I.t.J6STd9),
                             children: (0, l.jsxs)("ul", {
                                 className: y.activityList,
                                 children: [
@@ -90,9 +90,9 @@ function _(e) {
                       : null,
                   k
                       ? (0, l.jsx)(f.Z, {
-                            heading: I.intl.string(I.t.M0zgnZ),
-                            introText: D
-                                ? I.intl.format(I.t["4bk9Ag"], {
+                            heading: I.intl.string(I.t.M0zgnT),
+                            introText: R
+                                ? I.intl.format(I.t["4bk9Ak"], {
                                       learnMoreHook: (e, n) =>
                                           (0, l.jsx)(
                                               o.Anchor,
@@ -126,7 +126,7 @@ function _(e) {
               ],
           })
         : (0, l.jsx)("div", {
-              className: Z.empty,
+              className: _.empty,
               children: (0, l.jsx)(o.$jN, {}),
           });
 }

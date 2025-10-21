@@ -1,9 +1,9 @@
 n.d(t, {
-    Hu: () => X,
+    Hu: () => J,
     jx: () => H,
     oA: () => W,
     ov: () => F,
-    se: () => J,
+    se: () => X,
 }),
     n(35282),
     n(388685),
@@ -44,8 +44,8 @@ var r = n(951288),
     M = n(70722),
     k = n(761274),
     D = n(46140),
-    B = n(65154),
-    L = n(388032),
+    L = n(65154),
+    B = n(388032),
     G = n(336606);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -109,7 +109,7 @@ function H(e, t, n) {
 function W(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
-        o = b.Z.supports(B.AN.GO_LIVE_HARDWARE),
+        o = b.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [a, p] = i.useState(null),
         [x, j] = i.useState(null),
         [y, C] = i.useState(null),
@@ -162,11 +162,11 @@ function W(e) {
     let z = i.useCallback((e) => {
             null !== e && ((A.current = e), T(!e.isScrolledToTop()));
         }, []),
-        [V, J] = i.useState(void 0);
+        [V, X] = i.useState(void 0);
     i.useEffect(() => {
-        g.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
+        g.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(X);
     }, []);
-    let X = (function (e) {
+    let J = (function (e) {
         switch (e) {
             case c.vA.WINDOW:
                 return W;
@@ -176,13 +176,13 @@ function W(e) {
                 return y;
         }
     })(P);
-    if (null == X)
+    if (null == J)
         return !1 === V
             ? (0, r.jsxs)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: [L.intl.string(L.t["kW5h/f"]), (0, r.jsx)("br", {}), L.intl.string(L.t["5Jvu1d"])],
+                  children: [B.intl.string(B.t["kW5h/W"]), (0, r.jsx)("br", {}), B.intl.string(B.t["5Jvu1R"])],
               })
             : (0, r.jsx)(h.Z, {
                   className: G.spinner,
@@ -190,7 +190,7 @@ function W(e) {
                   align: h.Z.Align.CENTER,
                   children: (0, r.jsx)(f.$jN, {}),
               });
-    let K = X.map((e) => {
+    let K = J.map((e) => {
         let { id: i } = e,
             l = (null == t ? void 0 : t.id) === i;
         return (0, r.jsx)(
@@ -220,11 +220,11 @@ function W(e) {
                         options: (function () {
                             let e = [
                                 {
-                                    name: L.intl.string(L.t.tHoi7u),
+                                    name: B.intl.string(B.t.tHoi7u),
                                     value: c.vA.WINDOW,
                                 },
                                 {
-                                    name: L.intl.string(L.t["/iX8u7"]),
+                                    name: B.intl.string(B.t["/iX8uz"]),
                                     value: c.vA.SCREEN,
                                 },
                             ];
@@ -233,7 +233,7 @@ function W(e) {
                                     o &&
                                     w &&
                                     e.push({
-                                        name: L.intl.string(L.t.cWt5Ul),
+                                        name: B.intl.string(B.t.cWt5Up),
                                         value: c.vA.CAMERA,
                                     }),
                                 e
@@ -274,7 +274,7 @@ function z(e) {
         n = i.useCallback(() => {
             t({
                 id: "prepicked:",
-                name: L.intl.string(L.t["KKcy9/"]),
+                name: B.intl.string(B.t.KKcy95),
                 url: "",
             });
         }, [t]);
@@ -291,7 +291,7 @@ function z(e) {
                 (0, r.jsx)(f.Text, {
                     variant: "text-md/medium",
                     color: "none",
-                    children: L.intl.string(L.t.Yp6h5e),
+                    children: B.intl.string(B.t.Yp6h5W),
                 }),
             ],
         }),
@@ -325,7 +325,7 @@ function V(e) {
         }),
     });
 }
-function J(e) {
+function X(e) {
     let { onSourceSelect: t, selectedSource: n } = e,
         [l, o] = i.useState([]),
         [c, d] = i.useState({}),
@@ -398,23 +398,23 @@ function J(e) {
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "screen",
-                          name: L.intl.string(L.t.R4wpLC),
-                          text: L.intl.string(L.t.cVUFXV),
+                          name: B.intl.string(B.t.R4wpLN),
+                          text: B.intl.string(B.t.cVUFXY),
                           icon: f.pzj,
                       }),
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "window",
-                          name: L.intl.string(L.t["+SLJCg"]),
-                          text: L.intl.string(L.t.dG2A1N),
+                          name: B.intl.string(B.t["+SLJCh"]),
+                          text: B.intl.string(B.t.dG2A1E),
                           icon: f.GON,
                       }),
                       g
                           ? (0, r.jsx)(V, {
                                 onSelect: t,
                                 id: "app",
-                                name: L.intl.string(L.t.ct7AKS),
-                                text: L.intl.string(L.t["8lQwf3"]),
+                                name: B.intl.string(B.t.ct7AKQ),
+                                text: B.intl.string(B.t["8lQwf8"]),
                                 icon: f.gw7,
                             })
                           : null,
@@ -427,7 +427,7 @@ function J(e) {
                 className: G.nativePickerLabel,
                 variant: "text-md/semibold",
                 color: "interactive-normal",
-                children: L.intl.string(L.t.XyYoFR),
+                children: B.intl.string(B.t.XyYoFc),
             }),
             S,
             0 === l.length
@@ -443,7 +443,7 @@ function J(e) {
                                       className: G.nativeCaptureDevicesText,
                                       variant: "text-md/semibold",
                                       color: "interactive-normal",
-                                      children: L.intl.string(L.t.rO0Vi4),
+                                      children: B.intl.string(B.t.rO0Vix),
                                   }),
                                   (0, r.jsx)(f.CJ0, {
                                       size: "sm",
@@ -472,7 +472,7 @@ function J(e) {
         ],
     });
 }
-function X(e) {
+function J(e) {
     let { onSourceSelect: t, onCancel: n, pickerType: l } = e,
         { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
@@ -487,7 +487,7 @@ function X(e) {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: null != o && o.length > 0 ? o : L.intl.string(L.t.CKsXk5),
+                  children: null != o && o.length > 0 ? o : B.intl.string(B.t.CKsXk3),
               })
             : (0, r.jsx)(A.Z, {
                   animated: !0,

@@ -6,7 +6,7 @@ var n = r(951288),
     l = r(755721),
     u = r(481060),
     a = r(388032),
-    s = r(992050);
+    s = r(74450);
 function b(e) {
     var t,
         r,
@@ -68,9 +68,9 @@ function b(e) {
             return e;
         })(
             {
-                header: a.intl.string(a.t.VKsXpa),
-                confirmText: a.intl.string(a.t.R3BPHx),
-                cancelText: a.intl.string(a.t["ETE/oK"]),
+                header: a.intl.string(a.t.VKsXpY),
+                confirmText: a.intl.string(a.t["R3BPH+"]),
+                cancelText: a.intl.string(a.t["ETE/oC"]),
                 confirmButtonColor: l.zx.Colors.BRAND,
                 onConfirm: d,
             },
@@ -82,14 +82,14 @@ function b(e) {
                     className: s.doubleInput,
                     children: [
                         (0, n.jsx)(u.Wrb, {
-                            label: a.intl.string(a.t.pSZKvL),
+                            label: a.intl.string(a.t.pSZKvM),
                             required: !0,
                             value: p,
                             onSelect: j,
                             minDate: O,
                         }),
                         (0, n.jsx)(u.MGJ, {
-                            label: a.intl.string(a.t.GOmEb2),
+                            label: a.intl.string(a.t.GOmEb8),
                             required: !0,
                             value: p,
                             onChange: j,

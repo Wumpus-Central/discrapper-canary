@@ -5,7 +5,7 @@ var s = i(951288),
     c = i(776568),
     o = i(218035),
     r = i(775666),
-    d = i(71991),
+    d = i(214906),
     h = i(612856),
     l = i(423589),
     u = i(131704),
@@ -22,7 +22,7 @@ function x(n) {
     return (0, s.jsxs)(t.v2r, {
         navId: "notifications-inbox-message-context",
         onClose: a.Zy,
-        "aria-label": p.intl.string(p.t.Xm41aW),
+        "aria-label": p.intl.string(p.t.Xm41aV),
         onSelect: i,
         children: [(0, s.jsx)(t.kSQ, { children: e.isThread() ? j : f }), Q],
     });

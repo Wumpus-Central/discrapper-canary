@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(572264),
     u = n(981631),
     d = n(388032),
-    m = n(38579),
+    m = n(631936),
     g = n(849399);
 function f(e) {
     let { user: t } = e;
@@ -25,19 +25,19 @@ function f(e) {
                 className: m.title,
                 color: "header-primary",
                 variant: "heading-xl/bold",
-                children: d.intl.format(d.t["au+lPj"], { n: t.tag }),
+                children: d.intl.format(d.t["au+lPv"], { n: t.tag }),
             }),
             (0, r.jsx)(o.Text, {
                 className: m.subtitleInfo,
                 color: "header-secondary",
                 variant: "text-md/medium",
-                children: d.intl.format(d.t["5fwX5+"], {}),
+                children: d.intl.format(d.t["5fwX56"], {}),
             }),
             (0, r.jsx)(o.Text, {
                 className: m.prompt,
                 color: "header-secondary",
                 variant: "text-sm/medium",
-                children: d.intl.format(d.t["i2vB8/"], { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) }),
+                children: d.intl.format(d.t.i2vB8z, { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) }),
             }),
             (0, r.jsxs)("div", {
                 className: a()([m.infoItem, m.infoItemSpacing]),
@@ -54,7 +54,7 @@ function f(e) {
                     (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
-                        children: d.intl.format(d.t.SzUaZ2, {}),
+                        children: d.intl.format(d.t.SzUaZ1, {}),
                     }),
                 ],
             }),
@@ -71,7 +71,7 @@ function f(e) {
                     (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
-                        children: d.intl.format(d.t["UwPc+P"], {}),
+                        children: d.intl.format(d.t["UwPc+G"], {}),
                     }),
                 ],
             }),
@@ -88,7 +88,7 @@ function f(e) {
                     (0, r.jsx)(o.Text, {
                         color: "header-secondary",
                         variant: "text-sm/medium",
-                        children: d.intl.format(d.t.okLjjo, { username: t.tag }),
+                        children: d.intl.format(d.t.okLjju, { username: t.tag }),
                     }),
                 ],
             }),

@@ -56,15 +56,15 @@ let d = "1340102344645283891",
     y = () => ({
         [l.GuildFeatures.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: a.Ro.STREAM,
-            description: c.intl.string(c.t.y4ft4O),
+            description: c.intl.string(c.t.y4ft4D),
         },
         [l.GuildFeatures.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: a.Ro.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_1].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZE, { bitrate: s.HO[l.Eu4.TIER_1].limits.bitrate / 1000 }),
         },
         [l.GuildFeatures.INVITE_SPLASH]: {
             perkIcon: a.Ro.CUSTOMIZATION,
-            description: c.intl.string(c.t.Qwlpoq),
+            description: c.intl.string(c.t.Qwlpov),
         },
         [l.GuildFeatures.ANIMATED_ICON]: {
             perkIcon: a.Ro.ANIMATED,
@@ -72,35 +72,35 @@ let d = "1340102344645283891",
         },
         [l.GuildFeatures.AUDIO_BITRATE_256_KBPS]: {
             perkIcon: a.Ro.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_2].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZE, { bitrate: s.HO[l.Eu4.TIER_2].limits.bitrate / 1000 }),
         },
         [l.GuildFeatures.ROLE_ICONS]: {
             perkIcon: a.Ro.CUSTOM_ROLE_ICON,
-            description: c.intl.string(c.t["6PV6QU"]),
+            description: c.intl.string(c.t["6PV6Qc"]),
         },
         [l.GuildFeatures.MAX_FILE_SIZE_50_MB]: {
             perkIcon: a.Ro.UPLOAD,
-            description: c.intl.formatToPlainString(c.t["aFRl5+"], { uploadSizeLimit: c.intl.string(c.t.M6qV8v) }),
+            description: c.intl.formatToPlainString(c.t.aFRl53, { uploadSizeLimit: c.intl.string(c.t.M6qV8j) }),
         },
         [l.GuildFeatures.BANNER]: {
             perkIcon: a.Ro.CUSTOMIZATION,
-            description: c.intl.string(c.t["1a5rjo"]),
+            description: c.intl.string(c.t["1a5rjl"]),
         },
         [l.GuildFeatures.ANIMATED_BANNER]: {
             perkIcon: a.Ro.ANIMATED,
-            description: c.intl.string(c.t["1+Vmh4"]),
+            description: c.intl.string(c.t["1+Vmh9"]),
         },
         [l.GuildFeatures.AUDIO_BITRATE_384_KBPS]: {
             perkIcon: a.Ro.AUDIO,
-            description: c.intl.formatToPlainString(c.t.zoT1ZG, { bitrate: s.HO[l.Eu4.TIER_3].limits.bitrate / 1000 }),
+            description: c.intl.formatToPlainString(c.t.zoT1ZE, { bitrate: s.HO[l.Eu4.TIER_3].limits.bitrate / 1000 }),
         },
         [l.GuildFeatures.VANITY_URL]: {
             perkIcon: a.Ro.VANITY,
-            description: c.intl.string(c.t["5XZKy8"]),
+            description: c.intl.string(c.t["5XZKy/"]),
         },
         [l.GuildFeatures.MAX_FILE_SIZE_100_MB]: {
             perkIcon: a.Ro.UPLOAD,
-            description: c.intl.formatToPlainString(c.t["aFRl5+"], { uploadSizeLimit: c.intl.string(c.t.yMOW8P) }),
+            description: c.intl.formatToPlainString(c.t.aFRl53, { uploadSizeLimit: c.intl.string(c.t.yMOW8D) }),
         },
     }),
     O = {

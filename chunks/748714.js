@@ -22,7 +22,7 @@ var r = n(951288),
     g = n(960919),
     m = n(981631),
     h = n(388032),
-    j = n(815420);
+    j = n(66360);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -108,19 +108,19 @@ let E = (e) => {
                 variant: "active",
                 type: "submit",
                 "data-testid": "submitButton",
-                text: h.intl.string(h.t.wmcDys),
+                text: h.intl.string(h.t.wmcDyu),
             },
             s,
         );
         return null === n
             ? (0, r.jsx)(i.aML, {
                   "data-migration-pending": !0,
-                  text: h.intl.string(h.t["c/rcUl"]),
+                  text: h.intl.string(h.t["c/rcUu"]),
                   children: (e) => (0, r.jsx)(a.zxk, P(x({}, e, c), { disabled: !0 })),
               })
             : null === t || n > t
               ? (0, r.jsx)(i.aML, {
-                    text: h.intl.string(h.t.keFvXF),
+                    text: h.intl.string(h.t.keFvXM),
                     children: (e) => (0, r.jsx)(a.zxk, P(x({}, e, c), { disabled: !0 })),
                 })
               : (0, r.jsx)(
@@ -156,14 +156,14 @@ let E = (e) => {
     S = (e) => {
         let { orbBalance: t } = e;
         return (0, r.jsx)(i.gNt, {
-            label: h.intl.string(h.t.mmDvV1),
+            label: h.intl.string(h.t["mmDvV+"]),
             children: (0, r.jsxs)(l.U, {
                 className: j.paymentSourceItem,
                 children: [
                     (0, r.jsx)(i.Text, {
                         className: j.displayFlex,
                         variant: "text-md/medium",
-                        children: h.intl.string(h.t.y0WGqK),
+                        children: h.intl.string(h.t.y0WGqP),
                     }),
                     (0, r.jsx)(i.Text, {
                         className: j.displayFlex,
@@ -181,10 +181,10 @@ let E = (e) => {
         return (
             (n =
                 t.code === c.SM.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
-                    ? h.intl.string(h.t.keFvXF)
+                    ? h.intl.string(h.t.keFvXM)
                     : t.code === c.SM.ALREADY_PURCHASED
-                      ? h.intl.string(h.t.m371Mz)
-                      : h.intl.string(h.t.fqJZ19)),
+                      ? h.intl.string(h.t.m371Mx)
+                      : h.intl.string(h.t.fqJZ11)),
             (0, r.jsx)(i.M14, {
                 type: "critical",
                 children: n,
@@ -197,7 +197,7 @@ let E = (e) => {
             skuId: t,
             isOrbsPurchase: !0,
         })
-            ? (0, r.jsx)(f.Z, { message: h.intl.format(h.t.fsOXXF, {}) })
+            ? (0, r.jsx)(f.Z, { message: h.intl.format(h.t.fsOXXO, {}) })
             : null;
     },
     w = (e) => {

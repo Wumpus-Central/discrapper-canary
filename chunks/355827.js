@@ -7,7 +7,7 @@ var r = n(442837),
     o = n(938475),
     s = n(981631),
     c = n(388032),
-    u = n(959);
+    u = n(560059);
 function d(e) {
     let { channel: t } = e,
         n = (0, r.e7)([o.ZP], () => o.ZP.getVoiceStatesForChannel(t));
@@ -17,7 +17,7 @@ function d(e) {
             (0, i.jsx)(l.Text, {
                 variant: "text-xs/bold",
                 className: u.header,
-                children: c.intl.format(c.t.e95u3N, { count: n.length }),
+                children: c.intl.format(c.t.e95u3C, { count: n.length }),
             }),
             (0, i.jsx)(l.Ttm, {
                 className: u.scroller,

@@ -33,7 +33,7 @@ var i = n(120356),
     R = n(52741),
     P = n(474936),
     w = n(388032),
-    D = n(518520),
+    D = n(1721),
     L = n(895601),
     x = n(381126),
     M = n(234286);
@@ -200,7 +200,7 @@ function Z(e) {
         children: [
             (0, r.jsx)(Y, {}),
             (0, r.jsx)(A.E, {
-                text: null != H ? H : w.intl.string(w.t["6bEcYm"]),
+                text: null != H ? H : w.intl.string(w.t["6bEcYr"]),
                 className: D.pill,
             }),
             (0, r.jsx)(E.Z, {
@@ -304,7 +304,7 @@ function V(e) {
                     variant: "display-md",
                     color: "header-primary",
                     className: D.premiumCardsHeader,
-                    children: w.intl.string(w.t.vLz3Zm),
+                    children: w.intl.string(w.t.vLz3Zs),
                 }),
                 (0, r.jsxs)("div", {
                     ref: l,

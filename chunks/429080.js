@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(553393),
     f = n(981631),
     h = n(388032),
-    g = n(674455),
-    m = n(6723);
+    g = n(818923),
+    m = n(746882);
 let b = function (e) {
     let { quest: t } = e,
         [n, l] = i.useState(!1),
@@ -89,11 +89,11 @@ let b = function (e) {
                 (0, r.jsx)(s.Heading, {
                     className: m.heading,
                     variant: "heading-md/semibold",
-                    children: h.intl.string(h.t.jY7Zxs),
+                    children: h.intl.string(h.t.jY7Zxg),
                 }),
                 (0, r.jsx)("div", {
                     className: m.previewDescription,
-                    children: h.intl.string(h.t.q3hbnZ),
+                    children: h.intl.string(h.t.q3hbne),
                 }),
                 (0, r.jsx)("div", {
                     className: m.memberListContainer,
@@ -136,7 +136,7 @@ let b = function (e) {
                                                     (0, r.jsx)(s.Text, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
-                                                        children: h.intl.string(h.t.b9w3bG),
+                                                        children: h.intl.string(h.t.b9w3bO),
                                                     }),
                                                 ],
                                             }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(388685);
+n.d(t, { Z: () => K }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -103,7 +103,7 @@ function W(e, t) {
     }
     return r;
 }
-let K = (0, o.animated)(u.eTT),
+let q = (0, o.animated)(u.eTT),
     Y = r.memo(
         function (e) {
             var t, n;
@@ -129,7 +129,7 @@ let K = (0, o.animated)(u.eTT),
                     typingGradient: R,
                 } = e,
                 [D, Y] = r.useState(null != (n = E.Z.isAtBottom(m.id)) && n),
-                q = r.useMemo(
+                K = r.useMemo(
                     () =>
                         y
                             ? (0, L.aJ)({
@@ -156,7 +156,7 @@ let K = (0, o.animated)(u.eTT),
                     compact: y,
                     hasUnreads: j,
                     focusId: S,
-                    placeholderHeight: q.totalHeight,
+                    placeholderHeight: K.totalHeight,
                     canLoadMore: null == T,
                     handleScrollToBottom: r.useCallback(() => Y(!0), [Y]),
                     handleScrollFromBottom: r.useCallback(() => Y(!1), [Y]),
@@ -187,7 +187,7 @@ let K = (0, o.animated)(u.eTT),
                     uploads: x,
                     loadMore: X.loadMore,
                     scrollManager: X,
-                    specs: q,
+                    specs: K,
                     filterAfterTimestamp: null != T ? T : Q,
                     showingQuarantineBanner: N,
                     hideSummaries: A,
@@ -259,7 +259,7 @@ let K = (0, o.animated)(u.eTT),
                         children: [
                             null == ei && ee,
                             (0, i.jsxs)(
-                                K,
+                                q,
                                 z(
                                     G(
                                         {
@@ -287,7 +287,7 @@ let K = (0, o.animated)(u.eTT),
                                                             className: a()(F.scrollerInner, {
                                                                 [F.scrollerAllowSticky]: m.isModeratorReportChannel(),
                                                             }),
-                                                            "aria-label": V.intl.formatToPlainString(V.t.XarRiI, {
+                                                            "aria-label": V.intl.formatToPlainString(V.t.XarRiL, {
                                                                 channelName: m.name,
                                                             }),
                                                         },
@@ -299,7 +299,7 @@ let K = (0, o.animated)(u.eTT),
                                                                 className: F.navigationDescription,
                                                                 id: "messagesNavigationDescription",
                                                                 "aria-hidden": !0,
-                                                                children: V.intl.string(V.t.Spb3s7),
+                                                                children: V.intl.string(V.t["Spb3s/"]),
                                                             }),
                                                             $,
                                                             (0, i.jsx)("div", {
@@ -332,7 +332,7 @@ let K = (0, o.animated)(u.eTT),
         },
         (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden,
     ),
-    q = r.memo(function (e) {
+    K = r.memo(function (e) {
         var {
                 channel: t,
                 showingQuarantineBanner: n,

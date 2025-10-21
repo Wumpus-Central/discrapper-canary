@@ -25,11 +25,11 @@ var l = n(120356),
     p = n(594174),
     C = n(572004),
     D = n(5192),
-    L = n(51144),
-    U = n(131085),
+    U = n(51144),
+    L = n(131085),
     M = n(388032),
-    x = n(598256);
-function b(e) {
+    b = n(428331);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,13 +80,13 @@ function P(e) {
             n,
         ]);
     return (0, r.jsxs)("div", {
-        className: x.topRow,
+        className: b.topRow,
         children: [
             (0, r.jsxs)("div", {
-                className: x.memberNameContainer,
+                className: b.memberNameContainer,
                 children: [
                     (0, r.jsx)("div", {
-                        className: x.memberAvatar,
+                        className: b.memberAvatar,
                         children: (0, r.jsx)(o.qEK, {
                             src: t.getAvatarURL(n, 48),
                             "aria-label": t.username,
@@ -95,10 +95,10 @@ function P(e) {
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: x.memberNameAndTagContainer,
+                        className: b.memberNameAndTagContainer,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: x.memberNameTextContainer,
+                                className: b.memberNameTextContainer,
                                 children: [
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-lg/medium",
@@ -112,17 +112,17 @@ function P(e) {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: U.Gg.SIZE_16,
+                                        badgeSize: L.Gg.SIZE_16,
                                         textVariant: "heading-md/semibold",
-                                        className: x.memberClanTag,
-                                        containerClassName: x.memberClanTagContainer,
+                                        className: b.memberClanTag,
+                                        containerClassName: b.memberClanTagContainer,
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: L.ZP.getUserTag(t),
+                                children: U.ZP.getUserTag(t),
                             }),
                         ],
                     }),
@@ -132,7 +132,7 @@ function P(e) {
                 variant: "text-md/medium",
                 color: "text-default",
                 children: (0, r.jsx)(o.P3F, {
-                    className: x.closeAction,
+                    className: b.closeAction,
                     onClick: l,
                     children: (0, r.jsx)(o.Dio, {
                         size: "md",
@@ -170,13 +170,13 @@ function j(e) {
         text: n,
         children: (0, r.jsx)(
             o.P3F,
-            v(b({}, c), {
+            v(x({}, c), {
                 tag: t,
                 "aria-label": n,
-                className: i()(x.bottomRowAction, { [x.bottomRowActionDisabled]: l }),
+                className: i()(b.bottomRowAction, { [b.bottomRowActionDisabled]: l }),
                 onClick: l ? void 0 : u,
                 children: (0, r.jsx)("div", {
-                    className: x.innerBottomRowAction,
+                    className: b.innerBottomRowAction,
                     children: s,
                 }),
             }),
@@ -200,10 +200,10 @@ function y(e) {
             [t, a],
         ),
         S = (0, E.b)(l),
-        { analyticsLocations: D, newestAnalyticsLocation: L } = (0, c.ZP)(),
-        U = (0, T.sE)(i, {
+        { analyticsLocations: D, newestAnalyticsLocation: U } = (0, c.ZP)(),
+        L = (0, T.sE)(i, {
             targetUserId: t.id,
-            location: L,
+            location: U,
             locations: D,
         }),
         P = (0, s.e7)([m.default], () => m.default.getId() === (null == t ? void 0 : t.id)),
@@ -214,7 +214,7 @@ function y(e) {
             return null != n ? n : void 0;
         }, [i]);
     return (0, r.jsxs)("div", {
-        className: x.bottomRow,
+        className: b.bottomRow,
         children: [
             (0, r.jsx)(j, {
                 disabled: P,
@@ -231,15 +231,15 @@ function y(e) {
             }),
             (0, r.jsx)(j, {
                 disabled: !I,
-                text: M.intl.string(M.t["3glT6e"]),
+                text: M.intl.string(M.t["3glT6Z"]),
                 onClick: () => {
                     (0, o.ZDy)(async () => {
                         let { default: e } = await n.e("5454").then(n.bind(n, 854360));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                v(b({}, n), {
-                                    location: L,
+                                v(x({}, n), {
+                                    location: U,
                                     guildId: i,
                                     user: t,
                                     modReportId: y,
@@ -256,15 +256,15 @@ function y(e) {
             }),
             (0, r.jsx)(j, {
                 disabled: !N,
-                text: M.intl.string(M.t["5MBJ5O"]),
+                text: M.intl.string(M.t["5MBJ5M"]),
                 onClick: () => {
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await n.e("4114").then(n.bind(n, 98746));
+                        let { default: e } = await n.e("43350").then(n.bind(n, 98746));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                v(b({}, n), {
-                                    location: L,
+                                v(x({}, n), {
+                                    location: U,
                                     guildId: i,
                                     user: t,
                                     modReportId: y,
@@ -281,7 +281,7 @@ function y(e) {
             }),
             (0, r.jsx)(j, {
                 disabled: !f,
-                text: S ? M.intl.string(M.t.N86XcH) : M.intl.string(M.t.kTlLr6),
+                text: S ? M.intl.string(M.t.N86XcP) : M.intl.string(M.t.kTlLrz),
                 onClick: () => {
                     S
                         ? (0, d.q)({
@@ -304,9 +304,9 @@ function y(e) {
                 }),
             }),
             (0, r.jsx)(j, {
-                text: M.intl.string(M.t.IHTjzM),
+                text: M.intl.string(M.t.IHTjzA),
                 onClick: () => {
-                    U(T.jQ.COPY_ID), (0, C.JG)(t.id);
+                    L(T.jQ.COPY_ID), (0, C.JG)(t.id);
                 },
                 disabled: !C.wS,
                 children: (0, r.jsx)(o.VuL, {
@@ -326,7 +326,7 @@ function G(e) {
     return null == i || null == a
         ? null
         : (0, r.jsxs)("div", {
-              className: x.container,
+              className: b.container,
               children: [
                   (0, r.jsx)(P, {
                       user: i,

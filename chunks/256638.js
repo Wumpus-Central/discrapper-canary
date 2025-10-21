@@ -79,7 +79,7 @@ var r = n(951288),
     ev = n(610674),
     eI = n(65154),
     eT = n(388032),
-    eS = n(522488);
+    eS = n(50953);
 function eA(e, t, n) {
     return (
         t in e
@@ -136,7 +136,7 @@ let eP = (e) => {
         var t;
         let { error: n, allowClick: i = !1 } = e,
             a = null == (t = (0, x.hp)(n)) ? void 0 : t.errorCode,
-            o = eT.intl.formatToPlainString(eT.t["ejOT9/"], { errorCode: a }),
+            o = eT.intl.formatToPlainString(eT.t.ejOT95, { errorCode: a }),
             s = (0, r.jsx)(u.Text, {
                 variant: "text-sm/bold",
                 color: "currentColor",
@@ -163,11 +163,11 @@ let eP = (e) => {
                         eG();
                     },
                 }),
-                eT.intl.string(eT.t.o3zuY2),
+                eT.intl.string(eT.t.o3zuYz),
                 (0, r.jsx)(eP, { error: x.u.NO_INPUT_DEVICES }),
                 (0, r.jsx)(u.u3T, {
                     href: eh.Z.getArticleURL(ey.BhN.NO_INPUT_DETECTED),
-                    children: eT.intl.string(eT.t.RYKKo6),
+                    children: eT.intl.string(eT.t.RYKKox),
                 }),
             ],
         }),
@@ -183,11 +183,11 @@ let eP = (e) => {
                         eG(), (0, eb.b)();
                     },
                 }),
-                eT.intl.string(eT.t.ppW3rq),
+                eT.intl.string(eT.t.ppW3ri),
                 (0, r.jsx)(eP, { error: x.u.NO_AUDIO_INPUT_DETECTED }),
                 (0, r.jsx)(u.u3T, {
                     href: eL(t),
-                    children: eT.intl.string(eT.t.pxYBbG),
+                    children: eT.intl.string(eT.t.pxYBbM),
                 }),
             ],
         });
@@ -202,11 +202,11 @@ let eP = (e) => {
                         eG(), (0, eb.b)();
                     },
                 }),
-                eT.intl.string(eT.t.j4gGAw),
+                eT.intl.string(eT.t.j4gGA4),
                 (0, r.jsx)(eP, { error: x.u.NO_AUDIO_INPUT_DETECTED }),
                 (0, r.jsx)(u.u3T, {
                     href: eL(t),
-                    children: eT.intl.string(eT.t.pxYBbG),
+                    children: eT.intl.string(eT.t.pxYBbM),
                 }),
             ],
         });
@@ -220,11 +220,11 @@ let eP = (e) => {
                         eG(), (0, eb.b)();
                     },
                 }),
-                eT.intl.string(eT.t.nCO9bG),
+                eT.intl.string(eT.t.nCO9bI),
                 (0, r.jsx)(eP, { error: x.u.NO_AUDIO_INPUT_DETECTED }),
                 (0, r.jsx)(u.u3T, {
                     href: eh.Z.getArticleURL(ey.BhN.NO_INPUT_DETECTED),
-                    children: eT.intl.string(eT.t.RYKKo6),
+                    children: eT.intl.string(eT.t.RYKKox),
                 }),
             ],
         }),
@@ -237,7 +237,7 @@ let eP = (e) => {
                         eG(), (0, eb.b)();
                     },
                 }),
-                eT.intl.string(eT.t.dNAJ19),
+                eT.intl.string(eT.t.dNAJ18),
                 (0, r.jsx)(eP, {
                     allowClick: !0,
                     error: x.u.NO_AUDIO_INPUT_DETECTED,
@@ -246,7 +246,7 @@ let eP = (e) => {
                     onClick: () => {
                         (0, ea.openUserSettings)(ei.n.VOICE_AND_VIDEO_PANEL, { section: ey.oAB.VOICE });
                     },
-                    children: eT.intl.string(eT.t.I6YlBw),
+                    children: eT.intl.string(eT.t.I6YlB4),
                 }),
             ],
         });
@@ -343,7 +343,7 @@ let eZ = i.memo(function () {
                         onClick: () => eG(eX),
                         noticeType: ey.kVF.WIN32_DEPRECATED_MESSAGE,
                     }),
-                    eT.intl.format(eT.t["08KQ1N"], { helpCenterLink: eh.Z.getArticleURL(ey.BhN.WIN32_DEPRECATE) }),
+                    eT.intl.format(eT.t["08KQ1P"], { helpCenterLink: eh.Z.getArticleURL(ey.BhN.WIN32_DEPRECATE) }),
                 ],
             });
         case ey.kVF.WIN7_8_DEPRECATED_MESSAGE:
@@ -367,7 +367,7 @@ let eZ = i.memo(function () {
                         onClick: () => eG(eJ),
                         noticeType: ey.kVF.MACOS_19_DEPRECATED_MESSAGE,
                     }),
-                    eT.intl.format(eT.t.q8VPLi, { helpCenterLink: eh.Z.getArticleURL(ey.BhN.MACOS_19_DEPRECATE) }),
+                    eT.intl.format(eT.t.q8VPLo, { helpCenterLink: eh.Z.getArticleURL(ey.BhN.MACOS_19_DEPRECATE) }),
                 ],
             });
         case ey.kVF.GENERIC:
@@ -416,14 +416,14 @@ let eZ = i.memo(function () {
                         },
                         noticeType: ey.kVF.VOICE_DISABLED,
                     }),
-                    eT.intl.string(eT.t.bOQ3jY),
+                    eT.intl.string(eT.t.bOQ3jV),
                     (0, r.jsx)(u.NoS, {
                         onClick: () => {
                             let e = el.Z.getRemoteDisconnectVoiceChannelId();
                             null != e && null != eo.Z.getChannel(e) && g.default.selectVoiceChannel(e);
                         },
                         noticeType: ey.kVF.VOICE_DISABLED,
-                        children: eT.intl.string(eT.t.vD60Pj),
+                        children: eT.intl.string(eT.t.vD60Pv),
                     }),
                 ],
             });
@@ -437,14 +437,14 @@ let eZ = i.memo(function () {
                         },
                         noticeType: ey.kVF.VOICE_CONNECTED_LAST_SESSION,
                     }),
-                    eT.intl.string(eT.t.jY2lUF),
+                    eT.intl.string(eT.t.jY2lUA),
                     (0, r.jsx)(u.NoS, {
                         onClick: () => {
                             let e = el.Z.getLastSessionVoiceChannelId();
                             null != e && null != eo.Z.getChannel(e) && g.default.selectVoiceChannel(e);
                         },
                         noticeType: ey.kVF.VOICE_CONNECTED_LAST_SESSION,
-                        children: eT.intl.string(eT.t.vD60Pj),
+                        children: eT.intl.string(eT.t.vD60Pv),
                     }),
                 ],
             });
@@ -462,17 +462,17 @@ let eZ = i.memo(function () {
                         className: eS.platformIcon,
                         src: e$.icon.whiteSVG,
                     }),
-                    eT.intl.string(eT.t["D8Cp7+"]),
+                    eT.intl.string(eT.t.D8Cp76),
                     (0, r.jsx)(u.NoS, {
                         onClick: () => (0, ea.openUserSettings)(ei.n.VOICE_AND_VIDEO_PANEL, { section: ey.oAB.VOICE }),
                         noticeType: ey.kVF.SPOTIFY_AUTO_PAUSED,
-                        children: eT.intl.string(eT.t.NiTd0d),
+                        children: eT.intl.string(eT.t.NiTd0e),
                     }),
                     (0, r.jsx)(u.Anchor, {
                         className: eS.textLinkSmall,
                         href: eh.Z.getArticleURL(ey.BhN.SPOTIFY_AUTO_PAUSED),
                         target: "_blank",
-                        children: eT.intl.string(eT.t.CiqAIS),
+                        children: eT.intl.string(eT.t.CiqAIU),
                     }),
                 ],
             });
@@ -480,11 +480,11 @@ let eZ = i.memo(function () {
             return (0, r.jsxs)(u.qXd, {
                 color: u.DM8.DEFAULT,
                 children: [
-                    eT.intl.string(eT.t["f+Zaoq"]),
+                    eT.intl.string(eT.t["f+Zaol"]),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.UNCLAIMED_ACCOUNT,
                         onClick: () => (eb && null != h ? (0, B.hk)(h) : C.j()),
-                        children: eT.intl.string(eT.t.fiNVio),
+                        children: eT.intl.string(eT.t.fiNVin),
                     }),
                 ],
             });
@@ -498,13 +498,13 @@ let eZ = i.memo(function () {
                         onClick: () => {
                             _.Z.verifyResend(),
                                 d.Z.show({
-                                    title: eT.intl.string(eT.t.LykQYm),
-                                    body: eT.intl.format(eT.t.azKEPz, { email: null == a ? void 0 : a.email }),
-                                    secondaryConfirmText: eT.intl.string(eT.t.oP5zGB),
+                                    title: eT.intl.string(eT.t.LykQYk),
+                                    body: eT.intl.format(eT.t.azKEPy, { email: null == a ? void 0 : a.email }),
+                                    secondaryConfirmText: eT.intl.string(eT.t.oP5zGA),
                                     onConfirmSecondary: C.j,
                                 });
                         },
-                        children: eT.intl.string(eT.t.WnX4Jy),
+                        children: eT.intl.string(eT.t.WnX4J2),
                     }),
                 ],
             });
@@ -517,10 +517,10 @@ let eZ = i.memo(function () {
                         onClick: () => E.Z.ackScheduledMaintenance(),
                         noticeType: ey.kVF.SCHEDULED_MAINTENANCE,
                     }),
-                    eT.intl.format(eT.t.yb96S0, T.metadata),
+                    eT.intl.format(eT.t["yb96S+"], T.metadata),
                     (0, r.jsx)(u.u3T, {
                         href: "".concat(ey.yXt.STATUS, "/incidents/").concat(T.metadata.id),
-                        children: eT.intl.string(eT.t.hvVgAQ),
+                        children: eT.intl.string(eT.t.hvVgAZ),
                     }),
                 ],
             });
@@ -539,7 +539,7 @@ let eZ = i.memo(function () {
             return (0, r.jsxs)(u.qXd, {
                 color: u.DM8.DANGER,
                 children: [
-                    eT.intl.format(eT.t.qoDex8, {
+                    eT.intl.format(eT.t.qoDex7, {
                         vendorName: e0.name,
                         modelName: e1.name,
                     }),
@@ -552,7 +552,7 @@ let eZ = i.memo(function () {
                         href: e1.url,
                         target: "_blank",
                         rel: "noreferrer noopener",
-                        children: eT.intl.string(eT.t["Yl/Rio"]),
+                        children: eT.intl.string(eT.t["Yl/Riu"]),
                     }),
                 ],
             });
@@ -564,11 +564,11 @@ let eZ = i.memo(function () {
                         onClick: () => eG(),
                         noticeType: ey.kVF.STREAMER_MODE,
                     }),
-                    eT.intl.string(eT.t.iEgBXl),
+                    eT.intl.string(eT.t.iEgBXp),
                     (0, r.jsx)(u.NoS, {
                         onClick: () => y.Z.setEnabled(!1),
                         noticeType: ey.kVF.STREAMER_MODE,
-                        children: eT.intl.string(eT.t.R9GHyc),
+                        children: eT.intl.string(eT.t.R9GHya),
                     }),
                 ],
             });
@@ -581,12 +581,12 @@ let eZ = i.memo(function () {
                             eG();
                         },
                     }),
-                    eT.intl.string(eT.t.HcErZW),
+                    eT.intl.string(eT.t.HcErZT),
                     (0, r.jsx)(u.EyT, {
                         onClick: () => {
                             (0, ea.openUserSettings)(ei.n.VOICE_AND_VIDEO_PANEL, { section: ey.oAB.VOICE });
                         },
-                        children: eT.intl.string(eT.t["51hI/v"]),
+                        children: eT.intl.string(eT.t["51hI/g"]),
                     }),
                 ],
             });
@@ -609,7 +609,7 @@ let eZ = i.memo(function () {
                         color: "currentColor",
                         className: eS.premiumIcon,
                     }),
-                    eT.intl.format(eT.t["g3MU//"], {
+                    eT.intl.format(eT.t["g3MU/+"], {
                         applicationName: e8.name,
                         skuName: e4.name,
                     }),
@@ -631,7 +631,7 @@ let eZ = i.memo(function () {
                                 analyticsLocationObject: e5,
                                 context: __OVERLAY__ ? ey.IlC.OVERLAY : ey.IlC.APP,
                             }).then(() => p.Z(e4.id)),
-                        children: eT.intl.string(eT.t.KEwPY2),
+                        children: eT.intl.string(eT.t.KEwPYx),
                     }),
                 ],
             });
@@ -664,7 +664,7 @@ let eZ = i.memo(function () {
                                 pathname: ey.Z5c.APPLICATION_STORE_LISTING_SKU(n.id),
                                 state: { scrollRestoration: !1 },
                             },
-                            children: eT.intl.string(eT.t.hvVgAQ),
+                            children: eT.intl.string(eT.t.hvVgAZ),
                         }),
                     }),
                 ],
@@ -698,11 +698,11 @@ let eZ = i.memo(function () {
             return (0, r.jsxs)(u.qXd, {
                 color: u.DM8.DANGER,
                 children: [
-                    eT.intl.string(eT.t.ugxmk5),
+                    eT.intl.string(eT.t["ugxmk/"]),
                     (0, r.jsx)(u.u3T, {
                         href: eh.Z.getArticleURL(ey.BhN.CORRUPT_INSTALLATION),
                         target: "_blank",
-                        children: eT.intl.string(eT.t["6ik4Xl"]),
+                        children: eT.intl.string(eT.t["6ik4Xk"]),
                     }),
                 ],
             });
@@ -714,7 +714,7 @@ let eZ = i.memo(function () {
                         onClick: () => eG(),
                         noticeType: ey.kVF.VIDEO_UNSUPPORTED_BROWSER,
                     }),
-                    eT.intl.string(eT.t.wVjKGh),
+                    eT.intl.string(eT.t.wVjKGi),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.VIDEO_UNSUPPORTED_BROWSER,
                         onClick: () => {
@@ -725,7 +725,7 @@ let eZ = i.memo(function () {
                                 return (t) => (0, r.jsx)(e, eC({ source: "Video unsupported browser" }, t));
                             });
                         },
-                        children: eT.intl.string(eT.t["1WjMbG"]),
+                        children: eT.intl.string(eT.t["1WjMbC"]),
                     }),
                 ],
             });
@@ -747,7 +747,7 @@ let eZ = i.memo(function () {
                                 let { default: e } = await n.e("20212").then(n.bind(n, 915194));
                                 return (t) => (0, r.jsx)(e, eC({}, t));
                             }),
-                        children: eT.intl.string(eT.t.hvVgAQ),
+                        children: eT.intl.string(eT.t.hvVgAZ),
                     }),
                 ],
             });
@@ -765,12 +765,12 @@ let eZ = i.memo(function () {
                         justify: N.Z.Justify.CENTER,
                         children: [
                             null != te
-                                ? eT.intl.formatToPlainString(eT.t["pHj+z8"], {
+                                ? eT.intl.formatToPlainString(eT.t["pHj+z4"], {
                                       name: "".concat(te),
                                       progress: e7,
                                       total: e9,
                                   })
-                                : eT.intl.formatToPlainString(eT.t["lHZn+P"], {
+                                : eT.intl.formatToPlainString(eT.t["lHZn+A"], {
                                       progress: e7,
                                       total: e9,
                                   }),
@@ -792,7 +792,7 @@ let eZ = i.memo(function () {
                         align: N.Z.Align.CENTER,
                         children: [
                             (0, r.jsx)("div", {
-                                children: eT.intl.format(eT.t["1qxVe3"], {
+                                children: eT.intl.format(eT.t["1qxVe4"], {
                                     applicationName: T.metadata.applicationName,
                                 }),
                             }),
@@ -810,7 +810,7 @@ let eZ = i.memo(function () {
                     align: N.Z.Align.CENTER,
                     children: [
                         (0, r.jsx)("div", {
-                            children: eT.intl.format(eT.t.Fv5HrK, { applicationName: T.metadata.applicationName }),
+                            children: eT.intl.format(eT.t.Fv5HrE, { applicationName: T.metadata.applicationName }),
                         }),
                         (0, r.jsx)(eE.Z, {
                             dropdownSize: eE.E.DropdownSizes.SMALL,
@@ -864,9 +864,9 @@ let eZ = i.memo(function () {
                         className: eS.premiumIcon,
                     }),
                     ez === eO.PremiumTypes.TIER_1
-                        ? eT.intl.formatToPlainString(eT.t.fXv4ws, { daysLeft: T.metadata.daysLeft })
+                        ? eT.intl.formatToPlainString(eT.t.fXv4wm, { daysLeft: T.metadata.daysLeft })
                         : ez === eO.PremiumTypes.TIER_0
-                          ? eT.intl.formatToPlainString(eT.t.ZOHZMj, { daysLeft: T.metadata.daysLeft })
+                          ? eT.intl.formatToPlainString(eT.t.ZOHZMr, { daysLeft: T.metadata.daysLeft })
                           : eT.intl.formatToPlainString(eT.t.outyHh, { daysLeft: T.metadata.daysLeft }),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.PREMIUM_UNCANCEL,
@@ -881,7 +881,7 @@ let eZ = i.memo(function () {
                                     let { default: e } = await Promise.all([
                                         n.e("17938"),
                                         n.e("84992"),
-                                        n.e("12222"),
+                                        n.e("11394"),
                                     ]).then(n.bind(n, 561623));
                                     return (t) =>
                                         (0, r.jsx)(
@@ -897,10 +897,10 @@ let eZ = i.memo(function () {
                         },
                         children:
                             ez === eO.PremiumTypes.TIER_1
-                                ? eT.intl.string(eT.t.BkbUPD)
+                                ? eT.intl.string(eT.t.BkbUPM)
                                 : ez === eO.PremiumTypes.TIER_0
-                                  ? eT.intl.string(eT.t.Px978f)
-                                  : eT.intl.string(eT.t.LW5tCA),
+                                  ? eT.intl.string(eT.t.Px978X)
+                                  : eT.intl.string(eT.t.LW5tCE),
                     }),
                 ],
             });
@@ -915,14 +915,14 @@ let eZ = i.memo(function () {
                             eG(tn);
                         },
                     }),
-                    eT.intl.format(eT.t.zxU0Ki, { daysPastDue: tt }),
+                    eT.intl.format(eT.t.zxU0Kp, { daysPastDue: tt }),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                         onClick: () => {
                             eG(tn),
                                 (0, ea.openUserSettings)(ei.n.SUBSCRIPTIONS_PANEL, { section: ey.oAB.SUBSCRIPTIONS });
                         },
-                        children: eT.intl.string(eT.t.q8rxeX),
+                        children: eT.intl.string(eT.t.q8rxeS),
                     }),
                 ],
             });
@@ -941,7 +941,7 @@ let eZ = i.memo(function () {
                             );
                         },
                     }),
-                    eT.intl.string(eT.t.LlZaoa),
+                    eT.intl.string(eT.t.LlZaoX),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
@@ -953,7 +953,7 @@ let eZ = i.memo(function () {
                             ),
                                 (0, ea.openUserSettings)(ei.n.SUBSCRIPTIONS_PANEL, { section: ey.oAB.SUBSCRIPTIONS });
                         },
-                        children: eT.intl.string(eT.t["Zpd+Ym"]),
+                        children: eT.intl.string(eT.t["Zpd+Yq"]),
                     }),
                 ],
             });
@@ -972,7 +972,7 @@ let eZ = i.memo(function () {
                             );
                         },
                     }),
-                    eT.intl.string(eT.t["30YfCg"]),
+                    eT.intl.string(eT.t["30YfCr"]),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
@@ -984,7 +984,7 @@ let eZ = i.memo(function () {
                             ),
                                 (0, ea.openUserSettings)(ei.n.SUBSCRIPTIONS_PANEL, { section: ey.oAB.SUBSCRIPTIONS });
                         },
-                        children: eT.intl.string(eT.t.U5pKWF),
+                        children: eT.intl.string(eT.t.U5pKWA),
                     }),
                 ],
             });
@@ -1004,10 +1004,10 @@ let eZ = i.memo(function () {
                         },
                     }),
                     ez === eO.PremiumTypes.TIER_1
-                        ? eT.intl.formatToPlainString(eT.t.b6QUvb, { daysLeft: T.metadata.daysLeft })
+                        ? eT.intl.formatToPlainString(eT.t.b6QUvf, { daysLeft: T.metadata.daysLeft })
                         : ez === eO.PremiumTypes.TIER_0
-                          ? eT.intl.formatToPlainString(eT.t["tURZ/P"], { daysLeft: T.metadata.daysLeft })
-                          : eT.intl.formatToPlainString(eT.t.AyC74O, { daysLeft: T.metadata.daysLeft }),
+                          ? eT.intl.formatToPlainString(eT.t["tURZ/M"], { daysLeft: T.metadata.daysLeft })
+                          : eT.intl.formatToPlainString(eT.t.AyC74I, { daysLeft: T.metadata.daysLeft }),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
@@ -1023,8 +1023,8 @@ let eZ = i.memo(function () {
                             ez === eO.PremiumTypes.TIER_1
                                 ? eT.intl.string(eT.t.lboF5O)
                                 : ez === eO.PremiumTypes.TIER_0
-                                  ? eT.intl.string(eT.t["4UPwOj"])
-                                  : eT.intl.string(eT.t["P/VvGR"]),
+                                  ? eT.intl.string(eT.t["4UPwOq"])
+                                  : eT.intl.string(eT.t["P/VvGb"]),
                     }),
                 ],
             });
@@ -1044,17 +1044,17 @@ let eZ = i.memo(function () {
             return (0, r.jsxs)(u.qXd, {
                 color: u.DM8.DANGER,
                 children: [
-                    eT.intl.string(eT.t.DVFJYW),
+                    eT.intl.string(eT.t.DVFJYf),
                     (0, r.jsx)(u.u3T, {
                         href: ev.Z,
                         target: "_blank",
-                        children: eT.intl.string(eT.t.kvHdFB),
+                        children: eT.intl.string(eT.t.kvHdFN),
                     }),
                     (0, r.jsx)(u.Anchor, {
                         href: eh.Z.getArticleURL(ey.BhN.QUARANTINE),
                         target: "_blank",
                         className: eS.quarantineLearnMoreLink,
-                        children: eT.intl.string(eT.t.hvVgAQ),
+                        children: eT.intl.string(eT.t.hvVgAZ),
                     }),
                 ],
             });
@@ -1062,10 +1062,10 @@ let eZ = i.memo(function () {
             return (0, r.jsxs)(u.qXd, {
                 color: u.DM8.WARNING,
                 children: [
-                    eT.intl.string(eT.t.Ugijzs),
+                    eT.intl.string(eT.t.Ugijzi),
                     (0, r.jsx)(u.u3T, {
                         href: "".concat(ey.yXt.STATUS),
-                        children: eT.intl.string(eT.t.hvVgAQ),
+                        children: eT.intl.string(eT.t.hvVgAZ),
                     }),
                     (0, r.jsx)(u.RyX, {
                         onClick: () => eG(),
@@ -1084,7 +1084,7 @@ let eZ = i.memo(function () {
                             null != h && (0, U.T9)(h), eG(tr);
                         },
                     }),
-                    eT.intl.string(eT.t.B8ruyc),
+                    eT.intl.string(eT.t.B8ruyY),
                     (0, r.jsx)(u.EyT, {
                         onClick: () => {
                             null != h &&
@@ -1092,12 +1092,12 @@ let eZ = i.memo(function () {
                                     eG(tr), (0, U.T9)(h);
                                 });
                         },
-                        children: eT.intl.string(eT.t.oX14Eh),
+                        children: eT.intl.string(eT.t.oX14El),
                     }),
                     null != h
                         ? (0, r.jsx)(u.EyT, {
                               onClick: () => H.Z.open(h, ey.pNK.GUILD_AUTOMOD, void 0, ey.KsC.AUTOMOD_MENTION_SPAM),
-                              children: eT.intl.string(eT.t["1R7QIy"]),
+                              children: eT.intl.string(eT.t["1R7QIx"]),
                           })
                         : null,
                 ],
@@ -1112,7 +1112,7 @@ let eZ = i.memo(function () {
                             $.hZ(), eG();
                         },
                     }),
-                    eT.intl.string(eT.t.I1nKfH),
+                    eT.intl.string(eT.t.I1nKfO),
                     (0, r.jsx)(u.NoS, {
                         noticeType: ey.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
                         onClick: () => {
@@ -1125,7 +1125,7 @@ let eZ = i.memo(function () {
                                 $.hZ(),
                                 eG();
                         },
-                        children: eT.intl.string(eT.t.l5xYnJ),
+                        children: eT.intl.string(eT.t.l5xYnH),
                     }),
                 ],
             });
@@ -1157,7 +1157,7 @@ let eZ = i.memo(function () {
                                 (0, J.nE)(T.metadata.streamKey);
                         },
                     }),
-                    eT.intl.string(eT.t.rOx44u),
+                    eT.intl.string(eT.t.rOx44m),
                 ],
             });
         case ey.kVF.BLOCK_USER_FEEDBACK_NAGBAR:
@@ -1171,14 +1171,14 @@ let eZ = i.memo(function () {
                         },
                         noticeType: ey.kVF.BLOCK_USER_FEEDBACK_NAGBAR,
                     }),
-                    eT.intl.string(eT.t["0klLS0"]),
+                    eT.intl.string(eT.t["0klLS7"]),
                     (0, r.jsx)(u.NoS, {
                         onClick: () => {
                             var e;
                             (0, et.ZZ)(), eG(null == (e = T.metadata) ? void 0 : e.dismissUntil);
                         },
                         noticeType: ey.kVF.BLOCK_USER_FEEDBACK_NAGBAR,
-                        children: eT.intl.string(eT.t.e4y2VF),
+                        children: eT.intl.string(eT.t.e4y2VM),
                     }),
                 ],
             });

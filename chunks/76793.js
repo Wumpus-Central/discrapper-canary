@@ -14,7 +14,7 @@ var f = n(892001),
     _ = n(594174),
     p = n(51144),
     h = n(388032),
-    m = n(806222);
+    m = n(147111);
 function g(e) {
     let { userId: t, count: n } = e,
         { analyticsLocations: d } = (0, c.ZP)(),
@@ -59,7 +59,7 @@ function g(e) {
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
                             color: "header-secondary",
-                            children: h.intl.format(h.t["/MBjYG"], { count: n }),
+                            children: h.intl.format(h.t["/MBjYF"], { count: n }),
                         }),
                     ],
                 }),
@@ -87,7 +87,7 @@ function E(e) {
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/semibold",
                         color: "interactive-active",
-                        children: h.intl.format(h.t.N4qBBA, { index: s + 1 }),
+                        children: h.intl.format(h.t.N4qBBO, { index: s + 1 }),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/medium",
@@ -136,4 +136,4 @@ function b(e) {
         ],
     });
 }
-n(10198);
+n(197571);

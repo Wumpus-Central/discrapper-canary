@@ -24,10 +24,10 @@ var r = n(951288),
     S = n(981631),
     A = n(295907),
     C = n(388032),
-    N = n(313911),
-    R = n(285236),
-    P = n(465106),
-    w = n(10198);
+    N = n(740508),
+    R = n(315091),
+    P = n(149715),
+    w = n(197571);
 function D(e, t, n) {
     return (
         t in e
@@ -101,7 +101,7 @@ function B(e) {
     }));
     return (0, r.jsxs)(c.VqE, {
         className: o()(N.addGamePopout, R.elevationBorderHigh),
-        "aria-label": C.intl.string(C.t.GTCx0t),
+        "aria-label": C.intl.string(C.t.GTCx0p),
         children: [
             (0, r.jsx)(c.VcW, {
                 placeholder: C.intl.string(C.t.XqMe3N),
@@ -122,12 +122,12 @@ function B(e) {
                 children: [
                     (0, r.jsx)(c.Avr, {
                         variant: "secondary",
-                        text: C.intl.string(C.t["ETE/oK"]),
+                        text: C.intl.string(C.t["ETE/oC"]),
                         onClick: t,
                     }),
                     (0, r.jsx)(c.Button, {
                         variant: "primary",
-                        text: C.intl.string(C.t.GTCx0t),
+                        text: C.intl.string(C.t.GTCx0p),
                         disabled: null == a,
                         onClick: f,
                     }),
@@ -150,7 +150,7 @@ function Z(e) {
                 (0, g.le)(I)
                     ? O
                         ? I.gameName
-                        : C.intl.formatToPlainString(C.t.G6BGd3, { subgameName: I.gameName })
+                        : C.intl.formatToPlainString(C.t.G6BGdx, { subgameName: I.gameName })
                     : I.name,
             [I, O],
         ),
@@ -186,16 +186,16 @@ function Z(e) {
                       (0, r.jsx)(
                           e,
                           M(L({}, t), {
-                              title: C.intl.formatToPlainString(C.t.PZ4fKS, { platform: k }),
-                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfX, { platform: k }),
+                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: k }),
+                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: k }),
                               actions: [
                                   {
-                                      text: C.intl.string(C.t["ETE/oK"]),
+                                      text: C.intl.string(C.t["ETE/oC"]),
                                       onClick: () => t.onClose(),
                                       variant: "secondary",
                                   },
                                   {
-                                      text: C.intl.string(C.t.Fmjzt7),
+                                      text: C.intl.string(C.t.Fmjztz),
                                       onClick: () => {
                                           u.Z.toggleDetection(I), t.onClose();
                                       },
@@ -245,7 +245,7 @@ function Z(e) {
                       }),
                       (0, r.jsx)(c.aML, {
                           "data-migration-pending": !0,
-                          text: C.intl.string(C.t["4PJP5u"]),
+                          text: C.intl.string(C.t["4PJP5p"]),
                           children: (e) =>
                               (0, r.jsx)(
                                   h.Z,
@@ -286,8 +286,8 @@ function Z(e) {
             { played: t, exePath: n } = I;
         return (
             a || et
-                ? (e = C.intl.string(C.t.VbV5dn))
-                : null != t && "" !== t && (e = C.intl.format(C.t.gGeOEx, { when: t })),
+                ? (e = C.intl.string(C.t.VbV5dv))
+                : null != t && "" !== t && (e = C.intl.format(C.t["gGeOE+"], { when: t })),
             (0, r.jsx)("div", {
                 className: N.lastPlayed,
                 children: (0, r.jsx)(f.Z, {
@@ -316,7 +316,7 @@ function Z(e) {
             i = t
                 ? (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
-                      text: C.intl.string(C.t.Vfw2Ly),
+                      text: C.intl.string(C.t.Vfw2L5),
                       children: (e) => (0, r.jsx)("i", L({ className: N.overlayWarningIcon }, e)),
                   })
                 : null;
@@ -326,12 +326,12 @@ function Z(e) {
                 i,
                 (0, r.jsx)(c.aML, {
                     "data-migration-pending": !0,
-                    text: C.intl.string(C.t["1+O+Tk"]),
+                    text: C.intl.string(C.t["1+O+Tu"]),
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
                             M(L({}, t), {
-                                "aria-label": C.intl.string(C.t["1+O+Tk"]),
+                                "aria-label": C.intl.string(C.t["1+O+Tu"]),
                                 className: N.toggleIcon,
                                 onClick: () => W(!e),
                                 children: n,
@@ -384,12 +384,12 @@ function Z(e) {
                   className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
                   children: (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
-                      text: C.intl.string(C.t["y0B+lp"]),
+                      text: C.intl.string(C.t["y0B+lo"]),
                       children: (e) =>
                           (0, r.jsx)(
                               c.P3F,
                               M(L({}, e), {
-                                  "aria-label": C.intl.string(C.t["y0B+lp"]),
+                                  "aria-label": C.intl.string(C.t["y0B+lo"]),
                                   className: N.toggleIcon,
                                   onClick: z,
                                   children: (0, r.jsx)(c.U65, {
@@ -463,11 +463,11 @@ function F() {
             children: [
                 (0, r.jsx)("div", {
                     className: N.gameName,
-                    children: C.intl.string(C.t["H68X9/"]),
+                    children: C.intl.string(C.t.H68X9x),
                 }),
                 (0, r.jsx)("div", {
                     className: N.lastPlayed,
-                    children: C.intl.string(C.t.T5Ilm5),
+                    children: C.intl.string(C.t.T5Ilmw),
                 }),
             ],
         }),
@@ -510,11 +510,11 @@ let H = (0, O.oH)(function () {
             h = i.useRef(null);
         function E() {
             return 0 === d.length
-                ? (0, r.jsx)(V, { children: (0, r.jsx)(c.OZU, { children: C.intl.string(C.t["1yiJws"]) }) })
+                ? (0, r.jsx)(V, { children: (0, r.jsx)(c.OZU, { children: C.intl.string(C.t["1yiJwn"]) }) })
                 : (0, r.jsx)(c.C3N, {
                       className: w.marginTop40,
-                      label: C.intl.string(C.t.jCOdv7),
-                      description: C.intl.format(C.t.KPA3m5, { igdbLink: G }),
+                      label: C.intl.string(C.t.jCOdvx),
+                      description: C.intl.format(C.t.KPA3m9, { igdbLink: G }),
                       children: d.map((e) =>
                           (0, r.jsx)(
                               Z,
@@ -531,7 +531,7 @@ let H = (0, O.oH)(function () {
         return (
             i.useEffect(() => ((0, p.Ky)(), p.P7), []),
             (0, r.jsxs)(T.Z, {
-                title: n ? C.intl.string(C.t.AVDyEh) : null,
+                title: n ? C.intl.string(C.t.AVDyEj) : null,
                 className: t,
                 children: [
                     null != l
@@ -549,7 +549,7 @@ let H = (0, O.oH)(function () {
                     (0, r.jsxs)("div", {
                         className: o()(N.nowPlayingAdd, w.marginReset, w.marginTop8, w.marginBottom20),
                         children: [
-                            (0, r.jsx)("span", { children: C.intl.string(C.t.xwhoqK) }),
+                            (0, r.jsx)("span", { children: C.intl.string(C.t.xwhoqM) }),
                             (0, r.jsx)(c.yRy, {
                                 targetElementRef: h,
                                 renderPopout: (e) => {
@@ -565,7 +565,7 @@ let H = (0, O.oH)(function () {
                                             buttonRef: h,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",
-                                            text: C.intl.string(C.t.GjgdXV),
+                                            text: C.intl.string(C.t.GjgdXe),
                                         }),
                                     ),
                             }),

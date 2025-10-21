@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(726521),
     l = n(389052),
     c = n(388032),
-    u = n(37393);
+    u = n(978291);
 function d(e, t, n) {
     return (
         t in e
@@ -68,12 +68,12 @@ let h = (e) => {
         return (0, r.jsxs)(a.v2r, {
             navId: "authorized-app-action-menu",
             onClose: n,
-            "aria-label": c.intl.string(c.t.tKobzc),
+            "aria-label": c.intl.string(c.t.tKobzb),
             onSelect: void 0,
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "report",
-                    label: c.intl.string(c.t["+78Pfn"]),
+                    label: c.intl.string(c.t["+78Pfm"]),
                     color: "danger",
                     action: () =>
                         (0, s.uu)({
@@ -134,7 +134,7 @@ let h = (e) => {
                             {
                                 innerRef: s,
                                 className: u.actionMenuButton,
-                                "aria-label": c.intl.string(c.t.UKOtz8),
+                                "aria-label": c.intl.string(c.t["UKOtz+"]),
                             },
                             e,
                         ),

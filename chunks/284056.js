@@ -24,7 +24,7 @@ var r = n(951288),
     y = n(626135),
     O = n(981631),
     v = n(388032),
-    I = n(512588);
+    I = n(81272);
 function T(e, t, n) {
     return (
         t in e
@@ -141,7 +141,7 @@ class N extends i.PureComponent {
                 containerClassName: E,
             } = this.props,
             { isMicTesting: b, volume: y } = this.state,
-            O = e && !b ? v.intl.string(v.t["9viE2N"]) : null;
+            O = e && !b ? v.intl.string(v.t["9viE2A"]) : null;
         b && e && !u && this._micTestStop();
         let T = s.length >= a.length ? s : a;
         return (0, r.jsx)("div", {

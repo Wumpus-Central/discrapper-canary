@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(481060),
     c = n(889963),
     u = n(388032),
-    d = n(384);
+    d = n(18039);
 function f(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: s } = e,
         [c, u] = i.useState(!1),
@@ -100,7 +100,7 @@ function _(e) {
                         className: d.iconCaret,
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)("span", { children: u.intl.string(u.t["13/7kZ"]) }),
+                    (0, r.jsx)("span", { children: u.intl.string(u.t["13/7kX"]) }),
                 ],
             },
             t,
@@ -119,7 +119,7 @@ function _(e) {
                 disabled: n,
                 rel: "next",
                 children: [
-                    (0, r.jsx)("span", { children: u.intl.string(u.t.PDTjLC) }),
+                    (0, r.jsx)("span", { children: u.intl.string(u.t.PDTjLN) }),
                     (0, r.jsx)(l.Fbu, {
                         size: "md",
                         color: "currentColor",
@@ -137,7 +137,7 @@ function _(e) {
             {
                 className: o()(d.roundButton, { [d.activeButton]: e.selected }),
                 onClick: e.selected ? void 0 : e.navigateToPage,
-                "aria-label": u.intl.formatToPlainString(u.t.IGMs8f, { pageNumber: e.targetPage }),
+                "aria-label": u.intl.formatToPlainString(u.t.IGMs8S, { pageNumber: e.targetPage }),
                 "aria-current": e.selected ? "page" : void 0,
                 children: (0, r.jsx)("span", { children: e.targetPage }),
             },

@@ -19,8 +19,8 @@ var l = t(951288),
     b = t(602733),
     I = t(699516),
     y = t(246946),
-    Z = t(585483),
-    _ = t(5192),
+    _ = t(585483),
+    Z = t(5192),
     O = t(111361),
     N = t(785717),
     A = t(221292),
@@ -30,16 +30,16 @@ var l = t(951288),
     C = t(771362),
     S = t(510659),
     w = t(899007),
-    R = t(648052),
-    D = t(867176),
+    D = t(648052),
+    R = t(867176),
     L = t(280885),
     M = t(537006),
     B = t(681837),
     U = t(78806),
     k = t(91433),
     G = t(451834),
-    F = t(900927),
-    V = t(944043),
+    V = t(900927),
+    F = t(944043),
     W = t(502762),
     H = t(530),
     z = t(4517),
@@ -57,7 +57,7 @@ var l = t(951288),
     ei = t(981631),
     eo = t(671955),
     er = t(388032),
-    es = t(7938);
+    es = t(293496);
 function ea(e) {
     var n;
     let {
@@ -78,8 +78,8 @@ function ea(e) {
             sourceAnalyticsLocations: eI = [],
             disableActionsForPreview: ey = !1,
         } = e,
-        { analyticsLocations: eZ } = (0, u.ZP)([...eI, d.Z.USER_PROFILE_MODAL_V2]),
-        e_ = (0, N.ZB)({
+        { analyticsLocations: e_ } = (0, u.ZP)([...eI, d.Z.USER_PROFILE_MODAL_V2]),
+        eZ = (0, N.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
             sourceSessionId: ep,
@@ -102,8 +102,8 @@ function ea(e) {
         eS = i.useMemo(() => (null != ec ? { [ec]: [t.id] } : {}), [ec, t.id]);
     (0, c.$)(eS, "UserProfileModalV2");
     let ew = (0, P.ZP)(t.id, eb ? ec : void 0),
-        eR = _.ZP.useName(null == ew ? void 0 : ew.guildId, ed, t),
-        { relationshipType: eD, originApplicationId: eL } = (0, r.cj)([I.Z], () => ({
+        eD = Z.ZP.useName(null == ew ? void 0 : ew.guildId, ed, t),
+        { relationshipType: eR, originApplicationId: eL } = (0, r.cj)([I.Z], () => ({
             relationshipType: I.Z.getRelationshipType(t.id),
             originApplicationId: I.Z.getOriginApplicationId(t.id),
         })),
@@ -121,12 +121,12 @@ function ea(e) {
             user: t,
             currentUser: ea,
         }),
-        eF = (0, v.Y)({ userId: t.id }),
-        eV = (0, h.vh)(t.id),
+        eV = (0, v.Y)({ userId: t.id }),
+        eF = (0, h.vh)(t.id),
         eW = (0, C.Z)(t.id),
         eH = (0, E.Z)(t.id),
         ez = (0, m.Dt)(),
-        eY = er.intl.format(er.t.KRe1Fh, { name: eR });
+        eY = er.intl.format(er.t.KRe1Fk, { name: eD });
     return (
         i.useEffect(() => {
             let e = () => {
@@ -136,16 +136,16 @@ function ea(e) {
                     }, 1000);
             };
             return (
-                Z.S.subscribe(ei.CkL.SHAKE_PROFILE_MODAL, e),
+                _.S.subscribe(ei.CkL.SHAKE_PROFILE_MODAL, e),
                 () => {
-                    Z.S.unsubscribe(ei.CkL.SHAKE_PROFILE_MODAL, e), (0, en.L$)(null);
+                    _.S.unsubscribe(ei.CkL.SHAKE_PROFILE_MODAL, e), (0, en.L$)(null);
                 }
             );
         }, []),
         (0, l.jsx)(u.Gt, {
-            value: eZ,
+            value: e_,
             children: (0, l.jsx)(N.Mt, {
-                value: e_,
+                value: eZ,
                 openedAt: ej,
                 fetchStartedAt: null == ew ? void 0 : ew.fetchStartedAt,
                 fetchEndedAt: null == ew ? void 0 : ew.fetchEndedAt,
@@ -175,21 +175,21 @@ function ea(e) {
                                                       children: [
                                                           (0, l.jsx)(s.nn4, {
                                                               children: ""
-                                                                  .concat(er.intl.string(er.t.apViam), ": ")
+                                                                  .concat(er.intl.string(er.t.apVial), ": ")
                                                                   .concat(eY),
                                                           }),
                                                           (0, l.jsx)("span", {
                                                               "aria-hidden": !0,
-                                                              children: er.intl.string(er.t.apViam),
+                                                              children: er.intl.string(er.t.apVial),
                                                           }),
                                                       ],
                                                   }),
                                                   (0, l.jsx)(s.Button, {
                                                       size: "sm",
                                                       variant: "secondary",
-                                                      text: er.intl.string(er.t.ojM1xM),
+                                                      text: er.intl.string(er.t.ojM1xJ),
                                                       onClick: eg,
-                                                      "aria-label": er.intl.string(er.t.cpT0Cg),
+                                                      "aria-label": er.intl.string(er.t.cpT0Cq),
                                                   }),
                                               ],
                                           })
@@ -227,7 +227,7 @@ function ea(e) {
                                                         (0, l.jsxs)("div", {
                                                             className: es.profileHeader,
                                                             children: [
-                                                                (0, l.jsx)(D.Z, {
+                                                                (0, l.jsx)(R.Z, {
                                                                     user: t,
                                                                     displayProfile: ew,
                                                                     themeType: eo.l.MODAL_V2,
@@ -263,7 +263,7 @@ function ea(e) {
                                                                     user: t,
                                                                     guildId: ec,
                                                                     onClose: eg,
-                                                                    nickname: _.ZP.useName(
+                                                                    nickname: Z.ZP.useName(
                                                                         null == ew ? void 0 : ew.guildId,
                                                                         ed,
                                                                         t,
@@ -274,13 +274,13 @@ function ea(e) {
                                                                     }),
                                                                     nicknameVariant: "heading-xl/semibold",
                                                                     pronouns: null == ew ? void 0 : ew.pronouns,
-                                                                    tags: (0, l.jsx)(R.Z, {
+                                                                    tags: (0, l.jsx)(D.Z, {
                                                                         displayProfile: ew,
                                                                         themeType: eo.l.MODAL_V2,
                                                                         onClose: eg,
                                                                     }),
                                                                 }),
-                                                                eD === ei.OGo.PENDING_INCOMING &&
+                                                                eR === ei.OGo.PENDING_INCOMING &&
                                                                     (0, l.jsx)(W.Z.Overlay, {
                                                                         className: es.profileOverlay,
                                                                         children: (0, l.jsx)(k.Z, {
@@ -295,7 +295,7 @@ function ea(e) {
                                                                             className: es.profileBanner,
                                                                         }),
                                                                     }),
-                                                                eV.map((e) => {
+                                                                eF.map((e) => {
                                                                     var n;
                                                                     let { applicationId: i } = e;
                                                                     return (0, l.jsx)(
@@ -325,7 +325,7 @@ function ea(e) {
                                                                     (0, l.jsx)(W.Z.Overlay, {
                                                                         className: es.profileOverlay,
                                                                         children: (0, l.jsx)(Q.Z, {
-                                                                            heading: er.intl.string(er.t.Iyka0d),
+                                                                            heading: er.intl.string(er.t.Iyka0U),
                                                                             headingVariant: "text-md/semibold",
                                                                             headingIcon: (0, l.jsx)(s.Mgn, {
                                                                                 size: "xs",
@@ -343,7 +343,7 @@ function ea(e) {
                                                                         isPremiumUser: (0, O.I5)(ea),
                                                                         onInteraction: eg,
                                                                     }),
-                                                                (0, l.jsx)(V.Z, {
+                                                                (0, l.jsx)(F.Z, {
                                                                     user: t,
                                                                     className: es.profileBanner,
                                                                 }),
@@ -355,7 +355,7 @@ function ea(e) {
                                                                         guildId: ec,
                                                                         channelId: ed,
                                                                         displayProfile: ew,
-                                                                        relationshipType: eD,
+                                                                        relationshipType: eR,
                                                                         onClose: eg,
                                                                     }),
                                                                 }),
@@ -366,16 +366,16 @@ function ea(e) {
                                                                         userBio: ew.bio,
                                                                         setLineClamp: !1,
                                                                     }),
-                                                                eF.length > 0 &&
+                                                                eV.length > 0 &&
                                                                     (0, l.jsx)(Q.Z, {
-                                                                        heading: er.intl.string(er.t["Uv/eT0"]),
+                                                                        heading: er.intl.string(er.t["Uv/eTx"]),
                                                                         children: (0, l.jsx)(U.Z, {
-                                                                            applicationIds: eF,
+                                                                            applicationIds: eV,
                                                                         }),
                                                                     }),
                                                                 (0, l.jsx)(Q.Z, {
-                                                                    heading: er.intl.string(er.t.a6XYDw),
-                                                                    children: (0, l.jsx)(F.Z, {
+                                                                    heading: er.intl.string(er.t.a6XYD9),
+                                                                    children: (0, l.jsx)(V.Z, {
                                                                         userId: t.id,
                                                                         guildId: null == ew ? void 0 : ew.guildId,
                                                                         tooltipDelay: el.vB,
@@ -393,7 +393,7 @@ function ea(e) {
                                                                     }),
                                                                 eW.length > 0 &&
                                                                     (0, l.jsx)(Q.Z, {
-                                                                        heading: er.intl.string(er.t["3fe7U1"]),
+                                                                        heading: er.intl.string(er.t["3fe7U5"]),
                                                                         scrollIntoView: ex === el.Tb.CONNECTIONS,
                                                                         children: (0, l.jsx)(q.Z, {
                                                                             connections: eW,
@@ -464,7 +464,7 @@ function ea(e) {
                                                                                             });
                                                                                     }
                                                                                     return e;
-                                                                                })({ action: "SET_NOTE" }, e_),
+                                                                                })({ action: "SET_NOTE" }, eZ),
                                                                             ),
                                                                     }),
                                                                 }),

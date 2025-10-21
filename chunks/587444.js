@@ -12,9 +12,9 @@ var i = n(120356),
     c = n(600164),
     u = n(981631),
     d = n(388032),
-    h = n(108103),
-    g = n(465106),
-    p = n(10198);
+    h = n(736688),
+    g = n(149715),
+    p = n(197571);
 function m(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -22,11 +22,11 @@ function m(e) {
             (0, r.jsx)(o.Ee, { src: n(689411) }),
             (0, r.jsx)(o.Dx, {
                 className: s()(p.marginTop20, p.marginBottom8, g.flexCenter),
-                children: d.intl.string(d.t.eL5z0t),
+                children: d.intl.string(d.t.eL5z0i),
             }),
             (0, r.jsx)(o.DK, {
                 className: p.marginBottom40,
-                children: d.intl.string(d.t["poAv6+"]),
+                children: d.intl.string(d.t.poAv63),
             }),
             (0, r.jsxs)(a.Zbd, {
                 className: h.card,

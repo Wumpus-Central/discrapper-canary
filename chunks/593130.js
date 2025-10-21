@@ -16,7 +16,7 @@ var r = n(951288),
     v = n(124368),
     x = n(981631),
     p = n(388032),
-    b = n(767146);
+    b = n(715);
 function Z(e) {
     let { channel: t, className: n, onClose: a } = e,
         Z = (0, o.e7)([d.Z], () => d.Z.can(x.Plq.READ_MESSAGE_HISTORY, t)),
@@ -75,7 +75,7 @@ function Z(e) {
                         (0, r.jsx)(c.Heading, {
                             variant: "heading-md/semibold",
                             className: b.title,
-                            children: p.intl.string(p.t.E3H5lJ),
+                            children: p.intl.string(p.t.E3H5lE),
                         }),
                         Z
                             ? (0, r.jsxs)(r.Fragment, {
@@ -128,7 +128,7 @@ function Z(e) {
                         (0, r.jsx)(c.P3F, {
                             className: b.closeIcon,
                             onClick: a,
-                            "aria-label": p.intl.string(p.t.cpT0Cg),
+                            "aria-label": p.intl.string(p.t.cpT0Cq),
                             children: (0, r.jsx)(c.Dio, {
                                 size: "md",
                                 color: "currentColor",
@@ -161,7 +161,7 @@ function w(e) {
         onChange: (e) => n(e),
         onClear: () => n(""),
         onKeyDown: (e) => "Enter" === e.key && l(),
-        placeholder: p.intl.string(p.t.h0JN7e),
-        "aria-label": p.intl.string(p.t.h0JN7e),
+        placeholder: p.intl.string(p.t.h0JN7Q),
+        "aria-label": p.intl.string(p.t.h0JN7Q),
     });
 }

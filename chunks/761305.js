@@ -12,7 +12,7 @@ var r,
     g = n(388905),
     p = n(981631),
     m = n(388032),
-    f = n(10198);
+    f = n(197571);
 function _(e, t, n) {
     return (
         t in e
@@ -72,13 +72,13 @@ class x extends (r = s.PureComponent) {
             children: [
                 (0, i.jsx)(g.Dx, {
                     className: f.marginBottom8,
-                    children: m.intl.string(m.t.Z33eiI),
+                    children: m.intl.string(m.t.Z33eiP),
                 }),
-                (0, i.jsx)(g.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
+                (0, i.jsx)(g.DK, { children: m.intl.format(m.t.NRWtfC, { guildName: n.name }) }),
                 (0, i.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: m.intl.string(m.t.fIv16O),
+                    children: m.intl.string(m.t.fIv16B),
                 }),
                 (0, i.jsx)(g.zx, {
                     className: f.marginTop8,
@@ -87,7 +87,7 @@ class x extends (r = s.PureComponent) {
                     onClick: () => {
                         t(p.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: m.intl.string(m.t["cGmT/P"]),
+                    children: m.intl.string(m.t["cGmT/J"]),
                 }),
             ],
         });
@@ -104,11 +104,11 @@ class x extends (r = s.PureComponent) {
                     className: f.marginBottom8,
                     children: m.intl.string(m.t.ox9hIS),
                 }),
-                (0, i.jsx)(g.DK, { children: m.intl.string(m.t["/dcuR0"]) }),
+                (0, i.jsx)(g.DK, { children: m.intl.string(m.t["/dcuR5"]) }),
                 (0, i.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: m.intl.string(m.t.fIv16O),
+                    children: m.intl.string(m.t.fIv16B),
                 }),
             ],
         });

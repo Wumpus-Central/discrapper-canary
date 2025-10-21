@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(474936),
     p = n(981631),
     h = n(388032),
-    m = n(810270);
+    m = n(12033);
 let g = (0, f.createChannelRecord)({
     id: "1",
     type: p.d4z.DM,
@@ -81,7 +81,7 @@ function E(e) {
                         onSubmit: R,
                         disableThemedBackground: v,
                     }),
-                    (0, r.jsx)(s.nn4, { children: h.intl.format(h.t["+DFxLS"], { maxLength: _.$n }) }),
+                    (0, r.jsx)(s.nn4, { children: h.intl.format(h.t["+DFxLc"], { maxLength: _.$n }) }),
                 ],
             }),
         })

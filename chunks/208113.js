@@ -9,19 +9,19 @@ var r = n(951288),
     u = n(726985),
     d = n(65154),
     f = n(388032),
-    _ = n(10198);
+    _ = n(197571);
 function p(e, t, n) {
     let r = [
         {
             value: d.iA.STANDARD,
-            label: f.intl.string(f.t.dqb2JS),
+            label: f.intl.string(f.t.dqb2JZ),
         },
     ];
     return (
         e &&
             r.push({
                 value: d.iA.LEGACY,
-                label: f.intl.string(f.t["TYfH+/"]),
+                label: f.intl.string(f.t["TYfH+5"]),
             }),
         t &&
             r.push({
@@ -31,7 +31,7 @@ function p(e, t, n) {
         n &&
             r.push({
                 value: d.iA.AUTOMATIC,
-                label: f.intl.string(f.t.qNgtOz),
+                label: f.intl.string(f.t.qNgtO1),
             }),
         r
     );
@@ -51,13 +51,13 @@ function h() {
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
         children: (0, r.jsx)(a.q4e, {
-            label: f.intl.string(f.t.wVBHr6),
+            label: f.intl.string(f.t.wVBHr0),
             className: _.marginBottom20,
             value: e,
             options: p(t, n, h),
             onChange: (e) => {
                 let t = () => o.Z.setAudioSubsystem(e);
-                (0, c.Z)(f.intl.string(f.t.uY7AcX), f.intl.string(f.t.gBqik5), t);
+                (0, c.Z)(f.intl.string(f.t.uY7AcQ), f.intl.string(f.t.gBqik6), t);
             },
         }),
     });

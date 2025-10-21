@@ -24,9 +24,9 @@ function _(e) {
             return s()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e;
         }),
         T = r.useMemo(() => S.ZP.canEditDiscriminator(y) && !y.hasUniqueUsername(), [y]),
-        [p, L] = r.useState(y.username),
-        [R, M] = r.useState(y.discriminator),
-        [A, P] = r.useState(""),
+        [p, R] = r.useState(y.username),
+        [L, M] = r.useState(y.discriminator),
+        [P, A] = r.useState(""),
         [b, U] = r.useState(!1),
         C = (0, u.e7)([E.Z], () => E.Z.getErrors()),
         w = y.hasUniqueUsername(),
@@ -46,32 +46,32 @@ function _(e) {
             null == (e = I.current) || e.focus();
         }
     }, [a]);
-    let x = R !== y.discriminator;
-    async function G(e) {
+    let x = L !== y.discriminator;
+    async function Z(e) {
         e.preventDefault(), U(!0);
         let t = await (0, g.Mn)({
             username: p,
-            discriminator: T ? R : void 0,
-            password: A,
+            discriminator: T ? L : void 0,
+            password: P,
         });
         U(!1), (null == t ? void 0 : t.ok) && _();
     }
     return (0, i.jsx)("form", {
-        onSubmit: G,
+        onSubmit: Z,
         children: (0, i.jsx)(l.Modal, {
             onClose: _,
             transitionState: a,
-            title: v.intl.string(v.t["m5or5+"]),
-            subtitle: v.intl.string(v.t.SLJvy8),
+            title: v.intl.string(v.t.m5or54),
+            subtitle: v.intl.string(v.t.SLJvy0),
             actions: [
                 {
                     variant: "secondary",
-                    text: v.intl.string(v.t["ETE/oK"]),
+                    text: v.intl.string(v.t["ETE/oC"]),
                     onClick: _,
                 },
                 {
                     variant: "primary",
-                    text: v.intl.string(v.t.i4jeWV),
+                    text: v.intl.string(v.t.i4jeWR),
                     type: "submit",
                     loading: b,
                 },
@@ -113,12 +113,12 @@ function _(e) {
                                             return e;
                                         })(
                                             {
-                                                label: v.intl.string(v.t.TWzdWl),
+                                                label: v.intl.string(v.t.TWzdWj),
                                                 error: k,
                                                 name: "username",
                                                 value: p,
                                                 maxLength: h.l$U,
-                                                onChange: L,
+                                                onChange: R,
                                                 inputRef: I,
                                                 fullWidth: !0,
                                             },
@@ -138,15 +138,15 @@ function _(e) {
                                                     },
                                                     (e) => ({ successMessage: e }),
                                                 )
-                                                .otherwise(() => (n ? { helperText: v.intl.string(v.t.z7c4bG) } : {}))),
+                                                .otherwise(() => (n ? { helperText: v.intl.string(v.t.z7c4bP) } : {}))),
                                         ),
                                     ),
                                     !y.hasUniqueUsername() &&
                                         (0, i.jsx)(d.oil, {
                                             name: "discriminator",
-                                            "aria-label": v.intl.string(v.t.ozumaG),
+                                            "aria-label": v.intl.string(v.t.ozumaN),
                                             maxLength: 4,
-                                            value: R,
+                                            value: L,
                                             onChange: M,
                                             disabled: !T,
                                             leading: "#",
@@ -158,17 +158,17 @@ function _(e) {
                                       variant: "text-xs/normal",
                                       color: "header-secondary",
                                       className: O.discriminatorChangeWarning,
-                                      children: v.intl.string(v.t.mConUV),
+                                      children: v.intl.string(v.t.mConUX),
                                   })
                                 : null,
                         ],
                     }),
                     (0, i.jsx)(d.oil, {
-                        label: v.intl.string(v.t.TmdnJy),
+                        label: v.intl.string(v.t.TmdnJ3),
                         error: null == C || null == (t = C.password) ? void 0 : t[0],
                         type: "password",
-                        value: A,
-                        onChange: P,
+                        value: P,
+                        onChange: A,
                     }),
                 ],
             }),

@@ -82,7 +82,7 @@ function w(e) {
         ? null
         : (0, i.jsx)(c.u, {
               asContainer: !0,
-              text: E.intl.string(E.t["3gUsJS"]),
+              text: E.intl.string(E.t["3gUsJb"]),
               children: (0, i.jsx)(u.P3F, {
                   className: a()(
                       S.iconItem,
@@ -93,7 +93,7 @@ function w(e) {
                       d.ZP.open(t.id);
                   },
                   tabIndex: r,
-                  "aria-label": E.intl.string(E.t["3gUsJS"]),
+                  "aria-label": E.intl.string(E.t["3gUsJb"]),
                   children: (0, i.jsx)(u.ewm, {
                       size: "xs",
                       color: "currentColor",
@@ -118,12 +118,12 @@ function T(e) {
         Z = (0, s.e7)([v.Z], () => (0, h.b)(v.Z, x, t, I)),
         w = (0, s.e7)([v.Z], () =>
             (null == t ? void 0 : t.type) === C.d4z.GUILD_VOICE && j.isVoiceChannelEntrypointEnabled
-                ? E.intl.string(E.t["EE+P0N"])
+                ? E.intl.string(E.t["EE+P0H"])
                 : j.isTextChannelEntrypointEnabled
-                  ? E.intl.string(E.t["0jeAXl"])
+                  ? E.intl.string(E.t["0jeAXt"])
                   : v.Z.can(C.Plq.CREATE_INSTANT_INVITE, t)
-                    ? E.intl.string(E.t.zJrgTE)
-                    : E.intl.string(E.t.Sd8Ix8),
+                    ? E.intl.string(E.t.zJrgTG)
+                    : E.intl.string(E.t.Sd8Ixw),
         ),
         T = l.useRef(null);
     if (o || !Z || t.isModeratorReportChannel()) return null;
@@ -199,13 +199,13 @@ function A(e) {
     let { channel: t } = e;
     return (0, i.jsx)(c.u, {
         asContainer: !0,
-        text: E.intl.string(E.t.ROh4T0),
+        text: E.intl.string(E.t["ROh4T+"]),
         children: (0, i.jsx)(u.P3F, {
             className: S.iconItem,
             onClick: () => {
                 (0, g._U)(t.guild_id, t.id);
             },
-            "aria-label": E.intl.string(E.t.ROh4T0),
+            "aria-label": E.intl.string(E.t["ROh4T+"]),
             children: (0, i.jsx)(u.Dio, {
                 size: "xs",
                 color: "currentColor",
@@ -218,13 +218,13 @@ function R(e) {
     let { channel: t } = e;
     return (0, i.jsx)(c.u, {
         asContainer: !0,
-        text: E.intl.string(E.t["N2c/Ul"]),
+        text: E.intl.string(E.t["N2c/Un"]),
         children: (0, i.jsx)(u.P3F, {
             className: S.iconItem,
             onClick: () => {
                 (0, g.dM)(t.guild_id, t.id, !0, { section: C.jXE.CHANNEL_LIST });
             },
-            "aria-label": E.intl.string(E.t["N2c/Ul"]),
+            "aria-label": E.intl.string(E.t["N2c/Un"]),
             children: (0, i.jsx)(u.dz2, {
                 size: "xs",
                 color: "currentColor",

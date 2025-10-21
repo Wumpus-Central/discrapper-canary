@@ -47,12 +47,12 @@ function b(e) {
                           type: "image",
                           src: y.edit_profile_upsell_image,
                       },
-                      title: g.intl.format(g.t.TXDztL, { applicationName: C.name }),
-                      body: i ? g.intl.string(g.t["63Kso6"]) : g.intl.string(g.t.HwXoeH),
+                      title: g.intl.format(g.t.TXDztH, { applicationName: C.name }),
+                      body: i ? g.intl.string(g.t["63Kso0"]) : g.intl.string(g.t.HwXoeC),
                       actions: [
                           i
                               ? {
-                                    text: g.intl.string(g.t.VSLDl5),
+                                    text: g.intl.string(g.t.VSLDly),
                                     onClick: () => {
                                         j(!0),
                                             (0, p.openUserProfileModal)({
@@ -67,7 +67,7 @@ function b(e) {
                                     loading: v,
                                 }
                               : {
-                                    text: g.intl.string(g.t.DSJi39),
+                                    text: g.intl.string(g.t["DSJi3+"]),
                                     onClick: () => {
                                         O(),
                                             j(!0),

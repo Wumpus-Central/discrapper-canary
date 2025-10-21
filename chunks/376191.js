@@ -18,7 +18,7 @@ var i = n(442837),
     _ = n(332712),
     E = n(81471),
     O = n(388032),
-    v = n(418337);
+    v = n(79072);
 let y = (e) => {
         let { userId: t } = e,
             n = (0, _.O)(t);
@@ -27,7 +27,7 @@ let y = (e) => {
                   className: v.mutualGuilds,
                   variant: "text-sm/normal",
                   color: "text-muted",
-                  children: O.intl.string(O.t.jpY0X1),
+                  children: O.intl.string(O.t.jpY0X5),
               })
             : (0, r.jsxs)("div", {
                   className: v.mutualGuildsContainer,
@@ -42,7 +42,7 @@ let y = (e) => {
                           className: v.mutualGuilds,
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          children: O.intl.format(O.t.eE3oen, { count: n.length }),
+                          children: O.intl.format(O.t.eE3oep, { count: n.length }),
                       }),
                   ],
               });
@@ -67,7 +67,7 @@ function C(e) {
                 src: (0, f.x)(n, 40, C),
                 avatarDecoration: N,
                 size: a.EFr.SIZE_40,
-                "aria-label": null != (t = null == l ? void 0 : l.username) ? t : O.intl.string(O.t["30mdIy"]),
+                "aria-label": null != (t = null == l ? void 0 : l.username) ? t : O.intl.string(O.t["30mdIx"]),
             }),
             (0, r.jsxs)("div", {
                 className: v.userPreview,

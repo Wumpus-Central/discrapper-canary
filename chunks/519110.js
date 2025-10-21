@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(704826), n(35282);
+n.d(t, { Z: () => S }), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -59,52 +59,52 @@ function j(e, t) {
         e
     );
 }
-function S(e) {
+function E(e) {
     return d.ZP.getByName(e.replace(/(^:|:$)/g, ""));
 }
-function E(e) {
-    let { type: t, id: n, name: E, isInExpressionPicker: P = !1 } = e,
-        { location: _ } = (0, s.O)(),
-        Z = i.useMemo(() => j(v({}, _), { section: P ? m.jXE.EXPRESSION_PICKER : m.jXE.CONTEXT_MENU }), [_, P]),
+function S(e) {
+    let { type: t, id: n, name: S, isInExpressionPicker: _ = !1 } = e,
+        { location: P } = (0, s.O)(),
+        Z = i.useMemo(() => j(v({}, P), { section: _ ? m.jXE.EXPRESSION_PICKER : m.jXE.CONTEXT_MENU }), [P, _]),
         T = (0, p.Go)(),
-        w = (0, l.e7)([O.Z], () => (t === f.S.STICKER && null != n ? O.Z.getStickerById(n) : null)),
-        I = null != w && T.includes(w.id),
+        I = (0, l.e7)([O.Z], () => (t === f.S.STICKER && null != n ? O.Z.getStickerById(n) : null)),
+        w = null != I && T.includes(I.id),
         A = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
-                else if (null != E) {
+                else if (null != S) {
                     var e;
-                    return null != (e = S(E)) ? e : S(d.ZP.convertSurrogateToName(E));
+                    return null != (e = E(S)) ? e : E(d.ZP.convertSurrogateToName(S));
                 }
             }
         }),
         N = (0, c.C1)(null, A);
-    return null != w && t === f.S.STICKER
-        ? (0, y.J8)(w) && !(0, y.V9)(w)
+    return null != I && t === f.S.STICKER
+        ? (0, y.J8)(I) && !(0, y.V9)(I)
             ? null
-            : I
+            : w
               ? (0, r.jsx)(a.sNh, {
                     id: "unfavorite",
-                    action: () => (0, g.hW)(w.id),
-                    label: h.intl.string(h.t.XhzKyM),
+                    action: () => (0, g.hW)(I.id),
+                    label: h.intl.string(h.t.XhzKyF),
                 })
               : (0, r.jsx)(a.sNh, {
                     id: "favorite",
                     action: () => {
                         (0, b.cQ)({
-                            sticker: w,
+                            sticker: I,
                             location: j(v({}, Z), { object: m.qAy.STICKER }),
                         }),
-                            (0, g.SA)(null == w ? void 0 : w.id);
+                            (0, g.SA)(null == I ? void 0 : I.id);
                     },
-                    label: h.intl.string(h.t.kWmiPT),
+                    label: h.intl.string(h.t.kWmiPW),
                 })
         : null != A && t === f.S.EMOJI
           ? N
               ? (0, r.jsx)(a.sNh, {
                     id: "unfavorite",
                     action: () => (0, o.Xe)(A),
-                    label: h.intl.string(h.t.Ay49KC),
+                    label: h.intl.string(h.t.Ay49KA),
                 })
               : (0, r.jsx)(a.sNh, {
                     id: "favorite",
@@ -115,7 +115,7 @@ function E(e) {
                         }),
                             (0, o.$K)(A);
                     },
-                    label: h.intl.string(h.t["nNsr6+"]),
+                    label: h.intl.string(h.t.nNsr67),
                 })
           : void 0;
 }

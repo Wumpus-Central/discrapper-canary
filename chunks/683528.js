@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(549635),
     p = n(217702),
     h = n(388032),
-    m = n(439096);
+    m = n(27505);
 let g = 40;
 function E(e) {
     return "media-view-scroll-thumbnail-".concat(e);
@@ -91,7 +91,7 @@ function v(e) {
                 onClick: (e) => e.stopPropagation(),
                 children: t.map((e, i) => {
                     let l = i === n,
-                        c = l ? h.t["qv/U5e"] : h.t.zviMAA;
+                        c = l ? h.t["qv/U5V"] : h.t.zviMAG;
                     return (0, r.jsx)(
                         s.P3F,
                         {

@@ -202,13 +202,13 @@ function N(e) {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 className: C.header,
-                children: _.intl.string(_.t.mhxUsL),
+                children: _.intl.string(_.t.mhxUsE),
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
                 className: C.subheader,
-                children: _.intl.string(_.t.GtWdQE),
+                children: _.intl.string(_.t.GtWdQH),
             }),
             (0, r.jsxs)("div", {
                 className: C.help,
@@ -219,7 +219,7 @@ function N(e) {
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: _.intl.string(_.t.Ok55Ki),
+                            children: _.intl.string(_.t.Ok55Kh),
                         }),
                     }),
                     (0, r.jsx)("div", { className: C.helpSeparator }),
@@ -228,7 +228,7 @@ function N(e) {
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: _.intl.string(_.t["6gsjdH"]),
+                            children: _.intl.string(_.t["6gsjdM"]),
                         }),
                     }),
                     (0, r.jsx)("div", { className: C.helpSeparator }),
@@ -254,17 +254,17 @@ function I() {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         className: C.header,
-                        children: _.intl.string(_.t.WslWRE),
+                        children: _.intl.string(_.t.WslWRL),
                     }),
                     (0, r.jsxs)(l.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
-                        children: [e, _.intl.string(_.t.z9k21N)],
+                        children: [e, _.intl.string(_.t.z9k21H)],
                     }),
                     (0, r.jsxs)(l.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
-                        children: [e, _.intl.string(_.t.t1LelZ)],
+                        children: [e, _.intl.string(_.t.t1Lele)],
                     }),
                 ],
             }),
@@ -278,8 +278,8 @@ function S(e) {
     return (0, r.jsx)("div", {
         className: C.review,
         children: (0, r.jsx)(l.rsf, {
-            label: s ? _.intl.string(_.t.MBdTCQ) : _.intl.string(_.t.Wslim5),
-            description: s ? _.intl.string(_.t.LokpLi) : _.intl.string(_.t.nBIyJi),
+            label: s ? _.intl.string(_.t.MBdTCZ) : _.intl.string(_.t["Wslim+"]),
+            description: s ? _.intl.string(_.t.LokpLi) : _.intl.string(_.t.nBIyJp),
             checked: s,
             onChange: () => n(!1),
             disabled: !s && !a,
@@ -299,11 +299,11 @@ function T(e) {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
-                        children: s ? _.intl.string(_.t.FcIcT0) : _.intl.string(_.t.R09tJy),
+                        children: s ? _.intl.string(_.t.FcIcT8) : _.intl.string(_.t.R09tJ2),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-xs/normal",
-                        children: s ? _.intl.string(_.t.ockHVV) : _.intl.string(_.t["u/ji09"]),
+                        children: s ? _.intl.string(_.t.ockHVS) : _.intl.string(_.t["u/ji07"]),
                     }),
                 ],
             }),
@@ -314,12 +314,12 @@ function T(e) {
                         size: "sm",
                         variant: "secondary",
                         onClick: a,
-                        text: _.intl.string(_.t["6gsjdH"]),
+                        text: _.intl.string(_.t["6gsjdM"]),
                     }),
                     (0, r.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: _.intl.string(_.t.Yz7hsL),
+                        text: _.intl.string(_.t.Yz7hsB),
                         onClick: () => n(d),
                         disabled: !s,
                     }),
@@ -344,7 +344,7 @@ function P(e) {
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/medium",
                       color: "text-muted",
-                      children: _.intl.string(_.t.HVoKZ2),
+                      children: _.intl.string(_.t.HVoKZ5),
                   }),
               ],
           });

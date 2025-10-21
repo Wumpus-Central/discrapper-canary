@@ -14,7 +14,7 @@ var r,
     g = n(585483),
     _ = n(981631),
     f = n(388032),
-    b = n(72291);
+    b = n(633448);
 function x(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ class v extends (r = l.PureComponent) {
                     children: (0, i.jsx)(p.hU, {
                         variant: "icon-only",
                         icon: "caret" === s ? p.V7D : p.whL,
-                        "aria-label": f.intl.string(f.t.vgfxaG),
+                        "aria-label": f.intl.string(f.t.vgfxaA),
                         onClick: this.handlePrevious,
                     }),
                 }),
@@ -67,7 +67,7 @@ class v extends (r = l.PureComponent) {
                             {
                                 onClick: () => this.handleDotClick(t),
                                 className: t === e ? o()(b.dotSelected, l) : o()(b.dotNormal, a),
-                                "aria-label": f.intl.formatToPlainString(f.t["2SXOrK"], { pageNumber: t + 1 }),
+                                "aria-label": f.intl.formatToPlainString(f.t["2SXOrM"], { pageNumber: t + 1 }),
                             },
                             "dot-".concat(t),
                         ),
@@ -78,7 +78,7 @@ class v extends (r = l.PureComponent) {
                     children: (0, i.jsx)(p.hU, {
                         variant: "icon-only",
                         icon: "caret" === s ? p.Fbu : p.ZSh,
-                        "aria-label": f.intl.string(f.t.XiOHRU),
+                        "aria-label": f.intl.string(f.t.XiOHRX),
                         onClick: this.handleNext,
                     }),
                 }),

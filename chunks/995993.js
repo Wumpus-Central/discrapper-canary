@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(176505),
     v = n(490897),
     j = n(388032),
-    x = n(88448);
+    x = n(885525);
 function C(e) {
     let { guild: t, selected: C } = e,
         E = (0, p.Z)(t),
@@ -36,10 +36,10 @@ function C(e) {
             let r = m.default.extractTimestamp(n);
             return null != e && e > r;
         }),
-        T = i.useCallback(() => {
+        w = i.useCallback(() => {
             (0, h.uL)(O.Z5c.CHANNEL(t.id, E ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
         }, [t.id, E]),
-        w = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e("8926").then(n.bind(n, 156673));
@@ -110,10 +110,10 @@ function C(e) {
                     color: "currentColor",
                     className: e,
                 }),
-            text: E ? j.intl.string(j.t.h9mGOD) : j.intl.string(j.t.et6wam),
+            text: E ? j.intl.string(j.t.h9mGOP) : j.intl.string(j.t.et6wav),
             selected: C,
-            onClick: T,
-            onContextMenu: w,
+            onClick: w,
+            onContextMenu: T,
             trailing: A,
         })
     );

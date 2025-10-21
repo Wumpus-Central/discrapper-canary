@@ -28,7 +28,7 @@ var i = n(793030),
     O = n(761652),
     v = n(689079),
     I = n(388032),
-    T = n(114781);
+    T = n(12816);
 function S(e, t, n) {
     return (
         t in e
@@ -152,8 +152,8 @@ let P = {
             autocompletes: t,
             onHover: l,
             onClick: c,
-            titleWithQuery: I.t.HFRoZW,
-            titleWithoutQuery: I.intl.string(I.t["0hKkS0"]),
+            titleWithQuery: I.t.HFRoZR,
+            titleWithoutQuery: I.intl.string(I.t["0hKkS+"]),
             getQuery: (e) => "".concat(O.GI).concat(e),
             Component: d ? m.ZP.Command : m.ZP.NewCommand,
             getProps: (e) => {
@@ -174,7 +174,7 @@ let P = {
                 (0, r.jsx)(i.Avr, {
                     size: "xs",
                     onClick: N,
-                    text: I.intl.string(I.t["8a0P09"]),
+                    text: I.intl.string(I.t["8a0P0y"]),
                 }),
         });
     },

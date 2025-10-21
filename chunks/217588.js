@@ -30,8 +30,8 @@ var r = n(951288),
     w = n(981631),
     D = n(474936),
     L = n(388032),
-    x = n(24506),
-    M = n(702417);
+    x = n(564651),
+    M = n(975900);
 function k(e, t, n) {
     return (
         t in e
@@ -92,7 +92,7 @@ let B = 80,
     Y = 12,
     W = (e, t) =>
         t
-            ? L.intl.format(L.t.auckX1, { stickerPackName: e.name })
+            ? L.intl.format(L.t.auckXz, { stickerPackName: e.name })
             : L.intl.format(L.t.OzB6e3, { stickerPackName: e.name }),
     K = (e) => {
         let { sticker: t, stickerPack: n } = e;
@@ -226,7 +226,7 @@ let X = (e) => {
                             {
                                 variant: "secondary",
                                 size: "sm",
-                                text: L.intl.string(L.t.GPy3Ag),
+                                text: L.intl.string(L.t.GPy3Ar),
                                 onClick: E,
                             },
                             "view-sticker-pack",
@@ -275,18 +275,18 @@ let X = (e) => {
         U
             ? (t = Z
                   ? et
-                      ? L.intl.string(L.t.fZ0DiI)
-                      : L.intl.string(L.t["1f6D9v"])
+                      ? L.intl.string(L.t.fZ0DiG)
+                      : L.intl.string(L.t["1f6D9m"])
                   : en
-                    ? L.intl.string(L.t.yHmoR0)
+                    ? L.intl.string(L.t.yHmoR9)
                     : L.intl.string(L.t.vZaScH))
             : Z
-              ? ((t = et ? L.intl.string(L.t.jNphpq) : L.intl.string(L.t.lyD5ZW)),
+              ? ((t = et ? L.intl.string(L.t.jNphpt) : L.intl.string(L.t.lyD5ZW)),
                 (er = !0),
                 (ei = "Custom Sticker Popout (Upsell)"))
               : en
-                ? ((t = L.intl.string(L.t.IuXYcn)), (er = !0), (ei = "Custom Sticker Popout (Upsell)"))
-                : ((t = L.intl.format(L.t.hGWuxc, {
+                ? ((t = L.intl.string(L.t.IuXYch)), (er = !0), (ei = "Custom Sticker Popout (Upsell)"))
+                : ((t = L.intl.format(L.t.hGWuxU, {
                       openPremiumSettings: () => {
                           z(a), h();
                       },
@@ -327,7 +327,7 @@ let X = (e) => {
                                     subscriptionTier: D.Si.TIER_2,
                                     size: c.zx.Sizes.SMALL,
                                     fullWidth: !0,
-                                    textOptions: { textOverride: L.intl.string(L.t["gl/XHB"]) },
+                                    textOptions: { textOverride: L.intl.string(L.t["gl/XHJ"]) },
                                     onSubscribeModalClose: (t) => (t ? e() : h()),
                                     postSuccessGuild: Z || null == A ? void 0 : A,
                                     premiumModalAnalyticsLocation: Q,
@@ -339,7 +339,7 @@ let X = (e) => {
                                     children: (0, r.jsx)(u.Button, {
                                         variant: "primary",
                                         size: "sm",
-                                        text: L.intl.string(L.t.riu2R0),
+                                        text: L.intl.string(L.t.riu2R5),
                                         fullWidth: !0,
                                         onClick: e,
                                     }),
@@ -365,7 +365,7 @@ let X = (e) => {
                                 variant: "text-sm/normal",
                                 color: "text-secondary",
                                 className: M.guildTitle,
-                                children: Z ? L.intl.string(L.t.kx6pEB) : L.intl.string(L.t.pDE7GR),
+                                children: Z ? L.intl.string(L.t.kx6pEG) : L.intl.string(L.t.pDE7Gb),
                             }),
                             (0, r.jsx)(E.Oe, {
                                 expressionSourceGuild: a,
@@ -384,7 +384,7 @@ let X = (e) => {
                                                         className: M.__invalid_showMoreEmojisLabel,
                                                         variant: "text-xs/normal",
                                                         color: "none",
-                                                        children: L.intl.string(L.t.vtH5ho),
+                                                        children: L.intl.string(L.t.vtH5hn),
                                                     }),
                                                     (0, r.jsx)(u.CJ0, {
                                                         size: "md",
@@ -452,7 +452,7 @@ function J(e) {
         className: x.popoutContent,
         children: (0, r.jsx)(q, {
             sticker: i,
-            description: L.intl.format(L.t.hGWuxc, {
+            description: L.intl.format(L.t.hGWuxU, {
                 openPremiumSettings: () => {
                     n(), z(t);
                 },

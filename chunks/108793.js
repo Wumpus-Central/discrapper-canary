@@ -11,7 +11,7 @@ var r = n(951288),
     m = n(801461),
     g = n(981631),
     f = n(388032),
-    E = n(38579);
+    E = n(631936);
 function p(e) {
     var t,
         n,
@@ -43,18 +43,18 @@ function p(e) {
             switch (e) {
                 case m.Wq.EDIT_USERNAME:
                     return {
-                        header: f.intl.string(f.t["a/zCWl"]),
-                        subtitle: f.intl.string(f.t.gGz0sb),
+                        header: f.intl.string(f.t["a/zCWh"]),
+                        subtitle: f.intl.string(f.t.gGz0se),
                     };
                 case m.Wq.EDIT_DISPLAY_NAME:
                     return {
-                        header: f.intl.string(f.t.SRDNcH),
+                        header: f.intl.string(f.t.SRDNcG),
                         subtitle: f.intl.string(f.t["940AS0"]),
                     };
                 case m.Wq.PREVIEW:
                     return {
-                        header: f.intl.formatToPlainString(f.t.XDHrcn, { displayName: t }),
-                        subtitle: f.intl.format(f.t.bWE0ZG, {
+                        header: f.intl.formatToPlainString(f.t.XDHrcj, { displayName: t }),
+                        subtitle: f.intl.format(f.t.bWE0ZD, {
                             onClick: () => {
                                 n(), (0, l.openUserSettings)();
                             },
@@ -62,14 +62,14 @@ function p(e) {
                     };
                 case m.Wq.SUGGESTION:
                     return {
-                        header: f.intl.string(f.t.F7T4dX),
-                        subtitle: f.intl.formatToPlainString(f.t.Z8F83d, {}),
-                        link: f.intl.format(f.t["i2vB8/"], { helpdeskArticle: c.Z.getArticleURL(g.BhN.POMELO_FAQ) }),
+                        header: f.intl.string(f.t.F7T4db),
+                        subtitle: f.intl.formatToPlainString(f.t.Z8F83a, {}),
+                        link: f.intl.format(f.t.i2vB8z, { helpdeskArticle: c.Z.getArticleURL(g.BhN.POMELO_FAQ) }),
                     };
                 default:
                     return {
-                        header: f.intl.string(f.t["a/zCWl"]),
-                        subtitle: f.intl.string(f.t.gGz0sb),
+                        header: f.intl.string(f.t["a/zCWh"]),
+                        subtitle: f.intl.string(f.t.gGz0se),
                     };
             }
         })(b, u.ZP.getName(S), _),

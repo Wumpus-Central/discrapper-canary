@@ -4,7 +4,7 @@ var r = n(951288),
     l = n(755721),
     o = n(298213),
     a = n(388032),
-    s = n(17250);
+    s = n(231796);
 function c(e) {
     let { userId: t, applicationId: n } = e,
         [c, u] = i.useState(!1),
@@ -50,7 +50,7 @@ function c(e) {
                 submitting: c,
                 disabled: d,
                 onClick: h,
-                children: a.intl.string(a.t.ZcibdX),
+                children: a.intl.string(a.t.Zcibdf),
             }),
             (0, r.jsx)(l.zx, {
                 className: s.ignoreButton,
@@ -60,7 +60,7 @@ function c(e) {
                 submitting: d,
                 disabled: c,
                 onClick: f,
-                children: a.intl.string(a.t.xuio0N),
+                children: a.intl.string(a.t.xuio0C),
             }),
         ],
     });

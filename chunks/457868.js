@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(100527),
     y = n(906732),
     _ = n(82295),
-    j = n(91218),
-    O = n(623624),
+    O = n(91218),
+    j = n(623624),
     x = n(518738),
     v = n(850020),
     C = n(965376),
@@ -39,8 +39,8 @@ var r = n(951288),
     G = n(276264),
     H = n(981631),
     F = n(388032),
-    B = n(101265),
-    V = n(854641);
+    B = n(61722),
+    V = n(32482);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,7 +84,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             y = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             _ = (null == b ? void 0 : b.id) === (null == y ? void 0 : y.id),
-            j = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
+            O = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
             x = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
             C = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([E.Z], () => E.Z.getAnyStreamForUser(a)),
@@ -95,7 +95,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("32646")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("96456")]).then(
                                 n.bind(n, 654663),
                             );
                             return (n) => {
@@ -142,7 +142,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             Y = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, O.f)({
+                        (0, j.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: H.jXE.THREAD_MEMBER_LIST,
@@ -205,7 +205,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: y,
                             nick: null == h ? void 0 : h.nick,
-                            status: j,
+                            status: O,
                             activities: C,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -219,7 +219,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             premiumSince: null == X ? null : new Date(X),
                             onClickPremiumGuildIcon: Y,
                             itemProps: D,
-                            lostPermissionTooltipText: M ? void 0 : F.intl.string(F.t["/QcoT0"]),
+                            lostPermissionTooltipText: M ? void 0 : F.intl.string(F.t["/QcoTz"]),
                             isOwner: U,
                             nameplate: q,
                             onClick: (e) => {
@@ -249,12 +249,12 @@ let W = U.ZP.getEnableHardwareAcceleration(),
               })
             : (0, r.jsxs)(_.Z, {
                   className: V.membersGroup,
-                  "aria-label": F.intl.formatToPlainString(F.t.UaqbkZ, {
+                  "aria-label": F.intl.formatToPlainString(F.t.Uaqbke, {
                       title: n,
                       count: i,
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(j.Z, z({ className: V.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(O.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [n, " \u2014 ", i],
@@ -278,14 +278,14 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                                   color: "currentColor",
                               }),
                               "\xA0",
-                              F.intl.string(F.t.BTLTAg),
+                              F.intl.string(F.t.BTLTAs),
                           ],
                       }),
                       (0, r.jsx)(h.Text, {
                           variant: "text-sm/normal",
                           color: "header-secondary",
                           className: B.instructions,
-                          children: F.intl.string(F.t.Hsd8hI),
+                          children: F.intl.string(F.t.Hsd8hC),
                       }),
                   ],
               })
@@ -356,7 +356,7 @@ function X(e) {
                 listRef: r,
             };
         })(l, Y),
-        j = 0 === u.length || u.every((e) => 0 === e.userIds.length);
+        O = 0 === u.length || u.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             D.default.track(H.rMx.MEMBER_LIST_VIEWED, {
@@ -365,10 +365,10 @@ function X(e) {
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id, t.type]),
-        j)
+        O)
     )
         return (0, r.jsx)(J, { channel: t });
-    let O = o().omit(g.containerProps, ["ref"]),
+    let j = o().omit(g.containerProps, ["ref"]),
         x = M.iJ(n);
     return (0, r.jsx)(y.Gt, {
         value: s,
@@ -418,12 +418,12 @@ function X(e) {
                                     footerHeight: (e) => 80 * (u[e] === f && t.type === H.d4z.PRIVATE_THREAD),
                                     renderFooter: (e) =>
                                         u[e.section] === f ? (0, r.jsx)(Q, { channel: t }, "footer") : null,
-                                    innerAriaLabel: F.intl.string(F.t["9Oq93t"]),
+                                    innerAriaLabel: F.intl.string(F.t["9Oq93m"]),
                                     innerTag: "ul",
                                     sections: u.map((e) => e.userIds.length),
                                     fade: !0,
                                 },
-                                O,
+                                j,
                                 e,
                             ),
                             l,
@@ -442,7 +442,7 @@ function J(e) {
                 className: B.emptyStateHeader,
                 variant: "text-xs/bold",
                 color: "interactive-normal",
-                children: F.intl.string(F.t["9Oq93t"]),
+                children: F.intl.string(F.t["9Oq93m"]),
             }),
             (0, r.jsxs)("div", {
                 className: B.emptyStateIconContainer,
@@ -459,13 +459,13 @@ function J(e) {
             }),
             (0, r.jsx)(h.Heading, {
                 variant: "heading-md/semibold",
-                children: t.isForumPost() ? F.intl.string(F.t.p0UgNT) : F.intl.string(F.t["9/n5v7"]),
+                children: t.isForumPost() ? F.intl.string(F.t.p0UgNQ) : F.intl.string(F.t["9/n5vz"]),
             }),
             (0, r.jsx)(h.Text, {
                 className: B.emptyStateSubtext,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: F.intl.string(F.t.emw8UF),
+                children: F.intl.string(F.t.emw8UP),
             }),
         ],
     });

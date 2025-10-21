@@ -14,7 +14,7 @@ var r = n(951288),
     h = n(115610),
     m = n(981631),
     g = n(388032),
-    E = n(247708);
+    E = n(38297);
 function b(e) {
     let { message: t, channel: a, compact: b } = e,
         y = (0, s.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
@@ -37,7 +37,7 @@ function b(e) {
                           className: o()({ [E.compact]: b }),
                           children: (0, r.jsx)("div", {
                               className: o()({ [E.compact]: b }),
-                              children: "" !== t.content ? t.content : g.intl.string(g.t.wnn1DQ),
+                              children: "" !== t.content ? t.content : g.intl.string(g.t.wnn1Dc),
                           }),
                       }),
                   }),
@@ -64,7 +64,7 @@ function b(e) {
                           }),
                           (0, r.jsx)(l.Button, {
                               variant: "secondary",
-                              text: g.intl.string(g.t.gbrrAw),
+                              text: g.intl.string(g.t.gbrrAz),
                               icon:
                                   null != O
                                       ? {

@@ -12,8 +12,8 @@ var a = n(951288),
     p = n(507808),
     h = n(981631),
     x = n(388032),
-    f = n(270469),
-    g = n(892260),
+    f = n(97127),
+    g = n(665923),
     b = n(477154),
     v = n(387888);
 let j = () => {
@@ -49,8 +49,8 @@ let j = () => {
                 ctaText: t,
                 ctaOnClick: n,
                 analyticsPage: i,
-                linkPreText: o = x.intl.string(x.t["5qZv9P"]),
-                linkText: d = x.intl.string(x.t.XRdyj4),
+                linkPreText: o = x.intl.string(x.t["5qZv9E"]),
+                linkText: d = x.intl.string(x.t.XRdyjz),
             } = e,
             u = r.useCallback(() => {
                 null != i &&

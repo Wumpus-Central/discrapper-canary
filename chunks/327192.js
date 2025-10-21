@@ -39,7 +39,7 @@ var r = n(951288),
     B = n(856651),
     Z = n(921944),
     F = n(388032),
-    V = n(465631);
+    V = n(11049);
 function H(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ let z = (e) => {
             () => ({
                 isJoining: C.Z.isJoining(a.id),
                 joinErrorMessage:
-                    "" === C.Z.joinErrorMessage(a.id) ? F.intl.string(F.t.j2d6Ki) : C.Z.joinErrorMessage(a.id),
+                    "" === C.Z.joinErrorMessage(a.id) ? F.intl.string(F.t.j2d6Km) : C.Z.joinErrorMessage(a.id),
                 showJoinErrorMessage: void 0 !== C.Z.joinErrorMessage(a.id),
             }),
             [a.id],
@@ -120,7 +120,7 @@ let z = (e) => {
                 onClick: u,
                 disabled: o,
                 variant: "primary",
-                text: o ? F.intl.string(F.t.RXvQQk) : F.intl.string(F.t.XpeFYm),
+                text: o ? F.intl.string(F.t.RXvQQu) : F.intl.string(F.t.XpeFYr),
             })),
         (0, r.jsxs)("div", {
             className: V.integrationWrapper,
@@ -198,7 +198,7 @@ function q(e) {
             n.type === G.ABu.TWITTER &&
                 o &&
                 (s = (0, r.jsx)(d.u, {
-                    text: F.intl.string(F.t.Jebrw8),
+                    text: F.intl.string(F.t.Jebrww),
                     children: (0, r.jsx)(A.Z, {
                         color: u.Z.unsafe_rawColors.TWITTER.css,
                         children: (0, r.jsx)(_.kmB, {
@@ -244,7 +244,7 @@ function q(e) {
                     (0, r.jsx)(_.P3F, {
                         className: V.connectionDelete,
                         onClick: eo,
-                        "aria-label": F.intl.string(F.t.ppppRE),
+                        "aria-label": F.intl.string(F.t.ppppRJ),
                         focusProps: {
                             offset: {
                                 top: -4,
@@ -312,13 +312,13 @@ function q(e) {
                             variant: "text-xs/normal",
                             color: "text-secondary",
                             className: V.connectedAccountVanityMetadataCreatedAt,
-                            children: F.intl.format(F.t["9rfonp"], { date: a }),
+                            children: F.intl.format(F.t["9rfonh"], { date: a }),
                         },
                         "member-since",
                     ),
                 ));
         let o = H.includes(e.id),
-            s = F.intl.string(F.t.wzzjk5);
+            s = F.intl.string(F.t.wzzjk9);
         if (null == i || 0 === i.length)
             if (!0 !== b.Z.get(e.type).hasMetadata) return null;
             else
@@ -336,16 +336,16 @@ function q(e) {
                         {
                             variant: "text-xs/normal",
                             className: V.connectionMetadataUpsellDescription,
-                            children: F.intl.format(F.t.Up2ni4, {
+                            children: F.intl.format(F.t.Up2ni7, {
                                 helpdeskUrl: w.Z.getArticleURL(G.BhN.CONNECTION_DETAILS),
                             }),
                         },
                         "label",
                     ),
                 ]),
-                    (s = F.intl.string(F.t["LVh3//"]));
+                    (s = F.intl.string(F.t["LVh3/5"]));
         return (
-            o && (s = F.intl.string(F.t.i4jeWV)),
+            o && (s = F.intl.string(F.t.i4jeWR)),
             i.push(
                 (0, r.jsx)(
                     "div",
@@ -357,7 +357,7 @@ function q(e) {
                             size: "sm",
                             loading: k,
                             disabled: o,
-                            "aria-label": F.intl.string(F.t.sCkLYG),
+                            "aria-label": F.intl.string(F.t.sCkLYH),
                             onClick: o
                                 ? void 0
                                 : () => {
@@ -385,13 +385,13 @@ function q(e) {
         return (
             G.BFP.has(n.type) &&
                 (i = (0, r.jsx)(_.rsf, {
-                    label: F.intl.string(F.t["+KCMSk"]),
+                    label: F.intl.string(F.t["+KCMSi"]),
                     checked: c,
                     onChange: ec,
                 })),
             G.vbS.has(n.type) &&
                 (a = (0, r.jsx)(_.rsf, {
-                    label: F.intl.format(F.t["6u6J0t"], { platform: e.name }),
+                    label: F.intl.format(F.t["6u6J0q"], { platform: e.name }),
                     checked: S,
                     onChange: eu,
                 })),
@@ -406,7 +406,7 @@ function q(e) {
                 className: V.connectionOptions,
                 children: [
                     (0, r.jsx)(_.rsf, {
-                        label: F.intl.string(F.t.f7yOAQ),
+                        label: F.intl.string(F.t.f7yOAX),
                         checked: 1 === m,
                         onChange: es,
                     }),
@@ -421,11 +421,11 @@ function q(e) {
         return n.revoked
             ? (0, r.jsx)(s.Wn, {
                   messageType: s.QYI.INFO,
-                  children: F.intl.format(F.t["6C4lgI"], { onReconnect: ea }),
+                  children: F.intl.format(F.t["6C4lgA"], { onReconnect: ea }),
               })
             : n.integrations.length > 0
               ? (0, r.jsx)(_.gNt, {
-                    label: F.intl.string(F.t.fOe3fX),
+                    label: F.intl.string(F.t.fOe3fZ),
                     children: n.integrations.map((e) => (0, r.jsx)(z, { integration: e }, e.id)),
                 })
               : void 0;
@@ -448,16 +448,16 @@ function q(e) {
                 K(
                     Y(
                         {
-                            title: F.intl.formatToPlainString(F.t.U5x12d, { name: e.name }),
+                            title: F.intl.formatToPlainString(F.t.U5x12f, { name: e.name }),
                             subtitle: F.intl.format(F.t.VgqIPj, { provider: e.name }),
                             actions: [
                                 {
-                                    text: F.intl.string(F.t["ETE/oK"]),
+                                    text: F.intl.string(F.t["ETE/oC"]),
                                     onClick: i.onClose,
                                     variant: "secondary",
                                 },
                                 {
-                                    text: F.intl.string(F.t.bsbMV1),
+                                    text: F.intl.string(F.t.bsbMVz),
                                     onClick: () => {
                                         t(), i.onClose();
                                     },
@@ -470,7 +470,7 @@ function q(e) {
                     {
                         children:
                             (0, x.Z)(n) &&
-                            (0, r.jsx)(M.Z, { children: F.intl.format(F.t.COW3Xl, { platformName: e.name }) }),
+                            (0, r.jsx)(M.Z, { children: F.intl.format(F.t.COW3Xn, { platformName: e.name }) }),
                     },
                 ),
             ),
@@ -532,8 +532,8 @@ function X() {
             [],
         ),
         (0, r.jsx)(_.gNt, {
-            label: F.intl.string(F.t.ZeDrUV),
-            description: F.intl.format(F.t["oYc+Gx"], { privacyPolicyUrl: G.EYA.PRIVACY }),
+            label: F.intl.string(F.t.ZeDrUf),
+            description: F.intl.format(F.t["oYc+Gz"], { privacyPolicyUrl: G.EYA.PRIVACY }),
             children: (0, r.jsx)(J, {}),
         })
     );
@@ -570,7 +570,7 @@ function J() {
                 ),
             ),
             (0, r.jsx)(d.u, {
-                text: F.intl.string(F.t.QqTz8f),
+                text: F.intl.string(F.t.QqTz8b),
                 children: (0, r.jsx)("div", {
                     className: o()(V.accountAddWrapper, V.__invalid_accountButton),
                     children: (0, r.jsx)(_.tEY, {
@@ -578,11 +578,11 @@ function J() {
                             className: o()(V.accountAddInner, V.accountButtonInner),
                             type: "button",
                             onClick: e,
-                            "aria-label": F.intl.string(F.t.Zhcj9f),
+                            "aria-label": F.intl.string(F.t.Zhcj9X),
                             children: (0, r.jsx)(_.Fbu, {
                                 color: "currentColor",
                                 size: "md",
-                                "aria-label": F.intl.string(F.t.QqTz8f),
+                                "aria-label": F.intl.string(F.t.QqTz8b),
                             }),
                         }),
                     }),
@@ -606,7 +606,7 @@ function $(e) {
                     theme: a,
                     children: (0, r.jsx)(_.OZU, {
                         note: F.intl.string(F.t.WenGZ2),
-                        children: F.intl.string(F.t["aoLS8/"]),
+                        children: F.intl.string(F.t.aoLS84),
                     }),
                 })
               : i
@@ -641,7 +641,7 @@ let ee = () => {
     e)
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)(k.Z, {
-              title: F.intl.string(F.t["3fe7U1"]),
+              title: F.intl.string(F.t["3fe7U5"]),
               children: [
                   (0, r.jsx)(X, {}),
                   (0, r.jsx)(_.izJ, { gap: 24 }),

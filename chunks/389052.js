@@ -84,7 +84,7 @@ function m(e) {
         : (0, r.jsx)(a.sNh, {
               id: "block",
               color: null != T ? T : "default",
-              label: I ? d.intl.string(d.t.XyHpKC) : d.intl.string(d.t.l4EmaW),
+              label: I ? d.intl.string(d.t.XyHpKH) : d.intl.string(d.t.l4Emac),
               action: I
                   ? () => {
                         null == E || E(),
@@ -94,7 +94,7 @@ function m(e) {
                   : () => {
                         (0, a.ZDy)(
                             async () => {
-                                let { default: e } = await Promise.all([n.e("97652"), n.e("1783")]).then(
+                                let { default: e } = await Promise.all([n.e("97652"), n.e("13093")]).then(
                                     n.bind(n, 478923),
                                 );
                                 return (n) =>

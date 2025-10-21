@@ -17,7 +17,7 @@ var r = n(951288),
     _ = n(982183),
     O = n(981631),
     y = n(388032),
-    v = n(66449);
+    v = n(361584);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -162,7 +162,7 @@ let I = {
     [_.r0.ACK]: {
         type: "standard",
         Icon: a.dz2,
-        label: y.intl.string(y.t.e6RscX),
+        label: y.intl.string(y.t.e6RscS),
         onClick: (e) => {
             s.Z.dispatch({
                 type: "NOTIFICATIONS_INBOX_ITEM_ACK",
@@ -184,7 +184,7 @@ let I = {
     },
     [_.r0.BOOKMARK]: {
         type: "menu",
-        label: y.intl.string(y.t["9p3D9v"]),
+        label: y.intl.string(y.t["9p3D9p"]),
         Icon: (e) =>
             null != f.Z.getSavedMessage(e.message.channel_id, e.message.id)
                 ? (0, r.jsx)(a.plf, j({}, e))
@@ -208,7 +208,7 @@ let I = {
                         null != i
                             ? (0, r.jsx)(a.sNh, {
                                   id: "remove-from-for-later",
-                                  label: y.intl.string(y.t.SvXS1d),
+                                  label: y.intl.string(y.t.SvXS1Z),
                                   icon: a.plf,
                                   action: () =>
                                       (0, p.x)({
@@ -220,7 +220,7 @@ let I = {
                               })
                             : (0, r.jsx)(a.sNh, {
                                   id: "create-bookmark",
-                                  label: y.intl.string(y.t["9p3D9v"]),
+                                  label: y.intl.string(y.t["9p3D9p"]),
                                   icon: a.gt9,
                                   action: () =>
                                       (0, p.z)({
@@ -239,7 +239,7 @@ let I = {
     [_.r0.SETTINGS]: {
         type: "menu",
         Icon: a.Dkj,
-        label: y.intl.string(y.t.h850Sk),
+        label: y.intl.string(y.t.h850Ss),
         interactionType: g.s_.SETTINGS,
         Menu: (e) => {
             let { channel: t, renderPopoutProps: n } = e;
@@ -249,7 +249,7 @@ let I = {
                       x(j({}, n), {
                           channel: t,
                           navId: "thread-context",
-                          label: y.intl.string(y.t["1NBjqa"]),
+                          label: y.intl.string(y.t["1NBjqb"]),
                       }),
                   )
                 : (0, r.jsx)(
@@ -257,7 +257,7 @@ let I = {
                       x(j({}, n), {
                           channel: t,
                           navId: "channel-context",
-                          label: y.intl.string(y.t.Xm41aW),
+                          label: y.intl.string(y.t.Xm41aV),
                       }),
                   );
         },

@@ -14,7 +14,7 @@ function h(e) {
     let { active: t, user: n, channel: h } = e,
         g = (0, c.K)(),
         m = i.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.EDYbS0), l.ToastType.FAILURE));
+            (0, l.showToast)((0, l.createToast)(p.intl.string(p.t["EDYbS+"]), l.ToastType.FAILURE));
         }, []),
         b = i.useCallback(() => {
             o.Z.closeChannelSidebar(s.uZ);
@@ -54,7 +54,7 @@ function h(e) {
                         children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: p.intl.string(p.t.B2nygY),
+                            text: p.intl.string(p.t.B2nygW),
                             onClick: (e) => {
                                 e.stopPropagation(), O(h.id);
                             },
@@ -68,7 +68,7 @@ function h(e) {
                         children: (0, r.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: p.intl.string(p.t.Kz8Pws),
+                            text: p.intl.string(p.t.Kz8Pwr),
                             onClick: (e) => {
                                 e.stopPropagation(), E(h.id);
                             },

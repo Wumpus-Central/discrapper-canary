@@ -10,7 +10,7 @@ var a = n(951288),
     d = n(823379),
     m = n(5192),
     p = n(388032),
-    f = n(290590);
+    f = n(79148);
 function v(e) {
     let { user: t } = e,
         n = m.ZP.useName(null, null, t);
@@ -45,7 +45,7 @@ function h(e) {
                 children: (0, a.jsxs)(s.vwX, {
                     className: f.title,
                     children: [
-                        p.intl.string(p.t.WTozwc),
+                        p.intl.string(p.t.WTozwe),
                         (0, a.jsxs)("div", {
                             className: f.userCountPill,
                             children: [

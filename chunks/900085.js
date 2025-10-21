@@ -27,15 +27,15 @@ var r,
     P = n(483360),
     N = n(459273),
     Z = n(585483),
-    T = n(63063),
-    w = n(51596),
+    w = n(63063),
+    T = n(51596),
     A = n(823385),
     R = n(415795),
     D = n(670512),
     L = n(558631),
     M = n(981631),
     k = n(388032),
-    G = n(227129);
+    G = n(712198);
 function U(e, t, n) {
     return (
         t in e
@@ -94,8 +94,8 @@ let V = () =>
             (0, i.jsx)("div", {
                 className: G.emptyStateCTA,
                 children: (0, i.jsx)(d.Anchor, {
-                    href: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
-                    children: k.intl.string(k.t["4iPfEB"]),
+                    href: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+                    children: k.intl.string(k.t["4iPfEO"]),
                 }),
             }),
         ],
@@ -192,10 +192,10 @@ class Q extends l.PureComponent {
                   }));
     }
     close() {
-        (0, w.Cp)();
+        (0, T.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, w.yC)(e);
+        this.setState({ query: e }), (0, T.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -210,7 +210,7 @@ class Q extends l.PureComponent {
                 (0, i.jsx)(d.tEY, {
                     children: (0, i.jsx)("input", {
                         className: G.input,
-                        "aria-label": k.intl.string(k.t.ZvKwYW),
+                        "aria-label": k.intl.string(k.t.ZvKwYa),
                         ref: this.inputRef,
                         type: "text",
                         role: "combobox",
@@ -218,7 +218,7 @@ class Q extends l.PureComponent {
                         "aria-expanded": r,
                         "aria-activedescendant": r ? this.getRowId(e) : void 0,
                         "aria-autocomplete": "list",
-                        placeholder: k.intl.string(k.t.Vtvewc),
+                        placeholder: k.intl.string(k.t.VtvewW),
                         onChange: this.handleInputChange,
                         onKeyDown: this.handleKeyDown,
                         value: this.state.query,
@@ -243,7 +243,7 @@ class Q extends l.PureComponent {
                   : (0, i.jsx)(d._2F, {
                         innerId: this._listId,
                         innerRole: "listbox",
-                        "aria-label": k.intl.string(k.t.Wef5Dg),
+                        "aria-label": k.intl.string(k.t.Wef5Do),
                         ref: this.scrollerRef,
                         sectionHeight: 0,
                         rowHeight: 34,
@@ -269,12 +269,12 @@ class Q extends l.PureComponent {
         return (0, i.jsx)(_.Z, {
             className: a()(G.protip, { [G.hasContent]: this.state.query.length > 0 }),
             type: _.Z.Types.INLINE,
-            children: k.intl.format(k.t.wukqXV, {
-                userSymbolHook: (e, t) => X(t, g.xQ.USER, k.intl.string(k.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => X(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => X(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJi"])),
-                guildSymbolHook: (e, t) => X(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWl)),
-                helpdeskArticle: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+            children: k.intl.format(k.t.wukqXQ, {
+                userSymbolHook: (e, t) => X(t, g.xQ.USER, k.intl.string(k.t.GQRCGn)),
+                textChannelSymbolHook: (e, t) => X(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
+                voiceChannelSymbolHook: (e, t) => X(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJp"])),
+                guildSymbolHook: (e, t) => X(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWi)),
+                helpdeskArticle: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -285,7 +285,7 @@ class Q extends l.PureComponent {
     }
     render() {
         return (0, i.jsx)(s.IX, {
-            "aria-label": k.intl.string(k.t.ZvKwYW),
+            "aria-label": k.intl.string(k.t.ZvKwYa),
             size: "lg",
             transitionState: this.props.transitionState,
             onClose: this.props.onClose,
@@ -314,10 +314,10 @@ class Q extends l.PureComponent {
                 !1 !== e && this.setState({ mouseFocusDisabled: !1 });
             }),
             U(this, "focusResult", (e) => {
-                this.state.mouseFocusDisabled || (0, w.tF)(this.props.results.indexOf(e));
+                this.state.mouseFocusDisabled || (0, T.tF)(this.props.results.indexOf(e));
             }),
             U(this, "selectResult", (e) => {
-                (0, w.Se)(e, this.props.queryMode === g.h8.TEXT_CHANNEL);
+                (0, T.Se)(e, this.props.queryMode === g.h8.TEXT_CHANNEL);
             }),
             U(this, "handleContextMenu", (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -332,23 +332,23 @@ class Q extends l.PureComponent {
                                 n.e("51453"),
                                 n.e("7654"),
                                 n.e("845"),
-                                n.e("99063"),
+                                n.e("86736"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("44686"),
                                 n.e("30378"),
-                                n.e("29679"),
+                                n.e("64982"),
                                 n.e("22516"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("8209"),
+                                n.e("73709"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
                                     F(B({}, n), {
                                         guild: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: T.Cp,
                                         hideSettings: !0,
                                     }),
                                 );
@@ -375,7 +375,7 @@ class Q extends l.PureComponent {
                                             F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -394,7 +394,7 @@ class Q extends l.PureComponent {
                                             F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -408,7 +408,7 @@ class Q extends l.PureComponent {
                                             e,
                                             F(B({}, t), {
                                                 channel: r,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -421,7 +421,7 @@ class Q extends l.PureComponent {
                                             F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -443,7 +443,7 @@ class Q extends l.PureComponent {
                                     F(B({}, n), {
                                         channel: t.record,
                                         selected: S.Z.getChannelId() === t.record.id,
-                                        onSelect: w.Cp,
+                                        onSelect: T.Cp,
                                     }),
                                 );
                         });
@@ -457,7 +457,7 @@ class Q extends l.PureComponent {
                                     e,
                                     F(B({}, n), {
                                         user: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: T.Cp,
                                     }),
                                 );
                         });
@@ -471,11 +471,11 @@ class Q extends l.PureComponent {
                     { selectedIndex: l } = this.props;
                 switch (i) {
                     case "escape":
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, w.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, T.Cp)();
                         return;
                     case "k":
                         (!0 === e.ctrlKey || !0 === e.metaKey) &&
-                            (e.preventDefault(), e.stopPropagation(), (0, w.Cp)());
+                            (e.preventDefault(), e.stopPropagation(), (0, T.Cp)());
                         return;
                     case "enter": {
                         if (-1 === l) return;
@@ -501,7 +501,7 @@ class Q extends l.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, w.tF)(l);
+                e.preventDefault(), (0, T.tF)(l);
             }),
             U(this, "handleGlobalPaste", (e) => {
                 var t, n;
@@ -645,7 +645,7 @@ class Q extends l.PureComponent {
                                     n.record.type === m.Ky.SETTINGS &&
                                     (0, i.jsx)("div", {
                                         className: G.miscContainer,
-                                        children: k.intl.string(k.t["3D5yo6"]),
+                                        children: k.intl.string(k.t["3D5yo/"]),
                                     }),
                             },
                             "".concat(n.type, "-").concat(n.record.id),
@@ -683,8 +683,8 @@ function J(e) {
                 })
                 .filter((e) => "" !== e.title && null != e.path);
             e.unshift({
-                title: k.intl.string(k.t["3D5yo6"]),
-                searchableTitles: [k.intl.string(k.t["3D5yo6"])],
+                title: k.intl.string(k.t["3D5yo/"]),
+                searchableTitles: [k.intl.string(k.t["3D5yo/"])],
                 path: M.Z5c.SETTINGS("account"),
             }),
                 (0, P.gF)(e);

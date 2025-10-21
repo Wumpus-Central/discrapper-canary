@@ -8,7 +8,7 @@ var i = n(28664),
     s = n(200615),
     c = n(981631),
     u = n(388032),
-    d = n(242081);
+    d = n(58174);
 function m(e) {
     let { product: t } = e,
         n = (0, o.ql)(t, c.tuJ.PREMIUM_TIER_2);
@@ -18,8 +18,8 @@ function m(e) {
         className: d.container,
         children: [
             (0, r.jsx)(i.u, {
-                text: u.intl.string(u.t.MPFyJy),
-                "aria-label": u.intl.string(u.t.X3Ekj4),
+                text: u.intl.string(u.t.MPFyJ5),
+                "aria-label": u.intl.string(u.t.X3Ekj8),
                 children: (0, r.jsx)(a.SrA, {
                     size: "md",
                     color: "currentColor",
@@ -28,7 +28,7 @@ function m(e) {
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-xs/medium",
-                children: u.intl.format(u.t.Sv8iiY, {
+                children: u.intl.format(u.t.Sv8iic, {
                     price: m,
                     subscribeNowHook: (e) => (0, r.jsx)(s.F, { text: e }),
                 }),

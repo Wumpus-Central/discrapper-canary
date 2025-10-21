@@ -8,7 +8,7 @@ var i = n(951288),
     d = n(626135),
     u = n(981631),
     h = n(388032),
-    c = n(10198);
+    c = n(197571);
 function p(t, e, n) {
     return (
         e in t
@@ -55,7 +55,7 @@ class m extends s.Component {
                         tag: "strong",
                         variant: "text-md/normal",
                         className: c.marginBottom20,
-                        children: h.intl.string(h.t.UCEXPj),
+                        children: h.intl.string(h.t.UCEXPq),
                     }),
                 }),
                 (0, i.jsx)(l.mzw, {
@@ -64,12 +64,12 @@ class m extends s.Component {
                         children: [
                             (0, i.jsx)(l.Button, {
                                 variant: "primary",
-                                text: h.intl.string(h.t.taPRcH),
+                                text: h.intl.string(h.t.taPRcJ),
                                 onClick: this.handleRequestElevated,
                             }),
                             (0, i.jsx)(l.Button, {
                                 variant: "secondary",
-                                text: h.intl.string(h.t.of0VoK),
+                                text: h.intl.string(h.t.of0VoB),
                                 onClick: this.handleStreamWithoutSound,
                             }),
                         ],

@@ -7,9 +7,9 @@ var r = t(951288),
     s = t(796724),
     d = t(343312),
     c = t(619733),
-    u = t(45765),
+    u = t(470658),
     g = t(388032),
-    m = t(487569);
+    m = t(871404);
 function f(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -60,10 +60,10 @@ function p(e) {
                 case c.EK.SELECT_GAME:
                     return {
                         title: g.intl.string(u.default["3vWDMz"]),
-                        subtitle: g.intl.string(u.default.Az5bjo),
+                        subtitle: g.intl.string(u.default.Az5bjs),
                     };
                 case c.EK.SERVER_SETTINGS:
-                    return { title: g.intl.string(u.default["RLGW9/"]) };
+                    return { title: g.intl.string(u.default.RLGW9z) };
             }
         })(n);
     return (0, r.jsxs)(

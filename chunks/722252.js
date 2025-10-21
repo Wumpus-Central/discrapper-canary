@@ -8,7 +8,7 @@ var i = n(951288),
     c = n(996987),
     d = n(231338),
     u = n(388032),
-    p = n(307320);
+    p = n(55667);
 class m extends r.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
@@ -124,7 +124,7 @@ class m extends r.PureComponent {
                         l === d.Pl.MANAGE_MESSAGES
                             ? (0, i.jsx)(a.Wn, {
                                   messageType: a.QYI.WARNING,
-                                  children: u.intl.string(u.t["2XIdPj"]),
+                                  children: u.intl.string(u.t["2XIdPp"]),
                               })
                             : null,
                         "string" == typeof b &&

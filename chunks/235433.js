@@ -16,8 +16,8 @@ var r = n(951288),
     g = n(981631),
     E = n(921944),
     b = n(388032),
-    y = n(62222),
-    O = n(714892);
+    y = n(592186),
+    O = n(147164);
 function v(e) {
     let { user: t, guildId: n, className: v } = e,
         I = u.JH.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
@@ -51,7 +51,7 @@ function v(e) {
     if (!I && !j) return null;
     let U = void 0 !== N ? N : C;
     return (0, r.jsx)(m.Z, {
-        title: b.intl.string(y.default["86GtGB"]),
+        title: b.intl.string(y.default["86GtGH"]),
         titleIcon: L
             ? (0, r.jsx)(o.IGR, {
                   text: b.intl.string(b.t.y2b7CA),
@@ -68,7 +68,7 @@ function v(e) {
                     (0, r.jsx)(o.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: b.intl.string(y.default.vJqrIi),
+                        text: b.intl.string(y.default.vJqrIg),
                         onClick: x,
                     }),
                 null == n &&
@@ -76,7 +76,7 @@ function v(e) {
                     (0, r.jsx)(o.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: b.intl.string(y.default.ymq8WV),
+                        text: b.intl.string(y.default.ymq8WQ),
                         onClick: M,
                     }),
                 null != n &&

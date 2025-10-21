@@ -8,10 +8,10 @@ var a = e(951288),
     l = e(677281),
     d = e(378298),
     u = e(359119),
-    b = e(473092),
-    _ = e(388032),
-    g = e(962129),
-    x = e(74866);
+    _ = e(473092),
+    b = e(388032),
+    g = e(332287),
+    x = e(583140);
 function v() {
     return (0, a.jsxs)("div", {
         className: c()(x.toast, g.toast),
@@ -21,7 +21,7 @@ function v() {
                 className: x.__invalid_content,
                 color: "header-primary",
                 variant: "text-md/normal",
-                children: _.intl.string(_.t["gd/Yqq"]),
+                children: b.intl.string(b.t["gd/Yqs"]),
             }),
         ],
     });
@@ -35,11 +35,11 @@ function h(n) {
                 (null == x ? void 0 : x.feedback_type) !== n &&
                     ((0, d.Ms)(t, e, n),
                     (0, o.showToast)(
-                        (0, o.createToast)(_.intl.string(_.t["gd/Yqq"]), o.ToastType.CUSTOM, {
+                        (0, o.createToast)(b.intl.string(b.t["gd/Yqs"]), o.ToastType.CUSTOM, {
                             component: (0, a.jsx)(v, {}),
                         }),
                     ),
-                    (0, b.qc)({
+                    (0, _.qc)({
                         channelId: t,
                         warningId: e,
                         senderId: i,
@@ -55,7 +55,7 @@ function h(n) {
             (0, a.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: _.intl.string(_.t.L84yVl),
+                children: b.intl.string(b.t.L84yVm),
             }),
             (0, a.jsxs)("div", {
                 className: g.buttonsContainer,
@@ -66,8 +66,8 @@ function h(n) {
                             h ? g.buttonsBackgroundActive : g.buttonsBackgroundInactive,
                             { [g.disabled]: h },
                         ]),
-                        onClick: () => p(u.ny.UPVOTE, b.NM.FEEDBACK_UPVOTE),
-                        "aria-label": _.intl.string(_.t["2GrOCA"]),
+                        onClick: () => p(u.ny.UPVOTE, _.NM.FEEDBACK_UPVOTE),
+                        "aria-label": b.intl.string(b.t["2GrOCN"]),
                         children: (0, a.jsx)(l.Z, {
                             className: g.__invalid_buttonIcon,
                             color: "interactive-normal",
@@ -79,8 +79,8 @@ function h(n) {
                             k ? g.buttonsBackgroundActive : g.buttonsBackgroundInactive,
                             { [g.disabled]: k },
                         ]),
-                        onClick: () => p(u.ny.DOWNVOTE, b.NM.FEEDBACK_DOWNVOTE),
-                        "aria-label": _.intl.string(_.t.COp9BA),
+                        onClick: () => p(u.ny.DOWNVOTE, _.NM.FEEDBACK_DOWNVOTE),
+                        "aria-label": b.intl.string(b.t.COp9BO),
                         children: (0, a.jsx)(r.Z, {
                             className: g.__invalid_buttonIcon,
                             color: "interactive-normal",

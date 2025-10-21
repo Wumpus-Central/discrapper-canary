@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(626135),
     d = n(981631),
     f = n(388032),
-    _ = n(62222);
+    _ = n(592186);
 function p(e, t, n) {
     return (
         t in e
@@ -82,15 +82,15 @@ function E() {
         y = (0, c.A)("useAccessibilityItems"),
         O = [
             {
-                name: f.intl.string(f.t.YEOEi4),
+                name: f.intl.string(f.t.YEOEi6),
                 value: "username",
             },
             {
-                name: f.intl.string(f.t.mQaro6),
+                name: f.intl.string(f.t.mQaro3),
                 value: "dot",
             },
             {
-                name: f.intl.string(f.t.Ji2EVF),
+                name: f.intl.string(f.t.Ji2EVJ),
                 value: "hidden",
             },
         ];
@@ -103,7 +103,7 @@ function E() {
             {
                 children: (0, r.jsx)(a.S89, {
                     id: "reduced-motion",
-                    label: f.intl.string(f.t.b3XBzs),
+                    label: f.intl.string(f.t.b3XBzg),
                     checked: t,
                     action: () => (0, o.Zt)(t ? "no-preference" : "reduce"),
                 }),
@@ -115,7 +115,7 @@ function E() {
             {
                 children: (0, r.jsx)(a.II_, {
                     id: "input",
-                    label: f.intl.string(f.t["5PWWCQ"]),
+                    label: f.intl.string(f.t["5PWWCY"]),
                     control: (t, n) =>
                         (0, r.jsx)(
                             a._wy,
@@ -123,7 +123,7 @@ function E() {
                                 ref: n,
                                 value: 100 * e,
                                 onChange: (e) => (0, o.o2)(e / 100),
-                                "aria-label": f.intl.string(f.t["5PWWCQ"]),
+                                "aria-label": f.intl.string(f.t["5PWWCY"]),
                             }),
                         ),
                 }),
@@ -135,7 +135,7 @@ function E() {
             {
                 children: (0, r.jsx)(a.sNh, {
                     id: "role-colors",
-                    label: f.intl.string(f.t.uSOPWl),
+                    label: f.intl.string(f.t.uSOPWm),
                     children: O.map((e) => {
                         let { name: t, value: i } = e;
                         return (0, r.jsx)(
@@ -159,7 +159,7 @@ function E() {
             {
                 children: (0, r.jsx)(a.S89, {
                     id: "display-name-styles",
-                    label: f.intl.string(_.default["2gFUEx"]),
+                    label: f.intl.string(_.default["2gFUEw"]),
                     checked: E,
                     action: v,
                 }),
@@ -175,7 +175,7 @@ function E() {
                     {
                         children: (0, r.jsx)(a.S89, {
                             id: "high-contrast",
-                            label: f.intl.string(f.t.aZlePj),
+                            label: f.intl.string(f.t.aZlePv),
                             checked: p,
                             action: () => (0, o.vW)(p ? s.X.DEFAULT : s.X.HIGH),
                         }),
@@ -190,7 +190,7 @@ function E() {
                     {
                         children: (0, r.jsx)(a.S89, {
                             id: "switch-icons",
-                            label: f.intl.string(f.t["S3z+pa"]),
+                            label: f.intl.string(f.t["S3z+pV"]),
                             checked: m,
                             action: () => (0, o.ky)(!m),
                         }),

@@ -5,8 +5,8 @@ var r = n(951288),
     a = n(454585),
     s = n(273744),
     o = n(388032),
-    c = n(132875),
-    d = n(10198);
+    c = n(124252),
+    d = n(197571);
 let u = (e) => {
         var t, n;
         let {
@@ -75,7 +75,7 @@ let u = (e) => {
                           value: e,
                           isValid: !0,
                       }))
-                    : (Z(o.intl.string(o.t["24xrGR"])),
+                    : (Z(o.intl.string(o.t["24xrGb"])),
                       b({
                           value: e,
                           isValid: !1,

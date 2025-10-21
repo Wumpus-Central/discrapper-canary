@@ -16,7 +16,7 @@ var r = n(951288),
     m = n(50493),
     g = n(981631),
     N = n(388032),
-    h = n(38998);
+    h = n(536037);
 function O(e) {
     var t, n;
     let { permission: l, roleIds: i, guild: _, specMap: A } = e,
@@ -25,12 +25,12 @@ function O(e) {
         O = I._o.has(T),
         f = (0, a.Wu)([d.Z], () => d.Z.getManyRoles(_.id, i), [_.id, i]);
     return (0, r.jsx)(o.u, {
-        "aria-label": N.intl.string(N.t["0g8Xd3"]),
+        "aria-label": N.intl.string(N.t["0g8Xd/"]),
         __unsupportedReactNodeAsText: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Text, {
                     variant: "text-sm/normal",
-                    children: O ? N.intl.string(N.t["GEuu/P"]) : N.intl.string(N.t.wgGiCg),
+                    children: O ? N.intl.string(N.t["GEuu/O"]) : N.intl.string(N.t.wgGiCk),
                 }),
                 f.map((e) =>
                     (0, r.jsx)(
@@ -83,7 +83,7 @@ let f = l.memo(function (e) {
                     children: (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "text-feedback-positive",
-                        children: N.intl.string(N.t.sXhykZ),
+                        children: N.intl.string(N.t.sXhykX),
                     }),
                 });
             let e = [];
@@ -122,7 +122,7 @@ let f = l.memo(function (e) {
                       (0, r.jsx)(u.Text, {
                           variant: "eyebrow",
                           color: "header-secondary",
-                          children: N.intl.string(N.t.ZCq2nJ),
+                          children: N.intl.string(N.t.ZCq2nC),
                       }),
                       (0, r.jsxs)(u.P3F, {
                           className: h.viewAllPermissions,
@@ -131,7 +131,7 @@ let f = l.memo(function (e) {
                               (0, r.jsx)(u.Text, {
                                   variant: "eyebrow",
                                   color: "interactive-normal",
-                                  children: N.intl.format(N.t["0x6aTk"], { count: d }),
+                                  children: N.intl.format(N.t["0x6aTm"], { count: d }),
                               }),
                               (0, r.jsx)(u.Fbu, {
                                   size: "custom",

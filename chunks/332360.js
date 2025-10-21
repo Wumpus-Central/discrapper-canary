@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(631885),
     f = n(87792),
     _ = n(292352),
-    p = n(412297),
+    p = n(660886),
     h = n(388032),
-    m = n(262448);
+    m = n(84989);
 let g = () => {
         let e = (0, d.ZM)(),
             t = (0, u.cz)(),
@@ -68,7 +68,7 @@ let g = () => {
                 (0, r.jsxs)(s.P3F, {
                     className: m.backButton,
                     onClick: n,
-                    "aria-label": h.intl.string(h.t.ybUZqq),
+                    "aria-label": h.intl.string(h.t.ybUZql),
                     children: [
                         (0, r.jsx)(s.j9r, {
                             size: "sm",
@@ -77,7 +77,7 @@ let g = () => {
                         (0, r.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: h.intl.string(h.t["13/7kZ"]),
+                            children: h.intl.string(h.t["13/7kX"]),
                         }),
                     ],
                 }),
@@ -93,12 +93,12 @@ let g = () => {
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    children: h.intl.string(p.default.RZqaJi),
+                                    children: h.intl.string(p.default.RZqaJn),
                                 }),
                                 (0, r.jsx)(s.Heading, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
-                                    children: h.intl.string(e === _.dG.CONTENT_AND_SOCIAL ? h.t["+o1pDQ"] : h.t.OAuOHB),
+                                    children: h.intl.string(e === _.dG.CONTENT_AND_SOCIAL ? h.t["+o1pDZ"] : h.t.OAuOHD),
                                 }),
                             ],
                         }),

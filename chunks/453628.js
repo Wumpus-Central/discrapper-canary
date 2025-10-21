@@ -10,7 +10,7 @@ var l = n(120356),
     o = n(755721),
     s = n(481060),
     c = n(388032),
-    d = n(81348);
+    d = n(114284);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -121,13 +121,13 @@ function f(e) {
         { type: l, onSelect: m, isSelected: b } = e;
     switch (l) {
         case "DENY":
-            (i = c.intl.string(c.t["6639Oz"])), (t = s.Dio), (n = d.deny);
+            (i = c.intl.string(c.t["6639O5"])), (t = s.Dio), (n = d.deny);
             break;
         case "ALLOW":
             (i = c.intl.string(c.t.RzDfSk)), (t = s.dz2), (n = d.allow);
             break;
         default:
-            (i = c.intl.string(c.t.ujC3ZW)), (t = s.XZC), (n = d.passthrough);
+            (i = c.intl.string(c.t.ujC3ZS)), (t = s.XZC), (n = d.passthrough);
     }
     let g = (0, o.jm)({
         isSelected: b,

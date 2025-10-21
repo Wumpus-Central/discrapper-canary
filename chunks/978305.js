@@ -14,10 +14,10 @@ var n = t(951288),
     p = t(631885),
     x = t(292352),
     y = t(981631),
-    v = t(412297),
+    v = t(660886),
     b = t(388032),
-    h = t(938399),
-    g = t(10198);
+    h = t(352258),
+    g = t(197571);
 let O = (e) => {
     let { transitionState: r, onClose: t } = e,
         s = (0, m.Z)(),
@@ -25,9 +25,9 @@ let O = (e) => {
         { getLinkCode: _, isGetLinkCodeLoading: j } = (0, C.G)({}),
         q = (0, p.rW)(),
         N = (0, p.gU)(),
-        S = o.useRef(N);
+        z = o.useRef(N);
     i()(!s, "FamilyCenterQRCodeModal should only be rendered for teens.");
-    let z = () => {
+    let S = () => {
         O(
             (e) => (
                 f.default.track(y.rMx.FAMILY_CENTER_ACTION, { action: a ? x.YC.HideQRCode : x.YC.RevealQRCode }), !e
@@ -42,8 +42,8 @@ let O = (e) => {
         _();
     }),
         o.useEffect(() => {
-            N > S.current && t();
-        }, [S, N, t]);
+            N > z.current && t();
+        }, [z, N, t]);
     let E = a && !j && null != q;
     return (0, n.jsxs)(c.IX, {
         transitionState: r,
@@ -57,7 +57,7 @@ let O = (e) => {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    b.intl.string(v.default.iHYMAw),
+                    b.intl.string(v.default.iHYMAz),
                 ],
             }),
             (0, n.jsxs)(c.fef, {
@@ -66,13 +66,13 @@ let O = (e) => {
                         className: g.marginBottom8,
                         variant: "text-lg/bold",
                         color: "header-primary",
-                        children: b.intl.string(v.default.AVTZaG),
+                        children: b.intl.string(v.default.AVTZaN),
                     }),
                     (0, n.jsx)(c.Text, {
                         className: g.marginBottom20,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: b.intl.format(v.default.LyyCsL, {
+                        children: b.intl.format(v.default.LyyCsE, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
@@ -80,7 +80,7 @@ let O = (e) => {
                         className: h.qrCodeContainer,
                         children: (0, n.jsx)(c.P3F, {
                             className: l()(h.qrCodeObscure, { [h.visible]: E }),
-                            onClick: z,
+                            onClick: S,
                             children: (0, n.jsx)(u.c2, {
                                 size: 272,
                                 text: E ? q : x.vH,
@@ -93,7 +93,7 @@ let O = (e) => {
                         className: h.reminder,
                         variant: "text-xs/semibold",
                         color: "header-secondary",
-                        children: b.intl.string(v.default.goDyoa),
+                        children: b.intl.string(v.default.goDyoe),
                     }),
                 ],
             }),
@@ -102,13 +102,13 @@ let O = (e) => {
                 actions: [
                     {
                         variant: "secondary",
-                        text: b.intl.string(b.t.cpT0Cg),
+                        text: b.intl.string(b.t.cpT0Cq),
                         onClick: t,
                     },
                     {
                         variant: "primary",
-                        text: a ? b.intl.string(v.default.wg2xwc) : b.intl.string(v.default["10dX6e"]),
-                        onClick: z,
+                        text: a ? b.intl.string(v.default.wg2xwQ) : b.intl.string(v.default["10dX6U"]),
+                        onClick: S,
                         loading: a && j,
                     },
                 ],

@@ -6,7 +6,7 @@ var i = r(159691),
     l = r(847033),
     s = r(544978),
     c = r(388032),
-    a = r(75675);
+    a = r(790632);
 function d() {
     let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: r } = (0, l.m)();
     return t
@@ -24,13 +24,13 @@ function d() {
                               className: a.previewNoticeText,
                               children:
                                   e === s.y.GUILD_PRODUCTS_PREVIEW
-                                      ? c.intl.string(c.t.F4Z0nZ)
-                                      : c.intl.string(c.t.pzTFpK),
+                                      ? c.intl.string(c.t.F4Z0nV)
+                                      : c.intl.string(c.t.pzTFpM),
                           }),
                       ],
                   }),
                   (0, n.jsx)(i.zxk, {
-                      text: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.YF35pa) : c.intl.string(c.t.r30bk5),
+                      text: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.YF35pV) : c.intl.string(c.t.r30bky),
                       size: "sm",
                       variant: "secondary",
                       onClick: r,

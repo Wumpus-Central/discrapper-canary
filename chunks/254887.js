@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(485386),
     _ = n(981631),
     p = n(388032),
-    h = n(744774);
+    h = n(65448);
 function m(e, t, n) {
     return (
         t in e
@@ -108,7 +108,7 @@ function v(e) {
         );
     if (0 === E.length) return null;
     let O = E.length,
-        v = p.intl.formatToPlainString(p.t.PCs0oq, { numRoles: O });
+        v = p.intl.formatToPlainString(p.t.PCs0oo, { numRoles: O });
     return (0, r.jsx)(s.bG, {
         navigator: m,
         children: (0, r.jsx)(s.SJ, {
@@ -122,7 +122,7 @@ function v(e) {
                             variant: "text-sm/medium",
                             color: "text-default",
                             className: h.rolesHeading,
-                            children: p.intl.string(p.t.stcSfH),
+                            children: p.intl.string(p.t.stcSfI),
                         }),
                         (0, r.jsx)(
                             "div",

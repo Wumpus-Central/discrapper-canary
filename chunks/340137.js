@@ -19,7 +19,7 @@ var r = n(951288),
     O = n(961040),
     v = n(981631),
     y = n(388032),
-    I = n(10663);
+    I = n(445202);
 let C = {
         cozy: 0,
         default: 0,
@@ -67,7 +67,7 @@ function T(e) {
             (0, r.jsx)(u.u, {
                 asContainer: !0,
                 shouldShow: !j,
-                text: y.intl.string(y.t.HcoRu7),
+                text: y.intl.string(y.t.HcoRu0),
                 children: (0, r.jsxs)(
                     d.P3F,
                     ((t = (function (e) {

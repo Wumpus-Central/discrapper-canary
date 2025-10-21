@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(526383),
     f = n(294330),
     h = n(388032),
-    g = n(333682),
-    m = n(58071);
+    g = n(663448),
+    m = n(988050);
 let b = function (e) {
     let { onScroll: t } = e,
         n = (0, p.Z)(),
@@ -74,8 +74,8 @@ let b = function (e) {
         onScroll: t,
         children: [
             (0, r.jsx)(s.Z, {
-                title: h.intl.string(h.t.X5xPlZ),
-                description: h.intl.string(h.t["F/IQCA"]),
+                title: h.intl.string(h.t.X5xPlb),
+                description: h.intl.string(h.t["F/IQCI"]),
                 children: (0, r.jsx)(o.Z, {}),
             }),
             (0, r.jsxs)(c.Z, {
@@ -87,7 +87,7 @@ let b = function (e) {
                                       className: g.sectionTitle,
                                       variant: "heading-lg/semibold",
                                       color: "header-primary",
-                                      children: h.intl.string(h.t["2DfZIS"]),
+                                      children: h.intl.string(h.t["2DfZIQ"]),
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: g.content,
@@ -119,13 +119,13 @@ let b = function (e) {
                                 className: m.text,
                                 variant: "text-sm/medium",
                                 color: "header-secondary",
-                                children: [h.intl.string(h.t.O1k9XV), " "],
+                                children: [h.intl.string(h.t.O1k9XX), " "],
                             }),
                             (0, r.jsx)(l.Text, {
                                 className: m.text,
                                 variant: "text-sm/medium",
                                 color: "header-secondary",
-                                children: h.intl.string(h.t.FV5dvr),
+                                children: h.intl.string(h.t.FV5dvh),
                             }),
                         ],
                     }),

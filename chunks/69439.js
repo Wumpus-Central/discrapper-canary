@@ -22,13 +22,13 @@ let C = [
     {
         value: b.cd.DESKTOP,
         get label() {
-            return j.intl.string(j.t.QXc019);
+            return j.intl.string(j.t["QXc01+"]);
         },
     },
     {
         value: b.cd.CONSOLE,
         get label() {
-            return j.intl.string(j.t["8lAfuL"]);
+            return j.intl.string(j.t["8lAfuB"]);
         },
     },
 ];
@@ -38,10 +38,10 @@ function y(e) {
         { value: s } = e;
     switch (s) {
         case b.cd.DESKTOP:
-            (n = (0, r.jsx)(l.pzj, {})), (t = j.intl.string(j.t.QXc019));
+            (n = (0, r.jsx)(l.pzj, {})), (t = j.intl.string(j.t["QXc01+"]));
             break;
         case b.cd.CONSOLE:
-            (n = (0, r.jsx)(l.iWm, {})), (t = j.intl.string(j.t["8lAfuL"]));
+            (n = (0, r.jsx)(l.iWm, {})), (t = j.intl.string(j.t["8lAfuB"]));
             break;
         default:
             return null;
@@ -57,12 +57,12 @@ function E(e) {
         case b.cd.DESKTOP:
             return (0, r.jsxs)("span", {
                 className: v.platformSelectorPrimaryLabel,
-                children: [(0, r.jsx)(l.pzj, {}), j.intl.string(j.t["g6Dr4+"])],
+                children: [(0, r.jsx)(l.pzj, {}), j.intl.string(j.t.g6Dr44)],
             });
         case b.cd.CONSOLE:
             return (0, r.jsxs)("span", {
                 className: v.platformSelectorPrimaryLabel,
-                children: [(0, r.jsx)(l.iWm, {}), j.intl.string(j.t.iyNbj4)],
+                children: [(0, r.jsx)(l.iWm, {}), j.intl.string(j.t.iyNbj5)],
             });
         default:
             return (0, d.vE)(e[0].value);
@@ -75,21 +75,21 @@ function O(e) {
             questContent: w,
             onReceiveErrorHints: P,
             contentPosition: N,
-            rowIndex: R,
-            sourceQuestContent: A,
+            rowIndex: A,
+            sourceQuestContent: R,
         } = e,
         B = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         k = (0, _.g2)({ useReducedMotion: B }),
         I = (0, u.O5)(),
-        q = (0, m._s)({ quest: T }),
-        D = (0, m.z)(T),
+        D = (0, m._s)({ quest: T }),
+        q = (0, m.z)(T),
         L = (0, m.B6)(T.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
         {
-            isClaiming: V,
-            isEnrolling: Q,
+            isClaiming: Q,
+            isEnrolling: V,
             isQuestEnrollmentBlocked: M,
         } = (0, a.cj)([g.Z], () => ({
             isClaiming: g.Z.isClaimingReward(T.id) || g.Z.isFetchingRewardCode(T.id),
@@ -123,11 +123,11 @@ function O(e) {
             questContent: w,
             isCollectibleQuest: K,
             questContentPosition: N,
-            questContentRowIndex: R,
+            questContentRowIndex: A,
             inGiftInventory: !0,
             isVideoQuest: G,
             inGameQuest: Y,
-            sourceQuestContent: A,
+            sourceQuestContent: R,
         }),
         { startingConsoleQuest: el, startConsoleQuest: ec } = (0, m.GI)({
             questId: T.id,
@@ -138,8 +138,8 @@ function O(e) {
                         questContent: w,
                         questContentCTA: u.jZ.DEFIBRILLATOR,
                         questContentPosition: N,
-                        questContentRowIndex: R,
-                        sourceQuestContent: A,
+                        questContentRowIndex: A,
+                        sourceQuestContent: R,
                     });
             },
             afterRequest: (e) => {
@@ -159,7 +159,7 @@ function O(e) {
               className: v.button,
               children: (0, r.jsx)(o.zxk, {
                   variant: "primary",
-                  loading: V,
+                  loading: Q,
                   onClick: null != ei ? ei : void 0,
                   text: eo,
                   fullWidth: !0,
@@ -174,12 +174,12 @@ function O(e) {
                           (0, r.jsx)(o.zxk, {
                               variant: "secondary",
                               icon: l.Oe7,
-                              text: j.intl.string(j.t.YsCuyM),
+                              text: j.intl.string(j.t.YsCuyF),
                               onClick: () => {
                                   (0, x.openVideoQuestModal)({
                                       quest: T,
                                       questContent: w,
-                                      sourceQuestContent: A,
+                                      sourceQuestContent: R,
                                       sourceQuestContentCTA: u.jZ.WATCH_VIDEO,
                                       skipEnrollmentCheck: !0,
                                   });
@@ -227,7 +227,7 @@ function O(e) {
                       className: v.button,
                       children: (0, r.jsx)(o.zxk, {
                           variant: "primary",
-                          loading: V,
+                          loading: Q,
                           onClick: null != ei ? ei : void 0,
                           text: eo,
                           fullWidth: !0,
@@ -239,7 +239,7 @@ function O(e) {
                               className: v.button,
                               children: (0, r.jsx)(o.zxk, {
                                   variant: "primary",
-                                  loading: Q,
+                                  loading: V,
                                   onClick: null != ei ? ei : void 0,
                                   text: eo,
                                   fullWidth: !0,
@@ -250,7 +250,7 @@ function O(e) {
                               children: (0, r.jsx)(o.zxk, {
                                   variant: "secondary",
                                   disabled: !0,
-                                  text: j.intl.string(j.t.BkZhUF),
+                                  text: j.intl.string(j.t.BkZhUI),
                                   fullWidth: !0,
                               }),
                           }))
@@ -260,24 +260,24 @@ function O(e) {
                                 className: v.platformSelectorPrimary,
                                 isSelected: () => !1,
                                 options: C,
-                                placeholder: j.intl.string(j.t.drVw4e),
+                                placeholder: j.intl.string(j.t.drVw4T),
                                 renderOptionLabel: y,
                                 renderOptionValue: E,
                                 select: ea,
                                 serialize: (e) => {
                                     switch (e) {
                                         case b.cd.DESKTOP:
-                                            return j.intl.string(j.t.QXc019);
+                                            return j.intl.string(j.t["QXc01+"]);
                                         case b.cd.CONSOLE:
-                                            return j.intl.string(j.t["8lAfuL"]);
+                                            return j.intl.string(j.t["8lAfuB"]);
                                         default:
                                             return (0, d.vE)(e);
                                     }
                                 },
                                 size: "sm",
                             })
-                          : (0, p.$J)(T) && !D && $ !== f.LI.DESKTOP
-                            ? q
+                          : (0, p.$J)(T) && !q && $ !== f.LI.DESKTOP
+                            ? D
                                 ? (0, r.jsx)("div", {
                                       className: v.button,
                                       children: (0, r.jsx)(o.zxk, {
@@ -295,7 +295,7 @@ function O(e) {
                                       className: v.button,
                                       children: (0, r.jsxs)("div", {
                                           className: v.ctaInner,
-                                          children: [k.render(), j.intl.string(j.t.nPThNT)],
+                                          children: [k.render(), j.intl.string(j.t.nPThNb)],
                                       }),
                                   })
                             : G
@@ -324,7 +324,7 @@ function O(e) {
                                       children: (0, r.jsx)(o.zxk, {
                                           variant: "secondary",
                                           disabled: !0,
-                                          text: j.intl.string(j.t["9KoPyM"]),
+                                          text: j.intl.string(j.t["9KoPyB"]),
                                           fullWidth: !0,
                                       }),
                                   }))
@@ -338,19 +338,19 @@ function O(e) {
                                     (0, r.jsx)(o.zxk, {
                                         variant: "secondary",
                                         disabled: !0,
-                                        text: j.intl.string(j.t.V293qq),
+                                        text: j.intl.string(j.t.V293qn),
                                     }),
                                     (0, r.jsx)(o.zxk, {
                                         variant: "primary",
-                                        onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(T, w, A),
-                                        text: j.intl.string(j.t.vY9GgI),
+                                        onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(T, w, R),
+                                        text: j.intl.string(j.t.vY9GgG),
                                     }),
                                 ],
                             })
                           : (0, r.jsx)("div", {
                                 className: v.button,
                                 children: (0, r.jsx)(o.zxk, {
-                                    loading: Q,
+                                    loading: V,
                                     variant: "primary",
                                     onClick: null != ei ? ei : void 0,
                                     text: eo,
@@ -363,7 +363,7 @@ function O(e) {
                   children: (0, r.jsx)(o.zxk, {
                       variant: "secondary",
                       disabled: !0,
-                      text: j.intl.format(j.t["14o6QU"], { expiryDate: L }),
+                      text: j.intl.format(j.t["14o6QY"], { expiryDate: L }),
                       fullWidth: !0,
                   }),
               })),
@@ -392,16 +392,16 @@ function O(e) {
                                   }
                               },
                               options: C,
-                              placeholder: j.intl.string(j.t.drVw4e),
+                              placeholder: j.intl.string(j.t.drVw4T),
                               renderOptionLabel: y,
                               renderOptionValue: E,
                               select: ea,
                               serialize: (e) => {
                                   switch (e) {
                                       case b.cd.DESKTOP:
-                                          return j.intl.string(j.t.QXc019);
+                                          return j.intl.string(j.t["QXc01+"]);
                                       case b.cd.CONSOLE:
-                                          return j.intl.string(j.t["8lAfuL"]);
+                                          return j.intl.string(j.t["8lAfuB"]);
                                   }
                               },
                               size: "sm",

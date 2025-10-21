@@ -13,8 +13,8 @@ var r = n(951288),
     h = n(981631),
     g = n(295907),
     m = n(388032),
-    b = n(118213),
-    _ = n(10198);
+    b = n(470840),
+    _ = n(197571);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,7 +87,7 @@ function N(e, t) {
     }
 }
 function T(e) {
-    let { placeholder: t = m.intl.string(m.t["Rn/sLi"]) } = e,
+    let { placeholder: t = m.intl.string(m.t["Rn/sLl"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
         [o, p] = i.useReducer(N, y),
@@ -117,7 +117,7 @@ function T(e) {
                     () =>
                         p({
                             type: "SUCCESS",
-                            text: m.intl.format(m.t.Rtl1Eh, { discordTag: t }),
+                            text: m.intl.format(m.t.Rtl1Ep, { discordTag: t }),
                         }),
                     (e) => {
                         var n;
@@ -136,7 +136,7 @@ function T(e) {
                         (0, r.jsx)(u.Text, {
                             tag: "div",
                             variant: "heading-md/normal",
-                            children: m.intl.string(m.t["Rn/sLi"]),
+                            children: m.intl.string(m.t["Rn/sLl"]),
                         }),
                         (0, r.jsx)("img", {
                             src: v,
@@ -207,7 +207,7 @@ function T(e) {
                             (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 size: "sm",
-                                text: m.intl.string(m.t["PMsq/f"]),
+                                text: m.intl.string(m.t["PMsq/b"]),
                                 disabled: !E,
                                 type: "submit",
                             }),

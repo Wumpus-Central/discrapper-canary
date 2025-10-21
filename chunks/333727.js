@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var i = n(278323),
     r = n(13245),
     l = n(45114),
@@ -8,11 +8,11 @@ var i = n(278323),
     u = n(620954),
     c = n(987650),
     d = n(981631),
-    h = n(388032);
-function p(e, t, n, p) {
+    p = n(388032);
+function h(e, t, n, h) {
     if (s.Z.isNotificationDisabled(c.n0.ActivityInvite)) return null;
     let f = t.username,
-        m = h.intl.format(h.t.VDODnp, {
+        m = p.intl.format(p.t.VDODnv, {
             username: "",
             game: n.name,
         }),
@@ -21,14 +21,14 @@ function p(e, t, n, p) {
             notif_type: c.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: d.mFx.JOIN_REQUEST,
-            activity_name: p.name,
+            activity_name: h.name,
         });
     return {
         icon: g,
         title: f,
         body: m,
-        confirmText: h.intl.string(h.t["fgP/wc"]),
-        cancelText: h.intl.string(h.t.tpXzJy),
+        confirmText: p.intl.string(p.t["fgP/wX"]),
+        cancelText: p.intl.string(p.t["tpXzJ+"]),
         onNotificationShow: () => {
             y();
         },
@@ -36,7 +36,7 @@ function p(e, t, n, p) {
             i.Z.sendActivityInvite({
                 channelId: e.id,
                 type: d.mFx.JOIN,
-                activity: p,
+                activity: h,
                 location: o.default.isLocked((0, a.getPID)()) ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY,
             }),
                 O("join"),

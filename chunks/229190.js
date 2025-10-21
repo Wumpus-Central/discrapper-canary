@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(388032),
-    s = n(335591);
+    s = n(28767);
 function o(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: c } = e,
         d = i.useRef(null);
@@ -16,7 +16,7 @@ function o(e) {
                     variant: "text-xs/semibold",
                     color: "header-secondary",
                     className: s.customColorsHeader,
-                    children: a.intl.string(a.t.JhNpg4),
+                    children: a.intl.string(a.t.JhNpgy),
                 }),
                 (0, r.jsxs)("div", {
                     ref: d,
@@ -55,7 +55,7 @@ function o(e) {
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-default",
-                                        children: a.intl.string(a.t["8elvy8"]),
+                                        children: a.intl.string(a.t["8elvy6"]),
                                     }),
                                     (0, r.jsx)(l.Z$W, {
                                         className: s.colorPicker,

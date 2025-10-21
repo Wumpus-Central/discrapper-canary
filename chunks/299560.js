@@ -17,35 +17,35 @@ var r = n(951288),
     v = n(70399),
     y = n(228168),
     j = n(388032),
-    O = n(73686);
+    O = n(229870);
 let x = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: () => ({
             variant: "details",
             applicationId: d.L.LEAGUE_OF_LEGENDS,
         }),
-        getAriaLabel: () => j.intl.string(j.t.xJtdIi),
+        getAriaLabel: () => j.intl.string(j.t.xJtdIm),
     },
     [o.l.CURRENT_GAMES]: {
         placeholder: () => ({
             variant: "details",
             applicationId: d.L.VALORANT,
         }),
-        getAriaLabel: () => j.intl.string(j.t.Ae8tRk),
+        getAriaLabel: () => j.intl.string(j.t.Ae8tRi),
     },
     [o.l.PLAYED_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [d.L.PEAK, d.L.APEX_LEGENDS, d.L.REPO, d.L.BALDURS_GATE_3],
         }),
-        getAriaLabel: () => j.intl.string(j.t["pBR+4u"]),
+        getAriaLabel: () => j.intl.string(j.t["pBR+4j"]),
     },
     [o.l.WANT_TO_PLAY_GAMES]: {
         placeholder: () => ({
             variant: "grid",
             applicationIds: [d.L.MARVEL_RIVALS, d.L.WORLD_OF_WARCRAFT, d.L.BATTLEFIELD_6, d.L.RUST],
         }),
-        getAriaLabel: () => j.intl.string(j.t.NtoBi4),
+        getAriaLabel: () => j.intl.string(j.t.NtoBi1),
     },
     [o.l.APPLICATION]: {
         placeholder: (e) => ({
@@ -58,7 +58,7 @@ let x = {
         },
         getAriaLabel: (e) => {
             var t, n;
-            return j.intl.formatToPlainString(j.t.KfGahI, {
+            return j.intl.formatToPlainString(j.t.KfGahB, {
                 applicationName:
                     null != (n = null == (t = c.Z.getApplication(e.applicationId)) ? void 0 : t.name) ? n : "",
             });

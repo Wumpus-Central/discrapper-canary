@@ -21,8 +21,8 @@ var l = t(951288),
     v = t(176505),
     y = t(921944),
     O = t(388032),
-    N = t(380986),
-    Z = t(161655);
+    N = t(126512),
+    Z = t(97009);
 function I(e) {
     let { guild: n } = e,
         t = (0, C.Z)(n);
@@ -30,9 +30,9 @@ function I(e) {
         (0, m.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: y.L.DISMISS });
     });
     let i = t
-            ? O.intl.formatToPlainString(O.t.uqZgYW, { guildName: n.name })
-            : O.intl.formatToPlainString(O.t.velJeX, { guildName: n.name }),
-        a = t ? O.intl.string(O.t.h9mGOD) : O.intl.string(O.t.et6wam);
+            ? O.intl.formatToPlainString(O.t.uqZgYe, { guildName: n.name })
+            : O.intl.formatToPlainString(O.t.velJea, { guildName: n.name }),
+        a = t ? O.intl.string(O.t.h9mGOP) : O.intl.string(O.t.et6wav);
     return (
         (0, u.Tt)({ location: i }),
         (0, l.jsxs)(h.Z, {
@@ -87,7 +87,7 @@ function w(e) {
                                                   {
                                                       className: N.tabBarItem,
                                                       id: j.l7.CUSTOMIZE,
-                                                      children: O.intl.string(O.t.H2cICQ),
+                                                      children: O.intl.string(O.t.H2cICW),
                                                   },
                                                   j.l7.CUSTOMIZE,
                                               ),
@@ -96,11 +96,11 @@ function w(e) {
                                                   {
                                                       className: N.tabBarItem,
                                                       id: j.l7.BROWSE,
-                                                      "aria-label": O.intl.string(O.t.et6wam),
+                                                      "aria-label": O.intl.string(O.t.et6wav),
                                                       children: [
-                                                          O.intl.string(O.t.et6wam),
+                                                          O.intl.string(O.t.et6wav),
                                                           (0, l.jsx)(d.IGR, {
-                                                              text: w ? O.intl.string(O.t.psHMa2) : P,
+                                                              text: w ? O.intl.string(O.t.psHMa6) : P,
                                                               color: w
                                                                   ? c.Z.unsafe_rawColors.BRAND_260.css
                                                                   : c.Z.colors.BACKGROUND_ACCENT.css,

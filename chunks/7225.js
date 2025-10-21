@@ -16,8 +16,8 @@ var n = i(951288),
     S = i(981631),
     g = i(979007),
     m = i(388032),
-    b = i(58954),
-    j = i(815847);
+    b = i(465103),
+    j = i(325380);
 function v(t) {
     let { onClose: e, transitionState: i, appId: v, guildId: w } = t,
         C = (0, o.e7)([p.Z], () => p.Z.getApplication(v), [v]),
@@ -38,14 +38,14 @@ function v(t) {
     }, [v, Z.status]);
     let { subscriptions: O, otps: P } = (0, x.q)(v);
     if (null == C) return null;
-    let T = m.intl.formatToPlainString(m.t.XDRjs7, { appName: C.name }),
+    let T = m.intl.formatToPlainString(m.t.XDRjs5, { appName: C.name }),
         A = (0, n.jsx)("div", {
             className: b.icon,
             children: (0, n.jsx)(u.Z, {}),
         }),
         I = d.wS
             ? (0, n.jsx)(c.hU, {
-                  "aria-label": m.intl.string(m.t.WqhZsr),
+                  "aria-label": m.intl.string(m.t.WqhZss),
                   icon: () => (0, n.jsx)(c.xPt, { size: "sm" }),
                   onClick: () => {
                       let t = ""
@@ -53,7 +53,7 @@ function v(t) {
                           .concat(location.host)
                           .concat(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v, g.GlobalDiscoveryAppsSections.STORE));
                       (0, d.JG)(t, () =>
-                          (0, c.showToast)((0, c.createToast)(m.intl.string(m.t["L/PwZW"]), c.ToastType.SUCCESS)),
+                          (0, c.showToast)((0, c.createToast)(m.intl.string(m.t["L/PwZf"]), c.ToastType.SUCCESS)),
                       ),
                           (0, _.X)(v, _.B.STORE_MODAL);
                   },
@@ -91,7 +91,7 @@ function v(t) {
                                   termsOfServiceUrl: C.termsOfServiceUrl,
                                   privacyPolicyUrl: C.privacyPolicyUrl,
                               })
-                            : m.intl.string(m.t["3ZY+0N"]),
+                            : m.intl.string(m.t["3ZY+0D"]),
                 }),
             }),
         ],

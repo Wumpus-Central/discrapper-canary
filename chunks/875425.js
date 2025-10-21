@@ -59,71 +59,71 @@ var c = (function (e) {
 let u = [
     {
         value: "PLAYING",
-        label: () => a.intl.string(a.t.r5TNm5),
+        label: () => a.intl.string(a.t.r5TNmx),
     },
     {
         value: "LISTENING_TO",
-        label: () => a.intl.string(a.t.ylzor6),
+        label: () => a.intl.string(a.t["ylzor/"]),
     },
     {
         value: "WATCHING",
-        label: () => a.intl.string(a.t.pzz9iI),
+        label: () => a.intl.string(a.t.pzz9iP),
     },
     {
         value: "CURRENT_OBSESSION",
-        label: () => a.intl.string(a.t.xaCthI),
+        label: () => a.intl.string(a.t.xaCthD),
     },
     {
         value: "SHOWER_THOUGHT",
-        label: () => a.intl.string(a.t.Wf8fxM),
+        label: () => a.intl.string(a.t.Wf8fxL),
     },
     {
         value: "TODAY_I_LEARNED",
-        label: () => a.intl.string(a.t.pycKi4),
+        label: () => a.intl.string(a.t.pycKiy),
     },
     {
         value: "HOT_TAKE",
-        label: () => a.intl.string(a.t.l3pZcn),
+        label: () => a.intl.string(a.t.l3pZci),
     },
     {
         value: "DAD_JOKE",
-        label: () => a.intl.string(a.t["3XVZ0t"]),
+        label: () => a.intl.string(a.t["3XVZ0v"]),
     },
     {
         value: "EMOJI_DAY",
-        label: () => a.intl.string(a.t["4U+EJC"]),
+        label: () => a.intl.string(a.t["4U+EJP"]),
     },
     {
         value: "USELESS_TALENT",
-        label: () => a.intl.string(a.t["Z3Vn/f"]),
+        label: () => a.intl.string(a.t["Z3Vn/X"]),
     },
     {
         value: "VIDEO_GAME_ITEM",
-        label: () => a.intl.string(a.t.PiepBg),
+        label: () => a.intl.string(a.t.PiepBk),
     },
     {
         value: "READING",
-        label: () => a.intl.string(a.t.pYQRnJ),
+        label: () => a.intl.string(a.t.pYQRnN),
     },
     {
         value: "SONG_STUCK",
-        label: () => a.intl.string(a.t.S7UJ0t),
+        label: () => a.intl.string(a.t.S7UJ0u),
     },
     {
         value: "MOST_USED_EMOJI",
-        label: () => a.intl.string(a.t["1TlHw8"]),
+        label: () => a.intl.string(a.t["1TlHwx"]),
     },
     {
         value: "BEST_FOOD",
-        label: () => a.intl.string(a.t.ZPjue3),
+        label: () => a.intl.string(a.t.ZPjuez),
     },
     {
         value: "FICTIONAL_WORLD",
-        label: () => a.intl.string(a.t.lyOeXF),
+        label: () => a.intl.string(a.t.lyOeXL),
     },
     {
         value: "USERNAME_ORIGIN",
-        label: () => a.intl.string(a.t.l6Yb3d),
+        label: () => a.intl.string(a.t.l6Yb3T),
     },
     {
         value: "THEME_SONG",
@@ -131,7 +131,7 @@ let u = [
     },
     {
         value: "FAVORITE_COLLECTIBLE",
-        label: () => a.intl.string(a.t.T24um5),
+        label: () => a.intl.string(a.t.T24umy),
     },
     {
         value: "GAME_MECHANIC",
@@ -143,50 +143,50 @@ let u = [
     },
     {
         value: "FOOD_CRAVING",
-        label: () => a.intl.string(a.t.ujnXur),
+        label: () => a.intl.string(a.t.ujnXus),
     },
     {
         value: "MYTHICAL_PET",
-        label: () => a.intl.string(a.t["45r7ub"]),
+        label: () => a.intl.string(a.t["45r7ue"]),
     },
     {
         value: "LATEST_HOBBY",
-        label: () => a.intl.string(a.t.SluNa2),
+        label: () => a.intl.string(a.t.SluNa8),
     },
     {
         value: "FAVORITE_ANIME",
-        label: () => a.intl.string(a.t.R1f9RU),
+        label: () => a.intl.string(a.t.R1f9RT),
     },
     {
         value: "RANKED_UP",
-        label: () => a.intl.string(a.t.nXJgjo),
+        label: () => a.intl.string(a.t.nXJgjn),
     },
     {
         value: "CHARACTER_CLASS",
-        label: () => a.intl.string(a.t.SWVxPD),
+        label: () => a.intl.string(a.t.SWVxPM),
     },
     {
         value: "HIGH_SCORE",
-        label: () => a.intl.string(a.t.gbUeX1),
+        label: () => a.intl.string(a.t.gbUeX7),
     },
     {
         value: "FINISHED_PLAYING",
-        label: () => a.intl.string(a.t.bIrdLi),
+        label: () => a.intl.string(a.t.bIrdLj),
     },
     {
         value: "FINISHED_READING",
-        label: () => a.intl.string(a.t["tcQn+P"]),
+        label: () => a.intl.string(a.t["tcQn+J"]),
     },
     {
         value: "CANT_WAIT",
-        label: () => a.intl.string(a.t["40gTj4"]),
+        label: () => a.intl.string(a.t["40gTjw"]),
     },
     {
         value: "ADD_STATUS",
-        label: () => a.intl.string(a.t.Vq4UmZ),
+        label: () => a.intl.string(a.t.Vq4UmS),
     },
     {
         value: "WHATS_ON_YOUR_MIND",
-        label: () => a.intl.string(a.t["xod36+"]),
+        label: () => a.intl.string(a.t.xod367),
     },
 ];

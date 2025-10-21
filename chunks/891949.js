@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(481060),
     a = n(312097),
     s = n(810568),
@@ -9,8 +9,8 @@ var i = n(951288),
     d = n(275914);
 function u(e) {
     let { detectedGame: t, trackAction: n } = e,
-        u = r.useRef(null),
-        m = r.useMemo(() => {
+        u = i.useRef(null),
+        m = i.useMemo(() => {
             let e = t.artwork.map((e) => ({
                 url: e,
                 type: "IMAGE",
@@ -34,23 +34,23 @@ function u(e) {
     }
     return 0 === m.length
         ? null
-        : (0, i.jsxs)("div", {
+        : (0, r.jsxs)("div", {
               children: [
-                  (0, i.jsx)(l.Heading, {
+                  (0, r.jsx)(l.Heading, {
                       className: c.sectionHeader,
                       variant: "text-md/semibold",
                       color: "header-primary",
-                      children: o.intl.string(o.t["bNdK5+"]),
+                      children: o.intl.string(o.t.bNdK5x),
                   }),
-                  (0, i.jsxs)("div", {
+                  (0, r.jsxs)("div", {
                       className: f ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
                       children: [
-                          (0, i.jsx)(l.xVE, {
+                          (0, r.jsx)(l.xVE, {
                               ref: u,
                               className: d.imageScroller,
                               orientation: "horizontal",
                               children: m.map((e, t) =>
-                                  (0, i.jsx)(
+                                  (0, r.jsx)(
                                       l.P3F,
                                       {
                                           className: d.imageClickable,
@@ -67,10 +67,10 @@ function u(e) {
                                                       location: "GameProfileMedia",
                                                   });
                                           },
-                                          children: (0, i.jsx)("img", {
+                                          children: (0, r.jsx)("img", {
                                               src: e.url,
                                               className: d.gameArtwork,
-                                              alt: o.intl.formatToPlainString(o.t.COYYrq, { game: name }),
+                                              alt: o.intl.formatToPlainString(o.t.COYYrn, { game: name }),
                                           }),
                                       },
                                       t,
@@ -78,23 +78,23 @@ function u(e) {
                               ),
                           }),
                           f &&
-                              (0, i.jsxs)("div", {
+                              (0, r.jsxs)("div", {
                                   className: d.mediaOverlay,
                                   children: [
-                                      (0, i.jsx)("div", { className: d.gradientLeft }),
-                                      (0, i.jsx)(l.P3F, {
+                                      (0, r.jsx)("div", { className: d.gradientLeft }),
+                                      (0, r.jsx)(l.P3F, {
                                           className: d.arrowClickable,
                                           onClick: () => p(-1),
-                                          children: (0, i.jsx)(l.whL, {
+                                          children: (0, r.jsx)(l.whL, {
                                               className: d.arrow,
                                               color: "currentColor",
                                           }),
                                       }),
-                                      (0, i.jsx)("div", { className: d.gradientRight }),
-                                      (0, i.jsx)(l.P3F, {
+                                      (0, r.jsx)("div", { className: d.gradientRight }),
+                                      (0, r.jsx)(l.P3F, {
                                           className: d.arrowClickable,
                                           onClick: () => p(1),
-                                          children: (0, i.jsx)(l.ZSh, {
+                                          children: (0, r.jsx)(l.ZSh, {
                                               className: d.arrow,
                                               color: "currentColor",
                                           }),

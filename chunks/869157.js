@@ -17,16 +17,16 @@ var i = n(951288),
     x = n(485386),
     j = n(430824),
     v = n(594174),
-    y = n(626135),
-    O = n(5192),
+    O = n(626135),
+    y = n(5192),
     _ = n(709054),
     C = n(145260),
     N = n(905753),
     S = n(399860),
     E = n(335049),
     I = n(617012),
-    P = n(981631),
-    w = n(388032),
+    w = n(981631),
+    P = n(388032),
     T = n(547063);
 function Z(e) {
     let {
@@ -40,7 +40,7 @@ function Z(e) {
         g = (0, o.e7)([j.Z], () => j.Z.getGuild(l));
     a()(null != g, "");
     let h = (0, o.e7)([x.Z], () => x.Z.getSortedRoles(l)),
-        [y, E] = r.useState(new Set()),
+        [O, E] = r.useState(new Set()),
         I = r.useMemo(() => {
             let e = (0, b.bD)(l),
                 t = h.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
@@ -57,8 +57,8 @@ function Z(e) {
                                 let r = v.default.getUser(e.id),
                                     l = v.default.getUser(t.id);
                                 if (null != r && null != l) {
-                                    let e = O.ZP.getName(n, void 0, r),
-                                        t = O.ZP.getName(n, void 0, l);
+                                    let e = y.ZP.getName(n, void 0, r),
+                                        t = y.ZP.getName(n, void 0, l);
                                     return null == e ? void 0 : e.localeCompare(t);
                                 }
                                 return _.default.compare(e.id, t.id);
@@ -75,13 +75,13 @@ function Z(e) {
                     }
                 });
         }, [l, c, h]),
-        P = r.useCallback(
+        w = r.useCallback(
             (e, t) => {
                 n({}, [(0, S.rE)(e, t)]);
             },
             [n],
         ),
-        w = r.useCallback(
+        P = r.useCallback(
             (e, t, i) => {
                 let r = (0, S.rE)(e, t);
                 null != c[r] &&
@@ -100,10 +100,10 @@ function Z(e) {
         );
     r.useEffect(() => {
         let e = Object.values(c)
-            .filter((e) => e.type === m.Kw.USER && !e.canRead && !y.has(e.id))
+            .filter((e) => e.type === m.Kw.USER && !e.canRead && !O.has(e.id))
             .map((e) => e.id);
         0 !== e.length && (u.Z.requestMembersById(l, e, !1), E((t) => new Set([...t, ...e])));
-    }, [l, c, y, E]);
+    }, [l, c, O, E]);
     let Z = (0, o.e7)([N.Z], () => N.Z.getApplicationId()),
         A = (0, o.e7)([C.default], () =>
             null == Z
@@ -121,8 +121,8 @@ function Z(e) {
                   {
                       guild: g,
                       commandId: t,
-                      onChange: (t) => w(e.id, e.type, t),
-                      onRemove: () => P(e.id, e.type),
+                      onChange: (t) => P(e.id, e.type, t),
+                      onRemove: () => w(e.id, e.type),
                       overwrite: e,
                       integration: A,
                       canShowMigrationTooltip: D,
@@ -151,24 +151,24 @@ function k(e) {
             overwrite: x,
             integration: j,
             canShowMigrationTooltip: v,
-            hasAccessToMutatePermissions: O,
+            hasAccessToMutatePermissions: y,
         } = e,
         _ = x.id === o.id || x.id === (0, b.bD)(o.id),
         C = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
-        N = !x.canWrite || !O,
+        N = !x.canWrite || !y,
         S = h.default.getId();
-    O
+    y
         ? x.canWrite ||
           (x.type === m.Kw.USER
-              ? (a = x.id === S ? w.intl.string(w.t["1VF/09"]) : w.intl.string(w.t.P1GnER))
-              : x.type === m.Kw.ROLE && (a = w.intl.string(w.t.mcAijY)))
-        : (a = null != d ? w.intl.string(w.t.tybdam) : w.intl.string(w.t.z2hjk5));
+              ? (a = x.id === S ? P.intl.string(P.t["1VF/0x"]) : P.intl.string(P.t.P1GnEd))
+              : x.type === m.Kw.ROLE && (a = P.intl.string(P.t.mcAijf)))
+        : (a = null != d ? P.intl.string(P.t.tybdas) : P.intl.string(P.t["z2hjk/"]));
     let Z = v && null != j && x.id === o.id && void 0 !== C && !x.permission;
     r.useEffect(() => {
         if (Z) {
             var e, t, n;
-            y.default.track(
-                P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+            O.default.track(
+                w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -235,8 +235,8 @@ function k(e) {
         }),
         R = (0, i.jsx)(s.J2, {
             targetElementRef: k,
-            title: w.intl.string(w.t.ufFDiI),
-            body: w.intl.format(w.t.pW4Cr6, {
+            title: P.intl.string(P.t.ufFDiC),
+            body: P.intl.format(P.t.pW4Crz, {
                 botName: C,
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
@@ -267,7 +267,7 @@ function k(e) {
                         (0, i.jsx)(A, {
                             commandId: d,
                             isSentinel: _,
-                            isDisabled: !O,
+                            isDisabled: !y,
                             onRemove: f,
                         }),
                         D,
@@ -289,7 +289,7 @@ function A(e) {
                 className: T.removeActions,
                 children: (0, i.jsx)(d.P3F, {
                     className: T.removeContainer,
-                    "aria-label": w.intl.string(w.t.mT0CQE),
+                    "aria-label": P.intl.string(P.t.mT0CQM),
                     onClick: l,
                     children: (0, i.jsx)(d.XHJ, {
                         size: "md",

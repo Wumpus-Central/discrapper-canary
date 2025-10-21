@@ -1,20 +1,20 @@
-o.d(t, { default: () => p });
-var n = o(951288),
-    a = o(647438),
-    r = o(481060),
-    c = o(211266),
-    i = o(243778),
-    l = o(332664),
-    _ = o(626135),
-    u = o(867003),
-    b = o(987562),
-    s = o(981631),
-    d = o(565287),
-    m = o(388032);
-function p(e) {
-    let { onClose: t, transitionState: p, dismissibleContent: f } = e;
-    (0, i.US)([f]);
-    let h = (0, c.Z)((0, b.ny)(f)),
+n.d(t, { default: () => f });
+var o = n(951288),
+    a = n(647438),
+    r = n(481060),
+    c = n(211266),
+    i = n(243778),
+    l = n(332664),
+    _ = n(626135),
+    b = n(867003),
+    u = n(987562),
+    s = n(981631),
+    d = n(714664),
+    m = n(388032);
+function f(e) {
+    let { onClose: t, transitionState: f, dismissibleContent: p } = e;
+    (0, i.US)([p]);
+    let h = (0, c.Z)((0, u.ny)(p)),
         g = a.useMemo(() => h.map((e) => e.value), [h]);
     a.useEffect(() => {
         _.default.track(s.rMx.OPEN_MODAL, { type: "Age Verification User Feedback" });
@@ -24,62 +24,62 @@ function p(e) {
             var t;
             let { rating: a, problem: c, feedback: i } = e,
                 l = null == a,
-                _ = (0, u.nH)(f);
-            (0, u.I)(a, "" !== i ? i : null, null != (t = null == c ? void 0 : c.value) ? t : null, l, _),
+                _ = (0, b.nH)(p);
+            (0, b.I)(a, "" !== i ? i : null, null != (t = null == c ? void 0 : c.value) ? t : null, l, _),
                 l ||
                     (0, r.ZDy)(async () => {
-                        let { default: e } = await o.e("14466").then(o.bind(o, 729328));
+                        let { default: e } = await n.e("14466").then(n.bind(n, 729328));
                         return (t) =>
-                            (0, n.jsx)(
+                            (0, o.jsx)(
                                 e,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
-                                        var o = null != arguments[t] ? arguments[t] : {},
-                                            n = Object.keys(o);
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            o = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (n = n.concat(
-                                                Object.getOwnPropertySymbols(o).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(o, e).enumerable;
+                                            (o = o.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            n.forEach(function (t) {
-                                                var n;
-                                                (n = o[t]),
+                                            o.forEach(function (t) {
+                                                var o;
+                                                (o = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: n,
+                                                              value: o,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[t] = n);
+                                                        : (e[t] = o);
                                             });
                                     }
                                     return e;
-                                })({ body: m.intl.string(d.default["4djgOz"]) }, t),
+                                })({ body: m.intl.string(d.default["4djgO/"]) }, t),
                             );
                     });
         },
-        [f],
+        [p],
     );
-    return (0, n.jsx)(l.Z, {
+    return (0, o.jsx)(l.Z, {
         modalType: "age_verification",
-        header: m.intl.string(d.default.RqoA4u),
-        body: m.intl.string(d.default.RPb8Zm),
-        problemTitle: m.intl.string(d.default.KZw6kp),
+        header: m.intl.string(d.default.RqoA4v),
+        body: m.intl.string(d.default.RPb8Zk),
+        problemTitle: m.intl.string(d.default.KZw6kn),
         problems: h,
         freeformNeededProblems: g,
         onSubmit: j,
         onClose: t,
-        transitionState: p,
-        otherKey: b.wO.SOMETHING_ELSE,
+        transitionState: f,
+        otherKey: u.wO.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0,
         freeformDescription: (e) =>
             null == e
                 ? null
-                : e.value === b.wO.SOMETHING_ELSE
-                  ? m.intl.string(d.default["Q5cQ4+"])
-                  : m.intl.string(d.default.zApKaW),
+                : e.value === u.wO.SOMETHING_ELSE
+                  ? m.intl.string(d.default.Q5cQ46)
+                  : m.intl.string(d.default.zApKaR),
     });
 }

@@ -7,7 +7,7 @@ var i = n(951288),
     s = n(434404),
     c = n(486199),
     d = n(13051),
-    u = n(721257);
+    u = n(66544);
 function p(e) {
     let {
             integrations: t,
@@ -27,7 +27,7 @@ function p(e) {
             },
             [x, p.id],
         ),
-        y = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 x() &&
                     (e.id === (null == n ? void 0 : n.id) && a.Z.stopEditingIntegration(),
@@ -35,7 +35,7 @@ function p(e) {
             },
             [x, n, p.id],
         ),
-        O = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 x() &&
                     (e === (null == n ? void 0 : n.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e));
@@ -69,8 +69,8 @@ function p(e) {
                         guild: p,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: v,
-                        onDisable: y,
-                        onToggleExpand: () => O(e.id),
+                        onDisable: O,
+                        onToggleExpand: () => y(e.id),
                     },
                     e.id,
                 ),

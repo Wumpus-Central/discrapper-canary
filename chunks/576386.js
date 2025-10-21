@@ -11,7 +11,7 @@ var r = n(951288),
     p = n(74538),
     _ = n(539530),
     m = n(388032),
-    h = n(801707);
+    h = n(24391);
 let b = (e) => {
         var t;
         let { currentUser: n, nameplate: a, section: o, canUsePremiumCollectibles: p, isSelected: b, onClick: g } = e,
@@ -19,7 +19,7 @@ let b = (e) => {
             { isHoveringOrFocusing: x } = (0, u.Z)(v);
         return (0, r.jsxs)(s.P3F, {
             innerRef: v,
-            "aria-label": null != (t = a.label) ? t : m.intl.string(m.t.x5CoXV),
+            "aria-label": null != (t = a.label) ? t : m.intl.string(m.t.x5CoXR),
             className: h.nameplateItem,
             onClick: g,
             children: [
@@ -71,8 +71,8 @@ let b = (e) => {
                                                     variant: "text-xs/normal",
                                                     children:
                                                         null != i
-                                                            ? m.intl.string(m.t.CHf9iI)
-                                                            : m.intl.string(m.t.PoWNfX),
+                                                            ? m.intl.string(m.t.CHf9iJ)
+                                                            : m.intl.string(m.t.PoWNfe),
                                                 }),
                                             ],
                                         }),
@@ -86,7 +86,7 @@ let b = (e) => {
                                                 }),
                                                 (0, r.jsx)(s.Text, {
                                                     variant: "text-xs/normal",
-                                                    children: m.intl.string(m.t.pWG4zc),
+                                                    children: m.intl.string(m.t.pWG4ze),
                                                 }),
                                             ],
                                         }),

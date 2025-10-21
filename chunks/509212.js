@@ -398,33 +398,33 @@ function eh(e, t, n) {
 let em = (e) => {
     switch (e) {
         case w.y$.XBOX:
-            return G.intl.string(G.t.G84UWV);
+            return G.intl.string(G.t.G84UWZ);
         case w.y$.PLAYSTATION:
-            return G.intl.string(G.t["6IeKx8"]);
+            return G.intl.string(G.t["6IeKx2"]);
         case w.y$.SWITCH:
-            return G.intl.string(G.t["1pp0sr"]);
+            return G.intl.string(G.t["1pp0su"]);
         case w.y$.PC:
-            return G.intl.string(G.t["YK+wUl"]);
+            return G.intl.string(G.t["YK+wUg"]);
         case w.y$.CROSS_PLATFORM:
-            return G.intl.string(G.t.UWVbzc);
+            return G.intl.string(G.t.UWVbzV);
     }
 };
 function eg(e) {
     var t, n;
     let { quest: r, taskDetails: i, thirdPartyTaskDetails: a } = e;
-    if ((null == (t = r.userStatus) ? void 0 : t.completedAt) != null) return G.intl.string(G.t.BzFeTE);
+    if ((null == (t = r.userStatus) ? void 0 : t.completedAt) != null) return G.intl.string(G.t.BzFeTF);
     if ((null == (n = r.userStatus) ? void 0 : n.enrolledAt) != null) {
         let { percentComplete: e } = i,
             t = null != a ? a.percentComplete : e;
         return t >= 0.75
-            ? G.intl.string(G.t.gvCR4O)
+            ? G.intl.string(G.t.gvCR4H)
             : t >= 0.45 && t <= 0.55
-              ? G.intl.string(G.t.JNx8sL)
+              ? G.intl.string(G.t.JNx8sG)
               : t > 0
-                ? G.intl.string(G.t.JMbfnZ)
-                : G.intl.string(G.t["7e5k7O"]);
+                ? G.intl.string(G.t.JMbfnc)
+                : G.intl.string(G.t["7e5k7L"]);
     }
-    return G.intl.formatToPlainString(G.t.EQa7oq, { questName: r.config.messages.questName });
+    return G.intl.formatToPlainString(G.t.EQa7os, { questName: r.config.messages.questName });
 }
 function eE(e) {
     return Object.keys(k.a_).includes(w.jn[e]);
@@ -451,15 +451,15 @@ function ev(e) {
         o = Math.floor(a / 30) + +(a % 30 >= 25);
     if (o >= 12) {
         let e = Math.floor(o / 12);
-        return G.intl.formatToPlainString(G.t.PClsr6, { years: e });
+        return G.intl.formatToPlainString(G.t.PClsrw, { years: e });
     }
     {
-        if (o > 0) return G.intl.formatToPlainString(G.t.kridzM, { months: o });
+        if (o > 0) return G.intl.formatToPlainString(G.t.kridzK, { months: o });
         let e = (0, r.Z)(i, n);
-        if (!(e >= 7)) return G.intl.formatToPlainString(G.t.k2UNz8, { days: e });
+        if (!(e >= 7)) return G.intl.formatToPlainString(G.t["k2UNz+"], { days: e });
         {
             let t = Math.ceil(e / 7);
-            return G.intl.formatToPlainString(G.t.EmoBDw, { weeks: t });
+            return G.intl.formatToPlainString(G.t.EmoBD2, { weeks: t });
         }
     }
 }
@@ -835,7 +835,7 @@ function th(e) {
     return "xbox" === e.connected_account_type ? j.ABu.XBOX : j.ABu.PLAYSTATION;
 }
 function tm(e) {
-    return th(e) === j.ABu.XBOX ? G.t.mytEv7 : G.t.iDiwb2;
+    return th(e) === j.ABu.XBOX ? G.t["mytEv+"] : G.t.iDiwby;
 }
 function tg(e) {
     var t, n, r, i;
@@ -863,13 +863,13 @@ function tE(e) {
     let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, cosponsorName: i } = e;
     return t
         ? null == i
-            ? G.intl.formatToPlainString(G.t.Piihy8, { gamePublisher: n })
-            : G.intl.formatToPlainString(G.t.DV47Gx, {
+            ? G.intl.formatToPlainString(G.t.Piihy1, { gamePublisher: n })
+            : G.intl.formatToPlainString(G.t.DV47Gy, {
                   gamePublisher: n,
                   cosponsorName: i,
               })
         : G.intl.formatToPlainString(
-              L.m8.getConfig({ location: k.dr.QUEST_DISCLOSURE_MODAL }).enabled ? G.t.euizJS : G.t.tOWwxM,
+              L.m8.getConfig({ location: k.dr.QUEST_DISCLOSURE_MODAL }).enabled ? G.t.euizJY : G.t.tOWwxN,
               {
                   gamePublisher: n,
                   gameTitle: r,
@@ -937,8 +937,8 @@ function tR(e) {
 }
 let tP = (e) =>
     e.percentComplete > 0
-        ? G.intl.formatToPlainString(G.t["c59/Tk"], { remainTime: e7(e) })
-        : G.intl.formatToPlainString(G.t.GNsKiY, { remainTime: e7(e) });
+        ? G.intl.formatToPlainString(G.t["c59/Tp"], { remainTime: e7(e) })
+        : G.intl.formatToPlainString(G.t.GNsKiW, { remainTime: e7(e) });
 function tw(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
@@ -959,7 +959,7 @@ function tD(e) {
                   ? void 0
                   : a.messages.videoEndCtaTitle)
         ? i
-        : G.intl.string(G.t.iiTtpK);
+        : G.intl.string(G.t.iiTtpJ);
 }
 function tL(e, t) {
     var n;
@@ -1037,34 +1037,34 @@ function tZ(e, t) {
 function tF(e) {
     switch (e) {
         case k.yq.SUGGESTED:
-            return G.intl.string(G.t.gBfXPT);
+            return G.intl.string(G.t.gBfXPZ);
         case k.yq.MOST_RECENT:
-            return G.intl.string(G.t.K6oEu7);
+            return G.intl.string(G.t.K6oEu2);
         case k.yq.EXPIRING_SOON:
-            return G.intl.string(G.t.IB22n5);
+            return G.intl.string(G.t.IB22n3);
         case k.yq.RECENTLY_ENROLLED:
-            return G.intl.string(G.t["BB+2tb"]);
+            return G.intl.string(G.t["BB+2tX"]);
     }
 }
 function tV(e) {
     switch (e) {
         case k.UP.VIRTUAL_CURRENCY:
-            return G.intl.string(G.t.ElYQFR);
+            return G.intl.string(G.t.ElYQFS);
         case k.UP.COLLECTIBLE:
-            return G.intl.string(G.t.Jg17Ul);
+            return G.intl.string(G.t.Jg17Ut);
         case k.UP.IN_GAME:
-            return G.intl.string(G.t["O/J2kp"]);
+            return G.intl.string(G.t["O/J2kr"]);
         case k.oH.VIDEO:
-            return G.intl.string(G.t.e0iISE);
+            return G.intl.string(G.t.e0iISA);
         case k.oH.PLAY:
-            return G.intl.string(G.t["1nJR4u"]);
+            return G.intl.string(G.t["1nJR4p"]);
     }
 }
 function tH(e) {
     switch (e) {
         case "reward":
-            return G.intl.string(G.t.vjLqAQ);
+            return G.intl.string(G.t.vjLqAU);
         case "task":
-            return G.intl.string(G.t.Hufmsr);
+            return G.intl.string(G.t.Hufmss);
     }
 }

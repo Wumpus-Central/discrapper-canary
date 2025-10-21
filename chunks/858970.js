@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z }), t(388685), t(953529);
+t.d(n, { Z: () => _ }), t(388685), t(953529);
 var l = t(951288),
     i = t(442837),
     o = t(481060),
@@ -17,7 +17,7 @@ var l = t(951288),
     j = t(981631),
     g = t(671955),
     b = t(388032),
-    I = t(65464);
+    I = t(220566);
 function y(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -43,12 +43,12 @@ function y(e) {
     }
     return e;
 }
-function Z(e) {
+function _(e) {
     let {
             user: n,
             guildId: t,
-            channelId: Z,
-            messageId: _,
+            channelId: _,
+            messageId: Z,
             roleId: O,
             transitionState: N,
             openedAt: A,
@@ -63,31 +63,31 @@ function Z(e) {
             userId: n.id,
             showGuildProfile: !0,
             guildId: E,
-            channelId: Z,
-            messageId: _,
+            channelId: _,
+            messageId: Z,
             roleId: O,
         }),
-        R = [
+        D = [
             {
                 icon: o.owK,
-                description: b.intl.string(b.t.kcuWvb),
+                description: b.intl.string(b.t.kcuWva),
             },
             {
                 icon: o.owK,
-                description: b.intl.string(C ? b.t.QxrDY2 : b.t.W6fjkZ),
+                description: b.intl.string(C ? b.t.QxrDY1 : b.t.W6fjkS),
             },
         ],
-        D = (0, p.ZP)(n.id, E),
-        L = d.ZP.getName(null == D ? void 0 : D.guildId, Z, n),
-        M = b.intl.formatToPlainString(b.t.KRe1Fh, { name: L });
+        R = (0, p.ZP)(n.id, E),
+        L = d.ZP.getName(null == R ? void 0 : R.guildId, _, n),
+        M = b.intl.formatToPlainString(b.t.KRe1Fk, { name: L });
     return (0, l.jsx)(s.Gt, {
         value: S,
         children: (0, l.jsx)(u.Mt, {
             value: w,
             openedAt: A,
-            fetchStartedAt: null == D ? void 0 : D.fetchStartedAt,
-            fetchEndedAt: null == D ? void 0 : D.fetchEndedAt,
-            isLoaded: null == D ? void 0 : D.isLoaded,
+            fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
+            fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
+            isLoaded: null == R ? void 0 : R.isLoaded,
             children: (0, l.jsx)(o.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: N,
@@ -96,7 +96,7 @@ function Z(e) {
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, l.jsxs)(x.Z, {
                     user: n,
-                    displayProfile: D,
+                    displayProfile: R,
                     themeType: g.l.MODAL_V2,
                     children: [
                         (0, l.jsx)("div", { className: I.background }),
@@ -113,18 +113,18 @@ function Z(e) {
                                         (0, l.jsx)(o.Heading, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
-                                            children: b.intl.string(b.t.b33pLC),
+                                            children: b.intl.string(b.t.b33pLD),
                                         }),
                                         (0, l.jsx)(o.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: b.intl.format(C ? b.t.T7QiLi : b.t.MnEow8, { username: L }),
+                                            children: b.intl.format(C ? b.t.T7QiLn : b.t.MnEowy, { username: L }),
                                         }),
                                     ],
                                 }),
                                 (0, l.jsx)("div", {
                                     className: I.safetyTable,
-                                    children: R.map((e, n) => {
+                                    children: D.map((e, n) => {
                                         let { icon: t, description: i } = e;
                                         return (0, l.jsx)(
                                             a.JZ,

@@ -14,7 +14,7 @@ var r = n(951288),
     u = n(678694),
     p = n(216780),
     m = n(388032),
-    h = n(34315);
+    h = n(647803);
 function g(e) {
     let { category: t, count: n, onSelectCategory: i, selected: s } = e,
         c = a.useCallback(() => {
@@ -115,14 +115,14 @@ function f(e) {
                   (0, r.jsx)(o.Text, {
                       variant: "text-sm/medium",
                       color: "text-secondary",
-                      children: m.intl.string(m.t.f09BQE),
+                      children: m.intl.string(m.t.f09BQJ),
                   }),
                   (0, r.jsx)(c.ZP, {
                       items: _,
                       title: null != (t = null == b ? void 0 : b.name) ? t : "",
                       onSelect: f,
                       selected: "".concat(l),
-                      "aria-label": m.intl.string(m.t.WHdCwc),
+                      "aria-label": m.intl.string(m.t.WHdCwR),
                       variant: c.PA.FILLED,
                   }),
               ],

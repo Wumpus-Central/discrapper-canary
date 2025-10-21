@@ -6,7 +6,7 @@ var r = n(481060),
     a = n(28391),
     o = n(526761),
     s = n(388032),
-    c = n(637177);
+    c = n(58102);
 function u(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, i.jsxs)("div", {
@@ -17,12 +17,12 @@ function u(e) {
                 className: c.info,
                 children: (0, i.jsx)(r.Text, {
                     variant: "text-sm/medium",
-                    children: s.intl.format(s.t.P6Y2Nz, {}),
+                    children: s.intl.format(s.t.P6Y2N1, {}),
                 }),
             }),
             (0, i.jsx)(r.Button, {
                 variant: "secondary",
-                text: s.intl.string(s.t.KyUKhY),
+                text: s.intl.string(s.t.KyUKhT),
                 icon: r.UEU,
                 size: "sm",
                 onClick: () => {

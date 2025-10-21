@@ -10,10 +10,10 @@ var n = t(951288),
     u = t(263954),
     d = t(267642),
     m = t(678558),
-    g = t(981631),
-    j = t(388032),
-    b = t(768093),
-    h = t(10198);
+    j = t(981631),
+    b = t(388032),
+    g = t(707435),
+    h = t(197571);
 function x(e) {
     for (var r = 1; r < arguments.length; r++) {
         var t = null != arguments[r] ? arguments[r] : {},
@@ -43,7 +43,7 @@ let f = "premium-guild-subscription-upsell-modal-header";
 function y(e) {
     let { title: r, subtitle: t, image: o } = e;
     return (0, n.jsxs)("div", {
-        className: b.header,
+        className: g.header,
         children: [
             (0, n.jsx)(s.Heading, {
                 variant: "heading-xl/semibold",
@@ -54,7 +54,7 @@ function y(e) {
             }),
             (0, n.jsx)(s.Text, {
                 variant: "text-md/normal",
-                className: b.subtitleText,
+                className: g.subtitleText,
                 children: t,
             }),
             o,
@@ -62,13 +62,13 @@ function y(e) {
     });
 }
 let O = (e) => {
-        let { onClose: r, perks: t, perkIntro: o = j.intl.string(j.t.Dr3Goa), headerProps: i } = e;
+        let { onClose: r, perks: t, perkIntro: o = b.intl.string(b.t.Dr3GoS), headerProps: i } = e;
         return (0, n.jsxs)("div", {
-            className: b.wrapper,
+            className: g.wrapper,
             children: [
                 (0, n.jsx)(s.olH, {
                     "data-migration-pending": !0,
-                    className: b.closeButton,
+                    className: g.closeButton,
                     onClick: () => {
                         r();
                     },
@@ -78,7 +78,7 @@ let O = (e) => {
                     perkIntro: o,
                 }),
                 (0, n.jsx)("div", {
-                    className: b.perks,
+                    className: g.perks,
                     children: t.map((e, r) => {
                         let { icon: t, iconClassName: o, description: s, color: i } = e;
                         return (0, n.jsx)(
@@ -103,13 +103,13 @@ let O = (e) => {
                 null != r
                     ? (0, n.jsx)(y, x({}, r))
                     : (0, n.jsx)("img", {
-                          className: b.heroImage,
+                          className: g.heroImage,
                           src: t(438471),
-                          alt: j.intl.string(j.t.PkcaAA),
+                          alt: b.intl.string(b.t.PkcaAH),
                       }),
                 (0, n.jsx)(s.Text, {
                     variant: "text-md/normal",
-                    className: b.heading,
+                    className: g.heading,
                     children: i,
                 }),
             ],
@@ -118,18 +118,18 @@ let O = (e) => {
     _ = (e) => {
         let { guild: r, targetBoostedGuildTier: t, onClose: o, analyticsSourceLocation: i } = e,
             a = {
-                section: g.jXE.PREMIUM_GUILD_UPSELL_MODAL,
-                object: g.qAy.BUTTON_CTA,
+                section: j.jXE.PREMIUM_GUILD_UPSELL_MODAL,
+                object: j.qAy.BUTTON_CTA,
                 objectType: null != t ? (0, d.ge)(t) : null,
             };
         return (0, n.jsxs)(s.mzw, {
-            className: b.footer,
+            className: g.footer,
             "data-migration-pending": !0,
             children: [
                 (0, n.jsx)(s.Button, {
                     variant: "secondary",
                     size: "sm",
-                    text: j.intl.string(j.t.cpT0Cg),
+                    text: b.intl.string(b.t.cpT0Cq),
                     onClick: () => {
                         o();
                     },
@@ -154,9 +154,9 @@ function v(e) {
             guild: u,
             targetBoostedGuildTier: d,
             perks: m,
-            perkIntro: g,
-            headerProps: j,
-            onClose: b,
+            perkIntro: j,
+            headerProps: b,
+            onClose: g,
         } = e,
         h = (function (e, r) {
             if (null == e) return {};
@@ -205,15 +205,15 @@ function v(e) {
                         children: (0, n.jsx)(p.Z, {
                             hideBreadcrumbs: !0,
                             body: (0, n.jsx)(O, {
-                                onClose: b,
+                                onClose: g,
                                 perks: m,
-                                perkIntro: g,
-                                headerProps: j,
+                                perkIntro: j,
+                                headerProps: b,
                             }),
                             footer: (0, n.jsx)(_, {
                                 guild: u,
                                 targetBoostedGuildTier: d,
-                                onClose: b,
+                                onClose: g,
                                 analyticsSourceLocation: o,
                             }),
                             steps: [l.h8.PREMIUM_GUILD_UPSELL],

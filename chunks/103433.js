@@ -5,7 +5,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(388032),
-    l = n(623995),
+    l = n(38249),
     c = n(505944);
 let u = (e) => {
     let { className: t, onBackClick: n } = e;
@@ -26,7 +26,7 @@ let u = (e) => {
                         children: (0, r.jsxs)(o.P3F, {
                             onClick: n,
                             className: l.backButton,
-                            children: [(0, r.jsx)(o.V7D, { color: "currentColor" }), s.intl.string(s.t["13/7kZ"])],
+                            children: [(0, r.jsx)(o.V7D, { color: "currentColor" }), s.intl.string(s.t["13/7kX"])],
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -36,7 +36,7 @@ let u = (e) => {
                             children: (0, r.jsx)(o.Heading, {
                                 variant: "display-lg",
                                 color: "always-white",
-                                children: s.intl.string(s.t.hqjDX1),
+                                children: s.intl.string(s.t["hqjDX/"]),
                             }),
                         }),
                     }),

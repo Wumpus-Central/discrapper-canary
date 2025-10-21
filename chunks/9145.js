@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(871499),
     y = n(402113),
     _ = n(800965),
-    j = n(592125),
-    O = n(271383),
+    O = n(592125),
+    j = n(271383),
     x = n(944486),
     v = n(594174),
     C = n(585483),
@@ -39,7 +39,7 @@ var r = n(951288),
     G = n(918559),
     H = n(981631),
     F = n(388032),
-    B = n(322678);
+    B = n(33985);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,7 +76,7 @@ function Y(e) {
         X = (0, w.Z)(),
         J = (0, s.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(K), [K]),
         $ = (0, N.p)(K),
-        ee = (0, s.e7)([j.Z], () => j.Z.getChannel($)),
+        ee = (0, s.e7)([O.Z], () => O.Z.getChannel($)),
         et = (0, P.gb)(J),
         en = (0, P.uF)(et),
         er = i.useCallback(() => {
@@ -118,15 +118,15 @@ function Y(e) {
     }
     let eb = en.get(null != (Y = null == X ? void 0 : X.id) ? Y : ""),
         ey = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
-        e_ = (0, s.Wu)([O.ZP], () => {
+        e_ = (0, s.Wu)([j.ZP], () => {
             var e;
             return null == ee
                 ? []
                 : Array.from(null != (e = null == eb ? void 0 : eb.embeddedActivity.userIds) ? e : []).map((e) =>
-                      O.ZP.getMember(ee.guild_id, e),
+                      j.ZP.getMember(ee.guild_id, e),
                   );
         }, [eb, ee]),
-        ej = i.useMemo(() => {
+        eO = i.useMemo(() => {
             let e = new Map();
             return (
                 e_.forEach((t) => {
@@ -135,7 +135,7 @@ function Y(e) {
                 e
             );
         }, [e_]),
-        eO = (function (e, t, n) {
+        ej = (function (e, t, n) {
             let r = (0, p.Z)(e),
                 l = e !== r,
                 [a, s] = i.useState(!1);
@@ -190,7 +190,7 @@ function Y(e) {
     let eS = (e) => {
         var t;
         if (null == e || void 0 === e || e === D.ag) return null;
-        let n = ej.get(e.id),
+        let n = eO.get(e.id),
             i = null != (t = null == n ? void 0 : n.nick) ? t : I.ZP.getName(e);
         return (0, r.jsx)(
             c.u,
@@ -217,7 +217,7 @@ function Y(e) {
             (0, r.jsxs)("div", {
                 className: a()(B.wrapper, W[el], e),
                 ref: ei,
-                style: eO,
+                style: ej,
                 children: [
                     null == Q ? void 0 : Q(),
                     (0, r.jsxs)("div", {
@@ -268,7 +268,7 @@ function Y(e) {
                                                           (0, r.jsx)(U.Z, { channelId: ey }),
                                                           (0, r.jsx)(b.d, {
                                                               isTrayButton: !0,
-                                                              label: F.intl.string(F.t.brPQ5e),
+                                                              label: F.intl.string(F.t.brPQ5U),
                                                               onClick: er,
                                                               iconComponent: d.dOc,
                                                               themeable: !0,

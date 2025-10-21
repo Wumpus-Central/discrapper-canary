@@ -11,8 +11,8 @@ var n = A(951288),
     c = A(703558),
     g = A(981631),
     f = A(388032),
-    p = A(980272),
-    m = A(258422);
+    p = A(231319),
+    m = A(8542);
 let h = (0, l.Z)(),
     v = (0, u.createChannelRecord)({
         id: "1",
@@ -124,7 +124,7 @@ function C(e) {
                     null != g &&
                         (0, n.jsx)(o.nn4, {
                             id: h,
-                            children: f.intl.format(f.t["+DFxLS"], { maxLength: g }),
+                            children: f.intl.format(f.t["+DFxLc"], { maxLength: g }),
                         }),
                 ],
             });

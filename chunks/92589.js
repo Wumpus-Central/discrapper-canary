@@ -4,10 +4,10 @@ n(647438);
 var l = n(907331),
     i = n(481060),
     a = n(168020),
-    o = n(794324),
-    s = n(859788),
+    s = n(794324),
+    o = n(859788),
     c = n(388032),
-    u = n(80931);
+    u = n(449177);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,7 +42,7 @@ let g = (e) => {
             0.33,
             null != n,
         ),
-        { bannerUrl: p, bannerAnimatedUrl: f } = (0, o._M)(t),
+        { bannerUrl: p, bannerAnimatedUrl: f } = (0, s._M)(t),
         C = null != t.textColor ? { color: t.textColor } : void 0,
         h = null != t.body && "" !== t.body,
         _ = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
@@ -54,7 +54,7 @@ let g = (e) => {
                 className: u.banner,
                 children:
                     null != p &&
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(o.Z, {
                         bannerStatic: p,
                         bannerAnimated: f,
                     }),
@@ -89,7 +89,7 @@ let g = (e) => {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,
                                               style: d({}, C),
-                                              children: c.intl.string(c.t.O7ADgo),
+                                              children: c.intl.string(c.t.O7ADgv),
                                           }),
                                   ],
                               })

@@ -15,7 +15,7 @@ var i = n(442837),
     h = n(981631),
     m = n(474936),
     g = n(388032),
-    E = n(77247);
+    E = n(980676);
 let b = () => {
         (0, d.XO)(d.wh.APP_ICON), (0, p.default)();
     },
@@ -35,13 +35,13 @@ let b = () => {
                 children: [
                     (0, r.jsx)(a.Button, {
                         variant: t ? "secondary" : "primary",
-                        text: g.intl.string(g.t["hb/wEx"]),
+                        text: g.intl.string(g.t["hb/wE0"]),
                         onClick: () => b(),
                     }),
                     t
                         ? (0, r.jsx)(f.Z, {
                               subscriptionTier: m.Si.TIER_2,
-                              defaultTextOverride: g.intl.string(g.t.mr4K7O),
+                              defaultTextOverride: g.intl.string(g.t.mr4K7D),
                               premiumModalAnalyticsLocation: {
                                   object: h.qAy.BUTTON_CTA,
                                   objectType: h.Qqv.BUY,

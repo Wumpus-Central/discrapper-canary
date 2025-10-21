@@ -5,9 +5,9 @@ var l = t(951288),
     r = t(410030),
     s = t(343312),
     o = t(231338),
-    u = t(45765),
+    u = t(470658),
     c = t(388032),
-    d = t(241497),
+    d = t(731926),
     m = t(737413),
     v = t(688913);
 function g() {
@@ -15,7 +15,7 @@ function g() {
     return (0, l.jsx)(i.xvT, {
         variant: "text-sm/medium",
         className: d.text,
-        children: c.intl.format(u.default.fcJiY2, {
+        children: c.intl.format(u.default.fcJiY8, {
             provider: (0, l.jsx)("img", {
                 className: d.image,
                 src: e !== o.BR.LIGHT ? v : m,

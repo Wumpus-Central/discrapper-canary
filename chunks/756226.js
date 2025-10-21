@@ -9,9 +9,9 @@ var n = r(793030),
     a = r(880257),
     u = r(863552),
     h = r(292352),
-    d = r(412297),
+    d = r(660886),
     p = r(388032),
-    f = r(80103);
+    f = r(441076);
 let C = {
         [h.MY.USER_INTERACTION]: (0, o.jsx)(u.Z, {
             width: 18,
@@ -87,7 +87,7 @@ let C = {
     O = (t) => {
         let { transitionState: e, onClose: r } = t,
             i = (0, l.PO)("family_center_activity_card"),
-            u = (0, s.o)(p.intl.string(d.default.q3IRam), p.intl.string(d.default.JNLpDQ)),
+            u = (0, s.o)(p.intl.string(d.default.q3IRal), p.intl.string(d.default.JNLpDZ)),
             h = (0, a.Z)(),
             f = (0, c._p)(i);
         return (0, o.jsx)(n.Modal, {

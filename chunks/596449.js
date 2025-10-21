@@ -18,11 +18,11 @@ function c(e) {
             width: 20,
         }),
         color: i.Z.unsafe_rawColors.BRAND_500.css,
-        title: o.intl.string(o.t["60lJ0N"]),
-        description: o.intl.string(o.t["EYn7//"]),
+        title: o.intl.string(o.t["60lJ0C"]),
+        description: o.intl.string(o.t["EYn7/y"]),
         onClick: function () {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("36599"), n.e("61"), n.e("2385")]).then(n.bind(n, 779250));
+                let { default: e } = await Promise.all([n.e("36599"), n.e("61"), n.e("38793")]).then(n.bind(n, 779250));
                 return (t) => {
                     var n, i;
                     return (0, r.jsx)(

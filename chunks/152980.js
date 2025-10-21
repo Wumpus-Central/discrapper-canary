@@ -15,7 +15,7 @@ var n = A(951288),
     m = A(731994),
     h = A(629481),
     v = A(388032),
-    q = A(45856);
+    q = A(530521);
 let b = (0, c.hQ)();
 function C(e) {
     var t;
@@ -58,7 +58,7 @@ function C(e) {
                     null != s &&
                     (0, n.jsx)(o.P3F, {
                         onClick: d,
-                        "aria-label": v.intl.formatToPlainString(v.t["1o5hyc"], { attachment: m }),
+                        "aria-label": v.intl.formatToPlainString(v.t["1o5hyW"], { attachment: m }),
                         "aria-hidden": !1,
                         className: q.deleteButton,
                         children: (0, n.jsx)(o.Dio, {
@@ -102,8 +102,8 @@ function U(e) {
             children: [
                 (0, n.jsx)(s.Z, {
                     className: q.uploadArea,
-                    title: v.intl.string(v.t["5eTk2t"]),
-                    description: v.intl.string(v.t.Ecxoxs),
+                    title: v.intl.string(v.t["5eTk2g"]),
+                    description: v.intl.string(v.t.Ecxoxl),
                     icons: m.J6,
                     onDrop: U,
                 }),
@@ -111,7 +111,7 @@ function U(e) {
                     className: q.addFileButtonLook,
                     innerClassName: q.addFileButton,
                     disabled: !a,
-                    "aria-label": v.intl.string(v.t["23LeCA"]),
+                    "aria-label": v.intl.string(v.t["23LeCD"]),
                     "aria-describedby": b,
                     multiple: !0,
                     onChange: function (e) {
@@ -127,7 +127,7 @@ function U(e) {
                         (0, n.jsx)(o.Text, {
                             variant: "text-sm/medium",
                             color: "always-white",
-                            children: v.intl.string(v.t["23LeCA"]),
+                            children: v.intl.string(v.t["23LeCD"]),
                         }),
                     ],
                 }),
@@ -138,7 +138,7 @@ function U(e) {
                     variant: "text-xs/normal",
                     children: i
                         ? v.intl.formatToPlainString(v.t.lvU6sr, { fileUploadLimit: h.TR })
-                        : v.intl.formatToPlainString(v.t.DOXzIS, { fileUploadLimit: h.TR }),
+                        : v.intl.formatToPlainString(v.t.DOXzIU, { fileUploadLimit: h.TR }),
                 }),
                 A.length > 0 &&
                     (0, n.jsxs)(n.Fragment, {
@@ -146,7 +146,7 @@ function U(e) {
                             (0, n.jsx)("div", { className: q.separator }),
                             (0, n.jsx)("ul", {
                                 className: q.attachedFilesContainer,
-                                "aria-label": v.intl.string(v.t.YZ6cTU),
+                                "aria-label": v.intl.string(v.t.YZ6cTW),
                                 children: A.map((e) =>
                                     (0, n.jsx)(
                                         "li",

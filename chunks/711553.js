@@ -7,7 +7,7 @@ var i = n(951288),
     a = n(518084),
     c = n(981631),
     d = n(388032),
-    u = n(924957);
+    u = n(71264);
 let p = function (e) {
     let t,
         { title: n, header: s, children: p, renderSettings: h, onDragStart: f } = e,
@@ -62,7 +62,7 @@ let p = function (e) {
                                           (n = n =
                                               {
                                                   icon: l.ewm,
-                                                  label: d.intl.string(d.t["3D5yo6"]),
+                                                  label: d.intl.string(d.t["3D5yo/"]),
                                                   ref: g,
                                               }),
                                           Object.getOwnPropertyDescriptors

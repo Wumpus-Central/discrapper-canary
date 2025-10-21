@@ -1,13 +1,13 @@
 n.d(t, {
-    d: () => C,
-    k: () => y,
+    d: () => y,
+    k: () => C,
 }),
     n(388685);
 var i = n(951288),
     l = n(647438),
     s = n(780384),
-    a = n(755721),
-    r = n(481060),
+    r = n(755721),
+    a = n(481060),
     o = n(630810),
     d = n(43267),
     u = n(933557),
@@ -34,8 +34,8 @@ function E(e, t, n) {
         e
     );
 }
-let y = 44;
-class C extends l.Component {
+let C = 44;
+class y extends l.Component {
     shouldComponentUpdate(e, t) {
         return (
             this.state.sending !== t.sending ||
@@ -67,41 +67,41 @@ class C extends l.Component {
         }
         if (null == t || null == n)
             if (null != e)
-                return (0, i.jsx)(r.Text, {
+                return (0, i.jsx)(a.Text, {
                     variant: "text-md/medium",
                     className: f.acronym,
                     "aria-hidden": !0,
                     children: e,
                 });
             else return null;
-        return (0, i.jsx)(r.qEK, {
+        return (0, i.jsx)(a.qEK, {
             src: t,
             "aria-label": n,
-            size: r.EFr.SIZE_32,
+            size: a.EFr.SIZE_32,
             className: f.inviteRowAvatar,
         });
     }
     render() {
         let e,
             { user: t, channel: n } = this.props,
-            { sending: l, invited: r, hovered: o } = this.state;
+            { sending: l, invited: a, hovered: o } = this.state;
         return (
-            (e = r
-                ? (0, i.jsx)(a.zx, {
-                      look: a.zx.Looks.LINK,
-                      size: a.zx.Sizes.SMALL,
+            (e = a
+                ? (0, i.jsx)(r.zx, {
+                      look: r.zx.Looks.LINK,
+                      size: r.zx.Sizes.SMALL,
                       disabled: !0,
-                      color: (0, s.wj)(c.Z.theme) ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
-                      children: S.intl.string(S.t["dVT14+"]),
+                      color: (0, s.wj)(c.Z.theme) ? r.zx.Colors.WHITE : r.zx.Colors.BRAND,
+                      children: S.intl.string(S.t.dVT149),
                   })
-                : (0, i.jsx)(a.zx, {
-                      color: a.zx.Colors.GREEN,
-                      look: o ? a.zx.Looks.FILLED : a.zx.Looks.OUTLINED,
+                : (0, i.jsx)(r.zx, {
+                      color: r.zx.Colors.GREEN,
+                      look: o ? r.zx.Looks.FILLED : r.zx.Looks.OUTLINED,
                       className: f.inviteRowButton,
-                      size: a.zx.Sizes.SMALL,
+                      size: r.zx.Sizes.SMALL,
                       submitting: l,
                       onClick: this.handleClickInvite,
-                      children: S.intl.string(S.t.jYnGPD),
+                      children: S.intl.string(S.t.jYnGPG),
                   })),
             (0, i.jsxs)("div", {
                 className: f.inviteRow,

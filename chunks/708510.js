@@ -74,8 +74,8 @@ function I(e) {
         ),
         g = n === O.V_K.AGE_RESTRICTED && s !== O.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(a.rsf, {
-        label: y.intl.string(y.t.N9xEJC),
-        description: y.intl.format(y.t["iyQQ6+"], {
+        label: y.intl.string(y.t.N9xEJF),
+        description: y.intl.format(y.t.iyQQ62, {
             helpArticleLink: u.Z.getArticleURL(O.BhN.NSFW_SERVER_AGE_RESTRICTION),
         }),
         checked: o,
@@ -115,7 +115,7 @@ function T() {
             (0, r.jsx)(a.Heading, {
                 color: "header-primary",
                 variant: "heading-lg/semibold",
-                children: y.intl.string(y.t.YJlvBA),
+                children: y.intl.string(y.t.YJlvBM),
             }),
             (0, r.jsx)(_.h, {
                 onTypePicked: n,

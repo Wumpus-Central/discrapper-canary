@@ -36,8 +36,8 @@ var i = n(951288),
     D = n(981631),
     k = n(176505),
     U = n(388032),
-    B = n(40036),
-    H = n(10198);
+    B = n(963392),
+    H = n(197571);
 function V(e) {
     let { canManageRoles: t, channel: n } = e,
         r = t && (0, p.Yk)(n),
@@ -70,7 +70,7 @@ function F(e) {
             authorizedAppToken: _.Z.getNewestTokenForApplication(null == G ? void 0 : G.id),
             authorizedAppsFetchState: _.Z.getFetchState(),
         })),
-        K = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
+        q = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
     if (
         (r.useEffect(() => {
             v === D.d4z.DM &&
@@ -87,7 +87,7 @@ function F(e) {
             ? (0, i.jsx)(w.Z, { channel: p })
             : (0, i.jsx)(N.Z, {
                   channel: p,
-                  children: U.intl.string(U.t.Rzvnio),
+                  children: U.intl.string(U.t.Rzvnig),
               });
     if (v === D.d4z.DM) {
         let e;
@@ -109,7 +109,7 @@ function F(e) {
                               channel: p,
                               oauth2Token: z,
                           }),
-                          K && (0, i.jsx)(f.Z, { channel: p }),
+                          q && (0, i.jsx)(f.Z, { channel: p }),
                       ],
                   }))
                 : (e = (0, i.jsx)(E.Z, {
@@ -140,15 +140,15 @@ function F(e) {
             return (0, i.jsxs)(S.ZP, {
                 channelId: p.id,
                 children: [
-                    (0, i.jsx)(S.Ot, { children: U.intl.format(U.t.I3R7Vl, { channelName: y }) }),
-                    (0, i.jsx)(S.jz, { children: U.intl.string(U.t.M8Ao6O) }),
+                    (0, i.jsx)(S.Ot, { children: U.intl.format(U.t.I3R7Vn, { channelName: y }) }),
+                    (0, i.jsx)(S.jz, { children: U.intl.string(U.t.M8Ao6I) }),
                 ],
             });
         else if (p.hasFlag(k.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, i.jsx)(I.Z, { channel: p });
         else
             return (0, i.jsx)(N.Z, {
                 channel: p,
-                children: U.intl.format(U.t.MFwcqK, { name: y }),
+                children: U.intl.format(U.t.MFwcqO, { name: y }),
             });
     return R
         ? (0, i.jsx)(V, {
@@ -157,6 +157,6 @@ function F(e) {
           })
         : (0, i.jsx)(S.ZP, {
               channelId: p.id,
-              children: (0, i.jsx)(S.jz, { children: U.intl.format(U.t.hPVEQE, { channelName: y }) }),
+              children: (0, i.jsx)(S.jz, { children: U.intl.format(U.t.hPVEQG, { channelName: y }) }),
           });
 }

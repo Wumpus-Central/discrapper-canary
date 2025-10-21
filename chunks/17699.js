@@ -25,7 +25,7 @@ var r = n(951288),
     N = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(298814);
+    T = n(40175);
 function P(e, t, n) {
     return (
         t in e
@@ -130,12 +130,12 @@ function R(e) {
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
-                        children: S.intl.string(S.t["9Ki66O"]),
+                        children: S.intl.string(S.t["9Ki66N"]),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
                         color: "text-secondary",
-                        children: null != s.reason && "" !== s.reason ? s.reason : S.intl.string(S.t["t+2Zcn"]),
+                        children: null != s.reason && "" !== s.reason ? s.reason : S.intl.string(S.t["t+2Zci"]),
                     }),
                     null != b
                         ? (0, r.jsx)(o.Text, {
@@ -154,12 +154,12 @@ function R(e) {
                     children: [
                         (0, r.jsx)(o.Button, {
                             variant: "primary",
-                            text: S.intl.string(S.t.i4jeWV),
+                            text: S.intl.string(S.t.i4jeWR),
                             onClick: g,
                         }),
                         (0, r.jsx)(o.Button, {
                             variant: "critical-secondary",
-                            text: S.intl.string(S.t.UPcIa2),
+                            text: S.intl.string(S.t.UPcIa5),
                             onClick: O,
                             loading: m,
                         }),
@@ -314,14 +314,14 @@ function L(e) {
         children: [
             (0, r.jsx)(o.Heading, {
                 variant: "heading-lg/semibold",
-                children: S.intl.string(S.t["7OY0gI"]),
+                children: S.intl.string(S.t["7OY0gJ"]),
             }),
             (0, r.jsx)("div", {
                 className: T.settingsHeader,
                 children: (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     className: T.description,
-                    children: S.intl.format(S.t.JcZ36u, { onModerationClick: u }),
+                    children: S.intl.format(S.t.JcZ36i, { onModerationClick: u }),
                 }),
             }),
             (0, r.jsxs)("div", {
@@ -329,8 +329,8 @@ function L(e) {
                 children: [
                     (0, r.jsx)(o.E1j, {
                         query: null != l ? l : "",
-                        placeholder: S.intl.string(S.t.MiqUmZ),
-                        "aria-label": S.intl.string(S.t.MiqUmZ),
+                        placeholder: S.intl.string(S.t.MiqUmf),
+                        "aria-label": S.intl.string(S.t.MiqUmf),
                         onChange: g,
                         onKeyDown: f,
                         onClear: m,
@@ -340,7 +340,7 @@ function L(e) {
                         className: T.searchButton,
                         children: (0, r.jsx)(o.Button, {
                             variant: "primary",
-                            text: S.intl.string(S.t["5h0QOD"]),
+                            text: S.intl.string(S.t["5h0QOP"]),
                             onClick: p,
                             disabled: s,
                             loading: s,
@@ -427,7 +427,7 @@ function k() {
     i.useEffect(() => {
         B(W.current);
     }, [B]);
-    let V = i.useMemo(() => {
+    let z = i.useMemo(() => {
         var e;
         return null != (e = F[M.currentPage - 1]) ? e : [];
     }, [F, M.currentPage]);
@@ -447,7 +447,7 @@ function k() {
                               (0, r.jsx)(A, {
                                   guild: c,
                                   bans: x,
-                                  sortedBans: V,
+                                  sortedBans: z,
                                   ref: E,
                               }),
                           !k &&
@@ -465,7 +465,7 @@ function k() {
                                       (0, r.jsx)(o.OZU, {
                                           note: S.intl.string(S.t.zfCsAw),
                                           style: { maxWidth: 300 },
-                                          children: S.intl.string(S.t.ZEiY1N),
+                                          children: S.intl.string(S.t.ZEiY1D),
                                       }),
                                   ],
                               }),

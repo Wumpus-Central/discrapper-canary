@@ -16,32 +16,32 @@ var a = r(951288),
     _ = r(494831),
     f = r(71080),
     p = r(388032),
-    R = r(657966);
+    R = r(98678);
 function h(e) {
-    let { transitionState: t, onClose: r, roleId: h, guildId: y } = e,
-        k = (0, l.e7)([w.Z], () => w.Z.getRole(h), [h]),
+    let { transitionState: t, onClose: r, roleId: h, guildId: k } = e,
+        y = (0, l.e7)([w.Z], () => w.Z.getRole(h), [h]),
         [T, C] = n.useState(""),
         [M, v] = n.useState({}),
         [E, Z] = n.useState(!1),
         [S, H] = n.useState(null),
         B = n.useRef(null);
     n.useEffect(() => {
-        d.Z.requestMembers(y, T.trim().toLowerCase(), x._4);
-    }, [y, T]);
+        d.Z.requestMembers(k, T.trim().toLowerCase(), x._4);
+    }, [k, T]);
     let L = n.useCallback((e) => !e.roles.includes(h), [h]),
-        O = (0, x.lJ)(y, L),
+        O = (0, x.lJ)(k, L),
         j = n.useMemo(() => O.filter((e) => (0, x.eg)(T, e)), [T, O]),
         P = n.useCallback(async () => {
             let e = Object.values(M).map((e) => e.row.id);
             Z(!0);
             try {
-                await g.Z.bulkAddMemberRoles(y, h, e), (0, m.H)(y, h, !1), r();
+                await g.Z.bulkAddMemberRoles(k, h, e), (0, m.H)(k, h, !1), r();
             } catch (t) {
                 let e = new c.Hx(t);
                 Z(!1), H(e);
             }
-        }, [y, h, M, r]),
-        A = n.useMemo(
+        }, [k, h, M, r]),
+        q = n.useMemo(
             () =>
                 j.map((e) => {
                     var t;
@@ -61,8 +61,8 @@ function h(e) {
                 }),
             [j],
         ),
-        N = u.Z.useSections({ members: A }),
-        U = n.useCallback(
+        A = u.Z.useSections({ members: q }),
+        N = n.useCallback(
             (e) =>
                 e.rowType === f.aC.MEMBER || e.rowType === f.aC.OWNER
                     ? {
@@ -73,30 +73,30 @@ function h(e) {
                     : null,
             [],
         ),
-        q = n.useMemo(() => Object.keys(M).length, [M]);
+        U = n.useMemo(() => Object.keys(M).length, [M]);
     return (0, a.jsx)(u.Z.Provider, {
         listRef: B,
         query: T,
         setQuery: C,
         pendingAdditions: M,
         setPendingAdditions: v,
-        members: A,
-        getRichTag: U,
+        members: q,
+        getRichTag: N,
         maxPendingRows: _.ey,
         children: (0, a.jsx)(i.Modal, {
             onClose: r,
             transitionState: t,
-            title: p.intl.string(p.t["ZYOK4+"]),
+            title: p.intl.string(p.t.ZYOK46),
             subtitle:
-                null != k
-                    ? p.intl.format(p.t["qP+nub"], {
+                null != y
+                    ? p.intl.format(p.t["qP+nuZ"], {
                           numMembers: _.ey,
-                          roleName: k.name,
+                          roleName: y.name,
                       })
-                    : p.intl.format(p.t["3OxP4u"], { numMembers: _.ey }),
+                    : p.intl.format(p.t["3OxP4q"], { numMembers: _.ey }),
             input: (0, a.jsxs)("div", {
                 children: [
-                    (0, a.jsx)(u.Z.SearchBox, { placeholderText: p.intl.string(p.t.vMiCaW) }),
+                    (0, a.jsx)(u.Z.SearchBox, { placeholderText: p.intl.string(p.t.vMiCaQ) }),
                     null != S
                         ? (0, a.jsx)(o.Text, {
                               className: R.errorText,
@@ -113,20 +113,20 @@ function h(e) {
                 renderSection: u.Z.renderSection,
                 rowHeight: u.Z.ROW_HEIGHT,
                 renderRow: u.Z.renderRow,
-                sections: N,
+                sections: A,
             },
             actions: [
                 {
-                    text: p.intl.string(p.t["ETE/oK"]),
+                    text: p.intl.string(p.t["ETE/oC"]),
                     variant: "secondary",
                     onClick: r,
                 },
                 {
-                    text: p.intl.string(p.t.OYkgVl),
+                    text: p.intl.string(p.t.OYkgVk),
                     variant: "primary",
                     onClick: P,
                     loading: E,
-                    disabled: 0 === q || q > _.ey,
+                    disabled: 0 === U || U > _.ey,
                 },
             ],
         }),

@@ -17,7 +17,7 @@ var r = t(120356),
     h = t(981631),
     p = t(921944),
     f = t(388032),
-    g = t(63554),
+    g = t(886461),
     x = t(697611);
 function _(e) {
     return (0, m.te)(e) ? 250 : 152;
@@ -43,7 +43,7 @@ function C(e) {
                               className: g.description,
                               variant: "text-md/normal",
                               color: "always-white",
-                              children: f.intl.string(f.t.CXh95e),
+                              children: f.intl.string(f.t.CXh95Z),
                           }),
                           (0, l.jsx)(o.Button, {
                               variant: "overlay-primary",
@@ -73,18 +73,18 @@ function C(e) {
                               className: g.heading,
                               variant: "heading-lg/semibold",
                               color: "header-primary",
-                              children: f.intl.string(f.t.utqWEB),
+                              children: f.intl.string(f.t.utqWEC),
                           }),
                           (0, l.jsx)(o.Text, {
                               variant: "text-md/normal",
                               color: "header-secondary",
-                              children: f.intl.string(f.t["+9etcH"]),
+                              children: f.intl.string(f.t["+9etcM"]),
                           }),
                           (0, l.jsx)(o.Text, {
                               className: g.tip,
                               variant: "text-md/normal",
                               color: "header-secondary",
-                              children: f.intl.format(f.t.Z0axjo, {}),
+                              children: f.intl.format(f.t.Z0axjk, {}),
                           }),
                       ],
                   }),

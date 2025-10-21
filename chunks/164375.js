@@ -10,14 +10,14 @@ var i = n(951288),
     u = n(343544),
     _ = n(14251),
     m = n(110223),
-    f = n(981631),
-    x = n(388032),
-    h = n(73199);
+    x = n(981631),
+    f = n(388032),
+    h = n(405842);
 function g(e) {
-    let { channelId: t, blockedUserIds: n, ignoredUserIds: g = [], transitionState: E, onClose: N } = e;
+    let { channelId: t, blockedUserIds: n, ignoredUserIds: g = [], transitionState: N, onClose: E } = e;
     return (
         s.useEffect(() => {
-            d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+            d.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
                 channel_id: t,
                 warning_medium: m.WR.MODAL,
                 blocked_user_ids: n,
@@ -25,16 +25,16 @@ function g(e) {
             });
         }, [t, n, g]),
         (0, i.jsx)(u.Z, {
-            headerText: x.intl.string(x.t["mwJJ+f"]),
+            headerText: f.intl.string(f.t["mwJJ+f"]),
             descriptionText: ((e, t) => {
                 let n = e > 0,
                     i = t > 0;
                 return n && i
-                    ? x.intl.string(x.t["0dP7Fh"])
+                    ? f.intl.string(f.t["0dP7Fk"])
                     : n
-                      ? x.intl.formatToPlainString(x.t.OpIG9f, { n: e })
+                      ? f.intl.formatToPlainString(f.t.OpIG9d, { n: e })
                       : i
-                        ? x.intl.formatToPlainString(x.t["D+V4jI"], { n: t })
+                        ? f.intl.formatToPlainString(f.t["D+V4jI"], { n: t })
                         : null;
             })(n.length, g.length),
             infoRows: ((e) => {
@@ -48,7 +48,7 @@ function g(e) {
                                 className: h.icon,
                                 children: (0, i.jsx)(r.owK, {}),
                             }),
-                            text: x.intl.string(x.t["RIMw5+"]),
+                            text: f.intl.string(f.t.RIMw54),
                             className: h.row,
                         },
                         {
@@ -56,7 +56,7 @@ function g(e) {
                                 className: h.icon,
                                 children: (0, i.jsx)(r.d3s, {}),
                             }),
-                            text: x.intl.string(x.t.bejNWF),
+                            text: f.intl.string(f.t.bejNWN),
                             className: h.row,
                         },
                     ];
@@ -93,9 +93,9 @@ function g(e) {
                 ignoredUserIds: g,
             }),
             onDismissAndStay: () => {
-                N(),
+                E(),
                     (0, c.O)(t),
-                    d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    d.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: m.q.CLICK_TO_STAY,
                         channel_id: t,
                         warning_medium: m.WR.MODAL,
@@ -104,10 +104,10 @@ function g(e) {
                     });
             },
             onDismissAndLeave: () => {
-                N(),
+                E(),
                     (0, c.O)(t),
                     a.Z.closePrivateChannel(t, !0, !0),
-                    d.default.track(f.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    d.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: m.q.CLICK_TO_LEAVE,
                         channel_id: t,
                         warning_medium: m.WR.MODAL,
@@ -115,10 +115,10 @@ function g(e) {
                         ignored_user_ids: g,
                     });
             },
-            leaveButtonText: x.intl.string(x.t["Hi1/aW"]),
-            stayButtonText: x.intl.string(x.t.SW3lpK),
-            transitionState: E,
-            onClose: N,
+            leaveButtonText: f.intl.string(f.t["Hi1/aQ"]),
+            stayButtonText: f.intl.string(f.t.SW3lpH),
+            transitionState: N,
+            onClose: E,
         })
     );
 }

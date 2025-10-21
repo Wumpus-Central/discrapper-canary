@@ -11,8 +11,8 @@ var i,
     a = n(481060),
     c = n(294033),
     d = n(388032),
-    u = n(681212),
-    p = n(10198);
+    u = n(866497),
+    p = n(197571);
 function h(e, t, n) {
     return (
         t in e
@@ -76,7 +76,7 @@ class O extends (i = s.PureComponent) {
             : (0, r.jsx)(a.P3F, {
                   onClick: this.handleDismiss,
                   className: u.dismissButton,
-                  "aria-label": d.intl.string(d.t.LnEgqa),
+                  "aria-label": d.intl.string(d.t.LnEgqX),
                   children: (0, r.jsx)(a.Dio, {
                       size: "xs",
                       color: "currentColor",
@@ -151,7 +151,7 @@ class O extends (i = s.PureComponent) {
                                       ? (0, r.jsx)(a.Button, {
                                             variant: "active",
                                             size: "sm",
-                                            text: null != t ? t : d.intl.string(d.t.BddRzc),
+                                            text: null != t ? t : d.intl.string(d.t.BddRzS),
                                             onClick: this.handleConfirmClick,
                                         })
                                       : null,
@@ -159,7 +159,7 @@ class O extends (i = s.PureComponent) {
                                       ? (0, r.jsx)(a.Button, {
                                             variant: "secondary",
                                             size: "sm",
-                                            text: null != e ? e : d.intl.string(d.t["ETE/oK"]),
+                                            text: null != e ? e : d.intl.string(d.t["ETE/oC"]),
                                             onClick: this.handleCancelClick,
                                         })
                                       : null,

@@ -8,7 +8,7 @@ var r = n(120356),
     s = n(607070),
     c = n(254238),
     u = n(388032),
-    d = n(21719);
+    d = n(508773);
 function p(e) {
     let { height: t } = e,
         r = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
@@ -30,12 +30,12 @@ function p(e) {
             (0, i.jsx)(o.Heading, {
                 className: d.header,
                 variant: "heading-md/bold",
-                children: u.intl.string(u.t["C+tj1d"]),
+                children: u.intl.string(u.t["C+tj1c"]),
             }),
             (0, i.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                children: u.intl.format(u.t["nNHd//"], { onCancel: c.s6 }),
+                children: u.intl.format(u.t["nNHd/y"], { onCancel: c.s6 }),
             }),
         ],
     });

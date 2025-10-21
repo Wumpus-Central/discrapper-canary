@@ -5,7 +5,7 @@ var n = r(951288),
     a = r(481060),
     c = r(921944),
     s = r(388032),
-    l = r(64330);
+    l = r(333669);
 function p(e) {
     var t,
         r,
@@ -42,7 +42,7 @@ function p(e) {
         b = [
             {
                 variant: "secondary",
-                text: s.intl.string(s.t["ETE/oK"]),
+                text: s.intl.string(s.t["ETE/oC"]),
                 onClick: u.onClose,
             },
             ...(null != p.primaryButtonText

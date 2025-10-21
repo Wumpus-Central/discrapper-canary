@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(13736),
     y = n(732393),
     _ = n(137591),
-    j = n(299206),
-    O = n(665149),
+    O = n(299206),
+    j = n(665149),
     x = n(695346),
     v = n(979651),
     C = n(488131),
@@ -72,7 +72,7 @@ function Z(e) {
     function s() {
         l((e) => !e);
     }
-    let c = I.intl.string(I.t.UKOtz8);
+    let c = I.intl.string(I.t["UKOtz+"]);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: a,
         shouldShow: n,
@@ -87,7 +87,7 @@ function Z(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                O.ZP.Icon,
+                j.ZP.Icon,
                 E(S({}, e), {
                     ref: a,
                     onClick: s,
@@ -103,12 +103,12 @@ function Z(e) {
 function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        O = (0, f.Z)(t),
+        j = (0, f.Z)(t),
         S = (0, y.Z)(t.id),
         E = (0, b.Z)(t),
-        Z = (0, j.Z)({
+        Z = (0, O.Z)({
             id: t.id,
-            label: I.intl.string(I.t.DQ797u),
+            label: I.intl.string(I.t.DQ797g),
         }),
         P = (0, d.Z)(t),
         T = (0, u.Z)(t),
@@ -122,7 +122,7 @@ function P(e) {
     return (0, r.jsxs)(o.v2r, {
         navId: "thread-context",
         onClose: n,
-        "aria-label": I.intl.string(I.t["1NBjqa"]),
+        "aria-label": I.intl.string(I.t["1NBjqb"]),
         onSelect: i,
         children: [
             (0, r.jsxs)(o.kSQ, {
@@ -146,7 +146,7 @@ function P(e) {
                 ],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [A, l, O, T],
+                children: [A, l, j, T],
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [P, Z],

@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(823379),
     p = n(734190),
     f = n(388032),
-    h = n(95701);
+    h = n(113914);
 let g = i.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: g } = e,
         { density: m } = (0, s.TCT)(),
@@ -25,7 +25,7 @@ let g = i.memo(function (e) {
         className: h.container,
         children: (0, r.jsxs)("ul", {
             role: "group",
-            "aria-label": f.intl.formatToPlainString(f.t.EiyIi4, { channelName: t.name }),
+            "aria-label": f.intl.formatToPlainString(f.t.EiyIi6, { channelName: t.name }),
             children: [
                 (0, r.jsx)("div", {
                     className: o()(h.spineBorder, { [h.spineBorderWithGuildIcon]: g }),

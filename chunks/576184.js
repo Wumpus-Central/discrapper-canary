@@ -10,11 +10,11 @@ var t = s(951288),
     w = s(954824),
     b = s(981631),
     m = s(388032),
-    p = s(57986);
+    p = s(827414);
 let h = [
         {
             id: "discord",
-            getName: () => m.intl.string(m.t.uON9Ul),
+            getName: () => m.intl.string(m.t.uON9Ui),
             url: (0, d.t3)(),
         },
         {
@@ -24,7 +24,7 @@ let h = [
         },
         {
             id: "firefox",
-            getName: () => m.intl.string(m.t.LVbA5e),
+            getName: () => m.intl.string(m.t.LVbA5X),
             url: "https://www.mozilla.org/en-US/firefox/new/?scene=2",
         },
     ],
@@ -43,12 +43,12 @@ class u extends o.Component {
                     ? (0, t.jsx)(c.Anchor, {
                           className: p.btn,
                           href: o,
-                          children: m.intl.string(m.t["1WjMbG"]),
+                          children: m.intl.string(m.t["1WjMbC"]),
                       })
                     : (0, t.jsx)(a.rU, {
                           className: p.btn,
                           to: b.Z5c.APPS,
-                          children: m.intl.string(m.t["1WjMbG"]),
+                          children: m.intl.string(m.t["1WjMbC"]),
                       })),
             (0, t.jsxs)("li", {
                 className: p.browserItem,
@@ -79,11 +79,11 @@ class x extends o.Component {
                 children: [
                     (0, t.jsx)(c.H, {
                         className: p.title,
-                        children: m.intl.string(m.t["3h+n+/"]),
+                        children: m.intl.string(m.t["3h+n+8"]),
                     }),
                     (0, t.jsx)("p", {
                         className: p.message,
-                        children: m.intl.string(m.t.yNDLDA),
+                        children: m.intl.string(m.t.yNDLDL),
                     }),
                     (0, t.jsx)("ul", {
                         className: p.browserList,

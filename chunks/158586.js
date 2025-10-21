@@ -10,19 +10,19 @@ var i = n(951288),
     u = n(388032),
     m = n(172107);
 let j = (e) => {
-    var t, n, j, p, b, x, h;
+    var t, n, j, p, b, h, x;
     let { channel: v, onClose: f, transitionState: y } = e,
         [g, O] = o.useState(null != (j = v.defaultReactionEmoji) ? j : null),
         [N, w] = o.useState(!1),
         [E, P] = o.useState(!1),
-        _ = o.useRef(null),
-        k =
+        k = o.useRef(null),
+        _ =
             (null != (p = null == (t = v.defaultReactionEmoji) ? void 0 : t.emojiId) ? p : null) !==
             (null != (b = null == g ? void 0 : g.emojiId) ? b : null),
-        R =
-            (null != (x = null == (n = v.defaultReactionEmoji) ? void 0 : n.emojiName) ? x : null) !==
-            (null != (h = null == g ? void 0 : g.emojiName) ? h : null),
-        C = k || R,
+        C =
+            (null != (h = null == (n = v.defaultReactionEmoji) ? void 0 : n.emojiName) ? h : null) !==
+            (null != (x = null == g ? void 0 : g.emojiName) ? x : null),
+        R = _ || C,
         B = (e) => {
             O(
                 null == e
@@ -33,7 +33,7 @@ let j = (e) => {
             );
         },
         I = async () => {
-            if (C) {
+            if (R) {
                 w(!0), P(!1);
                 try {
                     await (0, a.wk)(v.id, { defaultReactionEmoji: g }), f();
@@ -45,21 +45,21 @@ let j = (e) => {
             }
         };
     return (0, i.jsxs)(l.Modal, {
-        title: u.intl.string(u.t.XlDE3t),
-        subtitle: u.intl.string(u.t.lVqhdX),
+        title: u.intl.string(u.t.XlDE3k),
+        subtitle: u.intl.string(u.t.lVqhdd),
         transitionState: y,
         onClose: f,
         actions: [
             {
                 variant: "secondary",
-                text: u.intl.string(u.t["ETE/oK"]),
+                text: u.intl.string(u.t["ETE/oC"]),
                 onClick: f,
             },
             {
                 variant: "primary",
-                text: u.intl.string(u.t.R3BPHx),
+                text: u.intl.string(u.t["R3BPH+"]),
                 loading: N,
-                disabled: !C,
+                disabled: !R,
                 onClick: I,
                 autoFocus: !0,
             },
@@ -71,7 +71,7 @@ let j = (e) => {
                 className: m.buttonRow,
                 children: [
                     (0, i.jsx)(r.yRy, {
-                        targetElementRef: _,
+                        targetElementRef: k,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(c.Z, {
@@ -119,8 +119,8 @@ let j = (e) => {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        buttonRef: _,
-                                        text: u.intl.string(u.t["59QgaG"]),
+                                        buttonRef: k,
+                                        text: u.intl.string(u.t["59QgaD"]),
                                         variant: "primary",
                                         onClick: (t) => {
                                             var n;
@@ -145,7 +145,7 @@ let j = (e) => {
                     }),
                     null != g &&
                         (0, i.jsx)(r.Button, {
-                            text: u.intl.string(u.t.N86XcH),
+                            text: u.intl.string(u.t.N86XcP),
                             variant: "critical-secondary",
                             onClick: () => B(null),
                         }),
@@ -155,7 +155,7 @@ let j = (e) => {
                 ? (0, i.jsx)(r.Text, {
                       variant: "text-sm/normal",
                       color: "text-danger",
-                      children: u.intl.string(u.t.F75nNj),
+                      children: u.intl.string(u.t.F75nNl),
                   })
                 : null,
         ],

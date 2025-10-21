@@ -14,10 +14,10 @@ function l(e, t) {
     };
 }
 function a() {
-    return l(0, i.intl.string(i.t["uXA57+"]));
+    return l(0, i.intl.string(i.t.uXA573));
 }
 function s() {
-    return l(0, i.intl.string(i.t.kesTVV));
+    return l(0, i.intl.string(i.t.kesTVT));
 }
 function o(e, t) {
     return l(1, (0, r.$q)(e, null == t ? void 0 : t.id));

@@ -21,8 +21,8 @@ var r = n(951288),
     y = n(474936),
     I = n(981631),
     C = n(388032),
-    S = n(3254),
-    N = n(952602);
+    S = n(427954),
+    N = n(286389);
 function T(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: T } = e,
         { analyticsLocations: P } = (0, d.ZP)(),
@@ -69,7 +69,7 @@ function T(e) {
         },
         D = () =>
             n === y.hX.FRIEND_ANNIVERSARY
-                ? C.intl.formatToPlainString(C.t["L2s/Nz"], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) })
+                ? C.intl.formatToPlainString(C.t["L2s/N3"], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) })
                 : (0, b.Ou)(n),
         M = () => (n === y.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t["4LohBA"]) : (0, b.Ou)(n)),
         k = i.useRef(null);

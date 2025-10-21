@@ -254,19 +254,19 @@ let V = (e) => {
                             children: [
                                 (0, r.jsx)(u.Heading, {
                                     variant: "heading-lg/bold",
-                                    children: P.intl.string(P.t["5/knv7"]),
+                                    children: P.intl.string(P.t["5/knv4"]),
                                 }),
                                 (0, r.jsx)(h.Z, {}),
                             ],
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: "text-sm/normal",
-                            children: P.intl.string(P.t.NFTQoa),
+                            children: P.intl.string(P.t.NFTQoc),
                         }),
                         (0, r.jsx)(u.Text, {
                             color: "text-link",
                             variant: "text-sm/normal",
-                            children: P.intl.format(P.t["jerM9/"], {
+                            children: P.intl.format(P.t.jerM90, {
                                 helpCenterLink: E.Z.getArticleURL(N.BhN.CONFETTI_POTION),
                             }),
                         }),
@@ -278,7 +278,7 @@ let V = (e) => {
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: "eyebrow",
-                            children: P.intl.string(P.t.o8XwoK),
+                            children: P.intl.string(P.t.o8XwoI),
                         }),
                         (0, r.jsx)(Y, {
                             channel: t,
@@ -302,7 +302,7 @@ let V = (e) => {
                     null == n
                         ? {
                               emojiName: null,
-                              selectionText: P.intl.string(P.t.KgK5qq),
+                              selectionText: P.intl.string(P.t.KgK5qg),
                           }
                         : {
                               emojiName: null == n.id ? n.optionallyDiverseSequence : n.name,
@@ -375,7 +375,7 @@ let V = (e) => {
             children: [
                 (0, r.jsx)(u.Button, {
                     variant: "secondary",
-                    text: P.intl.string(P.t.w2Qbd3),
+                    text: P.intl.string(P.t.w2Qbd6),
                     onClick: () => {
                         (0, u.Mr3)(G);
                     },
@@ -398,7 +398,7 @@ let V = (e) => {
     K = () => {
         let { entitlement: e, numPotions: t } = (0, C.t6)(I.D1);
         if (null == t || 0 === t) return null;
-        let n = (null == e ? void 0 : e.type) === N.qc2.DEVELOPER_GIFT ? P.t["b+P6ra"] : P.t.RiQ4cn;
+        let n = (null == e ? void 0 : e.type) === N.qc2.DEVELOPER_GIFT ? P.t["b+P6ra"] : P.t.RiQ4ci;
         return (0, r.jsxs)("div", {
             className: w.remaining,
             children: [
@@ -422,18 +422,18 @@ let V = (e) => {
                 tooltipCopy: d,
             } = (0, i.useMemo)(() => {
                 let e = {
-                        0: P.intl.formatToPlainString(P.t.POGRmp, {
+                        0: P.intl.formatToPlainString(P.t.POGRmi, {
                             amount: I.pe,
                             price: (0, b.T4)(a.amount, a.currency),
                         }),
-                        1: P.intl.string(P.t.RrKeDw),
-                        2: P.intl.string(P.t.WOXaWF),
-                        3: P.intl.string(P.t["1Qm829"]),
+                        1: P.intl.string(P.t.RrKeD5),
+                        2: P.intl.string(P.t.WOXaWH),
+                        3: P.intl.string(P.t["1Qm822"]),
                     },
                     r = {
-                        1: P.intl.string(P.t["Cb8/7+"]),
-                        2: P.intl.string(P.t.fMkB9P),
-                        3: P.intl.string(P.t["59ElNj"]),
+                        1: P.intl.string(P.t["Cb8/70"]),
+                        2: P.intl.string(P.t.fMkB9K),
+                        3: P.intl.string(P.t["59ElNn"]),
                     },
                     i = 0 !== n;
                 return {
@@ -465,7 +465,7 @@ let V = (e) => {
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-md/normal",
-                        children: P.intl.string(P.t.oKJdSk),
+                        children: P.intl.string(P.t.oKJdSs),
                     }),
                 ],
             }),

@@ -42,8 +42,8 @@ var i = n(120356),
     L = n(474936),
     x = n(217702),
     M = n(388032),
-    k = n(518520),
-    j = n(163594),
+    k = n(1721),
+    j = n(740150),
     U = n(107283),
     G = n(476945),
     B = n(945182);
@@ -257,7 +257,7 @@ function W(e) {
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/bold",
                     className: s ? k.tier2ApplicationHomeSubheader : j.tier2ApplicationHomeSubheader,
-                    children: M.intl.string(M.t.AozD3d),
+                    children: M.intl.string(M.t.AozD3Q),
                 }),
             g.map((e, n) => {
                 let { Icon: i, getText: o } = e;
@@ -526,7 +526,7 @@ function X(e) {
                 className: j.applicationHomeTierCardSectionHeader,
                 variant: "display-md",
                 color: "header-primary",
-                children: M.intl.string(M.t.vLz3Zm),
+                children: M.intl.string(M.t.vLz3Zs),
             }),
             (0, r.jsxs)("div", {
                 ref: s,

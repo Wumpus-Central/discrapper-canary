@@ -1,3 +1,12 @@
-e.exports = JSON.parse(
-    '{"nBRtt7":"Próbálj meg beírni egy másik kulcsszót, hogy megtaláld a hangcsatornát, ahol közvetíteni szeretnél.","sWGfr6":"Nem találhatók elérhető hangcsatornák","agwSGB":"A jövőben ezen a lapon tudsz adott eszközökről, például a kamerádból tartalmakat megosztani.","/z3YaW":"Nem találhatók elérhető Rögzítési eszközök.","xpVzr6":[[8,"$link",["További tájékoztatás"],[[1,"helpdeskURL"]]]],"/ssDMT":"Képkockasebesség","H3Qjqa":"Közvetítés előnézetének elrejtése","eYyK1t":"Speciális","FZ9Fl5":"Közelmúltbeli csatornák","CmJX8P":["Képkockasebesség: ",[1,"frameRate"],"\xA0fps"],"+f+cqq":"Nitro beszerzése","YSdHV1":"Hangrögzítő eszköz","P2pjm5":"Közvetítési mód","VQ3gwc":"Automatikus","G+k1q6":"Játék","G5O1Mz":["Zökkenőmentesebb videó (",[1,"resolution"],", ",[1,"frameRate"],"\xA0fps)"],"MuHUFR":"Zökkenőmentesebb videó","8tcFLy":["Jobban látható szöveg (",[1,"resolution"],", ",[1,"frameRate"],"\xA0fps)"],"y0JuYW":"Jobban látható szöveg","7A4ZyM":["Felbontás: ",[1,"resolution"]],"hJMA+/":"Forrás kiválasztása","IG5n0d":"Képernyőfelbontás","5AyH/v":"Élő közvetítés","SiHtX1":"A barátaim értesítése a szerveren belül","7eHfrq":"Előbeállítás","PYBXFR":"Felbontás","FzMGWV":"Közvetítés némítva","n9/rUl":"Rendszerhang","b0+Ira":"Közvetítés hangjának némítása"}',
-);
+e.exports = {
+    placeholderPulse: "placeholderPulse_c8ffbb",
+    container: "container_c8ffbb",
+    membersWrap: "membersWrap_c8ffbb",
+    members: "members_c8ffbb",
+    member: "member_c8ffbb",
+    membersGroup: "membersGroup_c8ffbb",
+    hiddenMembers: "hiddenMembers_c8ffbb",
+    memberGroupsPlaceholder: "memberGroupsPlaceholder_c8ffbb",
+    roleIcon: "roleIcon_c8ffbb",
+    fullWidth: "fullWidth_c8ffbb",
+};

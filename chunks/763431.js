@@ -4,7 +4,7 @@ n(647438);
 var i = n(481060),
     l = n(565138),
     a = n(388032),
-    s = n(296654);
+    s = n(99563);
 let o = (e) => {
     let { guild: t } = e;
     return (0, r.jsxs)("div", {
@@ -13,7 +13,7 @@ let o = (e) => {
             (0, r.jsx)(i.Heading, {
                 className: s.header,
                 variant: "heading-sm/semibold",
-                children: a.intl.string(a.t["0ox7Hh"]),
+                children: a.intl.string(a.t["0ox7Hq"]),
             }),
             (0, r.jsx)("div", {
                 className: s.guildContainer,

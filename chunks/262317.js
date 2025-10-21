@@ -37,7 +37,7 @@ var i = n(951288),
     w = n(927923),
     M = n(70722),
     R = n(388032),
-    L = n(2628);
+    L = n(92024);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -94,7 +94,7 @@ function U(e) {
 }
 function B(e) {
     let { numAudience: t, collapsed: n } = e,
-        r = n ? t : R.intl.formatToPlainString(R.t["+v2pNz"], { count: t });
+        r = n ? t : R.intl.formatToPlainString(R.t["+v2pN2"], { count: t });
     return (0, i.jsxs)("div", {
         className: a()(L.audienceContainer, { [L.audienceContainerCollapsed]: n }),
         children: [
@@ -127,9 +127,9 @@ let H = (0, h.$)(function (e) {
             video: G,
             embeddedApplication: z,
             serverMute: W,
-            serverDeaf: K,
+            serverDeaf: q,
             nick: Y,
-            ringing: q,
+            ringing: K,
             speaking: X,
             disconnected: J,
             connectUserDragSource: Q,
@@ -202,7 +202,7 @@ let H = (0, h.$)(function (e) {
                     n.e("98783"),
                     n.e("8982"),
                     n.e("7717"),
-                    n.e("87157"),
+                    n.e("96306"),
                 ]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, i.jsx)(
@@ -287,13 +287,13 @@ let H = (0, h.$)(function (e) {
                                 isGuest: en,
                                 video: G,
                                 priority: ei,
-                                ringing: q,
+                                ringing: K,
                                 deaf: F,
                                 nick: Y,
                                 collapsed: l,
                                 overlap: l,
                                 serverMute: W,
-                                serverDeaf: K,
+                                serverDeaf: q,
                                 tabIndex: ed,
                                 otherClientSessionType: es,
                                 voicePlatform: ec,
@@ -314,7 +314,7 @@ let H = (0, h.$)(function (e) {
                         if (eu) {
                             var r;
                             return (0, i.jsx)(o.u, {
-                                text: null != (r = (0, C.Z)(es)) ? r : R.intl.string(R.t.IyYqqa),
+                                text: null != (r = (0, C.Z)(es)) ? r : R.intl.string(R.t.IyYqqY),
                                 children: (0, i.jsx)(P.ZP, D({ ref: eC }, n)),
                             });
                         }

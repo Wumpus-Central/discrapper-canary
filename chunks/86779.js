@@ -16,13 +16,13 @@ var r = n(951288),
     _ = n(970648),
     x = n(981631),
     E = n(388032),
-    v = n(976914);
+    v = n(78224);
 let b = "mweb_handoff_nonce",
     j = "mweb_handoff_nonce_expiration",
     I = +f.Z.Millis.MINUTE,
     N = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
-    O = new Set(["deep_link_failed"]),
-    y = () => {
+    y = new Set(["deep_link_failed"]),
+    O = () => {
         c.K.remove(b), c.K.remove(j);
     },
     S = () => {
@@ -60,7 +60,7 @@ let b = "mweb_handoff_nonce",
             i.useEffect(() => {
                 if (null != Z) {
                     let e = c.K.get(j);
-                    (null == e || Date.now() >= e) && (T("nonce_expired"), y());
+                    (null == e || Date.now() >= e) && (T("nonce_expired"), O());
                 }
             }, [Z, T]),
             i.useEffect(() => {
@@ -95,7 +95,7 @@ let b = "mweb_handoff_nonce",
                             T("handoff_exchange");
                         })
                         .finally(() => {
-                            y();
+                            O();
                         });
             }, [n, Z, C, S, T]),
             null == S)
@@ -104,14 +104,14 @@ let b = "mweb_handoff_nonce",
         let P =
             null == C
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [E.intl.string(E.t.uJ1Jsb), (0, r.jsx)("br", {}), E.intl.string(E.t.GHVWAg)],
+                      children: [E.intl.string(E.t.uJ1JsY), (0, r.jsx)("br", {}), E.intl.string(E.t.GHVWAs)],
                   })
-                : O.has(C)
-                  ? E.intl.string(E.t.EPt55u)
+                : y.has(C)
+                  ? E.intl.string(E.t.EPt55r)
                   : N.has(C)
-                    ? E.intl.string(E.t.g87kTk)
+                    ? E.intl.string(E.t.g87kTp)
                     : void 0;
-        return null != C && O.has(C)
+        return null != C && y.has(C)
             ? (0, r.jsx)("div", {
                   className: v.errorContainer,
                   children: (0, r.jsx)(d.Text, {
@@ -157,7 +157,7 @@ let b = "mweb_handoff_nonce",
                           children: (0, r.jsx)(d.Text, {
                               className: v.buttonText,
                               variant: "text-sm/semibold",
-                              children: E.intl.string(E.t["NcC75+"]),
+                              children: E.intl.string(E.t.NcC759),
                           }),
                       }),
                   ],

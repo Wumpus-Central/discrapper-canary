@@ -13,7 +13,7 @@ var i = n(120356),
     _ = n(834129),
     p = n(674563),
     h = n(388032),
-    m = n(78642);
+    m = n(682392);
 function g(e) {
     var t;
     let { message: n, compact: i, usernameHook: g, channel: E } = e,
@@ -47,7 +47,7 @@ function g(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: m.username,
-                                    children: h.intl.string(h.t.hG1StL),
+                                    children: h.intl.string(h.t.hG1StD),
                                 }),
                                 (0, r.jsx)(l.Z, {
                                     type: p.Hb.SYSTEM_DM,
@@ -60,7 +60,7 @@ function g(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: a()(m.__invalid_messageContent, { [m.compact]: i }),
-                        children: h.intl.format(h.t.W0UBIy, {
+                        children: h.intl.format(h.t.W0UBI3, {
                             username: y.nick,
                             usernameHook: O,
                             guildName: null != (t = null == b ? void 0 : b.name) ? t : "",

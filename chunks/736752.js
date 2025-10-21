@@ -40,8 +40,8 @@ var r = n(951288),
     U = n(981631),
     G = n(801461),
     B = n(388032),
-    Z = n(719766),
-    F = n(10198);
+    Z = n(343396),
+    F = n(197571);
 function V(e, t, n) {
     return (
         t in e
@@ -112,12 +112,12 @@ class z extends i.PureComponent {
                 children: [
                     (0, r.jsx)("div", {
                         className: Z.accountWarningBodyText,
-                        children: B.intl.string(B.t.qKs3vr),
+                        children: B.intl.string(B.t.qKs3vg),
                     }),
                     (0, r.jsx)(c.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: B.intl.string(B.t["7psymp"]),
+                        text: B.intl.string(B.t["7psymi"]),
                         onClick: () => p.Z.openClaimAccountModal(),
                     }),
                 ],
@@ -130,7 +130,7 @@ class z extends i.PureComponent {
                     width: 60,
                     height: 60,
                 },
-                title: B.intl.string(B.t["/3qnLy"]),
+                title: B.intl.string(B.t["/3qnL/"]),
                 body: e,
             });
         }
@@ -140,7 +140,7 @@ class z extends i.PureComponent {
                 children: [
                     (0, r.jsx)("div", {
                         className: Z.accountWarningBodyText,
-                        children: B.intl.string(B.t.NAzplJ),
+                        children: B.intl.string(B.t.NAzplE),
                     }),
                     (0, r.jsx)(P.Z, {
                         size: "sm",
@@ -156,7 +156,7 @@ class z extends i.PureComponent {
                     width: 60,
                     height: 60,
                 },
-                title: B.intl.string(B.t.tuGzBQ),
+                title: B.intl.string(B.t.tuGzBT),
                 body: e,
             });
         }
@@ -167,13 +167,13 @@ class z extends i.PureComponent {
                   className: Z.accountWarningBodyText,
                   messageType: c.QYI.WARNING,
                   children: [
-                      B.intl.format(B.t.pdYZys, {}),
+                      B.intl.format(B.t.pdYZyg, {}),
                       " ",
                       "",
                       (0, r.jsx)(h.Z, {
                           className: Z.noticeTextButton,
                           onClick: () => (0, g.Z)(G.Kq.USER_SETTINGS),
-                          children: B.intl.string(B.t.LhlgY2),
+                          children: B.intl.string(B.t.LhlgY9),
                       }),
                   ],
               })
@@ -188,13 +188,13 @@ class z extends i.PureComponent {
         let { backupCodes: e, currentUser: t } = this.props;
         return (0, r.jsxs)(c.C3N, {
             className: Z.userSettingsSecurity,
-            label: B.intl.string(B.t.pKSjEh),
+            label: B.intl.string(B.t.pKSjEj),
             children: [
                 t.mfaEnabled
                     ? (0, r.jsx)(c.Wn, {
                           icon: c.mBM,
                           messageType: c.QYI.POSITIVE,
-                          children: B.intl.string(B.t.FsmBy8),
+                          children: B.intl.string(B.t.FsmBy4),
                       })
                     : null,
                 (0, r.jsx)(b.F, {
@@ -202,7 +202,7 @@ class z extends i.PureComponent {
                     children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: B.intl.string(B.t["FRep5+"]),
+                        text: B.intl.string(B.t["FRep5/"]),
                         onClick: () => (0, c.h7j)((e) => (0, r.jsx)(k.default, W(H({}, e), { onSuccess: e.onClose }))),
                     }),
                 }),
@@ -225,14 +225,14 @@ class z extends i.PureComponent {
             let e = () => this.setState({ shouldRenderOwnedTeamsModal: !1 });
             return (0, r.jsx)(c.sYh, {
                 dismissable: !0,
-                header: B.intl.string(B.t.UNGZDA),
-                confirmText: B.intl.string(B.t.BddRzc),
+                header: B.intl.string(B.t.UNGZDI),
+                confirmText: B.intl.string(B.t.BddRzS),
                 confirmButtonColor: l.Tt.BRAND,
                 onCancel: e,
                 onConfirm: e,
                 children: (0, r.jsx)(c.Text, {
                     variant: "text-md/normal",
-                    children: B.intl.string(B.t.alpAUl),
+                    children: B.intl.string(B.t.alpAUm),
                 }),
             });
         }
@@ -240,14 +240,14 @@ class z extends i.PureComponent {
             let e = () => this.setState({ shouldRenderOwnedGuildsModal: !1 });
             return (0, r.jsx)(c.sYh, {
                 dismissable: !0,
-                header: B.intl.string(B.t.I5UrbW),
-                confirmText: B.intl.string(B.t.BddRzc),
+                header: B.intl.string(B.t.I5UrbV),
+                confirmText: B.intl.string(B.t.BddRzS),
                 confirmButtonColor: l.Tt.BRAND,
                 onCancel: e,
                 onConfirm: e,
                 children: (0, r.jsx)(c.Text, {
                     variant: "text-md/normal",
-                    children: B.intl.string(B.t.UyVVam),
+                    children: B.intl.string(B.t.UyVVan),
                 }),
             });
         }
@@ -255,14 +255,14 @@ class z extends i.PureComponent {
             let e = () => this.setState({ shouldRenderDeleteAccountConfirmModal: !1 });
             return (0, r.jsx)(c.sYh, {
                 dismissable: !0,
-                header: B.intl.string(B.t["8lQ2ra"]),
-                confirmText: B.intl.string(B.t["8lQ2ra"]),
-                cancelText: B.intl.string(B.t["ETE/oK"]),
+                header: B.intl.string(B.t["8lQ2rR"]),
+                confirmText: B.intl.string(B.t["8lQ2rR"]),
+                cancelText: B.intl.string(B.t["ETE/oC"]),
                 onCancel: e,
                 onConfirm: () => (0, d.ss)("", !0).then(e),
                 children: (0, r.jsx)(c.Text, {
                     variant: "text-md/normal",
-                    children: B.intl.string(B.t.FB4H1N),
+                    children: B.intl.string(B.t.FB4H1D),
                 }),
             });
         }
@@ -274,8 +274,8 @@ class z extends i.PureComponent {
                 });
             return (0, r.jsx)(c.sYh, {
                 dismissable: !0,
-                header: B.intl.string(B.t.LX0nT0),
-                confirmText: B.intl.string(B.t.BddRzc),
+                header: B.intl.string(B.t.LX0nT8),
+                confirmText: B.intl.string(B.t.BddRzS),
                 confirmButtonColor: l.Tt.BRAND,
                 onCancel: e,
                 onConfirm: e,
@@ -323,7 +323,7 @@ class z extends i.PureComponent {
     renderUnhidden() {
         let { subsection: e } = this.props;
         return (0, r.jsx)(w.N, {
-            header: B.intl.string(B.t["JAIM/v"]),
+            header: B.intl.string(B.t["JAIM/m"]),
             children: (0, r.jsx)(D.Z, {
                 parentSetting: j.s6.ACCOUNT,
                 settingsSection: U.oAB.ACCOUNT,
@@ -336,12 +336,12 @@ class z extends i.PureComponent {
                 defaultTabIndex: "ACCOUNT_STANDING" === e ? 1 : void 0,
                 tabs: [
                     {
-                        title: B.intl.string(B.t.Am9YHh),
+                        title: B.intl.string(B.t.Am9YHi),
                         component: () => this.renderSecuritySettingsRedesign(),
                         setting: j.s6.ACCOUNT_SECURITY_TAB,
                     },
                     {
-                        title: B.intl.string(B.t["Vov/9v"]),
+                        title: B.intl.string(B.t["Vov/9o"]),
                         component: E.Z,
                         setting: j.s6.PRIVACY_AND_SAFETY_STANDING,
                     },
@@ -377,9 +377,9 @@ class z extends i.PureComponent {
                               _.Z,
                               W(H({}, e), {
                                   handleSubmit: (e) => this.handleSubmitDisableAccount(e, t),
-                                  title: t ? B.intl.string(B.t["8lQ2ra"]) : B.intl.string(B.t.jf5GGR),
-                                  actionText: t ? B.intl.string(B.t["8lQ2ra"]) : B.intl.string(B.t.jf5GGR),
-                                  children: t ? B.intl.string(B.t.FB4H1N) : B.intl.string(B.t.gk7h39),
+                                  title: t ? B.intl.string(B.t["8lQ2rR"]) : B.intl.string(B.t.jf5GGb),
+                                  actionText: t ? B.intl.string(B.t["8lQ2rR"]) : B.intl.string(B.t.jf5GGb),
+                                  children: t ? B.intl.string(B.t.FB4H1D) : B.intl.string(B.t.gk7h32),
                               }),
                           ),
                       )

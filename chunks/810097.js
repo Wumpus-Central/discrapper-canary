@@ -72,14 +72,14 @@ function y(e, t) {
 let O = 2700,
     v = "> -# *",
     I = {
-        [p.n_.AVATAR]: () => h.intl.string(h.t["fEUP/v"]),
-        [p.n_.STATUS]: () => h.intl.string(h.t.TKdBCw),
-        [p.n_.ACTIVITY]: () => h.intl.string(h.t.bSe71N),
+        [p.n_.AVATAR]: () => h.intl.string(h.t["fEUP/i"]),
+        [p.n_.STATUS]: () => h.intl.string(h.t.TKdBC8),
+        [p.n_.ACTIVITY]: () => h.intl.string(h.t.bSe71F),
     },
     T = {
-        [p.n_.AVATAR]: () => h.intl.string(h.t.xvN0fX),
-        [p.n_.STATUS]: () => h.intl.string(h.t["C/vzS0"]),
-        [p.n_.ACTIVITY]: () => h.intl.string(h.t.ObfsSk),
+        [p.n_.AVATAR]: () => h.intl.string(h.t.xvN0fV),
+        [p.n_.STATUS]: () => h.intl.string(h.t["C/vzS7"]),
+        [p.n_.ACTIVITY]: () => h.intl.string(h.t.ObfsSj),
     };
 function S(e) {
     let {
@@ -136,7 +136,7 @@ function S(e) {
         children: [
             (0, r.jsx)(l.u, {
                 asContainer: !0,
-                text: h.intl.string(h.t.nhaI4e),
+                text: h.intl.string(h.t.nhaI4b),
                 shouldShow: a,
                 delay: 0,
                 "aria-label": !1,
@@ -153,7 +153,7 @@ function S(e) {
             }),
             (0, r.jsx)(l.u, {
                 asContainer: !0,
-                text: h.intl.string(h.t.RmDYKC),
+                text: h.intl.string(h.t.RmDYKK),
                 shouldShow: a,
                 delay: 0,
                 "aria-label": !1,
@@ -177,7 +177,7 @@ function S(e) {
                       };
                       return (0, r.jsx)(l.u, {
                           asContainer: !0,
-                          text: h.intl.string(h.t.UKOtz8),
+                          text: h.intl.string(h.t["UKOtz+"]),
                           shouldShow: a,
                           delay: 0,
                           "aria-label": !1,
@@ -186,7 +186,7 @@ function S(e) {
                               y(E({ ref: A }, e), {
                                   onClick: t,
                                   className: m.button,
-                                  "aria-label": h.intl.string(h.t.UKOtz8),
+                                  "aria-label": h.intl.string(h.t["UKOtz+"]),
                                   children: (0, r.jsx)(c.xhG, {
                                       size: "xs",
                                       className: m.icon,

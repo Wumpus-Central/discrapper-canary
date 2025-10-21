@@ -15,7 +15,7 @@ var r = n(951288),
     f = n(256003),
     h = n(981631),
     g = n(388032),
-    j = n(211606);
+    j = n(800209);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,7 +67,7 @@ function y(e) {
         w = async (e, t, n, r) => {
             try {
                 let l = await c.Z.banMultipleUsers(e, t, n, r);
-                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.AsCe5O), s.ToastType.SUCCESS)),
+                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.AsCe5I), s.ToastType.SUCCESS)),
                     m.default.track(
                         h.rMx.BULK_MODERATION_ACTION_COMPLETED,
                         v(x({}, (0, d.hH)(e)), {
@@ -79,7 +79,7 @@ function y(e) {
                         }),
                     );
             } catch (e) {
-                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.mICAWV), s.ToastType.FAILURE));
+                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.mICAWY), s.ToastType.FAILURE));
             }
             H();
         },
@@ -98,10 +98,10 @@ function y(e) {
                 (0, r.jsx)(s.Text, {
                     variant: "heading-md/bold",
                     color: "text-default",
-                    children: g.intl.format(g.t.TstoSU, { count: O.size }),
+                    children: g.intl.format(g.t.TstoSZ, { count: O.size }),
                 }),
                 (0, r.jsx)(s.Avr, {
-                    text: g.intl.string(g.t.yW6ZdH),
+                    text: g.intl.string(g.t.yW6ZdE),
                     onClick: S,
                 }),
             ],
@@ -118,7 +118,7 @@ function y(e) {
                 (0, r.jsx)(s.Text, {
                     variant: "text-sm/semibold",
                     color: "currentColor",
-                    children: g.intl.string(g.t["2a50fH"]),
+                    children: g.intl.string(g.t["2a50fF"]),
                 }),
             ],
         });
@@ -141,7 +141,7 @@ function y(e) {
                                   }),
                               ),
                                   (0, s.ZDy)(async () => {
-                                      let { default: e } = await n.e("4114").then(n.bind(n, 98746));
+                                      let { default: e } = await n.e("43350").then(n.bind(n, 98746));
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,

@@ -39,9 +39,9 @@ var r = n(951288),
     k = n(623825),
     F = n(981631),
     L = n(354459),
-    U = n(65154),
-    V = n(388032),
-    W = n(400872);
+    V = n(65154),
+    U = n(388032),
+    W = n(7504);
 let H = new _.Z("StreamTile");
 function B(e) {
     let { participant: t, selected: n, focused: i, idle: l, width: a, premiumIndicator: c } = e,
@@ -95,7 +95,7 @@ function q(e) {
             !er &&
             ((0, d.rn)(G), u.Z.updateStageStreamSize(G.channelId, !1));
     });
-    let eo = (0, g.c)(U.Yn.STREAM, t.user.id);
+    let eo = (0, g.c)(V.Yn.STREAM, t.user.id);
     if (
         (i.useEffect(() => {
             H.info(
@@ -103,7 +103,7 @@ function q(e) {
                     .concat(null != $, " | selected: ")
                     .concat(n, " | Video: ")
                     .concat(null != z, " | MediaEngine: ")
-                    .concat(P.Z.supports(U.AN.VIDEO)),
+                    .concat(P.Z.supports(V.AN.VIDEO)),
             );
         }, [z, $, n]),
         K)
@@ -134,7 +134,7 @@ function q(e) {
             participant: t,
             width: M,
         });
-    if (!(null != $ && !n && null != z && P.Z.supports(U.AN.VIDEO)))
+    if (!(null != $ && !n && null != z && P.Z.supports(V.AN.VIDEO)))
         return (0, r.jsxs)("div", {
             className: a()(W.content, W.streamPreview, { [W.small]: ea }),
             children: [
@@ -153,19 +153,19 @@ function q(e) {
                                   children: (0, r.jsx)(s.Button, {
                                       variant: "secondary",
                                       size: ea ? "sm" : "md",
-                                      text: M < 175 ? V.intl.string(V.t["I6JG4+"]) : V.intl.string(V.t["7Xq/nZ"]),
+                                      text: M < 175 ? U.intl.string(U.t.I6JG46) : U.intl.string(U.t["7Xq/nV"]),
                                   }),
                               }),
                               et && !ee
                                   ? (0, r.jsx)("div", {
                                         className: a()(W.cta, W.addCta),
                                         children: (0, r.jsx)(c.u, {
-                                            text: V.intl.string(V.t.wCrzur),
+                                            text: U.intl.string(U.t.wCrzut),
                                             children: (0, r.jsx)(s.hU, {
                                                 variant: "secondary",
                                                 size: ea ? "sm" : "md",
                                                 icon: s.OgY,
-                                                "aria-label": V.intl.string(V.t.wCrzur),
+                                                "aria-label": U.intl.string(U.t.wCrzut),
                                                 onClick: (e) => {
                                                     e.stopPropagation(), (0, d.rn)(t.stream, { forceMultiple: !0 });
                                                 },

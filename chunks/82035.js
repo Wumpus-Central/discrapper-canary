@@ -3,8 +3,8 @@ var e = n(951288),
     r = n(647438),
     i = n(442837),
     a = n(544891),
-    u = n(159691),
-    s = n(481060),
+    s = n(159691),
+    u = n(481060),
     d = n(493773),
     c = n(910693),
     o = n(314897),
@@ -18,7 +18,7 @@ var e = n(951288),
     h = n(388032),
     C = n(277081);
 function p(l) {
-    let { disabled: t = !1, user: n, setNickname: i, nickname: a, error: u, hasNick: d } = l,
+    let { disabled: t = !1, user: n, setNickname: i, nickname: a, error: s, hasNick: d } = l,
         c = r.useRef(null),
         x = r.useCallback(() => {
             var l;
@@ -28,16 +28,16 @@ function p(l) {
         children: [
             t || null == n || n.id === o.default.getId()
                 ? null
-                : (0, e.jsx)(s.Zbd, {
-                      type: s.Zbd.Types.WARNING,
+                : (0, e.jsx)(u.Zbd, {
+                      type: u.Zbd.Types.WARNING,
                       className: C.card,
-                      children: (0, e.jsx)(s.Text, {
+                      children: (0, e.jsx)(u.Text, {
                           variant: "text-md/normal",
-                          children: h.intl.string(h.t.dq3At7),
+                          children: h.intl.string(h.t.dq3At2),
                       }),
                   }),
-            (0, e.jsx)(s.oil, {
-                label: t ? h.intl.string(h.t.EyA4q6) : h.intl.string(h.t["621LJC"]),
+            (0, e.jsx)(u.oil, {
+                label: t ? h.intl.string(h.t.EyA4q5) : h.intl.string(h.t["621LJD"]),
                 disabled: t,
                 inputRef: c,
                 maxLength: E.l$U,
@@ -46,19 +46,19 @@ function p(l) {
                 onChange: i,
                 autoFocus: !0,
             }),
-            null != u
-                ? (0, e.jsx)(s.Text, {
+            null != s
+                ? (0, e.jsx)(u.Text, {
                       variant: "text-xs/normal",
                       color: "text-danger",
                       className: C.nickError,
-                      children: u,
+                      children: s,
                   })
                 : null,
             d && !t
                 ? (0, e.jsx)("div", {
                       className: C.reset,
-                      children: (0, e.jsx)(s.Avr, {
-                          text: h.intl.string(h.t.aE02R0),
+                      children: (0, e.jsx)(u.Avr, {
+                          text: h.intl.string(h.t.aE02Rz),
                           onClick: x,
                           textVariant: "text-sm/normal",
                       }),
@@ -69,16 +69,16 @@ function p(l) {
 }
 let A = function (l) {
     var t;
-    let { transitionState: n, user: s, guildId: o, onClose: m, analyticsSource: C, analyticsLocations: A } = l,
-        f = (0, i.e7)([x.ZP], () => (null != o ? x.ZP.getMember(o, s.id) : null)),
+    let { transitionState: n, user: u, guildId: o, onClose: m, analyticsSource: C, analyticsLocations: A } = l,
+        f = (0, i.e7)([x.ZP], () => (null != o ? x.ZP.getMember(o, u.id) : null)),
         _ = (0, i.e7)([N.Z, g.default, v.Z], () => {
             var l;
             let t = v.Z.getGuild(o);
             return (
                 null != t &&
-                ((null == (l = g.default.getCurrentUser()) ? void 0 : l.id) === s.id
+                ((null == (l = g.default.getCurrentUser()) ? void 0 : l.id) === u.id
                     ? N.Z.can(E.Plq.CHANGE_NICKNAME, t) || N.Z.can(E.Plq.MANAGE_NICKNAMES, t)
-                    : N.Z.canManageUser(E.Plq.MANAGE_NICKNAMES, s.id, t))
+                    : N.Z.canManageUser(E.Plq.MANAGE_NICKNAMES, u.id, t))
             );
         }),
         [b, M] = r.useState(!1),
@@ -93,11 +93,11 @@ let A = function (l) {
     });
     let P = (0, c.sE)(o, {
             location: null == A ? void 0 : A[0],
-            targetUserId: s.id,
+            targetUserId: u.id,
         }),
         S = r.useCallback(
             async (l) => {
-                var t, n, e, r, i, u, d, x, v;
+                var t, n, e, r, i, s, d, x, v;
                 l.preventDefault();
                 let N = null;
                 if (
@@ -108,7 +108,7 @@ let A = function (l) {
                 try {
                     M(!0),
                         await a.tn.patch({
-                            url: E.ANM.GUILD_MEMBER(o, s.id),
+                            url: E.ANM.GUILD_MEMBER(o, u.id),
                             body: N,
                             rejectWithError: !1,
                         }),
@@ -120,33 +120,33 @@ let A = function (l) {
                     let t = null != (e = null == (n = a.body) ? void 0 : n.errors) ? e : null;
                     (null == t ? void 0 : t.nick) != null
                         ? (l =
-                              (null == (u = t.nick) || null == (i = u._errors) || null == (r = i[0])
+                              (null == (s = t.nick) || null == (i = s._errors) || null == (r = i[0])
                                   ? void 0
-                                  : r.message) || h.intl.string(h.t.xex86u))
+                                  : r.message) || h.intl.string(h.t.xex86n))
                         : (null == t ? void 0 : t.username) != null &&
                           (l =
                               (null == (v = t.username) || null == (x = v._errors) || null == (d = x[0])
                                   ? void 0
-                                  : d.message) || h.intl.string(h.t.xex86u)),
+                                  : d.message) || h.intl.string(h.t.xex86n)),
                         I({ nick: l });
                 }
             },
-            [o, Z, m, s, f, P],
+            [o, Z, m, u, f, P],
         );
     return (0, e.jsx)("form", {
         onSubmit: S,
-        children: (0, e.jsx)(u.u_l, {
+        children: (0, e.jsx)(s.u_l, {
             transitionState: n,
             onClose: m,
-            title: h.intl.string(h.t.dilOFx),
+            title: h.intl.string(h.t.dilOF6),
             actions: [
                 {
-                    text: h.intl.string(h.t["ETE/oK"]),
+                    text: h.intl.string(h.t["ETE/oC"]),
                     onClick: m,
                     variant: "secondary",
                 },
                 {
-                    text: h.intl.string(h.t.R3BPHx),
+                    text: h.intl.string(h.t["R3BPH+"]),
                     variant: "primary",
                     type: "submit",
                     disabled: b,
@@ -154,7 +154,7 @@ let A = function (l) {
             ],
             children: (0, e.jsx)(p, {
                 disabled: !_,
-                user: s,
+                user: u,
                 error: y.nick,
                 nickname: Z,
                 setNickname: j,

@@ -161,26 +161,26 @@ function x(e, t, n) {
     function r(e) {
         switch (e) {
             case i.J.NICKNAME_UPDATE:
-                return E.intl.string(E.t.t98DPT);
+                return E.intl.string(E.t.t98DPb);
             case i.J.NICKNAME_RESET:
-                return E.intl.string(E.t["7u/rlZ"]);
+                return E.intl.string(E.t["7u/rlU"]);
             default:
                 return;
         }
     }
     function a() {
-        return E.intl.string(E.t.MrYeyc);
+        return E.intl.string(E.t.MrYeyS);
     }
     function o(e) {
         switch (e) {
             case c.B.MESSAGE_SEND:
-                return E.intl.string(E.t.PmSMMT);
+                return E.intl.string(E.t.PmSMMS);
             case c.B.GUILD_JOIN:
-                return E.intl.string(E.t.m9wWzs);
+                return E.intl.string(E.t.m9wWzo);
             case c.B.USERNAME_UPDATE:
-                return E.intl.string(E.t.KNSkCw);
+                return E.intl.string(E.t.KNSkC6);
             case c.B.CLAN_TAG_UPDATE:
-                return E.intl.string(E.t.qV4K6u);
+                return E.intl.string(E.t.qV4K6j);
             default:
                 return;
         }
@@ -191,13 +191,13 @@ function M(e, t) {
     return t
         ? null != (n = null == e ? void 0 : e.name)
             ? n
-            : E.intl.string(E.t.J90oLS)
-        : E.intl.string(E.t["/YzI6+"]);
+            : E.intl.string(E.t.J90oLW)
+        : E.intl.string(E.t["/YzI63"]);
 }
 function k(e, t, n) {
     let r = C(e, s.G.VOICE_CHANNEL_STATUS_OUTCOME);
     if (null == r) return null;
-    let i = "blocked" === r ? E.t.cLQrq6 : E.t.bma6cn;
+    let i = "blocked" === r ? E.t.cLQrqz : E.t.bma6cs;
     return E.intl.format(i, {
         channelName: t,
         channelHook: n,
@@ -232,30 +232,30 @@ function j(e, t) {
                         interactionUserHook: i,
                         integrationOwnerHook: r,
                     })
-                  : E.intl.format(E.t.S3lNIS, {
+                  : E.intl.format(E.t.S3lNIT, {
                         applicationName: h,
                         interactionUserHook: i,
                         integrationOwnerHook: r,
                     })
               : f !== a.P.BLOCKED
-                ? E.intl.format(E.t.AXQufH, {
+                ? E.intl.format(E.t.AXQufN, {
                       applicationName: h,
                       channelName: b,
                       channelHook: y,
                       integrationOwnerHook: r,
                   })
-                : E.intl.format(E.t.s3tjMD, {
+                : E.intl.format(E.t.s3tjMN, {
                       applicationName: h,
                       channelName: b,
                       channelHook: y,
                       integrationOwnerHook: r,
                   })
           : f !== a.P.BLOCKED
-            ? E.intl.format(E.t.IZg0VV, {
+            ? E.intl.format(E.t.IZg0VQ, {
                   channelName: b,
                   channelHook: y,
               })
-            : E.intl.format(E.t.lOIOSE, {
+            : E.intl.format(E.t.lOIOSK, {
                   channelName: b,
                   channelHook: y,
               });
@@ -263,15 +263,15 @@ function j(e, t) {
 function U(e) {
     switch (e) {
         case d.i.NICKNAME:
-            return E.intl.string(E.t.fkBQa2);
+            return E.intl.string(E.t["fkBQa/"]);
         case d.i.USERNAME:
-            return E.intl.string(E.t.pJQVnp);
+            return E.intl.string(E.t.pJQVnr);
         case d.i.GLOBAL_NAME:
-            return E.intl.string(E.t["V9eJ8/"]);
+            return E.intl.string(E.t.V9eJ85);
         case d.i.CLAN_TAG:
-            return E.intl.string(E.t.Rtum09);
+            return E.intl.string(E.t.Rtum01);
         default:
-            return E.intl.string(E.t.pJQVnp);
+            return E.intl.string(E.t.pJQVnr);
     }
 }
 function G(e) {
@@ -332,16 +332,16 @@ function V(e) {
     return null != t ? t : null;
 }
 function H(e) {
-    if (null == e) return E.intl.string(E.t.Gh3A0N);
+    if (null == e) return E.intl.string(E.t.Gh3A0O);
     switch (e) {
         case m.$l.LEGITIMATE_ACTIVITY:
-            return E.intl.string(E.t["riQ+HB"]);
+            return E.intl.string(E.t["riQ+HH"]);
         case m.$l.DM_SPAM:
-            return E.intl.string(E.t.j5V0io);
+            return E.intl.string(E.t.j5V0ij);
         case m.$l.JOIN_RAID:
             return E.intl.string(E.t.qhaRbG);
         default:
-            return E.intl.string(E.t.GPg6JC);
+            return E.intl.string(E.t.GPg6JM);
     }
 }
 function Y(e) {

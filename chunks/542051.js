@@ -14,7 +14,7 @@ var r,
     c = n(607802),
     u = n(579612),
     d = n(388032),
-    f = n(2442);
+    f = n(575209);
 function _(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ let g = (e) => {
     return n
         ? (0, i.jsx)("div", {
               className: f.queryText,
-              children: d.intl.string(d.t["6RVtLC"]),
+              children: d.intl.string(d.t["6RVtLA"]),
           })
         : r
           ? o > 0
@@ -96,8 +96,8 @@ let g = (e) => {
                     color: "text-secondary",
                     className: f.searchDMQueryText,
                     children: u
-                        ? d.intl.format(d.t.iV2ftr, { filterCount: o })
-                        : d.intl.format(d.t["5CTmUl"], {
+                        ? d.intl.format(d.t.iV2fth, { filterCount: o })
+                        : d.intl.format(d.t["5CTmUk"], {
                               filterCount: o,
                               value: s,
                           }),
@@ -106,11 +106,11 @@ let g = (e) => {
                     variant: "text-sm/medium",
                     color: "text-secondary",
                     className: f.searchDMQueryText,
-                    children: u ? d.intl.string(d.t.w39VdH) : d.intl.format(d.t["9gKPv7"], { value: s }),
+                    children: u ? d.intl.string(d.t.w39VdC) : d.intl.format(d.t["9gKPvw"], { value: s }),
                 })
           : (0, i.jsx)("div", {
                 className: f.queryText,
-                children: d.intl.format(d.t.ub226e, { value: t }),
+                children: d.intl.format(d.t.ub226W, { value: t }),
             });
 };
 function E(e) {
@@ -232,7 +232,7 @@ class y extends (r = a.PureComponent) {
                     s = (0, c.X3)(t),
                     _ = (0, i.jsx)(u.ZP, {
                         channel: t,
-                        text: d.intl.formatToPlainString(d.t.LDpotL, { guildName: s }),
+                        text: d.intl.formatToPlainString(d.t.LDpotA, { guildName: s }),
                         channelContainerClassName: f.channelContainer,
                         textContainerClassName: f.searchResultNameContainer,
                     });
@@ -245,7 +245,7 @@ class y extends (r = a.PureComponent) {
                             variant: "text-md/normal",
                             color: "interactive-normal",
                             className: f.inChannelOption,
-                            children: d.intl.format(d.t.LDpotL, { guildName: _ }),
+                            children: d.intl.format(d.t.LDpotA, { guildName: _ }),
                         }),
                     }),
                 );

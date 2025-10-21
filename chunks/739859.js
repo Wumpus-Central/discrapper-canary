@@ -14,7 +14,7 @@ var r = n(951288),
     g = n(474936),
     f = n(981631),
     m = n(388032),
-    x = n(225002);
+    x = n(43860);
 function y(e) {
     var t;
     let { levelUpData: n } = e,
@@ -101,7 +101,7 @@ function y(e) {
                         (0, r.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             className: x.subscribedText,
-                            children: m.intl.formatToPlainString(m.t["f/OGgI"], {
+                            children: m.intl.formatToPlainString(m.t["f/OGgM"], {
                                 timeFrame: (0, p.q)(P.id, P.tenureReqNumMonths),
                                 date: v,
                             }),
@@ -110,7 +110,7 @@ function y(e) {
                         className: x.actionButtons,
                         children: (0, r.jsx)(o.aML, {
                             "data-migration-pending": !0,
-                            text: m.intl.string(m.t.hsvh0t),
+                            text: m.intl.string(m.t.hsvh0i),
                             children: (e) => {
                                 var t, n;
                                 return (0, r.jsx)(
@@ -146,7 +146,7 @@ function y(e) {
                                             variant: "secondary",
                                             size: "sm",
                                             onClick: B,
-                                            "aria-label": m.intl.string(m.t.hsvh0t),
+                                            "aria-label": m.intl.string(m.t.hsvh0i),
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

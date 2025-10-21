@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(225675),
     O = n(981631),
     v = n(388032),
-    I = n(95457);
+    I = n(124650);
 function T(e, t, n) {
     return (
         t in e
@@ -149,7 +149,7 @@ function A(e) {
           })
         : (0, r.jsx)(c.Text, {
               variant: "text-md/medium",
-              children: v.intl.string(v.t.MNSTbW),
+              children: v.intl.string(v.t.MNSTbY),
           });
 }
 function C(e) {

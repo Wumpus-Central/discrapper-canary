@@ -148,7 +148,7 @@ function K(e) {
         );
     t =
         W || eh
-            ? B.intl.string(B.t.nyzoFR)
+            ? B.intl.string(B.t.nyzoFb)
             : (0, N.PV)(P)
               ? (0, N.W_)(n, ec)
               : B.intl.formatToPlainString(B.t["sBpy9/"], { planName: ec.name });
@@ -219,7 +219,7 @@ function K(e) {
             (0, r.jsx)("div", {
                 className: F.paymentSourceWrapper,
                 children: (0, r.jsx)(p.ZP, {
-                    label: B.intl.string(B.t.mmDvV1),
+                    label: B.intl.string(B.t["mmDvV+"]),
                     paymentSources: Object.values(a),
                     selectedPaymentSourceId: es,
                     onChange: m,
@@ -234,7 +234,7 @@ function K(e) {
                 currencies: H,
                 className: F.currencyWrapper,
                 children: (0, r.jsx)(f.Z, {
-                    label: B.intl.string(B.t["/AAR09"]),
+                    label: B.intl.string(B.t["/AAR02"]),
                     selectedCurrency: s.currency,
                     currencies: H,
                     onChange: Y,
@@ -380,7 +380,7 @@ function q(e) {
             (0, r.jsxs)(D.aO, {
                 className: o()(F.invoice, m),
                 children: [
-                    (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Cg"]) }),
+                    (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Co"]) }),
                     (0, r.jsx)(j.Lu, {
                         invoice: T,
                         newPlan: a,
@@ -508,12 +508,12 @@ function Q(e) {
         children: [
             (0, r.jsx)("div", {
                 className: Z.renewalInvoiceDate,
-                children: B.intl.string(B.t.spIYoq),
+                children: B.intl.string(B.t.spIYou),
             }),
             (0, r.jsxs)(D.aO, {
                 className: o()(F.invoice, c),
                 children: [
-                    (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Cg"]) }),
+                    (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Co"]) }),
                     (0, r.jsx)(j.By, {
                         invoice: f,
                         isPrepaidPaymentSource: b,
@@ -573,12 +573,12 @@ function J(e) {
             children: [
                 (0, r.jsx)("div", {
                     className: Z.renewalInvoiceDate,
-                    children: B.intl.format(B.t["+y0Tj4"], { renewalDate: b }),
+                    children: B.intl.format(B.t["+y0Tjy"], { renewalDate: b }),
                 }),
                 (0, r.jsxs)(D.aO, {
                     className: o()(F.invoice, _),
                     children: [
-                        (0, r.jsx)(D.Z9, { children: B.intl.string(B.t.iqhIp6) }),
+                        (0, r.jsx)(D.Z9, { children: B.intl.string(B.t.iqhIp4) }),
                         (0, r.jsx)(D.B1, {
                             label: t,
                             value: (0, N.PK)(a, c, !0),

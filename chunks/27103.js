@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(834129),
     f = n(674563),
     _ = n(388032),
-    p = n(78642);
+    p = n(682392);
 function h(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         h = (0, l.ZP)(t),
@@ -43,7 +43,7 @@ function h(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: p.username,
-                                    children: _.intl.string(_.t.hG1StL),
+                                    children: _.intl.string(_.t.hG1StD),
                                 }),
                                 (0, r.jsx)(s.Z, {
                                     type: f.Hb.SYSTEM_DM,
@@ -56,7 +56,7 @@ function h(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: a()(p.__invalid_messageContent, { [p.compact]: n }),
-                        children: _.intl.format(_.t.qntXNT, {
+                        children: _.intl.format(_.t.qntXNQ, {
                             username: h.nick,
                             usernameHook: m,
                         }),

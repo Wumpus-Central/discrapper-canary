@@ -83,7 +83,7 @@ function C(e) {
         j = r.useCallback(() => {
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("41837")]).then(
+                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("899")]).then(
                         n.bind(n, 611446),
                     );
                     return (n) => {
@@ -110,7 +110,7 @@ function C(e) {
         }, [_, O]),
         P = r.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await n.e("63498").then(n.bind(n, 699783));
+                let { default: e } = await n.e("19538").then(n.bind(n, 699783));
                 return (n) => {
                     let { transitionState: r, onClose: l } = n;
                     return (0, i.jsx)(e, {
@@ -132,12 +132,12 @@ function C(e) {
         warningId: C,
         senderId: y,
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-        header: m.intl.string(m.t.ZzlB5u),
-        description: m.intl.string(m.t["D1aU+v"]),
+        header: m.intl.string(m.t.ZzlB5p),
+        description: m.intl.string(m.t["D1aU+h"]),
         onDismiss: _,
         buttons: [
             {
-                text: m.intl.string(m.t.Qyu4UF),
+                text: m.intl.string(m.t.Qyu4UK),
                 variant: "primary",
                 onClick: j,
             },
@@ -145,7 +145,7 @@ function C(e) {
                 ? []
                 : [
                       {
-                          text: m.intl.string(m.t["7q0bNT"]),
+                          text: m.intl.string(m.t["7q0bNY"]),
                           variant: "secondary",
                           onClick: P,
                       },

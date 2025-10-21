@@ -6,7 +6,7 @@ var i = n(780384),
     a = n(410030),
     s = n(293810),
     o = n(388032),
-    c = n(62435),
+    c = n(570734),
     d = n(934961),
     u = n(568294),
     g = n(867861),
@@ -31,20 +31,20 @@ function v() {
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: o.intl.string(o.t.TXPK7O),
+                        children: o.intl.string(o.t.TXPK7B),
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/bold",
                         className: j(e),
-                        children: o.intl.string(o.t.LdjJGx),
+                        children: o.intl.string(o.t.LdjJG5),
                     }),
                 ],
             }),
             (0, r.jsx)("img", {
                 className: c.roundAvatar,
                 src: f,
-                alt: o.intl.string(o.t.NgjpTE),
+                alt: o.intl.string(o.t.NgjpTL),
             }),
         ],
     });
@@ -100,7 +100,7 @@ function _() {
     }
     return (0, r.jsxs)("div", {
         className: c.avatarGridContainer,
-        "aria-label": o.intl.string(o.t["P2B/0d"]),
+        "aria-label": o.intl.string(o.t["P2B/0W"]),
         children: [
             (0, r.jsxs)("div", {
                 className: c.avatarCard,
@@ -164,7 +164,7 @@ function C() {
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                children: o.intl.string(o.t["9CdmS0"]),
+                children: o.intl.string(o.t["9CdmS8"]),
             }),
             (0, r.jsx)(l.LZC, { size: 32 }),
             (0, r.jsx)(v, {}),
@@ -181,17 +181,17 @@ function O() {
                 className: c.followerBenefitText,
                 variant: "text-md/normal",
                 color: "header-secondary",
-                children: o.intl.string(o.t.qsKRUV),
+                children: o.intl.string(o.t.qsKRUQ),
             }),
             (0, r.jsx)("img", {
                 className: c.roleSubscriptionSocial,
                 src: x,
-                alt: o.intl.string(o.t.yTPpra),
+                alt: o.intl.string(o.t.yTPprb),
             }),
             (0, r.jsx)("img", {
                 className: c.roleSubscriptionLanyardIllo,
                 src: b,
-                alt: o.intl.string(o.t["+gd9QU"]),
+                alt: o.intl.string(o.t["+gd9QQ"]),
             }),
         ],
     });
@@ -215,14 +215,14 @@ function y() {
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: o.intl.string(o.t.AewsXF),
+                        children: o.intl.string(o.t.AewsXD),
                     }),
                 ],
             }),
             (0, r.jsx)("img", {
                 className: c.roleSubscriptionEarningIllo,
                 src: h,
-                alt: o.intl.string(o.t.fD9Wv7),
+                alt: o.intl.string(o.t.fD9Wv1),
             }),
         ],
     });

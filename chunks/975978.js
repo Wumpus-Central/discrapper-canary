@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(694338),
     E = n(474936),
     b = n(388032),
-    y = n(97269),
+    y = n(727486),
     O = n(298632),
     v = n(219242);
 function I(e, t, n) {
@@ -81,7 +81,7 @@ let C = (e) => {
                           color: s.Z.colors.HEADER_PRIMARY,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(l.nn4, { children: b.intl.string(b.t["tq+6t7"]) }),
+                      (0, r.jsx)(l.nn4, { children: b.intl.string(b.t["tq+6t/"]) }),
                   ],
               })
             : (0, r.jsxs)(r.Fragment, {
@@ -91,7 +91,7 @@ let C = (e) => {
                           color: s.Z.colors.HEADER_PRIMARY,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(l.nn4, { children: b.intl.string(b.t.l4qZrq) }),
+                      (0, r.jsx)(l.nn4, { children: b.intl.string(b.t.l4qZrp) }),
                   ],
               });
     },
@@ -152,7 +152,7 @@ let C = (e) => {
     },
     P = (e) => {
         let { premiumType: t, priceString: n } = e,
-            i = t === E.PremiumTypes.TIER_0 ? b.intl.string(b.t.tUbSDA) : b.intl.string(b.t.Ipxkoq);
+            i = t === E.PremiumTypes.TIER_0 ? b.intl.string(b.t.tUbSDK) : b.intl.string(b.t.Ipxkog);
         return (0, r.jsxs)("div", {
             className: y.planTitleWithPrice,
             children: [
@@ -185,7 +185,7 @@ let C = (e) => {
                         className: y.headerLabelCell,
                         children: (0, r.jsx)(l.Heading, {
                             variant: "heading-xl/bold",
-                            children: b.intl.string(b.t.ED4UVF),
+                            children: b.intl.string(b.t.ED4UVD),
                         }),
                     }),
                     (0, r.jsx)("th", {
@@ -224,7 +224,7 @@ let C = (e) => {
             k = (0, g.e)();
         if (s) n = null;
         else {
-            let e = null != S ? b.intl.string(b.t.IBYG5e) : b.intl.string(b.t.TR2B4e);
+            let e = null != S ? b.intl.string(b.t.IBYG5U) : b.intl.string(b.t.TR2B4T);
             n = (0, r.jsx)(m.E, {
                 className: o()(y.pill, y.pillGradient),
                 text: e,
@@ -240,7 +240,7 @@ let C = (e) => {
                         className: y.titleText,
                         variant: "display-md",
                         color: "header-primary",
-                        children: b.intl.string(b.t.DbPgAQ),
+                        children: b.intl.string(b.t.DbPgAd),
                     }),
                     (0, r.jsxs)("div", {
                         className: y.tableWrapper,

@@ -6,8 +6,8 @@ var i = n(258536),
     o = n(481060),
     s = n(607070),
     l = n(388032),
-    c = n(280775),
-    u = n(74866);
+    c = n(630676),
+    u = n(583140);
 let d = () =>
         (0, r.jsxs)("div", {
             className: u.toast,
@@ -19,7 +19,7 @@ let d = () =>
                 (0, r.jsx)(o.Text, {
                     color: "header-primary",
                     variant: "text-md/normal",
-                    children: l.intl.string(l.t["5z/hlJ"]),
+                    children: l.intl.string(l.t["5z/hlE"]),
                 }),
             ],
         }),

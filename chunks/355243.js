@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(448986),
     u = n(604162),
     d = n(295907),
-    m = n(16954);
+    m = n(412331);
 function f(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
@@ -31,10 +31,10 @@ function v(e) {
         [S, _] = l.useState(null),
         [y, j] = l.useState(null),
         [x, T] = l.useState(null),
-        [D, R] = l.useState(!1),
-        P = l.useRef(null),
+        [D, P] = l.useState(!1),
+        R = l.useRef(null),
         I = (e) => {
-            (P.current = e), _(e);
+            (R.current = e), _(e);
         };
     l.useEffect(() => {
         null != S && (null == b ? T(null) : T(p(b, E, S)));
@@ -80,10 +80,10 @@ function v(e) {
                     o && null != O && O(f(e.clientX, e.currentTarget.getBoundingClientRect(), E));
                 },
                 onMouseEnter: (e) => {
-                    o && (null != k.current && I(k.current.getBoundingClientRect()), R(!0), w(e));
+                    o && (null != k.current && I(k.current.getBoundingClientRect()), P(!0), w(e));
                 },
                 onMouseLeave: (e) => {
-                    o && (R(!1), j(null));
+                    o && (P(!1), j(null));
                 },
                 onMouseMove: (e) => {
                     o && D && w(e);

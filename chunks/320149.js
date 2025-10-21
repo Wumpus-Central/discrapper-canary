@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(933557),
     E = n(287746),
     O = n(388032),
-    v = n(952713),
-    y = n(998603);
+    v = n(10832),
+    y = n(419246);
 function I(e) {
     let { channel: t, baseChannelId: n } = e,
         I = (0, _.ZP)(t),
@@ -43,7 +43,7 @@ function I(e) {
             s.ZP.Icon,
             {
                 icon: a.Dio,
-                tooltip: O.intl.string(O.t.cpT0Cg),
+                tooltip: O.intl.string(O.t.cpT0Cq),
                 onClick: () => m.Z.closeChannelSidebar(n),
             },
             "close",
@@ -66,14 +66,14 @@ function I(e) {
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
-                            children: O.intl.string(O.t.XVOKgo),
+                            children: O.intl.string(O.t.XVOKgj),
                         }),
                         (0, r.jsx)("div", {
                             className: y.hamBannerButton,
                             children: (0, r.jsx)(a.Button, {
                                 size: "sm",
                                 onClick: () => A(t, P),
-                                text: O.intl.string(O.t.koqL3d),
+                                text: O.intl.string(O.t.koqL3Z),
                             }),
                         }),
                     ],

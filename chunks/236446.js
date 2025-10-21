@@ -21,15 +21,15 @@ var r = n(951288),
     j = n(954824),
     I = n(781428),
     N = n(163671),
-    O = n(423527),
-    y = n(981631),
+    y = n(423527),
+    O = n(981631),
     S = n(260539),
     C = n(701476),
     A = n(630724),
     T = n(436620),
     Z = n(388032),
-    P = n(858518),
-    R = n(10198);
+    P = n(160033),
+    R = n(197571);
 function L(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ c.ZP.initialize();
 class w extends i.PureComponent {
     componentDidMount() {
         (0, x.e)("guildTemplate"),
-            T.KO || j.Z.launch("discord://" + y.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+            T.KO || j.Z.launch("discord://" + O.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
@@ -75,10 +75,10 @@ class w extends i.PureComponent {
                 }),
                 (0, r.jsx)(u.Dx, {
                     className: l()(R.marginTop8, R.marginBottom8),
-                    children: Z.intl.string(Z.t.C7ZRNz),
+                    children: Z.intl.string(Z.t.C7ZRNw),
                 }),
-                (0, r.jsx)(u.DK, { children: Z.intl.string(Z.t.A6MwXF) }),
-                this.renderButton(Z.intl.string(Z.t.fIv16O), this.handleContinue),
+                (0, r.jsx)(u.DK, { children: Z.intl.string(Z.t.A6MwXE) }),
+                this.renderButton(Z.intl.string(Z.t.fIv16B), this.handleContinue),
             ],
         });
     }
@@ -87,10 +87,10 @@ class w extends i.PureComponent {
             children: [
                 (0, r.jsx)(u.Dx, {
                     className: R.marginBottom8,
-                    children: Z.intl.string(Z.t.csrAMD),
+                    children: Z.intl.string(Z.t.csrAMJ),
                 }),
-                (0, r.jsx)(u.DK, { children: Z.intl.string(Z.t["m1+IBg"]) }),
-                this.renderButton(Z.intl.string(Z.t.fIv16O), this.handleContinue),
+                (0, r.jsx)(u.DK, { children: Z.intl.string(Z.t["m1+IBn"]) }),
+                this.renderButton(Z.intl.string(Z.t.fIv16B), this.handleContinue),
             ],
         });
     }
@@ -106,19 +106,19 @@ class w extends i.PureComponent {
     renderContinue() {
         return (0, r.jsxs)(u.ZP, {
             children: [
-                (0, r.jsx)(u.Dx, { children: Z.intl.string(Z.t.fOc4go) }),
-                this.renderButton(Z.intl.string(Z.t.fIv16O), this.handleContinue),
+                (0, r.jsx)(u.Dx, { children: Z.intl.string(Z.t.fOc4gn) }),
+                this.renderButton(Z.intl.string(Z.t.fIv16B), this.handleContinue),
             ],
         });
     }
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: s } = this.props;
-        if (null == e) return this.renderSpinner(Z.intl.string(Z.t.ZTNur6));
-        if (t === y.kEZ.OPEN) return this.renderAppOpened();
-        if (t === y.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
+        if (null == e) return this.renderSpinner(Z.intl.string(Z.t.ZTNur7));
+        if (t === O.kEZ.OPEN) return this.renderAppOpened();
+        if (t === O.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVU"]));
         switch (e.state) {
             case S.Rj.RESOLVING:
-                return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
+                return this.renderSpinner(Z.intl.string(Z.t["Z+hCVU"]));
             case S.Rj.RESOLVED:
                 if (n || !T.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
@@ -127,7 +127,7 @@ class w extends i.PureComponent {
                         transitionTo: i,
                         location: s,
                     });
-                return (0, r.jsx)(O.Z, {
+                return (0, r.jsx)(y.Z, {
                     guildTemplate: e,
                     transitionTo: i,
                     location: s,
@@ -185,7 +185,7 @@ function k(e) {
         children: [
             (0, r.jsx)(u.Dx, {
                 className: P.header,
-                children: Z.intl.string(Z.t.UNFvtL),
+                children: Z.intl.string(Z.t.UNFvtM),
             }),
             n,
             (0, r.jsx)(u.zx, {

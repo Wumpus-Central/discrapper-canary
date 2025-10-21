@@ -13,9 +13,9 @@ var i = t(442837),
     Z = t(430824),
     f = t(496675),
     b = t(823379),
-    m = t(981631),
-    O = t(388032),
-    p = t(390099);
+    O = t(981631),
+    m = t(388032),
+    p = t(96541);
 function h(e, n, t) {
     var i, a;
     return (0, l.jsxs)("div", {
@@ -24,14 +24,14 @@ function h(e, n, t) {
             "dot" === n
                 ? (0, l.jsx)(r.FhE, {
                       className: p.roleDot,
-                      color: null != (i = e.colorString) ? i : m.Pbq,
+                      color: null != (i = e.colorString) ? i : O.Pbq,
                       colors: t ? e.colorStrings : null,
                       background: !1,
                       tooltip: !1,
                   })
                 : (0, l.jsx)(r.xko, {
                       className: p.roleDot,
-                      color: null != (a = e.colorString) ? a : m.Pbq,
+                      color: null != (a = e.colorString) ? a : O.Pbq,
                       colors: t ? e.colorStrings : null,
                   }),
             (0, l.jsx)("div", { children: e.name }),
@@ -58,7 +58,7 @@ function j(e, n) {
             return {
                 userRoles: null != t ? t.roles : [],
                 isGuildMember: null != t,
-                canManageRoles: null != P && f.Z.can(m.Plq.MANAGE_ROLES, P),
+                canManageRoles: null != P && f.Z.can(O.Plq.MANAGE_ROLES, P),
             };
         }, [e, n, P]),
         C = (0, s.ZP)(n, e);
@@ -114,7 +114,7 @@ function j(e, n) {
           ? S
           : (0, l.jsx)(r.sNh, {
                 id: "roles",
-                label: O.intl.formatToPlainString(O.t.PCs0oq, { numRoles: S.length }),
+                label: m.intl.formatToPlainString(m.t.PCs0oo, { numRoles: S.length }),
                 children: S,
             });
 }

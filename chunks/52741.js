@@ -17,13 +17,13 @@ var i = n(120356),
     g = n(504865),
     E = n(474936),
     b = n(388032),
-    y = n(40747);
+    y = n(560230);
 function O(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: i, discountOffer: a } = e,
         o = (0, m.Aq)(i);
     return (0, r.jsx)(r.Fragment, {
-        children: b.intl.format(b.t.sJTwHR, {
+        children: b.intl.format(b.t.sJTwHQ, {
             numMonths: null != (t = a.discount.user_usage_limit) ? t : E.rt,
             discountedPrice: o,
             regularPrice: n,
@@ -68,16 +68,16 @@ function v(e) {
             i = () => {
                 var t, r, i;
                 return o === E.C.PREMIUM_TRIAL
-                    ? b.intl.format(b.t["2CGBrq"], {
+                    ? b.intl.format(b.t["2CGBri"], {
                           remainingTime: e,
                           price: n,
                       })
                     : P.planIdFromItems === E.Xh.PREMIUM_YEAR_TIER_2
-                      ? b.intl.format(b.t["+qqh6u"], {
+                      ? b.intl.format(b.t["+qqh6g"], {
                             percent: null != (t = null == L ? void 0 : L.percentage) ? t : E.Bo,
                             regularPrice: n,
                         })
-                      : b.intl.formatToPlainString(b.t["3Ziutb"], {
+                      : b.intl.formatToPlainString(b.t["3ZiutU"], {
                             percent: null != (r = null == L ? void 0 : L.percentage) ? r : E.M_,
                             regularPrice: n,
                             numMonths: null != (i = null == L ? void 0 : L.duration) ? i : E.rt,
@@ -101,7 +101,7 @@ function v(e) {
                 variant: N,
                 color: R,
                 className: a()(y.trialHeader, C),
-                children: b.intl.format(b.t["9vyovr"], {
+                children: b.intl.format(b.t["9vyovu"], {
                     planName: (0, f.aq)(
                         null != (B = E.IW[null != (G = null == U ? void 0 : U.sku_id) ? G : E.Si.NONE])
                             ? B

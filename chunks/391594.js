@@ -18,22 +18,22 @@ var i = n(647438),
     d = n(1585),
     c = n(318110),
     p = n(98278),
-    O = n(642619),
-    h = n(110560),
+    h = n(642619),
+    O = n(110560),
     f = n(313789),
     b = n(518596),
-    A = n(507808),
-    y = n(626135),
+    y = n(507808),
+    A = n(626135),
     E = n(585483),
     g = n(63063),
     I = n(884697),
-    P = n(328456),
-    R = n(302800),
-    S = n(215023),
-    T = n(981631),
-    m = n(456003),
+    m = n(328456),
+    P = n(302800),
+    R = n(215023),
+    S = n(981631),
+    T = n(339756),
     _ = n(388032);
-let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null),
+let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null),
     C = (t) => {
         let {
             product: e,
@@ -44,12 +44,12 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
             itemConsumed: a,
         } = t;
         if (null != n) return n;
-        if (S.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(m.default.nvaTQk);
-        if (S.Vt.FRACTIONAL_PREMIUM === e.skuId)
-            if (a) return _.intl.string(_.t.t0xkSE);
-            else return _.intl.string(_.t.g5W1g4);
-        if (i && !r) return _.intl.string(_.t.IMffmp);
-        return _.intl.formatToPlainString(_.t.YNaxMj, { itemName: l });
+        if (R.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(T.default.nvaTQq);
+        if (R.Vt.FRACTIONAL_PREMIUM === e.skuId)
+            if (a) return _.intl.string(_.t.t0xkSB);
+            else return _.intl.string(_.t.g5W1g8);
+        if (i && !r) return _.intl.string(_.t.IMffmm);
+        return _.intl.formatToPlainString(_.t.YNaxMp, { itemName: l });
     },
     v = (t) => {
         let {
@@ -63,12 +63,12 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
             expiresAt: d,
         } = t;
         if (null != n) return n;
-        if (S.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(m.default.UnPGio);
-        if (S.Vt.FRACTIONAL_PREMIUM !== e.skuId)
+        if (R.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(T.default.UnPGii);
+        if (R.Vt.FRACTIONAL_PREMIUM !== e.skuId)
             return (0, s.EQ)(null == e ? void 0 : e.type)
                 .with(u.Z.BUNDLE, () => {
-                    let { itemOneName: t, itemTwoName: n } = (0, P.Ws)(e);
-                    return _.intl.format(_.t.fXw44e, {
+                    let { itemOneName: t, itemTwoName: n } = (0, m.Ws)(e);
+                    return _.intl.format(_.t.fXw44U, {
                         itemOneName: t,
                         itemTwoName: n,
                     });
@@ -76,17 +76,17 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                 .with(u.Z.AVATAR_DECORATION, () => (r && null != l ? l : k(i)))
                 .otherwise(() => k(i));
         {
-            let t = _.intl.formatToPlainString(_.t["Cz1G9/"], { days: 3 });
+            let t = _.intl.formatToPlainString(_.t.Cz1G97, { days: 3 });
             return a
-                ? _.intl.format(_.t.bhLChI, {
-                      helpCenterLink: g.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                ? _.intl.format(_.t.bhLChO, {
+                      helpCenterLink: g.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT),
                       duration: t,
                       expirationDate: d,
                   })
                 : o
-                  ? _.intl.string(_.t.fBmhEx)
-                  : _.intl.format(_.t["1ZBX4O"], {
-                        helpCenterLink: g.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                  ? _.intl.string(_.t.fBmhE9)
+                  : _.intl.format(_.t["1ZBX4E"], {
+                        helpCenterLink: g.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT),
                         duration: t,
                     });
         }
@@ -99,43 +99,43 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                 hasRequiredProductItems: r,
                 handleUseNow: l,
                 isApplying: s,
-                openProfileSettings: y,
+                openProfileSettings: A,
                 itemConsumed: g,
             } = t,
             I = [];
-        if (S.Vt.ORB_PROFILE_BADGE === e.skuId)
+        if (R.Vt.ORB_PROFILE_BADGE === e.skuId)
             I.push(
                 {
-                    text: _.intl.string(m.default.yfwZu7),
+                    text: _.intl.string(T.default.yfwZuy),
                     variant: "primary",
                     onClick: () => {
-                        n(), E.S.dispatch(T.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                        n(), E.S.dispatch(S.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
                     },
                 },
                 {
-                    text: _.intl.string(_.t["H57f4+"]),
+                    text: _.intl.string(_.t.H57f41),
                     variant: "secondary",
                     onClick: () => {
                         n(),
-                            (0, A.Y)({
-                                pageType: T.ZY5.SHOP_ORBS_TAB,
-                                sectionType: T.jXE.ORBS_BADGE_REDEMPTION_MODAL,
-                                ctaObject: T.qAy.CTA_TO_QUEST_HOME,
+                            (0, y.Y)({
+                                pageType: S.ZY5.SHOP_ORBS_TAB,
+                                sectionType: S.jXE.ORBS_BADGE_REDEMPTION_MODAL,
+                                ctaObject: S.qAy.CTA_TO_QUEST_HOME,
                             }),
-                            (0, h.navigateToQuestHome)();
+                            (0, O.navigateToQuestHome)();
                     },
                 },
             );
-        else if (S.Vt.FRACTIONAL_PREMIUM === e.skuId)
+        else if (R.Vt.FRACTIONAL_PREMIUM === e.skuId)
             g
                 ? I.push(
                       {
-                          text: _.intl.string(_.t.cpT0Cg),
+                          text: _.intl.string(_.t.cpT0Cq),
                           variant: "secondary",
                           onClick: n,
                       },
                       {
-                          text: _.intl.string(_.t.ERKK6u),
+                          text: _.intl.string(_.t.ERKK6v),
                           variant: "primary",
                           onClick: () => {
                               (0, p.$)(n);
@@ -144,25 +144,25 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                   )
                 : I.push(
                       {
-                          text: _.intl.string(_.t.cpT0Cg),
+                          text: _.intl.string(_.t.cpT0Cq),
                           variant: "secondary",
                           onClick: n,
                       },
                       {
-                          text: _.intl.string(_.t["Jr6N+v"]),
+                          text: _.intl.string(_.t["Jr6N+s"]),
                           variant: "primary",
                           onClick: () => {
-                              (0, b.openUserSettings)(f.n.SUBSCRIPTIONS_PANEL, { section: T.oAB.SUBSCRIPTIONS }), n();
+                              (0, b.openUserSettings)(f.n.SUBSCRIPTIONS_PANEL, { section: S.oAB.SUBSCRIPTIONS }), n();
                           },
                       },
                   );
         else {
             let [t] = e.items;
             I.push({
-                text: _.intl.string(_.t["2p2aY2"]),
+                text: _.intl.string(_.t["2p2aYz"]),
                 variant: r ? "secondary" : "primary",
                 onClick: () => {
-                    if ((n(), (0, o.xf)(), null == y || y(), e.type === u.Z.AVATAR_DECORATION)) {
+                    if ((n(), (0, o.xf)(), null == A || A(), e.type === u.Z.AVATAR_DECORATION)) {
                         a()(t.type === u.Z.AVATAR_DECORATION, "product type and item type are the same"),
                             (0, d.ps)({
                                 initialSelectedDecoration: t,
@@ -172,7 +172,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
                     }
                     if (e.type === u.Z.PROFILE_EFFECT) {
                         a()(t.type === u.Z.PROFILE_EFFECT, "product type and item type are the same"),
-                            (0, O.H)({
+                            (0, h.H)({
                                 initialSelectedEffect: t,
                                 analyticsLocations: i,
                             });
@@ -192,7 +192,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
         return (
             r &&
                 I.push({
-                    text: _.intl.string(_.t.MAS7uL),
+                    text: _.intl.string(_.t.MAS7uK),
                     variant: "primary",
                     onClick: l,
                     loading: s,
@@ -204,8 +204,8 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
         let n = i.useMemo(() => (0, I.jm)(t.type, t.skuId), [t.type, t.skuId]);
         return (
             i.useEffect(() => {
-                y.default.track(T.rMx.OPEN_MODAL, {
-                    type: T.jXE.COLLECTIBLES_SHOP_COLLECTED_MODAL,
+                A.default.track(S.rMx.OPEN_MODAL, {
+                    type: S.jXE.COLLECTIBLES_SHOP_COLLECTED_MODAL,
                     location_stack: e,
                     sku_id: t.skuId,
                     product_type: n,
@@ -218,7 +218,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AA"], { itemName: t }) : null
         let n = i.useRef(new r.qA()),
             l = (0, i.useRef)(null),
             [a, s] = i.useState(null),
-            u = (0, R.UY)({
+            u = (0, P.UY)({
                 purchaseType: e,
                 skuId: t.skuId,
             });

@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(726985),
     I = n(981631),
     T = n(388032),
-    S = n(275765);
+    S = n(61365);
 function A(e, t, n) {
     return (
         t in e
@@ -124,7 +124,7 @@ class w extends i.PureComponent {
                                   children: [
                                       (0, r.jsx)(o.Heading, {
                                           variant: "heading-lg/semibold",
-                                          children: T.intl.string(T.t.obLrcH),
+                                          children: T.intl.string(T.t.obLrcK),
                                       }),
                                       (0, r.jsx)(f.oQ, {}),
                                       (0, r.jsx)(u.Z, { locale: a }),
@@ -135,7 +135,7 @@ class w extends i.PureComponent {
                       (0, r.jsx)(o.Wn, {
                           messageType: o.QYI.INFO,
                           className: S.codeRedemptionRedirect,
-                          children: T.intl.format(T.t["8b+FXF"], { onClick: () => this.handleRedemptionRedirect() }),
+                          children: T.intl.format(T.t["8b+FXG"], { onClick: () => this.handleRedemptionRedirect() }),
                       }),
                   ],
               });

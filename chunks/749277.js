@@ -25,7 +25,7 @@ var i = n(442837),
     S = n(801461),
     A = n(474936),
     C = n(388032),
-    N = n(522488);
+    N = n(50953);
 function R(e, t, n) {
     return (
         t in e
@@ -97,7 +97,7 @@ let L = (e) => {
                                 onClick: () => i(I.L.UNKNOWN),
                                 noticeType: R,
                             }),
-                            C.intl.string(C.t["+xn1o6"]),
+                            C.intl.string(C.t["+xn1o5"]),
                             (0, r.jsx)("i", { className: N.iconApple }),
                             (0, r.jsx)("i", { className: N.iconAndroid }),
                             (0, r.jsx)("i", { className: N.iconWindows }),
@@ -111,7 +111,7 @@ let L = (e) => {
                                         return (t) => (0, r.jsx)(e, P({ source: "Top Bar Nag" }, t));
                                     });
                                 },
-                                children: C.intl.string(C.t["1WjMbG"]),
+                                children: C.intl.string(C.t["1WjMbC"]),
                             }),
                         ],
                     });
@@ -124,7 +124,7 @@ let L = (e) => {
                                 noticeType: R,
                             }),
                             (0, r.jsx)(y.Z, { className: N.platformIcon }),
-                            C.intl.string(C.t["5NUVHB"]),
+                            C.intl.string(C.t["5NUVHH"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
                                     (0, u.Z)({
@@ -132,7 +132,7 @@ let L = (e) => {
                                         location: "Notice Bar",
                                     }),
                                 noticeType: R,
-                                children: C.intl.string(C.t.S0W8Z2),
+                                children: C.intl.string(C.t.S0W8Z5),
                             }),
                         ],
                     });
@@ -146,14 +146,14 @@ let L = (e) => {
                                 className: N.platformIcon,
                                 src: l.Z.get(T.ABu.PLAYSTATION).icon.whiteSVG,
                             }),
-                            C.intl.string(C.t.WHWgoa),
+                            C.intl.string(C.t.WHWgoY),
                             (0, r.jsx)(o.EyT, {
                                 onClick: () =>
                                     (0, u.Z)({
                                         platformType: T.ABu.PLAYSTATION,
                                         location: "Notice Bar",
                                     }),
-                                children: C.intl.string(C.t.S0W8Z2),
+                                children: C.intl.string(C.t.S0W8Z5),
                             }),
                         ],
                     });
@@ -165,7 +165,7 @@ let L = (e) => {
                                 onClick: () => i(I.L.USER_DISMISS),
                                 noticeType: R,
                             }),
-                            C.intl.string(C.t["3qKN/v"]),
+                            C.intl.string(C.t["3qKN/h"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: async () => {
                                     i(I.L.TAKE_ACTION);
@@ -190,12 +190,12 @@ let L = (e) => {
                                         });
                                     } catch (e) {
                                         (0, o.showToast)(
-                                            (0, o.createToast)(C.intl.string(C.t.xSCvBQ), o.ToastType.FAILURE),
+                                            (0, o.createToast)(C.intl.string(C.t.xSCvBf), o.ToastType.FAILURE),
                                         );
                                     }
                                 },
                                 noticeType: R,
-                                children: C.intl.string(C.t["ff/XX1"]),
+                                children: C.intl.string(C.t["ff/XXy"]),
                             }),
                         ],
                     });
@@ -206,7 +206,7 @@ let L = (e) => {
                             (0, r.jsx)("span", { className: N.premiumLogo }),
                             (0, r.jsx)("span", {
                                 className: N.premiumText,
-                                children: C.intl.string(C.t["+urf7+"]),
+                                children: C.intl.string(C.t["+urf75"]),
                             }),
                             (0, r.jsx)(o.NoS, {
                                 className: N.premiumAction,
@@ -218,7 +218,7 @@ let L = (e) => {
                                     }),
                                         (0, g.openUserSettings)(m.n.NITRO_PANEL, { section: T.oAB.PREMIUM });
                                 },
-                                children: C.intl.string(C.t["8JC5e3"]),
+                                children: C.intl.string(C.t["8JC5e/"]),
                             }),
                             (0, r.jsx)(o.RyX, {
                                 onClick: () => {
@@ -246,14 +246,14 @@ let L = (e) => {
                                 noticeType: R,
                                 onClick: () => i(I.L.UNKNOWN),
                             }),
-                            C.intl.string(C.t["0KFB2N"]),
+                            C.intl.string(C.t["0KFB2B"]),
                             (0, r.jsx)(o.NoS, {
                                 noticeType: R,
                                 onClick: () => {
                                     i(I.L.UNKNOWN),
                                         (0, g.openUserSettings)(m.n.NITRO_PANEL, { section: T.oAB.PREMIUM });
                                 },
-                                children: C.intl.string(C.t.pyYSiI),
+                                children: C.intl.string(C.t.pyYSiO),
                             }),
                         ],
                     });
@@ -265,13 +265,13 @@ let L = (e) => {
                                 onClick: () => i(I.L.UNKNOWN),
                                 noticeType: R,
                             }),
-                            C.intl.string(C.t["7490vb"]),
+                            C.intl.string(C.t["7490vQ"]),
                             (0, r.jsx)(o.NoS, {
                                 noticeType: R,
                                 onClick: () => {
                                     (0, h.uL)(T.Z5c.SETTINGS("account"));
                                 },
-                                children: C.intl.string(C.t.Vm8akJ),
+                                children: C.intl.string(C.t.Vm8akB),
                             }),
                         ],
                     });
@@ -284,7 +284,7 @@ let L = (e) => {
                                 onClick: () => i(I.L.UNKNOWN),
                                 noticeType: R,
                             }),
-                            C.intl.string(C.t.pJ4hJC),
+                            C.intl.string(C.t.pJ4hJE),
                             (0, r.jsx)(o.NoS, {
                                 noticeType: R,
                                 onClick: () => {
@@ -299,7 +299,7 @@ let L = (e) => {
                                                   ),
                                         );
                                 },
-                                children: C.intl.string(C.t["74s74O"]),
+                                children: C.intl.string(C.t["74s74F"]),
                             }),
                         ],
                     });
@@ -311,11 +311,11 @@ let L = (e) => {
                                 onClick: () => i(I.L.UNKNOWN),
                                 noticeType: R,
                             }),
-                            C.intl.format(C.t.pdYZys, {}),
+                            C.intl.format(C.t.pdYZyg, {}),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => (0, _.Z)(S.Kq.NOTICE),
                                 noticeType: R,
-                                children: C.intl.string(C.t.LhlgY2),
+                                children: C.intl.string(C.t.LhlgY9),
                             }),
                         ],
                     });
@@ -327,7 +327,7 @@ let L = (e) => {
                                 onClick: () => i(I.L.UNKNOWN),
                                 noticeType: R,
                             }),
-                            C.intl.string(C.t["O9GI+v"]),
+                            C.intl.string(C.t["O9GI+k"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     (0, f.Z)({
@@ -338,7 +338,7 @@ let L = (e) => {
                                     });
                                 },
                                 noticeType: R,
-                                children: C.intl.string(C.t.Zi69Dw),
+                                children: C.intl.string(C.t.Zi69D4),
                             }),
                         ],
                     });
@@ -350,7 +350,7 @@ let L = (e) => {
                                 onClick: () => i(I.L.USER_DISMISS),
                                 noticeType: T.kVF.REPORT_TO_MOD_EXIT_SURVEY,
                             }),
-                            C.intl.string(C.t.sw22sr),
+                            C.intl.string(C.t.sw22sn),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     window.open(
@@ -362,7 +362,7 @@ let L = (e) => {
                                         i(I.L.TAKE_ACTION);
                                 },
                                 noticeType: T.kVF.REPORT_TO_MOD_EXIT_SURVEY,
-                                children: C.intl.string(C.t.rulMOT),
+                                children: C.intl.string(C.t.rulMOX),
                             }),
                         ],
                     });

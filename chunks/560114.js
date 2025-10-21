@@ -2,8 +2,8 @@ n.d(t, { default: () => eI }), n(997841), n(388685);
 var i,
     l = n(951288),
     s = n(647438),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     o = n(512722),
     d = n.n(o),
     u = n(392711),
@@ -18,8 +18,8 @@ var i,
     S = n(447543),
     f = n(247272),
     E = n(110924),
-    y = n(100527),
-    C = n(906732),
+    C = n(100527),
+    y = n(906732),
     _ = n(835473),
     N = n(447003),
     T = n(471445),
@@ -40,11 +40,11 @@ var i,
     G = n(944486),
     F = n(594174),
     B = n(938475),
-    z = n(626135),
-    H = n(630388),
+    H = n(626135),
+    z = n(630388),
     q = n(971130),
-    K = n(301873),
-    W = n(559310),
+    W = n(301873),
+    K = n(559310),
     Y = n(264229),
     Q = n(366980),
     J = n(277364),
@@ -55,9 +55,9 @@ var i,
     en = n(981631),
     ei = n(176505),
     el = n(388032),
-    es = n(869306),
-    ea = n(10198),
-    er = n(492297),
+    es = n(451964),
+    er = n(197571),
+    ea = n(103126),
     eo = n(622577);
 function ed(e, t, n) {
     return (
@@ -116,8 +116,8 @@ class ev extends (i = s.PureComponent) {
                 source: i,
                 canCreateInvites: l,
                 analyticsLocation: s,
-                streamUserId: a,
-                targetType: r,
+                streamUserId: r,
+                targetType: a,
                 targetUserId: o,
                 application: d,
                 initialCounts: u,
@@ -138,7 +138,7 @@ class ev extends (i = s.PureComponent) {
                         max_age: v,
                         max_uses: p,
                         target_user_id: o,
-                        target_type: r,
+                        target_type: a,
                         target_application_id: null == d ? void 0 : d.id,
                         temporary: x,
                         flags: I,
@@ -148,7 +148,7 @@ class ev extends (i = s.PureComponent) {
         }
         if (
             (g &&
-                z.default.track(en.rMx.INVITE_SUGGESTION_OPENED, {
+                H.default.track(en.rMx.INVITE_SUGGESTION_OPENED, {
                     location: i,
                     num_suggestions: c.length,
                     num_friends: u.numFriends,
@@ -157,22 +157,22 @@ class ev extends (i = s.PureComponent) {
                     guild_id: n.id,
                     application_id: null == d ? void 0 : d.id,
                 }),
-            null != a)
+            null != r)
         ) {
-            let e = w.Z.getStreamForUser(a, n.id),
+            let e = w.Z.getStreamForUser(r, n.id),
                 t = (0, j.L2)(e, D.Z);
-            z.default.track(en.rMx.OPEN_MODAL, {
+            H.default.track(en.rMx.OPEN_MODAL, {
                 type: "Send Stream Invite",
                 source: i,
                 location: s,
-                other_user_id: a,
+                other_user_id: r,
                 application_id: null != t ? t.id : null,
                 application_name: null != t ? t.name : null,
                 game_id: null != t ? t.id : null,
             });
         } else
             (null == d ? void 0 : d.id) != null ||
-                z.default.track(en.rMx.OPEN_MODAL, {
+                H.default.track(en.rMx.OPEN_MODAL, {
                     type: "Instant Invite Modal",
                     source: i,
                     location: s,
@@ -180,7 +180,7 @@ class ev extends (i = s.PureComponent) {
     }
     componentWillUnmount() {
         let { inviteChannel: e, modalState: t } = this.props;
-        (0, H.yE)(t.flags, h.$.IS_GUEST_INVITE) && null != e && S.ZP.clearInviteFromStore(e.id);
+        (0, z.yE)(t.flags, h.$.IS_GUEST_INVITE) && null != e && S.ZP.clearInviteFromStore(e.id);
     }
     getInviteKey() {
         let { code: e, vanityURLCode: t, guildScheduledEvent: n, modalState: i } = this.props,
@@ -208,7 +208,7 @@ class ev extends (i = s.PureComponent) {
                       (0, l.jsx)(I.Text, {
                           variant: "text-xs/normal",
                           color: "header-secondary",
-                          children: el.intl.string(el.t.x1SQZW),
+                          children: el.intl.string(el.t.x1SQZb),
                       }),
                   ],
               })
@@ -221,7 +221,7 @@ class ev extends (i = s.PureComponent) {
                 showFriends: n,
                 guildScheduledEvent: i,
                 streamUserId: s,
-                application: a,
+                application: r,
                 welcomeToServer: o,
                 inviteChannel: d,
                 modalState: u,
@@ -234,14 +234,14 @@ class ev extends (i = s.PureComponent) {
             ((e = o
                 ? null
                 : null != s
-                  ? el.intl.string(el.t["6VQaqa"])
-                  : null != a
-                    ? el.intl.formatToPlainString(el.t.ZdK3dX, { applicationName: a.name })
+                  ? el.intl.string(el.t["6VQaqd"])
+                  : null != r
+                    ? el.intl.formatToPlainString(el.t.ZdK3dW, { applicationName: r.name })
                     : null != i
-                      ? el.intl.string(el.t.JKV4FB)
+                      ? el.intl.string(el.t.JKV4FL)
                       : (null == d ? void 0 : d.isGuildStageVoice())
-                        ? el.intl.string(el.t.zTrsHx)
-                        : el.intl.format(el.t.NvVBJS, { name: t.name })),
+                        ? el.intl.string(el.t.zTrsH0)
+                        : el.intl.format(el.t.NvVBJU, { name: t.name })),
             null != d)
         ) {
             let e = (0, T.KS)(d, t);
@@ -268,20 +268,20 @@ class ev extends (i = s.PureComponent) {
                               id: this._headerId,
                               variant: "heading-xl/semibold",
                               color: "header-primary",
-                              children: el.intl.string(el.t.WhR38v),
+                              children: el.intl.string(el.t.WhR38i),
                           }),
                           (0, l.jsx)(I.Text, {
                               color: "header-secondary",
                               variant: "text-md/normal",
-                              children: el.intl.string(el.t.Ed4BMj),
+                              children: el.intl.string(el.t.Ed4BMs),
                           }),
                           n &&
                               (0, l.jsx)(I.E1j, {
                                   size: "sm",
                                   query: g,
                                   onChange: this.handleQueryChange,
-                                  placeholder: el.intl.string(el.t.CmSHY2),
-                                  "aria-label": el.intl.string(el.t.CmSHY2),
+                                  placeholder: el.intl.string(el.t.CmSHYx),
+                                  "aria-label": el.intl.string(el.t.CmSHYx),
                                   autoFocus: !0,
                                   onClear: this.handleClearSearch,
                               }),
@@ -307,12 +307,12 @@ class ev extends (i = s.PureComponent) {
                                 size: "sm",
                                 query: g,
                                 onChange: this.handleQueryChange,
-                                placeholder: el.intl.string(el.t.CmSHY2),
+                                placeholder: el.intl.string(el.t.CmSHYx),
                                 autoFocus: !0,
                                 onClear: this.handleClearSearch,
                             }),
                             (0, l.jsx)("div", {
-                                className: ea.marginTop8,
+                                className: er.marginTop8,
                                 children: this.renderChannelWarning(),
                             }),
                         ],
@@ -322,7 +322,7 @@ class ev extends (i = s.PureComponent) {
                             (0, l.jsx)(I.Heading, {
                                 id: this._headerId,
                                 variant: "heading-md/semibold",
-                                className: r()(ea.marginReset, es.headerCloseButtonSpacing, es.headerText),
+                                className: a()(er.marginReset, es.headerCloseButtonSpacing, es.headerText),
                                 children: e,
                             }),
                             m,
@@ -350,7 +350,7 @@ class ev extends (i = s.PureComponent) {
                                         (0, l.jsx)(I.Heading, {
                                             variant: "heading-lg/semibold",
                                             className: es.welcomeHeading,
-                                            children: el.intl.string(el.t.DpoBNz),
+                                            children: el.intl.string(el.t.DpoBN0),
                                         }),
                                         (0, l.jsx)(I.Text, {
                                             variant: "text-md/normal",
@@ -374,12 +374,12 @@ class ev extends (i = s.PureComponent) {
         return 0 === e.length
             ? (0, l.jsx)(I.hzk, {
                   className: es.inviteRowEmptyState,
-                  children: (0, l.jsx)(I.OZU, { children: el.intl.string(el.t.ojoWgY) }),
+                  children: (0, l.jsx)(I.OZU, { children: el.intl.string(el.t.ojoWgX) }),
               })
             : null == i
               ? (0, l.jsx)(I.hzk, {
                     className: es.inviteRowEmptyState,
-                    children: (0, l.jsx)(I.OZU, { children: el.intl.string(el.t.hzPwGB) }),
+                    children: (0, l.jsx)(I.OZU, { children: el.intl.string(el.t.hzPwGG) }),
                 })
               : n && null != t
                 ? (0, l.jsx)(I.YAO, {
@@ -409,17 +409,17 @@ class ev extends (i = s.PureComponent) {
         var e;
         let { guild: t, showFriends: n, streamUserId: i, application: s } = this.props;
         if (n) return this.renderFriendsBody();
-        let a = (0, Q.Z)(null != (e = this.getInviteKey()) ? e : ""),
-            r = F.default.getCurrentUser();
-        d()(null != r, "InstantInviteModal: user cannot be undefined");
-        let o = (0, P.eM)(t, r) ? el.intl.string(el.t.HFbByM) : el.intl.string(el.t.ueBhAw);
+        let r = (0, Q.Z)(null != (e = this.getInviteKey()) ? e : ""),
+            a = F.default.getCurrentUser();
+        d()(null != a, "InstantInviteModal: user cannot be undefined");
+        let o = (0, P.eM)(t, a) ? el.intl.string(el.t.HFbByJ) : el.intl.string(el.t.ueBhA9);
         return (
-            null != i ? (o = el.intl.string(el.t.CXpS1N)) : null != s && (o = el.intl.string(el.t.ueCrHB)),
+            null != i ? (o = el.intl.string(el.t.CXpS1I)) : null != s && (o = el.intl.string(el.t.ueCrHB)),
             (0, l.jsx)(I.hzk, {
                 className: es.noScroll,
                 children: (0, l.jsxs)(b.Z, {
                     direction: b.Z.Direction.VERTICAL,
-                    className: ea.marginBottom20,
+                    className: er.marginBottom20,
                     children: [
                         (0, l.jsx)(I.Text, {
                             className: es.subText,
@@ -430,7 +430,7 @@ class ev extends (i = s.PureComponent) {
                             X.I,
                             ec(eu({}, this.props), {
                                 setInviteFlags: this.handleSetInviteFlags,
-                                copyValue: a,
+                                copyValue: r,
                             }),
                         ),
                     ],
@@ -445,7 +445,7 @@ class ev extends (i = s.PureComponent) {
                 showFriends: n,
                 guildScheduledEvent: i,
                 streamUserId: s,
-                application: a,
+                application: r,
                 inviteChannel: o,
                 modalState: d,
             } = this.props,
@@ -453,14 +453,14 @@ class ev extends (i = s.PureComponent) {
             c = null,
             g = (0, Q.Z)(null != (e = this.getInviteKey()) ? e : "");
         if (n) {
-            let e = el.intl.string(el.t.MLkj7O);
+            let e = el.intl.string(el.t.MLkj7N);
             null != s
-                ? (e = el.intl.string(el.t["1b9nen"]))
-                : null != a
-                  ? (e = el.intl.string(el.t.iI1gMj))
+                ? (e = el.intl.string(el.t["1b9neu"]))
+                : null != r
+                  ? (e = el.intl.string(el.t.iI1gMg))
                   : null != i
-                    ? (e = el.intl.string(el.t.KaWCyM))
-                    : (null == o ? void 0 : o.isGuildStageVoice()) && (e = el.intl.string(el.t["2frWa2"])),
+                    ? (e = el.intl.string(el.t.KaWCyD))
+                    : (null == o ? void 0 : o.isGuildStageVoice()) && (e = el.intl.string(el.t["2frWa3"])),
                 (c = (0, l.jsx)(b.Z, {
                     direction: b.Z.Direction.VERTICAL,
                     className: es.content,
@@ -479,7 +479,7 @@ class ev extends (i = s.PureComponent) {
             t ||
                 (c = (0, l.jsxs)(b.Z, {
                     justify: b.Z.Justify.BETWEEN,
-                    className: ea.marginTop20,
+                    className: er.marginTop20,
                     children: [
                         (0, l.jsx)(x.$q, {
                             size: 18,
@@ -488,19 +488,19 @@ class ev extends (i = s.PureComponent) {
                             onChange: this.handleToggleMaxAge,
                             children: (0, l.jsx)(I.Text, {
                                 variant: "text-sm/normal",
-                                children: el.intl.string(el.t.QKJru7),
+                                children: el.intl.string(el.t["QKJru/"]),
                             }),
                         }),
                         (0, l.jsx)(I.aML, {
                             "data-migration-pending": !0,
-                            text: el.intl.string(el.t.Yx4IiI),
+                            text: el.intl.string(el.t.Yx4IiC),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
                                 return (0, l.jsx)(I.P3F, {
                                     onClick: this.openSettings,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
-                                    className: er.cursorPointer,
+                                    className: ea.cursorPointer,
                                     children: (0, l.jsx)(I.ewm, {
                                         size: "sm",
                                         color: p.Z.unsafe_rawColors.PRIMARY_400.css,
@@ -512,7 +512,7 @@ class ev extends (i = s.PureComponent) {
                 }));
         return null != c
             ? (0, l.jsx)(I.mzw, {
-                  className: r()({
+                  className: a()({
                       [es.noPadding]: !n,
                       [es.footer]: n,
                   }),
@@ -551,11 +551,11 @@ class ev extends (i = s.PureComponent) {
             guild: n,
             showFriends: i,
             isFriendsInVCInvitesEnabled: s,
-            sections: a,
+            sections: r,
         } = this.props;
         return (0, l.jsx)("div", {
-            className: r()({
-                [es.isFriendsInVCInvitesExperiment]: s && null != a,
+            className: a()({
+                [es.isFriendsInVCInvitesExperiment]: s && null != r,
                 [es.wrapper]: i,
             }),
             children: (0, l.jsx)(I.Y0X, {
@@ -650,7 +650,7 @@ class ev extends (i = s.PureComponent) {
             }),
             ed(this, "renderRow", (e) => {
                 let { section: t, row: n } = e,
-                    { rows: i, sections: s, analyticsLocation: a, source: r } = this.props,
+                    { rows: i, sections: s, analyticsLocation: r, source: a } = this.props,
                     o = this.getInviteKey(),
                     d = null == s ? i[n] : s[t][n],
                     u = "".concat(d.type, "-").concat(d.item.id),
@@ -665,8 +665,8 @@ class ev extends (i = s.PureComponent) {
                                 row: d,
                                 channel: d.item,
                                 inviteKey: o,
-                                location: a,
-                                source: r,
+                                location: r,
+                                source: a,
                             },
                             u,
                         );
@@ -678,8 +678,8 @@ class ev extends (i = s.PureComponent) {
                                 row: d,
                                 user: d.item,
                                 inviteKey: o,
-                                location: a,
-                                source: r,
+                                location: r,
+                                source: a,
                             },
                             u,
                         );
@@ -692,12 +692,12 @@ class ev extends (i = s.PureComponent) {
                 let { section: t } = e,
                     { sections: n, isFriendsInVCInvitesEnabled: i } = this.props;
                 if (!i || null == n) return null;
-                let s = 0 === t ? el.intl.string(el.t.y29JXl) : el.intl.string(el.t.Sd8Ix8),
-                    a = this.getSectionVisibility(t);
+                let s = 0 === t ? el.intl.string(el.t.y29JXs) : el.intl.string(el.t.Sd8Ixw),
+                    r = this.getSectionVisibility(t);
                 return (0, l.jsx)(ep, {
                     section: t,
                     heading: s,
-                    isOpen: a,
+                    isOpen: r,
                     onToggleVisibility: this.handleToggleSectionVisibility,
                 });
             });
@@ -734,8 +734,8 @@ ed(ev, "defaultProps", {
 let ex = s.forwardRef(function (e, t) {
     var n, i;
     let {
-            channel: a,
-            guild: r,
+            channel: r,
+            guild: a,
             source: o,
             guildScheduledEvent: d,
             streamUserId: u,
@@ -746,24 +746,24 @@ let ex = s.forwardRef(function (e, t) {
             page: I,
             analyticsLocation: T,
         } = e,
-        { analyticsLocations: b } = (0, C.ZP)(y.Z.INSTANT_INVITE_MODAL),
+        { analyticsLocations: b } = (0, y.ZP)(C.Z.INSTANT_INVITE_MODAL),
         j = (0, m.e7)([G.Z, O.Z, R.ZP], () => {
-            if (null != a) return a;
+            if (null != r) return r;
             let e = G.Z.getChannelId(),
                 t = null == e || (0, ei.AB)(e) ? void 0 : O.Z.getChannel(e);
             return (
                 (null == t ? void 0 : t.isThread()) && (t = O.Z.getChannel(t.parent_id)),
-                null != t ? t : R.ZP.getDefaultChannel(r.id, !0, en.Plq.CREATE_INSTANT_INVITE)
+                null != t ? t : R.ZP.getDefaultChannel(a.id, !0, en.Plq.CREATE_INSTANT_INVITE)
             );
-        }, [a, r.id]),
+        }, [r, a.id]),
         A = null;
     null != u ? (A = et.Iq.STREAM) : null != c && (A = et.Iq.EMBEDDED_APPLICATION);
-    let P = null != a ? a.getGuildId() : null != r ? r.id : null,
-        w = (0, K.xU)({
+    let P = null != r ? r.getGuildId() : null != a ? a.id : null,
+        w = (0, W.xU)({
             guildId: P,
             location: "InstantInviteModalConnected",
         }),
-        D = (0, K.WV)({
+        D = (0, W.WV)({
             guildId: P,
             location: "InstantInviteModalConnected",
         }),
@@ -777,7 +777,7 @@ let ex = s.forwardRef(function (e, t) {
                       targetApplicationId: c,
                   });
         }, [j, A, u, c]),
-        { isFriendsInVCInvitesEnabled: z } = (0, W.am)({
+        { isFriendsInVCInvitesEnabled: H } = (0, K.am)({
             guildId: null != P ? P : void 0,
             location: "instant_invite_modal",
             autoTrackExposure: !0,
@@ -788,9 +788,9 @@ let ex = s.forwardRef(function (e, t) {
                 L.Z.getInviteSuggestionRows(),
                 L.Z.getTotalSuggestionsCount() >= 1,
                 L.Z.getInitialCounts(),
-                null != a && null != j ? B.ZP.getVoiceStatesForChannel(j) : null,
+                null != r && null != j ? B.ZP.getVoiceStatesForChannel(j) : null,
             ],
-            [j, a],
+            [j, r],
         ),
         ee = (0, m.e7)(
             [V.ZP],
@@ -803,7 +803,7 @@ let ex = s.forwardRef(function (e, t) {
         ),
         el = (0, m.e7)([k.Z], () => null != j && k.Z.can(en.Plq.CREATE_INSTANT_INVITE, j), [j]),
         es = null === F || !el,
-        [ea] = s.useState(() => {
+        [er] = s.useState(() => {
             let e = new Set();
             return (
                 null != u && null != X
@@ -820,34 +820,34 @@ let ex = s.forwardRef(function (e, t) {
                 e
             );
         }),
-        er = null == a ? void 0 : a.id,
-        eo = (0, m.e7)([M.Z], () => M.Z.getStageInstanceByChannel(er), [er]);
+        ea = null == r ? void 0 : r.id,
+        eo = (0, m.e7)([M.Z], () => M.Z.getStageInstanceByChannel(ea), [ea]);
     s.useEffect(() => {
         (0, f.x)({
-            omitUserIds: ea,
-            guild: r,
-            channel: a,
+            omitUserIds: er,
+            guild: a,
+            channel: r,
             applicationId: c,
             inviteTargetType: A,
         }).catch(en.VqG);
-    }, [ea, a, r, c, A]);
+    }, [er, r, a, c, A]);
     let [ed] = (0, _.Z)(null != c ? [c] : []),
         ec = null != F ? F.code : void 0,
         ep = null == F ? void 0 : F.maxAge,
         ex = null == F ? void 0 : F.maxUses,
         eI = null == F ? void 0 : F.temporary,
-        eS = r.vanityURLCode,
+        eS = a.vanityURLCode,
         ef = null != eS && eS.length > 0,
         eE = !el && !(null == j ? void 0 : j.isGuildVocal()) && ef,
-        ey = null != (n = null == F ? void 0 : F.flags) ? n : 0,
-        eC = (null == j ? void 0 : j.type) === en.d4z.GUILD_VOICE,
+        eC = null != (n = null == F ? void 0 : F.flags) ? n : 0,
+        ey = (null == j ? void 0 : j.type) === en.d4z.GUILD_VOICE,
         e_ = (0, N.Z)(j);
     el || (null == eo ? void 0 : eo.invite_code) == null || (ec = eo.invite_code);
-    let eN = s.useMemo(() => (z && eC ? (0, q.Qq)(Y, P) : null), [z, eC, Y, P]),
+    let eN = s.useMemo(() => (H && ey ? (0, q.Qq)(Y, P) : null), [H, ey, Y, P]),
         [eT, eb] = s.useState({
             query: "",
             maxAgeOptions: D,
-            maxAge: null != (i = null != ep ? ep : w) ? i : K.zv,
+            maxAge: null != (i = null != ep ? ep : w) ? i : W.zv,
             savedMaxAge: ep === eg.value ? (null != w ? w : eh.value) : eg.value,
             maxUses: null != ex && 0 !== ex ? ex : em.value,
             temporary: null != eI && eI,
@@ -855,7 +855,7 @@ let ex = s.forwardRef(function (e, t) {
             showVanityURL: eE,
             currentPage: null != I ? I : et.RV.MAIN,
             lastPage: void 0,
-            flags: ey,
+            flags: eC,
             sectionVisibility: {},
             defaultSectionVisibility: {},
         }),
@@ -871,10 +871,10 @@ let ex = s.forwardRef(function (e, t) {
             },
             [eT.currentPage, ej],
         ),
-        eZ = eC && !eE && !es && !e_,
+        eZ = ey && !eE && !es && !e_,
         { enabled: eM } = Z.o.useExperiment(
             {
-                guildId: null == r ? void 0 : r.id,
+                guildId: null == a ? void 0 : a.id,
                 location: "acc417_3",
             },
             { autoTrackExposure: eZ },
@@ -918,21 +918,21 @@ let ex = s.forwardRef(function (e, t) {
                 eP !== eg.value && eO !== eg.value && ej({ savedMaxAge: eg.value });
         }, [eE, el, j, o, null == ed ? void 0 : ed.id, A, u, eP, ew, eV, ej, eO, eR]),
         ek = (0, E.Z)(j),
-        eD = (0, E.Z)((0, H.yE)(eR, h.$.IS_APPLICATION_BYPASS)),
+        eD = (0, E.Z)((0, z.yE)(eR, h.$.IS_APPLICATION_BYPASS)),
         eG = null != ek && ek !== j,
-        eF = null != eD && eD !== (0, H.yE)(eR, h.$.IS_APPLICATION_BYPASS);
+        eF = null != eD && eD !== (0, z.yE)(eR, h.$.IS_APPLICATION_BYPASS);
     s.useEffect(() => {
         !eE && (eG || eF) && eL();
     }, [eL, eG, eF, eE]);
-    let { canCreateApplicationBypassInvites: eB, isManualApprovalGuild: ez } = (0, J.R)(r);
-    return (0, l.jsx)(C.Gt, {
+    let { canCreateApplicationBypassInvites: eB, isManualApprovalGuild: eH } = (0, J.R)(a);
+    return (0, l.jsx)(y.Gt, {
         value: b,
         children: (0, l.jsx)(ev, {
             ref: t,
             canCreateInvites: el,
             noInvitesAvailable: es,
             inviteChannel: j,
-            guild: r,
+            guild: a,
             guildScheduledEvent: d,
             streamUserId: u,
             vanityURLCode: eS,
@@ -941,7 +941,7 @@ let ex = s.forwardRef(function (e, t) {
             application: ed,
             rows: Y,
             sections: eN,
-            isFriendsInVCInvitesEnabled: z,
+            isFriendsInVCInvitesEnabled: H,
             showFriends: Q,
             initialCounts: $,
             code: ec,
@@ -953,7 +953,7 @@ let ex = s.forwardRef(function (e, t) {
             onClose: p,
             canShowVanityURL: eE,
             isGuestInviteCreationToggleEnabled: eM && eZ,
-            shouldHideTemporaryInviteToggle: (eM && eZ) || ez,
+            shouldHideTemporaryInviteToggle: (eM && eZ) || eH,
             modalState: eT,
             setModalState: ej,
             changePage: eA,

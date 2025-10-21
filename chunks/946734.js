@@ -108,7 +108,7 @@ class S {
                     {
                         asContainer: !0,
                         tag: "span",
-                        text: x.intl.string(x.t.UTjREx),
+                        text: x.intl.string(x.t["UTjRE/"]),
                         position: "bottom",
                         children: (0, r.jsx)(c.P3F, {
                             className: C.moreAvatars,
@@ -183,7 +183,7 @@ function I(e) {
               children: [
                   (0, r.jsx)(v.iz, { className: C.divider }),
                   (0, r.jsx)(c.IGR, {
-                      text: x.intl.string(x.t.l1QVfn),
+                      text: x.intl.string(x.t.l1QVfj),
                       disableColor: !0,
                       className: C.akaBadge,
                   }),

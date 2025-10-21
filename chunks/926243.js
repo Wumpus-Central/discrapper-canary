@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(358085),
     y = n(288406),
     O = n(388032),
-    v = n(39162);
+    v = n(999642);
 function I(e, t, n) {
     return (
         t in e
@@ -130,12 +130,12 @@ let R = (e, t) => "".concat(e, ":").concat(t),
             D = () => {
                 let e = (0, E.nY)(n);
                 return ((null == w ? void 0 : w.name) != null &&
-                    (e = O.intl.formatToPlainString(O.t["nXv4/P"], {
+                    (e = O.intl.formatToPlainString(O.t["nXv4/B"], {
                         names: e,
                         guildName: w.name,
                     })),
                 i)
-                    ? O.intl.formatToPlainString(O.t["9FI9Z2"], { names: e })
+                    ? O.intl.formatToPlainString(O.t["9FI9Z0"], { names: e })
                     : e;
             },
             L = d && !R;
@@ -280,7 +280,7 @@ function w(e) {
               l.aML,
               {
                   "data-migration-pending": !0,
-                  text: O.intl.formatToPlainString(O.t.glqNsb, { key: (0, b.isMac)() ? "Opt" : "Alt" }),
+                  text: O.intl.formatToPlainString(O.t.glqNsf, { key: (0, b.isMac)() ? "Opt" : "Alt" }),
                   position: "top",
                   delay: 200,
                   children: (e) => $(e),

@@ -17,28 +17,28 @@ var i = n(951288),
     x = n(749681),
     j = n(258971),
     v = n(685929),
-    y = n(163400),
-    O = n(553795),
+    O = n(163400),
+    y = n(553795),
     _ = n(496675),
     C = n(626135),
     N = n(768581),
     S = n(63063),
     E = n(709054),
     I = n(51144),
-    P = n(466070),
-    w = n(585835),
+    w = n(466070),
+    P = n(585835),
     T = n(997787),
     Z = n(981631),
     k = n(49898),
     A = n(388032),
-    D = n(280219),
+    D = n(81187),
     R = n(509399),
     L = n(790904),
     M = n(609182);
-function B(e, t) {
+function U(e, t) {
     return t.includes(e);
 }
-function U(e) {
+function B(e) {
     let { query: t, setQuery: n } = e,
         l = r.useCallback(
             (e) => {
@@ -52,8 +52,8 @@ function U(e) {
             query: t,
             onChange: l,
             onClear: () => n(""),
-            placeholder: A.intl.string(A.t["5prvKS"]),
-            "aria-label": A.intl.string(A.t["5prvKS"]),
+            placeholder: A.intl.string(A.t["5prvKe"]),
+            "aria-label": A.intl.string(A.t["5prvKe"]),
         }),
     });
 }
@@ -63,8 +63,8 @@ function W(e) {
             guild: W,
             channel: H,
             applicationIntegrations: G,
-            builtInIntegrations: K,
-            customWebhooks: F,
+            builtInIntegrations: F,
+            customWebhooks: K,
             followedChannelWebhooks: z,
             isLoadingWebhooks: q,
             canCreateWebhook: V,
@@ -77,10 +77,10 @@ function W(e) {
         ee = (0, m.ZP)(),
         [et, en] = r.useState(""),
         { isFetchingConnections: ei, accounts: er } = (0, c.cj)(
-            [O.Z],
+            [y.Z],
             () => ({
-                isFetchingConnections: O.Z.isFetching(),
-                accounts: O.Z.getAccounts(),
+                isFetchingConnections: y.Z.isFetching(),
+                accounts: y.Z.getAccounts(),
             }),
             [],
         ),
@@ -96,7 +96,7 @@ function W(e) {
         ),
         eo = (0, v.Y)(H),
         es = (0, g.q)(null == H || null == (t = H.linkedLobby) ? void 0 : t.application_id),
-        ec = (0, y.F)(null == W ? void 0 : W.id),
+        ec = (0, O.F)(null == W ? void 0 : W.id),
         {
             availableTwitchIntegrations: ed,
             availableYoutubeIntegrations: eu,
@@ -105,14 +105,14 @@ function W(e) {
         } = r.useMemo(() => {
             var e, t, n, i, r, l, a, o;
             return {
-                availableTwitchIntegrations: null != (r = null == (e = K.twitch) ? void 0 : e.length) ? r : 0,
-                availableYoutubeIntegrations: null != (l = null == (t = K.youtube) ? void 0 : t.length) ? l : 0,
+                availableTwitchIntegrations: null != (r = null == (e = F.twitch) ? void 0 : e.length) ? r : 0,
+                availableYoutubeIntegrations: null != (l = null == (t = F.youtube) ? void 0 : t.length) ? l : 0,
                 guildTwitchIntegrations:
-                    null != (a = null == (n = K.twitch) ? void 0 : n.filter((e) => e.enabled).length) ? a : 0,
+                    null != (a = null == (n = F.twitch) ? void 0 : n.filter((e) => e.enabled).length) ? a : 0,
                 guildYoutubeIntegrations:
-                    null != (o = null == (i = K.youtube) ? void 0 : i.filter((e) => e.enabled).length) ? o : 0,
+                    null != (o = null == (i = F.youtube) ? void 0 : i.filter((e) => e.enabled).length) ? o : 0,
             };
-        }, [K.twitch, K.youtube]),
+        }, [F.twitch, F.youtube]),
         { showTwitchCard: eb, showYoutubeCard: eg } = r.useMemo(() => {
             if (ei || !ea)
                 return {
@@ -129,7 +129,7 @@ function W(e) {
         }, [ei, ea, W, er, ed, eu]),
         ef = Object.values(G).length,
         eh = r.useMemo(() => {
-            let e = ef > 100 ? B : s();
+            let e = ef > 100 ? U : s();
             return Object.values(G).filter((t) => {
                 var n;
                 let { application: i } = t;
@@ -149,13 +149,13 @@ function W(e) {
             [eh, ex],
         ),
         ev = (0, u.s9z)(u.JQI),
-        [ey, eO] = r.useState(!1),
+        [eO, ey] = r.useState(!1),
         e_ = r.useRef(0),
         eC = () => {
-            eO(!0),
+            ey(!0),
                 clearTimeout(e_.current),
                 (e_.current = setTimeout(() => {
-                    eO(!1);
+                    ey(!1);
                 }, 200));
         };
     r.useEffect(() => (window.addEventListener("scroll", eC, !0), () => window.removeEventListener("scroll", eC)));
@@ -168,22 +168,22 @@ function W(e) {
                 null != l.user
                     ? a.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.Nu9sam, {
+                          text: A.intl.formatToPlainString(A.t.Nu9sat, {
                               timestamp: E.default.extractTimestamp(l.id),
                               user: I.ZP.getUserTag(l.user),
                           }),
                       })
                     : a.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: E.default.extractTimestamp(l.id) }),
+                          text: A.intl.formatToPlainString(A.t.gcdJ8J, { timestamp: E.default.extractTimestamp(l.id) }),
                       }),
                 (0, i.jsx)(
-                    w.Z,
+                    P.Z,
                     {
                         name: r.name,
                         imageSrc: null != (t = r.getIconURL(48)) ? t : N.pK["0"],
                         integration: e,
-                        buttonText: A.intl.string(A.t["Z/qRnJ"]),
+                        buttonText: A.intl.string(A.t["Z/qRnM"]),
                         hasNextSection: !0,
                         onButtonClick: () => {
                             X(r.id),
@@ -195,7 +195,7 @@ function W(e) {
                         },
                         details: a,
                         guildId: null == W ? void 0 : W.id,
-                        isScrolling: ey,
+                        isScrolling: eO,
                         canShowMigrationTooltip: n,
                     },
                     "integration-".concat(l.id),
@@ -223,7 +223,7 @@ function W(e) {
                             children: (0, i.jsx)(u.Text, {
                                 color: "text-muted",
                                 variant: "text-sm/normal",
-                                children: A.intl.string(A.t.EVWFNj),
+                                children: A.intl.string(A.t.EVWFNr),
                             }),
                         }),
                     ],
@@ -242,12 +242,12 @@ function W(e) {
                             (0, i.jsx)(u.Heading, {
                                 color: "header-secondary",
                                 variant: "heading-xl/bold",
-                                children: A.intl.string(A.t.nQQeFB),
+                                children: A.intl.string(A.t.nQQeFM),
                             }),
                             (0, i.jsx)(u.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                children: A.intl.format(A.t.snvKU1, {
+                                children: A.intl.format(A.t.snvKU3, {
                                     handleGoToAppDirectory: () => {
                                         (0, x.transitionToGlobalDiscovery)({
                                             tab: k.GlobalDiscoveryTab.APPS,
@@ -267,46 +267,46 @@ function W(e) {
         })(ee, ef, null == W ? void 0 : W.id)),
         (eS = null));
     let eE = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
-        eI = null != H ? A.t.YV0vh4 : A.t.FnZEJi,
-        eP = [];
+        eI = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
+        ew = [];
     if (el) {
         let e, t, r, a, o;
-        eP.push(
-            ((n = F.length),
-            n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJC)),
+        ew.push(
+            ((n = K.length),
+            n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJK)),
             (0, i.jsx)(
-                w.Z,
+                P.Z,
                 {
-                    name: A.intl.string(A.t.xOg4SE),
+                    name: A.intl.string(A.t.xOg4SP),
                     icon: u.tYf,
                     buttonText: e,
                     buttonDisabled: !V,
                     trailing: t,
                     onButtonClick: J,
                     hasNextSection: n > 0,
-                    details: [{ text: A.intl.formatToPlainString(A.t["6HqDfX"], { count: n }) }],
+                    details: [{ text: A.intl.formatToPlainString(A.t["6HqDfT"], { count: n }) }],
                 },
                 "webhooks",
             )),
         ),
             (null == H ? void 0 : H.type) === Z.d4z.GUILD_VOICE ||
                 ((null == H ? void 0 : H.type) != null && Z.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
-                eP.push(
+                ew.push(
                     ((l = z.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = Q))
-                        : ((r = A.intl.string(A.t["ZwSt+f"])),
+                        : ((r = A.intl.string(A.t["ZwSt+T"])),
                           (a = () => open(S.Z.getArticleURL(Z.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        w.Z,
+                        P.Z,
                         {
-                            name: A.intl.string(A.t.OrV60t),
+                            name: A.intl.string(A.t.OrV60r),
                             icon: u.AsW,
                             buttonText: r,
                             onButtonClick: a,
                             trailing: o,
                             hasNextSection: l > 0,
-                            details: [{ text: A.intl.formatToPlainString(A.t.JUNGIS, { count: l }) }],
+                            details: [{ text: A.intl.formatToPlainString(A.t.JUNGIZ, { count: l }) }],
                         },
                         "channels-followed",
                     )),
@@ -314,12 +314,12 @@ function W(e) {
     }
     null == H &&
         ec.length > 0 &&
-        eP.push(
+        ew.push(
             ((o = ec.length),
             (0, i.jsx)(
-                w.Z,
+                P.Z,
                 {
-                    name: A.intl.string(A.t.tqtDXF),
+                    name: A.intl.string(A.t.tqtDXC),
                     icon: u.DuK,
                     trailing: (0, i.jsx)(u.LJT, { size: "xs" }),
                     onButtonClick: $,
@@ -330,7 +330,7 @@ function W(e) {
             )),
         ),
         eb &&
-            eP.push(
+            ew.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -340,19 +340,19 @@ function W(e) {
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
-                              (l = A.intl.formatToPlainString(A.t.FFpnT0, { count: t })),
+                              (l = A.intl.formatToPlainString(A.t.FFpnT8, { count: t })),
                               (a = () => n(Z.ABu.TWITCH)))
-                            : ((r = A.intl.string(A.t.bkvGkp)),
-                              (l = A.intl.string(A.t.Qq3X2N)),
+                            : ((r = A.intl.string(A.t.bkvGkn)),
+                              (l = A.intl.string(A.t.Qq3X2M)),
                               (a = () =>
                                   (0, f.Z)({
                                       platformType: Z.ABu.TWITCH,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            w.Z,
+                            P.Z,
                             {
-                                name: A.intl.string(A.t.q4pBGx),
+                                name: A.intl.string(A.t.q4pBG3),
                                 icon: s.icon.whiteSVG,
                                 iconBackgroundColor: s.color,
                                 iconClassName: D.platformIcon,
@@ -368,7 +368,7 @@ function W(e) {
                 })(ed, ep, Y),
             ),
         eg &&
-            eP.push(
+            ew.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -378,19 +378,19 @@ function W(e) {
                     return (
                         e > 0
                             ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })),
-                              (l = A.intl.formatToPlainString(A.t.b2g5vL, { count: t })),
+                              (l = A.intl.formatToPlainString(A.t.b2g5vC, { count: t })),
                               (a = () => n(Z.ABu.YOUTUBE)))
-                            : ((r = A.intl.string(A.t.xEyQ3d)),
-                              (l = A.intl.string(A.t.T0ivgY)),
+                            : ((r = A.intl.string(A.t.xEyQ3X)),
+                              (l = A.intl.string(A.t.T0ivgQ)),
                               (a = () =>
                                   (0, f.Z)({
                                       platformType: Z.ABu.YOUTUBE,
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            w.Z,
+                            P.Z,
                             {
-                                name: A.intl.string(A.t.aS6cKy),
+                                name: A.intl.string(A.t.aS6cK4),
                                 icon: s.icon.whiteSVG,
                                 iconBackgroundColor: s.color,
                                 iconClassName: D.platformIcon,
@@ -405,7 +405,7 @@ function W(e) {
                     );
                 })(eu, em, Y),
             );
-    let ew = null != H && eo && null != es;
+    let eP = null != H && eo && null != es;
     return (0, i.jsxs)("div", {
         className: a()(null != eS ? D.footerPlaceholder : null),
         children: [
@@ -421,17 +421,17 @@ function W(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          eP,
-                          ew &&
+                          ew,
+                          eP &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      eP.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                      ew.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                       (0, i.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
                                           className: D.sectionHeader,
                                           children: A.intl.string(A.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(P.t, {
+                                      (0, i.jsx)(w.t, {
                                           channel: H,
                                           application: es,
                                           showApplicationImage: !0,
@@ -445,14 +445,14 @@ function W(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        eP.length > 0 || ew ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                        ew.length > 0 || eP ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                         (0, i.jsx)(u.Heading, {
                                             variant: "heading-md/semibold",
                                             className: D.sectionHeader,
-                                            children: A.intl.string(A.t.pUBKho),
+                                            children: A.intl.string(A.t.pUBKht),
                                         }),
                                         ef > 4
-                                            ? (0, i.jsx)(U, {
+                                            ? (0, i.jsx)(B, {
                                                   query: et,
                                                   setQuery: en,
                                               })

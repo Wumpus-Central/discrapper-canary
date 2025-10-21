@@ -43,9 +43,9 @@ var i = n(951288),
     G = n(680835),
     z = n(28546),
     W = n(295474),
-    K = n(521476),
+    q = n(521476),
     Y = n(69882),
-    q = n(71619),
+    K = n(71619),
     X = n(185145),
     J = n(736052),
     Q = n(146128),
@@ -97,15 +97,15 @@ var i = n(951288),
     eG = n(583027),
     ez = n(25007),
     eW = n(685006),
-    eK = n(685722),
+    eq = n(685722),
     eY = n(199649),
-    eq = n(1397),
+    eK = n(1397),
     eX = n(641861),
     eJ = n(981631),
     eQ = n(959517),
     e$ = n(388032),
-    e0 = n(161655),
-    e1 = n(599610);
+    e0 = n(97009),
+    e1 = n(180376);
 function e2(e, t, n) {
     return (
         t in e
@@ -733,15 +733,15 @@ class te extends r.PureComponent {
             M = c === D.Ie.SIDEBAR;
         t =
             M && n.type === eJ.d4z.GUILD_VOICE
-                ? e$.t.pnnyFR
+                ? e$.t.pnnyFZ
                 : M && n.type === eJ.d4z.GUILD_STAGE_VOICE
-                  ? e$.t.YInSkp
+                  ? e$.t.YInSkq
                   : u.T.THREADS.has(n.type)
-                    ? e$.t["OkzL+f"]
-                    : e$.t.UbNmGR;
+                    ? e$.t["OkzL+Q"]
+                    : e$.t.UbNmGc;
         let R = (0, i.jsx)("div", {
                 className: e0.channelBottomBarArea,
-                children: (0, i.jsx)(eK.Z, {}),
+                children: (0, i.jsx)(eq.Z, {}),
             }),
             L = (0, i.jsxs)("div", {
                 className: e0.channelBottomBarArea,
@@ -836,7 +836,7 @@ class te extends r.PureComponent {
                                         (0, i.jsxs)(p.y5t, {
                                             component: (0, i.jsx)(p.nn4, {
                                                 children: (0, i.jsx)(p.H, {
-                                                    children: e$.intl.format(e$.t.eTzKk5, { channelName: n.name }),
+                                                    children: e$.intl.format(e$.t.eTzKkx, { channelName: n.name }),
                                                 }),
                                             }),
                                             children: [
@@ -872,7 +872,7 @@ class te extends r.PureComponent {
                                                                           channel: n,
                                                                           children: U,
                                                                       })
-                                                                    : (0, i.jsx)(eq.Z, {
+                                                                    : (0, i.jsx)(eK.Z, {
                                                                           channel: n,
                                                                           children: U,
                                                                       }),
@@ -988,7 +988,7 @@ class te extends r.PureComponent {
                               disabledUntil: l,
                           })
                         : a
-                          ? (0, i.jsx)(K.h, { guild: r })
+                          ? (0, i.jsx)(q.h, { guild: r })
                           : null;
             }),
             e2(this, "renderAppLauncherButton", () => {
@@ -1028,7 +1028,7 @@ let tt = r.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: a } = e,
         { placeholder: o, accessibilityLabel: s } = (0, eV.Z)({ channel: t }),
         c = (0, ed.S)(eN.default.getCurrentUser(), t),
-        [u] = (0, q.AB)(null == n ? void 0 : n.id),
+        [u] = (0, K.AB)(null == n ? void 0 : n.id),
         h = (0, W.Ux)(null == n ? void 0 : n.id),
         f = (0, d.e7)([eN.default], () => eN.default.getCurrentUser()),
         m = (0, d.e7)([eS.ZP], () => {
@@ -1086,7 +1086,7 @@ let tt = r.memo(function (e) {
         V = (0, b.iD)(t),
         F = (0, b.d7)(t),
         z = V.length > 0 || t.rateLimitPerUser > 0 || null != H || null != F,
-        { showLinkedLobbyApplicationLoadingIndicator: K } = (0, eH.Z)(t.linkedLobby),
+        { showLinkedLobbyApplicationLoadingIndicator: q } = (0, eH.Z)(t.linkedLobby),
         Y = (0, G.Z)("ChannelChat");
     return (0, i.jsx)(te, {
         channel: t,
@@ -1115,7 +1115,7 @@ let tt = r.memo(function (e) {
         recipientUser: B,
         voiceChannel: U,
         messagesTypingGradient: z,
-        showLinkedLobbyApplicationLoadingIndicator: K,
+        showLinkedLobbyApplicationLoadingIndicator: q,
         announcementComposerEnabled: Y,
     });
 });

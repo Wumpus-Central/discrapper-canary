@@ -9,11 +9,11 @@ var i = n(120356),
     c = n(723851),
     u = n(981631),
     d = n(388032),
-    f = n(647576);
+    f = n(84637);
 let _ = {
     [u.TaA.WINDOWS]: {
         icon: c.Z,
-        getLabel: () => d.intl.string(d.t["0/xHFB"]),
+        getLabel: () => d.intl.string(d.t["0/xHFO"]),
     },
     [u.TaA.MACOS]: {
         icon: l.Z,
@@ -21,7 +21,7 @@ let _ = {
     },
     [u.TaA.LINUX]: {
         icon: s.Z,
-        getLabel: () => d.intl.string(d.t.tcawo6),
+        getLabel: () => d.intl.string(d.t.tcawo3),
     },
 };
 function p(e) {

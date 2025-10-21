@@ -12,7 +12,7 @@ var i = n(120356),
     p = n(168524),
     f = n(115530),
     h = n(388032),
-    g = n(516814);
+    g = n(48733);
 function m(e) {
     let { name: t, applicationId: n } = e,
         i = (0, p.Z)({
@@ -41,7 +41,7 @@ function b(e) {
             ref: f,
             popoutTargetRef: b,
         } = e,
-        _ = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/P"]);
+        _ = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/E"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {

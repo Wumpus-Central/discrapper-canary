@@ -37,18 +37,18 @@ function x(e) {
                             variant: "heading-md/semibold",
                             color: "text-primary",
                             className: p.title,
-                            children: m.intl.string(m.t["PRXV4+"]),
+                            children: m.intl.string(m.t.PRXV49),
                         }),
                         (0, a.jsx)(l.Text, {
                             variant: "text-sm/medium",
                             color: "text-secondary",
-                            children: m.intl.string(m.t.RSHtFx),
+                            children: m.intl.string(m.t["RSHtF+"]),
                         }),
                     ],
                 }),
                 f
                     ? (0, a.jsx)(l.Button, {
-                          text: m.intl.string(m.t.LhcHi4),
+                          text: m.intl.string(m.t.LhcHi5),
                           fullWidth: !0,
                           onClick: () => {
                               t(d.L.TAKE_ACTION), n();
@@ -62,7 +62,7 @@ function x(e) {
                           subscriptionTier: u.Si.TIER_2,
                           size: i.zx.Sizes.LARGE,
                           color: i.zx.Colors.CUSTOM,
-                          textOptions: { textOverride: m.intl.string(m.t.pj0XBA) },
+                          textOptions: { textOverride: m.intl.string(m.t.pj0XBN) },
                           className: p.button,
                       }),
             ],

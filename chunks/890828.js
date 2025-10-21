@@ -27,7 +27,7 @@ var i = n(951288),
     N = n(136015),
     w = n(981631),
     T = n(388032),
-    _ = n(665005);
+    _ = n(89524);
 let P = (e) => [
         e.userId,
         ...(function (e) {
@@ -102,7 +102,7 @@ let P = (e) => [
                   overflowCountClassName: _.overflowCount,
                   overflowCountVariant: "text-xs/semibold",
                   disableUserPopout: !0,
-                  "aria-label": T.intl.string(T.t.TxqPQU),
+                  "aria-label": T.intl.string(T.t.TxqPQR),
               });
     }),
     k = r.memo(function (e) {
@@ -133,7 +133,7 @@ let P = (e) => [
                 className: _.guildIconWrapper,
                 children: (0, i.jsx)(h.Ft, {
                     guildId: l.id,
-                    guildName: null != (t = l.name) ? t : T.intl.string(T.t.DmIUGB),
+                    guildName: null != (t = l.name) ? t : T.intl.string(T.t.DmIUGK),
                     guildIcon: l.icon,
                     iconSize: 32,
                 }),
@@ -252,7 +252,7 @@ let P = (e) => [
                 (0, i.jsxs)(m, {
                     className: _.channelList,
                     children: [
-                        a && 0 === n.length && (0, i.jsx)(M, { emptyText: T.intl.string(T.t.nxSS09) }),
+                        a && 0 === n.length && (0, i.jsx)(M, { emptyText: T.intl.string(T.t.nxSS03) }),
                         n.map((e) =>
                             (0, i.jsx)(
                                 L,
@@ -351,7 +351,7 @@ function z(e) {
               children: [
                   l.length > 0 &&
                       (0, i.jsx)(V, {
-                          sectionHeader: T.intl.string(T.t.lnk2NT),
+                          sectionHeader: T.intl.string(T.t.lnk2NQ),
                           channelIds: l.slice(0, 3),
                           hasQuery: !1,
                           query: t,
@@ -361,7 +361,7 @@ function z(e) {
                       }),
                   s.length > 0 &&
                       (0, i.jsx)(V, {
-                          sectionHeader: T.intl.string(T.t["0lvb9P"]),
+                          sectionHeader: T.intl.string(T.t["0lvb9O"]),
                           channelIds: s.slice(0, 8),
                           hasQuery: !1,
                           query: t,
@@ -371,7 +371,7 @@ function z(e) {
                       }),
               ],
           })
-        : (0, i.jsx)(M, { emptyText: T.intl.string(T.t["3ET7Aw"]) });
+        : (0, i.jsx)(M, { emptyText: T.intl.string(T.t["3ET7Ay"]) });
 }
 function U(e) {
     e.stopPropagation();
@@ -477,7 +477,7 @@ function W(e) {
                         children: (0, i.jsx)(u.E1j, {
                             autoFocus: !0,
                             query: d,
-                            placeholder: T.intl.string(T.t.UyA6SU),
+                            placeholder: T.intl.string(T.t.UyA6ST),
                             onClear: () => {
                                 p("");
                             },
@@ -485,12 +485,12 @@ function W(e) {
                             onChange: (e) => {
                                 p(e);
                             },
-                            inputProps: { "aria-label": T.intl.string(T.t.UyA6SU) },
+                            inputProps: { "aria-label": T.intl.string(T.t.UyA6ST) },
                         }),
                     }),
                     y
                         ? (0, i.jsx)(V, {
-                              sectionHeader: E ? T.intl.format(T.t.qdXiQ0, v) : T.intl.format(T.t["Aq+8wM"], v),
+                              sectionHeader: E ? T.intl.format(T.t.qdXiQ1, v) : T.intl.format(T.t["Aq+8wB"], v),
                               channelIds: h
                                   .map((e) => {
                                       let { channel: t } = e;

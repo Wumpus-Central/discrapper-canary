@@ -3,15 +3,15 @@ var r = n(647438),
     i = n(522942),
     a = n(342905),
     o = n(242824),
-    s = n(62222),
+    s = n(592186),
     l = n(388032);
 let c = {
-        [i.m.SOLID]: s.default.OpWJ3d,
-        [i.m.GRADIENT]: s.default["i9e/u7"],
-        [i.m.GLOW]: s.default["Ra3/9/"],
-        [i.m.NEON]: s.default.x68b1N,
-        [i.m.TOON]: s.default.otpeeH,
-        [i.m.POP]: s.default.cjQOKS,
+        [i.m.SOLID]: s.default.OpWJ3f,
+        [i.m.GRADIENT]: s.default["i9e/u1"],
+        [i.m.GLOW]: s.default["Ra3/93"],
+        [i.m.NEON]: s.default.x68b1F,
+        [i.m.TOON]: s.default.otpeeM,
+        [i.m.POP]: s.default.cjQOKb,
     },
     u = {
         [i.m.SOLID]: 3,
@@ -26,7 +26,7 @@ function d(e) {
     return r.useMemo(() => {
         var n, r;
         return {
-            name: l.intl.string(null != (n = c[e]) ? n : s.default.OpWJ3d),
+            name: l.intl.string(null != (n = c[e]) ? n : s.default.OpWJ3f),
             defaultColors: t,
             previewStyles: {
                 fontId: a.C.DEFAULT,

@@ -7,12 +7,12 @@ var i = e(951288),
     u = e(430824),
     o = e(270144),
     d = e(388032),
-    c = e(89434);
+    c = e(250117);
 function p(t) {
     let { transitionState: n, onClose: e, sku: p, onSelect: x, currentGuildId: h } = t,
         [g, f] = l.useState(),
         { guilds: j, isFetching: v } = (0, o.CR)(p.applicationId, p.id, !0),
-        m = l.useMemo(() => {
+        I = l.useMemo(() => {
             if (!v && null != h)
                 return (
                     j.findIndex((t) => {
@@ -22,8 +22,8 @@ function p(t) {
                 );
         }, [h, j, v]);
     l.useLayoutEffect(() => {
-        m && f(h);
-    }, [h, m]);
+        I && f(h);
+    }, [h, I]);
     let b = l.useMemo(() => {
         let t = [];
         for (let n of j) {
@@ -31,24 +31,24 @@ function p(t) {
                 value: n.id,
                 label: n.name,
             };
-            m && n.id === h ? t.unshift(e) : t.push(e);
+            I && n.id === h ? t.unshift(e) : t.push(e);
         }
         return t;
-    }, [h, j, m]);
+    }, [h, j, I]);
     return (0, i.jsx)(r.Modal, {
-        title: d.intl.string(d.t["xgtI/P"]),
-        subtitle: d.intl.string(d.t.rAXXxM),
+        title: d.intl.string(d.t["xgtI/K"]),
+        subtitle: d.intl.string(d.t.rAXXxN),
         transitionState: n,
         onClose: e,
         actions: [
             {
                 variant: "secondary",
-                text: d.intl.string(d.t.cpT0Cg),
+                text: d.intl.string(d.t.cpT0Cq),
                 onClick: e,
             },
             {
                 variant: "primary",
-                text: d.intl.string(d.t["cY+Ooa"]),
+                text: d.intl.string(d.t["cY+Oob"]),
                 disabled: null == g,
                 onClick: function () {
                     null != g && (x(g), e());
@@ -62,7 +62,7 @@ function p(t) {
               })
             : b.length > 0
               ? (0, i.jsx)(s.VcW, {
-                    "aria-label": d.intl.string(d.t["5qyruL"]),
+                    "aria-label": d.intl.string(d.t["5qyruI"]),
                     options: b,
                     value: g,
                     onChange: f,
@@ -88,7 +88,7 @@ function p(t) {
                                     (0, i.jsx)(s.Text, {
                                         variant: "text-xs/normal",
                                         color: "header-secondary",
-                                        children: d.intl.string(d.t.RjtuAA),
+                                        children: d.intl.string(d.t.RjtuAI),
                                     }),
                             ],
                         });
@@ -98,7 +98,7 @@ function p(t) {
                     messageType: s.QYI.WARNING,
                     children: (0, i.jsx)(s.Text, {
                         variant: "text-sm/normal",
-                        children: d.intl.string(d.t.M2TbbG),
+                        children: d.intl.string(d.t.M2TbbK),
                     }),
                 }),
     });

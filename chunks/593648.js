@@ -104,7 +104,7 @@ function z(e) {
         checked: n,
         onChange: o,
         disabled: i,
-        description: F.intl.format(F.t.OOiGCA, { onClick: a }),
+        description: F.intl.format(F.t.OOiGCM, { onClick: a }),
     });
 }
 function q(e) {
@@ -127,100 +127,100 @@ function q(e) {
     });
     let f = [
             {
-                label: F.intl.string(F.t.pz71xM),
+                label: F.intl.string(F.t.pz71xC),
                 sound: "message1",
                 focusModeDisabled: s,
             },
             {
-                label: F.intl.string(F.t.hK51Ym),
+                label: F.intl.string(F.t.hK51Yg),
                 sound: "deafen",
             },
             {
-                label: F.intl.string(F.t.XiejaG),
+                label: F.intl.string(F.t.XiejaJ),
                 sound: "undeafen",
             },
             {
-                label: F.intl.string(F.t["w4m94+"]),
+                label: F.intl.string(F.t.w4m945),
                 sound: "mute",
             },
             {
-                label: F.intl.string(F.t.YqAjX1),
+                label: F.intl.string(F.t.YqAjXy),
                 sound: "unmute",
             },
             {
-                label: F.intl.string(F.t.JoTq8v),
+                label: F.intl.string(F.t.JoTq8n),
                 sound: "camera_on",
             },
             {
-                label: F.intl.string(F.t["8P6tQ0"]),
+                label: F.intl.string(F.t["8P6tQ6"]),
                 sound: "camera_off",
             },
             {
-                label: F.intl.string(F.t["juL9/P"]),
+                label: F.intl.string(F.t["juL9/L"]),
                 sound: "disconnect",
             },
             {
-                label: F.intl.string(F.t.x98vQk),
+                label: F.intl.string(F.t.x98vQq),
                 sound: "ptt_start",
             },
             {
-                label: F.intl.string(F.t["1HjRqK"]),
+                label: F.intl.string(F.t["1HjRqC"]),
                 sound: "ptt_stop",
             },
             {
-                label: F.intl.string(F.t["9JB1Cg"]),
+                label: F.intl.string(F.t["9JB1Ck"]),
                 sound: "user_join",
             },
             {
-                label: F.intl.string(F.t.KUBBNj),
+                label: F.intl.string(F.t.KUBBNt),
                 sound: "user_leave",
             },
             {
-                label: F.intl.string(F.t.EZjqUV),
+                label: F.intl.string(F.t.EZjqUT),
                 sound: "user_moved",
             },
             {
-                label: F.intl.string(F.t.LnNlQk),
+                label: F.intl.string(F.t.LnNlQh),
                 sound: "call_calling",
             },
             {
-                label: F.intl.string(F.t.XBrJT0),
+                label: F.intl.string(F.t.XBrJT6),
                 sound: "call_ringing",
             },
             {
-                label: F.intl.string(F.t["Nd8P5+"]),
+                label: F.intl.string(F.t.Nd8P5y),
                 sound: "stream_started",
             },
             {
-                label: F.intl.string(F.t["9bYj+P"]),
+                label: F.intl.string(F.t["9bYj+G"]),
                 sound: "stream_ended",
             },
             {
-                label: F.intl.string(F.t.KccUIy),
+                label: F.intl.string(F.t.KccUI1),
                 sound: "stream_user_joined",
             },
             {
-                label: F.intl.string(F.t.dsjkiI),
+                label: F.intl.string(F.t.dsjkiN),
                 sound: "stream_user_left",
             },
             {
-                label: F.intl.string(F.t.nFOcf3),
+                label: F.intl.string(F.t.nFOcf9),
                 sound: "activity_launch",
             },
             {
-                label: F.intl.string(F.t["a6lw/v"]),
+                label: F.intl.string(F.t["a6lw/u"]),
                 sound: "activity_end",
             },
             {
-                label: F.intl.string(F.t.KaFxra),
+                label: F.intl.string(F.t.KaFxrY),
                 sound: "activity_user_join",
             },
             {
-                label: F.intl.string(F.t.S14z9v),
+                label: F.intl.string(F.t.S14z9n),
                 sound: "activity_user_left",
             },
             {
-                label: F.intl.string(F.t.CP3DCw),
+                label: F.intl.string(F.t.CP3DC3),
                 sound: "reconnect",
             },
         ],
@@ -229,18 +229,18 @@ function q(e) {
         setting: U.s6.NOTIFICATIONS_SOUNDS,
         children: (0, r.jsx)("div", {
             children: (0, r.jsxs)(u.C3N, {
-                label: F.intl.string(F.t.MKWyKS),
+                label: F.intl.string(F.t.MKWyKc),
                 children: [
                     _ ? (0, r.jsx)(E.Z, {}) : null,
                     (0, r.jsx)(u.rsf, {
-                        label: F.intl.string(F.t.lF5GGR),
-                        description: F.intl.string(F.t["7oXUio"]),
+                        label: F.intl.string(F.t.lF5GGe),
+                        description: F.intl.string(F.t["7oXUim"]),
                         checked: a,
                         onChange: d.default.setNotifyMessagesInSelectedChannel,
                     }),
                     (0, r.jsx)(u.rsf, {
-                        label: F.intl.string(F.t["2ZhCOT"]),
-                        description: F.intl.string(F.t["+B0XLC"]),
+                        label: F.intl.string(F.t["2ZhCOd"]),
+                        description: F.intl.string(F.t["+B0XLE"]),
                         checked: n,
                         onChange: d.default.toggleDisableAllSounds,
                     }),
@@ -265,7 +265,7 @@ function q(e) {
                                     s
                                         ? (0, r.jsx)(u.Wn, {
                                               messageType: u.QYI.WARNING,
-                                              children: F.intl.string(F.t.cIRG0t),
+                                              children: F.intl.string(F.t.cIRG0s),
                                           })
                                         : null,
                                 ],
@@ -293,11 +293,11 @@ function X() {
         : (0, r.jsx)(I.F, {
               setting: U.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
               children: (0, r.jsxs)(u.C3N, {
-                  label: F.intl.string(F.t.D9yVAA),
-                  description: F.intl.string(F.t["0PhAOD"]),
+                  label: F.intl.string(F.t.D9yVAH),
+                  description: F.intl.string(F.t["0PhAOH"]),
                   children: [
                       (0, r.jsx)(u.q4e, {
-                          label: F.intl.string(F.t.Q0PsXV),
+                          label: F.intl.string(F.t.Q0PsXX),
                           value: t,
                           onChange: (e) => {
                               n(e);
@@ -310,8 +310,8 @@ function X() {
                                     (0, r.jsx)(I.F, {
                                         setting: U.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                         children: (0, r.jsx)(u.rsf, {
-                                            label: F.intl.string(F.t.u6dc5O),
-                                            description: F.intl.string(F.t["z8Td4+"]),
+                                            label: F.intl.string(F.t.u6dc5B),
+                                            description: F.intl.string(F.t.z8Td48),
                                             checked: !e[t].disableRaidAlertNag,
                                             onChange: () => {
                                                 (0, M.PS)(
@@ -327,8 +327,8 @@ function X() {
                                     (0, r.jsx)(I.F, {
                                         setting: U.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                         children: (0, r.jsx)(u.rsf, {
-                                            label: F.intl.string(F.t.P8MG6u),
-                                            description: F.intl.string(F.t.PyxXs7),
+                                            label: F.intl.string(F.t.P8MG6q),
+                                            description: F.intl.string(F.t.PyxXs8),
                                             checked: !e[t].disableRaidAlertPush,
                                             onChange: () => {
                                                 (0, M.PS)(
@@ -374,20 +374,20 @@ class Q extends i.PureComponent {
                 .map((e) => ({
                     value: 60 * e,
                     label:
-                        0 === e ? F.intl.string(F.t["0QN7cX"]) : F.intl.formatToPlainString(F.t.iXLF9f, { minutes: e }),
+                        0 === e ? F.intl.string(F.t["0QN7cZ"]) : F.intl.formatToPlainString(F.t.iXLF9W, { minutes: e }),
                 }));
         return (0, r.jsx)(k.Z, {
-            title: F.intl.string(F.t.HcoRu7),
+            title: F.intl.string(F.t.HcoRu0),
             children: (0, r.jsxs)(u.Kqy, {
                 gap: 16,
                 children: [
                     (0, r.jsx)(I.F, {
                         setting: U.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                         children: (0, r.jsx)(u.rsf, {
-                            label: F.intl.string(F.t["/0WClp"]),
-                            description: F.intl.string(F.t.wF9ih4),
+                            label: F.intl.string(F.t["/0WCll"]),
+                            description: F.intl.string(F.t.wF9ih3),
                             checked: e !== G.qrD.NEVER && !c,
-                            helperText: c ? F.intl.string(F.t.cIRG0t) : void 0,
+                            helperText: c ? F.intl.string(F.t.cIRG0s) : void 0,
                             onChange: this.handleDesktopChange,
                             disabled: c,
                         }),
@@ -396,8 +396,8 @@ class Q extends i.PureComponent {
                     (0, r.jsx)(I.F, {
                         setting: U.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                         children: (0, r.jsx)(u.rsf, {
-                            label: F.intl.string(F.t.VH8AIC),
-                            description: F.intl.string(F.t["9K4qwc"]),
+                            label: F.intl.string(F.t.VH8AIJ),
+                            description: F.intl.string(F.t["9K4qwX"]),
                             checked: !n,
                             onChange: this.handleToggleShowUnreadBadge,
                         }),
@@ -405,8 +405,8 @@ class Q extends i.PureComponent {
                     (0, r.jsx)(I.F, {
                         setting: U.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                         children: (0, r.jsx)(u.rsf, {
-                            label: F.intl.string(F.t.xSmFQE),
-                            description: F.intl.string(F.t["bd4j4+"]),
+                            label: F.intl.string(F.t.xSmFQG),
+                            description: F.intl.string(F.t.bd4j4x),
                             checked: i,
                             onChange: this.handleToggleShowFlash,
                         }),
@@ -420,8 +420,8 @@ class Q extends i.PureComponent {
                         setting: U.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                         children: [
                             (0, r.jsx)(u.q4e, {
-                                label: F.intl.string(F.t.TTvjd3),
-                                description: F.intl.string(F.t.Xytv9P),
+                                label: F.intl.string(F.t.TTvjd9),
+                                description: F.intl.string(F.t.Xytv9C),
                                 value: t,
                                 onChange: x.CM.updateSetting,
                                 options: f,
@@ -454,15 +454,15 @@ class Q extends i.PureComponent {
                 if (!_.Zh) return null;
                 let e = [
                     {
-                        name: F.intl.string(F.t.B1AGeH),
+                        name: F.intl.string(F.t.B1AGeJ),
                         value: G.PrB.ALL_CHANNELS,
                     },
                     {
-                        name: F.intl.string(F.t.uM2rNj),
+                        name: F.intl.string(F.t.uM2rNr),
                         value: G.PrB.SELECTED_CHANNEL,
                     },
                     {
-                        name: F.intl.string(F.t.DYO5Oj),
+                        name: F.intl.string(F.t.DYO5Oi),
                         value: G.PrB.NEVER,
                     },
                 ];
@@ -470,8 +470,8 @@ class Q extends i.PureComponent {
                     setting: U.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
                         (0, r.jsx)(u.FXm, {
-                            label: F.intl.string(F.t.VIm5MD),
-                            description: F.intl.string(F.t["+4dnAw"]),
+                            label: F.intl.string(F.t.VIm5MO),
+                            description: F.intl.string(F.t["+4dnA5"]),
                             options: e,
                             onChange: this.handleTTSChange,
                             value: this.props.ttsType,
@@ -568,15 +568,15 @@ function ea() {
     let e = x.fz.useSetting(),
         t = [
             {
-                name: F.intl.string(F.t["9x/Rtb"]),
+                name: F.intl.string(F.t["9x/RtT"]),
                 value: l.Ns.NOTIFICATIONS_ENABLED,
             },
             {
-                name: F.intl.string(F.t.fJAbQU),
+                name: F.intl.string(F.t.fJAbQd),
                 value: l.Ns.ONLY_DMS,
             },
             {
-                name: F.intl.string(F.t["xu+UDQ"]),
+                name: F.intl.string(F.t["xu+UDU"]),
                 value: l.Ns.NOTIFICATIONS_DISABLED,
             },
         ],
@@ -588,8 +588,8 @@ function ea() {
               setting: U.s6.NOTIFICATIONS_REACTIONS,
               children: [
                   (0, r.jsx)(u.FXm, {
-                      label: F.intl.string(F.t.Rq0NFh),
-                      description: F.intl.string(F.t.oWF6eX),
+                      label: F.intl.string(F.t.Rq0NFs),
+                      description: F.intl.string(F.t.oWF6eQ),
                       options: t,
                       onChange: (e) => n({ value: e }),
                       value: e,
@@ -607,8 +607,8 @@ function eo() {
             (0, r.jsx)(I.F, {
                 setting: U.s6.NOTIFICATIONS_VOICE_ACTIVITY,
                 children: (0, r.jsx)(u.rsf, {
-                    label: F.intl.string(F.t.wtk08f),
-                    description: F.intl.string(F.t.rngMNz),
+                    label: F.intl.string(F.t.wtk08S),
+                    description: F.intl.string(F.t.rngMNx),
                     badge: "beta",
                     checked: e,
                     onChange: S.I,
@@ -617,8 +617,8 @@ function eo() {
             (0, r.jsx)(I.F, {
                 setting: U.s6.NOTIFICATIONS_GO_LIVE,
                 children: (0, r.jsx)(u.rsf, {
-                    label: F.intl.string(F.t.pW4TMj),
-                    description: F.intl.string(F.t["H+WYqa"]),
+                    label: F.intl.string(F.t.pW4TMp),
+                    description: F.intl.string(F.t["H+WYqZ"]),
                     checked: t,
                     onChange: x.JN.updateSetting,
                 }),
@@ -631,8 +631,8 @@ function es() {
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_FRIEND_ONLINE,
         children: (0, r.jsx)(u.rsf, {
-            label: F.intl.string(F.t["uvIi//"]),
-            description: F.intl.string(F.t.E6O06u),
+            label: F.intl.string(F.t["uvIi/4"]),
+            description: F.intl.string(F.t.E6O06k),
             checked: e,
             onChange: y.N,
         }),
@@ -643,8 +643,8 @@ function el() {
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_USER_RESURRECTION,
         children: (0, r.jsx)(u.rsf, {
-            label: F.intl.string(F.t.Zyn45e),
-            description: F.intl.string(F.t.XdihbG),
+            label: F.intl.string(F.t.Zyn45S),
+            description: F.intl.string(F.t.XdihbD),
             checked: e,
             onChange: h.F,
         }),

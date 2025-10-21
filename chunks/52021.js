@@ -7,9 +7,9 @@ var r = t(951288),
     o = t(49012),
     c = t(775146),
     d = t(619733),
-    u = t(45765),
+    u = t(470658),
     m = t(388032),
-    g = t(491029);
+    g = t(835295);
 function f(e) {
     let { guildId: n } = e,
         t = (0, i.e7)([s.default], () => s.default.getCurrentUser());
@@ -19,7 +19,7 @@ function f(e) {
         actions: (0, r.jsx)(a.zxk, {
             variant: "secondary",
             fullWidth: !0,
-            text: m.intl.string(u.default.f0xbio),
+            text: m.intl.string(u.default.f0xbih),
             icon: a.Gr1,
             iconPosition: "end",
             onClick: () => (0, o.q)({ href: f }),
@@ -41,7 +41,7 @@ function f(e) {
                         }),
                         (0, r.jsx)(a.xvT, {
                             variant: "text-sm/medium",
-                            children: m.intl.string(u.default.n4Tows),
+                            children: m.intl.string(u.default.n4Towj),
                         }),
                     ],
                 }),

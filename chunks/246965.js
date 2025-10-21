@@ -15,7 +15,7 @@ var i = n(990547),
     h = n(474936),
     m = n(981631),
     g = n(388032),
-    E = n(522488);
+    E = n(50953);
 function b(e) {
     switch (e) {
         case h.Si.TIER_0:
@@ -39,9 +39,9 @@ function y(e) {
 function O(e) {
     switch (e) {
         case h.Si.TIER_0:
-            return g.intl.string(g.t.mCG029);
+            return g.intl.string(g.t.mCG023);
         case h.Si.TIER_2:
-            return g.intl.string(g.t["7590PT"]);
+            return g.intl.string(g.t["7590Pe"]);
         default:
             throw Error("Unsupported subscription tier: ".concat(e));
     }

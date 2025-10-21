@@ -3,18 +3,18 @@ var r = n(951288);
 n(647438);
 var i = n(28664),
     l = n(388032),
-    a = n(252475);
+    a = n(41440);
 let o = Math.ceil(2 * Math.PI * 20),
     s = (e) => {
         let { total: t, used: n } = e,
             s = Math.max(0, Math.min(1, n / t)),
             c = "".concat(Math.floor(100 * s), "%");
         return (0, r.jsx)(i.u, {
-            text: l.intl.formatToPlainString(l.t["2eoRMj"], { used: c }),
+            text: l.intl.formatToPlainString(l.t["2eoRMh"], { used: c }),
             children: (0, r.jsxs)("div", {
                 className: a.wrapper,
                 role: "progressbar",
-                "aria-label": l.intl.formatToPlainString(l.t["2eoRMj"], { used: c }),
+                "aria-label": l.intl.formatToPlainString(l.t["2eoRMh"], { used: c }),
                 children: [
                     (0, r.jsxs)("svg", {
                         viewBox: "25 25 50 50",

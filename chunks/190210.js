@@ -54,9 +54,9 @@ var i = n(951288),
     G = n(273031),
     z = n(303628),
     W = n(981631),
-    K = n(761652),
+    q = n(761652),
     Y = n(224837),
-    q = n(200299),
+    K = n(200299),
     X = n(388032),
     J = n(593514),
     Q = n(564355);
@@ -138,7 +138,7 @@ let ei = r.memo(
                 channel: L,
                 type: k,
                 focused: G,
-                onChange: q,
+                onChange: K,
                 onResize: ei,
                 onBlur: es,
                 onFocus: ec,
@@ -188,16 +188,16 @@ let ei = r.memo(
                 canEveryoneSendMessages: eH,
             } = (0, F.TE)(L, k, eL, I),
             eV = !A.dN.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-            eF = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== K.GI,
+            eF = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
             eG = (0, T.Z)(),
             { fontSize: ez } = (0, d.cj)([C.Z], () => ({
                 fontSize: C.Z.fontSize,
                 isSubmitButtonEnabled: C.Z.isSubmitButtonEnabled,
             })),
             eW = (0, d.e7)([M.Z], () => M.Z.isEnabled()),
-            eK = (0, N.NE)(L);
+            eq = (0, N.NE)(L);
         (0, F.hJ)(k, eU);
-        let { eventEmitter: eY, handleEditorSelectionChanged: eq } = (0, F.x2)(ew, p, h),
+        let { eventEmitter: eY, handleEditorSelectionChanged: eK } = (0, F.x2)(ew, p, h),
             eX = r.useCallback(
                 (e) => {
                     let t = (e) => {
@@ -217,12 +217,12 @@ let ei = r.memo(
                                 ? eS
                                 : e.value.length > 0
                                   ? e.value.slice(0, 80)
-                                  : X.intl.string(X.t["7Xm5QE"]);
+                                  : X.intl.string(X.t["7Xm5QI"]);
                     if (null == eP)
                         return ed(
                             ee($({}, e), {
                                 announcementSendOptions: {
-                                    createThread: eK && eZ,
+                                    createThread: eq && eZ,
                                     threadName: i,
                                     publish: eI,
                                 },
@@ -263,7 +263,7 @@ let ei = r.memo(
                             ee($({}, e), {
                                 components: n,
                                 announcementSendOptions: {
-                                    createThread: eK && eZ,
+                                    createThread: eq && eZ,
                                     threadName: i,
                                     publish: eI,
                                 },
@@ -271,7 +271,7 @@ let ei = r.memo(
                         ).then(t)
                     );
                 },
-                [ed, eS, eP, L.id, eZ, eI, eK],
+                [ed, eS, eP, L.id, eZ, eI, eq],
             ),
             { submit: eJ, handleSubmit: eQ } = (0, F.bL)(eX, k, ew, eR, L.id),
             { autocompleteRef: e$, handleMaybeShowAutocomplete: e0, handleHideAutocomplete: e1 } = (0, F.jx)(),
@@ -413,7 +413,7 @@ let ei = r.memo(
                                                             onBlur: () => ts(!1),
                                                             maxLength: 140,
                                                             className: J.titleInput,
-                                                            placeholder: X.intl.string(X.t.Z8fYjI),
+                                                            placeholder: X.intl.string(X.t.Z8fYjO),
                                                             value: eS,
                                                             onChange: (e) => (0, O.c)(L.id, { title: e.target.value }),
                                                         }),
@@ -443,7 +443,7 @@ let ei = r.memo(
                                                             maxCharacterCount: null != em ? em : eG,
                                                             allowNewLines: !0,
                                                             "aria-describedby": eb,
-                                                            onChange: q,
+                                                            onChange: K,
                                                             onResize: e8,
                                                             onBlur: es,
                                                             onFocus: ec,
@@ -452,7 +452,7 @@ let ei = r.memo(
                                                             onTab: e4,
                                                             onEnter: e7,
                                                             onMoveSelection: e6,
-                                                            onSelectionChanged: eq,
+                                                            onSelectionChanged: eK,
                                                             onMaybeShowAutocomplete: e0,
                                                             onHideAutocomplete: e1,
                                                             promptToUpload: ep,
@@ -510,7 +510,7 @@ let ei = r.memo(
                                                 renderPopout: () =>
                                                     (0, i.jsx)(er, {
                                                         channelId: L.id,
-                                                        canCreateThread: eK,
+                                                        canCreateThread: eq,
                                                     }),
                                                 shouldShow: th,
                                                 autoInvert: !0,
@@ -532,7 +532,7 @@ let ei = r.memo(
                                                             },
                                                             disabled: 0 === p.length && 0 === eS.length,
                                                             size: "sm",
-                                                            "aria-label": X.intl.string(X.t.TXNS7e),
+                                                            "aria-label": X.intl.string(X.t.TXNS7S),
                                                             innerClassName: J.sendButton,
                                                             text: (0, i.jsxs)("div", {
                                                                 className: J.sendButtonContents,
@@ -540,7 +540,7 @@ let ei = r.memo(
                                                                     (0, i.jsx)(f.Text, {
                                                                         variant: "text-sm/semibold",
                                                                         color: "always-white",
-                                                                        children: X.intl.string(X.t.TXNS7e),
+                                                                        children: X.intl.string(X.t.TXNS7S),
                                                                     }),
                                                                     (0, i.jsxs)("div", {
                                                                         className: J.sendButtonIcons,
@@ -549,7 +549,7 @@ let ei = r.memo(
                                                                                 size: "xs",
                                                                                 color: "white",
                                                                             }),
-                                                                            eK && eZ
+                                                                            eq && eZ
                                                                                 ? (0, i.jsx)(f.or_, {
                                                                                       size: "xxs",
                                                                                       color: "white",
@@ -586,7 +586,7 @@ let ei = r.memo(
                                 onSendSticker: () => {},
                                 onVisibilityChange: ti,
                                 editorHeight: e3,
-                                setValue: (e, t) => (null == q ? void 0 : q(null, e, t)),
+                                setValue: (e, t) => (null == K ? void 0 : K(null, e, t)),
                                 position: e_,
                             }),
                             ev,
@@ -619,14 +619,14 @@ function er(e) {
         o = null == (t = null == a ? void 0 : a.createThread) || t,
         s = null == (n = null == a ? void 0 : a.publish) || n;
     return (0, i.jsxs)(f.v2r, {
-        "aria-label": X.intl.string(X.t["9WnJys"]),
+        "aria-label": X.intl.string(X.t["9WnJyo"]),
         navId: "send-announcement-options",
         onClose: W.dG4,
         onSelect: W.dG4,
         children: [
             (0, i.jsx)(f.S89, {
                 id: "create-thread",
-                label: X.intl.string(X.t.rBIGBA),
+                label: X.intl.string(X.t.rBIGBL),
                 checked: l && o,
                 disabled: !l,
                 action: () => {
@@ -635,7 +635,7 @@ function er(e) {
             }),
             (0, i.jsx)(f.S89, {
                 id: "send-and-publish",
-                label: X.intl.string(X.t["MFGE5+"]),
+                label: X.intl.string(X.t.MFGE51),
                 checked: s,
                 action: () => {
                     (0, O.c)(r, { publish: !s });
@@ -674,14 +674,14 @@ function el(e) {
               children: [
                   (0, i.jsx)("img", {
                       src: l,
-                      alt: X.intl.string(X.t["2ePvR0"]),
+                      alt: X.intl.string(X.t["2ePvR8"]),
                       className: J.heroImage,
                   }),
                   o
                       ? (0, i.jsx)(E.ZP, {
                             className: J.heroOverlay,
                             children: (0, i.jsx)(G.Z, {
-                                tooltip: X.intl.string(X.t.VjC219),
+                                tooltip: X.intl.string(X.t.VjC21x),
                                 onClick: n,
                                 dangerous: !0,
                                 children: (0, i.jsx)(f.XHJ, {}),
@@ -694,7 +694,7 @@ function el(e) {
 function ea(e) {
     let { channel: t } = e;
     return (0, i.jsx)(P.Z, {
-        "aria-label": X.intl.string(X.t["/IBYAg"]),
+        "aria-label": X.intl.string(X.t["/IBYAq"]),
         className: J.attachButton,
         size: "icon",
         color: "transparent",
@@ -744,7 +744,7 @@ function eo(e) {
         className: J.heroImageButton,
         children: (0, i.jsx)(h.u, {
             asContainer: !0,
-            text: X.intl.string(X.t["/IBYAg"]),
+            text: X.intl.string(X.t["/IBYAq"]),
             position: "top",
             children: (0, i.jsxs)(f.P3F, {
                 className: J.heroImageButton,
@@ -757,8 +757,8 @@ function eo(e) {
                         onChange: o,
                         "aria-hidden": !0,
                         tabIndex: -1,
-                        maxFileSizeBytes: q.B,
-                        onFileSizeError: () => (0, I.Z)(q.B),
+                        maxFileSizeBytes: K.B,
+                        onFileSizeError: () => (0, I.Z)(K.B),
                     }),
                     (0, i.jsx)(f.FmF, {
                         size: "md",

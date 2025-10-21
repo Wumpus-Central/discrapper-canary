@@ -12,7 +12,7 @@ var r = n(442837),
     p = n(954313),
     h = n(688641),
     f = n(388032),
-    m = n(167487);
+    m = n(837815);
 function g(e) {
     let { channelId: t } = e,
         g = (0, r.e7)([s.Z], () => s.Z.getChannel(t), [t]),
@@ -34,14 +34,14 @@ function g(e) {
                               width: 20,
                           }),
                           color: l.Z.unsafe_rawColors.GREEN_360.css,
-                          title: f.intl.formatToPlainString(y(e) ? f.t["1vGXqK"] : f.t.xMJylZ, { eventName: e.name }),
-                          description: f.intl.formatToPlainString(f.t.PTebCQ, {
+                          title: f.intl.formatToPlainString(y(e) ? f.t["1vGXqM"] : f.t.xMJyla, { eventName: e.name }),
+                          description: f.intl.formatToPlainString(f.t.PTebCR, {
                               startTime: (0, p.ub)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
                               y(e)
                                   ? (0, a.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e("84722"), n.e("1431")]).then(
+                                        let { default: t } = await Promise.all([n.e("84722"), n.e("51885")]).then(
                                             n.bind(n, 296864),
                                         );
                                         return (n) => {

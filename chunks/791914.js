@@ -40,13 +40,13 @@ function v(e) {
                         className: y.inboxTitle,
                         variant: "text-lg/semibold",
                         color: "interactive-active",
-                        children: O.intl.string(O.t.GSmTKC),
+                        children: O.intl.string(O.t.GSmTKJ),
                     }),
                     (0, r.jsxs)(o.kL8, {
                         className: y.controls,
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
-                        "aria-label": O.intl.string(O.t["8k+6QU"]),
+                        "aria-label": O.intl.string(O.t["8k+6QY"]),
                         children: [(0, r.jsx)(j, { tab: t }), (0, r.jsx)(g.Z, { closePopout: m })],
                     }),
                 ],
@@ -62,10 +62,10 @@ function v(e) {
                     children: [
                         (0, r.jsxs)(o.njP.Item, {
                             id: l.X.FOR_YOU,
-                            "aria-label": O.intl.string(O.t["En+D+v"]),
+                            "aria-label": O.intl.string(O.t["En+D+u"]),
                             className: y.tab,
                             children: [
-                                O.intl.string(O.t["En+D+v"]),
+                                O.intl.string(O.t["En+D+u"]),
                                 (null == h ? void 0 : h.badgeForYou)
                                     ? (0, r.jsx)(o.fWl, {
                                           color: s.Z.STATUS_DANGER,
@@ -77,13 +77,13 @@ function v(e) {
                         (0, r.jsx)(o.njP.Item, {
                             id: l.X.UNREADS,
                             className: y.tab,
-                            children: O.intl.string(O.t.sRUdBw),
+                            children: O.intl.string(O.t.sRUdB8),
                         }),
                         (0, r.jsx)(o.njP.Item, {
-                            "aria-label": O.intl.string(O.t["GRZF9/"]),
+                            "aria-label": O.intl.string(O.t.GRZF96),
                             id: l.X.MENTIONS,
                             className: y.tab,
-                            children: O.intl.string(O.t["GRZF9/"]),
+                            children: O.intl.string(O.t.GRZF96),
                         }),
                         x
                             ? (0, r.jsxs)(o.njP.Item, {
@@ -91,7 +91,7 @@ function v(e) {
                                   id: l.X.GAME_INVITES,
                                   className: y.tab,
                                   children: [
-                                      O.intl.string(O.t.apq3cX),
+                                      O.intl.string(O.t.apq3cU),
                                       C > 0
                                           ? (0, r.jsx)(o.fWl, {
                                                 color: s.Z.STATUS_DANGER,
@@ -109,7 +109,7 @@ function v(e) {
                                   children:
                                       0 === E
                                           ? O.intl.string(O.t["2pAkDA"])
-                                          : O.intl.formatToPlainString(O.t.I4fryM, { count: E }),
+                                          : O.intl.formatToPlainString(O.t.I4fryG, { count: E }),
                               })
                             : null,
                         v

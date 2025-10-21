@@ -4,7 +4,7 @@ e(647438);
 var a = e(481060),
     r = e(174767),
     s = e(388032),
-    l = e(607582);
+    l = e(33108);
 function o(t) {
     let { transitionState: n, onClose: e, onDelete: o } = t;
     async function d() {
@@ -26,7 +26,7 @@ function o(t) {
                                 className: l.__invalid_title,
                                 variant: "heading-lg/semibold",
                                 color: "header-primary",
-                                children: s.intl.string(s.t.P8nDIC),
+                                children: s.intl.string(s.t.P8nDIN),
                             }),
                             (0, i.jsx)(a.olH, { onClick: e }),
                         ],
@@ -35,7 +35,7 @@ function o(t) {
                         variant: "text-md/normal",
                         color: "text-default",
                         className: l.__invalid_body,
-                        children: s.intl.string(s.t.fwFcj4),
+                        children: s.intl.string(s.t.fwFcj5),
                     }),
                 ],
             }),
@@ -45,12 +45,12 @@ function o(t) {
                     children: [
                         (0, i.jsx)(a.Button, {
                             variant: "critical-primary",
-                            text: s.intl.string(s.t["5I4fSk"]),
+                            text: s.intl.string(s.t["5I4fSm"]),
                             onClick: d,
                         }),
                         (0, i.jsx)(a.Button, {
                             variant: "secondary",
-                            text: s.intl.string(s.t["ETE/oK"]),
+                            text: s.intl.string(s.t["ETE/oC"]),
                             onClick: e,
                         }),
                     ],

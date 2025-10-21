@@ -21,9 +21,9 @@ var i = n(951288),
     E = n(594174),
     x = n(979651),
     S = n(362446),
-    Z = n(518084),
-    j = n(981631),
-    C = n(388032),
+    C = n(518084),
+    Z = n(981631),
+    j = n(388032),
     I = n(361979),
     P = n(890332);
 function w(e, t, n) {
@@ -39,7 +39,7 @@ function w(e, t, n) {
         e
     );
 }
-function N(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -55,7 +55,7 @@ function N(e) {
     }
     return e;
 }
-function T(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,9 +81,9 @@ class D extends r.PureComponent {
         let { guild: t } = this.props,
             n = (0, h.F6)(e, E.default, v.Z),
             r = null != t ? "".concat(n, " / ").concat(t.name) : n,
-            s = null != t ? t.id : j.ME;
+            s = null != t ? t.id : Z.ME;
         return (0, i.jsx)(l.rU, {
-            to: j.Z5c.CHANNEL(s),
+            to: Z.Z5c.CHANNEL(s),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
             },
@@ -109,9 +109,9 @@ class D extends r.PureComponent {
         } = this.props;
         return null == s
             ? null
-            : (0, i.jsx)(Z.ZP.Bar, {
+            : (0, i.jsx)(C.ZP.Bar, {
                   className: o()(e, I.controls, { [I.unpinned]: !n }),
-                  children: (0, i.jsxs)(Z.ZP.Content, {
+                  children: (0, i.jsxs)(C.ZP.Content, {
                       className: o()(t, I.content),
                       dynamicSize: !0,
                       children: [
@@ -124,7 +124,7 @@ class D extends r.PureComponent {
                                   children: (e) =>
                                       (0, i.jsx)(
                                           c.P3F,
-                                          T(N({}, e), {
+                                          N(T({}, e), {
                                               innerRef: this.rtcConnectionStatusRef,
                                               children: (0, i.jsx)(_.Z, {
                                                   channelId: s.id,
@@ -142,20 +142,20 @@ class D extends r.PureComponent {
                               grow: 0,
                               children: [
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: h ? C.intl.string(C.t.YqAjX1) : C.intl.string(C.t["w4m94+"]),
+                                      tooltipText: h ? j.intl.string(j.t.YqAjXy) : j.intl.string(j.t.w4m945),
                                       icon: h ? c.nRN : c.S6n,
                                       iconForeground: h ? I.strikethrough : null,
                                       onClick: this.handleToggleSelfMute,
                                   }),
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: p ? C.intl.string(C.t["2US87+"]) : C.intl.string(C.t.wjcRFR),
+                                      tooltipText: p ? j.intl.string(j.t["2US872"]) : j.intl.string(j.t.wjcRFX),
                                       icon: p ? c.wE8 : c.VWR,
                                       onClick: this.handleToggleSelfDeaf,
                                       iconForeground: p ? I.strikethrough : null,
                                   }),
                                   null == r &&
                                       (0, i.jsx)(g.Z, {
-                                          tooltipText: C.intl.string(C.t["6vrfgo"]),
+                                          tooltipText: j.intl.string(j.t["6vrfgt"]),
                                           onClick: this.handleDisconnect,
                                           icon: c.gkL,
                                       }),
@@ -221,7 +221,7 @@ function k(e) {
         [u, p, h] = (0, a.Wu)([S.Z], () => [S.Z.getConnectionState(n), S.Z.getLastPing(n), S.Z.getQuality(n)]);
     return (0, i.jsx)(
         D,
-        T(N({}, s), {
+        N(T({}, s), {
             context: t,
             lobbyId: n,
             channel: r,

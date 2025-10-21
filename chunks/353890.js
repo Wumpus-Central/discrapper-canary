@@ -50,7 +50,7 @@ function x() {
                 className: h.channelName,
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: f.intl.string(f.t["Qj6O9/"]),
+                children: f.intl.string(f.t.Qj6O91),
             }),
         ],
     });

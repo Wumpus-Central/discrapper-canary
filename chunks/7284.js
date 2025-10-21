@@ -8,40 +8,40 @@ var r = n(120356),
     o = n(526167),
     s = n(594928),
     l = n(181430),
-    c = n(62222),
-    u = n(677970);
+    c = n(592186),
+    u = n(806539);
 let d = {
-        name: c.default.ZEL6m5,
+        name: c.default.ZEL6mz,
         className: "",
     },
     f = {
         [a.C.DEFAULT]: d,
         [a.C.CHERRY_BOMB]: {
-            name: c.default.rN7cub,
+            name: c.default.rN7cuX,
             className: u.cherryBomb,
         },
         [a.C.CHICLE]: {
-            name: c.default.CbHHnJ,
+            name: c.default.CbHHnL,
             className: u.chicle,
         },
         [a.C.MUSEO_MODERNO]: {
-            name: c.default.iEcEKC,
+            name: c.default.iEcEKO,
             className: u.museoModerno,
         },
         [a.C.NEO_CASTEL]: {
-            name: c.default.DL7jLS,
+            name: c.default.DL7jLZ,
             className: u.neoCastel,
         },
         [a.C.PIXELIFY]: {
-            name: c.default.jq4aRk,
+            name: c.default.jq4aRp,
             className: u.pixelify,
         },
         [a.C.SINISTRE]: {
-            name: c.default.jV9DNz,
+            name: c.default.jV9DN4,
             className: u.sinistre,
         },
         [a.C.ZILLA_SLAB]: {
-            name: c.default.KMR8ra,
+            name: c.default.KMR8rT,
             className: u.zillaSlab,
         },
     };

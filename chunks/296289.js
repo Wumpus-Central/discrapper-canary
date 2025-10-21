@@ -4,9 +4,9 @@ var r = n(951288),
     a = n(625651),
     i = n(905551),
     l = n(162190),
-    c = n(45765),
+    c = n(470658),
     s = n(388032),
-    u = n(715909);
+    u = n(924889);
 function d(e) {
     var { guildId: t, gameInstance: n } = e,
         d = (function (e, t) {
@@ -71,8 +71,8 @@ function d(e) {
                         className: u.image,
                     }),
                 }),
-                warningText: s.intl.string(c.default.ukbS3N),
-                acknowledgementText: s.intl.string(c.default.xjRtFx),
+                warningText: s.intl.string(c.default.ukbS3E),
+                acknowledgementText: s.intl.string(c.default.xjRtF9),
                 isLoading: f,
                 error: b,
                 onDeactivate: () => {

@@ -17,7 +17,7 @@ var r = n(951288),
     p = n(157018),
     f = n(828656),
     h = n(388032),
-    b = n(28742);
+    b = n(172931);
 function x(e) {
     let {
             guildId: t,
@@ -89,7 +89,7 @@ function x(e) {
                         (0, r.jsx)(o.P3F, {
                             className: b.cardActionButton,
                             onClick: j ? void 0 : p,
-                            "aria-label": h.intl.string(h.t.Eoo8h4),
+                            "aria-label": h.intl.string(h.t.Eoo8h6),
                             "aria-disabled": j,
                             children: (0, r.jsx)(o.vdY, {
                                 size: "xs",

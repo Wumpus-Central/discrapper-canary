@@ -21,15 +21,15 @@ var r = n(951288),
     f = n(370595),
     R = n(50493),
     S = n(981631),
-    p = n(152540),
-    C = n(447334);
+    p = n(87819),
+    C = n(125134);
 function D(e) {
     var t, n;
-    let { userId: i, guildId: D, location: L, className: U, onNavigate: M } = e,
-        x = l.useRef(null),
-        b = (0, o.e7)([m.ZP], () => m.ZP.getGuildSidebarState(D), [D]),
+    let { userId: i, guildId: D, location: U, className: L, onNavigate: M } = e,
+        b = l.useRef(null),
+        x = (0, o.e7)([m.ZP], () => m.ZP.getGuildSidebarState(D), [D]),
         v = l.useRef(0),
-        [P, j] = l.useState(null != (t = null == b ? void 0 : b.details.additionalSearchQuery) ? t : {}),
+        [P, j] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
         y = (0, O.z0)(i, D, {
             addtionalQuery: P,
             shouldDispatch: !0,
@@ -37,10 +37,10 @@ function D(e) {
         G = (0, o.e7)([N.default], () => N.default.getUser(i), [i]),
         k = (0, o.e7)([g.ZP], () => g.ZP.getMember(D, i), [D, i]);
     (0, c.Ng)(() => {
-        let e = null == b ? void 0 : b.details.scrollOffset;
+        let e = null == x ? void 0 : x.details.scrollOffset;
         if (null != e) {
             var t;
-            null == (t = x.current) ||
+            null == (t = b.current) ||
                 t.scrollTo({
                     to: e,
                     animate: !1,
@@ -49,21 +49,21 @@ function D(e) {
     });
     let F = l.useCallback(
             (e) => {
-                null != b &&
+                null != x &&
                     ((v.current = e.target.scrollTop),
-                    (0, h.r)(D, i, b.baseChannelId, {
+                    (0, h.r)(D, i, x.baseChannelId, {
                         modViewPanel: R.k.MESSAGE_HISTORY,
                         additionalSearchQuery: P,
                         scrollOffset: v.current,
                     }));
             },
-            [D, i, b, P],
+            [D, i, x, P],
         ),
         w = (0, a.throttle)(F, 300),
         z = l.useCallback(
             (e) => {
                 var t, n;
-                if (null == b) return;
+                if (null == x) return;
                 let r =
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -105,13 +105,13 @@ function D(e) {
                           }),
                     t);
                 j(r),
-                    (0, h.r)(D, i, b.baseChannelId, {
+                    (0, h.r)(D, i, x.baseChannelId, {
                         modViewPanel: R.k.MESSAGE_HISTORY,
                         additionalSearchQuery: r,
                         scrollOffset: v.current,
                     });
             },
-            [D, i, b, P],
+            [D, i, x, P],
         ),
         V = null != (n = null == P ? void 0 : P.offset) ? n : 0,
         Z = (0, o.e7)([d.Z], () => {
@@ -171,7 +171,7 @@ function D(e) {
     return null == G || null == k || null == B
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(p.container, U),
+              className: s()(p.container, L),
               children: [
                   (0, r.jsx)(f.Z, {
                       guildId: D,
@@ -180,7 +180,7 @@ function D(e) {
                   }),
                   (0, r.jsx)(u.Den, {
                       className: C.innerContainer,
-                      ref: x,
+                      ref: b,
                       onScroll: w,
                       children: (0, r.jsx)(T.Z, {
                           messages: Z,

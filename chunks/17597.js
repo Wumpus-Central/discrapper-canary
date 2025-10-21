@@ -16,9 +16,9 @@ var a = n(951288),
     g = n(352138),
     b = n(629235),
     v = n(981631),
-    j = n(131022),
+    j = n(847678),
     _ = n(388032),
-    y = n(450192),
+    y = n(70402),
     C = n(736056);
 let S = function (e) {
     let { transitionState: t, entryPoint: n, onClose: S, onComplete: E, dismissable: T, classificationId: O } = e,
@@ -66,9 +66,9 @@ let S = function (e) {
                 type: "image",
                 src: C.Z,
             },
-            title: _.intl.string(_.t.JHNunp),
+            title: _.intl.string(_.t.JHNunj),
             subtitle: D
-                ? _.intl.string(j.default["1/6wtb"])
+                ? _.intl.string(j.default["1/6wta"])
                 : _.intl.format(j.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
                           x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
@@ -78,7 +78,7 @@ let S = function (e) {
             actionBarInput: D
                 ? (0, a.jsx)(s.Text, {
                       variant: "text-xs/medium",
-                      children: _.intl.format(j.default.htWh1N, {
+                      children: _.intl.format(j.default.htWh1G, {
                           handleOnHelpUrlHook: () => {
                               x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
                                   (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
@@ -88,7 +88,7 @@ let S = function (e) {
                 : (0, a.jsx)(s.Avr, {
                       size: "sm",
                       textVariant: "text-sm/medium",
-                      text: _.intl.string(_.t["2jxGen"]),
+                      text: _.intl.string(_.t["2jxGer"]),
                       onClick: () => {
                           (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT),
                               (0, u.R)("age_verification_get_started_modal");
@@ -118,7 +118,7 @@ let S = function (e) {
                             (0, a.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: _.intl.string(j.default.ar3a3t),
+                                children: _.intl.string(j.default.ar3a3q),
                             }),
                         ],
                     }),
@@ -131,12 +131,12 @@ let S = function (e) {
                                   (0, a.jsx)(s.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-secondary",
-                                      children: _.intl.string(j.default.cR6339),
+                                      children: _.intl.string(j.default.cR6336),
                                   }),
                                   (0, a.jsx)(s.Button, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: _.intl.string(j.default.hDvmYG),
+                                      text: _.intl.string(j.default.hDvmYP),
                                       onClick: () => {
                                           (0, g.Jh)();
                                       },

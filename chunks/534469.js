@@ -47,10 +47,10 @@ var i = n(951288),
     G = n(737243),
     z = n(614584),
     W = n(295790),
-    K = n(959517),
+    q = n(959517),
     Y = n(981631),
-    q = n(388032),
-    X = n(5898);
+    K = n(388032),
+    X = n(360514);
 function J() {
     return (J =
         Object.assign ||
@@ -146,7 +146,7 @@ function en(e) {
             })((0, c.JA)(null != (t = e.id) ? t : "")),
         ),
         h = (0, u.e7)([_.Z], () => _.Z.getMessageByReference(l)),
-        { popouts: f, setPopout: m } = (0, L.Z)(r.id, K.d$),
+        { popouts: f, setPopout: m } = (0, L.Z)(r.id, q.d$),
         g = (0, T.ZP)(r),
         b = (0, w.iG)(r),
         C = (0, w.Gx)(r);
@@ -203,7 +203,7 @@ function ei(e) {
         { onFocus: I } = S,
         N = ee(S, ["onFocus"]),
         { isFocused: k, handleFocus: B, handleBlur: H } = (0, M.bb)(I),
-        { popouts: G, selected: J, setPopout: et } = (0, L.Z)(o.id, K.d$),
+        { popouts: G, selected: J, setPopout: et } = (0, L.Z)(o.id, q.d$),
         en = x.RS.useSetting(),
         ei = x.NA.useSetting(),
         er = (0, u.e7)([_.Z], () => _.Z.getMessageByReference(E)),
@@ -249,8 +249,8 @@ function ei(e) {
             (0, i.jsx)(d.P3F, {
                 className: X.jump,
                 onClick: e_,
-                "aria-label": q.intl.string(q.t.k5WiPT),
-                children: q.intl.string(q.t.k5WiPT),
+                "aria-label": K.intl.string(K.t.k5WiPf),
+                children: K.intl.string(K.t.k5WiPf),
             }),
             (0, i.jsx)(
                 A.Z,
@@ -337,7 +337,7 @@ let er = r.memo(function (e) {
         ep = x.RS.useSetting(),
         eh = x.NA.useSetting(),
         ef = (0, u.e7)([_.Z], () => _.Z.getMessageByReference(eo)),
-        { popouts: em, selected: eg, setPopout: eb } = (0, L.Z)(v.id, K.d$),
+        { popouts: em, selected: eg, setPopout: eb } = (0, L.Z)(v.id, q.d$),
         eC = (0, M.qo)(v, J, eb),
         ey = (0, M.Go)(v, J),
         {
@@ -403,13 +403,13 @@ let er = r.memo(function (e) {
         }),
         ez = (0, w.iG)(v, el),
         eW = (0, w.Gx)(v),
-        eK = (0, u.e7)([h.Z], () => h.Z.getMessage(I), [I]),
+        eq = (0, u.e7)([h.Z], () => h.Z.getMessage(I), [I]),
         eY = (0, k.Z)({
             message: v,
             channel: J,
         }),
-        eq = r.useRef(window),
-        eX = null != eK,
+        eK = r.useRef(window),
+        eX = null != eq,
         eJ = r.useMemo(() => Object.values(em).some((e) => e), [em]);
     l = v.type === Y.uaV.CUSTOM_GIFT ? "" : !eT && eX ? (0, B.Z)(e, ek) : (0, F.Z)(e, ek, eT);
     let eQ = v.id === el,
@@ -433,7 +433,7 @@ let er = r.memo(function (e) {
                         A.Z,
                         $(Q({}, eu), {
                             "aria-setsize": -1,
-                            "aria-roledescription": q.intl.string(q.t.BAB0yM),
+                            "aria-roledescription": K.intl.string(K.t.BAB0yK),
                             "aria-labelledby": ez,
                             "aria-describedby": eW,
                             onFocus: eI,
@@ -500,7 +500,7 @@ let er = r.memo(function (e) {
                                           setPopout: eb,
                                           messagePopouts: em,
                                           isFocused: eO || ej,
-                                          messageWindow: eq.current,
+                                          messageWindow: eK.current,
                                       })
                                     : void 0,
                             childrenSystemMessage: (0, W.Z)(e),
@@ -513,7 +513,7 @@ let er = r.memo(function (e) {
                             messageRef: (e) => {
                                 var t, n;
                                 (eY.current = e),
-                                    (eq.current =
+                                    (eK.current =
                                         null !=
                                         (n = null == e || null == (t = e.ownerDocument) ? void 0 : t.defaultView)
                                             ? n

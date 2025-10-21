@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(441319),
     g = n(921944),
     E = n(388032),
-    b = n(376930);
+    b = n(63224);
 function y(e, t, n) {
     return (
         t in e
@@ -69,15 +69,15 @@ function I(e, t) {
     );
 }
 let T = () => [
-        E.intl.string(E.t.EgWTY2),
-        E.intl.string(E.t.umBn5e),
-        E.intl.string(E.t.dG1wDw),
-        E.intl.string(E.t.SesI4e),
-        E.intl.string(E.t.RnMLvr),
+        E.intl.string(E.t["EgWTY+"]),
+        E.intl.string(E.t.umBn5f),
+        E.intl.string(E.t.dG1wD1),
+        E.intl.string(E.t.SesI4S),
+        E.intl.string(E.t.RnMLvl),
     ],
     S = () => {
         var e;
-        return null != (e = l().sample(T())) ? e : E.intl.string(E.t.EgWTY2);
+        return null != (e = l().sample(T())) ? e : E.intl.string(E.t["EgWTY+"]);
     },
     A = (e, t) => {
         let [n, r] = (0, _.US)([c.z.HALLOWEEN_APP_ICONS_TRICK_ICON_WEB_BADGE]),

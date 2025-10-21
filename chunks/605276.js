@@ -16,7 +16,7 @@ var l = t(951288),
     x = t(825334),
     b = t(981631),
     j = t(388032),
-    C = t(462188);
+    C = t(31499);
 let v = r.memo(function (e) {
         let { guild: n } = e,
             { guildProfile: t, fetchGuildProfile: a } = (0, o.u)(n.id);
@@ -117,7 +117,7 @@ let v = r.memo(function (e) {
                               className: C.sidebarCardHeader,
                               variant: "heading-md/bold",
                               color: "header-primary",
-                              children: j.intl.string(j.t.xwY4LS),
+                              children: j.intl.string(j.t.xwY4La),
                           }),
                           (0, l.jsx)("div", {
                               className: C.resourceChannelsList,

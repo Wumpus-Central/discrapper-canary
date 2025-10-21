@@ -17,7 +17,7 @@ let c = (e) => {
                   (0, r.jsx)(i.Heading, {
                       className: o.header,
                       variant: "heading-sm/semibold",
-                      children: s.intl.string(s.t["InbJ8/"]),
+                      children: s.intl.string(s.t.InbJ8x),
                   }),
                   (0, r.jsxs)("div", {
                       className: o.guildContainer,

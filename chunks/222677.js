@@ -101,9 +101,9 @@ function S(e, t, n) {
         switch (a && a.code) {
             case E.evJ.TOO_MANY_REACTIONS:
                 o.Z.show({
-                    title: b.intl.string(b.t.lFddsb),
-                    body: b.intl.string(b.t.h27eIi),
-                    confirmText: b.intl.string(b.t.BddRzc),
+                    title: b.intl.string(b.t.lFddsR),
+                    body: b.intl.string(b.t.h27eIm),
+                    confirmText: b.intl.string(b.t.BddRzS),
                 });
                 break;
             case E.evJ.REACTION_BLOCKED:
@@ -182,9 +182,9 @@ async function P(e, t, n) {
         p = null != u && !!u.isRetry;
     if (!p && k(e, t, n, f))
         return void o.Z.show({
-            title: b.intl.string(b.t["uaUU/v"]),
-            body: b.intl.string(b.t.psMorq),
-            confirmText: b.intl.string(b.t["NX+WJC"]),
+            title: b.intl.string(b.t["uaUU/g"]),
+            body: b.intl.string(b.t.psMorl),
+            confirmText: b.intl.string(b.t["NX+WJN"]),
         });
     let h = await M(n, f);
     return (
@@ -228,13 +228,13 @@ async function P(e, t, n) {
                     );
                 }
                 f
-                    ? (i.uv.announce(b.intl.formatToPlainString(b.t["RJlG+f"], { name: n.name })),
+                    ? (i.uv.announce(b.intl.formatToPlainString(b.t["RJlG+R"], { name: n.name })),
                       g.Z.triggerFullscreenAnimation({
                           channelId: e,
                           messageId: t,
                           emoji: I(O({}, n), { animated: !1 }),
                       }))
-                    : i.uv.announce(b.intl.formatToPlainString(b.t.ol4acH, { name: n.name }));
+                    : i.uv.announce(b.intl.formatToPlainString(b.t.ol4acF, { name: n.name }));
             })
             .catch((r) => {
                 S(
@@ -248,8 +248,8 @@ async function P(e, t, n) {
                 ) &&
                     (A("MESSAGE_REACTION_REMOVE", e, t, n, { burst: f }),
                     f
-                        ? i.uv.announce(b.intl.formatToPlainString(b.t["fJeu8/"], { name: n.name }))
-                        : i.uv.announce(b.intl.formatToPlainString(b.t.UUn5V1, { name: n.name })));
+                        ? i.uv.announce(b.intl.formatToPlainString(b.t.fJeu87, { name: n.name }))
+                        : i.uv.announce(b.intl.formatToPlainString(b.t["UUn5V+"], { name: n.name })));
             })
     );
 }
@@ -319,7 +319,7 @@ async function x(e) {
             .then(() => {
                 (null == u ? void 0 : u.burst)
                     ? i.uv.announce(b.intl.formatToPlainString(b.t["3l9f6u"], { name: a.name }))
-                    : i.uv.announce(b.intl.formatToPlainString(b.t["DQxi+/"], { name: a.name }));
+                    : i.uv.announce(b.intl.formatToPlainString(b.t["DQxi+7"], { name: a.name }));
             })
             .catch(async (e) => {
                 if (
@@ -347,8 +347,8 @@ async function x(e) {
                         colors: e,
                     }),
                         (null == u ? void 0 : u.burst)
-                            ? i.uv.announce(b.intl.formatToPlainString(b.t.OamVbW, { name: a.name }))
-                            : i.uv.announce(b.intl.formatToPlainString(b.t["tD9+b2"], { name: a.name }));
+                            ? i.uv.announce(b.intl.formatToPlainString(b.t.OamVbV, { name: a.name }))
+                            : i.uv.announce(b.intl.formatToPlainString(b.t["tD9+b+"], { name: a.name }));
                 }
             });
 }

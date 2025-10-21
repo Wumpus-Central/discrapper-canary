@@ -1,4 +1,4 @@
-r.d(t, { default: () => E }), r(388685);
+r.d(t, { default: () => y }), r(388685);
 var n = r(951288),
     a = r(647438),
     i = r(120356),
@@ -19,14 +19,14 @@ var n = r(951288),
     j = r(931331),
     f = r(55935),
     v = r(63063),
-    R = r(272008),
-    H = r(497505),
+    H = r(272008),
+    R = r(497505),
     T = r(502288),
     k = r(981631),
     A = r(675654),
     I = r(474936),
     S = r(388032),
-    B = r(77397),
+    B = r(192975),
     P = r(851750),
     L = r(946790),
     M = r(593639);
@@ -41,7 +41,7 @@ function b(e) {
         [I, S] = a.useState({ state: "loading" });
     a.useEffect(() => {
         k ||
-            (0, R.QB)(x.id, H.y$.CROSS_PLATFORM, g)
+            (0, H.QB)(x.id, R.y$.CROSS_PLATFORM, g)
                 .then((e) => {
                     if ((null == e ? void 0 : e.claimedAt) != null)
                         return void S({
@@ -87,13 +87,13 @@ function b(e) {
                                 onClose: h,
                             })
                           : M
-                            ? (0, n.jsx)(y, {
+                            ? (0, n.jsx)(F, {
                                   duration: (0, T.kb)(
                                       null != (c = null == (r = I.entitlements) ? void 0 : r.items) ? c : [],
                                   ),
                                   onClose: h,
                               })
-                            : (0, n.jsx)(F, {
+                            : (0, n.jsx)(Z, {
                                   duration: (0, T.kb)(
                                       null != (m = null == (i = I.entitlements) ? void 0 : i.items) ? m : [],
                                   ),
@@ -113,7 +113,7 @@ function b(e) {
 }
 function w(e) {
     let { onClose: t } = e,
-        r = S.intl.string(S.t.PbaUtr);
+        r = S.intl.string(S.t.PbaUtv);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(d.xBx, {
@@ -124,7 +124,7 @@ function w(e) {
                     (0, n.jsx)(d.Heading, {
                         className: B.errorTitle,
                         variant: "heading-xl/medium",
-                        children: S.intl.string(S.t["UleS9/"]),
+                        children: S.intl.string(S.t.UleS91),
                     }),
                     (0, n.jsx)(d.olH, {
                         "data-migration-pending": !0,
@@ -146,14 +146,14 @@ function w(e) {
                 className: B.errorModalFooter,
                 children: (0, n.jsx)(d.Button, {
                     variant: "primary",
-                    text: S.intl.string(S.t.cpT0Cg),
+                    text: S.intl.string(S.t.cpT0Cq),
                     onClick: t,
                 }),
             }),
         ],
     });
 }
-function y(e) {
+function F(e) {
     let { duration: t, onClose: r } = e,
         { theme: i } = (0, d.TCT)(),
         o = (0, C.Z)({ forceFetch: !0 }),
@@ -202,7 +202,7 @@ function y(e) {
                           (0, n.jsx)(d.Text, {
                               variant: "text-md/normal",
                               className: B.text,
-                              children: S.intl.format(S.t.tgc1oq, {
+                              children: S.intl.format(S.t.tgc1ol, {
                                   helpCenterLink: v.Z.getArticleURL(k.BhN.FRACTIONAL_PREMIUM_ABOUT),
                                   duration: t,
                                   expirationDate: s,
@@ -213,7 +213,7 @@ function y(e) {
                               className: B.cta,
                               children: (0, n.jsx)(d.Button, {
                                   variant: "primary",
-                                  text: S.intl.string(S.t["eQX+go"]),
+                                  text: S.intl.string(S.t["eQX+gg"]),
                                   onClick: l,
                               }),
                           }),
@@ -222,7 +222,7 @@ function y(e) {
               ],
           });
 }
-function F(e) {
+function Z(e) {
     let { duration: t, onClose: r } = e,
         i = (0, C.Z)({ forceFetch: !0 }),
         s = (0, m.ZP)(),
@@ -235,8 +235,8 @@ function F(e) {
             children: (0, n.jsx)(d.$jN, { type: d.$jN.Type.SPINNING_CIRCLE }),
         });
     let c = i.isFractionalPremiumActive
-        ? S.intl.string(S.t["1ku8i4"])
-        : S.intl.format(S.t.fI1nLy, {
+        ? S.intl.string(S.t["1ku8i2"])
+        : S.intl.format(S.t.fI1nL2, {
               helpCenterLink: v.Z.getArticleURL(k.BhN.FRACTIONAL_PREMIUM_ABOUT),
               duration: t,
           });
@@ -252,7 +252,7 @@ function F(e) {
                             (0, n.jsx)("img", {
                                 className: B.headerBackground,
                                 src: P,
-                                alt: S.intl.string(S.t["8SsCa2"]),
+                                alt: S.intl.string(S.t["8SsCa3"]),
                             }),
                             (0, n.jsx)(h.Z, { className: B.beta }),
                             (0, n.jsxs)("div", {
@@ -262,7 +262,7 @@ function F(e) {
                                         className: B.rewardAssetContainer,
                                         children: (0, n.jsx)("img", {
                                             src: M,
-                                            alt: S.intl.string(S.t.OhPMam),
+                                            alt: S.intl.string(S.t.OhPMaq),
                                             height: 120,
                                         }),
                                     }),
@@ -284,7 +284,7 @@ function F(e) {
                             (0, n.jsx)(d.Heading, {
                                 variant: "heading-lg/bold",
                                 className: B.heading,
-                                children: S.intl.string(S.t["+PHEo6"]),
+                                children: S.intl.string(S.t["+PHEo+"]),
                             }),
                             (0, n.jsx)(d.Text, {
                                 variant: "text-sm/normal",
@@ -296,7 +296,7 @@ function F(e) {
                                 className: B.cta2,
                                 children: (0, n.jsx)(d.Button, {
                                     variant: "primary",
-                                    text: S.intl.string(S.t.LnsQGR),
+                                    text: S.intl.string(S.t.LnsQGZ),
                                     onClick: l,
                                 }),
                             }),
@@ -306,7 +306,7 @@ function F(e) {
             }),
     });
 }
-function E(e) {
+function y(e) {
     let { quest: t, location: r, onClose: i, transitionState: o } = e,
         s = (0, c.Z)(() => {
             var e;

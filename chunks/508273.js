@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(358595),
     O = n(981631),
     v = n(388032),
-    I = n(69643);
+    I = n(492681);
 let T = 292,
     S = 36,
     A = 48;
@@ -56,7 +56,7 @@ function C(e) {
               className: o()(I.guildInviteContainer, { [I.clickable]: C && p }),
               onClick: L,
               style: M,
-              "aria-label": v.intl.string(v.t.dcl9MT),
+              "aria-label": v.intl.string(v.t.dcl9MQ),
               children: [
                   (0, r.jsxs)("div", {
                       className: I.cardHeightMeasure,
@@ -83,7 +83,7 @@ function C(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 onClick: x,
-                                text: v.intl.string(v.t.xdCLeH),
+                                text: v.intl.string(v.t.xdCLeM),
                             }),
                         })
                       : null,

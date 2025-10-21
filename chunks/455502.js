@@ -41,21 +41,21 @@ function _(e) {
         }, []);
     return "failed" === s
         ? (0, r.jsx)(u.Z, {
-              title: m.intl.string(m.t.PCgG39),
-              subtitle: m.intl.string(m.t.tQpeAw),
-              buttonText: m.intl.string(m.t.dKhVQE),
+              title: m.intl.string(m.t["PCgG3+"]),
+              subtitle: m.intl.string(m.t.tQpeA3),
+              buttonText: m.intl.string(m.t.dKhVQN),
               onButtonClick: E,
           })
         : "succeeded" === s
           ? (0, r.jsx)(u.Z, {
-                title: m.intl.string(m.t.dAfGb2),
-                buttonText: m.intl.string(m.t.uJWIj4),
+                title: m.intl.string(m.t["dAfGb+"]),
+                buttonText: m.intl.string(m.t["uJWIj/"]),
                 onButtonClick: v,
-                image: (0, r.jsx)(l.Om, { alt: m.intl.string(m.t.dAfGb2) }),
+                image: (0, r.jsx)(l.Om, { alt: m.intl.string(m.t["dAfGb+"]) }),
             })
           : (0, r.jsx)(u.Z, {
-                title: m.intl.string(m.t["0c8+5u"]),
-                subtitle: m.intl.string(m.t.ULTCBA),
+                title: m.intl.string(m.t["0c8+5n"]),
+                subtitle: m.intl.string(m.t.ULTCBE),
                 loading: !0,
             });
 }

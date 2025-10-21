@@ -15,7 +15,7 @@ var l = n(120356),
     T = n(908474),
     I = n(467014),
     m = n(388032),
-    g = n(152540);
+    g = n(87819);
 function N() {
     return (0, r.jsxs)("div", {
         className: g.header,
@@ -29,7 +29,7 @@ function N() {
                     }),
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-md/semibold",
-                        children: m.intl.string(m.t.cf5lgo),
+                        children: m.intl.string(m.t.cf5lgh),
                     }),
                 ],
             }),

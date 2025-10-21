@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(481060),
     s = n(871499),
     l = n(388032),
-    c = n(841074);
+    c = n(59213);
 function u(e, t, n) {
     return (
         t in e
@@ -84,7 +84,7 @@ function h(e) {
         s.Z,
         d(
             {
-                label: l.intl.string(l.t.jNqDh4),
+                label: l.intl.string(l.t["jNqDh/"]),
                 iconComponent: (e) => {
                     let { className: n } = e;
                     return (0, r.jsx)(p, {

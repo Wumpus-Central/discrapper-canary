@@ -10,11 +10,11 @@ var l = t(951288),
     u = t(872269),
     m = t(228168),
     p = t(388032),
-    f = t(214906),
-    x = t(74866);
+    f = t(361623),
+    x = t(583140);
 let h = {
         [m.qb.WIDGET_ADDED]: {
-            message: p.intl.string(p.t.fFP1U1),
+            message: p.intl.string(p.t.fFP1Uy),
             icon: (0, l.jsx)(c.dz2, {
                 size: "sm",
                 color: c.TVs.colors.STATUS_POSITIVE.css,
@@ -22,7 +22,7 @@ let h = {
             toast_id: "user_profile_widget_added",
         },
         [m.qb.WIDGET_REMOVED]: {
-            message: p.intl.string(p.t.zzsK7u),
+            message: p.intl.string(p.t.zzsK7h),
             icon: (0, l.jsx)(c.dz2, {
                 size: "sm",
                 color: c.TVs.colors.STATUS_POSITIVE.css,
@@ -39,7 +39,7 @@ let h = {
             type: c.ToastType.FAILURE,
         },
         [m.qb.SOMETHING_WENT_WRONG]: {
-            message: p.intl.string(p.t.F8FvU1),
+            message: p.intl.string(p.t.F8FvUy),
             icon: (0, l.jsx)(c.Uz9, {
                 size: "sm",
                 color: c.TVs.colors.STATUS_DANGER.css,

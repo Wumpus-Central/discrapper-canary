@@ -11,7 +11,7 @@ function u(e) {
     let { channel: t, maxWidth: n } = e,
         u = (0, i.jsx)(o.ZP.Icon, {
             icon: r.Dio,
-            tooltip: c.intl.string(c.t.cpT0Cg),
+            tooltip: c.intl.string(c.t.cpT0Cq),
             onClick: () => l.Z.toggleParticipantsList(t.id, !1),
         });
     return (0, i.jsx)(a.Z, {
@@ -20,14 +20,14 @@ function u(e) {
         floatingLayer: s.ZP,
         children: (0, i.jsxs)(o.ZP, {
             toolbar: u,
-            "aria-label": c.intl.string(c.t.jNqDh4),
+            "aria-label": c.intl.string(c.t["jNqDh/"]),
             children: [
                 (0, i.jsx)(o.ZP.Icon, {
                     icon: r.BFJ,
                     disabled: !0,
-                    "aria-label": c.intl.string(c.t.jNqDh4),
+                    "aria-label": c.intl.string(c.t["jNqDh/"]),
                 }),
-                (0, i.jsx)(o.ZP.Title, { children: c.intl.string(c.t.jNqDh4) }),
+                (0, i.jsx)(o.ZP.Title, { children: c.intl.string(c.t["jNqDh/"]) }),
             ],
         }),
     });

@@ -13,7 +13,7 @@ var r = n(951288),
     A = n(776767),
     T = n(981631),
     I = n(388032),
-    m = n(152540);
+    m = n(87819);
 function g(e) {
     let { member: t } = e,
         n = (0, i.e7)([E.Z], () => E.Z.getGuild(t.guildId), [t.guildId]),
@@ -27,7 +27,7 @@ function g(e) {
     null == n)
         ? null
         : (0, r.jsx)(s.gNt, {
-              label: I.intl.string(I.t["ldCE/v"]),
+              label: I.intl.string(I.t["ldCE/p"]),
               children: (0, r.jsxs)(A.WM, {
                   children: [
                       (0, r.jsx)(A._2, {
@@ -65,7 +65,7 @@ function g(e) {
                               name: (0, r.jsx)(s.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-default",
-                                  children: I.intl.string(I.t["93hqlp"]),
+                                  children: I.intl.string(I.t["93hqln"]),
                               }),
                               description:
                                   N === u.qc.AGREED
@@ -92,7 +92,7 @@ function g(e) {
                           name: (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: I.intl.string(I.t.SaDIpK),
+                              children: I.intl.string(I.t.SaDIpL),
                           }),
                           description: (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
@@ -110,7 +110,7 @@ function g(e) {
                           name: (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: I.intl.string(I.t["NQJ+WF"]),
+                              children: I.intl.string(I.t["NQJ+WG"]),
                           }),
                           description: (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
@@ -127,7 +127,7 @@ function g(e) {
                           name: (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
-                              children: I.intl.string(I.t["eJOq+f"]),
+                              children: I.intl.string(I.t["eJOq+Z"]),
                           }),
                           description: (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",

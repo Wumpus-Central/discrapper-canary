@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(809780),
     v = n(981631),
     j = n(388032),
-    x = n(39620);
+    x = n(557047);
 let C = {
     left: 4,
     right: -12,
@@ -164,7 +164,7 @@ function S(e) {
                             color: s.zx.Colors.LINK,
                             look: s.zx.Looks.LINK,
                             onClick: (e) => a(e, n[n.length - 1].id),
-                            children: [j.intl.string(j.t["9OB9ho"]), " \u203A"],
+                            children: [j.intl.string(j.t["9OB9hq"]), " \u203A"],
                         },
                         "view-all",
                     ),

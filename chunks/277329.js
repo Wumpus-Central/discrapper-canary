@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(332325),
     p = n(981631),
     h = n(388032),
-    m = n(15759);
+    m = n(830260);
 function g() {
     let e = (0, f.b)(),
         t = (0, i.e7)([l.Z], () => l.Z.getSubsection()),
@@ -48,7 +48,7 @@ function g() {
             (0, r.jsx)(a.Heading, {
                 className: m.heading,
                 variant: "heading-xl/semibold",
-                children: h.intl.string(h.t.URyqtL),
+                children: h.intl.string(h.t.URyqtP),
             }),
             (0, r.jsx)(a.njP, {
                 className: m.tabBar,

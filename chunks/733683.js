@@ -15,9 +15,9 @@ var r,
     g = n(481060),
     m = n(624138),
     p = n(981631),
-    f = n(258640),
+    f = n(149829),
     h = n(388032),
-    b = n(301142);
+    b = n(31441);
 function x(e, t, n) {
     return (
         t in e
@@ -88,11 +88,11 @@ class y extends (r = l.Component) {
                 color: g.aML.Colors.PRIMARY,
                 tooltipClassName: b.foregroundTooltip,
                 children: [
-                    (0, i.jsx)("div", { children: h.intl.format(h.t.gDsyBw, { numSubscriptions: e }) }),
+                    (0, i.jsx)("div", { children: h.intl.format(h.t.gDsyB9, { numSubscriptions: e }) }),
                     null != s && s > 0 && null != l
                         ? (0, i.jsx)("div", {
                               className: b.tooltipMuted,
-                              children: h.intl.format(h.t["2U9MDg"], {
+                              children: h.intl.format(h.t["2U9MDp"], {
                                   number: s,
                                   tier: l.name,
                               }),
@@ -109,12 +109,12 @@ class y extends (r = l.Component) {
         let n = Math.min(t, e.numRequired);
         return (0, i.jsx)("div", {
             children: this.getTierDisabled(e)
-                ? (0, i.jsx)("div", { children: h.intl.formatToPlainString(f.default["9CtPjo"], { perk: e.name }) })
+                ? (0, i.jsx)("div", { children: h.intl.formatToPlainString(f.default["9CtPjt"], { perk: e.name }) })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)("div", { children: e.name }),
                           (0, i.jsx)("div", {
-                              children: h.intl.format(h.t.AkLa6u, {
+                              children: h.intl.format(h.t.AkLa6n, {
                                   subscribers: n,
                                   numRequired: e.numRequired,
                               }),

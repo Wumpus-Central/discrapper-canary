@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(494620),
     d = n(65154),
     f = n(388032),
-    _ = n(282086);
+    _ = n(28025);
 let p = c.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
 function h() {
     var e, t;
@@ -52,7 +52,7 @@ function h() {
                     (0, r.jsx)("div", {
                         className: _.column,
                         children: (0, r.jsx)(o.j, {
-                            label: f.intl.string(f.t.hHMYbW),
+                            label: f.intl.string(f.t.hHMYbb),
                             deviceType: d.h7.AUDIO_INPUT,
                             location: "UserSettingsDevices",
                             hideDeviceTypeIcon: !0,
@@ -62,7 +62,7 @@ function h() {
                     (0, r.jsx)("div", {
                         className: _.column,
                         children: (0, r.jsx)(o.j, {
-                            label: f.intl.string(f.t.dl18zc),
+                            label: f.intl.string(f.t.dl18zb),
                             deviceType: d.h7.AUDIO_OUTPUT,
                             location: "UserSettingsDevices",
                             hideDeviceTypeIcon: !0,
@@ -74,7 +74,7 @@ function h() {
             I &&
                 (0, r.jsx)(u.Z, {
                     look: u.z.WARNING,
-                    children: f.intl.string(f.t.Ioz3g4),
+                    children: f.intl.string(f.t.Ioz3gx),
                 }),
         ],
     });

@@ -33,8 +33,8 @@ var r,
     R = n(981631),
     P = n(217702),
     w = n(388032),
-    D = n(174050),
-    L = n(465106);
+    D = n(55343),
+    L = n(149715);
 function x(e, t, n) {
     return (
         t in e
@@ -188,7 +188,7 @@ class K extends (r = o.Component) {
                   className: D.videoButton,
                   onClick: r,
                   tabIndex: o ? -1 : 0,
-                  "aria-label": w.intl.string(w.t.ZcgDJS),
+                  "aria-label": w.intl.string(w.t.ZcgDJX),
                   children: (0, a.jsx)(
                       p.fpf,
                       {
@@ -204,14 +204,14 @@ class K extends (r = o.Component) {
                     className: D.videoButton,
                     onClick: i,
                     tabIndex: o ? -1 : 0,
-                    "aria-label": w.intl.string(w.t.hsvh0t),
+                    "aria-label": w.intl.string(w.t.hsvh0i),
                     children: (0, a.jsx)(y.Z, { className: D.controlIcon }, "replay"),
                 })
               : (0, a.jsx)(p.P3F, {
                     className: D.videoButton,
                     onClick: i,
                     tabIndex: o ? -1 : 0,
-                    "aria-label": w.intl.string(w.t.RscU7O),
+                    "aria-label": w.intl.string(w.t.RscU7I),
                     children: (0, a.jsx)(
                         p.o1U,
                         {
@@ -808,7 +808,7 @@ class J extends (i = o.PureComponent) {
                   children:
                       t === F.VIDEO
                           ? (0, a.jsx)(E.Z, {
-                                "aria-label": w.intl.string(w.t["2nM3Pj"]),
+                                "aria-label": w.intl.string(w.t["2nM3Pk"]),
                                 className: D.videoButton,
                                 iconClassName: D.controlIcon,
                                 guestWindow: window,

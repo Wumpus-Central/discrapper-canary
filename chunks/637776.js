@@ -25,28 +25,28 @@ function f(e) {
     };
     return n
         ? (0, r.jsx)(c.Z, {
-              title: m.intl.string(m.t.csrAMD),
-              subtitle: m.intl.string(m.t["m1+IBg"]),
-              buttonText: m.intl.string(m.t.fIv16O),
+              title: m.intl.string(m.t.csrAMJ),
+              subtitle: m.intl.string(m.t["m1+IBn"]),
+              buttonText: m.intl.string(m.t.fIv16B),
               onButtonClick: () => (0, u.uL)(p.Z5c.CHANNEL(E)),
           })
         : _
           ? (0, r.jsx)(c.Z, {
-                title: m.intl.string(m.t.dAfGb2),
-                buttonText: m.intl.string(m.t.uJWIj4),
+                title: m.intl.string(m.t["dAfGb+"]),
+                buttonText: m.intl.string(m.t["uJWIj/"]),
                 onButtonClick: v,
-                image: (0, r.jsx)(l.Om, { alt: m.intl.string(m.t.dAfGb2) }),
+                image: (0, r.jsx)(l.Om, { alt: m.intl.string(m.t["dAfGb+"]) }),
             })
           : null != x
             ? (0, r.jsx)(c.Z, {
-                  title: m.intl.string(m.t.PCgG39),
-                  subtitle: m.intl.string(m.t.tQpeAw),
-                  buttonText: m.intl.string(m.t.uJWIj4),
+                  title: m.intl.string(m.t["PCgG3+"]),
+                  subtitle: m.intl.string(m.t.tQpeA3),
+                  buttonText: m.intl.string(m.t["uJWIj/"]),
                   onButtonClick: v,
               })
             : (0, r.jsx)(c.Z, {
-                  title: m.intl.string(m.t["0c8+5u"]),
-                  subtitle: m.intl.string(m.t.ULTCBA),
+                  title: m.intl.string(m.t["0c8+5n"]),
+                  subtitle: m.intl.string(m.t.ULTCBE),
                   loading: !0,
               });
 }

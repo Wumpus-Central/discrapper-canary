@@ -25,17 +25,17 @@ function v(e) {
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "changelog",
-                    label: j.intl.string(j.t.LRmNAg),
+                    label: j.intl.string(j.t.LRmNAl),
                     action: () => (0, s.Z)(!0),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "acknowledgements",
-                    label: j.intl.string(j.t["0nUKy8"]),
+                    label: j.intl.string(j.t["0nUKy3"]),
                     action: () => (0, c.Z)(y.EYA.ACKNOWLEDGEMENTS),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "support",
-                    label: j.intl.string(j.t["Yl/Rio"]),
+                    label: j.intl.string(j.t["Yl/Riu"]),
                     action: () => (0, c.Z)(f.w),
                 }),
             ],
@@ -63,7 +63,7 @@ function g() {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: j.intl.string(j.t["Knf/f3"]),
+                            children: j.intl.string(j.t["Knf/f/"]),
                         }),
                     }),
                     (0, r.jsx)("span", {
@@ -77,7 +77,7 @@ function g() {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: j.intl.string(j.t.uFSTGh),
+                            children: j.intl.string(j.t.uFSTGq),
                         }),
                     }),
                     (0, r.jsx)("span", {
@@ -133,7 +133,7 @@ function g() {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: j.intl.string(j.t.UKOtz8),
+                                            children: j.intl.string(j.t["UKOtz+"]),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors

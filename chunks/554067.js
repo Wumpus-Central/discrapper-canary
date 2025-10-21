@@ -3,20 +3,20 @@ var r = n(951288),
     l = n(647438),
     i = n(442837),
     a = n(481060),
-    o = n(706454),
-    s = n(626135),
+    s = n(706454),
+    o = n(626135),
     c = n(381585),
     u = n(501431),
     d = n(215023),
     g = n(981631),
     p = n(388032),
-    f = n(55918);
+    f = n(535333);
 function C(e) {
     let { handleTransition: t, selectedTab: n } = e,
         { searchQuery: C, onSetSearchQuery: h } = (0, u.S)(),
         [_, m] = l.useState(""),
         b = (0, c.sp)(),
-        v = (0, i.e7)([o.default], () => o.default.locale);
+        v = (0, i.e7)([s.default], () => s.default.locale);
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
@@ -32,7 +32,7 @@ function C(e) {
             className: f.searchBar,
             onClick: () => {
                 n !== d.AW.CATALOG && t(d.AW.CATALOG),
-                    s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                         page_section: null == b ? void 0 : b.pageSection,
                         page_category: null == b ? void 0 : b.pageCategory,
@@ -51,7 +51,7 @@ function C(e) {
                 onChange: m,
                 onClear: () => {
                     m(""),
-                        s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                             page_section: null == b ? void 0 : b.pageSection,
                             page_category: null == b ? void 0 : b.pageCategory,
@@ -61,7 +61,7 @@ function C(e) {
                             page_type: n,
                         });
                 },
-                placeholder: "en-US" === v ? p.intl.string(p.t.arz34O) : p.intl.string(p.t["hIt/Nj"]),
+                placeholder: "en-US" === v ? p.intl.string(p.t.arz34K) : p.intl.string(p.t["hIt/Nm"]),
             }),
         })
     );

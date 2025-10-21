@@ -10,9 +10,9 @@ var r,
     d = n(993365),
     f = n(639317),
     _ = n(388032),
-    p = n(258422),
-    h = n(219990),
-    m = n(525685);
+    p = n(8542),
+    h = n(979712),
+    m = n(154257);
 function g(e, t, n) {
     return (
         t in e
@@ -82,8 +82,8 @@ class I extends (r = a.Component) {
     }
     getErrorMessage() {
         let { error: e, maxLength: t, minLength: n } = this.props,
-            r = this.getIsOverflowing() ? _.intl.formatToPlainString(_.t.ICT5S0, { maxLength: t }) : null,
-            i = this.getIsUnderflowing() ? _.intl.formatToPlainString(_.t["62rk1N"], { minLength: n }) : null;
+            r = this.getIsOverflowing() ? _.intl.formatToPlainString(_.t.ICT5S6, { maxLength: t }) : null,
+            i = this.getIsUnderflowing() ? _.intl.formatToPlainString(_.t["62rk1K"], { minLength: n }) : null;
         return (null != e && "" === e) || null === e
             ? null
             : void 0 !== e
@@ -175,7 +175,7 @@ class I extends (r = a.Component) {
                         null != u &&
                             (0, i.jsx)(c.nn4, {
                                 id: y,
-                                children: _.intl.format(_.t["+DFxLS"], { maxLength: u }),
+                                children: _.intl.format(_.t["+DFxLc"], { maxLength: u }),
                             }),
                         this.renderCharacterCount(),
                         this.renderMaxLength(),

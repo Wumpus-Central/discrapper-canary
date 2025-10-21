@@ -148,7 +148,7 @@ function G() {
                 className: Z.emptyRolesText,
                 variant: "text-md/semibold",
                 color: "text-muted",
-                children: w.intl.string(w.t["vR7M+/"]),
+                children: w.intl.string(w.t["vR7M+y"]),
             }),
         ],
     });
@@ -193,7 +193,7 @@ function M(e) {
             [d, C, O, y, G, M, j],
         ),
         [{ isDragging: H }, W] = (0, s.c)(F),
-        V = i.useMemo(
+        z = i.useMemo(
             () => ({
                 accept: L,
                 canDrop: () => !G,
@@ -207,7 +207,7 @@ function M(e) {
             }),
             [G, d],
         ),
-        [{ dragSourcePosition: z }, K] = (0, o.L)(V),
+        [{ dragSourcePosition: V }, K] = (0, o.L)(z),
         Y = i.useCallback(
             (e) => {
                 (0, m.jW)(e, async () => {
@@ -238,8 +238,8 @@ function M(e) {
     return (0, r.jsxs)(g.P3F, {
         className: a()(Z.roleRow, {
             [Z.roleRowDisableHover]: E,
-            [Z.containerDragBefore]: null != z && j < z,
-            [Z.containerDragAfter]: null != z && j > z,
+            [Z.containerDragBefore]: null != V && j < V,
+            [Z.containerDragAfter]: null != V && j > V,
         }),
         onClick: X,
         onContextMenu: Y,
@@ -247,7 +247,7 @@ function M(e) {
             W(K(e));
         },
         "data-dnd-name": d.name,
-        "aria-label": w.intl.formatToPlainString(w.t.Vu0AcX, {
+        "aria-label": w.intl.formatToPlainString(w.t.Vu0Acc, {
             name: d.name,
             count: "".concat(_),
         }),
@@ -292,14 +292,14 @@ function M(e) {
                     (null == (l = d.tags) ? void 0 : l.subscription_listing_id) != null &&
                         (0, r.jsx)(v.Z, {
                             className: Z.subscriptionRoleIcon,
-                            "aria-label": w.intl.string(w.t.a2Ak8f),
+                            "aria-label": w.intl.string(w.t.a2Ak8b),
                         }),
                     (null == (c = d.tags) ? void 0 : c.is_guild_product_role) === !0 && (0, r.jsx)(b.Z, {}),
                 ],
             }),
             (0, r.jsx)(u.u, {
-                text: w.intl.string(w.t.CW75t7),
-                "aria-label": w.intl.formatToPlainString(w.t.Fgs8fH, { count: "".concat(_) }),
+                text: w.intl.string(w.t.CW75t0),
+                "aria-label": w.intl.formatToPlainString(w.t.Fgs8fD, { count: "".concat(_) }),
                 position: "right",
                 children: (0, r.jsxs)(g.P3F, {
                     className: a()(Z.memberCountContainer, R.memberSpacing),
@@ -326,20 +326,20 @@ function M(e) {
                 className: a()(Z.buttonsContainer, R.buttonsSpacing),
                 children: [
                     (0, r.jsx)(u.u, {
-                        text: G ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75u7),
+                        text: G ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75uw),
                         children: (0, r.jsx)(g.hU, {
                             variant: "secondary",
-                            "aria-label": G ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75u7),
+                            "aria-label": G ? w.intl.string(w.t["HO/oXl"]) : w.intl.string(w.t.bt75uw),
                             icon: G ? g.tEF : g.vdY,
                             onClick: X,
                         }),
                     }),
                     (0, r.jsx)(u.u, {
-                        text: w.intl.string(w.t.UKOtz8),
+                        text: w.intl.string(w.t["UKOtz+"]),
                         shouldShow: q,
                         children: (0, r.jsx)(g.hU, {
                             variant: "secondary",
-                            "aria-label": w.intl.string(w.t.UKOtz8),
+                            "aria-label": w.intl.string(w.t["UKOtz+"]),
                             icon: g.xhG,
                             onClick: Y,
                             disabled: !q,

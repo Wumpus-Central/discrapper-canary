@@ -56,8 +56,8 @@ var a = n(951288),
     ea = n(228168),
     er = n(671955),
     ei = n(388032),
-    el = n(138005),
-    eo = n(593540);
+    el = n(54482),
+    eo = n(116649);
 function es(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -269,8 +269,8 @@ function ec(e) {
                                                         (0, a.jsx)(X.V4, {
                                                             action: "EDIT_PROFILE",
                                                             label: ep
-                                                                ? ei.intl.string(ei.t.Ip9nBQ)
-                                                                : ei.intl.string(ei.t.s5vZlZ),
+                                                                ? ei.intl.string(ei.t.Ip9nBS)
+                                                                : ei.intl.string(ei.t.s5vZlQ),
                                                             icon: c.vdY,
                                                             onClick: eq,
                                                             renderSubmenu: eY
@@ -278,7 +278,7 @@ function ec(e) {
                                                                       let { closePopout: t } = e;
                                                                       return (0, a.jsx)(X.gp, {
                                                                           navId: "edit-profile-submenu",
-                                                                          "aria-label": ei.intl.string(ei.t.szTA8P),
+                                                                          "aria-label": ei.intl.string(ei.t.szTA8E),
                                                                           onClose: t,
                                                                           children: eJ,
                                                                       });
@@ -310,7 +310,7 @@ function ec(e) {
                                                                       return (0, a.jsx)(X.gp, {
                                                                           navId: "set-status-submenu",
                                                                           className: el.statusPickerModalMenu,
-                                                                          "aria-label": ei.intl.string(ei.t.E13trK),
+                                                                          "aria-label": ei.intl.string(ei.t.E13trI),
                                                                           onClose: t,
                                                                           children: eN,
                                                                       });
@@ -406,7 +406,7 @@ function ec(e) {
                                                                                                       "aria-label":
                                                                                                           ei.intl.string(
                                                                                                               ei.t[
-                                                                                                                  "3Uj+2t"
+                                                                                                                  "3Uj+2p"
                                                                                                               ],
                                                                                                           ),
                                                                                                       children: (0,
@@ -417,7 +417,7 @@ function ec(e) {
                                                                                                           "aria-label":
                                                                                                               ei.intl.string(
                                                                                                                   ei.t
-                                                                                                                      .E13trK,
+                                                                                                                      .E13trI,
                                                                                                               ),
                                                                                                           className:
                                                                                                               el.statusPickerModal,
@@ -486,7 +486,7 @@ function ec(e) {
                                                         (0, a.jsx)(X.V4, {
                                                             action: "PRESS_SWITCH_ACCOUNTS",
                                                             icon: c.lMe,
-                                                            label: ei.intl.string(ei.t.oMNyYG),
+                                                            label: ei.intl.string(ei.t.oMNyYN),
                                                             onClick: () => {
                                                                 n(), (0, ee.Z)();
                                                             },
@@ -494,7 +494,7 @@ function ec(e) {
                                                                 let { closePopout: t } = e;
                                                                 return (0, a.jsx)(X.gp, {
                                                                     navId: "switch-accounts-submenu",
-                                                                    "aria-label": ei.intl.string(ei.t.wFhVqK),
+                                                                    "aria-label": ei.intl.string(ei.t.wFhVqL),
                                                                     onClose: t,
                                                                     children: eP,
                                                                 });
@@ -506,7 +506,7 @@ function ec(e) {
                                                             (0, a.jsx)(X.V4, {
                                                                 action: "COPY_USER_ID",
                                                                 icon: c.VuL,
-                                                                label: ei.intl.string(ei.t["/AXYnJ"]),
+                                                                label: ei.intl.string(ei.t["/AXYnE"]),
                                                                 onClick: () => {
                                                                     (0, V.JG)(t.id), n();
                                                                 },

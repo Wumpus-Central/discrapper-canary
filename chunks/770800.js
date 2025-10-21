@@ -19,9 +19,9 @@ var r = n(951288),
     b = n(513547),
     D = n(65154),
     P = n(388032),
-    j = n(593235),
-    C = n(10198);
-class x extends a.PureComponent {
+    j = n(966117),
+    x = n(197571);
+class C extends a.PureComponent {
     render() {
         var e, t;
         let { transport: n, mediaSessionId: a, hidePersonalInformation: i, hostname: o } = this.props;
@@ -130,10 +130,10 @@ class x extends a.PureComponent {
             children: [
                 (0, r.jsx)(s.Heading, {
                     variant: "heading-md/medium",
-                    children: P.intl.string(P.t.wU9INz) + (null != a ? " - " + a : ""),
+                    children: P.intl.string(P.t.wU9IN2) + (null != a ? " - " + a : ""),
                 }),
                 (0, v.VE)(u),
-                0 === g.length ? null : (0, r.jsx)(s.izJ, { className: C.marginBottom20 }),
+                0 === g.length ? null : (0, r.jsx)(s.izJ, { className: x.marginBottom20 }),
                 (0, v.VE)(g),
             ],
         });
@@ -156,4 +156,4 @@ let Z = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
         mediaSessionId: d.Z.getMediaSessionId(),
         hostname: g.Z.getShortHostname(l),
     };
-})(x);
+})(C);

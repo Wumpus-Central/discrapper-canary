@@ -18,7 +18,7 @@ var r = n(951288),
     g = n(974513),
     m = n(290511),
     p = n(388032),
-    f = n(376933);
+    f = n(54028);
 function h(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: s, status: o, onEdit: c, extra: d } = e;
@@ -35,7 +35,7 @@ function h(e) {
                         variant: "text-xs/semibold",
                         color: "status-positive",
                         className: f.statusText,
-                        children: p.intl.string(p.t.rPnzRU),
+                        children: p.intl.string(p.t.rPnzRf),
                     }),
                 ],
             });
@@ -52,7 +52,7 @@ function h(e) {
                         variant: "text-xs/semibold",
                         color: "status-warning",
                         className: f.statusText,
-                        children: p.intl.string(p.t["yTa+dn"]),
+                        children: p.intl.string(p.t["yTa+di"]),
                     }),
                 ],
             });
@@ -112,7 +112,7 @@ function h(e) {
                                   size: "sm",
                                   variant: "secondary",
                                   onClick: c,
-                                  text: p.intl.string(p.t.bt75u7),
+                                  text: p.intl.string(p.t.bt75uw),
                               })
                             : (0, r.jsx)(a.Button, {
                                   icon: a.ZSh,
@@ -120,7 +120,7 @@ function h(e) {
                                   size: "sm",
                                   variant: "secondary",
                                   onClick: c,
-                                  text: p.intl.string(p.t["0GWElZ"]),
+                                  text: p.intl.string(p.t["0GWElc"]),
                               }),
                     }),
                 ],
@@ -150,18 +150,18 @@ function j(e) {
         C = (0, g.O4)(t),
         O = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         y = O
-            ? p.intl.formatToPlainString(p.t.nHwnLC, {
+            ? p.intl.formatToPlainString(p.t.nHwnLK, {
                   numDefaultChannels: v,
                   numFromQuestions: u - v,
               })
             : _
-              ? p.intl.formatToPlainString(p.t.HxEwSk, { numDefaultChannels: v })
-              : p.intl.formatToPlainString(p.t.ey3uVV, {
+              ? p.intl.formatToPlainString(p.t.HxEwSv, { numDefaultChannels: v })
+              : p.intl.formatToPlainString(p.t.ey3uVZ, {
                     numDefaultChannels: m.md,
                     numChattableChannels: m.X,
                 });
     return (0, r.jsx)(h, {
-        title: O ? p.intl.string(p.t.YZookZ) : p.intl.string(p.t["4GSygo"]),
+        title: O ? p.intl.string(p.t.YZookV) : p.intl.string(p.t["4GSygh"]),
         description: y,
         icon: (0, r.jsx)(a.VL1, {
             size: "md",
@@ -188,7 +188,7 @@ function v(e) {
     return (
         _ && (j >= 85 && !i ? (C = "good") : j < 85 && (C = "warning")),
         (0, r.jsx)(h, {
-            title: v ? p.intl.string(p.t.AGjtFh) : p.intl.string(p.t.dqCzoa),
+            title: v ? p.intl.string(p.t.AGjtFv) : p.intl.string(p.t.dqCzoT),
             description: p.intl.format(p.t.iuNisr, {
                 numChannels: b,
                 numTotalChannels: x,
@@ -226,7 +226,7 @@ function _(e) {
         _ = "none";
     v && (b && !o ? (_ = "good") : b || (_ = "required"));
     let C = p.intl.string(p.t.GMOwOD);
-    b ? v || (C = p.intl.string(p.t.wHOoyM)) : (C = p.intl.string(p.t.wXFbgY));
+    b ? v || (C = p.intl.string(p.t.wHOoyE)) : (C = p.intl.string(p.t.wXFbgZ));
     let O = null;
     return (
         v &&
@@ -240,7 +240,7 @@ function _(e) {
                 }),
             })),
         (0, r.jsx)(h, {
-            title: p.intl.string(p.t.mRHqsr),
+            title: p.intl.string(p.t.mRHqsj),
             description: C,
             icon: (0, r.jsx)(a.Vy8, {
                 size: "md",

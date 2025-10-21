@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(131951),
     h = n(65154),
     m = n(388032),
-    g = n(558254),
-    E = n(43404),
-    b = n(10198);
+    g = n(192294),
+    E = n(89079),
+    b = n(197571);
 let y = (0, _.hQ)();
 function O() {
     let [e, t] = i.useState(-100),
@@ -88,17 +88,17 @@ function O() {
                     (0, r.jsx)(d.Text, {
                         variant: "text-md/normal",
                         className: b.marginBottom8,
-                        children: m.intl.string(m.t.W3K5Ii),
+                        children: m.intl.string(m.t.W3K5Im),
                     }),
                 ],
             })),
         (0, r.jsxs)(d.C3N, {
-            label: m.intl.string(m.t["sqUm+v"]),
+            label: m.intl.string(m.t["sqUm+k"]),
             className: g.sensitivity,
             children: [
                 I &&
                     (0, r.jsx)(d.rsf, {
-                        label: m.intl.string(m.t.I1Zuq6),
+                        label: m.intl.string(m.t.I1Zuq0),
                         checked: O,
                         onChange: (e) => A(_, e),
                     }),
@@ -107,7 +107,7 @@ function O() {
                     (0, r.jsx)(d.Wn, {
                         messageType: d.QYI.WARNING,
                         className: b.marginBottom8,
-                        children: m.intl.format(m.t["O13I+P"], { onEnableClick: () => f.Z.enable(!0) }),
+                        children: m.intl.format(m.t["O13I+O"], { onEnableClick: () => f.Z.enable(!0) }),
                     }),
             ],
         })

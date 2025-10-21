@@ -100,7 +100,7 @@ function Z(e) {
         renderHeader: Z,
         renderEmptyState: A,
         renderMessage: w,
-        "aria-label": S.intl.string(S.t.jbV6MD),
+        "aria-label": S.intl.string(S.t.jbV6MM),
         listName: "recents",
     });
 }
@@ -134,7 +134,7 @@ function T(e) {
                     null != i
                         ? (0, r.jsx)(s.M0o, {
                               className: I.closeButton,
-                              tooltip: S.intl.string(S.t.cpT0Cg),
+                              tooltip: S.intl.string(S.t.cpT0Cq),
                               color: s.YX$.TERTIARY,
                               icon: (0, r.jsx)(s.Dio, {
                                   size: "xs",
@@ -173,7 +173,7 @@ function T(e) {
 function A() {
     return (0, r.jsx)(C.Z, {
         Icon: s.lOy,
-        header: S.intl.string(S.t["bgDz7+"]),
-        tip: S.intl.string(S.t.NS15vr),
+        header: S.intl.string(S.t.bgDz74),
+        tip: S.intl.string(S.t.NS15vk),
     });
 }

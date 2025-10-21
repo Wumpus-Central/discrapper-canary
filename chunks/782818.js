@@ -15,9 +15,9 @@ var r = n(951288),
     h = n(981631),
     b = n(486324),
     j = n(485696),
-    A = n(388032),
-    x = n(916340);
-function y(e) {
+    y = n(388032),
+    A = n(916340);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,47 +44,47 @@ function y(e) {
 }
 function C(e) {
     let { avatar: t, index: n, onSelectRecentAvatar: l, onDeleteRecentAvatar: a, avatarButtonRef: i } = e,
-        { id: s, storageHash: u, description: d = A.intl.string(A.t.lqaIxM) } = t,
+        { id: s, storageHash: u, description: d = y.intl.string(y.t.lqaIxI) } = t,
         { avatarSrc: f, eventHandlers: p } = (0, m.Z)({
             avatarId: s,
             storageHash: u,
         }),
         { onMouseEnter: g, onMouseLeave: h } = p,
         b = null != d ? d : u.substring(0, 6).toUpperCase(),
-        j = A.intl.formatToPlainString(A.t["tmJ75+"], {
+        j = y.intl.formatToPlainString(y.t.tmJ75y, {
             orderNumber: n + 1,
             description: b,
         }),
-        y = A.intl.formatToPlainString(A.t.pBzwhY, {
+        x = y.intl.formatToPlainString(y.t.pBzwhc, {
             orderNumber: n + 1,
             description: b,
         });
     return (0, r.jsxs)("div", {
-        className: x.recentAvatarButtonContainer,
+        className: A.recentAvatarButtonContainer,
         children: [
             (0, r.jsx)(c.P3F, {
                 onClick: () => l(t),
                 onMouseEnter: g,
                 onMouseLeave: h,
-                className: x.recentAvatarButton,
+                className: A.recentAvatarButton,
                 "aria-label": j,
                 innerRef: i,
                 children: (0, r.jsx)("img", {
                     src: f,
                     alt: d,
-                    className: x.recentAvatar,
+                    className: A.recentAvatar,
                 }),
             }),
             (0, r.jsx)(o.u, {
-                text: A.intl.string(A.t.N86XcH),
+                text: y.intl.string(y.t.N86XcP),
                 children: (0, r.jsx)(c.P3F, {
-                    "aria-label": y,
-                    onClick: (e) => a(e, n, s, u, y),
-                    className: x.deleteButton,
+                    "aria-label": x,
+                    onClick: (e) => a(e, n, s, u, x),
+                    className: A.deleteButton,
                     children: (0, r.jsx)(c.XHJ, {
                         size: "xs",
                         color: "currentColor",
-                        className: x.deleteIcon,
+                        className: A.deleteIcon,
                     }),
                 }),
             }),
@@ -100,9 +100,9 @@ function v(e) {
         O = l.useRef(i.length),
         N = l.useRef(null),
         [S, T] = l.useState(!1),
-        [w, R] = l.useState(!1),
-        [P, F] = l.useState(null),
-        _ = null != P ? P : null == m ? void 0 : m.message,
+        [w, P] = l.useState(!1),
+        [R, F] = l.useState(null),
+        _ = null != R ? R : null == m ? void 0 : m.message,
         Z = i.length,
         I = Math.max(j.iZ - Z, 0),
         k = (0, c.vRw)(),
@@ -131,7 +131,7 @@ function v(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     l,
-                                    y(
+                                    x(
                                         {
                                             imageUri: o,
                                             file: new File([a], u, { type: f }),
@@ -147,7 +147,7 @@ function v(e) {
                         { contextKey: k },
                     );
                 } catch (e) {
-                    F(A.intl.string(A.t.fZRH9P));
+                    F(y.intl.string(y.t.fZRH9P));
                 } finally {
                     T(!1);
                 }
@@ -160,7 +160,7 @@ function v(e) {
                 (N.current = o >= 0 ? v.current[o] : E.current),
                     e.shiftKey
                         ? (0, f.B)(l)
-                        : (R(!0),
+                        : (P(!0),
                           (0, c.ZDy)(async () => {
                               let { default: e } = await n.e("70871").then(n.bind(n, 225525));
                               return (t) => {
@@ -191,7 +191,7 @@ function v(e) {
                                       })(t, ["onClose"]);
                                   return (0, r.jsx)(
                                       e,
-                                      y(
+                                      x(
                                           {
                                               avatarId: l,
                                               storageHash: a,
@@ -200,7 +200,7 @@ function v(e) {
                                               onClose: async () => {
                                                   await n(),
                                                       requestAnimationFrame(() => {
-                                                          R(!1);
+                                                          P(!1);
                                                       });
                                               },
                                           },
@@ -226,9 +226,9 @@ function v(e) {
             (O.current = i.length));
     }, [i.length, w]),
     o)
-        ? (0, r.jsx)(c.$jN, { className: x.spinner })
+        ? (0, r.jsx)(c.$jN, { className: A.spinner })
         : (0, r.jsxs)("div", {
-              className: x.recentAvatarContainer,
+              className: A.recentAvatarContainer,
               children: [
                   null != _ &&
                       !o &&
@@ -238,12 +238,12 @@ function v(e) {
                           children: _,
                       }),
                   (0, r.jsxs)("div", {
-                      className: x.recentAvatarSlots,
+                      className: A.recentAvatarSlots,
                       children: [
                           Z > 0 &&
                               (0, r.jsx)("ul", {
-                                  "aria-label": A.intl.string(A.t.lsU63N),
-                                  className: x.recentAvatarList,
+                                  "aria-label": y.intl.string(y.t.lsU63N),
+                                  className: A.recentAvatarList,
                                   children: i.map((e, t) =>
                                       (0, r.jsx)(
                                           "li",
@@ -264,7 +264,7 @@ function v(e) {
                               }),
                           I > 0 &&
                               (0, r.jsxs)("div", {
-                                  className: x.emptyAvatarSlots,
+                                  className: A.emptyAvatarSlots,
                                   tabIndex: -1,
                                   ref: E,
                                   children: [
@@ -272,13 +272,13 @@ function v(e) {
                                           children: [
                                               0 === Z &&
                                                   (0, r.jsxs)(r.Fragment, {
-                                                      children: [A.intl.string(A.t.x0DsRU), " "],
+                                                      children: [y.intl.string(y.t.x0DsRS), " "],
                                                   }),
-                                              A.intl.format(A.t["8W2HOz"], { numberOfEmptyAvatarSlots: I }),
+                                              y.intl.format(y.t["8W2HO3"], { numberOfEmptyAvatarSlots: I }),
                                           ],
                                       }),
                                       [...Array(I)].map((e, t) =>
-                                          (0, r.jsx)(g.Z, { className: x.avatarPlaceholder }, t),
+                                          (0, r.jsx)(g.Z, { className: A.avatarPlaceholder }, t),
                                       ),
                                   ],
                               }),
@@ -290,10 +290,10 @@ function v(e) {
 function E(e) {
     let { className: t, onComplete: n } = e;
     return (0, r.jsx)("div", {
-        className: i()(x.container, t),
+        className: i()(A.container, t),
         children: (0, r.jsx)(c.gNt, {
-            label: A.intl.string(A.t.Bnq9zM),
-            description: A.intl.format(A.t["+CyJu7"], { recentAvatarsLimit: j.iZ }),
+            label: y.intl.string(y.t.Bnq9zK),
+            description: y.intl.format(y.t["+CyJu3"], { recentAvatarsLimit: j.iZ }),
             children: (0, r.jsx)(v, { onComplete: n }),
         }),
     });

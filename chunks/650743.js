@@ -18,7 +18,7 @@ var i = n(399606),
     E = n(763296),
     b = n(981631),
     y = n(388032),
-    O = n(45517);
+    O = n(638527);
 function v(e, t, n) {
     return (
         t in e
@@ -92,7 +92,7 @@ function T(e) {
         D = () => (0, c.Q3)(a.z.SOUNDBOARD_KEYBIND_TIP),
         L =
             null != R && (0, m.isWindows)() && !w
-                ? y.intl.format(y.t.udMTtr, {
+                ? y.intl.format(y.t.udMTth, {
                       keybind: (0, g.BB)(R.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(

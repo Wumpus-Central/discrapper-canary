@@ -7,7 +7,7 @@ var i = n(951288),
     s = n(981631),
     c = n(295907),
     u = n(388032),
-    d = n(287921);
+    d = n(26896);
 function p(e, t, n) {
     return (
         t in e
@@ -29,7 +29,7 @@ class f extends r.PureComponent {
         let { className: e, textValue: t, richValue: n, message: r, channel: l, onCancel: a, children: o } = this.props,
             s = (0, i.jsx)("div", {
                 className: d.operations,
-                children: u.intl.format(u.t.wDsPXl, {
+                children: u.intl.format(u.t.wDsPXs, {
                     onCancel: () => a(l.id),
                     onSave: this.onClickSave,
                 }),

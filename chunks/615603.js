@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(981631),
     S = n(474936),
     A = n(388032),
-    C = n(79665);
+    C = n(387473);
 function N(e, t, n) {
     return (
         t in e
@@ -89,7 +89,7 @@ function D(e) {
         _ = i.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
         p = (0, b.tl)(t),
         h = (null == s ? void 0 : s.isPaused) === !0 && d === S.a$.NONE,
-        m = A.intl.string(A.t.mOWsFx);
+        m = A.intl.string(A.t.mOWsF1);
     return (0, r.jsxs)(
         "li",
         {
@@ -108,7 +108,7 @@ function D(e) {
                             ? (0, r.jsx)(c.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/medium",
-                                  children: A.intl.format(A.t.Z4ULRE, { date: s.currentPeriodEnd }),
+                                  children: A.intl.format(A.t.Z4ULRD, { date: s.currentPeriodEnd }),
                               })
                             : t.isOnCooldown() && null != _
                               ? (0, r.jsx)(v.Z, { cooldown: _.getTime() })
@@ -116,7 +116,7 @@ function D(e) {
                                     className: C.__invalid_unappliedGuildBoostSlotDescription,
                                     color: "text-muted",
                                     variant: "text-sm/medium",
-                                    children: A.intl.string(A.t["2mcaf3"]),
+                                    children: A.intl.string(A.t["2mcafz"]),
                                 }),
                     ],
                 }),
@@ -136,7 +136,7 @@ function D(e) {
                                             l.Avr,
                                             w(R({}, e), {
                                                 variant: "primary",
-                                                text: A.intl.string(A.t.twFU3d),
+                                                text: A.intl.string(A.t.twFU3R),
                                                 onClick: () => a(t),
                                                 disabled: h,
                                                 size: "sm",
@@ -156,7 +156,7 @@ function D(e) {
                                             l.Avr,
                                             w(R({}, e), {
                                                 variant: "primary",
-                                                text: A.intl.string(A.t["2glQNj"]),
+                                                text: A.intl.string(A.t["2glQNp"]),
                                                 onClick: () => o(t),
                                                 disabled: h,
                                                 size: "sm",
@@ -253,8 +253,8 @@ let k = function (e) {
     let K = k.length;
     if (
         ((t = V
-            ? A.intl.formatToPlainString(G ? A.t["3DW6DQ"] : A.t["/u15QU"], { numUnappliedGuildBoostSlots: K })
-            : A.intl.formatToPlainString(G ? A.t["3DW6DQ"] : A.t.BPadnJ, { numUnappliedGuildBoostSlots: K })),
+            ? A.intl.formatToPlainString(G ? A.t["3DW6Dc"] : A.t["/u15Qc"], { numUnappliedGuildBoostSlots: K })
+            : A.intl.formatToPlainString(G ? A.t["3DW6Dc"] : A.t.BPadnO, { numUnappliedGuildBoostSlots: K })),
         y.ZP.isPremium(I))
     ) {
         let e = (e, t) =>
@@ -272,16 +272,16 @@ let k = function (e) {
             );
         n = G
             ? A.intl.format(A.t.omcpSE, { learnMoreHook: e })
-            : A.intl.format(A.t["5mAkVl"], {
+            : A.intl.format(A.t["5mAkVi"], {
                   numUnappliedGuildBoostSlots: K,
                   learnMoreHook: e,
               });
     } else
         n = G
-            ? A.intl.string(A.t["8pcUZm"])
-            : A.intl.formatToPlainString(A.t.Kaw82t, { numUnappliedGuildBoostSlots: K });
+            ? A.intl.string(A.t["8pcUZi"])
+            : A.intl.formatToPlainString(A.t.Kaw82o, { numUnappliedGuildBoostSlots: K });
     return (
-        (a = p && h === S.a$.NONE ? A.intl.string(A.t.mOWsFx) : A.intl.string(A.t.xr4m5O)),
+        (a = p && h === S.a$.NONE ? A.intl.string(A.t.mOWsF1) : A.intl.string(A.t.xr4m5B)),
         (0, r.jsx)("div", {
             className: C.wrapper,
             children: (0, r.jsxs)("div", {
@@ -328,7 +328,7 @@ let k = function (e) {
                                                 R(
                                                     {
                                                         variant: "primary",
-                                                        text: A.intl.string(A.t.BMx1i4),
+                                                        text: A.intl.string(A.t.BMx1iy),
                                                     },
                                                     e,
                                                 ),

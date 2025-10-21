@@ -12,7 +12,7 @@ var i = n(442837),
     g = n(981631),
     m = n(590433),
     p = n(388032),
-    f = n(75765);
+    f = n(464992);
 function h(e) {
     var t;
     let { action: n, triggerType: h, guildId: b, toggled: x, onToggleAction: j } = e,
@@ -54,23 +54,23 @@ function h(e) {
                                 null === O
                                     ? null
                                     : h === u.fX.MENTION_SPAM
-                                      ? p.intl.format(p.t.i3lsKC, { friendlyDurationString: O })
-                                      : p.intl.format(p.t.mvHxzc, { friendlyDurationString: O }),
+                                      ? p.intl.format(p.t.i3lsKD, { friendlyDurationString: O })
+                                      : p.intl.format(p.t.mvHxze, { friendlyDurationString: O }),
                                 y &&
                                     (0, r.jsx)(s.P3F, {
                                         onClick: v(!0),
                                         className: f.editChannel,
                                         tag: "span",
                                         role: "link",
-                                        children: p.intl.string(p.t["0B95RE"]),
+                                        children: p.intl.string(p.t["0B95RJ"]),
                                     }),
                             ],
                         }),
                 ],
             }),
             (0, r.jsx)(l.u, {
-                text: p.intl.format(p.t.wx6Vb2, {}),
-                "aria-label": p.intl.formatToMarkdownString(p.t.wx6Vb2, {}),
+                text: p.intl.format(p.t.wx6Vb9, {}),
+                "aria-label": p.intl.formatToMarkdownString(p.t.wx6Vb9, {}),
                 shouldShow: !y,
                 children: (0, r.jsx)("div", {
                     children: (0, r.jsx)(a.$q, {

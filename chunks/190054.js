@@ -45,7 +45,7 @@ function f(e) {
         className: a()(d.container, f),
         onClick: O,
         children: (0, l.jsx)(o.u, {
-            text: E ? c.intl.string(c.t["t5VZ8/"]) : c.intl.string(c.t.OpuAlJ),
+            text: E ? c.intl.string(c.t.t5VZ88) : c.intl.string(c.t.OpuAlK),
             children: (0, l.jsx)(
                 y,
                 ((t = (function (e) {

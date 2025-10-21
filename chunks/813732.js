@@ -43,7 +43,7 @@ var r = n(951288),
     H = n(526761),
     Y = n(726985),
     W = n(388032),
-    K = n(304343);
+    K = n(49122);
 function z() {
     return (0, r.jsx)(l.Zbd, {
         className: K.noItemsCard,
@@ -58,7 +58,7 @@ function z() {
                 }),
                 (0, r.jsx)("span", {
                     className: K.cardText,
-                    children: W.intl.string(W.t["jy/hys"]),
+                    children: W.intl.string(W.t["jy/hyj"]),
                 }),
             ],
         }),
@@ -71,8 +71,8 @@ function q() {
             (0, f.yD)(F.CL);
         }, []),
         (0, r.jsx)(l.C3N, {
-            label: W.intl.string(W.t["2GKrvr"]),
-            description: W.intl.string(W.t.kNEjGh),
+            label: W.intl.string(W.t["2GKrvn"]),
+            description: W.intl.string(W.t.kNEjGm),
             children:
                 null != e && k.ZP.hasAccountCredit(e)
                     ? (0, r.jsx)(G.Z, {
@@ -94,7 +94,7 @@ function X(e, t) {
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
                 className: K.accountCreditDescription,
-                children: W.intl.format(W.t["7Zi06e"], {
+                children: W.intl.format(W.t["7Zi06b"], {
                     helpCenterLink: M.Z.getArticleURL(V.BhN.FRACTIONAL_PREMIUM_ABOUT),
                 }),
             }),

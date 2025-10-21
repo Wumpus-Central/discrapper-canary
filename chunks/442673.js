@@ -4,7 +4,7 @@ var n = r(951288),
     o = r(481060),
     c = r(985002),
     a = r(957656),
-    l = r(345909),
+    l = r(660886),
     s = r(388032),
     d = r(601582);
 let u = (e) => {
@@ -29,14 +29,14 @@ let u = (e) => {
             g &&
                 (0, n.jsx)(o.M14, {
                     type: "critical",
-                    children: s.intl.string(l.default.krIDd3),
+                    children: s.intl.string(l.default.krIDdy),
                 }),
             (0, n.jsxs)(o.fef, {
                 children: [
                     (0, n.jsx)(a.Z.Header, {
                         currentUser: t,
                         otherUser: r,
-                        header: s.intl.formatToPlainString(l.default.NMSTb2, { isAdult: String(h) }),
+                        header: s.intl.formatToPlainString(l.default["NMSTb/"], { isAdult: String(h) }),
                         icon: (0, n.jsx)(o.Dio, {
                             size: "md",
                             color: "currentColor",
@@ -47,14 +47,14 @@ let u = (e) => {
                         gap: 16,
                         children: [
                             (0, n.jsx)(a.Z.Notice, {
-                                notice: h ? s.intl.string(l.default.EvMGLS) : s.intl.string(l.default.f1SUeX),
+                                notice: h ? s.intl.string(l.default.EvMGLT) : s.intl.string(l.default.f1SUeW),
                             }),
                             (0, n.jsx)(o.Checkbox, {
                                 checked: p,
                                 onChange: (e) => {
                                     j(e), y(!1);
                                 },
-                                label: h ? s.intl.string(l.default["/MYCeX"]) : s.intl.string(l.default.VJaHUV),
+                                label: h ? s.intl.string(l.default["/MYCee"]) : s.intl.string(l.default.VJaHUb),
                             }),
                         ],
                     }),
@@ -65,13 +65,13 @@ let u = (e) => {
                 actions: [
                     {
                         variant: "secondary",
-                        text: s.intl.string(s.t["ETE/oK"]),
+                        text: s.intl.string(s.t["ETE/oC"]),
                         onClick: f,
                         disabled: m,
                     },
                     {
                         variant: "critical-primary",
-                        text: s.intl.string(l.default["c5L+sr"]),
+                        text: s.intl.string(l.default["c5L+sl"]),
                         onClick: () => {
                             y(!1), O(r.id);
                         },

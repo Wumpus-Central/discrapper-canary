@@ -27,14 +27,14 @@ var r = n(951288),
     P = n(689674),
     N = n(963550),
     Z = n(845080),
-    T = n(295790),
-    w = n(145807),
+    w = n(295790),
+    T = n(145807),
     A = n(56744),
     R = n(834129),
     D = n(981631),
     L = n(388032),
-    M = n(77162),
-    k = n(5898);
+    M = n(378661),
+    k = n(360514);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -139,10 +139,10 @@ let B = i.memo(function e(t) {
               }),
           )
         : (m.Z.isBlockedForMessage(s)
-                ? (i = L.t["+FcYMz"])
+                ? (i = L.t["+FcYM/"])
                 : m.Z.isIgnoredForMessage(s)
-                  ? (i = L.t.VFWjc3)
-                  : (0, y.DQ)(s) && W && (i = L.t.xfkfTE),
+                  ? (i = L.t["VFWjc+"])
+                  : (0, y.DQ)(s) && W && (i = L.t.xfkfTK),
             void 0 !== i)
           ? (0, r.jsx)(F, {
                 className: M,
@@ -187,9 +187,9 @@ let B = i.memo(function e(t) {
                     enabledContentHarmTypeFlags: eu,
                     ctaButtonType: ed,
                 }),
-                childrenExecutedCommand: (0, w.Z)(s, l, R),
+                childrenExecutedCommand: (0, T.Z)(s, l, R),
                 childrenMessageContent: (0, N.Z)(t, er),
-                childrenSystemMessage: (0, T.Z)(t),
+                childrenSystemMessage: (0, w.Z)(t),
                 onContextMenu: B,
                 onClick: V,
                 hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
@@ -198,7 +198,7 @@ let B = i.memo(function e(t) {
                 messageRef: ec,
                 author: el,
                 "aria-labelledby": ef,
-                "aria-roledescription": L.intl.string(L.t.BAB0yM),
+                "aria-roledescription": L.intl.string(L.t.BAB0yK),
             });
 });
 function F(e) {

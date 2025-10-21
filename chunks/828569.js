@@ -1,4 +1,4 @@
-n.d(r, { default: () => R });
+n.d(r, { default: () => M });
 var t = n(951288),
     o = n(647438),
     i = n(120356),
@@ -26,7 +26,7 @@ var t = n(951288),
     v = n(981631),
     w = n(474936),
     S = n(388032),
-    E = n(23152);
+    E = n(803414);
 let N = (e) => {
         let { locale: r } = e;
         return (0, t.jsxs)(t.Fragment, {
@@ -34,12 +34,12 @@ let N = (e) => {
                 (0, t.jsx)(x.Z, {
                     icon: a.SlE,
                     iconClassName: E.iconColorPurple,
-                    description: S.intl.string(S.t.uAfKTU),
+                    description: S.intl.string(S.t.uAfKTe),
                 }),
                 (0, t.jsx)(x.Z, {
                     icon: a.$zw,
                     iconClassName: E.iconColorPink,
-                    description: S.intl.formatToPlainString(S.t.sWnv5O, {
+                    description: S.intl.formatToPlainString(S.t.sWnv5M, {
                         numGuildSubscriptions: w.cb,
                         discountPercent: (0, k.T3)(r, w.Rr / 100),
                     }),
@@ -47,7 +47,7 @@ let N = (e) => {
                 (0, t.jsx)(x.Z, {
                     icon: a.EO4,
                     iconClassName: E.iconColorYellow,
-                    description: S.intl.string(S.t.pqHIf3),
+                    description: S.intl.string(S.t.pqHIf7),
                 }),
             ],
         });
@@ -80,7 +80,7 @@ let N = (e) => {
                                   children:
                                       null == s
                                           ? (0, t.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS })
-                                          : S.intl.format(S.t.TBsJfX, {
+                                          : S.intl.format(S.t.TBsJfQ, {
                                                 monthlyPrice: (0, I.T4)(s.amount, s.currency),
                                             }),
                               }),
@@ -103,11 +103,11 @@ let N = (e) => {
                 (0, t.jsx)(a.Button, {
                     variant: "secondary",
                     size: "sm",
-                    text: S.intl.string(S.t.cpT0Cg),
+                    text: S.intl.string(S.t.cpT0Cq),
                     onClick: o,
                 }),
                 (0, t.jsx)(O.Z, {
-                    textOptions: { textOverride: null != r || null != n ? S.intl.string(S.t["Gd/XHB"]) : void 0 },
+                    textOptions: { textOverride: null != r || null != n ? S.intl.string(S.t["Gd/XHF"]) : void 0 },
                     premiumModalAnalyticsLocation: i,
                     subscriptionTier: w.Si.TIER_2,
                     size: s.zx.Sizes.SMALL,
@@ -119,7 +119,7 @@ let N = (e) => {
             ],
         });
     };
-function R(e) {
+function M(e) {
     var r,
         n,
         { onClose: i } = e,

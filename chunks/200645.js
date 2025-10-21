@@ -28,23 +28,23 @@ function m(e, t, n) {
 function g(e) {
     switch (e.state) {
         case "unknown":
-            return p.intl.string(p.t["KW+nqa"]);
+            return p.intl.string(p.t["KW+nqT"]);
         case "disabled":
-            return p.intl.string(p.t["Q/wAFx"]);
+            return p.intl.string(p.t["Q/wAF7"]);
         case "disconnected":
-            return p.intl.string(p.t.Xvs9IC);
+            return p.intl.string(p.t.Xvs9IM);
         case "initializing":
-            return p.intl.string(p.t.h4qz8f);
+            return p.intl.string(p.t.h4qz8W);
         case "connecting":
             return p.intl.string(p.t.fSu9XF);
         case "handshaking":
-            return p.intl.string(p.t["00aYLC"]);
+            return p.intl.string(p.t["00aYLJ"]);
         case "running":
-            return p.intl.string(p.t["54TB7e"]);
+            return p.intl.string(p.t["54TB7Z"]);
         case "waiting-for-retry":
-            return p.intl.string(p.t["0FONws"]);
+            return p.intl.string(p.t["0FONwi"]);
         case "failure":
-            return p.intl.string(p.t.Ic0nkZ);
+            return p.intl.string(p.t.Ic0nkd);
         default:
             (0, c.vE)(e.state);
     }
@@ -68,12 +68,12 @@ function E() {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: p.intl.string(p.t["roHq8/"]),
+                        children: p.intl.string(p.t.roHq80),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        children: p.intl.format(p.t["8CAL+P"], {
+                        children: p.intl.format(p.t["8CAL+D"], {
                             helpCenterLink: u.Z.getArticleURL(_.BhN.SYSTEM_SERVICE),
                         }),
                     }),
@@ -81,7 +81,7 @@ function E() {
                         ? (0, r.jsx)(o.Text, {
                               variant: "text-sm/normal",
                               color: E ? "text-feedback-positive" : "text-feedback-warning",
-                              children: E ? p.intl.string(p.t.KHVMkZ) : p.intl.format(p.t["5Rlr0d"], { status: g(f) }),
+                              children: E ? p.intl.string(p.t.KHVMkW) : p.intl.format(p.t["5Rlr0b"], { status: g(f) }),
                           })
                         : null,
                 ],
@@ -90,7 +90,7 @@ function E() {
                 variant: c ? "critical-secondary" : "primary",
                 loading: t,
                 onClick: m,
-                text: c ? p.intl.string(p.t.pAwbdH) : p.intl.string(p.t["1iI46O"]),
+                text: c ? p.intl.string(p.t.pAwbdL) : p.intl.string(p.t["1iI46O"]),
             }),
         ],
     });
@@ -105,7 +105,7 @@ class b extends i.PureComponent {
     }
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
-            i = (0, d.isLinux)() ? p.intl.string(p.t["7pPjTU"]) : p.intl.string(p.t.ZkDZoq);
+            i = (0, d.isLinux)() ? p.intl.string(p.t["7pPjTW"]) : p.intl.string(p.t.ZkDZov);
         return (0, r.jsxs)(o.Kqy, {
             gap: 16,
             children: [
@@ -117,23 +117,23 @@ class b extends i.PureComponent {
                 (0, r.jsxs)(o.C3N, {
                     children: [
                         (0, r.jsx)(o.rsf, {
-                            label: p.intl.string(p.t.WQm4p6),
-                            description: p.intl.string(p.t["s/cQra"]),
+                            label: p.intl.string(p.t.WQm4p1),
+                            description: p.intl.string(p.t["s/cQrU"]),
                             checked: e,
                             onChange: this.handleToggleOpenOnStartup,
                         }),
                         (0, d.isWindows)()
                             ? (0, r.jsx)(o.rsf, {
-                                  label: p.intl.string(p.t.n7Yjen),
-                                  description: p.intl.string(p.t.o2FSjI),
+                                  label: p.intl.string(p.t.n7Yjes),
+                                  description: p.intl.string(p.t.o2FSjB),
                                   checked: !!e && t,
                                   disabled: !e,
                                   onChange: this.handleToggleStartMinimized,
                               })
                             : null,
                         (0, r.jsx)(o.rsf, {
-                            label: p.intl.string(p.t.abLFen),
-                            description: p.intl.string(p.t["mVuX+v"]),
+                            label: p.intl.string(p.t.abLFes),
+                            description: p.intl.string(p.t["mVuX+j"]),
                             checked: n,
                             onChange: this.handleToggleMinimizeToTray,
                         }),

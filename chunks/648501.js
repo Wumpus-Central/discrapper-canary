@@ -19,21 +19,21 @@ var i = n(442837),
     O = n(790901),
     y = n(714794),
     v = n(355363),
-    j = n(687352),
+    j = n(259404),
     x = n(876548),
     C = n(25601),
     E = n(981631),
     S = n(490897),
     I = n(388032),
-    P = n(88448);
+    P = n(885525);
 function N(e) {
     var t;
     let {
             channel: n,
             isChannelSelected: N,
             isChannelCollapsed: Z,
-            voiceStates: T,
-            enableConnectedUserLimit: w,
+            voiceStates: w,
+            enableConnectedUserLimit: T,
             enableActivities: A,
             isSubscriptionGated: R,
             needSubscriptionToAccess: D,
@@ -80,7 +80,7 @@ function N(e) {
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
-            children: I.intl.format(I.t.GkAbqa, { count: (0, o.NGo)(K) }),
+            children: I.intl.format(I.t.GkAbqY, { count: (0, o.NGo)(K) }),
         });
     if (!M && n.isForumLikeChannel() && null != Y && Y > 0)
         return (0, r.jsx)(o.Text, {
@@ -88,16 +88,16 @@ function N(e) {
             color: "text-muted",
             children: (0, o.NGo)(Y),
         });
-    let X = null != (t = null == T ? void 0 : T.length) ? t : 0;
-    return null != w && w && W
+    let X = null != (t = null == w ? void 0 : w.length) ? t : 0;
+    return null != T && T && W
         ? (0, r.jsx)(x.Z, {
               userCount: X,
               video: H || z,
               channel: n,
           })
-        : Z && (0, _.a)(T) && q
+        : Z && (0, _.a)(w) && q
           ? (0, r.jsx)(o.IGR, {
-                text: I.intl.string(I.t.dI3q4u),
+                text: I.intl.string(I.t.dI3q4h),
                 color: l.Z.unsafe_rawColors.RED_400.css,
             })
           : null != V

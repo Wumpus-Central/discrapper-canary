@@ -25,7 +25,7 @@ var r = n(951288),
     A = n(441536),
     C = n(535396),
     N = n(981631),
-    R = n(989308),
+    R = n(149829),
     P = n(388032),
     w = n(765179),
     D = n(630564);
@@ -169,7 +169,7 @@ function j(e) {
                                 className: D.button,
                                 children: (0, r.jsx)(f.Button, {
                                     variant: "primary",
-                                    text: P.intl.string(P.t["oPAx7+"]),
+                                    text: P.intl.string(P.t.oPAx73),
                                     onClick: B,
                                     fullWidth: !0,
                                 }),
@@ -179,7 +179,7 @@ function j(e) {
                                     className: D.button,
                                     children: (0, r.jsx)(f.Button, {
                                         variant: "secondary",
-                                        text: P.intl.string(P.t.GoCQxc),
+                                        text: P.intl.string(P.t.GoCQxU),
                                         onClick: Z,
                                         fullWidth: !0,
                                     }),
@@ -197,7 +197,7 @@ function j(e) {
             b &&
                 (0, r.jsx)(f.IGR, {
                     className: D.topPerksCardNew,
-                    text: P.intl.string(P.t.oW0eUV),
+                    text: P.intl.string(P.t.oW0eUd),
                     color: l.Z.BG_BRAND,
                 }),
             L && (0, r.jsx)("div", { className: D.shineLine }),
@@ -221,7 +221,7 @@ let U = 3,
                   children: [
                       (0, r.jsx)(d.X6q, {
                           variant: "heading-xxl/extrabold",
-                          children: P.intl.string(R.default.wjI18f),
+                          children: P.intl.string(R.default.wjI18Q),
                       }),
                       (0, r.jsx)(d.xvT, {
                           variant: "text-lg/medium",

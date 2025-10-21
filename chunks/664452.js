@@ -1,4 +1,4 @@
-n.d(t, { default: () => y }), n(388685);
+n.d(t, { default: () => O }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(793030),
@@ -58,43 +58,43 @@ function v(e, t) {
         e
     );
 }
-function y(e) {
-    let { guildId: t, transitionState: n, onClose: y, analyticsData: O } = e,
+function O(e) {
+    let { guildId: t, transitionState: n, onClose: O, analyticsData: y } = e,
         _ = (0, a.e7)([s.Z], () => s.Z.getGuild(t), [t]),
         C = !!(null == _ ? void 0 : _.features.has(f.GuildFeatures.INVITES_DISABLED)),
         [N] = r.useState(!1),
         [S, E] = r.useState(g.Fl),
         I = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
-        P = (0, u.BT)(_),
-        w = (0, p.SG)(I) || C,
+        w = (0, u.BT)(_),
+        P = (0, p.SG)(I) || C,
         T = (0, p.sN)(I),
-        [Z, k] = r.useState(w),
+        [Z, k] = r.useState(P),
         [A, D] = r.useState(T),
         [R, L] = r.useState(!1),
-        M = Z !== w || A !== T || R,
-        B = C && !P;
-    if (null == _) return y(), null;
-    function U() {
+        M = Z !== P || A !== T || R,
+        U = C && !w;
+    if (null == _) return O(), null;
+    function B() {
         k((e) => !e);
     }
     return (0, i.jsx)(l.Modal, {
         transitionState: n,
-        title: h.intl.string(h.t.oCYAc3),
+        title: h.intl.string(h.t.oCYAc7),
         actions: [
             {
-                text: h.intl.string(h.t["ETE/oK"]),
-                onClick: y,
+                text: h.intl.string(h.t["ETE/oC"]),
+                onClick: O,
                 variant: "secondary",
                 disabled: N,
             },
             {
-                text: h.intl.string(h.t["pwm/z8"]),
+                text: h.intl.string(h.t["pwm/z0"]),
                 onClick: () => {
-                    (w || T) && !Z && !A
+                    (P || T) && !Z && !A
                         ? ((0, d.n)(_.id, !1, !1),
                           (0, o.ZDy)(() => Promise.resolve((e) => (0, i.jsx)(b.default, v(j({}, e), { guildId: t })))))
                         : (0, d.n)(_.id, Z, A, S);
-                    let { source: e, alertType: n, messageId: r } = O;
+                    let { source: e, alertType: n, messageId: r } = y;
                     c.default.track(f.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                         guild_id: t,
                         source: e,
@@ -104,13 +104,13 @@ function y(e) {
                         intervention_type_disabled: (0, p.lk)(Z, A),
                         duration: 60 * S,
                     }),
-                        y();
+                        O();
                 },
                 loading: N,
                 disabled: !M,
             },
         ],
-        onClose: y,
+        onClose: O,
         children: (0, i.jsxs)("div", {
             className: x.mainContainer,
             children: [
@@ -132,18 +132,18 @@ function y(e) {
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-md/semibold",
                                     color: "header-primary",
-                                    children: h.intl.string(h.t.Uwsjn5),
+                                    children: h.intl.string(h.t.Uwsjn6),
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: h.intl.string(h.t.qPJkZm),
+                                    children: h.intl.string(h.t.qPJkZh),
                                 }),
                             ],
                         }),
                         (0, i.jsx)(o.aML, {
                             "data-migration-pending": !0,
-                            text: h.intl.string(h.t["9GPbsb"]),
+                            text: h.intl.string(h.t["9GPbsV"]),
                             shouldShow: C,
                             children: (e) =>
                                 (0, i.jsx)(
@@ -151,9 +151,9 @@ function y(e) {
                                     v(j({}, e), {
                                         className: x.toggle,
                                         children: (0, i.jsx)(o.rsf, {
-                                            onChange: U,
+                                            onChange: B,
                                             checked: Z,
-                                            disabled: B,
+                                            disabled: U,
                                         }),
                                     }),
                                 ),
@@ -169,12 +169,12 @@ function y(e) {
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-md/semibold",
                                     color: "header-primary",
-                                    children: h.intl.string(h.t.wrDmAw),
+                                    children: h.intl.string(h.t["wrDmA/"]),
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: h.intl.string(h.t.UQbJW1),
+                                    children: h.intl.string(h.t.UQbJW7),
                                 }),
                             ],
                         }),

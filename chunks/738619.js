@@ -27,9 +27,9 @@ var i = n(951288),
     j = n(626135),
     I = n(823379),
     Z = n(5192),
-    x = n(981631),
-    E = n(388032),
-    w = n(3771);
+    E = n(981631),
+    x = n(388032),
+    w = n(458182);
 function P(e, t, n) {
     return (
         t in e
@@ -73,7 +73,7 @@ class N extends r.PureComponent {
         let e = this.props.activity.application_id;
         null != e &&
             -1 === C.indexOf(e) &&
-            (j.default.track(x.rMx.SHOW_TUTORIAL, {
+            (j.default.track(E.rMx.SHOW_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
             }),
@@ -89,7 +89,7 @@ class N extends r.PureComponent {
             children: [
                 (0, i.jsx)("div", { className: w.activityInviteEducationArrow }),
                 (0, i.jsx)("span", {
-                    children: E.intl.format(E.t["i/MoCg"], {
+                    children: x.intl.format(x.t["i/MoCt"], {
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation,
                     }),
@@ -155,20 +155,20 @@ function D(e) {
     let [y, v, S] = o,
         j = "";
     1 === o.length
-        ? (j = E.intl.format(E.t.lJ9sZW, { a: y }))
+        ? (j = x.intl.format(x.t.lJ9sZX, { a: y }))
         : 2 === o.length
-          ? (j = E.intl.format(E.t.rB0CUV, {
+          ? (j = x.intl.format(x.t.rB0CUa, {
                 a: y,
                 b: v,
             }))
           : 3 === o.length
-            ? (j = E.intl.format(E.t.StKTho, {
+            ? (j = x.intl.format(x.t.StKThj, {
                   a: y,
                   b: v,
                   c: S,
               }))
-            : o.length > 3 && (j = E.intl.format(E.t.Q8lUnJ, {}));
-    let I = m && o.length > 0 && o.length <= 3 ? E.intl.format(E.t["qD/0qa"], {}) : j;
+            : o.length > 3 && (j = x.intl.format(x.t.Q8lUnE, {}));
+    let I = m && o.length > 0 && o.length <= 3 ? x.intl.format(x.t["qD/0qZ"], {}) : j;
     return (0, i.jsxs)("div", {
         className: l()(
             w.typing,

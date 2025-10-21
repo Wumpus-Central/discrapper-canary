@@ -87,22 +87,22 @@ let S = {
             throw (
                 ((null == (i = e.body) ? void 0 : i.code) === y.evJ.TOO_MANY_THREADS
                     ? o.Z.show({
-                          title: r ? v.intl.string(v.t.kwyWNT) : v.intl.string(v.t["PeIE/v"]),
-                          body: r ? v.intl.string(v.t.KGaiEB) : v.intl.string(v.t.P0wT5e),
+                          title: r ? v.intl.string(v.t.kwyWNX) : v.intl.string(v.t["PeIE/r"]),
+                          body: r ? v.intl.string(v.t.KGaiEK) : v.intl.string(v.t.P0wT5S),
                       })
                     : (null == (a = e.body) ? void 0 : a.code) === y.evJ.TOO_MANY_ANNOUNCEMENT_THREADS
                       ? o.Z.show({
-                            title: v.intl.string(v.t["PeIE/v"]),
-                            body: v.intl.string(v.t.jDMxz8),
+                            title: v.intl.string(v.t["PeIE/r"]),
+                            body: v.intl.string(v.t.jDMxz2),
                         })
                       : 429 === e.status
                         ? o.Z.show({
-                              title: r ? v.intl.string(v.t.kwyWNT) : v.intl.string(v.t["PeIE/v"]),
-                              body: v.intl.string(v.t["Whhv4+"]),
+                              title: r ? v.intl.string(v.t.kwyWNX) : v.intl.string(v.t["PeIE/r"]),
+                              body: v.intl.string(v.t.Whhv4w),
                           })
                         : o.Z.show({
-                              title: v.intl.string(v.t.j2d6Ki),
-                              body: v.intl.string(v.t.fEptJC),
+                              title: v.intl.string(v.t.j2d6Km),
+                              body: v.intl.string(v.t.fEptJP),
                           }),
                 e)
             );
@@ -131,13 +131,13 @@ let S = {
             if ((null == (n = t.body) ? void 0 : n.code) === y.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 o.Z.show({
-                    title: t ? v.intl.string(v.t.EMYJFh) : v.intl.string(v.t.gtdVcn),
-                    body: t ? v.intl.string(v.t.QYyad3) : v.intl.string(v.t.abMwgo),
+                    title: t ? v.intl.string(v.t.EMYJFi) : v.intl.string(v.t.gtdVcs),
+                    body: t ? v.intl.string(v.t.QYyad3) : v.intl.string(v.t.abMwgm),
                 });
             } else
                 o.Z.show({
-                    title: v.intl.string(v.t.j2d6Ki),
-                    body: v.intl.string(v.t.fEptJC),
+                    title: v.intl.string(v.t.j2d6Km),
+                    body: v.intl.string(v.t.fEptJP),
                 });
             e.isForumPost() && T(e, !1);
         }
@@ -154,13 +154,13 @@ let S = {
             if ((null == (r = t.body) ? void 0 : r.code) === y.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 o.Z.show({
-                    title: t ? v.intl.string(v.t["0yAqqK"]) : v.intl.string(v.t.YErysL),
-                    body: t ? v.intl.string(v.t.QYyad3) : v.intl.string(v.t.abMwgo),
+                    title: t ? v.intl.string(v.t["0yAqqN"]) : v.intl.string(v.t.YErysD),
+                    body: t ? v.intl.string(v.t.QYyad3) : v.intl.string(v.t.abMwgm),
                 });
             } else
                 o.Z.show({
-                    title: v.intl.string(v.t.j2d6Ki),
-                    body: v.intl.string(v.t.fEptJC),
+                    title: v.intl.string(v.t.j2d6Km),
+                    body: v.intl.string(v.t.fEptJP),
                 });
         }
     },
@@ -398,8 +398,8 @@ let S = {
                             channelId: e.id,
                         }),
                             o.Z.show({
-                                title: v.intl.string(v.t.j2d6Ki),
-                                body: v.intl.string(v.t.fEptJC),
+                                title: v.intl.string(v.t.j2d6Km),
+                                body: v.intl.string(v.t.fEptJP),
                             });
                     })
             );

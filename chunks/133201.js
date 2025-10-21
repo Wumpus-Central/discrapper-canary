@@ -20,7 +20,7 @@ function x(t) {
             onSuccessButtonClick: u,
             isSuccessButtonLoading: x,
         } = t,
-        { hasAlreadyLinked: m, canStartAuthorization: h, startAuthorization: C, fetched: g } = (0, r.FG)(e);
+        { hasAlreadyLinked: f, canStartAuthorization: h, startAuthorization: C, fetched: g } = (0, r.FG)(e);
     if (!g)
         return (0, i.jsx)(l.IX, {
             transitionState: a,
@@ -32,7 +32,7 @@ function x(t) {
                 }),
             }),
         });
-    let S = m
+    let S = f
         ? {
               variant: "primary",
               text: c,
@@ -41,24 +41,24 @@ function x(t) {
           }
         : {
               variant: "primary",
-              text: d.intl.string(d.t.VDAhr6),
+              text: d.intl.string(d.t["VDAhr+"]),
               onClick: C,
               icon: l.uIJ,
               disabled: !h,
           };
-    return (0, i.jsx)(f, {
+    return (0, i.jsx)(m, {
         sku: n,
         application: e,
         transitionState: a,
         onClose: s,
-        hasAlreadyLinked: m,
+        hasAlreadyLinked: f,
         canStartAuthorization: h,
         primaryCTAButtonProps: S,
-        bodyText: d.intl.formatToPlainString(d.t.PaYE39, { applicationName: e.name }),
-        title: d.intl.string(d.t["Bn1J+f"]),
+        bodyText: d.intl.formatToPlainString(d.t.PaYE38, { applicationName: e.name }),
+        title: d.intl.string(d.t["Bn1J+a"]),
     });
 }
-function f(t) {
+function m(t) {
     let {
         sku: n,
         application: e,
@@ -67,7 +67,7 @@ function f(t) {
         onClose: r,
         hasAlreadyLinked: c,
         canStartAuthorization: x,
-        bodyText: f,
+        bodyText: m,
         title: h,
     } = t;
     return (0, i.jsxs)(l.IX, {
@@ -86,9 +86,9 @@ function f(t) {
                             (0, i.jsx)(o.Text, {
                                 variant: "text-md/normal",
                                 className: p.modalBodyText,
-                                children: f,
+                                children: m,
                             }),
-                            (0, i.jsx)(m, {
+                            (0, i.jsx)(f, {
                                 isConnected: c,
                                 application: e,
                             }),
@@ -100,7 +100,7 @@ function f(t) {
                             variant: "text-md/normal",
                             className: p.cannotLinkAccountWarning,
                             color: "text-feedback-warning",
-                            children: d.intl.string(d.t.GDL8wc),
+                            children: d.intl.string(d.t.GDL8wb),
                         }),
                 ],
             }),
@@ -111,7 +111,7 @@ function f(t) {
         ],
     });
 }
-function m(t) {
+function f(t) {
     let { isConnected: n, application: e } = t;
     return (0, i.jsx)("div", {
         className: p.statusContainer,
@@ -140,7 +140,7 @@ function m(t) {
                             variant: "text-md/normal",
                             className: p.statusText,
                             color: "text-secondary",
-                            children: n ? d.intl.string(d.t["LV+CXF"]) : d.intl.string(d.t.Plv1Xl),
+                            children: n ? d.intl.string(d.t["LV+CXH"]) : d.intl.string(d.t.Plv1Xk),
                         }),
                     ],
                 }),

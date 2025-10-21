@@ -22,7 +22,7 @@ let f = () => {
                   (0, r.jsx)(o.Heading, {
                       variant: "heading-lg/semibold",
                       color: "header-primary",
-                      children: d.intl.string(d.t["Ig/XFR"]),
+                      children: d.intl.string(d.t["Ig/XFa"]),
                   }),
                   (0, r.jsxs)(o.ubH, {
                       theme: t,
@@ -35,7 +35,7 @@ let f = () => {
                           }),
                           (0, r.jsx)(o.OZU, {
                               note: d.intl.string(d.t.WenGZ2),
-                              children: d.intl.string(d.t["aoLS8/"]),
+                              children: d.intl.string(d.t.aoLS84),
                           }),
                       ],
                   }),

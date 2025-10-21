@@ -4,7 +4,7 @@ var a = n(951288),
     i = n(481060),
     s = n(458044),
     o = n(388032),
-    l = n(58714);
+    l = n(291191);
 function c(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -30,7 +30,7 @@ function c(t) {
     }
     return t;
 }
-function g(t, e) {
+function d(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -48,8 +48,8 @@ function g(t, e) {
         t
     );
 }
-function d(t) {
-    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: g, tags: d, attachment: m } = t,
+function g(t) {
+    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: d, tags: g, attachment: m } = t,
         { name: u, avatarSrc: p } = e;
     return (0, a.jsxs)("div", {
         className: l.post,
@@ -66,7 +66,7 @@ function d(t) {
                                 children: [
                                     (0, a.jsx)("img", {
                                         src: p,
-                                        alt: o.intl.string(o.t.lqaIxM),
+                                        alt: o.intl.string(o.t.lqaIxI),
                                         width: 16,
                                         height: 16,
                                     }),
@@ -84,7 +84,7 @@ function d(t) {
                                             color: "header-primary",
                                             variant: "text-xxs/medium",
                                             className: l.inlineTag,
-                                            children: d[n],
+                                            children: g[n],
                                         }),
                                     ],
                                 }),
@@ -126,7 +126,7 @@ function d(t) {
                                             children: [
                                                 (0, a.jsx)("span", {
                                                     role: "img",
-                                                    "aria-label": o.intl.string(o.t.gHp0Cw),
+                                                    "aria-label": o.intl.string(o.t.gHp0C4),
                                                     className: l.icon,
                                                     children: "\u2764️",
                                                 }),
@@ -142,7 +142,7 @@ function d(t) {
                             (0, a.jsx)(i.Text, {
                                 color: "header-secondary",
                                 variant: "text-xs/medium",
-                                children: g,
+                                children: d,
                             }),
                         ],
                     }),
@@ -151,7 +151,7 @@ function d(t) {
             null != m &&
                 (0, a.jsx)("img", {
                     src: m,
-                    alt: o.intl.formatToPlainString(o.t.MJHFt7, { name: r }),
+                    alt: o.intl.formatToPlainString(o.t.MJHFt9, { name: r }),
                     className: l.attachment,
                 }),
         ],
@@ -165,7 +165,7 @@ function m(t) {
         children: [
             (0, a.jsx)("img", {
                 src: c,
-                alt: o.intl.string(o.t.lqaIxM),
+                alt: o.intl.string(o.t.lqaIxI),
                 width: 40,
                 height: 40,
             }),
@@ -182,7 +182,7 @@ function m(t) {
                             s &&
                                 (0, a.jsx)("span", {
                                     className: l.opTag,
-                                    children: o.intl.string(o.t.fyE8sL),
+                                    children: o.intl.string(o.t.fyE8sH),
                                 }),
                         ],
                     }),
@@ -236,7 +236,7 @@ function u(t) {
                                                         children: [
                                                             (0, a.jsx)("span", {
                                                                 role: "img",
-                                                                "aria-label": o.intl.string(o.t.gHp0Cw),
+                                                                "aria-label": o.intl.string(o.t.gHp0C4),
                                                                 className: l.icon,
                                                                 children: "\u2764️",
                                                             }),
@@ -252,7 +252,7 @@ function u(t) {
                                                                 size: "xs",
                                                                 color: "currentColor",
                                                             }),
-                                                            o.intl.string(o.t["3aOv+v"]),
+                                                            o.intl.string(o.t["3aOv+h"]),
                                                         ],
                                                     }),
                                                 ],
@@ -269,7 +269,7 @@ function u(t) {
                     children: (0, a.jsx)(i.Text, {
                         color: "text-muted",
                         variant: "text-sm/normal",
-                        children: o.intl.string(o.t.YzpScX),
+                        children: o.intl.string(o.t.YzpScd),
                     }),
                 }),
             ],
@@ -318,11 +318,11 @@ function p(t) {
                         }),
                         (0, a.jsx)("div", {
                             className: l.posts,
-                            children: x.map((t, e) => (0, a.jsx)(d, g(c({}, t), { tags: p }), e)),
+                            children: x.map((t, e) => (0, a.jsx)(g, d(c({}, t), { tags: p }), e)),
                         }),
                     ],
                 }),
-                (0, a.jsx)(u, g(c({}, h), { maxHeight: n })),
+                (0, a.jsx)(u, d(c({}, h), { maxHeight: n })),
             ],
         })
     );

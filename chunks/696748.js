@@ -14,8 +14,8 @@ var r = n(951288),
     h = n(626135),
     m = n(981631),
     g = n(388032),
-    E = n(755802),
-    b = n(10198);
+    E = n(422622),
+    b = n(197571);
 function y(e, t, n) {
     return (
         t in e
@@ -60,7 +60,7 @@ class v extends i.PureComponent {
                             className: E.conflictTitle,
                             children: e,
                         }),
-                        (0, r.jsx)("div", { children: g.intl.string(g.t.gflHOz) }),
+                        (0, r.jsx)("div", { children: g.intl.string(g.t.gflHO6) }),
                         (0, r.jsx)("div", {
                             className: E.timestamp,
                             children: o()(t).calendar(),
@@ -96,7 +96,7 @@ class v extends i.PureComponent {
                                 look: l.zx.Looks.LINK,
                                 color: l.zx.Colors.PRIMARY,
                                 onClick: this.onClose,
-                                children: g.intl.string(g.t["ETE/oK"]),
+                                children: g.intl.string(g.t["ETE/oC"]),
                             }),
                             (0, r.jsxs)(_.Z, {
                                 direction: _.Z.Direction.HORIZONTAL,
@@ -107,13 +107,13 @@ class v extends i.PureComponent {
                                         className: E.retryButton,
                                         children: (0, r.jsx)(c.Button, {
                                             variant: "secondary",
-                                            text: g.intl.string(g.t["5911LS"]),
+                                            text: g.intl.string(g.t["5911Lb"]),
                                             onClick: () => this.handlePlay(),
                                         }),
                                     }),
                                     (0, r.jsx)(c.Button, {
                                         variant: "primary",
-                                        text: g.intl.string(g.t["359PbW"]),
+                                        text: g.intl.string(g.t["359Pbd"]),
                                         onClick: () => this.handlePlay(!1),
                                     }),
                                 ],
@@ -132,10 +132,10 @@ class v extends i.PureComponent {
             children: [
                 (0, r.jsx)("div", {
                     className: E.description,
-                    children: g.intl.format(g.t.eyXUPz, { applicationName: e.name }),
+                    children: g.intl.format(g.t.eyXUP6, { applicationName: e.name }),
                 }),
                 this.renderConflictButton(
-                    g.intl.string(g.t.AQUmkp),
+                    g.intl.string(g.t.AQUmkr),
                     t.remote.timestamp,
                     E.conflictDownloadArt,
                     this.handleChooseDownload,
@@ -147,13 +147,13 @@ class v extends i.PureComponent {
                         (0, r.jsx)("div", { className: E.choiceLine }),
                         (0, r.jsx)("div", {
                             className: E.choiceTitle,
-                            children: g.intl.string(g.t.WUsA2N),
+                            children: g.intl.string(g.t.WUsA2D),
                         }),
                         (0, r.jsx)("div", { className: E.choiceLine }),
                     ],
                 }),
                 this.renderConflictButton(
-                    g.intl.string(g.t.AXVws7),
+                    g.intl.string(g.t.AXVwsw),
                     t.next.timestamp,
                     E.conflictUploadArt,
                     this.handleChooseUpload,
@@ -163,7 +163,7 @@ class v extends i.PureComponent {
     }
     render() {
         let { cloudSyncState: e, transitionState: t } = this.props,
-            n = e.type === m.TzF.CONFLICT ? g.intl.string(g.t.oNbO1d) : g.intl.string(g.t.as4Tgo);
+            n = e.type === m.TzF.CONFLICT ? g.intl.string(g.t.oNbO1f) : g.intl.string(g.t.as4Tgg);
         return (0, r.jsxs)(c.Y0X, {
             transitionState: t,
             className: E.modal,

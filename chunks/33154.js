@@ -14,7 +14,7 @@ var r = n(951288),
     d = n(41776),
     f = n(981631),
     _ = n(388032),
-    p = n(29030),
+    p = n(576385),
     h = (function (e) {
         return (e[(e.CHAT = 0)] = "CHAT"), (e[(e.REACTIONS = 1)] = "REACTIONS"), e;
     })({});
@@ -30,10 +30,10 @@ let m = (e) => {
         I = _.intl.string(_.t.d7b1p6);
     switch (t) {
         case 0:
-            v = _.intl.string(_.t.Xiwf1d);
+            v = _.intl.string(_.t.Xiwf1Q);
             break;
         case 1:
-            v = _.intl.string(_.t.GXvlU1);
+            v = _.intl.string(_.t.GXvlU9);
             break;
         default:
             return (0, u.vE)(t);
@@ -83,7 +83,7 @@ let m = (e) => {
                                 onClick: m,
                                 look: o.zx.Looks.BLANK,
                                 className: p.cancel,
-                                children: _.intl.string(_.t["2m+Sqq"]),
+                                children: _.intl.string(_.t["2m+Sqk"]),
                             }),
                         ],
                     }),

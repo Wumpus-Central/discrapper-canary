@@ -11,7 +11,7 @@ var a = n(951288),
     m = n(829716),
     p = n(981631),
     h = n(921944),
-    x = n(62222),
+    x = n(592186),
     f = n(388032),
     g = n(374104);
 let b = new s.Z("DisplayNameStylesCoachmark");
@@ -62,11 +62,11 @@ function v(e) {
                         loop: !0,
                     },
                     size: "lg",
-                    title: f.intl.string(x.default["1AE46+"]),
-                    body: [f.intl.string(x.default.cNc1g4), f.intl.string(f.t["4JNXHB"])],
+                    title: f.intl.string(x.default["1AE464"]),
+                    body: [f.intl.string(x.default.cNc1g9), f.intl.string(f.t["4JNXHG"])],
                     actions: [
                         {
-                            text: f.intl.string(f.t.uw9zIy),
+                            text: f.intl.string(f.t.uw9zI7),
                             variant: "primary",
                             onClick: y,
                         },

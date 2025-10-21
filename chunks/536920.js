@@ -5,30 +5,30 @@ var a = n(951288),
     s = n(379649),
     l = n(755721),
     o = n(481060),
-    c = n(493773),
-    d = n(579806),
+    d = n(493773),
+    c = n(579806),
     u = n(594190),
     m = n(77498),
     _ = n(626135),
     h = n(837268),
     x = n(371651),
-    g = n(981631),
-    v = n(388032),
-    p = n(94092);
+    v = n(981631),
+    g = n(388032),
+    p = n(361902);
 function j(e) {
     let { onClose: t, transitionState: n, clientSettingType: j, gameId: C } = e,
-        [y, k] = r.useState("unreported"),
-        [b, f] = r.useState(""),
+        [y, b] = r.useState("unreported"),
+        [k, f] = r.useState(""),
         [S, w] = r.useState(!1),
-        [N, R] = r.useState(!1),
-        [Z, z] = r.useState(!1),
-        [B, H] = r.useState(!1),
+        [N, z] = r.useState(!1),
+        [R, B] = r.useState(!1),
+        [H, M] = r.useState(!1),
         P = (0, i.e7)([m.Z, u.ZP], () => {
             var e;
             let t = null != C ? C : null == (e = u.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
             return null == t ? null : m.Z.getDetectableGame(t);
         }),
-        A = (0, i.e7)([x.default], () => {
+        Z = (0, i.e7)([x.default], () => {
             var e;
             let t =
                 null !=
@@ -37,41 +37,41 @@ function j(e) {
                     : void 0;
             return null != t ? h.gl[t] : void 0;
         }),
-        M = r.useMemo(() => {
+        A = r.useMemo(() => {
             let e = {
-                not_working: v.t.CHXHFR,
-                not_useful: v.t.a95skZ,
-                game_crashes_occurred: v.t.IFZ0SU,
-                poor_performance: v.t.exRczs,
-                too_many_notifications: v.t.XuBFBA,
-                multiple_monitors: v.t.p8Eky8,
-                in_the_way_of_game: v.t.YP7Pio,
-                other: v.t["YP/Ttr"],
+                not_working: g.t.CHXHFX,
+                not_useful: g.t.a95skc,
+                game_crashes_occurred: g.t.IFZ0Sa,
+                poor_performance: g.t.exRczv,
+                too_many_notifications: g.t.XuBFBM,
+                multiple_monitors: g.t.p8Ekyz,
+                in_the_way_of_game: g.t.YP7Pin,
+                other: g.t["YP/Ttl"],
             };
             return Object.keys(e).map((t) => ({
-                name: v.intl.string(e[t]),
+                name: g.intl.string(e[t]),
                 value: t,
             }));
         }, []),
-        Y = async () => {
+        D = async () => {
             var e, n, a;
-            if ("unreported" === y && 0 === b.length) {
-                z(!0), await (0, s._v)(100), z(!1), H(!0);
+            if ("unreported" === y && 0 === k.length) {
+                B(!0), await (0, s._v)(100), B(!1), M(!0);
                 return;
             }
             w(!0),
-                await _.default.track(g.rMx.OVERLAY_DISABLED_SURVEY, {
+                await _.default.track(v.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: y,
-                    comment: b,
+                    comment: k,
                     client_setting_type: j,
                     application_id: null == P ? void 0 : P.id,
                     application_name: null == P ? void 0 : P.name,
-                    most_recent_overlay_render_method: A,
+                    most_recent_overlay_render_method: Z,
                     hardware_display_count:
                         null !=
-                        (a = await (null === d.Z ||
-                        void 0 === d.Z ||
-                        null == (n = d.Z.hardware) ||
+                        (a = await (null === c.Z ||
+                        void 0 === c.Z ||
+                        null == (n = c.Z.hardware) ||
                         null == (e = n.getDisplayCount)
                             ? void 0
                             : e.call(n)))
@@ -80,17 +80,17 @@ function j(e) {
                 }),
                 await (0, s._v)(1000),
                 w(!1),
-                R(!0),
+                z(!0),
                 await (0, s._v)(1500),
                 t();
         };
     return (
-        (0, c.ZP)(() => {
-            _.default.track(g.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+        (0, d.ZP)(() => {
+            _.default.track(v.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
         }),
         (0, a.jsxs)(o.Y0X, {
             transitionState: n,
-            "aria-label": v.intl.string(v.t.bomhnZ),
+            "aria-label": g.intl.string(g.t.bomhnX),
             size: o.CgR.DYNAMIC,
             className: p.root,
             parentComponent: "OverlayDisabledSurveyModal",
@@ -103,13 +103,13 @@ function j(e) {
                                 (0, a.jsx)(o.Heading, {
                                     variant: "heading-lg/semibold",
                                     color: "header-primary",
-                                    children: v.intl.string(v.t["9JKzxc"]),
+                                    children: g.intl.string(g.t["9JKzxe"]),
                                 }),
                                 (0, a.jsx)(o.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
                                     className: p.description,
-                                    children: v.intl.string(v.t["2yjnmZ"]),
+                                    children: g.intl.string(g.t["2yjnmb"]),
                                 }),
                             ],
                         }),
@@ -126,20 +126,20 @@ function j(e) {
                             (0, a.jsxs)("div", {
                                 children: [
                                     (0, a.jsx)(o.UkV, {
-                                        isShaking: Z,
+                                        isShaking: R,
                                         intensity: 1,
                                         className: p.radioHeader,
                                         children: (0, a.jsx)(o.Text, {
                                             variant: "text-sm/semibold",
-                                            color: B ? "text-danger" : "text-muted",
-                                            children: v.intl.string(v.t.yhUvdX),
+                                            color: H ? "text-danger" : "text-muted",
+                                            children: g.intl.string(g.t.yhUvdd),
                                         }),
                                     }),
                                     (0, a.jsx)(o.FXm, {
                                         value: y,
-                                        options: M,
+                                        options: A,
                                         onChange: (e) => {
-                                            k(e), H(!1), z(!1);
+                                            b(e), M(!1), B(!1);
                                         },
                                     }),
                                 ],
@@ -151,14 +151,14 @@ function j(e) {
                                         variant: "text-sm/semibold",
                                         color: "text-muted",
                                         className: p.commentHeader,
-                                        children: v.intl.string(v.t.LYnrhY),
+                                        children: g.intl.string(g.t.LYnrhc),
                                     }),
                                     (0, a.jsx)(o.Kx8, {
                                         autosize: !0,
-                                        value: b,
+                                        value: k,
                                         maxLength: 1000,
                                         showRemainingCharacterCount: !1,
-                                        placeholder: v.intl.string(v.t["gU+bVF"]),
+                                        placeholder: g.intl.string(g.t["gU+bVJ"]),
                                         onChange: f,
                                     }),
                                 ],
@@ -171,24 +171,24 @@ function j(e) {
                     children: [
                         (0, a.jsx)(o.Button, {
                             variant: "secondary",
-                            text: v.intl.string(v.t["5WxrcX"]),
+                            text: g.intl.string(g.t["5Wxrcd"]),
                             disabled: S,
                             onClick: () => {
                                 t();
                             },
                         }),
                         (0, a.jsx)(o.UkV, {
-                            isShaking: Z,
+                            isShaking: R,
                             intensity: 1,
                             children: (0, a.jsx)(l.zx, {
                                 disabled: S,
                                 submitting: S,
-                                onClick: Y,
+                                onClick: D,
                                 color: (() => {
                                     switch (!0) {
                                         case N:
                                             return l.zx.Colors.GREEN;
-                                        case Z:
+                                        case R:
                                             return l.zx.Colors.PRIMARY;
                                         default:
                                             return l.zx.Colors.BRAND;
@@ -201,7 +201,7 @@ function j(e) {
                                         case S:
                                             return (0, a.jsx)(o.$jN, { type: o.RAz.PULSING_ELLIPSIS });
                                         default:
-                                            return v.intl.string(v.t.geKm7u);
+                                            return g.intl.string(g.t.geKm7t);
                                     }
                                 })(),
                             }),

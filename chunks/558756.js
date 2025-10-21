@@ -47,7 +47,7 @@ let c = (e) => {
                           );
                   });
               },
-              children: d ? s.intl.string(s.t.YqAjX1) : s.intl.string(s.t["w4m94+"]),
+              children: d ? s.intl.string(s.t.YqAjXy) : s.intl.string(s.t.w4m945),
           })
         : null;
 };

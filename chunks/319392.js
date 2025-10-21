@@ -9,7 +9,7 @@ var r = n(481060),
     l = n(981631),
     d = n(927923),
     u = n(388032),
-    p = n(196365),
+    p = n(99372),
     f = n(629582);
 function b() {
     return (0, o.jsxs)("div", {
@@ -29,21 +29,21 @@ function b() {
                                     alt: "",
                                 }),
                             }),
-                            u.intl.string(u.t["12Kx2t"]),
+                            u.intl.string(u.t["12Kx2v"]),
                         ],
                     }),
                     (0, o.jsx)(r.Text, {
                         tag: "p",
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: u.intl.string(u.t.M5yEcX),
+                        children: u.intl.string(u.t.M5yEcb),
                     }),
                     (0, o.jsx)(r.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
                         children: (0, o.jsx)(r.Anchor, {
                             href: a.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
-                            children: u.intl.string(u.t.hvVgAQ),
+                            children: u.intl.string(u.t.hvVgAZ),
                         }),
                     }),
                 ],
@@ -65,8 +65,8 @@ function g(e) {
             height: "160",
             alt: "",
         }),
-        title: u.intl.string(u.t["7QsHmp"]),
-        body: u.intl.string(u.t.byYNPT),
+        title: u.intl.string(u.t["7QsHmh"]),
+        body: u.intl.string(u.t.byYNPX),
         content: (0, o.jsx)(b, {}),
         onClose: t,
     });

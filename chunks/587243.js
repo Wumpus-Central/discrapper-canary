@@ -16,31 +16,31 @@ var r = n(722770),
     m = n(246133),
     p = n(981631),
     h = n(388032),
-    x = n(138005);
+    x = n(54482);
 let f = [
         {
             duration: 15 * d.Z.Millis.MINUTE,
-            label: () => h.intl.string(h.t["8ot6go"]),
+            label: () => h.intl.string(h.t["8ot6gv"]),
         },
         {
             duration: d.Z.Millis.HOUR,
-            label: () => h.intl.string(h.t.UMWBZm),
+            label: () => h.intl.string(h.t.UMWBZr),
         },
         {
             duration: 8 * d.Z.Millis.HOUR,
-            label: () => h.intl.string(h.t.EpAXPD),
+            label: () => h.intl.string(h.t.EpAXPC),
         },
         {
             duration: d.Z.Millis.DAY,
-            label: () => h.intl.string(h.t["755t4u"]),
+            label: () => h.intl.string(h.t["755t4q"]),
         },
         {
             duration: 3 * d.Z.Millis.DAY,
-            label: () => h.intl.string(h.t["f3/1cn"]),
+            label: () => h.intl.string(h.t["f3/1ch"]),
         },
         {
             duration: void 0,
-            label: () => h.intl.string(h.t["46dqJS"]),
+            label: () => h.intl.string(h.t["46dqJY"]),
         },
     ],
     g = "forever";
@@ -117,8 +117,8 @@ function j(e) {
     a.setDate(a.getDate() + 1);
     let r = b(t, a);
     return n
-        ? h.intl.formatToPlainString(h.t.ZxxHIC, { timeString: h.intl.data.formatTime(t, { format: "short" }) })
-        : h.intl.formatToPlainString(h.t["9OFjSU"], {
+        ? h.intl.formatToPlainString(h.t.ZxxHIO, { timeString: h.intl.data.formatTime(t, { format: "short" }) })
+        : h.intl.formatToPlainString(h.t["9OFjSe"], {
               dateString: r
                   ? h.intl.data.formatRelativeTime(1, "day", { numeric: "auto" })
                   : h.intl.data.formatDate(t, { dateStyle: "short" }),
@@ -137,9 +137,9 @@ function _(e) {
             if (e === a && null != r) return r;
             switch (a) {
                 case p.Skl.DND:
-                    return u ? h.intl.string(h.t.day5Aw) : t ? h.intl.string(h.t["tq/fMD"]) : h.intl.string(h.t.U9Vv19);
+                    return u ? h.intl.string(h.t.day5A6) : t ? h.intl.string(h.t["tq/fMK"]) : h.intl.string(h.t.U9Vv16);
                 case p.Skl.INVISIBLE:
-                    return t ? h.intl.string(h.t.zPc6MT) : h.intl.string(h.t.MqanVF);
+                    return t ? h.intl.string(h.t.zPc6Mc) : h.intl.string(h.t.MqanVP);
                 default:
                     return;
             }
@@ -210,13 +210,13 @@ function _(e) {
                                               (0, a.jsxs)("div", {
                                                   className: x.focusModeTitle,
                                                   children: [
-                                                      h.intl.string(h.t.gJRnwM),
+                                                      h.intl.string(h.t.gJRnwK),
                                                       (0, a.jsx)(i.IGR, {
                                                           text: d
                                                               ? h.intl.string(h.t.ApAu9f)
                                                               : b
-                                                                ? h.intl.string(h.t.gH3Fra)
-                                                                : h.intl.string(h.t["64pl8/"]),
+                                                                ? h.intl.string(h.t.gH3Frd)
+                                                                : h.intl.string(h.t["64pl82"]),
                                                           color: d ? r.Z.BRAND_500 : b ? r.Z.RED_400 : r.Z.PRIMARY_500,
                                                       }),
                                                   ],
@@ -225,7 +225,7 @@ function _(e) {
                                                   className: x.description,
                                                   children:
                                                       d && null != m && "0" !== m
-                                                          ? h.intl.formatToPlainString(h.t.BWD8fn, {
+                                                          ? h.intl.formatToPlainString(h.t.BWD8fs, {
                                                                 endTime: new Date(Number(m)).toLocaleString(
                                                                     h.intl.currentLocale,
                                                                     {
@@ -236,7 +236,7 @@ function _(e) {
                                                                     },
                                                                 ),
                                                             })
-                                                          : h.intl.string(h.t["Br1q+/"]),
+                                                          : h.intl.string(h.t["Br1q+x"]),
                                               }),
                                           ],
                                       }),

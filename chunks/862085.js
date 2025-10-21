@@ -5,7 +5,7 @@ var i = n(755721),
     l = n(481060),
     a = n(556012),
     s = n(388032),
-    o = n(75765);
+    o = n(464992);
 function c(e) {
     let { action: t, triggerType: n, toggled: c, onToggleAction: d } = e,
         u = (e) => () => d(e),
@@ -40,13 +40,13 @@ function c(e) {
                               color: "text-muted",
                               variant: "text-xs/medium",
                               children: [
-                                  s.intl.string(s.t.Oa9oWF),
+                                  s.intl.string(s.t.Oa9oWJ),
                                   (0, r.jsx)(l.P3F, {
                                       onClick: u(!0),
                                       className: o.editChannel,
                                       tag: "span",
                                       role: "link",
-                                      children: s.intl.string(s.t.QupmYW),
+                                      children: s.intl.string(s.t.QupmYY),
                                   }),
                               ],
                           })

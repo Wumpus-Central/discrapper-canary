@@ -1,4 +1,4 @@
-n.d(t, { Z: () => K }), n(388685);
+n.d(t, { Z: () => J }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -34,19 +34,19 @@ var r = n(951288),
     M = n(485299),
     k = n(615161),
     D = n(289989),
-    B = n(328242),
-    L = n(565574),
+    L = n(328242),
+    B = n(565574),
     G = n(286420),
-    U = n(51708),
+    U = n(173044),
     F = n(801604),
     H = n(577257),
     W = n(70722),
-    z = n(137349),
+    z = n(489999),
     V = n(388032),
-    J = n(374079);
-function K(e) {
+    X = n(468918);
+function J(e) {
     var t;
-    let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: K = [], selectSource: X = !0 } = e,
+    let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: J = [], selectSource: K = !0 } = e,
         Y = i.useRef(performance.now()),
         q = (0, f.e7)(
             [b.Z],
@@ -55,16 +55,16 @@ function K(e) {
                 ((0, w.isLinux)() ||
                     ((0, w.isMac)() && a().satisfies(null === _.Z || void 0 === _.Z ? void 0 : _.Z.os.release, W.jR))),
         ),
-        { analyticsLocations: Q } = (0, v.ZP)(K, x.Z.GO_LIVE_MODAL_V2),
+        { analyticsLocations: Q } = (0, v.ZP)(J, x.Z.GO_LIVE_MODAL_V2),
         $ = (0, f.e7)([C.default], () => C.default.getCurrentUser()),
         ee = (0, N.Z)(),
         { state: et, dispatch: en } = (0, k.Ti)(o, $, ee),
-        er = (0, m.Z)((0, w.isWindows)() && null != o && X ? "confirm" : "source_select");
+        er = (0, m.Z)((0, w.isWindows)() && null != o && K ? "confirm" : "source_select");
     (0, H.Z)(q, en, "confirm" === er);
     let ei = !P.ZP.canStreamQuality(P.ZP.StreamQuality.HIGH, $),
         el = !(0, w.isLinux)(),
         es = "confirm" === er,
-        eo = !X && null != o && !es,
+        eo = !K && null != o && !es,
         ea = q && et.sourceType !== u.vA.CAMERA,
         ec = i.useMemo(() => {
             let e = [
@@ -74,7 +74,7 @@ function K(e) {
                     icon: p.GON,
                 },
                 {
-                    name: V.intl.string(V.t.MhJ43N),
+                    name: V.intl.string(V.t.MhJ43A),
                     value: u.vA.CAMERA,
                     icon: p.Odl,
                 },
@@ -82,7 +82,7 @@ function K(e) {
             return (
                 q ||
                     e.splice(1, 0, {
-                        name: V.intl.string(V.t.slM8rK),
+                        name: V.intl.string(V.t.slM8rG),
                         value: u.vA.SCREEN,
                         icon: p.pzj,
                     }),
@@ -106,8 +106,8 @@ function K(e) {
                 if (t) return n();
                 "no permission" === r &&
                     h.Z.show({
-                        title: V.intl.string(V.t["X+mXen"]),
-                        body: V.intl.string(V.t.MIJCzs),
+                        title: V.intl.string(V.t["X+mXeq"]),
+                        body: V.intl.string(V.t.MIJCzr),
                     }),
                     n();
             },
@@ -120,7 +120,7 @@ function K(e) {
         var e;
         eu({
             id: "prepicked:" + et.nativeSourceType,
-            name: null != (e = I.ZP.getLastPickedContentTitle()) ? e : V.intl.string(V.t["KKcy9/"]),
+            name: null != (e = I.ZP.getLastPickedContentTitle()) ? e : V.intl.string(V.t.KKcy95),
             url: "",
         });
     }, [eu, et.nativeSourceType]);
@@ -136,10 +136,10 @@ function K(e) {
                     parent_media_session_id: y.Z.getMediaSessionId(),
                 },
             },
-            className: s()(J.root, {
-                [J.nativePicker]: q && null == o,
-                [J.channelSelector]: eo,
-                [J.confirmStep]: es,
+            className: s()(X.root, {
+                [X.nativePicker]: q && null == o,
+                [X.channelSelector]: eo,
+                [X.confirmStep]: es,
             }),
             size: p.CgR.DYNAMIC,
             transitionState: l,
@@ -147,7 +147,7 @@ function K(e) {
             children: [
                 eo
                     ? (0, r.jsx)(R.Z, {
-                          className: s()(J.channelSelectorComponent, J.withFooter),
+                          className: s()(X.channelSelectorComponent, X.withFooter),
                           onSelectChannel: ef,
                       })
                     : es
@@ -156,12 +156,12 @@ function K(e) {
                             children: [
                                 (0, r.jsx)(p.xBx, {
                                     separator: !1,
-                                    className: J.header,
+                                    className: X.header,
                                     children: (0, r.jsx)(p.sY7, {
-                                        className: J.segmentedControl,
+                                        className: X.segmentedControl,
                                         value: ed,
                                         look: "pill",
-                                        optionClassName: J.segmentedControlOption,
+                                        optionClassName: X.segmentedControlOption,
                                         onChange: (e) => {
                                             let { value: t } = e;
                                             return en({
@@ -173,11 +173,11 @@ function K(e) {
                                     }),
                                 }),
                                 (0, r.jsx)(p.hzk, {
-                                    className: J.content,
+                                    className: X.content,
                                     children:
                                         q && ed !== u.vA.CAMERA
                                             ? (0, r.jsx)(D.Z, { onSourceSelect: ep })
-                                            : (0, r.jsx)(B.Z, {
+                                            : (0, r.jsx)(L.Z, {
                                                   onClick: function (e) {
                                                       return eu(e);
                                                   },
@@ -186,16 +186,16 @@ function K(e) {
                             ],
                         }),
                 (0, r.jsxs)(p.mzw, {
-                    className: s()(J.footer, { [J.footerShadow]: !ei && es }),
+                    className: s()(X.footer, { [X.footerShadow]: !ei && es }),
                     separator: !1,
                     direction: d.k.Direction.VERTICAL,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: J.footerContent,
+                            className: X.footerContent,
                             children: [
                                 (0, r.jsx)(F.Z, {}),
                                 (0, r.jsxs)("div", {
-                                    className: J.rightButtonGroup,
+                                    className: X.rightButtonGroup,
                                     children: [
                                         ei && (0, r.jsx)(G.Z, { onClose: n }),
                                         ea &&
@@ -206,7 +206,7 @@ function K(e) {
                                                     (0, Z.t)(), (0, Z.T)(et.nativeSourceType);
                                                 },
                                                 align: "right",
-                                                ctaText: V.intl.string(V.t.FiBjwc),
+                                                ctaText: V.intl.string(V.t.FiBjwU),
                                                 hideOptionsButton: !ei,
                                             }),
                                         es &&
@@ -220,9 +220,9 @@ function K(e) {
                                                 },
                                                 align: "right",
                                                 hideOptionsButton: !ei,
-                                                ctaText: V.intl.string(z.default["5AyH/v"]),
+                                                ctaText: V.intl.string(z.default["5AyH/p"]),
                                             }),
-                                        (!ei || !(es || ea)) && (0, r.jsx)(L.Z, { align: "right" }),
+                                        (!ei || !(es || ea)) && (0, r.jsx)(B.Z, { align: "right" }),
                                     ],
                                 }),
                             ],

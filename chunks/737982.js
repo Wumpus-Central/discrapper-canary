@@ -13,9 +13,9 @@ var r = n(951288),
     h = n(981631),
     g = n(176505),
     m = n(921944),
-    b = n(45765),
+    b = n(470658),
     _ = n(388032),
-    O = n(878055);
+    O = n(990963);
 let y = i.memo(function (e) {
     let { guildId: t, selected: n } = e,
         [y, v] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
@@ -77,7 +77,7 @@ let y = i.memo(function (e) {
                                 className: e,
                                 color: "currentColor",
                             }),
-                        text: _.intl.string(b.default.vCzwMz),
+                        text: _.intl.string(b.default.vCzwM7),
                         selected: n,
                         onClick: j,
                         trailing: C

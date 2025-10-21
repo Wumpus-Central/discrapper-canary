@@ -40,8 +40,8 @@ var r = n(951288),
     Z = n(611480),
     F = n(653477),
     V = n(388032),
-    H = n(62222),
-    Y = n(133991),
+    H = n(592186),
+    Y = n(953752),
     W = n(328756);
 function K(e, t, n) {
     return (
@@ -110,7 +110,7 @@ function en(e) {
         n = y.fN.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
         i = (0, E.A)("UserSettingsAccessibility");
     return (0, r.jsx)(k.Z, {
-        title: V.intl.string(V.t.G0neg4),
+        title: V.intl.string(V.t.G0neg7),
         children: (0, r.jsxs)(c.Kqy, {
             gap: 16,
             children: [
@@ -173,7 +173,7 @@ function en(e) {
                     setting: G.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        children: V.intl.format(V.t.DHpTjY, {
+                        children: V.intl.format(V.t.DHpTjT, {
                             onAppearanceClick() {
                                 (0, j.openUserSettings)(L.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
                             },
@@ -218,7 +218,7 @@ function er() {
                         (0, r.jsx)(c.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: V.intl.string(V.t["2RHHg4"]),
+                            text: V.intl.string(V.t["2RHHgz"]),
                         }),
                         (0, r.jsx)("div", {
                             className: Y.previewAvatars,
@@ -226,7 +226,7 @@ function er() {
                                 (0, r.jsx)(
                                     c.Xo$,
                                     {
-                                        "aria-label": V.intl.string(V.t.lqaIxM),
+                                        "aria-label": V.intl.string(V.t.lqaIxI),
                                         src: W,
                                         size: c.EFr.SIZE_32,
                                         status: e,
@@ -259,8 +259,8 @@ function ei() {
         children: (n) => {
             let { visibleContent: i } = n;
             return (0, r.jsx)(c.rsf, {
-                label: V.intl.string(V.t.aZlePj),
-                description: V.intl.string(V.t["v2qF8/"]),
+                label: V.intl.string(V.t.aZlePv),
+                description: V.intl.string(V.t["v2qF8+"]),
                 badge: i === l.z.ACCESSIBILITY_HIGH_CONTRAST_MODE_NEW_BADGE ? "new" : void 0,
                 checked: e,
                 onChange: t,
@@ -271,8 +271,8 @@ function ei() {
 function ea() {
     let e = (0, s.e7)([f.Z], () => f.Z.isSwitchIconsEnabled);
     return (0, r.jsx)(c.rsf, {
-        label: V.intl.string(V.t["S3z+pa"]),
-        description: V.intl.string(V.t["3QuI9/"]),
+        label: V.intl.string(V.t["S3z+pV"]),
+        description: V.intl.string(V.t["3QuI9+"]),
         checked: e,
         onChange: (e) => (0, d.ky)(e),
         hasIcon: !0,
@@ -287,8 +287,8 @@ function eo() {
         gap: 16,
         children: [
             (0, r.jsx)(c.iRW, {
-                label: V.intl.string(V.t["5PWWCQ"]),
-                description: V.intl.string(V.t["0PbE/P"]),
+                label: V.intl.string(V.t["5PWWCY"]),
+                description: V.intl.string(V.t["0PbE/H"]),
                 "aria-labelledby": Q,
                 "aria-describedby": J,
                 markers: B.yqN.SATURATION_INCREMENTS,
@@ -303,8 +303,8 @@ function eo() {
             (0, r.jsx)(C.F, {
                 setting: G.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
                 children: (0, r.jsx)(c.rsf, {
-                    label: V.intl.string(V.t.bQCodH),
-                    description: V.intl.string(V.t.nlAOER),
+                    label: V.intl.string(V.t.bQCodD),
+                    description: V.intl.string(V.t.nlAOEW),
                     checked: t,
                     onChange: d.f1,
                 }),
@@ -318,8 +318,8 @@ function es() {
         (0, d.gs)(!e);
     }
     return (0, r.jsx)(c.rsf, {
-        label: V.intl.string(V.t.OLZFBw),
-        description: V.intl.string(V.t["72i5GB"]),
+        label: V.intl.string(V.t.OLZFB8),
+        description: V.intl.string(V.t["72i5GI"]),
         checked: e,
         onChange: t,
     });
@@ -330,8 +330,8 @@ function el() {
         return null == (e = f.Z.enableCustomCursor) || e;
     });
     return (0, r.jsx)(c.rsf, {
-        label: V.intl.string(V.t["+IsihY"]),
-        description: V.intl.string(V.t.nNZ1T0),
+        label: V.intl.string(V.t["+Isihb"]),
+        description: V.intl.string(V.t.nNZ1Tz),
         checked: e,
         onChange: () => (0, d.HU)(!e),
     });
@@ -342,19 +342,19 @@ function ec() {
         (0, d.u1)(e);
     }
     return (0, r.jsx)(c.FXm, {
-        label: V.intl.string(V.t.uSOPWl),
-        description: V.intl.string(V.t["86hjzc"]),
+        label: V.intl.string(V.t.uSOPWm),
+        description: V.intl.string(V.t["86hjzQ"]),
         options: [
             {
-                name: V.intl.string(V.t.YEOEi4),
+                name: V.intl.string(V.t.YEOEi6),
                 value: "username",
             },
             {
-                name: V.intl.string(V.t.mQaro6),
+                name: V.intl.string(V.t.mQaro3),
                 value: "dot",
             },
             {
-                name: V.intl.string(V.t.Ji2EVF),
+                name: V.intl.string(V.t.Ji2EVJ),
                 value: "hidden",
             },
         ],
@@ -369,8 +369,8 @@ function eu() {
         (0, d.X2)(e), P.default.track(B.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
     }
     return (0, r.jsx)(c.rsf, {
-        label: V.intl.string(H.default["2gFUEx"]),
-        description: V.intl.format(H.default.L8U56u, {
+        label: V.intl.string(H.default["2gFUEw"]),
+        description: V.intl.format(H.default.L8U56h, {
             onClickOpenModal() {
                 (0, O.I)({ analyticsLocations: t });
             },
@@ -391,8 +391,8 @@ function ed() {
                 children: (0, r.jsx)(C.F, {
                     setting: G.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                     children: (0, r.jsx)(c.rsf, {
-                        label: V.intl.string(V.t["sSY+mJ"]),
-                        description: V.intl.format(V.t.u6UjrK, {
+                        label: V.intl.string(V.t["sSY+mD"]),
+                        description: V.intl.format(V.t.u6UjrL, {
                             onThemeClick() {
                                 (0, j.openUserSettings)(L.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
                             },
@@ -416,9 +416,9 @@ function ef() {
         null != a.current && (clearTimeout(a.current), (a.current = null)),
             t !== e && (a.current = setTimeout(() => (0, d.qz)(t), 150));
     }, [t, e]);
-    let o = V.intl.format(V.t.GwEVEx, { learnMoreLink: w.Z.getArticleURL(B.BhN.FORCED_COLORS) });
+    let o = V.intl.format(V.t.GwEVE2, { learnMoreLink: w.Z.getArticleURL(B.BhN.FORCED_COLORS) });
     return (0, r.jsxs)(c.C3N, {
-        label: V.intl.string(V.t.TYyfOz),
+        label: V.intl.string(V.t["TYyfO/"]),
         children: [
             (0, r.jsx)(C.F, {
                 setting: G.s6.ACCESSIBILITY_HIGH_CONTRAST,
@@ -428,7 +428,7 @@ function ef() {
                 ? (0, r.jsx)(C.F, {
                       setting: G.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
                       children: (0, r.jsx)(c.rsf, {
-                          label: V.intl.string(V.t.cguieX),
+                          label: V.intl.string(V.t.cguiec),
                           description: o,
                           checked: t,
                           onChange: n,
@@ -468,21 +468,21 @@ function e_() {
         }, []);
     return (0, r.jsx)("div", {
         ref: p,
-        title: V.intl.string(V.t.e3TR1d),
+        title: V.intl.string(V.t.e3TR1b),
         className: Y.reducedMotion,
         children: (0, r.jsxs)(c.C3N, {
-            label: V.intl.string(V.t.e3TR1d),
-            description: V.intl.format(V.t["2l9U2t"], { helpdeskArticle: w.Z.getArticleURL(B.BhN.REDUCED_MOTION) }),
+            label: V.intl.string(V.t.e3TR1b),
+            description: V.intl.format(V.t["2l9U2j"], { helpdeskArticle: w.Z.getArticleURL(B.BhN.REDUCED_MOTION) }),
             children: [
                 (0, r.jsx)(c.Checkbox, {
                     checked: _,
                     onChange: h,
-                    label: V.intl.string(V.t["+Dx+HB"]),
+                    label: V.intl.string(V.t["+Dx+HD"]),
                 }),
                 (0, r.jsx)(C.F, {
                     setting: G.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                     children: (0, r.jsx)(c.rsf, {
-                        label: V.intl.string(V.t.b3XBzs),
+                        label: V.intl.string(V.t.b3XBzg),
                         checked: n,
                         onChange: m,
                     }),
@@ -490,7 +490,7 @@ function e_() {
                 (0, r.jsx)(C.F, {
                     setting: G.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
                     children: (0, r.jsx)(c.rsf, {
-                        label: V.intl.string(V.t.Iayoh4),
+                        label: V.intl.string(V.t.Iayoh5),
                         description: null != l ? (0, A.Z)(l) : void 0,
                         checked: e,
                         onChange: D.QK.updateSetting,
@@ -499,7 +499,7 @@ function e_() {
                 (0, r.jsx)(C.F, {
                     setting: G.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
                     children: (0, r.jsx)(c.rsf, {
-                        label: V.intl.string(V.t.iIaOlZ),
+                        label: V.intl.string(V.t.iIaOlc),
                         description: null != u ? (0, A.Z)(u) : void 0,
                         checked: t,
                         onChange: D.Yk.updateSetting,
@@ -516,20 +516,20 @@ function ep() {
             D.Wp.updateSetting(e);
         }, []);
     return (0, r.jsx)(c.FXm, {
-        label: V.intl.string(V.t["6NtAuL"]),
-        description: null != t ? (0, A.Z)(t) : V.intl.string(V.t.GRa6U1),
+        label: V.intl.string(V.t["6NtAuJ"]),
+        description: null != t ? (0, A.Z)(t) : V.intl.string(V.t.GRa6U7),
         options: [
             {
-                name: V.intl.string(V.t["Xp+X2d"]),
+                name: V.intl.string(V.t["Xp+X2U"]),
                 value: Z.yr.ALWAYS_ANIMATE,
             },
             {
                 name: V.intl.string(V.t.IlLT7e),
-                desc: V.intl.string(V.t.bIW9Tk),
+                desc: V.intl.string(V.t.bIW9Tl),
                 value: Z.yr.ANIMATE_ON_INTERACTION,
             },
             {
-                name: V.intl.string(V.t.IGu8x8),
+                name: V.intl.string(V.t.IGu8x3),
                 value: Z.yr.NEVER_ANIMATE,
             },
         ],
@@ -546,7 +546,7 @@ function eh() {
         (0, r.jsx)("div", {
             ref: n,
             children: (0, r.jsxs)(c.C3N, {
-                label: V.intl.string(V.t.onqU6u),
+                label: V.intl.string(V.t.onqU6o),
                 children: [
                     (0, r.jsx)(C.F, {
                         setting: G.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
@@ -559,8 +559,8 @@ function eh() {
                     (0, r.jsx)(C.F, {
                         setting: G.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
                         children: (0, r.jsx)(c.rsf, {
-                            label: V.intl.string(V.t.TZ2hZG),
-                            description: V.intl.string(V.t.Q7wgHR),
+                            label: V.intl.string(V.t.TZ2hZH),
+                            description: V.intl.string(V.t.Q7wgHc),
                             checked: t,
                             onChange: (e) => {
                                 P.default.track(B.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
@@ -588,17 +588,17 @@ function em() {
         }
         let e = () => a(!0),
             t = () => a(!1);
-        (0, N.cP)(V.intl.string(V.t.PKaNJC), !0, void 0, e, t), a(!0);
+        (0, N.cP)(V.intl.string(V.t.PKaNJL), !0, void 0, e, t), a(!0);
     };
     return (0, r.jsx)(C.F, {
         setting: G.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
         children: (0, r.jsxs)(c.C3N, {
-            label: V.intl.string(V.t.VpSKeH),
+            label: V.intl.string(V.t.VpSKeO),
             children: [
                 (0, r.jsx)(C.F, {
                     setting: G.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
                     children: (0, r.jsx)(c.rsf, {
-                        label: V.intl.string(V.t.qvTIwc),
+                        label: V.intl.string(V.t.qvTIwX),
                         checked: e,
                         onChange: D.OW.updateSetting,
                     }),
@@ -609,7 +609,7 @@ function em() {
                         gap: 16,
                         children: [
                             (0, r.jsx)(c.iRW, {
-                                label: V.intl.string(V.t.lsW5Eh),
+                                label: V.intl.string(V.t.lsW5Ev),
                                 markers: F.q,
                                 initialValue: t,
                                 defaultValue: 1,
@@ -621,13 +621,13 @@ function em() {
                                         ? (0, r.jsx)(c.Text, {
                                               variant: "text-xs/medium",
                                               color: "text-secondary",
-                                              children: V.intl.string(V.t["493lwc"]),
+                                              children: V.intl.string(V.t["493lwX"]),
                                           })
                                         : 10 === e
                                           ? (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/medium",
                                                 color: "text-secondary",
-                                                children: V.intl.string(V.t.ZSZEdX),
+                                                children: V.intl.string(V.t.ZSZEdS),
                                             })
                                           : 1 === e
                                             ? (0, r.jsx)(c.Text, {
@@ -645,11 +645,11 @@ function em() {
                                 children: (0, r.jsx)(c.Button, {
                                     size: "sm",
                                     icon: n ? c.fpf : c.o1U,
-                                    text: V.intl.string(V.t.hymc8v),
+                                    text: V.intl.string(V.t.hymc8s),
                                     onClick: o,
                                     "aria-label": ""
-                                        .concat(V.intl.string(V.t.hymc8v), " ")
-                                        .concat(V.intl.string(V.t.lsW5Eh)),
+                                        .concat(V.intl.string(V.t.hymc8s), " ")
+                                        .concat(V.intl.string(V.t.lsW5Ev)),
                                 }),
                             }),
                         ],

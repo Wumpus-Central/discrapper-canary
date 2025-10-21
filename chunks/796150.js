@@ -11,7 +11,7 @@ var a = n(120356),
     u = n(691703),
     p = n(953989),
     m = n(388032),
-    h = n(128027);
+    h = n(28552);
 function g(e) {
     let { className: t, view: n, application: a } = e,
         g = "embedded" === n,
@@ -38,7 +38,7 @@ function g(e) {
                             children: (0, r.jsx)(l.X6q, {
                                 variant: "heading-sm/semibold",
                                 color: "header-primary",
-                                children: m.intl.string(m.t["3NxHCw"]),
+                                children: m.intl.string(m.t["3NxHC4"]),
                             }),
                         }),
                     }),

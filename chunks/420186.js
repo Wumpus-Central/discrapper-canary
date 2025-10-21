@@ -27,7 +27,7 @@ let _ = () => {
             guildId: I,
             inviteCode: N,
         } = (0, g.XW)(),
-        O = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
+        y = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
     return (0, r.jsxs)("div", {
         className: l()(f.editProfileContainer, { [f.opened]: t }),
         children: [
@@ -52,12 +52,12 @@ let _ = () => {
                             (0, r.jsx)(a.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: m.intl.string(m.t.A5wHQ0),
+                                children: m.intl.string(m.t["A5wHQ/"]),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
-                                children: m.intl.string(m.t.UKCSER),
+                                children: m.intl.string(m.t.UKCSEd),
                             }),
                         ],
                     }),
@@ -72,9 +72,9 @@ let _ = () => {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: l()(f.customizationSection, { [f.opened]: t }, O ? null : f.condensed),
+                className: l()(f.customizationSection, { [f.opened]: t }, y ? null : f.condensed),
                 children: [
-                    O &&
+                    y &&
                         (0, r.jsxs)("div", {
                             className: f.serverNickname,
                             children: [
@@ -84,7 +84,7 @@ let _ = () => {
                                     children: m.intl.string(m.t.me1lRk),
                                 }),
                                 (0, r.jsx)(a.oil, {
-                                    placeholder: m.intl.string(m.t["09Q8ys"]),
+                                    placeholder: m.intl.string(m.t["09Q8yp"]),
                                     maxLength: p.l$U,
                                     value: _,
                                     onChange: v,
@@ -92,13 +92,13 @@ let _ = () => {
                             ],
                         }),
                     (0, r.jsx)(u.ZP, {
-                        title: m.intl.string(m.t["/2ed39"]),
+                        title: m.intl.string(m.t["/2ed37"]),
                         value: x,
                         onChange: b,
                     }),
                     s &&
                         (0, r.jsx)(u.ZP, {
-                            title: m.intl.string(m.t.bN4m1N),
+                            title: m.intl.string(m.t.bN4m1G),
                             value: E,
                             onChange: j,
                         }),

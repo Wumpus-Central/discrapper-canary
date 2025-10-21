@@ -14,47 +14,47 @@ var l = n(951288),
     g = n(18438),
     h = n(778825),
     x = n(150039),
-    _ = n(271383),
-    b = n(430824),
+    b = n(271383),
+    _ = n(430824),
     S = n(25990),
-    C = n(594174),
-    j = n(626135),
+    j = n(594174),
+    C = n(626135),
     v = n(51144),
     P = n(364747),
-    y = n(131016),
-    N = n(579346),
+    N = n(131016),
+    y = n(579346),
     k = n(438759),
     O = n(512070),
     T = n(299939),
     E = n(305813),
     D = n(203872),
     R = n(981631),
-    A = n(62222),
+    A = n(592186),
     I = n(388032),
-    L = n(845378);
+    L = n(300119);
 function w(e) {
     var t, n, w, B;
     let { transitionState: Z, analyticsLocations: M, guildId: G, onClose: Y } = e,
-        H = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
+        H = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
         F = null != (t = v.ZP.useName(H)) ? t : "",
-        z = (0, s.e7)([h.Z, S.Z, _.ZP], () => {
+        z = (0, s.e7)([h.Z, S.Z, b.ZP], () => {
             var e, t, n;
             return null != G
-                ? null != (t = null != (e = h.Z.getPendingNickname()) ? e : _.ZP.getNick(G, null == H ? void 0 : H.id))
+                ? null != (t = null != (e = h.Z.getPendingNickname()) ? e : b.ZP.getNick(G, null == H ? void 0 : H.id))
                     ? t
                     : F
                 : null != (n = S.Z.getPendingGlobalName())
                   ? n
                   : F;
         }, [G, H, F]),
-        U = (0, s.e7)([b.Z], () => b.Z.getGuild(G)),
-        { userDisplayNameStyles: q, guildDisplayNameStyles: K, pendingDisplayNameStyles: V } = (0, x.mD)(H, G),
-        X = void 0 !== V ? V : null != K ? K : q,
-        [W, $] = o.useState(null != (n = null == X ? void 0 : X.fontId) ? n : a.C.DEFAULT),
-        [J, Q] = o.useState(null != (w = null == X ? void 0 : X.effectId) ? w : i.m.SOLID),
+        U = (0, s.e7)([_.Z], () => _.Z.getGuild(G)),
+        { userDisplayNameStyles: q, guildDisplayNameStyles: K, pendingDisplayNameStyles: X } = (0, x.mD)(H, G),
+        V = void 0 !== X ? X : null != K ? K : q,
+        [W, $] = o.useState(null != (n = null == V ? void 0 : V.fontId) ? n : a.C.DEFAULT),
+        [J, Q] = o.useState(null != (w = null == V ? void 0 : V.effectId) ? w : i.m.SOLID),
         ee = (0, D.R)(J),
         et = (0, D.R)(i.m.GRADIENT),
-        en = null != (B = null == X ? void 0 : X.colors) ? B : [],
+        en = null != (B = null == V ? void 0 : V.colors) ? B : [],
         [el, eo] = o.useState(en.length > 0 && J !== i.m.GRADIENT ? en[0] : ee.defaultColors[0]),
         [er, ei] = o.useState(en.length > 0 && J === i.m.GRADIENT ? en : et.defaultColors);
     (0, f.Z)(
@@ -69,11 +69,11 @@ function w(e) {
         ec = o.useMemo(() => {
             var e;
             return (
-                W !== (null == X ? void 0 : X.fontId) ||
-                J !== (null == X ? void 0 : X.effectId) ||
-                !(0, c.E)(es, null != (e = null == X ? void 0 : X.colors) ? e : [])
+                W !== (null == V ? void 0 : V.fontId) ||
+                J !== (null == V ? void 0 : V.effectId) ||
+                !(0, c.E)(es, null != (e = null == V ? void 0 : V.colors) ? e : [])
             );
-        }, [X, W, J, es]),
+        }, [V, W, J, es]),
         ed = o.useCallback(() => {
             if (ec) {
                 let e = es;
@@ -84,7 +84,7 @@ function w(e) {
                     colors: e,
                 };
                 null != G ? (0, g.N_)(t) : (0, u.NI)(t),
-                    j.default.track(R.rMx.DISPLAY_NAME_STYLES_APPLIED, {
+                    C.default.track(R.rMx.DISPLAY_NAME_STYLES_APPLIED, {
                         font_name: a.C[W],
                         effect_name: i.m[J],
                         colors: es,
@@ -93,8 +93,8 @@ function w(e) {
             }
         }, [ec, W, J, es, ee, Y, G]),
         eu = o.useCallback(() => {
-            let { fontId: e, effectId: t, colors: n } = (0, y.aY)();
-            $(e), Q(t), t === i.m.GRADIENT ? ei(n) : eo(n[0]), j.default.track(R.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
+            let { fontId: e, effectId: t, colors: n } = (0, N.aY)();
+            $(e), Q(t), t === i.m.GRADIENT ? ei(n) : eo(n[0]), C.default.track(R.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
         }, [ei, eo]),
         ep = o.useCallback(
             (e) => {
@@ -135,7 +135,7 @@ function w(e) {
                                               className: L.sectionHeader,
                                               children: (0, l.jsx)(d.Heading, {
                                                   variant: "heading-lg/semibold",
-                                                  children: I.intl.string(A.default.ZPMAlZ),
+                                                  children: I.intl.string(A.default.ZPMAlX),
                                               }),
                                           }),
                                           (0, l.jsx)(O.Z, {
@@ -149,7 +149,7 @@ function w(e) {
                                               setSelectedEffectId: ep,
                                               className: L.selectionSubSection,
                                           }),
-                                          (0, l.jsx)(N.Z, {
+                                          (0, l.jsx)(y.Z, {
                                               selectedColors: es,
                                               setSelectedColors: em,
                                               selectedEffectId: J,

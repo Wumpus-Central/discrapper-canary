@@ -15,7 +15,7 @@ function u(e) {
     if (!(0, a.Z)(t) || null == f) return null;
     let _ = (e) => (e.stopPropagation(), null == n || n({ action: "PRESS_WATCH_BUTTON" }), window.open(f));
     return (0, r.jsx)(s.O1, {
-        text: c.intl.string(c.t["I6JG4+"]),
+        text: c.intl.string(c.t.I6JG46),
         fullWidth: !d,
         onClick: _,
     });

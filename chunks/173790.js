@@ -17,7 +17,7 @@ var i = n(951288),
     x = n(675993),
     g = n(689079),
     b = n(388032),
-    N = n(808888),
+    N = n(30787),
     j = n(413097);
 function C(e) {
     var t;
@@ -49,7 +49,7 @@ function C(e) {
             fade: !0,
             ref: O,
             role: "region",
-            "aria-label": b.intl.formatToPlainString(b.t["4OP4Ul"], { applicationName: L }),
+            "aria-label": b.intl.formatToPlainString(b.t["4OP4Uk"], { applicationName: L }),
             children: [
                 (0, i.jsx)(y.Z, {
                     application: A,

@@ -193,7 +193,7 @@ let Z = i.memo(function (e) {
                                 J(), (0, m.v)(K, m.d.STREAM, !1);
                             }),
                             (p = c.g5r),
-                            (Z = I.intl.string(I.t.S5anIS)))
+                            (Z = I.intl.string(I.t.S5anIc)))
                           : M
                             ? ((l = !1),
                               (a = () => {
@@ -202,17 +202,17 @@ let Z = i.memo(function (e) {
                               (p = c.hGI),
                               (Z =
                                   null != k
-                                      ? I.intl.formatToPlainString(I.t.AB5gT0, { game: k.name })
-                                      : I.intl.string(I.t.FeUKeH)))
+                                      ? I.intl.formatToPlainString(I.t.AB5gTy, { game: k.name })
+                                      : I.intl.string(I.t.FeUKeA)))
                             : ((l = !0),
                               (a = null),
                               (p = c.hGI),
                               (Z =
                                   null != L && (0, v.vd)(L.type)
-                                      ? I.intl.string(I.t.uQn9Bw)
+                                      ? I.intl.string(I.t.uQn9B8)
                                       : null != R
-                                        ? I.intl.string(I.t.fBXEoK)
-                                        : I.intl.string(I.t.n3feND))),
+                                        ? I.intl.string(I.t.fBXEoJ)
+                                        : I.intl.string(I.t.n3feNG))),
                       (0, r.jsx)("div", {
                           className: P.panelButtonContainer,
                           children: (0, r.jsx)(E.Z, {
@@ -227,7 +227,7 @@ let Z = i.memo(function (e) {
                 Y && null == G
                     ? (0, r.jsx)(E.Z, {
                           ref: H,
-                          tooltipText: I.intl.string(I.t["hC/Ze3"]),
+                          tooltipText: I.intl.string(I.t["hC/Zey"]),
                           onClick: q,
                           icon: c.ejJ,
                       })
@@ -236,7 +236,7 @@ let Z = i.memo(function (e) {
                 null == G
                     ? null
                     : (0, r.jsx)(E.Z, {
-                          tooltipText: I.intl.string(I.t["R/FK4O"]),
+                          tooltipText: I.intl.string(I.t["R/FK4A"]),
                           onClick: X(G.applicationId, G.location),
                           icon: c.PBZ,
                       }),
@@ -244,7 +244,7 @@ let Z = i.memo(function (e) {
                 null == U
                     ? null
                     : (0, r.jsx)(E.Z, {
-                          tooltipText: I.intl.string(I.t["R/FK4O"]),
+                          tooltipText: I.intl.string(I.t["R/FK4A"]),
                           onClick: Q(U.applicationId),
                           icon: c.PBZ,
                       }),
@@ -268,8 +268,8 @@ let Z = i.memo(function (e) {
             eh =
                 ei && ee && !en
                     ? (0, r.jsx)(s.J2, {
-                          title: I.intl.string(I.t.ULvRFR),
-                          body: I.intl.string(I.t.HJJDr6),
+                          title: I.intl.string(I.t.ULvRFd),
+                          body: I.intl.string(I.t["HJJDr+"]),
                           targetElementRef: z,
                           position: "top",
                           align: "center",
@@ -301,6 +301,6 @@ let Z = i.memo(function (e) {
                     i();
             },
             icon: a.u,
-            tooltipText: I.intl.string(I.t.sbdnp6),
+            tooltipText: I.intl.string(I.t.sbdnpw),
         });
     });

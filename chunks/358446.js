@@ -14,7 +14,7 @@ var r = n(704215),
     d = n(987650),
     u = n(921944),
     p = n(388032),
-    h = n(892701);
+    h = n(74912);
 function f() {
     let e = (0, c.Z)({
             location: "Overlay",
@@ -47,7 +47,7 @@ function g(e) {
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: "text-sm/normal",
-                    children: p.intl.string(p.t.EFRNtL),
+                    children: p.intl.string(p.t.EFRNtK),
                 }),
             ],
         }),

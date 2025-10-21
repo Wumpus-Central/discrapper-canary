@@ -7,7 +7,7 @@ var a = n(392711),
     o = n(481250),
     s = n(513547),
     c = n(388032),
-    d = n(10198);
+    d = n(197571);
 let u = {
     userId: 1,
     dataType: 2,
@@ -49,7 +49,7 @@ function m(e) {
             children: [
                 (0, r.jsx)(l.Heading, {
                     variant: "heading-md/medium",
-                    children: c.intl.string(c.t.MKrFKC),
+                    children: c.intl.string(c.t.MKrFKE),
                 }),
                 (0, o.VE)(n),
                 (function (e) {

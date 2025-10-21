@@ -9,7 +9,7 @@ var a = t(951288),
     c = t(174727),
     d = t(882126),
     f = t(943351),
-    m = t(513726);
+    m = t(21243);
 let g = l.memo(function (e) {
     let { playing: n, onPausePlayback: t, onPlaybackChange: r, onChangePosition: g, disabled: h = !1 } = e,
         p = (function (e) {
@@ -56,7 +56,7 @@ let g = l.memo(function (e) {
         let e = b.duration * s.Z.Millis.SECOND;
         _(0), N(0), O(e), F(e);
     }, [b]);
-    let A = l.useCallback(
+    let U = l.useCallback(
             (e, n) => {
                 if ((t(), 0 === e.button))
                     switch (n) {
@@ -72,7 +72,7 @@ let g = l.memo(function (e) {
             },
             [t],
         ),
-        U = l.useCallback((e) => {
+        A = l.useCallback((e) => {
             switch (e) {
                 case 0:
                     P(!1);
@@ -162,8 +162,8 @@ let g = l.memo(function (e) {
                                     max: (0, c.MN)(D, B, T),
                                     value: w,
                                     onChange: H,
-                                    onMouseDown: (e) => A(e, 0),
-                                    onMouseUp: () => U(0),
+                                    onMouseDown: (e) => U(e, 0),
+                                    onMouseUp: () => A(0),
                                     disabled: !y || h,
                                 }),
                                 (0, a.jsx)("input", {
@@ -174,8 +174,8 @@ let g = l.memo(function (e) {
                                     max: (0, c.MN)(D, B, T),
                                     value: S,
                                     onChange: L,
-                                    onMouseDown: (e) => A(e, 2),
-                                    onMouseUp: () => U(2),
+                                    onMouseDown: (e) => U(e, 2),
+                                    onMouseUp: () => A(2),
                                     disabled: !y || h,
                                 }),
                             ],
@@ -190,8 +190,8 @@ let g = l.memo(function (e) {
                                 max: (0, c.MN)(D, B, T),
                                 value: C,
                                 onChange: z,
-                                onMouseDown: (e) => A(e, 1),
-                                onMouseUp: () => U(1),
+                                onMouseDown: (e) => U(e, 1),
+                                onMouseUp: () => A(1),
                                 disabled: !y || h,
                             }),
                         }),

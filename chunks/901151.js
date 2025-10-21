@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(726985),
     b = n(981631),
     y = n(388032),
-    O = n(511693);
+    O = n(42101);
 let v = 3,
     I = 3;
 function T(e) {
@@ -33,7 +33,7 @@ function T(e) {
             let t = e.join(", "),
                 i = n.length - v;
             return i > 0
-                ? y.intl.format(y.t.sHFdTk, {
+                ? y.intl.format(y.t.sHFdTg, {
                       gameList: t,
                       plusMoreHook: (e, t) =>
                           (0, r.jsx)(
@@ -42,7 +42,7 @@ function T(e) {
                                   tag: "span",
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: y.intl.format(y.t["EADv+/"], { count: i }),
+                                  children: y.intl.format(y.t["EADv+4"], { count: i }),
                               },
                               t,
                           ),
@@ -115,7 +115,7 @@ function T(e) {
                             (0, r.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "interactive-normal",
-                                children: y.intl.format(y.t.oYaYOT, {}),
+                                children: y.intl.format(y.t.oYaYOe, {}),
                             }),
                             (0, r.jsx)(s.Fbu, {
                                 size: "xxs",
@@ -139,8 +139,8 @@ function S() {
     return (0, r.jsx)(m.U, {
         setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
         children: (0, r.jsx)(g.ZP, {
-            title: y.intl.string(y.t.XpBObG),
-            note: y.intl.format(y.t.oZsHTE, { helpdeskArticle: c.Z.getArticleURL(b.BhN.SLAYER_GAME_FRIENDS) }),
+            title: y.intl.string(y.t.XpBObB),
+            note: y.intl.format(y.t.oZsHTD, { helpdeskArticle: c.Z.getArticleURL(b.BhN.SLAYER_GAME_FRIENDS) }),
             value: e,
             onChange: d._j.updateSetting,
         }),
@@ -151,15 +151,15 @@ function A() {
         t = e === a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
             {
-                name: y.intl.string(y.t.JIFnNz),
+                name: y.intl.string(y.t.JIFnN9),
                 value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
             },
             {
-                name: y.intl.string(y.t.rRdsk5),
+                name: y.intl.string(y.t.rRdsk1),
                 value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
             },
             {
-                name: y.intl.string(y.t.AolKwM),
+                name: y.intl.string(y.t.AolKwN),
                 value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
             },
         ];
@@ -167,7 +167,7 @@ function A() {
         setting: E.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
         children: [
             (0, r.jsx)(m.H, {
-                header: y.intl.string(y.t["ms+TmZ"]),
+                header: y.intl.string(y.t["ms+Tme"]),
                 description: y.intl.string(y.t["4NN4+/"]),
             }),
             (0, r.jsx)(s.FXm, {
@@ -199,12 +199,12 @@ function C() {
                             variant: "text-md/medium",
                             color: "header-primary",
                             className: O.noGamesConnectedText,
-                            children: y.intl.string(y.t["+0U77e"]),
+                            children: y.intl.string(y.t["+0U77d"]),
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: y.intl.format(y.t.V8wClJ, {
+                            children: y.intl.format(y.t.V8wClM, {
                                 helpdeskArticle: c.Z.getArticleURL(b.BhN.SOCIAL_LAYER_CONNECTIONS),
                             }),
                         }),

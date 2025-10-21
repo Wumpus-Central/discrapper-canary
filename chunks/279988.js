@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    g = n(866234);
+    g = n(31829);
 let m = function (e) {
     let {
             channelId: t,
@@ -53,7 +53,7 @@ let m = function (e) {
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             className: g.clickable,
-                            children: u.intl.format(u.t.jnhD0d, { count: y }),
+                            children: u.intl.format(u.t.jnhD0S, { count: y }),
                         }),
                         (0, r.jsx)(o.Z, {
                             className: g.termsFieldCaretIcon,

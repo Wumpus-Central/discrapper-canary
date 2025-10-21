@@ -31,8 +31,8 @@ var i = n(951288),
     A = n(981631),
     w = n(921944),
     M = n(388032),
-    R = n(34101),
-    L = n(515527),
+    R = n(787267),
+    L = n(334405),
     D = n(977007);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -84,17 +84,17 @@ function B(e) {
         G = (0, u.e7)([_.Z], () => _.Z.getCustomHangStatus()),
         z = (0, E.Z)(),
         W = (0, u.e7)([_.Z], () => _.Z.getFavoritedStatuses()),
-        { defaultStatusVariant: K, allowPermanentClear: Y } = (0, y.bN)({
+        { defaultStatusVariant: q, allowPermanentClear: Y } = (0, y.bN)({
             guildId: B.guild_id,
             location: "HangStatusPicker",
         }),
-        q = (0, v.V)(K),
+        K = (0, v.V)(q),
         X = r.useRef(null),
         [J, Q] = r.useState(null != (n = null == G ? void 0 : G.status) ? n : ""),
         [$, ee] = r.useState(null != (l = null == G ? void 0 : G.emoji) ? l : null),
         [et, en] = r.useState(!1),
         ei = (0, u.e7)([_.Z], () => _.Z.getCurrentHangStatus()),
-        er = q[ei],
+        er = K[ei],
         el = W.length > 0,
         ea = null == J || "" === J.trim(),
         eo = (0, j.Z)(B),
@@ -214,7 +214,7 @@ function B(e) {
             (e, t, n) => {
                 var r;
                 let l = (0, O.Z)(e),
-                    a = l ? q[e] : null,
+                    a = l ? K[e] : null,
                     o = _.Z.isFavorited(e),
                     s = l
                         ? (0, i.jsx)(I.Z, {
@@ -224,7 +224,7 @@ function B(e) {
                                   type: A.IIU.HANG_STATUS,
                                   state: e,
                               },
-                              fallbackVariant: K,
+                              fallbackVariant: q,
                               className: R.icon,
                           })
                         : null != e.emoji &&
@@ -247,7 +247,7 @@ function B(e) {
                     "".concat(n, "-").concat(t),
                 );
             },
-            [K, eb, em, q, e_],
+            [q, eb, em, K, e_],
         ),
         ej = r.useCallback(() => {
             (0, C.Sc)(!0, Y), ee(null), Q(""), en(!1);
@@ -263,8 +263,8 @@ function B(e) {
         className: a()(L.menu, R.container),
         children: [
             (0, i.jsx)(p.J2, {
-                title: M.intl.string(M.t.waaIiI),
-                body: M.intl.string(M.t.qDoPam),
+                title: M.intl.string(M.t.waaIiO),
+                body: M.intl.string(M.t.qDoPah),
                 badge: "new",
                 shouldShow: eh === d.z.HANG_STATUS_POPOVER_NUX,
                 graphic: {
@@ -290,14 +290,14 @@ function B(e) {
                                     onBlur: ev,
                                     onFocus: ex,
                                     onChange: eE,
-                                    placeholder: M.intl.string(M.t.KPop4u),
+                                    placeholder: M.intl.string(M.t.KPop4s),
                                     leading: {
                                         type: "emoji",
                                         button: (0, i.jsx)(P.A, {
                                             customStatusEmoji: $,
                                             setCustomStatusEmoji: ee,
                                             selectedDefaultStatus: et || ep ? null : ei,
-                                            defaultStatusVariant: K,
+                                            defaultStatusVariant: q,
                                         }),
                                     },
                                     trailing:
@@ -306,21 +306,21 @@ function B(e) {
                                                 ? {
                                                       icon: h.d4D,
                                                       onClick: eC,
-                                                      "aria-label": M.intl.string(M.t.R3BPHx),
+                                                      "aria-label": M.intl.string(M.t["R3BPH+"]),
                                                       disabled: 0 === J.length,
                                                   }
                                                 : void 0
                                             : {
                                                   icon: h.XHJ,
                                                   onClick: ej,
-                                                  "aria-label": M.intl.string(M.t.S90Fub),
+                                                  "aria-label": M.intl.string(M.t.S90FuQ),
                                               },
                                 }),
                                 (0, i.jsx)(h.hU, {
                                     variant: "secondary",
                                     icon: S.k,
                                     onClick: ey,
-                                    "aria-label": M.intl.string(M.t["5UAi5+"]),
+                                    "aria-label": M.intl.string(M.t["5UAi59"]),
                                 }),
                             ],
                         }),
@@ -329,7 +329,7 @@ function B(e) {
                                 variant: "text-xs/normal",
                                 className: R.inputHint,
                                 color: "text-danger",
-                                children: M.intl.string(M.t["s/oq0d"]),
+                                children: M.intl.string(M.t["s/oq0f"]),
                             }),
                     ],
                 }),
@@ -352,7 +352,7 @@ function B(e) {
                                         (0, i.jsx)(h.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-tertiary",
-                                            children: M.intl.string(M.t.k8fFjo),
+                                            children: M.intl.string(M.t.k8fFjp),
                                         }),
                                         (0, i.jsx)(h.r7p, { size: "xxs" }),
                                     ],
@@ -374,7 +374,7 @@ function B(e) {
                                         (0, i.jsx)(h.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-tertiary",
-                                            children: M.intl.string(M.t["+9QSnp"]),
+                                            children: M.intl.string(M.t["+9QSnj"]),
                                         }),
                                         (0, i.jsx)(h.T39, { size: "xxs" }),
                                     ],

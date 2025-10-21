@@ -1,22 +1,22 @@
-n.d(t, { default: () => x }), n(388685), n(290780);
-var i = n(951288);
-n(647438);
-var r = n(990547),
-    s = n(481060),
-    a = n(785232),
-    o = n(592125),
-    l = n(594174),
-    d = n(626135),
-    c = n(33194),
-    u = n(343544),
-    m = n(14251),
-    _ = n(110223),
-    f = n(981631),
-    g = n(388032),
-    N = n(73199);
+t.d(n, { default: () => x }), t(388685), t(290780);
+var i = t(951288);
+t(647438);
+var r = t(990547),
+    s = t(481060),
+    a = t(785232),
+    o = t(592125),
+    l = t(594174),
+    d = t(626135),
+    c = t(33194),
+    u = t(343544),
+    m = t(14251),
+    _ = t(110223),
+    f = t(981631),
+    g = t(388032),
+    N = t(405842);
 function x(e) {
-    let { channelId: t, blockedUserIds: n, ignoredUserIds: x, transitionState: h, onClose: E, onJoin: p } = e,
-        A = Array.from(n)
+    let { channelId: n, blockedUserIds: t, ignoredUserIds: x, transitionState: h, onClose: E, onJoin: p } = e,
+        A = Array.from(t)
             .map((e) => l.default.getUser(e))
             .filter((e) => null !== e),
         C = Array.from(x)
@@ -25,22 +25,22 @@ function x(e) {
     return 0 === A.length && 0 === C.length
         ? null
         : (0, i.jsx)(u.Z, {
-              headerText: g.intl.string(g.t.zPUmzc),
-              descriptionText: ((e, t) => {
-                  let n = e > 0,
-                      i = t > 0;
-                  return n && i
-                      ? g.intl.string(g.t["X/iIjo"])
-                      : n
-                        ? g.intl.formatToPlainString(g.t.WgQ12t, { n: e })
+              headerText: g.intl.string(g.t.zPUmzZ),
+              descriptionText: ((e, n) => {
+                  let t = e > 0,
+                      i = n > 0;
+                  return t && i
+                      ? g.intl.string(g.t["X/iIjg"])
+                      : t
+                        ? g.intl.formatToPlainString(g.t.WgQ12s, { n: e })
                         : i
-                          ? g.intl.formatToPlainString(g.t.bwibp6, { n: t })
+                          ? g.intl.formatToPlainString(g.t.bwibp1, { n: n })
                           : null;
-              })(n.size, x.size),
+              })(t.size, x.size),
               infoRows: ((e) => {
-                  let { channelId: t, blockedUsers: n, ignoredUsers: r } = e,
-                      l = o.Z.getChannel(t),
-                      d = n.length > 0,
+                  let { channelId: n, blockedUsers: t, ignoredUsers: r } = e,
+                      l = o.Z.getChannel(n),
+                      d = t.length > 0,
                       c = r.length > 0,
                       u = [
                           {
@@ -48,12 +48,12 @@ function x(e) {
                                   className: N.icon,
                                   children: (0, i.jsx)(s.aNP, {}),
                               }),
-                              text: g.intl.string(g.t["7jN3FB"]),
+                              text: g.intl.string(g.t["7jN3FC"]),
                               className: N.row,
                           },
                       ];
                   if (d && c) {
-                      let e = [...n, ...r],
+                      let e = [...t, ...r],
                           o = e.slice(0, 2).map((e) => e.id);
                       u.unshift({
                           icon: (0, i.jsx)("div", {
@@ -63,35 +63,35 @@ function x(e) {
                                   size: s.EFr.SIZE_32,
                               }),
                           }),
-                          text: (0, m.a)(o, e.length, null == l ? void 0 : l.guild_id, t),
+                          text: (0, m.a)(o, e.length, null == l ? void 0 : l.guild_id, n),
                           className: N.row,
                       });
                   } else {
-                      let e = d ? n.slice(0, 2).map((e) => e.id) : r.slice(0, 2).map((e) => e.id),
-                          s = d ? n.length : r.length;
+                      let e = d ? t.slice(0, 2).map((e) => e.id) : r.slice(0, 2).map((e) => e.id),
+                          s = d ? t.length : r.length;
                       u.unshift({
                           icon: (0, i.jsx)("div", {
                               className: N.icon,
                               children: (0, m.r)(e, null == l ? void 0 : l.guild_id),
                           }),
-                          text: (0, m.a)(e, s, null == l ? void 0 : l.guild_id, t),
+                          text: (0, m.a)(e, s, null == l ? void 0 : l.guild_id, n),
                           className: N.row,
                       });
                   }
                   return u;
               })({
-                  channelId: t,
+                  channelId: n,
                   blockedUsers: A,
                   ignoredUsers: C,
               }),
               onDismissAndStay: () => {
                   p(),
                       E(),
-                      (0, c.dI)(new Set([...n, ...x])),
+                      (0, c.dI)(new Set([...t, ...x])),
                       d.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                           action: _.q.CLICK_TO_JOIN,
-                          channel_id: t,
-                          blocked_user_ids: Array.from(n),
+                          channel_id: n,
+                          blocked_user_ids: Array.from(t),
                           ignored_user_ids: Array.from(x),
                           warning_surface: _.fz.PRE_JOIN_MODAL,
                       });
@@ -100,21 +100,21 @@ function x(e) {
                   E(),
                       d.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                           action: _.q.CLICK_TO_LEAVE,
-                          channel_id: t,
-                          blocked_user_ids: Array.from(n),
+                          channel_id: n,
+                          blocked_user_ids: Array.from(t),
                           ignored_user_ids: Array.from(x),
                           warning_surface: _.fz.PRE_JOIN_MODAL,
                       });
               },
-              leaveButtonText: g.intl.string(g.t.rOXspK),
-              stayButtonText: g.intl.string(g.t.VJlc0d),
+              leaveButtonText: g.intl.string(g.t.rOXspL),
+              stayButtonText: g.intl.string(g.t.VJlc0S),
               transitionState: h,
               onClose: E,
               impression: {
                   impressionName: r.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
                   impressionProperties: {
-                      channel_id: t,
-                      blocked_user_ids: Array.from(n),
+                      channel_id: n,
+                      blocked_user_ids: Array.from(t),
                       warning_surface: _.fz.PRE_JOIN_MODAL,
                   },
               },

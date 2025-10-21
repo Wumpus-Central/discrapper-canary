@@ -5,7 +5,7 @@ var r = n(951288),
     a = n(457414),
     s = n(311173),
     o = n(388032),
-    c = n(332310);
+    c = n(97247);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,7 +83,7 @@ function g(e) {
                           children: [
                               (0, r.jsx)(l.Heading, {
                                   variant: "text-sm/medium",
-                                  children: o.intl.string(o.t.dnunm5),
+                                  children: o.intl.string(o.t["dnunm+"]),
                               }),
                               p
                                   ? (0, r.jsx)(l.u04, {

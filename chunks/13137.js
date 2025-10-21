@@ -15,7 +15,7 @@ var a = n(951288),
     _ = n(764920),
     m = n(531578),
     E = n(388032),
-    p = n(862083);
+    p = n(50312);
 let g = (e) =>
     s().shuffle(
         e.map((e) => {
@@ -84,27 +84,27 @@ function h(e) {
             categoriesHeader: x,
             optionsTree: L,
             hideDontShowAgainCheckbox: I,
-            impression: M,
-            transitionState: P,
+            impression: P,
+            transitionState: T,
         } = e,
-        T = (0, c.Z)(L),
-        [R, F] = l.useState(g(L));
+        F = (0, c.Z)(L),
+        [R, M] = l.useState(g(L));
     l.useEffect(() => {
-        s().isEqual(T, L) || F(g(L));
-    }, [L, T]);
+        s().isEqual(F, L) || M(g(L));
+    }, [L, F]);
     let A = (0, f.Dt)(),
         [k, w] = l.useState(!1),
-        [Z, U] = l.useState(D),
-        [$, B] = l.useState(null),
-        [H, G] = l.useState(null),
+        [U, Z] = l.useState(D),
+        [$, H] = l.useState(null),
+        [B, G] = l.useState(null),
         [J, K] = l.useState("");
     (0, d.ZP)(() => (null == o ? void 0 : o())),
         (0, d.zq)(() => {
             var e;
             h({
-                rating: Z,
+                rating: U,
                 category: null != (e = null == $ ? void 0 : $.value) ? e : null,
-                problem: H,
+                problem: B,
                 dontShowAgain: k,
                 feedback: J,
             });
@@ -112,7 +112,7 @@ function h(e) {
     let V = !0,
         z = !1;
     return (
-        null == Z
+        null == U
             ? ((n = (0, a.jsxs)(a.Fragment, {
                   children: [
                       (0, a.jsx)("div", {
@@ -120,9 +120,9 @@ function h(e) {
                           children: (0, a.jsx)(_.Z, {
                               ratingOptions: N,
                               emojiKind: C,
-                              selectedRating: Z,
+                              selectedRating: U,
                               onChangeRating: function (e) {
-                                  U(e), e === m.aZ.GOOD && S();
+                                  Z(e), e === m.aZ.GOOD && S();
                               },
                           }),
                       }),
@@ -133,26 +133,26 @@ function h(e) {
                               children: (0, a.jsx)(u.Checkbox, {
                                   checked: k,
                                   onChange: () => w(!k),
-                                  label: E.intl.string(E.t["5E9SBw"]),
+                                  label: E.intl.string(E.t["5E9SB9"]),
                                   labelType: "secondary",
                               }),
                           }),
                   ],
               })),
               (V = !1))
-            : Z !== m.aZ.GOOD && null == $
+            : U !== m.aZ.GOOD && null == $
               ? ((n = (0, a.jsx)(u.hzk, {
                     children: (0, a.jsx)(u.gNt, {
                         label: x,
                         children: (0, a.jsx)(O.Z, {
                             options: R,
-                            onClick: B,
+                            onClick: H,
                             hideCaret: () => !0,
                         }),
                     }),
                 })),
-                (i = () => U(null)))
-              : null != $ && null == H
+                (i = () => Z(null)))
+              : null != $ && null == B
                 ? ((n = (0, a.jsx)(u.hzk, {
                       children: (0, a.jsx)(u.gNt, {
                           label: $.problemsHeader,
@@ -174,16 +174,16 @@ function h(e) {
                           }),
                       }),
                   })),
-                  (i = () => B(null)))
+                  (i = () => H(null)))
                 : null != $ &&
-                  null != H &&
-                  (null == (t = $.freeformConfig) ? void 0 : t.value) === H.value &&
+                  null != B &&
+                  (null == (t = $.freeformConfig) ? void 0 : t.value) === B.value &&
                   ((n = (0, a.jsx)(u.hzk, {
                       children: (0, a.jsx)(u.Kx8, {
                           label: E.intl.string(E.t.h95hcn),
                           helperText: $.freeformConfig.hideHelpdeskLink
                               ? void 0
-                              : E.intl.format(E.t.ybi2tL, { helpdeskURL: v.Z.getSubmitRequestURL() }),
+                              : E.intl.format(E.t.ybi2tD, { helpdeskURL: v.Z.getSubmitRequestURL() }),
                           value: J,
                           maxLength: m.iF,
                           onChange: K,
@@ -194,8 +194,8 @@ function h(e) {
                   }),
                   (z = !0)),
         (0, a.jsxs)(u.Y0X, {
-            impression: M,
-            transitionState: P,
+            impression: P,
+            transitionState: T,
             className: p.modalRoot,
             "aria-labelledby": A,
             parentComponent: "FeedbackModalV2",
@@ -227,14 +227,14 @@ function h(e) {
                             (0, a.jsx)(u.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: E.intl.string(E.t["13/7kZ"]),
+                                text: E.intl.string(E.t["13/7kX"]),
                                 onClick: i,
                             }),
                             z &&
                                 (0, a.jsx)(u.Button, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: E.intl.string(E.t.geKm7u),
+                                    text: E.intl.string(E.t.geKm7t),
                                     onClick: S,
                                 }),
                         ],

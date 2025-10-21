@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => b }), n(35282);
+n.r(e), n.d(e, { default: () => B }), n(35282);
 var s = n(951288),
     r = n(647438),
     i = n(593473),
@@ -11,8 +11,8 @@ var s = n(951288),
     f = n(314897),
     u = n(981631),
     p = n(388032),
-    m = n(259522),
-    g = n(10198);
+    m = n(796771),
+    g = n(197571);
 function x(t, e, n) {
     return (
         e in t
@@ -34,7 +34,7 @@ function N() {
         window.close();
     } catch (t) {}
 }
-class b extends r.PureComponent {
+class B extends r.PureComponent {
     componentDidMount() {
         let { stage: t, key: e } = this.state;
         t === j
@@ -70,15 +70,15 @@ class b extends r.PureComponent {
                 }),
                 (0, s.jsx)(d.Dx, {
                     className: g.marginBottom8,
-                    children: p.intl.string(p.t.YsLqvr),
+                    children: p.intl.string(p.t.YsLqvs),
                 }),
                 (0, s.jsx)(d.DK, {
                     className: g.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDg),
+                    children: p.intl.string(p.t.CSBYDo),
                 }),
                 (0, s.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16O),
+                    children: p.intl.string(p.t.fIv16B),
                 }),
             ],
         });
@@ -92,15 +92,15 @@ class b extends r.PureComponent {
                 }),
                 (0, s.jsx)(d.Dx, {
                     className: g.marginBottom8,
-                    children: p.intl.string(p.t.hsLIsb),
+                    children: p.intl.string(p.t.hsLIsW),
                 }),
                 (0, s.jsx)(d.DK, {
                     className: g.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDg),
+                    children: p.intl.string(p.t.CSBYDo),
                 }),
                 (0, s.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16O),
+                    children: p.intl.string(p.t.fIv16B),
                 }),
             ],
         });
@@ -111,9 +111,9 @@ class b extends r.PureComponent {
                 (0, s.jsx)(d.Hh, {}),
                 (0, s.jsx)(d.Dx, {
                     className: g.marginBottom8,
-                    children: p.intl.string(p.t["ctWa6+"]),
+                    children: p.intl.string(p.t.ctWa65),
                 }),
-                (0, s.jsx)(d.DK, { children: p.intl.string(p.t["53IHoq"]) }),
+                (0, s.jsx)(d.DK, { children: p.intl.string(p.t["53IHoo"]) }),
             ],
         });
     }

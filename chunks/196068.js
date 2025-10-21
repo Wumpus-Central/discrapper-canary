@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(981631),
     b = n(474936),
     y = n(388032),
-    O = n(93128);
+    O = n(961987);
 let v = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, c.a0)(),
@@ -50,13 +50,13 @@ let v = (e) => {
                     color: "currentColor",
                     className: O.premiumIcon,
                 }),
-                I ? y.intl.string(y.t["5JMiOj"]) : y.intl.string(y.t["Pzh+Gx"]),
+                I ? y.intl.string(y.t["5JMiOo"]) : y.intl.string(y.t["Pzh+G2"]),
                 (0, r.jsx)(s.NoS, {
                     noticeType: E.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
                         T(), null !== e && e(g.L.TAKE_ACTION);
                     },
-                    children: y.intl.string(y.t.jVcuVV),
+                    children: y.intl.string(y.t.jVcuVY),
                 }),
             ],
         });

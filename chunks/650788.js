@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => V });
+r.r(t), r.d(t, { default: () => M });
 var n = r(951288),
     i = r(647438),
     o = r(120356),
@@ -28,10 +28,10 @@ var n = r(951288),
     I = r(886176),
     Z = r(333866),
     D = r(176505),
-    N = r(20281),
-    T = r(388032),
-    k = r(210461),
-    R = r(161655);
+    T = r(20281),
+    k = r(388032),
+    N = r(486663),
+    R = r(97009);
 function E(e) {
     var t;
     let { guildId: r, productId: i } = e,
@@ -45,7 +45,7 @@ function E(e) {
               defaultSortOption:
                   null != (t = null == l ? void 0 : l.store_page_guild_products_default_sort) ? t : Z.zJ.NAME,
               children: (0, n.jsxs)("div", {
-                  className: k.contentContainer,
+                  className: N.contentContainer,
                   children: [
                       (0, n.jsx)(S.C, {
                           guild: s,
@@ -54,7 +54,7 @@ function E(e) {
                       (0, n.jsx)(a.LZC, { size: 32 }),
                       C.length > 0 && (0, n.jsx)(w.z, { guild: s }),
                       (0, n.jsxs)("div", {
-                          className: k.tabContainer,
+                          className: N.tabContainer,
                           children: [
                               (0, n.jsx)(a.LZC, { size: 32 }),
                               u && (0, n.jsx)(P.Z, { guildId: r }),
@@ -70,7 +70,7 @@ function E(e) {
               }),
           });
 }
-function U(e) {
+function V(e) {
     let { guildId: t, productId: r } = e,
         o = (0, c.e7)([p.Z], () => p.Z.isConnected()),
         h = (0, c.e7)([g.Z], () => g.Z.getGuild(t)),
@@ -83,7 +83,7 @@ function U(e) {
         }, [t, P]),
         (0, d.Z)(
             {
-                type: N.n.PAGE,
+                type: T.n.PAGE,
                 name: s.ImpressionNames.GUILD_SHOP_PAGE,
                 properties: {
                     product_id: r,
@@ -94,7 +94,7 @@ function U(e) {
         ),
         (0, n.jsxs)("div", {
             "data-has-border": !0,
-            className: l()(R.chat, k.container),
+            className: l()(R.chat, N.container),
             children: [
                 (0, n.jsxs)(j.Z, {
                     children: [
@@ -103,12 +103,12 @@ function U(e) {
                             "aria-hidden": !0,
                             color: u.Z.INTERACTIVE_ACTIVE,
                         }),
-                        (0, n.jsx)(j.Z.Title, { children: T.intl.string(T.t.al5EXF) }),
+                        (0, n.jsx)(j.Z.Title, { children: k.intl.string(k.t.al5EXL) }),
                         (0, n.jsx)(L.Z, {}),
                     ],
                 }),
                 (0, n.jsx)(a.u2D, {
-                    className: k.content,
+                    className: N.content,
                     children: o
                         ? (0, n.jsx)(E, {
                               guildId: t,
@@ -116,20 +116,20 @@ function U(e) {
                           })
                         : (0, n.jsx)(a.$jN, {}),
                 }),
-                (0, n.jsx)(b.Z, { className: k.sparkleCloudTop }),
-                (0, n.jsx)(f.Z, { className: k.sparkleCloudBottom }),
+                (0, n.jsx)(b.Z, { className: N.sparkleCloudTop }),
+                (0, n.jsx)(f.Z, { className: N.sparkleCloudBottom }),
             ],
         })
     );
 }
-function V(e) {
+function M(e) {
     let { guildId: t, productId: r, initialTab: i } = e;
     return (
         null == i && null != r && (i = v.y.GUILD_PRODUCTS),
         (0, n.jsx)(m.Z, {
             initialTab: i,
             guildId: t,
-            children: (0, n.jsx)(U, {
+            children: (0, n.jsx)(V, {
                 initialTab: i,
                 productId: r,
                 guildId: t,

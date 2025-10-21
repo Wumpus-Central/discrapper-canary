@@ -12,7 +12,7 @@ var r = n(951288),
     h = n(305342),
     f = n(981631),
     g = n(388032),
-    m = n(31428);
+    m = n(200813);
 function b(e) {
     let { guildId: t, channelId: n } = e,
         b = (0, d.C)({
@@ -21,8 +21,8 @@ function b(e) {
         }),
         y = (0, c.GG)(t),
         _ = (0, c.YB)(t),
-        j = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        O = null == j ? void 0 : j.name,
+        O = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        j = null == O ? void 0 : O.name,
         x = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
         v = i.useMemo(() => {
             let e = {};
@@ -34,7 +34,7 @@ function b(e) {
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: b.map((e) => e.id),
     }),
-    null == j)
+    null == O)
         ? (0, r.jsx)("div", {
               className: m.__invalid_spinnerContainer,
               children: (0, r.jsx)(a.$jN, { className: m.__invalid_spinner }),
@@ -45,8 +45,8 @@ function b(e) {
                   (0, r.jsx)(a.Heading, {
                       variant: "heading-xl/semibold",
                       className: m.joinCtaTitle,
-                      children: g.intl.format(g.t.xHMpys, {
-                          serverName: O,
+                      children: g.intl.format(g.t.xHMpym, {
+                          serverName: j,
                           channelName: null == x ? void 0 : x.name,
                       }),
                   }),

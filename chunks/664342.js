@@ -11,13 +11,13 @@ var r = n(951288),
     p = n(192127),
     h = n(13736),
     f = n(732393),
-    g = n(71991),
+    g = n(214906),
     m = n(612856),
     b = n(137591),
     y = n(299206),
     _ = n(727429),
-    j = n(665149),
-    O = n(359110),
+    O = n(665149),
+    j = n(359110),
     x = n(585483),
     v = n(407908),
     C = n(739830),
@@ -74,7 +74,7 @@ function T(e) {
     function o() {
         a((e) => !e);
     }
-    let c = E.intl.string(E.t.UKOtz8);
+    let c = E.intl.string(E.t["UKOtz+"]);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: s,
         shouldShow: n,
@@ -89,7 +89,7 @@ function T(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                j.ZP.Icon,
+                O.ZP.Icon,
                 P(Z({}, e), {
                     ref: s,
                     onClick: o,
@@ -105,7 +105,7 @@ function T(e) {
 function N(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         _ = (0, c.Z)(t, "Sidebar Overflow"),
-        j = (0, u.Z)(t),
+        O = (0, u.Z)(t),
         v = (0, g.Z)(t),
         C = (0, m.Z)(t),
         I = (0, a.Z)(t),
@@ -116,17 +116,17 @@ function N(e) {
         R = (0, s.Z)(t),
         w = (0, y.Z)({
             id: t.id,
-            label: E.intl.string(E.t.DQ797u),
+            label: E.intl.string(E.t.DQ797g),
         }),
         A = (0, b.Z)(t),
         D = (0, p.Z)(t);
     function L() {
-        (0, O.Kh)(t.id);
+        (0, j.Kh)(t.id);
     }
     return (0, r.jsxs)(l.v2r, {
         navId: "thread-context",
         onClose: n,
-        "aria-label": E.intl.string(E.t["1NBjqa"]),
+        "aria-label": E.intl.string(E.t["1NBjqb"]),
         onSelect: i,
         children: [
             (0, r.jsxs)(l.kSQ, {
@@ -134,7 +134,7 @@ function N(e) {
                     _,
                     (0, r.jsx)(l.sNh, {
                         id: "open",
-                        label: E.intl.string(E.t.IxVmZm),
+                        label: E.intl.string(E.t.IxVmZi),
                         action: L,
                     }),
                 ],
@@ -143,13 +143,13 @@ function N(e) {
                 children: [v, C],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [T, j, P, D],
+                children: [T, O, P, D],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
                     (0, r.jsx)(l.sNh, {
                         id: "search",
-                        label: E.intl.string(E.t["5h0QOD"]),
+                        label: E.intl.string(E.t["5h0QOP"]),
                         icon: l.rgF,
                         action: function () {
                             L(),
@@ -160,7 +160,7 @@ function N(e) {
                     }),
                     (0, r.jsx)(l.sNh, {
                         id: "pins",
-                        label: E.intl.string(E.t["2BSH7u"]),
+                        label: E.intl.string(E.t["2BSH7n"]),
                         icon: l.rgF,
                         action: function () {
                             L(), x.S.dispatch(S.CkL.TOGGLE_CHANNEL_PINS);
@@ -184,9 +184,9 @@ function R(e) {
             t.isForumPost() ? null : (0, r.jsx)(C.Z, { channel: t }),
             t.isModeratorReportChannel() ? (0, r.jsx)(v.Z, { channel: t }) : null,
             (0, r.jsx)(T, { channel: t }),
-            (0, r.jsx)(j.ZP.Icon, {
+            (0, r.jsx)(O.ZP.Icon, {
                 icon: l.Dio,
-                tooltip: E.intl.string(E.t.cpT0Cg),
+                tooltip: E.intl.string(E.t.cpT0Cq),
                 onClick: () => (0, I.vN)((0, _.e)(t), null != n ? n : t.parent_id),
             }),
         ],

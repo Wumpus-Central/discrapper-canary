@@ -12,9 +12,9 @@ var a = t(120356),
     o = t(603113),
     u = t(481060),
     c = t(343312),
-    d = t(45765),
+    d = t(470658),
     m = t(388032),
-    v = t(815177);
+    v = t(467078);
 function g(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -47,7 +47,7 @@ function f(e) {
         g(
             {
                 variant: "primary",
-                text: m.intl.string(m.t["3PatS0"]),
+                text: m.intl.string(m.t["3PatSz"]),
                 onClick: n,
                 icon: u.ZSh,
                 iconPosition: "end",
@@ -62,9 +62,9 @@ function b(e) {
         o =
             r > 0
                 ? null != a
-                    ? m.intl.string(d.default.e3Q5Ky)
-                    : m.intl.string(d.default["cmSy/f"])
-                : m.intl.string(m.t.K344S0);
+                    ? m.intl.string(d.default.e3Q5Kz)
+                    : m.intl.string(d.default["cmSy/b"])
+                : m.intl.string(m.t.K344S7);
     return (0, l.jsx)(
         u.Button,
         g(
@@ -100,10 +100,10 @@ function j(e) {
         d = null == o || null == (n = o.onBack) ? void 0 : n.type;
     switch (d) {
         case "go-to-step":
-            i = m.intl.string(m.t["13/7kZ"]);
+            i = m.intl.string(m.t["13/7kX"]);
             break;
         case "close":
-            i = m.intl.string(m.t.cpT0Cg);
+            i = m.intl.string(m.t.cpT0Cq);
     }
     return (
         s()(null != i, "Invalid stepType ".concat(d)),

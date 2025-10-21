@@ -8,12 +8,12 @@ var i = n(120356),
     s = n(785717),
     c = n(86419),
     u = n(388032),
-    d = n(145624);
+    d = n(51708);
 function f(e) {
     let { game: t, widgetType: n, iconSize: i = "refresh_sm", className: f, buttonRef: g, onRemove: p } = e,
         { trackUserProfileEditAction: m } = (0, s.KZ)();
     return (0, r.jsx)(l.u, {
-        text: u.intl.string(u.t.HUvyDQ),
+        text: u.intl.string(u.t.HUvyDc),
         children: (0, r.jsx)(o.P3F, {
             innerRef: g,
             onClick: () => {
@@ -26,7 +26,7 @@ function f(e) {
                     }),
                     null == p || p();
             },
-            "aria-label": u.intl.string(u.t.HUvyDQ),
+            "aria-label": u.intl.string(u.t.HUvyDc),
             className: a()(f, d.clickable),
             children: (0, r.jsx)(o.XHJ, {
                 size: i,

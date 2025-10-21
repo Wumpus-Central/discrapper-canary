@@ -7,7 +7,7 @@ var n = r(951288),
     l = r(481060),
     c = r(144114),
     u = r(317175),
-    d = r(597313);
+    d = r(33048);
 function h(e) {
     let { show: t, alpha2: r, countryCode: i } = e,
         h = s.useRef(null),
@@ -21,7 +21,7 @@ function h(e) {
         }
         return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
     }, [t, r, i]);
-    let b = (0, l.q_F)({
+    let C = (0, l.q_F)({
         width: "".concat(f, "px"),
         onStart: () => {
             y(!0);
@@ -47,7 +47,7 @@ function h(e) {
                 ref: h,
                 children: (0, n.jsx)(a.animated.div, {
                     className: d.container,
-                    style: b,
+                    style: C,
                     children: (0, n.jsxs)("div", {
                         className: d.innerContainer,
                         ref: p,

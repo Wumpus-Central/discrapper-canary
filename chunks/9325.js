@@ -14,7 +14,7 @@ var r = n(951288),
     m = n(981631),
     f = n(260539),
     _ = n(388032),
-    x = n(10198);
+    x = n(197571);
 function E(e, t, n) {
     e.preventDefault(),
         g.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
@@ -45,13 +45,13 @@ function v(e) {
                     (0, r.jsx)(a.zx, {
                         onClick: (e) => E(e, t, n),
                         className: x.marginTop20,
-                        children: _.intl.string(_.t["a3Gl+f"]),
+                        children: _.intl.string(_.t["a3Gl+e"]),
                     }),
                 ],
             })
           : (0, r.jsx)(p.Z, {
-                text: _.intl.string(_.t["e/rZ2t"]),
-                buttonCta: _.intl.string(_.t.HAvYn5),
+                text: _.intl.string(_.t["e/rZ2n"]),
+                buttonCta: _.intl.string(_.t.HAvYn0),
                 onClick: (e) => E(e, t, n),
             });
 }

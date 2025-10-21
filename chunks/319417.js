@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(481060),
     l = n(443603),
     c = n(388032),
-    u = n(910792);
+    u = n(91252);
 function d(e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -26,7 +26,7 @@ function d(e) {
                         disabled: n,
                         isActive: !1,
                         noHover: n,
-                        "aria-label": c.intl.string(c.t.oeb1vr),
+                        "aria-label": c.intl.string(c.t.oeb1vg),
                         children: (0, r.jsx)(s.Uuj, {
                             size: "xs",
                             color: "currentColor",

@@ -14,7 +14,7 @@ var r = n(951288),
     p = n(981631),
     O = n(273504),
     y = n(388032),
-    m = n(31593);
+    m = n(335260);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -108,12 +108,12 @@ function E(e, t) {
             await S(i, x),
                 N(i),
                 null != _
-                    ? (0, l.showToast)((0, l.createToast)(y.intl.string(y.t.wH6L0t), l.ToastType.FAILURE))
-                    : (0, l.showToast)((0, l.createToast)(y.intl.string(y.t["0rdYm5"]), l.ToastType.SUCCESS));
+                    ? (0, l.showToast)((0, l.createToast)(y.intl.string(y.t.wH6L0r), l.ToastType.FAILURE))
+                    : (0, l.showToast)((0, l.createToast)(y.intl.string(y.t["0rdYm2"]), l.ToastType.SUCCESS));
         },
         G = (0, r.jsx)(l.sNh, {
             id: "automod-rules-loading",
-            label: y.intl.string(y.t.ZTNur6),
+            label: y.intl.string(y.t.ZTNur7),
         });
     return (
         I ||
@@ -122,7 +122,7 @@ function E(e, t) {
                     D &&
                         (0, r.jsx)(l.sNh, {
                             id: "add-first-rule",
-                            label: y.intl.string(y.t.f72Zqa),
+                            label: y.intl.string(y.t.f72Zqb),
                             action: L,
                             disabled: E,
                         }),
@@ -161,7 +161,7 @@ function E(e, t) {
                                 (0, r.jsx)(l.Clw, {}),
                                 (0, r.jsx)(l.sNh, {
                                     id: "add-another-rule",
-                                    label: y.intl.string(y.t["0K5jDA"]),
+                                    label: y.intl.string(y.t["0K5jDE"]),
                                     action: L,
                                     disabled: E,
                                 }),
@@ -171,7 +171,7 @@ function E(e, t) {
             })),
         (0, r.jsx)(l.sNh, {
             id: "guild-automod-add-selection",
-            label: y.intl.formatToPlainString(y.t.Kkjv1t, { keywordCount: R }),
+            label: y.intl.formatToPlainString(y.t.Kkjv1m, { keywordCount: R }),
             onFocus: () => {
                 Z || (T(!0), w());
             },

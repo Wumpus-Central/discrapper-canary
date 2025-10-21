@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(185923),
     f = n(474936),
     _ = n(388032),
-    p = n(62216);
+    p = n(159737);
 let h = 3,
     m = (e) => {
         let { emojis: t } = e,
@@ -59,7 +59,7 @@ let h = 3,
             className: p.upsell,
             children: [
                 (0, r.jsx)(o.z5, {
-                    children: (0, r.jsx)(o.BR, { children: _.intl.format(_.t["uEky4+"], { count: t.length }) }),
+                    children: (0, r.jsx)(o.BR, { children: _.intl.format(_.t.uEky42, { count: t.length }) }),
                 }),
                 (0, r.jsx)(o.dY, { children: m }),
             ],

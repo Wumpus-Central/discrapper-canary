@@ -6,7 +6,7 @@ var r,
     s = n.n(o),
     l = n(481060),
     c = n(388032),
-    u = n(25663);
+    u = n(574657);
 function d(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ class _ extends (r = a.PureComponent) {
                     tag: "div",
                     color: "text-feedback-positive",
                     className: u.pro,
-                    children: [c.intl.string(c.t["8tvIiI"]), ":"],
+                    children: [c.intl.string(c.t["8tvIiN"]), ":"],
                 }),
                 (0, i.jsx)(l.Text, {
                     className: s()(u.tip, n),

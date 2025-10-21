@@ -1,4 +1,4 @@
-n.r(s), n.d(s, { default: () => p });
+n.r(s), n.d(s, { default: () => j });
 var l = n(951288),
     r = n(647438),
     t = n(120356),
@@ -12,34 +12,34 @@ var l = n(951288),
     f = n(656649),
     g = n(981631),
     h = n(388032),
-    v = n(971990);
-let x = "https://dis.gd/Amazon-Music-Connection",
-    j = null != window.opener;
-function p() {
+    v = n(78713);
+let p = "https://dis.gd/Amazon-Music-Connection",
+    x = null != window.opener;
+function j() {
     let { type: e } = (0, i.UO)(),
         s = (0, f.vJ)(e),
         n = (0, u.l)().get("error-code"),
         t = r.useCallback(() => {
             window.close();
         }, []),
-        p = r.useMemo(() => {
+        j = r.useMemo(() => {
             switch (s) {
                 case g.ABu.AMAZON_MUSIC:
                     return (0, l.jsx)("div", {
                         className: a()(v.message, v.details),
                         children: o.tq
-                            ? h.intl.format(h.t["0EikXl"], {
+                            ? h.intl.format(h.t["0EikXi"], {
                                   link: () =>
                                       (0, l.jsx)(d.Anchor, {
-                                          href: x,
-                                          children: x,
+                                          href: p,
+                                          children: p,
                                       }),
                               })
-                            : h.intl.format(h.t.hKHZhI, {
+                            : h.intl.format(h.t.hKHZhO, {
                                   link: () =>
                                       (0, l.jsx)(d.Anchor, {
-                                          href: x,
-                                          children: x,
+                                          href: p,
+                                          children: p,
                                       }),
                               }),
                     });
@@ -47,7 +47,7 @@ function p() {
                     if (n === g.evJ.UNKNOWN_ACCOUNT.toString())
                         return (0, l.jsx)("div", {
                             className: a()(v.message, v.details),
-                            children: h.intl.format(h.t.nQPJdH, {
+                            children: h.intl.format(h.t.nQPJdL, {
                                 link: "https://support.google.com/youtube/answer/1646861",
                             }),
                         });
@@ -63,24 +63,24 @@ function p() {
         children: [
             (0, l.jsx)("div", {
                 className: a()(v.message, v.error),
-                children: h.intl.format(h.t.E62dXl, { name: N.name }),
+                children: h.intl.format(h.t.E62dXo, { name: N.name }),
             }),
             (0, l.jsx)("div", {
                 className: a()(v.message, v.details),
-                children: h.intl.string(h.t.Ra6lcn),
+                children: h.intl.string(h.t.Ra6lcp),
             }),
-            p,
-            j
+            j,
+            x
                 ? (0, l.jsx)(c.zx, {
                       className: v.btn,
                       onClick: t,
-                      children: h.intl.string(h.t.i4jeWV),
+                      children: h.intl.string(h.t.i4jeWR),
                   })
                 : null,
             null != n
                 ? (0, l.jsx)("div", {
                       className: a()(v.message, v.errorDetails),
-                      children: h.intl.format(h.t.LElyIC, { errorCode: n }),
+                      children: h.intl.format(h.t.LElyIL, { errorCode: n }),
                   })
                 : null,
         ],

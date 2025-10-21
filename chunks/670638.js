@@ -134,7 +134,7 @@ function x(e) {
                     impressionId: P,
                     sourceQuestContent: e.sourceQuestContent,
                 }),
-                (0, o.showToast)((0, o.createToast)(C.intl.string(C.t["+5kSoa"]), o.ToastType.SUCCESS)));
+                (0, o.showToast)((0, o.createToast)(C.intl.string(C.t["+5kSoW"]), o.ToastType.SUCCESS)));
         }, [P, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent, D]),
         Z = () => {
             (0, I.openDisclosureModal)(e.quest, {
@@ -202,7 +202,7 @@ function x(e) {
         variant: "fixed",
         onSelect: V,
         navId: "quests-entry",
-        "aria-label": C.intl.string(C.t.ogxXGh),
+        "aria-label": C.intl.string(C.t.ogxXGq),
         onClose: null != (t = null == e ? void 0 : e.onClose) ? t : A.dG,
         children: [
             (0, r.jsxs)(
@@ -218,7 +218,7 @@ function x(e) {
                         D &&
                             (0, r.jsx)(o.sNh, {
                                 id: "share-link",
-                                label: C.intl.string(C.t.RDE0SU),
+                                label: C.intl.string(C.t.RDE0Sc),
                                 action: B,
                                 icon: o.TIy,
                             }),
@@ -234,22 +234,22 @@ function x(e) {
                         !e.hideLearnMore &&
                             (0, r.jsx)(o.sNh, {
                                 id: "learn-more",
-                                label: C.intl.string(C.t.Ws2Bl5),
+                                label: C.intl.string(C.t["Ws2Bl+"]),
                                 action: F,
                                 icon: o.qDn,
                             }),
                         $ &&
                             (0, r.jsx)(o.sNh, {
                                 id: "display-disclosure",
-                                label: C.intl.string(C.t.GcsZKC),
+                                label: C.intl.string(C.t.GcsZKJ),
                                 action: Z,
                             }),
                         u &&
                             (0, r.jsx)(o.sNh, {
                                 id: "hide-entrypoint",
-                                label: C.intl.string(C.t.NN79Ex),
+                                label: C.intl.string(C.t.NN79E9),
                                 action: H,
-                                subtext: C.intl.string(ee ? C.t.RK9gxs : C.t["1u3YPD"]),
+                                subtext: C.intl.string(ee ? C.t.RK9gxo : C.t["1u3YPC"]),
                             }),
                     ],
                 },
@@ -259,27 +259,27 @@ function x(e) {
                 (0, r.jsxs)(
                     o.kSQ,
                     {
-                        label: C.intl.string(C.t["Ape+mp"]),
+                        label: C.intl.string(C.t["Ape+mm"]),
                         children: [
                             !(q || X) && Q,
                             (0, r.jsx)(o.sNh, {
                                 id: "dismiss",
-                                label: C.intl.string(C.t["JF6W6+"]),
+                                label: C.intl.string(C.t.JF6W66),
                                 action: M,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "enrollment",
-                                label: C.intl.string(C.t.taqkwM),
+                                label: C.intl.string(C.t.taqkwK),
                                 action: z,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "progress",
-                                label: C.intl.string(C.t.cKSLr6),
+                                label: C.intl.string(C.t.cKSLr4),
                                 action: U,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "complete",
-                                label: C.intl.string(C.t.jQEfRU),
+                                label: C.intl.string(C.t.jQEfRT),
                                 action: L,
                             }),
                             (0, m.$J)(e.quest) &&
@@ -306,7 +306,7 @@ function x(e) {
                                 }),
                             (0, r.jsx)(o.sNh, {
                                 id: "copy-quest-id",
-                                label: C.intl.string(C.t.oisrFh),
+                                label: C.intl.string(C.t.oisrFi),
                                 action: () => {
                                     (0, f.JG)(e.quest.id);
                                 },
@@ -314,7 +314,7 @@ function x(e) {
                             (0, v.T)({ location: T.dr.QUEST_PREVIEW_TOOL_2 }) &&
                                 (0, r.jsx)(o.sNh, {
                                     id: "preview",
-                                    label: C.intl.string(C.t.tx5Ax8),
+                                    label: C.intl.string(C.t.tx5Ax5),
                                     action: J,
                                 }),
                         ],

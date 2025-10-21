@@ -19,72 +19,72 @@ let b = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_PUMPKIN_TRICK_SKU_ID,
         assetId: "a_dec0db5e1395a9d7df152d6981443cd8",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["6Zuiv7"]),
-                name: l.intl.string(l.t["9PzTtL"]),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["6Zuivx"]),
+                name: l.intl.string(l.t["9PzTtM"]),
             }),
     },
     y = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_PUMPKIN_TREAT_SKU_ID,
         assetId: "a_8636994a8d0b1c5c8353ebce125c2cef",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["2UeOlZ"]),
-                name: l.intl.string(l.t["9PzTtL"]),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["2UeOlY"]),
+                name: l.intl.string(l.t["9PzTtM"]),
             }),
     },
     O = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_GHOST_TRICK_SKU_ID,
         assetId: "a_843b6925894c8fa530432ad197eb8dcd",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["6Zuiv7"]),
-                name: l.intl.string(l.t.sBk8mZ),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["6Zuivx"]),
+                name: l.intl.string(l.t.sBk8mT),
             }),
     },
     v = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_GHOST_TREAT_SKU_ID,
         assetId: "a_3835acaf56f5b8cdfb7be072580e618d",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["2UeOlZ"]),
-                name: l.intl.string(l.t.sBk8mZ),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["2UeOlY"]),
+                name: l.intl.string(l.t.sBk8mT),
             }),
     },
     I = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SKULL_TRICK_SKU_ID,
         assetId: "a_6f0c33fb534c1a0a21c606b50683e9a9",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["6Zuiv7"]),
-                name: l.intl.string(l.t.RbkXxc),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["6Zuivx"]),
+                name: l.intl.string(l.t.RbkXxR),
             }),
     },
     T = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SKULL_TREAT_SKU_ID,
         assetId: "a_46d01a1f046e4f58894f5b5361ab2e61",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["2UeOlZ"]),
-                name: l.intl.string(l.t.RbkXxc),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["2UeOlY"]),
+                name: l.intl.string(l.t.RbkXxR),
             }),
     },
     S = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SPIDER_TRICK_SKU_ID,
         assetId: "a_f6fbc6e9dedd53a1b70e5573499ddd11",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["6Zuiv7"]),
-                name: l.intl.string(l.t.FW3Qp6),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["6Zuivx"]),
+                name: l.intl.string(l.t["FW3Qp/"]),
             }),
     },
     A = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SPIDER_TREAT_SKU_ID,
         assetId: "a_f8fdf29cd07f09487165818605cab1dd",
         a11yLabel: () =>
-            l.intl.formatToPlainString(l.t.pDrI0t, {
-                category: l.intl.string(l.t["2UeOlZ"]),
-                name: l.intl.string(l.t.FW3Qp6),
+            l.intl.formatToPlainString(l.t.pDrI0m, {
+                category: l.intl.string(l.t["2UeOlY"]),
+                name: l.intl.string(l.t["FW3Qp/"]),
             }),
     },
     C = {
@@ -93,19 +93,19 @@ let b = {
     N = {
         variants: [
             {
-                name: () => l.intl.string(l.t["9PzTtL"]),
+                name: () => l.intl.string(l.t["9PzTtM"]),
                 variants: [b, y],
             },
             {
-                name: () => l.intl.string(l.t.sBk8mZ),
+                name: () => l.intl.string(l.t.sBk8mT),
                 variants: [O, v],
             },
             {
-                name: () => l.intl.string(l.t.RbkXxc),
+                name: () => l.intl.string(l.t.RbkXxR),
                 variants: [I, T],
             },
             {
-                name: () => l.intl.string(l.t.FW3Qp6),
+                name: () => l.intl.string(l.t["FW3Qp/"]),
                 variants: [S, A],
             },
         ],
@@ -156,38 +156,38 @@ let b = {
         firstTimeNotice: {
             getImageUrl: (e, t) => (t ? _.Z : f.Z),
             title: () => l.intl.string(l.t.UPFiIi),
-            description: () => l.intl.string(l.t["F/5kFB"]),
-            cta: () => l.intl.string(l.t.RzWDqa),
+            description: () => l.intl.string(l.t["F/5kFJ"]),
+            cta: () => l.intl.string(l.t.RzWDqY),
             analyticsLocation: i.Z.GIFTING_PROMOTION_COACHMARK,
             analyticsPage: s.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
         eligiblePlanIds: [o.Xh.PREMIUM_YEAR_TIER_2, o.Xh.PREMIUM_MONTH_TIER_2],
         planSelection: {
-            heading: () => l.intl.string(l.t.ruVnPj),
-            subheading: () => l.intl.string(l.t.q4BJSE),
-            mobileSubheading: (e) => l.intl.formatToPlainString(l.t.eDBuFx, { rewardCount: e }),
+            heading: () => l.intl.string(l.t.ruVnPr),
+            subheading: () => l.intl.string(l.t.q4BJSJ),
+            mobileSubheading: (e) => l.intl.formatToPlainString(l.t.eDBuF8, { rewardCount: e }),
             gradientConfig: C,
             getImageUrl: (e, t) => (t ? m.Z : h.Z),
             getBannerImageUrl: () => E.Z,
             getBackgroundImageUrl: () => c.Z,
         },
         planSelectionBanner: {
-            desktopBannerText: () => l.intl.string(l.t.mMgymZ),
-            mobileBannerText: () => l.intl.string(l.t.dAqTcH),
+            desktopBannerText: () => l.intl.string(l.t.mMgymV),
+            mobileBannerText: () => l.intl.string(l.t.dAqTcI),
             getImageUrl: () => m.Z,
             gradientConfig: () => C,
             getBackgroundImageUrl: () => p.Z,
         },
         billingSettingsMarketingBanner: {
             getImageUrl: (e) => (e ? d.Z : u.Z),
-            title: () => l.intl.string(l.t.CGgAyM),
-            body: () => l.intl.string(l.t["9rInzc"]),
+            title: () => l.intl.string(l.t.CGgAyN),
+            body: () => l.intl.string(l.t["9rInzW"]),
             getBackgroundImageUrl: () => g.Z,
         },
         giftPurchaseConfirmation: {
-            yearGiftText: l.t["rSS+oq"],
-            monthGiftText: l.t.gI6Yvr,
-            collectRewardButtonText: () => l.intl.string(l.t.kMYVws),
-            rewardCollectedText: () => l.intl.string(l.t.eZrmtr),
+            yearGiftText: l.t["rSS+oo"],
+            monthGiftText: l.t.gI6Yvv,
+            collectRewardButtonText: () => l.intl.string(l.t.kMYVwv),
+            rewardCollectedText: () => l.intl.string(l.t.eZrmtq),
         },
     };

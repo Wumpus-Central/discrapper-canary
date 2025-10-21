@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(393903),
     d = n(79707),
     u = n(388032),
-    p = n(892665);
+    p = n(16617);
 function m(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = a.useMemo(
@@ -90,7 +90,7 @@ function m(e) {
                         clickableRef: (e) => {
                             null != e && null != e.ref && (b.current = e.ref);
                         },
-                        "aria-label": u.intl.string(u.t.UKOtz8),
+                        "aria-label": u.intl.string(u.t["UKOtz+"]),
                         children: (0, r.jsxs)("div", {
                             className: p.more,
                             onMouseEnter: _,
@@ -99,7 +99,7 @@ function m(e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
                                     color: h,
-                                    children: u.intl.string(u.t.UKOtz8),
+                                    children: u.intl.string(u.t["UKOtz+"]),
                                 }),
                                 i
                                     ? (0, r.jsx)(o.u04, {

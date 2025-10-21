@@ -64,7 +64,7 @@ var i = n(951288),
     en = n(388627),
     ei = n(981631),
     er = n(388032),
-    el = n(41143);
+    el = n(131714);
 function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -450,14 +450,14 @@ function ep(e) {
                 });
         },
         g = null != h;
-    if (g) t = er.intl.string(er.t.S5anIS);
+    if (g) t = er.intl.string(er.t.S5anIc);
     else if (null != n) {
         let e = (0, en.pL)();
         t = c
             ? null != e
-                ? er.intl.format(er.t.AB5gT0, { game: e.name })
-                : er.intl.string(er.t.FeUKeH)
-            : er.intl.string(er.t.uQn9Bw);
+                ? er.intl.format(er.t.AB5gTy, { game: e.name })
+                : er.intl.string(er.t.FeUKeA)
+            : er.intl.string(er.t.uQn9B8);
     }
     let y = () => {
             if (g)
@@ -510,7 +510,7 @@ function ep(e) {
                 ref: a,
                 iconComponent: E,
                 tooltip: t,
-                "aria-label": er.intl.string(er.t.FeUKeH),
+                "aria-label": er.intl.string(er.t.FeUKeA),
                 isActive: g,
                 highlightedColor: "green",
                 onClick: y,
@@ -586,11 +586,11 @@ function eh(e) {
                 ref: s,
                 iconComponent: v,
                 tooltip: p
-                    ? er.intl.string(er.t["Ox4/zc"])
+                    ? er.intl.string(er.t["Ox4/zU"])
                     : f
-                      ? er.intl.string(er.t["+YBKYG"])
+                      ? er.intl.string(er.t["+YBKYI"])
                       : m
-                        ? er.intl.string(er.t.X1lQlp)
+                        ? er.intl.string(er.t.X1lQli)
                         : void 0,
                 onClick: (e) => {
                     S(),
@@ -671,7 +671,7 @@ function ef(e) {
             return (0, i.jsx)(es, {
                 ref: a,
                 iconComponent: v,
-                tooltip: s ? er.intl.string(er.t["6vrfgo"]) : er.intl.string(er.t.S0W8Z2),
+                tooltip: s ? er.intl.string(er.t["6vrfgt"]) : er.intl.string(er.t.S0W8Z5),
                 onClick: s ? u : m(n),
                 defaultColor: s ? "disconnect" : void 0,
                 onMouseEnter: y,

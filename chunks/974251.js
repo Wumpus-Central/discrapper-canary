@@ -36,7 +36,7 @@ var i = n(951288),
     D = n(356659),
     k = n(921944),
     U = n(388032),
-    B = n(935730);
+    B = n(90274);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,8 +82,8 @@ function V(e, t) {
 }
 let F = r.memo(function (e) {
     var t, l;
-    let { className: F, channel: G, draftType: z, editorTextContent: W, setValue: K, canOnlyUseTextCommands: Y } = e,
-        q = (0, y.bp)(),
+    let { className: F, channel: G, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
+        K = (0, y.bp)(),
         X = r.useRef(null),
         J = r.useRef(null),
         Q = (0, o.e7)([I.Z], () => I.Z.getActivities()),
@@ -155,7 +155,7 @@ let F = r.memo(function (e) {
             newClipsCount: eO,
             canPostPolls: ey,
             canLaunchActivities: e_,
-            appContext: q,
+            appContext: K,
             canSendScheduledMessages: ev,
             canSummarizeThreads: ex,
         });
@@ -203,7 +203,7 @@ let F = r.memo(function (e) {
                                 },
                                 draftType: z,
                                 editorTextContent: W,
-                                setValue: K,
+                                setValue: q,
                                 openClips: em,
                             }),
                         );
@@ -221,7 +221,7 @@ let F = r.memo(function (e) {
                                 className: a()(B.attachButton, F),
                                 childClassName: B.attachButtonInner,
                                 isActive: !1,
-                                "aria-label": U.intl.string(U.t.d56gCQ),
+                                "aria-label": U.intl.string(U.t.d56gCa),
                                 onDoubleClick: ep
                                     ? () => {
                                           var e;

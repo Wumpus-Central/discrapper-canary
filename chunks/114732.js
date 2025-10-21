@@ -27,7 +27,7 @@ let u = function (e) {
                     (0, a.jsx)(o.Heading, {
                         className: d.title,
                         variant: "heading-xl/medium",
-                        children: s.intl.string(s.t.tWYWJy),
+                        children: s.intl.string(s.t["tWYWJ+"]),
                     }),
                     (0, a.jsx)(o.olH, {
                         "data-migration-pending": !0,
@@ -42,7 +42,7 @@ let u = function (e) {
                 scrollbarType: "none",
                 children: (0, a.jsx)(o.Text, {
                     variant: "text-md/normal",
-                    children: s.intl.string(s.t.JNQRU1),
+                    children: s.intl.string(s.t.JNQRU4),
                 }),
             }),
             (0, a.jsx)(o.mzw, {
@@ -50,7 +50,7 @@ let u = function (e) {
                 className: d.modalFooter,
                 children: (0, a.jsx)(o.Button, {
                     variant: "primary",
-                    text: s.intl.string(s.t.cpT0Cg),
+                    text: s.intl.string(s.t.cpT0Cq),
                     onClick: t,
                 }),
             }),

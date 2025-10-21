@@ -7,14 +7,14 @@ var r = n(951288),
     l = n(422034),
     c = n(268685),
     u = n(388032),
-    d = n(94723);
+    d = n(612574);
 function f(e) {
     let { affinities: t, className: n } = e,
         a = (e) => (null != e.globalName ? e.globalName : e.username),
         f = i.useMemo(
             () =>
                 t.length > 1
-                    ? u.intl.formatToPlainString(u.t.HaVk0d, {
+                    ? u.intl.formatToPlainString(u.t.HaVk0X, {
                           username: a(t[0]),
                           numFriends: t.length - 1,
                       })

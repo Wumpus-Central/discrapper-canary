@@ -3,16 +3,16 @@ var n,
     s = i(951288),
     a = i(647438),
     l = i(120356),
-    r = i.n(l),
-    o = i(772848),
+    o = i.n(l),
+    r = i(772848),
     h = i(846519),
     d = i(755721),
     c = i(481060),
     u = i(981631),
     m = i(388032),
-    g = i(613881),
-    p = i(465106),
-    f = i(10198);
+    g = i(831319),
+    p = i(149715),
+    f = i(197571);
 function C(e, t, i) {
     return (
         t in e
@@ -56,7 +56,7 @@ class v extends (n = a.PureComponent) {
                         gap: 20,
                         children: [
                             (0, s.jsx)(c.oil, {
-                                label: m.intl.string(m.t.dI4d4e),
+                                label: m.intl.string(m.t.dI4d4S),
                                 value: n,
                                 error: e,
                                 onChange: this.handleEmailChange,
@@ -64,7 +64,7 @@ class v extends (n = a.PureComponent) {
                                 autoFocus: !0,
                             }),
                             (0, s.jsx)(c.oil, {
-                                label: m.intl.string(m.t["CIGa+/"]),
+                                label: m.intl.string(m.t["CIGa+7"]),
                                 type: "password",
                                 value: a,
                                 error: t,
@@ -79,7 +79,7 @@ class v extends (n = a.PureComponent) {
                         onClick: this.handleVerify,
                         submitting: i,
                         disabled: 0 === n.length || 0 === a.length,
-                        children: m.intl.string(m.t.v740sr),
+                        children: m.intl.string(m.t.v740sh),
                     }),
                 ],
             }),
@@ -96,7 +96,7 @@ class v extends (n = a.PureComponent) {
                     size: d.zx.Sizes.LARGE,
                     color: d.Tt.PRIMARY,
                     onClick: this.handleResendEmail,
-                    children: m.intl.string(m.t.LdUkOz),
+                    children: m.intl.string(m.t.LdUkO6),
                 }),
                 e &&
                     (0, s.jsx)(d.zx, {
@@ -106,7 +106,7 @@ class v extends (n = a.PureComponent) {
                         look: d.iL.LINK,
                         color: d.Tt.LINK,
                         onClick: this.handleChangeEmailClick,
-                        children: m.intl.string(m.t.oP5zGB),
+                        children: m.intl.string(m.t.oP5zGA),
                     }),
             ],
         });
@@ -118,14 +118,14 @@ class v extends (n = a.PureComponent) {
         return (
             (e =
                 t && null != i
-                    ? m.intl.format(m.t.JqLgQE, { email: i })
+                    ? m.intl.format(m.t.JqLgQL, { email: i })
                     : n
-                      ? m.intl.string(m.t.tSXg8P)
+                      ? m.intl.string(m.t.tSXg8O)
                       : m.intl.string(m.t.KW5DEh)),
             (0, s.jsxs)(c.Y0X, {
                 transitionState: a,
                 "aria-labelledby": this._headerId,
-                className: r()(g.emailVerificationModal, p.vertical, p.alignCenter, p.justifyCenter, f.marginTop60),
+                className: o()(g.emailVerificationModal, p.vertical, p.alignCenter, p.justifyCenter, f.marginTop60),
                 parentComponent: "EmailVerificationModal",
                 children: [
                     (0, s.jsx)("div", {
@@ -134,11 +134,11 @@ class v extends (n = a.PureComponent) {
                     }),
                     (0, s.jsx)("div", {
                         id: this._headerId,
-                        className: r()(g.title, f.marginBottom8),
-                        children: m.intl.string(m.t["1MPz29"]),
+                        className: o()(g.title, f.marginBottom8),
+                        children: m.intl.string(m.t["1MPz27"]),
                     }),
                     (0, s.jsx)("div", {
-                        className: r()(g.body, f.marginBottom20),
+                        className: o()(g.body, f.marginBottom20),
                         children: e,
                     }),
                     n ? this.renderActions() : this.renderInputs(),
@@ -151,7 +151,7 @@ class v extends (n = a.PureComponent) {
             C(this, "_lottieRef", void 0),
             C(this, "_animItem", null),
             C(this, "_timeout", new h.V7()),
-            C(this, "_headerId", (0, o.Z)()),
+            C(this, "_headerId", (0, r.Z)()),
             C(this, "state", {
                 resent: !1,
                 shouldClose: !1,

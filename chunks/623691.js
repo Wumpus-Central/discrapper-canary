@@ -45,13 +45,13 @@ function N(e) {
         children: [
             (0, r.jsx)(d.Heading, {
                 variant: "heading-lg/semibold",
-                children: y.intl.string(y.t.LPJmLy),
+                children: y.intl.string(y.t["LPJmL/"]),
             }),
             (0, r.jsx)(d.Text, {
                 className: E.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: y.intl.string(y.t["1ydhVl"]),
+                children: y.intl.string(y.t["1ydhVp"]),
             }),
             (0, r.jsx)(I, { guild: t }),
             (0, r.jsx)(S, {
@@ -78,18 +78,18 @@ function I(e) {
         l = t.features.has(_.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)
             ? (0, r.jsx)(d.Text, {
                   variant: "text-sm/normal",
-                  children: y.intl.format(y.t.Vg2oTE, { breakingChangeDate: n }),
+                  children: y.intl.format(y.t.Vg2oTN, { breakingChangeDate: n }),
               })
             : f.Z.can(O.Pl.ADMINISTRATOR, t)
               ? (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: y.intl.format(y.t.HYM8OD, {
+                    children: y.intl.format(y.t.HYM8OE, {
                         onClickMigrate: () => {
                             u.Z.show({
-                                title: y.intl.string(y.t.nFE8dH),
-                                body: y.intl.format(y.t["1PAzQ0"], { guildName: t.name }),
-                                cancelText: y.intl.string(y.t["ETE/oK"]),
-                                confirmText: y.intl.string(y.t["cY+Ooa"]),
+                                title: y.intl.string(y.t.nFE8dD),
+                                body: y.intl.format(y.t["1PAzQ6"], { guildName: t.name }),
+                                cancelText: y.intl.string(y.t["ETE/oC"]),
+                                confirmText: y.intl.string(y.t["cY+Oob"]),
                                 onConfirm: () => {
                                     x.Z.migratePinPermission(t.id);
                                 },
@@ -100,7 +100,7 @@ function I(e) {
                 })
               : (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: y.intl.format(y.t.cAuU1d, { breakingChangeDate: n }),
+                    children: y.intl.format(y.t.cAuU1S, { breakingChangeDate: n }),
                 });
     return (0, r.jsx)(p.Z, {
         look: p.z.WARNING,
@@ -125,7 +125,7 @@ function S(e) {
                 className: E.helpText,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: y.intl.format(y.t.xkC3YW, { articleURL: b.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) }),
+                children: y.intl.format(y.t.xkC3Yf, { articleURL: b.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) }),
             }),
             (0, r.jsx)("div", {
                 className: E.rolesTable,
@@ -136,12 +136,12 @@ function S(e) {
                         (0, r.jsx)(d.Text, {
                             className: a()(E.tableTitle, E.roleNameSpacing),
                             variant: "text-sm/normal",
-                            children: y.intl.format(y.t["38N3V1"], { numRoles: String(i.length) }),
+                            children: y.intl.format(y.t["38N3Vz"], { numRoles: String(i.length) }),
                         }),
                         (0, r.jsx)(d.Text, {
                             className: a()(E.tableTitle, E.memberSpacing),
                             variant: "text-sm/normal",
-                            children: y.intl.string(y.t["9Oq93t"]),
+                            children: y.intl.string(y.t["9Oq93m"]),
                         }),
                         (0, r.jsx)("div", { className: E.buttonsSpacing }),
                     ],
@@ -181,7 +181,7 @@ function T(e) {
                     size: "sm",
                     onClick: u,
                     loading: a,
-                    text: y.intl.string(y.t.JZZjQE),
+                    text: y.intl.string(y.t.JZZjQK),
                 }),
             ],
         }),

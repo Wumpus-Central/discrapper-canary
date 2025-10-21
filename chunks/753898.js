@@ -17,7 +17,7 @@ var i = n(951288),
     C = n(518950),
     y = n(967128),
     _ = n(388032),
-    v = n(40036);
+    v = n(963392);
 function x(e) {
     var t;
     let { channel: n, children: x, user: O } = e,
@@ -84,14 +84,14 @@ function x(e) {
                     children: [
                         (0, i.jsx)(b.l, {
                             channel: n,
-                            text: _.intl.string(_.t["6Qgren"]),
+                            text: _.intl.string(_.t["6Qgrev"]),
                             icon: o.ejJ,
                         }),
                         (0, i.jsx)(a.zxk, {
                             icon: o.vdY,
                             variant: "secondary",
-                            text: _.intl.string(_.t["5Q9+/P"]),
-                            "aria-label": _.intl.string(_.t["5Q9+/P"]),
+                            text: _.intl.string(_.t["5Q9+/L"]),
+                            "aria-label": _.intl.string(_.t["5Q9+/L"]),
                             onClick: () => (0, g.B)(n.id, c.Z.EMPTY_GROUP_DM),
                         }),
                     ],

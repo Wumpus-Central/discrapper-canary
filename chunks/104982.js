@@ -7,10 +7,10 @@ var r = n(951288),
     l = n(669460),
     s = n(981631),
     u = n(176505),
-    f = n(45765),
+    f = n(470658),
     d = n(388032),
-    p = n(500254),
-    b = n(671957);
+    p = n(477487),
+    b = n(868682);
 function g(e) {
     var { gameServerGame: t, guildId: n, status: g } = e,
         m = (function (e, t) {
@@ -63,8 +63,8 @@ function g(e) {
             return e;
         })(
             {
-                title: d.intl.string("created" === g ? f.default["4lLdBA"] : f.default.VPDgHR),
-                description: d.intl.formatToPlainString(f.default.yL6BiI, { provider: (0, l.Z)(t.provider) }),
+                title: d.intl.string("created" === g ? f.default["4lLdBM"] : f.default.VPDgHa),
+                description: d.intl.formatToPlainString(f.default.yL6BiH, { provider: (0, l.Z)(t.provider) }),
                 image: (0, r.jsx)("div", {
                     className: b.imageContainer,
                     children: (0, r.jsx)("img", {
@@ -78,7 +78,7 @@ function g(e) {
                     className: p.button,
                     children: (0, r.jsx)(a.Button, {
                         variant: "primary",
-                        text: d.intl.string(f.default.VkItSk),
+                        text: d.intl.string(f.default.VkItSr),
                         onClick: () => {
                             (0, i.uL)(s.Z5c.CHANNEL(n, u.oC.GAME_SERVERS)), m.onClose();
                         },

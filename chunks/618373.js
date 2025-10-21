@@ -12,7 +12,7 @@ var i = n(442837),
     f = n(44359),
     _ = n(981631),
     p = n(388032),
-    h = n(438540);
+    h = n(8280);
 function m(e, t, n) {
     let {
         highlightAdminWarningIfElevated: i,
@@ -48,14 +48,14 @@ function g(e) {
               variant: "text-xxs/semibold",
               color: g ? "text-feedback-warning" : "text-muted",
               children: v
-                  ? p.intl.format(p.t.MVS9pa, {
+                  ? p.intl.format(p.t.MVS9pV, {
                         onSettingsClick: (e) => {
                             e.stopPropagation(),
                                 (0, s.Z)(void 0, !0),
                                 (0, u.openUserSettings)(c.n.OVERLAY_PANEL, { section: _.oAB.OVERLAY });
                         },
                     })
-                  : p.intl.string(p.t.PIeSHB),
+                  : p.intl.string(p.t.PIeSHF),
           })
         : y
           ? E

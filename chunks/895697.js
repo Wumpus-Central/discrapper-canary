@@ -24,8 +24,8 @@ var i = n(442837),
     T = n(915014),
     S = n(671955),
     A = n(388032),
-    C = n(759253),
-    N = n(593540);
+    C = n(57842),
+    N = n(116649);
 function R(e) {
     let {
             user: t,
@@ -122,7 +122,7 @@ function R(e) {
                 }),
             null != P &&
                 (0, r.jsx)(m.Z, {
-                    heading: A.intl.string(A.t.LPJmLy),
+                    heading: A.intl.string(A.t["LPJmL/"]),
                     children: (0, r.jsx)(I.Z, {
                         user: t,
                         currentUser: n,

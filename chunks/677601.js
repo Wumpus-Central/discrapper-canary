@@ -43,9 +43,9 @@ var i = n(951288),
     G = n(880395),
     z = n(740492),
     W = n(793319),
-    K = n(3861),
+    q = n(3861),
     Y = n(493754),
-    q = n(937995),
+    K = n(937995),
     X = n(618158),
     J = n(880831),
     Q = n(73563),
@@ -200,7 +200,7 @@ class ez extends r.PureComponent {
     }
     get screenMessage() {
         return this.popoutOpen && !this.inPopout && this.props.inCall
-            ? { mainText: ek.intl.string(ek.t.J5bXZW) }
+            ? { mainText: ek.intl.string(ek.t.J5bXZU) }
             : null;
     }
     get inPopout() {
@@ -290,7 +290,7 @@ class ez extends r.PureComponent {
                         children:
                             r && this.popoutOpen && !this.inPopout
                                 ? null
-                                : (0, i.jsx)(K.Z, {
+                                : (0, i.jsx)(q.Z, {
                                       ref: this._contentRef,
                                       inCall: r,
                                       channel: p,
@@ -358,7 +358,7 @@ class ez extends r.PureComponent {
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
-                            children: (0, i.jsx)(q.ZP, {
+                            children: (0, i.jsx)(K.ZP, {
                                 timeout: 2000,
                                 children: (e) => this.renderContent(e),
                             }),
@@ -736,7 +736,7 @@ class ez extends r.PureComponent {
                                   grow: 0,
                                   children: [
                                       (0, i.jsx)($.Z, {
-                                          label: p ? ek.intl.string(ek.t.kkKapK) : ek.intl.string(ek.t["5MstTk"]),
+                                          label: p ? ek.intl.string(ek.t.kkKapG) : ek.intl.string(ek.t["5MstTl"]),
                                           direction: d,
                                           className: eU.leftTrayIcon,
                                           onClick: () => {
@@ -937,9 +937,9 @@ let eW = function (e) {
             [H],
         ),
         W = (0, u.e7)([eu.Z], () => eu.Z.getGuild(n.getGuildId())),
-        K = (0, u.e7)([ec.Z], () => ec.Z.getCall(n.id), [n.id]),
+        q = (0, u.e7)([ec.Z], () => ec.Z.getCall(n.id), [n.id]),
         Y = (0, u.e7)([ep.ZP], () => ep.ZP.getMentionCount(n.id), [n.id]),
-        q = (0, u.e7)([eo.default], () => eo.default.getId()),
+        K = (0, u.e7)([eo.default], () => eo.default.getId()),
         { popoutWindow: X, popoutWindowAlwaysOnTop: J } = (0, u.cj)([V.Z], () => ({
             popoutWindow: V.Z.getWindow(eD.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: V.Z.getIsAlwaysOnTop(eD.KJ3.CHANNEL_CALL_POPOUT),
@@ -958,7 +958,7 @@ let eW = function (e) {
     r.useEffect(() => {
         el === E.O.ERROR &&
             ef !== E.O.ERROR &&
-            (0, h.showToast)((0, h.createToast)(ek.intl.string(ek.t.AlJyIy), h.ToastType.FAILURE));
+            (0, h.showToast)((0, h.createToast)(ek.intl.string(ek.t["AlJyI+"]), h.ToastType.FAILURE));
     }, [el, ef]);
     let em = (0, u.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     r.useEffect(() => {
@@ -997,7 +997,7 @@ let eW = function (e) {
                             participantsListOpen: k && eb,
                             renderExternalHeader: l,
                             appContext: b,
-                            call: K,
+                            call: q,
                             popoutWindow: X,
                             popoutWindowAlwaysOnTop: J,
                             mentionCount: Y,
@@ -1011,7 +1011,7 @@ let eW = function (e) {
                             chatOpen: U,
                             maxSidebarWidth: ev,
                             shouldUseVoiceEffectsActionBar: eg,
-                            currentUserId: q,
+                            currentUserId: K,
                             selectedParticipant: H,
                             allActiveStreams: F,
                             useNewInviteButton: er,

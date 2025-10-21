@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(378441),
     d = n(358820),
     p = n(388032),
-    m = n(551766);
+    m = n(48528);
 function f() {
     let { hasActiveDownloads: e, progress: t } = (function () {
             let e = (0, a.cj)([c.Z], () => c.Z.getOngoingDownloads()),
@@ -67,10 +67,10 @@ function f() {
                                   (0, r.jsx)(s.Text, {
                                       variant: "text-sm/semibold",
                                       color: "text-primary",
-                                      children: p.intl.format(p.t["r+uZYW"], { progress: t }),
+                                      children: p.intl.format(p.t["r+uZYZ"], { progress: t }),
                                   }),
                                   (0, r.jsx)(s.Avr, {
-                                      text: p.intl.string(p.t["ETE/oK"]),
+                                      text: p.intl.string(p.t["ETE/oC"]),
                                       onClick: d.ge,
                                       variant: "always-white",
                                       textVariant: "text-sm/normal",

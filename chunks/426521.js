@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(148789),
     N = n(11825),
     Z = n(981631),
-    T = n(388032),
-    w = n(17250),
+    w = n(388032),
+    T = n(231796),
     A = n(756688),
     R = n(886765);
 function D(e) {
@@ -42,14 +42,14 @@ function D(e) {
                 : new m.Z(null == (l = c.message) ? void 0 : l.author),
         f = p.Z.parse(u);
     return (0, r.jsxs)("div", {
-        className: w.messagePreviewContainer,
+        className: T.messagePreviewContainer,
         children: [
             (0, r.jsx)(s.Z, {
                 user: d,
                 size: o.EFr.SIZE_24,
             }),
             (0, r.jsx)(o.Text, {
-                className: w.messagePreviewText,
+                className: T.messagePreviewText,
                 variant: "text-sm/normal",
                 lineClamp: 2,
                 children: f,
@@ -64,7 +64,7 @@ function L(e) {
     if (null == t) return null;
     let n = p.Z.parse(t);
     return (0, r.jsx)("div", {
-        className: w.calloutContainer,
+        className: T.calloutContainer,
         children: (0, r.jsx)(o.Text, {
             variant: "text-sm/normal",
             lineClamp: 2,
@@ -75,19 +75,19 @@ function L(e) {
 function M(e) {
     let { item: t } = e,
         n = R,
-        i = T.intl.string(T.t.SJTHJS);
+        i = w.intl.string(w.t.SJTHJb);
     return (
-        t.completed && ((n = A), (i = T.intl.string(T.t.f6RTAA))),
+        t.completed && ((n = A), (i = w.intl.string(w.t.f6RTAM))),
         (0, r.jsxs)("div", {
-            className: w.lifecycleContainer,
+            className: T.lifecycleContainer,
             children: [
                 (0, r.jsx)("img", {
-                    className: w.checkbox,
+                    className: T.checkbox,
                     alt: "",
                     src: n,
                 }),
                 (0, r.jsx)(o.Text, {
-                    className: w.lifecycleText,
+                    className: T.lifecycleText,
                     variant: "text-xs/bold",
                     color: "header-secondary",
                     children: i,
@@ -179,28 +179,28 @@ let G = i.memo(function (e) {
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(k, { applicationId: e }),
             }),
-            { emoji_id: T, emoji_name: A } = l,
+            { emoji_id: w, emoji_name: A } = l,
             R =
-                null != T || null != A
+                null != w || null != A
                     ? (0, r.jsx)(a.Z, {
-                          className: w.emoji,
-                          emojiId: T,
+                          className: T.emoji,
+                          emojiId: w,
                           emojiName: A,
                       })
                     : null;
         return (0, r.jsxs)("div", {
-            className: w.row,
+            className: T.row,
             children: [
                 (0, r.jsxs)(o.kL8, {
-                    className: w.rowContent,
+                    className: T.rowContent,
                     focusProps: { offset: 4 },
                     "aria-label": E,
                     onClick: g,
                     children: [
-                        f ? null : (0, r.jsx)("div", { className: w.unread }),
+                        f ? null : (0, r.jsx)("div", { className: T.unread }),
                         (0, r.jsx)(I.U, { item: l }),
                         (0, r.jsxs)("div", {
-                            className: w.body,
+                            className: T.body,
                             children: [
                                 "lifecycle_item" === l.type && null != l.item_enum && (0, r.jsx)(M, { item: l }),
                                 (0, r.jsxs)(o.Text, {

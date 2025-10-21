@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(74299),
     y = n(924301),
     _ = n(459502),
-    j = n(856691),
-    O = n(728285),
+    O = n(856691),
+    j = n(728285),
     x = n(357156),
     v = n(923973),
     C = n(829750),
@@ -65,7 +65,7 @@ function ei(e) {
         : (0, r.jsx)(N.d, {
               isTrayButton: !0,
               isActive: s,
-              label: s ? en.intl.string(en.t.GCimTk) : d ? en.intl.string(en.t.hLbG5O) : en.intl.string(en.t.e4WMv7),
+              label: s ? en.intl.string(en.t.GCimTk) : d ? en.intl.string(en.t.hLbG5N) : en.intl.string(en.t.e4WMvx),
               iconComponent: a.V9,
               onClick: () => {
                   (0, f.v)(n, f.d.REQUEST_TO_SPEAK, !s), o();
@@ -101,19 +101,19 @@ function ea(e) {
             (0, H.RK)(t, !1), (0, f.v)(n, f.d.SPEAK_ON_STAGE);
         },
         iconComponent: a.Lrb,
-        label: en.intl.string(en.t["8Joh+v"]),
+        label: en.intl.string(en.t["8Joh+p"]),
     });
 }
 function es(e) {
     let { channel: t, onSelect: n } = e,
-        d = (0, O.bp)(),
+        d = (0, j.bp)(),
         { canManageGuildEvent: u } = (0, x.XJ)(t),
         p = (0, l.e7)([z.Z], () => z.Z.getStageInstanceByChannel(t.id), [t.id]),
         h = (0, l.e7)([y.ZP], () => y.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
         { suppress: m } = (0, S.Z)(t),
         b = D.default.getId(),
         [_] = (0, $.Z)(t),
-        j = V.ZP.isModerator(b, t.id),
+        O = V.ZP.isModerator(b, t.id),
         v = (0, F.B)(t.id),
         C = u(h),
         { parentAnalyticsLocation: I } = (0, c.ZP)(),
@@ -127,7 +127,7 @@ function es(e) {
                 channel: t,
                 appContext: d,
             });
-    return (j || C) && null != p
+    return (O || C) && null != p
         ? (0, r.jsx)(a.yRy, {
               targetElementRef: E,
               renderPopout: (e) => {
@@ -135,7 +135,7 @@ function es(e) {
                   return (0, r.jsx)(T.Z, {
                       children: (0, r.jsx)(a.v2r, {
                           navId: "exit-options",
-                          "aria-label": en.intl.string(en.t["3Uj+2t"]),
+                          "aria-label": en.intl.string(en.t["3Uj+2p"]),
                           onClose: i,
                           onSelect: n,
                           onInteraction: (0, g.u)("End Stage", I, { entrypoint: et.A5.CARET }),
@@ -143,7 +143,7 @@ function es(e) {
                               id: "end-stage",
                               color: "danger",
                               action: () => (0, G.Ev)(t, d),
-                              label: en.intl.string(en.t.Fmx5y8),
+                              label: en.intl.string(en.t["Fmx5y/"]),
                               icon: a.k$p,
                           }),
                       }),
@@ -158,7 +158,7 @@ function es(e) {
                       { isShown: i } = t;
                   return (0, r.jsx)(R.Z, {
                       ref: E,
-                      label: en.intl.string(en.t.c6qKws),
+                      label: en.intl.string(en.t.c6qKwr),
                       onClick: Z,
                       onPopoutClick: n,
                       popoutOpen: i,
@@ -167,11 +167,11 @@ function es(e) {
           })
         : (m && !v) || _
           ? (0, r.jsx)(R.Z, {
-                label: en.intl.string(en.t.SMKyio),
+                label: en.intl.string(en.t.SMKyih),
                 onClick: Z,
             })
           : (0, r.jsx)(R.Z, {
-                label: en.intl.string(en.t.c6qKws),
+                label: en.intl.string(en.t.c6qKwr),
                 onClick: Z,
             });
 }
@@ -181,7 +181,7 @@ function eo(e) {
     return (0, r.jsx)(N.d, {
         isTrayButton: !0,
         iconComponent: a.zRq,
-        label: en.intl.string(en.t.ezLpY2),
+        label: en.intl.string(en.t.ezLpY6),
         onClick: () => {
             (0, f.v)(n, f.d.MOVE_TO_AUDIENCE), (0, H.yi)(t);
         },
@@ -197,7 +197,7 @@ function ec(e) {
         ? (0, r.jsx)(N.d, {
               isTrayButton: !0,
               isActive: !i,
-              label: i ? en.intl.string(en.t.ScHlfn) : en.intl.string(en.t.zqxfra),
+              label: i ? en.intl.string(en.t.ScHlfl) : en.intl.string(en.t.zqxfrf),
               iconComponent: i ? a.xjP : a.RZG,
               color: i ? void 0 : "green",
               onClick: () => {
@@ -207,7 +207,7 @@ function ec(e) {
         : (0, r.jsx)(N.d, {
               isTrayButton: !0,
               isActive: o,
-              label: o ? en.intl.string(en.t.zqxfra) : en.intl.string(en.t.ScHlfn),
+              label: o ? en.intl.string(en.t.zqxfrf) : en.intl.string(en.t.ScHlfl),
               iconComponent: o ? a.RZG : a.xjP,
               color: o ? "green" : void 0,
               onClick: () => {
@@ -221,7 +221,7 @@ let ed = i.memo(function (e) {
         { suppress: s, selfMute: o, mute: f } = (0, S.Z)(t),
         y = (0, F.B)(t.id),
         _ = (0, l.e7)([m.default], () => null != m.default.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: j, enabled: O } = (0, v.Z)(),
+        { cameraUnavailable: O, enabled: j } = (0, v.Z)(),
         x = (0, I.Z)(t),
         { limit: N, reachedLimit: R } = (0, C.Z)(t),
         D = (0, l.e7)([U.default], () => U.default.getCurrentUser()),
@@ -258,8 +258,8 @@ let ed = i.memo(function (e) {
                 ref: q,
                 centerButton: !0,
                 hasPermission: x,
-                enabled: O,
-                cameraUnavailable: j,
+                enabled: j,
+                cameraUnavailable: O,
                 onChange: E.r,
                 onCameraUnavailable: P.Z,
                 channelLimitReached: R,
@@ -375,7 +375,7 @@ let ep = i.memo(function (e) {
                             u ? (0, r.jsx)(_.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, r.jsx)("div", { className: er.separator }),
                             u && s
-                                ? (0, r.jsx)(j.Z, {
+                                ? (0, r.jsx)(O.Z, {
                                       highlight: !0,
                                       channel: t,
                                   })

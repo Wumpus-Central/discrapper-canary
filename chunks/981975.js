@@ -62,13 +62,13 @@ function S(e) {
             (0, r.jsx)(d.Heading, {
                 className: y.headerHeading,
                 variant: "eyebrow",
-                children: O.intl.string(O.t.nMir29),
+                children: O.intl.string(O.t.nMir27),
             }),
             (0, r.jsx)(d.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 className: y.headerNoConfigSubtitle,
-                children: O.intl.format(O.t.q5f7tL, {
+                children: O.intl.format(O.t.q5f7tK, {
                     helpdeskArticleUrl: m.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
@@ -148,21 +148,21 @@ function T(e) {
                                         className: y.headerTitleTextContainer,
                                         children: (0, r.jsx)(d.Heading, {
                                             variant: "eyebrow",
-                                            children: O.intl.string(O.t.nMir29),
+                                            children: O.intl.string(O.t.nMir27),
                                         }),
                                     }),
                                     (0, r.jsx)(d.Avr, {
                                         variant: "critical",
                                         onClick: B,
                                         disabled: l,
-                                        text: O.intl.string(O.t.ntW1cX),
+                                        text: O.intl.string(O.t.ntW1cc),
                                         textVariant: "text-sm/semibold",
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: O.intl.format(O.t.q5f7tL, {
+                                children: O.intl.format(O.t.q5f7tK, {
                                     helpdeskArticleUrl: m.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN),
                                 }),
                             }),
@@ -171,14 +171,14 @@ function T(e) {
                     (function (e, t, n, i, l) {
                         let a = I(i, g.O1.OR);
                         return (0, r.jsx)(d.FXm, {
-                            label: O.intl.string(O.t.Xs7PHR),
+                            label: O.intl.string(O.t.Xs7PHX),
                             options: [
                                 {
-                                    name: O.intl.string(O.t["W3iY5+"]),
+                                    name: O.intl.string(O.t.W3iY58),
                                     value: g.O1.OR,
                                 },
                                 {
-                                    name: O.intl.string(O.t.gHXS9P),
+                                    name: O.intl.string(O.t.gHXS9A),
                                     value: g.O1.AND,
                                 },
                             ],
@@ -309,7 +309,7 @@ function T(e) {
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  children: O.intl.string(O.t["2aFeeX"]),
+                                  children: O.intl.string(O.t["2aFeef"]),
                               }),
                           ],
                       })

@@ -11,13 +11,13 @@ var i = n(524437),
     d = n(726985),
     f = n(981631),
     _ = n(388032),
-    p = n(893867),
-    h = n(174546);
+    p = n(951917),
+    h = n(85240);
 function m(e) {
     let { className: t } = e;
     return (0, r.jsxs)(u.Z, {
         className: t,
-        title: _.intl.string(_.t.Cq98yM),
+        title: _.intl.string(_.t.Cq98yL),
         children: [
             (0, r.jsx)(b, {}),
             (0, r.jsx)(a.izJ, { gap: 32 }),
@@ -38,23 +38,23 @@ function g() {
         s = [
             {
                 value: i.GI.ACTIVITY_STATUS_ON,
-                name: _.intl.string(_.t.UzGMHx),
+                name: _.intl.string(_.t.UzGMH9),
             },
             {
                 value: i.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
-                name: _.intl.string(p.default["/sAeRU"]),
+                name: _.intl.string(p.default["/sAeRY"]),
             },
             {
                 value: i.GI.ACTIVITY_STATUS_OFF,
-                name: _.intl.string(p.default.m3oL7e),
+                name: _.intl.string(p.default.m3oL7Q),
             },
         ];
     return (0, r.jsxs)(a.C3N, {
-        label: _.intl.string(p.default.TG0Qsb),
-        description: _.intl.string(p.default.OO17Li),
+        label: _.intl.string(p.default.TG0QsS),
+        description: _.intl.string(p.default.OO17Lg),
         children: [
             (0, r.jsx)(a.FXm, {
-                label: _.intl.string(p.default["/LHVbm"]),
+                label: _.intl.string(p.default["/LHVbt"]),
                 options: s,
                 value: t,
                 onChange: (e) => n(e),
@@ -69,14 +69,14 @@ function g() {
                                 className: h.myServersTitle,
                                 variant: "heading-md/medium",
                                 color: "header-primary",
-                                children: _.intl.string(_.t.TqdOvL),
+                                children: _.intl.string(_.t.TqdOvC),
                             }),
                             !e &&
                                 (0, r.jsx)(a.Wn, {
                                     className: h.myServersIgnoredWarning,
                                     messageType: a.QYI.WARNING,
                                     textColor: "text-feedback-warning",
-                                    children: _.intl.string(p.default["xxI0/f"]),
+                                    children: _.intl.string(p.default["xxI0/W"]),
                                 }),
                         ],
                     }),
@@ -95,15 +95,15 @@ function E() {
             label: _.intl.string(p.default["5rYBAQ"]),
             children: [
                 (0, r.jsx)(a.rsf, {
-                    label: _.intl.string(p.default.khuuzs),
-                    description: _.intl.string(p.default["8EWsJy"]),
+                    label: _.intl.string(p.default.khuuzv),
+                    description: _.intl.string(p.default["8EWsJ8"]),
                     id: "allow-friends-to-join-my-game",
                     checked: e,
                     onChange: (e) => c.cP.updateSetting(e),
                 }),
                 (0, r.jsx)(a.rsf, {
-                    label: _.intl.string(p.default.Uz5Ipq),
-                    description: _.intl.string(p.default.CZI2GR),
+                    label: _.intl.string(p.default.Uz5Ipi),
+                    description: _.intl.string(p.default.CZI2Gb),
                     id: "allow-vc-join-without-request",
                     checked: t,
                     onChange: (e) => c.Ou.updateSetting(e),
@@ -114,15 +114,15 @@ function E() {
 }
 function b() {
     let e = c.G6.useSetting(),
-        t = l.isPlatformEmbedded ? _.intl.string(p.default.UQ9RHB) : _.intl.string(_.t.oKqC4u);
+        t = l.isPlatformEmbedded ? _.intl.string(p.default.UQ9RHJ) : _.intl.string(_.t.oKqC4t);
     return (0, r.jsx)(s.F, {
         setting: d.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, r.jsxs)(a.Kqy, {
             gap: 32,
             children: [
-                (0, r.jsx)("div", { children: _.intl.string(p.default.t2Ysra) }),
+                (0, r.jsx)("div", { children: _.intl.string(p.default.t2YsrV) }),
                 (0, r.jsx)(a.rsf, {
-                    label: _.intl.string(p.default.WhdCGB),
+                    label: _.intl.string(p.default.WhdCGP),
                     description: t,
                     id: "share-my-activity",
                     checked: e,
@@ -137,7 +137,7 @@ function y() {
         setting: d.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, r.jsx)(a.ToO, {
             type: a.ToO.Types.PRIMARY,
-            body: _.intl.format(_.t.xvCsx8, {
+            body: _.intl.format(_.t.xvCsx4, {
                 termsLink: f.EYA.TERMS,
                 privacyLink: f.EYA.PRIVACY,
             }),

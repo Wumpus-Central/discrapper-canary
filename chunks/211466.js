@@ -11,18 +11,18 @@ var i = n(925513),
     d = n(726985),
     f = n(981631),
     _ = n(388032),
-    p = n(627256);
+    p = n(20492);
 function h() {
     let e = (0, i.v6)(),
         t = [
             {
-                title: _.intl.string(_.t.GYpoAg),
+                title: _.intl.string(_.t.GYpoAq),
                 component: () => (0, r.jsx)(s.P, {}),
                 orientation: "vertical",
                 setting: d.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
             },
             {
-                title: _.intl.string(_.t["16/3Bg"]),
+                title: _.intl.string(_.t["16/3Bi"]),
                 component: () => (0, r.jsx)(l.I, {}),
                 orientation: "vertical",
                 setting: d.s6.GORE_MEDIA_REDACTION,
@@ -33,8 +33,8 @@ function h() {
         scrollPosition: u.FY.EXPLICIT_MEDIA_REDACTION_V2,
         children: [
             (0, r.jsx)(c.H, {
-                header: _.intl.string(_.t["Hj/Bur"]),
-                description: _.intl.format(_.t.dliU4u, { learnMoreLink: a.Z.getArticleURL(e) }),
+                header: _.intl.string(_.t["Hj/But"]),
+                description: _.intl.format(_.t.dliU4j, { learnMoreLink: a.Z.getArticleURL(e) }),
             }),
             (0, r.jsx)(o.Z, {
                 parentSetting: d.s6.CONTENT_SOCIAL,

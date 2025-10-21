@@ -5,7 +5,7 @@ var i = n(755721),
     l = n(481060),
     o = n(933557),
     a = n(388032),
-    s = n(50368);
+    s = n(188319);
 function c(e) {
     var t,
         n,
@@ -61,9 +61,9 @@ function c(e) {
             return e;
         })(
             {
-                header: a.intl.string(a.t.YWMtRU),
-                confirmText: a.intl.string(a.t.eW8Gy8),
-                cancelText: a.intl.string(a.t.s4uM3d),
+                header: a.intl.string(a.t.YWMtRe),
+                confirmText: a.intl.string(a.t.eW8Gy4),
+                cancelText: a.intl.string(a.t.s4uM3b),
                 confirmButtonColor: i.zx.Colors.BRAND,
             },
             d,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(997841), n(388685);
+n.d(t, { Z: () => H }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
     s = n(120356),
@@ -21,8 +21,8 @@ var r = n(951288),
     j = n(703656),
     I = n(108427),
     N = n(314897),
-    O = n(896797),
-    y = n(701190),
+    y = n(896797),
+    O = n(701190),
     S = n(626135),
     C = n(630388),
     A = n(63063),
@@ -36,7 +36,7 @@ var r = n(951288),
     k = n(701476),
     M = n(436620),
     U = n(388032),
-    G = n(10198);
+    G = n(197571);
 function B(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ async function K(e) {
     let { invite: t } = await d.ZP.resolveInvite(e, F);
     null != t && (0, p.A)(t);
 }
-class H extends i.PureComponent {
+class W extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
         if ((S.default.track(w.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, I.e)("invite"), !M.KO)) {
@@ -170,14 +170,14 @@ class H extends i.PureComponent {
                     className: l()(G.marginTop8, G.marginBottom8),
                     children: U.intl.string(U.t.kux01N),
                 }),
-                (0, r.jsx)(m.DK, { children: e ? U.intl.string(U.t["5AkWAQ"]) : U.intl.string(U.t["+qUJAg"]) }),
-                this.renderButton(U.intl.string(U.t.fIv16O)),
+                (0, r.jsx)(m.DK, { children: e ? U.intl.string(U.t["5AkWAd"]) : U.intl.string(U.t["+qUJAj"]) }),
+                this.renderButton(U.intl.string(U.t.fIv16B)),
                 (0, r.jsx)(m.zx, {
                     onClick: () => window.open(A.Z.getArticleURL(w.BhN.INVALID_INVITES), "_blank"),
                     look: m.zx.Looks.LINK,
                     color: m.zx.Colors.LINK,
                     className: G.marginTop8,
-                    children: U.intl.string(U.t.urIwn5),
+                    children: U.intl.string(U.t.urIwn4),
                 }),
             ],
         });
@@ -191,8 +191,8 @@ class H extends i.PureComponent {
                     error: null == (e = this.state.error) ? void 0 : e.message,
                 }),
                 (null == (t = this.state.error) ? void 0 : t.code) === w.evJ.INVALID_CANNOT_FRIEND_SELF
-                    ? this.renderButton(U.intl.string(U.t.fIv16O))
-                    : this.renderButton(U.intl.string(U.t.ohMvm5), this.handleAccept),
+                    ? this.renderButton(U.intl.string(U.t.fIv16B))
+                    : this.renderButton(U.intl.string(U.t.ohMvm1), this.handleAccept),
             ],
         });
     }
@@ -208,10 +208,10 @@ class H extends i.PureComponent {
             children: [
                 (0, r.jsx)(m.Dx, {
                     className: G.marginBottom8,
-                    children: U.intl.string(U.t.csrAMD),
+                    children: U.intl.string(U.t.csrAMJ),
                 }),
-                (0, r.jsx)(m.DK, { children: U.intl.string(U.t["m1+IBg"]) }),
-                this.renderButton(U.intl.string(U.t.fIv16O), () => t()),
+                (0, r.jsx)(m.DK, { children: U.intl.string(U.t["m1+IBn"]) }),
+                this.renderButton(U.intl.string(U.t.fIv16B), () => t()),
             ],
         });
     }
@@ -242,7 +242,7 @@ class H extends i.PureComponent {
                 (0, r.jsxs)(m.ZP, {
                     children: [
                         this.renderAuthenticatedHeader(),
-                        this.renderButton(U.intl.string(U.t.ohMvm5), this.handleAccept),
+                        this.renderButton(U.intl.string(U.t.ohMvm1), this.handleAccept),
                     ],
                 }),
                 this.renderAuthenicatedFooter(),
@@ -252,8 +252,8 @@ class H extends i.PureComponent {
     renderContinue() {
         return (0, r.jsxs)(m.ZP, {
             children: [
-                (0, r.jsx)(m.Dx, { children: U.intl.string(U.t.fOc4go) }),
-                this.renderButton(U.intl.string(U.t.fIv16O)),
+                (0, r.jsx)(m.Dx, { children: U.intl.string(U.t.fOc4gn) }),
+                this.renderButton(U.intl.string(U.t.fIv16B)),
             ],
         });
     }
@@ -267,10 +267,10 @@ class H extends i.PureComponent {
                 return this.renderContinue();
             case w.r2o.RESOLVING:
                 return D.a
-                    ? this.renderSpinner(U.intl.string(U.t.MKDeyM))
-                    : this.renderSpinner(U.intl.string(U.t["Z+hCVV"]));
+                    ? this.renderSpinner(U.intl.string(U.t.MKDeyL))
+                    : this.renderSpinner(U.intl.string(U.t["Z+hCVU"]));
             case w.r2o.APP_OPENING:
-                return this.renderSpinner(U.intl.string(U.t["Z+hCVV"]));
+                return this.renderSpinner(U.intl.string(U.t["Z+hCVU"]));
             case w.r2o.RESOLVED:
                 var l;
                 if (n && (0, C.yE)(null != (l = e.flags) ? l : 0, a.$.IS_GUEST_INVITE))
@@ -290,7 +290,7 @@ class H extends i.PureComponent {
                         transitionTo: i,
                     });
             case w.r2o.ACCEPTING:
-                return this.renderSpinner(U.intl.string(U.t["6wsY19"]));
+                return this.renderSpinner(U.intl.string(U.t["6wsY16"]));
             case w.r2o.EXPIRED:
                 return this.renderExpiredInvite();
             case w.r2o.BANNED:
@@ -340,7 +340,7 @@ class H extends i.PureComponent {
                         this.setState({
                             error: {
                                 code: e.code,
-                                message: U.intl.string(U.t.dDZRd3),
+                                message: U.intl.string(U.t.dDZRdy),
                             },
                         });
                 });
@@ -364,14 +364,14 @@ class H extends i.PureComponent {
             });
     }
 }
-let W = c.ZP.connectStores([y.Z, O.Z, N.default, x.Z, g.Z], (e) => {
+let H = c.ZP.connectStores([O.Z, y.Z, N.default, x.Z, g.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null != (t = y.Z.getInvite(n)) ? t : {},
+        invite: null != (t = O.Z.getInvite(n)) ? t : {},
         nativeAppState: x.Z.getState(n),
         authenticated: N.default.isAuthenticated(),
-        defaultRoute: O.Z.defaultRoute,
+        defaultRoute: y.Z.defaultRoute,
         isUnderage: g.Z.isUnderageAnonymous(),
     };
-})(H);
+})(W);

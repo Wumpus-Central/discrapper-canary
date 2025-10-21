@@ -9,7 +9,7 @@ var t = i(442837),
     d = i(922156),
     c = i(63063),
     u = i(388032),
-    p = i(41245);
+    p = i(534084);
 let h = (l) => {
     let { onClose: n, transitionState: i } = l,
         { error: h, applicationName: x } = (0, t.cj)([d.Z, a.Z], () => {
@@ -27,7 +27,7 @@ let h = (l) => {
     return (0, r.jsxs)(e.Y0X, {
         transitionState: i,
         size: e.CgR.SMALL,
-        "aria-label": u.intl.string(u.t["6kHRYG"]),
+        "aria-label": u.intl.string(u.t["6kHRYP"]),
         parentComponent: "DispatchErrorModal",
         children: [
             (0, r.jsxs)(e.xBx, {
@@ -38,7 +38,7 @@ let h = (l) => {
                         grow: 1,
                         children: (0, r.jsx)(e.Heading, {
                             variant: "heading-lg/semibold",
-                            children: u.intl.string(u.t["6kHRYG"]),
+                            children: u.intl.string(u.t["6kHRYP"]),
                         }),
                     }),
                     (0, r.jsx)(s.Z.Child, {
@@ -52,15 +52,15 @@ let h = (l) => {
                     className: p.body,
                     children: [
                         (0, r.jsx)("div", {
-                            children: u.intl.format(u.t["NnE/6O"], { link: "https://dis.gd/dispatch-error" }),
+                            children: u.intl.format(u.t["NnE/6P"], { link: "https://dis.gd/dispatch-error" }),
                         }),
                         (0, r.jsx)("div", {
                             className: p.supportCallToAction,
-                            children: u.intl.string(u.t["o+efY2"]),
+                            children: u.intl.string(u.t["o+efY9"]),
                         }),
                         (0, r.jsx)("div", {
                             className: p.errorLabel,
-                            children: u.intl.string(u.t.BiSnZ2),
+                            children: u.intl.string(u.t.BiSnZ9),
                         }),
                         (0, r.jsx)("div", {
                             className: p.errorDetails,
@@ -90,7 +90,7 @@ let h = (l) => {
                 children: [
                     (0, r.jsx)(e.Button, {
                         variant: "primary",
-                        text: u.intl.string(u.t.VdyWmJ),
+                        text: u.intl.string(u.t.VdyWmB),
                         onClick: () => {
                             window.open(c.Z.getSubmitRequestURL());
                         },
@@ -99,7 +99,7 @@ let h = (l) => {
                         look: o.zx.Looks.LINK,
                         onClick: n,
                         color: p.closeLink,
-                        children: u.intl.string(u.t.cpT0Cg),
+                        children: u.intl.string(u.t.cpT0Cq),
                     }),
                 ],
             }),

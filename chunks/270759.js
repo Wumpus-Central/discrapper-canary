@@ -40,7 +40,7 @@ function x() {
     return (0, r.jsx)("div", {
         className: j.inviteToolbar,
         children: (0, r.jsx)(b.Z, {
-            tooltip: P.intl.string(P.t.HfOgAw),
+            tooltip: P.intl.string(P.t["HfOgA/"]),
             location: "PeoplePageHeaderToolbar-CreateDMButton",
         }),
     });
@@ -83,13 +83,13 @@ let A = function (e) {
             {
                 id: N.pJs.ONLINE,
                 show: w.filter(N.pJs.ONLINE).length > 0,
-                content: P.intl.string(P.t.b9w3bG),
+                content: P.intl.string(P.t.b9w3bO),
                 className: j.item,
             },
             {
                 id: N.pJs.ALL,
                 show: R[N.OGo.FRIEND] > 0,
-                content: P.intl.string(P.t.PfjFjY),
+                content: P.intl.string(P.t.PfjFjR),
                 className: j.item,
             },
             {
@@ -97,7 +97,7 @@ let A = function (e) {
                 show: w.filter(N.pJs.PENDING).length > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        P.intl.string(P.t.p6IHGB),
+                        P.intl.string(P.t.p6IHGE),
                         A > 0 &&
                             (0, r.jsx)(c.mAB, {
                                 count: A,
@@ -105,7 +105,7 @@ let A = function (e) {
                             }),
                     ],
                 }),
-                ariaLabel: P.intl.formatToPlainString(P.t.OAC0Z2, { count: A.toString() }),
+                ariaLabel: P.intl.formatToPlainString(P.t.OAC0Z4, { count: A.toString() }),
                 className: j.item,
             },
             {
@@ -113,21 +113,21 @@ let A = function (e) {
                 show: L > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        P.intl.string(P.t["8rSi19"]),
+                        P.intl.string(P.t["8rSi1/"]),
                         (0, r.jsx)(c.mAB, {
                             count: L,
                             className: j.badge,
                         }),
                     ],
                 }),
-                ariaLabel: P.intl.formatToPlainString(P.t.AbMQp6, { count: L.toString() }),
+                ariaLabel: P.intl.formatToPlainString(P.t.AbMQp7, { count: L.toString() }),
                 className: j.item,
             },
             {
                 id: N.pJs.ADD_FRIEND,
                 show: !0,
-                content: (0, r.jsx)("span", { children: P.intl.string(P.t.j0wbEx) }),
-                ariaLabel: P.intl.string(P.t.j0wbEx),
+                content: (0, r.jsx)("span", { children: P.intl.string(P.t.j0wbE5) }),
+                ariaLabel: P.intl.string(P.t.j0wbE5),
                 className: a()(j.item, j.addFriend),
             },
         ],
@@ -143,9 +143,9 @@ let A = function (e) {
         (B = Z === N.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: k })),
         (0, r.jsxs)("main", {
             className: j.container,
-            "aria-label": P.intl.string(P.t.TdEu5e),
+            "aria-label": P.intl.string(P.t.TdEu5X),
             children: [
-                (0, r.jsx)(f.yY, { location: P.intl.string(P.t.TdEu5e) }),
+                (0, r.jsx)(f.yY, { location: P.intl.string(P.t.TdEu5X) }),
                 (0, r.jsx)(c.f6W, {
                     theme: b,
                     children: (e) =>
@@ -162,11 +162,11 @@ let A = function (e) {
                                 }),
                                 (0, r.jsx)(m.Z.Title, {
                                     id: M,
-                                    children: P.intl.string(P.t.TdEu5e),
+                                    children: P.intl.string(P.t.TdEu5X),
                                 }),
                                 (0, r.jsx)(m.Z.Divider, {}),
                                 (0, r.jsx)(c.njP, {
-                                    "aria-label": P.intl.string(P.t.TdEu5e),
+                                    "aria-label": P.intl.string(P.t.TdEu5X),
                                     selectedItem: Z,
                                     type: "top-pill",
                                     onItemSelect: D,

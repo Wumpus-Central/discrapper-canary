@@ -9,7 +9,7 @@ var a = n(951288),
     d = n(981631),
     p = n(474936),
     m = n(388032),
-    E = n(457048);
+    E = n(91717);
 let h = (e) => {
     let { transitionState: t, onClose: n } = e;
     return (
@@ -32,11 +32,11 @@ let h = (e) => {
                         (0, a.jsx)(s.Heading, {
                             variant: "heading-xl/semibold",
                             className: E.header,
-                            children: m.intl.string(m.t.Uq1zJS),
+                            children: m.intl.string(m.t.Uq1zJY),
                         }),
                         (0, a.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            children: m.intl.format(m.t.xPaO3t, {
+                            children: m.intl.format(m.t.xPaO3o, {
                                 onLearnMore: () => {
                                     n(), (0, r.openUserSettings)(l.n.NITRO_PANEL, { section: d.oAB.PREMIUM });
                                 },
@@ -47,7 +47,7 @@ let h = (e) => {
                 (0, a.jsx)(s.mzw, {
                     children: (0, a.jsx)(o.Z, {
                         onClick: n,
-                        textOptions: { textOverride: m.intl.string(m.t.pj0XBA) },
+                        textOptions: { textOverride: m.intl.string(m.t.pj0XBN) },
                         subscriptionTier: p.Si.TIER_2,
                         premiumModalAnalyticsLocation: { page: d.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL },
                     }),

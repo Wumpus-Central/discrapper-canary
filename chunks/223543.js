@@ -6,7 +6,7 @@ var r = n(951288),
     a = n(388905),
     o = n(108427),
     c = n(388032),
-    u = n(10198);
+    u = n(197571);
 function d(e) {
     let { location: t } = e,
         [d, h] = i.useState("submitting");
@@ -32,11 +32,11 @@ function d(e) {
                   }),
                   (0, r.jsx)(a.Dx, {
                       className: u.marginBottom8,
-                      children: c.intl.string(c.t.GHRpub),
+                      children: c.intl.string(c.t.GHRpue),
                   }),
                   (0, r.jsx)(a.DK, {
                       className: u.marginBottom40,
-                      children: c.intl.string(c.t["1nO55u"]),
+                      children: c.intl.string(c.t["1nO55v"]),
                   }),
               ],
           })
@@ -50,15 +50,15 @@ function d(e) {
                     }),
                     (0, r.jsx)(a.Dx, {
                         className: u.marginBottom8,
-                        children: c.intl.string(c.t["ihHX5+"]),
+                        children: c.intl.string(c.t.ihHX53),
                     }),
                     (0, r.jsx)(a.DK, {
                         className: u.marginBottom40,
-                        children: c.intl.string(c.t.pGPCv7),
+                        children: c.intl.string(c.t["pGPCv+"]),
                     }),
                 ],
             })
           : (0, r.jsxs)(a.ZP, {
-                children: [(0, r.jsx)(a.Hh, {}), (0, r.jsx)(a.Dx, { children: c.intl.string(c.t.T3vC7u) })],
+                children: [(0, r.jsx)(a.Hh, {}), (0, r.jsx)(a.Dx, { children: c.intl.string(c.t.T3vC7n) })],
             });
 }

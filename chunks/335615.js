@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(276264),
     y = n(607070),
     _ = n(100527),
-    j = n(367907),
-    O = n(906732),
+    O = n(367907),
+    j = n(906732),
     x = n(493324),
     v = n(611064),
     C = n(677432),
@@ -44,7 +44,7 @@ var r = n(951288),
     z = n(998502),
     W = n(981631),
     Y = n(388032),
-    q = n(854641);
+    q = n(32482);
 function K(e, t, n) {
     return (
         t in e
@@ -139,8 +139,8 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                 applicationStream: g,
                 status: y,
                 channel: _,
-                guildId: j,
-                isTyping: O,
+                guildId: O,
+                isTyping: j,
                 isMobileOnline: x,
                 premiumSince: v,
                 nameplate: C,
@@ -175,7 +175,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("19848"),
+                                n.e("52021"),
                             ]).then(n.bind(n, 757387)),
                             t = H.Z.isInChannel(k.Z.getVoiceChannelId(), d.id);
                         return (n) =>
@@ -183,14 +183,14 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                                 e,
                                 X(Q({}, n), {
                                     user: d,
-                                    guildId: j,
+                                    guildId: O,
                                     channel: _,
                                     showMediaItems: t,
                                 }),
                             );
                     });
                 },
-                [d, j, _],
+                [d, O, _],
             ),
             R = i.useCallback(() => {
                 let e = "@".concat(V.ZP.getUserTag(d, { decoration: "never" })),
@@ -204,22 +204,22 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
             }, [d, _.id]),
             w = i.useCallback(
                 (e) => {
-                    null != j &&
+                    null != O &&
                         (e.stopPropagation(),
                         (0, T.f)({
-                            guildId: j,
+                            guildId: O,
                             location: {
                                 section: W.jXE.MEMBER_LIST,
                                 object: W.qAy.BOOST_GEM_ICON,
                             },
                         }));
                 },
-                [j],
+                [O],
             );
         return (0, r.jsx)(A.Z, {
             targetElementRef: S,
             user: d,
-            guildId: j,
+            guildId: O,
             channelId: _.id,
             roleId: s,
             position: u.tq ? "window_center" : "left",
@@ -251,9 +251,9 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: O,
+                            isTyping: j,
                             channel: _,
-                            guildId: j,
+                            guildId: O,
                             isMobile: x,
                             onClickPremiumGuildIcon: w,
                             selected: E,
@@ -315,7 +315,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                   className: q.membersGroup,
                   children: [
                       (0, r.jsx)(h.nn4, {
-                          children: Y.intl.format(Y.t.UaqbkZ, {
+                          children: Y.intl.format(Y.t.Uaqbke, {
                               title: n,
                               count: i,
                           }),
@@ -398,7 +398,7 @@ class el extends i.Component {
                                 component: (0, r.jsx)(h.nn4, {
                                     children: (0, r.jsx)(h.H, {
                                         id: s,
-                                        children: Y.intl.format(Y.t.JBQxV1, { channel: n.name }),
+                                        children: Y.intl.format(Y.t.JBQxV6, { channel: n.name }),
                                     }),
                                 }),
                                 children: (0, r.jsx)(c.SJ, {
@@ -410,7 +410,7 @@ class el extends i.Component {
                                             Q(
                                                 {
                                                     innerRole: o,
-                                                    innerAriaLabel: Y.intl.string(Y.t["9Oq93t"]),
+                                                    innerAriaLabel: Y.intl.string(Y.t["9Oq93m"]),
                                                     ref: (e) => {
                                                         var t;
                                                         (this._list = e),
@@ -661,13 +661,13 @@ class el extends i.Component {
                     },
                 );
                 (this.lastReportedAnalyticsChannel = this.props.channel.id),
-                    j.ZP.trackWithMetadata(W.rMx.MEMBER_LIST_VIEWED, Q({}, i));
+                    O.ZP.trackWithMetadata(W.rMx.MEMBER_LIST_VIEWED, Q({}, i));
             });
     }
 }
 function ea(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, O.ZP)(_.Z.MEMBER_LIST),
+        { analyticsLocations: l } = (0, j.ZP)(_.Z.MEMBER_LIST),
         s = (0, p.e7)([y.Z], () => y.Z.keyboardModeEnabled),
         o = (0, p.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
@@ -681,7 +681,7 @@ function ea(e) {
             guildId: t.guild_id,
         }),
         b = i.useRef(null),
-        j = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
+        O = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
         x = i.useCallback(
             (e, t) => {
                 let n = b.current;
@@ -731,7 +731,7 @@ function ea(e) {
             scrollToStart: v,
             scrollToEnd: C,
         });
-    return (0, r.jsx)(O.Gt, {
+    return (0, r.jsx)(j.Gt, {
         value: l,
         children: (0, r.jsx)("div", {
             className: a()(q.container, n),
@@ -745,7 +745,7 @@ function ea(e) {
                         rows: u,
                         listRef: b,
                         updateMaxContentFeedRowSeen: m,
-                        sectionHeight: 18 + j,
+                        sectionHeight: 18 + O,
                         rowHeight: 42,
                     }),
                 ),

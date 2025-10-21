@@ -11,7 +11,7 @@ var r = n(951288),
     g = n(217472),
     m = n(651390),
     p = n(388032),
-    f = n(58801);
+    f = n(229271);
 function h(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
@@ -37,8 +37,8 @@ function h(e) {
           : (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.rsf, {
-                        label: p.intl.string(p.t.d21uOj),
-                        description: p.intl.string(p.t.SzpUBA),
+                        label: p.intl.string(p.t.d21uOr),
+                        description: p.intl.string(p.t.SzpUBF),
                         onChange: b,
                         checked: t,
                     }),
@@ -52,7 +52,7 @@ function h(e) {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
                                     className: f.rulesHeader,
-                                    children: p.intl.string(p.t.XcAzbm),
+                                    children: p.intl.string(p.t.XcAzbo),
                                 }),
                                 (0, r.jsx)(d.k, {
                                     guild: l,

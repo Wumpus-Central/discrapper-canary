@@ -8,7 +8,7 @@ var i = n(755721),
     l = n(981631),
     c = n(474936),
     u = n(388032),
-    d = n(78502);
+    d = n(699454);
 function f(e) {
     let { message: t, channel: n } = e,
         f = null != n.guild_id ? l.jXE.TEXT_IN_VOICE : l.jXE.CHANNEL_TEXT_AREA;
@@ -35,7 +35,7 @@ function f(e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/medium",
                                     className: d.nitroBadgeText,
-                                    children: u.intl.string(u.t["BMw+7O"]),
+                                    children: u.intl.string(u.t["BMw+7I"]),
                                 }),
                             ],
                         }),
@@ -47,7 +47,7 @@ function f(e) {
                         showGradient: !0,
                         iconClassName: d.premiumIcon,
                         subscriptionTier: c.Si.TIER_2,
-                        textOptions: { textOverride: u.intl.string(u.t.Y2WKTk) },
+                        textOptions: { textOverride: u.intl.string(u.t.Y2WKTl) },
                         size: i.zx.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
                             section: f,

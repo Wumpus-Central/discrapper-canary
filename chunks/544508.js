@@ -18,7 +18,7 @@ var r = n(951288),
     O = n(801461),
     S = n(671955),
     b = n(388032),
-    _ = n(38579),
+    _ = n(631936),
     N = n(733469);
 let v = i.forwardRef(function (e, t) {
     let {
@@ -68,7 +68,7 @@ let v = i.forwardRef(function (e, t) {
         );
     let G = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         { createMultipleConfettiAt: W } = i.useContext(m.h),
-        F = null == x ? void 0 : x.getLegacyUsername();
+        q = null == x ? void 0 : x.getLegacyUsername();
     return (
         i.useEffect(() => {
             !G &&
@@ -129,12 +129,12 @@ let v = i.forwardRef(function (e, t) {
                             className: _.avatar,
                         }),
                         P === O.Wq.PREVIEW &&
-                            null != F &&
+                            null != q &&
                             (0, r.jsx)("div", {
                                 className: _.legacyUsernameBadgeContainer,
                                 children: (0, r.jsx)(c.u, {
                                     position: "top",
-                                    text: b.intl.formatToPlainString(b.t.bhrgkJ, { legacyUsername: F }),
+                                    text: b.intl.formatToPlainString(b.t.bhrgkA, { legacyUsername: q }),
                                     spacing: 12,
                                     children: (0, r.jsx)(u.Anchor, {
                                         children: (0, r.jsx)("img", {
@@ -160,7 +160,7 @@ let v = i.forwardRef(function (e, t) {
                                 children: [
                                     P === O.Wq.EDIT_DISPLAY_NAME &&
                                         (0, r.jsx)(u.oil, {
-                                            label: b.intl.string(b.t["9AjdkJ"]),
+                                            label: b.intl.string(b.t["9AjdkD"]),
                                             value: null != w ? w : "",
                                             placeholder: E.ZP.getName(n),
                                             maxLength: O.hy,
@@ -229,7 +229,7 @@ let v = i.forwardRef(function (e, t) {
                                 className: _.memberText,
                                 color: "text-muted",
                                 variant: "text-sm/medium",
-                                children: b.intl.format(b.t["9rfonp"], { date: (0, p.K9)(n.id) }),
+                                children: b.intl.format(b.t["9rfonh"], { date: (0, p.K9)(n.id) }),
                             }),
                         ],
                     }),

@@ -4,7 +4,7 @@ n(647438);
 var i = n(481060),
     a = n(921944),
     o = n(388032),
-    s = n(471793);
+    s = n(73536);
 let l = (e) => {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)("div", {
@@ -19,7 +19,7 @@ let l = (e) => {
                 className: s.content,
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-xs/normal",
-                    children: o.intl.string(o.t["xdRf6+"]),
+                    children: o.intl.string(o.t.xdRf69),
                 }),
             }),
             (0, r.jsx)(i.P3F, {

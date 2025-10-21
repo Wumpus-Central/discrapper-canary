@@ -4,7 +4,7 @@ t.d(n, {
 });
 var r = t(647438),
     i = t(343312),
-    l = t(45765),
+    l = t(470658),
     a = t(388032);
 let o = ["/", "\\\\"];
 function s(e) {
@@ -12,7 +12,7 @@ function s(e) {
     return {
         isValid: !n,
         errors: {
-            name: n ? a.intl.formatToPlainString(l.default["jYZD4+"], { forbiddenCharacters: o.join(", ") }) : void 0,
+            name: n ? a.intl.formatToPlainString(l.default.jYZD44, { forbiddenCharacters: o.join(", ") }) : void 0,
         },
     };
 }

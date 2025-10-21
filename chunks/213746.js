@@ -16,7 +16,7 @@ var r = n(951288),
     f = n(979007),
     b = n(981631),
     x = n(388032),
-    v = n(51324);
+    v = n(154494);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -89,7 +89,7 @@ function y(e) {
                         (0, r.jsx)(i.X6q, {
                             variant: "heading-lg/semibold",
                             color: "header-primary",
-                            children: x.intl.string(x.t.yUGTs7),
+                            children: x.intl.string(x.t.yUGTs8),
                         }),
                         (0, r.jsx)("div", {
                             className: v.products,
@@ -233,9 +233,9 @@ function S(e) {
                           privacyHook: (e) => s(e, l),
                       })
                     : null != a
-                      ? x.intl.format(x.t["0cPyDw"], { termsHook: (e) => s(e, a) })
+                      ? x.intl.format(x.t["0cPyDz"], { termsHook: (e) => s(e, a) })
                       : null != l
-                        ? x.intl.format(x.t.loYGCw, { privacyHook: (e) => s(e, l) })
+                        ? x.intl.format(x.t["loYGC/"], { privacyHook: (e) => s(e, l) })
                         : null,
         }),
     });

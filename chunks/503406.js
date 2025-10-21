@@ -9,9 +9,9 @@ var r = n(951288),
     d = n(231239),
     u = n(881052),
     m = n(703656),
-    g = n(981631),
-    f = n(388032),
-    p = n(341430);
+    f = n(981631),
+    g = n(388032),
+    p = n(85890);
 let h = (e) => {
     let { email: t, guildId: n, onClose: i } = e,
         [s, h] = l.useState(""),
@@ -20,7 +20,7 @@ let h = (e) => {
             if (null != n)
                 try {
                     let e = await d.Z.verifyCode(s, n, t);
-                    e.guild && (null == i || i(), (0, m.uL)(g.Z5c.CHANNEL(e.guild.id)));
+                    e.guild && (null == i || i(), (0, m.uL)(f.Z5c.CHANNEL(e.guild.id)));
                 } catch (e) {
                     v(new u.Hx(e));
                 }
@@ -29,7 +29,7 @@ let h = (e) => {
             d.Z.sendVerificationEmail(t, !0, n);
         }, 1000),
         E = async (e) => {
-            null != s && "" !== s && e.charCode === g.yXg.ENTER && (await x());
+            null != s && "" !== s && e.charCode === f.yXg.ENTER && (await x());
         };
     return (0, r.jsxs)("div", {
         className: p.container,
@@ -38,7 +38,7 @@ let h = (e) => {
             (0, r.jsx)(c.Heading, {
                 className: a()(p.centerText, p.header),
                 variant: "heading-xl/semibold",
-                children: f.intl.string(f.t.SJ3Lxc),
+                children: g.intl.string(g.t.SJ3Lxc),
             }),
             (0, r.jsx)("div", {
                 className: p.descriptionWidth,
@@ -46,7 +46,7 @@ let h = (e) => {
                     className: p.centerText,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: f.intl.format(f.t["b+W0oq"], {
+                    children: g.intl.format(g.t["b+W0oq"], {
                         email: t,
                         onClick: N,
                     }),
@@ -55,7 +55,7 @@ let h = (e) => {
             (0, r.jsx)("div", {
                 className: p.formItem,
                 children: (0, r.jsx)(c.oil, {
-                    label: f.intl.string(f.t.rpWT1t),
+                    label: g.intl.string(g.t.rpWT1s),
                     onKeyPress: E,
                     onChange: (e) => {
                         null != e && "" !== e && h(e);
@@ -67,7 +67,7 @@ let h = (e) => {
                 fullWidth: !0,
                 onClick: x,
                 variant: "primary",
-                text: f.intl.string(f.t.geKm7u),
+                text: g.intl.string(g.t.geKm7t),
             }),
         ],
     });

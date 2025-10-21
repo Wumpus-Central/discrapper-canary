@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(149203),
     S = n(981631),
     A = n(388032),
-    C = n(39162);
+    C = n(999642);
 function N(e, t, n) {
     return (
         t in e
@@ -231,7 +231,7 @@ let x = (e) => {
                               : (0, s.wj)(eo)
                                 ? ee
                                 : et,
-                        c = A.intl.string(e.sectionCollapsedToThreeRows ? A.t.NZI2Zm : A.t["/K2RDA"]);
+                        c = A.intl.string(e.sectionCollapsedToThreeRows ? A.t.NZI2Zk : A.t["/K2RDH"]);
                     return n({
                         handleSelect: o,
                         icon: (0, r.jsx)("img", {

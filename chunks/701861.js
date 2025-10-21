@@ -59,29 +59,29 @@ function P(e) {
             });
         }, [n, l, t.id]),
         m = i.useCallback(() => {
-            let e = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
+            let e = l ? S.intl.string(S.t.RLcE6x) : S.intl.string(S.t.cvSt1J);
             c.Z.show({
-                title: S.intl.formatToPlainString(S.t.fPLvZW, { name: b.ZP.getName(t) }),
+                title: S.intl.formatToPlainString(S.t.fPLvZd, { name: b.ZP.getName(t) }),
                 body: S.intl.formatToPlainString(S.t.l5FFq6, { name: b.ZP.getName(t) }),
                 confirmText: e,
                 confirmVariant: "critical-primary",
-                cancelText: S.intl.string(S.t["ETE/oK"]),
+                cancelText: S.intl.string(S.t["ETE/oC"]),
                 onConfirm: h,
             });
         }, [h, l, t]),
         E = (0, o.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
         O = t.isProvisional,
-        v = l ? S.intl.string(S.t["RLcE6+"]) : S.intl.string(S.t.cvSt1N);
+        v = l ? S.intl.string(S.t.RLcE6x) : S.intl.string(S.t.cvSt1J);
     return (0, r.jsxs)(s.v2r, {
         navId: "friend-row",
-        "aria-label": S.intl.string(S.t.liqwPD),
+        "aria-label": S.intl.string(S.t.liqwPJ),
         onClose: d.Zy,
         onSelect: a,
         children: [
             !O && E
                 ? (0, r.jsx)(s.sNh, {
                       id: "start-video-call",
-                      label: S.intl.string(S.t.oCqlGB),
+                      label: S.intl.string(S.t.oCqlGG),
                       action: f,
                   })
                 : null,
@@ -163,7 +163,7 @@ class j extends i.PureComponent {
                                 }),
                                 (0, r.jsx)(E.Z, {
                                     icon: s.Huf,
-                                    tooltip: S.intl.string(S.t.UKOtz8),
+                                    tooltip: S.intl.string(S.t["UKOtz+"]),
                                     onClick: this.handleOpenActionsMenu,
                                     shouldHighlight: t,
                                 }),

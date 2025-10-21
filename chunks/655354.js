@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(l),
     a = n(481060),
     s = n(388032),
-    c = n(104001);
+    c = n(59777);
 function u(e) {
     let { className: t, onJump: n } = e,
         [l, u] = i.useState(!1);
@@ -19,7 +19,7 @@ function u(e) {
             : (0, r.jsx)(a.Text, {
                   variant: "text-xs/medium",
                   className: c.text,
-                  children: s.intl.string(s.t.k5WiPT),
+                  children: s.intl.string(s.t.k5WiPf),
               }),
     });
 }

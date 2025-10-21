@@ -5,7 +5,7 @@ var r = n(793030),
     l = n(481060),
     a = n(313201),
     o = n(388032),
-    s = n(88881);
+    s = n(881053);
 let c = () =>
         n
             .e("49812")
@@ -63,7 +63,7 @@ let c = () =>
                                         variant: "heading-lg/semibold",
                                         className: s.header,
                                         id: u,
-                                        children: o.intl.format(o.t.z9qozM, { guildName: e.guildName }),
+                                        children: o.intl.format(o.t.z9qozJ, { guildName: e.guildName }),
                                     }),
                                     (0, i.jsx)(l.Text, {
                                         variant: "text-sm/medium",
@@ -80,7 +80,7 @@ let c = () =>
                                     onClick: () => {
                                         e.onAccept(), e.onClose();
                                     },
-                                    text: o.intl.string(o.t.NuzmOD),
+                                    text: o.intl.string(o.t.NuzmOA),
                                 },
                             ],
                             actionsFullWidth: !0,

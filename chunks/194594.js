@@ -17,7 +17,7 @@ var r,
     h = n(768581),
     g = n(624138),
     _ = n(388032),
-    f = n(390354),
+    f = n(53062),
     b =
         (((r = {})[(r.SMALL = (0, g.Mg)(d.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = "SMALL"),
         (r[(r.LARGE = (0, g.Mg)(d.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
@@ -67,7 +67,7 @@ function C(e) {
         w = (function (e, t, n, r, a) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return _.intl.formatToPlainString(_.t.pnzE1t, { mutualGuildCount: t });
-            let i = t > 0 ? _.t.YR8PSE : _.t.GQjq6e,
+            let i = t > 0 ? _.t.YR8PSL : _.t.GQjq6c,
                 l = new Intl.NumberFormat(r, {
                     notation: a ? "compact" : "standard",
                     compactDisplay: "short",
@@ -125,7 +125,7 @@ function C(e) {
                                                 }),
                                                 Z > 0
                                                     ? (0, a.jsx)(c.u, {
-                                                          text: _.intl.formatToPlainString(_.t.m6oRrK, {
+                                                          text: _.intl.formatToPlainString(_.t.m6oRrA, {
                                                               appNames: E.format(R.map((e) => e.name)),
                                                           }),
                                                           position: "top",

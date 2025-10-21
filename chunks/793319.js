@@ -48,9 +48,9 @@ var i = n(951288),
     G = n(390322),
     z = n(791592),
     W = n(136995),
-    K = n(402113),
+    q = n(402113),
     Y = n(197016),
-    q = n(386000),
+    K = n(386000),
     X = n(331197),
     J = n(698877),
     Q = n(25827),
@@ -75,7 +75,7 @@ var i = n(951288),
     eb = n(981631),
     eC = n(354459),
     ey = n(921944),
-    e_ = n(817675);
+    e_ = n(32312);
 function ev() {
     return (ev =
         Object.assign ||
@@ -371,7 +371,7 @@ let eP = r.memo(function (e) {
                         case "ACTIVITY":
                             if (null == s || null == t || s.type !== eC.fO.ACTIVITY || null == a) return;
                             return (0, i.jsx)(
-                                K.Z,
+                                q.Z,
                                 eO(ex({}, c), {
                                     applicationId: s.applicationId,
                                     color: "disconnect",
@@ -491,7 +491,7 @@ let eT = function (e) {
         }),
         F = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, eo.Z)(n),
-        { analyticsLocations: K } = (0, v.ZP)(_.Z.VOICE_CONTROL_TRAY),
+        { analyticsLocations: q } = (0, v.ZP)(_.Z.VOICE_CONTROL_TRAY),
         Y = (0, $.Hu)({
             location: _.Z.VOICE_CONTROL_TRAY,
             autoTrackExposure: !0,
@@ -521,7 +521,7 @@ let eT = function (e) {
             : void 0;
     return H
         ? (0, i.jsx)(v.Gt, {
-              value: K,
+              value: q,
               children: (0, i.jsxs)(b.Z, {
                   section: eb.jXE.VOICE_CONTROL_TRAY,
                   children: [
@@ -585,7 +585,7 @@ let eT = function (e) {
                                           children: (e, t) => {
                                               let { onClick: n } = e,
                                                   { isShown: r } = t;
-                                              return (0, i.jsx)(q.Z, {
+                                              return (0, i.jsx)(K.Z, {
                                                   ref: en,
                                                   centerButton: !0,
                                                   onPopoutClick: B ? null : n,
@@ -681,7 +681,7 @@ let eT = function (e) {
               }),
           })
         : (0, i.jsx)(v.Gt, {
-              value: K,
+              value: q,
               children: (0, i.jsx)(eI, {
                   channel: n,
                   cameraUnavailable: x,

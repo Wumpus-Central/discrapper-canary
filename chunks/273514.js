@@ -6,7 +6,7 @@ var i = n(481060),
     a = n(592125),
     s = n(430824),
     o = n(388032),
-    c = n(50079);
+    c = n(238972);
 let d = (e) => {
     let { entry: t } = e,
         n = a.Z.getChannel(t.channelId);
@@ -20,7 +20,7 @@ let d = (e) => {
                   (0, r.jsx)(i.Heading, {
                       className: c.header,
                       variant: "heading-sm/semibold",
-                      children: o.intl.string(o.t.nTe4HB),
+                      children: o.intl.string(o.t.nTe4HC),
                   }),
                   (0, r.jsxs)("div", {
                       className: c.guildContainer,

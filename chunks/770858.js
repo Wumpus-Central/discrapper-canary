@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(871301),
     v = n(981631),
     j = n(490897),
-    x = n(86517);
+    x = n(888158);
 function C() {
     let e = (0, o.e7)([h.default], () => h.default.getCurrentUser());
     return (0, o.e7)(
@@ -37,8 +37,8 @@ function E(e) {
         { notificationCenterVariant: N } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
         {
             badge: Z,
-            badgeDimensions: T,
-            unreadChannelsCount: w,
+            badgeDimensions: w,
+            unreadChannelsCount: T,
         } = (function (e) {
             let { notificationCenterVariant: t } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
                 { unreadChannelIds: n } = (0, m.O4)(),
@@ -79,7 +79,7 @@ function E(e) {
             (0, r.jsx)(c.Z, {
                 selected: P && N === g.jP.SIDEBAR,
                 hovered: E && N === g.jP.SIDEBAR,
-                unread: w > 0,
+                unread: T > 0,
                 className: x.pill,
                 disabled: N === g.jP.LEGACY,
             }),
@@ -87,7 +87,7 @@ function E(e) {
                 children: (0, r.jsx)(a.aRk, {
                     selected: P || E,
                     lowerBadge: Z,
-                    lowerBadgeSize: T,
+                    lowerBadgeSize: w,
                     children: (0, r.jsx)(
                         a.LYs,
                         ((t = (function (e) {

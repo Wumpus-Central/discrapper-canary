@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(585857),
     j = n(795057),
     v = n(388032),
-    C = n(936289);
+    C = n(19672);
 function y(e) {
     return (0, r.jsx)(c.Text, {
         className: C.microphoneUnitBodyText,
@@ -58,10 +58,10 @@ function E(e) {
                 header: e
                     ? (0, f.Pb)(t)
                         ? v.intl.string(v.t.N33EuL)
-                        : v.intl.formatToPlainString(v.t["28Ql29"], { gameTitle: n })
+                        : v.intl.formatToPlainString(v.t["28Ql27"], { gameTitle: n })
                     : (0, f.Pb)(t)
-                      ? v.intl.string(v.t.YstzGB)
-                      : v.intl.formatToPlainString(v.t.gX0Qc3, { gameTitle: n }),
+                      ? v.intl.string(v.t.YstzGO)
+                      : v.intl.formatToPlainString(v.t.gX0Qcx, { gameTitle: n }),
                 renderBody: e
                     ? () =>
                           (0, r.jsx)(r.Fragment, {
@@ -103,8 +103,8 @@ function E(e) {
                               color: "text-muted",
                               variant: "text-xxs/normal",
                               children: (0, f.Pb)(t)
-                                  ? v.intl.string(v.t.bUyEZW)
-                                  : v.intl.format(v.t.GXqvCw, { gameTitle: n }),
+                                  ? v.intl.string(v.t.bUyEZZ)
+                                  : v.intl.format(v.t.GXqvC1, { gameTitle: n }),
                           }),
             };
         }, [E, t, a, j]);
@@ -216,15 +216,15 @@ let O = function (e) {
                         renderContent: () =>
                             (0, r.jsx)(j.y3, {
                                 children: (0, f.Pb)(t)
-                                    ? v.intl.string(v.t["5tXqFR"])
-                                    : v.intl.formatToPlainString(v.t["+8JB6e"], { gameTitle: l }),
+                                    ? v.intl.string(v.t["5tXqFe"])
+                                    : v.intl.formatToPlainString(v.t["+8JB6Y"], { gameTitle: l }),
                             }),
                         isComplete: a || c,
                     },
                     {
                         renderContent: () =>
                             (0, r.jsx)(j.y3, {
-                                children: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }),
+                                children: v.intl.formatToPlainString(v.t.HhfrYS, { numMinutes: n.targetMinutes }),
                             }),
                         isComplete: c,
                     },
@@ -235,7 +235,7 @@ let O = function (e) {
             };
         }, [o, i.length, t, n.targetMinutes]);
     return (0, r.jsx)(j.ZP, {
-        heading: v.intl.string(v.t.UPWlJi),
+        heading: v.intl.string(v.t.UPWlJu),
         steps: c,
         children:
             u &&

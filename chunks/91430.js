@@ -114,7 +114,7 @@ function Q(e) {
                                 (0, A.openUserSettings)(S.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                                     section: Y.oAB.GUILD_BOOSTING,
                                 }),
-                            text: z.intl.string(z.t["NQ5g/f"]),
+                            text: z.intl.string(z.t["NQ5g/U"]),
                         }),
                 ],
             }),
@@ -122,7 +122,7 @@ function Q(e) {
                 (0, r.jsx)(h.Text, {
                     className: q.boostingDesktopAppBlurb,
                     variant: "text-sm/normal",
-                    children: z.intl.format(d.tq ? z.t.uxYBER : z.t.k6haR0, { openAppHook: () => (0, b.Z)(X) }),
+                    children: z.intl.format(d.tq ? z.t.uxYBEa : z.t.k6haR9, { openAppHook: () => (0, b.Z)(X) }),
                 }),
         ],
     });
@@ -145,7 +145,7 @@ function J() {
                 (0, r.jsx)(h.Text, {
                     className: q.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: z.intl.string(z.t.xFHEMT),
+                    children: z.intl.string(z.t.xFHEMa),
                 }),
             ],
         })
@@ -169,7 +169,7 @@ function $() {
                 (0, r.jsx)(h.Text, {
                     className: q.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: z.intl.string(z.t["j+nuQU"]),
+                    children: z.intl.string(z.t["j+nuQZ"]),
                 }),
             ],
         })
@@ -195,7 +195,7 @@ function ee(e) {
                 (0, r.jsx)(h.Text, {
                     className: q.paymentBannerText,
                     variant: "text-sm/normal",
-                    children: z.intl.format(z.t["0nbf/P"], {
+                    children: z.intl.format(z.t["0nbf/G"], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
                             (0, T.Z)({
@@ -218,7 +218,7 @@ function et(e) {
             (0, r.jsx)(h.Heading, {
                 variant: "heading-md/semibold",
                 className: q.detailBlockHeader,
-                children: z.intl.string(z.t.KXQjfX),
+                children: z.intl.string(z.t.KXQjfc),
             }),
             (0, r.jsx)("div", { children: w.ZP.getBillingInformationString(t, n, i, !1, s) }),
         ],
@@ -234,7 +234,7 @@ function en() {
             }),
             (0, r.jsx)("p", {
                 className: q.sectionDescription,
-                children: z.intl.string(z.t.D8UpUl),
+                children: z.intl.string(z.t.D8UpUo),
             }),
             (0, r.jsx)(h.Zbd, {
                 className: q.noItemsCard,
@@ -249,7 +249,7 @@ function en() {
                         }),
                         (0, r.jsx)("span", {
                             className: q.cardText,
-                            children: z.intl.string(z.t.xCRgr6),
+                            children: z.intl.string(z.t.xCRgr1),
                         }),
                     ],
                 }),
@@ -337,7 +337,7 @@ function er(e) {
             }),
             (0, r.jsx)("div", {
                 children: (0, r.jsx)(h.C3N, {
-                    label: z.intl.string(z.t.Sb6wIy),
+                    label: z.intl.string(z.t.Sb6wI1),
                     children: (0, r.jsxs)("div", {
                         className: q.details,
                         children: [
@@ -353,10 +353,10 @@ function er(e) {
                                 children: (0, r.jsx)(h.gNt, {
                                     label:
                                         t.isPurchasedExternally && null != t.paymentGateway
-                                            ? z.intl.formatToPlainString(z.t.rTk9v7, {
+                                            ? z.intl.formatToPlainString(z.t["rTk9v/"], {
                                                   paymentGatewayName: Y.Vzj[t.paymentGateway],
                                               })
-                                            : z.intl.string(z.t.iRzXKS),
+                                            : z.intl.string(z.t.iRzXKd),
                                     children: (0, r.jsx)(Z.Z, {
                                         subscription: t,
                                         onPaymentSourceAdded: D.i1,
@@ -392,7 +392,7 @@ function ea() {
                 (0, r.jsx)(h.Text, {
                     className: q.duplicateSubscriptionsBannerText,
                     variant: "text-sm/normal",
-                    children: z.intl.format(z.t["6eXiiI"], { helpCenterLink: P.Z.getArticleURL(Y.BhN.NITRO) }),
+                    children: z.intl.format(z.t["6eXiiC"], { helpCenterLink: P.Z.getArticleURL(Y.BhN.NITRO) }),
                 }),
             ],
         })
@@ -480,7 +480,7 @@ function eo(e) {
               })),
           (0, r.jsxs)(h.C3N, {
               label: z.intl.string(z.t["/gs+Pz"]),
-              description: z.intl.string(z.t.D8UpUl),
+              description: z.intl.string(z.t.D8UpUo),
               children: [
                   B ? (0, r.jsx)(J, {}) : null,
                   Z ? (0, r.jsx)($, {}) : null,

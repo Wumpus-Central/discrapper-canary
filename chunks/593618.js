@@ -39,8 +39,8 @@ var r = n(951288),
     x = n(938475),
     M = n(981631),
     k = n(388032),
-    j = n(102647),
-    U = n(395530);
+    j = n(132789),
+    U = n(78480);
 function G(e, t, n) {
     return (
         t in e
@@ -229,7 +229,7 @@ function W(e) {
               variant: "text-xs/normal",
               color: "text-muted",
               className: n,
-              children: k.intl.string(k.t.fpKdS0),
+              children: k.intl.string(k.t.fpKdS1),
           })
         : (0, r.jsx)(v.Z, {
               muteConfig: t,
@@ -278,13 +278,13 @@ function K(e) {
 function z(e) {
     switch (e) {
         case E.wB.SUBMITTED:
-            return k.intl.string(k.t["9KFC9/"]);
+            return k.intl.string(k.t["9KFC98"]);
         case E.wB.REJECTED:
-            return k.intl.string(k.t["TQY/RU"]);
+            return k.intl.string(k.t["TQY/Rd"]);
         case E.wB.APPROVED:
-            return k.intl.string(k.t.WXHcq6);
+            return k.intl.string(k.t.WXHcq5);
         default:
-            return k.intl.string(k.t.fjHFCw);
+            return k.intl.string(k.t.fjHFC8);
     }
 }
 function q(e) {
@@ -331,7 +331,7 @@ function X(e) {
                       className: j.invitesDisabledTooltip,
                       color: "header-secondary",
                       variant: "text-sm/medium",
-                      children: k.intl.string(k.t["2n0/Fh"]),
+                      children: k.intl.string(k.t["2n0/Fk"]),
                   })
                 : null,
             d
@@ -339,7 +339,7 @@ function X(e) {
                       className: j.viewAsRolesWarning,
                       color: "text-default",
                       variant: "text-xs/normal",
-                      children: k.intl.string(k.t["5LwN8/"]),
+                      children: k.intl.string(k.t["5LwN89"]),
                   })
                 : f,
         ],

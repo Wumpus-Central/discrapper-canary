@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(410030),
     d = n(388032),
-    f = n(218686);
+    f = n(89863);
 function _(e) {
     let {
             src: t,
@@ -55,7 +55,7 @@ function _(e) {
                 className: o()(f.contentImage, _),
                 src: y && null != h ? h : t,
                 "aria-hidden": m,
-                alt: null != p ? p : m ? void 0 : d.intl.string(d.t["2B/phI"]),
+                alt: null != p ? p : m ? void 0 : d.intl.string(d.t["2B/phM"]),
                 onError: (e) => (y ? I(!0) : O(!0)),
             }),
         },

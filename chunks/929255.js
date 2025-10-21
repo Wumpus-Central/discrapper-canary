@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(702486),
+    s = n(481060),
+    o = n(702486),
     c = n(626135),
     u = n(381585),
     d = n(870289),
@@ -20,13 +20,13 @@ var r = n(951288),
     E = n(215023),
     x = n(981631),
     O = n(388032),
-    S = n(25616);
+    S = n(452785);
 function y(e) {
     let { tab: t, sortedCategories: n, initialCategoryId: i, showFilterInitially: c = !0, onUnmount: u } = e;
     (0, g.A)();
     let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
-        { handleScroll: h } = (0, s.z)(f, t),
+        { handleScroll: h } = (0, o.z)(f, t),
         { setCategoryRef: m, handleScrollToCategory: b } = (0, C.xV)(f.current),
         [v, E] = l.useState(p && c),
         [x, O] = l.useState(!1);
@@ -54,7 +54,7 @@ function y(e) {
             children: (0, r.jsxs)("main", {
                 className: a()(S.page, { [S.pageFilter]: p }),
                 children: [
-                    (0, r.jsx)(o.yWw, {
+                    (0, r.jsx)(s.yWw, {
                         className: S.shopScroll,
                         ref: f,
                         onScroll: h,
@@ -71,7 +71,7 @@ function y(e) {
                     v && !x && (0, r.jsx)("div", { className: S.divider }),
                     v &&
                         !x &&
-                        (0, r.jsx)(o.Ttm, {
+                        (0, r.jsx)(s.Ttm, {
                             className: S.filterBar,
                             children: (0, r.jsx)(_.Z, {}),
                         }),
@@ -85,7 +85,7 @@ let j = (e) => {
             isSmallScreen: t,
             filterBarOpen: n,
             setFilterBarOpen: i,
-            tab: s,
+            tab: o,
             scrollerRef: C,
             sortedCategories: y,
             setCategoryRef: j,
@@ -155,16 +155,16 @@ let j = (e) => {
                                         (0, r.jsxs)("div", {
                                             className: S.sortBy,
                                             children: [
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(s.Text, {
                                                     variant: "text-md/semibold",
-                                                    children: O.intl.string(O.t.uaX709),
+                                                    children: O.intl.string(O.t.uaX705),
                                                 }),
                                                 (0, r.jsx)(h.Z, {}),
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
                                             ref: P,
-                                            children: (0, r.jsx)(o.Button, {
+                                            children: (0, r.jsx)(s.Button, {
                                                 onClick: () => {
                                                     let e = !n;
                                                     c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -179,8 +179,8 @@ let j = (e) => {
                                                         i(e);
                                                 },
                                                 variant: "secondary",
-                                                text: O.intl.string(n ? O.t.fYtm6e : O.t.TeTYEx),
-                                                icon: o.gXV,
+                                                text: O.intl.string(n ? O.t.fYtm6f : O.t["TeTYE+"]),
+                                                icon: s.gXV,
                                                 iconPosition: "end",
                                             }),
                                         }),
@@ -191,7 +191,7 @@ let j = (e) => {
                                     (0, r.jsx)("div", {
                                         className: S.filterOverlay,
                                         ref: T,
-                                        children: (0, r.jsx)(o.Den, {
+                                        children: (0, r.jsx)(s.Den, {
                                             className: S.filterOverlayContent,
                                             children: (0, r.jsx)(_.Z, {}),
                                         }),
@@ -203,18 +203,18 @@ let j = (e) => {
                               b.Z,
                               {
                                   scrollerRef: C,
-                                  tab: s,
+                                  tab: o,
                               },
-                              s,
+                              o,
                           )
-                        : (0, E.RE)(s)
+                        : (0, E.RE)(o)
                           ? (0, r.jsx)(
                                 v.Z,
                                 {
                                     scrollerRef: C,
-                                    tab: s,
+                                    tab: o,
                                 },
-                                s,
+                                o,
                             )
                           : (0, r.jsx)(u.k0, {
                                 newValue: { pageIndex: A },

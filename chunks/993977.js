@@ -14,7 +14,7 @@ var r = n(951288),
     g = n(34305),
     m = n(981631),
     b = n(388032),
-    _ = n(936390);
+    _ = n(77839);
 function E(e, t, n) {
     return (
         t in e
@@ -90,7 +90,7 @@ function v(e) {
             (0, r.jsx)(a.Heading, {
                 variant: "heading-md/semibold",
                 className: _.hiddenLibraryApplicationsTitle,
-                children: b.intl.string(b.t["5PJtrK"]),
+                children: b.intl.string(b.t["5PJtrH"]),
             }),
             i,
         ],
@@ -120,15 +120,15 @@ class y extends i.PureComponent {
                           gap: 16,
                           children: [
                               (0, r.jsx)(a.rsf, {
-                                  label: b.intl.string(b.t["9ID+Ki"]),
-                                  description: b.intl.string(b.t.vT61Nz),
+                                  label: b.intl.string(b.t["9ID+Kh"]),
+                                  description: b.intl.string(b.t.vT61N0),
                                   checked: t,
                                   onChange: this.handleToggleShortcutDesktop,
                               }),
                               (0, r.jsx)(a.izJ, {}),
                               (0, r.jsx)(a.rsf, {
                                   label: b.intl.string(b.t.vNpUMz),
-                                  description: b.intl.string(b.t.cpYp0N),
+                                  description: b.intl.string(b.t.cpYp0H),
                                   checked: n,
                                   onChange: this.handleToggleShortcutStartMenu,
                               }),

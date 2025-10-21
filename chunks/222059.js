@@ -57,8 +57,8 @@ function L(e) {
         },
         G = h.o.useConfig({ location: "home button" }).dmsTab;
     if (null == d) return null;
-    let U = G ? A.intl.string(A.t.Ym2Ri4) : A.intl.string(A.t.YUU0RE);
-    v && (U = a.K.get(Z.wli) ? A.intl.string(A.t.nkq1l5) : A.intl.string(A.t.Be8Q5O));
+    let U = G ? A.intl.string(A.t.Ym2Ri6) : A.intl.string(A.t.YUU0RF);
+    v && (U = a.K.get(Z.wli) ? A.intl.string(A.t["nkq1l+"]) : A.intl.string(A.t.Be8Q5E));
     let B = null;
     !o &&
         _ &&
@@ -119,7 +119,7 @@ function L(e) {
                             }
                         },
                         selected: F,
-                        ariaLabel: A.intl.string(A.t.YUU0RE),
+                        ariaLabel: A.intl.string(A.t.YUU0RF),
                         "aria-owns": "guild-list-unread-dms",
                         "aria-selected": o,
                     },

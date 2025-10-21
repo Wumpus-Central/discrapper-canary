@@ -121,7 +121,7 @@ function Z(e) {
                                     s &&
                                         null != l &&
                                         (0, r.jsx)(C.Cy, {
-                                            text: D.intl.formatToPlainString(D.t.iiLbvr, { percent: l }),
+                                            text: D.intl.formatToPlainString(D.t.iiLbvu, { percent: l }),
                                             className: L.discountPill,
                                             colorOptions: C.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
@@ -168,7 +168,7 @@ function F(e) {
                                     s &&
                                         null != l &&
                                         (0, r.jsx)(C.Cy, {
-                                            text: D.intl.formatToPlainString(D.t.iiLbvr, { percent: l }),
+                                            text: D.intl.formatToPlainString(D.t.iiLbvu, { percent: l }),
                                             className: L.discountPill,
                                             colorOptions: C.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
@@ -193,7 +193,7 @@ function V() {
         children: [
             (0, r.jsx)(E.Z, {
                 className: L.discordWordmark,
-                "aria-label": D.intl.string(D.t["FSOz7+"]),
+                "aria-label": D.intl.string(D.t.FSOz78),
             }),
             (0, r.jsx)("div", { className: L.classicWordmark }),
         ],
@@ -205,7 +205,7 @@ function H() {
         wordMark: (0, r.jsx)(V, {}),
         subscriptionInfo: (0, r.jsx)("div", {
             className: L.planInfo,
-            children: D.intl.string(D.t.R0GJLy),
+            children: D.intl.string(D.t.R0GJL2),
         }),
         buttons: (0, r.jsx)(N.Z, {
             className: L.toolsButton,
@@ -215,7 +215,7 @@ function H() {
                     analyticsLocations: e,
                     analyticsObject: G,
                 }),
-            text: D.intl.string(D.t["/ygMUV"]),
+            text: D.intl.string(D.t["/ygMUY"]),
         }),
         statusClasses: { [L.tier1]: !0 },
     });
@@ -317,7 +317,7 @@ let Y = function (e) {
             (0, r.jsx)("div", {
                 className: L.planInfo,
                 children: J
-                    ? D.intl.format(D.t["/SfHws"], { weeks: 1 })
+                    ? D.intl.format(D.t["/SfHwl"], { weeks: 1 })
                     : (0, y.qV)({
                           planId: e,
                           subscription: i,
@@ -339,7 +339,7 @@ let Y = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         loading: C,
-                        text: D.intl.string(D.t.obRG6e).toLocaleUpperCase(),
+                        text: D.intl.string(D.t.obRG6Y).toLocaleUpperCase(),
                     }),
                 });
             }
@@ -357,7 +357,7 @@ let Y = function (e) {
                                       disabled: C,
                                       onClick: $,
                                       size: "sm",
-                                      text: D.intl.string(D.t.eFlYVF),
+                                      text: D.intl.string(D.t.eFlYVA),
                                   }),
                               })
                             : (0, r.jsx)("div", {
@@ -367,7 +367,7 @@ let Y = function (e) {
                                       onClick: ee,
                                       disabled: C,
                                       size: "sm",
-                                      text: D.intl.string(D.t["ETE/oK"]),
+                                      text: D.intl.string(D.t["ETE/oC"]),
                                   }),
                               }),
                         (0, r.jsx)(l.aML, {
@@ -386,7 +386,7 @@ let Y = function (e) {
                                                 subscription: i,
                                             });
                                         },
-                                        text: D.intl.string(D.t["dylp//"]),
+                                        text: D.intl.string(D.t["dylp/7"]),
                                     }),
                                 ),
                         }),
@@ -400,7 +400,7 @@ let Y = function (e) {
                     children: (0, r.jsx)(l.Button, {
                         variant: "overlay-primary",
                         size: "sm",
-                        text: D.intl.string(D.t.iIvF29),
+                        text: D.intl.string(D.t.iIvF2z),
                         loading: C,
                         onClick: er,
                     }),
@@ -412,7 +412,7 @@ let Y = function (e) {
                         size: "sm",
                         onClick: et,
                         loading: C,
-                        text: D.intl.string(D.t["ETE/oK"]),
+                        text: D.intl.string(D.t["ETE/oC"]),
                     });
                 case w.O0b.PAUSE_PENDING:
                     return (0, r.jsxs)("div", {
@@ -425,7 +425,7 @@ let Y = function (e) {
                                     disabled: C,
                                     onClick: ee,
                                     size: "sm",
-                                    text: D.intl.string(D.t.cM1H0N),
+                                    text: D.intl.string(D.t.cM1H0K),
                                 }),
                             }),
                             (0, r.jsx)("div", {
@@ -434,7 +434,7 @@ let Y = function (e) {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
-                                    text: D.intl.string(D.t.TgV5QU),
+                                    text: D.intl.string(D.t.TgV5Qf),
                                     loading: C,
                                     onClick: ei,
                                 }),
@@ -456,14 +456,14 @@ let Y = function (e) {
                                               onClick: ea,
                                               disabled: C,
                                               size: "sm",
-                                              text: D.intl.string(D.t.jNHWt7),
+                                              text: D.intl.string(D.t.jNHWt6),
                                           })
                                         : (0, r.jsx)(l.Avr, {
                                               variant: "always-white",
                                               onClick: eo,
                                               disabled: C,
                                               size: "sm",
-                                              text: D.intl.string(D.t.cM1H0N),
+                                              text: D.intl.string(D.t.cM1H0K),
                                           }),
                             }),
                             (0, r.jsx)("div", {
@@ -472,7 +472,7 @@ let Y = function (e) {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
-                                    text: D.intl.string(D.t.zpi5pq),
+                                    text: D.intl.string(D.t.zpi5pg),
                                     loading: C,
                                     onClick: ei,
                                 }),
@@ -505,7 +505,7 @@ let Y = function (e) {
                 children: [
                     (0, r.jsx)(E.Z, {
                         className: L.discordWordmark,
-                        "aria-label": D.intl.string(D.t["t9uG/v"]),
+                        "aria-label": D.intl.string(D.t["t9uG/o"]),
                     }),
                     (0, r.jsx)("div", { className: L.basicWordmark }),
                 ],
@@ -517,7 +517,7 @@ let Y = function (e) {
         case P.PremiumTypes.TIER_2:
             e_ = (0, r.jsx)(g.Z, {
                 className: L.planName,
-                "aria-label": D.intl.string(D.t.lpNrPj),
+                "aria-label": D.intl.string(D.t.lpNrPu),
             });
     }
     let ep = B.includes(i.status) && !W ? F : Z;

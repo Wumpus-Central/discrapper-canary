@@ -7,7 +7,7 @@ var r = n(951288),
     o = n(194774),
     c = n(981631),
     d = n(388032),
-    u = n(479447);
+    u = n(64929);
 function g(e) {
     let { guild: t, canManageGuild: n } = e;
     return (0, r.jsxs)("div", {
@@ -18,19 +18,19 @@ function g(e) {
                 children: [
                     (0, r.jsxs)(i.vwX, {
                         className: u.title,
-                        children: [d.intl.string(d.t.tzGY0t), (0, r.jsx)(a.hH, { guild: t })],
+                        children: [d.intl.string(d.t.tzGY0q), (0, r.jsx)(a.hH, { guild: t })],
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         className: u.text,
-                        children: d.intl.string(d.t.F7bbrq),
+                        children: d.intl.string(d.t.F7bbrh),
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         className: u.text,
-                        children: d.intl.format(d.t.ZYA9PT, {
+                        children: d.intl.format(d.t.ZYA9PV, {
                             articleURL: l.Z.getArticleURL(c.BhN.GUILD_INVITE_SPLASH),
                         }),
                     }),

@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(172751),
     h = n(228168),
     m = n(388032),
-    g = n(69295);
+    g = n(954677);
 function E(e) {
     let {
             user: t,
@@ -38,7 +38,7 @@ function E(e) {
                 : (0, r.jsx)(s.kL8, {
                       onClick: A,
                       className: g.clickableUsername,
-                      "aria-label": m.intl.string(m.t["+Xp3ho"]),
+                      "aria-label": m.intl.string(m.t["+Xp3hq"]),
                       children: e,
                   }),
         P = null != v && v.length > 0,
@@ -116,7 +116,7 @@ function E(e) {
                                 }),
                                 (0, r.jsx)(o.u, {
                                     asContainer: !0,
-                                    text: m.intl.string(m.t.GI2A8P),
+                                    text: m.intl.string(m.t.GI2A8C),
                                     delay: h.vB,
                                     children: (0, r.jsx)(s.Text, {
                                         className: a()(g.pronounsText, T),

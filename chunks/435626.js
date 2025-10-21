@@ -48,7 +48,7 @@ function I(t) {
                             children: [
                                 (0, i.jsx)(s.Heading, {
                                     variant: "heading-md/semibold",
-                                    children: x.intl.string(x.t.YBGjsr),
+                                    children: x.intl.string(x.t.YBGjso),
                                 }),
                                 (0, i.jsx)(s.olH, {
                                     "data-migration-pending": !0,
@@ -160,7 +160,7 @@ function N(t) {
                             variant: "display-sm",
                             color: "always-white",
                             className: E.buttonText,
-                            children: x.intl.string(x.t["lG6a5+"]),
+                            children: x.intl.string(x.t.lG6a5x),
                         }),
                         (0, i.jsx)(v, { imageType: 0 }),
                     ],
@@ -176,7 +176,7 @@ function N(t) {
                                 variant: "display-sm",
                                 color: "always-white",
                                 className: E.buttonText,
-                                children: x.intl.string(x.t["t9uG/v"]),
+                                children: x.intl.string(x.t["t9uG/o"]),
                             }),
                             (0, i.jsx)(v, { imageType: 1 }),
                         ],
@@ -201,7 +201,7 @@ function N(t) {
                             variant: "display-sm",
                             color: "always-white",
                             className: E.buttonText,
-                            children: x.intl.string(x.t.gFlB9f),
+                            children: x.intl.string(x.t.gFlB9b),
                         }),
                         (0, i.jsx)(v, { imageType: 2 }),
                     ],

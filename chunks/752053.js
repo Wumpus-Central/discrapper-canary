@@ -25,7 +25,7 @@ let p = (e) => {
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
         m = 1 === n ? u.giftModalContainer : u.shopPageContainer,
-        g = 1 === n ? c.intl.string(c.t["+2QBZW"]) : c.intl.string(c.t.LuhKs7);
+        g = 1 === n ? c.intl.string(c.t["+2QBZX"]) : c.intl.string(c.t.LuhKs2);
     return (0, r.jsxs)("div", {
         className: m,
         children: [
@@ -37,7 +37,7 @@ let p = (e) => {
             (0, r.jsx)(o.Heading, {
                 className: u.heading1,
                 variant: "heading-xl/semibold",
-                children: c.intl.string(c.t["i5SQ7+"]),
+                children: c.intl.string(c.t.i5SQ74),
             }),
             (0, r.jsx)(o.Text, {
                 className: u.description,
@@ -55,7 +55,7 @@ let p = (e) => {
                 className: u.reload,
                 children: (0, r.jsx)(o.Button, {
                     variant: "primary",
-                    text: c.intl.string(c.t["+hivLS"]),
+                    text: c.intl.string(c.t["+hivLW"]),
                     onClick: t,
                 }),
             }),

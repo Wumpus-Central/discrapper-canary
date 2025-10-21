@@ -26,7 +26,7 @@ var r = n(951288),
     C = n(689079),
     N = n(981631),
     R = n(388032),
-    P = n(587222),
+    P = n(57507),
     w = n(239840);
 let D = 512,
     L = 7,
@@ -199,7 +199,7 @@ let D = 512,
                                 t,
                                 0 === a.length &&
                                     (0, r.jsx)(c.Z, {
-                                        message: R.intl.format(R.t.WoQXT0, { applicationName: i.name }),
+                                        message: R.intl.format(R.t.WoQXT6, { applicationName: i.name }),
                                         noResultsImageURL: w,
                                         className: P.noSearchResults,
                                     }),

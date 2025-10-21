@@ -49,7 +49,7 @@ function v(e) {
         L = (0, s.Dt)(),
         k = (0, s.Dt)();
     return (0, r.jsx)(h.Z, {
-        title: x.intl.string(x.t.iHU439),
+        title: x.intl.string(x.t["iHU43+"]),
         intiallyExpanded: !0,
         children: (0, r.jsxs)(a.Kqy, {
             gap: 24,
@@ -60,8 +60,8 @@ function v(e) {
                         (0, r.jsx)("div", {
                             className: j.formSplitHalf,
                             children: (0, r.jsx)(a.oil, {
-                                label: x.intl.string(x.t.grbGJy),
-                                placeholder: x.intl.string(x.t["So2/xM"]),
+                                label: x.intl.string(x.t["grbGJ+"]),
+                                placeholder: x.intl.string(x.t["So2/xP"]),
                                 value: _,
                                 onChange: C,
                                 "aria-labelledby": A,
@@ -71,10 +71,10 @@ function v(e) {
                         (0, r.jsx)("div", {
                             className: j.formSplitHalf,
                             children: (0, r.jsx)(a.q4e, {
-                                label: x.intl.string(x.t.Ibl4BQ),
+                                label: x.intl.string(x.t.Ibl4BR),
                                 options: Z,
                                 isDisabled: D || null == t,
-                                placeholder: x.intl.string(x.t["88XZDg"]),
+                                placeholder: x.intl.string(x.t["88XZDs"]),
                                 value: O,
                                 onChange: y,
                                 maxVisibleItems: 5,
@@ -85,7 +85,7 @@ function v(e) {
                 }),
                 (0, r.jsx)(a.Kx8, {
                     label: x.intl.string(x.t["1w2WcX"]),
-                    placeholder: x.intl.string(x.t.p7Jr4O),
+                    placeholder: x.intl.string(x.t.p7Jr4K),
                     value: E,
                     autosize: !0,
                     onChange: N,
@@ -96,8 +96,8 @@ function v(e) {
                     className: j.iconSection,
                     children: [
                         (0, r.jsx)(a.gNt, {
-                            label: x.intl.string(x.t.RUBM2t),
-                            description: x.intl.string(x.t["0iUofH"]),
+                            label: x.intl.string(x.t.RUBM2q),
+                            description: x.intl.string(x.t["0iUofN"]),
                             children: (0, r.jsx)(o.Z, {
                                 onChange: R,
                                 "aria-label": P,

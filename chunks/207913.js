@@ -27,16 +27,16 @@ var r = n(951288),
     P = n(592125),
     N = n(720202),
     Z = n(430824),
-    T = n(821020),
-    w = n(948154),
+    w = n(821020),
+    T = n(948154),
     A = n(804932),
     R = n(993609),
     D = n(987889),
     L = n(586694),
     M = n(981631),
-    k = n(997998),
+    k = n(943910),
     G = n(388032),
-    U = n(66449);
+    U = n(361584);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,7 +100,7 @@ function V(e) {
             compact: !0,
             isRepliedMessage: !0,
         }),
-        T = (0, r.jsx)("div", {
+        w = (0, r.jsx)("div", {
             className: U.usernameTagContainer,
             inert: !0,
             children: (0, r.jsx)(j.Z, {
@@ -168,7 +168,7 @@ function V(e) {
                                                       (0, r.jsx)("div", {
                                                           className: U.username,
                                                           style: { color: null != y ? y : void 0 },
-                                                          children: (0, r.jsx)(g.Z, { children: T }),
+                                                          children: (0, r.jsx)(g.Z, { children: w }),
                                                       }),
                                                       P,
                                                   ],
@@ -271,7 +271,7 @@ function H(e) {
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 className: U.overflowText,
-                children: G.intl.formatToPlainString(k.default.NzUuLC, { count: t.length }),
+                children: G.intl.formatToPlainString(k.default.NzUuLD, { count: t.length }),
             }),
         ],
     });
@@ -328,26 +328,26 @@ function W(e) {
                 let y = !0,
                     v = null;
                 if (e)
-                    if (c) v = G.intl.string(G.t["9ddYKi"]);
+                    if (c) v = G.intl.string(G.t["9ddYKt"]);
                     else if (p) {
                         var j;
                         (y = !1), (v = null == (j = t.poll) ? void 0 : j.question.text);
                     } else
                         v = f
-                            ? G.intl.string(G.t.sad2PD)
+                            ? G.intl.string(G.t.sad2PH)
                             : i
-                              ? G.intl.string(G.t.p0oZm5)
+                              ? G.intl.string(G.t.p0oZmy)
                               : s > 1
-                                ? G.intl.formatToPlainString(G.t.rtfTKi, { count: s })
+                                ? G.intl.formatToPlainString(G.t.rtfTKp, { count: s })
                                 : 1 === s
-                                  ? G.intl.string(G.t.tCcq5u)
+                                  ? G.intl.string(G.t.tCcq5p)
                                   : d
-                                    ? G.intl.format(G.t.zY4v1N, { stickerName: t.stickerItems[0].name })
+                                    ? G.intl.format(G.t.zY4v1B, { stickerName: t.stickerItems[0].name })
                                     : h
-                                      ? G.intl.string(G.t.slFYgo)
+                                      ? G.intl.string(G.t.slFYgi)
                                       : g
-                                        ? G.intl.string(G.t.Yvvfw8)
-                                        : G.intl.string(G.t.sDqZHB);
+                                        ? G.intl.string(G.t.Yvvfw9)
+                                        : G.intl.string(G.t.sDqZHL);
                 else
                     (y = !1),
                         (v = (0, r.jsx)(O.ZP, {
@@ -417,14 +417,14 @@ let K = (0, i.memo)(
                           id: l.channelId,
                           guild_id: l.guildId,
                           type: M.d4z.UNKNOWN,
-                          name: G.intl.string(G.t.J90oLS),
+                          name: G.intl.string(G.t.J90oLW),
                       });
             }),
             b = (0, R.z)((e) => {
                 var t;
                 return e.isMenuOpenForMessage(null != (t = null == f ? void 0 : f.id) ? t : null);
             }),
-            { notificationCenterVariant: _ } = (0, T.pN)({ location: "NotificationsInboxMessageUnit" }),
+            { notificationCenterVariant: _ } = (0, w.pN)({ location: "NotificationsInboxMessageUnit" }),
             O = i.useMemo(
                 () => "".concat(null == f ? void 0 : f.author.username, ": ").concat(null == m ? void 0 : m.name),
                 [null == f ? void 0 : f.author.username, null == m ? void 0 : m.name],
@@ -439,11 +439,11 @@ let K = (0, i.memo)(
                       [U.actionMenuOpen]: b,
                   }),
                   onClick: () => {
-                      w.Z.inboxItemClick({
+                      T.Z.inboxItemClick({
                           message: f,
                           channel: m,
                           isUnread: p,
-                          isSidebar: _ === T.jP.SIDEBAR,
+                          isSidebar: _ === w.jP.SIDEBAR,
                           viewId: h,
                       });
                   },

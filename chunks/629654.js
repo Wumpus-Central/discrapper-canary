@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(667105),
     c = n(211712),
     u = n(388032),
-    d = n(781353);
+    d = n(19895);
 function f(e) {
     let { preset: t, onShuffle: n } = e,
         f = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
@@ -27,14 +27,14 @@ function f(e) {
                     n(), _.startAnimation(!1);
                 },
                 className: d.button,
-                "aria-label": u.intl.string(u.t["44yJxs"]),
+                "aria-label": u.intl.string(u.t["44yJxh"]),
                 children: _.render(),
             }),
             (0, r.jsxs)(o.P3F, {
                 onClick: () => {
                     n(), _.startAnimation(!1);
                 },
-                "aria-label": "".concat(p, ": ").concat(u.intl.string(u.t["44yJxs"])),
+                "aria-label": "".concat(p, ": ").concat(u.intl.string(u.t["44yJxh"])),
                 className: d.select,
                 children: [
                     (0, r.jsx)("img", {

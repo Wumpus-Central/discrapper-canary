@@ -12,7 +12,7 @@ var i = n(442837),
     p = n(434479),
     f = n(490897),
     h = n(388032),
-    g = n(516966);
+    g = n(509612);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,13 +69,13 @@ function _(e) {
         v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function j() {
         await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("5836")]).then(n.bind(n, 17671));
+            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("25688")]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let x = (0, c.ZP)(t.id),
-        C = x.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSk, { number: x.length }) : h.intl.string(h.t.tlopTE);
+        C = x.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSu, { number: x.length }) : h.intl.string(h.t.tlopTM);
     return (0, r.jsx)(p.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>

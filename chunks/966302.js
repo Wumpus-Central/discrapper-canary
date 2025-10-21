@@ -44,9 +44,9 @@ var r = n(951288),
     Y = n(295907),
     W = n(65154),
     K = n(388032),
-    z = n(327667),
-    q = n(70623),
-    X = n(285236);
+    z = n(993103),
+    q = n(450943),
+    X = n(315091);
 function Q(e, t, n) {
     return (
         t in e
@@ -156,7 +156,7 @@ function es(e) {
         children: [
             (0, r.jsx)(C.Z, {
                 iconComponent: c.Dio,
-                label: K.intl.string(K.t.WAI6xs),
+                label: K.intl.string(K.t.WAI6xu),
                 className: q.actionButton,
                 onClick: () => {
                     (0, Z.v)(s, Z.d.DISCONNECT),
@@ -284,8 +284,8 @@ function el(e) {
         }),
         Q =
             k === H.WtW.VOICE || (V && h.type === H.d4z.GUILD_VOICE)
-                ? K.intl.string(K.t.Js8cKy)
-                : K.intl.string(K.t.KcnWCA),
+                ? K.intl.string(K.t.Js8cK3)
+                : K.intl.string(K.t.KcnWCO),
         $ = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != I && null == T
@@ -375,7 +375,7 @@ function el(e) {
                                       children: (0, r.jsx)(c.Button, {
                                           variant: "secondary",
                                           size: "sm",
-                                          text: K.intl.string(K.t["8B0UDg"]),
+                                          text: K.intl.string(K.t["8B0UDr"]),
                                           fullWidth: !0,
                                           onClick: () => v(!0),
                                       }),

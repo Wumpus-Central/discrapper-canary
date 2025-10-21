@@ -4,7 +4,7 @@ var n = t(951288),
     s = t(793030),
     i = t(198993),
     a = t(388032),
-    c = t(456068);
+    c = t(93691);
 let l = [],
     u = function (e) {
         let { transitionState: r, onClose: t, questId: u, questName: p } = e,
@@ -16,8 +16,8 @@ let l = [],
             actions: l,
             onClose: t,
             size: "md",
-            subtitle: a.intl.format(a.t.y2Dgd3, { questName: p }),
-            title: a.intl.string(a.t.tQWM2N),
+            subtitle: a.intl.format(a.t.y2Dgd4, { questName: p }),
+            title: a.intl.string(a.t.tQWM2E),
             transitionState: r,
             children: (0, n.jsx)("div", {
                 className: c.qrCodeWrapper,

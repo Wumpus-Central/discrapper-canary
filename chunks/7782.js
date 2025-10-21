@@ -25,7 +25,7 @@ var i = n(951288),
     S = n(981631),
     P = n(228168),
     I = n(388032),
-    Z = n(90985);
+    Z = n(291738);
 let T = (e) => {
         let { userId: t, channelId: n } = e,
             l = (0, s.e7)([y.Z], () => y.Z.getMutualGuilds(t), [t]),
@@ -77,7 +77,7 @@ let T = (e) => {
             ? (0, i.jsx)(c.Text, {
                   color: "header-secondary",
                   variant: "text-sm/normal",
-                  children: I.intl.string(I.t.zjVh8v),
+                  children: I.intl.string(I.t.zjVh8h),
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -97,7 +97,7 @@ let T = (e) => {
                           children: (0, i.jsx)(c.Text, {
                               className: Z.mutualGuilds,
                               variant: "text-sm/normal",
-                              children: I.intl.format(I.t.eE3oen, { count: l.length }),
+                              children: I.intl.format(I.t.eE3oep, { count: l.length }),
                           }),
                       }),
                   ],
@@ -119,7 +119,7 @@ let T = (e) => {
                 onClick: () => {
                     u.Z.blockUser(r, { location: S.ZY5.DM_CHANNEL });
                 },
-                text: I.intl.string(I.t.l4EmaW),
+                text: I.intl.string(I.t.l4Emac),
             }),
             d = (0, h.n)({ userId: r });
         switch (n) {
@@ -146,7 +146,7 @@ let T = (e) => {
                             onClick: () => {
                                 u.Z.removeFriend(r, { location: S.ZY5.DM_CHANNEL });
                             },
-                            text: I.intl.string(I.t.cvSt1N),
+                            text: I.intl.string(I.t.cvSt1J),
                         }),
                         s,
                     ],
@@ -158,7 +158,7 @@ let T = (e) => {
                     onClick: () => {
                         u.Z.unblockUser(r, { location: S.ZY5.DM_CHANNEL });
                     },
-                    text: I.intl.string(I.t.XyHpKC),
+                    text: I.intl.string(I.t.XyHpKH),
                 });
             case S.OGo.PENDING_INCOMING:
                 return (0, i.jsxs)(i.Fragment, {
@@ -175,7 +175,7 @@ let T = (e) => {
                             onClick: () => {
                                 u.Z.cancelFriendRequest(r, { location: S.ZY5.DM_CHANNEL });
                             },
-                            text: I.intl.string(I.t.rQSndn),
+                            text: I.intl.string(I.t.rQSndv),
                         }),
                         s,
                     ],
@@ -187,7 +187,7 @@ let T = (e) => {
                             size: "sm",
                             variant: "primary",
                             disabled: !0,
-                            text: I.intl.string(I.t.xMH6vL),
+                            text: I.intl.string(I.t.xMH6vD),
                         }),
                         s,
                     ],
@@ -199,7 +199,7 @@ let T = (e) => {
     A = (e) => {
         let { channelId: t, otherUserId: n } = e,
             l = r.useCallback(() => {
-                (0, c.showToast)((0, c.createToast)(I.intl.string(I.t.a2j0ho), c.ToastType.FAILURE));
+                (0, c.showToast)((0, c.createToast)(I.intl.string(I.t.a2j0hv), c.ToastType.FAILURE));
             }, []),
             a = r.useCallback(() => {
                 C.Z.closeChannelSidebar(v.uZ);
@@ -229,7 +229,7 @@ let T = (e) => {
                     disabled: g,
                     onClick: () => s(t),
                     loading: d,
-                    text: I.intl.string(I.t.Kz8Pws),
+                    text: I.intl.string(I.t.Kz8Pwr),
                 }),
                 (0, i.jsx)(c.Button, {
                     variant: "secondary",
@@ -237,7 +237,7 @@ let T = (e) => {
                     disabled: g,
                     onClick: () => u(t),
                     loading: p,
-                    text: I.intl.string(I.t.B2nygY),
+                    text: I.intl.string(I.t.B2nygW),
                 }),
             ],
         });
@@ -284,7 +284,7 @@ let T = (e) => {
                     : (0, i.jsx)(c.Text, {
                           color: "header-secondary",
                           variant: "text-sm/normal",
-                          children: I.intl.string(I.t.c2v5nJ),
+                          children: I.intl.string(I.t.c2v5nO),
                       });
         return (0, i.jsxs)("div", {
             className: m ? Z.mobileContainer : Z.container,

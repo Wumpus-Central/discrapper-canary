@@ -1,4 +1,4 @@
-n.d(e, { ZP: () => S }), n(415506), n(539854), n(388685);
+n.d(e, { ZP: () => A }), n(415506), n(539854), n(388685);
 var i = n(951288),
     l = n(647438),
     u = n(442837);
@@ -17,105 +17,105 @@ let T = l.createContext(void 0),
             useLabel: () => d.intl.string(d.t.jD1qzM),
             sound: "message1",
             useDisabled: s.p,
-            useDisabledMessage: () => ((0, s.p)() ? d.intl.string(d.t.cIRG0t) : void 0),
+            useDisabledMessage: () => ((0, s.p)() ? d.intl.string(d.t.cIRG0s) : void 0),
         },
         {
-            useLabel: () => d.intl.string(d.t.XBrJT0),
+            useLabel: () => d.intl.string(d.t.XBrJT6),
             sound: "call_ringing",
         },
         {
-            useLabel: () => d.intl.string(d.t.hK51Ym),
+            useLabel: () => d.intl.string(d.t.hK51Yg),
             sound: "deafen",
         },
         {
-            useLabel: () => d.intl.string(d.t.XiejaG),
+            useLabel: () => d.intl.string(d.t.XiejaJ),
             sound: "undeafen",
         },
         {
-            useLabel: () => d.intl.string(d.t["w4m94+"]),
+            useLabel: () => d.intl.string(d.t.w4m945),
             sound: "mute",
         },
         {
-            useLabel: () => d.intl.string(d.t.YqAjX1),
+            useLabel: () => d.intl.string(d.t.YqAjXy),
             sound: "unmute",
         },
         {
-            useLabel: () => d.intl.string(d.t.JoTq8v),
+            useLabel: () => d.intl.string(d.t.JoTq8n),
             sound: "camera_on",
         },
         {
-            useLabel: () => d.intl.string(d.t["8P6tQ0"]),
+            useLabel: () => d.intl.string(d.t["8P6tQ6"]),
             sound: "camera_off",
         },
         {
-            useLabel: () => d.intl.string(d.t["juL9/P"]),
+            useLabel: () => d.intl.string(d.t["juL9/L"]),
             sound: "disconnect",
         },
         {
-            useLabel: () => d.intl.string(d.t.x98vQk),
+            useLabel: () => d.intl.string(d.t.x98vQq),
             sound: "ptt_start",
         },
         {
-            useLabel: () => d.intl.string(d.t["1HjRqK"]),
+            useLabel: () => d.intl.string(d.t["1HjRqC"]),
             sound: "ptt_stop",
         },
         {
-            useLabel: () => d.intl.string(d.t["9JB1Cg"]),
+            useLabel: () => d.intl.string(d.t["9JB1Ck"]),
             sound: "user_join",
         },
         {
-            useLabel: () => d.intl.string(d.t.KUBBNj),
+            useLabel: () => d.intl.string(d.t.KUBBNt),
             sound: "user_leave",
         },
         {
-            useLabel: () => d.intl.string(d.t.EZjqUV),
+            useLabel: () => d.intl.string(d.t.EZjqUT),
             sound: "user_moved",
         },
         {
-            useLabel: () => d.intl.string(d.t.LnNlQk),
+            useLabel: () => d.intl.string(d.t.LnNlQh),
             sound: "call_calling",
         },
         {
-            useLabel: () => d.intl.string(d.t["Nd8P5+"]),
+            useLabel: () => d.intl.string(d.t.Nd8P5y),
             sound: "stream_started",
         },
         {
-            useLabel: () => d.intl.string(d.t["9bYj+P"]),
+            useLabel: () => d.intl.string(d.t["9bYj+G"]),
             sound: "stream_ended",
         },
         {
-            useLabel: () => d.intl.string(d.t.KccUIy),
+            useLabel: () => d.intl.string(d.t.KccUI1),
             sound: "stream_user_joined",
         },
         {
-            useLabel: () => d.intl.string(d.t.dsjkiI),
+            useLabel: () => d.intl.string(d.t.dsjkiN),
             sound: "stream_user_left",
         },
         {
-            useLabel: () => d.intl.string(d.t.nFOcf3),
+            useLabel: () => d.intl.string(d.t.nFOcf9),
             sound: "activity_launch",
         },
         {
-            useLabel: () => d.intl.string(d.t["a6lw/v"]),
+            useLabel: () => d.intl.string(d.t["a6lw/u"]),
             sound: "activity_end",
         },
         {
-            useLabel: () => d.intl.string(d.t.KaFxra),
+            useLabel: () => d.intl.string(d.t.KaFxrY),
             sound: "activity_user_join",
         },
         {
-            useLabel: () => d.intl.string(d.t.S14z9v),
+            useLabel: () => d.intl.string(d.t.S14z9n),
             sound: "activity_user_left",
         },
         {
-            useLabel: () => d.intl.string(d.t.CP3DCw),
+            useLabel: () => d.intl.string(d.t.CP3DC3),
             sound: "reconnect",
         },
     ].map((t) => ({
         node: (0, a.qs)("".concat(E.n.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
             useTitle: t.useLabel,
             useSubtitle: () =>
-                d.intl.format(d.t.OOiGCA, {
+                d.intl.format(d.t.OOiGCM, {
                     onClick: () => {
                         (0, o.GN)(t.sound);
                     },
@@ -140,22 +140,22 @@ let T = l.createContext(void 0),
         }),
     })),
     O = (0, a.qs)(E.n.SELECTED_CHANNEL_NOTIFICATIONS, {
-        useTitle: () => d.intl.string(d.t.TzjwV1),
+        useTitle: () => d.intl.string(d.t.TzjwV9),
         useValue: () => (0, u.e7)([c.Z], () => c.Z.getNotifyMessagesInSelectedChannel()),
         setValue: (t) => r.default.setNotifyMessagesInSelectedChannel(t),
     }),
-    A = (0, a.qs)(E.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
-        useTitle: () => d.intl.string(d.t["2ZhCOT"]),
-        useSubtitle: () => d.intl.string(d.t["+B0XLC"]),
+    S = (0, a.qs)(E.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
+        useTitle: () => d.intl.string(d.t["2ZhCOd"]),
+        useSubtitle: () => d.intl.string(d.t["+B0XLE"]),
         useValue: () => (0, u.e7)([c.Z], () => c.Z.getDisableAllSounds()),
         setValue: (t) => r.default.toggleDisableAllSounds(t),
     }),
-    S = (0, a.$l)(E.n.NOTIFICATION_SOUNDS_LIST, {
+    A = (0, a.$l)(E.n.NOTIFICATION_SOUNDS_LIST, {
         collapseAfter: 4,
         useCollapsibleTitle: (t, e) =>
             t
-                ? d.intl.formatToPlainString(d.t["0JYT9/"], { count: e })
-                : d.intl.formatToPlainString(d.t.ji1uNj, { count: e }),
+                ? d.intl.formatToPlainString(d.t["0JYT98"], { count: e })
+                : d.intl.formatToPlainString(d.t.ji1uNt, { count: e }),
         ContextProvider: function (t) {
             let { children: e } = t,
                 n = l.useRef(null),
@@ -178,5 +178,5 @@ let T = l.createContext(void 0),
                 children: e,
             });
         },
-        buildLayout: () => [I[0].node, O, I[1].node, A, ...I.slice(2).map((t) => t.node)],
+        buildLayout: () => [I[0].node, O, I[1].node, S, ...I.slice(2).map((t) => t.node)],
     });

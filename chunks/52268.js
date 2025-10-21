@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(314940);
+n.d(t, { Z: () => O }), n(314940);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(731896),
     f = n(528439),
     p = n(388032),
-    m = n(51954),
+    m = n(364705),
     g = n(223223);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -95,8 +95,8 @@ let y = () => 80,
             y = i.useRef(null),
             {
                 accessibilityLabel: P,
-                thumbnailPreviewSrc: v,
-                title: O,
+                thumbnailPreviewSrc: O,
+                title: _,
             } = null != (t = null == p ? void 0 : p.config) ? t : {};
         return (0, r.jsxs)(
             j,
@@ -117,8 +117,8 @@ let y = () => 80,
                         }),
                         (0, r.jsx)("img", {
                             className: m.presetEffectImg,
-                            src: v,
-                            alt: O,
+                            src: O,
+                            alt: _,
                         }),
                         (0, r.jsx)(a.Z, {
                             isPurchaseSection: o === f.$0.PURCHASE,
@@ -131,7 +131,7 @@ let y = () => 80,
             ),
         );
     },
-    v = (e) => {
+    O = (e) => {
         let { user: t, guild: n, pendingProfileEffect: i, selectedProfileEffectRef: l, onSelect: o, onOpenShop: a } = e,
             d = (0, f.ZP)(),
             g = null != i,
@@ -151,8 +151,8 @@ let y = () => 80,
                     return t.length;
                 }),
                 renderItem: (e, t, u, x) => {
-                    let { section: y, items: v } = d[e];
-                    return (0, s.EQ)(v[t])
+                    let { section: y, items: O } = d[e];
+                    return (0, s.EQ)(O[t])
                         .with(f.Tm, () =>
                             (0, r.jsxs)(
                                 j,
@@ -169,7 +169,7 @@ let y = () => 80,
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-primary",
-                                            children: null != n ? p.intl.string(p.t.CHf9iI) : p.intl.string(p.t.PoWNfX),
+                                            children: null != n ? p.intl.string(p.t.CHf9iJ) : p.intl.string(p.t.PoWNfe),
                                         }),
                                     ],
                                 },
@@ -193,7 +193,7 @@ let y = () => 80,
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-primary",
-                                            children: p.intl.string(p.t.pWG4zc),
+                                            children: p.intl.string(p.t.pWG4ze),
                                         }),
                                     ],
                                 },

@@ -43,9 +43,9 @@ var i = n(951288),
     G = n(607744),
     z = n(496675),
     W = n(626135),
-    K = n(572004),
+    q = n(572004),
     Y = n(176354),
-    q = n(823379),
+    K = n(823379),
     X = n(970257),
     J = n(418476),
     Q = n(151007),
@@ -85,7 +85,7 @@ function eu(e) {
     }
     return e;
 }
-let ed = [C.ZP.getByName("100"), C.ZP.getByName("laughing"), C.ZP.getByName("sparkling_heart")].filter(q.lm);
+let ed = [C.ZP.getByName("100"), C.ZP.getByName("laughing"), C.ZP.getByName("sparkling_heart")].filter(K.lm);
 function ep(e) {
     e.stopPropagation();
 }
@@ -106,7 +106,7 @@ function eh(e) {
         onHeightUpdate: l,
         onClose: r,
         navId: "message-actions",
-        ariaLabel: es.intl.string(es.t.Lv7LxM),
+        ariaLabel: es.intl.string(es.t.Lv7LxN),
     });
 }
 let ef = r.memo(function (e) {
@@ -126,12 +126,12 @@ let ef = r.memo(function (e) {
         children: l.map((e) => {
             var r;
             let l = a.find((t) => (0, w.ir)(t.emoji, (0, w.g1)(e))),
-                o = null != l ? es.intl.string(es.t.wunKKC) : es.intl.string(es.t.XVx5BA),
+                o = null != l ? es.intl.string(es.t.wunKKA) : es.intl.string(es.t.XVx5BN),
                 s = null == e.id ? e.uniqueName : e.name,
                 c =
                     null != l
-                        ? es.intl.formatToPlainString(es.t.vjeruL, { emojiName: s })
-                        : es.intl.formatToPlainString(es.t.L1JQwM, { emojiName: s });
+                        ? es.intl.formatToPlainString(es.t.vjeruO, { emojiName: s })
+                        : es.intl.formatToPlainString(es.t.L1JQwE, { emojiName: s });
             return (0, i.jsx)(
                 et.sF,
                 {
@@ -194,7 +194,7 @@ function em(e) {
             isExpanded: M,
             showMoreUtilities: H,
             showEmojiPicker: Y,
-            showMessageBookmarksActions: q,
+            showMessageBookmarksActions: K,
             isMessageBookmark: er,
             setPopout: eo,
             hasDeveloperMode: ec,
@@ -248,7 +248,7 @@ function em(e) {
                     isGuest: N,
                     isActiveChannelOrUnarchivableThread: g,
                 }),
-                q =
+                K =
                     t.type === el.d4z.GUILD_ANNOUNCEMENT &&
                     null != p &&
                     p.features.has(el.GuildFeatures.NEWS) &&
@@ -275,10 +275,10 @@ function em(e) {
                 canStartThread: I,
                 canViewThread: Z,
                 canForward: ei,
-                canCopy: K.wS,
+                canCopy: q.wS,
                 hasDeveloperMode: x,
                 canReact: !Y && y,
-                canPublish: q,
+                canPublish: K,
                 canConfigureJoin: en,
                 isExpanded: eo && !es && !i && !r && !l,
                 showEmojiPicker: i,
@@ -327,7 +327,7 @@ function em(e) {
                 try {
                     (0, S.qc)(t.id, n.id, e);
                 } catch (e) {
-                    (0, p.showToast)((0, p.createToast)(es.intl.string(es.t.xsfC2d), p.ToastType.FAILURE));
+                    (0, p.showToast)((0, p.createToast)(es.intl.string(es.t.xsfC2S), p.ToastType.FAILURE));
                 }
             },
             [t.id, n.id],
@@ -341,7 +341,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.zBoHlZ),
+                                        label: es.intl.string(es.t.zBoHlf),
                                         icon: p.VuL,
                                         onClick: (e) => (0, en.F4)(t, n, e),
                                     },
@@ -352,7 +352,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.WqhZsr),
+                                        label: es.intl.string(es.t.WqhZss),
                                         icon: p.xPt,
                                         onClick: () => (0, en.fB)(t, n),
                                     },
@@ -363,7 +363,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.NpHUi4),
+                                        label: es.intl.string(es.t.NpHUi1),
                                         icon: p.idN,
                                         onClick: () => (0, en.zW)(t),
                                     },
@@ -374,18 +374,18 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.RpE9k5),
+                                        label: es.intl.string(es.t.RpE9k7),
                                         icon: p.z7b,
                                         onClick: () => (0, en.B8)(t, n),
                                     },
                                     "mark-unread",
                                 )
                               : null,
-                          q
+                          K
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: er ? es.intl.string(es.t.LHUP9P) : es.intl.string(es.t["9p3D9v"]),
+                                        label: er ? es.intl.string(es.t.LHUP9D) : es.intl.string(es.t["9p3D9p"]),
                                         icon: er ? p.plf : p.gt9,
                                         onClick: () => (er ? (0, en.eM)(t, n) : (0, en.dF)(t, n)),
                                     },
@@ -396,9 +396,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: n.pinned
-                                            ? es.intl.string(es.t["Bse+Fx"])
-                                            : es.intl.string(es.t["CvQ18/"]),
+                                        label: n.pinned ? es.intl.string(es.t["Bse+F/"]) : es.intl.string(es.t.CvQ18w),
                                         icon: p.qQX,
                                         onClick: (e) => (0, en.rY)(t, n, e),
                                     },
@@ -409,7 +407,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.rBIGBA),
+                                        label: es.intl.string(es.t.rBIGBL),
                                         icon: p.or_,
                                         onClick: () => (0, en.gK)(t, n),
                                     },
@@ -456,7 +454,7 @@ function em(e) {
                               ? (0, i.jsx)(
                                     et.sF,
                                     {
-                                        label: es.intl.string(es.t.icaJW1),
+                                        label: es.intl.string(es.t.icaJW5),
                                         icon: p.l22,
                                         onClick: () => {
                                             W.default.track(el.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, {
@@ -492,7 +490,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.bt75u7),
+                          label: es.intl.string(es.t.bt75uw),
                           icon: p.vdY,
                           onClick: () => (0, en.Hd)(t, n),
                       },
@@ -503,7 +501,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.I3ltXF),
+                          label: es.intl.string(es.t.I3ltXO),
                           icon: x.Z,
                           onClick: () => eP(t, n),
                           onTooltipShow: eE,
@@ -517,7 +515,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.rBIGBA),
+                          label: es.intl.string(es.t.rBIGBL),
                           icon: p.or_,
                           onClick: () => (0, en.gK)(t, n),
                       },
@@ -528,7 +526,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t["39d0Wl"]),
+                          label: es.intl.string(es.t["39d0Wj"]),
                           icon: p.or_,
                           onClick: () => (0, en.qe)(t, n),
                       },
@@ -539,7 +537,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: ey ? es.intl.string(es.t["1kWJAg"]) : es.intl.string(es.t["MFGE5+"]),
+                          label: ey ? es.intl.string(es.t["1kWJAr"]) : es.intl.string(es.t.MFGE51),
                           icon: p.MqZ,
                           onClick: () => (0, en.Xl)(t, n),
                           disabled: ey,
@@ -551,7 +549,7 @@ function em(e) {
                 ? (0, i.jsx)(
                       et.sF,
                       {
-                          label: es.intl.string(es.t.oyYWHB),
+                          label: es.intl.string(es.t.oyYWHE),
                           icon: p.XHJ,
                           onClick: (e) => (0, en.$Z)(t, n, e),
                           dangerous: !0,
@@ -610,7 +608,7 @@ function em(e) {
                               eu(
                                   {
                                       ref: ep,
-                                      label: es.intl.string(es.t.UKOtz8),
+                                      label: es.intl.string(es.t["UKOtz+"]),
                                       icon: p.xhG,
                                       selected: l,
                                       onClick: em,
@@ -635,7 +633,7 @@ function eg(e) {
                 (0, i.jsx)(
                     et.sF,
                     {
-                        label: es.intl.string(es.t["5911LS"]),
+                        label: es.intl.string(es.t["5911Lb"]),
                         icon: p.Oe7,
                         onClick: () => (0, en.mG)(t, n),
                     },
@@ -644,7 +642,7 @@ function eg(e) {
             (0, i.jsx)(
                 et.sF,
                 {
-                    label: es.intl.string(es.t.oyYWHB),
+                    label: es.intl.string(es.t.oyYWHE),
                     icon: p.XHJ,
                     onClick: (e) => (0, en.$Z)(t, n, e),
                 },
@@ -724,7 +722,7 @@ let ey = r.memo(function (e) {
               onClick: ep,
               onContextMenu: ep,
               role: "group",
-              "aria-label": es.intl.string(es.t.Lv7LxM),
+              "aria-label": es.intl.string(es.t.Lv7LxN),
               children: (0, i.jsxs)(et.ZP, {
                   className: e.innerClassName,
                   children: [s, c],

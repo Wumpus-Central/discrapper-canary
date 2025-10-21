@@ -13,7 +13,7 @@ var l = t(951288),
     p = t(339085),
     f = t(14263),
     g = t(388032),
-    x = t(46807);
+    x = t(830626);
 function _(e) {
     let { guildId: n, option: t, selected: i, onSelect: _, hideMemberCount: C, canBeNew: b } = e,
         j = (0, d.wj)((0, h.ZP)()),
@@ -145,7 +145,7 @@ function _(e) {
                             children: (0, l.jsx)(u.Text, {
                                 variant: "text-xs/normal",
                                 color: "always-white",
-                                children: g.intl.format(g.t.EgKsZG, { memberCount: P }),
+                                children: g.intl.format(g.t.EgKsZA, { memberCount: P }),
                             }),
                         }),
                 ),

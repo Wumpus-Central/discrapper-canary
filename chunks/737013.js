@@ -7,7 +7,7 @@ var i = n(442837),
     s = n(314897),
     l = n(131951),
     c = n(388032),
-    u = n(5569);
+    u = n(725227);
 function d(e, t, n) {
     return (
         t in e
@@ -85,7 +85,7 @@ function h(e, t) {
               id: "change-video-background",
               label: (0, r.jsx)("div", {
                   className: u.item,
-                  children: _ ? c.intl.string(c.t.mZKxHR) : c.intl.string(c.t.vkV939),
+                  children: _ ? c.intl.string(c.t.mZKxHb) : c.intl.string(c.t["vkV93/"]),
               }),
               action: E,
               icon: _ ? a.yMH : a.tEF,

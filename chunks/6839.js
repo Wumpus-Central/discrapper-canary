@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(995774),
     V = n(981631),
     H = n(388032),
-    Y = n(629969),
-    W = n(10198);
+    Y = n(302854),
+    W = n(197571);
 function K(e, t, n) {
     return (
         t in e
@@ -177,7 +177,7 @@ let er = (e) => {
             f = i.useMemo(() => et(t), [t]),
             p = i.useMemo(() => en(t, $, Y.emoji, o()(Y.emoji, Y.emojiText)), [t]),
             h = l === I.O.BURST,
-            m = h ? H.t.VmiNjY : H.t.cNfs19,
+            m = h ? H.t.VmiNjd : H.t["cNfs1/"],
             g = H.intl.formatToPlainString(m, {
                 name: f,
                 n: n,
@@ -491,7 +491,7 @@ function eu(e) {
             disableTabs: o = !1,
             onClose: s,
             transitionState: l,
-            "aria-label": c = H.intl.string(H.t.gHp0Cw),
+            "aria-label": c = H.intl.string(H.t.gHp0C4),
         } = e,
         d = (0, u.e7)([R.Z], () => R.Z.getChannel(t.getChannelId())),
         p = null == d ? void 0 : d.getGuildId(),

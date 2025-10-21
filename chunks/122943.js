@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(532657),
     g = n(556638),
     E = n(388032),
-    b = n(666998);
+    b = n(80568);
 function y(e, t, n) {
     return (
         t in e
@@ -121,10 +121,10 @@ function T(e) {
             N
                 ? A
                 : C
-                  ? E.intl.string(E.t["9FaEzs"])
+                  ? E.intl.string(E.t["9FaEzi"])
                   : t.isGuildStageVoice()
-                    ? E.intl.string(E.t.QygGCA)
-                    : E.intl.string(E.t.msxteH);
+                    ? E.intl.string(E.t.QygGCN)
+                    : E.intl.string(E.t.msxteM);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             D(),
@@ -158,10 +158,10 @@ function S(e) {
             O && null != g
                 ? g
                 : y
-                  ? E.intl.string(E.t["9FaEzs"])
+                  ? E.intl.string(E.t["9FaEzi"])
                   : t.isGuildStageVoice()
-                    ? E.intl.string(E.t.QygGCA)
-                    : E.intl.string(E.t.msxteH),
+                    ? E.intl.string(E.t.QygGCN)
+                    : E.intl.string(E.t.msxteM),
         I = null == g || O ? v : "".concat(v, " (").concat(g, ")"),
         T = p ? I : v;
     return (0, r.jsx)(m.Z, {

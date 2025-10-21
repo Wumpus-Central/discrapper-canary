@@ -17,13 +17,13 @@ var r = n(951288),
     b = n(981631),
     j = n(675654),
     v = n(710111),
-    _ = n(304726),
+    _ = n(833540),
     C = n(388032),
-    y = n(911873);
+    y = n(65766);
 function T(e) {
     let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        m = C.intl.formatToPlainString(C.t.tuMUJy, {
+        m = C.intl.formatToPlainString(C.t.tuMUJ2, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name,
         }),
@@ -130,13 +130,13 @@ function S() {
                     (0, r.jsx)(o.Heading, {
                         className: y.header,
                         variant: "heading-md/medium",
-                        children: C.intl.string(_.default.h6QNk5),
+                        children: C.intl.string(_.default.h6QNky),
                     }),
                     (0, r.jsx)(o.Text, {
                         className: y.text,
                         variant: "text-md/medium",
                         color: "text-secondary",
-                        children: C.intl.format(_.default["8N4c5+"], {
+                        children: C.intl.format(_.default["8N4c58"], {
                             airhornHook: (t) =>
                                 (0, r.jsx)(w, {
                                     containerRef: e,

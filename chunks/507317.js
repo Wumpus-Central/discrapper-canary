@@ -14,7 +14,7 @@ var r = n(951288),
     f = n(486324),
     h = n(200299),
     b = n(388032),
-    x = n(359449);
+    x = n(197530);
 let j = function (e) {
     let { guild: t } = e,
         j = t.features.has(m.GuildFeatures.BANNER),
@@ -22,7 +22,7 @@ let j = function (e) {
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -105,7 +105,7 @@ let j = function (e) {
                     : null,
             disabled: !j,
             onChange: v,
-            hint: b.intl.string(b.t.NyXznp),
+            hint: b.intl.string(b.t.NyXznh),
             enabled: j,
             maxFileSizeBytes: h.B,
         });
@@ -118,7 +118,7 @@ let j = function (e) {
                           (0, r.jsx)(l.Heading, {
                               className: x.header,
                               variant: "heading-lg/extrabold",
-                              children: b.intl.string(b.t.BBj1nZ),
+                              children: b.intl.string(b.t.BBj1nY),
                           }),
                           (0, r.jsx)(s.Z, {
                               className: x.boostIndicator,
@@ -137,14 +137,14 @@ let j = function (e) {
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/normal",
                                       color: "header-secondary",
-                                      children: b.intl.string(b.t.Vwintr),
+                                      children: b.intl.string(b.t.Vwintv),
                                   }),
                                   (0, r.jsx)("div", {
                                       className: x.uploadButton,
                                       children: (0, r.jsx)(d.Z, {
                                           onChange: v,
                                           maxFileSizeBytes: h.B,
-                                          text: b.intl.string(b.t.yG2pUl),
+                                          text: b.intl.string(b.t.yG2pUi),
                                           size: "md",
                                           variant: "primary",
                                       }),
@@ -164,7 +164,7 @@ let j = function (e) {
                           (0, r.jsx)(l.Heading, {
                               className: x.header,
                               variant: "heading-lg/extrabold",
-                              children: b.intl.string(b.t.BBj1nZ),
+                              children: b.intl.string(b.t.BBj1nY),
                           }),
                           (0, r.jsx)(s.Z, {
                               className: x.boostIndicator,
@@ -184,12 +184,12 @@ let j = function (e) {
                                       variant: "text-sm/normal",
                                       color: "header-secondary",
                                       className: x.bannerDescription,
-                                      children: b.intl.string(b.t.Vwintr),
+                                      children: b.intl.string(b.t.Vwintv),
                                   }),
                                   (0, r.jsx)(l.Button, {
                                       variant: "expressive",
                                       icon: l.Ucv,
-                                      text: b.intl.string(b.t["+7XY39"]),
+                                      text: b.intl.string(b.t["+7XY31"]),
                                       onClick: _,
                                   }),
                               ],

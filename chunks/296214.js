@@ -11,14 +11,14 @@ let s = (e) => {
     return (0, r.jsx)("div", {
         className: t,
         children: (0, r.jsx)(i.oil, {
-            label: o.intl.string(o.t.mmDvV1),
+            label: o.intl.string(o.t["mmDvV+"]),
             leading: {
                 type: "image",
                 src: (0, a.hx)(c),
             },
             value: n && null != l ? o.intl.formatToPlainString(o.t.bCynoK, l) : void 0,
             readOnly: !0,
-            placeholder: o.intl.string(o.t["bWMH7+"]),
+            placeholder: o.intl.string(o.t.bWMH78),
         }),
     });
 };

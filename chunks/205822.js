@@ -127,8 +127,8 @@ class h extends r.Component {
                     A &&
                         (t.setState({ isDragging: !1 }),
                         (0, d.openUploadError)({
-                            title: u.intl.string(u.t.azO1PT),
-                            help: u.intl.string(u.t.Koklr6),
+                            title: u.intl.string(u.t.azO1Pe),
+                            help: u.intl.string(u.t["Koklr/"]),
                             icons: t.props.icons,
                         })),
                     !1)

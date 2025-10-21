@@ -6,12 +6,12 @@ var r = n(951288),
     o = n(86419),
     s = n(286957),
     c = n(388032),
-    u = n(200344);
+    u = n(44258);
 let d = i.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: l } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "widget-game-tags",
-        "aria-label": c.intl.string(c.t.r6EJOj),
+        "aria-label": c.intl.string(c.t.r6EJOu),
         onClose: l,
         onSelect: () => {},
         className: u.gameTagsMenu,
@@ -27,7 +27,7 @@ let d = i.memo(function (e) {
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
-                                        label: c.intl.string(c.t.PoWNfX),
+                                        label: c.intl.string(c.t.PoWNfe),
                                         checked: !l.tags.some((e) => t.includes(e)),
                                         action: () => i(l.tags),
                                     },
@@ -190,11 +190,11 @@ function f(e) {
                     (n = n =
                         {
                             className: u.addButton,
-                            "aria-label": c.intl.string(c.t.r6EJOj),
+                            "aria-label": c.intl.string(c.t.r6EJOu),
                             children: (0, r.jsx)(a.Text, {
                                 variant: "text-xxs/medium",
                                 color: "none",
-                                children: c.intl.string(c.t.fZSej4),
+                                children: c.intl.string(c.t.fZSejy),
                             }),
                         }),
                     Object.getOwnPropertyDescriptors

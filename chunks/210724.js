@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => L,
-    Z: () => V,
+    Z: () => Q,
 }),
     n(388685);
 var r = n(951288),
@@ -31,16 +31,16 @@ var r = n(951288),
     w = n(667105),
     P = n(693900),
     N = n(130653),
-    R = n(941348),
-    A = n(46140),
+    A = n(941348),
+    R = n(46140),
     B = n(743294),
     k = n(981631),
-    I = n(747961);
-function q(e) {
+    I = n(89855);
+function D(e) {
     let { isExpanded: t, questId: n } = e;
     return (
         (0, b.qI)({
-            mode: t ? A.NH.EXPANDED : A.NH.COLLAPSED,
+            mode: t ? R.NH.EXPANDED : R.NH.COLLAPSED,
             questContent: v.jn.QUEST_BAR_V2,
             questId: n,
             sourceQuestContent: v.jn.QUEST_BAR_V2,
@@ -48,7 +48,7 @@ function q(e) {
         null
     );
 }
-function D() {
+function q() {
     return (
         s.useEffect(() => {
             m.j.trigger();
@@ -61,13 +61,13 @@ function L(e) {
     let { quest: a } = e,
         m = (0, E.T)({
             quest: a,
-            location: A.dr.QUESTS_BAR,
+            location: R.dr.QUESTS_BAR,
         }),
-        b = (0, y.Z)({ location: A.dr.QUESTS_BAR }),
+        b = (0, y.Z)({ location: R.dr.QUESTS_BAR }),
         L = (0, c.e7)([j.Z], () => null != j.Z.questEnrollmentBlockedUntil),
-        { isQuestBarVisible: V, reason: Q } = (0, w.qN)({
+        { isQuestBarVisible: Q, reason: V } = (0, w.qN)({
             quest: a,
-            location: A.dr.QUESTS_BAR,
+            location: R.dr.QUESTS_BAR,
         }),
         M = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         Z = (0, c.e7)([f.Z], () => f.Z.hasLayers()),
@@ -77,7 +77,7 @@ function L(e) {
         F = (0, u.Z)(U),
         z = (null == (n = a.userStatus) ? void 0 : n.completedAt) != null,
         { hasError: K, isLoading: G } = (0, T.d7)(),
-        X = s.useContext(N.T) || (b && V && !G && !L),
+        X = s.useContext(N.T) || (b && Q && !G && !L),
         Y = s.useRef(X),
         J = s.useRef(-1),
         $ = s.useRef(!1),
@@ -169,7 +169,7 @@ function L(e) {
         s.useLayoutEffect(() => {
             X !== Y.current && ec(!1), (Y.current = X);
         }, [X]);
-    let ey = U ? A.XZ : A.R4,
+    let ey = U ? R.XZ : R.R4,
         [{ expansionSpring: eE }, eO] = (0, d.q_F)(() => ({
             from: { expansionSpring: 0 },
             config: ey,
@@ -249,18 +249,18 @@ function L(e) {
                     properties: {
                         content_id: v.jn.QUEST_BAR,
                         content_name: (0, h._b)(v.jn.QUEST_BAR),
-                        reason: Q,
+                        reason: V,
                         impression_id: null == (e = W.current) ? void 0 : e.getId(),
                     },
                     sourceQuestContent: v.jn.QUEST_BAR_V2,
                 });
             }
-        }, [X, el, G, a.id, Q]),
+        }, [X, el, G, a.id, V]),
         s.useEffect(() => {
-            (!V || L) && x.Z.clearTracking(), X && el && !G && !K && b && x.Z.stopTracking(a.id);
-        }, [V, L, X, el, G, K, b, a.id]);
+            (!Q || L) && x.Z.clearTracking(), X && el && !G && !K && b && x.Z.stopTracking(a.id);
+        }, [Q, L, X, el, G, K, b, a.id]);
     let { enabled: eT, status: ew } = (0, C.n)({
-            location: A.dr.QUESTS_BAR,
+            location: R.dr.QUESTS_BAR,
             questConfig: a.config,
         }),
         eP = (null == ew ? void 0 : ew.progressBlur) && !U ? 88 : 70;
@@ -280,11 +280,11 @@ function L(e) {
                     X &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(q, {
+                                (0, r.jsx)(D, {
                                     questId: a.id,
                                     isExpanded: es,
                                 }),
-                                (0, r.jsx)(D, {}),
+                                (0, r.jsx)(q, {}),
                             ],
                         }),
                     (0, r.jsx)(i.animated.div, {
@@ -318,7 +318,7 @@ function L(e) {
                             children: (0, r.jsx)(P.t, {
                                 springConfig: ey,
                                 isExpanded: es,
-                                children: (0, r.jsx)(R.Z, {
+                                children: (0, r.jsx)(A.Z, {
                                     expandedContentRef: ed,
                                     expansionSpring: eE,
                                     isExpanded: es,
@@ -340,7 +340,7 @@ function L(e) {
         ),
     });
 }
-let V =
+let Q =
     12633 == n.j
         ? function () {
               let e = (0, w.DH)();
@@ -349,7 +349,7 @@ let V =
                   : (0, r.jsx)(
                         T.p,
                         {
-                            source: A.dr.QUESTS_BAR,
+                            source: R.dr.QUESTS_BAR,
                             questId: e.id,
                             children: (0, r.jsx)(L, { quest: e }),
                         },

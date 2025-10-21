@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(388905),
     u = n(703656),
     d = n(388032),
-    h = n(10198);
+    h = n(197571);
 let g = function (e) {
     let { match: t, location: n, attemptDeepLink: s } = e,
         [g, p] = i.useState(0);
@@ -43,36 +43,36 @@ let g = function (e) {
                 children: [
                     (0, r.jsx)(c.Dx, {
                         className: h.marginBottom8,
-                        children: d.intl.string(d.t.qllnGh),
+                        children: d.intl.string(d.t.qllnGm),
                     }),
-                    (0, r.jsx)(c.DK, { children: d.intl.string(d.t.SXCxyc) }),
+                    (0, r.jsx)(c.DK, { children: d.intl.string(d.t.SXCxye) }),
                     (0, r.jsx)(c.zx, {
                         className: h.marginTop40,
                         onClick: () => m(t, n),
-                        children: d.intl.string(d.t.UQvCf3),
+                        children: d.intl.string(d.t.UQvCf7),
                     }),
                     (0, r.jsx)(c.zx, {
                         className: l()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
                         onClick: () => (0, u.uL)((0, o.M)()),
-                        children: d.intl.string(d.t["2ixEBg"]),
+                        children: d.intl.string(d.t["2ixEBi"]),
                     }),
                 ],
             });
         case 0:
         case 2:
             return (0, r.jsxs)(c.ZP, {
-                children: [(0, r.jsx)(c.Dx, { children: d.intl.string(d.t["Z+hCVV"]) }), (0, r.jsx)(c.Hh, {})],
+                children: [(0, r.jsx)(c.Dx, { children: d.intl.string(d.t["Z+hCVU"]) }), (0, r.jsx)(c.Hh, {})],
             });
         case 3:
             return (0, r.jsxs)(c.ZP, {
                 children: [
                     (0, r.jsx)(c.Dx, {
                         className: h.marginBottom8,
-                        children: d.intl.string(d.t.csrAMD),
+                        children: d.intl.string(d.t.csrAMJ),
                     }),
-                    (0, r.jsx)(c.DK, { children: d.intl.string(d.t.ghBJz8) }),
+                    (0, r.jsx)(c.DK, { children: d.intl.string(d.t.ghBJz9) }),
                 ],
             });
     }

@@ -188,7 +188,7 @@ function w(e, t) {
             canRemoveVote: w,
             canShowVoteCounts: D,
             canSubmitVote: L,
-            expirationLabel: x = T.intl.string(T.t["e+J3JS"]),
+            expirationLabel: x = T.intl.string(T.t["e+J3JZ"]),
             hasSelectedAnswer: M,
             hasVoted: k,
             isEditingVote: j,
@@ -201,7 +201,7 @@ function w(e, t) {
             showResults: H,
         } = S,
         Y = (0, E.cZ)(B),
-        W = T.intl.formatToPlainString(T.t.XRkuoa, { count: Y.toLocaleString() }),
+        W = T.intl.formatToPlainString(T.t.XRkuof, { count: Y.toLocaleString() }),
         K = Math.max(
             ...v.map((e) => {
                 var t, n;
@@ -242,7 +242,7 @@ function w(e, t) {
                 votesPercentage: Math.round(100 * u),
                 votes: (0, r.EQ)(I)
                     .with(i.C.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")"))
-                    .otherwise(() => T.intl.formatToPlainString(T.t.XRkuoa, { count: c.toLocaleString() })),
+                    .otherwise(() => T.intl.formatToPlainString(T.t.XRkuof, { count: c.toLocaleString() })),
             };
         }),
         q = (0, r.EQ)({
@@ -257,13 +257,13 @@ function w(e, t) {
             .with({ isInteractive: !1 }, () => void 0)
             .with({ isExpired: !0 }, () => void 0)
             .with({ isEditingVote: !0 }, () => ({
-                label: T.intl.string(T.t.JwkNU1),
+                label: T.intl.string(T.t.JwkNU4),
                 presentation: "button",
                 enabled: M,
                 type: "submit",
             }))
             .with({ canRemoveVote: !0 }, () => ({
-                label: T.intl.string(T.t.XhQEh4),
+                label: T.intl.string(T.t.XhQEh8),
                 presentation: "secondaryButton",
                 enabled: !0,
                 type: "remove",
@@ -274,19 +274,19 @@ function w(e, t) {
                     showResults: !0,
                 },
                 () => ({
-                    label: T.intl.string(T.t.gNj6Ii),
+                    label: T.intl.string(T.t.gNj6In),
                     presentation: "secondaryButton",
                     enabled: !0,
                     type: "showVotes",
                 }),
             )
             .otherwise(() => ({
-                label: T.intl.string(T.t.JwkNU1),
+                label: T.intl.string(T.t.JwkNU4),
                 presentation: "button",
                 enabled: L,
                 type: "submit",
             })),
-        X = (0, m.isIOS)() ? T.intl.string(T.t.PVATMz) : T.intl.string(T.t.cHfFqq),
+        X = (0, m.isIOS)() ? T.intl.string(T.t["PVATM/"]) : T.intl.string(T.t.cHfFql),
         Q = (0, r.EQ)({
             isExpired: U,
             isInteractive: G,
@@ -298,13 +298,13 @@ function w(e, t) {
                     isExpired: !1,
                 },
                 () => ({
-                    label: T.intl.string(T.t.trrip6),
+                    label: T.intl.string(T.t.trrip0),
                     presentation: "text",
                     enabled: !1,
                 }),
             )
             .with({ isEditingVote: !0 }, () => ({
-                label: T.intl.string(T.t["ETE/oK"]),
+                label: T.intl.string(T.t["ETE/oC"]),
                 presentation: "textButton",
                 enabled: !0,
                 type: "cancel",
@@ -334,8 +334,8 @@ function w(e, t) {
         })
             .with({ isInteractive: !1 }, () => void 0)
             .with({ isExpired: !0 }, () => void 0)
-            .with({ canSelectMultipleAnswers: !0 }, () => T.intl.string(T.t.yCXvxc))
-            .otherwise(() => T.intl.string(T.t["9Y2wKC"]));
+            .with({ canSelectMultipleAnswers: !0 }, () => T.intl.string(T.t.yCXvxa))
+            .otherwise(() => T.intl.string(T.t["9Y2wKO"]));
     return {
         question: d.question,
         promptLabel: ee,

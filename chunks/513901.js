@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(981631),
     g = n(474936),
     E = n(388032),
-    b = n(445143);
+    b = n(78946);
 function y(e) {
     let {
             user: t,
@@ -69,7 +69,7 @@ function y(e) {
                     size: s.zx.Sizes.SMALL,
                     onClick: w,
                     className: o()({ [b.buttonHighlighted]: I }),
-                    children: E.intl.string(E.t["/dRfCQ"]),
+                    children: E.intl.string(E.t["/dRfCf"]),
                 }),
                 L &&
                     (0, r.jsx)("div", {
@@ -78,7 +78,7 @@ function y(e) {
                         children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: D ? E.intl.string(E.t.CHf9iI) : E.intl.string(E.t.uMuafH),
+                            text: D ? E.intl.string(E.t.CHf9iJ) : E.intl.string(E.t.uMuafO),
                             onClick: x,
                         }),
                     }),

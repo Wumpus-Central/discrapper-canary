@@ -1,4 +1,4 @@
-i.d(t, { DesktopRefreshOnboardingModal: () => k }), i(388685), i(539854);
+i.d(t, { DesktopRefreshOnboardingModal: () => C }), i(388685), i(539854);
 var s = i(951288),
     n = i(647438),
     a = i(120356),
@@ -17,8 +17,8 @@ var s = i(951288),
     j = i(874893),
     _ = i(231338),
     b = i(388032),
-    N = i(86603);
-function O(e) {
+    O = i(3498);
+function N(e) {
     let { options: t, selected: i, onSelect: n, showLabels: a, renderOptionContainer: r } = e;
     return (0, s.jsx)(c.Kqy, {
         direction: "horizontal",
@@ -36,7 +36,7 @@ function O(e) {
                         children: (0, s.jsxs)(c.P3F, {
                             "data-selected": e.id === i,
                             onClick: () => n(e.id),
-                            className: l()(e.className, N.option),
+                            className: l()(e.className, O.option),
                             style: e.style,
                             children: [
                                 a &&
@@ -49,7 +49,7 @@ function O(e) {
                                     (0, s.jsx)(c.IGR, {
                                         color: c.TVs.colors.BG_BRAND.css,
                                         text: b.intl.string(b.t.y2b7CA),
-                                        className: N.new,
+                                        className: O.new,
                                     }),
                             ],
                         }),
@@ -64,47 +64,47 @@ function O(e) {
 let v = [
         {
             id: _.BR.LIGHT,
-            label: b.intl.string(b.t.K2sFfn),
-            className: l()("theme-light", N.themeOption),
+            label: b.intl.string(b.t.K2sFfo),
+            className: l()("theme-light", O.themeOption),
         },
         {
             id: _.BR.DARK,
-            label: b.intl.string(b.t.SMPT1t),
-            className: l()("theme-dark", N.themeOption),
+            label: b.intl.string(b.t.SMPT1k),
+            className: l()("theme-dark", O.themeOption),
         },
         {
             id: _.BR.DARKER,
-            label: b.intl.string(b.t.b8Cei4),
-            className: l()("theme-darker", N.themeOption),
+            label: b.intl.string(b.t.b8Cei3),
+            className: l()("theme-darker", O.themeOption),
             new: !0,
         },
         {
             id: _.BR.MIDNIGHT,
-            label: b.intl.string(b.t.Do4ZJy),
-            className: l()("theme-midnight", N.themeOption),
+            label: b.intl.string(b.t.Do4ZJx),
+            className: l()("theme-midnight", O.themeOption),
             new: !0,
         },
     ],
-    C = [
+    k = [
         {
             id: "compact",
-            label: b.intl.string(b.t["7iegX1"]),
+            label: b.intl.string(b.t["7iegX4"]),
         },
         {
             id: "default",
-            label: b.intl.string(b.t.bBvAEB),
+            label: b.intl.string(b.t.bBvAEH),
         },
         {
             id: "cozy",
             label: b.intl.string(b.t["4cuYHx"]),
         },
     ];
-function k(e) {
+function C(e) {
     let { transitionState: t, onClose: i } = e,
         [a] = n.useState(() => g.Z.gradientPreset),
         o = (0, r.e7)([x.Z], () => x.Z.theme),
         [_] = n.useState(() => u.ZP.useSystemTheme === j.KW.ON),
-        [k, K] = n.useState(() => (_ ? "system" : null != a ? "gradient" : o)),
+        [C, K] = n.useState(() => (_ ? "system" : null != a ? "gradient" : o)),
         { density: f } = (0, c.TCT)(),
         w = n.useMemo(() => {
             if (null == a && !_) return v;
@@ -119,7 +119,7 @@ function k(e) {
                 e.push({
                     id: "gradient",
                     label: d,
-                    className: l()((0, c.wjy)(s) ? N.darkOverlay : N.lightOverlay, N.themeOption),
+                    className: l()((0, c.wjy)(s) ? O.darkOverlay : O.lightOverlay, O.themeOption),
                     style: { background: "var(--background-gradient), ".concat(r) },
                 });
             }
@@ -127,8 +127,8 @@ function k(e) {
                 _ &&
                     e.push({
                         id: "system",
-                        label: b.intl.string(b.t["7rOU6u"]),
-                        className: N.themeOption,
+                        label: b.intl.string(b.t["7rOU6j"]),
+                        className: O.themeOption,
                     }),
                 e
             );
@@ -137,37 +137,37 @@ function k(e) {
     return (0, s.jsxs)(c.Y0X, {
         transitionState: t,
         size: c.CgR.DYNAMIC,
-        className: N.root,
+        className: O.root,
         "data-modal-align": "top",
         parentComponent: "DesktopRefreshOnboardingModal",
         children: [
-            (0, s.jsx)("div", { className: N.gradient }),
+            (0, s.jsx)("div", { className: O.gradient }),
             (0, s.jsx)(c.xBx, {
-                className: N.header,
+                className: O.header,
                 children: (0, s.jsxs)(c.Kqy, {
                     gap: I ? 4 : 8,
                     children: [
                         (0, s.jsxs)(c.Kqy, {
                             gap: I ? 8 : 16,
                             children: [
-                                (0, s.jsx)("div", { className: N.headerImage }),
+                                (0, s.jsx)("div", { className: O.headerImage }),
                                 (0, s.jsx)(c.Heading, {
                                     variant: I ? "heading-lg/semibold" : "heading-xl/semibold",
                                     color: "header-primary",
-                                    children: b.intl.string(b.t["7+iCGx"]),
+                                    children: b.intl.string(b.t["7+iCG4"]),
                                 }),
                             ],
                         }),
                         (0, s.jsx)(c.Heading, {
                             variant: I ? "heading-sm/medium" : "heading-md/medium",
                             color: "text-secondary",
-                            children: b.intl.string(b.t.fZMMqK),
+                            children: b.intl.string(b.t.fZMMqN),
                         }),
                     ],
                 }),
             }),
             (0, s.jsx)(c.hzk, {
-                className: N.content,
+                className: O.content,
                 children: (0, s.jsxs)(c.Kqy, {
                     gap: I ? 20 : 24,
                     children: [
@@ -176,12 +176,12 @@ function k(e) {
                             children: [
                                 (0, s.jsx)(c.Heading, {
                                     variant: "heading-md/medium",
-                                    children: b.intl.string(b.t.Ksh3io),
+                                    children: b.intl.string(b.t.Ksh3ik),
                                 }),
-                                (0, s.jsx)(O, {
+                                (0, s.jsx)(N, {
                                     showLabels: !1,
                                     options: w,
-                                    selected: k,
+                                    selected: C,
                                     onSelect: (e) => {
                                         K(e),
                                             "gradient" === e
@@ -197,12 +197,12 @@ function k(e) {
                                             ? t
                                             : "system" === e.id
                                               ? (0, s.jsxs)(c.Kqy, {
-                                                    className: N.systemOption,
+                                                    className: O.systemOption,
                                                     children: [
                                                         t,
                                                         (0, s.jsx)(c.DuK, {
                                                             size: "sm",
-                                                            className: N.systemIcon,
+                                                            className: O.systemIcon,
                                                         }),
                                                     ],
                                                 })
@@ -231,7 +231,7 @@ function k(e) {
                                             children: [
                                                 (0, s.jsx)(c.Heading, {
                                                     variant: "heading-md/medium",
-                                                    children: b.intl.string(b.t["C/5V0N"]),
+                                                    children: b.intl.string(b.t["C/5V0A"]),
                                                 }),
                                                 (0, s.jsx)(c.IGR, {
                                                     color: c.TVs.colors.BG_BRAND.css,
@@ -242,13 +242,13 @@ function k(e) {
                                         (0, s.jsx)(c.Text, {
                                             variant: "text-sm/medium",
                                             color: "text-secondary",
-                                            children: b.intl.string(b.t["2w1sEB"]),
+                                            children: b.intl.string(b.t["2w1sEO"]),
                                         }),
                                     ],
                                 }),
-                                (0, s.jsx)(O, {
+                                (0, s.jsx)(N, {
                                     showLabels: !0,
-                                    options: C,
+                                    options: k,
                                     selected: f,
                                     onSelect: (e) => {
                                         switch (e) {
@@ -269,10 +269,10 @@ function k(e) {
                 }),
             }),
             (0, s.jsx)(c.mzw, {
-                className: N.footer,
+                className: O.footer,
                 children: (0, s.jsx)(c.Button, {
                     variant: "primary",
-                    text: b.intl.string(b.t["1Qm829"]),
+                    text: b.intl.string(b.t["1Qm822"]),
                     onClick: i,
                 }),
             }),

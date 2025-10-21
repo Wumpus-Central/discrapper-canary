@@ -7,7 +7,7 @@ var i = n(913527),
     s = n(481060),
     l = n(925329),
     c = n(388032),
-    u = n(386312);
+    u = n(56651);
 function d(e) {
     let { application: t, timestamp: n } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -28,7 +28,7 @@ function d(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
                         color: "interactive-active",
-                        children: c.intl.format(c.t.J3s8JC, { applicationName: t.name }),
+                        children: c.intl.format(c.t.J3s8JP, { applicationName: t.name }),
                     }),
                 ],
             }),
@@ -40,7 +40,7 @@ function f(e) {
     return (0, r.jsx)(o.u, {
         position: "top",
         asContainer: !0,
-        "aria-label": c.intl.string(c.t["5nMcv7"]),
+        "aria-label": c.intl.string(c.t["5nMcv1"]),
         __unsupportedReactNodeAsText: (0, r.jsx)(d, {
             application: t,
             timestamp: n,

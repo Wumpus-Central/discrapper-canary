@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(436660),
     h = n(887490),
     m = n(388032),
-    g = n(53457);
+    g = n(953782);
 function E(e, t, n) {
     return (
         t in e
@@ -83,8 +83,8 @@ function v(e, t, n) {
                 let e;
                 (e =
                     c > 0
-                        ? m.intl.formatToPlainString(m.t.BP8N0N, { count: l })
-                        : m.intl.formatToPlainString(m.t.lziVCw, { count: l })),
+                        ? m.intl.formatToPlainString(m.t.BP8N0K, { count: l })
+                        : m.intl.formatToPlainString(m.t.lziVC9, { count: l })),
                     (f["data-trailing-placeholder"] = e);
             }
             return (0, r.jsx)("div", O(b({ className: g.applicationCommand }, i, f), { children: a }));
@@ -137,7 +137,7 @@ let I = (e) => {
                     : (0, r.jsxs)("span", {
                           className: o()(g.optionPillValue, g.readonlyPillValue),
                           contentEditable: !1,
-                          children: [m.intl.string(m.t.GRdFnp), E],
+                          children: [m.intl.string(m.t.GRdFni), E],
                       })
                 : (0, r.jsxs)("span", {
                       className: g.optionPillValue,

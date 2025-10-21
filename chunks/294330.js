@@ -25,7 +25,7 @@ var r = n(951288),
     O = n(826946),
     v = n(981631),
     y = n(388032),
-    I = n(8548),
+    I = n(972725),
     C = n(129512),
     S = n(330065),
     N = n(755386);
@@ -227,7 +227,7 @@ function T(e) {
                                                         className: I.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: y.intl.format(y.t["LC+S+v"], {
+                                                        children: y.intl.format(y.t["LC+S+m"], {
                                                             membersOnline: t.presenceCount,
                                                         }),
                                                     }),
@@ -242,7 +242,7 @@ function T(e) {
                                                         className: I.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: y.intl.format(y.t.zRl6XV, { count: t.memberCount }),
+                                                        children: y.intl.format(y.t.zRl6XR, { count: t.memberCount }),
                                                     }),
                                                 ],
                                             }),

@@ -21,7 +21,7 @@ var n = r(951288),
     S = r(981631),
     P = r(474936),
     b = r(388032),
-    E = r(398726);
+    E = r(88785);
 function I(e) {
     let {
             user: t,
@@ -86,7 +86,7 @@ function I(e) {
                 children: [
                     (0, n.jsx)(s.Heading, {
                         variant: "heading-lg/semibold",
-                        children: b.intl.string(b.t.HykynZ),
+                        children: b.intl.string(b.t.HykynS),
                     }),
                     (0, n.jsx)(s.olH, {
                         "data-migration-pending": !0,
@@ -125,7 +125,7 @@ function I(e) {
                     (null != Z && (!(0, u.qS)(Z) || D)) || null === w
                         ? (0, n.jsx)(s.Button, {
                               variant: "primary",
-                              text: b.intl.string(b.t.Jh8fJy),
+                              text: b.intl.string(b.t.Jh8fJz),
                               onClick: () => {
                                   C(w), m();
                               },
@@ -135,17 +135,17 @@ function I(e) {
                           ? (0, n.jsx)(s.Button, {
                                 variant: "primary",
                                 onClick: () => L(null == N ? void 0 : N.skuId),
-                                text: b.intl.string(b.t.fYfGgI),
+                                text: b.intl.string(b.t.fYfGgK),
                             })
                           : (0, n.jsx)(x.Z, {
                                 subscriptionTier: P.Si.TIER_2,
                                 showGradient: !D,
                                 textOptions: {
                                     textOverride: y.ZP.isPremium(t)
-                                        ? b.intl.string(b.t.KXLX7u)
+                                        ? b.intl.string(b.t.KXLX7l)
                                         : D
-                                          ? b.intl.string(b.t.mr4K7O)
-                                          : b.intl.string(b.t.pj0XBA),
+                                          ? b.intl.string(b.t.mr4K7D)
+                                          : b.intl.string(b.t.pj0XBN),
                                 },
                             }),
                     !D && (0, u.G1)(N)
@@ -155,7 +155,7 @@ function I(e) {
                           })
                         : (0, n.jsx)(s.Button, {
                               variant: "secondary",
-                              text: b.intl.string(b.t["ETE/oK"]),
+                              text: b.intl.string(b.t["ETE/oC"]),
                               onClick: m,
                           }),
                 ],

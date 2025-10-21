@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var l = n(951288);
 n(647438);
 var o = n(120356),
@@ -11,23 +11,23 @@ var o = n(120356),
     u = n(131016),
     p = n(7284),
     m = n(660662),
-    f = n(62222),
+    f = n(592186),
     g = n(388032),
-    h = n(77426),
-    x = n(355654);
-function _(e) {
-    let { selectedFontId: t, setSelectedFontId: n, displayName: o, className: _ } = e,
-        b = t !== i.C.DEFAULT,
+    h = n(959389),
+    x = n(204469);
+function b(e) {
+    let { selectedFontId: t, setSelectedFontId: n, displayName: o, className: b } = e,
+        _ = t !== i.C.DEFAULT,
         S = (0, u.mR)(o),
-        { enabled: C } = d.wL.useConfig({ location: "DisplayNameStylesFontSelection" });
+        { enabled: j } = d.wL.useConfig({ location: "DisplayNameStylesFontSelection" });
     return (0, l.jsxs)("div", {
-        className: _,
+        className: b,
         children: [
             (0, l.jsxs)(a.X6q, {
                 variant: "heading-md/semibold",
                 className: h.selectorHeading,
                 children: [
-                    g.intl.string(f.default.nP0ngY),
+                    g.intl.string(f.default.nP0ngb),
                     (0, l.jsx)(c.SrA, {
                         size: "xs",
                         color: c.TVs.colors.TEXT_DEFAULT,
@@ -62,9 +62,9 @@ function _(e) {
                     );
                 }),
             }),
-            b &&
+            _ &&
                 S &&
-                C &&
+                j &&
                 (0, l.jsxs)("div", {
                     className: x.nonLatinDisclaimer,
                     children: [
@@ -72,7 +72,7 @@ function _(e) {
                         (0, l.jsx)(a.xvT, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
-                            children: g.intl.string(f.default["+O1xLy"]),
+                            children: g.intl.string(f.default["+O1xL2"]),
                         }),
                     ],
                 }),

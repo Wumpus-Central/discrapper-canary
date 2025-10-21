@@ -19,7 +19,7 @@ var r = n(951288),
     j = n(778567),
     O = n(228168),
     x = n(388032),
-    _ = n(363725);
+    _ = n(10094);
 function I(e) {
     let { profileOwner: t } = e,
         {
@@ -41,8 +41,8 @@ function I(e) {
     i.useEffect(() => {
         (null == P ? void 0 : P.visibility) != null && C(P.visibility === a.f.PUBLIC);
     }, [null == P ? void 0 : P.visibility]);
-    let { wishlist: N, error: D } = (0, p.kZ)(n, t.id),
-        A = i.useCallback(() => {
+    let { wishlist: N, error: A } = (0, p.kZ)(n, t.id),
+        D = i.useCallback(() => {
             if (null == n) return;
             let e = T ? a.f.PRIVATE : a.f.PUBLIC;
             C(!T),
@@ -60,7 +60,7 @@ function I(e) {
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
                 });
         }, [w]);
-    return null != D
+    return null != A
         ? null
         : null == N || 0 === N.items.length
           ? (0, r.jsx)(v.F, {
@@ -74,12 +74,12 @@ function I(e) {
                                 (0, r.jsx)(c.Heading, {
                                     variant: "heading-md/medium",
                                     color: "header-primary",
-                                    children: x.intl.string(x.t.HGnLLS),
+                                    children: x.intl.string(x.t.HGnLLT),
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    children: x.intl.string(x.t["/X1ny8"]),
+                                    children: x.intl.string(x.t["/X1ny6"]),
                                 }),
                             ],
                         }),
@@ -88,7 +88,7 @@ function I(e) {
                                 variant: "primary",
                                 size: "sm",
                                 icon: c.EOn,
-                                text: x.intl.string(x.t.ZbS4QE),
+                                text: x.intl.string(x.t.ZbS4QB),
                                 onClick: k,
                             }),
                     ],
@@ -107,11 +107,11 @@ function I(e) {
                                     (0, r.jsx)(c.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-secondary",
-                                        children: x.intl.format(x.t.r6Y1Li, { count: N.items.length }),
+                                        children: x.intl.format(x.t.r6Y1Lg, { count: N.items.length }),
                                     }),
                                     !T &&
                                         (0, r.jsx)(s.u, {
-                                            text: x.intl.string(x.t.RX7D9v),
+                                            text: x.intl.string(x.t.RX7D9h),
                                             asContainer: !0,
                                             children: (0, r.jsx)(c.tEY, {
                                                 children: (0, r.jsx)("div", {
@@ -128,7 +128,7 @@ function I(e) {
                                     T &&
                                         E &&
                                         (0, r.jsx)(s.u, {
-                                            text: x.intl.string(x.t.d78ChY),
+                                            text: x.intl.string(x.t.d78ChW),
                                             asContainer: !0,
                                             children: (0, r.jsx)(c.tEY, {
                                                 children: (0, r.jsx)("div", {
@@ -152,13 +152,13 @@ function I(e) {
                                               variant: "secondary",
                                               size: "sm",
                                               icon: c.qJs,
-                                              text: x.intl.string(x.t.SDUwMz),
+                                              text: x.intl.string(x.t.SDUwM0),
                                               onClick: k,
                                           }),
                                           (0, r.jsx)(j.Z, {
                                               isOwner: S,
                                               isWishlistPublic: T,
-                                              onToggleVisibility: A,
+                                              onToggleVisibility: D,
                                           }),
                                       ],
                                   })
@@ -166,7 +166,7 @@ function I(e) {
                                       variant: "secondary",
                                       size: "sm",
                                       icon: c.EOn,
-                                      text: x.intl.string(x.t["i/yzHh"]),
+                                      text: x.intl.string(x.t["i/yzHs"]),
                                       onClick: k,
                                   }),
                         ],

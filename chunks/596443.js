@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(953529), n(388685), n(539854);
+n.d(t, { Z: () => b }), n(953529), n(388685), n(539854);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -23,16 +23,16 @@ var r = n(951288),
     S = n(351127),
     p = n(981631),
     C = n(388032),
-    D = n(152540),
-    L = n(186905);
-function U(e) {
+    D = n(87819),
+    U = n(625109);
+function L(e) {
     var t, n, i, a;
     let { permission: o, roleIds: m, guild: N, specMap: O, categoryTitle: f, userId: R } = e,
         D = (0, u.Wu)([g.Z], () => g.Z.getManyRoles(N.id, m)),
-        U = p.Plq[o],
-        M = null != (i = null == (t = O[U.toString()]) ? void 0 : t.title) ? i : (0, T.wt)(U),
-        x = null != (a = null == (n = O[U.toString()]) ? void 0 : n.description) ? a : "",
-        b = S._o.has(U),
+        L = p.Plq[o],
+        M = null != (i = null == (t = O[L.toString()]) ? void 0 : t.title) ? i : (0, T.wt)(L),
+        b = null != (a = null == (n = O[L.toString()]) ? void 0 : n.description) ? a : "",
+        x = S._o.has(L),
         v = S.Qn.includes(o),
         P = m.length,
         j = (0, u.e7)([h.Z], () => h.Z.can(p.Plq.MANAGE_ROLES, N), [N]),
@@ -43,13 +43,13 @@ function U(e) {
             [j, N.id],
         );
     return (0, r.jsxs)("div", {
-        className: s()(L.permissionItemContainer, { [L.elevatedPermission]: b }),
+        className: s()(U.permissionItemContainer, { [U.elevatedPermission]: x }),
         children: [
             (0, r.jsxs)("div", {
-                className: L.permissionItemHeader,
+                className: U.permissionItemHeader,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: L.permissionTitle,
+                        className: U.permissionTitle,
                         children: [
                             (0, r.jsx)(E.Text, {
                                 variant: "text-md/medium",
@@ -58,14 +58,14 @@ function U(e) {
                             }),
                             null != f &&
                                 (0, r.jsxs)("div", {
-                                    className: L.permissionItemSubheader,
+                                    className: U.permissionItemSubheader,
                                     children: [
                                         (0, r.jsx)(E.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-muted",
                                             children: f,
                                         }),
-                                        b &&
+                                        x &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
                                                     (0, r.jsx)(d.Z, {
@@ -75,9 +75,9 @@ function U(e) {
                                                         color: E.TVs.colors.INTERACTIVE_MUTED.css,
                                                     }),
                                                     (0, r.jsx)(c.u, {
-                                                        text: C.intl.string(C.t.GZvXuL),
+                                                        text: C.intl.string(C.t.GZvXuP),
                                                         children: (0, r.jsxs)(E.P3F, {
-                                                            className: L.elevatedPermissionContainer,
+                                                            className: U.elevatedPermissionContainer,
                                                             children: [
                                                                 (0, r.jsx)(E.tQf, {
                                                                     size: "custom",
@@ -88,14 +88,14 @@ function U(e) {
                                                                 (0, r.jsx)(E.Text, {
                                                                     variant: "text-xs/normal",
                                                                     color: "text-brand",
-                                                                    children: C.intl.string(C.t.k7Kqj4),
+                                                                    children: C.intl.string(C.t.k7Kqj7),
                                                                 }),
                                                             ],
                                                         }),
                                                     }),
                                                 ],
                                             }),
-                                        !b &&
+                                        !x &&
                                             v &&
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
@@ -106,11 +106,11 @@ function U(e) {
                                                         color: E.TVs.colors.INTERACTIVE_MUTED.css,
                                                     }),
                                                     (0, r.jsx)("div", {
-                                                        className: L.elevatedPermissionContainer,
+                                                        className: U.elevatedPermissionContainer,
                                                         children: (0, r.jsx)(E.Text, {
                                                             variant: "text-xs/normal",
                                                             color: "header-muted",
-                                                            children: C.intl.string(C.t.IfqUEB),
+                                                            children: C.intl.string(C.t.IfqUEM),
                                                         }),
                                                     }),
                                                 ],
@@ -122,33 +122,33 @@ function U(e) {
                     (0, r.jsx)(E.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: C.intl.format(C.t.KmJI4O, { roleCount: P }),
+                        children: C.intl.format(C.t.KmJI4A, { roleCount: P }),
                     }),
                 ],
             }),
-            null != x &&
+            null != b &&
                 (0, r.jsx)("div", {
-                    className: L.permissionItemDescription,
+                    className: U.permissionItemDescription,
                     children: (0, r.jsx)(E.Text, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        children: x,
+                        children: b,
                     }),
                 }),
             (0, r.jsx)("div", {
-                className: L.permissionItemRoleContainer,
+                className: U.permissionItemRoleContainer,
                 children: D.map((e) =>
                     (0, S.Ov)(e.id, R)
                         ? (0, r.jsx)(
                               "div",
                               {
-                                  className: L.roleTooltipItem,
+                                  className: U.roleTooltipItem,
                                   children: (0, r.jsx)("div", {
-                                      className: L.roleChiplet,
+                                      className: U.roleChiplet,
                                       children: (0, r.jsx)(E.Text, {
                                           variant: "text-xs/medium",
                                           color: "text-default",
-                                          children: C.intl.string(C.t.pclUFB),
+                                          children: C.intl.string(C.t.pclUFJ),
                                       }),
                                   }),
                               },
@@ -157,12 +157,12 @@ function U(e) {
                         : (0, r.jsx)(
                               E.P3F,
                               {
-                                  className: s()(L.roleTooltipItem, { [L.editable]: j && !(0, I.fI)(e) }),
+                                  className: s()(U.roleTooltipItem, { [U.editable]: j && !(0, I.fI)(e) }),
                                   onClick: () => y(e.id),
                                   children: (0, r.jsx)(_.Z, {
                                       role: e,
                                       guildId: N.id,
-                                      className: L.roleChiplet,
+                                      className: U.roleChiplet,
                                   }),
                               },
                               e.id,
@@ -175,7 +175,7 @@ function U(e) {
 function M(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
-function x(e) {
+function b(e) {
     let { userId: t, guildId: n, location: i, className: a, onNavigate: c } = e,
         d = (0, u.e7)([O.default], () => O.default.getUser(t), [t]),
         _ = (0, u.e7)([N.Z], () => N.Z.getGuild(n), [n]),
@@ -183,8 +183,8 @@ function x(e) {
         I = (0, S.B2)(t, n, S.pd),
         g = Object.keys(I).length,
         h = l.useMemo(() => (null != _ ? f.Z.getGuildPermissionSpecMap(_) : null), [_]),
-        x = l.useMemo(() => (null != _ ? f.Z.generateGuildPermissionSpec(_) : null), [_]),
-        [b, v] = l.useState(""),
+        b = l.useMemo(() => (null != _ ? f.Z.generateGuildPermissionSpec(_) : null), [_]),
+        [x, v] = l.useState(""),
         [P, j] = l.useState(""),
         y = l.useMemo(() => o()(j, 300), []),
         G = l.useCallback(
@@ -201,12 +201,12 @@ function x(e) {
             if (0 === g)
                 return (0, r.jsx)(E.Text, {
                     variant: "text-sm/normal",
-                    children: C.intl.string(C.t.DEBGqK),
+                    children: C.intl.string(C.t.DEBGqA),
                 });
             let e = [];
             return (
-                null == x ||
-                    x.forEach((n) => {
+                null == b ||
+                    b.forEach((n) => {
                         n.permissions.forEach((l) => {
                             let i = l.flag,
                                 s = S.pd.find((e) => p.Plq[e] === i);
@@ -230,7 +230,7 @@ function x(e) {
                                         r = n.title,
                                         l = S._o.has(i),
                                         a = S.Qn.includes(s),
-                                        _ = l ? C.intl.string(C.t.k7Kqj4) : a ? C.intl.string(C.t.IfqUEB) : null,
+                                        _ = l ? C.intl.string(C.t.k7Kqj7) : a ? C.intl.string(C.t.IfqUEM) : null,
                                         A = M(P, e),
                                         I = M(P, t),
                                         m = M(P, r),
@@ -239,7 +239,7 @@ function x(e) {
                                 }
                                 e.push(
                                     (0, r.jsx)(
-                                        U,
+                                        L,
                                         {
                                             permission: s,
                                             roleIds: a,
@@ -256,7 +256,7 @@ function x(e) {
                     }),
                 e
             );
-        }, [_, h, A, g, x, I, P, t]);
+        }, [_, h, A, g, b, I, P, t]);
     return null == d || null == A
         ? null
         : (0, r.jsxs)("div", {
@@ -268,16 +268,16 @@ function x(e) {
                       onNavigate: c,
                   }),
                   (0, r.jsx)(E.Ttm, {
-                      className: L.permissionsGroupContainer,
+                      className: U.permissionsGroupContainer,
                       children: (0, r.jsx)(E.C3N, {
-                          label: C.intl.string(C.t.BBWnpq),
+                          label: C.intl.string(C.t.BBWnpr),
                           children: (0, r.jsxs)("div", {
-                              className: L.permissionsItemContainer,
+                              className: U.permissionsItemContainer,
                               children: [
                                   (0, r.jsx)(E.E1j, {
                                       size: "sm",
-                                      query: b,
-                                      placeholder: C.intl.string(C.t["yD9+dH"]),
+                                      query: x,
+                                      placeholder: C.intl.string(C.t["yD9+dN"]),
                                       onChange: G,
                                       onClear: k,
                                       autoComplete: "off",

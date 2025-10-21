@@ -102,7 +102,7 @@ function K(e) {
                 color: "currentColor",
                 className: F.libraryIcon,
             }),
-            (0, r.jsx)("div", { children: n.isHidden() ? Z.intl.string(Z.t.Wi99Rk) : Z.intl.string(Z.t["+tXad3"]) }),
+            (0, r.jsx)("div", { children: n.isHidden() ? Z.intl.string(Z.t.Wi99Ro) : Z.intl.string(Z.t["+tXad7"]) }),
         ],
     });
 }
@@ -129,25 +129,25 @@ class z extends i.PureComponent {
                 (0, r.jsx)("div", { className: o()(F.invalidPoop, { [F.invalidPoopHorizontal]: this.isHorizontal }) }),
             ),
             V(this, "renderTitle", () =>
-                this.props.isSelfGift ? Z.intl.string(Z.t["mT9B4+"]) : Z.intl.string(Z.t.Vo5yHx),
+                this.props.isSelfGift ? Z.intl.string(Z.t.mT9B49) : Z.intl.string(Z.t.Vo5yHw),
             ),
             V(this, "renderActions", () =>
                 this.props.isSelfGift
                     ? (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
-                          text: Z.intl.string(Z.t["jcSP+v"]),
+                          text: Z.intl.string(Z.t["jcSP+g"]),
                           onClick: this.handleViewInventory,
                       })
                     : (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
-                          text: Z.intl.string(Z.t.bUvv1d),
+                          text: Z.intl.string(Z.t.bUvv1f),
                           disabled: !0,
                       }),
             ),
             V(this, "renderTagline", () =>
-                this.props.isSelfGift ? Z.intl.string(Z.t.eEM3dn) : Z.intl.string(Z.t.tB8S6u),
+                this.props.isSelfGift ? Z.intl.string(Z.t.eEM3dq) : Z.intl.string(Z.t.tB8S6u),
             );
     }
 }
@@ -184,7 +184,7 @@ class q extends i.Component {
                         e.redeemed || e.isClaimed || null != t || null == e.expiresAt
                             ? null
                             : (0, r.jsx)("div", {
-                                  children: Z.intl.format(Z.t.nZBvUV, { hours: e.expiresAt.diff(l()(), "h") }),
+                                  children: Z.intl.format(Z.t.nZBvUR, { hours: e.expiresAt.diff(l()(), "h") }),
                               }),
                     ],
                 }),
@@ -192,7 +192,7 @@ class q extends i.Component {
         });
     }
     renderGiftCodeCopiesLeft(e) {
-        let t = e.isSubscription ? Z.t["4iHwKS"] : Z.t["YeLq8/"];
+        let t = e.isSubscription ? Z.t["4iHwKT"] : Z.t.YeLq88;
         return Z.intl.format(t, {
             remaining: e.remainingUses,
             total: e.maxUses,
@@ -216,10 +216,10 @@ class q extends i.Component {
                     className: (0, m.mO)(e) ? F.collectiblesAcceptButton : null,
                     size: u.zx.Sizes.SMALL,
                     children: e.redeemed
-                        ? Z.intl.string(Z.t.BTihoq)
+                        ? Z.intl.string(Z.t.BTihou)
                         : null != e.giftStyle
-                          ? Z.intl.string(Z.t.TiZFqa)
-                          : Z.intl.string(Z.t.bUvv1d),
+                          ? Z.intl.string(Z.t.TiZFqX)
+                          : Z.intl.string(Z.t.bUvv1f),
                 }),
             )
         );
@@ -231,16 +231,16 @@ class q extends i.Component {
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
         return this.isCustomGiftMessage() && !n
-            ? Z.intl.formatToPlainString(Z.t.t1SOIS, { recipientDisplayName: j.ZP.getName(t) })
+            ? Z.intl.formatToPlainString(Z.t.t1SOId, { recipientDisplayName: j.ZP.getName(t) })
             : null == r
               ? null
               : e.isSubscription
                 ? n
-                    ? Z.intl.string(Z.t["2PJ1ND"])
-                    : Z.intl.string(Z.t.hrnGnp)
+                    ? Z.intl.string(Z.t["2PJ1NP"])
+                    : Z.intl.string(Z.t.hrnGng)
                 : n
-                  ? Z.intl.string(Z.t.QLEMlZ)
-                  : Z.intl.string(Z.t.W4DBc3);
+                  ? Z.intl.string(Z.t.QLEMld)
+                  : Z.intl.string(Z.t.W4DBcy);
     }
     renderBody(e) {
         let {
@@ -251,12 +251,12 @@ class q extends i.Component {
             subscriptionPlan: a,
             currentUser: o,
         } = this.props;
-        if (null == r) return Z.intl.string(Z.t.ZTNur6);
+        if (null == r) return Z.intl.string(Z.t.ZTNur7);
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
-        let s = r.isPreorder() ? Z.intl.formatToPlainString(Z.t.evinTU, { name: r.name }) : r.name;
+        let s = r.isPreorder() ? Z.intl.formatToPlainString(Z.t.evinTd, { name: r.name }) : r.name;
         if (e.redeemed)
             return e.isSubscription || (0, m.mO)(e) || (0, v.K$)(r)
-                ? Z.intl.string(Z.t.mVC3Cg)
+                ? Z.intl.string(Z.t.mVC3Cv)
                 : Z.intl.format(Z.t["ss/L+/"], {
                       skuName: s,
                       onViewInLibrary: this.handleViewLibrary,
@@ -266,52 +266,52 @@ class q extends i.Component {
                 skuName: s,
                 onViewInLibrary: this.handleViewLibrary,
             });
-        if (e.isClaimed) return Z.intl.string(Z.t.ARWFQU);
-        if (!o.verified) return Z.intl.format(Z.t.GQxl7u, { onClick: this.handleVerificationClick });
+        if (e.isClaimed) return Z.intl.string(Z.t.ARWFQX);
+        if (!o.verified) return Z.intl.format(Z.t.GQxl7v, { onClick: this.handleVerificationClick });
         if (n)
             return e.isSelfRedeemable
-                ? Z.intl.string(Z.t["lQI+cH"])
+                ? Z.intl.string(Z.t["lQI+cB"])
                 : Z.intl.formatToPlainString(Z.t["A+etHx"], { skuName: s });
-        if (e.isExistingPremiumSubscriptionDisallowed) return Z.intl.string(Z.t["UCIU9/"]);
+        if (e.isExistingPremiumSubscriptionDisallowed) return Z.intl.string(Z.t.UCIU9y);
         if (e.hasMultipleCopies)
             return null != i
                 ? e.isSubscription
-                    ? Z.intl.format(Z.t.l3VxgI, {
+                    ? Z.intl.format(Z.t.l3VxgG, {
                           username: j.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: s,
                       })
-                    : Z.intl.format(Z.t["9cYrw8"], {
+                    : Z.intl.format(Z.t["9cYrw5"], {
                           username: j.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: s,
                       })
                 : e.isSubscription
-                  ? Z.intl.formatToPlainString(Z.t.svrO3d, {
+                  ? Z.intl.formatToPlainString(Z.t.svrO3W, {
                         maxUses: e.maxUses,
                         skuName: s,
                     })
-                  : Z.intl.formatToPlainString(Z.t["3AgAn5"], {
+                  : Z.intl.formatToPlainString(Z.t["3AgAn3"], {
                         totalCopies: e.maxUses,
                         skuName: s,
                     });
         if (e.isSubscription) {
-            if (null == a) return Z.intl.string(Z.t.ZTNur6);
+            if (null == a) return Z.intl.string(Z.t.ZTNur7);
             if (null != i) {
-                let e = a.interval === B.rV.MONTH ? Z.t["/RDIEB"] : Z.t["3CX6Eh"];
+                let e = a.interval === B.rV.MONTH ? Z.t["/RDIEA"] : Z.t["3CX6Ev"];
                 return Z.intl.format(e, {
                     username: j.ZP.getUserTag(i),
                     skuName: s,
                     intervalCount: a.intervalCount,
                 });
             }
-            let e = a.interval === B.rV.MONTH ? Z.t["2O4lo6"] : Z.t["+Xjmsb"];
+            let e = a.interval === B.rV.MONTH ? Z.t["2O4lo5"] : Z.t["+XjmsR"];
             return Z.intl.format(e, {
                 skuName: s,
                 intervalCount: a.intervalCount,
             });
         }
-        return null != i ? Z.intl.format(Z.t["3HsdQ0"], { username: j.ZP.getUserTag(i) }) : Z.intl.string(Z.t.Jdnjjo);
+        return null != i ? Z.intl.format(Z.t["3HsdQ/"], { username: j.ZP.getUserTag(i) }) : Z.intl.string(Z.t.Jdnjjj);
     }
     renderPromotionActions() {
         return (0, r.jsx)(d.Button, {
@@ -344,8 +344,8 @@ class q extends i.Component {
                 onEmbedClick: this.handleClaimPromotion,
                 analyticsSection: G.jXE.GIFT_CODE_EMBED,
                 renderCustomActions: () => this.renderPromotionActions(),
-                renderCustomTitle: () => Z.intl.string(Z.t.X4p5uL),
-                renderCustomTagline: () => Z.intl.string(Z.t.VIuwDw),
+                renderCustomTitle: () => Z.intl.string(Z.t.X4p5uH),
+                renderCustomTagline: () => Z.intl.string(Z.t.VIuwD7),
                 width: n,
             });
         if (null == e || e.revoked)

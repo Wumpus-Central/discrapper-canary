@@ -7,7 +7,7 @@ var a = n(951288),
     s = n(51144),
     c = n(231338),
     d = n(388032),
-    u = n(385612);
+    u = n(61952);
 function m() {
     var e;
     let t = (0, r.e7)([o.Z], () => o.Z.getStatus()),
@@ -18,17 +18,17 @@ function m() {
         children: [
             (0, a.jsxs)(l.nn4, {
                 tag: "div",
-                children: [d.intl.string(d.t.AHoLf3), ":"],
+                children: [d.intl.string(d.t.AHoLf4), ":"],
             }),
             n,
             n.length > 0 &&
                 m &&
                 (0, a.jsx)(i.u, {
-                    text: d.intl.string(d.t.L99HQk),
+                    text: d.intl.string(d.t.L99HQm),
                     children: (0, a.jsx)(l.Mgn, {
                         size: "xs",
                         color: l.TVs.colors.STATUS_WARNING,
-                        "aria-label": d.intl.string(d.t.L99HQk),
+                        "aria-label": d.intl.string(d.t.L99HQm),
                     }),
                 }),
         ],

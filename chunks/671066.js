@@ -10,7 +10,7 @@ var i = n(442837),
     d = n(594174),
     u = n(556012),
     g = n(388032),
-    m = n(75765);
+    m = n(464992);
 function p(e) {
     var t;
     let { action: n, triggerType: p, toggled: f, onToggleAction: h } = e,
@@ -51,13 +51,13 @@ function p(e) {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != v && g.intl.format(g.t["8Sr/am"], { channelName: v }),
+                                null != v && g.intl.format(g.t["8Sr/ar"], { channelName: v }),
                                 (0, r.jsx)(a.P3F, {
                                     onClick: b(!0),
                                     className: m.editChannel,
                                     tag: "span",
                                     role: "link",
-                                    children: g.intl.string(g.t["3gUsJS"]),
+                                    children: g.intl.string(g.t["3gUsJb"]),
                                 }),
                             ],
                         }),

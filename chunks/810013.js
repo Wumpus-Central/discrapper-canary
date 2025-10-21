@@ -7,7 +7,7 @@ var l = t(951288),
     c = t(499596),
     o = t(537135),
     u = t(388032),
-    d = t(79985);
+    d = t(542257);
 function m(e) {
     let { channel: n } = e,
         t = (0, r.e7)([s.default], () => s.default.getId()),
@@ -15,7 +15,7 @@ function m(e) {
     return (0, l.jsx)("div", {
         className: d.modalContent,
         children: (0, l.jsx)(i.gNt, {
-            label: u.intl.string(u.t.KPuWsr),
+            label: u.intl.string(u.t.KPuWsm),
             children: (0, l.jsx)(o.Z, {
                 children: (0, l.jsx)(c.Z, {
                     channel: n,

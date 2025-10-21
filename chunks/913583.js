@@ -18,15 +18,15 @@ function d(e) {
         (0, r.jsxs)(a.ZP, {
             className: u.chooseAccountAuthBox,
             children: [
-                (0, r.jsx)(a.Dx, { children: c.intl.string(c.t["bVbB6+"]) }),
+                (0, r.jsx)(a.Dx, { children: c.intl.string(c.t.bVbB63) }),
                 (0, r.jsx)(s.Text, {
                     className: u.chooseAccountHelpText,
                     variant: "text-md/normal",
                     color: "header-secondary",
-                    children: c.intl.string(c.t["0M5fNz"]),
+                    children: c.intl.string(c.t["0M5fN7"]),
                 }),
                 (0, r.jsx)(o.Z, {
-                    actionText: c.intl.string(c.t["DSN+h4"]),
+                    actionText: c.intl.string(c.t["DSN+hw"]),
                     onAction: (e) => {
                         e === o.W.LOGIN_REQUIRED && t();
                     },
@@ -37,7 +37,7 @@ function d(e) {
                         variant: "secondary",
                         size: "md",
                         textVariant: "text-sm/medium",
-                        text: c.intl.string(c.t["9g2mqa"]),
+                        text: c.intl.string(c.t["9g2mqT"]),
                         onClick: t,
                     }),
                 }),

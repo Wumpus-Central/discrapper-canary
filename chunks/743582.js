@@ -12,8 +12,8 @@ var l = i(951288),
     g = i(388032);
 function m(t) {
     var n, i;
-    let { transitionState: a, application: m, onClose: x } = t,
-        [h, v] = e.useState(null == m || null == (n = m.team) ? void 0 : n.id),
+    let { transitionState: a, application: m, onClose: h } = t,
+        [v, x] = e.useState(null == m || null == (n = m.team) ? void 0 : n.id),
         { teams: C } = (0, c.Z)(),
         b = e.useMemo(
             () =>
@@ -23,67 +23,67 @@ function m(t) {
                 })),
             [C],
         ),
-        f = (null == m || null == (i = m.team) ? void 0 : i.id) !== h,
-        [Z, { loading: j, error: y }] = (0, u.Z)(o.ZP.transferApplication),
-        k = async () => {
+        f = (null == m || null == (i = m.team) ? void 0 : i.id) !== v,
+        [Z, { loading: j, error: k }] = (0, u.Z)(o.ZP.transferApplication),
+        y = async () => {
             s()(null != m, "no application"),
-                s()(null != h, "no team selected"),
+                s()(null != v, "no team selected"),
                 null !=
                     (await Z({
                         applicationId: m.id,
-                        teamId: h,
-                    })) && x();
+                        teamId: v,
+                    })) && h();
         },
-        I = (null == m ? void 0 : m.team) != null;
+        A = (null == m ? void 0 : m.team) != null;
     return (0, l.jsxs)(r.Modal, {
         transitionState: a,
-        title: I ? g.intl.string(g.t["4TveVl"]) : g.intl.string(g.t.feBUAQ),
-        subtitle: I ? g.intl.string(g.t.c7HS0t) : g.intl.string(g.t.atZ50N),
-        onClose: x,
+        title: A ? g.intl.string(g.t["4TveVv"]) : g.intl.string(g.t.feBUAV),
+        subtitle: A ? g.intl.string(g.t.c7HS0n) : g.intl.string(g.t.atZ50I),
+        onClose: h,
         actions: [
             {
                 variant: "secondary",
-                text: g.intl.string(g.t["ETE/oK"]),
-                onClick: x,
+                text: g.intl.string(g.t["ETE/oC"]),
+                onClick: h,
             },
             {
                 variant: "critical-primary",
-                text: g.intl.string(g.t.R3BPHx),
+                text: g.intl.string(g.t["R3BPH+"]),
                 loading: j,
                 disabled: !f,
-                onClick: k,
+                onClick: y,
             },
         ],
         children: [
-            I
+            A
                 ? (0, l.jsxs)(d.Wn, {
                       messageType: d.QYI.WARNING,
                       children: [
-                          g.intl.string(g.t.Caz8nJ),
+                          g.intl.string(g.t.Caz8nL),
                           (0, l.jsx)(d.LZC, { size: 4 }),
                           (0, l.jsx)(d.Text, {
                               variant: "text-sm/normal",
-                              children: g.intl.string(g.t.u4ddHR),
+                              children: g.intl.string(g.t.u4ddHZ),
                           }),
                       ],
                   })
                 : null,
-            null != y
+            null != k
                 ? (0, l.jsx)(d.M14, {
                       type: "critical",
-                      children: y.message,
+                      children: k.message,
                   })
                 : null,
             (0, l.jsx)(d.LZC, { size: 16 }),
             (0, l.jsx)(d.q4e, {
-                label: I ? g.intl.string(g.t.xZ6ZLy) : g.intl.string(g.t.bfmKdH),
+                label: A ? g.intl.string(g.t.xZ6ZL6) : g.intl.string(g.t.bfmKdK),
                 required: !0,
                 options: b,
-                placeholder: g.intl.string(g.t.QXf93N),
-                value: h,
+                placeholder: g.intl.string(g.t.QXf93A),
+                value: v,
                 isDisabled: 0 === b.length,
-                onChange: (t) => v(t),
-                "aria-label": g.intl.string(g.t.QXf93N),
+                onChange: (t) => x(t),
+                "aria-label": g.intl.string(g.t.QXf93A),
             }),
         ],
     });

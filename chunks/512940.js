@@ -1,0 +1,4 @@
+s.r(t), s.d(t, { default: () => i });
+let i = JSON.parse(
+    '{"RPb8Zk":["Your feedback helps us improve Discord safety features."],"cDP3b4":["Feedback submitted"],"KZw6kn":["What isn\'t working well?"],"eSP1F9":["I changed my mind about seeing this content"],"bC0QVX":["The instructions were confusing"],"8JFGXc":["I tried to go through the steps, but it didn\u2019t work"],"Dl4A+U":["I didn\u2019t have the right documents with me"],"ZsnNgz":["I\u2019m concerned about sharing personal information"],"ep5SQp":["Something else"],"kkKhVJ":["This takes too much time"],"maxf2S":["I wasn\u2019t sure why this was necessary"],"Q5cQ46":["Describe your issue"],"zApKaR":["Would you like to tell us more?"],"4djgO/":["Thanks for the feedback!"],"RqoA4v":["How was your age verification experience?"]}',
+);

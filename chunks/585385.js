@@ -2,13 +2,13 @@ n.d(t, { D: () => h }), n(997841);
 var i = n(951288),
     l = n(120356),
     s = n.n(l),
-    a = n(481060),
-    r = n(410030),
+    r = n(481060),
+    a = n(410030),
     o = n(948851),
     d = n(868728),
     u = n(388032),
-    c = n(869306),
-    g = n(10198);
+    c = n(451964),
+    g = n(197571);
 let h = (e) => {
     let {
             handleDone: t,
@@ -22,23 +22,23 @@ let h = (e) => {
             isGuestInviteCreationToggleEnabled: I,
             onSetInviteFlags: S,
         } = e,
-        f = (0, r.ZP)(),
-        { maxAgeOptions: E, maxAge: y, maxUses: C, temporary: _, flags: N } = l;
+        f = (0, a.ZP)(),
+        { maxAgeOptions: E, maxAge: C, maxUses: y, temporary: _, flags: N } = l;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(a.xBx, {
+            (0, i.jsxs)(r.xBx, {
                 children: [
                     (0, i.jsx)("div", {
                         className: c.closeButton,
-                        children: (0, i.jsx)(a.olH, { onClick: t }),
+                        children: (0, i.jsx)(r.olH, { onClick: t }),
                     }),
                     (0, i.jsx)("div", {
                         className: c.headerContainer,
-                        children: (0, i.jsx)(a.Heading, {
+                        children: (0, i.jsx)(r.Heading, {
                             id: n,
                             variant: "heading-md/semibold",
                             className: s()(g.marginReset, c.headerCloseButtonSpacing, c.headerText),
-                            children: u.intl.string(u.t.Atdlys),
+                            children: u.intl.string(u.t.Atdlyu),
                         }),
                     }),
                 ],
@@ -46,8 +46,8 @@ let h = (e) => {
             (0, i.jsx)(o.Z, {
                 shouldHideTemporaryInviteToggle: h,
                 maxAgeOptions: E,
-                maxAge: y,
-                maxUses: C,
+                maxAge: C,
+                maxUses: y,
                 temporary: _,
                 onToggleTemporary: v,
                 onSelectMaxAge: p,
@@ -57,7 +57,7 @@ let h = (e) => {
                 onSetInviteFlags: S,
                 inviteFlags: N,
             }),
-            (0, i.jsx)(a.mzw, {
+            (0, i.jsx)(r.mzw, {
                 className: c.settingsFooter,
                 children: (0, i.jsx)(d.Z, {
                     theme: f,

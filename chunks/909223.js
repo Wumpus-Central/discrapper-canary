@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     s = n(990547),
@@ -15,8 +15,8 @@ var r = n(951288),
     f = n(63063),
     _ = n(981631),
     x = n(388032),
-    E = n(942970),
-    v = n(10198);
+    E = n(325659),
+    v = n(197571);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,9 +62,9 @@ function j(e, t) {
 }
 l.ZP.initialize();
 let I = {
-        [h.BM.MESSAGE]: x.t.fuqnBA,
-        [h.BM.USER]: x.t.F4jrRU,
-        [h.BM.GUILD]: x.t.gH3aMj,
+        [h.BM.MESSAGE]: x.t.fuqnBC,
+        [h.BM.USER]: x.t.F4jrRW,
+        [h.BM.GUILD]: x.t.gH3aMs,
     },
     N = (e) => {
         let { title: t, menuType: i } = e,
@@ -91,8 +91,8 @@ let I = {
                                     onFormSubmit: l,
                                     onResend: t,
                                     onSuccess: o,
-                                    headerText: x.intl.string(x.t.H3Q7U1),
-                                    confirmButtonText: x.intl.string(x.t["13ofGh"]),
+                                    headerText: x.intl.string(x.t.H3Q7U8),
+                                    confirmButtonText: x.intl.string(x.t["13ofGu"]),
                                     impression: { impressionName: s.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
                                 }),
                             );
@@ -108,8 +108,8 @@ let I = {
                             e,
                             j(b({}, t), {
                                 onSuccess: l,
-                                headerText: x.intl.string(x.t.ZLRYGR),
-                                confirmButtonText: x.intl.string(x.t.PDTjLC),
+                                headerText: x.intl.string(x.t.ZLRYGU),
+                                confirmButtonText: x.intl.string(x.t.PDTjLN),
                             }),
                         );
                 }),
@@ -125,7 +125,7 @@ let I = {
             ],
         });
     },
-    O = () => {
+    y = () => {
         let [e, t] = i.useState(!0),
             [n, s] = i.useState([]),
             h = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
@@ -165,11 +165,11 @@ let I = {
                       children: [
                           (0, r.jsx)(u.Dx, {
                               className: v.marginBottom8,
-                              children: x.intl.string(x.t.Z11w19),
+                              children: x.intl.string(x.t.Z11w18),
                           }),
                           (0, r.jsx)(u.DK, {
                               className: v.marginBottom8,
-                              children: x.intl.format(x.t["532l+v"], {
+                              children: x.intl.format(x.t["532l+q"], {
                                   supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
                               }),
                           }),

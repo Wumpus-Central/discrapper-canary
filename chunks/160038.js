@@ -42,7 +42,7 @@ let _ = () => {
                 null,
                 2,
             );
-            (0, h.JG)(t, () => (0, s.showToast)((0, s.createToast)(y.intl.string(y.t["t5VZ8/"]), s.ToastType.SUCCESS)));
+            (0, h.JG)(t, () => (0, s.showToast)((0, s.createToast)(y.intl.string(y.t.t5VZ88), s.ToastType.SUCCESS)));
         });
     },
     T = function (e) {
@@ -77,26 +77,26 @@ let _ = () => {
                             }),
                         (0, l.jsx)("div", {
                             className: C.popoutText,
-                            children: y.intl.format(y.t["X58/lJ"], { averagePing: n.toFixed(0) }),
+                            children: y.intl.format(y.t["X58/lN"], { averagePing: n.toFixed(0) }),
                         }),
                         null != r
                             ? (0, l.jsx)("div", {
                                   className: C.popoutText,
-                                  children: y.intl.format(y.t["6iv2TE"], { lastPing: r.toFixed(0) }),
+                                  children: y.intl.format(y.t["6iv2TF"], { lastPing: r.toFixed(0) }),
                               })
                             : null,
                         null != o
                             ? (0, l.jsx)("div", {
                                   className: C.popoutText,
-                                  children: y.intl.format(y.t.VIBJMz, { outboundLossRate: o.toFixed(1) }),
+                                  children: y.intl.format(y.t["VIBJM+"], { outboundLossRate: o.toFixed(1) }),
                               })
                             : null,
                         (0, l.jsxs)("div", {
                             className: a()(C.popoutText, C.popoutTextDetails),
                             children: [
-                                null == o ? y.intl.formatToPlainString(y.t.vggaMj, { badPing: 250 }) : null,
+                                null == o ? y.intl.formatToPlainString(y.t.vggaMt, { badPing: 250 }) : null,
                                 null != o
-                                    ? y.intl.formatToPlainString(y.t["3pFz1N"], {
+                                    ? y.intl.formatToPlainString(y.t["3pFz1P"], {
                                           badPing: 250,
                                           badLossRate: 10,
                                       })
@@ -109,22 +109,22 @@ let _ = () => {
             { connectionState: r, connectionTypeText: o } = e,
             h = d.Sb.getSetting(),
             T = {
-                [N.hes.AWAITING_ENDPOINT]: y.intl.format(y.t.Eu2vUV, { url: N.yXt.STATUS }),
-                [N.hes.CONNECTING]: y.intl.string(y.t["y+E8aG"]),
-                [N.hes.AUTHENTICATING]: y.intl.string(y.t["5lGIZG"]),
-                [N.hes.DISCONNECTED]: y.intl.string(y.t.fOX25O),
-                [N.hes.RTC_CONNECTING]: y.intl.string(y.t.b5Ubd3),
-                [N.hes.ICE_CHECKING]: y.intl.format(y.t.SyoYUV, {
+                [N.hes.AWAITING_ENDPOINT]: y.intl.format(y.t.Eu2vUR, { url: N.yXt.STATUS }),
+                [N.hes.CONNECTING]: y.intl.string(y.t["y+E8aD"]),
+                [N.hes.AUTHENTICATING]: y.intl.string(y.t["5lGIZH"]),
+                [N.hes.DISCONNECTED]: y.intl.string(y.t.fOX25I),
+                [N.hes.RTC_CONNECTING]: y.intl.string(y.t.b5Ubd5),
+                [N.hes.ICE_CHECKING]: y.intl.format(y.t.SyoYUb, {
                     url: p.Z.getArticleURL(N.BhN.VOICE_CONNECTION_ERRORS),
                 }),
-                [N.hes.DTLS_CONNECTING]: y.intl.format(y.t.SyoYUV, {
+                [N.hes.DTLS_CONNECTING]: y.intl.format(y.t.SyoYUb, {
                     url: p.Z.getArticleURL(N.BhN.VOICE_CONNECTION_ERRORS),
                 }),
                 [N.hes.RTC_CONNECTED]: n,
-                [N.hes.NO_ROUTE]: y.intl.format(y.t["2tgQnp"], {
+                [N.hes.NO_ROUTE]: y.intl.format(y.t["2tgQnk"], {
                     url: p.Z.getArticleURL(N.BhN.VOICE_CONNECTION_ERRORS),
                 }),
-                [N.hes.RTC_DISCONNECTED]: y.intl.string(y.t.fOX25O),
+                [N.hes.RTC_DISCONNECTED]: y.intl.string(y.t.fOX25I),
             }[r];
         return (0, l.jsxs)(l.Fragment, {
             children: [
@@ -158,7 +158,7 @@ let _ = () => {
                                         className: a()(C.debugButton, C.textWithIcon),
                                         onClick: t,
                                         children: [
-                                            y.intl.string(y.t.KBoWg4),
+                                            y.intl.string(y.t.KBoWg9),
                                             (0, l.jsx)(s.rgF, {
                                                 size: "xxs",
                                                 color: "currentColor",
@@ -171,7 +171,7 @@ let _ = () => {
                                         onClick: _,
                                         title: "Copy to clipboard",
                                         children: [
-                                            y.intl.string(y.t["XEb+Sk"]),
+                                            y.intl.string(y.t["XEb+Sj"]),
                                             (0, l.jsx)(s.TIy, {
                                                 size: "xxs",
                                                 color: "currentColor",
@@ -186,7 +186,7 @@ let _ = () => {
                             (0, l.jsx)(s.Anchor, {
                                 className: C.debugButton,
                                 href: p.Z.getArticleURL(N.BhN.VOICE_VIDEO_TROUBLESHOOTING),
-                                children: y.intl.string(y.t.hvVgAQ),
+                                children: y.intl.string(y.t.hvVgAZ),
                             }),
                     ],
                 }),

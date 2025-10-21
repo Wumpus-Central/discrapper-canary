@@ -56,7 +56,7 @@ var r,
     er = n(599706),
     ei = n(981631),
     el = n(388032),
-    ea = n(544284);
+    ea = n(84822);
 let eo = [14, 14, 12, 12, 10, 8, 6],
     es = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -103,12 +103,12 @@ let eo = [14, 14, 12, 12, 10, 8, 6],
                 properties: { location_stack: n },
             }),
             (0, i.jsx)(p.u, {
-                text: el.intl.string(el.t.JVwWvb),
+                text: el.intl.string(el.t.JVwWva),
                 children: (0, i.jsx)(f.Button, {
                     size: "sm",
                     variant: "primary",
                     icon: f.v3n,
-                    text: el.intl.string(el.t.YsIsPT),
+                    text: el.intl.string(el.t.YsIsPU),
                     onClick: t,
                 }),
             })
@@ -183,7 +183,7 @@ let eo = [14, 14, 12, 12, 10, 8, 6],
                                             }),
                                       (0, i.jsx)(f.Text, {
                                           variant: "text-xs/medium",
-                                          children: el.intl.formatToPlainString(el.t.RmiYFx, { gameName: l }),
+                                          children: el.intl.formatToPlainString(el.t.RmiYF3, { gameName: l }),
                                       }),
                                   ],
                               }),
@@ -467,7 +467,7 @@ let eO = (e) => {
                         (0, i.jsxs)("div", {
                             children: [
                                 es(n),
-                                ec(el.intl.formatToPlainString(el.t.C4WXvb, { memberCount: r.totalSize })),
+                                ec(el.intl.formatToPlainString(el.t.C4WXvc, { memberCount: r.totalSize })),
                             ],
                         }),
                         (0, i.jsx)(er.Z, {
@@ -577,7 +577,7 @@ let eO = (e) => {
                     (0, i.jsx)($.Z, { className: ea.xboxSectionIcon }),
                     (0, i.jsxs)("div", {
                         className: ea.__invalid_xboxSectionDetails,
-                        children: [es(t), ec(el.intl.string(el.t["JG9r+/"]))],
+                        children: [es(t), ec(el.intl.string(el.t["JG9r+9"]))],
                     }),
                 ],
             }),
@@ -707,7 +707,7 @@ let eO = (e) => {
                     }),
                 ],
             }),
-            g = null != (n = null == (t = (0, C.Z)(r, a)) ? void 0 : t.activityText) ? n : el.intl.string(el.t.eXan7O);
+            g = null != (n = null == (t = (0, C.Z)(r, a)) ? void 0 : t.activityText) ? n : el.intl.string(el.t.eXan7B);
         return (0, i.jsxs)(ed, {
             children: [
                 (0, i.jsxs)("div", {
@@ -804,7 +804,7 @@ let eO = (e) => {
                                     children: (0, i.jsx)(f.Button, {
                                         variant: "primary",
                                         size: "sm",
-                                        text: el.intl.string(el.t.VJlc0d),
+                                        text: el.intl.string(el.t.VJlc0S),
                                         onClick: (e) => {
                                             e.stopPropagation(),
                                                 (0, _.Z)({

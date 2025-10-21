@@ -33,8 +33,8 @@ var r,
     P = n(31022),
     N = n(10401),
     Z = n(131704),
-    T = n(592125),
-    w = n(796974),
+    w = n(592125),
+    T = n(796974),
     A = n(984933),
     R = n(914010),
     D = n(540126),
@@ -55,7 +55,7 @@ var r,
     X = n(53425),
     Q = n(424785),
     J = n(770202),
-    $ = n(79556),
+    $ = n(437621),
     ee = n(428127),
     et = n(950969),
     en = n(233657),
@@ -65,7 +65,7 @@ var r,
     eo = n(981631),
     ea = n(176505),
     es = n(388032),
-    ec = n(344110);
+    ec = n(776677);
 function eu(e, t, n) {
     return (
         t in e
@@ -130,7 +130,7 @@ class eh extends (r = l.PureComponent) {
     componentDidUpdate(e, t) {
         let { scrollToChannel: n, guildId: r, selectedChannelId: i } = this.props,
             { initialized: l } = this.state,
-            { scrollTop: o } = w.Z.getGuildDimensions(r);
+            { scrollTop: o } = T.Z.getGuildDimensions(r);
         null != n
             ? (this.scrollToChannel(n), p.Z.clearChannelListScrollTo(r))
             : r !== e.guildId
@@ -213,8 +213,8 @@ class eh extends (r = l.PureComponent) {
             className: ec.positionedContainer,
             children: (0, i.jsx)(et.Z, {
                 ref: this.unreadTopRef,
-                textUnread: es.intl.string(es.t.FCRiT0),
-                textMention: es.intl.string(es.t["8zH0LC"]),
+                textUnread: es.intl.string(es.t.FCRiT3),
+                textMention: es.intl.string(es.t["8zH0LJ"]),
                 hide: null == e && (r || null != t || null != n),
                 className: ec.unreadTop,
                 barClassName: ec.unreadBar,
@@ -233,8 +233,8 @@ class eh extends (r = l.PureComponent) {
         return (0, i.jsx)(et.Z, {
             reverse: !0,
             ref: this.unreadBottomRef,
-            textUnread: es.intl.string(es.t.FCRiT0),
-            textMention: es.intl.string(es.t["8zH0LC"]),
+            textUnread: es.intl.string(es.t.FCRiT3),
+            textMention: es.intl.string(es.t["8zH0LJ"]),
             hide: null == r && l,
             className: ec.unreadBottom,
             barClassName: ec.unreadBar,
@@ -297,7 +297,7 @@ class eh extends (r = l.PureComponent) {
                             onResize: this.handleResize,
                             onContentResize: this.handleResize,
                             sections: e.getSections(!0),
-                            innerAriaLabel: es.intl.string(es.t.OGiMXF),
+                            innerAriaLabel: es.intl.string(es.t.OGiMXJ),
                             innerTag: "ul",
                             getAnchorId: this.getAnchorId,
                         },
@@ -317,7 +317,7 @@ class eh extends (r = l.PureComponent) {
                     component: (0, i.jsx)(d.nn4, {
                         children: (0, i.jsx)(d.H, {
                             id: r,
-                            children: es.intl.string(es.t.OGiMXF),
+                            children: es.intl.string(es.t.OGiMXJ),
                         }),
                     }),
                     children: n
@@ -899,8 +899,8 @@ let eg = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: r } = e,
         o = (0, u.e7)([g.Z], () => g.Z.keyboardModeEnabled),
         { analyticsLocations: a } = (0, b.ZP)(m.Z.GUILD_CHANNEL_LIST),
-        d = (0, u.e7)([T.Z], () => T.Z.getChannel(n)),
-        p = (0, u.e7)([T.Z], () => T.Z.getChannel(r)),
+        d = (0, u.e7)([w.Z], () => w.Z.getChannel(n)),
+        p = (0, u.e7)([w.Z], () => w.Z.getChannel(r)),
         f = (0, u.e7)([R.Z], () => R.Z.getGuildId()),
         _ = (0, x.DM)(t),
         O = l.useRef(null),

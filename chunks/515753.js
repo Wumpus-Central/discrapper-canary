@@ -19,8 +19,8 @@ var r = n(951288),
     m = n(442837),
     b = n(28664),
     y = n(481060),
-    O = n(493683),
-    v = n(239091),
+    v = n(493683),
+    O = n(239091),
     g = n(420660),
     h = n(468363),
     j = n(326255),
@@ -59,7 +59,7 @@ var r = n(951288),
     ee = n(998502),
     et = n(981631),
     en = n(388032),
-    er = n(551139);
+    er = n(800525);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -202,8 +202,8 @@ let es = ee.ZP.getEnableHardwareAcceleration() ? y.Xo$ : y.qEK,
                 onClick: f,
                 className: m,
                 role: b,
-                "aria-posinset": O,
-                "aria-setsize": v,
+                "aria-posinset": v,
+                "aria-setsize": O,
                 listItemRef: g,
             } = e,
             h = eo(e, [
@@ -227,8 +227,8 @@ let es = ee.ZP.getEnableHardwareAcceleration() ? y.Xo$ : y.qEK,
             onClick: f,
             role: b,
             focusProps: ei({ within: !0 }, ea),
-            "aria-posinset": O,
-            "aria-setsize": v,
+            "aria-posinset": v,
+            "aria-setsize": O,
             ref: g,
             children: (0, r.jsx)(y.vjx, {
                 as: "div",
@@ -286,8 +286,8 @@ function em(e) {
         } = e,
         [ee, ef] = i.useState(!1),
         [em, eb] = i.useState(!1),
-        [ey, eO] = i.useState(!1),
-        ev = i.useRef(null),
+        [ey, ev] = i.useState(!1),
+        eO = i.useRef(null),
         eg = i.useRef(null),
         eh = null != q ? q : eg,
         {
@@ -335,10 +335,10 @@ function em(e) {
         },
         eV = function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), O.Z.closePrivateChannel(t.id, s, n);
+            null != e && (e.preventDefault(), e.stopPropagation()), v.Z.closePrivateChannel(t.id, s, n);
         },
         eY = () => {
-            O.Z.preload(et.ME, t.id);
+            v.Z.preload(et.ME, t.id);
         },
         eW = (e) => {
             e.stopPropagation();
@@ -346,16 +346,16 @@ function em(e) {
         eQ = (e) => {
             if (e.target === e.currentTarget) {
                 var t;
-                null == (t = ev.current) || t.click();
+                null == (t = eO.current) || t.click();
             }
         },
         eq = (e) => {
             let i = "contextmenu" === e.type,
                 l = eG && !i,
                 o = i ? u.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN : u.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
-            eO(!0),
+            ev(!0),
                 t.isMultiUserDM()
-                    ? (0, v.jW)(
+                    ? (0, O.jW)(
                           e,
                           async () => {
                               let { default: e } = await Promise.all([
@@ -376,10 +376,10 @@ function em(e) {
                           {
                               impressionName: o,
                               noBlurEvent: !0,
-                              onClose: () => eO(!1),
+                              onClose: () => ev(!1),
                           },
                       )
-                    : (0, v.jW)(
+                    : (0, O.jW)(
                           e,
                           async () => {
                               let { default: e } = l
@@ -390,7 +390,7 @@ function em(e) {
                                         n.e("98783"),
                                         n.e("6915"),
                                         n.e("56826"),
-                                        n.e("67825"),
+                                        n.e("3091"),
                                     ]).then(n.bind(n, 131404));
                               return (n) =>
                                   (0, r.jsx)(
@@ -404,17 +404,17 @@ function em(e) {
                           },
                           {
                               impressionName: o,
-                              onClose: () => eO(!1),
+                              onClose: () => ev(!1),
                           },
                       );
         },
         eJ = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let i = en.intl.formatToPlainString(en.t.hJ5Ap6, { name: eR }),
-                l = en.intl.format(en.t.SSIVOj, { name: eR });
+            let i = en.intl.formatToPlainString(en.t.hJ5Ap4, { name: eR }),
+                l = en.intl.format(en.t.SSIVOu, { name: eR });
             t.isManaged() &&
-                ((i = en.intl.formatToPlainString(en.t.hVGjER, { name: eR })),
-                (l = en.intl.format(en.t.IK1Qvr, { name: eR }))),
+                ((i = en.intl.formatToPlainString(en.t.hVGjEW, { name: eR })),
+                (l = en.intl.format(en.t.IK1Qvs, { name: eR }))),
                 (0, y.ZDy)(async () => {
                     let { default: e } = await n.e("14604").then(n.bind(n, 960670));
                     return (t) =>
@@ -464,7 +464,7 @@ function em(e) {
                 className: o()(er.channel, er.dm),
                 role: n,
                 focusProps: el(ei({}, ea), {
-                    focusTarget: ev,
+                    focusTarget: eO,
                     ringTarget: eh,
                 }),
                 ref: eh,
@@ -500,7 +500,7 @@ function em(e) {
                                 el(
                                     ei(
                                         {
-                                            innerRef: ev,
+                                            innerRef: eO,
                                             to: et.Z5c.CHANNEL(et.ME, t.id),
                                             className: er.link,
                                             "aria-label": (0, C.ZP)({
@@ -563,13 +563,13 @@ function em(e) {
                                                 ? (0, r.jsx)("div", {
                                                       className: er.subtext,
                                                       children: (0, P.Z)(t.id)
-                                                          ? en.intl.string(en.t.FL5T09)
-                                                          : en.intl.string(en.t.NnY5lZ),
+                                                          ? en.intl.string(en.t.FL5T01)
+                                                          : en.intl.string(en.t.NnY5lc),
                                                   })
                                                 : t.isMultiUserDM()
                                                   ? (0, r.jsx)("div", {
                                                         className: er.subtext,
-                                                        children: en.intl.format(en.t.CxSA5O, {
+                                                        children: en.intl.format(en.t.CxSA5N, {
                                                             members: t.recipients.length + 1,
                                                         }),
                                                     })
@@ -615,12 +615,12 @@ function em(e) {
                                     eA && !e5
                                         ? (0, r.jsx)(b.u, {
                                               asContainer: !0,
-                                              text: en.intl.string(ex ? en.t.Et8qws : en.t["d+e27u"]),
+                                              text: en.intl.string(ex ? en.t.Et8qwj : en.t["d+e27s"]),
                                               delay: 500,
                                               targetElementRef: eU,
                                               children: (0, r.jsx)(ec, {
                                                   icon: y.xhG,
-                                                  "aria-label": en.intl.string(en.t.PdRCRk),
+                                                  "aria-label": en.intl.string(en.t.PdRCRg),
                                                   onClick: (e) => {
                                                       eq(e);
                                                   },
@@ -633,7 +633,7 @@ function em(e) {
                                         : (0, r.jsx)(ec, {
                                               icon: y.Dio,
                                               "aria-label": ex
-                                                  ? en.intl.string(en.t["26C4oq"])
+                                                  ? en.intl.string(en.t["26C4oi"])
                                                   : en.intl.string(en.t.jsvgc3),
                                               onClick: ex ? eJ : eV,
                                               onMouseDown: eW,

@@ -22,22 +22,22 @@ var i = t(951288),
     j = t(855981),
     S = t(55543),
     C = t(626135),
-    A = t(768581),
-    T = t(358085),
+    T = t(768581),
+    A = t(358085),
     L = t(998502),
     P = t(379164),
     b = t(590965),
     R = t(981631),
-    z = t(474936),
-    Z = t(388032),
-    M = t(838655),
-    D = t(10198);
+    Z = t(474936),
+    z = t(388032),
+    M = t(12205),
+    D = t(197571);
 function k() {
     let { analyticsLocations: e, sourceAnalyticsLocations: n } = (0, _.ZP)(m.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         l.useEffect(() => {
             C.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: z.cd.GUILD_CAP_INLINE_INVITE_MODAL,
+                type: Z.cd.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: R.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: n,
             });
@@ -61,11 +61,11 @@ function k() {
                 }),
                 (0, i.jsx)("span", {
                     className: M.experimentUpsellText,
-                    children: Z.intl.string(Z.t["4/W4Pz"]),
+                    children: z.intl.string(z.t["4/W4Pz"]),
                 }),
                 (0, i.jsx)("span", {
                     className: M.experimentGetNitro,
-                    children: Z.intl.string(Z.t.b6KOkJ),
+                    children: z.intl.string(z.t.b6KOkI),
                 }),
             ],
         })
@@ -107,17 +107,17 @@ function U(e) {
                         id: t,
                         variant: "heading-xl/semibold",
                         color: "header-primary",
-                        children: Z.intl.string(Z.t.u9zxnZ),
+                        children: z.intl.string(z.t.u9zxnX),
                     }),
                     (0, i.jsx)("div", {
                         className: M.errorBody,
-                        children: Z.intl.string(Z.t.FWkU6O),
+                        children: z.intl.string(z.t.FWkU6P),
                     }),
                     (0, i.jsx)(p.zx, {
                         size: p.zx.Sizes.LARGE,
                         onClick: () => P.Z.close(),
                         color: p.zx.Colors.BRAND,
-                        children: Z.intl.string(Z.t.wcqOoK),
+                        children: z.intl.string(z.t.wcqOoF),
                     }),
                 ],
             }),
@@ -135,7 +135,7 @@ function y(e) {
         return null == (e = v.default.getCurrentUser()) ? void 0 : e.premiumType;
     });
     let E = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        { invite: j, error: S, submitting: z } = (0, o.cj)([b.Z], () => b.Z.getProps());
+        { invite: j, error: S, submitting: Z } = (0, o.cj)([b.Z], () => b.Z.getProps());
     l.useEffect(() => {
         if (null != j && null != j.guild) {
             var e;
@@ -149,7 +149,7 @@ function y(e) {
     ]);
     let O = (0, f.yr)();
     l.useEffect(() => {
-        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? L.ZP.minimize() : L.ZP.restore(), L.ZP.focus());
+        !__OVERLAY__ && A.isPlatformEmbedded && ((0, A.isWindows)() ? L.ZP.minimize() : L.ZP.restore(), L.ZP.focus());
     }, []);
     let y = (0, N.Dt)(),
         { analyticsLocations: F } = (0, _.ZP)(m.Z.INVITE_MODAL);
@@ -160,23 +160,23 @@ function y(e) {
     function G() {
         null != j && P.Z.acceptInvite(j);
     }
-    let { guild: V, channel: W, inviter: B, target_application: w } = j,
-        H = null != V,
-        Y = null == j.guild && null == j.channel && null != j.inviter;
+    let { guild: V, channel: B, inviter: W, target_application: w } = j,
+        Y = null != V,
+        H = null == j.guild && null == j.channel && null != j.inviter;
     if (null != w) (t = null == V ? void 0 : V.name), (a = I.ZP.createFromServer(w).getCoverImageURL(1024));
     else if (null != V)
         (t = V.name),
-            (a = A.ZP.getGuildSplashURL({
+            (a = T.ZP.getGuildSplashURL({
                 id: V.id,
                 splash: V.splash,
             }));
-    else if (((null == (t = W.name) || "" === t) && null != B && (t = B.username), null == t))
+    else if (((null == (t = B.name) || "" === t) && null != W && (t = W.username), null == t))
         throw Error("no name for group DM invite");
     let K = (0, h.yU)();
     return (
-        (r = Y
-            ? Z.intl.string(Z.t["e/6Ogo"])
-            : Z.intl.format(Z.t["9sWQNT"], { usernameHook: () => (0, i.jsx)("span", { children: O }) })),
+        (r = H
+            ? z.intl.string(z.t["e/6Ogt"])
+            : z.intl.format(z.t["9sWQNT"], { usernameHook: () => (0, i.jsx)("span", { children: O }) })),
         (0, i.jsx)(_.Gt, {
             value: F,
             children: (0, i.jsxs)(c.Y0X, {
@@ -204,7 +204,7 @@ function y(e) {
                                     id: y,
                                     children: (0, i.jsx)(u.Z, {
                                         invite: j,
-                                        disableUser: H,
+                                        disableUser: Y,
                                         error: S,
                                     }),
                                 }),
@@ -215,20 +215,20 @@ function y(e) {
                                         null == w
                                             ? (0, i.jsx)(c.aML, {
                                                   "data-migration-pending": !0,
-                                                  text: K ? Z.intl.string(Z.t.iLyuDA) : null,
+                                                  text: K ? z.intl.string(z.t.iLyuDO) : null,
                                                   position: "bottom",
                                                   children: (e) => {
                                                       let { onMouseEnter: n, onMouseLeave: t } = e;
                                                       return (0, i.jsx)(p.zx, {
                                                           size: p.zx.Sizes.LARGE,
                                                           onClick: G,
-                                                          submitting: z,
+                                                          submitting: Z,
                                                           disabled: K,
                                                           color: p.zx.Colors.BRAND,
                                                           onMouseEnter: n,
                                                           onMouseLeave: t,
                                                           children: K
-                                                              ? Z.intl.string(Z.t.ZNCziI)
+                                                              ? z.intl.string(z.t.ZNCziL)
                                                               : (0, i.jsxs)("div", {
                                                                     className: M.acceptAs,
                                                                     children: [
@@ -253,15 +253,15 @@ function y(e) {
                                                       (0, i.jsx)(p.zx, {
                                                           size: p.zx.Sizes.LARGE,
                                                           onClick: G,
-                                                          submitting: z,
-                                                          children: Z.intl.string(Z.t.RscU7O),
+                                                          submitting: Z,
+                                                          children: z.intl.string(z.t.RscU7I),
                                                       }),
                                                       (0, i.jsx)(p.zx, {
                                                           color: p.zx.Colors.PRIMARY,
                                                           size: p.zx.Sizes.LARGE,
                                                           onClick: G,
-                                                          submitting: z,
-                                                          children: Z.intl.string(Z.t.eylRaW),
+                                                          submitting: Z,
+                                                          children: z.intl.string(z.t.eylRaY),
                                                       }),
                                                   ],
                                               }),
@@ -280,7 +280,7 @@ function y(e) {
                                                         P.Z.close();
                                                 },
                                                 color: p.zx.Colors.TRANSPARENT,
-                                                children: Z.intl.string(Z.t.ndsK4e),
+                                                children: z.intl.string(z.t.ndsK4Z),
                                             }),
                                         }),
                                     ],

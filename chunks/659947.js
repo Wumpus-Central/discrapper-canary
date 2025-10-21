@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(914010),
     h = n(727785),
     m = n(388032),
-    g = n(47976);
+    g = n(704563);
 function E(e, t, n) {
     return (
         t in e
@@ -88,7 +88,7 @@ function N() {
             variant: "text-md/medium",
             color: "text-muted",
             className: g.noVoiceChannelSelected,
-            children: m.intl.string(m.t.zHjCd3),
+            children: m.intl.string(m.t.zHjCd1),
         }),
     });
 }
@@ -130,7 +130,7 @@ function P(e) {
     return (0, r.jsx)("div", {
         className: g.channelIdSection,
         children: (0, r.jsx)(o.gNt, {
-            label: m.intl.string(m.t.q4JpMz),
+            label: m.intl.string(m.t.q4JpM8),
             children: (0, r.jsxs)(c.Z, {
                 align: c.Z.Align.STRETCH,
                 children: [
@@ -285,7 +285,7 @@ function L(e) {
                         value: b,
                         onChange: y,
                         onKeyDown: M,
-                        placeholder: m.intl.string(m.t.tG0r7u),
+                        placeholder: m.intl.string(m.t.tG0r7g),
                         role: "combobox",
                         "aria-controls": s,
                         "aria-expanded": L > 0,
@@ -299,7 +299,7 @@ function L(e) {
                     (0, r.jsx)(o.Tvr, {
                         innerId: s,
                         innerRole: "listbox",
-                        "aria-label": m.intl.string(m.t["+N3fW1"]),
+                        "aria-label": m.intl.string(m.t["+N3fW7"]),
                         ref: c,
                         sections: [L],
                         renderRow: x,
@@ -340,7 +340,7 @@ function x(e) {
               variant: "text-md/medium",
               color: "text-muted",
               className: g.noVoiceChannelSelected,
-              children: m.intl.string(m.t["/fYIKy"]),
+              children: m.intl.string(m.t["/fYIK7"]),
           })
         : (0, r.jsx)(u.$W, {
               channel: n,

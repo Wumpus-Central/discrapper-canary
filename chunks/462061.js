@@ -31,14 +31,14 @@ var r = n(951288),
     Z = n(981631),
     x = n(65154),
     A = n(388032),
-    R = n(400872);
+    R = n(7504);
 let T = s.EFr.SIZE_80,
     N = s.EFr.SIZE_40;
 function D(e) {
     let { channelId: t, participant: n } = e;
     return (0, h.Eu)(t, n.id)
         ? (0, r.jsx)(c.u, {
-              text: A.intl.string(A.t.HFwRpq),
+              text: A.intl.string(A.t.HFwRpk),
               position: "bottom",
               children: (0, r.jsx)("div", {
                   className: R.interactive,
@@ -61,9 +61,9 @@ function M(e) {
             noVideoRender: k = !1,
             pulseSpeakingIndicator: F = !1,
             inOverlayPopout: L = !1,
-            paused: U = !1,
+            paused: V = !1,
         } = e,
-        V = O.Z.getVideoComponent(),
+        U = O.Z.getVideoComponent(),
         W = (0, o.e7)([S.default], () => S.default.getId()),
         { user: H, streamId: B, speaking: q } = t,
         z = H.id === W,
@@ -72,7 +72,7 @@ function M(e) {
         G = (0, o.e7)([v.Z], () => v.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
         Q = (0, o.e7)([O.Z], () => null != H.id && O.Z.isLocalVideoDisabled(H.id, (0, p.Z)(t.type)), [H.id, t.type]),
         X = (0, o.e7)([y.ZP], () => y.ZP.isGuestOrLurker(n.guild_id, H.id)),
-        J = C.ZP.getName(n.getGuildId(), n.id, H) + (X ? " ".concat(A.intl.string(A.t["pFO/Pj"])) : ""),
+        J = C.ZP.getName(n.getGuildId(), n.id, H) + (X ? " ".concat(A.intl.string(A.t["pFO/Ph"])) : ""),
         $ = q && (G || K),
         ee = c < 124 ? N : T,
         { avatarSrc: et, avatarDecorationSrc: en } = (0, E.Z)({
@@ -97,7 +97,7 @@ function M(e) {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
         e.isGuildStageVoice() && !Y && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
     }, [Y]),
-    l && !Q && !k && Y && !s && null != V && O.Z.supports(x.AN.VIDEO))
+    l && !Q && !k && Y && !s && null != U && O.Z.supports(x.AN.VIDEO))
         ? null != ei && null == el
             ? (0, r.jsx)(j.Z, {
                   avError: ei,
@@ -113,10 +113,10 @@ function M(e) {
                       className: R.content,
                       mirror: z,
                       streamId: B,
-                      videoComponent: V,
+                      videoComponent: U,
                       fit: h,
                       videoSpinnerContext: H.id === W ? d.m.SELF_VIDEO : d.m.REMOTE_VIDEO,
-                      paused: U,
+                      paused: V,
                       userId: H.id,
                   },
                   B,

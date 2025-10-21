@@ -1,4 +1,4 @@
-t.d(n, { default: () => H });
+t.d(n, { default: () => q });
 var l = t(951288),
     r = t(647438),
     i = t(120356),
@@ -24,23 +24,23 @@ var l = t(951288),
     P = t(823379),
     T = t(63063),
     I = t(358085),
-    E = t(653255),
-    O = t(989941),
-    y = t(618407),
+    O = t(653255),
+    y = t(989941),
+    E = t(618407),
     k = t(586290),
     A = t(233037),
     R = t(810013),
     M = t(537135),
-    w = t(641115),
+    D = t(641115),
     U = t(143135),
-    D = t(70722),
-    _ = t(981631),
+    _ = t(70722),
+    w = t(981631),
     z = t(388032),
-    L = t(740071),
-    G = t(79985);
+    L = t(734102),
+    G = t(542257);
 function B(e) {
     let { selectedSource: n, selectSource: t, sourceChanged: r, onChangeSource: i } = e,
-        s = (0, a.e7)([x.ZP, C.Z], () => ((0, I.isWindows)() ? (0, O.Z)(x.ZP, C.Z) : null)),
+        s = (0, a.e7)([x.ZP, C.Z], () => ((0, I.isWindows)() ? (0, y.Z)(x.ZP, C.Z) : null)),
         d = (0, a.e7)([u.Z], () => ((null == s ? void 0 : s.id) != null ? u.Z.getApplication(s.id) : null)),
         m = (0, a.e7)([x.ZP], () => x.ZP.getRunningGames()),
         h = (0, a.Wu)([u.Z], () => m.map((e) => (null != e.id ? u.Z.getApplication(e.id) : null)).filter(P.lm), [m]),
@@ -55,7 +55,7 @@ function B(e) {
             : d,
         f = null != n && n.id.startsWith("screen") ? o.pzj : o.GON;
     return (0, l.jsx)(o.gNt, {
-        label: z.intl.string(z.t.TC7Ev7),
+        label: z.intl.string(z.t.TC7Evz),
         children: (0, l.jsxs)(M.Z, {
             children: [
                 null != v
@@ -75,14 +75,14 @@ function B(e) {
                           color: c.zx.Colors.PRIMARY,
                           size: c.zx.Sizes.SMALL,
                           onClick: i,
-                          children: z.intl.string(z.t.GEgsAw),
+                          children: z.intl.string(z.t.GEgsA4),
                       })
                     : null,
             ],
         }),
     });
 }
-function F(e) {
+function W(e) {
     let { onChange: n, guildId: t } = e,
         r = (0, a.e7)([f.Z], () => f.Z.getGuild(t));
     return null == r
@@ -90,7 +90,7 @@ function F(e) {
         : (0, l.jsx)("div", {
               className: G.modalContent,
               children: (0, l.jsx)(o.gNt, {
-                  label: z.intl.string(z.t.WC3u3t),
+                  label: z.intl.string(z.t.WC3u3n),
                   children: (0, l.jsxs)(M.Z, {
                       children: [
                           (0, l.jsx)(h.Z, {
@@ -107,14 +107,14 @@ function F(e) {
                               color: c.zx.Colors.PRIMARY,
                               size: c.zx.Sizes.SMALL,
                               onClick: n,
-                              children: z.intl.string(z.t.GEgsAw),
+                              children: z.intl.string(z.t.GEgsA4),
                           }),
                       ],
                   }),
               }),
           });
 }
-function W(e) {
+function F(e) {
     let { text: n } = e;
     return (0, l.jsxs)(m.Z, {
         align: m.Z.Align.CENTER,
@@ -143,9 +143,9 @@ function V(e) {
         }),
         i = j.eo.useSetting(),
         c = r.useCallback((e) => {
-            j.eo.updateSetting(e), b.default.track(_.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: e });
+            j.eo.updateSetting(e), b.default.track(w.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: e });
         }, []);
-    return t >= 2 && t <= D.tB
+    return t >= 2 && t <= _.tB
         ? (0, l.jsx)("div", {
               className: s()(G.modalContent, L.checkboxRow),
               children: (0, l.jsx)(o.Checkbox, {
@@ -156,7 +156,7 @@ function V(e) {
           })
         : null;
 }
-function Y(e) {
+function H(e) {
     let { enabled: n, onChange: t, screen: i } = e,
         c = r.useCallback(
             (e) => {
@@ -170,11 +170,11 @@ function Y(e) {
         children: (0, l.jsx)(o.Checkbox, {
             checked: n,
             onChange: c,
-            label: i || u ? z.intl.string(z.t["5Adrtb"]) : z.intl.string(z.t.gRpbRE),
+            label: i || u ? z.intl.string(z.t["5AdrtW"]) : z.intl.string(z.t.gRpbRF),
         }),
     });
 }
-function q(e) {
+function Y(e) {
     let { enabled: n, onChange: t } = e,
         i = r.useCallback(
             (e) => {
@@ -187,11 +187,11 @@ function q(e) {
         children: (0, l.jsx)(o.Checkbox, {
             checked: n,
             onChange: i,
-            label: z.intl.string(z.t.JE73jI),
+            label: z.intl.string(z.t.JE73jB),
         }),
     });
 }
-function H(e) {
+function q(e) {
     let {
             selectedSource: n,
             selectedFPS: t,
@@ -211,17 +211,17 @@ function H(e) {
             onChangeSelectedPreset: b,
             onChangeSelectedChannelId: P,
             onChangeSource: I,
-            onChangeAudioDevice: O,
+            onChangeAudioDevice: y,
             onChangeGuild: M,
             onChangeSound: U,
-            onChangePreviewDisabled: D,
+            onChangePreviewDisabled: _,
         } = e,
         L = (0, a.e7)([S.Z, p.Z], () => p.Z.getChannel(S.Z.getVoiceChannelId())),
-        G = (0, a.e7)([E.Z], () => E.Z.GPUDriversOutdated),
-        H = (0, a.e7)([E.Z], () => E.Z.problematicGPUDriver),
+        G = (0, a.e7)([O.Z], () => O.Z.GPUDriversOutdated),
+        q = (0, a.e7)([O.Z], () => O.Z.problematicGPUDriver),
         X = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
-        K = (0, y.Z)();
-    null != n && n.id.startsWith("screen") && !Z.Z.supportsScreenSoundshare() && (K = z.intl.string(z.t["1b0Gm5"]));
+        K = (0, E.Z)();
+    null != n && n.id.startsWith("screen") && !Z.Z.supportsScreenSoundshare() && (K = z.intl.string(z.t["1b0Gm7"]));
     let J = !!(null == n ? void 0 : n.id.startsWith("camera")),
         Q = null != X && X.verified && !X.bot,
         $ = null != L && !(0, d.Yk)(L);
@@ -231,7 +231,7 @@ function H(e) {
                 ? (0, l.jsx)(k.Z, {
                       selectedSource: n,
                       onChangeVideoDeviceSource: I,
-                      onChangeAudioDevice: O,
+                      onChangeAudioDevice: y,
                   })
                 : (0, l.jsxs)("div", {
                       children: [
@@ -241,9 +241,9 @@ function H(e) {
                               onChangeSource: I,
                               selectedSource: n,
                           }),
-                          null != K ? (0, l.jsx)(W, { text: K }) : null,
+                          null != K ? (0, l.jsx)(F, { text: K }) : null,
                           null != n && null == K
-                              ? (0, l.jsx)(Y, {
+                              ? (0, l.jsx)(H, {
                                     enabled: h,
                                     onChange: U,
                                     screen: n.id.startsWith("screen"),
@@ -252,7 +252,7 @@ function H(e) {
                       ],
                   }),
             g && null != u
-                ? (0, l.jsx)(F, {
+                ? (0, l.jsx)(W, {
                       guildId: u,
                       onChange: M,
                   })
@@ -265,15 +265,15 @@ function H(e) {
                       onChangeSelectedChannelId: P,
                   }),
             null != u && Q && $ ? (0, l.jsx)(V, { guildId: u }) : null,
-            G ? (0, l.jsx)(W, { text: z.intl.string(z.t.q65tS0) }) : null,
-            H
-                ? (0, l.jsx)(W, {
-                      text: z.intl.format(z.t.RrLvub, {
-                          helpCenterLink: T.Z.getArticleURL(_.BhN.NVIDIA_DRIVER_ISSUES),
+            G ? (0, l.jsx)(F, { text: z.intl.string(z.t.q65tSw) }) : null,
+            q
+                ? (0, l.jsx)(F, {
+                      text: z.intl.format(z.t.RrLvuT, {
+                          helpCenterLink: T.Z.getArticleURL(w.BhN.NVIDIA_DRIVER_ISSUES),
                       }),
                   })
                 : null,
-            (0, l.jsx)(w.Z, {
+            (0, l.jsx)(D.Z, {
                 selectedPreset: s,
                 selectedFPS: t,
                 selectedResolution: c,
@@ -284,9 +284,9 @@ function H(e) {
                 onPresetChange: b,
                 captureDeviceSelected: J,
             }),
-            (0, l.jsx)(q, {
+            (0, l.jsx)(Y, {
                 enabled: j,
-                onChange: D,
+                onChange: _,
             }),
         ],
     });

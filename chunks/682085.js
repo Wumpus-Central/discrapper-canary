@@ -15,7 +15,7 @@ var r = n(951288),
     b = n(430790),
     h = n(795990),
     v = n(388032),
-    y = n(267233);
+    y = n(66582);
 function j() {
     let { trackUserProfileEditAction: e } = (0, f.KZ)(),
         t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
@@ -98,12 +98,12 @@ function j() {
             (0, r.jsx)(s.Heading, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: v.intl.string(v.t.oqalCw),
+                children: v.intl.string(v.t["oqalC+"]),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: v.intl.format(v.t.YnNFWV, { applicationName: j.name }),
+                children: v.intl.format(v.t.YnNFWa, { applicationName: j.name }),
             }),
         ],
     });
@@ -137,7 +137,7 @@ function j() {
                             w,
                             (0, r.jsx)(s.Button, {
                                 icon: s.qJs,
-                                text: v.intl.string(v.t.lBG2s7),
+                                text: v.intl.string(v.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
                                 onClick: P,

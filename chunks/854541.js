@@ -19,7 +19,7 @@ var r = n(951288),
     p = n(44315),
     h = n(981631),
     m = n(388032),
-    g = n(68701);
+    g = n(164688);
 function E(e, t, n) {
     return (
         t in e
@@ -312,7 +312,7 @@ function w(e) {
                             ? {
                                   icon: f.ilE,
                                   onClick: x,
-                                  "aria-label": m.intl.string(m.t["0dU9Nz"]),
+                                  "aria-label": m.intl.string(m.t["0dU9Ny"]),
                               }
                             : void 0,
                 }),

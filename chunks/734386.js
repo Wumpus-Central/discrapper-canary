@@ -28,8 +28,8 @@ var i = n(951288),
     Z = n(967128),
     T = n(981631),
     N = n(388032),
-    A = n(73288),
-    w = n(602009);
+    A = n(338518),
+    w = n(430864);
 function M(e) {
     let { channel: t } = e,
         [n, l] = r.useState(!1),
@@ -85,10 +85,10 @@ function M(e) {
                 locked: !0,
                 channelType: t.type,
             }),
-            (0, i.jsx)(Z.Ot, { children: N.intl.format(N.t.I3R7Vl, { channelName: o }) }),
+            (0, i.jsx)(Z.Ot, { children: N.intl.format(N.t.I3R7Vn, { channelName: o }) }),
             (0, i.jsx)(Z.jz, {
                 className: w.markup,
-                children: N.intl.format(N.t.QuwqjI, {
+                children: N.intl.format(N.t.QuwqjG, {
                     channelName: o,
                     topicHook: () => _.Z.parseTopic(t.topic, !0, { channelId: t.id }),
                 }),
@@ -98,7 +98,7 @@ function M(e) {
                       className: A.channelSettingButtons,
                       children: [
                           (0, i.jsx)(I.Z, {
-                              label: N.intl.string(N.t.dMJ3Y2),
+                              label: N.intl.string(N.t.dMJ3Y6),
                               onClick: () => l(!0),
                               icon: (0, i.jsx)(p.BFJ, {
                                   size: "xs",
@@ -106,7 +106,7 @@ function M(e) {
                               }),
                           }),
                           (0, i.jsx)(I.Z, {
-                              label: N.intl.string(N.t["3gUsJS"]),
+                              label: N.intl.string(N.t["3gUsJb"]),
                               onClick: function () {
                                   h.ZP.open(t.id);
                               },
@@ -150,7 +150,7 @@ function M(e) {
                                     tag: "span",
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children: N.intl.string(N.t.rt0ERU),
+                                    children: N.intl.string(N.t.rt0ERW),
                                 }),
                             ],
                         });

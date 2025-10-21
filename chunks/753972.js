@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(768581),
     l = n(388032),
-    c = n(54777);
+    c = n(474500);
 function u(e) {
     let {
             application: t,
@@ -36,7 +36,7 @@ function u(e) {
             : null
         : (0, r.jsx)("img", {
               className: o()(c.icon, a),
-              alt: l.intl.string(l.t.X4IxWF),
+              alt: l.intl.string(l.t.X4IxWL),
               src: p,
               "aria-hidden": !0,
               draggable: !1,

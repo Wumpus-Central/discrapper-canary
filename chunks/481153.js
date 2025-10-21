@@ -17,9 +17,9 @@ var r = n(951288),
     x = n(981631),
     E = n(474936),
     v = n(388032),
-    b = n(124896),
-    j = n(465106),
-    I = n(10198);
+    b = n(569964),
+    j = n(149715),
+    I = n(197571);
 let N = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
     let { giftCode: t } = e,
         n = f.Z.get(t.skuId),
@@ -32,11 +32,11 @@ let N = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
     };
 })((e) => {
     let { error: t, giftCode: n, gifter: s, sku: a, application: c, subscriptionPlan: p } = e,
-        m = null == s ? v.intl.string(v.t.lTGZAg) : v.intl.formatToPlainString(v.t.TjWdPT, { username: s.username }),
+        m = null == s ? v.intl.string(v.t.lTGZAl) : v.intl.formatToPlainString(v.t.TjWdPc, { username: s.username }),
         f = a.name;
     return (
         null != p &&
-            (f = v.intl.formatToPlainString(p.interval === E.rV.MONTH ? v.t.CTpcCQ : v.t.rgPWGx, {
+            (f = v.intl.formatToPlainString(p.interval === E.rV.MONTH ? v.t.CTpcCZ : v.t["rgPWG/"], {
                 skuName: a.name,
                 intervalCount: p.intervalCount,
             })),
@@ -56,7 +56,7 @@ let N = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                 null != t
                     ? (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.DK, { children: v.intl.string(v.t.mDFGFh) }),
+                              (0, r.jsx)(u.DK, { children: v.intl.string(v.t.mDFGFj) }),
                               (0, r.jsx)(u.Dx, { children: t }),
                           ],
                       })

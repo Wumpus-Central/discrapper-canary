@@ -12,7 +12,7 @@ var r = n(951288),
     m = n(613810),
     p = n(391181),
     f = n(388032),
-    h = n(931281);
+    h = n(82917);
 function b(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
         g = (0, d.ue)(t, { publishedOnly: !1 }),
@@ -21,7 +21,7 @@ function b(e) {
     return (0, r.jsx)("div", {
         className: h.productListingsHeader,
         children: (0, r.jsx)(l.gNt, {
-            label: x ? f.intl.string(f.t.RwuStb) : f.intl.string(f.t.WKMcMT),
+            label: x ? f.intl.string(f.t.RwuStQ) : f.intl.string(f.t.WKMcMW),
             children: (e) =>
                 x
                     ? (0, r.jsx)("ul", {
@@ -125,7 +125,7 @@ function x(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.zxk, {
-                text: f.intl.string(f.t.riG6DQ),
+                text: f.intl.string(f.t.riG6Da),
                 icon: l.qJs,
                 onClick: () => a(null),
                 disabled: n,

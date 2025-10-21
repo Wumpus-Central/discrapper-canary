@@ -3,10 +3,10 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     a = n(388032),
-    o = n(35379);
+    o = n(488463);
 function s(e) {
     let { name: t, onRetry: n } = e,
-        s = null != t ? t : a.intl.string(a.t["11pdXV"]);
+        s = null != t ? t : a.intl.string(a.t["11pdXZ"]);
     return (0, r.jsx)("div", {
         className: o.container,
         children: (0, r.jsxs)("div", {
@@ -28,7 +28,7 @@ function s(e) {
                         (0, r.jsx)(i.Text, {
                             variant: "text-sm/normal",
                             color: "text-feedback-warning",
-                            children: a.intl.string(a.t.tmGHjY),
+                            children: a.intl.string(a.t.tmGHjc),
                         }),
                     ],
                 }),

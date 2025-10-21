@@ -13,12 +13,12 @@ let c = (t) => {
     return (0, e.jsx)(r.Modal, {
         transitionState: c,
         onClose: i,
-        title: o ? d.intl.string(d.t["4rg7cH"]) : d.intl.string(d.t.uAmAiI),
-        subtitle: o ? d.intl.string(d.t["5vton5"]) : d.intl.string(d.t.mscFJS),
+        title: o ? d.intl.string(d.t["4rg7cA"]) : d.intl.string(d.t.uAmAiL),
+        subtitle: o ? d.intl.string(d.t["5vton6"]) : d.intl.string(d.t.mscFJU),
         actions: [
             {
                 variant: o ? "primary" : "critical-primary",
-                text: o ? d.intl.string(d.t.YqAjX1) : d.intl.string(d.t["w4m94+"]),
+                text: o ? d.intl.string(d.t.YqAjXy) : d.intl.string(d.t.w4m945),
                 onClick: () => {
                     s.Z.updateChannelOverrideSettings(null, n, { muted: !o }, o ? u.ZB.Unmuted : u.ZB.Muted), i();
                 },

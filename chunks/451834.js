@@ -12,8 +12,8 @@ var i = n(120356),
     f = n(510659),
     _ = n(228168),
     p = n(388032),
-    h = n(738369),
-    m = n(74866);
+    h = n(882909),
+    m = n(583140);
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: o } = (0, d.KZ)();
@@ -35,7 +35,7 @@ let g = (e) => {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-sm/semibold",
-                            children: p.intl.format(p.t.QEW8Mj, {
+                            children: p.intl.format(p.t.QEW8Mq, {
                                 onClick: () => {
                                     o({ action: "PRESS_REACT_REPLY_TOAST" }),
                                         null == i || i(),
@@ -59,14 +59,14 @@ let g = (e) => {
                 (0, r.jsx)(l.Text, {
                     color: "header-primary",
                     variant: "text-sm/semibold",
-                    children: p.intl.string(p.t.tcARX1),
+                    children: p.intl.string(p.t.tcARX0),
                 }),
             ],
         }),
     b = (e) => {
         let { userId: t, onClose: n, className: i } = e,
             { interactionTypeSent: c, showInteractionToast: d } = (0, f.Xo)(),
-            m = c === _.P.REPLY ? p.intl.string(p.t.BPaiaW) : p.intl.string(p.t.Ry2EtL),
+            m = c === _.P.REPLY ? p.intl.string(p.t.BPaiaa) : p.intl.string(p.t.Ry2EtG),
             b = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
             y = (0, l.Yzy)(
                 d,

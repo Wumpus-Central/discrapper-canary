@@ -38,7 +38,7 @@ var r = n(951288),
     L = n(526761),
     x = n(231338),
     M = n(388032),
-    k = n(90290);
+    k = n(227674);
 function j(e, t, n) {
     return (
         t in e
@@ -142,16 +142,16 @@ let H = Object.freeze({
                         isCoachmark: !0,
                         isPreview: !0,
                     },
-                    () => M.intl.string(M.t.D29k19),
+                    () => M.intl.string(M.t.D29k16),
                 )
                 .with(
                     {
                         type: "EDITOR",
                         isCoachmark: !0,
                     },
-                    () => M.intl.string(M.t["8+vbqa"]),
+                    () => M.intl.string(M.t["8+vbqd"]),
                 )
-                .otherwise(() => M.intl.string(M.t.hjV0fX));
+                .otherwise(() => M.intl.string(M.t.hjV0fZ));
         return (0, r.jsxs)("div", {
             className: k.title,
             children: [
@@ -180,24 +180,24 @@ let H = Object.freeze({
                     type: "EDITOR",
                     isPreview: !0,
                 },
-                () => M.intl.format(M.t.G8yQXl, { onPremiumClick: () => m.z }),
+                () => M.intl.format(M.t.G8yQXi, { onPremiumClick: () => m.z }),
             )
             .with(
                 {
                     type: "EDITOR",
                     isCoachmark: !0,
                 },
-                () => M.intl.string(M.t.jmZiNj),
+                () => M.intl.string(M.t.jmZiNu),
             )
             .with(
                 {
                     type: "EDITOR",
                     isPreview: !1,
                 },
-                () => M.intl.string(M.t.dqDFwc),
+                () => M.intl.string(M.t.dqDFwe),
             )
-            .with({ isPreview: !0 }, () => M.intl.format(M.t.DWIjJy, { onPremiumClick: () => m.z }))
-            .otherwise(() => M.intl.string(M.t["np0X/v"]));
+            .with({ isPreview: !0 }, () => M.intl.format(M.t["DWIjJ/"], { onPremiumClick: () => m.z }))
+            .otherwise(() => M.intl.string(M.t["np0X/u"]));
         return (0, r.jsx)(c.Heading, {
             variant: "text-sm/normal",
             className: k.subtext,
@@ -214,7 +214,7 @@ let H = Object.freeze({
             ? (0, r.jsx)(E.ZP, {
                   type: w.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                   subscriptionTier: w.Si.TIER_2,
-                  children: M.intl.format(M.t.G8yQXl, { onPremiumClick: () => m.z }),
+                  children: M.intl.format(M.t.G8yQXi, { onPremiumClick: () => m.z }),
               })
             : (0, r.jsxs)("div", {
                   className: k.header,
@@ -436,7 +436,7 @@ let H = Object.freeze({
                     (0, r.jsx)(c.Heading, {
                         className: k.upsellText,
                         variant: "heading-sm/semibold",
-                        children: M.intl.string(M.t.POSLGR),
+                        children: M.intl.string(M.t.POSLGY),
                     }),
                 (0, r.jsxs)(c.Kqy, {
                     direction: "horizontal",

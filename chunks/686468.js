@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(496675),
     y = n(146085),
     _ = n(979339),
-    j = n(643632),
-    O = n(388032),
+    O = n(643632),
+    j = n(388032),
     x = n(196979);
 function v(e) {
     let { onClick: t, className: n } = e,
@@ -32,8 +32,8 @@ function v(e) {
             width: 20,
         }),
         color: o.Z.unsafe_rawColors.PRIMARY_700.css,
-        title: O.intl.string(O.t.jMLfp6),
-        description: O.intl.string(O.t["Vd/rER"]),
+        title: j.intl.string(j.t["jMLfp/"]),
+        description: j.intl.string(j.t["Vd/rEX"]),
         onClick: t,
         className: n,
     });
@@ -55,14 +55,14 @@ function C(e) {
                 color: "header-secondary",
                 children: (function (e) {
                     if (0 === e.length) return "";
-                    if (1 === e.length) return O.intl.formatToPlainString(O.t["5ULgaW"], { first: e[0].userNick });
+                    if (1 === e.length) return j.intl.formatToPlainString(j.t["5ULgaQ"], { first: e[0].userNick });
                     if (2 === e.length)
-                        return O.intl.formatToPlainString(O.t.BHK0Oj, {
+                        return j.intl.formatToPlainString(j.t.BHK0Op, {
                             first: e[0].userNick,
                             second: e[1].userNick,
                         });
                     let t = e.length - 2;
-                    return O.intl.formatToPlainString(O.t.T3MT4u, {
+                    return j.intl.formatToPlainString(j.t.T3MT4n, {
                         first: e[0].userNick,
                         second: e[1].userNick,
                         numOthers: t,
@@ -77,7 +77,7 @@ function I(e) {
         l = (0, s.e7)([b.Z], () => b.Z.can(y.yP, t), [t]),
         o = t.guild_id,
         { canCreateGuildEvent: d } = (0, g.XJ)(t),
-        u = (0, j.Z)(t.id),
+        u = (0, O.Z)(t.id),
         _ = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: x.container,
@@ -93,13 +93,13 @@ function I(e) {
                             (0, r.jsx)(c.Heading, {
                                 className: x.__invalid_title,
                                 variant: "heading-xxl/normal",
-                                children: O.intl.string(O.t.QGnDLi),
+                                children: j.intl.string(j.t.QGnDLs),
                             }),
                             (0, r.jsx)(c.Text, {
                                 tag: "div",
                                 className: x.subtitle,
                                 variant: "heading-lg/normal",
-                                children: O.intl.string(O.t.djfK39),
+                                children: j.intl.string(j.t.djfK36),
                             }),
                         ],
                     }),

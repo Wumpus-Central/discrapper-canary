@@ -18,7 +18,7 @@ var r = n(951288),
     E = n(151459),
     O = n(981631),
     v = n(388032),
-    y = n(319763);
+    y = n(10058);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -264,8 +264,8 @@ function S(e) {
                             onClick: e,
                             icon: o.iFz,
                             iconSize: b,
-                            "aria-label": v.intl.string(v.t.TdEu5e),
-                            tooltip: i ? null : v.intl.string(v.t.TdEu5e),
+                            "aria-label": v.intl.string(v.t.TdEu5X),
+                            tooltip: i ? null : v.intl.string(v.t.TdEu5X),
                             selected: i,
                             showBadge: n,
                         }),

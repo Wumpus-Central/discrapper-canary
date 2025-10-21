@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(981631),
     f = n(185923),
     _ = n(388032),
-    p = n(508465);
+    p = n(41356);
 let h = {
         section: d.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: "gift_effect_emoji_picker",
@@ -31,11 +31,11 @@ function g(e) {
                         children: [
                             (0, r.jsx)(l.Text, {
                                 variant: "text-md/bold",
-                                children: _.intl.string(_.t.Hl2IgY),
+                                children: _.intl.string(_.t.Hl2Ige),
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                children: _.intl.string(_.t.stGFAw),
+                                children: _.intl.string(_.t.stGFA3),
                             }),
                         ],
                     }),
@@ -91,7 +91,7 @@ function g(e) {
                                       className: E,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: _.intl.string(_.t.Hl2IgY),
+                                      children: _.intl.string(_.t.Hl2Ige),
                                   }),
                               ],
                           })

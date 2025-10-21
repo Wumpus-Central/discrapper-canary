@@ -17,7 +17,7 @@ var l = n(442837),
     h = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(434652);
+    b = n(36973);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -54,22 +54,22 @@ let y = (e) => {
             newAccount: C,
             newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
-        S = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
+        S = 0 === t ? m.intl.string(m.t["6zY8BI"]) : null,
         I = null,
         P = null;
     return (0 === t &&
         (v
-            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
+            ? ((I = m.intl.string(m.t.IRxUlG)), (P = m.intl.string(m.t.fiNVin)))
             : x
-              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
+              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOv"])))
               : j
-                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
+                ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
                 : E
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: h.YeM.MEMBER_AGE })),
+                    (P = m.intl.string(m.t.BddRzS)))
                   : C &&
-                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))),
+                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: h.YeM.ACCOUNT_AGE })),
+                    (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
         ? null
         : (0, i.jsxs)(a.VqE, {
@@ -129,8 +129,8 @@ let y = (e) => {
                                                                     a.ConfirmModal,
                                                                     ((n = _(
                                                                         {
-                                                                            header: m.intl.string(m.t.LykQYm),
-                                                                            confirmText: m.intl.string(m.t.BddRzc),
+                                                                            header: m.intl.string(m.t.LykQYk),
+                                                                            confirmText: m.intl.string(m.t.BddRzS),
                                                                             confirmButtonColor: o.zx.Colors.BRAND,
                                                                         },
                                                                         e,
@@ -139,7 +139,7 @@ let y = (e) => {
                                                                         {
                                                                             children: (0, i.jsx)(a.Text, {
                                                                                 variant: "text-md/normal",
-                                                                                children: m.intl.format(m.t.azKEPz, {
+                                                                                children: m.intl.format(m.t.azKEPy, {
                                                                                     email:
                                                                                         null ==
                                                                                         (t = f.default.getCurrentUser())
@@ -179,7 +179,7 @@ let y = (e) => {
                                   v || x || j
                                       ? (0, i.jsx)(a.Avr, {
                                             onClick: O,
-                                            text: m.intl.string(m.t.oEAioK),
+                                            text: m.intl.string(m.t.oEAioF),
                                             variant: "secondary",
                                         })
                                       : null,

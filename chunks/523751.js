@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(682947),
     I = n(981631),
     T = n(388032),
-    S = n(767991);
+    S = n(73704);
 function A(e, t, n) {
     return (
         t in e
@@ -171,7 +171,7 @@ function L(e) {
                 children: (0, r.jsx)(u.Text, {
                     variant: "text-xs/semibold",
                     color: "always-white",
-                    children: T.intl.format(T.t["dR/SVF"], { count: t.premiumSubscriberCount }),
+                    children: T.intl.format(T.t["dR/SVH"], { count: t.premiumSubscriberCount }),
                 }),
             }),
         ],

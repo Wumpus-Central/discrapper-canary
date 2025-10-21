@@ -15,7 +15,7 @@ var r = n(951288),
     h = n(868814),
     b = n(981631),
     x = n(388032),
-    j = n(333999);
+    j = n(813878);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -218,16 +218,16 @@ let O = i.memo(function () {
                                           n.e("30474"),
                                           n.e("24358"),
                                           n.e("38342"),
-                                          n.e("63962"),
+                                          n.e("91053"),
                                           n.e("35755"),
-                                          n.e("65825"),
+                                          n.e("87943"),
                                           n.e("37220"),
                                           n.e("18320"),
                                           n.e("95546"),
-                                          n.e("9145"),
+                                          n.e("47840"),
                                           n.e("26503"),
                                           n.e("4745"),
-                                          n.e("6638"),
+                                          n.e("21684"),
                                       ]).then(n.bind(n, 373651));
                                       return (n) =>
                                           (0, r.jsx)(
@@ -267,7 +267,7 @@ let O = i.memo(function () {
                                                           variant: "text-xs/medium",
                                                           className: j.channelSubtitle,
                                                           color: "text-brand",
-                                                          children: x.intl.string(x.t.mPxmeH),
+                                                          children: x.intl.string(x.t.mPxmeE),
                                                       }),
                                                   ],
                                               })
@@ -285,7 +285,7 @@ let O = i.memo(function () {
                                     : (0, r.jsx)(o.Button, {
                                           size: "sm",
                                           variant: "secondary",
-                                          text: x.intl.string(x.t.zA9d1N),
+                                          text: x.intl.string(x.t.zA9d1J),
                                           icon: o.mBM,
                                           onClick: b.dG4,
                                       }),

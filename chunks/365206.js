@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(839963),
     c = n(139256),
     u = n(388032),
-    d = n(427816);
+    d = n(33470);
 function f(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ function E(e) {
     return (0, r.jsxs)("div", {
         className: d.votesData,
         children: [
-            t && (0, r.jsx)(o.T, { children: u.intl.string(u.t["8DAM+/"]) }),
+            t && (0, r.jsx)(o.T, { children: u.intl.string(u.t["8DAM+5"]) }),
             (0, r.jsxs)(s.Text, {
                 variant: "text-md/semibold",
                 color: "none",

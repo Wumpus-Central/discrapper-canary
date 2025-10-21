@@ -4,11 +4,11 @@ n(647438);
 var i = n(793030),
     a = n(115849),
     s = n(388032),
-    l = n(50051);
+    l = n(255597);
 function u(e) {
     let { transitionState: t, onClose: n } = e;
     return (0, r.jsx)(i.Modal, {
-        title: s.intl.string(s.t.w5uwoK),
+        title: s.intl.string(s.t.w5uwoI),
         transitionState: t,
         onClose: n,
         actions: void 0,

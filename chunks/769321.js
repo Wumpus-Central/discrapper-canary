@@ -15,7 +15,7 @@ var i = t(120356),
     x = t(785717),
     h = t(49898),
     v = t(388032),
-    j = t(638999);
+    j = t(20163);
 function g(e) {
     let { applicationRoleConnection: n, locale: t, onApplicationClicked: i, selectedGuildId: o } = e,
         r = (0, c.rm)(n, t);
@@ -69,7 +69,7 @@ function g(e) {
                                 variant: "text-xxs/normal",
                                 color: "text-default",
                                 className: j.connectedAppRoleAccountPoweredBy,
-                                children: v.intl.format(v.t.zIT9YG, { applicationHook: () => n.application.name }),
+                                children: v.intl.format(v.t.zIT9YA, { applicationHook: () => n.application.name }),
                             }),
                         ],
                     }),

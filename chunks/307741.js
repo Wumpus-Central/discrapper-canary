@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(168524),
     E = n(715318),
     b = n(388032),
-    y = n(35379);
+    y = n(488463);
 function O(e) {
     let { detectedGame: t } = e,
         n = i.useMemo(() => {
@@ -51,7 +51,7 @@ function v(e) {
                       className: y.gameIcon,
                       src: n,
                       height: 80,
-                      alt: b.intl.formatToPlainString(b.t["nh+jWl"], { game: t.name }),
+                      alt: b.intl.formatToPlainString(b.t["nh+jWk"], { game: t.name }),
                   })
                 : (0, r.jsx)(u.IMN, {
                       size: "lg",
@@ -121,7 +121,7 @@ function T(e) {
 function S(e) {
     let { application: t } = e,
         n = (0, l.e7)([_.Z], () => _.Z.getMute(t.id)),
-        a = i.useMemo(() => (n ? b.intl.string(b.t.tpvw4e) : b.intl.string(b.t["6EwEws"])), [n]);
+        a = i.useMemo(() => (n ? b.intl.string(b.t.tpvw4T) : b.intl.string(b.t["6EwEwp"])), [n]);
     return (0, r.jsxs)("div", {
         className: y.actionButtonsContainer,
         children: [

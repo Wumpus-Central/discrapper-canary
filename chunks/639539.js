@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(70956),
     d = n(388032),
-    p = n(20887);
+    p = n(636433);
 function m(e) {
     if (null != e) {
         let t = new Date(),
@@ -24,7 +24,7 @@ function m(e) {
             hours: String(n).padStart(2, "0"),
             minutes: String(r).padStart(2, "0"),
             seconds: String(i).padStart(2, "0"),
-            countdownString: d.intl.formatToPlainString(d.t.U0Hhr6, { duration: new Date(0, 0, 0, n, r, i) }),
+            countdownString: d.intl.formatToPlainString(d.t.U0Hhr7, { duration: new Date(0, 0, 0, n, r, i) }),
         };
     }
     return {
@@ -200,7 +200,7 @@ function y(e) {
                         (0, r.jsx)(c.Text, {
                             variant: null != t ? t : "text-sm/medium",
                             color: "header-primary",
-                            children: d.intl.string(d.t.VZsY3t),
+                            children: d.intl.string(d.t.VZsY3r),
                         }),
                     ],
                 }),

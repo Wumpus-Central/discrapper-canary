@@ -6,7 +6,7 @@ var r = n(120356),
     a = n(28664),
     o = n(481060),
     s = n(388032),
-    c = n(77464);
+    c = n(961174);
 function d(e) {
     let {
         name: t,
@@ -100,7 +100,7 @@ function d(e) {
                                         t,
                                         p &&
                                             (0, i.jsx)(a.u, {
-                                                text: s.intl.string(s.t.VFuFur),
+                                                text: s.intl.string(s.t.VFuFum),
                                                 children: (0, i.jsx)(o.Prq, {
                                                     size: "xs",
                                                     color: "currentColor",

@@ -156,7 +156,7 @@ function $(e) {
                 (0, A.JG)(t, () => i(!0));
             },
             className: K.copyId,
-            children: ["Application Id: ", t, " ", n ? W.intl.string(W.t["t5VZ8/"]) : null],
+            children: ["Application Id: ", t, " ", n ? W.intl.string(W.t.t5VZ88) : null],
         })
     );
 }

@@ -236,11 +236,11 @@ function Q(e) {
                             children: [
                                 (0, r.jsx)(f.Text, {
                                     variant: "text-md/bold",
-                                    children: z.intl.string(z.t.txajQE),
+                                    children: z.intl.string(z.t.txajQG),
                                 }),
                                 (0, r.jsx)(f.Text, {
                                     variant: "text-md/normal",
-                                    children: z.intl.format(z.t.hXcaLS, {
+                                    children: z.intl.format(z.t.hXcaLT, {
                                         price: (0, w.T4)(0, ti.currency, {
                                             minimumFractionDigits: 0,
                                             maximumFractionDigits: 0,
@@ -277,7 +277,7 @@ function Q(e) {
                     (0, r.jsxs)(k.aO, {
                         className: o()(q.invoice, ew),
                         children: [
-                            (0, r.jsx)(k.Z9, { children: z.intl.string(z.t["2eh+Cg"]) }),
+                            (0, r.jsx)(k.Z9, { children: z.intl.string(z.t["2eh+Co"]) }),
                             (0, r.jsx)(F.Lu, {
                                 invoice: eH,
                                 newPlan: eU,
@@ -303,7 +303,7 @@ function Q(e) {
         { checkboxLabel: to, checkboxClassname: ts, checkboxLabelClassname: tl } = X(null != em && em, eW, W),
         tc = z.intl.formatToPlainString(z.t["sBpy9/"], { planName: eU.name });
     eD && !eJ
-        ? (tc = z.intl.string(z.t.J5a0eX))
+        ? (tc = z.intl.string(z.t.J5a0eb))
         : eD && eJ
           ? (tc = "")
           : (0, P.PV)(eU.id) && (tc = P.ZP.getBillingReviewSubheader(null, eU));
@@ -358,7 +358,7 @@ function Q(e) {
                           variant: "heading-md/normal",
                           color: "always-white",
                           className: q.trialHeader,
-                          children: z.intl.format(z.t["7ZS2m5"], {
+                          children: z.intl.format(z.t["7ZS2m1"], {
                               trialEnd: null == ey ? void 0 : ey.currentPeriodEnd,
                           }),
                       }),
@@ -386,13 +386,13 @@ function Q(e) {
                       className: q.paymentSourceWrapper,
                       children: [
                           (0, r.jsx)(h.ZP, {
-                              label: em ? z.intl.string(z.t["YH7B+P"]) : z.intl.string(z.t.mmDvV1),
+                              label: em ? z.intl.string(z.t["YH7B+D"]) : z.intl.string(z.t["mmDvV+"]),
                               paymentSources: Object.values(ee),
                               selectedPaymentSourceId: e1,
                               prependOption:
                                   e3 && !em
                                       ? {
-                                            label: z.intl.string(z.t.IGU7Eh),
+                                            label: z.intl.string(z.t.IGU7El),
                                             value: null,
                                         }
                                       : null,
@@ -406,7 +406,7 @@ function Q(e) {
                           e3 && null == e1
                               ? (0, r.jsx)("div", {
                                     className: q.paymentSourceOptionalWarning,
-                                    children: z.intl.format(z.t["2wPRSE"], { months: e4.length }),
+                                    children: z.intl.format(z.t["2wPRSF"], { months: e4.length }),
                                 })
                               : null,
                           eg
@@ -415,7 +415,7 @@ function Q(e) {
                                     currencies: en,
                                     className: q.currencyWrapper,
                                     children: (0, r.jsx)(_.Z, {
-                                        label: z.intl.string(z.t["/AAR09"]),
+                                        label: z.intl.string(z.t["/AAR02"]),
                                         selectedCurrency: et.currency,
                                         currencies: en,
                                         onChange: er,

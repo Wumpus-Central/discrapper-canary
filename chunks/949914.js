@@ -96,13 +96,13 @@ let j = (e) => {
         return n && (t || a)
             ? null
             : (0, r.jsx)(u.gNt, {
-                  label: M.intl.string(M.t["4neDMz"]),
+                  label: M.intl.string(M.t["4neDM+"]),
                   children: (0, r.jsx)("div", {
                       className: k.__invalid_rowButtons,
                       children: n
                           ? (0, r.jsx)(u.Button, {
                                 variant: "primary",
-                                text: M.intl.string(M.t.y3mAEx),
+                                text: M.intl.string(M.t.y3mAE4),
                                 onClick: s,
                                 loading: i,
                             })
@@ -111,11 +111,11 @@ let j = (e) => {
                                     !t &&
                                         !a &&
                                         (0, r.jsx)(m.Z, {
-                                            label: M.intl.string(M.t.FRbWR0),
+                                            label: M.intl.string(M.t.FRbWR8),
                                             onClick: l,
                                         }),
                                     (0, r.jsx)(m.Z, {
-                                        label: M.intl.string(M.t.Dx0lFx),
+                                        label: M.intl.string(M.t.Dx0lF7),
                                         onClick: o,
                                     }),
                                 ],
@@ -143,7 +143,7 @@ let j = (e) => {
                 null != l &&
                     ((0, v.uL)(D.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)),
                     (0, T.default)(),
-                    f.Z.show(D.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, M.intl.string(M.t.DvbaMz), () =>
+                    f.Z.show(D.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, M.intl.string(M.t.DvbaM4), () =>
                         (0, S.openUserSettings)(I.n.SUBSCRIPTIONS_PANEL, {
                             section: D.oAB.SUBSCRIPTIONS,
                             subsection: x.cP,
@@ -194,13 +194,13 @@ let j = (e) => {
                                           value: Q,
                                       }),
                                       (0, r.jsx)(j, {
-                                          label: M.intl.string(M.t.dltUMD),
+                                          label: M.intl.string(M.t.dltUMH),
                                           value: q,
                                           showInfoIcon: $,
                                           infoIconTooltipText: $ ? M.intl.string(M.t["/q6fpa"]) : void 0,
                                       }),
                                       (0, r.jsx)(j, {
-                                          label: M.intl.string(M.t.AOcwWF),
+                                          label: M.intl.string(M.t.AOcwWB),
                                           value: X,
                                       }),
                                   ],
@@ -209,7 +209,7 @@ let j = (e) => {
                               !K &&
                                   !V &&
                                   (0, r.jsx)(u.gNt, {
-                                      label: M.intl.string(M.t.wmMFvL),
+                                      label: M.intl.string(M.t.wmMFvA),
                                       children: (0, r.jsx)(U, { subscription: t }),
                                   }),
                               !ee &&
@@ -227,19 +227,19 @@ let j = (e) => {
                     : null,
             en = () =>
                 K
-                    ? (0, r.jsx)(u.IGR, { text: M.intl.string(M.t["7uFZGh"]) })
+                    ? (0, r.jsx)(u.IGR, { text: M.intl.string(M.t["7uFZGt"]) })
                     : $
                       ? (0, r.jsx)(u.IGR, {
-                            text: M.intl.string(M.t["6antoq"]),
+                            text: M.intl.string(M.t["6anton"]),
                             color: s.Z.BRAND_500,
                         })
                       : z
                         ? (0, r.jsx)(c.u, {
-                              text: M.intl.string(M.t.eSuJEx),
+                              text: M.intl.string(M.t.eSuJE2),
                               children: (0, r.jsx)("div", {
                                   children: (0, r.jsx)(u.IGR, {
                                       className: k.paymentDueBadge,
-                                      text: M.intl.string(M.t.NrRwIi),
+                                      text: M.intl.string(M.t.NrRwIl),
                                       color: s.Z.YELLOW_300,
                                   }),
                               }),
@@ -251,7 +251,7 @@ let j = (e) => {
                           text: M.intl.string(M.t.nv1IqK),
                           children: (0, r.jsx)("div", {
                               children: (0, r.jsx)(u.IGR, {
-                                  text: M.intl.string(M.t.sBl3X1),
+                                  text: M.intl.string(M.t["sBl3X/"]),
                                   color: h.Z.INTERACTIVE_MUTED,
                               }),
                           }),
@@ -279,7 +279,7 @@ let j = (e) => {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-md/medium",
                                             className: k.guildName,
-                                            children: null != l ? l.name : M.intl.string(M.t["He+cmZ"]),
+                                            children: null != l ? l.name : M.intl.string(M.t["He+cmd"]),
                                         }),
                                         (0, r.jsxs)("div", {
                                             className: k.headerSubtitleContainer,
@@ -297,7 +297,7 @@ let j = (e) => {
                                 }),
                                 (0, r.jsx)(u.P3F, {
                                     onClick: i(m),
-                                    "aria-label": M.intl.string(M.t.e5eQOz),
+                                    "aria-label": M.intl.string(M.t.e5eQOy),
                                     "aria-controls": B,
                                     "aria-expanded": _,
                                     focusProps: { ringTarget: t },

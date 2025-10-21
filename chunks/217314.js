@@ -12,7 +12,7 @@ var i = n(399606),
     p = n(51144),
     f = n(984370),
     h = n(388032),
-    g = n(161655);
+    g = n(97009);
 function m(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
@@ -25,7 +25,7 @@ function m(e) {
         j = (0, s.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.EJRzg4) }),
+            (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.EJRzg7) }),
             null != m &&
                 !n &&
                 (0, r.jsx)("div", {
@@ -53,10 +53,10 @@ function m(e) {
                         }),
                         j &&
                             (0, r.jsx)(l.u, {
-                                text: h.intl.string(h.t.QyZ4TU),
+                                text: h.intl.string(h.t.QyZ4Td),
                                 children: (0, r.jsx)(o.tQf, {
                                     size: "xs",
-                                    "aria-label": h.intl.string(h.t.VHXh8f),
+                                    "aria-label": h.intl.string(h.t.VHXh8a),
                                     color: o.TVs.colors.INTERACTIVE_NORMAL,
                                     className: g.secureFramesIcon,
                                 }),

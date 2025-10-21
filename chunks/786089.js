@@ -191,13 +191,13 @@ let P = (0, i.memo)(function (e) {
                                   className: T.title,
                                   variant: "heading-md/semibold",
                                   color: "always-white",
-                                  children: N.intl.format(N.t.EAYZAg, { questName: A.config.messages.questName }),
+                                  children: N.intl.format(N.t.EAYZAr, { questName: A.config.messages.questName }),
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
                                   color: $ ? "text-muted" : "always-white",
                                   style: { opacity: $ ? 1 : 0.75 },
-                                  children: N.intl.format(N.t.kXVcV1, {
+                                  children: N.intl.format(N.t["kXVcV+"], {
                                       reward: Y.name,
                                       claimedDate: z,
                                   }),

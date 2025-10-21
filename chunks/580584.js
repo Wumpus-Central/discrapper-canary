@@ -10,9 +10,9 @@ function b(e) {
     let { transitionState: t, startRating: o, onClose: b, onSubmit: s } = e;
     return (0, _.jsx)(c.Z, {
         modalType: "summary",
-        header: i.intl.string(i.t.hghcMj),
-        body: i.intl.string(i.t["QFU78/"]),
-        problemTitle: i.intl.string(i.t.CtiHPj),
+        header: i.intl.string(i.t.hghcMh),
+        body: i.intl.string(i.t.QFU785),
+        problemTitle: i.intl.string(i.t.CtiHPm),
         onSubmit: s,
         onClose: b,
         ratingOptions: [n.aZ.GOOD, n.aZ.BAD],

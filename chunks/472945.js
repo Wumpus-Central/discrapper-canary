@@ -22,12 +22,12 @@ var n = s(951288),
     C = s(598077),
     w = s(592125),
     f = s(246946),
-    I = s(626135),
-    N = s(981631),
+    N = s(626135),
+    I = s(981631),
     E = s(388032),
-    O = s(695738),
-    k = s(504401),
-    D = s(10198);
+    O = s(175577),
+    k = s(620842),
+    D = s(197571);
 function P(e, t, s) {
     return (
         t in e
@@ -149,7 +149,7 @@ class A extends r.PureComponent {
         let { channelId: e } = this.props;
         d.tn
             .get({
-                url: N.ANM.INSTANT_INVITES(e),
+                url: I.ANM.INSTANT_INVITES(e),
                 retries: 3,
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -170,8 +170,8 @@ class A extends r.PureComponent {
                     invites: t,
                 });
             }),
-            I.default.track(
-                N.rMx.OPEN_MODAL,
+            N.default.track(
+                I.rMx.OPEN_MODAL,
                 R(S({}, (0, v.v_)(w.Z.getChannel(e))), {
                     type: "Group DM Invites",
                     source: "Group DM Menu",
@@ -194,14 +194,14 @@ class A extends r.PureComponent {
             })
             .value();
         return (0, n.jsxs)(u.iA_, {
-            "aria-label": E.intl.string(E.t["9F90iY"]),
+            "aria-label": E.intl.string(E.t["9F90ic"]),
             selectionMode: "none",
             children: [
                 (0, n.jsxs)(u.xDH, {
                     children: [
                         (0, n.jsx)(u.DwJ, { children: E.intl.string(E.t.EgHyKy) }),
-                        (0, n.jsx)(u.DwJ, { children: E.intl.string(E.t.LBlFEB) }),
-                        (0, n.jsx)(u.DwJ, { children: E.intl.string(E.t["1aM27e"]) }),
+                        (0, n.jsx)(u.DwJ, { children: E.intl.string(E.t.LBlFEN) }),
+                        (0, n.jsx)(u.DwJ, { children: E.intl.string(E.t["1aM27d"]) }),
                     ],
                 }),
                 (0, n.jsx)(u.RMI, {
@@ -248,7 +248,7 @@ class A extends r.PureComponent {
                                             }),
                                             (0, n.jsx)(u.hU, {
                                                 size: "sm",
-                                                "aria-label": E.intl.string(E.t.N86XcH),
+                                                "aria-label": E.intl.string(E.t.N86XcP),
                                                 variant: "critical-secondary",
                                                 icon: u.XHJ,
                                                 onClick: () => this.handleRevoke(e),
@@ -276,7 +276,7 @@ class A extends r.PureComponent {
                 }),
                 (0, n.jsx)(u.OZU, {
                     className: D.marginTop20,
-                    children: E.intl.string(E.t["03/rlZ"]),
+                    children: E.intl.string(E.t["03/rlQ"]),
                 }),
             ],
         });
@@ -305,11 +305,11 @@ class A extends r.PureComponent {
     render() {
         let { onClose: e, transitionState: t } = this.props;
         return (0, n.jsx)(h.u_l, {
-            title: E.intl.string(E.t["9F90iY"]),
-            subtitle: E.intl.string(E.t.WDw38P),
+            title: E.intl.string(E.t["9F90ic"]),
+            subtitle: E.intl.string(E.t.WDw38H),
             actions: [
                 {
-                    text: E.intl.string(E.t.i4jeWV),
+                    text: E.intl.string(E.t.i4jeWR),
                     onClick: this.handleClose,
                 },
             ],

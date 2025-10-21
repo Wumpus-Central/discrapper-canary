@@ -1,5 +1,5 @@
 n.d(t, {
-    P9: () => P,
+    P9: () => I,
     Uf: () => w,
     b0: () => _,
     s_: () => x,
@@ -20,35 +20,35 @@ var r = n(951288),
     m = n(388032),
     b = n(839468);
 let h = [
-        () => m.intl.string(m.t.madJdH),
-        () => m.intl.string(m.t.NYmfoK),
+        () => m.intl.string(m.t.madJdE),
+        () => m.intl.string(m.t.NYmfoP),
         () => m.intl.string(m.t.R2PaCg),
-        () => m.intl.string(m.t.laSR8v),
-        () => m.intl.string(m.t.DnsJEx),
+        () => m.intl.string(m.t.laSR8h),
+        () => m.intl.string(m.t.DnsJE8),
     ],
     v = [
-        () => m.intl.string(m.t.nFSbeH),
+        () => m.intl.string(m.t.nFSbeE),
         () => m.intl.string(m.t.gTcxOz),
-        () => m.intl.string(m.t["8T0wYm"]),
-        () => m.intl.string(m.t.BIHl1t),
-        () => m.intl.string(m.t.jhBm09),
+        () => m.intl.string(m.t["8T0wYj"]),
+        () => m.intl.string(m.t.BIHl1g),
+        () => m.intl.string(m.t["jhBm0+"]),
     ],
     y = [
-        () => m.intl.string(m.t.AyMGXF),
-        () => m.intl.string(m.t.aAFW7e),
-        (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }),
-        () => m.intl.string(m.t["rrYh5+"]),
-        () => m.intl.string(m.t["HX3K+P"]),
-        () => m.intl.string(m.t["/yW3aW"]),
-        () => m.intl.string(m.t["PmL/v7"]),
-        () => m.intl.string(m.t.IALa3t),
-        () => m.intl.string(m.t.HRcTFB),
-        () => m.intl.string(m.t.NuCqPj),
-        () => m.intl.string(m.t["M1tw+/"]),
-        () => m.intl.string(m.t.UBm1y8),
-        () => m.intl.string(m.t.Cu95PT),
-        () => m.intl.string(m.t["R/wFur"]),
-        () => m.intl.string(m.t.HQPAVV),
+        () => m.intl.string(m.t.AyMGXA),
+        () => m.intl.string(m.t.aAFW7V),
+        (e) => m.intl.formatToPlainString(m.t.h2g0cM, { name: e }),
+        () => m.intl.string(m.t.rrYh58),
+        () => m.intl.string(m.t["HX3K+F"]),
+        () => m.intl.string(m.t["/yW3aY"]),
+        () => m.intl.string(m.t["PmL/v0"]),
+        () => m.intl.string(m.t.IALa3h),
+        () => m.intl.string(m.t.HRcTFL),
+        () => m.intl.string(m.t.NuCqPt),
+        () => m.intl.string(m.t["M1tw+4"]),
+        () => m.intl.string(m.t.UBm1y2),
+        () => m.intl.string(m.t.Cu95PQ),
+        () => m.intl.string(m.t["R/wFuh"]),
+        () => m.intl.string(m.t.HQPAVT),
         () => m.intl.string(m.t.YolGh4),
     ],
     j = [
@@ -91,7 +91,7 @@ function O(e) {
     });
 }
 function x() {
-    let e = m.intl.string(m.t.RnD2yc),
+    let e = m.intl.string(m.t.RnD2yZ),
         [t] = i.useState(() => {
             var e;
             return (null != (e = (0, a.sample)(h)) ? e : h[0])();
@@ -102,7 +102,7 @@ function x() {
     });
 }
 function _() {
-    let e = m.intl.string(m.t.bFgqYG),
+    let e = m.intl.string(m.t.bFgqYJ),
         [t] = i.useState(() => {
             var e;
             return (null != (e = (0, a.sample)(v)) ? e : v[0])();
@@ -112,10 +112,10 @@ function _() {
         bodyText: t,
     });
 }
-function P(e) {
+function I(e) {
     let { user: t, guildId: n, channelId: s, onClose: c } = e,
         u = f.ZP.getName(n, s, t),
-        d = m.intl.formatToPlainString(m.t.sjSitL, { name: u }),
+        d = m.intl.formatToPlainString(m.t.sjSitP, { name: u }),
         [p] = i.useState(() => {
             var e;
             return (null != (e = (0, a.sample)(y)) ? e : y[0])(u);
@@ -136,7 +136,7 @@ function P(e) {
         }),
     });
 }
-function I() {
+function P() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
         className: b.connectionPlatforms,
@@ -169,19 +169,19 @@ function w(e) {
                 });
         }, [t]);
     return (0, r.jsxs)(O, {
-        heading: m.intl.string(m.t.VB6LWV),
-        bodyText: m.intl.string(m.t.KpjsU1),
+        heading: m.intl.string(m.t.VB6LWY),
+        bodyText: m.intl.string(m.t.KpjsU9),
         children: [
-            (0, r.jsx)(I, {}),
+            (0, r.jsx)(P, {}),
             (0, r.jsxs)("div", {
                 className: b.buttonRow,
                 children: [
                     (0, r.jsx)(g.O1, {
-                        text: m.intl.string(m.t["/Hl24e"]),
+                        text: m.intl.string(m.t["/Hl24U"]),
                         onClick: n,
                     }),
                     (0, r.jsx)(g.O1, {
-                        text: m.intl.string(m.t.GTCx0t),
+                        text: m.intl.string(m.t.GTCx0p),
                         onClick: a,
                     }),
                 ],

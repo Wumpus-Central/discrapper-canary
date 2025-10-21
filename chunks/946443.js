@@ -26,10 +26,10 @@ var r = n(951288),
     j = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(77902);
+    E = n(915087);
 function S(e) {
     var t, n, l, a, O, S, P;
-    let { onJump: N, showTutorial: Z, setSeenTutorial: T, closePopout: w } = e,
+    let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
         A = i.useRef(null),
         [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
@@ -86,12 +86,12 @@ function S(e) {
         }, []),
         i.useEffect(
             () => (
-                p.Z.subscribe("CONNECTION_OPEN", w),
+                p.Z.subscribe("CONNECTION_OPEN", T),
                 () => {
-                    p.Z.unsubscribe("CONNECTION_OPEN", w);
+                    p.Z.unsubscribe("CONNECTION_OPEN", T);
                 }
             ),
-            [w],
+            [T],
         ),
         (0, f.ZP)(
             () => (
@@ -105,11 +105,11 @@ function S(e) {
     if (0 === M.length) {
         return (0, r.jsx)(y.Z, {
             Icon: d.xx7,
-            header: C.intl.string(C.t["6XMM+P"]),
+            header: C.intl.string(C.t["6XMM+D"]),
             tip:
                 (null == (P = s().os) ? void 0 : P.family) === "OS X"
-                    ? C.intl.string(C.t.w9uDOT)
-                    : C.intl.string(C.t.BiUJCw),
+                    ? C.intl.string(C.t.w9uDOW)
+                    : C.intl.string(C.t.BiUJC6),
         });
     }
     return (0, r.jsx)(c.bG, {
@@ -183,7 +183,7 @@ function S(e) {
                             onScroll: L === j.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(G)),
                             children: [
-                                Z ? (0, r.jsx)(I, { setSeenTutorial: T }) : null,
+                                Z ? (0, r.jsx)(I, { setSeenTutorial: w }) : null,
                                 (0, v.Z)(M, D, N),
                                 L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
@@ -223,12 +223,12 @@ function I(e) {
                     (0, r.jsx)(d.Heading, {
                         className: E.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: C.intl.string(C.t.vZPktL),
+                        children: C.intl.string(C.t.vZPktJ),
                     }),
                     (0, r.jsx)(d.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: C.intl.string(C.t.vWkIIC),
+                        children: C.intl.string(C.t.vWkIII),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
@@ -236,7 +236,7 @@ function I(e) {
                         children: (0, r.jsx)(d.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: C.intl.string(C.t["+IrDzM"]),
+                            text: C.intl.string(C.t["+IrDzN"]),
                             onClick: t,
                         }),
                     }),
@@ -249,8 +249,8 @@ function P() {
     return (0, r.jsx)(y.Z, {
         Icon: d.xx7,
         disableStars: !0,
-        header: C.intl.string(C.t["KG/ynZ"]),
-        tip: C.intl.string(C.t.cvcKzc),
+        header: C.intl.string(C.t["KG/ynf"]),
+        tip: C.intl.string(C.t.cvcKzX),
     });
 }
 let N = () =>

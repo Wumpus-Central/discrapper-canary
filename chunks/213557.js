@@ -27,7 +27,7 @@ var l = t(951288),
     w = t(287746),
     P = t(981631),
     E = t(388032),
-    S = t(952713);
+    S = t(10832);
 function T(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -78,11 +78,11 @@ function A(e) {
         M = (0, I.ZP)(D),
         H = (0, i.e7)([b.Z], () => (null == L ? void 0 : L.id) != null && b.Z.isLurking(L.id), [L]),
         U = (0, g.Z)(n),
-        G = (0, i.e7)([f.Z], () => {
+        W = (0, i.e7)([f.Z], () => {
             var e;
             return null == (e = f.Z.getResourceForChannel(null == L ? void 0 : L.id, n)) ? void 0 : e.title;
         }),
-        W = (0, d.$5)(D),
+        G = (0, d.$5)(D),
         F = r.useRef(!1);
     if (
         (r.useEffect(() => {
@@ -102,13 +102,13 @@ function A(e) {
             x.ZP.Icon,
             {
                 icon: a.Dio,
-                tooltip: E.intl.string(E.t.cpT0Cg),
+                tooltip: E.intl.string(E.t.cpT0Cq),
                 onClick: () => v.Z.closeChannelSidebar(A),
             },
             "close",
         ),
     ),
-    W)
+    G)
         ? (0, l.jsx)(c.Z, {
               guild: L,
               channelId: D.id,
@@ -124,12 +124,12 @@ function A(e) {
                       "aria-label": E.intl.string(E.t.BIYAqa),
                       children: (0, C.ud)({
                           channel: D,
-                          channelName: U ? G : M,
+                          channelName: U ? W : M,
                           guild: L,
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await Promise.all([t.e("24783"), t.e("63384")]).then(
+                                  let { default: e } = await Promise.all([t.e("24783"), t.e("41815")]).then(
                                       t.bind(t, 439635),
                                   );
                                   return (n) =>

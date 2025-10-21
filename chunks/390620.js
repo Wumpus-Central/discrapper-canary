@@ -9,8 +9,8 @@ var i = n(120356),
     u = n(430824),
     c = n(70956),
     d = n(388032),
-    h = n(902378),
-    m = n(74866);
+    h = n(384490),
+    m = n(583140);
 let g = 6 * c.Z.Millis.SECOND;
 function p(e) {
     let { emoji: t, guildId: n } = e,
@@ -28,7 +28,7 @@ function p(e) {
             (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "text-tertiary",
-                children: d.intl.format(d.t.BaxFf3, {
+                children: d.intl.format(d.t.BaxFf8, {
                     emojiName: t.name,
                     emojiNameHook: (e, t) =>
                         (0, r.jsx)(

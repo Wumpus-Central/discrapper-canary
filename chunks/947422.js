@@ -4,7 +4,7 @@ r(647438);
 var o = r(793030),
     i = r(481060),
     c = r(388032),
-    l = r(614905),
+    l = r(76349),
     s = r(768982);
 let a = (t) => {
     let { text: e, icon: r, foreground: o } = t;
@@ -88,12 +88,12 @@ function u(t) {
                     type: "image",
                     src: s.Z,
                 },
-                title: c.intl.string(c.t.UVuXCg),
+                title: c.intl.string(c.t.UVuXCs),
                 onClose: u,
                 transitionState: l,
                 actions: [
                     {
-                        text: c.intl.string(c.t.obLqZ2),
+                        text: c.intl.string(c.t.obLqZ8),
                         variant: "primary",
                         onClick: u,
                     },
@@ -105,11 +105,11 @@ function u(t) {
                         foreground: "var(--status-danger)",
                     }),
                     (0, n.jsx)(a, {
-                        text: c.intl.string(c.t.x58YtL),
+                        text: c.intl.string(c.t.x58YtH),
                         icon: i.gkL,
                     }),
                     (0, n.jsx)(a, {
-                        text: c.intl.string(c.t.XtVqlZ),
+                        text: c.intl.string(c.t.XtVqla),
                         icon: i.V9,
                     }),
                 ],

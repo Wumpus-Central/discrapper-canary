@@ -16,15 +16,15 @@ var r = n(951288),
     b = n(665149),
     y = n(910611),
     _ = n(359110),
-    j = n(592125),
-    O = n(703558),
+    O = n(592125),
+    j = n(703558),
     x = n(430824),
     v = n(979651),
     C = n(664342),
     I = n(124368),
     S = n(981631),
     E = n(388032),
-    Z = n(229);
+    Z = n(952899);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,7 +70,7 @@ function T(e, t) {
 }
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
-        R = (0, s.e7)([j.Z], () => j.Z.getChannel(t)),
+        R = (0, s.e7)([O.Z], () => O.Z.getChannel(t)),
         w = (0, s.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
     var D = R;
@@ -89,7 +89,7 @@ function N(e) {
         (i.useEffect(() => {
             if (null == R || M.current) return;
             M.current = !0;
-            let e = (0, p.K)(j.Z.getChannel(R.id), !0);
+            let e = (0, p.K)(O.Z.getChannel(R.id), !0);
             (0, u.yw)(S.rMx.CHANNEL_OPENED, T(P({}, e, (0, u.$H)(R.id)), { channel_view: N })),
                 (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, N]),
@@ -104,11 +104,11 @@ function N(e) {
         children: [
             (0, r.jsx)(d.Z, {
                 channel: R,
-                draftType: O.d.ChannelMessage,
+                draftType: j.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: k,
-                "aria-label": E.intl.string(E.t.Pwe8tL),
+                "aria-label": E.intl.string(E.t.Pwe8tN),
                 children: (0, y.ud)({
                     channel: R,
                     channelName: A,

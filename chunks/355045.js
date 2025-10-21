@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(981631),
     O = n(474936),
     v = n(388032),
-    I = n(15470);
+    I = n(375646);
 let T = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
         T = i.useRef(null),
@@ -92,7 +92,7 @@ let T = function (e) {
                             (0, r.jsx)(u.Text, {
                                 className: I.guildStatusCopy,
                                 variant: "text-md/bold",
-                                children: v.intl.format(v.t["pob/cH"], { subscriptions: P }),
+                                children: v.intl.format(v.t["pob/cL"], { subscriptions: P }),
                             }),
                         ],
                     }),
@@ -100,7 +100,7 @@ let T = function (e) {
                         ? (0, r.jsx)(u.Text, {
                               className: I.guildBoostCountCurrentUser,
                               variant: "text-sm/normal",
-                              children: v.intl.format(v.t.Jeto2t, { numSubscriptions: R }),
+                              children: v.intl.format(v.t.Jeto2u, { numSubscriptions: R }),
                           })
                         : null,
                 ],
@@ -148,7 +148,7 @@ let T = function (e) {
                                       color: "currentColor",
                                       className: I.guildBoostCtaGiftIcon,
                                   }),
-                                  v.intl.string(v.t["8MYSQ0"]),
+                                  v.intl.string(v.t["8MYSQw"]),
                               ],
                           })
                         : (0, r.jsx)(c.zx, {
@@ -162,7 +162,7 @@ let T = function (e) {
                               color: c.zx.Colors.WHITE,
                               onClick: w,
                               size: c.zx.Sizes.LARGE,
-                              children: v.intl.string(v.t.Q43TvL),
+                              children: v.intl.string(v.t.Q43TvC),
                           }),
                 ],
             }),

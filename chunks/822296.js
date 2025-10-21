@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(592125),
     f = n(231338),
     _ = n(388032),
-    p = n(885347);
+    p = n(15456);
 function h(e) {
     var t;
     let { stream: n, width: i } = e,
@@ -49,7 +49,7 @@ function h(e) {
                                     onClick: (e) => {
                                         e.stopPropagation(), m();
                                     },
-                                    text: _.intl.string(_.t["4EGMWF"]),
+                                    text: _.intl.string(_.t["4EGMWL"]),
                                 }),
                             ],
                         }),

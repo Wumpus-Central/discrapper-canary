@@ -31,8 +31,8 @@ var n,
     I = r(998502),
     T = r(981631),
     L = r(388032),
-    F = r(589151),
-    N = r(10198);
+    F = r(407791),
+    N = r(197571);
 function D(t, e, r) {
     return (
         e in t
@@ -121,7 +121,7 @@ class B extends (n = s.PureComponent) {
                         alpha2: e.alpha2,
                         countryCode: e.code.split(" ")[0],
                         className: N.marginBottom20,
-                        label: L.intl.string(L.t.tUjnxs),
+                        label: L.intl.string(L.t.tUjnxr),
                         error: null != (t = this.renderError("login")) ? t : this.renderError("email"),
                         onChange: (t, e) =>
                             this.setState({
@@ -138,7 +138,7 @@ class B extends (n = s.PureComponent) {
                         required: !0,
                     }),
                     (0, o.jsx)(C.II, {
-                        label: L.intl.string(L.t["CIGa+/"]),
+                        label: L.intl.string(L.t["CIGa+7"]),
                         error: this.renderError("password"),
                         onChange: (t) => this.setState({ password: t }),
                         name: "password",
@@ -157,7 +157,7 @@ class B extends (n = s.PureComponent) {
                                 onClick: this.handleForgotPassword,
                                 look: p.zx.Looks.LINK,
                                 color: p.zx.Colors.LINK,
-                                children: L.intl.string(L.t.wWIufn),
+                                children: L.intl.string(L.t.wWIufs),
                             }),
                             (0, o.jsx)(C.zx, {
                                 onClick: () =>
@@ -177,7 +177,7 @@ class B extends (n = s.PureComponent) {
                                 look: p.zx.Looks.LINK,
                                 color: p.zx.Colors.LINK,
                                 disabled: r,
-                                children: L.intl.string(L.t["/kpMDg"]),
+                                children: L.intl.string(L.t["/kpMDt"]),
                             }),
                         ],
                     }),
@@ -190,8 +190,8 @@ class B extends (n = s.PureComponent) {
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(c.xBx, {
-                    title: L.intl.string(L.t.bPP34e),
-                    subtitle: L.intl.string(L.t.rvx0T0),
+                    title: L.intl.string(L.t.bPP34Q),
+                    subtitle: L.intl.string(L.t.rvx0T4),
                 }),
                 (0, o.jsx)(c.fef, { children: this.renderDefaultForm() }),
                 (0, o.jsx)(c.Go$, {
@@ -199,13 +199,13 @@ class B extends (n = s.PureComponent) {
                         variant: "secondary",
                         size: "md",
                         onClick: e,
-                        text: L.intl.string(L.t["13/7kZ"]),
+                        text: L.intl.string(L.t["13/7kX"]),
                         type: "button",
                     }),
                     actions: [
                         {
                             variant: "primary",
-                            text: L.intl.string(L.t["3PatS0"]),
+                            text: L.intl.string(L.t["3PatSz"]),
                             onClick: this.handleLogin,
                             loading: t === T.u34.LOGGING_IN,
                         },
@@ -231,8 +231,8 @@ class B extends (n = s.PureComponent) {
     }
     renderDisabledAccount() {
         let t = this.props.loginStatus === T.u34.ACCOUNT_DISABLED,
-            e = t ? L.intl.string(L.t["j3rC+f"]) : L.intl.string(L.t.ZFWofn),
-            r = t ? L.intl.string(L.t["6eNTWV"]) : L.intl.string(L.t.pCBti4);
+            e = t ? L.intl.string(L.t["j3rC+U"]) : L.intl.string(L.t.ZFWofo),
+            r = t ? L.intl.string(L.t["6eNTWe"]) : L.intl.string(L.t["pCBti+"]);
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(c.xBx, {
@@ -243,12 +243,12 @@ class B extends (n = s.PureComponent) {
                     leading: (0, o.jsx)(f.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: L.intl.format(L.t.js2rr6, { onClick: this.handleCancelAccountDeletion }),
+                        children: L.intl.format(L.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
                     }),
                     actions: [
                         {
                             variant: "primary",
-                            text: L.intl.string(L.t.JhDw5u),
+                            text: L.intl.string(L.t.JhDw5o),
                             onClick: this.handleReset,
                         },
                     ],
@@ -277,7 +277,7 @@ class B extends (n = s.PureComponent) {
         return (0, o.jsx)(c.fef, {
             children: (0, o.jsx)(y.Z, {
                 title: L.intl.string(L.t["+xqy3d"]),
-                subtitle: L.intl.format(L.t.ef4uZ2, { onResendClick: this.handleResendCode }),
+                subtitle: L.intl.format(L.t.ef4uZ7, { onResendClick: this.handleResendCode }),
                 error: t,
                 onSubmit: this.handlePasswordReset,
                 onCancel: void 0,
@@ -356,7 +356,7 @@ class B extends (n = s.PureComponent) {
                               let e = [
                                   {
                                       variant: "primary",
-                                      text: L.intl.string(L.t.BddRzc),
+                                      text: L.intl.string(L.t.BddRzS),
                                       onClick: t.onClose,
                                       fullWidth: !0,
                                   },
@@ -366,7 +366,7 @@ class B extends (n = s.PureComponent) {
                                   Z(
                                       M(
                                           {
-                                              title: L.intl.string(L.t["6Ecytr"]),
+                                              title: L.intl.string(L.t["6Ecyts"]),
                                               actions: e,
                                           },
                                           t,
@@ -374,7 +374,7 @@ class B extends (n = s.PureComponent) {
                                       {
                                           children: (0, o.jsx)(f.Text, {
                                               variant: "text-md/normal",
-                                              children: L.intl.string(L.t.iAcrqa),
+                                              children: L.intl.string(L.t.iAcrqV),
                                           }),
                                       },
                                   ),
@@ -386,8 +386,8 @@ class B extends (n = s.PureComponent) {
                                   Z(
                                       M(
                                           {
-                                              header: L.intl.string(L.t.f5Pi7O),
-                                              confirmText: L.intl.string(L.t.BddRzc),
+                                              header: L.intl.string(L.t.f5Pi7A),
+                                              confirmText: L.intl.string(L.t.BddRzS),
                                               confirmButtonColor: p.zx.Colors.BRAND,
                                           },
                                           t,
@@ -395,7 +395,7 @@ class B extends (n = s.PureComponent) {
                                       {
                                           children: (0, o.jsx)(f.Text, {
                                               variant: "text-md/normal",
-                                              children: L.intl.format(L.t["6u5hQ0"], { email: r }),
+                                              children: L.intl.format(L.t["6u5hQ9"], { email: r }),
                                           }),
                                       },
                                   ),

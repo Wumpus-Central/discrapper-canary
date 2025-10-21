@@ -113,7 +113,7 @@ function T(e) {
                         },
                         onUserClick: (e) => e.stopPropagation(),
                         disableUserPopout: !!x || ((e) => e === t.id),
-                        "aria-label": O.intl.string(O.t.jNqDh4),
+                        "aria-label": O.intl.string(O.t["jNqDh/"]),
                     }),
                 ],
             }),

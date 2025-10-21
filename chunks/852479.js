@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(893966),
     C = n(527379),
     m = n(388032),
-    b = n(399291),
-    p = n(508708);
+    b = n(266631),
+    p = n(51237);
 function f(e) {
     let { guild: t, onSubmit: i } = e,
         f = (0, a.e7)([d.Z], () => d.Z.getMembersCountByGuildId(t.id, c.R_.NEW_GUILD_MEMBER), [t.id]),
@@ -90,7 +90,7 @@ function f(e) {
                       children: (0, r.jsx)(s.Text, {
                           variant: "text-sm/normal",
                           color: "always-white",
-                          children: m.intl.format(m.t["/i5uJy"], {
+                          children: m.intl.format(m.t["/i5uJ1"], {
                               count: v,
                               date: h,
                           }),
@@ -109,7 +109,7 @@ function f(e) {
                                   color: "always-white",
                                   className: p.memberNoticeAction,
                                   children: [
-                                      (0, r.jsx)("div", { children: m.intl.string(m.t.rkyOzM) }),
+                                      (0, r.jsx)("div", { children: m.intl.string(m.t.rkyOzK) }),
                                       (0, r.jsx)(s.tBG, {
                                           size: "custom",
                                           color: "currentColor",

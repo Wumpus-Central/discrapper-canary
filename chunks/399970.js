@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(600164),
     f = n(695103),
     _ = n(388032),
-    p = n(518952),
-    h = n(10198);
+    p = n(39205),
+    h = n(197571);
 let m = /^\d+$|^$/;
 function g(e, t, n) {
     if (null == e) return null;
@@ -69,7 +69,7 @@ function E(e) {
                   className: p.inputWrapper,
                   children: (0, r.jsx)(s.oil, {
                       required: !0,
-                      label: _.intl.string(_.t.fF4zxs),
+                      label: _.intl.string(_.t.fF4zxq),
                       value: v,
                       maxLength: 5,
                       onChange: (e) => I(e),
@@ -86,15 +86,15 @@ function E(e) {
                     loading: b,
                     disabled: !A || 0 === y.length || ("localhost" === T && 0 === v.length),
                     variant: L ? "critical-primary" : "active",
-                    text: L ? _.intl.string(_.t.d6TR3N) : _.intl.string(_.t.qwuK5O),
+                    text: L ? _.intl.string(_.t.d6TR3I) : _.intl.string(_.t.qwuK5I),
                     onClick: x,
                 },
             ],
             [y.length, b, L, A, v.length, x, T],
         );
     return (0, r.jsxs)(a.Modal, {
-        title: _.intl.string(_.t.f8fzk5),
-        subtitle: _.intl.string(_.t.a6Vilp),
+        title: _.intl.string(_.t.f8fzky),
+        subtitle: _.intl.string(_.t.a6Vill),
         actions: M,
         onClose: t,
         transitionState: n,
@@ -111,7 +111,7 @@ function E(e) {
                             required: !0,
                             value: y,
                             maxLength: 19,
-                            error: A ? null : _.intl.string(_.t.gPNgKC),
+                            error: A ? null : _.intl.string(_.t.gPNgKO),
                             onChange: R,
                             disabled: b,
                         }),
@@ -119,18 +119,18 @@ function E(e) {
                     (0, r.jsx)("div", {
                         className: p.inputWrapper,
                         children: (0, r.jsx)(s.q4e, {
-                            label: _.intl.string(_.t["/GTqXF"]),
+                            label: _.intl.string(_.t["/GTqXG"]),
                             isDisabled: !A || "" === y,
                             value: T,
                             options: [
                                 {
                                     value: "localhost",
-                                    label: _.intl.string(_.t["+Y9Y6u"]),
+                                    label: _.intl.string(_.t["+Y9Y6r"]),
                                     key: "localhost",
                                 },
                                 {
                                     value: "proxy",
-                                    label: _.intl.string(_.t.uaksyc),
+                                    label: _.intl.string(_.t.uaksyW),
                                     key: "proxy",
                                 },
                             ],

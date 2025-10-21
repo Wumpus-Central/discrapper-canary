@@ -190,7 +190,7 @@ let G = "WELCOME_CHANNEL",
                                         size: "xxs",
                                         color: "currentColor",
                                     }),
-                                    (0, r.jsx)("span", { children: I ? P : D.intl.string(D.t.zFuCsL) }),
+                                    (0, r.jsx)("span", { children: I ? P : D.intl.string(D.t.zFuCsF) }),
                                 ],
                             }),
                         ],
@@ -198,7 +198,7 @@ let G = "WELCOME_CHANNEL",
                     (0, r.jsx)(g.hU, {
                         variant: "icon-only",
                         icon: g.XHJ,
-                        "aria-label": D.intl.string(D.t.JYBc3N),
+                        "aria-label": D.intl.string(D.t.JYBc3K),
                         onClick: R,
                     }),
                 ],
@@ -262,7 +262,7 @@ let G = "WELCOME_CHANNEL",
                   children: [
                       (0, r.jsx)(g.Heading, {
                           variant: "heading-lg/semibold",
-                          children: D.intl.string(D.t["2rkmDg"]),
+                          children: D.intl.string(D.t["2rkmDr"]),
                       }),
                       (0, r.jsx)("div", {
                           className: A.notice,
@@ -270,7 +270,7 @@ let G = "WELCOME_CHANNEL",
                               variant: "text-md/normal",
                               children: [
                                   (0, r.jsx)(N.Z, { className: A.noticeIcon }),
-                                  D.intl.format(D.t.oj2vi4, {
+                                  D.intl.format(D.t["oj2vi+"], {
                                       onboardingLink: (e) =>
                                           (0, r.jsx)(C.Z, {
                                               onClick: F,
@@ -282,7 +282,7 @@ let G = "WELCOME_CHANNEL",
                       }),
                       (0, r.jsx)(g.Text, {
                           variant: "text-sm/normal",
-                          children: D.intl.string(D.t["w2d74+"]),
+                          children: D.intl.string(D.t.w2d74x),
                       }),
                       (0, r.jsx)(P.Z, {
                           enabled: S,
@@ -310,8 +310,8 @@ let G = "WELCOME_CHANNEL",
                                     }
                                   : void 0,
                           animateStatus: b,
-                          firstLine: S ? D.intl.string(D.t.JbB7Qk) : D.intl.string(D.t["/bd0Qk"]),
-                          secondLine: S ? D.intl.string(D.t["TA1g7+"]) : D.intl.string(D.t.nc6r1N),
+                          firstLine: S ? D.intl.string(D.t.JbB7Ql) : D.intl.string(D.t["/bd0Qv"]),
+                          secondLine: S ? D.intl.string(D.t.TA1g7z) : D.intl.string(D.t.nc6r1B),
                       }),
                       (0, r.jsxs)("div", {
                           className: A.previewContainer,
@@ -329,7 +329,7 @@ let G = "WELCOME_CHANNEL",
                                       (0, r.jsx)(g.Heading, {
                                           className: A.welcomeTitle,
                                           variant: "heading-xl/semibold",
-                                          children: D.intl.format(D.t["0aydCA"], {
+                                          children: D.intl.format(D.t["0aydCN"], {
                                               guildName: t.name,
                                               guildNameHook: (e, n) =>
                                                   (0, r.jsxs)(
@@ -351,7 +351,7 @@ let G = "WELCOME_CHANNEL",
                                       (0, r.jsx)("div", {
                                           className: A.descriptionWrapper,
                                           children: (0, r.jsx)(g.Kx8, {
-                                              placeholder: D.intl.string(D.t.qzZHaW),
+                                              placeholder: D.intl.string(D.t.qzZHaX),
                                               onChange: (e) => {
                                                   (0, O.VP)({ description: e });
                                               },
@@ -375,8 +375,8 @@ let G = "WELCOME_CHANNEL",
                               (0, r.jsx)("div", {
                                   className: A.welcomeChannels,
                                   children: (0, r.jsx)(g.gNt, {
-                                      label: D.intl.string(D.t.euJXzc),
-                                      description: D.intl.string(D.t.VOnnn5),
+                                      label: D.intl.string(D.t.euJXzT),
+                                      description: D.intl.string(D.t.VOnnnz),
                                       children:
                                           null == E
                                               ? void 0

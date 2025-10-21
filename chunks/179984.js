@@ -28,7 +28,7 @@ var r = n(951288),
     R = n(21023),
     P = n(474936),
     w = n(388032),
-    D = n(213599),
+    D = n(17355),
     L = n(102655),
     x = n(768236),
     M = n(314907),
@@ -99,7 +99,7 @@ let Z = () => {
             children: (0, r.jsx)(u.Heading, {
                 className: D.mostPopularText,
                 variant: "heading-deprecated-12/extrabold",
-                children: w.intl.string(w.t["o/oRJC"]),
+                children: w.intl.string(w.t["o/oRJB"]),
             }),
         }),
     V = (e) => {
@@ -209,7 +209,7 @@ let Z = () => {
             el = (0, b.Vi)(),
             { enabled: ec } = O.T.useExperiment({ location: "PlanComparisonTable" });
         if (!G || !W) return null;
-        let eu = ec ? w.intl.string(w.t.XXENra) : w.intl.string(w.t.ED4UVF),
+        let eu = ec ? w.intl.string(w.t.XXENra) : w.intl.string(w.t.ED4UVD),
             ed = {
                 label: (0, r.jsx)(u.Heading, {
                     className: D.__invalid_textColor,
@@ -286,7 +286,7 @@ let Z = () => {
                 ? null
                 : null != J || null != $
                   ? (0, r.jsx)(N.Cy, {
-                        text: null != J ? w.intl.string(w.t.IBYG5e) : w.intl.string(w.t.ce1v3d),
+                        text: null != J ? w.intl.string(w.t.IBYG5U) : w.intl.string(w.t.ce1v3V),
                         className: D.freeTrialPillWithSparkles,
                         colorOptions:
                             J === P.Si.TIER_0
@@ -312,7 +312,7 @@ let Z = () => {
                     (0, r.jsx)(u.Heading, {
                         className: o()(D.titleText, D.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
-                        children: null != L ? L : w.intl.string(w.t.FIbMh4),
+                        children: null != L ? L : w.intl.string(w.t.FIbMh9),
                     }),
                     (0, r.jsxs)("div", {
                         className: D.tableWrapper,

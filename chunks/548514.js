@@ -74,7 +74,7 @@ function R(e) {
                         variant: "secondary",
                         size: n,
                         icon: c.xhG,
-                        "aria-label": N.intl.string(N.t.UKOtz8),
+                        "aria-label": N.intl.string(N.t["UKOtz+"]),
                     },
                     e,
                 ),
@@ -151,13 +151,13 @@ function Z(e) {
               icon: c.svS,
               size: i,
               onClick: o,
-              "aria-label": N.intl.string(N.t.NgXl3N),
+              "aria-label": N.intl.string(N.t.NgXl3C),
               disabled: !d,
           })
         : (0, r.jsx)(c.Button, {
               variant: n,
               size: i,
-              text: "small" === l ? N.intl.string(N.t.qRZ35u) : N.intl.string(N.t.NgXl3N),
+              text: "small" === l ? N.intl.string(N.t.qRZ35t) : N.intl.string(N.t.NgXl3C),
               onClick: o,
               disabled: !d,
           });
@@ -171,12 +171,12 @@ function w(e) {
               size: t,
               onClick: a,
               loading: i,
-              "aria-label": N.intl.string(N.t.QO7rOz),
+              "aria-label": N.intl.string(N.t.QO7rO6),
           })
         : (0, r.jsx)(c.Button, {
               variant: "primary",
               size: t,
-              text: N.intl.string(N.t.QO7rOz),
+              text: N.intl.string(N.t.QO7rO6),
               onClick: a,
               loading: i,
           });
@@ -194,7 +194,7 @@ let D = a.forwardRef(function (e, t) {
                         .concat(location.protocol, "//")
                         .concat(location.host)
                         .concat(E.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e))),
-                    () => (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZW"]), c.ToastType.SUCCESS)),
+                    () => (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZf"]), c.ToastType.SUCCESS)),
                 );
         }, [n.id]),
         S = a.useCallback(() => {
@@ -206,8 +206,8 @@ let D = a.forwardRef(function (e, t) {
         }, [n]),
         O = (0, f.Z)({
             id: n.id,
-            label: N.intl.string(N.t["FfCL+/"]),
-            onSuccess: () => (0, c.showToast)((0, c.createToast)(N.intl.string(N.t.eNjAam), c.ToastType.SUCCESS)),
+            label: N.intl.string(N.t["FfCL+6"]),
+            onSuccess: () => (0, c.showToast)((0, c.createToast)(N.intl.string(N.t.eNjAah), c.ToastType.SUCCESS)),
         }),
         A = (0, b.Z)({
             application: n,
@@ -219,7 +219,7 @@ let D = a.forwardRef(function (e, t) {
             (e, t) =>
                 (0, r.jsxs)(c.v2r, {
                     navId: "application-directory-profile",
-                    "aria-label": N.intl.string(N.t["/7I4/P"]),
+                    "aria-label": N.intl.string(N.t["/7I4/C"]),
                     onClose: t,
                     onSelect: void 0,
                     children: [
@@ -228,7 +228,7 @@ let D = a.forwardRef(function (e, t) {
                             ? (0, r.jsx)(c.kSQ, {
                                   children: (0, r.jsx)(c.sNh, {
                                       id: "copy",
-                                      label: N.intl.string(N.t.z4sP5O),
+                                      label: N.intl.string(N.t.z4sP5J),
                                       action: y,
                                       icon: c.xPt,
                                   }),
@@ -237,7 +237,7 @@ let D = a.forwardRef(function (e, t) {
                         (0, r.jsx)(c.kSQ, {
                             children: (0, r.jsx)(c.sNh, {
                                 id: "report",
-                                label: N.intl.string(N.t.NgA5vr),
+                                label: N.intl.string(N.t.NgA5vp),
                                 color: "danger",
                                 action: S,
                             }),
@@ -323,7 +323,7 @@ let D = a.forwardRef(function (e, t) {
                               size: i,
                               icon: c.xPt,
                               onClick: y,
-                              "aria-label": N.intl.string(N.t.z4sP5O),
+                              "aria-label": N.intl.string(N.t.z4sP5J),
                           })
                         : null,
                     (0, r.jsx)(R, {

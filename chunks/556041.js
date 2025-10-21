@@ -6,7 +6,7 @@ var i = n(28664),
     o = n(600164),
     s = n(245315),
     l = n(388032),
-    c = n(804660);
+    c = n(5146);
 let u = () =>
     (0, r.jsxs)(o.Z, {
         align: o.Z.Align.CENTER,
@@ -25,13 +25,13 @@ let u = () =>
                 className: c.nameWrapper,
                 children: [
                     (0, r.jsx)(i.u, {
-                        text: l.intl.string(l.t.oMx98P),
+                        text: l.intl.string(l.t.oMx98L),
                         children: (0, r.jsx)("div", { className: c.staffBadge }),
                     }),
                     (0, r.jsx)(a.Heading, {
                         className: c.header,
                         variant: "heading-md/semibold",
-                        children: l.intl.string(l.t.xfAlNz),
+                        children: l.intl.string(l.t.xfAlNx),
                     }),
                 ],
             }),
@@ -39,13 +39,13 @@ let u = () =>
                 className: c.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: l.intl.string(l.t.BUZ0sr),
+                children: l.intl.string(l.t.BUZ0sl),
             }),
             (0, r.jsx)(a.Text, {
                 className: c.description,
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: l.intl.string(l.t.w5beJC),
+                children: l.intl.string(l.t.w5beJH),
             }),
         ],
     });

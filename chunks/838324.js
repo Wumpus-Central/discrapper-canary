@@ -10,7 +10,7 @@ var i = n(442837),
     d = n(974513),
     u = n(290511),
     g = n(388032),
-    m = n(36040);
+    m = n(636942);
 function p(e) {
     let { guildId: t, scrollToQuestions: n } = e,
         p = (0, i.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
@@ -48,12 +48,12 @@ function p(e) {
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/bold",
                         color: "text-brand",
-                        children: g.intl.format(g.t.kvroKC, { count: _ }),
+                        children: g.intl.format(g.t.kvroKO, { count: _ }),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/bold",
                         color: "text-muted",
-                        children: g.intl.format(g.t["0MjxJy"], { count: v }),
+                        children: g.intl.format(g.t["0MjxJ5"], { count: v }),
                     }),
                 ],
             }),
@@ -69,7 +69,7 @@ function p(e) {
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: g.intl.format(g.t.k0COZW, { count: u.md }),
+                        children: g.intl.format(g.t.k0COZY, { count: u.md }),
                     }),
                 ],
             }),
@@ -80,7 +80,7 @@ function p(e) {
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: g.intl.format(g.t.PwXgS0, { count: u.X }),
+                        children: g.intl.format(g.t.PwXgSy, { count: u.X }),
                     }),
                 ],
             }),
@@ -99,7 +99,7 @@ function p(e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: g.intl.string(g.t.AyvkOD),
+                                    children: g.intl.string(g.t.AyvkOK),
                                 }),
                             ],
                         }),
@@ -115,7 +115,7 @@ function p(e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: g.intl.format(g.t["8Geut7"], {
+                                    children: g.intl.format(g.t["8Geut3"], {
                                         count: y,
                                         prejoinHook: (e) =>
                                             (0, r.jsx)(a.Anchor, {

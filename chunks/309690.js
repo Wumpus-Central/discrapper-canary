@@ -9,15 +9,15 @@ function d(t) {
     var i;
     let { onClose: n, transitionState: d } = t,
         o = null == (i = (0, l.hp)(l.u.STREAM_FULL)) ? void 0 : i.errorCode,
-        c = s.intl.formatToPlainString(s.t["ejOT9/"], { errorCode: o });
+        u = s.intl.formatToPlainString(s.t.ejOT95, { errorCode: o });
     return (0, e.jsx)(r.u_l, {
         transitionState: d,
-        title: s.intl.string(s.t.GzjdOz),
-        subtitle: s.intl.string(s.t.VVZDBA),
+        title: s.intl.string(s.t.GzjdO5),
+        subtitle: s.intl.string(s.t.VVZDBL),
         onClose: n,
         actions: [
             {
-                text: s.intl.string(s.t.BddRzc),
+                text: s.intl.string(s.t.BddRzS),
                 variant: "primary",
                 onClick: n,
             },
@@ -26,7 +26,7 @@ function d(t) {
             variant: "text-md/medium",
             selectable: !0,
             color: "text-muted",
-            children: c,
+            children: u,
         }),
     });
 }

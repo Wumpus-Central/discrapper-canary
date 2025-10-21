@@ -12,8 +12,8 @@ var l = t(951288),
     Z = t(430824),
     f = t(496675),
     b = t(594174),
-    m = t(388032);
-function O(e) {
+    O = t(388032);
+function m(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -73,8 +73,8 @@ function h(e, n, h) {
                     ? (0, l.jsx)(a.sNh, {
                           id: "remove",
                           label: P.isForumPost()
-                              ? m.intl.formatToPlainString(m.t.v2KNNz, { user: e.username })
-                              : m.intl.formatToPlainString(m.t["27xWaW"], { user: e.username }),
+                              ? O.intl.formatToPlainString(O.t.v2KNNx, { user: e.username })
+                              : O.intl.formatToPlainString(O.t["27xWaT"], { user: e.username }),
                           color: "danger",
                           action: () => d.Z.removeMember(P.id, e.id, "Context Menu"),
                       })
@@ -83,8 +83,8 @@ function h(e, n, h) {
                     ? (0, l.jsx)(a.sNh, {
                           id: "kick",
                           label: N
-                              ? m.intl.formatToPlainString(m.t["1Ie87u"], { user: e.username })
-                              : m.intl.formatToPlainString(m.t["9l/iTU"], { user: e.username }),
+                              ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: e.username })
+                              : O.intl.formatToPlainString(O.t["9l/iTS"], { user: e.username }),
                           color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
@@ -92,7 +92,7 @@ function h(e, n, h) {
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
-                                          p(O({}, t), {
+                                          p(m({}, t), {
                                               guildId: v.id,
                                               user: e,
                                           }),
@@ -104,16 +104,16 @@ function h(e, n, h) {
                     ? (0, l.jsx)(a.sNh, {
                           id: "ban",
                           label: N
-                              ? m.intl.formatToPlainString(m.t.i62APT, { user: e.username })
-                              : m.intl.formatToPlainString(m.t.WnpUBg, { user: e.username }),
+                              ? O.intl.formatToPlainString(O.t.i62APf, { user: e.username })
+                              : O.intl.formatToPlainString(O.t.WnpUBi, { user: e.username }),
                           color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e("43350").then(t.bind(t, 98746));
+                                  let { default: n } = await t.e("4114").then(t.bind(t, 98746));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
-                                          p(O({}, t), {
+                                          p(m({}, t), {
                                               guildId: v.id,
                                               user: e,
                                           }),

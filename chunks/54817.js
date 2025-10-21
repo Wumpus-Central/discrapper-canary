@@ -12,7 +12,7 @@ var i = n(120356),
     f = n(981631),
     _ = n(674563),
     p = n(388032),
-    h = n(78642);
+    h = n(682392);
 function m(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         m = (0, l.ZP)(t),
@@ -54,7 +54,7 @@ function m(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: h.username,
-                                    children: p.intl.string(p.t.hG1StL),
+                                    children: p.intl.string(p.t.hG1StD),
                                 }),
                                 (0, r.jsx)(s.Z, {
                                     type: _.Hb.SYSTEM_DM,
@@ -69,12 +69,12 @@ function m(e) {
                         className: a()(h.__invalid_messageContent, { [h.compact]: n }),
                         children:
                             t.type === f.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? p.intl.format(p.t["+m8eDw"], {
+                                ? p.intl.format(p.t["+m8eD7"], {
                                       username: m.nick,
                                       usernameHook: g,
                                       time: O,
                                   })
-                                : p.intl.format(p.t.BHeke3, {
+                                : p.intl.format(p.t["BHeke+"], {
                                       username: m.nick,
                                       usernameHook: g,
                                   }),

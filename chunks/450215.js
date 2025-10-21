@@ -45,13 +45,13 @@ function y(e) {
         [F] = x._T(P),
         [H] = x.mR(P),
         [W] = x.PK(P),
-        [V] = x.d9(P, 1024),
-        z = "" !== F ? F : C.intl.string(C.t.QWhe9P),
-        K = "" !== F && null != V && "" !== W && null != H && !B,
+        [z] = x.d9(P, 1024),
+        V = "" !== F ? F : C.intl.string(C.t.QWhe9G),
+        K = "" !== F && null != z && "" !== W && null != H && !B,
         Y = x.rU(P),
-        { loading: q, error: X, handleCreateOrUpdateFromEditState: Q } = x.Xo(),
-        { submitting: J, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
-        et = q || J;
+        { loading: q, error: X, handleCreateOrUpdateFromEditState: J } = x.Xo(),
+        { submitting: Q, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
+        et = q || Q;
     return (0, r.jsxs)("div", {
         className: O.container,
         children: [
@@ -61,15 +61,15 @@ function y(e) {
                     (0, r.jsx)("div", {
                         className: O.headerImageContainer,
                         children:
-                            null == V
+                            null == z
                                 ? (0, r.jsx)(j.Z, {
                                       className: O.starIcon,
                                       "aria-hidden": !0,
                                   })
                                 : (0, r.jsx)("img", {
                                       className: O.headerImage,
-                                      src: V,
-                                      alt: z,
+                                      src: z,
+                                      alt: V,
                                   }),
                     }),
                     (0, r.jsxs)("div", {
@@ -78,7 +78,7 @@ function y(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: "text-md/medium",
                                 color: "interactive-active",
-                                children: z,
+                                children: V,
                             }),
                             (0, r.jsx)(d.LZC, { size: 2 }),
                             (0, r.jsxs)("div", {
@@ -93,13 +93,13 @@ function y(e) {
                                     G &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
-                                            text: C.intl.string(C.t.nhbtEh),
+                                            text: C.intl.string(C.t.nhbtEl),
                                             className: O.archivedBadge,
                                         }),
                                     U &&
                                         (0, r.jsx)(d.IGR, {
                                             color: (0, u.Lq)(_.Ilk.PRIMARY_500),
-                                            text: C.intl.string(C.t.aiwXen),
+                                            text: C.intl.string(C.t.aiwXeq),
                                             className: O.unsavedBadge,
                                         }),
                                     null != L &&
@@ -121,12 +121,12 @@ function y(e) {
                                       onClick: () => {
                                           x.GM(P), R ? null == N || N() : A(!1);
                                       },
-                                      text: C.intl.string(C.t["ETE/oK"]),
+                                      text: C.intl.string(C.t["ETE/oC"]),
                                   }),
                                   (0, r.jsx)(d.Button, {
                                       variant: "primary",
                                       onClick: () =>
-                                          Q({
+                                          J({
                                               guildId: l,
                                               editStateId: P,
                                               groupListingId: I,
@@ -137,13 +137,13 @@ function y(e) {
                                           }),
                                       disabled: !K || !Y,
                                       loading: et,
-                                      text: C.intl.string(C.t.R3BPHx),
+                                      text: C.intl.string(C.t["R3BPH+"]),
                                   }),
                               ],
                           })
                         : (0, r.jsx)(d.P3F, {
                               onClick: () => A(!0),
-                              "aria-label": C.intl.string(C.t["2qPbmJ"]),
+                              "aria-label": C.intl.string(C.t["2qPbmO"]),
                               children: (0, r.jsx)(d.vdY, {
                                   size: "xs",
                                   color: "currentColor",

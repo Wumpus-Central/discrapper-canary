@@ -12,7 +12,7 @@ var r = n(951288),
     g = n(978369),
     p = n(286957),
     m = n(388032),
-    b = n(200344);
+    b = n(44258);
 function h(e) {
     var t;
     let { tags: n, isCurrentUser: a, widgetType: s, applicationId: c, className: u, disableInteraction: h = !1 } = e,
@@ -25,7 +25,7 @@ function h(e) {
         E = (0, i.useRef)(null),
         T = (0, i.useRef)(null),
         [C, N] = (0, i.useState)(0),
-        [D, A] = (0, i.useState)(!1),
+        [A, D] = (0, i.useState)(!1),
         k = O(E, T, x, S, N);
     if (
         ((0, i.useEffect)(
@@ -41,7 +41,7 @@ function h(e) {
         !_ && !P)
     )
         return null;
-    let Z = D ? x : x.slice(0, x.length - C);
+    let Z = A ? x : x.slice(0, x.length - C);
     return (0, r.jsxs)("div", {
         className: l()(b.tagListContainer, u),
         children: [
@@ -69,16 +69,16 @@ function h(e) {
                             ),
                         }),
                         C > 0 &&
-                            (D
+                            (A
                                 ? (0, r.jsx)(j, {
                                       onClick: () => {
-                                          A(!1), w({ action: "COLLAPSE_GAME_TAGS" });
+                                          D(!1), w({ action: "COLLAPSE_GAME_TAGS" });
                                       },
                                   })
                                 : (0, r.jsx)(y, {
                                       numHidden: C,
                                       onClick: () => {
-                                          A(!0), w({ action: "EXPAND_GAME_TAGS" });
+                                          D(!0), w({ action: "EXPAND_GAME_TAGS" });
                                       },
                                       ref: E,
                                       disableInteraction: h,
@@ -114,7 +114,7 @@ let v = (e) => {
                 n &&
                     !l &&
                     (0, r.jsx)(s.u, {
-                        text: m.intl.string(m.t.Otv9fH),
+                        text: m.intl.string(m.t.Otv9fP),
                         children: (0, r.jsx)(c.P3F, {
                             onClick: () => {
                                 (0, f.RZ)(a, i, t),
@@ -125,7 +125,7 @@ let v = (e) => {
                                     });
                             },
                             className: b.removeButton,
-                            "aria-label": m.intl.formatToPlainString(m.t.GCn1nZ, { tag: h() }),
+                            "aria-label": m.intl.formatToPlainString(m.t.GCn1ne, { tag: h() }),
                             children: (0, r.jsx)(c.Dio, {
                                 size: "xxs",
                                 color: "currentColor",
@@ -148,12 +148,12 @@ let v = (e) => {
               })
             : (0, r.jsx)(s.u, {
                   asContainer: !0,
-                  text: m.intl.string(m.t.mriLXF),
+                  text: m.intl.string(m.t.mriLXL),
                   children: (0, r.jsx)(c.P3F, {
                       onClick: n,
                       className: b.expandButton,
                       innerRef: a,
-                      "aria-label": m.intl.string(m.t.mriLXF),
+                      "aria-label": m.intl.string(m.t.mriLXL),
                       children: (0, r.jsx)(c.Text, {
                           variant: "text-xxs/medium",
                           color: "none",
@@ -166,11 +166,11 @@ let v = (e) => {
         let { onClick: t } = e;
         return (0, r.jsx)(s.u, {
             asContainer: !0,
-            text: m.intl.string(m.t.z9VPra),
+            text: m.intl.string(m.t.z9VPrQ),
             children: (0, r.jsx)(c.P3F, {
                 onClick: t,
                 className: b.collapseButton,
-                "aria-label": m.intl.string(m.t.z9VPra),
+                "aria-label": m.intl.string(m.t.z9VPrQ),
                 children: (0, r.jsx)(u.Z, {
                     direction: u.Z.Directions.LEFT,
                     width: 12,

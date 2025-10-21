@@ -28,7 +28,7 @@ var r = n(951288),
     R = n(612853),
     P = n(981631),
     w = n(388032),
-    D = n(590557),
+    D = n(62868),
     L = n(133529);
 function x(e) {
     let {
@@ -220,7 +220,7 @@ function x(e) {
                           variant: "text-xs/semibold",
                           className: D.discountFooterText,
                           lineClamp: 2,
-                          children: w.intl.formatToPlainString(w.t.IhKBNT, { discountOfferAmount: eU }),
+                          children: w.intl.formatToPlainString(w.t.IhKBNX, { discountOfferAmount: eU }),
                       }),
               ],
           });

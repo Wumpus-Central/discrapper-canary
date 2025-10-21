@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => ee,
-    n: () => J,
+    n: () => Y,
 }),
     n(539854),
     n(415506);
@@ -25,8 +25,8 @@ var i = n(951288),
     y = n(325476),
     C = n(627050),
     S = n(722252),
-    O = n(146085),
-    N = n(601964),
+    N = n(146085),
+    O = n(601964),
     Z = n(598077),
     E = n(277053),
     w = n(388610),
@@ -42,9 +42,9 @@ var i = n(951288),
     k = n(233608),
     B = n(700785),
     H = n(51144),
-    V = n(257017),
+    U = n(257017),
     G = n(188857),
-    U = n(981631),
+    V = n(981631),
     W = n(388032),
     F = n(198750);
 function z(e) {
@@ -90,10 +90,10 @@ function q(e, t) {
         e
     );
 }
-let J = o.ZP.connectStores([E.Z, w.Z], () => {
+let Y = o.ZP.connectStores([E.Z, w.Z], () => {
     let e = w.Z.getChannel();
     return {
-        submitting: E.Z.formState === U.QZA.SUBMITTING,
+        submitting: E.Z.formState === V.QZA.SUBMITTING,
         onReset() {
             (0, g.S1)();
         },
@@ -107,7 +107,7 @@ let J = o.ZP.connectStores([E.Z, w.Z], () => {
         },
     };
 })(f.Z);
-function Y(e) {
+function J(e) {
     let { overwrite: t } = e,
         n = (0, o.e7)([E.Z], () => E.Z.channel),
         l = (0, o.e7)([R.Z], () => (null != n ? R.Z.getGuild(n.getGuildId()) : null)),
@@ -156,23 +156,23 @@ function Y(e) {
                         null != n && (e = n.name);
                     }
                 }
-                V.X(e);
+                U.X(e);
             }
         },
         x = (e) => {
-            let t = P.Z.can(U.Plq.ADMINISTRATOR, l) || P.Z.can(U.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
-            return n.isGuildStageVoice() && O.xS.has(e)
-                ? W.intl.string(W.t.bTS5lZ)
-                : !((!a.fS(e, U.Plq.MANAGE_ROLES) || t) && (null == e || P.Z.can(e, l) || t)) &&
-                      W.intl.string(W.t.nOtPMD);
+            let t = P.Z.can(V.Plq.ADMINISTRATOR, l) || P.Z.can(V.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
+            return n.isGuildStageVoice() && N.xS.has(e)
+                ? W.intl.string(W.t.bTS5lf)
+                : !((!a.fS(e, V.Plq.MANAGE_ROLES) || t) && (null == e || P.Z.can(e, l) || t)) &&
+                      W.intl.string(W.t.nOtPMM);
         },
         j = t.id === c,
-        v = n.isForumLikeChannel() && a.e$(t.deny, U.Plq.SEND_MESSAGES),
-        N = a.e$(t.deny, U.Plq.SEND_MESSAGES),
-        Z = a.e$(t.deny, U.Plq.READ_MESSAGE_HISTORY),
+        v = n.isForumLikeChannel() && a.e$(t.deny, V.Plq.SEND_MESSAGES),
+        O = a.e$(t.deny, V.Plq.SEND_MESSAGES),
+        Z = a.e$(t.deny, V.Plq.READ_MESSAGE_HISTORY),
         w = k.Z.generateChannelPermissionSpec(c, n, j, {
             createPostsDisabled: v,
-            sendMessagesDisabled: N,
+            sendMessagesDisabled: O,
             readMessageHistoryDisabled: Z,
             inGameMentionsExperiment: s,
         });
@@ -197,13 +197,13 @@ function Y(e) {
                 ? null
                 : (0, i.jsx)(d.Button, {
                       variant: "critical-secondary",
-                      text: W.intl.format(W.t.txPV7u, { name: m() }),
+                      text: W.intl.format(W.t.txPV7k, { name: m() }),
                       onClick: () => {
                           let e = m();
                           u.Z.show({
-                              title: W.intl.string(W.t.GuPYQE),
+                              title: W.intl.string(W.t.GuPYQB),
                               body: W.intl.format(W.t.xERCnZ, { name: e }),
-                              cancelText: W.intl.string(W.t["ETE/oK"]),
+                              cancelText: W.intl.string(W.t["ETE/oC"]),
                               onConfirm: () => h.Z.clearPermissionOverwrite(p, t.id),
                           });
                       },
@@ -271,10 +271,10 @@ function K(e) {
         d = (0, o.e7)([_.Z], () => _.Z.getSortedRoles(t.id)),
         u = (0, o.Wu)([T.ZP], () => T.ZP.getMemberIds(t.id));
     return (0, i.jsx)(v.Z, {
-        label: W.intl.string(W.t.lT5Ztr),
-        placeholder: W.intl.string(W.t.V2pZRk),
-        "aria-label": W.intl.string(W.t["Uvt+p6"]),
-        sections: [W.intl.string(W.t.LPJmLy), W.intl.string(W.t["9Oq93t"])],
+        label: W.intl.string(W.t.lT5Zth),
+        placeholder: W.intl.string(W.t.V2pZRh),
+        "aria-label": W.intl.string(W.t["Uvt+p/"]),
+        sections: [W.intl.string(W.t["LPJmL/"]), W.intl.string(W.t["9Oq93m"])],
         onRenderResult: (e) => {
             if (Q(e)) {
                 let t;
@@ -325,14 +325,14 @@ function $() {
             };
         }, [f]),
         S = (0, G.Z)(f, r),
-        O = (0, x.ZP)(),
+        N = (0, x.ZP)(),
         Z = (0, o.e7)([j.Z], () => j.Z.roleStyle),
         w = l.useCallback(
             (e, l) => {
                 if (null == t) return null;
                 (0, p.jW)(e, async () => {
                     let { id: e, role: r, name: s } = l,
-                        a = null != v ? (0, N.lV)(v) : null,
+                        a = null != v ? (0, O.lV)(v) : null,
                         o = null != r && a === r.id,
                         { default: c } = await n.e("83884").then(n.bind(n, 905687));
                     return (n) =>
@@ -345,9 +345,9 @@ function $() {
                                     ? void 0
                                     : () => {
                                           u.Z.show({
-                                              title: W.intl.string(W.t.GuPYQE),
+                                              title: W.intl.string(W.t.GuPYQB),
                                               body: W.intl.format(W.t.xERCnZ, { name: s }),
-                                              cancelText: W.intl.string(W.t["ETE/oK"]),
+                                              cancelText: W.intl.string(W.t["ETE/oC"]),
                                               onConfirm: () => h.Z.clearPermissionOverwrite(t.id, e),
                                           });
                                       },
@@ -385,7 +385,7 @@ function $() {
             (0, i.jsx)(
                 m.Z,
                 {
-                    theme: O,
+                    theme: N,
                     roleStyle: Z,
                     id: e.id,
                     role: e,
@@ -412,7 +412,7 @@ function $() {
                     {
                         id: e.id,
                         guild: v,
-                        theme: O,
+                        theme: N,
                         roleStyle: Z,
                         "aria-label": H.ZP.getUserTag(e, { decoration: "never" }),
                         onContextMenu: (t) =>
@@ -449,7 +449,7 @@ function $() {
             orientation: "vertical",
             children: [
                 (() => {
-                    let t = (0, c.wj)(O) ? n(521715) : n(299603);
+                    let t = (0, c.wj)(N) ? n(521715) : n(299603);
                     return (0, i.jsx)(d.yRy, {
                         targetElementRef: e,
                         renderPopout: T,
@@ -465,9 +465,9 @@ function $() {
                                         children: [
                                             (0, i.jsxs)("span", {
                                                 children: [
-                                                    W.intl.string(W.t.LPJmLy),
+                                                    W.intl.string(W.t["LPJmL/"]),
                                                     "/",
-                                                    W.intl.string(W.t["9Oq93t"]),
+                                                    W.intl.string(W.t["9Oq93m"]),
                                                 ],
                                             }),
                                             (0, i.jsx)("img", {
@@ -492,12 +492,12 @@ function $() {
                             },
                         }),
                         (0, i.jsx)(d.Anchor, {
-                            href: A.Z.getArticleURL(U.BhN.PERMISSIONS_TUTORIAL),
+                            href: A.Z.getArticleURL(V.BhN.PERMISSIONS_TUTORIAL),
                             target: "_blank",
                             children: (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-link",
-                                children: W.intl.string(W.t["pfoA8/"]),
+                                children: W.intl.string(W.t.pfoA83),
                             }),
                         }),
                     ],
@@ -518,6 +518,6 @@ function ee() {
     let l = t[n];
     return (0, i.jsxs)(y.ZP, {
         className: F.container,
-        children: [(0, i.jsx)($, {}), (0, i.jsx)(Y, { overwrite: l })],
+        children: [(0, i.jsx)($, {}), (0, i.jsx)(J, { overwrite: l })],
     });
 }

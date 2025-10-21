@@ -37,12 +37,12 @@ var r = n(951288),
     G = n(981631),
     M = n(141006),
     U = n(388032),
-    B = n(258640),
-    F = n(250302),
-    H = n(10083),
+    B = n(149829),
+    F = n(12574),
+    H = n(21321),
     W = n(179517),
-    V = n(79829);
-let z = (0, x.Un)({
+    z = n(79829);
+let V = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
@@ -55,7 +55,7 @@ function Y(e) {
             a(t.name);
         }, [t.name]),
         (0, r.jsx)(m.oil, {
-            label: U.intl.string(U.t.dLbkBg),
+            label: U.intl.string(U.t.dLbkBk),
             required: !0,
             type: "text",
             value: l,
@@ -69,7 +69,7 @@ function Y(e) {
 }
 function q(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: s } = e,
-        o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
+        o = (0, P.F)(U.intl.string(U.t.Mi9Kbe)),
         d = (0, f.ZP)(),
         h = (0, v.oC)(n, t),
         x = {
@@ -78,7 +78,7 @@ function q(e) {
                 name: t.name,
             },
             light: {
-                src: V,
+                src: z,
                 name: t.name,
             },
         };
@@ -90,7 +90,7 @@ function q(e) {
         children: (e) => {
             let { visibleContent: p } = e;
             return (0, r.jsxs)(m.gNt, {
-                label: U.intl.string(U.t["9wVJRE"]),
+                label: U.intl.string(U.t["9wVJRB"]),
                 badge: p === u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE ? "new" : void 0,
                 children: [
                     (0, r.jsx)("div", {
@@ -149,12 +149,12 @@ function q(e) {
                                         (0, r.jsx)(m.Text, {
                                             variant: "text-sm/semibold",
                                             color: "button-outline-primary-text",
-                                            children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) }),
+                                            children: U.intl.format(B.default.VpEDJc, { magical: (0, r.jsx)(X, {}) }),
                                         }),
                                         (0, r.jsx)(m.Text, {
                                             variant: "text-xs/medium",
                                             color: "button-outline-primary-text",
-                                            children: U.intl.string(B.default.FJZeZG),
+                                            children: U.intl.string(B.default.FJZeZF),
                                         }),
                                     ],
                                 }),
@@ -162,7 +162,7 @@ function q(e) {
                                     onClick: O,
                                     variant: "expressive",
                                     icon: m.Ucv,
-                                    text: U.intl.string(U.t["+7XY39"]),
+                                    text: U.intl.string(U.t["+7XY31"]),
                                 }),
                             ],
                         }),
@@ -207,20 +207,20 @@ function X() {
             return e;
         })({}, t),
         className: n,
-        "data-text": U.intl.string(B.default["+/IHLi"]),
-        children: U.intl.string(B.default["+/IHLi"]),
+        "data-text": U.intl.string(B.default["+/IHLl"]),
+        children: U.intl.string(B.default["+/IHLl"]),
     });
 }
-function Q(e) {
+function J(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: a, hasEnhancedRoleColors: s } = e;
     return (0, r.jsx)("div", {
         className: F.colorPicker,
         children: (0, r.jsx)(m.gNt, {
-            label: U.intl.string(U.t["1F6FzM"]),
-            description: U.intl.string(U.t["9UCxlZ"]),
+            label: U.intl.string(U.t["1F6FzL"]),
+            description: U.intl.string(U.t["9UCxlf"]),
             required: !0,
-            children: (0, r.jsx)(z, {
+            children: (0, r.jsx)(V, {
                 defaultColor: G.p6O,
                 colors: a === T.g.GRADIENT && s ? M.tl : G.pmI,
                 value: i.color,
@@ -259,9 +259,9 @@ function Q(e) {
         }),
     });
 }
-function J(e) {
+function Q(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
-        s = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
+        s = (0, P.F)(U.intl.string(U.t.Mi9Kbe)),
         o = {
             nick: s.author.username,
             guildId: n,
@@ -275,7 +275,7 @@ function J(e) {
             name: t.name,
         },
         d = {
-            src: V,
+            src: z,
             name: t.name,
         },
         u = (0, v.oC)(n, t),
@@ -310,7 +310,7 @@ function J(e) {
                                             variant: "text-xs/medium",
                                             color: "text-secondary",
                                             className: F.lightThemeNotice,
-                                            children: U.intl.string(U.t.nxwm3N),
+                                            children: U.intl.string(U.t.nxwm3I),
                                         }),
                                 ],
                             }),
@@ -326,15 +326,15 @@ function $(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(m.rsf, {
-                label: U.intl.string(U.t.vceJPj),
+                label: U.intl.string(U.t.vceJPk),
                 checked: t.hoist,
                 onChange: (e) => (0, S.we)(t.id, e, t.mentionable),
                 disabled: n,
             }),
             (0, r.jsx)(m.izJ, { className: F.divider }),
             (0, r.jsx)(m.rsf, {
-                label: U.intl.formatToPlainString(U.t.DTXoJS, {}),
-                description: U.intl.string(U.t.kRg5W1),
+                label: U.intl.formatToPlainString(U.t.DTXoJQ, {}),
+                description: U.intl.string(U.t.kRg5W5),
                 checked: t.mentionable,
                 onChange: (e) => (0, S.we)(t.id, t.hoist, e),
                 disabled: n,
@@ -390,7 +390,7 @@ function ee(e) {
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
-                    (0, r.jsx)(Q, {
+                    (0, r.jsx)(J, {
                         role: n,
                         disabled: p,
                         currentStyle: u,
@@ -401,7 +401,7 @@ function ee(e) {
                         className: F.holographicInfoBox,
                         children: (0, r.jsx)(m.Text, {
                             variant: "text-xs/medium",
-                            children: U.intl.string(B.default.tBhCys),
+                            children: U.intl.string(B.default.tBhCyr),
                         }),
                     }),
                 (0, r.jsx)(Z.Z, {
@@ -409,7 +409,7 @@ function ee(e) {
                     disabled: p,
                     role: n,
                 }),
-                (0, r.jsx)(J, {
+                (0, r.jsx)(Q, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,

@@ -13,7 +13,7 @@ var n = r(951288),
     p = r(981631),
     b = r(135899),
     h = r(388032),
-    j = r(767875);
+    j = r(56726);
 function _(e) {
     let { guild: t } = e,
         r = m.ZP.getGuildIconURL({
@@ -45,19 +45,19 @@ function _(e) {
                     (0, n.jsx)(l.Heading, {
                         variant: "heading-lg/extrabold",
                         color: "header-primary",
-                        children: h.intl.string(h.t.MatO7O),
+                        children: h.intl.string(h.t.MatO7M),
                     }),
                     (0, n.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "header-primary",
-                        children: h.intl.string(h.t.VyPIen),
+                        children: h.intl.string(h.t.VyPIeu),
                     }),
                 ],
             }),
         ],
     });
 }
-let f = (e) => (e.toString() === p.Plq.MENTION_EVERYONE.toString() ? h.intl.string(h.t.yCpsQ0) : (0, o.wt)(e));
+let f = (e) => (e.toString() === p.Plq.MENTION_EVERYONE.toString() ? h.intl.string(h.t.yCpsQw) : (0, o.wt)(e));
 function g(e) {
     let { permissions: t } = e;
     return (0, n.jsxs)("div", {
@@ -67,7 +67,7 @@ function g(e) {
                 className: j.tableHeader,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: h.intl.string(h.t["0WZKIy"]),
+                children: h.intl.string(h.t["0WZKI4"]),
             }),
             (0, n.jsx)("div", {
                 className: j.permissionsTable,
@@ -101,7 +101,7 @@ function v(e) {
                 className: j.tableHeader,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: h.intl.string(h.t.Yo5qlp),
+                children: h.intl.string(h.t.Yo5qlq),
             }),
             (0, n.jsx)("div", {
                 className: j.permissionsTable,
@@ -143,7 +143,7 @@ function O(e) {
         children: [
             (0, n.jsx)(l.Button, {
                 variant: "primary",
-                text: h.intl.string(h.t.iOSdAQ),
+                text: h.intl.string(h.t.iOSdAW),
                 onClick: t,
             }),
             (0, n.jsx)(a.zx, {

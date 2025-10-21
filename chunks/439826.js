@@ -27,8 +27,8 @@ var r = n(951288),
     w = n(642145),
     P = n(981631),
     N = n(388032),
-    R = n(518388);
-function A(e) {
+    A = n(518388);
+function R(e) {
     var t;
     let { quest: n, errorHints: a, warningHints: o, isDarkTheme: l, sourceQuestContent: c } = e,
         { ref: p, height: g = 0 } = (0, u.ZP)([a]),
@@ -70,10 +70,10 @@ function A(e) {
         style: C,
         children: (0, r.jsxs)("div", {
             ref: p,
-            className: R.hints,
+            className: A.hints,
             children: [
                 (0, r.jsxs)("div", {
-                    className: R.hintsContainer,
+                    className: A.hintsContainer,
                     children: [
                         (0, r.jsx)(y, {
                             size: "xs",
@@ -111,13 +111,13 @@ function B(e) {
             warningHints: B,
             isVisibleInViewport: k,
             onCtxMenuClose: I,
-            onCtxMenuOpen: q,
-            onCtxMenuSelect: D,
+            onCtxMenuOpen: D,
+            onCtxMenuSelect: q,
             sourceQuestContent: L,
         } = e,
-        V = (0, f.PB)(m),
-        Q = (0, p.ZP)(),
-        M = ((0, c.wj)(Q) ? P.BRd.DARK : P.BRd.LIGHT) === P.BRd.DARK,
+        Q = (0, f.PB)(m),
+        V = (0, p.ZP)(),
+        M = ((0, c.wj)(V) ? P.BRd.DARK : P.BRd.LIGHT) === P.BRd.DARK,
         Z = (0, x.tP)(m),
         W = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
         H = (0, x.B6)(m.config.expiresAt, {
@@ -128,7 +128,7 @@ function B(e) {
         F = (null == (a = m.userStatus) ? void 0 : a.completedAt) != null,
         { onAssetLoadComplete: z } = s.useContext(O.k),
         K = s.useCallback(async () => {
-            V &&
+            Q &&
                 ((0, f.zi)(m) || U
                     ? (0, y.openVideoQuestModal)({
                           quest: m,
@@ -154,12 +154,12 @@ function B(e) {
                             sourceQuestContent: L,
                             sourceQuestContentCTA: g.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                         })));
-        }, [V, m, U, L]);
+        }, [Q, m, U, L]);
     return (0, r.jsxs)("div", {
-        className: R.container,
+        className: A.container,
         children: [
             (0, r.jsx)("div", {
-                className: R.heroAssetWrapper,
+                className: A.heroAssetWrapper,
                 children: (0, r.jsx)(v.Z, {
                     quest: m,
                     isInteracting: j,
@@ -168,59 +168,59 @@ function B(e) {
                         width: 1320,
                         height: 370,
                     },
-                    containerClassName: R.heroAssetCont,
+                    containerClassName: A.heroAssetCont,
                 }),
             }),
             (0, r.jsx)("div", {
-                className: o()(R.overlay, {
-                    [R.darkThemeGradient]: M,
-                    [R.lightThemeGradient]: !M,
+                className: o()(A.overlay, {
+                    [A.darkThemeGradient]: M,
+                    [A.lightThemeGradient]: !M,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: R.positionContentOverBackground,
+                className: A.positionContentOverBackground,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: R.contents,
+                        className: A.contents,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: R.topRow,
+                                className: A.topRow,
                                 children: [
                                     m.preview &&
                                         (0, r.jsx)("div", {
-                                            className: R.pill,
+                                            className: A.pill,
                                             children: (0, r.jsx)(d.Text, {
                                                 variant: "eyebrow",
                                                 color: "always-white",
-                                                className: R.eyebrowText,
+                                                className: A.eyebrowText,
                                                 children: N.intl.string(N.t.SKNnqq),
                                             }),
                                         }),
-                                    V &&
+                                    Q &&
                                         (0, r.jsx)(l.u, {
                                             text: F
-                                                ? N.intl.string(N.t.YsCuyM)
+                                                ? N.intl.string(N.t.YsCuyF)
                                                 : U
-                                                  ? N.intl.string(N.t["74Kqra"])
+                                                  ? N.intl.string(N.t["74KqrR"])
                                                   : (0, f.zi)(m)
-                                                    ? N.intl.string(N.t["I6JG4+"])
-                                                    : N.intl.string(N.t.umdNio),
+                                                    ? N.intl.string(N.t.I6JG46)
+                                                    : N.intl.string(N.t.umdNin),
                                             asContainer: !0,
                                             tag: "span",
                                             children: (0, r.jsx)(d.P3F, {
-                                                className: R.utilButtonWrapper,
-                                                "aria-label": N.intl.string(N.t.RscU7O),
+                                                className: A.utilButtonWrapper,
+                                                "aria-label": N.intl.string(N.t.RscU7I),
                                                 onClick: K,
                                                 children: (0, r.jsx)(d.o1U, {
                                                     color: "currentColor",
-                                                    className: R.utilButtonIcon,
+                                                    className: A.utilButtonIcon,
                                                 }),
                                             }),
                                         }),
                                     (0, r.jsx)(E.r, {
-                                        onOpen: q,
+                                        onOpen: D,
                                         onClose: I,
-                                        onSelect: D,
+                                        onSelect: q,
                                         questContent: _.jn.QUEST_HOME_DESKTOP,
                                         quest: m,
                                         hideLearnMore: !0,
@@ -259,12 +259,12 @@ function B(e) {
                                                 })({}, e)),
                                                 (n = n =
                                                     {
-                                                        className: R.utilButtonWrapper,
-                                                        "aria-label": N.intl.string(N.t.DEoVWV),
+                                                        className: A.utilButtonWrapper,
+                                                        "aria-label": N.intl.string(N.t.DEoVWZ),
                                                         children: (0, r.jsx)(d.xhG, {
                                                             size: "md",
                                                             color: "currentColor",
-                                                            className: R.utilButtonIcon,
+                                                            className: A.utilButtonIcon,
                                                         }),
                                                     }),
                                                 Object.getOwnPropertyDescriptors
@@ -293,10 +293,10 @@ function B(e) {
                                 showPlaceholder: !k,
                                 width: 100,
                                 height: 30,
-                                className: R.partnerBranding,
+                                className: A.partnerBranding,
                                 children: (0, r.jsx)(C.ZP, {
-                                    className: R.partnerBranding,
-                                    logotypeClassName: R.partnerLogotypes,
+                                    className: A.partnerBranding,
+                                    logotypeClassName: A.partnerLogotypes,
                                     quest: m,
                                     separatorSpacing: C.US.MEDIUM,
                                     withGameTile: !1,
@@ -304,7 +304,7 @@ function B(e) {
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.bottomRow,
+                                className: A.bottomRow,
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-sm/medium",
@@ -321,13 +321,13 @@ function B(e) {
                                         : (0, r.jsx)(d.Text, {
                                               variant: "text-sm/medium",
                                               color: M ? "text-muted" : "always-white",
-                                              children: N.intl.format(N.t["7D8r4O"], { expiryDate: H }),
+                                              children: N.intl.format(N.t["7D8r4F"], { expiryDate: H }),
                                           }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, r.jsx)(A, {
+                    (0, r.jsx)(R, {
                         quest: m,
                         errorHints: w,
                         warningHints: B,

@@ -1,4 +1,32 @@
-t.r(n), t.d(n, { default: () => r });
-let r = JSON.parse(
-    '{"EYDrR0":"Autotune (Dev)","VCZdnp":"Axel","Xypb39":"Cave","TYbrfH":"Tunetron (2-Part)","OnZ6g4":"Tunetron (Choir)","2XH8tr":"Tunetron (Dev)","qRFFLC":"Deep Fried","87aX+/":"Fan (Dev)","lFIyMz":"Ghost","KmHwvL":"Ghost (Dev)","vIrxZW":"Harper","ZVrsKC":"Justus","fPU01d":"Megaphone","biQVNz":"Quinn","anBE8f":"DR01D","XhhSOj":"DR01D (Dev)","Ur/62N":"DR01D (Synthetic)","NmbfHx":"Sébastien","tzvUKy":"Skye","ndNi1t":"Solara","KN+v7+":"Space Bunny","sem63N":"Tunetron","kHmvdn":"Cyber Boss","6PDpsb":"Vibrate (Dev)"}',
-);
+n.d(e, { Z: () => f });
+var r = n(951288);
+n(647438);
+var i = n(442837),
+    l = n(481060),
+    a = n(943094),
+    c = n(594190),
+    o = n(173747),
+    u = n(417363),
+    s = n(346329),
+    d = n(981631),
+    b = n(388032);
+function f(t) {
+    let e = (0, i.e7)([c.ZP], () => c.ZP.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
+        n = (0, i.e7)([u.Z], () => u.Z.isInstalled(t.id, t.branchId), [t.branchId, t.id]),
+        f = (0, i.e7)([o.Z], () => o.Z.getTargetManifests(t.id, t.branchId), [t.branchId, t.id]);
+    return n
+        ? e
+            ? null
+            : (0, r.jsx)(l.sNh, {
+                  id: "uninstall",
+                  label: b.intl.string(b.t.DwgfOM),
+                  action: () => (0, a.W)(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+              })
+        : null == f
+          ? null
+          : (0, r.jsx)(l.sNh, {
+                id: "install",
+                label: b.intl.string(b.t["N+XVnt"]),
+                action: () => s.installApplication(t.id, t.branchId, d.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+            });
+}

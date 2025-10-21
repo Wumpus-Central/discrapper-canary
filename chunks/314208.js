@@ -42,7 +42,7 @@ function T(e) {
         className: S.subtext,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: [O.intl.string(O.t.Jmh6n5), "\xA0 \u2022 \xA0", (0, w.Ye)(n)],
+        children: [O.intl.string(O.t.Jmh6n9), "\xA0 \u2022 \xA0", (0, w.Ye)(n)],
     });
 }
 function C(e) {
@@ -144,7 +144,7 @@ function I(e) {
                                   color: "currentColor",
                               }),
                           }),
-                          O.intl.format(O.t["5Wk9+v"], { time: (0, w.Ye)(g) }),
+                          O.intl.format(O.t["5Wk9+o"], { time: (0, w.Ye)(g) }),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -154,7 +154,7 @@ function I(e) {
                               user: v,
                               size: s.EFr.SIZE_16,
                           }),
-                          O.intl.format(O.t.GFDmd3, {
+                          O.intl.format(O.t["GFDmd/"], {
                               authorHook(e, t) {
                                   var n, l;
                                   return (0, r.jsx)(
@@ -173,7 +173,7 @@ function I(e) {
                               className: S.bullet,
                               children: "\u2022",
                           }),
-                          O.intl.format(O.t["5Wk9+v"], { time: (0, w.Ye)(g) }),
+                          O.intl.format(O.t["5Wk9+o"], { time: (0, w.Ye)(g) }),
                       ],
                   }),
     });

@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(793030),
     o = n(159691),
     s = n(388032),
-    l = n(869918);
+    l = n(37751);
 function c(e, t, n) {
     return (
         t in e
@@ -35,7 +35,7 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { onClick: t, "aria-label": n = s.intl.string(s.t.cpT0Cg) } = e,
+    let { onClick: t, "aria-label": n = s.intl.string(s.t.cpT0Cq) } = e,
         { firstFocusableItemProps: c } = i.useContext(a.MJU);
     return (0, r.jsx)("div", {
         className: l.closeButton,

@@ -44,7 +44,7 @@ var r = n(951288),
     z = n(73346),
     W = n(3570),
     Y = n(689796),
-    q = n(978436),
+    q = n(15470),
     K = n(506648),
     Q = n(449275),
     X = n(445986),
@@ -59,7 +59,7 @@ var r = n(951288),
     ea = n(981631),
     eo = n(186901),
     es = n(388032),
-    ec = n(868113);
+    ec = n(561537);
 function eu(e, t, n) {
     return (
         t in e
@@ -216,7 +216,7 @@ class ef extends i.PureComponent {
                             children: [
                                 (0, r.jsx)(j.Z.Icon, {
                                     icon: p.SrA,
-                                    "aria-label": es.intl.string(es.t.Ipxkoq),
+                                    "aria-label": es.intl.string(es.t.Ipxkog),
                                 }),
                                 (0, r.jsx)(et.Z, { sku: t }),
                             ],
@@ -325,7 +325,7 @@ class ef extends i.PureComponent {
             children: [
                 (0, r.jsx)(I.Z, {
                     tag: "h1",
-                    children: es.intl.format(es.t.tluX4O, { name: n.name }),
+                    children: es.intl.format(es.t.tluX4B, { name: n.name }),
                 }),
                 (0, r.jsx)(_.Z, {}),
                 (0, r.jsx)(q.Z, {
@@ -514,7 +514,7 @@ class ef extends i.PureComponent {
                 null != e &&
                     null != t &&
                     (0, p.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("7654"), n.e("28297")]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -530,7 +530,7 @@ class ef extends i.PureComponent {
                 let { channel: e, guild: t } = this.props;
                 return null != e && null != t && (w.Z.can(ea.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, r.jsx)(d.zx, {
-                          "aria-label": es.intl.string(es.t.zJrgTE),
+                          "aria-label": es.intl.string(es.t.zJrgTG),
                           look: d.zx.Looks.BLANK,
                           size: d.zx.Sizes.NONE,
                           onClick: this.handleCreateInstantInvite,
@@ -548,11 +548,11 @@ class ef extends i.PureComponent {
                 return this.isChannelType
                     ? this.renderInviteLink()
                     : (0, r.jsx)(c.u, {
-                          text: e ? es.intl.string(es.t.uvTCOT) : null,
+                          text: e ? es.intl.string(es.t.uvTCOY) : null,
                           position: "left",
                           forceOpen: e,
                           children: (0, r.jsx)(d.zx, {
-                              "aria-label": e ? es.intl.string(es.t.uvTCOT) : es.intl.string(es.t.WqhZsr),
+                              "aria-label": e ? es.intl.string(es.t.uvTCOY) : es.intl.string(es.t.WqhZss),
                               look: d.zx.Looks.BLANK,
                               size: d.zx.Sizes.NONE,
                               onClick: this.copyCurrentUrl,

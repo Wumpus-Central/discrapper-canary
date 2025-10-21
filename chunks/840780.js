@@ -177,8 +177,8 @@ class eN extends i.PureComponent {
                       let { visibleContent: t, markAsDismissed: n } = e;
                       return t === d.z.ACCOUNT_LINK_INVITE_FRIENDS
                           ? (0, r.jsx)(f.J2, {
-                                title: ex.intl.string(ex.t["0l2pEh"]),
-                                body: ex.intl.string(ex.t.DSZUKy),
+                                title: ex.intl.string(ex.t["0l2pEt"]),
+                                body: ex.intl.string(ex.t["DSZUK/"]),
                                 targetElementRef: this.inviteButtonRef,
                                 align: "right",
                                 shouldShow: !0,
@@ -186,7 +186,7 @@ class eN extends i.PureComponent {
                                 caretConfig: { align: "end" },
                                 actions: [
                                     {
-                                        text: ex.intl.string(ex.t.YdkBCA),
+                                        text: ex.intl.string(ex.t.YdkBCH),
                                         onClick: () => {
                                             var e;
                                             n(ey.L.TAKE_ACTION),
@@ -209,15 +209,15 @@ class eN extends i.PureComponent {
                             })
                           : t === d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER
                             ? (0, r.jsx)(f.J2, {
-                                  title: ex.intl.string(ex.t.MxAlrK),
-                                  body: ex.intl.string(ex.t["/UTTEh"]),
+                                  title: ex.intl.string(ex.t.MxAlrB),
+                                  body: ex.intl.string(ex.t["/UTTEg"]),
                                   targetElementRef: this.accountLinkUpsellTargetRef,
                                   position: "top",
                                   align: "left",
                                   caretConfig: { align: "start" },
                                   actions: [
                                       {
-                                          text: ex.intl.string(ex.t.aRIFWF),
+                                          text: ex.intl.string(ex.t.aRIFWD),
                                           onClick: () => {
                                               n(ey.L.TAKE_ACTION),
                                                   window.open(ed.Z.getArticleURL(e_.BhN.IN_GAME_FEATURES), "_blank");
@@ -235,7 +235,7 @@ class eN extends i.PureComponent {
                                         props: { application: i },
                                     },
                                     title: ex.intl.formatToPlainString(ex.t["lo6H6+"], { gameName: i.name }),
-                                    body: ex.intl.string(ex.t.qYAzOj),
+                                    body: ex.intl.string(ex.t.qYAzOp),
                                     targetElementRef: g,
                                     align: "right",
                                     shouldShow: !0,
@@ -244,7 +244,7 @@ class eN extends i.PureComponent {
                                     caretConfig: { align: "end" },
                                     actions: [
                                         {
-                                            text: ex.intl.string(ex.t.lw71NT),
+                                            text: ex.intl.string(ex.t.lw71Nf),
                                             onClick: () => {
                                                 n(ey.L.TAKE_ACTION), b();
                                             },

@@ -17,7 +17,7 @@ var a = n(512722),
     j = n(409110),
     _ = n(843880),
     g = n(388032),
-    b = n(75498);
+    b = n(791873);
 function v(e) {
     var t, n;
     let { transitionState: a, guildProductListingId: v, analyticsLocation: Z, guildId: N, onClose: O } = e,
@@ -42,7 +42,7 @@ function v(e) {
         });
     return (0, r.jsxs)(l.Modal, {
         title: y.name,
-        subtitle: g.intl.format(g.t.xImSen, {
+        subtitle: g.intl.format(g.t.xImSei, {
             productType: C,
             personName: null != (n = null == L ? void 0 : L.name) ? n : "",
         }),
@@ -74,7 +74,7 @@ function v(e) {
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-lg/medium",
                         color: "header-primary",
-                        children: g.intl.string(g.t.TNnDJi),
+                        children: g.intl.string(g.t.TNnDJs),
                     }),
                     (0, r.jsx)(c.LZC, { size: 12 }),
                     (0, r.jsx)(m.Z, {

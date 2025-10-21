@@ -13,7 +13,7 @@ var i = n(481060),
     _ = n(474936),
     p = n(981631),
     h = n(388032),
-    m = n(522488);
+    m = n(50953);
 let g = function (e) {
     var t;
     let { dismissCurrentNotice: n, subscriptionTier: g } = e,
@@ -47,7 +47,7 @@ let g = function (e) {
                   (0, r.jsx)(d.Jy, { children: (0, f.TV)(y, Number(b.discount.amount)) }),
                   (0, r.jsx)(d.OJ, {
                       onClick: I,
-                      text: h.intl.string(h.t.zLXssL),
+                      text: h.intl.string(h.t.zLXssK),
                   }),
               ],
           })
@@ -63,7 +63,7 @@ let g = function (e) {
                   (0, f.TV)(y, Number(b.discount.amount)),
                   (0, r.jsx)(i.EyT, {
                       onClick: I,
-                      children: h.intl.string(h.t.zLXssL),
+                      children: h.intl.string(h.t.zLXssK),
                   }),
               ],
           });

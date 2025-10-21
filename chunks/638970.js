@@ -22,7 +22,7 @@ var r = n(951288),
     I = n(228168),
     T = n(231338),
     S = n(388032),
-    A = n(923805);
+    A = n(31948);
 function C(e, t, n) {
     return (
         t in e
@@ -156,7 +156,7 @@ function M(e) {
                                   h({ section: I.oh.ACTIVITY });
                           },
                           variant: "secondary",
-                          text: S.intl.string(S.t.pD1L1t),
+                          text: S.intl.string(S.t.pD1L1u),
                           textVariant: "text-xs/medium",
                       }),
                   })
@@ -199,7 +199,7 @@ function M(e) {
                   (0, r.jsx)(l.nn4, {
                       children: (0, r.jsx)(l.H, {
                           id: R,
-                          children: S.intl.string(S.t.J6STd3),
+                          children: S.intl.string(S.t.J6STd9),
                       }),
                   }),
                   (0, r.jsxs)("div", {
@@ -231,7 +231,7 @@ function M(e) {
                                                       children: (0, r.jsx)(l.Text, {
                                                           variant: "text-xs/medium",
                                                           color: "none",
-                                                          children: S.intl.format(S.t.wv8Q7u, {
+                                                          children: S.intl.format(S.t.wv8Q7k, {
                                                               activitiesCount: ea.length,
                                                           }),
                                                       }),

@@ -1,7 +1,7 @@
 n.d(t, { default: () => b }), n(388685), n(781311);
 var l = n(951288),
-    i = n(647438),
-    a = n(990547),
+    a = n(647438),
+    i = n(990547),
     r = n(793030),
     o = n(442837),
     c = n(481060),
@@ -13,22 +13,22 @@ var l = n(951288),
     g = n(483517),
     h = n(981631),
     v = n(388032),
-    x = n(543733);
+    x = n(90149);
 function b(e) {
     var t, n;
     let { onClose: b, transitionState: _, onSubmitted: f, detectedActivity: j } = e,
-        [O, w] = i.useState("issue_selection"),
-        [y, P] = i.useState(null),
-        [k, I] = i.useState(""),
-        [G, N] = i.useState(null),
-        [T, D] = i.useState(""),
-        S = i.useMemo(() => (0, d.fP)(), []),
+        [O, w] = a.useState("issue_selection"),
+        [y, P] = a.useState(null),
+        [k, I] = a.useState(""),
+        [G, N] = a.useState(null),
+        [D, T] = a.useState(""),
+        S = a.useMemo(() => (0, d.fP)(), []),
         C = (0, o.e7)([u.Z], () => u.Z.games),
         E = null != j,
         A = (0, o.e7)([s.Z], () =>
             (null == j ? void 0 : j.application_id) != null ? s.Z.getApplication(j.application_id) : null,
         ),
-        Z = i.useMemo(
+        Z = a.useMemo(
             () =>
                 k.trim().length < 1
                     ? []
@@ -48,7 +48,7 @@ function b(e) {
                 applicationId: null != (e = null == j ? void 0 : j.application_id) ? e : "",
                 suggestedGameName: "" !== k.trim() ? k.trim() : void 0,
                 suggestedGameApplicationId: null != (t = null == G ? void 0 : G.id) ? t : null,
-                feedback: "" !== T.trim() ? T.trim() : void 0,
+                feedback: "" !== D.trim() ? D.trim() : void 0,
                 submitted: !0,
             }),
                 null == f || f(),
@@ -58,15 +58,15 @@ function b(e) {
             switch (O) {
                 case "issue_selection":
                     return {
-                        title: v.intl.string(v.t["6tnjbG"]),
+                        title: v.intl.string(v.t["6tnjbD"]),
                         actions: [],
                     };
                 case "game_search":
                     return {
-                        title: E ? v.intl.string(v.t.TZgkxc) : v.intl.string(v.t["+ie+wc"]),
+                        title: E ? v.intl.string(v.t.TZgkxY) : v.intl.string(v.t["+ie+wX"]),
                         actions: [
                             {
-                                text: v.intl.string(v.t.geKm7u),
+                                text: v.intl.string(v.t.geKm7t),
                                 onClick: M,
                                 variant: "primary",
                                 disabled: "" === k.trim(),
@@ -75,13 +75,13 @@ function b(e) {
                     };
                 case "other_feedback":
                     return {
-                        title: v.intl.string(v.t.tdDpJi),
+                        title: v.intl.string(v.t.tdDpJj),
                         actions: [
                             {
-                                text: v.intl.string(v.t.geKm7u),
+                                text: v.intl.string(v.t.geKm7t),
                                 onClick: M,
                                 variant: "primary",
-                                disabled: "" === T.trim(),
+                                disabled: "" === D.trim(),
                             },
                         ],
                     };
@@ -123,7 +123,7 @@ function b(e) {
             {
                 transitionState: _,
                 onClose: b,
-                trackingProps: { impression: { impressionName: a.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
+                trackingProps: { impression: { impressionName: i.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
                 children: (() => {
                     switch (O) {
                         case "issue_selection":
@@ -133,7 +133,7 @@ function b(e) {
                                     (0, l.jsx)(c.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
-                                        children: v.intl.string(v.t.IQHicn),
+                                        children: v.intl.string(v.t.IQHicr),
                                     }),
                                     (0, l.jsx)("div", {
                                         className: x.radioGroup,
@@ -158,21 +158,21 @@ function b(e) {
                                             options: E
                                                 ? [
                                                       {
-                                                          name: v.intl.string(v.t.TZgkxc),
+                                                          name: v.intl.string(v.t.TZgkxY),
                                                           value: "wrong_game_shown",
                                                       },
                                                       {
-                                                          name: v.intl.string(v.t.tdDpJi),
+                                                          name: v.intl.string(v.t.tdDpJj),
                                                           value: "other_feedback",
                                                       },
                                                   ]
                                                 : [
                                                       {
-                                                          name: v.intl.string(v.t["+ie+wc"]),
+                                                          name: v.intl.string(v.t["+ie+wX"]),
                                                           value: "game_not_detected",
                                                       },
                                                       {
-                                                          name: v.intl.string(v.t.tdDpJi),
+                                                          name: v.intl.string(v.t.tdDpJj),
                                                           value: "other_feedback",
                                                       },
                                                   ],
@@ -188,7 +188,7 @@ function b(e) {
                                     (0, l.jsx)(c.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
-                                        children: E ? v.intl.string(v.t["79o/io"]) : v.intl.string(v.t["r/2pZ2"]),
+                                        children: E ? v.intl.string(v.t["79o/iq"]) : v.intl.string(v.t["r/2pZy"]),
                                     }),
                                     E &&
                                         (0, l.jsxs)(l.Fragment, {
@@ -198,16 +198,16 @@ function b(e) {
                                                     children: [
                                                         (() => {
                                                             var e, t, n;
-                                                            let i = p.ZP.getApplicationIconURL({
+                                                            let a = p.ZP.getApplicationIconURL({
                                                                 id: null != (e = j.application_id) ? e : "",
                                                                 icon:
                                                                     null != (t = null == A ? void 0 : A.icon)
                                                                         ? t
                                                                         : null,
                                                             });
-                                                            return null != i
+                                                            return null != a
                                                                 ? (0, l.jsx)("img", {
-                                                                      src: i,
+                                                                      src: a,
                                                                       alt:
                                                                           null != j.name && "" !== j.name
                                                                               ? j.name
@@ -260,7 +260,7 @@ function b(e) {
                                         onSearchChange: (e) => {
                                             I(e), null != G && e !== G.name && N(null);
                                         },
-                                        placeholder: E ? v.intl.string(v.t["/SGi7u"]) : v.intl.string(v.t.ss9Zwc),
+                                        placeholder: E ? v.intl.string(v.t["/SGi7v"]) : v.intl.string(v.t.ss9Zwa),
                                         clearable: !0,
                                         filter: !1,
                                         maxVisibleItems: 5,
@@ -299,12 +299,12 @@ function b(e) {
                                     (0, l.jsx)(c.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
-                                        children: v.intl.string(v.t.IblYEx),
+                                        children: v.intl.string(v.t.IblYEw),
                                     }),
                                     (0, l.jsx)(c.Kx8, {
-                                        value: T,
-                                        onChange: D,
-                                        placeholder: v.intl.string(v.t.aiPKV1),
+                                        value: D,
+                                        onChange: T,
+                                        placeholder: v.intl.string(v.t.aiPKV4),
                                         maxLength: 300,
                                         rows: 4,
                                     }),

@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(481060),
     o = n(388032),
-    s = n(59248);
+    s = n(729020);
 function l(e, t, n) {
     return (
         t in e
@@ -83,11 +83,11 @@ let p = i.forwardRef(function (e, t) {
     let h = n <= 0,
         m = n >= i - 1,
         g = _
-            ? o.intl.format(o.t.MtpIws, {
+            ? o.intl.format(o.t.MtpIwg, {
                   currentPage: n + 1,
                   numPages: i,
               })
-            : o.intl.format(o.t.bKI77e, { currentPage: n + 1 });
+            : o.intl.format(o.t.bKI77c, { currentPage: n + 1 });
     return (0, r.jsxs)(
         "div",
         d(c({ ref: t }, p), {
@@ -103,7 +103,7 @@ let p = i.forwardRef(function (e, t) {
                                 icon: a.V7D,
                                 disabled: h,
                                 onClick: () => l(n - 1),
-                                "aria-label": o.intl.string(o.t.vgfxaG),
+                                "aria-label": o.intl.string(o.t.vgfxaA),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
@@ -114,7 +114,7 @@ let p = i.forwardRef(function (e, t) {
                                 icon: a.Fbu,
                                 disabled: m,
                                 onClick: () => l(n + 1),
-                                "aria-label": o.intl.string(o.t.XiOHRU),
+                                "aria-label": o.intl.string(o.t.XiOHRX),
                             }),
                         ],
                     }),

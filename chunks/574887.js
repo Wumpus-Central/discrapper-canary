@@ -17,7 +17,7 @@ var i = t(120356),
     v = t(981631),
     j = t(856651),
     g = t(388032),
-    b = t(638999);
+    b = t(20163);
 function I(e) {
     var n;
     let { account: t, locale: i, userId: o } = e,
@@ -32,7 +32,7 @@ function I(e) {
                 children: (0, l.jsx)("div", {
                     className: b.platformIconContainer,
                     children: (0, l.jsx)("img", {
-                        alt: g.intl.formatToPlainString(g.t.rtm15O, { name: null == I ? void 0 : I.name }),
+                        alt: g.intl.formatToPlainString(g.t.rtm15P, { name: null == I ? void 0 : I.name }),
                         className: b.platformIcon,
                         src: null == I ? void 0 : I.icon.lightPNG,
                     }),
@@ -65,8 +65,8 @@ function I(e) {
                                                   ? ""
                                                         .concat(I.name, ", ")
                                                         .concat(t.name, ", ")
-                                                        .concat(g.intl.string(g.t.q5jLJC))
-                                                  : "".concat(t.name, ", ").concat(g.intl.string(g.t.q5jLJC)),
+                                                        .concat(g.intl.string(g.t.q5jLJB))
+                                                  : "".concat(t.name, ", ").concat(g.intl.string(g.t.q5jLJB)),
                                           onClick: (e) => {
                                               (0, d.yw)(v.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: t.type,
@@ -103,7 +103,7 @@ function I(e) {
                             null != x &&
                                 (0, l.jsx)(a.Text, {
                                     variant: "text-xs/normal",
-                                    children: g.intl.format(g.t["9rfonp"], { date: x }),
+                                    children: g.intl.format(g.t["9rfonh"], { date: x }),
                                 }),
                         ],
                     }),

@@ -13,9 +13,9 @@ var s = n(951288),
     m = n(60482),
     x = n(587065),
     _ = n(986841),
-    h = n(45765),
+    h = n(470658),
     v = n(388032),
-    I = n(581385);
+    I = n(71124);
 function N(t) {
     let { guildId: e, instance: n, onClose: r, transitionState: N } = t,
         j = (0, c.e7)([m.Z], () => {
@@ -30,9 +30,9 @@ function N(t) {
         g = i.useMemo(() => {
             switch (n.status) {
                 case l.V.STARTING:
-                    return v.intl.string(h.default.ud4hxc);
+                    return v.intl.string(h.default.ud4hxY);
                 case l.V.OFFLINE:
-                    return v.intl.string(h.default["ABAm7+"]);
+                    return v.intl.string(h.default.ABAm7x);
                 default:
                     return;
             }
@@ -44,7 +44,7 @@ function N(t) {
             props: { instance: n },
         },
         title: n.name,
-        subtitle: v.intl.string(h.default["4HqfaW"]),
+        subtitle: v.intl.string(h.default["4HqfaU"]),
         size: "md",
         transitionState: N,
         onClose: r,
@@ -72,7 +72,7 @@ function N(t) {
                                                   children: (0, s.jsx)(p.Text, {
                                                       variant: "text-xs/semibold",
                                                       color: "text-secondary",
-                                                      children: v.intl.formatToPlainString(h.default.oSU1fH, {
+                                                      children: v.intl.formatToPlainString(h.default.oSU1fF, {
                                                           step: e + 1,
                                                       }),
                                                   }),
@@ -102,7 +102,7 @@ function N(t) {
                                       }),
                                       (0, s.jsx)(p.Button, {
                                           variant: T ? "active" : "primary",
-                                          text: T ? v.intl.string(v.t["t5VZ8/"]) : v.intl.string(v.t.OpuAlJ),
+                                          text: T ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.OpuAlK),
                                           onClick: S,
                                           icon: p.TIy,
                                       }),

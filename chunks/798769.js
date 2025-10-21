@@ -11,7 +11,7 @@ var i = n(442837),
     d = n(616030),
     f = n(474936),
     _ = n(388032),
-    p = n(900678);
+    p = n(15962);
 function h(e) {
     let {
             currentStep: t,
@@ -32,9 +32,9 @@ function h(e) {
         C = () => {
             switch (t) {
                 case s.h8.PLAN_SELECT:
-                    return m === f.PremiumTypes.TIER_0 ? _.intl.string(_.t.rk4Uu7) : _.intl.string(_.t["7YWj6+"]);
+                    return m === f.PremiumTypes.TIER_0 ? _.intl.string(_.t.rk4Uu8) : _.intl.string(_.t["7YWj6+"]);
                 case s.h8.ADD_PAYMENT_STEPS:
-                    return _.intl.string(_.t.vHqbJC);
+                    return _.intl.string(_.t.vHqbJE);
                 case s.h8.REVIEW:
                     return _.intl.string(_.t.wKaVLC);
                 default:

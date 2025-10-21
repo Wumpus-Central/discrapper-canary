@@ -14,19 +14,19 @@ var l = n(951288),
     g = n(753206),
     h = n(4242),
     x = n(150039),
-    _ = n(678135),
-    b = n(643879),
+    b = n(678135),
+    _ = n(643879),
     S = n(687158),
-    C = n(28660),
-    j = n(502762),
+    j = n(28660),
+    C = n(502762),
     v = n(25990),
     P = n(626135),
-    y = n(63063),
-    N = n(981631),
+    N = n(63063),
+    y = n(981631),
     k = n(671955),
-    O = n(62222),
+    O = n(592186),
     T = n(388032),
-    E = n(43659);
+    E = n(270816);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,25 +84,25 @@ function A(e) {
         M = (0, s.wjy)(Z),
         [G, Y] = (0, o.useState)(M),
         H = (0, S.ZP)(t.id, null),
-        { bannerSrc: F } = (0, C.Z)({
+        { bannerSrc: F } = (0, j.Z)({
             displayProfile: H,
             size: 413,
             canAnimate: !1,
         }),
         z = (0, a.cj)([v.Z, u.Z], () => (null == n ? v.Z.getAllPending() : u.Z.getAllPending())),
-        U = (0, b.SD)({
+        U = (0, _.SD)({
             userId: t.id,
             image: z.pendingAvatar,
         }),
-        { userNameplate: q, guildNameplate: K, pendingNameplate: V } = (0, x.Zx)(t, null == n ? void 0 : n.id),
-        X = null != K ? (0, h.Pb)(K) : void 0,
-        W = G ? N.BRd.DARK : N.BRd.LIGHT;
+        { userNameplate: q, guildNameplate: K, pendingNameplate: X } = (0, x.Zx)(t, null == n ? void 0 : n.id),
+        V = null != K ? (0, h.Pb)(K) : void 0,
+        W = G ? y.BRd.DARK : y.BRd.LIGHT;
     ((M && G) || (!M && !G)) && (W = Z);
     let $ = (0, o.useCallback)(() => {
-            P.default.track(N.rMx.DISPLAY_NAME_STYLES_CLOSED), B();
+            P.default.track(y.rMx.DISPLAY_NAME_STYLES_CLOSED), B();
         }, [B]),
         J = (0, o.useCallback)((e) => {
-            Y(e === N.BRd.DARK), P.default.track(N.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === N.BRd.DARK });
+            Y(e === y.BRd.DARK), P.default.track(y.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === y.BRd.DARK });
         }, []),
         Q = (0, o.useMemo)(
             () =>
@@ -130,7 +130,7 @@ function A(e) {
                 }),
             }),
             null != F &&
-                (0, l.jsx)(j.Z, {
+                (0, l.jsx)(C.Z, {
                     user: t,
                     displayProfile: H,
                     themeType: k.l.MODAL_V2,
@@ -149,7 +149,7 @@ function A(e) {
                         inert: !0,
                         children: [
                             (0, l.jsx)(
-                                _.Z,
+                                b.Z,
                                 R(
                                     D(
                                         {
@@ -180,11 +180,11 @@ function A(e) {
                                             {},
                                             (0, m.ZP)({
                                                 channelId: "1337",
-                                                content: T.intl.string(O.default.h5Cuen),
+                                                content: T.intl.string(O.default.h5Cuej),
                                             }),
                                         ),
                                         {
-                                            state: N.yb.SENT,
+                                            state: y.yb.SENT,
                                             id: "0",
                                         },
                                     ),
@@ -198,8 +198,8 @@ function A(e) {
                             (0, l.jsx)(d.Z, {
                                 user: t,
                                 guildId: null == n ? void 0 : n.id,
-                                nameplate: V,
-                                nameplateData: null == V ? (null != X ? X : q) : void 0,
+                                nameplate: X,
+                                nameplateData: null == X ? (null != V ? V : q) : void 0,
                                 pendingGlobalName: r,
                                 pendingDisplayNameStyles: Q.displayNameStyles,
                                 isHighlighted: !0,
@@ -214,8 +214,8 @@ function A(e) {
                     (0, l.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: T.intl.format(O.default.prQba2, {
-                            helpArticleLink: y.Z.getArticleURL(N.BhN.DISPLAY_NAME_STYLES),
+                        children: T.intl.format(O.default.prQba8, {
+                            helpArticleLink: N.Z.getArticleURL(y.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
                     (0, l.jsx)(I, {
@@ -229,24 +229,24 @@ function A(e) {
 }
 function I(e) {
     let { darkPreview: t, onToggleTheme: n } = e,
-        o = t ? N.BRd.DARK : N.BRd.LIGHT;
+        o = t ? y.BRd.DARK : y.BRd.LIGHT;
     return (0, l.jsx)(s.sY7, {
         className: E.themeToggleControl,
         optionClassName: E.themeToggleOption,
         options: [
             {
                 name: "",
-                tooltip: T.intl.string(T.t.b8Cei4),
-                value: N.BRd.DARK,
+                tooltip: T.intl.string(T.t.b8Cei3),
+                value: y.BRd.DARK,
                 icon: s.Z6G,
-                className: o === N.BRd.DARK ? E.themeToggleOptionSelected : void 0,
+                className: o === y.BRd.DARK ? E.themeToggleOptionSelected : void 0,
             },
             {
                 name: "",
-                tooltip: T.intl.string(T.t.K2sFfn),
-                value: N.BRd.LIGHT,
+                tooltip: T.intl.string(T.t.K2sFfo),
+                value: y.BRd.LIGHT,
                 icon: s.chG,
-                className: o === N.BRd.LIGHT ? E.themeToggleOptionSelected : void 0,
+                className: o === y.BRd.LIGHT ? E.themeToggleOptionSelected : void 0,
             },
         ],
         value: o,

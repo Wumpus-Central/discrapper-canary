@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(981631),
     h = n(217702),
     m = n(388032),
-    g = n(609966),
+    g = n(12464),
     E = n(167969),
     b = n(557256);
 function y(e, t, n) {
@@ -114,7 +114,7 @@ let A = i.forwardRef((e, t) => {
                 let { src: t, size: n, alt: i, className: a, mediaLayoutType: o } = e;
                 return (0, r.jsx)("img", {
                     className: null != a ? a : void 0,
-                    alt: null != i ? i : m.intl.string(m.t.X4IxWF),
+                    alt: null != i ? i : m.intl.string(m.t.X4IxWL),
                     src: t,
                     style: R(n, o),
                 });
@@ -231,7 +231,7 @@ let A = i.forwardRef((e, t) => {
                                       className: g.clickableWrapper,
                                       tabIndex: null != B ? B : 0,
                                       onClick: G,
-                                      "aria-label": null != b ? b : m.intl.string(m.t.X4IxWF),
+                                      "aria-label": null != b ? b : m.intl.string(m.t.X4IxWL),
                                       "aria-describedby": u.r5,
                                       innerRef: W,
                                       focusProps: { enabled: !1 },
@@ -260,7 +260,7 @@ function C(e) {
         children: (0, r.jsx)("img", {
             src: (0, s.ap)(a) ? b : E,
             className: g.imageError,
-            alt: null != i ? i : m.intl.string(m.t.X4IxWF),
+            alt: null != i ? i : m.intl.string(m.t.X4IxWL),
         }),
     });
 }

@@ -19,8 +19,8 @@ var i = n(951288),
     j = n(210887),
     p = n(131704),
     C = n(699516),
-    Z = n(944486),
-    S = n(914010),
+    S = n(944486),
+    Z = n(914010),
     w = n(594174),
     y = n(186523),
     N = n(553826),
@@ -28,10 +28,10 @@ var i = n(951288),
     L = n(407316),
     P = n(937784),
     R = n(388032),
-    k = n(62898),
+    k = n(413797),
     D = n(138715),
-    T = n(979770);
-function A(e) {
+    H = n(979770);
+function T(e) {
     let { channel: t, ChannelIcon: n, selected: l, onClick: a } = e,
         r = (0, g.ZP)(t);
     return (0, i.jsxs)(c.P3F, {
@@ -52,9 +52,9 @@ function A(e) {
         ],
     });
 }
-function B(e) {
+function A(e) {
     let { guildId: t, selectedChannelId: n, onSelectChannelId: a } = e,
-        d = (0, s.e7)([Z.Z], () => Z.Z.getChannelId()),
+        d = (0, s.e7)([S.Z], () => S.Z.getChannelId()),
         { guildChannels: o } = (0, s.cj)([f.Z], () => f.Z.getGuildWithoutChangingGuildActionRows(t)),
         u = l.useMemo(() => {
             let e = [];
@@ -74,7 +74,7 @@ function B(e) {
                       variant: "eyebrow",
                       color: "interactive-normal",
                       className: k.contentPadding,
-                      children: R.intl.string(R.t.SOtDeX),
+                      children: R.intl.string(R.t.SOtDeZ),
                   }),
                   (0, i.jsx)(c.aVo, {
                       sections: [u.length],
@@ -87,7 +87,7 @@ function B(e) {
                           return null == s
                               ? null
                               : (0, i.jsx)(
-                                    A,
+                                    T,
                                     {
                                         channel: r,
                                         ChannelIcon: s,
@@ -105,7 +105,7 @@ function B(e) {
               ],
           });
 }
-function H(e) {
+function B(e) {
     let { friends: t, searchQuery: n, disabled: a, onShareClip: d } = e,
         u = l.useMemo(
             () => (0 === n.length ? t : t.filter((e) => e.username.toLowerCase().includes(n.toLowerCase()))),
@@ -120,10 +120,10 @@ function H(e) {
                   (0, i.jsx)(c.oxh, {
                       width: 415,
                       height: 75,
-                      lightSrc: T,
+                      lightSrc: H,
                       darkSrc: D,
                   }),
-                  (0, i.jsx)(c.OZU, { note: R.intl.string(R.t["+Zg0lZ"]) }),
+                  (0, i.jsx)(c.OZU, { note: R.intl.string(R.t["+Zg0lW"]) }),
               ],
           })
         : (0, i.jsx)(c.aVo, {
@@ -154,7 +154,7 @@ function H(e) {
                                   color: o.Tt.BRAND,
                                   children: (0, i.jsx)(c.Text, {
                                       variant: "text-sm/medium",
-                                      children: R.intl.string(R.t.RDE0SU),
+                                      children: R.intl.string(R.t.RDE0Sc),
                                   }),
                               }),
                           ],
@@ -173,11 +173,11 @@ function E(e) {
         [h, g] = l.useState(""),
         [_, f] = l.useState(!1),
         [j, p] = l.useState(null),
-        Z = (0, s.Wu)([C.Z], () => C.Z.getFriendIDs()),
+        S = (0, s.Wu)([C.Z], () => C.Z.getFriendIDs()),
         y = (0, s.Wu)(
             [b.Z, w.default],
             () =>
-                Z.map((e) => w.default.getUser(e))
+                S.map((e) => w.default.getUser(e))
                     .filter(I.lm)
                     .sort((e, t) => {
                         var n, i, l, a;
@@ -190,9 +190,9 @@ function E(e) {
                                 : 0)
                         );
                     }),
-            [Z],
+            [S],
         ),
-        N = (0, s.e7)([S.Z], () => S.Z.getGuildId()),
+        N = (0, s.e7)([Z.Z], () => Z.Z.getGuildId()),
         { analyticsLocations: L } = (0, x.ZP)(m.Z.CLIPS_SHARE_MODAL);
     async function D(e) {
         let i = null != e ? e : j;
@@ -212,7 +212,7 @@ function E(e) {
             }
         }
     }
-    async function T(e) {
+    async function H(e) {
         let t = await u.Z.openPrivateChannel({ recipientIds: e });
         await D(t);
     }
@@ -225,13 +225,13 @@ function E(e) {
                 className: r()(k.title, k.contentPadding),
                 variant: "heading-lg/semibold",
                 color: "interactive-active",
-                children: R.intl.string(R.t["6EcIlJ"]),
+                children: R.intl.string(R.t["6EcIlH"]),
             }),
             (0, i.jsx)(c.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
                 className: r()(k.subtitle, k.contentPadding),
-                children: R.intl.string(R.t.Ey7mOT),
+                children: R.intl.string(R.t.Ey7mOU),
             }),
             (0, i.jsx)("div", {
                 className: k.searchBar,
@@ -241,18 +241,18 @@ function E(e) {
                     onClear: function () {
                         g("");
                     },
-                    placeholder: R.intl.string(R.t.CmSHY2),
+                    placeholder: R.intl.string(R.t.CmSHYx),
                 }),
             }),
             (0, i.jsx)("div", { className: r()(k.divider, k.topDivider) }),
-            (0, i.jsx)(H, {
+            (0, i.jsx)(B, {
                 searchQuery: h,
                 friends: y,
-                onShareClip: T,
+                onShareClip: H,
                 disabled: _,
             }),
             null != N &&
-                (0, i.jsx)(B, {
+                (0, i.jsx)(A, {
                     guildId: N,
                     selectedChannelId: j,
                     onSelectChannelId: p,
@@ -263,14 +263,14 @@ function E(e) {
                     children: [
                         (0, i.jsx)(c.Button, {
                             variant: "primary",
-                            text: R.intl.string(R.t.I8lglZ),
+                            text: R.intl.string(R.t.I8lglT),
                             disabled: null == j,
                             loading: _,
                             onClick: () => D(),
                         }),
                         (0, i.jsx)(c.Button, {
                             variant: "secondary",
-                            text: R.intl.string(R.t["13/7kZ"]),
+                            text: R.intl.string(R.t["13/7kX"]),
                             loading: _,
                             onClick: o,
                         }),

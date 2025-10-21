@@ -21,10 +21,10 @@ var r = t(951288),
     C = t(669460),
     E = t(619733),
     N = t(981631),
-    S = t(45765),
+    S = t(470658),
     O = t(388032),
-    y = t(636401);
-function I(e) {
+    y = t(817121);
+function T(e) {
     let { plan: n, selected: t, className: i } = e;
     return null == n
         ? null
@@ -43,7 +43,7 @@ function I(e) {
                                   }),
                                   (0, r.jsx)(d.Text, {
                                       variant: "text-xs/medium",
-                                      children: O.intl.format(S.default.kOMlHh, { boostCount: n.cost }),
+                                      children: O.intl.format(S.default.kOMlHs, { boostCount: n.cost }),
                                   }),
                               ],
                           }),
@@ -53,7 +53,7 @@ function I(e) {
               ],
           });
 }
-function T(e) {
+function I(e) {
     let { region: n, selected: t, disabled: i, className: l } = e,
         { pingText: o, pingCircleStyle: s } = (0, j.u)(n.pingUrl);
     return null == n
@@ -67,7 +67,7 @@ function T(e) {
                           (0, r.jsx)("div", {
                               className: y.labelContainer,
                               children: i
-                                  ? (0, r.jsx)("span", { children: O.intl.string(S.default.aCyHe3) })
+                                  ? (0, r.jsx)("span", { children: O.intl.string(S.default.aCyHe2) })
                                   : "" !== n.pingUrl
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
@@ -161,11 +161,11 @@ function P() {
                                                       className: y.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: O.intl.string(S.default.rOMEZW),
+                                                      children: O.intl.string(S.default.rOMEZd),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: O.intl.string(S.default.THJY1t),
+                                                      text: O.intl.string(S.default.THJY1n),
                                                       children: (0, r.jsx)(d.idN, {
                                                           className: y.sectionHeaderIcon,
                                                           size: "xs",
@@ -176,7 +176,7 @@ function P() {
                                           (0, r.jsx)(d.oil, {
                                               value: j,
                                               onChange: P,
-                                              placeholder: O.intl.string(S.default.ElVYr6),
+                                              placeholder: O.intl.string(S.default.ElVYr3),
                                               maxLength: E.Sg,
                                               disabled: G || !K,
                                               error: V.name,
@@ -193,12 +193,12 @@ function P() {
                                                       className: y.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: O.intl.string(S.default.nB5OZ2),
+                                                      children: O.intl.string(S.default.nB5OZ4),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
                                                       text: O.intl.string(
-                                                          null != l ? S.default["7mX0gI"] : S.default["61N+Pz"],
+                                                          null != l ? S.default["7mX0gE"] : S.default["61N+P6"],
                                                       ),
                                                       children: (0, r.jsx)(d.idN, {
                                                           className: y.sectionHeaderIcon,
@@ -212,7 +212,7 @@ function P() {
                                                           children: (0, r.jsx)(s.u, {
                                                               asContainer: !0,
                                                               position: "top",
-                                                              text: O.intl.string(S.default.kGkE7e),
+                                                              text: O.intl.string(S.default.kGkE7a),
                                                               children: (0, r.jsx)(d.P3F, {
                                                                   className: y.sectionHeaderIcon,
                                                                   onClick: () => (0, m.UM)(),
@@ -226,7 +226,7 @@ function P() {
                                               ? (0, r.jsx)(d.oil, {
                                                     value: null == l ? void 0 : l.regionName,
                                                     disabled: !0,
-                                                    placeholder: O.intl.string(S.default["k+RTIi"]),
+                                                    placeholder: O.intl.string(S.default["k+RTIm"]),
                                                 })
                                               : (0, r.jsx)(d.PhF, {
                                                     serialize: (e) => e.id,
@@ -235,10 +235,10 @@ function P() {
                                                     options: D,
                                                     optionClassName: y.option,
                                                     select: (e) => a(e.id),
-                                                    placeholder: O.intl.string(S.default["k+RTIi"]),
+                                                    placeholder: O.intl.string(S.default["k+RTIm"]),
                                                     renderOptionLabel: (e) => {
                                                         var n;
-                                                        return (0, r.jsx)(T, {
+                                                        return (0, r.jsx)(I, {
                                                             region: e.value,
                                                             selected: e.value.id === t,
                                                             disabled: null != (n = e.disabled) && n,
@@ -248,7 +248,7 @@ function P() {
                                                         var n;
                                                         return null == e[0]
                                                             ? null
-                                                            : (0, r.jsx)(T, {
+                                                            : (0, r.jsx)(I, {
                                                                   region: e[0].value,
                                                                   selected: e[0].value.id === t,
                                                                   disabled: null != (n = e[0].disabled) && n,
@@ -268,11 +268,11 @@ function P() {
                                                       className: y.headerText,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-secondary",
-                                                      children: O.intl.string(S.default["K+zMYm"]),
+                                                      children: O.intl.string(S.default["K+zMYp"]),
                                                   }),
                                                   (0, r.jsx)(s.u, {
                                                       position: "top",
-                                                      text: O.intl.string(S.default["/wD5IC"]),
+                                                      text: O.intl.string(S.default["/wD5IM"]),
                                                       children: (0, r.jsx)(d.idN, {
                                                           className: y.sectionHeaderIcon,
                                                           size: "xs",
@@ -287,10 +287,10 @@ function P() {
                                               options: z,
                                               optionClassName: y.option,
                                               select: (e) => R(e.id),
-                                              placeholder: O.intl.string(S.default.JdMW0t),
+                                              placeholder: O.intl.string(S.default.JdMW0i),
                                               renderOptionValue: (e) => {
                                                   var n, t, i;
-                                                  return (0, r.jsx)(I, {
+                                                  return (0, r.jsx)(T, {
                                                       plan: null == (n = e[0]) ? void 0 : n.value,
                                                       selected:
                                                           (null == (i = e[0]) || null == (t = i.value)
@@ -300,7 +300,7 @@ function P() {
                                                   });
                                               },
                                               renderOptionLabel: (e) =>
-                                                  (0, r.jsx)(I, {
+                                                  (0, r.jsx)(T, {
                                                       plan: e.value,
                                                       selected: e.value.id === w,
                                                   }),
@@ -323,8 +323,8 @@ function P() {
                               variant: "text-xs/medium",
                               children:
                                   Z < 0
-                                      ? O.intl.format(S.default.SorKam, { boostCount: Math.abs(Z) })
-                                      : O.intl.format(S.default.n2wpys, { boostCount: Z }),
+                                      ? O.intl.format(S.default.SorKas, { boostCount: Math.abs(Z) })
+                                      : O.intl.format(S.default.n2wpym, { boostCount: Z }),
                           }),
                       }),
                   !K &&
@@ -333,7 +333,7 @@ function P() {
                           look: c.z.WARNING,
                           children: (0, r.jsx)(d.Text, {
                               variant: "text-xs/medium",
-                              children: O.intl.string(S.default["/JNPWV"]),
+                              children: O.intl.string(S.default["/JNPWb"]),
                           }),
                       }),
                   (0, r.jsx)(d.Text, {
@@ -341,7 +341,7 @@ function P() {
                       color: "text-muted",
                       children:
                           null != M &&
-                          O.intl.format(A ? S.default.num0a2 : S.default.p5KZDg, {
+                          O.intl.format(A ? S.default.num0a6 : S.default.p5KZDr, {
                               provider: W,
                               termsOfServiceUrl: () => (0, g.q)({ href: J }),
                               helpCenterUrl: u.Z.getArticleURL(N.BhN.GAME_SERVER_HOSTING),

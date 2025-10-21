@@ -14,8 +14,8 @@ var r = n(951288),
     h = n(441319),
     m = n(526761),
     g = n(388032),
-    E = n(871976),
-    b = n(5874);
+    E = n(339637),
+    b = n(226518);
 function y(e, t, n) {
     return (
         t in e
@@ -131,7 +131,7 @@ function A(e) {
                                                     (0, r.jsx)(s.Heading, {
                                                         className: E.titleText,
                                                         variant: "text-lg/medium",
-                                                        children: g.intl.string(g.t.NThqT0),
+                                                        children: g.intl.string(g.t.NThqTw),
                                                     }),
                                                     (0, r.jsx)(u.Z, { className: E.premiumIcon }),
                                                 ],
@@ -139,7 +139,7 @@ function A(e) {
                                         (0, r.jsx)(s.Heading, {
                                             variant: "text-sm/normal",
                                             className: b.subtext,
-                                            children: g.intl.string(g.t.IgENJi),
+                                            children: g.intl.string(g.t.IgENJo),
                                         }),
                                     ],
                                 }),

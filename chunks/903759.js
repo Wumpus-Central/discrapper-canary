@@ -26,7 +26,7 @@ let h = (e) => {
                         children: [
                             (0, r.jsx)(l.Text, {
                                 variant: "text-md/medium",
-                                children: c.intl.format(c.t["Ks2/3d"], {
+                                children: c.intl.format(c.t["Ks2/3R"], {
                                     selectFileHook: (e, n) =>
                                         (0, r.jsx)(
                                             m,
@@ -41,7 +41,7 @@ let h = (e) => {
                             (0, r.jsx)(l.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-tertiary",
-                                children: c.intl.string(c.t.UTE8Cw),
+                                children: c.intl.string(c.t["UTE8C/"]),
                             }),
                         ],
                     }),

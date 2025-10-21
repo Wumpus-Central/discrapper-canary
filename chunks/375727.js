@@ -1,4 +1,4 @@
-n.d(t, { I: () => A }), n(388685);
+n.d(t, { I: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -29,7 +29,7 @@ var r = n(951288),
     S = n(388032),
     T = n(342745);
 let M = new m.Z("EmojiStudio");
-function P(e) {
+function A(e) {
     var t, n;
     if (null == e) return "";
     let r = null != (n = null == e || null == (t = e.file) ? void 0 : t.name) ? n : "",
@@ -37,12 +37,12 @@ function P(e) {
         l = -1 === i ? r : r.substring(0, i);
     return j.ZP.sanitizeEmojiName(l);
 }
-let A = (e) => {
+let P = (e) => {
         var t;
         let { guildId: n } = e,
             l = "userImage" in e ? e.userImage : void 0,
             m = "emoji" in e ? e.emoji : void 0,
-            A = !!m,
+            P = !!m,
             [Z, L] = i.useState(null != l ? l : null),
             [G, z] = i.useState(!1),
             U = (0, o.e7)([f.Z, x.Z, v.Z], () => {
@@ -53,7 +53,7 @@ let A = (e) => {
             [F, W] = i.useState(null != n ? n : U),
             [H, B] = i.useState(null),
             [V, J] = i.useState(null),
-            [Y, K] = i.useState(P(Z)),
+            [Y, K] = i.useState(A(Z)),
             [X, q] = i.useState(null),
             [$, Q] = i.useState(() => Date.now()),
             ee = i.useRef(0),
@@ -144,8 +144,8 @@ let A = (e) => {
                     } catch (e) {
                         if (429 === e.status)
                             c.Z.show({
-                                title: S.intl.string(S.t.iufib2),
-                                body: S.intl.string(S.t["Whhv4+"]),
+                                title: S.intl.string(S.t.iufib1),
+                                body: S.intl.string(S.t.Whhv4w),
                             });
                         else {
                             B((0, w.zg)(e)), M.error("Failed to delete emoji.", e);
@@ -175,10 +175,10 @@ let A = (e) => {
             }, []),
             eo = i.useCallback((e) => {
                 var t;
-                L(e), K((t) => ("" !== t ? t : P(e))), q(null != (t = null == e ? void 0 : e.data) ? t : null);
+                L(e), K((t) => ("" !== t ? t : A(e))), q(null != (t = null == e ? void 0 : e.data) ? t : null);
             }, []),
-            eu = A ? S.intl.string(S.t.FOYn8f) : S.intl.string(S.t.iMJO39),
-            ec = A ? S.intl.string(S.t.FOYn8f) : S.intl.string(S.t.DU0dy8);
+            eu = P ? S.intl.string(S.t.FOYn8U) : S.intl.string(S.t.iMJO37),
+            ec = P ? S.intl.string(S.t.FOYn8U) : S.intl.string(S.t["DU0dy/"]);
         return G
             ? (0, r.jsxs)("main", {
                   className: T.main,
@@ -225,7 +225,7 @@ let A = (e) => {
                               (0, r.jsxs)("div", {
                                   className: T.preview,
                                   children: [
-                                      (0, r.jsx)("label", { children: S.intl.string(S.t.JmuIb2) }),
+                                      (0, r.jsx)("label", { children: S.intl.string(S.t.JmuIb5) }),
                                       (0, r.jsxs)("ul", {
                                           children: [
                                               (0, r.jsx)("li", {
@@ -234,7 +234,7 @@ let A = (e) => {
                                                       children: [
                                                           (0, r.jsx)(k, {
                                                               src: X,
-                                                              alt: S.intl.string(S.t["zS0K+v"]),
+                                                              alt: S.intl.string(S.t["zS0K+s"]),
                                                           }),
                                                           (0, r.jsx)("span", { children: "8" }),
                                                       ],
@@ -245,7 +245,7 @@ let A = (e) => {
                                                       className: T.jumbo,
                                                       children: (0, r.jsx)(k, {
                                                           src: X,
-                                                          alt: S.intl.string(S.t["tE41+f"]),
+                                                          alt: S.intl.string(S.t["tE41+d"]),
                                                       }),
                                                   }),
                                               }),
@@ -255,18 +255,18 @@ let A = (e) => {
                               }),
                               (0, r.jsx)("div", {
                                   children: (0, r.jsx)(y.y, {
-                                      label: S.intl.string(S.t.m0YV7O),
+                                      label: S.intl.string(S.t.m0YV7M),
                                       name: Y,
                                       onNameChange: K,
                                   }),
                               }),
-                              A
+                              P
                                   ? null
                                   : (0, r.jsx)("div", {
                                         children: (0, r.jsx)(N.q, {
-                                            label: S.intl.string(S.t["9uKafX"]),
+                                            label: S.intl.string(S.t["9uKafS"]),
                                             required: !0,
-                                            helperText: null == F ? S.intl.string(S.t["1pdw0N"]) : void 0,
+                                            helperText: null == F ? S.intl.string(S.t["1pdw0A"]) : void 0,
                                             onChange: W,
                                             selected: F,
                                             onError: (e) => J(e),
@@ -316,7 +316,7 @@ let A = (e) => {
                 variant: "icon-only",
                 icon: u.j9r,
                 onClick: t,
-                "aria-label": S.intl.string(S.t["13/7kZ"]),
+                "aria-label": S.intl.string(S.t["13/7kX"]),
                 size: "md",
             }),
         });

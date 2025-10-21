@@ -18,7 +18,7 @@ var i = n(951288),
     y = n(641033),
     _ = n(989830),
     v = n(388032),
-    x = n(436083);
+    x = n(23586);
 let O = r.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -78,7 +78,7 @@ let O = r.memo(function (e) {
                             className: x.comboMultiplier,
                             style: { color: u },
                             variant: "text-sm/bold",
-                            children: v.intl.format(v.t["6bgVlp"], { multiplier: n }),
+                            children: v.intl.format(v.t["6bgVlq"], { multiplier: n }),
                         }),
                         o &&
                             (0, i.jsxs)(i.Fragment, {
@@ -116,7 +116,7 @@ let O = r.memo(function (e) {
                             (0, i.jsx)(c.Text, {
                                 className: x.tip,
                                 variant: "text-sm/bold",
-                                children: v.intl.string(v.t.b5Cpoa),
+                                children: v.intl.string(v.t.b5Cpof),
                             }),
                     ],
                 }),

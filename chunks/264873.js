@@ -12,7 +12,7 @@ var r = n(951288),
     g = n(108427),
     p = n(981631),
     m = n(388032),
-    f = n(10198);
+    f = n(197571);
 function _(e) {
     let { location: t, transitionTo: s = h.uL } = e,
         [a, _] = i.useState("submitting");
@@ -21,7 +21,7 @@ function _(e) {
             ? null
             : (0, r.jsx)(d.zx, {
                   onClick: () => s(p.Z5c.LOGIN, { source: "authorizeIPAdress" }),
-                  children: m.intl.string(m.t.dKhVQE),
+                  children: m.intl.string(m.t.dKhVQN),
               });
     }
     return ((0, c.ZP)(() => {
@@ -46,11 +46,11 @@ function _(e) {
                   }),
                   (0, r.jsx)(d.Dx, {
                       className: f.marginBottom8,
-                      children: m.intl.string(m.t["f/54a2"]),
+                      children: m.intl.string(m.t["f/54az"]),
                   }),
                   (0, r.jsx)(d.DK, {
                       className: f.marginBottom40,
-                      children: m.intl.string(m.t.i3ehMj),
+                      children: m.intl.string(m.t.i3ehMr),
                   }),
                   x(),
               ],
@@ -65,17 +65,17 @@ function _(e) {
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: f.marginBottom8,
-                        children: m.intl.string(m.t.iG0SlJ),
+                        children: m.intl.string(m.t.iG0SlK),
                     }),
                     (0, r.jsx)(d.DK, {
                         className: f.marginBottom40,
-                        children: m.intl.string(m.t["Elv+qq"]),
+                        children: m.intl.string(m.t["Elv+qt"]),
                     }),
                     x(),
                 ],
             })
           : (0, r.jsxs)(d.ZP, {
-                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: m.intl.string(m.t["9exy+f"]) })],
+                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: m.intl.string(m.t["9exy+V"]) })],
             });
 }
 a.ZP.initialize();

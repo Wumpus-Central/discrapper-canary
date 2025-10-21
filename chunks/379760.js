@@ -7,8 +7,8 @@ var s = r(755721),
     a = r(7557),
     l = r(388905),
     c = r(388032),
-    u = r(41636),
-    d = r(10198);
+    u = r(158017),
+    d = r(197571);
 function h(e) {
     let { title: t, subtitle: r, error: h, onSubmit: p, onCancel: f } = e;
     return (0, n.jsxs)(o.Z, {
@@ -42,7 +42,7 @@ function h(e) {
                     className: u.button,
                     onClick: f,
                     color: s.zx.Colors.PRIMARY,
-                    children: c.intl.string(c.t["ETE/oK"]),
+                    children: c.intl.string(c.t["ETE/oC"]),
                 }),
         ],
     });

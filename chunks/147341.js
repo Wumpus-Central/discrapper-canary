@@ -2,9 +2,9 @@ n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(997998),
+    l = n(943910),
     a = n(388032),
-    o = n(978143);
+    o = n(46693);
 function s() {
     return (0, r.jsx)("div", {
         className: o.wrapper,
@@ -17,13 +17,13 @@ function s() {
                     variant: "heading-xxl/normal",
                     color: "header-primary",
                     className: o.heading,
-                    children: a.intl.string(l.default["VAK+h4"]),
+                    children: a.intl.string(l.default["VAK+h9"]),
                 }),
                 (0, r.jsx)(i.Text, {
                     variant: "text-lg/normal",
                     color: "text-tertiary",
                     className: o.text,
-                    children: a.intl.string(l.default.dcpdhI),
+                    children: a.intl.string(l.default.dcpdhC),
                 }),
             ],
         }),

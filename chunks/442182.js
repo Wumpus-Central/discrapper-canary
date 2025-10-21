@@ -25,8 +25,8 @@ var r = n(951288),
     N = n(203377),
     I = n(981631),
     S = n(388032),
-    T = n(37134),
-    P = n(10083);
+    T = n(472039),
+    P = n(21321);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,10 +80,10 @@ async function R(e, t, n) {
             (0, r.jsx)(
                 s.Modal,
                 Z(w({}, t), {
-                    title: S.intl.string(S.t.R0RpRU),
+                    title: S.intl.string(S.t.R0RpRX),
                     actions: [
                         {
-                            text: S.intl.string(S.t.BddRzc),
+                            text: S.intl.string(S.t.BddRzS),
                             variant: "primary",
                             onClick: t.onClose,
                         },
@@ -110,19 +110,19 @@ function D(e) {
                 (0, r.jsx)(
                     s.Modal,
                     Z(w({}, e), {
-                        title: S.intl.string(S.t["7sFNfX"]),
-                        subtitle: S.intl.format(S.t.scORUl, {
+                        title: S.intl.string(S.t["7sFNfW"]),
+                        subtitle: S.intl.format(S.t.scORUv, {
                             username: t.name,
                             roleName: null == n ? void 0 : n.name,
                         }),
                         actions: [
                             {
-                                text: S.intl.string(S.t["ETE/oK"]),
+                                text: S.intl.string(S.t["ETE/oC"]),
                                 variant: "secondary",
                                 onClick: e.onClose,
                             },
                             {
-                                text: S.intl.string(S.t.N86XcH),
+                                text: S.intl.string(S.t.N86XcP),
                                 variant: "critical-primary",
                                 onClick: () => {
                                     R(t, l, o), e.onClose();
@@ -133,7 +133,7 @@ function D(e) {
                             className: T.removeTip,
                             color: "text-muted",
                             variant: "text-md/normal",
-                            children: S.intl.string(S.t.jxIxJC),
+                            children: S.intl.string(S.t.jxIxJL),
                         }),
                     }),
                 ),
@@ -144,7 +144,7 @@ function D(e) {
         let i = b.default.getUser(t.id);
         null != i &&
             (0, u.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("71227")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("97445")]).then(
                     n.bind(n, 415118),
                 );
                 return (t) =>
@@ -187,7 +187,7 @@ function D(e) {
                                 (0, r.jsx)("div", {
                                     className: T.removeButtonContainer,
                                     children: (0, r.jsx)(c.u, {
-                                        text: g ? S.intl.string(S.t.wkrQaG) : S.intl.string(S.t["7sFNfX"]),
+                                        text: g ? S.intl.string(S.t.wkrQaK) : S.intl.string(S.t["7sFNfW"]),
                                         position: "top",
                                         children: (0, r.jsx)(d.P3F, {
                                             className: a()(T.removeButton, { [T.removeButtonDisabled]: g }),
@@ -221,7 +221,7 @@ function A(e) {
                     className: T.emptyRowText,
                     variant: "text-sm/semibold",
                     color: "text-muted",
-                    children: S.intl.format(S.t.P9pZOT, {
+                    children: S.intl.format(S.t.P9pZOW, {
                         addMembersHook: function (e, i) {
                             return n
                                 ? null
@@ -301,15 +301,15 @@ function k(e) {
                 query: t,
                 onChange: n,
                 onClear: () => n(""),
-                placeholder: S.intl.string(S.t.pYHobG),
-                "aria-label": S.intl.string(S.t.pYHobG),
+                placeholder: S.intl.string(S.t.pYHobK),
+                "aria-label": S.intl.string(S.t.pYHobK),
             }),
             (0, r.jsx)(d.Button, {
                 onClick: l,
                 variant: "primary",
                 size: "sm",
                 disabled: i,
-                text: S.intl.string(S.t.cHszXl),
+                text: S.intl.string(S.t.cHszXg),
             }),
         ],
     });
@@ -333,7 +333,7 @@ function G(e) {
                 location_section: "Members",
             }),
                 (0, d.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("33285"), n.e("68226")]).then(n.bind(n, 24722));
+                    let { default: e } = await Promise.all([n.e("33285"), n.e("3291")]).then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -371,7 +371,7 @@ function G(e) {
                                 ? (0, r.jsx)(d.Wn, {
                                       className: T.searchWarning,
                                       messageType: d.QYI.INFO,
-                                      children: S.intl.string(S.t.RQxHZ2),
+                                      children: S.intl.string(S.t.RQxHZ8),
                                   })
                                 : null,
                         ],

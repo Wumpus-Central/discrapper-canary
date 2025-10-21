@@ -5,7 +5,7 @@ var i = n(120356),
     l = n.n(i),
     a = n(481060),
     s = n(388032),
-    o = n(24491);
+    o = n(289086);
 function c(e) {
     let {
         className: t,
@@ -60,7 +60,7 @@ function c(e) {
                               children: (0, r.jsx)(a.Button, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: null != i ? i : s.intl.string(s.t["5U0kLy"]),
+                                  text: null != i ? i : s.intl.string(s.t["5U0kL8"]),
                                   onClick: c,
                                   disabled: p,
                               }),
@@ -69,7 +69,7 @@ function c(e) {
                         variant: n ? "critical-primary" : "primary",
                         size: "sm",
                         disabled: null == d || !n || p,
-                        text: n ? s.intl.string(s.t.R9GHyc) : s.intl.string(s.t.JFfinp),
+                        text: n ? s.intl.string(s.t.R9GHya) : s.intl.string(s.t.JFfins),
                         onClick: d,
                     }),
                 ],

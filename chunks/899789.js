@@ -15,15 +15,15 @@ var l = t(951288),
     v = t(343312),
     g = t(30910),
     f = t(619733),
-    b = t(45765),
+    b = t(470658),
     p = t(388032),
-    j = t(179761);
+    j = t(755350);
 function x() {
     return (0, l.jsx)(o.Z, {
         className: j.maxInstancesWarning,
         children: (0, l.jsx)(s.Text, {
             variant: "text-sm/medium",
-            children: p.intl.formatToPlainString(b.default.xta2U1, { maxInstances: f.YX }),
+            children: p.intl.formatToPlainString(b.default.xta2U9, { maxInstances: f.YX }),
         }),
     });
 }
@@ -64,7 +64,7 @@ function h() {
                           children: [
                               (0, l.jsx)(s.Heading, {
                                   variant: "heading-md/semibold",
-                                  children: p.intl.string(b.default.BOWmmZ),
+                                  children: p.intl.string(b.default.BOWmmT),
                               }),
                               (0, l.jsx)("div", {
                                   className: j.gameInstanceContainer,
@@ -89,7 +89,7 @@ function h() {
                           k &&
                               (0, l.jsx)(s.Heading, {
                                   variant: "heading-md/semibold",
-                                  children: p.intl.string(b.default.NIwDqa),
+                                  children: p.intl.string(b.default.NIwDqW),
                               }),
                           (0, l.jsx)("div", {
                               className: j.gameContainer,
@@ -117,7 +117,7 @@ function h() {
                                   (0, l.jsx)(s.d3s, { size: "sm" }),
                                   (0, l.jsx)(s.Text, {
                                       variant: "text-sm/medium",
-                                      children: p.intl.string(b.default["5DjxXl"]),
+                                      children: p.intl.string(b.default["5DjxXm"]),
                                   }),
                               ],
                           }),

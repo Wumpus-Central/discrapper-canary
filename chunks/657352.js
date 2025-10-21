@@ -3,7 +3,7 @@ var i = n(951288);
 n(647438);
 var r = n(481060),
     l = n(388032),
-    a = n(29030);
+    a = n(576385);
 let o = (e) => {
     let { guild: t, onClose: o } = e;
     return (0, i.jsxs)("div", {
@@ -19,12 +19,12 @@ let o = (e) => {
                 children: [
                     (0, i.jsx)(r.Heading, {
                         variant: "heading-md/semibold",
-                        children: l.intl.format(l.t.THgVCA, { guild: t.name }),
+                        children: l.intl.format(l.t.THgVCC, { guild: t.name }),
                     }),
                     (0, i.jsx)(r.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: l.intl.string(l.t["1yq3nJ"]),
+                        children: l.intl.string(l.t["1yq3nO"]),
                     }),
                     (0, i.jsx)("div", {
                         className: a.buttonContainer,

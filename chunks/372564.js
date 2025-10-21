@@ -63,12 +63,12 @@ class O extends i.Component {
                           children: [
                               (0, r.jsx)(s.P3F, {
                                   onClick: this.handleClick,
-                                  "aria-label": f.intl.string(f.t.mKwsSk),
+                                  "aria-label": f.intl.string(f.t.mKwsSp),
                                   className: h.topicClickTarget,
                               }),
                               null == e.linkedLobby || t
                                   ? u.Z.parseTopic(e.topic, !0, { channelId: e.id })
-                                  : f.intl.string(f.t.XJVlf3),
+                                  : f.intl.string(f.t["XJVlf/"]),
                           ],
                       }),
                   ],

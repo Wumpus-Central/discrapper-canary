@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(720196),
     u = n(981631),
     d = n(388032),
-    h = n(926609),
-    g = n(10198);
+    h = n(710509),
+    g = n(197571);
 function p(e) {
     let { children: t } = e;
     return (0, r.jsx)("li", {
@@ -32,11 +32,11 @@ function m(e) {
             }),
             (0, r.jsx)(a.Dx, {
                 className: g.marginBottom8,
-                children: d.intl.string(d.t["8UcxIy"]),
+                children: d.intl.string(d.t["8UcxI6"]),
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
-                children: d.intl.string(d.t.O37hMj),
+                children: d.intl.string(d.t.O37hMl),
             }),
             (0, r.jsxs)(a.gO, {
                 className: s()(g.marginBottom20, g.marginTop20),
@@ -45,15 +45,15 @@ function m(e) {
                     (0, r.jsxs)("ul", {
                         className: h.listContainer,
                         children: [
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.Gj1Zr6) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.Gj1Zry) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t["8C6t3N"]) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t["8C6t3B"]) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.mToZMD) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.mToZMA) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.TPEvkZ) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.TPEvkc) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(p, { children: d.intl.string(d.t.H8Y1Li) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.H8Y1Ln) }),
                         ],
                     }),
                 ],
@@ -63,12 +63,12 @@ function m(e) {
                 children: [
                     (0, r.jsx)(a.zx, {
                         onClick: () => t(c.n.PASSWORD),
-                        children: d.intl.string(d.t.GgCRqa),
+                        children: d.intl.string(d.t.GgCRqR),
                     }),
                     (0, r.jsx)(a.zx, {
                         color: a.zx.Colors.PRIMARY,
                         onClick: () => i(u.Z5c.LOGIN, { source: "account_revert" }),
-                        children: d.intl.string(d.t["B/yHcX"]),
+                        children: d.intl.string(d.t["B/yHcQ"]),
                     }),
                 ],
             }),

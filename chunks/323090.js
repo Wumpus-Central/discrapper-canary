@@ -15,11 +15,11 @@ var i = t(442837),
     x = t(179828),
     h = t(228168),
     v = t(388032),
-    j = t(438160);
+    j = t(54966);
 function g(e) {
     let { user: n, currentUser: t, displayProfile: g, guildId: b, subsection: I, onClose: y } = e,
-        { trackUserProfileAction: Z } = (0, c.KZ)(),
-        _ = (0, i.e7)([d.Z], () => {
+        { trackUserProfileAction: _ } = (0, c.KZ)(),
+        Z = (0, i.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
@@ -34,11 +34,11 @@ function g(e) {
                     userBio: g.bio,
                     setLineClamp: !1,
                 }),
-            (null == _ ? void 0 : _.popularApplicationCommandIds) != null &&
+            (null == Z ? void 0 : Z.popularApplicationCommandIds) != null &&
                 null != O &&
                 (0, l.jsx)(u.Z, {
-                    applicationId: _.id,
-                    commandIds: _.popularApplicationCommandIds,
+                    applicationId: Z.id,
+                    commandIds: Z.popularApplicationCommandIds,
                     channel: O,
                     guildId: b,
                     onClick: y,
@@ -51,7 +51,7 @@ function g(e) {
                     scrollIntoView: I === h.Tb.ROLES,
                 }),
             (0, l.jsx)(f.Z, {
-                heading: v.intl.string(v.t["A//N4u"]),
+                heading: v.intl.string(v.t["A//N4k"]),
                 children: (0, l.jsx)(p.Z, {
                     userId: n.id,
                     guildId: b,
@@ -65,7 +65,7 @@ function g(e) {
                     userId: n.id,
                     className: j.note,
                     autoFocus: I === h.Tb.NOTE,
-                    onUpdate: () => Z({ action: "SET_NOTE" }),
+                    onUpdate: () => _({ action: "SET_NOTE" }),
                 }),
             }),
         ],

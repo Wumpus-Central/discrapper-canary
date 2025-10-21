@@ -8,9 +8,9 @@ var r = t(951288),
     c = t(639777),
     d = t(735276),
     u = t(619733),
-    m = t(45765),
+    m = t(470658),
     g = t(388032),
-    f = t(546162);
+    f = t(799070);
 let x = {
     steps: {
         [u.EK.SERVER_SETTINGS]: {
@@ -36,7 +36,7 @@ function _(e) {
                       onClose: () => {
                           (0, l.Zy)(), a();
                       },
-                      "aria-label": g.intl.string(m.default["yb+orq"]),
+                      "aria-label": g.intl.string(m.default["yb+ork"]),
                       onSelect: void 0,
                       children: (0, r.jsxs)(i.kSQ, {
                           children: [
@@ -44,7 +44,7 @@ function _(e) {
                                   (0, r.jsx)(i.sNh, {
                                       id: "get-support",
                                       icon: i.kBi,
-                                      label: g.intl.string(m.default.bBkeMj),
+                                      label: g.intl.string(m.default.bBkeMs),
                                       action: () => {
                                           (0, o.q)({ href: u.uz[t.providerType] });
                                       },
@@ -52,7 +52,7 @@ function _(e) {
                               (0, r.jsx)(i.sNh, {
                                   id: "settings",
                                   icon: i.ewm,
-                                  label: g.intl.string(m.default.feUiMz),
+                                  label: g.intl.string(m.default["feUiM/"]),
                                   action: () => {
                                       (0, d.Z)({
                                           guildId: n,
@@ -96,7 +96,7 @@ function _(e) {
                           return e;
                       })(
                           {
-                              "aria-label": g.intl.string(g.t.UKOtz8),
+                              "aria-label": g.intl.string(g.t["UKOtz+"]),
                               className: f.clickable,
                           },
                           e,

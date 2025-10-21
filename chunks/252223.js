@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(556638),
     R = n(981631),
     P = n(388032),
-    w = n(666998);
+    w = n(80568);
 function D(e, t, n) {
     return (
         t in e
@@ -83,15 +83,15 @@ function M(e, t) {
 function k(e) {
     let t = (0, d.R)("formatActivityString"),
         n = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
-    return null != n ? (t ? n : P.intl.formatToPlainString(P.t["0wJXSk"], { name: n })) : P.intl.string(P.t.eXan7O);
+    return null != n ? (t ? n : P.intl.formatToPlainString(P.t["0wJXSh"], { name: n })) : P.intl.string(P.t.eXan7B);
 }
 function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
-            ? P.intl.string(P.t["9FaEzs"])
+            ? P.intl.string(P.t["9FaEzi"])
             : e.isGuildStageVoice()
-              ? P.intl.string(P.t.QygGCA)
-              : P.intl.string(P.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
+              ? P.intl.string(P.t.QygGCN)
+              : P.intl.string(P.t.msxteM)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
 function U(e) {

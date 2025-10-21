@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(46140),
     S = n(231338),
     A = n(388032),
-    C = n(74576);
+    C = n(310696);
 function N(e, t, n) {
     return (
         t in e
@@ -136,7 +136,7 @@ let D = (0, s.animated)(u.CJ0),
                 [C.outerContainerEmbed]: q,
                 [C.outerContainerXs]: "xs" === P,
             }),
-            "aria-label": A.intl.string(A.t.dcl9MT),
+            "aria-label": A.intl.string(A.t.dcl9MQ),
             style: { height: z ? Z : void 0 },
             children: [
                 (0, r.jsx)(E.Z, {
@@ -176,7 +176,7 @@ let D = (0, s.animated)(u.CJ0),
                                         },
                                         "aria-hidden": !x && M,
                                         children: (0, r.jsxs)(u.kL8, {
-                                            "aria-label": A.intl.string(A.t.dcl9MT),
+                                            "aria-label": A.intl.string(A.t.dcl9MQ),
                                             onClick: en,
                                             className: C.headerCollapsedClickableContainer,
                                             children: [
@@ -245,7 +245,7 @@ let D = (0, s.animated)(u.CJ0),
                                                                       : "heading-lg/bold",
                                                             className: C.heading,
                                                             color: "always-white",
-                                                            children: A.intl.format(A.t.EAYZAg, {
+                                                            children: A.intl.format(A.t.EAYZAr, {
                                                                 questName: a.config.messages.questName,
                                                             }),
                                                         }),
@@ -254,14 +254,14 @@ let D = (0, s.animated)(u.CJ0),
                                                         variant: "text-xs/normal",
                                                         color: "always-white",
                                                         children: Q
-                                                            ? A.intl.formatToPlainString(A.t.APddvL, {
+                                                            ? A.intl.formatToPlainString(A.t.APddvF, {
                                                                   expirationDate: ee,
                                                               })
                                                             : n
-                                                              ? A.intl.formatToPlainString(A.t.v7xMw8, {
+                                                              ? A.intl.formatToPlainString(A.t.v7xMw7, {
                                                                     expirationDate: $,
                                                                 })
-                                                              : A.intl.formatToPlainString(A.t["pX+fmp"], {
+                                                              : A.intl.formatToPlainString(A.t["pX+fmn"], {
                                                                     expirationDate: $,
                                                                 }),
                                                     }),
@@ -302,7 +302,7 @@ let D = (0, s.animated)(u.CJ0),
                                                 u.P3F,
                                                 w(R({}, e), {
                                                     className: C.iconWrapper,
-                                                    "aria-label": A.intl.string(A.t.DEoVWV),
+                                                    "aria-label": A.intl.string(A.t.DEoVWZ),
                                                     children: (0, r.jsx)(u.xhG, {
                                                         size: "md",
                                                         color: l.Z.WHITE,
@@ -315,7 +315,7 @@ let D = (0, s.animated)(u.CJ0),
                                     (0, r.jsx)(u.P3F, {
                                         onClick: en,
                                         className: C.iconWrapper,
-                                        "aria-label": M ? A.intl.string(A.t.iTcumZ) : A.intl.string(A.t.dcl9MT),
+                                        "aria-label": M ? A.intl.string(A.t.iTcuma) : A.intl.string(A.t.dcl9MQ),
                                         children: (0, r.jsx)(D, {
                                             style: {
                                                 rotate: L.to({

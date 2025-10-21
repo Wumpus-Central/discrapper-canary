@@ -10,7 +10,7 @@ var s = n(120356),
     d = n(644646),
     u = n(46140),
     p = n(388032),
-    m = n(96656);
+    m = n(895758);
 let g = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: s, partnerBranding: g, useReducedMotion: f } = e,
         { status: h } = (0, c.n)({
@@ -112,7 +112,7 @@ let g = (e) => {
                             color: "always-white",
                             lineClamp: 1,
                             variant: "text-xs/medium",
-                            children: p.intl.string((null == h ? void 0 : h.label2) ? p.t["3mgEQU"] : p.t["1Wvve3"]),
+                            children: p.intl.string((null == h ? void 0 : h.label2) ? p.t["3mgEQf"] : p.t["1Wvve2"]),
                         }),
                     }),
                 ],

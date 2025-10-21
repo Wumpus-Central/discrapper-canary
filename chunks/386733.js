@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(938736),
     O = n(981631),
     v = n(388032),
-    I = n(55282),
+    I = n(120472),
     T = n(691766);
 function S(e, t, n) {
     return (
@@ -99,7 +99,7 @@ let R = (e) => {
                       children: n,
                   });
         return (0, r.jsx)(c.aML, {
-            text: v.intl.string(v.t.UnKHdn),
+            text: v.intl.string(v.t.UnKHdo),
             shouldShow: !o,
             tooltipContentClassName: I.unsentTooltipContent,
             children: (e) => (0, r.jsx)("div", N(A({ className: I.userAvatarProgressBarUnit }, e), { children: s })),
@@ -223,7 +223,7 @@ let R = (e) => {
                                                 alt: "",
                                                 className: I.expandedProgressBarSelectFriendsIcon,
                                             }),
-                                            S ? v.intl.string(v.t.SY9tyM) : v.intl.string(v.t.Lm2nFR),
+                                            S ? v.intl.string(v.t.SY9tyI) : v.intl.string(v.t.Lm2nFc),
                                         ],
                                     }),
                                 }),

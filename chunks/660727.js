@@ -10,14 +10,14 @@ var t = a(951288),
     u = a(984933),
     p = a(768581),
     m = a(956664),
-    x = a(185923),
-    g = a(388032),
+    g = a(185923),
+    x = a(388032),
     I = a(759415),
     f = a(84717);
 function h() {
     return [
         {
-            name: g.intl.string(g.t.Sp2NFx),
+            name: x.intl.string(x.t["Sp2NF+"]),
             extensions: ["jpg", "jpeg", "png"],
         },
     ];
@@ -39,7 +39,7 @@ let C = function (n) {
         b = u.ZP.getDefaultChannel(e),
         [N, y] = o.useState("tab-id-role-icon-file-upload"),
         [_, k] = o.useState(!1),
-        E = (0, i.Z)(h);
+        z = (0, i.Z)(h);
     return (
         o.useEffect(() => {
             k(!1);
@@ -64,11 +64,11 @@ let C = function (n) {
                         children: [
                             (0, t.jsx)(l.njP.Item, {
                                 id: "tab-id-role-icon-file-upload",
-                                children: g.intl.string(g.t.royWSE),
+                                children: x.intl.string(x.t.royWSB),
                             }),
                             (0, t.jsx)(l.njP.Item, {
                                 id: "tab-id-role-icon-emoji",
-                                children: g.intl.string(g.t["/Ny2wc"]),
+                                children: x.intl.string(x.t["/Ny2wZ"]),
                             }),
                         ],
                     }),
@@ -97,7 +97,7 @@ let C = function (n) {
                                       }),
                                       (0, t.jsx)("div", {
                                           className: I.uploadInfo,
-                                          children: g.intl.string(g.t["mz++Qk"]),
+                                          children: x.intl.string(x.t["mz++Qq"]),
                                       }),
                                       (0, t.jsx)(c.Z, {
                                           onChange: (n) => {
@@ -107,8 +107,8 @@ let C = function (n) {
                                               k(!0);
                                           },
                                           maxFileSizeBytes: 256000,
-                                          filters: E,
-                                          text: g.intl.string(g.t.sdCQY2),
+                                          filters: z,
+                                          text: x.intl.string(x.t.sdCQY4),
                                           size: "md",
                                           variant: "primary",
                                       }),
@@ -117,7 +117,7 @@ let C = function (n) {
                                                 className: I.uploadError,
                                                 color: "text-danger",
                                                 variant: "text-sm/normal",
-                                                children: g.intl.string(g.t.HFyKsb),
+                                                children: x.intl.string(x.t.HFyKsa),
                                             })
                                           : null,
                                   ],
@@ -142,7 +142,7 @@ let C = function (n) {
                                   }
                                   m();
                               },
-                              pickerIntention: x.Hz.COMMUNITY_CONTENT,
+                              pickerIntention: g.Hz.COMMUNITY_CONTENT,
                               channel: b,
                           })
                         : null,

@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(342386),
     _ = n(981631),
     p = n(930441),
-    h = n(345909),
+    h = n(660886),
     m = n(388032),
     g = n(286661);
 let E = () => {
@@ -27,13 +27,13 @@ let E = () => {
         (0, r.jsx)("div", {
             className: g.container,
             children: (0, r.jsxs)(l.C3N, {
-                label: m.intl.string(h.default.USIXU1),
+                label: m.intl.string(h.default.USIXU7),
                 children: [
                     (0, r.jsx)(l.rsf, {
                         checked: e,
-                        description: m.intl.string(h.default["5MdB3t"]),
+                        description: m.intl.string(h.default["5MdB3j"]),
                         onChange: d.Ex.updateSetting,
-                        label: m.intl.string(h.default.zkEceX),
+                        label: m.intl.string(h.default.zkEceS),
                     }),
                     e
                         ? (0, r.jsx)(l.Zbd, {
@@ -47,7 +47,7 @@ let E = () => {
                                           children: (0, r.jsx)(l.Text, {
                                               variant: "text-sm/semibold",
                                               color: "text-default",
-                                              children: m.intl.string(h.default.xAVm7O),
+                                              children: m.intl.string(h.default.xAVm7K),
                                           }),
                                       }),
                                       (0, r.jsx)(l.P3F, {
@@ -57,7 +57,7 @@ let E = () => {
                                                   pathname: _.Z5c.FAMILY_CENTER,
                                                   state: { scrollRestoration: !1 },
                                               },
-                                              children: m.intl.string(h.default.cUIXFR),
+                                              children: m.intl.string(h.default.cUIXFY),
                                           }),
                                       }),
                                       (0, r.jsx)(l.G2e, {
@@ -71,9 +71,9 @@ let E = () => {
                         : null,
                     (0, r.jsx)(l.rsf, {
                         checked: !!t[p.$Z.FAMILY_CENTER_DIGEST],
-                        description: m.intl.string(h.default["y34S4+"]),
+                        description: m.intl.string(h.default.y34S46),
                         onChange: E,
-                        label: m.intl.string(h.default.irvJKS),
+                        label: m.intl.string(h.default.irvJKR),
                     }),
                 ],
             }),

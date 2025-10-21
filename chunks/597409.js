@@ -16,7 +16,7 @@ let b = function (e) {
     return (0, n.jsx)(o.v2r, {
         navId: "member-application-context-menu",
         onClose: i.Zy,
-        "aria-label": u.intl.string(u.t.liqwPD),
+        "aria-label": u.intl.string(u.t.liqwPJ),
         onSelect: d,
         children: (0, n.jsxs)(o.kSQ, {
             children: [
@@ -25,12 +25,12 @@ let b = function (e) {
                         o.sNh,
                         {
                             id: "ban",
-                            label: u.intl.string(u.t["I+Cbur"]),
+                            label: u.intl.string(u.t["I+Cbum"]),
                             icon: o.pgN,
                             color: "danger",
                             action: () =>
                                 (0, o.ZDy)(async () => {
-                                    let { default: e } = await r.e("43350").then(r.bind(r, 98746));
+                                    let { default: e } = await r.e("4114").then(r.bind(r, 98746));
                                     return (t) => {
                                         var r, c;
                                         return (0, n.jsx)(
