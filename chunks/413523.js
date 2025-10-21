@@ -310,31 +310,33 @@ class D {
         }
         return v;
     }
-    constructor(e) {
+    constructor(e, t) {
         T(this, "channelId", void 0),
             T(this, "call", void 0),
             T(this, "participants", {}),
             T(this, "lastSpoke", {}),
             T(this, "guildRingingUsers", new Set()),
+            T(this, "isParticipantPoppedOut", null),
             T(
                 this,
                 "participantByIndex",
                 new i.h((e) => {
-                    var t;
-                    let n = [];
-                    if (
-                        (e.type === O.fO.USER && e.speaking && n.push("SPEAKING"),
-                        e.type === O.fO.USER && (null == (t = e.voiceState) ? void 0 : t.selfVideo))
-                    )
-                        n.push("VIDEO"), e.localVideoDisabled || n.push("FILTERED");
+                    var t, n, r, i;
+                    let a = [];
+                    e.type === O.fO.USER && e.speaking && a.push("SPEAKING");
+                    let o =
+                        null != (i = null == (t = (n = this).isParticipantPoppedOut) ? void 0 : t.call(n, e.id)) && i;
+                    if (e.type === O.fO.USER && (null == (r = e.voiceState) ? void 0 : r.selfVideo))
+                        a.push("VIDEO"), e.localVideoDisabled || o || a.push("FILTERED");
                     else if ((0, O._5)(e)) {
-                        n.push("STREAM");
+                        a.push("STREAM");
                         let { showInCallGrid: t } = (0, b.$)({ location: "ChannelRTCParticipants" });
-                        e.type !== O.fO.HIDDEN_STREAM && (null != e.streamId || t) && n.push("FILTERED");
+                        e.type !== O.fO.HIDDEN_STREAM && (null != e.streamId || t) && !o && a.push("FILTERED");
                     }
-                    return e.type === O.fO.ACTIVITY && (n.push("ACTIVITY"), n.push("FILTERED")), n;
+                    return e.type === O.fO.ACTIVITY && (a.push("ACTIVITY"), o || a.push("FILTERED")), a;
                 }, P),
             ),
-            (this.channelId = e);
+            (this.channelId = e),
+            (this.isParticipantPoppedOut = null != t ? t : null);
     }
 }

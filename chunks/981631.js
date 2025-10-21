@@ -6224,6 +6224,7 @@ let rO = [];
 var rv = (function (e) {
         return (
             (e.CHANNEL_CALL_POPOUT = "DISCORD_CHANNEL_CALL_POPOUT"),
+            (e.CALL_TILE_POPOUT = "DISCORD_CALL_TILE_POPOUT"),
             (e.SOUNDBOARD = "DISCORD_SOUNDBOARD"),
             (e.RTC_DEBUG_POPOUT = "DISCORD_RTC_DEBUG_POPOUT"),
             (e.CHANNEL_POPOUT = "DISCORD_CHANNEL_POPOUT"),

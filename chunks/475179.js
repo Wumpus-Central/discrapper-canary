@@ -44,6 +44,20 @@ let u = {
             id: t,
         });
     },
+    popoutParticipant(e, t) {
+        r.Z.dispatch({
+            type: "CHANNEL_RTC_POPOUT_PARTICIPANT",
+            channelId: e,
+            participantId: t,
+        });
+    },
+    returnParticipant(e, t) {
+        r.Z.dispatch({
+            type: "CHANNEL_RTC_RETURN_PARTICIPANT",
+            channelId: e,
+            participantId: t,
+        });
+    },
     updateLayout(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.IlC.APP;
         a.default.track(s.rMx.VIDEO_LAYOUT_TOGGLED, c({ video_layout: t }, (0, i.AB)(e))),

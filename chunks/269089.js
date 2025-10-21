@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(570140),
     l = n(765250),
@@ -8,36 +8,56 @@ var r = n(951288),
     c = n(788983),
     u = n(981631),
     d = n(757744);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 n(966117);
-let p = (0, o.Un)({
+let f = (0, o.Un)({
         createPromise: () => n.e("80960").then(n.bind(n, 223455)),
         webpackId: 223455,
         name: "PopoutWindowChannelCall",
     }),
-    f = (0, o.Un)({
+    h = (0, o.Un)({
+        createPromise: () => n.e("31688").then(n.bind(n, 205557)),
+        webpackId: 205557,
+        name: "PopoutWindowCallTile",
+    }),
+    g = (0, o.Un)({
         createPromise: () => n.e("20176").then(n.bind(n, 432472)),
         webpackId: 432472,
         name: "PopoutWindowStageChannelCall",
     }),
-    h = (0, o.Un)({
+    m = (0, o.Un)({
         createPromise: () => n.e("80960").then(n.bind(n, 945778)),
         webpackId: 945778,
         name: "PopoutWindowRTCDebug",
     }),
-    g = (0, o.Un)({
+    b = (0, o.Un)({
         createPromise: () => Promise.all([n.e("50751"), n.e("27278")]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: "PopoutWindowActivity",
     });
-class m extends a.Z {
+class _ extends a.Z {
     _initialize() {
         i.Z.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
+            i.Z.subscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
             i.Z.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
             i.Z.subscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
             this.initializeStyleSheetObserver();
     }
     _terminate() {
         i.Z.unsubscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout),
+            i.Z.unsubscribe("CALL_TILE_POPOUT_WINDOW_OPEN", this.handleOpenCallTilePopout),
             i.Z.unsubscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout),
             i.Z.unsubscribe("ACTIVITY_POPOUT_WINDOW_OPEN", this.handleOpenActivityPopout),
             this.terminateStyleSheetObserver();
@@ -48,11 +68,11 @@ class m extends a.Z {
             u.KJ3.CHANNEL_CALL_POPOUT,
             (e) =>
                 t.isGuildStageVoice()
-                    ? (0, r.jsx)(f, {
+                    ? (0, r.jsx)(g, {
                           windowKey: e,
                           channelId: t.id,
                       })
-                    : (0, r.jsx)(p, {
+                    : (0, r.jsx)(f, {
                           windowKey: e,
                           channelId: t.id,
                       }),
@@ -80,30 +100,38 @@ class m extends a.Z {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        c.bA(u.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(h, { windowKey: e }), {
+        c.bA(u.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(m, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
     }
     handleOpenActivityPopout() {
         (0, l.te)(d.$S, s.Z.getDefaultLayout(d.$S, d.HN), d.HN),
-            c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(g, { windowKey: e }), {
+            c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(b, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480,
             });
     }
     constructor(...e) {
         super(...e),
-            (function (e, t, n) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: null,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
-                    : (e[t] = null);
-            })(this, "_observer", null);
+            p(this, "_observer", null),
+            p(this, "handleOpenCallTilePopout", (e) => {
+                let { channelId: t, participantId: n } = e,
+                    i = "".concat(u.KJ3.CALL_TILE_POPOUT, "_").concat(t, "_").concat(n);
+                c.bA(
+                    i,
+                    (e) =>
+                        (0, r.jsx)(h, {
+                            windowKey: e,
+                            channelId: t,
+                            participantId: n,
+                        }),
+                    {
+                        defaultWidth: 854,
+                        defaultHeight: 480,
+                    },
+                );
+            });
     }
 }
-let b = new m();
+let E = new _();

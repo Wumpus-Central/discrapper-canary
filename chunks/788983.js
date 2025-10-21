@@ -1,9 +1,10 @@
 n.d(t, {
-    YS: () => d,
+    YS: () => f,
     bA: () => s,
+    fT: () => c,
     hP: () => l,
-    hY: () => u,
-    xv: () => c,
+    hY: () => d,
+    xv: () => u,
 });
 var r = n(570140);
 function i(e, t, n) {
@@ -55,20 +56,27 @@ function l(e) {
         channel: e,
     });
 }
-function c(e) {
+function c(e, t) {
+    return r.Z.dispatch({
+        type: "CALL_TILE_POPOUT_WINDOW_OPEN",
+        channelId: e,
+        participantId: t,
+    });
+}
+function u(e) {
     return r.Z.dispatch({
         type: "POPOUT_WINDOW_CLOSE",
         key: e,
     });
 }
-function u(e, t) {
+function d(e, t) {
     return r.Z.dispatch({
         type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP",
         alwaysOnTop: t,
         key: e,
     });
 }
-function d(e, t) {
+function f(e, t) {
     return r.Z.dispatch({
         type: "POPOUT_WINDOW_ADD_STYLESHEET",
         url: e,

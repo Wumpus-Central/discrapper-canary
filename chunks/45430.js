@@ -6,7 +6,7 @@ var i = n(951288),
     o = n(388032),
     s = n(427538);
 function c(e) {
-    let { channelId: t } = e;
+    let { channelId: t, allPoppedOut: n = !1 } = e;
     return (0, i.jsxs)("div", {
         className: s.container,
         children: [
@@ -16,16 +16,17 @@ function c(e) {
                 children: [
                     (0, i.jsx)(r.Heading, {
                         variant: "heading-lg/normal",
-                        children: o.intl.format(o.t.ilLVLi, {}),
+                        children: n ? o.intl.string(o.t.KIConm) : o.intl.format(o.t.ilLVLr, {}),
                     }),
-                    (0, i.jsx)(r.Button, {
-                        variant: "secondary",
-                        size: "md",
-                        onClick: (e) => {
-                            e.stopPropagation(), l.Z.toggleVoiceParticipantsHidden(t, !1);
-                        },
-                        text: o.intl.string(o.t.kLQySE),
-                    }),
+                    !n &&
+                        (0, i.jsx)(r.Button, {
+                            variant: "secondary",
+                            size: "md",
+                            onClick: (e) => {
+                                e.stopPropagation(), l.Z.toggleVoiceParticipantsHidden(t, !1);
+                            },
+                            text: o.intl.string(o.t.kLQySL),
+                        }),
                 ],
             }),
         ],
