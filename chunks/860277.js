@@ -9,10 +9,10 @@ var e = r(951288),
     o = r(198358),
     x = r(612776),
     u = r(268685),
-    p = r(484718),
+    p = r(124798),
     m = r(388032);
 function v(i) {
-    let { slide: t } = i,
+    let { step: t } = i,
         { users: r } = (0, l.e7)([c.Z], () => c.Z.getCheckpointData()),
         v = (0, n.useMemo)(
             () =>
@@ -26,13 +26,13 @@ function v(i) {
         );
     return (0, e.jsxs)(o.Z, {
         children: [
-            t === x.Ww.FRIENDS &&
+            t === x.ij.FRIENDS_INTRO &&
                 (0, e.jsxs)("div", {
                     children: [
                         (0, e.jsx)(a.xvT, {
                             variant: "display-md",
                             color: "text-primary",
-                            children: m.intl.string(p.default["4xZpq6"]),
+                            children: m.intl.string(p.default["4xZpq4"]),
                         }),
                         v.slice(1).map((i) =>
                             (0, e.jsxs)(
@@ -55,13 +55,13 @@ function v(i) {
                         ),
                     ],
                 }),
-            t === x.Ww.BEST_FRIEND &&
+            t === x.ij.FRIENDS_BEST &&
                 (0, e.jsxs)("div", {
                     children: [
                         (0, e.jsx)(a.xvT, {
                             variant: "display-md",
                             color: "text-primary",
-                            children: m.intl.string(p.default.d5HUsL),
+                            children: m.intl.string(p.default.d5HUsD),
                         }),
                         (0, e.jsx)(s.Z, {
                             user: v[0],
@@ -70,7 +70,7 @@ function v(i) {
                         (0, e.jsx)(a.xvT, {
                             variant: "display-md",
                             color: "text-primary",
-                            children: m.intl.format(p.default.wz2JuL, {
+                            children: m.intl.format(p.default.wz2JuF, {
                                 user: v[0].username,
                                 userHook: (i, t) =>
                                     (0, e.jsx)(
@@ -87,7 +87,7 @@ function v(i) {
                         (0, e.jsx)(a.xvT, {
                             variant: "display-sm",
                             color: "text-primary",
-                            children: m.intl.string(p.default.wWKySE),
+                            children: m.intl.string(p.default.wWKySP),
                         }),
                         (0, e.jsx)(a.xvT, {
                             variant: "display-sm",
@@ -97,7 +97,7 @@ function v(i) {
                         (0, e.jsx)(a.xvT, {
                             variant: "display-sm",
                             color: "text-primary",
-                            children: m.intl.string(p.default.lXT6np),
+                            children: m.intl.string(p.default.lXT6ns),
                         }),
                         (0, e.jsx)(a.xvT, {
                             variant: "display-sm",
