@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"Z1NZwX":["Izbrisano"],"+a5G2l":["Nedostupno"],"Ys/RrB":["Izvan mreže"],"60kAzo":["Na mreži"],"aCyHe2":["Nedostupno"],"k+RTIm":["Mjesto"],"nB5OZ4":["Mjesto"],"rOMEZd":["Ime"],"K+zMYp":["Model"],"k0Y0BE":["Pogledaj"],"P2ihv7":["Pozovi prijatelje"],"yIH2oI":["Upravljanje modelom"],"feUiM/":["Postavke"],"n+ZX7y":["Status servera"]}',
+p.exports = JSON.parse(
+    '{"zyFyf3":["Είσαι σε λειτουργία Μην ενοχλείτε. Συνδέσου για να πάρεις μέρος στη συζήτηση."],"7cuAey":["Η λειτουργία Μην ενοχλείτε είναι ενεργή εδώ και λίγο καιρό. Ενημέρωσε τους φίλους σου ότι είσαι διαθέσιμος."],"3nnb4r":["Οι φίλοι σου μπορεί να νομίζουν ότι είσαι απασχολημένος. Συνδέσου για να πάρεις μέρος στη συζήτηση."],"3t3FRw":["Πες στους άλλους ότι είσαι διαθέσιμος"],"Onha6E":["Είσαι ακόμα απασχολημένος;"],"NtY0dV":["Είσαι σε λειτουργία Μην ενοχλείτε για πάνω από μία ημέρα"]}',
 );

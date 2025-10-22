@@ -39,8 +39,8 @@ var r = n(951288),
     G = n(276264),
     H = n(981631),
     F = n(388032),
-    B = n(101265),
-    V = n(854641);
+    B = n(61722),
+    V = n(32482);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -95,7 +95,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("32646")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("96456")]).then(
                                 n.bind(n, 654663),
                             );
                             return (n) => {

@@ -1,1 +1,1 @@
-e.exports = { wrapper: "wrapper_d852db" };
+e.exports = { nowrap: "nowrap__5db79" };

@@ -19,7 +19,7 @@ var r = n(951288),
     j = n(778567),
     O = n(228168),
     x = n(388032),
-    _ = n(363725);
+    _ = n(10094);
 function I(e) {
     let { profileOwner: t } = e,
         {

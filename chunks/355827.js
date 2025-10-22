@@ -7,7 +7,7 @@ var r = n(442837),
     o = n(938475),
     s = n(981631),
     c = n(388032),
-    u = n(959);
+    u = n(560059);
 function d(e) {
     let { channel: t } = e,
         n = (0, r.e7)([o.ZP], () => o.ZP.getVoiceStatesForChannel(t));

@@ -12,7 +12,7 @@ var i = n(951288),
     m = n(110223),
     x = n(981631),
     f = n(388032),
-    h = n(73199);
+    h = n(405842);
 function g(e) {
     let { channelId: t, blockedUserIds: n, ignoredUserIds: g = [], transitionState: N, onClose: E } = e;
     return (

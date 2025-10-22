@@ -1,85 +1,74 @@
-n.r(e), n.d(e, { default: () => w });
-var i = n(951288),
-    l = n(647438),
-    o = n(120356),
-    a = n.n(o),
-    r = n(512722),
-    u = n.n(r),
-    s = n(399606),
-    d = n(475179),
-    c = n(721383),
-    p = n(372900),
-    h = n(238246),
-    P = n(788983),
-    f = n(27457),
-    g = n(937995),
-    m = n(592125),
-    x = n(358221),
-    C = n(354459),
-    Z = n(388032),
-    b = n(702511);
-let v = [c._];
-function w(t) {
-    let { windowKey: e, channelId: n, participantId: o } = t,
-        r = (0, s.e7)([m.Z], () => m.Z.getChannel(n));
-    u()(null != r, "channel cannot be null for tile popout");
-    let c = (0, s.e7)([x.Z], () => x.Z.getParticipant(n, o), [n, o]);
-    l.useEffect(() => {
-        null == c && P.xv(e);
-    }, [c, e]);
-    let w = l.useCallback(
-            (t) => {
-                let { unmountWindow: e } = t;
-                d.Z.returnParticipant(n, o), e();
+t.r(n), t.d(n, { default: () => P });
+var i = t(951288),
+    r = t(647438),
+    l = t(399606),
+    u = t(475179),
+    d = t(721383),
+    o = t(372900),
+    a = t(238246),
+    s = t(788983),
+    h = t(885006),
+    c = t(27457),
+    w = t(937995),
+    f = t(592125),
+    p = t(358221),
+    g = t(354459),
+    v = t(388032),
+    Z = t(542123);
+let m = [d._];
+function P(e) {
+    let { windowKey: n, channelId: t, participantId: d } = e,
+        P = (0, l.e7)([f.Z], () => f.Z.getChannel(t)),
+        k = (0, l.e7)([p.Z], () => p.Z.getParticipant(t, d), [t, d]),
+        x = null != P && null != k;
+    r.useEffect(() => {
+        x || s.xv(n);
+    }, [x, n]);
+    let y = r.useCallback(
+            (e) => {
+                let { unmountWindow: n } = e;
+                u.Z.returnParticipant(t, d), n();
             },
-            [n, o],
+            [t, d],
         ),
-        y = l.useMemo(
+        C = r.useMemo(
             () =>
-                null == c
-                    ? Z.intl.string(Z.t.lfzt24)
-                    : c.type === C.fO.USER
-                      ? c.user.username
-                      : c.type === C.fO.STREAM
-                        ? Z.intl.formatToPlainString(Z.t["/DC1y9"], { username: c.user.username })
-                        : Z.intl.string(Z.t["8vlBo7"]),
-            [c],
-        );
-    return (0, i.jsx)(h.Z, {
+                null == k
+                    ? v.intl.string(v.t.lfzt24)
+                    : k.type === g.fO.USER
+                      ? k.user.username
+                      : k.type === g.fO.STREAM
+                        ? v.intl.formatToPlainString(v.t["/DC1y9"], { username: k.user.username })
+                        : v.intl.string(v.t["8vlBo7"]),
+            [k],
+        ),
+        E = (0, h.Z)();
+    return (0, i.jsx)(a.Z, {
         withTitleBar: !0,
-        keybinds: v,
-        windowKey: e,
-        title: y,
-        channelId: n,
-        onBeforeUnload: w,
+        keybinds: m,
+        windowKey: n,
+        title: C,
+        channelId: t,
+        onBeforeUnload: y,
         hideModals: !0,
-        children: (0, i.jsx)("div", {
-            className: a()("root", b.rootPopout, b.tilePopout),
-            children:
-                null == c
-                    ? (0, i.jsx)("div", {
-                          className: b.tileContainer,
-                          children: Z.intl.string(Z.t.PmKUHq),
-                      })
-                    : (0, i.jsx)(p.Z.Provider, {
-                          value: r.guild_id,
-                          children: (0, i.jsx)(g.ZP, {
-                              timeout: 2000,
-                              children: () =>
-                                  (0, i.jsx)(f.ZP, {
-                                      participant: c,
-                                      channel: r,
-                                      inCall: !0,
-                                      width: 854,
-                                      inPopout: !0,
-                                      containerStyle: {
-                                          width: "100%",
-                                          height: "100%",
-                                      },
-                                      style: { padding: "8px" },
-                                  }),
+        children: x
+            ? (0, i.jsx)(o.Z.Provider, {
+                  value: P.guild_id,
+                  children: (0, i.jsx)(w.ZP, {
+                      timeout: 2000,
+                      children: () =>
+                          (0, i.jsx)(c.ZP, {
+                              className: Z.tile,
+                              participant: k,
+                              channel: P,
+                              width: E.width,
+                              inCall: !0,
+                              inPopout: !0,
+                              focused: !0,
+                              noBorder: !0,
                           }),
-                      }),
-        }),
+                  }),
+              })
+            : null,
     });
 }
