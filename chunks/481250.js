@@ -24,8 +24,8 @@ var r = n(951288),
     E = n(51144),
     b = n(513547),
     D = n(65154),
-    P = n(966117),
-    j = n(197571);
+    P = n(593235),
+    j = n(10198);
 let x = {
     [D.Z.NO_OVERRIDE]: "None",
     [D.Z.LOW]: "Low Quality Stream",

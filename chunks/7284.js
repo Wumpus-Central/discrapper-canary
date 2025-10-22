@@ -8,8 +8,8 @@ var r = n(120356),
     o = n(526167),
     s = n(594928),
     l = n(181430),
-    c = n(592186),
-    u = n(806539);
+    c = n(54979),
+    u = n(677970);
 let d = {
         name: c.default.ZEL6mz,
         className: "",

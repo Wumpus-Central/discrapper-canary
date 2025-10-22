@@ -153,7 +153,7 @@ let s = {
     "discord_common/js/shared/animations/app/gifts/standard/coffee/coffee-loop.lottiejson": () =>
         n.e("93554").then(n.t.bind(n, 732573, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Anime_v01_Lottie.lottiejson": () =>
-        n.e("39690").then(n.t.bind(n, 725432, 19)),
+        n.e("219").then(n.t.bind(n, 725432, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Arcade_v01.lottiejson": () =>
         n.e("54931").then(n.t.bind(n, 488583, 19)),
     "discord_app/images/burst_reactions/BurstReaction_BlackHoles_v01.lottiejson": () =>
@@ -274,7 +274,7 @@ let s = {
         n.e("50821").then(n.t.bind(n, 548421, 19)),
     "discord_app/modules/quests/images/confetti.lottiejson": () => n.e("67963").then(n.t.bind(n, 145193, 19)),
     "discord_app/modules/quests/web/images/quest_bar_background.json": () => n.e("30166").then(n.t.bind(n, 235630, 19)),
-    "discord_app/modules/quests/web/images/quest_bar_sparkle.json": () => n.e("4245").then(n.t.bind(n, 403389, 19)),
+    "discord_app/modules/quests/web/images/quest_bar_sparkle.json": () => n.e("63842").then(n.t.bind(n, 403389, 19)),
     "discord_app/modules/self_mod/inappropriate_conversation/images/vibing_wumpus.lottiejson": () =>
         n.e("29641").then(n.t.bind(n, 937359, 19)),
     "discord_common/js/shared/animations/app/everyone_popout/dark.lottiejson": () =>
