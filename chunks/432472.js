@@ -1,25 +1,29 @@
-i.r(e), i.d(e, { default: () => o });
-var t = i(951288);
-i(647438);
-var l = i(512722),
-    a = i.n(l),
-    r = i(399606),
-    u = i(372900),
-    c = i(238246),
-    d = i(592125),
-    h = i(504185);
-function o(n) {
-    let { windowKey: e, channelId: i } = n,
-        l = (0, r.e7)([d.Z], () => d.Z.getChannel(i));
+t.r(e), t.d(e, { default: () => h });
+var i = t(951288);
+t(647438);
+var l = t(512722),
+    a = t.n(l),
+    r = t(399606),
+    u = t(598006),
+    c = t(372900),
+    d = t(238246),
+    o = t(592125),
+    p = t(504185);
+function h(n) {
+    let { windowKey: e, channelId: t } = n,
+        l = (0, r.e7)([o.Z], () => o.Z.getChannel(t));
     return (
         a()(null != l, "channel cannot be null for popout"),
-        (0, t.jsx)(c.Z, {
+        (0, i.jsx)(d.Z, {
             withTitleBar: !0,
             windowKey: e,
             title: l.name,
-            children: (0, t.jsx)(u.Z.Provider, {
+            children: (0, i.jsx)(c.Z.Provider, {
                 value: l.guild_id,
-                children: (0, t.jsx)(h.Z, { channel: l }),
+                children: (0, i.jsx)(p.Z, {
+                    channel: l,
+                    popoutType: u.P.VOICE_UI,
+                }),
             }),
         })
     );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -6,85 +6,86 @@ var i = n(951288),
     o = n(442837),
     s = n(433517),
     c = n(519938),
-    u = n(241915),
-    d = n(366050),
-    p = n(27457),
-    h = n(981631),
-    f = n(354459),
-    m = n(330831),
-    g = n(315091);
-let b = "CameraPreviewPosition";
-function C(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: C, participants: y, onSelectParticipant: _ } = e,
-        [v, x] = (function () {
-            let [e, t] = r.useState(() => s.K.get(b, h.VD2.BOTTOM_RIGHT));
+    u = n(598006),
+    d = n(241915),
+    p = n(366050),
+    h = n(27457),
+    f = n(981631),
+    m = n(354459),
+    g = n(468032),
+    b = n(285236);
+let C = "CameraPreviewPosition";
+function y(e) {
+    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: _, onSelectParticipant: v } = e,
+        [x, O] = (function () {
+            let [e, t] = r.useState(() => s.K.get(C, f.VD2.BOTTOM_RIGHT));
             return [
                 e,
                 r.useCallback((e) => {
-                    s.K.set(b, e), t(e);
+                    s.K.set(C, e), t(e);
                 }, []),
             ];
         })(),
-        O = r.useRef(null),
-        j = null == C.getGuildId() ? 70 : 50,
-        E = (0, o.e7)([d.Z], () => d.Z.pipWidth(f.cL.CAMERA_PREVIEW)),
-        S = y.length,
-        P = E * S + 8 * (S - 1),
-        I = r.useMemo(
+        j = r.useRef(null),
+        E = null == y.getGuildId() ? 70 : 50,
+        S = (0, o.e7)([p.Z], () => p.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
+        P = _.length,
+        I = S * P + 8 * (P - 1),
+        Z = r.useMemo(
             () => ({
-                minWidth: f.Rv[f.cL.CAMERA_PREVIEW] * S + 8 * (S - 1),
-                maxWidth: f.$i[f.cL.CAMERA_PREVIEW] * S + 8 * (S - 1),
+                minWidth: m.Rv[m.cL.CAMERA_PREVIEW] * P + 8 * (P - 1),
+                maxWidth: m.$i[m.cL.CAMERA_PREVIEW] * P + 8 * (P - 1),
             }),
-            [S],
+            [P],
         );
     r.useLayoutEffect(() => {
         var e;
-        null == (e = O.current) || e.ensureIsInPosition();
-    }, [y.length]);
-    let Z = r.useCallback(
+        null == (e = j.current) || e.ensureIsInPosition();
+    }, [_.length]);
+    let T = r.useCallback(
             (e) => {
-                let t = 0 === S ? e : (e - 8 * (S - 1)) / S;
-                c.d7(t, f.cL.CAMERA_PREVIEW);
+                let t = 0 === P ? e : (e - 8 * (P - 1)) / P;
+                c.d7(t, m.cL.CAMERA_PREVIEW);
             },
-            [S],
+            [P],
         ),
-        T = r.useCallback(
+        N = r.useCallback(
             (e, t) => {
-                x(t);
+                O(t);
             },
-            [x],
+            [O],
         );
     return (0, i.jsx)("div", {
-        className: m.container,
-        children: (0, i.jsx)(u._, {
-            position: v,
+        className: g.container,
+        children: (0, i.jsx)(d._, {
+            position: x,
             id: 0,
-            width: P,
-            ref: O,
-            onMove: T,
-            onResize: Z,
+            width: I,
+            ref: j,
+            onMove: N,
+            onResize: T,
             maxX: t,
             maxY: l,
-            edgeOffsetTop: j,
+            edgeOffsetTop: E,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
-            resizeConfig: I,
+            resizeConfig: Z,
             children: (0, i.jsx)("div", {
-                className: m.tileContainer,
-                children: y.map((e) =>
+                className: g.tileContainer,
+                children: _.map((e) =>
                     (0, i.jsx)(
-                        p.ZP,
+                        h.ZP,
                         {
                             participant: e,
-                            channel: C,
+                            channel: y,
                             onContextMenu: n,
-                            className: a()(m.tile, g.elevationHigh),
-                            fit: p.BP.COVER,
+                            className: a()(g.tile, b.elevationHigh),
+                            fit: h.BP.COVER,
                             inCall: !0,
-                            inPopout: !1,
+                            popoutType: u.P.NO_POPOUT,
                             width: 160,
-                            onClick: _,
+                            onClick: v,
                         },
                         e.id,
                     ),

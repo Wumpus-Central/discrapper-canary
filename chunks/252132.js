@@ -3,29 +3,10 @@ var r = n(951288);
 n(647438);
 var i = n(27457),
     l = n(131951),
-    a = n(441997);
+    a = n(723262);
 function s(e) {
-    var {
-            aspectRatio: t,
-            blocked: n,
-            ignored: s,
-            channel: o,
-            className: c,
-            focused: d,
-            children: u,
-            inCall: p,
-            inPopout: h,
-            noBorder: f,
-            onClick: g,
-            onContextMenu: m,
-            onDoubleClick: b,
-            onVideoResize: y,
-            paused: _,
-            pulseSpeakingIndicator: j,
-            participant: O,
-            width: x,
-        } = e,
-        v = (function (e, t) {
+    var { aspectRatio: t, className: n, children: s, width: o } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -45,29 +26,10 @@ function s(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, [
-            "aspectRatio",
-            "blocked",
-            "ignored",
-            "channel",
-            "className",
-            "focused",
-            "children",
-            "inCall",
-            "inPopout",
-            "noBorder",
-            "onClick",
-            "onContextMenu",
-            "onDoubleClick",
-            "onVideoResize",
-            "paused",
-            "pulseSpeakingIndicator",
-            "participant",
-            "width",
-        ]);
-    let C = l.Z.getVideoComponent();
+        })(e, ["aspectRatio", "className", "children", "width"]);
+    let d = l.Z.getVideoComponent();
     return (0, r.jsx)("div", {
-        style: { width: x },
+        style: { width: o },
         className: a.spaceBetweenTiles,
         children: (0, r.jsxs)("div", {
             className: a.tileSizer,
@@ -101,28 +63,14 @@ function s(e) {
                         return e;
                     })(
                         {
-                            blocked: n,
-                            ignored: s,
-                            channel: o,
-                            className: c,
-                            focused: d,
-                            inCall: p,
-                            inPopout: h,
-                            noBorder: f,
-                            onClick: g,
-                            onContextMenu: m,
-                            onDoubleClick: b,
-                            onVideoResize: y,
-                            participant: O,
-                            paused: _,
-                            pulseSpeakingIndicator: j,
-                            videoComponent: C,
-                            width: x,
+                            className: n,
+                            videoComponent: d,
+                            width: o,
                         },
-                        v,
+                        c,
                     ),
                 ),
-                u,
+                s,
             ],
         }),
     });

@@ -1,41 +1,42 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(951288),
     r = n(647438),
     l = n(481060),
     a = n(287734),
-    o = n(305325),
-    s = n(281956),
-    c = n(584729),
-    u = n(27457),
-    d = n(546247),
-    p = n(354459),
-    h = n(388032),
-    f = n(427538);
-let m = function (e) {
-    let { participants: t, channel: n, hasConnectPermission: m } = e,
-        g = t.filter(p.Io),
-        b = (0, s.J)(n.guild_id),
-        C = r.useCallback(() => {
-            b ? (0, o.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, b]),
-        y = 4 === g.length ? 2 : 3;
+    o = n(598006),
+    s = n(305325),
+    c = n(281956),
+    u = n(584729),
+    d = n(27457),
+    p = n(546247),
+    h = n(354459),
+    f = n(388032),
+    m = n(631755);
+let g = function (e) {
+    let { participants: t, channel: n, hasConnectPermission: g } = e,
+        b = t.filter(h.Io),
+        C = (0, c.J)(n.guild_id),
+        y = r.useCallback(() => {
+            C ? (0, s.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, C]),
+        _ = 4 === b.length ? 2 : 3;
     return (0, i.jsxs)("div", {
-        className: f.container,
+        className: m.container,
         children: [
-            (0, i.jsx)(d.Z, {}),
+            (0, i.jsx)(p.Z, {}),
             (0, i.jsx)("div", {
-                className: f.tiles,
-                style: { maxWidth: 168 * y },
-                children: g.slice(0, 5).map((e) =>
+                className: m.tiles,
+                style: { maxWidth: 168 * _ },
+                children: b.slice(0, 5).map((e) =>
                     (0, i.jsx)(
-                        u.ZP,
+                        d.ZP,
                         {
                             participant: e,
                             channel: n,
-                            className: f.tile,
+                            className: m.tile,
                             inCall: !0,
                             noVideoRender: !0,
-                            inPopout: !1,
+                            popoutType: o.P.NO_POPOUT,
                             width: 48,
                         },
                         e.id,
@@ -43,41 +44,41 @@ let m = function (e) {
                 ),
             }),
             (0, i.jsx)(l.Heading, {
-                className: f.channelName,
+                className: m.channelName,
                 variant: "heading-xxl/semibold",
                 children: n.name,
             }),
             (0, i.jsx)("div", {
-                className: f.participantsRow,
+                className: m.participantsRow,
                 children: (0, i.jsx)(l.Text, {
                     color: "header-secondary",
                     variant: "text-sm/normal",
                     children:
-                        0 === g.length
-                            ? h.intl.string(h.t.zSqdrS)
-                            : 1 === g.length
-                              ? h.intl.formatToPlainString(h.t.BUyJIG, { a: (0, c.Z)(n, g[0]) })
-                              : 2 === g.length
-                                ? h.intl.formatToPlainString(h.t["dcyZf/"], {
-                                      a: (0, c.Z)(n, g[0]),
-                                      b: (0, c.Z)(n, g[1]),
+                        0 === b.length
+                            ? f.intl.string(f.t.zSqdrS)
+                            : 1 === b.length
+                              ? f.intl.formatToPlainString(f.t.BUyJIG, { a: (0, u.Z)(n, b[0]) })
+                              : 2 === b.length
+                                ? f.intl.formatToPlainString(f.t["dcyZf/"], {
+                                      a: (0, u.Z)(n, b[0]),
+                                      b: (0, u.Z)(n, b[1]),
                                   })
-                                : g.length > 2
-                                  ? h.intl.formatToPlainString(h.t["44/Obu"], {
-                                        a: (0, c.Z)(n, g[0]),
-                                        b: (0, c.Z)(n, g[1]),
-                                        n: g.length - 2,
+                                : b.length > 2
+                                  ? f.intl.formatToPlainString(f.t["44/Obu"], {
+                                        a: (0, u.Z)(n, b[0]),
+                                        b: (0, u.Z)(n, b[1]),
+                                        n: b.length - 2,
                                     })
                                   : void 0,
                 }),
             }),
             (0, i.jsx)("div", {
-                className: f.joinButton,
+                className: m.joinButton,
                 children: (0, i.jsx)(l.Button, {
                     variant: "overlay-primary",
-                    text: m ? h.intl.string(h.t["96ANUN"]) : h.intl.string(h.t.TVBCKZ),
-                    onClick: C,
-                    disabled: !m,
+                    text: g ? f.intl.string(f.t["96ANUN"]) : f.intl.string(f.t.TVBCKZ),
+                    onClick: y,
+                    disabled: !g,
                 }),
             }),
         ],

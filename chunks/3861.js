@@ -15,7 +15,7 @@ var i = n(951288),
     g = n(45430),
     b = n(981631),
     C = n(354459),
-    y = n(394024);
+    y = n(450906);
 let _ = (0, a.Z)((e) => {
     let {
         participants: t,
@@ -35,7 +35,7 @@ let _ = (0, a.Z)((e) => {
         height: N,
         idle: A,
         mode: w,
-        popoutWindow: M,
+        popoutType: M,
         awaitingRemoteSessionInfo: R,
         callContainerDimensions: L,
     } = e;
@@ -83,6 +83,7 @@ let _ = (0, a.Z)((e) => {
                 onDoubleClick: j,
                 onContextMenu: O,
                 inCall: I,
+                popoutType: M,
             }),
         });
     }
@@ -93,7 +94,7 @@ let _ = (0, a.Z)((e) => {
         selectedParticipant: a,
         filteredParticipants: D,
         participants: t,
-        popoutWindow: M,
+        popoutType: M,
         className: P,
         idle: A,
         height: N,

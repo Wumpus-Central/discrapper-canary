@@ -176,29 +176,35 @@ class v extends i.PureComponent {
             p.S.unsubscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
     }
     render() {
-        var e, t;
-        let { appContext: n, target: i, isOpen: a, theme: o, config: s, rect: l } = this.props,
-            c = null != (e = this.state.render) ? e : this.props.render;
-        return a && null != l && null != s && null != i && null != c && s.context === n
+        var e, t, n;
+        let { appContext: i, target: a, isOpen: o, theme: s, config: l, rect: c, renderWindow: u } = this.props,
+            d = null != (t = this.state.render) ? t : this.props.render;
+        return o &&
+            null != c &&
+            null != l &&
+            null != a &&
+            null != d &&
+            l.context === i &&
+            (null == (e = a.ownerDocument) ? void 0 : e.defaultView) === u
             ? (0, r.jsx)(O, {
-                  target: i,
-                  rect: l,
+                  target: a,
+                  rect: c,
                   close: this.close,
-                  onUnmount: s.onClose,
-                  align: s.align,
-                  position: s.position,
-                  impressionName: s.impressionName,
-                  impressionProperties: s.impressionProperties,
-                  disableClickTrap: null != (t = s.disableClickTrap) && t,
+                  onUnmount: l.onClose,
+                  align: l.align,
+                  position: l.position,
+                  impressionName: l.impressionName,
+                  impressionProperties: l.impressionProperties,
+                  disableClickTrap: null != (n = l.disableClickTrap) && n,
                   children: (e, t) => {
-                      let { position: r } = e;
-                      return c({
-                          position: r,
-                          theme: o,
+                      let { position: n } = e;
+                      return d({
+                          position: n,
+                          theme: s,
                           onHeightUpdate: t,
-                          config: s,
-                          target: i,
-                          context: n,
+                          config: l,
+                          target: a,
+                          context: i,
                       });
                   },
               })
