@@ -90,8 +90,8 @@ function y(e, t) {
         i = e.games.length > 0;
     if (n && i)
         return 1 === r.kp[e.type]
-            ? p.intl.string(p.t.wiXdER)
-            : p.intl.format(p.t["zR1+09"], { numGames: r.kp[e.type] });
+            ? p.intl.string(p.t.wiXdEa)
+            : p.intl.format(p.t["zR1+0/"], { numGames: r.kp[e.type] });
 }
 function O(e) {
     return d.S5.includes(e);
@@ -180,19 +180,24 @@ function M(e, t, n) {
     c.Z.setPendingWidgets(l);
 }
 function k(e, t) {
-    var n, r, i;
-    let o,
-        l = R(e),
-        u = I(e);
-    if (null != l && (null != (r = null == (n = l.games) ? void 0 : n.length) ? r : 0) >= u) return;
-    let d = {
+    var n, r, i, o;
+    let l,
+        u = R(e),
+        d = I(e);
+    if (
+        null != u &&
+        ((null != (r = null == (n = u.games) ? void 0 : n.length) ? r : 0) >= d ||
+            (null != (i = u.games) ? i : []).some((e) => e.applicationId === t.applicationId))
+    )
+        return;
+    let f = {
         applicationId: t.applicationId,
         comment: t.comment,
         tags: t.tags,
     };
-    o = null != l ? [...(null != (i = l.games) ? i : []), d] : [d];
-    let f = P(new s.zy(E(m({}, null != l ? l : { type: e }), { games: o })));
-    c.Z.setPendingWidgets(f), a.Z.getDetectableGamesSupplemental([t.applicationId]);
+    l = null != u ? [...(null != (o = u.games) ? o : []), f] : [f];
+    let _ = P(new s.zy(E(m({}, null != u ? u : { type: e }), { games: l })));
+    c.Z.setPendingWidgets(_), a.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
 function j(e, t, n) {
     let r = R(e);
