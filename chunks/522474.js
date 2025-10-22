@@ -314,6 +314,10 @@ class J extends (r = c.ZP.PersistedStore) {
         let n = R[e];
         return (null == n || null == (t = n.document) ? void 0 : t.visibilityState) === "visible";
     }
+    isAnyWindowVisible() {
+        for (let e of Object.keys(R)) if (this.getWindowVisible(e)) return !0;
+        return !1;
+    }
     getState() {
         return C;
     }
