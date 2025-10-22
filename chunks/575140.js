@@ -1,6 +1,7 @@
 n.d(t, {
-    FX: () => o,
-    r4: () => a,
+    FX: () => s,
+    oc: () => a,
+    r4: () => o,
     rd: () => i,
 }),
     n(388685);
@@ -8,7 +9,22 @@ var r = n(837268);
 function i(e) {
     return e;
 }
-function a() {
+function a(e) {
+    switch (e) {
+        case "click":
+        case "unknown":
+        default:
+            return "click";
+        case "mouseover":
+            return "mouseover";
+        case "mouseout":
+            return "mouseout";
+        case "mousemove":
+        case "hover":
+            return "mousemove";
+    }
+}
+function o() {
     return {
         popoutOpened: !1,
         windowHandleSentToNative: !1,
@@ -21,4 +37,4 @@ function a() {
         errorMessage: null,
     };
 }
-let o = new Set([r.mM.WAITING_FOR_POPOUT_OPEN, r.mM.WAITING_FOR_REACT_INITIALIZATION, r.mM.WAITING_FOR_PID_FOCUS]);
+let s = new Set([r.mM.WAITING_FOR_POPOUT_OPEN, r.mM.WAITING_FOR_REACT_INITIALIZATION, r.mM.WAITING_FOR_PID_FOCUS]);

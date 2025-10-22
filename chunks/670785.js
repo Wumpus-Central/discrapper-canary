@@ -5,13 +5,14 @@ var r,
     o = n(442837),
     s = n(579092),
     l = n(570140),
-    c = n(69004),
-    u = n(928518),
-    d = n(145597),
-    f = n(932404),
-    _ = n(509140),
-    p = n(501787);
-function h(e, t, n) {
+    c = n(522474),
+    u = n(145597),
+    d = n(932404),
+    f = n(509140),
+    _ = n(575140),
+    p = n(987650),
+    h = n(501787);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,83 +25,85 @@ function h(e, t, n) {
         e
     );
 }
-let m = new s.Yd("OverlayV3NativeClickZoneStore"),
-    g = 30000,
-    E = null,
-    b = [],
+let g = new s.Yd("OverlayV3NativeClickZoneStore"),
+    E = 30000,
+    b = null,
     y = [],
-    O = {};
-function v(e) {
-    return !a()(e, b);
+    O = [],
+    v = {},
+    I = !1;
+function T(e) {
+    return !a()(e, y);
 }
-function I(e) {
+function S(e) {
     let t = setTimeout(() => {
-        C(t);
-    }, g);
-    return e.map(
-        (e) => (
-            (O[e.name] = t),
-            {
+        R(t);
+    }, E);
+    return e.map((e) => {
+        let n = {
                 name: e.name,
                 left: e.left,
                 top: e.top,
                 right: e.right,
                 bottom: e.bottom,
-            }
-        ),
-    );
+            },
+            r = v[e.name];
+        return null != r && clearTimeout(r), (v[e.name] = t), n;
+    });
 }
-function T(e, t) {
+function A(e, t) {
     var n;
-    let r = null != (n = null == E ? void 0 : E.getLastAssociatedPID()) ? n : d.UNSET_PID;
+    if (null == b) return void g.error("Overlay module not found");
+    let r = null != (n = null == b ? void 0 : b.getLastAssociatedPID()) ? n : u.UNSET_PID;
     try {
-        let n = I(e);
-        v(e) &&
-            (0, f.Uk)(r, "capture_zones_set", {
+        let n = S(e);
+        T(e) &&
+            (0, d.bs)(r, "capture_zones_set", {
                 source: t,
                 capture_zones: n,
                 rawZones: e,
             }),
-            null == E || E.setCaptureZones(n);
+            b.setCaptureZones(n);
     } catch (e) {
-        m.error("Error setting capture zones:", e);
+        g.error("Error setting capture zones:", e);
     }
 }
-function S(e) {
-    return Object.keys(O).filter((t) => O[t] === e);
-}
-function A() {
-    return y.length > 0 && 0 === b.length;
-}
 function C(e) {
-    let t = S(e);
-    for (let n of (null != e && clearTimeout(e), t)) delete O[n];
-    let n = y.filter((e) => !t.includes(e.name));
-    A() || ((b = n), T(n, "timer_expired")), (y = [...n]);
+    return Object.keys(v).filter((t) => v[t] === e);
 }
-function N(e, t) {
-    T(e, t), (b = e), (y = [...e]);
+function N() {
+    return O.length > 0 && 0 === y.length;
 }
 function R(e) {
-    for (let e of Object.values(O)) null != e && clearTimeout(e);
-    (O = {}), (b = []), (y = []), T([], e);
+    let t = C(e);
+    for (let n of (null != e && clearTimeout(e), t)) delete v[n];
+    let n = O.filter((e) => !t.includes(e.name));
+    N() || ((y = n), A(n, "timer_expired")), (O = [...n]);
 }
-function P() {
-    0 !== b.length && ((y = [...b]), (b = []), T([], "store_click_zones"));
+function P(e, t) {
+    if (!f.Z.isOverlayEnabled) {
+        if (0 === y.length) return;
+        w("overlay_disabled");
+        return;
+    }
+    A(e, t), (y = e), (O = [...e]);
 }
-function w() {
-    b.length > 0 || T((b = [...y]), "refresh_click_zones");
+function w(e) {
+    for (let e of Object.values(v)) null != e && clearTimeout(e);
+    (v = {}), (y = []), (O = []), A([], e);
 }
-let D = new c.Z(100);
-function L(e, t, n, r) {
-    return "".concat(e, "-").concat(t, "-").concat(n, "-").concat(r);
+function D() {
+    0 !== y.length && ((O = [...y]), (y = []), A([], "store_click_zones"));
+}
+function L() {
+    y.length > 0 || A((y = [...O]), "refresh_click_zones");
 }
 function x(e, t, n, r) {
-    let i = u.Z.getWindow(p.$J);
+    let i = c.Z.getWindow(h.$J);
     if (null == i) return;
     let a = Math.ceil(n * i.innerWidth),
         o = Math.ceil(r * i.innerHeight),
-        s = new MouseEvent(t, {
+        s = new MouseEvent((0, _.oc)(t), {
             screenX: a,
             screenY: o,
             clientX: a,
@@ -109,60 +112,43 @@ function x(e, t, n, r) {
             view: i,
         }),
         l = i.document.elementFromPoint(a, o);
-    if (null == l) return;
-    let c = L(e, t, a, o);
-    if (!D.has(c)) {
-        var _;
-        D.set(c, {
-            eventType: t,
-            event: s,
-            node: l,
-        });
-        let n = null != (_ = null == E ? void 0 : E.getLastAssociatedPID()) ? _ : d.UNSET_PID;
-        (0, f.Uk)(n, "new_click_zone_event", {
-            zone: e,
-            eventType: t,
-            event: s,
-            node: l,
-        });
-    }
-    l.dispatchEvent(s);
+    null != l && l.dispatchEvent(s);
 }
 function M(e) {
-    return R("crashed"), !0;
+    return w("crashed"), !0;
 }
 function k(e) {
     let { zones: t } = e;
-    return N(t, "set_click_zones"), !0;
+    return P(t, "set_click_zones"), !0;
 }
 function j() {
-    return R("refresh_host_window"), !0;
+    return w("refresh_host_window"), !0;
 }
 function U() {
-    return null != (E = _.Z.getNativeModule()) && E.setCaptureZoneCallback(x), !0;
+    return null == (b = f.Z.getNativeModule()) || !!I || ((I = !0), b.setCaptureZoneCallback(x), !0);
 }
 function G() {
-    return (E = null), !0;
+    return (b = null), !0;
 }
 function B(e) {
     let { pid: t } = e;
-    return 0 === t ? P() : w(), !0;
+    return 0 === t ? D() : L(), !0;
 }
 class Z extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z);
+        this.waitFor(f.Z);
     }
     getClickZones() {
-        return b;
-    }
-    getFocusLostStoredClickZones() {
         return y;
     }
+    getFocusLostStoredClickZones() {
+        return O;
+    }
 }
-h(Z, "displayName", "Overlay-v3-Native-Debug-Module-Store");
+m(Z, "displayName", "Overlay-v3-Native-Debug-Module-Store");
 let F = new Z(
     l.Z,
-    __OVERLAY__
+    __OVERLAY__ || !p.iP
         ? {}
         : {
               OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: U,
