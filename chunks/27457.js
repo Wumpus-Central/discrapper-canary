@@ -547,8 +547,9 @@ let eo = i.memo((e) => {
     }, []);
     let { enabled: W } = (0, m.n)({ location: "CallTile" }),
         K = (0, a.e7)([b.Z], () => b.Z.isParticipantPoppedOut(C.id, O), [C.id, O]),
-        q = !D && v === Q.fO.STREAM && R && (!V || T),
-        J = (function (e) {
+        q = W && !K && v !== Q.fO.ACTIVITY,
+        J = !D && v === Q.fO.STREAM && R && (!V || T),
+        $ = (function (e) {
             let { localMuted: t, serverMuted: n, serverDeafened: r, deafened: i, muted: l } = e;
             return r ? u.Vm4 : n ? u.v0G : i ? u.wE8 : t ? u.v0G : l ? u.nRN : null;
         })({
@@ -601,9 +602,9 @@ let eo = i.memo((e) => {
                             color: "none",
                             variant: V ? "text-sm/normal" : "text-md/normal",
                             children: [
-                                null != J &&
+                                null != $ &&
                                     v === Q.fO.USER &&
-                                    (0, r.jsx)(J, {
+                                    (0, r.jsx)($, {
                                         className: o()(et.experimentTitleIcon, { [et.compact]: V }),
                                         size: "xs",
                                         color: "currentColor",
@@ -656,8 +657,7 @@ let eo = i.memo((e) => {
                             (0, r.jsxs)("div", {
                                 className: et.overlayButtonContainer,
                                 children: [
-                                    W &&
-                                        !K &&
+                                    q &&
                                         (0, r.jsx)(el, {
                                             onClick: (e) => {
                                                 e.stopPropagation(), p.Z.popoutParticipant(C.id, O), S.fT(C.id, O);
@@ -674,7 +674,7 @@ let eo = i.memo((e) => {
                                         icon: u.xhG,
                                         hideWhenInactive: !H,
                                     }),
-                                    q &&
+                                    J &&
                                         (0, r.jsx)(el, {
                                             onClick: M,
                                             tooltipText: T ? ee.intl.string(ee.t.YqAjXy) : ee.intl.string(ee.t.w4m945),
