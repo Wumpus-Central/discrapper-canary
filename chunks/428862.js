@@ -5,7 +5,7 @@ var r,
     a = n(647438),
     s = n(120356),
     o = n.n(s),
-    c = n(258536),
+    c = n(13941),
     d = n(442837),
     u = n(481060),
     g = n(205641),
@@ -91,7 +91,7 @@ function C(e) {
                     }),
                     (0, l.jsx)("div", {
                         className: o()(j.tierCloseHint, f),
-                        children: x.intl.format(x.t.qV3Erq, { numLeft: i - r }),
+                        children: x.intl.format(x.t.qV3Erl, { numLeft: i - r }),
                     }),
                     (0, l.jsx)(u.P3F, {
                         onClick: s,
@@ -225,7 +225,7 @@ function y(e) {
                                       E
                                           ? (0, l.jsx)("div", {
                                                 className: j.previousPerks,
-                                                children: x.intl.string(x.t.oKzyRU),
+                                                children: x.intl.string(x.t.oKzyRQ),
                                             })
                                           : null,
                                       null != i.perks &&
@@ -293,7 +293,7 @@ let E = (e) => {
         return (0, l.jsx)(c.animated.div, {
             style: { transform: t },
             className: j.tierUnlocked,
-            children: x.intl.string(x.t.dNGM0t),
+            children: x.intl.string(x.t.dNGM0v),
         });
     },
     I = (e) => {
@@ -302,7 +302,7 @@ let E = (e) => {
             children: [
                 (0, l.jsx)(u.Text, {
                     variant: "text-md/normal",
-                    children: x.intl.format(x.t.t2Wbo6, {
+                    children: x.intl.format(x.t.t2Wbo1, {
                         required: t,
                         decorator: "",
                     }),

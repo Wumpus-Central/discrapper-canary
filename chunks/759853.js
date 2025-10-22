@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     i = n(238651),
     l = n(603113),
-    c = n(258536),
+    c = n(13941),
     d = n(442837),
     u = n(110924),
     p = n(607070),
@@ -25,7 +25,7 @@ let _ = ["#51BC9D"],
             w = s.useRef(null),
             P = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
             N = (0, u.Z)(P),
-            [R, A] = s.useState(null),
+            [A, R] = s.useState(null),
             [B, k] = s.useState(null),
             I = s.useRef(
                 new i.qA({
@@ -33,16 +33,16 @@ let _ = ["#51BC9D"],
                     wind: 0,
                 }),
             ),
-            q = (0, i.uR)(R, B),
-            D = s.useCallback(() => {
+            D = (0, i.uR)(A, B),
+            q = s.useCallback(() => {
                 if (T) return;
                 let e = j.current,
                     t = w.current;
-                if (null != t && null != e && q.isReady) {
+                if (null != t && null != e && D.isReady) {
                     var n, r, s, a, o, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
                         { x: d, y: u } = t.getBoundingClientRect();
-                    q.createMultipleConfetti(
+                    D.createMultipleConfetti(
                         ((n = l - d),
                         (r = c - u),
                         (s = e.clientHeight),
@@ -127,25 +127,25 @@ let _ = ["#51BC9D"],
                         100,
                     );
                 }
-            }, [j, w, q, T]),
+            }, [j, w, D, T]),
             L = (0, u.Z)(v);
         return (s.useEffect(() => {
-            O && v && !L && (E(), D());
-        }, [v, O, E, D, L]),
+            O && v && !L && (E(), q());
+        }, [v, O, E, q, L]),
         s.useEffect(() => {
             O &&
                 !P &&
                 N &&
                 setTimeout(() => {
-                    E(), D();
+                    E(), q();
                 }, 200);
-        }, [O, N, P, E, D]),
+        }, [O, N, P, E, q]),
         s.useEffect(() => {
-            q.isReady && (!S.current && O && (E(), D()), (S.current = O));
-        }, [O, S, D, E, q]),
+            D.isReady && (!S.current && O && (E(), q()), (S.current = O));
+        }, [O, S, q, E, D]),
         s.useEffect(() => {
-            C && O && (E(), D());
-        }, [C, O, E, D]),
+            C && O && (E(), q());
+        }, [C, O, E, q]),
         T)
             ? null
             : (0, r.jsxs)("div", {
@@ -173,7 +173,7 @@ let _ = ["#51BC9D"],
                           },
                           children: [
                               (0, r.jsx)(i.O_, {
-                                  ref: A,
+                                  ref: R,
                                   className: h.confetti,
                                   environment: I.current,
                               }),

@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(442837),
     c = n(481060),
     u = n(607070),
@@ -15,15 +15,15 @@ function p(e) {
         n = [
             {
                 keybinds: ["Spacebar", "Enter"],
-                name: f.intl.string(f.t["cs/HVF"]),
+                name: f.intl.string(f.t["cs/HVH"]),
             },
             {
                 keybinds: ["up", "down"],
-                name: f.intl.string(f.t.dmMqa2),
+                name: f.intl.string(f.t.dmMqay),
             },
             {
                 keybinds: ["ESC"],
-                name: f.intl.string(f.t["1ioMJS"]),
+                name: f.intl.string(f.t["1ioMJQ"]),
             },
         ],
         a = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),

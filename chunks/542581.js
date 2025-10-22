@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     l = n.n(a),
-    s = n(258536),
+    s = n(13941),
     o = n(574583),
     c = n(481060),
     d = n(787014),
@@ -61,7 +61,7 @@ let b = i.memo(function (e) {
                                           width: 20,
                                           height: 20,
                                       }),
-                                      f.intl.string(f.t["4d4T4u"]),
+                                      f.intl.string(f.t["4d4T4l"]),
                                       v &&
                                           (0, r.jsx)(c.P3F, {
                                               onClick: () => {
@@ -77,7 +77,7 @@ let b = i.memo(function (e) {
                                   ],
                               }),
                               (0, r.jsx)(c.P3F, {
-                                  "aria-label": f.intl.string(f.t.cpT0Cg),
+                                  "aria-label": f.intl.string(f.t.cpT0Cq),
                                   className: x.clickable,
                                   onClick: () => {
                                       b.getState().setGuidelinesOpen(!1);
@@ -193,7 +193,7 @@ let b = i.memo(function (e) {
                                                       color: "text-brand",
                                                       className: x.showMoreText,
                                                       children: [
-                                                          f.intl.string(f.t.Vu7odH),
+                                                          f.intl.string(f.t.Vu7odK),
                                                           (0, r.jsx)(c.bJT, {
                                                               size: "xs",
                                                               color: "currentColor",

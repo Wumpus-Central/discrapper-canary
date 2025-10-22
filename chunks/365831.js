@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     o = n(120356),
     l = n.n(o),
-    a = n(258536),
+    a = n(13941),
     s = n(442837),
     c = n(481060),
     u = n(846027),
@@ -65,12 +65,12 @@ let h = (e) => 1 - Math.pow(1 - e, 4),
         tension: 1000,
         clamp: !0,
     },
-    P = {
+    _ = {
         mass: 1,
         friction: 64,
         tension: 1000,
     },
-    _ = {
+    P = {
         mass: 1,
         friction: 35,
         tension: 1000,
@@ -107,16 +107,16 @@ function w(e) {
         T = i.useCallback(() => (0, f.v6)(null), []),
         S = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
         N = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
-        D = i.useRef(0),
-        Z = n !== o ? D.current + 1 : D.current;
+        Z = i.useRef(0),
+        D = n !== o ? Z.current + 1 : Z.current;
     i.useEffect(() => {
-        D.current = Z;
-    }, [Z]);
+        Z.current = D;
+    }, [D]);
     let k = null != n,
         M = !k,
         A = k && null != o,
         R = null == n && null != o,
-        V = (0, c.q_F)(
+        L = (0, c.q_F)(
             {
                 opacity: +!!k,
                 height: 72 * !!k,
@@ -133,10 +133,10 @@ function w(e) {
             },
             "respect-motion-settings",
         ),
-        L = (0, c.Yzy)(
+        V = (0, c.Yzy)(
             null == w ? void 0 : w.id,
             {
-                key: Z,
+                key: D,
                 from: {
                     opacity: 0,
                     background: null == w ? void 0 : w.splashGradient,
@@ -186,7 +186,7 @@ function w(e) {
                               easing: h,
                               duration: 200,
                           }
-                        : P,
+                        : _,
                 delay: R ? 50 - 50 * e : 200 + 50 * e,
             }),
             "respect-motion-settings",
@@ -195,7 +195,7 @@ function w(e) {
         U = (0, c.Yzy)(
             null == w ? void 0 : w.iconURL,
             {
-                key: Z,
+                key: D,
                 from: {
                     opacity: 0,
                     scale: 80 / 88,
@@ -221,14 +221,14 @@ function w(e) {
                           }
                         : k
                           ? x
-                          : _,
+                          : P,
             },
             "respect-motion-settings",
         ),
         Y = (0, c.Yzy)(
             null == w ? void 0 : w.name,
             {
-                key: Z,
+                key: D,
                 from: {
                     opacity: 0,
                     scale: A ? 0.9 : 1,
@@ -248,7 +248,7 @@ function w(e) {
                               }
                             : A
                               ? x
-                              : P,
+                              : _,
                 },
                 leave: {
                     opacity: 0,
@@ -263,21 +263,21 @@ function w(e) {
                               }
                             : A
                               ? x
-                              : P,
+                              : _,
                 },
             },
             "respect-motion-settings",
         ),
-        H = v.intl.string(E ? v.t.esVyo6 : v.t.UQqFCA);
+        H = v.intl.string(E ? v.t.esVyo6 : v.t.UQqFCF);
     return (0, r.jsxs)(a.animated.div, {
         className: y.voiceFilterHero,
         "aria-hidden": M,
-        style: V,
+        style: L,
         children: [
             (0, r.jsx)("div", {
                 className: l()([y.bgGradient, y.bgGradientHighlight]),
             }),
-            L((e) =>
+            V((e) =>
                 (0, r.jsx)(a.animated.div, {
                     className: y.bgGradient,
                     style: e,
@@ -309,7 +309,7 @@ function w(e) {
                                 variant: "text-xs/normal",
                                 color: "always-white",
                                 className: y.offWhiteText,
-                                children: v.intl.string(v.t.WW5DAA),
+                                children: v.intl.string(v.t.WW5DAC),
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/medium",
@@ -340,7 +340,7 @@ function w(e) {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-xs/normal",
                                     color: "header-muted",
-                                    children: v.intl.string(E ? v.t.Sg6cfn : v.t.ZKhtw8),
+                                    children: v.intl.string(E ? v.t.Sg6cfm : v.t.ZKhtw0),
                                 }),
                             ],
                         }),
@@ -376,7 +376,7 @@ function w(e) {
                     (0, r.jsx)(c.aML, {
                         "data-migration-pending": !0,
                         shouldShow: k,
-                        text: v.intl.string(v.t.UvMx7O),
+                        text: v.intl.string(v.t.UvMx7F),
                         children: (e) =>
                             (0, r.jsx)(a.animated.div, {
                                 className: y.buttonWrapper,

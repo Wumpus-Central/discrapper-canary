@@ -3,11 +3,11 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(793030),
     c = n(481060),
     u = n(70300),
-    d = n(989308),
+    d = n(149829),
     f = n(388032),
     _ = n(240656);
 function p(e, t, n) {
@@ -93,18 +93,18 @@ function b(e) {
         if (null == p || 0 === p.length) return "";
         if (1 === p.length) e = (0, r.jsx)(E, { powerup: p[0] });
         else if (2 === p.length)
-            e = f.intl.format(d.default.MNO3sL, {
+            e = f.intl.format(d.default.MNO3sG, {
                 perk1: (0, r.jsx)(E, { powerup: p[0] }),
                 perk2: (0, r.jsx)(E, { powerup: p[1] }),
             });
         else {
             let t = Array.from(p).reverse();
-            e = f.intl.format(d.default.GmN3VV, {
+            e = f.intl.format(d.default.GmN3Vf, {
                 perk1: (0, r.jsx)(E, { powerup: t[0] }),
                 perk2: (0, r.jsx)(E, { powerup: t[1] }),
             });
         }
-        return f.intl.format(d.default["/6GgQk"], { perks: e });
+        return f.intl.format(d.default["/6GgQq"], { perks: e });
     }, [p]);
     return null == p || 0 === p.length
         ? null
@@ -123,7 +123,7 @@ function b(e) {
                   }),
                   (0, r.jsx)(l.zxk, {
                       variant: "primary",
-                      text: f.intl.string(d.default.E5V5KC),
+                      text: f.intl.string(d.default.E5V5KK),
                       onClick: a,
                   }),
               ],

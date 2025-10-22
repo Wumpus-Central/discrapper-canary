@@ -1,7 +1,7 @@
 n.d(t, { Z: () => z }), n(388685);
 var i = n(951288),
     r = n(647438),
-    s = n(258536),
+    s = n(13941),
     o = n(442837),
     l = n(481060),
     a = n(619915),
@@ -21,14 +21,14 @@ var i = n(951288),
     E = n(430824),
     x = n(496675),
     S = n(878884),
-    Z = n(19780),
-    j = n(944486),
-    C = n(9156),
+    C = n(19780),
+    Z = n(944486),
+    j = n(9156),
     I = n(938475),
     P = n(518084),
     w = n(312186),
-    N = n(711553),
-    T = n(981631),
+    T = n(711553),
+    N = n(981631),
     D = n(647086),
     k = n(388032),
     R = n(613322);
@@ -152,7 +152,7 @@ class M extends r.PureComponent {
             { guild: o } = s,
             { controller: a, renderBanner: c, bannerVisible: d, communityInfoVisible: g } = this.state,
             m = (null == o ? void 0 : o.id) === D._ ? u.j : u.E;
-        return (0, i.jsxs)(N.Z, {
+        return (0, i.jsxs)(T.Z, {
             header:
                 null != o
                     ? (0, i.jsx)(p.ZP, {
@@ -176,7 +176,7 @@ class M extends r.PureComponent {
                                           {
                                               ref: this.settingsIconRef,
                                               icon: l.ewm,
-                                              label: k.intl.string(k.t["3D5yo6"]),
+                                              label: k.intl.string(k.t["3D5yo/"]),
                                           },
                                           e,
                                       ),
@@ -217,7 +217,7 @@ class M extends r.PureComponent {
                 null != o &&
                     (0, i.jsx)("section", {
                         className: R.panels,
-                        "aria-label": k.intl.string(k.t.StREWF),
+                        "aria-label": k.intl.string(k.t.StREWK),
                         children: (0, i.jsx)(f.Z, { guildId: o.id }),
                     }),
             ],
@@ -247,9 +247,9 @@ function z(e) {
         r = (0, o.e7)([E.Z], () => E.Z.getGuild(n)),
         s = (0, o.e7)([b.ZP], () => b.ZP.getChannels(n)),
         l = (0, o.e7)([O.Z], () => O.Z.getCategories(n)),
-        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([C.ZP], () => ({
-            mutedChannels: C.ZP.getMutedChannels(n),
-            collapseMuted: C.ZP.isGuildCollapsed(n),
+        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([j.ZP], () => ({
+            mutedChannels: j.ZP.getMutedChannels(n),
+            collapseMuted: j.ZP.isGuildCollapsed(n),
         })),
         p = (0, o.e7)([I.ZP], () => I.ZP.getVoiceStates(n)),
         h = (0, o.e7)([y.Z], () => y.Z.getCollapsed()),
@@ -258,14 +258,14 @@ function z(e) {
             let { channelId: t } = e;
             return t;
         }),
-        w = (0, o.e7)([j.Z], () => j.Z.getVoiceChannelId()),
-        N = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
+        w = (0, o.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
+        T = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
         D = (0, o.e7)([m.Z], () => m.Z.version),
         k = (0, o.e7)([v.default], () => v.default.getGuildChangeSentinel(n)),
         R = (0, a.QN)(null == r ? void 0 : r.id),
         A = (0, c.gM)(null == r ? void 0 : r.id),
-        L = null != (t = null == r ? void 0 : r.features.has(T.GuildFeatures.COMMUNITY)) && t,
-        z = (0, o.e7)([Z.Z], () => Z.Z.getChannelId()),
+        L = null != (t = null == r ? void 0 : r.features.has(N.GuildFeatures.COMMUNITY)) && t,
+        z = (0, o.e7)([C.Z], () => C.Z.getChannelId()),
         V = (0, o.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(M, {
         guildId: n,
@@ -282,7 +282,7 @@ function z(e) {
         collapsedChannels: h,
         collapseMuted: u,
         guildReadStateSentinel: k,
-        permissionVersion: N,
+        permissionVersion: T,
         categoryCollapseVersion: D,
         embeddedAppsByChannel: R,
         activeEventsByChannel: A,

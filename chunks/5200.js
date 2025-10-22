@@ -4,7 +4,7 @@ var i,
     l = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     c = n(481060),
     u = n(542094),
     d = n(182906),
@@ -68,7 +68,7 @@ function _(e) {
                             children: (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: m.intl.string(m.t.VJlc0d),
+                                children: m.intl.string(m.t.VJlc0S),
                             }),
                         }),
                     });
@@ -80,7 +80,7 @@ function _(e) {
                             children: (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
-                                children: m.intl.string(m.t["wH/wDA"]),
+                                children: m.intl.string(m.t["wH/wDO"]),
                             }),
                         }),
                     });

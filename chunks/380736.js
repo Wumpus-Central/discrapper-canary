@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(442837),
     c = n(755721),
     u = n(481060),
@@ -156,7 +156,7 @@ let N = i.memo(function (e) {
         return (0, r.jsx)(_.Z, {
             className: y.dismissButton,
             onDismiss: G,
-            "aria-label": b.intl.string(b.t.LnEgqa),
+            "aria-label": b.intl.string(b.t.LnEgqX),
         });
     }
     function Y() {
@@ -182,7 +182,7 @@ let N = i.memo(function (e) {
                                 size: c.zx.Sizes.SMALL,
                                 color: c.zx.Colors.GREEN,
                                 onClick: B,
-                                children: null != T ? T : b.intl.string(b.t.BddRzc),
+                                children: null != T ? T : b.intl.string(b.t.BddRzS),
                             })
                           : null,
                       null != g
@@ -192,7 +192,7 @@ let N = i.memo(function (e) {
                                 look: c.zx.Looks.OUTLINED,
                                 color: c.zx.Colors.PRIMARY,
                                 onClick: Z,
-                                children: null != I ? I : b.intl.string(b.t["ETE/oK"]),
+                                children: null != I ? I : b.intl.string(b.t["ETE/oC"]),
                             })
                           : null,
                   ],

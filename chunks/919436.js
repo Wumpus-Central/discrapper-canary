@@ -2,15 +2,15 @@ n.d(t, { Z: () => D }), n(415506), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
-    o = n(258536),
+    o = n(13941),
     a = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(239091),
     d = n(358221),
     p = n(43267),
-    f = n(933557),
-    h = n(93687),
+    h = n(933557),
+    f = n(93687),
     g = n(266076),
     m = n(199902),
     b = n(19780),
@@ -54,7 +54,7 @@ function Z(e) {
     }
     return e;
 }
-function w(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function w(e, t) {
         e
     );
 }
-let T = {
+let w = {
     friction: 28,
     tension: 600,
 };
@@ -80,9 +80,9 @@ function A(e) {
     switch (e) {
         case "height":
         case "opacity":
-            return Z({ duration: 150 }, T);
+            return Z({ duration: 150 }, w);
         case "scale":
-            return Z({}, T);
+            return Z({}, w);
         default:
             throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)));
     }
@@ -159,9 +159,9 @@ class R extends (r = l.PureComponent) {
                 isCurrentUserInThisDMCall: u,
                 unread: d,
                 isGDMFacepileEnabled: p,
-                treeItemProps: f,
+                treeItemProps: h,
             } = this.props,
-            { hovered: h, animating: m } = this.state,
+            { hovered: f, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon && p,
             _ = () =>
                 (0, i.jsx)(
@@ -171,7 +171,7 @@ class R extends (r = l.PureComponent) {
                             to: S.Z5c.CHANNEL(S.ME, e.id),
                             onMouseEnter: () => this.setState({ hovered: !0 }),
                             onMouseLeave: () => this.setState({ hovered: !1 }),
-                            selected: n || h,
+                            selected: n || f,
                             ariaLabel:
                                 null != t
                                     ? I.intl.formatToPlainString(I.t.hKarnZ, {
@@ -192,7 +192,7 @@ class R extends (r = l.PureComponent) {
                                   })
                                 : void 0,
                         },
-                        f,
+                        h,
                     ),
                 );
         return (0, i.jsx)(o.animated.div, {
@@ -200,7 +200,7 @@ class R extends (r = l.PureComponent) {
             children: (0, i.jsxs)(x.H, {
                 children: [
                     (0, i.jsx)(j.Z, {
-                        hovered: !m && h,
+                        hovered: !m && f,
                         selected: !m && n,
                         unread: !m && d,
                         className: P.pill,
@@ -252,7 +252,7 @@ class R extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  w(Z({}, n), {
+                                  T(Z({}, n), {
                                       channel: t,
                                       user: r,
                                   }),
@@ -263,7 +263,7 @@ class R extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  w(Z({}, n), {
+                                  T(Z({}, n), {
                                       channel: t,
                                       selected: !1,
                                   }),
@@ -280,14 +280,14 @@ N(R, "defaultProps", {
 });
 let D = l.forwardRef(function (e, t) {
     let n = e.channel.id,
-        r = (0, f.ZP)(e.channel),
+        r = (0, h.ZP)(e.channel),
         l = (0, a.Ie)(n, 2),
         o = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : S.WtW.VOICE), [o]),
         p = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
         g = (0, s.e7)([O.Z], () => O.Z.getChannelId(), []),
         y = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: v } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
+        { isFacepileEnabled: v } = f.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
         j = o === n,
         x = !1,
         C = !1;
@@ -295,7 +295,7 @@ let D = l.forwardRef(function (e, t) {
     let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
-        w(Z({}, e), {
+        T(Z({}, e), {
             ref: t,
             channelName: r,
             unread: y > 0,

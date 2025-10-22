@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(392711),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(818405),
     c = n(587158),
     u = n(286379),
@@ -115,7 +115,7 @@ function x(e) {
                       (0, r.jsx)(f.Text, {
                           variant: "text-md/semibold",
                           color: "text-primary",
-                          children: R.intl.string(R.t.mn4eXF),
+                          children: R.intl.string(R.t.mn4eXC),
                       }),
                       (0, r.jsxs)("div", {
                           className: P.stackTraceCode,
@@ -138,16 +138,16 @@ function x(e) {
                   ],
               })
             : null,
-        j = g ? null : R.intl.string(R.t.oEJEFh),
+        j = g ? null : R.intl.string(R.t.oEJEFq),
         U =
             (null != (t = null == I ? void 0 : I.isStaff()) && t) ||
             (null != (n = null == I ? void 0 : I.isStaffPersonal()) && n);
     return (0, r.jsx)(A.Y, {
-        title: R.intl.string(R.t.U38qZm),
+        title: R.intl.string(R.t.U38qZj),
         body: k,
         hint: U ? j : void 0,
-        confirmText: R.intl.string(R.t.a3HlgI),
-        cancelText: null != M ? R.intl.string(R.t.qIYnPj) : void 0,
+        confirmText: R.intl.string(R.t.a3HlgJ),
+        cancelText: null != M ? R.intl.string(R.t.qIYnPo) : void 0,
         icon: (0, r.jsx)(b.Z, {
             width: 40,
             height: 40,

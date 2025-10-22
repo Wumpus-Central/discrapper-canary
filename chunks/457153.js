@@ -3,7 +3,7 @@ var r = n(951288),
     s = n(647438),
     a = n(120356),
     o = n.n(a),
-    i = n(258536),
+    i = n(13941),
     l = n(113434),
     c = n(497505),
     d = n(164495),
@@ -31,8 +31,8 @@ let h = s.forwardRef(function (e, t) {
         w = (0, l.Jf)(j),
         P = s.useRef(null),
         N = (null == (a = j.userStatus) ? void 0 : a.enrolledAt) != null,
-        R = null != w ? w.percentComplete : v.percentComplete,
-        [A, B] = s.useState(!1);
+        A = null != w ? w.percentComplete : v.percentComplete,
+        [R, B] = s.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T &&
@@ -42,7 +42,7 @@ let h = s.forwardRef(function (e, t) {
                     progressBarRef: P,
                     quest: j,
                     isExpanded: _,
-                    isHovered: A,
+                    isHovered: R,
                 }),
             (0, r.jsx)(i.animated.div, {
                 ref: t,
@@ -81,7 +81,7 @@ let h = s.forwardRef(function (e, t) {
                                   quest: j,
                                   progressBarRef: P,
                                   isExpanded: !1,
-                                  percentComplete: R,
+                                  percentComplete: A,
                               })
                             : null,
                         T &&

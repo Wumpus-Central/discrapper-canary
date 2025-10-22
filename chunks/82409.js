@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(258536),
+    a = n(13941),
     s = n(442837);
 n(28664);
 var c = n(481060),
@@ -11,8 +11,8 @@ var c = n(481060),
     d = n(45114),
     p = n(493773);
 n(100527), n(906732);
-var f = n(377171),
-    h = n(315174),
+var h = n(377171),
+    f = n(315174),
     g = n(340541),
     m = n(768943),
     b = n(592125),
@@ -29,8 +29,8 @@ var f = n(377171),
     P = n(334426),
     N = n(862149),
     Z = n(207913),
-    w = n(553984),
-    T = n(333834),
+    T = n(553984),
+    w = n(333834),
     A = n(982183),
     R = n(981631),
     D = n(388032),
@@ -78,7 +78,7 @@ function U(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
         a = (0, C.fJ)(),
-        { selectedFilter: f } = (0, E.Z)(),
+        { selectedFilter: h } = (0, E.Z)(),
         P = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
         N = (0, s.Wu)([S.Z], () => S.Z.getInboxMessages()),
         Z = (0, s.Wu)([y.ZP, _.Z, S.Z], () =>
@@ -107,13 +107,13 @@ function U(e) {
         ),
         U = i.useCallback(
             (e) => {
-                f !== A.V5.BOOKMARKS &&
+                h !== A.V5.BOOKMARKS &&
                     x.Z.loadMoreInbox({
                         viewId: a,
                         loadingTrigger: e,
                     });
             },
-            [f, a],
+            [h, a],
         ),
         { hasLoadedEver: B, canLoadMore: W } = (0, s.cj)([S.Z], () => ({
             hasLoadedEver: S.Z.hasLoadedEver,
@@ -168,8 +168,8 @@ function U(e) {
                 }),
             [K],
         ),
-        q = F(Z, f, P),
-        X = F(D, f, null);
+        q = F(Z, h, P),
+        X = F(D, h, null);
     (0, p.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
@@ -222,14 +222,14 @@ function U(e) {
         });
     let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
         J = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === j.v8.DROPDOWN && f !== A.V5.ALL,
-        ee = (0, A.H_)(f);
+        $ = Q === j.v8.DROPDOWN && h !== A.V5.ALL,
+        ee = (0, A.H_)(h);
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
         children: (0, r.jsxs)(c.y5t, {
             forceLevel: 1,
             component: (0, r.jsx)(
-                h.ZP,
+                f.ZP,
                 ((t = M(
                     {
                         hasSubheader: !0,
@@ -243,7 +243,7 @@ function U(e) {
                             direction: "horizontal",
                             gap: 4,
                             style: { marginRight: -4 },
-                            children: Q === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(w.p, {}),
+                            children: Q === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(T.p, {}),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -261,16 +261,16 @@ function U(e) {
                 t),
             ),
             children: [
-                f === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || f !== A.V5.ALL }),
+                h === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || h !== A.V5.ALL }),
                 $ && (0, r.jsx)(c.LZC, { size: 8 }),
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(w.Z, {
                     className: L.messageList,
                     renderMessageGroup: H,
-                    messages: f === A.V5.BOOKMARKS ? Y : q,
-                    unreadMessages: f === A.V5.BOOKMARKS ? [] : X,
+                    messages: h === A.V5.BOOKMARKS ? Y : q,
+                    unreadMessages: h === A.V5.BOOKMARKS ? [] : X,
                     listName: "notifications-inbox",
                     renderLoadingState: V,
-                    ignoreGrouping: f === A.V5.BOOKMARKS,
+                    ignoreGrouping: h === A.V5.BOOKMARKS,
                     loadMore: U,
                 }),
             ],
@@ -320,11 +320,11 @@ function z(e) {
                     variant: "text-sm/medium",
                     color: "text-feedback-positive",
                     className: L.caughtUpText,
-                    children: D.intl.string(D.t["6XMM+P"]),
+                    children: D.intl.string(D.t["6XMM+D"]),
                 }),
                 (0, r.jsx)(c.W6s, {
                     size: "sm",
-                    color: f.Z.TEXT_FEEDBACK_POSITIVE,
+                    color: h.Z.TEXT_FEEDBACK_POSITIVE,
                 }),
             ],
         }),

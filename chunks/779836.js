@@ -3,7 +3,7 @@ var i = n(951288);
 n(647438);
 var r = n(120356),
     l = n.n(r),
-    a = n(258536),
+    a = n(13941),
     o = n(399606),
     s = n(481060),
     c = n(511010),
@@ -55,7 +55,7 @@ function C(e) {
                               (0, i.jsx)(s.Text, {
                                   variant: "text-xs/medium",
                                   color: "interactive-normal",
-                                  children: g.intl.string(g.t["5ZsiEx"]),
+                                  children: g.intl.string(g.t["5ZsiE9"]),
                               }),
                               (0, i.jsx)(s.P3F, {
                                   onClick: (e) => l(e, f.aZ.GOOD),

@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(258536),
+    o = n(13941),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -111,12 +111,12 @@ let b = function (e) {
                         (0, r.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-primary",
-                            children: f.intl.format(f.t["3yZP0N"], { percent: h.discount.amount }),
+                            children: f.intl.format(f.t["3yZP0G"], { percent: h.discount.amount }),
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: f.intl.format(f.t["3Q4wCw"], {
+                            children: f.intl.format(f.t["3Q4wCy"], {
                                 numMonths: h.discount.user_usage_limit,
                                 discountedPrice: g,
                                 billingPeriod: (0, u.JP)(h.discount.user_usage_limit_interval),
@@ -128,7 +128,7 @@ let b = function (e) {
                     variant: "expressive",
                     icon: s.SrA,
                     size: "md",
-                    text: f.intl.string(f.t.zrCzVF),
+                    text: f.intl.string(f.t.zrCzVB),
                     onClick: () => O(),
                 }),
             ],

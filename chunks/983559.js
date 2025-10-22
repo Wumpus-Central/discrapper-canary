@@ -1,7 +1,7 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(258536),
+    l = n(13941),
     a = n(793030),
     s = n(481060),
     o = n(410030),
@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(510659),
     y = n(892001),
     _ = n(899007),
-    j = n(867176),
-    O = n(451834),
+    O = n(867176),
+    j = n(451834),
     x = n(502762),
     v = n(952124),
     C = n(544989),
@@ -126,14 +126,14 @@ function L(e) {
                                 (0, r.jsxs)("div", {
                                     className: A.header,
                                     children: [
-                                        (0, r.jsx)(j.Z, {
+                                        (0, r.jsx)(O.Z, {
                                             user: n,
                                             displayProfile: k,
                                             themeType: R.l.SIDEBAR,
                                             animateOnHoverOrFocusOnly: !V,
                                             className: A.banner,
                                         }),
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(j.Z, {
                                             userId: n.id,
                                             className: A.toast,
                                         }),
@@ -219,7 +219,7 @@ let M = (e) => {
             children: (0, r.jsx)(s.Text, {
                 color: a,
                 variant: "text-sm/normal",
-                children: w.intl.string(w.t["+Xp3ho"]),
+                children: w.intl.string(w.t["+Xp3hq"]),
             }),
         }),
     });

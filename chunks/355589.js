@@ -5,7 +5,7 @@ var r = n(951288),
     l = n.n(a),
     s = n(913527),
     o = n.n(s),
-    c = n(258536),
+    c = n(13941),
     d = n(574583),
     u = n(831209),
     m = n(149765),
@@ -95,10 +95,10 @@ let W = {
         height: 20,
         borderRadius: 10,
     },
-    X = (e) => {
+    K = (e) => {
         (0, k.e5)({ onboardingCTA: e });
     };
-class K {
+class X {
     addStep(e) {
         ++this.currentIndex, this.steps.push(G({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
     }
@@ -116,7 +116,7 @@ let Y = (e) => {
         let { guild: t, roles: n } = e;
         return (0, r.jsx)("div", {
             className: B.rolesList,
-            "aria-label": z.intl.formatToPlainString(z.t.PCs0oq, { numRoles: n.length }),
+            "aria-label": z.intl.formatToPlainString(z.t.PCs0oo, { numRoles: n.length }),
             children: n.map((e) =>
                 (0, r.jsx)(
                     x.UB,
@@ -143,7 +143,7 @@ let Y = (e) => {
         return (0, r.jsx)(g.P3F, {
             onClick: t,
             className: B.closeButton,
-            "aria-label": z.intl.string(z.t.WAI6xs),
+            "aria-label": z.intl.string(z.t.WAI6xu),
             children: (0, r.jsx)(g.Dio, {
                 size: "md",
                 color: "currentColor",
@@ -156,7 +156,7 @@ let Y = (e) => {
         return (0, r.jsx)(g.P3F, {
             onClick: n,
             className: B.closeButton,
-            "aria-label": t ? z.intl.string(z.t.iTcumZ) : z.intl.string(z.t.dcl9MT),
+            "aria-label": t ? z.intl.string(z.t.iTcuma) : z.intl.string(z.t.dcl9MQ),
             children: t
                 ? (0, r.jsx)(g.dOc, {
                       size: "xs",
@@ -220,7 +220,7 @@ let Y = (e) => {
                             o = (0, h.e7)([T.Z], () => (null != s ? T.Z.getSortedRoles(s) : void 0));
                         return i.useMemo(() => {
                             let i,
-                                s = new K(),
+                                s = new X(),
                                 c = (null == t ? void 0 : t.isMediaChannel()) === !0;
                             return (
                                 null == e ||
@@ -243,8 +243,8 @@ let Y = (e) => {
                                                 o = s.length > 0,
                                                 c = s.some((e) => (0, y.fI)(e));
                                             return {
-                                                name: z.intl.string(z.t["/Ax2go"]),
-                                                description: z.intl.string(z.t.gAIOfn),
+                                                name: z.intl.string(z.t["/Ax2gs"]),
+                                                description: z.intl.string(z.t.gAIOfg),
                                                 isDone: o && c,
                                                 shouldWarn: o && !c,
                                                 children: o
@@ -254,7 +254,7 @@ let Y = (e) => {
                                                       })
                                                     : null,
                                                 clickHandler: () => {
-                                                    X(D.ZI.PERMISSIONS),
+                                                    K(D.ZI.PERMISSIONS),
                                                         (0, g.ZDy)(
                                                             async () => {
                                                                 let { default: t } = await n
@@ -289,10 +289,10 @@ let Y = (e) => {
                                         ((e) => {
                                             let t = null != e.topic && e.topic.length > 0;
                                             return {
-                                                name: z.intl.string(z.t.UgJu1d),
-                                                description: z.intl.string(z.t["3C6/Gx"]),
+                                                name: z.intl.string(z.t.UgJu1e),
+                                                description: z.intl.string(z.t["3C6/G1"]),
                                                 clickHandler: () => {
-                                                    X(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, H.ZfP.TOPIC);
+                                                    K(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, H.ZfP.TOPIC);
                                                 },
                                                 isDone: t,
                                             };
@@ -302,10 +302,10 @@ let Y = (e) => {
                                     ((e) => {
                                         let t = null != e.availableTags && e.availableTags.length > 0;
                                         return {
-                                            name: z.intl.string(z.t.xiBFCg),
+                                            name: z.intl.string(z.t.xiBFCi),
                                             description: z.intl.string(z.t.wCv4Oz),
                                             clickHandler: () => {
-                                                X(D.ZI.TAGS),
+                                                K(D.ZI.TAGS),
                                                     f.ZP.open(e.id),
                                                     (0, g.ZDy)(async () => {
                                                         let { default: t } = await n.e("21971").then(n.bind(n, 201049));
@@ -327,10 +327,10 @@ let Y = (e) => {
                                     ((e) => {
                                         let t = null != e.defaultReactionEmoji;
                                         return {
-                                            name: z.intl.string(z.t.QlyC9v),
-                                            description: z.intl.string(z.t["+50LJi"]),
+                                            name: z.intl.string(z.t.QlyC9s),
+                                            description: z.intl.string(z.t["+50LJg"]),
                                             clickHandler: () => {
-                                                X(D.ZI.DEFAULT_REACTION),
+                                                K(D.ZI.DEFAULT_REACTION),
                                                     (0, g.ZDy)(async () => {
                                                         let { default: t } = await n.e("80404").then(n.bind(n, 158586));
                                                         return (n) => (0, r.jsx)(t, V(G({}, n), { channel: e }));
@@ -343,7 +343,7 @@ let Y = (e) => {
                                 s.addStep(
                                     ((i = null == e ? void 0 : e.id),
                                     {
-                                        name: z.intl.string(z.t["6A0O6+"]),
+                                        name: z.intl.string(z.t["6A0O64"]),
                                         description: c
                                             ? z.intl.string(z.t["8hI5vr"])
                                             : z.intl.format(z.t.ysxcAw, {
@@ -361,7 +361,7 @@ let Y = (e) => {
                                                   },
                                               }),
                                         clickHandler: () => {
-                                            X(D.ZI.CREATE_POST), N.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
+                                            K(D.ZI.CREATE_POST), N.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
                                         },
                                         isDone: a,
                                     }),
@@ -462,13 +462,13 @@ let Y = (e) => {
                                                     children: (0, r.jsxs)(g.y5t, {
                                                         component: (0, r.jsx)(g.Heading, {
                                                             variant: "heading-md/semibold",
-                                                            children: z.intl.string(z.t.LhlgY2),
+                                                            children: z.intl.string(z.t.LhlgY9),
                                                         }),
                                                         children: [
                                                             (0, r.jsx)(g.Heading, {
                                                                 variant: "heading-md/medium",
                                                                 className: B.header,
-                                                                children: z.intl.format(z.t["9L+8b2"], {
+                                                                children: z.intl.format(z.t["9L+8bz"], {
                                                                     numCompleted: eo.completedSteps.toString(),
                                                                     numSteps: eo.steps.length.toString(),
                                                                 }),
@@ -482,7 +482,7 @@ let Y = (e) => {
                                                                         color: "currentColor",
                                                                         className: B.icon,
                                                                     }),
-                                                                    z.intl.string(z.t.znhX2d),
+                                                                    z.intl.string(z.t.znhX2R),
                                                                 ],
                                                             }),
                                                             (0, r.jsx)($, {

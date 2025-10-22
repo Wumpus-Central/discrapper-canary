@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -129,7 +129,7 @@ let M = i.forwardRef(function (e, t) {
                             );
                     });
             },
-            d = null != a ? a.label() : A.intl.string(A.t.evw0o6),
+            d = null != a ? a.label() : A.intl.string(A.t.evw0oz),
             f = (0, r.jsxs)("div", {
                 className: C.content,
                 children: [
@@ -155,7 +155,7 @@ let M = i.forwardRef(function (e, t) {
                         ref: t,
                         children: (0, r.jsx)(u.P3F, {
                             className: C.outer,
-                            "aria-label": A.intl.string(A.t["zrpF/f"]),
+                            "aria-label": A.intl.string(A.t["zrpF/b"]),
                             onClick: c,
                             focusProps: { ringClassName: C.ring },
                             children: (0, r.jsxs)("span", {
@@ -270,7 +270,7 @@ let M = i.forwardRef(function (e, t) {
                     : (0, r.jsx)(u.Text, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          "aria-label": "".concat(A.intl.string(A.t.EVV6ub), ": ").concat(v),
+                          "aria-label": "".concat(A.intl.string(A.t.EVV6uZ), ": ").concat(v),
                           className: o()(C.statusText, P && C.italicPrompt),
                           children: null != v ? v : "",
                       }),
@@ -311,7 +311,7 @@ let M = i.forwardRef(function (e, t) {
                               role: "tooltip",
                               tabIndex: 0,
                               className: o()(C.container, g),
-                              "aria-label": A.intl.formatToPlainString(A.t.xRGqo6, {
+                              "aria-label": A.intl.formatToPlainString(A.t.xRGqow, {
                                   emoji: null != (n = null == _ ? void 0 : _.name) ? n : "",
                                   status: p,
                                   label: "",
@@ -339,7 +339,7 @@ let M = i.forwardRef(function (e, t) {
                               role: "tooltip",
                               tabIndex: 0,
                               className: o()(C.container, g),
-                              "aria-label": A.intl.formatToPlainString(A.t.xRGqo6, {
+                              "aria-label": A.intl.formatToPlainString(A.t.xRGqow, {
                                   emoji: null != (a = null == _ ? void 0 : _.name) ? a : "",
                                   label: "",
                                   status: p,

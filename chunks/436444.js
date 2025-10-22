@@ -7,7 +7,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(258536),
+    o = n(13941),
     s = n(481060),
     l = n(906732),
     c = n(975298),
@@ -18,7 +18,7 @@ var i = n(120356),
     p = n(981631),
     h = n(474936),
     m = n(388032),
-    g = n(989308),
+    g = n(149829),
     E = n(724437);
 function b(e, t, n) {
     return (
@@ -161,10 +161,10 @@ let T = {
         return (0, r.jsx)(s.aML, {
             tooltipClassName: E.tooltip,
             text: x
-                ? m.intl.formatToPlainString(m.t["1o48kp"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
+                ? m.intl.formatToPlainString(m.t["1o48ki"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
                 : j
-                  ? m.intl.formatToPlainString(g.default["9CtPjo"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
-                  : m.intl.formatToPlainString(m.t.r6NN6e, {
+                  ? m.intl.formatToPlainString(g.default["9CtPjt"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
+                  : m.intl.formatToPlainString(m.t.r6NN6Q, {
                         numBoostsRequired: D,
                         tierName: (0, d.nW)(A, { useLevels: !1 }),
                     }),

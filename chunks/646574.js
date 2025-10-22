@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(442837),
     c = n(704215),
     u = n(481060),
@@ -52,7 +52,7 @@ function y(e) {
     });
 }
 function O(e) {
-    return e ? m.intl.string(m.t["5cRA/f"]) : m.intl.string(m.t.buV4am);
+    return e ? m.intl.string(m.t["5cRA/b"]) : m.intl.string(m.t.buV4av);
 }
 function v(e) {
     let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
@@ -76,8 +76,8 @@ function v(e) {
         let e = S === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (A(h.L.DISMISS), setTimeout(() => N(e), 200));
     }, [S, A]);
-    let L = C ? m.intl.string(m.t["Osi/u7"]) : O(t),
-        x = C ? m.intl.string(m.t.ORK94u) : void 0;
+    let L = C ? m.intl.string(m.t["Osi/uy"]) : O(t),
+        x = C ? m.intl.string(m.t.ORK94p) : void 0;
     return (0, r.jsxs)(u.jSM, {
         position: "top",
         text: (0, r.jsx)(y, {
@@ -113,7 +113,7 @@ function v(e) {
                         children: (0, r.jsx)(u.Text, {
                             className: g.visuallyHidden,
                             variant: "text-sm/semibold",
-                            children: m.intl.string(m.t.buV4am),
+                            children: m.intl.string(m.t.buV4av),
                         }),
                     }),
                 ],

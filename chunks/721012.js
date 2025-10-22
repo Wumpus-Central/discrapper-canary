@@ -2,7 +2,7 @@ n.d(t, { i: () => d }), n(388685);
 var l = n(951288),
     r = n(647438);
 n(120356);
-var i = n(258536),
+var i = n(13941),
     a = n(481060),
     s = n(388032),
     o = n(490369);
@@ -101,14 +101,14 @@ function d(e) {
                         variant: "secondary",
                         icon: a.whL,
                         onClick: d,
-                        "aria-label": s.intl.string(s.t["13/7kZ"]),
+                        "aria-label": s.intl.string(s.t["13/7kX"]),
                     }),
                     (0, l.jsx)(a.hU, {
                         size: "sm",
                         variant: "secondary",
                         icon: a.ZSh,
                         onClick: m,
-                        "aria-label": s.intl.string(s.t.PDTjLC),
+                        "aria-label": s.intl.string(s.t.PDTjLN),
                     }),
                 ],
             }),

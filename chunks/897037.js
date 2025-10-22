@@ -5,7 +5,7 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(258536),
+    a = n(13941),
     o = n(481060),
     s = n(699682),
     l = n(388032),
@@ -96,9 +96,9 @@ function m(e) {
                     ? n
                     : c
                       ? null != a && (null != (e = null == r ? void 0 : r.length) ? e : 0) < a
-                          ? l.intl.formatToPlainString(l.t["62rk1N"], { minLength: a })
+                          ? l.intl.formatToPlainString(l.t["62rk1K"], { minLength: a })
                           : null != o && (null != (i = null == r ? void 0 : r.length) ? i : 0) > o
-                            ? l.intl.formatToPlainString(l.t.ICT5S0, { maxLength: o })
+                            ? l.intl.formatToPlainString(l.t.ICT5S6, { maxLength: o })
                             : null
                       : null;
         }, [t, n, c, a, null == r ? void 0 : r.length, o]),

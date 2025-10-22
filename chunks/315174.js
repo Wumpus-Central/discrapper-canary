@@ -7,14 +7,14 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(258536),
+    a = n(13941),
     s = n(873546),
     c = n(442837),
     u = n(28664),
     d = n(481060),
     p = n(666188),
-    f = n(340541),
-    h = n(159300),
+    h = n(340541),
+    f = n(159300),
     g = n(553984),
     m = n(695346),
     b = n(496675),
@@ -109,7 +109,7 @@ function P(e) {
             children:
                 c &&
                 (0, r.jsx)(u.u, {
-                    text: x.intl.string(x.t.O8lDIy),
+                    text: x.intl.string(x.t.O8lDI2),
                     position: "right",
                     children: (0, r.jsxs)("div", {
                         className: C.communityInfoPill,
@@ -124,7 +124,7 @@ function P(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 color: "none",
-                                children: x.intl.string(x.t["B/vjCg"]),
+                                children: x.intl.string(x.t["B/vjCu"]),
                             }),
                         ],
                     }),
@@ -158,7 +158,7 @@ let Z = (e) => {
         color: "currentColor",
     });
 };
-function w(e) {
+function T(e) {
     let { guild: t } = e;
     return (0, r.jsx)(d.Heading, {
         variant: "text-md/semibold",
@@ -167,7 +167,7 @@ function w(e) {
         children: t.name,
     });
 }
-function T(e) {
+function w(e) {
     var t;
     let {
         bannerVisible: n,
@@ -186,7 +186,7 @@ function T(e) {
                 isBannerVisible: n,
             }),
             i.id === j._ && (0, r.jsx)(N, {}),
-            (0, r.jsx)(w, { guild: i }),
+            (0, r.jsx)(T, { guild: i }),
             null != l &&
                 (0, r.jsx)(d.P3F, {
                     className: C.headerButton,
@@ -198,7 +198,7 @@ function T(e) {
                         ringTarget: c,
                         offset: 4,
                     },
-                    "aria-label": x.intl.formatToPlainString(x.t.xMXpl5, {
+                    "aria-label": x.intl.formatToPlainString(x.t.xMXpl3, {
                         guildName: null != (t = null == i ? void 0 : i.name) ? t : "",
                     }),
                 }),
@@ -212,8 +212,8 @@ function T(e) {
 let A = [j._, v.STv];
 function R(e) {
     var t;
-    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: f, children: m } = e,
-        _ = (0, c.e7)([b.Z], () => (0, h.b)(b.Z, o)),
+    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: h, children: m } = e,
+        _ = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, o)),
         O = i.useCallback(() => {
             _
                 ? (0, d.ZDy)(async () => {
@@ -236,11 +236,11 @@ function R(e) {
         children: [
             (0, r.jsxs)(d.P3F, {
                 className: C.guildDropdown,
-                "aria-label": x.intl.formatToPlainString(x.t.xMXpl5, {
+                "aria-label": x.intl.formatToPlainString(x.t.xMXpl3, {
                     guildName: null != (t = null == o ? void 0 : o.name) ? t : "",
                 }),
                 "aria-controls": p,
-                "aria-expanded": f,
+                "aria-expanded": h,
                 onContextMenu: s,
                 onClick: a,
                 children: [
@@ -252,7 +252,7 @@ function R(e) {
                                 isBannerVisible: l,
                             }),
                             o.id === j._ && (0, r.jsx)(N, {}),
-                            (0, r.jsx)(w, { guild: o }),
+                            (0, r.jsx)(T, { guild: o }),
                         ],
                     }),
                     (0, r.jsx)("div", {
@@ -263,7 +263,7 @@ function R(e) {
             }),
             !A.includes(o.id) &&
                 (0, r.jsx)(u.u, {
-                    text: x.intl.string(x.t.Sd8Ix8),
+                    text: x.intl.string(x.t.Sd8Ixw),
                     position: "bottom",
                     asContainer: !0,
                     children: (0, r.jsx)(d.P3F, {
@@ -289,7 +289,7 @@ let D = i.memo(function (e) {
             className: a,
             onClick: c,
             onContextMenu: u,
-            onMouseDown: h,
+            onMouseDown: f,
             disableBannerAnimation: g,
             "aria-expanded": b,
             "aria-controls": y,
@@ -297,7 +297,7 @@ let D = i.memo(function (e) {
             guildBanner: x,
             animationOverlayHeight: N,
             children: Z,
-            headerClassName: w,
+            headerClassName: T,
             communityInfoVisible: A,
             hasSubheader: D,
         } = e,
@@ -331,7 +331,7 @@ let D = i.memo(function (e) {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        X = (0, f._k)({ location: "guild_header" }),
+        X = (0, h._k)({ location: "guild_header" }),
         Q = {
             bannerVisible: n,
             guild: j,
@@ -360,18 +360,18 @@ let D = i.memo(function (e) {
                             [C.communityInfoVisible]: U || (D && G),
                             [C.invitesRefresh]: X.isGuildEntrypointEnabled,
                         }),
-                        onMouseDown: h,
+                        onMouseDown: f,
                         onClick: X.isGuildEntrypointEnabled ? void 0 : c,
                         onContextMenu: u,
                         children: [
                             (0, r.jsxs)("header", {
-                                className: o()(C.header, w, { [C.themedHeaderMobile]: s.tq }),
+                                className: o()(C.header, T, { [C.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: o()(C.headerContent, C.primaryInfo),
                                         children: X.isGuildEntrypointEnabled
                                             ? (0, r.jsx)(R, S(E({}, Q), { children: Z }))
-                                            : (0, r.jsx)(T, S(E({}, Q), { children: Z })),
+                                            : (0, r.jsx)(w, S(E({}, Q), { children: Z })),
                                     }),
                                     G &&
                                         (0, r.jsx)(P, {

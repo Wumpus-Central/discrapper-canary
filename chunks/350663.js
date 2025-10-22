@@ -3,19 +3,19 @@ var i = n(951288),
     r = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(258536),
+    a = n(13941),
     s = n(481060),
     u = n(110924),
     c = n(569545),
     d = n(237997),
-    h = n(444295),
-    p = n(752802),
+    p = n(444295),
+    h = n(752802),
     f = n(68286),
     m = n(461393),
     g = n(340101),
     y = n(981631),
     O = n(339882);
-function v(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -40,7 +40,7 @@ function v(e) {
     }
     return e;
 }
-function E(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -89,19 +89,19 @@ let S = {
             T = (0, u.Z)(n),
             _ = (0, u.Z)(x),
             P = b === g.C5.VERTICAL,
-            D = x || _ !== x || T !== n,
-            A = r.useMemo(() => {
+            A = x || _ !== x || T !== n,
+            D = r.useMemo(() => {
                 let e = 0,
                     t = 0;
                 return P
                     ? w.map((t, n) =>
-                          E(v({}, t), {
+                          v(E({}, t), {
                               y: (e += t.height + (n > 0 ? N : 0)) - t.height,
                               x: 0,
                           }),
                       )
                     : w.map((e, n) =>
-                          E(v({}, e), {
+                          v(E({}, e), {
                               x: (t += e.width + (n > 0 ? N : 0)) - e.width,
                               y: 0,
                           }),
@@ -109,17 +109,17 @@ let S = {
             }, [w, N, P]),
             R = r.useMemo(
                 () =>
-                    0 === A.length
+                    0 === D.length
                         ? (0, m.MH)(f.bt)
-                        : A.reduce((e, t) => e + t.height, 0) + (P ? N * (A.length - 1) : 0),
-                [A, P, N],
+                        : D.reduce((e, t) => e + t.height, 0) + (P ? N * (D.length - 1) : 0),
+                [D, P, N],
             ),
             k = r.useMemo(
-                () => (0 === A.length ? f.bt : A.reduce((e, t) => e + t.width, 0) + (P ? 0 : N * (A.length - 1))),
-                [A, P, N],
+                () => (0 === D.length ? f.bt : D.reduce((e, t) => e + t.width, 0) + (P ? 0 : N * (D.length - 1))),
+                [D, P, N],
             ),
             L = (0, s.Yzy)(
-                A,
+                D,
                 {
                     key: (e) => e.key,
                     from: {
@@ -150,16 +150,16 @@ let S = {
                         };
                     },
                     config: S,
-                    trail: 100 * !D,
+                    trail: 100 * !A,
                 },
-                D ? "animate-never" : "respect-motion-settings",
+                A ? "animate-never" : "respect-motion-settings",
             ),
-            M = (0, h.ee)(() => new Set(I.map((e) => e.user.id)), [I, C]),
-            V = (0, h.ee)(() => new Set(I.filter((e) => j.has((0, c.V9)(e.stream))).map((e) => e.user.id)), [I, j, C]);
+            M = (0, p.ee)(() => new Set(I.map((e) => e.user.id)), [I, C]),
+            V = (0, p.ee)(() => new Set(I.filter((e) => j.has((0, c.V9)(e.stream))).map((e) => e.user.id)), [I, j, C]);
         return (
             r.useEffect(() => {
                 0 !== M.size &&
-                    (0, h.zi)(y.Odu.GO_LIVE, {
+                    (0, p.zi)(y.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
                         shownUserIds: Array.from(M),
                         liveUserIds: Array.from(V),
@@ -186,7 +186,7 @@ let S = {
                             return (0, i.jsx)("div", {
                                 className: O.tileContainer,
                                 children: (0, i.jsx)(
-                                    p.Z,
+                                    h.Z,
                                     {
                                         participant: t,
                                         width: n,

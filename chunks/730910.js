@@ -1,7 +1,7 @@
 n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(258536),
+    l = n(13941),
     a = n(442837),
     s = n(692547),
     o = n(215569),
@@ -116,11 +116,11 @@ function A(e) {
         );
     }, [H]);
     let W = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
-        V = (0, d.dQu)(s.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        z = (0, c.wj)(U) ? W : V,
+        z = (0, d.dQu)(s.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        V = (0, c.wj)(U) ? W : z,
         K = F.to({
             range: [0, 1],
-            output: [z, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
+            output: [V, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],
         });
     if (A) {
         if (D === O.PG.DEFAULT_CHANNELS) return (0, r.jsx)(N.j, {});
@@ -159,7 +159,7 @@ function A(e) {
                 (0, b.Nb)((0, O.lg)(D)),
                 (await q()) && (0, b.IG)(f, D);
         },
-        Q = async () => {
+        J = async () => {
             m.default.track(
                 T.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 R(Z({}, (0, g.hH)(f)), {
@@ -170,31 +170,31 @@ function A(e) {
             ),
                 (await q()) && (0, b.Wy)(f, D);
         },
-        J = null;
+        Q = null;
     M &&
         (D === O.PG.SAFETY_CHECK
-            ? (J = (0, r.jsx)(E.j7, {}))
+            ? (Q = (0, r.jsx)(E.j7, {}))
             : D === O.PG.DEFAULT_CHANNELS
-              ? (J = (0, r.jsx)(E.Io, {}))
+              ? (Q = (0, r.jsx)(E.Io, {}))
               : D === O.PG.CUSTOMIZATION_QUESTIONS
-                ? (J = (0, r.jsx)(E.cZ, {}))
-                : D === O.PG.HOME_SETTINGS && (J = (0, r.jsx)(E.g6, {})));
+                ? (Q = (0, r.jsx)(E.cZ, {}))
+                : D === O.PG.HOME_SETTINGS && (Q = (0, r.jsx)(E.g6, {})));
     let $ = (0, r.jsx)("div", {
             className: M ? w.hidden : void 0,
             children: (0, r.jsx)(d.Button, {
                 size: "sm",
                 variant: "secondary",
-                text: P.intl.string(P.t["13/7kZ"]),
+                text: P.intl.string(P.t["13/7kX"]),
                 icon: d.whL,
                 iconPosition: "start",
-                onClick: Q,
+                onClick: J,
                 disabled: M || G,
             }),
         }),
         ee = (0, r.jsx)(d.Button, {
             size: "sm",
             variant: k ? "primary" : "secondary",
-            text: k ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t["5WxrcX"]),
+            text: k ? P.intl.string(P.t.PDTjLN) : P.intl.string(P.t["5Wxrcd"]),
             icon: d.ZSh,
             iconPosition: "end",
             onClick: X,
@@ -222,7 +222,7 @@ function A(e) {
                                       }),
                                       (0, r.jsxs)("div", {
                                           className: w.educationUpsell,
-                                          children: [J, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
+                                          children: [Q, (0, r.jsx)("div", { className: w.educationUpsellArrow })],
                                       }),
                                   ],
                               })
@@ -240,7 +240,7 @@ function A(e) {
                                                 ? (0, r.jsx)(d.Text, {
                                                       variant: "text-sm/normal",
                                                       color: "status-warning",
-                                                      children: P.intl.string(P.t.DhYsPD),
+                                                      children: P.intl.string(P.t.DhYsPL),
                                                   })
                                                 : null,
                                             Y ? null : ee,

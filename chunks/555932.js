@@ -1,7 +1,7 @@
 n.d(t, { Z: () => O }), n(388685), n(583741);
 var r = n(951288),
     i = n(647438),
-    a = n(258536),
+    a = n(13941),
     o = n(442837),
     s = n(481060),
     l = n(607070),
@@ -104,7 +104,7 @@ function O(e) {
             "aria-valuetext":
                 t.premiumTier === f.Eu4.NONE
                     ? _.intl.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: T })
-                    : _.intl.formatToPlainString(_.t.qWunaW, {
+                    : _.intl.formatToPlainString(_.t.qWunaU, {
                           numSubscriptionsApplied: T,
                           tierName: (0, c.nW)(t.premiumTier, { useLevels: !1 }),
                       }),

@@ -3,7 +3,7 @@ var n = r(951288),
     i = r(647438),
     a = r(512722),
     s = r.n(a),
-    l = r(258536),
+    l = r(13941),
     o = r(278074),
     c = r(979554),
     u = r(314794),
@@ -20,8 +20,8 @@ var n = r(951288),
     y = r(388032),
     P = r(186175),
     O = r(593639),
-    E = r(945182),
-    x = r(234286);
+    x = r(945182),
+    E = r(234286);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -103,14 +103,14 @@ let C = (e) => {
                 if (w)
                     if (r)
                         return (0, n.jsx)("img", {
-                            src: _ ? x : E,
-                            alt: y.intl.string(y.t.t0xkSE),
+                            src: _ ? E : x,
+                            alt: y.intl.string(y.t.t0xkSB),
                             style: { width: "100%" },
                         });
                     else
                         return (0, n.jsx)("img", {
                             src: O,
-                            alt: y.intl.string(y.t.g5W1g4),
+                            alt: y.intl.string(y.t.g5W1g8),
                         });
                 return (0, n.jsx)(m.b, { product: t });
             })

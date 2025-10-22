@@ -4,7 +4,7 @@ var r = n(951288),
     o = n(120356),
     i = n.n(o),
     a = n(713447),
-    s = n(258536),
+    s = n(13941),
     c = n(574583),
     u = n(754700),
     d = n(442837),
@@ -181,12 +181,12 @@ function $(e) {
         e2 = (0, l.useRef)(null),
         e8 = (0, l.useRef)(null),
         e4 = l.useRef(!0),
-        e6 = (null == (t = ee.userStatus) ? void 0 : t.completedAt) != null,
-        [e7, e9] = l.useState(null),
+        e7 = (null == (t = ee.userStatus) ? void 0 : t.completedAt) != null,
+        [e6, e9] = l.useState(null),
         [e3, e5] = l.useState(!1),
         [te, tt] = l.useState(!1),
         [tn, tr] = l.useState(null),
-        tl = e6
+        tl = e7
             ? null != (k = null == (n = e2.current) ? void 0 : n.duration)
                 ? k
                 : 0
@@ -216,7 +216,7 @@ function $(e) {
                         : Q.intl.string(Q.t.mxaHfx),
             };
         })(ee),
-        ts = e6
+        ts = e7
             ? eX.timestampSec >= eX.duration
                 ? 0
                 : eX.timestampSec
@@ -225,7 +225,7 @@ function $(e) {
         e4.current &&
             ((e4.current = !1),
             eZ(O.Z.getEffectiveConnectionSpeed()),
-            e6 && eX.timestampSec >= eX.duration && eJ(ee.id, 0, eX.duration));
+            e7 && eX.timestampSec >= eX.duration && eJ(ee.id, 0, eX.duration));
     });
     let {
             videoVariant: tc,
@@ -362,7 +362,7 @@ function $(e) {
                 if ((to.info("[QV] | updatePlayerState | playerState: ".concat(e)), eS(e), null != e2.current))
                     switch (e) {
                         case V.rq.PLAYING:
-                            e2.current.paused && tg(e7), e9(null), e2.current.play();
+                            e2.current.paused && tg(e6), e9(null), e2.current.play();
                             break;
                         case V.rq.PAUSED:
                             e2.current.paused || tw(), e2.current.pause(), (eW.current = !1);
@@ -371,30 +371,30 @@ function $(e) {
                             tw(), ed(!1);
                     }
             },
-            [tg, e7, tw, ed, to],
+            [tg, e6, tw, ed, to],
         );
     l.useEffect(() => {
-        tE(e7);
-    }, [e7, tE]),
+        tE(e6);
+    }, [e6, tE]),
         l.useEffect(() => {
             eE && tb(eg, eC);
         }, [eg, eE, eC, tb]);
     let tL = l.useCallback(
         (e) => {
             var t;
-            e6 ||
+            e7 ||
                 (null == (t = ee.userStatus) ? void 0 : t.enrolledAt) == null ||
                 (to.info("[QV] sendServerProgressUpdate: ".concat(e)), (0, _.FI)(ee, e)),
                 tv();
         },
-        [e6, ee, to, tv],
+        [e7, ee, to, tv],
     );
     l.useEffect(() => {
         (eo !== f.Dvm.HIDDEN &&
             eo !== f.Dvm.EXITING &&
             eo !== f.Dvm.EXITED &&
-            (null == eo || !eO || eb || e6) &&
-            (!eE || eg || e6)) ||
+            (null == eo || !eO || eb || e7) &&
+            (!eE || eg || e7)) ||
             null == e2.current ||
             eC !== V.rq.PLAYING ||
             (to.info(
@@ -403,11 +403,11 @@ function $(e) {
                     .concat(eo, ", visible: ")
                     .concat(eb, ", focused: ")
                     .concat(eg, ", isQuestCompleted: ")
-                    .concat(e6),
+                    .concat(e7),
             ),
             tA(V.rq.PAUSED),
-            e6 || e9(j.yE.LOST_FOCUS));
-    }, [eo, eg, eE, eb, eO, eC, e6, tA, tL, to]);
+            e7 || e9(j.yE.LOST_FOCUS));
+    }, [eo, eg, eE, eb, eO, eC, e7, tA, tL, to]);
     let [tM, tV] = l.useState(!1),
         tZ = l.useRef(null),
         tB = l.useRef(performance.now()),
@@ -595,8 +595,8 @@ function $(e) {
             ),
             [tq, t1, e1, eH, t0],
         );
-    let t6 = eC === V.rq.ENDED,
-        t7 = l.useCallback(
+    let t7 = eC === V.rq.ENDED,
+        t6 = l.useCallback(
             async (e) => {
                 if (ep) {
                     var t;
@@ -619,7 +619,7 @@ function $(e) {
         ),
         t9 = l.useMemo(() => (0, I.z0)(ee, u.X.WATCH_VIDEO, I.n1.VIDEO, I.O.THUMBNAIL), [ee]),
         t3 = l.useMemo(() => (0, I.z0)(ee, u.X.WATCH_VIDEO, I.n1.VIDEO, I.O.CAPTION), [ee]),
-        t5 = e6 || eX.maxTimestampSec >= (null != (B = null == (m = e2.current) ? void 0 : m.currentTime) ? B : 0) + 1,
+        t5 = e7 || eX.maxTimestampSec >= (null != (B = null == (m = e2.current) ? void 0 : m.currentTime) ? B : 0) + 1,
         ne = l.useMemo(() => null === (0, I.z0)(ee, u.X.WATCH_VIDEO, I.n1.VIDEO, I.O.TRANSCRIPT), [ee]);
     return (0, r.jsx)(f.P3F, {
         className: G.videoCont,
@@ -639,14 +639,14 @@ function $(e) {
                 [G.videoContInnerRelativeLandscape]: "landscape" === ec,
             }),
             children: [
-                t6 &&
+                t7 &&
                     (() => {
                         if (!(0, P.e)({ location: q.dr.VIDEO_MODAL }))
                             return (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(X, {
                                         quest: ee,
-                                        shouldShow: t6,
+                                        shouldShow: t7,
                                         sourceQuestContent: es,
                                     }),
                                     (0, r.jsx)("div", { className: G.videoContOverlay }),
@@ -655,7 +655,7 @@ function $(e) {
                                         subtitle: ta,
                                         icon: f.d4D,
                                         className: G.endScreenPanelRight,
-                                        onClick: () => t7(j.jn.VIDEO_MODAL),
+                                        onClick: () => t6(j.jn.VIDEO_MODAL),
                                     }),
                                 ],
                             });
@@ -688,7 +688,7 @@ function $(e) {
                                               : s.messages.videoEndCtaButtonLabel)
                                         ? a
                                         : Q.intl.string(Q.t.iiTtpJ),
-                                onCTAClick: () => t7(j.jn.VIDEO_MODAL_END_CARD),
+                                onCTAClick: () => t6(j.jn.VIDEO_MODAL_END_CARD),
                                 sourceQuestContent: es,
                             });
                         }
@@ -701,7 +701,7 @@ function $(e) {
                     playsInline: !0,
                     mediaLayoutType: ep ? Y.hV.STATIC : Y.hV.RESPONSIVE,
                     className: i()({
-                        [G.hidden]: t6,
+                        [G.hidden]: t7,
                         [G.videoInner]: !0,
                     }),
                     controls: !1,
@@ -817,7 +817,7 @@ function $(e) {
                         type: f.$jN.Type.WANDERING_CUBES,
                         className: G.loadingSpinner,
                     }),
-                eC === V.rq.PAUSED && e7 === j.yE.LOST_FOCUS && (0, r.jsx)(K, {}),
+                eC === V.rq.PAUSED && e6 === j.yE.LOST_FOCUS && (0, r.jsx)(K, {}),
                 eu &&
                     eC !== V.rq.ENDED &&
                     (0, r.jsxs)(r.Fragment, {
@@ -927,7 +927,7 @@ function $(e) {
                         (0, r.jsx)(L.Z, {
                             percent: eD,
                             animate: !0 !== e4.current && !eR,
-                            interactionEnabled: e6 && eQ,
+                            interactionEnabled: e7 && eQ,
                             backgroundColor: tq ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: tq ? eL : void 0,
                             duration: null != ($ = null == (E = e2.current) ? void 0 : E.duration) ? $ : 1,

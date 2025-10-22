@@ -1,7 +1,7 @@
 n.d(t, { Z: () => N });
 var r = n(951288),
     l = n(647438),
-    i = n(258536),
+    i = n(13941),
     s = n(872175),
     a = n(442837),
     o = n(481060),
@@ -37,8 +37,8 @@ function N(e) {
         p = (0, u.Z)(n),
         C = null == S ? null : S === I.k.INFO ? "backwards" : "forwards",
         D = (0, s.Z)(C),
-        { reducedMotion: L } = l.useContext(o.Sfi),
-        U = l.useCallback(
+        { reducedMotion: U } = l.useContext(o.Sfi),
+        L = l.useCallback(
             (e) => {
                 null != R && (0, d.r)(N, n, R.baseChannelId, { modViewPanel: e });
             },
@@ -49,13 +49,13 @@ function N(e) {
                 [m.EkH.CLOSE_MODAL]: {
                     binds: ["esc"],
                     comboKeysBindGlobal: !0,
-                    action: () => (S === I.k.INFO ? h() : U(I.k.INFO)),
+                    action: () => (S === I.k.INFO ? h() : L(I.k.INFO)),
                 },
             }),
-            [h, S, U],
+            [h, S, L],
         );
     l.useEffect(() => (c.Z.enable(), c.Z.enableTemp(M), () => c.Z.disableTemp()), [M]);
-    let x = (0, o.Yzy)(
+    let b = (0, o.Yzy)(
         S,
         {
             value: 0,
@@ -72,7 +72,7 @@ function N(e) {
             flex: 1,
             overflow: "hidden",
         },
-        children: x((e, t, l) => {
+        children: b((e, t, l) => {
             var s, a, o;
             let { key: u } = l;
             return (0, r.jsx)(
@@ -111,7 +111,7 @@ function N(e) {
                             width: "100%",
                             height: "100%",
                         },
-                        L.enabled
+                        U.enabled
                             ? { opacity: null == (s = e.value) ? void 0 : s.to((e) => 1 - Math.abs(e)) }
                             : {
                                   left: null == (a = e.value) ? void 0 : a.to(g("left", D)),
@@ -124,21 +124,21 @@ function N(e) {
                                 return (0, r.jsx)(_.Z, {
                                     userId: n,
                                     guildId: N,
-                                    onNavigate: U,
+                                    onNavigate: L,
                                     className: f,
                                 });
                             case I.k.MESSAGE_HISTORY:
                                 return (0, r.jsx)(A.Z, {
                                     userId: n,
                                     guildId: N,
-                                    onNavigate: () => U(I.k.INFO),
+                                    onNavigate: () => L(I.k.INFO),
                                     className: f,
                                 });
                             case I.k.PERMISSIONS:
                                 return (0, r.jsx)(T.Z, {
                                     userId: n,
                                     guildId: N,
-                                    onNavigate: () => U(I.k.INFO),
+                                    onNavigate: () => L(I.k.INFO),
                                     className: f,
                                 });
                             default:

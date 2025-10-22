@@ -3,7 +3,7 @@ var r = n(951288),
     s = n(647438),
     a = n(120356),
     o = n.n(a),
-    i = n(258536),
+    i = n(13941),
     l = n(278074),
     c = n(754700),
     d = n(442837),
@@ -27,16 +27,16 @@ var r = n(951288),
     w = n(475595),
     P = n(720293),
     N = n(644646),
-    R = n(110560),
-    A = n(78826),
+    A = n(110560),
+    R = n(78826),
     B = n(693900),
     k = n(164495),
     I = n(759853),
-    q = n(205511),
-    D = n(694802),
+    D = n(205511),
+    q = n(694802),
     L = n(95985),
-    V = n(688927),
-    Q = n(50476),
+    Q = n(688927),
+    V = n(50476),
     M = n(46140),
     Z = n(743294),
     W = n(388032),
@@ -153,8 +153,8 @@ function K(e) {
         B = s.useMemo(() => (0, w.fh)(t, w.eC.HERO_IMAGE), [t]),
         k = s.useMemo(() => (null == B ? {} : { backgroundImage: "url(".concat(B.url, ")") }), [B]),
         I = (0, g.ZP)(),
-        q = (0, p.wj)(I),
-        D = (0, d.e7)([x.Z], () => x.Z.isFocused()),
+        D = (0, p.wj)(I),
+        q = (0, d.e7)([x.Z], () => x.Z.isFocused()),
         L = (0, d.e7)([f.Z], () => f.Z.useReducedMotion);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -172,7 +172,7 @@ function K(e) {
                                     className: H.title,
                                     color: "header-primary",
                                     variant: "heading-md/medium",
-                                    children: W.intl.format(W.t.EQa7oq, { questName: t.config.messages.questName }),
+                                    children: W.intl.format(W.t.EQa7os, { questName: t.config.messages.questName }),
                                 }),
                                 (0, r.jsx)(z, {
                                     quest: t,
@@ -191,7 +191,7 @@ function K(e) {
                                 loading: y,
                                 text: S,
                                 size: "sm",
-                                icon: (0, R.getPrimaryCtaIcon)(t),
+                                icon: (0, A.getPrimaryCtaIcon)(t),
                                 fullWidth: !0,
                             }),
                         }),
@@ -236,7 +236,7 @@ function K(e) {
                                 className: H.shine,
                                 "data-migration-pending": !0,
                                 shineSize: m.rHe.DEFAULT,
-                                shinePaused: !D || L,
+                                shinePaused: !q || L,
                             }),
                     ],
                 }),
@@ -266,7 +266,7 @@ function K(e) {
                             ],
                         }),
                     E.isAnimated
-                        ? (0, r.jsx)(A.Fl, {
+                        ? (0, r.jsx)(R.Fl, {
                               id: "QuestBarV2ContentExpanded_heroAnimated",
                               children: (e) =>
                                   (0, r.jsx)(G, {
@@ -276,7 +276,7 @@ function K(e) {
                                       reducedMotion: c,
                                   }),
                           })
-                        : (0, r.jsx)(A.Fl, {
+                        : (0, r.jsx)(R.Fl, {
                               id: "QuestBarV2ContentExpanded_heroStatic",
                               children: (e) =>
                                   (0, r.jsx)("img", {
@@ -286,7 +286,7 @@ function K(e) {
                                       src: E.url,
                                   }),
                           }),
-                    (0, r.jsx)("div", { className: o()(H.legibilityGradient, { [H.legibilityGradientDark]: q }) }),
+                    (0, r.jsx)("div", { className: o()(H.legibilityGradient, { [H.legibilityGradientDark]: D }) }),
                 ],
             }),
         ],
@@ -342,11 +342,11 @@ function X(e) {
         [S, T, w] = (0, v.me)(n, a),
         P = s.useRef(null),
         N = s.useRef(null),
-        A = (0, v._s)({ quest: n }),
+        R = (0, v._s)({ quest: n }),
         W = (0, b.q8)(n),
         F = (0, v.Jf)(n),
         z = s.useCallback(() => {
-            (0, R.openVideoQuestModal)({
+            (0, A.openVideoQuestModal)({
                 quest: n,
                 questContent: y.jn.QUEST_BAR_V2,
                 sourceQuestContent: y.jn.QUEST_BAR_V2,
@@ -372,7 +372,7 @@ function X(e) {
                     "function" == typeof m ? m(e) : null != m && (m.current = e), null != e && (N.current = e);
                 },
                 children: [
-                    (0, r.jsx)(V.Z, {
+                    (0, r.jsx)(Q.Z, {
                         quest: n,
                         onCtxMenuOpen: g,
                         onCtxMenuClose: f,
@@ -404,14 +404,14 @@ function X(e) {
                             !(0, b.Gd)(n) &&
                             (0, l.EQ)(S)
                                 .with(y.LI.SELECT, () =>
-                                    (0, r.jsx)(Q.Z, {
+                                    (0, r.jsx)(V.Z, {
                                         onConsole: () => w(M.cd.CONSOLE),
                                         onDesktop: () => w(M.cd.DESKTOP),
                                     }),
                                 )
-                                .with(y.LI.DESKTOP, () => (0, r.jsx)(D.Z, { quest: n }))
+                                .with(y.LI.DESKTOP, () => (0, r.jsx)(q.Z, { quest: n }))
                                 .with(y.LI.CONSOLE, () =>
-                                    (0, r.jsx)(q.Z, {
+                                    (0, r.jsx)(D.Z, {
                                         quest: n,
                                         taskDetails: a,
                                     }),
@@ -431,7 +431,7 @@ function X(e) {
                                 quest: n,
                                 useReducedMotion: p,
                                 isExpanded: u,
-                                awaitingConsoleConnections: A,
+                                awaitingConsoleConnections: R,
                                 hasMadeProgress: E,
                                 isProgressing: O,
                                 activeScreen: S,
@@ -456,7 +456,7 @@ function X(e) {
 async function Y(e, t, n, r) {
     let s = (0, b.q8)(e);
     return s && (0, S.R)(M.dr.QUESTS_BAR)
-        ? void (await (0, R.enrollAndStartVideoQuestWithErrorHandling)(e, {
+        ? void (await (0, A.enrollAndStartVideoQuestWithErrorHandling)(e, {
               questContent: t,
               questContentCTA: n,
               sourceQuestContent: r,
@@ -474,7 +474,7 @@ async function Y(e, t, n, r) {
                 sourceQuestContent: r,
             }),
             s &&
-                (0, R.openVideoQuestModal)({
+                (0, A.openVideoQuestModal)({
                     quest: e,
                     questContent: t,
                     sourceQuestContent: r,

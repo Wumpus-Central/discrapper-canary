@@ -3,7 +3,7 @@ var r = n(951288),
     s = n(647438),
     a = n(120356),
     o = n.n(a),
-    i = n(258536),
+    i = n(13941),
     l = n(442837),
     c = n(481060),
     d = n(393238),
@@ -27,23 +27,23 @@ function S(e) {
     let {
             quest: P,
             questContent: N,
-            isHovering: R,
-            contentPosition: A,
+            isHovering: A,
+            contentPosition: R,
             rowIndex: B,
             isVisibleInViewport: k,
             onReceiveErrorHints: I,
-            sourceQuestContent: q,
+            sourceQuestContent: D,
         } = e,
-        D = s.useRef(null),
+        q = s.useRef(null),
         L = s.useMemo(() => f.r.build(P.config), [P.config]),
-        V = L.defaultRewardName,
-        Q = L.defaultRewardNameWithArticle,
+        Q = L.defaultRewardName,
+        V = L.defaultRewardNameWithArticle,
         M = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: Z, scrollHeight: W } = (0, d.kE)(),
         H = 104 !== W,
         { onAssetLoadComplete: U } = s.useContext(_.k),
         { expansionSpring: F } = (0, c.q_F)({
-            expansionSpring: +!!R,
+            expansionSpring: +!!A,
             config:
                 ((S = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -90,11 +90,11 @@ function S(e) {
         G = (0, m.xN)(P.config),
         X = (0, m.LM)(P.config),
         { completedRatio: Y, completedRatioDisplay: J } = (0, g.I)(P),
-        $ = (0, g.Bd)(P, q, D),
+        $ = (0, g.Bd)(P, D, q),
         ee = s.useMemo(
             () =>
                 K && G
-                    ? y.intl.format(y.t["8Op4c3"], {
+                    ? y.intl.format(y.t["8Op4c4"], {
                           balanceHook: () =>
                               (0, r.jsxs)(T, {
                                   questId: P.id,
@@ -111,10 +111,10 @@ function S(e) {
                     : K
                       ? (0, r.jsx)(T, {
                             questId: P.id,
-                            children: V,
+                            children: Q,
                         })
                       : G
-                        ? y.intl.format(y.t.ro1szc, {
+                        ? y.intl.format(y.t.ro1sze, {
                               balanceHook: () =>
                                   (0, r.jsxs)(T, {
                                       questId: P.id,
@@ -128,14 +128,14 @@ function S(e) {
                                       ],
                                   }),
                           })
-                        : y.intl.format(y.t["0IUT4e"], {
+                        : y.intl.format(y.t["0IUT4Y"], {
                               rewardWithArticleHook: () =>
                                   (0, r.jsx)(T, {
                                       questId: P.id,
-                                      children: Q,
+                                      children: V,
                                   }),
                           }),
-            [V, K, Q, P.id, X, G],
+            [Q, K, V, P.id, X, G],
         ),
         et = s.useMemo(() => {
             if (null != $)
@@ -149,7 +149,7 @@ function S(e) {
         en = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, r.jsxs)("div", {
         className: E.container,
-        ref: D,
+        ref: q,
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
@@ -181,7 +181,7 @@ function S(e) {
                                                   quest: P,
                                                   size: 76,
                                                   percentComplete: Y,
-                                                  percentCompleteText: R && !(0, m.zi)(P) ? J : void 0,
+                                                  percentCompleteText: A && !(0, m.zi)(P) ? J : void 0,
                                                   children: (0, r.jsx)("div", {
                                                       className: E.circularRewardTileWrapper,
                                                       children: (0, r.jsx)(x.Z, {
@@ -189,10 +189,10 @@ function S(e) {
                                                           questContent: N,
                                                           className: E.circularQuestRewardTileAsset,
                                                           location: v.dr.QUEST_HOME_DESKTOP,
-                                                          autoplay: R,
+                                                          autoplay: A,
                                                           onLoadComplete: U,
                                                           lazyLoad: !0,
-                                                          sourceQuestContent: q,
+                                                          sourceQuestContent: D,
                                                       }),
                                                   }),
                                               }),
@@ -200,13 +200,13 @@ function S(e) {
                                       })
                                     : (0, r.jsx)(x.Z, {
                                           quest: P,
-                                          autoplay: R,
+                                          autoplay: A,
                                           questContent: N,
                                           className: E.questRewardTileAsset,
                                           location: v.dr.QUEST_HOME_DESKTOP,
                                           onLoadComplete: U,
                                           lazyLoad: !0,
-                                          sourceQuestContent: q,
+                                          sourceQuestContent: D,
                                       }),
                             ],
                         }),
@@ -219,7 +219,7 @@ function S(e) {
                                 variant: "eyebrow",
                                 color: "text-brand",
                                 className: E.questName,
-                                children: y.intl.format(y.t.EAYZAg, { questName: P.config.messages.questName }),
+                                children: y.intl.format(y.t.EAYZAr, { questName: P.config.messages.questName }),
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/semibold",
@@ -242,10 +242,10 @@ function S(e) {
             (0, r.jsx)(j.Z, {
                 quest: P,
                 questContent: N,
-                contentPosition: A,
+                contentPosition: R,
                 rowIndex: B,
                 onReceiveErrorHints: I,
-                sourceQuestContent: q,
+                sourceQuestContent: D,
             }),
         ],
     });

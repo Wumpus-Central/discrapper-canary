@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(513351),
-    l = n(258536),
+    l = n(13941),
     c = n(278074),
     u = n(748780),
     d = n(28664),
@@ -249,7 +249,7 @@ function D(e) {
                 scaleFontToUserSetting: !0,
                 children: t.pollMedia.text,
             }),
-            t.didSelfVote && (0, r.jsx)(s.T, { children: y.intl.string(y.t["8DAM+/"]) }),
+            t.didSelfVote && (0, r.jsx)(s.T, { children: y.intl.string(y.t["8DAM+5"]) }),
             a &&
                 (0, r.jsx)(R, {
                     percentage: t.votesPercentage,

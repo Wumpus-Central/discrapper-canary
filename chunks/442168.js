@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
-    l = n(258536),
+    l = n(13941),
     a = n(442837),
     o = n(780384),
     c = n(481060),
@@ -37,7 +37,7 @@ function m(e) {
     return e;
 }
 let g = { visibility: "hidden" },
-    E = {
+    v = {
         precision: 0.0001,
         duration: 300,
     },
@@ -47,7 +47,7 @@ let g = { visibility: "hidden" },
         precision: 0.0001,
         bounce: 0,
     },
-    v = { duration: 1000 };
+    E = { duration: 1000 };
 function h(e) {
     let { stream: t, inPopout: n } = e,
         { reducedMotion: h } = i.useContext(o.Sf),
@@ -82,12 +82,12 @@ function h(e) {
                 ref: Z,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: E,
+                config: v,
             },
             "animate-always",
         ),
         x = (0, i.useRef)(null),
-        A = (0, c.Yzy)(
+        R = (0, c.Yzy)(
             C,
             {
                 ref: x,
@@ -140,7 +140,7 @@ function h(e) {
                             })(),
                         ),
                 ),
-                config: h.enabled ? v : b,
+                config: h.enabled ? E : b,
                 onRest: (e, t) => {
                     null != t.item &&
                         null != C.find((e) => e.timestamp === t.item.timestamp) &&
@@ -168,7 +168,7 @@ function h(e) {
                 (0, r.jsx)(p.ZP, {
                     children: (0, r.jsx)("div", {
                         className: _.hidden,
-                        children: A(
+                        children: R(
                             (e, t, n, i) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(l.animated.img, {

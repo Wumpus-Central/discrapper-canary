@@ -1,7 +1,7 @@
 n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
-    s = n(258536),
+    s = n(13941),
     l = n(442837),
     a = n(481060),
     o = n(447543),
@@ -21,7 +21,7 @@ var r = n(951288),
     j = n(981631),
     I = n(388032),
     N = n(271922);
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -96,13 +96,13 @@ function A(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return (null == t ? void 0 : t.state) === j.r2o.BANNED
         ? (0, r.jsx)(c.u, {
-              text: I.intl.string(I.t["5AkWAQ"]),
-              buttonCta: I.intl.string(I.t["8osdkp"]),
+              text: I.intl.string(I.t["5AkWAd"]),
+              buttonCta: I.intl.string(I.t["8osdkn"]),
               onClick: n,
           })
         : (0, r.jsx)(c.u, {
-              text: I.intl.string(I.t["usP+MT"]),
-              buttonCta: I.intl.string(I.t["8osdkp"]),
+              text: I.intl.string(I.t["usP+Mb"]),
+              buttonCta: I.intl.string(I.t["8osdkn"]),
               onClick: n,
           });
 }
@@ -163,8 +163,8 @@ function Z(e) {
     return null != t && (0, E.JI)(t)
         ? (0, r.jsx)(
               T,
-              y(
-                  O(
+              O(
+                  y(
                       {
                           startAnimHeightPx: 0,
                           innerStyle: () => N.guildInfoInner,
@@ -185,8 +185,8 @@ function P(e) {
         };
     return (0, r.jsx)(
         T,
-        y(
-            O(
+        O(
+            y(
                 {
                     startAnimHeightPx: 200,
                     innerStyle: (e) => n[e],
@@ -199,9 +199,9 @@ function P(e) {
                         if (null == t) return (0, r.jsx)(S, {});
                         switch (n) {
                             case 1:
-                                return (0, r.jsx)(v.Z, y(O({}, e), { invite: t }));
+                                return (0, r.jsx)(v.Z, O(y({}, e), { invite: t }));
                             case 2:
-                                return (0, r.jsx)(A, y(O({}, e), { invite: t }));
+                                return (0, r.jsx)(A, O(y({}, e), { invite: t }));
                             default:
                                 return (0, r.jsx)(S, {});
                         }
@@ -226,7 +226,7 @@ function R(e) {
         className: N.splashBackground,
         style: s,
         contentClassName: N.centerAuthBoxContent,
-        children: [(0, r.jsx)(P, y(O({}, e), { onAcceptInvite: n })), (0, r.jsx)(Z, O({}, e))],
+        children: [(0, r.jsx)(P, O(y({}, e), { onAcceptInvite: n })), (0, r.jsx)(Z, y({}, e))],
     });
 }
 function L(e) {

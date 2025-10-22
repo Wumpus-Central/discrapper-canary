@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(481060),
     c = n(493773),
     u = n(600164),
@@ -172,12 +172,12 @@ function S(e) {
                                     }),
                                     (0, r.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
-                                        children: m.intl.string(m.t.KTjjrK),
+                                        children: m.intl.string(m.t.KTjjrG),
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: m.intl.string(m.t.AvbrEB),
+                                        children: m.intl.string(m.t.AvbrEM),
                                     }),
                                 ],
                             }),
@@ -188,7 +188,7 @@ function S(e) {
                                     children: [
                                         (0, r.jsx)(l.Button, {
                                             variant: "primary",
-                                            text: m.intl.string(m.t.cpT0Cg),
+                                            text: m.intl.string(m.t.cpT0Cq),
                                             onClick: o,
                                         }),
                                         (0, r.jsx)(s.animated.div, {

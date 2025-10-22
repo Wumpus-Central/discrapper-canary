@@ -10,7 +10,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(793030),
     c = n(438784),
     u = n(696826),
@@ -130,7 +130,7 @@ function N(e) {
 function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return null != t
-        ? E.intl.formatToPlainString(E.t["/6mw19"], {
+        ? E.intl.formatToPlainString(E.t["/6mw10"], {
               label: e,
               status: (0, p.u5)(t, n),
           })

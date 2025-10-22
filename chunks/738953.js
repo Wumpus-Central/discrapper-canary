@@ -1,7 +1,7 @@
 n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(258536),
+    a = n(13941),
     o = n(442837),
     s = n(481060),
     l = n(616780),
@@ -151,7 +151,7 @@ function Z(e) {
                 ? null
                 : (0, r.jsx)(s.sNh, {
                       id: "view-profile",
-                      label: M.intl.string(M.t["+Xp3ho"]),
+                      label: M.intl.string(M.t["+Xp3hq"]),
                       action: () => {
                           ed(),
                               (0, b.pQ)(
@@ -185,7 +185,7 @@ function Z(e) {
                         (0, r.jsx)(s.nn4, {
                             children: (0, r.jsx)(s.H, {
                                 id: ep,
-                                children: M.intl.format(M.t.KRe1Fh, { name: eh }),
+                                children: M.intl.format(M.t.KRe1Fk, { name: eh }),
                             }),
                         }),
                         (0, r.jsxs)(A.Z, {

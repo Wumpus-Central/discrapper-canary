@@ -3,7 +3,7 @@ var r = n(951288),
     s = n(647438),
     a = n(120356),
     o = n.n(a),
-    i = n(258536),
+    i = n(13941),
     l = n(481060),
     c = n(617136),
     d = n(915750),
@@ -50,10 +50,10 @@ let v = (0, i.animated)(g.ZP),
                     sourceQuestContent: p.jn.QUEST_BAR_V2,
                 });
             }, [S, t]),
-            R = E && O,
-            A = (0, r.jsx)(l.P3F, {
+            A = E && O,
+            R = (0, r.jsx)(l.P3F, {
                 onClick: N,
-                className: o()(j.clickable, { [j.logo]: R }),
+                className: o()(j.clickable, { [j.logo]: A }),
                 children: (0, r.jsx)(v, {
                     quest: t,
                     withGameTile: !1,
@@ -74,7 +74,7 @@ let v = (0, i.animated)(g.ZP),
                 }),
             });
         return (0, r.jsxs)(i.animated.div, {
-            className: o()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: R }),
+            className: o()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: A }),
             style: {
                 transform: (0, i.to)(
                     [
@@ -99,8 +99,8 @@ let v = (0, i.animated)(g.ZP),
                 (0, r.jsx)(x.Z, {
                     quest: t,
                     expansionSpring: n,
-                    isFullyExpanded: R,
-                    partnerBranding: A,
+                    isFullyExpanded: A,
+                    partnerBranding: R,
                     useReducedMotion: y,
                 }),
                 (0, r.jsxs)(i.animated.div, {
@@ -119,7 +119,7 @@ let v = (0, i.animated)(g.ZP),
                                 (0, r.jsx)(l.Text, {
                                     color: "always-white",
                                     variant: "text-xs/normal",
-                                    children: b.intl.string(b.t.o6FLcH),
+                                    children: b.intl.string(b.t.o6FLcF),
                                 }),
                                 (0, r.jsx)(l.idN, {
                                     color: l.TVs.colors.WHITE,
@@ -168,7 +168,7 @@ let v = (0, i.animated)(g.ZP),
                                     (n = n =
                                         {
                                             className: j.submenuWrapper,
-                                            "aria-label": b.intl.string(b.t.DEoVWV),
+                                            "aria-label": b.intl.string(b.t.DEoVWZ),
                                             children: (0, r.jsx)(l.xhG, {
                                                 size: "md",
                                                 color: "currentColor",

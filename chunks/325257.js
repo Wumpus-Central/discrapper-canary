@@ -4,13 +4,13 @@ var r = n(951288),
     l = n(120356),
     o = n.n(l),
     a = n(100568),
-    s = n(258536),
+    s = n(13941),
     c = n(91192),
     u = n(399606),
     d = n(846519),
     p = n(481060),
-    f = n(493683),
-    h = n(239091),
+    h = n(493683),
+    f = n(239091),
     g = n(153867),
     m = n(377171),
     b = n(35225),
@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(252686),
     N = n(682662),
     Z = n(674552),
-    w = n(981631),
-    T = n(388032),
+    T = n(981631),
+    w = n(388032),
     A = n(534175);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,13 +75,13 @@ function D(e, t) {
 }
 let L = {
     analyticsSource: {
-        page: w.ZY5.GUILD_CHANNEL,
-        section: w.jXE.CHANNEL_LIST,
-        object: w.qAy.CHANNEL,
+        page: T.ZY5.GUILD_CHANNEL,
+        section: T.jXE.CHANNEL_LIST,
+        object: T.qAy.CHANNEL,
     },
 };
 function M(e, t) {
-    (0, h.jW)(e, async () => {
+    (0, f.jW)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("36599"),
             n.e("76692"),
@@ -105,7 +105,7 @@ function M(e, t) {
     });
 }
 let k = i.memo(function (e) {
-    var t, n, l, h, k;
+    var t, n, l, f, k;
     let {
             guildNode: G,
             setRef: U,
@@ -134,7 +134,7 @@ let k = i.memo(function (e) {
         ec = null != (n = e.lowerBadge) ? n : void 0;
     null == ec && X > 0
         ? (ec = null != (l = (0, Z.Ne)(X, Q ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0)
-        : null == ec && null != en && (ec = null != (h = (0, Z.jt)({ guildJoinRequestStatus: en })) ? h : void 0);
+        : null == ec && null != en && (ec = null != (f = (0, Z.jt)({ guildJoinRequestStatus: en })) ? f : void 0);
     let eu = null != (k = e.lowerBadgeSize) ? k : { width: (0, p.OVM)(X) },
         [{ dragging: ed }, ep] = (0, a.c)({
             type: x.eD.GUILD,
@@ -152,9 +152,9 @@ let k = i.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
-        ef = (0, c.Ie)(null != eo ? eo : w.lds, null != ea ? 2 : 1),
-        [eh, eg] = i.useState(!1),
-        em = !ee && eh,
+        eh = (0, c.Ie)(null != eo ? eo : T.lds, null != ea ? 2 : 1),
+        [ef, eg] = i.useState(!1),
+        em = !ee && ef,
         [eb, e_] = i.useState(!1),
         [eO, ey] = i.useState(!1),
         [ev] = i.useState(() => new d.sW(70, () => ey(!0)));
@@ -166,7 +166,7 @@ let k = i.memo(function (e) {
         ex = i.useCallback(() => {
             if (null != V || null == H || q || !et) return;
             let e = (0, b.V)(H.id);
-            null != e && f.Z.preload(H.id, e);
+            null != e && h.Z.preload(H.id, e);
         }, [V, H, q, et]),
         eC = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
         eE = i.useCallback(
@@ -217,7 +217,7 @@ let k = i.memo(function (e) {
                       D(
                           R(
                               {
-                                  ariaLabel: T.intl.formatToPlainString(T.t["/uzRss"], {
+                                  ariaLabel: w.intl.formatToPlainString(w.t["/uzRss"], {
                                       guildName: H.name,
                                       mentions: X,
                                   }),
@@ -235,7 +235,7 @@ let k = i.memo(function (e) {
                                   icon: (0, y.EB)(H, 2 * eN, em && z, !0),
                                   selected: W || em,
                               },
-                              ef,
+                              eh,
                           ),
                           {
                               "aria-setsize": ei,
@@ -244,7 +244,7 @@ let k = i.memo(function (e) {
                           },
                       ),
                   ),
-        ew = ed
+        eT = ed
             ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(P.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   ref: $
@@ -281,7 +281,7 @@ let k = i.memo(function (e) {
                 guild: H,
                 disabled: ee,
                 isDragging: ed,
-                children: ew,
+                children: eT,
             }),
             $
                 ? (0, r.jsx)(S.ZP, {

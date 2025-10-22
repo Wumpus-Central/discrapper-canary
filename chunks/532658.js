@@ -8,7 +8,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(258536),
+    s = n(13941),
     l = n(442837),
     c = n(481060),
     u = n(239091),
@@ -225,7 +225,7 @@ let K = i.memo(function (e) {
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: D.intl.format(D.t.uFcRen, { nick: t }),
+                            children: D.intl.format(D.t.uFcReq, { nick: t }),
                         }),
                     }),
                     !d &&
