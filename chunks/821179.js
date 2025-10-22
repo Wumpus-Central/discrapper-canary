@@ -10,9 +10,9 @@ var i = n(780384),
     u = n(5192),
     d = n(652853),
     p = n(228168),
-    f = n(981631),
-    h = n(671955),
-    g = n(323759);
+    h = n(981631),
+    f = n(671955),
+    g = n(163514);
 let m = (0, l.pxk)(l.EFr.SIZE_16);
 function b(e) {
     let { user: t, guild: b, nick: _, onSelect: O } = e,
@@ -20,7 +20,7 @@ function b(e) {
         j = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(l.P3F, {
         focusProps:
-            v === h.l.MODAL_V2
+            v === f.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -46,13 +46,13 @@ function b(e) {
                     n.e("845"),
                     n.e("38697"),
                     n.e("63575"),
-                    n.e("86736"),
+                    n.e("99063"),
                     n.e("6850"),
                     n.e("58227"),
                     n.e("62856"),
                     n.e("44686"),
                     n.e("30378"),
-                    n.e("64982"),
+                    n.e("29679"),
                     n.e("66201"),
                     n.e("93375"),
                     n.e("39206"),
@@ -60,7 +60,7 @@ function b(e) {
                     n.e("89442"),
                     n.e("87154"),
                     n.e("33213"),
-                    n.e("7756"),
+                    n.e("24521"),
                 ]).then(n.bind(n, 545135));
                 return (t) => {
                     var n, i;
@@ -115,7 +115,7 @@ function b(e) {
                 guild: b,
                 showBadge: !0,
                 className: null != b.icon ? g.icon : g.noIcon,
-                badgeStrokeColor: (0, a.Lq)((0, i.wj)(y) ? f.Ilk.PRIMARY_600 : f.Ilk.WHITE_500),
+                badgeStrokeColor: (0, a.Lq)((0, i.wj)(y) ? h.Ilk.PRIMARY_600 : h.Ilk.WHITE_500),
                 badgeTooltipColor: l.r6K.PRIMARY,
                 badgeTooltipDelay: p.vB,
                 size: c.Z.Sizes.MEDIUM,

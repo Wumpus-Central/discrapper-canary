@@ -15,9 +15,9 @@ var r = n(951288),
     s = n(377171),
     c = n(192371),
     u = n(834209),
-    d = n(989308),
+    d = n(39690),
     p = n(388032),
-    f = n(237522);
+    f = n(470039);
 function m(e) {
     let { text: t } = e;
     return (0, r.jsxs)("div", {
@@ -47,7 +47,7 @@ function g(e) {
             (0, r.jsx)(a.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
-                children: p.intl.formatToMarkdownString(d.default["ol/ao6"], { dateString: (0, c.Z)(t) }),
+                children: p.intl.formatToMarkdownString(d.default["ol/ao/"], { dateString: (0, c.Z)(t) }),
             }),
         ],
     });
@@ -64,7 +64,7 @@ function v(e) {
             (0, r.jsx)(a.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
-                children: p.intl.formatToPlainString(d.default["6e2ry8"], { dateString: (0, u.Z)(t) }),
+                children: p.intl.formatToPlainString(d.default["6e2ry1"], { dateString: (0, u.Z)(t) }),
             }),
         ],
     });
@@ -88,7 +88,7 @@ function x(e) {
                             tag: "div",
                             variant: "heading-md/semibold",
                             color: "text-secondary",
-                            children: p.intl.formatToPlainString(p.t.t2Wbo6, {
+                            children: p.intl.formatToPlainString(p.t.t2Wbo1, {
                                 required: t,
                                 decorator: null != n ? n : "",
                             }),
@@ -169,7 +169,7 @@ let h = i.forwardRef(function (e, t) {
                 "beta" === u &&
                     (0, r.jsx)(a.IGR, {
                         className: f.new,
-                        text: p.intl.string(p.t.oW0eUV),
+                        text: p.intl.string(p.t.oW0eUd),
                         color: s.Z.BG_BRAND,
                     }),
             ],

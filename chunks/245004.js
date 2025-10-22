@@ -4,8 +4,8 @@ n(647438), n(399606);
 var i = n(481060);
 n(607070);
 var a = n(388032);
-n(989308);
-var o = n(630564);
+n(39690);
+var o = n(546241);
 function s(e, t, n) {
     return (
         t in e
@@ -100,7 +100,7 @@ function d(e) {
                                 (0, r.jsx)(i.Text, {
                                     variant: "text-sm/semibold",
                                     color: "currentColor",
-                                    children: a.intl.string(a.t.pCMkDQ),
+                                    children: a.intl.string(a.t.pCMkDb),
                                 }),
                             ],
                         }),

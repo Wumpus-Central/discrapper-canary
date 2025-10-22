@@ -1,5 +1,5 @@
 n.d(t, {
-    VE: () => C,
+    VE: () => x,
     lV: () => R,
 }),
     n(539854),
@@ -24,14 +24,14 @@ var r = n(951288),
     E = n(51144),
     b = n(513547),
     D = n(65154),
-    P = n(966117),
-    j = n(197571);
-let x = {
+    P = n(593235),
+    j = n(10198);
+let C = {
     [D.Z.NO_OVERRIDE]: "None",
     [D.Z.LOW]: "Low Quality Stream",
     [D.Z.HIGH]: "High Quality Stream",
 };
-function C(e) {
+function x(e) {
     let t = [],
         n = 0;
     for (
@@ -164,7 +164,7 @@ function R(e) {
                                       })
                                     : null;
                             })(e, n, a, i),
-                        C(o),
+                        x(o),
                     ],
                 },
                 "".concat(e.type, " + ").concat(e.ssrc),
@@ -188,7 +188,7 @@ function R(e) {
                         },
                         options: Object.values(D.Z).map((e) => ({
                             value: e,
-                            label: x[e],
+                            label: C[e],
                         })),
                     }),
                 }),

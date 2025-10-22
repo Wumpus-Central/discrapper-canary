@@ -19,9 +19,9 @@ var r = n(951288),
     y = n(47760),
     O = n(629452),
     v = n(981631),
-    I = n(119475),
+    I = n(30038),
     T = n(388032),
-    S = n(306518);
+    S = n(132705);
 let A = (e) => e.map((e) => "#".concat(e)),
     C = (e) => {
         let { message: t } = e,
@@ -121,14 +121,14 @@ let A = (e) => e.map((e) => "#".concat(e)),
                               (0, r.jsxs)(d.Heading, {
                                   variant: "heading-md/semibold",
                                   className: S.sharedTitle,
-                                  children: [T.intl.string(I.default.KSBBpK), " ", (0, r.jsx)(l.SrA, {})],
+                                  children: [T.intl.string(I.default.KSBBpC), " ", (0, r.jsx)(l.SrA, {})],
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-secondary",
                                   className: S.sharedBy,
                                   children: N(
-                                      "".concat(T.intl.format(I.default.fQPSER, { username: "__USERNAME__" })),
+                                      "".concat(T.intl.format(I.default.fQPSEf, { username: "__USERNAME__" })),
                                       t.author,
                                       c.nick,
                                   ),

@@ -10,9 +10,9 @@ var i = n(990547),
     u = n(799360),
     d = n(342386),
     f = n(771934),
-    _ = n(119475),
+    _ = n(30038),
     p = n(388032),
-    h = n(640744),
+    h = n(525126),
     m = n(758335);
 function g() {
     let { analyticsLocations: e } = (0, s.ZP)();
@@ -23,10 +23,10 @@ function g() {
     });
     let t = (0, u.B)(
             {
-                "en-US": _.default["f/cLEh"],
-                "en-GB": _.default["f/cLEh"],
+                "en-US": _.default["f/cLEi"],
+                "en-GB": _.default["f/cLEi"],
             },
-            _.default.CARxAA,
+            _.default.CARxAC,
         ),
         n = () => {
             (0, f.DI)(f.Ln.APPEARANCE_SETTINGS), (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.SETTING }), (0, d.default)();
@@ -52,7 +52,7 @@ function g() {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
-                        children: p.intl.string(_.default.nla4RE),
+                        children: p.intl.string(_.default.nla4RG),
                     }),
                 ],
             }),
@@ -60,7 +60,7 @@ function g() {
                 className: h.buttonContainer,
                 children: (0, r.jsx)(a.zxk, {
                     variant: "primary",
-                    text: p.intl.string(p.t.uw9zIy),
+                    text: p.intl.string(p.t.uw9zI7),
                     onClick: n,
                 }),
             }),

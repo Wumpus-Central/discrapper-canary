@@ -13,9 +13,9 @@ var i = n(793030),
     f = n(639660),
     m = n(767218),
     g = n(981631),
-    v = n(989308),
+    v = n(39690),
     x = n(388032),
-    _ = n(741872);
+    _ = n(403373);
 function b(e) {
     let { guildId: t } = e,
         n = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
@@ -30,7 +30,7 @@ function b(e) {
                         (0, r.jsx)(i.xvT, {
                             variant: "eyebrow",
                             color: "text-secondary",
-                            children: x.intl.string(v.default.hjvcLC),
+                            children: x.intl.string(v.default.hjvcLO),
                         }),
                         (0, r.jsx)(i.xvT, {
                             className: _.learnMore,

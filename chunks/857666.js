@@ -14,7 +14,7 @@ var r = n(951288),
     d = n(169010),
     p = n(279604),
     f = n(981631),
-    m = n(989308),
+    m = n(39690),
     g = n(388032),
     v = n(46310),
     x = n(175435);
@@ -34,15 +34,15 @@ function _(e, t) {
                 "guildTagsBadgePacks" === e
                     ? (function (e) {
                           let { guildId: t, canUseBoosts: i, allPowerups: l, unlockedPowerups: c, skuIds: u } = e,
-                              d = g.intl.string(m.default.KC9HRU),
-                              _ = g.intl.string(m.default.GJiSmJ),
+                              d = g.intl.string(m.default.KC9HRW),
+                              _ = g.intl.string(m.default.GJiSmP),
                               b = null == l ? void 0 : l[o.IN],
                               h = (null == c ? void 0 : c[o.IN]) != null,
-                              j = g.intl.string(m.default["/egwJC"]),
-                              C = h ? void 0 : g.intl.string(m.default.W6Vwn5),
-                              I = h ? void 0 : g.intl.string(m.default.lvk1GR),
-                              E = h ? g.intl.string(m.default["9CfkLC"]) : g.intl.string(g.t["+7XY39"]),
-                              w = h ? "secondary" : "expressive",
+                              j = g.intl.string(m.default["/egwJA"]),
+                              C = h ? void 0 : g.intl.string(m.default.W6Vwn3),
+                              I = h ? void 0 : g.intl.string(m.default.lvk1Gc),
+                              w = h ? g.intl.string(m.default["9CfkLO"]) : g.intl.string(g.t["+7XY31"]),
+                              E = h ? "secondary" : "expressive",
                               Z = i
                                   ? () => {
                                         h
@@ -91,15 +91,15 @@ function _(e, t) {
                                                       {
                                                           guildId: t,
                                                           title: d,
-                                                          description: g.intl.string(m.default.BBRFRU),
+                                                          description: g.intl.string(m.default.BBRFRd),
                                                           powerups: e,
                                                           footerInfoText: I,
                                                           footerAction:
-                                                              i && null != Z && null != E
+                                                              i && null != Z && null != w
                                                                   ? {
-                                                                        variant: w,
-                                                                        text: E,
-                                                                        icon: "expressive" === w ? a.Ucv : void 0,
+                                                                        variant: E,
+                                                                        text: w,
+                                                                        icon: "expressive" === E ? a.Ucv : void 0,
                                                                         onClick: Z,
                                                                     }
                                                                   : void 0,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(120356),
     o = n.n(i),
@@ -20,12 +20,12 @@ var r = n(951288),
     j = n(5192),
     C = n(998502),
     I = n(981631),
-    E = n(989308),
-    w = n(388032),
-    Z = n(127181),
+    w = n(39690),
+    E = n(388032),
+    Z = n(540206),
     P = n(350618);
-let y = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : u.Z;
-function T(e) {
+let T = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : u.Z;
+function y(e) {
     var t, n;
     let { guildId: i } = e,
         u = (0, a.e7)([b.Z], () => b.Z.getGuild(i)),
@@ -35,8 +35,8 @@ function T(e) {
                 return (null == (t = e.tags) ? void 0 : t.premium_subscriber) === null;
             }),
         ),
-        T = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        N = null == T ? void 0 : T.id,
+        y = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        N = null == y ? void 0 : y.id,
         O = (0, a.e7)([x.ZP], () => (null != N ? x.ZP.getMember(i, N) : void 0), [N, i]),
         S = (null == O ? void 0 : O.premiumSince) != null,
         A = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -45,12 +45,12 @@ function T(e) {
             avatarSrc: R,
             eventHandlers: L,
         } = (0, v.Z)({
-            userId: null == T ? void 0 : T.id,
+            userId: null == y ? void 0 : y.id,
             guildId: i,
             size: c.EFr.SIZE_40,
             animateOnHover: !A,
         });
-    return null == u || null == O || null == T
+    return null == u || null == O || null == y
         ? null
         : (0, r.jsxs)(c.$1m, {
               className: Z.container,
@@ -65,11 +65,11 @@ function T(e) {
                       children: [
                           (0, r.jsx)(l.xvT, {
                               variant: "text-md/semibold",
-                              children: w.intl.string(S ? E.default.KSWK1d : E.default.XXXX5u),
+                              children: E.intl.string(S ? w.default.KSWK1U : w.default.XXXX5l),
                           }),
                           (0, r.jsx)(l.xvT, {
                               variant: "text-sm/medium",
-                              children: w.intl.format(S ? E.default["7fWTg4"] : E.default["7PXeeX"], {
+                              children: E.intl.format(S ? w.default["7fWTg4"] : w.default["7PXeeQ"], {
                                   onClick: () => {
                                       (0, p.f)({
                                           guildId: i,
@@ -87,7 +87,7 @@ function T(e) {
                       !S &&
                       (0, r.jsx)(g.l, {
                           avatar: (0, r.jsx)(
-                              y,
+                              T,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -115,7 +115,7 @@ function T(e) {
                               })({}, L)),
                               (n = n =
                                   {
-                                      user: T,
+                                      user: y,
                                       src: R,
                                       avatarDecoration: k,
                                       size: c.EFr.SIZE_40,
@@ -138,12 +138,12 @@ function T(e) {
                           ),
                           username: (0, r.jsx)(c.PUh, {
                               variant: "text-md/semibold",
-                              name: j.ZP.getName(i, null, T),
+                              name: j.ZP.getName(i, null, y),
                               colorString: C.colorString,
                               colorStrings: C.colorStrings,
                           }),
                           className: o()(Z.content, Z.exampleMessage),
-                          message: w.intl.string(w.t["6OSasb"]),
+                          message: E.intl.string(E.t["6OSasb"]),
                           decorations: (0, r.jsx)(c.Ucv, {
                               color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                               className: Z.boostIcon,

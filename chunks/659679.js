@@ -9,9 +9,9 @@ var i = n(793030),
     c = n(271383),
     u = n(709054),
     d = n(884902),
-    p = n(989308),
+    p = n(39690),
     f = n(388032),
-    m = n(238937);
+    m = n(503142);
 function g(e) {
     let { boost: t } = e,
         n = new Date(u.default.extractTimestamp(t.id)),
@@ -56,7 +56,7 @@ function g(e) {
                 (0, r.jsx)(i.xvT, {
                     variant: "text-md/medium",
                     lineClamp: 1,
-                    children: (0, r.jsx)(a.Z, { children: f.intl.string(p.default.plwH8f) }),
+                    children: (0, r.jsx)(a.Z, { children: f.intl.string(p.default.plwH8d) }),
                 }),
             ],
         }),

@@ -4,9 +4,9 @@ var r = n(951288),
     o = n(159691),
     l = n(481060),
     a = n(921944),
-    s = n(989308),
+    s = n(39690),
     c = n(388032),
-    u = n(176179),
+    u = n(255748),
     d = n(719119);
 function p(e) {
     let { markAsDismissed: t } = e;
@@ -21,19 +21,19 @@ function p(e) {
             (0, r.jsx)(i.xvT, {
                 color: "always-white",
                 variant: "text-md/semibold",
-                children: c.intl.string(s.default.diMhWV),
+                children: c.intl.string(s.default.diMhWc),
             }),
             (0, r.jsx)(i.xvT, {
                 color: "always-white",
                 variant: "text-sm/medium",
-                children: c.intl.string(s.default.pycxTk),
+                children: c.intl.string(s.default.pycxTr),
             }),
             (0, r.jsx)("div", {
                 className: u.close,
                 children: (0, r.jsx)(o.hU, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": c.intl.string(c.t.cpT0Cg),
+                    "aria-label": c.intl.string(c.t.cpT0Cq),
                     onClick: () => {
                         t(a.L.USER_DISMISS);
                     },

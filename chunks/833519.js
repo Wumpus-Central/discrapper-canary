@@ -13,11 +13,11 @@ var r = n(951288),
     d = n(872810),
     f = n(493773),
     p = n(763520),
-    m = n(194082),
-    _ = n(710845),
+    _ = n(194082),
+    m = n(710845),
     g = n(965048),
-    b = n(590293),
-    v = n(595816),
+    v = n(590293),
+    b = n(595816),
     E = n(863908),
     h = n(871118),
     S = n(517525),
@@ -27,11 +27,11 @@ var r = n(951288),
     C = n(199902),
     w = n(314897),
     j = n(592125),
-    P = n(131951),
-    Z = n(451478),
+    Z = n(131951),
+    P = n(451478),
     x = n(112560),
-    A = n(442168),
-    R = n(822296),
+    R = n(442168),
+    A = n(822296),
     T = n(916771),
     N = n(792517),
     D = (n(351483), n(979425)),
@@ -41,8 +41,8 @@ var r = n(951288),
     L = n(354459),
     V = n(65154),
     U = n(388032),
-    W = n(7504);
-let H = new _.Z("StreamTile");
+    W = n(400872);
+let H = new m.Z("StreamTile");
 function B(e) {
     let { participant: t, selected: n, focused: i, idle: l, width: a, premiumIndicator: c } = e,
         s = (0, o.e7)([C.Z], () => C.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
@@ -53,7 +53,7 @@ function B(e) {
             i || null == s || s.state === F.jm8.ENDED || s.state === F.jm8.FAILED
                 ? null
                 : (0, r.jsx)(S.Z, {
-                      size: m.ZP.Sizes.SMALL,
+                      size: _.ZP.Sizes.SMALL,
                       className: W.liveIndicator,
                       participant: t,
                       showQuality: !u && !l,
@@ -68,25 +68,25 @@ function q(e) {
             participant: t,
             selected: n,
             onVideoResize: l,
-            fit: m,
-            inPopout: _,
+            fit: _,
+            inPopout: m,
             inOverlayPopout: S = !1,
             width: M,
             focused: k,
             wrapperClassName: B,
             paused: q = !1,
         } = e,
-        z = P.Z.getVideoComponent(),
+        z = Z.Z.getVideoComponent(),
         Y = (0, o.e7)([w.default], () => w.default.getId()),
-        K = (0, b.Z)(),
+        K = (0, v.Z)(),
         { stream: G, user: Q, streamId: X } = t,
         J = (0, o.e7)([j.Z], () => j.Z.getChannel(G.channelId)),
         $ = (0, o.e7)([C.Z], () => C.Z.getActiveStreamForUser(Q.id, G.guildId), [Q.id, G.guildId]),
-        { defaultWatchMultipleStreams: ee } = (0, v.P)({ location: "StreamTile" }),
+        { defaultWatchMultipleStreams: ee } = (0, b.P)({ location: "StreamTile" }),
         et = (0, o.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0),
-        en = (0, o.e7)([Z.Z], () => Z.Z.isFocused()),
+        en = (0, o.e7)([P.Z], () => P.Z.isFocused()),
         er = (null == $ ? void 0 : $.ownerId) === Y,
-        ei = er && !en && !_,
+        ei = er && !en && !m,
         el = null != $ ? (0, E.Z)($, Q, Q.id === Y, ei) : null,
         ea = M < 195;
     (0, f.ZP)(() => {
@@ -103,7 +103,7 @@ function q(e) {
                     .concat(null != $, " | selected: ")
                     .concat(n, " | Video: ")
                     .concat(null != z, " | MediaEngine: ")
-                    .concat(P.Z.supports(V.AN.VIDEO)),
+                    .concat(Z.Z.supports(V.AN.VIDEO)),
             );
         }, [z, $, n]),
         K)
@@ -115,7 +115,7 @@ function q(e) {
             isSelfStream: Q.id === Y,
         });
     if ((null == $ ? void 0 : $.state) === F.jm8.ENDED)
-        return (0, r.jsx)(R.Z, {
+        return (0, r.jsx)(A.Z, {
             selected: n,
             stream: $,
             width: M,
@@ -134,7 +134,7 @@ function q(e) {
             participant: t,
             width: M,
         });
-    if (!(null != $ && !n && null != z && P.Z.supports(V.AN.VIDEO)))
+    if (!(null != $ && !n && null != z && Z.Z.supports(V.AN.VIDEO)))
         return (0, r.jsxs)("div", {
             className: a()(W.content, W.streamPreview, { [W.small]: ea }),
             children: [
@@ -198,7 +198,7 @@ function q(e) {
                         className: W.content,
                         streamId: X,
                         videoComponent: z,
-                        fit: m,
+                        fit: _,
                         paused: q || (null == $ ? void 0 : $.state) === F.jm8.PAUSED || ei,
                         videoSpinnerContext: er ? p.m.SELF_STREAM : p.m.REMOTE_STREAM,
                         userId: Q.id,
@@ -236,9 +236,9 @@ function q(e) {
                           })({ size: (0, x.L)(M) }, el),
                       )
                     : null,
-                (0, r.jsx)(A.Z, {
+                (0, r.jsx)(R.Z, {
                     stream: G,
-                    inPopout: _,
+                    inPopout: m,
                 }),
             ],
         });

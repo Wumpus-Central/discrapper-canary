@@ -12,10 +12,10 @@ var r = n(647438),
     u = n(639777),
     d = n(973772),
     p = n(834209),
-    f = n(279604),
-    h = n(535396),
+    h = n(279604),
+    f = n(535396),
     g = n(981631),
-    m = n(989308),
+    m = n(39690),
     b = n(388032);
 function _(e, t) {
     var n;
@@ -25,15 +25,15 @@ function _(e, t) {
         }),
         a = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         u = null == a ? void 0 : a.allPowerups[i.A$],
-        f = (0, d.ZP)(e, u),
+        h = (0, d.ZP)(e, u),
         _ = (0, c.q8)(e, t),
         O = null == u ? void 0 : u.storeRemovalDate,
         y = null != (n = null == r ? void 0 : r.has(g.GuildFeatures.PARTNERED)) && n,
-        v = _ && null != O && !y && f.type === h.A3.POWERUP_ACTIVATED,
+        v = _ && null != O && !y && h.type === f.A3.POWERUP_ACTIVATED,
         j = v
             ? {
-                  title: b.intl.formatToPlainString(m.default.mgoPkZ, { perkName: null == u ? void 0 : u.title }),
-                  description: b.intl.formatToPlainString(m.default.UT9pkJ, { dateString: (0, p.Z)(O) }),
+                  title: b.intl.formatToPlainString(m.default.mgoPkU, { perkName: null == u ? void 0 : u.title }),
+                  description: b.intl.formatToPlainString(m.default.UT9pkI, { dateString: (0, p.Z)(O) }),
               }
             : null;
     return {
@@ -56,28 +56,28 @@ function O(e, t) {
             var t;
             return null == (t = o.Z.getGuild(e)) ? void 0 : t.features;
         }),
-        w = null != (y = null == Z ? void 0 : Z.has(g.GuildFeatures.PARTNERED)) && y,
-        { onActivate: T } = (0, f._C)(e, N),
-        A = !j && x && C && null != S && !w && I.type === h.A3.POWERUP_ACTIVATED && null != P && null != N && null != v,
+        T = null != (y = null == Z ? void 0 : Z.has(g.GuildFeatures.PARTNERED)) && y,
+        { onActivate: w } = (0, h._C)(e, N),
+        A = !j && x && C && null != S && !T && I.type === f.A3.POWERUP_ACTIVATED && null != P && null != N && null != v,
         R = r.useCallback(
             (e) => {
-                T(e);
+                w(e);
             },
-            [T],
+            [w],
         ),
         D = r.useMemo(() => {
             if (!A) return null;
             let e = (0, p.Z)(P),
-                t = v.premiumTier === g.Eu4.TIER_2 ? b.intl.string(m.default["0uo/LC"]) : void 0;
+                t = v.premiumTier === g.Eu4.TIER_2 ? b.intl.string(m.default["0uo/LD"]) : void 0;
             return {
                 firstHeader: S.title,
-                secondHeader: b.intl.formatToPlainString(m.default["8imxAg"], { dateString: e }),
-                firstBody: b.intl.formatToPlainString(m.default["/bW9tb"], { serverName: v.name }),
-                secondBody: b.intl.formatToPlainString(m.default.D09fdn, {
+                secondHeader: b.intl.formatToPlainString(m.default["8imxAq"], { dateString: e }),
+                firstBody: b.intl.formatToPlainString(m.default["/bW9tW"], { serverName: v.name }),
+                secondBody: b.intl.formatToPlainString(m.default.D09fdi, {
                     dateString: e,
                     boostCount: S.cost,
                 }),
-                thirdBody: b.intl.string(m.default["+zvKPj"]),
+                thirdBody: b.intl.string(m.default["+zvKPr"]),
                 primaryButtonText: t,
                 onPrimaryClick: null != t ? R : void 0,
             };

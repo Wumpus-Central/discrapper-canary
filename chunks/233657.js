@@ -10,9 +10,9 @@ var i = n(442837),
     u = n(306680),
     d = n(9156),
     p = n(434479),
-    f = n(490897),
-    h = n(388032),
-    g = n(509612);
+    h = n(490897),
+    f = n(388032),
+    g = n(516966);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,21 +61,21 @@ function _(e) {
         { hasUnread: O, mentionCount: y } = (0, i.cj)(
             [u.ZP],
             () => ({
-                hasUnread: u.ZP.hasUnread(t.id, f.W.GUILD_EVENT),
-                mentionCount: u.ZP.getMentionCount(t.id, f.W.GUILD_EVENT),
+                hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
+                mentionCount: u.ZP.getMentionCount(t.id, h.W.GUILD_EVENT),
             }),
             [t.id],
         ),
         v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function j() {
         await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("25688")]).then(n.bind(n, 17671));
+            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("5836")]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let x = (0, c.ZP)(t.id),
-        C = x.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSu, { number: x.length }) : h.intl.string(h.t.tlopTM);
+        C = x.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSu, { number: x.length }) : f.intl.string(f.t.tlopTM);
     return (0, r.jsx)(p.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>

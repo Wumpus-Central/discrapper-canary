@@ -6,14 +6,14 @@ var r = n(951288),
     o = n(434404),
     s = n(981631),
     c = n(921944),
-    u = n(989308),
+    u = n(39690),
     d = n(388032),
     p = n(437329);
 function f(e) {
     let { guild: t, markAsDismissed: n, renderTargetElement: f } = e,
         h = i.useRef(null),
         g = {
-            text: d.intl.string(u.default.Xnghq6),
+            text: d.intl.string(u.default.Xnghqy),
             onClick: () => {
                 o.Z.open(t.id, s.pNK.BOOST_PERKS, { section: a.Z.GUILD_BOOSTING_PROGRESS_BAR }), n(c.L.TAKE_ACTION);
             },
@@ -26,8 +26,8 @@ function f(e) {
             }),
             (0, r.jsx)(l.Mb, {
                 targetElementRef: h,
-                title: d.intl.string(u.default.UuwXRU),
-                body: d.intl.string(u.default.MIwlcX),
+                title: d.intl.string(u.default.UuwXRZ),
+                body: d.intl.string(u.default.MIwlcR),
                 caretConfig: {
                     position: "top",
                     align: "center",

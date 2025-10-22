@@ -13,9 +13,9 @@ var r = n(951288),
     g = n(603213),
     b = n(606876),
     _ = n(535396),
-    f = n(989308),
+    f = n(39690),
     C = n(388032),
-    h = n(802795);
+    h = n(825268);
 function j(e) {
     var t,
         n,
@@ -126,7 +126,7 @@ function j(e) {
                                                 (0, r.jsx)(l.Text, {
                                                     className: h.description,
                                                     variant: "text-sm/normal",
-                                                    children: C.intl.formatToPlainString(f.default.NAFGkJ, {
+                                                    children: C.intl.formatToPlainString(f.default.NAFGkH, {
                                                         level: N.title,
                                                     }),
                                                 }),

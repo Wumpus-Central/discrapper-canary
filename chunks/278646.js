@@ -4,9 +4,9 @@ var r = n(951288),
     l = n(262212),
     o = n(795338),
     a = n(535396),
-    s = n(989308),
+    s = n(39690),
     c = n(388032),
-    u = n(477487);
+    u = n(500254);
 function d(e, t) {
     if (null == t) return;
     let d = a.uc.has(t.skuId);
@@ -41,8 +41,8 @@ function d(e, t) {
                     return e;
                 })(
                     {
-                        title: c.intl.formatToPlainString(s.default.lFuOFB, { perkName: t.title }),
-                        description: c.intl.formatToPlainString(s.default.y3wHoq, { perkName: t.title }),
+                        title: c.intl.formatToPlainString(s.default.lFuOFF, { perkName: t.title }),
+                        description: c.intl.formatToPlainString(s.default.y3wHot, { perkName: t.title }),
                         image: (0, r.jsx)(o.m, {
                             className: u.image,
                             powerup: t,
@@ -59,7 +59,7 @@ function d(e, t) {
                                   className: u.button,
                                   children: (0, r.jsx)(i.Button, {
                                       variant: "primary",
-                                      text: c.intl.string(c.t.cpT0Cg),
+                                      text: c.intl.string(c.t.cpT0Cq),
                                       onClick: n.onClose,
                                   }),
                               }),

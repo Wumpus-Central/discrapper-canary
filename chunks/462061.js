@@ -13,11 +13,11 @@ var r = n(951288),
     d = n(763520),
     f = n(358221),
     p = n(414910),
-    m = n(502053),
-    _ = n(965048),
+    _ = n(502053),
+    m = n(965048),
     g = n(266910),
-    b = n(352978),
-    v = n(928518),
+    v = n(352978),
+    b = n(928518),
     E = n(518950),
     h = n(470956),
     S = n(314897),
@@ -27,25 +27,25 @@ var r = n(951288),
     C = n(5192),
     w = n(44136),
     j = (n(351483), n(249212)),
-    P = n(853476),
-    Z = n(981631),
+    Z = n(853476),
+    P = n(981631),
     x = n(65154),
-    A = n(388032),
-    R = n(7504);
+    R = n(388032),
+    A = n(400872);
 let T = s.EFr.SIZE_80,
     N = s.EFr.SIZE_40;
 function D(e) {
     let { channelId: t, participant: n } = e;
     return (0, h.Eu)(t, n.id)
         ? (0, r.jsx)(c.u, {
-              text: A.intl.string(A.t.HFwRpk),
+              text: R.intl.string(R.t.HFwRpk),
               position: "bottom",
               children: (0, r.jsx)("div", {
-                  className: R.interactive,
+                  className: A.interactive,
                   children: (0, r.jsx)(s.Mgn, { color: s.TVs.colors.STATUS_WARNING_BACKGROUND }),
               }),
           })
-        : (0, r.jsx)(P.Z, { userId: n.user.id });
+        : (0, r.jsx)(Z.Z, { userId: n.user.id });
 }
 function M(e) {
     let {
@@ -55,7 +55,7 @@ function M(e) {
             width: c,
             selected: s,
             fit: h,
-            onVideoResize: P,
+            onVideoResize: Z,
             blocked: D,
             ignored: M,
             noVideoRender: k = !1,
@@ -69,10 +69,10 @@ function M(e) {
         z = H.id === W,
         Y = (0, w.ZP)(t),
         K = (0, o.e7)([I.Z], () => I.Z.isFocused()),
-        G = (0, o.e7)([v.Z], () => v.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
+        G = (0, o.e7)([b.Z], () => b.Z.getWindowFocused(P.KJ3.CHANNEL_CALL_POPOUT)),
         Q = (0, o.e7)([O.Z], () => null != H.id && O.Z.isLocalVideoDisabled(H.id, (0, p.Z)(t.type)), [H.id, t.type]),
         X = (0, o.e7)([y.ZP], () => y.ZP.isGuestOrLurker(n.guild_id, H.id)),
-        J = C.ZP.getName(n.getGuildId(), n.id, H) + (X ? " ".concat(A.intl.string(A.t["pFO/Ph"])) : ""),
+        J = C.ZP.getName(n.getGuildId(), n.id, H) + (X ? " ".concat(R.intl.string(R.t["pFO/Ph"])) : ""),
         $ = q && (G || K),
         ee = c < 124 ? N : T,
         { avatarSrc: et, avatarDecorationSrc: en } = (0, E.Z)({
@@ -82,8 +82,8 @@ function M(e) {
             animateOnHover: !$,
         }),
         er = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
-        ei = (0, _.Z)(x.Yn.DEFAULT, t.user.id),
-        el = (0, m.Z)(t.user.id),
+        ei = (0, m.Z)(x.Yn.DEFAULT, t.user.id),
+        el = (0, _.Z)(t.user.id),
         ea = {
             channel: n,
             selectedParticipant: er,
@@ -106,11 +106,11 @@ function M(e) {
                   selected: s,
               })
             : (0, r.jsx)(
-                  b.Z,
+                  v.Z,
                   {
-                      onResize: P,
-                      wrapperClassName: R.videoWrapper,
-                      className: R.content,
+                      onResize: Z,
+                      wrapperClassName: A.videoWrapper,
+                      className: A.content,
                       mirror: z,
                       streamId: B,
                       videoComponent: U,
@@ -122,7 +122,7 @@ function M(e) {
                   B,
               )
         : (0, r.jsx)("div", {
-              className: a()(R.content, { [R.blockedAvatar]: D || M }),
+              className: a()(A.content, { [A.blockedAvatar]: D || M }),
               children: (0, r.jsx)(g.Z, {
                   "aria-label": J,
                   src: et,

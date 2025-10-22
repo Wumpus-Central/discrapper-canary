@@ -3,7 +3,7 @@ n.d(t, {
     En: () => M,
     cO: () => D,
     dJ: () => L,
-    jG: () => T,
+    jG: () => w,
     yI: () => R,
 });
 var r = n(951288);
@@ -17,8 +17,8 @@ var i = n(120356),
     u = n(100527),
     d = n(623624),
     p = n(703656),
-    f = n(970731),
-    h = n(430824),
+    h = n(970731),
+    f = n(430824),
     g = n(326660),
     m = n(639777),
     b = n(441536),
@@ -28,15 +28,15 @@ var i = n(120356),
     v = n(981631),
     j = n(176505),
     x = n(921944),
-    C = n(470658),
-    E = n(149829),
+    C = n(940884),
+    E = n(39690),
     S = n(388032),
-    I = n(428197),
+    I = n(718908),
     P = n(611087),
     N = n(928381),
     Z = n(283902),
-    w = n(225375);
-function T(e) {
+    T = n(225375);
+function w(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(k, {
         asset: (0, r.jsx)(_.g, { className: I.image }),
@@ -67,14 +67,14 @@ function A(e) {
                       location: { section: v.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
                   }),
         markAsDismissed: n,
-        caretPosition: i ? f.DF.LEFT_TOP : f.DF.TOP_CENTER,
+        caretPosition: i ? h.DF.LEFT_TOP : h.DF.TOP_CENTER,
     });
 }
 function R(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = (0, s.e7)([h.Z], () => {
+        l = (0, s.e7)([f.Z], () => {
             var e;
-            return null == (e = h.Z.getGuild(t)) ? void 0 : e.name;
+            return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
         }),
         { onActivate: o } = (0, O.ZP)(t, n[0]);
     if (0 === n.length) return;
@@ -115,7 +115,7 @@ function D(e) {
             content: S.intl.string(E.default.mmNkUA),
             asset: (0, r.jsx)("img", {
                 alt: "",
-                src: w.Z,
+                src: T.Z,
                 className: I.image,
             }),
             onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, l.skuId),
@@ -195,10 +195,10 @@ function k(e) {
             }
             return i;
         })(e, ["asset", "header", "content", "caretPosition", "markAsDismissed"]);
-    let d = null != o ? o : f.DF.LEFT_TOP,
-        p = d === f.DF.TOP_CENTER || d === f.DF.LEFT_TOP ? I[d] : "";
+    let d = null != o ? o : h.DF.LEFT_TOP,
+        p = d === h.DF.TOP_CENTER || d === h.DF.LEFT_TOP ? I[d] : "";
     return (0, r.jsx)(
-        f.ZP,
+        h.ZP,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

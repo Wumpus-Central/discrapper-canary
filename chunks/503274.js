@@ -11,15 +11,15 @@ var l = t(951288),
     m = t(60482),
     v = t(162190),
     g = t(68015),
-    f = t(989308),
+    f = t(39690),
     b = t(388032),
-    p = t(678873);
+    p = t(277781);
 function j(e) {
     let { guildId: n, gameInstance: t, cost: a } = e;
     return (0, l.jsx)(o.i_, {
-        "aria-label": b.intl.string(f.default.TZsu1d),
-        title: b.intl.string(f.default.TZsu1d),
-        body: b.intl.formatToPlainString(f.default["5HQUzM"], { boostCount: a }),
+        "aria-label": b.intl.string(f.default.TZsu1U),
+        title: b.intl.string(f.default.TZsu1U),
+        body: b.intl.formatToPlainString(f.default["5HQUzD"], { boostCount: a }),
         children: (0, l.jsx)("div", {
             className: p.disableButton,
             children: (0, l.jsx)(u.Button, {
@@ -30,7 +30,7 @@ function j(e) {
                 text: a.toString(),
                 variant: "secondary",
                 size: "sm",
-                "aria-label": b.intl.string(f.default.TZsu1d),
+                "aria-label": b.intl.string(f.default.TZsu1U),
                 onClick: (e) => {
                     e.stopPropagation(), (0, g.x)(n, t);
                 },
@@ -78,7 +78,7 @@ function x(e) {
                           }),
                           P
                               ? (0, l.jsx)(d.rL, { dateString: O.ends_at })
-                              : (0, l.jsx)(d.P2, { text: b.intl.string(f.default.FFLkm5) }),
+                              : (0, l.jsx)(d.P2, { text: b.intl.string(f.default.FFLkmx) }),
                       ],
                   }),
                   S &&

@@ -5,7 +5,7 @@ var r = n(647438),
     o = n(905128),
     a = n(973772),
     s = n(535396),
-    c = n(989308);
+    c = n(39690);
 function u(e, t, n) {
     let u = (0, i.e7)([o.Z], () => o.Z.getStateForGuild(e)),
         d = (0, a.ZP)(e, t);
@@ -30,7 +30,7 @@ function u(e, t, n) {
             disabled: null != a,
             reason:
                 null != a && null != i[a]
-                    ? l.intl.formatToPlainString(n ? c.default.vCEBiY : c.default["1B8AZm"], {
+                    ? l.intl.formatToPlainString(n ? c.default.vCEBiS : c.default["1B8AZr"], {
                           perk: null == (r = i[a]) ? void 0 : r.title,
                       })
                     : void 0,

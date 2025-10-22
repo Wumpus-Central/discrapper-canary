@@ -6,17 +6,17 @@ var a = n(793030),
     l = n(526689),
     s = n(229373),
     i = n(518027),
-    c = n(119475),
+    c = n(30038),
     u = n(388032);
 let d = (e) => {
     let { transitionState: t, onClose: n } = e,
         { send: d, sending: f, canSend: b } = (0, o.C$)();
     return (0, r.jsx)(a.Modal, {
-        title: u.intl.string(c.default.zgFs8P),
+        title: u.intl.string(c.default.zgFs8C),
         actions: [
             {
                 variant: "primary",
-                text: u.intl.string(u.t.TXNS7e),
+                text: u.intl.string(u.t.TXNS7S),
                 onClick: d,
                 loading: f,
                 disabled: !b(),

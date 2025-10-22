@@ -8,9 +8,9 @@ var r = n(951288),
     c = n(692547),
     u = n(899667),
     d = n(317169),
-    p = n(989308),
+    p = n(39690),
     f = n(388032),
-    m = n(874622);
+    m = n(296594);
 function g(e) {
     let { guildId: t, powerups: n } = e,
         { spent: g } = (0, d.Z)(t),
@@ -41,12 +41,12 @@ function g(e) {
             (0, r.jsx)(a.xvT, {
                 variant: "text-md/semibold",
                 color: "text-feedback-warning",
-                children: f.intl.string(p.default.n5hQhY),
+                children: f.intl.string(p.default.n5hQhc),
             }),
             (0, r.jsxs)(a.xvT, {
                 variant: "text-sm/medium",
                 children: [
-                    f.intl.formatToPlainString(p.default.iAaAiI, {
+                    f.intl.formatToPlainString(p.default.iAaAiG, {
                         boostCount: x,
                         perksString: n.map((e) => e.title).join(", "),
                     }),
@@ -54,7 +54,7 @@ function g(e) {
                         (0, r.jsx)(a.xvT, {
                             variant: "text-sm/medium",
                             color: "text-feedback-warning",
-                            children: f.intl.string(p.default.Sfr0Jy),
+                            children: f.intl.string(p.default.Sfr0Jw),
                         }),
                 ],
             }),

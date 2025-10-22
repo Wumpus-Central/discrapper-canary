@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(819640),
     p = n(476044),
     f = n(921944),
-    m = n(989308),
+    m = n(39690),
     g = n(388032);
 function v(e) {
     let { powerup: t, targetRef: n, isCardVisible: v } = e,
@@ -19,8 +19,8 @@ function v(e) {
         b =
             t.skuId === o.A$
                 ? {
-                      title: g.intl.string(m.default.YWo6VF),
-                      body: g.intl.string(m.default.gXVvKS),
+                      title: g.intl.string(m.default.YWo6VL),
+                      body: g.intl.string(m.default.gXVvKc),
                       dismissibleContentType: a.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
                   }
                 : null,

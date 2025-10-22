@@ -9,9 +9,9 @@ var r = n(951288),
     u = n(973772),
     d = n(279604),
     p = n(535396),
-    f = n(989308),
-    h = n(388032),
-    g = n(362320);
+    h = n(39690),
+    f = n(388032),
+    g = n(123879);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,11 +44,11 @@ function b(e) {
         children: [
             (0, r.jsx)(s.Text, {
                 variant: "text-xs/semibold",
-                children: h.intl.string(f.default.TZsu1d),
+                children: f.intl.string(h.default.TZsu1U),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-xs/medium",
-                children: h.intl.formatToPlainString(f.default["5HQUzM"], { boostCount: t }),
+                children: f.intl.formatToPlainString(h.default["5HQUzD"], { boostCount: t }),
             }),
         ],
     });
@@ -63,15 +63,15 @@ function _(e) {
             children: [
                 (0, r.jsx)(s.Text, {
                     variant: "text-xs/semibold",
-                    children: h.intl.string(f.default["9oYuvb"]),
+                    children: f.intl.string(h.default["9oYuvb"]),
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-xs/medium",
-                    children: h.intl.formatToPlainString(f.default.WRRYUV, {
+                    children: f.intl.formatToPlainString(h.default.WRRYUT, {
                         perkName:
                             null != (o = null == (l = i.sourcePowerup) ? void 0 : l.title)
                                 ? o
-                                : h.intl.string(h.t.BfF6EB),
+                                : f.intl.string(f.t.BfF6ED),
                     }),
                 }),
             ],
@@ -90,7 +90,7 @@ function O(e) {
         }, [E, j]),
         (0, r.jsx)(s.aML, {
             delay: 100,
-            "aria-label": null != N ? N : I ? h.intl.string(f.default.TZsu1d) : void 0,
+            "aria-label": null != N ? N : I ? f.intl.string(h.default.TZsu1U) : void 0,
             text:
                 null != N
                     ? N
@@ -126,7 +126,7 @@ function O(e) {
                                               icon: a,
                                           }
                                         : {
-                                              text: h.intl.format(n ? f.default.uzQpQU : f.default.ad2Mfn, {
+                                              text: f.intl.format(n ? h.default.uzQpQd : h.default.ad2Mfj, {
                                                   boostCount: t,
                                                   dotHook: () =>
                                                       (0, r.jsx)("span", {
@@ -152,7 +152,7 @@ function O(e) {
                                     m(
                                         {
                                             variant: I ? "secondary" : "primary",
-                                            "aria-label": h.intl.string(I ? f.default.TZsu1d : f.default.gSxlHR),
+                                            "aria-label": f.intl.string(I ? h.default.TZsu1U : h.default.gSxlHf),
                                             disabled: P,
                                             onClick: I ? S : x,
                                             loading: C,

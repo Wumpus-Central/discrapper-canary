@@ -10,21 +10,21 @@ var r = n(951288),
     d = n(857666),
     p = n(279475),
     f = n(535396),
-    m = n(989308),
+    m = n(39690),
     g = n(388032),
-    v = n(639560);
+    v = n(703754);
 function x(e) {
     var t, n, x;
     let _,
         { guildId: b, group: h, powerups: j } = e,
         [C, I] = i.useState(!1),
-        E = (0, c.Gv)(b, j),
-        w = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        w = (0, c.Gv)(b, j),
+        E = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         Z = (0, d.Z)(h, b);
     if (void 0 === Z || j.length <= 0) return null;
-    let P = E.some((e) => e.type !== f.A3.INACTIVE),
-        y = (0, p.d)(P),
-        T = E.reduce(
+    let P = w.some((e) => e.type !== f.A3.INACTIVE),
+        T = (0, p.d)(P),
+        y = w.reduce(
             (e, t) => {
                 let { sourceEntitlement: n } = t,
                     r = null == n ? void 0 : n.ends_at;
@@ -32,21 +32,21 @@ function x(e) {
             },
             void 0,
         );
-    void 0 !== T
+    void 0 !== y
         ? (_ = {
               type: "expiring",
-              expiringAt: T,
+              expiringAt: y,
           })
         : P &&
           (_ = {
               type: "active",
-              statusText: g.intl.string(m.default.FFLkm5),
+              statusText: g.intl.string(m.default.FFLkmx),
           });
-    let N = E.reduce((e, t) => {
+    let N = w.reduce((e, t) => {
             let { type: n, powerup: r } = t;
             return n === f.A3.POWERUP_ACTIVATED ? e + r.cost : e;
         }, 0),
-        O = E.reduce(
+        O = w.reduce(
             (e, t) => {
                 var n, r;
                 let { powerup: i } = t;
@@ -56,17 +56,17 @@ function x(e) {
                       ? r
                       : 0;
             },
-            null != (x = null == (n = E[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
+            null != (x = null == (n = w[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
         ),
-        S = E.reduce((e, t) => {
+        S = w.reduce((e, t) => {
             var n;
             let { powerup: r } = t;
             return e + (null != (n = null == r ? void 0 : r.cost) ? n : 0);
         }, 0),
         A = P ? N : O,
         k = !P && S > A ? "+" : void 0,
-        R = !w && C ? Z.image.animatedUrl : Z.image.staticUrl,
-        L = null != Z.viewCta && "" !== Z.viewCta ? Z.viewCta : g.intl.string(m.default["27GkOj"]),
+        R = !E && C ? Z.image.animatedUrl : Z.image.staticUrl,
+        L = null != Z.viewCta && "" !== Z.viewCta ? Z.viewCta : g.intl.string(m.default["27GkOu"]),
         U = null != Z.viewCtaTooltip && "" !== Z.viewCtaTooltip ? Z.viewCtaTooltip : void 0;
     return (0, r.jsxs)(u.aB, {
         label: Z.title,
@@ -83,7 +83,7 @@ function x(e) {
             }),
             (0, r.jsx)(u.Q9, {
                 title: Z.title,
-                textColor: y,
+                textColor: T,
                 footer: (0, r.jsx)(u.uf, {
                     status: _,
                     cost: A,
@@ -91,7 +91,7 @@ function x(e) {
                 }),
                 children: (0, r.jsx)(a.Text, {
                     className: v.description,
-                    color: y,
+                    color: T,
                     variant: "text-sm/medium",
                     children: Z.description,
                 }),

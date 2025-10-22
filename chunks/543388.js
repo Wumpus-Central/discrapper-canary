@@ -7,7 +7,7 @@ var i = n(913527),
     s = n(481060),
     l = n(925329),
     c = n(388032),
-    u = n(56651);
+    u = n(386312);
 function d(e) {
     let { application: t, timestamp: n } = e;
     return (0, r.jsxs)(r.Fragment, {

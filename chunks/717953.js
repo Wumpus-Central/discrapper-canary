@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(583901),
     g = n(576157),
     E = n(231338),
-    b = n(119475),
+    b = n(30038),
     y = n(388032),
-    O = n(279457);
+    O = n(617385);
 function v() {
     return (0, r.jsxs)("svg", {
         className: O.newRing,
@@ -98,7 +98,7 @@ function I(e) {
                 onSelect: t ? void 0 : k,
                 isSelected: !1,
                 showSelectionCircle: P,
-                name: y.intl.string(b.default.KSBBpK),
+                name: y.intl.string(b.default.KSBBpC),
                 className: o()(O.container, w && C, t && O.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,

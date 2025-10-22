@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(233398),
     g = n(866419),
     E = n(771934),
-    b = n(119475),
+    b = n(30038),
     y = n(388032),
-    O = n(209289);
+    O = n(970281);
 function v() {
     return (0, r.jsx)("div", {
         className: O.loader,
@@ -176,24 +176,24 @@ function P(e) {
                         children: [
                             null != c &&
                                 (0, r.jsx)(f.u, {
-                                    text: y.intl.string(b.default["NCFz+P"]),
+                                    text: y.intl.string(b.default["NCFz+N"]),
                                     children: (0, r.jsx)(_.hU, {
                                         variant: "icon-only",
                                         size: "sm",
                                         onClick: M,
                                         icon: d.i,
-                                        "aria-label": y.intl.string(b.default["NCFz+P"]),
+                                        "aria-label": y.intl.string(b.default["NCFz+N"]),
                                     }),
                                 }),
                             G &&
                                 (0, r.jsx)(f.u, {
-                                    text: y.intl.string(y.t.N86XcH),
+                                    text: y.intl.string(y.t.N86XcP),
                                     children: (0, r.jsx)(_.hU, {
                                         variant: "icon-only",
                                         size: "sm",
                                         onClick: () => j(v),
                                         icon: p.V_R,
-                                        "aria-label": y.intl.string(y.t.N86XcH),
+                                        "aria-label": y.intl.string(y.t.N86XcP),
                                     }),
                                 }),
                         ],
@@ -206,7 +206,7 @@ function P(e) {
                     size: "md",
                     onClick: k,
                     icon: p.BRu,
-                    text: y.intl.string(b.default.JUQcdX),
+                    text: y.intl.string(b.default.JUQcdT),
                     fullWidth: !0,
                 }),
         ],

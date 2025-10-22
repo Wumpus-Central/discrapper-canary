@@ -9,14 +9,14 @@ var r = n(951288),
     u = n(434479),
     d = n(819640),
     p = n(713081),
-    f = n(326660),
-    h = n(441536),
+    h = n(326660),
+    f = n(441536),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    _ = n(989308),
+    _ = n(39690),
     O = n(388032),
-    y = n(969649);
+    y = n(524707);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,22 +58,22 @@ let j = {
             C = i.useCallback(() => {
                 var e;
                 (0, p.jd)(t),
-                    (0, h.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
                     null == x || null == (e = x.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
             }, [t, x]),
             E = i.useCallback(() => {
                 var e;
                 switch (null == x || null == (e = x.popout) ? void 0 : e.type) {
-                    case f.J.LEVEL_REACHED:
+                    case h.J.LEVEL_REACHED:
                         return (0, r.jsx)(g.jG, v({ guildId: t }, x.popout));
-                    case f.J.PERKS_AVAILABLE:
+                    case h.J.PERKS_AVAILABLE:
                         return (0, r.jsx)(g.$h, v({ guildId: t }, x.popout));
-                    case f.J.PERKS_PURCHASABLE:
+                    case h.J.PERKS_PURCHASABLE:
                         return (0, r.jsx)(g.yI, v({ guildId: t }, x.popout));
-                    case f.J.NEW_PERK_AVAILABLE:
+                    case h.J.NEW_PERK_AVAILABLE:
                         return (0, r.jsx)(g.cO, v({ guildId: t }, x.popout));
-                    case f.J.GAME_SERVER_HOSTING_AVAILABLE:
-                    case f.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
+                    case h.J.GAME_SERVER_HOSTING_AVAILABLE:
+                    case h.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
                         return (0, r.jsx)(g.dJ, v({ guildId: t }, x.popout));
                     default:
                         return (0, r.jsx)("div", {});
@@ -86,12 +86,12 @@ let j = {
         i.useEffect(() => {
             (null == x ? void 0 : x.popout) == null && N(null);
         }, [null == x ? void 0 : x.popout]);
-        let w = i.useCallback((e) => {
+        let T = i.useCallback((e) => {
                 N(e);
             }, []),
-            T = i.useRef(null);
+            w = i.useRef(null);
         return (0, r.jsx)(s.yRy, {
-            targetElementRef: T,
+            targetElementRef: w,
             shouldShow: (null == x ? void 0 : x.popout) != null && !(S || I),
             nudgeAlignIntoViewport: !0,
             animationPosition: "bottom",
@@ -104,7 +104,7 @@ let j = {
                     ((i = v({}, e)),
                     (a = a =
                         {
-                            ref: T,
+                            ref: w,
                             className: y.container,
                             id: "skill-trees-".concat(t),
                             renderIcon: (e) =>
@@ -122,13 +122,13 @@ let j = {
                                         className: y.lottie,
                                         sceneSegments: j,
                                         importData: () => n.e("50821").then(n.t.bind(n, 548421, 19)),
-                                        onScenePlay: w,
+                                        onScenePlay: T,
                                         rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
                                     }),
                                 }),
                             text: (0, r.jsx)("span", {
                                 className: o()({ [y.textImportant]: (null == x ? void 0 : x.showUnread) === !0 }),
-                                children: O.intl.string(_.default.yv3DJC),
+                                children: O.intl.string(_.default.yv3DJJ),
                             }),
                             selected: l,
                             onClick: C,

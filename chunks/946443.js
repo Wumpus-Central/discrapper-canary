@@ -14,8 +14,8 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(570140),
-    f = n(493773),
-    h = n(607070),
+    h = n(493773),
+    f = n(607070),
     g = n(724757),
     m = n(626135),
     b = n(585483),
@@ -26,15 +26,15 @@ var r = n(951288),
     j = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(915087);
+    E = n(77902);
 function S(e) {
     var t, n, l, a, O, S, P;
-    let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
+    let { onJump: N, showTutorial: Z, setSeenTutorial: T, closePopout: w } = e,
         A = i.useRef(null),
         [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
-        G = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
+        G = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
     (t = A),
         (n = R),
         (l = D),
@@ -86,14 +86,14 @@ function S(e) {
         }, []),
         i.useEffect(
             () => (
-                p.Z.subscribe("CONNECTION_OPEN", T),
+                p.Z.subscribe("CONNECTION_OPEN", w),
                 () => {
-                    p.Z.unsubscribe("CONNECTION_OPEN", T);
+                    p.Z.unsubscribe("CONNECTION_OPEN", w);
                 }
             ),
-            [T],
+            [w],
         ),
-        (0, f.ZP)(
+        (0, h.ZP)(
             () => (
                 b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
@@ -183,7 +183,7 @@ function S(e) {
                             onScroll: L === j.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(G)),
                             children: [
-                                Z ? (0, r.jsx)(I, { setSeenTutorial: w }) : null,
+                                Z ? (0, r.jsx)(I, { setSeenTutorial: T }) : null,
                                 (0, v.Z)(M, D, N),
                                 L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],

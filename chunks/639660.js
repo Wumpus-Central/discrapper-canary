@@ -11,15 +11,15 @@ var r = n(951288),
     p = n(309945),
     f = n(385902),
     m = n(981631),
-    g = n(989308),
+    g = n(39690),
     v = n(388032),
-    x = n(547885);
+    x = n(973071);
 function _() {
     return (0, r.jsx)("div", {
         className: x.staffContainer,
         children: (0, r.jsx)(i.xvT, {
             variant: "text-sm/medium",
-            children: v.intl.string(g.default.l9n4QU),
+            children: v.intl.string(g.default.l9n4QZ),
         }),
     });
 }
@@ -37,11 +37,11 @@ function b(e) {
         { shouldShow: j, notificationConfig: C } = (0, f._)(t, "GuildPowerupNotificationContainer"),
         I = [];
     j && I.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [E, w] = (0, a.ZT)(I, t),
-        Z = null != E && null != C,
+    let [w, E] = (0, a.ZT)(I, t),
+        Z = null != w && null != C,
         P = [];
     Z || h || P.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
-    let [y, T] = (0, a.US)(P),
+    let [T, y] = (0, a.US)(P),
         N = ((e) => {
             let n = [];
             return (
@@ -63,7 +63,7 @@ function b(e) {
                             {
                                 notificationConfig: C,
                                 markAsDismissed: (e) => {
-                                    w(e);
+                                    E(e);
                                 },
                             },
                             "rollback-notification",
@@ -71,10 +71,10 @@ function b(e) {
                     ),
                 null != e &&
                     e === l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK &&
-                    n.push((0, r.jsx)(u.Z, { markAsDismissed: T }, "info-card")),
+                    n.push((0, r.jsx)(u.Z, { markAsDismissed: y }, "info-card")),
                 n
             );
-        })(y);
+        })(T);
     return 0 !== N.length || n
         ? (0, r.jsxs)("div", {
               className: x.container,
@@ -82,7 +82,7 @@ function b(e) {
                   (0, r.jsx)(i.xvT, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: v.intl.string(g.default["3FRira"]),
+                      children: v.intl.string(g.default["3FRirU"]),
                   }),
                   n && (0, r.jsx)(_, {}),
                   N.map((e) => e),

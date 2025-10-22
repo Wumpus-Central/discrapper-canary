@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(628238),
     d = n(976853),
     p = n(977683),
-    f = n(869765),
-    h = n(695346),
+    h = n(869765),
+    f = n(695346),
     g = n(592125),
     m = n(699516),
     b = n(709054),
@@ -27,14 +27,14 @@ var r = n(951288),
     P = n(689674),
     N = n(963550),
     Z = n(845080),
-    w = n(295790),
-    T = n(145807),
+    T = n(295790),
+    w = n(145807),
     A = n(56744),
     R = n(834129),
     D = n(981631),
     L = n(388032),
-    M = n(378661),
-    k = n(360514);
+    M = n(77162),
+    k = n(5898);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,16 +93,16 @@ let B = i.memo(function e(t) {
             treatSpam: W,
         } = t,
         K = D.OBS.has(s.type) ? s.messageReference : void 0,
-        Y = (0, a.e7)([f.Z], () => f.Z.getMessageByReference(K)),
+        Y = (0, a.e7)([h.Z], () => h.Z.getMessageByReference(K)),
         q = (0, a.e7)([g.Z], () =>
-            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED
+            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED
                 ? g.Z.getChannel(Y.message.channel_id)
                 : null,
         ),
-        X = h.x4.useSetting(),
-        Q = h.RS.useSetting(),
-        J = h.NA.useSetting(),
-        $ = h.QK.useSetting(),
+        X = f.x4.useSetting(),
+        Q = f.RS.useSetting(),
+        J = f.NA.useSetting(),
+        $ = f.QK.useSetting(),
         ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: en } = (0, x.Z)(l),
@@ -118,7 +118,7 @@ let B = i.memo(function e(t) {
             [g.Z],
             () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id)),
         ),
-        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED && null != q,
+        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED && null != q,
         es = !ea && void 0 === i,
         ec = (0, P.Z)({
             message: s,
@@ -128,7 +128,7 @@ let B = i.memo(function e(t) {
         eu = (0, c.v)(s),
         ed = (0, _.ro)(s.id, s.channel_id),
         ep = (0, p.Z)(s),
-        ef = (0, E.iG)(s);
+        eh = (0, E.iG)(s);
     return ea
         ? (0, r.jsx)(
               e,
@@ -187,9 +187,9 @@ let B = i.memo(function e(t) {
                     enabledContentHarmTypeFlags: eu,
                     ctaButtonType: ed,
                 }),
-                childrenExecutedCommand: (0, T.Z)(s, l, R),
+                childrenExecutedCommand: (0, w.Z)(s, l, R),
                 childrenMessageContent: (0, N.Z)(t, er),
-                childrenSystemMessage: (0, w.Z)(t),
+                childrenSystemMessage: (0, T.Z)(t),
                 onContextMenu: B,
                 onClick: V,
                 hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
@@ -197,7 +197,7 @@ let B = i.memo(function e(t) {
                 isSystemMessage: (0, v.Z)(s),
                 messageRef: ec,
                 author: el,
-                "aria-labelledby": ef,
+                "aria-labelledby": eh,
                 "aria-roledescription": L.intl.string(L.t.BAB0yK),
             });
 });

@@ -10,8 +10,8 @@ var i = n(442837),
     u = n(456269),
     d = n(921711),
     p = n(368442),
-    f = n(601070),
-    h = n(430824),
+    h = n(601070),
+    f = n(430824),
     g = n(496675),
     m = n(306680),
     b = n(979651),
@@ -19,21 +19,21 @@ var i = n(442837),
     O = n(790901),
     y = n(714794),
     v = n(355363),
-    j = n(259404),
+    j = n(687352),
     x = n(876548),
     C = n(25601),
     E = n(981631),
     S = n(490897),
     I = n(388032),
-    P = n(885525);
+    P = n(88448);
 function N(e) {
     var t;
     let {
             channel: n,
             isChannelSelected: N,
             isChannelCollapsed: Z,
-            voiceStates: w,
-            enableConnectedUserLimit: T,
+            voiceStates: T,
+            enableConnectedUserLimit: w,
             enableActivities: A,
             isSubscriptionGated: R,
             needSubscriptionToAccess: D,
@@ -54,13 +54,13 @@ function N(e) {
             video: (H || z) && null == V,
             selected: N,
         }),
-        K = (0, i.e7)([f.Z], () => f.Z.getNewThreadCount(n.guild_id, n.id)),
+        K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
         Y = (0, u.n2)(n.guild_id, n.id),
-        q = (0, i.e7)([h.Z], () => {
+        q = (0, i.e7)([f.Z], () => {
             var e, t;
             return (
                 null !=
-                    (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
+                    (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
                 t
             );
         });
@@ -88,14 +88,14 @@ function N(e) {
             color: "text-muted",
             children: (0, o.NGo)(Y),
         });
-    let X = null != (t = null == w ? void 0 : w.length) ? t : 0;
-    return null != T && T && W
+    let X = null != (t = null == T ? void 0 : T.length) ? t : 0;
+    return null != w && w && W
         ? (0, r.jsx)(x.Z, {
               userCount: X,
               video: H || z,
               channel: n,
           })
-        : Z && (0, _.a)(w) && q
+        : Z && (0, _.a)(T) && q
           ? (0, r.jsx)(o.IGR, {
                 text: I.intl.string(I.t.dI3q4h),
                 color: l.Z.unsafe_rawColors.RED_400.css,

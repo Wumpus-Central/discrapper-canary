@@ -18,7 +18,7 @@ var r,
     b = n(346329),
     y = n(981631),
     O = n(388032),
-    v = n(701306);
+    v = n(387219);
 function I(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ class C extends (r = a.PureComponent) {
         let { dispatchState: e } = this.props;
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, i.jsxs)(d.P3F, {
-                  "aria-label": O.intl.string(O.t.KTPVLC),
+                  "aria-label": O.intl.string(O.t.KTPVLL),
                   className: v.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
@@ -130,10 +130,10 @@ class C extends (r = a.PureComponent) {
             return f
                 ? null
                 : this.renderDisabledButton(
-                      O.intl.string(O.t["359PbW"]),
-                      E.isPlatformEmbedded ? O.intl.string(O.t.NASLa2) : O.intl.string(O.t.o1bhkJ),
+                      O.intl.string(O.t["359Pbd"]),
+                      E.isPlatformEmbedded ? O.intl.string(O.t.NASLa3) : O.intl.string(O.t.o1bhkD),
                   );
-        if (l) return this.renderDisabledButton(O.intl.string(O.t["3elwAA"]));
+        if (l) return this.renderDisabledButton(O.intl.string(O.t["3elwAB"]));
         let _ = c ? d.gtL : u.zx;
         return (0, i.jsxs)(_, {
             className: s()(v.playButton, e),
@@ -146,7 +146,7 @@ class C extends (r = a.PureComponent) {
             children: [
                 (0, i.jsx)("div", {
                     className: v.buttonText,
-                    children: O.intl.string(O.t["359PbW"]),
+                    children: O.intl.string(O.t["359Pbd"]),
                 }),
                 this.renderDropdown(),
             ],
@@ -161,7 +161,7 @@ class C extends (r = a.PureComponent) {
                 f.jW(
                     e,
                     async () => {
-                        let { default: e } = await n.e("53195").then(n.bind(n, 918306));
+                        let { default: e } = await n.e("886").then(n.bind(n, 918306));
                         return (n) =>
                             (0, i.jsx)(
                                 e,

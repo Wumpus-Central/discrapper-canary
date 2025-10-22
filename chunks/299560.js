@@ -17,7 +17,7 @@ var r = n(951288),
     v = n(70399),
     y = n(228168),
     j = n(388032),
-    O = n(229870);
+    O = n(73686);
 let x = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: () => ({

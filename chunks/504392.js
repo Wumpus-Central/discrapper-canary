@@ -32,17 +32,17 @@ var r = n(951288),
     j = n(426771),
     C = n(51859),
     I = n(184478),
-    E = n(877362),
-    w = n(460608),
+    w = n(877362),
+    E = n(460608),
     Z = n(279604),
     P = n(385902),
-    y = n(332538),
-    T = n(857666),
+    T = n(332538),
+    y = n(857666),
     N = n(535396),
     O = n(921944),
-    S = n(989308),
+    S = n(39690),
     A = n(388032),
-    k = n(823441);
+    k = n(287569);
 let R = [N.Us.LEVEL, N.Us.PERK];
 function L(e) {
     let { guildId: t, powerupListingId: o } = e,
@@ -53,14 +53,14 @@ function L(e) {
         i.useEffect(() => {
             (0, v.Sn)(t), (0, v.BN)(t);
         }, [t]),
-        (0, y.Wj)(t);
+        (0, T.Wj)(t);
     let U = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
         M = (0, _.Z)(t),
         D = i.useRef(!1),
-        { shouldShow: V, modalConfig: B } = (0, P.K)(t, "GuildPowerupsOverview"),
-        G = null == o && null != B,
+        { shouldShow: V, modalConfig: G } = (0, P.K)(t, "GuildPowerupsOverview"),
+        B = null == o && null != G,
         W = [];
-    V && G && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    V && B && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
     let [z, F] = (0, u.US)(W),
         K = i.useMemo(
             () =>
@@ -81,7 +81,7 @@ function L(e) {
         X = K.flatMap((e) => e.listings)
             .filter((e) => "multiPerk" === e.type)
             .map((e) => e.group),
-        H = (0, T.f)(X, t);
+        H = (0, y.f)(X, t);
     return (i.useEffect(() => {
         if (null != o && !D.current)
             for (let e of K)
@@ -108,7 +108,7 @@ function L(e) {
     }, [t, o, K, H]),
     i.useEffect(() => {
         null != z &&
-            null != B &&
+            null != G &&
             (0, c.ZDy)(
                 async () => {
                     let { default: e } = await n.e("61879").then(n.bind(n, 802426));
@@ -141,7 +141,7 @@ function L(e) {
                                 return e;
                             })(
                                 {
-                                    modalConfig: B,
+                                    modalConfig: G,
                                     markAsDismissed: F,
                                 },
                                 t,
@@ -155,7 +155,7 @@ function L(e) {
                     modalKey: "dismissible_content_".concat(z),
                 },
             );
-    }, [t, z, F, B]),
+    }, [t, z, F, G]),
     (null == U ? void 0 : U.powerupCatalog) == null)
         ? null
         : (0, r.jsxs)("div", {
@@ -170,7 +170,7 @@ function L(e) {
                               icon: c.Ucv,
                               "aria-label": "",
                           }),
-                          (0, r.jsx)(d.Z.Title, { children: A.intl.string(S.default.yv3DJC) }),
+                          (0, r.jsx)(d.Z.Title, { children: A.intl.string(S.default.yv3DJJ) }),
                       ],
                   }),
                   (0, r.jsxs)("div", {
@@ -184,13 +184,13 @@ function L(e) {
                                           switch (e) {
                                               case N.Us.LEVEL:
                                                   return {
-                                                      title: A.intl.string(S.default["TXY/b2"]),
-                                                      description: A.intl.string(S.default.aJv4PD),
+                                                      title: A.intl.string(S.default["TXY/b0"]),
+                                                      description: A.intl.string(S.default.aJv4PB),
                                                   };
                                               case N.Us.PERK:
                                                   return {
-                                                      title: A.intl.string(S.default.TV3Vm5),
-                                                      description: A.intl.string(S.default.STx9ho),
+                                                      title: A.intl.string(S.default.TV3Vm8),
+                                                      description: A.intl.string(S.default.STx9hp),
                                                   };
                                           }
                                       })(n),
@@ -273,8 +273,8 @@ function L(e) {
                           (0, r.jsxs)("div", {
                               className: k.sidebarContainer,
                               children: [
-                                  M ? (0, r.jsx)(I.Z, { guildId: t }) : (0, r.jsx)(E.Z, { guildId: t }),
-                                  (0, r.jsx)(w.Z, { guildId: t }),
+                                  M ? (0, r.jsx)(I.Z, { guildId: t }) : (0, r.jsx)(w.Z, { guildId: t }),
+                                  (0, r.jsx)(E.Z, { guildId: t }),
                               ],
                           }),
                       ],

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => E }), n(388685);
+n.d(t, { ZP: () => w }), n(388685);
 var r = n(951288),
     i = n(647438),
     o = n(120356),
@@ -14,10 +14,10 @@ var r = n(951288),
     g = n(279475),
     v = n(535396),
     x = n(981631),
-    _ = n(989308),
+    _ = n(39690),
     b = n(388032),
-    h = n(237522),
-    j = n(259913);
+    h = n(470039),
+    j = n(444012);
 function C(e) {
     let t,
         { active: n, nextActive: i, position: o } = e;
@@ -82,13 +82,13 @@ function I(e) {
                 children: (0, r.jsx)(a.xvT, {
                     color: o,
                     variant: "text-sm/medium",
-                    children: b.intl.string(_.default.nIj3LS),
+                    children: b.intl.string(_.default.nIj3LZ),
                 }),
             }),
         ],
     });
 }
-function E(e) {
+function w(e) {
     let { guildId: t, index: n, powerup: o, nextPowerup: l } = e,
         a = (0, u.ZP)(t, o),
         s = (0, u.ZP)(t, l),
@@ -97,7 +97,7 @@ function E(e) {
         _ = a.type === v.A3.TIER_OVERRIDE_ACTIVATED,
         [b, h] = i.useState(void 0);
     (0, m.KT)(b);
-    let E = (0, g.d)(c);
+    let w = (0, g.d)(c);
     return (0, r.jsxs)(f.Z, {
         guildId: t,
         powerup: o,
@@ -110,7 +110,7 @@ function E(e) {
             }),
             (0, r.jsx)(d.Q9, {
                 title: o.title,
-                textColor: E,
+                textColor: w,
                 footer:
                     !_ &&
                     (0, r.jsx)(f.g, {

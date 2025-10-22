@@ -13,11 +13,11 @@ var l = n(442837),
     u = n(313201),
     d = n(144114),
     p = n(607744),
-    f = n(594174),
-    h = n(981631),
+    h = n(594174),
+    f = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(36973);
+    b = n(434652);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,10 +65,10 @@ let y = (e) => {
               : j
                 ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
                 : E
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: h.YeM.MEMBER_AGE })),
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: f.YeM.MEMBER_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))
                   : C &&
-                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: h.YeM.ACCOUNT_AGE })),
+                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: f.YeM.ACCOUNT_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
         ? null
@@ -142,7 +142,7 @@ let y = (e) => {
                                                                                 children: m.intl.format(m.t.azKEPy, {
                                                                                     email:
                                                                                         null ==
-                                                                                        (t = f.default.getCurrentUser())
+                                                                                        (t = h.default.getCurrentUser())
                                                                                             ? void 0
                                                                                             : t.email,
                                                                                 }),
