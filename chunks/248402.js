@@ -31,19 +31,26 @@ function E() {
     if (null == r) e = null;
     else {
         var n, a, o, l, c;
-        e = u.Z.getSelectedParticipantId(r);
+        null != (e = u.Z.getSelectedParticipantId(r)) && u.Z.isParticipantPoppedOut(r, e) && (e = null);
         let t = f.Z.getLastActiveStream(),
             g = null != e ? u.Z.getParticipant(r, e) : null;
         if (
             (((null == g ? void 0 : g.type) !== m.fO.ACTIVITY &&
                 ((null == g ? void 0 : g.type) !== m.fO.USER || (null == (n = g.voiceState) ? void 0 : n.selfVideo))) ||
                 (e = null),
-            null != t && null == e && (e = null == (a = u.Z.getParticipant(r, (0, d.V9)(t))) ? void 0 : a.id),
-            null == e)
+            null != t && null == e)
         ) {
+            let n = null == (a = u.Z.getParticipant(r, (0, d.V9)(t))) ? void 0 : a.id;
+            null == n || u.Z.isParticipantPoppedOut(r, n) || (e = n);
+        }
+        if (null == e) {
             let t = _.default.getId(),
                 n = s()(u.Z.getVideoParticipants(r)).filter(
-                    (e) => e.type === m.fO.USER && e.user.id !== t && !p.Z.isLocalVideoDisabled(e.user.id),
+                    (e) =>
+                        e.type === m.fO.USER &&
+                        e.user.id !== t &&
+                        !p.Z.isLocalVideoDisabled(e.user.id) &&
+                        !u.Z.isParticipantPoppedOut(r, e.id),
                 ),
                 a = n.map((e) => e.user.id),
                 d = Date.now();
