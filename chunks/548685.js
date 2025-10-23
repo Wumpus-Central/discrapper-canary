@@ -1,149 +1,150 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
+    s = n(685816),
     o = n(442837),
-    s = n(28664),
-    c = n(481060),
-    u = n(782568),
-    d = n(607070),
-    g = n(594174),
-    p = n(451478),
-    f = n(626135),
-    C = n(63063),
-    h = n(74538),
-    _ = n(381585),
-    m = n(597688),
-    b = n(128922),
-    v = n(38900),
-    E = n(709999),
-    x = n(653126),
-    O = n(786040),
-    S = n(401975),
-    y = n(328626),
-    j = n(849275),
-    k = n(619899),
-    T = n(642909),
-    L = n(215023),
-    I = n(981631),
-    B = n(388032),
-    A = n(345213),
-    N = n(310582);
-let P = (e) => {
+    c = n(28664),
+    u = n(481060),
+    d = n(782568),
+    g = n(607070),
+    p = n(594174),
+    f = n(451478),
+    C = n(626135),
+    h = n(63063),
+    _ = n(74538),
+    m = n(381585),
+    b = n(597688),
+    v = n(128922),
+    E = n(38900),
+    x = n(709999),
+    O = n(653126),
+    S = n(786040),
+    y = n(401975),
+    j = n(328626),
+    k = n(849275),
+    T = n(619899),
+    L = n(642909),
+    I = n(215023),
+    B = n(981631),
+    A = n(388032),
+    N = n(391447),
+    P = n(687983);
+let R = (e) => {
     var t;
     let {
             isLoading: n,
             title: i,
-            sortedSkuIds: P,
-            numVisibleItems: R,
-            prioritizeUserDiscounts: Z,
-            tab: w,
-            buttonContainerClassName: H,
+            sortedSkuIds: R,
+            numVisibleItems: Z,
+            prioritizeUserDiscounts: w,
+            tab: H,
+            buttonContainerClassName: M,
             orbsSupportedOnly: D,
         } = e,
-        M = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        F = h.ZP.canUseCollectibles(M),
-        W = (0, T.G)("FeedBlock"),
+        F = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        W = _.ZP.canUseCollectibles(F),
+        V = (0, L.G)("FeedBlock"),
         {
-            sortType: V,
-            setSortType: U,
-            sortedItems: z,
-            sortOptions: G,
-            shuffleProducts: K,
-            showRecommendationOption: Y,
-        } = (0, j.Z)({
-            sortedSkuIds: P,
-            isPremiumUser: F,
-            prioritizeUserDiscounts: Z,
+            sortType: U,
+            setSortType: z,
+            sortedItems: G,
+            sortOptions: K,
+            shuffleProducts: Y,
+            showRecommendationOption: q,
+        } = (0, k.Z)({
+            sortedSkuIds: R,
+            isPremiumUser: W,
+            prioritizeUserDiscounts: w,
             orbsSupportedOnly: D,
         }),
-        q = (0, k.St)(z),
-        Q = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        J = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        X = !Q && J,
-        { animationPhase: $, startAnimation: ee } = (0, y.y)(),
-        et = (0, _.sp)(),
-        en = null != (t = null == et ? void 0 : et.sessionId) ? t : "",
-        er = l.useRef(null),
-        el = l.useCallback(
+        J = (0, T.St)(G),
+        Q = (0, o.e7)([g.Z], () => g.Z.useReducedMotion),
+        X = (0, o.e7)([f.Z], () => f.Z.isFocused()),
+        $ = !Q && X,
+        { animationPhase: ee, startAnimation: et } = (0, j.y)(),
+        en = (0, m.sp)(),
+        er = null != (t = null == en ? void 0 : en.sessionId) ? t : "",
+        el = l.useRef(null),
+        ei = l.useCallback(
             (e) => {
-                ee({
+                et({
                     isShuffling: !1,
-                    onOutroComplete: () => U(e),
+                    onOutroComplete: () => z(e),
                 }),
-                    f.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
-                        page_session_id: en,
+                    C.default.track(B.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                        page_session_id: er,
                         sort_type: e,
                     });
             },
-            [ee, U, en],
+            [et, z, er],
         ),
-        ei = b.Z.useConfig({ location: "FeedBlock" }).showCardsV2;
-    return null == M
+        ea = v.Z.useConfig({ location: "FeedBlock" }).showCardsV2;
+    return null == F
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(N.popularPicksSection, N.centeredSection),
+              className: a()(P.popularPicksSection, P.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: N.blockHeader,
+                      className: P.blockHeader,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: N.headerLeft,
+                              className: P.headerLeft,
                               children: [
-                                  (0, r.jsx)(c.Heading, {
+                                  (0, r.jsx)(u.Heading, {
                                       variant: "heading-lg/semibold",
                                       children: i,
                                   }),
-                                  Y &&
-                                      (0, r.jsx)(s.u, {
-                                          text: B.intl.string(B.t["3taPdn"]),
+                                  q &&
+                                      (0, r.jsx)(c.u, {
+                                          text: A.intl.string(A.t["3taPdj"]),
                                           position: "top",
-                                          "aria-label": B.intl.string(B.t["3taPdn"]),
-                                          children: (0, r.jsx)(c.P3F, {
+                                          "aria-label": A.intl.string(A.t["3taPdj"]),
+                                          children: (0, r.jsx)(u.P3F, {
                                               onClick: () =>
-                                                  (0, u.Z)(C.Z.getArticleURL(I.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                              className: N.informationIcon,
-                                              children: (0, r.jsx)(c.d3s, { size: "sm" }),
+                                                  (0, d.Z)(h.Z.getArticleURL(B.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                              className: P.informationIcon,
+                                              children: (0, r.jsx)(u.d3s, { size: "sm" }),
                                           }),
                                       }),
                               ],
                           }),
                           (0, r.jsxs)("div", {
-                              className: a()(N.headerRight, { [A.shopTakeOver]: W }),
+                              className: a()(P.headerRight, { [N.shopTakeOver]: V }),
                               children: [
-                                  (0, r.jsx)(c.Text, {
+                                  (0, r.jsx)(u.Text, {
                                       variant: "text-md/medium",
-                                      children: B.intl.string(B.t.uaX709),
+                                      children: A.intl.string(A.t.uaX705),
                                   }),
                                   (0, r.jsx)("div", {
-                                      className: H,
-                                      children: (0, r.jsx)(c.PhF, {
-                                          options: G,
-                                          select: el,
-                                          className: N.sortSelect,
-                                          popoutClassName: a()({ [A.shopTakeOver]: W }),
-                                          isSelected: (e) => e === V,
+                                      className: M,
+                                      children: (0, r.jsx)(u.PhF, {
+                                          options: K,
+                                          select: ei,
+                                          className: P.sortSelect,
+                                          popoutClassName: a()({ [N.shopTakeOver]: V }),
+                                          isSelected: (e) => e === U,
                                           serialize: (e) => e,
                                       }),
                                   }),
                                   (0, r.jsx)("div", {
-                                      className: H,
-                                      children: (0, r.jsx)(c.Button, {
+                                      className: M,
+                                      children: (0, r.jsx)(u.Button, {
                                           variant: "secondary",
-                                          text: B.intl.string(B.t.X3tnc3),
-                                          buttonRef: er,
+                                          text: A.intl.string(A.t.X3tnc4),
+                                          buttonRef: el,
                                           onClick: () => {
-                                              ee({
+                                              et({
                                                   isShuffling: !0,
-                                                  onOutroComplete: K,
-                                                  returnRef: er,
+                                                  onOutroComplete: Y,
+                                                  returnRef: el,
                                               }),
-                                                  f.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
-                                                      page_session_id: en,
+                                                  C.default.track(B.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                      page_session_id: er,
                                                   });
                                           },
-                                          disabled: $ !== y.g.MOUNTED && $ !== y.g.FINISHED,
+                                          disabled: ee !== j.g.MOUNTED && ee !== j.g.FINISHED,
                                       }),
                                   }),
                               ],
@@ -151,44 +152,44 @@ let P = (e) => {
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: N.feed,
+                      className: P.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
                                 children: [...Array(12)].map((e, t) =>
-                                    ei ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(v.K, {}, t + 1),
+                                    ea ? (0, r.jsx)(y.Z, {}, t + 1) : (0, r.jsx)(E.K, {}, t + 1),
                                 ),
                             })
-                          : q.slice(0, R).map((e, t) => {
+                          : J.slice(0, Z).map((e, t) => {
                                 let n,
-                                    l = m.Z.getCategoryForProduct(e.skuId);
+                                    l = b.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
-                                if (X)
-                                    if ($ === y.g.SHUFFLE_OUT)
-                                        return ei
+                                if ($)
+                                    if (ee === j.g.SHUFFLE_OUT)
+                                        return ea
                                             ? (0, r.jsx)(
                                                   "div",
                                                   {
-                                                      className: N.shuffleOutro,
-                                                      children: (0, r.jsx)(S.Z, { skipPulseAnimation: !0 }),
+                                                      className: P.shuffleOutro,
+                                                      children: (0, r.jsx)(y.Z, { skipPulseAnimation: !0 }),
                                                   },
                                                   "".concat(e.skuId, "-").concat(t),
                                               )
                                             : (0, r.jsx)(
                                                   "div",
                                                   {
-                                                      className: N.shuffleOutro,
-                                                      children: (0, r.jsx)("div", { className: N.placeholderCard }),
+                                                      className: P.shuffleOutro,
+                                                      children: (0, r.jsx)("div", { className: P.placeholderCard }),
                                                   },
                                                   "".concat(e.skuId, "-").concat(t),
                                               );
                                     else
-                                        $ === y.g.SORT_OUT
-                                            ? (n = N.sortChangedOutro)
-                                            : $ === y.g.SHUFFLE_IN
-                                              ? (n = N.shuffleIntro)
-                                              : $ === y.g.SORT_IN && (n = N.sortChangedIntro);
+                                        ee === j.g.SORT_OUT
+                                            ? (n = P.sortChangedOutro)
+                                            : ee === j.g.SHUFFLE_IN
+                                              ? (n = P.shuffleIntro)
+                                              : ee === j.g.SORT_IN && (n = P.sortChangedIntro);
                                 return (0, r.jsx)(
-                                    _.k0,
+                                    m.k0,
                                     {
                                         newValue: {
                                             tilePosition: t,
@@ -196,21 +197,22 @@ let P = (e) => {
                                             categoryPosition: 2,
                                         },
                                         children:
-                                            ei && (null == e ? void 0 : e.skuId) != null
+                                            ea && (null == e ? void 0 : e.skuId) != null
                                                 ? (0, r.jsx)("div", {
                                                       className: n,
-                                                      children: (0, r.jsx)(x.Z, {
+                                                      children: (0, r.jsx)(O.Z, {
                                                           skuId: null == e ? void 0 : e.skuId,
-                                                          prioritizedCurrency: w === L.AW.ORBS ? O.tA.ORBS : void 0,
-                                                          onClickAnalytics: (0, O.wO)(e, w, et),
+                                                          prioritizedCurrency: H === I.AW.ORBS ? S.tA.ORBS : void 0,
+                                                          onClickAnalytics: (0, S.wO)(e, H, en),
                                                       }),
                                                   })
-                                                : (0, r.jsx)(E.Z, {
+                                                : (0, r.jsx)(x.Z, {
                                                       product: e,
                                                       category: l,
-                                                      user: M,
-                                                      tab: w,
+                                                      user: F,
+                                                      tab: H,
                                                       className: n,
+                                                      shopBlockType: s.z.FEED,
                                                   }),
                                     },
                                     null == e ? void 0 : e.skuId,

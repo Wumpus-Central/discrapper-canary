@@ -37,9 +37,11 @@ let f = (e) => {
     }
     return (0, a.EQ)([n, b > 1])
         .with(["card", !0], () =>
-            null != p && p === i.z.HERO ? y(d.intl.formatToPlainString(d.t.Io7ozs, { days: b })) : null,
+            null != p && (p === i.z.HERO || p === i.z.FEED)
+                ? y(d.intl.formatToPlainString(d.t.Io7ozn, { days: b }))
+                : null,
         )
-        .with(["banner", !0], () => y(d.intl.formatToPlainString(d.t["8gsP5O"], { days: b })))
-        .with(["modal", !0], () => y(d.intl.formatToPlainString(d.t.Io7ozs, { days: b })))
-        .otherwise(() => y(d.intl.string(d.t.Bc13HB)));
+        .with(["banner", !0], () => y(d.intl.formatToPlainString(d.t["8gsP5M"], { days: b })))
+        .with(["modal", !0], () => y(d.intl.formatToPlainString(d.t.Io7ozn, { days: b })))
+        .otherwise(() => y(d.intl.string(d.t.Bc13HF)));
 };
