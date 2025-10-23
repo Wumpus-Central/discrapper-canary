@@ -50,6 +50,7 @@ var r = (function (e) {
         (e.PREMIUM_PAYMENT_ACTION_SHEET = "premium payment action sheet"),
         (e.CHANNEL_CALL = "channel call"),
         (e.CHANNEL_CALL_CONNECTING_SCREEN = "channel call connecting screen"),
+        (e.CALL_TILE_POPOUT = "call tile popout"),
         (e.CHANNEL_DETAILS = "channel details"),
         (e.RTC_PANEL = "rtc panel"),
         (e.AUDIO_INPUT_BUTTON = "audio input button"),

@@ -175,13 +175,14 @@ class z extends (r = a.Component) {
             contentClassName: d,
             themeOverride: _,
             hideModals: m = !1,
+            appContext: g,
         } = this.props;
         (0, M.getPlatform)();
-        let g = K({
+        let E = K({
                 withTitleBar: o,
                 isFullScreen: a,
             }),
-            E = r === Z.$J ? D.Z : S.Z;
+            y = r === Z.$J ? D.Z : S.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
                 L.w,
@@ -195,11 +196,11 @@ class z extends (r = a.Component) {
                                 (0, i.jsx)(q, {
                                     guestWindow: l,
                                     className: c,
-                                    children: (0, i.jsxs)(E, {
+                                    children: (0, i.jsxs)(y, {
                                         children: [
                                             (0, i.jsx)(A.Co, {}),
                                             (0, i.jsx)(w.Wu, {
-                                                appContext: B.IlC.POPOUT,
+                                                appContext: null != g ? g : B.IlC.POPOUT,
                                                 renderWindow: l,
                                                 children: (0, i.jsx)(T.m, {
                                                     children: (0, i.jsxs)(P.yP, {
@@ -207,7 +208,7 @@ class z extends (r = a.Component) {
                                                             (0, i.jsxs)("div", {
                                                                 className: F.popout,
                                                                 children: [
-                                                                    g && (0, i.jsx)(C.TF, { windowKey: r }),
+                                                                    E && (0, i.jsx)(C.TF, { windowKey: r }),
                                                                     null,
                                                                     (0, i.jsx)("div", {
                                                                         className: s()(F.content, d),

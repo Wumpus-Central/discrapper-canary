@@ -6052,7 +6052,9 @@ var n4 = (function (e) {
 let n5 = 14,
     n6 = 30;
 var n7 = (function (e) {
-    return (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), e;
+    return (
+        (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), (e.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"), e
+    );
 })({});
 let n9 = __OVERLAY__ ? "OVERLAY" : "APP";
 var re = (function (e) {
