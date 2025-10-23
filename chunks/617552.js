@@ -83,12 +83,9 @@ function m(e) {
     var { onConfirm: t, onCancel: n } = e,
         l = p(e, ["onConfirm", "onCancel"]);
     let [u, f] = i.useState(!1);
-    i.useEffect(
-        () => () => {
-            u && s.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 });
-        },
-        [u],
-    );
+    i.useEffect(() => {
+        s.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: u });
+    }, [u]);
     let h = () => {
             null == n || n(), l.onClose();
         },
@@ -100,15 +97,15 @@ function m(e) {
         _(d({}, l), {
             size: "md",
             title: c.intl.string(c.t.ye21jI),
-            subtitle: c.intl.string(c.t.hbagWF),
+            subtitle: c.intl.string(c.t.hbagWD),
             actions: [
                 {
-                    text: c.intl.string(c.t.B8pz39),
+                    text: c.intl.string(c.t.B8pz37),
                     onClick: h,
                     variant: "secondary",
                 },
                 {
-                    text: c.intl.string(c.t.makWn5),
+                    text: c.intl.string(c.t.makWn9),
                     onClick: m,
                     variant: "primary",
                 },
@@ -116,7 +113,7 @@ function m(e) {
             actionBarInput: (0, r.jsx)(o.Checkbox, {
                 checked: u,
                 onChange: (e) => f(e),
-                label: c.intl.string(c.t.wGAwOT),
+                label: c.intl.string(c.t.wGAwOS),
             }),
         }),
     );
