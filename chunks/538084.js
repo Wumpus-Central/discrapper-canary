@@ -1,100 +1,77 @@
 n.d(t, {
-    default: () => p,
-    k: () => d,
+    default: () => h,
+    k: () => p,
 }),
     n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(913527),
     a = n.n(l),
-    o = n(481060),
-    s = n(45251),
-    c = n(388032),
-    u = n(206536);
-let d = "SCHEDULED_MESSAGE_CREATE_MODAL_KEY";
-function p(e) {
-    let { channel: t, transitionState: n, onClose: l, prefilledTime: p } = e,
-        h = a()(),
-        f = a()().add(365, "days"),
-        [m, g] = r.useState(null != p ? a()(p.substring(0, 200)) : h);
-    return (0, i.jsxs)(o.Y0X, {
+    o = n(793030),
+    s = n(481060),
+    c = n(45251),
+    u = n(388032),
+    d = n(206536);
+let p = "SCHEDULED_MESSAGE_CREATE_MODAL_KEY";
+function h(e) {
+    let { channel: t, transitionState: n, onClose: l, prefilledTime: h } = e,
+        f = a()(),
+        m = a()().add(365, "days"),
+        [g, b] = r.useState(null != h ? a()(h.substring(0, 200)) : f);
+    return (0, i.jsx)(o.Modal, {
         transitionState: n,
-        size: o.CgR.SMALL,
-        "aria-label": c.intl.string(c.t.WbFpq6),
-        parentComponent: "ScheduledMessageCreateModal",
-        children: [
-            (0, i.jsx)(o.olH, {
+        size: "md",
+        title: u.intl.string(u.t["3+ii4F"]),
+        onClose: l,
+        actions: [
+            {
+                variant: "secondary",
+                text: u.intl.string(u.t["ETE/oC"]),
                 onClick: l,
-                className: u.closeButton,
-            }),
-            (0, i.jsx)(o.xBx, {
-                separator: !1,
-                className: u.header,
-                children: (0, i.jsx)(o.Heading, {
-                    variant: "heading-xl/medium",
-                    children: c.intl.string(c.t["3+ii4O"]),
-                }),
-            }),
-            (0, i.jsx)(o.hzk, {
-                children: (0, i.jsxs)("div", {
-                    className: u.doubleInput,
-                    children: [
-                        (0, i.jsx)("div", {
-                            className: u.column,
-                            children: (0, i.jsx)(o.Wrb, {
-                                required: !0,
-                                label: c.intl.string(c.t.pSZKvL),
-                                value: m,
-                                onSelect: (e) => {
-                                    g(e);
-                                },
-                                minDate: h,
-                                maxDate: f,
-                                disabled: !1,
-                            }),
-                        }),
-                        (0, i.jsx)("div", {
-                            className: u.column,
-                            children: (0, i.jsx)(o.MGJ, {
-                                label: c.intl.string(c.t.GOmEb2),
-                                required: !0,
-                                value: m,
-                                onChange: (e) => {
-                                    e.isValid() && g(e);
-                                },
-                                hideValue: !1,
-                                disabled: !1,
-                            }),
-                        }),
-                    ],
-                }),
-            }),
-            (0, i.jsxs)(o.mzw, {
-                className: u.footer,
-                children: [
-                    (0, i.jsx)("div", {
-                        "data-button-hoisted-classname-wrapper": !0,
-                        className: u.cancelButton,
-                        children: (0, i.jsx)(o.Button, {
-                            variant: "secondary",
-                            text: c.intl.string(c.t["ETE/oK"]),
-                            onClick: l,
-                        }),
+            },
+            {
+                variant: "primary",
+                text: u.intl.string(u.t.iQ1SwX),
+                onClick: () => {
+                    (0, c._e)({
+                        channelId: t.id,
+                        scheduledTimestamp: g.toISOString(),
                     }),
-                    (0, i.jsx)(o.Button, {
-                        variant: "primary",
-                        text: c.intl.string(c.t.iQ1Swc),
-                        onClick: () => {
-                            (0, s._e)({
-                                channelId: t.id,
-                                scheduledTimestamp: m.toISOString(),
-                            }),
-                                (0, o.Mr3)(d);
+                        (0, s.Mr3)(p);
+                },
+            },
+        ],
+        children: (0, i.jsxs)("div", {
+            className: d.doubleInput,
+            children: [
+                (0, i.jsx)("div", {
+                    className: d.column,
+                    children: (0, i.jsx)(s.Wrb, {
+                        required: !0,
+                        label: u.intl.string(u.t.pSZKvM),
+                        value: g,
+                        onSelect: (e) => {
+                            b(e);
                         },
+                        minDate: f,
+                        maxDate: m,
                         disabled: !1,
                     }),
-                ],
-            }),
-        ],
+                }),
+                (0, i.jsx)("div", {
+                    className: d.column,
+                    children: (0, i.jsx)(s.MGJ, {
+                        label: u.intl.string(u.t.GOmEb8),
+                        required: !0,
+                        value: g,
+                        onChange: (e) => {
+                            e.isValid() && b(e);
+                        },
+                        hideValue: !1,
+                        disabled: !1,
+                    }),
+                }),
+            ],
+        }),
     });
 }
