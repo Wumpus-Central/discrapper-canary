@@ -8,7 +8,7 @@ var i = n(28664),
     s = n(200615),
     c = n(981631),
     u = n(388032),
-    d = n(242081);
+    d = n(58174);
 function m(e) {
     let { product: t } = e,
         n = (0, o.ql)(t, c.tuJ.PREMIUM_TIER_2);

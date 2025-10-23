@@ -27,8 +27,8 @@ var r,
     P = n(213609),
     j = n(728345),
     x = n(812206),
-    A = n(933557),
-    Z = n(194082),
+    Z = n(933557),
+    A = n(194082),
     w = n(377171),
     L = n(379357),
     R = n(264165),
@@ -56,7 +56,7 @@ var r,
     er = n(599706),
     ei = n(981631),
     el = n(388032),
-    ea = n(544284);
+    ea = n(84822);
 let eo = [14, 14, 12, 12, 10, 8, 6],
     es = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -389,7 +389,7 @@ let eO = (e) => {
         var t;
         let { guild: n, channel: r, partySize: a, members: s, onChannelContextMenu: c } = e,
             u = l.useRef(null),
-            d = (0, A.ZP)(r, !0),
+            d = (0, Z.ZP)(r, !0),
             p = (0, q.EB)(n, 32),
             g = (0, q.gM)(n);
         return (0, i.jsx)(ed, {
@@ -722,7 +722,7 @@ let eO = (e) => {
                         (0, i.jsxs)("div", {
                             children: [es(en.ZP.getName(l)), ec(g)],
                         }),
-                        (0, i.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL }),
+                        (0, i.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL }),
                     ],
                 }),
                 h,

@@ -12,7 +12,7 @@ var r = n(951288),
     h = n(981631),
     f = n(176505),
     g = n(388032),
-    m = n(503769);
+    m = n(46674);
 function b(e, t) {
     return (0, r.jsx)(
         a.Text,
@@ -29,7 +29,7 @@ let _ = i.memo(function (e) {
     let { guild: _ } = e,
         O = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(_.id), [_.id]),
         y = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(_.id)),
-        v = i.useMemo(() => {
+        j = i.useMemo(() => {
             if (null == O || null == y) return 0;
             let e = 0;
             return (
@@ -39,7 +39,7 @@ let _ = i.memo(function (e) {
                 e
             );
         }, [y, O]),
-        j = null == O ? 0 : O.length,
+        v = null == O ? 0 : O.length,
         x = (0, l.JA)("progress-bar-".concat(_.id));
     return (0, r.jsxs)("li", {
         children: [
@@ -95,8 +95,8 @@ let _ = i.memo(function (e) {
                                                 className: m.rightText,
                                                 children: g.intl.format(g.t.eqZ1lW, {
                                                     numberHook: b,
-                                                    total: j.toString(),
-                                                    completed: v.toString(),
+                                                    total: v.toString(),
+                                                    completed: j.toString(),
                                                 }),
                                             }),
                                             (0, r.jsx)(p.Z, {
@@ -112,7 +112,7 @@ let _ = i.memo(function (e) {
                             (0, r.jsx)(a.Exd, {
                                 className: m.progressBar,
                                 foregroundGradientColor: [(0, s.Lq)(h.Ilk.GREEN_300), (0, s.Lq)(h.Ilk.GREEN_230)],
-                                percent: (v / j) * 100 + 3,
+                                percent: (j / v) * 100 + 3,
                                 animate: !0,
                             }),
                         ],

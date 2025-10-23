@@ -15,12 +15,12 @@ var r = n(951288),
     m = n(639777),
     b = n(495804),
     _ = n(441536),
-    O = n(39690),
+    O = n(149829),
     y = n(388032),
-    v = n(621779);
-function j(e) {
+    j = n(931942);
+function v(e) {
     let { guild: t, withMargin: l } = e,
-        j = (0, b.Z)(t),
+        v = (0, b.Z)(t),
         x = (0, m.Z)(t.id),
         C = i.useCallback(() => {
             (0, _.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
@@ -32,7 +32,7 @@ function j(e) {
     i.useEffect(() => {
         E !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
     }, [t.id, E, t.premiumSubscriberCount]);
-    let S = Math.min((E / j) * 100, 100),
+    let S = Math.min((E / v) * 100, 100),
         [I, P] = (0, u.q_F)(
             () => ({
                 width: E === t.premiumSubscriberCount ? "calc(".concat(S, "% - 4px)") : "0%",
@@ -48,7 +48,7 @@ function j(e) {
     i.useEffect(() => {
         P({ width: "calc(".concat(S, "% - 4px)") });
     }, [S, P]);
-    let N = E >= j;
+    let N = E >= v;
     return (0, r.jsx)(u.P3F, {
         "aria-label": void 0,
         role: "button",
@@ -61,7 +61,7 @@ function j(e) {
         onClick: () => {
             C();
         },
-        className: o()(v.container, { [v.containerWithMargin]: l }),
+        className: o()(j.container, { [j.containerWithMargin]: l }),
         onContextMenu: (e) => {
             x &&
                 (0, d.jW)(e, async () => {
@@ -114,50 +114,50 @@ function j(e) {
                 });
         },
         children: (0, r.jsxs)("div", {
-            className: v.contentContainer,
+            className: j.contentContainer,
             children: [
-                (0, r.jsx)("div", { className: v.progressContainer }),
+                (0, r.jsx)("div", { className: j.progressContainer }),
                 (0, r.jsx)(a.animated.div, {
-                    className: o()(v.progress, { [v.progressLow]: S <= 5 }),
+                    className: o()(j.progress, { [j.progressLow]: S <= 5 }),
                     style: I,
                 }),
                 (0, r.jsxs)("div", {
-                    className: v.textContainer,
+                    className: j.textContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: v.textContentContainer,
+                            className: j.textContentContainer,
                             children: [
                                 (0, r.jsx)(s.xvT, {
-                                    className: v.text,
+                                    className: j.text,
                                     variant: "text-xs/semibold",
                                     children: y.intl.string(O.default.NI6Ihe),
                                 }),
-                                t.premiumSubscriberCount >= j &&
+                                t.premiumSubscriberCount >= v &&
                                     (0, r.jsx)(s.xvT, {
-                                        className: v.text,
+                                        className: j.text,
                                         variant: "text-xs/semibold",
                                         children: "\uD83C\uDF89",
                                     }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: v.textContentContainer,
+                            className: j.textContentContainer,
                             children: [
                                 (0, r.jsx)(s.xvT, {
-                                    className: o()(v.text, v.boostCountText),
+                                    className: o()(j.text, j.boostCountText),
                                     variant: "text-xs/semibold",
                                     children: N
                                         ? y.intl.formatToPlainString(O.default["Ehpq+7"], { appliedBoostCount: E })
                                         : y.intl.formatToPlainString(O.default["/rbPDs"], {
                                               appliedBoostCount: E,
-                                              maxBoostCount: j,
+                                              maxBoostCount: v,
                                           }),
                                 }),
                                 (0, r.jsx)(g.Z, {
                                     width: 12,
                                     height: 12,
                                     direction: g.Z.Directions.RIGHT,
-                                    className: o()(v.text, v.boostCountText),
+                                    className: o()(j.text, j.boostCountText),
                                 }),
                             ],
                         }),
@@ -169,7 +169,7 @@ function j(e) {
 }
 function x(e) {
     let { guild: t, withMargin: n } = e;
-    return (0, r.jsx)(j, {
+    return (0, r.jsx)(v, {
         guild: t,
         withMargin: n,
     });

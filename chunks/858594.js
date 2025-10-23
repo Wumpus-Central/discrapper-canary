@@ -5,9 +5,9 @@ var a = t(120356),
     i = t.n(a),
     r = t(481060),
     s = t(162190),
-    o = t(940884),
+    o = t(470658),
     u = t(388032),
-    c = t(3804);
+    c = t(722417);
 function d(e) {
     let { className: n, game: t, onClick: a, imageClassName: d, titleClassName: m, disabled: v = !1 } = e,
         g = (0, s.Z)(t.gameId, "cover");

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => l }), n(539854);
-var r = n(647438),
-    o = n(823379),
-    a = n(267642),
-    i = n(535396),
-    c = n(39690),
-    s = n(388032);
+o.d(t, { Z: () => l }), o(539854);
+var n = o(647438),
+    r = o(823379),
+    a = o(267642),
+    c = o(535396),
+    s = o(149829),
+    i = o(388032);
 function l(e) {
     let {
         includeEmojis: t,
-        includeStickers: n,
+        includeStickers: o,
         includeSoundboards: l,
     } = arguments.length > 1 && void 0 !== arguments[1]
         ? arguments[1]
@@ -17,35 +17,35 @@ function l(e) {
               includeStickers: !0,
               includeSoundboards: !0,
           };
-    return r.useMemo(() => {
-        let r = [],
-            u = (0, i.d5)();
+    return n.useMemo(() => {
+        let n = [],
+            d = (0, c.d5)();
         return (
             t &&
-                r.push({
+                n.push({
                     perkIcon: a.Ro.EMOJI,
-                    description: s.intl.formatToPlainString(c.default["NXvV0+"], {
+                    description: i.intl.formatToPlainString(s.default["NXvV0+"], {
                         totalEmojis: e.features.total_emoji_slots,
                         additionalEmojis: e.features.additional_emoji_slots,
                     }),
                 }),
-            n &&
-                r.push({
+            o &&
+                n.push({
                     perkIcon: a.Ro.STICKER,
-                    description: s.intl.formatToPlainString(c.default.ZEvvPz, {
+                    description: i.intl.formatToPlainString(s.default.ZEvvPz, {
                         totalStickers: e.features.total_sticker_slots,
                         additionalStickers: e.features.additional_sticker_slots,
                     }),
                 }),
             l &&
-                r.push({
+                n.push({
                     perkIcon: a.Ro.SOUNDBOARD,
-                    description: s.intl.formatToPlainString(c.default["s9u/E7"], {
+                    description: i.intl.formatToPlainString(s.default["s9u/E7"], {
                         totalSoundboards: e.features.total_sound_slots,
                         additionalSoundboards: e.features.additional_sound_slots,
                     }),
                 }),
-            r.concat(e.features.features.map((e) => u[e]).filter(o.lm))
+            n.concat(e.features.features.map((e) => d[e]).filter(r.lm))
         );
-    }, [e, t, n, l]);
+    }, [e, t, o, l]);
 }

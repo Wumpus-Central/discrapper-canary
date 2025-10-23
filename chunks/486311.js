@@ -14,10 +14,10 @@ var r = n(951288),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    _ = n(39690),
+    _ = n(149829),
     O = n(388032),
-    y = n(524707);
-function v(e) {
+    y = n(969649);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-let j = {
+let v = {
         animation: {
             BEG: 0,
             END: 75,
@@ -65,16 +65,16 @@ let j = {
                 var e;
                 switch (null == x || null == (e = x.popout) ? void 0 : e.type) {
                     case h.J.LEVEL_REACHED:
-                        return (0, r.jsx)(g.jG, v({ guildId: t }, x.popout));
+                        return (0, r.jsx)(g.jG, j({ guildId: t }, x.popout));
                     case h.J.PERKS_AVAILABLE:
-                        return (0, r.jsx)(g.$h, v({ guildId: t }, x.popout));
+                        return (0, r.jsx)(g.$h, j({ guildId: t }, x.popout));
                     case h.J.PERKS_PURCHASABLE:
-                        return (0, r.jsx)(g.yI, v({ guildId: t }, x.popout));
+                        return (0, r.jsx)(g.yI, j({ guildId: t }, x.popout));
                     case h.J.NEW_PERK_AVAILABLE:
-                        return (0, r.jsx)(g.cO, v({ guildId: t }, x.popout));
+                        return (0, r.jsx)(g.cO, j({ guildId: t }, x.popout));
                     case h.J.GAME_SERVER_HOSTING_AVAILABLE:
                     case h.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
-                        return (0, r.jsx)(g.dJ, v({ guildId: t }, x.popout));
+                        return (0, r.jsx)(g.dJ, j({ guildId: t }, x.popout));
                     default:
                         return (0, r.jsx)("div", {});
                 }
@@ -101,7 +101,7 @@ let j = {
                 var i, a;
                 return (0, r.jsx)(
                     u.m,
-                    ((i = v({}, e)),
+                    ((i = j({}, e)),
                     (a = a =
                         {
                             ref: w,
@@ -120,7 +120,7 @@ let j = {
                                     children: (0, r.jsx)(s.kci, {
                                         nextScene: Z,
                                         className: y.lottie,
-                                        sceneSegments: j,
+                                        sceneSegments: v,
                                         importData: () => n.e("50821").then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: T,
                                         rendererSettings: { preserveAspectRatio: "xMidYMid slice" },

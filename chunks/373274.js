@@ -23,8 +23,8 @@ var r,
     _ = n(313201),
     O = n(362658),
     y = n(915885),
-    v = n(258871),
-    j = n(216306),
+    j = n(258871),
+    v = n(216306),
     x = n(398758),
     C = n(737982),
     E = n(486311),
@@ -55,7 +55,7 @@ var r,
     X = n(53425),
     Q = n(424785),
     J = n(770202),
-    $ = n(79556),
+    $ = n(437621),
     ee = n(428127),
     et = n(950969),
     en = n(233657),
@@ -65,7 +65,7 @@ var r,
     eo = n(981631),
     ea = n(176505),
     es = n(388032),
-    ec = n(344110);
+    ec = n(776677);
 function eu(e, t, n) {
     return (
         t in e
@@ -556,7 +556,7 @@ class ef extends (r = l.PureComponent) {
                 if (null == r) return;
                 let i = null,
                     l = r.getShownChannelAndThreadIds();
-                null != n && l.includes(n) && (i = (0, j.KY)(t)), (0, j.Uo)(e.id, l, i);
+                null != n && l.includes(n) && (i = (0, v.KY)(t)), (0, v.Uo)(e.id, l, i);
             }),
             eu(this, "renderSection", (e) => {
                 let { section: t } = e,
@@ -602,7 +602,7 @@ class ef extends (r = l.PureComponent) {
                     switch (t) {
                         case ei.z.GUILD_HUB_HEADER_OPTIONS:
                             return (0, i.jsx)(
-                                v.Z,
+                                j.Z,
                                 {
                                     guild: r,
                                     channel: A.ZP.getDefaultChannel(r.id),
@@ -721,9 +721,9 @@ class ef extends (r = l.PureComponent) {
                 if (null == m) return null;
                 let { category: b, channel: _ } = m,
                     O = b instanceof D.VR,
-                    j = _.record,
+                    v = _.record,
                     x = "".concat(t).concat(_.id);
-                switch (j.type) {
+                switch (v.type) {
                     case eo.d4z.GUILD_ANNOUNCEMENT:
                     case eo.d4z.GUILD_TEXT:
                     case eo.d4z.GUILD_FORUM:
@@ -735,7 +735,7 @@ class ef extends (r = l.PureComponent) {
                             {
                                 children: [
                                     (0, i.jsx)($.Z, {
-                                        channel: j,
+                                        channel: v,
                                         guild: r,
                                         position: _.position,
                                         selected: a === _.id,
@@ -749,12 +749,12 @@ class ef extends (r = l.PureComponent) {
                                     _.threadCount > 0
                                         ? (0, i.jsx)(X.Z, {
                                               withGuildIcon: g,
-                                              channel: j,
+                                              channel: v,
                                               sortedThreadIds: _.threadIds,
                                               selectedChannel:
-                                                  null != o && (o.id === _.id || o.parent_id === j.id) ? o : null,
+                                                  null != o && (o.id === _.id || o.parent_id === v.id) ? o : null,
                                               selectedVoiceChannelId:
-                                                  (null == s ? void 0 : s.parent_id) === j.id ? c : null,
+                                                  (null == s ? void 0 : s.parent_id) === v.id ? c : null,
                                           })
                                         : null,
                                 ],
@@ -766,7 +766,7 @@ class ef extends (r = l.PureComponent) {
                         return (0, i.jsx)(
                             Q.Z,
                             {
-                                channel: j,
+                                channel: v,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -783,7 +783,7 @@ class ef extends (r = l.PureComponent) {
                         return (0, i.jsx)(
                             er.Z,
                             {
-                                channel: j,
+                                channel: v,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -802,7 +802,7 @@ class ef extends (r = l.PureComponent) {
                         return (0, i.jsx)(
                             J.Z,
                             {
-                                channel: j,
+                                channel: v,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -811,13 +811,13 @@ class ef extends (r = l.PureComponent) {
                         );
                     case eo.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, i.jsx)(U.kw, { channel: j }, "readonly-".concat(j.id));
+                        return (0, i.jsx)(U.kw, { channel: v }, "readonly-".concat(v.id));
                     case eo.d4z.PUBLIC_THREAD:
                     case eo.d4z.PRIVATE_THREAD:
                         return (0, i.jsx)(
                             $.Z,
                             {
-                                channel: j,
+                                channel: v,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -919,7 +919,7 @@ let eg = (e) => {
                     null == (r = document.querySelector(e)) || r.focus();
                 }
         }, []),
-        v = l.useCallback(
+        j = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = O.current;
@@ -928,7 +928,7 @@ let eg = (e) => {
                 }),
             [],
         ),
-        j = l.useCallback(
+        v = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = O.current;
@@ -942,8 +942,8 @@ let eg = (e) => {
             defaultFocused: null != n ? n : void 0,
             isEnabled: o,
             setFocus: y,
-            scrollToStart: v,
-            scrollToEnd: j,
+            scrollToStart: j,
+            scrollToEnd: v,
         }),
         E = C.setFocus;
     l.useEffect(() => {

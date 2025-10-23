@@ -21,12 +21,12 @@ var r = n(951288),
     y = n(474936),
     I = n(981631),
     C = n(388032),
-    S = n(3254),
-    N = n(952602);
+    S = n(427954),
+    N = n(286389);
 function T(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: T } = e,
         { analyticsLocations: P } = (0, d.ZP)(),
-        { isHovered: j, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, h.Z)(200, 300),
+        { isHovered: j, setIsHovered: x, onMouseEnter: Z, onMouseLeave: A } = (0, h.Z)(200, 300),
         { enableEmojiCTA: w } = _.w.useExperiment({ location: "GiftIntentActionButton" }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -41,9 +41,9 @@ function T(e) {
     }, [t, n]);
     let L = i.useCallback(
             (e) => {
-                "focus" !== e.type && A();
+                "focus" !== e.type && Z();
             },
-            [A],
+            [Z],
         ),
         R = (e) => {
             e.stopPropagation();
@@ -90,8 +90,8 @@ function T(e) {
                 giftIntentType: n,
                 premiumGiftIntentCardType: v.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: A,
-                onMouseLeave: Z,
+                onMouseEnter: Z,
+                onMouseLeave: A,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: I.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
@@ -106,7 +106,7 @@ function T(e) {
                       onClick: R,
                       className: a()(N.actionButton, S.popoutButton, { [N.highlight]: T }),
                       onMouseEnter: L,
-                      onMouseLeave: Z,
+                      onMouseLeave: A,
                       children: (0, r.jsx)(o.animated.div, {
                           className: S.spriteContainer,
                           children: (0, r.jsx)("div", { className: S.sprite }),
@@ -117,7 +117,7 @@ function T(e) {
                       buttonRef: k,
                       onClick: R,
                       onMouseEnter: L,
-                      onMouseLeave: Z,
+                      onMouseLeave: A,
                       children: (0, r.jsxs)("div", {
                           className: S.pillContentContainer,
                           children: [

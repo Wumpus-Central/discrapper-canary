@@ -9,9 +9,9 @@ var r = n(951288),
     u = n(973772),
     d = n(279604),
     p = n(535396),
-    h = n(39690),
+    h = n(149829),
     f = n(388032),
-    g = n(123879);
+    g = n(362320);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,14 +80,14 @@ function _(e) {
     if (i.type === p.A3.POWERUP_ACTIVATED) return (0, r.jsx)(b, { cost: n.cost });
 }
 function O(e) {
-    let { guildId: t, powerup: n, compact: l, iconSize: b, size: O, grow: y, className: v, onError: j } = e,
+    let { guildId: t, powerup: n, compact: l, iconSize: b, size: O, grow: y, className: j, onError: v } = e,
         { onActivate: x, isLoading: C, error: E, onShowDeactivate: S } = (0, d.ZP)(t, n),
         I = (0, u.ZP)(t, n).type !== p.A3.INACTIVE,
         { disabled: P, reason: N } = (0, c.Z)(t, n, I);
     return (
         i.useEffect(() => {
-            null == j || j(E);
-        }, [E, j]),
+            null == v || v(E);
+        }, [E, v]),
         (0, r.jsx)(s.aML, {
             delay: 100,
             "aria-label": null != N ? N : I ? f.intl.string(h.default.TZsu1U) : void 0,
@@ -113,7 +113,7 @@ function O(e) {
                                     [g.buttonWrapper]: y,
                                     [g.noGrow]: !y,
                                 },
-                                v,
+                                j,
                             ),
                             children: (() => {
                                 let { text: e, icon: t } = (function (e) {

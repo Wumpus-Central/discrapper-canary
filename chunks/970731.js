@@ -12,7 +12,7 @@ var o = n(120356),
     c = n(481060),
     u = n(493773),
     d = n(921944),
-    p = n(12614);
+    p = n(164208);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,8 +91,8 @@ function y(e) {
         contentClassName: g,
         buttonCTA: m,
         secondaryButtonCTA: y,
-        onClick: v,
-        onSecondaryClick: j,
+        onClick: j,
+        onSecondaryClick: v,
         buttonProps: x = {
             color: s.zx.Colors.BRAND,
             look: s.zx.Looks.FILLED,
@@ -139,7 +139,7 @@ function y(e) {
                                     f(h({}, C), {
                                         fullWidth: 1 === N,
                                         onClick: () => {
-                                            null == j || j(), null == I || I(d.L.SECONDARY);
+                                            null == v || v(), null == I || I(d.L.SECONDARY);
                                         },
                                         children: y,
                                     }),
@@ -152,7 +152,7 @@ function y(e) {
                                     f(h({}, x), {
                                         fullWidth: !Z || 1 === N,
                                         onClick: (e) => {
-                                            v(e), null == I || I(d.L.PRIMARY);
+                                            j(e), null == I || I(d.L.PRIMARY);
                                         },
                                         children: m,
                                     }),

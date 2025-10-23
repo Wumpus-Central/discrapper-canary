@@ -24,8 +24,8 @@ var r = n(951288),
     E = n(51144),
     b = n(513547),
     D = n(65154),
-    P = n(593235),
-    j = n(10198);
+    P = n(966117),
+    j = n(197571);
 let x = {
     [D.Z.NO_OVERRIDE]: "None",
     [D.Z.LOW]: "Low Quality Stream",
@@ -79,10 +79,10 @@ function R(e) {
         [k, w] = a.useState("0"),
         B = (0, s.e7)([y.Z], () => (N ? y.Z.getGuildId() : null)),
         A = (0, s.e7)([v.default], () => (N && null != R ? v.default.getUser(R) : null)),
-        L = (0, s.e7)([h.ZP], () => (N && null != B && null != R ? h.ZP.getNick(B, R) : null));
+        T = (0, s.e7)([h.ZP], () => (N && null != B && null != R ? h.ZP.getNick(B, R) : null));
     if (null == t || (N && null == R) || 0 === t.length) return (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE });
-    let T = F;
-    N && null != A && (T = "".concat(F, " \u2014 ").concat(null != L ? L : E.ZP.getName(A)));
+    let L = F;
+    N && null != A && (L = "".concat(F, " \u2014 ").concat(null != T ? T : E.ZP.getName(A)));
     let O = t.map((e, t) =>
             (0, r.jsx)(
                 c.njP.Item,
@@ -198,7 +198,7 @@ function R(e) {
         children: [
             (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",
-                children: T,
+                children: L,
             }),
             (0, r.jsx)(c.njP, {
                 type: "top",

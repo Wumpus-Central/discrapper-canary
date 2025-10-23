@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(119315),
     j = n(100527),
     x = n(906732),
-    A = n(397698),
-    Z = n(562129),
+    Z = n(397698),
+    A = n(562129),
     w = n(793865),
     L = n(522651),
     R = n(795318),
@@ -81,8 +81,8 @@ var r = n(951288),
     eP = n(63063),
     ej = n(51144),
     ex = n(870569),
-    eA = n(345243),
-    eZ = n(594117),
+    eZ = n(345243),
+    eA = n(594117),
     ew = n(226323),
     eL = n(981631),
     eR = n(354459),
@@ -90,8 +90,8 @@ var r = n(951288),
     eM = n(190378),
     ek = n(345655),
     eU = n(388032),
-    eG = n(239545),
-    eB = n(10198);
+    eG = n(890332),
+    eB = n(197571);
 function eH(e, t, n) {
     return (
         t in e
@@ -412,7 +412,7 @@ function eX(e) {
             skipFetchingShelf: !0,
         }),
         b = c !== N.jy.CAN_LAUNCH,
-        { Component: _, events: E, play: O } = (0, Z.Z)("RTCConnection");
+        { Component: _, events: E, play: O } = (0, A.Z)("RTCConnection");
     return n
         ? (0, r.jsx)(m.aML, {
               "data-migration-pending": !0,
@@ -437,7 +437,7 @@ function eX(e) {
                                       onClick: () => {
                                           var n;
                                           O(),
-                                              (0, A.Z)({
+                                              (0, Z.Z)({
                                                   context:
                                                       null != t
                                                           ? {
@@ -509,9 +509,9 @@ function eJ(e) {
         T = _ ? eU.intl.string(eU.t.fjBNo1) : eU.intl.string(eU.t.uQn9B8),
         P = O || o || v,
         j = null != C,
-        { Component: A, events: Z, play: w } = (0, p.P)(j ? "disable" : "enable");
+        { Component: Z, events: A, play: w } = (0, p.P)(j ? "disable" : "enable");
     i.useEffect(() => () => w(), [w, j]);
-    let D = (0, r.jsx)(A, {
+    let D = (0, r.jsx)(Z, {
         size: "md",
         color: "currentColor",
         className: a()(eG.buttonIcon, { [eG.withText]: !P }),
@@ -563,11 +563,11 @@ function eJ(e) {
                             {
                                 onMouseEnter: () => {
                                     var t;
-                                    null == i || i(), null == (t = e.onMouseEnter) || t.call(e), Z.onMouseEnter();
+                                    null == i || i(), null == (t = e.onMouseEnter) || t.call(e), A.onMouseEnter();
                                 },
                                 onMouseLeave: () => {
                                     var t;
-                                    null == (t = e.onMouseLeave) || t.call(e), Z.onMouseLeave();
+                                    null == (t = e.onMouseLeave) || t.call(e), A.onMouseLeave();
                                 },
                                 innerClassName: eG.buttonContents,
                                 wrapperClassName: eG.button,
@@ -615,7 +615,7 @@ class e$ extends i.PureComponent {
                         to: e,
                         onClick: this.handleChannelLinkClick,
                         onContextMenu: this.handleChannelLinkContextMenu,
-                        children: (0, r.jsx)(eA.Z, {
+                        children: (0, r.jsx)(eZ.Z, {
                             className: eG.channel,
                             children: (0, r.jsx)(m.Text, {
                                 variant: "text-xs/medium",
@@ -770,7 +770,7 @@ class e$ extends i.PureComponent {
                                           className: eG.voiceButtonsContainer,
                                           children: [
                                               t ? this.renderNoiseCancellation() : null,
-                                              (0, r.jsx)(eZ.Z, { channel: e }),
+                                              (0, r.jsx)(eA.Z, { channel: e }),
                                           ],
                                       }),
                                   ],
@@ -938,15 +938,15 @@ let e1 = (0, v.Z)(function (e) {
                 ? t
                 : [];
         }, [y, I, S]),
-        [P, A] = i.useState(!1);
+        [P, Z] = i.useState(!1);
     i.useEffect(() => {
-        (E || O) && A(!1);
-    }, [E, O, A]);
-    let { analyticsLocations: Z } = (0, x.ZP)(j.Z.RTC_PANEL),
+        (E || O) && Z(!1);
+    }, [E, O, Z]);
+    let { analyticsLocations: A } = (0, x.ZP)(j.Z.RTC_PANEL),
         w = (0, C.Z)(null != d ? d : eL.lds, null == c ? void 0 : c.id),
         L = (0, T.Z)(null == c ? void 0 : c.id);
     return (0, r.jsx)(x.Gt, {
-        value: Z,
+        value: A,
         children: (0, r.jsxs)("div", {
             className: eG.wrapper,
             children: [
@@ -970,7 +970,7 @@ let e1 = (0, v.Z)(function (e) {
                         showVoiceStates: v,
                         shouldShowVoicePanelIntroduction: h,
                         isPrivateChannelWithEnabledActivities: L,
-                        analyticsLocations: Z,
+                        analyticsLocations: A,
                     }),
                 ),
                 !P && E && null != d
@@ -986,7 +986,7 @@ let e1 = (0, v.Z)(function (e) {
                                   size: "sm",
                                   fullWidth: !0,
                                   onClick: () => {
-                                      A(!0);
+                                      Z(!0);
                                   },
                                   text: eU.intl.string(eU.t.WAI6xu),
                                   focusProps: eW,

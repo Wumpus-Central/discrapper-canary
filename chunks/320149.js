@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(933557),
     E = n(287746),
     O = n(388032),
-    v = n(952713),
-    y = n(998603);
+    v = n(10832),
+    y = n(419246);
 function I(e) {
     let { channel: t, baseChannelId: n } = e,
         I = (0, _.ZP)(t),
@@ -33,12 +33,12 @@ function I(e) {
         x = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: A } = (0, f.m)({
+        { markAsNotSpam: Z } = (0, f.m)({
             onAcceptSuccess: j,
             onError: x,
         });
     if (null == t || !t.isDM()) return null;
-    let Z = [
+    let A = [
         (0, r.jsx)(
             s.ZP.Icon,
             {
@@ -52,7 +52,7 @@ function I(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.ZP, {
-                toolbar: Z,
+                toolbar: A,
                 "aria-label": O.intl.string(O.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
@@ -72,7 +72,7 @@ function I(e) {
                             className: y.hamBannerButton,
                             children: (0, r.jsx)(a.Button, {
                                 size: "sm",
-                                onClick: () => A(t, P),
+                                onClick: () => Z(t, P),
                                 text: O.intl.string(O.t.koqL3Z),
                             }),
                         }),

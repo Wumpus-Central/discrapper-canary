@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(626135),
     O = n(709054),
     y = n(591759),
-    v = n(833592),
-    j = n(497089),
+    j = n(833592),
+    v = n(497089),
     x = n(178480),
     C = n(418316),
     E = n(382865),
@@ -28,7 +28,7 @@ var r = n(951288),
     N = n(11825),
     Z = n(981631),
     T = n(388032),
-    w = n(17250),
+    w = n(231796),
     A = n(756688),
     R = n(886765);
 function D(e) {
@@ -107,7 +107,7 @@ let G = i.memo(function (e) {
             { analyticsLocations: u } = (0, c.ZP)(),
             h = (0, S.I)(l, s),
             g = i.useCallback(async () => {
-                if ((h || (0, v.wt)(l), null != l.item_enum && l.item_enum === j.AM.FIND_FRIENDS))
+                if ((h || (0, j.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
                         let { default: e } = await n.e("6074").then(n.bind(n, 443189));
                         return (t) =>
@@ -158,7 +158,7 @@ let G = i.memo(function (e) {
                         } else await (0, d.Z)(r);
                     }
                     _.default.track(Z.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: j.ud.CLICKED,
+                        action_type: v.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
                         acked: h,
@@ -166,9 +166,9 @@ let G = i.memo(function (e) {
                 }
             }, [l, h, u]),
             m = null;
-        l.type === j.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
+        l.type === v.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
             ? (m = (0, r.jsx)(P.Z, { userId: l.other_user.id }))
-            : l.type === j.O7.INCOMING_GAME_FRIEND_REQUESTS &&
+            : l.type === v.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
               (m = (0, r.jsx)(P.Z, {
                   userId: l.other_user.id,

@@ -18,14 +18,14 @@ var i = n(442837),
     _ = n(968358),
     O = n(790901),
     y = n(714794),
-    v = n(355363),
-    j = n(687352),
+    j = n(355363),
+    v = n(259404),
     x = n(876548),
     C = n(25601),
     E = n(981631),
     S = n(490897),
     I = n(388032),
-    P = n(88448);
+    P = n(885525);
 function N(e) {
     var t;
     let {
@@ -48,7 +48,7 @@ function N(e) {
         V = (0, s.P)(n),
         H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
         z = (0, p.PK)(n.id) && n.isGuildStageVoice(),
-        W = (0, v.ZP)({
+        W = (0, j.ZP)({
             channel: n,
             locked: F,
             video: (H || z) && null == V,
@@ -106,7 +106,7 @@ function N(e) {
                   entry: { start: V },
               })
             : null != A && A && (0, O.u)(B)
-              ? (0, r.jsx)(j.Z, {
+              ? (0, r.jsx)(v.Z, {
                     embeddedApps: B,
                     muted: M,
                 })

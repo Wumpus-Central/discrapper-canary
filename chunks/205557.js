@@ -18,7 +18,7 @@ var r = n(951288),
     C = n(354459),
     O = n(981631),
     b = n(388032),
-    g = n(11830);
+    g = n(542123);
 let P = [s._];
 function j(e) {
     let { windowKey: t, channelId: n, participantId: s } = e,

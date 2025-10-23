@@ -11,7 +11,7 @@ var r = n(951288),
     m = n(703656),
     f = n(981631),
     g = n(388032),
-    p = n(341430);
+    p = n(85890);
 let h = (e) => {
     let { email: t, guildId: n, onClose: i } = e,
         [s, h] = l.useState(""),

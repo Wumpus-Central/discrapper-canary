@@ -31,9 +31,9 @@ var r = n(951288),
     P = n(998502),
     j = n(228488),
     x = n(403497),
-    A = n(950796),
-    Z = n(741764),
-    w = n(851352);
+    Z = n(950796),
+    A = n(741764),
+    w = n(82504);
 let L = (0, o.U)(() => ({ isOpen: !0 }));
 function R(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
@@ -46,7 +46,7 @@ function R(e) {
 }
 let D = i.memo(function () {
     i.useLayoutEffect(() => {
-        P.ZP.setMinimumSize(Z.J, Z.N);
+        P.ZP.setMinimumSize(A.J, A.N);
     }, []);
     let { notificationCenterVariant: e, entrypoint: t } = (0, y.pN)({ location: "AppTitleBar" }),
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, g.t)({ location: "AppTitleBar" }),
@@ -56,7 +56,7 @@ let D = i.memo(function () {
         D = null !== e && t === y.u3.TITLE_BAR_LEFT,
         M = null === e;
     i.useLayoutEffect(() => {
-        P.ZP.setMinimumSize(Z.J, Z.N);
+        P.ZP.setMinimumSize(A.J, A.N);
     }, []);
     let k = (0, N.Ll)(),
         U = (0, s.e7)([T.Z, C.Z], () => (0, j.rB)()),
@@ -94,7 +94,7 @@ let D = i.memo(function () {
                 theme: k,
                 children: (t) => {
                     var i, a;
-                    return (0, r.jsx)(A.TF, {
+                    return (0, r.jsx)(Z.TF, {
                         className: t,
                         leading: (0, r.jsxs)(r.Fragment, {
                             children: [

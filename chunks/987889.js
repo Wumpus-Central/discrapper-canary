@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(982183),
     O = n(981631),
     y = n(388032),
-    v = n(66449);
-function j(e) {
+    j = n(361584);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,7 +80,7 @@ function E(e) {
         onTooltipShow: () => d(!0),
         onTooltipHide: () => d(!1),
         children: (0, r.jsx)(a.P3F, {
-            className: v.action,
+            className: j.action,
             onClick: (e) => {
                 (0, g.Qz)({
                     message: l,
@@ -92,7 +92,7 @@ function E(e) {
             },
             children: (0, r.jsx)(s, {
                 size: u ? "sm" : "xs",
-                className: v.actionIcon,
+                className: j.actionIcon,
             }),
         }),
     });
@@ -134,7 +134,7 @@ function S(e) {
                 onTooltipHide: () => f(!1),
                 children: (0, r.jsx)(a.P3F, {
                     innerRef: O,
-                    className: v.action,
+                    className: j.action,
                     onClick: (e) => {
                         (0, g.Qz)({
                             message: n,
@@ -147,10 +147,10 @@ function S(e) {
                     },
                     children: (0, r.jsx)(
                         s,
-                        x(j({}, e), {
+                        x(v({}, e), {
                             message: n,
                             "aria-label": l,
-                            className: v.actionIcon,
+                            className: j.actionIcon,
                             size: h ? "sm" : "xs",
                         }),
                     ),
@@ -187,8 +187,8 @@ let I = {
         label: y.intl.string(y.t["9p3D9p"]),
         Icon: (e) =>
             null != h.Z.getSavedMessage(e.message.channel_id, e.message.id)
-                ? (0, r.jsx)(a.plf, j({}, e))
-                : (0, r.jsx)(a.gt9, j({}, e)),
+                ? (0, r.jsx)(a.plf, v({}, e))
+                : (0, r.jsx)(a.gt9, v({}, e)),
         interactionType: g.s_.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
@@ -199,7 +199,7 @@ let I = {
                 });
             return (0, r.jsxs)(
                 a.v2r,
-                x(j({}, n), {
+                x(v({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": y.intl.string(y.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -246,7 +246,7 @@ let I = {
             return t.isThread()
                 ? (0, r.jsx)(
                       f.Z,
-                      x(j({}, n), {
+                      x(v({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: y.intl.string(y.t["1NBjqb"]),
@@ -254,7 +254,7 @@ let I = {
                   )
                 : (0, r.jsx)(
                       u.Z,
-                      x(j({}, n), {
+                      x(v({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: y.intl.string(y.t.Xm41aV),
@@ -278,14 +278,14 @@ function P(e) {
         gap: 4,
         align: "center",
         justify: "center",
-        className: v.actions,
+        className: j.actions,
         children: o.map((e) => {
             let i = I[e];
             switch (i.type) {
                 case "standard":
                     return (0, r.jsx)(
                         E,
-                        x(j({}, i), {
+                        x(v({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -294,7 +294,7 @@ function P(e) {
                 case "menu":
                     return (0, r.jsx)(
                         S,
-                        x(j({}, i), {
+                        x(v({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

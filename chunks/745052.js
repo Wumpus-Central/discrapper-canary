@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(897473),
     j = n(108427),
     x = n(210887),
-    A = n(313789),
-    Z = n(518596),
+    Z = n(313789),
+    A = n(518596),
     w = n(433355),
     L = n(592125),
     R = n(819640),
@@ -50,8 +50,8 @@ var r = n(951288),
     X = n(921944),
     J = n(526761),
     $ = n(388032),
-    ee = n(735516),
-    et = n(161655);
+    ee = n(803882),
+    et = n(97009);
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -293,7 +293,7 @@ let ea = (e) => {
                                                       text: $.intl.string($.t.JN6EOJ),
                                                       onClick: (e) => {
                                                           e.stopPropagation(),
-                                                              (0, Z.openUserSettings)(A.n.CONTENT_AND_SOCIAL_PANEL, {
+                                                              (0, A.openUserSettings)(Z.n.CONTENT_AND_SOCIAL_PANEL, {
                                                                   section: Q.oAB.CONTENT_AND_SOCIAL,
                                                                   scrollPosition: J.FY.MESSAGE_REQUESTS_V2,
                                                               }),
@@ -343,7 +343,7 @@ let es = (0, h.Z)(function (e) {
         null != g && !_ && E && b && ((0, N.Kh)(g), T.Z.closeChannelSidebar(w.uZ));
     }, [g, E, b, _]);
     let [y, I] = i.useState(K.pS.REQUESTS),
-        A = (e) => {
+        Z = (e) => {
             I(e);
         };
     return (
@@ -379,7 +379,7 @@ let es = (0, h.Z)(function (e) {
                                             "aria-label": $.intl.string($.t.e7GWjQ),
                                             selectedItem: y,
                                             type: "top-pill",
-                                            onItemSelect: A,
+                                            onItemSelect: Z,
                                             children: [
                                                 (0, r.jsx)(p.njP.Item, {
                                                     id: K.pS.REQUESTS,

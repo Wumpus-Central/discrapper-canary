@@ -23,11 +23,11 @@ var r = n(951288),
     _ = n(430824),
     O = n(496675),
     y = n(9156),
-    v = n(203818),
-    j = n(438144),
+    j = n(203818),
+    v = n(438144),
     x = n(981631),
     C = n(388032),
-    E = n(973780);
+    E = n(84688);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,8 +79,8 @@ let N = i.memo(function (e) {
             {
                 channel: l,
                 connectChannelDragSource: f,
-                connectChannelDropTarget: v,
-                disableManageChannels: j,
+                connectChannelDropTarget: j,
+                disableManageChannels: v,
                 position: N,
                 sortingPosition: Z,
                 hideIcon: T,
@@ -120,7 +120,7 @@ let N = i.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("29497"), n.e("73209")]).then(n.bind(n, 241865));
+                        let { default: i } = await Promise.all([n.e("29497"), n.e("53781")]).then(n.bind(n, 241865));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -215,7 +215,7 @@ let N = i.memo(function (e) {
                                     onClick: P,
                                     className: E.children,
                                     children:
-                                        D && !j
+                                        D && !v
                                             ? (0, r.jsx)(c.u, {
                                                   text: C.intl.string(C.t["fUYU+j"]),
                                                   children: (0, r.jsx)(u.zx, {
@@ -248,7 +248,7 @@ let N = i.memo(function (e) {
                     w,
                 ],
             });
-        return null != v && null != f ? v(f(z)) : z;
+        return null != j && null != f ? j(f(z)) : z;
     }),
     Z = (0, f.B)(N),
     T = i.memo(function (e) {
@@ -286,9 +286,9 @@ let N = i.memo(function (e) {
     }),
     w = i.memo(function (e) {
         let { category: t } = e,
-            n = (0, s.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            n = (0, s.e7)([j.Z], () => j.Z.isVoiceCategoryCollapsed(t.guild.id)),
             l = i.useCallback(() => {
-                n ? (0, j.s)(t.guild.id) : (0, j.M)(t.guild.id);
+                n ? (0, v.s)(t.guild.id) : (0, v.M)(t.guild.id);
             }, [t.guild.id, n]);
         return (0, r.jsxs)(u.zx, {
             look: u.zx.Looks.FILLED,
@@ -311,7 +311,7 @@ let N = i.memo(function (e) {
     }),
     A = i.memo(function (e) {
         let { category: t, channel: n } = e,
-            i = (0, s.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id));
+            i = (0, s.e7)([j.Z], () => j.Z.isVoiceCategoryCollapsed(t.guild.id));
         return i || null == n || n.record.type === x.d4z.GUILD_CATEGORY
             ? i
                 ? (0, r.jsx)("li", {

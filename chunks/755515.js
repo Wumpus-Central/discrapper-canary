@@ -2,7 +2,7 @@ n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(647438),
     l = n(450369),
-    a = n(123382);
+    a = n(62219);
 let s = i.memo(function (e) {
     let { channel: t, participants: n, tileWidth: i, selectedParticipant: s, popoutType: o } = e;
     return (0, r.jsx)("div", {

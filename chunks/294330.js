@@ -25,7 +25,7 @@ var r = n(951288),
     O = n(826946),
     v = n(981631),
     y = n(388032),
-    I = n(8548),
+    I = n(972725),
     C = n(129512),
     S = n(330065),
     N = n(755386);
@@ -35,7 +35,7 @@ function T(e) {
         [E, T] = i.useState(!1),
         [P, j] = i.useState(!1),
         x = i.useRef(null),
-        A = i.useCallback(async () => {
+        Z = i.useCallback(async () => {
             T(!0);
             try {
                 await l(t.id);
@@ -43,7 +43,7 @@ function T(e) {
                 T(!1);
             }
         }, [t.id, l]),
-        Z = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 e && !h && (g(!0), null == o || o(t.id));
             },
@@ -141,13 +141,13 @@ function T(e) {
                 }),
             (0, r.jsx)(s.$, {
                 innerRef: x,
-                onChange: Z,
+                onChange: A,
                 active: !h,
                 threshold: 0.55,
                 children: (0, r.jsxs)(f.Z, {
                     ref: x,
                     className: I.card,
-                    onClick: A,
+                    onClick: Z,
                     disabled: E,
                     onContextMenu: w,
                     "aria-label": y.intl.string(y.t["M9wQ+f"]),
