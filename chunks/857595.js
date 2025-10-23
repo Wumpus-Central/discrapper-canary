@@ -78,28 +78,29 @@ function b(e) {
     });
 }
 function y(e) {
-    let t = o.Z.useReducedMotion;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.mX.REDUCED_MOTION,
+        n = o.Z.useReducedMotion;
     r.Z.dispatch({
         type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
         prefersReducedMotion: e,
     });
-    let n = o.Z.useReducedMotion;
-    !t && n
+    let a = o.Z.useReducedMotion;
+    (!n && a) || t === l.mX.LOW_PERFORMANCE_MODE
         ? i.ZP.applySettingsOverride({
               gifAutoPlay: {
                   value: !1,
-                  reasonKey: l.mX.REDUCED_MOTION,
+                  reasonKey: t,
               },
               animateEmoji: {
                   value: !1,
-                  reasonKey: l.mX.REDUCED_MOTION,
+                  reasonKey: t,
               },
               animateStickers: {
-                  value: c.yr.ANIMATE_ON_INTERACTION,
-                  reasonKey: l.mX.REDUCED_MOTION_STICKERS,
+                  value: t === l.mX.LOW_PERFORMANCE_MODE ? c.yr.NEVER_ANIMATE : c.yr.ANIMATE_ON_INTERACTION,
+                  reasonKey: t,
               },
           })
-        : t && !n && i.ZP.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
+        : n && !a && i.ZP.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
 }
 function O(e) {
     r.Z.dispatch({

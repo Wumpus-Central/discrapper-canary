@@ -5281,6 +5281,7 @@ var nE = (function (e) {
             (e.DEBUG_MISSING_STRING = "debug_missing_string"),
             (e.ORB_BALANCE_ACTION_SHEET_ACTION = "orb_balance_action_sheet_action"),
             (e.SESSION_START_PAGE_VIEWED = "session_start_page_viewed"),
+            (e.LOW_PERFORMANCE_MODE_OPT_OUT = "low_performance_mode_opt_out"),
             e
         );
     })({}),
