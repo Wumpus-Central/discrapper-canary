@@ -30,15 +30,15 @@ var r = n(951288),
     j = n(592125),
     Z = n(131951),
     R = n(451478),
-    x = n(112560),
-    A = n(442168),
-    T = n(822296),
+    A = n(112560),
+    T = n(442168),
+    x = n(822296),
     N = n(916771),
     D = n(792517),
     M = (n(351483), n(979425)),
     k = n(651183),
-    F = n(623825),
-    L = n(981631),
+    L = n(623825),
+    F = n(981631),
     V = n(354459),
     U = n(65154),
     W = n(388032),
@@ -47,11 +47,11 @@ let B = new g.Z("StreamTile");
 function q(e) {
     let { participant: t, selected: n, focused: i, idle: l, width: a, premiumIndicator: c } = e,
         s = (0, o.e7)([w.Z], () => w.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        u = (0, F.K)(a);
+        u = (0, L.K)(a);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n || i ? null : (0, r.jsx)(k.Z, { participant: t }),
-            i || null == s || s.state === L.jm8.ENDED || s.state === L.jm8.FAILED
+            i || null == s || s.state === F.jm8.ENDED || s.state === F.jm8.FAILED
                 ? null
                 : (0, r.jsx)(y.Z, {
                       size: m.ZP.Sizes.SMALL,
@@ -73,7 +73,7 @@ function Y(e) {
             popoutType: g,
             width: y,
             focused: k,
-            wrapperClassName: F,
+            wrapperClassName: L,
             paused: q = !1,
         } = e,
         Y = Z.Z.getVideoComponent(),
@@ -114,13 +114,13 @@ function Y(e) {
             selected: n,
             isSelfStream: Q.id === z,
         });
-    if ((null == $ ? void 0 : $.state) === L.jm8.ENDED)
-        return (0, r.jsx)(T.Z, {
+    if ((null == $ ? void 0 : $.state) === F.jm8.ENDED)
+        return (0, r.jsx)(x.Z, {
             selected: n,
             stream: $,
             width: y,
         });
-    if (null != eo || (null == $ ? void 0 : $.state) === L.jm8.FAILED)
+    if (null != eo || (null == $ ? void 0 : $.state) === F.jm8.FAILED)
         return (0, r.jsx)(N.Z, {
             avError: null == eo ? void 0 : eo.type,
             avErrorContext: eo,
@@ -194,12 +194,12 @@ function Y(e) {
                     O.Z,
                     {
                         onResize: l,
-                        wrapperClassName: a()(H.videoWrapper, F),
+                        wrapperClassName: a()(g !== _.P.CALL_TILE ? H.videoWrapper : void 0, L),
                         className: H.content,
                         streamId: X,
                         videoComponent: Y,
                         fit: m,
-                        paused: q || (null == $ ? void 0 : $.state) === L.jm8.PAUSED || ei,
+                        paused: q || (null == $ ? void 0 : $.state) === F.jm8.PAUSED || ei,
                         videoSpinnerContext: er ? p.m.SELF_STREAM : p.m.REMOTE_STREAM,
                         userId: Q.id,
                         streamKey: t.id,
@@ -233,10 +233,10 @@ function Y(e) {
                                       });
                               }
                               return e;
-                          })({ size: (0, x.L)(y) }, el),
+                          })({ size: (0, A.L)(y) }, el),
                       )
                     : null,
-                (0, r.jsx)(A.Z, {
+                (0, r.jsx)(T.Z, {
                     stream: G,
                     popoutType: g,
                 }),
