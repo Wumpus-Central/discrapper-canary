@@ -1110,7 +1110,7 @@ function eJ(e) {
             location: {
                 section: ee.jXE.CHANNEL,
                 object: ee.qAy.ACK_FORUM_CHANNEL_NO_UNREAD_POSTS,
-                objectType: ee.Qqv.ACK_AUTOMATIC,
+                objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
             },
         });
 }
@@ -1259,7 +1259,7 @@ function e9(e) {
             location: {
                 section: ee.jXE.CHANNEL,
                 object: ee.qAy.ACK_INCOMING_MESSAGE,
-                objectType: ee.Qqv.ACK_AUTOMATIC,
+                objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
             },
         });
     if (null != r && r.isInstanceFocused() && h && r.isInstanceLocked() && r.isPinned(ee.Odu.TEXT))
@@ -1269,7 +1269,7 @@ function e9(e) {
             location: {
                 section: ee.jXE.OVERLAY,
                 object: ee.qAy.ACK_INCOMING_MESSAGE,
-                objectType: ee.Qqv.ACK_AUTOMATIC,
+                objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
             },
         });
     if (
@@ -1399,7 +1399,7 @@ function tu(e) {
         {
             section: ee.jXE.CHANNEL,
             object: ee.qAy.ACK_RESORT_THREADS,
-            objectType: ee.Qqv.ACK_AUTOMATIC,
+            objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
         },
         t,
     );
@@ -1530,7 +1530,7 @@ function tI(e) {
                     {
                         section: ee.jXE.CHANNEL,
                         object: ee.qAy.ACK_CHANNEL_SELECT_SAME_CHANNEL,
-                        objectType: ee.Qqv.ACK_AUTOMATIC,
+                        objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
                     },
                     t,
                 ) || a),
@@ -1540,7 +1540,7 @@ function tI(e) {
                     {
                         section: ee.jXE.CHANNEL,
                         object: ee.qAy.ACK_CHANNEL_SELECT_SAME_CHANNEL_SIDEBAR,
-                        objectType: ee.Qqv.ACK_AUTOMATIC,
+                        objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
                     },
                     n,
                 ) || a),
@@ -1560,7 +1560,7 @@ function tT() {
                       {
                           section: ee.jXE.CHANNEL,
                           object: ee.qAy.ACK_CHANNEL_SECTION_STORE_UPDATE,
-                          objectType: ee.Qqv.ACK_AUTOMATIC,
+                          objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
                       },
                       e,
                   ) || t),
@@ -1580,7 +1580,7 @@ function tS(e) {
                 location: {
                     section: ee.jXE.CHANNEL,
                     object: ee.qAy.ACK_VOICE_CHANNEL_SELECT,
-                    objectType: ee.Qqv.ACK_SEMI_AUTOMATIC,
+                    objectType: ee.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                 },
             })
         );
@@ -1611,7 +1611,7 @@ function tR(e, t) {
             {
                 section: ee.jXE.CHANNEL,
                 object: ee.qAy.ACK_WINDOW_FOCUS,
-                objectType: ee.Qqv.ACK_AUTOMATIC,
+                objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
             },
             e,
         )
@@ -1623,7 +1623,7 @@ function tP(e) {
         {
             section: ee.jXE.CHANNEL,
             object: ee.qAy.ACK_CHANNEL_SCROLL,
-            objectType: ee.Qqv.ACK_AUTOMATIC,
+            objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
         },
         t,
     );
@@ -1767,7 +1767,7 @@ function tY(e) {
             {
                 section: ee.jXE.CHANNEL,
                 object: ee.qAy.ENABLE_AUTOMATIC_ACK,
-                objectType: ee.Qqv.ACK_AUTOMATIC,
+                objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
             },
             t,
         ))
@@ -1828,7 +1828,7 @@ function tJ(e) {
             {
                 section: ee.jXE.CHANNEL,
                 object: ee.qAy.ACK_APP_FOREGROUND,
-                objectType: ee.Qqv.ACK_AUTOMATIC,
+                objectType: ee.AnalyticsObjectTypes.ACK_AUTOMATIC,
             },
             X.Z.getChannelId(),
         )

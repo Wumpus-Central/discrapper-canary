@@ -1,4 +1,12 @@
-function r(e, t) {
+n.d(t, {
+    JU: () => r,
+    b: () => i,
+}),
+    n(388685);
+var r = (function (e) {
+    return (e[(e.UNSET = 0)] = "UNSET"), (e[(e.SOURCE_1 = 1)] = "SOURCE_1"), (e[(e.SOURCE_2 = 2)] = "SOURCE_2"), e;
+})({});
+function i(e, t) {
     return {
         id: e.id,
         topic: e.topic,
@@ -12,4 +20,3 @@ function r(e, t) {
         type: e.type,
     };
 }
-n.d(t, { b: () => r }), n(388685);

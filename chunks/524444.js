@@ -509,10 +509,10 @@ function ed(e) {
                   });
         }, [n]),
         l = i.useCallback(() => {
-            (0, _.In)(n, {
+            (0, _.ack)(n, {
                 section: U.jXE.NEW_MESSAGES_BANNER,
                 object: U.qAy.MARK_CHANNEL_AS_READ_BUTTON,
-                objectType: U.Qqv.ACK_MANUAL,
+                objectType: U.AnalyticsObjectTypes.ACK_MANUAL,
             });
         }, [n]),
         { disableInteractions: c } = i.useContext(b.G);
@@ -762,10 +762,10 @@ function ef(e) {
                   });
         }, [s.id]),
         en = i.useCallback(() => {
-            (0, _.In)(s.id, {
+            (0, _.ack)(s.id, {
                 section: U.jXE.NEW_TOPICS_BAR,
                 object: U.qAy.MARK_CHANNEL_AS_READ_BUTTON,
-                objectType: U.Qqv.ACK_MANUAL,
+                objectType: U.AnalyticsObjectTypes.ACK_MANUAL,
             });
         }, [s.id]),
         er = Z.intl.string(Z.t["38qwgO"]);

@@ -169,11 +169,11 @@ let I = {
                 messageId: e.id,
                 channelId: e.channel_id,
             }),
-                c.In(
+                c.ack(
                     e.channel_id,
                     {
                         object: O.qAy.MARK_MESSAGE_AS_READ_BUTTON,
-                        objectType: O.Qqv.ACK_MANUAL,
+                        objectType: O.AnalyticsObjectTypes.ACK_MANUAL,
                     },
                     !0,
                     void 0,

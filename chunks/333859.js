@@ -44,7 +44,7 @@ let b = () => {
                               defaultTextOverride: g.intl.string(g.t.mr4K7D),
                               premiumModalAnalyticsLocation: {
                                   object: h.qAy.BUTTON_CTA,
-                                  objectType: h.Qqv.BUY,
+                                  objectType: h.AnalyticsObjectTypes.BUY,
                               },
                               fullWidth: !0,
                           })

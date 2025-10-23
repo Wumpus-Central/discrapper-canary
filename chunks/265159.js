@@ -66,7 +66,7 @@ function u() {
                         page: a.ZY5.USER_SETTINGS,
                         section: a.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                         object: a.qAy.BUTTON_CTA,
-                        type: a.Qqv.BUY,
+                        type: a.AnalyticsObjectTypes.BUY,
                     },
                 }),
             );

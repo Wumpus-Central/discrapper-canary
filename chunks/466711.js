@@ -170,7 +170,7 @@ function M(e) {
                     page: l.isPrivate() ? I.ZY5.DM_CHANNEL : I.ZY5.GUILD_CHANNEL,
                     section: I.jXE.CHANNEL_TEXT_AREA,
                     object: I.qAy.GIFTING_PROMOTION_BUTTON,
-                    objectType: I.Qqv.GIFT,
+                    objectType: I.AnalyticsObjectTypes.GIFT,
                 },
             });
         },

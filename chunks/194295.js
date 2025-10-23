@@ -42,12 +42,12 @@ function p(e, t, n, p) {
                 r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, s.In)(
+            (0, s.ack)(
                 e.id,
                 {
                     section: c.jXE.OVERLAY,
                     object: c.qAy.ACK_DECLINE_REQUEST_TO_JOIN,
-                    objectType: c.Qqv.ACK_SEMI_AUTOMATIC,
+                    objectType: c.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                 },
                 !0,
                 !0,

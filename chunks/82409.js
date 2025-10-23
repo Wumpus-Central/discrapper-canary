@@ -19,8 +19,8 @@ var h = n(377171),
     _ = n(430824),
     O = n(375954),
     y = n(306680),
-    v = n(709054),
-    j = n(821020),
+    j = n(709054),
+    v = n(821020),
     x = n(948154),
     C = n(804932),
     E = n(725739),
@@ -135,13 +135,13 @@ function U(e) {
                         null != r &&
                             null != i &&
                             l &&
-                            v.default.compare(i, r) >= 0 &&
-                            d.In(
+                            j.default.compare(i, r) >= 0 &&
+                            d.ack(
                                 e,
                                 {
                                     section: R.jXE.NOTIFICATIONS_INBOX,
                                     object: R.qAy.ACK_INBOX_CHANNEL_NO_MESSAGES,
-                                    objectType: R.Qqv.ACK_AUTOMATIC,
+                                    objectType: R.AnalyticsObjectTypes.ACK_AUTOMATIC,
                                 },
                                 !0,
                             );
@@ -173,9 +173,9 @@ function U(e) {
     (0, p.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
-        let t = (0, j.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
+        let t = (0, v.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
             n = null == (e = S.Z.getDevOverrides().navOnClick) || e;
-        if (t !== j.jP.SIDEBAR || !1 === n) return;
+        if (t !== v.jP.SIDEBAR || !1 === n) return;
         let { message: r, isUnread: i } = (function (e, t) {
             var n, r, i;
             let l = null == (n = e[e.length - 1]) ? void 0 : n.message,
@@ -201,7 +201,7 @@ function U(e) {
                   }
                 : {
                       message: {
-                          id: v.default.atNextMillisecond(u),
+                          id: j.default.atNextMillisecond(u),
                           channel_id: c,
                       },
                       isUnread: null != (i = y.ZP.hasUnread(c)) && i,
@@ -220,9 +220,9 @@ function U(e) {
         (0, p.zq)(() => {
             u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
-    let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
+    let { filterStyle: Q } = (0, v.pN)({ location: "NotificationsInboxSidebar" }),
         J = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === j.v8.DROPDOWN && h !== A.V5.ALL,
+        $ = Q === v.v8.DROPDOWN && h !== A.V5.ALL,
         ee = (0, A.H_)(h);
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
@@ -243,7 +243,7 @@ function U(e) {
                             direction: "horizontal",
                             gap: 4,
                             style: { marginRight: -4 },
-                            children: Q === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(T.p, {}),
+                            children: Q === v.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(T.p, {}),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -288,7 +288,7 @@ function F(e, t, n) {
                 : e.filter((e) => {
                       let { id: r } = e;
                       return (
-                          !(v.default.age(r) > A.ib || (null != n && 0 >= v.default.compare(r, n))) && t === A.V5.ALL
+                          !(j.default.age(r) > A.ib || (null != n && 0 >= j.default.compare(r, n))) && t === A.V5.ALL
                       );
                   }),
         [e, t, n],

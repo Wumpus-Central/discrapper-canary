@@ -43,7 +43,7 @@ function b(e, t, n, b) {
                       hideSimpleEmbedContent: !1,
                   }).content
                 : C,
-        hint: (e, t) => (e && !t ? null : (0, y.Q)((0, O.P)(), S.t.ykjOAA, S.intl.string(S.t.jZkzVF))),
+        hint: (e, t) => (e && !t ? null : (0, y.Q)((0, O.P)(), S.t.ykjOAJ, S.intl.string(S.t.jZkzVJ))),
         maxBodyLines: 2,
         renderFooter: (n, r, l) =>
             n && !l
@@ -59,12 +59,12 @@ function b(e, t, n, b) {
         },
         onNotificationClick: () => {
             let n = (0, h.getPID)();
-            (0, l.In)(
+            (0, l.ack)(
                 e.id,
                 {
                     section: v.jXE.OVERLAY,
                     object: v.qAy.ACK_TEXT_CHAT_NOTIFICATION,
-                    objectType: v.Qqv.ACK_SEMI_AUTOMATIC,
+                    objectType: v.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                 },
                 !0,
                 !0,

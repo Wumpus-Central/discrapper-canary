@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(453879),
     y = n(408310),
     _ = n(75666),
-    j = n(981631),
-    O = n(295907),
+    O = n(981631),
+    j = n(295907),
     x = n(806328);
 let v = (e) => {
     let { channel: t, guild: v } = e,
@@ -44,11 +44,11 @@ let v = (e) => {
             let e = c.ZP.lastMessageId(t.id);
             null != e &&
                 s.Z.wait(() => {
-                    (0, o.In)(
+                    (0, o.ack)(
                         t.id,
                         {
-                            object: j.qAy.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
-                            objectType: j.Qqv.ACK_AUTOMATIC,
+                            object: O.qAy.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
+                            objectType: O.AnalyticsObjectTypes.ACK_AUTOMATIC,
                         },
                         !0,
                         !0,
@@ -83,7 +83,7 @@ let v = (e) => {
             u.c$(t.id), u.YZ(t.id), A(e);
         }, [t.id]),
         i.useEffect(() => {
-            d.default.track(j.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
+            d.default.track(O.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: t.id,
                 directory_guild_id: v.id,
                 primary_category_id: C,
@@ -149,9 +149,9 @@ let v = (e) => {
             : void 0,
         U = (e) => {
             0 !== w.trim().length &&
-                e.key === O.vn.ENTER &&
+                e.key === j.vn.ENTER &&
                 (u.Rq(t.id, w),
-                d.default.track(j.rMx.GUILD_DIRECTORY_SEARCH, {
+                d.default.track(O.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: t.id,
                     directory_guild_id: v.id,
                 }));

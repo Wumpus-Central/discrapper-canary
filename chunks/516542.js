@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(904245),
@@ -8,29 +8,29 @@ var i = n(951288),
     u = n(655687),
     c = n(541716),
     d = n(752305),
-    h = n(893718),
-    p = n(957730),
+    p = n(893718),
+    h = n(957730),
     f = n(849522),
     m = n(145597),
     g = n(981631),
     y = n(959517),
     O = n(572985);
-function v(e) {
-    let { id: t, replyToMessageId: n, channel: v, onSend: E } = e,
+function E(e) {
+    let { id: t, replyToMessageId: n, channel: E, onSend: v } = e,
         S = (0, f.Z)(),
-        { placeholder: b, accessibilityLabel: x } = (0, u.Z)({ channel: v }),
+        { placeholder: b, accessibilityLabel: x } = (0, u.Z)({ channel: E }),
         [j, I] = r.useState(() => (0, d.H2)()),
         { textValue: C, richValue: Z } = j,
         [N, w] = r.useState(!1),
         T = r.useCallback(() => w(!0), []),
         _ = r.useCallback(() => w(!1), []);
     (0, s.ZP)(() => {
-        (0, a.In)(
-            v.id,
+        (0, a.ack)(
+            E.id,
             {
                 section: g.jXE.OVERLAY,
                 object: g.qAy.ACK_INLINE_REPLY,
-                objectType: g.Qqv.ACK_SEMI_AUTOMATIC,
+                objectType: g.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
             },
             !0,
             !0,
@@ -43,34 +43,34 @@ function v(e) {
                 richValue: n,
             });
         }, []),
-        D = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 "Escape" === e.key && o.Z.updateNotificationStatus(t, g._1z.ACTIVE);
             },
             [t],
         ),
-        A = r.useCallback(
+        D = r.useCallback(
             () => (
                 C.length > S ||
-                    (l.Z.sendMessage(v.id, p.ZP.parse(v, C), !1, { location: y.dy.OVERLAY }),
+                    (l.Z.sendMessage(E.id, h.ZP.parse(E, C), !1, { location: y.dy.OVERLAY }),
                     o.Z.setInputLocked(!0, (0, m.getPID)()),
                     o.Z.updateNotificationStatus(t, g._1z.DISMISSED),
-                    null == E || E(C)),
+                    null == v || v(C)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0,
                 })
             ),
-            [C, S, v, t, E],
+            [C, S, E, t, v],
         );
     return (0, i.jsx)("div", {
         className: O.container,
-        children: (0, i.jsx)(h.ZP, {
+        children: (0, i.jsx)(p.ZP, {
             innerClassName: O.textArea,
             onChange: P,
             placeholder: b,
             accessibilityLabel: x,
-            channel: v,
+            channel: E,
             textValue: C,
             richValue: Z,
             type: c.Ie.OVERLAY_INLINE_REPLY,
@@ -78,8 +78,8 @@ function v(e) {
             onBlur: _,
             onFocus: T,
             focused: N,
-            onSubmit: A,
-            onKeyDown: D,
+            onSubmit: D,
+            onKeyDown: A,
             autoCompletePosition: "bottom",
             disableThemedBackground: !0,
         }),

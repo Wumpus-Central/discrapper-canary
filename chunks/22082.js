@@ -65,11 +65,11 @@ function R(e, t) {
             (null == (r = u.Z.getChannel(t)) ? void 0 : r.isThread()) ||
             null != p.ZP.ackMessageId(t) ||
             a.Z.wait(() =>
-                (0, o.In)(
+                (0, o.ack)(
                     t,
                     {
                         object: E.qAy.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED,
-                        objectType: E.Qqv.ACK_AUTOMATIC,
+                        objectType: E.AnalyticsObjectTypes.ACK_AUTOMATIC,
                     },
                     !0,
                     !0,

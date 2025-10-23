@@ -44,12 +44,12 @@ function g(e, t, n, g) {
             (0, o.Z)((0, s.getPID)(), { preset: n }), S("request-to-stream"), i.Z.updateNotificationStatus(t);
         },
         onCancelClick: (t, n) => {
-            (0, r.In)(
+            (0, r.ack)(
                 e.id,
                 {
                     section: p.jXE.OVERLAY,
                     object: p.qAy.ACK_DECLINE_REQUEST_TO_STREAM,
-                    objectType: p.Qqv.ACK_SEMI_AUTOMATIC,
+                    objectType: p.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                 },
                 !0,
                 !0,

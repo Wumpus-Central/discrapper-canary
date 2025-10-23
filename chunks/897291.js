@@ -86,7 +86,7 @@ function O(e) {
                                       page: p.ZY5.DM_CHANNEL,
                                       section: p.jXE.CHANNEL_TEXT_AREA,
                                       object: p.qAy.BUTTON_ICON,
-                                      objectType: p.Qqv.GIFT,
+                                      objectType: p.AnalyticsObjectTypes.GIFT,
                                   },
                                   analyticsLocations: g,
                                   giftRecipient: b,
@@ -104,12 +104,12 @@ function O(e) {
                       page: i.isPrivate() ? p.ZY5.DM_CHANNEL : p.ZY5.GUILD_CHANNEL,
                       section: p.jXE.CHANNEL_TEXT_AREA,
                       object: p.qAy.BUTTON_ICON,
-                      objectType: p.Qqv.GIFT,
+                      objectType: p.AnalyticsObjectTypes.GIFT,
                   },
               });
     };
     return (0, r.jsx)(o.u, {
-        text: h.intl.string(h.t.sWtWDQ),
+        text: h.intl.string(h.t.sWtWDX),
         children: (0, r.jsx)(
             _.Z,
             y(

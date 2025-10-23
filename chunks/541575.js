@@ -88,7 +88,7 @@ let x = function (e) {
             onClick: () =>
                 O({
                     object: g.qAy.LEARN_MORE,
-                    objectType: g.Qqv.TIER_2,
+                    objectType: g.AnalyticsObjectTypes.TIER_2,
                 }),
         });
     return (0, r.jsxs)("div", {
@@ -96,11 +96,11 @@ let x = function (e) {
         children: [
             (0, r.jsxs)(i.vwX, {
                 className: f.formTitle,
-                children: [(0, r.jsx)("div", { children: p.intl.string(p.t.B9grJy) }), y],
+                children: [(0, r.jsx)("div", { children: p.intl.string(p.t.B9grJw) }), y],
             }),
             (0, r.jsx)(i.R94, {
                 className: f.description,
-                children: p.intl.string(p.t.I3YQeX),
+                children: p.intl.string(p.t.I3YQeV),
             }),
             (0, r.jsxs)("div", {
                 className: f.rolePreviewArea,
@@ -151,7 +151,7 @@ let x = function (e) {
                               },
                               variant: "critical-secondary",
                               disabled: x,
-                              text: p.intl.string(p.t["uY+Nk5"]),
+                              text: p.intl.string(p.t["uY+Nk/"]),
                           })
                         : null,
                 ],

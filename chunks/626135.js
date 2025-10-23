@@ -139,7 +139,7 @@ let F = {
         throttleKeys: () => [],
     },
     [g.rMx.ACK_MESSAGES]: (e) =>
-        e.location_object_type === g.Qqv.ACK_MANUAL
+        e.location_object_type === g.AnalyticsObjectTypes.ACK_MANUAL
             ? void 0
             : {
                   throttlePeriod: x,

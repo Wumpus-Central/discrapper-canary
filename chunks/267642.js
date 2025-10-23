@@ -316,13 +316,13 @@ let D = i().memoize((e) =>
     ),
     L = (e) =>
         e === g.Eu4.NONE
-            ? g.Qqv.NONE
+            ? g.AnalyticsObjectTypes.NONE
             : e === g.Eu4.TIER_1
-              ? g.Qqv.TIER_1
+              ? g.AnalyticsObjectTypes.TIER_1
               : e === g.Eu4.TIER_2
-                ? g.Qqv.TIER_2
+                ? g.AnalyticsObjectTypes.TIER_2
                 : e === g.Eu4.TIER_3
-                  ? g.Qqv.TIER_3
+                  ? g.AnalyticsObjectTypes.TIER_3
                   : null;
 function x(e) {
     var t;

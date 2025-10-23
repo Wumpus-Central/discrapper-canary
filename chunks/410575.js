@@ -94,5 +94,5 @@ class f extends (r = a.Component) {
 u(f, "Pages", c.ZY5),
     u(f, "Sections", c.jXE),
     u(f, "Objects", c.qAy),
-    u(f, "ObjectTypes", c.Qqv),
+    u(f, "ObjectTypes", c.AnalyticsObjectTypes),
     u(f, "defaultProps", { root: !1 });

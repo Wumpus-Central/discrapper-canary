@@ -26,7 +26,7 @@ let E = function (e) {
                   className: g.guildInfoContainer,
                   children: (0, r.jsx)(l.Text, {
                       variant: "text-lg/bold",
-                      children: m.intl.string(m.t["6Kwwur"]),
+                      children: m.intl.string(m.t["6Kwwuo"]),
                   }),
               }),
           })
@@ -55,7 +55,7 @@ let E = function (e) {
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/bold",
                                       color: "text-muted",
-                                      children: m.intl.format(m.t["pob/cH"], { subscriptions: b }),
+                                      children: m.intl.format(m.t["pob/cL"], { subscriptions: b }),
                                   }),
                                   (0, r.jsx)("div", { className: g.separator }),
                                   (0, r.jsx)(l.Text, {
@@ -74,16 +74,16 @@ let E = function (e) {
                                 page: h.ZY5.GUILD_BOOSTING_USER_SETTINGS,
                                 section: h.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
                                 object: h.qAy.BUTTON_CTA,
-                                objectType: h.Qqv.BUY,
+                                objectType: h.AnalyticsObjectTypes.BUY,
                             },
                             pauseAnimation: !0,
                             size: s.zx.Sizes.MEDIUM,
                             color: s.zx.Colors.PRIMARY,
-                            buttonText: m.intl.string(m.t.aBHecH),
+                            buttonText: m.intl.string(m.t.aBHecF),
                         })
                       : (0, r.jsx)(l.Button, {
                             variant: "secondary",
-                            text: m.intl.string(m.t.KLOhbG),
+                            text: m.intl.string(m.t.KLOhbO),
                             onClick: () => {
                                 (0, u.f)({
                                     guildId: E.id,

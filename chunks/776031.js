@@ -134,7 +134,7 @@ function S(e, t) {
                     id: "stream-settings-fps-".concat(t),
                     label: n,
                     checked: t === v,
-                    action: () => w(i, y, t, m.Qqv.RESOLUTION),
+                    action: () => w(i, y, t, m.AnalyticsObjectTypes.RESOLUTION),
                 },
                 "stream-settings-fps-".concat(t),
             );
@@ -149,7 +149,7 @@ function S(e, t) {
                     id: "stream-settings-resolution-".concat(t),
                     label: n,
                     checked: t === y,
-                    action: () => w(i, t, D, m.Qqv.RESOLUTION),
+                    action: () => w(i, t, D, m.AnalyticsObjectTypes.RESOLUTION),
                 },
                 "stream-settings-resolution-".concat(t),
             );
@@ -157,11 +157,11 @@ function S(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.kSQ, {
-                label: b.intl.string(b.t.SkkeIi),
+                label: b.intl.string(b.t.SkkeIt),
                 children: L,
             }),
             (0, r.jsx)(o.kSQ, {
-                label: b.intl.string(b.t.rHyPXl),
+                label: b.intl.string(b.t.rHyPXg),
                 children: x,
             }),
         ],

@@ -156,12 +156,12 @@ let A = {
                     viewId: l,
                 }),
             r &&
-                s.In(
+                s.ack(
                     t.channel_id,
                     {
                         section: h.jXE.INBOX,
                         object: h.qAy.ACK_MESSAGE_VIEWED,
-                        objectType: h.Qqv.ACK_SEMI_AUTOMATIC,
+                        objectType: h.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                     },
                     !0,
                     void 0,

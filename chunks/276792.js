@@ -4,18 +4,18 @@ n(647438);
 var i = n(657707),
     l = n(704215),
     a = n(740111),
-    o = n(159691),
-    s = n(481060),
+    s = n(159691),
+    o = n(481060),
     c = n(963249),
     u = n(703656),
     d = n(626135),
     p = n(63063),
     f = n(382791),
     h = n(474936),
-    g = n(981631),
-    m = n(388032),
-    b = n(605548);
-function _(e) {
+    m = n(981631),
+    g = n(388032),
+    _ = n(605548);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,20 +59,20 @@ function E(e, t) {
     );
 }
 function O(e) {
-    var t, n, O, v;
+    var t, n, O, I;
     let y,
-        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: N, isLightTheme: T } = e,
-        P = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
-        { onClose: j } = C,
-        x = null != (v = null == (t = I.button) ? void 0 : t.copy) ? v : m.intl.string(m.t.YScQSE),
+        { content: v, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
+        j = "AnnouncementModalVariant1_".concat(l.z[Number(v.dismissKey)]),
+        { onClose: P } = C,
+        x = null != (I = null == (t = v.button) ? void 0 : t.copy) ? I : g.intl.string(g.t.YScQSF),
         A =
-            (null == (n = I.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
+            (null == (n = v.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
-    switch (null == (O = I.button) ? void 0 : O.buttonAction) {
+    switch (null == (O = v.button) ? void 0 : O.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
             y = () => {
-                (0, u.uL)(g.Z5c.APPLICATION_STORE), j();
+                (0, u.uL)(m.Z5c.APPLICATION_STORE), P();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
@@ -80,12 +80,12 @@ function O(e) {
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_1,
                     analyticsLocations: S,
-                    analyticsObject: E(_({}, N), {
-                        object: g.qAy.BUTTON_CTA,
-                        objectType: g.Qqv.TIER_1,
+                    analyticsObject: E(b({}, T), {
+                        object: m.qAy.BUTTON_CTA,
+                        objectType: m.AnalyticsObjectTypes.TIER_1,
                     }),
                     onClose: (e) => {
-                        e && j();
+                        e && P();
                     },
                 });
             break;
@@ -96,78 +96,78 @@ function O(e) {
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_2,
                     analyticsLocations: S,
-                    analyticsObject: E(_({}, N), {
-                        object: g.qAy.BUTTON_CTA,
-                        objectType: g.Qqv.TIER_2,
+                    analyticsObject: E(b({}, T), {
+                        object: m.qAy.BUTTON_CTA,
+                        objectType: m.AnalyticsObjectTypes.TIER_2,
                     }),
                     onClose: (e) => {
-                        e && j();
+                        e && P();
                     },
                 });
     }
     let Z =
-            "" !== I.helpArticleId
+            "" !== v.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               "\xA0",
-                              (0, r.jsx)(s.Anchor, {
-                                  className: b.termsApplyAnchor,
-                                  href: p.Z.getArticleURL(I.helpArticleId),
-                                  children: m.intl.string(m.t["sBp+u7"]),
+                              (0, r.jsx)(o.Anchor, {
+                                  className: _.termsApplyAnchor,
+                                  href: p.Z.getArticleURL(v.helpArticleId),
+                                  children: g.intl.string(g.t["sBp+u0"]),
                               }),
                           ],
                       })
                 : void 0,
         w = {
             type: "video",
-            src: T ? I.heroArtVideoLinkLightTheme : I.videoLink,
+            src: N ? v.heroArtVideoLinkLightTheme : v.videoLink,
         };
-    null != I.heroArtVideoSubtitles &&
-        (w.subtitles = I.heroArtVideoSubtitles.map((e) => ({
+    null != v.heroArtVideoSubtitles &&
+        (w.subtitles = v.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1,
         }))),
-        ("" !== I.heroArtImageLinkDarkTheme || "" !== I.heroArtImageLinkLightTheme) &&
+        ("" !== v.heroArtImageLinkDarkTheme || "" !== v.heroArtImageLinkLightTheme) &&
             (w = {
                 type: "image",
-                src: T ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
+                src: N ? v.heroArtImageLinkLightTheme : v.heroArtImageLinkDarkTheme,
             });
     let L =
-        "" !== I.modalTopPill
+        "" !== v.modalTopPill
             ? () =>
                   (0, r.jsx)(f.mn, {
-                      text: I.modalTopPill,
-                      className: b.modalTopPill,
+                      text: v.modalTopPill,
+                      className: _.modalTopPill,
                   })
             : void 0;
     return {
         renderModalProps: C,
-        header: I.header,
+        header: v.header,
         modalTopExtra: L,
-        subHeader: I.subheader,
+        subHeader: v.subheader,
         subHeaderExtra: Z,
-        body: I.body,
+        body: v.body,
         heroArt: w,
-        featureCards: I.featureCards.map((e) => ({
+        featureCards: v.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
-        changeLogId: P,
+        changeLogId: j,
         button: () => {
             let e = Date.now();
-            return (0, r.jsx)(o.zxk, {
+            return (0, r.jsx)(s.zxk, {
                 variant: "expressive",
                 size: "md",
                 onClick: () => {
-                    d.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: P,
+                    d.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
+                        change_log_id: j,
                         cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: P,
+                        target: j,
                     }),
                         y();
                 },
@@ -175,6 +175,6 @@ function O(e) {
                 icon: i.SrA,
             });
         },
-        modalDismissibleContent: "" !== I.dismissKey ? Number(I.dismissKey) : void 0,
+        modalDismissibleContent: "" !== v.dismissKey ? Number(v.dismissKey) : void 0,
     };
 }

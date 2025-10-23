@@ -49,14 +49,14 @@ let D = () => {
             m = () => {
                 if (!o || s) return null;
                 let e = u
-                    ? P.intl.formatToPlainString(P.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount })
-                    : P.intl.string(P.t.mr4K7O);
+                    ? P.intl.formatToPlainString(P.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
+                    : P.intl.string(P.t.mr4K7D);
                 return (0, r.jsxs)("div", {
                     className: w.tryItOutButtons,
                     children: [
                         (0, r.jsx)(l.Button, {
                             variant: "secondary",
-                            text: P.intl.string(P.t["E+COuL"]),
+                            text: P.intl.string(P.t["E+COuA"]),
                             onClick: () => D(),
                         }),
                         (0, r.jsx)(y.Z, {
@@ -64,7 +64,7 @@ let D = () => {
                             defaultTextOverride: e,
                             premiumModalAnalyticsLocation: {
                                 object: C.qAy.BUTTON_CTA,
-                                objectType: C.Qqv.BUY,
+                                objectType: C.AnalyticsObjectTypes.BUY,
                             },
                             fullWidth: !0,
                         }),
@@ -88,7 +88,7 @@ let D = () => {
                             children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: P.intl.string(P.t["E+COuL"]),
+                                text: P.intl.string(P.t["E+COuA"]),
                                 onClick: () => D(),
                             }),
                         }),
@@ -151,7 +151,7 @@ function x() {
               children: [
                   (0, r.jsx)(l.izJ, { gap: 24 }),
                   (0, r.jsx)(l.rsf, {
-                      label: P.intl.string(P.t.yF54Ki),
+                      label: P.intl.string(P.t.yF54Ks),
                       checked: e && (0, s.ap)(t) && !n,
                       disabled: t !== C.BRd.LIGHT || n || null != i || o,
                       onChange: c.lq,
@@ -165,6 +165,6 @@ let M = () =>
         ? null
         : (0, r.jsx)(l.Button, {
               variant: "primary",
-              text: P.intl.string(P.t.qYXrkZ),
+              text: P.intl.string(P.t.qYXrkX),
               onClick: D,
           });

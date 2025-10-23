@@ -1,5 +1,5 @@
 t.d(n, {
-    Z: () => N,
+    Z: () => S,
     c: () => Z,
 });
 var l = t(951288),
@@ -45,9 +45,9 @@ function f(e) {
         a = r.useCallback(() => {
             if (null != i) {
                 var e;
-                return null != (e = (0, g.fr)(i, j.Si.TIER_2)) ? e : p.intl.string(p.t.Y2WKTk);
+                return null != (e = (0, g.fr)(i, j.Si.TIER_2)) ? e : p.intl.string(p.t.Y2WKTl);
             }
-            return p.intl.string(p.t.Y2WKTk);
+            return p.intl.string(p.t.Y2WKTl);
         }, [i]);
     return (0, l.jsx)(
         x.Z,
@@ -103,17 +103,17 @@ function Z() {
             (0, l.jsx)(o.Text, {
                 variant: "text-xs/medium",
                 className: v.reverseTrialEducationText,
-                children: p.intl.format(p.t.GimLpa, {}),
+                children: p.intl.format(p.t.GimLpS, {}),
             }),
         ],
     });
 }
-function N(e) {
+function S(e) {
     let { message: n, onClose: t, openStreamUpsellModal: r, glow: i = !1 } = e,
         a = {
             section: h.jXE.STREAM_SETTINGS,
             object: h.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: h.Qqv.BUY,
+            objectType: h.AnalyticsObjectTypes.BUY,
         };
     return (0, l.jsxs)("div", {
         className: s()(v.upsellBanner, v.enhancedBanner, { [v.gradientGlow]: i }),
@@ -131,7 +131,7 @@ function N(e) {
                         children:
                             null != n
                                 ? n
-                                : p.intl.format(p.t["L/zCtr"], {
+                                : p.intl.format(p.t["L/zCto"], {
                                       onClick: () =>
                                           r({
                                               analyticsLocation: a,

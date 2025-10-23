@@ -43,7 +43,7 @@ let j = () =>
                     (0, r.jsx)(d.Heading, {
                         variant: "heading-md/bold",
                         color: "always-white",
-                        children: M.intl.string(M.t.POSLGR),
+                        children: M.intl.string(M.t.POSLGY),
                     }),
                 ],
             }),
@@ -68,7 +68,7 @@ let j = () =>
                 }),
                 (0, r.jsx)(d.Heading, {
                     variant: "heading-lg/extrabold",
-                    children: M.intl.string(M.t["xSR+a2"]),
+                    children: M.intl.string(M.t["xSR+a/"]),
                 }),
             ],
         });
@@ -87,10 +87,10 @@ let j = () =>
                 intervalCount: null == _ || null == (n = _.subscription_trial) ? void 0 : n.interval_count,
             }),
             g = d
-                ? M.intl.string(M.t.IJI7ys)
+                ? M.intl.string(M.t.IJI7yk)
                 : (null == _ || null == (i = _.subscription_trial) ? void 0 : i.sku_id) === x.Si.TIER_2
                   ? p
-                  : M.intl.string(M.t.mr4K7O),
+                  : M.intl.string(M.t.mr4K7D),
             E = (e) => {
                 e &&
                     (null == a || a(),
@@ -111,7 +111,7 @@ let j = () =>
             defaultTextOverride: g,
             premiumModalAnalyticsLocation: {
                 object: D.qAy.BUTTON_CTA,
-                objectType: D.Qqv.BUY,
+                objectType: D.AnalyticsObjectTypes.BUY,
             },
             onSubscribeModalClose: E,
             fullWidth: !0,
@@ -130,21 +130,21 @@ let j = () =>
             },
             _ = (0, E.B)(
                 {
-                    no: M.t["3D5yo6"],
-                    "sv-SE": M.t["3D5yo6"],
-                    uk: M.t["3D5yo6"],
-                    de: M.t["3D5yo6"],
+                    no: M.t["3D5yo/"],
+                    "sv-SE": M.t["3D5yo/"],
+                    uk: M.t["3D5yo/"],
+                    de: M.t["3D5yo/"],
                 },
-                M.t["dqH+qq"],
+                M.t["dqH+qr"],
             ),
             p = (0, s.EQ)({
                 isPreview: a,
                 isCoachmark: n,
                 forceShowCloseButton: o,
             })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => M.intl.string(M.t.cpT0Cg))
+                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => M.intl.string(M.t.cpT0Cq))
                 .with({ isPreview: !0 }, () => _)
-                .otherwise(() => M.intl.string(M.t.Olc2Ky));
+                .otherwise(() => M.intl.string(M.t.Olc2K3));
         return (0, r.jsxs)("div", {
             className: k.editorFooter,
             children: [

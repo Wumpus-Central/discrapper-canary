@@ -1,6 +1,7 @@
 n.d(t, {
     Kh: () => _,
     ad: () => p,
+    jd: () => h,
 });
 var r = n(512722),
     i = n.n(r),
@@ -51,4 +52,10 @@ function p(e, t) {
     i()(null != e.parent_id, "Thread must have a parent ID.");
     let n = (0, s.e)(e);
     (0, c.uL)(u.Z5c.CHANNEL(n, e.id), f({ openChannel: !0 }, t));
+}
+function h(e, t, n) {
+    let r = l.Z.getChannel(e);
+    if (null == r) return;
+    let i = (0, s.e)(r);
+    (0, c.uL)(u.Z5c.CHANNEL(i, r.id, t), f({ openChannel: !0 }, n));
 }

@@ -75,11 +75,11 @@ function v(e, t) {
 function I(e) {
     switch (e) {
         case p.Eu4.TIER_3:
-            return p.Qqv.TIER_3;
+            return p.AnalyticsObjectTypes.TIER_3;
         case p.Eu4.TIER_2:
-            return p.Qqv.TIER_2;
+            return p.AnalyticsObjectTypes.TIER_2;
         case p.Eu4.TIER_1:
-            return p.Qqv.TIER_1;
+            return p.AnalyticsObjectTypes.TIER_1;
         default:
             throw Error("Unsupported Boosting tier: ".concat(e));
     }
