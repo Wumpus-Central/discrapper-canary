@@ -1,5 +1,6 @@
 e.exports = {
     container: "container__7a78a",
+    sizeMedium: "sizeMedium__7a78a",
     sizeSmall: "sizeSmall__7a78a",
     placeholderDetailsCard: "placeholderDetailsCard__7a78a",
     placeholderText: "placeholderText__7a78a",
