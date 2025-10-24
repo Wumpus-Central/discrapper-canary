@@ -1,0 +1,93 @@
+n.d(t, { M: () => p }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(481060),
+    a = n(31336),
+    s = n(678717),
+    o = n(252899),
+    c = n(478057),
+    u = n(665149);
+function d(e) {
+    let { onClose: t } = e,
+        n = (0, s.useDevToolsTabConfig)(),
+        i = (0, o.F)(n, a.d8),
+        u = (0, c.Z)();
+    return (0, r.jsxs)(l.v2r, {
+        onSelect: () => {},
+        navId: "devtools-popout",
+        variant: "fixed",
+        onClose: t,
+        "aria-label": "DevTools Actions",
+        children: [i, u],
+    });
+}
+function p(e) {
+    let { className: t, focusSectionProps: n } = e,
+        [s, o] = i.useState(!1),
+        [c, p] = i.useState(0),
+        f = i.useRef(null),
+        h = (e) => {
+            clearTimeout(c),
+                p(
+                    setTimeout(() => {
+                        o(e);
+                    }, 100),
+                );
+        };
+    return (0, r.jsx)("div", {
+        onMouseEnter: () => h(!0),
+        onMouseLeave: () => h(!1),
+        children: (0, r.jsx)(l.yRy, {
+            targetElementRef: f,
+            shouldShow: s,
+            animation: l.yRy.Animation.NONE,
+            position: "bottom",
+            align: "right",
+            autoInvert: !1,
+            onRequestOpen: () => o(!0),
+            onRequestClose: () => o(!1),
+            renderPopout: () => (0, r.jsx)(d, { onClose: () => o(!1) }),
+            children: (e, i) => {
+                let { isShown: s } = i;
+                return (0, r.jsx)(
+                    u.JO,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })(
+                        {
+                            ref: f,
+                            onClick: () => (0, a.d8)(),
+                            icon: l.Ymb,
+                            "aria-label": "DevTools",
+                            selected: s,
+                            className: t,
+                        },
+                        n,
+                    ),
+                );
+            },
+        }),
+    });
+}

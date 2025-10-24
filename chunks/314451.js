@@ -1,18 +1,12 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { H: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(481060),
-    o = n(782568),
-    s = n(31336),
-    c = n(678717),
-    u = n(252899),
-    d = n(478057),
-    p = n(906467),
-    f = n(63063),
-    h = n(665149),
-    g = n(388032);
-function m(e) {
+    l = n(481060),
+    a = n(782568),
+    s = n(63063),
+    o = n(665149),
+    c = n(388032);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,94 +31,74 @@ function m(e) {
     }
     return e;
 }
-let b = () =>
-    (0, a.ZDy)(async () => {
+let d = () =>
+    (0, l.ZDy)(async () => {
         let { default: e } = await n.e("83051").then(n.bind(n, 115072));
-        return (t) => (0, r.jsx)(e, m({}, t));
+        return (t) => (0, r.jsx)(e, u({}, t));
     });
-function _(e) {
-    let { onClose: t, isDiscordDeveloper: n } = e,
-        i = (0, c.useDevToolsTabConfig)(),
-        l = (0, u.F)(i, s.d8),
-        p = (0, d.Z)();
-    return (0, r.jsx)(a.v2r, {
+function p(e) {
+    let { onClose: t } = e;
+    return (0, r.jsx)(l.v2r, {
         onSelect: () => {},
         navId: "staff-help-popout",
         variant: "fixed",
         onClose: t,
-        "aria-label": g.intl.string(g.t.HpQykc),
-        children: (0, r.jsxs)(a.kSQ, {
+        "aria-label": c.intl.string(c.t.HpQykc),
+        children: (0, r.jsxs)(l.kSQ, {
             children: [
-                (0, r.jsx)(a.sNh, {
+                (0, r.jsx)(l.sNh, {
                     id: "staff-help-bug-reporter",
-                    label: g.intl.string(g.t["5LqopY"]),
-                    icon: a.nnZ,
-                    action: b,
+                    label: c.intl.string(c.t["5LqopY"]),
+                    icon: l.nnZ,
+                    action: d,
                 }),
-                n &&
-                    (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)(a.sNh, {
-                                id: "staff-devtools",
-                                label: "DevTools",
-                                action: () => (0, s.d8)(),
-                                children: l,
-                            }),
-                            p,
-                        ],
-                    }),
-                (0, r.jsx)(a.sNh, {
+                (0, r.jsx)(l.sNh, {
                     id: "staff-help-center",
                     label: "Go to Help Center",
-                    icon: a.rgF,
-                    action: () => (0, o.Z)(f.w),
+                    icon: l.rgF,
+                    action: () => (0, a.Z)(s.w),
                 }),
             ],
         }),
     });
 }
-function E(e) {
+function f(e) {
     let { className: t, focusSectionProps: n } = e,
-        o = (0, l.e7)([p.Z], () => p.Z.isDeveloper),
-        [s, c] = i.useState(!1),
-        [u, d] = i.useState(0),
-        f = i.useRef(null),
-        E = (e) => {
-            clearTimeout(u),
-                d(
+        [a, s] = i.useState(!1),
+        [f, h] = i.useState(0),
+        m = i.useRef(null),
+        g = (e) => {
+            clearTimeout(f),
+                h(
                     setTimeout(() => {
-                        c(e);
+                        s(e);
                     }, 100),
                 );
         };
     return (0, r.jsx)("div", {
-        onMouseEnter: () => E(!0),
-        onMouseLeave: () => E(!1),
-        children: (0, r.jsx)(a.yRy, {
-            targetElementRef: f,
-            shouldShow: s,
-            animation: a.yRy.Animation.NONE,
+        onMouseEnter: () => g(!0),
+        onMouseLeave: () => g(!1),
+        children: (0, r.jsx)(l.yRy, {
+            targetElementRef: m,
+            shouldShow: a,
+            animation: l.yRy.Animation.NONE,
             position: "bottom",
             align: "right",
             autoInvert: !1,
-            onRequestOpen: () => c(!0),
-            onRequestClose: () => c(!1),
-            renderPopout: () =>
-                (0, r.jsx)(_, {
-                    onClose: () => c(!1),
-                    isDiscordDeveloper: o,
-                }),
+            onRequestOpen: () => s(!0),
+            onRequestClose: () => s(!1),
+            renderPopout: () => (0, r.jsx)(p, { onClose: () => s(!1) }),
             children: (e, i) => {
-                let { isShown: l } = i;
+                let { isShown: a } = i;
                 return (0, r.jsx)(
-                    h.JO,
-                    m(
+                    o.JO,
+                    u(
                         {
-                            ref: f,
-                            onClick: b,
-                            icon: a.nnZ,
-                            "aria-label": g.intl.string(g.t["cqEoj/"]),
-                            selected: l,
+                            ref: m,
+                            onClick: d,
+                            icon: l.nnZ,
+                            "aria-label": c.intl.string(c.t["5LqopY"]),
+                            selected: a,
                             className: t,
                         },
                         n,
