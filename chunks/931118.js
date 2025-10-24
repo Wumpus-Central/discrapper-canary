@@ -20,27 +20,32 @@ let a = (0, r.Z)({
             variant: "control",
             showNagbar: !0,
             hasExperimentalTooltip: !1,
+            hasNitroTabBadgeOfferReminder: !1,
         },
         variations: {
             1: {
                 variant: "nagbar-refresh",
                 showNagbar: !0,
                 hasExperimentalTooltip: !0,
+                hasNitroTabBadgeOfferReminder: !1,
             },
             2: {
                 variant: "offer-badge",
                 showNagbar: !1,
                 hasExperimentalTooltip: !0,
+                hasNitroTabBadgeOfferReminder: !0,
             },
             3: {
                 variant: "offer-countdown",
                 showNagbar: !1,
                 hasExperimentalTooltip: !0,
+                hasNitroTabBadgeOfferReminder: !0,
             },
             4: {
                 variant: "hero-countdown",
                 showNagbar: !1,
                 hasExperimentalTooltip: !0,
+                hasNitroTabBadgeOfferReminder: !0,
             },
         },
     }),

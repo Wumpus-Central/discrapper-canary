@@ -1,112 +1,131 @@
 n.d(t, {
-    $H: () => b,
-    GN: () => y,
-    _y: () => O,
+    $H: () => O,
+    GN: () => v,
+    _y: () => I,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(28664),
-    l = n(481060),
-    c = n(774078),
-    u = n(55935),
-    d = n(74538),
-    f = n(931118),
-    _ = n(639119),
-    p = n(533246),
-    h = n(388032),
-    m = n(788963);
-let g = 60000;
-function E(e) {
+    s = n(704215),
+    l = n(28664),
+    c = n(481060),
+    u = n(774078),
+    d = n(266454),
+    f = n(55935),
+    _ = n(74538),
+    p = n(931118),
+    h = n(639119),
+    m = n(533246),
+    g = n(388032),
+    E = n(788963);
+let b = 60000;
+function y(e) {
     let {
             isTabSelected: t,
             expiresAt: n,
-            trialDuration: a,
-            className: d,
-            tooltipTextOverride: f,
-            tooltipPosition: _,
+            badgeCopy: a,
+            className: _,
+            tooltipTextOverride: p,
+            tooltipPosition: h,
+            shouldShowOfferReminder: m,
         } = e,
-        p = i.useMemo(() => Date.parse(n), [n]),
-        E = (0, c.Z)(p, g);
-    return Object.values(E).every((e) => 0 === e)
+        y = i.useMemo(() => Date.parse(n), [n]),
+        O = (0, u.Z)(y, b),
+        v = (0, d.zu)(s.z.NITRO_TAB_BADGE_OFFER_REMINDER),
+        I = m && !v;
+    return Object.values(O).every((e) => 0 === e)
         ? null
-        : (0, r.jsx)(s.u, {
+        : (0, r.jsx)(l.u, {
               text:
-                  null != f
-                      ? f
-                      : (0, u.QX)(E, {
-                            days: h.t.qVGNkZ,
-                            hours: h.t.wyg9a2,
-                            minutes: h.t.IzmIlZ,
+                  null != p
+                      ? p
+                      : (0, f.QX)(O, {
+                            days: g.t.qVGNkU,
+                            hours: g.t.wyg9a9,
+                            minutes: g.t.IzmIlV,
                         }),
-              position: null != _ ? _ : "top",
+              position: null != h ? h : "top",
               children: (0, r.jsxs)("div", {
-                  className: o()(m.premiumTrialBadge, m.premiumTrialAcknowledgedBadge, d, {
-                      [m.premiumTrialBadgeSelected]: t,
-                  }),
+                  className: o()(
+                      E.premiumTrialBadge,
+                      I ? E.premiumOfferUnackedBadge : E.premiumOfferWithTimerAcknowledgedBadge,
+                      _,
+                      { [E.premiumTrialBadgeSelected]: t },
+                  ),
                   children: [
-                      (0, r.jsx)(l.T39, {
+                      (0, r.jsx)(c.T39, {
                           size: "custom",
                           width: 20,
                           height: 20,
-                          color: "currentColor",
-                          className: m.premiumTrialBadgeIcon,
+                          color: I ? "white" : "currentColor",
+                          className: E.premiumTrialBadgeIcon,
                       }),
-                      (0, r.jsxs)(l.Text, {
+                      (0, r.jsx)(c.Text, {
                           variant: "eyebrow",
-                          children: [" ", a, " "],
+                          color: I ? "always-white" : "text-primary",
+                          children: a,
                       }),
                   ],
               }),
           });
 }
-function b(e) {
+function O(e) {
     var t;
-    let { isTabSelected: n, trialOffer: i } = e,
-        a = null == (t = (0, _.N)()) ? void 0 : t.subscription_trial,
-        o = (0, d.a5)({
-            intervalType: null == a ? void 0 : a.interval,
-            intervalCount: null == a ? void 0 : a.interval_count,
+    let { isTabSelected: n, trialOffer: i, shouldShowOfferReminder: a } = e,
+        o = null == (t = (0, h.N)()) ? void 0 : t.subscription_trial,
+        s = (0, _.a5)({
+            intervalType: null == o ? void 0 : o.interval,
+            intervalCount: null == o ? void 0 : o.interval_count,
         }),
-        s = (0, p.YF)(i),
-        { hasExperimentalTooltip: l } = (0, f.ZP)("PremiumOfferTabBadge");
-    return (0, r.jsx)(O, {
+        l = (0, m.YF)(i),
+        { hasExperimentalTooltip: c } = (0, p.ZP)("PremiumOfferTabBadge");
+    return (0, r.jsx)(I, {
         isTabSelected: n,
-        badgeCopy: o,
+        badgeCopy: s,
         offerExpiresAt: i.expires_at,
+        tooltipTextOverride: c ? l : null,
+        tooltipPosition: c ? "right" : "top",
+        shouldShowOfferReminder: a,
+    });
+}
+function v(e) {
+    let { isTabSelected: t, userDiscount: n, includesAmountOff: i, shouldShowOfferReminder: a } = e,
+        o = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n.discount.amount }),
+        s = (0, m.h$)(n),
+        { hasExperimentalTooltip: l } = (0, p.ZP)("PremiumOfferTabBadge");
+    return (0, r.jsx)(I, {
+        isTabSelected: t,
+        badgeCopy: i ? o : g.intl.string(g.t["/DTtr6"]),
+        offerExpiresAt: n.expires_at,
         tooltipTextOverride: l ? s : null,
         tooltipPosition: l ? "right" : "top",
+        shouldShowOfferReminder: a,
     });
 }
-function y(e) {
-    let { isTabSelected: t, userDiscount: n, includesAmountOff: i } = e,
-        a = h.intl.formatToPlainString(h.t.iiLbvr, { percent: n.discount.amount }),
-        o = (0, p.h$)(n),
-        { hasExperimentalTooltip: s } = (0, f.ZP)("PremiumOfferTabBadge");
-    return (0, r.jsx)(O, {
+function I(e) {
+    let {
         isTabSelected: t,
-        badgeCopy: i ? a : h.intl.string(h.t["/DTtr6"]),
-        offerExpiresAt: n.expires_at,
-        tooltipTextOverride: s ? o : null,
-        tooltipPosition: s ? "right" : "top",
-    });
-}
-function O(e) {
-    let { isTabSelected: t, badgeCopy: n, offerExpiresAt: i, tooltipTextOverride: a, tooltipPosition: s } = e;
+        badgeCopy: n,
+        offerExpiresAt: i,
+        tooltipTextOverride: a,
+        tooltipPosition: s,
+        shouldShowOfferReminder: l = !1,
+    } = e;
     return null != i
-        ? (0, r.jsx)(E, {
+        ? (0, r.jsx)(y, {
               expiresAt: i,
               isTabSelected: t,
-              trialDuration: n,
+              badgeCopy: n,
               tooltipTextOverride: a,
               tooltipPosition: s,
+              shouldShowOfferReminder: l,
           })
         : (0, r.jsx)("div", {
-              className: o()(m.premiumTrialBadge, m.premiumOfferUnackedBadge),
-              children: (0, r.jsx)(l.Text, {
+              className: o()(E.premiumTrialBadge, E.premiumOfferUnackedBadge),
+              children: (0, r.jsx)(c.Text, {
                   variant: "eyebrow",
-                  className: m.premiumOfferBadgeCopy,
+                  className: E.premiumOfferBadgeCopy,
                   children: n,
               }),
           });

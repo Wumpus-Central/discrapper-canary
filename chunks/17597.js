@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(388685), n(953529);
+n.d(t, { default: () => E }), n(388685), n(953529);
 var a = n(951288),
     r = n(647438),
     i = n(772848),
@@ -16,37 +16,38 @@ var a = n(951288),
     g = n(352138),
     b = n(629235),
     v = n(981631),
-    j = n(847678),
-    _ = n(388032),
-    y = n(70402),
-    C = n(736056);
-let S = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: S, onComplete: E, dismissable: T, classificationId: O } = e,
-        [N, P] = r.useState(o.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = r.useRef(N),
-        [w, k] = (0, c.US)([N], void 0, !0),
-        R = r.useMemo(() => (0, i.Z)(), []),
-        A = r.useRef(!1),
-        D = (0, m.GE)();
+    j = n(800530),
+    _ = n(847678),
+    y = n(388032),
+    C = n(70402),
+    S = n(736056);
+let E = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: E, onComplete: T, dismissable: O, classificationId: N } = e,
+        [P, I] = r.useState(o.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        w = r.useRef(P),
+        [k, R] = (0, c.US)([P], void 0, !0),
+        A = r.useMemo(() => (0, i.Z)(), []),
+        D = r.useRef(!1),
+        Z = (0, m.GE)();
     r.useEffect(() => {
-        I.current = w;
-    }, [w]);
-    let { loading: Z, ageVerificationMethods: M } = (0, b.Z)({
+        w.current = k;
+    }, [k]);
+    let { loading: M, ageVerificationMethods: L } = (0, b.Z)({
         onClose: () => {
-            null == E || E(), S();
+            null == T || T(), E();
         },
         onMethodClick: () => {
-            P(o.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            I(o.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: O,
+        classificationId: N,
     });
     return (
         r.useLayoutEffect(
             () => () => {
-                if (A.current) return;
-                let e = I.current;
+                if (D.current) return;
+                let e = w.current;
                 null != e &&
-                    ((A.current = !0),
+                    ((D.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -55,42 +56,42 @@ let S = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, f.lA)(R, f.d_.EXPRESSIVE_PRIMARY, n);
-        }, [R, n]),
+            (0, f.lA)(A, f.d_.EXPRESSIVE_PRIMARY, n);
+        }, [A, n]),
         (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
-            onClose: S,
+            onClose: E,
             gradientColor: "blue",
-            dismissable: T,
+            dismissable: O,
             graphic: {
                 type: "image",
-                src: C.Z,
+                src: S.Z,
             },
-            title: _.intl.string(_.t.JHNunj),
-            subtitle: D
-                ? _.intl.string(j.default["1/6wta"])
-                : _.intl.format(j.default.RpMIT0, {
+            title: y.intl.string(y.t.JHNunj),
+            subtitle: Z
+                ? y.intl.string(_.default["1/6wta"])
+                : y.intl.format(_.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
                           x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                              (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                              (0, f.x3)(A, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
                       },
                   }),
-            actionBarInput: D
+            actionBarInput: Z
                 ? (0, a.jsx)(s.Text, {
                       variant: "text-xs/medium",
-                      children: _.intl.format(j.default.htWh1G, {
+                      children: y.intl.format(_.default.htWh1G, {
                           handleOnHelpUrlHook: () => {
-                              x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                                  (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                              x.Z.openUrl(j.sQ.LEARN_MORE_UU_APPEAL_LINK),
+                                  (0, f.x3)(A, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
                           },
                       }),
                   })
                 : (0, a.jsx)(s.Avr, {
                       size: "sm",
                       textVariant: "text-sm/medium",
-                      text: _.intl.string(_.t["2jxGer"]),
+                      text: y.intl.string(y.t["2jxGer"]),
                       onClick: () => {
-                          (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT),
+                          (0, f.x3)(A, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT),
                               (0, u.R)("age_verification_get_started_modal");
                       },
                   }),
@@ -109,7 +110,7 @@ let S = function (e) {
                             right: 12,
                         },
                         align: "center",
-                        className: y.dataAssurance,
+                        className: C.dataAssurance,
                         children: [
                             (0, a.jsx)(s.d3s, {
                                 size: "lg",
@@ -118,11 +119,11 @@ let S = function (e) {
                             (0, a.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: _.intl.string(j.default.ar3a3q),
+                                children: y.intl.string(_.default.ar3a3q),
                             }),
                         ],
                     }),
-                    null == M || 0 === M.length
+                    null == L || 0 === L.length
                         ? (0, a.jsxs)(s.Kqy, {
                               direction: "vertical",
                               align: "center",
@@ -131,12 +132,12 @@ let S = function (e) {
                                   (0, a.jsx)(s.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-secondary",
-                                      children: _.intl.string(j.default.cR6336),
+                                      children: y.intl.string(_.default.cR6336),
                                   }),
                                   (0, a.jsx)(s.Button, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: _.intl.string(j.default.hDvmYP),
+                                      text: y.intl.string(_.default.hDvmYP),
                                       onClick: () => {
                                           (0, g.Jh)();
                                       },
@@ -146,7 +147,7 @@ let S = function (e) {
                         : (0, a.jsx)(s.Kqy, {
                               direction: "vertical",
                               gap: 8,
-                              children: M.map((e) => {
+                              children: L.map((e) => {
                                   let { title: t, description: n, onClick: r } = e;
                                   return (0, a.jsx)(
                                       d.JZ,
@@ -154,8 +155,8 @@ let S = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: Z,
-                                          onButtonPress: () => r(R),
+                                          buttonDisabled: M,
+                                          onButtonPress: () => r(A),
                                       },
                                       t,
                                   );

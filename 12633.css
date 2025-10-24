@@ -56470,21 +56470,17 @@ h3.improved__1689b:after {
     background: linear-gradient(90deg, #db00a4, #5968f0)
 }
 
-.premiumTrialBadge__4c1e4.premiumTrialAcknowledgedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4 {
+.premiumTrialBadge__4c1e4.premiumOfferUnackedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4,
+.premiumTrialBadge__4c1e4.premiumOfferWithTimerAcknowledgedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4 {
     height: 12px;
     width: 12px
 }
 
-.premiumTrialTier0UnacknowledgedBadge__4c1e4 {
-    background-image: linear-gradient(to right, var(--premium-tier-0-purple-for-gradients) 0, var(--premium-tier-0-blue-for-gradients-2) 50%, var(--premium-tier-0-blue-for-gradients) 100%)
-}
-
-.premiumDiscountUnacknowledgedBadge__4c1e4,
-.premiumTrialTier2UnacknowledgedBadge__4c1e4 {
+.premiumOfferWithTimerUnacknowledgedBadge__4c1e4 {
     background-image: linear-gradient(to right, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients))
 }
 
-.premiumTrialAcknowledgedBadge__4c1e4 {
+.premiumOfferWithTimerAcknowledgedBadge__4c1e4 {
     background-color: var(--background-accent)
 }
 
@@ -72541,6 +72537,10 @@ html .progress__61462 {
 .topOfPageGradient_f48ee4 {
     position: absolute;
     top: 0
+}
+
+.topOfPageGradientWithCountdown_f48ee4 {
+    opacity: .75
 }
 
 .bottomOfPageGradient_f48ee4 {
