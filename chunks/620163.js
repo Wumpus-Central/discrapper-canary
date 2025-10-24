@@ -1158,11 +1158,6 @@ let eB = () => {
                 parent: eN.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
                 predicate: () => U.Z.supports(ew.AN.OPEN_H264),
             },
-            [eN.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION]: {
-                section: eP.oAB.VOICE,
-                searchableTitles: [eD.intl.string(eD.t.Sln58X)],
-                parent: eN.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
-            },
             [eN.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS]: {
                 section: eP.oAB.VOICE,
                 searchableTitles: [eD.intl.string(eD.t.AxnPm1)],
