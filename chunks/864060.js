@@ -1,13 +1,14 @@
 n.d(t, {
     FI: () => L,
     LL: () => k,
-    N_: () => M,
+    N_: () => U,
     Xi: () => F,
-    eF: () => U,
+    eF: () => M,
 }),
     n(997841),
     n(953529),
-    n(415506);
+    n(415506),
+    n(388685);
 var l = n(317381),
     i = n(599149),
     r = n(933557),
@@ -35,8 +36,8 @@ var l = n(317381),
     v = n(594174),
     x = n(630388),
     P = n(5192),
-    Z = n(352736),
-    A = n(51144);
+    A = n(352736),
+    Z = n(51144);
 n(734934);
 var j = n(842619),
     R = n(981631),
@@ -55,7 +56,7 @@ function k(e, t, n) {
         (!l.ignoreNoMessagesSetting && b.ZP.allowNoMessages(n))
     );
 }
-function U(e, t) {
+function M(e, t) {
     var n, i;
     let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -117,7 +118,7 @@ function U(e, t) {
         });
     }
 }
-function M(e, t) {
+function U(e, t) {
     var n;
     if (m.Z.getChannelId(I.Z.getGuildId()) !== t) return !1;
     let l = y.Z.getChannel(t);
@@ -196,48 +197,49 @@ function F(e, t, n) {
             (e.isManaged() && n.bot && s === (0, r.F6)(e, v.default, T.Z)) || (s = G(s, e));
     }
     let f = t.content;
-    if ((0, g.Z)(t) && null == (f = Z.Z.stringify(t, e)))
+    if ((0, g.Z)(t) && null == (f = A.Z.stringify(t, e)))
         throw (
             (new a.Z("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
                 message: t,
             }),
             Error("failed to stringify system message"))
         );
-    let h = "sticker_items" in t ? t.sticker_items : "stickerItems" in t ? t.stickerItems : t.stickers;
-    if ("message_reference" in t ? (0, o.s)(t) : (0, o.Z)(t)) l = w.intl.string(w.t["9ddYKi"]);
+    let h = "sticker_items" in t ? t.sticker_items : "stickerItems" in t ? t.stickerItems : t.stickers,
+        p = [];
+    if ("message_reference" in t ? (0, o.s)(t) : (0, o.Z)(t)) l = w.intl.string(w.t["9ddYKt"]);
     else if (null != t.activity && null != t.application)
         l =
             t.activity.type === R.mFx.JOIN
-                ? w.intl.formatToPlainString(V(e, w.t.E8CgCg, w.t.c6KHWF, w.t.Fy7rJC), {
+                ? w.intl.formatToPlainString(V(e, w.t.E8CgCh, w.t.c6KHWJ, w.t.Fy7rJN), {
                       user: i,
                       game: t.application.name,
                   })
                 : t.activity.type === R.mFx.JOIN_REQUEST
-                  ? w.intl.formatToPlainString(V(e, w.t["/TD0lZ"], w.t["/TD0lZ"], w.t["/TD0lZ"]), {
+                  ? w.intl.formatToPlainString(V(e, w.t["/TD0la"], w.t["/TD0la"], w.t["/TD0la"]), {
                         user: i,
                         game: t.application.name,
                     })
                   : "";
     else if (null != t.activity && t.activity.type === R.mFx.LISTEN) {
-        let t = V(e, w.t.SaDdmJ, w.t.qsODho, w.t.WeiMTU);
+        let t = V(e, w.t.SaDdmN, w.t.qsODhp, w.t.WeiMTW);
         l = w.intl.formatToPlainString(t, { user: i });
-    } else if (null != h && h.length > 0) l = w.intl.formatToPlainString(w.t.zY4v1N, { stickerName: h[0].name });
+    } else if (null != h && h.length > 0) l = w.intl.formatToPlainString(w.t.zY4v1B, { stickerName: h[0].name });
     else if (t.type === R.uaV.PREMIUM_REFERRAL)
-        l = w.intl.formatToPlainString(w.t.lieTqa, { username: A.ZP.getName(n) });
-    else if (null != t.poll) l = w.intl.formatToPlainString(w.t.ImizdH, { question: t.poll.question.text });
+        l = w.intl.formatToPlainString(w.t.lieTqU, { username: Z.ZP.getName(n) });
+    else if (null != t.poll) l = w.intl.formatToPlainString(w.t.ImizdM, { question: t.poll.question.text });
     else if (t.type === R.uaV.POLL_RESULT) {
-        var p, E, N;
+        var E, N, O;
         let e =
-                null == (N = t.embeds) || null == (E = N[0]) || null == (p = E.fields)
+                null == (O = t.embeds) || null == (N = O[0]) || null == (E = N.fields)
                     ? void 0
-                    : p.find((e) => ("name" in e ? e.name : e.rawName) === "poll_question_text"),
+                    : E.find((e) => ("name" in e ? e.name : e.rawName) === "poll_question_text"),
             n = null != e ? ("value" in e ? e.value : e.rawValue) : "";
-        l = w.intl.formatToPlainString(w.t["9WrecH"], { question: n });
-    } else
-        l =
-            0 !== f.length && e.type === R.d4z.DM && !n.bot && f.startsWith("> -# *")
-                ? (l = c.ZP.unparse(f, e.id, !0)).substring(0, 1) + l.substring(4)
-                : c.ZP.unparse(f, e.id, !0);
+        l = w.intl.formatToPlainString(w.t["9WrecI"], { question: n });
+    } else if (
+        (({ content: l, emoji: p } = c.ZP.unparseWithMeta(f, e.id, !0)),
+        0 !== f.length && e.type === R.d4z.DM && !n.bot && f.startsWith("> -# *"))
+    )
+        for (let e of ((l = l.substring(0, 1) + l.substring(4)), p)) e.position -= 2;
     return (
         0 === l.length &&
             (l = (function (e) {
@@ -255,10 +257,10 @@ function F(e, t, n) {
                         return "".concat(n, " ").concat(l);
                     }
                 }
-                if ((0, x.yE)(null != (t = e.flags) ? t : 0, R.iLy.IS_VOICE_MESSAGE)) return w.intl.string(w.t.slFYgo);
+                if ((0, x.yE)(null != (t = e.flags) ? t : 0, R.iLy.IS_VOICE_MESSAGE)) return w.intl.string(w.t.slFYgi);
                 if (void 0 !== e.attachments && e.attachments.length > 0) {
                     let t = (0, d.Z)(e.attachments[0]);
-                    return w.intl.formatToPlainString(w.t["51OkwM"], { filename: t });
+                    return w.intl.formatToPlainString(w.t["51OkwL"], { filename: t });
                 }
                 return "";
             })(t)),
@@ -266,6 +268,7 @@ function F(e, t, n) {
             icon: n.getAvatarURL(e.guild_id, 128),
             title: s,
             body: l,
+            emoji: p,
         }
     );
 }

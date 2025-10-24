@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => eo }), n(35282), n(388685), n(539854), n(361932), n(187205);
+n.d(t, { ZP: () => es }), n(35282), n(388685), n(539854), n(361932), n(187205);
 var r = n(392711),
     i = n.n(r),
     a = n(159635),
@@ -341,7 +341,7 @@ let V = f.Z.RULES,
                     let t = b.Z.getDetectableGame(e[1]);
                     return null != t
                         ? { content: "@".concat(t.name) }
-                        : { content: "@".concat(x.intl.string(x.t["11pdXV"])) };
+                        : { content: "@".concat(x.intl.string(x.t["11pdXZ"])) };
                 }
                 return { content: e[0] };
             },
@@ -360,7 +360,10 @@ let V = f.Z.RULES,
                     { guild: o } = n,
                     s = c.ZP.getDisambiguatedEmojiContext(o ? o.id : null).getById(a),
                     l = null != s ? s.name : i;
-                return { content: ":".concat(l, ":") };
+                return {
+                    content: ":".concat(l, ":"),
+                    id: a,
+                };
             },
         },
         soundboard: {
@@ -372,7 +375,7 @@ let V = f.Z.RULES,
         },
         spoiler: {
             match: o().anyScopeRegex(D.$92),
-            parse: () => ({ content: "<".concat(x.intl.string(x.t["F+x38P"]).toLowerCase(), ">") }),
+            parse: () => ({ content: "<".concat(x.intl.string(x.t["F+x38C"]).toLowerCase(), ">") }),
         },
         staticRouteLink: {
             match: o().anyScopeRegex(D.PEY),
@@ -408,32 +411,49 @@ function et(e, t, n) {
     }
 }
 function en(e, t, n, r) {
-    let i = "";
+    let i = "",
+        a = [];
     return (
         e.forEach((e) => {
             if ((et(t, e, r), "string" == typeof e.content))
                 switch (e.type) {
+                    case "emoji":
+                        a.push({
+                            position: i.length,
+                            length: e.content.length,
+                            id: e.id,
+                        }),
+                            (i += e.content);
+                        break;
                     case "codeBlock":
                     case "inlineCode":
                     case "mention":
                     case "roleMention":
                     case "channel":
-                    case "emoji":
                         !0 === t.isNotification ? (i += (0, s.KM)(e.content, !0)) : (i += e.content);
                         break;
                     default:
                         i += n(e.content);
                 }
-            else
-                e.content.constructor === Array
-                    ? (i += en(e.content, t, n, r))
-                    : console.warn("Unknown message item type: ", e);
+            else if (e.content.constructor === Array) {
+                let { content: o, emoji: s } = en(e.content, t, n, r);
+                for (let e of s)
+                    a.push({
+                        position: i.length + e.position,
+                        length: e.length,
+                        id: e.id,
+                    });
+                i += o;
+            } else console.warn("Unknown message item type: ", e);
         }),
-        i
+        {
+            content: i,
+            emoji: a,
+        }
     );
 }
 function er(e, t, n) {
-    return en($(e, t), t, u.ZP.translateInlineEmojiToSurrogates, n);
+    return en($(e, t), t, u.ZP.translateInlineEmojiToSurrogates, n).content;
 }
 function ei(e) {
     let t,
@@ -524,7 +544,22 @@ function ei(e) {
 function ea(e) {
     return e;
 }
-let eo = {
+function eo(e, t, n) {
+    let r = E.Z.getChannel(t),
+        a = null != r ? r.getGuildId() : null,
+        s = null != a ? I.Z.getGuild(a) : null,
+        l = n ? J : i().omit(J, ["spoiler", "timestamp"]),
+        c = n ? ea : u.ZP.translateSurrogatesToInlineEmoji,
+        d = o().parserFor(l),
+        f = {
+            inline: !0,
+            guild: s,
+            channelId: t,
+            isNotification: n,
+        };
+    return en(d(e, f), f, c);
+}
+let es = {
     parse(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
             r = null != n ? n : ei(e),
@@ -548,19 +583,6 @@ let eo = {
         );
     },
     parsePreprocessor: (e, t) => $(t, ei(e)),
-    unparse(e, t, n) {
-        let r = E.Z.getChannel(t),
-            a = null != r ? r.getGuildId() : null,
-            s = null != a ? I.Z.getGuild(a) : null,
-            l = n ? J : i().omit(J, ["spoiler", "timestamp"]),
-            c = n ? ea : u.ZP.translateSurrogatesToInlineEmoji,
-            d = o().parserFor(l),
-            f = {
-                inline: !0,
-                guild: s,
-                channelId: t,
-                isNotification: n,
-            };
-        return en(d(e, f), f, c);
-    },
+    unparse: (e, t, n) => eo(e, t, n).content,
+    unparseWithMeta: eo,
 };
