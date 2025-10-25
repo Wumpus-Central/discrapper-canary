@@ -22,8 +22,8 @@ var r = n(951288),
     E = n(607070),
     O = n(557968),
     I = n(213609),
-    y = n(463119),
-    v = n(377171),
+    v = n(463119),
+    y = n(377171),
     C = n(111028),
     S = n(243778),
     T = n(702456),
@@ -41,12 +41,12 @@ var r = n(951288),
     k = n(795448),
     U = n(441623),
     G = n(93237),
-    H = n(138176),
-    B = n(457396),
+    B = n(138176),
+    H = n(457396),
     V = n(108989),
     F = n(937797),
-    Y = n(362870),
-    z = n(51596),
+    z = n(362870),
+    Y = n(51596),
     W = n(905423),
     q = n(155409),
     K = n(210887),
@@ -301,11 +301,11 @@ let e_ = (e) => {
                 subscribeToGlobalHotkey: !0,
             }),
         }),
-    ey = () => {
+    ev = () => {
         let e = (0, A.q)();
         return e > 0 ? (0, r.jsx)(g.mAB, { count: e }) : null;
     },
-    ev = (e) => {
+    ey = (e) => {
         let { selected: t } = e,
             n = (0, u.JA)("messageRequests"),
             { channelId: i } = (0, x._)();
@@ -324,7 +324,7 @@ let e_ = (e) => {
                     },
                     n,
                 ),
-                { children: (0, r.jsx)(ey, {}) },
+                { children: (0, r.jsx)(ev, {}) },
             ),
         );
     },
@@ -387,7 +387,7 @@ let e_ = (e) => {
                             return t === f.z.FAMILY_CENTER_NEW_BADGE
                                 ? (0, r.jsx)(g.IGR, {
                                       text: ed.intl.string(ed.t.y2b7CA),
-                                      color: v.Z.BG_BRAND,
+                                      color: y.Z.BG_BRAND,
                                   })
                                 : null;
                         },
@@ -411,7 +411,7 @@ let e_ = (e) => {
                 }),
             ],
         }),
-    eN = () => (0, z.$Z)("DM_SEARCH");
+    eN = () => (0, Y.$Z)("DM_SEARCH");
 function ej(e) {
     switch (e) {
         case es.Z5c.APPLICATION_LIBRARY:
@@ -448,7 +448,7 @@ let eP = i.memo(function (e) {
         } = e,
         O = i.useRef(null),
         I = i.useRef(null),
-        v = i.useRef(null),
+        y = i.useRef(null),
         S = i.useRef(null),
         N = D.o.useConfig({ location: "privatechannels" }).friendsTab,
         j = (0, P.b5)("PrivateChannels");
@@ -483,7 +483,7 @@ let eP = i.memo(function (e) {
                     selectedChannelId: g,
                     showDMHeader: !E && !b,
                     hideAllDMs: E,
-                    listScrollerRef: v,
+                    listScrollerRef: y,
                     createDMCTAButtonVariant: h,
                     children: [
                         N && !b
@@ -518,7 +518,7 @@ let eP = i.memo(function (e) {
                             : null,
                         u && !b
                             ? (0, r.jsx)(
-                                  ev,
+                                  ey,
                                   {
                                       selected:
                                           null == _
@@ -529,11 +529,11 @@ let eP = i.memo(function (e) {
                               )
                             : null,
                         o && !b
-                            ? (0, r.jsxs)(r.Fragment, {
-                                  children: [
-                                      (0, r.jsx)(
-                                          B.g,
-                                          {
+                            ? (0, r.jsxs)(
+                                  i.Fragment,
+                                  {
+                                      children: [
+                                          (0, r.jsx)(H.g, {
                                               nitroTabButtonRef: S,
                                               selected: null == _ ? s : _.startsWith(es.Z5c.APPLICATION_STORE),
                                               route: es.Z5c.APPLICATION_STORE,
@@ -544,17 +544,17 @@ let eP = i.memo(function (e) {
                                                       object: es.qAy.NAVIGATION_LINK,
                                                   },
                                               },
-                                          },
-                                          "premium",
-                                      ),
-                                      c && (0, r.jsx)(H.F, { targetElementRef: S }),
-                                  ],
-                              })
+                                          }),
+                                          c && (0, r.jsx)(B.F, { targetElementRef: S }),
+                                      ],
+                                  },
+                                  "nitro-tab-group",
+                              )
                             : null,
                         b
                             ? null
                             : (0, r.jsx)(
-                                  y.i,
+                                  v.i,
                                   {
                                       selected:
                                           _ === es.Z5c.COLLECTIBLES_SHOP ||
@@ -583,7 +583,7 @@ let eP = i.memo(function (e) {
                             : null,
                         f && !b
                             ? (0, r.jsx)(
-                                  Y.Z,
+                                  z.Z,
                                   {
                                       selected:
                                           null == _
@@ -624,7 +624,7 @@ function eA() {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),
-        d = (0, B.i)({ selected: null == u ? t : u.startsWith(es.Z5c.APPLICATION_STORE) }),
+        d = (0, H.i)({ selected: null == u ? t : u.startsWith(es.Z5c.APPLICATION_STORE) }),
         f = (0, G.eW)(),
         h = (0, Z.a)(),
         m = (function () {
