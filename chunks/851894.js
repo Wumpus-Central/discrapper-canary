@@ -148,7 +148,7 @@ function Z(e) {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: D.intl.format(D.t["/PTB2N"], {
+                        children: D.intl.format(D.t["/PTB2E"], {
                             helpCenterLink: T.Z.getArticleURL(w.BhN.GUILD_PROFILES),
                         }),
                     }),
@@ -165,7 +165,7 @@ function Z(e) {
                                       profilePreviewTitle: (0, r.jsx)(l.Heading, {
                                           variant: "heading-md/medium",
                                           className: L.profilePreviewTitle,
-                                          children: D.intl.formatToPlainString(D.t.Tc0slJ, {
+                                          children: D.intl.formatToPlainString(D.t.Tc0slG, {
                                               guildName: null == t ? void 0 : t.name,
                                           }),
                                       }),
@@ -181,14 +181,17 @@ function Z(e) {
                                           }),
                                       ),
                                       nameplatePreview: z
-                                          ? (0, r.jsx)(p.Z, {
-                                                pendingDisplayNameStyles: K,
-                                                user: a,
-                                                guildId: null == t ? void 0 : t.id,
-                                                nameplate: V,
-                                                nameplateData: null == V ? W : void 0,
-                                                isHighlighted: !0,
-                                            })
+                                          ? (0, r.jsx)(
+                                                p.Z,
+                                                j(M({}, H), {
+                                                    pendingDisplayNameStyles: K,
+                                                    user: a,
+                                                    guildId: null == t ? void 0 : t.id,
+                                                    nameplate: V,
+                                                    nameplateData: null == V ? W : void 0,
+                                                    isHighlighted: !0,
+                                                }),
+                                            )
                                           : null,
                                       children: (0, r.jsx)(R.Z, { nameplateEnabled: z }),
                                   }),
