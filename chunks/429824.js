@@ -16,7 +16,7 @@ function b(e) {
                 alertType: (0, c.T1)(d),
             };
             (0, l.ZDy)(async () => {
-                let { default: i } = await n.e("61536").then(n.bind(n, 664452));
+                let { default: i } = await n.e("61536").then(n.bind(n, 32032));
                 return (n) => {
                     var l, o;
                     return (0, r.jsx)(
@@ -71,7 +71,7 @@ function b(e) {
     return e.features.has(u.GuildFeatures.COMMUNITY) && b
         ? (0, r.jsx)(l.sNh, {
               id: "server-lockdown",
-              label: p ? s.intl.string(s.t["+tSVi4"]) : s.intl.string(s.t.EPlEdn),
+              label: p ? s.intl.string(s.t["+tSVi3"]) : s.intl.string(s.t.EPlEdu),
               icon: t ? (p ? l.d$P : l.mBM) : void 0,
               action: O,
               color: "danger",

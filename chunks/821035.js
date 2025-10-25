@@ -14,7 +14,7 @@ var i = n(524437),
     p = n(526761),
     h = n(726985),
     m = n(388032),
-    g = n(345909);
+    g = n(41418);
 function E(e, t, n) {
     return (
         t in e
@@ -60,38 +60,38 @@ function y() {
         I = [
             {
                 value: i.Q4.BLUR,
-                label: m.intl.string(m.t.S49UaW),
+                label: m.intl.string(m.t.S49Uad),
             },
             {
                 value: i.Q4.BLOCK,
-                label: m.intl.string(m.t["D/157e"]),
+                label: m.intl.string(m.t["D/157Y"]),
             },
         ],
         T = [
             {
                 value: i.Q4.BLUR,
-                label: m.intl.string(m.t.S49UaW),
+                label: m.intl.string(m.t.S49Uad),
             },
         ],
         S = {
             value: i.Q4.SHOW,
-            label: m.intl.string(m.t["5k5OFh"]),
+            label: m.intl.string(m.t["5k5OFp"]),
         };
     t && (I.unshift(S), T.unshift(S));
     let A = {
         isDisabled: n,
-        tooltipText: n ? m.intl.string(g.default["6Af/c3"]) : void 0,
+        tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
     };
     return (0, r.jsxs)(f.n, {
         setting: h.s6.PRIVACY_SENSITIVE_MEDIA_V2,
         scrollPosition: p.FY.EXPLICIT_MEDIA_REDACTION_V2,
-        description: m.intl.string(m.t.Wnojv7),
+        description: m.intl.string(m.t.Wnojv1),
         children: [
             (0, r.jsx)(
                 _.Z,
                 b(
                     {
-                        title: m.intl.string(m.t["+uI23N"]),
+                        title: m.intl.string(m.t["+uI23H"]),
                         value: y,
                         onChange: (e) => v({ explicitContentFriendDm: e }),
                         options: I,
@@ -112,11 +112,11 @@ function y() {
                 ),
             ),
             (0, r.jsx)(_.Z, {
-                title: m.intl.string(m.t["FP+a4+"]),
+                title: m.intl.string(m.t["FP+a42"]),
                 value: E,
                 onChange: (e) => v({ explicitContentGuilds: e }),
                 isDisabled: !t || n,
-                tooltipText: n ? m.intl.string(g.default["6Af/c3"]) : void 0,
+                tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
                 options: T,
             }),
         ],

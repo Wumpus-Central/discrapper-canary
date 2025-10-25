@@ -1,4 +1,4 @@
-n.d(e, { a: () => S });
+n.d(e, { a: () => A });
 var i = n(951288),
     l = n(657707),
     u = n(704215),
@@ -10,21 +10,21 @@ var i = n(951288),
     E = n(54942),
     d = n(726985),
     T = n(388032),
-    I = n(345909);
+    I = n(41418);
 let O = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
-        useTitle: () => T.intl.string(I.default.RZqaJi),
+        useTitle: () => T.intl.string(I.default.RZqaJn),
         buildLayout: () => [],
         render: () => (0, i.jsx)(E.Z, {}),
     }),
-    A = (0, a.wf)(c.n.FAMILY_CENTER_PANEL, {
-        useTitle: () => T.intl.string(I.default.RZqaJi),
+    S = (0, a.wf)(c.n.FAMILY_CENTER_PANEL, {
+        useTitle: () => T.intl.string(I.default.RZqaJn),
         buildLayout: () => [O],
     }),
-    S = (0, a.m7)(c.n.FAMILY_CENTER_SIDEBAR_ITEM, {
+    A = (0, a.m7)(c.n.FAMILY_CENTER_SIDEBAR_ITEM, {
         icon: l.BFJ,
-        useTitle: () => T.intl.string(I.default.RZqaJi),
+        useTitle: () => T.intl.string(I.default.RZqaJn),
         legacySearchKey: d.s6.PRIVACY_FAMILY_CENTER,
-        buildLayout: () => [A],
+        buildLayout: () => [S],
         trailing: {
             type: o.PU.STRONGLY_DISCOURAGED_CUSTOM,
             getDismissibleContentTypes: () => [u.z.FAMILY_CENTER_NEW_BADGE],

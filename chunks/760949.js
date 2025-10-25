@@ -1,4 +1,4 @@
-e.d(n, { default: () => f }), e(388685);
+e.d(n, { default: () => x }), e(388685);
 var i = e(951288),
     a = e(647438),
     l = e(793030),
@@ -8,35 +8,35 @@ var i = e(951288),
     o = e(695346),
     u = e(342386),
     d = e(981631),
-    h = e(345909),
-    x = e(388032);
-function f(t) {
+    h = e(41418),
+    p = e(388032);
+function x(t) {
     let { transitionState: n, onClose: e } = t,
-        [f, p] = a.useState(!1),
+        [x, f] = a.useState(!1),
         [S, g] = a.useState(null),
         k = async () => {
-            g(null), p(!0);
+            g(null), f(!0);
             try {
                 await o.Ex.updateSetting(!1), (0, s.uL)(d.Z5c.FRIENDS), (0, u.default)(), e();
             } catch (t) {
                 g(new c.Z(t).getAnyErrorMessage());
             } finally {
-                p(!1);
+                f(!1);
             }
         },
-        y = () => {
+        C = () => {
             (0, s.uL)(d.Z5c.SETTINGS("family-center")), e();
         };
     return (0, i.jsx)(l.Modal, {
         transitionState: n,
         onClose: e,
-        title: x.intl.string(h.default.VGB30N),
-        subtitle: x.intl.format(h.default["CrZZ+v"], {
+        title: p.intl.string(h.default.VGB30H),
+        subtitle: p.intl.format(h.default["CrZZ+p"], {
             openSettingsHook: (t, n) =>
                 (0, i.jsx)(
                     r.Anchor,
                     {
-                        onClick: y,
+                        onClick: C,
                         children: t,
                     },
                     n,
@@ -45,13 +45,13 @@ function f(t) {
         actions: [
             {
                 variant: "secondary",
-                text: x.intl.string(x.t["ETE/oK"]),
+                text: p.intl.string(p.t["ETE/oC"]),
                 onClick: e,
             },
             {
-                text: x.intl.string(h.default.cSb7U1),
+                text: p.intl.string(h.default.cSb7U0),
                 onClick: k,
-                loading: f,
+                loading: x,
                 variant: "critical-primary",
             },
         ],

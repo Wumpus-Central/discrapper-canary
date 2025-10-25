@@ -25,7 +25,7 @@ var r = n(913527),
     s = n(914788),
     l = n(277537),
     c = n(292352),
-    u = n(345909),
+    u = n(41418),
     d = n(388032);
 let f = 60,
     _ = 3600,
@@ -33,21 +33,21 @@ let f = 60,
     h = 172800,
     m = 604800,
     g = () => ({
-        today: d.intl.string(u.default.VjIAQU),
-        yesterday: d.intl.string(u.default["2a8xHR"]),
+        today: d.intl.string(u.default.VjIAQQ),
+        yesterday: d.intl.string(u.default["2a8xHY"]),
         days: u.default.Xt6oND,
     }),
     E = (e) =>
         e
             ? {
-                  today: d.intl.string(u.default["2AtcIi"]),
-                  yesterday: d.intl.string(u.default.stOECg),
-                  days: u.default.n8n5BQ,
+                  today: d.intl.string(u.default["2AtcIs"]),
+                  yesterday: d.intl.string(u.default.stOECr),
+                  days: u.default.n8n5Ba,
               }
             : {
-                  today: d.intl.string(u.default.g1ZX6u),
-                  yesterday: d.intl.string(u.default.s3qSVl),
-                  days: u.default.f1UJiI,
+                  today: d.intl.string(u.default.g1ZX6m),
+                  yesterday: d.intl.string(u.default.s3qSVt),
+                  days: u.default.f1UJiC,
               },
     b = (e, t, n) => {
         let r = i()().diff(i()(e), "s"),
@@ -112,10 +112,10 @@ let f = 60,
     },
     L = (e, t) =>
         t > 0 && 0 === e
-            ? d.intl.formatToPlainString(u.default["L/Cj7e"], { callCount: t })
+            ? d.intl.formatToPlainString(u.default["L/Cj7S"], { callCount: t })
             : e > 0 && 0 === t
-              ? d.intl.formatToPlainString(u.default["6X1F0t"], { messageCount: e })
-              : d.intl.formatToPlainString(u.default.IYqGMD, {
+              ? d.intl.formatToPlainString(u.default["6X1F0i"], { messageCount: e })
+              : d.intl.formatToPlainString(u.default.IYqGMG, {
                     messageCount: e,
                     callCount: t,
                 });

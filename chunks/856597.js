@@ -7,13 +7,13 @@ var r = n(481060),
     o = n(118589),
     s = n(210825),
     c = n(345262),
-    d = n(241945),
+    d = n(79541),
     u = n(388032),
     m = n(133023);
 let p = {
-        [o.UA.EMAIL_VERIFICATION]: u.intl.string(d.default.HC4IiY),
-        [o.UA.REFRESH_APP]: u.intl.string(d.default.SzfxQ0),
-        [o.UA.AGE_VERIFICATION]: u.intl.string(d.default["dSkE/P"]),
+        [o.UA.EMAIL_VERIFICATION]: u.intl.string(d.default.HC4IiR),
+        [o.UA.REFRESH_APP]: u.intl.string(d.default.SzfxQ3),
+        [o.UA.AGE_VERIFICATION]: u.intl.string(d.default["dSkE/A"]),
     },
     h = function () {
         let { task: e } = (0, l.T)(),
@@ -31,7 +31,7 @@ let p = {
                         (0, a.jsx)(r.Heading, {
                             variant: "display-md",
                             className: m.title,
-                            children: u.intl.string(d.default["/OpRAA"]),
+                            children: u.intl.string(d.default["/OpRAP"]),
                         }),
                         (0, a.jsx)(r.Kqy, {
                             direction: "vertical",
@@ -57,7 +57,7 @@ let p = {
                 (0, a.jsx)(r.Text, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: u.intl.format(d.default["0DHxys"], {
+                    children: u.intl.format(d.default["0DHxym"], {
                         handleLogOut: () => (0, s.R)("safety_flows_sidebar"),
                     }),
                 }),

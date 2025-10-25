@@ -10,13 +10,13 @@ var i = n(915009),
     u = n(726985),
     d = n(981631),
     f = n(388032),
-    _ = n(345909);
+    _ = n(41418);
 function p() {
     let e = o.bh.useSetting(),
         t = (0, s.W)("DataUsageQuestsSetting"),
         n = (0, i.LN)(),
-        p = t ? f.t.sJYh5u : f.t.VkS7YW,
-        h = t ? f.t.cf9mvb : f.t["7Q2yX1"];
+        p = t ? f.t.sJYh5t : f.t.VkS7Yd,
+        h = t ? f.t.cf9mvV : f.t["7Q2yX9"];
     return (0, r.jsx)(l.U, {
         setting: u.s6.PRIVACY_DATA_QUESTS_V2,
         children: (0, r.jsx)(c.ZP, {
@@ -25,7 +25,7 @@ function p() {
             value: !e,
             onChange: (e) => o.bh.updateSetting(!e),
             disabled: n,
-            tooltipText: n ? f.intl.string(_.default["6Af/c3"]) : void 0,
+            tooltipText: n ? f.intl.string(_.default["6Af/cw"]) : void 0,
         }),
     });
 }

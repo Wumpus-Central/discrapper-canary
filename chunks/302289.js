@@ -7,15 +7,15 @@ var i = n(120356),
     s = n(546791),
     l = n(785681),
     c = n(130310),
-    u = n(345909),
+    u = n(41418),
     d = n(388032),
     f = n(398739),
     _ = n(519279);
 let p = () => {
-    let e = (0, s.nE)(d.intl.string(u.default.XJabSE), d.intl.string(u.default.tr8Gnp)),
+    let e = (0, s.nE)(d.intl.string(u.default.XJabSN), d.intl.string(u.default.tr8Gni)),
         t = (0, l.o)(
-            (0, s.nE)(d.intl.string(u.default.i4XFEB), d.intl.string(u.default["3xKGSE"])),
-            (0, s.nE)(d.intl.string(u.default.eHQZuL), d.intl.string(u.default.XbgrGx)),
+            (0, s.nE)(d.intl.string(u.default.i4XFEH), d.intl.string(u.default["3xKGSE"])),
+            (0, s.nE)(d.intl.string(u.default.eHQZuO), d.intl.string(u.default.XbgrG7)),
         );
     return (0, r.jsxs)(o.Kqy, {
         className: a()(f.container, _.box),

@@ -6,7 +6,7 @@ var n = r(951288),
     l = r(481060),
     a = r(985002),
     s = r(957656),
-    d = r(345909),
+    d = r(41418),
     u = r(388032),
     f = r(490839);
 let b = (e) => {
@@ -19,7 +19,7 @@ let b = (e) => {
             b();
         }, [b]),
         g = t.nsfwAllowed,
-        { cancelLinkRequest: m, isCancelLoading: O } = (0, a.G)({
+        { cancelLinkRequest: O, isCancelLoading: m } = (0, a.G)({
             onError: y,
             onSuccess: j,
         });
@@ -32,13 +32,13 @@ let b = (e) => {
                 p &&
                     (0, n.jsx)(l.M14, {
                         type: "critical",
-                        children: u.intl.string(d.default["6gyAQU"]),
+                        children: u.intl.string(d.default["6gyAQZ"]),
                     }),
                 (0, n.jsx)(l.fef, {
                     children: (0, n.jsx)(s.Z.Header, {
                         currentUser: t,
                         otherUser: r,
-                        header: u.intl.string(d.default.HynllZ),
+                        header: u.intl.string(d.default.HynllX),
                         icon: (0, n.jsx)(l.Dio, {
                             size: "md",
                             color: "currentColor",
@@ -53,16 +53,16 @@ let b = (e) => {
                             variant: "secondary",
                             text: u.intl.string(d.default.czincX),
                             onClick: b,
-                            disabled: O,
+                            disabled: m,
                         },
                         {
                             variant: "critical-primary",
-                            text: u.intl.string(d.default.mK40bm),
+                            text: u.intl.string(d.default.mK40bk),
                             onClick: () => {
-                                h(!1), m(r.id);
+                                h(!1), O(r.id);
                             },
-                            disabled: O || p,
-                            loading: O,
+                            disabled: m || p,
+                            loading: m,
                         },
                     ],
                 }),

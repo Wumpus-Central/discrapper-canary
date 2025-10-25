@@ -12,7 +12,7 @@ var r = n(951288),
     u = n(914788),
     d = n(322192),
     f = n(981631),
-    _ = n(345909),
+    _ = n(41418),
     p = n(388032),
     h = n(987588);
 let m = [18, 18, 16, 16, 14, 12, 10];
@@ -57,7 +57,7 @@ let E = i.memo((e) => {
                             null != i
                                 ? i
                                 : void 0 !== a.approximateMemberCount
-                                  ? p.intl.format(_.default["5JmNgo"], { members: a.approximateMemberCount })
+                                  ? p.intl.format(_.default["5JmNgg"], { members: a.approximateMemberCount })
                                   : null,
                     }),
                 ],

@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(933970),
     d = n(340453),
     f = n(292352),
-    _ = n(345909),
+    _ = n(41418),
     p = n(388032),
     h = n(823074);
 function m(e, t, n) {
@@ -95,7 +95,7 @@ function y(e) {
                 className: h.actions,
                 children: (0, r.jsx)(u.Z, {
                     icon: l.Dio,
-                    tooltip: p.intl.string(_.default.l20ZZm),
+                    tooltip: p.intl.string(_.default.l20ZZp),
                     onClick: m,
                 }),
             }),

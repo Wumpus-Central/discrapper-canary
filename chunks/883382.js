@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(726985),
     p = n(981631),
     h = n(388032),
-    m = n(345909);
+    m = n(41418);
 function g() {
     let e = (0, a.cj)([l.Z], () => l.Z.hasConsented(p.pjP.PERSONALIZATION)),
         [t, n] = i.useState(e),
@@ -23,26 +23,26 @@ function g() {
                       .catch(f.S)
                       .then(() => n(!0))
                 : (0, f.V)({
-                      header: h.intl.string(h.t["9SNpzs"]),
-                      confirmText: h.intl.string(h.t["9g5UGx"]),
-                      cancelText: h.intl.string(h.t["+ZLPw8"]),
+                      header: h.intl.string(h.t["9SNpzv"]),
+                      confirmText: h.intl.string(h.t["9g5UGw"]),
+                      cancelText: h.intl.string(h.t["+ZLPw9"]),
                       onConfirm: () => {
                           (0, o.g)([], [p.pjP.PERSONALIZATION])
                               .catch(f.S)
                               .then(() => n(!1));
                       },
-                      body: h.intl.string(h.t.gJvDDg),
+                      body: h.intl.string(h.t.gJvDDh),
                   });
         };
     return (0, r.jsx)(u.U, {
         setting: _.s6.PRIVACY_DATA_PERSONALIZE_V2,
         children: (0, r.jsx)(d.ZP, {
-            title: h.intl.string(h.t.MNKzys),
-            note: h.intl.format(h.t["eQL/Mj"], { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_USED_FOR_RECOMMENDED) }),
+            title: h.intl.string(h.t.MNKzyg),
+            note: h.intl.format(h.t["eQL/Mr"], { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_USED_FOR_RECOMMENDED) }),
             value: t,
             onChange: E,
             disabled: g,
-            tooltipText: g ? h.intl.string(m.default["6Af/c3"]) : void 0,
+            tooltipText: g ? h.intl.string(m.default["6Af/cw"]) : void 0,
         }),
     });
 }

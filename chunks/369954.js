@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(631885),
     g = n(292352),
     E = n(981631),
-    b = n(345909),
+    b = n(41418),
     y = n(388032),
     O = n(271650);
 let v = (e) => {
@@ -63,12 +63,12 @@ let v = (e) => {
                     children: [
                         (0, r.jsx)(a.xvT, {
                             variant: "text-sm/semibold",
-                            children: y.intl.string(b.default.ahKIJC),
+                            children: y.intl.string(b.default.ahKIJO),
                         }),
                         (0, r.jsx)(a.xvT, {
                             variant: "text-md/medium",
                             color: "text-tertiary",
-                            children: y.intl.format(b.default.X9rW0t, {
+                            children: y.intl.format(b.default.X9rW0j, {
                                 openSettingsHook: (e, t) =>
                                     (0, r.jsx)(
                                         o.Anchor,
@@ -83,7 +83,7 @@ let v = (e) => {
                     ],
                 }),
                 (0, r.jsx)(o.Button, {
-                    text: y.intl.formatToPlainString(b.default.ggcjPT, { count: e.length }),
+                    text: y.intl.formatToPlainString(b.default.ggcjPR, { count: e.length }),
                     onClick: t,
                     variant: "secondary",
                     size: "sm",
@@ -109,7 +109,7 @@ let v = (e) => {
                     children: [
                         (0, r.jsx)(a.xvT, {
                             variant: "text-sm/semibold",
-                            children: y.intl.string(b.default.ahKIJC),
+                            children: y.intl.string(b.default.ahKIJO),
                         }),
                         (0, r.jsx)(a.xvT, {
                             variant: "text-md/medium",
@@ -119,14 +119,14 @@ let v = (e) => {
                     ],
                 }),
                 (0, r.jsx)(v, {
-                    title: y.intl.string(y.t["+o1pDQ"]),
-                    buttonText: y.intl.string(y.t.bt75u7),
+                    title: y.intl.string(y.t["+o1pDZ"]),
+                    buttonText: y.intl.string(y.t.bt75uw),
                     onButtonPress: () => o(g.dG.CONTENT_AND_SOCIAL),
                 }),
                 (0, r.jsx)(c.Z, { className: O.divider }),
                 (0, r.jsx)(v, {
-                    title: y.intl.string(y.t.OAuOHB),
-                    buttonText: y.intl.string(y.t.bt75u7),
+                    title: y.intl.string(y.t.OAuOHD),
+                    buttonText: y.intl.string(y.t.bt75uw),
                     onButtonPress: () => o(g.dG.DATA_AND_PRIVACY),
                 }),
             ],

@@ -13,7 +13,7 @@ var i = n(524437),
     _ = n(947707),
     p = n(726985),
     h = n(388032),
-    m = n(345909);
+    m = n(41418);
 function g(e, t, n) {
     return (
         t in e
@@ -59,37 +59,37 @@ function b() {
         v = [
             {
                 value: i.Q4.BLUR,
-                label: h.intl.string(h.t.S49UaW),
+                label: h.intl.string(h.t.S49Uad),
             },
             {
                 value: i.Q4.BLOCK,
-                label: h.intl.string(h.t["D/157e"]),
+                label: h.intl.string(h.t["D/157Y"]),
             },
         ],
         I = [
             {
                 value: i.Q4.BLUR,
-                label: h.intl.string(h.t.S49UaW),
+                label: h.intl.string(h.t.S49Uad),
             },
         ],
         T = {
             value: i.Q4.SHOW,
-            label: h.intl.string(h.t["5k5OFh"]),
+            label: h.intl.string(h.t["5k5OFp"]),
         };
     t && (v.unshift(T), I.unshift(T));
     let S = {
         isDisabled: n,
-        tooltipText: n ? h.intl.string(m.default["6Af/c3"]) : void 0,
+        tooltipText: n ? h.intl.string(m.default["6Af/cw"]) : void 0,
     };
     return (0, r.jsxs)(f.n, {
         setting: p.s6.GORE_MEDIA_REDACTION,
-        description: h.intl.string(h.t.XgH9en),
+        description: h.intl.string(h.t.XgH9eh),
         children: [
             (0, r.jsx)(
                 _.Z,
                 E(
                     {
-                        title: h.intl.string(h.t["+uI23N"]),
+                        title: h.intl.string(h.t["+uI23H"]),
                         value: b,
                         onChange: (e) => O({ goreContentFriendDm: e }),
                         options: v,
@@ -110,12 +110,12 @@ function b() {
                 ),
             ),
             (0, r.jsx)(_.Z, {
-                title: h.intl.string(h.t["FP+a4+"]),
+                title: h.intl.string(h.t["FP+a42"]),
                 value: g,
                 onChange: (e) => O({ goreContentGuilds: e }),
                 isDisabled: !t || n,
                 options: I,
-                tooltipText: n ? h.intl.string(m.default["6Af/c3"]) : void 0,
+                tooltipText: n ? h.intl.string(m.default["6Af/cw"]) : void 0,
             }),
         ],
     });

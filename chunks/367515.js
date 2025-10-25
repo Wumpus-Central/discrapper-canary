@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(933970),
     _ = n(340453),
     p = n(292352),
-    h = n(345909),
+    h = n(41418),
     m = n(388032),
     g = n(823074);
 function E(e, t, n) {
@@ -137,12 +137,12 @@ function v(e) {
                                   ? null
                                   : (0, r.jsx)(f.Z, {
                                         icon: l.dz2,
-                                        tooltip: m.intl.string(h.default.krWQZG),
+                                        tooltip: m.intl.string(h.default.krWQZK),
                                         onClick: v,
                                     }),
                               (0, r.jsx)(f.Z, {
                                   icon: l.Dio,
-                                  tooltip: m.intl.string(h.default.bBDeND),
+                                  tooltip: m.intl.string(h.default.bBDeNI),
                                   onClick: I,
                               }),
                           ],

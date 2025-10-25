@@ -12,19 +12,19 @@ var r = n(979554),
     s = n(212161),
     l = n(768581),
     c = n(474936),
-    u = n(345909),
+    u = n(41418),
     d = n(388032);
 let f = 40,
     _ = (e) => {
         switch (e) {
             case r.Z.AVATAR_DECORATION:
-                return d.intl.string(u.default.obi47u);
+                return d.intl.string(u.default.obi47v);
             case r.Z.PROFILE_EFFECT:
-                return d.intl.string(u.default.RX8BMT);
+                return d.intl.string(u.default.RX8BMR);
             case r.Z.NAMEPLATE:
-                return d.intl.string(u.default.nNGEHh);
+                return d.intl.string(u.default.nNGEHk);
             case r.Z.BUNDLE:
-                return d.intl.string(u.default.VS1fKi);
+                return d.intl.string(u.default.VS1fKo);
             default:
                 return "";
         }

@@ -10,7 +10,7 @@ var i = n(399606),
     u = n(792258),
     d = n(657825),
     f = n(872608),
-    _ = n(345909),
+    _ = n(41418),
     p = n(388032),
     h = n(336888);
 let m = () => {
@@ -28,7 +28,7 @@ let m = () => {
                               (0, r.jsx)(o.Heading, {
                                   variant: "text-md/medium",
                                   className: h.sectionHeader,
-                                  children: p.intl.string(_.default.BxbvS0),
+                                  children: p.intl.string(_.default.BxbvS7),
                               }),
                               (0, r.jsx)("div", {
                                   className: h.avatarList,
@@ -60,7 +60,7 @@ let m = () => {
                               (0, r.jsx)(o.Heading, {
                                   variant: "text-md/medium",
                                   className: h.sectionHeader,
-                                  children: p.intl.string(_.default.Lq9Sen),
+                                  children: p.intl.string(_.default.Lq9Set),
                               }),
                               1 === t.length
                                   ? (0, r.jsx)(u.Z, {

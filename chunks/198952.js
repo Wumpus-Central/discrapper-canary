@@ -7,7 +7,7 @@ n(647438);
 var i = n(481060),
     a = n(518950),
     o = n(998502),
-    s = n(345909),
+    s = n(41418),
     l = n(388032),
     c = n(574999);
 function u(e, t, n) {
@@ -80,7 +80,7 @@ let p = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
                     src: o,
                     avatarDecoration: c,
                     size: n,
-                    "aria-label": l.intl.formatToPlainString(s.default.kFj4h4, { name: t.username }),
+                    "aria-label": l.intl.formatToPlainString(s.default.kFj4h1, { name: t.username }),
                 }),
             }),
         );

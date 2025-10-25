@@ -13,7 +13,7 @@ var a = n(951288),
     h = n(535188),
     x = n(856597),
     f = n(231338),
-    g = n(241945),
+    g = n(79541),
     b = n(388032),
     v = n(104940);
 let j = n(575703);
@@ -74,7 +74,7 @@ let y = function (e) {
                           },
                       });
             } catch (e) {
-                C(b.intl.string(g.default["/f++3t"]));
+                C(b.intl.string(g.default["/f++3g"]));
             } finally {
                 x(!1);
             }
@@ -146,12 +146,12 @@ let y = function (e) {
                                                         children: [
                                                             (0, a.jsx)(i.Heading, {
                                                                 variant: "heading-xl/semibold",
-                                                                children: b.intl.string(b.t.c6kn6O),
+                                                                children: b.intl.string(b.t.c6kn6F),
                                                             }),
                                                             (0, a.jsx)(i.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-muted",
-                                                                children: b.intl.string(b.t.ZUEGFh),
+                                                                children: b.intl.string(b.t.ZUEGFn),
                                                             }),
                                                         ],
                                                     }),
@@ -163,14 +163,14 @@ let y = function (e) {
                                                             (0, a.jsx)(i.Button, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
-                                                                text: b.intl.string(b.t["2jxGen"]),
+                                                                text: b.intl.string(b.t["2jxGer"]),
                                                                 onClick: () => {
                                                                     (0, p.R)("safety_flows_modal");
                                                                 },
                                                             }),
                                                             (0, a.jsx)(i.Button, {
                                                                 fullWidth: !0,
-                                                                text: b.intl.string(b.t["7NqTJi"]),
+                                                                text: b.intl.string(b.t["7NqTJn"]),
                                                                 onClick: () => {
                                                                     T();
                                                                 },

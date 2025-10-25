@@ -7,7 +7,7 @@ var i = n(722687),
     s = n(63063),
     l = n(652262),
     c = n(981631),
-    u = n(345909),
+    u = n(41418),
     d = n(388032);
 function f() {
     var e;
@@ -18,7 +18,7 @@ function f() {
         ? null
         : (0, r.jsx)(a.U, {
               children: (0, r.jsx)(o.ZP, {
-                  title: d.intl.string(d.t.CyLYKS),
+                  title: d.intl.string(d.t.CyLYKZ),
                   note: d.intl.format(u.default["6mK5Pz"], {
                       helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS),
                   }),

@@ -29,7 +29,7 @@ var r = n(951288),
     C = n(539086),
     N = n(292352),
     R = n(981631),
-    P = n(345909),
+    P = n(41418),
     w = n(388032),
     D = n(166387);
 let L = {
@@ -61,7 +61,7 @@ function k(e) {
         ? null
         : (0, r.jsxs)(c.njP, {
               className: D.settingsTabBar,
-              "aria-label": w.intl.string(P.default.RZqaJi),
+              "aria-label": w.intl.string(P.default.RZqaJn),
               selectedItem: t,
               type: "top",
               look: "brand",
@@ -70,14 +70,14 @@ function k(e) {
                   (0, r.jsx)(c.njP.Item, {
                       className: D.settingsTabBarItem,
                       id: N.dG.ACTIVITY,
-                      children: w.intl.string(P.default.bdBmq6),
+                      children: w.intl.string(P.default.bdBmqy),
                   }),
                   (0, r.jsxs)(c.njP.Item, {
                       className: D.settingsTabBarItem,
                       id: N.dG.REQUESTS,
-                      "aria-label": w.intl.string(P.default["gVWG+/"]),
+                      "aria-label": w.intl.string(P.default["gVWG+6"]),
                       children: [
-                          w.intl.string(P.default["gVWG+/"]),
+                          w.intl.string(P.default["gVWG+6"]),
                           i > 0
                               ? (0, r.jsx)(c.mAB, {
                                     className: D.badge,
@@ -90,7 +90,7 @@ function k(e) {
                       ? (0, r.jsx)(c.njP.Item, {
                             className: D.settingsTabBarItem,
                             id: N.dG.SETTINGS,
-                            children: w.intl.string(w.t["3D5yo6"]),
+                            children: w.intl.string(w.t["3D5yo/"]),
                         })
                       : null,
               ],
@@ -116,11 +116,11 @@ function j(e) {
                     }),
                     (0, r.jsx)(h.Z.Title, {
                         id: a,
-                        children: w.intl.string(P.default.RZqaJi),
+                        children: w.intl.string(P.default.RZqaJn),
                     }),
                     (0, r.jsx)(h.Z.Divider, {}),
                     (0, r.jsxs)(c.njP, {
-                        "aria-label": w.intl.string(P.default.RZqaJi),
+                        "aria-label": w.intl.string(P.default.RZqaJn),
                         selectedItem: n,
                         type: "top-pill",
                         onItemSelect: i,
@@ -128,14 +128,14 @@ function j(e) {
                             (0, r.jsx)(c.njP.Item, {
                                 id: N.dG.ACTIVITY,
                                 className: D.item,
-                                children: w.intl.string(P.default.bdBmq6),
+                                children: w.intl.string(P.default.bdBmqy),
                             }),
                             (0, r.jsxs)(c.njP.Item, {
                                 id: N.dG.REQUESTS,
                                 className: D.item,
-                                "aria-label": w.intl.string(P.default["gVWG+/"]),
+                                "aria-label": w.intl.string(P.default["gVWG+6"]),
                                 children: [
-                                    w.intl.string(P.default["gVWG+/"]),
+                                    w.intl.string(P.default["gVWG+6"]),
                                     l > 0
                                         ? (0, r.jsx)(c.mAB, {
                                               className: D.badge,
@@ -170,9 +170,9 @@ function U() {
     let s = L[n];
     return (0, r.jsxs)("main", {
         className: D.container,
-        "aria-label": w.intl.string(P.default.RZqaJi),
+        "aria-label": w.intl.string(P.default.RZqaJn),
         children: [
-            (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJi) }),
+            (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJn) }),
             (0, r.jsx)(k, {
                 section: n,
                 handleItemSelect: o,
@@ -217,9 +217,9 @@ function G() {
         value: e,
         children: (0, r.jsxs)("main", {
             className: o()(D.container, D.containerSidenav),
-            "aria-label": w.intl.string(P.default.RZqaJi),
+            "aria-label": w.intl.string(P.default.RZqaJn),
             children: [
-                (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJi) }),
+                (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJn) }),
                 (0, r.jsx)(j, {
                     theme: a,
                     section: S,

@@ -233,7 +233,7 @@ let s = {
     "discord_common/js/shared/animations/app/premium_marketing_surface/hd_streaming.lottiejson": () =>
         n.e("3128").then(n.t.bind(n, 354437, 19)),
     "discord_common/js/shared/animations/app/premium-payment-tier-2/index.lottiejson": () =>
-        n.e("89506").then(n.t.bind(n, 88032, 19)),
+        n.e("63859").then(n.t.bind(n, 88032, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Bubbles_v03.lottiejson": () =>
         n.e("78073").then(n.t.bind(n, 82134, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Portal_v03.lottiejson": () =>
@@ -274,7 +274,7 @@ let s = {
         n.e("50821").then(n.t.bind(n, 548421, 19)),
     "discord_app/modules/quests/images/confetti.lottiejson": () => n.e("67963").then(n.t.bind(n, 145193, 19)),
     "discord_app/modules/quests/web/images/quest_bar_background.json": () => n.e("30166").then(n.t.bind(n, 235630, 19)),
-    "discord_app/modules/quests/web/images/quest_bar_sparkle.json": () => n.e("4245").then(n.t.bind(n, 403389, 19)),
+    "discord_app/modules/quests/web/images/quest_bar_sparkle.json": () => n.e("63842").then(n.t.bind(n, 403389, 19)),
     "discord_app/modules/self_mod/inappropriate_conversation/images/vibing_wumpus.lottiejson": () =>
         n.e("29641").then(n.t.bind(n, 937359, 19)),
     "discord_common/js/shared/animations/app/everyone_popout/dark.lottiejson": () =>

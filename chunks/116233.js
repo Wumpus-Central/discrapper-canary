@@ -6,14 +6,14 @@ var i = n(493683),
     o = n(907995),
     s = n(342386),
     l = n(484710),
-    c = n(345909);
+    c = n(41418);
 function u() {
     let e = (0, a.ZM)(),
         t = () => {
             (0, s.default)(), i.Z.openPrivateChannel({ recipientIds: e });
         };
     return (0, r.jsx)(o.f, {
-        label: c.default.i284fX,
+        label: c.default.i284fU,
         labelHook: t,
         noticeType: l.nq.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
         count: e.length,
