@@ -4,7 +4,7 @@ var e = r(951288),
     a = r(442837),
     l = r(5888),
     s = r(198358),
-    d = r(484718),
+    d = r(87678),
     c = r(388032);
 function o() {
     let {
@@ -16,7 +16,7 @@ function o() {
                 ? (0, e.jsx)(n.xvT, {
                       variant: "display-sm",
                       color: "text-primary",
-                      children: c.intl.format(d.default.Xu0Qsb, {
+                      children: c.intl.format(d.default.Xu0QsX, {
                           numHours: Math.floor(i / 60),
                           hoursHook: (i, t) =>
                               (0, e.jsx)(
@@ -33,7 +33,7 @@ function o() {
                 : (0, e.jsx)(n.xvT, {
                       variant: "display-sm",
                       color: "text-primary",
-                      children: c.intl.format(d.default.UZbUtr, {
+                      children: c.intl.format(d.default.UZbUtl, {
                           numMinutes: Math.floor(i),
                           minutesHook: (i, t) =>
                               (0, e.jsx)(
@@ -50,7 +50,7 @@ function o() {
             (0, e.jsx)(n.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: c.intl.format(d.default["36PZws"], { percent: t }),
+                children: c.intl.format(d.default["36PZwu"], { percent: t }),
             }),
         ],
     });

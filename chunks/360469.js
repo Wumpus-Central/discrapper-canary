@@ -4,7 +4,7 @@ var e = r(951288),
     a = r(442837),
     l = r(5888),
     s = r(198358),
-    d = r(484718),
+    d = r(87678),
     c = r(388032);
 function o() {
     let {
@@ -15,7 +15,7 @@ function o() {
             (0, e.jsx)(n.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: c.intl.format(d.default.nPTMHh, {
+                children: c.intl.format(d.default.nPTMHj, {
                     numMessages: i,
                     messagesHook: (i, t) =>
                         (0, e.jsx)(
@@ -32,7 +32,7 @@ function o() {
             (0, e.jsx)(n.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: c.intl.format(d.default.ixvOzc, { percent: t }),
+                children: c.intl.format(d.default.ixvOza, { percent: t }),
             }),
         ],
     });

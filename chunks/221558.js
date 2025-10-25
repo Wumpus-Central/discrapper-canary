@@ -7,7 +7,7 @@ var e = r(951288),
     d = r(430824),
     c = r(5888),
     o = r(198358),
-    x = r(484718),
+    x = r(87678),
     u = r(388032);
 function p() {
     let {
@@ -28,7 +28,7 @@ function p() {
             (0, e.jsx)(a.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: u.intl.format(x.default.mAroeH, {
+                children: u.intl.format(x.default.mAroeJ, {
                     joinedCount: t,
                     guildCount: r.length,
                 }),
@@ -58,7 +58,7 @@ function p() {
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
-                                            children: u.intl.string(x.default.wWKySE),
+                                            children: u.intl.string(x.default.wWKySP),
                                         }),
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-md",
@@ -68,7 +68,7 @@ function p() {
                                         (0, e.jsx)(a.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
-                                            children: u.intl.string(x.default.lXT6np),
+                                            children: u.intl.string(x.default.lXT6ns),
                                         }),
                                     ],
                                 }),

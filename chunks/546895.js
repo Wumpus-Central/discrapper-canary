@@ -27,7 +27,7 @@ var a = n(951288),
     o = n(481060);
 let s = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
-        () => n.e("49190").then(n.t.bind(n, 871413, 17)),
+        () => n.e("49190").then(n.t.bind(n, 58399, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
         () => n.e("30611").then(n.t.bind(n, 34195, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Servers_CombinedEE.lottie":
@@ -233,7 +233,7 @@ let s = {
     "discord_common/js/shared/animations/app/premium_marketing_surface/hd_streaming.lottiejson": () =>
         n.e("3128").then(n.t.bind(n, 354437, 19)),
     "discord_common/js/shared/animations/app/premium-payment-tier-2/index.lottiejson": () =>
-        n.e("63859").then(n.t.bind(n, 88032, 19)),
+        n.e("89506").then(n.t.bind(n, 88032, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Bubbles_v03.lottiejson": () =>
         n.e("78073").then(n.t.bind(n, 82134, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Portal_v03.lottiejson": () =>

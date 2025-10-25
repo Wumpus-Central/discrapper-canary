@@ -16,7 +16,7 @@ function b(e) {
                 alertType: (0, c.T1)(d),
             };
             (0, l.ZDy)(async () => {
-                let { default: i } = await n.e("61536").then(n.bind(n, 32032));
+                let { default: i } = await n.e("61536").then(n.bind(n, 664452));
                 return (n) => {
                     var l, o;
                     return (0, r.jsx)(
