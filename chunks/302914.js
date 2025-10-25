@@ -66,29 +66,33 @@ function d(e) {
         onGameSheetClosed: f,
     } = e;
     return (e) =>
-        (0, r.jsx)(a.Z, {
-            quest: t,
-            sourceQuestContent: n,
-            applications: null != s ? s : [],
-            targetElementRef: c,
-            onGameSheetOpened: d,
-            onGameSheetClosed: f,
-            children: (t, n) =>
-                (0, r.jsx)(
-                    i.P3F,
-                    u(l({}, t), {
-                        style: {
-                            display: "inline-block",
-                            cursor: "pointer",
-                        },
-                        innerRef: n,
-                        children: (0, r.jsx)(i.Text, {
-                            variant: "text-xs/normal",
-                            color: "text-link",
-                            className: o.instructionsLink,
-                            children: e,
+        (0, r.jsx)(
+            a.Z,
+            {
+                quest: t,
+                sourceQuestContent: n,
+                applications: null != s ? s : [],
+                targetElementRef: c,
+                onGameSheetOpened: d,
+                onGameSheetClosed: f,
+                children: (t, n) =>
+                    (0, r.jsx)(
+                        i.P3F,
+                        u(l({}, t), {
+                            style: {
+                                display: "inline-block",
+                                cursor: "pointer",
+                            },
+                            innerRef: n,
+                            children: (0, r.jsx)(i.Text, {
+                                variant: "text-xs/normal",
+                                color: "text-link",
+                                className: o.instructionsLink,
+                                children: e,
+                            }),
                         }),
-                    }),
-                ),
-        });
+                    ),
+            },
+            t.id,
+        );
 }

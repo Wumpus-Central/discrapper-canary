@@ -96,27 +96,9 @@ function S(e) {
                 K && G
                     ? y.intl.format(y.t["8Op4c4"], {
                           balanceHook: () =>
-                              (0, r.jsxs)(T, {
-                                  questId: P.id,
-                                  children: [
-                                      (0, r.jsx)(p.Z, {
-                                          shouldUseThemeColor: !0,
-                                          className: E.orbsBalanceIcon,
-                                          customSize: 14,
-                                      }),
-                                      X,
-                                  ],
-                              }),
-                      })
-                    : K
-                      ? (0, r.jsx)(T, {
-                            questId: P.id,
-                            children: Q,
-                        })
-                      : G
-                        ? y.intl.format(y.t.ro1sze, {
-                              balanceHook: () =>
-                                  (0, r.jsxs)(T, {
+                              (0, r.jsxs)(
+                                  T,
+                                  {
                                       questId: P.id,
                                       children: [
                                           (0, r.jsx)(p.Z, {
@@ -126,14 +108,44 @@ function S(e) {
                                           }),
                                           X,
                                       ],
-                                  }),
+                                  },
+                                  P.id,
+                              ),
+                      })
+                    : K
+                      ? (0, r.jsx)(T, {
+                            questId: P.id,
+                            children: Q,
+                        })
+                      : G
+                        ? y.intl.format(y.t.ro1sze, {
+                              balanceHook: () =>
+                                  (0, r.jsxs)(
+                                      T,
+                                      {
+                                          questId: P.id,
+                                          children: [
+                                              (0, r.jsx)(p.Z, {
+                                                  shouldUseThemeColor: !0,
+                                                  className: E.orbsBalanceIcon,
+                                                  customSize: 14,
+                                              }),
+                                              X,
+                                          ],
+                                      },
+                                      P.id,
+                                  ),
                           })
                         : y.intl.format(y.t["0IUT4Y"], {
                               rewardWithArticleHook: () =>
-                                  (0, r.jsx)(T, {
-                                      questId: P.id,
-                                      children: V,
-                                  }),
+                                  (0, r.jsx)(
+                                      T,
+                                      {
+                                          questId: P.id,
+                                          children: V,
+                                      },
+                                      P.id,
+                                  ),
                           }),
             [Q, K, V, P.id, X, G],
         ),
