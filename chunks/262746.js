@@ -10,7 +10,7 @@ var i = n(951288),
     d = n(496675),
     p = n(993706),
     h = n(796263),
-    f = n(764295),
+    f = n(43617),
     m = n(388032);
 function g(e) {
     let { channel: t, user: g, guild: b } = e,
@@ -25,7 +25,7 @@ function g(e) {
         !x)
     )
         return null;
-    let O = !0 === C ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
+    let O = !0 === C ? m.intl.string(f.default.dpfwQ1) : m.intl.string(f.default.ASv23S),
         j = "ban-user-".concat(null == g ? void 0 : g.id);
     return (0, i.jsx)(
         h.Z,

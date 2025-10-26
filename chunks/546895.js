@@ -27,7 +27,7 @@ var a = n(951288),
     o = n(481060);
 let s = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
-        () => n.e("49190").then(n.t.bind(n, 58399, 17)),
+        () => n.e("49190").then(n.t.bind(n, 871413, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
         () => n.e("30611").then(n.t.bind(n, 34195, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Servers_CombinedEE.lottie":
@@ -284,7 +284,7 @@ let s = {
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/coachmark/seasonal-gifting-coachmark.lottiejson":
         () => n.e("57802").then(n.t.bind(n, 719225, 19)),
     "discord_common/js/shared/animations/app/playstation/playstation_connecting.lottiejson": () =>
-        n.e("78698").then(n.t.bind(n, 141923, 19)),
+        n.e("87522").then(n.t.bind(n, 141923, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/emoji.lottiejson": () =>
         n.e("75317").then(n.t.bind(n, 833862, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/interstitial_wheel_dark.lottiejson": () =>

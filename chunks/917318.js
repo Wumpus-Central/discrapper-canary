@@ -8,16 +8,16 @@ var i = n(275726),
     l = n(942951),
     c = n(834129),
     u = n(594174),
-    d = n(764295),
+    d = n(43617),
     f = n(388032);
 let _ = {
-        [i.u.REPORT_TO_MOD_BAN_USER]: () => d.default.komFTk,
-        [i.u.REPORT_TO_MOD_KICK_USER]: () => d.default.FAJmJS,
-        [i.u.REPORT_TO_MOD_TIMEOUT_USER]: () => d.default["90r/sb"],
+        [i.u.REPORT_TO_MOD_BAN_USER]: () => d.default.komFTv,
+        [i.u.REPORT_TO_MOD_KICK_USER]: () => d.default.FAJmJV,
+        [i.u.REPORT_TO_MOD_TIMEOUT_USER]: () => d.default["90r/sR"],
     },
     p = {
-        [i.u.REPORT_TO_MOD_DELETED_MESSAGE]: () => d.default["4023i4"],
-        [i.u.REPORT_TO_MOD_CLOSED_REPORT]: () => d.default.UE81zc,
+        [i.u.REPORT_TO_MOD_DELETED_MESSAGE]: () => d.default["4023i8"],
+        [i.u.REPORT_TO_MOD_CLOSED_REPORT]: () => d.default.UE81zV,
     };
 function h(e) {
     let { type: t } = e,

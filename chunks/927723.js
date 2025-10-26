@@ -9,7 +9,7 @@ var i = n(755721),
     o = n(63063),
     s = n(981631),
     l = n(388032),
-    c = n(764295);
+    c = n(43617);
 function u(e, t, n) {
     return (
         t in e
@@ -77,11 +77,11 @@ function h() {
                 e,
                 _(d({}, t), {
                     header: l.intl.string(c.default.odgSTk),
-                    confirmText: l.intl.string(l.t.BddRzc),
+                    confirmText: l.intl.string(l.t.BddRzS),
                     confirmButtonColor: i.zx.Colors.BRAND,
                     children: (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        children: l.intl.format(c.default.EZfHRk, {
+                        children: l.intl.format(c.default.EZfHRq, {
                             helpURL: o.Z.getArticleURL(s.BhN.NSFW_AGE_GATING),
                         }),
                     }),

@@ -6,14 +6,14 @@ var i = n(951288),
     o = n(271383),
     s = n(496675),
     c = n(796263),
-    u = n(764295),
+    u = n(43617),
     d = n(388032);
 function p(e) {
     let { channel: t, user: p, guild: h } = e,
         f = (0, r.e7)([s.Z], () => null != p && null != h && (0, a.nX)(p, h, [s.Z])),
         m = (0, r.e7)([o.ZP], () => null == p || null == o.ZP.getMember(t.guild_id, p.id));
     if (!f) return null;
-    let g = m ? d.intl.string(u.default.Ux67nZ) : d.intl.string(u.default["snp/lJ"]),
+    let g = m ? d.intl.string(u.default.Ux67nW) : d.intl.string(u.default["snp/lJ"]),
         b = "kick-user-".concat(null == p ? void 0 : p.id);
     return (0, i.jsx)(
         c.Z,

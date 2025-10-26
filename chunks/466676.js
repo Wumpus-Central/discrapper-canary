@@ -16,7 +16,7 @@ var i = t(481060),
     p = t(895563),
     j = t(423589),
     y = t(981631),
-    g = t(764295),
+    g = t(43617),
     P = t(388032);
 let Z = (0, o.Z)(
     (0, c.Z)(
@@ -29,16 +29,16 @@ let Z = (0, o.Z)(
                 Z = (0, f.ZP)(e),
                 v = (0, O.Z)({
                     id: e.id,
-                    label: P.intl.string(P.t.gFHI3t),
+                    label: P.intl.string(P.t.gFHI3k),
                 }),
                 E = (0, u.Z)(e),
                 _ = (0, b.Z)(e),
                 N = (0, h.ZP)(e),
-                C = (0, j.Mn)("ReportToModChannelContextMenu");
+                A = (0, j.Mn)("ReportToModChannelContextMenu");
             return (0, r.jsxs)(i.v2r, {
                 navId: "report-to-mod-channel-context",
                 onClose: l.Zy,
-                "aria-label": P.intl.string(g.default["zp+z/P"]),
+                "aria-label": P.intl.string(g.default["zp+z/E"]),
                 onSelect: t,
                 children: [
                     (0, r.jsxs)(
@@ -52,7 +52,7 @@ let Z = (0, o.Z)(
                     (0, r.jsxs)(
                         i.kSQ,
                         {
-                            children: [Z, C ? N : _],
+                            children: [Z, A ? N : _],
                         },
                         "notifications",
                     ),

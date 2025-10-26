@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(434404),
     d = n(981631),
     u = n(388032),
-    g = n(764295),
+    g = n(43617),
     m = n(776853);
 async function p(e, t) {
     return await c.Z.saveGuild(e.id, { moderatorReportingEnabled: t });
@@ -30,8 +30,8 @@ function f(e) {
                   (0, r.jsx)("div", {
                       className: m.setupContainer,
                       children: (0, r.jsx)(a.rsf, {
-                          label: u.intl.string(g.default["/xIz7O"]),
-                          description: u.intl.string(g.default.uUMXys),
+                          label: u.intl.string(g.default["/xIz7G"]),
+                          description: u.intl.string(g.default.uUMXyu),
                           badge: "beta",
                           checked: f,
                           onChange: b,

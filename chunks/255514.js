@@ -30,9 +30,9 @@ var r = n(951288),
     E = n(266080),
     k = n(316617),
     w = n(15682),
-    D = n(189472),
-    M = n(749534),
-    R = n(157759),
+    M = n(189472),
+    R = n(749534),
+    D = n(157759),
     A = n(521332),
     B = n(680050),
     U = n(905434),
@@ -44,9 +44,9 @@ var r = n(951288),
     z = n(375790),
     V = n(981631),
     Q = n(388032),
-    J = n(764295),
-    K = n(520310);
-function Y(e) {
+    Y = n(43617),
+    J = n(520310);
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,7 +71,7 @@ function Y(e) {
     }
     return e;
 }
-let q = ["user_urf", "message_urf", "guild_urf"];
+let K = ["user_urf", "message_urf", "guild_urf"];
 function X(e, t) {
     let { elements: n } = e;
     return n.find((e) => {
@@ -130,7 +130,7 @@ let ee = (e) => {
         eC = i.useMemo(() => (0, m.VP)(eu, em, eo, eO, ej), [eu, em, eo, eO, ej]),
         eN = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                r = Y({}, eO);
+                r = q({}, eO);
             (r[e] = {
                 value: t,
                 isValid: n,
@@ -167,7 +167,7 @@ let ee = (e) => {
                                               }),
                                         e
                                     );
-                                })(Y({}, e), { [t]: n }),
+                                })(q({}, e), { [t]: n }),
                             );
             }
         }, [eo]),
@@ -178,16 +178,16 @@ let ee = (e) => {
         eE = null != X(t, "ignore_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name),
         ek = (0, d.U)(),
         ew = (0, o.PO)("share_with_parent_element"),
-        eD = (0, c.zu)(),
-        eM = ek && eD.length > 0 && ew && null != X(t, "share_with_parents");
+        eM = (0, c.zu)(),
+        eR = ek && eM.length > 0 && ew && null != X(t, "share_with_parents");
     return (0, r.jsxs)("div", {
-        className: K.container,
+        className: J.container,
         children: [
             (0, r.jsxs)(a.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
                 direction: s.Z.Direction.VERTICAL,
-                className: K.header,
+                className: J.header,
                 children: [
                     (0, r.jsx)(L.Z, { element: X(t, "success") }),
                     (0, r.jsx)(N.Z, {
@@ -199,7 +199,7 @@ let ee = (e) => {
             }),
             (0, r.jsxs)(a.hzk, {
                 "data-migration-pending": !0,
-                className: K.body,
+                className: J.body,
                 children: [
                     null != ec && (0, r.jsx)(H.Z, { element: ec }),
                     null != ep && (0, r.jsx)(G.Z, { element: ep }),
@@ -226,7 +226,7 @@ let ee = (e) => {
                             return z.O.includes(t);
                         });
                     })(t) &&
-                        (0, r.jsxs)(M.Z, {
+                        (0, r.jsxs)(R.Z, {
                             children: [
                                 eE &&
                                     (0, r.jsx)(T.Z, {
@@ -234,7 +234,7 @@ let ee = (e) => {
                                         channelId: eI,
                                         reportId: ea,
                                     }),
-                                eM && (0, r.jsx)(B.Z, { parents: eD }),
+                                eR && (0, r.jsx)(B.Z, { parents: eM }),
                                 null != X(t, "block_users") &&
                                     ("message" === n.name ||
                                         "first_dm" === n.name ||
@@ -258,7 +258,7 @@ let ee = (e) => {
                                         "first_dm" === n.name ||
                                         "user" === n.name ||
                                         "report_to_mod_message" === n.name) &&
-                                    (0, r.jsx)(D.Z, {
+                                    (0, r.jsx)(M.Z, {
                                         user: "user" === n.name ? n.record : n.record.author,
                                         channelId: eI,
                                         reportId: ea,
@@ -283,7 +283,7 @@ let ee = (e) => {
                                     }),
                                 null != X(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, r.jsx)(R.Z, {
+                                    (0, r.jsx)(D.Z, {
                                         application: n.record,
                                         reportId: ea,
                                     }),
@@ -317,12 +317,12 @@ let ee = (e) => {
                         (0, r.jsx)(w.Z, {
                             element: eo,
                             onChange: (e, t) => {
-                                let n = Y({}, ej);
+                                let n = q({}, ej);
                                 e in ej ? delete n[e] : (n[e] = t), ey(n);
                             },
                             state: ej,
                         }),
-                    q.includes(n.name) &&
+                    K.includes(n.name) &&
                         null != em &&
                         em.length > 0 &&
                         (0, r.jsx)(v.Z, {
@@ -330,7 +330,7 @@ let ee = (e) => {
                             onChange: eN,
                             state: eO,
                         }),
-                    q.includes(n.name) &&
+                    K.includes(n.name) &&
                         null != eu &&
                         eu.length > 0 &&
                         (0, r.jsx)(O.Z, {
@@ -339,7 +339,7 @@ let ee = (e) => {
                             state: eO,
                         }),
                     (0, r.jsxs)("div", {
-                        className: K.listContainer,
+                        className: J.listContainer,
                         children: [
                             (0, r.jsx)(b.Z, {
                                 node: t,
@@ -381,10 +381,10 @@ let ee = (e) => {
                                 .catch((e) => {
                                     var t;
                                     (null == (t = e.body) ? void 0 : t.code) === V.evJ.INVALID_FORM_BODY
-                                        ? ev(Q.intl.string(Q.t.VjAAuL))
+                                        ? ev(Q.intl.string(Q.t.VjAAuP))
                                         : eg
-                                          ? ev(Q.intl.string(J.default.psKFdH))
-                                          : ev(Q.intl.string(Q.t.h6D8V1));
+                                          ? ev(Q.intl.string(Y.default.psKFdJ))
+                                          : ev(Q.intl.string(Q.t.h6D8Vy));
                                 })
                                 .finally(() => {
                                     eh(!1);
@@ -396,7 +396,7 @@ let ee = (e) => {
             }),
             (0, r.jsx)(a.olH, {
                 "data-migration-pending": !0,
-                className: K.closeButton,
+                className: J.closeButton,
                 onClick: er,
             }),
         ],

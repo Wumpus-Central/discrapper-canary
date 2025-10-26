@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(942951),
     p = n(594174),
     h = n(55935),
-    m = n(764295),
+    m = n(43617),
     g = n(388032),
     E = n(424271),
     b = n(724913),
@@ -30,11 +30,11 @@ let O = (e) => {
         A = null != I ? I.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : y,
         C =
             null != I
-                ? g.intl.format(m.default["+zqXZm"], {
+                ? g.intl.format(m.default["+zqXZs"], {
                       username: I.username,
                       onUserClick: S,
                   })
-                : g.intl.string(m.default.xpRjfX);
+                : g.intl.string(m.default.xpRjfS);
     return (0, r.jsxs)("div", {
         className: o()(b.messageSpine, b.repliedMessage, T),
         children: [

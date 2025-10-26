@@ -5,7 +5,7 @@ var r = n(481060),
     i = n(688465),
     l = n(921944),
     o = n(388032),
-    s = n(941246);
+    s = n(29114);
 function c(e) {
     let { markAsDismissed: t, onCTA: c } = e;
     return (0, a.jsxs)("div", {
@@ -38,18 +38,18 @@ function c(e) {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 className: s.heading,
-                                children: [o.intl.string(o.t.MLt8Hx), (0, a.jsx)(i.Z, { className: s.betaTag })],
+                                children: [o.intl.string(o.t.MLt8H4), (0, a.jsx)(i.Z, { className: s.betaTag })],
                             }),
                             (0, a.jsx)(r.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: o.intl.string(o.t["l+lSLi"]),
+                                children: o.intl.string(o.t["l+lSLp"]),
                             }),
                         ],
                     }),
                     (0, a.jsx)(r.Button, {
                         variant: "primary",
-                        text: o.intl.string(o.t["9WdoBw"]),
+                        text: o.intl.string(o.t["9WdoB+"]),
                         fullWidth: !0,
                         onClick: () => {
                             t(l.L.TAKE_ACTION), c();

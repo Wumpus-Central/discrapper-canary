@@ -1,16 +1,3 @@
-n.d(t, { Z: () => a });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    l = n.n(i),
-    o = n(481060),
-    s = n(173943);
-function a(e) {
-    let { children: t, className: n } = e;
-    return (0, r.jsx)(o.Text, {
-        color: "none",
-        className: l()(s.subtext, n),
-        variant: "text-xs/medium",
-        children: t,
-    });
-}
+e.exports = JSON.parse(
+    '{"o/An3l":[[1,"username"]," megkért, hogy közvetítsd a következőt: ",[1,"applicationName"]],"DKHhec":["Közvetítés kérése"],"8qq+H7":[[1,"applicationName"]," közvetítésének kérése"],"s7bMT0":[[1,"username"]," arra kér, hogy közvetítsd a következőt: ",[1,"applicationName"]],"7pndSl":["Felkértél valakit a következő közvetítésére: ",[1,"applicationName"]],"P0wwmM":["Már zajlik a közvetítés"],"u4QmWl":["A kérés lejárt"],"qRXats":["Nincs a hangcsatornában"],"43zohO":["Nem futó játék"],"fac+eE":["Nincs jogosultság"],"8HU1M2":["Kérés elküldve"],"5+172e":["Élő közvetítés"],"nAyuPp":["Közvetítési kérés"],"d/qbC0":[[1,"username"]," megkért, hogy közvetíts"],"8B3U5O":["Megkértél valakit, hogy közvetítsen"],"UGbmBp":["Élő közvetítés"],"jTbTAF":[[8,"$b",[[1,"username"]]]," nézni szeretné, ahogy játszol a következővel: ",[8,"$b",[[1,"game"]]],"."]}',
+);

@@ -10,7 +10,7 @@ var i = n(951288),
     d = n(496675),
     p = n(594174),
     h = n(796263),
-    f = n(764295),
+    f = n(43617),
     m = n(388032);
 function g(e) {
     let { channel: t, user: n, guild: g } = e,
@@ -25,7 +25,7 @@ function g(e) {
     return (0, i.jsx)(
         h.Z,
         {
-            text: y ? m.intl.string(f.default["6uMZbm"]) : m.intl.string(f.default["Sgg/uL"]),
+            text: y ? m.intl.string(f.default["6uMZbv"]) : m.intl.string(f.default["Sgg/uI"]),
             icon: l.T39,
             onClick: () => {
                 null != n &&

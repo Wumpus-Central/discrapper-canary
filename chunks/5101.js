@@ -8,7 +8,7 @@ var i = n(951288),
     l = n(793030),
     a = n(433517),
     o = n(481060),
-    s = n(764295),
+    s = n(43617),
     c = n(388032);
 let u = "report_to_mod_dont_show_resolve_confirm";
 function d(e) {
@@ -17,11 +17,11 @@ function d(e) {
     return (0, i.jsx)(l.Modal, {
         transitionState: t,
         onClose: n,
-        title: c.intl.string(s.default["8R4eur"]),
-        subtitle: c.intl.string(s.default.xgOraW),
+        title: c.intl.string(s.default["8R4euh"]),
+        subtitle: c.intl.string(s.default.xgOraS),
         actions: [
             {
-                text: c.intl.string(s.default.ctefOz),
+                text: c.intl.string(s.default.ctefO2),
                 onClick: () => {
                     p && a.K.set(u, !0), n(), d();
                 },
@@ -30,7 +30,7 @@ function d(e) {
         actionBarInput: (0, i.jsx)(o.Checkbox, {
             checked: p,
             onChange: (e) => h(e),
-            label: c.intl.string(s.default["3puq5e"]),
+            label: c.intl.string(s.default["3puq5c"]),
             labelType: "secondary",
         }),
     });

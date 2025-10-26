@@ -6,8 +6,8 @@ var i = t(442837),
     a = t(660189),
     o = t(501517),
     c = t(982168),
-    u = t(388032),
-    s = t(764295),
+    s = t(388032),
+    u = t(43617),
     d = t(474440);
 function f(e) {
     let n = e.isArchivedThread(),
@@ -17,7 +17,7 @@ function f(e) {
         ? null
         : (0, r.jsx)(l.sNh, {
               id: "resolve-report",
-              label: u.intl.string(s.default["8yIKen"]),
+              label: s.intl.string(u.default["8yIKem"]),
               action: () => o.Z.resolveFlag(e.id),
               className: d.menuItem,
           });

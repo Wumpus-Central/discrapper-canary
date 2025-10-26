@@ -9,7 +9,7 @@ var i = n(951288),
     u = n(375954),
     d = n(496675),
     p = n(796263),
-    h = n(764295),
+    h = n(43617),
     f = n(388032);
 function m(e) {
     let { message: t, user: n, guild: m, channel: g } = e,
@@ -22,7 +22,7 @@ function m(e) {
             return null != (t = null == (e = c.Z.getChannel(g.id)) ? void 0 : e.isArchivedThread()) && t;
         });
     if (!b) return null;
-    let x = null == y ? f.intl.string(h.default["0IZbwM"]) : f.intl.string(h.default.Uj6oDw),
+    let x = null == y ? f.intl.string(h.default["0IZbwC"]) : f.intl.string(h.default.Uj6oD4),
         O = null == y,
         j = "delete-message-".concat(t.id);
     return (0, i.jsx)(

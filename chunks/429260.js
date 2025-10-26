@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => S,
-    eH: () => _,
-    wY: () => P,
+    ZP: () => E,
+    eH: () => P,
+    wY: () => _,
 });
 var r = n(951288);
 n(647438);
@@ -22,21 +22,21 @@ var i = n(442837),
     m = n(970257),
     h = n(921944),
     v = n(388032),
-    j = n(764295);
-function S(e) {
+    j = n(43617);
+function E(e) {
     let t = (0, i.e7)([O.Z], () => O.Z.getGuildId()),
         n = (0, p.Q_)(t);
     return (0, m.a4)(e)
         ? (0, r.jsx)(a.sNh, {
               id: "report",
-              label: n ? v.intl.string(v.t.n5EBAA) : v.intl.string(v.t.GwbdGR),
+              label: n ? v.intl.string(v.t.n5EBAJ) : v.intl.string(v.t.GwbdGe),
               action: () => (0, f.ak)(e, "web_message_context_menu"),
               icon: n ? a.gw7 : a.U65,
               color: "danger",
           })
         : null;
 }
-function E() {
+function S() {
     return (0, r.jsx)(d.ZP, {
         contentTypes: [l.z.REPORT_TO_MOD_NEW_TAG],
         children: (e) => {
@@ -53,7 +53,7 @@ function E() {
         },
     });
 }
-function P(e) {
+function _(e) {
     let t = (0, i.e7)([g.Z], () => g.Z.hasReportedMessage(e.channel_id, e.id)),
         n = (0, b.sP)(e);
     return ((0, o.zq)(() => {
@@ -62,16 +62,16 @@ function P(e) {
     n)
         ? (0, r.jsx)(a.sNh, {
               id: "report-to-mod",
-              label: t ? v.intl.string(j.default["8wsdnp"]) : v.intl.string(j.default["1D+vq6"]),
+              label: t ? v.intl.string(j.default["8wsdng"]) : v.intl.string(j.default["1D+vqy"]),
               action: () => {
                   (0, u.Q3)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.USER_DISMISS }), (0, f.tV)(e);
               },
-              icon: (0, r.jsx)(E, {}),
+              icon: (0, r.jsx)(S, {}),
               disabled: t,
           })
         : null;
 }
-function _(e) {
+function P(e) {
     let t = (0, i.e7)([c.ZP], () => c.ZP.get("iar_testing")),
         n = (0, i.e7)([y.default], () => y.default.getCurrentUser());
     return (0, m.a4)(e) && null != n && n.isStaff() && t

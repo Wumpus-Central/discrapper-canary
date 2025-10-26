@@ -4,7 +4,7 @@ var i = n(951288),
     l = n(481060),
     a = n(545594),
     o = n(501517),
-    s = n(764295),
+    s = n(43617),
     c = n(388032),
     u = n(541170);
 let d = (e) => {
@@ -16,14 +16,14 @@ let d = (e) => {
         bannerHeader: (0, i.jsx)(l.Text, {
             variant: "text-md/medium",
             color: "text-muted",
-            children: c.intl.string(s.default["0eUUeH"]),
+            children: c.intl.string(s.default["0eUUeF"]),
         }),
         headerStyles: u.bannerHeader,
         containerStyles: u.bannerContainer,
         children: (0, i.jsx)(l.Button, {
             variant: "secondary",
             size: "sm",
-            text: c.intl.string(s.default["6quCi4"]),
+            text: c.intl.string(s.default["6quCi9"]),
             onClick: n,
         }),
     });
