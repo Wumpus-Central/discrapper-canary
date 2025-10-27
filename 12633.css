@@ -9381,14 +9381,14 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     border-radius: 8px 0 0 8px
 }
 
-.fullRegionButton_f1ceac {
+.fullRegionButton_f1ceac,
+.fullRegionDropdownButton_f1ceac {
+    border: 1px solid var(--border-faint);
     border-radius: 12px
 }
 
 .fullRegionDropdownButton_f1ceac {
     align-items: center;
-    border: 1px solid var(--border-faint);
-    border-radius: 12px;
     display: flex;
     justify-content: center;
     padding: 4px
