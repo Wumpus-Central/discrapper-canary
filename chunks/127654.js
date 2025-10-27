@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => T,
-    d: () => S,
+    d: () => A,
 }),
     n(388685),
     n(415506);
@@ -76,7 +76,7 @@ function T(e, t, n) {
             post_compression_aggregate_file_size: t,
         }),
             (0, o.openUploadError)({
-                title: O.intl.string(O.t["/tGlcn"]),
+                title: O.intl.string(O.t["/tGlcj"]),
                 help: (0, g.BK)(r, i),
                 showPremiumUpsell: !(0, m.M5)(r, y.PremiumTypes.TIER_2),
                 fileSize: d,
@@ -84,11 +84,17 @@ function T(e, t, n) {
         return;
     }
     (0, o.openUploadError)({
-        title: O.intl.string(O.t["/tGlcn"]),
+        title: O.intl.string(O.t["/tGlcj"]),
         help: O.intl.formatToPlainString(O.t.tUOJdH, { maxSize: h.Ng(h.OC()) }),
     });
 }
-function S(e, t, n) {
+async function S(e) {
+    await Promise.resolve(),
+        e.forEach((e) => {
+            e.type, e.size;
+        });
+}
+async function A(e, t, n) {
     let {
         filesMetadata: c,
         requireConfirm: _ = !0,
@@ -99,16 +105,16 @@ function S(e, t, n) {
     if (e.length < 1) return;
     if (null != c && c.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
     let v = t.getGuildId(),
-        S = Array.from(e);
-    if ((0, g.Bf)(S, v)) return void T(t, S);
-    if (f.Z.getUploadCount(t.id, n) + S.length > E.dN1) {
+        A = Array.from(e);
+    if ((await S(A), (0, g.Bf)(A, v))) return void T(t, A);
+    if (f.Z.getUploadCount(t.id, n) + A.length > E.dN1) {
         (0, o.openUploadError)({
-            title: O.intl.string(O.t.wOr6hI),
-            help: O.intl.formatToPlainString(O.t["qqyp/f"], { limit: E.dN1 }),
+            title: O.intl.string(O.t.wOr6hB),
+            help: O.intl.formatToPlainString(O.t["qqyp/e"], { limit: E.dN1 }),
         }),
             p.default.track(E.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: f.Z.getUploadCount(t.id, n),
-                new_count: S.length,
+                new_count: A.length,
             });
         return;
     }
@@ -118,7 +124,7 @@ function S(e, t, n) {
             r.Z.updateChatOpen(t.id, !0),
         _)
     ) {
-        let e = S.map((e, t) =>
+        let e = A.map((e, t) =>
             I(
                 {
                     file: e,
@@ -136,7 +142,7 @@ function S(e, t, n) {
             draftType: n,
         });
     } else {
-        let e = S.map((e, n) => {
+        let e = A.map((e, n) => {
             let r = null != c ? c[n] : {};
             return new s.nH(
                 I(

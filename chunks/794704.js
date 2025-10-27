@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(320724),
     R = n(925329),
     P = n(297700),
-    w = n(444295),
-    D = n(486016),
+    D = n(444295),
+    w = n(486016),
     L = n(837268),
     x = n(32300),
     M = n(809357),
@@ -141,17 +141,17 @@ function eI(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let eT = ew(null),
+let eT = eD(null),
     eS = 20,
     eA = 16,
     eC = 1,
     eN = 25,
     eR = [0, 5, 10, 15, 20, 25];
 function eP() {
-    let e = ew(eT);
+    let e = eD(eT);
     f().isEqual(e, eT) || (ei.default.track(eu.rMx.OVERLAY_SETTINGS_UPDATED, e), (eT = e));
 }
-function ew(e) {
+function eD(e) {
     var t;
     let n = er.default.getNotificationPositionMode(),
         r = n !== eu._vf.DISABLED,
@@ -168,7 +168,7 @@ function ew(e) {
         old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : en.default.enabled,
     };
 }
-function eD(e) {
+function ew(e) {
     let {
         header: t,
         icon: n,
@@ -255,7 +255,7 @@ function eL(e) {
         children: (e) => {
             let { onClick: t } = e;
             return (0, r.jsx)(
-                eD,
+                ew,
                 eO(eb({}, s), {
                     onClick: (e) => {
                         u(!l), null == t || t(e);
@@ -332,39 +332,39 @@ function ek(e) {
     }, [f, d]);
     let C = !(0, el.supportsLegacy)(),
         N = !(0, el.supportsOutOfProcess)(),
-        { legacyEnabled: D, oopEnabled: x } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
+        { legacyEnabled: w, oopEnabled: x } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         M = (e, t) => {
             var n, r, i;
             if (null == o) return;
             let a = !1,
                 s = !1;
             switch (t) {
-                case w.OverlayToggledClientSettingType.LEGACY_GAME:
+                case D.OverlayToggledClientSettingType.LEGACY_GAME:
                     I(e), m.Z.toggleOverlay(o, e, g), (a = !e && y);
                     break;
-                case w.OverlayToggledClientSettingType.OOP_GAME:
+                case D.OverlayToggledClientSettingType.OOP_GAME:
                     E(e), m.Z.toggleOverlay(o, y, e), (s = !e && g);
                     break;
-                case w.OverlayToggledClientSettingType.LEGACY:
+                case D.OverlayToggledClientSettingType.LEGACY:
                     b.Z.setEnabled(e, x),
-                        (0, w.ou)(e, w.OverlayToggledClientSettingType.LEGACY, null != (n = o.id) ? n : null);
+                        (0, D.ou)(e, D.OverlayToggledClientSettingType.LEGACY, null != (n = o.id) ? n : null);
                     break;
-                case w.OverlayToggledClientSettingType.OOP:
-                    b.Z.setEnabled(D, e),
-                        (0, w.ou)(e, w.OverlayToggledClientSettingType.OOP, null != (r = o.id) ? r : null);
+                case D.OverlayToggledClientSettingType.OOP:
+                    b.Z.setEnabled(w, e),
+                        (0, D.ou)(e, D.OverlayToggledClientSettingType.OOP, null != (r = o.id) ? r : null);
             }
             (a || s) &&
                 (0, B.l)(
-                    a ? w.OverlayToggledClientSettingType.LEGACY_GAME : w.OverlayToggledClientSettingType.OOP_GAME,
+                    a ? D.OverlayToggledClientSettingType.LEGACY_GAME : D.OverlayToggledClientSettingType.OOP_GAME,
                     null != (i = o.id) ? i : null,
                 );
         },
         j = (e, t) => {
             let n = !t && e,
                 r = !x && g,
-                i = !D && y,
+                i = !w && y,
                 a = !g && x,
-                o = !y && D;
+                o = !y && w;
             switch (!0) {
                 case n && (r || i) && (a || o):
                     return "both";
@@ -383,14 +383,14 @@ function ek(e) {
                     m.Z.toggleOverlay(o, e, e), I(e), E(e), (n = !e && y), (r = !e && g);
                     break;
                 case "global":
-                    b.Z.setEnabled(e, e), (n = !e && D), (r = !e && x);
+                    b.Z.setEnabled(e, e), (n = !e && w), (r = !e && x);
                     break;
                 case "both":
                     b.Z.setEnabled(e, e),
                         m.Z.toggleOverlay(o, e, e),
                         I(e),
                         E(e),
-                        (n = (!e && D) || (!e && y)),
+                        (n = (!e && w) || (!e && y)),
                         (r = (!e && x) || (!e && g));
             }
             let i = null;
@@ -398,13 +398,13 @@ function ek(e) {
                 (n
                     ? (i =
                           "game" === t
-                              ? w.OverlayToggledClientSettingType.LEGACY_GAME
-                              : w.OverlayToggledClientSettingType.LEGACY)
+                              ? D.OverlayToggledClientSettingType.LEGACY_GAME
+                              : D.OverlayToggledClientSettingType.LEGACY)
                     : r &&
                       (i =
                           "game" === t
-                              ? w.OverlayToggledClientSettingType.OOP_GAME
-                              : w.OverlayToggledClientSettingType.OOP),
+                              ? D.OverlayToggledClientSettingType.OOP_GAME
+                              : D.OverlayToggledClientSettingType.OOP),
                 null != i)
             ) {
                 var a;
@@ -412,8 +412,8 @@ function ek(e) {
             }
         },
         G = C && N,
-        Z = !D && !x,
-        F = !g && !D && y && !C,
+        Z = !w && !x,
+        F = !g && !w && y && !C,
         V = !y && !x && g && !N,
         H = (null == u ? void 0 : u.overlayMethod) === L.gl.Disabled,
         Y = (null == u ? void 0 : u.state) === L.mM.OVERLAY_RENDERING && !H,
@@ -522,6 +522,13 @@ function ek(e) {
                     return [ep.intl.string(ep.t["2Xhy9k"]), null];
                 case null == u:
                     return [ep.intl.string(ep.t.vwHPRi), null];
+                case H: {
+                    let e =
+                        (null == u ? void 0 : u.fullscreenType) === O.Jx.FULLSCREEN
+                            ? ep.intl.string(ep.t.mJmbeC)
+                            : null;
+                    return [ep.intl.string(ep.t.VPW4XY), e];
+                }
                 default:
                     return [ep.intl.string(ep.t.ONovP5), null];
             }
@@ -613,10 +620,10 @@ function ek(e) {
               action: (0, r.jsx)(h.P3F, {
                   onClick: (e) => eM(e),
                   children: (0, r.jsx)(h.rsf, {
-                      checked: (g && x) || (y && D),
+                      checked: (g && x) || (y && w),
                       disabled: G,
                       onChange: (e) => {
-                          U(e, j(e, (g && x) || (y && D)));
+                          U(e, j(e, (g && x) || (y && w)));
                       },
                   }),
               }),
@@ -625,7 +632,7 @@ function ek(e) {
                   game: o,
               }),
               children: [
-                  (0, r.jsx)(eD, {
+                  (0, r.jsx)(ew, {
                       title: ep.intl.string(ep.t["7BlVIs"]),
                       description: ep.intl.string(ep.t.ndgADE),
                       hint: x ? void 0 : ep.intl.string(ep.t.cAFVsL),
@@ -637,28 +644,28 @@ function ek(e) {
                                   disabled: N,
                                   onChange: (e) => {
                                       e && !x
-                                          ? M(e, w.OverlayToggledClientSettingType.OOP)
-                                          : M(e, w.OverlayToggledClientSettingType.OOP_GAME);
+                                          ? M(e, D.OverlayToggledClientSettingType.OOP)
+                                          : M(e, D.OverlayToggledClientSettingType.OOP_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: eh.emptySpacer }),
                           ],
                       }),
                   }),
-                  (0, r.jsx)(eD, {
+                  (0, r.jsx)(ew, {
                       title: ep.intl.string(ep.t.BfFpW1),
                       description: ep.intl.string(ep.t.OzInYk),
-                      hint: D ? void 0 : ep.intl.string(ep.t["3sYHXm"]),
+                      hint: w ? void 0 : ep.intl.string(ep.t["3sYHXm"]),
                       "aria-label": ep.intl.string(ep.t.BfFpW1),
                       action: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(h.rsf, {
-                                  checked: y && D,
+                                  checked: y && w,
                                   disabled: C,
                                   onChange: (e) => {
-                                      e && !D
-                                          ? M(e, w.OverlayToggledClientSettingType.LEGACY)
-                                          : M(e, w.OverlayToggledClientSettingType.LEGACY_GAME);
+                                      e && !w
+                                          ? M(e, D.OverlayToggledClientSettingType.LEGACY)
+                                          : M(e, D.OverlayToggledClientSettingType.LEGACY_GAME);
                                   },
                               }),
                               (0, r.jsx)("div", { className: eh.emptySpacer }),
@@ -702,7 +709,7 @@ function eU(e) {
             (0, B.l)(l, null != (i = null != (r = u.id) ? r : null == t ? void 0 : t.id) ? i : null);
         }
     };
-    return (0, r.jsx)(eD, {
+    return (0, r.jsx)(ew, {
         title: t.name,
         icon: (0, r.jsx)(ej, {
             game: u,
@@ -731,8 +738,8 @@ function eG() {
             var t, r;
             b.Z.setEnabled(e, a);
             let i = null != (r = null == (t = A.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
-            (0, w.ou)(e, w.OverlayToggledClientSettingType.LEGACY, i),
-                !e && n && (0, B.l)(w.OverlayToggledClientSettingType.LEGACY, i);
+            (0, D.ou)(e, D.OverlayToggledClientSettingType.LEGACY, i),
+                !e && n && (0, B.l)(D.OverlayToggledClientSettingType.LEGACY, i);
         },
         u = (e, t, n) => {
             let { enabledOOP: r } = n;
@@ -748,7 +755,7 @@ function eG() {
             [l],
         );
     return 0 === o.length
-        ? (0, r.jsx)(eD, {
+        ? (0, r.jsx)(ew, {
               title: ep.intl.string(ep.t.BfFpW1),
               description: d,
               "aria-label": ep.intl.string(ep.t.BfFpW1),
@@ -794,7 +801,7 @@ function eG() {
                               eU,
                               {
                                   rawGame: e,
-                                  clientSettingType: w.OverlayToggledClientSettingType.LEGACY_GAME,
+                                  clientSettingType: D.OverlayToggledClientSettingType.LEGACY_GAME,
                                   supportDisabled: l,
                                   gameApplication: s[t],
                                   getEnabledFromStatus: (e) => {
@@ -822,8 +829,8 @@ function eB() {
             let i = !e && n;
             b.Z.setEnabled(a, e);
             let o = null != (r = null == (t = A.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
-            (0, w.ou)(e, w.OverlayToggledClientSettingType.OOP, o),
-                i && (0, B.l)(w.OverlayToggledClientSettingType.OOP, o);
+            (0, D.ou)(e, D.OverlayToggledClientSettingType.OOP, o),
+                i && (0, B.l)(D.OverlayToggledClientSettingType.OOP, o);
         },
         u = (e, t, n) => {
             let { enabledLegacy: r } = n;
@@ -835,7 +842,7 @@ function eB() {
             [o],
         );
     return 0 === s.length
-        ? (0, r.jsx)(eD, {
+        ? (0, r.jsx)(ew, {
               title: ep.intl.string(ep.t["7BlVIs"]),
               description: d,
               "aria-label": ep.intl.string(ep.t["7BlVIs"]),
@@ -881,7 +888,7 @@ function eB() {
                               eU,
                               {
                                   rawGame: e,
-                                  clientSettingType: w.OverlayToggledClientSettingType.OOP_GAME,
+                                  clientSettingType: D.OverlayToggledClientSettingType.OOP_GAME,
                                   gameApplication: l[t],
                                   supportDisabled: o,
                                   getEnabledFromStatus: (e) => {
@@ -956,32 +963,32 @@ let eF = (e, t, n) =>
         {
             title: ep.t.eVE4LX,
             description: ep.t["72WNqk"],
-            disabledSetting: D.i.TEXT_CHAT,
+            disabledSetting: w.i.TEXT_CHAT,
         },
         {
             title: ep.t.oifnSh,
             description: ep.t.bgU5r0,
-            disabledSetting: D.i.WELCOME_GENERAL,
+            disabledSetting: w.i.WELCOME_GENERAL,
         },
         {
             title: ep.t.hqsZJW,
             description: ep.t.kHjdqc,
-            disabledSetting: D.i.GO_LIVE_NUDGE,
+            disabledSetting: w.i.GO_LIVE_NUDGE,
         },
         e && {
             title: ep.t.sop3rn,
             description: ep.t.pjgffc,
-            disabledSetting: D.i.GAME_ACTIVITY,
+            disabledSetting: w.i.GAME_ACTIVITY,
         },
         t && {
             title: ep.t["2QVhbb"],
             description: ep.t.wQ4ilB,
-            disabledSetting: D.i.NOW_PLAYING,
+            disabledSetting: w.i.NOW_PLAYING,
         },
         n && {
             title: ep.t["5/21FT"],
             description: ep.t.EIzwfA,
-            disabledSetting: D.i.FRIEND_STREAM_WATCH_NUDGE,
+            disabledSetting: w.i.FRIEND_STREAM_WATCH_NUDGE,
         },
     ]
         .filter((e) => !1 !== e)
