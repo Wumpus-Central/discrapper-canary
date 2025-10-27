@@ -80,11 +80,17 @@ let u = {
     rating: {
         getLabel: () => l.intl.string(l.t["7/umul"]),
         type: "checkbox",
-        tags: [i._.LOVE_IT, i._.KIND_OF_LOVE_IT, i._.KIND_OF_HATE_IT, i._.RAGE_QUITTING],
+        tags: [i._.OBSESSED, i._.LOVE_IT, i._.KIND_OF_LOVE_IT, i._.KIND_OF_HATE_IT, i._.RAGE_QUITTING],
     },
     looking_for: {
         getLabel: () => l.intl.string(l.t["5Dez17"]),
         type: "checkbox",
-        tags: [i._.LOOKING_FOR_GROUP, i._.OPEN_TO_PLAY, i._.LOOKING_FOR_TIPS, i._.OPEN_TO_TEACH],
+        tags: [
+            i._.LOOKING_FOR_GROUP,
+            i._.OPEN_TO_PLAY,
+            i._.LOOKING_FOR_TIPS,
+            i._.OPEN_TO_TEACH,
+            i._.LOOKING_TO_DISCUSS,
+        ],
     },
 };
