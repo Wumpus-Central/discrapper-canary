@@ -1,64 +1,66 @@
 n.d(t, {
-    Fj: () => f,
-    _: () => u,
-    qn: () => d,
+    Fj: () => _,
+    _: () => d,
+    qn: () => f,
 });
-var r = n(768494),
-    i = n(695346),
-    a = n(991621),
-    o = n(936141),
-    s = n(656577),
-    l = n(925513),
-    c = n(981631),
-    u = (function (e) {
-        return (e.EXPLICIT = "explicit"), (e.GORE = "gore"), e;
-    })({}),
+var r = n(524437),
+    i = n(768494),
+    a = n(695346),
+    o = n(991621),
+    s = n(936141),
+    l = n(656577),
+    c = n(925513),
+    u = n(981631),
     d = (function (e) {
+        return (e.EXPLICIT = "explicit"), (e.GORE = "gore"), (e.SELF_HARM = "self_harm"), e;
+    })({}),
+    f = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.EXPLICIT = 1)] = "EXPLICIT"),
             (e[(e.GORE = 2)] = "GORE"),
-            (e[(e.ALL = 3)] = "ALL"),
+            (e[(e.SELF_HARM = 4)] = "SELF_HARM"),
+            (e[(e.ALL = 7)] = "ALL"),
             e
         );
     })({});
-let f = {
+let _ = {
     explicit: {
         harmType: "explicit",
-        obscureReason: o.wk.EXPLICIT_CONTENT,
-        attachmentFlag: c.J0y.CONTAINS_EXPLICIT_MEDIA,
-        embedFlag: c.xPJ.CONTAINS_EXPLICIT_MEDIA,
-        genericMediaFlag: r.Cb.EXPLICIT,
+        obscureReason: s.wk.EXPLICIT_CONTENT,
+        attachmentFlag: u.J0y.CONTAINS_EXPLICIT_MEDIA,
+        embedFlag: u.xPJ.CONTAINS_EXPLICIT_MEDIA,
+        genericMediaFlag: i.Cb.EXPLICIT,
         bitmask: 1,
         devSettingKey: "obscure_blur_effect_explicit_content_enabled",
         getProtoUserSettings: (e) => {
             var t;
             let n = null == e || null == (t = e.textAndImages) ? void 0 : t.explicitContentSettings;
             return {
-                [a.n.GUILD]: null == n ? void 0 : n.explicitContentGuilds,
-                [a.n.FRIEND_DM]: null == n ? void 0 : n.explicitContentFriendDm,
-                [a.n.NON_FRIEND_DM]: null == n ? void 0 : n.explicitContentNonFriendDm,
+                [o.n.GUILD]: null == n ? void 0 : n.explicitContentGuilds,
+                [o.n.FRIEND_DM]: null == n ? void 0 : n.explicitContentFriendDm,
+                [o.n.NON_FRIEND_DM]: null == n ? void 0 : n.explicitContentNonFriendDm,
             };
         },
         getUserSettingsWithDefaults: (e) => {
             var t, n, r;
-            let o =
+            let i =
                 null != e
                     ? e
                     : {
-                          [a.n.GUILD]: null == (t = i.Sh.getSetting()) ? void 0 : t.explicitContentGuilds,
-                          [a.n.FRIEND_DM]: null == (n = i.Sh.getSetting()) ? void 0 : n.explicitContentFriendDm,
-                          [a.n.NON_FRIEND_DM]: null == (r = i.Sh.getSetting()) ? void 0 : r.explicitContentNonFriendDm,
+                          [o.n.GUILD]: null == (t = a.Sh.getSetting()) ? void 0 : t.explicitContentGuilds,
+                          [o.n.FRIEND_DM]: null == (n = a.Sh.getSetting()) ? void 0 : n.explicitContentFriendDm,
+                          [o.n.NON_FRIEND_DM]: null == (r = a.Sh.getSetting()) ? void 0 : r.explicitContentNonFriendDm,
                       };
             return {
-                [a.n.GUILD]: (0, s.ec)({ setting: null == o ? void 0 : o[a.n.GUILD] }),
-                [a.n.FRIEND_DM]: (0, s.ec)({
-                    setting: null == o ? void 0 : o[a.n.FRIEND_DM],
+                [o.n.GUILD]: (0, l.ec)({ setting: null == i ? void 0 : i[o.n.GUILD] }),
+                [o.n.FRIEND_DM]: (0, l.ec)({
+                    setting: null == i ? void 0 : i[o.n.FRIEND_DM],
                     isDm: !0,
                     isFriend: !0,
                 }),
-                [a.n.NON_FRIEND_DM]: (0, s.ec)({
-                    setting: null == o ? void 0 : o[a.n.NON_FRIEND_DM],
+                [o.n.NON_FRIEND_DM]: (0, l.ec)({
+                    setting: null == i ? void 0 : i[o.n.NON_FRIEND_DM],
                     isDm: !0,
                 }),
             };
@@ -66,43 +68,66 @@ let f = {
     },
     gore: {
         harmType: "gore",
-        obscureReason: o.wk.GORE_CONTENT,
-        attachmentFlag: c.J0y.CONTAINS_GORE_CONTENT,
-        embedFlag: c.xPJ.CONTAINS_GORE_CONTENT,
-        genericMediaFlag: r.Cb.GORE,
+        obscureReason: s.wk.GORE_CONTENT,
+        attachmentFlag: u.J0y.CONTAINS_GORE_CONTENT,
+        embedFlag: u.xPJ.CONTAINS_GORE_CONTENT,
+        genericMediaFlag: i.Cb.GORE,
         bitmask: 2,
         devSettingKey: "obscure_blur_effect_gore_content_enabled",
         getProtoUserSettings: (e) => {
             var t;
             let n = null == e || null == (t = e.textAndImages) ? void 0 : t.goreContentSettings;
             return {
-                [a.n.GUILD]: null == n ? void 0 : n.goreContentGuilds,
-                [a.n.FRIEND_DM]: null == n ? void 0 : n.goreContentFriendDm,
-                [a.n.NON_FRIEND_DM]: null == n ? void 0 : n.goreContentNonFriendDm,
+                [o.n.GUILD]: null == n ? void 0 : n.goreContentGuilds,
+                [o.n.FRIEND_DM]: null == n ? void 0 : n.goreContentFriendDm,
+                [o.n.NON_FRIEND_DM]: null == n ? void 0 : n.goreContentNonFriendDm,
             };
         },
         getUserSettingsWithDefaults: (e) => {
             var t, n, r;
-            let o =
+            let i =
                 null != e
                     ? e
                     : {
-                          [a.n.GUILD]: null == (t = i.j7.getSetting()) ? void 0 : t.goreContentGuilds,
-                          [a.n.FRIEND_DM]: null == (n = i.j7.getSetting()) ? void 0 : n.goreContentFriendDm,
-                          [a.n.NON_FRIEND_DM]: null == (r = i.j7.getSetting()) ? void 0 : r.goreContentNonFriendDm,
+                          [o.n.GUILD]: null == (t = a.j7.getSetting()) ? void 0 : t.goreContentGuilds,
+                          [o.n.FRIEND_DM]: null == (n = a.j7.getSetting()) ? void 0 : n.goreContentFriendDm,
+                          [o.n.NON_FRIEND_DM]: null == (r = a.j7.getSetting()) ? void 0 : r.goreContentNonFriendDm,
                       };
             return {
-                [a.n.GUILD]: (0, l._i)({ setting: null == o ? void 0 : o[a.n.GUILD] }),
-                [a.n.FRIEND_DM]: (0, l._i)({
-                    setting: null == o ? void 0 : o[a.n.FRIEND_DM],
+                [o.n.GUILD]: (0, c._i)({ setting: null == i ? void 0 : i[o.n.GUILD] }),
+                [o.n.FRIEND_DM]: (0, c._i)({
+                    setting: null == i ? void 0 : i[o.n.FRIEND_DM],
                     isDm: !0,
                     isFriend: !0,
                 }),
-                [a.n.NON_FRIEND_DM]: (0, l._i)({
-                    setting: null == o ? void 0 : o[a.n.NON_FRIEND_DM],
+                [o.n.NON_FRIEND_DM]: (0, c._i)({
+                    setting: null == i ? void 0 : i[o.n.NON_FRIEND_DM],
                     isDm: !0,
                 }),
             };
         },
+    },
+    self_harm: {
+        harmType: "self_harm",
+        obscureReason: s.wk.SELF_HARM_CONTENT,
+        attachmentFlag: u.J0y.CONTAINS_SELF_HARM_CONTENT,
+        embedFlag: u.xPJ.CONTAINS_SELF_HARM_CONTENT,
+        genericMediaFlag: i.Cb.SELF_HARM,
+        bitmask: 4,
+        devSettingKey: "obscure_blur_effect_self_harm_content_enabled",
+        getProtoUserSettings: (e) => {
+            var t;
+            let n = null == e || null == (t = e.textAndImages) ? void 0 : t.selfHarmContentSettings;
+            return {
+                [o.n.GUILD]: null == n ? void 0 : n.selfHarmContentGuilds,
+                [o.n.FRIEND_DM]: null == n ? void 0 : n.selfHarmContentFriendDm,
+                [o.n.NON_FRIEND_DM]: null == n ? void 0 : n.selfHarmContentNonFriendDm,
+            };
+        },
+        getUserSettingsWithDefaults: () => ({
+            [o.n.GUILD]: r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
+            [o.n.FRIEND_DM]: r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
+            [o.n.NON_FRIEND_DM]: r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
+        }),
     },
 };

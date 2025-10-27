@@ -154,7 +154,7 @@ function V(e) {
         n = {};
     return (
         e.forEach((e) => {
-            var r, i, a, o, s, l, c, u, d, f, _, p;
+            var r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E;
             null == t[e.channel_id] &&
                 (t[e.channel_id] = {
                     numOfAttachments: 0,
@@ -166,26 +166,28 @@ function V(e) {
                     (n[e.id] = {
                         channelId: e.channel_id,
                         numOfAttachments: 0,
+                        numOfSelfHarmAttachments: 0,
                         numOfGoreAttachments: 0,
                         numOfExplicitAttachments: 0,
                         numOfEmbeds: 0,
+                        numOfSelfHarmEmbeds: 0,
                         numOfGoreEmbeds: 0,
                         numOfExplicitEmbeds: 0,
                     });
-            let h = null != (c = null == (r = e.attachments) ? void 0 : r.length) ? c : 0,
-                m = null != (u = null == (i = e.embeds) ? void 0 : i.length) ? u : 0,
-                { attachmentIds: g, embedIds: E } = (0, A.DQ)(e),
-                b = t[e.channel_id];
-            (b.numOfAttachments += h),
-                (b.numOfEmbeds += m),
-                (b.numOfAttachmentsPendingScan += g.length),
-                (b.numOfEmbedsPendingScan += E.length);
-            let y = n[e.id];
-            (y.numOfAttachments += h),
-                (y.numOfEmbeds += m),
-                (y.numOfExplicitAttachments =
+            let b = null != (d = null == (r = e.attachments) ? void 0 : r.length) ? d : 0,
+                y = null != (f = null == (i = e.embeds) ? void 0 : i.length) ? f : 0,
+                { attachmentIds: O, embedIds: I } = (0, A.DQ)(e),
+                T = t[e.channel_id];
+            (T.numOfAttachments += b),
+                (T.numOfEmbeds += y),
+                (T.numOfAttachmentsPendingScan += O.length),
+                (T.numOfEmbedsPendingScan += I.length);
+            let C = n[e.id];
+            (C.numOfAttachments += b),
+                (C.numOfEmbeds += y),
+                (C.numOfExplicitAttachments =
                     null !=
-                    (d =
+                    (_ =
                         null == (a = e.attachments)
                             ? void 0
                             : a.filter((e) =>
@@ -194,11 +196,11 @@ function V(e) {
                                       media: e,
                                   }),
                               ).length)
-                        ? d
+                        ? _
                         : 0),
-                (y.numOfExplicitEmbeds =
+                (C.numOfExplicitEmbeds =
                     null !=
-                    (f =
+                    (p =
                         null == (o = e.embeds)
                             ? void 0
                             : o.filter((e) =>
@@ -207,11 +209,11 @@ function V(e) {
                                       media: e,
                                   }),
                               ).length)
-                        ? f
+                        ? p
                         : 0),
-                (y.numOfGoreAttachments =
+                (C.numOfGoreAttachments =
                     null !=
-                    (_ =
+                    (h =
                         null == (s = e.attachments)
                             ? void 0
                             : s.filter((e) =>
@@ -220,11 +222,11 @@ function V(e) {
                                       media: e,
                                   }),
                               ).length)
-                        ? _
+                        ? h
                         : 0),
-                (y.numOfGoreEmbeds =
+                (C.numOfGoreEmbeds =
                     null !=
-                    (p =
+                    (m =
                         null == (l = e.embeds)
                             ? void 0
                             : l.filter((e) =>
@@ -233,7 +235,33 @@ function V(e) {
                                       media: e,
                                   }),
                               ).length)
-                        ? p
+                        ? m
+                        : 0),
+                (C.numOfSelfHarmAttachments =
+                    null !=
+                    (g =
+                        null == (c = e.attachments)
+                            ? void 0
+                            : c.filter((e) =>
+                                  (0, A.SI)(S._.SELF_HARM, {
+                                      type: v.l.Attachment,
+                                      media: e,
+                                  }),
+                              ).length)
+                        ? g
+                        : 0),
+                (C.numOfSelfHarmEmbeds =
+                    null !=
+                    (E =
+                        null == (u = e.embeds)
+                            ? void 0
+                            : u.filter((e) =>
+                                  (0, A.SI)(S._.SELF_HARM, {
+                                      type: v.l.Embed,
+                                      media: e,
+                                  }),
+                              ).length)
+                        ? E
                         : 0);
         }),
         {
@@ -324,9 +352,11 @@ function W(e, t) {
                     numOfAttachments: n.numOfAttachments,
                     numOfGoreAttachments: n.numOfGoreAttachments,
                     numOfExplicitAttachments: n.numOfExplicitAttachments,
+                    numOfSelfHarmAttachments: n.numOfSelfHarmAttachments,
                     numOfEmbeds: n.numOfEmbeds,
                     numOfGoreEmbeds: n.numOfGoreEmbeds,
                     numOfExplicitEmbeds: n.numOfExplicitEmbeds,
+                    numOfSelfHarmEmbeds: n.numOfSelfHarmEmbeds,
                 });
             }),
         n.length > 0 && (F(n, t), !0)
@@ -353,10 +383,12 @@ function K(e) {
                     channelId: n.channelId,
                     numOfAttachments: n.numOfAttachments,
                     numOfGoreAttachments: n.numOfGoreAttachments,
+                    numOfSelfHarmAttachments: n.numOfSelfHarmAttachments,
                     numOfExplicitAttachments: n.numOfExplicitAttachments,
                     numOfEmbeds: n.numOfEmbeds,
                     numOfGoreEmbeds: n.numOfGoreEmbeds,
                     numOfExplicitEmbeds: n.numOfExplicitEmbeds,
+                    numOfSelfHarmEmbeds: n.numOfSelfHarmEmbeds,
                 });
             }),
         t.length > 0 && (F(t), !0)

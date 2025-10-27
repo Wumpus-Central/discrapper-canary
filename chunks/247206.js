@@ -140,29 +140,35 @@ function v(e) {
             messageId: t,
             channelId: n,
             numOfAttachments: r,
-            numOfEmbeds: i,
-            numOfGoreAttachments: a,
-            numOfExplicitAttachments: o,
-            numOfGoreEmbeds: s,
-            numOfExplicitEmbeds: u,
+            numOfSelfHarmAttachments: i,
+            numOfEmbeds: a,
+            numOfGoreAttachments: o,
+            numOfExplicitAttachments: s,
+            numOfSelfHarmEmbeds: u,
+            numOfGoreEmbeds: d,
+            numOfExplicitEmbeds: f,
         } = e,
-        d = o > 0 || u > 0,
-        f = a > 0 || s > 0;
-    if (null == n || null == t || (!d && !f)) return;
-    let p = l.Z.getChannel(n);
+        p = s > 0 || f > 0,
+        h = o > 0 || d > 0,
+        m = i > 0 || u > 0;
+    if (null == n || null == t || (!p && !h && !m)) return;
+    let g = l.Z.getChannel(n);
     c.default.track(_.rMx.REDACTABLE_MESSAGE_LOADED, {
         message_id: t,
         channel_id: n,
-        channel_type: null == p ? void 0 : p.type,
-        guild_id: null == p ? void 0 : p.guild_id,
+        channel_type: null == g ? void 0 : g.type,
+        guild_id: null == g ? void 0 : g.guild_id,
         num_of_attachments: r,
-        num_of_gore_attachments: a,
-        num_of_explicit_attachments: o,
-        num_of_embeds: i,
-        num_of_gore_embeds: s,
-        num_of_explicit_embeds: u,
-        has_redactable_explicit: d,
-        has_redactable_gore: f,
+        num_of_gore_attachments: o,
+        num_of_explicit_attachments: s,
+        num_of_self_harm_attachments: i,
+        num_of_embeds: a,
+        num_of_gore_embeds: d,
+        num_of_explicit_embeds: f,
+        num_of_self_harm_embeds: u,
+        has_redactable_explicit: p,
+        has_redactable_gore: h,
+        has_redactable_self_harm: m,
     });
 }
 function I(e) {

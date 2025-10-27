@@ -11,6 +11,7 @@ let c = (e) => {
     switch (t) {
         case i.wk.EXPLICIT_CONTENT:
         case i.wk.GORE_CONTENT:
+        case i.wk.SELF_HARM_CONTENT:
             return (0, a.jsx)(r.fFY, {
                 className: s()(n, o.obscuredIcon),
                 color: "white",

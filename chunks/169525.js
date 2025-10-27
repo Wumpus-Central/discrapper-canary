@@ -84,11 +84,13 @@ let p = (e, t) => {
             ? a.wk.EXPLICIT_CONTENT
             : s.includes(a.wk.GORE_CONTENT)
               ? a.wk.GORE_CONTENT
-              : l
-                ? a.wk.POTENTIAL_EXPLICIT_CONTENT
-                : n
-                  ? a.wk.SPOILER
-                  : null;
+              : s.includes(a.wk.SELF_HARM_CONTENT)
+                ? a.wk.SELF_HARM_CONTENT
+                : l
+                  ? a.wk.POTENTIAL_EXPLICIT_CONTENT
+                  : n
+                    ? a.wk.SPOILER
+                    : null;
     };
 function g(e) {
     switch (e.type) {
@@ -136,6 +138,7 @@ let y = (e) => {
     switch (e) {
         case a.wk.EXPLICIT_CONTENT:
         case a.wk.GORE_CONTENT:
+        case a.wk.SELF_HARM_CONTENT:
             return _.intl.string(_.t.SEgHFh);
         case a.wk.SPOILER:
             return _.intl.string(_.t["XpfDH+"]);

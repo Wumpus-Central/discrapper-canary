@@ -256,6 +256,9 @@ function w(e) {
                 break;
             case m._.GORE:
                 t |= m.qn.GORE;
+                break;
+            case m._.SELF_HARM:
+                t |= m.qn.SELF_HARM;
         }
     return t;
 }
@@ -341,7 +344,7 @@ function k(e, t) {
 }
 function j(e, t) {
     let n = h.Z.validContentScanVersion;
-    return e !== g && (t.includes(m._.GORE) ? null == e || e < n : null == e);
+    return e !== g && (t.includes(m._.GORE) || t.includes(m._.SELF_HARM) ? null == e || e < n : null == e);
 }
 function U(e) {
     return null != e && [r.Q4.BLOCK, r.Q4.BLUR].includes(e);

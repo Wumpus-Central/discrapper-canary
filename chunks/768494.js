@@ -67,7 +67,7 @@ function d(e, t) {
     );
 }
 var f = (function (e) {
-    return (e[(e.EXPLICIT = 1)] = "EXPLICIT"), (e[(e.GORE = 2)] = "GORE"), e;
+    return (e[(e.EXPLICIT = 1)] = "EXPLICIT"), (e[(e.GORE = 2)] = "GORE"), (e[(e.SELF_HARM = 4)] = "SELF_HARM"), e;
 })({});
 function _(e) {
     return {

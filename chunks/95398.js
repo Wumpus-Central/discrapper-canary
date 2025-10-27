@@ -110,6 +110,7 @@ let I = (e) => {
                 return (0, r.jsx)(I, { className: n });
             case p.wk.EXPLICIT_CONTENT:
             case p.wk.GORE_CONTENT:
+            case p.wk.SELF_HARM_CONTENT:
                 return (0, r.jsx)(T, {
                     isSingleMosaicItem: i,
                     className: n,
@@ -126,7 +127,7 @@ let I = (e) => {
     },
     A = (e) => {
         let { obscureReason: t, isVisible: n, handleToggleObscurity: i, obscurityControlClassName: a } = e;
-        return t !== p.wk.EXPLICIT_CONTENT && t !== p.wk.GORE_CONTENT
+        return t !== p.wk.EXPLICIT_CONTENT && t !== p.wk.GORE_CONTENT && t !== p.wk.SELF_HARM_CONTENT
             ? null
             : (0, r.jsx)("div", {
                   className: o()(g.obscureButtonContainer, a),
@@ -364,6 +365,7 @@ class N extends i.PureComponent {
                 return m.intl.string(m.t["F+x38C"]);
             case p.wk.EXPLICIT_CONTENT:
             case p.wk.GORE_CONTENT:
+            case p.wk.SELF_HARM_CONTENT:
                 return m.intl.string(m.t.mlJ8Vf);
             case p.wk.POTENTIAL_EXPLICIT_CONTENT:
                 return m.intl.string(m.t.MRdR7z);
@@ -378,6 +380,7 @@ class N extends i.PureComponent {
                 return m.intl.string(m.t["F+x38C"]);
             case p.wk.EXPLICIT_CONTENT:
             case p.wk.GORE_CONTENT:
+            case p.wk.SELF_HARM_CONTENT:
                 return m.intl.string(m.t.mlJ8Vf);
             case p.wk.POTENTIAL_EXPLICIT_CONTENT:
                 return m.intl.string(m.t.MRdR7z);

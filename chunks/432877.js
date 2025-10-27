@@ -44,6 +44,10 @@ let l = {
             label: "Force gore content obscure blur effect on for message media and embeds",
             category: 1,
         },
+        obscure_blur_effect_self_harm_content_enabled: {
+            label: "Force self harm content obscure blur effect on for message media and embeds",
+            category: 1,
+        },
         explicit_media_redaction_ignore_pending_scan: {
             label: "Ignore pending scan on explicit media",
             category: 1,

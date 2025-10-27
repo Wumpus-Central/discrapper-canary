@@ -911,6 +911,7 @@ var z = (function (e) {
             (e[(e.CONTAINS_EXPLICIT_MEDIA = 16)] = "CONTAINS_EXPLICIT_MEDIA"),
             (e[(e.IS_ANIMATED = 32)] = "IS_ANIMATED"),
             (e[(e.CONTAINS_GORE_CONTENT = 64)] = "CONTAINS_GORE_CONTENT"),
+            (e[(e.CONTAINS_SELF_HARM_CONTENT = 128)] = "CONTAINS_SELF_HARM_CONTENT"),
             e
         );
     })({}),
@@ -922,6 +923,7 @@ var z = (function (e) {
             (e[(e.CONTAINS_EXPLICIT_MEDIA = 16)] = "CONTAINS_EXPLICIT_MEDIA"),
             (e[(e.IS_CONTENT_INVENTORY_ENTRY = 32)] = "IS_CONTENT_INVENTORY_ENTRY"),
             (e[(e.CONTAINS_GORE_CONTENT = 64)] = "CONTAINS_GORE_CONTENT"),
+            (e[(e.CONTAINS_SELF_HARM_CONTENT = 128)] = "CONTAINS_SELF_HARM_CONTENT"),
             e
         );
     })({}),
