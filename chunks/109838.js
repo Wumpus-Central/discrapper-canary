@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => y });
+t.r(n), t.d(n, { default: () => h });
 var r = t(951288),
     a = t(647438),
     i = t(657707),
@@ -9,64 +9,62 @@ var r = t(951288),
     d = t(63063),
     u = t(639777),
     m = t(905551),
-    g = t(578756),
-    f = t(60482),
-    x = t(52021),
-    _ = t(809121),
-    v = t(546303),
-    b = t(981631),
-    p = t(269794),
-    j = t(388032),
-    h = t(215365);
-function y(e) {
+    g = t(60482),
+    f = t(52021),
+    x = t(809121),
+    _ = t(546303),
+    v = t(981631),
+    b = t(269794),
+    p = t(388032),
+    j = t(215365);
+function h(e) {
     var n;
     let { guildId: t } = e;
-    (0, g.cX)(t),
-        a.useEffect(() => {
-            (0, m.mF)(t), o.Z.getDetectableGames();
-        }, [t]);
-    let y = (0, u.Z)(t),
-        C = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(t)),
-        O = Object.values(null != (n = null == C ? void 0 : C.instances) ? n : {});
+    a.useEffect(() => {
+        (0, m.mF)(t), o.Z.getDetectableGames();
+    }, [t]);
+    let h = (0, u.Z)(t),
+        y = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(t)),
+        C = Object.values(null != (n = null == y ? void 0 : y.instances) ? n : {});
     return (0, r.jsxs)("div", {
-        className: h.container,
+        className: j.container,
         children: [
             (0, r.jsxs)(c.ZP, {
-                className: h.toolbar,
+                className: j.toolbar,
                 toolbar: (0, r.jsx)("div", {}),
                 children: [
                     (0, r.jsx)(c.ZP.Icon, {
                         icon: i.iWm,
                         "aria-label": "",
                     }),
-                    (0, r.jsx)(c.ZP.Title, { children: j.intl.string(p.default.vCzwM7) }),
+                    (0, r.jsx)(c.ZP.Title, { children: p.intl.string(b.default.vCzwM7) }),
                     (0, r.jsx)(s.IGR, {
                         disableColor: !0,
-                        text: j.intl.string(j.t.oW0eUd),
-                        className: h.badge,
+                        text: p.intl.string(p.t.oW0eUd),
+                        className: j.badge,
                     }),
-                    (0, r.jsx)(c.ZP.Divider, { className: h.divider }),
+                    (0, r.jsx)(c.ZP.Divider, { className: j.divider }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: j.intl.format(p.default.LiR4eN, {
-                            helpCenterUrl: d.Z.getArticleURL(b.BhN.GAME_SERVER_HOSTING),
+                        children: p.intl.format(b.default.LiR4eN, {
+                            helpCenterUrl: d.Z.getArticleURL(v.BhN.GAME_SERVER_HOSTING),
                         }),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: h.contentContainer,
+                className: j.contentContainer,
                 children: [
-                    (null == C ? void 0 : C.instances) != null
+                    (null == y ? void 0 : y.instances) != null
                         ? (0, r.jsx)(s.zJl, {
-                              className: h.gameContainerWrapper,
+                              className: j.gameContainerWrapper,
                               children: (0, r.jsxs)("div", {
-                                  className: h.gameContainer,
+                                  className: j.gameContainer,
                                   children: [
-                                      O.map((e, n) =>
+                                      C.map((e, n) =>
                                           (0, r.jsx)(
-                                              _.ZP,
+                                              x.ZP,
                                               {
                                                   guildId: t,
                                                   instance: e,
@@ -74,15 +72,15 @@ function y(e) {
                                               "".concat(e.gameId, "-").concat(n),
                                           ),
                                       ),
-                                      (0, r.jsx)(x.Z, { guildId: t }),
+                                      (0, r.jsx)(f.Z, { guildId: t }),
                                   ],
                               }),
                           })
                         : (0, r.jsx)("div", {
-                              className: h.spinnerContainer,
+                              className: j.spinnerContainer,
                               children: (0, r.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
                           }),
-                    y && (0, r.jsx)(v.Z, { guildId: t }),
+                    h && (0, r.jsx)(_.Z, { guildId: t }),
                 ],
             }),
         ],

@@ -18,8 +18,8 @@ function d(t, e, d) {
     return !v || p || E
         ? null
         : (0, l.jsx)(i.sNh, {
-              id: s.intl.string(s.t.cK1GGR),
-              label: s.intl.string(s.t.cK1GGR),
+              id: s.intl.string(s.t.cK1GGY),
+              label: s.intl.string(s.t.cK1GGY),
               action: function () {
                   null != b &&
                       (0, i.ZDy)(async () => {

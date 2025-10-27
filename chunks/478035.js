@@ -15,7 +15,7 @@ function d(e) {
         ? null
         : (0, r.jsx)(l.sNh, {
               id: "go-to-original-guild",
-              label: u.intl.string(u.t.WYj55e),
+              label: u.intl.string(u.t.WYj55Y),
               action: function () {
                   (0, a.XU)(e.guild_id, e.id);
               },

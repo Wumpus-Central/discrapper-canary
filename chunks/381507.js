@@ -1,35 +1,35 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(780384),
     a = n(481060),
     l = n(410030),
-    s = n(518950),
-    o = n(51144),
+    o = n(518950),
+    s = n(51144),
     d = n(105759),
-    c = n(898969),
-    C = n(703614),
+    C = n(898969),
+    c = n(703614),
     u = n(268685),
     p = n(388032),
-    h = n(908780);
-let _ = () => {
+    _ = n(908780);
+let h = () => {
     let e = (0, d.Z)(),
-        { avatarSrc: t, eventHandlers: n } = (0, s.Z)({
+        { avatarSrc: t, eventHandlers: n } = (0, o.Z)({
             userId: null == e ? void 0 : e.id,
             size: u.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        _ = (0, l.Fg)(),
-        m = (0, i.ap)(_),
-        f = o.ZP.getName(e),
-        x = m ? c.Z : C.Z;
+        h = (0, l.Fg)(),
+        m = (0, i.ap)(h),
+        f = s.ZP.getName(e),
+        x = m ? C.Z : c.Z;
     return null == e
         ? null
         : (0, r.jsxs)("div", {
-              className: h.attributionBannerContainer,
+              className: _.attributionBannerContainer,
               children: [
                   (0, r.jsx)("div", {
-                      className: h.avatarContainer,
+                      className: _.avatarContainer,
                       children: (0, r.jsx)(
                           a.qEK,
                           (function (e) {
@@ -68,10 +68,10 @@ let _ = () => {
                   }),
                   (0, r.jsx)(a.Text, {
                       variant: "text-xs/bold",
-                      className: h.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: f }),
+                      className: _.bannerHeader,
+                      children: p.intl.format(p.t.oxhCOl, { userName: f }),
                   }),
-                  (0, r.jsx)(x, { className: h.bannerIcon }),
+                  (0, r.jsx)(x, { className: _.bannerIcon }),
               ],
           });
 };

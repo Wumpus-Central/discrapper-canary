@@ -69,7 +69,7 @@ let _ = (e) => {
             {
                 variant: c,
                 size: f,
-                text: l.intl.string(l.t.ZYO5OD),
+                text: l.intl.string(l.t.ZYO5OK),
                 disabled: h,
                 onClick: m,
                 fullWidth: !0,

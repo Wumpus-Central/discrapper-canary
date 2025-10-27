@@ -1,17 +1,17 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(812206),
     a = n(531826);
-function o(e) {
-    let { applicationId: t, channelId: o, mediaUrl: s } = e,
+function s(e) {
+    let { applicationId: t, channelId: s, mediaUrl: o } = e,
         c = l.Z.getApplication(t),
         u =
             null !=
             (0, a.ZP)({
                 application: c,
-                channelId: o,
+                channelId: s,
             })
                 ? i.u1M
                 : i.z1l;
@@ -48,7 +48,7 @@ function o(e) {
                     })(
                         {
                             applicationId: t,
-                            mediaUrl: s,
+                            mediaUrl: o,
                         },
                         n,
                     ),

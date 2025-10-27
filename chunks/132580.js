@@ -59,7 +59,7 @@ function o(e) {
         })({}, d)),
         (n = n =
             {
-                text: s.intl.string(s.t.G6GWZ2),
+                text: s.intl.string(s.t.G6GWZ4),
                 color: c,
                 className: o,
             }),

@@ -41,7 +41,7 @@ function u(e) {
                 children: (0, r.jsx)(i.Heading, {
                     variant: "heading-lg/medium",
                     color: "header-primary",
-                    children: null != n ? n : l.intl.string(l.t.wZmuen),
+                    children: null != n ? n : l.intl.string(l.t.wZmueu),
                 }),
             }),
             (0, r.jsx)("div", {
@@ -49,7 +49,7 @@ function u(e) {
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
-                    children: l.intl.string(l.t["8mfCqa"]),
+                    children: l.intl.string(l.t["8mfCqY"]),
                 }),
             }),
         ],

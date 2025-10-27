@@ -78,12 +78,12 @@ function h() {
                               children: [
                                   (0, r.jsx)(o.Avr, {
                                       disabled: !m,
-                                      text: _.intl.string(_.t.Ra9Pws),
+                                      text: _.intl.string(_.t.Ra9Pwk),
                                       onClick: c.oc,
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-sm/normal",
-                                      children: _.intl.string(_.t.iYjQ8f),
+                                      children: _.intl.string(_.t.iYjQ8X),
                                   }),
                               ],
                           }),

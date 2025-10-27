@@ -18,13 +18,13 @@ var s = r(951288),
     j = r(51144),
     v = r(981631),
     T = r(388032),
-    S = r(559577);
-let P = (e) => {
+    P = r(559577);
+let S = (e) => {
         let { channel: t, guildName: r } = e,
             l = (0, a.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
             n = (0, o.ZP)(t);
         return (0, s.jsxs)("div", {
-            className: S.result,
+            className: P.result,
             children: [
                 (0, s.jsx)(m.Z, {
                     size: m.E.SMALL_32,
@@ -32,7 +32,7 @@ let P = (e) => {
                     channel: t,
                 }),
                 (0, s.jsxs)("div", {
-                    className: S.resultText,
+                    className: P.resultText,
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
@@ -52,7 +52,7 @@ let P = (e) => {
             r = (0, o.ZP)(t),
             l = (0, x._)(t);
         return (0, s.jsxs)("div", {
-            className: S.result,
+            className: P.result,
             children: [
                 (0, s.jsx)(h.Z, {
                     "aria-hidden": !0,
@@ -61,7 +61,7 @@ let P = (e) => {
                     experimentLocation: "forward-modal",
                 }),
                 (0, s.jsxs)("div", {
-                    className: S.resultText,
+                    className: P.resultText,
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
@@ -82,7 +82,7 @@ let P = (e) => {
             n = j.ZP.useName(t),
             u = j.ZP.useUserTag(t);
         return (0, s.jsxs)("div", {
-            className: S.result,
+            className: P.result,
             children: [
                 (0, s.jsx)(c.Z, {
                     "aria-hidden": !0,
@@ -91,7 +91,7 @@ let P = (e) => {
                     status: r,
                 }),
                 (0, s.jsxs)("div", {
-                    className: S.resultText,
+                    className: P.resultText,
                     children: [
                         (0, s.jsx)(i.Text, {
                             variant: "text-md/medium",
@@ -117,7 +117,7 @@ class N extends l.Component {
                 break;
             case d.h8.TEXT_CHANNEL: {
                 let { categoryName: t, guildName: l } = r;
-                e = (0, s.jsx)(P, {
+                e = (0, s.jsx)(S, {
                     channel: r.data.record,
                     categoryName: t,
                     guildName: l,
@@ -140,18 +140,18 @@ class N extends l.Component {
             (t = r.sent
                 ? (0, s.jsx)(i.Button, {
                       variant: "secondary",
-                      text: T.intl.string(T.t.i6A1X1),
+                      text: T.intl.string(T.t.i6A1Xw),
                       size: "sm",
                       disabled: !0,
                   })
                 : (0, s.jsx)(i.Button, {
                       variant: "secondary",
-                      text: T.intl.string(T.t["6F9ivr"]),
+                      text: T.intl.string(T.t["6F9ivu"]),
                       size: "sm",
                       loading: l,
                   })),
             (0, s.jsxs)(i.P3F, {
-                className: S.resultWrapper,
+                className: P.resultWrapper,
                 onClick: this.handleClick,
                 children: [e, t],
             })
@@ -191,7 +191,7 @@ function E(e) {
         ),
         [m, x] = l.useState(o),
         [g, p] = l.useState([]),
-        [j, P] = l.useState(!1),
+        [j, S] = l.useState(!1),
         b = l.useRef(null),
         C = l.useCallback(() => {
             var e;
@@ -253,23 +253,23 @@ function E(e) {
         ? null
         : (0, s.jsx)(n.Modal, {
               transitionState: t,
-              title: T.intl.formatToPlainString(T.t["2tN7io"], { name: h.name }),
+              title: T.intl.formatToPlainString(T.t["2tN7ih"], { name: h.name }),
               onClose: r,
               actions: [],
               input: (0, s.jsx)(i.E1j, {
                   query: m,
                   onChange: Z,
-                  placeholder: T.intl.string(T.t["5h0QOD"]),
+                  placeholder: T.intl.string(T.t["5h0QOP"]),
                   autoFocus: !0,
                   onClear: () => {
                       Z("");
                   },
               }),
               size: "md",
-              "aria-label": T.intl.formatToPlainString(T.t["2tN7io"], { name: h.name }),
+              "aria-label": T.intl.formatToPlainString(T.t["2tN7ih"], { name: h.name }),
               children: (0, s.jsx)(i.YAO, {
                   scrollerRef: b,
-                  className: 0 === c.length ? S.noResults : S.results,
+                  className: 0 === c.length ? P.noResults : P.results,
                   paddingBottom: 12,
                   sections: [c.length],
                   sectionHeight: 0,
@@ -294,7 +294,7 @@ function E(e) {
                   },
                   onScroll: (e) => {
                       let t = e.currentTarget.scrollTop > 0;
-                      j !== t && P(t);
+                      j !== t && S(t);
                   },
               }),
           });

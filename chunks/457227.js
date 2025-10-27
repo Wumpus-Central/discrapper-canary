@@ -11,11 +11,11 @@ let u = (e) => Object.values(e).sort((e, t) => e.order - t.order),
     d = (e) => {
         let { navBarSections: t, activeSectionId: n } = e,
             d = {
-                [s.h.HOME]: l.intl.string(l.t.uGRXjY),
+                [s.h.HOME]: l.intl.string(l.t.uGRXjS),
                 [s.h.WHATS_NEW]: l.intl.string(l.t["mfcR/v"]),
-                [s.h.BEST_OF_NITRO]: l.intl.string(l.t.xQKkEx),
-                [s.h.PLANS]: l.intl.string(l.t.wyNMnp),
-                [s.h.COMPARE]: l.intl.string(l.t.pwD7IS),
+                [s.h.BEST_OF_NITRO]: l.intl.string(l.t.xQKkE8),
+                [s.h.PLANS]: l.intl.string(l.t.wyNMnm),
+                [s.h.COMPARE]: l.intl.string(l.t.pwD7If),
             },
             f = u(t);
         return (0, r.jsx)(a.Z, {

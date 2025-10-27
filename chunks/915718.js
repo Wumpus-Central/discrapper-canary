@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(728285),
     y = n(560688),
     _ = n(173507),
-    j = n(523746),
-    O = n(819640),
+    O = n(523746),
+    j = n(819640),
     x = n(131951),
     v = n(699516),
     C = n(594174),
@@ -67,16 +67,16 @@ class A extends i.PureComponent {
             h = !1;
         return (
             d
-                ? ((h = !0), (p = R.intl.string(R.t.izMR7u)), (e = o.aML.Colors.RED))
+                ? ((h = !0), (p = R.intl.string(R.t.izMR7o)), (e = o.aML.Colors.RED))
                 : x.Z.supports(N.AN.VIDEO)
                   ? a
-                      ? ((p = R.intl.string(R.t.PHzjvb)), (e = o.aML.Colors.RED), (h = !0))
+                      ? ((p = R.intl.string(R.t.PHzjvX)), (e = o.aML.Colors.RED), (h = !0))
                       : i && c === Z.WtW.VIDEO
                         ? ((t = this.handleJoinVideoCall),
-                          (p = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.W68MhI)))
+                          (p = u ? R.intl.string(R.t.S0W8Z5) : R.intl.string(R.t.W68MhH)))
                         : ((t = this.handleStartVideoCall),
-                          (p = u ? R.intl.string(R.t.S0W8Z2) : R.intl.string(R.t.oCqlGB)))
-                  : ((h = !0), (t = this.handleBrowserNotSupported), (p = R.intl.string(R.t.UVpg3d))),
+                          (p = u ? R.intl.string(R.t.S0W8Z5) : R.intl.string(R.t.oCqlGG)))
+                  : ((h = !0), (t = this.handleBrowserNotSupported), (p = R.intl.string(R.t.UVpg3U))),
             (0, r.jsx)(E.ZP.Icon, {
                 icon: o.Odl,
                 onClick: t,
@@ -102,17 +102,17 @@ class A extends i.PureComponent {
         let h = d.isManaged(),
             f = !1;
         p
-            ? ((f = !0), (e = R.intl.string(R.t.izMR7u)), (t = o.aML.Colors.RED))
+            ? ((f = !0), (e = R.intl.string(R.t.izMR7o)), (t = o.aML.Colors.RED))
             : l
-              ? ((e = h ? R.intl.string(R.t.LW2Gho) : R.intl.string(R.t.rF7lNz)), (t = o.aML.Colors.RED), (f = !0))
+              ? ((e = h ? R.intl.string(R.t.LW2Ghr) : R.intl.string(R.t.rF7lN5)), (t = o.aML.Colors.RED), (f = !0))
               : c
-                ? ((e = R.intl.string(R.t.PHzjvb)), (t = o.aML.Colors.RED), (f = !0))
+                ? ((e = R.intl.string(R.t.PHzjvX)), (t = o.aML.Colors.RED), (f = !0))
                 : (e = i
                       ? h
-                          ? R.intl.string(R.t.S0W8Z2)
-                          : R.intl.string(R.t.fdEeb2)
+                          ? R.intl.string(R.t.S0W8Z5)
+                          : R.intl.string(R.t.fdEeb5)
                       : h
-                        ? R.intl.string(R.t.S0W8Z2)
+                        ? R.intl.string(R.t.S0W8Z5)
                         : R.intl.string(R.t.focH1t));
         let m = (0, r.jsx)(E.ZP.Icon, {
             ref: this.iconRef,
@@ -132,8 +132,8 @@ class A extends i.PureComponent {
                         return t === a.z.ACTIVITY_GDM_CALL_TOOLTIP
                             ? (0, r.jsx)(s.J2, {
                                   targetElementRef: this.iconRef,
-                                  title: R.intl.string(R.t.HOPqzc),
-                                  body: R.intl.format(R.t.xAW71d, { helpdeskUrl: P.sI }),
+                                  title: R.intl.string(R.t.HOPqzR),
+                                  body: R.intl.format(R.t.xAW71b, { helpdeskUrl: P.sI }),
                                   position: "bottom",
                                   align: "center",
                                   caretConfig: { align: "center" },
@@ -192,9 +192,9 @@ function D(e) {
         s = (0, l.e7)([h.Z], () => h.Z.getMode(n.id)),
         o = (0, l.e7)([I.Z], () => I.Z.isInChannel(n.id)),
         c = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        { callActive: d, callUnavailable: f } = (0, l.cj)([j.Z], () => ({
-            callActive: j.Z.isCallActive(n.id),
-            callUnavailable: j.Z.isCallUnavailable(n.id),
+        { callActive: d, callUnavailable: f } = (0, l.cj)([O.Z], () => ({
+            callActive: O.Z.isCallActive(n.id),
+            callUnavailable: O.Z.isCallUnavailable(n.id),
         })),
         g = n.getRecipientId(),
         { notFriend: y, isBlocked: _ } = (0, l.cj)([v.Z], () => ({
@@ -205,7 +205,7 @@ function D(e) {
         S = (0, b.bp)(),
         E = [],
         P = (0, p.Z)(n.id),
-        T = (0, l.e7)([O.Z], () => O.Z.hasLayers());
+        T = (0, l.e7)([j.Z], () => j.Z.hasLayers());
     return (P && !T && E.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == x ? void 0 : x.bot))
         ? null
         : (0, r.jsx)(A, {

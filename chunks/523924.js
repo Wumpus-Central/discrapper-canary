@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(28664),
-    o = n(481060),
-    s = n(693546),
+    s = n(481060),
+    o = n(693546),
     c = n(937111),
     u = n(388032),
     d = n(394121);
@@ -15,50 +15,50 @@ let p = (e) => {
             onReapply: p,
             confirmText: f,
             onWithdrawApplication: h,
-            rejectionReason: g = null,
-            guild: m = null,
+            rejectionReason: m = null,
+            guild: g = null,
         } = e,
-        b = (0, l.e7)([c.Z], () => {
+        _ = (0, l.e7)([c.Z], () => {
             var e;
-            return c.Z.getCooldown(null != (e = null == m ? void 0 : m.id) ? e : "0");
+            return c.Z.getCooldown(null != (e = null == g ? void 0 : g.id) ? e : "0");
         });
     i.useEffect(() => {
-        null == b && null != m && s.Z.fetchJoinRequestCooldown(m.id);
-    }, [b, m]);
-    let _ = (null != b ? b : 0) > 0,
-        E = _ && null != b ? Math.ceil((1000 * b - Date.now()) / 86400000) : 0;
+        null == _ && null != g && o.Z.fetchJoinRequestCooldown(g.id);
+    }, [_, g]);
+    let b = (null != _ ? _ : 0) > 0,
+        E = b && null != _ ? Math.ceil((1000 * _ - Date.now()) / 86400000) : 0;
     return (0, r.jsxs)("div", {
         className: d.confirmation,
         children: [
             (0, r.jsx)("div", {
                 className: d.iconWrapper,
-                children: (0, r.jsx)(o.P$X, {
+                children: (0, r.jsx)(s.P$X, {
                     size: "md",
-                    color: o.TVs.colors.INTERACTIVE_ACTIVE,
+                    color: s.TVs.colors.INTERACTIVE_ACTIVE,
                 }),
             }),
             (0, r.jsxs)("div", {
                 className: d.statusTextContainer,
                 children: [
-                    (0, r.jsx)(o.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         id: t,
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children:
-                            (null == m ? void 0 : m.name) != null
-                                ? u.intl.formatToPlainString(u.t["P+/gzM"], { guildName: m.name })
-                                : u.intl.string(u.t.gBPcuL),
+                            (null == g ? void 0 : g.name) != null
+                                ? u.intl.formatToPlainString(u.t["P+/gzA"], { guildName: g.name })
+                                : u.intl.string(u.t.gBPcuP),
                     }),
-                    null != g && "" !== g
-                        ? (0, r.jsxs)(o.Text, {
+                    null != m && "" !== m
+                        ? (0, r.jsxs)(s.Text, {
                               variant: "text-md/medium",
                               color: "header-secondary",
                               children: [
                                   (0, r.jsx)("span", {
                                       className: d.rejectionReasonLabel,
-                                      children: u.intl.string(u.t.cf1psb),
+                                      children: u.intl.string(u.t.cf1psW),
                                   }),
-                                  (0, r.jsx)("span", { children: g }),
+                                  (0, r.jsx)("span", { children: m }),
                               ],
                           })
                         : null,
@@ -69,19 +69,19 @@ let p = (e) => {
                 children: [
                     (0, r.jsx)(a.u, {
                         asContainer: !0,
-                        text: _ ? u.intl.formatToPlainString(u.t.A0f0Pz, { days: E }) : null,
-                        "aria-label": _ ? u.intl.formatToPlainString(u.t.A0f0Pz, { days: E }) : void 0,
-                        children: (0, r.jsx)(o.Button, {
+                        text: b ? u.intl.formatToPlainString(u.t.A0f0P7, { days: E }) : null,
+                        "aria-label": b ? u.intl.formatToPlainString(u.t.A0f0P7, { days: E }) : void 0,
+                        children: (0, r.jsx)(s.Button, {
                             onClick: p,
                             variant: "secondary",
                             size: "md",
-                            loading: null == b,
-                            disabled: _,
+                            loading: null == _,
+                            disabled: b,
                             text: n,
                             fullWidth: !0,
                         }),
                     }),
-                    (0, r.jsx)(o.Button, {
+                    (0, r.jsx)(s.Button, {
                         onClick: h,
                         variant: "critical-primary",
                         size: "md",

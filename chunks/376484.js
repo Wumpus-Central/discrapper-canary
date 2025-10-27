@@ -36,7 +36,7 @@ function p(e) {
                 className: _.actions,
                 children: (0, r.jsx)(o.Button, {
                     variant: "secondary",
-                    text: f.intl.string(f.t.zdBCIi),
+                    text: f.intl.string(f.t.zdBCIv),
                     onClick: () => {
                         l ? (0, u.z$)(t) : (0, u.XP)(i.guild_id, i.id, t.id);
                     },

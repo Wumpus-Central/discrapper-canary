@@ -4,8 +4,8 @@ var r = n(647438),
     a = n(481060);
 function l(e) {
     let { container: t, edgeDistance: n = 130, maxSpeed: l = 1700, power: o = 2.2 } = e,
-        s = (0, r.useRef)(null),
-        c = (0, r.useRef)(0),
+        c = (0, r.useRef)(null),
+        s = (0, r.useRef)(0),
         u = (0, r.useCallback)(
             (e) => ({
                 isDragging: e.isDragging(),
@@ -18,15 +18,15 @@ function l(e) {
         p = (0, a.zPA)();
     (0, r.useEffect)(
         () => (
-            (s.current = requestAnimationFrame(function e(r) {
+            (c.current = requestAnimationFrame(function e(r) {
                 if (p || null == t) return;
-                if (((s.current = requestAnimationFrame(e)), !1 === d || null == f || "WIDGET" !== g)) {
-                    (t.style.overflowAnchor = "auto"), (t.style.overscrollBehavior = "auto"), (c.current = r);
+                if (((c.current = requestAnimationFrame(e)), !1 === d || null == f || "WIDGET" !== g)) {
+                    (t.style.overflowAnchor = "auto"), (t.style.overscrollBehavior = "auto"), (s.current = r);
                     return;
                 }
                 (t.style.overflowAnchor = "none"), (t.style.overscrollBehavior = "contain");
-                let i = Math.min(32, 0 !== c.current ? r - c.current : 16) / 1000;
-                c.current = r;
+                let i = Math.min(32, 0 !== s.current ? r - s.current : 16) / 1000;
+                s.current = r;
                 let a = t.getBoundingClientRect(),
                     u = f.y,
                     m = u - a.top,
@@ -38,7 +38,7 @@ function l(e) {
                     0 !== h && (t.scrollTop += h * i);
             })),
             () => {
-                null !== s.current && cancelAnimationFrame(s.current), (s.current = null), (c.current = 0);
+                null !== c.current && cancelAnimationFrame(c.current), (c.current = null), (s.current = 0);
             }
         ),
         [t, d, f, g, n, l, o, p],

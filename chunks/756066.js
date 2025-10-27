@@ -21,10 +21,10 @@ function a(e) {
     let u = null;
     return (
         d
-            ? (u = l.intl.string(l.t.OrkTBg))
+            ? (u = l.intl.string(l.t.OrkTBn))
             : null != o
               ? (u = o)
-              : null != c && ((u = c), (t = l.intl.string(l.t["YKw/NT"]))),
+              : null != c && ((u = c), (t = l.intl.string(l.t["YKw/NQ"]))),
         null != u
             ? (0, r.jsx)(i.Wn, {
                   messageType: i.QYI.WARNING,

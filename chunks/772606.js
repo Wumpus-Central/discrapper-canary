@@ -16,7 +16,7 @@ function d(e) {
     return (0, i.jsx)(o.P3F, {
         onClick: r,
         className: a()(u.clickable, t),
-        "aria-label": c.intl.string(c.t.ybUZqq),
+        "aria-label": c.intl.string(c.t.ybUZql),
         children: (0, i.jsx)(o.j9r, {
             size: "sm",
             color: o.TVs.colors.INTERACTIVE_ACTIVE,

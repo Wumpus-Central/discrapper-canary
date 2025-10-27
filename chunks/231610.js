@@ -9,7 +9,7 @@ var r = n(951288),
     d = n(619326),
     u = n(553204),
     g = n(388032),
-    m = n(510569);
+    m = n(549556);
 function p() {
     let { editStateId: e, guildId: t } = (0, a.N)(),
         [, p] = s.p9(e, t),
@@ -80,14 +80,14 @@ function p() {
     }
     let j = (0, l.mY)();
     return (0, r.jsx)(o.Z, {
-        title: g.intl.string(g.t["Ah+sQ0"]),
-        description: g.intl.string(g.t.ixbWiI),
+        title: g.intl.string(g.t["Ah+sQ9"]),
+        description: g.intl.string(g.t.ixbWiB),
         children: (0, r.jsxs)(i.Kqy, {
             direction: "vertical",
             gap: 24,
             children: [
                 (0, r.jsx)(i.gNt, {
-                    label: g.intl.string(g.t["6OUqDQ"]),
+                    label: g.intl.string(g.t["6OUqDa"]),
                     disabled: j,
                     children: (0, r.jsx)(d.Z, {
                         value: f,
@@ -96,9 +96,9 @@ function p() {
                     }),
                 }),
                 (0, r.jsx)(i.gNt, {
-                    label: g.intl.string(g.t["zn8/AQ"]),
+                    label: g.intl.string(g.t["zn8/AX"]),
                     disabled: j,
-                    description: g.intl.string(g.t.AqHUra),
+                    description: g.intl.string(g.t.AqHUrU),
                     children: (0, r.jsxs)(i.Kqy, {
                         direction: "horizontal",
                         gap: 16,

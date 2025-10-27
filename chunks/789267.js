@@ -21,7 +21,7 @@ function l(e) {
               compact: l,
               children:
                   null != m
-                      ? o.intl.format(o.t.AcqBmJ, {
+                      ? o.intl.format(o.t.AcqBmO, {
                             username: p,
                             usernameHook: h,
                             callDuration: m,
@@ -37,19 +37,19 @@ function l(e) {
               compact: l,
               children: [
                   null != m
-                      ? o.intl.format(o.t["7TeC1N"], {
+                      ? o.intl.format(o.t["7TeC1P"], {
                             username: p,
                             usernameHook: h,
                             callDuration: m,
                         })
-                      : o.intl.format(o.t.LuB5RE, {
+                      : o.intl.format(o.t.LuB5RD, {
                             username: p,
                             usernameHook: h,
                         }),
                   u
                       ? (0, r.jsx)(a.Z.Action, {
                             onClick: f,
-                            children: o.intl.string(o.t.oa9mvb),
+                            children: o.intl.string(o.t.oa9mvZ),
                         })
                       : null,
               ],

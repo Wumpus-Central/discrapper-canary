@@ -23,7 +23,7 @@ class o extends r.Z {
         });
     }
     getName(e) {
-        return null != this.name ? this.name : this.id === e ? i.intl.string(i.t.AHqj6e) : i.intl.string(i.t["62f4nJ"]);
+        return null != this.name ? this.name : this.id === e ? i.intl.string(i.t.AHqj6c) : i.intl.string(i.t["62f4nE"]);
     }
     constructor(e) {
         super(),

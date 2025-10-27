@@ -8,7 +8,7 @@ var i = n(951288),
     o = n(342386),
     c = n(388032);
 let E = (0, s.m7)(a.n.LOGOUT_SIDEBAR_ITEM, {
-    useTitle: () => c.intl.string(c.t["2jxGen"]),
+    useTitle: () => c.intl.string(c.t["2jxGer"]),
     icon: l.PBZ,
     onClick: () => {
         (0, u.h7j)((t) => {
@@ -41,9 +41,9 @@ let E = (0, s.m7)(a.n.LOGOUT_SIDEBAR_ITEM, {
                     return t;
                 })(
                     {
-                        header: c.intl.string(c.t["2jxGen"]),
-                        confirmText: c.intl.string(c.t["2jxGen"]),
-                        cancelText: c.intl.string(c.t["ETE/oK"]),
+                        header: c.intl.string(c.t["2jxGer"]),
+                        confirmText: c.intl.string(c.t["2jxGer"]),
+                        cancelText: c.intl.string(c.t["ETE/oC"]),
                         onCancel: t.onClose,
                         onConfirm: () => {
                             (0, o.default)(), r.Z.logout("settings");
@@ -55,7 +55,7 @@ let E = (0, s.m7)(a.n.LOGOUT_SIDEBAR_ITEM, {
                     {
                         children: (0, i.jsx)(u.Text, {
                             variant: "text-md/normal",
-                            children: c.intl.string(c.t.SUnWBA),
+                            children: c.intl.string(c.t.SUnWBB),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

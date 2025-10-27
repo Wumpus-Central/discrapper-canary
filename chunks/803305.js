@@ -20,12 +20,12 @@ function g(e) {
         ? {
               color: i.Tt.GREEN,
               look: i.iL.FILLED,
-              text: d.intl.string(d.t.cYzxGh),
+              text: d.intl.string(d.t.cYzxGn),
           }
         : void 0;
     return (0, r.jsx)(l.Z, {
-        header: d.intl.string(d.t.zT9Sxc),
-        text: d.intl.formatToPlainString(d.t.OKqEAQ, {
+        header: d.intl.string(d.t.zT9SxY),
+        text: d.intl.formatToPlainString(d.t.OKqEAU, {
             level: p,
             numAdditional: (0, s.Je)(p),
         }),

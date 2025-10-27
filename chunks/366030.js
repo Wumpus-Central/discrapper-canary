@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(977392),
     R = n(134433),
     P = n(753194),
-    w = n(458034),
-    D = n(856651),
+    D = n(458034),
+    w = n(856651),
     L = n(981631),
     x = n(228168),
     M = n(388032),
@@ -90,14 +90,14 @@ function Z(e) {
         { connectionType: n, connectionMetadataField: i, operator: a, value: o, description: s } = e;
     if (null != s)
         switch (a) {
-            case D.iO.LESS_THAN:
-                t = M.intl.format(M.t["2p7dAw"], {
+            case w.iO.LESS_THAN:
+                t = M.intl.format(M.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) - 1),
                 });
                 break;
-            case D.iO.GREATER_THAN:
-                t = M.intl.format(M.t["2p7dAw"], {
+            case w.iO.GREATER_THAN:
+                t = M.intl.format(M.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) + 1),
                 });
@@ -254,10 +254,10 @@ function V(e) {
     return (
         (t =
             1 === o.length && 1 === o[0].length
-                ? M.intl.string(M.t.jDym4O)
+                ? M.intl.string(M.t.jDym4E)
                 : 1 === o.length
-                  ? M.intl.format(M.t["0eBj39"], {})
-                  : M.intl.format(M.t.D7uftL, {})),
+                  ? M.intl.format(M.t["0eBj3x"], {})
+                  : M.intl.format(M.t.D7uftB, {})),
         (0, r.jsxs)("div", {
             className: k.popout,
             children: [
@@ -288,7 +288,7 @@ function V(e) {
                             className: k.viewConnectionsButton,
                             color: _.zx.Colors.PRIMARY,
                             onClick: a,
-                            children: M.intl.string(M.t.hgKDnJ),
+                            children: M.intl.string(M.t.hgKDnG),
                         }),
                     ],
                 }),
@@ -321,7 +321,7 @@ function H(e) {
                       channelId: s.id,
                       guildId: a.id,
                       onGetRolesClicked: () => {
-                          (0, w.Am)(a.id);
+                          (0, D.Am)(a.id);
                       },
                       onOpenProfile: () => {
                           (0, v.openUserProfileModal)({
@@ -346,7 +346,7 @@ function H(e) {
         nudgeAlignIntoViewport: !0,
         children: (e) =>
             (0, r.jsx)(d.u, {
-                text: M.intl.string(M.t.Wpsnam),
+                text: M.intl.string(M.t.Wpsnar),
                 children: (0, r.jsxs)(
                     "div",
                     B(

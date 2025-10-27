@@ -1,16 +1,16 @@
 n.d(t, { Z: () => o }), n(388685);
 var r = n(647438),
     i = n(321114),
-    l = n(226746);
+    a = n(226746);
 function o(e, t) {
     let [n, o] = r.useState(!1),
-        a = r.useCallback(async () => {
+        l = r.useCallback(async () => {
             o(!0), await (0, i.c)(e, !0), o(!1), null == t || t();
         }, [e, t]),
-        s = (0, l.Z)(e);
+        s = (0, a.Z)(e);
     return {
         isAdopting: n,
-        onAdoptTag: a,
+        onAdoptTag: l,
         onEditProfile: r.useCallback(() => {
             null == t || t(), s();
         }, [s, t]),

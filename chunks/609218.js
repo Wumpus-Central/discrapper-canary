@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(124527),
     R = n(591867),
     P = n(325380),
-    w = n(428946),
-    D = n(42948),
+    D = n(428946),
+    w = n(42948),
     L = n(109194),
     x = n(352812),
     M = (function (e) {
@@ -81,13 +81,13 @@ function k(e) {
         z = (0, y.N)(),
         q = i.useCallback(() => {
             var e;
-            return null != (e = (0, g.fr)(z, S.Si.TIER_2)) ? e : C.intl.string(C.t.pj0XBA);
+            return null != (e = (0, g.fr)(z, S.Si.TIER_2)) ? e : C.intl.string(C.t.pj0XBN);
         }, [z]),
         X = (0, b.Z)({ location: "PremiumUpsellPickerOverlay" }),
         Q = (0, I.Z)(S.Si.TIER_2);
     if (X) {
         let e;
-        e = F ? ((0, m.rO)() ? w.Z : D.Z) : (0, m.rO)() ? L.Z : x.Z;
+        e = F ? ((0, m.rO)() ? D.Z : w.Z) : (0, m.rO)() ? L.Z : x.Z;
         let t = F ? "nitro-pink" : "green";
         return (0, r.jsxs)(r.Fragment, {
             children: [

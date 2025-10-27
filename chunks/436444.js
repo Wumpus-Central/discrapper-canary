@@ -18,7 +18,7 @@ var i = n(120356),
     p = n(981631),
     h = n(474936),
     m = n(388032),
-    g = n(149829),
+    g = n(459196),
     E = n(724437);
 function b(e, t, n) {
     return (
@@ -104,13 +104,13 @@ let T = {
             } = e,
             { analyticsLocations: R } = (0, l.ZP)(),
             P = (0, c.Z)(),
-            w = p.oCV[A],
-            D = w - N,
+            D = p.oCV[A],
+            w = D - N,
             L = A <= C || b,
             x = L && A <= i.premiumTier,
             M = L && A < i.premiumTier,
             k = L && A === i.premiumTier,
-            j = i.premiumTier < A && N >= w,
+            j = i.premiumTier < A && N >= D,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: C >= A || (b && C + 1 === A) || (b && -1 === C && A === p.Eu4.NONE) ? 1 : 0 },
@@ -151,7 +151,7 @@ let T = {
                             object: p.qAy.SUBSCRIBE_TO_TIER_BUTTON,
                             objectType: I(A),
                         },
-                        numberOfBoostsToAdd: D,
+                        numberOfBoostsToAdd: w,
                         guild: i,
                     }));
         }
@@ -165,7 +165,7 @@ let T = {
                 : j
                   ? m.intl.formatToPlainString(g.default["9CtPjt"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
                   : m.intl.formatToPlainString(m.t.r6NN6Q, {
-                        numBoostsRequired: D,
+                        numBoostsRequired: w,
                         tierName: (0, d.nW)(A, { useLevels: !1 }),
                     }),
             shouldShow: A !== p.Eu4.NONE,

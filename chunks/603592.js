@@ -20,8 +20,8 @@ let f = i.forwardRef(function (e, t) {
             tooltip: _,
             upperBadge: O,
             lowerBadge: y,
-            lowerBadgeSize: v,
-            showPill: j = !0,
+            lowerBadgeSize: j,
+            showPill: v = !0,
             className: x,
             "aria-label": C,
             children: E,
@@ -30,10 +30,10 @@ let f = i.forwardRef(function (e, t) {
             onMouseDown: P,
         } = e,
         N = (0, a.Ie)(f),
-        [Z, w] = i.useState(!1);
+        [Z, T] = i.useState(!1);
     return (0, r.jsxs)(u.H, {
         children: [
-            j
+            v
                 ? (0, r.jsx)("div", {
                       className: p.pill,
                       children: (0, r.jsx)(c.Z, {
@@ -49,7 +49,7 @@ let f = i.forwardRef(function (e, t) {
                     selected: !0,
                     upperBadge: O,
                     lowerBadge: y,
-                    lowerBadgeSize: v,
+                    lowerBadgeSize: j,
                     children: (0, r.jsx)(
                         s.P3F,
                         ((n = (function (e) {
@@ -80,10 +80,10 @@ let f = i.forwardRef(function (e, t) {
                             {
                                 innerRef: t,
                                 onMouseEnter: () => {
-                                    null == S || S(), w(!0);
+                                    null == S || S(), T(!0);
                                 },
                                 onMouseLeave: () => {
-                                    null == I || I(), w(!1);
+                                    null == I || I(), T(!1);
                                 },
                                 onMouseDown: P,
                                 className: o()(p.circleIconButton, x, { [p.selected]: b || Z }),

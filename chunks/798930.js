@@ -1,10 +1,10 @@
-t.d(a, { O: () => n });
-var r,
-    n =
-        (((r = {}).LANDING = "landing"),
-        (r.PRE_CONNECT = "pre-connect"),
-        (r.PRE_CONNECT_WAITING = "pre-connect-waiting"),
-        (r.DISCORD_CONSENT = "discord-consent"),
-        (r.SUCCESS = "success"),
-        (r.ERROR = "error"),
-        r);
+t.d(a, { O: () => r });
+var n,
+    r =
+        (((n = {}).LANDING = "landing"),
+        (n.PRE_CONNECT = "pre-connect"),
+        (n.PRE_CONNECT_WAITING = "pre-connect-waiting"),
+        (n.DISCORD_CONSENT = "discord-consent"),
+        (n.SUCCESS = "success"),
+        (n.ERROR = "error"),
+        n);

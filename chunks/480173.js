@@ -31,7 +31,7 @@ function h(e) {
                     (0, a.jsx)("div", {
                         className: u.closeButton,
                         children: (0, a.jsx)(l.aML, {
-                            text: d.intl.string(d.t.cpT0Cg),
+                            text: d.intl.string(d.t.cpT0Cq),
                             children: (e) => {
                                 var t, n;
                                 return (0, a.jsx)(
@@ -67,7 +67,7 @@ function h(e) {
                                             variant: "secondary",
                                             size: "sm",
                                             onClick: i,
-                                            "aria-label": d.intl.string(d.t.cpT0Cg),
+                                            "aria-label": d.intl.string(d.t.cpT0Cq),
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

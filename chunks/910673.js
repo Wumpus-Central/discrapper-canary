@@ -1,4 +1,4 @@
-n.d(e, { default: () => f });
+n.d(e, { default: () => R });
 var i = n(951288),
     r = n(647438),
     l = n(793030),
@@ -13,10 +13,10 @@ var i = n(951288),
     C = n(63063),
     A = n(247206),
     d = n(981631),
-    R = n(526761),
-    L = n(388032);
-let f = (t) => {
-    let { channelId: e, messageId: f, transitionState: g, onClose: O } = t,
+    L = n(526761),
+    f = n(388032);
+let R = (t) => {
+    let { channelId: e, messageId: R, transitionState: g, onClose: O } = t,
         P = (0, I.Z)(),
         v = (0, _.Jm)(),
         T = (0, A.m8)(),
@@ -26,10 +26,10 @@ let f = (t) => {
                 (0, A.aP)({
                     action: t,
                     channelId: e,
-                    messageId: f,
+                    messageId: R,
                 });
             },
-            [e, f],
+            [e, R],
         ),
         p = r.useCallback(() => {
             O(),
@@ -66,47 +66,47 @@ let f = (t) => {
                             })(
                                 {
                                     channelId: e,
-                                    messageId: f,
+                                    messageId: R,
                                 },
                                 n,
                             ),
                         );
                 });
-        }, [e, f, O, M]);
+        }, [e, R, O, M]);
     return (
         r.useEffect(() => {
             (0, A.aP)({
                 action: A.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
                 channelId: e,
-                messageId: f,
+                messageId: R,
             });
-        }, [e, f]),
+        }, [e, R]),
         (0, i.jsx)(l.Modal, {
-            title: L.intl.string(L.t.sGW77u),
+            title: f.intl.string(f.t.sGW77l),
             subtitle: (function () {
                 if (h)
-                    return L.intl.format(L.t["1L0hub"], {
+                    return f.intl.format(f.t["1L0huf"], {
                         handleOnHelpUrlHook: () => {
                             s.Z.openUrl(C.Z.getArticleURL(d.BhN.TIGGER_PAWTECT_LEARN_MORE)),
                                 M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
                         },
                     });
-                let t = L.intl.string(L.t.RUw0ZG),
-                    e = L.intl.string(L.t["E/oQYG"]);
+                let t = f.intl.string(f.t.RUw0ZC),
+                    e = f.intl.string(f.t["E/oQYL"]);
                 return P ? t : e;
             })(),
             actions: [
                 (function () {
                     if (!T && !h)
                         return {
-                            text: L.intl.string(L.t.ZH7P2t),
+                            text: f.intl.string(f.t.ZH7P2h),
                             onClick: p,
                             variant: "secondary",
                         };
                 })(),
                 h
                     ? {
-                          text: L.intl.string(L.t.KPGVWl),
+                          text: f.intl.string(f.t.KPGVWl),
                           onClick: function () {
                               O(),
                                   M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
@@ -117,18 +117,18 @@ let f = (t) => {
                       }
                     : P
                       ? {
-                            text: L.intl.string(L.t["9D+zGR"]),
+                            text: f.intl.string(f.t["9D+zGX"]),
                             onClick: function () {
                                 M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
                                     (0, u.openUserSettings)(c.n.CONTENT_AND_SOCIAL_PANEL, {
                                         section: d.oAB.CONTENT_AND_SOCIAL,
-                                        scrollPosition: R.FY.EXPLICIT_MEDIA_REDACTION_V2,
+                                        scrollPosition: L.FY.EXPLICIT_MEDIA_REDACTION_V2,
                                     }),
                                     O();
                             },
                         }
                       : {
-                            text: L.intl.string(L.t.hvVgAQ),
+                            text: f.intl.string(f.t.hvVgAZ),
                             onClick: () => {
                                 (0, a.Z)(C.Z.getArticleURL(d.BhN.EXPLICIT_MEDIA_REDACTION));
                             },

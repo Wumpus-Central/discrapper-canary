@@ -109,11 +109,11 @@ async function f(e) {
                 type: "RECENT_AVATAR_DELETE",
                 avatarId: e,
             }),
-            l.uvj.announce(u.intl.string(u.t.YJPieH));
+            l.uvj.announce(u.intl.string(u.t.YJPieI));
     } catch (e) {
         i.Z.show({
-            title: u.intl.string(u.t.iufib2),
-            body: u.intl.string(u.t["/ZNT+/"]),
+            title: u.intl.string(u.t.iufib1),
+            body: u.intl.string(u.t["/ZNT+0"]),
         });
     }
 }

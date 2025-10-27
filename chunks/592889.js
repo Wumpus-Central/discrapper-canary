@@ -79,7 +79,7 @@ function m(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: d.text,
-                    children: u.intl.format(u.t.ar1cPj, {
+                    children: u.intl.format(u.t.ar1cPl, {
                         planName: t.hasExternalPlanChange ? (0, l.zL)(i) : l.ZP.getDisplayName(i.planId),
                         date: g,
                     }),
@@ -103,7 +103,7 @@ function m(e) {
                                   });
                           },
                           className: d.cancelLink,
-                          children: u.intl.string(u.t["ETE/oK"]),
+                          children: u.intl.string(u.t["ETE/oC"]),
                       }),
             ],
         })

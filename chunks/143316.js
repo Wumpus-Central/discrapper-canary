@@ -31,12 +31,12 @@ function p(e) {
                 : null,
             "bottom-floating" === t
                 ? (0, r.jsx)(s.a, {
-                      text: u.intl.string(u.t["8k+6QU"]),
+                      text: u.intl.string(u.t["8k+6QY"]),
                       icon: o.W6s,
                       onClick: g,
                   })
                 : (0, r.jsx)(o.M0o, {
-                      tooltip: u.intl.string(u.t["8k+6QU"]),
+                      tooltip: u.intl.string(u.t["8k+6QY"]),
                       color: o.YX$.TERTIARY,
                       icon: (0, r.jsx)(o.W6s, {
                           size: "xs",
@@ -53,15 +53,15 @@ function f(e) {
     return (0, r.jsx)(o.sYh, {
         dismissable: !0,
         header: u.intl.string(u.t.h4bVZ2),
-        confirmText: u.intl.string(u.t.e6RscX),
-        cancelText: u.intl.string(u.t["ETE/oK"]),
+        confirmText: u.intl.string(u.t.e6RscS),
+        cancelText: u.intl.string(u.t["ETE/oC"]),
         confirmButtonColor: l.zx.Colors.BRAND,
         onCancel: t,
         onConfirm: n,
         children: (0, r.jsx)(o.Text, {
             color: "text-default",
             variant: "text-sm/normal",
-            children: u.intl.string(u.t["0MQ0BQ"]),
+            children: u.intl.string(u.t["0MQ0Bf"]),
         }),
     });
 }

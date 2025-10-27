@@ -15,34 +15,34 @@ function d() {
     return (0, r.jsx)(a.PU, {
         className: u.editableRequirementContainer,
         icon: i.AtH,
-        text: c.intl.string(c.t.woMjLS),
-        footnote: c.intl.string(c.t["jMh+TU"]),
+        text: c.intl.string(c.t.woMjLV),
+        footnote: c.intl.string(c.t["jMh+TY"]),
         meetsRequirement: !1,
         children: (0, r.jsx)(l.u, {
             asContainer: !0,
-            text: c.intl.string(c.t.mGlP39),
+            text: c.intl.string(c.t.mGlP30),
             children: (0, r.jsx)(i.Button, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
-                text: c.intl.string(c.t["13ofGh"]),
+                text: c.intl.string(c.t["13ofGu"]),
             }),
         }),
     });
 }
 function m(e) {
     let { isUserVerified: t } = e,
-        l = t ? c.intl.string(c.t.WWzQtb) : c.intl.string(c.t.woMjLS);
+        l = t ? c.intl.string(c.t.WWzQta) : c.intl.string(c.t.woMjLV);
     return (0, r.jsx)(a.PU, {
         className: u.editableRequirementContainer,
         icon: i.AtH,
         text: l,
-        footnote: c.intl.string(c.t["jMh+TU"]),
+        footnote: c.intl.string(c.t["jMh+TY"]),
         meetsRequirement: t,
         children: (0, r.jsx)(i.Button, {
             variant: "primary",
             size: "sm",
-            text: c.intl.string(c.t["13ofGh"]),
+            text: c.intl.string(c.t["13ofGu"]),
             onClick: () => {
                 (0, i.ZDy)(
                     async () => {

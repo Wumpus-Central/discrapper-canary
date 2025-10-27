@@ -20,7 +20,7 @@ let p = (e) => {
     return (0, r.jsx)("img", {
         className: _.icon,
         src: a,
-        alt: f.intl.formatToPlainString(f.t.g6KdFh, { fileType: i }),
+        alt: f.intl.formatToPlainString(f.t.g6KdFv, { fileType: i }),
         title: i,
     });
 };
@@ -29,10 +29,10 @@ function h(e) {
         a = i.useMemo(() => {
             let e = n.items;
             return null == e
-                ? f.intl.string(f.t.jfKTen)
+                ? f.intl.string(f.t.jfKTes)
                 : 1 === e.length && null != e[0].filename
                   ? e[0].filename
-                  : f.intl.formatToPlainString(f.t.D0noUl, { count: e.length });
+                  : f.intl.formatToPlainString(f.t.D0noUt, { count: e.length });
         }, [n.items]),
         o = i.useCallback(() => {
             u.Z.cancel(t, n);
@@ -66,7 +66,7 @@ function h(e) {
                         (0, r.jsx)("div", {
                             className: _.progressContainer,
                             children: s
-                                ? f.intl.string(f.t.jfKTen)
+                                ? f.intl.string(f.t.jfKTes)
                                 : (0, r.jsx)(c.Exd, {
                                       className: _.progress,
                                       percent: n.progress,

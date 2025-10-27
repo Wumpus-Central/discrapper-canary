@@ -44,7 +44,7 @@ function v(e) {
                         children: t,
                     }),
                 }),
-            (0, r.jsx)("div", { children: b.intl.string(b.t.DY2CXl) }),
+            (0, r.jsx)("div", { children: b.intl.string(b.t.DY2CXs) }),
         ],
     });
 }
@@ -53,7 +53,7 @@ function I() {
         className: y.body,
         children: [
             (0, r.jsx)("div", { className: y.uncancelImage }),
-            (0, r.jsx)("div", { children: b.intl.string(b.t.G27uHR) }),
+            (0, r.jsx)("div", { children: b.intl.string(b.t.G27uHe) }),
         ],
     });
 }
@@ -80,32 +80,32 @@ function T(e) {
                         S(2);
                 } catch (t) {
                     let e = t instanceof f.HF ? t : new f.HF(t, t.code);
-                    R(b.intl.string(e.code === _.SM.BILLING_PAUSE_INVALID_UPDATE ? b.t.dq4vq6 : b.t["5mlOCQ"])), C(!1);
+                    R(b.intl.string(e.code === _.SM.BILLING_PAUSE_INVALID_UPDATE ? b.t.dq4vq7 : b.t["5mlOCW"])), C(!1);
                 }
         }, [y, t, d]),
-        w = () => {
+        D = () => {
             switch (T) {
                 case 1:
-                    return b.intl.string(b.t.l52ih4);
+                    return b.intl.string(b.t.l52ih2);
                 case 2:
-                    return b.intl.string(b.t.H9QUAA);
+                    return b.intl.string(b.t.H9QUAB);
                 default:
                     return "";
             }
         },
-        D = () => {
+        w = () => {
             switch (T) {
                 case 1:
                     return [
                         {
                             variant: "secondary",
-                            text: b.intl.string(b.t.oEAioK),
+                            text: b.intl.string(b.t.oEAioF),
                             disabled: A,
                             onClick: a,
                         },
                         {
                             variant: "primary",
-                            text: b.intl.string(b.t.etZP4O),
+                            text: b.intl.string(b.t.etZP4B),
                             loading: A,
                             onClick: P,
                         },
@@ -114,7 +114,7 @@ function T(e) {
                     return [
                         {
                             variant: "primary",
-                            text: b.intl.string(b.t.BddRzc),
+                            text: b.intl.string(b.t.BddRzS),
                             onClick: a,
                         },
                     ];
@@ -139,8 +139,8 @@ function T(e) {
             transitionState: n,
             onClose: async () => await a(),
             size: "sm",
-            title: w(),
-            actions: D(),
+            title: D(),
+            actions: w(),
             children: L(),
         }),
     });

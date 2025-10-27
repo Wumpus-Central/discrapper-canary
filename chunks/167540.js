@@ -33,14 +33,14 @@ function y() {
                 ],
             }),
             (0, r.jsx)(s.Z, {
-                title: b.intl.string(b.t.KDdjoq),
+                title: b.intl.string(b.t.KDdjou),
                 webSetting: g.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 children: (0, r.jsxs)(l.Z, {
                     children: [(0, r.jsx)(p.Z, {}), e && (0, r.jsx)(_.Z, {}), (0, r.jsx)(f.Z, {})],
                 }),
             }),
             (0, r.jsx)(s.Z, {
-                title: b.intl.string(b.t["8/udY2"]),
+                title: b.intl.string(b.t["8/udY0"]),
                 webSetting: g.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED,
                 children: (0, r.jsx)(l.Z, { children: (0, r.jsx)(m.Z, {}) }),
             }),

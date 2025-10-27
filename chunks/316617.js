@@ -49,7 +49,7 @@ let f = (e) => {
                   (0, r.jsx)(a.Heading, {
                       className: x.header,
                       variant: "heading-sm/semibold",
-                      children: b.intl.string(b.t.iouM3d),
+                      children: b.intl.string(b.t.iouM3a),
                   }),
                   (0, r.jsx)(a.Ttm, {
                       className: x.messagePreviewContainer,

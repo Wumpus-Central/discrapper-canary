@@ -18,8 +18,8 @@ var i = n(120356),
     _ = n(565138),
     O = n(199902),
     y = n(592125),
-    v = n(430824),
-    j = n(158776),
+    j = n(430824),
+    v = n(158776),
     x = n(306680),
     C = n(594174),
     E = n(388032),
@@ -78,7 +78,7 @@ function P(e) {
                             channel: i,
                             gotoChannel: a,
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(w, {
                             channel: i,
                             gotoChannel: a,
                             mentionCount: c,
@@ -109,7 +109,7 @@ function N(e) {
               channel: t,
               gotoChannel: n,
           })
-        : (0, r.jsx)(w, {
+        : (0, r.jsx)(T, {
               channel: t,
               gotoChannel: n,
           });
@@ -129,9 +129,9 @@ function Z(e) {
         }),
     });
 }
-function w(e) {
+function T(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id));
+        i = (0, a.e7)([j.Z], () => j.Z.getGuild(t.guild_id));
     return null == i
         ? null
         : (0, r.jsx)(_.Z, {
@@ -144,9 +144,9 @@ function w(e) {
               tabIndex: -1,
           });
 }
-function T(e) {
+function w(e) {
     let { channel: t, gotoChannel: n, mentionCount: i } = e,
-        o = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
+        o = (0, a.e7)([j.Z], () => j.Z.getGuild(t.guild_id)),
         c = (0, a.e7)([y.Z], () => y.Z.getChannel(t.parent_id)),
         u = (0, a.e7)([x.ZP], () => x.ZP.getIsMentionLowImportance(t.id)),
         d = (0, g.KS)(t, o),
@@ -158,7 +158,7 @@ function T(e) {
                     : o.name
                 : "".concat(null == o ? void 0 : o.name, " \u203A ").concat(c.name),
         b = t.isMultiUserDM()
-            ? E.intl.formatToPlainString(E.t.CxSA5O, { members: t.recipients.length + 1 })
+            ? E.intl.formatToPlainString(E.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, r.jsx)(A, { channel: t })
               : (0, r.jsx)(s.P3F, {
@@ -217,12 +217,12 @@ function A(e) {
             status: i,
             activities: l,
             applicationStream: o,
-        } = (0, a.cj)([C.default, j.Z, O.Z], () => {
+        } = (0, a.cj)([C.default, v.Z, O.Z], () => {
             let e = C.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                status: null != e ? j.Z.getStatus(e.id) : null,
-                activities: null != e ? j.Z.getActivities(e.id) : null,
+                status: null != e ? v.Z.getStatus(e.id) : null,
+                activities: null != e ? v.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? O.Z.getAnyStreamForUser(e.id) : null,
             };
         }),

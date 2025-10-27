@@ -12,8 +12,8 @@ let d = "PS two way upsell",
     f = () => {
         let e = o.Z.getArticleURL(l.BhN.PS_CONNECTION);
         return (0, r.jsx)(s.t, {
-            title: c.intl.string(c.t.v20wws),
-            body: c.intl.format(c.t.lTZBio, { help_article: e }),
+            title: c.intl.string(c.t.v20wwm),
+            body: c.intl.format(c.t.lTZBit, { help_article: e }),
             img: (0, r.jsx)("img", {
                 src: u,
                 width: "82",

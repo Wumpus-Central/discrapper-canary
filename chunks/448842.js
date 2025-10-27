@@ -78,12 +78,12 @@ function A(e) {
             autocompletes: N,
             mode: R,
         }),
-        w = (0, E.Z)({
+        D = (0, E.Z)({
             setSearchQuery: A,
             searchContext: v,
             mode: R,
         }),
-        D = (e) => {
+        w = (e) => {
             let { searchEverywhere: t } = e;
             s.S.dispatch(b.CkL.PERFORM_SEARCH, { searchEverywhere: t });
         },
@@ -122,7 +122,7 @@ function A(e) {
         },
         x = i.useCallback(
             (e) => {
-                let t = e ? y.intl.string(y.t.diOL4u) : y.intl.string(y.t["M1tf+/"]),
+                let t = e ? y.intl.string(y.t.diOL4i) : y.intl.string(y.t["M1tf+7"]),
                     i = () => {
                         (0, a.ZDy)(async () => {
                             let { default: e } = await Promise.all([n.e("30474"), n.e("37979"), n.e("49205")]).then(
@@ -176,7 +176,7 @@ function A(e) {
                                 className: O.itemIcon,
                             }),
                             label: (0, r.jsx)(d.Q0, {
-                                label: y.intl.format(y.t["VGEH//"], { channelName: t }),
+                                label: y.intl.format(y.t["VGEH/0"], { channelName: t }),
                                 className: O.labelWithElements,
                             }),
                             onSelect: (e) => {
@@ -191,15 +191,15 @@ function A(e) {
                 }
                 let t = x(C);
                 if (C) {
-                    let n = [...w, t];
+                    let n = [...D, t];
                     e.push(
                         (0, _.fC)(f.i.GROUP, {
                             rows: n,
-                            title: y.intl.string(y.t.UdhTtr),
+                            title: y.intl.string(y.t.UdhTtk),
                         }),
                     );
                 } else e.push(t);
-                let n = C ? e.length + w.length : e.length,
+                let n = C ? e.length + D.length : e.length,
                     { autocompleteCount: i, autocompleteGroups: o } = P({
                         filterFn: (e) => e.group === b.rtL.HISTORY && e.results.length > 0,
                         getAutocompleteRowItem: (e) => {
@@ -230,7 +230,7 @@ function A(e) {
                             return (0, _.fC)(f.i.ROW, {
                                 icon: s,
                                 label: l,
-                                ariaLabel: y.intl.formatToPlainString(y.t.WoiGra, { suggestion: c }),
+                                ariaLabel: y.intl.formatToPlainString(y.t.WoiGrV, { suggestion: c }),
                                 resultText: o,
                                 onSelect: u,
                             });
@@ -260,13 +260,13 @@ function A(e) {
                             }),
                             label:
                                 v.type === b.aib.FAVORITES && (0, l.X$)()
-                                    ? (0, r.jsx)(d.Q0, { label: y.intl.string(y.t["6RVtLC"]) })
+                                    ? (0, r.jsx)(d.Q0, { label: y.intl.string(y.t["6RVtLA"]) })
                                     : (0, r.jsx)(d.Q0, {
-                                          label: y.intl.format(y.t.rCnaoq, { value: n }),
+                                          label: y.intl.format(y.t.rCnaoo, { value: n }),
                                           className: O.labelWithElements,
                                       }),
-                            ariaLabel: y.intl.formatToPlainString(y.t.rCnaoq, { value: t.query }),
-                            onSelect: () => D({ searchEverywhere: !1 }),
+                            ariaLabel: y.intl.formatToPlainString(y.t.rCnaoo, { value: t.query }),
+                            onSelect: () => w({ searchEverywhere: !1 }),
                         });
                     if ((e.push(i), v.type === b.aib.FAVORITES && (0, l.X$)())) {
                         let t = (0, _.fC)(f.i.ROW, {
@@ -276,7 +276,7 @@ function A(e) {
                                 className: O.itemIcon,
                             }),
                             label: (0, r.jsx)(d.Q0, { label: y.intl.string(y.t.FtSUxc) }),
-                            onSelect: () => D({ searchEverywhere: !0 }),
+                            onSelect: () => w({ searchEverywhere: !0 }),
                         });
                         e.push(t);
                     }
@@ -343,11 +343,11 @@ function A(e) {
                     o = C && 0 === n,
                     s = x(o);
                 if (o) {
-                    let t = [...w, s];
+                    let t = [...D, s];
                     e.push(
                         (0, _.fC)(f.i.GROUP, {
                             rows: t,
-                            title: y.intl.string(y.t.UdhTtr),
+                            title: y.intl.string(y.t.UdhTtk),
                         }),
                     );
                 } else e.push(s);

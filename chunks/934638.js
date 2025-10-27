@@ -18,10 +18,10 @@ function u(e) {
         ),
         m = (0, a.e7)([c.Z], () => c.Z.getError("description"));
     return (0, r.jsx)(s.Kx8, {
-        label: d.intl.string(d.t.Z27SCQ),
-        description: d.intl.string(d.t.pw0MIi),
+        label: d.intl.string(d.t.Z27SCb),
+        description: d.intl.string(d.t.pw0MIk),
         value: t.description,
-        placeholder: d.intl.string(d.t.Nvfows),
+        placeholder: d.intl.string(d.t.Nvfowl),
         onChange: g,
         maxLength: l.Us,
         disabled: !n,

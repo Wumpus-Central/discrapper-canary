@@ -1,6 +1,6 @@
 n.d(t, {
     Go: () => R,
-    LZ: () => D,
+    LZ: () => w,
     Pq: () => v,
     RJ: () => P,
     Sd: () => M,
@@ -201,7 +201,7 @@ function P() {
         [e],
     );
 }
-function w() {
+function D() {
     var e, t;
     let n = (0, s.D)(),
         r = N;
@@ -211,8 +211,8 @@ function w() {
         r
     );
 }
-function D() {
-    let e = w();
+function w() {
+    let e = D();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
 let L = (e) => {
@@ -234,13 +234,13 @@ let L = (e) => {
                 {
                     type: E.Ih.FAVORITE,
                     id: E.Ih.FAVORITE,
-                    name: O.intl.string(O.t.y3LQCA),
+                    name: O.intl.string(O.t.y3LQCG),
                     stickers: t,
                 },
                 {
                     type: E.Ih.RECENT,
                     id: E.Ih.RECENT,
-                    name: O.intl.string(O.t["6hjpXV"]),
+                    name: O.intl.string(O.t["6hjpXW"]),
                     stickers:
                         null !=
                         (r =

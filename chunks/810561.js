@@ -18,8 +18,8 @@ function _(e) {
             hideScroller: p = !1,
             activeRecurrenceId: g,
         } = e,
-        { recurrenceStartTimes: m, canViewMoreRecurrences: b, updateRecurrenceStartTimes: h } = (0, c.Z)(a, n, t),
-        f = p ? "div" : l.Ttm;
+        { recurrenceStartTimes: m, canViewMoreRecurrences: h, updateRecurrenceStartTimes: b } = (0, c.Z)(a, n, t),
+        v = p ? "div" : l.Ttm;
     return (0, i.jsxs)("div", {
         className: u.recurrences,
         children: [
@@ -28,7 +28,7 @@ function _(e) {
                 className: u.heading,
                 children: d.intl.string(d.t["D/jjoa"]),
             }),
-            (0, i.jsxs)(f, {
+            (0, i.jsxs)(v, {
                 className: r()(u.scroller, { [u.showScroller]: !p }),
                 children: [
                     m.map((e) => {
@@ -45,14 +45,14 @@ function _(e) {
                             n,
                         );
                     }),
-                    b &&
+                    h &&
                         (0, i.jsx)("div", {
                             className: u.buttonContainer,
                             children: (0, i.jsx)(l.Avr, {
                                 onClick: (e) => {
-                                    e.stopPropagation(), h();
+                                    e.stopPropagation(), b();
                                 },
-                                text: d.intl.string(d.t["8O7Hp6"]),
+                                text: d.intl.string(d.t["8O7Hpy"]),
                                 size: "sm",
                             }),
                         }),

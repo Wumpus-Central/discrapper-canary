@@ -1,6 +1,6 @@
 n.d(t, {
     al: () => b,
-    ck: () => x,
+    ck: () => C,
 }),
     n(388685),
     n(539854),
@@ -271,7 +271,7 @@ let b = {
         },
     },
     j = (e) => e,
-    C = (e) => {
+    x = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -287,7 +287,7 @@ let b = {
             })
         );
     };
-function x(e) {
+function C(e) {
     var t, n, a;
     let { label: i, value: l, section: u } = e,
         m = null != (n = D[i]) ? n : j,
@@ -302,7 +302,7 @@ function x(e) {
                       height: 100,
                   })
                 : "number" == typeof l
-                  ? (0, r.jsx)(C, {
+                  ? (0, r.jsx)(x, {
                         converter: p,
                         value: l,
                         width: 300,

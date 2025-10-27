@@ -24,8 +24,8 @@ var l = n(951288),
     P = n(709054),
     w = n(39604),
     N = n(572720),
-    T = n(981631),
-    E = n(388032),
+    E = n(981631),
+    T = n(388032),
     I = n(134351);
 let S = function (e) {
     var t, n, r;
@@ -33,17 +33,17 @@ let S = function (e) {
         v = (0, d.Wu)([_.default], () => o.users.map((e) => _.default.getUser(e)).filter(O.lm)),
         { analyticsLocations: w } = (0, j.ZP)(x.Z.CLIPS_GALLERY_ITEM),
         [N, S] = a.useState(!1),
-        D = a.useRef(null),
+        L = a.useRef(null),
         M = (0, c.Z)(null != (r = null == (t = o.editMetadata) ? void 0 : t.start) ? r : 0),
         R = a.useRef(
             new p.sW(500, () => {
                 var e;
-                let t = D.current;
-                null != t && t.paused && ((t.currentTime = M.current), null == (e = D.current) || e.play());
+                let t = L.current;
+                null != t && t.paused && ((t.currentTime = M.current), null == (e = L.current) || e.play());
             }),
         ),
         H = a.useCallback(() => {
-            let e = D.current;
+            let e = L.current;
             null != e && (e.pause(), (e.src = ""));
         }, []),
         A = a.useCallback(() => {
@@ -53,7 +53,7 @@ let S = function (e) {
         z = a.useCallback(() => {
             var e, t, n;
             S(!1);
-            let l = D.current;
+            let l = L.current;
             null == (e = R.current) || e.cancel(),
                 null != l &&
                     (l.pause(),
@@ -78,11 +78,11 @@ let S = function (e) {
         value: w,
         children: (0, l.jsxs)(h.kL8, {
             "aria-disabled": u,
-            "aria-label": E.intl.string(E.t.bt75u7),
+            "aria-label": T.intl.string(T.t.bt75uw),
             onClick: u
                 ? void 0
                 : () => {
-                      b(o), C.default.track(T.rMx.CLIP_GALLERY_CARD_CLICKED);
+                      b(o), C.default.track(E.rMx.CLIP_GALLERY_CARD_CLICKED);
                   },
             className: i()(I.clipItem, { [I.disabled]: u }),
             onBlur: B,
@@ -93,7 +93,7 @@ let S = function (e) {
                 (0, l.jsx)(k, {
                     clip: o,
                     isNew: m,
-                    videoRef: D,
+                    videoRef: L,
                 }),
                 (0, l.jsxs)("div", {
                     className: I.clipFooter,
@@ -135,10 +135,10 @@ let S = function (e) {
                                                 : l.parentElement) !== i &&
                                             A();
                                     },
-                                    "aria-label": E.intl.string(E.t.WTozwc),
+                                    "aria-label": T.intl.string(T.t.WTozwe),
                                 }),
                                 N &&
-                                    (0, l.jsx)(L, {
+                                    (0, l.jsx)(D, {
                                         clip: o,
                                         actionsDisabled: u,
                                         exporting: s,
@@ -173,7 +173,7 @@ function k(e) {
     return (0, l.jsxs)("div", {
         className: I.clipThumbContainer,
         children: [
-            (0, l.jsx)(D, {
+            (0, l.jsx)(L, {
                 clip: t,
                 videoRef: r,
             }),
@@ -186,7 +186,7 @@ function k(e) {
                             children: (0, l.jsx)(h.Text, {
                                 variant: "text-md/medium",
                                 color: "always-white",
-                                children: E.intl.string(E.t["2Fp7OD"]),
+                                children: T.intl.string(T.t["2Fp7OP"]),
                             }),
                         }),
                     !i &&
@@ -201,7 +201,7 @@ function k(e) {
                                     color: "currentColor",
                                     className: I.newIcon,
                                 }),
-                                E.intl.string(E.t.y2b7CA).toUpperCase(),
+                                T.intl.string(T.t.y2b7CA).toUpperCase(),
                             ],
                         }),
                     !i &&
@@ -262,7 +262,7 @@ function Z(e) {
                             className: I.clipTitle,
                             color: "text-muted",
                             variant: "heading-lg/medium",
-                            children: E.intl.string(E.t["x+/nmJ"]),
+                            children: T.intl.string(T.t["x+/nmN"]),
                         })
                       : (0, l.jsx)(h.Heading, {
                             className: I.clipTitle,
@@ -273,7 +273,7 @@ function Z(e) {
                   r &&
                       (0, l.jsx)(h.vdY, {
                           size: "custom",
-                          "aria-label": E.intl.string(E.t.bt75u7),
+                          "aria-label": T.intl.string(T.t.bt75uw),
                           color: h.TVs.colors.TEXT_MUTED,
                           height: m.Z.sm,
                           width: m.Z.sm,
@@ -282,7 +282,7 @@ function Z(e) {
               ],
           });
 }
-function D(e) {
+function L(e) {
     let { clip: t, videoRef: n } = e,
         a = (0, N.l)(t);
     return 0 === t.length
@@ -306,7 +306,7 @@ function D(e) {
                 className: I.clipThumb,
             });
 }
-function L(e) {
+function D(e) {
     let {
             clip: t,
             exporting: n,
@@ -322,19 +322,19 @@ function L(e) {
             (e) => {
                 e.stopPropagation(),
                     e.shiftKey ? (i(), (0, w.sS)(t.filepath)) : o(t, i),
-                    C.default.track(T.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
+                    C.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
             },
             [o, i, t],
         ),
         f = a.useCallback(
             (e) => {
-                e.stopPropagation(), s(t), C.default.track(T.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
+                e.stopPropagation(), s(t), C.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
             },
             [s, t],
         ),
         x = a.useCallback(
             (e) => {
-                e.stopPropagation(), c(t), C.default.track(T.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
+                e.stopPropagation(), c(t), C.default.track(E.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
             },
             [c, t],
         );
@@ -343,7 +343,7 @@ function L(e) {
         children: [
             null != o &&
                 (0, l.jsx)(g.u, {
-                    text: E.intl.string(E.t.oyYWHB),
+                    text: T.intl.string(T.t.oyYWHE),
                     children: (0, l.jsx)(b.zx, {
                         disabled: r,
                         color: p ? b.zx.Colors.RED : b.zx.Colors.PRIMARY,
@@ -359,7 +359,7 @@ function L(e) {
                     }),
                 }),
             (0, l.jsx)(g.u, {
-                text: E.intl.string(E.t.bt75u7),
+                text: T.intl.string(T.t.bt75uw),
                 children: (0, l.jsx)(b.zx, {
                     disabled: r,
                     color: b.zx.Colors.PRIMARY,
@@ -371,7 +371,7 @@ function L(e) {
                 }),
             }),
             (0, l.jsx)(g.u, {
-                text: E.intl.string(E.t.RDE0SU),
+                text: T.intl.string(T.t.RDE0Sc),
                 children: (0, l.jsx)(b.zx, {
                     disabled: r && !n,
                     submitting: n,

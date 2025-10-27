@@ -1,35 +1,35 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(393238),
     u = n(877604),
     d = n(998730),
     p = n(546247),
     f = n(430824),
     h = n(768581),
-    g = n(302221),
-    m = n(745752),
-    b = n(17181),
-    _ = n(388032),
+    m = n(302221),
+    g = n(745752),
+    _ = n(17181),
+    b = n(388032),
     E = n(76531),
     O = n(718215);
-function v(e) {
+function I(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: l, width: v, height: y } = (0, c.ZP)(),
-        I = i.useCallback(() => {
+        { ref: l, width: I, height: v } = (0, c.ZP)(),
+        y = i.useCallback(() => {
             null != t &&
                 null != n &&
-                ((0, m.I1)(t),
-                (0, b.default)({
+                ((0, g.I1)(t),
+                (0, _.default)({
                     guildId: t,
                     returnChannelId: n,
                 }));
         }, [t, n]),
-        C = (0, o.e7)([f.Z], () => f.Z.getGuild(t)),
+        C = (0, s.e7)([f.Z], () => f.Z.getGuild(t)),
         S = i.useMemo(
             () =>
                 null == C
@@ -40,7 +40,7 @@ function v(e) {
                       }),
             [C],
         ),
-        N = (0, d.N)(S);
+        T = (0, d.N)(S);
     return (0, r.jsxs)("div", {
         className: a()(E.outerWrapping, O.main, { [O.fullBorderWithGradient]: null == S }),
         ref: l,
@@ -49,19 +49,19 @@ function v(e) {
                 ? (0, r.jsx)(u.Z, {
                       className: O.artwork,
                       src: S,
-                      width: v,
-                      height: y,
+                      width: I,
+                      height: v,
                       imageClassName: O.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
-            null != N &&
+            null != T &&
                 null != S &&
                 (0, r.jsx)("div", {
                     className: O.gradient,
                     style: {
                         background: "linear-gradient(180deg, "
-                            .concat((0, g.aD)(N, 0.16), " 0%, ")
-                            .concat((0, g.aD)(N, 1), " 100%)"),
+                            .concat((0, m.aD)(T, 0.16), " 0%, ")
+                            .concat((0, m.aD)(T, 1), " 100%)"),
                     },
                 }),
             null != S && (0, r.jsx)("div", { className: O.gradient }),
@@ -71,23 +71,23 @@ function v(e) {
                     (0, r.jsxs)("div", {
                         className: E.header,
                         children: [
-                            (0, r.jsx)(s.Heading, {
+                            (0, r.jsx)(o.Heading, {
                                 variant: "heading-xxl/normal",
                                 color: "always-white",
-                                children: _.intl.string(_.t.CCmhpF),
+                                children: b.intl.string(b.t.CCmhpF),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-lg/normal",
                                 color: "always-white",
-                                children: _.intl.string(_.t.gRAHcZ),
+                                children: b.intl.string(b.t.gRAHcZ),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(s.Button, {
+                    (0, r.jsx)(o.Button, {
                         variant: "overlay-primary",
                         size: "md",
-                        text: _.intl.string(_.t.VVFjAC),
-                        onClick: I,
+                        text: b.intl.string(b.t.VVFjAC),
+                        onClick: y,
                     }),
                 ],
             }),

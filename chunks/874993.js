@@ -30,8 +30,8 @@ function y(e) {
         [Z] = (0, m.RD)(P),
         { rulesByTriggerType: R } = (0, m.pH)(P),
         D = {
-            [p.vh.MEMBERS]: C.intl.string(C.t.sx4E5u),
-            [p.vh.CONTENT]: C.intl.string(C.t.fphZb2),
+            [p.vh.MEMBERS]: C.intl.string(C.t.sx4E5v),
+            [p.vh.CONTENT]: C.intl.string(C.t.fphZb0),
         },
         A = i.useMemo(
             () =>
@@ -88,7 +88,7 @@ function y(e) {
             (0, r.jsx)(s.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: C.intl.string(C.t.uRelg4),
+                children: C.intl.string(C.t.uRelgx),
             }),
             (0, r.jsxs)("div", {
                 className: O.descriptionContainer,
@@ -99,12 +99,12 @@ function y(e) {
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: C.intl.string(C.t.EwuSCQ),
+                                children: C.intl.string(C.t.EwuSCR),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 className: O.helpUrl,
-                                children: C.intl.format(C.t["B+sgGh"], {
+                                children: C.intl.format(C.t["B+sgGt"], {
                                     helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                                 }),
                             }),
@@ -116,7 +116,7 @@ function y(e) {
                             (0, r.jsx)(s.qEK, {
                                 src: (0, g.j)(),
                                 size: s.EFr.SIZE_80,
-                                "aria-label": C.intl.string(C.t.hG1StL),
+                                "aria-label": C.intl.string(C.t.hG1StD),
                             }),
                             (0, r.jsx)(s.IGR, {
                                 text: (0, r.jsxs)("div", {
@@ -130,7 +130,7 @@ function y(e) {
                                         (0, r.jsx)(s.Text, {
                                             variant: "text-xs/bold",
                                             className: O.automodText,
-                                            children: C.intl.string(C.t.hG1StL),
+                                            children: C.intl.string(C.t.hG1StD),
                                         }),
                                     ],
                                 }),

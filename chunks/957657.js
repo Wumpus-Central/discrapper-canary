@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(984370),
-    o = n(703656),
-    s = n(626135),
+    s = n(703656),
+    o = n(626135),
     c = n(804739),
     u = n(981631),
     d = n(388032),
@@ -12,7 +12,7 @@ var r = n(951288),
 let f = (0, c.Q)() || !1,
     h = i.memo(function (e) {
         let { currentRoute: t, renderToolbar: n } = e,
-            c = i.useContext(s.AnalyticsContext),
+            c = i.useContext(o.AnalyticsContext),
             h = f || t === u.Z5c.APPLICATION_LIBRARY_SETTINGS;
         return (0, r.jsxs)(a.Z, {
             className: p.libraryHeader,
@@ -22,7 +22,7 @@ let f = (0, c.Q)() || !1,
                     icon: l.vqy,
                     "aria-hidden": !0,
                 }),
-                (0, r.jsx)(a.Z.Title, { children: d.intl.string(d.t.cw57am) }),
+                (0, r.jsx)(a.Z.Title, { children: d.intl.string(d.t.cw57ar) }),
                 (0, r.jsx)(a.Z.Divider, {}),
                 (0, r.jsxs)(l.njP, {
                     type: "top-pill",
@@ -30,7 +30,7 @@ let f = (0, c.Q)() || !1,
                     onItemSelect: function (e) {
                         var n, r;
                         e !== t &&
-                            (0, o.uL)(e, {
+                            (0, s.uL)(e, {
                                 state: {
                                     analyticsSource:
                                         ((n = (function (e) {
@@ -82,12 +82,12 @@ let f = (0, c.Q)() || !1,
                     children: [
                         (0, r.jsx)(l.njP.Item, {
                             id: u.Z5c.APPLICATION_LIBRARY,
-                            children: d.intl.string(d.t.p7ARTE),
+                            children: d.intl.string(d.t.p7ARTB),
                         }),
                         h
                             ? (0, r.jsx)(l.njP.Item, {
                                   id: u.Z5c.APPLICATION_LIBRARY_SETTINGS,
-                                  children: d.intl.string(d.t["3D5yo6"]),
+                                  children: d.intl.string(d.t["3D5yo/"]),
                               })
                             : null,
                     ],

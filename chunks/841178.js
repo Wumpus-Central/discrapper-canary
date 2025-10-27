@@ -1,56 +1,56 @@
-n.d(i, { default: () => d });
+n.d(i, { default: () => c });
 var e = n(951288);
 n(647438);
-var a = n(481060),
-    r = n(600164),
+var r = n(481060),
+    a = n(600164),
     s = n(313201),
     o = n(952164),
-    l = n(388032),
-    c = n(551850);
-function d(t) {
+    d = n(388032),
+    l = n(551850);
+function c(t) {
     let { transitionState: i, onClose: n } = t,
-        d = (0, s.Dt)();
-    return (0, e.jsxs)(a.Y0X, {
-        "aria-labelledby": d,
+        c = (0, s.Dt)();
+    return (0, e.jsxs)(r.Y0X, {
+        "aria-labelledby": c,
         transitionState: i,
-        size: a.CgR.SMALL,
+        size: r.CgR.SMALL,
         parentComponent: "SpotifyPremiumUpgradeModal",
         children: [
-            (0, e.jsx)(a.xBx, {
+            (0, e.jsx)(r.xBx, {
                 separator: !1,
-                children: (0, e.jsx)(a.Heading, {
-                    id: d,
+                children: (0, e.jsx)(r.Heading, {
+                    id: c,
                     variant: "heading-lg/semibold",
-                    children: l.intl.formatToMarkdownString(l.t.DQsSGh, {}),
+                    children: d.intl.formatToMarkdownString(d.t.DQsSGr, {}),
                 }),
             }),
-            (0, e.jsxs)(a.hzk, {
+            (0, e.jsxs)(r.hzk, {
                 children: [
-                    (0, e.jsx)(r.Z, {
-                        justify: r.Z.Justify.CENTER,
-                        children: (0, e.jsx)("div", { className: c.image }),
+                    (0, e.jsx)(a.Z, {
+                        justify: a.Z.Justify.CENTER,
+                        children: (0, e.jsx)("div", { className: l.image }),
                     }),
-                    (0, e.jsx)(a.Text, {
-                        className: c.text,
+                    (0, e.jsx)(r.Text, {
+                        className: l.text,
                         variant: "text-sm/normal",
-                        children: l.intl.string(l.t.xGMwi4),
+                        children: d.intl.string(d.t.xGMwi9),
                     }),
                 ],
             }),
-            (0, e.jsx)(a.mzw, {
-                children: (0, e.jsxs)(a.ButtonGroup, {
+            (0, e.jsx)(r.mzw, {
+                children: (0, e.jsxs)(r.ButtonGroup, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, e.jsx)(a.Button, {
+                        (0, e.jsx)(r.Button, {
                             variant: "primary",
-                            text: l.intl.string(l.t.n8U5jY),
+                            text: d.intl.string(d.t.n8U5jd),
                             onClick: function () {
                                 (0, o.KK)(), n();
                             },
                         }),
-                        (0, e.jsx)(a.Button, {
+                        (0, e.jsx)(r.Button, {
                             variant: "secondary",
-                            text: l.intl.string(l.t["ETE/oK"]),
+                            text: d.intl.string(d.t["ETE/oC"]),
                             onClick: n,
                         }),
                     ],

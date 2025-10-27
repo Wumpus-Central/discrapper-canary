@@ -12,8 +12,8 @@ function d() {
     return (0, r.jsx)(s.U, {
         setting: l.s6.PRIVACY_DATA_BASIC_SERVICE_V2,
         children: (0, r.jsx)(s.H, {
-            header: u.intl.string(u.t.D60Gfn),
-            description: u.intl.format(u.t.R5N31N, {
+            header: u.intl.string(u.t.D60Gfj),
+            description: u.intl.format(u.t.R5N31P, {
                 onClick: () => {
                     (0, o.openUserSettings)(i.n.ACCOUNT_PANEL, {
                         section: c.oAB.ACCOUNT,

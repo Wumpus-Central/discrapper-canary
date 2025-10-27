@@ -145,8 +145,8 @@ let v = y(E({}, h.Z), {
             autocompletes: t,
             onHover: s,
             onClick: c,
-            titleWithQuery: m.t.HFRoZW,
-            titleWithoutQuery: m.intl.string(m.t["0hKkS0"]),
+            titleWithQuery: m.t.HFRoZR,
+            titleWithoutQuery: m.intl.string(m.t["0hKkS+"]),
             Component: o.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;

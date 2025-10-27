@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(66999),
     O = n(378844),
     y = n(359110),
-    v = n(922482),
-    j = n(431328),
+    j = n(922482),
+    v = n(431328),
     x = n(501655),
     C = n(427679),
     E = n(368442),
@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(592125),
     N = n(430824),
     Z = n(607744),
-    w = n(496675),
-    T = n(306680),
+    T = n(496675),
+    w = n(306680),
     A = n(9156),
     R = n(979651),
     D = n(934415),
@@ -138,9 +138,9 @@ class Y extends L.ZP {
                 unread: _,
                 resolvedUnreadSetting: O,
                 mentionCount: y,
-                isFavoriteSuggestion: v,
+                isFavoriteSuggestion: j,
             } = this.props,
-            { shouldShowGuildVerificationPopout: j } = this.state,
+            { shouldShowGuildVerificationPopout: v } = this.state,
             x = this.getVoiceStatesCount(),
             C = (0, r.jsxs)("li", {
                 className: o()(this.getModeClass(), { [V.disabled]: this.isDisabled() }),
@@ -152,7 +152,7 @@ class Y extends L.ZP {
                         renderPopout: this.renderPopout,
                         spacing: 0,
                         onRequestClose: this.closeGuildVerificationPopout,
-                        shouldShow: j,
+                        shouldShow: v,
                         children: () =>
                             (0, r.jsx)(s.u, {
                                 text: this.getTooltipText(),
@@ -161,7 +161,7 @@ class Y extends L.ZP {
                                     className: V.iconVisibility,
                                     iconClassName: o()({ [H.iconLive]: null != g }),
                                     channel: e,
-                                    selected: !v && t,
+                                    selected: !j && t,
                                     connected: n,
                                     unread: n ? _ : void 0,
                                     resolvedUnreadSetting: O,
@@ -175,7 +175,7 @@ class Y extends L.ZP {
                                     },
                                     connectDragPreview: d,
                                     subtitle: this.renderSubtitle(),
-                                    isFavoriteSuggestion: v,
+                                    isFavoriteSuggestion: j,
                                     "aria-label": (0, h.ZP)({
                                         channel: e,
                                         unread: _,
@@ -185,12 +185,12 @@ class Y extends L.ZP {
                                         needSubscriptionToAccess: b,
                                     }),
                                     children: [
-                                        v && this.renderAcceptSuggestionButton(),
-                                        v && this.renderRemoveSuggestionButton(),
-                                        !v && this.renderOpenChatButton(),
-                                        !v && this.renderInviteButton(),
-                                        !v && this.renderEditButton(),
-                                        !v && this.renderChannelInfo(),
+                                        j && this.renderAcceptSuggestionButton(),
+                                        j && this.renderRemoveSuggestionButton(),
+                                        !j && this.renderOpenChatButton(),
+                                        !j && this.renderInviteButton(),
+                                        !j && this.renderEditButton(),
+                                        !j && this.renderChannelInfo(),
                                     ],
                                 }),
                             }),
@@ -212,7 +212,7 @@ class Y extends L.ZP {
                     i = e.getGuildId();
                 null != i && (0, b.n)(i) && (0, m.hk)(i),
                     r && this.setState({ shouldShowGuildVerificationPopout: !0 }),
-                    t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, v.Cq)(e),
+                    t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, j.Cq)(e),
                     __OVERLAY__ || (0, y.Kh)(e.id);
             }),
             z(this, "handleClickChat", () => {
@@ -256,13 +256,13 @@ class Y extends L.ZP {
                 if (!t)
                     return (0, r.jsx)(s.u, {
                         asContainer: !0,
-                        text: F.intl.string(F.t.ZXxLQk),
+                        text: F.intl.string(F.t.ZXxLQg),
                         children: (0, r.jsx)(c.P3F, {
                             className: o()(V.iconItem, n ? V.alwaysShown : null),
                             onClick: () => {
                                 u.Z.updateChatOpen(e.id, !0), this.handleClickChat();
                             },
-                            "aria-label": F.intl.string(F.t.ZXxLQk),
+                            "aria-label": F.intl.string(F.t.ZXxLQg),
                             children: (0, r.jsx)(c.kBi, {
                                 size: "xs",
                                 color: "currentColor",
@@ -273,7 +273,7 @@ class Y extends L.ZP {
             }),
             z(this, "getTooltipText", () => {
                 let { connected: e } = this.props;
-                return this.isFull() && !e ? F.intl.string(F.t.rZfiNj) : null;
+                return this.isFull() && !e ? F.intl.string(F.t.rZfiNq) : null;
             }),
             z(this, "renderSubtitle", () => {
                 var e;
@@ -285,34 +285,34 @@ class Y extends L.ZP {
 let q = (0, p.B)((0, f.Q)(Y));
 function X(e) {
     let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, collapsed: o, voiceStates: s } = e,
-        c = (0, a.cj)([T.ZP], () => ({
-            unread: T.ZP.hasUnread(n.id),
-            mentionCount: T.ZP.getMentionCount(n.id),
+        c = (0, a.cj)([w.ZP], () => ({
+            unread: w.ZP.hasUnread(n.id),
+            mentionCount: w.ZP.getMentionCount(n.id),
         })),
         u = (0, a.e7)([A.ZP], () => A.ZP.resolveUnreadSetting(n)),
-        d = (0, a.cj)([P.Z, Z.Z, w.Z], () => {
+        d = (0, a.cj)([P.Z, Z.Z, T.Z], () => {
             let e = P.Z.getChannel(n.parent_id),
                 r = Z.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && w.Z.can(U.Plq.MANAGE_CHANNELS, n),
+                canManageChannel: null != t && T.Z.can(U.Plq.MANAGE_CHANNELS, n),
                 canReorderChannel:
                     !0 !== i &&
                     (t.id === B._ ||
-                        (null != e ? w.Z.can(U.Plq.MANAGE_CHANNELS, e) : w.Z.can(U.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: w.Z.can(U.Plq.MOVE_MEMBERS, n),
-                locked: !w.Z.can(U.Plq.CONNECT, n),
-                bypassLimit: w.Z.can(U.Plq.MOVE_MEMBERS, n),
+                        (null != e ? T.Z.can(U.Plq.MANAGE_CHANNELS, e) : T.Z.can(U.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: T.Z.can(U.Plq.MOVE_MEMBERS, n),
+                locked: !T.Z.can(U.Plq.CONNECT, n),
+                bypassLimit: T.Z.can(U.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !r.canChat,
             };
         }),
         p = (0, a.e7)([I.Z], () => I.Z.isCollapsed(n.parent_id)),
         f = (0, S.ZP)(n.id),
         h = (0, a.e7)([C.Z], () => C.Z.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, j.Rk)(n.id, x.pV.AUDIENCE),
+        g = (0, v.Rk)(n.id, x.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: b } = (0, _.Z)(n.id),
         O = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         y = (0, E.xJ)(n.id),
-        v = (0, M.Z)({
+        j = (0, M.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: o,
@@ -321,7 +321,7 @@ function X(e) {
             needSubscriptionToAccess: b,
             enableConnectedUserLimit: y || (n.userLimit > 0 && n.userLimit < U.xGv),
         }),
-        N = e.connected && null == v;
+        N = e.connected && null == j;
     return (0, r.jsx)(
         q,
         K(
@@ -341,7 +341,7 @@ function X(e) {
             {
                 isFavoriteSuggestion: l && !O,
                 forceShowButtons: N,
-                channelInfo: v,
+                channelInfo: j,
                 resolvedUnreadSetting: u,
             },
         ),

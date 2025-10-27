@@ -87,7 +87,7 @@ function Z() {
             color: "header-primary",
             variant: "heading-xl/semibold",
             className: p.title,
-            children: j.intl.string(j.t.hW0mBQ),
+            children: j.intl.string(j.t.hW0mBR),
         }),
     });
 }
@@ -97,7 +97,7 @@ function y() {
             color: "header-secondary",
             variant: "heading-md/semibold",
             className: p.errorTitle,
-            children: j.intl.string(j.t.obChXl),
+            children: j.intl.string(j.t.obChXk),
         }),
     });
 }
@@ -119,7 +119,7 @@ function C(e) {
             (0, l.jsx)(o.Text, {
                 color: "text-default",
                 variant: "text-md/normal",
-                children: j.intl.format(j.t.BdQTfX, { userRemainCount: n }),
+                children: j.intl.format(j.t.BdQTfR, { userRemainCount: n }),
             }),
         ],
     });
@@ -197,7 +197,7 @@ function P(e) {
         ],
     });
 }
-function E(e) {
+function k(e) {
     let { children: n, style: t } = e;
     return (0, l.jsx)("div", {
         className: p.container,
@@ -205,9 +205,9 @@ function E(e) {
         children: n,
     });
 }
-function k(e) {
+function E(e) {
     let { children: n, height: t } = e;
-    return (0, l.jsx)(E, {
+    return (0, l.jsx)(k, {
         style: { height: t },
         children: n,
     });
@@ -216,7 +216,7 @@ function w(e) {
     let { guildEvent: n, recurrenceId: r, eventUsers: i, loading: s, error: c, containerHeight: d } = e,
         u = (0, g.Z)(n.guild_id, n.id, r);
     if (s && 0 === i.length)
-        return (0, l.jsx)(k, {
+        return (0, l.jsx)(E, {
             height: d,
             children: (0, l.jsx)(o.$jN, {
                 type: o.$jN.Type.SPINNING_CIRCLE,
@@ -224,7 +224,7 @@ function w(e) {
             }),
         });
     if (null != c && 0 === i.length)
-        return (0, l.jsx)(k, {
+        return (0, l.jsx)(E, {
             height: d,
             children: (0, l.jsx)(y, {}),
         });
@@ -232,11 +232,11 @@ function w(e) {
     return (
         i.length >= v.rC && u > v.rC && (_ = Math.max(u - i.length, 0)),
         0 === i.length
-            ? (0, l.jsx)(k, {
+            ? (0, l.jsx)(E, {
                   height: d,
                   children: (0, l.jsx)(Z, {}),
               })
-            : (0, l.jsx)(E, {
+            : (0, l.jsx)(k, {
                   children: (0, l.jsx)(P, {
                       eventUsers: i,
                       guildId: n.guild_id,

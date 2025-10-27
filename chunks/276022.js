@@ -25,7 +25,7 @@ function E(e) {
         N = (0, l.LD)(y, C),
         R = (0, l.PL)(A, C),
         P = (0, a.e7)([_.Z], () => null != _.Z.getNewestTokenForApplication(I)),
-        { isUserApp: w, isGuildApp: D } = i.useMemo(() => {
+        { isUserApp: D, isGuildApp: w } = i.useMemo(() => {
             var e, t, n, r;
             if (null == I)
                 return {
@@ -62,27 +62,27 @@ function E(e) {
     if (O === m.IlC.POPOUT) return null;
     let M = [];
     return (
-        D &&
+        w &&
             S &&
             M.push(
                 (0, r.jsx)(
                     o.sNh,
                     {
                         id: "manage-server-integration",
-                        label: g.intl.string(g.t.IuSJT0),
+                        label: g.intl.string(g.t.IuSJT8),
                         action: L,
                     },
                     "manage-server-integration",
                 ),
             ),
-        w &&
+        D &&
             P &&
             M.push(
                 (0, r.jsx)(
                     o.sNh,
                     {
                         id: "manage-authorized-app",
-                        label: g.intl.string(g.t.V8ruv7),
+                        label: g.intl.string(g.t.V8ruvz),
                         action: x,
                     },
                     "manage-authorized-app",

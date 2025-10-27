@@ -46,7 +46,7 @@ function b(e) {
             null != n
                 ? (0, r.jsx)(y, {
                       icon: l.xPt,
-                      text: m.intl.format(m.t["5k5OKC"], { origin: n }),
+                      text: m.intl.format(m.t["5k5OKD"], { origin: n }),
                   })
                 : null,
             (0, r.jsx)(y, {
@@ -55,12 +55,12 @@ function b(e) {
             }),
             (0, r.jsx)(y, {
                 icon: l.T39,
-                text: m.intl.formatToPlainString(m.t["+1bjc3"], { date: T }),
+                text: m.intl.formatToPlainString(m.t["+1bjc8"], { date: T }),
             }),
             s.includes(o.x.BOT) && null != O
                 ? (0, r.jsx)(y, {
                       icon: l.wGt,
-                      text: m.intl.formatToPlainString(m.t.UHGHSE, { guildCount: O }),
+                      text: m.intl.formatToPlainString(m.t.UHGHSP, { guildCount: O }),
                   })
                 : null,
             (0, r.jsx)(y, {

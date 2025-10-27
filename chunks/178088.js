@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(675478),
     O = n(581883),
     y = n(585483),
-    v = n(153209),
-    j = n(903672),
+    j = n(153209),
+    v = n(903672),
     x = n(791914),
     C = n(711165),
     E = n(946443),
@@ -32,8 +32,8 @@ function Z(e) {
             onClose: n,
             children: l,
             badgeState: Z,
-            popoutPosition: w,
-            popoutAlign: T,
+            popoutPosition: T,
+            popoutAlign: w,
             targetElementRef: A,
             spacing: R,
             dialogClassName: D,
@@ -100,14 +100,14 @@ function Z(e) {
         children: (0, r.jsx)(u.yRy, {
             targetElementRef: A,
             animation: u.yRy.Animation.NONE,
-            position: w,
-            align: T,
+            position: T,
+            align: w,
             autoInvert: !1,
             shouldShow: M,
             onRequestClose: V,
             renderPopout: function () {
                 return (0, r.jsx)(u.VqE, {
-                    "aria-label": P.intl.string(P.t.GSmTKC),
+                    "aria-label": P.intl.string(P.t.GSmTKJ),
                     className: D,
                     children: (0, r.jsx)("div", {
                         className: o()(N.container, { [N.widerInbox]: X }),
@@ -120,9 +120,9 @@ function Z(e) {
                             }),
                             children:
                                 G === c.X.FOR_YOU
-                                    ? (0, r.jsx)(v.ZP, {})
+                                    ? (0, r.jsx)(j.ZP, {})
                                     : G === c.X.MENTIONS
-                                      ? (0, r.jsx)(j.Z, { onJump: q })
+                                      ? (0, r.jsx)(v.Z, { onJump: q })
                                       : Y && G === c.X.GAME_INVITES
                                         ? (0, r.jsx)(S.Z, {})
                                         : z && W && G === c.X.BOOKMARKS

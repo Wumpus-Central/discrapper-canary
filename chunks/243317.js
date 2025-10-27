@@ -7,7 +7,7 @@ var i = n(28664),
     s = n(136038);
 function l() {
     return (0, r.jsx)(i.u, {
-        text: o.intl.string(o.t["RO/KYm"]),
+        text: o.intl.string(o.t["RO/KYj"]),
         children: (0, r.jsx)("div", {
             className: s.badge,
             children: (0, r.jsx)(a.LQn, {

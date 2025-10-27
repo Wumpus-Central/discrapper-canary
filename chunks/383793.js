@@ -28,7 +28,7 @@ function y(e) {
             variant: "text-sm/medium",
             color: "text-secondary",
             className: O.vanityInfo,
-            children: C.intl.format(C.t["1qTOvr"], {
+            children: C.intl.format(C.t["1qTOvn"], {
                 urlText: e,
                 urlValue: e,
             }),
@@ -57,13 +57,13 @@ function E(e) {
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-sm/semibold",
                         color: "text-default",
-                        children: C.intl.string(C.t["6oJyq6"]),
+                        children: C.intl.string(C.t["6oJyq5"]),
                     }),
                     n.length > 0
                         ? (0, r.jsx)(a.Text, {
                               variant: "text-sm/medium",
                               color: "text-secondary",
-                              children: C.intl.format(C.t.MVWOUV, { uses: l }),
+                              children: C.intl.format(C.t.MVWOUY, { uses: l }),
                           })
                         : null,
                 ],
@@ -80,7 +80,7 @@ function E(e) {
                       children: (0, r.jsx)(a.Button, {
                           variant: "critical-secondary",
                           onClick: d,
-                          text: C.intl.string(C.t["3ggb6O"]),
+                          text: C.intl.string(C.t["3ggb6K"]),
                       }),
                   })
                 : null,

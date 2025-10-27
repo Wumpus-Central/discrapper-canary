@@ -1,4 +1,4 @@
-n.d(t, { default: () => V }), n(388685), n(539854), n(415506);
+n.d(t, { default: () => U }), n(388685), n(539854), n(415506);
 var l = n(951288),
     a = n(647438),
     s = n(120356),
@@ -40,10 +40,10 @@ function I() {
                 style: { marginBottom: 10 },
             }),
             (0, l.jsx)(c.OZU, {
-                note: Z.intl.string(Z.t.bwytdn),
+                note: Z.intl.string(Z.t.bwytdh),
                 noteClassName: y.emptyText,
                 className: y.emptyTitle,
-                children: Z.intl.string(Z.t.vhQK3t),
+                children: Z.intl.string(Z.t.vhQK3o),
             }),
         ],
     });
@@ -75,7 +75,7 @@ function L(e) {
     return (0, l.jsx)(c.njP, {
         look: "custom",
         orientation: "vertical",
-        "aria-label": Z.intl.string(Z.t["qbir+/"]),
+        "aria-label": Z.intl.string(Z.t["qbir+4"]),
         selectedItem: a,
         onItemSelect: s,
         children: t.answers.map((e) => {
@@ -83,7 +83,7 @@ function L(e) {
             let s = String(e.answer_id),
                 i = null != (t = n[s]) ? t : 0,
                 { emoji: o, text: d } = e.poll_media,
-                u = Z.intl.formatToPlainString(Z.t.wqBc7O, {
+                u = Z.intl.formatToPlainString(Z.t.wqBc7A, {
                     numVotes: i,
                     option: d,
                 }),
@@ -131,7 +131,7 @@ function L(e) {
         }),
     });
 }
-function E(e) {
+function A(e) {
     let { user: t, channel: n } = e,
         a = (0, o.e7)([p.default], () => p.default.getUser(t.id), [t]),
         s = C.ZP.useName(n.guild_id, n.id, t);
@@ -170,7 +170,7 @@ function E(e) {
         ],
     });
 }
-function U(e) {
+function E(e) {
     let { message: t, reaction: n, channel: s } = e,
         { reactors: r, hasMore: i } = (0, S.Z)({
             channelId: s.id,
@@ -225,7 +225,7 @@ function U(e) {
                       ? (0, l.jsx)(c.$jN, { className: y.spinner }, "loadingMore")
                       : null != a &&
                         (0, l.jsx)(
-                            E,
+                            A,
                             {
                                 channel: s,
                                 user: a,
@@ -253,7 +253,7 @@ function U(e) {
         }),
     });
 }
-function V(e) {
+function U(e) {
     var t;
     let { message: n, initialAnswerId: s, onClose: r, transitionState: d } = e,
         u = (0, o.e7)([j.Z], () => j.Z.getChannel(n.getChannelId())),
@@ -291,7 +291,7 @@ function V(e) {
                 t
             );
         }, [null == (t = n.poll) ? void 0 : t.answers]),
-        g = Z.intl.formatToPlainString(Z.t.wqBc7O, {
+        g = Z.intl.formatToPlainString(Z.t.wqBc7A, {
             numVotes: p,
             option: f[m],
         });
@@ -304,7 +304,7 @@ function V(e) {
         children: [
             (0, l.jsx)(i.xBx, {
                 title: n.poll.question.text,
-                subtitle: Z.intl.format(Z.t.XRkuoa, { count: v.toLocaleString() }),
+                subtitle: Z.intl.format(Z.t.XRkuof, { count: v.toLocaleString() }),
             }),
             (0, l.jsx)(c.w0Z, {
                 className: y.body,
@@ -327,7 +327,7 @@ function V(e) {
                             className: y.panel,
                             children:
                                 null != _ && p > 0
-                                    ? (0, l.jsx)(U, {
+                                    ? (0, l.jsx)(E, {
                                           message: n,
                                           reaction: _,
                                           channel: u,

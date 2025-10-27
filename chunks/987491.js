@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => G });
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -35,13 +35,13 @@ function A(e) {
         { status: r } = e;
     switch (r) {
         case f.wB.REJECTED:
-            (t = O.t["7YSJ6e"]), (n = O.t.i05OUV);
+            (t = O.t["7YSJ6f"]), (n = O.t.i05OUR);
             break;
         case f.wB.APPROVED:
-            (t = O.t.bv82GR), (n = O.t.D4OUHR);
+            (t = O.t.bv82GS), (n = O.t.D4OUHT);
             break;
         default:
-            (t = O.t["/wqiSk"]), (n = O.t.o47YZm);
+            (t = O.t["/wqiSv"]), (n = O.t.o47YZs);
     }
     return (0, l.jsxs)("div", {
         className: I.emptyContainer,
@@ -63,7 +63,7 @@ function A(e) {
         ],
     });
 }
-function Z(e) {
+function M(e) {
     let { sortOrder: t, onSortChange: n } = e;
     return (0, l.jsx)("thead", {
         children: (0, l.jsxs)("tr", {
@@ -74,7 +74,7 @@ function Z(e) {
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
-                        children: O.intl.string(O.t.Es7n9f),
+                        children: O.intl.string(O.t.Es7n9c),
                     }),
                 }),
                 (0, l.jsx)("th", {
@@ -86,7 +86,7 @@ function Z(e) {
                             (0, l.jsx)(u.Text, {
                                 variant: "eyebrow",
                                 color: "interactive-normal",
-                                children: O.intl.string(O.t.EZ5QWF),
+                                children: O.intl.string(O.t.EZ5QWL),
                             }),
                             t === f.Nw.TIMESTAMP_ASC
                                 ? (0, l.jsx)(E.Z, {
@@ -105,14 +105,14 @@ function Z(e) {
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
-                        children: O.intl.string(O.t["5Q9xGh"]),
+                        children: O.intl.string(O.t["5Q9xGr"]),
                     }),
                 }),
             ],
         }),
     });
 }
-let M = r.memo(function (e) {
+let Z = r.memo(function (e) {
         let { joinRequest: t, user: n } = e,
             { joinRequestId: i, guildId: a } = t,
             { analyticsLocations: s } = (0, j.ZP)(),
@@ -187,7 +187,7 @@ let M = r.memo(function (e) {
                   }),
                   children: [
                       (0, l.jsx)("td", {
-                          children: (0, l.jsx)(M, {
+                          children: (0, l.jsx)(Z, {
                               joinRequest: t,
                               user: b,
                           }),
@@ -205,7 +205,7 @@ let M = r.memo(function (e) {
                           children:
                               v &&
                               (0, l.jsx)(d.u, {
-                                  text: O.intl.string(O.t.x8Nn4O),
+                                  text: O.intl.string(O.t.x8Nn4M),
                                   children: (0, l.jsx)(u.P3F, {
                                       onClick: (e) => {
                                           (0, m.jW)(
@@ -293,7 +293,7 @@ let M = r.memo(function (e) {
                   ],
               });
     }),
-    G = () => {
+    k = () => {
         let e = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
             t = "".concat(Math.floor(50 * Math.random()) + 100, "px"),
             n = "".concat(Math.floor(25 * Math.random()) + 50, "px");
@@ -333,7 +333,7 @@ let M = r.memo(function (e) {
             ],
         });
     };
-function k(e) {
+function G(e) {
     let { guildId: t, currentTab: n } = e,
         i = r.useRef(null),
         a = (0, c.e7)([N.Z], () => N.Z.getGuild(t)),
@@ -363,13 +363,13 @@ function k(e) {
                   children: (0, l.jsxs)("table", {
                       className: I.table,
                       children: [
-                          (0, l.jsx)(Z, {
+                          (0, l.jsx)(M, {
                               sortOrder: s,
                               onSortChange: x,
                           }),
                           (0, l.jsx)("tbody", {
                               children: o
-                                  ? [, , , , ,].fill(0).map((e, t) => (0, l.jsx)(G, {}, "placeholder-".concat(t)))
+                                  ? [, , , , ,].fill(0).map((e, t) => (0, l.jsx)(k, {}, "placeholder-".concat(t)))
                                   : 0 === d.length
                                     ? (0, l.jsx)("td", {
                                           colSpan: 3,

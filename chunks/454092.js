@@ -15,14 +15,14 @@ var i,
 function c(e, t) {
     let n;
     0 === e
-        ? (n = o.intl.format(o.t["/S6f5+"], {}))
+        ? (n = o.intl.format(o.t["/S6f5y"], {}))
         : 1 === e
-          ? (n = o.intl.format(o.t.EBhv4e, { name: t }))
-          : 2 === e && (n = o.intl.format(o.t["59Dbw8"], { name: t })),
+          ? (n = o.intl.format(o.t.EBhv4R, { name: t }))
+          : 2 === e && (n = o.intl.format(o.t["59Dbw0"], { name: t })),
         r.Z.show({
-            title: o.intl.string(o.t.vElC9f),
+            title: o.intl.string(o.t.vElC9b),
             body: n,
-            cancelText: o.intl.string(o.t.psXQHB),
+            cancelText: o.intl.string(o.t.psXQHP),
             onCancel() {
                 window.open(l.Z.getArticleURL(a.BhN.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT));
             },

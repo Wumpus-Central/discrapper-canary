@@ -34,8 +34,8 @@ function E(e) {
             C(), T({ action: b ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
         }, [C, b, T]),
         P = null != E,
-        w = (0, c.q)(E);
-    return P && null == w
+        D = (0, c.q)(E);
+    return P && null == D
         ? null
         : (0, r.jsxs)("div", {
               className: o()(g.container, y),
@@ -43,24 +43,24 @@ function E(e) {
                   P
                       ? (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
-                            children: m.intl.format(b ? m.t.syHjLC : m.t.V15uUF, {
+                            children: m.intl.format(b ? m.t.syHjLL : m.t.V15uUI, {
                                 username: I,
                                 applicationIcon: () =>
                                     (0, r.jsx)(
                                         u.Z,
                                         {
                                             className: g.gameIcon,
-                                            game: w,
+                                            game: D,
                                             size: u.A.XXSMALL,
                                         },
-                                        null == w ? void 0 : w.id,
+                                        null == D ? void 0 : D.id,
                                     ),
-                                applicationName: null == w ? void 0 : w.name,
+                                applicationName: null == D ? void 0 : D.name,
                             }),
                         })
                       : (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
-                            children: m.intl.format(m.t.uIomX1, { username: I }),
+                            children: m.intl.format(m.t.uIomXw, { username: I }),
                         }),
                   (0, r.jsxs)("div", {
                       className: g.buttonContainer,
@@ -69,13 +69,13 @@ function E(e) {
                               variant: v ? "secondary" : "primary",
                               size: "sm",
                               onClick: N,
-                              text: m.intl.string(m.t.ZcibdX),
+                              text: m.intl.string(m.t.Zcibdf),
                           }),
                           (0, r.jsx)(s.Button, {
                               variant: "secondary",
                               size: "sm",
                               onClick: R,
-                              text: m.intl.string(m.t.xuio0N),
+                              text: m.intl.string(m.t.xuio0C),
                           }),
                       ],
                   }),

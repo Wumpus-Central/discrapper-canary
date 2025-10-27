@@ -12,6 +12,6 @@ let s = n(848304),
     c = () =>
         (0, i.jsx)(r.i, {
             bannerIcon: s,
-            bannerHeader: o.intl.string(o.t.EouHws),
-            bannerSubtext: o.intl.format(o.t.PThBen, { appealLink: a.Z }),
+            bannerHeader: o.intl.string(o.t.EouHwv),
+            bannerSubtext: o.intl.format(o.t.PThBel, { appealLink: a.Z }),
         });

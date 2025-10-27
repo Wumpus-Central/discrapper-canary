@@ -55,13 +55,13 @@ function f(t, e) {
 function b(t) {
     let { guildEventId: e, guild: b, channel: v, recurrenceId: E, isRecurrenceItem: p } = t,
         { canManageGuildEvent: Z } = (0, u.XJ)(null != v ? v : b),
-        y = (0, r.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(e)),
-        O = Z(y),
-        h = (0, s.Z)(),
-        P = (0, c.Z)(E, null == y ? void 0 : y.id),
+        h = (0, r.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(e)),
+        y = Z(h),
+        P = (0, s.Z)(),
+        O = (0, c.Z)(E, null == h ? void 0 : h.id),
         m = (0, a.zI)(e, E);
-    if (!O || null == m || null == y) return null;
-    let j = null != y.recurrence_rule && !p,
+    if (!y || null == m || null == h) return null;
+    let j = null != h.recurrence_rule && !p,
         N = (t) => {
             (null == E || t) && !p
                 ? (0, i.ZDy)(async () => {
@@ -79,7 +79,7 @@ function b(t) {
                                   guildId: b.id,
                               }),
                           );
-                  }, h)
+                  }, P)
                 : null != E &&
                   (0, i.ZDy)(async () => {
                       let { default: t } = await n.e("27919").then(n.bind(n, 379038));
@@ -87,31 +87,31 @@ function b(t) {
                           (0, l.jsx)(
                               t,
                               f(g({}, e), {
-                                  guildEvent: y,
+                                  guildEvent: h,
                                   recurrenceId: E,
                               }),
                           );
-                  }, h);
+                  }, P);
         };
     return (0, l.jsx)(i.sNh, {
-        id: d.intl.string(d.t.Rgy2dX),
-        label: d.intl.string(d.t.Rgy2dX),
+        id: d.intl.string(d.t.Rgy2dU),
+        label: d.intl.string(d.t.Rgy2dU),
         action: j ? void 0 : () => N(!0),
         children:
             j &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(i.sNh, {
-                        id: d.intl.string(d.t.wmVmXF),
-                        label: d.intl.string(d.t.wmVmXF),
+                        id: d.intl.string(d.t.wmVmXN),
+                        label: d.intl.string(d.t.wmVmXN),
                         action: () => N(!1),
-                        disabled: (null == P ? void 0 : P.is_canceled) || m.startTime.getTime() < Date.now(),
+                        disabled: (null == O ? void 0 : O.is_canceled) || m.startTime.getTime() < Date.now(),
                     }),
                     (0, l.jsx)(i.sNh, {
-                        id: d.intl.string(d.t.BW1Qoq),
-                        label: d.intl.string(d.t.BW1Qoq),
+                        id: d.intl.string(d.t.BW1Qoh),
+                        label: d.intl.string(d.t.BW1Qoh),
                         action: () => N(!0),
-                        disabled: new Date(y.scheduled_start_time).getTime() < Date.now(),
+                        disabled: new Date(h.scheduled_start_time).getTime() < Date.now(),
                     }),
                 ],
             }),

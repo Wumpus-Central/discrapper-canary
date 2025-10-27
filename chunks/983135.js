@@ -24,8 +24,8 @@ var l = n(570140),
     p = n(889369),
     N = n(570961),
     O = n(84658),
-    S = n(176505),
-    E = n(290511),
+    E = n(176505),
+    S = n(290511),
     x = n(388032);
 function T(e) {
     l.Z.dispatch({
@@ -44,10 +44,10 @@ async function j(e, t) {
     let n = s.Z.getEnabled(e),
         a = Array.from(p.Z.editedDefaultChannelIds).filter((e) => null != g.Z.getChannel(e)),
         [o, d] = (0, c.d9)(e, [...a]);
-    if (n && t === E.Un.ONBOARDING_DEFAULT && (d.length < E.md || o.length < E.X))
+    if (n && t === S.Un.ONBOARDING_DEFAULT && (d.length < S.md || o.length < S.X))
         return void r.Z.show({
-            title: x.intl.string(x.t.iLdiqa),
-            body: x.intl.string(x.t.JOT74e),
+            title: x.intl.string(x.t.iLdiqY),
+            body: x.intl.string(x.t.JOT74c),
         });
     try {
         await (0, N.n_)(e, { mode: t });
@@ -55,7 +55,7 @@ async function j(e, t) {
         var u;
         let { fieldName: e, error: t } = null != (u = new i.Z(n).getAnyErrorMessageAndField()) ? u : {};
         r.Z.show({
-            title: x.intl.string(x.t.iLdiqa),
+            title: x.intl.string(x.t.iLdiqY),
             body: [e, t].filter(f.lm).join(": "),
         });
     }
@@ -94,6 +94,6 @@ async function D(e) {
         await (0, d.default)({
             guildId: t.id,
             isPreview: !0,
-            returnChannelId: S.oC.GUILD_HOME,
+            returnChannelId: E.oC.GUILD_HOME,
         }));
 }

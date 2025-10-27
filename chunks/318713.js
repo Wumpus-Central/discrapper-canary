@@ -83,7 +83,7 @@ let E = i.memo(function (e) {
             S = i.useMemo(() => (0, l.Hg)(T), [T]),
             A = i.useMemo(() => (null != p ? (0, l.vc)(T, p) : a ? (0, l.vc)(T, "LT") : (0, l.Y4)(T, !0)), [T, p, a]),
             C = i.useMemo(() => (a ? (0, u.Z)(A) : null), [a, A]),
-            N = i.useMemo(() => (O ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: S }) : S), [O, S]);
+            N = i.useMemo(() => (O ? d.intl.formatToPlainString(d.t.CDzOFd, { timeFormatted: S }) : S), [O, S]);
         return (0, r.jsx)("span", {
             className: o()(n, C, {
                 [f.timestamp]: !0,

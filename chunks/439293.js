@@ -9,10 +9,10 @@ var r = n(278074),
 function c(e) {
     let { step: t, onClose: n, isGift: c } = e,
         d = (0, r.EQ)(t)
-            .with(a.h8.REVIEW, () => (c ? o.intl.string(o.t.wKaVLC) : o.intl.string(o.t.Whxhpq)))
-            .with(a.h8.ADD_PAYMENT_STEPS, () => o.intl.string(o.t.QiGOam))
-            .with(a.h8.GIFT_CUSTOMIZATION, () => o.intl.string(o.t["JCFN//"]))
-            .with(a.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => o.intl.string(o.t.lDbi6O))
+            .with(a.h8.REVIEW, () => (c ? o.intl.string(o.t.wKaVLC) : o.intl.string(o.t.Whxhpm)))
+            .with(a.h8.ADD_PAYMENT_STEPS, () => o.intl.string(o.t.QiGOak))
+            .with(a.h8.GIFT_CUSTOMIZATION, () => o.intl.string(o.t["JCFN/y"]))
+            .with(a.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => o.intl.string(o.t.lDbi6H))
             .with(a.h8.CONFIRM, () => "")
             .otherwise(() => null);
     return null == d

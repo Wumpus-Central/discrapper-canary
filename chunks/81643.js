@@ -5,11 +5,11 @@ n.d(t, {
     L0: () => N,
     L5: () => I,
     M$: () => A,
-    WD: () => D,
+    WD: () => w,
     bj: () => O,
     g0: () => C,
     kJ: () => P,
-    l6: () => w,
+    l6: () => D,
     pY: () => R,
     sf: () => v,
     yo: () => T,
@@ -88,14 +88,14 @@ function P() {
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function w() {
+function D() {
     let e = (0, i.e7)([_.default], () => _.default.getCurrentUser());
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function D(e) {
+function w(e) {
     let {
             onComplete: t,
             isRetry: n = !1,

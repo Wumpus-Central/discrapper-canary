@@ -48,7 +48,7 @@ class u extends (r = s.Component) {
                 label: e.getName(n),
                 value: e.id,
             })),
-            placeholder: d.intl.string(d.t.Sw7pHB),
+            placeholder: d.intl.string(d.t.Sw7pHF),
             value: t,
             onChange: this.handleChange,
             className: l,

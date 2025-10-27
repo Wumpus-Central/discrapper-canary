@@ -99,19 +99,17 @@ function h(e) {
                               (0, i.jsx)(
                                   g.Z,
                                   {
-                                      guildId: n,
                                       game: e,
                                       onClick: () =>
                                           (0, x.Z)({
                                               guildId: n,
                                               stepConfig: j,
                                               initialGameServerGame: e,
-                                              analyticsLocation: d.Z.GAME_SERVER_PAGE_SIDEBAR,
+                                              analyticsLocation: d.Z.GAME_SERVER_OVERVIEW,
                                           }),
                                       imageClassName: p.image,
                                       titleClassName: p.title,
                                       disabled: h,
-                                      location: d.Z.GAME_SERVER_PAGE_SIDEBAR,
                                   },
                                   "sidebar-game-".concat(t, "-").concat(e.id),
                               ),

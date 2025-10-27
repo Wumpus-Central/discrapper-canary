@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var r = n(442837),
     i = n(567409),
     a = n(594174),
     l = n(823379),
     o = n(652853);
-function s(e) {
+function c(e) {
     let { userId: t } = (0, o.z)(),
         n = (0, i.N)(e);
     return (0, r.Wu)([a.default], () => {

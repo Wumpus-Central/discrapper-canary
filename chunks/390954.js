@@ -116,7 +116,7 @@ class I extends (r = a.PureComponent) {
                                         variant: "secondary",
                                         onClick: this.handleEditClick,
                                         size: "sm",
-                                        text: g.intl.string(g.t.bt75u7),
+                                        text: g.intl.string(g.t.bt75uw),
                                     }),
                           ],
                       }),
@@ -147,18 +147,18 @@ class T extends a.PureComponent {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: "text-sm/normal",
-                                  children: g.intl.string(g.t.aRHpAA),
+                                  children: g.intl.string(g.t.aRHpAB),
                               }),
                               (0, i.jsx)("div", {
                                   className: E.subText,
-                                  children: g.intl.string(g.t.o9bOIi),
+                                  children: g.intl.string(g.t.o9bOIl),
                               }),
                           ],
                       })
                     : null,
                 (0, i.jsx)(l.zxk, {
                     onClick: this.handleAddPaymentMethod,
-                    text: g.intl.string(g.t.CpOiEB),
+                    text: g.intl.string(g.t.CpOiEO),
                 }),
             ],
         });
@@ -208,13 +208,13 @@ class T extends a.PureComponent {
                             className: E.lockIcon,
                         }),
                         " ",
-                        g.intl.string(g.t.W26xGR),
+                        g.intl.string(g.t.W26xGQ),
                     ],
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
-                    children: g.intl.string(g.t.h6V3uL),
+                    children: g.intl.string(g.t.h6V3uK),
                 }),
                 f,
                 d !== l.length - 1 ? (0, i.jsx)(c.izJ, { className: E.__invalid_sourceDivider }) : null,

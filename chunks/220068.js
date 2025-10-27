@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s }), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Z: () => o }), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(948789),
     i = n(972959),
     l = n(113434),
     a = n(981631);
-let o = Object.freeze({ tab: l.e5.ALL }),
-    s = (0, i.H)((e) => {
+let s = Object.freeze({ tab: l.e5.ALL }),
+    o = (0, i.H)((e) => {
         var t, n;
         return (
             (t = (function (e) {
@@ -31,7 +31,7 @@ let o = Object.freeze({ tab: l.e5.ALL }),
                         });
                 }
                 return e;
-            })({}, o)),
+            })({}, s)),
             (n = n =
                 {
                     initializeFromUrl: (t, n) => {

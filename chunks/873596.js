@@ -96,7 +96,7 @@ function T(e) {
 }
 function m(e) {
     let { channelId: t, isOverlay: n, lobbyId: i, closePopout: r } = e,
-        a = (0, g.J)({ channelId: t }) ? N.intl.string(N.t["3BogKS"]) : N.intl.string(N.t.ETIVvr);
+        a = (0, g.J)({ channelId: t }) ? N.intl.string(N.t["3BogKe"]) : N.intl.string(N.t.ETIVvg);
     return n
         ? (0, l.jsx)(_, {
               lobbyId: i,
@@ -138,7 +138,7 @@ function I(e) {
                     className: O.title,
                     variant: "heading-lg/bold",
                     color: "header-primary",
-                    children: t ? N.intl.string(N.t.IlHdW1) : N.intl.string(N.t.WsOisr),
+                    children: t ? N.intl.string(N.t.IlHdW8) : N.intl.string(N.t.WsOisp),
                 }),
                 (0, l.jsxs)(a.njP, {
                     className: O.tabs,
@@ -150,14 +150,14 @@ function I(e) {
                         (0, l.jsx)(a.njP.Item, {
                             id: E.tu.RTC_DEBUG_PANEL,
                             className: O.tabBarItem,
-                            children: N.intl.string(N.t.MBY1Pj),
+                            children: N.intl.string(N.t.MBY1Pm),
                         }),
                         h
                             ? null
                             : (0, l.jsx)(a.njP.Item, {
                                   id: E.tu.RTC_SECURE_FRAMES,
                                   className: O.tabBarItem,
-                                  children: N.intl.string(N.t.zC6o3t),
+                                  children: N.intl.string(N.t.zC6o3s),
                               }),
                     ],
                 }),

@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(966902),
     f = n(562618),
     _ = n(803866),
-    p = n(751611),
+    p = n(982519),
     h = n(388032),
     m = n(37751);
 function g(e, t, n) {
@@ -117,8 +117,8 @@ function I(e) {
             "popoverRef",
         ]);
     let P = i.useRef(null),
-        w = (0, a.j1L)(b),
-        D = i.useCallback(
+        D = (0, a.j1L)(b),
+        w = i.useCallback(
             () => ({
                 type: "VIDEO",
                 url: g,
@@ -138,7 +138,7 @@ function I(e) {
         }, [C]),
         M = i.useCallback(() => {
             null !== P.current && P.current.pause();
-            let e = D();
+            let e = w();
             (0, l.K)({
                 items: [e],
                 startingIndex: 0,
@@ -147,8 +147,8 @@ function I(e) {
             }),
                 null == C || C(),
                 null == A || A();
-        }, [D, A, C]),
-        k = w
+        }, [w, A, C]),
+        k = D
             ? (0, r.jsx)(a.zsu, {
                   type: "image",
                   src: b,

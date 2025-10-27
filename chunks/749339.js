@@ -14,7 +14,7 @@ function c(e) {
         ? null
         : (0, r.jsx)(i.sNh, {
               id: "copy-text",
-              label: s.intl.string(s.t.JrGD7O),
+              label: s.intl.string(s.t.JrGD7E),
               icon: i.TIy,
               action: () => {
                   (0, o.JG)(n);

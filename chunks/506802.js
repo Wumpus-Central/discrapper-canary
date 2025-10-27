@@ -1,6 +1,6 @@
 n.d(t, {
     aM: () => j,
-    gq: () => D,
+    gq: () => w,
     jS: () => U,
     r6: () => S,
 }),
@@ -115,7 +115,7 @@ let A = 16,
         green: E.tooltipGreen,
         red: E.tooltipRed,
     });
-function w(e, t, n) {
+function D(e, t, n) {
     let r = "left" === e || "right" === e,
         i = r ? "top" : "left",
         a = r ? "top" : "left",
@@ -127,7 +127,7 @@ function w(e, t, n) {
         { [i]: "calc(".concat(s, " + ").concat(l, "px)") }
     );
 }
-let D = (e) => {
+let w = (e) => {
         let {
                 targetElementRef: t,
                 align: n = "center",
@@ -164,11 +164,11 @@ let D = (e) => {
                     children: [
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipPointer, E.tooltipPointerBg, b),
-                            style: w(null != t ? t : r, n, _),
+                            style: D(null != t ? t : r, n, _),
                         }),
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipPointer, b),
-                            style: w(null != t ? t : r, n, _),
+                            style: D(null != t ? t : r, n, _),
                         }),
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipContent, { [E.tooltipContentAllowOverflow]: m }, f),
@@ -209,7 +209,7 @@ let D = (e) => {
         )((e, t) =>
             t
                 ? (0, i.jsx)(
-                      D,
+                      w,
                       y(
                           {
                               animationStyle: e,

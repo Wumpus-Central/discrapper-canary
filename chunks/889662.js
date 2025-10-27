@@ -1,4 +1,4 @@
-n.d(e, { default: () => b }), n(388685);
+n.d(e, { default: () => d }), n(388685);
 var r = n(951288),
     l = n(647438),
     c = n(374470),
@@ -8,15 +8,15 @@ var r = n(951288),
     a = n(358085),
     u = n(998502),
     p = n(388032);
-function b(t) {
-    let { text: e, target: n, onHeightUpdate: b, onSelect: d } = t,
-        f = l.useCallback(() => {
+function d(t) {
+    let { text: e, target: n, onHeightUpdate: d, onSelect: f } = t,
+        b = l.useCallback(() => {
             (0, s.Zy)(), (0, c.kK)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
         }, [n]),
         [h, y] = (0, o.Z)({
             text: e,
             target: n,
-            onHeightUpdate: b,
+            onHeightUpdate: d,
         });
     if (!a.isPlatformEmbedded || !((0, c.kK)(n, HTMLInputElement) || (0, c.kK)(n, HTMLTextAreaElement))) return null;
     let O =
@@ -26,7 +26,7 @@ function b(t) {
                       i.sNh,
                       {
                           id: "cut",
-                          label: p.intl.string(p.t.pNPVhY),
+                          label: p.intl.string(p.t.pNPVhe),
                           hint: (0, a.isMac)() ? "\u2318X" : "Ctrl+X",
                           action: () => setTimeout(() => u.ZP.cut(), 0),
                       },
@@ -36,7 +36,7 @@ function b(t) {
                       i.sNh,
                       {
                           id: "copy",
-                          label: p.intl.string(p.t.OpuAlJ),
+                          label: p.intl.string(p.t.OpuAlK),
                           hint: (0, a.isMac)() ? "\u2318C" : "Ctrl+C",
                           action: () => u.ZP.copy(e),
                       },
@@ -46,9 +46,9 @@ function b(t) {
             : null;
     return (0, r.jsxs)(i.v2r, {
         navId: "textarea-context",
-        onClose: f,
-        "aria-label": p.intl.string(p.t.NWlDSE),
-        onSelect: d,
+        onClose: b,
+        "aria-label": p.intl.string(p.t.NWlDSI),
+        onSelect: f,
         children: [
             (0, r.jsx)(i.kSQ, { children: h }),
             (0, r.jsx)(i.kSQ, { children: y }),
@@ -57,7 +57,7 @@ function b(t) {
                     O,
                     (0, r.jsx)(i.sNh, {
                         id: "paste",
-                        label: p.intl.string(p.t.lMUxVl),
+                        label: p.intl.string(p.t.lMUxVi),
                         hint: (0, a.isMac)() ? "\u2318V" : "Ctrl+V",
                         action: () => setTimeout(() => u.ZP.paste(), 0),
                     }),

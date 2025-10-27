@@ -28,7 +28,7 @@ function _(e) {
         );
     return null != T || g
         ? (0, r.jsx)(s.gNt, {
-              label: d.intl.string(d.t["7V375+"]),
+              label: d.intl.string(d.t["7V3759"]),
               children: (0, r.jsxs)(E.WM, {
                   children: [
                       null != T &&
@@ -42,7 +42,7 @@ function _(e) {
                               name: (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: d.intl.string(d.t.ZRnONz),
+                                  children: d.intl.string(d.t.ZRnON3),
                               }),
                               description: (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",
@@ -62,7 +62,7 @@ function _(e) {
                               name: (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: d.intl.string(d.t["TJ8/tL"]),
+                                  children: d.intl.string(d.t["TJ8/tE"]),
                               }),
                               description: (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",

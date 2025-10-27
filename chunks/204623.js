@@ -57,7 +57,7 @@ class S extends i.PureComponent {
         let e = (0, r.jsx)("div", {
                 children: (0, r.jsxs)("p", {
                     children: [
-                        O.intl.string(O.t["4tRjHB"]),
+                        O.intl.string(O.t["4tRjHC"]),
                         " ",
                         (0, r.jsx)(f.Z, {
                             src: h.ZP.getURL(c.Z.convert.fromCodePoint("1f44c")),
@@ -70,14 +70,14 @@ class S extends i.PureComponent {
             t = (0, r.jsx)(u.zx, {
                 size: u.Ph.LARGE,
                 onClick: this.handleDownload,
-                children: O.intl.string(O.t["1WjMbG"]),
+                children: O.intl.string(O.t["1WjMbC"]),
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(s.ql, { children: (0, r.jsx)("html", { className: (0, d.QeD)(y.BRd.DARK) }) }),
                 (0, r.jsx)(T, { type: this.getPlatform() }),
                 (0, r.jsx)(_.Z, {
-                    title: O.intl.string(O.t["3h+n+/"]),
+                    title: O.intl.string(O.t["3h+n+8"]),
                     note: e,
                     action: t,
                 }),

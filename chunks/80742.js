@@ -15,13 +15,13 @@ let s = (0, u.Z)(
             let { userId: t, onSelect: n } = e,
                 i = (0, a.Z)({
                     id: t,
-                    label: f.intl.string(f.t["/AXYnJ"]),
+                    label: f.intl.string(f.t["/AXYnE"]),
                     showWithoutDeveloperMode: !0,
                 });
             return (0, r.jsx)(o.v2r, {
                 navId: "unknown-user-context",
                 onClose: c.Zy,
-                "aria-label": f.intl.string(f.t.liqwPD),
+                "aria-label": f.intl.string(f.t.liqwPJ),
                 onSelect: n,
                 children: (0, r.jsx)(o.kSQ, { children: i }),
             });

@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(770146),
     a = n(388032),
-    o = n(419295);
-class s extends i.PureComponent {
+    s = n(419295);
+class o extends i.PureComponent {
     render() {
         let { className: e, sku: t } = this.props;
         return null == t.legalNotice
@@ -12,13 +12,13 @@ class s extends i.PureComponent {
             : (0, r.jsxs)("div", {
                   className: e,
                   children: [
-                      (0, r.jsx)(l.Z, { children: a.intl.string(a.t.m8OiMj) }),
+                      (0, r.jsx)(l.Z, { children: a.intl.string(a.t.m8OiMv) }),
                       (0, r.jsx)("div", {
-                          className: o.content,
+                          className: s.content,
                           children: t.legalNotice,
                       }),
                   ],
               });
     }
 }
-let c = s;
+let c = o;

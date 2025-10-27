@@ -54,7 +54,7 @@ function P(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,12 +66,12 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -87,16 +87,16 @@ let L = 10,
 function B(e) {
     var t;
     let n = {
-            [S.S7.PACKAGE_ACTION_ADVENTURE]: C.t.PYFVdX,
-            [S.S7.PACKAGE_RPG_MMO]: C.t.rFQo2N,
-            [S.S7.PACKAGE_RACING_SPORTS]: C.t.zDRa6u,
-            [S.S7.PACKAGE_SANDBOX_CREATIVE]: C.t.vz9U2d,
-            [S.S7.PACKAGE_FAMILY_FRIENDLY]: C.t.IOiAEx,
-            [S.S7.PACKAGE_HOLIDAY_SEASON]: C.t.cJPqvL,
-            [S.S7.PACKAGE_NEW_YEARS]: C.t.S0w2mp,
+            [S.S7.PACKAGE_ACTION_ADVENTURE]: C.t.PYFVdf,
+            [S.S7.PACKAGE_RPG_MMO]: C.t.rFQo2F,
+            [S.S7.PACKAGE_RACING_SPORTS]: C.t.zDRa6g,
+            [S.S7.PACKAGE_SANDBOX_CREATIVE]: C.t.vz9U2Q,
+            [S.S7.PACKAGE_FAMILY_FRIENDLY]: C.t.IOiAE0,
+            [S.S7.PACKAGE_HOLIDAY_SEASON]: C.t.cJPqvD,
+            [S.S7.PACKAGE_NEW_YEARS]: C.t.S0w2mv,
         },
         r = e.config.features.find((e) => e in n),
-        i = null != (t = null != r ? n[r] : null) ? t : C.t["D+DkEB"];
+        i = null != (t = null != r ? n[r] : null) ? t : C.t["D+DkEH"];
     return C.intl.string(i);
 }
 let Z = (e) => {
@@ -125,7 +125,7 @@ let Z = (e) => {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-tertiary",
-                                    children: C.intl.string(C.t.VgN1Bg),
+                                    children: C.intl.string(C.t.VgN1Bn),
                                 }),
                             ],
                         }),
@@ -133,7 +133,7 @@ let Z = (e) => {
                 }),
                 (0, r.jsx)(c.P3F, {
                     className: N.closeButton,
-                    "aria-label": C.intl.string(C.t.cpT0Cg),
+                    "aria-label": C.intl.string(C.t.cpT0Cq),
                     onClick: n,
                     children: (0, r.jsx)(c.Dio, {
                         size: "md",
@@ -415,6 +415,6 @@ let W = function (e) {
               questOrQuests: e.quest,
               questContent: O.jn.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(Y, D(P({}, e), { impressionRef: t })),
+              children: (t) => (0, r.jsx)(Y, w(P({}, e), { impressionRef: t })),
           });
 };

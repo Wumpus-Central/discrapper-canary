@@ -1,7 +1,7 @@
 n.d(i, { default: () => c }), n(539854), n(388685);
-var r = n(951288);
+var s = n(951288);
 n(647438);
-var s = n(149765),
+var r = n(149765),
     a = n(793030),
     e = n(995648),
     l = n(422559),
@@ -9,19 +9,19 @@ var s = n(149765),
 function c(t) {
     let { defaultMemberPermissions: i, onClose: n, transitionState: c } = t,
         p = [];
-    for (let t of l.VY) s.e$(i, t) && p.push(t);
-    return (0, r.jsx)(a.Modal, {
-        "aria-label": o.intl.string(o.t.vusPtr),
+    for (let t of l.VY) r.e$(i, t) && p.push(t);
+    return (0, s.jsx)(a.Modal, {
+        "aria-label": o.intl.string(o.t.vusPtq),
         transitionState: c,
-        title: o.intl.string(o.t["4gMlpa"]),
+        title: o.intl.string(o.t["4gMlpQ"]),
         onClose: n,
         actions: [
             {
                 variant: "primary",
-                text: o.intl.string(o.t.i4jeWV),
+                text: o.intl.string(o.t.i4jeWR),
                 onClick: n,
             },
         ],
-        children: (0, r.jsx)(e.Z, { grantedPermissions: p }),
+        children: (0, s.jsx)(e.Z, { grantedPermissions: p }),
     });
 }

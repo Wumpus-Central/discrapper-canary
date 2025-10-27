@@ -42,16 +42,16 @@ let P = () => {
             className: g.spinnerContainer,
             children: (0, i.jsx)(l.$jN, {}),
         });
-    let A = n === m.PremiumTypes.TIER_2,
-        O = [
+    let O = n === m.PremiumTypes.TIER_2,
+        b = [
             {
-                text: p.intl.string(p.t.zl7LZm),
+                text: p.intl.string(p.t.zl7LZp),
                 onClick: () => e(),
                 variant: "secondary",
                 disabled: S,
             },
             {
-                text: p.intl.string(p.t.CKSuZG),
+                text: p.intl.string(p.t.CKSuZJ),
                 onClick: () => D(),
                 variant: "primary",
                 icon: l.SrA,
@@ -62,15 +62,15 @@ let P = () => {
     return (0, i.jsxs)(a.ExpressiveModal, {
         graphic: {
             type: "image",
-            src: A ? x.Z : h,
+            src: O ? x.Z : h,
         },
-        gradientColor: A ? "nitro-pink" : "nitro-green",
+        gradientColor: O ? "nitro-pink" : "nitro-green",
         transitionState: t,
         title:
             P.status === f.O0b.CANCELED
-                ? p.intl.string(p.t["2Otztr"])
-                : "".concat(p.intl.format(p.t.q9Vxu7, { percent: v.discount.amount })),
-        actions: O,
+                ? p.intl.string(p.t["2Otzti"])
+                : "".concat(p.intl.format(p.t.q9Vxu4, { percent: v.discount.amount })),
+        actions: b,
         onClose: async () => e(),
         children: [
             (0, i.jsx)("div", {
@@ -87,14 +87,14 @@ let P = () => {
                     color: "text-secondary",
                     children:
                         P.status === f.O0b.CANCELED
-                            ? p.intl.format(p.t.mY3ysL, {
+                            ? p.intl.format(p.t.mY3ysK, {
                                   discountedPrice: T,
                                   billingPeriod: (0, o.JP)(v.discount.user_usage_limit_interval),
                                   numMonths: v.discount.user_usage_limit,
                                   fullPrice: E,
                                   paidURL: s.Z.getArticleURL(f.BhN.PAID_TERMS),
                               })
-                            : p.intl.format(p.t.hrGTjI, {
+                            : p.intl.format(p.t.hrGTjG, {
                                   discountedPrice: T,
                                   billingPeriod: (0, o.JP)(v.discount.user_usage_limit_interval),
                                   numMonths: v.discount.user_usage_limit,
@@ -106,7 +106,7 @@ let P = () => {
             N
                 ? (0, i.jsx)(a.M14, {
                       type: "critical",
-                      children: p.intl.string(p.t["5mlOCQ"]),
+                      children: p.intl.string(p.t["5mlOCW"]),
                   })
                 : null,
         ],

@@ -1,31 +1,31 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(388032),
     a = n(926440),
-    o = n(217110);
-function s() {
+    s = n(217110);
+function o() {
     return (0, r.jsx)("div", {
         className: a.container,
         children: (0, r.jsxs)("div", {
             className: a.content,
             children: [
                 (0, r.jsx)("img", {
-                    src: o,
-                    alt: l.intl.string(l.t.MvLOqq),
+                    src: s,
+                    alt: l.intl.string(l.t.MvLOqp),
                 }),
                 (0, r.jsx)(i.LZC, { size: 12 }),
                 (0, r.jsx)(i.Heading, {
                     className: a.header,
                     variant: "heading-lg/semibold",
-                    children: l.intl.string(l.t.t18lFh),
+                    children: l.intl.string(l.t.t18lFj),
                 }),
                 (0, r.jsx)(i.LZC, { size: 8 }),
                 (0, r.jsx)(i.Text, {
                     color: "header-secondary",
                     variant: "text-sm/normal",
-                    children: l.intl.string(l.t.TvGJgo),
+                    children: l.intl.string(l.t.TvGJgk),
                 }),
             ],
         }),

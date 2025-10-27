@@ -86,17 +86,17 @@ let b = u.Z.Millis.SECOND,
     y = 2 * b,
     O = u.Z.Millis.HALF_SECOND,
     v = [
-        () => f.intl.string(f.t.MSaeTU),
-        () => f.intl.string(f.t.UmrCw8),
-        () => f.intl.string(f.t.gKE0Ji),
-        () => f.intl.string(f.t["4DSKbm"]),
-        () => f.intl.string(f.t["+8ENdX"]),
-        () => f.intl.string(f.t.GlWHv7),
-        () => f.intl.string(f.t.hIzxU1),
-        () => f.intl.string(f.t["26uMPD"]),
-        () => f.intl.string(f.t.uFs7R0),
-        () => f.intl.string(f.t.bLXdcX),
-        () => f.intl.string(f.t.gPg9fX),
+        () => f.intl.string(f.t.MSaeTe),
+        () => f.intl.string(f.t.UmrCw7),
+        () => f.intl.string(f.t.gKE0Jq),
+        () => f.intl.string(f.t["4DSKbi"]),
+        () => f.intl.string(f.t["+8ENdT"]),
+        () => f.intl.string(f.t.GlWHv8),
+        () => f.intl.string(f.t.hIzxU9),
+        () => f.intl.string(f.t["26uMPL"]),
+        () => f.intl.string(f.t.uFs7R2),
+        () => f.intl.string(f.t.bLXdcY),
+        () => f.intl.string(f.t.gPg9fS),
     ];
 function I(e) {
     let { text: t, copyValue: n, children: u, onCopy: f, "aria-label": _, delay: h = O } = e,
@@ -116,8 +116,8 @@ function I(e) {
     )
         return (0, r.jsx)(r.Fragment, { children: u({}) });
     let P = E >= v.length - 1,
-        w = P ? s.r6K.RED : s.r6K.GREEN,
-        D = T ? w : s.r6K.PRIMARY,
+        D = P ? s.r6K.RED : s.r6K.GREEN,
+        w = T ? D : s.r6K.PRIMARY,
         L = () => {
             var e;
             if (!T) return t;
@@ -146,7 +146,7 @@ function I(e) {
         text: L(),
         delay: h,
         "aria-label": _,
-        color: D,
+        color: w,
         forceOpen: A,
         onAnimationRest: x,
         children: (e) => {

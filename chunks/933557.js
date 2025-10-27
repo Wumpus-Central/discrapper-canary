@@ -28,7 +28,7 @@ function d(e, t, n) {
         });
     return r.length > 0
         ? r.join(", ")
-        : u.intl.formatToPlainString(u.t["9Uk8PD"], { name: l.ZP.getName(t.getCurrentUser()) });
+        : u.intl.formatToPlainString(u.t["9Uk8PF"], { name: l.ZP.getName(t.getCurrentUser()) });
 }
 function f(e, t, n) {
     return d(e.recipients, t, n);

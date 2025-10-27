@@ -32,8 +32,8 @@ n(151851);
 var N = n(587061),
     R = n(280049),
     P = n(314910),
-    w = n(728285),
-    D = n(22205),
+    D = n(728285),
+    w = n(22205),
     L = n(746106),
     x = n(892071),
     M = n(358085),
@@ -182,7 +182,7 @@ class z extends (r = a.Component) {
                 withTitleBar: o,
                 isFullScreen: a,
             }),
-            y = r === Z.$J ? D.Z : S.Z;
+            y = r === Z.$J ? w.Z : S.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
                 L.w,
@@ -199,7 +199,7 @@ class z extends (r = a.Component) {
                                     children: (0, i.jsxs)(y, {
                                         children: [
                                             (0, i.jsx)(A.Co, {}),
-                                            (0, i.jsx)(w.Wu, {
+                                            (0, i.jsx)(D.Wu, {
                                                 appContext: null != g ? g : B.IlC.POPOUT,
                                                 renderWindow: l,
                                                 children: (0, i.jsx)(T.m, {

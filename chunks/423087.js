@@ -7,11 +7,11 @@ var r = n(951288),
     o = n(755721),
     c = n(481060),
     d = n(499513),
-    u = n(229190),
+    u = n(336066),
     g = n(510918),
     m = n(434404),
     p = n(131085),
-    f = n(659854),
+    f = n(562915),
     h = n(388032),
     b = n(764009);
 function x(e) {
@@ -91,7 +91,7 @@ function _(e) {
         } = e,
         v = (0, o.jm)({
             isSelected: l,
-            label: h.intl.formatToPlainString(h.t.hr4D2d, {
+            label: h.intl.formatToPlainString(h.t.hr4D2X, {
                 primaryColor: n,
                 secondaryColor: i,
             }),
@@ -189,7 +189,7 @@ let C = function (e) {
             }),
             (0, r.jsx)(c.nn4, {
                 id: O,
-                children: h.intl.string(h.t.ovbW0d),
+                children: h.intl.string(h.t.ovbW0Z),
             }),
         ],
     });

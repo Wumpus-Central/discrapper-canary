@@ -99,36 +99,36 @@ let u = (e) => {
             } = e,
             p = null;
         return t === r.w6.APPLICATION && null != n
-            ? i.intl.formatToPlainString(i.t.uERlTU, { appName: n.name })
+            ? i.intl.formatToPlainString(i.t.uERlTd, { appName: n.name })
             : a
               ? o
                   ? d
                       ? f && s
-                          ? i.intl.string(i.t.xFb68v)
+                          ? i.intl.string(i.t.xFb68j)
                           : s
                             ? u
-                                ? i.intl.string(i.t.vLklfH)
-                                : i.intl.string(i.t["g8i/bW"])
-                            : i.intl.string(i.t.Eoynp6)
+                                ? i.intl.string(i.t.vLklfF)
+                                : i.intl.string(i.t["g8i/bf"])
+                            : i.intl.string(i.t.Eoynp0)
                       : c
-                        ? i.intl.string(i.t.hU4kIS)
-                        : i.intl.string(i.t.GM0xaW)
+                        ? i.intl.string(i.t.hU4kIe)
+                        : i.intl.string(i.t.GM0xaX)
                   : l
-                    ? i.intl.string(i.t.xE9WGh)
-                    : i.intl.string(i.t["0LMpW1"])
+                    ? i.intl.string(i.t.xE9WGt)
+                    : i.intl.string(i.t["0LMpW+"])
               : o
                 ? f && s
-                    ? i.intl.string(i.t.xFb68v)
+                    ? i.intl.string(i.t.xFb68j)
                     : s
                       ? u
-                          ? i.intl.string(i.t.vLklfH)
-                          : i.intl.string(i.t["g8i/bW"])
+                          ? i.intl.string(i.t.vLklfF)
+                          : i.intl.string(i.t["g8i/bf"])
                       : c
                         ? i.intl.string(i.t.ICPhqa)
-                        : i.intl.string(i.t.jQy3aG)
+                        : i.intl.string(i.t.jQy3aM)
                 : l
-                  ? i.intl.string(i.t.FJ6Z09)
-                  : i.intl.format(i.t.U6vLcH, { openPremiumSettings: _ });
+                  ? i.intl.string(i.t.FJ6Z01)
+                  : i.intl.format(i.t.U6vLcA, { openPremiumSettings: _ });
     },
     f = (e) => {
         let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: r, isDiscoverable: a } = e,
@@ -138,13 +138,13 @@ let u = (e) => {
         return t && s
             ? {
                   type: "JOIN_GUILD",
-                  text: i.intl.string(i.t.riu2R0),
+                  text: i.intl.string(i.t.riu2R5),
                   description: null,
               }
             : l
               ? {
                     type: "GET_PREMIUM",
-                    text: i.intl.string(i.t["gl/XHB"]),
+                    text: i.intl.string(i.t["gl/XHJ"]),
                     description: null,
                 }
               : {

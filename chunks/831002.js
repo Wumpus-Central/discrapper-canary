@@ -30,12 +30,12 @@ function C(e) {
         ? null != r
             ? (0, i.jsx)(o.sNh, {
                   id: "edit-stage",
-                  label: b.intl.string(b.t["I+9bLy"]),
+                  label: b.intl.string(b.t["I+9bLx"]),
                   action: s,
               })
             : (0, i.jsx)(o.sNh, {
                   id: "start-stage",
-                  label: b.intl.string(b.t.OYbHfn),
+                  label: b.intl.string(b.t.OYbHfv),
                   action: s,
               })
         : null;

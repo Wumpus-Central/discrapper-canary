@@ -4,33 +4,33 @@ n(647438);
 var i = n(442837),
     l = n(139117),
     a = n(481060),
-    o = n(129861),
-    s = n(607070),
+    s = n(129861),
+    o = n(607070),
     c = n(570928),
     u = n(388905),
     d = n(1585),
     p = n(125988),
     f = n(43267),
     h = n(699516),
-    g = n(51144),
-    m = n(998502),
-    b = n(620924),
-    _ = n(332712),
+    m = n(51144),
+    g = n(998502),
+    _ = n(620924),
+    b = n(332712),
     E = n(81471),
     O = n(388032),
-    v = n(79072);
-let y = (e) => {
+    I = n(79072);
+let v = (e) => {
         let { userId: t } = e,
-            n = (0, _.O)(t);
+            n = (0, b.O)(t);
         return null == n || 0 === n.length
             ? (0, r.jsx)(a.Text, {
-                  className: v.mutualGuilds,
+                  className: I.mutualGuilds,
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: O.intl.string(O.t.jpY0X5),
               })
             : (0, r.jsxs)("div", {
-                  className: v.mutualGuildsContainer,
+                  className: I.mutualGuildsContainer,
                   children: [
                       (0, r.jsx)(l.Z, {
                           guilds: n,
@@ -39,7 +39,7 @@ let y = (e) => {
                           hideOverflowCount: !0,
                       }),
                       (0, r.jsx)(a.Text, {
-                          className: v.mutualGuilds,
+                          className: I.mutualGuilds,
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: O.intl.format(O.t.eE3oep, { count: n.length }),
@@ -47,44 +47,44 @@ let y = (e) => {
                   ],
               });
     },
-    I = m.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
+    y = g.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
 function C(e) {
     var t;
     let { channel: n, otherUser: l, active: u } = e,
-        m = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        _ = (0, i.e7)([h.Z], () => (null == l ? null : h.Z.getNickname(l.id))),
-        C = !m && u,
-        S = (0, b.c)(n),
-        { avatarDecorationSrc: N } = (0, p.Z)({
+        g = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        b = (0, i.e7)([h.Z], () => (null == l ? null : h.Z.getNickname(l.id))),
+        C = !g && u,
+        S = (0, _.c)(n),
+        { avatarDecorationSrc: T } = (0, p.Z)({
             user: l,
             size: (0, d.y9)(a.EFr.SIZE_40),
             onlyAnimateOnHoverOrFocus: !0,
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(I, {
-                className: v.avatar,
+            (0, r.jsx)(y, {
+                className: I.avatar,
                 src: (0, f.x)(n, 40, C),
-                avatarDecoration: N,
+                avatarDecoration: T,
                 size: a.EFr.SIZE_40,
                 "aria-label": null != (t = null == l ? void 0 : l.username) ? t : O.intl.string(O.t["30mdIx"]),
             }),
             (0, r.jsxs)("div", {
-                className: v.userPreview,
+                className: I.userPreview,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: v.userContainerWithPreview,
+                        className: I.userContainerWithPreview,
                         children: [
-                            (0, r.jsx)(o.Z, {
-                                nick: _,
+                            (0, r.jsx)(s.Z, {
+                                nick: b,
                                 user: l,
                                 showAccountIdentifier: !0,
-                                className: v.tagContainer,
-                                usernameClass: v.username,
-                                discriminatorClass: null != g.ZP.getGlobalName(l) ? v.globalName : v.discriminator,
+                                className: I.tagContainer,
+                                usernameClass: I.username,
+                                discriminatorClass: null != m.ZP.getGlobalName(l) ? I.globalName : I.discriminator,
                             }),
                             (0, r.jsx)(a.Text, {
-                                className: v.timestampWithPreview,
+                                className: I.timestampWithPreview,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
                                 children: S,
@@ -94,7 +94,7 @@ function C(e) {
                     (0, r.jsx)(c.Z, {
                         hoverText: (0, r.jsx)(E.Z, { channel: n }),
                         forceHover: u,
-                        children: (0, r.jsx)(y, { userId: l.id }),
+                        children: (0, r.jsx)(v, { userId: l.id }),
                     }),
                 ],
             }),

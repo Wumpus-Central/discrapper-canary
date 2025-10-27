@@ -52,7 +52,7 @@ function y() {
         return !1;
     }, [t, d, n])
         ? (0, r.jsx)(o.M0o, {
-              tooltip: m.intl.string(m.t["8k+6QU"]),
+              tooltip: m.intl.string(m.t["8k+6QY"]),
               color: o.YX$.TERTIARY,
               icon: (0, r.jsx)(o.W6s, {
                   size: "xs",

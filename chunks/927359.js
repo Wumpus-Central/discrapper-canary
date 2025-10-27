@@ -102,37 +102,37 @@ function f(e, t) {
     switch (t) {
         case 0:
             n = {
-                days: o.t["/wnvqK"],
-                hours: o.t.Jsq0XF,
-                minutes: o.t["SBd+Bg"],
+                days: o.t["/wnvqA"],
+                hours: o.t.Jsq0XN,
+                minutes: o.t["SBd+Bs"],
             };
             break;
         case 1:
             n = {
                 days: o.t.UD5nn5,
-                hours: o.t.Hg8FeX,
-                minutes: o.t.XSbQZW,
+                hours: o.t.Hg8Fee,
+                minutes: o.t.XSbQZZ,
             };
             break;
         case 2:
             n = {
-                days: o.t.rLqNaW,
+                days: o.t.rLqNad,
                 hours: o.t.d1LvCA,
-                minutes: o.t.Z2LX7O,
+                minutes: o.t.Z2LX7K,
             };
             break;
         case 4:
             n = {
-                days: o.t.xQ3zuL,
-                hours: o.t.SFU7QE,
-                minutes: o.t.Y4FNdH,
+                days: o.t.xQ3zuN,
+                hours: o.t.SFU7QN,
+                minutes: o.t.Y4FNdL,
             };
             break;
         case 3:
             n = {
-                days: o.t.fYmir6,
-                hours: o.t["C3RO+v"],
-                minutes: o.t.r77oHR,
+                days: o.t.fYmirx,
+                hours: o.t["C3RO+g"],
+                minutes: o.t.r77oHc,
             };
             break;
         default:

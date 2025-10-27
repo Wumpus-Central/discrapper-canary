@@ -41,15 +41,15 @@ let c = function (e) {
         n = (0, a.qb)(t);
     if (0 === n.length) return null;
     let s = n.at(0);
-    return s === o.intl.string(o.t.BV6xDg)
+    return s === o.intl.string(o.t.BV6xDm)
         ? (0, r.jsx)(l, {
-              header: o.intl.string(o.t.onh6cn),
-              children: o.intl.string(o.t.arVHRE),
+              header: o.intl.string(o.t.onh6ct),
+              children: o.intl.string(o.t.arVHRA),
           })
-        : s === o.intl.string(o.t.MFGxFB)
+        : s === o.intl.string(o.t.MFGxFM)
           ? (0, r.jsx)(l, {
-                header: o.intl.string(o.t.JPihZG),
-                children: o.intl.string(o.t.MFGxFB),
+                header: o.intl.string(o.t.JPihZA),
+                children: o.intl.string(o.t.MFGxFM),
             })
           : null;
 };

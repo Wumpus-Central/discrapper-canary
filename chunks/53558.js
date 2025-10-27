@@ -69,7 +69,7 @@ function h(e) {
                 {
                     action: "PRESS_APP_STOREFRONT",
                     icon: a.EOn,
-                    text: u.intl.string(u.t.V7j5aW),
+                    text: u.intl.string(u.t.V7j5aZ),
                     onClick: n,
                     variant: "primary",
                 },

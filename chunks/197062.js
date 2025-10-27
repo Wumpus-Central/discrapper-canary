@@ -31,6 +31,6 @@ let o = (e, t) => {
     },
     s = {
         getForumChannelPermissionText: function () {
-            return a.intl.format(a.t.zlXUVV, { warningHook: o });
+            return a.intl.format(a.t.zlXUVY, { warningHook: o });
         },
     };

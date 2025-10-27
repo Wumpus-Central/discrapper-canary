@@ -15,8 +15,8 @@ var i = t(951288),
     N = t(14251),
     g = t(110223),
     E = t(981631),
-    h = t(388032),
-    p = t(623146);
+    p = t(388032),
+    h = t(623146);
 function C(e) {
     let { channelId: n, userId: t, transitionState: C, onClose: k } = e,
         O = r.useRef(!1),
@@ -33,20 +33,20 @@ function C(e) {
             {
                 icon: (0, N.r)([t], null == A ? void 0 : A.guild_id),
                 text: (0, N.a)([t], 1, null == A ? void 0 : A.guild_id, n),
-                className: p.row,
+                className: h.row,
             },
             {
                 icon: (0, i.jsx)("div", {
-                    className: p.icon,
+                    className: h.icon,
                     children: (0, i.jsx)(a.aNP, {}),
                 }),
-                text: h.intl.string(h.t["+4O9nZ"]),
-                className: p.row,
+                text: p.intl.string(p.t["+4O9nX"]),
+                className: h.row,
             },
         ],
-        I = v ? h.intl.string(h.t.QnTzrq) : h.intl.string(h.t.QsWbfX);
+        I = v ? p.intl.string(p.t.QnTzrp) : p.intl.string(p.t.QsWbfY);
     return (0, i.jsx)(x.Z, {
-        headerText: h.intl.string(h.t["1/gpFh"]),
+        headerText: p.intl.string(p.t["1/gpFh"]),
         descriptionText: I,
         infoRows: w,
         onDismissAndStay: () => {
@@ -73,8 +73,8 @@ function C(e) {
                     warning_surface: g.fz.POST_JOIN_MODAL,
                 });
         },
-        leaveButtonText: h.intl.string(h.t["Hi1/aW"]),
-        stayButtonText: h.intl.string(h.t["Z+/hfX"]),
+        leaveButtonText: p.intl.string(p.t["Hi1/aQ"]),
+        stayButtonText: p.intl.string(p.t["Z+/hfb"]),
         transitionState: C,
         onClose: k,
         impression: {

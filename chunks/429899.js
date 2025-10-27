@@ -1,21 +1,21 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(558381),
     a = n(613311);
-class o extends i.Component {
+class s extends i.Component {
     componentDidMount() {
         this.fetchStoreListing();
     }
     render() {
-        let { skuId: e, applicationId: t, slug: n, storeListingId: i, pageSize: l, location: o } = this.props;
+        let { skuId: e, applicationId: t, slug: n, storeListingId: i, pageSize: l, location: s } = this.props;
         return (0, r.jsx)(a.Z, {
             inputSkuId: e,
             applicationId: t,
             fetchStoreListing: this.fetchStoreListing,
             slug: n,
             storeListingId: i,
-            location: o,
+            location: s,
             pageSize: l,
         });
     }
@@ -37,4 +37,4 @@ class o extends i.Component {
             });
     }
 }
-let s = o;
+let o = s;

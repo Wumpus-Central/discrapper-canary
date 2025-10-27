@@ -24,11 +24,11 @@ function f(e) {
               shouldShow: !0,
               caretConfig: { align: "end" },
               onRequestClose: () => m(l.L.USER_DISMISS),
-              title: c.intl.string(c.t.qPbFKy),
-              body: c.intl.string(c.t.URrJq6),
+              title: c.intl.string(c.t.qPbFK2),
+              body: c.intl.string(c.t.URrJq1),
               actions: [
                   {
-                      text: c.intl.string(c.t["NX+WJC"]),
+                      text: c.intl.string(c.t["NX+WJN"]),
                       onClick: () => m(l.L.USER_DISMISS),
                   },
               ],

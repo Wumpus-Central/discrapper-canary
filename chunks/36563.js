@@ -103,8 +103,8 @@ function I(e) {
             disableUsernameTooltip: N = !1,
             disableUserPopout: R = !1,
             onClickOverflow: P,
-            onFocusOverflow: w,
-            onUserClick: D,
+            onFocusOverflow: D,
+            onUserClick: w,
             onUserPopoutRequestClose: L,
             "aria-label": x,
             "aria-labelledby": M,
@@ -132,7 +132,7 @@ function I(e) {
                                 channelId: g,
                                 nick: _.ZP.getNickname(s, g, e),
                                 disablePopout: "function" == typeof R ? R(e.id) : R,
-                                onClick: D,
+                                onClick: w,
                                 onPopoutRequestClose: () => {
                                     U(!1), null == L || L();
                                 },
@@ -222,11 +222,11 @@ function I(e) {
                             y(E({}, t), {
                                 innerRef: B,
                                 className: o()(m.overflow, G, A),
-                                onFocus: w,
+                                onFocus: D,
                                 onClick: (e) => {
                                     null == P || P(e), U(!0);
                                 },
-                                "aria-label": h.intl.formatToPlainString(h.t.R8Z8Qk, { count: F }),
+                                "aria-label": h.intl.formatToPlainString(h.t.R8Z8Qr, { count: F }),
                                 children: (0, r.jsx)(u.Text, {
                                     variant: e,
                                     color: S,

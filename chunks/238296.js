@@ -1,7 +1,7 @@
 n.d(t, {
     E: () => S,
     Y: () => x,
-    default: () => D,
+    default: () => E,
 });
 var i = n(951288);
 n(647438);
@@ -13,8 +13,8 @@ var r = n(481060),
     a = n(167675),
     u = n(737013),
     d = n(607783),
-    b = n(589049),
-    f = n(299206),
+    f = n(589049),
+    b = n(299206),
     g = n(314897),
     j = n(389052),
     m = n(158508),
@@ -32,20 +32,20 @@ function x(e) {
             channelId: l,
             showGuildProfile: !0,
             icon: (0, i.jsx)(r.tBG, { size: "sm" }),
-            label: h.intl.string(h.t.iXAna2),
+            label: h.intl.string(h.t.iXAna6),
         }),
         d = (0, p.Z)(n, c, r.kBi),
-        f = (0, Z.Z)(n),
+        b = (0, Z.Z)(n),
         g = (0, v.Z)(n),
         j = (0, a.Z)(n),
         m = (0, u.Z)(n),
-        y = (0, b.Z)();
+        y = (0, f.Z)();
     return [
         (0, i.jsxs)(r.kSQ, {
             children: [s, d],
         }),
         (0, i.jsxs)(r.kSQ, {
-            children: [f, g, j, m, t && y],
+            children: [b, g, j, m, t && y],
         }),
     ];
 }
@@ -56,9 +56,9 @@ function S(e, t, n) {
             guildId: n,
             minimal: !0,
         }),
-        o = (0, f.Z)({
+        o = (0, b.Z)({
             id: e.id,
-            label: h.intl.string(h.t["/AXYnJ"]),
+            label: h.intl.string(h.t["/AXYnE"]),
         }),
         c = (0, m.Z)({
             user: e,
@@ -82,28 +82,28 @@ function S(e, t, n) {
         a,
     ];
 }
-let D = (0, c.Z)(
+let E = (0, c.Z)(
     (0, o.Z)(
         function (e) {
             let { user: t, channel: n, onSelect: o, onInteraction: c, context: s } = e,
                 a = n.id,
                 u = t.isNonUserBot(),
                 d = t.id === g.default.getId(),
-                b = x({
+                f = x({
                     isOwnSettings: d,
                     userId: t.id,
                     channelId: a,
                     context: s,
                 }),
                 j = S(t, a),
-                m = (0, f.Z)({
+                m = (0, b.Z)({
                     id: t.id,
-                    label: h.intl.string(h.t["/AXYnJ"]),
+                    label: h.intl.string(h.t["/AXYnE"]),
                 });
             return (0, i.jsx)(r.v2r, {
                 navId: "user-context",
                 onClose: l.Zy,
-                "aria-label": h.intl.string(h.t.liqwPD),
+                "aria-label": h.intl.string(h.t.liqwPJ),
                 onSelect: o,
                 onInteraction: c,
                 variant: "fixed",
@@ -111,12 +111,12 @@ let D = (0, c.Z)(
                     !u &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            b,
+                            f,
                             !d &&
                                 (0, i.jsx)(r.kSQ, {
                                     children: (0, i.jsx)(r.sNh, {
                                         id: "more-options",
-                                        label: h.intl.string(h.t.PdRCRk),
+                                        label: h.intl.string(h.t.PdRCRg),
                                         children: j,
                                     }),
                                 }),

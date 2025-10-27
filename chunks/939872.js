@@ -22,7 +22,7 @@ let f = (e) => {
             (0, r.jsx)(o.Heading, {
                 className: d.confirmationHeader,
                 variant: "heading-lg/extrabold",
-                children: u.intl.format(u.t.I5dYFh, {
+                children: u.intl.format(u.t.I5dYFs, {
                     serverName: null == _ ? void 0 : _.name,
                     tierName: n.name,
                 }),
@@ -32,20 +32,20 @@ let f = (e) => {
                     className: d.confirmationSubtitle,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: u.intl.format(u.t.TnhFHh, { benefits: p.asString() }),
+                    children: u.intl.format(u.t.TnhFHv, { benefits: p.asString() }),
                 }),
             (0, r.jsxs)("div", {
                 className: d.actions,
                 children: [
                     (0, r.jsx)(a.zxk, {
                         variant: "primary",
-                        text: u.intl.string(u.t.WWvswM),
+                        text: u.intl.string(u.t.WWvswD),
                         fullWidth: !0,
                         onClick: () => (0, s.Z)("role_sub_mweb_success_modal"),
                     }),
                     (0, r.jsx)(a.zxk, {
                         variant: "secondary",
-                        text: u.intl.string(u.t.y84Dho),
+                        text: u.intl.string(u.t.y84Dhr),
                         fullWidth: !0,
                         onClick: () => t(!0),
                     }),

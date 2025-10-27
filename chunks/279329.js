@@ -12,7 +12,7 @@ function c(e, t) {
         ? null
         : (0, r.jsx)(l.sNh, {
               id: "tts",
-              label: n ? s.intl.string(s.t.CJ30BA) : s.intl.string(s.t.yGLjXF),
+              label: n ? s.intl.string(s.t.CJ30BP) : s.intl.string(s.t.yGLjXF),
               icon: l.J2R,
               action: () => (n ? (0, a.NB)() : (0, a.LA)(t, e)),
           });

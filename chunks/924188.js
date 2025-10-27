@@ -1,29 +1,29 @@
-n.d(i, { default: () => o });
+n.d(i, { default: () => l });
 var e = n(951288);
 n(647438);
-var s = n(793030),
-    a = n(481060),
-    r = n(468706),
-    l = n(388032);
-function o(t) {
-    let { channelId: i, messageId: n, onClose: o, transitionState: d } = t;
-    return (0, e.jsx)(s.Modal, {
+var a = n(793030),
+    r = n(481060),
+    s = n(468706),
+    o = n(388032);
+function l(t) {
+    let { channelId: i, messageId: n, onClose: l, transitionState: d } = t;
+    return (0, e.jsx)(a.Modal, {
         transitionState: d,
-        onClose: o,
-        title: l.intl.string(l.t.B3vFdX),
-        subtitle: l.intl.string(l.t.i4AbAQ),
+        onClose: l,
+        title: o.intl.string(o.t.B3vFdU),
+        subtitle: o.intl.string(o.t.i4AbAS),
         actions: [
             {
-                text: l.intl.string(l.t.WAI6xs),
-                onClick: o,
+                text: o.intl.string(o.t.WAI6xu),
+                onClick: l,
             },
         ],
-        children: (0, e.jsx)(a.Text, {
+        children: (0, e.jsx)(r.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
-            children: l.intl.format(l.t.Ge0HUl, {
+            children: o.intl.format(o.t.Ge0HUi, {
                 handleFalsePositiveHook: () => {
-                    o(), (0, r.e)(i, n);
+                    l(), (0, s.e)(i, n);
                 },
             }),
         }),

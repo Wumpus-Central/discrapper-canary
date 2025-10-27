@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(951288),
     r = n(647438),
     s = n(442837),
@@ -47,7 +47,7 @@ function S() {
         text_activation_hotkey: null != i ? (0, f.BB)(i.shortcut) : null,
     });
 }
-class C extends r.PureComponent {
+class Z extends r.PureComponent {
     componentDidMount() {
         l.Z.track(O.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
@@ -305,7 +305,7 @@ class C extends r.PureComponent {
             });
     }
 }
-function Z(e) {
+function C(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
@@ -325,7 +325,7 @@ function Z(e) {
             shouldShowInviteNotification: !y.Z.isNotificationDisabled(_.n0.ActivityInvite),
         })),
         u = (0, m.Z)({ location: "Overlay Settings" });
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(Z, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: r,

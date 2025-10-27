@@ -16,6 +16,6 @@ let o = "992549565104128000",
     },
     c = (e, t, n) => {
         let r = l(e, n);
-        return "0" === r ? a.intl.string(a.t.eXHkho) : a.intl.formatToPlainString(t, { count: r });
+        return "0" === r ? a.intl.string(a.t.eXHkhl) : a.intl.formatToPlainString(t, { count: r });
     },
-    u = (e, t) => c(e, a.t.rfAXDQ, t);
+    u = (e, t) => c(e, a.t.rfAXDV, t);

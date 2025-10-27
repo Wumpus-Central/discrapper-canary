@@ -53,7 +53,7 @@ function _() {
             color: "currentColor",
             className: x.labelIcon,
         }),
-        title: b.intl.string(b.t.d7YJMD),
+        title: b.intl.string(b.t.d7YJMK),
         className: x.createLabel,
     });
 }
@@ -86,7 +86,7 @@ function y(e) {
             "aria-labelledby": v,
             onChange: _,
         } = e,
-        C = b.intl.string(b.t.d7YJMD),
+        C = b.intl.string(b.t.d7YJMK),
         y = (0, s.e7)([g.Z], () => g.Z.getCategories(l), [l]),
         E = (0, f.m7)(null != a ? a : h.lds),
         N = i.useMemo(() => {
@@ -119,7 +119,7 @@ function y(e) {
         }, [C, a, E, y, x, d]);
     return (0, r.jsx)(o.PhF, {
         label: t,
-        placeholder: b.intl.string(b.t.r2pts7),
+        placeholder: b.intl.string(b.t.r2ptsz),
         options: N,
         select: function (e) {
             null == e

@@ -61,7 +61,7 @@ function p(e) {
                 a()(null != t, "paymentSource missing"), null == s || s(t), i();
             },
             onStepChange: () => {},
-            header: (0, r.jsx)(o.xBx, { title: u.intl.string(u.t.eQ2bLi) }),
+            header: (0, r.jsx)(o.xBx, { title: u.intl.string(u.t.eQ2bLp) }),
             analyticsLocation: n,
             hideBreadcrumbs: !0,
             toastContent: f,
@@ -74,7 +74,7 @@ function p(e) {
         transitionState: t,
         onClose: i,
         size: "sm",
-        "aria-label": u.intl.string(u.t.eQ2bLi),
+        "aria-label": u.intl.string(u.t.eQ2bLp),
         children: (0, r.jsx)("form", {
             className: d.form,
             onSubmit: g,

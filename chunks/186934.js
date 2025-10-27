@@ -19,13 +19,13 @@ function f() {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
         children: [
             (0, r.jsx)(a.rsf, {
-                label: d.intl.string(d.t["/jwMtr"]),
-                description: d.intl.string(d.t.zlA23N),
+                label: d.intl.string(d.t["/jwMtn"]),
+                description: d.intl.string(d.t.zlA23F),
                 checked: e,
                 onChange: (e) => o.Z.setSidechainCompression(e, { analyticsLocations: n }),
             }),
             (0, r.jsx)(a.iRW, {
-                label: d.intl.string(d.t.fhEzfn),
+                label: d.intl.string(d.t.fhEzfj),
                 initialValue: t,
                 minValue: 1,
                 onValueChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: n }),

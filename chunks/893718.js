@@ -7,7 +7,7 @@ n.d(t, {
     ae: () => ev,
     bL: () => ey,
     hJ: () => eS,
-    iV: () => ew,
+    iV: () => eD,
     jx: () => eC,
     oR: () => eR,
     qz: () => eN,
@@ -45,8 +45,8 @@ var r = n(951288),
     N = n(805680),
     R = n(368844),
     P = n(41776),
-    w = n(657871),
-    D = n(849522),
+    D = n(657871),
+    w = n(849522),
     L = n(780291),
     x = n(328908),
     M = n(913663),
@@ -400,7 +400,7 @@ function eP(e, t, n, r) {
         s,
     );
 }
-function ew(e, t) {
+function eD(e, t) {
     let [n, r] = (0, C.Iu)((e) => [e.activeView, e.activeViewType], u.X),
         a = (0, _.e7)([O.Z], () => O.Z.shouldShowPopup() && O.Z.activeViewType() === e);
     i.useEffect(
@@ -420,7 +420,7 @@ function ew(e, t) {
         handleOuterClick: o,
     };
 }
-function eD(e, t, n) {
+function ew(e, t, n) {
     let r = i.useCallback(() => {
         var r, i;
         return (
@@ -476,7 +476,7 @@ function eL(e, t) {
     );
 }
 let ex = (e) => {
-        let { enabled: t, onlyExactMatch: n } = (0, w.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
+        let { enabled: t, onlyExactMatch: n } = (0, D.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
             [r, a] = i.useState(!0),
             o = i.useRef(null);
         return (
@@ -493,7 +493,7 @@ let ex = (e) => {
         );
     },
     eM = () => {
-        let { enabled: e } = (0, w.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
+        let { enabled: e } = (0, D.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
             [t, n] = i.useState(null);
         return {
             currentAutocompleteType: t,
@@ -515,7 +515,7 @@ function ek(e, t) {
         editorClassName: C,
         id: R,
         required: P,
-        disabled: w,
+        disabled: D,
         placeholder: x,
         accessibilityLabel: M,
         channel: k,
@@ -561,12 +561,12 @@ function ek(e, t) {
         e$ = i.useRef(null);
     null == eG || eG(eQ.current);
     let e0 = (0, y.Z)(k),
-        [e1, e2] = i.useState(!e0);
+        [e1, e3] = i.useState(!e0);
     (0, m.PM)(eq, (e) => {
         let { width: t } = e;
-        return e2(!e0 && (null == t || t > em));
+        return e3(!e0 && (null == t || t > em));
     });
-    let { activeCommand: e3, activeCommandSection: e4 } = (0, _.cj)([v.Z], () => {
+    let { activeCommand: e2, activeCommandSection: e4 } = (0, _.cj)([v.Z], () => {
             var e, t;
             return {
                 activeCommand: (null == (e = j.commands) ? void 0 : e.enabled) ? v.Z.getActiveCommand(k.id) : null,
@@ -582,11 +582,11 @@ function ek(e, t) {
             canAttachFiles: e7,
             canCreateThreads: e9,
             canEveryoneSendMessages: te,
-        } = eP(k, j, e3, w),
+        } = eP(k, j, e2, D),
         tt = j.toolbarType === Q.OW.STATIC,
         tn = !G.dN.useSetting() && !(0, q.isAndroidWeb)() && null != window.ResizeObserver,
         tr = !tn || !(null == (n = j.commands) ? void 0 : n.enabled) || !U || f !== ec.GI,
-        ti = (0, D.Z)(),
+        ti = (0, w.Z)(),
         { fontSize: ta } = (0, _.cj)([g.Z], () => ({ fontSize: g.Z.fontSize })),
         to = (0, _.e7)([V.Z], () => V.Z.isEnabled()),
         ts = i.useRef(f);
@@ -619,24 +619,24 @@ function ek(e, t) {
             return null == e$ || null == (e = e$.current) ? void 0 : e.hide();
         }, []),
         { editorHeight: tv, handleResize: tI } = eR(K),
-        { handleTab: tT, handleEnter: tS, handleMoveSelection: tA } = eD(tp, eX, tr),
-        { expressionPickerView: tC, shouldHideExpressionPicker: tN, handleOuterClick: tR } = ew(j, eQ),
+        { handleTab: tT, handleEnter: tS, handleMoveSelection: tA } = ew(tp, eX, tr),
+        { expressionPickerView: tC, shouldHideExpressionPicker: tN, handleOuterClick: tR } = eD(j, eQ),
         tP = eL(tc, eQ),
-        tw = ex(f),
-        { currentAutocompleteType: tD, handleAutocompleteVisibilityChange: tL } = eM();
+        tD = ex(f),
+        { currentAutocompleteType: tw, handleAutocompleteVisibilityChange: tL } = eM();
     (0, X.S)(tc, k.guild_id, k.id);
     let tx = null != Y,
         tM = (e6 && !((e8 || e5) && te)) || (td && (null == (s = j.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
         tk = null;
-    null != e3
-        ? (tk = null == F ? void 0 : F(e3, e4, ed.attachButton))
+    null != e2
+        ? (tk = null == F ? void 0 : F(e2, e4, ed.attachButton))
         : (!e6 || e9) && (tk = null == Z ? void 0 : Z(tx, ed.attachButton));
-    let tj = tn && null != h && !e6 && j.showCharacterCount && null == e3,
-        tU = tn && !__OVERLAY__ && null != h && null == e3 && j.toolbarType !== Q.OW.NONE && !e6,
+    let tj = tn && null != h && !e6 && j.showCharacterCount && null == e2,
+        tU = tn && !__OVERLAY__ && null != h && null == e2 && j.toolbarType !== Q.OW.NONE && !e6,
         tG = (0, et.c)({
             channel: k,
             type: j,
-            activeCommand: e3,
+            activeCommand: e2,
             pendingReply: Y,
             pendingScheduledMessage: eW,
             selectedAutocompleteInputType: tP,
@@ -765,8 +765,8 @@ function ek(e, t) {
                                                 fontSize: ta,
                                                 spellcheckEnabled: to,
                                                 canOnlyUseTextCommands: tx,
-                                                isEditorIdle: tw,
-                                                currentAutocompleteType: tD,
+                                                isEditorIdle: tD,
+                                                currentAutocompleteType: tw,
                                                 className: o()(
                                                     {
                                                         [ed.textAreaThreadCreation]: j === Q.Ie.THREAD_CREATION,
@@ -802,7 +802,7 @@ function ek(e, t) {
                             canSendSoundmoji: null == (u = j.soundmoji) ? void 0 : u.allowSending,
                             textValue: f,
                             focused: U,
-                            isEditorIdle: tw,
+                            isEditorIdle: tD,
                             expressionPickerView: tC,
                             type: j,
                             targetRef: eq,

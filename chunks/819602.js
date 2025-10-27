@@ -48,7 +48,7 @@ function T(e) {
     let C = null != (t = j.metadata) ? t : {},
         S = P ? (0, f.FI)(C[Z.PC.CREATED_AT], y) : null,
         w = (0, c.dQu)(r.Z.unsafe_rawColors.TWITTER).hex(),
-        R = N.intl.string(N.t["6H6h1t"]);
+        D = N.intl.string(N.t["6H6h1r"]);
     if (P)
         switch (j.type) {
             case _.ABu.REDDIT:
@@ -60,7 +60,7 @@ function T(e) {
             case _.ABu.BLUESKY:
             case _.ABu.MASTODON:
             case _.ABu.TWITTER:
-                (i = (0, x.rJ)(C)), "1" === C[Z.PC.TWITTER_VERIFIED] && ((d = w), (R = N.intl.string(N.t.Jebrw8)));
+                (i = (0, x.rJ)(C)), "1" === C[Z.PC.TWITTER_VERIFIED] && ((d = w), (D = N.intl.string(N.t.Jebrww)));
                 break;
             case _.ABu.PAYPAL:
                 i = (0, x.li)(C);
@@ -71,8 +71,8 @@ function T(e) {
             case _.ABu.TIKTOK:
                 i = (0, x.hf)(C);
         }
-    let D = u.Z.get((0, p.rR)(j.type)),
-        L = null == D || null == (n = D.getPlatformUserUrl) ? void 0 : n.call(D, j);
+    let R = u.Z.get((0, p.rR)(j.type)),
+        L = null == R || null == (n = R.getPlatformUserUrl) ? void 0 : n.call(R, j);
     null != E && E
         ? (v = (0, l.jsx)(c.kZF, {
               size: "md",
@@ -83,9 +83,9 @@ function T(e) {
           (v = (0, l.jsx)(c.Anchor, {
               href: L,
               "aria-label":
-                  (null == D ? void 0 : D.name) != null
-                      ? "".concat(D.name, ", ").concat(j.name, ", ").concat(N.intl.string(N.t.q5jLJC))
-                      : "".concat(j.name, ", ").concat(N.intl.string(N.t.q5jLJC)),
+                  (null == R ? void 0 : R.name) != null
+                      ? "".concat(R.name, ", ").concat(j.name, ", ").concat(N.intl.string(N.t.q5jLJB))
+                      : "".concat(j.name, ", ").concat(N.intl.string(N.t.q5jLJB)),
               onClick: (e) => {
                   var n;
                   (n = j.type),
@@ -96,7 +96,7 @@ function T(e) {
                       (0, I.q)(
                           {
                               href: L,
-                              trusted: (null == D ? void 0 : D.type) !== _.ABu.DOMAIN,
+                              trusted: (null == R ? void 0 : R.type) !== _.ABu.DOMAIN,
                           },
                           e,
                       );
@@ -114,7 +114,7 @@ function T(e) {
                   color: null != d ? d : M,
                   forcedIconColor: B,
                   size: 16,
-                  tooltipText: R,
+                  tooltipText: D,
               })
             : null;
     return (0, l.jsxs)("li", {
@@ -128,17 +128,17 @@ function T(e) {
                 className: A.connectedAccount,
                 children: [
                     (0, l.jsx)(s.u, {
-                        __unsupportedReactNodeAsText: null == D ? void 0 : D.name,
+                        __unsupportedReactNodeAsText: null == R ? void 0 : R.name,
                         children: (0, l.jsx)("img", {
-                            alt: N.intl.formatToPlainString(N.t.rtm15O, { name: null == D ? void 0 : D.name }),
+                            alt: N.intl.formatToPlainString(N.t.rtm15P, { name: null == R ? void 0 : R.name }),
                             className: A.connectedAccountIcon,
                             src: (0, a.wj)(g)
-                                ? null == D
+                                ? null == R
                                     ? void 0
-                                    : D.icon.darkSVG
-                                : null == D
+                                    : R.icon.darkSVG
+                                : null == R
                                   ? void 0
-                                  : D.icon.lightSVG,
+                                  : R.icon.lightSVG,
                         }),
                     }),
                     (0, l.jsxs)("div", {
@@ -170,7 +170,7 @@ function T(e) {
                                 ? (0, l.jsx)(c.Text, {
                                       variant: "text-xs/normal",
                                       color: "header-secondary",
-                                      children: N.intl.format(N.t["9rfonp"], { date: S }),
+                                      children: N.intl.format(N.t["9rfonh"], { date: S }),
                                   })
                                 : null,
                         ],
@@ -250,7 +250,7 @@ function P(e) {
                     children: (0, l.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: N.intl.format(N.t.zIT9YG, {
+                        children: N.intl.format(N.t.zIT9YA, {
                             applicationHook: () =>
                                 (0, l.jsxs)("div", {
                                     className: A.connectedAccountPoweredByText,

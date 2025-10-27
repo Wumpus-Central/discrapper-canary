@@ -83,8 +83,8 @@ async function v(e, t, n, r) {
         let e = i().flatMap(null != (o = t.body) ? o : {}, (e) => e);
         return (
             s.Z.show({
-                title: p.intl.string(p.t["6nCZyM"]),
-                body: p.intl.format(p.t.dYCPDw, { errorMessage: e.join(", ") }),
+                title: p.intl.string(p.t["6nCZyG"]),
+                body: p.intl.format(p.t.dYCPD2, { errorMessage: e.join(", ") }),
             }),
             u.Z.addBreadcrumb({ message: "Error updating new member action icon" }),
             Promise.reject()
@@ -137,8 +137,8 @@ async function E(e, t, n) {
         var r;
         let e = i().flatMap(null != (r = t.body) ? r : {}, (e) => e);
         s.Z.show({
-            title: p.intl.string(p.t["6nCZyM"]),
-            body: p.intl.format(p.t.dYCPDw, { errorMessage: e.join(", ") }),
+            title: p.intl.string(p.t["6nCZyG"]),
+            body: p.intl.format(p.t.dYCPD2, { errorMessage: e.join(", ") }),
         });
     }
 }
@@ -147,8 +147,8 @@ function N(e, t) {
     return n || g.Z.hasChanges()
         ? o.Z.getEnabled(e) && !(0, c.uo)(t)
             ? (s.Z.show({
-                  title: p.intl.string(p.t["6nCZyM"]),
-                  body: p.intl.string(p.t.JuhUTU),
+                  title: p.intl.string(p.t["6nCZyG"]),
+                  body: p.intl.string(p.t.JuhUTS),
               }),
               u.Z.addBreadcrumb({ message: "Error saving home settings" }),
               Promise.reject())
@@ -160,8 +160,8 @@ function I(e, t) {
     let i = o.Z.getSettings(e);
     return t && !(0, c.uo)(i)
         ? void s.Z.show({
-              title: p.intl.string(p.t["6nCZyM"]),
-              body: p.intl.string(p.t.JuhUTU),
+              title: p.intl.string(p.t["6nCZyG"]),
+              body: p.intl.string(p.t.JuhUTS),
           })
         : (a.Z.dispatch({
               type: "GUILD_HOME_SETTINGS_TOGGLE_ENABLED",
@@ -256,8 +256,8 @@ async function S(e, t) {
         let e = i().flatMap(null != (x = t.body) ? x : {}, (e) => e);
         a.Z.dispatch({ type: "GUILD_HOME_SETTINGS_UPDATE_FAIL" }),
             s.Z.show({
-                title: p.intl.string(p.t["6nCZyM"]),
-                body: p.intl.format(p.t.dYCPDw, { errorMessage: e.join(", ") }),
+                title: p.intl.string(p.t["6nCZyG"]),
+                body: p.intl.format(p.t.dYCPD2, { errorMessage: e.join(", ") }),
             });
     }
 }

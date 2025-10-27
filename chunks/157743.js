@@ -35,7 +35,7 @@ function d(t) {
         title: u.intl.string(u.t["dOWb+f"]),
         actions: [
             {
-                text: u.intl.string(u.t.cpT0Cg),
+                text: u.intl.string(u.t.cpT0Cq),
                 onClick: e,
                 variant: "primary",
             },

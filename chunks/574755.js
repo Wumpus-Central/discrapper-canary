@@ -41,7 +41,7 @@ function O(e) {
                                 n
                                     ? (0, r.jsxs)(s.Heading, {
                                           variant: "heading-lg/semibold",
-                                          children: [y.intl.string(y.t.z2jK6e), " ", (0, r.jsx)(g.Z, {})],
+                                          children: [y.intl.string(y.t.z2jK6X), " ", (0, r.jsx)(g.Z, {})],
                                       })
                                     : null,
                                 T &&
@@ -59,16 +59,16 @@ function O(e) {
                         gap: 16,
                         children: [
                             (0, r.jsx)(s.rsf, {
-                                label: y.intl.string(y.t.AGDDkJ),
-                                description: y.intl.string(y.t["wW9/zc"]),
+                                label: y.intl.string(y.t.AGDDkH),
+                                description: y.intl.string(y.t["wW9/zQ"]),
                                 checked: O,
                                 onChange: (e) => m.yg({ allowVoiceRecording: e }),
                             }),
                             v &&
                                 A &&
                                 (0, r.jsx)(s.rsf, {
-                                    label: y.intl.string(y.t.NWw7kZ),
-                                    description: y.intl.string(y.t["0vjy8P"]),
+                                    label: y.intl.string(y.t.NWw7kY),
+                                    description: y.intl.string(y.t["0vjy8N"]),
                                     checked: S,
                                     onChange: (e) =>
                                         m.yl({

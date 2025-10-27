@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var i = n(951288),
     r = n(120356),
     l = n.n(r),
@@ -8,15 +8,15 @@ var i = n(951288),
     u = n(872810),
     c = n(700582),
     d = n(812206),
-    h = n(358221),
-    p = n(594190),
+    p = n(358221),
+    h = n(594190),
     f = n(925329),
     m = n(352978),
     g = n(592125),
     y = n(77498),
     O = n(355863),
-    v = n(594174),
-    E = n(5192),
+    E = n(594174),
+    v = n(5192),
     S = n(444295),
     b = n(32300),
     x = n(1226),
@@ -81,7 +81,7 @@ function P(e) {
                     variant: "text-sm/medium",
                     color: "interactive-normal",
                     className: T.bodyText,
-                    children: w.intl.format(w.t.vTPX29, { username: a }),
+                    children: w.intl.format(w.t.vTPX23, { username: a }),
                 }),
             }),
             (0, i.jsx)("div", {
@@ -93,14 +93,14 @@ function P(e) {
                         variant: "text-sm/medium",
                         color: "always-white",
                         tag: "span",
-                        children: w.intl.string(w.t["xl+bTE"]),
+                        children: w.intl.string(w.t["xl+bTG"]),
                     }),
                 }),
             }),
         ],
     });
 }
-function D(e) {
+function A(e) {
     let { user: t, application: n, runningGame: r, username: a, onWatchClick: s, iconColor: u } = e;
     return (0, i.jsxs)("div", {
         className: T.container,
@@ -119,7 +119,7 @@ function D(e) {
                     variant: "text-sm/medium",
                     color: "interactive-normal",
                     className: T.bodyText,
-                    children: w.intl.format(w.t.NmEczs, { username: a }),
+                    children: w.intl.format(w.t.NmEczg, { username: a }),
                 }),
             }),
             (0, i.jsx)("div", { className: T.buttonDivider }),
@@ -137,29 +137,29 @@ function D(e) {
         ],
     });
 }
-function A(e, t, n) {
+function D(e, t, n) {
     var r, l;
     if (j.Z.isNotificationDisabled(Z.n0.StreamWatchNudge)) return null;
-    let o = v.default.getUser(e);
+    let o = E.default.getUser(e);
     if (null == o) return null;
     let { designVariant: c } = (0, b.lj)("OverlayV3StreamWatchNudge"),
         f = null == n ? void 0 : n.application_id,
         I = g.Z.getChannel(t),
         w = null != f ? d.Z.getApplication(f) : null,
         T = null != f ? y.Z.getDetectableGame(f) : null,
-        _ = null != f ? p.ZP.getRunningGames().find((e) => e.id === f) : null,
-        A =
+        _ = null != f ? h.ZP.getRunningGames().find((e) => e.id === f) : null,
+        D =
             null != (l = null != (r = null == _ ? void 0 : _.name) ? r : null == T ? void 0 : T.name)
                 ? l
                 : null == w
                   ? void 0
                   : w.name,
-        R = (0, E.oY)(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, o),
+        R = (0, v.oY)(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, o),
         { trackView: k, trackClick: L } = (0, C.R)(Z.n0.StreamWatchNudge, {
             notif_type: Z.n0.StreamWatchNudge,
             notif_user_id: o.id,
             activity_type: null == n ? void 0 : n.type,
-            activity_name: null != A ? A : null == n ? void 0 : n.name,
+            activity_name: null != D ? D : null == n ? void 0 : n.name,
         });
     return {
         body: (() => {
@@ -181,7 +181,7 @@ function A(e, t, n) {
                         buttonColor: "gray",
                     });
                 case b.RD.SINGLE_ICON_BUTTON:
-                    return (0, i.jsx)(D, {
+                    return (0, i.jsx)(A, {
                         user: o,
                         application: w,
                         runningGame: _,
@@ -194,7 +194,7 @@ function A(e, t, n) {
         onNotificationClick: (n, i) => {
             L("overlay-watch-stream");
             let [r] = O.Z.getWidgetsByType(N.Odu.GO_LIVE),
-                l = h.Z.getStreamParticipants(t).find((t) => t.user.id === e);
+                l = p.Z.getStreamParticipants(t).find((t) => t.user.id === e);
             null != r &&
                 null != l &&
                 ((0, x.gI)(l.stream, m.L.COVER),

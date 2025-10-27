@@ -5,8 +5,8 @@ var l = n(951288),
     i = n(481060),
     t = n(835473),
     r = n(933557),
-    s = n(471445),
-    d = n(454585),
+    d = n(471445),
+    s = n(454585),
     p = n(63063),
     h = n(981631),
     m = n(388032),
@@ -15,12 +15,12 @@ var l = n(951288),
 function k(e) {
     var a;
     let { channel: n, onClose: o, guild: k, transitionState: N } = e,
-        u = (0, s.KS)(n, k),
+        u = (0, d.KS)(n, k),
         j = (0, r.ZP)(n, !1),
         y = (0, t.q)(null == (a = n.linkedLobby) ? void 0 : a.application_id);
     return (0, l.jsxs)(i.Y0X, {
         transitionState: N,
-        "aria-label": m.intl.string(m.t.X8jMDg),
+        "aria-label": m.intl.string(m.t.X8jMDh),
         className: b.modal,
         parentComponent: "ChannelTopicModal",
         children: [
@@ -53,7 +53,7 @@ function k(e) {
                         selectable: !0,
                         variant: "text-md/normal",
                         className: c()(b.content, x.markup),
-                        children: d.Z.parseTopic(n.topic, !0, { channelId: n.id }),
+                        children: s.Z.parseTopic(n.topic, !0, { channelId: n.id }),
                     }),
                     null != y
                         ? (0, l.jsxs)("div", {
@@ -63,7 +63,7 @@ function k(e) {
                                   (0, l.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "header-secondary",
-                                      children: m.intl.format(m.t.Ud5rys, {
+                                      children: m.intl.format(m.t.Ud5ryv, {
                                           applicationName: y.name,
                                           helpdeskArticle: p.Z.getArticleURL(h.BhN.LINKED_LOBBIES),
                                           separatorHook: (e, a) =>

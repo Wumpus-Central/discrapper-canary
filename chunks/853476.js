@@ -9,7 +9,7 @@ function c(e) {
     let { userId: t, className: n } = e,
         c = (0, l.Z)(t);
     if (null == c) return null;
-    let s = c === i.u.CAMERA_SEND_LOW_FPS ? o.intl.string(o.t["1NyoVl"]) : void 0;
+    let s = c === i.u.CAMERA_SEND_LOW_FPS ? o.intl.string(o.t["1NyoVt"]) : void 0;
     return null != s
         ? (0, r.jsx)(a.Z, {
               className: n,

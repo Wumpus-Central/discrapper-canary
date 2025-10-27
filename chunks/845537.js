@@ -4,9 +4,9 @@ n.d(t, {
     N1: () => j,
     NY: () => x,
     Ox: () => P,
-    Vq: () => D,
+    Vq: () => w,
     Wf: () => M,
-    cB: () => w,
+    cB: () => D,
     dy: () => N,
     wP: () => R,
 });
@@ -68,7 +68,7 @@ function P(e) {
     let { text: t } = e;
     return (0, r.jsx)(_.Z, { children: t });
 }
-function w(e) {
+function D(e) {
     let { id: t, guildId: n, channelId: s } = e,
         c = (0, i.e7)([y.default], () => y.default.getUser(t)),
         u = (0, i.e7)([b.Z], () => b.Z.hidePersonalInformation),
@@ -108,14 +108,14 @@ function w(e) {
     }
     return f;
 }
-function D(e) {
+function w(e) {
     let { id: t, guildId: n } = e,
         a = (0, i.e7)([E.Z], () => (null != n ? E.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([c.Z], () => c.Z.roleStyle),
         l = (0, h._f)(n, a, null == a ? void 0 : a.colorStrings);
     if (null == a)
         return (0, r.jsxs)("span", {
-            children: ["@", S.intl.string(S.t["YV4F/v"])],
+            children: ["@", S.intl.string(S.t["YV4F/n"])],
         });
     let u = null != a.color && 0 !== a.color,
         d = "dot" === s,
@@ -139,12 +139,12 @@ function D(e) {
 function L(e) {
     let { id: t } = e,
         n = (0, i.e7)([m.Z], () => m.Z.getChannel(t)),
-        a = S.intl.string(S.t.zLZPmp).toLowerCase(),
+        a = S.intl.string(S.t.zLZPmk).toLowerCase(),
         o = "text",
         s = !0;
     if (null != n) {
         var l;
-        (a = (0, u.YO)(n) ? n.name : S.intl.string(S.t["/YzI6+"])),
+        (a = (0, u.YO)(n) ? n.name : S.intl.string(S.t["/YzI63"])),
             (o = (0, u.YO)(n) ? (null != (l = (0, v.wl)(n)) ? l : "text") : "locked"),
             (s = (0, d.B)(n.type));
     }
@@ -194,6 +194,6 @@ function j(e) {
                   })
                 : null;
     return (0, r.jsxs)(_.Z, {
-        children: [o, null != (t = null == a ? void 0 : a.name) ? t : S.intl.string(S.t["11pdXV"])],
+        children: [o, null != (t = null == a ? void 0 : a.name) ? t : S.intl.string(S.t["11pdXZ"])],
     });
 }

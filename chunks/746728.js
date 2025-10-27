@@ -1,14 +1,14 @@
 n.d(t, {
     I: () => h,
-    Z: () => m,
+    Z: () => g,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(706454),
+    s = n(481060),
+    o = n(706454),
     c = n(959165),
     u = n(164991),
     d = n(783393),
@@ -24,7 +24,7 @@ function h(e) {
             languageCode: u.Z.getField("languageCode"),
         });
 }
-function g(e) {
+function m(e) {
     let { loadId: t, categoryId: n, count: l } = e,
         c = i.useCallback(() => {
             h({
@@ -33,28 +33,28 @@ function g(e) {
             });
         }, [n, t]),
         p = u.Z.useField("categoryId") === n,
-        g = l.toLocaleString(s.default.locale),
-        m = (0, d.E)({ categoryId: n });
-    return (0, r.jsxs)(o.P3F, {
+        m = l.toLocaleString(o.default.locale),
+        g = (0, d.E)({ categoryId: n });
+    return (0, r.jsxs)(s.P3F, {
         onClick: c,
         className: a()(f.category, { [f.selected]: p }),
         children: [
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 className: f.name,
                 variant: "text-sm/medium",
                 color: "header-primary",
-                children: m,
+                children: g,
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 className: f.count,
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: g,
+                children: m,
             }),
         ],
     });
 }
-let m = function (e) {
+let g = function (e) {
     let { loadId: t } = e,
         n = (0, p.q)();
     return null == n
@@ -64,7 +64,7 @@ let m = function (e) {
               children: n.map((e) => {
                   let [n, i] = e;
                   return (0, r.jsx)(
-                      g,
+                      m,
                       {
                           loadId: t,
                           categoryId: n,

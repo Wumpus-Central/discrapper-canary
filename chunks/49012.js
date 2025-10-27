@@ -35,13 +35,13 @@ function N(e, t) {
 function R(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         I = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: T, onClick: N, onConfirm: R, onCancel: P, shouldConfirm: w, messageId: D, channelId: L } = e,
+        { trusted: T, onClick: N, onConfirm: R, onCancel: P, shouldConfirm: D, messageId: w, channelId: L } = e,
         x = i().sanitizeUrl(e.href);
     if (null == x) {
         null != t && t.preventDefault(),
             a.Z.show({
-                title: C.intl.string(C.t.x87gam),
-                body: C.intl.format(C.t["9rqRws"], { url: e.href }),
+                title: C.intl.string(C.t.x87gan),
+                body: C.intl.format(C.t["9rqRwl"], { url: e.href }),
                 isDismissable: !0,
                 contextKey: I,
             });
@@ -55,12 +55,12 @@ function R(e, t) {
     }
     let k = null,
         j = !1,
-        U = D,
+        U = w,
         G = L,
         B = null;
-    if (null != D && null != L) {
+    if (null != w && null != L) {
         var Z, F, V;
-        let e = v.Z.getMessage(L, D),
+        let e = v.Z.getMessage(L, w),
             t = E.Z.getBasicChannel(L);
         k = null != (V = null == t ? void 0 : t.guild_id) ? V : null;
         let n = b.Z.getGuild(k),
@@ -139,7 +139,7 @@ function R(e, t) {
         K = (0, O.E)(M),
         z = "http:" !== K && "https:" !== K;
     if ((!z && (W || y.Z.isTrustedDomain(M))) || (z && y.Z.isTrustedProtocol(M)))
-        return void (null == t || (null != w && w)
+        return void (null == t || (null != D && D)
             ? H()
             : j &&
               _.Z.trackAnnouncementMessageLinkClicked({

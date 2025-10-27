@@ -13,9 +13,9 @@ let l = function (e) {
         variant: "text-sm/medium",
         color: "text-muted",
         children: (0, o.QX)(l, {
-            days: s.t.WUTPDQ,
-            hours: s.t.c1qodX,
-            minutes: s.t["2+A3dn"],
+            days: s.t.WUTPDc,
+            hours: s.t.c1qodV,
+            minutes: s.t["2+A3dv"],
         }),
     });
 };

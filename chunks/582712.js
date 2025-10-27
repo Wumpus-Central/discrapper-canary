@@ -36,7 +36,7 @@ function y(e) {
                           b.h2
                               .updateSetting(Array.from(t))
                               .then(() =>
-                                  (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.rlYD1d), l.ToastType.SUCCESS)),
+                                  (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.rlYD1W), l.ToastType.SUCCESS)),
                               ),
                           O(),
                           (0, p.L)(p.Q.MODAL_DISABLED_DMS, y);
@@ -54,13 +54,13 @@ function y(e) {
                               (0, n.jsx)(l.Heading, {
                                   variant: "heading-lg/bold",
                                   className: x.title,
-                                  children: f.intl.string(f.t.w2BvnJ),
+                                  children: f.intl.string(f.t.w2BvnL),
                               }),
                               (0, n.jsx)(l.Text, {
                                   variant: "text-md/normal",
                                   color: "header-secondary",
                                   className: x.body,
-                                  children: f.intl.format(f.t.Depjkp, { guild_name: D.name }),
+                                  children: f.intl.format(f.t.Depjkv, { guild_name: D.name }),
                               }),
                           ],
                       }),
@@ -70,7 +70,7 @@ function y(e) {
                                   variant: "eyebrow",
                                   color: "header-secondary",
                                   className: x.subtitle,
-                                  children: f.intl.string(f.t.KPB2i4),
+                                  children: f.intl.string(f.t.KPB2iw),
                               }),
                               (0, n.jsx)("div", {
                                   className: x.guildContainer,
@@ -97,7 +97,7 @@ function y(e) {
                                           type: "submit",
                                           color: o.zx.Colors.BRAND,
                                           size: o.zx.Sizes.MEDIUM,
-                                          children: f.intl.string(f.t.TD7iU1),
+                                          children: f.intl.string(f.t.TD7iUx),
                                       }),
                                       (0, n.jsx)(o.zx, {
                                           className: x.button,
@@ -105,13 +105,13 @@ function y(e) {
                                           onClick: () => {
                                               O(), (0, p.L)(p.Q.MODAL_DISMISSED, y);
                                           },
-                                          children: f.intl.string(f.t.PsWbcn),
+                                          children: f.intl.string(f.t.PsWbcp),
                                       }),
                                       (0, n.jsx)(l.Text, {
                                           variant: "text-xs/normal",
                                           color: "header-secondary",
                                           className: x.footer,
-                                          children: f.intl.format(f.t.IzZxXV, {
+                                          children: f.intl.format(f.t.IzZxXW, {
                                               onClick: () => {
                                                   O(),
                                                       (0, u.X)(y),

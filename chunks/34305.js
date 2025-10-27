@@ -1,20 +1,20 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(325432),
-    s = n(570928),
+    s = n(325432),
+    o = n(570928),
     c = n(600164),
     u = n(579022),
     d = n(391690),
     p = n(424218),
     f = n(358085),
     h = n(998502),
-    g = n(388032),
-    m = n(499126),
-    b = n(197571);
-function _(e, t, n) {
+    m = n(388032),
+    g = n(499126),
+    _ = n(197571);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,47 +40,47 @@ class E extends i.PureComponent {
     renderViewing() {
         let e,
             t,
-            { path: n, label: i, editingPath: l, isDefault: o, metadata: u } = this.props;
+            { path: n, label: i, editingPath: l, isDefault: s, metadata: u } = this.props;
         return (
             null != u &&
                 ((e = null != u.availableKB ? (0, p.BU)(u.availableKB, { useKibibytes: !0 }) : null),
                 (t = null != u.totalKB ? (0, p.BU)(u.totalKB, { useKibibytes: !0 }) : null)),
             (0, r.jsxs)(c.Z, {
-                className: m.installationPath,
+                className: g.installationPath,
                 align: c.Z.Align.CENTER,
                 children: [
                     this.renderDiskUsageCircle(),
                     (0, r.jsxs)(c.Z, {
                         direction: c.Z.Direction.VERTICAL,
-                        className: m.__invalid_descriptionWrapper,
+                        className: g.__invalid_descriptionWrapper,
                         children: [
                             (0, r.jsxs)(c.Z, {
                                 align: c.Z.Align.CENTER,
                                 children: [
                                     (0, r.jsx)(a.Heading, {
-                                        className: m.rowTitle,
+                                        className: g.rowTitle,
                                         variant: "heading-md/semibold",
                                         children: null != i ? i : d.Z.getLabelFromPath(n),
                                     }),
-                                    o
+                                    s
                                         ? (0, r.jsx)("span", {
-                                              className: m.defaultIndicator,
-                                              children: g.intl.string(g.t.bBvAEH),
+                                              className: g.defaultIndicator,
+                                              children: m.intl.string(m.t.bBvAEH),
                                           })
                                         : null,
                                 ],
                             }),
                             null != u && null != e && null != t
-                                ? (0, r.jsx)(s.Z, {
-                                      className: m.rowBody,
-                                      hoverText: g.intl.formatToPlainString(g.t["Fxo9e+"], {
+                                ? (0, r.jsx)(o.Z, {
+                                      className: g.rowBody,
+                                      hoverText: m.intl.formatToPlainString(m.t["Fxo9e+"], {
                                           available: e,
                                           total: t,
                                       }),
                                       children: n,
                                   })
                                 : (0, r.jsx)(a.Text, {
-                                      className: m.rowBody,
+                                      className: g.rowBody,
                                       variant: "text-xs/normal",
                                       children: n,
                                   }),
@@ -89,7 +89,7 @@ class E extends i.PureComponent {
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: g.intl.string(g.t.bt75uw),
+                        text: m.intl.string(m.t.bt75uw),
                         disabled: null != l,
                         onClick: this.handleStartEditing,
                     }),
@@ -102,42 +102,42 @@ class E extends i.PureComponent {
             { label: n, isDefault: i } = this.state;
         return (0, r.jsx)(a.Zbd, {
             editable: !0,
-            className: m.installationPathEditing,
+            className: g.installationPathEditing,
             children: (0, r.jsxs)(c.Z, {
                 children: [
                     this.renderDiskUsageCircle(),
                     (0, r.jsxs)(c.Z.Child, {
                         children: [
                             (0, r.jsx)(a.oil, {
-                                label: g.intl.string(g.t.AJkKCB),
+                                label: m.intl.string(m.t.AJkKCB),
                                 value: n,
                                 placeholder: d.Z.getLabelFromPath(e),
                                 onChange: this.handleLabelChange,
                             }),
                             (0, r.jsx)("div", {
-                                className: b.marginTop20,
+                                className: _.marginTop20,
                                 children: (0, r.jsx)(a.oil, {
-                                    label: g.intl.string(g.t.lnUCwX),
+                                    label: m.intl.string(m.t.lnUCwX),
                                     disabled: !0,
                                     value: e,
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: m.defaultLocationCheckbox,
+                                className: g.defaultLocationCheckbox,
                                 children: (0, r.jsx)(a.Checkbox, {
                                     checked: null != i ? i : this.props.isDefault,
                                     disabled: this.props.isDefault,
                                     onChange: this.handleToggleDefault,
-                                    label: g.intl.string(g.t.Z2MWuH),
+                                    label: m.intl.string(m.t.Z2MWuH),
                                 }),
                             }),
-                            (0, r.jsx)(a.izJ, { className: m.separator }),
+                            (0, r.jsx)(a.izJ, { className: g.separator }),
                             (0, r.jsxs)(c.Z, {
                                 children: [
                                     (0, r.jsx)(a.Button, {
                                         variant: "critical-secondary",
                                         size: "sm",
-                                        text: g.intl.string(g.t.iBUzS5),
+                                        text: m.intl.string(m.t.iBUzS5),
                                         disabled: t || this.props.isDefault,
                                         onClick: this.handleRemoveLocation,
                                     }),
@@ -148,13 +148,13 @@ class E extends i.PureComponent {
                                                 (0, r.jsx)(a.Button, {
                                                     variant: "secondary",
                                                     size: "sm",
-                                                    text: g.intl.string(g.t["ETE/oC"]),
+                                                    text: m.intl.string(m.t["ETE/oC"]),
                                                     onClick: this.handleStopEditing,
                                                 }),
                                                 (0, r.jsx)(a.Button, {
                                                     variant: "active",
                                                     size: "sm",
-                                                    text: g.intl.string(g.t["R3BPH+"]),
+                                                    text: m.intl.string(m.t["R3BPH+"]),
                                                     disabled:
                                                         e === this.props.path &&
                                                         n === this.props.label &&
@@ -177,11 +177,11 @@ class E extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", {
+            b(this, "state", {
                 label: void 0,
                 isDefault: null,
             }),
-            _(this, "handleStartEditing", () => {
+            b(this, "handleStartEditing", () => {
                 let { path: e, label: t, isDefault: n, onToggleEditing: r } = this.props;
                 r(e),
                     this.setState({
@@ -189,7 +189,7 @@ class E extends i.PureComponent {
                         isDefault: n,
                     });
             }),
-            _(this, "handleStopEditing", () => {
+            b(this, "handleStopEditing", () => {
                 let { onToggleEditing: e } = this.props;
                 e(null),
                     this.setState({
@@ -197,7 +197,7 @@ class E extends i.PureComponent {
                         isDefault: null,
                     });
             }),
-            _(this, "handleRemoveLocation", () => {
+            b(this, "handleRemoveLocation", () => {
                 (0, a.h7j)((e) =>
                     (0, r.jsx)(
                         a.ConfirmModal,
@@ -230,45 +230,45 @@ class E extends i.PureComponent {
                                             }),
                                         )),
                                         r.forEach(function (t) {
-                                            _(e, t, n[t]);
+                                            b(e, t, n[t]);
                                         });
                                 }
                                 return e;
                             })({}, e),
                             {
-                                header: g.intl.string(g.t.iBUzS5),
-                                confirmText: g.intl.string(g.t.iBUzS5),
-                                cancelText: g.intl.string(g.t["ETE/oC"]),
+                                header: m.intl.string(m.t.iBUzS5),
+                                confirmText: m.intl.string(m.t.iBUzS5),
+                                cancelText: m.intl.string(m.t["ETE/oC"]),
                                 onConfirm: () => {
-                                    this.handleStopEditing(), (0, o.iD)(this.props.path);
+                                    this.handleStopEditing(), (0, s.iD)(this.props.path);
                                 },
                                 children: (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
-                                    children: g.intl.string(g.t["1XqeW2"]),
+                                    children: m.intl.string(m.t["1XqeW2"]),
                                 }),
                             },
                         ),
                     ),
                 );
             }),
-            _(this, "handleSaveChanges", () => {
-                (0, o.Tb)(this.props.path, {
+            b(this, "handleSaveChanges", () => {
+                (0, s.Tb)(this.props.path, {
                     label: null != this.state.label ? this.state.label : this.props.label,
                     isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault,
                 }),
                     this.handleStopEditing();
             }),
-            _(this, "handleLabelChange", (e) => {
+            b(this, "handleLabelChange", (e) => {
                 this.setState({ label: e });
             }),
-            _(this, "handleToggleDefault", () => {
+            b(this, "handleToggleDefault", () => {
                 this.setState({ isDefault: !this.state.isDefault });
             });
     }
 }
 class O extends i.PureComponent {
     componentDidMount() {
-        (0, o.ec)(
+        (0, s.ec)(
             this.props.installationPaths.map((e) => {
                 let { path: t } = e;
                 return t;
@@ -279,9 +279,9 @@ class O extends i.PureComponent {
         let { installationPaths: e, installationPathsMetadata: t, defaultInstallationPath: n } = this.props,
             { editingPath: i } = this.state;
         return (0, r.jsx)("div", {
-            className: m.wrapper,
+            className: g.wrapper,
             children: (0, r.jsxs)(a.gNt, {
-                label: g.intl.string(g.t.aLszkC),
+                label: m.intl.string(m.t.aLszkC),
                 children: [
                     e.map((e) => {
                         let { path: l, label: a } = e;
@@ -300,11 +300,11 @@ class O extends i.PureComponent {
                         );
                     }),
                     (0, r.jsx)("div", {
-                        className: m.buttonRowWrapper,
+                        className: g.buttonRowWrapper,
                         children: (0, r.jsx)(a.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: g.intl.string(g.t.pnZ2uk),
+                            text: m.intl.string(m.t.pnZ2uk),
                             disabled: !f.isPlatformEmbedded,
                             onClick: this.handleAddInstallationLocation,
                         }),
@@ -315,18 +315,18 @@ class O extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", { editingPath: null }),
-            _(this, "handleAddInstallationLocation", () => {
+            b(this, "state", { editingPath: null }),
+            b(this, "handleAddInstallationLocation", () => {
                 h.ZP.showOpenDialog(["openDirectory"]).then((e) => {
-                    null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, o.RY)(e[0]);
+                    null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, s.RY)(e[0]);
                 });
             }),
-            _(this, "handleToggleEditing", (e) => {
+            b(this, "handleToggleEditing", (e) => {
                 this.setState({ editingPath: e });
             });
     }
 }
-let v = l.ZP.connectStores([d.Z], () => ({
+let I = l.ZP.connectStores([d.Z], () => ({
     installationPaths: d.Z.installationPaths,
     installationPathsMetadata: d.Z.installationPathsMetadata,
     defaultInstallationPath: d.Z.defaultInstallationPath,

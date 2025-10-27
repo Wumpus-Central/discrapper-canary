@@ -37,9 +37,9 @@ function p(e, t) {
             null == t &&
             i.Z.show({
                 title: f.intl.string(f.t["B+cbLS"]),
-                body: f.intl.string(f.t.CYVgLC),
-                cancelText: f.intl.string(f.t.f3Pet7),
-                confirmText: f.intl.string(f.t.BddRzc),
+                body: f.intl.string(f.t.CYVgLI),
+                cancelText: f.intl.string(f.t.f3Pet9),
+                confirmText: f.intl.string(f.t.BddRzS),
                 onConfirm: () => {
                     (0, a.Z)({ nextStatus: d.Skl.ONLINE });
                 },

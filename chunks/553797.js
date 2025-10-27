@@ -20,9 +20,9 @@ function u(e) {
         p = null;
     return (
         i === s.rV.YEAR
-            ? (p = l.intl.format(l.t["3U719v"], { price: _ }))
+            ? (p = l.intl.format(l.t["3U719t"], { price: _ }))
             : i === s.rV.MONTH && 1 === d
-              ? (p = l.intl.format(l.t.NkR7BQ, { price: _ }))
+              ? (p = l.intl.format(l.t.NkR7BU, { price: _ }))
               : i === s.rV.MONTH &&
                 d > 1 &&
                 (p = l.intl.format(l.t.CNAGg4, {

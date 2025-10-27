@@ -8,8 +8,8 @@ var r = n(951288),
     a = n(120356),
     l = n.n(a),
     o = n(100568),
-    s = n(417865),
-    c = n(665379),
+    c = n(417865),
+    s = n(665379),
     u = n(481060),
     d = n(388032);
 function f(e) {
@@ -77,7 +77,7 @@ function p(e) {
             "children",
         ]);
     let h = i.useRef(null),
-        { isDragging: v, dragSourcePosition: y } = (function (e) {
+        { isDragging: y, dragSourcePosition: v } = (function (e) {
             let {
                     dragRef: t,
                     dropRef: n,
@@ -106,7 +106,7 @@ function p(e) {
                     }),
                     [l, r, u, d],
                 ),
-                [{ isDragging: v }, y, j] = (0, o.c)({
+                [{ isDragging: y }, v, O] = (0, o.c)({
                     type: m,
                     item: h,
                     collect: (e) => ({
@@ -116,9 +116,9 @@ function p(e) {
                     end: g,
                 });
             i.useEffect(() => {
-                p && j((0, c.r)(), { captureDraggingState: !0 });
-            }, [j, p]);
-            let [{ dragSourcePosition: O }, x] = (0, s.L)({
+                p && O((0, s.r)(), { captureDraggingState: !0 });
+            }, [O, p]);
+            let [{ dragSourcePosition: j }, x] = (0, c.L)({
                 accept: m,
                 drop: (e) => {
                     let t = e.index;
@@ -137,11 +137,11 @@ function p(e) {
                 },
             });
             return (
-                y(t),
+                v(t),
                 x(n),
                 {
-                    isDragging: v,
-                    dragSourcePosition: O,
+                    isDragging: y,
+                    dragSourcePosition: j,
                 }
             );
         })(
@@ -154,12 +154,12 @@ function p(e) {
                 b,
             ),
         ),
-        j = null != y,
-        O = j && t < y,
-        x = j && t > y;
+        O = null != v,
+        j = O && t < v,
+        x = O && t > v;
     return (0, r.jsx)("div", {
         ref: h,
-        className: l()(n, v && a, O && u, x && d),
+        className: l()(n, y && a, j && u, x && d),
         "aria-label": p,
         children: m,
     });
@@ -174,7 +174,7 @@ function m(e) {
         ((t = f(
             {
                 innerRef: i,
-                "aria-label": null != a ? a : d.intl.string(d.t.Zc1neH),
+                "aria-label": null != a ? a : d.intl.string(d.t.Zc1neM),
             },
             o,
         )),

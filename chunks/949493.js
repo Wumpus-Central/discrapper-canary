@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(388032);
 let R = () =>
         (0, r.jsxs)(m.Z, {
-            title: N.intl.string(N.t.xVRG4O),
+            title: N.intl.string(N.t.xVRG4P),
             webSetting: S.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             children: [
                 (0, r.jsx)(E.n, {}),
@@ -40,7 +40,7 @@ let R = () =>
         }),
     P = () =>
         (0, r.jsxs)(m.Z, {
-            title: N.intl.string(N.t["y62Z/f"]),
+            title: N.intl.string(N.t["y62Z/d"]),
             webSetting: S.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: [
                 (0, r.jsx)(a.F, {
@@ -53,32 +53,32 @@ let R = () =>
                 (0, r.jsx)(y.Z, {}),
             ],
         }),
-    w = () =>
+    D = () =>
         (0, r.jsxs)(m.Z, {
-            title: N.intl.string(N.t["1Qn8iY"]),
+            title: N.intl.string(N.t["1Qn8iV"]),
             webSetting: S.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: [(0, r.jsx)(_.Z, {}), (0, r.jsx)(g.ZP, {})],
         }),
-    D = () =>
+    w = () =>
         (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)(R, {}), (0, r.jsx)(P, {}), (0, r.jsx)(w, {})],
+            children: [(0, r.jsx)(R, {}), (0, r.jsx)(P, {}), (0, r.jsx)(D, {})],
         });
 function L() {
     let e = (0, i.e7)([o.Z], () => o.Z.getSubsection()),
         t = [
             {
-                title: N.intl.string(N.t["/7xJCA"]),
-                component: () => (0, r.jsx)(D, {}),
+                title: N.intl.string(N.t["/7xJCF"]),
+                component: () => (0, r.jsx)(w, {}),
                 setting: S.s6.CONTENT_SOCIAL_DISCORD_TAB,
             },
             {
-                title: N.intl.string(N.t.YpCiMj),
+                title: N.intl.string(N.t.YpCiMt),
                 component: u.Z,
                 setting: S.s6.CONTENT_SOCIAL_CONNECTED_GAMES,
             },
         ];
     return (0, r.jsx)(s.N, {
-        header: N.intl.string(N.t["+o1pDQ"]),
+        header: N.intl.string(N.t["+o1pDZ"]),
         notice: (0, r.jsx)(T.Z, { page: T.N.CONTENT_AND_SOCIAL }),
         children: (0, r.jsx)(l.Z, {
             parentSetting: S.s6.CONTENT_SOCIAL,

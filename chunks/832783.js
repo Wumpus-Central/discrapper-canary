@@ -7,8 +7,8 @@ var i = n(442837),
     a = n(981631),
     o = n(388032);
 let c = (0, u.qs)(s.n.DESKTOP_NOTIFICATIONS, {
-    useTitle: () => o.intl.string(o.t["/0WClp"]),
-    useSubtitle: () => o.intl.string(o.t.wF9ih4),
+    useTitle: () => o.intl.string(o.t["/0WCll"]),
+    useSubtitle: () => o.intl.string(o.t.wF9ih3),
     useValue: () => (0, i.e7)([r.Z], () => r.Z.getDesktopType()) !== a.qrD.NEVER,
     setValue: (t) => l.default.setDesktopType(t ? a.qrD.ALL : a.qrD.NEVER),
 });

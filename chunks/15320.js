@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => Z });
 var r = n(951288),
     l = n(647438),
     i = n(399606),
@@ -72,7 +72,7 @@ function C(e, t) {
         t,
     );
 }
-function P(e, t) {
+function E(e, t) {
     return (
         !(
             e.features.has(_.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
@@ -80,7 +80,7 @@ function P(e, t) {
         ) && null != t
     );
 }
-function E(e) {
+function P(e) {
     let {
             headerId: t,
             guild: n,
@@ -95,20 +95,20 @@ function E(e) {
         } = e,
         _ = (0, i.Wu)([p.Z], () => p.Z.getOnboardingResponsesForPrompt(n.id, u.id)),
         N = 0 === _.length && (null == u ? void 0 : u.required),
-        P = null == u ? void 0 : u.options.filter((e) => _.includes(e.id)),
-        E = (0, h.L6)(P),
-        Z = (0, h.dX)(P),
-        I = 0 === _.length,
+        E = null == u ? void 0 : u.options.filter((e) => _.includes(e.id)),
+        P = (0, h.L6)(E),
+        I = (0, h.dX)(E),
+        Z = 0 === _.length,
         { helpText: w, helpTextAdditional: T } = (0, g.Z)({
             guild: n,
             prompt: u,
-            selectedRoleIds: E,
-            selectedChannelIds: Z,
+            selectedRoleIds: P,
+            selectedChannelIds: I,
             itemHook: C,
         }),
         D = (0, d.Z)(n.id, 1000),
         S = u.options.map((e) => y({ value: e.id }, e)),
-        B = u.options.filter((e) => _.includes(e.id)).map((e) => e.id);
+        R = u.options.filter((e) => _.includes(e.id)).map((e) => e.id);
     return (0, r.jsx)("div", {
         className: O.prompt,
         children: (0, r.jsxs)("div", {
@@ -123,7 +123,7 @@ function E(e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    children: b.intl.format(b.t.isV0NT, {
+                                    children: b.intl.format(b.t.isV0NW, {
                                         currentQuestion: l + 1,
                                         questionCount: c,
                                     }),
@@ -139,7 +139,7 @@ function E(e) {
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-sm/medium",
                                                   color: "text-brand",
-                                                  children: b.intl.string(b.t.Ur8Vrq),
+                                                  children: b.intl.string(b.t.Ur8Vrt),
                                               }),
                                           ],
                                       })
@@ -155,7 +155,7 @@ function E(e) {
                         }),
                         (0, r.jsx)(v.Z, {
                             options: S,
-                            value: B,
+                            value: R,
                             onChange: (e) => {
                                 let t = e.find((e) => !_.includes(e.id)),
                                     n = e.map((e) => e.id);
@@ -183,7 +183,7 @@ function E(e) {
                                 (0, r.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "md",
-                                    text: b.intl.string(b.t["13/7kZ"]),
+                                    text: b.intl.string(b.t["13/7kX"]),
                                     onClick: () => f(_.length),
                                     icon: o.j9r,
                                     iconPosition: "start",
@@ -200,15 +200,15 @@ function E(e) {
                                 }),
                                 (0, r.jsx)(a.u, {
                                     asContainer: !0,
-                                    text: N ? b.intl.string(b.t.dA1dSU) : null,
+                                    text: N ? b.intl.string(b.t.dA1dSf) : null,
                                     children: (0, r.jsx)(o.Button, {
-                                        variant: I ? "secondary" : "primary",
+                                        variant: Z ? "secondary" : "primary",
                                         size: "md",
                                         text: s
-                                            ? "".concat(b.intl.string(b.t["8SuVoK"]), " \uD83C\uDF89")
-                                            : I
-                                              ? b.intl.string(b.t["5WxrcX"])
-                                              : b.intl.string(b.t.PDTjLC),
+                                            ? "".concat(b.intl.string(b.t["8SuVoE"]), " \uD83C\uDF89")
+                                            : Z
+                                              ? b.intl.string(b.t["5Wxrcd"])
+                                              : b.intl.string(b.t.PDTjLN),
                                         onClick: () => (s ? j() : x(_.length)),
                                         disabled: N,
                                         icon: s ? void 0 : o.d4D,
@@ -223,7 +223,7 @@ function E(e) {
         }),
     });
 }
-function Z(e) {
+function I(e) {
     let {
             headerId: t,
             guild: n,
@@ -240,13 +240,13 @@ function Z(e) {
         _ = 0 === j.length && (null == u ? void 0 : u.required),
         y = null == u ? void 0 : u.options.filter((e) => j.includes(e.id)),
         N = (0, h.L6)(y),
-        P = (0, h.dX)(y),
-        E = 0 === j.length,
-        { helpText: Z, helpTextAdditional: I } = (0, g.Z)({
+        E = (0, h.dX)(y),
+        P = 0 === j.length,
+        { helpText: I, helpTextAdditional: Z } = (0, g.Z)({
             guild: n,
             prompt: u,
             selectedRoleIds: N,
-            selectedChannelIds: P,
+            selectedChannelIds: E,
             itemHook: C,
         });
     return (0, r.jsx)("div", {
@@ -263,7 +263,7 @@ function Z(e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    children: b.intl.format(b.t.isV0NT, {
+                                    children: b.intl.format(b.t.isV0NW, {
                                         currentQuestion: l + 1,
                                         questionCount: c,
                                     }),
@@ -279,7 +279,7 @@ function Z(e) {
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-sm/medium",
                                                   color: "text-brand",
-                                                  children: b.intl.string(b.t.Ur8Vrq),
+                                                  children: b.intl.string(b.t.Ur8Vrt),
                                               }),
                                           ],
                                       })
@@ -320,7 +320,7 @@ function Z(e) {
                                 (0, r.jsx)(o.Button, {
                                     variant: "secondary",
                                     size: "md",
-                                    text: b.intl.string(b.t["13/7kZ"]),
+                                    text: b.intl.string(b.t["13/7kX"]),
                                     onClick: () => m(j.length),
                                     icon: o.j9r,
                                     iconPosition: "start",
@@ -333,19 +333,19 @@ function Z(e) {
                                     className: O.helpText,
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: [Z, " ", I],
+                                    children: [I, " ", Z],
                                 }),
                                 (0, r.jsx)(a.u, {
                                     asContainer: !0,
-                                    text: _ ? b.intl.string(b.t.dA1dSU) : null,
+                                    text: _ ? b.intl.string(b.t.dA1dSf) : null,
                                     children: (0, r.jsx)(o.Button, {
-                                        variant: E ? "secondary" : "primary",
+                                        variant: P ? "secondary" : "primary",
                                         size: "md",
                                         text: s
-                                            ? "".concat(b.intl.string(b.t["8SuVoK"]), " \uD83C\uDF89")
-                                            : E
-                                              ? b.intl.string(b.t["5WxrcX"])
-                                              : b.intl.string(b.t.PDTjLC),
+                                            ? "".concat(b.intl.string(b.t["8SuVoE"]), " \uD83C\uDF89")
+                                            : P
+                                              ? b.intl.string(b.t["5Wxrcd"])
+                                              : b.intl.string(b.t.PDTjLN),
                                         onClick: () => (s ? v() : f(j.length)),
                                         disabled: _,
                                         icon: s ? void 0 : o.d4D,
@@ -360,7 +360,7 @@ function Z(e) {
         }),
     });
 }
-function I(e) {
+function Z(e) {
     let {
             guild: t,
             prompts: n,
@@ -378,7 +378,7 @@ function I(e) {
             c.ZP.fetchVerificationForm(t.id);
     }, [t]);
     let v = n[a],
-        b = a + 1 >= n.length && !P(t, x),
+        b = a + 1 >= n.length && !E(t, x),
         O = n[0].required;
     l.useEffect(() => {
         g ||
@@ -411,9 +411,9 @@ function I(e) {
                             required: n[a + 1].required,
                         }),
                     )),
-                a + 1 < n.length ? p(a + 1) : P(t, x) && p("rules");
+                a + 1 < n.length ? p(a + 1) : E(t, x) && p("rules");
         },
-        I = (e) => {
+        Z = (e) => {
             !g &&
                 (m.default.track(
                     _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
@@ -439,7 +439,7 @@ function I(e) {
     if (null == v) return null;
     switch (v.type) {
         case j.FN.MULTIPLE_CHOICE:
-            return (0, r.jsx)(Z, {
+            return (0, r.jsx)(I, {
                 guild: t,
                 headerId: h,
                 step: a,
@@ -447,12 +447,12 @@ function I(e) {
                 currentPrompt: v,
                 lastPrompt: b,
                 selectOption: o,
-                gotoPrevPrompt: I,
+                gotoPrevPrompt: Z,
                 gotoNextPrompt: C,
                 completeOnboarding: d,
             });
         case j.FN.DROPDOWN:
-            return (0, r.jsx)(E, {
+            return (0, r.jsx)(P, {
                 guild: t,
                 headerId: h,
                 step: a,
@@ -460,7 +460,7 @@ function I(e) {
                 currentPrompt: v,
                 lastPrompt: b,
                 selectOption: o,
-                gotoPrevPrompt: I,
+                gotoPrevPrompt: Z,
                 gotoNextPrompt: C,
                 completeOnboarding: d,
             });

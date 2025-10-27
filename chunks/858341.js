@@ -18,8 +18,8 @@ function k(e) {
     let t,
         k,
         Z,
-        { channel: x, message: S, target: m, attachment: _, onSelect: j } = e,
-        v = m;
+        { channel: m, message: x, target: S, attachment: _, onSelect: j } = e,
+        v = S;
     if (null != _) k = t = _.url;
     else
         for (; (0, s.kK)(v); )
@@ -29,24 +29,24 @@ function k(e) {
     let b = null == (n = document.getSelection()) ? void 0 : n.toString(),
         C = (0, a.Z)(b),
         Q = (0, o.Z)(b),
-        w = (0, f.Z)(S, x),
-        T = (0, p.Z)(S, x),
-        B = (0, u.Z)(S, x),
-        H = (0, h.Z)(S, x),
+        w = (0, f.Z)(x, m),
+        T = (0, p.Z)(x, m),
+        B = (0, u.Z)(x, m),
+        H = (0, h.Z)(x, m),
         I = (0, d.Z)(null != t ? t : k, Z),
         K = (0, r.Z)({
-            id: S.id,
-            label: g.intl.string(g.t.zBoHlZ),
-            shiftId: "".concat(S.channel_id, "-").concat(S.id),
+            id: x.id,
+            label: g.intl.string(g.t.zBoHlf),
+            shiftId: "".concat(x.channel_id, "-").concat(x.id),
         }),
         M = (0, r.Z)({
-            id: S.author.id,
-            label: g.intl.string(g.t.Muw4ws),
+            id: x.author.id,
+            label: g.intl.string(g.t.Muw4wm),
         });
     return (0, l.jsxs)(i.v2r, {
         navId: "message",
         onClose: c.Zy,
-        "aria-label": g.intl.string(g.t.ChPNkJ),
+        "aria-label": g.intl.string(g.t.ChPNkN),
         onSelect: j,
         children: [
             (0, l.jsx)(i.kSQ, { children: C }),

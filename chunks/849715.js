@@ -14,12 +14,12 @@ function d(e) {
         children: [
             (0, r.jsx)(a.Z, {
                 step: 1,
-                header: o.intl.string(o.t["1YgPj4"]),
+                header: o.intl.string(o.t["1YgPj/"]),
             }),
             (0, r.jsx)(s.Z, { type: s.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(a.Z, {
                 step: 2,
-                header: o.intl.string(o.t["18TOiY"]),
+                header: o.intl.string(o.t["18TOiQ"]),
                 children: (0, r.jsx)(i.Z, {
                     rule: t,
                     onChangeRule: n,
@@ -28,7 +28,7 @@ function d(e) {
             (0, r.jsx)(s.Z, { type: s.Z.Type.CROSS }),
             (0, r.jsx)(a.Z, {
                 step: 3,
-                header: o.intl.string(o.t.eq3gjo),
+                header: o.intl.string(o.t.eq3gjh),
                 children: (0, r.jsx)(l.Z, {
                     rule: t,
                     onChangeRule: n,

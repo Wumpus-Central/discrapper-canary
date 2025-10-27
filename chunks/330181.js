@@ -50,7 +50,7 @@ function h(e) {
     let O = () => h(n),
         v = o()(n.currentPeriodEnd).format(_);
     return (0, r.jsx)(d.Z, {
-        message: f.intl.format(f.t.chw89f, {
+        message: f.intl.format(f.t.chw89X, {
             currentListing: b.name,
             nextListing: y.name,
             changeDate: v,
@@ -58,7 +58,7 @@ function h(e) {
         error: null == g ? void 0 : g.message,
         onClick: O,
         submitting: m,
-        ctaMessage: f.intl.string(f.t.De4wIy),
+        ctaMessage: f.intl.string(f.t.De4wI8),
         className: a,
     });
 }

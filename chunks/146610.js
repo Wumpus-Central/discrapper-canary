@@ -43,13 +43,13 @@ let m = [
         {
             key: "subscribers",
             cellClassName: l()(u.subscribersColumn, g.cellAlignRight),
-            renderHeader: () => d.intl.string(d.t.zu8go6),
+            renderHeader: () => d.intl.string(d.t.zu8go1),
             render: (e) => (0, r.jsx)(c.av, { children: e.roleMemberCount }),
         },
         {
             key: "price",
             cellClassName: l()(u.priceColumn, g.cellAlignRight),
-            renderHeader: () => d.intl.string(d.t.NcrbWF),
+            renderHeader: () => d.intl.string(d.t.NcrbWI),
             render(e) {
                 let { subscriptionListing: t } = e,
                     n = null == t ? void 0 : t.subscription_plans[0],

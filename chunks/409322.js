@@ -24,8 +24,8 @@ function u(e) {
                 ? t
                 : ((n = g.length),
                   d
-                      ? c.intl.formatToPlainString(c.t["3SHL+f"], { count: n })
-                      : c.intl.formatToPlainString(c.t["8JRFyc"], { count: n }));
+                      ? c.intl.formatToPlainString(c.t["3SHL+d"], { count: n })
+                      : c.intl.formatToPlainString(c.t["8JRFyZ"], { count: n }));
     return (0, r.jsx)(h, {
         children: (0, r.jsxs)(o.Kqy, {
             gap: 8,

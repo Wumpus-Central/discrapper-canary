@@ -97,13 +97,13 @@ function E(e) {
                 modalClassName: f.modal,
                 modalContentClassName: f.modalContent,
                 type: c.cd.TRY_IT_OUT_MODAL_UPSELL,
-                title: d.intl.string(d.t.reVc0N),
-                body: d.intl.string(d.t.KckEj4),
-                glowUp: d.intl.string(d.t.reVc0N),
+                title: d.intl.string(d.t.reVc0M),
+                body: d.intl.string(d.t.KckEj7),
+                glowUp: d.intl.string(d.t.reVc0M),
                 onSecondaryClick: () => {
                     (0, s.$)(n);
                 },
-                secondaryCTA: d.intl.string(d.t.PcTCBw),
+                secondaryCTA: d.intl.string(d.t.PcTCB7),
                 onClose: n,
                 enableArtBoxShadow: !1,
                 hideBackButton: !0,

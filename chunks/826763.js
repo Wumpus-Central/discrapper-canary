@@ -25,7 +25,7 @@ function p(e) {
                     children: [
                         (0, r.jsx)(i.Heading, {
                             variant: "heading-xl/semibold",
-                            children: c.intl.string(c.t["8gJGPj"]),
+                            children: c.intl.string(c.t["8gJGPs"]),
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: "text-sm/normal",
@@ -37,7 +37,7 @@ function p(e) {
                             className: d.__invalid_button,
                             children: (0, r.jsx)(i.Button, {
                                 variant: "primary",
-                                text: c.intl.string(c.t["I/XhUl"]),
+                                text: c.intl.string(c.t["I/XhUn"]),
                                 onClick: () => {
                                     (0, a.mL)(t),
                                         l.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS),

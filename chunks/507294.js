@@ -1,6 +1,6 @@
 n.d(t, {
     default: () => x,
-    g: () => j,
+    g: () => P,
 }),
     n(388685),
     n(472816),
@@ -10,28 +10,28 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(793030),
-    s = n(442837),
+    s = n(793030),
+    o = n(442837),
     c = n(780384),
     u = n(481060),
     d = n(239091),
     p = n(749210),
     f = n(410030),
     h = n(726542),
-    g = n(884338),
-    m = n(367907),
-    b = n(598077),
-    _ = n(314897),
+    m = n(884338),
+    g = n(367907),
+    _ = n(598077),
+    b = n(314897),
     E = n(271383),
     O = n(485386),
-    v = n(626135),
-    y = n(63063),
-    I = n(225104),
+    I = n(626135),
+    v = n(63063),
+    y = n(225104),
     C = n(981631),
     S = n(388032),
-    N = n(375563),
-    T = n(245141);
-function P(e) {
+    T = n(375563),
+    N = n(245141);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,13 +56,13 @@ function P(e) {
     }
     return e;
 }
-function j(e, t) {
+function P(e, t) {
     (0, u.ZDy)(async () => {
         let { default: i } = await n.e("38413").then(n.bind(n, 107807));
         return (n) =>
             (0, r.jsx)(
                 i,
-                P(
+                j(
                     {
                         role: e,
                         guildId: t,
@@ -74,44 +74,44 @@ function j(e, t) {
 }
 let x = function (e) {
     let { guildId: t, transitionState: l, onClose: x } = e,
-        A = (0, s.e7)([O.Z], () => O.Z.getSortedRoles(t)),
-        Z = (0, s.e7)([_.default], () => _.default.getId()),
-        w = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, Z)),
-        [L, R] = i.useState([]),
-        D = (0, f.ZP)();
+        A = (0, o.e7)([O.Z], () => O.Z.getSortedRoles(t)),
+        Z = (0, o.e7)([b.default], () => b.default.getId()),
+        w = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, Z)),
+        [L, D] = i.useState([]),
+        R = (0, f.ZP)();
     if (
         (i.useEffect(() => {
             0 !== L.length &&
-                v.default.track(
+                I.default.track(
                     C.rMx.PASSPORT_ENTRY_VIEWED,
-                    P(
+                    j(
                         {
                             role_ids: L.map((e) => {
                                 let { role_id: t } = e;
                                 return t;
                             }),
                         },
-                        (0, m.hH)(t),
+                        (0, g.hH)(t),
                     ),
                 );
         }, [t, L]),
         i.useEffect(() => {
-            p.Z.getGuildRoleConnectionsConfigurations(t).then((e) => R(e));
+            p.Z.getGuildRoleConnectionsConfigurations(t).then((e) => D(e));
         }, [t]),
         null == w)
     )
         return null;
     let M = A.filter((e) => null === e.tags.guild_connections);
-    return (0, r.jsx)(o.Modal, {
+    return (0, r.jsx)(s.Modal, {
         transitionState: l,
-        title: S.intl.string(S.t.ghtnsr),
+        title: S.intl.string(S.t.ghtnss),
         onClose: x,
-        subtitle: S.intl.format(S.t["Y+TsER"], { helpdeskArticleUrl: y.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
+        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: v.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, r.jsx)(u.Kqy, {
             children: M.map((e) => {
                 let l = w.roles.includes(e.id),
-                    o = (function (e) {
+                    s = (function (e) {
                         let n = L.find((t) => {
                             let { role_id: n } = t;
                             return n === e;
@@ -119,35 +119,35 @@ let x = function (e) {
                         if (null == n) return [];
                         let i = {};
                         for (let e of n.rules.flat()) {
-                            let o;
+                            let s;
                             if (null != e.application_id) {
                                 var l;
                                 let i = null == (l = n.applications) ? void 0 : l[e.application_id];
-                                o =
+                                s =
                                     (null == i ? void 0 : i.bot) != null
                                         ? (0, r.jsx)("img", {
-                                              src: new b.Z(i.bot).getAvatarURL(t, 24),
+                                              src: new _.Z(i.bot).getAvatarURL(t, 24),
                                               alt: "",
-                                              className: a()(N.botAvatar, T.avatar),
+                                              className: a()(T.botAvatar, N.avatar),
                                           })
                                         : null;
                             } else {
                                 let t = h.Z.get(e.connection_type);
-                                o = (0, r.jsx)("img", {
-                                    src: (0, c.ap)(D) ? t.icon.lightSVG : t.icon.darkSVG,
+                                s = (0, r.jsx)("img", {
+                                    src: (0, c.ap)(R) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
-                                    className: T.avatar,
+                                    className: N.avatar,
                                 });
                             }
-                            null != o && (i["".concat(e.connection_type, ":").concat(e.application_id)] = o);
+                            null != s && (i["".concat(e.connection_type, ":").concat(e.application_id)] = s);
                         }
                         return Object.values(i);
                     })(e.id);
                 return (0, r.jsxs)(
                     u.P3F,
                     {
-                        className: a()(N.verifiedRole, l ? N.verifiedRoleHasRole : null),
-                        onClick: l ? void 0 : () => j(e, t),
+                        className: a()(T.verifiedRole, l ? T.verifiedRoleHasRole : null),
+                        onClick: l ? void 0 : () => P(e, t),
                         onContextMenu: l
                             ? (i) => {
                                   var l;
@@ -159,7 +159,7 @@ let x = function (e) {
                                               var i, a;
                                               return (0, r.jsx)(
                                                   e,
-                                                  ((i = P({}, n)),
+                                                  ((i = j({}, n)),
                                                   (a = a =
                                                       {
                                                           roleId: l,
@@ -191,42 +191,42 @@ let x = function (e) {
                         children: [
                             l
                                 ? (0, r.jsx)("div", {
-                                      className: N.roleCheckmark,
+                                      className: T.roleCheckmark,
                                       children: (0, r.jsx)(u.kmB, {
                                           size: "xs",
                                           color: "currentColor",
                                       }),
                                   })
                                 : null,
-                            (0, r.jsx)(I.Z, {
+                            (0, r.jsx)(y.Z, {
                                 guildId: t,
                                 role: e,
                                 size: 24,
                             }),
                             (0, r.jsxs)("div", {
-                                className: N.verifiedRoleNameDescriptionContainer,
+                                className: T.verifiedRoleNameDescriptionContainer,
                                 children: [
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-md/medium",
                                         color: "header-primary",
-                                        className: N.verifiedRoleName,
+                                        className: T.verifiedRoleName,
                                         children: e.name,
                                     }),
                                     void 0 !== e.description
                                         ? (0, r.jsx)(u.Text, {
                                               variant: "text-xs/normal",
                                               color: "header-secondary",
-                                              className: N.verifiedRoleDescription,
+                                              className: T.verifiedRoleDescription,
                                               children: e.description,
                                           })
                                         : null,
                                 ],
                             }),
-                            (0, r.jsx)(g.ZP, {
+                            (0, r.jsx)(m.ZP, {
                                 showUserPopout: !1,
                                 guildId: t,
-                                users: o.map(() => null),
-                                renderUser: (e, t, n) => (0, r.jsx)(i.Fragment, { children: o[n] }, n),
+                                users: s.map(() => null),
+                                renderUser: (e, t, n) => (0, r.jsx)(i.Fragment, { children: s[n] }, n),
                                 max: 3,
                             }),
                         ],

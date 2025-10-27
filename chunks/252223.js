@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(556638),
     R = n(981631),
     P = n(388032),
-    w = n(80568);
-function D(e, t, n) {
+    D = n(80568);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -116,7 +116,7 @@ function G(e) {
         s = a - 1;
     return (0, r.jsxs)(l.xvT, {
         variant: t,
-        className: o()(n, w.activityCounter),
+        className: o()(n, D.activityCounter),
         color: i ? "status-positive" : "none",
         children: ["+", s],
     });
@@ -125,7 +125,7 @@ function B(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xvT, {
         variant: t,
-        className: o()(w.dot, n),
+        className: o()(D.dot, n),
         children: N.l,
     });
 }
@@ -141,7 +141,7 @@ function Z(e) {
         animateEmoji: O = !0,
         hasQuest: v = !1,
         hideEmoji: P = !1,
-        hideTooltip: D = !1,
+        hideTooltip: w = !1,
     } = e;
     (0, _.Z)(null == t ? void 0 : t.id);
     let x = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
@@ -209,7 +209,7 @@ function Z(e) {
     if (K) return null;
     let et = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || D;
+                t = !0 === e || w;
             if (null != x)
                 return (0, r.jsx)(T.Z, {
                     stream: x,
@@ -288,29 +288,29 @@ function Z(e) {
             0 === Q
                 ? null
                 : J && !W
-                  ? D
+                  ? w
                       ? (0, r.jsxs)("div", {
-                            className: o()(w.activityContainer, $ && w.iconOnly),
+                            className: o()(D.activityContainer, $ && D.iconOnly),
                             children: [et(), er()],
                         })
                       : (0, r.jsx)(u.aML, {
                             "data-migration-pending": !0,
-                            tooltipContentClassName: o()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
+                            tooltipContentClassName: o()(D.container, D.activitiesTooltip, D.hasMultipleActivities),
                             delay: N.X,
                             text: en(),
                             "aria-label": ee,
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    M(L({ className: o()(w.activityContainer, $ && w.iconOnly) }, e), {
+                                    M(L({ className: o()(D.activityContainer, $ && D.iconOnly) }, e), {
                                         children: [et(!0), er()],
                                     }),
                                 ),
                         })
                   : et(),
-        ea = o()(w.container, {
-            [w.textXs]: "xs" === h,
-            [w.textSm]: "sm" === h,
+        ea = o()(D.container, {
+            [D.textXs]: "xs" === h,
+            [D.textSm]: "sm" === h,
         }),
         eo = () =>
             null == Z && null == V
@@ -320,7 +320,7 @@ function Z(e) {
                       textSize: h,
                       animateEmoji: O,
                       hideEmoji: P,
-                      hideTooltip: D,
+                      hideTooltip: w,
                       textClassName: d,
                       iconClassName: p,
                       tooltipClassName: ea,

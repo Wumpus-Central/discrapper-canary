@@ -39,7 +39,7 @@ function c(e) {
         title: n,
         actions: [
             {
-                text: o.intl.string(o.t["NX+WJC"]),
+                text: o.intl.string(o.t["NX+WJN"]),
                 onClick: s,
             },
         ],

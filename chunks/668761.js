@@ -21,7 +21,7 @@ function p() {
     if (null == n || !p) return null;
     let h = l.BB(n.shortcut, !0);
     return {
-        title: u.intl.format(u.t.S5uhCA, {
+        title: u.intl.format(u.t.S5uhCN, {
             keybind: h,
             keybindHook: () =>
                 (0, i.jsx)("span", {

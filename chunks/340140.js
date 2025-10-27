@@ -4,8 +4,8 @@ var l = e(951288),
     i = e(159691),
     a = e(481060),
     s = e(538211),
-    u = e(698066),
-    o = e(648159),
+    o = e(698066),
+    u = e(648159),
     c = e(388032);
 function b(t, n, e) {
     return (
@@ -25,16 +25,16 @@ class d extends r.PureComponent {
         let { isStreamer: t, transitionState: n, onClose: e } = this.props,
             { problem: r } = this.state;
         return (0, l.jsxs)(i.u_l, {
-            title: c.intl.string(c.t.qnJ9W1),
-            subtitle: c.intl.string(c.t["7vw0h4"]),
+            title: c.intl.string(c.t.qnJ9W3),
+            subtitle: c.intl.string(c.t["7vw0h+"]),
             actions: [
                 {
-                    text: c.intl.string(c.t["ETE/oK"]),
+                    text: c.intl.string(c.t["ETE/oC"]),
                     variant: "secondary",
                     onClick: e,
                 },
                 {
-                    text: c.intl.string(c.t.E48BIS),
+                    text: c.intl.string(c.t.E48BIc),
                     variant: "primary",
                     onClick: this.handleSubmit,
                     disabled: null == r,
@@ -43,10 +43,10 @@ class d extends r.PureComponent {
             onClose: e,
             transitionState: n,
             children: [
-                (0, l.jsx)(o.Z, {}),
+                (0, l.jsx)(u.Z, {}),
                 (0, l.jsx)(a.q4e, {
-                    label: c.intl.string(c.t["6Y1t5O"]),
-                    placeholder: c.intl.string(c.t.U0kGk5),
+                    label: c.intl.string(c.t["6Y1t5P"]),
+                    placeholder: c.intl.string(c.t.U0kGk6),
                     options: (0, s.Z)({
                         isStreamer: t,
                         isEndStream: !1,
@@ -67,7 +67,7 @@ class d extends r.PureComponent {
             b(this, "handleSubmit", () => {
                 let { stream: t, streamApplication: n, analyticsData: r, onClose: i } = this.props,
                     { problem: s } = this.state;
-                (0, u.Z)({
+                (0, o.Z)({
                     problem: s,
                     stream: t,
                     feedback: "",
@@ -96,7 +96,7 @@ class d extends r.PureComponent {
                                             });
                                     }
                                     return t;
-                                })({ body: c.intl.string(c.t.mMTVnp) }, n),
+                                })({ body: c.intl.string(c.t.mMTVnv) }, n),
                             );
                     });
             });

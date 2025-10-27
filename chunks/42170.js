@@ -69,7 +69,7 @@ function p(e) {
         selectedOption: h,
         isCustomDateRange: g,
         menuName: "joined-date",
-        accessibilityLabel: C.intl.string(C.t.XMVinZ),
+        accessibilityLabel: C.intl.string(C.t.XMVinX),
         onClose: n,
         onSelectDateOption: function (e, n) {
             let r = null != n ? a()().subtract(n.input, n.unit).valueOf() : null;

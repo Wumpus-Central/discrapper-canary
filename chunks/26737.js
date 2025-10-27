@@ -9,7 +9,7 @@ function o(e, t) {
     return s.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
         ? (0, i.jsx)(l.sNh, {
               id: "copy",
-              label: a.intl.string(a.t.OpuAlJ),
+              label: a.intl.string(a.t.OpuAlK),
               hint: (0, s.isMac)() ? "\u2318C" : "Ctrl+C",
               action: () => {
                   r.ZP.copy(e), null == t || t.focus();

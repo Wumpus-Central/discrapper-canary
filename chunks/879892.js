@@ -101,8 +101,8 @@ async function v(e) {
             handleSubscribeModalClose: N,
             disablePremiumUpsell: R,
             inPopout: P,
-            applicationId: w,
-            intent: D,
+            applicationId: D,
+            intent: w,
         } = e,
         L = P ? i.u1M : i.z1l,
         x = l.default.getCurrentUser();
@@ -179,7 +179,7 @@ async function v(e) {
             onSubscriptionConfirmation: S,
             onSubscribeComplete: A,
             inPopout: P,
-            applicationId: w,
-            intent: D,
+            applicationId: D,
+            intent: w,
         });
 }

@@ -52,10 +52,10 @@ function u(e) {
     throw Error(
         (t =
             e.status >= 500 && e.status <= 599
-                ? o.intl.string(o.t.cvJdtr)
+                ? o.intl.string(o.t.cvJdtg)
                 : null != e && null != e.body && null != e.body.message
                   ? e.body.message
-                  : o.intl.string(o.t.cvJdtr)),
+                  : o.intl.string(o.t.cvJdtg)),
     );
 }
 function d() {

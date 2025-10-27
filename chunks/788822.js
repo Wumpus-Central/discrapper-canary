@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(622535),
     a = n(481060),
-    o = n(626135),
-    s = n(381585),
+    s = n(626135),
+    o = n(381585),
     c = n(597688),
     u = n(297651),
     d = n(794324),
@@ -25,7 +25,7 @@ let C = (e) => {
         O = (0, d.YG)(_, m),
         S = l.useRef(null),
         y = null == m ? void 0 : m.bodyText,
-        j = (0, s.sp)();
+        j = (0, o.sp)();
     return (0, r.jsx)(i.$, {
         innerRef: S,
         onChange: x,
@@ -60,7 +60,7 @@ let C = (e) => {
             })({}, null != O && { backgroundImage: "url(".concat(O, ")") }),
             onClick: () => {
                 v("shop marketing tile", E, void 0, !0),
-                    o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
                         sku_id: E,
                         page_type: "home",
@@ -94,11 +94,11 @@ let C = (e) => {
                     className: f.featuredBlockButtonContainer,
                     children: (0, r.jsx)(a.Button, {
                         variant: "overlay-primary",
-                        text: p.intl.string(p.t.jVcuVV),
+                        text: p.intl.string(p.t.jVcuVY),
                         onClick: (e) => {
                             v("shop marketing take me there button", E, void 0, !0),
                                 e.stopPropagation(),
-                                o.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                s.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                     collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
                                     sku_id: E,
                                     page_type: "home",

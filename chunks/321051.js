@@ -33,7 +33,7 @@ function h(e) {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-sm/normal",
-                            children: f.intl.string(f.t.stGFAw),
+                            children: f.intl.string(f.t.stGFA3),
                         }),
                     ],
                 }),

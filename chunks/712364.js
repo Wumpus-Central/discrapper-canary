@@ -129,13 +129,13 @@ class f extends (r = a.PureComponent) {
                             children: [
                                 (0, i.jsx)(l.Button, {
                                     variant: "primary",
-                                    text: null != n ? n : c.intl.string(c.t["cY+Ooa"]),
+                                    text: null != n ? n : c.intl.string(c.t["cY+Oob"]),
                                     type: "submit",
                                     disabled: d || 0 === g.length,
                                 }),
                                 (0, i.jsx)(l.Button, {
                                     variant: "secondary",
-                                    text: c.intl.string(c.t["ETE/oK"]),
+                                    text: c.intl.string(c.t["ETE/oC"]),
                                     onClick: this.handleCancel,
                                     disabled: d,
                                 }),
@@ -162,11 +162,11 @@ class f extends (r = a.PureComponent) {
                 return null != (e = this.props.label)
                     ? e
                     : this.props.disallowBackupCodes
-                      ? c.intl.string(c.t.HZPBOT)
-                      : c.intl.string(c.t["+NQopK"]);
+                      ? c.intl.string(c.t.HZPBOd)
+                      : c.intl.string(c.t["+NQopF"]);
             }),
             d(this, "getSupportedCodeTypes", () =>
-                this.props.disallowBackupCodes ? c.intl.string(c.t.tARzgo) : c.intl.string(c.t.yO4lAA),
+                this.props.disallowBackupCodes ? c.intl.string(c.t.tARzgo) : c.intl.string(c.t.yO4lAM),
             ),
             d(this, "getPlaceholder", () => {
                 var e;

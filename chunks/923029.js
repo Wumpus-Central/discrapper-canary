@@ -22,14 +22,14 @@ function g(e) {
     return (
         (t = m
             ? (0, r.jsx)(s.OZU, {
-                  note: h.intl.string(h.t["D5SN5+"]),
-                  children: h.intl.string(h.t.xVTAdX),
+                  note: h.intl.string(h.t["D5SN5/"]),
+                  children: h.intl.string(h.t.xVTAdb),
               })
             : null != g
               ? (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE })
               : (0, r.jsx)(s.OZU, {
-                    note: h.intl.string(h.t["LTr+x8"]),
-                    children: h.intl.string(h.t.ai6Lbm),
+                    note: h.intl.string(h.t["LTr+x9"]),
+                    children: h.intl.string(h.t.ai6Lbr),
                 })),
         (0, r.jsxs)("div", {
             className: f.noChannel,

@@ -19,7 +19,7 @@ function c(e, t) {
         ? null
         : (0, l.jsx)(r.sNh, {
               id: "focus-video",
-              label: n ? d.intl.string(d.t.KJPKUV) : d.intl.string(d.t["77cRNz"]),
+              label: n ? d.intl.string(d.t.KJPKUT) : d.intl.string(d.t["77cRN4"]),
               action: () => a.Z.selectParticipant(t, n ? null : e),
           });
 }

@@ -37,7 +37,7 @@ function j(e) {
                                 (0, r.jsx)(y, {
                                     icon: s.yFM,
                                     onClick: () => d.Z.setState({ showNavigationMobile: !0 }),
-                                    label: b.intl.string(b.t["13/7kZ"]),
+                                    label: b.intl.string(b.t["13/7kX"]),
                                 }),
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-md/medium",
@@ -50,7 +50,7 @@ function j(e) {
                     (0, r.jsx)(y, {
                         icon: s.Uz9,
                         onClick: l,
-                        label: b.intl.string(b.t.cpT0Cg),
+                        label: b.intl.string(b.t.cpT0Cq),
                     }),
                 ],
             }),

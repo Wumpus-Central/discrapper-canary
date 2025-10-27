@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(502762),
     y = n(848780),
     _ = n(907179),
-    j = n(671955),
-    O = n(388032),
+    O = n(671955),
+    j = n(388032),
     x = n(491010),
     v = n(268293);
 function C(e) {
@@ -68,7 +68,7 @@ function I(e) {
                 ref: N,
                 user: t,
                 displayProfile: S,
-                themeType: j.l.SIDEBAR,
+                themeType: O.l.SIDEBAR,
                 themeOverride: E,
                 children: (0, r.jsx)(l.u2D, {
                     children: (0, r.jsxs)("div", {
@@ -89,11 +89,11 @@ function I(e) {
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.Heading, {
                                                 variant: "heading-lg/bold",
-                                                children: O.intl.string(O.t.b33pLC),
+                                                children: j.intl.string(j.t.b33pLD),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: O.intl.format(Z ? O.t["8F+WNz"] : O.t["/cZp5u"], {
+                                                children: j.intl.format(Z ? j.t["8F+WNz"] : j.t["/cZp5s"], {
                                                     username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),

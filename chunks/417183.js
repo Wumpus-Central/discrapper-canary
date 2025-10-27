@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(748780),
-    s = n(91192),
+    s = n(748780),
+    o = n(91192),
     c = n(481060),
     u = n(239091),
     d = n(617015),
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,14 +56,14 @@ function g(e, t) {
         e
     );
 }
-class m extends i.PureComponent {
+class g extends i.PureComponent {
     componentWillLeave(e) {
-        o.Z.parallel([
-            o.Z.timing(this.state.opacity, {
+        s.Z.parallel([
+            s.Z.timing(this.state.opacity, {
                 toValue: 0,
                 duration: 200,
             }),
-            o.Z.timing(this.state.height, {
+            s.Z.timing(this.state.height, {
                 toValue: 0,
                 duration: 200,
             }),
@@ -72,12 +72,12 @@ class m extends i.PureComponent {
     componentWillEnter(e) {
         this.state.opacity.setValue(0),
             this.state.height.setValue(0),
-            o.Z.parallel([
-                o.Z.timing(this.state.opacity, {
+            s.Z.parallel([
+                s.Z.timing(this.state.opacity, {
                     toValue: 1,
                     duration: 200,
                 }),
-                o.Z.timing(this.state.height, {
+                s.Z.timing(this.state.height, {
                     toValue: d.NV,
                     duration: 200,
                 }),
@@ -85,21 +85,21 @@ class m extends i.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: i } = this.state,
-            { children: l, user: u, onClick: d, isActive: f, className: m, activeClassName: b } = this.props;
-        return (0, r.jsx)(s.mh, {
+            { children: l, user: u, onClick: d, isActive: f, className: g, activeClassName: _ } = this.props;
+        return (0, r.jsx)(o.mh, {
             id: u.id,
-            children: (s) =>
+            children: (o) =>
                 (0, r.jsx)(c.tEY, {
                     offset: {
                         left: -8,
                         right: -8,
                     },
                     children: (0, r.jsx)(
-                        o.Z.div,
-                        g(
+                        s.Z.div,
+                        m(
                             h(
                                 {
-                                    className: a()(m, p.peopleListItem, null != b ? { [b]: f || i } : null, {
+                                    className: a()(g, p.peopleListItem, null != _ ? { [_]: f || i } : null, {
                                         [p.active]: f || i,
                                     }),
                                     onContextMenu: (e) => this.handleContextMenu(e, u),
@@ -111,7 +111,7 @@ class m extends i.PureComponent {
                                         opacity: t,
                                     },
                                 },
-                                s,
+                                o,
                             ),
                             { children: l(n || f || i) },
                         ),
@@ -122,8 +122,8 @@ class m extends i.PureComponent {
     constructor(...e) {
         super(...e),
             f(this, "state", {
-                height: new o.Z.Value(d.NV),
-                opacity: new o.Z.Value(1),
+                height: new s.Z.Value(d.NV),
+                opacity: new s.Z.Value(1),
                 hovered: !1,
                 isContextMenuActive: !1,
             }),
@@ -143,7 +143,7 @@ class m extends i.PureComponent {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
                                 n.bind(n, 881351),
                             );
-                            return (n) => (0, r.jsx)(e, g(h({}, n), { user: t }));
+                            return (n) => (0, r.jsx)(e, m(h({}, n), { user: t }));
                         },
                         {
                             onClose: () => {
@@ -154,4 +154,4 @@ class m extends i.PureComponent {
             });
     }
 }
-let b = m;
+let _ = g;

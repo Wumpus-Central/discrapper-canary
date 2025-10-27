@@ -37,7 +37,7 @@ let y = (e, t) => {
                             className: m.footerHeader,
                             variant: "display-md",
                             color: "header-primary",
-                            children: h.intl.string(h.t.lEw32t),
+                            children: h.intl.string(h.t.lEw32m),
                         }),
                         (0, r.jsx)(_.PK, {
                             subscriptionTier: v,

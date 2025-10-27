@@ -18,8 +18,8 @@ var i = n(120356),
     _ = n(594174),
     O = n(938475),
     y = n(823379),
-    v = n(709054),
-    j = n(853856),
+    j = n(709054),
+    v = n(853856),
     x = n(981631),
     C = n(388032),
     E = n(132789);
@@ -42,9 +42,9 @@ function S(e, t) {
           });
 }
 function I() {
-    let e = (0, s.Wu)([j.Z, b.Z], () =>
-            v.default
-                .keys(j.Z.getFavoriteChannels())
+    let e = (0, s.Wu)([v.Z, b.Z], () =>
+            j.default
+                .keys(v.Z.getFavoriteChannels())
                 .map((e) => b.Z.getChannel(e))
                 .filter(y.lm),
         ),
@@ -104,7 +104,7 @@ function I() {
             u.gj8,
             l.filter((e) => !C.includes(e.id) && !I.includes(e.id)),
         ),
-        w =
+        T =
             0 === o.length
                 ? null
                 : (0, r.jsxs)("div", {
@@ -137,14 +137,14 @@ function I() {
                           }),
                       ],
                   }),
-        T = S(
+        w = S(
             u.hGI,
             N.filter((e) => null != e && !I.includes(e.id)),
         ),
         { enabled: A } = d.c.useExperiment({ location: "FavoritesTooltip" }, { autoTrackExposure: !0 }),
         R = S(A ? u.iWm : u.nG3, P);
     return (0, r.jsxs)(r.Fragment, {
-        children: [w, Z, T, R],
+        children: [T, Z, w, R],
     });
 }
 function P() {
@@ -154,7 +154,7 @@ function P() {
                 className: l()(E.row, E.rowGuildName),
                 children: (0, r.jsx)("span", {
                     className: l()(E.guildNameText, E.guildNameTextLimitedSize),
-                    children: C.intl.string(C.t.wMWycn),
+                    children: C.intl.string(C.t.wMWyci),
                 }),
             }),
             (0, r.jsx)(I, {}),

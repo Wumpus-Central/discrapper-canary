@@ -13,13 +13,13 @@ function o(e) {
     return (0, i.jsx)(t.v2r, {
         onSelect: d,
         navId: "channel-summaries-context-menu",
-        "aria-label": u.intl.string(u.t.ogxXGh),
+        "aria-label": u.intl.string(u.t.ogxXGq),
         onClose: a.Zy,
         children: (0, i.jsx)(t.kSQ, {
             children: (0, i.jsx)(t.sNh, {
                 id: "delete-summary",
                 color: "danger",
-                label: u.intl.string(u.t["5AwUIi"]),
+                label: u.intl.string(u.t["5AwUIg"]),
                 action: () => {
                     (0, r.$l)(n);
                     let e = l.Z.getChannel(n.channelId);

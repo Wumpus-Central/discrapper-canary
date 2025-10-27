@@ -32,8 +32,8 @@ function R() {
         n = (0, s.e7)([f.Z, E.Z], () => f.Z.showNotice() || E.Z.showNotice()),
         a = null != e ? e : t,
         R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        { subsection: P, setSubsection: w } = (0, v.Z)(),
-        D = g.R.useField("hasSearchResults"),
+        { subsection: P, setSubsection: D } = (0, v.Z)(),
+        w = g.R.useField("hasSearchResults"),
         L = g.R.useField("searchResults");
     function x(t) {
         if (P !== t) {
@@ -45,7 +45,7 @@ function R() {
                     y.S.dispatch(I.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === S.NB.GUILD && null == e && null != a && (0, d.Fq)(a), w(t);
+            t === S.NB.GUILD && null == e && null != a && (0, d.Fq)(a), D(t);
         }
     }
     i.useEffect(() => {
@@ -56,13 +56,13 @@ function R() {
     let M = !0,
         k = !0;
     return (
-        D &&
+        w &&
             1 === L.length &&
             (L.includes(A.s6.PROFILE_SERVER_PROFILES)
                 ? (x(S.NB.GUILD), (k = !1))
                 : L.includes(A.s6.PROFILE_USER_PROFILE) && (x(S.NB.USER_PROFILE), (M = !1))),
         (0, r.jsxs)(h.N, {
-            header: C.intl.string(C.t["vi7f+v"]),
+            header: C.intl.string(C.t["vi7f+q"]),
             children: [
                 (0, r.jsxs)(l.njP, {
                     className: N.tabBar,
@@ -87,9 +87,9 @@ function R() {
                                   l.njP.Item,
                                   {
                                       className: o()(N.tabBarItem, N.guildTabBarItem),
-                                      "aria-label": C.intl.string(C.t.kPHroa),
+                                      "aria-label": C.intl.string(C.t.kPHroX),
                                       id: S.NB.GUILD,
-                                      children: C.intl.string(C.t.kPHroa),
+                                      children: C.intl.string(C.t.kPHroX),
                                   },
                                   S.NB.GUILD,
                               )

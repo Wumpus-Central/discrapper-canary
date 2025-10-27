@@ -33,9 +33,9 @@ let _ = (e) => {
     (0, i.useEffect)(() => {
         n && f.default.track(g.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]);
-    let v = n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2];
+    let j = n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2];
     return (0, r.jsx)(a.ZP, {
-        contentTypes: v,
+        contentTypes: j,
         children: (e) => {
             let { visibleContent: i, markAsDismissed: l } = e,
                 a = i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n;

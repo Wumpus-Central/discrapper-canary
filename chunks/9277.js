@@ -47,9 +47,9 @@ function b(e, t) {
         }, [a]),
         { Component: N, events: R, play: P } = (0, c.V)();
     if (n) return null;
-    let w = v === m.X1.GIF && I === a;
+    let D = v === m.X1.GIF && I === a;
     return (0, r.jsx)(u.u, {
-        text: O ? g.intl.string(g.t.mE2e8P) : null,
+        text: O ? g.intl.string(g.t.mE2e8A) : null,
         forceOpen: !0,
         children: (0, r.jsx)("div", {
             ref: t,
@@ -61,10 +61,10 @@ function b(e, t) {
                 onClick: () => {
                     C(), P();
                 },
-                isActive: w,
+                isActive: D,
                 pulse: b,
-                "aria-label": g.intl.string(g.t.PtVpk5),
-                "aria-expanded": w,
+                "aria-label": g.intl.string(g.t.PtVpk2),
+                "aria-expanded": D,
                 "aria-haspopup": "dialog",
                 "aria-controls": T,
                 children: (0, r.jsx)(N, {

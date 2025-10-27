@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(772848),
-    s = n(399606),
+    s = n(772848),
+    o = n(399606),
     c = n(952265),
     u = n(481060),
     d = n(150063),
@@ -35,8 +35,8 @@ var r = n(951288),
     Z = n(981631),
     w = n(295907),
     H = n(887353),
-    D = n(345213);
-let M = (e) => {
+    M = n(345213);
+let D = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             i = (0, c.f9)();
         return (
@@ -53,9 +53,9 @@ let M = (e) => {
     F = function (e) {
         let { tab: t = R.AW.HOME } = e;
         (0, C.z)(f.f), (0, j.f)();
-        let n = (0, g.Z)((0, o.Z)()),
-            i = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-            { userProfile: c, wishlistId: w } = (0, s.cj)(
+        let n = (0, g.Z)((0, s.Z)()),
+            i = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
+            { userProfile: c, wishlistId: w } = (0, o.cj)(
                 [h.Z],
                 () => ({
                     userProfile: null != i ? h.Z.getUserProfile(i.id) : null,
@@ -79,18 +79,18 @@ let M = (e) => {
                 },
             ),
             Y = (0, y.O)(G),
-            [q, Q] = l.useState(),
-            J = (0, s.e7)([E.Z], () => {
+            [q, J] = l.useState(),
+            Q = (0, o.e7)([E.Z], () => {
                 var e;
                 return null == (e = E.Z.getCategory(q)) ? void 0 : e.name;
             }),
             [X, $] = l.useState();
         (0, I.Kp)();
         let ee = l.useCallback((e, t) => {
-                $(e), Q(t);
+                $(e), J(t);
             }, []),
             { selectedTab: et, transitionState: en, transitionToTab: er } = (0, k.B)(z);
-        (0, O.q3)(n, et, J, en, X), (0, O.EB)(et, i);
+        (0, O.q3)(n, et, Q, en, X), (0, O.EB)(et, i);
         let { dismissShopButtonDC: el } = (0, N.Z)();
         l.useEffect(() => {
             el();
@@ -105,22 +105,22 @@ let M = (e) => {
                 var e;
                 null == (e = ea.current) || e.focus();
             }, []);
-        let { analyticsLocations: eo } = (0, O.MV)(et);
+        let { analyticsLocations: es } = (0, O.MV)(et);
         return (0, r.jsx)(p.Gt, {
-            value: eo,
+            value: es,
             children: (0, r.jsx)(v.k0, {
                 newValue: {
                     sessionId: n,
-                    pageCategory: J,
+                    pageCategory: Q,
                     pageSize: R.kN,
                 },
                 children: (0, r.jsx)(x.ni, {
                     tab: et,
-                    children: (0, r.jsx)(M, {
+                    children: (0, r.jsx)(D, {
                         onClose: W,
                         shouldAddEventListener: !1,
                         children: (0, r.jsxs)("div", {
-                            className: a()(H.shop, { [D.shopTakeOver]: F }),
+                            className: a()(H.shop, { [M.shopTakeOver]: F }),
                             ref: ea,
                             tabIndex: -1,
                             children: [

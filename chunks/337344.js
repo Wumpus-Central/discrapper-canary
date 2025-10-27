@@ -12,8 +12,8 @@ function u(e) {
     return (0, r.jsx)("div", {
         className: d.container,
         children: (0, r.jsx)(i.gNt, {
-            label: c.intl.string(c.t.arFPfH),
-            description: c.intl.string(c.t["IT/0AA"]),
+            label: c.intl.string(c.t.arFPfJ),
+            description: c.intl.string(c.t["IT/0AI"]),
             children: (0, r.jsx)(i.Button, {
                 size: "sm",
                 variant: "secondary",
@@ -25,7 +25,7 @@ function u(e) {
                             returnToSection: o.pNK.ROLES,
                         });
                 },
-                text: c.intl.string(c.t.arFPfH),
+                text: c.intl.string(c.t.arFPfJ),
                 icon: i.d4D,
                 iconPosition: "end",
             }),

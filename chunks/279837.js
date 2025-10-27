@@ -55,7 +55,7 @@ class u extends (r = a.PureComponent) {
                                 children: [
                                     (0, i.jsx)(o.oil, {
                                         type: "password",
-                                        label: s.intl.string(s.t["CIGa+/"]),
+                                        label: s.intl.string(s.t["CIGa+7"]),
                                         autoComplete: "current-password",
                                         autoFocus: !0,
                                         value: d,
@@ -80,13 +80,13 @@ class u extends (r = a.PureComponent) {
                             children: [
                                 (0, i.jsx)(o.Button, {
                                     variant: "primary",
-                                    text: null != t ? t : s.intl.string(s.t["cY+Ooa"]),
+                                    text: null != t ? t : s.intl.string(s.t["cY+Oob"]),
                                     type: "submit",
                                     disabled: u || 0 === d.length,
                                 }),
                                 (0, i.jsx)(o.Button, {
                                     variant: "secondary",
-                                    text: s.intl.string(s.t["ETE/oK"]),
+                                    text: s.intl.string(s.t["ETE/oC"]),
                                     onClick: this.handleCancel,
                                 }),
                             ],

@@ -39,19 +39,19 @@ function R(e, t, n) {
     );
 }
 let P = 512,
-    w = 1000;
-class D extends i.PureComponent {
+    D = 1000;
+class w extends i.PureComponent {
     componentWillUnmount() {
         this._copyModeTimeout.stop();
     }
     get copyButtonText() {
         switch (this.state.copyMode) {
             case u.uA3.SUCCESS:
-                return C.intl.string(C.t.XVvPjY);
+                return C.intl.string(C.t.XVvPjU);
             case u.uA3.ERROR:
-                return C.intl.string(C.t.i4GM3N);
+                return C.intl.string(C.t.i4GM3L);
             default:
-                return C.intl.string(C.t.OpuAlJ);
+                return C.intl.string(C.t.OpuAlK);
         }
     }
     handleRevoke(e) {
@@ -70,7 +70,7 @@ class D extends i.PureComponent {
                     text: this.copyButtonText,
                     mode: n,
                     supportsCopy: I.wS,
-                    hideMessage: e ? C.intl.string(C.t["0RLn4+"]) : null,
+                    hideMessage: e ? C.intl.string(C.t["0RLn47"]) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.Tt.BRAND,
                     buttonLook: c.iL.FILLED,
@@ -81,7 +81,7 @@ class D extends i.PureComponent {
                         null != t.expiresAt
                             ? (0, r.jsxs)(i.Fragment, {
                                   children: [
-                                      C.intl.format(C.t.ltVZcH, { hours: t.expiresAt.diff(o()(), "h") }),
+                                      C.intl.format(C.t.ltVZcJ, { hours: t.expiresAt.diff(o()(), "h") }),
                                       " \u2014\xA0",
                                   ],
                               })
@@ -89,7 +89,7 @@ class D extends i.PureComponent {
                         (0, r.jsx)(u.P3F, {
                             tag: "a",
                             onClick: () => this.handleRevoke(t.code),
-                            children: C.intl.string(C.t.v6Yaz8),
+                            children: C.intl.string(C.t.v6Yazx),
                         }),
                     ],
                 }),
@@ -108,7 +108,7 @@ class D extends i.PureComponent {
                         () => this.setState({ copyMode: u.uA3.SUCCESS }),
                         () => this.setState({ copyMode: u.uA3.ERROR }),
                     ),
-                    this._copyModeTimeout.start(w, () => {
+                    this._copyModeTimeout.start(D, () => {
                         this.setState({ copyMode: u.uA3.DEFAULT });
                     });
             });
@@ -124,15 +124,15 @@ class L extends i.PureComponent {
         return (
             (e =
                 i === A.m8
-                    ? C.intl.string(C.t.odsU6e)
+                    ? C.intl.string(C.t.odsU6W)
                     : i === A.rX && null != n
-                      ? C.intl.formatToPlainString(n.interval === A.rV.MONTH ? C.t.uZjpiI : C.t.bJW1EB, {
+                      ? C.intl.formatToPlainString(n.interval === A.rV.MONTH ? C.t.uZjpiJ : C.t.bJW1EA, {
                             skuName: t.name,
                             intervalCount: n.intervalCount,
                         })
                       : null == n
                         ? t.name
-                        : C.intl.formatToPlainString(n.interval === A.rV.MONTH ? C.t.rCJvqq : C.t.Vd3Iu7, {
+                        : C.intl.formatToPlainString(n.interval === A.rV.MONTH ? C.t.rCJvqo : C.t.Vd3Iu8, {
                               skuName: t.name,
                               intervalCount: n.intervalCount,
                           })),
@@ -155,7 +155,7 @@ class L extends i.PureComponent {
                 (0, r.jsx)(u.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: C.intl.string(C.t.Q3Qgur),
+                    text: C.intl.string(C.t.Q3Qguo),
                     loading: this.state.isCreating,
                     onClick: this.handleGenerateGiftCode,
                 }),
@@ -210,7 +210,7 @@ class L extends i.PureComponent {
                                                 this.renderTitle(),
                                                 (0, r.jsx)("div", {
                                                     className: N.subTextHeader,
-                                                    children: C.intl.format(C.t.zMcvcH, { copies: e.length }),
+                                                    children: C.intl.format(C.t.zMcvcA, { copies: e.length }),
                                                 }),
                                             ],
                                         }),
@@ -233,7 +233,7 @@ class L extends i.PureComponent {
                                         n.length < e.length ? this.renderGenerateGiftCodeRow() : null,
                                         n.map((e) =>
                                             (0, r.jsx)(
-                                                D,
+                                                w,
                                                 {
                                                     giftCode: e,
                                                     sku: o,

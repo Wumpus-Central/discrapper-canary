@@ -16,7 +16,7 @@ function p(e) {
     return null != p && null != n && (n.features.has(s.GuildFeatures.COMMUNITY) || p.isStaff())
         ? (0, r.jsx)(l.S89, {
               id: "opt-in",
-              label: b.intl.string(b.t.FB2ZZW),
+              label: b.intl.string(b.t.FB2ZZV),
               checked: !t,
               action: () => {
                   (0, c.kH)(e);

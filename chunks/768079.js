@@ -17,7 +17,7 @@ let p = (0, o.Z)(
             a = (0, d.Z)({ userId: t.id }),
             p = (0, s.Z)({
                 id: t.id,
-                label: b.intl.string(b.t["/AXYnJ"]),
+                label: b.intl.string(b.t["/AXYnE"]),
             }),
             O = (0, u.Z)(t.id),
             h = t.isNonUserBot();
@@ -27,7 +27,7 @@ let p = (0, o.Z)(
             children: (0, r.jsxs)(i.v2r, {
                 navId: "user-context",
                 onClose: l.Zy,
-                "aria-label": b.intl.string(b.t.liqwPD),
+                "aria-label": b.intl.string(b.t.liqwPJ),
                 onSelect: o,
                 children: [
                     (0, r.jsxs)(i.kSQ, {

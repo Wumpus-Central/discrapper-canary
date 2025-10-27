@@ -77,7 +77,7 @@ function N(e) {
             Icon: c.S6n,
             getCanSetDevice: (e) => e.supports(y.AN.AUDIO_INPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UV"], { onDownloadClick: () => (0, _.y)("Help Text Input Devices") }),
+                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Input Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
         },
         [y.h7.AUDIO_OUTPUT]: {
@@ -85,7 +85,7 @@ function N(e) {
             Icon: c.VWR,
             getCanSetDevice: (e) => e.supports(y.AN.AUDIO_OUTPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t.Ow0dbG, { onDownloadClick: () => (0, _.y)("Help Text Output Devices") }),
+                O.intl.format(O.t.Ow0dbF, { onDownloadClick: () => (0, _.y)("Help Text Output Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
         },
         [y.h7.VIDEO_INPUT]: {
@@ -93,7 +93,7 @@ function N(e) {
             Icon: c.xmR,
             getCanSetDevice: (e) => e.isVideoAvailable(),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UV"], { onDownloadClick: () => (0, _.y)("Help Text Video Devices") }),
+                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Video Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
         },
     }[e];
@@ -117,7 +117,7 @@ function R(e) {
             "hideDeviceTypeIcon",
             "label",
         ]);
-    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: L, getLocation: x } = N(t),
+    let { setDevice: P, Icon: D, getCanSetDevice: w, getWarningMessage: L, getLocation: x } = N(t),
         { analyticsLocations: M } = (0, d.ZP)(),
         k = (0, s.e7)([f.Z], () => f.Z.theme),
         [j, U] = i.useState(u),
@@ -125,7 +125,7 @@ function R(e) {
         [B, Z] = (0, E.Ls)(t, { location: G }),
         { id: F } = (0, E.p6)(t),
         V = null != _ ? _ : F,
-        H = (0, s.e7)([h.Z], () => D(h.Z)),
+        H = (0, s.e7)([h.Z], () => w(h.Z)),
         { showDeviceSelectionImprovements: Y } = (0, g.V)({ location: "".concat(G, "/SingleSelectDevices") }),
         W = (0, r.jsx)(c.Wn, {
             messageType: c.QYI.WARNING,
@@ -169,7 +169,7 @@ function R(e) {
             let e = (0, l.ap)(k) ? n(561259) : n(887695);
             i = (0, r.jsx)("img", {
                 src: e,
-                alt: O.intl.string(O.t.smSKsr),
+                alt: O.intl.string(O.t.smSKsj),
             });
         }
         return (0, r.jsxs)("div", {
@@ -181,7 +181,7 @@ function R(e) {
                 !I &&
                     (0, r.jsx)("div", {
                         className: v.deviceIcon,
-                        children: (0, r.jsx)(w, {
+                        children: (0, r.jsx)(D, {
                             size: "custom",
                             width: 20,
                             height: 20,
@@ -227,7 +227,7 @@ function R(e) {
         {
             let e = {
                 value: C,
-                label: O.intl.string(O.t.E99UMj),
+                label: O.intl.string(O.t.E99UMh),
                 preventCloseOnSelect: !0,
             };
             return t.concat(e);

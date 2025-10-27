@@ -13,8 +13,8 @@ var i = t(442837),
     Z = t(299206),
     f = t(976192),
     b = t(819403),
-    m = t(163612),
-    O = t(592125),
+    O = t(163612),
+    m = t(592125),
     p = t(944486),
     h = t(777658),
     j = t(858488),
@@ -31,8 +31,8 @@ var i = t(442837),
     T = t(47091),
     U = t(558924),
     A = t(520063),
-    k = t(37258),
-    M = t(931617),
+    M = t(37258),
+    k = t(931617),
     w = t(332031),
     R = t(981631),
     D = t(388032);
@@ -41,7 +41,7 @@ let G = (0, o.Z)(
         function (e) {
             let { user: n, guildId: t, channel: u, context: o, onSelect: G, onHeightUpdate: L } = e,
                 V = u.id,
-                q = (0, k.Z)({
+                q = (0, M.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: V,
@@ -53,23 +53,23 @@ let G = (0, o.Z)(
                     user: n,
                     context: o,
                 }),
-                F = (0, i.e7)([p.Z, O.Z], () => {
+                Q = (0, i.e7)([p.Z, m.Z], () => {
                     let e = p.Z.getVoiceChannelId();
-                    return O.Z.getChannel(e);
+                    return m.Z.getChannel(e);
                 }),
-                { enabled: Q } = m.Z.useExperiment({
-                    guildId: null == F ? void 0 : F.guild_id,
+                { enabled: F } = O.Z.useExperiment({
+                    guildId: null == Q ? void 0 : Q.guild_id,
                     location: "ThreadUserContextMenu",
                 }),
-                Y = Q ? (null == F ? void 0 : F.id) : null,
+                Y = F ? (null == Q ? void 0 : Q.id) : null,
                 X = (0, U.Z)(n, Y),
-                J = (0, v.Z)({
+                z = (0, v.Z)({
                     user: n,
                     guildId: t,
                     channelId: V,
                     context: o,
                 }),
-                z = (0, j.Z)({ user: n }),
+                J = (0, j.Z)({ user: n }),
                 { analyticsLocations: $ } = (0, g.ZP)(c.Z.THREAD_USER_MENU),
                 ee = (0, f.Z)({
                     guildId: t,
@@ -103,11 +103,11 @@ let G = (0, o.Z)(
                     location: "ThreadUserContextMenu",
                 }),
                 eo = (0, A.Z)(n, t, V),
-                es = (0, M.Z)(n.id, t),
+                es = (0, k.Z)(n.id, t),
                 ed = (0, S.Z)(n, t),
                 ec = (0, Z.Z)({
                     id: n.id,
-                    label: D.intl.string(D.t["/AXYnJ"]),
+                    label: D.intl.string(D.t["/AXYnE"]),
                 }),
                 eg = (0, b.Z)(n),
                 eZ = (0, x.Z)({
@@ -121,7 +121,7 @@ let G = (0, o.Z)(
             return (0, l.jsxs)(r.v2r, {
                 navId: "user-context",
                 onClose: a.Zy,
-                "aria-label": D.intl.string(D.t.liqwPD),
+                "aria-label": D.intl.string(D.t.liqwPJ),
                 onSelect: G,
                 children: [
                     !ef &&
@@ -129,7 +129,7 @@ let G = (0, o.Z)(
                             children: [
                                 (0, l.jsx)(r.kSQ, { children: eg }),
                                 (0, l.jsxs)(r.kSQ, {
-                                    children: [q, H, B, K, X, J, z, W],
+                                    children: [q, H, B, K, X, z, J, W],
                                 }),
                                 (0, l.jsx)(r.kSQ, { children: et }),
                                 (0, l.jsxs)(r.kSQ, {

@@ -34,8 +34,8 @@ var r,
     N = n(768581),
     R = n(51144),
     P = n(965386),
-    w = n(981631),
-    D = n(185923),
+    D = n(981631),
+    w = n(185923),
     L = n(388032),
     x = n(512746);
 function M(e, t, n) {
@@ -296,7 +296,7 @@ class X extends H {
                 }),
                 (0, i.jsxs)("div", {
                     className: x.autocompleteContentWrapper,
-                    "aria-label": L.intl.formatToPlainString(L.t["9v/R+v"], { name: _ }),
+                    "aria-label": L.intl.formatToPlainString(L.t["9v/R+j"], { name: _ }),
                     children: [
                         (0, i.jsx)(P.z5, {
                             children: (0, i.jsx)(f.Text, {
@@ -379,7 +379,7 @@ class Q extends H {
                         ],
                     }),
                 }),
-                t ? null : (0, i.jsx)(P.dY, { children: L.intl.string(L.t["/91tbm"]) }),
+                t ? null : (0, i.jsx)(P.dY, { children: L.intl.string(L.t["/91tbr"]) }),
             ],
         });
     }
@@ -387,7 +387,7 @@ class Q extends H {
 class J extends H {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === w.d4z.GUILD_CATEGORY ? f.ROc : (0, E.KS)(e);
+            n = e.type === D.d4z.GUILD_CATEGORY ? f.ROc : (0, E.KS)(e);
         return (0, i.jsxs)(P.RX, {
             children: [
                 null != n && (0, i.jsx)(P.Tw, { children: (0, i.jsx)(n, { className: x.icon }) }),
@@ -450,7 +450,7 @@ class et extends H {
                                   ? N.ZP.getEmojiURL({
                                         id: e.id,
                                         animated: e.animated && r,
-                                        size: D.$U,
+                                        size: w.$U,
                                     })
                                   : e.url,
                       })
@@ -491,7 +491,7 @@ class en extends H {
                     (0, i.jsxs)(P.z5, {
                         children: [
                             (0, i.jsx)(P.BR, { children: s.name }),
-                            null != r && (0, i.jsx)(P.wL, { children: L.intl.format(L.t.PAutaW, { queryMatch: r }) }),
+                            null != r && (0, i.jsx)(P.wL, { children: L.intl.format(L.t.PAutaQ, { queryMatch: r }) }),
                         ],
                     }),
                     null != n && (0, i.jsx)(P.dY, { children: n }),

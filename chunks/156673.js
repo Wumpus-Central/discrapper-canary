@@ -11,18 +11,18 @@ var l = n(481060),
 function c(e) {
     let { guild: t, onSelect: n } = e,
         c = (0, u.Z)(t.id),
-        h = (0, a.wC)(t.id);
+        f = (0, a.wC)(t.id);
     return (0, i.jsx)(l.v2r, {
         onSelect: n,
         navId: "guild-browse-channels-context-menu",
-        "aria-label": o.intl.string(o.t.ogxXGh),
+        "aria-label": o.intl.string(o.t.ogxXGq),
         onClose: r.Zy,
         children: (0, i.jsxs)(l.kSQ, {
             children: [
-                h &&
+                f &&
                     (0, i.jsx)(l.sNh, {
                         id: "go-to-settings",
-                        label: o.intl.string(o.t.X70lV1),
+                        label: o.intl.string(o.t.X70lV6),
                         action: () => {
                             s.Z.open(t.id, d.pNK.ONBOARDING);
                         },

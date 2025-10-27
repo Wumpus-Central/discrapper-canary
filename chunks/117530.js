@@ -47,8 +47,8 @@ let O = (e) => {
         s = [...g(n, i)];
     if (s.length + t.length > f.dN1 && i !== d.d.SlashCommand && i !== d.d.ApplicationLauncherCommand)
         return void l.Z.show({
-            title: _.intl.string(_.t.wOr6hI),
-            body: _.intl.formatToPlainString(_.t["qqyp/f"], { limit: f.dN1 }),
+            title: _.intl.string(_.t.wOr6hB),
+            body: _.intl.formatToPlainString(_.t["qqyp/e"], { limit: f.dN1 }),
         });
     a().forEach(t, (e) => {
         let t = new c.nH(e, n, r, s.length, o);

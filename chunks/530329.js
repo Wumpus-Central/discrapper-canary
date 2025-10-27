@@ -41,9 +41,9 @@ function p(e) {
         m = l.useMemo(() => {
             switch (t) {
                 case u.pC.AVATAR:
-                    return d.intl.format(d.t["pvw/HB"], { onClick: g });
+                    return d.intl.format(d.t["pvw/HH"], { onClick: g });
                 case u.pC.BANNER:
-                    return d.intl.format(d.t.aCrz1d, { onClick: g });
+                    return d.intl.format(d.t.aCrz1e, { onClick: g });
                 default:
                     return "";
             }
@@ -79,7 +79,7 @@ function p(e) {
               })(
                   {
                       text: m,
-                      button: d.intl.string(d.t.BmJkbW),
+                      button: d.intl.string(d.t.BmJkbd),
                       buttonAnalyticsObject: { section: c.jXE.USER_PROFILE },
                       className: i()(f.container, a),
                   },

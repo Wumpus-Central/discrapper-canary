@@ -1,17 +1,17 @@
-n.d(t, { Z: () => m }), n(415506), n(388685), n(49124);
+n.d(t, { Z: () => g }), n(415506), n(388685), n(49124);
 var r = n(72924),
     i = n(100527),
     l = n(367207),
     a = n(996106),
-    o = n(452426),
-    s = n(561205),
+    s = n(452426),
+    o = n(561205),
     c = n(334288),
     u = n(852926),
     d = n(186901),
     p = n(981631),
     f = n(474936);
 let h = [i.Z.RPC];
-function g(e, t) {
+function m(e, t) {
     let n = {
         subscriptionTier: f.Si.TIER_2,
         analyticsLocations: h,
@@ -26,11 +26,11 @@ function g(e, t) {
             throw Error("Unexpected app context: ".concat(e));
     }
 }
-let m = {
+let g = {
     [p.Etm.START_PURCHASE]: {
         [d.Gp.ANY]: [d.wE, d.lH],
         validation: (e) =>
-            (0, o.Z)(e)
+            (0, s.Z)(e)
                 .required()
                 .keys({
                     sku_id: e.string().required(),
@@ -44,22 +44,22 @@ let m = {
             (0, c.f)(t.transport);
             let l = t.application.id;
             if (null == l) throw new a.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
-            let { lock: o, context: f } = (0, u.jU)(t.transport !== d.He.POST_MESSAGE ? i : null);
-            if (null == (0, s.Z)()) throw new a.Z({ errorCode: p.lTL.INVALID_CHANNEL }, "Invalid channel");
-            let m = { page: p.ZY5.IN_APP };
+            let { lock: s, context: f } = (0, u.jU)(t.transport !== d.He.POST_MESSAGE ? i : null);
+            if (null == (0, o.Z)()) throw new a.Z({ errorCode: p.lTL.INVALID_CHANNEL }, "Invalid channel");
+            let g = { page: p.ZY5.IN_APP };
             return (async () => {
                 try {
                     let e = await (0, r.S)({
                         applicationId: l,
                         skuId: n,
-                        openPremiumPaymentModal: () => g(f, m),
+                        openPremiumPaymentModal: () => m(f, g),
                         analyticsLocations: h,
-                        analyticsLocationObject: m,
+                        analyticsLocationObject: g,
                         context: f,
                     });
-                    return o(), e;
+                    return s(), e;
                 } catch (e) {
-                    if ((o(), null != e)) {
+                    if ((s(), null != e)) {
                         let t = "";
                         throw (
                             ((t =
@@ -78,7 +78,7 @@ let m = {
     },
     [p.Etm.START_PREMIUM_PURCHASE]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        validation: (e) => (0, o.Z)(e).keys({ pid: e.number().min(0) }),
+        validation: (e) => (0, s.Z)(e).keys({ pid: e.number().min(0) }),
         handler(e) {
             let {
                 socket: t,
@@ -87,7 +87,7 @@ let m = {
             if (((0, c.f)(t.transport), null == t.application.id))
                 throw new a.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
             let { lock: r, context: i } = (0, u.jU)(t.transport !== d.He.POST_MESSAGE ? n : null);
-            return g(i, { page: p.ZY5.IN_APP }).then(
+            return m(i, { page: p.ZY5.IN_APP }).then(
                 () => {
                     r();
                 },

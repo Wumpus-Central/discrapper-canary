@@ -20,7 +20,7 @@ let v = (0, s.e)(function (e) {
                 className: f.error,
                 variant: "text-md/normal",
                 color: "text-feedback-warning",
-                children: u.intl.string(u.t.WLDKSU),
+                children: u.intl.string(u.t.WLDKSb),
             }),
         });
     async function v() {
@@ -47,18 +47,18 @@ let v = (0, s.e)(function (e) {
                 (0, n.jsx)(a.Heading, {
                     variant: "text-lg/bold",
                     className: f.header,
-                    children: u.intl.format(u.t.Pw4veX, { provider: s.name }),
+                    children: u.intl.format(u.t.Pw4vee, { provider: s.name }),
                 }),
                 (0, n.jsx)(a.Text, {
                     variant: "text-md/normal",
                     className: f.body,
-                    children: u.intl.format(u.t.rHlSVF, { provider: s.name }),
+                    children: u.intl.format(u.t.rHlSVB, { provider: s.name }),
                 }),
                 (0, n.jsx)(r.zx, {
                     size: r.zx.Sizes.LARGE,
                     color: r.zx.Colors.BRAND,
                     onClick: v,
-                    children: u.intl.string(u.t["+NJGEh"]),
+                    children: u.intl.string(u.t["+NJGEj"]),
                 }),
             ],
         }),

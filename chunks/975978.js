@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -173,7 +173,7 @@ let C = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let { tier0Price: t, tier2Price: n, shouldUseDiscountPrice: i, tier2DiscountedPriceString: a } = e,
             o = i ? a : (0, f.T4)(n.amount, n.currency);
         return (0, r.jsx)("thead", {
@@ -208,7 +208,7 @@ let C = (e) => {
             }),
         });
     },
-    D = (e) => {
+    w = (e) => {
         var t;
         let n,
             { className: a, hidePill: s = !1, selectedPlanTier: f = E.PremiumTypes.TIER_2 } = e,
@@ -217,8 +217,8 @@ let C = (e) => {
             C = null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id,
             N = (0, _.Ng)(),
             P = null != N && (0, _.Wp)(N, E.Si.TIER_2),
-            D = (0, h.Aq)(E.Xh.PREMIUM_MONTH_TIER_2),
-            L = "".concat(D, "/").concat((0, d.eP)(E.rV.MONTH)),
+            w = (0, h.Aq)(E.Xh.PREMIUM_MONTH_TIER_2),
+            L = "".concat(w, "/").concat((0, d.eP)(E.rV.MONTH)),
             x = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_0),
             M = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_2),
             k = (0, g.e)();
@@ -273,7 +273,7 @@ let C = (e) => {
                             (0, r.jsxs)("table", {
                                 className: y.table,
                                 children: [
-                                    (0, r.jsx)(w, {
+                                    (0, r.jsx)(D, {
                                         tier0Price: x,
                                         tier2Price: M,
                                         shouldUseDiscountPrice: P,

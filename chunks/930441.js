@@ -21,27 +21,27 @@ let o = ["tips", "recommendations_and_events", "updates_and_announcements"],
     s = [
         {
             category: "communication",
-            label: () => r.intl.string(r.t["B75+xc"]),
-            subLabel: () => r.intl.string(r.t.ZHg9TU),
+            label: () => r.intl.string(r.t["B75+xe"]),
+            subLabel: () => r.intl.string(r.t.ZHg9Tc),
         },
         {
             category: "social",
-            label: () => r.intl.string(r.t.sxn7lZ),
-            subLabel: () => r.intl.string(r.t.l7sdzM),
+            label: () => r.intl.string(r.t.sxn7lR),
+            subLabel: () => r.intl.string(r.t.l7sdzF),
         },
         {
             category: "updates_and_announcements",
-            label: () => r.intl.string(r.t.EkxXhY),
-            subLabel: () => r.intl.string(r.t["8ba9Q0"]),
+            label: () => r.intl.string(r.t.EkxXhe),
+            subLabel: () => r.intl.string(r.t["8ba9Q7"]),
         },
         {
             category: "tips",
-            label: () => r.intl.string(r.t.jNrkrK),
-            subLabel: () => r.intl.string(r.t["FF6/+P"]),
+            label: () => r.intl.string(r.t.jNrkrM),
+            subLabel: () => r.intl.string(r.t["FF6/+B"]),
         },
         {
             category: "recommendations_and_events",
-            label: () => r.intl.string(r.t.E8g1l5),
-            subLabel: () => r.intl.string(r.t.X4JMt7),
+            label: () => r.intl.string(r.t.E8g1l8),
+            subLabel: () => r.intl.string(r.t.X4JMt1),
         },
     ];

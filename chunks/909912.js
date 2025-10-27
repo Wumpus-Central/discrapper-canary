@@ -17,8 +17,8 @@ function u() {
         };
     return (0, r.jsx)(a.U, {
         children: (0, r.jsx)(o.ZP, {
-            title: u ? c.intl.string(c.t.PMsfcH) : c.intl.string(c.t.RAQUSE),
-            note: u ? c.intl.string(c.t.XXGmuL) : c.intl.string(c.t.wbYDfX),
+            title: u ? c.intl.string(c.t.PMsfcH) : c.intl.string(c.t.RAQUSN),
+            note: u ? c.intl.string(c.t.XXGmuB) : c.intl.string(c.t.wbYDfT),
             value: !t,
             onChange: d,
         }),

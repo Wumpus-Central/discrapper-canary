@@ -1,16 +1,16 @@
 t.d(a, { k: () => o }), t(388685);
-var r = t(647438),
-    n = t(110924),
+var n = t(647438),
+    r = t(110924),
     s = t(626135),
     l = t(798930),
     i = t(981631);
 function o(e, a) {
-    let [t, o] = r.useState(l.O.LANDING),
-        c = (0, n.Z)(t),
-        [d, x] = r.useState(null),
-        [u, h] = r.useState(null),
-        [m, N] = r.useState(void 0),
-        C = r.useCallback(() => {
+    let [t, o] = n.useState(l.O.LANDING),
+        c = (0, r.Z)(t),
+        [d, x] = n.useState(null),
+        [u, h] = n.useState(null),
+        [m, N] = n.useState(void 0),
+        C = n.useCallback(() => {
             switch (t) {
                 case l.O.LANDING:
                     o(l.O.PRE_CONNECT);
@@ -22,17 +22,17 @@ function o(e, a) {
                     o(l.O.PRE_CONNECT);
             }
         }, [t]),
-        j = r.useCallback((e) => {
+        j = n.useCallback((e) => {
             x(null), N(e), o(l.O.ERROR);
         }, []),
-        p = r.useCallback((e) => {
+        p = n.useCallback((e) => {
             x(e), o(l.O.PRE_CONNECT_WAITING);
         }, []),
-        v = r.useCallback((e) => {
+        v = n.useCallback((e) => {
             x(null), h(e), o(l.O.DISCORD_CONSENT);
         }, []);
     return (
-        r.useEffect(() => {
+        n.useEffect(() => {
             t !== c &&
                 s.default.track(i.rMx.ACCOUNT_LINK_STEP, {
                     location_stack: e,

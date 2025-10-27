@@ -14,7 +14,7 @@ let d = () => {
         className: c.banner,
         children: [
             (0, r.jsx)(o.mn, {
-                text: l.intl.string(l.t.qYKftb),
+                text: l.intl.string(l.t.qYKftX),
                 className: c.pill,
             }),
             (0, r.jsx)("img", {
@@ -29,7 +29,7 @@ let d = () => {
                 children: (0, r.jsx)(i.Text, {
                     color: "text-secondary",
                     variant: "text-sm/normal",
-                    children: l.intl.format(l.t.uu1WAQ, { weeks: 1 }),
+                    children: l.intl.format(l.t.uu1WAa, { weeks: 1 }),
                 }),
             }),
             (0, r.jsx)(a.Z, {

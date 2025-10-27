@@ -10,8 +10,8 @@ function o(t) {
         [d, u] = s.useState(!1),
         [h, m] = s.useState(""),
         [x, p] = s.useState(void 0),
-        g = s.useRef(null);
-    async function f(t) {
+        f = s.useRef(null);
+    async function g(t) {
         t.preventDefault(), u(!0);
         try {
             await (0, i.WQ)(o.id, h), n();
@@ -25,7 +25,7 @@ function o(t) {
         s.useEffect(() => {
             if (e === l.Dvm.ENTERED) {
                 var t;
-                null == (t = g.current) || t.focus();
+                null == (t = f.current) || t.focus();
             }
         }, [e]),
         (0, a.jsxs)(l.Y0X, {
@@ -40,7 +40,7 @@ function o(t) {
                             color: "header-secondary",
                             variant: "text-lg/bold",
                             className: c.subtitle,
-                            children: r.intl.string(r.t.YjuMsb),
+                            children: r.intl.string(r.t.YjuMsf),
                         }),
                         (0, a.jsx)(l.olH, {
                             onClick: n,
@@ -49,14 +49,14 @@ function o(t) {
                     ],
                 }),
                 (0, a.jsxs)("form", {
-                    onSubmit: f,
+                    onSubmit: g,
                     children: [
                         (0, a.jsx)(l.hzk, {
                             className: c.content,
                             children: (0, a.jsx)(l.oil, {
-                                label: r.intl.string(r.t["7yEgJS"]),
-                                inputRef: g,
-                                "aria-label": r.intl.string(r.t["7yEgJS"]),
+                                label: r.intl.string(r.t["7yEgJY"]),
+                                inputRef: f,
+                                "aria-label": r.intl.string(r.t["7yEgJY"]),
                                 placeholder: o.name,
                                 value: h,
                                 minLength: 1,
@@ -71,7 +71,7 @@ function o(t) {
                             children: [
                                 (0, a.jsx)(l.Button, {
                                     variant: "primary",
-                                    text: r.intl.string(r.t.i4jeWV),
+                                    text: r.intl.string(r.t.i4jeWR),
                                     type: "submit",
                                     loading: d,
                                     disabled: 0 === h.length || h.length > 32,
@@ -81,7 +81,7 @@ function o(t) {
                                     className: c.cancel,
                                     children: (0, a.jsx)(l.Button, {
                                         variant: "secondary",
-                                        text: r.intl.string(r.t["ETE/oK"]),
+                                        text: r.intl.string(r.t["ETE/oC"]),
                                         onClick: n,
                                     }),
                                 }),

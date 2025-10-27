@@ -36,12 +36,12 @@ function S(e) {
     }, [C]);
     let R = (0, f.N)(),
         P = (0, d.Ng)(),
-        w = null != R || null != P,
-        D = (null == R || null == (t = R.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_0;
+        D = null != R || null != P,
+        w = (null == R || null == (t = R.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_0;
     return (0, r.jsxs)("div", {
-        className: o()(I.emptyState, S, { [I.unifyTrialUpsell]: w }),
+        className: o()(I.emptyState, S, { [I.unifyTrialUpsell]: D }),
         children: [
-            w
+            D
                 ? (0, r.jsx)(_.ZP, {
                       discountOffer: P,
                       trialOffer: R,
@@ -51,20 +51,20 @@ function S(e) {
                           null != (a = null == R || null == (n = R.subscription_trial) ? void 0 : n.sku_id)
                               ? a
                               : O.Si.TIER_2,
-                      children: v.intl.string(v.t.FnNud3),
+                      children: v.intl.string(v.t.FnNud4),
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.Heading, {
                               className: I.header,
                               variant: "heading-xl/semibold",
-                              children: v.intl.string(v.t.HEm04O),
+                              children: v.intl.string(v.t.HEm04J),
                           }),
                           (0, r.jsx)(l.Text, {
                               className: I.subtitle,
                               color: "header-secondary",
                               variant: "text-md/normal",
-                              children: v.intl.string(v.t.FnNud3),
+                              children: v.intl.string(v.t.FnNud4),
                           }),
                           (0, r.jsx)("div", {
                               className: I.stickersRow,
@@ -82,10 +82,10 @@ function S(e) {
                           }),
                       ],
                   }),
-            !w &&
+            !D &&
                 (0, r.jsx)(E.Z, {
                     analyticsSection: y.jXE.EXPRESSION_PICKER,
-                    buttonText: w ? (D ? v.intl.string(v.t.hz78hI) : v.intl.string(v.t["Gd/XHB"])) : void 0,
+                    buttonText: D ? (w ? v.intl.string(v.t.hz78hE) : v.intl.string(v.t["Gd/XHF"])) : void 0,
                 }),
         ],
     });

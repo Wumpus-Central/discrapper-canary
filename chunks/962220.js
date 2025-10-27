@@ -3,8 +3,8 @@ var r,
     i,
     l = n(39612),
     a = n(271579),
-    o = n(756647),
-    s = n(625128),
+    s = n(756647),
+    o = n(625128),
     c = n(626135),
     u = n(954824),
     d = n(751189),
@@ -39,7 +39,7 @@ let f = "template",
         (i = i =
             {
                 openNativeAppModal(e) {
-                    s.Z.openNativeAppModal(e, p.Etm.GUILD_TEMPLATE_BROWSER);
+                    o.Z.openNativeAppModal(e, p.Etm.GUILD_TEMPLATE_BROWSER);
                 },
                 openMobileApp(e, t) {
                     if (null != platform.ua && platform.ua.toLowerCase().indexOf("googlebot") > -1) return;
@@ -51,7 +51,7 @@ let f = "template",
                             attemptId: r,
                         });
                     c.default.track(p.rMx.DEEP_LINK_CLICKED, {
-                        fingerprint: (0, o.K)(t),
+                        fingerprint: (0, s.K)(t),
                         attempt_id: r,
                         source: f,
                         guild_template_code: e,

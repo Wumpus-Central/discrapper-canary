@@ -3,8 +3,8 @@ var r = n(570140),
     i = n(317770),
     l = n(601964),
     a = n(430824),
-    o = n(594174),
-    s = n(358085),
+    s = n(594174),
+    o = n(358085),
     c = n(53365),
     u = n(981631);
 class d extends i.Z {
@@ -26,9 +26,9 @@ class d extends i.Z {
                       })
                     : (e[t] = n);
             })(this, "maybeFetchEligiblity", async () => {
-                if ((0, s.isDesktop)() || (0, s.isWeb)()) {
+                if ((0, o.isDesktop)() || (0, o.isWeb)()) {
                     let e = a.Z.getGuildsArray(),
-                        t = o.default.getCurrentUser(),
+                        t = s.default.getCurrentUser(),
                         n = e.filter(
                             (e) =>
                                 (0, l.eM)(e, t) &&

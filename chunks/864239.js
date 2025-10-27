@@ -14,11 +14,11 @@ function u() {
     return (0, r.jsx)(o.U, {
         setting: l.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2,
         children: (0, r.jsx)(s.ZP, {
-            title: c.intl.string(c.t["L+yTsb"]),
+            title: c.intl.string(c.t["L+yTsa"]),
             value: n,
             onChange: i.DC.updateSetting,
             disabled: !t,
-            note: c.intl.string(c.t.hiM8pa),
+            note: c.intl.string(c.t.hiM8pU),
         }),
     });
 }

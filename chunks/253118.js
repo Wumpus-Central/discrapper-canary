@@ -75,23 +75,23 @@ function _(e) {
         g = () =>
             null != t.messageReference
                 ? null == c
-                    ? l.intl.format(l.t.lD5tur, {
+                    ? l.intl.format(l.t.lD5tup, {
                           usernameHook: h,
                           username: p,
                           messageOnClick: m,
                       })
-                    : l.intl.format(l.t.yIDvPD, {
+                    : l.intl.format(l.t.yIDvPL, {
                           usernameHook: h,
                           username: p,
                           pinsActionOnClick: c,
                           messageOnClick: m,
                       })
                 : null == c
-                  ? l.intl.format(l.t.vfkjq6, {
+                  ? l.intl.format(l.t.vfkjqx, {
                         usernameHook: h,
                         username: p,
                     })
-                  : l.intl.format(l.t.R7vZGR, {
+                  : l.intl.format(l.t.R7vZGZ, {
                         usernameHook: h,
                         username: p,
                         pinsActionOnClick: c,

@@ -1,5 +1,5 @@
 n.d(t, {
-    L9: () => w,
+    L9: () => D,
     ZK: () => P,
     d4: () => R,
     dS: () => S,
@@ -116,7 +116,7 @@ function A(e) {
             var e;
             return (0, p.yE)(null != (e = n.flags) ? e : 0, E.J0y.IS_CLIP)
                 ? (0, r.jsxs)(s.jS, {
-                      text: b.intl.string(b.t["/fgfWl"]),
+                      text: b.intl.string(b.t["/fgfWh"]),
                       className: y.clipPill,
                       children: [
                           (0, r.jsx)(l.AlX, {
@@ -126,7 +126,7 @@ function A(e) {
                           (0, r.jsx)(o.x, {
                               variant: "text-xs/semibold",
                               color: "always-white",
-                              children: b.intl.string(b.t.oA4afH),
+                              children: b.intl.string(b.t.oA4afG),
                           }),
                       ],
                   })
@@ -229,15 +229,15 @@ function P(e) {
         }),
     );
 }
-function w(e) {
+function D(e) {
     return "CLIP" === e.item.type
-        ? (0, r.jsx)(D, {
+        ? (0, r.jsx)(w, {
               attachment: e.item.originalItem,
               message: e.message,
           })
         : null;
 }
-function D(e) {
+function w(e) {
     var t;
     let { attachment: n, message: i } = e,
         o = i.channel_id,

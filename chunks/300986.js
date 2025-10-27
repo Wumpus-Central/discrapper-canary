@@ -1,23 +1,23 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(692547),
     a = n(481060),
-    o = n(706454),
-    s = n(594174),
+    s = n(706454),
+    o = n(594174),
     c = n(626135),
     u = n(63063),
     d = n(51144),
     p = n(665149),
     f = n(981631),
     h = n(388032);
-let g = new Set(["ko", "ja"]);
-function m(e) {
+let m = new Set(["ko", "ja"]);
+function g(e) {
     let { className: t, focusSectionProps: n } = e,
-        m = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        b = (0, i.e7)([o.default], () => o.default.locale),
-        _ = (0, d.EO)(m);
+        g = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        _ = (0, i.e7)([s.default], () => s.default.locale),
+        b = (0, d.EO)(g);
     return (0, r.jsx)(a.Anchor, {
         href: u.w,
         target: "_blank",
@@ -50,11 +50,11 @@ function m(e) {
                 return e;
             })(
                 {
-                    color: _ ? l.Z.unsafe_rawColors.GREEN_360.css : "currentColor",
+                    color: b ? l.Z.unsafe_rawColors.GREEN_360.css : "currentColor",
                     className: t,
-                    onClick: () => c.default.track(f.rMx.HELP_CLICKED, { highlighted: _ }),
+                    onClick: () => c.default.track(f.rMx.HELP_CLICKED, { highlighted: b }),
                     icon: a.idN,
-                    tooltipPosition: g.has(b) ? "left" : void 0,
+                    tooltipPosition: m.has(_) ? "left" : void 0,
                     tooltip: h.intl.string(h.t["cqEoj/"]),
                 },
                 n,

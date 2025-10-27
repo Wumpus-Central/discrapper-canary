@@ -13,7 +13,7 @@ function s(t) {
                 separator: !1,
                 children: (0, r.jsx)(e.Heading, {
                     variant: "heading-md/semibold",
-                    children: a.intl.string(a.t.KTjjrK),
+                    children: a.intl.string(a.t.KTjjrG),
                 }),
             }),
             (0, r.jsx)(e.hzk, {
@@ -28,7 +28,7 @@ function s(t) {
             (0, r.jsx)(e.mzw, {
                 children: (0, r.jsx)(e.Button, {
                     variant: "primary",
-                    text: a.intl.string(a.t.i4jeWV),
+                    text: a.intl.string(a.t.i4jeWR),
                     onClick: n,
                 }),
             }),

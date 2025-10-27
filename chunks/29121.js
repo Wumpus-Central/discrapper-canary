@@ -9,9 +9,9 @@ var r = n(979554),
     a = n(388032);
 let o = (e) => {
         if (null == e) return "";
-        let t = a.intl.string(a.t.z7y5vL);
+        let t = a.intl.string(a.t.z7y5vF);
         return "baseVariantName" in e && null != e.baseVariantName && e.variantLabel !== t
-            ? a.intl.formatToPlainString(a.t.BZN5k5, {
+            ? a.intl.formatToPlainString(a.t.BZN5k2, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel,
               })
@@ -27,9 +27,9 @@ let o = (e) => {
                 : e.name,
     l = (e) => {
         if (null == e) return "";
-        let t = a.intl.string(a.t.z7y5vL);
+        let t = a.intl.string(a.t.z7y5vF);
         return null != e.baseVariantName && e.variantLabel !== t
-            ? a.intl.formatToPlainString(a.t.BZN5k5, {
+            ? a.intl.formatToPlainString(a.t.BZN5k2, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel,
               })
@@ -41,9 +41,9 @@ let o = (e) => {
             case r.Z.AVATAR_DECORATION:
                 return a.intl.formatToPlainString(a.t.lvBzLi, { product: t });
             case r.Z.PROFILE_EFFECT:
-                return a.intl.formatToPlainString(a.t.eR7moK, { product: t });
+                return a.intl.formatToPlainString(a.t.eR7moP, { product: t });
             case r.Z.NAMEPLATE:
-                return a.intl.formatToPlainString(a.t.YFOwHh, { product: t });
+                return a.intl.formatToPlainString(a.t.YFOwHj, { product: t });
             default:
                 return t;
         }

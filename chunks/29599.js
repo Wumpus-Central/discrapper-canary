@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(317941),
     R = n(342386),
     P = n(518596),
-    w = n(981631),
-    D = n(474936),
+    D = n(981631),
+    w = n(474936),
     L = n(388032),
     x = n(666707);
 function M(e, t, n) {
@@ -94,27 +94,27 @@ function G(e) {
         v = null != a,
         I = (0, m.Z)(n, v);
     v && c
-        ? (t = L.intl.format(L.t.pkxVx8, {
+        ? (t = L.intl.format(L.t.pkxVx6, {
               endDate: I,
               onClickDetails: E,
           }))
         : v && !c
-          ? (t = L.intl.format(L.t["4sFeoa"], {
+          ? (t = L.intl.format(L.t["4sFeob"], {
                 endDate: I,
                 onClickDetails: E,
             }))
           : !v && c
-            ? (t = L.intl.format(L.t["RBnE+v"], {
+            ? (t = L.intl.format(L.t["RBnE+l"], {
                   endDate: I,
                   onClickDetails: E,
               }))
             : v ||
               c ||
-              (t = L.intl.format(L.t["57+7Qk"], {
+              (t = L.intl.format(L.t["57+7Qn"], {
                   endDate: I,
                   onClickDetails: E,
               }));
-    let T = v ? L.intl.string(L.t["2cHUtr"]) : L.intl.string(L.t.O13yh4),
+    let T = v ? L.intl.string(L.t["2cHUti"]) : L.intl.string(L.t.O13yhz),
         S = i.useCallback(() => h(!1), []),
         { outboundTitle: A, outboundTermsAndConditions: C } = n;
     return (0, r.jsxs)(r.Fragment, {
@@ -193,7 +193,7 @@ let B = function () {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
-        a = (0, c.e7)([I.default], () => A.ZP.isPremiumExactly(I.default.getCurrentUser(), D.PremiumTypes.TIER_2)),
+        a = (0, c.e7)([I.default], () => A.ZP.isPremiumExactly(I.default.getCurrentUser(), w.PremiumTypes.TIER_2)),
         s = l().groupBy(t, (e) => (0, S.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [_, p] = i.useState(!1);
     i.useEffect(() => {
@@ -218,19 +218,19 @@ let B = function () {
                 },
             ).enabled && j;
     function B() {
-        (0, P.openUserSettings)(C.n.NITRO_PANEL, { section: w.oAB.PREMIUM });
+        (0, P.openUserSettings)(C.n.NITRO_PANEL, { section: D.oAB.PREMIUM });
     }
     function Z() {
         var e;
-        let t = n.find((e) => e.giftCodeBatchId === D.m8 && !e.consumed),
-            i = null != (e = n.filter((e) => e.giftCodeBatchId === D.rX && !e.consumed)) ? e : [],
+        let t = n.find((e) => e.giftCodeBatchId === w.m8 && !e.consumed),
+            i = null != (e = n.filter((e) => e.giftCodeBatchId === w.rX && !e.consumed)) ? e : [],
             [s, c] = l().partition(i, (e) => {
                 let { subscriptionPlanId: t } = e;
-                return t === D.Xh.PREMIUM_YEAR_TIER_2;
+                return t === w.Xh.PREMIUM_YEAR_TIER_2;
             }),
             d = (0, r.jsx)(u.Heading, {
                 variant: "heading-md/semibold",
-                children: j ? L.intl.string(L.t.wFsj3N) : void 0,
+                children: j ? L.intl.string(L.t.wFsj3B) : void 0,
             }),
             f = U
                 ? (0, r.jsxs)("div", {
@@ -244,17 +244,17 @@ let B = function () {
                           (0, r.jsx)(u.Text, {
                               variant: "text-md/normal",
                               className: x.promoDescription,
-                              children: L.intl.format(L.t.G4fwxM, {
+                              children: L.intl.format(L.t.G4fwxK, {
                                   onClick: () => {
-                                      (0, R.default)(), (0, v.uL)(w.Z5c.APPLICATION_STORE);
+                                      (0, R.default)(), (0, v.uL)(D.Z5c.APPLICATION_STORE);
                                   },
                               }),
                           }),
                           (0, r.jsx)(y.Z, {
                               showGradient: !0,
                               className: x.promoNitroButton,
-                              subscriptionTier: D.Si.TIER_2,
-                              textOptions: { textOverride: L.intl.string(L.t.mr4K7O) },
+                              subscriptionTier: w.Si.TIER_2,
+                              textOptions: { textOverride: L.intl.string(L.t.mr4K7D) },
                           }),
                       ],
                   })
@@ -306,7 +306,7 @@ let B = function () {
                                           skuId: t.skuId,
                                           subscriptionPlanId: t.subscriptionPlanId,
                                           entitlements: [t],
-                                          giftCodeBatchId: D.m8,
+                                          giftCodeBatchId: w.m8,
                                       },
                                       (0, S.Bg)(t.skuId, t.subscriptionPlanId),
                                   )
@@ -319,7 +319,7 @@ let B = function () {
                                           skuId: s[0].skuId,
                                           subscriptionPlanId: s[0].subscriptionPlanId,
                                           entitlements: s,
-                                          giftCodeBatchId: D.rX,
+                                          giftCodeBatchId: w.rX,
                                       },
                                       (0, S.Bg)(s[0].skuId, s[0].subscriptionPlanId),
                                   )
@@ -332,7 +332,7 @@ let B = function () {
                                           skuId: c[0].skuId,
                                           subscriptionPlanId: c[0].subscriptionPlanId,
                                           entitlements: c,
-                                          giftCodeBatchId: D.rX,
+                                          giftCodeBatchId: w.rX,
                                       },
                                       (0, S.Bg)(c[0].skuId, c[0].subscriptionPlanId),
                                   )
@@ -350,11 +350,11 @@ let B = function () {
                 (0, r.jsx)("div", { className: x.emptyStateImage }),
                 (0, r.jsx)(u.H, {
                     className: x.emptyStateHeader,
-                    children: L.intl.string(L.t.B1qgZm),
+                    children: L.intl.string(L.t.B1qgZn),
                 }),
                 (0, r.jsx)("p", {
                     className: x.emptyStateSubtext,
-                    children: L.intl.format(L.t.HezvJy, { onClick: B }),
+                    children: L.intl.format(L.t.HezvJ8, { onClick: B }),
                 }),
             ],
         });
@@ -368,7 +368,7 @@ let B = function () {
                       children: (0, r.jsxs)(u.y5t, {
                           component: (0, r.jsx)(u.Heading, {
                               variant: "heading-md/semibold",
-                              children: L.intl.string(L.t["9KeUbW"]),
+                              children: L.intl.string(L.t["9KeUbY"]),
                           }),
                           children: [
                               (0, r.jsx)(u.izJ, { className: x.divider }),

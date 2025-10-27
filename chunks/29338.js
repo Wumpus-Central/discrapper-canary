@@ -11,7 +11,7 @@ function u(e) {
     let { message: t, compact: n, usernameHook: u } = e,
         d = (0, o.ZP)(t),
         f = u(d),
-        _ = l.intl.format(l.t["Rv+TSE"], {
+        _ = l.intl.format(l.t["Rv+TSM"], {
             username: d.nick,
             usernameHook: f,
             topic: t.content,

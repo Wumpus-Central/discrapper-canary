@@ -13,15 +13,15 @@ function u(t) {
             t.preventDefault(), (0, r.CM)(u), n();
         },
         children: (0, e.jsx)(s.Modal, {
-            title: l.intl.string(l.t["ISN+ND"]),
+            title: l.intl.string(l.t["ISN+NM"]),
             actions: [
                 {
-                    text: l.intl.string(l.t["ETE/oK"]),
+                    text: l.intl.string(l.t["ETE/oC"]),
                     onClick: n,
                     variant: "secondary",
                 },
                 {
-                    text: l.intl.string(l.t["ISN+ND"]),
+                    text: l.intl.string(l.t["ISN+NM"]),
                     variant: "primary",
                     type: "submit",
                     autoFocus: !1,
@@ -31,11 +31,11 @@ function u(t) {
             transitionState: i,
             onClose: n,
             children: (0, e.jsx)(o.oil, {
-                label: l.intl.string(l.t.OCAkGB),
+                label: l.intl.string(l.t.OCAkGP),
                 value: u,
                 onChange: c,
                 maxLength: 100,
-                placeholder: l.intl.string(l.t.eTVbt7),
+                placeholder: l.intl.string(l.t.eTVbtx),
                 autoFocus: !0,
             }),
         }),

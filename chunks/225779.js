@@ -170,7 +170,7 @@ function S(e) {
         onClick: () => {
             t(), O(n);
         },
-        "aria-label": u.intl.string(u.t.WAI6xs),
+        "aria-label": u.intl.string(u.t.WAI6xu),
         children: (0, r.jsx)(s.Dio, {
             size: "sm",
             color: "currentColor",

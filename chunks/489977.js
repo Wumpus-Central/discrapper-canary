@@ -3,8 +3,8 @@ var r = n(570140),
     i = n(809206),
     l = n(317770),
     a = n(18438),
-    o = n(378879),
-    s = n(643879),
+    s = n(378879),
+    o = n(643879),
     c = n(350327),
     u = n(594174),
     d = n(74538),
@@ -22,18 +22,18 @@ class f extends l.Z {
                   let { image: t, file: n, guildId: r, analyticsSource: l, isTryItOutFlow: f } = e;
                   if (f) return void (0, c.c_)(t);
                   let h = u.default.getCurrentUser(),
-                      g = null != r ? a.I5 : i.I5,
-                      m = d.ZP.canUseAnimatedAvatar(h);
-                  if (m || "image/gif" !== n.type) return void g(t);
+                      m = null != r ? a.I5 : i.I5,
+                      g = d.ZP.canUseAnimatedAvatar(h);
+                  if (g || "image/gif" !== n.type) return void m(t);
                   if (null == h) return;
-                  let b = (0, s.SD)({
+                  let _ = (0, o.SD)({
                       userId: h.id,
                       image: t,
                   });
-                  if (!m)
-                      return void (0, o.s)({
+                  if (!g)
+                      return void (0, s.s)({
                           uploadType: p.pC.AVATAR,
-                          imageSrc: b,
+                          imageSrc: _,
                           analyticsSource: l,
                       });
               })(e)
@@ -42,14 +42,14 @@ class f extends l.Z {
                     let { image: t, guildId: n, analyticsSource: r, isTryItOutFlow: i } = e,
                         l = t.imageUri;
                     if (i) return void (0, c.f4)(l);
-                    let s = u.default.getCurrentUser(),
+                    let o = u.default.getCurrentUser(),
                         f = null != n ? a.g_ : c.g_,
-                        h = d.ZP.canUsePremiumProfileCustomization(s);
-                    return d.ZP.canUsePremiumProfileCustomization(s)
+                        h = d.ZP.canUsePremiumProfileCustomization(o);
+                    return d.ZP.canUsePremiumProfileCustomization(o)
                         ? void f(l)
-                        : null == s || h
+                        : null == o || h
                           ? void 0
-                          : void (0, o.s)({
+                          : void (0, s.s)({
                                 uploadType: p.pC.BANNER,
                                 imageSrc: l,
                                 analyticsSource: r,

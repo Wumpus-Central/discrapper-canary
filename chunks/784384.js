@@ -40,7 +40,7 @@ function S(e) {
 }
 function Z(e, t, n) {
     let l = n instanceof d.Sf;
-    if ((0, s.Y3)(t) && !(l && (0, s.Y3)(n))) return { label: E.intl.string(E.t.KgPx1N) };
+    if ((0, s.Y3)(t) && !(l && (0, s.Y3)(n))) return { label: E.intl.string(E.t.KgPx1D) };
     if (l && (0, d.Km)(n.type)) {
         if (
             (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
@@ -52,7 +52,7 @@ function Z(e, t, n) {
             !(0, g.eC)(n, h.Z) &&
             !(0, g.En)(e)
         )
-            return { label: E.intl.string(E.t.Wr4RIS) };
+            return { label: E.intl.string(E.t.Wr4RIX) };
         let t = [
             ...(0, o.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
@@ -70,13 +70,13 @@ function Z(e, t, n) {
                 })(e, n),
             )
         )
-            return { label: E.intl.string(E.t["0Yyrub"]) };
+            return { label: E.intl.string(E.t["0Yyrua"]) };
         if (
             (e.hasFlag(y.iLy.IS_VOICE_MESSAGE) ||
                 e.messageSnapshots.some((e) => e.message.hasFlag(y.iLy.IS_VOICE_MESSAGE))) &&
             !h.Z.can(y.Plq.SEND_VOICE_MESSAGES, n)
         )
-            return { label: E.intl.string(E.t.quj4DQ) };
+            return { label: E.intl.string(E.t.quj4DY) };
     }
 }
 function v(e, t) {

@@ -36,8 +36,8 @@ async function b(e) {
         ((!n && (h.length < m.md || f.length < m.X)) || (n && (b.length < m.md || x.length < m.X)))
     )
         return void i.Z.show({
-            title: p.intl.string(p.t.iLdiqa),
-            body: p.intl.string(p.t.JOT74e),
+            title: p.intl.string(p.t.iLdiqY),
+            body: p.intl.string(p.t.JOT74c),
         });
     if (d.Z.hasChanges()) {
         r.Z.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT" });
@@ -52,7 +52,7 @@ async function b(e) {
             var j;
             let { fieldName: e, error: t } = null != (j = new l.Hx(n).getAnyErrorMessageAndField()) ? j : {};
             i.Z.show({
-                title: p.intl.string(p.t.iLdiqa),
+                title: p.intl.string(p.t.iLdiqY),
                 body: [e, t].filter(c.lm).join(": "),
             }),
                 r.Z.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED" });

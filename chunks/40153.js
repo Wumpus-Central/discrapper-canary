@@ -1,7 +1,7 @@
 n.d(t, {
     OG: () => x,
-    ZP: () => v,
-    Zu: () => j,
+    ZP: () => j,
+    Zu: () => v,
 }),
     n(388685);
 var r = n(951288),
@@ -95,7 +95,7 @@ function y(e) {
         }),
     });
 }
-let v = i.memo(function (e) {
+let j = i.memo(function (e) {
     let { name: t, targetNode: n, noCombine: i = !1, below: l = !1, onDragOverChanged: o } = e,
         a = !i && null == n.parentId;
     return (0, r.jsxs)("div", {
@@ -117,7 +117,7 @@ let v = i.memo(function (e) {
         ],
     });
 });
-function j(e) {
+function v(e) {
     let { name: t, targetNode: n } = e,
         [{ canDrop: i, isOver: l }, o] = (0, c.L)(() => _([p.eD.GUILD], n, !0, !0)),
         a = b([[l, m.wrapperOver]]),

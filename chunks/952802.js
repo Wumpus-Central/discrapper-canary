@@ -19,9 +19,9 @@ function f(e) {
             error: m,
             className: g,
             required: y,
-            value: b,
+            value: C,
             setRef: O,
-            placeholder: C,
+            placeholder: b,
             autoFocus: j,
             maxLength: w,
             spellCheck: S,
@@ -33,7 +33,7 @@ function f(e) {
         } = e,
         k = (0, c.Dt)(),
         [Z, A] = s.useState(!1),
-        T = (0, u.o9)(i, b);
+        T = (0, u.o9)(i, C);
     return (0, n.jsx)("div", {
         className: null != g ? g : void 0,
         children: (0, n.jsx)(l.gNt, {
@@ -56,9 +56,9 @@ function f(e) {
                         id: k,
                         name: "email",
                         type: i === u.Nz.EMAIL ? "email" : "text",
-                        value: b,
+                        value: C,
                         inputRef: O,
-                        placeholder: C,
+                        placeholder: b,
                         "aria-label": f,
                         required: y,
                         onChange: function (e) {

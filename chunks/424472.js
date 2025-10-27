@@ -26,7 +26,7 @@ function p(e) {
                   (0, r.jsx)(i.Heading, {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
-                      children: d.intl.string(d.t.s7ialZ),
+                      children: d.intl.string(d.t.s7iald),
                   }),
                   (0, r.jsx)("div", {
                       className: u.categories,

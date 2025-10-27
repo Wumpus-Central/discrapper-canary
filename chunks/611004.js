@@ -172,7 +172,7 @@ function P(e, t) {
         i
     );
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let r = (0, u.Tm)(e),
         i = h.Z.getEditorState(r);
     if (null == i) return;
@@ -181,7 +181,7 @@ function w(e, t, n) {
     let o = h.Z.getSearchMode(r);
     p.Z.updateSearchMode(t, null != o ? o : g.o), c.Z.clearSearchMessages(r), p.Z.clearSearchEditorState(e), n(a);
 }
-function D() {
+function w() {
     h.Z.getSearchStateIds().forEach((e) => {
         let t = a.Z.getChannel(e);
         null != t &&
@@ -226,6 +226,6 @@ let L = {
             replace: r,
         });
     },
-    transitionQueryStateToSearchContext: w,
-    cleanUpPrivateChannelSearchState: D,
+    transitionQueryStateToSearchContext: D,
+    cleanUpPrivateChannelSearchState: w,
 };

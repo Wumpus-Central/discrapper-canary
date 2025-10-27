@@ -61,7 +61,7 @@ function f(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(c.jz, { children: u.intl.string(u.t.Rzvnio) }),
+                            (0, i.jsx)(c.jz, { children: u.intl.string(u.t.Rzvnig) }),
                         ],
                     }),
                 ],

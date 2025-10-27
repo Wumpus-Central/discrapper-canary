@@ -59,9 +59,9 @@ function u(e) {
             rowClassName: p,
         }),
         O = a.useRef(null),
-        j = (0, s.Z)("forward-modal", O);
+        C = (0, s.Z)("forward-modal", O);
     return (0, r.jsx)(o.bG, {
-        navigator: j,
+        navigator: C,
         children: (0, r.jsx)(o.SJ, {
             children: (e) => {
                 var t,

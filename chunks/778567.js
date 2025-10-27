@@ -4,14 +4,14 @@ var r = n(951288),
     a = n(481060),
     l = n(100527),
     o = n(906732),
-    s = n(63063),
-    c = n(732380),
+    c = n(63063),
+    s = n(732380),
     u = n(981631),
     d = n(388032),
     f = n(367155);
-let g = s.Z.getArticleURL(u.BhN.CUSTOM_PROFILES_WISHLIST);
+let g = c.Z.getArticleURL(u.BhN.CUSTOM_PROFILES_WISHLIST);
 function p(e) {
-    let { isOwner: t, isWishlistPublic: n, onToggleVisibility: s } = e,
+    let { isOwner: t, isWishlistPublic: n, onToggleVisibility: c } = e,
         u = i.useRef(null),
         { analyticsLocations: p } = (0, o.ZP)(l.Z.USER_PROFILE_WISHLIST),
         m = i.useMemo(
@@ -37,7 +37,7 @@ function p(e) {
                                       ],
                                   }),
                                   checked: n,
-                                  action: s,
+                                  action: c,
                               }),
                               (0, r.jsx)(a.Clw, {}),
                               (0, r.jsx)(a.sNh, {
@@ -53,7 +53,7 @@ function p(e) {
                           ],
                       })
                     : null,
-            [t, n, s],
+            [t, n, c],
         );
     return null == m
         ? null
@@ -73,7 +73,7 @@ function p(e) {
                   },
                   children: (e) =>
                       (0, r.jsx)(
-                          c.pt,
+                          s.pt,
                           (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},

@@ -12,8 +12,8 @@ let d = "Xbox two way upsell",
     f = () => {
         let e = o.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
         return (0, r.jsx)(s.t, {
-            title: c.intl.string(c.t["2okkZW"]),
-            body: c.intl.format(c.t.OnERSU, { help_article: e }),
+            title: c.intl.string(c.t["2okkZV"]),
+            body: c.intl.format(c.t.OnERSS, { help_article: e }),
             img: (0, r.jsx)("img", {
                 src: u,
                 width: "auto",

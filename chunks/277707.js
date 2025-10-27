@@ -4,19 +4,19 @@ function i(e) {
     let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: i, isGuest: a, isStage: o, isStream: s } = e;
     if (t)
         if (i)
-            if (s) return r.intl.string(r.t.N85DCg);
-            else if (o) return r.intl.string(r.t.TJQcNj);
-            else if (a) return r.intl.string(r.t.mJyBio);
-            else return r.intl.string(r.t.lxTgPz);
-        else if (s) return r.intl.string(r.t.Mnvc3N);
-        else if (o) return r.intl.string(r.t.FdPNr6);
-        else if (a) return r.intl.string(r.t.f4gmra);
-        else return r.intl.string(r.t.H39rER);
+            if (s) return r.intl.string(r.t.N85DCl);
+            else if (o) return r.intl.string(r.t.TJQcNv);
+            else if (a) return r.intl.string(r.t.mJyBir);
+            else return r.intl.string(r.t.lxTgP9);
+        else if (s) return r.intl.string(r.t.Mnvc3C);
+        else if (o) return r.intl.string(r.t.FdPNr5);
+        else if (a) return r.intl.string(r.t.f4gmrf);
+        else return r.intl.string(r.t.H39rEY);
     return n
         ? i
             ? r.intl.string(r.t.UxmnHx)
-            : r.intl.string(r.t.sigPER)
+            : r.intl.string(r.t.sigPEf)
         : i
-          ? r.intl.string(r.t["oU/lsr"])
-          : r.intl.string(r.t.BoQUFR);
+          ? r.intl.string(r.t["oU/lsl"])
+          : r.intl.string(r.t.BoQUFf);
 }

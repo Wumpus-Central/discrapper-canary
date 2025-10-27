@@ -76,9 +76,9 @@ let N = 150;
 function R(e, t) {
     switch (e) {
         case y.fO.ACTIVITY:
-            return v.intl.formatToPlainString(v.t.TCM94e, { numUsers: t });
+            return v.intl.formatToPlainString(v.t.TCM94S, { numUsers: t });
         case y.fO.STREAM:
-            return v.intl.formatToPlainString(v.t.BR7Tnp, { numViewers: t });
+            return v.intl.formatToPlainString(v.t.BR7Tno, { numViewers: t });
         default:
             throw Error("Unknown participant type.");
     }
@@ -119,7 +119,7 @@ function P(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     let { users: t, guildId: n, channelId: i, maxVisibleUsers: a = 3, className: s, participantType: l } = e,
         c = R(l, t.length),
         u =
@@ -154,7 +154,7 @@ function w(e) {
         }),
     });
 }
-let D = [];
+let w = [];
 function L(e) {
     let {
             channelId: t,
@@ -172,13 +172,13 @@ function L(e) {
         k = (0, c.Wu)([m.Z, g.default], () => {
             if (s.type === y.fO.STREAM) {
                 let e = m.Z.getViewerIds(s.id);
-                return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : D;
+                return e.length > 0 ? e.map((e) => g.default.getUser(e)).filter(E.lm) : w;
             }
             return s.type === y.fO.ACTIVITY && s.participants.length > 0
                 ? Array.from(s.participants)
                       .map((e) => g.default.getUser(e.userId))
                       .filter(E.lm)
-                : D;
+                : w;
         }, [s]);
     i.useEffect(() => {
         R && (M.current.cancel(), x(!1));
@@ -207,7 +207,7 @@ function L(e) {
         );
     if (0 === k.length) return null;
     if (b)
-        return (0, r.jsx)(w, {
+        return (0, r.jsx)(D, {
             maxVisibleUsers: T,
             users: k,
             guildId: a,

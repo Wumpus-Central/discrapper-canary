@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -78,7 +78,7 @@ function R(e) {
     let n = l().sample(l().values(e));
     return {
         type: O.wI2.FAVORITES,
-        name: v.intl.string(v.t.y3LQCA),
+        name: v.intl.string(v.t.y3LQCG),
         icon: f.r7p,
         src: null != n ? n.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
         format: null != (t = null == n ? void 0 : n.format) ? t : u.EO.IMAGE,
@@ -222,7 +222,7 @@ class P extends i.PureComponent {
             });
     }
 }
-function w(e) {
+function D(e) {
     let t = (0, c.e7)([h.Z], () => h.Z.getTrendingCategories()),
         n = (0, g.gG)(),
         i = (0, y.PY)();

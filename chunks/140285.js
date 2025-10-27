@@ -16,12 +16,12 @@ function u(e) {
         onChange: (e) => p(e),
         options: [
             {
-                name: d.intl.string(d.t["vs2T+P"]),
+                name: d.intl.string(d.t["vs2T+B"]),
                 value: a.I.SOME_CHANNELS_ACCESS,
                 leadingIcon: (0, i.GSL)(c.Z),
             },
             {
-                name: d.intl.string(d.t.l4Tr7e),
+                name: d.intl.string(d.t.l4Tr7X),
                 value: a.I.ALL_CHANNELS_ACCESS,
                 leadingIcon: (0, i.GSL)(o.Z),
             },

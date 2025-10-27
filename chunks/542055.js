@@ -66,11 +66,11 @@ function w(e, t) {
 }
 function N(e) {
     let { channelId: t, onClose: r, transitionState: o } = e,
-        [N, T] = a.useState(""),
-        [E, I] = a.useState("descending"),
+        [N, E] = a.useState(""),
+        [T, I] = a.useState("descending"),
         [S, k] = a.useState(!0),
-        [Z, D] = a.useState(null),
-        L = a.useDeferredValue(N),
+        [Z, L] = a.useState(null),
+        D = a.useDeferredValue(N),
         M = (0, u.e7)([h.Z], () => h.Z.getClips()),
         R = (0, u.e7)([h.Z], () => h.Z.getPendingClips()),
         H = (0, u.e7)([h.Z], () => h.Z.getSettings().storageLocation),
@@ -99,23 +99,23 @@ function N(e) {
         () =>
             s()(B)
                 .filter((e) => {
-                    if ("" === L.trim()) return !0;
-                    let t = L.toLowerCase();
+                    if ("" === D.trim()) return !0;
+                    let t = D.toLowerCase();
                     return (
                         (null != e.name && "" !== e.name && i()(t, e.name.toLowerCase())) ||
                         i()(t, e.applicationName.toLowerCase())
                     );
                 })
                 .sort((e, t) =>
-                    "ascending" === E
+                    "ascending" === T
                         ? b.default.compare(e.id, t.id)
-                        : "descending" === E
+                        : "descending" === T
                           ? b.default.compare(t.id, e.id)
                           : 0,
                 )
                 .chunk(3)
                 .value(),
-        [B, L, E],
+        [B, D, T],
     );
     a.useEffect(() => {
         !(async function () {
@@ -148,7 +148,7 @@ function N(e) {
         ),
         { onShareClick: G } = (0, j.Z)({
             channelId: t,
-            setExporting: D,
+            setExporting: L,
         }),
         K = a.useCallback((e, t) => {
             (0, p.ZDy)(async () => {
@@ -226,8 +226,8 @@ function N(e) {
                 (0, l.jsx)(v.Z, {
                     onClose: r,
                     filterQuery: N,
-                    setFilterQuery: T,
-                    sortOrder: E,
+                    setFilterQuery: E,
+                    sortOrder: T,
                     setSortOrder: I,
                 }),
                 U,

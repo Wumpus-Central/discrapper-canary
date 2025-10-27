@@ -20,7 +20,7 @@ function p(e) {
     };
     return (0, i.jsx)(r.sNh, {
         id: "guild-settings",
-        label: b.intl.string(b.t["154/bG"]),
+        label: b.intl.string(b.t["154/bL"]),
         action: () => p(),
         children: (0, a.t)(e).map((t) => {
             let { section: n, label: o } = t;
@@ -34,7 +34,7 @@ function p(e) {
                         {
                             id: n,
                             action: () => p(n),
-                            label: b.intl.string(b.t.nRtNqq),
+                            label: b.intl.string(b.t.nRtNqn),
                         },
                         n,
                     );

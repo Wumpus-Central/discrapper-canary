@@ -49,11 +49,11 @@ let I = function (e) {
         (0, r.jsxs)(o.Modal, {
             transitionState: t,
             onClose: I,
-            title: M.intl.string(M.t.JHNunp),
+            title: M.intl.string(M.t.JHNunj),
             subtitle: M.intl.string(M.t["+BLIGh"]),
             actions: [
                 {
-                    text: M.intl.string(M.t.SJMnkZ),
+                    text: M.intl.string(M.t.SJMnkX),
                     loading: G,
                     icon: l.Gr1,
                     iconPosition: "end",
@@ -71,7 +71,7 @@ let I = function (e) {
                 },
                 className: C.learnMoreButton,
                 children: [
-                    M.intl.string(M.t["aA6q//"]),
+                    M.intl.string(M.t["aA6q/z"]),
                     (0, r.jsx)(l.Gr1, {
                         size: "xs",
                         color: "currentColor",
@@ -96,7 +96,7 @@ let I = function (e) {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     className: C.requestContainer,
-                    children: M.intl.format(M.t.pJAxgY, {
+                    children: M.intl.format(M.t.pJAxgQ, {
                         handleOnRequestHook: () => {
                             R.Z.openUrl(f.sQ.APPEALS_LINK), (0, d.x3)(O, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
                         },

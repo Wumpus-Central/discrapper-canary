@@ -1,5 +1,5 @@
 n.d(t, {
-    A2: () => e2,
+    A2: () => e3,
     AY: () => ei,
     CM: () => el,
     CW: () => ek,
@@ -10,7 +10,7 @@ n.d(t, {
     Fg: () => ee,
     G6: () => eh,
     H1: () => M,
-    HV: () => e3,
+    HV: () => e2,
     I0: () => U,
     JG: () => eV,
     JN: () => ea,
@@ -23,7 +23,7 @@ n.d(t, {
     Ou: () => Y,
     P4: () => eb,
     Pe: () => V,
-    QK: () => ew,
+    QK: () => eD,
     QZ: () => R,
     R$: () => y,
     RS: () => eI,
@@ -40,7 +40,7 @@ n.d(t, {
     Xk: () => k,
     Xr: () => ep,
     YC: () => e1,
-    Yk: () => eD,
+    Yk: () => ew,
     _O: () => L,
     _j: () => eF,
     bh: () => eo,
@@ -49,7 +49,7 @@ n.d(t, {
     cP: () => H,
     co: () => eg,
     d$: () => Z,
-    d4: () => D,
+    d4: () => w,
     d8: () => A,
     dN: () => b,
     eR: () => v,
@@ -221,23 +221,23 @@ let A = (0, f.Zc)(
         (e) => (null != e ? e : "0"),
         (e) => e,
     ),
-    w = [],
-    D = (0, f.Zc)(
+    D = [],
+    w = (0, f.Zc)(
         "textAndImages",
         "emojiPickerCollapsedSections",
-        (e) => (null != e ? e : w),
+        (e) => (null != e ? e : D),
         (e) => e,
     ),
     L = (0, f.Zc)(
         "textAndImages",
         "stickerPickerCollapsedSections",
-        (e) => (null != e ? e : w),
+        (e) => (null != e ? e : D),
         (e) => e,
     ),
     x = (0, f.Zc)(
         "textAndImages",
         "soundboardPickerCollapsedSections",
-        (e) => (null != e ? e : w),
+        (e) => (null != e ? e : D),
         (e) => e,
     ),
     M = (0, f.Zc)(
@@ -755,7 +755,7 @@ let eR = (0, f.KM)(
         }),
         { comparator: s.Z },
     ),
-    ew = (0, f.R2)(
+    eD = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",
@@ -780,7 +780,7 @@ let eR = (0, f.KM)(
                 return null == (e = _.Z.getOverride("gifAutoPlay")) ? void 0 : e.value;
             }),
     ),
-    eD = (0, f.R2)(
+    ew = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",
@@ -1023,7 +1023,7 @@ let e$ = (0, f.Zc)(
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e,
     ),
-    e2 = (0, f.Zc)(
+    e3 = (0, f.Zc)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>
@@ -1036,7 +1036,7 @@ let e$ = (0, f.Zc)(
             ),
         { delay: h.fy.AUTOMATED },
     ),
-    e3 = (0, f.Zc)(
+    e2 = (0, f.Zc)(
         "textAndImages",
         "showMentionSuggestions",
         (e) => {

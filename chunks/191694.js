@@ -12,12 +12,12 @@ let E = (0, u.x1)(r.n.REGISTERED_GAMES_PANE, {
         render: () => (0, i.jsx)(s.Z, {}),
     }),
     d = (0, u.wf)(r.n.REGISTERED_GAMES_PANEL, {
-        useTitle: () => c.intl.string(c.t.AVDyEh),
+        useTitle: () => c.intl.string(c.t.AVDyEj),
         buildLayout: () => [E],
     }),
     T = (0, u.m7)(r.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
         icon: l.iWm,
-        useTitle: () => c.intl.string(c.t.AVDyEh),
+        useTitle: () => c.intl.string(c.t.AVDyEj),
         legacySearchKey: o.s6.REGISTERED_GAMES,
         usePredicate: a.Jw,
         buildLayout: () => [d],

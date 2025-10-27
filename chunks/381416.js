@@ -1,11 +1,11 @@
-n.d(t, { s: () => o });
+n.d(t, { s: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(388032),
     a = n(394121);
-function o(e) {
-    let { onDiscardApplication: t, onContinueApplication: n, guild: o } = e;
+function s(e) {
+    let { onDiscardApplication: t, onContinueApplication: n, guild: s } = e;
     return (0, r.jsxs)("div", {
         className: a.confirmation,
         children: [
@@ -20,9 +20,9 @@ function o(e) {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
                 children:
-                    null != o
-                        ? l.intl.formatToPlainString(l.t.f5Jaw8, { guildName: o.name })
-                        : l.intl.string(l.t["0sTyER"]),
+                    null != s
+                        ? l.intl.formatToPlainString(l.t.f5Jaw7, { guildName: s.name })
+                        : l.intl.string(l.t["0sTyEb"]),
             }),
             (0, r.jsxs)("div", {
                 className: a.incompleteButtonsContainer,
@@ -32,14 +32,14 @@ function o(e) {
                         onClick: n,
                         variant: "secondary",
                         size: "md",
-                        text: l.intl.string(l.t.h3aGmp),
+                        text: l.intl.string(l.t.h3aGmv),
                     }),
                     (0, r.jsx)(i.Button, {
                         fullWidth: !0,
                         onClick: t,
                         variant: "critical-primary",
                         size: "md",
-                        text: l.intl.string(l.t.OQFlFB),
+                        text: l.intl.string(l.t.OQFlFD),
                     }),
                 ],
             }),

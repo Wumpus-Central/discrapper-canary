@@ -121,7 +121,7 @@ let S = r.memo(function (e) {
                     }),
                 );
             else if (e.type === x.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
-                return "" !== e.content ? e.content : O.intl.string(O.t.wnn1DQ);
+                return "" !== e.content ? e.content : O.intl.string(O.t.wnn1Dc);
             if (null != e.content && "" !== e.content) {
                 let t = {
                         formatInline: !0,
@@ -153,8 +153,8 @@ let S = r.memo(function (e) {
             }),
             [M],
         ),
-        V = (0, v.wq)(null == M ? void 0 : M.author.id, P.id),
-        F = (0, v.$3)(n, M),
+        F = (0, v.wq)(null == M ? void 0 : M.author.id, P.id),
+        V = (0, v.$3)(n, M),
         G = (0, v.Wl)(M, P, Z, N),
         z = (0, v.rY)(T, N),
         W = r.useCallback(() => {
@@ -163,12 +163,12 @@ let S = r.memo(function (e) {
                 referencedAvatarProfile: !1,
             });
         }, [N]),
-        K = (0, C.Uj)(n);
+        q = (0, C.Uj)(n);
     return (0, i.jsx)(y.Z, {
         repliedAuthor: R,
         baseMessage: n,
         channel: P,
-        baseAuthor: K,
+        baseAuthor: q,
         referencedMessage: S,
         content: U,
         compact: I,
@@ -179,8 +179,8 @@ let S = r.memo(function (e) {
         renderPopout: _.Z,
         onClickAvatar: z,
         onClickUsername: G,
-        onClickReply: F,
-        onContextMenu: V,
+        onClickReply: V,
+        onContextMenu: F,
         onPopoutRequestClose: W,
         isReplySpineClickable: A,
         showReplySpine: w,

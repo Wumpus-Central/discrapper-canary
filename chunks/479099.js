@@ -66,23 +66,23 @@ function y(e, t) {
 var j = (((r = j || {})[(r.SMALL = 0)] = "SMALL"), (r[(r.MEDIUM = 1)] = "MEDIUM"), r);
 function x(e) {
     let { tag: t, size: r = 1, disabled: a, className: u, onClick: j, onRemove: x, selected: w, ariaLabel: E } = e,
-        { name: L, emojiId: S, emojiName: N } = t,
+        { name: S, emojiId: L, emojiName: N } = t,
         _ = null != x,
         [P, C] = i.useState(!1),
-        T = (0, c.e7)([f.ZP], () => (null != S ? f.ZP.getUsableCustomEmojiById(S) : null)),
+        M = (0, c.e7)([f.ZP], () => (null != L ? f.ZP.getUsableCustomEmojiById(L) : null)),
         R = _ || null != j,
-        Z = (!_ || !P) && (null != S || null != N),
-        M = 0 === r,
+        T = (!_ || !P) && (null != L || null != N),
+        Z = 0 === r,
         A = i.useRef(null),
         I = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         U = (0, l.jsxs)(l.Fragment, {
             children: [
-                Z
+                T
                     ? (0, l.jsx)(g.Z, {
-                          className: s()(O.emoji, { [O.small]: M }),
-                          emojiId: S,
+                          className: s()(O.emoji, { [O.small]: Z }),
+                          emojiId: L,
                           emojiName: N,
-                          animated: !!(null == T ? void 0 : T.animated),
+                          animated: !!(null == M ? void 0 : M.animated),
                           size: "reaction",
                       })
                     : null,
@@ -97,10 +97,10 @@ function x(e) {
                         }),
                     }),
                 (0, l.jsx)(d.Text, {
-                    variant: M ? "text-xs/semibold" : "text-sm/semibold",
+                    variant: Z ? "text-xs/semibold" : "text-sm/semibold",
                     lineClamp: 1,
                     color: "currentColor",
-                    children: L,
+                    children: S,
                 }),
             ],
         }),
@@ -111,7 +111,7 @@ function x(e) {
                 {
                     [O.disabled]: a,
                     [O.clickable]: R,
-                    [O.small]: M,
+                    [O.small]: Z,
                     [O.selected]: w,
                     [O[t.color]]: null != t.color && !R,
                 },
@@ -142,7 +142,7 @@ function x(e) {
                       y(b({}, z), {
                           innerRef: A,
                           focusProps: { ringTarget: A },
-                          "aria-label": null != E ? E : D.intl.formatToPlainString(D.t.iyRTLi, { tagName: L }),
+                          "aria-label": null != E ? E : D.intl.formatToPlainString(D.t.iyRTLm, { tagName: S }),
                           role: "button",
                           "aria-pressed": w,
                       }),
@@ -157,7 +157,7 @@ function w(e) {
     let { tags: t, count: n, size: r = 1 } = e,
         i = 0 === r;
     return (0, l.jsx)(u.u, {
-        "aria-label": D.intl.string(D.t["P/y+sr"]),
+        "aria-label": D.intl.string(D.t["P/y+sj"]),
         __unsupportedReactNodeAsText: (0, l.jsx)(l.Fragment, {
             children: t.map((e) =>
                 (0, l.jsx)(

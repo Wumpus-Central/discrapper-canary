@@ -16,27 +16,27 @@ function b(e) {
     var n;
     let t = (0, Z.Z)(),
         b = null == t ? void 0 : t.id,
-        m = null == t ? void 0 : t.guild_id,
-        O = (0, i.e7)([a.Z], () => a.Z.getGuild(m), [m]),
+        O = null == t ? void 0 : t.guild_id,
+        m = (0, i.e7)([a.Z], () => a.Z.getGuild(O), [O]),
         p = (0, i.e7)([o.Z], () => (null != b ? o.Z.getVoiceStateForChannel(b, e.id) : null), [b, e.id]),
         h = (null == (n = u.default.getCurrentUser()) ? void 0 : n.id) === e.id,
         j = (0, g.Z)(),
         P = (0, i.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, b), [b, e.id]),
         v = (0, d.B)(b);
-    if (null == t || null == O || null == p || P.speaker) return null;
+    if (null == t || null == m || null == p || P.speaker) return null;
     let x = () => {
         h ? (0, s.RK)(t, !1) : (0, s._0)(t, e.id);
     };
     return v
         ? (0, l.jsx)(r.sNh, {
               id: "invite-speaker",
-              label: h ? f.intl.string(f.t["W6c/VV"]) : f.intl.string(f.t.VUCWcH),
+              label: h ? f.intl.string(f.t["W6c/Vf"]) : f.intl.string(f.t.VUCWcO),
               action: x,
           })
         : j && h
           ? (0, l.jsx)(r.sNh, {
                 id: "invite-speaker",
-                label: f.intl.string(f.t["W6c/VV"]),
+                label: f.intl.string(f.t["W6c/Vf"]),
                 action: x,
             })
           : null;

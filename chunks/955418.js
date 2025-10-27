@@ -80,7 +80,7 @@ function O(e) {
         className: h.container,
         editorClassName: h.editor,
         type: C,
-        placeholder: p.intl.formatToPlainString(p.t["0ZQw/f"], { name: u.ZP.getName(n, c, t) }),
+        placeholder: p.intl.formatToPlainString(p.t["0ZQw/X"], { name: u.ZP.getName(n, c, t) }),
         channel: y,
         textValue: v,
         richValue: T,

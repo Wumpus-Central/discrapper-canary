@@ -9,8 +9,8 @@ var i = e(481060),
     c = e(49012),
     u = e(358085),
     d = e(998502),
-    v = e(36998),
-    f = e(981631),
+    f = e(36998),
+    v = e(981631),
     h = e(388032);
 function p(t) {
     for (var n = 1; n < arguments.length; n++) {
@@ -51,13 +51,13 @@ function m(t, n, e, m) {
         return null;
     let g = (0, o.F)(t),
         j = (t) => {
-            s.default.track(f.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: g }, (0, v.v)())),
+            s.default.track(v.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: g }, (0, f.v)())),
                 d.ZP.copy(t),
-                (0, i.showToast)((0, i.createToast)(h.intl.string(h.t["L/PwZW"]), i.ToastType.SUCCESS));
+                (0, i.showToast)((0, i.createToast)(h.intl.string(h.t["L/PwZf"]), i.ToastType.SUCCESS));
         },
         O = (e, l) => {
             let i = !0 === l ? t.replace("tel:", "sms:") : t;
-            s.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: g }, (0, v.v)())),
+            s.default.track(v.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: g }, (0, f.v)())),
                 (0, c.q)(
                     {
                         href: i,
@@ -70,7 +70,7 @@ function m(t, n, e, m) {
         k = [],
         C = t.match(b);
     if (null != C) {
-        let t = h.intl.string("mailto" === C[1] ? h.t.ZYLVKi : h.t["3zozoa"]);
+        let t = h.intl.string("mailto" === C[1] ? h.t.ZYLVKo : h.t["3zozoR"]);
         k.push(
             (0, l.jsx)(
                 i.sNh,
@@ -90,7 +90,7 @@ function m(t, n, e, m) {
                         i.sNh,
                         {
                             id: "native-send-sms",
-                            label: h.intl.string(h.t["+wbjMT"]),
+                            label: h.intl.string(h.t["+wbjMW"]),
                             action: (t) => O(t, !0),
                         },
                         "native-send-sms",
@@ -102,7 +102,7 @@ function m(t, n, e, m) {
             i.sNh,
             {
                 id: "copy-native-link",
-                label: h.intl.string(h.t.WqhZsr),
+                label: h.intl.string(h.t.WqhZss),
                 action: () => {
                     j(t);
                 },
@@ -114,7 +114,7 @@ function m(t, n, e, m) {
             i.sNh,
             {
                 id: "open-native-link",
-                label: h.intl.string(h.t.wuRE8P),
+                label: h.intl.string(h.t.wuRE8M),
                 action: (t) => O(t),
             },
             "open-native-link",

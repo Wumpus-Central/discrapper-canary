@@ -24,7 +24,7 @@ function f(e) {
                   ? o.Z.unsafe_rawColors.PRIMARY_630.css
                   : o.Z.unsafe_rawColors.WHITE_500.css),
         (0, r.jsx)(s.u, {
-            text: null != m ? m : d.intl.string(d.t.T3PvV1),
+            text: null != m ? m : d.intl.string(d.t.T3PvV4),
             children: (0, r.jsx)(u.Z, {
                 className: p,
                 color: O,

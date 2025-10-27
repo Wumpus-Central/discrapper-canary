@@ -46,21 +46,21 @@ function y(e) {
                         (0, i.jsx)(a.Heading, {
                             variant: "heading-lg/bold",
                             color: "header-primary",
-                            children: m.intl.string(m.t["kw8/ER"]),
+                            children: m.intl.string(m.t["kw8/Ec"]),
                         }),
                         (0, i.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: m.intl.string(m.t.GZoV1N),
+                            children: m.intl.string(m.t.GZoV1O),
                         }),
                     ],
                 }),
                 (0, i.jsx)(a.Button, {
                     variant: "primary",
-                    text: m.intl.string(m.t.Ye51oa),
-                    "aria-label": m.intl.formatToPlainString(m.t.xx5Sur, {
-                        sectionTitle: m.intl.string(m.t["kw8/ER"]),
-                        sectionBody: m.intl.string(m.t.GZoV1N),
+                    text: m.intl.string(m.t.Ye51oT),
+                    "aria-label": m.intl.formatToPlainString(m.t.xx5Sug, {
+                        sectionTitle: m.intl.string(m.t["kw8/Ec"]),
+                        sectionBody: m.intl.string(m.t.GZoV1O),
                     }),
                     onClick: g,
                 }),

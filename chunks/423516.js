@@ -9,7 +9,7 @@ var i = n(120356),
     u = n(980941);
 let c = function (e) {
     let { className: t, hasVideo: n, text: i, hasConnectedChannel: c, textVariant: d = "text-md/medium" } = e,
-        f = n ? s.intl.string(s.t.IlHdW1) : s.intl.string(s.t.WsOisr);
+        f = n ? s.intl.string(s.t.IlHdW8) : s.intl.string(s.t.WsOisp);
     return (0, l.jsx)(o.Z, {
         className: r()(t, u.hoverableStatus),
         hoverText: c

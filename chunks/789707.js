@@ -28,13 +28,13 @@ function l() {
             (0, r.jsx)(i.Heading, {
                 className: s.header,
                 variant: "heading-xl/semibold",
-                children: o.intl.string(o.t.yJHJen),
+                children: o.intl.string(o.t.yJHJei),
             }),
             (0, r.jsx)(i.Text, {
                 className: s.text,
                 color: "header-secondary",
                 variant: "text-md/normal",
-                children: o.intl.string(o.t.p2dIh4),
+                children: o.intl.string(o.t.p2dIh6),
             }),
         ],
     });

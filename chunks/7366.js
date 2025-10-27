@@ -85,7 +85,7 @@ let m = (e) => {
         E = p(e, ["gradientColor", "title", "subtitle", "onClose", "onSecondaryClick", "videoSrc", "loopAt"]);
     let { subscribeButtonProps: b, subscriptionTier: y } = (0, o.G)({
             subscriptionTier: l.Si.TIER_2,
-            defaultTextOverride: c.intl.string(c.t.pj0XBA),
+            defaultTextOverride: c.intl.string(c.t.pj0XBN),
         }),
         O = (0, s.Z)(l.Si.TIER_2);
     return (0, r.jsx)(a.Z, {

@@ -16,7 +16,7 @@ function u(e) {
         }, [t]);
     return (0, r.jsx)(a.Button, {
         variant: "primary",
-        text: n ? c.intl.string(c.t.KPGVWl) : c.intl.string(c.t["/nicWl"]),
+        text: n ? c.intl.string(c.t.KPGVWl) : c.intl.string(c.t["/nicWo"]),
         onClick: d,
         disabled: !u,
     });

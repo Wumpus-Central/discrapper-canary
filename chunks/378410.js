@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(710845),
     i = n(914946),
     l = n(452426),
     a = n(981631);
-let o = new r.Z(a.BZL),
-    s = {
+let s = new r.Z(a.BZL),
+    o = {
         [a.Etm.CAPTURE_LOG]: {
             validation: (e) =>
                 (0, l.Z)(e)
@@ -23,19 +23,19 @@ let o = new r.Z(a.BZL),
                     a = "".concat(l, " - ").concat(r);
                 switch (n) {
                     case "log":
-                        o.log(a);
+                        s.log(a);
                         break;
                     case "warn":
-                        o.warn(a);
+                        s.warn(a);
                         break;
                     case "debug":
-                        o.verbose(a);
+                        s.verbose(a);
                         break;
                     case "info":
-                        o.info(a);
+                        s.info(a);
                         break;
                     case "error":
-                        o.error(a);
+                        s.error(a);
                 }
             },
         },

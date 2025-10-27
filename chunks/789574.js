@@ -72,7 +72,7 @@ function j() {
             (j = (0, r.jsx)(a.Text, {
                 color: "text-danger",
                 variant: "text-md/normal",
-                children: b.intl.string(b.t["mrO/ZW"]),
+                children: b.intl.string(b.t["mrO/ZQ"]),
             }))),
         (0, r.jsx)(o.Z, {
             submitting: n,

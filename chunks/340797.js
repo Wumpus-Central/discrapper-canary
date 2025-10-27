@@ -33,7 +33,7 @@ function d(e) {
                       tag: "span",
                       innerRef: d,
                       children: (0, r.jsx)(a.u, {
-                          text: c.intl.string(c.t["v/OYd3"]),
+                          text: c.intl.string(c.t["v/OYd2"]),
                           children: (0, r.jsx)("div", {
                               className: u.newMemberBadge,
                               children: (0, r.jsx)(o.hg2, {

@@ -30,11 +30,11 @@ function S(e) {
     return n <= 0
         ? null
         : 0 === i && 0 === l
-          ? N.intl.format(N.t.kF0HER, {
+          ? N.intl.format(N.t.kF0HEa, {
                 tierName: r,
                 numPremiumSubscriptions: n,
             })
-          : N.intl.format(N.t.neDJho, {
+          : N.intl.format(N.t.neDJhq, {
                 days: i,
                 hours: l,
                 tierName: r,
@@ -52,7 +52,7 @@ function T(e) {
         children: [
             (0, r.jsx)("div", {
                 className: I.guildBoostingGracePeriodTitle,
-                children: N.intl.format(N.t.LG7vvr, {}),
+                children: N.intl.format(N.t.LG7vvg, {}),
             }),
             (0, r.jsx)(S, {
                 endsAt: i,
@@ -92,7 +92,7 @@ function w() {
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/semibold",
-                        children: N.intl.string(N.t.nLovSU),
+                        children: N.intl.string(N.t.nLovSZ),
                     }),
                     null != t && null != e
                         ? (0, r.jsx)(T, {
@@ -103,7 +103,7 @@ function w() {
                     (0, r.jsx)(a.Text, {
                         className: I.titleBlurb,
                         variant: "text-sm/normal",
-                        children: N.intl.format(N.t.hLOkp6, {
+                        children: N.intl.format(N.t.hLOkp9, {
                             helpdeskArticle: O.Z.getArticleURL(E.BhN.GUILD_SUBSCRIPTIONS),
                         }),
                     }),

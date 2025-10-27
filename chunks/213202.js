@@ -1,4 +1,4 @@
-n.d(t, { default: () => Y });
+n.d(t, { default: () => H });
 var i = n(951288);
 n(647438);
 var r = n(442837),
@@ -23,23 +23,23 @@ var r = n(442837),
     S = n(109764),
     P = n(3689),
     C = n(323597),
-    m = n(852245),
-    E = n(493802),
+    E = n(852245),
+    m = n(493802),
     N = n(367722),
-    _ = n(461535),
-    k = n(776568),
-    T = n(218035),
-    w = n(775666),
+    k = n(461535),
+    _ = n(776568),
+    w = n(218035),
+    T = n(775666),
     L = n(442754),
     Q = n(333805),
     V = n(567521),
-    D = n(624514),
+    A = n(624514),
     G = n(917327),
-    M = n(381924),
-    I = n(601274),
-    A = n(981631),
-    U = n(388032);
-function R(e) {
+    I = n(381924),
+    M = n(601274),
+    D = n(981631),
+    R = n(388032);
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -74,43 +74,43 @@ function X(e) {
         P = (0, V.Z)(t, u),
         C = (0, f.l)(t),
         N = (0, f.P)(t),
-        _ = (0, g.Z)(t),
-        k = (0, h.Z)(t),
+        k = (0, g.Z)(t),
+        _ = (0, h.Z)(t),
         L = (0, b.Z)(t),
-        G = (0, E.Z)(t),
-        M = (0, T.Z)(t),
-        A = (0, m.Z)(t),
-        R = (0, I.Z)(t, n),
+        G = (0, m.Z)(t),
+        I = (0, w.Z)(t),
+        D = (0, E.Z)(t),
+        U = (0, M.Z)(t, n),
         X = (0, d.Z)({
             id: t.id,
-            label: U.intl.string(U.t.gFHI3t),
+            label: R.intl.string(R.t.gFHI3k),
         }),
         q = (0, Q.Z)(t),
-        Y = (0, s.Z)(t),
-        H = (0, O.Mn)("ChannelListVoiceContextMenuFavorite"),
-        F = (0, w.ZP)(t),
-        W = (0, D.Z)();
+        H = (0, s.Z)(t),
+        Y = (0, O.Mn)("ChannelListVoiceContextMenuFavorite"),
+        F = (0, T.ZP)(t),
+        z = (0, A.Z)();
     return (0, i.jsxs)(l.v2r, {
         navId: "channel-context",
         onClose: a.Zy,
-        "aria-label": U.intl.string(U.t.Xm41aW),
+        "aria-label": R.intl.string(R.t.Xm41aV),
         onSelect: o,
         children: [
             (0, i.jsx)(l.kSQ, { children: null != j ? x : P }),
             (0, i.jsxs)(l.kSQ, {
-                children: [k, L, _, C],
+                children: [_, L, k, C],
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [G, H ? F : M, A],
+                children: [G, Y ? F : I, D],
             }),
-            (0, i.jsx)(l.kSQ, { children: Y }),
+            (0, i.jsx)(l.kSQ, { children: H }),
             (0, i.jsx)(l.kSQ, { children: N }),
             (0, i.jsxs)(l.kSQ, {
-                children: [R, Z],
+                children: [U, Z],
             }),
             (0, i.jsx)(l.kSQ, { children: q }),
             (0, i.jsxs)(l.kSQ, {
-                children: [X, W],
+                children: [X, z],
             }),
         ],
     });
@@ -119,46 +119,46 @@ function q(e) {
     let { channel: t, guild: n, onSelect: o } = e,
         c = t.isGuildStageVoice(),
         u = (0, r.e7)([y.Z], () => (c ? y.Z.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
-        Z = (0, _.Z)(t),
+        Z = (0, k.Z)(t),
         g = (0, S.Z)(t),
         h = (0, v.qY)(t.id),
         b = (0, p.Z)(null == h ? void 0 : h.id, n, t),
-        A = (0, V.Z)(t, u),
-        R = (0, f.l)(t),
+        D = (0, V.Z)(t, u),
+        U = (0, f.l)(t),
         X = (0, f.P)(t),
-        q = (0, E.Z)(t),
-        Y = (0, T.Z)(t),
-        H = (0, m.Z)(t),
+        q = (0, m.Z)(t),
+        H = (0, w.Z)(t),
+        Y = (0, E.Z)(t),
         F = (0, N.Z)(t, n, u),
-        W = (0, I.Z)(t, n),
-        z = (0, G.Z)(t, n),
-        B = (0, M.Z)(t, n.id),
-        K = (0, x.Z)(t, n),
-        J = (0, P.Z)(t, n),
+        z = (0, M.Z)(t, n),
+        W = (0, G.Z)(t, n),
+        B = (0, I.Z)(t, n.id),
+        J = (0, x.Z)(t, n),
+        K = (0, P.Z)(t, n),
         $ = (0, C.Z)(t),
         ee = (0, d.Z)({
             id: t.id,
-            label: U.intl.string(U.t.gFHI3t),
+            label: R.intl.string(R.t.gFHI3k),
         }),
         et = (0, Q.Z)(t),
         en = (0, s.Z)(t),
         ei = (0, L.Z)(t),
         er = (0, j.Z)(t),
-        el = (0, k.ZP)(t),
+        el = (0, _.ZP)(t),
         ea = (0, O.Mn)("ChannelListVoiceContextMenuNormal"),
-        eo = (0, w.ZP)(t),
-        ec = (0, D.Z)();
+        eo = (0, T.ZP)(t),
+        ec = (0, A.Z)();
     return (0, i.jsxs)(l.v2r, {
         navId: "channel-context",
         onClose: a.Zy,
-        "aria-label": U.intl.string(U.t.Xm41aW),
+        "aria-label": R.intl.string(R.t.Xm41aV),
         onSelect: o,
         children: [
-            (0, i.jsx)(l.kSQ, { children: null != h ? b : A }),
+            (0, i.jsx)(l.kSQ, { children: null != h ? b : D }),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [Z, R],
+                    children: [Z, U],
                 },
                 "mark-as-read-or-favorite",
             ),
@@ -172,14 +172,14 @@ function q(e) {
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [B, W, z, q, er, et],
+                    children: [B, z, W, q, er, et],
                 },
                 "voice-actions",
             ),
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [el, ea ? eo : Y],
+                    children: [el, ea ? eo : H],
                 },
                 "notifications",
             ),
@@ -187,7 +187,7 @@ function q(e) {
             (0, i.jsxs)(
                 l.kSQ,
                 {
-                    children: [H, K, J, $],
+                    children: [Y, J, K, $],
                 },
                 "admin-actions",
             ),
@@ -201,12 +201,12 @@ function q(e) {
         ],
     });
 }
-let Y = (0, c.Z)(
+let H = (0, c.Z)(
     (0, o.Z)(
         function (e) {
-            return (0, Z.Z)() ? (0, i.jsx)(X, R({}, e)) : (0, i.jsx)(q, R({}, e));
+            return (0, Z.Z)() ? (0, i.jsx)(X, U({}, e)) : (0, i.jsx)(q, U({}, e));
         },
-        { object: A.qAy.CONTEXT_MENU },
+        { object: D.qAy.CONTEXT_MENU },
     ),
     [u.Z.CONTEXT_MENU, u.Z.CHANNEL_LIST_VOICE_CHANNEL_MENU],
 );

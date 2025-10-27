@@ -1,19 +1,19 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(704215),
     l = n(481060),
     a = n(570140),
-    o = n(317770),
-    s = n(266454),
+    s = n(317770),
+    o = n(266454),
     c = n(605236),
     u = n(650774),
     d = n(430824),
     p = n(496675),
     f = n(228392),
     h = n(981631),
-    g = n(921944);
-class m extends o.Z {
+    m = n(921944);
+class g extends s.Z {
     _initialize() {
         a.Z.subscribe("CHANNEL_SELECT", this.handleChannelSelect);
     }
@@ -29,16 +29,16 @@ class m extends o.Z {
                 let n = d.Z.getGuild(e),
                     r = !!(null == n ? void 0 : n.features.has(h.GuildFeatures.COMMUNITY)),
                     l = p.Z.can(h.Plq.MANAGE_CHANNELS, n),
-                    a = (0, s.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
-                    o = null != (t = u.Z.getMemberCount(e)) ? t : 0;
-                return r && l && !a && o >= 200;
+                    a = (0, o.zu)(i.z.FORUM_CHANNEL_UPSELL_MODAL),
+                    s = null != (t = u.Z.getMemberCount(e)) ? t : 0;
+                return r && l && !a && s >= 200;
             })(t)
         )
             return;
         (0, f.qz)(), (0, c.kk)(i.z.FORUM_CHANNEL_UPSELL_MODAL);
         let a = function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.L.DISMISS;
-            (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.L.DISMISS;
+            (0, o.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
         };
         (0, l.ZDy)(
             async () => {
@@ -97,10 +97,10 @@ class m extends o.Z {
                 };
             },
             {
-                onCloseCallback: () => (0, s.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: g.L.DISMISS }),
+                onCloseCallback: () => (0, o.Q3)(i.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: m.L.DISMISS }),
                 onCloseRequest: h.VqG,
             },
         );
     }
 }
-let b = new m();
+let _ = new g();

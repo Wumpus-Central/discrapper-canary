@@ -62,7 +62,7 @@ function c(e) {
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/normal",
                 className: o.accessoryText,
-                children: a.intl.string(a.t["2aXnfX"]),
+                children: a.intl.string(a.t["2aXnfa"]),
             }),
         ],
     });

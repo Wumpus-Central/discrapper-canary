@@ -4,22 +4,22 @@ n(647438);
 var l = n(567400),
     i = n(786040),
     a = n(143941),
-    o = n(652100);
-let s = (e) => {
+    s = n(652100);
+let o = (e) => {
         let { product: t, selectedVariantIndex: n, isCardHovered: l } = e;
         return (0, r.jsx)(a.a, {
             product: t,
             selectedVariantIndex: n,
             isCardHovered: l,
-            className: o.wishlistButton,
+            className: s.wishlistButton,
         });
     },
     c = (e) => {
         let { skuId: t, selectedVariantIndex: n, isCardHovered: a } = e,
-            o = (0, l.Y)({ location: "ProductWishlistButton" }),
+            s = (0, l.Y)({ location: "ProductWishlistButton" }),
             c = (0, i.LJ)(t);
-        return null != c && o
-            ? (0, r.jsx)(s, {
+        return null != c && s
+            ? (0, r.jsx)(o, {
                   product: c,
                   selectedVariantIndex: n,
                   isCardHovered: a,

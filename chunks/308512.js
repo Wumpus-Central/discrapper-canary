@@ -10,7 +10,7 @@ function c() {
     let e = (0, i.e7)([o.Z], () => o.Z.enabled, []);
     return (0, a.jsx)(l.S89, {
         id: "streamer-mode-toggle",
-        label: s.intl.string(s.t.p9ZAJS),
+        label: s.intl.string(s.t.p9ZAJZ),
         action: () => {
             r.Z.setEnabled(!e);
         },

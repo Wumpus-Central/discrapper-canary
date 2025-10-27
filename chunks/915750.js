@@ -1,6 +1,6 @@
 n.d(t, {
     B5: () => M,
-    PI: () => w,
+    PI: () => D,
     WD: () => U,
     aM: () => G,
     ui: () => B,
@@ -65,8 +65,8 @@ function C(e) {
 let N = 100,
     R = 60,
     P = 1,
-    w = 0.5,
-    D = new Set();
+    D = 0.5,
+    w = new Set();
 function L(e, t) {
     return "".concat(e, "_").concat(t);
 }
@@ -194,7 +194,7 @@ class x {
                         n = (0, y.Zp)(this.questContent);
                     if (null != n) {
                         let r = L(e.id, n);
-                        (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
+                        (t = !w.has(r) && (0, y.VB)(this.questContent)) && w.add(r);
                     }
                     let r = (0, y.jY)(this.questContent);
                     (0, u.S)((0, b._b)(this.questContent)).then((n) => {
@@ -326,7 +326,7 @@ class x {
             (this.questContent = t),
             (this.questContentPosition = i),
             (this.minViewTimeSeconds = l),
-            (this.minViewportPercentage = w),
+            (this.minViewportPercentage = D),
             (this.quests = Array.isArray(e) ? e : [e]),
             (this.trackGuildAndChannelMetadata = r),
             (this.triggeredByStatusChange = n),

@@ -59,7 +59,7 @@ function h(e) {
                     {
                         filters: l,
                         maxFileSizeBytes: u.B,
-                        imageSpecifications: t === d.pC.BANNER ? f.intl.string(f.t.IhzZlp) : void 0,
+                        imageSpecifications: t === d.pC.BANNER ? f.intl.string(f.t.IhzZlo) : void 0,
                         onComplete: (e) => {
                             let { assetOrigin: n, imageUri: r, file: a, originalAsset: l } = e,
                                 u = a.name.replace(/\.[^/.]+$/, ""),

@@ -3,8 +3,8 @@ var r,
     i,
     l,
     a,
-    o = n(951288),
-    s = n(647438);
+    s = n(951288),
+    o = n(647438);
 function c(e, t, n) {
     return (
         t in e
@@ -74,8 +74,8 @@ var h =
         (i.REFURBISHED = "http://schema.org/RefurbishedCondition"),
         (i.USED = "http://schema.org/UsedCondition"),
         i),
-    g =
-        (((l = g || {}).DISCONTINUED = "http://schema.org/Discontinued"),
+    m =
+        (((l = m || {}).DISCONTINUED = "http://schema.org/Discontinued"),
         (l.IN_STOCK = "http://schema.org/InStock"),
         (l.IN_STORE_ONLY = "http://schema.org/InStoreOnly"),
         (l.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability"),
@@ -85,20 +85,20 @@ var h =
         (l.PRESALE = "http://schema.org/PreSale"),
         (l.SOLD_OUT = "http://schema.org/SoldOut"),
         l);
-function m(e) {
+function g(e) {
     return d("Offer", e);
 }
-(m.ItemConditions = h), (m.ItemAvailability = g);
-var b = (((a = b || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
-function _(e) {
+(g.ItemConditions = h), (g.ItemAvailability = m);
+var _ = (((a = _ || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
+function b(e) {
     return d("QuantitativeValue", e);
 }
-_.UnitCodes = b;
-class E extends (r = s.Component) {
+b.UnitCodes = _;
+class E extends (r = o.Component) {
     render() {
         let { debug: e, data: t } = this.props,
             n = JSON.stringify(u({ "@context": "http://schema.org" }, t));
-        return (0, o.jsx)("script", {
+        return (0, s.jsx)("script", {
             type: "application/ld+json",
             children: n,
         });
@@ -116,7 +116,7 @@ c(E, "Thing", p),
         return d("ItemPage", e);
     }),
     c(E, "Product", f),
-    c(E, "Offer", m),
+    c(E, "Offer", g),
     c(E, "Rating", function (e) {
         return d("Rating", e);
     }),
@@ -126,7 +126,7 @@ c(E, "Thing", p),
     c(E, "AggregateOffer", function (e) {
         return d("AggregateOffer", e);
     }),
-    c(E, "QuantitativeValue", _),
+    c(E, "QuantitativeValue", b),
     c(E, "UnitPriceSpecification", function (e) {
         return d("UnitPriceSpecification", e);
     });

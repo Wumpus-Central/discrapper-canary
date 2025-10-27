@@ -43,7 +43,7 @@ function x(e) {
                 children: [
                     (0, r.jsx)(c.rsf, {
                         label: h.intl.string(h.t.fjHWen),
-                        description: h.intl.string(h.t.J1YOV1),
+                        description: h.intl.string(h.t.J1YOV6),
                         checked: !j,
                         onChange: C,
                         disabled: y || !l,
@@ -52,7 +52,7 @@ function x(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: h.intl.format(h.t.R8jY9v, {
+                            children: h.intl.format(h.t.R8jY9g, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
                                         c.Anchor,

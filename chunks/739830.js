@@ -66,7 +66,7 @@ function g(e) {
             }
         );
     }, []);
-    let y = p.intl.string(p.t.h850Sk);
+    let y = p.intl.string(p.t.h850Ss);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: b,
         shouldShow: g,
@@ -81,7 +81,7 @@ function g(e) {
                 f(h({}, e), {
                     channel: t,
                     navId: "thread-context",
-                    label: p.intl.string(p.t["1NBjqa"]),
+                    label: p.intl.string(p.t["1NBjqb"]),
                 }),
             ),
         children: (e, t) => {

@@ -11,7 +11,7 @@ function u(e) {
         n = (0, i.e7)([s.Z], () => {
             var e;
             return t.guildId === l.X8
-                ? c.intl.string(c.t.Rtvk9f)
+                ? c.intl.string(c.t.Rtvk9X)
                 : null == (e = s.Z.getGuild(t.guildId))
                   ? void 0
                   : e.name;

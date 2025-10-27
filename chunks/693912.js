@@ -10,14 +10,14 @@ var r = n(63063),
 function o(e) {
     let { application: t, username: n, usernameHook: o = i.dG4, applicationNameHook: s = i.dG4 } = e;
     return null != t
-        ? a.intl.format(a.t.J8SaGx, {
+        ? a.intl.format(a.t.J8SaGy, {
               username: n,
               otherUsername: t.name,
               usernameHook: o,
               otherUsernameHook: s,
               helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS),
           })
-        : a.intl.format(a.t["+6V2sb"], {
+        : a.intl.format(a.t["+6V2sd"], {
               username: n,
               usernameHook: o,
               helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS),
@@ -26,14 +26,14 @@ function o(e) {
 function s(e) {
     let { application: t, username: n, usernameHook: o = i.dG4, applicationNameHook: s = i.dG4 } = e;
     return null != t
-        ? a.intl.format(a.t.eGCDam, {
+        ? a.intl.format(a.t.eGCDak, {
               username: n,
               otherUsername: t.name,
               usernameHook: o,
               otherUsernameHook: s,
               helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS),
           })
-        : a.intl.format(a.t.sAX6rq, {
+        : a.intl.format(a.t.sAX6rs, {
               username: n,
               usernameHook: o,
               helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS),
@@ -42,7 +42,7 @@ function s(e) {
 function l(e) {
     let { application: t, username: n, usernameOnClick: o, applicationNameOnClick: s, medium: l } = e;
     return null != t
-        ? a.intl.formatToParts(a.t["8r+Z+P"], {
+        ? a.intl.formatToParts(a.t["8r+Z+I"], {
               username: n,
               otherUsername: t.name,
               usernameOnClick: o,
@@ -50,7 +50,7 @@ function l(e) {
               medium: l,
               helpCenterLink: { url: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS) },
           })
-        : a.intl.formatToParts(a.t.ojysqa, {
+        : a.intl.formatToParts(a.t.ojysqe, {
               username: n,
               usernameOnClick: o,
               medium: l,
@@ -60,7 +60,7 @@ function l(e) {
 function c(e) {
     let { application: t, username: n, usernameOnClick: o, applicationNameOnClick: s, medium: l } = e;
     return null != t
-        ? a.intl.formatToParts(a.t.zmc0mp, {
+        ? a.intl.formatToParts(a.t.zmc0mq, {
               username: n,
               otherUsername: t.name,
               usernameOnClick: o,
@@ -68,7 +68,7 @@ function c(e) {
               medium: l,
               helpCenterLink: { url: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS) },
           })
-        : a.intl.formatToParts(a.t["x2CN/f"], {
+        : a.intl.formatToParts(a.t["x2CN/Z"], {
               username: n,
               usernameOnClick: o,
               medium: l,

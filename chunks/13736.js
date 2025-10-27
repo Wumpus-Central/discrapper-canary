@@ -13,7 +13,7 @@ function o(t) {
         ? null
         : (0, i.jsx)(a.sNh, {
               id: "edit-thread",
-              label: t.isForumPost() ? s.intl.string(s.t.NP1yHB) : s.intl.string(s.t["2Mk1TE"]),
+              label: t.isForumPost() ? s.intl.string(s.t.NP1yHG) : s.intl.string(s.t["2Mk1TP"]),
               action: () => {
                   (0, a.pTH)(), l.ZP.open(t.id);
               },

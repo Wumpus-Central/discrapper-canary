@@ -1,45 +1,45 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(692547),
-    o = n(481060),
-    s = n(153867),
+    s = n(481060),
+    o = n(153867),
     c = n(906732),
     u = n(705262),
     d = n(210887),
     p = n(981631),
     f = n(388032),
     h = n(932720);
-let g = function () {
+let m = function () {
     let { analyticsLocations: e } = (0, c.ZP)(),
         t = (0, l.e7)([d.Z], () => d.Z.theme),
         n = i.useRef(null);
     i.useEffect(() => {
         null == n.current && (n.current = t);
     }, [t]);
-    let g = (0, o.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.LIGHT),
-        m = (0, o.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.DARKER),
-        b = (0, o.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.MIDNIGHT),
-        _ = i.useMemo(
+    let m = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.LIGHT),
+        g = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.DARKER),
+        _ = (0, s.dQu)(a.Z.colors.BACKGROUND_BASE_LOW, p.BRd.MIDNIGHT),
+        b = i.useMemo(
             () => [
                 {
                     theme: p.BRd.LIGHT,
-                    label: f.t.K2sFfn,
-                    color: g.hex(),
-                },
-                {
-                    theme: p.BRd.DARKER,
-                    label: f.t.b8Cei4,
+                    label: f.t.K2sFfo,
                     color: m.hex(),
                 },
                 {
+                    theme: p.BRd.DARKER,
+                    label: f.t.b8Cei3,
+                    color: g.hex(),
+                },
+                {
                     theme: p.BRd.MIDNIGHT,
-                    label: f.t.Do4ZJy,
-                    color: b.hex(),
+                    label: f.t.Do4ZJx,
+                    color: _.hex(),
                 },
             ],
-            [g, m, b],
+            [m, g, _],
         ),
         E = i.useCallback(
             (t) => {
@@ -48,7 +48,7 @@ let g = function () {
                     analyticsLocations: e,
                     themeName: "default ".concat(t),
                 }),
-                    (0, s.ZI)({ theme: t });
+                    (0, o.ZI)({ theme: t });
             },
             [e],
         ),
@@ -60,7 +60,7 @@ let g = function () {
         children: (0, r.jsxs)("div", {
             className: h.themeSelector,
             children: [
-                _.map((e) =>
+                b.map((e) =>
                     (0, r.jsxs)(
                         "button",
                         {
@@ -84,10 +84,10 @@ let g = function () {
                         e.theme,
                     ),
                 ),
-                (0, r.jsx)(o.hU, {
+                (0, r.jsx)(s.hU, {
                     onClick: O,
-                    "aria-label": f.intl.string(f.t.yBZMsb),
-                    icon: o.DuK,
+                    "aria-label": f.intl.string(f.t.yBZMsQ),
+                    icon: s.DuK,
                     variant: "secondary",
                 }),
             ],

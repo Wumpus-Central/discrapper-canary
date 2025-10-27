@@ -90,7 +90,7 @@ function O(e) {
         () =>
             t && null != i
                 ? {
-                      label: E.intl.string(E.t.hvVgAQ),
+                      label: E.intl.string(E.t.hvVgAZ),
                       trackingArea: h.j_.VIEW,
                       onClick() {
                           i();
@@ -98,7 +98,7 @@ function O(e) {
                   }
                 : n && null != i
                   ? {
-                        label: E.intl.string(E.t.NgXl3N),
+                        label: E.intl.string(E.t.NgXl3C),
                         trackingArea: h.j_.ADD_APP,
                         onClick() {
                             i();

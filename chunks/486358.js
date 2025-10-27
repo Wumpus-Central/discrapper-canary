@@ -36,14 +36,14 @@ let _ = function () {
                               (0, r.jsx)(i.X6q, {
                                   variant: "heading-lg/semibold",
                                   color: "header-primary",
-                                  children: j.intl.string(j.t["6TAHb2"]),
+                                  children: j.intl.string(j.t["6TAHbx"]),
                               }),
                               (0, r.jsx)(i.xvT, {
                                   variant: "text-sm/medium",
                                   color: "header-secondary",
                                   tag: "p",
                                   className: v.description,
-                                  children: j.intl.string(j.t.XCGZFh),
+                                  children: j.intl.string(j.t.XCGZFk),
                               }),
                           ],
                       }),

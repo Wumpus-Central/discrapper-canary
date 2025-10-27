@@ -12,12 +12,12 @@ let d = (e) => {
         [f, b] = r.useState(!1),
         { firstAvatarDecoration: y, firstProfileEffect: O, firstNameplate: v } = (0, c.Rj)(t),
         g = (0, s.x6)(t)
-            ? u.intl.string(u.t.tf1ZZ2)
+            ? u.intl.string(u.t.tf1ZZ4)
             : t.type === l.Z.AVATAR_DECORATION
-              ? u.intl.string(u.t.zOA4a2)
+              ? u.intl.string(u.t.zOA4ax)
               : t.type === l.Z.NAMEPLATE
-                ? u.intl.string(u.t.gOzMv7)
-                : u.intl.string(u.t.SWm2am);
+                ? u.intl.string(u.t.gOzMvx)
+                : u.intl.string(u.t.SWm2ai);
     return {
         handleUseNow: r.useCallback(async () => {
             b(!0);

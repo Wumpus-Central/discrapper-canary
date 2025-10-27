@@ -32,14 +32,14 @@ let p = function (t) {
             return o;
         })(t, ["channelId", "application", "onClose"]);
     let [O, y] = o.useState(!1),
-        j = async () => {
+        g = async () => {
             try {
                 y(!0), await a.ZP.removeLinkedLobby(p), u();
             } catch (t) {
                 y(!1),
                     l.Z.show({
-                        title: s.intl.string(s.t.vFzPFh),
-                        body: s.intl.string(s.t["6D5WVl"]),
+                        title: s.intl.string(s.t.vFzPFj),
+                        body: s.intl.string(s.t["6D5WVg"]),
                     });
             }
         };
@@ -71,11 +71,11 @@ let p = function (t) {
             return t;
         })(
             {
-                header: s.intl.string(s.t.JmUENj),
-                confirmText: s.intl.string(s.t["cY+Ooa"]),
-                cancelText: s.intl.string(s.t["ETE/oK"]),
+                header: s.intl.string(s.t.JmUENg),
+                confirmText: s.intl.string(s.t["cY+Oob"]),
+                cancelText: s.intl.string(s.t["ETE/oC"]),
                 confirmButtonColor: i.zx.Colors.BRAND,
-                onConfirm: j,
+                onConfirm: g,
                 loading: O,
                 onClose: u,
             },
@@ -85,7 +85,7 @@ let p = function (t) {
             {
                 children: (0, n.jsx)(c.Text, {
                     variant: "text-sm/normal",
-                    children: s.intl.format(s.t["6l2osr"], { applicationName: b.name }),
+                    children: s.intl.format(s.t["6l2osp"], { applicationName: b.name }),
                 }),
             }),
         Object.getOwnPropertyDescriptors

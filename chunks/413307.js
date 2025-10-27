@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(949389),
     a = n(82950),
-    o = n(434404),
-    s = n(981631),
+    s = n(434404),
+    o = n(981631),
     c = n(388032),
     u = n(438825);
 let d = (e) => {
@@ -15,11 +15,11 @@ let d = (e) => {
     return (0, r.jsx)(a.Z, {
         guild: t,
         onDismissed: n,
-        onClick: () => o.Z.open(t.id, s.pNK.COMMUNITY),
-        message: c.intl.string(c.t["2klD0d"]),
-        trackingSource: s.PsQ.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
-        type: s.vID.PUBLIC_UPSELL,
+        onClick: () => s.Z.open(t.id, o.pNK.COMMUNITY),
+        message: c.intl.string(c.t["2klD0Z"]),
+        trackingSource: o.PsQ.ENABLE_PUBLIC_GUILD_UPSELL_NOTICE,
+        type: o.vID.PUBLIC_UPSELL,
         image: u,
-        cta: c.intl.string(c.t.hvVgAQ),
+        cta: c.intl.string(c.t.hvVgAZ),
     });
 };

@@ -7,11 +7,11 @@ var i = n(509613),
     a = n(271524),
     o = n(388032);
 let c = (0, i.CB)(l.n.NOTIFICATIONS_ADVANCED_ACCORDION, {
-        useTitle: (t) => (t ? o.intl.string(o.t.RyimDg) : o.intl.string(o.t.CUICbG)),
-        useSubtitle: () => o.intl.string(o.t.SwKADQ),
+        useTitle: (t) => (t ? o.intl.string(o.t.RyimDk) : o.intl.string(o.t.CUICbO)),
+        useSubtitle: () => o.intl.string(o.t.SwKADb),
         buildLayout: () => [r.Z, u.Z, s.Z, a.Z],
     }),
     E = (0, i.k4)(l.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
-        useNavigationTitle: () => o.intl.string(o.t["31DySk"]),
+        useNavigationTitle: () => o.intl.string(o.t["31DySj"]),
         buildLayout: () => [c],
     });

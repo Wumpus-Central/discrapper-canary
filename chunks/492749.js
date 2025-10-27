@@ -123,7 +123,7 @@ function h(e) {
             addedGuilds: m,
             loading: p,
         } = e,
-        [h, b] = l.useState(0);
+        [h, _] = l.useState(0);
     return (
         (t = p
             ? (0, i.jsx)("div", {
@@ -144,7 +144,7 @@ function h(e) {
                                 className: C.emptyText,
                                 color: "header-secondary",
                                 variant: "text-md/normal",
-                                children: x.intl.string(x.t.liuEhY),
+                                children: x.intl.string(x.t.liuEhd),
                             }),
                         ],
                     })
@@ -171,7 +171,7 @@ function h(e) {
                               className: C.emptyText,
                               color: "header-secondary",
                               variant: "text-md/normal",
-                              children: x.intl.string(x.t.WJLuKC),
+                              children: x.intl.string(x.t.WJLuKK),
                           }),
                       ],
                   })
@@ -188,26 +188,26 @@ function h(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.xBx, {
-                    title: x.intl.formatToPlainString(x.t["9SKJdH"], { guildName: d }),
-                    subtitle: x.intl.string(x.t.pYFZ9v),
+                    title: x.intl.formatToPlainString(x.t["9SKJdF"], { guildName: d }),
+                    subtitle: x.intl.string(x.t.pYFZ9p),
                 }),
                 (0, i.jsx)(a.fef, {
                     controls: (0, i.jsxs)(c.njP, {
                         className: C.tabBar,
                         selectedItem: h,
-                        onItemSelect: b,
+                        onItemSelect: _,
                         type: "top",
                         look: "brand",
                         children: [
                             (0, i.jsx)(c.njP.Item, {
                                 className: r()(C.tabBarItem, { [C.selectedTab]: 0 === h }),
                                 id: 0,
-                                children: x.intl.string(x.t.FTe8HR),
+                                children: x.intl.string(x.t.FTe8HS),
                             }),
                             (0, i.jsx)(c.njP.Item, {
                                 className: r()(C.tabBarItem, { [C.selectedTab]: 1 === h }),
                                 id: 1,
-                                children: x.intl.string(x.t.epOump),
+                                children: x.intl.string(x.t.epOumr),
                             }),
                         ],
                     }),
@@ -224,7 +224,7 @@ function h(e) {
                         (0, i.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
                             className: C.footerTitle,
-                            children: x.intl.string(x.t.pgCZRE),
+                            children: x.intl.string(x.t.pgCZRP),
                         }),
                         (0, i.jsx)(a.Go$, {
                             actionsFullWidth: !0,

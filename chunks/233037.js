@@ -41,7 +41,7 @@ function j(e) {
             };
         });
     return (0, l.jsx)(x.Z, {
-        title: g.intl.string(g.t["eg7R/v"]),
+        title: g.intl.string(g.t["eg7R/k"]),
         scrollerInnerClassName: h.channelSelectScrollerInner,
         children: (0, l.jsx)(i.Gu, {
             options: Z,

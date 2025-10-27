@@ -45,10 +45,10 @@ var n = a(392711),
     q = a(237997),
     x = a(411198),
     J = a(145597),
-    Q = a(111628),
-    B = a(454991),
-    K = a(371651),
-    X = a(624864);
+    Q = a(454991),
+    B = a(371651),
+    K = a(624864),
+    X = a(338949);
 async function $(e, t) {
     let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new r.Z();
     await new Promise((e) => setImmediate(e));
@@ -122,10 +122,10 @@ async function $(e, t) {
         eF = (0, v.xU)(i.o8, p.Z.settings),
         eH = Z.Z.getOverlaySerializedState(),
         eW = O.Z.consents,
-        eY = Object.values(K.default.getTrackedGames()),
-        eq = B.v.serialize(),
-        ex = Array.from(Q.Z.getRenderDebugModes()),
-        eJ = X.Z.getInitialOverlayState();
+        eY = Object.values(B.default.getTrackedGames()),
+        eq = Q.v.serialize(),
+        ex = Array.from(X.Z.getRenderDebugModes()),
+        eJ = K.Z.getInitialOverlayState();
     return {
         type: "OVERLAY_INITIALIZE",
         version: J.OVERLAY_VERSION,

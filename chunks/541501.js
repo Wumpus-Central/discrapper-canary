@@ -4,8 +4,8 @@ var n = r(951288),
     o = r(574583),
     c = r(481060),
     i = r(239091),
-    l = r(667142),
-    u = r(388032);
+    u = r(667142),
+    l = r(388032);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -52,7 +52,7 @@ function s(e, t) {
 function f(e) {
     let { onSelect: t, onClose: r } = e,
         f = (function () {
-            let e = l.ZP.useState((e) => e.timeToLiveMs, o.X);
+            let e = u.ZP.useState((e) => e.timeToLiveMs, o.X);
             return (0, n.jsx)(c.II_, {
                 id: "opacity",
                 "aria-haspopup": !0,
@@ -63,17 +63,17 @@ function f(e) {
                         s(p({}, t), {
                             ref: r,
                             value: e,
-                            maxValue: l.VX,
-                            minValue: l.ih,
+                            maxValue: u.VX,
+                            minValue: u.ih,
                             renderValue: (e) => "".concat(e, "ms"),
-                            onChange: (e) => (0, l.S_)(e),
+                            onChange: (e) => (0, u.S_)(e),
                             "aria-label": "Time To Live",
                         }),
                     ),
             });
         })(),
         b = (function () {
-            let e = l.ZP.useState((e) => e.reappearTimeMs, o.X);
+            let e = u.ZP.useState((e) => e.reappearTimeMs, o.X);
             return (0, n.jsx)(c.II_, {
                 id: "opacity",
                 "aria-haspopup": !0,
@@ -84,10 +84,10 @@ function f(e) {
                         s(p({}, t), {
                             ref: r,
                             value: e,
-                            maxValue: l.V5,
-                            minValue: l.xc,
+                            maxValue: u.V5,
+                            minValue: u.xc,
                             renderValue: (e) => "".concat(e, "ms"),
-                            onChange: (e) => (0, l.Df)(e),
+                            onChange: (e) => (0, u.Df)(e),
                             "aria-label": "Time To Reappear",
                         }),
                     ),
@@ -108,7 +108,7 @@ function f(e) {
         (0, n.jsxs)(c.v2r, {
             navId: "overlay-click-zone-debug-context-menu",
             onClose: i.Zy,
-            "aria-label": u.intl.string(u.t.tPfVWl),
+            "aria-label": l.intl.string(l.t.tPfVWi),
             onSelect: t,
             children: [f, b],
         })

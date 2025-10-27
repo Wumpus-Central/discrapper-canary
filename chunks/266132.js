@@ -14,8 +14,8 @@ function d() {
         setting: l.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
         children: [
             (0, r.jsx)(s.H, {
-                header: c.intl.string(c.t["5b3FND"]),
-                description: c.intl.format(c.t.jrTSWV, { helpArticle: (0, i.pL)() }),
+                header: c.intl.string(c.t["5b3FNI"]),
+                description: c.intl.format(c.t.jrTSWU, { helpArticle: (0, i.pL)() }),
             }),
             e.map((e) =>
                 (0, r.jsx)(

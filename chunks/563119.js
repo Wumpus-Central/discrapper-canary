@@ -71,9 +71,9 @@ let b = "game_console_alert_modal",
             if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(a.z.CONSOLE_PTT_DISABLE_ALERT))
                 return Promise.resolve();
             let t = {
-                [_.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
-                [_.ABu.PLAYSTATION]: p.intl.string(p.t["6iqUsb"]),
-                [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t["6iqUsb"]),
+                [_.ABu.XBOX]: p.intl.string(p.t.bVZ7vy),
+                [_.ABu.PLAYSTATION]: p.intl.string(p.t["6iqUsf"]),
+                [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t["6iqUsf"]),
             }[e];
             return null == t
                 ? Promise.resolve()
@@ -89,7 +89,7 @@ let b = "game_console_alert_modal",
                                       subtitle: p.intl.string(p.t.bL21zs),
                                       actions: [
                                           {
-                                              text: p.intl.string(p.t.BddRzc),
+                                              text: p.intl.string(p.t.BddRzS),
                                               onClick: n,
                                           },
                                       ],
@@ -121,7 +121,7 @@ let b = "game_console_alert_modal",
                         title: t,
                         actions: [
                             {
-                                text: p.intl.string(p.t.BddRzc),
+                                text: p.intl.string(p.t.BddRzS),
                                 onClick: h,
                             },
                         ],

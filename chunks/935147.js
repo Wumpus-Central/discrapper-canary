@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(296810),
     R = n(433411),
     P = n(532432),
-    w = n(235433),
-    D = n(504983),
+    D = n(235433),
+    w = n(504983),
     L = n(134795),
     x = n(513901),
     M = n(451392),
@@ -140,17 +140,17 @@ function W(e) {
         ed = (0, h.Wp)(eu, U.Si.TIER_2),
         ef = () =>
             K
-                ? B.intl.string(B.t.AfRWIy)
+                ? B.intl.string(B.t.AfRWI8)
                 : ed
-                  ? B.intl.formatToPlainString(B.t.bkQ4bG, { percent: null == eu ? void 0 : eu.discount.amount })
-                  : B.intl.string(B.t.pj0XBA);
+                  ? B.intl.formatToPlainString(B.t.bkQ4bH, { percent: null == eu ? void 0 : eu.discount.amount })
+                  : B.intl.string(B.t.pj0XBN);
     return W
         ? (0, r.jsx)(c.Gt, {
               value: ea,
-              children: (0, r.jsxs)(D.Z, {
+              children: (0, r.jsxs)(w.Z, {
                   ref: ei,
                   className: Z.tryItOutSection,
-                  type: D.Y.PREMIUM,
+                  type: w.Y.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
@@ -163,7 +163,7 @@ function W(e) {
                                       color: "currentColor",
                                       className: Z.premiumIcon,
                                   }),
-                                  B.intl.string(B.t.gMlDNT),
+                                  B.intl.string(B.t.gMlDNd),
                               ],
                           }),
                           profilePreview: (0, r.jsxs)(r.Fragment, {
@@ -182,12 +182,12 @@ function W(e) {
                                       children: [
                                           (0, r.jsx)(o.Heading, {
                                               variant: "heading-xl/extrabold",
-                                              children: B.intl.string(B.t["2zGdAQ"]),
+                                              children: B.intl.string(B.t["2zGdAW"]),
                                           }),
                                           (0, r.jsx)(o.Text, {
                                               className: Z.description,
                                               variant: "text-sm/normal",
-                                              children: B.intl.string(B.t.xeEC29),
+                                              children: B.intl.string(B.t.xeEC20),
                                           }),
                                       ],
                                   }),
@@ -215,8 +215,8 @@ function W(e) {
                                       isTryItOutFlow: !0,
                                       onAvatarChange: I.c_,
                                       showRemoveAvatarButton: !1,
-                                      changeAvatarButtonText: B.intl.string(B.t["7z0D1d"]),
-                                      sectionTitle: B.intl.string(B.t.vtFfPT),
+                                      changeAvatarButtonText: B.intl.string(B.t["7z0D1c"]),
+                                      sectionTitle: B.intl.string(B.t.vtFfPX),
                                   }),
                                   (0, r.jsx)(
                                       R.Z,
@@ -228,7 +228,7 @@ function W(e) {
                                       },
                                       "decoration",
                                   ),
-                                  (0, r.jsx)(w.Z, {
+                                  (0, r.jsx)(D.Z, {
                                       user: F,
                                       className: Z.customizationSection,
                                   }),
@@ -239,14 +239,14 @@ function W(e) {
                                           isTryItOutFlow: !0,
                                           initialSelectedEffect: et,
                                           user: F,
-                                          sectionTitle: B.intl.string(B.t.wR5wOj),
+                                          sectionTitle: B.intl.string(B.t.wR5wOo),
                                       },
                                       "effect",
                                   ),
                                   !ec &&
                                       (0, r.jsx)(o.Text, {
                                           variant: "text-sm/normal",
-                                          children: B.intl.string(B.t["smo74+"]),
+                                          children: B.intl.string(B.t["smo74/"]),
                                       }),
                               ],
                           }),
@@ -256,7 +256,7 @@ function W(e) {
                               onSubscribeModalClose: el,
                               className: Z.floatingUpsell,
                               showUpsell: !0,
-                              text: B.intl.format(B.t.TmfgIy, {
+                              text: B.intl.format(B.t.TmfgI2, {
                                   onClick: () => {
                                       (0, O.y)({
                                           analyticsSource: eo,

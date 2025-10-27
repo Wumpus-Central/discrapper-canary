@@ -11,7 +11,7 @@ function u(e) {
     let t = (0, i.e7)([a.Z], () => (0, s.P)(a.Z.getInputVolume()));
     return (0, r.jsx)(o.II_, {
         id: "input",
-        label: c.intl.string(c.t.OX2Bnp),
+        label: c.intl.string(c.t.OX2Bnr),
         control: (n, i) => {
             var a, u;
             return (0, r.jsx)(
@@ -46,7 +46,7 @@ function u(e) {
                         ref: i,
                         value: t,
                         onChange: (t) => l.Z.setInputVolume((0, s.A)(t), { analyticsLocations: e }),
-                        "aria-label": c.intl.string(c.t.OX2Bnp),
+                        "aria-label": c.intl.string(c.t.OX2Bnr),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))

@@ -53,9 +53,9 @@ async function d(e) {
                 let r = e.name;
                 return (
                     "Entire screen" === r
-                        ? (r = a.intl.string(a.t.R4wpLC))
+                        ? (r = a.intl.string(a.t.R4wpLN))
                         : /^Screen \d+$/.test(r) &&
-                          (r = a.intl.formatToPlainString(a.t["y/R7n5"], { index: parseInt(r.split(" ")[1]) })),
+                          (r = a.intl.formatToPlainString(a.t["y/R7n4"], { index: parseInt(r.split(" ")[1]) })),
                     (t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},

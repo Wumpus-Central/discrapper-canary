@@ -13,11 +13,11 @@ var r = n(951288),
     f = n(465682),
     m = n(585961),
     b = n(131085),
-    p = n(659854),
+    p = n(562915),
     h = n(388032),
     j = n(978098),
     k = n(764009);
-function _(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function _(e) {
     }
     return e;
 }
-function v(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function v(e, t) {
         e
     );
 }
-function O(e) {
+function v(e) {
     let { badge: t, isSelected: n, onClick: i } = e,
         s = (0, d.jm)({
             isSelected: n,
@@ -102,7 +102,7 @@ function S(e) {
             children: f,
         });
     if (n && null != t.packName && "" !== t.packName) {
-        let e = h.intl.formatToPlainString(p.default.ECl8SU, { packName: t.packName });
+        let e = h.intl.formatToPlainString(p.default.ECl8SQ, { packName: t.packName });
         return (0, r.jsx)(c.u, {
             delay: 100,
             text: e,
@@ -118,7 +118,7 @@ function S(e) {
     }
     return (0, r.jsx)(
         o.P3F,
-        v(_({}, u), {
+        _(O({}, u), {
             className: g,
             onClick: d,
             children: f,
@@ -129,8 +129,8 @@ function N(e) {
     let { badgeCollection: t, handleBoostUpsellClick: n, selectedBadge: s, onBadgeClicked: c, headingId: u } = e,
         [x, b] = i.useState(!1),
         N = i.useId(),
-        { enabled: C } = g.Z.useConfig({ location: "BadgeGrid" }),
-        y = (0, d.Jb)({
+        { enabled: y } = g.Z.useConfig({ location: "BadgeGrid" }),
+        C = (0, d.Jb)({
             orientation: "horizontal",
             isDisabled: !1,
             labelledBy: u,
@@ -140,16 +140,16 @@ function N(e) {
         children: [
             (0, r.jsx)(o.nn4, {
                 id: N,
-                children: h.intl.string(h.t["5AQGub"]),
+                children: h.intl.string(h.t["5AQGuZ"]),
             }),
             (0, r.jsx)(
                 "div",
-                v(_({}, y), {
+                _(O({}, C), {
                     "aria-describedby": N,
                     className: k.pickerGrid,
                     children: t.unlockedBadges.map((e) =>
                         (0, r.jsx)(
-                            O,
+                            v,
                             {
                                 badge: e,
                                 isSelected: e.kind === s,
@@ -202,7 +202,7 @@ function N(e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-secondary",
-                                    children: h.intl.string(p.default["2tkPDw"]),
+                                    children: h.intl.string(p.default["2tkPDy"]),
                                 }),
                                 (0, r.jsx)(a.CJ0, { size: "sm" }),
                             ],
@@ -220,9 +220,9 @@ function N(e) {
                                         variant: "text-sm/normal",
                                         color: "text-default",
                                         className: j.badgesUpsellText,
-                                        children: h.intl.string(p.default.G3qiHh),
+                                        children: h.intl.string(p.default.G3qiHu),
                                     }),
-                                    C
+                                    y
                                         ? (0, r.jsx)("div", {
                                               className: j.badgesUpsellButton,
                                               children: (0, r.jsx)(f.v, { onClick: n }),
@@ -240,7 +240,7 @@ function N(e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-secondary",
-                                    children: h.intl.string(p.default.idxnf3),
+                                    children: h.intl.string(p.default.idxnf7),
                                 }),
                                 (0, r.jsx)(a.u04, { size: "sm" }),
                             ],

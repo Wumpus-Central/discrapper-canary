@@ -117,7 +117,7 @@ function g(e) {
                     (0, r.jsx)(i.Heading, {
                         variant: "text-md/semibold",
                         color: "text-default",
-                        children: s.intl.string(s.t.Iyka0d),
+                        children: s.intl.string(s.t.Iyka0U),
                     }),
                     (0, r.jsx)(i.Mgn, {
                         size: "xs",

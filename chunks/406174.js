@@ -15,13 +15,13 @@ function f(e) {
         children: [
             (0, r.jsx)(s.Heading, {
                 variant: "heading-md/bold",
-                children: l.intl.string(l.t["KzCF//"]),
+                children: l.intl.string(l.t["KzCF/6"]),
             }),
             (0, r.jsx)(s.LZC, { size: 4 }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 className: c.sectionDescription,
-                children: l.intl.string(l.t["3D7qCg"]),
+                children: l.intl.string(l.t["3D7qCu"]),
             }),
             (0, r.jsx)(s.LZC, { size: 24 }),
             (0, r.jsxs)("div", {
@@ -38,19 +38,19 @@ function f(e) {
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-xl/semibold",
                                 className: c.header,
-                                children: l.intl.string(l.t["KzCF//"]),
+                                children: l.intl.string(l.t["KzCF/6"]),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 className: c.description,
-                                children: l.intl.format(l.t["m+pcOD"], { numSubscriptions: n }),
+                                children: l.intl.format(l.t["m+pcOO"], { numSubscriptions: n }),
                             }),
                         ],
                     }),
                     (0, r.jsx)(o.zxk, {
                         size: "sm",
                         variant: "overlay-primary",
-                        text: l.intl.string(l.t["3a8Xxs"]),
+                        text: l.intl.string(l.t["3a8Xxj"]),
                         onClick: t,
                     }),
                 ],

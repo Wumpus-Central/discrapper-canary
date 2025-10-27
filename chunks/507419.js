@@ -36,7 +36,7 @@ let m = l.memo(function (e) {
                                       : (y.pause(), h(!1)));
                           },
                     className: f.playButton,
-                    "aria-label": g ? d.intl.string(d.t.hHBkuL) : d.intl.string(d.t.RscU7O),
+                    "aria-label": g ? d.intl.string(d.t.hHBkuG) : d.intl.string(d.t.RscU7I),
                     children: g
                         ? (0, a.jsx)(r.wNq, {
                               size: "xs",

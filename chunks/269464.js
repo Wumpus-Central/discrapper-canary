@@ -52,7 +52,7 @@ function h(e) {
                     : null,
             disabled: !x,
             onChange: v,
-            hint: p.intl.string(p.t.uPvxqK),
+            hint: p.intl.string(p.t.uPvxqJ),
             onOpenImageSelectModal: () =>
                 (0, c.mw)({
                     uploadType: g.pC.GUILD_BANNER,

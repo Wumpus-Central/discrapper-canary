@@ -43,9 +43,9 @@ function P(e) {
             [R],
         ),
         H = (0, _.bp)() === j.IlC.POPOUT,
-        { parentAnalyticsLocation: V, newestAnalyticsLocation: F } = (0, g.ZP)(),
+        { parentAnalyticsLocation: F, newestAnalyticsLocation: V } = (0, g.ZP)(),
         G = r.useCallback(() => {
-            (0, C.v)(V, C.d.ACTIVITY),
+            (0, C.v)(F, C.d.ACTIVITY),
                 (0, b.Z)({
                     context:
                         null != t
@@ -55,15 +55,15 @@ function P(e) {
                               }
                             : { type: "contextless" },
                     openInPopout: H,
-                    analyticsLocation: F,
+                    analyticsLocation: V,
                 });
-        }, [t, H, F, V]),
+        }, [t, H, V, F]),
         z = [];
     A || z.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
         (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
         A || z.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
     let W = r.useRef(!1),
-        K = r.useRef(null);
+        q = r.useRef(null);
     return (0, i.jsx)(y.ZP, {
         contentTypes: z,
         children: (e) => {
@@ -73,7 +73,7 @@ function P(e) {
                 W.current && !c && l(E.L.AUTO_DISMISS),
                 W.current !== c && (W.current = c),
                 (0, i.jsx)(s.yRy, {
-                    targetElementRef: K,
+                    targetElementRef: q,
                     fixed: !0,
                     shouldShow: w && (P === O.D.ACTIVITY || null == P),
                     animation: s.yRy.Animation.FADE,
@@ -109,11 +109,11 @@ function P(e) {
                                 return (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsx)(o.u, {
-                                            text: S.intl.string(S.t.P8vmUl),
+                                            text: S.intl.string(S.t.P8vmUv),
                                             forceOpen: !0,
                                             shouldShow: c,
                                             children: (0, i.jsx)("div", {
-                                                ref: K,
+                                                ref: q,
                                                 children: (0, i.jsx)(x.Z, {
                                                     disabled: A,
                                                     "aria-label": N,

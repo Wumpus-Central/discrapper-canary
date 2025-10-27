@@ -4,30 +4,30 @@ var r = n(951288),
     a = n(481060),
     l = n(785717),
     o = n(86419),
-    s = n(286957),
-    c = n(388032),
+    c = n(286957),
+    s = n(388032),
     u = n(44258);
 let d = i.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: l } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "widget-game-tags",
-        "aria-label": c.intl.string(c.t.r6EJOu),
+        "aria-label": s.intl.string(s.t.r6EJOu),
         onClose: l,
         onSelect: () => {},
         className: u.gameTagsMenu,
-        children: Object.entries(s.aE).map((e) => {
+        children: Object.entries(c.aE).map((e) => {
             let [l, o] = e,
                 u = ((e, l) => {
                     let o = [];
                     return (
-                        l.type === s.kd.RADIO &&
+                        l.type === c.kd.RADIO &&
                             o.push(
                                 (0, r.jsx)(
                                     a.k5B,
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
-                                        label: c.intl.string(c.t.PoWNfe),
+                                        label: s.intl.string(s.t.PoWNfe),
                                         checked: !l.tags.some((e) => t.includes(e)),
                                         action: () => i(l.tags),
                                     },
@@ -35,16 +35,16 @@ let d = i.memo(function (e) {
                                 ),
                             ),
                         l.tags.forEach((i) => {
-                            let c = s.XV[i];
-                            null != c &&
-                                (l.type === s.kd.RADIO
+                            let s = c.XV[i];
+                            null != s &&
+                                (l.type === c.kd.RADIO
                                     ? o.push(
                                           (0, r.jsx)(
                                               a.k5B,
                                               {
                                                   id: i,
                                                   group: e,
-                                                  label: c.getText(),
+                                                  label: s.getText(),
                                                   checked: t.includes(i),
                                                   action: () => n(i, !0),
                                               },
@@ -56,7 +56,7 @@ let d = i.memo(function (e) {
                                               a.S89,
                                               {
                                                   id: i,
-                                                  label: c.getText(),
+                                                  label: s.getText(),
                                                   checked: t.includes(i),
                                                   action: () => n(i, !1),
                                               },
@@ -88,7 +88,7 @@ function f(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     r = new Set(b);
                 if (t) {
-                    let t = Object.values(s.aE).find((t) => t.tags.includes(e));
+                    let t = Object.values(c.aE).find((t) => t.tags.includes(e));
                     null != t &&
                         (t.tags.forEach((e) => {
                             r.delete(e);
@@ -117,7 +117,7 @@ function f(e) {
             },
             [b, m, n, f],
         ),
-        v = (0, i.useCallback)(
+        y = (0, i.useCallback)(
             (e) => {
                 let t = new Set(b);
                 e.forEach((e) => {
@@ -147,7 +147,7 @@ function f(e) {
             return (0, r.jsx)(d, {
                 currentTags: b,
                 onTagSelect: h,
-                onNoneSelect: v,
+                onNoneSelect: y,
                 onClose: t,
             });
         },
@@ -190,11 +190,11 @@ function f(e) {
                     (n = n =
                         {
                             className: u.addButton,
-                            "aria-label": c.intl.string(c.t.r6EJOu),
+                            "aria-label": s.intl.string(s.t.r6EJOu),
                             children: (0, r.jsx)(a.Text, {
                                 variant: "text-xxs/medium",
                                 color: "none",
-                                children: c.intl.string(c.t.fZSejy),
+                                children: s.intl.string(s.t.fZSejy),
                             }),
                         }),
                     Object.getOwnPropertyDescriptors

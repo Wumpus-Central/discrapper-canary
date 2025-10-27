@@ -20,8 +20,8 @@ var l = n(951288),
     p = n(630388),
     N = n(526120),
     O = n(563534),
-    S = n(846121),
-    E = n(216701),
+    E = n(846121),
+    S = n(216701),
     x = n(981631),
     T = n(372897),
     _ = n(388032),
@@ -71,10 +71,10 @@ function v(e) {
                       alt: "",
                       "aria-hidden": !0,
                   })
-                : (0, l.jsx)(E.Z, {
+                : (0, l.jsx)(S.Z, {
                       emojiId: n,
                       emojiName: r,
-                      size: E.R.LARGE,
+                      size: S.R.LARGE,
                       defaultComponent: (0, l.jsx)("div", {
                           className: j.channelIconContainer,
                           children: (0, l.jsx)(c, {
@@ -121,18 +121,18 @@ function b(e) {
         { channelId: a, title: m, emoji: g, icon: f } = n,
         { id: I, name: p } = null != g ? g : {},
         O = (0, s.e7)([u.Z], () => u.Z.getChannel(a)),
-        S = (0, c.ZP)(O, !0),
-        E = (0, s.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, O)),
+        E = (0, c.ZP)(O, !0),
+        S = (0, s.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, O)),
         T = r.useMemo(() => {
             if (null != O) return () => (0, N.gp)(O.guild_id, O.id);
         }, [O]);
-    if (null == O || !E) return null;
+    if (null == O || !S) return null;
     let _ = null != (t = (0, d.KS)(O)) ? t : o.VL1;
     return (0, l.jsx)(v, {
         variant: "channel",
         channelId: a,
         title: m,
-        channelName: S,
+        channelName: E,
         emojiId: I,
         emojiName: p,
         icon: f,
@@ -144,7 +144,7 @@ function b(e) {
 function D(e) {
     let { guildId: t } = e,
         n = (0, s.e7)([O.Z], () => O.Z.getNewMemberActions(t), [t]),
-        i = (0, s.e7)([S.Z], () => S.Z.getCompletedActions(t)),
+        i = (0, s.e7)([E.Z], () => E.Z.getCompletedActions(t)),
         c = (0, s.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
         d = (0, s.e7)([g.Z], () => g.Z.getGuild(t));
     r.useEffect(() => {
@@ -165,7 +165,7 @@ function D(e) {
                   (0, l.jsx)(o.Heading, {
                       variant: "heading-lg/bold",
                       color: "header-primary",
-                      children: _.intl.string(_.t.LhlgY2),
+                      children: _.intl.string(_.t.LhlgY9),
                   }),
                   n.map((e) =>
                       (0, l.jsx)(
@@ -196,7 +196,7 @@ function D(e) {
                                   children: (0, l.jsx)(o.Text, {
                                       variant: "text-md/semibold",
                                       color: "header-primary",
-                                      children: _.intl.string(_.t["K/i3iY"]),
+                                      children: _.intl.string(_.t["K/i3iQ"]),
                                   }),
                               }),
                           ],

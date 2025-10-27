@@ -187,8 +187,8 @@ function U(e) {
         onClick: d,
         disabled: o,
         variant: "secondary",
-        "aria-label": T.intl.formatToPlainString(T.t.UXw6W1, { commandName: n.untranslatedName }),
-        text: T.intl.string(T.t.TXNS7e),
+        "aria-label": T.intl.formatToPlainString(T.t.UXw6W2, { commandName: n.untranslatedName }),
+        text: T.intl.string(T.t.TXNS7S),
         icon: s.U,
         iconPosition: "end",
         size: "md",
@@ -281,14 +281,14 @@ function H(e) {
                       context: n,
                       section: f,
                       commands: b,
-                      headerName: T.intl.string(T.t.acSE0t),
+                      headerName: T.intl.string(T.t.acSE0h),
                       sectionName: a,
                   }),
                   (0, i.jsx)(D, {
                       context: n,
                       section: f,
                       commands: m ? w : x,
-                      headerName: T.intl.string(T.t.DUU9Ly),
+                      headerName: T.intl.string(T.t.DUU9L3),
                       sectionName: a,
                       children:
                           g &&

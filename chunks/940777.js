@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(905423),
     O = n(199902),
     y = n(592125),
-    v = n(944486),
-    j = n(979651),
+    j = n(944486),
+    v = n(979651),
     x = n(709054),
     C = n(853856),
     E = n(593214),
@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(603274),
     N = n(981631),
     Z = n(388032),
-    w = n(499951);
-function T(e) {
+    T = n(499951);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,12 +69,12 @@ function R() {
             favoriteChannels: C.Z.getFavoriteChannels(),
             favoriteServerMuted: C.Z.favoriteServerMuted,
         })),
-        U = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
+        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(N.I_8)),
         B = (0, s.e7)([y.Z], () => y.Z.getChannel(U)),
         F = (0, _.Z)((e) => e.guildId) === N.I_8,
         { badge: V, unread: H } = (0, S.Z)(G),
         z = (function (e) {
-            let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
                 r = (0, s.e7)([O.Z], () => {
                     if (!n) return !1;
@@ -82,7 +82,7 @@ function R() {
                     return null != t && null != e[t.channelId];
                 }),
                 i = (0, s.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, s.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
+                l = (0, s.e7)([v.Z], () => n && null != t && v.Z.hasVideo(t), [n, t]),
                 o = (0, s.Wu)([p.ZP], () =>
                     x.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
                 ),
@@ -120,7 +120,7 @@ function R() {
                 selected: F,
                 hovered: L,
                 unread: H && !k,
-                className: w.pill,
+                className: T.pill,
             }),
             (0, r.jsx)(P.Z, {
                 onShow: K,
@@ -131,11 +131,11 @@ function R() {
                         lowerBadge: W,
                         children: (0, r.jsx)(
                             c.LYs,
-                            ((e = T({}, l)),
+                            ((e = w({}, l)),
                             (t = t =
                                 {
-                                    ariaLabel: Z.intl.formatToPlainString(Z.t["/uzRsr"], {
-                                        guildName: Z.intl.string(Z.t.wMWycn),
+                                    ariaLabel: Z.intl.formatToPlainString(Z.t["/uzRss"], {
+                                        guildName: Z.intl.string(Z.t.wMWyci),
                                         mentions: V,
                                     }),
                                     "aria-selected": F,
@@ -152,15 +152,15 @@ function R() {
                                     onContextMenu: function (e) {
                                         (0, d.jW)(e, async () => {
                                             let { default: e } = await n.e("3190").then(n.bind(n, 631981));
-                                            return (t) => (0, r.jsx)(e, T({}, t));
+                                            return (t) => (0, r.jsx)(e, w({}, t));
                                         });
                                     },
                                     children: (0, r.jsx)("div", {
-                                        className: o()(w.ring, { [w.ringActive]: R }),
+                                        className: o()(T.ring, { [T.ringActive]: R }),
                                         children: (0, r.jsx)(c.r7p, {
                                             size: "custom",
                                             color: "currentColor",
-                                            className: w.favoriteIcon,
+                                            className: T.favoriteIcon,
                                             width: 20,
                                             height: 20,
                                         }),

@@ -1,5 +1,5 @@
 n.d(t, {
-    $: () => D,
+    $: () => w,
     X: () => M,
 });
 var r = n(951288),
@@ -68,7 +68,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function w(e, t) {
         e
     );
 }
-let D = (0, m.H)(() => ({
+let w = (0, m.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
 }));
@@ -95,12 +95,12 @@ function L() {
         children: [
             (0, r.jsx)(u.sN, {
                 id: "appearance",
-                label: A.intl.string(A.t["iHH+k5"]),
+                label: A.intl.string(A.t["iHH+ky"]),
                 children: e.filter((e) => null != e),
             }),
             (0, r.jsx)(u.sN, {
                 id: "accessibility",
-                label: A.intl.string(A.t.G0neg4),
+                label: A.intl.string(A.t.G0neg7),
                 children: t.filter((e) => null != e),
             }),
             (0, r.jsx)(u.sN, {
@@ -123,7 +123,7 @@ function x() {
         children: (t) =>
             (0, r.jsx)(
                 h.hU,
-                w(
+                D(
                     R(
                         {
                             size: "sm",
@@ -141,8 +141,8 @@ function x() {
 function M(e) {
     var t;
     let { config: n } = e,
-        c = D.useField("selectedCollection"),
-        u = D.useField("selectedStory"),
+        c = w.useField("selectedCollection"),
+        u = w.useField("selectedStory"),
         {
             collection: f,
             group: m,
@@ -165,13 +165,13 @@ function M(e) {
             };
         }, [c, u, n.collections]),
         b = (e) => {
-            D.setState({
+            w.setState({
                 selectedCollection: e,
                 selectedStory: null,
             });
         },
         y = (e) => {
-            D.setState({ selectedStory: e });
+            w.setState({ selectedStory: e });
         },
         S = null != (t = null == f ? void 0 : f.name) ? t : "Design System",
         A = null == E ? void 0 : E.name,

@@ -36,7 +36,7 @@ let _ = (e) => {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                children: d.intl.format(d.t.twSHtb, {
+                children: d.intl.format(d.t.twSHte, {
                     checkItOut: (e) =>
                         (0, r.jsx)(i.P3F, {
                             className: f.link,

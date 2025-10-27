@@ -3,18 +3,18 @@ var r = n(951288),
     i = n(647438),
     l = n(392711),
     a = n.n(l),
-    o = n(442837),
-    s = n(239091),
-    c = n(476669),
-    u = n(524331),
-    d = n(768419),
-    p = n(831506),
-    f = n(699516),
-    h = n(594174),
-    g = n(823379),
+    s = n(442837),
+    o = n(239091),
+    c = n(524331),
+    u = n(768419),
+    d = n(831506),
+    p = n(699516),
+    f = n(594174),
+    h = n(823379),
     m = n(824138),
-    b = n(388032);
-function _(e, t, n) {
+    g = n(658244),
+    _ = n(388032);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ class E extends i.PureComponent {
         return e.length > 1;
     }
     handleStopListening() {
-        (0, u.Z)();
+        (0, c.Z)();
     }
     render() {
         let { currentUser: e, host: t, party: n } = this.props;
@@ -49,8 +49,8 @@ class E extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "handleUserContextMenu", (e, t) => {
-                (0, s.jW)(e, async () => {
+            b(this, "handleUserContextMenu", (e, t) => {
+                (0, o.jW)(e, async () => {
                     let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
                     return (n) =>
                         (0, r.jsx)(
@@ -84,7 +84,7 @@ class E extends i.PureComponent {
                                                 }),
                                             )),
                                             r.forEach(function (t) {
-                                                _(e, t, n[t]);
+                                                b(e, t, n[t]);
                                             });
                                     }
                                     return e;
@@ -94,33 +94,33 @@ class E extends i.PureComponent {
                         );
                 });
             }),
-            _(this, "renderOverflowPopout", () => {
+            b(this, "renderOverflowPopout", () => {
                 let { party: e } = this.props;
-                return (0, r.jsx)(c.Z, {
+                return (0, r.jsx)(g.Z, {
                     party: e,
-                    header: b.intl.formatToPlainString(b.t.I9et19, { count: e.length }),
+                    header: _.intl.formatToPlainString(_.t.I9et1z, { count: e.length }),
                 });
             });
     }
 }
-let O = o.ZP.connectStores([d.Z, h.default, f.Z, p.Z], () => {
+let O = s.ZP.connectStores([u.Z, f.default, p.Z, d.Z], () => {
     let e,
         t,
-        n = d.Z.getSyncingWith(),
-        r = d.Z.getActivity(),
-        i = h.default.getCurrentUser(),
+        n = u.Z.getSyncingWith(),
+        r = u.Z.getActivity(),
+        i = f.default.getCurrentUser(),
         l = [];
     if (
         (null != n
-            ? ((e = h.default.getUser(n.userId)), (t = n.partyId))
+            ? ((e = f.default.getUser(n.userId)), (t = n.partyId))
             : null != r && null != r.party && null != r.party.id && ((e = i), (t = r.party.id)),
         null != t)
     ) {
-        var o;
-        l = a()(Array.from(null != (o = p.Z.getParty(t)) ? o : []))
-            .map((e) => h.default.getUser(e))
-            .filter(g.lm)
-            .orderBy([(t) => null == e || e.id === t.id, (e) => f.Z.isFriend(e.id)], ["desc", "desc"])
+        var s;
+        l = a()(Array.from(null != (s = d.Z.getParty(t)) ? s : []))
+            .map((e) => f.default.getUser(e))
+            .filter(h.lm)
+            .orderBy([(t) => null == e || e.id === t.id, (e) => p.Z.isFriend(e.id)], ["desc", "desc"])
             .value();
     }
     return {

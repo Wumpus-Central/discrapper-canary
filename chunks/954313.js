@@ -14,7 +14,7 @@ n.d(t, {
     ib: () => R,
     lh: () => J,
     mF: () => q,
-    ub: () => D,
+    ub: () => w,
     v1: () => j,
     x6: () => k,
     zi: () => X,
@@ -62,19 +62,19 @@ function N(e) {
         a = [
             {
                 value: d.z.NONE,
-                label: _.intl.string(_.t["0bK0Bw"]),
+                label: _.intl.string(_.t["0bK0B1"]),
             },
             {
                 value: d.z.WEEKLY,
-                label: _.intl.formatToPlainString(_.t["B8/yfn"], { weekday: i }),
+                label: _.intl.formatToPlainString(_.t["B8/yfp"], { weekday: i }),
             },
             {
                 value: d.z.BIWEEKLY,
-                label: _.intl.formatToPlainString(_.t["z+aIub"], { weekday: i }),
+                label: _.intl.formatToPlainString(_.t["z+aIuX"], { weekday: i }),
             },
             {
                 value: d.z.MONTHLY,
-                label: _.intl.formatToPlainString(_.t.mjOEBg, {
+                label: _.intl.formatToPlainString(_.t.mjOEBk, {
                     nth: r,
                     weekday: i,
                 }),
@@ -94,11 +94,11 @@ function N(e) {
             ? (null == (t = s.default.getCurrentUser()) ? void 0 : t.isStaff()) &&
               a.push({
                   value: d.z.WEEKEND_ONLY,
-                  label: _.intl.string(_.t.hRpynZ),
+                  label: _.intl.string(_.t.hRpynV),
               })
             : a.push({
                   value: d.z.WEEKDAY_ONLY,
-                  label: _.intl.string(_.t["jYR/MT"]),
+                  label: _.intl.string(_.t["jYR/MY"]),
               }),
         a
     );
@@ -109,17 +109,17 @@ let R = () => {
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
     P = (e, t) => (0, l.vc)(e, e.get("years") === t.get("years") ? m : g),
-    w = (e, t) => {
+    D = (e, t) => {
         let n = (0, l.wY)(e.toDate(), t.toDate());
         return n > 1 || n < 0 ? P(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? "sameDay" : "nextDay", e, t));
     };
-function D(e, t, n) {
+function w(e, t, n) {
     null == n && (n = a()());
     let r = a()(e),
         i = null != t && "" !== t ? a()(t) : void 0,
         o = null != t && r.isSame(i, "day");
     return {
-        startDateTimeString: w(r, n),
+        startDateTimeString: D(r, n),
         endDateTimeString: null != i ? (o ? i.format(E) : P(i, n)) : void 0,
         currentOrPastEvent: r <= n,
         upcomingEvent: r <= a()().add(1, "hour"),

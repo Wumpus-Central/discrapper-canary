@@ -66,13 +66,13 @@ let m = function (e) {
                             children: [
                                 (0, a.jsx)(r.Avr, {
                                     variant: "secondary",
-                                    text: f.intl.string(f.t.fjKFaW),
+                                    text: f.intl.string(f.t.fjKFae),
                                     onClick: n,
                                 }),
                                 null != i &&
                                     (0, a.jsx)(r.Avr, {
                                         variant: "secondary",
-                                        text: f.intl.string(f.t["4gTnU1"]),
+                                        text: f.intl.string(f.t["4gTnU0"]),
                                         onClick: i,
                                     }),
                             ],

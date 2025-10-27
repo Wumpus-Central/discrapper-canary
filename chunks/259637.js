@@ -55,8 +55,8 @@ function g(e) {
         onChange: (e) => {
             (!i || n.has(e)) && (l(e), o());
         },
-        placeholder: u.intl.string(u.t.MbhGm5),
-        "aria-label": u.intl.string(u.t.MbhGm5),
+        placeholder: u.intl.string(u.t.MbhGm7),
+        "aria-label": u.intl.string(u.t.MbhGm7),
         children: (e) =>
             c.filter((t) => a()(e.toLowerCase(), t.name.toLowerCase())).map((e) => (0, r.jsx)(h, { tag: e }, e.id)),
     });

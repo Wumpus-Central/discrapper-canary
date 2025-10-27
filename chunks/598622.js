@@ -20,8 +20,8 @@ let g = (e) => {
                 (0, r.jsx)(
                     o.Z,
                     {
-                        title: u.intl.string(u.t.QiONLy),
-                        details: u.intl.string(u.t.dSRTMD),
+                        title: u.intl.string(u.t.QiONL5),
+                        details: u.intl.string(u.t.dSRTMB),
                     },
                     "hide-suspicious-dms",
                 ),
@@ -32,19 +32,19 @@ let g = (e) => {
                 (0, r.jsx)(
                     o.Z,
                     {
-                        title: u.intl.string(u.t["f+8F8P"]),
-                        details: u.intl.string(u.t.qChrIy),
+                        title: u.intl.string(u.t["f+8F8F"]),
+                        details: u.intl.string(u.t.qChrI2),
                     },
                     "filter-unknown-dms",
                 ),
             enabled: !0,
         },
         {
-            renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t.EkSAHR) }, "outbound-links-warn"),
+            renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t.EkSAHZ) }, "outbound-links-warn"),
             enabled: !0,
         },
         {
-            renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t["7cAQmp"]) }, "delete-spam"),
+            renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t["7cAQmj"]) }, "delete-spam"),
             enabled: !0,
         },
     ].filter((e) => null != e);
@@ -56,11 +56,11 @@ let g = (e) => {
             },
             {
                 renderComponent: () =>
-                    (0, r.jsx)(o.Z, { title: u.intl.string(u.t.gOkFfH) }, "captcha-suspicious-joins"),
+                    (0, r.jsx)(o.Z, { title: u.intl.string(u.t.gOkFfI) }, "captcha-suspicious-joins"),
                 enabled: !0,
             },
             {
-                renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t.r3esyM) }, "captcha-raid-joins"),
+                renderComponent: () => (0, r.jsx)(o.Z, { title: u.intl.string(u.t.r3esyC) }, "captcha-raid-joins"),
                 enabled: !0,
             },
         ],

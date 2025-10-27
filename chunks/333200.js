@@ -110,8 +110,8 @@ function p(e) {
             refs: N,
             floatingStyles: R,
             getFloatingProps: P,
-            getReferenceProps: w,
-            transitionStyles: D,
+            getReferenceProps: D,
+            transitionStyles: w,
         } = (0, o.C)();
     return (0, r.jsxs)(
         i.uz,
@@ -142,7 +142,7 @@ function p(e) {
                             showChevronButton: !0,
                             ref: N.setReference,
                         },
-                        w(),
+                        D(),
                     ),
                 ),
                 A &&
@@ -153,7 +153,7 @@ function p(e) {
                                 {
                                     ref: N.setFloating,
                                     className: s.selectDropdown,
-                                    style: c({}, R, D),
+                                    style: c({}, R, w),
                                 },
                                 P(),
                             ),

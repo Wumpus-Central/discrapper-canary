@@ -54,7 +54,7 @@ function v(e) {
             return (
                 e.unshift({
                     value: b,
-                    label: h.intl.string(h.t.wGiHkJ),
+                    label: h.intl.string(h.t.wGiHkK),
                 }),
                 e
             );

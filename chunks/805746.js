@@ -44,9 +44,9 @@ let g = (e) => {
     return null == t
         ? null
         : (0, r.jsx)(d.JZ, {
-              title: p.intl.string(p.t.ygG62N),
-              description: p.intl.string(p.t.S51EKi),
-              buttonText: g ? p.intl.string(p.t.xXpoGR) : p.intl.string(p.t.JsiUnJ),
+              title: p.intl.string(p.t.ygG62M),
+              description: p.intl.string(p.t.S51EKg),
+              buttonText: g ? p.intl.string(p.t.xXpoGV) : p.intl.string(p.t.JsiUnL),
               buttonDisabled: !g,
               onButtonPress: f,
               buttonVariant: g ? "critical-primary" : "secondary",

@@ -13,7 +13,7 @@ function c() {
         ? null
         : (0, a.jsx)(i.S89, {
               id: "preview-markdown-toggle",
-              label: s.intl.string(s.t.sHJ9wc),
+              label: s.intl.string(s.t.sHJ9wZ),
               action: () => {
                   let e = !t;
                   l.default.track(o.rMx.PREVIEW_MARKDOWN_TOGGLED, {

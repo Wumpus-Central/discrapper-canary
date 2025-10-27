@@ -3,34 +3,34 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(755721),
-    s = n(770146),
+    s = n(755721),
+    o = n(770146),
     c = n(600164),
     u = n(424218),
     d = n(823379),
     p = n(358085),
     f = n(843445),
     h = n(981631),
-    g = n(388032),
-    m = n(688510);
-let b = {
+    m = n(388032),
+    g = n(688510);
+let _ = {
     [h.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
     [h.TaA.MACOS]: p.PlatformTypes.OSX,
     [h.TaA.LINUX]: p.PlatformTypes.LINUX,
 };
-class _ extends i.PureComponent {
+class b extends i.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: i } = this.props,
             l = n === f.b.LARGE;
-        return (0, r.jsx)(o.zx, {
-            size: l ? o.zx.Sizes.MIN : o.zx.Sizes.LARGE,
+        return (0, r.jsx)(s.zx, {
+            size: l ? s.zx.Sizes.MIN : s.zx.Sizes.LARGE,
             fullWidth: !l,
-            color: e ? m.tabSelectedColor : m.tabNotSelectedColor,
+            color: e ? g.tabSelectedColor : g.tabNotSelectedColor,
             className: a()({
-                [m.tabPageLarge]: l,
-                [m.tabPageSmall]: !l,
-                [m.tabSelected]: e,
-                [m.tabNotSelected]: !e,
+                [g.tabPageLarge]: l,
+                [g.tabPageSmall]: !l,
+                [g.tabSelected]: e,
+                [g.tabNotSelected]: !e,
             }),
             onClick: i,
             children: t,
@@ -51,12 +51,12 @@ class E extends i.PureComponent {
         return 1 === i.length
             ? null
             : (0, r.jsxs)(c.Z, {
-                  className: m.tabs,
+                  className: g.tabs,
                   children: [
-                      (0, r.jsx)("div", { className: m.separator }),
+                      (0, r.jsx)("div", { className: g.separator }),
                       i.map((t) =>
                           (0, r.jsx)(
-                              _,
+                              b,
                               {
                                   active: t === n,
                                   onClick: () => this.handleSelectOperatingSystem(t),
@@ -64,11 +64,11 @@ class E extends i.PureComponent {
                                   children: (function (e) {
                                       switch (e) {
                                           case h.TaA.WINDOWS:
-                                              return g.intl.string(g.t["0/xHFB"]);
+                                              return m.intl.string(m.t["0/xHFO"]);
                                           case h.TaA.MACOS:
-                                              return g.intl.string(g.t.E4u4n5);
+                                              return m.intl.string(m.t.E4u4n5);
                                           case h.TaA.LINUX:
-                                              return g.intl.string(g.t.tcawo6);
+                                              return m.intl.string(m.t.tcawo3);
                                       }
                                   })(t),
                               },
@@ -82,40 +82,40 @@ class E extends i.PureComponent {
         if (null == e) return null;
         let n = [
             {
-                key: g.intl.string(g.t["0TcHzs"]),
+                key: m.intl.string(m.t["0TcHzv"]),
                 value: e.operating_system_version,
             },
             {
-                key: g.intl.string(g.t.eOX6Hh),
+                key: m.intl.string(m.t.eOX6Hq),
                 value: e.cpu,
             },
             {
-                key: g.intl.string(g.t["+WJ5XV"]),
+                key: m.intl.string(m.t["+WJ5XQ"]),
                 value:
                     null != e.ram
-                        ? g.intl.formatToPlainString(g.t.RNRSl5, {
+                        ? m.intl.formatToPlainString(m.t.RNRSl6, {
                               size: (0, u.BU)(1000 * e.ram, { showDecimalForGB: !1 }),
                           })
                         : null,
             },
             {
-                key: g.intl.string(g.t["+3s/V1"]),
+                key: m.intl.string(m.t["+3s/V/"]),
                 value: e.gpu,
             },
             {
-                key: g.intl.string(g.t["L+x5wM"]),
+                key: m.intl.string(m.t["L+x5wB"]),
                 value: null != e.disk ? (0, u.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null,
             },
             {
-                key: g.intl.string(g.t["Ghp2/P"]),
+                key: m.intl.string(m.t["Ghp2/B"]),
                 value: e.sound_card,
             },
             {
-                key: g.intl.string(g.t["+w6nJi"]),
+                key: m.intl.string(m.t["+w6nJg"]),
                 value: e.network,
             },
             {
-                key: g.intl.string(g.t.Au3Vbm),
+                key: m.intl.string(m.t.Au3Vbp),
                 value: e.notes,
             },
         ]
@@ -126,10 +126,10 @@ class E extends i.PureComponent {
                     : (0, r.jsxs)(
                           "div",
                           {
-                              className: m.requirement,
+                              className: g.requirement,
                               children: [
                                   (0, r.jsxs)("span", {
-                                      className: m.requirementKey,
+                                      className: g.requirementKey,
                                       children: [e.key, ":"],
                                   }),
                                   n,
@@ -140,9 +140,9 @@ class E extends i.PureComponent {
             })
             .filter(d.lm);
         return (0, r.jsxs)("div", {
-            className: m.requirements,
+            className: g.requirements,
             children: [
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(o.Z, {
                     tag: "h4",
                     children: t,
                 }),
@@ -153,17 +153,17 @@ class E extends i.PureComponent {
     renderBody() {
         let { minimum: e, recommended: t } = this.props.systemRequirements[this.state.selectedOperatingSystem];
         return (0, r.jsxs)("div", {
-            className: m.requirementsContainer,
+            className: g.requirementsContainer,
             children: [
-                this.renderRequirementsSection(e, g.intl.string(g.t.QCCMXF)),
-                this.renderRequirementsSection(t, g.intl.string(g.t.He39ws)),
+                this.renderRequirementsSection(e, m.intl.string(m.t.QCCMXE)),
+                this.renderRequirementsSection(t, m.intl.string(m.t.He39wq)),
             ],
         });
     }
     render() {
         return (0, r.jsxs)("div", {
             className: this.props.className,
-            children: [(0, r.jsx)(s.Z, { children: g.intl.string(g.t.IkOAoq) }), this.renderTabs(), this.renderBody()],
+            children: [(0, r.jsx)(o.Z, { children: m.intl.string(m.t.IkOAol) }), this.renderTabs(), this.renderBody()],
         });
     }
     constructor(e) {
@@ -183,7 +183,7 @@ class E extends i.PureComponent {
         let t = (0, p.getPlatform)(),
             n = Object.keys(e.systemRequirements),
             r = n[0];
-        for (let e of n) b[e] === t && (r = e);
+        for (let e of n) _[e] === t && (r = e);
         this.state = { selectedOperatingSystem: r };
     }
 }

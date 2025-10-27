@@ -1,12 +1,12 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => y });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     l = n(442837),
     o = n(28664),
-    s = n(481060),
-    c = n(313201),
+    c = n(481060),
+    s = n(313201),
     u = n(224724),
     d = n(747101),
     f = n(817053),
@@ -18,7 +18,7 @@ function h(e) {
     var t,
         n,
         { gameName: i, onClick: a } = e,
-        c = (function (e, t) {
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -39,14 +39,14 @@ function h(e) {
             }
             return i;
         })(e, ["gameName", "onClick"]);
-    let g = null != i ? i : p.intl.string(p.t.GIWFlJ),
-        h = p.intl.formatToPlainString(p.t["3mb1s7"], { game: g }),
-        v = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
-    return (0, d.kO)(c.applicationId) || v
+    let g = null != i ? i : p.intl.string(p.t.GIWFlF),
+        h = p.intl.formatToPlainString(p.t["3mb1s5"], { game: g }),
+        y = (0, l.e7)([u.Z], () => u.Z.suggestedFetchIsLoading);
+    return (0, d.kO)(s.applicationId) || y
         ? (0, r.jsx)("div", { className: m.loadingCover })
         : (0, r.jsx)(o.u, {
               text: h,
-              children: (0, r.jsxs)(s.P3F, {
+              children: (0, r.jsxs)(c.P3F, {
                   className: b.addButton,
                   onClick: a,
                   children: [
@@ -81,7 +81,7 @@ function h(e) {
                                   className: b.cover,
                                   gameName: i,
                               },
-                              c,
+                              s,
                           )),
                           (n = n = { disableInteraction: !0 }),
                           Object.getOwnPropertyDescriptors
@@ -98,18 +98,18 @@ function h(e) {
                                 }),
                           t),
                       ),
-                      (0, r.jsx)(s.svS, {
+                      (0, r.jsx)(c.svS, {
                           size: "md",
                           className: b.addIcon,
-                          color: s.TVs.colors.WHITE,
+                          color: c.TVs.colors.WHITE,
                       }),
                   ],
               }),
           });
 }
-function v(e) {
+function y(e) {
     let { userId: t, games: n, onDismiss: i, onClick: l, className: o } = e,
-        u = (0, c.Dt)();
+        u = (0, s.Dt)();
     return (0, r.jsxs)("aside", {
         className: a()(b.container, o),
         "aria-labelledby": u,
@@ -117,20 +117,20 @@ function v(e) {
             (0, r.jsxs)("div", {
                 className: b.header,
                 children: [
-                    (0, r.jsx)(s.P3F, {
+                    (0, r.jsx)(c.P3F, {
                         className: b.dismissButton,
-                        "aria-label": p.intl.string(p.t["pUR+3t"]),
+                        "aria-label": p.intl.string(p.t["pUR+3g"]),
                         onClick: i,
-                        children: (0, r.jsx)(s.Dio, {
+                        children: (0, r.jsx)(c.Dio, {
                             size: "sm",
                             color: "currentColor",
                         }),
                     }),
-                    (0, r.jsx)(s.Heading, {
+                    (0, r.jsx)(c.Heading, {
                         id: u,
                         variant: "text-xs/medium",
                         color: "text-secondary",
-                        children: p.intl.string(p.t.zMUr6e),
+                        children: p.intl.string(p.t.zMUr6Z),
                     }),
                 ],
             }),

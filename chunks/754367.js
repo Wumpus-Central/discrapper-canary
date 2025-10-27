@@ -20,9 +20,9 @@ function _() {
                 children: (0, r.jsx)(i.Button, {
                     variant: "critical-secondary",
                     size: "sm",
-                    text: f.intl.string(f.t["4iKQ//"]),
+                    text: f.intl.string(f.t["4iKQ/3"]),
                     onClick: () => {
-                        (0, c.Z)(f.intl.string(f.t["4iKQ//"]), f.intl.string(f.t.sQ42iY), a.Z.reset);
+                        (0, c.Z)(f.intl.string(f.t["4iKQ/3"]), f.intl.string(f.t.sQ42iT), a.Z.reset);
                     },
                 }),
             }),

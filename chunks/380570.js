@@ -3,8 +3,8 @@ var r = n(748780),
     i = n(908670),
     l = n(570140),
     a = n(317770),
-    o = n(928518);
-function s(e, t, n) {
+    s = n(928518);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,10 +19,10 @@ function s(e, t, n) {
 }
 class c extends a.Z {
     _initialize() {
-        o.Z.addChangeListener(this.handlePopoutWindowChange), l.Z.subscribe("WINDOW_FOCUS", this.handleMainWindowFocus);
+        s.Z.addChangeListener(this.handlePopoutWindowChange), l.Z.subscribe("WINDOW_FOCUS", this.handleMainWindowFocus);
     }
     _terminate() {
-        o.Z.removeChangeListener(this.handlePopoutWindowChange),
+        s.Z.removeChangeListener(this.handlePopoutWindowChange),
             l.Z.unsubscribe("WINDOW_FOCUS", this.handleMainWindowFocus),
             this.injectWindowAnimationFrame(window);
     }
@@ -33,13 +33,13 @@ class c extends a.Z {
     }
     constructor(...e) {
         super(...e),
-            s(this, "handleMainWindowFocus", (e) => {
+            o(this, "handleMainWindowFocus", (e) => {
                 e.focused && e.windowId === window.__DISCORD_WINDOW_ID && this.injectWindowAnimationFrame(window);
             }),
-            s(this, "handlePopoutWindowChange", () => {
-                let e = o.Z.getWindowKeys().find((e) => o.Z.getWindowFocused(e));
+            o(this, "handlePopoutWindowChange", () => {
+                let e = s.Z.getWindowKeys().find((e) => s.Z.getWindowFocused(e));
                 if (null == e) return this.injectWindowAnimationFrame(window);
-                let t = o.Z.getWindow(e);
+                let t = s.Z.getWindow(e);
                 if (null == t || t.closed) return this.injectWindowAnimationFrame(window);
                 this.injectWindowAnimationFrame(t);
             });

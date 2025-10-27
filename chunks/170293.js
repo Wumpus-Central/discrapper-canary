@@ -4,11 +4,11 @@ var a = n(668781),
     i = n(388032);
 function l(e) {
     a.Z.show({
-        title: i.intl.string(i.t.RpjdLy),
-        body: i.intl.string(i.t.nOSopa),
-        confirmText: i.intl.string(i.t["sKJ7+f"]),
+        title: i.intl.string(i.t.RpjdL8),
+        body: i.intl.string(i.t.nOSopS),
+        confirmText: i.intl.string(i.t["sKJ7+Y"]),
         confirmVariant: "critical-primary",
-        cancelText: i.intl.string(i.t["7wZ1GR"]),
+        cancelText: i.intl.string(i.t["7wZ1GY"]),
         onConfirm: () => {
             (0, r.v6)(null);
         },

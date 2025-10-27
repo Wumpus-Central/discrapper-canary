@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(373230),
     R = n(246946),
     P = n(25990),
-    w = n(594174),
-    D = n(626135),
+    D = n(594174),
+    w = n(626135),
     L = n(74538),
     x = n(413182),
     M = n(695346),
@@ -127,8 +127,8 @@ function q() {
     }, [n, t]);
 }
 function X() {
-    let e = (0, s.e7)([w.default], () => {
-            let e = w.default.getCurrentUser();
+    let e = (0, s.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
             return o()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
         t = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
@@ -209,20 +209,20 @@ function X() {
                       (0, r.jsx)(O.p, {
                           className: Z.floatingNitroUpsell,
                           showUpsell: ee && !Q,
-                          text: B.intl.format(B.t.TmfgIy, { onClick: () => (0, v.y)({ analyticsSource: X }) }),
+                          text: B.intl.format(B.t.TmfgI2, { onClick: () => (0, v.y)({ analyticsSource: X }) }),
                           textVariant: "heading-md/medium",
                           button: (0, r.jsx)(u.Button, {
                               variant: "expressive",
                               onClick: () => {
                                   var e;
-                                  D.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, {
+                                  w.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
                                       null == et ||
                                           null == (e = et.current) ||
                                           e.scrollIntoView({ behavior: "smooth" });
                               },
-                              text: B.intl.string(B.t.uw9zIy),
+                              text: B.intl.string(B.t.uw9zI7),
                               icon: u.SrA,
                           }),
                       }),

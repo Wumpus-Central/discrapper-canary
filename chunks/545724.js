@@ -1,10 +1,10 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(748780),
-    s = n(91192),
+    s = n(748780),
+    o = n(91192),
     c = n(481060),
     u = n(239091),
     d = n(687683),
@@ -52,28 +52,28 @@ function h(e, t) {
         e
     );
 }
-let g = function (e) {
+let m = function (e) {
     let {
             index: t,
             children: l,
-            user: g,
-            channel: m,
-            onClick: b,
-            isFocused: _,
+            user: m,
+            channel: g,
+            onClick: _,
+            isFocused: b,
             isActive: E,
             onOtherHover: O,
-            className: v,
+            className: I,
         } = e,
-        [y, I] = i.useState(!1),
+        [v, y] = i.useState(!1),
         [C, S] = i.useState(!1),
-        N = () => {
-            I(!0), !_ || E || C || null == O || O();
-        },
         T = () => {
-            I(!1);
+            y(!0), !b || E || C || null == O || O();
+        },
+        N = () => {
+            y(!1);
         };
-    return (0, r.jsx)(s.mh, {
-        id: m.id,
+    return (0, r.jsx)(o.mh, {
+        id: g.id,
         children: (e) =>
             (0, r.jsx)(c.tEY, {
                 offset: {
@@ -81,16 +81,16 @@ let g = function (e) {
                     right: -8,
                 },
                 children: (0, r.jsx)(
-                    o.Z.div,
+                    s.Z.div,
                     h(
                         f(
                             {
-                                className: a()(p.messageRequestItem, v, {
+                                className: a()(p.messageRequestItem, I, {
                                     [p.active]: E || C,
                                     [p.firstItem]: 0 === t,
                                 }),
                                 onContextMenu: (e) => {
-                                    null != g &&
+                                    null != m &&
                                         (S(!0),
                                         (0, u.jW)(
                                             e,
@@ -99,7 +99,7 @@ let g = function (e) {
                                                     n.e("79695"),
                                                     n.e("69220"),
                                                 ]).then(n.bind(n, 881351));
-                                                return (t) => (0, r.jsx)(e, h(f({}, t), { user: g }));
+                                                return (t) => (0, r.jsx)(e, h(f({}, t), { user: m }));
                                             },
                                             {
                                                 onClose: () => {
@@ -108,9 +108,9 @@ let g = function (e) {
                                             },
                                         ));
                                 },
-                                onMouseEnter: N,
-                                onMouseLeave: T,
-                                onClick: null != b ? b : void 0,
+                                onMouseEnter: T,
+                                onMouseLeave: N,
+                                onClick: null != _ ? _ : void 0,
                                 style: {
                                     LIST_ROW_HEIGHT: d.WN,
                                     opacity: 1,
@@ -118,7 +118,7 @@ let g = function (e) {
                             },
                             e,
                         ),
-                        { children: l(y || E || C) },
+                        { children: l(v || E || C) },
                     ),
                 ),
             }),

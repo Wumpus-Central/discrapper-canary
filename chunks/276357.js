@@ -64,7 +64,7 @@ function b(e) {
             ref: (e) => {
                 null == b || b(e);
             },
-            "aria-label": f.intl.string(f.t.TdqRTk),
+            "aria-label": f.intl.string(f.t.TdqRTh),
             className: x.container,
             children: [
                 (0, r.jsx)("div", {
@@ -76,7 +76,7 @@ function b(e) {
                                 color: "interactive-normal",
                                 variant: "heading-md/semibold",
                                 className: x.headerText,
-                                children: f.intl.string(f.t.HPu3kp),
+                                children: f.intl.string(f.t.HPu3kq),
                             }),
                             (0, r.jsx)("div", {
                                 className: x.countContainer,
@@ -191,9 +191,9 @@ function b(e) {
                 }),
                 (0, r.jsx)("div", { className: x.separator }),
                 (0, r.jsx)(o.Avr, {
-                    "aria-label": f.intl.string(f.t["98EPQE"]),
+                    "aria-label": f.intl.string(f.t["98EPQP"]),
                     onClick: T,
-                    text: f.intl.string(f.t["98EPQE"]),
+                    text: f.intl.string(f.t["98EPQP"]),
                 }),
             ],
         })

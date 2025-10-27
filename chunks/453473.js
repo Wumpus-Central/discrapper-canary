@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(768943),
     R = n(686478),
     P = n(664559),
-    w = n(767893),
-    D = n(206697),
+    D = n(767893),
+    w = n(206697),
     L = n(74551),
     x = n(981631),
     M = n(388032),
@@ -148,7 +148,7 @@ function Y(e) {
         [n.length],
     ),
     0 === n.length)
-        ? (0, r.jsx)(D.w, {})
+        ? (0, r.jsx)(w.w, {})
         : (0, r.jsx)(K, {
               savedMessageKeys: n,
               closePopout: t,
@@ -272,7 +272,7 @@ function z(e) {
                   (0, r.jsx)(p.P3F, {
                       className: k.clickableMessageBackground,
                       onClick: l,
-                      "aria-label": M.intl.string(M.t["+TSRGB"]),
+                      "aria-label": M.intl.string(M.t["+TSRGD"]),
                   }),
                   null != t.saveData.dueAt
                       ? (0, r.jsx)(L.Z, {
@@ -280,7 +280,7 @@ function z(e) {
                             throttledNow: a,
                         })
                       : null,
-                  (0, r.jsx)(w.Z, { channel: s }),
+                  (0, r.jsx)(D.Z, { channel: s }),
                   (0, r.jsx)(
                       b.Z,
                       {
@@ -316,14 +316,14 @@ function z(e) {
                   (0, r.jsx)(p.Heading, {
                       variant: "text-md/semibold",
                       color: "header-secondary",
-                      children: null != t.saveData.dueAt ? M.intl.string(M.t["wuQm+v"]) : M.intl.string(M.t.o572FR),
+                      children: null != t.saveData.dueAt ? M.intl.string(M.t["wuQm+j"]) : M.intl.string(M.t.o572Fe),
                   }),
                   (0, r.jsx)(y.ZP, {
                       className: k.hoverBar,
                       children: (0, r.jsx)(
                           y.sF,
                           {
-                              label: M.intl.string(M.t.SvXS1d),
+                              label: M.intl.string(M.t.SvXS1Z),
                               icon: p.XHJ,
                               dangerous: !0,
                               onClick: () => (0, A.x)(t.saveData),
@@ -354,7 +354,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t.yjGtdH),
+                          label: M.intl.string(M.t.yjGtdJ),
                           icon: p.dz2,
                           onClick: () =>
                               (0, A.z)({
@@ -368,7 +368,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t.vrbqs7),
+                          label: M.intl.string(M.t.vrbqs1),
                           icon: p.vdY,
                           onClick: (e) =>
                               (0, h.jW)(e, async () => {
@@ -377,7 +377,7 @@ function X(e) {
                                       (0, r.jsx)(
                                           e,
                                           B(U({}, n), {
-                                              label: M.intl.string(M.t.roMu1N),
+                                              label: M.intl.string(M.t.roMu1H),
                                               message: t.message,
                                           }),
                                       );
@@ -389,7 +389,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t["+TSRGB"]),
+                          label: M.intl.string(M.t["+TSRGD"]),
                           icon: p.acy,
                           onClick: (e) => i(e),
                       },
@@ -398,7 +398,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t.SvXS1d),
+                          label: M.intl.string(M.t.SvXS1Z),
                           icon: p.plf,
                           onClick: () => (0, A.x)(t.saveData),
                       },
@@ -431,7 +431,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t["+TSRGB"]),
+                          label: M.intl.string(M.t["+TSRGD"]),
                           icon: p.acy,
                           onClick: (e) => i(e),
                       },
@@ -440,7 +440,7 @@ function X(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: M.intl.string(M.t.SvXS1d),
+                          label: M.intl.string(M.t.SvXS1Z),
                           icon: p.plf,
                           onClick: () => (0, A.x)(t.saveData),
                       },

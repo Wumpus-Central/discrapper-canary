@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(558381),
     a = n(480916),
-    o = n(986035),
-    s = n(388032),
+    s = n(986035),
+    o = n(388032),
     c = n(624066);
 function u(e, t, n) {
     return (
@@ -26,14 +26,14 @@ class d extends i.PureComponent {
         } = this.props;
         return (0, r.jsx)("div", {
             className: c.matureListing,
-            children: (0, r.jsx)(o.Z, {
+            children: (0, r.jsx)(s.Z, {
                 modalType: a.it.NSFW_APP_LISTING,
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
-                title: s.intl.formatToPlainString(s.t.n5PGER, { name: e }),
-                description: s.intl.string(s.t["bJx/aG"]),
-                agreement: s.intl.string(s.t.odZq8f),
-                disagreement: s.intl.string(s.t.hieTsL),
+                title: o.intl.formatToPlainString(o.t.n5PGEY, { name: e }),
+                description: o.intl.string(o.t["bJx/aL"]),
+                agreement: o.intl.string(o.t.odZq8d),
+                disagreement: o.intl.string(o.t.hieTsG),
             }),
         });
     }

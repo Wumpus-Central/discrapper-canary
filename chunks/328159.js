@@ -88,10 +88,10 @@ let p = (e) => {
     f = (e) => {
         let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: l } = e,
             s = [
-                m.intl.string(m.t["9dhBGh"]),
-                m.intl.string(m.t["8RmhKC"]),
-                m.intl.string(m.t["2t0V8/"]),
-                m.intl.string(m.t.l8WqCQ),
+                m.intl.string(m.t["9dhBGo"]),
+                m.intl.string(m.t["8RmhKF"]),
+                m.intl.string(m.t["2t0V83"]),
+                m.intl.string(m.t.l8WqCR),
             ],
             o = [];
         for (let e = 0; e < 4; e++)

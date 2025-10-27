@@ -10,7 +10,7 @@ function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
         u = (0, a.ZP)(t),
         d = c(u),
-        f = s.intl.format(s.t.Yy6vLi, {
+        f = s.intl.format(s.t.Yy6vLs, {
             username: u.nick,
             usernameHook: d,
             topic: t.content,

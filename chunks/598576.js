@@ -20,7 +20,7 @@ function b(e) {
             handleWaitingForConnection: C,
             handleAuthToken: _,
             expectedCallbackState: m,
-            callbackData: O,
+            callbackData: v,
         } = (0, i.k)(b, p.ABu.XBOX);
     return (0, o.jsx)(r.Y0X, {
         className: f.modal,
@@ -61,7 +61,7 @@ function b(e) {
                 (0, o.jsx)(r.Mi4, {
                     id: u.O.DISCORD_CONSENT,
                     children: (0, o.jsx)(s.Z, {
-                        authToken: O,
+                        authToken: v,
                         onContinue: x,
                         onError: h,
                         onClose: n,

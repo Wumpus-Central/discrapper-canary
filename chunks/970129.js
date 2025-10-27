@@ -12,9 +12,9 @@ var r = n(951288),
 function d(e, t, n) {
     let r = (0, l.e7)([o.Z], () => !o.Z.isRoleHigher(e, t, n), [e, t, n]);
     return i.useMemo(() => r && n.id === (null == t ? void 0 : t.id), [r, n, t])
-        ? c.intl.string(c.t.PQylOT)
+        ? c.intl.string(c.t.PQylOR)
         : r
-          ? c.intl.string(c.t.UGIjx8)
+          ? c.intl.string(c.t.UGIjx9)
           : null;
 }
 function u(e) {

@@ -18,7 +18,7 @@ n.d(t, {
     ku: () => _,
     pw: () => P,
     uZ: () => f,
-    yd: () => D,
+    yd: () => w,
     ze: () => c,
 });
 let r = ["start", "end"],
@@ -106,7 +106,7 @@ function R(e, t, n, r) {
 function P(e) {
     return e.replace(/left|right|bottom|top/g, (e) => u[e]);
 }
-function w(e) {
+function D(e) {
     return {
         top: 0,
         right: 0,
@@ -115,9 +115,9 @@ function w(e) {
         ...e,
     };
 }
-function D(e) {
+function w(e) {
     return "number" != typeof e
-        ? w(e)
+        ? D(e)
         : {
               top: e,
               right: e,

@@ -55,7 +55,7 @@ function u(e, t) {
     return i;
 }
 function d(e) {
-    return e ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy);
+    return e ? o.intl.string(o.t.S5anIc) : o.intl.string(o.t.q3O3J8);
 }
 function f(e) {
     var { isSelfStream: t, centerButton: n = !1, onMouseEnter: o, onMouseLeave: s } = e,

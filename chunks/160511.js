@@ -68,7 +68,7 @@ function c(e) {
                 children: (0, l.jsxs)(a.NIo, {
                     children: [
                         (0, l.jsx)(a.oil, {
-                            label: u.intl.string(u.t.HZPBOT),
+                            label: u.intl.string(u.t.HZPBOd),
                             inputRef: w,
                             onChange: Z,
                             placeholder: u.intl.string(u.t.tARzgo),
@@ -81,7 +81,7 @@ function c(e) {
                         }),
                         (0, l.jsx)(a.Button, {
                             variant: "secondary",
-                            text: u.intl.string(u.t.ZF29Ly),
+                            text: u.intl.string(u.t.ZF29L6),
                             loading: m,
                             onClick: () => {
                                 s.tn

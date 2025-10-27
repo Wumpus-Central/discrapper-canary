@@ -22,9 +22,9 @@ let y = (e) => {
     let n,
         { commandType: t, commandTargetId: r, channel: y, guildId: C, onHeightUpdate: I, context: O } = e,
         v = (0, c.e7)([h.Z], () => h.Z.getGuild(null != C ? C : y.guild_id)),
-        E = (0, c.e7)([b.default], () => b.default.getUser(r)),
-        P = (0, f.Z)({
-            user: E,
+        P = (0, c.e7)([b.default], () => b.default.getUser(r)),
+        E = (0, f.Z)({
+            user: P,
             guildId: null == v ? void 0 : v.id,
             context: O,
         }),
@@ -109,13 +109,13 @@ let y = (e) => {
             },
             [y, U, Z, v, r],
         ),
-        G = i.useCallback(
+        Q = i.useCallback(
             (e) => {
                 let { section: n, data: t } = e;
                 return (0, l.jsx)(
                     s.kSQ,
                     {
-                        label: _.intl.string(_.t.V0w2am),
+                        label: _.intl.string(_.t.V0w2ap),
                         children: t.map((e) => L(e, { showAppIcon: !0 })),
                     },
                     n.id,
@@ -123,7 +123,7 @@ let y = (e) => {
             },
             [L],
         ),
-        Q = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 let { section: n, data: t } = e,
                     i = (0, p.ky)(n);
@@ -150,7 +150,7 @@ let y = (e) => {
             },
             [y, L],
         ),
-        V = (0, l.jsx)(
+        Y = (0, l.jsx)(
             s.II_,
             {
                 id: "command-search",
@@ -187,7 +187,7 @@ let y = (e) => {
                             {
                                 query: N,
                                 onChange: A,
-                                placeholder: _.intl.string(_.t.m1UwbG),
+                                placeholder: _.intl.string(_.t.m1UwbP),
                                 ref: n,
                             }),
                         Object.getOwnPropertyDescriptors
@@ -224,13 +224,13 @@ let y = (e) => {
                 children: [
                     F &&
                         (0, l.jsxs)(l.Fragment, {
-                            children: [V, (0, l.jsx)(s.Clw, {})],
+                            children: [Y, (0, l.jsx)(s.Clw, {})],
                         }),
                     (0, l.jsx)(
                         s.sNh,
                         {
                             id: "menu-commands-empty",
-                            label: _.intl.string(_.t.YSNlV1),
+                            label: _.intl.string(_.t.YSNlV2),
                             disabled: !0,
                         },
                         "menu-commands-empty",
@@ -240,7 +240,7 @@ let y = (e) => {
         else if (Z)
             if (F)
                 n = (0, l.jsxs)(l.Fragment, {
-                    children: [V, (0, l.jsx)(s.Clw, {}), M.map((e) => L(e, { showAppIcon: !0 }))],
+                    children: [Y, (0, l.jsx)(s.Clw, {}), M.map((e) => L(e, { showAppIcon: !0 }))],
                 });
             else {
                 let e = S.find((e) => {
@@ -253,25 +253,25 @@ let y = (e) => {
                     });
                 n = (0, l.jsxs)(l.Fragment, {
                     children: [
-                        T && V,
-                        null != e && G(e),
+                        T && Y,
+                        null != e && Q(e),
                         (0, l.jsx)(s.kSQ, {
                             label: _.intl.string(_.t.PHjkRE),
-                            children: t.map((e) => Q(e)),
+                            children: t.map((e) => V(e)),
                         }),
                     ],
                 });
             }
         else n = M.map((e) => L(e, { showAppIcon: !0 }));
-        null != P &&
-            P.length > 0 &&
+        null != E &&
+            E.length > 0 &&
             (n = (0, l.jsxs)(l.Fragment, {
-                children: [n, (0, l.jsx)(s.Clw, {}, "separator"), P],
+                children: [n, (0, l.jsx)(s.Clw, {}, "separator"), E],
             }));
     }
     if (!j.TPd.TEXTUAL.has(y.type))
-        if (null == P) return null;
-        else n = P;
+        if (null == E) return null;
+        else n = E;
     return (0, l.jsx)(s.sNh, {
         id: "apps",
         label: _.intl.string(_.t.PHjkRE),

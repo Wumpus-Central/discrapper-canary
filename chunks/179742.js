@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(843611),
     l = n(880257),
     a = n(106939),
-    o = n(981631);
-function s() {
-    return !1 === (0, l.Z)() ? (0, r.jsx)(i.l_, { to: o.Z5c.SETTINGS("family-center") }) : (0, r.jsx)(a.Z, {});
+    s = n(981631);
+function o() {
+    return !1 === (0, l.Z)() ? (0, r.jsx)(i.l_, { to: s.Z5c.SETTINGS("family-center") }) : (0, r.jsx)(a.Z, {});
 }

@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => ej }), n(539854);
+n.d(t, { Z: () => eC }), n(539854);
 var r = n(951288),
     s = n(647438),
     o = n(120356),
@@ -22,14 +22,14 @@ var r = n(951288),
     x = n(714338),
     S = n(185666),
     Z = n(100527),
-    j = n(906732),
-    C = n(600164);
+    C = n(906732),
+    j = n(600164);
 n(70097);
 var I = n(266454),
     P = n(594190),
     w = n(74299),
-    N = n(989941),
-    T = n(377400),
+    T = n(989941),
+    N = n(377400),
     D = n(329557),
     k = n(199902),
     R = n(314897),
@@ -174,7 +174,7 @@ class eZ extends s.Component {
         O.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        O.Z.startSession(), T.Z.initialize(), S.Z.initialize(), D.Z.initialize();
+        O.Z.startSession(), N.Z.initialize(), S.Z.initialize(), D.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -273,11 +273,11 @@ class eZ extends s.Component {
                 Y.default.getDisableExternalLinkAlert() || t === W.Z.getLastURL()
                     ? J.ZP.send("OPEN_EXTERNAL_URL", t)
                     : y.Z.show({
-                          title: ey.intl.string(ey.t.WLx4Fx),
-                          body: ey.intl.string(ey.t.H8O1TE),
-                          secondaryConfirmText: ey.intl.string(ey.t.IwqGhY),
-                          confirmText: ey.intl.string(ey.t["3PatS0"]),
-                          cancelText: ey.intl.string(ey.t["ETE/oK"]),
+                          title: ey.intl.string(ey.t.WLx4F6),
+                          body: ey.intl.string(ey.t.H8O1TK),
+                          secondaryConfirmText: ey.intl.string(ey.t.IwqGhU),
+                          confirmText: ey.intl.string(ey.t["3PatSz"]),
+                          cancelText: ey.intl.string(ey.t["ETE/oC"]),
                           onConfirmSecondary: () => {
                               O.Z.disableExternalLinkAlert();
                           },
@@ -293,18 +293,18 @@ class eZ extends s.Component {
             window.removeEventListener("keydown", this.onKeyDownGlobal, !0),
             window.removeEventListener("keyup", this.onKeyUpGlobal, !0),
             this.props.locked && window.removeEventListener("contextmenu", ev, !1),
-            T.Z.terminate(),
+            N.Z.terminate(),
             S.Z.terminate(),
             D.Z.terminate();
     }
     renderInvalidSizeMessage() {
-        return (0, r.jsx)(C.Z, {
-            justify: C.Z.Justify.CENTER,
-            align: C.Z.Align.CENTER,
+        return (0, r.jsx)(j.Z, {
+            justify: j.Z.Justify.CENTER,
+            align: j.Z.Align.CENTER,
             className: e_.invalidContainer,
             children: (0, r.jsx)("div", {
                 className: e_.inactiveContainer,
-                children: ey.intl.format(ey.t.ketnW1, ee.OVERLAY_MIN_RESOLUTION),
+                children: ey.intl.format(ey.t.ketnW0, ee.OVERLAY_MIN_RESOLUTION),
             }),
         });
     }
@@ -332,7 +332,7 @@ class eZ extends s.Component {
                 o &&
                     (0, r.jsx)("header", {
                         className: e_.previewingInGameHeader,
-                        children: ey.intl.string(ey.t.iOq96u),
+                        children: ey.intl.string(ey.t.iOq96m),
                     }),
                 i,
                 (!e || a.has(em.O0n.TEXT_WIDGET)) &&
@@ -403,7 +403,7 @@ class eZ extends s.Component {
         x.Z.setLayout(t ? E.Xq : E.Sr), t && x.Z.enable();
     }
 }
-function ej() {
+function eC() {
     var e, t;
     let {
             locked: n,
@@ -425,21 +425,21 @@ function ej() {
         p = (0, f.e7)([V.Z], () => V.Z.getVoiceChannelId()),
         h = (0, f.e7)([A.Z], () => A.Z.getChannel(p)),
         g = (0, f.e7)([L.Z], () => (null != h ? L.Z.getGuild(h.guild_id) : null)),
-        m = (0, f.e7)([P.ZP, U.Z], () => (0, N.Z)(P.ZP, U.Z)),
+        m = (0, f.e7)([P.ZP, U.Z], () => (0, T.Z)(P.ZP, U.Z)),
         y = (0, f.e7)([z.Z], () => (0, w.Z)(z.Z)),
         _ = (0, f.e7)([k.Z], () => null != k.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: O } = (0, j.ZP)(Z.Z.OVERLAY),
+        { analyticsLocations: O } = (0, C.ZP)(Z.Z.OVERLAY),
         { showKeybindIndicators: b, dismissKeybindNotification: E } = (0, eo.K)(),
         x = (null == c ? void 0 : c.fullscreenType) === v.Jx.FULLSCREEN,
         S = null != (e = null == c ? void 0 : c.oopEnabled) && e,
-        C = en.v.oopEnabled,
+        j = en.v.oopEnabled,
         I = null != (t = null == c ? void 0 : c.hasChangedRenderMode) && t,
-        { useContextualNudge: T, disableNudge: D } = (0, er.J0)("OverlaySetup");
+        { useContextualNudge: N, disableNudge: D } = (0, er.J0)("OverlaySetup");
     return (
         s.useEffect(() => {
             i && (0, er.F3)();
         }, [i]),
-        (0, r.jsx)(j.Gt, {
+        (0, r.jsx)(C.Gt, {
             value: O,
             children: (0, r.jsx)(eZ, {
                 locked: n,
@@ -458,7 +458,7 @@ function ej() {
                 isStreaming: _,
                 showKeybindNotification: b,
                 dismissKeybindNotification: E,
-                isOOPOverlayAvailable: (!T || (C && S && x && !I)) && !D,
+                isOOPOverlayAvailable: (!N || (j && S && x && !I)) && !D,
             }),
         })
     );

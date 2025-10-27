@@ -37,7 +37,7 @@ function A(e) {
             (0, r.jsx)(l.Text, {
                 variant: "text-sm/medium",
                 color: "header-primary",
-                children: T.intl.string(T.t.J4cw1t),
+                children: T.intl.string(T.t.J4cw1q),
             }),
             (0, r.jsx)(l.LZC, {
                 size: 4,
@@ -104,8 +104,8 @@ function R(e) {
         g = (null != (n = null == o || null == (t = o.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [E, b] = i.useState(1),
         R = (0, c.Z)("(max-width: 1439px)"),
-        { selectedTab: P, isPhantomPreview: w } = (0, O.m)(),
-        D = P === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t["LvXy/P"]) : T.intl.string(T.t.XyqKh4),
+        { selectedTab: P, isPhantomPreview: D } = (0, O.m)(),
+        w = P === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t["LvXy/H"]) : T.intl.string(T.t.XyqKh8),
         L = (e) => {
             null != e && e.clientHeight > 30 && b(2);
         };
@@ -139,7 +139,7 @@ function R(e) {
         : (0, r.jsx)(l.Text, {
               variant: "text-sm/normal",
               color: "text-default",
-              children: w ? D : T.intl.string(T.t["NY/FIS"]),
+              children: D ? w : T.intl.string(T.t["NY/FIW"]),
           });
     return (0, r.jsxs)("div", {
         className: S.container,
@@ -152,7 +152,7 @@ function R(e) {
                             guild: a,
                             size: f.Z.Sizes.LARGER,
                             iconSrc:
-                                null == a.icon || w
+                                null == a.icon || D
                                     ? (0, u.b)("server_products/storefront/default-guild-icon.jpg")
                                     : void 0,
                         }),
@@ -169,16 +169,16 @@ function R(e) {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
                                     lineClamp: 2,
-                                    children: w
-                                        ? T.intl.string(T.t.rtgp7u)
-                                        : T.intl.formatToPlainString(T.t.NZeik5, { guildName: a.name }),
+                                    children: D
+                                        ? T.intl.string(T.t.rtgp7q)
+                                        : T.intl.formatToPlainString(T.t.NZeik9, { guildName: a.name }),
                                 }),
                             }),
                             (0, r.jsx)(l.LZC, { size: 8 }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-md/normal",
                                 color: "text-default",
-                                children: T.intl.format(T.t["7JwrlJ"], {
+                                children: T.intl.format(T.t["7JwrlH"], {
                                     username: d,
                                     usernameHook: x,
                                 }),
@@ -191,7 +191,7 @@ function R(e) {
             }),
             (0, r.jsx)(N, {
                 coverImageAsset: null == o ? void 0 : o.cover_image_asset,
-                isPreview: w,
+                isPreview: D,
             }),
         ],
     });

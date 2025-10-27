@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(175470),
     p = n(569545),
     _ = n(314910),
-    m = n(833876);
+    m = n(565063);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,7 +64,7 @@ function S(e) {
         },
         [I],
     );
-    let j = (e) => {
+    let Z = (e) => {
             if (n !== s.P.NO_POPOUT) return v;
             let t = null == O ? void 0 : O.getBoundingClientRect();
             if (((P.current = t), e.timestamp !== C || null == t)) return v;
@@ -76,23 +76,23 @@ function S(e) {
                 width: 268,
             };
         },
-        Z = (0, i.useRef)(null),
-        R = (0, c.Yzy)(
+        j = (0, i.useRef)(null),
+        T = (0, c.Yzy)(
             w,
             {
                 keys: (e) => e.timestamp,
-                ref: Z,
+                ref: j,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: b,
             },
             "animate-always",
         ),
-        x = (0, i.useRef)(null),
-        A = (0, c.Yzy)(
+        A = (0, i.useRef)(null),
+        R = (0, c.Yzy)(
             w,
             {
-                ref: x,
+                ref: A,
                 keys: (e) => e.timestamp,
                 from: (e) =>
                     g(
@@ -102,7 +102,7 @@ function S(e) {
                             opacity: 1,
                         },
                         S.enabled
-                            ? j(e)
+                            ? Z(e)
                             : (() => {
                                   var e;
                                   if (n !== s.P.NO_POPOUT) return v;
@@ -123,7 +123,7 @@ function S(e) {
                             opacity: 1,
                             visibility: "visible",
                         },
-                        j(e),
+                        Z(e),
                     ),
                 ],
                 leave: g(
@@ -153,14 +153,14 @@ function S(e) {
             "animate-always",
         );
     return (
-        (0, l.useChain)([Z, x], [0, 0.1], 3000),
+        (0, l.useChain)([j, A], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
                     className: m.hidden,
                     ref: y,
                 }),
-                R(
+                T(
                     (e, t) =>
                         null != t &&
                         (0, r.jsx)(l.animated.div, {
@@ -171,7 +171,7 @@ function S(e) {
                 (0, r.jsx)(_.ZP, {
                     children: (0, r.jsx)("div", {
                         className: m.hidden,
-                        children: A(
+                        children: R(
                             (e, t, n, i) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(l.animated.img, {

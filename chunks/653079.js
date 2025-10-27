@@ -29,7 +29,7 @@ let g = (e) => {
             (0, r.jsx)("div", {
                 className: b.previewBox,
                 role: "img",
-                "aria-label": h.intl.string(h.t.SZeUdX),
+                "aria-label": h.intl.string(h.t.SZeUdR),
                 children: (0, r.jsxs)("div", {
                     className: b.previewContents,
                     "aria-hidden": !0,
@@ -74,10 +74,10 @@ let g = (e) => {
                                 children: P
                                     ? h.intl.string(h.t.nD78oa)
                                     : y && C
-                                      ? h.intl.string(h.t.hmyYKy)
+                                      ? h.intl.string(h.t.hmyYK8)
                                       : y
-                                        ? h.intl.string(h.t.JY1i0t)
-                                        : h.intl.string(h.t.fEGjVV),
+                                        ? h.intl.string(h.t.JY1i0u)
+                                        : h.intl.string(h.t.fEGjVQ),
                             }),
                     ],
                 }),

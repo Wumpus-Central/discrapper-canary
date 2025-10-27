@@ -46,9 +46,9 @@ function f(e, t) {
         !l.Z.canSubmitFpReport(t))
     ) {
         a.Z.show({
-            title: c.intl.string(c.t["iS/eFB"]),
-            body: c.intl.string(c.t.YrjcgY),
-            confirmText: c.intl.string(c.t.BddRzc),
+            title: c.intl.string(c.t["iS/eFN"]),
+            body: c.intl.string(c.t.YrjcgR),
+            confirmText: c.intl.string(c.t.BddRzS),
         }),
             o.Z.disableFalsePositiveButton(e, t);
         return;

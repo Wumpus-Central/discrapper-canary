@@ -21,7 +21,7 @@ var r,
     c = (((r = {}).NEW = "new"), (r.RECOMMENDED = "recommended"), (r.BETA = "beta"), (r.ALPHA = "alpha"), r);
 let f = {
     [o.fX.SPAM_LINK]: {
-        getDefaultRuleName: () => s.intl.string(s.t.ffR2cH),
+        getDefaultRuleName: () => s.intl.string(s.t.ffR2cM),
         type: o.fX.SPAM_LINK,
         eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 0,
@@ -30,7 +30,7 @@ let f = {
         defaultActionTypes: new Set(),
     },
     [o.fX.KEYWORD]: {
-        getDefaultRuleName: () => s.intl.string(s.t.ffR2cH),
+        getDefaultRuleName: () => s.intl.string(s.t.ffR2cM),
         type: o.fX.KEYWORD,
         eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 6,
@@ -39,7 +39,7 @@ let f = {
         defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE]),
     },
     [o.fX.ML_SPAM]: {
-        getDefaultRuleName: () => s.intl.string(s.t["puF/Oj"]),
+        getDefaultRuleName: () => s.intl.string(s.t["puF/Os"]),
         type: o.fX.ML_SPAM,
         eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,
@@ -48,7 +48,7 @@ let f = {
         defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE]),
     },
     [o.fX.DEFAULT_KEYWORD_LIST]: {
-        getDefaultRuleName: () => s.intl.string(s.t.LnGhZm),
+        getDefaultRuleName: () => s.intl.string(s.t.LnGhZv),
         type: o.fX.DEFAULT_KEYWORD_LIST,
         eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,
@@ -57,7 +57,7 @@ let f = {
         defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE]),
     },
     [o.fX.MENTION_SPAM]: {
-        getDefaultRuleName: () => s.intl.string(s.t.pX7i6u),
+        getDefaultRuleName: () => s.intl.string(s.t.pX7i6n),
         type: o.fX.MENTION_SPAM,
         eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,
@@ -66,7 +66,7 @@ let f = {
         defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE]),
     },
     [o.fX.USER_PROFILE]: {
-        getDefaultRuleName: () => s.intl.string(s.t.q1L2v7),
+        getDefaultRuleName: () => s.intl.string(s.t.q1L2v8),
         type: o.fX.USER_PROFILE,
         eventType: o.q4.GUILD_MEMBER_JOIN_OR_UPDATE,
         perGuildMaxCount: 1,
@@ -75,7 +75,7 @@ let f = {
         defaultActionTypes: new Set([o.jj.QUARANTINE_USER]),
     },
     [o.fX.SERVER_POLICY]: {
-        getDefaultRuleName: () => s.intl.string(s.t.ZQr92N),
+        getDefaultRuleName: () => s.intl.string(s.t.ZQr92M),
         type: o.fX.SERVER_POLICY,
         eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,

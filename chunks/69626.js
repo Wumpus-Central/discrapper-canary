@@ -1,6 +1,6 @@
 n.d(t, {
     Wf: () => R,
-    ZP: () => w,
+    ZP: () => D,
     wz: () => P,
 });
 var r = n(951288),
@@ -122,9 +122,9 @@ function N(e, t, n, i, a) {
                   C(
                       S(
                           {
-                              header: I.intl.string(I.t.pe26Cg),
-                              confirmText: I.intl.string(I.t.VkKicX),
-                              cancelText: I.intl.string(I.t["ETE/oK"]),
+                              header: I.intl.string(I.t.pe26Cj),
+                              confirmText: I.intl.string(I.t.VkKicb),
+                              cancelText: I.intl.string(I.t["ETE/oC"]),
                               onConfirm: () => o(),
                               confirmButtonColor: s.zx.Colors.BRAND,
                               onCloseCallback: () => {
@@ -212,7 +212,7 @@ function P(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     return {
         react: (e, t, n) =>
             (0, r.jsx)(R, {

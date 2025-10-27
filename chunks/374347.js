@@ -39,7 +39,7 @@ function m() {
                         variant: "text-lg/semibold",
                         className: p.advancedTitle,
                         children: [
-                            g.intl.string(g.t.dYRsrq),
+                            g.intl.string(g.t.dYRsrm),
                             (0, i.jsx)(h.Z, {
                                 expanded: e,
                                 className: p.titleCaret,

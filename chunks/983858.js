@@ -13,8 +13,8 @@ var n = t(951288),
     I = t(624138),
     _ = t(388032),
     S = t(607032),
-    g = t(129512),
-    m = t(330065);
+    m = t(129512),
+    g = t(330065);
 let h = [16, 16, 14, 14, 12, 10, 8],
     v = function (e) {
         var i, t;
@@ -29,7 +29,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                 className: y,
             } = e,
             O = (0, o.ZP)(),
-            [P, L] = l.useState(!1);
+            [P, R] = l.useState(!1);
         if (null == r || p)
             return (0, n.jsx)("div", {
                 className: s()(y, S.card, S.cardPlaceholder, {
@@ -37,8 +37,8 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                     [S.cardDisabled]: v,
                 }),
             });
-        let { name: N } = r,
-            R =
+        let { name: L } = r,
+            N =
                 null != r.discoverySplash && /^data:/.test(r.discoverySplash)
                     ? r.discoverySplash
                     : f.ZP.getGuildDiscoverySplashURL({
@@ -46,7 +46,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                           splash: r.discoverySplash,
                           size: 240 * (0, E.x_)(),
                       }),
-            b = (0, u.wj)(O) ? g : m,
+            b = (0, u.wj)(O) ? m : g,
             G =
                 null !=
                 (i = f.ZP.getGuildIconURL({
@@ -91,10 +91,10 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                         (0, n.jsx)("div", {
                             className: S.splash,
                             children: (0, n.jsx)("img", {
-                                src: null != R ? R : b,
+                                src: null != N ? N : b,
                                 alt: "",
                                 className: S.splashImage,
-                                onLoad: () => L(!0),
+                                onLoad: () => R(!0),
                             }),
                         }),
                         (0, n.jsx)("div", {
@@ -130,7 +130,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                 (0, n.jsx)(a.Text, {
                                     className: S.guildName,
                                     variant: "text-md/normal",
-                                    children: (0, n.jsx)("span", { children: N }),
+                                    children: (0, n.jsx)("span", { children: L }),
                                 }),
                             ],
                         }),
@@ -155,8 +155,8 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                             (0, n.jsx)(a.Text, {
                                                 variant: "text-xs/normal",
                                                 children: T
-                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: F })
-                                                    : _.intl.formatToPlainString(_.t["LC+S+v"], { membersOnline: F }),
+                                                    ? _.intl.formatToPlainString(_.t.YMor7k, { count: F })
+                                                    : _.intl.formatToPlainString(_.t["LC+S+m"], { membersOnline: F }),
                                             }),
                                         ],
                                     }),
@@ -168,8 +168,8 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                                             (0, n.jsx)(a.Text, {
                                                 variant: "text-xs/normal",
                                                 children: T
-                                                    ? _.intl.formatToPlainString(_.t.YMor7u, { count: V })
-                                                    : _.intl.formatToPlainString(_.t.zRl6XV, { count: V }),
+                                                    ? _.intl.formatToPlainString(_.t.YMor7k, { count: V })
+                                                    : _.intl.formatToPlainString(_.t.zRl6XR, { count: V }),
                                             }),
                                         ],
                                     }),

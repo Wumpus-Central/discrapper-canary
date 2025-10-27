@@ -32,8 +32,8 @@ var r = n(951288),
     N = n(28964),
     R = n(971128),
     P = n(532428),
-    w = n(583642),
-    D = n(991896),
+    D = n(583642),
+    w = n(991896),
     L = n(611004),
     x = n(778177),
     M = n(165017),
@@ -120,13 +120,13 @@ class W extends i.PureComponent {
             handleDroppedFiles: this.handleDroppedFiles,
             handleDrop: this.handleDrop,
             keyBindingFn: this.handleKeyBind,
-            placeholder: null != n ? n : B.intl.string(B.t["5h0QOD"]),
+            placeholder: null != n ? n : B.intl.string(B.t["5h0QOP"]),
             editorState: t,
             onChange: this.setEditorState,
             role: "combobox",
             ariaExpanded: e,
             ariaControls: e ? H : void 0,
-            ariaLabel: B.intl.string(B.t["5h0QOD"]),
+            ariaLabel: B.intl.string(B.t["5h0QOP"]),
             ariaAutoComplete: "list",
         });
     }
@@ -211,7 +211,7 @@ class W extends i.PureComponent {
             F(this, "renderPopout", () => {
                 let { isSearchFiltersRedesignEnabled: e } = this.props;
                 return e
-                    ? (0, r.jsx)(w.Z, {
+                    ? (0, r.jsx)(D.Z, {
                           ref: this._searchFiltersRedesignPopoutRef,
                           searchContext: this.props.searchContext,
                           navId: H,
@@ -242,7 +242,7 @@ class W extends i.PureComponent {
                         query: t,
                         searchEverywhere: null != r && r,
                     }),
-                        d.uvj.announce(B.intl.string(B.t.pKCxWF)),
+                        d.uvj.announce(B.intl.string(B.t.pKCxWP)),
                         this.handleBlur(!0);
                 }
                 return !0;
@@ -385,7 +385,7 @@ class W extends i.PureComponent {
             }),
             F(this, "setEditorState", (e) => {
                 let { searchContext: t } = this.props;
-                D.Z.updateSearchEditorState(t, e);
+                w.Z.updateSearchEditorState(t, e);
             }),
             F(this, "getPopoutRef", () => {
                 let { current: e } = this._searchFiltersRedesignPopoutRef,
@@ -404,7 +404,7 @@ class W extends i.PureComponent {
                     if ((e.preventDefault(), O.xb(a))) this.blurEditor();
                     else {
                         let e = O.FZ(a);
-                        D.Z.updateSearchEditorState(o, e), this.setState({ focused: !0 });
+                        w.Z.updateSearchEditorState(o, e), this.setState({ focused: !0 });
                     }
                     return !0;
                 }
@@ -480,7 +480,7 @@ function K(e) {
                         query: r,
                         queryString: n,
                     }),
-                    D.Z.updateSearchMode(t, G.QIO.NEWEST),
+                    w.Z.updateSearchMode(t, G.QIO.NEWEST),
                     t.type === G.aib.DMS
                         ? L.Z.fetchCrossDMMessages({
                               searchContext: t,
@@ -511,16 +511,16 @@ function K(e) {
             return null;
         }),
         A = (0, N.nP)({ location: "Search" }),
-        w = (0, N.KS)({ location: "Search" }),
-        x = A || w,
+        D = (0, N.KS)({ location: "Search" }),
+        x = A || D,
         M = (0, C.UX)({ location: "Search" }),
         U = i.useMemo(
             () =>
                 t.type === G.aib.DMS
-                    ? B.intl.string(B.t.m7OrlZ)
+                    ? B.intl.string(B.t.m7OrlR)
                     : (t.type === G.aib.CHANNEL && M) || x
-                      ? B.intl.formatToPlainString(B.t.LDZtFB, { name: I })
-                      : B.intl.string(B.t["5h0QOD"]),
+                      ? B.intl.formatToPlainString(B.t.LDZtFO, { name: I })
+                      : B.intl.string(B.t["5h0QOP"]),
             [t.type, M, x, I],
         );
     return (0, r.jsx)(W, {

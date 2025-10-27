@@ -10,9 +10,9 @@ n.d(t, {
     g_: () => I,
     ho: () => v,
     pG: () => O,
-    rf: () => w,
+    rf: () => D,
     uV: () => x,
-    x3: () => D,
+    x3: () => w,
     z5: () => C,
 });
 var r = n(442837),
@@ -183,14 +183,14 @@ function P(e) {
     }),
         E(h.QP.PROFILE_BANNER);
 }
-function w(e) {
+function D(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
         themeColors: e,
     }),
         E(h.QP.PROFILE_THEME_COLOR);
 }
-function D(e) {
+function w(e) {
     a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(h.QP.PRESET);
 }
 async function L() {

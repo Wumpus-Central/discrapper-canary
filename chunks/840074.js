@@ -1,11 +1,11 @@
-n.d(t, { _: () => o });
+n.d(t, { _: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(812206),
     a = n(531826);
-function o(e) {
-    let { applicationId: t, customId: o, linkId: s, message: c, onShare: u } = e,
+function s(e) {
+    let { applicationId: t, customId: s, linkId: o, message: c, onShare: u } = e,
         d = l.Z.getApplication(t);
     if (null == d) return void u(!1, !1);
     let p = null != (0, a.jA)({ applicationId: d.id }) ? i.u1M : i.z1l,
@@ -13,7 +13,7 @@ function o(e) {
     function h(e) {
         u(e, f);
     }
-    function g() {
+    function m() {
         f = !0;
     }
     (0, i.ZDy)(
@@ -49,10 +49,10 @@ function o(e) {
                     })(
                         {
                             applicationId: t,
-                            customId: o,
-                            linkId: s,
+                            customId: s,
+                            linkId: o,
                             message: c,
-                            onCopyLink: g,
+                            onCopyLink: m,
                             onShare: h,
                         },
                         n,

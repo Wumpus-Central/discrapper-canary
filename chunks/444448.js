@@ -1,4 +1,4 @@
-n.d(t, { d: () => x });
+n.d(t, { d: () => h });
 var i = n(951288),
     r = n(647438),
     l = n(512722),
@@ -14,13 +14,13 @@ var i = n(951288),
     m = n(436585),
     v = n(388032),
     b = n(216215);
-function x(e) {
+function h(e) {
     var t;
     let { handleClose: n } = e,
-        { skusById: l, selectedSkuId: x, application: h } = (0, d.JL)(),
+        { skusById: l, selectedSkuId: h, application: x } = (0, d.JL)(),
         { isGift: j, giftRecipient: C } = (0, c.wD)();
-    a()(null != x, "Expected selectedSkuId"), a()(null != h, "Expected application");
-    let y = l[x];
+    a()(null != h, "Expected selectedSkuId"), a()(null != x, "Expected application");
+    let y = l[h];
     return (a()(null != y, "Expected sku"),
     r.useEffect(() => {
         j ||
@@ -28,9 +28,9 @@ function x(e) {
             n(),
             (0, p.I)({
                 sku: y,
-                application: h,
+                application: x,
             }));
-    }, [j, y, h, n]),
+    }, [j, y, x, n]),
     j)
         ? (0, i.jsxs)(u.C3, {
               children: [
@@ -42,11 +42,11 @@ function x(e) {
                           (0, i.jsx)(s.Heading, {
                               variant: "heading-xxl/bold",
                               className: b.confirmationHeader,
-                              children: v.intl.string(v.t["5glWtb"]),
+                              children: v.intl.string(v.t["5glWta"]),
                           }),
                           (0, i.jsx)(s.Text, {
                               variant: "text-md/normal",
-                              children: v.intl.formatToPlainString(v.t["2VjPT0"], {
+                              children: v.intl.formatToPlainString(v.t["2VjPTw"], {
                                   itemName: y.name,
                                   giftRecipient: null != (t = null == C ? void 0 : C.username) ? t : "your recipient",
                               }),
@@ -54,7 +54,7 @@ function x(e) {
                           (0, i.jsx)("div", { className: b.divider }),
                           (0, i.jsx)(o.zxk, {
                               onClick: n,
-                              text: v.intl.string(v.t.cpT0Cg),
+                              text: v.intl.string(v.t.cpT0Cq),
                               fullWidth: !0,
                           }),
                       ],

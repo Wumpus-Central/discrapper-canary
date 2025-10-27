@@ -16,17 +16,17 @@ class p extends i.Component {
             onClose: async () => {
                 await r(!1);
             },
-            "aria-label": m.intl.string(m.t.BNg1io),
-            title: m.intl.string(m.t.BNg1io),
+            "aria-label": m.intl.string(m.t.BNg1ir),
+            title: m.intl.string(m.t.BNg1ir),
             premiumModalType: c.C.Types.UPGRADE,
             primary: {
                 onClick: () => r(!0),
-                label: m.intl.string(m.t.P3etAg),
+                label: m.intl.string(m.t.P3etAv),
             },
             children:
                 u.ZP.isPremium(e) && !u.ZP.canInstallPremiumApplications(e)
-                    ? m.intl.string(m.t.mKA9OD)
-                    : m.intl.string(m.t.sqSlm5),
+                    ? m.intl.string(m.t.mKA9OJ)
+                    : m.intl.string(m.t.sqSlm4),
         });
     }
 }

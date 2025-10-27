@@ -72,7 +72,7 @@ function O(e, t, n, r) {
                     .css(),
                 ";\n    ",
             ),
-        w = "\n      "
+        D = "\n      "
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR, ": ")
             .concat(A.light.css(), ";\n      ")
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR_HSL, ": ")
@@ -89,7 +89,7 @@ function O(e, t, n, r) {
         .concat(N, "\n      ")
         .concat(R, "\n      ")
         .concat(P, "\n      ")
-        .concat(w, "\n      }");
+        .concat(D, "\n      }");
 }
 function v(e, t) {
     let n = a.b[e.colors[0].token].hex,

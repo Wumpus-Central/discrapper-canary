@@ -9,8 +9,8 @@ var i = n(951288),
     d = n(411477),
     u = n(594174),
     f = n(626135),
-    g = n(74538),
-    _ = n(981631),
+    _ = n(74538),
+    g = n(981631),
     p = n(486324),
     x = n(474936),
     m = n(388032),
@@ -18,14 +18,14 @@ var i = n(951288),
 function h(e) {
     let { analyticsSection: t, type: n } = e,
         h = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
-        A = g.ZP.canUseAnimatedAvatar(h),
-        P = g.ZP.canUsePremiumProfileCustomization(h),
+        A = _.ZP.canUseAnimatedAvatar(h),
+        P = _.ZP.canUsePremiumProfileCustomization(h),
         b = (n === p.pC.BANNER && P) || (n === p.pC.AVATAR && A),
         { sourceAnalyticsLocations: v } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
         (a.useEffect(() => {
             b ||
-                f.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
+                f.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: t,
                     location_stack: v,
                 });
@@ -39,18 +39,18 @@ function h(e) {
         look: o.zx.Looks.LINK,
         color: o.zx.Colors.LINK,
         subscriptionTier: x.Si.TIER_2,
-        textOptions: { textOverride: m.intl.format(m.t["944tDg"], {}) },
+        textOptions: { textOverride: m.intl.format(m.t["944tDv"], {}) },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: t,
-            object: _.qAy.BUTTON_CTA,
+            object: g.qAy.BUTTON_CTA,
         },
         disableShine: !0,
     });
     return (0, i.jsx)(d.Z, {
         reducedRightPadding: !0,
         className: N.nitroPreviewUpsell,
-        text: m.intl.format(m.t.Og8039, {}),
+        text: m.intl.format(m.t.Og803x, {}),
         button: E,
     });
 }

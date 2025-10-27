@@ -67,7 +67,7 @@ function C(e) {
     return y || 0 !== O.length
         ? y
             ? (0, i.jsx)(l.sNh, {
-                  label: m.intl.string(m.t.PlwgdX),
+                  label: m.intl.string(m.t.PlwgdU),
                   id: "handoff",
                   action: () => {
                       (0, u.F)(C);
@@ -90,12 +90,12 @@ function C(e) {
                                       : m.intl.string(m.t.E8euSk)
                                   : o === f.ABu.PLAYSTATION
                                     ? s
-                                        ? m.intl.string(m.t.vzfxmZ)
-                                        : m.intl.string(m.t.QxEYDg)
+                                        ? m.intl.string(m.t.vzfxmY)
+                                        : m.intl.string(m.t.QxEYDj)
                                     : o === f.ABu.PLAYSTATION_STAGING
                                       ? s
-                                          ? m.intl.string(m.t.BDiXtb)
-                                          : m.intl.string(m.t["bhdB9/"])
+                                          ? m.intl.string(m.t.BDiXtV)
+                                          : m.intl.string(m.t["bhdB9+"])
                                       : void 0),
                           action: () =>
                               ((t) => {
@@ -106,7 +106,7 @@ function C(e) {
                                       });
                                   t.type === f.ABu.XBOX
                                       ? (0, l.ZDy)(async () => {
-                                            let { default: t } = await Promise.all([n.e("54569"), n.e("45929")]).then(
+                                            let { default: t } = await Promise.all([n.e("85555"), n.e("45929")]).then(
                                                 n.bind(n, 200623),
                                             );
                                             return (n) => (0, i.jsx)(t, b(g({}, n), { channel: e }));

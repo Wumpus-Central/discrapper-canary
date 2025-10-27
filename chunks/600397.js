@@ -22,7 +22,7 @@ function p(e) {
         })(),
         E = (0, a.q)(t.applicationId);
     if (null == E) return null;
-    let b = f.intl.format(f.t.m7Lwam, {
+    let b = f.intl.format(f.t.m7Lwas, {
         username: m,
         usernameHook: g,
         gameName: E.name,

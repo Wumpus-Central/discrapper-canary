@@ -81,7 +81,7 @@ let I = (e) => {
             S = (0, h.Nx)(),
             C = (0, p.Vi)(),
             N = (0, s.e7)([_.Z], () => _.Z.affinities).length > 0,
-            R = O.intl.string(O.t.YCZldH);
+            R = O.intl.string(O.t.YCZldK);
         return (0, r.jsx)(d.Gt, {
             value: E,
             children: (0, r.jsxs)("div", {

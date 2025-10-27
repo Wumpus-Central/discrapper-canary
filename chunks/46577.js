@@ -20,18 +20,18 @@ var n = r(951288),
 function w(t) {
     let { rule: e, analyticsContext: r, onSelect: w } = t,
         x = (0, p.Vb)(e),
-        v = (function (t) {
+        P = (function (t) {
             let { editingRule: e, setEditingRule: r } = (0, y.V)();
             return (0, n.jsx)(a.sNh, {
                 id: "edit-automod-rule",
-                label: m.intl.string(m.t.uQq6Pz),
+                label: m.intl.string(m.t.uQq6Px),
                 action: () => {
                     r(t);
                 },
                 disabled: null != e,
             });
         })(e),
-        P = (function (t) {
+        v = (function (t) {
             let { setEditingRule: e } = (0, y.V)(),
                 [r, c] = i.useState(!1),
                 { removeRule: s } = (0, f.pH)(t.guildId),
@@ -46,7 +46,7 @@ function w(t) {
                             let t = new u.Hx(e);
                             (0, a.showToast)(
                                 (0, a.createToast)(
-                                    null != (n = t.getAnyErrorMessage()) ? n : m.intl.string(m.t.fEptJC),
+                                    null != (n = t.getAnyErrorMessage()) ? n : m.intl.string(m.t.fEptJP),
                                     a.ToastType.FAILURE,
                                 ),
                             );
@@ -61,7 +61,7 @@ function w(t) {
                     d.features.has(h.GuildFeatures.COMMUNITY);
             return (0, n.jsx)(a.sNh, {
                 id: "delete-automod-rule",
-                label: m.intl.string(m.t["92m/09"]),
+                label: m.intl.string(m.t["92m/01"]),
                 action: w
                     ? () => {
                           (0, a.h7j)((t) => {
@@ -94,8 +94,8 @@ function w(t) {
                                       return t;
                                   })(
                                       {
-                                          header: m.intl.string(m.t.MmpqMD),
-                                          confirmText: m.intl.string(m.t.BddRzc),
+                                          header: m.intl.string(m.t.MmpqMC),
+                                          confirmText: m.intl.string(m.t.BddRzS),
                                           confirmButtonColor: o.zx.Colors.BRAND,
                                       },
                                       t,
@@ -104,7 +104,7 @@ function w(t) {
                                       {
                                           children: (0, n.jsx)(a.Text, {
                                               variant: "text-md/normal",
-                                              children: m.intl.string(m.t.XMdBLy),
+                                              children: m.intl.string(m.t.XMdBLw),
                                           }),
                                       }),
                                   Object.getOwnPropertyDescriptors
@@ -128,7 +128,7 @@ function w(t) {
         })(e),
         T = (0, d.Z)({
             id: e.id,
-            label: m.intl.string(m.t.F64hjo),
+            label: m.intl.string(m.t.F64hjn),
         });
     return (0, n.jsx)(s.Z, {
         context: r,
@@ -136,11 +136,11 @@ function w(t) {
         children: (0, n.jsxs)(a.v2r, {
             navId: "automod-rule-context",
             onClose: c.Zy,
-            "aria-label": m.intl.string(m.t.uT36Sk),
+            "aria-label": m.intl.string(m.t.uT36So),
             onSelect: w,
             children: [
                 (0, n.jsxs)(a.kSQ, {
-                    children: [v, x && P],
+                    children: [P, x && v],
                 }),
                 x && (0, n.jsx)(a.kSQ, { children: T }),
             ],

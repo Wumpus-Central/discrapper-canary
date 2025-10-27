@@ -1,7 +1,7 @@
 n.d(t, {
     RY: () => l,
-    Tb: () => o,
-    ec: () => s,
+    Tb: () => s,
+    ec: () => o,
     iD: () => a,
 }),
     n(388685);
@@ -24,7 +24,7 @@ function a(e) {
         path: e,
     });
 }
-function o(e, t) {
+function s(e, t) {
     let { label: n, isDefault: i } = t;
     r.Z.dispatch({
         type: "INSTALLATION_LOCATION_UPDATE",
@@ -33,7 +33,7 @@ function o(e, t) {
         isDefault: i,
     });
 }
-function s(e) {
+function o(e) {
     let t = {},
         n = 0;
     for (let l of e)

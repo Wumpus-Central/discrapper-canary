@@ -1,7 +1,7 @@
 n.d(t, {
     $Z: () => M,
     Cp: () => k,
-    F_: () => w,
+    F_: () => D,
     Se: () => B,
     ZN: () => j,
     tF: () => G,
@@ -85,14 +85,14 @@ function P(e) {
     let n = null != (t = N[e.charAt(0)]) ? t : null;
     return [e.replace(R, ""), n];
 }
-function w(e) {
+function D(e) {
     let [t, n] = P(e);
     return {
         query: t,
         queryMode: n,
     };
 }
-function D(e) {
+function w(e) {
     let t;
     if (v.Z.isOpen()) return;
     let n = b.Z.getGuildId(),
@@ -168,7 +168,7 @@ function x() {
 function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    D(e), i.Z.dispatch(A({ type: "QUICKSWITCHER_SHOW" }, w(t)));
+    w(e), i.Z.dispatch(A({ type: "QUICKSWITCHER_SHOW" }, D(t)));
 }
 function k() {
     L(I.rMx.QUICKSWITCHER_CLOSED), x();
@@ -178,7 +178,7 @@ function j() {
     v.Z.isOpen() ? k() : M(e);
 }
 function U(e) {
-    i.Z.dispatch(A({ type: "QUICKSWITCHER_SEARCH" }, w(e)));
+    i.Z.dispatch(A({ type: "QUICKSWITCHER_SEARCH" }, D(e)));
 }
 function G(e) {
     i.Z.dispatch({

@@ -144,7 +144,7 @@ function P(e) {
     let { applications: t } = e;
     for (let e of t) b(o.ZP.createFromServer(e));
 }
-function w(e) {
+function D(e) {
     let { recommendations: t } = e;
     t.forEach((e) => {
         e.items.forEach((e) => {
@@ -152,7 +152,7 @@ function w(e) {
         });
     });
 }
-function D(e) {
+function w(e) {
     let { userProfile: t } = e,
         { user: n, application: r } = t;
     n.bot &&
@@ -331,8 +331,8 @@ let z = new K(a.Z, {
     LIBRARY_FETCH_SUCCESS: R,
     STORE_LISTING_FETCH_SUCCESS: Z,
     LOAD_MESSAGES_SUCCESS: F,
-    APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: w,
-    USER_PROFILE_FETCH_SUCCESS: D,
+    APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: D,
+    USER_PROFILE_FETCH_SUCCESS: w,
     APP_DM_OPEN: L,
     USER_AUTHORIZED_APPS_UPDATE: Y,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: W,

@@ -22,11 +22,11 @@ function c(t) {
         } = t,
         [y, A] = s.useState(!1),
         [g, v] = s.useState(""),
-        [x, E] = s.useState(null),
+        [C, E] = s.useState(null),
         Z = s.useRef(null),
         b = async (t) => {
             if ((t.preventDefault(), E(null), A(!0), !1 === p.test(g))) {
-                E(u.intl.string(u.t.hML7Gx)), A(!1);
+                E(u.intl.string(u.t.hML7Gw)), A(!1);
                 return;
             }
             try {
@@ -56,7 +56,7 @@ function c(t) {
             title: m,
             actions: [
                 {
-                    text: u.intl.string(u.t["ETE/oK"]),
+                    text: u.intl.string(u.t["ETE/oC"]),
                     onClick: d,
                     variant: "secondary",
                     disabled: y,
@@ -70,8 +70,8 @@ function c(t) {
             ],
             onClose: d,
             children: (0, i.jsx)(l.oil, {
-                label: u.intl.string(u.t.hvOfmJ),
-                error: x,
+                label: u.intl.string(u.t.hvOfmC),
+                error: C,
                 value: g,
                 onChange: v,
                 inputRef: Z,

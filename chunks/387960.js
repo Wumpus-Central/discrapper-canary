@@ -56,7 +56,7 @@ let x = [],
                           children: [
                               (0, r.jsx)(s.Text, {
                                   variant: "text-md/semibold",
-                                  children: h.intl.string(h.t.WThgAQ),
+                                  children: h.intl.string(h.t.WThgAR),
                               }),
                               (0, r.jsxs)("div", {
                                   className: b.suggestedChannelsHeader,
@@ -64,7 +64,7 @@ let x = [],
                                       (0, r.jsx)(s.Text, {
                                           variant: "text-xs/medium",
                                           color: "text-muted",
-                                          children: h.intl.string(h.t.YtNI8P),
+                                          children: h.intl.string(h.t.YtNI8C),
                                       }),
                                       (0, r.jsxs)(s.P3F, {
                                           className: b.suggestedChannelsDismiss,
@@ -78,7 +78,7 @@ let x = [],
                                               (0, r.jsx)(s.Text, {
                                                   variant: "text-xs/semibold",
                                                   color: "text-brand",
-                                                  children: h.intl.string(h.t.aLqZTk),
+                                                  children: h.intl.string(h.t.aLqZTl),
                                               }),
                                           ],
                                       }),

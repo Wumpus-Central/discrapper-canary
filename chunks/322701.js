@@ -3,30 +3,30 @@ var r = n(951288),
     i = n(647438),
     l = n(924826),
     a = n(91192),
-    o = n(442837),
-    s = n(215569),
+    s = n(442837),
+    o = n(215569),
     c = n(481060),
     u = n(607070),
     d = n(981631),
     p = n(983703);
 let f = function (e) {
-    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: h, sectionFilter: g, footer: m } = e,
-        b = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        _ = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: h, sectionFilter: m, footer: g } = e,
+        _ = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        b = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         E = (0, l.ZP)({
             id: "people",
-            isEnabled: b,
+            isEnabled: _,
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
-        O = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        v = _ || h || O,
-        y = i.useMemo(
+        O = m !== d.pJs.ONLINE && m !== d.pJs.ALL,
+        I = b || h || O,
+        v = i.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : v
+                        : I
                           ? (0, r.jsxs)(
                                 "div",
                                 {
@@ -35,7 +35,7 @@ let f = function (e) {
                                 t,
                             )
                           : (0, r.jsxs)(
-                                s.W,
+                                o.W,
                                 {
                                     transitionAppear: !1,
                                     component: "div",
@@ -44,7 +44,7 @@ let f = function (e) {
                                 t,
                             ),
                 ),
-            [n, f, t, v],
+            [n, f, t, I],
         );
     return (0, r.jsx)(a.bG, {
         navigator: E,
@@ -111,7 +111,7 @@ let f = function (e) {
                     )),
                     (n = n =
                         {
-                            children: [y, m],
+                            children: [v, g],
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

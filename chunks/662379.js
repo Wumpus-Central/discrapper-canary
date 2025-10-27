@@ -36,11 +36,11 @@ function g() {
     let e = [
         {
             imageSrc: d,
-            description: a.intl.string(a.t.lT0ZNT),
+            description: a.intl.string(a.t.lT0ZNS),
         },
         {
             imageSrc: o,
-            description: a.intl.string(a.t.ihN2WV),
+            description: a.intl.string(a.t.ihN2Wb),
         },
         {
             imageSrc: c,
@@ -52,7 +52,7 @@ function g() {
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: a.intl.string(a.t.R9rNIi),
+                children: a.intl.string(a.t.R9rNIk),
             }),
             (0, r.jsx)(i.LZC, { size: 24 }),
             (0, r.jsx)("div", {

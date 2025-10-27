@@ -46,8 +46,8 @@ var i = n(772848),
     N = n(61115),
     R = n(150560),
     P = n(46140),
-    w = n(981631),
-    D = n(49898),
+    D = n(981631),
+    w = n(49898),
     L = n(388032);
 function x(e, t, n) {
     return (
@@ -289,9 +289,9 @@ function K() {
         utmContentCurrent: Object.keys(y.jn).find((t) => y.jn[t] === e),
     });
     let r = null != t ? "#".concat(t) : "";
-    n && c.Z.setState({ selectedTab: D.GlobalDiscoveryTab.QUESTS }),
+    n && c.Z.setState({ selectedTab: w.GlobalDiscoveryTab.QUESTS }),
         (0, f.default)(),
-        (0, d.uL)((n ? w.Z5c.QUEST_HOME : w.Z5c.QUEST_HOME_V2) + r);
+        (0, d.uL)((n ? D.Z5c.QUEST_HOME : D.Z5c.QUEST_HOME_V2) + r);
 }
 let z = 0.2;
 function q(e) {
@@ -336,7 +336,7 @@ function Q(e) {
         null != e &&
             e.timestampSec > 1 &&
             ((0, E.lx)(n.id),
-            p.default.track(w.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            p.default.track(D.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: n.id,
                 source_quest_content: (0, m._b)(o),
                 source_quest_content_cta: l,
@@ -390,7 +390,7 @@ function $(e) {
     let t = J(e),
         n = (0, a.zS)(t);
     null != n &&
-        p.default.track(w.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(D.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -398,7 +398,7 @@ function $(e) {
         h.Z.launch(t, (t) => {
             t ||
                 (0, d.dL)({
-                    pathname: w.Z5c.QUEST_HOME_V2,
+                    pathname: D.Z5c.QUEST_HOME_V2,
                     hash: e,
                 });
         });
@@ -426,7 +426,7 @@ function et(e) {
     let t = ee(e),
         n = (0, a.zS)(t);
     null != n &&
-        p.default.track(w.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(D.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -434,7 +434,7 @@ function et(e) {
         h.Z.launch(t, (t) => {
             t ||
                 (0, d.dL)({
-                    pathname: w.Z5c.QUEST_HOME_V2,
+                    pathname: D.Z5c.QUEST_HOME_V2,
                     hash: e,
                 });
         });

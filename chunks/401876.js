@@ -10,7 +10,7 @@ function o(e) {
         u = (0, a.P8)(t),
         d = (e) => e.toString();
     return (0, r.jsx)(i.PhF, {
-        label: s.intl.string(s.t["59TVxM"]),
+        label: s.intl.string(s.t["59TVxL"]),
         required: !0,
         placeholder: "gaming",
         options: u,

@@ -70,7 +70,7 @@ function j(e) {
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: "text-sm/normal",
-                    children: f.intl.format(f.t["9gsSLi"], {
+                    children: f.intl.format(f.t["9gsSLu"], {
                         helpdeskArticle: m.Z.getArticleURL(g.BhN.LINKED_LOBBIES),
                     }),
                 }),

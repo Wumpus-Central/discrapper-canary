@@ -14,7 +14,7 @@ var i = n(951288),
     g = n(941678);
 function f(e) {
     let { webhook: t, editedWebhook: f, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
-        y = r.useMemo(() => {
+        O = r.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -24,7 +24,7 @@ function f(e) {
                       discriminator: m.fo$,
                   });
         }, [t]),
-        O = r.useCallback(() => {
+        y = r.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
                 return (n) => {
@@ -58,20 +58,20 @@ function f(e) {
                         })({}, n)),
                         (l = l =
                             {
-                                header: b.intl.formatToPlainString(b.t.gBKqZ2, { name: t.name }),
-                                confirmText: b.intl.string(b.t.CMy0Cg),
-                                cancelText: b.intl.string(b.t["ETE/oK"]),
+                                header: b.intl.formatToPlainString(b.t.gBKqZ0, { name: t.name }),
+                                confirmText: b.intl.string(b.t.CMy0Cj),
+                                cancelText: b.intl.string(b.t["ETE/oC"]),
                                 onConfirm: () => {
                                     c.Z.delete(t.guild_id, t.id).catch(() => {
                                         o.Z.show({
-                                            title: b.intl.string(b.t.LpbaFR),
-                                            body: b.intl.string(b.t["/4TwKS"]),
+                                            title: b.intl.string(b.t.LpbaFV),
+                                            body: b.intl.string(b.t["/4TwKf"]),
                                         });
                                     });
                                 },
                                 children: (0, i.jsx)(a.Text, {
                                     variant: "text-md/normal",
-                                    children: b.intl.string(b.t.zO9jrK),
+                                    children: b.intl.string(b.t.zO9jrD),
                                 }),
                             }),
                         Object.getOwnPropertyDescriptors
@@ -103,7 +103,7 @@ function f(e) {
                 "span",
                 {
                     className: g.guildSource,
-                    children: b.intl.format(b.t["H/jJ6e"], {
+                    children: b.intl.format(b.t["H/jJ6R"], {
                         guildHook: () =>
                             (0, i.jsx)(
                                 "span",
@@ -134,7 +134,7 @@ function f(e) {
                                 gap: 16,
                                 children: [
                                     (0, i.jsx)(a.oil, {
-                                        label: b.intl.string(b.t.I1o5gY),
+                                        label: b.intl.string(b.t.I1o5gV),
                                         value: f.name,
                                         onChange: (e) => {
                                             s.Z.updateWebhook({ name: e });
@@ -143,7 +143,7 @@ function f(e) {
                                         error: j.name,
                                     }),
                                     (0, i.jsx)(a.q4e, {
-                                        label: b.intl.string(b.t["4TuWfX"]),
+                                        label: b.intl.string(b.t["4TuWfc"]),
                                         value: f.channel_id,
                                         options: h,
                                         onChange: (e) => {
@@ -154,10 +154,10 @@ function f(e) {
                             }),
                             (0, i.jsx)(a.izJ, { className: g.bottomDivider }),
                             (0, i.jsx)(l.Avr, {
-                                onClick: O,
+                                onClick: y,
                                 size: "sm",
                                 variant: "critical",
-                                text: b.intl.string(b.t.CMy0Cg),
+                                text: b.intl.string(b.t.CMy0Cj),
                             }),
                         ],
                     }),
@@ -179,7 +179,7 @@ function f(e) {
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     name: t.name,
-                                    imageSrc: y,
+                                    imageSrc: O,
                                     details: _,
                                 }),
                                 (0, i.jsx)(d.Z, {

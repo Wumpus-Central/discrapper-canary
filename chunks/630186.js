@@ -11,6 +11,6 @@ class s extends i.ZP {
         return r.Z.get("twitch").icon.lightPNG;
     }
     constructor(e) {
-        super(e), (this.id = "".concat(o).concat(e.url)), (this.name = a.intl.string(a.t.JIPtgo));
+        super(e), (this.id = "".concat(o).concat(e.url)), (this.name = a.intl.string(a.t.JIPtgq));
     }
 }

@@ -15,8 +15,8 @@ function f() {
         children: (0, r.jsx)(c.ZP, {
             value: e,
             onChange: a.Z.updatePersistentCodesEnabled,
-            title: d.intl.string(d.t["opi/XF"]),
-            note: d.intl.format(d.t["/T+ZlJ"], { helpArticle: (0, s.aZ)() }),
+            title: d.intl.string(d.t["opi/XK"]),
+            note: d.intl.format(d.t["/T+ZlP"], { helpArticle: (0, s.aZ)() }),
         }),
     });
 }

@@ -14,7 +14,7 @@ let l = 0;
 function c() {
     return {
         id: l,
-        name: s.intl.string(s.t.E407b2),
+        name: s.intl.string(s.t.E407b7),
     };
 }
 function u(e) {

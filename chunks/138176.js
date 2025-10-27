@@ -4,21 +4,21 @@ n(647438);
 var i = n(907862),
     l = n(481060),
     a = n(100527),
-    o = n(626135),
-    s = n(93237),
+    s = n(626135),
+    o = n(93237),
     c = n(981631),
     u = n(388032),
     d = n(295234);
 let p = (e) => {
     let { targetElementRef: t } = e,
-        p = (0, s.eW)(),
+        p = (0, o.eW)(),
         f = () => {
-            (0, s.ZL)();
+            (0, o.ZL)();
         };
     return (0, r.jsx)(i.J2, {
         targetElementRef: t,
-        title: u.intl.string(u.t.K2DyeX),
-        body: u.intl.string(u.t["JICo+/"]),
+        title: u.intl.string(u.t.K2DyeS),
+        body: u.intl.string(u.t["JICo+3"]),
         graphic: {
             type: "image",
             src: d.Z,
@@ -31,9 +31,9 @@ let p = (e) => {
         caretConfig: { align: "start" },
         actions: [
             {
-                text: u.intl.string(u.t.t2N819),
+                text: u.intl.string(u.t.t2N81y),
                 onClick: () => {
-                    o.default.track(c.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                    s.default.track(c.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                         location_stack: [a.Z.HOME_PAGE_PREMIUM_TAB],
                     }),
                         f(),

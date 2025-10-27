@@ -56,7 +56,7 @@ function h(e) {
               children: (0, r.jsx)(l.zxk, {
                   disabled: !(x && n),
                   variant: "primary",
-                  text: f.intl.string(f.t.yG2pUl),
+                  text: f.intl.string(f.t.yG2pUi),
                   onClick: C,
               }),
           })

@@ -141,14 +141,14 @@ let O = (0, y.createContext)(null),
                     isRequired: a.isRequired,
                 },
             }),
-            w = (0, h.z)(e, { global: !0 });
+            D = (0, h.z)(e, { global: !0 });
         return (
-            delete w.id,
-            delete w.onClick,
+            delete D.id,
+            delete D.onClick,
             y.createElement(
                 "label",
                 {
-                    ...(0, m.d)(w, l, N, P),
+                    ...(0, m.d)(D, l, N, P),
                     ref: t,
                     "data-selected": u || void 0,
                     "data-pressed": O || void 0,

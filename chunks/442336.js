@@ -62,9 +62,9 @@ function b(e) {
             () => [o.ZP.isChannelMuted(t.getGuildId(), t.id), o.ZP.resolvedMessageNotifications(t)],
             [t],
         ),
-        [_, j] = i.useState(!1);
+        [_, O] = i.useState(!1);
     i.useEffect(() => {
-        let e = () => j(!0);
+        let e = () => O(!0);
         return (
             c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
@@ -72,12 +72,12 @@ function b(e) {
             }
         );
     }, []);
-    let O = (e) => {
+    let j = (e) => {
             e.shiftKey
                 ? s.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, d.UE.muted(!b))
-                : j((e) => !e);
+                : O((e) => !e);
         },
-        x = f.intl.string(f.t.h850Sk);
+        x = f.intl.string(f.t.h850Ss);
     return (0, r.jsx)(a.yRy, {
         targetElementRef: n,
         shouldShow: _,
@@ -85,14 +85,14 @@ function b(e) {
         position: "bottom",
         align: "right",
         autoInvert: !1,
-        onRequestClose: () => j(!1),
+        onRequestClose: () => O(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
                 p.Z,
                 m(g({}, e), {
                     channel: t,
                     navId: "channel-context",
-                    label: f.intl.string(f.t.Xm41aW),
+                    label: f.intl.string(f.t.Xm41aV),
                 }),
             ),
         clickTrap: !0,
@@ -102,7 +102,7 @@ function b(e) {
                 u.ZP.Icon,
                 m(g({}, e), {
                     ref: n,
-                    onClick: O,
+                    onClick: j,
                     tooltip: i ? null : x,
                     icon: b || y !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
                     "aria-label": x,

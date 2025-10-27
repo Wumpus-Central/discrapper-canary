@@ -18,8 +18,8 @@ let f = { SMALL_32: 24 },
     m = function (e) {
         let { className: n, iconClassName: t, size: l, channel: i, guild: d, locked: m, hasActiveThreads: p } = e;
         if (null == d) return null;
-        let j = (0, s.EB)(d, 48),
-            b = h[l],
+        let b = (0, s.EB)(d, 48),
+            j = h[l],
             g = f[l],
             y = (0, o.KS)(i, d, {
                 locked: m,
@@ -34,10 +34,10 @@ let f = { SMALL_32: 24 },
                 (0, r.jsx)(a.ZP, {
                     mask: a.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
                     children:
-                        null != j
+                        null != b
                             ? (0, r.jsx)("img", {
                                   alt: "",
-                                  src: j,
+                                  src: b,
                                   className: u.channelGuildIcon,
                                   style: {
                                       width: g,
@@ -47,7 +47,7 @@ let f = { SMALL_32: 24 },
                             : (0, r.jsx)("div", {
                                   className: c()(u.channelGuildIcon, u.acronym),
                                   style: {
-                                      fontSize: O.length - 1 > b.length ? b[b.length - 1] : b[O.length - 1],
+                                      fontSize: O.length - 1 > j.length ? j[j.length - 1] : j[O.length - 1],
                                       width: g,
                                       height: g,
                                   },

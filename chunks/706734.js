@@ -28,18 +28,18 @@ function _(t) {
             type: "image",
             src: E,
         },
-        title: u.intl.string(u.t["41NIIi"]),
+        title: u.intl.string(u.t["41NIIh"]),
         onClose: n,
         transitionState: C,
         actions: [
             {
                 variant: "secondary",
-                text: u.intl.string(u.t["ETE/oK"]),
+                text: u.intl.string(u.t["ETE/oC"]),
                 onClick: n,
             },
             {
                 variant: "primary",
-                text: u.intl.string(u.t["3PatS0"]),
+                text: u.intl.string(u.t["3PatSz"]),
                 disabled: null == _,
                 onClick: e,
             },
@@ -62,7 +62,7 @@ function _(t) {
                     value: A,
                     maxLength: c.mF,
                     onChange: x,
-                    placeholder: u.intl.string(u.t.Q8Rk7O),
+                    placeholder: u.intl.string(u.t.Q8Rk7N),
                 }),
         ],
     });

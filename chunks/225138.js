@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => B,
-    default: () => K,
+    S: () => K,
+    default: () => B,
 });
 var r = n(951288);
 n(647438);
@@ -22,18 +22,18 @@ var i = n(374470),
     h = n(986240),
     v = n(667922),
     j = n(941389),
-    S = n(449751),
-    E = n(749339),
-    P = n(601184),
-    _ = n(6148),
+    E = n(449751),
+    S = n(749339),
+    _ = n(601184),
+    P = n(6148),
     Z = n(519110),
     T = n(759875),
-    w = n(168405),
-    I = n(536639),
+    I = n(168405),
+    w = n(536639),
     A = n(720904),
     N = n(88791),
-    D = n(385302),
-    x = n(873699),
+    x = n(385302),
+    D = n(873699),
     M = n(134323),
     C = n(429260),
     R = n(1626),
@@ -44,7 +44,7 @@ var i = n(374470),
     F = n(481300),
     H = n(975368),
     z = n(388032);
-function K(e) {
+function B(e) {
     var t, n;
     let l,
         o,
@@ -62,8 +62,8 @@ function K(e) {
         { analyticsLocations: h } = (0, c.ZP)([s.Z.MESSAGE_CONTEXT_MENU]),
         v = b,
         j = b.getAttribute("data-type"),
-        S = b.getAttribute("data-id"),
-        E = b.getAttribute("data-name");
+        E = b.getAttribute("data-id"),
+        S = b.getAttribute("data-name");
     if (null != p) o = l = u = p.url;
     else
         for (; (0, i.kK)(v); )
@@ -79,17 +79,17 @@ function K(e) {
                             "" !== v.getAttribute("data-safe-src") &&
                             (u = v.getAttribute("data-safe-src")))),
                 (v = v.parentNode);
-    let P = null != (n = null == (t = document.getSelection()) ? void 0 : t.toString()) ? n : "";
+    let _ = null != (n = null == (t = document.getSelection()) ? void 0 : t.toString()) ? n : "";
     return (0, r.jsx)(c.Gt, {
         value: h,
-        children: B({
+        children: K({
             message: g,
             channel: f,
             mediaItem: p,
-            textSelection: P,
+            textSelection: _,
             favoriteableType: j,
-            favoriteableId: S,
-            favoriteableName: E,
+            favoriteableId: E,
+            favoriteableName: S,
             itemHref: l,
             itemSrc: o,
             itemSafeSrc: u,
@@ -99,12 +99,12 @@ function K(e) {
             onSelect: y,
             onClose: a.Zy,
             navId: "message",
-            ariaLabel: z.intl.string(z.t.ChPNkJ),
+            ariaLabel: z.intl.string(z.t.ChPNkN),
             shouldHideMediaOptions: O,
         }),
     });
 }
-function B(e) {
+function K(e) {
     let {
             message: t,
             channel: n,
@@ -112,8 +112,8 @@ function B(e) {
             textSelection: a,
             favoriteableType: s,
             favoriteableId: c,
-            favoriteableName: K,
-            itemHref: B,
+            favoriteableName: B,
+            itemHref: K,
             itemSrc: X,
             itemSafeSrc: W,
             itemTextContent: q,
@@ -129,46 +129,46 @@ function B(e) {
         er = (0, b.Z)(a),
         ei = (0, A.Z)(t, n),
         el = (0, v.Z)(t, n),
-        ea = (0, _.Z)(t, n),
-        eo = (0, I.Z)(t, n),
+        ea = (0, P.Z)(t, n),
+        eo = (0, w.Z)(t, n),
         es = (0, Z.Z)({
             type: s,
             id: c,
-            name: K,
+            name: B,
         }),
         ec = (0, R.Z)(t, n),
-        eu = (0, w.Z)(t, n),
+        eu = (0, I.Z)(t, n),
         ed = (0, N.Z)(t),
         ef = (0, j.Z)(t, n),
-        eg = (0, S.Z)(t, n),
-        eb = (0, D.Z)(t, n),
-        ep = (0, x.Z)(t, n),
-        eO = (0, P.Z)(t, n),
+        eg = (0, E.Z)(t, n),
+        eb = (0, x.Z)(t, n),
+        ep = (0, D.Z)(t, n),
+        eO = (0, _.Z)(t, n),
         ey = (0, C.ZP)(t),
         em = (0, C.wY)(t),
         eh = (0, C.eH)(t),
         ev = (0, L.Z)(t, n),
-        ej = (0, g.Z)(null != B ? B : X, q, t, { shouldHideMediaOptions: et }),
-        eS = (0, f.Z)(W, t, {
+        ej = (0, g.Z)(null != K ? K : X, q, t, { shouldHideMediaOptions: et }),
+        eE = (0, f.Z)(W, t, {
             shouldHideMediaOptions: et,
             contentType: null == i ? void 0 : i.contentType,
             originalContentType: null == i ? void 0 : i.originalContentType,
         }),
-        eE = (0, F.Z)(t, i),
-        eP = (0, u.Z)({
+        eS = (0, F.Z)(t, i),
+        e_ = (0, u.Z)({
             id: t.id,
-            label: z.intl.string(z.t.zBoHlZ),
+            label: z.intl.string(z.t.zBoHlf),
             shiftId: "".concat(t.channel_id, "-").concat(t.id),
         }),
-        e_ = (0, M.Z)(t, n),
+        eP = (0, M.Z)(t, n),
         eZ = (0, T.Z)(t, n),
         eT = (0, k.Z)(t, n),
-        ew = (0, y.Z)(a, n.getGuildId()),
-        eI = (0, m.Z)(t),
-        eA = (0, E.Z)(t),
+        eI = (0, y.Z)(a, n.getGuildId()),
+        ew = (0, m.Z)(t),
+        eA = (0, S.Z)(t),
         eN = (0, G.Z)(t, n),
-        eD = (0, H.Z)(t),
-        ex = (0, h.Z)(t, n),
+        ex = (0, H.Z)(t),
+        eD = (0, h.Z)(t, n),
         eM = (0, O.Z)({
             commandType: o.yU.MESSAGE,
             commandTargetId: t.id,
@@ -187,22 +187,22 @@ function B(e) {
             (0, r.jsx)(l.kSQ, { children: en }),
             (0, r.jsx)(l.kSQ, { children: er }),
             (0, r.jsxs)(l.kSQ, {
-                children: ["" === a ? ei : null, el, ed, ex],
+                children: ["" === a ? ei : null, el, ed, eD],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [ea, e_, eZ, eT],
+                children: [ea, eP, eZ, eT],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [eA, eN, eo, eI, eM, ec, eu, ef, eg, ev, eR, eC],
+                children: [eA, eN, eo, ew, eM, ec, eu, ef, eg, ev, eR, eC],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [ep, eb, eO, V && ey, V && eh, em],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [es, ew, eS, eE, eD],
+                children: [es, eI, eE, eS, ex],
             }),
             (0, r.jsx)(l.kSQ, { children: ej }),
-            (0, r.jsx)(l.kSQ, { children: eP }),
+            (0, r.jsx)(l.kSQ, { children: e_ }),
         ],
     });
 }

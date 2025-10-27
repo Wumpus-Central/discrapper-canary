@@ -1,6 +1,6 @@
 n.d(t, {
     bG: () => a,
-    bY: () => o,
+    bY: () => s,
 });
 var r,
     i = n(358085),
@@ -12,7 +12,7 @@ var r,
         (r[(r.SERIOUS = 2)] = "SERIOUS"),
         (r[(r.CRITICAL = 3)] = "CRITICAL"),
         r);
-function o() {
+function s() {
     var e = l.Z.getRawThermalState();
     if (null == e) return -1;
     if ((0, i.isIOS)()) return e;

@@ -22,7 +22,7 @@ function u() {
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 className: l.upsellText,
-                children: s.intl.format(s.t.f5VHKi, {}),
+                children: s.intl.format(s.t.f5VHKm, {}),
             }),
         ],
     });

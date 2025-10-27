@@ -12,8 +12,8 @@ function _(t) {
     var e, n;
     let { emailToken: _, onClose: d, onBack: A, onNext: x, transitionState: C } = t,
         [g, p] = r.useState(""),
-        [S, N] = r.useState(""),
-        [f, m] = r.useState(!1),
+        [S, f] = r.useState(""),
+        [N, m] = r.useState(!1),
         h = (0, i.e7)([o.Z], () => o.Z.getErrors()),
         T = r.useRef(null);
     async function v(t) {
@@ -41,26 +41,26 @@ function _(t) {
                 type: "image",
                 src: E,
             },
-            title: u.intl.string(u.t.p3280t),
-            subtitle: u.intl.string(u.t["1k44EB"]),
+            title: u.intl.string(u.t.p3280r),
+            subtitle: u.intl.string(u.t["1k44EL"]),
             onClose: d,
             transitionState: C,
             actions: [
                 null != A
                     ? {
                           variant: "secondary",
-                          text: u.intl.string(u.t["13/7kZ"]),
+                          text: u.intl.string(u.t["13/7kX"]),
                           onClick: A,
                       }
                     : {
                           variant: "secondary",
-                          text: u.intl.string(u.t["ETE/oK"]),
+                          text: u.intl.string(u.t["ETE/oC"]),
                           onClick: d,
                       },
                 {
                     variant: "primary",
-                    text: u.intl.string(u.t.i4jeWV),
-                    loading: f,
+                    text: u.intl.string(u.t.i4jeWR),
+                    loading: N,
                     onClick: v,
                 },
             ],
@@ -68,7 +68,7 @@ function _(t) {
                 gap: 20,
                 children: [
                     (0, a.jsx)(l.oil, {
-                        label: u.intl.string(u.t["w/qqKC"]),
+                        label: u.intl.string(u.t["w/qqKK"]),
                         error: null == h || null == (e = h.email) ? void 0 : e[0],
                         type: "email",
                         value: g,
@@ -76,11 +76,11 @@ function _(t) {
                         inputRef: T,
                     }),
                     (0, a.jsx)(l.oil, {
-                        label: u.intl.string(u.t.TmdnJy),
+                        label: u.intl.string(u.t.TmdnJ3),
                         error: null == h || null == (n = h.password) ? void 0 : n[0],
                         type: "password",
                         value: S,
-                        onChange: N,
+                        onChange: f,
                     }),
                 ],
             }),

@@ -41,7 +41,7 @@ function f(e) {
                 null != m &&
                 (0, i.jsx)(c.aML, {
                     "data-migration-pending": !0,
-                    text: C && !f ? d.intl.string(d.t.YSDH9v) : void 0,
+                    text: C && !f ? d.intl.string(d.t.YSDH9n) : void 0,
                     children: (e) => {
                         var t, n;
                         return (0, i.jsx)(

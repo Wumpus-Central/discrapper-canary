@@ -10,7 +10,7 @@ function s(e) {
     let t = (0, l.e7)([c.Z], () => c.Z.getVoiceParticipantsHidden(e));
     return (0, r.jsx)(i.S89, {
         id: "no-video-hide",
-        label: a.intl.string(a.t.BL8ss7),
+        label: a.intl.string(a.t.BL8ss6),
         checked: !t,
         action: () => o.Z.toggleVoiceParticipantsHidden(e, !t),
     });

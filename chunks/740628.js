@@ -124,7 +124,7 @@ function b(e) {
                       (0, l.jsx)("div", { className: v.emptyIconStreamerMode }),
                       (0, l.jsx)("div", {
                           className: v.emptyText,
-                          children: h.intl.string(h.t.Br1ls7),
+                          children: h.intl.string(h.t.Br1ls3),
                       }),
                   ],
               }),

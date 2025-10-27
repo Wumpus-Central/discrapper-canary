@@ -17,10 +17,10 @@ let b = (e) => {
         let { channel: t } = e;
         return (0, p.m$)({ channelId: t.id })
             ? (0, r.jsx)(l.u, {
-                  text: g.intl.string(g.t.QyZ4TU),
+                  text: g.intl.string(g.t.QyZ4Td),
                   children: (0, r.jsx)(o.tQf, {
                       size: "xs",
-                      "aria-label": g.intl.string(g.t.VHXh8f),
+                      "aria-label": g.intl.string(g.t.VHXh8a),
                       color: o.TVs.colors.INTERACTIVE_NORMAL,
                   }),
               })
@@ -34,7 +34,7 @@ let b = (e) => {
             children: [
                 (0, r.jsx)(l.u, {
                     asContainer: !0,
-                    text: g.intl.string(g.t["5Q9+/P"]),
+                    text: g.intl.string(g.t["5Q9+/L"]),
                     position: "bottom",
                     children: (0, r.jsxs)(o.P3F, {
                         className: m.hoverableContainer,
@@ -119,7 +119,7 @@ let b = (e) => {
                                 location: s.Z.HEADER_BAR,
                             });
                         },
-                        "aria-label": g.intl.string(g.t["5Q9+/P"]),
+                        "aria-label": g.intl.string(g.t["5Q9+/L"]),
                         children: [
                             (0, r.jsx)(u.Z, {
                                 className: m.gdmIcon,

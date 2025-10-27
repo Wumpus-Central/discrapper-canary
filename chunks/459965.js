@@ -26,12 +26,12 @@ function d(e, t, n) {
                 null != e.paymentGateway &&
                 !n &&
                 (a.Z.show({
-                    title: u.intl.formatToPlainString(u.t["6mIX6u"], { paymentGatewayName: c.Vz[e.paymentGateway] }),
-                    body: u.intl.format(u.t.EOa8en, {
+                    title: u.intl.formatToPlainString(u.t["6mIX6s"], { paymentGatewayName: c.Vz[e.paymentGateway] }),
+                    body: u.intl.format(u.t.EOa8ei, {
                         paymentGatewayName: c.Vz[e.paymentGateway],
                         subscriptionManagementLink: (0, l.JE)(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                     }),
-                    confirmText: u.intl.string(u.t.BddRzc),
+                    confirmText: u.intl.string(u.t.BddRzS),
                 }),
                 t());
         }, [e]);

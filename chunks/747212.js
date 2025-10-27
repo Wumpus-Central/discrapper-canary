@@ -11,7 +11,7 @@ let o = (e) => {
     return (0, i.jsx)("div", {
         className: a.formSection,
         children: (0, i.jsx)(l.VcW, {
-            label: s.intl.string(s.t.FGjMZW),
+            label: s.intl.string(s.t.FGjMZS),
             helperText: c,
             isDisabled: o,
             options: d,

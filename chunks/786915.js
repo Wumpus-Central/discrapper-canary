@@ -99,7 +99,7 @@ function y(e) {
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
         L = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
         D = null == t || j ? o.ejJ : o.gQj,
-        k = null != t ? b.intl.string(b.t["OzOM/v"]) : b.intl.string(b.t["6F9ivr"]);
+        k = null != t ? b.intl.string(b.t["OzOM/q"]) : b.intl.string(b.t["6F9ivu"]);
     return null != L && E
         ? (0, i.jsx)(m.Z, {
               onClick: () => {

@@ -1,9 +1,9 @@
-n.d(t, { $: () => o });
+n.d(t, { $: () => s });
 var r = n(544891),
     i = n(570140),
     l = n(34756),
     a = n(981631);
-async function o(e) {
+async function s(e) {
     i.Z.dispatch({
         type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_START",
         applicationId: e,

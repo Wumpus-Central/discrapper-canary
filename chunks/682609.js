@@ -30,7 +30,7 @@ function f(e) {
             }
             return o;
         })(e, ["channel", "onClose"]);
-    let s = a.intl.format(a.t.AVVUsb, {
+    let s = a.intl.format(a.t.AVVUse, {
         onLearnMore: function () {
             n(), (0, o.z)();
         },
@@ -65,7 +65,7 @@ function f(e) {
             {
                 artURL: u.Z,
                 type: l.cd.MESSAGE_LENGTH_UPSELL,
-                title: a.intl.string(a.t.SeL3eX),
+                title: a.intl.string(a.t.SeL3ec),
                 body: s,
                 glowUp: s,
                 analyticsSource: {

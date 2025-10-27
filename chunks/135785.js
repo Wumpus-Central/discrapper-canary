@@ -46,11 +46,11 @@ let m = (e) => {
                     variant: "text-sm/medium",
                     color: n,
                     children: O
-                        ? p.intl.format(p.t["tYuv+f"], {
+                        ? p.intl.format(p.t["tYuv+T"], {
                               helpdeskArticle: c.Z.getArticleURL(_.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: y,
                           })
-                        : p.intl.format(p.t.xHRgU1, {
+                        : p.intl.format(p.t.xHRgU2, {
                               subscriptionName: t,
                               onSubscriptionsClick: y,
                           }),

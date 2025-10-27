@@ -199,30 +199,30 @@ function R(e, t) {
     switch (e) {
         case l.Z.ReasonCodes.TIMEOUT:
             let n = s.Z.getApplication(t);
-            if (null != n) return g.intl.formatToPlainString(g.t.u2D2Ul, { applicationName: n.name });
-            return g.intl.string(g.t["vGU8+v"]);
+            if (null != n) return g.intl.formatToPlainString(g.t.u2D2Uj, { applicationName: n.name });
+            return g.intl.string(g.t["vGU8+r"]);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT:
-            return g.intl.string(g.t.Gyzcra);
+            return g.intl.string(g.t.GyzcrS);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_VERIFICATION_LEVEL:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_PERMISSIONS:
-            return g.intl.string(g.t.hHGrW1);
+            return g.intl.string(g.t.hHGrWz);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_CHANNEL:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_GUILD:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_TYPE:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_NO_AFK:
-            return g.intl.string(g.t.j29zCg);
+            return g.intl.string(g.t.j29zCr);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_AGE_GATE:
             return g.intl.string(g.t["4WuFRE"]);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_DEV_PREVIEW_GUILD_SIZE:
-            return g.intl.string(g.t.RvkXdX);
+            return g.intl.string(g.t.RvkXdb);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_SUPPORTED:
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_RELEASED:
-            return g.intl.string(g.t.uGDCc3);
+            return g.intl.string(g.t.uGDCcw);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_NO_ACCESS_TO_ACTIVITY:
             return g.intl.string(g.t.WjNAAA);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_LOCATION_TYPE:
-            return g.intl.string(g.t.PtobXV);
+            return g.intl.string(g.t.PtobXW);
         case l.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION:
-            return g.intl.string(g.t.PrHIMz);
+            return g.intl.string(g.t.PrHIM5);
     }
 }

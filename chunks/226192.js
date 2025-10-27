@@ -180,17 +180,17 @@ function p(e) {
             u(
                 l(
                     {
-                        header: o.intl.string(o.t.wLGrjI),
-                        confirmText: o.intl.string(o.t["cY+Ooa"]),
+                        header: o.intl.string(o.t.wLGrjB),
+                        confirmText: o.intl.string(o.t["cY+Oob"]),
                         onConfirm: e,
-                        cancelText: o.intl.string(o.t["ETE/oK"]),
+                        cancelText: o.intl.string(o.t["ETE/oC"]),
                     },
                     t,
                 ),
                 {
                     children: (0, r.jsx)(i.Text, {
                         variant: "text-md/normal",
-                        children: o.intl.string(o.t.arYQ2d),
+                        children: o.intl.string(o.t.arYQ2X),
                     }),
                 },
             ),

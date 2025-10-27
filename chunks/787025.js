@@ -88,7 +88,7 @@ function g(e, t) {
 function E(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
     return (
-        (0, l.Tt)({ location: u.intl.string(u.t["3S249/"]) }),
+        (0, l.Tt)({ location: u.intl.string(u.t["3S2494"]) }),
         (0, r.jsx)(s.f6W, {
             theme: c.BRd.DARK,
             children: (e) =>

@@ -4,15 +4,15 @@ n(647438);
 var i = n(755721),
     l = n(481060),
     a = n(509212),
-    o = n(113434),
-    s = n(670362),
+    s = n(113434),
+    o = n(670362),
     c = n(388032),
     u = n(477813);
 let d = function (e) {
     let { onChange: t, optionClassName: n, selectedFilters: d } = e,
-        p = (0, o.N8)();
-    return (0, r.jsx)(s.Z, {
-        renderPopout: (e, o) => {
+        p = (0, s.N8)();
+    return (0, r.jsx)(o.Z, {
+        renderPopout: (e, s) => {
             let { closePopout: f } = e;
             return (0, r.jsxs)("div", {
                 children: [
@@ -22,11 +22,11 @@ let d = function (e) {
                             {
                                 className: u.filterOptionGroup,
                                 children: [
-                                    (0, r.jsx)(s.g, {
-                                        id: o,
+                                    (0, r.jsx)(o.g, {
+                                        id: s,
                                         children: e.heading,
                                     }),
-                                    e.options.map((e, o) =>
+                                    e.options.map((e, s) =>
                                         (0, r.jsx)(
                                             i.$q,
                                             {
@@ -47,7 +47,7 @@ let d = function (e) {
                                                     children: (0, a.Nt)(e.filter),
                                                 }),
                                             },
-                                            o,
+                                            s,
                                         ),
                                     ),
                                 ],
@@ -63,7 +63,7 @@ let d = function (e) {
                                 t([]), f();
                             },
                             size: "sm",
-                            text: c.intl.string(c.t.VkKicX),
+                            text: c.intl.string(c.t.VkKicb),
                             variant: "secondary",
                         }),
                     }),

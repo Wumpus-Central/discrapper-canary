@@ -37,27 +37,27 @@ let x = (e) => {
                 overviewFooter: p,
                 onNextPressed: f,
                 onPrevPressed: v,
-                onComplete: j,
-                sequencerClassName: N,
+                onComplete: N,
+                sequencerClassName: j,
                 initialStep: b = 0,
                 forceStep: C,
-                submitting: S = !1,
-                autoCloseOnComplete: E = !0,
+                submitting: E = !1,
+                autoCloseOnComplete: S = !0,
             } = e,
             [I, O] = l.useState([]),
-            [M, L] = l.useState(b),
+            [L, M] = l.useState(b),
             w = (0, c.Dt)();
         l.useEffect(() => {
             O([...Array(n.length).keys()]);
         }, [n.length]);
-        let y = null != C ? C : M,
-            _ = n[y],
-            P = 0 === y,
+        let y = null != C ? C : L,
+            P = n[y],
+            _ = 0 === y,
             T = y === n.length - 1,
-            k = null != g ? g : d.intl.string(d.t.i4jeWV),
+            k = null != g ? g : d.intl.string(d.t.i4jeWR),
             A = l.useCallback(() => {
-                null == v || v(), L(y - 1);
-            }, [v, y, L]);
+                null == v || v(), M(y - 1);
+            }, [v, y, M]);
         return (0, s.jsxs)(o.Y0X, {
             size: o.CgR.MEDIUM,
             className: a()(u.container, t),
@@ -112,9 +112,9 @@ let x = (e) => {
                                     steps: I,
                                     sideMargin: 24,
                                     verticalMargin: 24,
-                                    className: a()(u.sequencer, N),
+                                    className: a()(u.sequencer, j),
                                     innerClassName: u.innerSequencer,
-                                    children: _.modalContent,
+                                    children: P.modalContent,
                                 }),
                             ],
                         }),
@@ -123,22 +123,22 @@ let x = (e) => {
                             children: [
                                 (0, s.jsx)(o.Button, {
                                     variant: "active",
-                                    text: T ? k : d.intl.string(d.t.PDTjLC),
+                                    text: T ? k : d.intl.string(d.t.PDTjLN),
                                     type: "submit",
-                                    loading: S,
+                                    loading: E,
                                     onClick: () => {
-                                        T ? (j(), E && h()) : (null == f || f(), L(y + 1));
+                                        T ? (N(), S && h()) : (null == f || f(), M(y + 1));
                                     },
-                                    disabled: _.disableNextStep,
+                                    disabled: P.disableNextStep,
                                 }),
-                                P
+                                _
                                     ? null
                                     : (0, s.jsx)(r.zx, {
                                           look: r.zx.Looks.LINK,
                                           color: r.zx.Colors.PRIMARY,
                                           size: r.zx.Sizes.MIN,
                                           onClick: A,
-                                          children: d.intl.string(d.t["13/7kZ"]),
+                                          children: d.intl.string(d.t["13/7kX"]),
                                       }),
                             ],
                         }),

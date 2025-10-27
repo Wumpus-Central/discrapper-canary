@@ -5,8 +5,8 @@ n.d(t, {
 var i,
     l = n(493683),
     s = n(904245),
-    a = n(710845),
-    r = n(592125),
+    r = n(710845),
+    a = n(592125),
     o = n(70956),
     d = n(651655);
 let u = +o.Z.Millis.SECOND + 10;
@@ -28,7 +28,7 @@ class g extends d.Z {
             case 1:
                 l.Z.ensurePrivateChannel(e.user.id).then(
                     (l) => {
-                        let s = r.Z.getChannel(l);
+                        let s = a.Z.getChannel(l);
                         null != s && this._sendInvite(s, e.inviteKey, n, i, t);
                     },
                     () => t(null, !1),
@@ -36,7 +36,7 @@ class g extends d.Z {
         }
     }
     constructor() {
-        super(new a.Z("InviteQueue"), u);
+        super(new r.Z("InviteQueue"), u);
     }
 }
 let h = new g();

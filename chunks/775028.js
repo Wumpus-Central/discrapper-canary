@@ -1,4 +1,4 @@
-t.d(n, { Z: () => G }), t(388685), t(539854), t(472816), t(794429);
+t.d(n, { Z: () => W }), t(388685), t(539854), t(472816), t(794429);
 var l = t(951288),
     r = t(647438),
     i = t(120356),
@@ -121,7 +121,7 @@ function L(e) {
                         (0, l.jsx)(m.Text, {
                             color: "text-muted",
                             variant: "text-xs/medium",
-                            children: S.intl.string(S.t.mSQwnZ),
+                            children: S.intl.string(S.t.mSQwnW),
                         }),
                     ],
                 }),
@@ -155,8 +155,8 @@ let M = r.memo(function () {
             } = e,
             { isSubscriptionGated: L } = (0, g.Z)(n.id),
             U = (0, I.Mf)(i.id, n.id, r.id),
-            G = (0, I.t4)(i.id, n.id, r.id),
-            W = (0, I.EH)(i.id, r.id),
+            W = (0, I.t4)(i.id, n.id, r.id),
+            G = (0, I.EH)(i.id, r.id),
             F = (0, o.e7)([O.Z], () => O.Z.getActiveThreadCount(i.id, n.id)),
             q = (0, o.e7)([b.Z], () => b.Z.shouldIndicateNewChannel(i.id, n.id)),
             z = (function (e, n) {
@@ -170,7 +170,7 @@ let M = r.memo(function () {
                                 {
                                     variant: "text-xs/normal",
                                     className: T.channelSubtitle,
-                                    children: S.intl.format(S.t.z0qMLy, { count: n }),
+                                    children: S.intl.format(S.t.z0qML2, { count: n }),
                                 },
                                 "thread-count",
                             ),
@@ -208,26 +208,26 @@ let M = r.memo(function () {
                         .slice(0, -1)
                 );
             })(n, F),
-            V = S.intl.string(S.t.vetGQk);
+            V = S.intl.string(S.t.vetGQs);
         n.isGuildStageVoice() || n.isGuildVoice()
-            ? (V = S.intl.string(S.t.VJlc0d))
-            : n.isForumLikeChannel() && (V = S.intl.string(S.t["3xjX0d"]));
-        let X = G ? "text-muted" : "text-default",
-            Q = (0, m.dQu)(G ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
+            ? (V = S.intl.string(S.t.VJlc0S))
+            : n.isForumLikeChannel() && (V = S.intl.string(S.t["3xjX0U"]));
+        let X = W ? "text-muted" : "text-default",
+            Q = (0, m.dQu)(W ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.u, {
-                    text: W,
+                    text: G,
                     delay: 500,
                     position: w,
                     children: (0, l.jsxs)(m.P3F, {
                         className: a()(T.channelRow, {
                             [T.firstChannel]: s,
                             [T.lastChannel]: f,
-                            [T.disabled]: G,
+                            [T.disabled]: W,
                         }),
                         onClick: (e) => {
-                            if (!G) return e.stopPropagation(), Z(i.id, n.id, r.id), !0;
+                            if (!W) return e.stopPropagation(), Z(i.id, n.id, r.id), !0;
                         },
                         onContextMenu: (e) => {
                             n.isGuildVocal()
@@ -332,7 +332,7 @@ let M = r.memo(function () {
                                         "aria-checked": U,
                                         value: U,
                                         type: u.M0.INVERTED,
-                                        disabled: G,
+                                        disabled: W,
                                         innerClassName: T.checkboxInner,
                                         displayOnly: !0,
                                     }),
@@ -345,7 +345,7 @@ let M = r.memo(function () {
             ],
         });
     });
-function G(e) {
+function W(e) {
     let { categories: n, guild: t, className: i, innerClassName: o, hasSidebar: c } = e,
         { onChannelClick: d } = (0, Z.Z)(t.id),
         u = (0, f.Nj)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,

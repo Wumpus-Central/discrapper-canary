@@ -8,13 +8,13 @@ var r = n(951288),
     a = n(1596),
     d = n(681678),
     u = n(138201),
-    f = n(699516),
-    O = n(626135),
+    O = n(699516),
+    f = n(626135),
     m = n(63063),
     j = n(5192),
-    p = n(240515),
-    x = n(858380),
-    g = n(981631),
+    g = n(240515),
+    p = n(858380),
+    x = n(981631),
     b = n(388032),
     I = n(230784);
 function h(t) {
@@ -62,7 +62,7 @@ function E(t, e) {
 }
 function y(t) {
     let { user: e, onBlock: n, onIgnore: i, location: o, disallowIgnore: s, guildId: d, channelId: y } = t,
-        N = (0, l.e7)([f.Z], () => f.Z.isIgnored(e.id));
+        N = (0, l.e7)([O.Z], () => O.Z.isIgnored(e.id));
     return (0, r.jsxs)("div", {
         className: I.container,
         children: [
@@ -93,7 +93,7 @@ function y(t) {
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/medium",
                                 color: "header-secondary",
-                                children: b.intl.string(b.t.S70joq),
+                                children: b.intl.string(b.t.S70jou),
                             }),
                         ],
                     }),
@@ -106,22 +106,22 @@ function y(t) {
                       className: I.otherOptions,
                       children: [
                           (0, r.jsx)(u.rT, {
-                              title: b.intl.string(b.t["+BJTcH"]),
+                              title: b.intl.string(b.t["+BJTcB"]),
                               children: (0, r.jsx)(u.JZ, {
-                                  title: b.intl.string(b.t.hC8tcX),
-                                  description: b.intl.string(b.t.If89rK),
+                                  title: b.intl.string(b.t.hC8tcc),
+                                  description: b.intl.string(b.t.If89rE),
                                   titleVariant: "text-md/medium",
                                   descriptionVariant: "text-xs/medium",
-                                  buttonText: b.intl.string(b.t.mxJOd3),
+                                  buttonText: b.intl.string(b.t.mxJOd9),
                                   onButtonPress: () => {
-                                      O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
-                                          action: x.l.GOTO_IGNORE,
+                                      f.default.track(x.rMx.USER_REMEDIATION_ACTION, {
+                                          action: p.l.GOTO_IGNORE,
                                           location: o,
                                       }),
                                           (0, c.pTH)(),
                                           (0, c.h7j)((t) =>
                                               (0, r.jsx)(
-                                                  p.default,
+                                                  g.default,
                                                   E(h({}, t), {
                                                       user: e,
                                                       guildId: d,
@@ -138,8 +138,8 @@ function y(t) {
                           (0, r.jsx)(c.Text, {
                               variant: "text-sm/medium",
                               className: I.featureGuide,
-                              children: b.intl.format(b.t.DJN6eX, {
-                                  articleLink: m.Z.getArticleURL(g.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                              children: b.intl.format(b.t.DJN6eZ, {
+                                  articleLink: m.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
                               }),
                           }),
                       ],
@@ -154,11 +154,11 @@ function N(t) {
             onCancel: l,
             onIgnore: a,
             location: u = "ContextMenu",
-            disallowIgnore: f,
+            disallowIgnore: O,
             guildId: m,
             channelId: j,
         } = t,
-        p = (function (t, e) {
+        g = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -182,8 +182,8 @@ function N(t) {
     return (
         i.useLayoutEffect(
             () => () => {
-                O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
-                    action: x.l.DISMISS_BLOCK,
+                f.default.track(x.rMx.USER_REMEDIATION_ACTION, {
+                    action: p.l.DISMISS_BLOCK,
                     location: u,
                 });
             },
@@ -194,11 +194,11 @@ function N(t) {
             E(
                 h(
                     {
-                        confirmText: b.intl.string(b.t.l4EmaW),
-                        cancelText: b.intl.string(b.t["ETE/oK"]),
+                        confirmText: b.intl.string(b.t.l4Emac),
+                        cancelText: b.intl.string(b.t["ETE/oC"]),
                         onCancel: () => {
-                            O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
-                                action: x.l.CANCEL_BLOCK,
+                            f.default.track(x.rMx.USER_REMEDIATION_ACTION, {
+                                action: p.l.CANCEL_BLOCK,
                                 location: u,
                             }),
                                 null == l || l();
@@ -206,13 +206,13 @@ function N(t) {
                         onConfirm: () => {
                             null == n || n(),
                                 s.Z.blockUser(e.id, { location: u }).then(() => {
-                                    O.default.track(g.rMx.BLOCK_USER_CONFIRMED),
+                                    f.default.track(x.rMx.BLOCK_USER_CONFIRMED),
                                         d.Z.showBlockSuccessToast(e.id, null != j ? j : void 0);
                                 });
                         },
                         impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION },
                     },
-                    p,
+                    g,
                 ),
                 {
                     children: (0, r.jsx)(y, {
@@ -221,7 +221,7 @@ function N(t) {
                         channelId: j,
                         onBlock: n,
                         onIgnore: a,
-                        disallowIgnore: f,
+                        disallowIgnore: O,
                     }),
                 },
             ),

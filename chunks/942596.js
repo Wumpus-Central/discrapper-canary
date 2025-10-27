@@ -32,8 +32,8 @@ var r,
     N = n(81063),
     R = n(768581),
     P = n(630388),
-    w = n(153066),
-    D = n(740265),
+    D = n(153066),
+    w = n(740265),
     L = n(122810),
     x = n(833664),
     M = n(503438),
@@ -148,12 +148,12 @@ class $ extends (r = a.PureComponent) {
             (null == e ? void 0 : e.type) !== B.IIU.HANG_STATUS
             ? {
                   type: B.IIU.PLAYING,
-                  name: Z.intl.string(Z.t.eXan7O),
+                  name: Z.intl.string(Z.t.eXan7B),
               }
             : e;
     }
     getTypeClass(e, t) {
-        return (0, w.l)(F, e, this.props.type, t);
+        return (0, D.l)(F, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
         return (0, j.Z)(this.activity) && "ActivityFeed" === this.props.type;
@@ -171,32 +171,32 @@ class $ extends (r = a.PureComponent) {
                 });
                 break;
             case B.IIU.LISTENING:
-                t = Z.intl.formatToPlainString(Z.t["5sYPnp"], { name: c });
+                t = Z.intl.formatToPlainString(Z.t["5sYPnr"], { name: c });
                 break;
             case B.IIU.WATCHING:
-                t = Z.intl.formatToPlainString(Z.t.Ge29Z2, { name: c });
+                t = Z.intl.formatToPlainString(Z.t.Ge29Zy, { name: c });
                 break;
             case B.IIU.PLAYING:
-                t = (0, D.Z)(l);
+                t = (0, w.Z)(l);
                 break;
             case B.IIU.COMPETING:
-                t = Z.intl.formatToPlainString(Z.t.SQCo6O, { name: c });
+                t = Z.intl.formatToPlainString(Z.t.SQCo6D, { name: c });
         }
         if (null != r) {
             var u;
             t = (0, P.yE)(null != (u = null == l ? void 0 : l.flags) ? u : 0, B.xjy.EMBEDDED)
                 ? l.type === B.IIU.WATCHING
-                    ? Z.intl.formatToPlainString(Z.t["M/L8oq"], { guildName: r.name })
-                    : Z.intl.formatToPlainString(Z.t["4chKQk"], { guildName: r.name })
-                : Z.intl.formatToPlainString(Z.t.sddlGB, { server: r.name });
+                    ? Z.intl.formatToPlainString(Z.t["M/L8ot"], { guildName: r.name })
+                    : Z.intl.formatToPlainString(Z.t["4chKQu"], { guildName: r.name })
+                : Z.intl.formatToPlainString(Z.t.sddlGK, { server: r.name });
         }
         return (
-            (null == l ? void 0 : l.type) === B.IIU.HANG_STATUS && (t = Z.intl.string(Z.t["74vS//"])),
+            (null == l ? void 0 : l.type) === B.IIU.HANG_STATUS && (t = Z.intl.string(Z.t["74vS/x"])),
             (0, i.jsxs)("div", {
                 className: F.headerContainer,
                 children: [
                     (0, i.jsx)(d.Heading, {
-                        className: s()((0, w.l)(F, "headerText", e ? "EmptyBody" : "Normal")),
+                        className: s()((0, D.l)(F, "headerText", e ? "EmptyBody" : "Normal")),
                         variant: a ? "text-xs/semibold" : "eyebrow",
                         children: (0, i.jsx)(g.Z, { children: t }),
                     }),
@@ -294,7 +294,7 @@ class $ extends (r = a.PureComponent) {
                             }),
                             (0, i.jsx)("div", {
                                 className: F.streamGame,
-                                children: Z.intl.format(Z.t.gmCZRU, { game: e.details }),
+                                children: Z.intl.format(Z.t.gmCZRY, { game: e.details }),
                             }),
                         ],
                     }),
@@ -394,7 +394,7 @@ class $ extends (r = a.PureComponent) {
             : (0, i.jsx)(d.Text, {
                   title: c,
                   variant: "text-sm/semibold",
-                  className: s()((0, w.l)(F, "name", t.bot ? "wrap" : "normal")),
+                  className: s()((0, D.l)(F, "name", t.bot ? "wrap" : "normal")),
                   children: u,
               });
     }
@@ -406,7 +406,7 @@ class $ extends (r = a.PureComponent) {
             s = n;
         if (e.type === B.IIU.CUSTOM_STATUS) o = r;
         else if (e.type === B.IIU.HANG_STATUS && null != a)
-            (o = Z.intl.formatToPlainString(Z.t.IAZiW1, { guildName: a.name })),
+            (o = Z.intl.formatToPlainString(Z.t.IAZiW2, { guildName: a.name })),
                 (t = () => {
                     (0, S.X)(a.id);
                 });
@@ -423,7 +423,7 @@ class $ extends (r = a.PureComponent) {
                         },
                         n,
                     );
-                o = Z.intl.format(Z.t.uU9le3, {
+                o = Z.intl.format(Z.t.uU9le8, {
                     artists: s,
                     artistsHook: t,
                 });
@@ -434,7 +434,7 @@ class $ extends (r = a.PureComponent) {
         }
         return null == o || "" === o
             ? null
-            : ((0, j.Z)(e) && (o = Z.intl.formatToPlainString(Z.t.gmCZRU, { game: o })), null != t)
+            : ((0, j.Z)(e) && (o = Z.intl.formatToPlainString(Z.t.gmCZRY, { game: o })), null != t)
               ? (0, i.jsx)(d.P3F, {
                     onClick: t,
                     title: null != s ? s : void 0,
@@ -453,7 +453,7 @@ class $ extends (r = a.PureComponent) {
             ? null == r
                 ? (0, i.jsx)("div", {
                       className: (0, j.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details,
-                      children: Z.intl.format(Z.t["hq/Qzc"], { guildName: t.name }),
+                      children: Z.intl.format(Z.t["hq/Qze"], { guildName: t.name }),
                   })
                 : (0, i.jsxs)("div", {
                       className: s()((0, j.Z)(e) || (0, M.Z)(e) ? F.detailsWrap : F.details, F.guildDetails),
@@ -535,19 +535,19 @@ class $ extends (r = a.PureComponent) {
                           n,
                       )
                     : u;
-            c = Z.intl.format(Z.t.vOLBEx, {
+            c = Z.intl.format(Z.t.vOLBEy, {
                 album: u,
                 albumHook: t,
             });
         }
         return (null != c && "" !== c && e.type !== B.IIU.CUSTOM_STATUS) || (0, C.dS)(e)
             ? ((null == s ? void 0 : s.size) == null && [G.Zc].includes(null != (n = e.application_id) ? n : "")
-                  ? (a = Z.intl.formatToPlainString(Z.t["u//9Bw"], {
+                  ? (a = Z.intl.formatToPlainString(Z.t["u//9By"], {
                         count: "0",
                         max: null != (r = null == t ? void 0 : t.getMaxParticipants()) ? r : 0,
                     }))
                   : (0, C.dS)(e) && (null == s ? void 0 : s.size) != null
-                    ? (a = Z.intl.formatToPlainString(Z.t["JC/3x8"], {
+                    ? (a = Z.intl.formatToPlainString(Z.t["JC/3xw"], {
                           numSpeakers: s.size[0],
                           numListeners: s.size[1] - s.size[0],
                       }))
@@ -556,7 +556,7 @@ class $ extends (r = a.PureComponent) {
                       (a =
                           0 === s.size[1]
                               ? Z.intl.formatToPlainString(Z.t.IM4J4e, { count: s.size[0] })
-                              : Z.intl.formatToPlainString(Z.t["u//9Bw"], {
+                              : Z.intl.formatToPlainString(Z.t["u//9By"], {
                                     count: s.size[0],
                                     max: s.size[1],
                                 })),
@@ -616,7 +616,7 @@ class $ extends (r = a.PureComponent) {
                                 ? null
                                 : (0, i.jsxs)(h.Z.Child, {
                                       className: s()(
-                                          (0, w.l)(
+                                          (0, D.l)(
                                               F,
                                               "content",
                                               _ ? "GameImage" : null != e ? "Images" : "NoImages",

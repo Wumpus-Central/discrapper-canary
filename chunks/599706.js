@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(392711),
     a = n.n(l),
-    o = n(481060),
-    s = n(100527),
+    s = n(481060),
+    o = n(100527),
     c = n(670188),
     u = n(463618),
     d = n(823379),
@@ -25,13 +25,13 @@ let f = (e) => {
                         targetElementRef: a,
                         userId: t.id,
                         guildId: l,
-                        newAnalyticsLocations: [s.Z.AVATAR],
+                        newAnalyticsLocations: [o.Z.AVATAR],
                         position: "left",
                         clickTrap: !0,
                         children: (e) => {
                             var n, i;
                             return (0, r.jsx)(
-                                o.qEK,
+                                s.qEK,
                                 ((n = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ let f = (e) => {
                                         ref: a,
                                         src: t.getAvatarURL(l, 24),
                                         "aria-label": t.username,
-                                        size: o.EFr.SIZE_24,
+                                        size: s.EFr.SIZE_24,
                                         className: p.partyMember,
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -84,8 +84,8 @@ let f = (e) => {
                 });
     },
     h = (e) => {
-        let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: l = 2, guildId: o } = e,
-            { unknownSize: s, totalSize: c, knownSize: u } = t;
+        let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: l = 2, guildId: s } = e,
+            { unknownSize: o, totalSize: c, knownSize: u } = t;
         if (c < i) return null;
         let h = a()(n)
             .filter(d.lm)
@@ -95,34 +95,34 @@ let f = (e) => {
                     f,
                     {
                         member: e,
-                        guildId: o,
+                        guildId: s,
                     },
                     e.id,
                 ),
             )
             .value();
-        for (let e = 0; e < s && h.length < l; e++) h.push((0, r.jsx)(f, { guildId: o }, "unknown-member-".concat(e)));
-        let g = c - u - s;
-        for (let e = 0; e < g && h.length < l; e++)
+        for (let e = 0; e < o && h.length < l; e++) h.push((0, r.jsx)(f, { guildId: s }, "unknown-member-".concat(e)));
+        let m = c - u - o;
+        for (let e = 0; e < m && h.length < l; e++)
             h.push(
                 (0, r.jsx)(
                     f,
                     {
                         empty: !0,
-                        guildId: o,
+                        guildId: s,
                     },
                     "empty-member-".concat(e),
                 ),
             );
-        let m = Math.max(Math.min(c - h.length, 99), 0);
-        if (1 === m) {
+        let g = Math.max(Math.min(c - h.length, 99), 0);
+        if (1 === g) {
             let e = n[l];
             h.push(
                 (0, r.jsx)(
                     f,
                     {
                         member: e,
-                        guildId: o,
+                        guildId: s,
                     },
                     e.id,
                 ),
@@ -134,10 +134,10 @@ let f = (e) => {
                 className: p.partyMembers,
                 children: [
                     h,
-                    m > 1
+                    g > 1
                         ? (0, r.jsxs)("div", {
                               className: p.partyMemberOverflow,
-                              children: ["+", m],
+                              children: ["+", g],
                           })
                         : null,
                 ],

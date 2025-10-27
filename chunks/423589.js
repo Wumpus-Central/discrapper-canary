@@ -17,27 +17,27 @@ var i = n(442837),
 function p() {
     return [
         {
-            label: d.intl.string(d.t["8ot6go"]),
+            label: d.intl.string(d.t["8ot6gv"]),
             value: c.Oe.MINUTES_15,
         },
         {
-            label: d.intl.string(d.t.UMWBZm),
+            label: d.intl.string(d.t.UMWBZr),
             value: c.Oe.HOURS_1,
         },
         {
-            label: d.intl.string(d.t.QmYWtr),
+            label: d.intl.string(d.t.QmYWtu),
             value: c.Oe.HOURS_3,
         },
         {
-            label: d.intl.string(d.t.EpAXPD),
+            label: d.intl.string(d.t.EpAXPC),
             value: c.Oe.HOURS_8,
         },
         {
-            label: d.intl.string(d.t["755t4u"]),
+            label: d.intl.string(d.t["755t4q"]),
             value: c.Oe.HOURS_24,
         },
         {
-            label: d.intl.string(d.t.r3LawM),
+            label: d.intl.string(d.t.r3LawO),
             value: c.Oe.ALWAYS,
         },
     ];

@@ -12,7 +12,7 @@ function s(e) {
             (0, r.jsx)(i.Heading, {
                 className: a.header,
                 variant: "text-sm/semibold",
-                children: null != n ? n : l.intl.string(l.t["k+QA9P"]),
+                children: null != n ? n : l.intl.string(l.t["k+QA9N"]),
             }),
             (0, r.jsx)("div", {
                 className: a.upsellsContainer,

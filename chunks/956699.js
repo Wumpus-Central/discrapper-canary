@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(38618),
     R = n(375657),
     P = n(171393),
-    w = n(837268),
-    D = n(32300),
+    D = n(837268),
+    w = n(32300),
     L = n(371651),
     x = n(398269),
     M = n(921801),
@@ -951,11 +951,11 @@ function ep(e) {
     Z.ZP.triggerJSException(e);
 }
 function eh() {
-    let e = (0, D.XE)("developer_settings"),
+    let e = (0, w.XE)("developer_settings"),
         t = (0, d.e7)([L.default], () => L.default.getForcedRenderMode()),
         [n, a] = i.useState(!1),
         [o, s] = i.useState(""),
-        l = e || t === w.R5.OUT_OF_PROCESS_V3 || t === w.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
+        l = e || t === D.R5.OUT_OF_PROCESS_V3 || t === D.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (i.useEffect(() => {
         (async () => {
             s(await (0, U.getOverlayURL)());

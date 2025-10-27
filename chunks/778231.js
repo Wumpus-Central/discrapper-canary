@@ -2,10 +2,10 @@ n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(384275),
-    o = n(686546),
-    c = n(522289),
+    a = n(139117),
+    s = n(481060),
+    o = n(384275),
+    c = n(686546),
     d = n(359993),
     u = n(146078),
     m = n(881998),
@@ -22,24 +22,24 @@ let b = (e) => {
         j = (0, d.Z)({ application: b }),
         y = i.useRef(!1);
     i.useEffect(() => {
-        y.current || (s.Z.fetch(), (y.current = !0));
+        y.current || (o.Z.fetch(), (y.current = !0));
     }, []);
     let O = null != f ? p.default.extractTimestamp(f.id) : void 0;
     return (0, r.jsxs)("div", {
         className: _.container,
         children: [
-            (0, r.jsx)(a.Heading, {
+            (0, r.jsx)(s.Heading, {
                 className: _.header,
                 variant: "heading-sm/semibold",
-                children: g.intl.string(g.t["aYfK//"]),
+                children: g.intl.string(g.t["aYfK/w"]),
             }),
             (0, r.jsx)("div", {
                 className: _.appContainer,
                 children: (0, r.jsxs)("div", {
                     className: _.appInfo,
                     children: [
-                        (0, r.jsx)(o.ZP, {
-                            mask: o.ZP.Masks.AVATAR_DEFAULT,
+                        (0, r.jsx)(c.ZP, {
+                            mask: c.ZP.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
                             className: _.appIconMask,
@@ -52,7 +52,7 @@ let b = (e) => {
                         (0, r.jsxs)("div", {
                             className: _.textContainer,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     color: "header-primary",
                                     variant: "text-md/medium",
                                     children: x,
@@ -60,12 +60,12 @@ let b = (e) => {
                                 j.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(a.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
                                                   children: (0, u.Z)(j.length),
                                               }),
-                                              (0, r.jsx)(c.Z, {
+                                              (0, r.jsx)(a.Z, {
                                                   className: _.guildStack,
                                                   guilds: j,
                                                   maxGuilds: 6,
@@ -74,16 +74,16 @@ let b = (e) => {
                                       })
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(a.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
                                                   children: null == (t = b.bot) ? void 0 : t.tag,
                                               }),
                                               null != O &&
-                                                  (0, r.jsx)(a.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       color: "text-default",
                                                       variant: "text-md/normal",
-                                                      children: g.intl.formatToPlainString(g.t.C9rUOz, {
+                                                      children: g.intl.formatToPlainString(g.t.C9rUO8, {
                                                           authorizedAt: O,
                                                       }),
                                                   }),

@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => w,
-    Z: () => D,
+    S: () => D,
+    Z: () => w,
 }),
     n(704826),
     n(35282),
@@ -40,7 +40,7 @@ function P(e) {
         ? "ms-settings:camera" + (null != e ? "?cameraId=".concat(encodeURIComponent(e.replace(C, N))) : "")
         : "";
 }
-function w() {
+function D() {
     let [e, t] = i.useState(!1),
         n = (0, s.e7)([E.Z], () => E.Z.isMediaFilterSettingLoading());
     return (i.useEffect(() => {
@@ -61,7 +61,7 @@ function w() {
           })
         : null;
 }
-function D(e) {
+function w(e) {
     let {
             hideDeviceSelector: t = !1,
             hideDeviceHeader: n = !1,
@@ -75,25 +75,25 @@ function D(e) {
             onCancelPreview: C,
         } = e,
         { analyticsLocations: N } = (0, f.ZP)(),
-        { id: w } = (0, p.p6)(I.h7.VIDEO_INPUT),
-        D = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
+        { id: D } = (0, p.p6)(I.h7.VIDEO_INPUT),
+        w = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
         L = m.qF.useSetting();
     return (0, r.jsxs)(c.Kqy, {
         gap: 20,
         children: [
-            d(w),
+            d(D),
             E.Z.isEnabled()
                 ? null
                 : (0, r.jsx)(c.Text, {
                       className: S.permissionWarning,
                       color: "interactive-normal",
                       variant: "text-sm/normal",
-                      children: T.intl.format(T.t.stagfH, { onEnableClick: () => u.Z.enable(!0) }),
+                      children: T.intl.format(T.t.stagfJ, { onEnableClick: () => u.Z.enable(!0) }),
                   }),
             y
                 ? null
                 : (0, r.jsx)(c.rsf, {
-                      label: T.intl.string(T.t["3Ppr1t"]),
+                      label: T.intl.string(T.t["3Ppr1h"]),
                       description: T.intl.string(T.t.WNbX4O),
                       checked: L,
                       onChange: (e) => {
@@ -105,13 +105,13 @@ function D(e) {
                 (0, r.jsx)(h.F, {
                     setting: v.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
                     children: (0, r.jsx)(_.j, {
-                        label: n ? void 0 : T.intl.string(T.t.FsQ3OT),
+                        label: n ? void 0 : T.intl.string(T.t.FsQ3OR),
                         helperText:
                             !i && R()
-                                ? T.intl.format(T.t.aJYgRk, {
+                                ? T.intl.format(T.t.aJYgRt, {
                                       onCameraSettingsClick: () => {
                                           null == C || C(),
-                                              window.open(P(w)),
+                                              window.open(P(D)),
                                               b.default.track(O.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, {
                                                   location_stack: N,
                                               });
@@ -120,7 +120,7 @@ function D(e) {
                                 : void 0,
                         deviceType: I.h7.VIDEO_INPUT,
                         location: "CameraSettings",
-                        isDisabled: !D,
+                        isDisabled: !w,
                         showAllDevices: !0,
                     }),
                 }),
@@ -131,7 +131,7 @@ function D(e) {
                     onLearnMore: a,
                     selectedBackgroundOption: o,
                     onSelectBackgroundOption: l,
-                    currentDeviceId: w,
+                    currentDeviceId: D,
                     smallerBackgroundOptions: A,
                 }),
             }),

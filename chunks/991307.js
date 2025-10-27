@@ -52,10 +52,10 @@ function p(e) {
                           action: () => {
                               if (x)
                                   return void a.Z.show({
-                                      title: m.intl.string(m.t.m2Hyj4),
-                                      body: m.intl.string(m.t.EhaK6O),
-                                      confirmText: m.intl.string(m.t.ND1my8),
-                                      cancelText: m.intl.string(m.t.jEqEh4),
+                                      title: m.intl.string(m.t.m2Hyj0),
+                                      body: m.intl.string(m.t.EhaK6B),
+                                      confirmText: m.intl.string(m.t.ND1my3),
+                                      cancelText: m.intl.string(m.t.jEqEhy),
                                       onConfirm: () => o.Z.setDisableLocalVideo(e, b.ZUi.MANUAL_ENABLED),
                                   });
                               let n = j ? b.ZUi.MANUAL_ENABLED : b.ZUi.DISABLED;
@@ -72,7 +72,7 @@ function p(e) {
                                             width: 12,
                                             className: v.warningCircle,
                                         }),
-                                        m.intl.string(m.t.m2Hyj4),
+                                        m.intl.string(m.t.m2Hyj0),
                                     ],
                                 })
                               : null,
@@ -86,7 +86,7 @@ function p(e) {
                   r.S89,
                   {
                       id: "soundboard-sound-mute",
-                      label: m.intl.string(m.t.LxhEuL),
+                      label: m.intl.string(m.t.LxhEuG),
                       action: () => {
                           let n = d.Z.getRTCConnection();
                           f.default.track(b.rMx.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
@@ -108,7 +108,7 @@ function p(e) {
                   r.S89,
                   {
                       id: "mute",
-                      label: m.intl.string(m.t.sWmtIy),
+                      label: m.intl.string(m.t.sWmtI6),
                       action: () =>
                           o.Z.toggleSelfMute({
                               context: t,
@@ -122,7 +122,7 @@ function p(e) {
                   r.S89,
                   {
                       id: "deafen",
-                      label: m.intl.string(m.t.wjcRFR),
+                      label: m.intl.string(m.t.wjcRFX),
                       action: () =>
                           o.Z.toggleSelfDeaf({
                               context: t,
@@ -139,7 +139,7 @@ function p(e) {
                   r.S89,
                   {
                       id: "mute",
-                      label: m.intl.string(m.t.sWmtIy),
+                      label: m.intl.string(m.t.sWmtI6),
                       action: () => o.Z.toggleLocalMute(e, t),
                       checked: O,
                   },

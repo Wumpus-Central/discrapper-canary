@@ -98,7 +98,7 @@ function g(e) {
                 label: t,
                 value: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        h ? u.intl.formatToPlainString(u.t.hXcaLS, { price: (0, c.T4)(0, f) }) : n,
+                        h ? u.intl.formatToPlainString(u.t.hXcaLT, { price: (0, c.T4)(0, f) }) : n,
                         null != y
                             ? (0, r.jsxs)("div", {
                                   className: d.rowPercentDiscount,
@@ -113,7 +113,7 @@ function g(e) {
                 (0, r.jsx)(s.Text, {
                     variant: "text-md/medium",
                     className: d.trialEndPrice,
-                    children: u.intl.format(u.t.v9QeOD, { price: O }),
+                    children: u.intl.format(u.t.v9QeON, { price: O }),
                 }),
             null != y
                 ? (0, r.jsxs)("div", {
@@ -124,7 +124,7 @@ function g(e) {
             null != b
                 ? (0, r.jsx)("div", {
                       className: d.entitlementDiscountRow,
-                      children: u.intl.string(u.t.A7Hpfn),
+                      children: u.intl.string(u.t.A7Hpfs),
                   })
                 : null,
         ],

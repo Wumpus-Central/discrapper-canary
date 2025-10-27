@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(594174),
     u = n(381585),
     d = n(597688),
@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(310582);
 let v = (e) => {
     let { shelf: t, handleTransition: n, tab: i } = e,
-        v = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+        v = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         E = g.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
         x = (0, u.sp)(),
         O = l.useMemo(() => t.rankedSkuIds.map((e) => d.Z.getProduct(e)).filter((e) => null != e), [t.rankedSkuIds]),
@@ -31,13 +31,13 @@ let v = (e) => {
                   (0, r.jsxs)("div", {
                       className: b.blockHeader,
                       children: [
-                          (0, r.jsx)(s.Heading, {
+                          (0, r.jsx)(o.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(s.Button, {
+                          (0, r.jsx)(o.Button, {
                               variant: "secondary",
-                              text: m.intl.formatToPlainString(m.t.bc9RBA, { category_name: t.name }),
+                              text: m.intl.formatToPlainString(m.t.bc9RBE, { category_name: t.name }),
                               onClick: () => n("shelf block see all", t.categorySkuId, void 0, !0),
                           }),
                       ],

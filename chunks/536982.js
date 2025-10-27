@@ -15,7 +15,7 @@ function c(e) {
             maxWordCount: c,
             className: o.keywordTextAreaContainer,
             textAreaClassName: o.keywordTextArea,
-            subtitleText: s.intl.formatToMarkdownString(s.t.qm7UZ2, {}),
+            subtitleText: s.intl.formatToMarkdownString(s.t.qm7UZ8, {}),
             initialValue: n,
         }),
         className: o.collapseable,
@@ -30,7 +30,7 @@ function c(e) {
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: "text-sm/medium",
-                            children: s.intl.string(s.t.lbE2Nj),
+                            children: s.intl.string(s.t.lbE2Nm),
                         }),
                         u
                             ? (0, r.jsx)(l.u04, {

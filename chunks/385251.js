@@ -96,21 +96,21 @@ function A(e) {
             (0, r.jsx)(i.Heading, {
                 variant: "heading-xl/semibold",
                 color: "text-primary",
-                children: E.intl.format(E.t["50bA2N"], { percent: n.percentage }),
+                children: E.intl.format(E.t["50bA2I"], { percent: n.percentage }),
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
                 children: o
-                    ? E.intl.format(E.t["3Ziutb"], {
+                    ? E.intl.format(E.t["3ZiutU"], {
                           percent: n.percentage,
                           numMonths: n.duration,
                           regularPrice: h,
                       })
-                    : E.intl.format(E.t.N43FMz, {
+                    : E.intl.format(E.t.N43FMx, {
                           numMonths: n.duration,
                           discountedPrice: _,
-                          billingPeriod: E.intl.string(E.t.FPybU1),
+                          billingPeriod: E.intl.string(E.t.FPybU7),
                           fullPrice: h,
                       }),
             }),
@@ -125,12 +125,12 @@ function C(e) {
             (0, r.jsx)(i.Heading, {
                 variant: "heading-xl/semibold",
                 color: "text-primary",
-                children: E.intl.format(E.t.sFO20N, { percent: t.discount.amount }),
+                children: E.intl.format(E.t.sFO20P, { percent: t.discount.amount }),
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: E.intl.format(E.t["PH7Q+f"], {
+                children: E.intl.format(E.t["PH7Q+R"], {
                     numMonths: t.discount.user_usage_limit,
                     discountedPrice: a,
                     billingPeriod: (0, d.JP)(t.discount.user_usage_limit_interval),
@@ -173,7 +173,7 @@ let N = function (e) {
                     );
             });
         },
-        w = () => {
+        D = () => {
             let e = d.ZP.isSwitchingPlansDisabled(t),
                 n = d.ZP.getSwitchingPlansDisabledMessage(t);
             return d.ZP.isBaseSubscriptionCanceled(t)
@@ -181,7 +181,7 @@ let N = function (e) {
                       variant: "expressive",
                       icon: i.SrA,
                       size: "md",
-                      text: E.intl.string(E.t.zrCzVF),
+                      text: E.intl.string(E.t.zrCzVB),
                       loading: f,
                       onClick: () => P(h.R.CONFIRM_DISCOUNT),
                   })
@@ -196,7 +196,7 @@ let N = function (e) {
                                       T(v({}, n), {
                                           variant: "expressive",
                                           disabled: e,
-                                          text: E.intl.string(E.t["dylp//"]),
+                                          text: E.intl.string(E.t["dylp/7"]),
                                           size: "md",
                                           onClick: () => {
                                               (0, s.Z)({
@@ -212,16 +212,16 @@ let N = function (e) {
                           (0, r.jsx)(i.Button, {
                               variant: "secondary",
                               size: "md",
-                              text: E.intl.string(E.t["ETE/oK"]),
+                              text: E.intl.string(E.t["ETE/oC"]),
                               loading: f,
                               onClick: R,
                           }),
                       ],
                   });
         },
-        D = d.ZP.getPlanIdFromInvoice(t, c),
+        w = d.ZP.getPlanIdFromInvoice(t, c),
         L = (0, p.eQ)(null == I ? void 0 : I.expires_at);
-    return (0, l.Q0)(D)
+    return (0, l.Q0)(w)
         ? null
         : (0, r.jsx)("div", {
               className: b.churnDiscountBannerBackground,
@@ -237,7 +237,7 @@ let N = function (e) {
                                   (0, r.jsx)(u.Z, {
                                       color: "currentcolor",
                                       className: b.churnDiscountBannerWordMark,
-                                      "aria-label": E.intl.string(E.t.lpNrPj),
+                                      "aria-label": E.intl.string(E.t.lpNrPu),
                                   }),
                                   (0, r.jsx)(i.Text, {
                                       className: b.churnDiscountBannerExpiryDate,
@@ -267,7 +267,7 @@ let N = function (e) {
                                                 }),
                                           (0, r.jsx)("div", {
                                               className: b.churnDiscountBannerButton,
-                                              children: w(),
+                                              children: D(),
                                           }),
                                       ],
                                   }),

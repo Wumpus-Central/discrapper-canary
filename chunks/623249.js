@@ -30,22 +30,22 @@ function O(e) {
     let { quest: n, errorHints: a, transitionState: j, onClose: O, sourceQuestContent: T } = e,
         [w, P] = (0, s.useState)(a),
         N = (0, x.KX)(),
-        R = (0, g.O5)(),
-        A = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        A = (0, g.O5)(),
+        R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
         B = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
         k = (0, v.g2)({
             useReducedMotion: B,
             className: E.colorTransition,
         }),
         I = w.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
-        q = (0, h.Bz)(n),
-        D = (0, l.e7)([m.Z], () => m.Z.getState().theme),
-        L = (0, d.wj)(D) ? C.BRd.DARK : C.BRd.LIGHT,
-        { startConsoleQuest: V, startingConsoleQuest: Q } = (0, x.GI)({
+        D = (0, h.Bz)(n),
+        q = (0, l.e7)([m.Z], () => m.Z.getState().theme),
+        L = (0, d.wj)(q) ? C.BRd.DARK : C.BRd.LIGHT,
+        { startConsoleQuest: Q, startingConsoleQuest: V } = (0, x.GI)({
             questId: n.id,
             beforeRequest: () => {
                 k.startAnimation(),
-                    R({
+                    A({
                         questId: n.id,
                         questContent: _.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
@@ -59,7 +59,7 @@ function O(e) {
     return (0, r.jsx)(i.Modal, {
         transitionState: j,
         onClose: O,
-        title: y.intl.string(y.t.W5lmKi),
+        title: y.intl.string(y.t.W5lmKt),
         subtitle: N.message,
         actions: [
             {
@@ -71,16 +71,16 @@ function O(e) {
                         {
                             content: _.jn.CONNECTIONS_MODAL,
                             ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: A,
+                            impressionId: R,
                             sourceQuestContent: T,
                         },
                     )),
-                text: y.intl.string(y.t["qiS+xs"]),
+                text: y.intl.string(y.t["qiS+xj"]),
             },
             {
                 variant: "primary",
                 onClick: () => O(),
-                text: y.intl.string(y.t.cpT0Cg),
+                text: y.intl.string(y.t.cpT0Cq),
             },
         ],
         children: (0, r.jsxs)(r.Fragment, {
@@ -91,18 +91,18 @@ function O(e) {
                         (0, r.jsx)(u.Text, {
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: y.intl.string(y.t["+/hZMz"]),
+                            children: y.intl.string(y.t["+/hZM/"]),
                         }),
                         (0, r.jsxs)(u.P3F, {
-                            className: o()(E.refreshWrapper, { [E.disabled]: Q }),
-                            onClick: V,
+                            className: o()(E.refreshWrapper, { [E.disabled]: V }),
+                            onClick: Q,
                             children: [
                                 k.render(),
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
                                     className: E.colorTransition,
-                                    children: y.intl.string(y.t.wzzjk5),
+                                    children: y.intl.string(y.t.wzzjk9),
                                 }),
                             ],
                         }),
@@ -117,9 +117,9 @@ function O(e) {
                         }),
                         (0, r.jsx)(S, {
                             icon: (0, r.jsx)(u.iWm, { size: "sm" }),
-                            text: y.intl.string(y.t.XF4wuL),
-                            errors: q ? void 0 : I.map((e) => e.message),
-                            gameTile: q
+                            text: y.intl.string(y.t.XF4wuA),
+                            errors: D ? void 0 : I.map((e) => e.message),
+                            gameTile: D
                                 ? (0, r.jsx)(c.u, {
                                       "aria-label": n.config.messages.gameTitle,
                                       __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
@@ -132,7 +132,7 @@ function O(e) {
                                               (0, r.jsx)(u.Text, {
                                                   variant: "text-xs/normal",
                                                   color: "text-muted",
-                                                  children: y.intl.string(y.t.STpNEB),
+                                                  children: y.intl.string(y.t.STpNEC),
                                               }),
                                           ],
                                       }),

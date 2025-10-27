@@ -72,7 +72,7 @@ let m = (e) => {
                           className: _.errorBlock,
                           children: (0, r.jsx)(o.M14, {
                               type: "critical",
-                              children: f.intl.string(f.t.vZ8y7u),
+                              children: f.intl.string(f.t.vZ8y7l),
                           }),
                       })
                     : null,

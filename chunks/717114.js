@@ -57,18 +57,18 @@ function E() {
                                   l.default,
                                   g(
                                       {
-                                          title: h.intl.string(h.t.eotlXF),
+                                          title: h.intl.string(h.t.eotlXE),
                                           body: h.intl.formatToPlainString(h.t.Lw6KXV, {
                                               game: null == t ? void 0 : t.name,
                                           }),
-                                          secondaryConfirmText: h.intl.string(h.t["5E9SBw"]),
+                                          secondaryConfirmText: h.intl.string(h.t["5E9SB9"]),
                                           onConfirmSecondary: () => s.Z.clearPTTAdminWarning(),
                                           onConfirm: () =>
                                               window.open(
                                                   _.Z.getArticleURL(p.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE),
                                                   "_blank",
                                               ),
-                                          confirmText: h.intl.string(h.t.psXQHB),
+                                          confirmText: h.intl.string(h.t.psXQHP),
                                       },
                                       e,
                                   ),

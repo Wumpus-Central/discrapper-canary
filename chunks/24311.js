@@ -13,7 +13,7 @@ var i = t(442837),
     Z = t(981631),
     f = t(388032);
 function b(e) {
-    let { user: n, context: b, label: m, joinCallVideo: O, id: p, onCall: h } = e,
+    let { user: n, context: b, label: O, joinCallVideo: m, id: p, onCall: h } = e,
         j = (0, u.Aq)(),
         P = (0, i.e7)([s.default], () => s.default.getId() === n.id),
         v = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
@@ -24,7 +24,7 @@ function b(e) {
                 a.Z.openPrivateChannel({
                     recipientIds: n.id,
                     joinCall: !0,
-                    joinCallVideo: O,
+                    joinCallVideo: m,
                 }),
                 j.dispatch(Z.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
@@ -32,7 +32,7 @@ function b(e) {
         N = !o.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
         id: null != p ? p : "call",
-        label: null != m ? m : f.intl.string(f.t.JJogjo),
+        label: null != O ? O : f.intl.string(f.t.JJogjm),
         action: N
             ? () => {
                   (0, r.ZDy)(async () => {

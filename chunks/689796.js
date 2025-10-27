@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(77878),
     a = n(770146),
-    o = n(600164),
-    s = n(981631),
+    s = n(600164),
+    o = n(981631),
     c = n(388032),
     u = n(315208);
 class d extends i.PureComponent {
@@ -25,7 +25,7 @@ class d extends i.PureComponent {
         } = this.props;
         if (null == e || null == t) return null;
         let i = {
-                [s.aIt.ESRB]: {
+                [o.aIt.ESRB]: {
                     1: c.intl.string(c.t.ErVezT),
                     2: c.intl.string(c.t.xLyerM),
                     3: c.intl.string(c.t.UmB6j4),
@@ -70,7 +70,7 @@ class d extends i.PureComponent {
                     42: c.intl.string(c.t["jRZf+d"]),
                     43: c.intl.string(c.t["4Vg0mm"]),
                 },
-                [s.aIt.PEGI]: {
+                [o.aIt.PEGI]: {
                     1: c.intl.string(c.t.VcO2U3),
                     2: c.intl.string(c.t.wt264z),
                     3: c.intl.string(c.t["5yzEJa"]),
@@ -85,7 +85,7 @@ class d extends i.PureComponent {
             className: n,
             children: [
                 (0, r.jsx)(a.Z, { children: c.intl.string(c.t.q9Zqgl) }),
-                (0, r.jsxs)(o.Z, {
+                (0, r.jsxs)(s.Z, {
                     className: u.content,
                     children: [
                         this.renderContentRatingImage(),

@@ -42,14 +42,14 @@ function g(e) {
                               }),
                               (0, i.jsx)(l.Heading, {
                                   variant: "heading-md/semibold",
-                                  children: u.intl.string(u.t.gzuVHx),
+                                  children: u.intl.string(u.t.gzuVH0),
                               }),
                               (0, i.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
                                   className: p.emptyStateButton,
                                   children: (0, i.jsx)(l.Button, {
                                       variant: "primary",
-                                      text: u.intl.string(u.t["ZwSt+f"]),
+                                      text: u.intl.string(u.t["ZwSt+T"]),
                                       onClick: t,
                                   }),
                               }),

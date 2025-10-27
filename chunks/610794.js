@@ -53,7 +53,7 @@ function O(e) {
     }
     let I = (0, d.FI)(f[E.PC.CREATED_AT], h),
         T = null,
-        S = b.intl.string(b.t.wzzjk5);
+        S = b.intl.string(b.t.wzzjk9);
     return (
         (null == v || 0 === v.length) &&
             null == I &&
@@ -62,12 +62,12 @@ function O(e) {
                 {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: b.intl.format(b.t.Up2ni4, { helpdeskUrl: m.Z.getArticleURL(g.BhN.CONNECTION_DETAILS) }),
+                    children: b.intl.format(b.t.Up2ni7, { helpdeskUrl: m.Z.getArticleURL(g.BhN.CONNECTION_DETAILS) }),
                 },
                 "label",
             )),
-            (S = b.intl.string(b.t["LVh3//"]))),
-        o && (S = b.intl.string(b.t.i4jeWV)),
+            (S = b.intl.string(b.t["LVh3/5"]))),
+        o && (S = b.intl.string(b.t.i4jeWR)),
         (0, r.jsxs)("div", {
             className: y.metadataContainer,
             children: [
@@ -86,7 +86,7 @@ function O(e) {
                           {
                               variant: "text-xs/normal",
                               color: "header-secondary",
-                              children: b.intl.format(b.t["9rfonp"], { date: I }),
+                              children: b.intl.format(b.t["9rfonh"], { date: I }),
                           },
                           "member-since",
                       )
@@ -100,7 +100,7 @@ function O(e) {
                             variant: o ? "active" : "secondary",
                             loading: c,
                             disabled: o,
-                            "aria-label": b.intl.string(b.t.sCkLYG),
+                            "aria-label": b.intl.string(b.t.sCkLYH),
                             onClick: O,
                             text: S,
                         },
@@ -180,7 +180,7 @@ function v(e) {
                                     disabled: 1 !== d || null == t.metadata,
                                     checked: 1 === p,
                                     onChange: E,
-                                    label: b.intl.string(b.t["3l78ws"]),
+                                    label: b.intl.string(b.t["3l78wo"]),
                                 }),
                         ],
                     }),
@@ -205,7 +205,7 @@ function I() {
         ? null
         : (0, r.jsx)(s.C3N, {
               className: y.container,
-              label: b.intl.string(b.t.aw0GVV),
+              label: b.intl.string(b.t.aw0GVS),
               children: t.map((e) =>
                   (0, r.jsx)(
                       v,

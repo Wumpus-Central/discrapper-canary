@@ -47,7 +47,7 @@ function s() {
             );
         },
         selected: e,
-        tooltip: o.intl.string(o.t.Z7jwrK),
+        tooltip: o.intl.string(o.t.Z7jwrJ),
         icon: i._8t,
     });
 }

@@ -43,22 +43,22 @@ let p = (e) => {
                 separator: !1,
                 children: (0, r.jsxs)(s.Heading, {
                     variant: "heading-lg/semibold",
-                    children: [m.intl.string(m.t.zbyz7u), "\u2014", null != t ? t.name : ""],
+                    children: [m.intl.string(m.t.zbyz7p), "\u2014", null != t ? t.name : ""],
                 }),
             }),
             (0, r.jsxs)("div", {
                 className: b.content,
                 children: [
                     (0, r.jsx)(s.FXm, {
-                        label: m.intl.string(m.t.YccTvL),
+                        label: m.intl.string(m.t.YccTvK),
                         value: String(p),
                         options: [
                             {
-                                name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 7 }),
+                                name: m.intl.formatToPlainString(m.t.FM1dHS, { days: 7 }),
                                 value: "7",
                             },
                             {
-                                name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 30 }),
+                                name: m.intl.formatToPlainString(m.t.FM1dHS, { days: 30 }),
                                 value: "30",
                             },
                         ],
@@ -69,7 +69,7 @@ let p = (e) => {
                     (0, r.jsx)(s.zJl, {
                         className: b.scroller,
                         children: (0, r.jsx)(s.VcW, {
-                            label: m.intl.string(m.t.buoe19),
+                            label: m.intl.string(m.t.buoe17),
                             maxVisibleItems: 10,
                             multi: !0,
                             value: j,
@@ -82,11 +82,11 @@ let p = (e) => {
                         className: b.spacing,
                         children:
                             j.length > 0
-                                ? m.intl.format(m.t["5WxHHh"], {
+                                ? m.intl.format(m.t["5WxHHp"], {
                                       members: h,
                                       days: p,
                                   })
-                                : m.intl.format(m.t.f13az8, {
+                                : m.intl.format(m.t.f13az9, {
                                       members: h,
                                       days: p,
                                   }),
@@ -99,14 +99,14 @@ let p = (e) => {
                     children: [
                         (0, r.jsx)(s.Button, {
                             variant: "primary",
-                            text: m.intl.string(m.t["2mIlKS"]),
+                            text: m.intl.string(m.t["2mIlKQ"]),
                             onClick: () => {
                                 c.Z.prune(t.id, p, j), i();
                             },
                         }),
                         (0, r.jsx)(s.Button, {
                             variant: "secondary",
-                            text: m.intl.string(m.t["ETE/oK"]),
+                            text: m.intl.string(m.t["ETE/oC"]),
                             onClick: i,
                         }),
                     ],

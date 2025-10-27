@@ -23,7 +23,7 @@ function S(e) {
     let a = (0, h.Z)(),
         [S, N] = (0, x.Ls)(j.h7.AUDIO_INPUT, { location: "CaptureDeviceConfig" }),
         C = S.concat(N),
-        [b, P] = r.useState(
+        [b, T] = r.useState(
             (function (e, n, t) {
                 var l;
                 let r = n.find((n) => n.id === e);
@@ -71,7 +71,7 @@ function S(e) {
                             location: "CaptureDeviceConfig",
                             className: Z.__invalid_marginaTop8,
                             selectedDeviceId: b,
-                            onSelectDevice: (e) => (P(e), i(e), !1),
+                            onSelectDevice: (e) => (T(e), i(e), !1),
                         }),
                     ],
                 }),

@@ -27,7 +27,7 @@ let o = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
         (n >= 0 && t > 0 ? -((e - (n + (t * (a - n)) / a)) * 100) / t : -(100 * e * 1) / a + 100).toFixed(4);
 async function c(e) {
     if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !a.bp.has(e.type))
-        throw Error(l.intl.formatToPlainString(l.t["2y3xGR"], { fileType: e.type }));
+        throw Error(l.intl.formatToPlainString(l.t["2y3xGU"], { fileType: e.type }));
     let n = new Audio(URL.createObjectURL(e));
     return (
         await new Promise((e) => {

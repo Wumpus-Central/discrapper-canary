@@ -12,9 +12,9 @@ var i = n(120356),
     f = n(726185);
 let _ = (e, t) =>
         (null == e ? void 0 : e.status) === c.Vq.EARNED
-            ? d.intl.format(d.t.Hu4jfn, { date: null != t ? t : new Date() })
+            ? d.intl.format(d.t.Hu4jfi, { date: null != t ? t : new Date() })
             : (null == e ? void 0 : e.status) === c.Vq.UPCOMING
-              ? d.intl.format(d.t.E85flp, {
+              ? d.intl.format(d.t.E85fll, {
                     date: null != t ? t : new Date(),
                     days: e.daysLeft,
                 })

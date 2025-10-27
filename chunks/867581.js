@@ -41,12 +41,12 @@ let O = "hTKzmak",
                         (0, l.jsx)(s.Heading, {
                             className: I.rowText,
                             variant: "heading-md/semibold",
-                            children: f.intl.string(f.t.DwDxDQ),
+                            children: f.intl.string(f.t.DwDxDU),
                         }),
                         (0, l.jsx)(s.Text, {
                             className: I.rowText,
                             variant: "text-xs/normal",
-                            children: f.intl.string(f.t["5RL4CA"]),
+                            children: f.intl.string(f.t["5RL4CD"]),
                         }),
                     ],
                 }),
@@ -63,22 +63,22 @@ function C(e) {
         [o, d] = i.useState(""),
         [m, N] = i.useState(!1),
         [T, C] = i.useState(null),
-        g = i.useRef(null);
+        h = i.useRef(null);
     i.useEffect(() => {
         var e;
-        r && (null == (e = g.current) || e.focus());
+        r && (null == (e = h.current) || e.focus());
     }, [r]);
-    let h = (e) => {
+    let g = (e) => {
         e.preventDefault();
         let t = o.trim();
-        if ("" === t) return void C(f.intl.string(f.t.IRq5am));
+        if ("" === t) return void C(f.intl.string(f.t.IRq5ah));
         C(null), N(!0);
         let r = t.split("/"),
             l = r[r.length - 1];
         c.ZP.resolveInvite(l, "Join Guild", { inputValue: t }).then(
             (e) => {
                 let { invite: t } = e;
-                if ((N(!1), null == t)) return void C(f.intl.string(f.t["GEYI+f"]));
+                if ((N(!1), null == t)) return void C(f.intl.string(f.t["GEYI+Z"]));
                 if (null != t.channel) {
                     let e = c.ZP.getInviteContext("Join Guild", t);
                     c.ZP.acceptInvite({
@@ -90,7 +90,7 @@ function C(e) {
                     }).then(
                         () => {},
                         (e) => {
-                            e instanceof u.yZ || e instanceof u.Hx ? C((0, p.O)(e.code)) : C(f.intl.string(f.t.dDZRd3));
+                            e instanceof u.yZ || e instanceof u.Hx ? C((0, p.O)(e.code)) : C(f.intl.string(f.t.dDZRdy));
                         },
                     );
                 }
@@ -112,7 +112,7 @@ function C(e) {
                     (0, l.jsx)(s.Heading, {
                         className: I.title,
                         variant: "heading-xl/semibold",
-                        children: f.intl.string(f.t.riOUtL),
+                        children: f.intl.string(f.t.riOUtB),
                     }),
                     (0, l.jsx)(s.Text, {
                         color: "header-secondary",
@@ -129,22 +129,22 @@ function C(e) {
                 className: I.__invalid_content,
                 children: [
                     (0, l.jsx)("form", {
-                        onSubmit: h,
+                        onSubmit: g,
                         className: I.inputForm,
                         children: (0, l.jsx)(s.oil, {
-                            label: f.intl.string(f.t.qreV29),
+                            label: f.intl.string(f.t.qreV25),
                             required: !0,
                             error: T,
                             value: o,
                             onChange: d,
                             placeholder: "".concat(S).concat(O),
-                            inputRef: g,
+                            inputRef: h,
                         }),
                     }),
                     (0, l.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: f.intl.string(f.t.Bnq46O),
+                        children: f.intl.string(f.t.Bnq46H),
                     }),
                     (0, l.jsx)("div", {
                         className: I.sampleLinks,
@@ -168,16 +168,16 @@ function C(e) {
                 children: [
                     (0, l.jsx)(s.Button, {
                         variant: "primary",
-                        text: f.intl.string(f.t["Ts/9AQ"]),
+                        text: f.intl.string(f.t["Ts/9Ac"]),
                         loading: m,
-                        onClick: h,
+                        onClick: g,
                     }),
                     (0, l.jsx)(a.zx, {
                         color: a.zx.Colors.PRIMARY,
                         look: a.zx.Looks.LINK,
                         size: a.zx.Sizes.MIN,
                         onClick: t,
-                        children: f.intl.string(f.t["13/7kZ"]),
+                        children: f.intl.string(f.t["13/7kX"]),
                     }),
                 ],
             }),

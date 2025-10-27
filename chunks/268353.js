@@ -61,7 +61,7 @@ function p(e, t) {
 function h(e) {
     var { enabled: t } = e,
         n = _(e, ["enabled"]);
-    let i = t ? u.intl.string(u.t.Z7MyND) : u.intl.string(u.t.OIDkcn),
+    let i = t ? u.intl.string(u.t.Z7MyNB) : u.intl.string(u.t.OIDkcp),
         o = t ? a.wvt : a.NpZ;
     return (0, r.jsx)(
         c.Z,

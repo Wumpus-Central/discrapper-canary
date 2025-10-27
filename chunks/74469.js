@@ -80,7 +80,7 @@ let v = (0, l.hQ)(),
                 },
                 [S],
             ),
-            w = i.useCallback(
+            D = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
@@ -100,7 +100,7 @@ let v = (0, l.hQ)(),
                 },
                 [S],
             ),
-            D = i.useCallback(
+            w = i.useCallback(
                 (e) => {
                     let t = e[0];
                     return null == t ? null : (0, r.jsx)(r.Fragment, { children: R(t) });
@@ -122,7 +122,7 @@ let v = (0, l.hQ)(),
         return (
             (0, p.Z)(j, b.Y_.GUILD_TAG),
             (0, r.jsxs)(_.Z, {
-                title: y.intl.string(y.t.Pdd1nZ),
+                title: y.intl.string(y.t.Pdd1nd),
                 titleId: v,
                 ref: j,
                 titleIcon:
@@ -135,7 +135,7 @@ let v = (0, l.hQ)(),
                     (0, r.jsx)(s.Text, {
                         className: O.subtitle,
                         variant: "text-sm/normal",
-                        children: y.intl.string(y.t.mlZ6Jy),
+                        children: y.intl.string(y.t.mlZ6Jx),
                     }),
                     (0, r.jsx)(s.PhF, {
                         className: O.select,
@@ -144,8 +144,8 @@ let v = (0, l.hQ)(),
                         options: N,
                         select: L,
                         renderLeading: P,
-                        renderTrailing: w,
-                        renderOptionValue: D,
+                        renderTrailing: D,
+                        renderOptionValue: w,
                         serialize: M,
                         clear: k,
                         clearable: null != C,

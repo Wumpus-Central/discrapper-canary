@@ -35,10 +35,10 @@ function h(e) {
 function b(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
         b = [
-            [p.intl.string(p.t["73h51N"]), p.intl.string(p.t["gbjs//"])],
-            [p.intl.string(p.t.mCoH0d), p.intl.string(p.t["l/BuSE"])],
-            [p.intl.string(p.t.psQktr), p.intl.string(p.t.nMhIZW)],
-            [p.intl.string(p.t["0ItLmJ"]), p.intl.string(p.t.yQHqsL)],
+            [p.intl.string(p.t["73h51J"]), p.intl.string(p.t["gbjs/6"])],
+            [p.intl.string(p.t.mCoH0V), p.intl.string(p.t["l/BuSI"])],
+            [p.intl.string(p.t.psQktv), p.intl.string(p.t.nMhIZQ)],
+            [p.intl.string(p.t["0ItLmF"]), p.intl.string(p.t.yQHqsC)],
         ];
     return (0, r.jsx)("div", {
         className: l()({ [f.responsive]: i }),
@@ -58,11 +58,11 @@ function b(e) {
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-lg/medium",
                                     color: "header-primary",
-                                    children: p.intl.string(p.t["67arYG"]),
+                                    children: p.intl.string(p.t["67arYL"]),
                                 }),
                                 n &&
                                     (0, r.jsx)(a.zxk, {
-                                        text: p.intl.string(p.t.oyzLpK),
+                                        text: p.intl.string(p.t.oyzLpD),
                                         icon: s.ZSh,
                                         iconPosition: "end",
                                         size: "md",

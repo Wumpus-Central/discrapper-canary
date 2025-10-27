@@ -12,12 +12,12 @@ let E = (0, u.x1)(s.n.GIFT_PANE, {
         render: a.Z,
     }),
     d = (0, u.wf)(s.n.GIFT_PANEL, {
-        useTitle: () => c.intl.string(c.t["jcSP+v"]),
+        useTitle: () => c.intl.string(c.t["jcSP+g"]),
         buildLayout: () => [E],
     }),
     T = (0, u.m7)(s.n.GIFT_SIDEBAR_ITEM, {
         icon: i.OgN,
-        useTitle: () => c.intl.string(c.t["jcSP+v"]),
+        useTitle: () => c.intl.string(c.t["jcSP+g"]),
         legacySearchKey: o.s6.GIFT_INVENTORY,
         buildLayout: () => [d],
         trailing: {

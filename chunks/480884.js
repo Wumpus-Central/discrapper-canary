@@ -8,8 +8,8 @@ var a = e(951288),
     l = e(797614),
     d = e(819557),
     u = e(138201),
-    b = e(359119),
-    _ = e(473092),
+    _ = e(359119),
+    b = e(473092),
     g = e(636749),
     x = e(981631),
     v = e(388032),
@@ -20,23 +20,23 @@ function k(n) {
             onClose: e,
             channelId: k,
             warningId: p,
-            senderId: y,
-            description: m,
+            senderId: m,
+            description: y,
             safetyTipRows: T,
             actionRows: j,
             learnMore: N,
         } = n,
-        f = (0, o.e7)([b.ZP], () => b.ZP.getChannelSafetyWarning(k, p));
+        f = (0, o.e7)([_.ZP], () => _.ZP.getChannelSafetyWarning(k, p));
     return (
         s.useEffect(() => {
-            (0, _.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+            (0, b.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: k,
                 warningId: p,
-                senderId: y,
+                senderId: m,
                 warningType: null == f ? void 0 : f.type,
             }),
                 l.Z.increment({ name: i.V.SAFETY_WARNING_MODAL_VIEW });
-        }, [k, p, y, f]),
+        }, [k, p, m, f]),
         (0, a.jsx)(c.ExpressiveModal, {
             onClose: e,
             transitionState: t,
@@ -45,8 +45,8 @@ function k(n) {
                 src: h.Z,
             },
             gradientColor: "blue",
-            title: v.intl.string(v.t.lyt43N),
-            subtitle: m,
+            title: v.intl.string(v.t.lyt43P),
+            subtitle: y,
             actions: [],
             children: (0, a.jsxs)(r.Kqy, {
                 gap: 24,
@@ -61,7 +61,7 @@ function k(n) {
                             (0, a.jsx)(r.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
-                                children: v.intl.string(v.t.K5FKtb),
+                                children: v.intl.string(v.t.K5FKtc),
                             }),
                             (0, a.jsx)(u.rT, { children: j }),
                         ],
@@ -69,7 +69,7 @@ function k(n) {
                     (0, a.jsx)(g.Z, {
                         channelId: k,
                         warningId: p,
-                        senderId: y,
+                        senderId: m,
                         safetyWarning: f,
                     }),
                 ],

@@ -11,7 +11,7 @@ let s = function () {
             (0, r.jsx)(i.Text, {
                 variant: "eyebrow",
                 color: "header-secondary",
-                children: l.intl.string(l.t.MjVwl5),
+                children: l.intl.string(l.t.MjVwl8),
             }),
             (0, r.jsxs)("div", {
                 className: a.example,
@@ -28,12 +28,12 @@ let s = function () {
                             (0, r.jsx)(i.Text, {
                                 variant: "text-md/semibold",
                                 color: "header-primary",
-                                children: l.intl.string(l.t.wyARg4),
+                                children: l.intl.string(l.t.wyARgw),
                             }),
                             (0, r.jsx)(i.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: l.intl.string(l.t.lhsK1d),
+                                children: l.intl.string(l.t.lhsK1V),
                             }),
                         ],
                     }),

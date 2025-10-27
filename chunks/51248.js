@@ -37,8 +37,8 @@ function g(e) {
                 null != e && x(e);
             }
         },
-        O = d.intl.string(d.t["ETE/oK"]),
-        y = !p && j ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == f ? void 0 : f.name }) : void 0;
+        O = d.intl.string(d.t["ETE/oC"]),
+        y = !p && j ? d.intl.formatToPlainString(d.t.nula34, { ruleName: null == f ? void 0 : f.name }) : void 0;
     return (
         null != h &&
             (y = (0, r.jsx)(l.Text, {

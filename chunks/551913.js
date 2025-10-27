@@ -3,15 +3,15 @@ var r = n(951288),
     i = n(647438),
     l = n(907862),
     a = n(703656),
-    o = n(937797),
-    s = n(46140),
+    s = n(937797),
+    o = n(46140),
     c = n(981631),
     u = n(388032),
     d = n(11269);
 function p(e) {
     let { onNavigateToQuestHome: t, onRender: n, onRequestClose: p, targetElementRef: f } = e,
-        { enabled: h, variant: g } = o.GE.useConfig({ location: s.dr.QUEST_HOME_DESKTOP }),
-        m = i.useCallback(() => {
+        { enabled: h, variant: m } = s.GE.useConfig({ location: o.dr.QUEST_HOME_DESKTOP }),
+        g = i.useCallback(() => {
             t(), (0, a.uL)(c.Z5c.QUEST_HOME_V2);
         }, [t]);
     if (
@@ -25,22 +25,22 @@ function p(e) {
                 {
                     text: (function (e) {
                         switch (e) {
-                            case o.yE.DISCOVER:
-                                return u.intl.string(u.t.BeeKh4);
-                            case o.yE.ACTION:
+                            case s.yE.DISCOVER:
+                                return u.intl.string(u.t.BeeKh0);
+                            case s.yE.ACTION:
                                 return u.intl.string(u.t["8Dp3R0"]);
-                            case o.yE.EARN:
-                                return u.intl.string(u.t.facYnJ);
-                            case o.yE.REWARD:
-                                return u.intl.string(u.t.gL45vL);
+                            case s.yE.EARN:
+                                return u.intl.string(u.t.facYnD);
+                            case s.yE.REWARD:
+                                return u.intl.string(u.t.gL45vM);
                         }
-                    })(g),
+                    })(m),
                     variant: "primary",
-                    onClick: m,
+                    onClick: g,
                 },
             ],
             align: "top",
-            body: u.intl.string(u.t.o4NGXV),
+            body: u.intl.string(u.t.o4NGXc),
             caretConfig: { align: "start" },
             gradientColor: "purple",
             graphic: {
@@ -53,15 +53,15 @@ function p(e) {
             targetElementRef: f,
             title: (function (e) {
                 switch (e) {
-                    case o.yE.DISCOVER:
-                        return u.intl.string(u.t["2qdOVl"]);
-                    case o.yE.ACTION:
-                        return u.intl.string(u.t.E3Rw09);
-                    case o.yE.EARN:
-                        return u.intl.string(u.t["2/2YdH"]);
-                    case o.yE.REWARD:
+                    case s.yE.DISCOVER:
+                        return u.intl.string(u.t["2qdOVq"]);
+                    case s.yE.ACTION:
+                        return u.intl.string(u.t.E3Rw0y);
+                    case s.yE.EARN:
+                        return u.intl.string(u.t["2/2YdK"]);
+                    case s.yE.REWARD:
                         return u.intl.string(u.t.mOH7r6);
                 }
-            })(g),
+            })(m),
         });
 }

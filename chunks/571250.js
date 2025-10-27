@@ -2,10 +2,10 @@ r.d(t, { Z: () => a });
 var n = r(388032);
 function a(e, t, r) {
     return r
-        ? n.intl.string(n.t["2Ne/Y2"])
+        ? n.intl.string(n.t["2Ne/Y1"])
         : t
-          ? n.intl.string(n.t.QZ7WSU)
+          ? n.intl.string(n.t.QZ7WSS)
           : e
-            ? n.intl.string(n.t["2US87+"])
-            : n.intl.string(n.t.wjcRFR);
+            ? n.intl.string(n.t["2US872"])
+            : n.intl.string(n.t.wjcRFX);
 }

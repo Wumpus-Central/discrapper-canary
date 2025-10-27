@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(497598),
-    s = n(792091),
+    s = n(497598),
+    o = n(792091),
     c = n(481060),
     u = n(626135),
     d = n(381585),
@@ -20,31 +20,31 @@ let b = () => {
         i = (0, d.sp)(),
         b = (0, p.G)("CollectiblesSortSelect"),
         v = n(),
-        E = l.useMemo(() => f.aP.filter((e) => e.sortType !== s.E.RELEVANCE || v), [v]),
+        E = l.useMemo(() => f.aP.filter((e) => e.sortType !== o.E.RELEVANCE || v), [v]),
         x = l.useCallback((e) => {
             let { sortType: t, sortDirection: n } = e;
-            return t === s.E.RECENCY
+            return t === o.E.RECENCY
                 ? {
-                      label: h.intl.string(h.t["51Bhi4"]),
+                      label: h.intl.string(h.t["51Bhiz"]),
                       value: "recent",
                   }
-                : t === s.E.PRICE
-                  ? n === o.F.ASC
+                : t === o.E.PRICE
+                  ? n === s.F.ASC
                       ? {
-                            label: h.intl.string(h.t.m8RVU1),
+                            label: h.intl.string(h.t.m8RVU2),
                             value: "price-asc",
                         }
                       : {
-                            label: h.intl.string(h.t.zBwQJC),
+                            label: h.intl.string(h.t.zBwQJO),
                             value: "price-desc",
                         }
-                  : t === s.E.RELEVANCE
+                  : t === o.E.RELEVANCE
                     ? {
-                          label: h.intl.string(h.t["XoeT//"]),
+                          label: h.intl.string(h.t["XoeT/z"]),
                           value: "relevance",
                       }
                     : {
-                          label: h.intl.string(h.t.Y68e5u),
+                          label: h.intl.string(h.t.Y68e5p),
                           value: "popularity",
                       };
         }, []),
@@ -52,24 +52,24 @@ let b = () => {
             (e) =>
                 ({
                     recent: {
-                        sortType: s.E.RECENCY,
-                        sortDirection: o.F.DESC,
+                        sortType: o.E.RECENCY,
+                        sortDirection: s.F.DESC,
                     },
                     "price-asc": {
-                        sortType: s.E.PRICE,
-                        sortDirection: o.F.ASC,
+                        sortType: o.E.PRICE,
+                        sortDirection: s.F.ASC,
                     },
                     "price-desc": {
-                        sortType: s.E.PRICE,
-                        sortDirection: o.F.DESC,
+                        sortType: o.E.PRICE,
+                        sortDirection: s.F.DESC,
                     },
                     popularity: {
-                        sortType: s.E.POPULARITY,
-                        sortDirection: o.F.DESC,
+                        sortType: o.E.POPULARITY,
+                        sortDirection: s.F.DESC,
                     },
                     relevance: {
-                        sortType: s.E.RELEVANCE,
-                        sortDirection: o.F.DESC,
+                        sortType: o.E.RELEVANCE,
+                        sortDirection: s.F.DESC,
                     },
                 })[e],
             [],

@@ -41,7 +41,7 @@ let h = {
             n = u.oY(t);
         return null == n || 0 === n.length
             ? ""
-            : d.intl.formatToPlainString(d.t.Y6Qfjo, {
+            : d.intl.formatToPlainString(d.t.Y6Qfju, {
                   username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n,
               });
     },

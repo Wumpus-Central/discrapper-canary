@@ -60,7 +60,7 @@ function M(e) {
                 return null;
             let n = u()(),
                 a = u()(J.tenantMetadata.socialLayer.expiresAt).diff(n, "days");
-            return a <= 1 ? N.intl.string(N.t.Bc13HB) : N.intl.format(N.t.Io7ozs, { days: a });
+            return a <= 1 ? N.intl.string(N.t.Bc13HF) : N.intl.format(N.t.Io7ozn, { days: a });
         }, [null == J || null == (n = J.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
         en =
             (null == J || null == (i = J.tenantMetadata) || null == (a = i.socialLayer)
@@ -190,7 +190,7 @@ function M(e) {
                                 onClick: (e) => {
                                     e.stopPropagation(), (0, O.P)(J, { isGift: !1 });
                                 },
-                                text: N.intl.format(N.t.Xp5WTk, {
+                                text: N.intl.format(N.t.Xp5WTn, {
                                     price: (0, _.T4)(
                                         null != (F = null == (w = J.price) ? void 0 : w.amount) ? F : 0,
                                         null != (U = null == (T = J.price) ? void 0 : T.currency) ? U : A.pK.USD,

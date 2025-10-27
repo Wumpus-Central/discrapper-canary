@@ -32,18 +32,18 @@ let v = function (e) {
         ),
         A = Z
             ? y.TPd.GUILD_THREADS_ONLY.has(v.type)
-                ? _.intl.string(_.t.RBBLhI)
-                : _.intl.string(_.t.gUx4en)
+                ? _.intl.string(_.t.RBBLhL)
+                : _.intl.string(_.t.gUx4eu)
             : O
-              ? _.intl.format(_.t.dYP2FR, { destination: (0, s.F6)(v, f.default, h.Z, !0) })
-              : _.intl.string(_.t.h76ulJ);
+              ? _.intl.format(_.t.dYP2Fc, { destination: (0, s.F6)(v, f.default, h.Z, !0) })
+              : _.intl.string(_.t.h76ulG);
     return P || !N
         ? null
         : (0, i.jsx)(b.Z, {
               className: t,
               style: n,
               title: A,
-              description: Z ? _.intl.string(_.t.lpgkzs) : _.intl.string(_.t.usQh4O),
+              description: Z ? _.intl.string(_.t.lpgkzq) : _.intl.string(_.t.usQh4J),
               icons: C.J6,
               onDrop: (e) => {
                   if (P) return !1;

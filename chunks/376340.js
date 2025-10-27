@@ -1,40 +1,40 @@
 t.d(a, { L: () => c });
-var r = t(951288);
+var n = t(951288);
 t(647438);
-var n = t(481060),
+var r = t(481060),
     s = t(600164),
     l = t(424071),
     i = t(388032),
     o = t(771831);
 function c(e) {
     let { onClose: a, img: t, title: c, body: d, content: x } = e;
-    return (0, r.jsxs)(l.Z, {
+    return (0, n.jsxs)(l.Z, {
         children: [
-            (0, r.jsxs)(n.xBx, {
+            (0, n.jsxs)(r.xBx, {
                 direction: s.Z.Direction.VERTICAL,
                 className: o.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: o.illustration,
                         children: t,
                     }),
-                    (0, r.jsx)(n.Heading, {
+                    (0, n.jsx)(r.Heading, {
                         className: o.title,
                         variant: "heading-xl/extrabold",
                         children: c,
                     }),
-                    (0, r.jsx)(n.olH, {
+                    (0, n.jsx)(r.olH, {
                         className: o.closeButton,
                         onClick: a,
                     }),
                 ],
             }),
-            (0, r.jsxs)(n.hzk, {
+            (0, n.jsxs)(r.hzk, {
                 className: o.body,
                 paddingFix: !1,
                 children: [
-                    (0, r.jsx)(n.Text, {
+                    (0, n.jsx)(r.Text, {
                         tag: "p",
                         variant: "text-md/normal",
                         color: "header-secondary",
@@ -43,14 +43,14 @@ function c(e) {
                     x,
                 ],
             }),
-            (0, r.jsx)(n.mzw, {
+            (0, n.jsx)(r.mzw, {
                 className: o.footer,
-                children: (0, r.jsx)("div", {
+                children: (0, n.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: o.footerButton,
-                    children: (0, r.jsx)(n.Button, {
+                    children: (0, n.jsx)(r.Button, {
                         variant: "primary",
-                        text: i.intl.string(i.t.i4jeWV),
+                        text: i.intl.string(i.t.i4jeWR),
                         onClick: a,
                     }),
                 }),

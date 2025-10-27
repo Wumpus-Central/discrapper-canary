@@ -67,7 +67,7 @@ function h(e) {
         E = (0, o.bp)();
     return (0, r.jsx)(i.sNh, {
         id: "user-profile",
-        label: null != t ? t : u.intl.string(u.t.LYju5O),
+        label: null != t ? t : u.intl.string(u.t.LYju5J),
         action: () => {
             null == n || n(),
                 (0, l.openUserProfileModal)(

@@ -27,8 +27,8 @@ var r = n(392711),
     N = n(303694),
     R = n(660199),
     P = n(364458),
-    w = n(981631),
-    D = n(689079),
+    D = n(981631),
+    w = n(689079),
     L = n(388032);
 function x(e, t, n) {
     return (
@@ -255,7 +255,7 @@ let H = (e) => {
                 if (null == d)
                     return {
                         type: "text",
-                        content: "@".concat(L.intl.string(L.t["YV4F/v"])),
+                        content: "@".concat(L.intl.string(L.t["YV4F/n"])),
                     };
                 let f = (0, u.zI)(null == l ? void 0 : l.id, d) && !(0, c.Gr)(d);
                 return {
@@ -309,8 +309,8 @@ let H = (e) => {
                     r = null != (s = g.ZP.getNickname(o.getGuildId(), n.channelId, a)) ? s : E.ZP.getName(a);
                 }
                 let l = e[1],
-                    c = null != l && w.Xyh.test(l.trim()),
-                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(L.intl.string(L.t.sKdZ6e)) : e[0];
+                    c = null != l && D.Xyh.test(l.trim()),
+                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(L.intl.string(L.t.sKdZ6U)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -358,7 +358,7 @@ let H = (e) => {
                         id: e[2],
                     };
                 let [, ...r] = e[1].split(" "),
-                    i = "".concat(e[2]).concat([...r].map((e) => "".concat(D.oQ).concat(e)).join(""));
+                    i = "".concat(e[2]).concat([...r].map((e) => "".concat(w.oQ).concat(e)).join(""));
                 return {
                     channelId: n.channelId,
                     commandId: e[2],
@@ -387,7 +387,7 @@ let H = (e) => {
                         content: [
                             {
                                 type: "text",
-                                content: L.intl.string(L.t["11pdXV"]),
+                                content: L.intl.string(L.t["11pdXZ"]),
                             },
                         ],
                         icon: void 0,
@@ -402,7 +402,7 @@ let H = (e) => {
                         {
                             type: "text",
                             content: "".concat(
-                                null != (a = null == l ? void 0 : l.name) ? a : L.intl.string(L.t["11pdXV"]),
+                                null != (a = null == l ? void 0 : l.name) ? a : L.intl.string(L.t["11pdXZ"]),
                             ),
                         },
                     ],
@@ -471,7 +471,7 @@ let H = (e) => {
         spoiler: {
             order: A.ZP.order,
             requiredFirstCharacters: ["|"],
-            match: (e) => w.$92.exec(e),
+            match: (e) => D.$92.exec(e),
             parse: (e, t, n) => ({
                 content: t(e[1], n),
                 channelId: n.channelId,
@@ -480,7 +480,7 @@ let H = (e) => {
         staticRouteLink: {
             order: A.ZP.order,
             requiredFirstCharacters: ["<"],
-            match: (e) => w.PEY.exec(e),
+            match: (e) => D.PEY.exec(e),
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,

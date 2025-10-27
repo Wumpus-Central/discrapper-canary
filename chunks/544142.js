@@ -130,7 +130,7 @@ function E(e) {
                       color: "header-secondary",
                       children: (0, i.jsx)("div", {
                           className: v.subtitle,
-                          children: _.intl.format(_.t.imPXd3, {
+                          children: _.intl.format(_.t.imPXd5, {
                               usernameHook: (e, n) =>
                                   (0, i.jsx)(
                                       j,

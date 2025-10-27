@@ -104,17 +104,17 @@ function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
         case o.Skl.ONLINE:
-            return t ? s.intl.string(s.t["9hghLC"]) : s.intl.string(s.t.WbGtnJ);
+            return t ? s.intl.string(s.t["9hghLD"]) : s.intl.string(s.t.WbGtnH);
         case o.Skl.OFFLINE:
-            return s.intl.string(s.t.Vv0abG);
+            return s.intl.string(s.t.Vv0abJ);
         case o.Skl.IDLE:
-            return s.intl.string(s.t.qWbtVV);
+            return s.intl.string(s.t.qWbtVU);
         case o.Skl.DND:
-            return s.intl.string(s.t.jaNpQE);
+            return s.intl.string(s.t.jaNpQH);
         case o.Skl.INVISIBLE:
-            return s.intl.string(s.t.bg24HB);
+            return s.intl.string(s.t.bg24HO);
         case o.Skl.STREAMING:
-            return s.intl.string(s.t.XKYej4);
+            return s.intl.string(s.t.XKYej5);
         case o.Skl.UNKNOWN:
         default:
             return null;
@@ -141,7 +141,7 @@ function T(e) {
     });
 }
 function S(e, t, n) {
-    if (null == e) return s.intl.string(s.t.sKdZ6e);
+    if (null == e) return s.intl.string(s.t.sKdZ6U);
     if (!h(e.username)) return d;
     let r = n;
     if (

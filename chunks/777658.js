@@ -81,9 +81,9 @@ function m(e) {
                         h(
                             _(
                                 {
-                                    header: d.intl.formatToPlainString(d.t.fPLvZW, { name: b }),
-                                    confirmText: d.intl.string(d.t.cvSt1N),
-                                    cancelText: d.intl.string(d.t["ETE/oK"]),
+                                    header: d.intl.formatToPlainString(d.t.fPLvZd, { name: b }),
+                                    confirmText: d.intl.string(d.t.cvSt1J),
+                                    cancelText: d.intl.string(d.t["ETE/oC"]),
                                     onConfirm: () => {
                                         s.Z.removeFriend(E, { location: f }), A(!1), null == m || m();
                                     },
@@ -105,12 +105,12 @@ function m(e) {
     return I
         ? (0, r.jsx)(o.sNh, {
               id: "remove-friend",
-              label: d.intl.string(d.t.cvSt1N),
+              label: d.intl.string(d.t.cvSt1J),
               action: C,
           })
         : (0, r.jsx)(o.sNh, {
               id: "add-friend",
-              label: S ? d.intl.string(d.t.xMH6vL) : v,
+              label: S ? d.intl.string(d.t.xMH6vD) : v,
               action: () => {
                   S ||
                       (s.Z.addRelationship({

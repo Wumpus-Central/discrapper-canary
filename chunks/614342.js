@@ -12,8 +12,8 @@ function d(e) {
         case s.d5.NEEDS_COMMUNITY:
             return {
                 visibility: t,
-                noticeText: c.intl.string(c.t["0Z2Qxs"]),
-                ctaLabel: c.intl.string(c.t.BOJpl5),
+                noticeText: c.intl.string(c.t["0Z2Qxt"]),
+                ctaLabel: c.intl.string(c.t.BOJpl0),
                 ctaClickable: null != e,
                 onCtaClicked() {
                     var t;
@@ -24,8 +24,8 @@ function d(e) {
         case s.d5.WAITLIST_ONLY:
             return {
                 visibility: t,
-                noticeText: c.intl.string(c.t["5vz88P"]),
-                ctaLabel: c.intl.string(c.t["6yjvmp"]),
+                noticeText: c.intl.string(c.t["5vz88G"]),
+                ctaLabel: c.intl.string(c.t["6yjvmg"]),
                 ctaClickable: !0,
                 onCtaClicked() {
                     (0, l.Z)("https://dis.gd/creators-waitlist");

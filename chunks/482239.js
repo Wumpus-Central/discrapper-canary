@@ -10,7 +10,7 @@ function s(e) {
         _ = (0, i.Sw)(l, s),
         p = c(f),
         h = u(null != _ ? _ : void 0),
-        m = o.intl.format(o.t["32QI5+"], {
+        m = o.intl.format(o.t["32QI5/"], {
             actorName: f.nick,
             actorHook: p,
             targetName: null == _ ? void 0 : _.nick,

@@ -28,7 +28,7 @@ function g() {
     return (0, r.jsxs)("div", {
         className: d.rowContainer,
         children: [
-            (0, r.jsx)("div", { children: c.intl.string(c.t.AKcFUl) }),
+            (0, r.jsx)("div", { children: c.intl.string(c.t.AKcFUj) }),
             (0, r.jsx)(i.rgF, {
                 size: "xs",
                 color: "currentColor",

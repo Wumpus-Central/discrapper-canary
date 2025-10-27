@@ -80,7 +80,7 @@ function x(e) {
                               className: v.chatHeaderBarText,
                               variant: "text-md/medium",
                               color: "header-secondary",
-                              children: _.intl.format(_.t.f2tNxM, {
+                              children: _.intl.format(_.t.f2tNxH, {
                                   username: null == t ? void 0 : t.globalName,
                                   channelName: (0, i.jsx)(
                                       c.Text,
@@ -105,7 +105,7 @@ function x(e) {
 }
 function O(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: r } = e,
-        l = r ? _.intl.string(_.t.ygslb2) : _.intl.string(_.t["3Hv9qa"]),
+        l = r ? _.intl.string(_.t.ygslb0) : _.intl.string(_.t["3Hv9qQ"]),
         a = r
             ? () => u.Z.stopRinging(t, [n])
             : () => {

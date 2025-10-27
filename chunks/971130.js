@@ -1,12 +1,12 @@
 let I;
 n.d(e, {
     Qq: () => c,
-    Sz: () => D,
-    Vg: () => U,
+    Sz: () => p,
+    Vg: () => A,
     ZP: () => R,
     an: () => m,
     bm: () => f,
-    rh: () => p,
+    rh: () => D,
 }),
     n(539854),
     n(388685);
@@ -21,8 +21,8 @@ var i,
     a = n(483360),
     S = n(981631),
     s = n(245335),
-    o = n(388032);
-function E(t) {
+    P = n(388032);
+function o(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             I = Object.keys(n);
@@ -47,7 +47,7 @@ function E(t) {
     }
     return t;
 }
-function P(t, e) {
+function E(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -95,9 +95,9 @@ let d = (t, e) => null != t && _.ZP.isMember(t, e),
                 continue;
             }
             if (null == O.ZP.lastMessageId(N.id)) continue;
-            let o = N.getRecipientId();
-            if (null != o && !e.has(o) && !i.has(o)) {
-                let t = T.default.getUser(o);
+            let P = N.getRecipientId();
+            if (null != P && !e.has(P) && !i.has(P)) {
+                let t = T.default.getUser(P);
                 if (null == t || t.bot || d(I, t.id)) continue;
                 i.add(t.id),
                     l.push({
@@ -121,7 +121,7 @@ function m(t) {
             omitGuildId: N,
         } = t,
         S = new Set(),
-        o = [],
+        P = [],
         f = {
             numFriends: 0,
             numDms: 0,
@@ -135,12 +135,12 @@ function m(t) {
             maxRowsWithoutQuery: _,
             omitGuildId: N,
             shownUserIds: S,
-            rows: o,
+            rows: P,
             counts: f,
         };
         n === s.Iq.EMBEDDED_APPLICATION &&
             (g(
-                P(E({}, t), {
+                E(o({}, t), {
                     includeGroupDms: !1,
                     limit: 1,
                 }),
@@ -159,7 +159,7 @@ function m(t) {
                             }),
                             i.numChannels++);
                     }
-            })(P(E({}, t), { suggestedChannelIds: l }))),
+            })(E(o({}, t), { suggestedChannelIds: l }))),
             ((t) => {
                 let {
                     omitUserIds: e,
@@ -184,8 +184,8 @@ function m(t) {
                             }),
                             _.numFriends++);
                     }
-            })(P(E({}, t), { suggestedUserIds: i })),
-            g(P(E({}, t), { includeGroupDms: !0 })),
+            })(E(o({}, t), { suggestedUserIds: i })),
+            g(E(o({}, t), { includeGroupDms: !0 })),
             ((t) => {
                 let { omitUserIds: e, maxRowsWithoutQuery: n, omitGuildId: I, shownUserIds: i, rows: l, counts: r } = t;
                 for (let t of u.Z.getFriendIDs()) {
@@ -204,7 +204,7 @@ function m(t) {
     } else {
         let t = {
             query: e,
-            rows: o,
+            rows: P,
             counts: f,
         };
         n === s.Iq.EMBEDDED_APPLICATION &&
@@ -225,7 +225,7 @@ function m(t) {
                         }),
                             I.numChannels++;
                     });
-            })(P(E({}, t), { inviteTargetType: n })),
+            })(E(o({}, t), { inviteTargetType: n })),
             ((t) => {
                 let { query: e, omitUserIds: n, shownUserIds: I, rows: i, counts: l } = t;
                 a.ZP.queryDMUsers({
@@ -247,7 +247,7 @@ function m(t) {
                         l.numDms++);
                 });
             })(
-                P(E({}, t), {
+                E(o({}, t), {
                     omitUserIds: I,
                     shownUserIds: S,
                 }),
@@ -288,14 +288,14 @@ function m(t) {
                         I.numFriends++);
                 });
             })(
-                P(E({}, t), {
+                E(o({}, t), {
                     omitUserIds: I,
                     shownUserIds: S,
                 }),
             );
     }
     return {
-        rows: o,
+        rows: P,
         counts: f,
     };
 }
@@ -313,7 +313,7 @@ function c(t, e) {
         }
     return [n, I];
 }
-function p(t, e) {
+function D(t, e) {
     for (let n of N.Z.getPrivateChannelIds()) {
         let I = r.Z.getChannel(n);
         if (null == I || !I.isDM() || null == O.ZP.lastMessageId(I.id)) continue;
@@ -326,7 +326,7 @@ function p(t, e) {
     }
     return null;
 }
-function D(t) {
+function p(t) {
     let { channel: e, inviteTargetType: n, applicationId: I } = t;
     if (n === s.Iq.EMBEDDED_APPLICATION && null != e) {
         for (let t of l.ZP.getEmbeddedActivitiesForChannel(e.id)) if (t.applicationId === I) return new Set(t.userIds);
@@ -334,25 +334,25 @@ function D(t) {
     return new Set();
 }
 let V = "minutes",
-    M = "hours",
+    y = "hours",
     h = "days",
-    y = "never",
-    A = {
+    M = "never",
+    U = {
         [I.INVITE_OPTIONS_30_MINUTES.value]: {
             value: 30,
             type: V,
         },
         [I.INVITE_OPTIONS_1_HOUR.value]: {
             value: 1,
-            type: M,
+            type: y,
         },
         [I.INVITE_OPTIONS_6_HOURS.value]: {
             value: 6,
-            type: M,
+            type: y,
         },
         [I.INVITE_OPTIONS_12_HOURS.value]: {
             value: 12,
-            type: M,
+            type: y,
         },
         [I.INVITE_OPTIONS_1_DAY.value]: {
             value: 1,
@@ -376,32 +376,32 @@ let V = "minutes",
         },
         [I.INVITE_OPTIONS_FOREVER.value]: {
             value: 0,
-            type: y,
+            type: M,
         },
     };
-function U(t, e) {
+function A(t, e) {
     let n = parseInt(e, 10),
         I = 0 === n,
-        i = A[t].value;
-    switch (A[t].type) {
+        i = U[t].value;
+    switch (U[t].type) {
         case V:
-            if (I) return o.intl.string(o.t["/WbTXF"]);
-            return o.intl.formatToPlainString(o.t.eDRWJC, { numUses: n });
-        case M:
-            if (I) return o.intl.formatToPlainString(o.t.ZVdJMz, { numHours: i });
-            return o.intl.formatToPlainString(o.t.NgZgAA, {
+            if (I) return P.intl.string(P.t["/WbTXD"]);
+            return P.intl.formatToPlainString(P.t.eDRWJK, { numUses: n });
+        case y:
+            if (I) return P.intl.formatToPlainString(P.t.ZVdJMy, { numHours: i });
+            return P.intl.formatToPlainString(P.t.NgZgAB, {
                 numHours: i,
                 numUses: n,
             });
         case h:
-            if (I) return o.intl.formatToPlainString(o.t.T96qsr, { numDays: i });
-            return o.intl.formatToPlainString(o.t.TfuB9P, {
+            if (I) return P.intl.formatToPlainString(P.t.T96qss, { numDays: i });
+            return P.intl.formatToPlainString(P.t.TfuB9B, {
                 numDays: i,
                 numUses: n,
             });
-        case y:
-            if (I) return o.intl.string(o.t.QrHBnJ);
-            return o.intl.formatToPlainString(o.t.yJnTxM, { numUses: n });
+        case M:
+            if (I) return P.intl.string(P.t.QrHBnC);
+            return P.intl.formatToPlainString(P.t.yJnTxI, { numUses: n });
         default:
             return "";
     }

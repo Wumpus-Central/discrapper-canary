@@ -42,7 +42,7 @@ function y(e) {
                     else {
                         var t;
                         (null == e || null == (t = e.body) ? void 0 : t.username) != null
-                            ? T(A.intl.string(A.t["TGg/2t"]))
+                            ? T(A.intl.string(A.t["TGg/2k"]))
                             : T(null == e ? void 0 : e.body.message);
                     }
                 }
@@ -58,11 +58,11 @@ function y(e) {
         children: (0, r.jsx)(a.Modal, {
             transitionState: t,
             onClose: n,
-            title: A.intl.string(A.t.QpSKo6),
-            subtitle: A.intl.format(A.t.EcJBEB, { helpURL: f.Z.getArticleURL(E.BhN.AGE_GATE) }),
+            title: A.intl.string(A.t.QpSKow),
+            subtitle: A.intl.format(A.t.EcJBEI, { helpURL: f.Z.getArticleURL(E.BhN.AGE_GATE) }),
             actions: [
                 {
-                    text: A.intl.string(A.t.i4jeWV),
+                    text: A.intl.string(A.t.i4jeWR),
                     type: "submit",
                     loading: O,
                     disabled: null == y,
@@ -77,7 +77,7 @@ function y(e) {
             children: (0, r.jsx)(d.Z, {
                 required: !0,
                 autoFocus: !0,
-                label: A.intl.string(A.t.rhBeKS),
+                label: A.intl.string(A.t.rhBeKe),
                 name: "birthday",
                 onChange: (e) => b(e),
                 onPopulated: w,

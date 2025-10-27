@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(570140),
     i = n(317770),
     l = n(594174);
@@ -22,4 +22,4 @@ class a extends i.Z {
         null != window.DiscordDevSession && window.DiscordDevSession.started && window.DiscordDevSession.stop();
     }
 }
-let o = new a();
+let s = new a();

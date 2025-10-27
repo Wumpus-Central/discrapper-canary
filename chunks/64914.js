@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => w,
+    ZP: () => D,
     fD: () => R,
 }),
     n(388685),
@@ -90,7 +90,7 @@ function P(e) {
         ? (o.K.set(N, e), h.ZP.setEnableHardwareAcceleration(!0))
         : h.ZP.setEnableHardwareAcceleration(e);
 }
-function w() {
+function D() {
     let [e] = i.useState(() => R()),
         t = g.bm.useSetting(),
         n = g.Sb.useSetting(),
@@ -107,15 +107,15 @@ function w() {
         }, []),
         N = i.useCallback((e) => {
             (0, s.h7j)((t) => {
-                let n = e ? I.intl.format(I.t.LYXRxM, {}) : I.intl.format(I.t.uDP3Ky, {});
+                let n = e ? I.intl.format(I.t.LYXRxL, {}) : I.intl.format(I.t.uDP3Kz, {});
                 return (0, r.jsx)(
                     s.ConfirmModal,
                     C(
                         S(
                             {
-                                header: I.intl.string(I.t.aqpAvr),
-                                confirmText: I.intl.string(I.t.vT7ckp),
-                                cancelText: I.intl.string(I.t["ETE/oK"]),
+                                header: I.intl.string(I.t.aqpAvn),
+                                confirmText: I.intl.string(I.t.vT7ckk),
+                                cancelText: I.intl.string(I.t["ETE/oC"]),
                                 onConfirm: () => P(e),
                             },
                             t,
@@ -131,8 +131,8 @@ function w() {
             });
         }, []),
         {
-            warpEnabled: w,
-            warpConnecting: D,
+            warpEnabled: D,
+            warpConnecting: w,
             warpLog: L,
         } = (0, a.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
@@ -143,7 +143,7 @@ function w() {
             e ? d.Z.connect() : d.Z.disconnect();
         }, []);
     return (0, r.jsx)(y.Z, {
-        title: I.intl.string(I.t["8/udY2"]),
+        title: I.intl.string(I.t["8/udY0"]),
         children: (0, r.jsxs)(s.Kqy, {
             gap: 16,
             children: [
@@ -151,8 +151,8 @@ function w() {
                     setting: O.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.ObIb1d),
-                            description: I.intl.format(I.t["CY6q/f"], { apiDocsUrl: v.EYA.API_DOCS }),
+                            label: I.intl.string(I.t.ObIb1Q),
+                            description: I.intl.format(I.t["CY6q/Q"], { apiDocsUrl: v.EYA.API_DOCS }),
                             checked: n,
                             onChange: g.Sb.updateSetting,
                         }),
@@ -165,15 +165,15 @@ function w() {
                         gap: 16,
                         children: [
                             (0, r.jsx)(s.rsf, {
-                                label: I.intl.string(I.t["eOC/Fx"]),
-                                description: I.intl.string(I.t.Afc7l5),
+                                label: I.intl.string(I.t["eOC/F2"]),
+                                description: I.intl.string(I.t.Afc7l6),
                                 checked: e,
                                 onChange: N,
                             }),
                             !e &&
                                 (0, r.jsx)(E.Z, {
                                     look: E.z.WARNING,
-                                    children: I.intl.string(I.t.j7S6IS),
+                                    children: I.intl.string(I.t.j7S6IX),
                                 }),
                             (0, r.jsx)(s.izJ, {}),
                         ],
@@ -183,8 +183,8 @@ function w() {
                     setting: O.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.fi3UQE),
-                            description: I.intl.string(I.t["8mYp39"]),
+                            label: I.intl.string(I.t.fi3UQN),
+                            description: I.intl.string(I.t["8mYp37"]),
                             checked: !t,
                             onChange: h,
                         }),
@@ -195,8 +195,8 @@ function w() {
                     setting: O.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.erOqlp),
-                            description: I.intl.string(I.t["52hMnJ"]),
+                            label: I.intl.string(I.t.erOqlh),
+                            description: I.intl.string(I.t["52hMnD"]),
                             checked: null != o,
                             onChange: T,
                         }),
@@ -207,8 +207,8 @@ function w() {
                     setting: O.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.qDZryM),
-                            description: I.intl.string(I.t["B/qU4O"]),
+                            label: I.intl.string(I.t.qDZryG),
+                            description: I.intl.string(I.t["B/qU4K"]),
                             checked: f,
                             onChange: A,
                         }),
@@ -223,10 +223,10 @@ function w() {
                             (0, r.jsx)(s.rsf, {
                                 label: "Enable WARP",
                                 description: "Enable WARP Proxy Connection",
-                                checked: w,
+                                checked: D,
                                 onChange: x,
                             }),
-                            D ? (0, r.jsx)(s.$jN, {}) : null,
+                            w ? (0, r.jsx)(s.$jN, {}) : null,
                             (0, r.jsx)(s.Text, {
                                 variant: "code",
                                 children: L.map((e, t) => (0, r.jsx)("div", { children: JSON.stringify(e) }, t)),

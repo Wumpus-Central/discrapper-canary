@@ -60,8 +60,8 @@ function p(e) {
         : (null == f ? void 0 : f.guildId) != null
           ? (0, l.jsx)(i.sNh, {
                 id: "view-main-profile",
-                label: d.intl.string(d.t.GISTtb),
-                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: r.ZP.getName(void 0, void 0, n) }),
+                label: d.intl.string(d.t.GISTta),
+                subtext: d.intl.formatToPlainString(d.t["mn/nW2"], { displayName: r.ZP.getName(void 0, void 0, n) }),
                 action: () => {
                     null == x || x(),
                         (0, a.openUserProfileModal)(
@@ -92,8 +92,8 @@ function p(e) {
             })
           : (0, l.jsx)(i.sNh, {
                 id: "view-server-profile",
-                label: d.intl.string(d.t.DisZzM),
-                subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: r.ZP.getName(t, p, n) }),
+                label: d.intl.string(d.t.DisZzB),
+                subtext: d.intl.formatToPlainString(d.t["mn/nW2"], { displayName: r.ZP.getName(t, p, n) }),
                 action: () => {
                     null == x || x(),
                         (0, a.openUserProfileModal)(

@@ -21,7 +21,7 @@ function s(e, t) {
               i.sNh,
               {
                   id: "report-image-false-positive",
-                  label: o.intl.string(o.t.ZH7P2t),
+                  label: o.intl.string(o.t.ZH7P2h),
                   action: () => {
                       (0, i.ZDy)(async () => {
                           let { default: i } = await n(788679);

@@ -21,11 +21,11 @@ var l = t(951288),
     N = t(451467),
     C = t(122186),
     b = t(37113),
-    P = t(981631),
-    T = t(388032),
-    I = t(542257),
-    O = t(381994),
-    y = t(197571);
+    T = t(981631),
+    P = t(388032),
+    y = t(542257),
+    I = t(381994),
+    O = t(197571);
 function E(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -78,17 +78,17 @@ function A(e) {
 }
 function R() {
     return (0, l.jsxs)("div", {
-        className: O.toolTipTextContainer,
+        className: I.toolTipTextContainer,
         children: [
             (0, l.jsx)(d.SrA, {
                 size: "md",
                 color: j.JX.PREMIUM_TIER_2,
-                className: O.premiumIcon,
+                className: I.premiumIcon,
             }),
             (0, l.jsx)(d.Text, {
-                className: O.upsellText,
+                className: I.upsellText,
                 variant: "text-sm/medium",
-                children: T.intl.string(T.t.sEAnVH),
+                children: P.intl.string(P.t.sEAnVH),
             }),
         ],
     });
@@ -110,17 +110,17 @@ function M(e) {
     return (
         a
             ? ((n = (0, l.jsx)(d.jSM, {
-                  tooltipClassName: O.tooltip,
+                  tooltipClassName: I.tooltip,
                   spacing: 6,
-                  "aria-label": T.intl.string(T.t.sEAnVH),
+                  "aria-label": P.intl.string(P.t.sEAnVH),
                   text: (0, l.jsx)(R, {}),
                   children: (0, l.jsx)("div", {
-                      className: O.textContainer,
+                      className: I.textContainer,
                       onMouseEnter: () => x(!0),
                       onMouseLeave: () => x(!1),
                       children: (0, l.jsx)(d.Text, {
                           variant: "text-xs/bold",
-                          className: s()(O.selectorNitroText, O.enhancedSelectorNitroText),
+                          className: s()(I.selectorNitroText, I.enhancedSelectorNitroText),
                           children: h,
                       }),
                   }),
@@ -131,20 +131,20 @@ function M(e) {
                       onClose: m,
                   })))
             : ((n = (0, l.jsx)("div", {
-                  className: O.textContainer,
+                  className: I.textContainer,
                   children: (0, l.jsx)(d.Text, {
                       variant: "text-xs/normal",
-                      className: s()(O.selectorText, { [O.enhancedSelectorNitroText]: c }),
+                      className: s()(I.selectorText, { [I.enhancedSelectorNitroText]: c }),
                       children: h,
                   }),
               })),
               (t = () => u(g))),
         {
             content: n,
-            className: s()(O.selectorButton, {
-                [O.selectorButtonSelected]: i,
-                [O.perksDemo]: c,
-                [O.premiumUpsell]: a,
+            className: s()(I.selectorButton, {
+                [I.selectorButtonSelected]: i,
+                [I.perksDemo]: c,
+                [I.premiumUpsell]: a,
             }),
             onClick: t,
         }
@@ -174,8 +174,8 @@ function D(e) {
         W = !z && !G,
         [F, V] = r.useState(!1),
         H = U ? b.z8 : b.WC,
-        Y = k(E({}, L), { section: P.jXE.STREAM_SETTINGS }),
-        q = (0, l.jsx)(u.hE, {
+        Y = k(E({}, L), { section: T.jXE.STREAM_SETTINGS }),
+        X = (0, l.jsx)(u.hE, {
             buttons: H.map((e) =>
                 M({
                     type: e,
@@ -189,7 +189,7 @@ function D(e) {
                 }),
             ),
         }),
-        X = (0, l.jsx)(u.hE, {
+        q = (0, l.jsx)(u.hE, {
             buttons: b.k0.map((e) =>
                 M({
                     type: e,
@@ -206,19 +206,19 @@ function D(e) {
         K = [
             {
                 value: b.ApplicationStreamPresets.PRESET_VIDEO,
-                label: T.intl.string(T.t.HcwHcx),
+                label: P.intl.string(P.t.HcwHcx),
             },
             ...(U
                 ? []
                 : [
                       {
                           value: b.ApplicationStreamPresets.PRESET_DOCUMENTS,
-                          label: T.intl.string(T.t["/RfohG"]),
+                          label: P.intl.string(P.t["/RfohG"]),
                       },
                   ]),
             {
                 value: b.ApplicationStreamPresets.PRESET_CUSTOM,
-                label: T.intl.string(T.t["+eOtrD"]),
+                label: P.intl.string(P.t["+eOtrD"]),
             },
         ],
         J =
@@ -227,16 +227,16 @@ function D(e) {
                       children: [
                           (0, l.jsx)(h.Z, {
                               children: (0, l.jsx)(d.gNt, {
-                                  label: T.intl.string(T.t.rHyPXg),
+                                  label: P.intl.string(P.t.rHyPXg),
                                   children: (0, l.jsx)(d.Text, {
                                       variant: "text-xs/normal",
-                                      children: T.intl.format(T.t["U+hmag"], { fps: s }),
+                                      children: P.intl.format(P.t["U+hmag"], { fps: s }),
                                   }),
                               }),
                           }),
                           W
                               ? (0, l.jsx)(C.Z, {
-                                    message: T.intl.string(T.t.deDogB),
+                                    message: P.intl.string(P.t.deDogB),
                                     onClose: n,
                                     openStreamUpsellModal: A,
                                 })
@@ -250,12 +250,12 @@ function D(e) {
                           (0, l.jsxs)(d.NIo, {
                               children: [
                                   (0, l.jsx)(d.gNt, {
-                                      label: T.intl.string(T.t.rHyPXg),
-                                      children: q,
+                                      label: P.intl.string(P.t.rHyPXg),
+                                      children: X,
                                   }),
                                   (0, l.jsx)(d.gNt, {
-                                      label: T.intl.string(T.t.SkkeIt),
-                                      children: X,
+                                      label: P.intl.string(P.t.SkkeIt),
+                                      children: q,
                                   }),
                               ],
                           }),
@@ -273,14 +273,14 @@ function D(e) {
         m.Z,
         k(E({}, Y), {
             children: (0, l.jsx)("div", {
-                className: I.modalContent,
+                className: y.modalContent,
                 children: (0, l.jsxs)("div", {
-                    className: O.qualitySettingsContainer,
+                    className: I.qualitySettingsContainer,
                     children: [
                         (0, l.jsx)(d.q4e, {
-                            label: T.intl.string(T.t.ax4Fnc),
+                            label: P.intl.string(P.t.ax4Fnc),
                             value: t,
-                            className: y.marginTop8,
+                            className: O.marginTop8,
                             options: K,
                             onChange: (e) => R(e),
                         }),

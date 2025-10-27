@@ -9,10 +9,10 @@ function s(e) {
     return i
         ? t
             ? r && !n
-                ? a.intl.format(a.t.s9zQyM, {})
-                : a.intl.format(a.t.Rb8Jho, {})
-            : a.intl.string(a.t["2rh0b2"])
-        : a.intl.format(a.t.Rb8Jho, {});
+                ? a.intl.format(a.t.s9zQyG, {})
+                : a.intl.format(a.t.Rb8Jhs, {})
+            : a.intl.string(a.t["2rh0by"])
+        : a.intl.format(a.t.Rb8Jhs, {});
 }
 let l = function (e) {
     let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: a, hasBoostPerk: l, canAddBoosts: c } = e;

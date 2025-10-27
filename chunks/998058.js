@@ -1,6 +1,6 @@
 n.d(t, { i: () => s });
-var i = n(544891),
-    r = n(570140),
+var r = n(544891),
+    i = n(570140),
     l = n(881052),
     a = n(981631);
 let s = async (e) => {
@@ -9,7 +9,7 @@ let s = async (e) => {
         let n = (
             null !=
             (t = (
-                await i.tn.get({
+                await r.tn.get({
                     url: a.ANM.SIMILAR_GAMES(e),
                     rejectWithError: !1,
                 })
@@ -17,7 +17,7 @@ let s = async (e) => {
                 ? t
                 : []
         ).filter((t) => t !== e);
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS",
             applicationId: e,
             games: n,

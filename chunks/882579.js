@@ -20,8 +20,8 @@ let i = (0, n(818083).B)({
 });
 function l(e, t) {
     var n, l, a;
-    let o = (0, r.jX)(e),
-        { buttonVariant: s } = i.useExperiment(
+    let s = (0, r.jX)(e),
+        { buttonVariant: o } = i.useExperiment(
             { location: e },
             ((l = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -50,7 +50,7 @@ function l(e, t) {
             })({}, t)),
             (a = a =
                 {
-                    disable: o || (null != (n = t.disable) && n),
+                    disable: s || (null != (n = t.disable) && n),
                     autoTrackExposure: t.autoTrackExposure,
                 }),
             Object.getOwnPropertyDescriptors
@@ -67,5 +67,5 @@ function l(e, t) {
                   }),
             l),
         );
-    return s;
+    return o;
 }

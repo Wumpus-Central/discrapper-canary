@@ -99,7 +99,7 @@ function y(e) {
     return {
         action: d.yM.SEND_FRIEND_REQUEST,
         icon: a.oLu,
-        text: _.intl.string(_.t.w5uwoK),
+        text: _.intl.string(_.t.w5uwoI),
         onClick: r,
     };
 }
@@ -145,9 +145,9 @@ let T = {
         [f.OGo.PENDING_INCOMING]: a.iHX,
     },
     S = {
-        [f.OGo.FRIEND]: () => _.intl.string(_.t.G7jMpa),
-        [f.OGo.PENDING_OUTGOING]: () => _.intl.string(_.t["s/+byM"]),
-        [f.OGo.PENDING_INCOMING]: () => _.intl.string(_.t["6QQCQ0"]),
+        [f.OGo.FRIEND]: () => _.intl.string(_.t.G7jMpU),
+        [f.OGo.PENDING_OUTGOING]: () => _.intl.string(_.t["s/+byI"]),
+        [f.OGo.PENDING_INCOMING]: () => _.intl.string(_.t["6QQCQ+"]),
     };
 function A(e) {
     var { type: t, user: n, relationshipType: i, analyticsLocation: a, shouldShowTooltip: o } = e,

@@ -26,7 +26,7 @@ function E(e) {
         : (0, r.jsx)(p.f6, {
               action: "PRESS_MOD_VIEW",
               icon: a.HI3,
-              tooltipText: g.intl.string(g.t.kj3tz8),
+              tooltipText: g.intl.string(g.t.kj3tz2),
               onClick: () => {
                   c.Z.close(),
                       null != T && (0, d.Kh)(T),

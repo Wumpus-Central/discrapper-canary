@@ -11,8 +11,8 @@ var r = n(647438),
     a = n(224706),
     l = n(669764),
     o = n(77498),
-    s = n(836197);
-function c(e) {
+    c = n(836197);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -101,17 +101,17 @@ function m(e) {
     let t = p(e.games.map((e) => e.applicationId));
     return r.useMemo(
         () =>
-            new s.zy(
-                u(c({}, e), {
+            new c.zy(
+                u(s({}, e), {
                     games: e.games.map((e) => {
                         let n = t[e.applicationId];
                         if (null != n)
-                            return u(c({}, e), {
+                            return u(s({}, e), {
                                 gameName: n.name,
                                 imageSrc: n.coverImageUrl,
                             });
                         let r = o.Z.getDetectableGame(e.applicationId);
-                        return u(c({}, e), { gameName: null == r ? void 0 : r.name });
+                        return u(s({}, e), { gameName: null == r ? void 0 : r.name });
                     }),
                 }),
             ),

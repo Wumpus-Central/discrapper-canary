@@ -103,7 +103,7 @@ class T extends l.PureComponent {
                             children: (0, r.jsx)(s.P3F, {
                                 className: E.button,
                                 onClick: this.jumpTo,
-                                children: c.intl.string(c.t.k5WiPT),
+                                children: c.intl.string(c.t.k5WiPf),
                             }),
                         }),
                     ],

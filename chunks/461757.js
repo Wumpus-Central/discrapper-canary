@@ -1,18 +1,18 @@
-l.d(t, { Z: () => s });
+l.d(t, { Z: () => o });
 var i = l(951288);
 l(647438);
 var e = l(481060),
-    a = l(572004),
-    r = l(109764),
+    s = l(572004),
+    a = l(109764),
     c = l(388032);
-function s(n, t, l) {
+function o(n, t, l) {
     return null != n
-        ? (0, r.Z)(n, l, t)
+        ? (0, a.Z)(n, l, t)
         : (0, i.jsx)(e.sNh, {
               id: "channel-copy-link",
-              label: c.intl.string(c.t.WqhZsr),
+              label: c.intl.string(c.t.WqhZss),
               action: () => {
-                  (0, a.JG)(null != t ? t : "");
+                  (0, s.JG)(null != t ? t : "");
               },
           });
 }

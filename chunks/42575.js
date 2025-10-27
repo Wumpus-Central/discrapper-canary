@@ -1,21 +1,21 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(194359),
     a = n(906732),
-    o = n(388380),
-    s = n(892001),
+    s = n(388380),
+    o = n(892001),
     c = n(321488),
     u = n(417183),
     d = n(170245),
     p = n(981631),
     f = n(388032),
     h = n(475823);
-function g(e) {
-    let { user: t, nickname: n, status: g, isFocused: m } = e,
-        { analyticsLocations: b } = (0, a.ZP)(),
-        _ = (e) => {
+function m(e) {
+    let { user: t, nickname: n, status: m, isFocused: g } = e,
+        { analyticsLocations: _ } = (0, a.ZP)(),
+        b = (e) => {
             null == e || e.stopPropagation(),
                 l.Z.addRelationship({
                     userId: t.id,
@@ -25,16 +25,16 @@ function g(e) {
                 });
         },
         E = (e) => {
-            null == e || e.stopPropagation(), o.Z.ignore(t.id);
+            null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        O = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
+        O = m === p.Skl.OFFLINE ? p.Skl.UNKNOWN : m;
     return (0, r.jsx)(u.Z, {
-        isFocused: m,
+        isFocused: g,
         user: t,
         onClick: () =>
-            (0, s.openUserProfileModal)({
+            (0, o.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: b,
+                sourceAnalyticsLocations: _,
             }),
         children: (e) => {
             let l = (0, r.jsxs)(r.Fragment, {
@@ -42,14 +42,14 @@ function g(e) {
                     (0, r.jsx)(c.Z, {
                         icon: i.dz2,
                         actionType: c.Z.ActionTypes.ACCEPT,
-                        tooltip: f.intl.string(f.t.ZcibdX),
-                        onClick: _,
+                        tooltip: f.intl.string(f.t.Zcibdf),
+                        onClick: b,
                         shouldHighlight: e,
                     }),
                     (0, r.jsx)(c.Z, {
                         icon: i.Dio,
                         actionType: c.Z.ActionTypes.DENY,
-                        tooltip: f.intl.string(f.t.xuio0N),
+                        tooltip: f.intl.string(f.t.xuio0C),
                         onClick: E,
                         shouldHighlight: e,
                     }),

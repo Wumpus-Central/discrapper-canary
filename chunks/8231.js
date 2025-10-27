@@ -75,22 +75,22 @@ function P(e, t) {
         e
     );
 }
-let w = () =>
+let D = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
                 className: v.mostPopularText,
                 variant: "text-xs/bold",
-                children: O.intl.string(O.t.TR2B4e),
+                children: O.intl.string(O.t.TR2B4T),
             }),
         }),
-    D = () =>
+    w = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
                 className: v.mostPopularText,
                 variant: "heading-deprecated-12/extrabold",
-                children: O.intl.string(O.t.IBYG5e),
+                children: O.intl.string(O.t.IBYG5U),
             }),
         }),
     L = (e) => {
@@ -119,7 +119,7 @@ let w = () =>
                           className: n ? v.basicCheckMark : v.premiumCheckMark,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(c.nn4, { children: O.intl.string(O.t["tq+6t7"]) }),
+                      (0, r.jsx)(c.nn4, { children: O.intl.string(O.t["tq+6t/"]) }),
                   ],
               })
             : (0, r.jsxs)(r.Fragment, {
@@ -130,7 +130,7 @@ let w = () =>
                           className: v.closeIcon,
                           "aria-hidden": !0,
                       }),
-                      (0, r.jsx)(c.nn4, { children: O.intl.string(O.t.l4qZrq) }),
+                      (0, r.jsx)(c.nn4, { children: O.intl.string(O.t.l4qZrp) }),
                   ],
               });
     },
@@ -238,7 +238,7 @@ let w = () =>
                     scope: "row",
                     className: v.labelCell,
                     children: (0, r.jsx)(L, {
-                        text: O.intl.string(O.t["09yRKy"]),
+                        text: O.intl.string(O.t["09yRK3"]),
                         variant: "text-lg/bold",
                     }),
                 }),
@@ -275,7 +275,7 @@ let w = () =>
             j = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_2),
             B = (0, b.e)();
         if (!I || !T) return null;
-        n = l ? null : null != S ? (0, r.jsx)(D, {}) : (0, r.jsx)(w, {});
+        n = l ? null : null != S ? (0, r.jsx)(w, {}) : (0, r.jsx)(D, {});
         let Z = A === y.Si.TIER_0 || u === y.PremiumTypes.TIER_0;
         return (0, r.jsx)(f.Gt, {
             value: O,

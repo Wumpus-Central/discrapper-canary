@@ -6,8 +6,8 @@ n.d(t, {
     V4: () => Y,
     _B: () => N,
     dI: () => M,
-    do: () => D,
-    f: () => w,
+    do: () => w,
+    f: () => D,
     mW: () => P,
     uB: () => H,
 }),
@@ -155,7 +155,7 @@ function P(e) {
         ],
     });
 }
-function w(e) {
+function D(e) {
     let t = (0, p.nl)(e);
     return (0, r.jsxs)("div", {
         className: I.channelNameContainer,
@@ -173,7 +173,7 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let { searchContext: t } = e;
     return (0, r.jsx)(s.u, {
         asContainer: !0,
@@ -437,7 +437,7 @@ function V(e) {
                         color: "text-primary",
                         children: null != (a = h.ZP[y.dCx.FILTER_IN].key) ? a : "",
                     }),
-                    w(t),
+                    D(t),
                 ],
             }),
             ariaLabel: t.name,

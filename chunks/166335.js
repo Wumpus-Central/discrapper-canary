@@ -65,9 +65,9 @@ function d(t) {
             return t;
         })(
             {
-                title: u.intl.string(u.t.YqknLi),
-                glowUp: u.intl.string(u.t["3hj4kZ"]),
-                body: u.intl.string(u.t["3hj4kZ"]),
+                title: u.intl.string(u.t.YqknLn),
+                glowUp: u.intl.string(u.t["3hj4kU"]),
+                body: u.intl.string(u.t["3hj4kU"]),
                 artElement: f,
                 artContainerClassName: b.artContainer,
                 type: l.cd.VOICE_FILTERS_UPSELL,

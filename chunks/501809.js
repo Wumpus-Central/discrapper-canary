@@ -3,8 +3,8 @@ var r,
     i = n(442837),
     l = n(570140),
     a = n(38618),
-    o = n(592125),
-    s = n(709054);
+    s = n(592125),
+    o = n(709054);
 function c(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ let u = Object.freeze({
     f = null;
 class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(a.Z, o.Z), (p = null != e ? e : d);
+        this.waitFor(a.Z, s.Z), (p = null != e ? e : d);
     }
     getState() {
         return p;
@@ -49,8 +49,8 @@ c(h, "displayName", "ChannelMemberCountStore"),
     new h(l.Z, {
         CONNECTION_OPEN: function () {
             null != f && a.Z.getSocket().requestChannelMemberCount(f.guildId, f.channelId),
-                s.default.keys(p).forEach((e) => {
-                    null == o.Z.getChannel(e) && delete p[e];
+                o.default.keys(p).forEach((e) => {
+                    null == s.Z.getChannel(e) && delete p[e];
                 });
         },
         CHANNEL_MEMBER_COUNT_UPDATE: function (e) {

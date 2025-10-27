@@ -16,8 +16,8 @@ function h(n) {
     let { classificationId: e, transitionState: i, initialSlide: h = g.Cs.SPEED_BUMP, onClose: N } = n,
         [C, j] = a.useState(h),
         { classification: _, isDsaEligible: E } = (0, r.YG)(null != e ? e : p.lds),
-        v = (null == _ ? void 0 : _.is_spam) || !1,
-        I = (null == _ ? void 0 : _.is_coppa) || !1,
+        I = (null == _ ? void 0 : _.is_spam) || !1,
+        v = (null == _ ? void 0 : _.is_coppa) || !1,
         T = null == _ ? void 0 : _.appeal_ingestion_type;
     a.useEffect(() => {
         j(h);
@@ -55,8 +55,8 @@ function h(n) {
                             classification: _,
                             onClose: S,
                             onNext: A,
-                            isSpam: v,
-                            isCoppa: I,
+                            isSpam: I,
+                            isCoppa: v,
                             appealIngestionType: T,
                             isDsaEligible: E,
                         }),

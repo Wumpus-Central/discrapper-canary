@@ -102,8 +102,8 @@ function I(e) {
             children: R,
         } = e,
         P = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        w = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
-        { analyticsLocations: D } = (0, o.ZP)(),
+        D = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
+        { analyticsLocations: w } = (0, o.ZP)(),
         L = (0, p.N)(),
         x = !N && null != L && null != g && h.nG[L.trial_id].skus.includes(g);
     return R({
@@ -111,7 +111,7 @@ function I(e) {
             var i;
             if ((e.preventDefault(), null == P))
                 return void (0, c.uL)(m.Z5c.LOGIN, { source: "premium_subscribe_button" });
-            if ((null == t || t(e), (null == w ? void 0 : w.status) === m.O0b.ACCOUNT_HOLD)) {
+            if ((null == t || t(e), (null == D ? void 0 : D.status) === m.O0b.ACCOUNT_HOLD)) {
                 (0, s.A3)(), (0, d.openUserSettings)(u.n.NITRO_PANEL, { section: m.oAB.PREMIUM }), null == v || v(!1);
                 return;
             }
@@ -142,7 +142,7 @@ function I(e) {
                     isGift: N,
                     initialPlanId: null,
                     subscriptionTier: g,
-                    analyticsLocations: D,
+                    analyticsLocations: w,
                     analyticsObject: E(
                         {
                             object: m.qAy.BUTTON_CTA,

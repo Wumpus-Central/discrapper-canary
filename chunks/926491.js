@@ -77,7 +77,7 @@ let O = 2,
         N = new Map(N.set(e, t));
     },
     P = p.Z.Millis.HOUR,
-    w = async () => {
+    D = async () => {
         if (0 !== O) return;
         let e = s.Z.database();
         if (null == e) return;
@@ -91,7 +91,7 @@ let O = 2,
                 stickers: t,
             });
     };
-function D(e) {
+function w(e) {
     let { stickers: t } = e;
     for (let [e, n] of t)
         if (f.Z.isMember(e) && !N.has(e)) {
@@ -248,7 +248,7 @@ let F = () => {
     };
 class X extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, f.Z, _.Z);
+        this.waitFor(f.Z, _.Z, d.Z);
     }
     get isLoaded() {
         return 0 !== O;
@@ -257,7 +257,7 @@ class X extends (r = a.ZP.Store) {
         return O;
     }
     get stickerMetadata() {
-        return w(), null == T && ((T = new Map()), k()), T;
+        return D(), null == T && ((T = new Map()), k()), T;
     }
     get hasLoadedStickerPacks() {
         return null != A && A + P > Date.now();
@@ -266,7 +266,7 @@ class X extends (r = a.ZP.Store) {
         return C;
     }
     getStickerById(e) {
-        return I.has(e) || w(), I.get(e);
+        return I.has(e) || D(), I.get(e);
     }
     getStickerPack(e) {
         return v.get(e);
@@ -281,13 +281,13 @@ class X extends (r = a.ZP.Store) {
         return N;
     }
     getAllStickersIterator() {
-        return w(), I.values();
+        return D(), I.values();
     }
     getAllGuildStickers() {
-        return w(), N;
+        return D(), N;
     }
     getStickersByGuildId(e) {
-        return w(), N.get(e);
+        return D(), N.get(e);
     }
 }
 g(X, "displayName", "StickersStore");
@@ -304,5 +304,5 @@ let Q = new X(o.Z, {
     GUILD_STICKERS_CREATE_SUCCESS: K,
     STICKER_FETCH_SUCCESS: z,
     GUILD_STICKERS_UPDATE: q,
-    CACHED_STICKERS_LOADED: D,
+    CACHED_STICKERS_LOADED: w,
 });

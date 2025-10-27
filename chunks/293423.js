@@ -1,45 +1,45 @@
-n.d(t, { Z: () => b }), n(953529);
+n.d(t, { Z: () => _ }), n(953529);
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(584825),
     a = n(290348),
-    o = n(934826),
-    s = n(660196),
+    s = n(934826),
+    o = n(660196),
     c = n(330181),
     u = n(939225),
     d = n(36246),
     p = n(305342),
     f = n(726324),
     h = n(981631),
-    g = n(388032),
-    m = n(851418);
-let b = (e) => {
+    m = n(388032),
+    g = n(851418);
+let _ = (e) => {
     var t, n;
-    let { guild: b } = e,
-        _ = (0, l.GG)(b.id)[0];
-    (0, s.Z)({
-        guildId: b.id,
-        groupListingId: null == _ ? void 0 : _.id,
+    let { guild: _ } = e,
+        b = (0, l.GG)(_.id)[0];
+    (0, o.Z)({
+        guildId: _.id,
+        groupListingId: null == b ? void 0 : b.id,
         location: h.Sbl.ROLE_SUBSCRIPTIONS_TAB,
-        relevantSubscriptionListingIds: null == _ ? void 0 : _.subscription_listings_ids,
+        relevantSubscriptionListingIds: null == b ? void 0 : b.subscription_listings_ids,
     });
-    let { activeSubscription: E } = (0, o.Z)(null == _ ? void 0 : _.id),
-        O = (0, l.YB)(b.id),
-        v = null == O ? void 0 : O.description,
-        { editStateIds: y } = a.B7(null != (t = null == _ ? void 0 : _.id) ? t : null, b.id);
+    let { activeSubscription: E } = (0, s.Z)(null == b ? void 0 : b.id),
+        O = (0, l.YB)(_.id),
+        I = null == O ? void 0 : O.description,
+        { editStateIds: v } = a.B7(null != (t = null == b ? void 0 : b.id) ? t : null, _.id);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(f.Z, {
-                title: g.intl.format(g.t["rm+ojI"], { serverName: b.name }),
-                description: null != v ? v : null,
+                title: m.intl.format(m.t["rm+ojA"], { serverName: _.name }),
+                description: null != I ? I : null,
                 coverImageAsset: null != (n = null == O ? void 0 : O.cover_image_asset) ? n : null,
-                guild: b,
+                guild: _,
                 children: [
-                    null != _
+                    null != b
                         ? (0, r.jsx)(c.Z, {
-                              className: m.pendingPlanChangeNotice,
-                              groupListingId: _.id,
+                              className: g.pendingPlanChangeNotice,
+                              groupListingId: b.id,
                               subscription: E,
                           })
                         : null,
@@ -48,14 +48,14 @@ let b = (e) => {
             }),
             (0, r.jsx)(i.y5t, {
                 children: (0, r.jsx)(d.Z, {
-                    guildId: b.id,
-                    children: y.map((e) => {
+                    guildId: _.id,
+                    children: v.map((e) => {
                         var t;
                         return (0, r.jsx)(
                             p.Z,
                             {
-                                guildId: b.id,
-                                groupListingId: null != (t = null == _ ? void 0 : _.id) ? t : "",
+                                guildId: _.id,
+                                groupListingId: null != (t = null == b ? void 0 : b.id) ? t : "",
                                 listingId: e,
                                 analyticsLocation: h.Sbl.ROLE_SUBSCRIPTIONS_TAB,
                             },

@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(231239),
     u = n(881052),
     m = n(686546),
-    g = n(565138),
-    f = n(768581),
+    f = n(565138),
+    g = n(768581),
     p = n(411198),
     h = n(888592),
     _ = n(388032),
@@ -21,7 +21,7 @@ function N(e) {
     let { guildInfo: i, onClick: a, submitting: s } = e,
         o =
             null !=
-            (t = f.ZP.getGuildIconURL({
+            (t = g.ZP.getGuildIconURL({
                 id: i.id,
                 icon: i.icon,
                 size: 40,
@@ -36,7 +36,7 @@ function N(e) {
                 mask: m.ZP.Masks.AVATAR_DEFAULT,
                 width: 40,
                 height: 40,
-                children: (0, r.jsx)(g.Z, {
+                children: (0, r.jsx)(f.Z, {
                     className: v.guildIcon,
                     iconSrc: o,
                     guild: (0, p.yS)(
@@ -80,7 +80,7 @@ function N(e) {
                               }),
                         n),
                     ),
-                    size: g.Z.Sizes.MEDIUM,
+                    size: f.Z.Sizes.MEDIUM,
                 }),
             }),
             (0, r.jsx)(c.Text, {
@@ -100,7 +100,7 @@ function N(e) {
 }
 let E = (e) => {
     let { setStep: t, email: n, guildsInfo: i, setGuildId: s, forceGuildScrollHeight: m } = e,
-        [g, f] = l.useState(null),
+        [f, g] = l.useState(null),
         [p, x] = l.useState(void 0),
         [E, y] = l.useState(null),
         S = () => t(h.tF.SUBMIT_SCHOOL),
@@ -113,7 +113,7 @@ let E = (e) => {
                 (0, r.jsx)(c.Heading, {
                     className: a()(v.centerText, v.header),
                     variant: "heading-xl/semibold",
-                    children: _.intl.string(_.t.mOMeiY),
+                    children: _.intl.string(_.t.mOMeiR),
                 }),
                 (0, r.jsx)("div", {
                     className: v.description,
@@ -121,7 +121,7 @@ let E = (e) => {
                         className: v.centerText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: _.intl.format(_.t.dZeiTE, { onJoinWaitlist: S }),
+                        children: _.intl.format(_.t.dZeiTJ, { onJoinWaitlist: S }),
                     }),
                 }),
                 (0, r.jsxs)("div", {
@@ -131,11 +131,11 @@ let E = (e) => {
                             className: v.searchContainer,
                             children: [
                                 (0, r.jsx)(c.E1j, {
-                                    placeholder: _.intl.string(_.t["5h0QOD"]),
+                                    placeholder: _.intl.string(_.t["5h0QOP"]),
                                     onChange: (e) => {
                                         x(e);
                                     },
-                                    "aria-label": _.intl.string(_.t["5h0QOD"]),
+                                    "aria-label": _.intl.string(_.t["5h0QOP"]),
                                     query: null != p ? p : "",
                                     onClear: () => {
                                         x(void 0);
@@ -144,7 +144,7 @@ let E = (e) => {
                                 (0, r.jsx)(c.Text, {
                                     color: "text-danger",
                                     variant: "text-xs/normal",
-                                    children: null == g ? void 0 : g.getAnyErrorMessage(),
+                                    children: null == f ? void 0 : f.getAnyErrorMessage(),
                                 }),
                             ],
                         }),
@@ -162,12 +162,12 @@ let E = (e) => {
                                                     onClick:
                                                         ((l = e.id),
                                                         async () => {
-                                                            f(null), s(l), y(l);
+                                                            g(null), s(l), y(l);
                                                             try {
                                                                 await d.Z.sendVerificationEmail(n, !0, l),
                                                                     t(h.tF.VERIFY_PIN);
                                                             } catch (e) {
-                                                                f(new u.Hx(e));
+                                                                g(new u.Hx(e));
                                                             } finally {
                                                                 y(null);
                                                             }
@@ -187,12 +187,12 @@ let E = (e) => {
                                           (0, r.jsx)(c.Heading, {
                                               className: a()(v.centerText, v.header),
                                               variant: "heading-xl/semibold",
-                                              children: _.intl.string(_.t["1eUrDQ"]),
+                                              children: _.intl.string(_.t["1eUrDc"]),
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               className: v.centerText,
                                               variant: "text-md/normal",
-                                              children: _.intl.format(_.t.flgDKC, { onJoinWaitlist: S }),
+                                              children: _.intl.format(_.t.flgDKM, { onJoinWaitlist: S }),
                                           }),
                                       ],
                                   }),

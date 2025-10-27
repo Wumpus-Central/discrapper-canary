@@ -41,7 +41,7 @@ let p = (e) => {
                     color: "currentColor",
                     className: d.icon,
                 }),
-                u.intl.string(u.t["7eicAA"]),
+                u.intl.string(u.t["7eicAO"]),
             ],
         });
     },
@@ -91,7 +91,7 @@ let p = (e) => {
         let { className: t } = e;
         return (0, i.jsx)("div", {
             className: t,
-            children: u.intl.string(u.t.QQsaCQ),
+            children: u.intl.string(u.t.QQsaCc),
         });
     };
 class O extends (r = a.PureComponent) {

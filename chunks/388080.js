@@ -18,7 +18,7 @@ var r = n(951288),
     C = n(388032),
     b = n(491068),
     O = n(400167);
-function y(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,9 +31,9 @@ function y(e, t, n) {
         e
     );
 }
-let k = m.Z.reactParserFor(f.default.getDefaultRules(b)),
-    S = {};
-class E extends l.PureComponent {
+let y = m.Z.reactParserFor(f.default.getDefaultRules(b)),
+    E = {};
+class S extends l.PureComponent {
     track(e, t, n) {
         this.props.track(e, t, n);
     }
@@ -42,7 +42,7 @@ class E extends l.PureComponent {
             className: b.footer,
             children: [
                 (0, r.jsx)(c.Anchor, {
-                    "aria-label": C.intl.string(C.t["/84uiI"]),
+                    "aria-label": C.intl.string(C.t["/84uiD"]),
                     className: b.socialLink,
                     href: (0, p.Z)(j.RK.TWITTER),
                     target: "blank",
@@ -52,7 +52,7 @@ class E extends l.PureComponent {
                     }),
                 }),
                 (0, r.jsx)(c.Anchor, {
-                    "aria-label": C.intl.string(C.t["h0or/v"]),
+                    "aria-label": C.intl.string(C.t["h0or/l"]),
                     className: b.socialLink,
                     href: j.fK7.FACEBOOK_URL,
                     target: "blank",
@@ -62,7 +62,7 @@ class E extends l.PureComponent {
                     }),
                 }),
                 (0, r.jsx)(c.Anchor, {
-                    "aria-label": C.intl.string(C.t["5uVPyc"]),
+                    "aria-label": C.intl.string(C.t["5uVPyf"]),
                     className: b.socialLink,
                     href: j.fK7.INSTAGRAM_URL,
                     target: "blank",
@@ -73,7 +73,7 @@ class E extends l.PureComponent {
                 }),
                 (0, r.jsx)(c.Text, {
                     variant: "text-xs/normal",
-                    children: C.intl.string(C.t.EjVVIy),
+                    children: C.intl.string(C.t.EjVVI7),
                 }),
             ],
         });
@@ -161,12 +161,12 @@ class E extends l.PureComponent {
                     children: (0, r.jsxs)("div", {
                         tabIndex: 0,
                         role: "region",
-                        "aria-label": C.intl.string(C.t.HzBchI),
+                        "aria-label": C.intl.string(C.t.HzBchE),
                         children: [
                             this.renderVideo(),
-                            k(e.body, !1, {
+                            y(e.body, !1, {
                                 changeLog: this,
-                                interpolations: S,
+                                interpolations: E,
                                 onLinkClick: this.trackLinkClick,
                             }),
                         ],
@@ -181,15 +181,15 @@ class E extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, "scrollerRef", l.createRef()),
-            y(this, "handleScroll", () => {
+            k(this, "scrollerRef", l.createRef()),
+            k(this, "handleScroll", () => {
                 let { current: e } = this.scrollerRef;
                 if (null != e) {
                     var t, n;
                     null == (t = (n = this.props).onScroll) || t.call(n, e);
                 }
             }),
-            y(this, "trackLinkClick", (e) => {
+            k(this, "trackLinkClick", (e) => {
                 this.props.track(
                     j.rMx.CHANGE_LOG_CTA_CLICKED,
                     {
@@ -199,7 +199,7 @@ class E extends l.PureComponent {
                     !1,
                 );
             }),
-            y(this, "renderHeader", () => {
+            k(this, "renderHeader", () => {
                 let { changeLog: e } = this.props;
                 return (0, r.jsxs)(u.Z.Child, {
                     grow: 1,
@@ -207,12 +207,12 @@ class E extends l.PureComponent {
                     children: [
                         (0, r.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
-                            children: C.intl.string(C.t.LRmNAg),
+                            children: C.intl.string(C.t.LRmNAl),
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/normal",
                             className: b.date,
-                            children: C.intl.format(C.t.Fb8xx8, {
+                            children: C.intl.format(C.t.Fb8xx2, {
                                 date: null != e.date && "" !== e.date ? s()(e.date).toDate() : new Date(),
                             }),
                         }),
@@ -221,4 +221,4 @@ class E extends l.PureComponent {
             });
     }
 }
-let _ = E;
+let _ = S;

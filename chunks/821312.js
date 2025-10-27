@@ -14,27 +14,27 @@ function p(e) {
         [g, f] = r.useState(),
         h = [
             {
-                label: d.intl.string(d.t["//3pvr"]),
+                label: d.intl.string(d.t["//3pvi"]),
                 value: s.C2.DM_SPAM,
             },
             {
-                label: d.intl.string(d.t.SdVsio),
+                label: d.intl.string(d.t.SdVsip),
                 value: s.C2.MENTION_SPAM,
             },
             {
-                label: d.intl.string(d.t.uTiSVF),
+                label: d.intl.string(d.t.uTiSVL),
                 value: s.C2.CHANNEL_SPAM,
             },
             {
-                label: d.intl.string(d.t.GQczU1),
+                label: d.intl.string(d.t.GQczU8),
                 value: s.C2.SUS_NEW_MEMBERS,
             },
             {
-                label: d.intl.string(d.t.AAgqy8),
+                label: d.intl.string(d.t.AAgqy3),
                 value: s.C2.CHANGING_SETTINGS,
             },
             {
-                label: d.intl.string(d.t.ryPKb2),
+                label: d.intl.string(d.t.ryPKb7),
                 value: s.C2.OTHER,
             },
         ],
@@ -48,12 +48,12 @@ function p(e) {
               title: d.intl.string(d.t.f5hd9P),
               actions: [
                   {
-                      text: d.intl.string(d.t["ETE/oK"]),
+                      text: d.intl.string(d.t["ETE/oC"]),
                       onClick: p,
                       variant: "secondary",
                   },
                   {
-                      text: d.intl.string(d.t.nAt0rK),
+                      text: d.intl.string(d.t.nAt0rE),
                       onClick: function () {
                           (0, o.yw)(c.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
                               raid_lockdown_feedback_type: m,
@@ -78,7 +78,7 @@ function p(e) {
                           (0, i.jsx)("div", {
                               className: u.textboxContainer,
                               children: (0, i.jsx)(a.Kx8, {
-                                  placeholder: d.intl.string(d.t["PAM+JS"]),
+                                  placeholder: d.intl.string(d.t["PAM+JR"]),
                                   onChange: f,
                                   value: g,
                                   autoFocus: !0,

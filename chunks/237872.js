@@ -35,7 +35,7 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { onClick: t, "aria-label": n = s.intl.string(s.t.cpT0Cg), variant: c } = e,
+    let { onClick: t, "aria-label": n = s.intl.string(s.t.cpT0Cq), variant: c } = e,
         { firstFocusableItemProps: d } = i.useContext(a.MJU);
     return (0, r.jsx)("div", {
         className: l.closeButton,

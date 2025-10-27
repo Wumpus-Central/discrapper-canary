@@ -11,12 +11,12 @@ let c = (0, u.x1)(r.n.BILLING_PANE, {
         render: () => (0, i.jsx)(s.Z, {}),
     }),
     E = (0, u.wf)(r.n.BILLING_PANEL, {
-        useTitle: () => o.intl.string(o.t.oeUm2t),
+        useTitle: () => o.intl.string(o.t.oeUm2s),
         buildLayout: () => [c],
     }),
     d = (0, u.m7)(r.n.BILLING_SIDEBAR_ITEM, {
         icon: l.ciH,
-        useTitle: () => o.intl.string(o.t.oeUm2t),
+        useTitle: () => o.intl.string(o.t.oeUm2s),
         legacySearchKey: a.s6.BILLING,
         buildLayout: () => [E],
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -137,7 +137,7 @@ function T(e) {
             [h.oneByOneGridMosaic]: !i,
             [h.hasFooter]: null != a,
         }),
-        children: (0, r.jsx)(w, {
+        children: (0, r.jsx)(D, {
             props: s,
             useFullWidth: !i,
             isSingleItem: !0,
@@ -156,7 +156,7 @@ function S(e) {
                 "div",
                 {
                     className: h.oneByTwoGridItem,
-                    children: (0, r.jsx)(w, {
+                    children: (0, r.jsx)(D, {
                         props: e,
                         maxWidth: i,
                         maxHeight: i,
@@ -176,7 +176,7 @@ function A(e) {
         children: [
             (0, r.jsx)("div", {
                 className: h.oneByTwoSoloItem,
-                children: (0, r.jsx)(w, {
+                children: (0, r.jsx)(D, {
                     props: t[0],
                     maxWidth: i,
                 }),
@@ -190,7 +190,7 @@ function A(e) {
                             "div",
                             {
                                 className: h.twoByOneGridItem,
-                                children: (0, r.jsx)(w, {
+                                children: (0, r.jsx)(D, {
                                     props: e,
                                     maxWidth: a,
                                     maxHeight: O,
@@ -211,7 +211,7 @@ function C(e) {
         className: h.twoByTwoGrid,
         children: t.map((e) =>
             (0, r.jsx)(
-                w,
+                D,
                 {
                     props: e,
                     maxWidth: i,
@@ -230,7 +230,7 @@ function N(e) {
         className: h.threeByThreeGrid,
         children: t.map((e) =>
             (0, r.jsx)(
-                w,
+                D,
                 {
                     props: e,
                     maxWidth: i,
@@ -248,7 +248,7 @@ let R = (e) => ({
         imgClassName: h.lazyImg,
     }),
     P = (e) => ({ className: o()(e, h.lazyImg) });
-function w(e) {
+function D(e) {
     let {
             props: t,
             maxWidth: n = p.mT,
@@ -272,7 +272,7 @@ function w(e) {
         children: (0, r.jsx)(_.ZP, b(g({}, u), { footer: s })),
     });
 }
-let D = function (e) {
+let w = function (e) {
     let { items: t, isInAppComponentsV2: n = !1 } = e,
         { groupableVisualMediaItems: i, nonGroupableVisualMediaItems: a, nonVisualMediaItems: s } = v(t),
         l = n ? p.Y9 : p.mT;
@@ -313,7 +313,7 @@ let D = function (e) {
                             "div",
                             {
                                 className: h.nonVisualMediaItem,
-                                children: (0, r.jsx)(w, { props: e }),
+                                children: (0, r.jsx)(D, { props: e }),
                             },
                             e.item.uniqueId,
                         ),

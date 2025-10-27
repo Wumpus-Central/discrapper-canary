@@ -22,8 +22,8 @@ function x(e) {
         : (0, i.jsxs)(a.C3N, {
               children: [
                   (0, i.jsx)(a.rsf, {
-                      label: m.intl.format(m.t["J+7D9P"], { name: x.name }),
-                      description: m.intl.string(m.t.IngcUl),
+                      label: m.intl.format(m.t["J+7D9E"], { name: x.name }),
+                      description: m.intl.string(m.t.IngcUv),
                       checked: p,
                       onChange: (e) => {
                           o.Z.updateGuildNotificationSettings(s, { muted: e }, u.UE.muted(e));
@@ -31,11 +31,11 @@ function x(e) {
                   }),
                   p &&
                       (0, i.jsx)(a.q4e, {
-                          label: m.intl.string(m.t.Ztu2Ym),
+                          label: m.intl.string(m.t.Ztu2Yo),
                           description:
                               null == (n = v) || null == n.end_time
                                   ? null
-                                  : m.intl.formatToPlainString(m.t.j7h4AA, {
+                                  : m.intl.formatToPlainString(m.t.j7h4AJ, {
                                         endTime: new Date(n.end_time).toLocaleString(m.intl.currentLocale, {
                                             month: "numeric",
                                             day: "numeric",

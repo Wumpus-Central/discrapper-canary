@@ -30,7 +30,7 @@ function m(e) {
                             }),
                             (0, r.jsx)(s.P3F, {
                                 onClick: i(h),
-                                "aria-label": u.intl.string(u.t.e5eQOz),
+                                "aria-label": u.intl.string(u.t.e5eQOy),
                                 "aria-controls": b,
                                 "aria-expanded": p,
                                 focusProps: { ringTarget: t },

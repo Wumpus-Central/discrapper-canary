@@ -1,16 +1,16 @@
-a.d(t, { default: () => u }), a(388685);
-var n = a(951288),
-    i = a(647438),
-    o = a(481060),
-    r = a(313201),
-    c = a(764920),
-    l = a(429506),
-    s = a(981631),
-    d = a(531578),
-    m = a(388032),
-    _ = a(345469);
+t.d(a, { default: () => u }), t(388685);
+var n = t(951288),
+    i = t(647438),
+    o = t(481060),
+    r = t(313201),
+    c = t(764920),
+    l = t(429506),
+    s = t(981631),
+    d = t(531578),
+    m = t(388032),
+    _ = t(345469);
 function u(e) {
-    let [t, u] = i.useState(null),
+    let [a, u] = i.useState(null),
         b = (0, r.Dt)();
     return (0, n.jsxs)(o.Y0X, {
         transitionState: e.transitionState,
@@ -25,12 +25,12 @@ function u(e) {
                         id: b,
                         variant: "heading-xl/extrabold",
                         color: "none",
-                        children: m.intl.string(m.t.BIbnR0),
+                        children: m.intl.string(m.t.BIbnR2),
                     }),
                     (0, n.jsx)(o.Text, {
                         variant: "text-md/normal",
                         className: _.ratingBody,
-                        children: m.intl.string(m.t.j2kf2t),
+                        children: m.intl.string(m.t.j2kf2m),
                     }),
                 ],
             }),
@@ -39,42 +39,42 @@ function u(e) {
                 children: (0, n.jsx)(c.Z, {
                     ratingOptions: [d.aZ.GOOD, d.aZ.BAD],
                     emojiKind: "thumb",
-                    selectedRating: t,
-                    onChangeRating: function (t) {
-                        u(t),
-                            null != t &&
-                                ((0, l.Z)({ rating: t }),
+                    selectedRating: a,
+                    onChangeRating: function (a) {
+                        u(a),
+                            null != a &&
+                                ((0, l.Z)({ rating: a }),
                                 e.onClose(),
                                 (0, o.ZDy)(async () => {
-                                    let { default: e } = await a.e("14466").then(a.bind(a, 729328));
-                                    return (t) =>
+                                    let { default: e } = await t.e("14466").then(t.bind(t, 729328));
+                                    return (a) =>
                                         (0, n.jsx)(
                                             e,
                                             (function (e) {
-                                                for (var t = 1; t < arguments.length; t++) {
-                                                    var a = null != arguments[t] ? arguments[t] : {},
-                                                        n = Object.keys(a);
+                                                for (var a = 1; a < arguments.length; a++) {
+                                                    var t = null != arguments[a] ? arguments[a] : {},
+                                                        n = Object.keys(t);
                                                     "function" == typeof Object.getOwnPropertySymbols &&
                                                         (n = n.concat(
-                                                            Object.getOwnPropertySymbols(a).filter(function (e) {
-                                                                return Object.getOwnPropertyDescriptor(a, e).enumerable;
+                                                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                                             }),
                                                         )),
-                                                        n.forEach(function (t) {
+                                                        n.forEach(function (a) {
                                                             var n;
-                                                            (n = a[t]),
-                                                                t in e
-                                                                    ? Object.defineProperty(e, t, {
+                                                            (n = t[a]),
+                                                                a in e
+                                                                    ? Object.defineProperty(e, a, {
                                                                           value: n,
                                                                           enumerable: !0,
                                                                           configurable: !0,
                                                                           writable: !0,
                                                                       })
-                                                                    : (e[t] = n);
+                                                                    : (e[a] = n);
                                                         });
                                                 }
                                                 return e;
-                                            })({ body: m.intl.string(m.t.IuPjpK) }, t),
+                                            })({ body: m.intl.string(m.t.IuPjpE) }, a),
                                         );
                                 }));
                     },
@@ -84,7 +84,7 @@ function u(e) {
                 className: _.ratingsFooter,
                 children: (0, n.jsx)(o.Text, {
                     variant: "text-md/normal",
-                    children: m.intl.format(m.t.zru1Ky, { safetyCenterUrl: s.EYA.SAFETY_CENTER }),
+                    children: m.intl.format(m.t.zru1K0, { safetyCenterUrl: s.EYA.SAFETY_CENTER }),
                 }),
             }),
         ],

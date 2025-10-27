@@ -7,22 +7,22 @@ n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(481060),
-    o = n(129861),
-    s = n(961275);
+    s = n(129861),
+    o = n(961275);
 function c(e) {
     let { user: t, status: n, isFocused: i, guildId: l } = e;
     return (0, r.jsxs)("div", {
-        className: s.memberItem,
+        className: o.memberItem,
         children: [
             (0, r.jsx)(a.qEK, {
                 src: t.getAvatarURL(l, 24),
-                className: s.avatar,
+                className: o.avatar,
                 "aria-label": t.username,
                 size: a.EFr.SIZE_24,
                 status: n,
                 statusColor: i ? "currentColor" : void 0,
             }),
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(s.Z, {
                 user: t,
                 hideDiscriminator: !0,
             }),
@@ -32,7 +32,7 @@ function c(e) {
 function u(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
-        className: s.memberItem,
-        children: [(0, r.jsx)("div", { className: l()(s.avatar, s.unknown) }), (0, r.jsx)("div", { children: t })],
+        className: o.memberItem,
+        children: [(0, r.jsx)("div", { className: l()(o.avatar, o.unknown) }), (0, r.jsx)("div", { children: t })],
     });
 }

@@ -4,8 +4,8 @@ n(647438);
 var l = n(120356),
     i = n.n(l),
     a = n(399606),
-    o = n(481060),
-    s = n(594174),
+    s = n(481060),
+    o = n(594174),
     c = n(74538),
     u = n(884697),
     d = n(724994),
@@ -17,7 +17,7 @@ var l = n(120356),
 let _ = (e) => {
         let { product: t, badgeOverride: n, className: l, prioritizedCurrency: _ } = e,
             { isPurchased: m, isPartiallyOwnedBundle: b } = (0, d.L)(t),
-            v = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
+            v = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
             E = c.ZP.canUseCollectibles(v),
             x = (0, p.Iw)(t),
             { isOrbExclusive: O } = (0, f.Ip)({
@@ -31,15 +31,15 @@ let _ = (e) => {
         return (n === g.Zh.NEW
             ? (S = C.intl.string(C.t.y2b7CA))
             : n === g.Zh.ORBS_EXCLUSIVE
-              ? (S = C.intl.string(C.t["0TmQRE"]))
-              : n === g.Zh.NEW_COLOR_VARIANT && (S = C.intl.string(C.t.S6kE9v)),
+              ? (S = C.intl.string(C.t["0TmQRG"]))
+              : n === g.Zh.NEW_COLOR_VARIANT && (S = C.intl.string(C.t.S6kE9h)),
         null == S &&
             (!b && !m && (0, u.Yq)(t.skuId)
                 ? (S = C.intl.string(C.t.y2b7CA))
-                : O && (S = C.intl.string(C.t["0TmQRE"]))),
+                : O && (S = C.intl.string(C.t["0TmQRG"]))),
         null == S)
             ? null
-            : (0, r.jsx)(o.IGR, {
+            : (0, r.jsx)(s.IGR, {
                   text: S,
                   disableColor: !0,
                   className: i()(l, h.productCardBadge),

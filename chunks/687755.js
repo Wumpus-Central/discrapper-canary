@@ -11,7 +11,7 @@ let l = (e) => {
         className: a()(s.tag, t),
         children: (0, r.jsx)("span", {
             className: s.text,
-            children: o.intl.string(o.t["14lP0d"]),
+            children: o.intl.string(o.t["14lP0W"]),
         }),
     });
 };

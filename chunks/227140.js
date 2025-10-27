@@ -4,26 +4,26 @@ n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(481060),
-    o = n(679768),
-    s = n(387016);
+    s = n(679768),
+    o = n(387016);
 function c(e) {
     let { copy: t, showStars: n = !0, className: i } = e;
     return (0, r.jsxs)("div", {
-        className: l()(s.badgeContainer, i),
+        className: l()(o.badgeContainer, i),
         children: [
             n &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("span", {
-                            className: l()(s.star, s.starLeft),
-                            children: (0, r.jsx)(o.Z, {
+                            className: l()(o.star, o.starLeft),
+                            children: (0, r.jsx)(s.Z, {
                                 width: "10",
                                 height: "10",
                             }),
                         }),
                         (0, r.jsx)("span", {
-                            className: l()(s.star, s.starRight),
-                            children: (0, r.jsx)(o.Z, {
+                            className: l()(o.star, o.starRight),
+                            children: (0, r.jsx)(s.Z, {
                                 width: "14",
                                 height: "14",
                             }),
@@ -32,7 +32,7 @@ function c(e) {
                 }),
             (0, r.jsx)(a.Text, {
                 variant: "eyebrow",
-                className: s.newBadge,
+                className: o.newBadge,
                 children: t,
             }),
         ],

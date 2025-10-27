@@ -29,19 +29,19 @@ let c = (e) => {
                             (0, r.jsx)("br", {}),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-md/normal",
-                                children: s.intl.string(s.t.Y3fdOj),
+                                children: s.intl.string(s.t.Y3fdOp),
                             }),
                             (0, r.jsx)("br", {}),
                             (0, r.jsxs)(a.Text, {
                                 variant: "text-md/normal",
                                 children: [
-                                    s.intl.string(s.t.Paa4v7),
+                                    s.intl.string(s.t.Paa4v4),
                                     "\xA0",
                                     n
-                                        ? s.intl.string(s.t.StGVvL)
+                                        ? s.intl.string(s.t.StGVvC)
                                         : (0, r.jsx)(a.Anchor, {
                                               onClick: i,
-                                              children: s.intl.string(s.t.Ex7sk5),
+                                              children: s.intl.string(s.t.Ex7sk9),
                                           }),
                                 ],
                             }),
@@ -61,7 +61,7 @@ let c = (e) => {
                     "data-testid": "continue",
                     variant: "primary",
                     disabled: !0,
-                    text: s.intl.string(s.t.g8vPz8),
+                    text: s.intl.string(s.t.g8vPzy),
                 }),
             }),
         });

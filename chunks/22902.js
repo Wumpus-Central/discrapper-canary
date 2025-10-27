@@ -11,7 +11,7 @@ function l(e) {
                 value: e,
                 label:
                     e.interval === o.rV.DAY && 7 === e.interval_count
-                        ? s.intl.formatToPlainString(s.t.XfSsr6, { defaultLimit: (0, i.iG)(e) })
+                        ? s.intl.formatToPlainString(s.t.XfSsr1, { defaultLimit: (0, i.iG)(e) })
                         : (0, i.iG)(e),
                 isDefault: e.interval === o.rV.DAY && 7 === e.interval_count,
             })),

@@ -57,7 +57,7 @@ class m extends (r = a.PureComponent) {
     render() {
         let e,
             {
-                text: t = f.intl.string(f.t.OpuAlJ),
+                text: t = f.intl.string(f.t.OpuAlK),
                 mode: n,
                 hideMessage: r,
                 className: a,

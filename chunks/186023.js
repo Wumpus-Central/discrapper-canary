@@ -29,8 +29,8 @@ let x = (e) => {
         [N, T] = i.useState(I),
         [P, E] = i.useState(void 0),
         [k, w] = i.useState(void 0),
-        [D, M] = i.useState([]),
-        [R, A] = i.useState(void 0),
+        [M, R] = i.useState([]),
+        [D, A] = i.useState(void 0),
         [B, U] = i.useState(void 0),
         L = (0, m.PO)("in_app_report_modal");
     (0, s.ZP)(() => {
@@ -88,7 +88,7 @@ let x = (e) => {
                     r),
                 );
             if (
-                (M([...D, e]),
+                (R([...M, e]),
                 null != c.key && (null == v || v(c.key)),
                 E(void 0),
                 w(void 0),
@@ -107,14 +107,14 @@ let x = (e) => {
         },
         H = async (e) => {
             var r;
-            let i = y ? await (0, g.ZD)(n, t, [...D, e]) : await (0, g.fw)(n, t, [...D, e], j),
+            let i = y ? await (0, g.ZD)(n, t, [...M, e]) : await (0, g.fw)(n, t, [...M, e], j),
                 l = null == i || null == (r = i.body) ? void 0 : r.report_id;
             null != l && A(l), U(Z[e.nodeRef].report_type), null == f || f(l);
         },
         W = () => {
             var e, n;
-            if (D.length < 1) return;
-            let r = [...D],
+            if (M.length < 1) return;
+            let r = [...M],
                 i = r.pop(),
                 l = null != (n = null == i ? void 0 : i.nodeRef) ? n : I;
             if (t.name === p.b.MESSAGE || t.name === p.b.FIRST_DM) {
@@ -130,7 +130,7 @@ let x = (e) => {
             E(null == i || null == (e = i.multiSelect) ? void 0 : e.state),
                 w(null == i ? void 0 : i.textInput),
                 T(l),
-                M(r),
+                R(r),
                 null == v || v("..");
         },
         F = i.useMemo(() => {
@@ -173,7 +173,7 @@ let x = (e) => {
                                 node: e,
                                 reportType: t,
                                 reportSubType: B,
-                                history: D,
+                                history: M,
                                 onModalClose: x.onClose,
                                 onSelectChild: G,
                                 onNavigateBack: W,
@@ -182,7 +182,7 @@ let x = (e) => {
                                 successNodeId: S,
                                 failNodeId: C,
                                 onSubmit: H,
-                                reportId: R,
+                                reportId: D,
                                 nodeMap: Z,
                             }),
                         }),

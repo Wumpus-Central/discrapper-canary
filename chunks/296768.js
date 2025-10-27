@@ -1,6 +1,6 @@
 n.d(t, { Z: () => E }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     s = n(392711),
@@ -20,40 +20,40 @@ var i = n(951288),
     y = n(226788),
     I = n(414642);
 let b = (e) => {
-    let { game: t, onClose: n, trackClick: r } = e,
+    let { game: t, onClose: n, trackClick: i } = e,
         l = (0, c.e7)([f.Z], () => f.Z.getApplication(t.applicationId));
-    return (0, i.jsx)(d.u, {
+    return (0, r.jsx)(d.u, {
         asContainer: !0,
         text: t.name,
-        children: (0, i.jsx)(u.P3F, {
+        children: (0, r.jsx)(u.P3F, {
             className: I.similarGameImageClickable,
             onClick: async () => {
-                r(g.as.ClickSimilarGame, t.applicationId),
+                i(g.as.ClickSimilarGame, t.applicationId),
                     (0, u.ZDy)(() =>
                         Promise.resolve((e) =>
-                            (0, i.jsx)(
+                            (0, r.jsx)(
                                 v.default,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            i = Object.keys(n);
+                                            r = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (i = i.concat(
+                                            (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            i.forEach(function (t) {
-                                                var i;
-                                                (i = n[t]),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: i,
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[t] = i);
+                                                        : (e[t] = r);
                                             });
                                     }
                                     return e;
@@ -70,7 +70,7 @@ let b = (e) => {
                     await new Promise((e) => setTimeout(e, 10)),
                     n();
             },
-            children: (0, i.jsx)(j.C, {
+            children: (0, r.jsx)(j.C, {
                 game: t,
                 application: l,
                 className: I.similarGameImage,
@@ -93,35 +93,35 @@ function E(e) {
                 .filter((e) => (0, h.z6)(e.applicationId))
                 .slice(0, 5),
         );
-    return (r.useEffect(() => {
+    return (i.useEffect(() => {
         s.length > 0 && m.Z.getDetectableGamesSupplemental([t, ...s]);
     }, [t, s]),
     f && null == d)
-        ? (0, i.jsxs)("div", {
+        ? (0, r.jsxs)("div", {
               children: [
-                  (0, i.jsx)("div", { className: a()(I.loadingHeading, y.sectionHeader) }),
-                  (0, i.jsx)("div", {
+                  (0, r.jsx)("div", { className: a()(I.loadingHeading, y.sectionHeader) }),
+                  (0, r.jsx)("div", {
                       className: a()(y.row, y.gapLg),
                       children: o()
                           .range(0, 5)
-                          .map((e) => (0, i.jsx)("div", { className: I.loadingArtwork }, e)),
+                          .map((e) => (0, r.jsx)("div", { className: I.loadingArtwork }, e)),
                   }),
               ],
           })
         : (f || 0 !== g.length) && null == d
-          ? (0, i.jsxs)("div", {
+          ? (0, r.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(u.Heading, {
+                    (0, r.jsx)(u.Heading, {
                         className: y.sectionHeader,
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: O.intl.string(O.t["6rLyQE"]),
+                        children: O.intl.string(O.t["6rLyQB"]),
                     }),
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: I.similarGames,
                         style: {},
                         children: g.map((e) =>
-                            (0, i.jsx)(
+                            (0, r.jsx)(
                                 b,
                                 {
                                     game: e,

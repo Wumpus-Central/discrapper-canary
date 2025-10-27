@@ -38,7 +38,7 @@ function h(e, t, n) {
     }
     return (0, r.jsx)(a.sNh, {
         id: "mention",
-        label: _.intl.string(_.t.P8tvKC),
+        label: _.intl.string(_.t.P8tvKG),
         action: h,
     });
 }

@@ -10,12 +10,12 @@ let o = (0, l.x1)(u.n.ADVANCED_PANE, {
         render: r.ZP,
     }),
     c = (0, l.wf)(u.n.ADVANCED_PANEL, {
-        useTitle: () => a.intl.string(a.t["8/udY2"]),
+        useTitle: () => a.intl.string(a.t["8/udY0"]),
         buildLayout: () => [o],
     }),
     E = (0, l.m7)(u.n.ADVANCED_SIDEBAR_ITEM, {
         icon: i.xhG,
-        useTitle: () => a.intl.string(a.t["8/udY2"]),
+        useTitle: () => a.intl.string(a.t["8/udY0"]),
         legacySearchKey: s.s6.SETTINGS_ADVANCED,
         buildLayout: () => [c],
     });

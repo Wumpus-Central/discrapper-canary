@@ -40,10 +40,10 @@ function y() {
                 color: o.DM8.DANGER,
                 className: b.nagbar,
                 children: [
-                    E.intl.string(E.t.TDRvqq),
+                    E.intl.string(E.t.TDRvqs),
                     (0, r.jsx)(o.EyT, {
                         onClick: () => u.yq(),
-                        children: E.intl.string(E.t.R1AN4O),
+                        children: E.intl.string(E.t.R1AN4F),
                     }),
                 ],
             })

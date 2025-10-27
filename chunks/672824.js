@@ -10,7 +10,7 @@ function s(e) {
     let t = (0, i.e7)([c.Z], () => c.Z.isCollapsed(e.id), [e.id]);
     return (0, r.jsx)(l.S89, {
         id: "collapse-category",
-        label: a.intl.string(a.t.SvVRsr),
+        label: a.intl.string(a.t.SvVRsj),
         action: () => (t ? (0, o.mJ)(e.id) : (0, o.c4)(e.id)),
         checked: t,
     });

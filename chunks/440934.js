@@ -55,7 +55,7 @@ function p(n) {
                         (0, i.jsx)(s.Wn, {
                             messageType: s.QYI.WARNING,
                             className: u.submissionWarning,
-                            children: d.intl.format(d.t["dSTy//"], { applicationName: b }),
+                            children: d.intl.format(d.t["dSTy/w"], { applicationName: b }),
                         }),
                         (0, i.jsx)("div", {
                             className: u.components,
@@ -73,12 +73,12 @@ function p(n) {
                     actions: [
                         {
                             variant: "secondary",
-                            text: d.intl.string(d.t["ETE/oK"]),
+                            text: d.intl.string(d.t["ETE/oC"]),
                             onClick: t,
                         },
                         {
                             variant: "primary",
-                            text: d.intl.string(d.t.geKm7u),
+                            text: d.intl.string(d.t.geKm7t),
                             loading: x === o.i.IN_FLIGHT,
                             onClick: I,
                         },

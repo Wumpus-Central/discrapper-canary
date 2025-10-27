@@ -1,4 +1,4 @@
-t.d(n, { default: () => q }), t(457542), t(388685);
+t.d(n, { default: () => W }), t(457542), t(388685);
 var a = t(951288),
     o = t(647438),
     r = t(120356),
@@ -32,8 +32,8 @@ var a = t(951288),
     E = t(968435),
     L = t(114732),
     M = t(46140),
-    O = t(981631),
-    k = t(675654),
+    k = t(981631),
+    O = t(675654),
     Z = t(474936),
     D = t(388032),
     F = t(824210);
@@ -94,7 +94,7 @@ function U(e) {
                                     className: F.loadingIndicatorWrapper,
                                     children: (0, a.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE }),
                                 })
-                              : (0, a.jsx)(W, {
+                              : (0, a.jsx)(H, {
                                     quest: s,
                                     user: N,
                                     decoration: p,
@@ -112,13 +112,13 @@ function U(e) {
                 (0, a.jsx)(x.Z, {
                     confettiTarget: h.current,
                     confettiCanvas: C,
-                    sprites: k.CA,
-                    colors: k.Br,
+                    sprites: O.CA,
+                    colors: O.Br,
                 }),
         ],
     });
 }
-function H(e) {
+function q(e) {
     let { quest: n } = e,
         t = o.useMemo(() => (0, B.fh)(n, B.eC.LOGO_TYPE, "dark"), [n]),
         r = A.r.build(n.config).defaultRewardRedemptionInstructionsByPlatform[y.y$.CROSS_PLATFORM];
@@ -138,7 +138,7 @@ function H(e) {
         ],
     });
 }
-function W(e) {
+function H(e) {
     let { quest: n, user: t, decoration: o, isSaving: r, onClose: i, onConfirm: l } = e,
         s = (0, B.fh)(n, B.eC.REWARD).url,
         d = (0, R.f$)(n.config),
@@ -190,7 +190,7 @@ function W(e) {
                             variant: "heading-lg/bold",
                             color: "header-primary",
                             className: F.heading,
-                            children: D.intl.string(D.t["0/Yz+f"]),
+                            children: D.intl.string(D.t["0/Yz+Y"]),
                         }),
                         (0, a.jsx)(c.Text, {
                             variant: "text-sm/normal",
@@ -200,21 +200,21 @@ function W(e) {
                         }),
                         (0, a.jsx)(c.Button, {
                             variant: "primary",
-                            text: D.intl.string(D.t.MAS7uL),
+                            text: D.intl.string(D.t.MAS7uK),
                             loading: r,
                             onClick: l,
                         }),
-                        (0, R.zK)(n, M.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(H, { quest: n }),
+                        (0, R.zK)(n, M.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(q, { quest: n }),
                         d &&
                             !m &&
                             (0, a.jsx)(C.p, {
                                 className: F.upsell,
-                                upsellText: D.intl.format(D.t.VHXn7O, {
+                                upsellText: D.intl.format(D.t.VHXn7C, {
                                     onNitroClick: () => {
-                                        (0, N.openUserSettings)(w.n.NITRO_PANEL, { section: O.oAB.PREMIUM }), i();
+                                        (0, N.openUserSettings)(w.n.NITRO_PANEL, { section: k.oAB.PREMIUM }), i();
                                     },
                                 }),
-                                buttonAnalyticsObject: { section: O.jXE.PERMADECOS_MARKETING_UPSELL },
+                                buttonAnalyticsObject: { section: k.jXE.PERMADECOS_MARKETING_UPSELL },
                             }),
                     ],
                 }),
@@ -222,7 +222,7 @@ function W(e) {
         ],
     });
 }
-function q(e) {
+function W(e) {
     var n, t;
     let { quest: r, location: i, onClose: l, transitionState: d, preview: c } = e,
         m = o.useMemo(() => (0, R.xn)(r.config), [r]),

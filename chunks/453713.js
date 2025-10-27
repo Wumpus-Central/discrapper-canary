@@ -108,7 +108,7 @@ let x = s()((e) => {
                 [C, t, a],
             );
         return (0, r.jsx)(p.u, {
-            text: v.intl.string(v.t["6cfuDg"]),
+            text: v.intl.string(v.t["6cfuDj"]),
             "aria-label": !1,
             shouldShow: !P && E,
             asContainer: !0,
@@ -217,7 +217,7 @@ let x = s()((e) => {
                                     variant: "text-xs/medium",
                                     color: "text-secondary",
                                     className: g.variantLabel,
-                                    children: d ? v.intl.string(v.t.wbgaj4) : C,
+                                    children: d ? v.intl.string(v.t.wbgaj6) : C,
                                 }),
                             ],
                         }),

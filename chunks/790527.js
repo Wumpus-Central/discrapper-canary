@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -59,14 +59,14 @@ function P(e) {
             return !1;
     }
 }
-function w(e) {
+function D(e) {
     var t,
         n,
         a,
         {
             title: R,
-            type: w,
-            guildBoostProps: D,
+            type: D,
+            guildBoostProps: w,
             analyticsSource: L,
             analyticsLocation: x,
             body: M,
@@ -143,7 +143,7 @@ function w(e) {
             "smallText",
             "footerClassName",
         ]);
-    let eh = null != D,
+    let eh = null != w,
         em = (0, b.N)(),
         eg = (0, E.Ng)(),
         eE =
@@ -155,8 +155,8 @@ function w(e) {
             analyticsLocation: x,
             analyticsLocations: eb,
             analyticsSource: L,
-            guildBoostProps: D,
-            type: w,
+            guildBoostProps: w,
+            type: D,
         },
         eO = i.useRef(ey);
     i.useEffect(() => {
@@ -188,7 +188,7 @@ function w(e) {
                   });
         }, [eh, et, en]);
     let ev = (0, s.e7)([g.Z], () => g.Z.affinities),
-        eI = ev.length > 1 && P(w),
+        eI = ev.length > 1 && P(D),
         eT = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
         eT || u.MH();
@@ -197,10 +197,10 @@ function w(e) {
             if (eh)
                 return (0, r.jsx)(p.Z, {
                     analyticsLocation: x,
-                    guild: D.guild,
+                    guild: w.guild,
                     onClose: Y,
                 });
-            let e = ea ? S.intl.string(S.t.pj0XBA) : void 0;
+            let e = ea ? S.intl.string(S.t.pj0XBN) : void 0;
             if (eE)
                 if (null != em) {
                     var t, n;
@@ -208,7 +208,7 @@ function w(e) {
                         intervalType: null == em || null == (t = em.subscription_trial) ? void 0 : t.interval,
                         intervalCount: null == em || null == (n = em.subscription_trial) ? void 0 : n.interval_count,
                     });
-                } else null != eg && (e = S.intl.formatToPlainString(S.t.bkQ4bG, { percent: eg.discount.amount }));
+                } else null != eg && (e = S.intl.formatToPlainString(S.t.bkQ4bH, { percent: eg.discount.amount }));
             return (0, r.jsx)(y.Z, {
                 className: es,
                 showGradient: ea || eo,
@@ -263,7 +263,7 @@ function w(e) {
                         : eE
                           ? (0, r.jsx)(O.ZP, {
                                 onClose: Y,
-                                type: w,
+                                type: D,
                                 subscriptionTier:
                                     null != (a = null == em || null == (n = em.subscription_trial) ? void 0 : n.sku_id)
                                         ? a
@@ -325,7 +325,7 @@ function w(e) {
                             (0, r.jsx)(c.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: null != ei ? ei : S.intl.string(S.t["13/7kZ"]),
+                                text: null != ei ? ei : S.intl.string(S.t["13/7kX"]),
                                 onClick: Y,
                             }),
                     ],

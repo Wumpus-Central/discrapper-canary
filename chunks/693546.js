@@ -117,7 +117,7 @@ let p = {
                         e.body.code === f.evJ.REQUEST_TO_JOIN_USER_INELIGIBLE &&
                         a.Z.show({
                             title: _.intl.string(_.t.DxJj4e),
-                            body: _.intl.string(_.t.rSAOk5),
+                            body: _.intl.string(_.t.rSAOk9),
                         }),
                     Promise.reject(e)
                 ),

@@ -1,6 +1,6 @@
 n.d(t, {
-    i: () => z,
-    y: () => B,
+    i: () => B,
+    y: () => A,
 });
 var r = n(951288),
     s = n(647438),
@@ -94,8 +94,8 @@ let N = (e) => {
                 return null != n
                     ? n
                     : (0, p.pO)(t) || t.config.features.includes(b.S7.NON_GAMING_PLAY_QUEST)
-                      ? v.intl.string(v.t.hvVgAQ)
-                      : v.intl.string(v.t.lwQdjI);
+                      ? v.intl.string(v.t.hvVgAZ)
+                      : v.intl.string(v.t.lwQdjB);
             })();
         return (0, r.jsx)(o.zxk, {
             size: "sm",
@@ -127,7 +127,7 @@ let N = (e) => {
                     },
                 ),
             size: "sm",
-            text: v.intl.string(v.t.csptqa),
+            text: v.intl.string(v.t.csptqV),
         });
     },
     P = (e) => {
@@ -170,14 +170,14 @@ let N = (e) => {
                             variant: "secondary",
                             fullWidth: !0,
                             size: "sm",
-                            text: v.intl.string(v.t["93PTEh"]),
+                            text: v.intl.string(v.t["93PTEs"]),
                         },
                         e,
                     ),
                 ),
         });
     },
-    z = (e) => {
+    B = (e) => {
         var t,
             n,
             {
@@ -226,7 +226,7 @@ let N = (e) => {
                 questContent: E,
                 sourceQuestContent: N,
             }),
-            z = s.useCallback(
+            B = s.useCallback(
                 (e) => {
                     var t;
                     null == b || b(e),
@@ -240,8 +240,8 @@ let N = (e) => {
                 },
                 [b, d.config, null == (n = d.userStatus) ? void 0 : n.claimedAt, _],
             ),
-            { shouldUseShinyButton: A } = g.Z.useConfig({ location: (0, u._b)(N) + "- CtaButton" });
-        return A
+            { shouldUseShinyButton: z } = g.Z.useConfig({ location: (0, u._b)(N) + "- CtaButton" });
+        return z
             ? (0, r.jsx)(
                   i.gtL,
                   S(
@@ -249,7 +249,7 @@ let N = (e) => {
                           {
                               fullWidth: !0,
                               size: l.zx.Sizes.SMALL,
-                              onClick: z,
+                              onClick: B,
                               pauseAnimation: f || (!j && !P),
                               className: m,
                               buttonShineClassName: O.shine,
@@ -257,7 +257,7 @@ let N = (e) => {
                           },
                           w,
                       ),
-                      { children: null != C ? C : v.intl.string(v.t.cfY4PD) },
+                      { children: null != C ? C : v.intl.string(v.t.cfY4PE) },
                   ),
               )
             : (0, r.jsx)(
@@ -266,8 +266,8 @@ let N = (e) => {
                       k(
                           {
                               fullWidth: !0,
-                              onClick: z,
-                              text: null != C ? C : v.intl.string(v.t.cfY4PD),
+                              onClick: B,
+                              text: null != C ? C : v.intl.string(v.t.cfY4PE),
                           },
                           w,
                       ),
@@ -275,7 +275,7 @@ let N = (e) => {
                   ),
               );
     },
-    A = (e) => {
+    z = (e) => {
         var t;
         let {
                 quest: n,
@@ -297,7 +297,7 @@ let N = (e) => {
             b = null;
         return (
             m
-                ? (b = (0, r.jsx)(z, {
+                ? (b = (0, r.jsx)(B, {
                       quest: n,
                       sourceQuestContent: s,
                       useReducedMotion: o,
@@ -338,7 +338,7 @@ let N = (e) => {
                   })
         );
     };
-function B(e) {
+function A(e) {
     let t = s.useRef(null);
     return (0, r.jsxs)("div", {
         className: O.ctaButtons,
@@ -347,13 +347,13 @@ function B(e) {
             e.showBackButton &&
                 (0, r.jsx)(o.hU, {
                     size: "sm",
-                    "aria-label": v.intl.string(v.t["13/7kZ"]),
+                    "aria-label": v.intl.string(v.t["13/7kX"]),
                     onClick: e.onBack,
                     icon: i.V7D,
                     variant: "secondary",
                 }),
             (0, r.jsx)(
-                A,
+                z,
                 S(k({}, e), {
                     popoutTargetElementRef: t,
                     onGameSheetOpened: e.onGameSheetOpened,

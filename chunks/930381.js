@@ -2,23 +2,23 @@ e.d(a, { default: () => c });
 var n = e(951288);
 e(647438);
 var i = e(481060),
-    l = e(239091),
-    r = e(13245),
-    s = e(145597),
+    r = e(239091),
+    s = e(13245),
+    l = e(145597),
     o = e(757744),
     u = e(388032);
 function c(t) {
-    let { onSelect: a, layoutId: e = s.OVERLAY_LAYOUT_ID, version: c } = t;
+    let { onSelect: a, layoutId: e = l.OVERLAY_LAYOUT_ID, version: c } = t;
     return (0, n.jsx)(i.v2r, {
         navId: "overlay",
-        onClose: l.Zy,
-        "aria-label": u.intl.string(u.t.tPfVWl),
+        onClose: r.Zy,
+        "aria-label": u.intl.string(u.t.tPfVWi),
         onSelect: a,
         children: (0, n.jsx)(i.sNh, {
             id: "reset",
-            label: u.intl.string(u.t["hW+EMj"]),
+            label: u.intl.string(u.t["hW+EMu"]),
             action: (t) => {
-                t.stopPropagation(), r.Z.resetDefaultLayout(e, null != c ? c : o.bv);
+                t.stopPropagation(), s.Z.resetDefaultLayout(e, null != c ? c : o.bv);
             },
         }),
     });

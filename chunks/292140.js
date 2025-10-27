@@ -1,25 +1,25 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(493773),
     a = n(626135),
-    o = n(144145),
-    s = n(555927),
+    s = n(144145),
+    o = n(555927),
     c = n(738762),
     u = n(244080),
     d = n(247530),
     p = n(260889),
     f = n(981631),
     h = n(388032);
-function g(e) {
-    let { party: t, close: n, onSelect: g } = e,
-        m = (0, c.Z)(t),
-        b = (0, p.Z)(t),
-        _ = (0, d.Z)(t),
+function m(e) {
+    let { party: t, close: n, onSelect: m } = e,
+        g = (0, c.Z)(t),
+        _ = (0, p.Z)(t),
+        b = (0, d.Z)(t),
         E = (0, u.Z)(t),
-        O = (0, o.Z)(t),
-        v = (0, s.Z)(t);
+        O = (0, s.Z)(t),
+        I = (0, o.Z)(t);
     return (
         (0, l.ZP)(() => {
             let e = t.currentActivities
@@ -39,16 +39,16 @@ function g(e) {
         (0, r.jsxs)(i.v2r, {
             navId: "now-playing-menu",
             onClose: n,
-            "aria-label": h.intl.string(h.t.ogxXGh),
-            onSelect: g,
+            "aria-label": h.intl.string(h.t.ogxXGq),
+            onSelect: m,
             children: [
-                m,
+                g,
                 (0, r.jsxs)(i.kSQ, {
-                    children: [b, _],
+                    children: [_, b],
                 }),
                 (0, r.jsx)(i.kSQ, { children: E }),
                 (0, r.jsx)(i.kSQ, { children: O }),
-                v,
+                I,
             ],
         })
     );

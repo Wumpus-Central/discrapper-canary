@@ -15,11 +15,11 @@ let a = () =>
             }),
             (0, r.jsx)("div", {
                 className: l.title,
-                children: i.intl.string(i.t.MwjTvr),
+                children: i.intl.string(i.t.MwjTvn),
             }),
             (0, r.jsx)("div", {
                 className: l.body,
-                children: i.intl.string(i.t.AKBgPz),
+                children: i.intl.string(i.t.AKBgPy),
             }),
         ],
     });

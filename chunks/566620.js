@@ -46,8 +46,8 @@ var r = n(990547),
     N = n(48854),
     R = n(835873),
     P = n(973616),
-    w = n(314897),
-    D = n(592125),
+    D = n(314897),
+    w = n(592125),
     L = n(430824),
     x = n(496675),
     M = n(594174),
@@ -129,7 +129,7 @@ async function eo(e) {
             inviterUserId: b,
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
-        O = D.Z.getChannel(r),
+        O = w.Z.getChannel(r),
         v = null != (t = null == O ? void 0 : O.getGuildId()) ? t : void 0;
     if (null == v && !(null != (n = null == O ? void 0 : O.isPrivate()) && n)) return !1;
     let C = (0, N.r)();
@@ -275,7 +275,7 @@ async function el(e) {
                 channelId: r,
             })),
             await (0, h.FN)({ type: "user" });
-        let e = D.Z.getChannel(r),
+        let e = w.Z.getChannel(r),
             { isAuthorized: n } = await (0, b.L)({
                 applicationId: t,
                 channel: e,
@@ -287,7 +287,7 @@ async function el(e) {
                 reason: 2,
             };
     }
-    let y = D.Z.getChannel(r),
+    let y = w.Z.getChannel(r),
         O = null != i ? L.Z.getGuild(i) : null;
     if (null == y)
         return {
@@ -372,7 +372,7 @@ async function el(e) {
 async function ec(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: s } = e,
-        c = w.default.getSessionId(),
+        c = D.default.getSessionId(),
         u = M.default.getCurrentUser(),
         d = n;
     if (null == d)
@@ -391,7 +391,7 @@ async function ec(e) {
             result: "failure",
             reason: 3,
         };
-    let _ = D.Z.getChannel(i);
+    let _ = w.Z.getChannel(i);
     if (null == _)
         return {
             result: "failure",
@@ -399,7 +399,7 @@ async function ec(e) {
         };
     let p = (0, W.e4)({
         channelId: i,
-        ChannelStore: D.Z,
+        ChannelStore: w.Z,
         GuildStore: L.Z,
         PermissionStore: x.Z,
         VoiceStateStore: k.Z,
@@ -412,8 +412,8 @@ async function ec(e) {
                 : p === W.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   ((e = 6),
                   l.Z.show({
-                      title: en.intl.string(en.t["IOy+Iy"]),
-                      body: en.intl.string(en.t.UXoQTk),
+                      title: en.intl.string(en.t["IOy+I5"]),
+                      body: en.intl.string(en.t.UXoQTp),
                       hideActionSheet: !1,
                   })),
             {
@@ -658,7 +658,7 @@ async function eh(e) {
             },
             i,
         );
-    null != D.Z.getChannel(n) && f.Z.sendInvite(n, o.code, i, a);
+    null != w.Z.getChannel(n) && f.Z.sendInvite(n, o.code, i, a);
 }
 async function em(e) {
     let { channelId: t, applicationId: n, userId: r, location: i, inviteAnalyticsMetadata: a, prefixedContent: o } = e,
@@ -672,7 +672,7 @@ async function em(e) {
         );
     await c.Z.ensurePrivateChannel(r).then((e) => {
         let t,
-            n = D.Z.getChannel(e);
+            n = w.Z.getChannel(e);
         if (null == n) throw Error("Private channel not found");
         null != o && (t = C.ZP.parse(n, o).content), f.Z.sendInvite(e, s.code, i, a, t);
     });
@@ -745,7 +745,7 @@ async function eI(e, t) {
             });
     } catch (l) {
         var n;
-        let r = D.Z.getChannel(t),
+        let r = w.Z.getChannel(t),
             a = null != (n = null == r ? void 0 : r.guild_id) ? n : null,
             o = null != a ? i.E.GUILD_CHANNEL : i.E.PRIVATE_CHANNEL;
         return (

@@ -132,7 +132,7 @@ let k = r.forwardRef(function (e, t) {
         return () => clearTimeout(e);
     }, []);
     let { enabled: H } = P.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
-        V = r.useCallback(() => {
+        F = r.useCallback(() => {
             (0, C.Z)({
                 context:
                     null != l
@@ -147,7 +147,7 @@ let k = r.forwardRef(function (e, t) {
                 u(),
                 g();
         }, [l, k, g, u, U]),
-        F = r.useCallback(
+        V = r.useCallback(
             (e) => {
                 c(),
                     S.default.track(A.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -171,13 +171,13 @@ let k = r.forwardRef(function (e, t) {
                         children: (0, i.jsx)(p.nn4, {
                             children: (0, i.jsx)(p.H, {
                                 id: L,
-                                children: w.intl.string(w.t["2lnYtL"]),
+                                children: w.intl.string(w.t["2lnYtB"]),
                             }),
                         }),
                     }),
                     (0, i.jsxs)("div", {
                         className: M.container,
-                        onMouseEnter: F,
+                        onMouseEnter: V,
                         onMouseLeave: u,
                         children: [
                             (0, i.jsxs)("div", {
@@ -193,17 +193,17 @@ let k = r.forwardRef(function (e, t) {
                                             }),
                                             (0, i.jsx)(p.Text, {
                                                 variant: "eyebrow",
-                                                children: w.intl.string(w.t.f3Cz29),
+                                                children: w.intl.string(w.t.f3Cz25),
                                             }),
                                         ],
                                     }),
                                     (0, i.jsxs)(p.P3F, {
                                         className: M.titleRight,
-                                        onClick: V,
+                                        onClick: F,
                                         children: [
                                             (0, i.jsx)(p.Text, {
                                                 variant: "eyebrow",
-                                                children: w.intl.string(w.t["K8+z4e"]),
+                                                children: w.intl.string(w.t["K8+z4S"]),
                                             }),
                                             (0, i.jsx)(p.Fbu, {
                                                 size: "custom",

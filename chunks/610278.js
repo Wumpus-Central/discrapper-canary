@@ -1,13 +1,13 @@
 n.d(t, {
-    ZP: () => b,
+    ZP: () => _,
     ro: () => f,
 });
 var r = n(570140),
     i = n(519938),
     l = n(317770),
     a = n(958185),
-    o = n(928518),
-    s = n(819640),
+    s = n(928518),
+    o = n(819640),
     c = n(366050),
     u = n(591472),
     d = n(981631);
@@ -30,11 +30,11 @@ function h() {
     }
     return r.Z.wait(() => i.bA(t, d.NYg.FRAME, {})), void (p = t);
 }
-function g() {
+function m() {
     if (
         (0, a.Z)({
-            LayerStore: s.Z,
-            PopoutWindowStore: o.Z,
+            LayerStore: o.Z,
+            PopoutWindowStore: s.Z,
         })
     ) {
         let e = p;
@@ -44,12 +44,12 @@ function g() {
     let e = p;
     null != e && c.Z.isOpen(e) && r.Z.wait(() => i.$Z(e));
 }
-class m extends l.Z {
+class g extends l.Z {
     _initialize() {
-        u.Z.addChangeListener(h), s.Z.addChangeListener(g);
+        u.Z.addChangeListener(h), o.Z.addChangeListener(m);
     }
     _terminate() {
-        u.Z.removeChangeListener(h), s.Z.removeChangeListener(g);
+        u.Z.removeChangeListener(h), o.Z.removeChangeListener(m);
     }
 }
-let b = new m();
+let _ = new g();

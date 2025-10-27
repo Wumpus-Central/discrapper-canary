@@ -38,12 +38,12 @@ function _(e) {
             }
             return i;
         })(e, ["channelId", "className"]);
-    let j = i.useRef(null),
-        O = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
+    let O = i.useRef(null),
+        j = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
         x = i.useCallback(() => {
-            let e = O ? g.MI.NO_CHAT : g.MI.RESIZABLE;
+            let e = j ? g.MI.NO_CHAT : g.MI.RESIZABLE;
             (0, h.gC)(e);
-        }, [O]),
+        }, [j]),
         { unreadCount: v, mentionCount: C } = (function (e) {
             let t = (0, a.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
@@ -62,16 +62,16 @@ function _(e) {
         })(t),
         I = i.useCallback(() => {
             var e;
-            null == (e = j.current) || e.focus();
+            null == (e = O.current) || e.focus();
         }, []);
     (0, p.yp)({
         event: m.CkL.FOCUS_CHAT_BUTTON,
         handler: I,
     });
-    let S = O ? b.intl.string(b.t["5MstTk"]) : b.intl.string(b.t.kkKapK),
+    let S = j ? b.intl.string(b.t["5MstTl"]) : b.intl.string(b.t.kkKapG),
         E = [S];
-    C > 0 && E.push(b.intl.formatToPlainString(b.t["3l1GOz"], { mentionCount: C })),
-        v > 0 && E.push(b.intl.string(b.t.x5zAGR));
+    C > 0 && E.push(b.intl.formatToPlainString(b.t["3l1GOx"], { mentionCount: C })),
+        v > 0 && E.push(b.intl.string(b.t.x5zAGZ));
     let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
         P = C > 0 ? C : v,
         T = P > 0;
@@ -107,7 +107,7 @@ function _(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: j,
+                        buttonRef: O,
                         onClick: x,
                         label: S,
                         "aria-label": E.join(", "),

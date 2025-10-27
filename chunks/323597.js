@@ -1,4 +1,4 @@
-e.d(n, { Z: () => m });
+e.d(n, { Z: () => Z });
 var i = e(951288);
 e(647438);
 var a = e(442837),
@@ -13,11 +13,11 @@ var a = e(442837),
     f = e(496675),
     g = e(709054),
     v = e(981631),
-    Z = e(388032);
-function m(t) {
+    m = e(388032);
+function Z(t) {
     let n = t.isForumPost(),
         e = (0, a.e7)([h.default], () => t.isOwner(h.default.getId()), [t]),
-        m = (0, u.HL)(t),
+        Z = (0, u.HL)(t),
         { canManageChannel: b, canAccessChannel: p } = (0, a.cj)(
             [f.Z],
             () => ({
@@ -31,26 +31,26 @@ function m(t) {
             return null != (n = c.Z.getCount(t.id)) ? n : 0;
         }, [t.id]),
         { firstMessage: _ } = (0, a.e7)([d.Z], () => d.Z.getMessage(t.id), [t.id]),
-        E = m && b && null == _,
-        N = n && (b || (e && C < 1) || E),
-        O = n && e && !b && C > 0 && null != _;
-    return p && (!m || E) && (b || N || O)
+        O = Z && b && null == _,
+        N = n && (b || (e && C < 1) || O),
+        j = n && e && !b && C > 0 && null != _;
+    return p && (!Z || O) && (b || N || j)
         ? (0, i.jsx)(l.sNh, {
               id: "delete-channel",
               label:
                   t.type === v.d4z.GUILD_CATEGORY
-                      ? Z.intl.string(Z.t.ifbXnJ)
+                      ? m.intl.string(m.t.ifbXnL)
                       : t.isForumPost()
                         ? N
-                            ? Z.intl.string(Z.t.nEOg1N)
-                            : Z.intl.string(Z.t.xwMqDw)
+                            ? m.intl.string(m.t.nEOg1N)
+                            : m.intl.string(m.t.xwMqD7)
                         : t.isThread()
-                          ? Z.intl.string(Z.t.H7vTe3)
-                          : Z.intl.string(Z.t["8D8Rsb"]),
+                          ? m.intl.string(m.t.H7vTe2)
+                          : m.intl.string(m.t["8D8Rsb"]),
               color: "danger",
               action: () => {
                   (0, o.w)(t, function () {
-                      O ? s.Z.deleteMessage(t.id, g.default.castChannelIdAsMessageId(t.id)) : r.ZP.deleteChannel(t.id);
+                      j ? s.Z.deleteMessage(t.id, g.default.castChannelIdAsMessageId(t.id)) : r.ZP.deleteChannel(t.id);
                   });
               },
           })

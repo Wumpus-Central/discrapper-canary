@@ -125,7 +125,7 @@ function N(e) {
         N = (0, d.E)("UserActivityContainer", A),
         R = (0, a.e7)([_.Z], () => (l ? _.Z.getAnyStreamForUser(n.id) : null)),
         P = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && N ? A : null,
-        w = (0, a.e7)([h.Z, m.Z, p.Z], () => {
+        D = (0, a.e7)([h.Z, m.Z, p.Z], () => {
             var e, r;
             return (0, o.Z)(t, b.xjy.EMBEDDED)
                 ? h.Z.getGuild(
@@ -142,7 +142,7 @@ function N(e) {
                   ? h.Z.getGuild(P.getGuildId())
                   : null;
         }),
-        D = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R.guildId) : null)),
+        w = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R.guildId) : null)),
         L = (0, a.e7)([c.Z], () => {
             if (null != t)
                 if (null != t.application_id) return c.Z.getApplication(t.application_id);
@@ -171,7 +171,7 @@ function N(e) {
                   user: n,
                   application: L,
                   hideHeader: y,
-                  activityGuild: null != w ? w : D,
+                  activityGuild: null != D ? D : w,
                   showChannelDetails: O,
                   channel: O ? A : void 0,
                   renderActions: E

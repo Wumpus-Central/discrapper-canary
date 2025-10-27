@@ -75,12 +75,12 @@ function E(e) {
                               s.Z.setUseSystemScreensharePicker(e), l.Z.app.relaunch();
                           },
                           confirmButtonColor: a.zx.Colors.BRAND,
-                          header: _.intl.string(_.t["9jf31N"]),
-                          cancelText: _.intl.string(_.t["ETE/oK"]),
-                          confirmText: _.intl.string(_.t.BddRzc),
+                          header: _.intl.string(_.t["9jf31O"]),
+                          cancelText: _.intl.string(_.t["ETE/oC"]),
+                          confirmText: _.intl.string(_.t.BddRzS),
                           children: (0, r.jsx)(o.Text, {
                               variant: "text-md/normal",
-                              children: _.intl.string(_.t.uBd6JS),
+                              children: _.intl.string(_.t.uBd6JW),
                           }),
                       }),
                   );
@@ -107,8 +107,8 @@ function b() {
             (0, r.jsx)(c.F, {
                 setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK,
                 children: (0, r.jsx)(o.rsf, {
-                    label: _.intl.string(_.t.GmWk2N),
-                    description: _.intl.string(_.t["Fj/xn5"]),
+                    label: _.intl.string(_.t.GmWk2E),
+                    description: _.intl.string(_.t["Fj/xn1"]),
                     checked: e,
                     onChange: (e) => s.Z.setVideoHook(e),
                 }),
@@ -118,7 +118,7 @@ function b() {
                 (0, r.jsx)(c.F, {
                     setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE,
                     children: (0, r.jsx)(o.rsf, {
-                        label: _.intl.string(_.t["4I0qzc"]),
+                        label: _.intl.string(_.t["4I0qzZ"]),
                         checked: t,
                         onChange: (e) => s.Z.setExperimentalSoundshare(e),
                     }),

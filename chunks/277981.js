@@ -120,7 +120,7 @@ let T = {
                           : h,
                 l =
                     g.length > 0 && null != s
-                        ? b.intl.format(b.t["3njXz8"], {
+                        ? b.intl.format(b.t["3njXz/"], {
                               query: g,
                               command: s,
                           })

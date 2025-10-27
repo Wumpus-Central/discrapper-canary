@@ -71,7 +71,7 @@ let b = "MMMM Do, YYYY",
             S = i.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
             A = i.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
             C = o()(a.currentPeriodEnd).format(b),
-            N = h.intl.formatToPlainString(h.t.KsMRPz, {
+            N = h.intl.formatToPlainString(h.t.KsMRP5, {
                 numChannels: S.length,
                 numAdditionalBenefits: A.length,
                 subscriptionEndDate: C,
@@ -81,18 +81,18 @@ let b = "MMMM Do, YYYY",
             "aria-labelledby": g,
             actions: [
                 {
-                    text: h.intl.string(h.t.EP6EPT),
+                    text: h.intl.string(h.t.EP6EPb),
                     variant: "secondary",
                     onClick: c,
                 },
                 {
                     variant: "critical-primary",
-                    text: h.intl.string(h.t.F6lUDA),
+                    text: h.intl.string(h.t.F6lUDF),
                     onClick: T,
                     loading: I,
                 },
             ],
-            title: h.intl.string(h.t.O6l5tL),
+            title: h.intl.string(h.t.O6l5tM),
             subtitle: N,
             onClose: c,
             children: (0, r.jsxs)(l.Kqy, {

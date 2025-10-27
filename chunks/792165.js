@@ -19,10 +19,10 @@ var i = n(442837),
     b = n(262381);
 function y(e) {
     return e === m.PremiumTypes.TIER_2
-        ? E.intl.string(E.t.jqO5Qk)
+        ? E.intl.string(E.t.jqO5Qn)
         : null == e
-          ? E.intl.string(E.t.f2qjw8)
-          : E.intl.string(E.t.SblICQ);
+          ? E.intl.string(E.t.f2qjw5)
+          : E.intl.string(E.t.SblICW);
 }
 function O(e) {
     let { onClose: t, markAsDismissed: n } = e,
@@ -47,7 +47,7 @@ function O(e) {
                 ? (0, r.jsx)(s.P3F, {
                       className: b.close,
                       onClick: () => (null == n ? void 0 : n(h.L.DISMISS)),
-                      "aria-label": E.intl.string(E.t.cpT0Cg),
+                      "aria-label": E.intl.string(E.t.cpT0Cq),
                       children: (0, r.jsx)(s.Dio, {
                           size: "xs",
                           color: "currentColor",
@@ -65,7 +65,7 @@ function O(e) {
                     }),
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-sm/bold",
-                        children: E.intl.string(E.t.dTbAx8),
+                        children: E.intl.string(E.t.dTbAxx),
                     }),
                 ],
             }),
@@ -76,11 +76,11 @@ function O(e) {
             I
                 ? (0, r.jsx)(s.Button, {
                       onClick: T,
-                      text: E.intl.string(E.t.RzWDqa),
+                      text: E.intl.string(E.t.RzWDqY),
                       fullWidth: !0,
                   })
                 : (0, r.jsx)(l.Z, {
-                      textOptions: { textOverride: E.intl.string(E.t.pj0XBA) },
+                      textOptions: { textOverride: E.intl.string(E.t.pj0XBN) },
                       subscriptionTier: m.Si.TIER_2,
                       premiumModalAnalyticsLocation: {
                           section: p.jXE.SOUNDBOARD_SOUND_PICKER,

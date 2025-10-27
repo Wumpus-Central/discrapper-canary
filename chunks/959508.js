@@ -57,16 +57,16 @@ function O(e) {
         F = L.config,
         H = l.options.length >= j.fY,
         W = (0, g.kl)(n.id, Array.from(w), [l]).length - w.size,
-        V = i.useRef(null),
-        z = i.useRef(x);
+        z = i.useRef(null),
+        V = i.useRef(x);
     return (i.useEffect(() => {
-        z.current = x;
+        V.current = x;
     }),
     i.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === z.current && !u) {
+            if (0 === V.current && !u) {
                 var e;
-                null == (e = V.current) || e.focus();
+                null == (e = z.current) || e.focus();
             }
         }, 0);
     }, [u]),
@@ -117,7 +117,7 @@ function O(e) {
                       }),
                       (0, r.jsx)(o.u, {
                           asContainer: !0,
-                          text: v.intl.string(v.t["Ku+86e"]),
+                          text: v.intl.string(v.t["Ku+86R"]),
                           children: (0, r.jsx)("div", {
                               className: _.closeIcon,
                               children: (0, r.jsx)(c.hU, {
@@ -125,7 +125,7 @@ function O(e) {
                                   icon: c.XHJ,
                                   variant: "icon-only",
                                   onClick: () => (0, h.fi)(n, l.id),
-                                  "aria-label": v.intl.string(v.t["Ku+86e"]),
+                                  "aria-label": v.intl.string(v.t["Ku+86R"]),
                               }),
                           }),
                       }),
@@ -161,10 +161,10 @@ function O(e) {
                           children: [
                               (0, r.jsx)(c.oil, {
                                   label: v.intl.formatToPlainString(v.t.yjS3zs, { index: x + 1 }),
-                                  inputRef: V,
+                                  inputRef: z,
                                   value: l.title,
                                   onChange: (e) => (0, h.Kk)(n, l.id, { title: e }),
-                                  placeholder: v.intl.string(v.t.QMCuCg),
+                                  placeholder: v.intl.string(v.t.QMCuCo),
                                   maxLength: j.iU,
                                   error: L.title,
                               }),
@@ -175,11 +175,11 @@ function O(e) {
                               (0, r.jsx)(c.gNt, {
                                   errorMessage: B,
                                   label: H
-                                      ? v.intl.formatToPlainString(v.t.AbvhZG, {
+                                      ? v.intl.formatToPlainString(v.t.AbvhZD, {
                                             count: l.options.length,
                                             total: j.qm,
                                         })
-                                      : v.intl.formatToPlainString(v.t.b7VxYW, {
+                                      : v.intl.formatToPlainString(v.t.b7VxYX, {
                                             count: l.options.length,
                                             total: j.qm,
                                         }),
@@ -202,7 +202,7 @@ function O(e) {
                                       (0, r.jsx)(c.Checkbox, {
                                           checked: !l.singleSelect,
                                           onChange: (e) => (0, h.Kk)(n, l.id, { singleSelect: !e }),
-                                          label: v.intl.string(v.t.uCebZW),
+                                          label: v.intl.string(v.t.uCebZa),
                                       }),
                                       l.inOnboarding
                                           ? (0, r.jsx)(c.Checkbox, {
@@ -210,8 +210,8 @@ function O(e) {
                                                 onChange: (e) => (0, h.Kk)(n, l.id, { required: e }),
                                                 disabled: !l.inOnboarding,
                                                 label: N
-                                                    ? v.intl.formatToPlainString(v.t["0re8T0"], { count: W })
-                                                    : v.intl.string(v.t.Ur8Vrq),
+                                                    ? v.intl.formatToPlainString(v.t["0re8T6"], { count: W })
+                                                    : v.intl.string(v.t.Ur8Vrt),
                                             })
                                           : null,
                                   ],
@@ -227,7 +227,7 @@ function O(e) {
                               }),
                               (0, r.jsx)(o.u, {
                                   asContainer: !0,
-                                  text: v.intl.string(v.t["Ku+86e"]),
+                                  text: v.intl.string(v.t["Ku+86R"]),
                                   children: (0, r.jsx)("div", {
                                       className: _.closeIcon,
                                       children: (0, r.jsx)(c.hU, {
@@ -235,7 +235,7 @@ function O(e) {
                                           icon: c.XHJ,
                                           variant: "icon-only",
                                           onClick: () => (0, h.fi)(n, l.id),
-                                          "aria-label": v.intl.string(v.t["Ku+86e"]),
+                                          "aria-label": v.intl.string(v.t["Ku+86R"]),
                                       }),
                                   }),
                               }),
@@ -272,15 +272,15 @@ function y(e) {
             (0, r.jsx)(c.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: v.intl.string(v.t.ECnSLi),
+                children: v.intl.string(v.t.ECnSLl),
             }),
             (0, r.jsxs)("div", {
                 className: _.examples,
                 children: [
-                    s(v.intl.string(v.t["7GZMJS"])),
-                    s(v.intl.string(v.t.nItydn)),
-                    s(v.intl.string(v.t.evuYbm)),
-                    s(v.intl.string(v.t.XWRuOj)),
+                    s(v.intl.string(v.t["7GZMJa"])),
+                    s(v.intl.string(v.t.nItydm)),
+                    s(v.intl.string(v.t.evuYbq)),
+                    s(v.intl.string(v.t.XWRuOp)),
                 ],
             }),
         ],

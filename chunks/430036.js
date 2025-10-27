@@ -22,13 +22,13 @@ var i = n(951288),
     x = n(541716),
     S = n(752305),
     Z = n(974251),
-    j = n(893718),
-    C = n(249458),
+    C = n(893718),
+    j = n(249458),
     I = n(552062),
     P = n(957730),
     w = n(105457),
-    N = n(400023),
-    T = n(623292),
+    T = n(400023),
+    N = n(623292),
     D = n(807092),
     k = n(592125),
     R = n(703558),
@@ -156,7 +156,7 @@ class el extends r.Component {
                 },
                 children: () =>
                     (0, i.jsx)(
-                        j.ZP,
+                        C.ZP,
                         er(ei({}, r), {
                             ref: this.textAreaRef,
                             renderAttachButton: this.renderAttachButton,
@@ -263,7 +263,7 @@ class el extends r.Component {
                               er(ei({}, l), { location: $.dy.OVERLAY }),
                           ),
                           this.setState((0, S.H2)()),
-                          (0, T.A6)(n.id),
+                          (0, N.A6)(n.id),
                           r)
                               ? (f.Z.deactivateAllRegions(),
                                 {
@@ -349,7 +349,7 @@ class ea extends r.PureComponent {
                           channelId: t.id,
                       })
                     : (0, i.jsx)(
-                          N.Z,
+                          T.Z,
                           {
                               channel: t,
                               className: et.messages,
@@ -360,7 +360,7 @@ class ea extends r.PureComponent {
                           },
                           t.id,
                       )),
-            (0, i.jsx)(C.G.Provider, {
+            (0, i.jsx)(j.G.Provider, {
                 value: {
                     disableInteractions: u && a && !c,
                     disableAnimations: u && g && !c,
@@ -420,13 +420,13 @@ class ea extends r.PureComponent {
                                                     ),
                                                     children:
                                                         null != t.name && t.name.length > 0
-                                                            ? ee.intl.formatToPlainString(ee.t["9TkYMD"], {
+                                                            ? ee.intl.formatToPlainString(ee.t["9TkYMO"], {
                                                                   keybind: d,
                                                                   channelName: t.isMultiUserDM()
                                                                       ? t.name
                                                                       : "#".concat(t.name),
                                                               })
-                                                            : ee.intl.formatToPlainString(ee.t["hxz/4O"], {
+                                                            : ee.intl.formatToPlainString(ee.t["hxz/4E"], {
                                                                   keybind: d,
                                                               }),
                                                 }),

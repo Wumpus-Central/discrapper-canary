@@ -142,20 +142,20 @@ let _ = new y(l.Z, {
         var t, n, r, i, l, o, u, p, f;
         let { channelId: b, entry: y } = e,
             _ = (0, a.MQ)(y),
-            j = null == (t = h[b]) ? void 0 : t[_.guildId];
-        h[b] = d(c({}, h[b]), { [_.guildId]: c({}, j, _) });
-        let O = null != (i = null == j ? void 0 : j.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
+            O = null == (t = h[b]) ? void 0 : t[_.guildId];
+        h[b] = d(c({}, h[b]), { [_.guildId]: c({}, O, _) });
+        let j = null != (i = null == O ? void 0 : O.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
             x = null != (l = _.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
-            v = Object.assign({}, null == (n = g[b]) ? void 0 : n[O]);
-        null != j && O !== x && delete v[_.guildId],
+            v = Object.assign({}, null == (n = g[b]) ? void 0 : n[j]);
+        null != O && j !== x && delete v[_.guildId],
             (g[b] = d(c({}, g[b]), {
-                [O]: v,
-                [x]: d(c({}, null == (r = g[b]) ? void 0 : r[x]), { [_.guildId]: c({}, j, _) }),
+                [j]: v,
+                [x]: d(c({}, null == (r = g[b]) ? void 0 : r[x]), { [_.guildId]: c({}, O, _) }),
             })),
-            x !== O &&
+            x !== j &&
                 null != m[b] &&
                 (m[b] = d(c({}, m[b]), {
-                    [O]: (null == (o = m[b]) ? void 0 : o[O]) > 0 ? (null == (u = m[b]) ? void 0 : u[O]) - 1 : 0,
+                    [j]: (null == (o = m[b]) ? void 0 : o[j]) > 0 ? (null == (u = m[b]) ? void 0 : u[j]) - 1 : 0,
                     [x]: (null != (f = null == (p = m[b]) ? void 0 : p[x]) ? f : 0) + 1,
                 }));
     },

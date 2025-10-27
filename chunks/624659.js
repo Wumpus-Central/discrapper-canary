@@ -1,11 +1,11 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var l = n(951288),
     a = n(647438),
     i = n(120356),
     r = n.n(i),
-    o = n(392711),
-    u = n.n(o),
-    d = n(872175),
+    d = n(392711),
+    o = n.n(d),
+    u = n(872175),
     s = n(755721),
     b = n(481060),
     c = n(493773),
@@ -25,18 +25,18 @@ function C() {
         className: m.helpdeskLink,
         variant: "text-xs/normal",
         color: "text-muted",
-        children: N.intl.format(N.t.ybi2tL, { helpdeskURL: h.Z.getSubmitRequestURL() }),
+        children: N.intl.format(N.t.ybi2tD, { helpdeskURL: h.Z.getSubmitRequestURL() }),
     });
 }
-function I(e) {
+function D(e) {
     var t, n;
     let {
             header: i,
-            body: o,
+            body: d,
             problems: h,
-            transitionState: I,
-            feedbackProblems: y = {},
-            otherKey: D,
+            transitionState: D,
+            feedbackProblems: I = {},
+            otherKey: y,
             hasCloseButton: L,
             onSubmit: T,
             onClose: x,
@@ -44,33 +44,33 @@ function I(e) {
             showHelpdeskLink: k = !0,
         } = e,
         R = (0, E.Z)(h),
-        [j, A] = a.useState(!1),
-        [P, B] = a.useState(null),
-        [U, $] = a.useState(u().shuffle(h)),
+        [j, P] = a.useState(!1),
+        [A, U] = a.useState(null),
+        [$, B] = a.useState(o().shuffle(h)),
         [F, Z] = a.useState(""),
-        [w, H] = a.useState(!1),
+        [H, w] = a.useState(!1),
         G = (0, f.Dt)(),
-        J = (0, d.Z)(j),
-        Y = (0, d.Z)(P),
-        K = (0, d.Z)(T),
-        z = (0, d.Z)(F),
-        Q = (0, d.Z)(w),
-        V = null != P ? y[P] : null,
-        X = null != V;
+        J = (0, u.Z)(j),
+        Y = (0, u.Z)(A),
+        z = (0, u.Z)(T),
+        K = (0, u.Z)(F),
+        Q = (0, u.Z)(H),
+        X = null != A ? I[A] : null,
+        V = null != X;
     return (
         a.useEffect(() => {
-            u().isEqual(R, h) || $((0, g.Bi)(h, D));
-        }, [h, R, D]),
+            o().isEqual(R, h) || B((0, g.Bi)(h, y));
+        }, [h, R, y]),
         (0, c.ZP)(() => () => {
-            K.current({
+            z.current({
                 problem: Y.current,
                 dontShowAgain: J.current,
-                feedback: z.current,
+                feedback: K.current,
                 closeClicked: Q.current,
             });
         }),
         (0, l.jsxs)(b.Y0X, {
-            transitionState: I,
+            transitionState: D,
             "aria-labelledby": G,
             parentComponent: "SimpleFeedbackModal",
             children: [
@@ -90,13 +90,13 @@ function I(e) {
                             variant: "text-sm/medium",
                             color: "header-secondary",
                             className: r()(m.ratingBody, p.headerBody),
-                            children: null != (t = null == V ? void 0 : V.subheader) ? t : o,
+                            children: null != (t = null == X ? void 0 : X.subheader) ? t : d,
                         }),
                         L
                             ? (0, l.jsx)(b.olH, {
                                   className: m.modalCloseButton,
                                   onClick: function () {
-                                      H(!0), x();
+                                      w(!0), x();
                                   },
                               })
                             : null,
@@ -105,19 +105,19 @@ function I(e) {
                 (0, l.jsxs)(b.hzk, {
                     className: p.modalContent,
                     children: [
-                        X
+                        V
                             ? null
                             : (0, l.jsx)("div", {
                                   className: m.problemInfo,
                                   children: (0, l.jsx)(v.Z, {
-                                      options: U,
+                                      options: $,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          B(t), Object.keys(y).includes(t) || x();
+                                          U(t), Object.keys(I).includes(t) || x();
                                       },
                                   }),
                               }),
-                        X
+                        V
                             ? (0, l.jsxs)("div", {
                                   className: m.problemInfo,
                                   children: [
@@ -125,7 +125,7 @@ function I(e) {
                                           value: F,
                                           maxLength: S.iF,
                                           onChange: Z,
-                                          placeholder: null != (n = V.hint) ? n : N.intl.string(N.t.h95hcn),
+                                          placeholder: null != (n = X.hint) ? n : N.intl.string(N.t.h95hcn),
                                       }),
                                       k ? (0, l.jsx)(C, {}) : null,
                                   ],
@@ -133,11 +133,11 @@ function I(e) {
                             : null,
                     ],
                 }),
-                M || X
+                M || V
                     ? (0, l.jsx)(b.mzw, {
-                          className: r()(m.footer, X ? p.submitFooter : p.modalFooter),
+                          className: r()(m.footer, V ? p.submitFooter : p.modalFooter),
                           direction: O.Z.Direction.HORIZONTAL,
-                          children: X
+                          children: V
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsx)(s.zx, {
@@ -146,14 +146,14 @@ function I(e) {
                                             look: s.zx.Looks.LINK,
                                             color: s.zx.Colors.PRIMARY,
                                             onClick: () => {
-                                                B(null), Z("");
+                                                U(null), Z("");
                                             },
-                                            children: N.intl.string(N.t["13/7kZ"]),
+                                            children: N.intl.string(N.t["13/7kX"]),
                                         }),
                                         (0, l.jsx)(b.Button, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: N.intl.string(N.t.geKm7u),
+                                            text: N.intl.string(N.t.geKm7t),
                                             onClick: x,
                                         }),
                                     ],
@@ -161,8 +161,8 @@ function I(e) {
                               : M
                                 ? (0, l.jsx)(b.Checkbox, {
                                       checked: j,
-                                      onChange: () => A(!j),
-                                      label: N.intl.string(N.t.lkWab2),
+                                      onChange: () => P(!j),
+                                      label: N.intl.string(N.t.lkWaby),
                                       labelType: "secondary",
                                   })
                                 : null,

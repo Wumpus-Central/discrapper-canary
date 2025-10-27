@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => x,
-    T: () => O,
+    T: () => j,
 }),
     n(388685);
 var r = n(647438),
@@ -20,11 +20,11 @@ var r = n(647438),
     b = n(206583),
     y = n(809017),
     _ = n(981631),
-    j = n(388032);
-let O = 0;
+    O = n(388032);
+let j = 0;
 function x(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: O },
+            memberStoreProps: { groups: t, rows: n, version: j },
             channelId: x,
             guildId: v,
         } = e,
@@ -38,7 +38,7 @@ function x(e) {
         A = null != w && w && (null == N ? void 0 : N.isForumChannel()) === !1,
         [D, L, M, k] = r.useMemo(() => {
             let e;
-            if (null == E || 0 === E.length || null == S || !A) return [t, n, O];
+            if (null == E || 0 === E.length || null == S || !A) return [t, n, j];
             let r = C ? E.length : 3,
                 i = E.slice(0, r);
             e = P
@@ -54,7 +54,7 @@ function x(e) {
                 key: y.G,
                 count: e.length,
                 index: n.length,
-                title: j.intl.string(j.t["6gwSFR"]),
+                title: O.intl.string(O.t["6gwSFY"]),
                 onToggleExpand: () => {
                     I((e) => {
                         let t = !e;
@@ -73,7 +73,7 @@ function x(e) {
                 feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [x, E, C, t, v, S, n, O, P, A]),
+        }, [x, E, C, t, v, S, n, j, P, A]),
         U = r.useRef(0),
         G = r.useRef(E),
         H = r.useRef(void 0),

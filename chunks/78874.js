@@ -1,4 +1,4 @@
-n.d(e, { Z: () => f });
+n.d(e, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -10,10 +10,10 @@ var i = n(442837),
     s = n(804739),
     d = n(346329),
     b = n(592745),
-    p = n(388032);
-function f(t, e) {
+    f = n(388032);
+function p(t, e) {
     let n = (0, i.e7)([a.ZP], () => a.ZP.getRunningVerifiedApplicationIds().includes(t.id), [t.id]),
-        f = (0, i.e7)(
+        p = (0, i.e7)(
             [o.Z, b.Z, u.Z, c.Z],
             () =>
                 (0, s.t)({
@@ -26,11 +26,11 @@ function f(t, e) {
                 }),
             [t.branchId, t.id],
         );
-    return n || !f
+    return n || !p
         ? null
         : (0, r.jsx)(l.sNh, {
               id: "launch",
-              label: p.intl.string(p.t.XKUw8v),
+              label: f.intl.string(f.t.XKUw8m),
               action: () => d.playApplication(t.id, t, { analyticsParams: { location: e } }),
           });
 }

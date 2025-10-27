@@ -53,12 +53,12 @@ function _(e) {
             i(b.L.USER_DISMISS);
         }, [i]),
         _ = f.vK[n],
-        y = v.intl.formatToPlainString(v.t.ewkaVV, {
+        y = v.intl.formatToPlainString(v.t.ewkaVR, {
             timeMilestone: null == (t = (0, p.q)(_.id, _.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
         }),
         C = [
             {
-                text: v.intl.string(v.t.RzWDqa),
+                text: v.intl.string(v.t.RzWDqY),
                 variant: "primary",
                 onClick: h,
             },
@@ -77,7 +77,7 @@ function _(e) {
                   }
                 : void 0,
         size: "lg",
-        title: v.intl.string(v.t.VoDxsb),
+        title: v.intl.string(v.t.VoDxsV),
         body: y,
         actions: C,
     });

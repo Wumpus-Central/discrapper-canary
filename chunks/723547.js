@@ -20,12 +20,12 @@ function s(e) {
                 (0, a.jsx)(r.Text, {
                     className: o.description,
                     variant: "text-md/normal",
-                    children: l.intl.string(l.t["Ny/0ur"]),
+                    children: l.intl.string(l.t["Ny/0ui"]),
                 }),
                 (0, a.jsx)(r.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: l.intl.string(l.t.TYo739),
+                    text: l.intl.string(l.t.TYo738),
                     fullWidth: !0,
                     onClick: () => {
                         t(i.L.TAKE_ACTION), n();

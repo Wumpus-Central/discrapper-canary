@@ -44,19 +44,19 @@ function p(e) {
             analyticsSourceLocation: n,
             guild: i,
             headerProps: {
-                title: u.intl.string(u.t["rv2H+/"]),
+                title: u.intl.string(u.t["rv2H+1"]),
                 subtitle: (function (e, t) {
                     let n = (0, s.nW)(e);
                     return t
-                        ? u.intl.formatToPlainString(u.t["TR/Uys"], { targetLevelOrPlan: n })
-                        : u.intl.formatToPlainString(u.t.B253V1, { targetLevelOrPlan: n });
+                        ? u.intl.formatToPlainString(u.t["TR/Uyt"], { targetLevelOrPlan: n })
+                        : u.intl.formatToPlainString(u.t.B253V6, { targetLevelOrPlan: n });
                 })(g, l),
                 image: (0, r.jsx)(m, {
                     guild: i,
                     banner: a,
                 }),
             },
-            perkIntro: u.intl.string(u.t.ZuItcH),
+            perkIntro: u.intl.string(u.t.ZuItcI),
             perks: l ? (0, c.zC)() : (0, c.XO)(),
         });
 }

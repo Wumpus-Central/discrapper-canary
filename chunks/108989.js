@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(238651);
 let a = [n(123353)],
-    o = ["#FFFFFF"],
-    s = 1000 / 60,
+    s = ["#FFFFFF"],
+    o = 1000 / 60,
     c = {
         velocity: {
             type: "static-random",
@@ -55,17 +55,17 @@ let a = [n(123353)],
         },
     };
 function u(e) {
-    let { className: t, firing: n = !0, wind: u = 2, sprites: d = a, spriteColors: p = o, confettiConfig: f } = e,
-        [h, g] = i.useState(null),
-        [m, b] = i.useState(null),
-        _ = (0, l.uR)(m, h),
+    let { className: t, firing: n = !0, wind: u = 2, sprites: d = a, spriteColors: p = s, confettiConfig: f } = e,
+        [h, m] = i.useState(null),
+        [g, _] = i.useState(null),
+        b = (0, l.uR)(g, h),
         E = i.useMemo(() => new l.qA({ wind: u }), [u]),
         O = i.useCallback(() => {
             var e, t;
-            let n = null == m ? void 0 : m.getCanvas();
+            let n = null == g ? void 0 : g.getCanvas();
             if (null == n) return;
             let r = n.getBoundingClientRect();
-            _.createConfetti(
+            b.createConfetti(
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -119,21 +119,21 @@ function u(e) {
                       }),
                 e),
             );
-        }, [_, m, f]);
+        }, [b, g, f]);
     return (
         i.useEffect(() => {
-            let e = n ? setInterval(O, s) : null;
+            let e = n ? setInterval(O, o) : null;
             return () => clearInterval(e);
         }, [n, O]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.O_, {
-                    ref: b,
+                    ref: _,
                     className: t,
                     environment: E,
                 }),
                 (0, r.jsx)(l.Ji, {
-                    ref: g,
+                    ref: m,
                     colors: p,
                     sprites: d,
                     spriteWidth: 6,

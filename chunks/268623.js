@@ -27,7 +27,7 @@ function O(e) {
         ? null != n || (0, f.Z)()
             ? (0, r.jsxs)(a.sNh, {
                   id: "save-for-later",
-                  label: p.intl.string(p.t.tpxJtr),
+                  label: p.intl.string(p.t.tpxJto),
                   action: () =>
                       null == n
                           ? (0, c.z)({
@@ -45,7 +45,7 @@ function O(e) {
                       null != n
                           ? (0, r.jsx)(a.sNh, {
                                 id: "remove-from-for-later",
-                                label: p.intl.string(p.t.SvXS1d),
+                                label: p.intl.string(p.t.SvXS1Z),
                                 icon: a.plf,
                                 action: () =>
                                     (0, c.x)({
@@ -57,7 +57,7 @@ function O(e) {
                             })
                           : (0, r.jsx)(a.sNh, {
                                 id: "create-bookmark",
-                                label: p.intl.string(p.t["9p3D9v"]),
+                                label: p.intl.string(p.t["9p3D9p"]),
                                 icon: a.gt9,
                                 action: () =>
                                     (0, c.z)({
@@ -72,7 +72,7 @@ function O(e) {
               })
             : (0, r.jsx)(a.sNh, {
                   id: "save-for-later-upsell",
-                  label: p.intl.string(p.t.tpxJtr),
+                  label: p.intl.string(p.t.tpxJto),
                   icon: a.SrA,
                   iconProps: { color: o.JX.PREMIUM_TIER_2 },
                   action: () =>
@@ -111,7 +111,7 @@ function y(e) {
         });
     return (null == n ? void 0 : n.saveData.dueAt) == null
         ? (0, r.jsx)(a.kSQ, {
-              label: p.intl.string(p.t.roMu1N),
+              label: p.intl.string(p.t.roMu1H),
               children: d,
           })
         : (0, r.jsxs)(a.kSQ, {
@@ -119,7 +119,7 @@ function y(e) {
               children: [
                   (0, r.jsx)(a.sNh, {
                       id: "mark-complete",
-                      label: p.intl.string(p.t.yjGtdH),
+                      label: p.intl.string(p.t.yjGtdJ),
                       icon: a.kmB,
                       action: () =>
                           (0, c.z)({
@@ -130,7 +130,7 @@ function y(e) {
                   }),
                   (0, r.jsx)(a.sNh, {
                       id: "edit-reminder",
-                      label: p.intl.string(p.t.vrbqs7),
+                      label: p.intl.string(p.t.vrbqs1),
                       children: d,
                   }),
               ],

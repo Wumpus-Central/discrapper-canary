@@ -25,7 +25,7 @@ function c(e) {
                       isInline: !1,
                       children: (0, r.jsxs)("span", {
                           className: o.edited,
-                          children: ["(", a.intl.string(a.t.C8sXIC), ")"],
+                          children: ["(", a.intl.string(a.t.C8sXIM), ")"],
                       }),
                   }),
               ],

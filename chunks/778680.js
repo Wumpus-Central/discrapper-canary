@@ -3,23 +3,23 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(751586),
-    o = n(388032),
-    s = n(473846);
+    s = n(388032),
+    o = n(473846);
 function c(e) {
     let { children: t, selectedSections: n = [], onSectionSelect: c, controls: u } = e,
         d = (0, a.Ui)(),
         p = 0 === n.length || n.length === d.length,
         f = i.useMemo(() => (p ? "all" : 1 === n.length ? n[0] : "all"), [n, p]);
     return (0, r.jsxs)("div", {
-        className: s.container,
+        className: o.container,
         children: [
             (0, r.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
                 color: "header-primary",
-                children: o.intl.string(o.t.BDUDam),
+                children: s.intl.string(s.t.BDUDau),
             }),
             (0, r.jsx)("div", {
-                className: s.controlsBarContainer,
+                className: o.controlsBarContainer,
                 children: u,
             }),
             (0, r.jsxs)(l.njP, {
@@ -32,7 +32,7 @@ function c(e) {
                 children: [
                     (0, r.jsx)(l.njP.Item, {
                         id: "all",
-                        children: o.intl.string(o.t.Y9DnPT),
+                        children: s.intl.string(s.t.Y9DnPa),
                     }),
                     d.map((e) =>
                         (0, r.jsx)(
@@ -47,9 +47,9 @@ function c(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: s.contentArea,
+                className: o.contentArea,
                 children: (0, r.jsx)("div", {
-                    className: s.content,
+                    className: o.content,
                     children: t,
                 }),
             }),

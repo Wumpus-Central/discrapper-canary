@@ -7,18 +7,18 @@ function c() {
     return (0, r.jsxs)(o.z, {
         children: [
             (0, r.jsx)(o.q, {
-                title: l.intl.string(l.t.fjFJFR),
+                title: l.intl.string(l.t.fjFJFV),
                 description: l.intl.string(l.t["8SIMPz"]),
                 icon: i.owK,
             }),
             (0, r.jsx)(o.q, {
-                title: l.intl.string(l.t.QCrmqa),
-                description: l.intl.string(l.t.TKDMoK),
+                title: l.intl.string(l.t.QCrmqS),
+                description: l.intl.string(l.t.TKDMoN),
                 icon: i.owK,
             }),
             (0, r.jsx)(o.q, {
-                title: l.intl.string(l.t["lkm/a2"]),
-                description: l.intl.string(l.t["8j3qaG"]),
+                title: l.intl.string(l.t["lkm/a8"]),
+                description: l.intl.string(l.t["8j3qaC"]),
                 icon: i.aNP,
             }),
         ],

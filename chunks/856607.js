@@ -23,19 +23,19 @@ function d() {
             (0, r.jsx)(i.Heading, {
                 className: c.topSpacing,
                 variant: "heading-lg/extrabold",
-                children: l.intl.string(l.t.Z1OZCQ),
+                children: l.intl.string(l.t.Z1OZCV),
             }),
             (0, r.jsx)(i.Text, {
                 className: c.topSpacing,
                 variant: "text-md/normal",
-                children: l.intl.string(l.t.ZSt4Tk),
+                children: l.intl.string(l.t.ZSt4Tt),
             }),
             (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: c.topSpacing,
                 children: (0, r.jsx)(i.Button, {
                     variant: "primary",
-                    text: l.intl.string(l.t.jQ3pqq),
+                    text: l.intl.string(l.t.jQ3pqt),
                     onClick: e,
                 }),
             }),

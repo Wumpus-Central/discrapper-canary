@@ -10,8 +10,8 @@ var r = t(951288),
     d = t(313201),
     g = t(720202),
     p = t(430824),
-    h = t(306680),
-    m = t(626135),
+    m = t(306680),
+    h = t(626135),
     v = t(823379);
 t(981888);
 var j = t(709054),
@@ -32,14 +32,14 @@ function w(e) {
         S = (0, c.e7)([p.Z], () => p.Z.getGuild(w)),
         D = (0, b.Z)(null == S ? void 0 : S.id),
         L = (0, x.ZP)(w),
-        T = i.useRef(h.ZP.ackMessageId(w, P.W.GUILD_EVENT)),
+        T = i.useRef(m.ZP.ackMessageId(w, P.W.GUILD_EVENT)),
         M = (0, C.Z)();
     return (
         i.useEffect(() => {
             L.forEach((e) => f.Z.getGuildEventUserCounts(w, e.id, [])), f.Z.getGuildEventsForCurrentUser(w);
         }, [L, w]),
         (0, u.ZP)(() => {
-            m.default.track(N.rMx.OPEN_MODAL, {
+            h.default.track(N.rMx.OPEN_MODAL, {
                 type: Z.zw,
                 guild_id: w,
                 guild_events_count: L.length,
@@ -78,8 +78,8 @@ function w(e) {
                             variant: "heading-md/semibold",
                             children:
                                 L.length > 0
-                                    ? k.intl.formatToPlainString(k.t.IBdqSk, { number: L.length })
-                                    : k.intl.string(k.t.tlopTE),
+                                    ? k.intl.formatToPlainString(k.t.IBdqSu, { number: L.length })
+                                    : k.intl.string(k.t.tlopTM),
                         }),
                         D &&
                             (0, r.jsxs)(r.Fragment, {
@@ -158,14 +158,14 @@ function w(e) {
                                                 };
                                             }, M);
                                         },
-                                        text: k.intl.string(k.t["60lJ0N"]),
+                                        text: k.intl.string(k.t["60lJ0C"]),
                                     }),
                                 ],
                             }),
                         (0, r.jsx)(o.P3F, {
                             onClick: l,
                             className: E.iconButton,
-                            "aria-label": k.intl.string(k.t.cpT0Cg),
+                            "aria-label": k.intl.string(k.t.cpT0Cq),
                             children: (0, r.jsx)(o.Dio, {
                                 size: "md",
                                 color: "currentColor",

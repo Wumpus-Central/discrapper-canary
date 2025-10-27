@@ -101,22 +101,22 @@ class N extends i.PureComponent {
                     variant: "heading-md/semibold",
                     color: t,
                     className: v.searchHeader,
-                    children: O.intl.string(O.t.y3LQCA),
+                    children: O.intl.string(O.t.y3LQCG),
                 });
             case E.wI2.TRENDING_GIFS:
                 return (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     color: t,
                     className: v.searchHeader,
-                    children: O.intl.string(O.t.H6zNFx),
+                    children: O.intl.string(O.t.H6zNFz),
                 });
             default:
                 return (0, r.jsx)(c.E1j, {
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,
-                    placeholder: O.intl.string(O.t.TnYqkZ),
-                    "aria-label": O.intl.string(O.t.TnYqkZ),
+                    placeholder: O.intl.string(O.t.TnYqke),
+                    "aria-label": O.intl.string(O.t.TnYqke),
                     ref: this.props.searchBarRef,
                     autoFocus: !0,
                 });
@@ -130,7 +130,7 @@ class N extends i.PureComponent {
                 (t = (0, r.jsx)(c.P3F, {
                     onClick: this.handleClearQuery,
                     className: v.backButton,
-                    "aria-label": O.intl.string(O.t["13/7kZ"]),
+                    "aria-label": O.intl.string(O.t["13/7kX"]),
                     children: (0, r.jsx)(c.whL, {
                         size: "md",
                         color: "currentColor",

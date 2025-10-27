@@ -11,12 +11,12 @@ let c = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
         render: s.Z,
     }),
     E = (0, l.wf)(r.n.VOICE_AND_VIDEO_PANEL, {
-        useTitle: () => o.intl.string(o.t.B1fFpa),
+        useTitle: () => o.intl.string(o.t.B1fFpf),
         buildLayout: () => [c],
     }),
     d = (0, l.m7)(r.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
         icon: i.S6n,
-        useTitle: () => o.intl.string(o.t.B1fFpa),
+        useTitle: () => o.intl.string(o.t.B1fFpf),
         usePredicate: () => u.Z.isSupported(),
         legacySearchKey: a.s6.VOICE_AND_VIDEO,
         buildLayout: () => [E],

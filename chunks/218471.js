@@ -4,9 +4,9 @@ var r = n(524437),
     l = n(82554),
     a = n(388032);
 let s = {
-    getTitle: () => a.intl.string(a.t.RVX1zc),
-    getDisabledTitle: () => a.intl.string(a.t.SYkEBg),
-    getDescription: () => a.intl.string(a.t.aqlmp6),
+    getTitle: () => a.intl.string(a.t.RVX1zT),
+    getDisabledTitle: () => a.intl.string(a.t.SYkEBi),
+    getDescription: () => a.intl.string(a.t.aqlmp8),
     eligibleReportSubtypes: [l.i5.SUB_GORE, l.i5.SUB_GLORIFYING_VIOLENCE],
     onApply: () =>
         (0, i.Jr)(

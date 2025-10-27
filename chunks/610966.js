@@ -16,7 +16,7 @@ function d(e) {
         m = (0, s.Cf)(p, h, !1),
         g = (0, i._i)(m[0]);
     return (0, r.jsx)(c.Z, {
-        title: u.intl.string(u.t["/X3fkZ"]),
+        title: u.intl.string(u.t["/X3fkf"]),
         children: (0, r.jsx)(l.Z, {
             onChange: (e) => _(e),
             color: null != (t = null != f ? f : d) ? t : g,

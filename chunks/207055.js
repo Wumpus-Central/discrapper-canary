@@ -46,8 +46,8 @@ let D = r.memo((e) => {
                     : [!S.Z.isSupported() || S.Z.isLocalMute(D), !1, S.Z.isLocalVideoDisabled(D)],
             [k, D],
         ),
-        V = (0, o.e7)([T.Z], () => T.Z.isPrioritySpeaker(D)),
-        F = (0, c.Z)({
+        F = (0, o.e7)([T.Z], () => T.Z.isPrioritySpeaker(D)),
+        V = (0, c.Z)({
             userId: D,
             checkSoundSharing: !0,
         }),
@@ -62,9 +62,9 @@ let D = r.memo((e) => {
                 }),
             [D, P.id],
         ),
-        K = (0, p.Z)(null != W ? [W.applicationId] : []),
+        q = (0, p.Z)(null != W ? [W.applicationId] : []),
         Y = (0, _.Z)(D, P.guild_id)[0],
-        q = null != (n = (0, d.IX)(null == Y ? void 0 : Y.application_id).data) ? n : void 0,
+        K = null != (n = (0, d.IX)(null == Y ? void 0 : Y.application_id).data) ? n : void 0,
         [X, J] = (0, o.Wu)(
             [O.Z],
             () => [O.Z.getStreamForUser(D, P.getGuildId()), O.Z.getActiveStreamForUser(D, P.getGuildId())],
@@ -90,7 +90,7 @@ let D = r.memo((e) => {
         );
     return (0, i.jsx)(C.Z, {
         shakeLocation: R.oZ.VOICE_USER,
-        isShaking: F,
+        isShaking: V,
         children: (0, i.jsx)(
             w.ZP,
             ((r = (function (e) {
@@ -129,16 +129,16 @@ let D = r.memo((e) => {
                     localVideoDisabled: H,
                     mute: a || U,
                     deaf: s || B,
-                    speaking: F,
+                    speaking: V,
                     ringing: z,
-                    priority: V,
-                    embeddedApplication: K[0],
+                    priority: F,
+                    embeddedApplication: q[0],
                     isStreaming: null != X && X.channelId === P.id,
                     isWatching: null != J && J.state !== M.jm8.ENDED,
                     isGuest: G,
                     isSelf: k,
                     requestToStreamActivity: eo ? Y : void 0,
-                    application: (ea || et) && (null == Y ? void 0 : Y.session_id) != null ? q : void 0,
+                    application: (ea || et) && (null == Y ? void 0 : Y.session_id) != null ? K : void 0,
                     showHangStatus: en && et && (k || null != er),
                     hangStatusActivity: k ? ei : er,
                 }),

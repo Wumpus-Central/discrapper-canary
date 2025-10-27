@@ -75,8 +75,8 @@ let m = () => {
             p = i.useCallback(() => {
                 let t, n;
                 f
-                    ? ((t = d.intl.string(d.t.Y40JkZ)), (n = d.intl.string(d.t["5J4yGR"])))
-                    : ((t = d.intl.string(d.t.FJSZVF)), (n = d.intl.string(d.t.etJjgY))),
+                    ? ((t = d.intl.string(d.t.Y40Jke)), (n = d.intl.string(d.t["5J4yGc"])))
+                    : ((t = d.intl.string(d.t.FJSZVM)), (n = d.intl.string(d.t.etJjgW))),
                     (e.current = (0, o.h7j)((e) =>
                         (0, r.jsx)(
                             l.default,
@@ -85,8 +85,8 @@ let m = () => {
                                     title: t,
                                     body: n,
                                     onConfirm: m,
-                                    confirmText: d.intl.string(d.t.BddRzc),
-                                    secondaryConfirmText: d.intl.string(d.t["5E9SBw"]),
+                                    confirmText: d.intl.string(d.t.BddRzS),
+                                    secondaryConfirmText: d.intl.string(d.t["5E9SB9"]),
                                     onConfirmSecondary: g,
                                 },
                                 e,

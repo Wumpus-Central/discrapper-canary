@@ -56,11 +56,11 @@ class f extends a.Z {
                           i.Modal,
                           ((n = u(
                               {
-                                  title: c.intl.formatToPlainString(c.t["2tN7io"], { name: t.name }),
+                                  title: c.intl.formatToPlainString(c.t["2tN7ih"], { name: t.name }),
                                   actions: [
                                       {
                                           variant: "primary",
-                                          text: c.intl.string(c.t.BddRzc),
+                                          text: c.intl.string(c.t.BddRzS),
                                           onClick: e.onClose,
                                           autoFocus: !0,
                                       },
@@ -72,7 +72,7 @@ class f extends a.Z {
                               {
                                   children: (0, r.jsx)(l.Text, {
                                       variant: "text-md/normal",
-                                      children: c.intl.string(c.t.MAxtkp),
+                                      children: c.intl.string(c.t.MAxtks),
                                   }),
                               }),
                           Object.getOwnPropertyDescriptors

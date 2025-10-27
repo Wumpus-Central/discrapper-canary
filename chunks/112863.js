@@ -25,18 +25,18 @@ function d() {
                 children: [
                     (0, r.jsx)(i.Text, {
                         variant: "text-lg/bold",
-                        children: l.intl.string(l.t.ZHNSYW),
+                        children: l.intl.string(l.t.ZHNSYf),
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        children: l.intl.string(l.t.kCj5pq),
+                        children: l.intl.string(l.t.kCj5ps),
                     }),
                 ],
             }),
             (0, r.jsx)(i.Button, {
                 variant: "secondary",
-                text: l.intl.string(l.t.JFlifn),
+                text: l.intl.string(l.t.JFlifp),
                 onClick: e,
             }),
         ],

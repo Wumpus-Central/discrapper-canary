@@ -12,9 +12,9 @@ var i = n(509613),
     T = n(513696),
     I = n(860171),
     O = n(960323),
-    A = n(249857),
-    S = n(388032);
+    S = n(249857),
+    A = n(388032);
 let y = (0, i.vB)(l.n.APP_SECTION, {
-    useLabel: () => S.intl.string(S.t.f2n1TE),
-    buildLayout: () => [s.z, u.F, O.K, T.g, a.Q, c.m, o.G, d.a, A.R, E.o, I.g, r.w],
+    useLabel: () => A.intl.string(A.t.f2n1TP),
+    buildLayout: () => [s.z, u.F, O.K, T.g, a.Q, c.m, o.G, d.a, S.R, E.o, I.g, r.w],
 });

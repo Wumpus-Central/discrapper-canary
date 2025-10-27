@@ -24,7 +24,7 @@ function l(e) {
                 (0, r.jsxs)(a.Text, {
                     variant: l,
                     color: "text-default",
-                    children: [(0, r.jsx)(a.nn4, { children: o.intl.string(o.t.RnyseH) }), n.name],
+                    children: [(0, r.jsx)(a.nn4, { children: o.intl.string(o.t.RnyseL) }), n.name],
                 }),
                 !0 === t &&
                     (0, r.jsxs)(r.Fragment, {

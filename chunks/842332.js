@@ -52,32 +52,32 @@ function h(e) {
         i.useEffect(() => {
             (null == d.name || "" === d.name.trim()) && !m && y && null != n && (b(!0), _());
         }, [t.id, n, l, d.name, m, y, _]);
-    let j = i.useCallback(
+    let O = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if (y)
                     return {
                         icon: s.$2U,
                         onClick: _,
-                        "aria-label": u.intl.string(u.t.ZF2oBg),
+                        "aria-label": u.intl.string(u.t.ZF2oBs),
                         disabled: e || f || (null == n && h.textValue.trim().length < 10),
-                        tooltip: u.intl.string(u.t.ZF2oBg),
+                        tooltip: u.intl.string(u.t.ZF2oBs),
                         loading: f,
                     };
             },
             [y, _, f, n, h.textValue],
         ),
-        O = i.useCallback(
+        j = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return y
                     ? (0, r.jsx)(a.u, {
-                          text: u.intl.string(u.t.ZF2oBg),
+                          text: u.intl.string(u.t.ZF2oBs),
                           children: (0, r.jsx)(s.hU, {
                               icon: s.$2U,
                               variant: "secondary",
                               size: "sm",
-                              "aria-label": u.intl.string(u.t.ZF2oBg),
+                              "aria-label": u.intl.string(u.t.ZF2oBs),
                               onClick: _,
                               disabled: e || f || (null == n && h.textValue.trim().length < 10),
                               loading: f,
@@ -92,7 +92,7 @@ function h(e) {
         isGeneratingAI: f,
         generateAIName: _,
         enableAIFeatures: y,
-        renderAiGenerateButton: O,
-        getThreadNameInputAccessory: j,
+        renderAiGenerateButton: j,
+        getThreadNameInputAccessory: O,
     };
 }

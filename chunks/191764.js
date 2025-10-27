@@ -76,7 +76,7 @@ function y(e) {
     return (null == n ? void 0 : n.type) !== p.IIU.HANG_STATUS || null == O
         ? null
         : (0, r.jsx)(_.O1, {
-              text: v ? h.intl.string(h.t.BXxdl5) : h.intl.string(h.t["9C444u"]),
+              text: v ? h.intl.string(h.t.BXxdl7) : h.intl.string(h.t["9C444m"]),
               fullWidth: !0,
               onClick: (e) => {
                   e.stopPropagation(),

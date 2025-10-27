@@ -61,14 +61,14 @@ function E(e) {
         case v.x_.OPEN:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.G5ATX1),
+                    null != o ? _.intl.formatToPlainString(_.t.I6YOjS, { payoutDate: o }) : _.intl.string(_.t.G5ATX6),
                     (0, l.jsx)(f.Z, { className: C.statusScheduledIcon }),
                 ],
             });
         case v.x_.CANCELED:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    _.intl.string(_.t["0SrNPz"]),
+                    _.intl.string(_.t["0SrNPx"]),
                     (0, l.jsx)(g.k$p, {
                         size: "md",
                         color: "currentColor",
@@ -80,7 +80,7 @@ function E(e) {
             if ((null == i ? void 0 : i.includes(v.XL.PAYOUT_SEIZED)) === !0)
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
-                        _.intl.string(_.t["0SrNPz"]),
+                        _.intl.string(_.t["0SrNPx"]),
                         (0, l.jsx)(g.k$p, {
                             size: "md",
                             color: "currentColor",
@@ -89,7 +89,7 @@ function E(e) {
                     ],
                 });
             return (0, l.jsxs)(l.Fragment, {
-                children: [_.intl.string(_.t.OtZ5k5), (0, l.jsx)(h.Z, { className: C.statusDeferredIcon })],
+                children: [_.intl.string(_.t.OtZ5kz), (0, l.jsx)(h.Z, { className: C.statusDeferredIcon })],
             });
     }
     switch (r) {
@@ -103,7 +103,7 @@ function E(e) {
         case v.jw.ERROR:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.ubdQTk),
+                    null != o ? _.intl.formatToPlainString(_.t.I6YOjS, { payoutDate: o }) : _.intl.string(_.t.ubdQTt),
                     (0, l.jsx)(f.Z, { className: C.statusScheduledIcon }),
                 ],
             });
@@ -140,7 +140,7 @@ let N = (0, x.i$)({
         cellClassName: C.amountColumn,
         renderHeader() {
             let e = (0, l.jsx)(u.u, {
-                text: _.intl.string(_.t.q3PkLy),
+                text: _.intl.string(_.t.q3PkL5),
                 children: (0, l.jsx)(g.d3s, {
                     size: "xs",
                     color: "currentColor",
@@ -148,7 +148,7 @@ let N = (0, x.i$)({
                 }),
             });
             return (0, l.jsxs)(x.qN, {
-                children: [_.intl.string(_.t.VodAGR), e],
+                children: [_.intl.string(_.t.VodAGZ), e],
             });
         },
         getAmount: (e) => e.amount,
@@ -158,7 +158,7 @@ let N = (0, x.i$)({
             (0, j.Fd)({
                 key: "PERIOD",
                 cellClassName: C.periodColumn,
-                renderHeader: () => (0, l.jsx)(x.qN, { children: _.intl.string(_.t.fThnXV) }),
+                renderHeader: () => (0, l.jsx)(x.qN, { children: _.intl.string(_.t.fThnXa) }),
                 renderContent: (e) => (0, l.jsx)(y, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
                     o()(null != t, "CellProps should always be provided");
@@ -192,7 +192,7 @@ let N = (0, x.i$)({
                 cellClassName: C.statusColumn,
                 renderHeader() {
                     let e = (0, l.jsx)(u.u, {
-                        text: _.intl.string(_.t.cIGvZG),
+                        text: _.intl.string(_.t.cIGvZI),
                         children: (0, l.jsx)(g.d3s, {
                             size: "xs",
                             color: "currentColor",
@@ -200,7 +200,7 @@ let N = (0, x.i$)({
                         }),
                     });
                     return (0, l.jsxs)(x.qN, {
-                        children: [_.intl.string(_.t.oypxx8), e],
+                        children: [_.intl.string(_.t.oypxxw), e],
                     });
                 },
                 renderContent: (e) =>

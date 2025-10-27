@@ -95,12 +95,12 @@ function f() {
         }),
         { horizontalSpacing: I, verticalSpacing: T, maxHorizontalSpacing: C, maxVerticalSpacing: L } = (0, o.i)(),
         { setHorizontalSpacing: R, setVerticalSpacing: m } = o.i.getState(),
-        k = d.zY.useSetting(),
-        Z = [];
+        Z = d.zY.useSetting(),
+        k = [];
     return (
         t &&
             n &&
-            (Z.push(
+            (k.push(
                 (0, a.jsx)(
                     l.sNh,
                     {
@@ -116,7 +116,7 @@ function f() {
                     "overrides",
                 ),
             ),
-            Z.push(
+            k.push(
                 (0, a.jsx)(
                     l.sNh,
                     {
@@ -132,7 +132,7 @@ function f() {
                     "manual-triggers",
                 ),
             ),
-            Z.push(
+            k.push(
                 (0, a.jsxs)(
                     l.sNh,
                     {
@@ -174,9 +174,9 @@ function f() {
                                 {
                                     id: "always-deliver",
                                     label: "Ads auto-targeting",
-                                    checked: k,
+                                    checked: Z,
                                     action: () => {
-                                        d.zY.updateSetting(!k);
+                                        d.zY.updateSetting(!Z);
                                     },
                                 },
                                 "always-deliver",
@@ -258,7 +258,7 @@ function f() {
                     "developer-flags",
                 ),
             ),
-            Z.push(
+            k.push(
                 (0, a.jsxs)(
                     l.sNh,
                     {
@@ -324,7 +324,7 @@ function f() {
                     "logging",
                 ),
             ),
-            Z.push(
+            k.push(
                 (0, a.jsx)(
                     l.sNh,
                     {
@@ -353,7 +353,7 @@ function f() {
                 ),
             ),
             e &&
-                (Z.push(
+                (k.push(
                     (0, a.jsx)(
                         l.II_,
                         {
@@ -376,7 +376,7 @@ function f() {
                         "horizontal-spacing",
                     ),
                 ),
-                Z.push(
+                k.push(
                     (0, a.jsx)(
                         l.II_,
                         {
@@ -399,6 +399,6 @@ function f() {
                         "vertical-spacing",
                     ),
                 ))),
-        0 === Z.length ? null : Z
+        0 === k.length ? null : k
     );
 }

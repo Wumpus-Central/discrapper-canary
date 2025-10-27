@@ -42,10 +42,10 @@ function m(e) {
 }
 function g(e, t) {
     return "voice" === e
-        ? p.intl.string(p.t.vxfv7u)
+        ? p.intl.string(p.t.vxfv7v)
         : null != t
-          ? p.intl.string(p.t.fAYU2N)
-          : p.intl.string(p.t["9V4X/f"]);
+          ? p.intl.string(p.t.fAYU2G)
+          : p.intl.string(p.t["9V4X/c"]);
 }
 function E(e) {
     let { className: t, sourcePage: n } = e,
@@ -77,7 +77,7 @@ function E(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: p.intl.format(p.t["/y6htr"], {
+                        children: p.intl.format(p.t["/y6htt"], {
                             helpCenterLink: d.Z.getArticleURL(_.BhN.SYSTEM_SERVICE),
                         }),
                     }),

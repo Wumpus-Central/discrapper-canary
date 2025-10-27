@@ -1,62 +1,62 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => T });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(636977),
-    s = n(481060),
+    s = n(636977),
+    o = n(481060),
     c = n(456100),
     u = n(930446),
     d = n(31569),
     p = n(258971),
     f = n(164991),
     h = n(859921),
-    g = n(220068),
-    m = n(626135),
-    b = n(836768),
-    _ = n(766219),
+    m = n(220068),
+    g = n(626135),
+    _ = n(836768),
+    b = n(766219),
     E = n(749681),
     O = n(49898),
-    v = n(981631),
-    y = n(46140),
-    I = n(388032),
+    I = n(981631),
+    v = n(46140),
+    y = n(388032),
     C = n(933767);
 function S(e) {
     let { tab: t } = e,
         { enabled: n } = c.c.useExperiment({ location: "GlobalDiscoverySidebar" }, { autoTrackExposure: !0 }),
-        l = b.Z.useField("selectedTab"),
-        I = i.useMemo(
+        l = _.Z.useField("selectedTab"),
+        y = i.useMemo(
             () =>
                 (function (e, t) {
                     switch (e) {
                         case O.GlobalDiscoveryTab.SERVERS:
-                            return (0, r.jsx)(s.QTo, { color: "currentColor" });
+                            return (0, r.jsx)(o.QTo, { color: "currentColor" });
                         case O.GlobalDiscoveryTab.APPS:
                             return t
-                                ? (0, r.jsx)(s.iWm, { color: "currentColor" })
-                                : (0, r.jsx)(s.jje, { color: "currentColor" });
+                                ? (0, r.jsx)(o.iWm, { color: "currentColor" })
+                                : (0, r.jsx)(o.jje, { color: "currentColor" });
                         case O.GlobalDiscoveryTab.QUESTS:
-                            return (0, r.jsx)(s.qDn, { color: "currentColor" });
+                            return (0, r.jsx)(o.qDn, { color: "currentColor" });
                     }
                 })(t, n),
             [t, n],
         ),
-        S = i.useMemo(() => (0, _.s)(t), [t]),
-        N = l === t,
-        T = i.useCallback(() => {
+        S = i.useMemo(() => (0, b.s)(t), [t]),
+        T = l === t,
+        N = i.useCallback(() => {
             switch (t) {
                 case O.GlobalDiscoveryTab.QUESTS:
                     return (
-                        N && g.Z.resetState(),
-                        m.default.track(v.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
+                        T && m.Z.resetState(),
+                        g.default.track(I.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
                         (0, E.transitionToGlobalDiscovery)({
                             tab: O.GlobalDiscoveryTab.QUESTS,
-                            location: y.dr.DISCOVERY_SIDEBAR,
-                            questContent: o.j.DISCOVERY_SIDEBAR,
+                            location: v.dr.DISCOVERY_SIDEBAR,
+                            questContent: s.j.DISCOVERY_SIDEBAR,
                         })
                     );
                 case O.GlobalDiscoveryTab.APPS:
-                    if (!N)
+                    if (!T)
                         return (0, E.transitionToGlobalDiscovery)({
                             tab: t,
                             newSessionState: {
@@ -67,22 +67,22 @@ function S(e) {
                     d.Z.resetState(), (0, E.transitionToGlobalDiscovery)({ tab: t });
                     return;
                 case O.GlobalDiscoveryTab.SERVERS:
-                    if (!N) return (0, E.transitionToGlobalDiscovery)({ tab: t });
+                    if (!T) return (0, E.transitionToGlobalDiscovery)({ tab: t });
                     f.Z.resetState(), h.Z.resetState();
                     return;
                 default:
                     return (0, E.transitionToGlobalDiscovery)({ tab: t });
             }
-        }, [t, N]);
-    return (0, r.jsxs)(s.P3F, {
-        onClick: T,
-        className: a()(C.navItem, { [C.selected]: N }),
+        }, [t, T]);
+    return (0, r.jsxs)(o.P3F, {
+        onClick: N,
+        className: a()(C.navItem, { [C.selected]: T }),
         children: [
             (0, r.jsx)("div", {
                 className: C.navItemIcon,
-                children: I,
+                children: y,
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: "text-md/medium",
                 color: "none",
                 children: S,
@@ -90,15 +90,15 @@ function S(e) {
         ],
     });
 }
-let N = function () {
+let T = function () {
     return (0, r.jsxs)("div", {
         className: C.container,
         children: [
             (0, r.jsx)("div", {
                 className: C.header,
-                children: (0, r.jsx)(s.Heading, {
+                children: (0, r.jsx)(o.Heading, {
                     variant: "text-lg/semibold",
-                    children: I.intl.string(I.t["1KqYnp"]),
+                    children: y.intl.string(y.t["1KqYnl"]),
                 }),
             }),
             (0, r.jsx)("nav", {

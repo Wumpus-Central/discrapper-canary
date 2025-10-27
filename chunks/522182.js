@@ -64,7 +64,7 @@ function m(e) {
             {
                 action: "VISIT_SHOP",
                 icon: o.EOn,
-                tooltipText: u.intl.string(u.t.b2d0Nz),
+                tooltipText: u.intl.string(u.t.b2d0N0),
                 onClick: () => {
                     if (f) return void a.Z.notifyPendingWidgets();
                     (0, s.mK)({

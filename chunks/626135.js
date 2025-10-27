@@ -115,8 +115,8 @@ let C = { location: {} },
     N = r.createContext(C),
     R = {},
     P = 10000,
-    w = 60000,
-    D = 120000,
+    D = 60000,
+    w = 120000,
     L = 300000,
     x = 900000,
     M = 3600000,
@@ -135,7 +135,7 @@ let F = {
         throttleKeys: () => [],
     },
     [g.rMx.APP_BACKGROUND]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: () => [],
     },
     [g.rMx.ACK_MESSAGES]: (e) =>
@@ -170,7 +170,7 @@ let F = {
         throttleKeys: (e) => [e.server],
     },
     [g.rMx.ACTIVITY_UPDATED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.application_id],
         deduplicate: !0,
     },
@@ -204,7 +204,7 @@ let F = {
         throttleKeys: () => [],
     },
     [g.rMx.KEYBOARD_SHORTCUT_USED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => {
             var t;
             return [e.shortcut_name, e.location_object, ...(null != (t = e.source_class_list) ? t : [])];
@@ -219,7 +219,7 @@ let F = {
         throttleKeys: (e) => [e.type],
     },
     [g.rMx.ROLE_PAGE_VIEWED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.role_id, e.tab_opened],
     },
     [g.rMx.VIDEO_INPUT_INITIALIZED]: {
@@ -261,11 +261,11 @@ let F = {
         throttleKeys: (e) => [e.banner_type, e.channel_id],
     },
     [g.rMx.PREMIUM_UPSELL_VIEWED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.type],
     },
     [g.rMx.FORUM_CHANNEL_SEARCHED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.FORUM_CHANNEL_SCROLLED]: {
@@ -273,11 +273,11 @@ let F = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.user_id],
     },
     [g.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: () => [],
     },
     [g.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
@@ -305,7 +305,7 @@ let F = {
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
@@ -349,7 +349,7 @@ let F = {
     [g.rMx.OPEN_MODAL]: (e) =>
         e.type === g.jXE.MEDIA_VIEWER
             ? {
-                  throttlePeriod: w,
+                  throttlePeriod: D,
                   throttleKeys: (e) => [e.type],
               }
             : void 0,

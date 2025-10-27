@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(607070),
     O = n(460181),
     y = n(585483),
-    v = n(264549),
-    j = n(981631),
+    j = n(264549),
+    v = n(981631),
     x = n(388032),
     C = n(870525);
 function E(e, t, n) {
@@ -42,13 +42,13 @@ let S = {
 };
 function I(e) {
     switch (e.keyCode) {
-        case j.yXg.ARROW_UP:
+        case v.yXg.ARROW_UP:
             return "UP";
-        case j.yXg.ARROW_DOWN:
+        case v.yXg.ARROW_DOWN:
             return "DOWN";
-        case j.yXg.ARROW_LEFT:
+        case v.yXg.ARROW_LEFT:
             return "LEFT";
-        case j.yXg.ARROW_RIGHT:
+        case v.yXg.ARROW_RIGHT:
             return "RIGHT";
         default:
             return null;
@@ -137,17 +137,17 @@ function Z() {
         }),
     });
 }
-class w extends i.PureComponent {
+class T extends i.PureComponent {
     componentDidMount() {
         (this.lastInputedKeys = []),
-            y.S.subscribe(j.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            y.S.subscribe(j.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+            y.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            y.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.addEventListener("keydown", this.handleKeyDown, { capture: !0 }),
             window.addEventListener("keyup", this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        y.S.unsubscribe(j.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            y.S.unsubscribe(j.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+        y.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            y.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.removeEventListener("keydown", this.handleKeyDown, { capture: !0 }),
             window.removeEventListener("keyup", this.handleKeyUp, { capture: !0 });
     }
@@ -162,37 +162,37 @@ class w extends i.PureComponent {
                     children: [
                         (0, r.jsx)("div", {
                             className: C.content,
-                            children: x.intl.string(x.t["1BdUt7"]),
+                            children: x.intl.string(x.t["1BdUtx"]),
                         }),
                         (0, r.jsx)(h.M2$, { shortcut: "mod+/" }),
                     ],
                 }),
                 (0, r.jsx)("div", {
                     className: C.modalSubtitle,
-                    children: x.intl.string(x.t["2t19lZ"]),
+                    children: x.intl.string(x.t["2t19lU"]),
                 }),
                 (0, r.jsxs)("div", {
                     className: C.ddrArrows,
                     children: [
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(w, {
                             arrow: "LEFT",
                             isActive: n,
                             className: C.left,
                             children: "left",
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(w, {
                             arrow: "DOWN",
                             isActive: t,
                             className: C.down,
                             children: "down",
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(w, {
                             arrow: "UP",
                             isActive: e,
                             className: C.up,
                             children: "up",
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(w, {
                             arrow: "RIGHT",
                             isActive: i,
                             className: C.right,
@@ -278,11 +278,11 @@ class w extends i.PureComponent {
                 if (
                     (this.lastInputedKeys.push(e.keyCode),
                     (this.lastInputedKeys = this.lastInputedKeys.slice(-5)),
-                    this.lastInputedKeys[0] === j.yXg.H &&
-                        this.lastInputedKeys[1] === j.yXg.H &&
-                        this.lastInputedKeys[2] === j.yXg.ARROW_RIGHT &&
-                        this.lastInputedKeys[3] === j.yXg.N &&
-                        this.lastInputedKeys[4] === j.yXg.K &&
+                    this.lastInputedKeys[0] === v.yXg.H &&
+                        this.lastInputedKeys[1] === v.yXg.H &&
+                        this.lastInputedKeys[2] === v.yXg.ARROW_RIGHT &&
+                        this.lastInputedKeys[3] === v.yXg.N &&
+                        this.lastInputedKeys[4] === v.yXg.K &&
                         this.props.activateRagingDemon(),
                     this.props.keyboardModeEnabled)
                 )
@@ -300,7 +300,7 @@ class w extends i.PureComponent {
             });
     }
 }
-function T(e) {
+function w(e) {
     let { isActive: t, arrow: n, className: l, children: a } = e,
         [s, c] = i.useState(t),
         u = i.useCallback(() => {
@@ -335,14 +335,14 @@ function A(e) {
             (0, r.jsx)(h.Y0X, {
                 className: o()(C.noBackground, { [C.noShadow]: l }),
                 size: h.CgR.DYNAMIC,
-                "aria-label": x.intl.string(x.t.T9DA2N),
+                "aria-label": x.intl.string(x.t.T9DA2K),
                 transitionState: t,
                 parentComponent: "KeyboardShortcutsModal",
                 children: (0, r.jsx)(f.W, {
                     component: "div",
                     children: l
                         ? (0, r.jsx)(
-                              v.Z,
+                              j.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);
@@ -351,7 +351,7 @@ function A(e) {
                               "raging-demo",
                           )
                         : (0, r.jsx)(
-                              w,
+                              T,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

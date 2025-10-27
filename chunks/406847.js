@@ -6,19 +6,19 @@ var i = n(524437),
     s = n(313789),
     a = n(388032);
 let o = (0, u.Em)(s.n.REACTION_NOTIFICATIONS, {
-    useTitle: () => a.intl.string(a.t.Rq0NFh),
-    useSubtitle: () => a.intl.string(a.t.oWF6eX),
+    useTitle: () => a.intl.string(a.t.Rq0NFs),
+    useSubtitle: () => a.intl.string(a.t.oWF6eQ),
     useOptions: () => [
         {
-            label: a.intl.string(a.t["9x/Rtb"]),
+            label: a.intl.string(a.t["9x/RtT"]),
             value: i.Ns.NOTIFICATIONS_ENABLED,
         },
         {
-            label: a.intl.string(a.t.fJAbQU),
+            label: a.intl.string(a.t.fJAbQd),
             value: i.Ns.ONLY_DMS,
         },
         {
-            label: a.intl.string(a.t["xu+UDQ"]),
+            label: a.intl.string(a.t["xu+UDU"]),
             value: i.Ns.NOTIFICATIONS_DISABLED,
         },
     ],

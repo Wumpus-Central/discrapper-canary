@@ -1,7 +1,7 @@
 n.d(t, { default: () => C }), n(388685);
 var s = n(951288),
-    a = n(647438),
-    i = n(990547),
+    i = n(647438),
+    a = n(990547),
     r = n(793030),
     l = n(442837),
     c = n(481060),
@@ -16,21 +16,21 @@ var s = n(951288),
     g = n(518474);
 function C(e) {
     let { transitionState: t, onClose: n } = e,
-        { currentUser: C, multiAccountUsers: E } = (0, l.cj)([d.default, u.Z], () => ({
+        { currentUser: C, multiAccountUsers: T } = (0, l.cj)([d.default, u.Z], () => ({
             currentUser: d.default.getCurrentUser(),
             multiAccountUsers: u.Z.getUsers(),
         })),
-        [N, T] = a.useState(!1),
-        [b, A] = a.useState(_.lds),
-        [p, v] = a.useState(null);
+        [E, N] = i.useState(!1),
+        [b, A] = i.useState(_.lds),
+        [p, v] = i.useState(null);
     return (
-        a.useEffect(() => {
-            if (N)
+        i.useEffect(() => {
+            if (E)
                 v(
                     (0, s.jsx)(c.Wn, {
                         messageType: c.QYI.ERROR,
                         className: g.infoMessage,
-                        children: f.intl.format(f.t.HAuRSE, { maxNumAccounts: h.$H }),
+                        children: f.intl.format(f.t.HAuRSM, { maxNumAccounts: h.$H }),
                     }),
                 ),
                     A(_.lds);
@@ -41,32 +41,32 @@ function C(e) {
                         (0, s.jsx)(c.Wn, {
                             messageType: c.QYI.POSITIVE,
                             className: g.infoMessage,
-                            children: f.intl.format(f.t["09qidX"], { username: e.username }),
+                            children: f.intl.format(f.t["09qide"], { username: e.username }),
                         }),
                     ),
-                    T(!1);
+                    N(!1);
             }
-        }, [b, N]),
-        a.useEffect(() => {
-            E.length < h.$H && T(!1);
-        }, [E]),
+        }, [b, E]),
+        i.useEffect(() => {
+            T.length < h.$H && N(!1);
+        }, [T]),
         (0, o.Z)({
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
+            type: a.ImpressionTypes.MODAL,
+            name: a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING,
         }),
         (0, s.jsxs)(r.Modal, {
             onClose: n,
             transitionState: t,
             size: "md",
-            "aria-label": f.intl.string(f.t.WbFpq6),
-            title: f.intl.string(f.t.WbFpq6),
-            subtitle: f.intl.string(f.t["+1Uk3d"]),
+            "aria-label": f.intl.string(f.t.WbFpq4),
+            title: f.intl.string(f.t.WbFpq4),
+            subtitle: f.intl.string(f.t["+1Uk3c"]),
             actions: [
                 {
-                    text: f.intl.string(f.t["9g2mqa"]),
+                    text: f.intl.string(f.t["9g2mqT"]),
                     variant: "secondary",
                     onClick: () => {
-                        if (E.length >= h.$H) return void T(!0);
+                        if (T.length >= h.$H) return void N(!0);
                         n(), (0, x.y)();
                     },
                 },
@@ -74,7 +74,7 @@ function C(e) {
             children: [
                 p,
                 (0, s.jsx)(m.Z, {
-                    actionText: f.intl.string(f.t.Wf421N),
+                    actionText: f.intl.string(f.t.Wf421J),
                     onAction: (e, t) => {
                         switch (e) {
                             case m.W.LOGIN_REQUIRED:

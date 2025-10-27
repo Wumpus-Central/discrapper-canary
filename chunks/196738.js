@@ -8,13 +8,13 @@ function e(t) {
     return (0, s.jsx)(a.Modal, {
         transitionState: n,
         size: "sm",
-        title: r.intl.string(r.t.C5biFx),
-        subtitle: r.intl.string(r.t["3Dy1Rk"]),
+        title: r.intl.string(r.t.C5biF4),
+        subtitle: r.intl.string(r.t["3Dy1Rh"]),
         onClose: i,
         actions: [
             {
                 variant: "primary",
-                text: r.intl.string(r.t.BddRzc),
+                text: r.intl.string(r.t.BddRzS),
                 onClick: i,
             },
         ],

@@ -113,7 +113,7 @@ function v(e) {
                                       s(e.toLowerCase());
                               },
                               onClear: I,
-                              placeholder: C.intl.string(C.t.s5MnmJ),
+                              placeholder: C.intl.string(C.t.s5MnmC),
                           }),
                           N
                               ? (0, l.jsx)(a.Button, {

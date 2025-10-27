@@ -103,11 +103,11 @@ var v = (function (e) {
 function I(e, t) {
     switch (e) {
         case 2:
-            return h.intl.formatToPlainString(h.t.k1ew5O, { rate: t });
+            return h.intl.formatToPlainString(h.t.k1ew5N, { rate: t });
         case 3:
-            return h.intl.formatToPlainString(h.t["Hs3Y+P"], { rate: t });
+            return h.intl.formatToPlainString(h.t["Hs3Y+I"], { rate: t });
         case 4:
-            return h.intl.string(h.t.DLAKbm);
+            return h.intl.string(h.t.DLAKbi);
     }
 }
 function T(e) {
@@ -124,7 +124,7 @@ function T(e) {
               onClick: c,
               loading: d,
               icon: s,
-              text: null != u ? h.intl.formatToPlainString(h.t.i4T8v7, { rate: u }) : h.intl.string(h.t.uuzaAA),
+              text: null != u ? h.intl.formatToPlainString(h.t.i4T8vz, { rate: u }) : h.intl.string(h.t.uuzaAK),
           })
         : (0, r.jsx)(C, { text: I(l, null != u ? u : "") });
 }
@@ -146,12 +146,12 @@ function S(e) {
         (null != n ? n : d)(e), null == i || i();
     };
     return g
-        ? (0, r.jsx)(C, { text: h.intl.string(h.t["6cfuDg"]) })
+        ? (0, r.jsx)(C, { text: h.intl.string(h.t["6cfuDj"]) })
         : (0, r.jsx)(A, {
               appId: t,
               skuId: a.id,
               onClick: b,
-              text: h.intl.format(h.t.Xp5WTk, { price: (0, f.T4)(E.amount, E.currency) }),
+              text: h.intl.format(h.t.Xp5WTn, { price: (0, f.T4)(E.amount, E.currency) }),
               icon: l,
           });
 }

@@ -4,18 +4,18 @@ n(647438);
 var l = n(120356),
     i = n.n(l),
     a = n(442837),
-    o = n(677850),
-    s = n(607070),
+    s = n(677850),
+    o = n(607070),
     c = n(70097),
     u = n(451478),
     d = n(410572);
 let g = (e) => {
     let { bannerStatic: t, bannerAnimated: n, bannerRive: l, isResponsive: g = !1, eventTargetRef: p } = e,
-        f = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         C = (0, a.e7)([u.Z], () => u.Z.isFocused()),
         h = null != n && !f && C;
     return null != l
-        ? (0, r.jsx)(o.B, {
+        ? (0, r.jsx)(s.B, {
               src: l,
               fit: "fit-width",
               eventTargetRef: p,

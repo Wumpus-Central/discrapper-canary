@@ -42,7 +42,7 @@ function m(e) {
                                 children: [
                                     (0, i.jsx)(r.Dx, {
                                         className: f.header,
-                                        children: _.intl.string(_.t.UNFvtL),
+                                        children: _.intl.string(_.t.UNFvtM),
                                     }),
                                     (0, i.jsxs)(o.C3N, {
                                         children: [m, h],
@@ -57,7 +57,7 @@ function m(e) {
                     children: [
                         (0, i.jsx)(o.Button, {
                             variant: "secondary",
-                            text: _.intl.string(_.t.cpT0Cg),
+                            text: _.intl.string(_.t.cpT0Cq),
                             onClick: a,
                         }),
                         (0, i.jsx)(o.Button, {

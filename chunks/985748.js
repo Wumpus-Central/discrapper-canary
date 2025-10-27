@@ -7,7 +7,7 @@ var i = n(436846),
 function o(e) {
     var t,
         n,
-        { user: o, widget: s, guildId: c, channelId: u, disableInteraction: d } = e,
+        { user: o, widget: c, guildId: s, channelId: u, disableInteraction: d } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -58,7 +58,7 @@ function o(e) {
         })(
             {
                 userId: o.id,
-                widget: s,
+                widget: c,
                 disableInteraction: d,
             },
             f,
@@ -66,16 +66,16 @@ function o(e) {
         (n = n =
             {
                 children:
-                    s.games.length > 0
+                    c.games.length > 0
                         ? (0, r.jsx)(l.Z, {
                               user: o,
-                              widgetType: s.type,
-                              games: s.games,
-                              guildId: c,
+                              widgetType: c.type,
+                              games: c.games,
+                              guildId: s,
                               channelId: u,
                               disableInteraction: d,
                           })
-                        : (0, r.jsx)(i.Z, { widget: s }),
+                        : (0, r.jsx)(i.Z, { widget: c }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

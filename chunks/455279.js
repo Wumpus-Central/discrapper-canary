@@ -57,10 +57,10 @@ class b extends i.PureComponent {
         return (
             (e =
                 "RECORDING" === t
-                    ? p.intl.string(p.t.bmOri4)
+                    ? p.intl.string(p.t.bmOri0)
                     : 0 === n.length
-                      ? p.intl.string(p.t.co3wt7)
-                      : p.intl.string(p.t.idFMvL)),
+                      ? p.intl.string(p.t.co3wt9)
+                      : p.intl.string(p.t.idFMvH)),
             (0, r.jsx)(d.tEY, {
                 focusTarget: this._inputRef,
                 ringTarget: this._containerRef,
@@ -76,7 +76,7 @@ class b extends i.PureComponent {
                                 className: h.keybindInput,
                                 children: (0, r.jsx)("input", {
                                     id: this._inputId,
-                                    placeholder: p.intl.string(p.t.nWRdnp),
+                                    placeholder: p.intl.string(p.t.nWRdnl),
                                     type: "text",
                                     ref: this.setInputRef,
                                     readOnly: !0,

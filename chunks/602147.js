@@ -50,7 +50,7 @@ let m = i.forwardRef(function (e, t) {
             O(), void 0 !== m && m();
         },
         selected: n,
-        tooltip: g.intl.string(g.t["4nEZLi"]),
+        tooltip: g.intl.string(g.t["4nEZLk"]),
         icon: o.Jmo,
     });
 });

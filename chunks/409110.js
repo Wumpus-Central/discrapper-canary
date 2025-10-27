@@ -28,7 +28,7 @@ function p(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: l ? x.intl.string(x.t.DKNxgI) : x.intl.string(x.t.ESEKub),
+                        children: l ? x.intl.string(x.t.DKNxgB) : x.intl.string(x.t.ESEKua),
                     }),
                     (0, r.jsx)(o.Z, {
                         className: f.caretIcon,
@@ -43,7 +43,7 @@ function p(e) {
                     id: h,
                     children: [
                         (0, r.jsx)(d.Z, {
-                            label: x.intl.string(x.t.DWYJub),
+                            label: x.intl.string(x.t.DWYJua),
                             children: (0, r.jsx)("ul", {
                                 className: f.attachmentGrid,
                                 children: t.map((e) => (0, r.jsx)(c.Z, { attachment: e }, e.id)),
@@ -54,7 +54,7 @@ function p(e) {
                                 children: [
                                     (0, r.jsx)("div", { className: f.separator }),
                                     (0, r.jsx)(d.Z, {
-                                        label: x.intl.string(x.t.o9xphY),
+                                        label: x.intl.string(x.t.o9xphc),
                                         children: (0, r.jsx)(u.Z, {
                                             role: n,
                                             textVariant: "text-md/medium",

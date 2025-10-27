@@ -122,7 +122,7 @@ function p(e) {
             I,
         ),
         P = (0, s.pxk)(n),
-        w = f(
+        D = f(
             {
                 height: P,
                 width: P,
@@ -130,7 +130,7 @@ function p(e) {
             y,
         );
     return (0, r.jsx)("div", {
-        style: w,
+        style: D,
         onContextMenu: v,
         className: R,
         children: N(),

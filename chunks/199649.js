@@ -23,9 +23,9 @@ function g(e) {
         x = y && !v && !b.isMultiUserDM(),
         O = {};
     if (v) {
-        let e = _ ? m.intl.string(m.t["+KSnWV"]) : m.intl.string(m.t.hvVgAQ);
-        (O.message = m.intl.string(m.t.Bt2N7O)),
-            (O.subtitle = m.intl.string(m.t["n/Vzk5"])),
+        let e = _ ? m.intl.string(m.t["+KSnWX"]) : m.intl.string(m.t.hvVgAZ);
+        (O.message = m.intl.string(m.t.Bt2N7D)),
+            (O.subtitle = m.intl.string(m.t["n/Vzkw"])),
             (O.buttonText = e),
             (O.buttonIcon = _ ? l.rgF : void 0),
             (O.onButtonClick = () => {
@@ -42,8 +42,8 @@ function g(e) {
             (O.imageSrc = n(780961));
     } else
         x &&
-            ((O.message = m.intl.string(m.t["9T6N5+"])),
-            (O.buttonText = m.intl.string(m.t.XyHpKC)),
+            ((O.message = m.intl.string(m.t["9T6N5/"])),
+            (O.buttonText = m.intl.string(m.t.XyHpKH)),
             (O.onButtonClick = () => {
                 a.Z.unblockUser(b.getRecipientId());
             }));

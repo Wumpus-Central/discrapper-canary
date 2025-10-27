@@ -103,7 +103,7 @@ function b(e) {
         a.Button,
         p(
             {
-                text: y ? f.intl.string(f.t.BXxdl5) : f.intl.string(f.t["9C444u"]),
+                text: y ? f.intl.string(f.t.BXxdl7) : f.intl.string(f.t["9C444m"]),
                 onClick: O,
                 variant: t,
                 size: n,

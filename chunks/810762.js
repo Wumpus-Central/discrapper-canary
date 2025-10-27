@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(892729),
     u = n(949914),
     d = n(388032),
-    f = n(343447);
+    f = n(591506);
 let _ = (e) => {
     let { onGoBack: t } = e,
         n = (0, c.Z)(),
@@ -20,15 +20,15 @@ let _ = (e) => {
           : (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(a.zxk, {
-                        text: d.intl.string(d.t.hqyhKS),
+                        text: d.intl.string(d.t.hqyhKQ),
                         icon: o.wj7,
                         variant: "secondary",
                         onClick: t,
                     }),
                     (0, r.jsx)(o.LZC, { size: 10 }),
                     (0, r.jsx)(o.C3N, {
-                        label: d.intl.string(d.t["KzCF//"]),
-                        description: d.intl.string(d.t["Y+ucR0"]),
+                        label: d.intl.string(d.t["KzCF/6"]),
+                        description: d.intl.string(d.t["Y+ucR7"]),
                         children: (0, r.jsx)("div", {
                             className: f.subscriptionsContainer,
                             children: n.map((e) => (0, r.jsx)(u.Z, { subscription: e }, e.id)),

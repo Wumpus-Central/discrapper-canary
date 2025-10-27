@@ -10,7 +10,7 @@ function u(e, t) {
     return r.wS
         ? (0, i.jsx)(l.sNh, {
               id: "copy-link",
-              label: o.intl.string(o.t.Xrt5Pj),
+              label: o.intl.string(o.t.Xrt5Po),
               icon: l.xPt,
               action: () => {
                   (0, r.JG)(

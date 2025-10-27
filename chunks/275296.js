@@ -23,7 +23,7 @@ let d = (e) => {
                       }),
                       (0, r.jsx)(i.Text, {
                           variant: "text-sm/normal",
-                          children: o.intl.string(o.t.YRbgX1),
+                          children: o.intl.string(o.t.YRbgXz),
                       }),
                   ],
               })
@@ -39,7 +39,7 @@ let d = (e) => {
                       }),
                       (0, r.jsx)(i.Text, {
                           variant: "text-sm/normal",
-                          children: o.intl.string(o.t.mqeO2t),
+                          children: o.intl.string(o.t.mqeO2v),
                       }),
                   ],
               })

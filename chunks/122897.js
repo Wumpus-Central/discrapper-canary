@@ -22,8 +22,8 @@ function m() {
         setting: d.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, r.jsx)(c.H, {
-                header: _.intl.string(_.t.tiCXaG),
-                description: _.intl.format(_.t.RvjRRE, { appealLink: o.Z.getArticleURL(f.BhN.SAFE_DIRECT_MESSAGING) }),
+                header: _.intl.string(_.t.tiCXaH),
+                description: _.intl.format(_.t.RvjRRI, { appealLink: o.Z.getArticleURL(f.BhN.SAFE_DIRECT_MESSAGING) }),
             }),
             (0, r.jsx)(a.Gu, {
                 className: p.radioGroup,

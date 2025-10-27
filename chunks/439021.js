@@ -44,7 +44,7 @@ function u(e) {
             paymentRequestWallet: _,
         } = e,
         p = {
-            paymentLabel: o.intl.string(o.t.ZURqX1),
+            paymentLabel: o.intl.string(o.t.ZURqX0),
             paymentRequestRef: f,
             renderConnectorView: !0,
             onStripePaymentMethodReceived: l,
@@ -61,7 +61,7 @@ function u(e) {
         (0, r.jsx)("div", {
             className: s.body,
             children: (0, r.jsx)(i.gNt, {
-                label: o.intl.string(o.t.eQ2bLi),
+                label: o.intl.string(o.t.eQ2bLp),
                 children: t,
             }),
         })

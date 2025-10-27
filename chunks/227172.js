@@ -30,8 +30,8 @@ var r = n(951288),
     N = n(31074),
     R = n(206295),
     P = n(91140),
-    w = n(297781),
-    D = n(591853),
+    D = n(297781),
+    w = n(591853),
     L = n(410441),
     x = n(797342),
     M = n(981631),
@@ -102,13 +102,13 @@ let j = {
                 [null == V ? void 0 : V.src, b, ee, y, Q, er, et, en, q, X, H],
             );
         if (null == H) return null;
-        let ef = (0, r.jsx)(w.Gk, {
-                location: null == J ? w.Gt.POPOUT : w.Gt.STREAMING_POPOUT,
+        let ef = (0, r.jsx)(D.Gk, {
+                location: null == J ? D.Gt.POPOUT : D.Gt.STREAMING_POPOUT,
                 children: P.W.map((e, t) => (0, r.jsx)(e, { entry: y }, t)),
             }),
             e_ =
                 null == $
-                    ? (0, r.jsx)(D.wG, {
+                    ? (0, r.jsx)(w.wG, {
                           channel: b,
                           headerIcons:
                               null == ea
@@ -116,9 +116,9 @@ let j = {
                                   : (0, r.jsx)(L.Z, {
                                         onClick: es,
                                         Icon: ea,
-                                        "aria-label": k.intl.string(k.t.YR4cHB),
+                                        "aria-label": k.intl.string(k.t.YR4cHH),
                                     }),
-                          userDescription: (0, S.kr)(y) ? k.t.vPg1JS : k.t.rPqqtr,
+                          userDescription: (0, S.kr)(y) ? k.t.vPg1JT : k.t.rPqqts,
                           title: W,
                           subtitle: Y,
                           badges: ef,
@@ -127,12 +127,12 @@ let j = {
                           onUserPopoutClosed: Z,
                           trackRankingItemInteraction: F,
                       })
-                    : (0, r.jsx)(D.jL, {
+                    : (0, r.jsx)(w.jL, {
                           channel: b,
                           title: y.extra.game_name,
                           subtitle: Y,
                           badges: ef,
-                          userDescription: k.t["6oWFUF"],
+                          userDescription: k.t["6oWFUN"],
                           entry: y,
                           stream: $,
                           onUserPopoutClosed: Z,
@@ -177,11 +177,11 @@ let j = {
                     : null,
                 ep,
             ].filter(O.lm);
-        return (0, r.jsxs)(D.yR, {
+        return (0, r.jsxs)(w.yR, {
             children: [
                 e_,
-                (0, r.jsx)(D.St, {
-                    children: (0, r.jsx)(D.WT, {
+                (0, r.jsx)(w.St, {
+                    children: (0, r.jsx)(w.WT, {
                         onReaction: G,
                         onVoiceChannelPreview: B,
                         user: H,

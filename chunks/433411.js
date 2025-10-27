@@ -43,10 +43,10 @@ function E(e) {
             [v, O, n],
         ),
         P = O || void 0 !== A ? null != A : (I ? S : T) != null;
-    function w() {
+    function D() {
         (0, p.PO)(null == n ? void 0 : n.id, null);
     }
-    let D = b ? l.gtL : s.zx;
+    let w = b ? l.gtL : s.zx;
     return (0, r.jsxs)(h.Z, {
         className: a,
         forcedDivider: E,
@@ -57,11 +57,11 @@ function E(e) {
             (0, r.jsxs)("div", {
                 className: g.buttonsContainer,
                 children: [
-                    (0, r.jsx)(D, {
+                    (0, r.jsx)(w, {
                         size: s.zx.Sizes.SMALL,
                         onClick: R,
                         className: o()({ [g.buttonHighlighted]: b }),
-                        children: m.intl.string(m.t.BVcYCw),
+                        children: m.intl.string(m.t.BVcYCx),
                     }),
                     P &&
                         (0, r.jsx)("div", {
@@ -70,8 +70,8 @@ function E(e) {
                             children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: (0, u.ad)(t, n) ? m.intl.string(m.t.CHf9iI) : m.intl.string(m.t.OrokWl),
-                                onClick: w,
+                                text: (0, u.ad)(t, n) ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.OrokWm),
+                                onClick: D,
                             }),
                         }),
                 ],
@@ -100,7 +100,7 @@ let b = "PALUE000000001",
                     },
                     size: "sm",
                     variant: "primary",
-                    text: m.intl.string(m.t.a9F1Qk),
+                    text: m.intl.string(m.t.a9F1Qu),
                 }),
             ],
         });

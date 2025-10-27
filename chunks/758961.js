@@ -26,7 +26,7 @@ let w = [
 ];
 function _(e) {
     var n, t, r, _;
-    let { guildId: C, sourceFile: N, existingSound: S, onClose: O, transitionState: E, showGuildPicker: P = !1 } = e,
+    let { guildId: C, sourceFile: N, existingSound: S, onClose: O, transitionState: P, showGuildPicker: E = !1 } = e,
         [I, M] = l.useState(
             null != (t = null != (n = null == N ? void 0 : N.name) ? n : null == S ? void 0 : S.name) ? t : "",
         ),
@@ -182,7 +182,7 @@ function _(e) {
         );
     return (0, a.jsx)(o.Modal, {
         onClose: O,
-        transitionState: E,
+        transitionState: P,
         title: et ? j.intl.string(j.t.HmsZGS) : j.intl.string(j.t["ioD/9I"]),
         actions: es,
         children: (0, a.jsxs)(o.C3N, {
@@ -193,7 +193,7 @@ function _(e) {
                         type: "critical",
                         children: G.message,
                     }),
-                P
+                E
                     ? (0, a.jsx)(y.Z, {
                           label: j.intl.string(j.t.UYt7iQ),
                           value: K,

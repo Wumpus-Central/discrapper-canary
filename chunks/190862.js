@@ -1,11 +1,11 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(296009),
     a = n(442837),
     l = n(314897),
     o = n(86419),
-    s = n(747101),
-    c = n(556045),
+    c = n(747101),
+    s = n(556045),
     u = n(881410),
     d = n(985748),
     f = n(566007),
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,9 +58,9 @@ function v(e, t) {
     }
     return i;
 }
-let y = (e) => {
+let v = (e) => {
         var { widget: t } = e,
-            n = v(e, ["widget"]);
+            n = y(e, ["widget"]);
         switch (t.type) {
             case i.l.FAVORITE_GAMES:
                 return (0, r.jsx)(f.Z, h({ widget: t }, n));
@@ -74,19 +74,19 @@ let y = (e) => {
                 return null;
         }
     },
-    j = (e) => {
+    O = (e) => {
         var { widget: t, user: n, disableInteraction: i } = e,
-            d = v(e, ["widget", "user", "disableInteraction"]);
-        let f = (0, s.FX)(t),
-            { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, c.h)(f),
-            j = (0, a.e7)([l.default], () => l.default.getId() === n.id),
-            O = j && !i && g,
+            d = y(e, ["widget", "user", "disableInteraction"]);
+        let f = (0, c.FX)(t),
+            { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(f),
+            O = (0, a.e7)([l.default], () => l.default.getId() === n.id),
+            j = O && !i && g,
             x = (0, o.mR)(f),
-            _ = (0, o.Hy)(f, { isCurrentUser: j }),
-            I = (0, o.kQ)(f),
-            P = 1 === (0, o.Gv)(f.type);
+            _ = (0, o.Hy)(f, { isCurrentUser: O }),
+            P = (0, o.kQ)(f),
+            I = 1 === (0, o.Gv)(f.type);
         return (0, r.jsx)(
-            y,
+            v,
             h(
                 {
                     widget: f,
@@ -95,12 +95,12 @@ let y = (e) => {
                     headerTitle: x,
                     headerSubtitle: _,
                     headerActionButtons:
-                        j && !P
+                        O && !I
                             ? [
                                   (0, r.jsx)(
                                       u.yX,
                                       {
-                                          disabled: I,
+                                          disabled: P,
                                           widgetType: f.type,
                                           widget: f,
                                       },
@@ -109,7 +109,7 @@ let y = (e) => {
                               ]
                             : void 0,
                     trailingContent:
-                        O &&
+                        j &&
                         (0, r.jsx)(m.Z, {
                             userId: n.id,
                             widgetType: f.type,

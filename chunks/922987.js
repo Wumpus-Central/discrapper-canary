@@ -260,7 +260,7 @@ let A = {
             ],
         });
     },
-    R = [
+    k = [
         {
             key: null,
             renderStep: (e) => (0, r.jsx)(I, _({}, e)),
@@ -268,10 +268,10 @@ let A = {
         {
             key: d.h8.REVIEW,
             renderStep: (e) => (0, r.jsx)(L, _({}, e)),
-            options: { useBreadcrumbLabel: () => E.intl.string(E.t.QBnNHh) },
+            options: { useBreadcrumbLabel: () => E.intl.string(E.t.QBnNHq) },
         },
     ],
-    k = (e, t, n) =>
+    R = (e, t, n) =>
         (0, r.jsx)(f.Z, {
             isOrbCheckout: !0,
             step: n,
@@ -304,7 +304,7 @@ let A = {
             onClose: c,
             hideShadow: !0,
             skuId: t,
-            renderHeader: k,
+            renderHeader: R,
             initialPlanId: null,
             analyticsLocations: n,
         });
@@ -316,7 +316,7 @@ let A = {
             applicationId: (0, g.N)(t),
             activeSubscription: null,
             loadId: n,
-            stepConfigs: R,
+            stepConfigs: k,
             purchaseType: x.GZQ.ONE_TIME,
             skuIDs: [t],
             excludeSubscriptionPlansBySKU: !0,

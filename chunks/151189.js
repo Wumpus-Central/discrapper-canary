@@ -48,36 +48,36 @@ let v = () => (0, h.f)(!1),
                                   ? a
                                   : E.Si.TIER_2,
                           children: A
-                              ? b.intl.format(b.t.MAGag4, {
+                              ? b.intl.format(b.t.MAGagw, {
                                     planName: (0, p.aq)(E.Xh.PREMIUM_MONTH_TIER_0),
                                     onClick: h,
                                 })
-                              : b.intl.format(b.t.jt7JX1, { onClick: h }),
+                              : b.intl.format(b.t.jt7JX6, { onClick: h }),
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)("img", {
                                   className: y.upsellImage,
                                   src: O,
-                                  alt: b.intl.string(b.t.do7AoK),
+                                  alt: b.intl.string(b.t.do7AoM),
                               }),
                               (0, r.jsx)(s.Text, {
                                   className: y.upsellTitle,
                                   color: "header-primary",
                                   variant: "text-lg/semibold",
-                                  children: b.intl.string(b.t.jJG1pq),
+                                  children: b.intl.string(b.t.jJG1pl),
                               }),
                               (0, r.jsx)(s.Text, {
                                   className: y.upsellDescription,
                                   variant: "text-md/normal",
-                                  children: b.intl.format(b.t.jt7JX1, { onClick: h }),
+                                  children: b.intl.format(b.t.jt7JX6, { onClick: h }),
                               }),
                           ],
                       }),
                 !C &&
                     (0, r.jsx)(m.Z, {
                         analyticsSection: g.jXE.EXPRESSION_PICKER,
-                        buttonText: C ? (A ? b.intl.string(b.t.hz78hI) : b.intl.string(b.t["Gd/XHB"])) : void 0,
+                        buttonText: C ? (A ? b.intl.string(b.t.hz78hE) : b.intl.string(b.t["Gd/XHF"])) : void 0,
                     }),
                 (0, r.jsx)(s.P3F, {
                     className: y.upsellClose,

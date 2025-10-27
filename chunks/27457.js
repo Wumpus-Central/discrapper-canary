@@ -1,5 +1,5 @@
 n.d(t, {
-    BP: () => ef,
+    BP: () => eh,
     ZP: () => eg,
 }),
     n(388685);
@@ -13,8 +13,8 @@ var r = n(951288),
     u = n(481060),
     d = n(846027),
     p = n(475179),
-    h = n(872810),
-    f = n(410575),
+    f = n(872810),
+    h = n(410575),
     g = n(812206),
     m = n(835473),
     b = n(629049),
@@ -64,7 +64,7 @@ var r = n(951288),
     ea = n(7504);
 let es = [er.fO.ACTIVITY],
     ec = i.memo((e) => {
-        var t, n, l, s, c, p, h;
+        var t, n, l, s, c, p, f;
         let {
                 participant: b,
                 popoutType: _,
@@ -84,7 +84,7 @@ let es = [er.fO.ACTIVITY],
                 noBorder: eu = !1,
                 noVideoRender: ed = !1,
                 focused: ep = !1,
-                blocked: ef = !1,
+                blocked: eh = !1,
                 ignored: eg = !1,
                 fit: em = S.L.CONTAIN,
                 paused: eb = !1,
@@ -242,7 +242,7 @@ let es = [er.fO.ACTIVITY],
                     paused: eb,
                     selected: ec,
                     width: W,
-                    blocked: ef,
+                    blocked: eh,
                     ignored: eg,
                     noVideoRender: ed || eA,
                     pulseSpeakingIndicator: e_,
@@ -277,7 +277,7 @@ let es = [er.fO.ACTIVITY],
         }
         let e4 = i.useRef(null),
             e8 = b.type === er.fO.STREAM ? u.pzj : u.Odl;
-        return (0, r.jsx)(f.Z, {
+        return (0, r.jsx)(h.Z, {
             section: en.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
                 className: o()(ea.wrapper, { [ea.ringing]: eD }, Z),
@@ -368,7 +368,7 @@ let es = [er.fO.ACTIVITY],
                                     es.includes(b.type)
                                         ? null
                                         : (0, r.jsx)(
-                                              eh,
+                                              ef,
                                               ((p = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {
                                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -405,12 +405,12 @@ let es = [er.fO.ACTIVITY],
                                                   },
                                                   ek,
                                               )),
-                                              (h = h =
+                                              (f = f =
                                                   {
                                                       idle: ey,
                                                       platform: eB,
                                                       title: (0, Y.Z)(z, b),
-                                                      blocked: ef,
+                                                      blocked: eh,
                                                       ignored: eg,
                                                       localVideoDisabled: eT,
                                                       videoToggleState: ew,
@@ -425,7 +425,7 @@ let es = [er.fO.ACTIVITY],
                                                       popoutType: _,
                                                   }),
                                               Object.getOwnPropertyDescriptors
-                                                  ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(h))
+                                                  ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(f))
                                                   : (function (e, t) {
                                                         var n = Object.keys(e);
                                                         if (Object.getOwnPropertySymbols) {
@@ -433,11 +433,11 @@ let es = [er.fO.ACTIVITY],
                                                             n.push.apply(n, r);
                                                         }
                                                         return n;
-                                                    })(Object(h)).forEach(function (e) {
+                                                    })(Object(f)).forEach(function (e) {
                                                         Object.defineProperty(
                                                             p,
                                                             e,
-                                                            Object.getOwnPropertyDescriptor(h, e),
+                                                            Object.getOwnPropertyDescriptor(f, e),
                                                         );
                                                     }),
                                               p),
@@ -529,13 +529,13 @@ function ep(e) {
         : null;
 }
 ec.displayName = "CallTile";
-let eh = i.memo((e) => {
+let ef = i.memo((e) => {
     let {
             idle: t,
             title: n,
             width: l,
             focused: d,
-            videoToggleState: f,
+            videoToggleState: h,
             blocked: g,
             ignored: m,
             participantId: j,
@@ -591,7 +591,7 @@ let eh = i.memo((e) => {
             (0, r.jsx)("div", {
                 className: o()(ea.overlayTop, { [ea.small]: l < 195 }),
                 children:
-                    B || f === en.ZUi.AUTO_PROBING
+                    B || h === en.ZUi.AUTO_PROBING
                         ? t
                             ? (0, r.jsx)("div", {
                                   className: ea.status,
@@ -696,7 +696,7 @@ let eh = i.memo((e) => {
                                                   e.stopPropagation();
                                                   let t = _.Z.getParticipant(S.id, j);
                                                   null != t &&
-                                                      ((0, er._5)(t) && (0, h.rn)(t.stream, { forceMultiple: !0 }),
+                                                      ((0, er._5)(t) && (0, f.rn)(t.stream, { forceMultiple: !0 }),
                                                       p.Z.popoutParticipant(S.id, j),
                                                       Z.fT(S.id, j));
                                               },
@@ -728,6 +728,6 @@ let eh = i.memo((e) => {
         ],
     });
 });
-eh.displayName = "CallTileOverlay";
-let ef = S.L,
+ef.displayName = "CallTileOverlay";
+let eh = S.L,
     eg = ec;

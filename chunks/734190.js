@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(481060),
     d = n(493683),
     p = n(239091),
-    h = n(99690),
-    f = n(471445),
+    f = n(99690),
+    h = n(471445),
     g = n(111028),
     m = n(569471),
     b = n(488131),
@@ -150,9 +150,9 @@ function M(e) {
     let { thread: t } = e,
         n = i.useMemo(() => {
             var e;
-            return null != (e = (0, f.KS)(t)) ? e : u.or_;
+            return null != (e = (0, h.KS)(t)) ? e : u.or_;
         }, [t]),
-        l = (0, f.bT)(t);
+        l = (0, h.bT)(t);
     return (0, r.jsx)(c.u, {
         text: l,
         delay: 500,
@@ -169,7 +169,7 @@ function M(e) {
     });
 }
 let k = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: c, isLast: f, withGuildIcon: A } = e,
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: c, isLast: h, withGuildIcon: A } = e,
         k = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(t), [t]),
         G = (0, s.e7)([j.Z], () => j.Z.hasVideo(t.id)),
         {
@@ -243,7 +243,7 @@ let k = i.memo(function (e) {
         className: o()(T.containerDefault, { [T.selected]: l }),
         children: [
             (0, r.jsx)(L, { withGuildIcon: A }),
-            f
+            h
                 ? null
                 : (0, r.jsx)(L, {
                       withGuildIcon: A,
@@ -290,7 +290,7 @@ let k = i.memo(function (e) {
                                                       (0, r.jsx)(M, { thread: t }),
                                                       null == z
                                                           ? null
-                                                          : (0, r.jsx)(h.Z, {
+                                                          : (0, r.jsx)(f.Z, {
                                                                 user: z,
                                                                 size: u.EFr.SIZE_16,
                                                             }),

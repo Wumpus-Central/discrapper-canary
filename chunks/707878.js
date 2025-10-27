@@ -27,7 +27,7 @@ class y extends r.PureComponent {
             children: (0, i.jsx)("div", {
                 className: f.sliderContainer,
                 children: (0, i.jsx)(o.iRW, {
-                    label: h.intl.string(h.t.OVovCQ),
+                    label: h.intl.string(h.t.OVovCb),
                     mini: !0,
                     initialValue: this.initialValue,
                     defaultValue: this.initialValue,

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => y });
+n.r(t), n.d(t, { default: () => A });
 var i = n(951288),
     a = n(647438),
     o = n(442837),
@@ -20,8 +20,8 @@ var i = n(951288),
     m = n(991346),
     x = n(839469),
     k = n(981631),
-    A = n(388032);
-let L = a.forwardRef(function () {
+    L = n(388032);
+let y = a.forwardRef(function () {
         g.Z.trackExposure({ location: "cd25e4_1" }),
             f.Z.useExperiment({ location: "user_setting_auto" }, { autoTrackExposure: !1 }),
             f.Z.trackExposure({ location: "user_setting_manual" });
@@ -29,8 +29,8 @@ let L = a.forwardRef(function () {
             t = (0, S.Ll)(),
             {
                 section: n,
-                subsection: L,
-                analyticsLocation: y,
+                subsection: y,
+                analyticsLocation: A,
                 analyticsLocations: T,
             } = (0, o.cj)([_.Z], () => {
                 let e = _.Z.getSection(),
@@ -43,19 +43,19 @@ let L = a.forwardRef(function () {
                 };
             }),
             j = (0, u.Z)(n),
-            P = (0, u.Z)(L),
+            P = (0, u.Z)(y),
             { analyticsLocations: w } = (0, Z.ZP)(d.Z.USER_SETTINGS);
         a.useEffect(() => {
             null != n &&
-                (n !== j || L !== P) &&
+                (n !== j || y !== P) &&
                 (0, b.QB)({
                     destinationPane: n,
                     originPane: null != j ? j : null,
-                    source: y,
-                    subsection: L,
+                    source: A,
+                    subsection: y,
                     locationStack: T,
                 });
-        }, [n, j, L, P, y, T]);
+        }, [n, j, y, P, A, T]);
         let { hasSearchResults: C, searchResults: v } = (0, x.F)(),
             G = (0, m.VO)(),
             R = (0, m.q8)(v),
@@ -72,7 +72,7 @@ let L = a.forwardRef(function () {
                 page: k.ZY5.USER_SETTINGS,
                 children: (0, i.jsx)(r.ZP, {
                     theme: e,
-                    title: A.intl.string(A.t.cduTBA),
+                    title: L.intl.string(L.t.cduTBL),
                     sidebarTheme: t,
                     section: n,
                     onSetSection: I,
@@ -85,11 +85,11 @@ let L = a.forwardRef(function () {
             }),
         });
     }),
-    y = a.forwardRef(function () {
+    A = a.forwardRef(function () {
         let e = (0, o.e7)([_.Z], () => _.Z.getAnalyticsLocations()),
             { analyticsLocations: t } = (0, Z.ZP)(e);
         return (0, i.jsx)(Z.Gt, {
             value: t,
-            children: (0, i.jsx)(L, {}),
+            children: (0, i.jsx)(y, {}),
         });
     });

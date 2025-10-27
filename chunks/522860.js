@@ -13,7 +13,7 @@ function u(e) {
         h = (0, o.ZP)(n),
         m = null == (t = n.call) ? void 0 : t.duration,
         g = _(h),
-        E = l.intl.format(l.t.FKXvaG, {
+        E = l.intl.format(l.t.FKXvaI, {
             username: h.nick,
             activityName: null != d ? d.name : "unknown",
             onJoinStream: f,
@@ -21,7 +21,7 @@ function u(e) {
         });
     return (
         null != m &&
-            (E = l.intl.format(l.t.NEFxtb, {
+            (E = l.intl.format(l.t.NEFxtd, {
                 username: h.nick,
                 duration: m.humanize(),
                 channelName: u.name,

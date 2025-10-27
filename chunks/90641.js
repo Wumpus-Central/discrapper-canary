@@ -36,8 +36,8 @@ async function m(e, t) {
                 persistentCodesEnabled: !1,
             }),
                 i.Z.show({
-                    title: p.intl.string(p.t.R0RpRU),
-                    body: null != (n = e.getAnyErrorMessage()) ? n : p.intl.string(p.t.eAn6z8),
+                    title: p.intl.string(p.t.R0RpRX),
+                    body: null != (n = e.getAnyErrorMessage()) ? n : p.intl.string(p.t.eAn6z2),
                 });
         }
     } else
@@ -55,9 +55,9 @@ let g = {
         let t = h();
         null != t
             ? u.Z.openSecureFramesUpdateConfirmation({
-                  title: e ? p.intl.string(p.t.DRFN1N) : p.intl.string(p.t.q29xJy),
-                  subtitle: e ? p.intl.string(p.t.y015ZW) : p.intl.string(p.t.E66FQk),
-                  confirmText: p.intl.string(p.t.aTuFYW),
+                  title: e ? p.intl.string(p.t.DRFN1B) : p.intl.string(p.t.q29xJz),
+                  subtitle: e ? p.intl.string(p.t.y015ZY) : p.intl.string(p.t.E66FQn),
+                  confirmText: p.intl.string(p.t.aTuFYT),
                   onConfirm: async () => {
                       await m(e, () => {
                           a.default.disconnect(), a.default.selectVoiceChannel(t);

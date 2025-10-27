@@ -11,21 +11,21 @@ var r = n(63063),
     i = n(168107),
     a = n(480916),
     o = n(981631),
-    s = n(398158),
+    s = n(153177),
     l = n(388032);
 let c = new Set([a.cU.NSFW_GUILD]),
     u = (e) => [
         {
-            title: l.intl.string(l.t.HphYKi),
-            description: l.intl.string(l.t["GCZC+/"]),
+            title: l.intl.string(l.t.HphYKp),
+            description: l.intl.string(l.t["GCZC+9"]),
         },
         {
-            title: l.intl.string(l.t.nkO4Ly),
-            description: l.intl.string(l.t.rHZFsL),
+            title: l.intl.string(l.t.nkO4L3),
+            description: l.intl.string(l.t.rHZFsH),
         },
         {
             title: l.intl.string(l.t.aVwLfn),
-            description: l.intl.format(l.t.n5vd1N, {
+            description: l.intl.format(l.t.n5vd1E, {
                 handleOnHelpUrlHook: () => {
                     i.Z.openUrl(r.Z.getArticleURL(o.BhN.TIGGER_PAWTECT_SYSTEM_DMS)),
                         (0, a.x3)(e, a.d_.PRIMARY, a.sU.SYSTEM_DMS_LEARN_MORE);
@@ -45,11 +45,11 @@ var _ = (function (e) {
 })({});
 let p = {
     1: {
-        title: s.default["2yLvkZ"],
-        description: s.default.eJmat7,
+        title: s.default["2yLvkS"],
+        description: s.default.eJmat5,
     },
     2: {
-        title: s.default.dwkwo6,
-        description: s.default.ZdmRwc,
+        title: s.default.dwkwo0,
+        description: s.default.ZdmRwW,
     },
 };

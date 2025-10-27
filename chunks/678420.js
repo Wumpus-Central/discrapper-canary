@@ -118,7 +118,7 @@ function f(e) {
                 className: g.empty,
                 children: (0, r.jsx)(o.Heading, {
                     variant: "heading-lg/medium",
-                    children: u.intl.string(u.t.V9ospq),
+                    children: u.intl.string(u.t.V9ospk),
                 }),
             }),
         });
@@ -131,7 +131,7 @@ function f(e) {
                     className: g.empty,
                     children: (0, r.jsx)(o.Text, {
                         variant: "text-md/semibold",
-                        children: u.intl.string(u.t.O1iRT0),
+                        children: u.intl.string(u.t.O1iRT8),
                     }),
                 }),
             });

@@ -1,39 +1,39 @@
 n.d(t, { W: () => g });
-var i = n(951288),
+var r = n(951288),
     l = n(647438),
-    s = n(481060),
+    i = n(481060),
     a = n(479531),
-    r = n(434404),
+    s = n(434404),
     o = n(496675),
-    d = n(981631),
+    c = n(981631),
     u = n(388032),
-    c = n(451964);
+    d = n(451964);
 function g(e) {
     let { guild: t, error: n, onClose: g } = e,
-        h = t.id,
-        m = l.useCallback(() => {
-            g(), r.Z.open(h, d.pNK.INVITES);
-        }, [h, g]),
-        v = l.useCallback(
+        m = t.id,
+        x = l.useCallback(() => {
+            g(), s.Z.open(m, c.pNK.INVITES);
+        }, [m, g]),
+        h = l.useCallback(
             (e) =>
-                (0, i.jsx)(s.P3F, {
-                    className: c.errorLink,
-                    onClick: m,
-                    children: (0, i.jsx)(s.Text, {
+                (0, r.jsx)(i.P3F, {
+                    className: d.errorLink,
+                    onClick: x,
+                    children: (0, r.jsx)(i.Text, {
                         variant: "text-xs/normal",
                         color: "text-link",
                         tag: "span",
                         children: e,
                     }),
                 }),
-            [m],
+            [x],
         ),
-        p = l.useCallback(
+        v = l.useCallback(
             (e) =>
-                (0, i.jsx)(s.Anchor, {
-                    href: d.EYA.INVITES_HELP,
+                (0, r.jsx)(i.Anchor, {
+                    href: c.EYA.INVITES_HELP,
                     target: "_blank",
-                    children: (0, i.jsx)(s.Text, {
+                    children: (0, r.jsx)(i.Text, {
                         variant: "text-xs/normal",
                         color: "text-link",
                         tag: "span",
@@ -42,23 +42,23 @@ function g(e) {
                 }),
             [],
         ),
-        x =
+        p =
             n instanceof a.Z
-                ? n.code !== d.evJ.TOO_MANY_INVITES
+                ? n.code !== c.evJ.TOO_MANY_INVITES
                     ? n.getAnyErrorMessage()
-                    : o.Z.can(d.Plq.MANAGE_GUILD, t)
-                      ? u.intl.format(u.t["H/RUY2"], {
-                            inviteListHook: v,
-                            inviteHelpHook: p,
+                    : o.Z.can(c.Plq.MANAGE_GUILD, t)
+                      ? u.intl.format(u.t["H/RUY1"], {
+                            inviteListHook: h,
+                            inviteHelpHook: v,
                         })
-                      : u.intl.string(u.t["/FxH6O"])
+                      : u.intl.string(u.t["/FxH6G"])
                 : "message" in n
                   ? n.message
-                  : u.intl.string(u.t.eAn6z8);
-    return (0, i.jsx)(s.Text, {
-        className: c.errorMessage,
+                  : u.intl.string(u.t.eAn6z2);
+    return (0, r.jsx)(i.Text, {
+        className: d.errorMessage,
         variant: "text-xs/normal",
         color: "text-danger",
-        children: x,
+        children: p,
     });
 }

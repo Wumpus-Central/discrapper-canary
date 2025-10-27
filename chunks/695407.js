@@ -9,7 +9,7 @@ let l = i.forwardRef(function (e, t) {
             query: n,
             onChange: l,
             disabled: c = !1,
-            placeholder: u = s.intl.string(s.t["5h0QOD"]),
+            placeholder: u = s.intl.string(s.t["5h0QOP"]),
             "aria-label": d,
             onInteraction: f,
         } = e,

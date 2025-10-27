@@ -3,8 +3,8 @@ var n = i(951288),
     s = i(647438),
     a = i(442837),
     l = i(481060),
-    r = i(893776),
-    o = i(809206),
+    o = i(893776),
+    r = i(809206),
     h = i(704903),
     d = i(155433),
     c = i(23434),
@@ -21,26 +21,26 @@ let C = (e) => {
         x = (0, a.e7)([c.Z], () => c.Z.getAction()),
         R = !g.Z.isEmailReverification(x),
         [_, b] = s.useState(!0),
-        E = v === p.QZA.SUBMITTING;
-    function I(e) {
+        I = v === p.QZA.SUBMITTING;
+    function E(e) {
         var t, i;
         return null != (i = null == C || null == (t = C[e]) ? void 0 : t[0]) ? i : "";
     }
-    let P = I("email"),
-        j = I("password");
+    let j = E("email"),
+        P = E("password");
     return (0, n.jsx)(h.Z, {
         transitionState: t,
         email: null == y ? void 0 : y.email,
-        emailError: P,
-        passwordError: j,
-        submitting: E,
-        canResend: _ && !E && (null == y ? void 0 : y.email) != null && 0 === P.length && 0 === j.length,
+        emailError: j,
+        passwordError: P,
+        submitting: I,
+        canResend: _ && !I && (null == y ? void 0 : y.email) != null && 0 === j.length && 0 === P.length,
         canChange: R,
         onChangeEmailClick: function () {
             b(!1);
         },
         onVerify: function (e, t) {
-            (0, o.Mn)({
+            (0, r.Mn)({
                 email: e,
                 password: t,
             }).then((e) => {
@@ -48,15 +48,15 @@ let C = (e) => {
                     var t;
                     (null == e || null == (t = e.body) ? void 0 : t.username) != null
                         ? (0, d.P)()
-                        : 0 === j.length &&
-                          0 === P.length &&
-                          (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.R0RpRU), l.ToastType.FAILURE));
+                        : 0 === P.length &&
+                          0 === j.length &&
+                          (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.R0RpRX), l.ToastType.FAILURE));
                 }
             }),
                 b(!0);
         },
         onResend: function () {
-            r.Z.verifyResend();
+            o.Z.verifyResend();
         },
         onClose: i,
     });

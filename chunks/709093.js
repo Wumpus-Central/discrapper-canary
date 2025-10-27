@@ -86,13 +86,13 @@ let T = function (e) {
         R = null == N || null == (t = N.discount) ? void 0 : t.amount,
         P = A ? O : y,
         {
-            step: w,
-            breadcrumbs: D,
+            step: D,
+            breadcrumbs: w,
             startedPaymentFlowWithPaymentSourcesRef: L,
             isDisplayingWowMomentConfirmation: x,
         } = (0, s.JL)();
-    if (null == D || 0 === D.length) return null;
-    let M = D.flatMap((e) => {
+    if (null == w || 0 === w.length) return null;
+    let M = w.flatMap((e) => {
         let t = e.useBreadcrumbLabel(b),
             n = e.sectionHeaderText;
         return null != t
@@ -108,15 +108,15 @@ let T = function (e) {
             let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
                 n = e.id === l.h8.ADD_PAYMENT_STEPS && !L.current;
             return !b || (b && (t || n));
-        })).find((e) => e.id === w),
+        })).find((e) => e.id === D),
         j =
             null != (i = null == k || null == (n = k.sectionHeaderText) ? void 0 : n.call(k))
                 ? i
                 : null == k
                   ? void 0
                   : k.label,
-        U = null != j && null != w,
-        G = C && U && w === l.h8.REVIEW,
+        U = null != j && null != D,
+        G = C && U && D === l.h8.REVIEW,
         B = A ? "nitro-pink" : "nitro-green",
         Z = A ? p.intl.string(p.t.lG6a5x) : p.intl.string(p.t["t9uG/o"]);
     return x
@@ -163,7 +163,7 @@ let T = function (e) {
                       (0, r.jsx)(v, {
                           isOneStepCheckout: C,
                           headerText: j,
-                          step: w,
+                          step: D,
                           filteredBreadcrumbs: M,
                       }),
                   G &&

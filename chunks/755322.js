@@ -11,12 +11,12 @@ let c = (0, l.x1)(u.n.LEGACY_NOTIFICATIONS_PANE, {
         render: s.Z,
     }),
     E = (0, l.wf)(u.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL, {
-        useTitle: () => o.intl.string(o.t.HcoRu7),
+        useTitle: () => o.intl.string(o.t.HcoRu0),
         buildLayout: () => [c],
     }),
     d = (0, l.m7)(u.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
         icon: i.Dkj,
-        useTitle: () => o.intl.string(o.t.HcoRu7),
+        useTitle: () => o.intl.string(o.t.HcoRu0),
         legacySearchKey: a.s6.NOTIFICATIONS,
         usePredicate: () => !(0, r.gj)("LegacyNotificationsPanel"),
         buildLayout: () => [E],

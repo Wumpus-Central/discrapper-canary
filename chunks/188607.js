@@ -17,9 +17,9 @@ let p = function (e) {
         }, [p, t]),
         h =
             t === o.MU || null == m
-                ? c.intl.string(c.t["FVJt+/"])
-                : c.intl.formatToPlainString(c.t.FjCaND, { categoryName: m }),
-        g = t === o.MU ? c.intl.string(c.t.GXiMtb) : c.intl.format(c.t.JaLoFB, { onClick: n });
+                ? c.intl.string(c.t["FVJt+8"])
+                : c.intl.formatToPlainString(c.t.FjCaNB, { categoryName: m }),
+        g = t === o.MU ? c.intl.string(c.t.GXiMta) : c.intl.format(c.t.JaLoFF, { onClick: n });
     return (0, r.jsxs)("div", {
         className: d.container,
         children: [

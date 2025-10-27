@@ -33,7 +33,7 @@ function x() {
                       (0, r.jsx)(i.X6q, {
                           variant: "heading-lg/semibold",
                           color: "header-primary",
-                          children: h.intl.string(h.t.UKgg5O),
+                          children: h.intl.string(h.t.UKgg5N),
                       }),
                       (0, r.jsx)(p.w, {
                           canManageGuild: x,

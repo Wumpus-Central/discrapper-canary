@@ -65,7 +65,7 @@ function h() {
                 (l = l =
                     {
                         buttonRef: t,
-                        label: d.intl.string(d.t.Cuo44O),
+                        label: d.intl.string(d.t.Cuo44L),
                         isActive: e,
                         iconComponent: a.tEF,
                         onClick: o.LT,

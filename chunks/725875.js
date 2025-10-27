@@ -42,7 +42,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        y = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 x() && (e === (null == f ? void 0 : f.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
             },
@@ -69,7 +69,7 @@ function g(e) {
                             (0, i.jsx)(l.Text, {
                                 variant: "text-md/medium",
                                 className: b.groupHeader,
-                                children: m.intl.format(m.t.TKDIZm, {
+                                children: m.intl.format(m.t.TKDIZg, {
                                     channelHook: () =>
                                         (0, i.jsx)(
                                             "span",
@@ -122,7 +122,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: f,
                 errors: h,
-                toggleWebhookExpand: y,
+                toggleWebhookExpand: O,
             });
         }),
     });

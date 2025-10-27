@@ -24,14 +24,14 @@ function h(e) {
                 }),
             [g],
         ),
-        { analyticsLocations: j } = (0, a.ZP)(null != (t = (0, s.DR)()) ? t : []),
-        O = r.useRef(!1);
+        { analyticsLocations: O } = (0, a.ZP)(null != (t = (0, s.DR)()) ? t : []),
+        j = r.useRef(!1);
     r.useEffect(() => {
         m &&
             null != h &&
             null != _ &&
-            !O.current &&
-            ((O.current = !0),
+            !j.current &&
+            ((j.current = !0),
             o.default.track(
                 p.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED,
                 (function (e) {
@@ -63,11 +63,11 @@ function h(e) {
                         role_subscription_group_listing_id: h,
                         role_subscription_listing_ids: _,
                         is_premium_member: y,
-                        location_stack: j,
+                        location_stack: O,
                         location: f,
                     },
                     (0, l.hH)(n),
                 ),
             ));
-    }, [n, h, m, f, _, y, j]);
+    }, [n, h, m, f, _, y, O]);
 }

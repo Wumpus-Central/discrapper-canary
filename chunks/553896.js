@@ -6,14 +6,14 @@ let a = (e, t) => {
         case r.VU.PREMIUM_TENURE_1_MONTH:
         case r.VU.PREMIUM_TENURE_3_MONTH:
         case r.VU.PREMIUM_TENURE_6_MONTH:
-            return i.intl.formatToPlainString(i.t.erUSmJ, { months: t });
+            return i.intl.formatToPlainString(i.t.erUSmA, { months: t });
         case r.VU.PREMIUM_TENURE_12_MONTH:
         case r.VU.PREMIUM_TENURE_24_MONTH:
         case r.VU.PREMIUM_TENURE_36_MONTH:
         case r.VU.PREMIUM_TENURE_60_MONTH:
-            return i.intl.formatToPlainString(i.t.IfYQVF, { years: t / 12 });
+            return i.intl.formatToPlainString(i.t.IfYQVC, { years: t / 12 });
         case r.VU.PREMIUM_TENURE_72_MONTH:
-            return i.intl.formatToPlainString(i.t.IfYQVF, { years: "6+" });
+            return i.intl.formatToPlainString(i.t.IfYQVC, { years: "6+" });
         default:
             return null;
     }

@@ -11,7 +11,7 @@ let l = (t) => {
             () => [
                 {
                     variant: "secondary",
-                    text: o.intl.string(o.t["NX+WJC"]),
+                    text: o.intl.string(o.t["NX+WJN"]),
                     onClick: l,
                 },
             ],

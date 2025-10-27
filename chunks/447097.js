@@ -11,8 +11,8 @@ function d(e) {
         [m, p] = r.useState(null),
         [b, S] = r.useState(""),
         x = r.useRef(null),
-        j = o.intl.string(o.t["C/ZAw8"]),
-        y = o.intl.string(o.t.fZSi1N),
+        j = o.intl.string(o.t["C/ZAw/"]),
+        y = o.intl.string(o.t.fZSi1D),
         v = r.useCallback(
             (e) => {
                 S(e), p(null);

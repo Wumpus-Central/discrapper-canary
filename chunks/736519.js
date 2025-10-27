@@ -14,7 +14,7 @@ var i = n(120356),
     d = n(474936),
     f = n(388032),
     _ = n(827154);
-let p = (e) => (e === d.Si.TIER_0 ? f.intl.string(f.t.rk4Uu7) : f.intl.string(f.t.Ve9Ge3)),
+let p = (e) => (e === d.Si.TIER_0 ? f.intl.string(f.t.rk4Uu8) : f.intl.string(f.t.Ve9Ge6)),
     h = (e) => {
         let {
                 className: t,

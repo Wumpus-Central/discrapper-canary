@@ -20,7 +20,7 @@ function E(e) {
                   a.sNh,
                   {
                       id: "search-google",
-                      label: d.intl.string(d.t["Rd/Mkp"]),
+                      label: d.intl.string(d.t["Rd/Mko"]),
                       action: t,
                   },
                   "search-google",

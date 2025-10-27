@@ -61,9 +61,9 @@ function m(e) {
     }, []);
     let g =
         "error" === h.status
-            ? d.intl.string(d.t.vjyinp)
+            ? d.intl.string(d.t.vjying)
             : "success" === h.status
-              ? d.intl.format(d.t.qP5xYW, {
+              ? d.intl.format(d.t.qP5xYc, {
                     emailAddress: p,
                     emailAddressLink: "mailto:".concat(p),
                 })
@@ -78,7 +78,7 @@ function m(e) {
                       type: "image",
                       src: _,
                   },
-        title: "loading" === h.status ? void 0 : d.intl.string(d.t.c8eASE),
+        title: "loading" === h.status ? void 0 : d.intl.string(d.t.c8eASM),
         subtitle: g,
         actions:
             "loading" === h.status
@@ -86,7 +86,7 @@ function m(e) {
                 : [
                       {
                           variant: "secondary",
-                          text: d.intl.string(d.t.cpT0Cg),
+                          text: d.intl.string(d.t.cpT0Cq),
                           onClick: n,
                       },
                   ],
@@ -104,7 +104,7 @@ function m(e) {
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            children: d.intl.string(d.t.yb7itb),
+                            children: d.intl.string(d.t.yb7itQ),
                         }),
                     ],
                 }),

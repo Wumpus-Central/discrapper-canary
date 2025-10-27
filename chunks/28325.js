@@ -6,8 +6,8 @@ var i = n(509613),
     s = n(313789),
     a = n(388032);
 let o = (0, i.qs)(s.n.VOICE_ACTIVITY_NOTIFICATIONS, {
-    useTitle: () => a.intl.string(a.t.wtk08f),
-    useSubtitle: () => a.intl.string(a.t.rngMNz),
+    useTitle: () => a.intl.string(a.t.wtk08S),
+    useSubtitle: () => a.intl.string(a.t.rngMNx),
     useValue: r.d8.useSetting,
     setValue: u.I,
     usePredicate: () => (0, l.Az)("VoiceActivityNotifications").enabled,

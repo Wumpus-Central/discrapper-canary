@@ -10,7 +10,7 @@ function u(e) {
     let t = (0, i.e7)([c.ZP], () => c.ZP.isGuildCollapsed(e), [e]);
     return (0, r.jsx)(l.S89, {
         id: "hide-muted-channels",
-        label: o.intl.string(o.t.UwOLJC),
+        label: o.intl.string(o.t.UwOLJO),
         action: () => a.Z.toggleCollapseGuild(e),
         checked: t,
     });

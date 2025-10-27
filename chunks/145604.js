@@ -41,8 +41,8 @@ var r = n(951288),
     H = n(914010),
     V = n(885110),
     F = n(9156),
-    Y = n(594174),
-    z = n(774343),
+    z = n(594174),
+    Y = n(774343),
     W = n(974042),
     q = n(237997),
     K = n(626135),
@@ -342,7 +342,7 @@ function er() {
         o = (0, s.e7)([L.Z], () => L.Z.getChannel(e), [e]),
         c = (0, s.e7)([H.Z], () => H.Z.getGuildId(), []),
         u = (0, s.e7)([M.Z], () => M.Z.getGuild(c), [c]),
-        g = (0, s.e7)([Y.default], () => Y.default.getCurrentUser(), []),
+        g = (0, s.e7)([z.default], () => z.default.getCurrentUser(), []),
         b = (0, s.e7)([R.ZP], () => {
             var e, t;
             return (
@@ -353,7 +353,7 @@ function er() {
             );
         }, [g, c]),
         E = (0, s.e7)([W.ZP], () => W.ZP.getState().section, []),
-        y = (0, s.e7)([z.Z], () => z.Z.getHomeLink(), []),
+        y = (0, s.e7)([Y.Z], () => Y.Z.getHomeLink(), []),
         T = (0, s.e7)([I.Z], () => I.Z.isConnected(), []),
         [N, j] = (0, s.Wu)([k.Z], () => [k.Z.isVideoEnabled(), k.Z.isScreenSharing()], []),
         P = (0, s.e7)([V.Z], () => V.Z.getPrimaryActivity(), []),

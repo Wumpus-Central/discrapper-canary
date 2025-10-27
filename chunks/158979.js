@@ -60,7 +60,7 @@ function m() {
         children: (0, i.jsx)(r.Button, {
             variant: "active",
             size: "sm",
-            text: p.intl.string(p.t.U76Ft7),
+            text: p.intl.string(p.t.U76Ft2),
             fullWidth: !0,
         }),
     });
@@ -120,7 +120,7 @@ function y(e) {
             return {
                 icon: n(847881),
                 title: null,
-                body: p.intl.formatToPlainString(p.t["0SVWgI"], { game: t.name }),
+                body: p.intl.formatToPlainString(p.t["0SVWgF"], { game: t.name }),
                 hint: () => (0, i.jsx)(m, {}),
                 renderFooter: () => (0, i.jsx)(m, {}),
                 onNotificationShow: () => {

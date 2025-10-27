@@ -35,12 +35,12 @@ function m(t) {
                               horizontal: !0,
                               size: 8,
                           }),
-                          p.intl.string(p.t.bi7buL),
+                          p.intl.string(p.t.bi7buI),
                       ],
                   }),
                   (0, n.jsx)(a.Text, {
                       variant: "text-md/normal",
-                      children: p.intl.format(p.t["4kglOT"], { roleName: o.name }),
+                      children: p.intl.format(p.t["4kglOW"], { roleName: o.name }),
                   }),
               ],
           });
@@ -116,8 +116,8 @@ function O(t) {
             {
                 className: b.modalContainer,
                 header: p.intl.string(p.t["/gaTp6"]),
-                confirmText: p.intl.string(p.t.E4nVWF),
-                cancelText: p.intl.string(p.t["ETE/oK"]),
+                confirmText: p.intl.string(p.t.E4nVWA),
+                cancelText: p.intl.string(p.t["ETE/oC"]),
                 loading: O,
                 onConfirm: j,
                 children: [

@@ -1,5 +1,5 @@
 n.d(t, {
-    Vq: () => D,
+    Vq: () => w,
     Xo: () => z,
     qE: () => V,
     qe: () => F,
@@ -214,7 +214,7 @@ function P(e, t, n, r) {
     }
     return null;
 }
-function w(e, t, n, r) {
+function D(e, t, n, r) {
     if (null == e) return _.QS.AVATAR_DEFAULT;
     if (r)
         switch (t) {
@@ -297,7 +297,7 @@ function w(e, t, n, r) {
             .concat(n ? "true" : "false"),
     );
 }
-function D(e, t, n) {
+function w(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = (0, u.W5)(e.status, t, n, r),
         a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
@@ -320,7 +320,7 @@ function L(e, t, n) {
     };
 }
 function x(e, t, n, i) {
-    let a = D(n, i, t, !1),
+    let a = w(n, i, t, !1),
         o = (0, u.lm)(i, e);
     if (!t) {
         let t = a.height / 2 + n.stroke,
@@ -531,7 +531,7 @@ function Z(e) {
         A = null == p || h ? void 0 : R(p, E, y),
         C = T.size * m.hs,
         N = P(E, n, y, O),
-        w =
+        D =
             null != v &&
             (0, r.jsx)("svg", {
                 width: C + I,
@@ -569,7 +569,7 @@ function Z(e) {
               onMouseLeave: null != d ? d : void 0,
               "aria-label": A,
               "aria-hidden": h,
-              children: [t, w],
+              children: [t, D],
           })
         : (0, r.jsxs)("div", {
               className: o()(b.wrapper, f),
@@ -580,7 +580,7 @@ function Z(e) {
               role: "img",
               "aria-label": A,
               "aria-hidden": h,
-              children: [t, w],
+              children: [t, D],
           });
 }
 let F = i.forwardRef((e, t) => {
@@ -664,7 +664,7 @@ function V(e) {
                         y: 0,
                         width: B.size,
                         height: B.size,
-                        mask: null != P ? "url(#".concat(W, ")") : "url(#".concat(w(k, a, l, f), ")"),
+                        mask: null != P ? "url(#".concat(W, ")") : "url(#".concat(D(k, a, l, f), ")"),
                         children: (0, r.jsx)(F, {
                             ref: m,
                             src: t,
@@ -686,7 +686,7 @@ function V(e) {
                                       children: [
                                           (0, r.jsx)(
                                               "rect",
-                                              I(O({}, e, D(B, k, l, f)), {
+                                              I(O({}, e, w(B, k, l, f)), {
                                                   fill: Y,
                                                   mask: "url(#".concat((0, u.rs)(k, l, f), ")"),
                                                   className: b.pointerEvents,
@@ -750,8 +750,8 @@ function W(e) {
             statusColor: S,
             statusTooltip: R = !1,
             statusTooltipDelay: P,
-            statusBackdropColor: w,
-            "aria-hidden": D = !1,
+            statusBackdropColor: D,
+            "aria-hidden": w = !1,
             "aria-label": L,
             imageClassName: M,
             pulseStatusIcon: j,
@@ -834,7 +834,7 @@ function W(e) {
         Z,
         I(O({}, e), {
             ariaLabel: L,
-            ariaHidden: D,
+            ariaHidden: w,
             typingOffset: ef,
             specs: ec,
             children: (0, r.jsxs)("svg", {
@@ -880,7 +880,7 @@ function W(e) {
                             className: M,
                         }),
                     }),
-                    null != w && x(w, f, ec, v),
+                    null != D && x(D, f, ec, v),
                     (0, r.jsx)(d.aM, {
                         "data-migration-pending": !0,
                         text: R ? (0, p.u5)(v) : null,

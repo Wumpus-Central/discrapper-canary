@@ -21,6 +21,6 @@ function s(e, n, t) {
 }
 function c(e, n) {
     return (0, l.e7)([r.ZP], () => {
-        if (null != n && r.ZP.isChannelOptedIn(e, n, !0)) return a.intl.string(a.t.Lz94y8);
+        if (null != n && r.ZP.isChannelOptedIn(e, n, !0)) return a.intl.string(a.t.Lz94y1);
     });
 }

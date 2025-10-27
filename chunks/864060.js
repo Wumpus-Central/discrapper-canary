@@ -36,8 +36,8 @@ var l = n(317381),
     v = n(594174),
     x = n(630388),
     P = n(5192),
-    A = n(352736),
-    Z = n(51144);
+    Z = n(352736),
+    A = n(51144);
 n(734934);
 var j = n(842619),
     R = n(981631),
@@ -197,7 +197,7 @@ function F(e, t, n) {
             (e.isManaged() && n.bot && s === (0, r.F6)(e, v.default, T.Z)) || (s = G(s, e));
     }
     let f = t.content;
-    if ((0, g.Z)(t) && null == (f = A.Z.stringify(t, e)))
+    if ((0, g.Z)(t) && null == (f = Z.Z.stringify(t, e)))
         throw (
             (new a.Z("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
                 message: t,
@@ -225,7 +225,7 @@ function F(e, t, n) {
         l = w.intl.formatToPlainString(t, { user: i });
     } else if (null != h && h.length > 0) l = w.intl.formatToPlainString(w.t.zY4v1B, { stickerName: h[0].name });
     else if (t.type === R.uaV.PREMIUM_REFERRAL)
-        l = w.intl.formatToPlainString(w.t.lieTqU, { username: Z.ZP.getName(n) });
+        l = w.intl.formatToPlainString(w.t.lieTqU, { username: A.ZP.getName(n) });
     else if (null != t.poll) l = w.intl.formatToPlainString(w.t.ImizdM, { question: t.poll.question.text });
     else if (t.type === R.uaV.POLL_RESULT) {
         var E, N, O;

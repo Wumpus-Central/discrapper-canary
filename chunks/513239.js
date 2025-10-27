@@ -8,11 +8,11 @@ function e(t) {
     return (0, s.jsx)(r.Modal, {
         transitionState: n,
         size: "sm",
-        title: a.intl.string(a.t.wLrh09),
-        subtitle: a.intl.string(a.t.DW9yJi),
+        title: a.intl.string(a.t.wLrh03),
+        subtitle: a.intl.string(a.t.DW9yJj),
         actions: [
             {
-                text: a.intl.string(a.t.BddRzc),
+                text: a.intl.string(a.t.BddRzS),
                 variant: "primary",
                 onClick: i,
             },

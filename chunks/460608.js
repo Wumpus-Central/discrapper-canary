@@ -52,7 +52,7 @@ function x(e) {
                       className: v.header,
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: g.intl.string(g.t.yM9Krq),
+                      children: g.intl.string(g.t.yM9Krm),
                   }),
                   (0, r.jsx)(o.zJl, {
                       className: v.container,

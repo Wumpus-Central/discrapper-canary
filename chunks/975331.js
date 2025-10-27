@@ -33,21 +33,21 @@ function b() {
         E = (0, o.Dt)(),
         N = (0, o.Dt)();
     return (0, r.jsxs)(f.Z, {
-        title: h.intl.string(h.t["6antoq"]),
-        description: h.intl.string(h.t.urVijY),
+        title: h.intl.string(h.t["6anton"]),
+        description: h.intl.string(h.t.urVijS),
         children: [
             (0, r.jsx)(s.rsf, {
-                label: h.intl.string(h.t["+hTmdX"]),
+                label: h.intl.string(h.t["+hTmdb"]),
                 checked: C,
                 onChange: (e) => O(e),
                 disabled: y,
             }),
             (0, r.jsx)(s.q4e, {
-                label: h.intl.string(h.t.m1KuWV),
-                description: h.intl.string(h.t.NB9NLC),
+                label: h.intl.string(h.t.m1KuWd),
+                description: h.intl.string(h.t.NB9NLF),
                 "aria-labelledby": E,
                 options: v,
-                placeholder: h.intl.string(h.t.WZG1BQ),
+                placeholder: h.intl.string(h.t.WZG1BU),
                 value: n,
                 onChange: l,
                 maxVisibleItems: 5,
@@ -55,8 +55,8 @@ function b() {
             }),
             (0, r.jsx)(s.LZC, { size: 24 }),
             (0, r.jsx)(s.q4e, {
-                label: h.intl.string(h.t["/JD9oa"]),
-                description: h.intl.string(h.t.Cg5eBg),
+                label: h.intl.string(h.t["/JD9oe"]),
+                description: h.intl.string(h.t.Cg5eBm),
                 "aria-labelledby": N,
                 options: _,
                 value: b,

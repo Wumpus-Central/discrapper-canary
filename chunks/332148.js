@@ -20,14 +20,14 @@ let u = {
                         let t;
                         (t = e.isPrivate()
                             ? c.intl.formatToPlainString(c.t.Q89oQU, { maxPins: s.tG9 })
-                            : c.intl.formatToPlainString(c.t.NnO1S0, {
+                            : c.intl.formatToPlainString(c.t.NnO1S5, {
                                   maxPins: s.tG9,
                                   channelName: i,
                               })),
                             a.Z.show({
-                                title: c.intl.string(c.t.HI88Q0),
+                                title: c.intl.string(c.t.HI88Q3),
                                 body: t,
-                                confirmText: c.intl.string(c.t.BddRzc),
+                                confirmText: c.intl.string(c.t.BddRzS),
                             });
                     });
         },
@@ -41,10 +41,10 @@ let u = {
                     })
                     .catch(() =>
                         a.Z.show({
-                            title: c.intl.string(c.t.xFjBys),
-                            body: c.intl.string(c.t["0R/Toa"]),
-                            confirmText: c.intl.string(c.t["7NqTJi"]),
-                            cancelText: c.intl.string(c.t["ETE/oK"]),
+                            title: c.intl.string(c.t.xFjByk),
+                            body: c.intl.string(c.t["0R/Toc"]),
+                            confirmText: c.intl.string(c.t["7NqTJn"]),
+                            cancelText: c.intl.string(c.t["ETE/oC"]),
                             onConfirm: u.unpinMessage.bind(u, e, t),
                         }),
                     );

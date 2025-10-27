@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(314897),
     R = n(592125),
     P = n(271383),
-    w = n(542578),
-    D = n(375954),
+    D = n(542578),
+    w = n(375954),
     L = n(496675),
     x = n(699516),
     M = n(594174),
@@ -435,9 +435,9 @@ class eo extends i.PureComponent {
             });
     }
 }
-let es = u.ZP.connectStores([w.Z], (e) => {
+let es = u.ZP.connectStores([D.Z], (e) => {
     let { message: t, reaction: n, reactionType: r } = e,
-        i = w.Z.getReactions(t.getChannelId(), t.id, n.emoji, V.pTL, r);
+        i = D.Z.getReactions(t.getChannelId(), t.id, n.emoji, V.pTL, r);
     if (null == i)
         return {
             reactors: [],
@@ -495,10 +495,10 @@ function eu(e) {
         } = e,
         d = (0, u.e7)([R.Z], () => R.Z.getChannel(t.getChannelId())),
         p = null == d ? void 0 : d.getGuildId(),
-        h = (0, u.e7)([D.Z, O.Z], () => {
+        h = (0, u.e7)([w.Z, O.Z], () => {
             var e, n;
             let r =
-                null != (n = D.Z.getMessage(t.getChannelId(), t.id))
+                null != (n = w.Z.getMessage(t.getChannelId(), t.id))
                     ? n
                     : null == (e = O.Z.getMessage(G.default.castMessageIdAsChannelId(t.id)))
                       ? void 0

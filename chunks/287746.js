@@ -38,8 +38,8 @@ var i = n(951288),
     U = n(190210),
     B = n(516887),
     H = n(974251),
-    V = n(893718),
-    F = n(436660),
+    F = n(893718),
+    V = n(436660),
     G = n(680835),
     z = n(28546),
     W = n(295474),
@@ -92,8 +92,8 @@ var i = n(951288),
     eU = n(127654),
     eB = n(979956),
     eH = n(413251),
-    eV = n(655687),
-    eF = n(775685),
+    eF = n(655687),
+    eV = n(775685),
     eG = n(583027),
     ez = n(25007),
     eW = n(685006),
@@ -289,7 +289,7 @@ class e9 extends r.PureComponent {
                           highlighted: a,
                           setEditorRef: (e) => (this.editorRef = e),
                       })
-                    : (0, i.jsx)(V.ZP, {
+                    : (0, i.jsx)(F.ZP, {
                           ref: this.props.refInstance,
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
@@ -656,7 +656,7 @@ class e9 extends r.PureComponent {
             e2(this, "handleSetValue", (e) => {
                 var t, n;
                 let i = null == (t = this.editorRef) ? void 0 : t.getSlateEditor();
-                null != i && (F.Q.select(i, []), i.insertText(e), null == (n = this.editorRef) || n.focus());
+                null != i && (V.Q.select(i, []), i.insertText(e), null == (n = this.editorRef) || n.focus());
             }),
             e2(this, "renderAttachButton", (e, t) =>
                 (0, i.jsx)(H.Z, {
@@ -789,7 +789,7 @@ class te extends r.PureComponent {
                 guildId: null == I ? void 0 : I.guild_id,
                 location: "ChannelChat",
             }),
-            V = H && null != P && null != I && null != I.guild_id;
+            F = H && null != P && null != I && null != I.guild_id;
         return (0, i.jsx)(
             C.Z,
             {
@@ -823,7 +823,7 @@ class te extends r.PureComponent {
                                     onKeyDown: this.handleKeyDown,
                                     onFocus: this.handleChatInteract,
                                     children: [
-                                        V &&
+                                        F &&
                                             (0, i.jsx)(eX.Z, {
                                                 recipientUser: P,
                                                 voiceChannel: I,
@@ -993,7 +993,7 @@ class te extends r.PureComponent {
             }),
             e2(this, "renderAppLauncherButton", () => {
                 let { channel: e, entryPointCommandButtonRef: t, chatInputType: n } = this.props;
-                return (0, i.jsx)(eF.Z, {
+                return (0, i.jsx)(eV.Z, {
                     channel: e,
                     type: n,
                     animateRef: this.appIconAnimateRef,
@@ -1026,7 +1026,7 @@ class te extends r.PureComponent {
 }
 let tt = r.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: a } = e,
-        { placeholder: o, accessibilityLabel: s } = (0, eV.Z)({ channel: t }),
+        { placeholder: o, accessibilityLabel: s } = (0, eF.Z)({ channel: t }),
         c = (0, ed.S)(eN.default.getCurrentUser(), t),
         [u] = (0, K.AB)(null == n ? void 0 : n.id),
         h = (0, W.Ux)(null == n ? void 0 : n.id),
@@ -1083,9 +1083,9 @@ let tt = r.memo(function (e) {
         U = (0, d.e7)([eO.Z], () => eO.Z.getChannel(k)),
         B = (0, d.e7)([eN.default], () => (t.type !== eJ.d4z.DM ? null : eN.default.getUser(t.getRecipientId()))),
         H = (0, d.e7)([es.ZP, ev.default], () => es.ZP.getUserCombo(ev.default.getId(), t.id)),
-        V = (0, b.iD)(t),
-        F = (0, b.d7)(t),
-        z = V.length > 0 || t.rateLimitPerUser > 0 || null != H || null != F,
+        F = (0, b.iD)(t),
+        V = (0, b.d7)(t),
+        z = F.length > 0 || t.rateLimitPerUser > 0 || null != H || null != V,
         { showLinkedLobbyApplicationLoadingIndicator: q } = (0, eH.Z)(t.linkedLobby),
         Y = (0, G.Z)("ChannelChat");
     return (0, i.jsx)(te, {

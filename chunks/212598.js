@@ -1,6 +1,6 @@
 t.d(a, { t: () => v }), t(415506);
-var r = t(951288),
-    n = t(647438),
+var n = t(951288),
+    r = t(647438),
     s = t(512722),
     l = t.n(s),
     i = t(478677),
@@ -22,83 +22,83 @@ function v(e) {
             onWaitingForConnection: s,
             expectedCallbackState: m,
             onAuthToken: v,
-            onError: f,
-            onClose: k,
-            img: b,
+            onError: b,
+            onClose: f,
+            img: k,
             title: g,
             body: E,
             redirectDestination: T,
         } = e,
-        O = n.useCallback(async () => {
+        O = r.useCallback(async () => {
             let e;
             try {
                 if (((e = await (0, u.H)(a, { twoWayLinkType: i.g.DESKTOP })), null == e))
                     throw Error("missing authorizeURL");
             } catch (e) {
-                p.error("Error opening provider authorize page", e), f();
+                p.error("Error opening provider authorize page", e), b();
                 return;
             }
             let { state: t } = (0, x.xp)(e);
             l()(null != t, "Authorize URL state query parameter must be present"), null == s || s(t);
-        }, [a, f, s]),
-        y = n.useCallback(
+        }, [a, b, s]),
+        R = r.useCallback(
             (e) => {
-                let { callbackCode: t, callbackState: r } = e;
-                if (r !== m) return void p.warn("".concat(a, " link: received mismatching callback state!"));
+                let { callbackCode: t, callbackState: n } = e;
+                if (n !== m) return void p.warn("".concat(a, " link: received mismatching callback state!"));
                 v({
                     callbackCode: t,
-                    callbackState: r,
+                    callbackState: n,
                 });
             },
             [a, m, v],
         );
     return (
-        n.useEffect(
+        r.useEffect(
             () => (
-                d.Z.subscribe("USER_CONNECTIONS_LINK_CALLBACK", y),
+                d.Z.subscribe("USER_CONNECTIONS_LINK_CALLBACK", R),
                 () => {
-                    d.Z.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", y);
+                    d.Z.unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", R);
                 }
             ),
-            [y],
+            [R],
         ),
-        (0, r.jsxs)(N.Z, {
+        (0, n.jsxs)(N.Z, {
             children: [
-                (0, r.jsxs)(c.xBx, {
+                (0, n.jsxs)(c.xBx, {
                     direction: h.Z.Direction.VERTICAL,
                     className: j.header,
                     separator: !1,
                     children: [
-                        (0, r.jsx)(c.Text, {
+                        (0, n.jsx)(c.Text, {
                             className: j.stepHeader,
                             variant: "text-xs/bold",
                             color: "header-secondary",
-                            children: C.intl.format(C.t.fHz6eX, {
+                            children: C.intl.format(C.t.fHz6eR, {
                                 number: 1,
                                 total: 2,
                             }),
                         }),
-                        (0, r.jsxs)("div", {
+                        (0, n.jsxs)("div", {
                             className: j.illustration,
-                            children: [b, " "],
+                            children: [k, " "],
                         }),
-                        (0, r.jsx)(c.Heading, {
+                        (0, n.jsx)(c.Heading, {
                             className: j.title,
                             variant: "heading-xl/extrabold",
                             children: g,
                         }),
-                        null != k &&
-                            (0, r.jsx)(c.olH, {
+                        null != f &&
+                            (0, n.jsx)(c.olH, {
                                 className: j.closeButton,
-                                onClick: k,
+                                onClick: f,
                             }),
                     ],
                 }),
-                (0, r.jsxs)(c.hzk, {
+                (0, n.jsxs)(c.hzk, {
                     className: j.body,
                     paddingFix: !1,
                     children: [
-                        (0, r.jsx)(c.Text, {
+                        (0, n.jsx)(c.Text, {
                             tag: "p",
                             variant: "text-md/normal",
                             color: "header-secondary",
@@ -106,23 +106,23 @@ function v(e) {
                         }),
                         !t &&
                             null != T &&
-                            (0, r.jsx)(c.Text, {
+                            (0, n.jsx)(c.Text, {
                                 tag: "p",
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: C.intl.format(C.t.XhlYYm, { redirectUrl: T }),
+                                children: C.intl.format(C.t.XhlYYn, { redirectUrl: T }),
                             }),
                     ],
                 }),
-                (0, r.jsx)(c.mzw, {
+                (0, n.jsx)(c.mzw, {
                     className: j.footer,
-                    children: (0, r.jsxs)(o.zx, {
+                    children: (0, n.jsxs)(o.zx, {
                         className: j.footerButton,
                         color: t ? o.zx.Colors.PRIMARY : o.zx.Colors.BRAND,
                         onClick: O,
                         children: [
-                            t ? C.intl.string(C.t["5911LS"]) : C.intl.string(C.t["3PatS0"]),
-                            (0, r.jsx)(c.rgF, {
+                            t ? C.intl.string(C.t["5911Lb"]) : C.intl.string(C.t["3PatSz"]),
+                            (0, n.jsx)(c.rgF, {
                                 color: "currentColor",
                                 className: j.launchIcon,
                                 size: "xs",

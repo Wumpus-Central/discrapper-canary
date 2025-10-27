@@ -1,8 +1,8 @@
 n.d(t, {
     RB: () => y,
     VH: () => _,
-    Vi: () => v,
-    Vu: () => j,
+    Vi: () => j,
+    Vu: () => v,
     q7: () => O,
 });
 var r = n(692547),
@@ -59,7 +59,7 @@ let _ = {
         }
     },
     y = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
-    v = (e) => {
+    j = (e) => {
         switch (e) {
             case i.DY.GO_LIVE_PUSH:
                 return {
@@ -99,7 +99,7 @@ let _ = {
                 return null;
         }
     },
-    j = (e) => {
+    v = (e) => {
         switch (e.item_enum) {
             case i.AM.UPDATE_PROFILE:
                 return l.Y9;

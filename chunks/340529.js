@@ -73,7 +73,7 @@ function y(e) {
                 (0, n.jsx)(c.P3F, {
                     className: v.tabPreviewClose,
                     onClick: d,
-                    "aria-label": m.intl.string(m.t.WAI6xs),
+                    "aria-label": m.intl.string(m.t.WAI6xu),
                     children: (0, n.jsx)(c.k$p, {
                         size: "xs",
                         color: "currentColor",
@@ -98,8 +98,8 @@ function _(e) {
                                 width: 20,
                                 height: 20,
                             }),
-                            title: m.intl.string(m.t.odvTUl),
-                            body: m.intl.string(m.t["0JFpRU"]),
+                            title: m.intl.string(m.t.odvTUp),
+                            body: m.intl.string(m.t["0JFpRW"]),
                             selected: i === f.y.GUILD_PRODUCTS,
                             onClick: () => o(f.y.GUILD_PRODUCTS),
                         },
@@ -113,10 +113,10 @@ function _(e) {
                                 width: 20,
                                 height: 20,
                             }),
-                            title: m.intl.string(m.t["KzCF//"]),
+                            title: m.intl.string(m.t["KzCF/6"]),
                             body: r
-                                ? m.intl.string(m.t["jqz+l5"])
-                                : m.intl.format(m.t.ycs4oK, {
+                                ? m.intl.string(m.t["jqz+ly"])
+                                : m.intl.format(m.t.ycs4oO, {
                                       openRoleSubPage: () => (0, u.uL)(O.Z5c.CHANNEL(t.id, x.oC.ROLE_SUBSCRIPTIONS)),
                                   }),
                             disabled: !r,
@@ -143,8 +143,8 @@ function _(e) {
                                       width: 20,
                                       height: 20,
                                   }),
-                            title: m.intl.string(m.t.odvTUl),
-                            body: m.intl.string(m.t["827i8P"]),
+                            title: m.intl.string(m.t.odvTUp),
+                            body: m.intl.string(m.t["827i8I"]),
                             selected: i === f.y.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
                                 o(f.y.GUILD_PRODUCTS_PREVIEW), s.K.set(h.Hr, "true");
@@ -164,7 +164,7 @@ function _(e) {
             (0, n.jsx)(c.Heading, {
                 variant: "heading-sm/bold",
                 className: v.header,
-                children: m.intl.string(m.t.GF433N),
+                children: m.intl.string(m.t.GF433I),
             }),
             (0, n.jsx)(c.LZC, { size: 12 }),
             (0, n.jsxs)("div", {

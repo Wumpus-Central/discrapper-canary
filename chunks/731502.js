@@ -58,8 +58,8 @@ let s = (e) => {
         })(
             {
                 gradientColor: "nitro-pink",
-                title: c.intl.string(c.t.ewxv3N),
-                subtitle: c.intl.string(c.t.qlsCDA),
+                title: c.intl.string(c.t.ewxv3J),
+                subtitle: c.intl.string(c.t.qlsCDB),
                 videoSrc: s,
                 loopAt: 5,
                 onSecondaryClick: t,

@@ -13,7 +13,7 @@ function d() {
     return (0, r.jsx)(s.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
         children: (0, r.jsx)(a.rsf, {
-            label: u.intl.string(u.t["3CqDxs"]),
+            label: u.intl.string(u.t["3CqDxp"]),
             description: u.intl.string(u.t.I1Eoqq),
             checked: e,
             onChange: (e) => o.Z.setQoS(e),

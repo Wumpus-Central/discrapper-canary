@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(388032),
     a = n(808709);
-let o = (e) => {
+let s = (e) => {
     let { hasHub: t } = e;
     return (0, r.jsxs)("div", {
         className: a.container,
@@ -20,13 +20,13 @@ let o = (e) => {
                 color: "header-primary",
                 variant: "text-lg/semibold",
                 className: a.header,
-                children: t ? l.intl.string(l.t.hsSHh4) : l.intl.string(l.t.Wf6iio),
+                children: t ? l.intl.string(l.t.hsSHh8) : l.intl.string(l.t.Wf6iij),
             }),
             (0, r.jsx)(i.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
                 className: a.__invalid_description,
-                children: t ? l.intl.string(l.t.FZ2J3d) : l.intl.string(l.t.TvHcv7),
+                children: t ? l.intl.string(l.t.FZ2J3Y) : l.intl.string(l.t.TvHcv6),
             }),
             (0, r.jsx)("div", { className: a.gap }),
             (0, r.jsx)(i.Button, {
@@ -65,7 +65,7 @@ let o = (e) => {
                                 })({}, t),
                             );
                     }),
-                text: t ? l.intl.string(l.t.IyjHDw) : l.intl.string(l.t["KU/aNz"]),
+                text: t ? l.intl.string(l.t.IyjHD9) : l.intl.string(l.t["KU/aN4"]),
             }),
         ],
     });

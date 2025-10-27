@@ -94,7 +94,7 @@ let d = {
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: a, confirmText: s = o.intl.string(o.t["cY+Ooa"]), onConfirm: c } = e;
+        let { title: t, subtitle: a, confirmText: s = o.intl.string(o.t["cY+Oob"]), onConfirm: c } = e;
         (0, i.ZDy)(async () => {
             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
             return (n) =>
@@ -105,7 +105,7 @@ let d = {
                             {
                                 header: t,
                                 confirmText: s,
-                                cancelText: o.intl.string(o.t["ETE/oK"]),
+                                cancelText: o.intl.string(o.t["ETE/oC"]),
                                 onConfirm: c,
                             },
                             n,

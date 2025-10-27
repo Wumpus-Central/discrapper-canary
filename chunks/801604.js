@@ -18,7 +18,7 @@ var i = n(120356),
     x = n(396678),
     v = n(37113),
     j = n(65154),
-    S = n(637824),
+    S = n(529822),
     b = n(388032),
     y = n(214795);
 function C() {
@@ -63,23 +63,23 @@ function w() {
         M = (0, h.L)(c),
         k = (0, m.M)(A),
         D = Z === s.vA.CAMERA,
-        B = null != P,
-        L = null != P ? (null == P || null == (e = P.id) ? void 0 : e.startsWith(s.vA.CAMERA)) : D,
+        L = null != P,
+        B = null != P ? (null == P || null == (e = P.id) ? void 0 : e.startsWith(s.vA.CAMERA)) : D,
         G = c === v.ApplicationStreamPresets.PRESET_AUTO,
-        U = B
+        U = L
             ? void 0
             : c === v.ApplicationStreamPresets.PRESET_VIDEO
-              ? b.intl.string(S.default.MuHUFR)
+              ? b.intl.string(S.default.MuHUFe)
               : c === v.ApplicationStreamPresets.PRESET_DOCUMENTS
-                ? b.intl.string(S.default.y0JuYW)
+                ? b.intl.string(S.default.y0JuYR)
                 : c === v.ApplicationStreamPresets.PRESET_AUTO
-                  ? b.intl.string(S.default.m4jtlZ)
+                  ? b.intl.string(S.default.m4jtlc)
                   : void 0,
         F = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)());
     return (0, r.jsxs)("div", {
         className: y.root,
         children: [
-            B && (0, r.jsx)(O, { source: P }),
+            L && (0, r.jsx)(O, { source: P }),
             (0, r.jsxs)("div", {
                 className: y.summary,
                 children: [
@@ -87,10 +87,10 @@ function w() {
                         className: y.sourceOrPresetName,
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: B
+                        children: L
                             ? null != (i = null == P ? void 0 : P.name)
                                 ? i
-                                : b.intl.string(S.default["hJMA+/"])
+                                : b.intl.string(S.default["hJMA+x"])
                             : M,
                     }),
                     (0, r.jsxs)(a.Text, {
@@ -98,7 +98,7 @@ function w() {
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: [
-                            B &&
+                            L &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsxs)("span", {
@@ -137,18 +137,18 @@ function w() {
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
-                                                b.intl.string(S.default.FzMGWV),
+                                                b.intl.string(S.default.FzMGWR),
                                             ],
                                         }),
                                     ],
                                 }),
                             !w &&
-                                !L &&
+                                !B &&
                                 F &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(C, {}), b.intl.string(S.default["n9/rUl"])],
+                                    children: [(0, r.jsx)(C, {}), b.intl.string(S.default["n9/rUq"])],
                                 }),
-                            L
+                            B
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(C, {}),

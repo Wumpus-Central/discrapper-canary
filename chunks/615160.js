@@ -18,17 +18,17 @@ let _ = () =>
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(a.N, {
-                        title: f.intl.string(f.t.xVRG4O),
+                        title: f.intl.string(f.t.xVRG4P),
                         children: (0, r.jsx)(d.n, {}),
                     }),
                     (0, r.jsx)(a.N, {
-                        title: f.intl.string(f.t["y62Z/f"]),
+                        title: f.intl.string(f.t["y62Z/d"]),
                         children: (0, r.jsxs)(o.Z, {
                             children: [(0, r.jsx)(l.Z, {}), (0, r.jsx)(c.t, {})],
                         }),
                     }),
                     (0, r.jsx)(a.N, {
-                        title: f.intl.string(f.t["1Qn8iY"]),
+                        title: f.intl.string(f.t["1Qn8iV"]),
                         children: (0, r.jsx)(u.Z, {}),
                     }),
                 ],

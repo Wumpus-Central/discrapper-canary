@@ -15,7 +15,7 @@ var i = n(951288),
     g = n(607361),
     b = n(463421),
     C = n(981631),
-    y = n(658805),
+    y = n(978967),
     _ = n(388032),
     v = n(405143);
 function x(e) {
@@ -42,7 +42,7 @@ function x(e) {
         }
         g(2);
     }
-    if ((b && (t = _.intl.string(y.default.qRXatr)), n.type === C.IIU.PLAYING)) {
+    if ((b && (t = _.intl.string(y.default.qRXats)), n.type === C.IIU.PLAYING)) {
         let e = null == u ? void 0 : u.getIconURL(46);
         return (0, i.jsxs)("div", {
             className: v.activityRow,
@@ -66,7 +66,7 @@ function x(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-tertiary",
-                                    children: _.intl.string(_.t.BMTj29),
+                                    children: _.intl.string(_.t.BMTj28),
                                 }),
                                 (0, i.jsx)(s.Text, {
                                     variant: "text-md/medium",
@@ -81,7 +81,7 @@ function x(e) {
                     disabled: b || 2 === m,
                     fullWidth: !0,
                     size: "sm",
-                    text: 2 === m ? _.intl.string(y.default["8HU1Mz"]) : _.intl.string(y.default.DKHheX),
+                    text: 2 === m ? _.intl.string(y.default["8HU1M2"]) : _.intl.string(y.default.DKHhec),
                     onClick: x,
                 }),
                 null != t &&

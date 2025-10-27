@@ -72,7 +72,7 @@ function h(e) {
                     (0, i.jsx)(O.Z, {
                         onClick: l,
                         icon: s.Dio,
-                        tooltip: b.intl.string(b.t.cpT0Cg),
+                        tooltip: b.intl.string(b.t.cpT0Cq),
                         className: a()(E.closeButton, e),
                     }),
             }),

@@ -23,7 +23,7 @@ function g(n) {
                 ? null
                 : (0, l.jsx)(r.sNh, {
                       id: "popout-call",
-                      label: E.intl.string(E.t.JzWez8),
+                      label: E.intl.string(E.t.JzWezz),
                       icon: r.rgF,
                       action: () => s.hP(n),
                   });
@@ -40,7 +40,7 @@ function g(n) {
         })(t);
     return (0, l.jsxs)(r.v2r, {
         navId: "rtc-channel",
-        "aria-label": E.intl.string(E.t.ogxXGh),
+        "aria-label": E.intl.string(E.t.ogxXGq),
         onClose: o.Zy,
         onSelect: e,
         onInteraction: g,
@@ -54,7 +54,7 @@ function g(n) {
                         id: "show-voice-states",
                         checked: h,
                         action: () => d.Fg.updateSetting(!h),
-                        label: E.intl.string(E.t.vkbSBw),
+                        label: E.intl.string(E.t.vkbSB0),
                     }),
                 ],
             }),

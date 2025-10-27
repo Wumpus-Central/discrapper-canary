@@ -40,9 +40,9 @@ function _(e) {
                 s.Z.unignoreUser(t, "web_stranger_danger_more", n);
         }, [n, l, t]);
     return (0, i.jsx)(d.JZ, {
-        title: y.intl.string(y.t.avyV7O),
-        description: y.intl.string(y.t.naWE6e),
-        buttonText: o ? y.intl.string(y.t["3SrzRU"]) : y.intl.string(y.t.avyV7O),
+        title: y.intl.string(y.t.avyV7P),
+        description: y.intl.string(y.t.naWE6W),
+        buttonText: o ? y.intl.string(y.t["3SrzRT"]) : y.intl.string(y.t.avyV7P),
         onButtonPress: o ? u : c,
     });
 }
@@ -88,7 +88,7 @@ function v(e) {
                         channelId: t,
                         warningId: v,
                         senderId: x,
-                        description: y.intl.string(y.t.DJMZX1),
+                        description: y.intl.string(y.t.DJMZX6),
                         safetyTipRows: E.map((e, t) =>
                             (0, i.jsx)(
                                 u.q,
@@ -114,9 +114,9 @@ function v(e) {
                                 (0, i.jsx)(
                                     d.JZ,
                                     {
-                                        title: y.intl.string(y.t["5QYPOz"]),
-                                        description: y.intl.string(y.t.G08MKi),
-                                        buttonText: y.intl.string(y.t["5QYPOz"]),
+                                        title: y.intl.string(y.t["5QYPO2"]),
+                                        description: y.intl.string(y.t.G08MKu),
+                                        buttonText: y.intl.string(y.t["5QYPO2"]),
                                         buttonVariant: "critical-primary",
                                         onButtonPress: () => {
                                             l(), I(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, P);
@@ -199,12 +199,12 @@ function v(e) {
         warningId: v,
         senderId: x,
         warningType: f.pj.STRANGER_DANGER,
-        header: y.intl.string(y.t.iOkDpK),
-        description: y.intl.string(y.t.ISUbcH),
+        header: y.intl.string(y.t.iOkDpM),
+        description: y.intl.string(y.t.ISUbcM),
         onDismiss: j,
         buttons: [
             {
-                text: y.intl.string(y.t["Qk/c4+"]),
+                text: y.intl.string(y.t["Qk/c48"]),
                 variant: "primary",
                 onClick: () => {
                     P(),
@@ -221,7 +221,7 @@ function v(e) {
                 ? []
                 : [
                       {
-                          text: y.intl.string(y.t.ie0QdH),
+                          text: y.intl.string(y.t.ie0QdN),
                           variant: "critical-primary",
                           onClick: () => I(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL),
                       },

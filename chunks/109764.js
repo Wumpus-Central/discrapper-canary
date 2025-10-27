@@ -15,7 +15,7 @@ function h(t, n, e) {
         ? null
         : (0, i.jsx)(l.sNh, {
               id: "channel-copy-link",
-              label: c.intl.string(c.t.WqhZsr),
+              label: c.intl.string(c.t.WqhZss),
               action: () => {
                   t.isForumPost() &&
                       (0, r.B)({

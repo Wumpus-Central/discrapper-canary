@@ -1,25 +1,25 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(13941),
     a = n(442837),
-    o = n(481060),
-    s = n(570140),
+    s = n(481060),
+    o = n(570140),
     c = n(868781),
     u = n(122943),
     d = n(665149),
     p = n(670188),
     f = n(592125),
     h = n(158776),
-    g = n(699516),
-    m = n(594174),
-    b = n(482798),
-    _ = n(167762),
+    m = n(699516),
+    g = n(594174),
+    _ = n(482798),
+    b = n(167762),
     E = n(151459),
     O = n(981631),
-    v = n(388032),
-    y = n(10058);
-function I(e) {
+    I = n(388032),
+    v = n(10058);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,8 +64,8 @@ function C(e, t) {
 }
 function S(e) {
     let { className: t } = e,
-        n = (0, a.e7)([g.Z], () => g.Z.getPendingCount() > 0),
-        b = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
+        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount() > 0),
+        _ = (0, s.dQu)(s.TVs.modules.chat.INPUT_ICON_SIZE),
         S = (function () {
             let [e, t] = i.useState(null),
                 { showActivityTicker: n } = (0, E.Z)(),
@@ -83,12 +83,12 @@ function S(e) {
                                 0 === Object.keys(r.current[e]).length && delete r.current[e];
                         },
                         i = (n, i, a) => {
-                            var o, s, c, u, d, p, h, b, _;
-                            if (!g.Z.isFriend(n)) return !1;
-                            let E = m.default.getUser(n);
+                            var s, o, c, u, d, p, h, _, b;
+                            if (!m.Z.isFriend(n)) return !1;
+                            let E = g.default.getUser(n);
                             if (null == E) return !1;
-                            let v = !1,
-                                y = null;
+                            let I = !1,
+                                v = null;
                             if (null != i) {
                                 let t = i.type;
                                 if (
@@ -111,41 +111,41 @@ function S(e) {
                                                   .concat(null != (p = i.details) ? p : "")
                                             : "".concat(t, "-").concat(null != (h = i.name) ? h : "");
                                     (null == (c = r.current[n]) ? void 0 : c.presence) !== l &&
-                                        ((v = !0),
+                                        ((I = !0),
                                         e(n, "presence", l),
-                                        (y = {
+                                        (v = {
                                             user: E,
                                             activity: i,
                                         }));
                                 } else
-                                    (null == (s = r.current[n]) ? void 0 : s.presence) != null &&
-                                        ((v = !0), e(n, "presence", null));
+                                    (null == (o = r.current[n]) ? void 0 : o.presence) != null &&
+                                        ((I = !0), e(n, "presence", null));
                             }
                             if (null != a) {
                                 let t = f.Z.getChannel(a);
                                 if (null != t) {
                                     let i = "voice-".concat(t.id);
-                                    (null == (b = r.current[n]) ? void 0 : b.voice) !== i &&
-                                        ((v = !0),
+                                    (null == (_ = r.current[n]) ? void 0 : _.voice) !== i &&
+                                        ((I = !0),
                                         e(n, "voice", i),
-                                        (y = {
+                                        (v = {
                                             user: E,
                                             voiceChannel: t,
                                         }));
                                 }
                             } else
-                                (null == (o = r.current[n]) ? void 0 : o.voice) != null &&
-                                    ((v = !0), e(n, "voice", null));
+                                (null == (s = r.current[n]) ? void 0 : s.voice) != null &&
+                                    ((I = !0), e(n, "voice", null));
                             return (
-                                v &&
-                                    null != y &&
-                                    ((_ = y),
+                                I &&
+                                    null != v &&
+                                    ((b = v),
                                     null != l.current && (window.clearTimeout(l.current), (l.current = null)),
-                                    t(_),
+                                    t(b),
                                     (l.current = window.setTimeout(() => {
                                         t(null), (l.current = null);
                                     }, 10000))),
-                                v
+                                I
                             );
                         },
                         a = (e) => {
@@ -155,15 +155,15 @@ function S(e) {
                                 if (i(e, n)) break;
                             }
                         },
-                        o = (e) => {
+                        s = (e) => {
                             for (let t of e.voiceStates) if (i(t.userId, void 0, t.channelId)) break;
                         };
                     return (
-                        s.Z.subscribe("PRESENCE_UPDATES", a),
-                        s.Z.subscribe("VOICE_STATE_UPDATES", o),
+                        o.Z.subscribe("PRESENCE_UPDATES", a),
+                        o.Z.subscribe("VOICE_STATE_UPDATES", s),
                         () => {
-                            s.Z.unsubscribe("PRESENCE_UPDATES", a),
-                                s.Z.unsubscribe("VOICE_STATE_UPDATES", o),
+                            o.Z.unsubscribe("PRESENCE_UPDATES", a),
+                                o.Z.unsubscribe("VOICE_STATE_UPDATES", s),
                                 null != l.current && (window.clearTimeout(l.current), (l.current = null));
                         }
                     );
@@ -171,8 +171,8 @@ function S(e) {
                 e
             );
         })(),
-        N = i.useRef(null),
-        T = (0, o.Yzy)(S, {
+        T = i.useRef(null),
+        N = (0, s.Yzy)(S, {
             keys: (e) => {
                 var t, n, r;
                 return null != e
@@ -205,12 +205,12 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: y.container,
-                children: T((e, t) =>
+                className: v.container,
+                children: N((e, t) =>
                     null == t
                         ? null
                         : (0, r.jsx)(p.Z, {
-                              targetElementRef: N,
+                              targetElementRef: T,
                               position: "bottom",
                               align: "left",
                               userId: t.user.id,
@@ -219,17 +219,17 @@ function S(e) {
                                   return (0, r.jsxs)(
                                       l.animated.div,
                                       C(
-                                          I(
+                                          y(
                                               {
-                                                  ref: N,
-                                                  className: y.activityWrapper,
+                                                  ref: T,
+                                                  className: v.activityWrapper,
                                                   style: e,
                                               },
                                               n,
                                           ),
                                           {
                                               children: [
-                                                  (0, r.jsx)(o.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       variant: "text-xs/semibold",
                                                       children: null != (i = t.user.globalName) ? i : t.user.username,
                                                   }),
@@ -237,12 +237,12 @@ function S(e) {
                                                       ? (0, r.jsx)(u.Z, {
                                                             channel: t.voiceChannel,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: y.statusText,
+                                                            textClassName: v.statusText,
                                                         })
                                                       : (0, r.jsx)(c.Z, {
                                                             activity: t.activity,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: y.statusText,
+                                                            textClassName: v.statusText,
                                                         }),
                                               ],
                                           },
@@ -252,20 +252,20 @@ function S(e) {
                           }),
                 ),
             }),
-            (0, r.jsx)(_.Or, {
+            (0, r.jsx)(b.Or, {
                 popoutPosition: "bottom",
                 popoutAlign: "left",
                 children: (e, i, l, a) =>
                     (0, r.jsx)(
                         d.JO,
-                        C(I({}, l), {
+                        C(y({}, l), {
                             ref: a,
                             className: t,
                             onClick: e,
-                            icon: o.iFz,
-                            iconSize: b,
-                            "aria-label": v.intl.string(v.t.TdEu5X),
-                            tooltip: i ? null : v.intl.string(v.t.TdEu5X),
+                            icon: s.iFz,
+                            iconSize: _,
+                            "aria-label": I.intl.string(I.t.TdEu5X),
+                            tooltip: i ? null : I.intl.string(I.t.TdEu5X),
                             selected: i,
                             showBadge: n,
                         }),
@@ -274,8 +274,8 @@ function S(e) {
         ],
     });
 }
-function N(e) {
+function T(e) {
     let { className: t } = e,
-        { enableTopNavButton: n } = (0, b.Cq)({ location: "friends-button" });
+        { enableTopNavButton: n } = (0, _.Cq)({ location: "friends-button" });
     return n ? (0, r.jsx)(S, { className: t }) : null;
 }

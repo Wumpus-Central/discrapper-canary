@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    w = n(343396),
-    D = n(197571);
+    D = n(343396),
+    w = n(197571);
 function L(e, t, n) {
     return (
         t in e
@@ -100,18 +100,18 @@ function j(e) {
             [a],
         );
     return (0, r.jsx)("li", {
-        className: D.marginBottom20,
+        className: w.marginBottom20,
         children: (0, r.jsx)(c.P3F, {
             innerRef: o,
-            className: w.backupCode,
+            className: D.backupCode,
             onKeyDown: s,
             children: (0, r.jsx)(l.$q, {
                 displayOnly: !0,
                 readOnly: !0,
-                className: w.codeCheckbox,
+                className: D.codeCheckbox,
                 value: n,
                 children: (0, r.jsx)("span", {
-                    className: w.code,
+                    className: D.code,
                     children: a,
                 }),
             }),
@@ -138,7 +138,7 @@ class U extends i.PureComponent {
                         P.intl.format(P.t.PXVoEO, { phoneNumber: e }),
                         (0, r.jsx)(c.Anchor, {
                             onClick: this.togglePhoneNumberVisibility,
-                            className: w.phoneRevealer,
+                            className: D.phoneRevealer,
                             children: n ? P.intl.string(P.t.FfltIN) : P.intl.string(P.t.llArAg),
                         }),
                     ],
@@ -221,13 +221,13 @@ class U extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(h.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: w.checkboxGroup,
+                                            className: D.checkboxGroup,
                                             children: i(t.slice(0, t.length / 2)),
                                         }),
                                     }),
                                     (0, r.jsx)(h.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: w.checkboxGroup,
+                                            className: D.checkboxGroup,
                                             children: i(t.slice(t.length / 2)),
                                         }),
                                     }),

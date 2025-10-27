@@ -16,7 +16,7 @@ let d = () => {
               onSave: () => (0, s.Es)(e.id, n),
               onReset: s.Xb,
               submitting: t,
-              onSaveText: c.intl.string(c.t["7NqTJi"]),
-              message: c.intl.string(c.t["Z0/WmZ"]),
+              onSaveText: c.intl.string(c.t["7NqTJn"]),
+              message: c.intl.string(c.t["Z0/Wme"]),
           });
 };

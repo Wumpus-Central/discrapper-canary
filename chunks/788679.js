@@ -15,7 +15,7 @@ function d(e) {
         { reportFalsePositive: y, isReportFalsePositiveLoading: m } = (0, o.$)({
             onSuccess: () => (0, c.s)(b),
             onError: () => {
-                (0, i.showToast)((0, i.createToast)(u.intl.string(u.t.R0RpRU), i.ToastType.FAILURE));
+                (0, i.showToast)((0, i.createToast)(u.intl.string(u.t.R0RpRX), i.ToastType.FAILURE));
             },
             report: () => {
                 (0, l.Uj)(

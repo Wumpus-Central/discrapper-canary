@@ -36,7 +36,7 @@ let p = new o.Z("InteractionComponentUtils"),
                   })
                 : void 0,
     }),
-    m = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? _.intl.string(_.t.fitPBQ) : _.intl.string(_.t.VCsUJi)),
+    m = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? _.intl.string(_.t.fitPBS) : _.intl.string(_.t.VCsUJu)),
     g = (e, t, n) => {
         let r =
             (null == e ? void 0 : e.data.interactionType) === a.B8.MESSAGE_COMPONENT &&
@@ -50,7 +50,7 @@ let p = new o.Z("InteractionComponentUtils"),
     };
 function E(e) {
     var t;
-    return null != (t = e.placeholder) ? t : _.intl.string(_.t.Otr6W1);
+    return null != (t = e.placeholder) ? t : _.intl.string(_.t.Otr6W2);
 }
 let b = (e) => {
     switch (e) {

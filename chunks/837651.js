@@ -62,8 +62,8 @@ class f extends n.PureComponent {
         let { transitionState: t, onClose: n } = this.props,
             { totpSecret: a, code: p, isVerifying: f } = this.state,
             m = null == (e = l.default.getCurrentUser()) ? void 0 : e.email,
-            b = (0, d.U0)(null != m ? m : "", a),
-            x = (0, s.jsx)("form", {
+            x = (0, d.U0)(null != m ? m : "", a),
+            b = (0, s.jsx)("form", {
                 onSubmit: this.handleActivate,
                 children: (0, s.jsxs)(o.Z, {
                     className: h.inputContainer,
@@ -84,7 +84,7 @@ class f extends n.PureComponent {
                             shrink: 0,
                             children: (0, s.jsx)(i.Button, {
                                 variant: "primary",
-                                text: u.intl.string(u.t["/a5+YW"]),
+                                text: u.intl.string(u.t["/a5+YV"]),
                                 type: "submit",
                                 loading: f,
                             }),
@@ -107,12 +107,12 @@ class f extends n.PureComponent {
                             children: [
                                 (0, s.jsx)(i.Heading, {
                                     variant: "heading-lg/semibold",
-                                    children: u.intl.string(u.t.cDgKtb),
+                                    children: u.intl.string(u.t.cDgKte),
                                 }),
                                 (0, s.jsx)(i.Text, {
                                     variant: "text-xs/normal",
                                     className: h.subHeader,
-                                    children: u.intl.string(u.t["7NGwtL"]),
+                                    children: u.intl.string(u.t["7NGwtH"]),
                                 }),
                             ],
                         }),
@@ -131,24 +131,24 @@ class f extends n.PureComponent {
                                 width: 100,
                                 height: 100,
                             }),
-                            label: u.intl.string(u.t["9E74Dw"]),
-                            text: u.intl.format(u.t.A7Aeh4, {
+                            label: u.intl.string(u.t["9E74Dx"]),
+                            text: u.intl.format(u.t.A7Aehw, {
                                 googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en",
                                 authyURL: "https://www.authy.com/",
                             }),
                         }),
                         (0, s.jsx)(i.izJ, { className: h.divider }),
                         (0, s.jsx)(g, {
-                            image: (0, s.jsx)(c.ZP, { text: b }),
-                            label: u.intl.string(u.t["91InFx"]),
-                            text: u.intl.string(u.t.hFeBkp),
+                            image: (0, s.jsx)(c.ZP, { text: x }),
+                            label: u.intl.string(u.t["91InF1"]),
+                            text: u.intl.string(u.t.hFeBkl),
                             children: (0, s.jsxs)("div", {
                                 className: h.topSpacing,
                                 children: [
                                     (0, s.jsx)(i.Heading, {
                                         variant: "heading-sm/semibold",
                                         className: h.headerSpacing,
-                                        children: u.intl.string(u.t["76IPws"]),
+                                        children: u.intl.string(u.t["76IPwr"]),
                                     }),
                                     (0, s.jsx)(i.Text, {
                                         variant: "text-md/normal",
@@ -165,9 +165,9 @@ class f extends n.PureComponent {
                                 alt: "",
                                 src: r(308777),
                             }),
-                            label: u.intl.string(u.t["SaD/LS"]),
-                            text: u.intl.string(u.t.vI1ziY),
-                            children: x,
+                            label: u.intl.string(u.t["SaD/LY"]),
+                            text: u.intl.string(u.t.vI1zic),
+                            children: b,
                         }),
                     ],
                 }),

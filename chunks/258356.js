@@ -43,7 +43,7 @@ function p(e) {
                 color: i.zx.Colors.GREEN,
                 onClick: l,
                 submitting: a,
-                children: h.intl.string(h.t.riu2R0),
+                children: h.intl.string(h.t.riu2R5),
             }),
         ],
     });
@@ -60,7 +60,7 @@ function m(e) {
             (0, r.jsx)(s.Heading, {
                 className: g.presentedBy,
                 variant: "text-sm/medium",
-                children: h.intl.string(h.t.Eabu19),
+                children: h.intl.string(h.t.Eabu1z),
             }),
             (0, r.jsxs)("div", {
                 className: g.guildContainer,

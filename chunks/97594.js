@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(388685);
+n.d(t, { default: () => _ }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -20,13 +20,13 @@ function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || d.Z.useReducedMotion ? e.set(t) : e.start(t);
 }
-function S(e) {
+function _(e) {
     var {
             onClose: t,
             items: n,
             startingIndex: l,
-            enabledContentHarmTypeFlags: S,
-            shouldHideMediaOptions: _ = !1,
+            enabledContentHarmTypeFlags: _,
+            shouldHideMediaOptions: S = !1,
             transitionState: v,
         } = e,
         T = (function (e, t) {
@@ -59,7 +59,7 @@ function S(e) {
         ]);
     let [j, C] = r.useState(null != l ? l : 0),
         [D, x] = r.useState(!1),
-        [P, L] = (0, s.q_F)(() => ({
+        [P, R] = (0, s.q_F)(() => ({
             scale: d.Z.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
@@ -68,7 +68,7 @@ function S(e) {
                 tension: 300,
             },
         })),
-        R = r.useRef(null);
+        L = r.useRef(null);
     r.useEffect(() => {
         if (null != t)
             return (
@@ -90,7 +90,7 @@ function S(e) {
                 i = () => {
                     u.Z.disableTemp();
                 },
-                r = null == (t = R.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
+                r = null == (t = L.current) || null == (e = t.ownerDocument) ? void 0 : e.defaultView;
             return (
                 null == r || r.addEventListener("focus", n),
                 null == r || r.addEventListener("blur", i),
@@ -167,26 +167,26 @@ function S(e) {
                         animation: o.fM.SUBTLE,
                         fullscreenOnMobile: !1,
                         onClick: t,
-                        "aria-label": E.intl.string(E.t.AMTX3t),
+                        "aria-label": E.intl.string(E.t.AMTX3j),
                         parentComponent: "MediaViewerModal",
                         children: (0, i.jsxs)(m.z.Provider, {
                             value: I,
                             children: [
                                 (0, i.jsx)(O.Z, {
                                     item: n[j],
-                                    hideMediaOptions: _,
+                                    hideMediaOptions: S,
                                     onClose: t,
                                 }),
                                 (0, i.jsx)("div", {
                                     style: { display: "none" },
-                                    ref: R,
+                                    ref: L,
                                 }),
                                 (0, i.jsx)(y.ZP, {
                                     items: n,
                                     startIndex: j,
                                     onIndexChange: M,
-                                    enabledContentHarmTypeFlags: S,
-                                    shouldHideMediaOptions: _,
+                                    enabledContentHarmTypeFlags: _,
+                                    shouldHideMediaOptions: S,
                                 }),
                             ],
                         }),

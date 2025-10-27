@@ -77,7 +77,7 @@ let d = (e) => {
                 !p &&
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: o.intl.format(o.t.Q0tSKS, {}),
+                    children: o.intl.format(o.t.Q0tSKT, {}),
                 }),
         ],
     });

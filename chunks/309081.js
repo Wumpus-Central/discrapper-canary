@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(120356),
@@ -16,8 +16,8 @@ var r = n(951288),
     j = n(185923),
     O = n(957825),
     y = n(388032),
-    h = n(514271);
-function v(e, t) {
+    v = n(514271);
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -65,22 +65,22 @@ function P(e) {
 function w(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: a } = e;
     return (0, r.jsx)("div", {
-        className: h.menuContainer,
+        className: v.menuContainer,
         children: (0, r.jsx)(c.v2r, {
             navId: "poll-media-edit-menu",
             onClose: a,
-            "aria-label": y.intl.string(y.t["cV+h7O"]),
+            "aria-label": y.intl.string(y.t["cV+h7B"]),
             onSelect: t,
             children: (0, r.jsxs)(c.kSQ, {
                 children: [
                     (0, r.jsx)(c.sNh, {
                         id: "poll-media-replace",
-                        label: y.intl.string(y.t.CZeRhY),
+                        label: y.intl.string(y.t.CZeRhU),
                         action: n,
                     }),
                     (0, r.jsx)(c.sNh, {
                         id: "poll-media-delete",
-                        label: y.intl.string(y.t.IhMxgo),
+                        label: y.intl.string(y.t.IhMxgu),
                         action: l,
                         color: "danger",
                     }),
@@ -99,10 +99,10 @@ function C(e) {
             answerIndex: m,
             shouldShowEmojiPicker: g,
             toggleEmojiPicker: C,
-            containerRef: R,
+            containerRef: k,
         } = e,
-        k = l.useRef(null),
-        x = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
+        x = l.useRef(null),
+        R = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
         {
             emoji: E,
             isLoadingMedia: S,
@@ -121,25 +121,25 @@ function C(e) {
         U = l.useMemo(
             () =>
                 _
-                    ? y.intl.formatToPlainString(y.t.vcC7Qk, {
+                    ? y.intl.formatToPlainString(y.t.vcC7Qn, {
                           imageName: (0, p.fw)(A),
                           answerNumber: m + 1,
                       })
                     : null != E
-                      ? y.intl.formatToPlainString(y.t.ncOAhY, {
+                      ? y.intl.formatToPlainString(y.t.ncOAha, {
                             emojiName: E.name,
                             answerNumber: m + 1,
                         })
-                      : y.intl.formatToPlainString(y.t.emdpNj, { answerNumber: m + 1 }),
+                      : y.intl.formatToPlainString(y.t.emdpNo, { answerNumber: m + 1 }),
             [_, E, m, A],
         ),
         L = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)("div", {
-                    className: h.emojiPicker,
+                    className: v.emojiPicker,
                     children: (0, r.jsx)(u.Z, {
-                        channel: x,
+                        channel: R,
                         pickerIntention: j.Hz.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
@@ -150,7 +150,7 @@ function C(e) {
                     }),
                 });
             },
-            [x, s, m],
+            [R, s, m],
         ),
         T = l.useCallback(
             (e) => {
@@ -165,23 +165,23 @@ function C(e) {
             [N, C],
         ),
         Z = S
-            ? (0, r.jsx)(c.$jN, { className: h.spinnerWrapperDefault })
+            ? (0, r.jsx)(c.$jN, { className: v.spinnerWrapperDefault })
             : (0, r.jsx)(P, {
                   hasUpload: _,
                   mediaUrl: D,
                   mediaFilename: A,
-                  imageClassName: i()(h.media, h.gifDefault),
+                  imageClassName: i()(v.media, v.gifDefault),
                   emoji: E,
-                  emojiClassName: i()(h.media, h.emojiDefault),
+                  emojiClassName: i()(v.media, v.emojiDefault),
                   fallback: (0, r.jsx)(c.EO4, {
                       size: "sm",
                       color: "currentColor",
-                      className: h.expressionPickerIconDefault,
+                      className: v.expressionPickerIconDefault,
                   }),
               }),
-        Y = i()(O.CT, h.expressionPickerButtonDefault, { [h.canEditMedia]: I });
+        B = i()(O.CT, v.expressionPickerButtonDefault, { [v.canEditMedia]: I });
     return (0, r.jsx)(c.yRy, {
-        targetElementRef: R,
+        targetElementRef: k,
         renderPopout: L,
         shouldShow: g,
         onRequestClose: C,
@@ -191,9 +191,9 @@ function C(e) {
         children: (e) => {
             var { "aria-controls": t, "aria-expanded": n } = e;
             return (
-                v(e, ["aria-controls", "aria-expanded"]),
+                h(e, ["aria-controls", "aria-expanded"]),
                 (0, r.jsx)(c.yRy, {
-                    targetElementRef: k,
+                    targetElementRef: x,
                     animation: c.yRy.Animation.NONE,
                     position: "bottom",
                     renderPopout: T,
@@ -201,7 +201,7 @@ function C(e) {
                         var l,
                             a,
                             { onClick: i, "aria-controls": o, "aria-expanded": s } = e,
-                            u = v(e, ["onClick", "aria-controls", "aria-expanded"]);
+                            u = h(e, ["onClick", "aria-controls", "aria-expanded"]);
                         return (0, r.jsxs)(
                             c.P3F,
                             ((l = (function (e) {
@@ -228,10 +228,10 @@ function C(e) {
                                         });
                                 }
                                 return e;
-                            })({ innerRef: k }, u)),
+                            })({ innerRef: x }, u)),
                             (a = a =
                                 {
-                                    className: Y,
+                                    className: B,
                                     onClick: I && !g ? i : C,
                                     "aria-label": U,
                                     "aria-controls": null != t ? t : o,
@@ -242,7 +242,7 @@ function C(e) {
                                             (0, r.jsx)(c.vdY, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: h.editIcon,
+                                                className: v.editIcon,
                                                 "aria-hidden": !0,
                                             }),
                                     ],
@@ -267,7 +267,7 @@ function C(e) {
         },
     });
 }
-function R(e) {
+function k(e) {
     let {
             channelId: t,
             answer: n,
@@ -281,25 +281,25 @@ function R(e) {
             addAnswer: b,
             submitPoll: j,
             error: O,
-            ref: h,
-            answerRowRefs: v,
+            ref: v,
+            answerRowRefs: h,
         } = e,
         P = l.useRef(null),
         w = l.useRef(null),
-        R = l.useRef(null);
-    l.useImperativeHandle(h, () => ({
+        k = l.useRef(null);
+    l.useImperativeHandle(v, () => ({
         focusDeleteButton: () => {
             var e;
             return null == (e = w.current) ? void 0 : e.focus();
         },
         focusInput: () => {
             var e;
-            return null == (e = R.current) ? void 0 : e.focus();
+            return null == (e = k.current) ? void 0 : e.focus();
         },
     }));
-    let [k, x] = l.useState(!1),
+    let [x, R] = l.useState(!1),
         E = l.useCallback(() => {
-            x((e) => !e);
+            R((e) => !e);
         }, []),
         S = l.useCallback(
             (e) => {
@@ -311,13 +311,13 @@ function R(e) {
                         i &&
                             (e.preventDefault(),
                             ((0, p.cS)(n) || "macos" !== (0, m.getOS)() ? t : r) ? (e.stopPropagation(), j()) : b()),
-                            null == (l = v.current[a + 1]) || l.focusInput();
+                            null == (l = h.current[a + 1]) || l.focusInput();
                         break;
                     case "e":
                         ("macos" === (0, m.getOS)() ? r : t) && (e.preventDefault(), e.stopPropagation(), E());
                 }
             },
-            [b, n, v, a, i, j, E],
+            [b, n, h, a, i, j, E],
         ),
         _ = (0, r.jsx)(C, {
             containerRef: P,
@@ -327,7 +327,7 @@ function R(e) {
             onEmojiRemove: u,
             localCreationAnswerId: n.localCreationAnswerId,
             answerIndex: a,
-            shouldShowEmojiPicker: k,
+            shouldShowEmojiPicker: x,
             toggleEmojiPicker: E,
         });
     return (0, r.jsx)("div", {
@@ -340,14 +340,14 @@ function R(e) {
             },
             trailing: f
                 ? {
-                      "aria-label": y.intl.formatToPlainString(y.t["22fjER"], { answerNumber: a + 1 }),
+                      "aria-label": y.intl.formatToPlainString(y.t["22fjEc"], { answerNumber: a + 1 }),
                       icon: c.XHJ,
                       onClick: () => d(a),
                       buttonRef: w,
                   }
                 : void 0,
-            "aria-label": y.intl.formatToPlainString(y.t["3+V8Gx"], { answerNumber: a + 1 }),
-            placeholder: y.intl.string(y.t.NNHVlp),
+            "aria-label": y.intl.formatToPlainString(y.t["3+V8G9"], { answerNumber: a + 1 }),
+            placeholder: y.intl.string(y.t.NNHVlv),
             value: n.text,
             onChange: (e) =>
                 o({
@@ -357,7 +357,7 @@ function R(e) {
                 }),
             onKeyDown: S,
             maxLength: g.WA,
-            inputRef: R,
+            inputRef: k,
         }),
     });
 }

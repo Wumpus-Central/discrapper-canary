@@ -21,7 +21,7 @@ function g(e, t) {
     return e.type === _.uaV.VOICE_HANGOUT_INVITE
         ? ""
         : e.hasFlag(_.iLy.SOURCE_MESSAGE_DELETED)
-          ? p.intl.string(p.t.JOtgS0)
+          ? p.intl.string(p.t.JOtgSw)
           : t;
 }
 function E(e) {

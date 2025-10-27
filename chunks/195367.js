@@ -24,17 +24,17 @@ function y(e) {
             guildId: y,
             error: E,
             validationErrorMessage: N,
-            onChange: C,
-            canSetFocus: P = !1,
+            onChange: P,
+            canSetFocus: C = !1,
         } = e,
         {
             entityType: S,
             channelId: I,
-            description: Z,
-            name: T,
+            description: T,
+            name: Z,
             image: w,
-            scheduledEndTime: k,
-            scheduledStartTime: D,
+            scheduledEndTime: D,
+            scheduledStartTime: k,
             recurrenceRule: R,
         } = t,
         A = (0, u._d)(I),
@@ -42,21 +42,21 @@ function y(e) {
         G = null != t && (0, g.xt)(t),
         U = l.useMemo(() => {
             let e = (0, x.v1)(t);
-            return null != e ? e : { startDate: a()(D) };
-        }, [t, D]),
-        [M, L] = l.useState(() => (0, x.zi)(a()(D), R)),
-        z = l.useRef(null);
+            return null != e ? e : { startDate: a()(k) };
+        }, [t, k]),
+        [L, z] = l.useState(() => (0, x.zi)(a()(k), R)),
+        F = l.useRef(null);
     l.useEffect(() => {
-        if (P) {
+        if (C) {
             var e;
-            null == (e = z.current) || e.focus();
+            null == (e = F.current) || e.focus();
         }
-    }, [P]);
-    let F = (e) => {
-            C({ image: e });
+    }, [C]);
+    let M = (e) => {
+            P({ image: e });
         },
         V = (e, t) => {
-            if (null == e || void 0 === t) return void F(null);
+            if (null == e || void 0 === t) return void M(null);
             (0, s.ZDy)(async () => {
                 let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("21046")]).then(
                     n.bind(n, 712451),
@@ -94,7 +94,7 @@ function y(e) {
                                 file: t,
                                 onCrop: (e) => {
                                     let { imageUri: t } = e;
-                                    return F(t);
+                                    return M(t);
                                 },
                                 uploadType: j.pC.SCHEDULED_EVENT_IMAGE,
                             },
@@ -104,8 +104,8 @@ function y(e) {
             });
         },
         B = null == E ? void 0 : E.getFirstFieldErrorMessage("name"),
-        W = null == E ? void 0 : E.getFirstFieldErrorMessage("description"),
-        X = null == B && null == W ? (null == E ? void 0 : E.getAnyErrorMessage()) : null;
+        X = null == E ? void 0 : E.getFirstFieldErrorMessage("description"),
+        W = null == B && null == X ? (null == E ? void 0 : E.getAnyErrorMessage()) : null;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -118,17 +118,17 @@ function y(e) {
                     gap: 16,
                     children: [
                         (0, r.jsx)(s.oil, {
-                            label: f.intl.string(f.t["0HbEQ0"]),
+                            label: f.intl.string(f.t["0HbEQ6"]),
                             required: !0,
-                            error: null != B ? B : X,
+                            error: null != B ? B : W,
                             onChange: (e) => {
-                                C({ name: e });
+                                P({ name: e });
                             },
-                            placeholder: f.intl.string(f.t["6/yarq"]),
+                            placeholder: f.intl.string(f.t["6/yars"]),
                             maxLength: p.p,
-                            value: T,
+                            value: Z,
                             autoComplete: "off",
-                            inputRef: z,
+                            inputRef: F,
                         }),
                         (0, r.jsx)(v.Z, {
                             className: b.formItem,
@@ -139,15 +139,15 @@ function y(e) {
                                         scheduledEndTime: null == n ? void 0 : n.toISOString(),
                                     };
                                 null != t &&
-                                    null != k &&
+                                    null != D &&
                                     (null == n ? void 0 : n.isBefore(t)) &&
                                     (r.scheduledEndTime = t.add(1, "hour").toISOString()),
-                                    null != t && null != M && (r.recurrenceRule = (0, x.mF)(M, t)),
-                                    C(r);
+                                    null != t && null != L && (r.recurrenceRule = (0, x.mF)(L, t)),
+                                    P(r);
                             },
                             onRecurrenceChange: (e) => {
                                 let t = U.startDate;
-                                null != t && (C({ recurrenceRule: (0, x.mF)(e, t) }), L(e));
+                                null != t && (P({ recurrenceRule: (0, x.mF)(e, t) }), z(e));
                             },
                             schedule: U,
                             recurrenceRule: R,
@@ -158,19 +158,19 @@ function y(e) {
                         }),
                         (0, r.jsx)(O, { error: N }),
                         (0, r.jsx)(s.Kx8, {
-                            label: f.intl.string(f.t["+gRCCw"]),
-                            error: W,
-                            placeholder: f.intl.string(f.t["kWO/Ex"]),
-                            value: Z,
+                            label: f.intl.string(f.t["+gRCC7"]),
+                            error: X,
+                            placeholder: f.intl.string(f.t["kWO/E8"]),
+                            value: T,
                             onChange: (e) => {
-                                C({ description: e });
+                                P({ description: e });
                             },
                             maxLength: p.wm,
                             autosize: !0,
                         }),
                         (0, r.jsx)(s.gNt, {
-                            label: f.intl.string(f.t.Ly121d),
-                            description: f.intl.string(f.t.B9C9bW),
+                            label: f.intl.string(f.t.Ly121e),
+                            description: f.intl.string(f.t.B9C9be),
                             children:
                                 null != w
                                     ? (0, r.jsxs)(r.Fragment, {
@@ -187,15 +187,15 @@ function y(e) {
                                                       }
                                                   },
                                                   onChange: V,
-                                                  hint: f.intl.string(f.t.G44Xmp),
+                                                  hint: f.intl.string(f.t.G44Xml),
                                                   showRemoveButton: !1,
                                                   enabled: !0,
                                               }),
                                               (0, r.jsx)(s.Button, {
                                                   variant: "primary",
                                                   size: "sm",
-                                                  text: f.intl.string(f.t.gmUvOz),
-                                                  onClick: () => F(null),
+                                                  text: f.intl.string(f.t.gmUvO1),
+                                                  onClick: () => M(null),
                                               }),
                                           ],
                                       })
@@ -203,7 +203,7 @@ function y(e) {
                                           size: "sm",
                                           variant: "primary",
                                           onChange: V,
-                                          text: f.intl.string(f.t.vKCGYW),
+                                          text: f.intl.string(f.t.vKCGYb),
                                       }),
                         }),
                     ],

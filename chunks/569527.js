@@ -159,7 +159,7 @@ function T(e) {
             },
             [w],
         ),
-        K = a.useCallback(
+        X = a.useCallback(
             (e, t) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: y.m_.SEARCH,
@@ -172,7 +172,7 @@ function T(e) {
             },
             [null == V ? void 0 : V.loadId, n, w],
         ),
-        X = (0, g.K)();
+        K = (0, g.K)();
     return (0, r.jsxs)("div", {
         className: N.container,
         children: [
@@ -201,8 +201,8 @@ function T(e) {
                                             U === _.M.FETCHED &&
                                             (null == V || (null == V ? void 0 : V.results.length) === 0)
                                                 ? (0, r.jsx)(P.Z, {
-                                                      selectedCategoryId: null != k ? k : X.id,
-                                                      searchAllCategories: () => W(X),
+                                                      selectedCategoryId: null != k ? k : K.id,
+                                                      searchAllCategories: () => W(K),
                                                   })
                                                 : (0, r.jsx)("div", {
                                                       className: N.content,
@@ -216,7 +216,7 @@ function T(e) {
                                                                             j.Z,
                                                                             {
                                                                                 application: n,
-                                                                                onSelectApplication: (e) => K(e, t),
+                                                                                onSelectApplication: (e) => X(e, t),
                                                                                 showCategory: !0,
                                                                             },
                                                                             n.id,

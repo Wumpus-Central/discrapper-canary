@@ -15,7 +15,7 @@ function s(e, t) {
         : (0, l.jsx)(i.sNh, {
               id: "transfer-ownership",
               color: "danger",
-              label: c.intl.string(c.t.Z5s7PD),
+              label: c.intl.string(c.t.Z5s7PM),
               action: () =>
                   (0, i.ZDy)(async () => {
                       let { default: t } = await n.e("95055").then(n.bind(n, 372355));

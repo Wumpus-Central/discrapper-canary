@@ -27,20 +27,20 @@ function m(e) {
         return null;
     let y = () =>
             g === p.l.MODAL || g === p.l.MODAL_V2
-                ? h.intl.string(h.t["3xjX0d"])
+                ? h.intl.string(h.t["3xjX0U"])
                 : t.isDM() || t.isGroupDM()
-                  ? h.intl.string(h.t["7hwn2N"])
+                  ? h.intl.string(h.t["7hwn2A"])
                   : t.isGuildStageVoice()
-                    ? h.intl.string(h.t.Acqcoq)
-                    : h.intl.string(h.t.BXxdl5),
+                    ? h.intl.string(h.t.Acqcot)
+                    : h.intl.string(h.t.BXxdl7),
         O = () =>
             g === p.l.MODAL || g === p.l.MODAL_V2
-                ? h.intl.string(h.t.VJlc0d)
+                ? h.intl.string(h.t.VJlc0S)
                 : t.isDM() || t.isGroupDM()
-                  ? h.intl.string(h.t.ozoE2N)
+                  ? h.intl.string(h.t.ozoE2A)
                   : t.isGuildStageVoice()
-                    ? h.intl.string(h.t["7vb2cX"])
-                    : h.intl.string(h.t["96ANUF"]),
+                    ? h.intl.string(h.t["7vb2cc"])
+                    : h.intl.string(h.t["96ANUN"]),
         v = (e) => {
             e.stopPropagation(),
                 null == n || n({ action: "PRESS_JOIN_CALL_BUTTON" }),

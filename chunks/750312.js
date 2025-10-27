@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -14,71 +14,71 @@ var r = n(951288),
     m = n(840367),
     b = n(34335),
     h = n(388032),
-    v = n(415734);
-function y(e) {
+    y = n(415734);
+function v(e) {
     let {
             userId: t,
             widget: n,
             children: a,
             disableInteraction: h,
-            className: y,
-            index: O,
+            className: v,
+            index: j,
             trailingContent: x,
             headerTitle: _,
-            headerSubtitle: I,
-            headerActionButtons: P,
+            headerSubtitle: P,
+            headerActionButtons: I,
             dragHandleAdditionalMenuItems: w,
         } = e,
         S = (0, s.Dt)(),
         E = (0, c.e7)([u.default], () => u.default.getId() === t),
         T = i.useRef(null),
-        { registerManageWidgetButtonRef: C, manageFocusOnReorder: N } = (0, b.j)(),
-        D = i.useRef(null);
+        { registerManageWidgetButtonRef: C, manageFocusOnReorder: D } = (0, b.j)(),
+        k = i.useRef(null);
     i.useLayoutEffect(() => {
         let e = C(n.type);
-        return e(D.current), () => e(null);
+        return e(k.current), () => e(null);
     }, [C, n.type]);
-    let { trackUserProfileAction: A } = (0, d.KZ)(),
-        k = (0, g.Z)({
+    let { trackUserProfileAction: N } = (0, d.KZ)(),
+        A = (0, g.Z)({
             widgetType: n.type,
-            onAction: A,
+            onAction: N,
         }),
-        Z = E && null != O && !h,
-        { isDragging: R, dragSourcePosition: L } = (0, f.q)({
+        Z = E && null != j && !h,
+        { isDragging: R, dragSourcePosition: B } = (0, f.q)({
             dropRef: T,
-            dragRef: D,
+            dragRef: k,
             userId: t,
             widget: n,
-            index: O,
+            index: j,
             disableInteraction: !Z,
-            onReorder: () => N(n.type),
+            onReorder: () => D(n.type),
         }),
-        [G, B] = i.useState(!1);
-    return (0, r.jsx)(j, {
+        [G, L] = i.useState(!1);
+    return (0, r.jsx)(O, {
         ref: T,
         disableInteraction: !Z,
-        onMouseEnter: () => B(!0),
-        onMouseLeave: () => B(!1),
-        dragSourcePosition: L,
-        index: null != O ? O : 0,
+        onMouseEnter: () => L(!0),
+        onMouseLeave: () => L(!1),
+        dragSourcePosition: B,
+        index: null != j ? j : 0,
         children: (0, r.jsxs)("section", {
-            ref: k,
-            className: l()(v.container, y, { [v.isDragging]: R }),
+            ref: A,
+            className: l()(y.container, v, { [y.isDragging]: R }),
             "aria-labelledby": S,
             children: [
                 Z &&
                     (0, r.jsx)(p.Z, {
-                        buttonRef: D,
+                        buttonRef: k,
                         widget: n,
-                        className: l()(v.dragHandleButton, { [v.opacity]: G || R }),
+                        className: l()(y.dragHandleButton, { [y.opacity]: G || R }),
                         additionalMenuItems: w,
                     }),
                 (0, r.jsx)(m.Z, {
                     userId: t,
                     headingId: S,
                     title: _,
-                    subtitle: I,
-                    actionButtons: P,
+                    subtitle: P,
+                    actionButtons: I,
                     widget: n,
                     disableInteraction: h,
                 }),
@@ -89,7 +89,7 @@ function y(e) {
         }),
     });
 }
-let j = (e) => {
+let O = (e) => {
     let {
             ref: t,
             children: n,
@@ -106,9 +106,9 @@ let j = (e) => {
         ? n
         : (0, r.jsx)("div", {
               ref: t,
-              className: l()(v.dragAndDropHitbox, {
-                  [v.dropIndicatorBefore]: d,
-                  [v.dropIndicatorAfter]: f,
+              className: l()(y.dragAndDropHitbox, {
+                  [y.dropIndicatorBefore]: d,
+                  [y.dropIndicatorAfter]: f,
               }),
               onMouseEnter: a,
               onMouseLeave: o,

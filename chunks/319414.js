@@ -9,8 +9,8 @@ var r = n(442837),
     u = n(944486),
     c = n(554174),
     d = n(333031),
-    h = n(710111),
-    p = n(179505);
+    p = n(710111),
+    h = n(179505);
 function f() {
     let [e, t] = (0, r.Wu)([l.Z], () => [l.Z.enabled, l.Z.keepOpen]),
         n = (0, r.e7)([u.Z], () => u.Z.getVoiceChannelId()),
@@ -18,10 +18,10 @@ function f() {
         m = null == f ? void 0 : f.getGuildId();
     return e && null != f
         ? (0, i.jsx)(d.Z, {
-              className: p.container,
+              className: h.container,
               children: (0, i.jsx)(a.Z, {
-                  width: h.FW.width,
-                  height: h.FW.height,
+                  width: p.FW.width,
+                  height: p.FW.height,
                   guildId: m,
                   channel: f,
                   keepOpen: t,

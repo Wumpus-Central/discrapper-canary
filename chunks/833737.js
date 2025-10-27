@@ -13,14 +13,14 @@ var l = n(951288),
     g = n(976192),
     O = n(910693),
     E = n(271383),
-    y = n(979651),
-    p = n(933409),
+    p = n(979651),
+    y = n(933409),
     Z = n(389052),
     P = n(158508),
     m = n(88966),
     j = n(712301),
-    v = n(567711),
-    h = n(358386),
+    h = n(567711),
+    v = n(358386),
     _ = n(37258),
     S = n(931617),
     M = n(981631),
@@ -42,20 +42,20 @@ let I = (0, c.Z)(
                     showTransferOwnershipItem: w,
                 } = e,
                 { analyticsLocations: x } = (0, f.ZP)(d.Z.CONTEXT_MENU),
-                U = (0, s.O)(),
-                R = null != (t = null == T ? void 0 : T[0]) ? t : x[0],
+                R = (0, s.O)(),
+                U = null != (t = null == T ? void 0 : T[0]) ? t : x[0],
                 k = (0, O.sE)(u, {
-                    location: R,
+                    location: U,
                     targetUserId: n.id,
                 }),
-                L = (0, i.e7)([y.Z], () => {
+                L = (0, i.e7)([p.Z], () => {
                     var e;
-                    return null != (e = y.Z.getUserVoiceChannelId(u, n.id)) ? e : void 0;
+                    return null != (e = p.Z.getUserVoiceChannelId(u, n.id)) ? e : void 0;
                 }, [u, n.id]),
-                q = r.useCallback(() => {
+                G = r.useCallback(() => {
                     k(O.jQ.COPY_ID);
                 }, [k]),
-                G = (0, i.e7)([E.ZP], () => E.ZP.isMember(u, n.id), [u, n.id]),
+                q = (0, i.e7)([E.ZP], () => E.ZP.isMember(u, n.id), [u, n.id]),
                 B = (0, _.Z)({
                     userId: n.id,
                     guildId: u,
@@ -65,30 +65,30 @@ let I = (0, c.Z)(
                 V = (0, g.Z)({
                     guildId: u,
                     userId: n.id,
-                    analyticsLocation: null != A ? A : U.location,
-                    analyticsLocations: [R],
+                    analyticsLocation: null != A ? A : R.location,
+                    analyticsLocations: [U],
                     context: M,
                 }),
-                Y = (0, Z.Z)({
+                K = (0, Z.Z)({
                     user: n,
                     guildId: u,
-                    location: R,
+                    location: U,
                     channelId: c,
                 }),
-                K = (0, P.Z)({
+                Y = (0, P.Z)({
                     user: n,
                     guildId: u,
-                    location: R,
+                    location: U,
                     channelId: c,
                 }),
-                Q = (0, p.Z)(n, u, null != c ? c : L, R),
-                H = (0, v.Z)(c, N),
-                W = (0, h.Z)(n, u),
-                X = (0, S.Z)(n.id, u, !1, R),
+                Q = (0, y.Z)(n, u, null != c ? c : L, U),
+                H = (0, h.Z)(c, N),
+                W = (0, v.Z)(n, u),
+                X = (0, S.Z)(n.id, u, !1, U),
                 z = (0, b.Z)({
                     id: n.id,
-                    label: C.intl.string(C.t["/AXYnJ"]),
-                    onSuccess: q,
+                    label: C.intl.string(C.t["/AXYnE"]),
+                    onSuccess: G,
                 }),
                 J = (0, j.Z)(n, u),
                 $ = !!(null == n ? void 0 : n.isNonUserBot());
@@ -97,7 +97,7 @@ let I = (0, c.Z)(
                 onClose: () => {
                     (0, o.Zy)(), null == D || D();
                 },
-                "aria-label": C.intl.string(C.t.liqwPD),
+                "aria-label": C.intl.string(C.t.liqwPJ),
                 onSelect: I,
                 children: [
                     !$ &&
@@ -107,9 +107,9 @@ let I = (0, c.Z)(
                                     children: [B, F],
                                 }),
                                 (0, l.jsxs)(a.kSQ, {
-                                    children: [V, K, Y],
+                                    children: [V, Y, K],
                                 }),
-                                G &&
+                                q &&
                                     (0, l.jsxs)(l.Fragment, {
                                         children: [
                                             (0, l.jsx)(a.kSQ, { children: Q }),

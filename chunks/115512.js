@@ -15,7 +15,7 @@ function u(t) {
         ? (0, l.jsxs)(i.v2r, {
               navId: "image-context",
               onClose: r.Zy,
-              "aria-label": s.intl.string(s.t.Zow2V1),
+              "aria-label": s.intl.string(s.t.Zow2V5),
               onSelect: n,
               children: [(0, l.jsx)(i.kSQ, { children: u }), (0, l.jsx)(i.kSQ, { children: d })],
           })

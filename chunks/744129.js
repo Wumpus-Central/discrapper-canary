@@ -32,8 +32,8 @@ var i = n(120356),
     N = n(823188),
     R = n(52741),
     P = n(474936),
-    w = n(388032),
-    D = n(1721),
+    D = n(388032),
+    w = n(1721),
     L = n(895601),
     x = n(381126),
     M = n(234286);
@@ -106,18 +106,18 @@ function B(e) {
         v = (null == p ? void 0 : p.hasActiveTrial) ? (null == E ? void 0 : E.premiumType) : null,
         T = (0, C.y_)(v, O),
         S = null != T,
-        w = (0, c.ap)((0, d.ZP)()),
+        D = (0, c.ap)((0, d.ZP)()),
         L = (0, y.yc)({ location: "PremiumBrandRefreshTierCards" }),
         x = (0, r.jsxs)(r.Fragment, {
             children: [
                 S &&
                     (0, r.jsx)(A.E, {
                         text: T,
-                        className: D.pill,
+                        className: w.pill,
                     }),
                 (0, r.jsx)(g.Z, {
-                    className: D.wordmark,
-                    color: w ? "black" : "white",
+                    className: w.wordmark,
+                    color: D ? "black" : "white",
                 }),
                 (0, r.jsx)(R.Z, {
                     isGift: l,
@@ -129,9 +129,9 @@ function B(e) {
                     enablePremiumBrandRefresh: !0,
                     headingVariant: "text-md/medium",
                     headingColor: "text-primary",
-                    headerClassName: D.priceHeader,
+                    headerClassName: w.priceHeader,
                 }),
-                (0, r.jsx)("hr", { className: D.divider }),
+                (0, r.jsx)("hr", { className: w.divider }),
                 (0, r.jsx)(N.ql, {
                     enablePremiumBrandRefresh: !0,
                     isApplicationHome: _,
@@ -142,11 +142,11 @@ function B(e) {
     return L
         ? (0, r.jsx)(u.$1m, {
               color: "nitro-green",
-              className: a()(D.card, D.tier0, o, { [D.pillMargin]: !_ && S }),
+              className: a()(w.card, w.tier0, o, { [w.pillMargin]: !_ && S }),
               children: x,
           })
         : (0, r.jsx)("div", {
-              className: a()(D.card, D.tier0, o, { [D.pillMargin]: !_ && S }),
+              className: a()(w.card, w.tier0, o, { [w.pillMargin]: !_ && S }),
               children: x,
           });
 }
@@ -180,31 +180,31 @@ function Z(e) {
                     (0, r.jsx)("img", {
                         src: x,
                         alt: "",
-                        className: a()(D.bigCloud, D[y]),
+                        className: a()(w.bigCloud, w[y]),
                     }),
                     (0, r.jsx)("img", {
                         src: L,
                         alt: "",
-                        className: a()(D.smallCloud, D[y]),
+                        className: a()(w.smallCloud, w[y]),
                     }),
                     (0, r.jsx)("img", {
                         src: M,
                         alt: "",
-                        className: a()(D.wumpus, D[y]),
+                        className: a()(w.wumpus, w[y]),
                     }),
                 ],
             });
     return (0, r.jsxs)(u.$1m, {
         color: "nitro-pink",
-        className: a()(D.card, l, { [D.withGiftBanner]: g }),
+        className: a()(w.card, l, { [w.withGiftBanner]: g }),
         children: [
             (0, r.jsx)(Y, {}),
             (0, r.jsx)(A.E, {
-                text: null != H ? H : w.intl.string(w.t["6bEcYr"]),
-                className: D.pill,
+                text: null != H ? H : D.intl.string(D.t["6bEcYr"]),
+                className: w.pill,
             }),
             (0, r.jsx)(E.Z, {
-                className: D.wordmark,
+                className: w.wordmark,
                 color: V ? "black" : "white",
             }),
             (0, r.jsx)(R.Z, {
@@ -217,16 +217,16 @@ function Z(e) {
                 enablePremiumBrandRefresh: !0,
                 headingVariant: "text-md/medium",
                 headingColor: "text-primary",
-                headerClassName: D.priceHeader,
+                headerClassName: w.priceHeader,
             }),
-            (0, r.jsx)("hr", { className: D.divider }),
+            (0, r.jsx)("hr", { className: w.divider }),
             (0, r.jsx)(N.nT, {
                 featureSet: o,
                 isModal: _,
                 isGift: f,
                 enablePremiumBrandRefresh: !0,
                 isApplicationHome: T,
-                firstFeatureItemClassName: "inCard" === y ? D.firstFeatureItemContainer : void 0,
+                firstFeatureItemClassName: "inCard" === y ? w.firstFeatureItemContainer : void 0,
             }),
             n,
             g && (0, r.jsx)(O.f, {}),
@@ -243,7 +243,7 @@ let F = (e) => {
         }),
         { disabled: _ } = d,
         p = (0, r.jsx)("div", {
-            className: D.CTAButton,
+            className: w.CTAButton,
             children: (0, r.jsx)(
                 l.zxk,
                 G(
@@ -259,12 +259,12 @@ let F = (e) => {
             ),
         }),
         h = (0, r.jsx)("div", {
-            className: a()({ [D.premiumCardHover]: !n }),
+            className: a()({ [w.premiumCardHover]: !n }),
             children: (0, r.jsx)(
                 c,
                 j(
                     {
-                        className: D.applicationHomeCard,
+                        className: w.applicationHomeCard,
                         ctaButton: p,
                         showYearlyPrice: !0,
                         isApplicationHome: !0,
@@ -298,27 +298,27 @@ function V(e) {
     return (0, r.jsx)(p.Gt, {
         value: i,
         children: (0, r.jsxs)("div", {
-            className: a()(D.premiumCardsContainer, n),
+            className: a()(w.premiumCardsContainer, n),
             children: [
                 (0, r.jsx)(o.X, {
                     variant: "display-md",
                     color: "header-primary",
-                    className: D.premiumCardsHeader,
-                    children: w.intl.string(w.t.vLz3Zs),
+                    className: w.premiumCardsHeader,
+                    children: D.intl.string(D.t.vLz3Zs),
                 }),
                 (0, r.jsxs)("div", {
                     ref: l,
-                    className: D.premiumCards,
+                    className: w.premiumCards,
                     children: [
                         (0, r.jsx)(F, {
                             subscriptionTier: P.Si.TIER_0,
                             isReducedMotion: c,
-                            className: D.tier0CardOrder,
+                            className: w.tier0CardOrder,
                         }),
                         (0, r.jsx)(F, {
                             subscriptionTier: P.Si.TIER_2,
                             isReducedMotion: c,
-                            className: D.tier2CardOrder,
+                            className: w.tier2CardOrder,
                             tierCardProps: { wumpusPosition: "inCorner" },
                         }),
                     ],

@@ -7,6 +7,6 @@ var i = n(28664),
 let s = () =>
     (0, r.jsx)(i.u, {
         asContainer: !0,
-        text: o.intl.string(o.t["/fgfWl"]),
+        text: o.intl.string(o.t["/fgfWh"]),
         children: (0, r.jsx)(a.Z, {}),
     });

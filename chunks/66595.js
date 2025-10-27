@@ -10,6 +10,6 @@ function c(e) {
     let { className: t } = e;
     return (0, r.jsx)(o.IGR, {
         className: a()(l.tag, t),
-        text: s.intl.string(s.t.EYxi0t),
+        text: s.intl.string(s.t.EYxi0o),
     });
 }

@@ -1,10 +1,10 @@
-n.d(t, { r: () => s });
+n.d(t, { r: () => o });
 var r,
     i,
     l = n(817718),
     a = n(612226),
-    o = n(981631);
-let s =
+    s = n(981631);
+let o =
     ((r = (function (e) {
         for (var t = 1; t < arguments.length; t++) {
             var n = null != arguments[t] ? arguments[t] : {},
@@ -32,8 +32,8 @@ let s =
     })({}, a.oT)),
     (i = i =
         {
-            [o.EkH.CAROUSEL_NEXT]: l.lI,
-            [o.EkH.CAROUSEL_PREV]: l.hd,
+            [s.EkH.CAROUSEL_NEXT]: l.lI,
+            [s.EkH.CAROUSEL_PREV]: l.hd,
         }),
     Object.getOwnPropertyDescriptors
         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))

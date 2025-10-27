@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(937889),
     R = n(739566),
     P = n(779125),
-    w = n(890410),
-    D = n(464891),
+    D = n(890410),
+    w = n(464891),
     L = n(507418),
     x = n(348238),
     M = n(38267),
@@ -200,17 +200,17 @@ function et(e, t, n) {
     try {
         switch (parseInt(e.actionType)) {
             case g.d.DELETE_USER_MESSAGE:
-                return F.intl.formatToPlainString(F.t.BtKE9v, {
+                return F.intl.formatToPlainString(F.t.BtKE9h, {
                     userName: i,
                     timestamp: a.fromNow(),
                 });
             case g.d.SET_COMPLETED:
-                return F.intl.formatToPlainString(F.t.dyo9UV, {
+                return F.intl.formatToPlainString(F.t.dyo9US, {
                     userName: i,
                     timestamp: a.fromNow(),
                 });
             case g.d.SUBMIT_FEEDBACK:
-                return F.intl.formatToPlainString(F.t["C9/kIC"], {
+                return F.intl.formatToPlainString(F.t["C9/kIO"], {
                     userName: i,
                     timestamp: a.fromNow(),
                 });
@@ -259,7 +259,7 @@ let ei = i.memo(function (e) {
         l = X(n, i),
         c = Q(i, n.author),
         u = (0, R.ZP)(n),
-        d = (0, D.CF)(
+        d = (0, w.CF)(
             Y(
                 {
                     message: n,
@@ -278,7 +278,7 @@ let ei = i.memo(function (e) {
         m = Q(i, p, S.default.getCurrentUser());
     if (null != p) {
         let e = (0, R.ij)(p, i),
-            r = (0, D.CF)(
+            r = (0, w.CF)(
                 Y(
                     {
                         message: n,
@@ -395,7 +395,7 @@ function ea(e) {
             children: (0, r.jsxs)("div", {
                 className: o()(V.content, { [V.compact]: a }),
                 children: [
-                    (0, r.jsx)(D.nD, {
+                    (0, r.jsx)(w.nD, {
                         message: s,
                         messageClassname: V.spanCorrection,
                         className: o()(V.usernameContainer, V.spanCorrection, { [V.compact]: a }),
@@ -407,7 +407,7 @@ function ea(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: V.username,
-                                    children: F.intl.string(F.t.hG1StL),
+                                    children: F.intl.string(F.t.hG1StD),
                                 }),
                                 (0, r.jsx)(m.Z, {
                                     type: B.Hb.SYSTEM_DM,
@@ -428,7 +428,7 @@ function ea(e) {
                     (0, r.jsx)("div", {
                         className: o()(V.messageContent, { [V.compact]: a }),
                         children: (0, r.jsx)(
-                            w.Z,
+                            D.Z,
                             K(Y({}, R), {
                                 message: s,
                                 channel: q,
@@ -453,7 +453,7 @@ function ea(e) {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-muted",
                                                                 tag: "span",
-                                                                children: F.intl.format(F.t.SYIUTU, { keyword: et }),
+                                                                children: F.intl.format(F.t.SYIUTR, { keyword: et }),
                                                             }),
                                                             (0, r.jsx)("div", { className: o()(V.dot, V.dotMargin) }),
                                                         ],
@@ -463,7 +463,7 @@ function ea(e) {
                                                         variant: "text-xs/medium",
                                                         color: "text-muted",
                                                         tag: "span",
-                                                        children: F.intl.format(F.t.ZoOyKC, { ruleName: W }),
+                                                        children: F.intl.format(F.t.ZoOyKB, { ruleName: W }),
                                                     }),
                                                 null != eO &&
                                                     (0, r.jsxs)(r.Fragment, {
@@ -474,7 +474,7 @@ function ea(e) {
                                                                 color: "text-muted",
                                                                 tag: "span",
                                                                 className: V.__invalid_footerText,
-                                                                children: F.intl.format(F.t["3LYql5"], {
+                                                                children: F.intl.format(F.t["3LYql6"], {
                                                                     duration: eO,
                                                                 }),
                                                             }),
@@ -489,7 +489,7 @@ function ea(e) {
                                                                 color: "text-muted",
                                                                 tag: "span",
                                                                 className: V.titleCase,
-                                                                children: F.intl.format(F.t["26bB2N"], {
+                                                                children: F.intl.format(F.t["26bB2M"], {
                                                                     reason: (0, E.hU)(ec),
                                                                 }),
                                                             }),
@@ -534,7 +534,7 @@ function ea(e) {
                                             variant: "primary",
                                             size: "sm",
                                             textVariant: "text-xs/normal",
-                                            text: F.intl.string(F.t.DEoVWV),
+                                            text: F.intl.string(F.t.DEoVWZ),
                                             onClick: em,
                                         }),
                                     ],
@@ -550,7 +550,7 @@ function ea(e) {
                                                       variant: "primary",
                                                       size: "sm",
                                                       textVariant: "text-xs/normal",
-                                                      text: F.intl.string(F.t.jtkj09),
+                                                      text: F.intl.string(F.t.jtkj06),
                                                   }),
                                               }),
                                           ],
@@ -564,7 +564,7 @@ function ea(e) {
                                         variant: "primary",
                                         size: "sm",
                                         textVariant: "text-xs/normal",
-                                        text: F.intl.string(F.t["94JbMz"]),
+                                        text: F.intl.string(F.t["94JbM3"]),
                                     }),
                                 }),
                                 eI
@@ -578,7 +578,7 @@ function ea(e) {
                                                       variant: "primary",
                                                       size: "sm",
                                                       textVariant: "text-xs/normal",
-                                                      text: F.intl.string(F.t["3A52tb"]),
+                                                      text: F.intl.string(F.t["3A52tY"]),
                                                   }),
                                               }),
                                           ],

@@ -13,12 +13,12 @@ let T = (0, l.x1)(u.n.NOTIFICATIONS_PANE, {
         buildLayout: () => [c.Z, E.Z, a.Z, o.Z, s.Z],
     }),
     I = (0, l.wf)(u.n.NOTIFICATIONS_PANEL, {
-        useTitle: () => d.intl.string(d.t.HcoRu7),
+        useTitle: () => d.intl.string(d.t.HcoRu0),
         buildLayout: () => [T],
     }),
     O = (0, l.m7)(u.n.NOTIFICATIONS_SIDEBAR_ITEM, {
         icon: i.Dkj,
-        useTitle: () => d.intl.string(d.t.HcoRu7),
+        useTitle: () => d.intl.string(d.t.HcoRu0),
         usePredicate: () => (0, r.gj)("NotificationsPanel"),
         buildLayout: () => [I],
     });

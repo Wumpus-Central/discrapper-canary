@@ -16,7 +16,7 @@ function c(e) {
         let e = (0, a.i)(f);
         n = (0, r.jsx)("div", {
             className: l.userAppsBetaContent,
-            children: s.intl.format(s.t.wx1tLS, {
+            children: s.intl.format(s.t.wx1tLQ, {
                 handleDelete: _,
                 reason: e,
             }),
@@ -24,8 +24,8 @@ function c(e) {
     } else
         n =
             c.type === o.uaV.STAGE_RAISE_HAND
-                ? s.intl.format(s.t["qDAX+/"], { handleDelete: _ })
-                : s.intl.format(s.t.uX3ecH, {
+                ? s.intl.format(s.t["qDAX++"], { handleDelete: _ })
+                : s.intl.format(s.t.uX3ecL, {
                       count: 1,
                       countMessages: 1,
                       handleDelete: _,

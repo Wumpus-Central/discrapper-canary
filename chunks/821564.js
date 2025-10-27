@@ -24,7 +24,7 @@ function d(e) {
                 t,
             );
     return [
-        d(c.pM4.VOICE_ACTIVITY, u.intl.string(u.t.cHCEOD)),
-        d(c.pM4.PUSH_TO_TALK, t ? u.intl.string(u.t["1AINrK"]) : u.intl.string(u.t.Q8gkVF)),
+        d(c.pM4.VOICE_ACTIVITY, u.intl.string(u.t.cHCEOJ)),
+        d(c.pM4.PUSH_TO_TALK, t ? u.intl.string(u.t["1AINrB"]) : u.intl.string(u.t.Q8gkVL)),
     ];
 }

@@ -32,7 +32,7 @@ function m(e) {
     if (null == y && null != n && (0, l.Z)(n))
         return (0, r.jsx)(f.O1, {
             icon: I,
-            text: h.intl.string(h.t.RscU7O),
+            text: h.intl.string(h.t.RscU7I),
             fullWidth: E !== p.l.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),

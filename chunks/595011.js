@@ -22,7 +22,7 @@ let h = (0, s.Z)(
             Z = (0, f.Z)(l.id, n),
             j = (0, u.Z)({
                 id: l.id,
-                label: g.intl.string(g.t["/AXYnJ"]),
+                label: g.intl.string(g.t["/AXYnE"]),
             }),
             p = (0, d.Z)(l.id),
             v = l.isNonUserBot();
@@ -32,7 +32,7 @@ let h = (0, s.Z)(
             children: (0, t.jsxs)(r.v2r, {
                 navId: "user-context",
                 onClose: i.Zy,
-                "aria-label": g.intl.string(g.t.liqwPD),
+                "aria-label": g.intl.string(g.t.liqwPJ),
                 onSelect: c,
                 children: [
                     (0, t.jsxs)(r.kSQ, {

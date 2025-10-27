@@ -13,16 +13,16 @@ var r = n(951288),
     h = n(981631),
     g = n(176505),
     m = n(921944),
-    b = n(470658),
+    b = n(269794),
     _ = n(388032),
     O = n(990963);
 let y = i.memo(function (e) {
     let { guildId: t, selected: n } = e,
-        [y, v] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
-        j = i.useCallback(() => {
-            y === o.z.GAME_SERVER_HOSTING_NEW_BADGE && v(m.L.USER_DISMISS),
+        [y, j] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
+        v = i.useCallback(() => {
+            y === o.z.GAME_SERVER_HOSTING_NEW_BADGE && j(m.L.USER_DISMISS),
                 (0, d.uL)(h.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
-        }, [t, y, v]),
+        }, [t, y, j]),
         x = i.useRef(null),
         C = y === o.z.GAME_SERVER_HOSTING_NEW_BADGE,
         E = (0, a.f9)(),
@@ -36,7 +36,7 @@ let y = i.memo(function (e) {
         renderPopout: () =>
             (0, r.jsx)(f.En, {
                 guildId: t,
-                markAsDismissed: v,
+                markAsDismissed: j,
             }),
         children: (e) => {
             var i, l;
@@ -79,7 +79,7 @@ let y = i.memo(function (e) {
                             }),
                         text: _.intl.string(b.default.vCzwM7),
                         selected: n,
-                        onClick: j,
+                        onClick: v,
                         trailing: C
                             ? (0, r.jsx)(s.IGR, {
                                   disableColor: !0,

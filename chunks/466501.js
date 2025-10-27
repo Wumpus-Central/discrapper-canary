@@ -67,7 +67,7 @@ function j(e) {
     } = e;
     return (0, n.jsx)(c.Modal, {
         transitionState: a,
-        title: b.intl.string(b.t["3s47iI"]),
+        title: b.intl.string(b.t["3s47iN"]),
         actions: [],
         onClose: async () => {
             await (0, l.Mr3)(h.Q);

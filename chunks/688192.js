@@ -4,23 +4,23 @@ r.d(t, {
 });
 var n,
     i = r(951288),
-    s = r(647438),
-    l = r(120356),
-    a = r.n(l),
-    o = r(481060),
-    c = r(906732),
+    l = r(647438),
+    s = r(120356),
+    a = r.n(s),
+    c = r(481060),
+    o = r(906732),
     u = r(221292),
     d = r(461631),
     f = r(228168),
-    p = r(388032),
-    m = r(232644),
+    m = r(388032),
+    p = r(232644),
     h = (((n = {}).GIFTING_FLOW = "gifting_flow"), (n.PROFILE_MODAL = "profile_modal"), n);
 function I(e) {
     let {
             item: t,
             wishlistId: r,
             isOwner: n,
-            surface: l = "profile_modal",
+            surface: s = "profile_modal",
             cardRef: h,
             renderItemPreview: I,
             accessibleLabel: O,
@@ -30,26 +30,26 @@ function I(e) {
             isOwned: j = !1,
             renderSourceIcon: v,
         } = e,
-        S = s.useRef(null),
-        w = s.useRef(null),
-        y = null != h ? h : w,
-        { analyticsLocations: x } = (0, c.ZP)(),
-        E = "profile_modal" === l && !j,
-        T = (0, i.jsx)("div", {
-            className: m.cardStateIconWrapper,
-            children: (0, i.jsx)(o.sV5, {
+        S = l.useRef(null),
+        w = l.useRef(null),
+        x = null != h ? h : w,
+        { analyticsLocations: y } = (0, o.ZP)(),
+        E = "profile_modal" === s && !j,
+        N = (0, i.jsx)("div", {
+            className: p.cardStateIconWrapper,
+            children: (0, i.jsx)(c.sV5, {
                 size: "custom",
-                color: o.TVs.colors.WHITE,
+                color: c.TVs.colors.WHITE,
                 width: 38,
                 height: 38,
-                className: a()(m.cardStateIcon, m.checkmark),
-                "aria-label": p.intl.string(p.t.L5Pt9L),
+                className: a()(p.cardStateIcon, p.checkmark),
+                "aria-label": m.intl.string(m.t.L5Pt9L),
             }),
         }),
-        N = (0, i.jsx)("div", {
-            className: m.overlay,
-            children: (0, i.jsx)(o.Button, {
-                focusProps: { ringTarget: y },
+        T = (0, i.jsx)("div", {
+            className: p.overlay,
+            children: (0, i.jsx)(c.Button, {
+                focusProps: { ringTarget: x },
                 variant: "primary",
                 size: "sm",
                 text: b,
@@ -67,34 +67,34 @@ function I(e) {
                         wishlistId: r,
                         action: f.NW.WISHLIST_ITEM_CLICKED,
                         skuId: t.skuId,
-                        analyticsLocations: x,
+                        analyticsLocations: y,
                     }),
                 g());
         };
     return (0, i.jsxs)("div", {
         ref: S,
-        className: m.container,
+        className: p.container,
         children: [
             (0, i.jsxs)("div", {
-                ref: y,
-                className: a()(m.card, {
-                    [m.giftSent]: j,
-                    [m.smallCard]: "gifting_flow" === l,
-                    [m.largeCard]: "profile_modal" === l,
+                ref: x,
+                className: a()(p.card, {
+                    [p.giftSent]: j,
+                    [p.smallCard]: "gifting_flow" === s,
+                    [p.largeCard]: "profile_modal" === s,
                 }),
                 onClick: k,
                 children: [
-                    (0, i.jsx)(o.nn4, { children: (0, i.jsx)(o.H, { children: O }) }),
+                    (0, i.jsx)(c.nn4, { children: (0, i.jsx)(c.H, { children: O }) }),
                     (0, i.jsx)("div", {
-                        className: m.cardPreview,
+                        className: p.cardPreview,
                         children: I(),
                     }),
-                    j && T,
+                    j && N,
                     E
-                        ? N
-                        : (0, i.jsx)(o.P3F, {
+                        ? T
+                        : (0, i.jsx)(c.P3F, {
                               "aria-label": b,
-                              focusProps: { ringTarget: y },
+                              focusProps: { ringTarget: x },
                               onClick: (e) => {
                                   e.stopPropagation(), k();
                               },
@@ -108,7 +108,7 @@ function I(e) {
                     iconSize: "sm",
                     item: t,
                     wishlistId: r,
-                    className: m.removeItemButton,
+                    className: p.removeItemButton,
                 }),
         ],
     });

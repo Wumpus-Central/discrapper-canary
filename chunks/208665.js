@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => E });
 var l,
     r,
     i = n(392711),
@@ -62,7 +62,7 @@ class O extends (r = s.ZP.Store) {
           writable: !0,
       })
     : (O[l] = "GuildSettingsOnboardingPromptsStore");
-let S = new O(o.Z, {
+let E = new O(o.Z, {
     GUILD_SETTINGS_INIT: N,
     GUILD_SETTINGS_SET_SECTION: N,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,

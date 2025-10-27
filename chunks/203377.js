@@ -18,10 +18,10 @@ var c =
     (r[(r.VERIFICATIONS = 3)] = "VERIFICATIONS"),
     r);
 let d = {
-    afk_channel_id: () => i.intl.string(i.t.KuYcnZ),
-    public_updates_channel_id: () => i.intl.string(i.t.vAyDGR),
-    safety_alerts_channel_id: () => i.intl.string(i.t.sMkYEx),
-    system_channel_id: () => i.intl.string(i.t.NASFnp),
+    afk_channel_id: () => i.intl.string(i.t.KuYcnU),
+    public_updates_channel_id: () => i.intl.string(i.t.vAyDGU),
+    safety_alerts_channel_id: () => i.intl.string(i.t.sMkYE8),
+    system_channel_id: () => i.intl.string(i.t.NASFnq),
 };
 function o(e) {
     var t;

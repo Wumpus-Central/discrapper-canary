@@ -21,7 +21,7 @@ function d(t, e, n) {
         ? null
         : (0, r.jsx)(o.sNh, {
               id: "mention",
-              label: b.intl.string(b.t.P8tvKC),
+              label: b.intl.string(b.t.P8tvKG),
               action: function () {
                   let { id: e } = t,
                       n = "@".concat(t.name);

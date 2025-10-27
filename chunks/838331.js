@@ -128,10 +128,10 @@ function S(e) {
             emptyStateHeader: R,
             onQueryChange: P,
         } = e,
-        [w, D] = i.useState(""),
+        [D, w] = i.useState(""),
         L = i.useCallback(
             (e) => {
-                D(e), null == P || P(e);
+                w(e), null == P || P(e);
             },
             [P],
         ),
@@ -149,9 +149,9 @@ function S(e) {
                 padding: 12,
             });
     }, [M]);
-    let G = n(w),
+    let G = n(D),
         B = 0 === G.length,
-        Z = null != R ? R : d.intl.string(d.t["4o4z3d"]),
+        Z = null != R ? R : d.intl.string(d.t["4o4z3e"]),
         F = i.useId(),
         V = i.useCallback(
             () =>
@@ -207,7 +207,7 @@ function S(e) {
                                 size: "sm",
                                 autoFocus: S,
                                 placeholder: t,
-                                query: w,
+                                query: D,
                                 onChange: L,
                                 onKeyDown: i,
                                 onBlur: () => k(null),
@@ -232,7 +232,7 @@ function S(e) {
                                               (0, r.jsx)(u.Text, {
                                                   color: "text-muted",
                                                   variant: "text-md/normal",
-                                                  children: null != N ? N : d.intl.string(d.t.QwSXv7),
+                                                  children: null != N ? N : d.intl.string(d.t.QwSXv8),
                                               }),
                                           ],
                                       })

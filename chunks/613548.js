@@ -50,7 +50,7 @@ function M(e) {
                       u.u,
                       {
                           position: "bottom",
-                          text: A.intl.formatToPlainString(A.t.JjdizM, { username: e.user.username }),
+                          text: A.intl.formatToPlainString(A.t.JjdizN, { username: e.user.username }),
                           children: (0, i.jsx)(S.ZP, {
                               user: e.user,
                               speaking: !0,

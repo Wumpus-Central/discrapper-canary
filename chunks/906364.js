@@ -23,7 +23,7 @@ function l(e) {
         errors: n,
         disabled: f,
         children: (0, r.jsx)(i.oil, {
-            placeholder: null != u ? u : o.intl.string(o.t.NPEUUl),
+            placeholder: null != u ? u : o.intl.string(o.t.NPEUUu),
             maxLength: s,
             value: null != c ? c : d,
             onChange: _,

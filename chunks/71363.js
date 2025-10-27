@@ -28,19 +28,19 @@ let A = (e) => {
         { isAllPerksVisible: a, setIsAllPerksVisible: A, previousComponent: C, enablePremiumBrandRefresh: N } = e,
         R = i.useRef(null),
         P = i.useRef(null),
-        w = Object.entries((0, b.Z)()).reduce((e, t) => {
+        D = Object.entries((0, b.Z)()).reduce((e, t) => {
             let [n, r] = t;
             return !1 !== r.canReveal && "upcomingDropUntimed" !== r.name && (e[n] = r), e;
         }, {}),
-        { analyticsLocations: D } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        { analyticsLocations: w } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [L, x] = i.useState(!1),
         M = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         k = (0, O.mN)(),
         { fractionalState: j } = (0, _.Z)(),
         U = (0, h.W)();
     k
-        ? ((t = I.intl.string(I.t["+vt7w8"])), (n = I.intl.string(I.t.LgHbnJ)))
-        : ((t = I.intl.string(I.t.LgHbnJ)), (n = I.intl.string(I.t["+vt7w8"])));
+        ? ((t = I.intl.string(I.t["+vt7w9"])), (n = I.intl.string(I.t.LgHbnL)))
+        : ((t = I.intl.string(I.t.LgHbnL)), (n = I.intl.string(I.t["+vt7w9"])));
     let G = () => {
         A(!1),
             p.default.track(v.rMx.NITRO_HOME_NAVIGATION, {
@@ -59,7 +59,7 @@ let A = (e) => {
             color: "nitro-pink",
             className: o()(T.container, T.responsiveContainer, { [T.hiddenGradient]: !N }),
             children: (0, r.jsxs)(f.Gt, {
-                value: D,
+                value: w,
                 children: [
                     N
                         ? (0, r.jsx)(g.Z, { onBackClick: G })
@@ -79,7 +79,7 @@ let A = (e) => {
                             (0, r.jsx)(E.Z, {
                                 className: T.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: w,
+                                    perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_FIRST_ROW,
                                     isPremiumSubscriber: k,
                                     hideCardsOnNarrowScreen: !0,
@@ -97,7 +97,7 @@ let A = (e) => {
                             (0, r.jsx)(E.Z, {
                                 className: T.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: w,
+                                    perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_SECOND_ROW,
                                     isPremiumSubscriber: k,
                                     hideCardsOnNarrowScreen: !0,
@@ -110,12 +110,12 @@ let A = (e) => {
                                 variant: "heading-xxl/extrabold",
                                 color: "header-primary",
                                 className: T.heading,
-                                children: I.intl.string(I.t.LTaxu7),
+                                children: I.intl.string(I.t.LTaxu9),
                             }),
                             (0, r.jsx)(E.Z, {
                                 className: T.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: w,
+                                    perksCards: D,
                                     variant: y.gM.CARD_CAROUSEL_THIRD_ROW,
                                     isPremiumSubscriber: k,
                                     hideCardsOnNarrowScreen: !0,
@@ -132,7 +132,7 @@ let A = (e) => {
                         onChange: (e) => {
                             e &&
                                 !L &&
-                                (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: D }),
+                                (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: w }),
                                 x(!0));
                         },
                         children: (0, r.jsx)("div", {
@@ -145,7 +145,7 @@ let A = (e) => {
                         className: T.bottomIllustration,
                         width: 112,
                         height: 85,
-                        alt: I.intl.string(I.t.X4IxWF),
+                        alt: I.intl.string(I.t.X4IxWL),
                     }),
                 ],
             }),

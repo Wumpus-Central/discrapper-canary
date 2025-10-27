@@ -34,6 +34,6 @@ function u(e) {
         },
         onMouseEnter: m,
         onMouseLeave: g,
-        text: null != u ? u : c.intl.string(c.t.HHZmDg),
+        text: null != u ? u : c.intl.string(c.t.HHZmDn),
     });
 }

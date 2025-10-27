@@ -130,7 +130,7 @@ function C(e) {
     let { guildId: t, onClick: n } = e,
         r = (0, c.BU)(v(t) / 1024, { useKibibytes: !0 }),
         i = (0, c.BU)(f.Uq / 1024, { useKibibytes: !0 });
-    return _.intl.format(_.t.tRuxk5, {
+    return _.intl.format(_.t.tRuxk9, {
         maxSize: r,
         premiumMaxSize: i,
         onClick: n,

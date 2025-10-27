@@ -1,35 +1,35 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(647438),
     i = n(166516),
     l = n.n(i),
     a = n(525654),
-    o = n.n(a),
-    s = n(442837),
+    s = n.n(a),
+    o = n(442837),
     c = n(91896),
     u = n(849862),
     d = n(888369),
     p = n(292959),
     f = n(699516),
     h = n(340895),
-    g = n(358085),
-    m = n(998502),
-    b = n(252618),
-    _ = n(981631),
+    m = n(358085),
+    g = n(998502),
+    _ = n(252618),
+    b = n(981631),
     E = n(388032);
 let O = new Set(["Blink", "Gecko", "WebKit"]),
-    v = _.dG4;
-if (g.isPlatformEmbedded) v = (e) => m.ZP.setBadge(e);
-else if (O.has(o().layout)) {
+    I = b.dG4;
+if (m.isPlatformEmbedded) I = (e) => g.ZP.setBadge(e);
+else if (O.has(s().layout)) {
     let e = new (l())({ animation: "none" });
-    v = (t) => {
+    I = (t) => {
         try {
-            (0, b.PR)(t), e.badge(-1 === t ? "\u2022" : t);
+            (0, _.PR)(t), e.badge(-1 === t ? "\u2022" : t);
         } catch (e) {}
     };
 }
-function y() {
-    let e = (0, s.e7)([h.Z], () => h.Z.hasIncomingCalls()),
-        t = (0, s.e7)([d.default, f.Z, p.Z, c.Z], () => {
+function v() {
+    let e = (0, o.e7)([h.Z], () => h.Z.hasIncomingCalls()),
+        t = (0, o.e7)([d.default, f.Z, p.Z, c.Z], () => {
             let e = d.default.getTotalMentionCount(),
                 t = (0, u.m$)([f.Z, c.Z]),
                 n = d.default.hasAnyUnread(),
@@ -39,9 +39,9 @@ function y() {
         });
     r.useEffect(() => {
         if (!e) return;
-        let t = m.ZP.bounceDock("critical"),
-            n = (0, b.EM)({
-                messages: [E.intl.string(E.t["fk1/bW"])],
+        let t = g.ZP.bounceDock("critical"),
+            n = (0, _.EM)({
+                messages: [E.intl.string(E.t["fk1/bX"])],
                 count: 50,
             });
         return () => {
@@ -49,7 +49,7 @@ function y() {
         };
     }, [e]),
         r.useEffect(() => {
-            v(t);
+            I(t);
         }, [t]),
-        r.useEffect(() => () => v(0), []);
+        r.useEffect(() => () => I(0), []);
 }

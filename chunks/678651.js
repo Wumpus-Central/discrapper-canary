@@ -38,7 +38,7 @@ function p(e) {
                             (0, a.jsx)(i.Text, {
                                 variant: "text-md/medium",
                                 className: m.timeTitle,
-                                children: d.intl.string(d.t.g8pDeX),
+                                children: d.intl.string(d.t.g8pDeY),
                             }),
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -56,7 +56,7 @@ function p(e) {
                             (0, a.jsx)(i.Text, {
                                 variant: "text-md/medium",
                                 className: m.timeTitle,
-                                children: d.intl.string(d.t.v6XAgo),
+                                children: d.intl.string(d.t.v6XAgu),
                             }),
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",

@@ -25,9 +25,9 @@ var i = n(951288),
     _ = n(703558),
     O = n(430824),
     x = n(751771),
-    j = n(496675),
-    N = n(699516),
-    Z = n(117530),
+    Z = n(496675),
+    j = n(699516),
+    N = n(117530),
     P = n(594174),
     A = n(626135),
     D = n(768581),
@@ -77,7 +77,7 @@ function B(e) {
         },
     });
     let [O] = (0, S.Z)([l]),
-        N = (0, u.e7)([P.default], () => P.default.getCurrentUser()),
+        j = (0, u.e7)([P.default], () => P.default.getCurrentUser()),
         [D, M] = a.useState(""),
         [F, B] = a.useState([]),
         [K, Q] = a.useState(null),
@@ -99,9 +99,9 @@ function B(e) {
                 a.readAsDataURL(i);
         })();
     }, [r, Q]);
-    let ee = (0, u.Wu)([x.Z, j.Z], () =>
+    let ee = (0, u.Wu)([x.Z, Z.Z], () =>
         x.Z.getInviteSuggestionRows().filter(
-            (e) => e.type === U.bm.FRIEND || e.type === U.bm.DM || j.Z.can(G.Plq.ATTACH_FILES, e.item),
+            (e) => e.type === U.bm.FRIEND || e.type === U.bm.DM || Z.Z.can(G.Plq.ATTACH_FILES, e.item),
         ),
     );
     a.useEffect(() => {
@@ -129,13 +129,13 @@ function B(e) {
         }, [s]),
         en = a.useCallback(async () => {
             A.default.track(G.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
-                user_id: null == N ? void 0 : N.id,
+                user_id: null == j ? void 0 : j.id,
                 application_id: l,
                 activity_session_id: null == v ? void 0 : v.compositeInstanceId,
             }),
                 await L.ZP.copyImage(r),
                 J(!0);
-        }, [null == v ? void 0 : v.compositeInstanceId, l, r, null == N ? void 0 : N.id]),
+        }, [null == v ? void 0 : v.compositeInstanceId, l, r, null == j ? void 0 : j.id]),
         ei = a.useCallback(async () => {
             let e = 0,
                 t = 0,
@@ -169,7 +169,7 @@ function B(e) {
                         draftType: _.d.ChannelMessage,
                     });
                 }
-                let s = Z.Z.getUploads(a, _.d.ChannelMessage);
+                let s = N.Z.getUploads(a, _.d.ChannelMessage);
                 I.Z.sendMessage(
                     a,
                     null != O
@@ -205,7 +205,7 @@ function B(e) {
             }
             let a = F.map((e) => i(e));
             A.default.track(G.rMx.ACTIVITY_SHARE_MOMENT_SEND, {
-                user_id: null == N ? void 0 : N.id,
+                user_id: null == j ? void 0 : j.id,
                 application_id: l,
                 activity_session_id: null == v ? void 0 : v.compositeInstanceId,
                 n_users: e,
@@ -225,7 +225,7 @@ function B(e) {
                 throw ((0, p.showToast)((0, p.createToast)(H.intl.string(H.t.PanA4J), p.ToastType.FAILURE)), e);
             }
             et();
-        }, [v, O, l, F, K, et, N]);
+        }, [v, O, l, F, K, et, j]);
     return null == Y
         ? (0, i.jsx)(p.$jN, {})
         : (0, i.jsx)(
@@ -374,20 +374,20 @@ function W(e) {
             break;
         case U.bm.GROUP_DM: {
             let e = (0, h.x)(t.item),
-                n = (0, v.F6)(t.item, P.default, N.Z);
+                n = (0, v.F6)(t.item, P.default, j.Z);
             (s = (0, i.jsx)(p.qEK, {
                 src: e,
                 "aria-label": n,
                 size: p.EFr.SIZE_40,
             })),
-                (o = (0, v.F6)(t.item, P.default, N.Z));
+                (o = (0, v.F6)(t.item, P.default, j.Z));
             break;
         }
         case U.bm.CHANNEL: {
             let e = t.item,
                 n = O.Z.getGuild(e.guild_id);
             if (null == n) return null;
-            if (((o = "#".concat((0, v.F6)(e, P.default, N.Z))), (d = n.name), null != n.icon)) {
+            if (((o = "#".concat((0, v.F6)(e, P.default, j.Z))), (d = n.name), null != n.icon)) {
                 let t = D.ZP.getGuildIconURL({
                     id: e.guild_id,
                     icon: n.icon,

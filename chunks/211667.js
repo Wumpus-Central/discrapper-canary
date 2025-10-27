@@ -43,9 +43,9 @@ let _ = [
                     expirationDate: {
                         name: "expirationDate",
                         id: (0, a.hQ)(),
-                        title: () => c.intl.string(c.t["CeBa//"]),
+                        title: () => c.intl.string(c.t["CeBa/4"]),
                         autoComplete: "cc-exp",
-                        placeholder: () => c.intl.string(c.t.xeEWQ0),
+                        placeholder: () => c.intl.string(c.t.xeEWQ6),
                         pattern: "\\d*",
                         getClassNameForLayout: () => u.width50,
                         renderInput: (e) => (0, r.jsx)(s.Z, f({}, e)),
@@ -63,7 +63,7 @@ let _ = [
             t({ expirationDate: h }, null === f);
         }, [h, t, f]);
         let g = (e) => {
-            u || "" === e || d(!0), (u && "" === e) || !(0, o.eH)(e) ? p(c.intl.string(c.t["9/zZdn"])) : p(null), m(e);
+            u || "" === e || d(!0), (u && "" === e) || !(0, o.eH)(e) ? p(c.intl.string(c.t["9/zZdl"])) : p(null), m(e);
         };
         return (0, r.jsx)(l.Z, {
             className: n,

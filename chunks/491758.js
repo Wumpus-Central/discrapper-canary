@@ -84,8 +84,8 @@ function R() {
         C = (0, s.e7)([m.Z], () => m.Z.getHardwareClassification()),
         R = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         P = m.Z.isDecoupledGameClippingEnabled(),
-        w = (0, E.Z)(_.Z),
-        { showClipsHeaderEntrypoint: D } = h.NV.useExperiment(
+        D = (0, E.Z)(_.Z),
+        { showClipsHeaderEntrypoint: w } = h.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
         );
@@ -95,15 +95,15 @@ function R() {
             () => [
                 {
                     value: y.OT.SECONDS_30,
-                    label: I.intl.formatToPlainString(I.t["bTFv//"], { count: 30 }),
+                    label: I.intl.formatToPlainString(I.t["bTFv/3"], { count: 30 }),
                 },
                 {
                     value: y.OT.MINUTES_1,
-                    label: I.intl.formatToPlainString(I.t.ICo9Nj, { count: 1 }),
+                    label: I.intl.formatToPlainString(I.t.ICo9Nk, { count: 1 }),
                 },
                 {
                     value: y.OT.MINUTES_2,
-                    label: I.intl.formatToPlainString(I.t.ICo9Nj, { count: 2 }),
+                    label: I.intl.formatToPlainString(I.t.ICo9Nk, { count: 2 }),
                 },
             ],
             [L],
@@ -112,31 +112,31 @@ function R() {
             () => [
                 {
                     value: v.ApplicationStreamResolutions.RESOLUTION_480,
-                    label: I.intl.formatToPlainString(I.t.TEOC0N, {
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
                         resolution: v.ApplicationStreamResolutions.RESOLUTION_480,
                     }),
                 },
                 {
                     value: v.ApplicationStreamResolutions.RESOLUTION_720,
-                    label: I.intl.formatToPlainString(I.t.TEOC0N, {
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
                         resolution: v.ApplicationStreamResolutions.RESOLUTION_720,
                     }),
                 },
                 {
                     value: v.ApplicationStreamResolutions.RESOLUTION_1080,
-                    label: I.intl.formatToPlainString(I.t.TEOC0N, {
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
                         resolution: v.ApplicationStreamResolutions.RESOLUTION_1080,
                     }),
                 },
                 {
                     value: v.ApplicationStreamResolutions.RESOLUTION_1440,
-                    label: I.intl.formatToPlainString(I.t.TEOC0N, {
+                    label: I.intl.formatToPlainString(I.t.TEOC0I, {
                         resolution: v.ApplicationStreamResolutions.RESOLUTION_1440,
                     }),
                 },
                 {
                     value: v.ApplicationStreamResolutions.RESOLUTION_SOURCE,
-                    label: I.intl.string(I.t.XjXqzs),
+                    label: I.intl.string(I.t.XjXqzh),
                 },
             ],
             [L],
@@ -145,15 +145,15 @@ function R() {
             () => [
                 {
                     value: v.ApplicationStreamFPS.FPS_15,
-                    label: I.intl.formatToPlainString(I.t.Qb44XF, { fps: v.ApplicationStreamFPS.FPS_15 }),
+                    label: I.intl.formatToPlainString(I.t.Qb44XH, { fps: v.ApplicationStreamFPS.FPS_15 }),
                 },
                 {
                     value: v.ApplicationStreamFPS.FPS_30,
-                    label: I.intl.formatToPlainString(I.t.Qb44XF, { fps: v.ApplicationStreamFPS.FPS_30 }),
+                    label: I.intl.formatToPlainString(I.t.Qb44XH, { fps: v.ApplicationStreamFPS.FPS_30 }),
                 },
                 {
                     value: v.ApplicationStreamFPS.FPS_60,
-                    label: I.intl.formatToPlainString(I.t.Qb44XF, { fps: v.ApplicationStreamFPS.FPS_60 }),
+                    label: I.intl.formatToPlainString(I.t.Qb44XH, { fps: v.ApplicationStreamFPS.FPS_60 }),
                 },
             ],
             [L],
@@ -170,12 +170,12 @@ function R() {
             C === g.x.BELOW_MINIMUM
                 ? (0, r.jsx)(f.Z, {
                       look: f.z.WARNING,
-                      children: I.intl.string(I.t.SIxrIC),
+                      children: I.intl.string(I.t.SIxrIF),
                   })
                 : null,
             (0, r.jsx)(l.rsf, {
                 label: I.intl.string(I.t.h8rgrK),
-                description: I.intl.string(I.t["4Qw3ND"]),
+                description: I.intl.string(I.t["4Qw3NO"]),
                 checked: e,
                 onChange: (e) =>
                     b.em({
@@ -183,15 +183,15 @@ function R() {
                         trackAnalytics: !0,
                     }),
             }),
-            (0, r.jsx)(f.Z, { children: I.intl.string(I.t["Z+Mfqa"]) }),
+            (0, r.jsx)(f.Z, { children: I.intl.string(I.t["Z+MfqT"]) }),
             P &&
-                w &&
+                D &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.izJ, {}),
                         (0, r.jsx)(l.rsf, {
-                            label: I.intl.string(I.t.yXvykp),
-                            description: I.intl.string(I.t.YP3ujo),
+                            label: I.intl.string(I.t.yXvykv),
+                            description: I.intl.string(I.t.YP3ujk),
                             checked: n,
                             onChange: (e) =>
                                 b._Q({
@@ -201,13 +201,13 @@ function R() {
                         }),
                     ],
                 }),
-            D &&
+            w &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.izJ, {}),
                         (0, r.jsx)(l.rsf, {
-                            label: I.intl.string(I.t["3zwNf3"]),
-                            description: I.intl.string(I.t.m4Cjj4),
+                            label: I.intl.string(I.t["3zwNf6"]),
+                            description: I.intl.string(I.t.m4Cjj9),
                             checked: t,
                             onChange: (e) => b.N0(e),
                         }),
@@ -220,7 +220,7 @@ function R() {
                     (0, r.jsx)(l.q4e, {
                         onChange: b.eU,
                         label: I.intl.string(I.t.OgfUio),
-                        description: I.intl.string(I.t.H7j4tb),
+                        description: I.intl.string(I.t.H7j4tY),
                         value: a,
                         options: x,
                     }),
@@ -230,8 +230,8 @@ function R() {
                                 resolution: e,
                                 frameRate: S.frameRate,
                             }),
-                        label: I.intl.string(I.t.aFudZG),
-                        description: I.intl.string(I.t.nIrkW1),
+                        label: I.intl.string(I.t.aFudZJ),
+                        description: I.intl.string(I.t.nIrkW5),
                         value: S.resolution,
                         options: M,
                     }),
@@ -241,14 +241,14 @@ function R() {
                                 resolution: S.resolution,
                                 frameRate: e,
                             }),
-                        label: I.intl.string(I.t["2wScLy"]),
-                        description: I.intl.string(I.t["Rf9+f3"]),
+                        label: I.intl.string(I.t["2wScL1"]),
+                        description: I.intl.string(I.t["Rf9+fy"]),
                         value: S.frameRate,
                         options: k,
                     }),
                     (0, r.jsx)(l.gNt, {
-                        label: I.intl.string(I.t.pf54ER),
-                        description: I.intl.string(I.t["QyB/jI"]),
+                        label: I.intl.string(I.t.pf54EU),
+                        description: I.intl.string(I.t["QyB/jK"]),
                         layout: "horizontal",
                         children: (0, r.jsx)("div", {
                             className: T.keyRecorder,

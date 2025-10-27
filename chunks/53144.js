@@ -116,7 +116,7 @@ function h(e) {
                     {
                         variant: "secondary",
                         onClick: m,
-                        text: u.intl.string(u.t["ETE/oK"]),
+                        text: u.intl.string(u.t["ETE/oC"]),
                     },
                     {
                         onClick: h,

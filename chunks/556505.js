@@ -7,7 +7,7 @@ var i = n(951288),
     s = n(542445);
 function c(e) {
     let { labelType: t, collapsed: n = !1 } = e,
-        c = t === a.ww.NEW ? o.intl.string(o.t.y2b7CA) : o.intl.string(o.t["/qdhkp"]),
+        c = t === a.ww.NEW ? o.intl.string(o.t.y2b7CA) : o.intl.string(o.t["/qdhkk"]),
         u = t === a.ww.NEW ? s.activityNewBadge : s.activityUpdatedBadge,
         [d, p] = l.useState(n ? "" : c);
     return (l.useEffect(() => {
@@ -15,7 +15,7 @@ function c(e) {
             ? p("")
             : t === a.ww.NEW
               ? p(o.intl.string(o.t.y2b7CA))
-              : t === a.ww.UPDATED && p(o.intl.string(o.t["/qdhkp"]));
+              : t === a.ww.UPDATED && p(o.intl.string(o.t["/qdhkk"]));
     }, [n, t]),
     t === a.ww.NONE)
         ? null

@@ -58,7 +58,7 @@ function T(e) {
 function S(e) {
     let { className: t, sound: n, playSound: i, isPlaying: a } = e,
         s = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        l = O.intl.formatToPlainString(O.t.tuMUJy, {
+        l = O.intl.formatToPlainString(O.t.tuMUJ2, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name,
         });

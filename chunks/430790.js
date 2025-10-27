@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(647438),
     a = n(481060),
     l = n(785717),
     o = n(388032),
-    s = n(684066);
-function c() {
+    c = n(684066);
+function s() {
     let { trackUserProfileEditAction: e } = (0, l.KZ)(),
         t = i.useCallback(() => {
             e({ action: "PRESS_ADD_WIDGET" }),
@@ -62,7 +62,7 @@ function c() {
                 );
         }, [e]);
     return (0, r.jsxs)(a.P3F, {
-        className: s.addWidgetButton,
+        className: c.addWidgetButton,
         onClick: t,
         children: [
             (0, r.jsx)(a.qJs, {

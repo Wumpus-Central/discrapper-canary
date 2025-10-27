@@ -10,7 +10,7 @@ function c(e, t) {
     return (0, l.a)(e)
         ? (0, r.jsx)(i.sNh, {
               id: "forward",
-              label: s.intl.string(s.t.I3ltXF),
+              label: s.intl.string(s.t.I3ltXO),
               icon: a.Z,
               action: () => {
                   (0, o.ts)(t, e);

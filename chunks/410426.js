@@ -22,12 +22,12 @@ function h(e) {
             n(), (0, c.Z)(f.Z.CLIPS);
         }, [n]),
         y = (() => {
-            if (!h) return g.intl.format(g.t["3iveam"], { onClick: j });
-            if (t) return g.intl.string(g.t["xrEs6+"]);
+            if (!h) return g.intl.format(g.t["3iveao"], { onClick: j });
+            if (t) return g.intl.string(g.t["xrEs6/"]);
             if (null == r) return g.intl.format(g.t.jpKk7e, { onClick: j });
             {
                 let e = d.BB(r.shortcut, !0);
-                return g.intl.format(g.t["xY/8Ky"], {
+                return g.intl.format(g.t["xY/8K5"], {
                     keybind: e,
                     keybindHook: () =>
                         (0, l.jsx)("span", {

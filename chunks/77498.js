@@ -80,10 +80,10 @@ function P(e) {
     let { detectableApplications: t } = e;
     for (let e of t) R(e);
 }
-function w() {
+function D() {
     r = !0;
 }
-function D() {
+function w() {
     r = !1;
 }
 function L(e) {
@@ -212,7 +212,7 @@ g(x, "displayName", "GameStore"),
     ]);
 let M = new x(l.Z, {
     OVERLAY_INITIALIZE: P,
-    GAMES_DATABASE_FETCH: w,
-    GAMES_DATABASE_FETCH_FAIL: D,
+    GAMES_DATABASE_FETCH: D,
+    GAMES_DATABASE_FETCH_FAIL: w,
     GAMES_DATABASE_UPDATE: L,
 });

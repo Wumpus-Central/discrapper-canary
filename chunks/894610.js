@@ -9,13 +9,13 @@ let c = (0, l.Yn)([
     (0, l.nn)({
         key: "LISTING_NAME",
         cellClassName: o.listingNameColumn,
-        renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.OGpGqK) }),
+        renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.OGpGqO) }),
         sort: (0, l.Qg)((e) => e.listing.name.toLowerCase()),
     }),
     (0, l.GW)({
         key: "PAYMENTS_COUNT",
         cellClassName: o.paymentsCountColumn,
-        renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.vpHXJy) }),
+        renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.vpHXJ0) }),
         getCount: (e) => e.paymentsCount,
         sort: (0, l.Qg)((e) => {
             var t;
@@ -25,7 +25,7 @@ let c = (0, l.Yn)([
     (0, l.i$)({
         key: "PRICE",
         cellClassName: o.priceColumn,
-        renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.VodAGR) }),
+        renderHeader: () => (0, r.jsx)(l.qN, { children: s.intl.string(s.t.VodAGZ) }),
         getAmount(e) {
             let { listing: t } = e;
             return t.price_tier;

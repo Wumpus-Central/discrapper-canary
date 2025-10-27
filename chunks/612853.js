@@ -20,7 +20,7 @@ function u(e) {
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 className: a()(l.lockIconText, null != n ? n : void 0),
-                children: s.intl.string(s.t.Kv6Z4O),
+                children: s.intl.string(s.t.Kv6Z4I),
             }),
         ],
     });

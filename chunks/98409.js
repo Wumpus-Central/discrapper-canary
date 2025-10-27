@@ -1,25 +1,25 @@
-i.d(t, { default: () => d });
-var s = i(951288);
-i(647438);
-var a = i(481060),
-    e = i(239091),
-    r = i(934415),
-    c = i(572004),
-    l = i(176505),
-    o = i(388032);
+t.d(s, { default: () => d });
+var i = t(951288);
+t(647438);
+var a = t(481060),
+    e = t(239091),
+    c = t(934415),
+    l = t(572004),
+    o = t(176505),
+    r = t(388032);
 function d(n) {
-    let { guild: t, onSelect: i } = n;
-    return (0, s.jsx)(a.v2r, {
+    let { guild: s, onSelect: t } = n;
+    return (0, i.jsx)(a.v2r, {
         navId: "game-shop-context",
-        "aria-label": o.intl.string(o.t.vyaWs7),
+        "aria-label": r.intl.string(r.t.vyaWs7),
         onClose: e.Zy,
-        onSelect: i,
-        children: (0, s.jsx)(a.kSQ, {
-            children: (0, s.jsx)(a.sNh, {
+        onSelect: t,
+        children: (0, i.jsx)(a.kSQ, {
+            children: (0, i.jsx)(a.sNh, {
                 id: "game-shop-copy-link",
-                label: o.intl.string(o.t.WqhZsr),
+                label: r.intl.string(r.t.WqhZss),
                 action: () => {
-                    (0, c.JG)((0, r.wR)(t.id, l.oC.GAME_SHOP));
+                    (0, l.JG)((0, c.wR)(s.id, o.oC.GAME_SHOP));
                 },
             }),
         }),

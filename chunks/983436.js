@@ -42,7 +42,7 @@ function h(e) {
                             children: (0, r.jsxs)("span", {
                                 className: p.infoTitle,
                                 children: [
-                                    _.intl.format(_.t["2wimj4"], { guildName: t.name }),
+                                    _.intl.format(_.t["2wimj5"], { guildName: t.name }),
                                     (0, r.jsx)("span", {
                                         className: p.infoBadge,
                                         children: (0, r.jsx)(s.Z, {
@@ -58,7 +58,7 @@ function h(e) {
                 (0, r.jsx)(l.Z.Button, {
                     onClick: E,
                     color: l.Z.Button.Colors.GREEN,
-                    children: n.isGuildStageVoice() ? _.intl.string(_.t["7vb2cX"]) : _.intl.string(_.t["96ANUF"]),
+                    children: n.isGuildStageVoice() ? _.intl.string(_.t["7vb2cc"]) : _.intl.string(_.t["96ANUN"]),
                 }),
             ],
         }),

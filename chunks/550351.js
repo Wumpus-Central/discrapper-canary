@@ -39,7 +39,7 @@ function h(e) {
         {
             id: u.default.fromTimestamp(Date.now()),
             version: d.Bg,
-            applicationName: null != t ? t : _.intl.string(_.t.qtSJxc),
+            applicationName: null != t ? t : _.intl.string(_.t.qtSJxb),
             applicationId: n,
             users: i,
             clipMethod: "manual",

@@ -5,8 +5,8 @@ var i = n(120356),
     a = n.n(i),
     l = n(36563),
     o = n(481060),
-    s = n(313201),
-    c = n(245583);
+    c = n(313201),
+    s = n(245583);
 function u(e) {
     var { label: t, visuallyHideLabel: n = !1, className: i, size: u = o.EFr.SIZE_16, maxUsers: d = 4 } = e,
         f = (function (e, t) {
@@ -30,9 +30,9 @@ function u(e) {
             }
             return i;
         })(e, ["label", "visuallyHideLabel", "className", "size", "maxUsers"]);
-    let g = (0, s.Dt)();
+    let g = (0, c.Dt)();
     return (0, r.jsxs)("div", {
-        className: a()(i, c.container),
+        className: a()(i, s.container),
         children: [
             (0, r.jsx)(
                 l.Z,
@@ -63,7 +63,7 @@ function u(e) {
                 })(
                     {
                         "aria-labelledby": g,
-                        overflowCountClassName: c.overflowButton,
+                        overflowCountClassName: s.overflowButton,
                         size: u,
                         maxUsers: d,
                     },

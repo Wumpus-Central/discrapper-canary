@@ -4,8 +4,8 @@ var r = n(951288),
     a = n(81897),
     l = n(906732),
     o = n(566898),
-    s = n(785717),
-    c = n(806729),
+    c = n(785717),
+    s = n(806729),
     u = n(857302),
     d = n(892001),
     f = n(252417),
@@ -14,9 +14,9 @@ var r = n(951288),
     m = n(443680);
 function b(e) {
     let { user: t, guildId: n, channelId: b, onClose: h } = e,
-        { analyticsLocations: v } = (0, l.ZP)(),
-        { context: y, trackUserProfileAction: j } = (0, s.KZ)(),
-        { mutualFriends: O, mutualFriendsCount: x } = (0, c.Z)(t),
+        { analyticsLocations: y } = (0, l.ZP)(),
+        { context: v, trackUserProfileAction: O } = (0, c.KZ)(),
+        { mutualFriends: j, mutualFriendsCount: x } = (0, s.Z)(t),
         _ = (0, a.Z)();
     return (
         i.useEffect(() => {
@@ -25,7 +25,7 @@ function b(e) {
         (0, r.jsx)(p.F, {
             className: m.scroller,
             children:
-                null == O
+                null == j
                     ? Array.from({ length: null != x ? x : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               "div",
@@ -45,9 +45,9 @@ function b(e) {
                               t,
                           ),
                       )
-                    : 0 === O.length
+                    : 0 === j.length
                       ? (0, r.jsx)(g.s_, {})
-                      : O.map((e) => {
+                      : j.map((e) => {
                             let { key: t, user: i, status: a } = e;
                             return (0, r.jsx)(
                                 f.Z,
@@ -59,7 +59,7 @@ function b(e) {
                                     onSelect: () => {
                                         var e, t;
                                         null == h || h(),
-                                            j({ action: "PRESS_MUTUAL_FRIEND" }),
+                                            O({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, d.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -86,11 +86,11 @@ function b(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, y)),
+                                                })({}, v)),
                                                 (t = t =
                                                     {
                                                         userId: i.id,
-                                                        sourceAnalyticsLocations: v,
+                                                        sourceAnalyticsLocations: y,
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

@@ -1,26 +1,26 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(545957),
     u = n(594174),
     d = n(51144),
     p = n(553393),
     f = n(981631),
     h = n(388032),
-    g = n(818923),
-    m = n(746882);
-let b = function (e) {
+    m = n(818923),
+    g = n(746882);
+let _ = function (e) {
     let { quest: t } = e,
         [n, l] = i.useState(!1),
-        b = i.useRef(null),
-        _ = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        E = d.ZP.useName(_),
-        O = (0, c.Z)(null == _ ? void 0 : _.id),
-        v = i.useCallback(
+        _ = i.useRef(null),
+        b = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        E = d.ZP.useName(b),
+        O = (0, c.Z)(null == b ? void 0 : b.id),
+        I = i.useCallback(
             (e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -53,7 +53,7 @@ let b = function (e) {
                         {
                             name: E,
                             quest: t,
-                            memberListItemRef: b,
+                            memberListItemRef: _,
                             applicationStream: O,
                         },
                         e,
@@ -82,58 +82,58 @@ let b = function (e) {
             [t, O, E],
         );
     return (0, r.jsx)("div", {
-        className: g.previewBackground,
+        className: m.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: g.previewCard,
+            className: m.previewCard,
             children: [
-                (0, r.jsx)(s.Heading, {
-                    className: m.heading,
+                (0, r.jsx)(o.Heading, {
+                    className: g.heading,
                     variant: "heading-md/semibold",
                     children: h.intl.string(h.t.jY7Zxg),
                 }),
                 (0, r.jsx)("div", {
-                    className: m.previewDescription,
+                    className: g.previewDescription,
                     children: h.intl.string(h.t.q3hbne),
                 }),
                 (0, r.jsx)("div", {
-                    className: m.memberListContainer,
-                    children: (0, r.jsx)(s.yRy, {
-                        targetElementRef: b,
-                        renderPopout: v,
+                    className: g.memberListContainer,
+                    children: (0, r.jsx)(o.yRy, {
+                        targetElementRef: _,
+                        renderPopout: I,
                         position: "bottom",
                         shouldShow: n,
                         onRequestClose: () => l(!1),
                         nudgeAlignIntoViewport: !1,
                         useRawTargetDimensions: !0,
-                        animation: s.yRy.Animation.NONE,
+                        animation: o.yRy.Animation.NONE,
                         spacing: -3,
                         fixed: !0,
                         scrollBehavior: "close",
                         children: () =>
                             (0, r.jsx)("div", {
-                                ref: b,
-                                className: a()(m.minimalMemberItem, { [m.selected]: n }),
-                                children: (0, r.jsx)(s.P3F, {
+                                ref: _,
+                                className: a()(g.minimalMemberItem, { [g.selected]: n }),
+                                children: (0, r.jsx)(o.P3F, {
                                     onClick: () => l(!n),
                                     tabIndex: 0,
                                     children: (0, r.jsxs)("div", {
-                                        className: m.memberItemContent,
+                                        className: g.memberItemContent,
                                         children: [
-                                            (0, r.jsx)(s.qEK, {
-                                                size: s.EFr.SIZE_32,
-                                                src: null == _ ? void 0 : _.getAvatarURL(void 0, 32),
+                                            (0, r.jsx)(o.qEK, {
+                                                size: o.EFr.SIZE_32,
+                                                src: null == b ? void 0 : b.getAvatarURL(void 0, 32),
                                                 status: f.Skl.ONLINE,
-                                                "aria-label": null == _ ? void 0 : _.username,
+                                                "aria-label": null == b ? void 0 : b.username,
                                             }),
                                             (0, r.jsxs)("div", {
-                                                className: m.memberInfo,
+                                                className: g.memberInfo,
                                                 children: [
-                                                    (0, r.jsx)(s.Text, {
+                                                    (0, r.jsx)(o.Text, {
                                                         variant: "text-md/semibold",
                                                         color: "header-primary",
                                                         children: E,
                                                     }),
-                                                    (0, r.jsx)(s.Text, {
+                                                    (0, r.jsx)(o.Text, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
                                                         children: h.intl.string(h.t.b9w3bO),

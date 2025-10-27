@@ -54,7 +54,7 @@ function P(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,12 +66,12 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,7 +84,7 @@ function L(e) {
             highlightAddPaymentMethodButton: a,
             dropdownClassName: s,
             analyticsLocation: R,
-            currentInvoicePreview: w,
+            currentInvoicePreview: D,
             disabled: L = !1,
         } = e,
         M = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
@@ -112,7 +112,7 @@ function L(e) {
                     amount: i.subtotal,
                     currency: i.currency,
                 };
-            w.currency !== i.currency || (w.currency === i.currency && w.total !== i.total)
+            D.currency !== i.currency || (D.currency === i.currency && D.total !== i.total)
                 ? await x(
                       i,
                       () => {
@@ -144,7 +144,7 @@ function L(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         _.default,
-                        D(P({}, e), {
+                        w(P({}, e), {
                             onAddPaymentSource: q,
                             analyticsLocation: R,
                         }),
@@ -163,7 +163,7 @@ function L(e) {
                 prependOption:
                     null == e
                         ? {
-                              label: A.intl.string(A.t.iA5vAw),
+                              label: A.intl.string(A.t.iA5vA1),
                               value: null,
                           }
                         : null,
@@ -183,7 +183,7 @@ function L(e) {
                 fullWidth: !0,
                 variant: a ? "primary" : "secondary",
                 onClick: X,
-                text: A.intl.string(A.t.CpOiEB),
+                text: A.intl.string(A.t.CpOiEO),
             }),
         $ = (e) => {
             l()(null != e.paymentGateway, "Expected payment gateway when managed externally");
@@ -194,7 +194,7 @@ function L(e) {
                 className: C.externalLink,
                 children: (0, r.jsx)(u.Button, {
                     variant: "secondary",
-                    text: A.intl.string(A.t.SgX7RU),
+                    text: A.intl.string(A.t.SgX7Ra),
                     fullWidth: !0,
                 }),
             });
@@ -215,7 +215,7 @@ function L(e) {
                           children: (0, r.jsxs)("div", {
                               className: o()(C.currency, N.flex, N.alignCenter),
                               children: [
-                                  (0, r.jsx)("div", { children: A.intl.string(A.t["0YjaXV"]) }),
+                                  (0, r.jsx)("div", { children: A.intl.string(A.t["0YjaXf"]) }),
                                   (0, r.jsx)(p.Z, {
                                       className: C.currencyDropdown,
                                       selectedCurrency: V,

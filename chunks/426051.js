@@ -1,66 +1,66 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(286379),
     a = n(481060),
-    o = n(797614),
-    s = n(359110),
+    s = n(797614),
+    o = n(359110),
     c = n(6025),
     u = n(433355),
     d = n(26373),
     p = n(486622),
     f = n(376191),
     h = n(86203),
-    g = n(388032),
-    m = n(539410);
-function b(e) {
-    let { active: t, user: n, channel: b } = e,
-        _ = (0, d.V)(),
+    m = n(388032),
+    g = n(539410);
+function _(e) {
+    let { active: t, user: n, channel: _ } = e,
+        b = (0, d.V)(),
         E = i.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)),
-                o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+            (0, a.showToast)((0, a.createToast)(m.intl.string(m.t.pIQ3h4), a.ToastType.FAILURE)),
+                s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         O = i.useCallback(() => {
             c.Z.closeChannelSidebar(u.uZ);
         }, []),
-        v = i.useCallback(() => {
-            c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
-        }, [b.id, _]),
+        I = i.useCallback(() => {
+            c.Z.closeChannelSidebar(u.uZ), b && (0, o.Kh)(_.id);
+        }, [_.id, b]),
         {
-            acceptMessageRequest: y,
-            isAcceptLoading: I,
+            acceptMessageRequest: v,
+            isAcceptLoading: y,
             isUserProfileLoading: C,
             isOptimisticAccepted: S,
         } = (0, p.m)({
             user: n,
-            onAcceptSuccess: v,
+            onAcceptSuccess: I,
             onRejectSuccess: O,
             onError: E,
         }),
-        N = I || C,
-        T = N || S;
+        T = y || C,
+        N = T || S;
     return (0, r.jsxs)("div", {
-        className: m.container,
+        className: g.container,
         children: [
             (0, r.jsx)(f.Z, {
                 otherUser: n,
-                channel: b,
+                channel: _,
                 active: t,
             }),
             (0, r.jsxs)("div", {
-                className: m.actions,
+                className: g.actions,
                 children: [
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: g.intl.string(g.t.vicfl5),
+                        text: m.intl.string(m.t.vicfl6),
                         onClick: (e) => {
-                            y(b.id), e.stopPropagation();
+                            v(_.id), e.stopPropagation();
                         },
-                        disabled: T,
-                        loading: N,
+                        disabled: N,
+                        loading: T,
                     }),
-                    (0, r.jsx)(h.Z, { channel: b }),
+                    (0, r.jsx)(h.Z, { channel: _ }),
                 ],
             }),
         ],

@@ -19,7 +19,7 @@ function h() {
         ? null
         : (0, r.jsx)(c.H, {
               children: (0, r.jsx)(u.Z, {
-                  text: p.intl.format(p.t["TnH05+"], { count: n }),
+                  text: p.intl.format(p.t["TnH05/"], { count: n }),
                   color: o.aML.Colors.RED,
                   children: (0, r.jsx)(
                       o.Anchor,
@@ -52,7 +52,7 @@ function h() {
                               href: d.yX.STATUS,
                               target: "_blank",
                               className: f.guildsError,
-                              "aria-label": p.intl.formatToPlainString(p.t["MEpX+/"], { count: n }),
+                              "aria-label": p.intl.formatToPlainString(p.t["MEpX+2"], { count: n }),
                           },
                           h,
                       )),

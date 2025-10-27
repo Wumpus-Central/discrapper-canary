@@ -13,21 +13,21 @@ function a(e) {
                         t,
                         n,
                         o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (!(0, i.isValidElement)(o)) return a(o, s), o;
+                        c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                    if (!(0, i.isValidElement)(o)) return a(o, c), o;
                     if ("string" != typeof o.type) {
-                        var c = o.type.displayName || o.type.name || "the component";
+                        var s = o.type.displayName || o.type.name || "the component";
                         throw Error(
                             "Only native element nodes can now be passed to React DnD connectors." +
-                                "You can either wrap ".concat(c, " into a <div>, or turn it into a ") +
+                                "You can either wrap ".concat(s, " into a <div>, or turn it into a ") +
                                 "drag source or a drop target itself.",
                         );
                     }
                     return (
                         (e = o),
-                        (t = s
+                        (t = c
                             ? function (e) {
-                                  return a(e, s);
+                                  return a(e, c);
                               }
                             : a),
                         (n = e.ref),

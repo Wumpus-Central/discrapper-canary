@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => w,
+    B: () => D,
     E: () => P,
 }),
     n(953529);
@@ -110,7 +110,7 @@ let v = (e, t) => {
             }),
         });
     };
-function w(e) {
+function D(e) {
     let { sku: t, skuPricePreview: n, application: i } = e;
     s()(null != n.amount, "SKU must have a price set."),
         s()(null != n.invoice_items && 1 === n.invoice_items.length, "SKU preview must have single line item");
@@ -158,7 +158,7 @@ function w(e) {
                         "THREE_COLUMN" === o && (0, r.jsx)(S, {}),
                         (0, r.jsx)(A, {
                             className: O.invoiceRegularText,
-                            children: y.intl.string(y.t["/I8zmJ"]),
+                            children: y.intl.string(y.t["/I8zmP"]),
                         }),
                         (0, r.jsx)(C, {
                             className: O.invoiceRegularText,
@@ -175,7 +175,7 @@ function w(e) {
                             children: [
                                 (0, r.jsx)(S, {
                                     className: O.invoiceRegularText,
-                                    children: y.intl.format(y.t["+B5KfH"], {}),
+                                    children: y.intl.format(y.t["+B5KfG"], {}),
                                 }),
                                 "THREE_COLUMN" === o && (0, r.jsx)(A, {}),
                                 (0, r.jsx)(C, {

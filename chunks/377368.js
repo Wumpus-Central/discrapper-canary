@@ -1,24 +1,24 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(570140),
     a = n(536442),
-    o = n(810788),
-    s = n(592125),
+    s = n(810788),
+    o = n(592125),
     c = n(131951),
     u = n(944486),
     d = n(556296),
     p = n(131468),
     f = n(208049),
     h = n(763296),
-    g = n(641015),
-    m = n(22382),
-    b = n(747071),
-    _ = n(49230),
+    m = n(641015),
+    g = n(22382),
+    _ = n(747071),
+    b = n(49230),
     E = n(981631),
     O = n(65154);
-function v(e, t, n) {
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-class y extends p.Z {
+class v extends p.Z {
     _initialize() {
         super._initialize(),
             __OVERLAY__ ||
@@ -52,8 +52,8 @@ class y extends p.Z {
         var t;
         super(...e),
             (t = this),
-            v(this, "playingSoundsWeb", new Map()),
-            v(this, "_stopAndClearSounds", () => {
+            I(this, "playingSoundsWeb", new Map()),
+            I(this, "_stopAndClearSounds", () => {
                 c.Z.supports(O.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
@@ -63,7 +63,7 @@ class y extends p.Z {
                     }),
                     (this.playingSoundsWeb = new Map());
             }),
-            v(this, "_playSound", async function (e) {
+            I(this, "_playSound", async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     r = arguments.length > 2 ? arguments[2] : void 0,
                     i = arguments.length > 3 ? arguments[3] : void 0,
@@ -72,26 +72,26 @@ class y extends p.Z {
                     try {
                         let i = {
                             soundKey: "".concat(r, "-").concat(e),
-                            soundURL: (0, m.Z)(e),
-                            soundVolume: (0, b.Z)(n),
+                            soundURL: (0, g.Z)(e),
+                            soundVolume: (0, _.Z)(n),
                             reportSoundStartedPlaying: () => (0, f.xR)(e, r),
                         };
-                        c.Z.supports(O.AN.SAMPLE_PLAYBACK) ? await (0, _.$)(i) : await (0, _.h)(i, t.playingSoundsWeb);
+                        c.Z.supports(O.AN.SAMPLE_PLAYBACK) ? await (0, b.$)(i) : await (0, b.h)(i, t.playingSoundsWeb);
                     } finally {
                         (0, f.R)(e, r);
                     }
             }),
-            v(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
+            I(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
                 (0, f.w)();
             }),
-            v(this, "_handleOpenEducationModal", (e, t) => {
+            I(this, "_handleOpenEducationModal", (e, t) => {
                 if (null == e) return;
-                let l = s.Z.getChannel(t),
+                let l = o.Z.getChannel(t),
                     c = d.ZP.getKeybindForAction(E.kg4.SOUNDBOARD_HOLD);
                 null != l &&
-                    (0, g.Z)(l) &&
+                    (0, m.Z)(l) &&
                     null != c &&
-                    o.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
+                    s.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, i.ZDy)(async () => {
                         let { default: t } = await n.e("69208").then(n.bind(n, 490166));
                         return (n) =>
@@ -126,7 +126,7 @@ class y extends p.Z {
                                                     }),
                                                 )),
                                                 r.forEach(function (t) {
-                                                    v(e, t, n[t]);
+                                                    I(e, t, n[t]);
                                                 });
                                         }
                                         return e;
@@ -142,4 +142,4 @@ class y extends p.Z {
             });
     }
 }
-let I = new y();
+let y = new v();

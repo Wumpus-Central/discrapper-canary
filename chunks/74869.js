@@ -169,7 +169,7 @@ function O() {
                             query: c,
                             onChange: f,
                             ref: t,
-                            placeholder: h.intl.string(h.t["5h0QOD"]),
+                            placeholder: h.intl.string(h.t["5h0QOP"]),
                         }),
                     ),
             },

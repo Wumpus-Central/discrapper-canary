@@ -7,17 +7,17 @@ var r = n(981631),
 function l(e) {
     switch (e) {
         case r.evJ.UNKNOWN_CHANNEL:
-            return i.intl.string(i.t.ETCmRU);
+            return i.intl.string(i.t.ETCmRa);
         case r.evJ.INVALID_PERMISSIONS:
-            return i.intl.string(i.t.lXtut7);
+            return i.intl.string(i.t.lXtut1);
         case r.evJ.INVALID_ACCESS:
-            return i.intl.string(i.t.TAXOKy);
+            return i.intl.string(i.t.TAXOKw);
         case r.evJ.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS:
-            return i.intl.string(i.t.ZpuxVl);
+            return i.intl.string(i.t.ZpuxVs);
         case r.evJ.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED:
-            return i.intl.string(i.t.tSBmIi);
+            return i.intl.string(i.t.tSBmIv);
         case r.evJ.VANITY_URL_REQUIREMENTS_NOT_MET:
-            return i.intl.string(i.t["w+yGQU"]);
+            return i.intl.string(i.t["w+yGQT"]);
         default:
             return i.intl.string(i.t.ckQidX);
     }

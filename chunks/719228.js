@@ -18,8 +18,8 @@ var r = n(951288),
 function b(e) {
     let { setQuery: t, query: n } = e;
     return (0, r.jsx)(c.E1j, {
-        placeholder: g.intl.string(g.t.vf3ZTU),
-        "aria-label": g.intl.string(g.t.vf3ZTU),
+        placeholder: g.intl.string(g.t.vf3ZTa),
+        "aria-label": g.intl.string(g.t.vf3ZTa),
         query: n,
         onChange: t,
         onClear: () => t(""),
@@ -64,7 +64,7 @@ function y(e) {
                                               t,
                                           ),
                                   })
-                                : g.intl.string(g.t.w3GLl5),
+                                : g.intl.string(g.t.w3GLl9),
                     }),
                 }),
             y.map((e) =>
@@ -101,7 +101,7 @@ function y(e) {
                                 className: E.selectGuildPseudoCta,
                                 color: "always-white",
                                 variant: "text-sm/medium",
-                                children: t ? g.intl.string(g.t.dUgaFx) : g.intl.string(g.t.Uj0md3),
+                                children: t ? g.intl.string(g.t.dUgaF8) : g.intl.string(g.t.Uj0md3),
                             }),
                         ],
                     },
@@ -117,7 +117,7 @@ function O(e) {
         d = async () => {
             await t();
         },
-        f = o ? g.intl.string(g.t.IB13DQ) : g.intl.string(g.t.cQYceX);
+        f = o ? g.intl.string(g.t.IB13DV) : g.intl.string(g.t.cQYceV);
     return (0, r.jsx)(s.Modal, {
         transitionState: a,
         onClose: d,

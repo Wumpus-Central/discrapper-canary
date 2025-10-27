@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(685816),
-    s = n(481060),
+    s = n(685816),
+    o = n(481060),
     c = n(702486),
     u = n(626135),
     d = n(381585),
@@ -28,7 +28,7 @@ var r = n(951288),
     L = n(310582);
 let I = (e) => {
         var t;
-        let { handleTransition: n, numVisibleItems: i, isFetchingCategories: s, tab: c } = e,
+        let { handleTransition: n, numVisibleItems: i, isFetchingCategories: o, tab: c } = e,
             { noCache: u, includeUnpublished: h } = (0, _.Z)(),
             [S, k] = l.useState(!1),
             I = (0, d.sp)(),
@@ -97,7 +97,7 @@ let I = (e) => {
                         }),
                         (0, r.jsx)(v.Z, {
                             isLoading: A,
-                            title: c === j.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
+                            title: c === j.AW.ORBS ? T.intl.string(T.t.dFgeuZ) : T.intl.string(T.t.NSv5KV),
                             numVisibleItems: i,
                             tab: c,
                         }),
@@ -110,7 +110,7 @@ let I = (e) => {
                             let u = null,
                                 d = !1;
                             switch (e.type) {
-                                case o.z.HERO:
+                                case s.z.HERO:
                                     u = (0, r.jsx)(
                                         E.Z,
                                         {
@@ -122,7 +122,7 @@ let I = (e) => {
                                         l,
                                     );
                                     break;
-                                case o.z.FEATURED:
+                                case s.z.FEATURED:
                                     u = (0, r.jsx)(
                                         b.Z,
                                         {
@@ -133,18 +133,18 @@ let I = (e) => {
                                         l,
                                     );
                                     break;
-                                case o.z.FEED:
+                                case s.z.FEED:
                                     let p = e.sortedSkuIds;
                                     u = (0, r.jsx)(
                                         v.Z,
                                         {
                                             title:
-                                                c === j.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
-                                            isLoading: A || s,
+                                                c === j.AW.ORBS ? T.intl.string(T.t.dFgeuZ) : T.intl.string(T.t.NSv5KV),
+                                            isLoading: A || o,
                                             numVisibleItems: i,
                                             sortedSkuIds: p,
                                             buttonContainerClassName:
-                                                (null == t ? void 0 : t.type) === o.z.IMMERSIVE_BANNER
+                                                (null == t ? void 0 : t.type) === s.z.IMMERSIVE_BANNER
                                                     ? L.feedblockInteractiveBackground
                                                     : void 0,
                                             prioritizeUserDiscounts: c === j.AW.HOME,
@@ -154,7 +154,7 @@ let I = (e) => {
                                         l,
                                     );
                                     break;
-                                case o.z.WIDE_BANNER:
+                                case s.z.WIDE_BANNER:
                                     u = (0, r.jsx)(
                                         y.Z,
                                         {
@@ -165,7 +165,7 @@ let I = (e) => {
                                         l,
                                     );
                                     break;
-                                case o.z.SHELF:
+                                case s.z.SHELF:
                                     u = (0, r.jsx)(
                                         O.Z,
                                         {
@@ -176,7 +176,7 @@ let I = (e) => {
                                         l,
                                     );
                                     break;
-                                case o.z.COUNTDOWN_TIMER:
+                                case s.z.COUNTDOWN_TIMER:
                                     (u = (0, r.jsx)(
                                         m.J,
                                         {
@@ -187,7 +187,7 @@ let I = (e) => {
                                     )),
                                         (d = !0);
                                     break;
-                                case o.z.IMMERSIVE_BANNER:
+                                case s.z.IMMERSIVE_BANNER:
                                     u = (0, r.jsx)(
                                         x.Z,
                                         {
@@ -220,7 +220,7 @@ let I = (e) => {
     B = (e) => {
         let { handleTransition: t, tab: n, transitionState: i } = e,
             a = l.useRef(null),
-            { handleScroll: o } = (0, c.z)(a, n),
+            { handleScroll: s } = (0, c.z)(a, n),
             g = (0, h.R)(),
             p = (0, d.sp)(),
             [f, C] = l.useState(j.IV),
@@ -242,10 +242,10 @@ let I = (e) => {
                     );
                 }
             }, [a, f, C, m]),
-            (0, r.jsx)(s.Den, {
+            (0, r.jsx)(o.Den, {
                 className: L.shopScroll,
                 ref: a,
-                onScroll: o,
+                onScroll: s,
                 children: (0, r.jsxs)("div", {
                     className: L.shop,
                     children: [
@@ -263,13 +263,13 @@ let I = (e) => {
                                     (0, r.jsxs)("div", {
                                         className: L.endOfFeed,
                                         children: [
-                                            (0, r.jsx)(s.Heading, {
+                                            (0, r.jsx)(o.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: T.intl.string(T.t.Yr70c3),
+                                                children: T.intl.string(T.t.Yr70c4),
                                             }),
-                                            (0, r.jsx)(s.Button, {
+                                            (0, r.jsx)(o.Button, {
                                                 variant: "primary",
-                                                text: T.intl.string(T.t.AfrvRE),
+                                                text: T.intl.string(T.t.AfrvRD),
                                                 onClick: () => {
                                                     t("shop all button", void 0, !0, !1),
                                                         u.default.track(k.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {

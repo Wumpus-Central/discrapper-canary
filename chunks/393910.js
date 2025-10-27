@@ -12,7 +12,7 @@ function s(t, e) {
         s = !n;
     return (0, r.jsx)(o.S89, {
         id: "mute-game",
-        label: u.intl.string(u.t["6EwEws"]),
+        label: u.intl.string(u.t["6EwEwp"]),
         checked: n,
         action: () => {
             (0, c.Eq)({

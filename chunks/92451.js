@@ -32,10 +32,10 @@ let g = function (t) {
         j = async () => {
             null != v && O(null);
             let t = f.map((t) => t.value.trim()).filter((t) => "" !== t);
-            if (0 === t.length) return void O(b.intl.string(b.t.TCHkcX));
+            if (0 === t.length) return void O(b.intl.string(b.t.TCHkcd));
             let e = {
                 field_type: u.QJ.TERMS,
-                label: b.intl.string(b.t["9suSIC"]),
+                label: b.intl.string(b.t["9suSIA"]),
                 values: t,
                 required: !0,
             };
@@ -77,7 +77,7 @@ let g = function (t) {
             (r = r =
                 {
                     errorText: v,
-                    title: b.intl.string(b.t["3pz9t7"]),
+                    title: b.intl.string(b.t["3pz9t3"]),
                     onCancel: _,
                     onConfirm: j,
                     children: (0, n.jsx)(s.k, {

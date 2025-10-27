@@ -23,7 +23,7 @@ function m(e) {
     return {
         memberSince: i,
         nextRenewalDate: n,
-        nextRenewalLabel: o ? _.intl.string(_.t.UAfot7) : _.intl.string(_.t.CVjLcH),
+        nextRenewalLabel: o ? _.intl.string(_.t.UAfot2) : _.intl.string(_.t.CVjLcM),
         subscriptionPrice: r,
         isCancelled: o,
         isPastDue: s,

@@ -67,7 +67,7 @@ function _(e) {
         i.Button,
         u(
             {
-                text: l.intl.string(l.t.vwl1PD),
+                text: l.intl.string(l.t.vwl1PK),
                 variant: c,
                 size: "sm",
                 onClick: p,

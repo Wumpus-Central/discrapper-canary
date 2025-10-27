@@ -13,7 +13,7 @@ function c(e) {
     return (null == n ? void 0 : n.isStaff()) === !0 && e.isDM() && null == t
         ? (0, i.jsx)(l.sNh, {
               id: "mark-as-stranger-danger",
-              label: d.intl.string(d.t.CgWmmZ),
+              label: d.intl.string(d.t.CgWmmT),
               action: () => (0, a.Dl)(e.id),
           })
         : null;

@@ -13,8 +13,8 @@ function s(e, n) {
         ? null
         : (0, i.jsx)(l.sNh, {
               id: "close-dm",
-              label: u.intl.string(t ? u.t.oI64T0 : u.t.jsvgc3),
-              subtext: t ? u.intl.string(u.t.JENR6O) : void 0,
+              label: u.intl.string(t ? u.t.oI64T4 : u.t.jsvgc3),
+              subtext: t ? u.intl.string(u.t.JENR6J) : void 0,
               action: () => r.Z.closePrivateChannel(e, n),
           });
 }

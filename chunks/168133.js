@@ -3,14 +3,14 @@ var n = i(951288),
     a = i(647438),
     c = i(442837),
     s = i(481060),
-    l = i(239091),
-    o = i(13245),
-    r = i(624864),
+    o = i(239091),
+    r = i(13245),
+    l = i(624864),
     u = i(987650),
     d = i(388032);
 function f(t) {
     let { onSelect: e, onClose: i } = t,
-        f = (0, c.e7)([r.Z], () => r.Z.isNotificationDisabled(u.n0.TextChat)),
+        f = (0, c.e7)([l.Z], () => l.Z.isNotificationDisabled(u.n0.TextChat)),
         h = a.useRef(i);
     return (
         a.useEffect(() => {
@@ -25,14 +25,14 @@ function f(t) {
         ),
         (0, n.jsx)(s.v2r, {
             navId: "overlay-notifications-widget-context-menu",
-            onClose: l.Zy,
-            "aria-label": d.intl.string(d.t.tPfVWl),
+            onClose: o.Zy,
+            "aria-label": d.intl.string(d.t.tPfVWi),
             onSelect: e,
             children: (0, n.jsx)(s.S89, {
-                label: d.intl.string(d.t.Fy5kPj),
+                label: d.intl.string(d.t.Fy5kPp),
                 checked: !f,
                 id: "overlay-text-chat-notifications",
-                action: () => o.Z.setNotificationDisabled(u.n0.TextChat, !f),
+                action: () => r.Z.setNotificationDisabled(u.n0.TextChat, !f),
             }),
         })
     );

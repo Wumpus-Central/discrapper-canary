@@ -71,9 +71,9 @@ function m(e) {
             s(
                 {
                     modalType: "in_app_report",
-                    header: p.intl.string(p.t.MP5lDg),
-                    body: p.intl.string(p.t["7Ct0Dg"]),
-                    problemTitle: p.intl.string(p.t.FJmoxM),
+                    header: p.intl.string(p.t.MP5lDj),
+                    body: p.intl.string(p.t["7Ct0Dj"]),
+                    problemTitle: p.intl.string(p.t.FJmoxF),
                     problems: (0, _.Z)(),
                     freeformNeededProblems: f,
                     onSubmit: function (e) {
@@ -96,7 +96,7 @@ function m(e) {
                                 null != i &&
                                 (0, c.ZDy)(async () => {
                                     let { default: e } = await n.e("14466").then(n.bind(n, 729328));
-                                    return (t) => (0, o.jsx)(e, s({ body: p.intl.string(p.t["d9+vQ0"]) }, t));
+                                    return (t) => (0, o.jsx)(e, s({ body: p.intl.string(p.t["d9+vQ8"]) }, t));
                                 });
                     },
                     otherKey: _.f.OTHER,

@@ -11,7 +11,7 @@ function u(e) {
     let { name: t, onRetry: n } = e,
         u = (0, s.nv)(),
         d = (0, s.dG)(u.hex()),
-        f = null != t ? t : l.intl.string(l.t.DmIUGB);
+        f = null != t ? t : l.intl.string(l.t.DmIUGK);
     return (0, r.jsxs)("div", {
         className: c.container,
         children: [
@@ -53,7 +53,7 @@ function u(e) {
                             (0, r.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-warning",
-                                children: l.intl.string(l.t.tmGHjY),
+                                children: l.intl.string(l.t.tmGHjc),
                             }),
                         ],
                     }),

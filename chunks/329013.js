@@ -30,8 +30,8 @@ var r = n(951288),
     N = n(921944),
     R = n(474936),
     P = n(388032),
-    w = n(505575);
-let D = () => {
+    D = n(505575);
+let w = () => {
         (0, g.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: N.L.PRIMARY,
             forceTrack: !0,
@@ -52,12 +52,12 @@ let D = () => {
                     ? P.intl.formatToPlainString(P.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
                     : P.intl.string(P.t.mr4K7D);
                 return (0, r.jsxs)("div", {
-                    className: w.tryItOutButtons,
+                    className: D.tryItOutButtons,
                     children: [
                         (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             text: P.intl.string(P.t["E+COuA"]),
-                            onClick: () => D(),
+                            onClick: () => w(),
                         }),
                         (0, r.jsx)(y.Z, {
                             subscriptionTier: R.Si.TIER_2,
@@ -84,15 +84,15 @@ let D = () => {
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)("div", {
-                            className: w.previewThemeButton,
+                            className: D.previewThemeButton,
                             children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,
                                 text: P.intl.string(P.t["E+COuA"]),
-                                onClick: () => D(),
+                                onClick: () => w(),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: w.premiumTier2Divider }),
+                        (0, r.jsx)("div", { className: D.premiumTier2Divider }),
                         (0, r.jsx)(O.ZP, {
                             type: R.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                             subscriptionTier: R.Si.TIER_2,
@@ -112,7 +112,7 @@ let D = () => {
                 return (
                     o &&
                         (e = (0, r.jsx)("div", {
-                            className: w.colorThemesBackground,
+                            className: D.colorThemesBackground,
                             children: e,
                         })),
                     e
@@ -123,13 +123,13 @@ let D = () => {
                 (0, r.jsxs)(h.ZP, {
                     type: h.yH.SETTINGS,
                     children: [
-                        (0, r.jsx)(h.ZP.Basic, { className: w.basicThemeSelectors }),
+                        (0, r.jsx)(h.ZP.Basic, { className: D.basicThemeSelectors }),
                         (0, r.jsx)(x, {}),
                         (0, r.jsx)(p.Z, {}),
                         v,
                     ],
                 }),
-                (0, r.jsx)(l.izJ, { className: w.divider }),
+                (0, r.jsx)(l.izJ, { className: D.divider }),
             ],
         });
     };
@@ -166,5 +166,5 @@ let M = () =>
         : (0, r.jsx)(l.Button, {
               variant: "primary",
               text: P.intl.string(P.t.qYXrkX),
-              onClick: D,
+              onClick: w,
           });

@@ -94,13 +94,13 @@ function R(e, t) {
     return i;
 }
 let P = [];
-function w(e) {
+function D(e) {
     let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
         A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         R = (0, p.Z)("attachments", l.hy.HORIZONTAL),
-        w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
+        D = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
-            isApplicationCommand: D,
+            isApplicationCommand: w,
             commandOptions: L,
             commandOptionStates: x,
         } = (0, c.cj)([h.Z], () => {
@@ -152,7 +152,7 @@ function w(e) {
         handler: U,
     });
     let G = {
-            isApplicationCommand: D,
+            isApplicationCommand: w,
             previousUploadOptions: k,
             uploadOptions: M,
         },
@@ -173,8 +173,8 @@ function w(e) {
                     j(i);
             }
         }, [t, M.length, n]);
-    let Z = w.filter((e) => e.filename !== a);
-    return (!D && 0 === Z.length) || (D && 0 === M.length)
+    let Z = D.filter((e) => e.filename !== a);
+    return (!w && 0 === Z.length) || (w && 0 === M.length)
         ? null
         : (0, r.jsx)(s.bG, {
               navigator: R,
@@ -186,7 +186,7 @@ function w(e) {
                           "ul",
                           C(S({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, I.scrollbarGhost),
-                              children: D
+                              children: w
                                   ? M.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
@@ -218,10 +218,10 @@ function w(e) {
               }),
           });
 }
-function D(e) {
+function w(e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: o = !1 } = e;
     return i
-        ? (0, r.jsx)(w, {
+        ? (0, r.jsx)(D, {
               channelId: t,
               type: n,
               ignoreFile: a,
@@ -229,4 +229,4 @@ function D(e) {
           })
         : null;
 }
-let L = i.memo(D);
+let L = i.memo(w);

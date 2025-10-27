@@ -9,7 +9,7 @@ function s() {
         children: (0, r.jsx)(i.Text, {
             variant: "text-sm/medium",
             color: "text-secondary",
-            children: a.intl.string(a.t.zksHZG),
+            children: a.intl.string(a.t.zksHZO),
         }),
     });
 }

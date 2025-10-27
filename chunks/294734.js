@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(951288),
     i = n(647438),
     a = n(793030),
@@ -37,7 +37,7 @@ function N() {
                 className: C.headerText,
                 variant: "text-sm/semibold",
                 color: "text-low-contrast",
-                children: A.intl.string(A.t.ToyvLi),
+                children: A.intl.string(A.t.ToyvLk),
             }),
         ],
     });
@@ -141,7 +141,7 @@ function P(e) {
               s,
           );
 }
-function w(e) {
+function D(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, n) =>

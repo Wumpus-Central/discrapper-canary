@@ -53,7 +53,7 @@ function E(e) {
             }),
                 v(!1);
         }, [t, y, T, R]),
-        w = i.useCallback(
+        D = i.useCallback(
             async (e, n, r) => {
                 var i;
                 v(!0),
@@ -83,13 +83,13 @@ function E(e) {
         submitting: E,
         focusProps: { within: !0 },
         children: [
-            g.intl.string(g.t.iMJO39),
+            g.intl.string(g.t.iMJO37),
             T.isSelectFileBeforeEmojiStudioExperimentEnabled
                 ? (0, r.jsx)(_.ZP, {
                       ref: n,
                       tabIndex: 0,
                       disabled: R,
-                      onChange: w,
+                      onChange: D,
                       setLoading: b,
                   })
                 : null,

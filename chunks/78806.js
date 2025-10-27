@@ -11,16 +11,16 @@ function o(e) {
     if (0 === n.length) return null;
     let o = null;
     if (1 === n.length)
-        o = s.intl.format(s.t.wQ6ur6, { applicationName: () => (0, r.jsx)(a.Z, { application: n[0] }, n[0].id) });
+        o = s.intl.format(s.t.wQ6urw, { applicationName: () => (0, r.jsx)(a.Z, { application: n[0] }, n[0].id) });
     else if (2 === n.length)
-        o = s.intl.format(s.t.C98CSE, {
+        o = s.intl.format(s.t.C98CSN, {
             applicationName: () => (0, r.jsx)(a.Z, { application: n[0] }, n[0].id),
             applicationName2: () => (0, r.jsx)(a.Z, { application: n[1] }, n[1].id),
         });
     else {
         let e = n[n.length - 1],
             t = n.slice(0, -1);
-        o = s.intl.format(s.t.UxpwAg, {
+        o = s.intl.format(s.t.UxpwAh, {
             applications: () =>
                 t.map((e) =>
                     (0, r.jsx)(

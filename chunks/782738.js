@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(514482);
-let s = i.memo(function (e) {
+    s = n(514482);
+let o = i.memo(function (e) {
     let { className: t } = e;
-    return (0, r.jsx)("div", { className: a()(t, o.cardPlaceholder) });
+    return (0, r.jsx)("div", { className: a()(t, s.cardPlaceholder) });
 });

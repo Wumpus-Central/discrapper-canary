@@ -43,15 +43,15 @@ let { CAPTCHA: s, EMAIL: l, PHONE: c, REVERIFY_EMAIL: u, REVERIFY_PHONE: d } = a
         getButtonTitle(e) {
             switch (e) {
                 case a.PUi.EMAIL:
-                    return o.intl.string(o.t["1MPz29"]);
+                    return o.intl.string(o.t["1MPz27"]);
                 case a.PUi.PHONE:
-                    return o.intl.string(o.t.mjJecn);
+                    return o.intl.string(o.t.mjJeco);
                 case a.PUi.REVERIFY_EMAIL:
-                    return o.intl.string(o.t.nmdPFR);
+                    return o.intl.string(o.t.nmdPFX);
                 case a.PUi.REVERIFY_PHONE:
-                    return o.intl.string(o.t.of2129);
+                    return o.intl.string(o.t.of2125);
                 default:
-                    return o.intl.string(o.t["oF6+W1"]);
+                    return o.intl.string(o.t["oF6+Ww"]);
             }
         },
         areVerificationTypesEqual: (e, t) => i().isEqual(e, t),

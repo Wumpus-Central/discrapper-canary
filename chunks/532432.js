@@ -55,7 +55,7 @@ function m(e) {
                     className: o()({ [p.buttonHighlighted]: I }),
                     size: s.zx.Sizes.SMALL,
                     onClick: A,
-                    children: null != g ? g : _.intl.string(_.t["4OynCA"]),
+                    children: null != g ? g : _.intl.string(_.t["4OynCD"]),
                 }),
                 t &&
                     (0, r.jsx)("div", {
@@ -64,7 +64,7 @@ function m(e) {
                         children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != E ? _.intl.string(_.t.TDjKDg) : _.intl.string(_.t.twB3f3),
+                            text: null != E ? _.intl.string(_.t.TDjKDm) : _.intl.string(_.t.twB3fz),
                             onClick: () => a(null),
                         }),
                     }),

@@ -12,11 +12,11 @@ function f(e, t) {
     let { rearrangeContextMenu: f } = o.Z.useExperiment({ location: "useChannelLeaveItem" }),
         b = i.useCallback(() => {
             let i = (0, u.F6)(e, s.default, c.Z),
-                o = d.intl.formatToPlainString(d.t.hJ5Ap6, { name: i }),
-                f = d.intl.format(d.t.SSIVOj, { name: i });
+                o = d.intl.formatToPlainString(d.t.hJ5Ap4, { name: i }),
+                f = d.intl.format(d.t.SSIVOu, { name: i });
             e.isManaged() &&
-                ((o = d.intl.formatToPlainString(d.t.hVGjER, { name: i })),
-                (f = d.intl.format(d.t.IK1Qvr, { name: i })));
+                ((o = d.intl.formatToPlainString(d.t.hVGjEW, { name: i })),
+                (f = d.intl.format(d.t.IK1Qvs, { name: i })));
             let b = function (n) {
                 let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 a.Z.closePrivateChannel(e.id, t, r);
@@ -63,9 +63,9 @@ function f(e, t) {
         }, [e, t]);
     return (0, r.jsx)(l.sNh, {
         id: "leave-channel",
-        label: d.intl.string(d.t["26C4oq"]),
+        label: d.intl.string(d.t["26C4oi"]),
         action: b,
         color: "danger",
-        subtext: f ? d.intl.string(d.t["2HOk0t"]) : void 0,
+        subtext: f ? d.intl.string(d.t["2HOk0k"]) : void 0,
     });
 }

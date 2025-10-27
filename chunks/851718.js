@@ -95,7 +95,7 @@ class y extends i.PureComponent {
                   children: [
                       f.intl.format(f.t.IIHUUF, { subscriptionId: this.props.subscription.id }),
                       " ",
-                      f.intl.format(f.t.fh65ER, { helpLink: b }),
+                      f.intl.format(f.t.fh65ES, { helpLink: b }),
                   ],
               })
             : this.props.children;
@@ -112,7 +112,7 @@ function O(e) {
             _({ route: u.j.HOME });
         },
         b = (e) => {
-            _(p({ route: u.j.SWITCH_APP_PLANS }, e)), n(f.intl.string(f.t.VFqtkJ), E);
+            _(p({ route: u.j.SWITCH_APP_PLANS }, e)), n(f.intl.string(f.t.VFqtkP), E);
         },
         [O, v] = i.useState({});
     i.useEffect(() => {

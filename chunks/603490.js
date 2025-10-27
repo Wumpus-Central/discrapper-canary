@@ -25,7 +25,7 @@ function c(e) {
                 o.sF,
                 {
                     ref: p,
-                    label: s.intl.string(s.t.lfIHs7),
+                    label: s.intl.string(s.t.lfIHs4),
                     icon: a.EO4,
                     onClick: c,
                 },

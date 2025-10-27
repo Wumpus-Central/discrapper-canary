@@ -15,7 +15,7 @@ function l(e) {
         transitionState: t,
         onClose: c,
         size: "sm",
-        title: s.intl.string(s.t["p8+qtb"]),
+        title: s.intl.string(s.t["p8+qtU"]),
         actions: [],
         children: (0, r.jsx)(o.Z, {
             onRetry: l,

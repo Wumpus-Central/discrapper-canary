@@ -13,7 +13,7 @@ function d(t) {
     var e;
     let { error: n, setEmailToken: d, setError: A, onNext: x, onClose: C, transitionState: g } = t,
         [p, S] = r.useState(!1),
-        [N, f] = r.useState(""),
+        [f, N] = r.useState(""),
         [m, h] = r.useState(!1),
         T = (0, i.e7)([c.Z], () => c.Z.getErrors()),
         v = r.useRef(null);
@@ -24,7 +24,7 @@ function d(t) {
     let y = async (t) => {
             t.preventDefault(), A(null), S(!0);
             try {
-                let { token: t } = await (0, o.w)(N);
+                let { token: t } = await (0, o.w)(f);
                 d(t), x();
             } catch (t) {
                 A(new s.Z(t).getAnyErrorMessage());
@@ -37,7 +37,7 @@ function d(t) {
                 h(!0);
                 try {
                     await (0, o.i)(!0),
-                        (0, l.showToast)((0, l.createToast)(u.intl.string(u.t["84yeo6"]), l.ToastType.SUCCESS));
+                        (0, l.showToast)((0, l.createToast)(u.intl.string(u.t["84yeoz"]), l.ToastType.SUCCESS));
                 } catch (e) {
                     let t = new s.Z(e).getAnyErrorMessage();
                     null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE));
@@ -47,8 +47,8 @@ function d(t) {
             }
         };
     return (0, a.jsxs)(l.Ioy, {
-        title: u.intl.string(u.t.jMGc4O),
-        subtitle: u.intl.string(u.t.SZJow8),
+        title: u.intl.string(u.t.jMGc4J),
+        subtitle: u.intl.string(u.t.SZJowy),
         graphic: {
             type: "image",
             src: _,
@@ -58,17 +58,17 @@ function d(t) {
         actions: [
             {
                 variant: "primary",
-                text: u.intl.string(u.t.PDTjLC),
+                text: u.intl.string(u.t.PDTjLN),
                 loading: p,
                 onClick: y,
             },
         ],
         children: [
             (0, a.jsx)(l.oil, {
-                label: u.intl.string(u.t["8mZX6O"]),
+                label: u.intl.string(u.t["8mZX6M"]),
                 error: null != n ? n : null == T || null == (e = T.email_token) ? void 0 : e[0],
-                value: N,
-                onChange: f,
+                value: f,
+                onChange: N,
                 inputRef: v,
             }),
             (0, a.jsx)(l.Text, {

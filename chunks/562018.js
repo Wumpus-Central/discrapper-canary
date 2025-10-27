@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(570140),
     i = n(996106),
     l = n(452426),
     a = n(701488),
-    o = n(231338);
-let s = {
-    [o.Et.SET_ORIENTATION_LOCK_STATE]: {
+    s = n(231338);
+let o = {
+    [s.Et.SET_ORIENTATION_LOCK_STATE]: {
         validation: (e) =>
             (0, l.Z)(e)
                 .required()
@@ -27,16 +27,16 @@ let s = {
                     socket: t,
                     args: { lock_state: n, picture_in_picture_lock_state: l, grid_lock_state: a },
                 } = e,
-                s = t.application.id;
-            if (null != s)
+                o = t.application.id;
+            if (null != o)
                 r.Z.dispatch({
                     type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE",
-                    applicationId: s,
+                    applicationId: o,
                     lockState: n,
                     pictureInPictureLockState: l,
                     gridLockState: a,
                 });
-            else throw new i.Z({ errorCode: o.lT.INVALID_COMMAND }, "No application.");
+            else throw new i.Z({ errorCode: s.lT.INVALID_COMMAND }, "No application.");
         },
     },
 };

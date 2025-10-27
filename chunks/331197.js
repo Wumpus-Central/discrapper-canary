@@ -35,7 +35,7 @@ function j(e) {
         D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
         [k, U] = (0, h.cv)(D),
         { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: H, setIsHovered: V, onMouseEnter: F, onMouseLeave: G } = (0, f.Z)(200, 300);
+        { isHovered: H, setIsHovered: F, onMouseEnter: V, onMouseLeave: G } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -97,11 +97,11 @@ function j(e) {
         (0, d.v)(P, d.d.SOUNDBOARD),
             E === x.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != E ? (Z(), F()) : Z(), null == S || S(x.D.SOUNDBOARD));
+                : (null != E ? (Z(), V()) : Z(), null == S || S(x.D.SOUNDBOARD));
     }
-    let K = r.useRef(null);
+    let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
-        targetElementRef: K,
+        targetElementRef: q,
         shouldShow: (H && (E === x.D.SOUNDBOARD || null == E)) || E === x.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
@@ -109,7 +109,7 @@ function j(e) {
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            V(!1), null == S || S(void 0);
+            F(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -117,7 +117,7 @@ function j(e) {
                 ? null
                 : (0, i.jsx)(_.Z, {
                       children: (0, i.jsx)("div", {
-                          onMouseEnter: F,
+                          onMouseEnter: V,
                           onMouseLeave: G,
                           children: (0, i.jsx)(b.Z, {
                               guildId: A,
@@ -136,22 +136,22 @@ function j(e) {
         },
         children: () =>
             (0, i.jsx)(v.d, {
-                ref: K,
+                ref: q,
                 isTrayButton: !0,
                 themeable: j,
                 label: w
-                    ? O.intl.string(O.t["Ox4/zc"])
+                    ? O.intl.string(O.t["Ox4/zU"])
                     : M
-                      ? O.intl.string(O.t["+YBKYG"])
+                      ? O.intl.string(O.t["+YBKYI"])
                       : R
-                        ? O.intl.string(O.t.X1lQlp)
+                        ? O.intl.string(O.t.X1lQli)
                         : void 0,
                 iconComponent: I,
                 disabled: L,
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    F(), T();
+                    V(), T();
                 },
                 onMouseLeave: () => {
                     null == E && (G(), N());

@@ -34,11 +34,11 @@ function m(e) {
         let e = m instanceof s.ZP ? m.embeddedActivityConfig : m.embedded_activity_config,
             n = (0, a.Z)((0, u.getOS)());
         null == e || e.supported_platforms.includes(n)
-            ? (null == h ? void 0 : h.isThread()) && ((x = !0), (t = p.intl.string(p.t.ddSR3t)))
-            : ((x = !1), (t = p.intl.string(p.t.z2YTgI)));
+            ? (null == h ? void 0 : h.isThread()) && ((x = !0), (t = p.intl.string(p.t.ddSR3v)))
+            : ((x = !1), (t = p.intl.string(p.t.z2YTgJ)));
     }
     return (
-        x && null == t && (t = p.intl.string(p.t.f41E1t)),
+        x && null == t && (t = p.intl.string(p.t.f41E1g)),
         {
             disabled: x,
             reason: t,

@@ -112,9 +112,9 @@ function O() {
                 });
         }, []);
     return (0, r.jsx)(d.Z, {
-        title: p.intl.string(p.t.IHMsPj),
+        title: p.intl.string(p.t.IHMsPn),
         children: (0, r.jsx)(o.Gu, {
-            label: p.intl.string(p.t["mx+sp6"]),
+            label: p.intl.string(p.t["mx+sp7"]),
             onChange: O,
             options: b,
             value: t,

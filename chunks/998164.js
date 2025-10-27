@@ -74,7 +74,7 @@ function b() {
                     children: (0, r.jsx)(a.Text, {
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: g.intl.string(g.t["K/i3iY"]),
+                        children: g.intl.string(g.t["K/i3iQ"]),
                     }),
                 }),
             ],
@@ -108,7 +108,7 @@ function x(e) {
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "none",
-                children: g.intl.string(g.t.qce3EB),
+                children: g.intl.string(g.t.qce3EM),
             }),
         ],
     });

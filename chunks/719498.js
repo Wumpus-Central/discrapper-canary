@@ -72,17 +72,17 @@ let u = (e) => {
         O = (0, o.ZP)(t, !0);
     return (0, n.jsx)(i.Modal, {
         transitionState: b,
-        "aria-label": d.intl.string(d.t.OJknho),
+        "aria-label": d.intl.string(d.t.OJknhi),
         onClose: m,
-        title: d.intl.string(d.t.OJknho),
+        title: d.intl.string(d.t.OJknhi),
         actions: [
             {
-                text: d.intl.string(d.t["ETE/oK"]),
+                text: d.intl.string(d.t["ETE/oC"]),
                 onClick: m,
                 variant: "secondary",
             },
             {
-                text: d.intl.string(d.t.LLWaxc),
+                text: d.intl.string(d.t.LLWaxQ),
                 onClick: x,
                 variant: "critical-primary",
             },
@@ -108,7 +108,7 @@ let u = (e) => {
                                 (0, n.jsx)(c.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: d.intl.format(d.t["0NJZAQ"], { channelName: O }),
+                                    children: d.intl.format(d.t["0NJZAU"], { channelName: O }),
                                 }),
                             ],
                         }),

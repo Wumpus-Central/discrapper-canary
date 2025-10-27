@@ -1,14 +1,14 @@
 let r, i, l;
 n.d(t, { Z: () => p }), n(388685);
 var a,
-    o,
-    s = n(442837),
+    s,
+    o = n(442837),
     c = n(570140);
 function u() {
     (i = {}), (r = {}), (l = new Set());
 }
 u();
-class d extends (a = s.ZP.Store) {
+class d extends (a = o.ZP.Store) {
     getStatisticsForApplication(e) {
         return r[e];
     }
@@ -17,14 +17,14 @@ class d extends (a = s.ZP.Store) {
         return !l.has(e) && (null == t || Date.now() - t > 3600000);
     }
 }
-(o = "displayName") in d
-    ? Object.defineProperty(d, o, {
+(s = "displayName") in d
+    ? Object.defineProperty(d, s, {
           value: "ApplicationStatisticsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (d[o] = "ApplicationStatisticsStore");
+    : (d[s] = "ApplicationStatisticsStore");
 let p = new d(c.Z, {
     APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
         let { applicationId: t } = e;

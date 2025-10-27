@@ -81,7 +81,7 @@ function P(e) {
                 try {
                     await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
-                    (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3t"]), c.ToastType.FAILURE));
+                    (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3v"]), c.ToastType.FAILURE));
                 }
             },
             [t],
@@ -102,17 +102,17 @@ function P(e) {
                     (0, r.jsx)(c.Text, {
                         color: "header-primary",
                         variant: "text-md/semibold",
-                        children: N.intl.string(N.t.DpRdYG),
+                        children: N.intl.string(N.t.DpRdYK),
                     }),
                     (0, r.jsx)(c.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: N.intl.format(N.t.iuRk2t, {}),
+                        children: N.intl.format(N.t.iuRk2j, {}),
                     }),
                 ],
             }),
             (0, r.jsx)(O.Z, {
-                changeTitle: N.intl.string(N.t.TxESJC),
+                changeTitle: N.intl.string(N.t.TxESJG),
                 value: null == s ? void 0 : s.value,
                 options: a,
                 disabled: !n,
@@ -131,7 +131,7 @@ function w(e) {
                     await v.Z.saveGuild(t.id, { explicitContentFilter: n }),
                         v.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
-                    (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3t"]), c.ToastType.FAILURE));
+                    (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["46Rs3v"]), c.ToastType.FAILURE));
                 }
             },
             [t.id],
@@ -155,19 +155,19 @@ function w(e) {
                             (0, r.jsx)(c.Text, {
                                 color: "header-primary",
                                 variant: "text-md/semibold",
-                                children: N.intl.string(N.t.bPgfJy),
+                                children: N.intl.string(N.t.bPgfJz),
                             }),
                             (0, r.jsx)(c.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                children: N.intl.format(N.t.BI4ukJ, {
+                                children: N.intl.format(N.t.BI4ukC, {
                                     helpdeskArticle: x.Z.getArticleURL(E.BhN.SAFE_DIRECT_MESSAGING),
                                 }),
                             }),
                         ],
                     }),
                     (0, r.jsx)(O.Z, {
-                        changeTitle: N.intl.string(N.t["eBd+Ul"]),
+                        changeTitle: N.intl.string(N.t["eBd+Uv"]),
                         value: null == g ? void 0 : g.value,
                         options: u,
                         disabled: !s,
@@ -208,8 +208,8 @@ function R(e) {
                       className: I.setupContainer,
                       children: [
                           (0, r.jsx)(c.rsf, {
-                              label: N.intl.string(N.t.jDarm5),
-                              description: N.intl.string(N.t["/ee7yM"]),
+                              label: N.intl.string(N.t.jDarmy),
+                              description: N.intl.string(N.t["/ee7yK"]),
                               badge: "beta",
                               checked: s,
                               onChange: g,
@@ -218,7 +218,7 @@ function R(e) {
                           (0, r.jsx)(c.Wn, {
                               messageType: c.QYI.INFO,
                               textVariant: "text-xs/normal",
-                              children: N.intl.string(N.t.JxO639),
+                              children: N.intl.string(N.t.JxO63z),
                           }),
                       ],
                   }),
@@ -261,8 +261,8 @@ function D(e) {
                       className: I.setupContainer,
                       children: [
                           (0, r.jsx)(c.rsf, {
-                              label: N.intl.string(N.t.lbBfER),
-                              description: N.intl.string(N.t.REr5AA),
+                              label: N.intl.string(N.t.lbBfEQ),
+                              description: N.intl.string(N.t.REr5AI),
                               checked: h,
                               onChange: x,
                               disabled: !d,
@@ -271,7 +271,7 @@ function D(e) {
                               (0, r.jsx)(c.Wn, {
                                   messageType: c.QYI.INFO,
                                   textVariant: "text-xs/normal",
-                                  children: N.intl.format(N.t.Xz1O0d, {
+                                  children: N.intl.format(N.t.Xz1O0W, {
                                       onClick: function () {
                                           (0, m.openUserSettings)(g.n.ACCOUNT_PANEL, { section: E.oAB.ACCOUNT });
                                       },
@@ -295,7 +295,7 @@ function A() {
                     (0, r.jsx)(c.Heading, {
                         className: I.headerContainer,
                         variant: "heading-lg/semibold",
-                        children: N.intl.string(N.t["suhY+f"]),
+                        children: N.intl.string(N.t["suhY+Y"]),
                     }),
                     (0, r.jsx)(C.z, { guild: e }),
                     (0, r.jsx)(R, { guild: e }),

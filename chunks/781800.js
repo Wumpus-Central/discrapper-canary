@@ -26,7 +26,7 @@ let d = (e) => {
         },
         children: (0, r.jsxs)("div", {
             className: u.seeAllPerksButtonContent,
-            children: [c.intl.string(c.t["37C26e"]), (0, r.jsx)(a.Fbu, { color: "currentColor" })],
+            children: [c.intl.string(c.t["37C26f"]), (0, r.jsx)(a.Fbu, { color: "currentColor" })],
         }),
     });
 };

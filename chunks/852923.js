@@ -27,7 +27,7 @@ function h(e) {
               className: _.blocked,
               children: (0, r.jsx)("div", {
                   className: a()(_.blockedText, _.noIcon),
-                  children: f.intl.string(f.t.xlJRfn),
+                  children: f.intl.string(f.t.xlJRfv),
               }),
           })
         : o > 0
@@ -35,7 +35,7 @@ function h(e) {
                 className: _.blocked,
                 children: (0, r.jsx)("div", {
                     className: a()(_.blockedText, _.noIcon),
-                    children: f.intl.string(f.t.WYad9f),
+                    children: f.intl.string(f.t.WYad9Z),
                 }),
             })
           : s > 0
@@ -43,7 +43,7 @@ function h(e) {
                   className: _.blocked,
                   children: (0, r.jsx)("div", {
                       className: a()(_.blockedText, _.noIcon),
-                      children: f.intl.string(f.t.eHq2OD),
+                      children: f.intl.string(f.t.eHq2OF),
                   }),
               })
             : null;
@@ -56,7 +56,7 @@ function m() {
               className: _.container,
               color: o.DM8.DEFAULT,
               children: [
-                  f.intl.string(f.t.Ul1RJS),
+                  f.intl.string(f.t.Ul1RJQ),
                   (0, r.jsx)(h, { channelId: e.id }),
                   (0, r.jsxs)(o.ButtonGroup, {
                       size: "sm",
@@ -64,13 +64,13 @@ function m() {
                       children: [
                           (0, r.jsx)(o.Button, {
                               variant: "overlay-primary",
-                              text: f.intl.string(f.t.MpO0p6),
+                              text: f.intl.string(f.t.MpO0px),
                               onClick: () => p(!1),
                           }),
                           (0, r.jsx)(o.Button, {
                               variant: "secondary",
                               onClick: () => p(!0),
-                              text: f.intl.string(f.t["1YDv7e"]),
+                              text: f.intl.string(f.t["1YDv7a"]),
                           }),
                       ],
                   }),

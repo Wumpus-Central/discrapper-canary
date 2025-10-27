@@ -126,7 +126,7 @@ let E = i.memo(function (e) {
             p(
                 {
                     boxLayout: t,
-                    title: u.intl.string(u.t.LRmNAg),
+                    title: u.intl.string(u.t.LRmNAl),
                     startLeftAligned: e.enablePremiumBrandRefreshDesign,
                 },
                 e,
@@ -140,7 +140,7 @@ let E = i.memo(function (e) {
             p(
                 {
                     boxLayout: t,
-                    title: u.intl.string(u.t.EnzW2N),
+                    title: u.intl.string(u.t.EnzW2H),
                     includeSideGradient: !e.enablePremiumBrandRefreshDesign,
                     startLeftAligned: !0,
                 },

@@ -1,27 +1,27 @@
-n.d(t, { Z: () => m }), n(35282), n(388685);
+n.d(t, { Z: () => g }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(772848),
     a = n(873546),
-    o = n(159691),
-    s = n(481060),
+    s = n(159691),
+    o = n(481060),
     c = n(626135),
     u = n(358085),
     d = n(289341),
     p = n(981631),
     f = n(186901),
     h = n(388032),
-    g = n(87805);
-function m(e) {
+    m = n(87805);
+function g(e) {
     let { applicationId: t } = e.match.params,
-        [m, b] = i.useState(!1),
-        _ = i.useRef(!1),
+        [g, _] = i.useState(!1),
+        b = i.useRef(!1),
         [E, O] = i.useState(null),
-        v = !u.isPlatformEmbedded && !a.tq && !m,
-        y = i.useMemo(() => (0, l.Z)(), []);
+        I = !u.isPlatformEmbedded && !a.tq && !g,
+        v = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
-        v &&
-            !0 !== _.current &&
+        I &&
+            !0 !== b.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
                 .then((e) => {
@@ -31,7 +31,7 @@ function m(e) {
                         params: {
                             applicationId: t,
                             url: location.href,
-                            attemptId: y,
+                            attemptId: v,
                         },
                     })
                         .then((e) => {
@@ -40,7 +40,7 @@ function m(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: y,
+                                    attempt_id: v,
                                     rpc_success: n,
                                 });
                         })
@@ -49,42 +49,42 @@ function m(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: y,
+                                    attempt_id: v,
                                     rpc_success: !1,
                                 });
                         })
                         .then(() => n.disconnect());
                 }),
-            (_.current = !0));
-    }, [t, v, y]),
-    v && !1 !== E)
+            (b.current = !0));
+    }, [t, I, v]),
+    I && !1 !== E)
         ? !0 === E
             ? (0, r.jsxs)("div", {
-                  className: g.container,
+                  className: m.container,
                   children: [
-                      (0, r.jsx)(s.Heading, {
+                      (0, r.jsx)(o.Heading, {
                           variant: "heading-xxl/bold",
                           children: h.intl.string(h.t.csrAMJ),
                       }),
-                      (0, r.jsx)(s.Text, {
+                      (0, r.jsx)(o.Text, {
                           variant: "text-xs/semibold",
                           children: h.intl.string(h.t["m1+IBn"]),
                       }),
-                      (0, r.jsx)(o.zxk, {
+                      (0, r.jsx)(s.zxk, {
                           variant: "primary",
                           text: h.intl.string(h.t.fIv16B),
-                          onClick: () => b(!0),
+                          onClick: () => _(!0),
                       }),
                   ],
               })
             : (0, r.jsxs)("div", {
-                  className: g.container,
+                  className: m.container,
                   children: [
-                      (0, r.jsx)(s.Heading, {
+                      (0, r.jsx)(o.Heading, {
                           variant: "heading-xxl/bold",
                           children: h.intl.string(h.t["Z+hCVU"]),
                       }),
-                      (0, r.jsx)(s.$jN, {}),
+                      (0, r.jsx)(o.$jN, {}),
                   ],
               })
         : (0, r.jsx)(

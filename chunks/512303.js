@@ -18,19 +18,19 @@ var r = n(951288),
     h = n(121271);
 function v(e) {
     var t, n, v, j;
-    let { analyticsLocations: S } = (0, u.ZP)(),
-        E = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
-        P = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
-        _ = null == (v = e.interactionMetadata) ? void 0 : v.user.id,
-        Z = (0, a.e7)([y.default], () => y.default.getUser(E)),
-        T = (0, a.e7)([O.Z], () => O.Z.getGuild(P)),
-        w = p.Z.getChannel(e.channel_id),
-        I = null == w ? void 0 : w.getGuildId(),
-        A = (0, a.e7)([y.default], () => y.default.getUser(_));
+    let { analyticsLocations: E } = (0, u.ZP)(),
+        S = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
+        _ = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
+        P = null == (v = e.interactionMetadata) ? void 0 : v.user.id,
+        Z = (0, a.e7)([y.default], () => y.default.getUser(S)),
+        T = (0, a.e7)([O.Z], () => O.Z.getGuild(_)),
+        I = p.Z.getChannel(e.channel_id),
+        w = null == I ? void 0 : I.getGuildId(),
+        A = (0, a.e7)([y.default], () => y.default.getUser(P));
     if (
         (i.useEffect(() => {
-            null == Z && null != E && (0, s.PR)(E);
-        }, [Z, E]),
+            null == Z && null != S && (0, s.PR)(S);
+        }, [Z, S]),
         !(0, d.a)(e))
     )
         return null;
@@ -48,16 +48,16 @@ function v(e) {
                       }),
                   id: "integration-owner",
                   label: T.name,
-                  subtext: m.intl.formatToPlainString(m.t.ShLXXF, { application: e.author.username }),
+                  subtext: m.intl.formatToPlainString(m.t.ShLXXB, { application: e.author.username }),
               }))
             : null != Z &&
               (N = (0, r.jsx)(o.sNh, {
                   action: () =>
                       (0, g.openUserProfileModal)({
                           userId: Z.id,
-                          guildId: I,
+                          guildId: w,
                           channelId: e.channel_id,
-                          sourceAnalyticsLocations: S,
+                          sourceAnalyticsLocations: E,
                       }),
                   className: h.interactionInfoMenuItem,
                   iconLeft: () =>
@@ -67,11 +67,11 @@ function v(e) {
                       }),
                   id: "integration-owner",
                   label: Z.username,
-                  subtext: m.intl.formatToPlainString(m.t.ShLXXF, { application: e.author.username }),
+                  subtext: m.intl.formatToPlainString(m.t.ShLXXB, { application: e.author.username }),
               })),
         (0, r.jsxs)(o.sNh, {
             id: "view-interaction-info",
-            label: m.intl.string(m.t.Rjezb2),
+            label: m.intl.string(m.t.Rjezbz),
             children: [
                 N,
                 null != A
@@ -79,9 +79,9 @@ function v(e) {
                           action: () =>
                               (0, g.openUserProfileModal)({
                                   userId: A.id,
-                                  guildId: I,
+                                  guildId: w,
                                   channelId: e.channel_id,
-                                  sourceAnalyticsLocations: S,
+                                  sourceAnalyticsLocations: E,
                               }),
                           className: h.interactionInfoMenuItem,
                           iconLeft: () =>
@@ -91,7 +91,7 @@ function v(e) {
                               }),
                           id: "interaction-user",
                           label: A.username,
-                          subtext: m.intl.string(m.t["04gxNj"]),
+                          subtext: m.intl.string(m.t["04gxNg"]),
                       })
                     : null,
             ],

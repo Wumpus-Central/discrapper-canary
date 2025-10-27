@@ -38,7 +38,7 @@ let d = (e) => {
                               onClick: t,
                               className: u.iconWrapperActive,
                               tabIndex: f ? -1 : 0,
-                              "aria-label": c.intl.string(c.t.RscU7O),
+                              "aria-label": c.intl.string(c.t.RscU7I),
                               children: (0, r.jsx)(o.o1U, {
                                   size: "xs",
                                   color: "currentColor",
@@ -53,7 +53,7 @@ let d = (e) => {
                               rel: "noreferrer noopener",
                               className: u.iconWrapperActive,
                               children: (0, r.jsx)(l.Z, {
-                                  "aria-label": c.intl.string(c.t.wuRE8P),
+                                  "aria-label": c.intl.string(c.t.wuRE8M),
                                   className: null != t ? u.iconExternalMargins : u.iconExternal,
                               }),
                               messageId: _,

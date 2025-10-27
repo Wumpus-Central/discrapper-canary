@@ -150,12 +150,12 @@ let T = (e) => {
             d = i.size === p.Q,
             b = () =>
                 !1 === l
-                    ? g.intl.format(g.t["zWhX/f"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
+                    ? g.intl.format(g.t["zWhX/Q"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
                     : n.length === p.Q
                       ? !0 === c
-                          ? g.intl.format(g.t["1aEjsL"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
-                          : g.intl.format(g.t["+u3AOD"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
-                      : g.intl.format(g.t["omMr+f"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) });
+                          ? g.intl.format(g.t["1aEjsH"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
+                          : g.intl.format(g.t["+u3AOO"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
+                      : g.intl.format(g.t["omMr+V"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) });
         return (0, r.jsxs)("div", {
             className: a()(E.container, t),
             children: [
@@ -185,7 +185,7 @@ let T = (e) => {
                         (0, r.jsx)(s.Button, {
                             variant: "primary",
                             disabled: !1 === l || !0 === d,
-                            text: g.intl.string(g.t.Lm2nFR),
+                            text: g.intl.string(g.t.Lm2nFc),
                             onClick: () =>
                                 T({
                                     startingScreen: h.SelectFriendsModalScreens.SELECT_FRIENDS,

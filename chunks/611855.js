@@ -23,7 +23,7 @@ let d = function (e) {
             }),
             (0, r.jsx)("span", {
                 style: { opacity: i },
-                children: c.intl.string(c.t.o6FLcH),
+                children: c.intl.string(c.t.o6FLcF),
             }),
         ],
     });

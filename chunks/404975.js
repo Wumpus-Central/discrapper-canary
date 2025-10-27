@@ -76,7 +76,7 @@ function v(e) {
                                                 onClick: y,
                                                 variant: "icon-only",
                                                 size: "sm",
-                                                "aria-label": j.intl.string(j.t.cpT0Cg),
+                                                "aria-label": j.intl.string(j.t.cpT0Cq),
                                             }),
                                         }),
                                     (0, r.jsx)("div", {

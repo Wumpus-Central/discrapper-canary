@@ -31,7 +31,7 @@ function f(e) {
     return (0, r.jsx)(u.Z, {
         title: C ? f : null != (t = null == I ? void 0 : I.title) ? t : f,
         description: C
-            ? "(".concat(null != (n = null == I ? void 0 : I.title) ? n : m.intl.string(m.t.PoWNfX), ")")
+            ? "(".concat(null != (n = null == I ? void 0 : I.title) ? n : m.intl.string(m.t.PoWNfe), ")")
             : null != (l = null == I ? void 0 : I.description)
               ? l
               : "",
@@ -40,7 +40,7 @@ function f(e) {
             look: s.zx.Looks.LINK,
             size: s.zx.Sizes.MIN,
             color: s.zx.Colors.LINK,
-            children: m.intl.string(m.t.GEgsAw),
+            children: m.intl.string(m.t.GEgsA4),
         }),
         loading: y,
         className: x,

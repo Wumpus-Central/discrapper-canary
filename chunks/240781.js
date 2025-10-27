@@ -57,18 +57,18 @@ let f = [
                     (0, n.jsx)(c.Text, {
                         variant: "text-xxs/normal",
                         color: "text-muted",
-                        children: y.intl.format(y.t.Io7ozs, { days: l.days.toString() }),
+                        children: y.intl.format(y.t.Io7ozn, { days: l.days.toString() }),
                     }),
                 (0, n.jsxs)(c.Text, {
                     variant: "text-xxs/normal",
                     color: "text-muted",
                     children: [
-                        i ? y.intl.format(y.t["req+eX"], { dateAcquired: a }) : y.intl.format(y.t.gW9R4O, { date: a }),
+                        i ? y.intl.format(y.t["req+eY"], { dateAcquired: a }) : y.intl.format(y.t.gW9R4B, { date: a }),
                         null != t.expiresAt &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)("br", {}),
-                                    y.intl.format(y.t.eZSTa2, {
+                                    y.intl.format(y.t.eZSTa5, {
                                         date: t.expiresAt.toLocaleDateString(r, {
                                             minute: "numeric",
                                             hour: "numeric",
@@ -85,7 +85,7 @@ let f = [
                     (0, n.jsx)(c.Text, {
                         variant: "text-xxs/normal",
                         color: "text-muted",
-                        children: y.intl.string(y.t.nKdAlJ),
+                        children: y.intl.string(y.t.nKdAlO),
                     }),
             ],
         });
@@ -103,12 +103,12 @@ let f = [
             N = i.useMemo(
                 () =>
                     A
-                        ? y.intl.string(y.t["7vkeu7"])
+                        ? y.intl.string(y.t["7vkeu5"])
                         : (0, a.EQ)([C, E, w])
-                              .with([!0, !0, !1], () => y.intl.string(y.t.hmyYKy))
-                              .with([!0, !1, !0], () => y.intl.string(y.t.q0PlFh))
-                              .with([!0, !1, !1], () => y.intl.string(y.t["0xs2sL"]))
-                              .otherwise(() => y.intl.string(y.t.fEGjVV)),
+                              .with([!0, !0, !1], () => y.intl.string(y.t.hmyYK8))
+                              .with([!0, !1, !0], () => y.intl.string(y.t.q0PlFn))
+                              .with([!0, !1, !1], () => y.intl.string(y.t["0xs2sA"]))
+                              .otherwise(() => y.intl.string(y.t.fEGjVQ)),
                 [A, C, E, w],
             );
         return null != P && (null == b || A)

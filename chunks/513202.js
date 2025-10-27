@@ -67,11 +67,11 @@ class T extends f.Z {
                     i.Modal,
                     O(
                         {
-                            title: b.intl.formatToPlainString(b.t.hbiAOz, { code: t }),
+                            title: b.intl.formatToPlainString(b.t.hbiAO6, { code: t }),
                             subtitle: n,
                             actions: [
                                 {
-                                    text: b.intl.string(b.t.BddRzc),
+                                    text: b.intl.string(b.t.BddRzS),
                                     onClick: e.onClose,
                                     variant: "primary",
                                 },
@@ -89,11 +89,11 @@ class T extends f.Z {
                     i.Modal,
                     O(
                         {
-                            title: b.intl.string(b.t.PtobXV),
+                            title: b.intl.string(b.t.PtobXW),
                             subtitle: e,
                             actions: [
                                 {
-                                    text: b.intl.string(b.t.BddRzc),
+                                    text: b.intl.string(b.t.BddRzS),
                                     onClick: t.onClose,
                                     variant: "primary",
                                 },
@@ -105,7 +105,7 @@ class T extends f.Z {
         );
     }
     showDevShelfOverrideEnabled() {
-        (0, a.showToast)((0, a.createToast)(b.intl.string(b.t.JfA7IC), a.ToastType.SUCCESS));
+        (0, a.showToast)((0, a.createToast)(b.intl.string(b.t.JfA7IK), a.ToastType.SUCCESS));
     }
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: r, shouldClosePopout: i = !0 } = e;

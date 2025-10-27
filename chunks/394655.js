@@ -20,8 +20,8 @@ function f() {
                     slurs: e,
                     sexualContent: e,
                 }),
-            title: d.intl.string(d.t.CB5reH),
-            note: d.intl.format(d.t.kAyJIS, { learnMoreLink: a.Z.getArticleURL(u.BhN.KEYWORD_FILTERS) }),
+            title: d.intl.string(d.t.CB5reE),
+            note: d.intl.format(d.t.kAyJIR, { learnMoreLink: a.Z.getArticleURL(u.BhN.KEYWORD_FILTERS) }),
         }),
     });
 }

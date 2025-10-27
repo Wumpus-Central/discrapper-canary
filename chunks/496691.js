@@ -35,9 +35,9 @@ class p extends r.Component {
                             className: m.marketingHeader,
                             onChangeLocale: this.handleHeaderLocaleChange,
                             mobileClassName: m.marketingHeader,
-                            openNavAriaLabel: N.intl.string(N.t.Fs9k3N),
-                            hideNavAriaLabel: N.intl.string(N.t.AbfyHB),
-                            skipToContentLabel: N.intl.string(N.t["18gavL"]),
+                            openNavAriaLabel: N.intl.string(N.t.Fs9k3K),
+                            hideNavAriaLabel: N.intl.string(N.t.AbfyHI),
+                            skipToContentLabel: N.intl.string(N.t["18gavA"]),
                         }),
                         a(t, i),
                         (0, n.jsx)(s.$, {

@@ -33,8 +33,8 @@ var r = n(951288),
     N = n(439944),
     R = n(199902),
     P = n(984933),
-    w = n(699516),
-    D = n(9156),
+    D = n(699516),
+    w = n(9156),
     L = n(594174),
     x = n(938475),
     M = n(981631),
@@ -112,7 +112,7 @@ function V(e) {
         r = (0, S.ZP)(t),
         a = i.useMemo(() => r.map((e) => e.id), [r]),
         o = (0, c.e7)([x.ZP], () => x.ZP.getVoiceStates(t), [t]),
-        s = (0, c.Wu)([w.Z], () => w.Z.getBlockedOrIgnoredIDs()),
+        s = (0, c.Wu)([D.Z], () => D.Z.getBlockedOrIgnoredIDs()),
         u = l().flatMap(n, (t) => {
             var n;
             if (t === e.afkChannelId) return [];
@@ -158,11 +158,11 @@ function V(e) {
         y = (0, p.dq)(b),
         O = E.filter((e) => null != e && !m.includes(e.id)),
         v = (0, c.e7)([C.Z], () => C.Z.getUserAffinitiesMap(), []),
-        D = i.useMemo(() => (0, N.C)(y, v, "GuildTooltip - nonBlockedUsers"), [y, v]),
+        w = i.useMemo(() => (0, N.C)(y, v, "GuildTooltip - nonBlockedUsers"), [y, v]),
         k = i.useMemo(() => (0, N.C)(d, v, "GuildTooltip - stageSpeakers"), [d, v]),
         j = i.useMemo(() => (0, N.C)(O, v, "GuildTooltip - streamUsers"), [O, v]);
     return {
-        voiceUsersToShow: D,
+        voiceUsersToShow: w,
         stageSpeakers: k,
         numStageListeners: _,
         streamUsersToShow: j,
@@ -252,10 +252,10 @@ function K(e) {
         m = H(u.hGI, f, n),
         g = H(i ? u.iWm : u.nG3, _, n),
         { isMuted: E, muteConfig: b } = (0, c.cj)(
-            [D.ZP],
+            [w.ZP],
             () => ({
-                isMuted: D.ZP.isMuted(n),
-                muteConfig: D.ZP.getMuteConfig(n),
+                isMuted: w.ZP.isMuted(n),
+                muteConfig: w.ZP.getMuteConfig(n),
             }),
             [n],
         ),

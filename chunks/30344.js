@@ -5,8 +5,8 @@ var i = n(442837),
     a = n(314897),
     l = n(733231),
     o = n(890814),
-    s = n(753436),
-    c = n(34335);
+    c = n(753436),
+    s = n(34335);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +60,7 @@ function d(e) {
         games: t,
         renderGame: (e, t) =>
             (0, r.jsx)(
-                s.S,
+                c.S,
                 u(
                     {
                         index: t,
@@ -75,10 +75,10 @@ function d(e) {
 }
 function f(e) {
     let { userId: t, widgetType: n, disableInteraction: o } = e,
-        s = (0, i.e7)([a.default], () => a.default.getId() === t),
-        { getManageButtonForWidget: f } = (0, c.j)(),
+        c = (0, i.e7)([a.default], () => a.default.getId() === t),
+        { getManageButtonForWidget: f } = (0, s.j)(),
         g = f(n);
-    return s && !o
+    return c && !o
         ? (0, r.jsx)(l.d, {
               emptyListFallbackRef: g,
               children: (0, r.jsx)(d, u({}, e)),

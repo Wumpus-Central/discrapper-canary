@@ -47,7 +47,7 @@ function d(e) {
         : (0, r.jsx)("img", {
               className: d,
               src: n.coverImageUrl,
-              alt: l.intl.formatToPlainString(l.t["3ev90d"], { game: p }),
+              alt: l.intl.formatToPlainString(l.t["3ev90U"], { game: p }),
               onError: m,
               onLoad: g,
           });

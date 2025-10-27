@@ -107,13 +107,13 @@ function O(e, t) {
             (this.hostname = this.hostname || "");
         var P = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
         if (!P)
-            for (var w = this.hostname.split(/\./), N = 0, D = w.length; N < D; N++) {
-                var L = w[N];
+            for (var D = this.hostname.split(/\./), N = 0, w = D.length; N < w; N++) {
+                var L = D[N];
                 if (L && !L.match(f)) {
                     for (var x = "", M = 0, k = L.length; M < k; M++) L.charCodeAt(M) > 127 ? (x += "x") : (x += L[M]);
                     if (!x.match(f)) {
-                        var j = w.slice(0, N),
-                            U = w.slice(N + 1),
+                        var j = D.slice(0, N),
+                            U = D.slice(N + 1),
                             G = L.match(_);
                         G && (j.push(G[1]), U.unshift(G[2])),
                             U.length && (y = "/" + U.join(".") + y),
@@ -131,7 +131,7 @@ function O(e, t) {
             P && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), "/" !== y[0] && (y = "/" + y));
     }
     if (!p[I])
-        for (var N = 0, D = l.length; N < D; N++) {
+        for (var N = 0, w = l.length; N < w; N++) {
             var F = l[N];
             if (-1 !== y.indexOf(F)) {
                 var V = encodeURIComponent(F);

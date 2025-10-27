@@ -23,25 +23,25 @@ function E(e) {
                 type: h.dCx.FILTER_FROM,
                 isEligible: b.has(h.dCx.FILTER_FROM),
                 icon: a.tBG,
-                label: m.intl.string(m.t.ktr6z8),
+                label: m.intl.string(m.t.ktr6z5),
             },
             {
                 type: h.dCx.FILTER_IN,
                 isEligible: b.has(h.dCx.FILTER_IN),
                 icon: a.VL1,
-                label: m.intl.string(m.t.VMjDvb),
+                label: m.intl.string(m.t.VMjDvS),
             },
             {
                 type: h.dCx.FILTER_MENTIONS,
                 isEligible: b.has(h.dCx.FILTER_MENTIONS),
                 icon: a.lOy,
-                label: m.intl.string(m.t.fpKv9f),
+                label: m.intl.string(m.t.fpKv9Y),
             },
             {
                 type: h.dCx.FILTER_HAS,
                 isEligible: b.has(h.dCx.FILTER_HAS),
                 icon: a.Ujz,
-                label: m.intl.string(m.t.IhIpc3),
+                label: m.intl.string(m.t.IhIpc7),
             },
         ];
         return e

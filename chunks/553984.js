@@ -19,7 +19,7 @@ function m(e) {
         { selectedFilter: m, setSelectedFilter: b } = (0, u.Z)(),
         _ = (0, p.d)((e) => e.setInboxReadState);
     if (!i) return null;
-    let O = m === f.V5.ALL ? h.intl.string(h.t["2pAkDA"]) : h.intl.string(h.t.HcoRu7);
+    let O = m === f.V5.ALL ? h.intl.string(h.t["2pAkDA"]) : h.intl.string(h.t.HcoRu0);
     return (0, r.jsx)(o.u, {
         position: "bottom",
         text: O,

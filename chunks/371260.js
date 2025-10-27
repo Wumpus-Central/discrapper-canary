@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(13941),
     a = n(442837),
-    o = n(481060),
-    s = n(607070),
+    s = n(481060),
+    o = n(607070),
     c = n(514482);
 let u = {
         mass: 1,
@@ -14,12 +14,12 @@ let u = {
     },
     d = function (e) {
         let { animate: t, state: n, cleanUp: d, children: p } = e,
-            f = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+            f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
             h = i.useMemo(
                 () =>
                     !1 === t || f
                         ? { opacity: 1 }
-                        : n === o.pJH.ENTERED || n === o.pJH.MOUNTED
+                        : n === s.pJH.ENTERED || n === s.pJH.MOUNTED
                           ? {
                                 from: { opacity: 0 },
                                 to: { opacity: 1 },
@@ -35,9 +35,9 @@ let u = {
                             },
                 [t, d, f, n],
             ),
-            g = (0, o.q_F)(h);
+            m = (0, s.q_F)(h);
         return (0, r.jsx)(l.animated.div, {
-            style: g,
+            style: m,
             className: c.transitionItem,
             children: p,
         });

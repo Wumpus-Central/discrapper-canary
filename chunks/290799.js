@@ -10,41 +10,41 @@ var r = n(951288),
     d = n(890663);
 let f = [
         {
-            getQuestion: () => u.intl.string(u.t.C4J8UF),
-            getAnswer: () => u.intl.string(u.t.nhkk6u),
+            getQuestion: () => u.intl.string(u.t.C4J8UB),
+            getAnswer: () => u.intl.string(u.t.nhkk6k),
         },
         {
-            getQuestion: () => u.intl.string(u.t.ai4ym5),
+            getQuestion: () => u.intl.string(u.t.ai4ym2),
             getAnswer: () =>
-                u.intl.format(u.t["8zlqlJ"], { helpCenterUrl: l.Z.getArticleURL(c.BhN.GUILD_BOOSTING_FAQ) }),
+                u.intl.format(u.t["8zlqlD"], { helpCenterUrl: l.Z.getArticleURL(c.BhN.GUILD_BOOSTING_FAQ) }),
         },
         {
-            getQuestion: () => u.intl.string(u.t.kMVGsL),
+            getQuestion: () => u.intl.string(u.t.kMVGsC),
             getAnswer: () => u.intl.string(u.t["Vz/SCQ"]),
         },
         {
             getQuestion: () => u.intl.string(u.t.kYmXWF),
-            getAnswer: () => u.intl.string(u.t["+OURPj"]),
+            getAnswer: () => u.intl.string(u.t["+OURPp"]),
         },
         {
             getQuestion: () => u.intl.string(u.t["LsX/vb"]),
-            getAnswer: () => u.intl.string(u.t["3TeauL"]),
+            getAnswer: () => u.intl.string(u.t["3TeauK"]),
         },
         {
-            getQuestion: () => u.intl.string(u.t.fRlnXV),
-            getAnswer: () => u.intl.string(u.t.bTRacn),
+            getQuestion: () => u.intl.string(u.t.fRlnXU),
+            getAnswer: () => u.intl.string(u.t.bTRacj),
         },
         {
-            getQuestion: () => u.intl.string(u.t["8Mu5Q0"]),
-            getAnswer: () => u.intl.string(u.t["2T5iPj"]),
+            getQuestion: () => u.intl.string(u.t["8Mu5Q9"]),
+            getAnswer: () => u.intl.string(u.t["2T5iPo"]),
         },
         {
-            getQuestion: () => u.intl.string(u.t["6EN+TU"]),
-            getAnswer: () => u.intl.string(u.t.NZax1t),
+            getQuestion: () => u.intl.string(u.t["6EN+TZ"]),
+            getAnswer: () => u.intl.string(u.t.NZax1u),
         },
         {
-            getQuestion: () => u.intl.string(u.t.f5B4ER),
-            getAnswer: () => u.intl.string(u.t.Aje8PT),
+            getQuestion: () => u.intl.string(u.t.f5B4EW),
+            getAnswer: () => u.intl.string(u.t.Aje8Pb),
         },
     ],
     _ = function (e) {

@@ -18,8 +18,8 @@ function N(e) {
     let { guildId: t, welcomeMessage: n, className: i } = e,
         N = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
         O = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        S = (0, s.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.authorIds[0])),
-        E = r.useMemo(() => (null != N && null != S && (0, u.Y)(N, S) ? S : null), [N, S]),
+        E = (0, s.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.authorIds[0])),
+        S = r.useMemo(() => (null != N && null != E && (0, u.Y)(N, E) ? E : null), [N, E]),
         x = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         T = r.useMemo(() => {
             var e;
@@ -29,28 +29,28 @@ function N(e) {
         c.Z.requestMembersById(t, T);
     }, [t, T]),
         r.useEffect(() => {
-            null != E && (0, m.Z)(E.id, E.getAvatarURL(t, 48), { guildId: t });
-        }, [E, t]);
-    let _ = f.ZP.useName(t, null, E),
+            null != S && (0, m.Z)(S.id, S.getAvatarURL(t, 48), { guildId: t });
+        }, [S, t]);
+    let _ = f.ZP.useName(t, null, S),
         j = (0, I._T)(x);
-    if (null == E || null == x || null == n) return null;
-    let v = null != N && N.ownerId === E.id;
+    if (null == S || null == x || null == n) return null;
+    let v = null != N && N.ownerId === S.id;
     return (0, l.jsxs)(o.Zbd, {
         className: a()(p.welcomeMessageContainer, i),
         children: [
             (0, l.jsx)("div", { className: p.avatarBackground }),
             O
                 ? (0, l.jsx)(o.qEK, {
-                      src: E.getAvatarURL(t, 48),
+                      src: S.getAvatarURL(t, 48),
                       size: o.EFr.SIZE_48,
                       className: p.avatar,
-                      "aria-label": E.username,
+                      "aria-label": S.username,
                   })
                 : (0, l.jsx)(o.Xo$, {
-                      src: E.getAvatarURL(t, 48),
+                      src: S.getAvatarURL(t, 48),
                       size: o.EFr.SIZE_48,
                       className: p.avatar,
-                      "aria-label": E.username,
+                      "aria-label": S.username,
                   }),
             (0, l.jsx)("div", { className: p.avatarBorder }),
             (0, l.jsxs)("div", {

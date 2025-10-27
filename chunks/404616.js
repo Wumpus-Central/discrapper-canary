@@ -33,15 +33,15 @@ var a = n(951288),
     O = n(824578),
     P = n(95398),
     Z = n(247206),
-    w = n(406432),
-    _ = n(169525),
-    S = n(566006),
-    T = n(255269),
-    k = n(937889),
-    M = n(443877),
+    _ = n(406432),
+    w = n(169525),
+    T = n(566006),
+    S = n(255269),
+    M = n(937889),
+    k = n(443877),
     I = n(524444),
-    R = n(287151),
-    E = n(267128),
+    E = n(287151),
+    R = n(267128),
     A = n(695346),
     L = n(433355),
     B = n(592125),
@@ -139,14 +139,14 @@ let eo = 72,
                 null == s || s(y.current, t);
             }, [y, s, t]);
         let P = l.useRef(null),
-            { handleLeftClick: Z, handleRightClick: w } = (0, et.Z)({
+            { handleLeftClick: Z, handleRightClick: _ } = (0, et.Z)({
                 facepileRef: P,
                 goToThread: n,
                 channel: g,
             }),
-            _ = (0, m.JA)(t),
-            { role: S, onFocus: T } = _,
-            k = (function (e, t) {
+            w = (0, m.JA)(t),
+            { role: T, onFocus: S } = w,
+            M = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     a,
@@ -166,13 +166,13 @@ let eo = 72,
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
                 }
                 return l;
-            })(_, ["role", "onFocus"]),
-            { isFocused: M, handleFocus: I, handleBlur: R } = (0, $.Z)(T);
+            })(w, ["role", "onFocus"]),
+            { isFocused: k, handleFocus: I, handleBlur: E } = (0, $.Z)(S);
         return (0, a.jsxs)("div", {
             ref: y,
             "data-item-id": t,
             onClick: Z,
-            onContextMenu: w,
+            onContextMenu: _,
             className: r()(es.container, c, { [es.isOpen]: f }),
             children: [
                 (0, a.jsx)(
@@ -181,16 +181,16 @@ let eo = 72,
                         {
                             onClick: Z,
                             focusProps: { ringTarget: y },
-                            onContextMenu: w,
-                            "aria-label": el.intl.formatToPlainString(el.t.pgYN6e, {
+                            onContextMenu: _,
+                            "aria-label": el.intl.formatToPlainString(el.t.pgYN6c, {
                                 title: g.name,
                                 count: j,
                             }),
                             className: es.focusTarget,
                             onFocus: I,
-                            onBlur: R,
+                            onBlur: E,
                         },
-                        k,
+                        M,
                     ),
                 ),
                 (0, a.jsxs)("div", {
@@ -206,7 +206,7 @@ let eo = 72,
                             }),
                         }),
                         (0, a.jsx)(x.Rny, {
-                            enabled: !M,
+                            enabled: !k,
                             children: (0, a.jsx)(eg, {
                                 channel: g,
                                 firstMessage: p,
@@ -289,7 +289,7 @@ function em(e) {
         s = l.useMemo(() => (0, p.nC)(t && null != n ? n : "", a), [t, n, a]);
     return l.useMemo(
         () =>
-            (0, k.ZP)(
+            (0, M.ZP)(
                 {
                     content: e.name,
                     embeds: [],
@@ -314,14 +314,14 @@ let eh = l.memo(function (e) {
             className: es.blockedMessage,
             variant: "text-sm/medium",
             color: "text-muted",
-            children: el.intl.string(el.t.Lkp2fH),
+            children: el.intl.string(el.t.Lkp2fB),
         });
     else if (c)
         g = (0, a.jsx)(x.Text, {
             className: es.blockedMessage,
             variant: "text-sm/medium",
             color: "text-muted",
-            children: el.intl.string(el.t.yWK7ZG),
+            children: el.intl.string(el.t.yWK7ZM),
         });
     else {
         let { contentPlaceholder: e, renderedContent: n } =
@@ -330,7 +330,7 @@ let eh = l.memo(function (e) {
                       contentPlaceholder: null,
                       renderedContent: null,
                   }
-                : (0, E.f)(t, l, o, c, r()(es.messageContent, er.inlineFormat, er.__invalid_smallFontSize), {
+                : (0, R.f)(t, l, o, c, r()(es.messageContent, er.inlineFormat, er.__invalid_smallFontSize), {
                       leadingIconClass: es.messageContentLeadingIcon,
                       trailingIconClass: es.messageContentTrailingIcon,
                       iconSize: ea.WW,
@@ -349,11 +349,11 @@ let eh = l.memo(function (e) {
                         variant: "text-sm/medium",
                         color: i ? "header-secondary" : "text-muted",
                         className: es.messageContent,
-                        children: null == t ? (u ? null : el.intl.string(el.t.mE3KJC)) : e,
+                        children: null == t ? (u ? null : el.intl.string(el.t.mE3KJN)) : e,
                     });
     }
     return (0, a.jsxs)(P.aQ.Provider, {
-        value: (0, T.Z)(m, d),
+        value: (0, S.Z)(m, d),
         children: [
             !o &&
                 (0, a.jsx)(Y.Z, {
@@ -454,7 +454,7 @@ function ef(e) {
                       className: es.newMessageCount,
                       variant: "text-sm/semibold",
                       color: "text-brand",
-                      children: ["(", el.intl.format(el.t.z3PEtr, { count: i }), ")"],
+                      children: ["(", el.intl.format(el.t.z3PEth, { count: i }), ")"],
                   }),
         ],
     });
@@ -463,10 +463,10 @@ function ex(e) {
     let { firstMessage: t, channel: n } = e,
         l = (0, h.e7)([B.Z], () => B.Z.getChannel(n.parent_id)),
         s = (0, G.Bs)(l),
-        { disableReactionCreates: r, isLurking: i, isPendingMember: o } = (0, M.Z)(n);
+        { disableReactionCreates: r, isLurking: i, isPendingMember: o } = (0, k.Z)(n);
     return null == s || r
         ? null
-        : (0, a.jsx)(R.le, {
+        : (0, a.jsx)(E.le, {
               className: es.updateReactionButton,
               message: t,
               readOnly: n.isArchivedLockedThread(),
@@ -479,7 +479,7 @@ function ex(e) {
               burst_count: 0,
               me: !1,
               me_burst: !1,
-              type: S.O.NORMAL,
+              type: T.O.NORMAL,
               emojiSize: "reaction",
               emojiSizeTooltip: "reaction",
           });
@@ -488,11 +488,11 @@ function ej(e) {
     var t;
     let { firstMessage: n, channel: l } = e,
         s = (0, G.IN)(n),
-        { disableReactionUpdates: r, isLurking: i, isPendingMember: o } = (0, M.Z)(l);
+        { disableReactionUpdates: r, isLurking: i, isPendingMember: o } = (0, k.Z)(l);
     return null == s
         ? null
         : (0, a.jsx)(
-              R.le,
+              E.le,
               ei(
                   {
                       className: es.updateReactionButton,
@@ -501,7 +501,7 @@ function ej(e) {
                       isLurking: i,
                       isPendingMember: o,
                       useChatFontScaling: !1,
-                      type: s.burst_count >= s.count ? S.O.BURST : S.O.NORMAL,
+                      type: s.burst_count >= s.count ? T.O.BURST : T.O.NORMAL,
                       emojiSize: "reaction",
                       emojiSizeTooltip: "reaction",
                   },
@@ -516,7 +516,7 @@ function eb(e) {
         { sortOrder: l } = (0, W.H)(n.parent_id),
         s = (0, G.xw)(n, l),
         r = null == (t = n.threadMetadata) ? void 0 : t.createTimestamp,
-        i = null == r ? null : el.intl.formatToPlainString(el.t["13euCQ"], { timestamp: (0, U.vc)(u()(r), "LLLL") });
+        i = null == r ? null : el.intl.formatToPlainString(el.t["13euCd"], { timestamp: (0, U.vc)(u()(r), "LLLL") });
     return (0, a.jsx)(f.u, {
         text: i,
         children: (0, a.jsx)(x.Text, {
@@ -547,14 +547,14 @@ function ep(e) {
 function ev(e) {
     let { firstMedia: t, shouldObscure: n, obscureReason: l, shouldShowAgeVerification: s } = e,
         i = (0, h.e7)([D.Z], () => D.Z.isFocused()),
-        o = (0, w.d$)(t.src),
+        o = (0, _.d$)(t.src),
         c = A.QK.useSetting(),
-        u = (0, _.MC)(l),
+        u = (0, w.MC)(l),
         { src: d, width: m, height: g, alt: f } = t;
     if (s) {
         var j;
         return (0, a.jsx)("div", {
-            "aria-label": null != (j = null != u ? u : f) ? j : el.intl.string(el.t.hqwnc3),
+            "aria-label": null != (j = null != u ? u : f) ? j : el.intl.string(el.t.hqwnc2),
             className: r()(es.thumbnailContainer, es.obscuredThumbnailPlaceholder),
             style: {
                 maxWidth: ec,
@@ -592,7 +592,7 @@ function ev(e) {
 }
 function eN(e) {
     let { channel: t, firstMedia: n } = e,
-        [l, s] = (0, _.hL)({
+        [l, s] = (0, w.hL)({
             media: n,
             channel: t,
         }),

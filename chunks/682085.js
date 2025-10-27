@@ -1,11 +1,11 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     a = n(296009),
     l = n(442837),
     o = n(704215),
-    s = n(481060),
-    c = n(491662),
+    c = n(481060),
+    s = n(491662),
     u = n(243778),
     d = n(594174),
     f = n(785717),
@@ -14,26 +14,26 @@ var r = n(951288),
     m = n(28671),
     b = n(430790),
     h = n(795990),
-    v = n(388032),
-    y = n(66582);
-function j() {
+    y = n(388032),
+    v = n(66582);
+function O() {
     let { trackUserProfileEditAction: e } = (0, f.KZ)(),
         t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        { application: j, config: O } = (0, p.G)(),
-        { token: x, fetched: _ } = (0, c.o)(null == O ? void 0 : O.application_id),
-        I = i.useMemo(
+        { application: O, config: j } = (0, p.G)(),
+        { token: x, fetched: _ } = (0, s.o)(null == j ? void 0 : j.application_id),
+        P = i.useMemo(
             () =>
-                (null == O ? void 0 : O.application_id) != null
+                (null == j ? void 0 : j.application_id) != null
                     ? new g.q({
                           type: a.l.APPLICATION,
-                          applicationId: O.application_id,
+                          applicationId: j.application_id,
                       })
                     : null,
-            [null == O ? void 0 : O.application_id],
+            [null == j ? void 0 : j.application_id],
         ),
-        P = i.useCallback(() => {
+        I = i.useCallback(() => {
             e({ action: "PRESS_ADD_WIDGET" }),
-                (0, s.ZDy)(
+                (0, c.ZDy)(
                     async () => {
                         let { default: t } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
@@ -85,25 +85,25 @@ function j() {
                     { stackingBehavior: "stack" },
                 );
         }, [e]);
-    if (null == t || null == j || null == I || !_)
+    if (null == t || null == O || null == P || !_)
         return (0, r.jsx)("div", {
-            className: y.loading,
-            children: (0, r.jsx)(s.$jN, {}),
+            className: v.loading,
+            children: (0, r.jsx)(c.$jN, {}),
         });
     if (null == x) return (0, r.jsx)(h.Z, {});
-    let w = (0, r.jsxs)(s.Kqy, {
+    let w = (0, r.jsxs)(c.Kqy, {
         gap: 4,
-        className: y.header,
+        className: v.header,
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",
                 color: "header-primary",
-                children: v.intl.string(v.t["oqalC+"]),
+                children: y.intl.string(y.t["oqalC+"]),
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: v.intl.format(v.t.YnNFWa, { applicationName: j.name }),
+                children: y.intl.format(y.t.YnNFWa, { applicationName: O.name }),
             }),
         ],
     });
@@ -114,33 +114,33 @@ function j() {
             let { visibleContent: n, markAsDismissed: i } = e;
             switch (n) {
                 case o.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET:
-                    return (0, r.jsxs)(s.Kqy, {
+                    return (0, r.jsxs)(c.Kqy, {
                         gap: 16,
                         align: "center",
                         children: [
-                            (0, r.jsx)(s.LZC, { size: 32 }),
+                            (0, r.jsx)(c.LZC, { size: 32 }),
                             w,
                             (0, r.jsx)(m.Z, {
                                 user: t,
-                                application: j,
+                                application: O,
                                 onDismiss: i,
                             }),
                             (0, r.jsx)(b.Z, {}),
                         ],
                     });
                 case null:
-                    return (0, r.jsxs)(s.Kqy, {
+                    return (0, r.jsxs)(c.Kqy, {
                         gap: 32,
                         align: "center",
                         children: [
-                            (0, r.jsx)(s.LZC, { size: 128 }),
+                            (0, r.jsx)(c.LZC, { size: 128 }),
                             w,
-                            (0, r.jsx)(s.Button, {
-                                icon: s.qJs,
-                                text: v.intl.string(v.t["lBG2s/"]),
+                            (0, r.jsx)(c.Button, {
+                                icon: c.qJs,
+                                text: y.intl.string(y.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
-                                onClick: P,
+                                onClick: I,
                             }),
                         ],
                     });

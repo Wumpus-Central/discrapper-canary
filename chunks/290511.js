@@ -77,7 +77,7 @@ function y(e) {
 function O() {
     return {
         id: String(Date.now()),
-        title: a.intl.string(a.t.vY91Cw),
+        title: a.intl.string(a.t.vY91C9),
         options: [],
         singleSelect: !1,
         required: !1,

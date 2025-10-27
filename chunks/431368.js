@@ -14,7 +14,7 @@ function d(e, t) {
     return n
         ? (0, i.jsx)(l.S89, {
               id: "self-stream-hide",
-              label: u.intl.string(u.t.aol7iY),
+              label: u.intl.string(u.t.aol7iW),
               checked: !d,
               action: () => {
                   if (h || d) return p(!d);

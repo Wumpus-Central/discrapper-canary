@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(493773),
     O = n(209613),
     y = n(100527),
-    v = n(906732),
-    j = n(358221),
+    j = n(906732),
+    v = n(358221),
     x = n(706590),
     C = n(940777),
     E = n(113544),
@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(770858),
     N = n(365113),
     Z = n(905423),
-    w = n(796974),
-    T = n(478738),
+    T = n(796974),
+    w = n(478738),
     A = n(271383),
     R = n(430824),
     D = n(771845),
@@ -257,7 +257,7 @@ function eu(e) {
             return [e, e.version];
         }),
         s = a.getRoots(),
-        c = (0, p.Wu)([T.Z], () => T.Z.getGeoRestrictedGuilds()).map((e) =>
+        c = (0, p.Wu)([w.Z], () => w.Z.getGeoRestrictedGuilds()).map((e) =>
             (0, r.jsx)(
                 z.Z,
                 {
@@ -272,7 +272,7 @@ function eu(e) {
         children: [
             (0, r.jsx)(m.Kqy, {
                 role: "group",
-                "aria-label": en.intl.string(en.t["7hB4kp"]),
+                "aria-label": en.intl.string(en.t["7hB4kg"]),
                 gap: "xs",
                 children: s.map((e, t) => l(e, t, s.length)),
             }),
@@ -297,10 +297,10 @@ function ed(e) {
         }),
         d = (0, p.e7)([S.Z], () => S.Z.lurkingGuildIds()),
         f = i.useMemo(() => (n ? [] : d), [d, n]),
-        b = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
+        b = (0, p.e7)([v.Z], () => v.Z.isFullscreenInContext()),
         { isSorting: O, startSorting: C, stopSorting: E } = (0, M.Z)(),
         N = i.useRef(!1),
-        [T] = i.useState(() => new h.V7()),
+        [w] = i.useState(() => new h.V7()),
         A = i.useRef(null),
         R = i.useRef(null),
         B = (0, u.OP)(),
@@ -368,18 +368,18 @@ function ed(e) {
         ),
         [ef],
     );
-    let { analyticsLocations: eh } = (0, v.ZP)(y.Z.GUILDS_LIST),
+    let { analyticsLocations: eh } = (0, j.ZP)(y.Z.GUILDS_LIST),
         eg = ea(ee);
     (0, _.Ng)(() => {
         if (!N.current && 0 !== s.size) {
             if (!eg) {
-                let { scrollTop: e } = w.Z.getGuildListDimensions();
+                let { scrollTop: e } = T.Z.getGuildListDimensions();
                 ef.scrollTo({
                     to: e,
                     animate: !1,
                 });
             }
-            return (N.current = !0), () => T.stop();
+            return (N.current = !0), () => w.stop();
         }
     }),
         i.useEffect(() => {
@@ -444,7 +444,7 @@ function ed(e) {
             className: er.discoveryIcon,
         }),
         eO = ed === I.u3.SERVER_RAIL_BOTTOM;
-    return (0, r.jsx)(v.Gt, {
+    return (0, r.jsx)(j.Gt, {
         value: eh,
         children: (0, r.jsx)(m.f6W, {
             theme: a,

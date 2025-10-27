@@ -35,11 +35,11 @@ let g = (e) => {
             intervalCount: null == S ? void 0 : S.interval_count,
         }),
         N = (0, l._)({
-            defaultResponse: h.intl.string(h.t["8x0jKS"]),
-            onNonTier2Subscriber: h.intl.string(h.t.IJI7ys),
+            defaultResponse: h.intl.string(h.t["8x0jKT"]),
+            onNonTier2Subscriber: h.intl.string(h.t.IJI7yk),
             onTier2TrialOffer: C,
             onTier0TrialOffer: C,
-            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bG, {
+            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bH, {
                 percent: null == A ? void 0 : A.discount.amount,
             }),
         }),

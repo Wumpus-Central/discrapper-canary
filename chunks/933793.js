@@ -18,16 +18,16 @@ function f(t) {
         ? t.hasFlag(c.zZ.PINNED)
             ? (0, i.jsx)(l.sNh, {
                   id: "unpin-thread",
-                  label: h.intl.string(h.t.trD8am),
+                  label: h.intl.string(h.t.trD8ao),
                   action: () => o.Z.unpin(t),
               })
             : (0, i.jsx)(l.sNh, {
                   id: "pin-thread",
-                  label: h.intl.string(h.t.EnaWho),
+                  label: h.intl.string(h.t.EnaWhu),
                   action: function () {
                       null != f
                           ? r.Z.show({
-                                title: h.intl.string(h.t.IMbjxs),
+                                title: h.intl.string(h.t.IMbjxo),
                                 body: h.intl.string(h.t["mi5+Vl"]),
                                 onConfirm: async () => {
                                     await o.Z.unpin(f), o.Z.pin(t);

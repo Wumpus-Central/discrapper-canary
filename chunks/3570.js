@@ -1,27 +1,27 @@
 n.d(t, {
-    T: () => s,
+    T: () => o,
     s: () => c,
 });
 var r = n(536285),
     i = n(703656),
     l = n(314897),
     a = n(358085),
-    o = n(981631);
-let s = a.isPlatformEmbedded
-        ? o.dG4
+    s = n(981631);
+let o = a.isPlatformEmbedded
+        ? s.dG4
         : (e, t) => {
               if (!(0, i.DB)())
-                  return r.default.request(o.Etm.DEEP_LINK, {
+                  return r.default.request(s.Etm.DEEP_LINK, {
                       type: e,
                       params: t,
                   });
           },
     c = a.isPlatformEmbedded
-        ? o.dG4
+        ? s.dG4
         : (e, t) => {
               if (!l.default.isAuthenticated()) {
                   var n, r;
-                  return s(
+                  return o(
                       e,
                       ((n = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(917318),
     R = n(703656),
     P = n(471253),
-    w = n(565799),
-    D = n(590415),
+    D = n(565799),
+    w = n(590415),
     L = n(911560),
     x = n(488131),
     M = n(814820),
@@ -93,7 +93,7 @@ function eP(e, t, n) {
         e
     );
 }
-function ew(e) {
+function eD(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -109,7 +109,7 @@ function ew(e) {
     }
     return e;
 }
-function eD(e, t) {
+function ew(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -126,7 +126,7 @@ function eL(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : eD(Object(t)).forEach(function (n) {
+            : ew(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -276,7 +276,7 @@ function eB(e) {
         d = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e("91315"), n.e("219")]).then(n.bind(n, 223901));
-                return (t) => (0, r.jsx)(e, ew({ channel: a }, t));
+                return (t) => (0, r.jsx)(e, eD({ channel: a }, t));
             });
         }, [a]),
         f = i.useCallback(
@@ -288,7 +288,7 @@ function eB(e) {
                         let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("32925")]).then(
                             n.bind(n, 422200),
                         );
-                        return (t) => (0, r.jsx)(e, eL(ew({}, t), { channel: a }));
+                        return (t) => (0, r.jsx)(e, eL(eD({}, t), { channel: a }));
                     });
             },
             [t],
@@ -597,13 +597,13 @@ function e1(e) {
         f = () => {
             (0, P.DT)(s, i.author.id, !1), l.Z.deleteMessage(s.id, i.id, !0);
         },
-        _ = (0, a.e7)([w.Z], () => w.Z.getParticipant(s.id, i.author.id)),
+        _ = (0, a.e7)([D.Z], () => D.Z.getParticipant(s.id, i.author.id)),
         p =
             new Date(z.default.extractTimestamp(i.id)).toISOString() ===
             new Date(
                 null != (n = null == _ || null == (t = _.voiceState) ? void 0 : t.requestToSpeakTimestamp) ? n : 0,
             ).toISOString(),
-        h = d && (null == _ ? void 0 : _.rtsState) === D.xO.REQUESTED_TO_SPEAK && p;
+        h = d && (null == _ ? void 0 : _.rtsState) === w.xO.REQUESTED_TO_SPEAK && p;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(eg.Z, {
@@ -622,7 +622,7 @@ function e1(e) {
         ],
     });
 }
-function e2(e) {
+function e3(e) {
     let { message: t, channel: n, compact: i } = e;
     return (0, r.jsx)(_.Z, {
         message: t,
@@ -630,7 +630,7 @@ function e2(e) {
         compact: i,
     });
 }
-function e3(e) {
+function e2(e) {
     let { message: t, channel: n, compact: i } = e;
     return (0, r.jsx)(f.Z, {
         message: t,
@@ -759,9 +759,9 @@ let tn = Object.freeze({
     [eC.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: C.P,
     [eC.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: C.e,
     [eC.uaV.PREMIUM_REFERRAL]: te,
-    [eC.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e2,
+    [eC.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e3,
     [eC.uaV.CUSTOM_GIFT]: void 0,
-    [eC.uaV.GUILD_GAMING_STATS_PROMPT]: e3,
+    [eC.uaV.GUILD_GAMING_STATS_PROMPT]: e2,
     [eC.uaV.VOICE_HANGOUT_INVITE]: void 0,
     [eC.uaV.POLL_RESULT]: T.Z,
     [eC.uaV.CHANGELOG]: void 0,

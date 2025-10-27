@@ -42,35 +42,35 @@ function o() {
     return [
         {
             value: "missing_expected_result",
-            label: a.intl.string(a.t["4DEniY"]),
+            label: a.intl.string(a.t["4DEniX"]),
         },
         {
             value: "no_results",
-            label: a.intl.string(a.t.jlh29f),
+            label: a.intl.string(a.t.jlh29e),
         },
         {
             value: "required_multiple_searches",
-            label: a.intl.string(a.t.TpGBIC),
+            label: a.intl.string(a.t.TpGBIB),
         },
         {
             value: "buried_expected_result",
-            label: a.intl.string(a.t.Zh6bND),
+            label: a.intl.string(a.t.Zh6bNN),
         },
         {
             value: "irrelevant_results",
-            label: a.intl.string(a.t.WCiDBA),
+            label: a.intl.string(a.t.WCiDBF),
         },
         {
             value: "inadequate_filters",
-            label: a.intl.string(a.t.mf36b2),
+            label: a.intl.string(a.t.mf36b7),
         },
         {
             value: "hard_to_scan_results",
-            label: a.intl.string(a.t.ECI0OT),
+            label: a.intl.string(a.t.ECI0Of),
         },
         {
             value: i,
-            label: a.intl.string(a.t.oxbtmJ),
+            label: a.intl.string(a.t.oxbtmN),
         },
     ];
 }
@@ -78,15 +78,15 @@ function v() {
     return [
         {
             value: "looking_for_known_answer",
-            label: a.intl.string(a.t["Str6/v"]),
+            label: a.intl.string(a.t["Str6/o"]),
         },
         {
             value: "looking_for_unknown_answer",
-            label: a.intl.string(a.t.DePZNT),
+            label: a.intl.string(a.t.DePZNY),
         },
         {
             value: "message_from_specific_author",
-            label: a.intl.string(a.t["sGKG/f"]),
+            label: a.intl.string(a.t["sGKG/Y"]),
         },
         {
             value: "images_and_files_results",
@@ -94,19 +94,19 @@ function v() {
         },
         {
             value: "link_results",
-            label: a.intl.string(a.t.a1ZtEx),
+            label: a.intl.string(a.t.a1ZtE8),
         },
         {
             value: "specific_topic",
-            label: a.intl.string(a.t.EIHXbW),
+            label: a.intl.string(a.t.EIHXbc),
         },
         {
             value: "navigation_results",
-            label: a.intl.string(a.t["6wKpiY"]),
+            label: a.intl.string(a.t["6wKpiV"]),
         },
         {
             value: i,
-            label: a.intl.string(a.t.RBmOLi),
+            label: a.intl.string(a.t.RBmOLj),
         },
     ];
 }

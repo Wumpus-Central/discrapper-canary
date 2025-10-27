@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => p,
-    default: () => f,
+    default: () => g,
 });
 var r = n(951288),
     l = n(647438),
@@ -12,17 +12,17 @@ var r = n(951288),
     d = n(161836),
     u = n(630724),
     m = n(388032),
-    g = n(759137);
-function f(e) {
-    let { transitionState: t, onClose: n, isNUXFlow: f } = e;
+    f = n(759137);
+function g(e) {
+    let { transitionState: t, onClose: n, isNUXFlow: g } = e;
     return (
         l.useEffect(() => {
-            o.Z.hideHubUpsell(), f && s.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION);
-        }, [f]),
+            o.Z.hideHubUpsell(), g && s.Z.flowStep(u.MK.ORGANIC, u.EW.HUB_CONNECTION);
+        }, [g]),
         (0, r.jsx)(a.Y0X, {
-            className: g.modalRoot,
+            className: f.modalRoot,
             transitionState: t,
-            "aria-label": m.intl.string(m.t["3khS8P"]),
+            "aria-label": m.intl.string(m.t["3khS8H"]),
             impression: { impressionName: i.ImpressionNames.HUB_EMAIL_SIGNUP },
             parentComponent: "HubEmailConnectionModal",
             children: (0, r.jsx)(a.hzk, {
@@ -31,23 +31,23 @@ function f(e) {
                     paddingRight: "0px",
                 },
                 paddingFix: !1,
-                className: g.modalContent,
+                className: f.modalContent,
                 children: (0, r.jsxs)("div", {
-                    className: g.container,
+                    className: f.container,
                     children: [
                         (0, r.jsx)("div", {
-                            className: g.sidebarContainer,
+                            className: f.sidebarContainer,
                             children: (0, r.jsx)(d.Z, {}),
                         }),
                         (0, r.jsxs)("div", {
-                            className: g.contentContainer,
+                            className: f.contentContainer,
                             children: [
                                 (0, r.jsx)(a.olH, {
                                     onClick: n,
-                                    className: g.closeButton,
+                                    className: f.closeButton,
                                 }),
                                 (0, r.jsx)(c.Z, {
-                                    isNUXFlow: f,
+                                    isNUXFlow: g,
                                     onClose: n,
                                 }),
                             ],
@@ -61,14 +61,14 @@ function f(e) {
 let p = (e) => {
     let { invite: t } = e;
     return (0, r.jsxs)("div", {
-        className: g.container,
+        className: f.container,
         children: [
             (0, r.jsx)("div", {
-                className: g.sidebarContainer,
+                className: f.sidebarContainer,
                 children: (0, r.jsx)(d.Z, {}),
             }),
             (0, r.jsx)("div", {
-                className: g.contentContainer,
+                className: f.contentContainer,
                 children: (0, r.jsx)(c.Z, { invite: t }),
             }),
         ],

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(442837),
-    o = n(481060),
-    s = n(797258),
+    s = n(481060),
+    o = n(797258),
     c = n(374129),
     u = n(639351),
     d = n(565473),
     p = n(927923),
     f = n(388032),
     h = n(971108);
-function g(e) {
+function m(e) {
     let { platform: t } = e;
     return t === p.YE.XBOX
         ? (0, r.jsx)(u.Z, { className: h.icon })
@@ -20,33 +20,33 @@ function g(e) {
           ? (0, r.jsx)(c.Z, { className: h.icon })
           : null;
 }
-function m(e) {
+function g(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
         i = null != n ? (0, d.y)(n.type) : null,
-        c = (0, a.e7)([s.Z], () => {
+        c = (0, a.e7)([o.Z], () => {
             var e, n;
-            return null == (e = s.Z.getSessionById(null != (n = null == t ? void 0 : t.sessionId) ? n : ""))
+            return null == (e = o.Z.getSessionById(null != (n = null == t ? void 0 : t.sessionId) ? n : ""))
                 ? void 0
                 : e.clientInfo.os;
         }),
         u = null != i ? i : c;
     if (null == u || !p.al.has(u)) return null;
-    let m = null != n,
-        b = m
+    let g = null != n,
+        _ = g
             ? u === p.YE.XBOX
-                ? f.intl.string(f.t.UjA4HR)
-                : f.intl.string(f.t.QCw1oa)
+                ? f.intl.string(f.t.UjA4HX)
+                : f.intl.string(f.t.QCw1oW)
             : u === p.YE.XBOX
-              ? f.intl.format(f.t["ynEs/f"], {})
+              ? f.intl.format(f.t["ynEs/Y"], {})
               : f.intl.format(f.t.TZ17Bg, {});
     return (0, r.jsxs)("div", {
-        className: l()(h.root, m ? h.connecting : h.connected),
+        className: l()(h.root, g ? h.connecting : h.connected),
         children: [
-            (0, r.jsx)(g, { platform: u }),
-            (0, r.jsx)(o.Text, {
-                color: m ? "header-primary" : "always-white",
+            (0, r.jsx)(m, { platform: u }),
+            (0, r.jsx)(s.Text, {
+                color: g ? "header-primary" : "always-white",
                 variant: "text-xs/medium",
-                children: b,
+                children: _,
             }),
         ],
     });

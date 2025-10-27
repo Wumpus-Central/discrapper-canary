@@ -3,29 +3,29 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(399606),
-    s = n(704215),
+    s = n(399606),
+    o = n(704215),
     c = n(582019),
     u = n(28664),
     d = n(755721),
     p = n(481060),
     f = n(239091),
     h = n(100527),
-    g = n(906732),
-    m = n(522651),
-    b = n(795318),
-    _ = n(706140),
+    m = n(906732),
+    g = n(522651),
+    _ = n(795318),
+    b = n(706140),
     E = n(294629),
     O = n(131951),
-    v = n(459273),
-    y = n(242291),
-    I = n(792165),
+    I = n(459273),
+    v = n(242291),
+    y = n(792165),
     C = n(603074),
     S = n(981631),
-    N = n(921944),
-    T = n(388032),
-    P = n(890332);
-function j(e) {
+    T = n(921944),
+    N = n(388032),
+    j = n(890332);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -93,13 +93,13 @@ function A(e) {
         })(e, ["channel"]);
     let A = i.useRef(null),
         { mute: Z, suppress: w } = (0, E.Z)(t),
-        L = (0, o.e7)([O.Z], () => O.Z.isDeaf()),
-        R = Z || w || L,
-        [D, M] = i.useState(!1),
+        L = (0, s.e7)([O.Z], () => O.Z.isDeaf()),
+        D = Z || w || L,
+        [R, M] = i.useState(!1),
         k = t.getGuildId(),
-        U = (0, y.sR)({ isSoundboardButtonDisabled: R }),
-        [G, B] = (0, _.cv)(U),
-        { analyticsLocations: H, parentAnalyticsLocation: V } = (0, g.ZP)(h.Z.SOUNDBOARD_BUTTON);
+        U = (0, v.sR)({ isSoundboardButtonDisabled: D }),
+        [G, B] = (0, b.cv)(U),
+        { analyticsLocations: H, parentAnalyticsLocation: V } = (0, m.ZP)(h.Z.SOUNDBOARD_BUTTON);
     function F(e) {
         null != k &&
             (0, f.jW)(e, async () => {
@@ -108,47 +108,47 @@ function A(e) {
                     (0, r.jsx)(
                         e,
                         x(
-                            j(
+                            P(
                                 {
                                     guildId: k,
                                     sourceAnalyticsLocations: H,
                                 },
                                 t,
                             ),
-                            { onInteraction: (0, b.u)("SoundboardContextMenu", h.Z.RTC_PANEL) },
+                            { onInteraction: (0, _.u)("SoundboardContextMenu", h.Z.RTC_PANEL) },
                         ),
                     );
             });
     }
     let {
             Component: z,
-            play: W,
-            events: { onMouseEnter: Y, onMouseLeave: q },
+            play: Y,
+            events: { onMouseEnter: W, onMouseLeave: q },
         } = (0, c.j)(),
         K = i.useCallback(() => {
-            R || M(!D);
-        }, [R, D]);
+            D || M(!R);
+        }, [D, R]);
     return (
-        (0, v.yp)({
+        (0, I.yp)({
             event: S.CkL.TOGGLE_SOUNDBOARD,
             handler: K,
         }),
-        (0, r.jsx)(g.Gt, {
+        (0, r.jsx)(m.Gt, {
             value: H,
             children: (0, r.jsx)(u.u, {
                 targetElementRef: A,
                 text: Z
-                    ? T.intl.string(T.t["Ox4/zc"])
+                    ? N.intl.string(N.t["Ox4/zU"])
                     : w
-                      ? T.intl.string(T.t["+YBKYG"])
+                      ? N.intl.string(N.t["+YBKYI"])
                       : L
-                        ? T.intl.string(T.t.X1lQlp)
-                        : T.intl.string(T.t["6EJvHh"]),
+                        ? N.intl.string(N.t.X1lQli)
+                        : N.intl.string(N.t["6EJvHt"]),
                 asContainer: !0,
                 children: (0, r.jsx)(p.yRy, {
                     targetElementRef: A,
                     animation: p.yRy.Animation.FADE,
-                    shouldShow: D,
+                    shouldShow: R,
                     position: "top",
                     onRequestClose: () => M(!1),
                     renderPopout: (e) => {
@@ -158,8 +158,8 @@ function A(e) {
                             channel: t,
                             onClose: n,
                             gridNotice:
-                                G === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                (0, r.jsx)(I.o, {
+                                G === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                (0, r.jsx)(y.o, {
                                     onClose: n,
                                     markAsDismissed: B,
                                 }),
@@ -172,26 +172,26 @@ function A(e) {
                             children: (0, r.jsx)(
                                 d.zx,
                                 x(
-                                    j(
-                                        x(j({}, e), {
-                                            className: a()(P.button, P.buttonColor, {
-                                                [P.greyButtonActive]: D,
-                                                [P.disabled]: R,
+                                    P(
+                                        x(P({}, e), {
+                                            className: a()(j.button, j.buttonColor, {
+                                                [j.greyButtonActive]: R,
+                                                [j.disabled]: D,
                                             }),
-                                            wrapperClassName: P.button,
-                                            innerClassName: P.buttonContents,
-                                            disabled: R,
+                                            wrapperClassName: j.button,
+                                            innerClassName: j.buttonContents,
+                                            disabled: D,
                                             onClick: () => {
                                                 null != G &&
-                                                    G !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                                    B(N.L.UNKNOWN),
-                                                    M(!D),
-                                                    W(),
-                                                    (0, m.v)(V, m.d.SOUNDBOARD);
+                                                    G !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                                    B(T.L.UNKNOWN),
+                                                    M(!R),
+                                                    Y(),
+                                                    (0, g.v)(V, g.d.SOUNDBOARD);
                                             },
                                             onMouseEnter: (e) => {
                                                 var t;
-                                                null == (t = l.onMouseEnter) || t.call(l, e), Y();
+                                                null == (t = l.onMouseEnter) || t.call(l, e), W();
                                             },
                                             onMouseLeave: (e) => {
                                                 var t;
@@ -205,7 +205,7 @@ function A(e) {
                                     ),
                                     {
                                         children: (0, r.jsx)(z, {
-                                            className: P.buttonIcon,
+                                            className: j.buttonIcon,
                                             size: "sm",
                                             color: "currentColor",
                                         }),

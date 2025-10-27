@@ -20,23 +20,23 @@ let y = (e) => {
         y = (0, a.useRef)((0, g.sf)()).current,
         {
             selectedDestinations: O,
-            messageText: j,
-            canSend: C,
+            messageText: C,
+            canSend: j,
             setSend: w,
             updateMessage: v,
             updateChannel: S,
         } = (0, o.o)(y),
         [P, x] = a.useState(!1),
         { colors: E, chassisMixAmount: M, gradientAngle: k } = (0, b.Ig)(),
-        D = (0, s.e7)([u.Z], () => u.Z.theme),
-        I = (0, a.useMemo)(
+        I = (0, s.e7)([u.Z], () => u.Z.theme),
+        D = (0, a.useMemo)(
             () => ({
                 colors: E.map((e) => e.replace("#", "")),
                 gradient_angle: k,
                 base_mix: M,
-                base_theme: (0, p.h)(D),
+                base_theme: (0, p.h)(I),
             }),
-            [E, k, M, D],
+            [E, k, M, I],
         ),
         T = a.useMemo(
             () =>
@@ -87,9 +87,9 @@ let y = (e) => {
         v(R), S(T), x(!0);
     }, [R, T, v, S]);
     let Z = a.useCallback(async () => {
-        if (!C()) return Promise.reject();
-        await (0, _.O)(O, I, j), f.default.track(m.rMx.CUSTOM_THEME_SHARED, { num_destinations: O.length }), await n();
-    }, [I, O, j, C, n]);
+        if (!j()) return Promise.reject();
+        await (0, _.O)(O, D, C), f.default.track(m.rMx.CUSTOM_THEME_SHARED, { num_destinations: O.length }), await n();
+    }, [D, O, C, j, n]);
     return ((0, a.useEffect)(() => {
         w(Z);
     }, [Z, w]),

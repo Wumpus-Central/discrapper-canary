@@ -74,14 +74,14 @@ function a(e) {
                         children: [
                             (0, n.jsx)(c.Button, {
                                 variant: "secondary",
-                                text: l.intl.string(l.t["ETE/oK"]),
+                                text: l.intl.string(l.t["ETE/oC"]),
                                 onClick: c.pTH,
                             }),
                             (0, n.jsx)(i.zx, {
                                 color: i.Tt.RED,
                                 onClick: p,
                                 style: { marginRight: 8 },
-                                children: l.intl.string(l.t.R9GHyc),
+                                children: l.intl.string(l.t.R9GHya),
                             }),
                         ],
                     }),

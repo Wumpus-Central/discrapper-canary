@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: () => x,
-        getPageSize: () => P,
+        getPageSize: () => j,
     }),
     n(388685),
     n(35282);
@@ -9,26 +9,26 @@ var r = n(951288),
     i = n(647438),
     l = n(593473),
     a = n(843611),
-    o = n(442837),
-    s = n(930118),
+    s = n(442837),
+    o = n(930118),
     c = n(355467),
     u = n(410575),
     d = n(666743),
     p = n(112724),
     f = n(447269),
     h = n(612226),
-    g = n(714338),
-    m = n(663993),
-    b = n(628123),
-    _ = n(703656),
+    m = n(714338),
+    g = n(663993),
+    _ = n(628123),
+    b = n(703656),
     E = n(108427),
     O = n(911314),
-    v = n(429899),
-    y = n(843445),
-    I = n(981631),
+    I = n(429899),
+    v = n(843445),
+    y = n(981631),
     C = n(388032),
     S = n(430355);
-function N(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,37 +41,37 @@ function N(e, t, n) {
         e
     );
 }
-let T = (0, m.Un)({
+let N = (0, g.Un)({
     createPromise: () => Promise.all([n.e("68264"), n.e("87626")]).then(n.bind(n, 496691)),
     webpackId: 496691,
 });
-function P(e) {
-    return e < y.x ? y.b.SMALL : y.b.LARGE;
+function j(e) {
+    return e < v.x ? v.b.SMALL : v.b.LARGE;
 }
-o.ZP.initialize();
-class j extends i.PureComponent {
+s.ZP.initialize();
+class P extends i.PureComponent {
     componentDidMount() {
-        (0, s.Y)(this.props.location),
-            (this.stopListeningToHistory = (0, _.s1)().listen((e) => {
-                e.pathname.startsWith(I.Z5c.APPLICATION_STORE) && (0, s.Y)(e);
+        (0, o.Y)(this.props.location),
+            (this.stopListeningToHistory = (0, b.s1)().listen((e) => {
+                e.pathname.startsWith(y.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
-            g.Z.disable(),
-            g.Z.setLayout(f.r),
-            g.Z.enable(),
+            m.Z.disable(),
+            m.Z.setLayout(f.r),
+            m.Z.enable(),
             (0, E.e)("application_store");
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(),
-            g.Z.disable(),
-            g.Z.setLayout(h.oT),
-            g.Z.enable();
+            m.Z.disable(),
+            m.Z.setLayout(h.oT),
+            m.Z.enable();
     }
     renderCustomErrorMessage() {
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)("p", { children: C.intl.string(C.t["1PZdFx"]) }),
-                (0, r.jsx)("p", { children: C.intl.string(C.t.CvQlAA) }),
+                (0, r.jsx)("p", { children: C.intl.string(C.t["1PZdF7"]) }),
+                (0, r.jsx)("p", { children: C.intl.string(C.t.CvQlAH) }),
             ],
         });
     }
@@ -82,74 +82,74 @@ class j extends i.PureComponent {
                       className: S.applicationStore,
                       children: this.renderContent(),
                   })
-                : (0, r.jsx)(T, {
+                : (0, r.jsx)(N, {
                       className: S.applicationStore,
                       location: t,
                       render: this.renderContent,
                   });
-        return (0, r.jsx)(b.Z, {
+        return (0, r.jsx)(_.Z, {
             renderCustomMessage: this.renderCustomErrorMessage,
             children: n,
         });
     }
     constructor(...e) {
         super(...e),
-            N(this, "stopListeningToHistory", void 0),
-            N(this, "renderStoreListing", (e) => {
+            T(this, "stopListeningToHistory", void 0),
+            T(this, "renderStoreListing", (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: i },
                         },
                         location: a,
                     } = e,
-                    { width: o } = this.props,
-                    s = (0, l.parse)(a.search);
+                    { width: s } = this.props,
+                    o = (0, l.parse)(a.search);
                 return (0, r.jsx)(u.Z, {
-                    page: I.ZY5.STORE_LISTING,
+                    page: y.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, r.jsx)(v.Z, {
+                    children: (0, r.jsx)(I.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: i,
                         location: a,
-                        storeListingId: s.store_listing_id,
-                        pageSize: P(o),
+                        storeListingId: o.store_listing_id,
+                        pageSize: j(s),
                     }),
                 });
             }),
-            N(this, "renderContent", () =>
+            T(this, "renderContent", () =>
                 (0, r.jsxs)(a.rs, {
                     children: [
                         (0, r.jsx)(a.AW, {
-                            path: I.Z5c.APPLICATION_STORE,
+                            path: y.Z5c.APPLICATION_STORE,
                             exact: !0,
                             render: () =>
                                 (0, r.jsx)(u.Z, {
-                                    page: I.ZY5.STORE_DIRECTORY_HOME,
+                                    page: y.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
                                     children: (0, r.jsx)(O.Z, {}),
                                 }),
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: I.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
+                            path: y.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
                             render: this.renderStoreListing,
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: I.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
+                            path: y.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
                             render: this.renderStoreListing,
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: I.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+                            path: y.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
                             render: this.renderStoreListing,
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: I.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId"),
+                            path: y.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId"),
                             render: this.renderStoreListing,
                         }),
-                        (0, r.jsx)(a.l_, { to: I.Z5c.APP }),
+                        (0, r.jsx)(a.l_, { to: y.Z5c.APP }),
                     ],
                 }),
             );
     }
 }
-let x = (0, a.EN)((0, d.Z)((0, p.Z)(j)));
+let x = (0, a.EN)((0, d.Z)((0, p.Z)(P)));

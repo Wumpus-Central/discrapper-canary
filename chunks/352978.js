@@ -24,23 +24,23 @@ let _ = l.memo(function (e) {
             fit: _ = "contain",
             mirror: m = !1,
             paused: g = !1,
-            streamPreviewURL: E,
+            streamPreviewURL: v,
             videoSpinnerContext: b,
-            userId: v,
+            userId: E,
             streamKey: h,
         } = e,
         [S, y] = l.useState(!0);
     (0, u.Z)({
         location: "VideoStream",
         videoSpinnerContext: b,
-        userId: v,
+        userId: E,
         streamId: t,
         loading: S,
         paused: g,
     });
     let { onReady: O } = (0, s.Z)({
             streamId: t,
-            userId: v,
+            userId: E,
             loading: S,
             videoSpinnerContext: b,
             streamKey: h,
@@ -68,9 +68,9 @@ let _ = l.memo(function (e) {
                           S &&
                           (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  null != E
+                                  null != v
                                       ? (0, i.jsx)("img", {
-                                            src: E,
+                                            src: v,
                                             alt: "",
                                             className: f.previewImage,
                                         })

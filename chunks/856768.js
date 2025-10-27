@@ -79,6 +79,6 @@ function E(e) {
         options: b,
         renderOptionPrefix: y,
         renderOptionSuffix: o,
-        placeholder: h.intl.string(h.t["kMgj+f"]),
+        placeholder: h.intl.string(h.t["kMgj+e"]),
     });
 }

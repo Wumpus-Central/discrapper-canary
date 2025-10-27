@@ -27,9 +27,9 @@ let m = (e) => {
         }, [t]);
     return null != t && _
         ? (0, r.jsx)(s.JZ, {
-              title: u.intl.string(u.t.c9BHLy),
-              description: u.intl.string(u.t.dK8S09),
-              buttonText: m ? u.intl.string(u.t.f3pnLC) : u.intl.string(u.t.ch2xbm),
+              title: u.intl.string(u.t.c9BHL9),
+              description: u.intl.string(u.t.dK8S0w),
+              buttonText: m ? u.intl.string(u.t.f3pnLL) : u.intl.string(u.t.ch2xbt),
               buttonDisabled: m,
               buttonVariant: "critical-primary",
               onButtonPress: g,

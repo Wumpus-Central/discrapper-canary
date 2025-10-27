@@ -21,7 +21,7 @@ function f() {
             (0, r.jsx)("div", {
                 className: d.column,
                 children: (0, r.jsx)(a.iRW, {
-                    label: u.intl.string(u.t.OX2Bnp),
+                    label: u.intl.string(u.t.OX2Bnr),
                     initialValue: (0, c.P)(t),
                     asValueChanges: (t) => o.Z.setInputVolume((0, c.A)(t), { analyticsLocations: e }),
                 }),
@@ -29,7 +29,7 @@ function f() {
             (0, r.jsx)("div", {
                 className: d.column,
                 children: (0, r.jsx)(a.iRW, {
-                    label: u.intl.string(u.t.eATD2N),
+                    label: u.intl.string(u.t.eATD2B),
                     initialValue: (0, c.P)(n),
                     maxValue: 200,
                     onValueRender: (e) => "".concat(e.toFixed(0), "%"),

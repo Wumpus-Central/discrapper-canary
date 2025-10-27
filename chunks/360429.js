@@ -15,9 +15,9 @@ var l = n(392711),
     g = n(607783),
     O = n(435064),
     I = n(779618),
-    S = n(39604),
+    j = n(39604),
     h = n(258609),
-    j = n(569545),
+    S = n(569545),
     m = n(352978),
     y = n(441167),
     E = n(700994),
@@ -26,9 +26,9 @@ var l = n(392711),
     Z = n(592125),
     x = n(131951),
     C = n(594174),
-    k = n(444295),
+    V = n(444295),
     P = n(1226),
-    V = n(981631),
+    k = n(981631),
     A = n(65154),
     _ = n(388032);
 function D(e) {
@@ -77,12 +77,12 @@ function N(e, t) {
 function T(e) {
     return (0, i.e7)([v.Z], () => {
         let t = v.Z.getActiveStreamForApplicationStream(e);
-        return null != t && (0, j.V9)(t) === (0, j.V9)(e);
+        return null != t && (0, S.V9)(t) === (0, S.V9)(e);
     });
 }
 function L(e) {
     let { stream: t, analyticsContext: n, appContext: v, exitFullscreen: L, onSelect: G } = e,
-        M = (function (e) {
+        U = (function (e) {
             let t = T(e),
                 n = (0, I.Z)(x.Z),
                 l = O.Z.getSettings().clipsEnabled,
@@ -97,32 +97,32 @@ function L(e) {
                 ? (0, r.jsx)(o.sNh, {
                       id: "clip-stream",
                       disabled: !l || !(a || d) || s,
-                      label: _.intl.string(_.t.U4URzM),
-                      action: () => (a ? (0, S.C1)() : (0, S.C1)((0, j.V9)(e))),
+                      label: _.intl.string(_.t.U4URzP),
+                      action: () => (a ? (0, j.C1)() : (0, j.C1)((0, S.V9)(e))),
                   })
                 : null;
         })(t),
-        U = T(t),
-        J = (function (e) {
+        M = T(t),
+        Q = (function (e) {
             let t = T(e),
                 n = (0, l.debounce)((t) => {
-                    (0, k.Ws)(V.Odu.GO_LIVE, {
-                        type: k.Qu.AUDIO,
-                        value: k.bk.SETTING_ADJUSTED,
+                    (0, V.Ws)(k.Odu.GO_LIVE, {
+                        type: V.Qu.AUDIO,
+                        value: V.bk.SETTING_ADJUSTED,
                         userId: e.ownerId,
                     });
                 }, 1000),
                 r = (0, E.Z)(e.ownerId, A.Yn.STREAM, n);
             return t ? r : null;
         })(t),
-        Q = (function (e) {
+        R = (function (e) {
             let t,
                 n = (0, i.e7)([h.default], () => null != h.default.getRemoteSessionId()),
                 l = (0, i.e7)([Z.Z], () => Z.Z.getChannel(e.channelId), [e.channelId]),
                 a = T(e),
                 c = C.default.getCurrentUser(),
                 d = null != c && e.ownerId === c.id;
-            return ((t = d ? _.intl.string(_.t.S5anIS) : a ? _.intl.string(_.t.q3O3Jy) : _.intl.string(_.t["7Xq/nZ"])),
+            return ((t = d ? _.intl.string(_.t.S5anIc) : a ? _.intl.string(_.t.q3O3J8) : _.intl.string(_.t["7Xq/nV"])),
             n || (!d && a && (null == l ? void 0 : l.isGuildStageVoice())))
                 ? null
                 : (0, r.jsx)(o.sNh, {
@@ -130,25 +130,25 @@ function L(e) {
                       label: t,
                       action: a
                           ? function () {
-                                (0, s.g)((0, j.V9)(e)),
-                                    (0, k.Ws)(V.Odu.GO_LIVE, {
-                                        type: k.Qu.GO_LIVE,
-                                        value: k.bk.DISABLED,
+                                (0, s.g)((0, S.V9)(e)),
+                                    (0, V.Ws)(k.Odu.GO_LIVE, {
+                                        type: V.Qu.GO_LIVE,
+                                        value: V.bk.DISABLED,
                                         userId: e.ownerId,
                                     });
                             }
                           : function () {
                                 u.default.selectVoiceChannel(e.channelId),
                                     (0, s.rn)(e),
-                                    (0, k.Ws)(V.Odu.GO_LIVE, {
-                                        type: k.Qu.GO_LIVE,
-                                        value: k.bk.ENABLED,
+                                    (0, V.Ws)(k.Odu.GO_LIVE, {
+                                        type: V.Qu.GO_LIVE,
+                                        value: V.bk.ENABLED,
                                         userId: e.ownerId,
                                     });
                             },
                   });
         })(t),
-        R = (function (e) {
+        B = (function (e) {
             let t = T(e),
                 n = (0, i.e7)([x.Z], () => x.Z.isLocalMute(e.ownerId, A.Yn.STREAM)),
                 l = C.default.getCurrentUser(),
@@ -157,14 +157,14 @@ function L(e) {
                 ? null
                 : (0, r.jsx)(o.S89, {
                       id: "mute",
-                      label: _.intl.string(_.t.sWmtIy),
+                      label: _.intl.string(_.t.sWmtI6),
                       action: function () {
                           a.Z.toggleLocalMute(e.ownerId, A.Yn.STREAM);
                       },
                       checked: n,
                   });
         })(t),
-        B = (function (e) {
+        J = (function (e) {
             let t = T(e),
                 n = e.ownerId === w.default.getId(),
                 l = x.Z.supports(A.AN.SIDECHAIN_COMPRESSION),
@@ -176,13 +176,13 @@ function L(e) {
                       children: [
                           (0, r.jsx)(o.S89, {
                               id: "sidechain-compression",
-                              label: _.intl.string(_.t["/jwMtr"]),
+                              label: _.intl.string(_.t["/jwMtn"]),
                               action: () => a.Z.setSidechainCompression(!c, { analyticsLocations: s }),
                               checked: c,
                           }),
                           (0, r.jsx)(o.II_, {
                               id: "sidechain-parameters",
-                              label: _.intl.string(_.t.fhEzfn),
+                              label: _.intl.string(_.t.fhEzfj),
                               control: (e, t) =>
                                   (0, r.jsx)(
                                       o._wy,
@@ -192,7 +192,7 @@ function L(e) {
                                           maxValue: 100,
                                           onChange: (e) =>
                                               a.Z.setSidechainCompressionStrength(e, { analyticsLocations: s }),
-                                          "aria-label": _.intl.string(_.t.fhEzfn),
+                                          "aria-label": _.intl.string(_.t.fhEzfj),
                                       }),
                                   ),
                           }),
@@ -200,21 +200,21 @@ function L(e) {
                   })
                 : null;
         })(t),
-        W = (0, b.Z)(t, v, L),
-        F = (0, p.G)({
+        F = (0, b.Z)(t, v, L),
+        Y = (0, p.G)({
             stream: t,
             channelId: t.channelId,
         }),
-        Y = (0, g.B)({
+        W = (0, g.B)({
             userId: t.ownerId,
             channelId: t.channelId,
             guildId: t.guildId,
         }),
         z = (function (e) {
             let t = (0, l.debounce)(() => {
-                    (0, k.Ws)(V.Odu.GO_LIVE, {
-                        type: k.Qu.SCREEN_SHARE,
-                        value: k.bk.SETTING_ADJUSTED,
+                    (0, V.Ws)(k.Odu.GO_LIVE, {
+                        type: V.Qu.SCREEN_SHARE,
+                        value: V.bk.SETTING_ADJUSTED,
                         userId: e.ownerId,
                     });
                 }, 1000),
@@ -224,7 +224,7 @@ function L(e) {
                 i = (0, P.BO)(e);
             return (0, r.jsx)(o.II_, {
                 id: "stream-zoom",
-                label: _.intl.string(_.t.B3kEDg),
+                label: _.intl.string(_.t.B3kEDs),
                 control: (e, t) =>
                     (0, r.jsx)(
                         o._wy,
@@ -234,7 +234,7 @@ function L(e) {
                             maxValue: 300,
                             onChange: n,
                             minValue: 100,
-                            "aria-label": _.intl.string(_.t.B3kEDg),
+                            "aria-label": _.intl.string(_.t.B3kEDs),
                         }),
                     ),
             });
@@ -243,12 +243,12 @@ function L(e) {
             let t = (0, P.xN)(e);
             return (0, r.jsx)(o.S89, {
                 id: "fit",
-                label: _.intl.string(_.t.mpnvra),
+                label: _.intl.string(_.t.mpnvrV),
                 action: () => {
                     (0, P.gI)(e, t === m.L.CONTAIN ? m.L.COVER : m.L.CONTAIN),
-                        (0, k.Ws)(V.Odu.GO_LIVE, {
-                            type: k.Qu.GO_LIVE,
-                            value: k.bk.SETTING_ADJUSTED,
+                        (0, V.Ws)(k.Odu.GO_LIVE, {
+                            type: V.Qu.GO_LIVE,
+                            value: V.bk.SETTING_ADJUSTED,
                             userId: e.ownerId,
                         });
                 },
@@ -257,22 +257,22 @@ function L(e) {
         })(t);
     return (0, r.jsx)(d.Z, {
         context: n,
-        object: V.qAy.CONTEXT_MENU,
+        object: k.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(o.v2r, {
             navId: "stream-context",
             onClose: c.Zy,
-            "aria-label": _.intl.string(_.t.Gl3Q39),
+            "aria-label": _.intl.string(_.t.Gl3Q30),
             onSelect: G,
             children: [
                 (0, r.jsxs)(o.kSQ, {
-                    children: [Q, M, R, F, Y],
+                    children: [R, U, B, Y, W],
                 }),
-                (0, r.jsx)(o.kSQ, { children: J }),
+                (0, r.jsx)(o.kSQ, { children: Q }),
                 (0, r.jsxs)(o.kSQ, {
                     children: [z, q],
                 }),
-                B,
-                (0, r.jsx)(o.kSQ, { children: U && W }),
+                J,
+                (0, r.jsx)(o.kSQ, { children: M && F }),
             ],
         }),
     });

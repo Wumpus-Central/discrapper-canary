@@ -104,8 +104,8 @@ let A = i.forwardRef((e, t) => {
             maxWidth: S = y,
             maxHeight: A = v,
             minWidth: P = 0,
-            minHeight: w = 0,
-            mediaLayoutType: D,
+            minHeight: D = 0,
+            mediaLayoutType: w,
             limitResponsiveWidth: L = !0,
             accessory: x,
             zoomable: M = !0,
@@ -162,7 +162,7 @@ let A = i.forwardRef((e, t) => {
             maxWidth: S,
             maxHeight: A,
             minWidth: P,
-            minHeight: w,
+            minHeight: D,
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
     "" !== f && c !== p.zo9.ERROR
@@ -171,12 +171,12 @@ let A = i.forwardRef((e, t) => {
               size: K,
               alt: b,
               className: s,
-              mediaLayoutType: D,
+              mediaLayoutType: w,
           }))
         : c !== p.zo9.LOADING &&
           (n = (0, r.jsx)(C, {
               size: K,
-              mediaLayoutType: D,
+              mediaLayoutType: w,
               alt: b,
           })),
         (n = (0, r.jsx)(_.N, {
@@ -184,7 +184,7 @@ let A = i.forwardRef((e, t) => {
             aspectRatio: z,
             placeholder: h,
             placeholderVersion: E,
-            placeholderStyle: R(K, D),
+            placeholderStyle: R(K, w),
             children: n,
         }));
     let q = null != U ? U() : null;
@@ -209,7 +209,7 @@ let A = i.forwardRef((e, t) => {
                                 },
                                 a,
                             ),
-                            style: N(K, L, F, D),
+                            style: N(K, L, F, w),
                         },
                         H,
                     ),
@@ -292,7 +292,7 @@ function R(e, t) {
                 maxWidth: 1 === (0, f.Z)() ? "calc(100% + 1px)" : "100%",
             };
         case h.hV.RESPONSIVE:
-            return w(e);
+            return D(e);
         default:
             return e;
     }
@@ -308,12 +308,12 @@ function P(e, t) {
                 maxHeight: "inherit",
             };
         case h.hV.RESPONSIVE:
-            return I(O({}, w(e)), { display: "flex" });
+            return I(O({}, D(e)), { display: "flex" });
         default:
             return e;
     }
 }
-function w(e) {
+function D(e) {
     let { width: t, height: n } = e;
     return {
         maxWidth: t,

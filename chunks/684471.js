@@ -18,10 +18,10 @@ function g(t) {
             return o.ZP.getName(t);
         });
     return (0, i.jsx)(d.Z, {
-        header: u.intl.string(u.t.sSMgCw),
-        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: h }),
+        header: u.intl.string(u.t.sSMgC6),
+        description: u.intl.formatToPlainString(u.t.q2QrTY, { username: h }),
         heroImageSrc: x,
-        heroImageAlt: u.intl.string(u.t["3QhxXF"]),
+        heroImageAlt: u.intl.string(u.t["3QhxXJ"]),
         children: (0, i.jsxs)("div", {
             className: p.buttonContainer,
             children: [
@@ -34,7 +34,7 @@ function g(t) {
                     },
                 }),
                 (0, i.jsx)(r.Button, {
-                    text: u.intl.string(u.t.xLkGzM),
+                    text: u.intl.string(u.t.xLkGzP),
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {

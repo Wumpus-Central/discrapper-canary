@@ -57,8 +57,8 @@ let j = new h.Z("ImageEditor"),
             }),
             I = i.useRef(null),
             [S, T] = i.useState(1),
-            [M, P] = i.useState(null),
-            [A, R] = i.useState({
+            [M, A] = i.useState(null),
+            [P, R] = i.useState({
                 top: 0,
                 bottom: 0,
                 left: 0,
@@ -81,7 +81,7 @@ let j = new h.Z("ImageEditor"),
         let Y = i.useCallback(
                 (e) => {
                     if (null == I.current) return;
-                    let { x: t, y: n } = (0, m.U$)(e.x, e.y, A);
+                    let { x: t, y: n } = (0, m.U$)(e.x, e.y, P);
                     (O.current = {
                         x: t,
                         y: n,
@@ -95,7 +95,7 @@ let j = new h.Z("ImageEditor"),
                             y: n,
                         });
                 },
-                [I, k, A],
+                [I, k, P],
             ),
             K = i.useCallback(
                 (e) => {
@@ -132,7 +132,7 @@ let j = new h.Z("ImageEditor"),
                     y: t,
                 }),
                     Z(e),
-                    P({
+                    A({
                         width: r,
                         height: i,
                     }),
@@ -241,7 +241,7 @@ let j = new h.Z("ImageEditor"),
             if (null == I.current) return;
             let e = I.current.naturalWidth,
                 t = I.current.naturalHeight;
-            P({
+            A({
                 width: e,
                 height: t,
             });
@@ -287,7 +287,7 @@ let j = new h.Z("ImageEditor"),
                             className: x.image,
                             src: n,
                             crossOrigin: "anonymous",
-                            alt: v.intl.string(v.t.EYR1FR),
+                            alt: v.intl.string(v.t.EYR1Fa),
                             ref: I,
                             onMouseDown: $,
                             draggable: !1,
@@ -304,7 +304,7 @@ let j = new h.Z("ImageEditor"),
                                     className: x.panHint,
                                     variant: "text-xs/normal",
                                     color: "text-primary",
-                                    children: v.intl.string(v.t.oBPhdH),
+                                    children: v.intl.string(v.t.oBPhdN),
                                 }),
                             }),
                     ],
@@ -315,15 +315,15 @@ let j = new h.Z("ImageEditor"),
                           children: (0, r.jsx)(c.Text, {
                               variant: "text-sm/normal",
                               color: "text-muted",
-                              children: v.intl.string(v.t["5XCxio"]),
+                              children: v.intl.string(v.t["5XCxir"]),
                           }),
                       })
                     : (0, r.jsxs)("div", {
                           className: x.toolsContainer,
                           children: [
                               (0, r.jsx)(u.u, {
-                                  text: v.intl.string(v.t["oCs/+P"]),
-                                  "aria-label": v.intl.string(v.t["oCs/+P"]),
+                                  text: v.intl.string(v.t["oCs/+G"]),
+                                  "aria-label": v.intl.string(v.t["oCs/+G"]),
                                   children: (0, r.jsx)(c.P3F, {
                                       className: x.toolButton,
                                       onClick: X,
@@ -350,7 +350,7 @@ let j = new h.Z("ImageEditor"),
                                               asValueChanges: K,
                                               equidistant: !0,
                                               hideBubble: !0,
-                                              "aria-label": v.intl.string(v.t["2hPcVF"]),
+                                              "aria-label": v.intl.string(v.t["2hPcVJ"]),
                                           }),
                                       (0, r.jsx)(c.OyE, {
                                           color: c.TVs.colors.ICON_SECONDARY,

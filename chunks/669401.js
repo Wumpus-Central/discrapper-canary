@@ -22,12 +22,12 @@ let u = function (e) {
                   (0, r.jsx)(l.Heading, {
                       variant: "heading-lg/semibold",
                       color: "header-primary",
-                      children: c.intl.string(c.t.runNFx),
+                      children: c.intl.string(c.t.runNF8),
                   }),
                   (0, r.jsx)(s.Z, {
                       className: d.contentContainer,
                       grantedPermissions: u,
-                      grantedPermissionsHeader: c.intl.string(c.t.SLgiND),
+                      grantedPermissionsHeader: c.intl.string(c.t.SLgiNH),
                   }),
               ],
           })

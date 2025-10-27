@@ -5,8 +5,8 @@ var i = n(120356),
     a = n.n(i),
     l = n(79116),
     o = n(442837),
-    s = n(481060),
-    c = n(239091),
+    c = n(481060),
+    s = n(239091),
     u = n(607070),
     d = n(313201),
     f = n(314897),
@@ -15,8 +15,8 @@ var i = n(120356),
     m = n(872269),
     b = n(228168),
     h = n(388032),
-    v = n(176870);
-function y(e) {
+    y = n(176870);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function y(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,25 +59,25 @@ function j(e, t) {
         e
     );
 }
-let O = (e) => {
+let j = (e) => {
         let { widgetTitle: t, children: n } = e,
             i = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
             { isDragging: a } = (0, l.f)((e) => ({ isDragging: e.isDragging() }));
-        return (0, r.jsx)(s.aML, {
-            "aria-label": h.intl.formatToPlainString(h.t.HWNJJC, { widgetTitle: t }),
+        return (0, r.jsx)(c.aML, {
+            "aria-label": h.intl.formatToPlainString(h.t.HWNJJN, { widgetTitle: t }),
             text: () =>
                 (0, r.jsxs)("div", {
-                    className: v.dragClickTooltipText,
+                    className: y.dragClickTooltipText,
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            children: h.intl.format(i ? h.t["zvln/v"] : h.t["7cdwho"], {
+                            children: h.intl.format(i ? h.t["zvln/l"] : h.t["7cdwhg"], {
                                 emphasizeHook: (e) => (0, r.jsx)("strong", { children: e }),
                             }),
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            children: h.intl.format(h.t["4e0rMz"], {
+                            children: h.intl.format(h.t["4e0rM4"], {
                                 emphasizeHook: (e) => (0, r.jsx)("strong", { children: e }),
                             }),
                         }),
@@ -101,13 +101,13 @@ let O = (e) => {
                         (0, m.L$)(b.qb.WIDGET_REMOVED);
                     return;
                 }
-                (0, s.ZDy)(
+                (0, c.ZDy)(
                     async () => {
                         let { default: e } = await n.e("70887").then(n.bind(n, 37668));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                j(y({}, t), {
+                                O(v({}, t), {
                                     userId: f.default.getId(),
                                     widget: i,
                                     trackUserProfileEditAction: o,
@@ -117,29 +117,29 @@ let O = (e) => {
                     { stackingBehavior: "stack" },
                 );
             };
-        return (0, r.jsx)(s.yRy, {
+        return (0, r.jsx)(c.yRy, {
             targetElementRef: a,
             align: "top",
             position: "right",
             disablePointerEvents: !1,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(s.v2r, {
+                return (0, r.jsx)(c.v2r, {
                     navId: "user-profile-widget-context-menu",
                     onClose: () => {
-                        (0, c.Zy)(), t();
+                        (0, s.Zy)(), t();
                     },
                     onSelect: () => {},
                     "aria-label": h.intl.string(h.t.xpSHSk),
-                    children: (0, r.jsxs)(s.kSQ, {
+                    children: (0, r.jsxs)(c.kSQ, {
                         children: [
                             l,
-                            (0, r.jsx)(s.sNh, {
+                            (0, r.jsx)(c.sNh, {
                                 id: "remove-widget",
-                                label: h.intl.string(h.t.Mm07YW),
+                                label: h.intl.string(h.t.Mm07Yc),
                                 action: u,
                                 color: "danger",
-                                icon: s.XHJ,
+                                icon: c.XHJ,
                             }),
                         ],
                     }),
@@ -151,8 +151,8 @@ let O = (e) => {
     _ = (e) => {
         let { widget: t, className: n, buttonRef: i, additionalMenuItems: l } = e,
             o = (0, p.mR)(t),
-            c = (0, d.Dt)();
-        return (0, r.jsx)(O, {
+            s = (0, d.Dt)();
+        return (0, r.jsx)(j, {
             widgetTitle: o,
             children: (e) =>
                 (0, r.jsx)(x, {
@@ -161,25 +161,25 @@ let O = (e) => {
                     additionalMenuItems: l,
                     children: (t) =>
                         (0, r.jsxs)(
-                            s.P3F,
-                            j(
-                                y(
+                            c.P3F,
+                            O(
+                                v(
                                     {
                                         innerRef: i,
-                                        className: a()(v.dragHandleButton, n),
+                                        className: a()(y.dragHandleButton, n),
                                         "data-dnd-name": o,
-                                        "aria-label": h.intl.formatToPlainString(h.t.HWNJJC, { widgetTitle: o }),
-                                        "aria-describedby": c,
+                                        "aria-label": h.intl.formatToPlainString(h.t.HWNJJN, { widgetTitle: o }),
+                                        "aria-describedby": s,
                                     },
                                     e,
                                     t,
                                 ),
                                 {
                                     children: [
-                                        (0, r.jsx)(s.Vni, { size: "sm" }),
-                                        (0, r.jsx)(s.nn4, {
-                                            id: c,
-                                            children: h.intl.string(h.t.bsuqFh),
+                                        (0, r.jsx)(c.Vni, { size: "sm" }),
+                                        (0, r.jsx)(c.nn4, {
+                                            id: s,
+                                            children: h.intl.string(h.t.bsuqFn),
                                         }),
                                     ],
                                 },

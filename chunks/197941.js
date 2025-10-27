@@ -4,34 +4,34 @@ n(647438);
 var i = n(243814),
     l = n(481060),
     a = n(846027),
-    o = n(872810),
-    s = n(594190),
+    s = n(872810),
+    o = n(594190),
     c = n(989941),
     u = n(173507),
     d = n(199902),
     p = n(131951),
     f = n(449224),
     h = n(358085),
-    g = n(452426),
-    m = n(736045),
-    b = n(186901),
-    _ = n(981631);
+    m = n(452426),
+    g = n(736045),
+    _ = n(186901),
+    b = n(981631);
 let E = {
-    [_.Etm.TOGGLE_VIDEO]: {
+    [b.Etm.TOGGLE_VIDEO]: {
         scope: {
-            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_VIDEO_WRITE],
+            [_.Gp.ALL]: [i.x.RPC, i.x.RPC_VIDEO_WRITE],
         },
         handler() {
             let e = p.Z.isVideoEnabled();
-            null != (0, m.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, u.Z)(() => a.Z.setVideoEnabled(!0), _.IlC.APP));
+            null != (0, g.Z)() && (e ? a.Z.setVideoEnabled(!1) : (0, u.Z)(() => a.Z.setVideoEnabled(!0), b.IlC.APP));
         },
     },
-    [_.Etm.TOGGLE_SCREENSHARE]: {
+    [b.Etm.TOGGLE_SCREENSHARE]: {
         scope: {
-            [b.Gp.ALL]: [i.x.RPC, i.x.RPC_SCREENSHARE_WRITE],
+            [_.Gp.ALL]: [i.x.RPC, i.x.RPC_SCREENSHARE_WRITE],
         },
         validation: (e) =>
-            (0, g.Z)(e)
+            (0, m.Z)(e)
                 .optional()
                 .keys({ pid: e.number().optional().min(0) }),
         handler(e) {
@@ -40,17 +40,17 @@ let E = {
                 } = e,
                 i = d.Z.getCurrentUserActiveStream(),
                 a = d.Z.getStreamerActiveStreamMetadata(),
-                u = (0, c.Z)(s.ZP, f.Z),
-                p = (0, m.Z)();
+                u = (0, c.Z)(o.ZP, f.Z),
+                p = (0, g.Z)();
             null != p &&
                 (null != t && null != a && a.pid !== t && (0, h.isWindows)()
-                    ? (0, o.WH)(p.guild_id, p.id, { pid: t })
+                    ? (0, s.WH)(p.guild_id, p.id, { pid: t })
                     : null != i
-                      ? (0, o.L6)(!1)
+                      ? (0, s.L6)(!1)
                       : null != t && (0, h.isWindows)()
-                        ? (0, o.WH)(p.guild_id, p.id, { pid: t })
+                        ? (0, s.WH)(p.guild_id, p.id, { pid: t })
                         : null != u
-                          ? (0, o.WH)(p.guild_id, p.id, { pid: u.pid })
+                          ? (0, s.WH)(p.guild_id, p.id, { pid: u.pid })
                           : (0, l.ZDy)(async () => {
                                 let { default: e } = await Promise.all([n.e("4093"), n.e("47863")]).then(
                                     n.bind(n, 60594),
@@ -87,7 +87,7 @@ let E = {
                                         (i = i =
                                             {
                                                 guildId: p.guild_id,
-                                                analyticsLocation: _.Sbl.ACTIVITY_RPC,
+                                                analyticsLocation: b.Sbl.ACTIVITY_RPC,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

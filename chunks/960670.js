@@ -59,8 +59,8 @@ function a(e) {
         })(
             {
                 header: a,
-                confirmText: i.intl.string(i.t["26C4oq"]),
-                cancelText: i.intl.string(i.t["ETE/oK"]),
+                confirmText: i.intl.string(i.t["26C4oi"]),
+                cancelText: i.intl.string(i.t["ETE/oC"]),
                 onConfirm: () => {
                     s(null, p);
                 },
@@ -79,7 +79,7 @@ function a(e) {
                         children: (0, n.jsx)(c.Checkbox, {
                             checked: p,
                             onChange: () => f((e) => !e),
-                            label: i.intl.string(i.t.bq3JXl),
+                            label: i.intl.string(i.t.bq3JXs),
                             labelType: "secondary",
                         }),
                     }),

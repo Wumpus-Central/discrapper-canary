@@ -46,7 +46,7 @@ function v(e, t, n) {
             r = [
                 {
                     field_type: f.QJ.TERMS,
-                    label: p.intl.string(p.t["9suSIC"]),
+                    label: p.intl.string(p.t["9suSIA"]),
                     values: e,
                     required: !0,
                 },

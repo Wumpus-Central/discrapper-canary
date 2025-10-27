@@ -115,7 +115,7 @@ function p(e) {
                 g(
                     {
                         channelId: f.rulesChannelId,
-                        title: E === a.it.COMPACT ? u.intl.string(u.t["55+giY"]) : u.intl.string(u.t["53vNcH"]),
+                        title: E === a.it.COMPACT ? u.intl.string(u.t["55+gic"]) : u.intl.string(u.t["53vNcB"]),
                         formField: p,
                     },
                     w,

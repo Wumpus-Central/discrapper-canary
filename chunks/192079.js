@@ -20,8 +20,8 @@ function d(e, t, n, r) {
     return 1 === s && null != a
         ? o
         : null == a
-          ? u.intl.formatToPlainString(u.t.chmM9P, { count: s })
-          : u.intl.formatToPlainString(u.t.GhkJ29, {
+          ? u.intl.formatToPlainString(u.t.chmM9N, { count: s })
+          : u.intl.formatToPlainString(u.t.GhkJ21, {
                 name: o,
                 count: s - 1,
             });
@@ -29,12 +29,12 @@ function d(e, t, n, r) {
 function f(e, t) {
     switch (e) {
         case c.aC.OWNER:
-            return u.intl.string(u.t.icuNBA);
+            return u.intl.string(u.t.icuNBM);
         case c.aC.ADMINISTRATOR:
-            return u.intl.string(u.t.eTmN5e);
+            return u.intl.string(u.t.eTmN5a);
         case c.aC.MEMBER:
         case c.aC.ROLE:
-            return t ? u.intl.string(u.t.Hw3XW1) : u.intl.string(u.t.YieyPj);
+            return t ? u.intl.string(u.t.Hw3XWx) : u.intl.string(u.t.YieyPi);
         case c.aC.EMPTY_STATE:
     }
     return null;

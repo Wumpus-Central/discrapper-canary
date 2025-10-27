@@ -9,7 +9,7 @@ function s(e) {
     return (0, r.jsx)(i.Button, {
         variant: "expressive",
         icon: i.SrA,
-        text: null != n ? n : o.intl.string(o.t["8Sh5fn"]),
+        text: null != n ? n : o.intl.string(o.t["8Sh5fg"]),
         onClick: () => (0, a.Z)({ section: t }),
     });
 }

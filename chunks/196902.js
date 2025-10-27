@@ -11,7 +11,7 @@ var r = n(951288),
     g = n(434404),
     m = n(999382),
     p = n(981631),
-    f = n(659854),
+    f = n(562915),
     h = n(388032),
     b = n(764009);
 let x = function (e) {
@@ -25,7 +25,7 @@ let x = function (e) {
         className: t,
         children: [
             (0, r.jsx)(o.gNt, {
-                label: h.intl.string(f.default["tN+8pK"]),
+                label: h.intl.string(f.default["tN+8pD"]),
                 children: (e) =>
                     (0, r.jsxs)("div", {
                         className: b.tagContainer,
@@ -56,7 +56,7 @@ let x = function (e) {
                                 children: (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
-                                    children: h.intl.string(f.default.CrHXHh),
+                                    children: h.intl.string(f.default.CrHXHt),
                                 }),
                             }),
                         ],
@@ -67,7 +67,7 @@ let x = function (e) {
                     className: b.tagChangeInfoBox,
                     children: (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
-                        children: h.intl.format(f.default["4ZKDXl"], {
+                        children: h.intl.format(f.default["4ZKDXq"], {
                             articleUrl: u.Z.getArticleURL(p.BhN.SERVER_TAGS),
                         }),
                     }),

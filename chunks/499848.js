@@ -30,7 +30,7 @@ let s = a.ZP.connectStores([i.ZP], (e) => {
         mediaEngineConnectionId: s,
         userId: i,
         videoStreams: c,
-        title: o.intl.string(o.t.SJmZam),
+        title: o.intl.string(o.t.SJmZaq),
         showUserInfo: !0,
     });
 });

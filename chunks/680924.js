@@ -63,8 +63,8 @@ function u(e, t, n) {
                 s(
                     {
                         header: e,
-                        confirmText: a.intl.string(a.t.BddRzc),
-                        cancelText: a.intl.string(a.t["ETE/oK"]),
+                        confirmText: a.intl.string(a.t.BddRzS),
+                        cancelText: a.intl.string(a.t["ETE/oC"]),
                         onConfirm: n,
                     },
                     o,

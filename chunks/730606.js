@@ -1,7 +1,7 @@
 n.d(t, {
     Qk: () => C,
     WG: () => P,
-    ZP: () => w,
+    ZP: () => D,
 }),
     n(388685);
 var r = n(951288),
@@ -91,7 +91,7 @@ function P(e, t) {
         });
     }
 }
-function w(e) {
+function D(e) {
     let {
             items: t,
             onIndexChange: n,
@@ -119,11 +119,11 @@ function w(e) {
             }
         );
     }, [P, C]);
-    let w = t[f],
-        D = (0, d.g4)(
+    let D = t[f],
+        w = (0, d.g4)(
             {
                 type: c.l.GenericMedia,
-                media: w,
+                media: D,
             },
             l,
         ),
@@ -145,7 +145,7 @@ function w(e) {
                                           e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_PREV);
                                       },
                                       icon: s.j9r,
-                                      tooltip: S.intl.string(S.t.vgfxaG),
+                                      tooltip: S.intl.string(S.t.vgfxaA),
                                       className: o()(A.navPrev, e),
                                   }),
                                   (0, r.jsx)(v.Z, {
@@ -153,7 +153,7 @@ function w(e) {
                                           e.stopPropagation(), h.S.dispatch(T.CkL.MODAL_CAROUSEL_NEXT);
                                       },
                                       icon: s.d4D,
-                                      tooltip: S.intl.string(S.t.XiOHRU),
+                                      tooltip: S.intl.string(S.t.XiOHRX),
                                       className: o()(A.navNext, e),
                                   }),
                               ],
@@ -165,11 +165,11 @@ function w(e) {
                 currentIndex: f,
                 children: (e, t) =>
                     (0, r.jsx)(R, {
-                        isObscured: !m && D,
-                        src: w.url,
+                        isObscured: !m && w,
+                        src: D.url,
                         children: (n) =>
                             (0, r.jsx)(I.ZP, {
-                                media: w,
+                                media: D,
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,

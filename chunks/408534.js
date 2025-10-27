@@ -39,8 +39,8 @@ function j(e) {
         U = (0, c.$A)(I),
         B = (0, c.j8)(I),
         H = (0, b.Z)(A, P),
-        V = (0, g.Z)(w, I),
-        F = (0, f.Z)(),
+        F = (0, g.Z)(w, I),
+        V = (0, f.Z)(),
         G = (0, o.Z)(j);
     return (0, i.jsxs)(l.v2r, {
         className: O.menu,
@@ -48,7 +48,7 @@ function j(e) {
         onSelect: n,
         onInteraction: S,
         navId: "more-settings-context",
-        "aria-label": x.intl.string(x.t.FTLzdX),
+        "aria-label": x.intl.string(x.t.FTLzdR),
         children: [
             (0, i.jsx)(l.kSQ, { children: Z !== v.d4z.GUILD_STAGE_VOICE ? L : null }),
             (0, i.jsxs)(l.kSQ, {
@@ -56,7 +56,7 @@ function j(e) {
                     Z === v.d4z.GUILD_STAGE_VOICE ? U : null,
                     Z === v.d4z.GUILD_STAGE_VOICE ? B : null,
                     E || Z === v.d4z.GUILD_STAGE_VOICE ? null : D,
-                    F,
+                    V,
                     Z !== v.d4z.GUILD_STAGE_VOICE ? M : null,
                     Z === v.d4z.GUILD_STAGE_VOICE || Z === v.d4z.GUILD_VOICE ? R : null,
                 ],
@@ -64,7 +64,7 @@ function j(e) {
             (0, i.jsx)(l.kSQ, { children: G }),
             (0, i.jsx)(l.kSQ, { children: k }),
             (0, i.jsxs)(l.kSQ, {
-                children: [null != A ? H : null, null != w ? V : null],
+                children: [null != A ? H : null, null != w ? F : null],
             }),
         ],
     });

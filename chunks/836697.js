@@ -56,19 +56,19 @@ function O(e) {
                                             children: [
                                                 (0, r.jsx)(o.Heading, {
                                                     variant: "heading-md/medium",
-                                                    children: b.intl.string(b.t["0YV0YG"]),
+                                                    children: b.intl.string(b.t["0YV0YE"]),
                                                 }),
                                                 (0, r.jsx)(o.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: b.intl.string(b.t["0UQVDA"]),
+                                                    children: b.intl.string(b.t["0UQVDL"]),
                                                 }),
                                             ],
                                         }),
                                         (0, r.jsx)(o.Button, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: b.intl.string(b.t["4r+amZ"]),
+                                            text: b.intl.string(b.t["4r+amb"]),
                                             fullWidth: !0,
                                             onClick: p,
                                         }),
@@ -139,14 +139,14 @@ function O(e) {
 function y(e) {
     let { onActivate: t } = e,
         [n, y] = i.useState(!1),
-        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        j = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        j = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        v = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         x = (0, h.Z)(),
-        C = (0, a.Z)(v),
+        C = (0, a.Z)(j),
         E = i.useMemo(() => {
             let e = (0, f.qQ)({
                 folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: b.intl.string(b.t["scsU+v"]),
+                folderName: b.intl.string(b.t["scsU+l"]),
                 expanded: n,
                 guildIds: [],
             });
@@ -154,12 +154,12 @@ function y(e) {
             return e;
         }, [x, n]);
     i.useEffect(() => {
-        n && !j && s.Z.fetchRequestToJoinGuilds();
-    }, [n, j]);
-    let S = null != v && x.includes(v);
+        n && !v && s.Z.fetchRequestToJoinGuilds();
+    }, [n, v]);
+    let S = null != j && x.includes(j);
     return (i.useEffect(() => {
-        !n && S && C !== v && y(!0);
-    }, [n, S, C, v]),
+        !n && S && C !== j && y(!0);
+    }, [n, S, C, j]),
     0 === x.length)
         ? null
         : (0, r.jsx)(O, {

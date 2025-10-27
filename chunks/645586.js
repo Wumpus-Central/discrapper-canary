@@ -9,8 +9,8 @@ var a = i(951288),
     u = i(622999),
     h = i(981631),
     p = i(388032),
-    g = i(848747);
-function d(t, e, i) {
+    d = i(848747);
+function g(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -34,24 +34,24 @@ class m extends n.Component {
         let { step: t } = this.state;
         switch (t) {
             case 0:
-                return p.intl.string(p.t.N65Zra);
+                return p.intl.string(p.t.N65ZrW);
             case 2:
                 return p.intl.string(p.t.DPgrRk);
             case 3:
-                return p.intl.string(p.t.xypuIi);
+                return p.intl.string(p.t.xypuIv);
             default:
-                return p.intl.string(p.t.uEoQdH);
+                return p.intl.string(p.t.uEoQdA);
         }
     }
     getImageStyle() {
         let { step: t } = this.state;
         switch (t) {
             case 0:
-                return g.authenticationRequiredImage;
+                return d.authenticationRequiredImage;
             case 2:
-                return g.authenticationSuccessImage;
+                return d.authenticationSuccessImage;
             default:
-                return g.authenticationFailImage;
+                return d.authenticationFailImage;
         }
     }
     getMessage() {
@@ -59,16 +59,16 @@ class m extends n.Component {
             { pendingPayment: e } = this.props;
         switch (t) {
             case 0:
-                return p.intl.format(p.t.RoxWER, {
+                return p.intl.format(p.t.RoxWET, {
                     price: (0, o.T4)(e.amount, e.currency),
                     item: e.description,
                 });
             case 2:
-                return p.intl.string(p.t.PZskfn);
+                return p.intl.string(p.t.PZskfs);
             case 3:
-                return p.intl.format(p.t["j0tI/f"], { item: e.description });
+                return p.intl.format(p.t["j0tI/b"], { item: e.description });
             default:
-                return p.intl.string(p.t.BAr3rK);
+                return p.intl.string(p.t.BAr3rB);
         }
     }
     renderButtons() {
@@ -76,12 +76,12 @@ class m extends n.Component {
         return 0 === t
             ? [
                   {
-                      text: p.intl.string(p.t["2NeVoa"]),
+                      text: p.intl.string(p.t["2NeVoY"]),
                       onClick: this.cancelPayment,
                       variant: "secondary",
                   },
                   {
-                      text: p.intl.string(p.t.VAqBoK),
+                      text: p.intl.string(p.t.VAqBoE),
                       onClick: this.handleAuthenticate,
                       variant: "primary",
                       loading: e,
@@ -89,7 +89,7 @@ class m extends n.Component {
               ]
             : [
                   {
-                      text: p.intl.string(p.t.cpT0Cg),
+                      text: p.intl.string(p.t.cpT0Cq),
                       onClick: this.close,
                       variant: "primary",
                   },
@@ -114,16 +114,16 @@ class m extends n.Component {
     }
     constructor(...t) {
         super(...t),
-            d(this, "state", {
+            g(this, "state", {
                 step: 0,
                 isAwaitingAuthentication: !1,
             }),
-            d(this, "close", async () => {
+            g(this, "close", async () => {
                 let { step: t } = this.state,
                     { onClose: e, pendingPayment: i } = this.props;
                 0 === t && (await (0, c.UY)(i.id)), e();
             }),
-            d(this, "cancelPayment", async () => {
+            g(this, "cancelPayment", async () => {
                 let { pendingPayment: t } = this.props;
                 try {
                     await (0, c.UY)(t.id);
@@ -132,7 +132,7 @@ class m extends n.Component {
                 }
                 this.setState({ step: 3 });
             }),
-            d(this, "handleAuthenticate", async () => {
+            g(this, "handleAuthenticate", async () => {
                 let { pendingPayment: t } = this.props;
                 this.setState({ isAwaitingAuthentication: !0 });
                 let { error: e } = await (0, u.oe)(t.id);

@@ -1,9 +1,9 @@
 n.d(t, {
-    Fo: () => S,
+    Fo: () => L,
     KY: () => N,
     Uo: () => _,
     fU: () => C,
-    qw: () => T,
+    qw: () => M,
     tn: () => P,
 }),
     n(290780);
@@ -30,10 +30,10 @@ var r = n(647438),
     x = n(443063),
     w = n(490897),
     E = n(388032);
-function L(e, t) {
+function S(e, t) {
     e.index = t;
 }
-function S(e, t, n, l) {
+function L(e, t, n, l) {
     l = l.toLowerCase();
     let a = (0, g.g)(e),
         s = r.useCallback(
@@ -56,7 +56,7 @@ function S(e, t, n, l) {
             (e._categories = t._categories.filter(
                 (t) => "null" === t.channel.id || 0 === l.length || e[t.channel.id].length > 0,
             )),
-            (0, d.Z)(e._categories, e).forEach(L),
+            (0, d.Z)(e._categories, e).forEach(S),
             e
         );
     }, [t, n, s, l]);
@@ -132,7 +132,7 @@ function C(e) {
     let a = r[null != (n = null == (t = i.channel) ? void 0 : t.id) ? n : "null"];
     return null == a ? 0 : 0 === a.length ? i.index + 2 - l : a[a.length - 1].index + 2 - l;
 }
-function T(e) {
+function M(e) {
     var t;
     return E.intl.formatToPlainString(E.t["8N0BHR"], {
         timeAgo: s()(b.default.extractTimestamp(null != (t = O.ZP.lastMessageId(e)) ? t : e)).fromNow(),

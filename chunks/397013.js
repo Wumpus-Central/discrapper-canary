@@ -4,8 +4,8 @@ n(647438);
 var o = n(755721),
     c = n(481060),
     a = n(313201),
-    s = n(388032),
-    l = n(317983);
+    l = n(388032),
+    s = n(317983);
 let i = (e) => {
     var t, n;
     let { onClose: i } = e,
@@ -44,33 +44,33 @@ let i = (e) => {
                 children: [
                     (0, r.jsxs)(c.xBx, {
                         separator: !1,
-                        className: l.modalHeader,
+                        className: s.modalHeader,
                         children: [
                             (0, r.jsx)(c.Heading, {
                                 id: d,
                                 variant: "heading-xl/extrabold",
-                                children: s.intl.string(s.t.EouHws),
+                                children: l.intl.string(l.t.EouHwv),
                             }),
                             (0, r.jsx)(c.olH, {
-                                className: l.closeButton,
+                                className: s.closeButton,
                                 onClick: i,
                             }),
                         ],
                     }),
                     (0, r.jsx)(c.hzk, {
-                        className: l.modalContent,
+                        className: s.modalContent,
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-md/normal",
-                            className: l.contentText,
-                            children: s.intl.string(s.t.zNPBMD),
+                            className: s.contentText,
+                            children: l.intl.string(l.t.zNPBMA),
                         }),
                     }),
                     (0, r.jsx)(c.mzw, {
                         children: (0, r.jsx)(o.zx, {
-                            className: l.button,
+                            className: s.button,
                             size: o.zx.Sizes.MIN,
                             onClick: i,
-                            children: s.intl.string(s.t.BddRzc),
+                            children: l.intl.string(l.t.BddRzS),
                         }),
                     }),
                 ],

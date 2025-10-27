@@ -45,7 +45,7 @@ let g = l.memo(function (e) {
         [w, _] = l.useState(0),
         [C, N] = l.useState(0),
         [S, O] = l.useState(0),
-        [E, P] = l.useState(!1),
+        [P, E] = l.useState(!1),
         [I, M] = l.useState(!1),
         [Z, k] = l.useState(!1),
         [T, F] = l.useState(0),
@@ -61,7 +61,7 @@ let g = l.memo(function (e) {
                 if ((t(), 0 === e.button))
                     switch (n) {
                         case 0:
-                            P(!0);
+                            E(!0);
                             break;
                         case 1:
                             M(!0);
@@ -75,7 +75,7 @@ let g = l.memo(function (e) {
         A = l.useCallback((e) => {
             switch (e) {
                 case 0:
-                    P(!1);
+                    E(!1);
                     break;
                 case 1:
                     M(!1);
@@ -87,12 +87,12 @@ let g = l.memo(function (e) {
         }, []),
         H = l.useCallback(
             (e) => {
-                if (null == b || !E) return;
+                if (null == b || !P) return;
                 let n = parseInt(e.target.value),
                     t = n > S ? S : n;
                 r((0, c.my)(t)), _(t), N(t);
             },
-            [b, r, S, E],
+            [b, r, S, P],
         ),
         z = l.useCallback(
             (e) => {
@@ -139,12 +139,12 @@ let g = l.memo(function (e) {
         l.useEffect(() => {
             if (p.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
-                E && w == w && -1 === D ? R(w) : Z && S == S && -1 === D ? R(S) : I && C == C && -1 === D && R(C);
+                P && w == w && -1 === D ? R(w) : Z && S == S && -1 === D ? R(S) : I && C == C && -1 === D && R(C);
             }, p.fineTuningDelay);
             return () => {
                 clearTimeout(e);
             };
-        }, [p.fineTuningDelay, Z, S, D, I, C, E, w]),
+        }, [p.fineTuningDelay, Z, S, D, I, C, P, w]),
         (0, a.jsxs)("div", {
             className: i()(m.timeline, { [m.initialized]: y }),
             children: [
@@ -202,7 +202,7 @@ let g = l.memo(function (e) {
                     children: [
                         (0, a.jsxs)("div", {
                             className: i()(m.handleFrame, {
-                                [m.startDragging]: E,
+                                [m.startDragging]: P,
                                 [m.endDragging]: Z,
                             }),
                             style: {
@@ -239,7 +239,7 @@ let g = l.memo(function (e) {
                         (0, a.jsx)("div", {
                             className: m.playheadTrack,
                             children: (0, a.jsx)("div", {
-                                className: i()(m.playhead, { [m.dragging]: I || E || Z || n }),
+                                className: i()(m.playhead, { [m.dragging]: I || P || Z || n }),
                                 style: { left: "".concat((0, c.pN)(C, D, B, T), "%") },
                             }),
                         }),

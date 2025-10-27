@@ -78,8 +78,8 @@ let _ = i.memo(function (e) {
             }
             return i;
         })(e, ["folderNode"]);
-    let { id: O, name: y, color: v, children: j } = t,
-        x = j.map((e) => e.id),
+    let { id: O, name: y, color: j, children: v } = t,
+        x = v.map((e) => e.id),
         C = (0, s.Z)((e) => e.guildId),
         E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
         S = (function (e) {
@@ -105,10 +105,10 @@ let _ = i.memo(function (e) {
             isMentionLowImportance: x.every((e) => u.default.getIsMentionLowImportance(e)),
             unread: x.some((e) => u.default.hasUnread(e)),
         })),
-        w = i.useCallback(() => {
+        T = i.useCallback(() => {
             a.Z.toggleGuildFolderExpand(O);
         }, [O]),
-        T = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
                     let { default: e } = await n.e("52590").then(n.bind(n, 205784));
@@ -118,13 +118,13 @@ let _ = i.memo(function (e) {
                             b(m({}, t), {
                                 folderId: O,
                                 folderName: y,
-                                folderColor: v,
+                                folderColor: j,
                                 unread: Z || P > 0,
                             }),
                         );
                 });
             },
-            [O, y, v, Z, P],
+            [O, y, j, Z, P],
         );
     return (0, r.jsx)(
         f.Z,
@@ -137,8 +137,8 @@ let _ = i.memo(function (e) {
             unread: Z,
             mediaState: I,
             defaultFolderName: S,
-            onExpandCollapse: w,
-            onContextMenu: T,
+            onExpandCollapse: T,
+            onContextMenu: w,
         }),
     );
 });

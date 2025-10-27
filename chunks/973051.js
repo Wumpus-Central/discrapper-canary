@@ -67,45 +67,45 @@ function x(e) {
         O = l.useRef(null),
         y = (0, i.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
         [N, C] = l.useState(null != (t = null == y ? void 0 : y.response) && t),
-        P = (0, i.e7)([c.Z], () => c.Z.get(n.id)),
-        E = l.useRef(null),
-        Z = l.useRef(null),
-        I = l.useCallback(async () => {
-            if (null != P && null != y) {
+        E = (0, i.e7)([c.Z], () => c.Z.get(n.id)),
+        P = l.useRef(null),
+        I = l.useRef(null),
+        Z = l.useCallback(async () => {
+            if (null != E && null != y) {
                 try {
                     await s.ZP.submitVerificationForm(
                         n.id,
-                        g(h({}, P), { formFields: [g(h({}, y), { response: N })] }),
+                        g(h({}, E), { formFields: [g(h({}, y), { response: N })] }),
                     );
                 } catch (e) {}
                 v();
             }
-        }, [n.id, P, y, N, v]);
+        }, [n.id, E, y, N, v]);
     function w(e) {
         let [t] = e;
         t.isIntersecting && C(!0);
     }
     return (l.useEffect(() => {
         let e = new IntersectionObserver(w, {
-                root: E.current,
+                root: P.current,
                 rootMargin: "0px",
                 threshold: 0,
             }),
-            t = Z.current;
+            t = I.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
             () => {
                 null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
             }
         );
-    }, [Z, E]),
+    }, [I, P]),
     null == y)
         ? null
         : (0, r.jsx)("div", {
               className: p.prompt,
               children: (0, r.jsxs)("div", {
                   className: p.promptContent,
-                  ref: E,
+                  ref: P,
                   children: [
                       (0, r.jsxs)(a.h21, {
                           className: p.scrollerContent,
@@ -114,15 +114,15 @@ function x(e) {
                               (0, r.jsx)(a.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: f.intl.string(f.t["b1JC+v"]),
+                                  children: f.intl.string(f.t["b1JC+l"]),
                               }),
                               (0, r.jsx)(a.Heading, {
                                   variant: "heading-xl/semibold",
-                                  children: f.intl.string(f.t.prJqwc),
+                                  children: f.intl.string(f.t.prJqwT),
                               }),
                               (0, r.jsx)("div", {
                                   className: p.termsFieldBody,
-                                  ref: Z,
+                                  ref: I,
                                   children: y.values.map((e, t) =>
                                       (0, r.jsxs)(
                                           "div",
@@ -160,7 +160,7 @@ function x(e) {
                                       (0, r.jsx)(a.Button, {
                                           variant: "secondary",
                                           size: "md",
-                                          text: f.intl.string(f.t["13/7kZ"]),
+                                          text: f.intl.string(f.t["13/7kX"]),
                                           onClick: () => {
                                               !_ &&
                                                   (d.default.track(
@@ -195,13 +195,13 @@ function x(e) {
                                           className: p.helpText,
                                           variant: "text-xs/normal",
                                           color: "text-muted",
-                                          children: N ? f.intl.string(f.t.arAe3N) : f.intl.string(f.t.D0CVAQ),
+                                          children: N ? f.intl.string(f.t.arAe3I) : f.intl.string(f.t.D0CVAc),
                                       }),
                                       (0, r.jsx)(a.Button, {
                                           variant: "primary",
                                           size: "md",
-                                          text: "".concat(f.intl.string(f.t["8SuVoK"]), " \uD83C\uDF89"),
-                                          onClick: I,
+                                          text: "".concat(f.intl.string(f.t["8SuVoE"]), " \uD83C\uDF89"),
+                                          onClick: Z,
                                           disabled: !N,
                                       }),
                                   ],

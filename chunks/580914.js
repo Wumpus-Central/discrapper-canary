@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(907331),
-    s = n(636977),
+    s = n(907331),
+    o = n(636977),
     c = n(685816),
     u = n(442837),
     d = n(481060),
@@ -35,8 +35,8 @@ var r = n(951288),
     Z = n(642909),
     w = n(859788),
     H = n(215023),
-    D = n(981631),
-    M = n(388032),
+    M = n(981631),
+    D = n(388032),
     F = n(310582);
 let W = (0, v.IC)(90),
     V = {
@@ -53,7 +53,7 @@ let W = (0, v.IC)(90),
     U = (e) => {
         var t;
         let { isLoading: n, handleTransition: i, category: U, heroBlock: z, tab: G, onVisibilityChange: K } = e,
-            Y = (0, o.O)(
+            Y = (0, s.O)(
                 (e) => {
                     null == K || K(e);
                 },
@@ -61,8 +61,8 @@ let W = (0, v.IC)(90),
                 null != K,
             ),
             q = l.useRef(null),
-            Q = (0, Z.G)("HeroBlock"),
-            J = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
+            J = (0, Z.G)("HeroBlock"),
+            Q = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
             X = (0, N.Z)(),
             $ = (0, m.sp)(),
             ee = O.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && G !== H.AW.ORBS,
@@ -95,12 +95,12 @@ let W = (0, v.IC)(90),
                 logoStyleOverrides: el,
                 heroLogo: ei,
                 heroBannerStatic: ea,
-                heroBannerAnimated: eo,
-                heroBannerRive: es,
+                heroBannerAnimated: es,
+                heroBannerRive: eo,
             } = (0, A.hr)(en),
             ec = null != (t = null == er ? void 0 : er.responsive) && t,
             eu = null == er ? void 0 : er.backgroundStyle,
-            ed = null != es,
+            ed = null != eo,
             eg = (0, u.e7)([b.Z], () => b.Z.products),
             ep = l.useMemo(() => (n ? [] : eg.size > 0 ? X(en.rankedSkuIds) : []), [n, X, en.rankedSkuIds, eg]),
             ef = l.useMemo(
@@ -141,25 +141,25 @@ let W = (0, v.IC)(90),
             eb = (0, P.St)(em),
             ev =
                 G === H.AW.ORBS
-                    ? M.intl.string(M.t["1CdL8f"])
-                    : Q
-                      ? M.intl.string(M.t.guWAg4)
+                    ? D.intl.string(D.t["1CdL8d"])
+                    : J
+                      ? D.intl.string(D.t.guWAg1)
                       : et
-                        ? M.intl.string(M.t["/QvRam"])
-                        : M.intl.string(M.t.xYKa1d),
+                        ? D.intl.string(D.t["/QvRak"])
+                        : D.intl.string(D.t.xYKa1T),
             eE = (0, x.FF)("CollectiblesContent"),
             ex = (0, v.$2)(en.categorySkuId),
             eO = E.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
             eS = () => {
                 G === H.AW.ORBS
                     ? ((0, C.Y)({
-                          pageType: D.ZY5.SHOP_ORBS_TAB,
-                          sectionType: D.jXE.ORBS_SHOP_HERO_BLOCK,
-                          ctaObject: D.qAy.CTA_TO_QUEST_HOME,
+                          pageType: M.ZY5.SHOP_ORBS_TAB,
+                          sectionType: M.jXE.ORBS_SHOP_HERO_BLOCK,
+                          ctaObject: M.qAy.CTA_TO_QUEST_HOME,
                       }),
-                      (0, f.navigateToQuestHome)({ fromContent: s.j.ORBS_SHOP_HERO_CTA }))
+                      (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
                     : (i("shop latest category hero", !eE || ex ? en.categorySkuId : void 0, void 0, !0),
-                      _.default.track(D.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                      _.default.track(M.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == $ ? void 0 : $.sessionId,
                           sku_id: en.categorySkuId,
                           page_type: G,
@@ -168,14 +168,14 @@ let W = (0, v.IC)(90),
                           cta_name: "shop latest category hero button",
                       }));
             };
-        return null != J && (n || en !== V)
+        return null != Q && (n || en !== V)
             ? (0, r.jsxs)("div", {
                   ref: Y,
                   className: F.heroBlock,
                   children: [
                       ed
                           ? (0, R.gT)({
-                                isCustomCursorEnabled: Q,
+                                isCustomCursorEnabled: J,
                                 className: F.riveEventOverlay,
                                 riveEventTargetRef: q,
                             })
@@ -187,8 +187,8 @@ let W = (0, v.IC)(90),
                               null != ea &&
                               (0, r.jsx)(w.Z, {
                                   bannerStatic: ea,
-                                  bannerAnimated: eo,
-                                  bannerRive: es,
+                                  bannerAnimated: es,
+                                  bannerRive: eo,
                                   isResponsive: ec,
                                   eventTargetRef: q,
                               }),
@@ -222,7 +222,7 @@ let W = (0, v.IC)(90),
                                                           null != en.unpublishedAt &&
                                                               (0, r.jsx)(d.IGR, {
                                                                   disableColor: !0,
-                                                                  text: M.intl.string(M.t["h/uBCQ"]),
+                                                                  text: D.intl.string(D.t["h/uBCR"]),
                                                                   className: F.limitedTimeBadge,
                                                               }),
                                                           (0, r.jsxs)("div", {
@@ -327,7 +327,7 @@ let W = (0, v.IC)(90),
                                                                                 {
                                                                                     product: e,
                                                                                     category: n,
-                                                                                    user: J,
+                                                                                    user: Q,
                                                                                     tab: G,
                                                                                     shopBlockType: c.z.HERO,
                                                                                 },

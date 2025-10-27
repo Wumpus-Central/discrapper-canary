@@ -29,7 +29,7 @@ function d(e) {
                   (0, r.jsx)(i.Heading, {
                       variant: "heading-lg/semibold",
                       color: "header-primary",
-                      children: o.intl.string(o.t.swIgTE),
+                      children: o.intl.string(o.t.swIgTL),
                   }),
                   (0, r.jsx)("div", {
                       className: c.contentContainer,

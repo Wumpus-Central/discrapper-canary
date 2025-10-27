@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(430824),
     R = n(246946),
     P = n(626135),
-    w = n(63063),
-    D = n(706454),
+    D = n(63063),
+    w = n(706454),
     L = n(526665),
     x = n(349728),
     M = n(494620),
@@ -175,7 +175,7 @@ function q(e) {
         [E, T] = i.useState(n.metadataVisibility),
         [S, C] = i.useState(n.showActivity),
         [N, R] = i.useState(null),
-        [P, D] = i.useState(null),
+        [P, w] = i.useState(null),
         [k, Z] = i.useState(!1),
         [H, W] = i.useState([]),
         q = (0, y.rR)(n.type),
@@ -337,7 +337,7 @@ function q(e) {
                             variant: "text-xs/normal",
                             className: V.connectionMetadataUpsellDescription,
                             children: F.intl.format(F.t.Up2ni7, {
-                                helpdeskUrl: w.Z.getArticleURL(G.BhN.CONNECTION_DETAILS),
+                                helpdeskUrl: D.Z.getArticleURL(G.BhN.CONNECTION_DETAILS),
                             }),
                         },
                         "label",
@@ -493,7 +493,7 @@ function q(e) {
         let { verified: t } = n,
             r = +!!e;
         if (e && !t) {
-            D(r),
+            w(r),
                 (0, v.Z)({
                     platformType: n.type,
                     location: "User Settings",
@@ -515,7 +515,7 @@ function q(e) {
             if (!1 === n.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
             null != e && (g(e), h.Z.setVisibility(n.type, n.id, e), R(null)),
-                null != t && (T(t), h.Z.setMetadataVisibility(n.type, n.id, t), D(null));
+                null != t && (T(t), h.Z.setMetadataVisibility(n.type, n.id, t), w(null));
         }, [n]);
     let ed = (0, L.wy)("ConnectedAccount");
     return (0, r.jsxs)("div", {
@@ -634,7 +634,7 @@ let ee = () => {
         t = (0, l.e7)([C.Z], () => C.Z.isFetching()),
         n = (0, l.e7)([C.Z], () => C.Z.getAccounts()),
         a = (0, E.ZP)(),
-        o = (0, l.e7)([D.default], () => D.default.locale);
+        o = (0, l.e7)([w.default], () => w.default.locale);
     return (i.useEffect(() => {
         h.Z.fetch();
     }, []),

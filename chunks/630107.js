@@ -107,11 +107,11 @@ function b(e) {
                             (0, s.jsx)(r.Text, {
                                 variant: "text-md/normal",
                                 className: N.bodyText,
-                                children: j.intl.string(j.t.NweJIy),
+                                children: j.intl.string(j.t.NweJI8),
                             }),
                             (0, s.jsx)(r.Button, {
                                 variant: "primary",
-                                text: j.intl.string(j.t.UQvCf3),
+                                text: j.intl.string(j.t.UQvCf7),
                                 fullWidth: !0,
                                 onClick: f,
                             }),
@@ -132,7 +132,7 @@ function b(e) {
                     children: O
                         ? (0, s.jsxs)(s.Fragment, {
                               children: [
-                                  (0, s.jsx)(d.Dx, { children: j.intl.string(j.t["Z+hCVV"]) }),
+                                  (0, s.jsx)(d.Dx, { children: j.intl.string(j.t["Z+hCVU"]) }),
                                   (0, s.jsx)(d.Hh, {}),
                               ],
                           })
@@ -140,9 +140,9 @@ function b(e) {
                               children: [
                                   (0, s.jsx)(d.Dx, {
                                       className: N.appOpenedTitle,
-                                      children: j.intl.string(j.t.csrAMD),
+                                      children: j.intl.string(j.t.csrAMJ),
                                   }),
-                                  (0, s.jsx)(d.DK, { children: j.intl.string(j.t.ghBJz8) }),
+                                  (0, s.jsx)(d.DK, { children: j.intl.string(j.t.ghBJz9) }),
                               ],
                           }),
                 }),

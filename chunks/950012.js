@@ -9,15 +9,15 @@ var r = n(951288),
     d = n(888592);
 let u = (e) => {
     let { onClose: t, invite: n, forceGuildScrollHeight: u = !0, isNUXFlow: m } = e,
-        [g, f] = l.useState([d.tF.VERIFY_EMAIL]),
+        [f, g] = l.useState([d.tF.VERIFY_EMAIL]),
         [p, h] = l.useState(""),
         [_, v] = l.useState(""),
         [x, N] = l.useState(void 0),
         [E, y] = l.useState([]),
         S = (e) => {
-            f(g.concat(e).slice(-4));
+            g(f.concat(e).slice(-4));
         };
-    switch (g[g.length - 1]) {
+    switch (f[f.length - 1]) {
         case d.tF.VERIFY_EMAIL:
             return (0, r.jsx)(i.Z, {
                 setGuildsInfo: y,
@@ -40,7 +40,7 @@ let u = (e) => {
         case d.tF.SUBMIT_SCHOOL:
             return (0, r.jsx)(s.Z, {
                 onBack: () => {
-                    g.length > 1 && f(g.slice(0, -1).slice(-4));
+                    f.length > 1 && g(f.slice(0, -1).slice(-4));
                 },
                 setStep: S,
                 email: p,

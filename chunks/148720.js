@@ -24,21 +24,21 @@ function g(e) {
             break;
         case h.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t.UXoQTk),
+                title: m.intl.string(m.t.PtobXW),
+                body: m.intl.string(m.t.UXoQTp),
                 hideActionSheet: !1,
             });
             break;
         case h.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t.uGDCc3),
+                title: m.intl.string(m.t.PtobXW),
+                body: m.intl.string(m.t.uGDCcw),
                 hideActionSheet: !1,
             });
             break;
         case h.Fw.ACTIVITY_AGE_GATED:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXV),
+                title: m.intl.string(m.t.PtobXW),
                 body: m.intl.string(m.t["4WuFRE"]),
                 hideActionSheet: !1,
             });
@@ -48,8 +48,8 @@ function g(e) {
         case h.Fw.NO_CHANNEL:
         case h.Fw.NO_USER:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t.FUCQcn),
+                title: m.intl.string(m.t.PtobXW),
+                body: m.intl.string(m.t.FUCQco),
                 hideActionSheet: !1,
             });
     }

@@ -14,13 +14,13 @@ function u(e) {
         p = "",
         h = {
             trial: {
-                days_and_hours: s.t.SQyVVV,
+                days_and_hours: s.t.SQyVVd,
                 days: s.t["2ifAYG"],
-                hours: s.t.kZSTYm,
+                hours: s.t.kZSTYg,
             },
             default: {
-                days_and_hours: s.t["6r9LLi"],
-                days: s.t.c2BbVF,
+                days_and_hours: s.t["6r9LLp"],
+                days: s.t.c2BbVA,
                 hours: s.t["8Xm6uL"],
             },
         };

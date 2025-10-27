@@ -10,8 +10,8 @@ var a = n(442837),
     d = n(914010),
     u = n(981631),
     f = n(30513),
-    g = n(388032),
-    _ = n(413955);
+    _ = n(388032),
+    g = n(413955);
 function p(e) {
     let { analyticsSection: t, analyticsPage: n, isGIF: p, banner: x } = e,
         m = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
@@ -22,21 +22,21 @@ function p(e) {
         (!p && N.features.has(u.GuildFeatures.BANNER))
         ? null
         : (0, i.jsxs)("div", {
-              className: _.container,
+              className: g.container,
               children: [
                   (0, i.jsx)(r.Ucv, {
                       color: r.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                      className: _.guildBoostingIcon,
+                      className: g.guildBoostingIcon,
                   }),
                   (0, i.jsx)(r.Text, {
                       color: "header-primary",
                       variant: "text-sm/semibold",
-                      children: g.intl.string(g.t["56M7xc"]),
+                      children: _.intl.string(_.t["56M7xe"]),
                   }),
                   (0, i.jsx)("div", {
-                      className: _.subscribeButton,
+                      className: g.subscribeButton,
                       children: (0, i.jsx)(r.Avr, {
-                          text: g.intl.string(g.t.WUHdZW),
+                          text: _.intl.string(_.t.WUHdZV),
                           onClick: () => {
                               if (null == N) return;
                               let e = {

@@ -8,20 +8,20 @@ var i = n(951288),
     u = n(594174),
     c = n(444295),
     d = n(603618),
-    h = n(388627),
-    p = n(981631),
+    p = n(388627),
+    h = n(981631),
     f = n(275525);
 function m(e) {
     let { locked: t } = e,
-        n = (0, h.II)(),
+        n = (0, p.II)(),
         m = null == n ? void 0 : n.id,
         g = null == n ? void 0 : n.altId,
         y = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         O = null != g ? g : m,
-        [v, E] = r.useState(new Set()),
+        [E, v] = r.useState(new Set()),
         [S, b] = r.useState(new Set()),
         x = r.useCallback((e, t, n) => {
-            E((n) => {
+            v((n) => {
                 if (t) {
                     if (n.has(e)) return n;
                     n.add(e);
@@ -42,13 +42,13 @@ function m(e) {
                     return new Set(i);
                 });
         }, []),
-        j = (0, c.ee)(() => v, [v]),
+        j = (0, c.ee)(() => E, [E]),
         I = (0, c.ee)(() => S, [S]),
         C = (0, o.h)(c.zi, 3000, []);
     r.useEffect(() => {
         0 === j.size ||
             t ||
-            C(p.Odu.FRIENDS, {
+            C(h.Odu.FRIENDS, {
                 locked: t,
                 shownUserIds: Array.from(j),
                 liveUserIds: Array.from(I),
@@ -121,7 +121,7 @@ function m(e) {
             if (null != n) {
                 var i, r;
                 (0, c.Ws)(
-                    p.Odu.FRIENDS,
+                    h.Odu.FRIENDS,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -181,7 +181,7 @@ function m(e) {
               listClassName: f.list,
               closePopout: w,
               renderHeader: T,
-              appContext: p.IlC.OVERLAY,
+              appContext: h.IlC.OVERLAY,
               onAction: N,
               onFriendVisible: x,
           });

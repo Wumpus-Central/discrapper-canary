@@ -35,7 +35,7 @@ function v(e) {
                     (0, r.jsx)(c.Z, {
                         revenue: v.metrics.revenue,
                         revenueTrend: v.metrics.revenuePctChange,
-                        summaryMetricLabel: x.intl.string(x.t.R3PCmZ),
+                        summaryMetricLabel: x.intl.string(x.t.R3PCmW),
                         summaryMetricValue: null != (n = v.metrics.paymentsCount) ? n : "-",
                         summaryMetricTrend: null != (s = v.metrics.paymentsCountChange) ? s : 0,
                         summaryMetricTrendIsPercent: !1,
@@ -45,7 +45,7 @@ function v(e) {
                         }),
                     }),
                     (0, r.jsx)(l.gNt, {
-                        label: x.intl.string(x.t["+5Rmho"]),
+                        label: x.intl.string(x.t["+5Rmhl"]),
                         children: (0, r.jsx)(o.Z, {
                             ListingIdLabel: j,
                             payoutsByPeriod: v.payoutsByPeriod,
@@ -53,7 +53,7 @@ function v(e) {
                         }),
                     }),
                     (0, r.jsx)(l.gNt, {
-                        label: x.intl.string(x.t.O8cDAA),
+                        label: x.intl.string(x.t.O8cDAJ),
                         disabled: _,
                         children: (0, r.jsx)(g.Z, {
                             guildId: f,
@@ -61,7 +61,7 @@ function v(e) {
                         }),
                     }),
                     (0, r.jsx)(l.gNt, {
-                        label: x.intl.string(x.t["0n7R2d"]),
+                        label: x.intl.string(x.t["0n7R2X"]),
                         children: (0, r.jsx)(m.Z, {
                             guildId: f,
                             allPeriods: v.payoutsByPeriod,

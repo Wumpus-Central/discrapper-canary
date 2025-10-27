@@ -43,19 +43,19 @@ let d = { skuId: "None" },
                     section: "purchase",
                     items: [d, m, ...n.purchase],
                     height: 12,
-                    header: c.intl.string(c.t.VqmVqK),
+                    header: c.intl.string(c.t.VqmVqE),
                 },
                 {
                     section: "premium_purchase",
                     items: n.premium_purchase,
                     height: 12,
-                    header: c.intl.string(c.t.TiLCg4),
+                    header: c.intl.string(c.t.TiLCgw),
                 },
                 {
                     section: "preview",
                     items: n.preview,
                     height: 12,
-                    header: c.intl.string(c.t["1vbbeX"]),
+                    header: c.intl.string(c.t["1vbbee"]),
                 },
             ].filter((e) => {
                 let { items: t } = e;

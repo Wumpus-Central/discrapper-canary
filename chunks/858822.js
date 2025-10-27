@@ -27,13 +27,13 @@ function f(e, t) {
         : i
           ? (0, r.jsx)(s.sNh, {
                 id: "unmute-guild",
-                label: h.intl.string(h.t.De0BTE),
+                label: h.intl.string(h.t.De0BTC),
                 subtext: g,
                 action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, p.ZB.Unmuted),
             })
           : (0, r.jsx)(s.sNh, {
                 id: "mute-guild",
-                label: h.intl.string(h.t.vRzp7O),
+                label: h.intl.string(h.t.vRzp7P),
                 action: () => o.Z.updateGuildNotificationSettings(n, { muted: !0 }, p.ZB.Muted),
                 children: (0, c.k)().map((e) => {
                     let { value: i, label: a } = e;

@@ -1,32 +1,32 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(264418),
     l = n(481060),
     a = n(100527),
-    o = n(906732),
-    s = n(74538),
+    s = n(906732),
+    o = n(74538),
     c = n(230916),
     u = n(45474),
     d = n(474936),
     p = n(921944),
     f = n(388032),
     h = n(288541);
-let g = (e) => {
-    let { targetElementRef: t, discountOffer: g, premiumSubscription: m, dismissCoachmark: b, children: _ } = e,
-        { analyticsLocations: E } = (0, o.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
-        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, g, m),
-        v = (0, r.jsx)(i.Z, {
+let m = (e) => {
+    let { targetElementRef: t, discountOffer: m, premiumSubscription: g, dismissCoachmark: _, children: b } = e,
+        { analyticsLocations: E } = (0, s.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
+        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, m, g),
+        I = (0, r.jsx)(i.Z, {
             targetElementRef: t,
             position: "right",
             align: "top",
             size: "md",
             caretConfig: { align: "start" },
-            title: f.intl.format(f.t["3yZP0N"], { percent: g.discount.amount }).toString(),
-            body: f.intl.format(f.t["3Q4wCw"], {
+            title: f.intl.format(f.t["3yZP0G"], { percent: m.discount.amount }).toString(),
+            body: f.intl.format(f.t["3Q4wCy"], {
                 discountedPrice: O,
-                billingPeriod: (0, s.JP)(g.discount.user_usage_limit_interval),
-                numMonths: g.discount.user_usage_limit,
+                billingPeriod: (0, o.JP)(m.discount.user_usage_limit_interval),
+                numMonths: m.discount.user_usage_limit,
             }),
             graphic: {
                 type: "image",
@@ -35,10 +35,10 @@ let g = (e) => {
             gradientColor: "nitro-pink",
             actions: [
                 {
-                    text: f.intl.string(f.t.zrCzVF),
+                    text: f.intl.string(f.t.zrCzVB),
                     variant: "expressive",
                     onClick: () => {
-                        b(p.L.TAKE_ACTION),
+                        _(p.L.TAKE_ACTION),
                             (0, l.ZDy)(async () => {
                                 let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                     n.e("26526"),
@@ -75,7 +75,7 @@ let g = (e) => {
                                         })({}, t)),
                                         (i = i =
                                             {
-                                                premiumSubscription: m,
+                                                premiumSubscription: g,
                                                 analyticsLocations: E,
                                                 initialStep: u.R.CONFIRM_DISCOUNT,
                                             }),
@@ -100,10 +100,10 @@ let g = (e) => {
                 },
             ],
             onRequestClose: () => {
-                b(p.L.USER_DISMISS);
+                _(p.L.USER_DISMISS);
             },
         });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", { children: _ }), v],
+        children: [(0, r.jsx)("div", { children: b }), I],
     });
 };

@@ -17,7 +17,7 @@ function u(e) {
                 children: (0, r.jsx)(o.hU, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": s.intl.string(s.t.cpT0Cg),
+                    "aria-label": s.intl.string(s.t.cpT0Cq),
                     onClick: () => {
                         n(a.L.USER_DISMISS);
                     },

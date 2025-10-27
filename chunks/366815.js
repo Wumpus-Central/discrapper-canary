@@ -15,25 +15,25 @@ let d = () =>
                 color: "header-primary",
                 variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t.GcZzp6),
+                children: o.intl.string(o.t.GcZzp2),
             }),
             (0, r.jsx)(i.Text, {
                 color: "header-primary",
                 variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t["/NEGrK"]),
+                children: o.intl.string(o.t["/NEGrO"]),
             }),
             (0, r.jsx)(i.Text, {
                 color: "header-primary",
                 variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t.eUbuHB),
+                children: o.intl.string(o.t.eUbuHL),
             }),
             (0, r.jsx)(i.Text, {
                 color: "header-primary",
                 variant: "text-xs/normal",
                 className: c.inlineText,
-                children: o.intl.string(o.t.sCAZeH),
+                children: o.intl.string(o.t.sCAZeI),
             }),
         ],
     });
@@ -52,18 +52,18 @@ function g(e) {
                               children: [
                                   (0, r.jsx)(i.Heading, {
                                       variant: "heading-md/semibold",
-                                      children: o.intl.string(o.t.Sx8Ezs),
+                                      children: o.intl.string(o.t.Sx8Ezi),
                                   }),
                                   (0, r.jsx)(i.Text, {
                                       color: "header-secondary",
                                       variant: "text-xs/normal",
                                       className: c.descriptionText,
-                                      children: o.intl.string(o.t.JUzPho),
+                                      children: o.intl.string(o.t.JUzPhm),
                                   }),
                                   (0, r.jsx)(i.Text, {
                                       color: "header-secondary",
                                       variant: "text-xs/normal",
-                                      children: o.intl.format(o.t.Vh7rPz, { suggestionsHook: d }),
+                                      children: o.intl.format(o.t.Vh7rP7, { suggestionsHook: d }),
                                   }),
                               ],
                           }),
@@ -71,7 +71,7 @@ function g(e) {
                               className: c.image,
                               children: (0, r.jsx)("img", {
                                   src: u,
-                                  alt: o.intl.string(o.t["uIm/n5"]),
+                                  alt: o.intl.string(o.t["uIm/n4"]),
                               }),
                           }),
                       ],
@@ -85,7 +85,7 @@ function g(e) {
                               (0, r.jsx)(i.Button, {
                                   onClick: t,
                                   variant: "secondary",
-                                  text: o.intl.string(o.t["X/3SyM"]),
+                                  text: o.intl.string(o.t["X/3SyA"]),
                               }),
                               (0, r.jsx)("div", {
                                   className: c.textButtonWrapper,
@@ -95,7 +95,7 @@ function g(e) {
                                       },
                                       variant: "secondary",
                                       textVariant: "text-sm/medium",
-                                      text: o.intl.string(o.t["5E9SBw"]),
+                                      text: o.intl.string(o.t["5E9SB9"]),
                                   }),
                               }),
                           ],

@@ -137,7 +137,7 @@ function m(e) {
             className: d,
             playable: p = !0,
             renderImageComponent: m,
-            alt: g = l.intl.string(l.t.I5gL2N),
+            alt: g = l.intl.string(l.t.I5gL2H),
             sourceMetadata: E,
         } = e,
         b = _(e, [

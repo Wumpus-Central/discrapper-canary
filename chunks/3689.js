@@ -69,13 +69,13 @@ function s(e, t) {
         case a.d4z.GUILD_TEXT:
             return (0, r.jsx)(l.sNh, {
                 id: "create-text-channel",
-                label: c.intl.string(c.t.HHkTJC),
+                label: c.intl.string(c.t.HHkTJP),
                 action: d,
             });
         case a.d4z.GUILD_VOICE:
             return (0, r.jsx)(l.sNh, {
                 id: "create-voice-channel",
-                label: c.intl.string(c.t.AlbZaG),
+                label: c.intl.string(c.t.AlbZaI),
                 action: d,
             });
         default:

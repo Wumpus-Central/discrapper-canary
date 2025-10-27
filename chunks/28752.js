@@ -59,15 +59,15 @@ function b(e) {
                     {
                         type: a.Y.USER_INSTALL,
                         icon: o.oLu,
-                        title: f.intl.string(f.t.aCg60N),
-                        subtitle: f.intl.string(f.t.YeiIUV),
+                        title: f.intl.string(f.t.aCg60P),
+                        subtitle: f.intl.string(f.t.YeiIUZ),
                         beta: !1,
                     },
                     {
                         type: a.Y.GUILD_INSTALL,
                         icon: o.QTo,
-                        title: f.intl.string(f.t.E64YCw),
-                        subtitle: f.intl.string(f.t.bbtoKi),
+                        title: f.intl.string(f.t.E64YCz),
+                        subtitle: f.intl.string(f.t.bbtoKm),
                         beta: !1,
                     },
                 ].filter((e) => {
@@ -177,7 +177,7 @@ function O(e) {
                       children: (0, r.jsx)(o.Text, {
                           variant: "text-xs/medium",
                           color: "text-default",
-                          children: f.intl.string(f.t.LO4f0N),
+                          children: f.intl.string(f.t.LO4f0P),
                       }),
                   })
                 : null,
@@ -229,7 +229,7 @@ function I(e) {
                           (0, r.jsx)(o.Text, {
                               variant: "text-sm/semibold",
                               color: "text-brand",
-                              children: O ? f.intl.string(f.t.u4YJ8v) : f.intl.string(f.t["N/tajI"]),
+                              children: O ? f.intl.string(f.t.u4YJ8g) : f.intl.string(f.t["N/tajD"]),
                           }),
                           O
                               ? (0, r.jsx)(o.u04, {

@@ -70,7 +70,7 @@ class x {
         let A = this.target.getMaxAttachmentsCount();
         if (this.uploads.length >= A)
             throw (
-                (i.uv.announce(b.intl.formatToPlainString(b.t["0QDZ4O"], { maxAttachmentsCount: A })),
+                (i.uv.announce(b.intl.formatToPlainString(b.t["0QDZ4J"], { maxAttachmentsCount: A })),
                 Error("Too many attachments"))
             );
         e.target = u.e.GUILD_PRODUCT_ATTACHMENT;
@@ -89,7 +89,7 @@ class x {
                               reason: l,
                           }),
                       )
-                    : i.uv.announce(b.intl.formatToPlainString(b.t.mBkf6e, { reason: l })),
+                    : i.uv.announce(b.intl.formatToPlainString(b.t.mBkf6Z, { reason: l })),
                     t((e) => j(U({}, e), { [n.id]: a }));
             }),
             n.on("progress", (e, A) => {

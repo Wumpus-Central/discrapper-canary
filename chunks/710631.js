@@ -110,7 +110,7 @@ function N(e) {
         ? null
         : (0, r.jsx)(o.sNh, {
               id: "invite-to-server",
-              label: b.intl.string(b.t.Sd8Ix8),
+              label: b.intl.string(b.t.Sd8Ixw),
               children: d.map((e) =>
                   y[e.id]
                       ? (0, r.jsx)(
@@ -118,7 +118,7 @@ function N(e) {
                             {
                                 id: e.id,
                                 disabled: !0,
-                                label: b.intl.string(b.t.PuLLzM),
+                                label: b.intl.string(b.t.PuLLzP),
                             },
                             e.id,
                         )

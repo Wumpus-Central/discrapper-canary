@@ -4,8 +4,8 @@ var n = i(951288),
     s = i(793030),
     l = i(442837),
     a = i(481060),
-    d = i(594174),
-    c = i(63063),
+    c = i(594174),
+    d = i(63063),
     o = i(86419),
     u = i(778414),
     x = i(872269),
@@ -31,23 +31,23 @@ function b(t) {
                 b(),
                 (0, x.L$)(h.qb.WIDGET_REMOVED);
         }, [i.type, b, v]),
-        f = (0, l.e7)([d.default], () => d.default.getUser(u));
+        f = (0, l.e7)([c.default], () => c.default.getUser(u));
     return null == f
         ? null
         : (0, n.jsxs)(s.Modal, {
               transitionState: e,
               onClose: b,
-              title: p.intl.string(p.t.Mm07YW),
-              subtitle: p.intl.format(p.t["x+djIy"], { helpUrl: c.w }),
+              title: p.intl.string(p.t.Mm07Yc),
+              subtitle: p.intl.format(p.t["x+djI4"], { helpUrl: d.w }),
               actions: [
                   {
                       variant: "secondary",
-                      text: p.intl.string(p.t["ETE/oK"]),
+                      text: p.intl.string(p.t["ETE/oC"]),
                       onClick: b,
                   },
                   {
                       variant: "critical-primary",
-                      text: p.intl.string(p.t.Mm07YW),
+                      text: p.intl.string(p.t.Mm07Yc),
                       onClick: E,
                   },
               ],
@@ -64,7 +64,7 @@ function b(t) {
                       children: (0, n.jsx)(a.Text, {
                           color: "text-secondary",
                           variant: "text-sm/normal",
-                          children: p.intl.string(p.t.bQNGeX),
+                          children: p.intl.string(p.t.bQNGeT),
                       }),
                   }),
               ],

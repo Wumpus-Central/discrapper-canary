@@ -11,14 +11,14 @@ let c = new a.Z({
             t && (0, i.uL)(s.Z5c.ME),
                 (0, r.showToast)(
                     (0, r.createToast)(
-                        l.intl.formatToPlainString(l.t.wx7O3N, { username: e.username }),
+                        l.intl.formatToPlainString(l.t.wx7O3L, { username: e.username }),
                         r.ToastType.SUCCESS,
                     ),
                 );
         }, 100);
     },
     onSwitchError() {
-        (0, r.showToast)((0, r.createToast)(l.intl.string(l.t.pqvKWF), r.ToastType.FAILURE));
+        (0, r.showToast)((0, r.createToast)(l.intl.string(l.t.pqvKWA), r.ToastType.FAILURE));
     },
     onTokenSet() {
         (0, r.Mr3)(o.Ui), (0, r.Mr3)(o._5);

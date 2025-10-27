@@ -13,7 +13,7 @@ function d(e) {
     return (0, a.yE)(e.flags, c.iLy.IS_VOICE_MESSAGE) && t
         ? (0, r.jsx)(i.sNh, {
               id: "save-voice-message-audio",
-              label: u.intl.string(u.t.vbAEaG),
+              label: u.intl.string(u.t.vbAEaA),
               icon: i._8t,
               action: () => {
                   let t = (0, l.s$)(e.attachments[0].url);

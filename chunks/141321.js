@@ -3,30 +3,30 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(212605),
+    s = n(442837),
+    o = n(212605),
     c = n(681715),
     u = n(481060),
     d = n(686546),
     p = n(719961),
     f = n(388035),
     h = n(306680),
-    g = n(594174),
-    m = n(178088),
-    b = n(490897),
-    _ = n(388032),
+    m = n(594174),
+    g = n(178088),
+    _ = n(490897),
+    b = n(388032),
     E = n(741047);
 function O(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
-        O = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        v = i.useRef(null),
-        y = (0, o.e7)(
+        O = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        I = i.useRef(null),
+        v = (0, s.e7)(
             [h.ZP],
-            () => (null == O ? void 0 : O.id) != null && h.ZP.getMentionCount(O.id, b.W.NOTIFICATION_CENTER) > 0,
+            () => (null == O ? void 0 : O.id) != null && h.ZP.getMentionCount(O.id, _.W.NOTIFICATION_CENTER) > 0,
         ),
-        { titlebarIconSize: I, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
-        S = "sm" === I ? "refresh_sm" : "md",
-        N = i.useMemo(
+        { titlebarIconSize: y, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
+        S = "sm" === y ? "refresh_sm" : "md",
+        T = i.useMemo(
             () =>
                 (0, r.jsx)(u.xx7, {
                     size: S,
@@ -34,24 +34,24 @@ function O(e) {
                 }),
             [S],
         );
-    return (0, r.jsx)(m.k, {
-        targetElementRef: v,
+    return (0, r.jsx)(g.k, {
+        targetElementRef: I,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: y },
+        badgeState: { badgeForYou: v },
         popoutPosition: "bottom",
         popoutAlign: "right",
         children: (e, t, n, i) => {
-            var o, p;
+            var s, p;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.u, {
-                        targetElementRef: v,
+                        targetElementRef: I,
                         shouldShow: !t,
-                        text: _.intl.string(_.t.GSmTKC),
+                        text: b.intl.string(b.t.GSmTKJ),
                         children: (0, r.jsx)(
                             u.P3F,
-                            ((o = (function (e) {
+                            ((s = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
@@ -79,30 +79,30 @@ function O(e) {
                             (p = p =
                                 {
                                     tag: "div",
-                                    innerRef: v,
+                                    innerRef: I,
                                     onClick: e,
                                     "data-jump-section": l,
-                                    "aria-label": _.intl.string(_.t.GSmTKC),
+                                    "aria-label": b.intl.string(b.t.GSmTKJ),
                                     className: a()(E.clickable, { [E.withHighlight]: C }),
                                     children:
-                                        y || i
+                                        v || i
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
                                                       (0, r.jsx)(d.ZP, {
                                                           mask: d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                          height: s.Z[S],
-                                                          width: s.Z[S],
-                                                          children: N,
+                                                          height: o.Z[S],
+                                                          width: o.Z[S],
+                                                          children: T,
                                                       }),
                                                       (0, r.jsx)("span", {
                                                           className: a()(E.badge, { [E.smol]: "refresh_sm" === S }),
                                                       }),
                                                   ],
                                               })
-                                            : N,
+                                            : T,
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(p))
+                                ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(p))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -111,14 +111,14 @@ function O(e) {
                                       }
                                       return n;
                                   })(Object(p)).forEach(function (e) {
-                                      Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(p, e));
+                                      Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(p, e));
                                   }),
-                            o),
+                            s),
                         ),
                     }),
                     (0, r.jsx)(f.U, {
                         location: "inbox-button",
-                        targetElementRef: v,
+                        targetElementRef: I,
                     }),
                 ],
             });

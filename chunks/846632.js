@@ -1,4 +1,4 @@
-n.d(t, { default: () => h });
+n.d(t, { default: () => m });
 var a = n(951288);
 n(647438);
 var r = n(120356),
@@ -13,13 +13,13 @@ var r = n(120356),
     f = n(731722),
     b = n(446094),
     p = n(388032),
-    C = n(659854),
-    m = n(265227);
-function h(e) {
+    C = n(562915),
+    h = n(265227);
+function m(e) {
     var t,
         n,
         r,
-        h,
+        m,
         { guildId: j } = e,
         v = (function (e, t) {
             if (null == e) return {};
@@ -78,7 +78,7 @@ function h(e) {
                 return e;
             })(
                 {
-                    className: m.modal,
+                    className: h.modal,
                     size: d.CgR.DYNAMIC,
                 },
                 v,
@@ -88,20 +88,20 @@ function h(e) {
                     parentComponent: "GuildTagAdoptModal",
                     children: [
                         (0, a.jsxs)(d.hzk, {
-                            className: m.modalContent,
+                            className: h.modalContent,
                             scrollbarType: "none",
                             children: [
                                 (0, a.jsx)("div", {
-                                    className: m.modalContentChild,
+                                    className: h.modalContentChild,
                                     children: (0, a.jsxs)("div", {
-                                        className: m.left,
+                                        className: h.left,
                                         children: [
                                             (0, a.jsxs)("div", {
-                                                className: m.headerContainer,
+                                                className: h.headerContainer,
                                                 children: [
                                                     (0, a.jsx)(d.Heading, {
                                                         variant: "heading-lg/bold",
-                                                        children: p.intl.string(C.default.OvKPi4),
+                                                        children: p.intl.string(C.default.OvKPi0),
                                                     }),
                                                     (0, a.jsx)(d.Text, {
                                                         variant: "text-md/normal",
@@ -110,7 +110,7 @@ function h(e) {
                                                 ],
                                             }),
                                             (0, a.jsx)(c.Z, {
-                                                className: m.guildRow,
+                                                className: h.guildRow,
                                                 guildId: _.id,
                                                 guildName: _.name,
                                                 guildIcon: _.icon,
@@ -119,14 +119,14 @@ function h(e) {
                                                 guildBadge: null != (r = _.profile.badge) ? r : "",
                                             }),
                                             (0, a.jsxs)("div", {
-                                                className: m.buttonContainer,
+                                                className: h.buttonContainer,
                                                 children: [
                                                     (0, a.jsx)(l.u, {
-                                                        text: p.intl.string(C.default.WlENZm),
+                                                        text: p.intl.string(C.default.WlENZt),
                                                         shouldShow: y,
                                                         children: (0, a.jsx)(d.Button, {
                                                             variant: "primary",
-                                                            text: p.intl.string(p.t.jwEaiY),
+                                                            text: p.intl.string(p.t.jwEaiX),
                                                             fullWidth: !0,
                                                             onClick: x,
                                                             loading: O,
@@ -135,7 +135,7 @@ function h(e) {
                                                     }),
                                                     (0, a.jsx)(d.Button, {
                                                         variant: "secondary",
-                                                        text: p.intl.string(p.t.s5vZlZ),
+                                                        text: p.intl.string(p.t.s5vZlQ),
                                                         fullWidth: !0,
                                                         onClick: w,
                                                     }),
@@ -145,18 +145,18 @@ function h(e) {
                                     }),
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: i()(m.modalContentChild, m.right),
+                                    className: i()(h.modalContentChild, h.right),
                                     children: (0, a.jsx)(s.Z, {
-                                        className: m.rightContent,
+                                        className: h.rightContent,
                                         guildId: _.id,
                                         tag: _.profile.tag,
-                                        badge: null != (h = _.profile.badge) ? h : "",
+                                        badge: null != (m = _.profile.badge) ? m : "",
                                     }),
                                 }),
                             ],
                         }),
                         (0, a.jsx)(d.olH, {
-                            className: m.close,
+                            className: h.close,
                             onClick: v.onClose,
                         }),
                     ],

@@ -74,12 +74,12 @@ function b(e) {
                     className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: t.isForumPost() ? h.intl.string(h.t["833FDg"]) : h.intl.string(h.t.rEeodH),
+                    children: t.isForumPost() ? h.intl.string(h.t["833FDn"]) : h.intl.string(h.t.rEeodK),
                 }),
                 l
                     ? (0, i.jsx)(o.Button, {
                           variant: "secondary",
-                          text: h.intl.string(h.t["0dvvEh"]),
+                          text: h.intl.string(h.t["0dvvEi"]),
                           onClick: () => {
                               c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,
@@ -114,12 +114,12 @@ function C(e) {
                     className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: t.isForumPost() ? h.intl.string(h.t.E7oO8v) : h.intl.string(h.t["V/JF2N"]),
+                    children: t.isForumPost() ? h.intl.string(h.t.E7oO8u) : h.intl.string(h.t["V/JF2N"]),
                 }),
                 l
                     ? (0, i.jsx)(o.Button, {
                           variant: "secondary",
-                          text: h.intl.string(h.t.zA9d1N),
+                          text: h.intl.string(h.t.zA9d1J),
                           onClick: () => {
                               c.default.track(
                                   p.rMx.CHANNEL_BANNER_CTA_CLICKED,

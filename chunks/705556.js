@@ -76,7 +76,7 @@ function O(e) {
         ? null == I
             ? (0, r.jsx)(p.O1, {
                   action: "EDIT_PROFILE",
-                  text: h.intl.string(h.t.s5vZlZ),
+                  text: h.intl.string(h.t.s5vZlQ),
                   icon: o.vdY,
                   autoFocus: !0,
                   fullWidth: g,
@@ -97,12 +97,12 @@ function O(e) {
                           onClose: () => {
                               t(), null == O || O();
                           },
-                          "aria-label": h.intl.string(h.t.AXIHpa),
+                          "aria-label": h.intl.string(h.t.AXIHpV),
                           children: [
                               (0, r.jsx)(o.sNh, {
                                   id: "edit-server-profile",
-                                  label: h.intl.string(h.t["PKQB/P"]),
-                                  subtext: h.intl.string(h.t.VYHWKC),
+                                  label: h.intl.string(h.t["PKQB/H"]),
+                                  subtext: h.intl.string(h.t.VYHWKJ),
                                   action: () => {
                                       C({ action: "EDIT_GUILD_PROFILE" }), S(), (0, s.i)(y);
                                   },
@@ -110,7 +110,7 @@ function O(e) {
                               (0, r.jsx)(o.sNh, {
                                   id: "edit-main-profile",
                                   label: h.intl.string(h.t.HmFaFB),
-                                  subtext: h.intl.string(h.t["+EERMj"]),
+                                  subtext: h.intl.string(h.t["+EERMk"]),
                                   action: () => {
                                       C({ action: "EDIT_PROFILE" }), A(), (0, s.i)(y);
                                   },
@@ -126,7 +126,7 @@ function O(e) {
                           E(
                               {
                                   buttonRef: N,
-                                  text: h.intl.string(h.t.s5vZlZ),
+                                  text: h.intl.string(h.t.s5vZlQ),
                                   icon: o.vdY,
                                   autoFocus: !0,
                                   fullWidth: g,

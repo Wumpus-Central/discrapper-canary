@@ -37,8 +37,8 @@ var r,
     N = n(629710),
     R = n(262777),
     P = n(761538),
-    w = n(674611),
-    D = n(294734),
+    D = n(674611),
+    w = n(294734),
     L = n(947849),
     x = n(10433),
     M = n(715903),
@@ -91,8 +91,8 @@ var r,
     eN = n(461157),
     eR = n(901461),
     eP = n(432376),
-    ew = n(384203),
-    eD = n(633957),
+    eD = n(384203),
+    ew = n(633957),
     eL = n(530472),
     ex = n(29909),
     eM = n(782658),
@@ -154,7 +154,7 @@ function e1(e, t) {
     }
     return n;
 }
-function e2(e, t) {
+function e3(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -165,7 +165,7 @@ function e2(e, t) {
         e
     );
 }
-function e3(e, t) {
+function e2(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -198,7 +198,7 @@ function e8() {
             (0, i.jsx)(f.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: eX.intl.format(eX.t["G/H+s7"], { onClick: () => (0, $.z)() }),
+                children: eX.intl.format(eX.t["G/H+s6"], { onClick: () => (0, $.z)() }),
             }),
         ],
     });
@@ -259,7 +259,7 @@ class tt extends (r = a.Component) {
             r = null;
         switch (n) {
             case eI.aD.MARK_AS_FALSE_POSITIVE:
-                r = (0, i.jsx)(w.Z, {
+                r = (0, i.jsx)(D.Z, {
                     messageId: e.id,
                     channelId: t.id,
                 });
@@ -300,7 +300,7 @@ class tt extends (r = a.Component) {
                   if (n === S.g.EVENT) return (0, i.jsx)(U.Z, { code: r }, r);
                   if (n === S.g.CHANNEL_LINK)
                       return (0, i.jsx)(
-                          ew.Z,
+                          eD.Z,
                           {
                               code: r,
                               message: e,
@@ -433,7 +433,7 @@ class tt extends (r = a.Component) {
         let f = d
                 .map((t) => {
                     var n;
-                    return e2(e0({}, (0, W.JD)(t, e)), {
+                    return e3(e0({}, (0, W.JD)(t, e)), {
                         original: t.url,
                         srcIsAnimated: (0, ey.yE)(null != (n = t.flags) ? n : 0, ez.J0y.IS_ANIMATED),
                     });
@@ -616,16 +616,16 @@ class tt extends (r = a.Component) {
         )
             return (0, i.jsx)("div", {
                 className: eQ.threadRoleMentionFailure,
-                children: eX.intl.string(eX.t.ma8Rs7),
+                children: eX.intl.string(eX.t.ma8Rs0),
             });
     }
     renderSuppressConfirmModal() {
         let { channel: e, message: t } = this.props;
         return (0, i.jsxs)(f.sYh, {
             dismissable: !0,
-            header: eX.intl.string(eX.t.VL1KOj),
-            confirmText: eX.intl.string(eX.t.YEHppK),
-            cancelText: eX.intl.string(eX.t["ETE/oK"]),
+            header: eX.intl.string(eX.t.VL1KOk),
+            confirmText: eX.intl.string(eX.t.YEHppG),
+            cancelText: eX.intl.string(eX.t["ETE/oC"]),
             onCancel: () => this.setState({ showSuppressModal: !1 }),
             onConfirm: () => {
                 _.Z.suppressEmbeds(e.id, t.id), this.setState({ showSuppressModal: !1 });
@@ -635,12 +635,12 @@ class tt extends (r = a.Component) {
                     variant: "text-md/normal",
                     color: "text-default",
                     className: eQ.confirmText,
-                    children: eX.intl.string(eX.t["vXZ+Fh"]),
+                    children: eX.intl.string(eX.t["vXZ+Fo"]),
                 }),
                 (0, i.jsx)(f.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: eX.intl.string(eX.t["5j2by8"]),
+                    children: eX.intl.string(eX.t["5j2by3"]),
                 }),
             ],
         });
@@ -652,9 +652,9 @@ class tt extends (r = a.Component) {
             ? void this.setState({ showRemoveAttachmentModal: !1 })
             : (0, i.jsx)(f.sYh, {
                   dismissable: !0,
-                  header: eX.intl.string(eX.t.CbTIEh),
-                  confirmText: eX.intl.string(eX.t.kFwAsb),
-                  cancelText: eX.intl.string(eX.t["ETE/oK"]),
+                  header: eX.intl.string(eX.t.CbTIEo),
+                  confirmText: eX.intl.string(eX.t.kFwAsa),
+                  cancelText: eX.intl.string(eX.t["ETE/oC"]),
                   onCancel: () =>
                       this.setState({
                           showRemoveAttachmentModal: !1,
@@ -672,7 +672,7 @@ class tt extends (r = a.Component) {
                       variant: "text-md/normal",
                       color: "text-default",
                       className: eQ.confirmText,
-                      children: eX.intl.string(eX.t.faHmOz),
+                      children: eX.intl.string(eX.t.faHmO3),
                   }),
               });
     }
@@ -689,7 +689,7 @@ class tt extends (r = a.Component) {
         let { application: t, activityInstance: n } = e;
         return null == t || null == n
             ? null
-            : (0, i.jsx)(eD.Z, {
+            : (0, i.jsx)(ew.Z, {
                   application: t,
                   channelId: this.props.channel.id,
                   guildId: this.props.channel.guild_id,
@@ -741,7 +741,7 @@ class tt extends (r = a.Component) {
         if (e.messageSnapshots.length > 0 && (0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(en.Z, { message: e });
     }
     renderForwardedMessage(e) {
-        if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(D.Z, { message: e });
+        if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(w.Z, { message: e });
     }
     renderEditedTag(e, t) {
         return (0, i.jsx)(eY.Z, {
@@ -776,8 +776,8 @@ class tt extends (r = a.Component) {
             N = this.renderMediaObscureNotice(t),
             R = this.renderPoll(t, n),
             P = this.renderForwardedMessage(t),
-            w = this.renderReportedMessage(t),
-            D = this.renderShareClientTheme(t);
+            D = this.renderReportedMessage(t),
+            w = this.renderShareClientTheme(t);
         return null == c &&
             null == d &&
             null == p &&
@@ -796,18 +796,18 @@ class tt extends (r = a.Component) {
             null != T &&
             null == R &&
             null == P &&
-            null == w &&
-            null == D
+            null == D &&
+            null == w
             ? null
             : (0, i.jsxs)("div", {
                   id: (0, ej.bX)(t),
                   className: s()(e, eQ.container),
                   children: [
-                      w,
+                      D,
                       P,
                       v,
                       R,
-                      D,
+                      w,
                       c,
                       u,
                       S,
@@ -985,17 +985,17 @@ function tn(e) {
             isAutomodQuarantined: y,
         }),
         P = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
-        w = (0, z.Z)(null == n ? void 0 : n.id),
-        D = (0, Q.Z)(r),
+        D = (0, z.Z)(null == n ? void 0 : n.id),
+        w = (0, Q.Z)(r),
         L = (0, R.v)(r),
         x = (0, eC._)(n),
         j = (0, eI.ro)(r.id, r.channel_id),
         U = (0, C.m8)();
     return (0, i.jsx)(
         tt,
-        e2(
+        e3(
             e0(
-                e2(
+                e3(
                     e0(
                         {
                             canSuppressEmbeds: I,
@@ -1018,10 +1018,10 @@ function tn(e) {
                 renderEmbeds: d,
                 gifAutoPlay: _,
                 canRenderReferralEmbed: n.isDM(),
-                poll: D,
+                poll: w,
                 showListsAndHeaders: P,
                 showMaskedLinks: P,
-                shouldHideMediaOptions: w,
+                shouldHideMediaOptions: D,
                 enabledContentHarmTypeFlags: L,
                 ctaButtonType: j,
                 shouldAgeVerify: U,
@@ -1045,7 +1045,7 @@ let tr = (e) => {
             disableComponentInteractivity: c = !0,
             isSearchResult: u = !1,
         } = e,
-        d = e3(e, [
+        d = e2(e, [
             "message",
             "channel",
             "disableReactionReads",
@@ -1066,7 +1066,7 @@ let tr = (e) => {
         y = (0, Q.Z)(n);
     return (0, i.jsx)(
         tt,
-        e2(e0({}, d), {
+        e3(e0({}, d), {
             message: n,
             channel: r,
             disableReactionReads: a,

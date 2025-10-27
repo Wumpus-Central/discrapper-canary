@@ -34,8 +34,8 @@ var r = n(392711),
     N = n(134432),
     R = n(594174),
     P = n(768581),
-    w = n(176354),
-    D = n(353368),
+    D = n(176354),
+    w = n(353368),
     L = n(388032);
 let x = {
         start: 10,
@@ -44,8 +44,8 @@ let x = {
     M = [a],
     k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
     j = {
-        [D.q.BASIC]: M,
-        [D.q.PREMIUM]: k,
+        [w.q.BASIC]: M,
+        [w.q.PREMIUM]: k,
     },
     U = i().memoize(
         (e) =>
@@ -54,7 +54,7 @@ let x = {
                 (n.src = e),
                     (n.crossOrigin = "Anonymous"),
                     (n.onload = () => {
-                        let r = D.v * (0, N.x_)();
+                        let r = w.v * (0, N.x_)();
                         if (n.width === r && n.height === r) t(e);
                         else {
                             var i;
@@ -69,14 +69,14 @@ let x = {
     ),
     G = (e, t) => {
         let n = j[e];
-        if (null != t && e === D.q.PREMIUM) {
+        if (null != t && e === w.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);
         }
         return Math.floor(Math.random() * n.length);
     };
 function B(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D.v;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w.v;
     if (null != e.id) {
         var n;
         return P.ZP.getEmojiURL({
@@ -87,7 +87,7 @@ function B(e) {
     }
     let r = C.ZP.convertSurrogateToName(e.name, !1),
         i = C.ZP.getByName(r);
-    return null != i ? w.ZP.getURL(i.surrogates) : "";
+    return null != i ? D.ZP.getURL(i.surrogates) : "";
 }
 function Z(e, t) {
     return i()(e)
@@ -108,17 +108,17 @@ function F(e) {
     return s.length < 1
         ? ""
         : 1 === s.length
-          ? L.intl.formatToPlainString(L.t.yZYxzM, {
+          ? L.intl.formatToPlainString(L.t.yZYxzF, {
                 firstUsername: null == (n = R.default.getUser(s[0])) ? void 0 : n.username,
                 emojiNames: c,
             })
           : 2 === s.length
-            ? L.intl.formatToPlainString(L.t["8rmtbW"], {
+            ? L.intl.formatToPlainString(L.t["8rmtbd"], {
                   firstUsername: null == (r = R.default.getUser(s[0])) ? void 0 : r.username,
                   secondUsername: null == (i = R.default.getUser(s[1])) ? void 0 : i.username,
                   emojiNames: c,
               })
-            : L.intl.formatToPlainString(L.t["/okjv7"], {
+            : L.intl.formatToPlainString(L.t["/okjv0"], {
                   firstUsername: null == (a = R.default.getUser(s[0])) ? void 0 : a.username,
                   secondUsername: null == (o = R.default.getUser(s[1])) ? void 0 : o.username,
                   count: s.length - 2,

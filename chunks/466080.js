@@ -57,9 +57,9 @@ function l(e) {
             return e;
         })(
             {
-                header: i.intl.string(i.t.YrV3Iy),
-                confirmText: i.intl.string(i.t.X7eUJi),
-                cancelText: i.intl.string(i.t["13/7kZ"]),
+                header: i.intl.string(i.t.YrV3I9),
+                confirmText: i.intl.string(i.t.X7eUJq),
+                cancelText: i.intl.string(i.t["13/7kX"]),
                 confirmButtonColor: o.zx.Colors.BRAND,
                 onConfirm: l,
                 onCancel: a,
@@ -70,7 +70,7 @@ function l(e) {
             {
                 children: (0, n.jsx)(c.Text, {
                     variant: "text-md/medium",
-                    children: i.intl.string(i.t.MXSMtr),
+                    children: i.intl.string(i.t.MXSMtl),
                 }),
             }),
         Object.getOwnPropertyDescriptors

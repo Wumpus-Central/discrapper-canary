@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    s = n(859148);
-function a(e) {
+    a = n(481060),
+    o = n(859148);
+function s(e) {
     let { children: t, className: n } = e;
-    return (0, r.jsx)(o.Text, {
+    return (0, r.jsx)(a.Text, {
         color: "none",
-        className: l()(s.title, n),
+        className: l()(o.title, n),
         variant: "text-md/medium",
         children: t,
     });

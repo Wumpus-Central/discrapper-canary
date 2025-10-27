@@ -40,5 +40,5 @@ let { createLoader: r } = n(400497),
         },
         "en-US",
     ),
-    { makeMessagesProxy: l } = n(400497),
-    o = l(i);
+    { makeMessagesProxy: a } = n(400497),
+    o = a(i);

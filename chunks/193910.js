@@ -70,8 +70,8 @@ function M(e) {
         } = e,
         { analyticsLocations: U, newestAnalyticsLocation: B } = (0, d.ZP)(),
         H = (0, g.Dt)({ channel: t }),
-        V = (0, a.e7)([C.Z], () => C.Z.isInProgress());
-    function F() {
+        F = (0, a.e7)([C.Z], () => C.Z.isInProgress());
+    function V() {
         (0, y.R6)(t, void 0, "Plus Button");
     }
     function G() {
@@ -134,7 +134,7 @@ function M(e) {
                 { modalKey: Z.$z },
             );
     }
-    function K() {
+    function q() {
         v.default.track(P.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
@@ -175,7 +175,7 @@ function M(e) {
             onSelect: M,
             navId: "channel-attach",
             onClose: _,
-            "aria-label": T.intl.string(T.t.Xm41aW),
+            "aria-label": T.intl.string(T.t.Xm41aV),
             className: N.menu,
             children: f.map(function (e) {
                 var n;
@@ -310,7 +310,7 @@ function M(e) {
                             {
                                 id: "THREAD",
                                 label: r,
-                                action: F,
+                                action: V,
                             },
                             "THREAD",
                         );
@@ -330,7 +330,7 @@ function M(e) {
                             {
                                 id: "activity",
                                 label: r,
-                                action: K,
+                                action: q,
                                 hint: (0, i.jsx)(w, {}),
                             },
                             "activity",
@@ -353,9 +353,9 @@ function M(e) {
                                 id: "summarize_thread",
                                 label: r,
                                 action: () => b.Z.summarizeThread(t),
-                                icon: V ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
-                                disabled: V,
-                                children: V
+                                icon: F ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
+                                disabled: F,
+                                children: F
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
@@ -363,7 +363,7 @@ function M(e) {
                                                   s.sNh,
                                                   {
                                                       id: "summarize_thread_for_everyone",
-                                                      label: T.intl.string(T.t.eCzSdX),
+                                                      label: T.intl.string(T.t.eCzSdd),
                                                       iconLeft: s.BFJ,
                                                       action: () => b.Z.summarizeThread(t, !1),
                                                   },
@@ -373,7 +373,7 @@ function M(e) {
                                                   s.sNh,
                                                   {
                                                       id: "summarize_thread_for_me",
-                                                      label: T.intl.string(T.t["HOe+Hh"]),
+                                                      label: T.intl.string(T.t["HOe+Hq"]),
                                                       iconLeft: s.tBG,
                                                       action: () => b.Z.summarizeThread(t),
                                                   },

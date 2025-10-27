@@ -4,16 +4,16 @@ n(647438);
 var i = n(442837),
     l = n(388905),
     a = n(362762),
-    o = n(358085),
-    s = n(981631),
+    s = n(358085),
+    o = n(981631),
     c = n(388032),
     u = n(307907);
 let d = n(575703);
 function p(e) {
     let { children: t } = e,
         n = (0, i.e7)([a.Z], () => a.Z.getHighestState());
-    return (0, o.isDesktop)() || n !== s.kEZ.OPENING
-        ? (0, o.isDesktop)() || n !== s.kEZ.OPEN
+    return (0, s.isDesktop)() || n !== o.kEZ.OPENING
+        ? (0, s.isDesktop)() || n !== o.kEZ.OPEN
             ? t
             : (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -28,9 +28,9 @@ function p(e) {
                               children: [
                                   (0, r.jsx)(l.Dx, {
                                       className: u.appOpenedTitle,
-                                      children: c.intl.string(c.t.csrAMD),
+                                      children: c.intl.string(c.t.csrAMJ),
                                   }),
-                                  (0, r.jsx)(l.DK, { children: c.intl.string(c.t.ghBJz8) }),
+                                  (0, r.jsx)(l.DK, { children: c.intl.string(c.t.ghBJz9) }),
                               ],
                           }),
                       }),
@@ -47,7 +47,7 @@ function p(e) {
                       className: u.container,
                       children: (0, r.jsxs)(l.ZP, {
                           children: [
-                              (0, r.jsx)(l.Dx, { children: c.intl.string(c.t["Z+hCVV"]) }),
+                              (0, r.jsx)(l.Dx, { children: c.intl.string(c.t["Z+hCVU"]) }),
                               (0, r.jsx)(l.Hh, {}),
                           ],
                       }),

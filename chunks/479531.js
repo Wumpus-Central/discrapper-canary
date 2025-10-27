@@ -8,11 +8,11 @@ class o extends r.sX {
             e,
             t,
             null != t
-                ? a.intl.formatToPlainString(a.t.aKRa0d, {
+                ? a.intl.formatToPlainString(a.t.aKRa0Q, {
                       statusPageURL: i.yXt.STATUS,
                       details: "".concat(t),
                   })
-                : a.intl.formatToPlainString(a.t.aTVNen, { statusPageURL: i.yXt.STATUS }),
+                : a.intl.formatToPlainString(a.t.aTVNes, { statusPageURL: i.yXt.STATUS }),
         );
     }
 }

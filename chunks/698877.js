@@ -49,11 +49,11 @@ function s(e) {
     let b = d ? a.d : a.Z;
     t = c
         ? u
-            ? o.intl.string(o.t.S5anIS)
-            : o.intl.string(o.t.q3O3Jy)
+            ? o.intl.string(o.t.S5anIc)
+            : o.intl.string(o.t.q3O3J8)
         : s
-          ? o.intl.string(o.t.fjBNo6)
-          : o.intl.string(o.t.uQn9Bw);
+          ? o.intl.string(o.t.fjBNo1)
+          : o.intl.string(o.t.uQn9B8);
     let { Component: C, events: y, play: _ } = (0, l.P)(c ? "disable" : "enable");
     return (
         r.useEffect(() => () => _(), [c, _]),

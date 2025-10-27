@@ -1,17 +1,17 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(28664),
     a = n(481060),
-    o = n(770146),
-    s = n(863969),
+    s = n(770146),
+    o = n(863969),
     c = n(38761),
     u = n(6074),
     d = n(39377),
     p = n(981631),
     f = n(388032),
     h = n(126373);
-let g = [
+let m = [
         {
             feature: p.Qa3.SINGLE_PLAYER,
             getText: () => f.intl.string(f.t["V+/FjO"]),
@@ -82,7 +82,7 @@ let g = [
             feature: p.Qa3.CLOUD_SAVES,
             getText: () => f.intl.string(f.t.rOcNrD),
             getTooltip: () => f.intl.string(f.t.kvw18E),
-            IconComponent: s.Z,
+            IconComponent: o.Z,
         },
         {
             feature: p.Qa3.SECURE_NETWORKING,
@@ -91,7 +91,7 @@ let g = [
             IconComponent: d.Z,
         },
     ],
-    m = (e) => {
+    g = (e) => {
         let { IconComponent: t, text: n, tooltip: i } = e;
         return (0, r.jsxs)("div", {
             className: h.row,
@@ -112,10 +112,10 @@ let g = [
             ],
         });
     };
-class b extends i.PureComponent {
+class _ extends i.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = g
+            t = m
                 .filter((t) => {
                     let { feature: n } = t;
                     return e.features.has(n);
@@ -123,7 +123,7 @@ class b extends i.PureComponent {
                 .map((e) => {
                     let { feature: t, IconComponent: n, getText: i, getTooltip: l } = e;
                     return (0, r.jsx)(
-                        m,
+                        g,
                         {
                             IconComponent: n,
                             text: i(),
@@ -136,8 +136,8 @@ class b extends i.PureComponent {
             ? null
             : (0, r.jsxs)("div", {
                   className: h.features,
-                  children: [(0, r.jsx)(o.Z, { children: f.intl.string(f.t.XXENra) }), t],
+                  children: [(0, r.jsx)(s.Z, { children: f.intl.string(f.t.XXENra) }), t],
               });
     }
 }
-let _ = b;
+let b = _;

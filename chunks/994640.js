@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(592125),
     u = n(888592),
     m = n(981631),
-    g = n(388032),
-    f = n(330966);
+    f = n(388032),
+    g = n(330966);
 let p = (e) => {
     let { setStep: t, setGuildsInfo: n, email: i, setEmail: p, setGuildId: h, invite: _, onClose: v, isNUXFlow: x } = e,
         [N, E] = l.useState(null),
@@ -31,59 +31,59 @@ let p = (e) => {
                         : void 0;
                 e === u.fQ && (e = void 0);
                 let c = await o.Z.sendVerificationEmail(i, !0, e),
-                    g = c.guilds_info;
+                    f = c.guilds_info;
                 c.has_matching_guild
                     ? (h(e), t(u.tF.VERIFY_PIN))
-                    : 0 === g.length
+                    : 0 === f.length
                       ? t(u.tF.SUBMIT_SCHOOL)
-                      : 1 === g.length
-                        ? (h(g[0].id), await o.Z.sendVerificationEmail(i, !0, g[0].id), t(u.tF.VERIFY_PIN))
-                        : (n(g), t(u.tF.SELECT_SCHOOL));
+                      : 1 === f.length
+                        ? (h(f[0].id), await o.Z.sendVerificationEmail(i, !0, f[0].id), t(u.tF.VERIFY_PIN))
+                        : (n(f), t(u.tF.SELECT_SCHOOL));
             } catch (e) {
                 E(new c.Hx(e));
             } finally {
                 S(!1);
             }
         },
-        I = g.intl.string(g.t.H1jCHB),
-        O = g.intl.string(g.t.YfeHRE);
-    if (x) (I = g.intl.string(g.t.LVyxND)), (O = g.intl.string(g.t.ECd7Rk));
+        I = f.intl.string(f.t.H1jCHH),
+        O = f.intl.string(f.t.YfeHRA);
+    if (x) (I = f.intl.string(f.t.LVyxNH)), (O = f.intl.string(f.t.ECd7Rt));
     else if (
         (null == _ ? void 0 : _.guild) != null &&
         _.guild.id !== u.fQ &&
         (null == _ ? void 0 : _.approximate_member_count) != null
     ) {
         let { name: e } = _.guild;
-        I = g.intl.formatToPlainString(g.t["4T4+p6"], {
+        I = f.intl.formatToPlainString(f.t["4T4+p1"], {
             guildName: e,
             count: _.approximate_member_count,
         });
     }
     return (0, r.jsxs)("div", {
-        className: f.container,
+        className: g.container,
         children: [
-            (0, r.jsx)("div", { className: f.topImage }),
+            (0, r.jsx)("div", { className: g.topImage }),
             (0, r.jsx)(s.Heading, {
-                className: a()(f.centerText, f.header),
+                className: a()(g.centerText, g.header),
                 variant: "heading-xl/semibold",
                 children: I,
             }),
             (0, r.jsx)("div", {
-                className: f.descriptionWidth,
+                className: g.descriptionWidth,
                 children: (0, r.jsx)(s.Text, {
-                    className: f.centerText,
+                    className: g.centerText,
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: O,
                 }),
             }),
             (0, r.jsxs)("form", {
-                className: f.formContent,
+                className: g.formContent,
                 onSubmit: j,
                 children: [
                     (0, r.jsx)(s.oil, {
-                        label: g.intl.string(g.t.kmCxkZ),
-                        placeholder: g.intl.string(g.t.ImAOh4),
+                        label: f.intl.string(f.t.kmCxkf),
+                        placeholder: f.intl.string(f.t.ImAOh5),
                         onChange: (e) => {
                             p(e);
                         },
@@ -91,32 +91,32 @@ let p = (e) => {
                     }),
                     (0, r.jsx)(s.Text, {
                         color: "header-secondary",
-                        className: f.formDescription,
+                        className: g.formDescription,
                         variant: "text-sm/normal",
-                        children: g.intl.string(g.t.Cv7mmJ),
+                        children: f.intl.string(f.t.Cv7mmI),
                     }),
                     (0, r.jsx)(s.Button, {
                         type: "submit",
                         variant: "primary",
                         loading: y,
-                        text: g.intl.string(g.t["8vmKOz"]),
+                        text: f.intl.string(f.t["8vmKO0"]),
                         fullWidth: !0,
                     }),
                     (0, r.jsx)(s.Text, {
-                        className: f.termsPhrase,
+                        className: g.termsPhrase,
                         color: "header-secondary",
                         variant: "text-xs/normal",
-                        children: g.intl.format(g.t.RPT0vr, {
+                        children: f.intl.format(f.t.RPT0vj, {
                             termsURL: m.EYA.TERMS,
                             privacyURL: m.EYA.PRIVACY,
                         }),
                     }),
                     x &&
                         (0, r.jsx)("div", {
-                            className: f.cancelButton,
+                            className: g.cancelButton,
                             children: (0, r.jsx)(s.Avr, {
                                 onClick: v,
-                                text: g.intl.string(g.t.hO6qJy),
+                                text: f.intl.string(f.t.hO6qJ3),
                             }),
                         }),
                 ],

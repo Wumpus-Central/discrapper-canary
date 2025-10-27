@@ -59,8 +59,8 @@ function P(e) {
             currentUser: n,
             guildId: N,
             channelId: P,
-            messageId: w,
-            roleId: D,
+            messageId: D,
+            roleId: w,
             openedAt: L,
             closePopout: x,
             setPopoutRef: M,
@@ -74,8 +74,8 @@ function P(e) {
             userId: t.id,
             guildId: N,
             channelId: P,
-            messageId: w,
-            roleId: D,
+            messageId: D,
+            roleId: w,
         }),
         Z = (0, h.ZP)(t.id, N),
         F = (0, a.e7)([d.Z], () => (null != N ? d.Z.getGuild(N) : null)),
@@ -102,7 +102,7 @@ function P(e) {
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "view-profile",
-                      label: A.intl.string(A.t["+Xp3ho"]),
+                      label: A.intl.string(A.t["+Xp3hq"]),
                       action: () => {
                           Y(),
                               (0, p.pQ)(
@@ -134,7 +134,7 @@ function P(e) {
                     (0, r.jsx)(o.nn4, {
                         children: (0, r.jsx)(o.H, {
                             id: z,
-                            children: A.intl.format(A.t.KRe1Fh, { name: q }),
+                            children: A.intl.format(A.t.KRe1Fk, { name: q }),
                         }),
                     }),
                     (0, r.jsxs)(b.Z, {

@@ -3,51 +3,51 @@ var r = n(951288),
     i = n(647438),
     l = n(392711),
     a = n.n(l),
-    o = n(954955),
-    s = n.n(o),
+    s = n(954955),
+    o = n.n(s),
     c = n(442837),
     u = n(481060),
     d = n(570140),
     p = n(365113),
     f = n(509212),
     h = n(569984),
-    g = n(93127),
-    m = n(752048),
-    b = n(594174),
-    _ = n(801077),
+    m = n(93127),
+    g = n(752048),
+    _ = n(594174),
+    b = n(801077),
     E = n(626135),
     O = n(70956),
-    v = n(225559),
-    y = n(910436),
-    I = n(203028),
+    I = n(225559),
+    v = n(910436),
+    y = n(203028),
     C = n(358924),
     S = n(292140),
-    N = n(525296),
-    T = n(981631),
-    P = n(46140),
-    j = n(388032),
+    T = n(525296),
+    N = n(981631),
+    j = n(46140),
+    P = n(388032),
     x = n(559909);
 let A = 15 * O.Z.Millis.MINUTE,
-    Z = (0, N.Z)(function (e) {
+    Z = (0, T.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            o = i.useRef(null),
-            c = (0, r.jsx)(I.Z, {
+            s = i.useRef(null),
+            c = (0, r.jsx)(y.Z, {
                 party: t,
                 onUserContextMenu: n,
             }),
-            d = (0, r.jsx)(y.Z, {
+            d = (0, r.jsx)(v.Z, {
                 party: t,
                 onChannelContextMenu: l,
                 quest: a,
             }),
-            { partiedMembers: f, applicationStreams: h, currentActivities: g, voiceChannels: m } = t,
-            b = f.length,
-            _ = h.length,
-            O = g.length,
-            v = m.length > 0,
-            N = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
-            P = i.useCallback(() => {
-                let e = g
+            { partiedMembers: f, applicationStreams: h, currentActivities: m, voiceChannels: g } = t,
+            _ = f.length,
+            b = h.length,
+            O = m.length,
+            I = g.length > 0,
+            T = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
+            j = i.useCallback(() => {
+                let e = m
                     .filter((e) => {
                         var t, n;
                         return (
@@ -56,18 +56,18 @@ let A = 15 * O.Z.Millis.MINUTE,
                         );
                     })
                     .map((e) => e.game.name);
-                E.default.track(T.rMx.NOW_PLAYING_CARD_HOVERED, {
-                    num_users: b,
-                    num_streams: _,
+                E.default.track(N.rMx.NOW_PLAYING_CARD_HOVERED, {
+                    num_users: _,
+                    num_streams: b,
                     num_activities: O,
-                    in_voice_channel: v,
+                    in_voice_channel: I,
                     games_detected: e,
                 });
-            }, [b, _, O, v, g]),
-            j = s()(P, A);
+            }, [_, b, O, I, m]),
+            P = o()(j, A);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
-                  targetElementRef: o,
+                  targetElementRef: s,
                   position: "left",
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
@@ -109,12 +109,12 @@ let A = 15 * O.Z.Millis.MINUTE,
                           })({}, e)),
                           (i = i =
                               {
-                                  ref: o,
-                                  onMouseEnter: j,
+                                  ref: s,
+                                  onMouseEnter: P,
                                   "aria-haspopup": "menu",
                                   className: x.itemCard,
                                   active: l,
-                                  flat: N,
+                                  flat: T,
                                   children: (0, r.jsxs)("div", {
                                       children: [c, d],
                                   }),
@@ -137,7 +137,7 @@ let A = 15 * O.Z.Millis.MINUTE,
               })
             : null;
     }),
-    w = a().throttle(() => g._(), 300000);
+    w = a().throttle(() => m._(), 300000);
 function L() {
     let {
             nowPlayingCards: e,
@@ -145,22 +145,22 @@ function L() {
             needsRefresh: n,
             fetching: l,
             currentUser: a,
-        } = (0, c.cj)([_.Z, m.Z, b.default], () => ({
-            nowPlayingCards: _.Z.nowPlayingCards,
-            loaded: _.Z.loaded,
-            needsRefresh: m.Z.shouldFetch(),
-            fetching: m.Z.isFetching(),
-            currentUser: b.default.getCurrentUser(),
+        } = (0, c.cj)([b.Z, g.Z, _.default], () => ({
+            nowPlayingCards: b.Z.nowPlayingCards,
+            loaded: b.Z.loaded,
+            needsRefresh: g.Z.shouldFetch(),
+            fetching: g.Z.isFetching(),
+            currentUser: _.default.getCurrentUser(),
         })),
-        o = (0, c.e7)([h.Z], () => h.Z.quests);
-    i.useEffect(() => (d.Z.wait(() => v.L()), () => d.Z.wait(() => v.v())), [null == a ? void 0 : a.id]),
+        s = (0, c.e7)([h.Z], () => h.Z.quests);
+    i.useEffect(() => (d.Z.wait(() => I.L()), () => d.Z.wait(() => I.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && w();
         }, [n, l]);
-    let s = i.useMemo(() => {
+    let o = i.useMemo(() => {
             let t = new Map(),
                 n = new Set(),
-                r = (0, f.NI)(o, P.l$);
+                r = (0, f.NI)(s, j.l$);
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: l } = e;
@@ -169,7 +169,7 @@ function L() {
                     null == a || n.has(a.id) || (t.set(i.party.id, a), n.add(a.id));
                 });
             return t;
-        }, [e, o]),
+        }, [e, s]),
         p = null;
     return t
         ? (p =
@@ -180,7 +180,7 @@ function L() {
                             Z,
                             {
                                 party: t,
-                                quest: s.get(t.id),
+                                quest: o.get(t.id),
                             },
                             t.id,
                         );
@@ -191,13 +191,13 @@ function L() {
                             (0, r.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
                                 className: x.emptyHeader,
-                                children: j.intl.string(j.t["ngJ/5u"]),
+                                children: P.intl.string(P.t["ngJ/5u"]),
                             }),
                             (0, r.jsx)(u.Text, {
                                 color: "none",
                                 className: x.emptyText,
                                 variant: "text-sm/normal",
-                                children: j.intl.string(j.t["99ZWxc"]),
+                                children: P.intl.string(P.t["99ZWxQ"]),
                             }),
                         ],
                     }))

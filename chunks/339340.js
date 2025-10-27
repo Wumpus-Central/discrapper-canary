@@ -31,8 +31,8 @@ function T(e) {
         A = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         C = (0, o.e7)([h.Z], () => h.Z.getMediaSessionId()),
         [N, R] = i.useState(null != A ? A : ""),
-        [P, w] = i.useState(!1),
-        [D, L] = i.useState(null),
+        [P, D] = i.useState(!1),
+        [w, L] = i.useState(null),
         x = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         M = N.length > I;
     i.useEffect(() => {
@@ -49,12 +49,12 @@ function T(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = c.Z.validateMessage(n, x, t.id);
-                return L(e), w(!1), { hasErrors: !0 };
+                return L(e), D(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         U = async (e) => {
-            N === A && S(), null == e || e.preventDefault(), L(null), w(!0);
+            N === A && S(), null == e || e.preventDefault(), L(null), D(!0);
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = p.ZP.parse(t, N),
@@ -76,7 +76,7 @@ function T(e) {
                 } catch (e) {
                     k(e);
                 }
-                w(!1);
+                D(!1);
             }
         },
         [G, B] = i.useState((0, f.JM)(N)),
@@ -91,13 +91,13 @@ function T(e) {
             })
         ),
         V = (0, r.jsx)(a.gNt, {
-            label: b.intl.string(b.t.Fq5lwM),
-            errorMessage: D,
+            label: b.intl.string(b.t.Fq5lwN),
+            errorMessage: w,
             children: (0, r.jsx)(_.ZP, {
                 innerClassName: y.textArea,
                 textValue: N,
                 richValue: G,
-                placeholder: b.intl.formatToPlainString(b.t.DUXxBg, { channelName: t.name }),
+                placeholder: b.intl.formatToPlainString(b.t.DUXxBh, { channelName: t.name }),
                 focused: !0,
                 channel: t,
                 onChange: Z,
@@ -119,19 +119,19 @@ function T(e) {
             type: "image",
             src: O,
         },
-        title: b.intl.string(b.t["5CyJBQ"]),
-        subtitle: b.intl.string(b.t.NRBYjo),
+        title: b.intl.string(b.t["5CyJBd"]),
+        subtitle: b.intl.string(b.t.NRBYju),
         actions: [
             {
                 variant: "secondary",
-                text: b.intl.string(b.t["ETE/oK"]),
+                text: b.intl.string(b.t["ETE/oC"]),
                 onClick: S,
             },
             {
                 variant: "primary",
                 loading: P,
                 disabled: M,
-                text: b.intl.string(b.t.XqK2Iy),
+                text: b.intl.string(b.t.XqK2I2),
                 onClick: U,
             },
         ],

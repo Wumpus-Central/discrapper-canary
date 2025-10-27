@@ -13,7 +13,7 @@ var l = t(442837),
 function u(e, n, t) {
     return 0 === e.length
         ? ""
-        : d.intl.format(t ? d.t.cJZxWV : d.t.Kj5GIS, {
+        : d.intl.format(t ? d.t.cJZxWf : d.t.Kj5GIT, {
               count: e.length,
               extraCount: Math.max(e.length - 2, 0),
               role1: e[0],
@@ -32,7 +32,7 @@ function m(e) {
                 .map((e) => (0, r.F6)(e, s.default, o.Z, !0)),
         ),
         _ = g.map((e) => "@".concat(e.name)),
-        C = (null == t ? void 0 : t.singleSelect) ? "" : d.intl.string(d.t.JshhEh),
+        C = (null == t ? void 0 : t.singleSelect) ? "" : d.intl.string(d.t.JshhEl),
         b = "";
     if (0 === x.length && _.length > 0) C = u(_, p);
     else
@@ -40,7 +40,7 @@ function m(e) {
             ((C =
                 0 === x.length
                     ? ""
-                    : d.intl.format(d.t.Rj841d, {
+                    : d.intl.format(d.t.Rj841R, {
                           count: x.length,
                           extraCount: Math.max(x.length - 2, 0),
                           channel1: x[0],
@@ -64,10 +64,10 @@ function h(e) {
                 .map((e) => (0, r.F6)(e, s.default, o.Z, !0)),
         ),
         x = f.map((e) => "@".concat(e.name)),
-        _ = (null == t ? void 0 : t.singleSelect) ? "" : d.intl.string(d.t.JshhEh);
+        _ = (null == t ? void 0 : t.singleSelect) ? "" : d.intl.string(d.t.JshhEl);
     return (
         0 === g.length && x.length > 0
-            ? (_ = d.intl.format(d.t.vdtNYW, {
+            ? (_ = d.intl.format(d.t.vdtNYa, {
                   count: x.length,
                   extraCount: Math.max(x.length - 2, 0),
                   role1: x[0],
@@ -75,7 +75,7 @@ function h(e) {
                   itemHook: h,
               }))
             : g.length > 0 && 0 === x.length
-              ? (_ = d.intl.format(d.t.ZKywGR, {
+              ? (_ = d.intl.format(d.t.ZKywGU, {
                     count: g.length,
                     extraCount: Math.max(g.length - 2, 0),
                     channel1: g[0],
@@ -84,7 +84,7 @@ function h(e) {
                 }))
               : g.length > 0 &&
                 x.length > 0 &&
-                (_ = d.intl.format(d.t.WewRHB, {
+                (_ = d.intl.format(d.t.WewRHM, {
                     channelCount: g.length,
                     extraChannelCount: Math.max(g.length - 2, 0),
                     channel1: g[0],

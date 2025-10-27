@@ -36,7 +36,7 @@ function c(e) {
             (0, r.jsx)(l.Text, {
                 color: "header-secondary",
                 variant: "text-md/normal",
-                children: o.intl.string(o.t.jmq9GB),
+                children: o.intl.string(o.t.jmq9GC),
             }),
             d || u
                 ? (0, r.jsx)("div", {
@@ -44,7 +44,7 @@ function c(e) {
                       className: i.cta,
                       children: (0, r.jsx)(l.Button, {
                           variant: "primary",
-                          text: o.intl.string(o.t.rBIGBA),
+                          text: o.intl.string(o.t.rBIGBL),
                           onClick: c,
                       }),
                   })

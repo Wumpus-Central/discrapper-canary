@@ -83,7 +83,7 @@ function _(e) {
     return (0, r.jsx)(
         a.IGR,
         u(l({}, s), {
-            text: o.intl.string(o.t.oW0eUV),
+            text: o.intl.string(o.t.oW0eUd),
             color: n,
             className: t,
         }),

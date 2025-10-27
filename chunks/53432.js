@@ -49,11 +49,11 @@ function E() {
                 o.kSQ,
                 {
                     children: [
-                        O(m.BRd.LIGHT, g.intl.string(g.t.K2sFfn)),
-                        O(m.BRd.DARK, g.intl.string(g.t.SMPT1t)),
-                        O(m.BRd.DARKER, g.intl.string(g.t.b8Cei4)),
-                        O(m.BRd.MIDNIGHT, g.intl.string(g.t.Do4ZJy)),
-                        O("system", g.intl.string(g.t["7rOU6u"])),
+                        O(m.BRd.LIGHT, g.intl.string(g.t.K2sFfo)),
+                        O(m.BRd.DARK, g.intl.string(g.t.SMPT1k)),
+                        O(m.BRd.DARKER, g.intl.string(g.t.b8Cei3)),
+                        O(m.BRd.MIDNIGHT, g.intl.string(g.t.Do4ZJx)),
+                        O("system", g.intl.string(g.t["7rOU6j"])),
                     ],
                 },
                 "theme-items",
@@ -69,7 +69,7 @@ function E() {
                         (0, r.jsx)(o.k5B, {
                             id: "compact-ui",
                             group: "list-density",
-                            label: g.intl.string(g.t["7iegX1"]),
+                            label: g.intl.string(g.t["7iegX4"]),
                             checked: y === a.Pi.COMPACT,
                             action: () => {
                                 p.YC.updateSetting(a.Pi.COMPACT);
@@ -78,7 +78,7 @@ function E() {
                         (0, r.jsx)(o.k5B, {
                             id: "default-ui",
                             group: "list-density",
-                            label: g.intl.string(g.t.bBvAEB),
+                            label: g.intl.string(g.t.bBvAEH),
                             checked: y === a.Pi.DEFAULT,
                             action: () => {
                                 p.YC.updateSetting(a.Pi.DEFAULT);
@@ -107,7 +107,7 @@ function E() {
                         (0, r.jsx)(o.k5B, {
                             id: "cozy-chat",
                             group: "chat-density",
-                            label: g.intl.string(g.t.Jqj4cX),
+                            label: g.intl.string(g.t.Jqj4cZ),
                             checked: !e,
                             action: () => {
                                 p.jU.updateSetting(!1), (0, l.ZZ)();
@@ -116,7 +116,7 @@ function E() {
                         (0, r.jsx)(o.k5B, {
                             id: "compact-chat",
                             group: "chat-density",
-                            label: g.intl.string(g.t["1JNcPT"]),
+                            label: g.intl.string(g.t["1JNcPS"]),
                             checked: e,
                             action: () => {
                                 p.jU.updateSetting(!0), (0, l.ZZ)();

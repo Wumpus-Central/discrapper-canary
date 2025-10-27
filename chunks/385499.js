@@ -24,26 +24,26 @@ let d = (e) => {
     switch (n) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            (d = !0), (m = c.intl.string(c.t["7s687u"])), (h = c.intl.string(c.t.lKQ7Wl));
+            (d = !0), (m = c.intl.string(c.t["7s687k"])), (h = c.intl.string(c.t.lKQ7Wt));
             break;
         case l.Hb.SERVER:
-            h = c.intl.string(c.t.PuJGuL);
+            h = c.intl.string(c.t.PuJGuM);
             break;
         case l.Hb.ORIGINAL_POSTER:
-            h = c.intl.string(c.t.fyE8sL);
+            h = c.intl.string(c.t.fyE8sH);
             break;
         case l.Hb.STAFF_ONLY_DM:
-            h = c.intl.string(c.t.oMx98P);
+            h = c.intl.string(c.t.oMx98L);
             break;
         case l.Hb.NOT_STAFF_WARNING:
-            (h = c.intl.string(c.t.UWhXbG)), (g = u.botTagNotStaffWarning);
+            (h = c.intl.string(c.t.UWhXbK)), (g = u.botTagNotStaffWarning);
             break;
         case l.Hb.REMIX:
-            (d = !1), (h = c.intl.string(c.t.uXDG39));
+            (d = !1), (h = c.intl.string(c.t.uXDG34));
             break;
         case l.Hb.BOT:
         default:
-            h = c.intl.string(c.t["9RNkeH"]);
+            h = c.intl.string(c.t["9RNkeF"]);
     }
     let E = n === l.Hb.ORIGINAL_POSTER,
         b = n === l.Hb.REMIX,
@@ -76,14 +76,14 @@ let d = (e) => {
     switch (n) {
         case l.Hb.REMIX:
             return (0, r.jsx)(o.u, {
-                text: c.intl.string(c.t.xb0str),
+                text: c.intl.string(c.t.xb0sts),
                 position: "top",
                 asContainer: !0,
                 children: O(),
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(o.u, {
-                text: c.intl.string(c.t.uN6Emp),
+                text: c.intl.string(c.t.uN6Emt),
                 position: "top",
                 asContainer: !0,
                 children: O(),

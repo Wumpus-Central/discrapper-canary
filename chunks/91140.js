@@ -87,7 +87,7 @@ let E = [_.OV, _.EE, _.Af, _.U9, _.wO, _.f, _.n8, _.v1, _.pQ],
                                             (0, r.jsx)(o.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-secondary",
-                                                children: h.intl.string(h.t["5HiF2t"]),
+                                                children: h.intl.string(h.t["5HiF2i"]),
                                             }),
                                         ],
                                     }),

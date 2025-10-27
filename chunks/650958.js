@@ -64,17 +64,17 @@ function m(e) {
     return {
         [u.h7.AUDIO_INPUT]: {
             setDevice: o.Z.setInputDevice,
-            getLabel: () => d.intl.string(d.t.ElbIXF),
+            getLabel: () => d.intl.string(d.t.ElbIXN),
             getLocation: (e) => "".concat(e, ".useInputDeviceMenuItems"),
         },
         [u.h7.AUDIO_OUTPUT]: {
             setDevice: o.Z.setOutputDevice,
-            getLabel: () => d.intl.string(d.t["6Ww0iI"]),
+            getLabel: () => d.intl.string(d.t["6Ww0iH"]),
             getLocation: (e) => "".concat(e, ".useOutputDeviceMenuItems"),
         },
         [u.h7.VIDEO_INPUT]: {
             setDevice: o.Z.setVideoDevice,
-            getLabel: () => d.intl.string(d.t.F122Gx),
+            getLabel: () => d.intl.string(d.t.F122Gz),
             getLocation: (e) => "".concat(e, ".useVideoDeviceMenuItems"),
         },
     }[e];
@@ -97,8 +97,8 @@ function g(e) {
         [A, C] = (0, l.Ls)(t, { location: S }),
         N = I ? A.concat(C) : A,
         { id: R, name: P } = (0, l.p6)(t),
-        w = null != p ? p : R,
-        D = N.map((e) => {
+        D = null != p ? p : R,
+        w = N.map((e) => {
             let i,
                 { id: o, disabled: s, name: c } = e,
                 d = c,
@@ -119,7 +119,7 @@ function g(e) {
                                     variant: "text-xs/normal",
                                     children: i,
                                 }),
-                            checked: o === w,
+                            checked: o === D,
                             action: () => {
                                 var e;
                                 (null == (e = null == u ? void 0 : u(o)) || e) && y(o, { analyticsLocations: n });
@@ -133,7 +133,7 @@ function g(e) {
         }),
         L = (0, r.jsx)(a.sNh, {
             id: "SHOW_MORE",
-            label: d.intl.string(d.t.E99UMj),
+            label: d.intl.string(d.t.E99UMh),
             dontCloseOnAction: !0,
             action: () => {
                 T(!0),
@@ -160,14 +160,14 @@ function g(e) {
                       E,
                   ),
                   {
-                      children: [D, x && L],
+                      children: [w, x && L],
                   },
               ),
           )
         : (0, r.jsxs)(
               a.kSQ,
               h(_({ label: O() }, g), {
-                  children: [D, x && L],
+                  children: [w, x && L],
               }),
           );
 }

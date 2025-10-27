@@ -24,7 +24,7 @@ function f() {
                   (0, r.jsx)(s.Text, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: c.intl.string(c.t.OS9KPj),
+                      children: c.intl.string(c.t.OS9KPu),
                   }),
               ],
           })
@@ -33,7 +33,7 @@ function f() {
               children: (0, r.jsx)(s.Text, {
                   variant: "eyebrow",
                   color: "always-white",
-                  children: c.intl.string(c.t.OS9KPj),
+                  children: c.intl.string(c.t.OS9KPu),
               }),
           });
 }

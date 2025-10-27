@@ -17,7 +17,7 @@ var r = n(951288),
     _ = n(51144),
     O = n(506914);
 let y = p.u8.SIZE_24;
-function v(e) {
+function j(e) {
     var t, n;
     let { activity: i, user: l, embeddedApp: o, onOpenSpotifyAlbum: a } = e,
         d = null == i ? void 0 : i.assets,
@@ -67,7 +67,7 @@ function v(e) {
           }))
         : _;
 }
-function j(e) {
+function v(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: i } = e,
         l = null == t ? void 0 : t.details,
         o = null == t ? void 0 : t.name,
@@ -180,7 +180,7 @@ function S(e) {
                   (0, r.jsxs)("div", {
                       className: O.flexRow,
                       children: [
-                          (0, r.jsx)(v, {
+                          (0, r.jsx)(j, {
                               activity: t,
                               user: l,
                               embeddedApp: n,
@@ -189,7 +189,7 @@ function S(e) {
                           (0, r.jsxs)("div", {
                               className: O.detailsAndAvatarsContainer,
                               children: [
-                                  (0, r.jsx)(j, {
+                                  (0, r.jsx)(v, {
                                       activity: t,
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: d,

@@ -5,10 +5,10 @@ var i = n(442837),
     a = n(235874),
     o = n(28664),
     s = n(481060),
-    l = n(944613),
-    c = n(607070),
-    u = n(345162),
-    d = n(496675),
+    l = n(607070),
+    c = n(345162),
+    u = n(496675),
+    d = n(608798),
     f = n(981631),
     _ = n(388032),
     p = n(880033);
@@ -66,16 +66,16 @@ function E(e, t) {
 }
 function b(e) {
     let { guild: t, guildMember: n, numRoles: h, highestRole: g, onAddRole: b, buttonRef: y } = e,
-        O = (0, i.e7)([c.Z], () => c.Z.roleStyle);
-    if (!(0, i.e7)([d.Z], () => d.Z.can(f.Plq.MANAGE_ROLES, t))) return null;
-    let v = (e) => !(0, u.fI)(e) && !e.managed && d.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
+        O = (0, i.e7)([l.Z], () => l.Z.roleStyle);
+    if (!(0, i.e7)([u.Z], () => u.Z.can(f.Plq.MANAGE_ROLES, t))) return null;
+    let v = (e) => !(0, c.fI)(e) && !e.managed && u.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(a.y, {
         targetElementRef: y,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, r.jsx)(l.Z, {
+            return (0, r.jsx)(d.Z, {
                 guild: t,
                 roleStyle: O,
                 roleFilter: v,
@@ -86,7 +86,7 @@ function b(e) {
         children: (e) =>
             (0, r.jsx)(o.u, {
                 asContainer: !0,
-                text: _.intl.string(_.t.icyMgY),
+                text: _.intl.string(_.t.icyMgc),
                 "aria-label": !1,
                 shouldShow: h > 0,
                 children: (0, r.jsxs)(
@@ -97,7 +97,7 @@ function b(e) {
                                 innerRef: y,
                                 className: p.button,
                                 role: "button",
-                                "aria-label": _.intl.string(_.t.icyMgY),
+                                "aria-label": _.intl.string(_.t.icyMgc),
                             },
                             e,
                         ),
@@ -111,7 +111,7 @@ function b(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-xs/normal",
                                         color: "none",
-                                        children: _.intl.string(_.t.icyMgY),
+                                        children: _.intl.string(_.t.icyMgc),
                                     }),
                             ],
                         },

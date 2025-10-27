@@ -4,15 +4,15 @@ var r = n(951288),
     a = n(442837),
     o = n(481060),
     s = n(528963),
-    l = n(143740),
-    c = n(212342),
+    l = n(212342),
+    c = n(887715),
     u = n(388032),
     d = n(785188);
 let f = (e) => {
     let { channelId: t, messageId: n } = e,
-        f = (0, a.e7)([c.Z], () => c.Z.shouldShowBump(n), [n]),
+        f = (0, a.e7)([l.Z], () => l.Z.shouldShowBump(n), [n]),
         _ = i.useCallback(() => {
-            s.Z.dismissPublishBump(n), (0, l.Z)(t, n);
+            s.Z.dismissPublishBump(n), (0, c.Z)(t, n);
         }, [t, n]),
         p = i.useCallback(() => {
             s.Z.dismissPublishBump(n);

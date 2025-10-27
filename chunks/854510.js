@@ -14,12 +14,12 @@ function a(t) {
         transitionState: a,
         actions: [
             {
-                text: l.intl.string(l.t.CZGqeX),
+                text: l.intl.string(l.t.CZGqeT),
                 variant: "secondary",
                 onClick: c,
             },
             {
-                text: l.intl.string(l.t.mbD50N),
+                text: l.intl.string(l.t.mbD50D),
                 variant: "primary",
                 onClick: () => {
                     n(e), c();
@@ -31,8 +31,8 @@ function a(t) {
             return e > 0 && n > 0
                 ? l.intl.formatToPlainString(l.t.Uzdyho, { number: e + n })
                 : n > 0
-                  ? l.intl.formatToPlainString(l.t.wvygk5, { number: n })
-                  : l.intl.formatToPlainString(l.t.HviVAw, { number: e });
+                  ? l.intl.formatToPlainString(l.t.wvygk8, { number: n })
+                  : l.intl.formatToPlainString(l.t.HviVA9, { number: e });
         })({
             blockedUsersCount: d.length,
             ignoredUsersCount: u.length,
@@ -40,10 +40,10 @@ function a(t) {
         subtitle: (function (t) {
             let { blockedUsersCount: e, ignoredUsersCount: n } = t;
             return e > 0 && n > 0
-                ? l.intl.string(l.t["P/KFX1"])
+                ? l.intl.string(l.t["P/KFXz"])
                 : n > 0
-                  ? l.intl.format(l.t.Ri3o39, { number: n })
-                  : l.intl.format(l.t["28qZMT"], { number: e });
+                  ? l.intl.format(l.t.Ri3o33, { number: n })
+                  : l.intl.format(l.t["28qZMU"], { number: e });
         })({
             blockedUsersCount: d.length,
             ignoredUsersCount: u.length,

@@ -15,8 +15,8 @@ function u() {
         children: (0, r.jsx)(s.ZP, {
             value: !!n && t,
             onChange: i.xM.updateSetting,
-            title: c.intl.string(c.t.XahVjo),
-            note: c.intl.string(c.t.R9fXyc),
+            title: c.intl.string(c.t.XahVjj),
+            note: c.intl.string(c.t.R9fXyS),
             disabled: !n,
         }),
     });

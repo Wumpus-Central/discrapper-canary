@@ -20,8 +20,8 @@ function d(e) {
             width: 20,
         }),
         color: i.Z.unsafe_rawColors.GREEN_360.css,
-        title: c.intl.string(c.t.OYbHfn),
-        description: c.intl.string(c.t.yXwLMT),
+        title: c.intl.string(c.t.OYbHfv),
+        description: c.intl.string(c.t.yXwLMQ),
         onClick: function () {
             (0, s.T)(n, u);
         },

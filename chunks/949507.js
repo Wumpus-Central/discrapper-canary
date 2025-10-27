@@ -47,7 +47,7 @@ function x(e) {
     return (0, r.jsxs)(l.P3F, {
         className: i()(_.card, n),
         onClick: a,
-        "aria-label": g.intl.string(g.t.RB4L29),
+        "aria-label": g.intl.string(g.t.RB4L2x),
         children: [
             (0, r.jsxs)("div", {
                 className: _.cardHeader,
@@ -114,7 +114,7 @@ function x(e) {
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-xs/normal",
                                     color: "header-secondary",
-                                    children: g.intl.format(g.t.zRl6XV, { count: t.approximate_member_count }),
+                                    children: g.intl.format(g.t.zRl6XR, { count: t.approximate_member_count }),
                                 }),
                             ],
                         }),

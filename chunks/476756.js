@@ -17,7 +17,7 @@ function _() {
     let n = [
         {
             value: d.Y.CLASSIC,
-            label: f.intl.string(f.t.p3Hg5e),
+            label: f.intl.string(f.t.p3Hg5W),
         },
         {
             value: t.soundpack,
@@ -25,7 +25,7 @@ function _() {
         },
     ];
     return (0, r.jsx)(s.q4e, {
-        label: f.intl.string(f.t.fgSHf3),
+        label: f.intl.string(f.t.fgSHf8),
         onChange: l.c,
         value: e,
         options: n,

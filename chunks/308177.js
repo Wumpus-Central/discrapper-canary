@@ -14,7 +14,7 @@ var r = n(951288),
     g = n(12779),
     m = n(450369),
     b = n(388032),
-    y = n(277745);
+    y = n(307139);
 function _(e) {
     return e.type === d.Ui.VOICE;
 }

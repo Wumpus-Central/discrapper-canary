@@ -77,7 +77,7 @@ let E = 2.1,
             h(
                 {
                     gradientColor: "nitro-pink",
-                    title: d.intl.string(d.t["9C+41t"]),
+                    title: d.intl.string(d.t["9C+41g"]),
                     subtitle: g,
                     videoSrc: b,
                     loopAt: E,

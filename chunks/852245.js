@@ -1,4 +1,4 @@
-t.d(e, { Z: () => d });
+t.d(e, { Z: () => b });
 var r = t(951288);
 t(647438);
 var l = t(442837),
@@ -8,12 +8,12 @@ var l = t(442837),
     a = t(496675),
     u = t(981631),
     s = t(388032);
-function d(n) {
+function b(n) {
     let {
         canManageChannels: e,
         canManageRoles: t,
-        canManageWebhooks: d,
-        canAccessChannel: b,
+        canManageWebhooks: b,
+        canAccessChannel: d,
         canUnlinkChannel: E,
     } = (0, l.cj)(
         [a.Z],
@@ -26,10 +26,10 @@ function d(n) {
         }),
         [n],
     );
-    return !__OVERLAY__ && b && (e || t || d || E)
+    return !__OVERLAY__ && d && (e || t || b || E)
         ? (0, r.jsx)(i.sNh, {
               id: "edit-channel",
-              label: n.type === u.d4z.GUILD_CATEGORY ? s.intl.string(s.t.zdPFs7) : s.intl.string(s.t["3gUsJS"]),
+              label: n.type === u.d4z.GUILD_CATEGORY ? s.intl.string(s.t.zdPFs9) : s.intl.string(s.t["3gUsJb"]),
               action: () => c.ZP.open(n.id),
           })
         : null;

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => a });
 var i = n(647438),
     l = n(252618),
     s = n(358085),
-    a = n(388032);
-function r() {
+    r = n(388032);
+function a() {
     return (
         i.useEffect(() => {
             s.isPlatformEmbedded ||
                 (0, l.EM)({
-                    messages: [a.intl.string(a.t.KIX3cn), a.intl.string(a.t["UbO+8v"]), a.intl.string(a.t.MbySu7)],
+                    messages: [r.intl.string(r.t.KIX3cl), r.intl.string(r.t["UbO+8i"]), r.intl.string(r.t.MbySu9)],
                     interval: 600,
                     count: 20,
                     onlyWhenBlurred: !0,

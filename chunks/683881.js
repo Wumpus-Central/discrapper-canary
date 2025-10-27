@@ -4,8 +4,8 @@ var r = n(951288),
     a = n(442837),
     l = n(481060),
     o = n(594174),
-    s = n(817053),
-    c = n(623132),
+    c = n(817053),
+    s = n(623132),
     u = n(778414),
     d = n(707804);
 function f(e) {
@@ -25,7 +25,7 @@ function f(e) {
     if (!0 !== f || null == p || null == g) return null;
     let h = null == n || null == (t = n.current) ? void 0 : t.getBoundingClientRect();
     if (null == h || null == m) return null;
-    let v = (function (e, t) {
+    let y = (function (e, t) {
         let { id: n, itemType: i, itemPreviewProps: a } = e;
         if ("WIDGET" === i && (null == a ? void 0 : a.widget) != null)
             return (0, r.jsx)("div", {
@@ -42,7 +42,7 @@ function f(e) {
             (null == a ? void 0 : a.gameName) != null
         ) {
             let { imageSrc: e, gameName: i } = a;
-            return (0, r.jsx)(s.Z, {
+            return (0, r.jsx)(c.Z, {
                 className: d.gamePreview,
                 imageSrc: e,
                 gameName: i,
@@ -57,7 +57,7 @@ function f(e) {
             (null == a ? void 0 : a.widgetType) != null
         ) {
             let { game: e, widgetType: n } = a;
-            return (0, r.jsx)(c.Z, {
+            return (0, r.jsx)(s.Z, {
                 className: d.gameDetailsCardPreview,
                 user: t,
                 widgetType: n,
@@ -67,12 +67,12 @@ function f(e) {
         }
         return null;
     })(g, m);
-    if (null == v) return null;
-    let y = p.x - h.left - 60 * !!b,
-        j = p.y - h.top;
+    if (null == y) return null;
+    let v = p.x - h.left - 60 * !!b,
+        O = p.y - h.top;
     return (0, r.jsx)("div", {
         className: d.container,
-        style: { transform: "translate(".concat(y, "px, ").concat(j, "px)") },
-        children: v,
+        style: { transform: "translate(".concat(v, "px, ").concat(O, "px)") },
+        children: y,
     });
 }

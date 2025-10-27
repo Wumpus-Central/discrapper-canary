@@ -8,15 +8,15 @@ var i = n(951288),
     u = n(358221),
     c = n(569545),
     d = n(522474),
-    h = n(199902),
-    p = n(314897),
+    p = n(199902),
+    h = n(314897),
     f = n(592125),
     m = n(355863),
     g = n(944486),
     y = n(837268),
     O = n(804570),
-    v = n(350663),
-    E = n(752802),
+    E = n(350663),
+    v = n(752802),
     S = n(68286),
     b = n(340101),
     x = n(501787),
@@ -32,13 +32,13 @@ function C(e) {
             padding: T,
             borderWidth: _,
             opacity: P,
-            horizontal: D,
-            pinned: A,
+            horizontal: A,
+            pinned: D,
             anchorTop: R,
             anchorLeft: k,
             showEmpty: L = !0,
         } = e,
-        M = D ? b.C5.HORIZONTAL : b.C5.VERTICAL,
+        M = A ? b.C5.HORIZONTAL : b.C5.VERTICAL,
         V = M === b.C5.VERTICAL,
         z = (0, l.e7)([m.Z], () => {
             var e;
@@ -52,19 +52,19 @@ function C(e) {
             activeStreams: F,
             participantsVersion: H,
         } = (function (e, t, n, i, o) {
-            let a = (0, l.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e))),
+            let a = (0, l.Wu)([p.Z], () => (null == e ? [] : p.Z.getAllActiveStreamsForChannel(e))),
                 s = r.useMemo(() => new Set(a.map((e) => (0, c.V9)(e))), [a]),
                 d = (0, l.e7)([u.Z], () => (null == e ? -1 : u.Z.getParticipantsVersion(e)));
             return {
-                streamParticipants: (0, l.Wu)([u.Z, h.Z], () => {
+                streamParticipants: (0, l.Wu)([u.Z, p.Z], () => {
                     if (null == e) return [];
                     function r(e) {
                         return s.has((0, c.V9)(e.stream));
                     }
                     let l = u.Z.getStreamParticipants(e).filter((e) => {
                         if (e.user.id === t) return !1;
-                        let i = h.Z.getActiveStreamForUser(e.user.id, e.stream.guildId);
-                        return !(null != i && E.q.has(i.state)) && (!!n || r(e));
+                        let i = p.Z.getActiveStreamForUser(e.user.id, e.stream.guildId);
+                        return !(null != i && v.q.has(i.state)) && (!!n || r(e));
                     });
                     return (
                         l.sort((e, t) => {
@@ -85,10 +85,10 @@ function C(e) {
             };
         })(
             U,
-            (0, l.e7)([p.default], () => p.default.getId()),
+            (0, l.e7)([h.default], () => h.default.getId()),
             z,
-            (R && V) || (k && D),
-            (!R && V) || (!k && D),
+            (R && V) || (k && A),
+            (!R && V) || (!k && A),
         ),
         B = G.length,
         Y = (0, l.e7)([d.Z], () => d.Z.getWindowState(x.$J), []),
@@ -96,8 +96,8 @@ function C(e) {
             tileWidth: Q,
             tileHeight: K,
             widgetWidth: X,
-            widgetHeight: q,
-            containerRef: J,
+            widgetHeight: J,
+            containerRef: q,
             containerMinMaxSizes: $,
         } = (0, S.Bz)({
             tileCount: B,
@@ -116,12 +116,12 @@ function C(e) {
             widgetMinMaxSizes: $,
             containerSize: {
                 width: X,
-                height: q,
+                height: J,
             },
             orientedPosition: {
                 top: 0,
                 left: 0,
-                bottom: null != (t = null == Y ? void 0 : Y.height) ? t : q,
+                bottom: null != (t = null == Y ? void 0 : Y.height) ? t : J,
                 right: null != (n = null == Y ? void 0 : Y.width) ? n : X,
             },
             locked: w,
@@ -139,14 +139,14 @@ function C(e) {
     (0, s.ZP)(() => () => {
         a.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
-    (et || !A) && w)
+    (et || !D) && w)
         ? null
         : et && !w
           ? L
               ? w
                   ? null
                   : (0, i.jsx)(O.E, {
-                        emptyText: j.intl.string(j.t["T6+rX1"]),
+                        emptyText: j.intl.string(j.t["T6+rXy"]),
                         icon: o.hGI,
                         absolute: !0,
                     })
@@ -154,8 +154,8 @@ function C(e) {
           : (0, i.jsx)("div", {
                 className: I.goLiveGridContainer,
                 style: { opacity: P },
-                ref: J,
-                children: (0, i.jsx)(v.Z, {
+                ref: q,
+                children: (0, i.jsx)(E.Z, {
                     widgetId: C,
                     tileWidth: Q,
                     tileHeight: K,
@@ -164,7 +164,7 @@ function C(e) {
                     activeStreams: F,
                     streamParticipants: G,
                     participantsVersion: H,
-                    pinned: A,
+                    pinned: D,
                     padding: T,
                 }),
             });

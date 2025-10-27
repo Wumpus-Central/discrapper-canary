@@ -75,8 +75,8 @@ function P(e, t) {
         e
     );
 }
-let w = 250,
-    D = 24;
+let D = 250,
+    w = 24;
 function L(e, t) {
     switch (t.type) {
         case "MEASUREMENT_COMPLETE":
@@ -176,7 +176,7 @@ function M(e) {
                 requestAnimationFrame(() => {
                     Q({
                         type: "START_EXPAND_ANIMATION",
-                        height: e + t - D,
+                        height: e + t - w,
                     }),
                         (q.current = setTimeout(() => {
                             var e;
@@ -185,7 +185,7 @@ function M(e) {
                                 height: "auto",
                             }),
                                 null == (e = K.current) || e.focus();
-                        }, w));
+                        }, D));
                 });
         }, [P, M]);
     return ((0, c.zq)(() => {

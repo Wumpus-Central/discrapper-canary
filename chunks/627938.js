@@ -9,7 +9,7 @@ function s(e, t) {
     return (0, l.NE)(t, e)
         ? (0, r.jsx)(i.sNh, {
               id: "thread",
-              label: o.intl.string(o.t.rBIGBA),
+              label: o.intl.string(o.t.rBIGBL),
               icon: i.or_,
               action: () => {
                   (0, a.gK)(t, e);

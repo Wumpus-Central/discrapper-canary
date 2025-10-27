@@ -10,8 +10,8 @@ function u(e, t) {
     let n = e.username,
         u = s.intl.format(s.t["Yk+uYG"], { username: "" }),
         c = (0, i.ov)(e),
-        d = s.intl.string(s.t.WRj1Wl),
-        { trackView: h, trackClick: p } = (0, l.R)(o.n0.ActivityUserJoin, {
+        d = s.intl.string(s.t.WRj1Wn),
+        { trackView: p, trackClick: h } = (0, l.R)(o.n0.ActivityUserJoin, {
             notif_type: o.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: a.mFx.JOIN,
@@ -23,10 +23,10 @@ function u(e, t) {
         body: u,
         hint: d,
         onNotificationShow: () => {
-            h();
+            p();
         },
         onDismissClick: () => {
-            p("dismiss");
+            h("dismiss");
         },
     };
 }

@@ -52,7 +52,7 @@ let d = (e) => {
                     size: a.Ph.MEDIUM,
                     onClick: f,
                     className: u.reconnectButton,
-                    children: c.intl.string(c.t.vD60Pj),
+                    children: c.intl.string(c.t.vD60Pv),
                 }),
             ],
         });

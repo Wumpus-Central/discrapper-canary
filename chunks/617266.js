@@ -1,4 +1,4 @@
-n.d(t, { F: () => q });
+n.d(t, { F: () => U });
 var l = n(951288),
     r = n(647438),
     i = n(120356),
@@ -201,7 +201,7 @@ function R(e) {
         }),
     );
 }
-function U(e) {
+function q(e) {
     var { channel: t, subLabel: n } = e,
         r = k(e, ["channel", "subLabel"]);
     let i = (0, u.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
@@ -260,7 +260,7 @@ function U(e) {
         }),
     );
 }
-function q(e) {
+function U(e) {
     let {
             rowData: t,
             selectedDestinations: n,
@@ -296,11 +296,11 @@ function q(e) {
                                       t.rateLimitPerUser > 0 &&
                                       !(S.Z.can(L.Plq.MANAGE_CHANNELS, t) || S.Z.can(L.Plq.MANAGE_MESSAGES, t))
                                   )
-                                      return { label: M.intl.string(M.t.Icu3bW) };
+                                      return { label: M.intl.string(M.t.Icu3bf) };
                                   if (t.isThread() || t.isForumPost() || !S.Z.can(L.Plq.USE_APPLICATION_COMMANDS, t))
-                                      return { label: M.intl.string(M.t.v8MLq6) };
+                                      return { label: M.intl.string(M.t.v8MLqz) };
                                   let n = (0, y.dL)(t.id);
-                                  if (e.id === n.id) return { label: M.intl.string(M.t.mD4gqa) };
+                                  if (e.id === n.id) return { label: M.intl.string(M.t.mD4gqe) };
                               }
                           })(s, u)
                         : null,
@@ -319,7 +319,7 @@ function q(e) {
                 : r === p.h8.GROUP_DM
                   ? (0, l.jsx)(R, D({ channel: u }, m), d)
                   : r === p.h8.TEXT_CHANNEL || r === p.h8.VOICE_CHANNEL
-                    ? (0, l.jsx)(U, D({ channel: u }, m), d)
+                    ? (0, l.jsx)(q, D({ channel: u }, m), d)
                     : void (0, w.vE)(r);
         });
     }, [a, i, s, t, o]);

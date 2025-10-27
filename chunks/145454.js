@@ -32,15 +32,15 @@ class _ extends i.PureComponent {
             E = [];
         return (
             h
-                ? (e = u.intl.string(u.t["4qMI6O"]))
-                : ((e = u.intl.string(u.t.Vp9je3)),
+                ? (e = u.intl.string(u.t["4qMI6A"]))
+                : ((e = u.intl.string(u.t.Vp9je2)),
                   (t = (0, r.jsx)(s.Text, {
                       variant: "text-sm/normal",
-                      children: u.intl.format(u.t["3BTmqa"], {}),
+                      children: u.intl.format(u.t["3BTmqX"], {}),
                   }))),
             h
                 ? ((n = (0, r.jsx)(s.gNt, {
-                      label: u.intl.string(u.t.Xclkxs),
+                      label: u.intl.string(u.t.Xclkxp),
                       hideLabel: !0,
                       errorMessage: null != f ? f : void 0,
                       children: (0, r.jsx)(l.Z, { onSubmit: this.handleVerifyPhone }),
@@ -48,13 +48,13 @@ class _ extends i.PureComponent {
                   (E = [
                       {
                           variant: "secondary",
-                          text: u.intl.string(u.t["5b60go"]),
+                          text: u.intl.string(u.t["5b60gi"]),
                           onClick: this.handleResendCode,
                           loading: _,
                       },
                   ]))
                 : ((n = (0, r.jsx)(c.Z, {
-                      label: u.intl.string(u.t["64bX0N"]),
+                      label: u.intl.string(u.t["64bX0M"]),
                       errorMessage: null != f ? f : void 0,
                       className: d.field,
                       onChange: this.handlePhoneChange,
@@ -63,13 +63,13 @@ class _ extends i.PureComponent {
                   })),
                   (E = [
                       {
-                          text: u.intl.string(u.t.TXNS7e),
+                          text: u.intl.string(u.t.TXNS7S),
                           disabled: "" === g,
                           loading: _,
                           onClick: this.handleAddPhone,
                       },
                   ])),
-            (i = h ? u.intl.string(u.t.Xclkxs) : u.intl.string(u.t.uR76s7)),
+            (i = h ? u.intl.string(u.t.Xclkxp) : u.intl.string(u.t.uR76s6)),
             (0, r.jsx)(o.Modal, {
                 size: h ? "sm" : "md",
                 title: i,

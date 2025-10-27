@@ -20,8 +20,8 @@ var i = n(951288),
     y = n(533947),
     C = n(277053),
     S = n(388610),
-    O = n(592125),
-    N = n(496675),
+    N = n(592125),
+    O = n(496675),
     Z = n(699516),
     E = n(594174),
     w = n(585483),
@@ -103,11 +103,11 @@ class k extends l.PureComponent {
                           x = v.Ec.has(t.type),
                           j =
                               t.type === b
-                                  ? M.intl.string(M.t.ifbXnJ)
+                                  ? M.intl.string(M.t.ifbXnL)
                                   : x
                                     ? t.isForumPost()
                                         ? M.intl.string(M.t.nEOg1N)
-                                        : M.intl.string(M.t.H7vTe3)
+                                        : M.intl.string(M.t.H7vTe2)
                                     : M.intl.string(M.t["8D8Rsb"]);
                       return [
                           {
@@ -136,12 +136,12 @@ class k extends l.PureComponent {
                                                     : null,
                                             ],
                                         })
-                                      : M.intl.string(M.t.XPDhcX),
+                                      : M.intl.string(M.t.XPDhcc),
                           },
                           {
                               section: L.CoT.OVERVIEW,
-                              label: M.intl.string(M.t["/dp6yc"]),
-                              ariaLabel: M.intl.string(M.t["/dp6yc"]),
+                              label: M.intl.string(M.t["/dp6yY"]),
+                              ariaLabel: M.intl.string(M.t["/dp6yY"]),
                               element: P.Z,
                               notice: {
                                   element: P.G,
@@ -151,7 +151,7 @@ class k extends l.PureComponent {
                           },
                           {
                               section: L.CoT.PERMISSIONS,
-                              label: M.intl.string(M.t.xrmhRU),
+                              label: M.intl.string(M.t.xrmhRX),
                               element: m.Z,
                               notice: {
                                   element: I.n,
@@ -161,15 +161,15 @@ class k extends l.PureComponent {
                           },
                           {
                               section: L.CoT.INSTANT_INVITES,
-                              label: M.intl.string(M.t["9F90iY"]),
+                              label: M.intl.string(M.t["9F90ic"]),
                               element: R.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => t.type !== b && r && !x && !t.isModeratorReportChannel(),
                           },
                           {
                               section: L.CoT.INTEGRATIONS,
-                              label: M.intl.string(M.t.s69NLC),
-                              ariaLabel: M.intl.string(M.t.s69NLC),
+                              label: M.intl.string(M.t.s69NLF),
+                              ariaLabel: M.intl.string(M.t.s69NLF),
                               element: _.Z,
                               notice: {
                                   stores: [y.Z],
@@ -223,13 +223,13 @@ function B() {
             canManageRoles: u,
             canManageWebhooks: h,
             canUnlinkChannel: g,
-        } = (0, r.cj)([N.Z], () => ({
-            canManageChannels: N.Z.can(L.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && N.Z.can(L.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && N.Z.can(L.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, f.C)(e, N.Z),
+        } = (0, r.cj)([O.Z], () => ({
+            canManageChannels: O.Z.can(L.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && O.Z.can(L.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && O.Z.can(L.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, f.C)(e, O.Z),
         })),
-        p = (0, r.e7)([O.Z], () => O.Z.getChannel(null == e ? void 0 : e.parent_id));
+        p = (0, r.e7)([N.Z], () => N.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(k, {
         channel: e,
         category: p,

@@ -2,15 +2,15 @@ n.d(t, { Z: () => u });
 var r,
     i,
     l = n(442837),
-    o = n(570140),
-    s = n(780106);
-let a = "None";
+    a = n(570140),
+    o = n(780106);
+let s = "None";
 class c extends (i = l.ZP.Store) {
     getFakeGameToShow() {
-        return a;
+        return s;
     }
     getFakeGameData() {
-        return s.O[a];
+        return o.O[s];
     }
 }
 (r = "displayName") in c
@@ -21,9 +21,9 @@ class c extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (c[r] = "ContentInventoryDevToolsStore");
-let u = new c(o.Z, {
+let u = new c(a.Z, {
     CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING: function (e) {
         let { gameToShow: t } = e;
-        a = t;
+        s = t;
     },
 });

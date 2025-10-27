@@ -20,8 +20,8 @@ let i = () => {
             onClear: () => {
                 t("");
             },
-            placeholder: s.intl.string(s.t["5h0QOD"]),
-            "aria-label": s.intl.string(s.t["5h0QOD"]),
+            placeholder: s.intl.string(s.t["5h0QOP"]),
+            "aria-label": s.intl.string(s.t["5h0QOP"]),
             autoFocus: !0,
         })
     );

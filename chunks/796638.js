@@ -14,7 +14,7 @@ var r = n(951288),
     s = n(823379),
     u = n(27457),
     d = n(354459),
-    f = n(538925);
+    f = n(699966);
 let p = 112,
     _ = (16 / 9) * 112 + 8,
     m = 10 * c.Z.Millis.SECOND;
@@ -104,11 +104,11 @@ function v(e, t) {
             }
             let P = w.filter(s.lm);
             E.current = (0, l.keyBy)((0, l.range)(P.length), (e) => P[e].id);
-            let j = [...I, ...P];
+            let Z = [...I, ...P];
             return (
-                null != b && (f && j.length >= S ? (j[Math.max(0, j.length - 1)] = b) : j.push(b)),
+                null != b && (f && Z.length >= S ? (Z[Math.max(0, Z.length - 1)] = b) : Z.push(b)),
                 {
-                    visibleParticipants: j,
+                    visibleParticipants: Z,
                     participantTileWidth: y,
                 }
             );

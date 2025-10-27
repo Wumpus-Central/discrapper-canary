@@ -11,16 +11,16 @@ var l = n(990547),
     u = n(388032),
     x = n(140080);
 function m(t) {
-    let { url: e, trustUrl: n, isProtocol: m, onConfirm: h, onCancel: p, onClose: C, transitionState: _ } = t,
+    let { url: e, trustUrl: n, isProtocol: m, onConfirm: h, onCancel: p, onClose: C, transitionState: k } = t,
         {
-            protocol: k,
+            protocol: _,
             authorityPrefix: f,
             hostname: b,
             theRestOfTheUrl: M,
             shouldTrustUrl: g,
-            setShouldTrustUrl: L,
-            handleConfirm: v,
-            handleCancel: D,
+            setShouldTrustUrl: v,
+            handleConfirm: D,
+            handleCancel: L,
         } = (0, s.X)({
             url: e,
             trustUrl: n,
@@ -35,15 +35,15 @@ function m(t) {
         }),
         (0, a.jsxs)(r.Modal, {
             size: "md",
-            transitionState: _,
+            transitionState: k,
             onClose: C,
-            title: u.intl.string(u.t["3w1QGh"]),
-            subtitle: m ? u.intl.format(u.t.aCYv19, {}) : u.intl.string(u.t.soRxRU),
+            title: u.intl.string(u.t["3w1QGl"]),
+            subtitle: m ? u.intl.format(u.t.aCYv1z, {}) : u.intl.string(u.t.soRxRe),
             actions: [
                 {
                     text: u.intl.string(u.t["/g10LC"]),
                     onClick: () => {
-                        D(),
+                        L(),
                             o.default.track(d.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: g,
                                 action_type: "cancel",
@@ -52,9 +52,9 @@ function m(t) {
                     variant: "secondary",
                 },
                 {
-                    text: m ? u.intl.string(u.t.COq6kp) : u.intl.string(u.t.NcJfJC),
+                    text: m ? u.intl.string(u.t.COq6kk) : u.intl.string(u.t.NcJfJG),
                     onClick: () => {
-                        v(),
+                        D(),
                             o.default.track(d.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: g,
                                 action_type: "confirm",
@@ -71,7 +71,7 @@ function m(t) {
                             tag: "span",
                             variant: m ? "text-md/semibold" : "text-md/normal",
                             color: m ? "text-default" : "text-muted",
-                            children: [k, f],
+                            children: [_, f],
                         }),
                         (0, a.jsx)(c.Text, {
                             tag: "span",
@@ -91,10 +91,10 @@ function m(t) {
                     className: x.checkboxMana,
                     children: (0, a.jsx)(c.Checkbox, {
                         checked: g,
-                        onChange: (t) => L(t),
+                        onChange: (t) => v(t),
                         label: m
-                            ? u.intl.format(u.t["haA+X1"], { protocol: k.replace(":", "") })
-                            : u.intl.format(u.t.ZgXDsL, { domain: b }),
+                            ? u.intl.format(u.t["haA+Xw"], { protocol: _.replace(":", "") })
+                            : u.intl.format(u.t.ZgXDsI, { domain: b }),
                         labelType: "secondary",
                     }),
                 }),

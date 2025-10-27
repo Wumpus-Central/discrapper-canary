@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(55935),
     R = n(739566),
     P = n(421399),
-    w = n(310423),
-    D = n(223021),
+    D = n(310423),
+    w = n(223021),
     L = n(981631),
     x = n(388032),
     M = n(724913);
@@ -329,7 +329,7 @@ function q(e) {
             () => (e) => (
                 l()(null != s, "ExecutedCommand: channel cannot be null"),
                 (0, r.jsx)(
-                    w.Z,
+                    D.Z,
                     G(j({}, e), {
                         channel: s,
                         messageId: a.id,
@@ -350,7 +350,7 @@ function q(e) {
             null != e.renderTargetMessage,
         Z = (0, R.Sw)(null == (t = a.interaction) ? void 0 : t.user, s),
         F = (0, R.Sw)(U, s),
-        V = i.useMemo(() => (e.compact ? (0, D.Z)((0, N.vc)(u()(), "LT")) : null), [e.compact]),
+        V = i.useMemo(() => (e.compact ? (0, w.Z)((0, N.vc)(u()(), "LT")) : null), [e.compact]),
         z = (0, h.NX)(s.id),
         q = a.interaction;
     if (null == q || null == Z) return null;
@@ -382,7 +382,7 @@ function q(e) {
             let t = W(e, L, C);
             return (0, r.jsx)(i.Fragment, { children: t }, "command");
         };
-        (n = x.intl.format(x.t["rg7U+P"], {
+        (n = x.intl.format(x.t["rg7U+C"], {
             userHook: X,
             commandHook: t,
         })),
@@ -415,15 +415,15 @@ function q(e) {
                     onClick: e,
                     children: (0, r.jsx)("div", {
                         className: o()(M.commandName, M.clickable),
-                        children: x.intl.string(x.t.YTgRvr),
+                        children: x.intl.string(x.t.YTgRvn),
                     }),
                 });
         n = z
-            ? x.intl.format(x.t.kfV8WF, {
+            ? x.intl.format(x.t.kfV8WM, {
                   userHook: X,
                   activityHook: t,
               })
-            : x.intl.format(x.t["6FeSyc"], { userHook: X });
+            : x.intl.format(x.t["6FeSyT"], { userHook: X });
     }
     return (0, r.jsx)(E.Gt, {
         value: c,

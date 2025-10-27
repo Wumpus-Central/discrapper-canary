@@ -59,13 +59,13 @@ let b = function (e) {
         n = (0, o.$5)(t),
         [b, y] = i.useState(!1),
         _ = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
-        j = (0, c.Aq)(),
-        O = i.useRef(null),
+        O = (0, c.Aq)(),
+        j = i.useRef(null),
         x = i.useCallback(() => {
             n || y((e) => !e);
         }, [n]);
     function v(e) {
-        (null == e ? void 0 : e.shiftKey) || j.dispatch(h.CkL.POPOUT_CLOSE);
+        (null == e ? void 0 : e.shiftKey) || O.dispatch(h.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
@@ -78,7 +78,7 @@ let b = function (e) {
             [x],
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: O,
+            targetElementRef: j,
             shouldShow: b,
             animation: a.yRy.Animation.NONE,
             position: "bottom",
@@ -101,12 +101,12 @@ let b = function (e) {
                 return (0, r.jsx)(
                     p.JO,
                     m(g({}, e), {
-                        ref: O,
+                        ref: j,
                         onClick: x,
-                        tooltip: i ? null : f.intl.string(f.t["mp1N//"]),
+                        tooltip: i ? null : f.intl.string(f.t["mp1N/2"]),
                         icon: a.qQX,
                         iconSize: 20,
-                        "aria-label": f.intl.string(f.t["mp1N//"]),
+                        "aria-label": f.intl.string(f.t["mp1N/2"]),
                         disabled: n,
                         showBadge: _,
                         selected: i,

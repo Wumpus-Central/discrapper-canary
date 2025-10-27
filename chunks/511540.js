@@ -21,10 +21,10 @@ function s(e, t, n) {
                 var r;
                 d(
                     429 === (r = null == e ? void 0 : e.status)
-                        ? o.intl.string(o.t.BPmZvr)
+                        ? o.intl.string(o.t.BPmZvj)
                         : 404 === r || 400 === r
-                          ? o.intl.string(o.t.aWa1Pz)
-                          : o.intl.string(o.t.JNQRU1),
+                          ? o.intl.string(o.t.aWa1Pw)
+                          : o.intl.string(o.t.JNQRU4),
                 ),
                     l(!1),
                     (null == e ? void 0 : e.status) === 401 && n();

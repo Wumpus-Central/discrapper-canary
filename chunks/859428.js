@@ -47,13 +47,13 @@ let b = () => {
                         color: "currentColor",
                         className: g.arrow,
                     }),
-                    m.intl.string(m.t["13/7kZ"]),
+                    m.intl.string(m.t["13/7kX"]),
                 ],
             }),
             (0, r.jsx)(c.Text, {
                 className: g.header,
                 variant: "text-sm/normal",
-                children: m.intl.string(m.t["N/y2WF"]),
+                children: m.intl.string(m.t["N/y2WE"]),
             }),
             (0, r.jsx)(l.zx, {
                 className: g.button,
@@ -62,7 +62,7 @@ let b = () => {
                 size: l.zx.Sizes.NONE,
                 submitting: n,
                 onClick: y,
-                children: m.intl.format(m.t.uHN7n5, { guild: t.name }),
+                children: m.intl.format(m.t.uHN7ny, { guild: t.name }),
             }),
         ],
     });

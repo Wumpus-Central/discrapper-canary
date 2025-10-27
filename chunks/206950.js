@@ -63,7 +63,7 @@ function u(e) {
             ),
             u = new s.Z({
                 id: "313337",
-                username: c.intl.string(c.t.cqpybG),
+                username: c.intl.string(c.t.cqpybK),
                 discriminator: "0000",
                 bot: !1,
             });

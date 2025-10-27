@@ -61,7 +61,7 @@ function d(e) {
         a.Z,
         l(
             {
-                label: null != t ? t : o.intl.string(o.t.cpT0Cg),
+                label: null != t ? t : o.intl.string(o.t.cpT0Cq),
                 iconComponent: i.P$X,
             },
             n,

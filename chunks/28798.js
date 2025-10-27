@@ -29,13 +29,13 @@ let f = function (e) {
                         (0, r.jsx)(s.Heading, {
                             color: "always-white",
                             variant: "text-sm/medium",
-                            children: d.intl.format(d.t["5nMfBQ"], { gameTitle: t.config.messages.gameTitle }),
+                            children: d.intl.format(d.t["5nMfBZ"], { gameTitle: t.config.messages.gameTitle }),
                         }),
                         (0, r.jsx)(s.Text, {
                             className: u.subheading,
                             color: "always-white",
                             variant: "text-xs/medium",
-                            children: d.intl.string(d.t.mjbPtb),
+                            children: d.intl.string(d.t.mjbPtS),
                         }),
                     ],
                 }),

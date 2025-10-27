@@ -11,7 +11,7 @@ function i() {
         (0, r.useEffect)(() => {
             if (null != o)
                 return void t(
-                    a.intl.format(a.t["7gHWra"], {
+                    a.intl.format(a.t["7gHWrd"], {
                         amount: "1 orb",
                         errorMessage: o.message,
                     }),
@@ -22,7 +22,7 @@ function i() {
                     return null == (t = e.sku) ? void 0 : t.name;
                 });
                 t(
-                    a.intl.format(a.t.JxNFam, {
+                    a.intl.format(a.t.JxNFav, {
                         amountDescription: "1 orb",
                         redeemedItemDescription: ""
                             .concat(1 === e.length ? "SKU" : "SKUs", ": ")

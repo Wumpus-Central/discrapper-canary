@@ -34,13 +34,13 @@ function u(n) {
                     (0, t.jsx)(l.Heading, {
                         className: g.title,
                         variant: "heading-xl/semibold",
-                        children: x.intl.string(x.t.QMbTSk),
+                        children: x.intl.string(x.t.QMbTSu),
                     }),
                     (0, t.jsx)(l.Heading, {
                         className: g.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: x.intl.string(x.t.Qdx8AA),
+                        children: x.intl.string(x.t.Qdx8AP),
                     }),
                     null != a &&
                         (0, t.jsx)(l.olH, {
@@ -62,12 +62,12 @@ function u(n) {
                         children: x.intl.string(x.t["9BRc1N"]),
                     }),
                     (0, t.jsx)(c.Z, {
-                        text: x.intl.string(x.t.PxL38P),
+                        text: x.intl.string(x.t.PxL38B),
                         url: d.sQ.COMMUNITY_GUIDELINES,
                         onClick: () => u(d.n0.ClickCommunityGuidelinesLink),
                     }),
                     (0, t.jsx)(c.Z, {
-                        text: x.intl.string(x.t.qC3XKS),
+                        text: x.intl.string(x.t.qC3XKa),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
                         onClick: () => u(d.n0.ClickWarningSystemHelpcenterLink),
                     }),
@@ -77,7 +77,7 @@ function u(n) {
                 "data-migration-pending": !0,
                 children: (0, t.jsx)(l.Button, {
                     variant: "primary",
-                    text: x.intl.string(x.t.i4jeWV),
+                    text: x.intl.string(x.t.i4jeWR),
                     onClick: i,
                 }),
             }),

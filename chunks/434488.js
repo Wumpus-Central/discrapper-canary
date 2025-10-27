@@ -63,7 +63,7 @@ function Z(e) {
             children: [
                 (0, i.jsx)(c.u, {
                     asContainer: !0,
-                    text: E.intl.string(E.t.qJvTKS),
+                    text: E.intl.string(E.t.qJvTKQ),
                     children: (0, i.jsx)(u.P3F, {
                         onClick: () => {
                             (0, b.Z)({
@@ -216,14 +216,14 @@ function T(e) {
                                     variant: "secondary",
                                     icon: v,
                                     text: d.isInCallEntrypointEnabled
-                                        ? E.intl.string(E.t["EE+P0N"])
-                                        : E.intl.string(E.t["6Qgren"]),
+                                        ? E.intl.string(E.t["EE+P0H"])
+                                        : E.intl.string(E.t["6Qgrev"]),
                                     onClick: f,
                                 }),
                                 (0, i.jsx)(u.Button, {
                                     variant: "secondary",
                                     icon: y,
-                                    text: E.intl.string(E.t.qnFavb),
+                                    text: E.intl.string(E.t.qnFavR),
                                     onClick: C,
                                 }),
                             ],
@@ -259,7 +259,7 @@ function N(e) {
                     ? (0, i.jsx)(u.Text, {
                           className: S.heading,
                           variant: s > 550 ? "text-md/semibold" : "text-sm/semibold",
-                          children: E.intl.string(E.t["7BKMcH"]),
+                          children: E.intl.string(E.t["7BKMcG"]),
                       })
                     : null,
                 (0, i.jsx)("div", {
@@ -292,7 +292,7 @@ function N(e) {
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(u.Text, {
                             variant: "text-sm/medium",
-                            children: E.intl.string(E.t["5E9SBw"]),
+                            children: E.intl.string(E.t["5E9SB9"]),
                         }),
                     ],
                 }),

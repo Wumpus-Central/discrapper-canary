@@ -9,7 +9,7 @@ function c(e) {
     let { rule: t, onChangeRule: n } = e,
         [c, d] = i.useState(t.name);
     return (0, r.jsx)(l.oil, {
-        label: o.intl.string(o.t.WVAHxM),
+        label: o.intl.string(o.t.WVAHxF),
         onChange: (e) => {
             var r, i;
             d(e),
@@ -59,7 +59,7 @@ function c(e) {
         onKeyDown: (e) => {
             e.which === s.yXg.SPACE && e.stopPropagation();
         },
-        placeholder: o.intl.string(o.t["5AO43N"]),
+        placeholder: o.intl.string(o.t["5AO43K"]),
         maxLength: a.OU,
         value: c,
     });

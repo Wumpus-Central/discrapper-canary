@@ -40,7 +40,7 @@ let f = (e) => {
                 onClick: (e) => {
                     (0, s.v)(f, s.d.MORE), n(e);
                 },
-                label: h.intl.string(h.t.PdRCRk),
+                label: h.intl.string(h.t.PdRCRg),
                 iconComponent: l.xhG,
                 color: "primaryDark",
                 isActive: r,

@@ -4,8 +4,8 @@ var r = n(951288),
     a = n(481060),
     l = n(785717),
     o = n(810473),
-    s = n(299560),
-    c = n(247397),
+    c = n(299560),
+    s = n(247397),
     u = n(388032),
     d = n(958461);
 function f() {
@@ -13,7 +13,7 @@ function f() {
         t = (0, o.Z)(),
         n = i.useMemo(() => {
             let e = new Set(t);
-            return c.rR.filter((t) => e.has(t));
+            return s.rR.filter((t) => e.has(t));
         }, [t]);
     return (0, r.jsxs)("div", {
         className: d.empty,
@@ -40,7 +40,7 @@ function f() {
                     (0, r.jsx)(
                         "li",
                         {
-                            children: (0, r.jsx)(s.Z, {
+                            children: (0, r.jsx)(c.Z, {
                                 widgetType: t,
                                 size: "small",
                                 trackUserProfileEditAction: e,

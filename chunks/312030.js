@@ -4,8 +4,8 @@ var r = n(647438),
     i = n(215023);
 let a = (e) => {
     let { scrollerRef: t, sortedCategories: n } = e,
-        [a, o] = r.useState(1),
-        s = r.useCallback(
+        [a, s] = r.useState(1),
+        o = r.useCallback(
             (e) => {
                 let t = n.findIndex((t) => t.skuId === e);
                 return -1 === t ? 1 : Math.floor(t / i.kN) + 1;
@@ -15,20 +15,20 @@ let a = (e) => {
         c = r.useCallback(
             (e) => {
                 if (null != e && !(0, l.$2)(e)) {
-                    let t = s(e);
-                    t !== a && o(t);
+                    let t = o(e);
+                    t !== a && s(t);
                 }
             },
-            [s, a, o],
+            [o, a, s],
         );
     return {
         currentPage: a,
         handlePageChange: r.useCallback(
             (e) => {
                 var n;
-                o(e), null == (n = t.current) || n.scrollTo({ to: 0 });
+                s(e), null == (n = t.current) || n.scrollTo({ to: 0 });
             },
-            [t, o],
+            [t, s],
         ),
         scrollToCategory: c,
     };

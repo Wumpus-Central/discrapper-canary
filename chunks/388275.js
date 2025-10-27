@@ -1,6 +1,6 @@
 n.d(t, { _: () => f }), n(388685);
-var l = n(951288),
-    a = n(647438),
+var a = n(951288),
+    l = n(647438),
     r = n(430742),
     i = n(541716),
     s = n(893718),
@@ -12,50 +12,50 @@ var l = n(951288),
     m = n(388032),
     g = n(773921);
 function f(e) {
-    let { message: t, canSend: n, selectedDestinations: f, onSend: w, inputValue: p, setInputValue: b } = e,
-        _ = (0, o.Z)(),
+    let { message: t, canSend: n, selectedDestinations: f, onSend: _, inputValue: w, setInputValue: p } = e,
+        b = (0, o.Z)(),
         v = (0, u.nm)(f),
         x = (0, d.Ad)(),
-        { textValue: y, richValue: P } = p,
-        [C, O] = a.useState(!1),
-        j = a.useCallback(() => O(!0), []),
-        S = a.useCallback(() => O(!1), []),
-        Z = a.useCallback(
-            (e, n, l) => {
-                b({
+        { textValue: y, richValue: C } = w,
+        [O, P] = l.useState(!1),
+        S = l.useCallback(() => P(!0), []),
+        j = l.useCallback(() => P(!1), []),
+        E = l.useCallback(
+            (e, n, a) => {
+                p({
                     textValue: n,
-                    richValue: l,
+                    richValue: a,
                 }),
                     r.Z.saveDraft(t.channel_id, n, c.d.ForwardContextMessage),
                     x(t.channel_id, t.id);
             },
-            [x, t, b],
+            [x, t, p],
         ),
-        I = a.useCallback(() => {
-            r.Z.clearDraft(t.channel_id, c.d.ForwardContextMessage), w(y);
-        }, [t.channel_id, w, y]),
-        R = a.useCallback(
+        T = l.useCallback(() => {
+            r.Z.clearDraft(t.channel_id, c.d.ForwardContextMessage), _(y);
+        }, [t.channel_id, _, y]),
+        I = l.useCallback(
             () => (
-                !n || y.length > _ || I(),
+                !n || y.length > b || T(),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0,
                 })
             ),
-            [I, y, _, n],
+            [T, y, b, n],
         );
-    return (0, l.jsx)(s.ZP, {
+    return (0, a.jsx)(s.ZP, {
         innerClassName: g.messageInput,
-        onChange: Z,
-        placeholder: m.intl.string(m.t.ZroO3N),
+        onChange: E,
+        placeholder: m.intl.string(m.t.ZroO3G),
         channel: v,
         textValue: y,
-        richValue: P,
+        richValue: C,
         type: i.Ie.FORWARD_MESSAGE_INPUT,
-        onBlur: S,
-        onFocus: j,
-        focused: C,
-        onSubmit: R,
+        onBlur: j,
+        onFocus: S,
+        focused: O,
+        onSubmit: I,
         parentModalKey: h.so,
         autoCompletePosition: "bottom",
         emojiPickerCloseOnModalOuterClick: !0,

@@ -7,17 +7,17 @@ var i = n(951288),
     a = n(726985),
     o = n(388032);
 let c = (0, u.x1)(r.n.DATA_AND_PRIVACY_PANE, {
-        useTitle: () => o.intl.string(o.t.OAuOHB),
+        useTitle: () => o.intl.string(o.t.OAuOHD),
         buildLayout: () => [],
         render: () => (0, i.jsx)(s.Z, {}),
     }),
     E = (0, u.wf)(r.n.DATA_AND_PRIVACY_PANEL, {
-        useTitle: () => o.intl.string(o.t.OAuOHB),
+        useTitle: () => o.intl.string(o.t.OAuOHD),
         buildLayout: () => [c],
     }),
     d = (0, u.m7)(r.n.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
         icon: l.tQf,
-        useTitle: () => o.intl.string(o.t.OAuOHB),
+        useTitle: () => o.intl.string(o.t.OAuOHD),
         legacySearchKey: a.s6.DATA_PRIVACY,
         buildLayout: () => [E],
     });

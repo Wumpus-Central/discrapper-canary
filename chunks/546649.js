@@ -1,23 +1,23 @@
-l.d(t, { default: () => o });
+l.d(t, { default: () => r });
 var i = l(951288);
 l(647438);
 var e = l(481060),
-    a = l(239091),
-    r = l(299206),
+    s = l(239091),
+    a = l(299206),
     c = l(461757),
-    s = l(388032);
-function o(n) {
-    let { channel: t, channelId: l, originalLink: o, messageId: u, onSelect: d } = n,
-        h = (0, c.Z)(t, o, u),
-        p = (0, r.Z)({
+    o = l(388032);
+function r(n) {
+    let { channel: t, channelId: l, originalLink: r, messageId: u, onSelect: d } = n,
+        h = (0, c.Z)(t, r, u),
+        p = (0, a.Z)({
             id: l,
-            label: s.intl.string(s.t.gFHI3t),
+            label: o.intl.string(o.t.gFHI3k),
         });
     return (0, i.jsxs)(e.v2r, {
         navId: "channel-mention-context",
-        onClose: a.Zy,
+        onClose: s.Zy,
         onSelect: d,
-        "aria-label": s.intl.string(s.t.feGACA),
+        "aria-label": o.intl.string(o.t.feGACE),
         children: [
             (0, i.jsx)(e.kSQ, { children: h }, "channel-mention-actions"),
             (0, i.jsx)(e.kSQ, { children: p }, "developer-actions"),

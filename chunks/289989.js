@@ -50,7 +50,7 @@ function S(e) {
                 className: v.header,
                 variant: "heading-lg/semibold",
                 color: "text-default",
-                children: x.intl.string(x.t.XyYoFR),
+                children: x.intl.string(x.t.XyYoFc),
             }),
             l
                 ? (0, r.jsxs)(r.Fragment, {
@@ -59,7 +59,7 @@ function S(e) {
                               className: v.body,
                               variant: "text-sm/medium",
                               color: "text-secondary",
-                              children: x.intl.format(x.t.sbbPhY, { buttonName: x.intl.string(x.t.FiBjwc) }),
+                              children: x.intl.format(x.t.sbbPhW, { buttonName: x.intl.string(x.t.FiBjwU) }),
                           }),
                           (0, r.jsx)(h.Z, {}),
                       ],
@@ -76,7 +76,7 @@ function S(e) {
                                   });
                               },
                               id: "screen",
-                              text: x.intl.string(x.t.cVUFXV),
+                              text: x.intl.string(x.t.cVUFXY),
                               icon: c.pzj,
                           }),
                           (0, r.jsx)(j, {
@@ -88,7 +88,7 @@ function S(e) {
                                   });
                               },
                               id: "window",
-                              text: x.intl.string(x.t.dG2A1N),
+                              text: x.intl.string(x.t.dG2A1E),
                               icon: c.GON,
                           }),
                       ],

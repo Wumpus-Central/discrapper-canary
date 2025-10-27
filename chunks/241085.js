@@ -60,11 +60,11 @@ function P(e) {
                         children:
                             i > 1
                                 ? i === a
-                                    ? N.intl.format(N.t.SAr319, {
+                                    ? N.intl.format(N.t.SAr31z, {
                                           minValues: i,
                                           maxSize: c,
                                       })
-                                    : N.intl.format(N.t["ZG+3Cg"], {
+                                    : N.intl.format(N.t["ZG+3Ck"], {
                                           minValues: i,
                                           maxValues: a,
                                           maxSize: c,
@@ -87,14 +87,14 @@ function P(e) {
                         (0, r.jsx)(u.Text, {
                             variant: "text-md/normal",
                             color: "text-primary",
-                            children: N.intl.string(N.t["8OJlsL"]),
+                            children: N.intl.string(N.t["8OJlsH"]),
                         }),
                     ],
                 }),
         ],
     });
 }
-function w() {
+function D() {
     return (0, r.jsxs)("div", {
         className: o()(R.mainWrapper, R.mainBody),
         children: [
@@ -110,12 +110,12 @@ function w() {
             (0, r.jsx)(u.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: N.intl.string(N.t.HYg2Hh),
+                children: N.intl.string(N.t.HYg2Hn),
             }),
         ],
     });
 }
-function D(e) {
+function w(e) {
     var t;
     let { upload: n, handleRemoveFile: i, singleFileInput: a } = e;
     return (0, r.jsxs)(
@@ -130,13 +130,13 @@ function D(e) {
                 (0, r.jsx)(u.Text, {
                     variant: "text-".concat(a ? "md" : "xs", "/medium"),
                     className: R.filename,
-                    children: null != (t = n.filename) ? t : N.intl.string(N.t.ZMirp6),
+                    children: null != (t = n.filename) ? t : N.intl.string(N.t.ZMirp0),
                 }),
                 (0, r.jsx)(E.ZP, {
                     className: R.miniPopover,
                     children: (0, r.jsx)(h.Z, {
                         className: R.action,
-                        tooltip: N.intl.string(N.t.N86XcH),
+                        tooltip: N.intl.string(N.t.N86XcP),
                         onClick: () => i(n.id),
                         dangerous: !0,
                         children: (0, r.jsx)(u.XHJ, {
@@ -178,8 +178,8 @@ function L(e) {
                 if (0 === e.length) return;
                 if (v.length + e.length > a)
                     return (0, _.openUploadError)({
-                        title: N.intl.string(N.t.wOr6hI),
-                        help: N.intl.formatToPlainString(N.t.dy6viI, { maxValues: a }),
+                        title: N.intl.string(N.t.wOr6hB),
+                        help: N.intl.formatToPlainString(N.t.dy6viJ, { maxValues: a }),
                     });
                 if ((0, T.Bf)(e, k.guild_id)) return (0, I.G)(k, e);
                 let n = e.map((e) => {
@@ -235,7 +235,7 @@ function L(e) {
         );
     }, [j, U, B]),
     1 === a && 1 === x.length)
-        ? (0, r.jsx)(D, {
+        ? (0, r.jsx)(w, {
               upload: x[0],
               handleRemoveFile: F,
               singleFileInput: !0,
@@ -248,7 +248,7 @@ function L(e) {
               }),
               children: [
                   v.length >= a
-                      ? (0, r.jsx)(w, {})
+                      ? (0, r.jsx)(D, {})
                       : (0, r.jsx)(P, {
                             dropping: h,
                             fileInputRef: s,
@@ -261,7 +261,7 @@ function L(e) {
                           className: R.files,
                           children: x.map((e) =>
                               (0, r.jsx)(
-                                  D,
+                                  w,
                                   {
                                       upload: e,
                                       handleRemoveFile: F,

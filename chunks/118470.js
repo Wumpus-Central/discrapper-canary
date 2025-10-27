@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(812206),
-    o = n(82950),
-    s = n(434404),
+    s = n(82950),
+    o = n(434404),
     c = n(106976),
     u = n(270144),
     d = n(981631),
@@ -14,44 +14,44 @@ function h(e) {
     let t,
         { guild: n } = e,
         h = (0, u.h6)(n),
-        g = () => (0, c.sB)(n.id),
-        m = i.useMemo(() => new Set(h.map((e) => e.applicationId)), [h]),
-        b = (0, l.Wu)([a.Z], () => {
+        m = () => (0, c.sB)(n.id),
+        g = i.useMemo(() => new Set(h.map((e) => e.applicationId)), [h]),
+        _ = (0, l.Wu)([a.Z], () => {
             let e = [];
-            for (let t of m) {
+            for (let t of g) {
                 let n = a.Z.getApplication(t);
                 null != n && e.push(n);
             }
             return e;
-        }, [m]);
-    return 0 === b.length
+        }, [g]);
+    return 0 === _.length
         ? null
         : ((t =
-              1 === b.length
-                  ? p.intl.formatToPlainString(p.t["Egq+Gx"], { a: b[0].name })
-                  : 2 === b.length
-                    ? p.intl.formatToPlainString(p.t.LxU9R0, {
-                          a: b[0].name,
-                          b: b[1].name,
+              1 === _.length
+                  ? p.intl.formatToPlainString(p.t["Egq+G/"], { a: _[0].name })
+                  : 2 === _.length
+                    ? p.intl.formatToPlainString(p.t.LxU9R3, {
+                          a: _[0].name,
+                          b: _[1].name,
                       })
-                    : 3 === b.length
-                      ? p.intl.formatToPlainString(p.t.crKXMD, {
-                            a: b[0].name,
-                            b: b[1].name,
-                            c: b[2].name,
+                    : 3 === _.length
+                      ? p.intl.formatToPlainString(p.t.crKXMC, {
+                            a: _[0].name,
+                            b: _[1].name,
+                            c: _[2].name,
                         })
-                      : p.intl.string(p.t.MvfowM)),
-          (0, r.jsx)(o.Z, {
+                      : p.intl.string(p.t.MvfowF)),
+          (0, r.jsx)(s.Z, {
               guild: n,
-              onDismissed: g,
+              onDismissed: m,
               message: t,
               type: d.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: f,
               onClick: () => {
-                  g(), s.Z.open(n.id, d.pNK.INTEGRATIONS);
+                  m(), o.Z.open(n.id, d.pNK.INTEGRATIONS);
               },
               imageMarginTop: 6,
               imageMarginX: 46,
-              cta: p.intl.string(p.t.Rr3MAQ),
+              cta: p.intl.string(p.t.Rr3MAe),
           }));
 }

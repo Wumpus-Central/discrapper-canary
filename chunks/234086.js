@@ -1,23 +1,23 @@
-n.d(t, { i: () => s });
+n.d(t, { i: () => o });
 var r = n(951288),
     i = n(481060),
     l = n(134483),
     a = n(388032),
-    o = n(818923);
-let s = (e) => {
+    s = n(818923);
+let o = (e) => {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
-        className: o.previewBackground,
+        className: s.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: o.previewCard,
+            className: s.previewCard,
             children: [
                 (0, r.jsx)(i.Heading, {
-                    className: o.heading,
+                    className: s.heading,
                     variant: "heading-md/semibold",
-                    children: a.intl.string(a.t.gWinpa),
+                    children: a.intl.string(a.t.gWinpQ),
                 }),
                 (0, r.jsx)("div", {
-                    className: o.questChannelCallHeaderWrapper,
+                    className: s.questChannelCallHeaderWrapper,
                     children: (0, r.jsx)(l.Z, {
                         channelId: "preview-channel-id",
                         previewQuest: t,

@@ -56,24 +56,24 @@ let g = function (e) {
                 p(!0),
                 (0, c.s)(g).finally(() => p(!1));
         }, [g, t]),
-        C = r.useMemo(
+        h = r.useMemo(
             () =>
                 (null == g ? void 0 : g.email) == null
                     ? [
                           {
-                              text: f.intl.string(f.t.ydw5nZ),
+                              text: f.intl.string(f.t.ydw5nX),
                               onClick: y,
                               variant: "primary",
                           },
                       ]
                     : [
                           {
-                              text: f.intl.string(f.t.Vm8akJ),
+                              text: f.intl.string(f.t.Vm8akB),
                               onClick: y,
                               variant: "secondary",
                           },
                           {
-                              text: f.intl.string(f.t.lm1UKi),
+                              text: f.intl.string(f.t.lm1UKt),
                               onClick: k,
                               variant: "primary",
                               loading: b,
@@ -82,16 +82,16 @@ let g = function (e) {
             [g, y, k, b],
         );
     return (0, i.jsxs)(s.Modal, {
-        title: f.intl.string(f.t.UZLrY2),
+        title: f.intl.string(f.t.UZLrY1),
         transitionState: a,
         onClose: v,
-        actions: C,
+        actions: h,
         children: [
             (0, i.jsx)("div", { className: m.imageUnverified }),
             (0, i.jsx)(u.Text, {
                 variant: "text-md/normal",
                 className: m.message,
-                children: f.intl.string(f.t["0LgOKC"]),
+                children: f.intl.string(f.t["0LgOKH"]),
             }),
         ],
     });

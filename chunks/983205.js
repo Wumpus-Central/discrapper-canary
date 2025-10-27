@@ -35,7 +35,7 @@ let o = (e) => {
         minLength: 2,
         value: t,
         onChange: m,
-        placeholder: s.intl.string(s.t.U2JFHR),
+        placeholder: s.intl.string(s.t.U2JFHZ),
         name: "emoji_name",
         onBlur: g,
         onFocus: p,

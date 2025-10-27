@@ -9,7 +9,7 @@ function o(e) {
     return (0, r.jsx)(a.Z, {
         withTitleBar: !0,
         windowKey: t,
-        title: l.intl.string(l.t["5I/1fn"]),
+        title: l.intl.string(l.t["5I/1fl"]),
         children: (0, r.jsx)(i.Z, {}),
     });
 }

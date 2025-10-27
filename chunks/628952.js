@@ -76,8 +76,8 @@ let C = (e) => {
         { product: C } = (0, m.T)(t, !0),
         { giftRecipient: N, giftRecipientError: R } = (0, f.wD)(),
         P = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-        w = (0, y.kd)(C),
-        D = i.useRef(null);
+        D = (0, y.kd)(C),
+        w = i.useRef(null);
     if (null == C) return null;
     let [L] = C.items;
     l()(null != L, "Product item should not be empty");
@@ -87,9 +87,9 @@ let C = (e) => {
                 case c.Z.AVATAR_DECORATION:
                     return O.intl.string(O.t["7v0T9P"]);
                 case c.Z.PROFILE_EFFECT:
-                    return O.intl.string(O.t.wR5wOj);
+                    return O.intl.string(O.t.wR5wOo);
                 case c.Z.NAMEPLATE:
-                    return O.intl.string(O.t.x5CoXV);
+                    return O.intl.string(O.t.x5CoXR);
                 default:
                     return null;
             }
@@ -105,13 +105,13 @@ let C = (e) => {
                 (0, r.jsx)("div", {
                     className: v.previewTitleContainer,
                     children: (0, r.jsx)(d.gNt, {
-                        label: O.intl.string(O.t.PpoJzs),
+                        label: O.intl.string(O.t.PpoJzt),
                         children:
                             M &&
                             (0, r.jsx)(
                                 d.yRy,
                                 {
-                                    targetElementRef: D,
+                                    targetElementRef: w,
                                     preload: () => (0, p.Z)(N.id, N.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
@@ -133,11 +133,11 @@ let C = (e) => {
                                             d.P3F,
                                             A(T({}, e), {
                                                 className: v.previewLink,
-                                                innerRef: D,
+                                                innerRef: w,
                                                 children: (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/medium",
                                                     color: "text-link",
-                                                    children: O.intl.string(O.t["2GnJQE"]),
+                                                    children: O.intl.string(O.t["2GnJQL"]),
                                                 }),
                                             }),
                                         ),
@@ -166,7 +166,7 @@ let C = (e) => {
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-md/semibold",
-                                        children: w,
+                                        children: D,
                                     }),
                                     (0, r.jsx)(d.Heading, {
                                         variant: "heading-sm/medium",

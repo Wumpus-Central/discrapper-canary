@@ -3,19 +3,19 @@ var r = n(951288),
     i = n(647438),
     l = n(907862),
     a = n(100527),
-    o = n(434404),
-    s = n(981631),
+    s = n(434404),
+    o = n(981631),
     c = n(921944),
-    u = n(149829),
+    u = n(459196),
     d = n(388032),
     p = n(437329);
 function f(e) {
     let { guild: t, markAsDismissed: n, renderTargetElement: f } = e,
         h = i.useRef(null),
-        g = {
+        m = {
             text: d.intl.string(u.default.Xnghqy),
             onClick: () => {
-                o.Z.open(t.id, s.pNK.BOOST_PERKS, { section: a.Z.GUILD_BOOSTING_PROGRESS_BAR }), n(c.L.TAKE_ACTION);
+                s.Z.open(t.id, o.pNK.BOOST_PERKS, { section: a.Z.GUILD_BOOSTING_PROGRESS_BAR }), n(c.L.TAKE_ACTION);
             },
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -33,7 +33,7 @@ function f(e) {
                     align: "center",
                 },
                 assetUrl: p.Z,
-                action: g,
+                action: m,
                 onRequestClose: () => n(c.L.USER_DISMISS),
             }),
         ],

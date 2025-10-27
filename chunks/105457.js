@@ -97,7 +97,7 @@ function g(e) {
                                 children: [
                                     (0, i.jsx)("div", {
                                         className: f.header,
-                                        children: h.intl.string(h.t.mY3Y39),
+                                        children: h.intl.string(h.t.mY3Y38),
                                     }),
                                     (0, i.jsx)(s.Text, {
                                         id: "content-warning-popout-label",
@@ -115,12 +115,12 @@ function g(e) {
                                                         className: f.button,
                                                         color: o.zx.Colors.PRIMARY,
                                                         onClick: O,
-                                                        children: h.intl.string(h.t.fsBWmZ),
+                                                        children: h.intl.string(h.t.fsBWmS),
                                                     }),
                                                     (0, i.jsx)(s.Text, {
                                                         variant: "text-xs/normal",
                                                         className: f.buttonHint,
-                                                        children: h.intl.format(h.t["0LzVPT"], {}),
+                                                        children: h.intl.format(h.t["0LzVPZ"], {}),
                                                     }),
                                                 ],
                                             }),
@@ -132,7 +132,7 @@ function g(e) {
                                                         onClick: x,
                                                         type: "submit",
                                                         autoFocus: !0,
-                                                        children: h.intl.string(h.t.KJnHq6),
+                                                        children: h.intl.string(h.t.KJnHq3),
                                                     }),
                                                     (0, i.jsx)(s.Text, {
                                                         variant: "text-xs/normal",

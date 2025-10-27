@@ -98,30 +98,30 @@ function g(e) {
     let I = {
         transfer: {
             label: null != t.premiumGuildSubscription ? d.intl.string(d.t["PR0n//"]) : d.intl.string(d.t["+fmEYG"]),
-            subtext: t.isOnCooldown() ? d.intl.string(d.t.XnB8Mz) : null,
+            subtext: t.isOnCooldown() ? d.intl.string(d.t.XnB8M0) : null,
             disabled: t.isOnCooldown(),
         },
         cancel: {
-            label: d.intl.string(d.t.twFU3d),
-            subtext: h ? null : d.intl.string(d.t.oQ9lOj),
+            label: d.intl.string(d.t.twFU3R),
+            subtext: h ? null : d.intl.string(d.t.oQ9lOh),
             disabled: !h,
         },
         uncancel: {
-            label: d.intl.string(d.t["2glQNj"]),
+            label: d.intl.string(d.t["2glQNp"]),
             subtext: null,
             disabled: !1,
         },
     };
     switch (g.status) {
         case c.O0b.PAST_DUE:
-            (I.cancel.disabled = !0), (I.cancel.subtext = d.intl.string(d.t.WnL6DQ)), (I.uncancel.disabled = !0);
+            (I.cancel.disabled = !0), (I.cancel.subtext = d.intl.string(d.t.WnL6DV)), (I.uncancel.disabled = !0);
             break;
         case c.O0b.PAUSE_PENDING:
         case c.O0b.PAUSED:
             b === u.a$.NONE &&
                 ((I.transfer.disabled = !0),
-                (I.transfer.subtext = d.intl.string(d.t.LiLRRU)),
-                (I.cancel.subtext = d.intl.string(d.t["1ywaWF"])),
+                (I.transfer.subtext = d.intl.string(d.t.LiLRRT)),
+                (I.cancel.subtext = d.intl.string(d.t["1ywaWL"])),
                 (I.cancel.disabled = !0),
                 (I.uncancel.disabled = !0));
     }
@@ -130,7 +130,7 @@ function g(e) {
             g.isPausedOrPausePending && b === u.a$.NONE
                 ? (0, r.jsx)(a.sNh, {
                       id: "manage-subscription",
-                      label: d.intl.string(d.t.obRG6e),
+                      label: d.intl.string(d.t.obRG6Y),
                       action: () => (0, s.openUserSettings)(o.n.SUBSCRIPTIONS_PANEL, { section: c.oAB.SUBSCRIPTIONS }),
                       iconLeft: a.WGR,
                       className: f.manageSubscription,
@@ -142,7 +142,7 @@ function g(e) {
         onSelect: E,
         navId: "subscription-context",
         variant: "fixed",
-        "aria-label": d.intl.string(d.t.ogxXGh),
+        "aria-label": d.intl.string(d.t.ogxXGq),
         onClose: _,
         children: [
             (0, r.jsx)(a.sNh, {

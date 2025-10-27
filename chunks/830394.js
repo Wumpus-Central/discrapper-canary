@@ -17,8 +17,8 @@ function d(t) {
         Z = null != E && b(E);
     return f && (null == p ? void 0 : p.is_canceled) && Z && (!v || f)
         ? (0, l.jsx)(i.sNh, {
-              id: s.intl.string(s.t.b8606O),
-              label: s.intl.string(s.t.b8606O),
+              id: s.intl.string(s.t.b8606G),
+              label: s.intl.string(s.t.b8606G),
               action: () => {
                   null != n && null != p && (0, c.Z)(p, d.id, e, n);
               },

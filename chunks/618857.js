@@ -15,14 +15,14 @@ var i = n(951288),
     c = n(538084),
     u = n(388032);
 function d(e) {
-    let t = u.intl.formatToPlainString(u.t["CvHu/v"], { timestamp: new Date(e).valueOf() });
+    let t = u.intl.formatToPlainString(u.t["CvHu/j"], { timestamp: new Date(e).valueOf() });
     (0, a.showToast)((0, a.createToast)(t, a.ToastType.SUCCESS));
 }
 function p() {
-    (0, a.showToast)((0, a.createToast)(u.intl.string(u.t["JF/LWl"]), a.ToastType.SUCCESS));
+    (0, a.showToast)((0, a.createToast)(u.intl.string(u.t["JF/LWn"]), a.ToastType.SUCCESS));
 }
 function h(e) {
-    (0, a.showToast)((0, a.createToast)(u.intl.formatToPlainString(u.t.sUvyW1, { error: e }), a.ToastType.FAILURE));
+    (0, a.showToast)((0, a.createToast)(u.intl.formatToPlainString(u.t.sUvyW3, { error: e }), a.ToastType.FAILURE));
 }
 function f(e) {
     let { channel: t } = e,
@@ -31,15 +31,15 @@ function f(e) {
         o = l()().startOf("isoWeek").add(1, "week").set("hours", 9),
         c = [
             {
-                display: u.intl.string(u.t.tjIn9v),
+                display: u.intl.string(u.t.tjIn9i),
                 value: n,
             },
             {
-                display: u.intl.string(u.t.EMRZyc),
+                display: u.intl.string(u.t.EMRZyS),
                 value: r,
             },
             {
-                display: u.intl.string(u.t["+P5MmJ"]),
+                display: u.intl.string(u.t["+P5MmK"]),
                 value: o,
             },
         ].map((e) =>
@@ -66,7 +66,7 @@ function f(e) {
                         a.sNh,
                         {
                             id: "custom-time",
-                            label: u.intl.string(u.t.stHooK),
+                            label: u.intl.string(u.t.stHooC),
                             action: () => m({ channel: t }),
                         },
                         "custom-time",

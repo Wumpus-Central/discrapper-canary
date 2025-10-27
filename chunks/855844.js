@@ -20,8 +20,8 @@ var i = n(990547),
     O = n(358085),
     h = n(822556),
     x = n(981631),
-    P = n(345655),
-    _ = n(65154),
+    _ = n(345655),
+    P = n(65154),
     w = n(388032),
     C = n(895634);
 function E(e) {
@@ -33,39 +33,39 @@ function E(e) {
             maybeRenderPTTCheckbox: T = !1,
             renderDeafenCheckbox: S = !1,
             renderInputProfiles: N = !1,
-            renderOutputDevices: D = !1,
-            renderOutputVolume: Z = !1,
+            renderOutputDevices: Z = !1,
+            renderOutputVolume: D = !1,
             renderInputDevices: k = !1,
             renderInputVolume: M = !1,
             maybeRenderInputMeter: A = !1,
             renderSettingsButton: R = !1,
         } = e,
-        { analyticsLocations: V } = (0, d.ZP)();
+        { analyticsLocations: L } = (0, d.ZP)();
     (0, p.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: V },
+        properties: { location_stack: L },
     });
-    let L = (0, h.Z)(t),
+    let V = (0, h.Z)(t),
         F = (0, m.M)({
-            deviceType: _.h7.AUDIO_INPUT,
-            analyticsLocations: V,
+            deviceType: P.h7.AUDIO_INPUT,
+            analyticsLocations: L,
             asSubmenu: !0,
         }),
         U = (0, m.M)({
-            deviceType: _.h7.AUDIO_OUTPUT,
-            analyticsLocations: V,
+            deviceType: P.h7.AUDIO_OUTPUT,
+            analyticsLocations: L,
             asSubmenu: !0,
         }),
         Y = (0, o.e7)([v.Z], () => v.Z.getActiveInputProfile()),
-        H = (0, b.Z)(V),
-        z = (0, f.Z)(V),
-        B = (0, g.Z)(V),
+        H = (0, b.Z)(L),
+        z = (0, f.Z)(L),
+        B = (0, g.Z)(L),
         q = l.Yn.DEFAULT,
         W = v.Z.isSelfDeaf(q),
-        K = (0, o.e7)([v.Z], () => v.Z.getMode()),
-        X = K === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY,
-        G = (0, o.e7)([v.Z, j.ZP], () => {
+        X = (0, o.e7)([v.Z], () => v.Z.getMode()),
+        G = X === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY,
+        K = (0, o.e7)([v.Z, j.ZP], () => {
             var e;
             let t = (null == (e = v.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
                 n = null != j.ZP.getKeybindForAction(x.kg4.PUSH_TO_TALK, !1, !0),
@@ -81,11 +81,11 @@ function E(e) {
             onClose: I,
             navId: "audio-device-context",
             variant: "fixed",
-            "aria-label": w.intl.string(w.t.ZR1Ss7),
+            "aria-label": w.intl.string(w.t.ZR1Ss6),
             className: C.menu,
             children: [
                 (0, r.jsxs)(a.kSQ, {
-                    children: [k && F, N && H, D && U],
+                    children: [k && F, N && H, Z && U],
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
@@ -103,18 +103,18 @@ function E(e) {
                                         notchClassName: C.customNotches,
                                     }),
                             }),
-                        Z && B,
+                        D && B,
                     ],
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
-                        T && O.isPlatformEmbedded && G
+                        T && O.isPlatformEmbedded && K
                             ? (0, r.jsx)(a.S89, {
-                                  checked: K === x.pM4.PUSH_TO_TALK,
+                                  checked: X === x.pM4.PUSH_TO_TALK,
                                   id: "input-mode",
-                                  label: w.intl.string(w.t.Q8gkVF),
-                                  action: () => s.Z.setMode(X, void 0, void 0, { analyticsLocations: V }),
-                                  disabled: Y === P._.STUDIO,
+                                  label: w.intl.string(w.t.Q8gkVL),
+                                  action: () => s.Z.setMode(G, void 0, void 0, { analyticsLocations: L }),
+                                  disabled: Y === _._.STUDIO,
                               })
                             : null,
                         S &&
@@ -122,7 +122,7 @@ function E(e) {
                                 a.S89,
                                 {
                                     id: "deafen",
-                                    label: w.intl.string(w.t.wjcRFR),
+                                    label: w.intl.string(w.t.wjcRFX),
                                     action: () =>
                                         s.Z.toggleSelfDeaf({
                                             context: q,
@@ -132,7 +132,7 @@ function E(e) {
                                 },
                                 "self-deafen",
                             ),
-                        R && L,
+                        R && V,
                     ],
                 }),
             ],

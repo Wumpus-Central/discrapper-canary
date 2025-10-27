@@ -42,8 +42,8 @@ var i = n(658722),
     N = n(926491),
     R = n(373228),
     P = n(601070),
-    w = n(569471),
-    D = n(675478),
+    D = n(569471),
+    w = n(675478),
     L = n(131704),
     x = n(345162),
     M = n(598077),
@@ -146,8 +146,8 @@ let eb = new h.Z("AutocompleteUtils"),
     eN = 5,
     eR = 3,
     eP = 11,
-    ew = 6,
-    eD = 8,
+    eD = 6,
+    ew = 8,
     eL = 1,
     ex = 1000,
     eM = 0.2,
@@ -315,12 +315,12 @@ function e$(e) {
         case R.MO.STICKER_NAME:
             return eP;
         case R.MO.CORRELATED_EMOJI:
-            return ew;
+            return eD;
         case R.MO.TAG:
             return eL;
         case R.MO.GUILD_NAME:
         case R.MO.PACK_NAME:
-            return eD;
+            return ew;
         default:
             return 1;
     }
@@ -333,10 +333,10 @@ function e1(e, t, n) {
         e === t || ((!!n || !!(0, L.Km)(t)) && (e === B.sH ? (0, L.r8)(t) || (0, L.bw)(t) : e === B.Zb && (0, L.bw)(t)))
     );
 }
-function e2(e, t) {
+function e3(e, t) {
     return e === B.sH && (0, L.bw)(t);
 }
-function e3(e) {
+function e2(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e
             .split(" ")
@@ -585,7 +585,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     allowSnowflake: p,
                     includeAllThreads: h,
                 } = e,
-                m = e3(n, c),
+                m = e2(n, c),
                 g = e0(l);
             t =
                 null != r
@@ -624,8 +624,8 @@ let e7 = (0, $.oH)((e, t, n) => {
                     0 !== c &&
                         !(t.length > 1) &&
                         (1 !== t.length || t[0].isFullMatch || s) &&
-                        (e2(l, e.type) && (c = Math.max(c - eA, eS / 2)),
-                        e.isThread() && (e.isActiveThread() || (c -= eC), w.Z.hasJoined(e.id) || (c -= eN)),
+                        (e3(l, e.type) && (c = Math.max(c - eA, eS / 2)),
+                        e.isThread() && (e.isActiveThread() || (c -= eC), D.Z.hasJoined(e.id) || (c -= eN)),
                         (c = Math.min(
                             c + Math.min(null != (O = U.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eR,
                             c >= ev ? ey : ev,
@@ -769,10 +769,10 @@ let e7 = (0, $.oH)((e, t, n) => {
                     queryLower: i,
                 },
                 s = {
-                    [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4zc)],
-                    [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkoq)],
-                    [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2N)],
-                    [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUl)],
+                    [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4ze)],
+                    [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkog)],
+                    [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2K)],
+                    [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUj)],
                 },
                 l = [];
             for (let e in s) {
@@ -1013,15 +1013,15 @@ let e7 = (0, $.oH)((e, t, n) => {
                 l = [
                     {
                         id: eu.HY.SERVER_GUIDE,
-                        name: ef.intl.string(ef.t.VbpLyc),
+                        name: ef.intl.string(ef.t.VbpLyU),
                     },
                     {
                         id: eu.HY.CHANNEL_BROWSER,
-                        name: ef.intl.string(ef.t.et6wam),
+                        name: ef.intl.string(ef.t.et6wav),
                     },
                     {
                         id: eu.HY.CUSTOMIZE_COMMUNITY,
-                        name: ef.intl.string(ef.t.h9mGOD),
+                        name: ef.intl.string(ef.t.h9mGOP),
                     },
                 ],
                 c = [];
@@ -1099,7 +1099,7 @@ let e7 = (0, $.oH)((e, t, n) => {
         queryEmojiResults(e) {
             let { query: t, channel: n, intention: r, maxCount: i = el.rnv, matchComparator: a } = e;
             return (
-                D.DZ.loadIfNecessary(),
+                w.DZ.loadIfNecessary(),
                 {
                     emojis: m.ZP.searchWithoutFetchingLatest({
                         channel: n,
@@ -1118,7 +1118,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                 a = X.default.getCurrentUser(),
                 o = new Set(),
                 l = [];
-            for (let s of (D.DZ.loadIfNecessary(), e)) {
+            for (let s of (w.DZ.loadIfNecessary(), e)) {
                 if ("" === s) continue;
                 let e = s.toLocaleLowerCase(),
                     c = (0, eo._I)(e),
@@ -1167,7 +1167,7 @@ let e7 = (0, $.oH)((e, t, n) => {
         },
         querySoundmoji(e, t) {
             let n = X.default.getCurrentUser();
-            T.Z.isFetching() || T.Z.hasFetchedAllSounds() || (0, I.w)(), D.DZ.loadIfNecessary();
+            T.Z.isFetching() || T.Z.hasFetchedAllSounds() || (0, I.w)(), w.DZ.loadIfNecessary();
             let r = Array.from(T.Z.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {

@@ -1,4 +1,4 @@
-n.d(i, { default: () => r });
+n.d(i, { default: () => c });
 var e = n(951288);
 n(647438);
 var l = n(481060),
@@ -6,17 +6,17 @@ var l = n(481060),
     o = n(560067),
     s = n(675999),
     d = n(388032);
-function r(t) {
+function c(t) {
     let { onSelect: i } = t;
     return (0, e.jsxs)(l.v2r, {
         navId: "guild-context",
-        "aria-label": d.intl.string(d.t.HpQykZ),
+        "aria-label": d.intl.string(d.t.HpQykc),
         onClose: a.Zy,
         onSelect: i,
         children: [
             (0, e.jsx)(l.sNh, {
                 id: "join",
-                label: d.intl.string(d.t.yRjK4u),
+                label: d.intl.string(d.t.yRjK4p),
                 action: () =>
                     o.Z.openCreateGuildModal({
                         initialSlide: s._m.JOIN_GUILD,
@@ -25,7 +25,7 @@ function r(t) {
             }),
             (0, e.jsx)(l.sNh, {
                 id: "create",
-                label: d.intl.string(d.t.B44MTk),
+                label: d.intl.string(d.t.B44MTm),
                 action: () => o.Z.openCreateGuildModal({ location: "Guild List - ContextMenu" }),
             }),
         ],

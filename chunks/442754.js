@@ -22,11 +22,11 @@ function b(e) {
     if (e.isCategory())
         return (0, r.jsx)(l.sNh, {
             id: "opt-into-category",
-            label: b ? d.intl.string(d.t["3zySTE"]) : d.intl.string(d.t["9mysCg"]),
+            label: b ? d.intl.string(d.t["3zySTA"]) : d.intl.string(d.t["9mysCh"]),
             action: () => O(),
         });
-    let y = f ? d.intl.string(d.t.z7I3gY) : d.intl.string(d.t["N2c/Ul"]),
-        g = f ? d.intl.string(d.t.M5PWSU) : d.intl.string(d.t.RMpwZm);
+    let y = f ? d.intl.string(d.t.z7I3gd) : d.intl.string(d.t["N2c/Un"]),
+        g = f ? d.intl.string(d.t.M5PWSf) : d.intl.string(d.t.RMpwZu);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.sNh, {
@@ -39,7 +39,7 @@ function b(e) {
             p
                 ? (0, r.jsx)(l.sNh, {
                       id: "opt-out-category",
-                      label: d.intl.string(d.t.jNphKS),
+                      label: d.intl.string(d.t.jNphKT),
                       action: () =>
                           void (
                               null != e.parent_id &&
@@ -48,7 +48,7 @@ function b(e) {
                   })
                 : (0, r.jsx)(l.sNh, {
                       id: "opt-into-channel",
-                      label: b ? d.intl.string(d.t["3zySTE"]) : d.intl.string(d.t["9mysCg"]),
+                      label: b ? d.intl.string(d.t["3zySTA"]) : d.intl.string(d.t["9mysCh"]),
                       action: () => O(),
                   }),
         ],

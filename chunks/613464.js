@@ -23,33 +23,33 @@ var r = n(951288),
     S = n(345226);
 function p(e) {
     let { userId: t, guildId: n, onClose: i, className: p, infoPanelClassName: C, style: D } = e,
-        L = (0, O.m)(n),
-        U = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
+        U = (0, O.m)(n),
+        L = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
         M = (0, a.e7)([N.ZP], () => N.ZP.getMember(n, t), [n, t]),
-        [x, b] = l.useState(null == U || null == M),
+        [b, x] = l.useState(null == L || null == M),
         v = (0, c.Z)(M),
         P = l.useRef(null),
         { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
         y = (0, I.ZP)(t, n),
         G = (0, E.ZP)();
     return (l.useEffect(() => {
-        L || i();
-    }, [L, i]),
+        U || i();
+    }, [U, i]),
     l.useEffect(() => {
-        null == v || null != M || x || i();
-    }, [x, M, i, v]),
+        null == v || null != M || b || i();
+    }, [b, M, i, v]),
     l.useEffect(() => {
-        null != U && null != M && b(!1);
-    }, [U, M]),
+        null != L && null != M && x(!1);
+    }, [L, M]),
     l.useEffect(() => {
         let e = null == M;
         return (
-            !x && e && (P.current = window.setTimeout(i, 500)),
+            !b && e && (P.current = window.setTimeout(i, 500)),
             () => {
                 null != P.current && window.clearTimeout(P.current);
             }
         );
-    }, [x, M, i]),
+    }, [b, M, i]),
     (0, d.$)({ [n]: [t] }, "GuildMemberModViewSidebar"),
     l.useEffect(() => {
         !(async function () {
@@ -61,17 +61,17 @@ function p(e) {
                     dispatchWait: !0,
                 }),
             ];
-            await Promise.all(e), b(!1);
+            await Promise.all(e), x(!1);
         })();
     }, [n, t]),
-    L)
-        ? x || null == U || null == M
+    U)
+        ? b || null == L || null == M
             ? (0, r.jsx)("div", {
                   className: s()(S.sidebarContainer, S.loadingContainer, p),
                   style: D,
                   children: (0, r.jsx)(o.$jN, {
                       animated: !0,
-                      type: x ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS,
+                      type: b ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS,
                   }),
               })
             : (0, r.jsx)(A.Gt, {
@@ -80,7 +80,7 @@ function p(e) {
                       className: s()(S.sidebarContainer, p),
                       style: D,
                       children: (0, r.jsx)(g.Z, {
-                          user: U,
+                          user: L,
                           displayProfile: y,
                           themeType: null,
                           themeOverride: G,

@@ -1,19 +1,19 @@
 n.d(t, {
-    Z: () => b,
-    o: () => p,
+    Z: () => g,
+    o: () => h,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    l = n.n(a),
-    o = n(28664),
-    c = n(481060),
-    s = n(810568),
+    l = n(120356),
+    a = n.n(l),
+    s = n(28664),
+    o = n(481060),
+    c = n(810568),
     u = n(168524),
     d = n(388032),
-    f = n(932366);
-function g(e) {
+    p = n(932366);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,75 +38,75 @@ function g(e) {
     }
     return e;
 }
-function p(e) {
+function h(e) {
     let { imageSrc: t, gameName: n } = e,
-        [a, l] = i.useState(!1),
-        o = null != n ? n : d.intl.string(d.t.GIWFlJ);
-    return a || null == t
+        [l, a] = i.useState(!1),
+        s = null != n ? n : d.intl.string(d.t.GIWFlF);
+    return l || null == t
         ? (0, r.jsx)("div", {
               role: "img",
-              "aria-label": o,
-              className: f.fallback,
-              children: (0, r.jsx)(c.Text, {
+              "aria-label": s,
+              className: p.fallback,
+              children: (0, r.jsx)(o.Text, {
                   variant: "text-xxs/medium",
                   lineClamp: 3,
                   "aria-hidden": !0,
-                  children: o,
+                  children: s,
               }),
           })
         : (0, r.jsx)("img", {
               src: t,
-              alt: o,
-              className: f.gameCoverImage,
-              onError: () => l(!0),
-              onLoad: () => l(!1),
+              alt: s,
+              className: p.gameCoverImage,
+              onError: () => a(!0),
+              onLoad: () => a(!1),
           });
 }
 function m(e) {
-    let { imageSrc: t, gameName: n, applicationId: i, userId: a, className: g, hideTooltip: m = !1, coverRef: b } = e,
-        h = (0, u.Z)({
+    let { imageSrc: t, gameName: n, applicationId: i, userId: l, className: f, hideTooltip: m = !1, coverRef: g } = e,
+        _ = (0, u.Z)({
             location: "GameCover",
             applicationId: i,
-            source: s.m1.UserProfile,
-            sourceUserId: a,
+            source: c.m1.UserProfile,
+            sourceUserId: l,
             trackEntryPointImpression: !0,
         }),
-        v = null != n ? n : d.intl.string(d.t.GIWFlJ),
-        y = d.intl.formatToPlainString(d.t["8QLQBw"], { gameName: v }),
-        j = (e) =>
+        b = null != n ? n : d.intl.string(d.t.GIWFlF),
+        E = d.intl.formatToPlainString(d.t["8QLQB+"], { gameName: b }),
+        O = (e) =>
             m
                 ? e
-                : (0, r.jsx)(o.u, {
-                      text: v,
+                : (0, r.jsx)(s.u, {
+                      text: b,
                       children: e,
                   });
-    return j(
-        null == h
-            ? (0, r.jsx)(c.tEY, {
+    return O(
+        null == _
+            ? (0, r.jsx)(o.tEY, {
                   children: (0, r.jsx)("div", {
-                      ref: b,
-                      className: g,
+                      ref: g,
+                      className: f,
                       tabIndex: -1,
-                      children: (0, r.jsx)(p, {
+                      children: (0, r.jsx)(h, {
                           imageSrc: t,
                           gameName: n,
                       }),
                   }),
               })
-            : (0, r.jsx)(c.P3F, {
-                  innerRef: b,
-                  onClick: h,
-                  "aria-label": y,
-                  className: l()(f.clickable, g),
-                  children: (0, r.jsx)(p, {
+            : (0, r.jsx)(o.P3F, {
+                  innerRef: g,
+                  onClick: _,
+                  "aria-label": E,
+                  className: a()(p.clickable, f),
+                  children: (0, r.jsx)(h, {
                       imageSrc: t,
                       gameName: n,
                   }),
               }),
     );
 }
-function b(e) {
-    var { applicationId: t, userId: n, className: i, disableInteraction: a = !1, hideTooltip: o, coverRef: s } = e,
+function g(e) {
+    var { applicationId: t, userId: n, className: i, disableInteraction: l = !1, hideTooltip: s, coverRef: c } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -116,37 +116,37 @@ function b(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["applicationId", "userId", "className", "disableInteraction", "hideTooltip", "coverRef"]);
-    let d = l()(f.coverContainer, i);
-    return a
-        ? (0, r.jsx)(c.tEY, {
+    let d = a()(p.coverContainer, i);
+    return l
+        ? (0, r.jsx)(o.tEY, {
               children: (0, r.jsx)("div", {
-                  ref: s,
+                  ref: c,
                   className: d,
                   tabIndex: -1,
-                  children: (0, r.jsx)(p, g({}, u)),
+                  children: (0, r.jsx)(h, f({}, u)),
               }),
           })
         : (0, r.jsx)(
               m,
-              g(
+              f(
                   {
                       className: d,
                       applicationId: t,
                       userId: n,
-                      hideTooltip: o,
-                      coverRef: s,
+                      hideTooltip: s,
+                      coverRef: c,
                   },
                   u,
               ),

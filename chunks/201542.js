@@ -78,8 +78,8 @@ let N = i.memo(function (e) {
             onVolumeShow: N,
             onVolumeHide: R,
             onPlay: P,
-            onPause: w,
-            onError: D,
+            onPause: D,
+            onError: w,
             playbackCacheKey: L,
         } = e,
         x = i.useRef(null),
@@ -129,8 +129,8 @@ let N = i.memo(function (e) {
             let e = x.current;
             if (null == e) return;
             let t = e.error;
-            null == D || D(t);
-        }, [D]),
+            null == w || w(t);
+        }, [w]),
         eu = i.useCallback(
             (e) => {
                 let t = (0, g.A)(e, 1);
@@ -161,7 +161,7 @@ let N = i.memo(function (e) {
         em = {
             played: q,
             currentTime: G,
-            onPause: w,
+            onPause: D,
             onPlay: P,
         },
         eg = i.useRef(em);
@@ -208,8 +208,8 @@ let N = i.memo(function (e) {
         A(x, Y, B),
         C(n, Y, W);
     let eE = Y ? l.fpf : l.o1U,
-        eb = Y ? O.intl.string(O.t.ZcgDJS) : O.intl.string(O.t.RscU7O),
-        ey = O.intl.formatToPlainString(O.t.LgCPMj, { playbackRate: k }),
+        eb = Y ? O.intl.string(O.t.ZcgDJX) : O.intl.string(O.t.RscU7I),
+        ey = O.intl.formatToPlainString(O.t.LgCPMt, { playbackRate: k }),
         eO = "".concat(k.toString().replace(/^0/, ""), "X");
     t =
         "Safari" === platform.name

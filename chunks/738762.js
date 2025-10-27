@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(493683),
-    o = n(367907),
-    s = n(205129),
+    s = n(367907),
+    o = n(205129),
     c = n(626135),
     u = n(981631),
     d = n(388032);
@@ -37,19 +37,19 @@ function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { priorityMembers: n, partiedMembers: f } = e,
         h = i.useContext(c.AnalyticsContext),
-        g = n.map((e) => {
+        m = n.map((e) => {
             let { user: t } = e;
             return t.id;
         }),
-        m = 1 === f.length && 1 === n.length,
-        b = n.length - f.length > 0;
-    return (m || t) && !b && 0 !== g.length
+        g = 1 === f.length && 1 === n.length,
+        _ = n.length - f.length > 0;
+    return (g || t) && !_ && 0 !== m.length
         ? (0, r.jsx)(l.sNh, {
               id: "message",
               action: function () {
-                  a.Z.openPrivateChannel({ recipientIds: g }).then((t) => {
+                  a.Z.openPrivateChannel({ recipientIds: m }).then((t) => {
                       var n, r;
-                      return o.ZP.trackWithMetadata(
+                      return s.ZP.trackWithMetadata(
                           u.rMx.ACTIVITY_FEED_DM_VISITED,
                           p(
                               {
@@ -70,10 +70,10 @@ function f(e) {
                                             }),
                                       n),
                                   channel_id: t,
-                                  recipient_id: "string" == typeof g ? g : g[0],
+                                  recipient_id: "string" == typeof m ? m : m[0],
                                   af_recently_played: !1,
                               },
-                              (0, s.y)(e),
+                              (0, o.y)(e),
                           ),
                       );
                   });

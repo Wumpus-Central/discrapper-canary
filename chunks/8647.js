@@ -55,13 +55,13 @@ let I = function (e) {
                                 className: g.bannerHeader,
                                 variant: "heading-md/extrabold",
                                 color: "header-primary",
-                                children: m.intl.string(m.t["+5UxMD"]),
+                                children: m.intl.string(m.t["+5UxML"]),
                             }),
                             (0, r.jsx)(s.Text, {
                                 className: g.bannerText,
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: m.intl.format(m.t["lVOH/v"], {
+                                children: m.intl.format(m.t["lVOH/p"], {
                                     helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
                                 }),
                             }),
@@ -96,19 +96,19 @@ let I = function (e) {
                                     className: g.bannerHeader,
                                     variant: "heading-lg/extrabold",
                                     color: "header-primary",
-                                    children: m.intl.string(m.t["+5UxMD"]),
+                                    children: m.intl.string(m.t["+5UxML"]),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     className: g.bannerText,
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    children: m.intl.format(m.t["lVOH/v"], {
+                                    children: m.intl.format(m.t["lVOH/p"], {
                                         helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
                                     }),
                                 }),
                                 (0, r.jsx)(_.Z, {
                                     textOptions: {
-                                        textOverride: m.intl.string(m.t.J61px8),
+                                        textOverride: m.intl.string(m.t.J61px0),
                                         textClassName: g.subscribeButtonText,
                                     },
                                     subscriptionTier: p.Si.TIER_2,
@@ -144,7 +144,7 @@ let I = function (e) {
                             children: (0, r.jsx)(s.Text, {
                                 variant: "eyebrow",
                                 color: "always-white",
-                                children: m.intl.string(m.t.OS9KPj),
+                                children: m.intl.string(m.t.OS9KPu),
                             }),
                         }),
                         (0, r.jsxs)("div", {
@@ -154,19 +154,19 @@ let I = function (e) {
                                     className: g.bannerHeader,
                                     variant: "heading-xxl/extrabold",
                                     color: "header-primary",
-                                    children: m.intl.string(m.t["+5UxMD"]),
+                                    children: m.intl.string(m.t["+5UxML"]),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     className: g.bannerText,
                                     variant: "text-md/medium",
                                     color: "text-secondary",
-                                    children: m.intl.format(m.t["lVOH/v"], {
+                                    children: m.intl.format(m.t["lVOH/p"], {
                                         helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
                                     }),
                                 }),
                                 (0, r.jsx)(_.Z, {
                                     textOptions: {
-                                        textOverride: m.intl.string(m.t.J61px8),
+                                        textOverride: m.intl.string(m.t.J61px0),
                                         textClassName: g.subscribeButtonText,
                                     },
                                     subscriptionTier: p.Si.TIER_2,

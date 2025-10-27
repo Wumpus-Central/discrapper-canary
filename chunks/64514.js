@@ -3,8 +3,8 @@ var r = n(846519),
     i = n(570140),
     l = n(317770),
     a = n(626135),
-    o = n(70956),
-    s = n(960048),
+    s = n(70956),
+    o = n(960048),
     c = n(930446),
     u = n(127438),
     d = n(981631);
@@ -49,12 +49,12 @@ class f extends l.Z {
             p(this, "lastHeartbeatTimestamp", 0),
             p(this, "maybeStartHeartbeat", () => {
                 this.heartbeatInterval.isStarted() ||
-                    (this.trackHeartbeat(), this.heartbeatInterval.start(5 * o.Z.Millis.MINUTE, this.trackHeartbeat));
+                    (this.trackHeartbeat(), this.heartbeatInterval.start(5 * s.Z.Millis.MINUTE, this.trackHeartbeat));
             }),
             p(this, "startAnalyticHeartbeat", () => {
                 this.schedulerStarted ||
                     ((this.schedulerStarted = !0),
-                    s.Z.addBreadcrumb({
+                    o.Z.addBreadcrumb({
                         category: "ad",
                         message: "Starting ad session heartbeat",
                     }),
@@ -63,7 +63,7 @@ class f extends l.Z {
             p(this, "trackHeartbeat", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if (!t.schedulerStarted && !e) {
-                    s.Z.addBreadcrumb({
+                    o.Z.addBreadcrumb({
                         category: "ad",
                         message: "Ad heartbeat called but scheduler not started",
                     }),
@@ -72,7 +72,7 @@ class f extends l.Z {
                 }
                 let n = performance.now(),
                     r = n - t.lastHeartbeatTimestamp,
-                    i = 5 * o.Z.Millis.MINUTE;
+                    i = 5 * s.Z.Millis.MINUTE;
                 if (!e && t.lastHeartbeatTimestamp > 0 && r < i) return;
                 let l = (0, c.Gy)();
                 a.default.track(d.rMx.CLIENT_AD_HEARTBEAT, {
@@ -87,7 +87,7 @@ class f extends l.Z {
                 t.schedulerStarted &&
                     ((t.schedulerStarted = !1),
                     (t.lastHeartbeatTimestamp = 0),
-                    s.Z.addBreadcrumb({
+                    o.Z.addBreadcrumb({
                         category: "ad",
                         message: "Stopping ad session heartbeat: ".concat(e),
                     }),
@@ -99,7 +99,7 @@ class f extends l.Z {
                     try {
                         t.startAnalyticHeartbeat();
                     } catch (e) {
-                        s.Z.captureException(e);
+                        o.Z.captureException(e);
                     }
                 else t.stopAnalyticHeartbeat(e);
             }),

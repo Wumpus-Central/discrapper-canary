@@ -11,7 +11,7 @@ function u(e, n, t) {
     return (0, o.jsx)(a.sNh, {
         id: "report-app",
         color: "danger",
-        label: l.intl.string(l.t.NgA5vr),
+        label: l.intl.string(l.t.NgA5vp),
         action: () =>
             (0, i.uu)({
                 application: e,

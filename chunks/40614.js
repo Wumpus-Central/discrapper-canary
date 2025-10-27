@@ -15,7 +15,7 @@ function u(e) {
             className: c.textContent,
             variant: "text-xs/medium",
             color: "text-secondary",
-            children: s.intl.string(s.t.jfrLLS),
+            children: s.intl.string(s.t.jfrLLb),
         }),
     });
 }

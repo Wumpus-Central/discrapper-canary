@@ -87,7 +87,7 @@ function T(e) {
     let k = i.useCallback((e) => {
             (Z.current = e), j(null == e ? void 0 : e.soundId);
         }, []),
-        U = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 if (null == e) return void k(null);
                 let t = x[e];
@@ -95,7 +95,7 @@ function T(e) {
             },
             [k, x],
         ),
-        M = i.useCallback(
+        U = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = x[e];
@@ -131,8 +131,8 @@ function T(e) {
                   itemHeight: 52,
                   showDeadZoneIndicator: !I,
                   activeItem: A,
-                  onItemSelect: U,
-                  onItemAction: M,
+                  onItemSelect: M,
+                  onItemAction: U,
                   onClose: v,
                   interactive: S,
                   children: L,

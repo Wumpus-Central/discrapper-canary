@@ -178,7 +178,7 @@ function N() {
                     (0, a.jsx)(p.hU, {
                         size: "sm",
                         variant: "icon-only",
-                        "aria-label": C.intl.string(C.t.VkKicX),
+                        "aria-label": C.intl.string(C.t.VkKicb),
                         icon: p.XHJ,
                         onClick: b.Zw,
                     }),

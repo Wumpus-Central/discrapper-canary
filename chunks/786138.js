@@ -37,11 +37,11 @@ function y(e) {
         }),
         R = (0, a.e7)([d.Z], () => d.Z.getState().soundshareEnabled),
         P = f.Z.supports(E.AN.DESKTOP_CAPTURE_APPLICATIONS),
-        w = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
-        D = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
+        D = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
+        w = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
         L = (0, h.Z)(O, A),
         x = (0, p.Z)(O, A, g.Vq),
-        M = null != C && w && (!C.startsWith("screen") || D),
+        M = null != C && D && (!C.startsWith("screen") || w),
         k = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, _.isLinux)()),
         j = i.useCallback(() => {
             (null == C ? void 0 : C.startsWith("prepicked:"))
@@ -62,12 +62,12 @@ function y(e) {
             U &&
             (null != (y = null == N ? void 0 : N.applications.length) ? y : 0) > 0,
         Z = G
-            ? b.intl.string(b.t.qDK8gY)
+            ? b.intl.string(b.t.qDK8gQ)
             : B
-              ? b.intl.string(b.t["3m8w+f"])
+              ? b.intl.string(b.t["3m8w+Q"])
               : S
-                ? b.intl.string(b.t.eAktHh)
-                : b.intl.string(b.t.qntSam),
+                ? b.intl.string(b.t.eAktHv)
+                : b.intl.string(b.t.qntSal),
         F = i.useCallback(() => {
             let { preset: e, resolution: t, fps: n } = d.Z.getState(),
                 r = {
@@ -94,21 +94,21 @@ function y(e) {
     if (null == O)
         return (0, r.jsx)(o.sNh, {
             id: "share-your-screen",
-            label: b.intl.string(b.t.fjBNo6),
+            label: b.intl.string(b.t.fjBNo1),
             icon: o.hGI,
             action: v,
         });
     let V = _.isPlatformEmbedded
             ? (0, r.jsx)(o.sNh, {
                   id: "stream-settings",
-                  label: b.intl.string(b.t.ytAD9f),
+                  label: b.intl.string(b.t.ytAD9d),
                   children: L,
               })
             : null,
         H = M
             ? (0, r.jsx)(o.S89, {
                   id: "stream-settings-audio-enable",
-                  label: S ? b.intl.string(b.t.af2Tw8) : b.intl.string(b.t.ZJEHt7),
+                  label: S ? b.intl.string(b.t.af2Tw1) : b.intl.string(b.t.ZJEHt7),
                   checked: R,
                   action: F,
               })
@@ -125,7 +125,7 @@ function y(e) {
         W = (0, r.jsx)(o.sNh, {
             id: "stop-streaming",
             color: "danger",
-            label: b.intl.string(b.t.S5anIS),
+            label: b.intl.string(b.t.S5anIc),
             icon: o.g5r,
             action: () => (0, u.Z)(O),
         });

@@ -5,16 +5,16 @@ r.d(t, {
     r(388685);
 var n = r(951288),
     i = r(647438),
-    s = r(120356),
-    l = r.n(s),
+    l = r(120356),
+    s = r.n(l),
     a = r(843611),
-    o = r(979554),
-    c = r(311570),
+    c = r(979554),
+    o = r(311570),
     u = r(442837),
     d = r(681715),
     f = r(481060),
-    p = r(100527),
-    m = r(906732),
+    m = r(100527),
+    p = r(906732),
     h = r(597688),
     I = r(237031),
     O = r(956472),
@@ -25,11 +25,11 @@ var n = r(951288),
     v = r(602733),
     S = r(823379),
     w = r(51144),
-    y = r(892001),
-    x = r(221300),
+    x = r(892001),
+    y = r(221300),
     E = r(688192),
-    T = r(981631),
-    N = r(215023),
+    N = r(981631),
+    T = r(215023),
     k = r(474936),
     L = r(388032),
     _ = r(232644),
@@ -46,13 +46,13 @@ let Z = (e) => {
 function F(e) {
     let { surface: t = E.Y.PROFILE_MODAL } = e,
         r = i.useRef(null),
-        s = i.useRef(null);
+        l = i.useRef(null);
     return (0, n.jsx)("div", {
         ref: r,
         className: _.container,
         children: (0, n.jsx)("div", {
-            ref: s,
-            className: l()(_.card, _.placeholderCard, {
+            ref: l,
+            className: s()(_.card, _.placeholderCard, {
                 [_.smallCard]: t === E.Y.GIFTING_FLOW,
                 [_.largeCard]: t === E.Y.PROFILE_MODAL,
             }),
@@ -70,8 +70,8 @@ function R(e) {
     var t,
         r,
         {
-            profileOwner: s,
-            showIcons: l = !1,
+            profileOwner: l,
+            showIcons: s = !1,
             collectibleSource: C = v.lr.WISHLIST,
             giftingOrigin: Z = k.Wt.USER_PROFILE_WISHLIST,
         } = e,
@@ -84,32 +84,32 @@ function R(e) {
                     var r,
                         n,
                         i = {},
-                        s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++)
-                    (r = s[n]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["profileOwner", "showIcons", "collectibleSource", "giftingOrigin"]);
     let { item: R, isOwner: A } = F,
-        { analyticsLocations: G } = (0, m.ZP)(),
+        { analyticsLocations: G } = (0, p.ZP)(),
         D = (0, a.TH)(),
         W = i.useRef(null),
         { isHoveringOrFocusing: H } = (0, g.Z)(W),
-        [z] = (0, u.Wu)([j.Z], () => [j.Z.hasSentGift(R.skuId, s.id)], [R.skuId, s.id]),
+        [z] = (0, u.Wu)([j.Z], () => [j.Z.hasSentGift(R.skuId, l.id)], [R.skuId, l.id]),
         M = R.collectiblesItem.type,
         U = (() => {
             switch (M) {
-                case o.Z.AVATAR_DECORATION:
+                case c.Z.AVATAR_DECORATION:
                     return L.intl.formatToPlainString(L.t.IQQYef, { itemName: R.skuName });
-                case o.Z.PROFILE_EFFECT:
+                case c.Z.PROFILE_EFFECT:
                     return L.intl.formatToPlainString(L.t["x/MGWy"], { itemName: R.skuName });
-                case o.Z.NAMEPLATE:
+                case c.Z.NAMEPLATE:
                     return L.intl.formatToPlainString(L.t.eVNt6E, { itemName: R.skuName });
                 default:
                     (0, S.vE)(M);
@@ -118,28 +118,28 @@ function R(e) {
         V = A ? L.intl.string(L.t.FdGl5A) : L.intl.string(L.t.ilhtIa),
         Y = A ? void 0 : f.OgN,
         B = i.useCallback(() => {
-            let e = D.pathname.startsWith(T.Z5c.COLLECTIBLES_SHOP);
+            let e = D.pathname.startsWith(N.Z5c.COLLECTIBLES_SHOP);
             if (A) {
                 if (e) {
                     let e = h.Z.getProduct(R.skuId),
                         t = h.Z.getCategoryForProduct(R.skuId);
                     if (null != e && null != t) {
-                        (0, y.closeUserProfileModal)(),
+                        (0, x.closeUserProfileModal)(),
                             (0, I.T)({
                                 product: e,
                                 category: t,
                                 shouldCheckoutWithOrbs: (0, O.oQ)({ product: e }),
                                 analyticsLocations: G,
-                                analyticsSource: p.Z.USER_PROFILE_WISHLIST,
+                                analyticsSource: m.Z.USER_PROFILE_WISHLIST,
                                 returnRef: void 0,
                                 tab: void 0,
-                                variantType: N.Ch.DEFAULT,
+                                variantType: T.Ch.DEFAULT,
                             });
                         return;
                     }
                 }
-                (0, y.closeUserProfileModal)(),
-                    (0, P.uL)("".concat(T.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(R.skuId));
+                (0, x.closeUserProfileModal)(),
+                    (0, P.uL)("".concat(N.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(R.skuId));
             } else {
                 if (z) return;
                 (0, b.Z)({
@@ -147,19 +147,19 @@ function R(e) {
                     isGift: !0,
                     giftingOrigin: Z,
                     analyticsLocations: G,
-                    giftRecipient: s,
-                    variantsReturnStyle: c.v.VARIANTS_GROUP,
+                    giftRecipient: l,
+                    variantsReturnStyle: o.v.VARIANTS_GROUP,
                 });
             }
-        }, [D.pathname, R.skuId, G, A, z, s, Z]),
+        }, [D.pathname, R.skuId, G, A, z, l, Z]),
         K = i.useCallback(
             () =>
-                l
+                s
                     ? C === v.lr.WISHLIST
                         ? (0, n.jsx)("div", {
                               className: _.itemIcon,
                               children: (0, n.jsx)(d.u, {
-                                  text: L.intl.formatToPlainString(L.t.p3RmJF, { username: w.ZP.getName(s) }),
+                                  text: L.intl.formatToPlainString(L.t.p3RmJF, { username: w.ZP.getName(l) }),
                                   position: "top",
                                   children: (0, n.jsx)(f.h_8, {
                                       size: "custom",
@@ -187,17 +187,17 @@ function R(e) {
                             })
                           : null
                     : null,
-            [l, C, s],
+            [s, C, l],
         ),
         Q = i.useCallback(
             () =>
-                (0, n.jsx)(x.Z, {
+                (0, n.jsx)(y.Z, {
                     item: R,
-                    profileOwner: s,
+                    profileOwner: l,
                     isHighlighted: !z && H,
                     surface: F.surface,
                 }),
-            [R, s, z, H, F.surface],
+            [R, l, z, H, F.surface],
         );
     return (0, n.jsx)(
         E.Z,

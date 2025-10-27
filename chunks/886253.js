@@ -31,19 +31,19 @@ function b(e) {
             actions: [
                 {
                     onClick: y,
-                    text: m.intl.string(m.t.BddRzc),
+                    text: m.intl.string(m.t.BddRzS),
                     variant: "primary",
                 },
             ],
             onClose: y,
             size: "sm",
             transitionState: b,
-            title: m.intl.string(m.t["0Bf80N"]),
+            title: m.intl.string(m.t["0Bf80I"]),
             children: (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
                 className: g.unavailableBody,
-                children: m.intl.string(m.t.omH3bm),
+                children: m.intl.string(m.t.omH3bq),
             }),
         });
     let N =
@@ -85,14 +85,14 @@ function b(e) {
                             : (0, r.jsx)(s.Text, {
                                   color: "header-primary",
                                   variant: "text-xs/normal",
-                                  children: m.intl.string(m.t["3ZY+0N"]),
+                                  children: m.intl.string(m.t["3ZY+0D"]),
                               }),
                         (0, r.jsxs)("div", {
                             className: g.footerButtons,
                             children: [
                                 d.wS &&
                                     (0, r.jsx)(s.hU, {
-                                        "aria-label": m.intl.string(m.t.WqhZsr),
+                                        "aria-label": m.intl.string(m.t.WqhZss),
                                         icon: () =>
                                             (0, r.jsx)(s.xPt, {
                                                 size: "xs",
@@ -106,7 +106,7 @@ function b(e) {
                                             (0, d.JG)(e, () =>
                                                 (0, s.showToast)(
                                                     (0, s.createToast)(
-                                                        m.intl.string(m.t["L/PwZW"]),
+                                                        m.intl.string(m.t["L/PwZf"]),
                                                         s.ToastType.SUCCESS,
                                                     ),
                                                 ),

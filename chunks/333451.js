@@ -12,8 +12,8 @@ var i = n(951288),
     m = n(600164),
     E = n(963249),
     P = n(639119),
-    _ = n(165583),
-    h = n(263954),
+    h = n(165583),
+    _ = n(263954),
     S = n(706454),
     g = n(626135),
     y = n(930153),
@@ -29,31 +29,31 @@ function L(e) {
     return (0, i.jsxs)("div", {
         className: M.perksList,
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(_.Z, {
                 icon: u.Ucv,
                 iconClassName: M.perkIconGuild,
                 description: b.intl.formatToPlainString(b.t.sQBgs2, { numFreeGuildSubscriptions: O.cb }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(_.Z, {
                 icon: u.Ucv,
                 iconClassName: M.perkIconGuild,
                 description: b.intl.formatToPlainString(b.t["1A6vXi"], { percent: (0, y.T3)(n, O.Rr / 100) }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             t
-                ? (0, i.jsx)(h.Z, {
+                ? (0, i.jsx)(_.Z, {
                       icon: u.EO4,
                       iconClassName: M.perkIconChatPerks,
                       description: b.intl.string(b.t.Z9b2x2),
                   })
                 : null,
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(_.Z, {
                 icon: u.hGI,
                 iconClassName: M.perkIconStream,
                 description: b.intl.string(b.t["8dqG5E"]),
             }),
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(_.Z, {
                 icon: u.rG2,
                 iconClassName: M.perkIconUpload,
                 description: b.intl.string(b.t.cBorIy),
@@ -67,7 +67,7 @@ function T(e) {
             premiumSubscriptionPlan: n,
             onClose: r,
             onBack: a,
-            onSkip: h,
+            onSkip: _,
             onSubscriptionConfirmation: S,
             analyticsLocation: y,
             analyticsSourceLocation: T,
@@ -79,9 +79,9 @@ function T(e) {
         v = null == n || null == n.premiumSubscriptionType,
         k = f.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, x),
         D = (0, I.T4)(k.amount, k.currency),
-        w = (0, P.N)(),
-        Z = null == w ? void 0 : w.trial_id,
-        U = (null == w || null == (t = w.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_2;
+        Z = (0, P.N)(),
+        w = null == Z ? void 0 : Z.trial_id,
+        U = (null == Z || null == (t = Z.subscription_trial) ? void 0 : t.sku_id) === O.Si.TIER_2;
     return (
         l.useEffect(() => {
             g.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
@@ -100,12 +100,12 @@ function T(e) {
                             onClick: r,
                             className: M.closeButton,
                         }),
-                        U && (0, i.jsx)(_.dz, { className: M.premiumTrialBadge }),
+                        U && (0, i.jsx)(h.dz, { className: M.premiumTrialBadge }),
                         (0, i.jsx)("div", { className: s()(M.upsellImage, { [M.upsellImageWithTrialOffer]: U }) }),
                         (0, i.jsx)("div", {
                             className: M.bodyText,
                             children:
-                                null != Z
+                                null != w
                                     ? b.intl.string(b.t.AoSzEr)
                                     : b.intl.format(b.t["7vePZb"], { monthlyPrice: D }),
                         }),
@@ -124,12 +124,12 @@ function T(e) {
                                     "data-migration-pending": !0,
                                     look: c.zx.Looks.LINK,
                                     color: R,
-                                    onClick: h,
+                                    onClick: _,
                                     children: b.intl.string(b.t["SI/adm"]),
                                 }),
                                 (0, i.jsx)(u.Button, {
                                     variant: "active",
-                                    text: null != Z ? b.intl.string(b.t["Gd/XHF"]) : b.intl.string(b.t.p2moip),
+                                    text: null != w ? b.intl.string(b.t["Gd/XHF"]) : b.intl.string(b.t.p2moip),
                                     type: "submit",
                                     onClick: () => {
                                         var e, t;
@@ -190,7 +190,7 @@ function T(e) {
                                                     e),
                                                 analyticsSourceLocation: T,
                                                 onSubscriptionConfirmation: S,
-                                                trialId: Z,
+                                                trialId: w,
                                             });
                                     },
                                 }),

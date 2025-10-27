@@ -45,7 +45,7 @@ let m = function (e) {
                 className: p.card,
                 onClick: y,
                 onContextMenu: () => {},
-                "aria-label": u.intl.string(u.t.np1Wrq),
+                "aria-label": u.intl.string(u.t.np1Wru),
                 children: [
                     (0, r.jsxs)("div", {
                         className: p.header,
@@ -121,7 +121,7 @@ let m = function (e) {
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: "text-xs/medium",
                                                     color: "text-secondary",
-                                                    children: u.intl.string(u.t["/eVltr"]),
+                                                    children: u.intl.string(u.t["/eVltv"]),
                                                 })
                                               : null,
                                       ],

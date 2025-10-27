@@ -19,18 +19,18 @@ function d() {
         _ = [
             {
                 value: i.Q4.BLUR,
-                label: u.intl.string(u.t.S49UaW),
+                label: u.intl.string(u.t.S49Uad),
             },
             {
                 value: i.Q4.BLOCK,
-                label: u.intl.string(u.t["D/157e"]),
+                label: u.intl.string(u.t["D/157Y"]),
             },
         ];
     return (0, r.jsxs)(a.n, {
-        description: u.intl.string(u.t.XgH9en),
+        description: u.intl.string(u.t.XgH9eh),
         children: [
             (0, r.jsx)(o.Z, {
-                title: u.intl.string(u.t["+uI23N"]),
+                title: u.intl.string(u.t["+uI23H"]),
                 value: n,
                 onChange: (e) => f({ goreContentFriendDm: e }),
                 options: _,

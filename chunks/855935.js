@@ -72,7 +72,7 @@ function p(e) {
         onClose: () => {
             null == n || n();
         },
-        "aria-label": m.intl.string(m.t["u/7RdX"]),
+        "aria-label": m.intl.string(m.t["u/7Rdc"]),
         onSelect: C.dG4,
         children: (0, r.jsx)(s.kSQ, {
             children: b.map((e) => {
@@ -84,13 +84,13 @@ function p(e) {
                         label: (function (e) {
                             switch (e) {
                                 case c.d$.ORDER_BY_GUILD_JOINED_AT_DESC:
-                                    return m.intl.string(m.t.V7zCwM);
+                                    return m.intl.string(m.t.V7zCwB);
                                 case c.d$.ORDER_BY_GUILD_JOINED_AT_ASC:
-                                    return m.intl.string(m.t.l2Zaen);
+                                    return m.intl.string(m.t.l2Zaet);
                                 case c.d$.ORDER_BY_USER_ID_DESC:
-                                    return m.intl.string(m.t.xMA6RE);
+                                    return m.intl.string(m.t.xMA6RG);
                                 case c.d$.ORDER_BY_USER_ID_ASC:
-                                    return m.intl.string(m.t.bUKkZ2);
+                                    return m.intl.string(m.t.bUKkZx);
                                 default:
                                     return null;
                             }

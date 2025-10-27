@@ -90,7 +90,7 @@ function O(e) {
         children: (0, r.jsxs)(s.v2r, {
             navId: "guild-product-context",
             onClose: g,
-            "aria-label": p.intl.string(p.t.Z146dH),
+            "aria-label": p.intl.string(p.t.Z146dM),
             onSelect: E,
             children: [
                 (0, r.jsxs)(s.kSQ, {
@@ -98,20 +98,20 @@ function O(e) {
                         t &&
                             (0, r.jsx)(s.sNh, {
                                 id: "guild-product-edit",
-                                label: p.intl.string(p.t.EEfce3),
+                                label: p.intl.string(p.t.EEfce4),
                                 action: c,
                             }),
                         i &&
                             (0, r.jsx)(s.sNh, {
                                 id: "guild-product-copy-link",
-                                label: p.intl.string(p.t.XR26ur),
+                                label: p.intl.string(p.t.XR26uj),
                                 icon: s.xPt,
                                 action: f,
                             }),
                         a &&
                             (0, r.jsx)(s.sNh, {
                                 id: "guild-product-test-download",
-                                label: p.intl.string(p.t.aXoI6e),
+                                label: p.intl.string(p.t.aXoI6U),
                                 icon: s._8t,
                                 action: _,
                             }),
@@ -122,13 +122,13 @@ function O(e) {
                         n &&
                             (0, r.jsx)(s.sNh, {
                                 id: "guild-product-unpublish",
-                                label: p.intl.string(p.t.QrkMlJ),
+                                label: p.intl.string(p.t.QrkMlN),
                                 action: u,
                             }),
                         o &&
                             (0, r.jsx)(s.sNh, {
                                 id: "guild-product-delete",
-                                label: p.intl.string(p.t.zWjqvL),
+                                label: p.intl.string(p.t.zWjqvB),
                                 color: "danger",
                                 action: d,
                             }),
@@ -139,7 +139,7 @@ function O(e) {
                         l &&
                         (0, r.jsx)(s.sNh, {
                             id: "guild-product-report",
-                            label: p.intl.string(p.t["6yUzvL"]),
+                            label: p.intl.string(p.t["6yUzvG"]),
                             color: "danger",
                             action: m,
                         }),
@@ -203,7 +203,7 @@ function v(e) {
                     s.P3F,
                     b(g({}, e), {
                         innerRef: I,
-                        "aria-label": p.intl.formatToPlainString(p.t.RtqjeH, { productName: t.name }),
+                        "aria-label": p.intl.formatToPlainString(p.t.RtqjeB, { productName: t.name }),
                         "aria-haspopup": "listbox",
                         "aria-expanded": i,
                         className: h.productActionMenuButton,
@@ -264,7 +264,7 @@ function I(e) {
         className: o()(h.productCardClickable, h.productCard, { [h.disabled]: T }),
         onClick: T ? void 0 : i,
         onContextMenu: N,
-        "aria-label": p.intl.formatToPlainString(p.t["X/yAKi"], { productName: t.name }),
+        "aria-label": p.intl.formatToPlainString(p.t["X/yAKs"], { productName: t.name }),
         children: [
             (0, r.jsx)("img", {
                 alt: "",

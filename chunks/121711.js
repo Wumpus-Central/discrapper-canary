@@ -41,8 +41,8 @@ var r = n(951288),
     H = n(220068),
     V = n(937797),
     F = n(36243),
-    Y = n(877109),
-    z = n(110560),
+    z = n(877109),
+    Y = n(110560),
     W = n(150560),
     q = n(672188),
     K = n(558652),
@@ -130,7 +130,7 @@ function eh(e) {
 function em(e) {
     let { onLoadComplete: t, onScroll: n, onSelectTab: l, selectedTabId: a, scrollerRef: s, tabs: c } = e,
         u = i.useCallback(() => {
-            (0, z.navigateToQuestHome)({ fromContent: B.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
+            (0, Y.navigateToQuestHome)({ fromContent: B.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 D.default.track(
                     en.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
@@ -228,7 +228,7 @@ let eg = function (e) {
     }, [o, I]);
     let { onScroll: R, scrollPosition: k } = (0, C.M)(),
         B = W.Z.getState().getUtmCurrentContext(),
-        z = (0, G._)({ location: et.dr.QUEST_HOME_DESKTOP }) ? Q.Z : Q.j,
+        Y = (0, G._)({ location: et.dr.QUEST_HOME_DESKTOP }) ? Q.Z : Q.j,
         q = (0, J.z)((e) => e.registerAssetLoad),
         es = i.useRef(B);
     i.useEffect(() => {
@@ -371,9 +371,9 @@ let eg = function (e) {
                                         (0, r.jsx)(T.Z, {
                                             children:
                                                 I === U.e5.CLAIMED
-                                                    ? (0, r.jsx)(z, { onSelectTab: L })
+                                                    ? (0, r.jsx)(Y, { onSelectTab: L })
                                                     : I === U.e5.PREVIEW_TOOL
-                                                      ? (0, r.jsx)(Y.Z, {})
+                                                      ? (0, r.jsx)(z.Z, {})
                                                       : (0, r.jsx)(K.Z, {}),
                                         }),
                                     ],
@@ -425,9 +425,9 @@ let eg = function (e) {
                                                         }),
                                                     }),
                                                     I === U.e5.CLAIMED
-                                                        ? (0, r.jsx)(z, { onSelectTab: L })
+                                                        ? (0, r.jsx)(Y, { onSelectTab: L })
                                                         : I === U.e5.PREVIEW_TOOL
-                                                          ? (0, r.jsx)(Y.Z, {})
+                                                          ? (0, r.jsx)(z.Z, {})
                                                           : (0, r.jsx)(K.Z, {}),
                                                 ],
                                             }),

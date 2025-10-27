@@ -83,7 +83,7 @@ function f(e) {
         N = [];
     N.push({
         section: m,
-        label: "" !== c.name ? c.name : u.intl.string(u.t["154/bG"]),
+        label: "" !== c.name ? c.name : u.intl.string(u.t["154/bL"]),
     }),
         N.push(g(d.pNK.PROFILE, E)),
         N.push(g(d.pNK.TAG, E)),
@@ -93,7 +93,7 @@ function f(e) {
             (N.push({ section: p }),
             N.push({
                 section: m,
-                label: u.intl.string(u.t.m6lkGx),
+                label: u.intl.string(u.t.m6lkGy),
             }),
             N.push(g(d.pNK.EMOJI, E)),
             N.push(g(d.pNK.STICKERS, E)),
@@ -102,7 +102,7 @@ function f(e) {
             (N.push({ section: p }),
             N.push({
                 section: m,
-                label: u.intl.string(u.t.bMAKMD),
+                label: u.intl.string(u.t.bMAKMK),
             }),
             N.push(g(d.pNK.MEMBERS, E)),
             N.push(g(d.pNK.ROLES, E)),
@@ -120,7 +120,7 @@ function f(e) {
         (N.push({ section: p }),
         N.push({
             section: m,
-            label: u.intl.string(u.t["5tbTdX"]),
+            label: u.intl.string(u.t["5tbTdV"]),
         }),
         N.push(g(d.pNK.SAFETY, E)),
         N.push(g(d.pNK.MODERATION, E)),

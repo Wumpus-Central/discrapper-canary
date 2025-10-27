@@ -7,7 +7,7 @@ var i = n(436846),
 function o(e) {
     var t,
         n,
-        { user: o, widget: s, guildId: c, channelId: u, disableInteraction: d } = e,
+        { user: o, widget: c, guildId: s, channelId: u, disableInteraction: d } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -29,7 +29,7 @@ function o(e) {
             }
             return i;
         })(e, ["user", "widget", "guildId", "channelId", "disableInteraction"]);
-    let g = s.games[0];
+    let g = c.games[0];
     return (0, r.jsx)(
         a.Z,
         ((t = (function (e) {
@@ -59,7 +59,7 @@ function o(e) {
         })(
             {
                 userId: o.id,
-                widget: s,
+                widget: c,
                 disableInteraction: d,
             },
             f,
@@ -70,13 +70,13 @@ function o(e) {
                     null != g
                         ? (0, r.jsx)(l.Z, {
                               user: o,
-                              widgetType: s.type,
+                              widgetType: c.type,
                               game: g,
-                              guildId: c,
+                              guildId: s,
                               channelId: u,
                               disableInteraction: d,
                           })
-                        : (0, r.jsx)(i.Z, { widget: s }),
+                        : (0, r.jsx)(i.Z, { widget: c }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

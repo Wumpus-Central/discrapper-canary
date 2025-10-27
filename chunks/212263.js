@@ -92,10 +92,10 @@ let T = (e) => {
                 : v.subCategory === h.t0.NEWLY_ADDED_EMOJI
                   ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
                   : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let w = null != v ? v.emoji : void 0,
-        D = null != w && w.animated,
-        L = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
-        x = null != w ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
+    let D = null != v ? v.emoji : void 0,
+        w = null != D && D.animated,
+        L = null != D && !_.ZP.isInternalEmojiForGuildId(D, null == y ? void 0 : y.getGuildId()),
+        x = null != D ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
         M = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
@@ -108,8 +108,8 @@ let T = (e) => {
                 width: 220,
                 height: 132,
             },
-            title: b.intl.string(b.t["0+11FB"]),
-            description: b.intl.string(b.t.dURIzc),
+            title: b.intl.string(b.t["0+11FF"]),
+            description: b.intl.string(b.t.dURIzS),
             enableSocialProof: !1,
             analyticsLocationSection: m.jXE.EMOJI_UPSELL_POPOUT,
             onClose: n,
@@ -120,7 +120,7 @@ let T = (e) => {
                 location_stack: P,
                 sku_id: (0, p.Wz)(p.ZP.getSkuIdForPremiumType(E.PremiumTypes.TIER_2)),
                 has_search_query: null != R && "" !== R,
-                is_animated: D,
+                is_animated: w,
             },
             isEmojiPickerOverlay: !0,
         })

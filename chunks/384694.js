@@ -120,7 +120,7 @@ let b = (e) => ({
                                               variant: "text-xs/normal",
                                               color: "text-tertiary",
                                               className: x.text,
-                                              children: v.intl.format(v.t.WkK72t, { count: N[e.value] }),
+                                              children: v.intl.format(v.t.WkK72v, { count: N[e.value] }),
                                           }),
                                       ],
                                   }),
@@ -150,7 +150,7 @@ let b = (e) => ({
                 renderOptionValue: I,
                 value: n,
                 "aria-labelledby": _,
-                placeholder: C.length < 1 ? v.intl.string(v.t.jHpxws) : v.intl.string(v.t["4mqeQE"]),
+                placeholder: C.length < 1 ? v.intl.string(v.t.jHpxwo) : v.intl.string(v.t["4mqeQO"]),
                 isDisabled: C.length < 1,
             })
         );

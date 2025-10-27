@@ -18,18 +18,18 @@ var r = n(951288),
     E = n(613928),
     O = n(390536),
     I = n(581696),
-    y = n(981631),
-    v = n(388032),
+    v = n(981631),
+    y = n(388032),
     C = n(357483),
     S = n(97009);
 let T = (0, d.Z)(function (e) {
     let { width: t } = e,
         n = (0, _.b5)("ICYMIPage", !1);
     i.useEffect(() => {
-        n || (0, s.uL)(y.Z5c.ME);
+        n || (0, s.uL)(v.Z5c.ME);
     }, [n]),
         i.useLayoutEffect(() => {
-            n && u.Y(y.Z5c.ICYMI);
+            n && u.Y(v.Z5c.ICYMI);
         }, [n]),
         (0, p.ZP)(() => {
             n && (0, m.e)("icymi");
@@ -37,7 +37,7 @@ let T = (0, d.Z)(function (e) {
     let l = (0, o.e7)([g.Z], () => g.Z.theme),
         d = (0, o.e7)([b.Z], () => b.Z.isRefreshing()),
         T = i.useRef(null);
-    (0, f.Tt)({ location: v.intl.string(v.t["jnXV/V"]) });
+    (0, f.Tt)({ location: y.intl.string(y.t["jnXV/V"]) });
     let [N, j] = i.useState(!1);
     i.useEffect(() => {
         let e = (e) => {
@@ -65,12 +65,12 @@ let T = (0, d.Z)(function (e) {
         A = i.useCallback(
             async (e) => {
                 e.metaKey && x
-                    ? await (0, E.ye)(y.qAy.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON)
+                    ? await (0, E.ye)(v.qAy.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON)
                     : await P();
             },
             [P, x],
         ),
-        Z = N && x ? v.intl.string(v.t.YplSn2) : v.intl.string(v.t.wzzjk9);
+        Z = N && x ? y.intl.string(y.t.YplSn2) : y.intl.string(y.t.wzzjk9);
     return n
         ? (0, r.jsxs)("div", {
               className: a()(S.chat, C.container),
@@ -92,11 +92,11 @@ let T = (0, d.Z)(function (e) {
                                       icon: c.qOE,
                                       "aria-hidden": !0,
                                   }),
-                                  (0, r.jsx)(h.Z.Title, { children: v.intl.string(v.t["jnXV/V"]) }),
+                                  (0, r.jsx)(h.Z.Title, { children: y.intl.string(y.t["jnXV/V"]) }),
                                   (0, r.jsx)(h.Z.Title, {
                                       children: (0, r.jsx)("p", {
                                           className: C.preAlphaText,
-                                          children: v.intl.string(v.t.Ac2OZA),
+                                          children: y.intl.string(y.t.Ac2OZA),
                                       }),
                                   }),
                               ],

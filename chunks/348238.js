@@ -7,7 +7,7 @@ n.d(t, {
     R9: () => j,
     RN: () => F,
     Wl: () => L,
-    XO: () => D,
+    XO: () => w,
     Xn: () => z,
     bb: () => W,
     qo: () => B,
@@ -98,7 +98,7 @@ function P(e, t, n) {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function w(e, t, n) {
+function D(e, t, n) {
     return i.useCallback(
         (r) => {
             let i = g.default.getUser(e);
@@ -115,21 +115,21 @@ function w(e, t, n) {
         [e, t, n],
     );
 }
-function D(e, t, n, r) {
+function w(e, t, n, r) {
     let i = P("usernameProfile", n, r);
-    return w(e.author.id, t.id, i);
+    return D(e.author.id, t.id, i);
 }
 function L(e, t, n, r) {
     let i = P("referencedUsernameProfile", n, r);
-    return w(null == e ? void 0 : e.author.id, t.id, i);
+    return D(null == e ? void 0 : e.author.id, t.id, i);
 }
 function x(e, t, n, r) {
     let i = P("interactionUsernameProfile", n, r);
-    return w(null == e ? void 0 : e.user.id, t.id, i);
+    return D(null == e ? void 0 : e.user.id, t.id, i);
 }
 function M(e, t, n, r) {
     let i = P("referencedUsernameProfile", n, r);
-    return w(e, t.id, i);
+    return D(e, t.id, i);
 }
 function k(e) {
     return i.useCallback(

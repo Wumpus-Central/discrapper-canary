@@ -57,13 +57,13 @@ function v(e) {
             d.isPlatformEmbedded || n !== m.pM4.PUSH_TO_TALK
                 ? (0, r.jsx)(o.Wn, {
                       messageType: o.QYI.INFO,
-                      children: g.intl.format(g.t.HVvn5e, {
+                      children: g.intl.format(g.t.HVvn5T, {
                           onClick: () => (0, p.openUserSettings)(_.n.KEYBINDS_PANEL, { section: m.oAB.KEYBINDS }),
                       }),
                   })
                 : (0, r.jsx)(o.Wn, {
                       messageType: o.QYI.WARNING,
-                      children: g.intl.format(g.t.zvMPOT, { onDownloadClick: () => (0, h.y)("Help Text PTT") }),
+                      children: g.intl.format(g.t.zvMPOc, { onDownloadClick: () => (0, h.y)("Help Text PTT") }),
                   })),
         (0, r.jsxs)(o.Kqy, {
             gap: 20,
@@ -73,14 +73,14 @@ function v(e) {
                     direction: "horizontal",
                     children: [
                         (0, r.jsx)(o.gNt, {
-                            label: g.intl.string(g.t.YkDjVF),
+                            label: g.intl.string(g.t.YkDjVM),
                             children: (0, r.jsx)(l.Z, {
                                 defaultValue: i,
                                 onChange: (e) => s.Z.setMode(n, { shortcut: e }),
                             }),
                         }),
                         (0, r.jsx)(o.iRW, {
-                            label: g.intl.string(g.t.y0ShVl),
+                            label: g.intl.string(g.t.y0ShVt),
                             initialValue: c,
                             onValueChange: (e) => s.Z.setMode(n, { delay: e }),
                             onValueRender: O,
@@ -90,8 +90,8 @@ function v(e) {
                 }),
                 b &&
                     (0, r.jsx)(o.rsf, {
-                        label: g.intl.string(g.t.EGn1eH),
-                        description: g.intl.string(g.t.iT257u),
+                        label: g.intl.string(g.t.EGn1eN),
+                        description: g.intl.string(g.t.iT257i),
                         checked: null != E && E,
                         onChange: (e) => s.Z.setMode(n, { pttLatchingEnabled: e }),
                     }),
@@ -106,11 +106,11 @@ function I() {
         l = [
             {
                 value: m.pM4.VOICE_ACTIVITY,
-                name: g.intl.string(g.t.cHCEOD),
+                name: g.intl.string(g.t.cHCEOJ),
             },
             {
                 value: m.pM4.PUSH_TO_TALK,
-                name: y ? g.intl.string(g.t["1AINrK"]) : g.intl.string(g.t.Q8gkVF),
+                name: y ? g.intl.string(g.t["1AINrB"]) : g.intl.string(g.t.Q8gkVL),
             },
         ],
         d = i.useCallback(
@@ -125,11 +125,11 @@ function I() {
                                 e,
                                 b(
                                     {
-                                        title: g.intl.string(g.t.Kdt0GR),
-                                        confirmText: g.intl.string(g.t["1WjMbG"]),
-                                        cancelText: g.intl.string(g.t.BddRzc),
+                                        title: g.intl.string(g.t.Kdt0Gb),
+                                        confirmText: g.intl.string(g.t["1WjMbC"]),
+                                        cancelText: g.intl.string(g.t.BddRzS),
                                         onConfirm: () => (0, h.y)("PTT Limited Modal"),
-                                        body: g.intl.string(g.t.NIozvr),
+                                        body: g.intl.string(g.t.NIozvt),
                                     },
                                     t,
                                 ),
@@ -143,7 +143,7 @@ function I() {
         gap: 20,
         children: [
             (0, r.jsx)(o.FXm, {
-                label: g.intl.string(g.t["pS+K2N"]),
+                label: g.intl.string(g.t["pS+K2L"]),
                 onChange: (e) => d({ value: e }),
                 options: l,
                 value: t,

@@ -2,10 +2,10 @@ r.d(t, {
     MC: () => p,
     Y5: () => v,
     ZF: () => j,
-    ZP: () => S,
+    ZP: () => O,
     d6: () => k,
     m8: () => w,
-    nU: () => O,
+    nU: () => S,
     tO: () => x,
 }),
     r(388685);
@@ -170,21 +170,21 @@ function y(e) {
             bufferFramecountRef: y,
             frameCheckerEffect: T,
         } = k(r, c),
-        [R, C, O] = j(t),
-        [S, E] = v(R, T),
+        [R, C, S] = j(t),
+        [O, E] = v(R, T),
         F = performance.now() - l.current < p,
         P = C(d, y.current);
     (0, i.ZP)(
         () => (
-            S(),
+            O(),
             () => {
                 E();
             }
         ),
     );
     let I = a.useCallback(() => {
-        h(), O(), S();
-    }, [h, O, S]);
+        h(), S(), O();
+    }, [h, S, O]);
     return (0, n.jsxs)("div", {
         className: f.panelGroup,
         children: [
@@ -498,7 +498,7 @@ function C(e) {
         ],
     });
 }
-function O() {
+function S() {
     let [, e] = a.useState({});
     a.useEffect(() => {
         let t = setInterval(() => {
@@ -509,11 +509,11 @@ function O() {
         };
     }, []);
 }
-function S() {
+function O() {
     let e = (0, u.e7)([d.Z], () => d.Z.getSocket()),
         [t, r] = a.useState(!1);
     return (
-        O(),
+        S(),
         (0, n.jsx)("div", {
             className: l()(m.panel, f.panel),
             children: (0, n.jsxs)(o.zJl, {

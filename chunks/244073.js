@@ -12,7 +12,7 @@ var i = n(951288),
     h = n(933557),
     f = n(600164),
     g = n(870569),
-    m = n(345243),
+    m = n(582642),
     y = n(873596),
     _ = n(917405),
     O = n(430824),
@@ -21,8 +21,8 @@ var i = n(951288),
     E = n(594174),
     x = n(979651),
     S = n(362446),
-    C = n(518084),
-    Z = n(981631),
+    Z = n(518084),
+    C = n(981631),
     j = n(388032),
     I = n(361979),
     P = n(890332);
@@ -81,9 +81,9 @@ class D extends r.PureComponent {
         let { guild: t } = this.props,
             n = (0, h.F6)(e, E.default, v.Z),
             r = null != t ? "".concat(n, " / ").concat(t.name) : n,
-            s = null != t ? t.id : Z.ME;
+            s = null != t ? t.id : C.ME;
         return (0, i.jsx)(l.rU, {
-            to: Z.Z5c.CHANNEL(s),
+            to: C.Z5c.CHANNEL(s),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
             },
@@ -109,9 +109,9 @@ class D extends r.PureComponent {
         } = this.props;
         return null == s
             ? null
-            : (0, i.jsx)(C.ZP.Bar, {
+            : (0, i.jsx)(Z.ZP.Bar, {
                   className: o()(e, I.controls, { [I.unpinned]: !n }),
-                  children: (0, i.jsxs)(C.ZP.Content, {
+                  children: (0, i.jsxs)(Z.ZP.Content, {
                       className: o()(t, I.content),
                       dynamicSize: !0,
                       children: [

@@ -73,7 +73,7 @@ function f(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-md/semibold",
                             color: "interactive-normal",
-                            children: n ? p.intl.string(p.t["vtfc4+"]) : p.intl.string(p.t.ZDRyur),
+                            children: n ? p.intl.string(p.t["vtfc4+"]) : p.intl.string(p.t.ZDRyuq),
                         }),
                         n
                             ? (0, r.jsx)(c.u04, {

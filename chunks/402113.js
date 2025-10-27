@@ -99,7 +99,7 @@ function m(e) {
             isTrayButton: !1,
             onClick: g,
             iconComponent: i.PBZ,
-            label: c.intl.string(c.t["R/FK4O"]),
+            label: c.intl.string(c.t["R/FK4A"]),
         }),
     );
 }

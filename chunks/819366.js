@@ -103,9 +103,9 @@ function T(e) {
         { analyticsLocations: N } = (0, c.ZP)(l.Z.USER_MENTION),
         R = (0, o.e7)([m.default], () => m.default.getUser(u)),
         P = (0, o.e7)([_.Z], () => _.Z.getChannel(b)),
-        w = null != P ? P.getGuildId() : null,
-        D =
-            S || null == R || null == w || null == b
+        D = null != P ? P.getGuildId() : null,
+        w =
+            S || null == R || null == D || null == b
                 ? void 0
                 : (e) => {
                       null != P &&
@@ -125,13 +125,13 @@ function T(e) {
                                           viewingChannelId: A,
                                           user: R,
                                           channel: P,
-                                          guildId: w,
+                                          guildId: D,
                                       }),
                                   );
                           });
                   },
         L = E.ZP.useName(R),
-        x = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(w, b, R));
+        x = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(D, b, R));
     if (null == R)
         return (0, r.jsx)(I, {
             userId: O,
@@ -146,7 +146,7 @@ function T(e) {
                     {
                         ref: C,
                         className: t,
-                        onContextMenu: D,
+                        onContextMenu: w,
                     },
                     e,
                 ),
@@ -163,7 +163,7 @@ function T(e) {
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: C,
                   user: R,
-                  guildId: null != w ? w : void 0,
+                  guildId: null != D ? D : void 0,
                   channelId: b,
                   position: a.tq ? "top" : "right",
                   clickTrap: !0,

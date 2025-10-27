@@ -28,9 +28,9 @@ let p = () => {
             },
             [e],
         ),
-        [O, j] = a.useState(!1),
-        C = a.useCallback(() => j(!0), []),
-        w = a.useCallback(() => j(!1), []);
+        [O, C] = a.useState(!1),
+        j = a.useCallback(() => C(!0), []),
+        w = a.useCallback(() => C(!1), []);
     (0, a.useEffect)(
         () => () => {
             l.Z.clearDraft(e.channel_id, u.d.ChannelMessage);
@@ -44,13 +44,13 @@ let p = () => {
     return (0, r.jsx)(c.ZP, {
         innerClassName: b.messageInput,
         onChange: y,
-        placeholder: f.intl.string(f.t.ZroO3N),
+        placeholder: f.intl.string(f.t.ZroO3G),
         channel: t,
         textValue: _,
         richValue: m,
         type: s.Ie.SHARE_CUSTOM_CLIENT_THEME_INPUT,
         onBlur: w,
-        onFocus: C,
+        onFocus: j,
         focused: O,
         onSubmit: v,
         parentModalKey: d.tj,

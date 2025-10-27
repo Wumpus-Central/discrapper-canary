@@ -27,28 +27,28 @@ function f(t) {
             }),
             [f, e, v],
         ),
-        y = (0, s.Z)(f, e);
-    if (b || (null == y ? void 0 : y.is_canceled)) return null;
-    let O = function () {
+        h = (0, s.Z)(f, e);
+    if (b || (null == h ? void 0 : h.is_canceled)) return null;
+    let y = function () {
         let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             l = (null == p ? void 0 : p.response) === d.gv.INTERESTED ? d.gv.UNINTERESTED : d.gv.INTERESTED,
             r = t ? null : f;
         a.Z.updateRsvp(e, r, n, l);
     };
     return (0, l.jsxs)(i.sNh, {
-        id: E ? g.intl.string(g.t["7M5gaG"]) : g.intl.string(g.t.FXixvL),
-        label: E ? g.intl.string(g.t["7M5gaG"]) : g.intl.string(g.t.FXixvL),
+        id: E ? g.intl.string(g.t["7M5gaN"]) : g.intl.string(g.t.FXixvH),
+        label: E ? g.intl.string(g.t["7M5gaN"]) : g.intl.string(g.t.FXixvH),
         action: void 0,
         children: [
             (0, l.jsx)(i.sNh, {
-                id: g.intl.string(g.t.lwZCFR),
-                label: g.intl.string(g.t.lwZCFR),
-                action: () => O(!1),
+                id: g.intl.string(g.t.lwZCFT),
+                label: g.intl.string(g.t.lwZCFT),
+                action: () => y(!1),
             }),
             (0, l.jsx)(i.sNh, {
-                id: g.intl.string(g.t.uoorxs),
-                label: g.intl.string(g.t.uoorxs),
-                action: () => O(!0),
+                id: g.intl.string(g.t.uoorxi),
+                label: g.intl.string(g.t.uoorxi),
+                action: () => y(!0),
                 disabled: null != Z,
             }),
         ],

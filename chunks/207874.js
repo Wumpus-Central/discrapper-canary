@@ -38,9 +38,9 @@ function d() {
             query: e,
             onClear: n,
             onChange: _,
-            placeholder: u.intl.string(u.t["5h0QOD"]),
+            placeholder: u.intl.string(u.t["5h0QOP"]),
             inputProps: {
-                "aria-label": u.intl.string(u.t.pk9BWV),
+                "aria-label": u.intl.string(u.t.pk9BWW),
                 "aria-expanded": !0,
                 onFocus: (e) => t(!0, e),
                 onBlur: (e) => t(!1, e),

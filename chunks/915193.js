@@ -50,7 +50,7 @@ function b(e, n) {
         : (0, t.jsx)(o.sNh, {
               id: "make-dm-owner",
               color: "danger",
-              label: u.intl.string(u.t["6t3CyM"]),
+              label: u.intl.string(u.t["6t3CyN"]),
               action: () => {
                   (0, o.h7j)((i) => {
                       var c, b;
@@ -83,9 +83,9 @@ function b(e, n) {
                           })(
                               {
                                   bodyClassName: m.confirmModal,
-                                  header: u.intl.string(u.t.WZoUsr),
-                                  confirmText: u.intl.string(u.t["cY+Ooa"]),
-                                  cancelText: u.intl.string(u.t["ETE/oK"]),
+                                  header: u.intl.string(u.t.WZoUsm),
+                                  confirmText: u.intl.string(u.t["cY+Oob"]),
+                                  cancelText: u.intl.string(u.t["ETE/oC"]),
                                   onConfirm: () => l.Z.setDMOwner(n.id, e.id),
                               },
                               i,
@@ -115,7 +115,7 @@ function b(e, n) {
                                       }),
                                       (0, t.jsx)(o.Text, {
                                           variant: "text-md/normal",
-                                          children: u.intl.format(u.t.gsBb3N, {
+                                          children: u.intl.format(u.t.gsBb3F, {
                                               usernameHook: (n, r) =>
                                                   (0, t.jsx)(
                                                       a.Z,

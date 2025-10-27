@@ -27,16 +27,16 @@ function s(t, e, n) {
                         if ("" === e) return !0;
                         let O = e.toLowerCase();
                         for (let t of null != I ? I : []) if (l()(O, t.toLowerCase())) return !0;
-                        let A = !1;
+                        let S = !1;
                         if (null != d) {
                             let t = null == (c = (0, u.qgQ)(d)) ? void 0 : c.toLowerCase();
-                            null != t && (A = l()(O, t));
+                            null != t && (S = l()(O, t));
                         }
-                        if (null != T && !A) {
+                        if (null != T && !S) {
                             let t = null == (E = (0, u.qgQ)(T)) ? void 0 : E.toLowerCase();
-                            null != t && (A = l()(O, t));
+                            null != t && (S = l()(O, t));
                         }
-                        return A;
+                        return S;
                     })(t, e, E, n) || c,
                 T = !1;
             if ((0, r.Lk)(t)) for (let e of t.layout) T = s(e, E, d) || T;

@@ -6,7 +6,7 @@ n.d(t, {
     $n: () => eQ,
     A5: () => B,
     AU: () => X,
-    Bo: () => e3,
+    Bo: () => e2,
     C: () => s,
     C2: () => J,
     CL: () => _,
@@ -23,12 +23,12 @@ n.d(t, {
     HO: () => ek,
     IW: () => S,
     Lw: () => eC,
-    M_: () => e2,
+    M_: () => e3,
     NV: () => Y,
     Nl: () => eh,
     OT: () => el,
     PremiumTypes: () => l,
-    QF: () => eD,
+    QF: () => ew,
     QI: () => eX,
     QP: () => eU,
     Qh: () => e8,
@@ -372,8 +372,8 @@ let R = Object.freeze({
         },
     }),
     P = new Set(["511651880837840896"]),
-    w = 16,
-    D = 8,
+    D = 16,
+    w = 8,
     L = 5,
     x = 30,
     M = 2,
@@ -582,10 +582,10 @@ let eA = Object.freeze({
     eN = 52428800,
     eR = 524288000,
     eP = 52428800,
-    ew = 104857600,
-    eD = 5,
+    eD = 104857600,
+    ew = 5,
     eL = {
-        [i.Eu4.NONE]: eD,
+        [i.Eu4.NONE]: ew,
         [i.Eu4.TIER_1]: 10,
         [i.Eu4.TIER_2]: 15,
         [i.Eu4.TIER_3]: 30,
@@ -659,7 +659,7 @@ let eA = Object.freeze({
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: ew,
+                fileSize: eD,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
                 soundboardSounds: eM[i.Eu4.TIER_3],
@@ -696,10 +696,10 @@ var eU = (function (e) {
         return (e.FREE = "free"), (e.PREMIUM_STANDARD = "premium-standard"), e;
     })({});
 let eB = {
-    "1024422698568122368": w,
-    "511651876987469824": w,
-    "511651885459963904": w,
-    "944037208325619722": D,
+    "1024422698568122368": D,
+    "511651876987469824": D,
+    "511651885459963904": D,
+    "944037208325619722": w,
     "642251038925127690": L,
 };
 var eZ = (function (e) {
@@ -767,8 +767,8 @@ var eJ = (function (e) {
         );
     })({});
 let e1 = 3,
-    e2 = 30,
-    e3 = 20;
+    e3 = 30,
+    e2 = 20;
 var e4 = (function (e) {
     return (
         (e.PREMIUM_TENURE_1_MONTH = "premium_tenure_1_month_v2"),
@@ -795,14 +795,14 @@ let e8 = [
     e5 = {
         premium_tenure_1_month_v2: {
             id: "premium_tenure_1_month_v2",
-            nameUnformatted: o.t.LR1C0d,
+            nameUnformatted: o.t.LR1C0a,
             tenureReqNumMonths: 1,
             hasWideArt: !1,
             glowColor: "#b54913",
         },
         premium_tenure_3_month_v2: {
             id: "premium_tenure_3_month_v2",
-            nameUnformatted: o.t["rI1/3N"],
+            nameUnformatted: o.t["rI1/3H"],
             tenureReqNumMonths: 3,
             hasWideArt: !1,
             glowColor: "#9e9e9e",
@@ -816,35 +816,35 @@ let e8 = [
         },
         premium_tenure_12_month_v2: {
             id: "premium_tenure_12_month_v2",
-            nameUnformatted: o.t.gzUfNT,
+            nameUnformatted: o.t.gzUfNS,
             tenureReqNumMonths: 12,
             hasWideArt: !1,
             glowColor: "#5eacc2",
         },
         premium_tenure_24_month_v2: {
             id: "premium_tenure_24_month_v2",
-            nameUnformatted: o.t.fuwTPj,
+            nameUnformatted: o.t.fuwTPm,
             tenureReqNumMonths: 24,
             hasWideArt: !1,
             glowColor: "#6d5cf2",
         },
         premium_tenure_36_month_v2: {
             id: "premium_tenure_36_month_v2",
-            nameUnformatted: o.t.qNhNk5,
+            nameUnformatted: o.t.qNhNk4,
             tenureReqNumMonths: 36,
             hasWideArt: !1,
             glowColor: "#32c102",
         },
         premium_tenure_60_month_v2: {
             id: "premium_tenure_60_month_v2",
-            nameUnformatted: o.t["wvX+eH"],
+            nameUnformatted: o.t["wvX+eD"],
             tenureReqNumMonths: 60,
             hasWideArt: !0,
             glowColor: "#f29cc3",
         },
         premium_tenure_72_month_v2: {
             id: "premium_tenure_72_month_v2",
-            nameUnformatted: o.t["/menIy"],
+            nameUnformatted: o.t["/menIw"],
             tenureReqNumMonths: 72,
             hasWideArt: !0,
             glowColor: "#078292",

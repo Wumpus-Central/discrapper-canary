@@ -15,8 +15,8 @@ function _(e) {
         { note: _ } = (0, c.Z)(t),
         p = null != _ && "" !== _,
         h = p ? s.hH0 : s.Wos,
-        m = p ? d.intl.string(d.t["gs+qcH"]) : d.intl.string(d.t["1ZZttr"]),
-        g = p ? _ : d.intl.string(d.t["1ZZttr"]),
+        m = p ? d.intl.string(d.t["gs+qcM"]) : d.intl.string(d.t["1ZZtts"]),
+        g = p ? _ : d.intl.string(d.t["1ZZtts"]),
         { trackUserProfileAction: E } = (0, l.KZ)(),
         b = () => {
             E({ action: "PRESS_ADD_NOTE" }), null == i || i({ subsection: u.Tb.NOTE });

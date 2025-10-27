@@ -87,7 +87,7 @@ let S = (e, t) => {
                                   variant: "text-md/medium",
                                   className: O.userName,
                                   color: "text-primary",
-                                  children: y.intl.format(y.t.RO3T4O, { userName: l }),
+                                  children: y.intl.format(y.t.RO3T4B, { userName: l }),
                               }),
                           ],
                       })
@@ -125,13 +125,13 @@ let S = (e, t) => {
                       },
             _ = () =>
                 0 === t.filter((e) => e.status === g.Fz.SUCCESS).length
-                    ? y.intl.string(y.t["7VBEub"])
+                    ? y.intl.string(y.t["7VBEue"])
                     : !0 === a
-                      ? y.intl.string(y.t.GP5lbm)
-                      : y.intl.string(y.t.tKCltb),
+                      ? y.intl.string(y.t.GP5lbq)
+                      : y.intl.string(y.t.tKCltd),
             m = () =>
                 !0 === a
-                    ? y.intl.format(y.t["4gJJfH"], { helpdeskArticle: h.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) })
+                    ? y.intl.format(y.t["4gJJfD"], { helpdeskArticle: h.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) })
                     : y.intl.format(y.t.AwGSWl, { helpdeskArticle: h.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) }),
             I = () =>
                 (0, r.jsx)("div", {

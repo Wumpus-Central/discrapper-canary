@@ -37,9 +37,9 @@ function b(t) {
     return (0, r.jsx)(c.Modal, {
         size: "md",
         transitionState: u,
-        "aria-label": d.intl.string(d.t["3jaCaW"]),
+        "aria-label": d.intl.string(d.t["3jaCac"]),
         title: f.name,
-        subtitle: d.intl.format(d.t["6dOuaG"], { count: f.attachments_count }),
+        subtitle: d.intl.format(d.t["6dOuaP"], { count: f.attachments_count }),
         actions: [],
         onClose: l,
         children: (0, r.jsx)("ul", {

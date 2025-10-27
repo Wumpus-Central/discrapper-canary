@@ -22,7 +22,7 @@ function u(e, t, n, u, m) {
                       i.sNh,
                       {
                           id: "edit-server-profile",
-                          "aria-label": c.intl.string(c.t["9ESaOz"]),
+                          "aria-label": c.intl.string(c.t["9ESaO7"]),
                           label: () =>
                               (0, a.jsxs)("div", {
                                   className: d.item,
@@ -36,7 +36,7 @@ function u(e, t, n, u, m) {
                                           children: [
                                               (0, a.jsx)(i.Text, {
                                                   variant: "text-sm/medium",
-                                                  children: c.intl.string(c.t["9ESaOz"]),
+                                                  children: c.intl.string(c.t["9ESaO7"]),
                                               }),
                                               (0, a.jsx)(i.Text, {
                                                   variant: "text-xs/normal",

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(442837),
-    o = n(481060),
-    s = n(185514),
+    s = n(481060),
+    o = n(185514),
     c = n(719961),
     u = n(365355),
     d = n(891304),
@@ -36,7 +36,7 @@ function h(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,32 +54,32 @@ function g(e, t) {
         e
     );
 }
-let m = s.Nx.binds["0"],
-    b = s.On.binds["0"],
-    _ = (e) => {
+let g = o.Nx.binds["0"],
+    _ = o.On.binds["0"],
+    b = (e) => {
         let { firstElementFocusJumpSectionProps: t = {} } = e,
             { titlebarIconSize: n } = (0, c.T)({ location: "BackForwardButtons" }),
-            { canGoBack: i, canGoForward: s } = (0, a.cj)([u.Z], () => ({
+            { canGoBack: i, canGoForward: o } = (0, a.cj)([u.Z], () => ({
                 canGoBack: u.Z.canGoBack,
                 canGoForward: u.Z.canGoForward,
             }));
         return (0, r.jsxs)("div", {
             className: f.backForwardButtons,
             children: [
-                (0, r.jsx)(o.aML, {
+                (0, r.jsx)(s.aML, {
                     "data-migration-pending": !0,
-                    "aria-label": p.intl.string(p.t.B9vzIC),
+                    "aria-label": p.intl.string(p.t.B9vzIP),
                     tooltipContentClassName: f.navigationTooltip,
                     shouldShow: i,
                     text: (0, r.jsxs)(r.Fragment, {
-                        children: [p.intl.string(p.t.B9vzIC), (0, r.jsx)(o.M2$, { shortcut: m })],
+                        children: [p.intl.string(p.t.B9vzIP), (0, r.jsx)(s.M2$, { shortcut: g })],
                     }),
                     children: (e) =>
                         (0, r.jsx)(
-                            o.P3F,
-                            g(
+                            s.P3F,
+                            m(
                                 h(
-                                    g(h({}, e), {
+                                    m(h({}, e), {
                                         "aria-disabled": !i,
                                         className: l()(f.button, f.back, { [f.disabled]: !i }),
                                         onClick: () => (0, d.Hm)("nav_button"),
@@ -87,7 +87,7 @@ let m = s.Nx.binds["0"],
                                     t,
                                 ),
                                 {
-                                    children: (0, r.jsx)(o.whL, {
+                                    children: (0, r.jsx)(s.whL, {
                                         size: n,
                                         color: "currentColor",
                                     }),
@@ -95,22 +95,22 @@ let m = s.Nx.binds["0"],
                             ),
                         ),
                 }),
-                (0, r.jsx)(o.aML, {
+                (0, r.jsx)(s.aML, {
                     "data-migration-pending": !0,
-                    "aria-label": p.intl.string(p.t["9KJ29f"]),
+                    "aria-label": p.intl.string(p.t["9KJ29e"]),
                     tooltipContentClassName: f.navigationTooltip,
-                    shouldShow: s,
+                    shouldShow: o,
                     text: (0, r.jsxs)(r.Fragment, {
-                        children: [p.intl.string(p.t["9KJ29f"]), (0, r.jsx)(o.M2$, { shortcut: b })],
+                        children: [p.intl.string(p.t["9KJ29e"]), (0, r.jsx)(s.M2$, { shortcut: _ })],
                     }),
                     children: (e) =>
                         (0, r.jsx)(
-                            o.P3F,
-                            g(h({}, e), {
-                                "aria-disabled": !s,
-                                className: l()(f.button, f.forward, { [f.disabled]: !s }),
+                            s.P3F,
+                            m(h({}, e), {
+                                "aria-disabled": !o,
+                                className: l()(f.button, f.forward, { [f.disabled]: !o }),
                                 onClick: () => (0, d.TL)("nav_button"),
-                                children: (0, r.jsx)(o.ZSh, {
+                                children: (0, r.jsx)(s.ZSh, {
                                     size: n,
                                     color: "currentColor",
                                 }),

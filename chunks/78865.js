@@ -74,8 +74,8 @@ function y(e) {
             }),
             (0, s.uL)(b.Z5c.APPLICATION_STORE);
     }
-    let h = d.intl.string(d.t.ewxv3N),
-        j = d.intl.string(d.t.qlsCDA);
+    let h = d.intl.string(d.t.ewxv3J),
+        j = d.intl.string(d.t.qlsCDB);
     return (0, c.Z)({ location: "StreamUpsellModal" })
         ? (0, n.jsx)(
               i.Z,

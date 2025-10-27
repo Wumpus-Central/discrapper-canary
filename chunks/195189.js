@@ -30,7 +30,7 @@ function d(e) {
                 ],
             }),
             (0, r.jsx)(i.u, {
-                text: o.intl.string(o.t.NQ4nCg),
+                text: o.intl.string(o.t.NQ4nCp),
                 children: (0, r.jsx)(a.Z, {
                     checked: !0,
                     disabled: !0,

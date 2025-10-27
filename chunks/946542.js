@@ -150,7 +150,7 @@ let b = function (e) {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
                       className: g.sectionHeader,
-                      children: h.intl.string(h.t.E8wCnp),
+                      children: h.intl.string(h.t.E8wCnk),
                   }),
                   (0, r.jsx)(u.Z, {
                       loading: n === o.M.FETCHING,

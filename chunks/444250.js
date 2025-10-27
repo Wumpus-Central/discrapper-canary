@@ -11,12 +11,12 @@ let c = (0, u.x1)(r.n.ACCESSIBILITY_PANE, {
         render: () => (0, i.jsx)(s.Z, {}),
     }),
     E = (0, u.wf)(r.n.ACCESSIBILITY_PANEL, {
-        useTitle: () => o.intl.string(o.t.G0neg4),
+        useTitle: () => o.intl.string(o.t.G0neg7),
         buildLayout: () => [c],
     }),
     d = (0, u.m7)(r.n.ACCESSIBILITY_SIDEBAR_ITEM, {
         icon: l.O0f,
-        useTitle: () => o.intl.string(o.t.G0neg4),
+        useTitle: () => o.intl.string(o.t.G0neg7),
         legacySearchKey: a.s6.ACCESSIBILITY,
         buildLayout: () => [E],
     });

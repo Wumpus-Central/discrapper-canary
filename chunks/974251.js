@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(415506);
+n.d(t, { Z: () => V }), n(388685), n(415506);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -62,7 +62,7 @@ function H(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,9 +80,9 @@ function V(e, t) {
         e
     );
 }
-let F = r.memo(function (e) {
+let V = r.memo(function (e) {
     var t, l;
-    let { className: F, channel: G, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
+    let { className: V, channel: G, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
         K = (0, y.bp)(),
         X = r.useRef(null),
         J = r.useRef(null),
@@ -118,7 +118,7 @@ let F = r.memo(function (e) {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await n.e("57478").then(n.bind(n, 542055));
-                return (t) => (0, i.jsx)(e, V(H({}, t), { channelId: G.id }));
+                return (t) => (0, i.jsx)(e, F(H({}, t), { channelId: G.id }));
             },
             { modalKey: D.Qr },
         ),
@@ -185,7 +185,7 @@ let F = r.memo(function (e) {
                     case "recentClips":
                         return (0, i.jsx)(
                             g.Z,
-                            V(H({}, e), {
+                            F(H({}, e), {
                                 onOpenClips: em,
                                 lastClipsSession: ee,
                             }),
@@ -193,7 +193,7 @@ let F = r.memo(function (e) {
                     case "attachMenu":
                         return (0, i.jsx)(
                             M.Z,
-                            V(H({}, e), {
+                            F(H({}, e), {
                                 onClose: () => ec(null),
                                 options: ej,
                                 channel: G,
@@ -214,11 +214,11 @@ let F = r.memo(function (e) {
             children: (e) =>
                 (0, i.jsx)(
                     w.Z,
-                    V(
+                    F(
                         H(
                             {
                                 ref: J,
-                                className: a()(B.attachButton, F),
+                                className: a()(B.attachButton, V),
                                 childClassName: B.attachButtonInner,
                                 isActive: !1,
                                 "aria-label": U.intl.string(U.t.d56gCa),

@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-function D(e) {
+function w(e) {
     let {
             guildBoostSlot: t,
             isCancellable: n,
@@ -134,7 +134,7 @@ function D(e) {
                                         className: C.unappliedGuildBoostSlotCta,
                                         children: (0, r.jsx)(
                                             l.Avr,
-                                            w(R({}, e), {
+                                            D(R({}, e), {
                                                 variant: "primary",
                                                 text: A.intl.string(A.t.twFU3R),
                                                 onClick: () => a(t),
@@ -154,7 +154,7 @@ function D(e) {
                                         className: C.unappliedGuildBoostSlotCta,
                                         children: (0, r.jsx)(
                                             l.Avr,
-                                            w(R({}, e), {
+                                            D(R({}, e), {
                                                 variant: "primary",
                                                 text: A.intl.string(A.t["2glQNp"]),
                                                 onClick: () => o(t),
@@ -176,7 +176,7 @@ function L(e) {
         async () => (t) =>
             (0, r.jsx)(
                 _.default,
-                w(R({}, t), {
+                D(R({}, t), {
                     guildBoostSlots: [e],
                     locationSection: T.jXE.SETTINGS_PREMIUM,
                 }),
@@ -184,10 +184,10 @@ function L(e) {
     );
 }
 function x(e) {
-    (0, c.ZDy)(async () => (t) => (0, r.jsx)(p.default, w(R({}, t), { guildBoostSlot: e })));
+    (0, c.ZDy)(async () => (t) => (0, r.jsx)(p.default, D(R({}, t), { guildBoostSlot: e })));
 }
 function M(e) {
-    (0, c.ZDy)(async () => (t) => (0, r.jsx)(h.default, w(R({}, t), { guildBoostSlotId: e.id })));
+    (0, c.ZDy)(async () => (t) => (0, r.jsx)(h.default, D(R({}, t), { guildBoostSlotId: e.id })));
 }
 let k = function (e) {
     let t,
@@ -324,7 +324,7 @@ let k = function (e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             c.Button,
-                                            w(
+                                            D(
                                                 R(
                                                     {
                                                         variant: "primary",
@@ -347,7 +347,7 @@ let k = function (e) {
                             className: C.unappliedBoostSlots,
                             children: k.map((e) =>
                                 (0, r.jsx)(
-                                    D,
+                                    w,
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: F,

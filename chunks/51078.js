@@ -25,7 +25,7 @@ function f(t, e) {
                   }),
                   (0, r.jsx)(i.sNh, {
                       id: y,
-                      label: b.intl.string(b.t["/yA6QU"]),
+                      label: b.intl.string(b.t["/yA6Qd"]),
                       action: () => (0, s.SZ)(d.hY, t, n),
                   }),
               ],

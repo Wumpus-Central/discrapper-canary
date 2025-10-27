@@ -120,7 +120,7 @@ class y extends i.PureComponent {
                 return (0, r.jsx)(o.v2r, {
                     onSelect: n,
                     navId: "test-skus",
-                    "aria-label": f.intl.string(f.t.ogxXGh),
+                    "aria-label": f.intl.string(f.t.ogxXGq),
                     onClose: s.Zy,
                     children: e.map((e) =>
                         (0, r.jsx)(

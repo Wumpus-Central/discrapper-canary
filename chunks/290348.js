@@ -76,7 +76,7 @@ function P(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -88,12 +88,12 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -279,7 +279,7 @@ function ee(e) {
 }
 function et(e, t) {
     (0, c.j)(() => {
-        S.n.setState((n) => ({ listings: D(P({}, n.listings), { [t]: n.listings[e] }) }));
+        S.n.setState((n) => ({ listings: w(P({}, n.listings), { [t]: n.listings[e] }) }));
     });
 }
 function en(e) {
@@ -288,7 +288,7 @@ function en(e) {
 function er(e, t) {
     (0, c.j)(() => {
         S.n.setState((n) => ({
-            listings: D(P({}, n.listings), {
+            listings: w(P({}, n.listings), {
                 [t]: n.listings[e],
                 [e]: void 0,
             }),

@@ -115,7 +115,7 @@ let E = r.memo(function (e) {
                     className: v.positionContainer,
                     role: "dialog",
                     style: x,
-                    "aria-label": _.intl.string(_.t["3CNGLC"]),
+                    "aria-label": _.intl.string(_.t["3CNGLK"]),
                     children:
                         t &&
                         (0, i.jsx)(

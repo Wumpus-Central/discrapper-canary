@@ -3,11 +3,11 @@ var i = n(951288);
 n(647438);
 var l = n(533800),
     s = n(481060),
-    a = n(630388),
-    r = n(971130),
+    r = n(630388),
+    a = n(971130),
     o = n(388032),
     d = n(337709);
-let u = r.ZP.getMaxUsesOptions;
+let u = a.ZP.getMaxUsesOptions;
 function c(e) {
     var t;
     let {
@@ -24,8 +24,8 @@ function c(e) {
             inviteFlags: f,
             onSetInviteFlags: E,
         } = e,
-        y = r.ZP.getMaxAgeOptionByValue(g),
-        C = u.find((e) => e.value === h);
+        C = a.ZP.getMaxAgeOptionByValue(g),
+        y = u.find((e) => e.value === h);
     return (0, i.jsx)("div", {
         className: d.settingsContent,
         children: (0, i.jsxs)("form", {
@@ -33,30 +33,30 @@ function c(e) {
             className: d.settingsForm,
             children: [
                 (0, i.jsx)(s.VcW, {
-                    label: o.intl.string(o.t["60qw29"]),
+                    label: o.intl.string(o.t["60qw2x"]),
                     options: c,
-                    value: null != (t = null == y ? void 0 : y.value) ? t : c[0].value,
+                    value: null != (t = null == C ? void 0 : C.value) ? t : c[0].value,
                     onChange: x,
                 }),
                 (0, i.jsx)(s.VcW, {
-                    label: o.intl.string(o.t.jDqWHR),
+                    label: o.intl.string(o.t.jDqWHW),
                     options: u,
-                    value: null == C ? void 0 : C.value,
+                    value: null == y ? void 0 : y.value,
                     onChange: I,
                 }),
                 !n &&
                     (0, i.jsx)(s.rsf, {
                         checked: m,
                         onChange: (e) => p(e),
-                        description: o.intl.string(o.t.UN5IRU),
-                        label: o.intl.string(o.t["wE+9dn"]),
+                        description: o.intl.string(o.t.UN5IRX),
+                        label: o.intl.string(o.t["wE+9dr"]),
                     }),
                 S &&
                     (0, i.jsx)(s.rsf, {
-                        checked: (0, a.yE)(f, l.$.IS_GUEST_INVITE),
-                        onChange: (e) => E((0, a.mB)(f, l.$.IS_GUEST_INVITE, e)),
-                        description: o.intl.string(o.t["/FeTKy"]),
-                        label: o.intl.string(o.t.siexRU),
+                        checked: (0, r.yE)(f, l.$.IS_GUEST_INVITE),
+                        onChange: (e) => E((0, r.mB)(f, l.$.IS_GUEST_INVITE, e)),
+                        description: o.intl.string(o.t["/FeTK6"]),
+                        label: o.intl.string(o.t.siexRS),
                     }),
             ],
         }),

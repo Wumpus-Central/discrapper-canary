@@ -12,10 +12,10 @@ var r = n(647438),
     u = n(639777),
     d = n(973772),
     p = n(834209),
-    h = n(279604),
-    f = n(535396),
+    f = n(279604),
+    h = n(535396),
     g = n(981631),
-    m = n(149829),
+    m = n(459196),
     b = n(388032);
 function _(e, t) {
     var n;
@@ -25,11 +25,11 @@ function _(e, t) {
         }),
         a = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         u = null == a ? void 0 : a.allPowerups[i.A$],
-        h = (0, d.ZP)(e, u),
+        f = (0, d.ZP)(e, u),
         _ = (0, c.q8)(e, t),
         O = null == u ? void 0 : u.storeRemovalDate,
         y = null != (n = null == r ? void 0 : r.has(g.GuildFeatures.PARTNERED)) && n,
-        j = _ && null != O && !y && h.type === f.A3.POWERUP_ACTIVATED,
+        j = _ && null != O && !y && f.type === h.A3.POWERUP_ACTIVATED,
         v = j
             ? {
                   title: b.intl.formatToPlainString(m.default.mgoPkU, { perkName: null == u ? void 0 : u.title }),
@@ -57,8 +57,8 @@ function O(e, t) {
             return null == (t = o.Z.getGuild(e)) ? void 0 : t.features;
         }),
         T = null != (y = null == Z ? void 0 : Z.has(g.GuildFeatures.PARTNERED)) && y,
-        { onActivate: w } = (0, h._C)(e, N),
-        A = !v && x && C && null != S && !T && I.type === f.A3.POWERUP_ACTIVATED && null != P && null != N && null != j,
+        { onActivate: w } = (0, f._C)(e, N),
+        A = !v && x && C && null != S && !T && I.type === h.A3.POWERUP_ACTIVATED && null != P && null != N && null != j,
         R = r.useCallback(
             (e) => {
                 w(e);

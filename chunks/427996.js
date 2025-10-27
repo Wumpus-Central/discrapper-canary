@@ -30,11 +30,11 @@ function p(e) {
             (0, i.jsx)(o.Checkbox, {
                 checked: p,
                 onChange: s.Y$,
-                label: u.intl.string(u.t["3TSGuL"]),
+                label: u.intl.string(u.t["3TSGuD"]),
             }),
             p
                 ? (0, i.jsx)(o.oil, {
-                      label: u.intl.string(u.t["9rnmen"]),
+                      label: u.intl.string(u.t["9rnmem"]),
                       disabled: !p,
                       value: null != l ? l : void 0,
                       onChange: s.jS,

@@ -5,8 +5,8 @@ var i = n(442837),
     a = n(314897),
     l = n(733231),
     o = n(623132),
-    s = n(34335),
-    c = n(112794);
+    c = n(34335),
+    s = n(112794);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,9 +55,9 @@ function d(e) {
             }
             return i;
         })(e, ["games", "user", "widgetType"]);
-    let { registerItemRef: s, manageFocusOnDelete: d } = (0, l.C)();
+    let { registerItemRef: c, manageFocusOnDelete: d } = (0, l.C)();
     return (0, r.jsx)("ul", {
-        className: c.cardList,
+        className: s.cardList,
         children: t.map((e, t) =>
             (0, r.jsx)(
                 "li",
@@ -70,7 +70,7 @@ function d(e) {
                                 user: n,
                                 game: e,
                                 widgetType: i,
-                                coverRef: s(e.applicationId),
+                                coverRef: c(e.applicationId),
                                 onRemoveGame: d,
                             },
                             a,
@@ -84,10 +84,10 @@ function d(e) {
 }
 function f(e) {
     let { user: t, widgetType: n, disableInteraction: o } = e,
-        c = (0, i.e7)([a.default], () => a.default.getId() === t.id),
-        { getManageButtonForWidget: f } = (0, s.j)(),
+        s = (0, i.e7)([a.default], () => a.default.getId() === t.id),
+        { getManageButtonForWidget: f } = (0, c.j)(),
         g = f(n);
-    return c && !o
+    return s && !o
         ? (0, r.jsx)(l.d, {
               emptyListFallbackRef: g,
               children: (0, r.jsx)(d, u({}, e)),

@@ -46,7 +46,7 @@ function f(e) {
             (0, r.jsx)(a.X6q, {
                 variant: "heading-deprecated-12/semibold",
                 className: u.sectionLabel,
-                children: c.intl.string(c.t["8qKd+P"]),
+                children: c.intl.string(c.t["8qKd+J"]),
             }),
             null != p && "" !== p
                 ? (0, r.jsx)(o.x, {
@@ -59,7 +59,7 @@ function f(e) {
                 wrapperClassName: u.select,
                 maxVisibleItems: d,
                 onChange: _,
-                placeholder: c.intl.string(c.t["Re/64e"]),
+                placeholder: c.intl.string(c.t["Re/64R"]),
                 options: E,
                 value: f,
                 renderOptionLabel: (e) =>
@@ -77,7 +77,7 @@ function f(e) {
                 variant: "text-xs/normal",
                 color: "header-secondary",
                 className: u.label,
-                children: c.intl.string(c.t.kQXMfH),
+                children: c.intl.string(c.t.kQXMfN),
             }),
         ],
     });

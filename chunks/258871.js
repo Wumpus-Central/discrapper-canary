@@ -62,7 +62,7 @@ let g = [
                     color: "currentColor",
                     className: e,
                 }),
-            getName: () => p.intl.string(p.t.K50GHR),
+            getName: () => p.intl.string(p.t.K50GHd),
             handler: (e, t) => (0, s.XU)(e.id, t.id),
         },
         {
@@ -73,7 +73,7 @@ let g = [
                     color: "currentColor",
                     className: e,
                 }),
-            getName: () => p.intl.string(p.t.emRpdX),
+            getName: () => p.intl.string(p.t.emRpdS),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
                     let { default: i } = await n.e("79764").then(n.bind(n, 533202));
@@ -91,7 +91,7 @@ let g = [
         {
             key: "INVITE_MEMBERS",
             renderIcon: (e) => (0, r.jsx)(l.ejJ, { className: e }),
-            getName: () => p.intl.string(p.t.MJQOuL),
+            getName: () => p.intl.string(p.t.MJQOuJ),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
                     let { default: i } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));

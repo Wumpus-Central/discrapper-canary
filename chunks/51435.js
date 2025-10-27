@@ -7,17 +7,17 @@ var i = n(951288),
     a = n(726985),
     o = n(388032);
 let c = (0, u.x1)(r.n.CONNECTIONS_PANE, {
-        useTitle: () => o.intl.string(o.t["3fe7U1"]),
+        useTitle: () => o.intl.string(o.t["3fe7U5"]),
         buildLayout: () => [],
         render: () => (0, i.jsx)(s.Z, {}),
     }),
     E = (0, u.wf)(r.n.CONNECTIONS_PANEL, {
-        useTitle: () => o.intl.string(o.t["3fe7U1"]),
+        useTitle: () => o.intl.string(o.t["3fe7U5"]),
         buildLayout: () => [c],
     }),
     d = (0, u.m7)(r.n.CONNECTIONS_SIDEBAR_ITEM, {
         icon: l.xPt,
-        useTitle: () => o.intl.string(o.t["3fe7U1"]),
+        useTitle: () => o.intl.string(o.t["3fe7U5"]),
         legacySearchKey: a.s6.CONNECTIONS,
         buildLayout: () => [E],
     });

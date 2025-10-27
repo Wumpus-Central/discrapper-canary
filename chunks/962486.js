@@ -1,10 +1,10 @@
-n.d(t, { Z: () => g }), n(539854);
+n.d(t, { Z: () => m }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(322665),
-    o = n(17845),
-    s = n(374939),
+    s = n(17845),
+    o = n(374939),
     c = n(283293),
     u = n(726115),
     d = n(294330),
@@ -15,13 +15,13 @@ let h = {
     object: p.qAy.CARD,
     section: p.jXE.DISCOVER_POPULAR,
 };
-function g(e) {
-    let { tab: t, guildIds: n, loading: p, onScroll: g, onGuildCardClick: m, onGuildCardSeen: b } = e,
-        _ = (0, u.Mf)(t),
+function m(e) {
+    let { tab: t, guildIds: n, loading: p, onScroll: m, onGuildCardClick: g, onGuildCardSeen: _ } = e,
+        b = (0, u.Mf)(t),
         E = (0, u.a$)(t),
         O = (0, u.QW)(t),
-        v = (0, u.lg)(t),
-        y = i.useMemo(() => {
+        I = (0, u.lg)(t),
+        v = i.useMemo(() => {
             let e = p ? 30 : n.length,
                 t = [];
             for (let a = 0; a < e; a++) {
@@ -32,24 +32,24 @@ function g(e) {
                         {
                             guildId: null != (i = n[a]) ? i : null,
                             index: a,
-                            onClick: (e) => m(e, a, v, h),
-                            onView: (e) => b(e, v),
+                            onClick: (e) => g(e, a, I, h),
+                            onView: (e) => _(e, I),
                         },
                         null != (l = n[a]) ? l : a,
                     ),
                 );
             }
             return t;
-        }, [v, n, p, m, b]);
+        }, [I, n, p, g, _]);
     return (0, r.jsxs)(c.Z, {
-        onScroll: g,
+        onScroll: m,
         children: [
-            (0, r.jsx)(o.Z, {
-                title: _,
+            (0, r.jsx)(s.Z, {
+                title: b,
                 description: E,
                 children: (0, r.jsx)(a.Z, {}),
             }),
-            (0, r.jsxs)(s.Z, {
+            (0, r.jsxs)(o.Z, {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         className: f.sectionTitle,
@@ -59,7 +59,7 @@ function g(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: f.content,
-                        children: y,
+                        children: v,
                     }),
                 ],
             }),

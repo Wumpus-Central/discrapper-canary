@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(168611),
     O = n(201895),
     y = n(718589),
-    v = n(933557),
-    j = n(557135),
+    j = n(933557),
+    v = n(557135),
     x = n(873696),
     C = n(446226),
     E = n(305325),
@@ -27,8 +27,8 @@ var r = n(951288),
     P = n(554747),
     N = n(378844),
     Z = n(574176),
-    w = n(763624),
-    T = n(359110),
+    T = n(763624),
+    w = n(359110),
     A = n(155409),
     R = n(695346),
     D = n(592125),
@@ -170,8 +170,8 @@ class en extends V.ZP {
                 connectDragPreview: m,
                 canReorderChannel: b,
                 canMoveMembers: _,
-                showTutorial: v,
-                hasActiveEvent: j,
+                showTutorial: j,
+                hasActiveEvent: v,
                 embeddedApps: x,
                 isSubscriptionGated: C,
                 isFavoriteSuggestion: E,
@@ -180,7 +180,7 @@ class en extends V.ZP {
             } = this.props,
             { shouldShowActivities: P, shouldShowGuildVerificationPopout: N } = this.state,
             Z = this.getVoiceStatesCount(),
-            w = (0, r.jsxs)("li", {
+            T = (0, r.jsxs)("li", {
                 ref: this.ref,
                 className: o()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
                 "data-dnd-name": e.name,
@@ -201,8 +201,8 @@ class en extends V.ZP {
                                     children: (0, r.jsxs)(z.ZP, {
                                         ref: this.channelItemRef,
                                         className: J.iconVisibility,
-                                        iconClassName: o()({ [J.iconLive]: j || I }),
-                                        hasActiveEvent: j,
+                                        iconClassName: o()({ [J.iconLive]: v || I }),
+                                        hasActiveEvent: v,
                                         channel: e,
                                         selected: !E && t,
                                         connected: n,
@@ -258,17 +258,17 @@ class en extends V.ZP {
                 ],
             });
         return (
-            _ && (w = g(w)),
-            b && (w = f(h(w))),
-            v &&
-                (w = (0, r.jsx)(A.Z, {
+            _ && (T = g(T)),
+            b && (T = f(h(T))),
+            j &&
+                (T = (0, r.jsx)(A.Z, {
                     childRef: this.ref,
                     tutorialId: "voice-conversations",
                     position: "right",
                     offsetX: -20,
-                    children: w,
+                    children: T,
                 })),
-            w
+            T
         );
     }
     constructor(...e) {
@@ -297,7 +297,7 @@ class en extends V.ZP {
                 r && this.setState({ shouldShowGuildVerificationPopout: !0 });
                 let a = l && o > 0;
                 a && d.Z.updateChatOpen(n.id, !0),
-                    j.Z.handleVoiceConnect({
+                    v.Z.handleVoiceConnect({
                         channel: n,
                         connected: t,
                         needSubscriptionToAccess: i,
@@ -380,13 +380,13 @@ class en extends V.ZP {
                 if (!t)
                     return (0, r.jsx)(c.u, {
                         asContainer: !0,
-                        text: Q.intl.string(Q.t.ZXxLQk),
+                        text: Q.intl.string(Q.t.ZXxLQg),
                         children: (0, r.jsx)(u.P3F, {
                             className: o()(J.iconItem, n ? J.alwaysShown : null),
                             onClick: () => {
-                                d.Z.updateChatOpen(e.id, !0), (0, T.Kh)(e.id);
+                                d.Z.updateChatOpen(e.id, !0), (0, w.Kh)(e.id);
                             },
-                            "aria-label": Q.intl.string(Q.t.ZXxLQk),
+                            "aria-label": Q.intl.string(Q.t.ZXxLQg),
                             children: (0, r.jsx)(u.kBi, {
                                 size: "xs",
                                 color: "currentColor",
@@ -397,7 +397,7 @@ class en extends V.ZP {
             }),
             $(this, "getTooltipText", () => {
                 let { connected: e } = this.props;
-                return this.isFull() && !e ? Q.intl.string(Q.t.rZfiNj) : null;
+                return this.isFull() && !e ? Q.intl.string(Q.t.rZfiNq) : null;
             });
     }
 }
@@ -434,22 +434,22 @@ function ei(e) {
         }),
         f = (0, a.e7)([B.Z], () => B.Z.hasVideo(n.id)),
         h = (0, g.ZP)(n),
-        m = (0, v.ZP)(n),
+        m = (0, j.ZP)(n),
         O = (0, P.qY)(n.id),
         { enabled: y } = b.W.useExperiment({
             guildId: t.id,
             location: "VoiceChannel",
         }),
-        j = (0, a.e7)([_.Z], () => !!y && null != _.Z.getStartTime(n), [n, y]),
+        v = (0, a.e7)([_.Z], () => !!y && null != _.Z.getStartTime(n), [n, y]),
         { isSubscriptionGated: x, needSubscriptionToAccess: E } = (0, I.Z)(n.id),
         S = (0, C.Z)(),
         N = (0, a.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
-        T = e.connected || (null == S ? void 0 : S.channelId) === n.id,
+        w = e.connected || (null == S ? void 0 : S.channelId) === n.id,
         { enableHangStatus: A, showEmptyChannelTopic: R } = (0, Z.bN)({
             guildId: n.guild_id,
             location: "VoiceChannel",
         }),
-        { enableOpenTIVForPing: L } = w.A.useExperiment(
+        { enableOpenTIVForPing: L } = T.A.useExperiment(
             {
                 guildId: n.guild_id,
                 location: "VoiceChannel",
@@ -466,7 +466,7 @@ function ei(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0,
         }),
-        V = T && null == F;
+        V = w && null == F;
     return (0, r.jsx)(
         er,
         et(
@@ -485,7 +485,7 @@ function ei(e) {
                 e,
             ),
             {
-                connected: T,
+                connected: w,
                 isFavoriteSuggestion: l && !N,
                 forceShowButtons: V,
                 channelInfo: F,
@@ -494,7 +494,7 @@ function ei(e) {
                 showEmptyChannelTopic: R,
                 enableOpenTIVForPing: L,
                 hasChannelInfo: null != F,
-                hasStartTime: j,
+                hasStartTime: v,
             },
         ),
     );

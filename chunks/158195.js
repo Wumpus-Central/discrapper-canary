@@ -21,7 +21,7 @@ let p = (0, a.Z)(
             return (0, n.jsxs)(c.v2r, {
                 navId: "moderation-raid-context",
                 onClose: o.Zy,
-                "aria-label": O.intl.string(O.t.liqwPD),
+                "aria-label": O.intl.string(O.t.liqwPJ),
                 onSelect: i,
                 children: [
                     (0, n.jsx)(c.kSQ, { children: l }),

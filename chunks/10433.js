@@ -59,7 +59,7 @@ function E(e) {
         ? (0, r.jsxs)(c.Z, {
               containerRef: S,
               children: [
-                  (0, r.jsx)(c.Z.Header, { text: m.intl.string(m.t.j4KtLS) }),
+                  (0, r.jsx)(c.Z.Header, { text: m.intl.string(m.t.j4KtLa) }),
                   (0, r.jsx)(c.Z.Body, {
                       children: (0, r.jsxs)("div", {
                           className: g.invalidBody,
@@ -68,7 +68,7 @@ function E(e) {
                               (0, r.jsx)(c.Z.Info, {
                                   expired: !0,
                                   title: m.intl.string(m.t.NaQLEx),
-                                  children: m.intl.string(m.t["0H5OT0"]),
+                                  children: m.intl.string(m.t["0H5OT2"]),
                               }),
                           ],
                       }),

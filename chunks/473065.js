@@ -19,7 +19,7 @@ function f(e) {
         b = f === p.ULH.PROFILE && m;
     return (0, r.jsx)(u.JO, {
         disabled: !m || n,
-        tooltip: !m || n ? h.intl.string(h.t.YneDgI) : b ? h.intl.string(h.t.niD64e) : h.intl.string(h.t["+FAsHh"]),
+        tooltip: !m || n ? h.intl.string(h.t.YneDgF) : b ? h.intl.string(h.t.niD64e) : h.intl.string(h.t["+FAsHq"]),
         icon: l.z65,
         onClick: () => {
             (0, s.TY)({

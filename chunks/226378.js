@@ -74,47 +74,47 @@ function f(e) {
         d = {
             disabled: !1,
             isJoinAction: !c,
-            text: c ? o.intl.string(o.t.RscU7O) : o.intl.string(o.t.sqe0ho),
+            text: c ? o.intl.string(o.t.RscU7I) : o.intl.string(o.t.sqe0hj),
             tooltip: void 0,
         },
         f = (0, i.WS)(s);
     if (null != t && null != r && t.launchId === r.launchId)
         return u(l({}, d), {
             disabled: !0,
-            text: o.intl.string(o.t.DPfdsr),
+            text: o.intl.string(o.t.DPfdsq),
             tooltip: void 0,
         });
     if (c)
         return u(l({}, d), {
             disabled: !f,
-            tooltip: f ? void 0 : o.intl.string(o.t.f41E1t),
+            tooltip: f ? void 0 : o.intl.string(o.t.f41E1g),
         });
     if (null != n && n !== a.Fw.CAN_JOIN) {
         let e;
         switch (n) {
             case a.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-                e = o.intl.string(o.t.hHGrW1);
+                e = o.intl.string(o.t.hHGrWz);
                 break;
             case a.Fw.ACTIVITY_AGE_GATED:
                 e = o.intl.string(o.t["4WuFRE"]);
                 break;
             case a.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-                e = o.intl.string(o.t.uGDCc3);
+                e = o.intl.string(o.t.uGDCcw);
                 break;
             case a.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
-                e = o.intl.string(o.t.UXoQTk);
+                e = o.intl.string(o.t.UXoQTp);
                 break;
             case a.Fw.CHANNEL_FULL:
-                e = o.intl.string(o.t.rZfiNj);
+                e = o.intl.string(o.t.rZfiNq);
                 break;
             case a.Fw.NO_CHANNEL_CONNECT_PERMISSION:
-                e = o.intl.string(o.t.w5SApq);
+                e = o.intl.string(o.t.w5SAps);
                 break;
             case a.Fw.NO_CHANNEL:
             case a.Fw.NO_GUILD:
             case a.Fw.NO_USER:
             case a.Fw.IS_AFK_CHANNEL:
-                e = o.intl.string(o.t.Etp6uL);
+                e = o.intl.string(o.t.Etp6uI);
         }
         return u(l({}, d), {
             disabled: !0,

@@ -7,8 +7,8 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(239091),
-    s = n(585237),
+    s = n(239091),
+    o = n(585237),
     c = n(551428),
     u = n(388032);
 function d(e, t, n) {
@@ -25,10 +25,10 @@ function d(e, t, n) {
     );
 }
 let p = {
-    DropdownSizes: s.Z.DropdownSizes,
-    Sizes: s.Z.Sizes,
-    Colors: s.Z.Colors,
-    Looks: s.Z.Looks,
+    DropdownSizes: o.Z.DropdownSizes,
+    Sizes: o.Z.Sizes,
+    Colors: o.Z.Colors,
+    Looks: o.Z.Looks,
 };
 class f extends i.PureComponent {
     render() {
@@ -38,7 +38,7 @@ class f extends i.PureComponent {
                 storeListings: i,
                 primaryStoreListing: l,
                 skuId: a,
-                onStoreListingSelect: o,
+                onStoreListingSelect: s,
                 currentStoreListingId: c,
             } = n,
             p = (function (e, t) {
@@ -66,7 +66,7 @@ class f extends i.PureComponent {
         return (f += i.length) < 2
             ? null
             : (0, r.jsx)(
-                  s.Z,
+                  o.Z,
                   ((e = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ class f extends i.PureComponent {
                       },
                       p,
                   )),
-                  (t = t = { children: u.intl.string(u.t.hElye3) }),
+                  (t = t = { children: u.intl.string(u.t.hElye1) }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                       : (function (e, t) {
@@ -121,7 +121,7 @@ class f extends i.PureComponent {
                                   id: "".concat(e.id),
                                   label: e.id,
                                   action: () => {
-                                      o.Zy(), null == t || t(e);
+                                      s.Zy(), null == t || t(e);
                                   },
                               })
                             : null,
@@ -129,13 +129,13 @@ class f extends i.PureComponent {
                 return (0, r.jsx)(a.v2r, {
                     onSelect: i,
                     navId: "test-store-listing",
-                    "aria-label": u.intl.string(u.t.ogxXGh),
-                    onClose: o.Zy,
+                    "aria-label": u.intl.string(u.t.ogxXGq),
+                    onClose: s.Zy,
                     children: l,
                 });
             }),
             d(this, "handleContextMenu", (e) => {
-                e.stopPropagation(), o.vq(e, this.renderContextMenu);
+                e.stopPropagation(), s.vq(e, this.renderContextMenu);
             });
     }
 }

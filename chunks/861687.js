@@ -27,8 +27,8 @@ var r = n(654861),
     N = n(450109),
     R = n(118445),
     P = n(995896),
-    w = n(311473),
-    D = n(615830),
+    D = n(311473),
+    w = n(615830),
     L = n(314897),
     x = n(592125),
     M = n(131951),
@@ -738,7 +738,7 @@ class eC extends d.Z {
                         ? t
                         : { batteryUsageRounded: null };
                 })(),
-                w.Z.getKrispModel(),
+                D.Z.getKrispModel(),
                 M.Z.getKrispEnableStats() ? M.Z.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null),
                 M.Z.getMediaEngine().getSystemMicrophoneMode(),
             ]).then((e) => {
@@ -812,7 +812,7 @@ class eC extends d.Z {
                     active: !1,
                 });
         let l = M.Z.getMediaEngine(),
-            c = D.Z.getPersistentCodesEnabled(),
+            c = w.Z.getPersistentCodesEnabled(),
             u = null != (s = L.default.getStaticAuthSessionId()) ? s : void 0,
             d = (0, _.zO)(),
             h = l.connect(

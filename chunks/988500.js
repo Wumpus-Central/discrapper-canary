@@ -9,7 +9,7 @@ let s = {
     [a.z.END_EARLY]: (e) =>
         (0, r.jsx)(i.sNh, {
             id: "end-poll-early",
-            label: o.intl.string(o.t.grdwws),
+            label: o.intl.string(o.t.grdwwt),
             icon: i.e0C,
             action: () => {
                 l.Z.endPollEarly({

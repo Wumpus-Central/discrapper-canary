@@ -53,10 +53,10 @@ function m(e) {
 }
 let g = (e) =>
         ({
-            [c.bK.DIDNT_VIOLATE_POLICY]: f.intl.string(f.t.mZffAg),
-            [c.bK.TOO_STRICT_UNFAIR]: f.intl.string(f.t.wgZVAg),
-            [c.bK.DONT_AGREE_PENALTY]: f.intl.string(f.t.eu8G4u),
-            [c.bK.SOMETHING_ELSE]: f.intl.string(f.t.XU3s6u),
+            [c.bK.DIDNT_VIOLATE_POLICY]: f.intl.string(f.t.mZffAi),
+            [c.bK.TOO_STRICT_UNFAIR]: f.intl.string(f.t.wgZVAn),
+            [c.bK.DONT_AGREE_PENALTY]: f.intl.string(f.t.eu8G4k),
+            [c.bK.SOMETHING_ELSE]: f.intl.string(f.t.XU3s6r),
         })[e],
     E = (e) =>
         null == e || 0 === e.length
@@ -67,7 +67,7 @@ let g = (e) =>
 function b(e) {
     return null != e && null != e.guild_metadata;
 }
-let y = (e) => (e === u.evJ.DSA_APPEAL_REQUEST_DEFLECTION ? f.intl.string(f.t["0qyXXF"]) : f.intl.string(f.t.aPmsx8));
+let y = (e) => (e === u.evJ.DSA_APPEAL_REQUEST_DEFLECTION ? f.intl.string(f.t["0qyXXH"]) : f.intl.string(f.t.aPmsx3));
 function O(e) {
     let t = e.max_expiration_time;
     if (null == t) return null;

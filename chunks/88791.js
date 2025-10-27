@@ -9,7 +9,7 @@ function o(e) {
         ? null
         : (0, r.jsx)(i.sNh, {
               id: "reactions",
-              label: a.intl.string(a.t.wikODg),
+              label: a.intl.string(a.t.wikODq),
               icon: i.EO4,
               action: () =>
                   (0, i.ZDy)(async () => {

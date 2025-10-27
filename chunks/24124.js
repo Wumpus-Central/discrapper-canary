@@ -1,6 +1,6 @@
 n.d(t, {
-    GG: () => a,
-    R2: () => o,
+    GG: () => o,
+    R2: () => a,
     h7: () => i,
     rh: () => l,
 });
@@ -24,13 +24,13 @@ function l(e) {
         query: e,
     });
 }
-function a(e) {
+function o(e) {
     r.Z.dispatch({
         type: "ACTIVITY_INVITE_MODAL_SEND",
         channelId: e,
     });
 }
-function o(e) {
+function a(e) {
     r.Z.dispatch({
         type: "ACTIVITY_INVITE_MODAL_SEND",
         userId: e,

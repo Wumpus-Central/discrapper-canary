@@ -16,12 +16,12 @@ let f = (0, a.Z)(
         return (0, n.jsx)(o.v2r, {
             navId: "favorite-server-context",
             onClose: i.Zy,
-            "aria-label": b.intl.string(b.t.liqwPD),
+            "aria-label": b.intl.string(b.t.liqwPJ),
             onSelect: t,
             children: (0, n.jsx)(o.kSQ, {
                 children: (0, n.jsx)(o.S89, {
                     id: "mute-server",
-                    label: b.intl.string(b.t.vRzp7O),
+                    label: b.intl.string(b.t.vRzp7P),
                     action: () => (0, u._Z)(),
                     checked: r,
                 }),

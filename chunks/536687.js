@@ -25,8 +25,8 @@ var r = n(951288),
     x = n(472144),
     T = n(602667),
     D = n(644646),
-    R = n(604162),
-    P = n(747717),
+    P = n(604162),
+    R = n(747717),
     I = n(963123),
     N = n(281055),
     k = n(46140),
@@ -51,10 +51,10 @@ function M(e) {
         W = (0, m.wj)(G) ? w.BRd.DARK : w.BRd.LIGHT,
         z = (0, u.e7)([v.Z], () => v.Z.useReducedMotion),
         K = (0, b.aM)(),
-        [X, $] = l.useState(Y.progressSeconds),
-        [J, ee] = l.useState(!1),
+        [X, J] = l.useState(Y.progressSeconds),
+        [$, ee] = l.useState(!1),
         { completedRatio: et, completedRatioDisplay: en } = (0, h.I)(Z),
-        [er, el] = (0, R.G6)(A.intl.string(A.t.RDE0SU), A.intl.string(A.t["+5kSoa"]), 1700),
+        [er, el] = (0, P.G6)(A.intl.string(A.t.RDE0Sc), A.intl.string(A.t["+5kSoW"]), 1700),
         eo = null != (0, O.LM)(Z.config),
         [ei, ea] = l.useState(!1),
         es = l.useRef(null),
@@ -62,9 +62,9 @@ function M(e) {
         eu =
             (null == (t = Z.userStatus) ? void 0 : t.claimedAt) != null
                 ? eo
-                    ? A.intl.string(A.t.WYchdX)
-                    : A.intl.string(A.t.vTgCW1)
-                : A.intl.string(A.t.cfY4PD),
+                    ? A.intl.string(A.t.WYchde)
+                    : A.intl.string(A.t.vTgCWx)
+                : A.intl.string(A.t.cfY4PE),
         ed = l.useCallback(() => {
             ec &&
                 ((0, O.f2)(Z.id, {
@@ -83,7 +83,7 @@ function M(e) {
                     impressionId: K,
                     sourceQuestContent: H,
                 }),
-                (0, p.showToast)((0, p.createToast)(A.intl.string(A.t["+5kSoa"]), p.ToastType.SUCCESS)),
+                (0, p.showToast)((0, p.createToast)(A.intl.string(A.t["+5kSoW"]), p.ToastType.SUCCESS)),
                 ea(!0),
                 null != es.current && clearTimeout(es.current),
                 (es.current = setTimeout(() => {
@@ -99,7 +99,7 @@ function M(e) {
     let ef = async () => {
             if (null != V) {
                 let e = y.r.build(Z.config).ctaLink;
-                (await (0, R.PW)(e)) && V();
+                (await (0, P.PW)(e)) && V();
             }
             (0, O.nc)(Z, {
                 content: S.jn.VIDEO_MODAL,
@@ -112,7 +112,7 @@ function M(e) {
             ((0, O.xN)(Z.config) || (0, O.Bg)(Z.config)) && V();
         },
         ev = l.useMemo(() => y.r.build(Z.config).defaultRewardName, [Z]),
-        eg = A.intl.formatToPlainString(A.t["12IWPz"], { rewardName: ev }),
+        eg = A.intl.formatToPlainString(A.t["12IWP2"], { rewardName: ev }),
         eE = null == (o = Z.config.taskConfigV2) || null == (n = o.tasks) ? void 0 : n[c.X.WATCH_VIDEO];
     s()(null != eE, "VideoQuestModal: videoTask must not be null");
     let eb = (0, O.ZS)(eE),
@@ -148,14 +148,14 @@ function M(e) {
                                             className: i()(L.contentHeaderLogotype, L.accentOnHover),
                                             src: (0, _.fh)(Z, _.eC.LOGO_TYPE, W).url,
                                         }),
-                                        (0, r.jsx)(P.Z, {}),
+                                        (0, r.jsx)(R.Z, {}),
                                         (0, r.jsxs)("div", {
                                             className: L.questHeading,
                                             children: [
                                                 (0, r.jsx)(p.Heading, {
                                                     variant: "heading-md/semibold",
                                                     color: "header-primary",
-                                                    children: A.intl.format(A.t.EQa7oq, {
+                                                    children: A.intl.format(A.t.EQa7os, {
                                                         questName: Z.config.messages.questName,
                                                     }),
                                                 }),
@@ -184,7 +184,7 @@ function M(e) {
                                                 quest: Z,
                                                 size: 48,
                                                 percentComplete: et,
-                                                percentCompleteText: J ? en : void 0,
+                                                percentCompleteText: $ ? en : void 0,
                                                 percentCompleteTextVariant: "text-sm/medium",
                                                 children: (0, r.jsx)(D.Z, {
                                                     className: L.questProgressRewardTile,
@@ -204,7 +204,7 @@ function M(e) {
                             videoTask: eE,
                             videoSessionId: F,
                             parentTransitionState: M,
-                            onOptimisticProgressUpdate: $,
+                            onOptimisticProgressUpdate: J,
                             autoplay: B,
                             performanceClockStartTime: q,
                             onClose: V,
@@ -219,7 +219,7 @@ function M(e) {
                                           className: L.portraitCtaBtnWrapper,
                                           children: (0, r.jsx)(p.Button, {
                                               variant: "secondary",
-                                              text: A.intl.string(A.t.nL0WvL),
+                                              text: A.intl.string(A.t.nL0WvC),
                                               onClick: ef,
                                               fullWidth: !0,
                                           }),
@@ -245,14 +245,14 @@ function M(e) {
                                                     variant: "active",
                                                     icon: p.owK,
                                                     onClick: em,
-                                                    "aria-label": A.intl.string(A.t.RDE0SU),
+                                                    "aria-label": A.intl.string(A.t.RDE0Sc),
                                                 })
                                               : (0, r.jsx)(d.u, {
-                                                    text: A.intl.string(A.t.WqhZsr),
+                                                    text: A.intl.string(A.t.WqhZss),
                                                     children: (0, r.jsx)(p.hU, {
                                                         variant: "secondary",
                                                         icon: p.TIy,
-                                                        "aria-label": A.intl.string(A.t.RDE0SU),
+                                                        "aria-label": A.intl.string(A.t.RDE0Sc),
                                                         onClick: em,
                                                     }),
                                                 })),
@@ -263,7 +263,7 @@ function M(e) {
                                   children: [
                                       (0, r.jsx)(p.Button, {
                                           variant: "secondary",
-                                          text: A.intl.string(A.t.cpT0Cg),
+                                          text: A.intl.string(A.t.cpT0Cq),
                                           onClick: V,
                                       }),
                                       (0, r.jsxs)("div", {

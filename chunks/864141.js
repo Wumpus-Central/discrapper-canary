@@ -28,17 +28,17 @@ var i = n(120356),
 function N(e) {
     let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: R } = e,
         { themeType: P } = (0, g.z)(),
-        { analyticsLocations: w } = (0, u.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
-        D = (0, h.Z)({
+        { analyticsLocations: D } = (0, u.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        w = (0, h.Z)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: i.id,
             user: t,
-            analyticsLocations: w,
+            analyticsLocations: D,
         }),
         L = (0, m.Z)({
             userId: t.id,
-            onAction: D,
+            onAction: w,
         }),
         x = (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild_id)),
         M = (0, p.Z)(i),
@@ -46,7 +46,7 @@ function N(e) {
         { channelStatusEnabled: j } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
         U = () => {
             if (t.id !== n.id) return null;
-            let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbW"]) : A.intl.string(A.t.xOVEjY);
+            let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbX"]) : A.intl.string(A.t.xOVEjc);
             return (0, r.jsx)(s.u, {
                 text: e,
                 children: (0, r.jsx)(l.d3s, { size: "xxs" }),
@@ -57,22 +57,22 @@ function N(e) {
                 className: C.actions,
                 children: (0, r.jsx)(I.Z, {
                     channel: i,
-                    onAction: D,
+                    onAction: w,
                     onClose: R,
                 }),
             }),
         B =
             i.isDM() || i.isGroupDM()
-                ? A.intl.string(A.t["9FaEzs"])
+                ? A.intl.string(A.t["9FaEzi"])
                 : i.isGuildStageVoice()
-                  ? A.intl.string(A.t.QygGCA)
-                  : A.intl.string(A.t.msxteH);
+                  ? A.intl.string(A.t.QygGCN)
+                  : A.intl.string(A.t.msxteM);
     return (0, r.jsx)(u.Gt, {
-        value: w,
+        value: D,
         children: (0, r.jsxs)(E.Z, {
             ref: L,
             className: a()(C.card, N),
-            onAction: D,
+            onAction: w,
             onClose: R,
             "aria-label": "".concat(B, ", ").concat(k),
             children: [
@@ -100,14 +100,14 @@ function N(e) {
                                     (0, r.jsx)(y.Z, {
                                         channel: i,
                                         guild: x,
-                                        onAction: D,
+                                        onAction: w,
                                         onClose: R,
                                     }),
                                     j &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(v.Z, {
                                             voiceChannel: i,
-                                            onAction: D,
+                                            onAction: w,
                                             onClose: R,
                                         }),
                                     P === S.l.MODAL_V2 && G(),

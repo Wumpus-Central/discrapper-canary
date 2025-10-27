@@ -5,19 +5,19 @@ var i = n(120356),
     a = n.n(i),
     l = n(442837),
     o = n(481060),
-    s = n(706454),
-    c = n(86419),
+    c = n(706454),
+    s = n(86419),
     u = n(881410),
     d = n(388032),
     f = n(959183);
 function g(e) {
     let { widget: t } = e,
-        n = (0, c.Gv)(t.type),
+        n = (0, s.Gv)(t.type),
         i = 1 === n,
         g =
-            (0, l.e7)([s.default], () => ["en-US", "en-GB"].includes(s.default.locale)) && i
-                ? d.intl.string(d.t["3FdPBQ"])
-                : d.intl.format(d.t.W8K2GB, { maxGames: n });
+            (0, l.e7)([c.default], () => ["en-US", "en-GB"].includes(c.default.locale)) && i
+                ? d.intl.string(d.t["3FdPBT"])
+                : d.intl.format(d.t.W8K2GH, { maxGames: n });
     return (0, r.jsxs)("div", {
         className: a()(f.container, i && f.singleGameWidget),
         children: [

@@ -29,12 +29,12 @@ function d(e) {
                               (0, i.jsx)(o.Heading, {
                                   variant: "heading-xl/medium",
                                   color: "header-primary",
-                                  children: u.intl.string(u.t.jzjJQk),
+                                  children: u.intl.string(u.t.jzjJQg),
                               }),
                               (0, i.jsx)(o.Text, {
                                   variant: "text-md/normal",
                                   color: "text-muted",
-                                  children: u.intl.string(u.t["5dOfxc"]),
+                                  children: u.intl.string(u.t["5dOfxb"]),
                               }),
                           ],
                       }),
@@ -48,7 +48,7 @@ function d(e) {
                                       (0, i.jsx)(o.Text, {
                                           variant: "text-md/medium",
                                           color: "interactive-normal",
-                                          children: u.intl.string(u.t.S6VRyM),
+                                          children: u.intl.string(u.t.S6VRyK),
                                       }),
                                   ],
                               }),
@@ -59,7 +59,7 @@ function d(e) {
                                       (0, i.jsx)(o.Text, {
                                           variant: "text-md/medium",
                                           color: "interactive-normal",
-                                          children: u.intl.string(u.t.xq8CKS),
+                                          children: u.intl.string(u.t.xq8CKY),
                                       }),
                                   ],
                               }),
@@ -70,7 +70,7 @@ function d(e) {
                                       (0, i.jsx)(o.Text, {
                                           variant: "text-md/medium",
                                           color: "interactive-normal",
-                                          children: u.intl.string(u.t.GwpRe3),
+                                          children: u.intl.string(u.t.GwpRe0),
                                       }),
                                   ],
                               }),
@@ -81,7 +81,7 @@ function d(e) {
                                       (0, i.jsx)(o.Text, {
                                           variant: "text-md/medium",
                                           color: "interactive-normal",
-                                          children: u.intl.string(u.t.VUoC5O),
+                                          children: u.intl.string(u.t.VUoC5F),
                                       }),
                                   ],
                               }),

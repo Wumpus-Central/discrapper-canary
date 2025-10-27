@@ -13,7 +13,7 @@ function d() {
     return (0, r.jsx)(a.F, {
         setting: l.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
         children: (0, r.jsx)(i.rsf, {
-            label: u.intl.string(u.t["3Ppr1t"]),
+            label: u.intl.string(u.t["3Ppr1h"]),
             description: u.intl.string(u.t.WNbX4O),
             checked: e,
             onChange: (e) => {

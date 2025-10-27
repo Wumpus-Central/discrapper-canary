@@ -43,12 +43,12 @@ function d() {
               className: u.verifyConfirmText,
               variant: "text-sm/normal",
               color: "text-feedback-positive",
-              children: c.intl.string(c.t.H3Q7U1),
+              children: c.intl.string(c.t.H3Q7U8),
           })
         : (0, r.jsx)(s.Button, {
               variant: "primary",
               size: "sm",
-              text: o ? c.intl.string(c.t.WnX4Jy) : c.intl.string(c.t["13ofGh"]),
+              text: o ? c.intl.string(c.t.WnX4J2) : c.intl.string(c.t["13ofGu"]),
               loading: e,
               onClick: m,
           });
@@ -57,29 +57,29 @@ function m() {
     return (0, r.jsx)(o.PU, {
         className: u.editableRequirementContainer,
         icon: s._XJ,
-        text: c.intl.string(c.t.c6EUJC),
-        footnote: c.intl.string(c.t["jMh+TU"]),
+        text: c.intl.string(c.t.c6EUJI),
+        footnote: c.intl.string(c.t["jMh+TY"]),
         meetsRequirement: !1,
         children: (0, r.jsx)(i.u, {
             asContainer: !0,
-            text: c.intl.string(c.t.mGlP39),
+            text: c.intl.string(c.t.mGlP30),
             children: (0, r.jsx)(s.Button, {
                 variant: "primary",
                 size: "sm",
                 disabled: !0,
-                text: c.intl.string(c.t["13ofGh"]),
+                text: c.intl.string(c.t["13ofGu"]),
             }),
         }),
     });
 }
 function f(e) {
     let { isUserVerified: t } = e,
-        n = t ? c.intl.string(c.t.qY1jHB) : c.intl.string(c.t.c6EUJC);
+        n = t ? c.intl.string(c.t.qY1jHN) : c.intl.string(c.t.c6EUJI);
     return (0, r.jsx)(o.PU, {
         className: u.editableRequirementContainer,
         icon: s._XJ,
         text: n,
-        footnote: c.intl.string(c.t["jMh+TU"]),
+        footnote: c.intl.string(c.t["jMh+TY"]),
         meetsRequirement: t,
         children: (0, r.jsx)(d, {}),
     });

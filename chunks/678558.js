@@ -102,8 +102,8 @@ let P = (e) => {
             targetBoostedGuildTier: A,
             onClose: R = () => {},
             closeLayer: P = () => {},
-            pauseAnimation: w = !1,
-            applicationId: D,
+            pauseAnimation: D = !1,
+            applicationId: w,
             handleSubscribeModalClose: L,
             withHighlight: x = !1,
             icon: M,
@@ -148,7 +148,7 @@ let P = (e) => {
                     onClose: R,
                     closeLayer: P,
                     inPopout: B,
-                    applicationId: D,
+                    applicationId: w,
                     handleSubscribeModalClose: L,
                     intent: k,
                 }),
@@ -157,7 +157,7 @@ let P = (e) => {
         q = g.Z.getPremiumTypeSubscription(),
         X = (0, r.jsxs)("div", {
             className: I.button,
-            children: [M, null != T ? T : v.intl.string(v.t.gKmQ1N)],
+            children: [M, null != T ? T : v.intl.string(v.t.gKmQ1G)],
         }),
         Q = !1;
     return ((Q = null !== q && !(Y.length > 0) && (null == q ? void 0 : q.isPausedOrPausePending) && V === O.a$.NONE) &&
@@ -182,7 +182,7 @@ let P = (e) => {
                       icon: u.mBM,
                       iconPosition: "start",
                       disabled: !0,
-                      text: null != T ? T : v.intl.string(v.t.gKmQ1N),
+                      text: null != T ? T : v.intl.string(v.t.gKmQ1G),
                   }),
               })
             : (0, r.jsx)(p.Z, {
@@ -196,7 +196,7 @@ let P = (e) => {
                                   C(S({ "data-migration-pending": !0 }, e), {
                                       disabled: !0,
                                       size: c.zx.Sizes.SMALL,
-                                      pauseAnimation: w,
+                                      pauseAnimation: D,
                                   }),
                                   U,
                               ),
@@ -209,7 +209,7 @@ let P = (e) => {
                 variant: "expressive",
                 disabled: Q,
                 loading: Z,
-                text: null != T ? T : v.intl.string(v.t.gKmQ1N),
+                text: null != T ? T : v.intl.string(v.t.gKmQ1G),
                 onClick: z,
             })
           : (0, r.jsx)(
@@ -226,7 +226,7 @@ let P = (e) => {
                         className: o()(U.className, { [I.buttonHighlighted]: x }),
                         submitting: Z,
                         onClick: z,
-                        pauseAnimation: w,
+                        pauseAnimation: D,
                         children: X,
                     },
                 ),

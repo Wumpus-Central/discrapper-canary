@@ -8,8 +8,8 @@ var r = n(544891),
 function c(e) {
     let t = new o.Hx(e).getAnyErrorMessage();
     a.Z.show({
-        title: l.intl.string(l.t["328j/P"]),
-        body: null != t ? t : l.intl.string(l.t.fEptJC),
+        title: l.intl.string(l.t["328j/I"]),
+        body: null != t ? t : l.intl.string(l.t.fEptJP),
     });
 }
 function u(e) {
@@ -46,7 +46,7 @@ let f = {
             userId: t,
             applicationId: n,
             onSuccess: () => {
-                i.uv.announce(l.intl.string(l.t.zRf8cH));
+                i.uv.announce(l.intl.string(l.t.zRf8cO));
             },
         });
     },
@@ -57,7 +57,7 @@ let f = {
             applicationId: n,
             type: s.OGo.FRIEND,
             onSuccess: () => {
-                i.uv.announce(l.intl.string(l.t.taJiub));
+                i.uv.announce(l.intl.string(l.t.taJiuc));
             },
         });
     },
@@ -67,7 +67,7 @@ let f = {
             userId: t,
             applicationId: n,
             onSuccess: () => {
-                i.uv.announce(l.intl.string(l.t.XMf21t));
+                i.uv.announce(l.intl.string(l.t.XMf21q));
             },
         });
     },

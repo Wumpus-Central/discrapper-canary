@@ -19,14 +19,14 @@ function l(e) {
         l = Math.ceil(e / n);
     if (l < i)
         return t.useSpace
-            ? r.intl.formatToPlainString(r.t.cS889P, { size: l })
-            : r.intl.formatToPlainString(r.t.pIn7AQ, { size: l });
+            ? r.intl.formatToPlainString(r.t.cS889N, { size: l })
+            : r.intl.formatToPlainString(r.t.pIn7Af, { size: l });
     let c = l / i;
     return (
         (c = t.showDecimalForGB ? Math.round(10 * c) / 10 : Math.round(c)),
         t.useSpace
-            ? r.intl.formatToPlainString(r.t.yhEXX1, { size: c })
-            : r.intl.formatToPlainString(r.t.TbMX9P, { size: c })
+            ? r.intl.formatToPlainString(r.t.yhEXX7, { size: c })
+            : r.intl.formatToPlainString(r.t.TbMX9D, { size: c })
     );
 }
 function c(e) {
@@ -37,6 +37,6 @@ function c(e) {
     return c / o >= 1
         ? l(c, t)
         : t.useSpace
-          ? r.intl.formatToPlainString(r.t.bTzRR0, { size: Math.ceil(c) })
-          : r.intl.formatToPlainString(r.t.kEk9pq, { size: Math.ceil(c) });
+          ? r.intl.formatToPlainString(r.t.bTzRR6, { size: Math.ceil(c) })
+          : r.intl.formatToPlainString(r.t.kEk9pr, { size: Math.ceil(c) });
 }

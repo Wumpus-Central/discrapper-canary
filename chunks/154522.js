@@ -46,7 +46,7 @@ function g(e) {
     return o
         ? (0, n.jsx)("ul", {
               className: j.cardContainer,
-              "aria-label": b.intl.string(b.t.qe4kTU),
+              "aria-label": b.intl.string(b.t.qe4kTa),
               children: O.map((e) =>
                   (0, n.jsx)(
                       "li",

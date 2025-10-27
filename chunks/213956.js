@@ -38,13 +38,13 @@ function O() {
             break;
         case h.u.CAPTCHA_AND_RAID_PROTECTION:
             e = (0, r.jsx)(x.Z, {
-                title: _.intl.string(_.t["53eF5u"]),
+                title: _.intl.string(_.t["53eF5o"]),
                 settings: y[h.u.CAPTCHA_AND_RAID_PROTECTION],
             });
             break;
         case h.u.DM_AND_SPAM_PROTECTION:
             e = (0, r.jsx)(x.Z, {
-                title: _.intl.string(_.t.O0SfFx),
+                title: _.intl.string(_.t.O0SfFy),
                 settings: y[h.u.DM_AND_SPAM_PROTECTION],
             });
             break;
@@ -53,7 +53,7 @@ function O() {
             break;
         case h.u.PERMISSIONS:
             e = (0, r.jsx)(x.Z, {
-                title: _.intl.string(_.t.BXoNiY),
+                title: _.intl.string(_.t.BXoNiT),
                 settings: y[h.u.PERMISSIONS],
             });
     }
@@ -76,7 +76,7 @@ function O() {
                         (0, r.jsx)(o.Text, {
                             variant: "text-sm/semibold",
                             color: "interactive-normal",
-                            children: _.intl.string(_.t["13/7kZ"]),
+                            children: _.intl.string(_.t["13/7kX"]),
                         }),
                     ],
                 }),

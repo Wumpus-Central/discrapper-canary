@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(616922),
     I = n(388032);
 function T(e) {
-    if (e === a._.WEEK) return I.t.SjOZfn;
+    if (e === a._.WEEK) return I.t.SjOZfm;
 }
 let S = (e, t, n, r) => {
         let i = T(r),
@@ -35,7 +35,7 @@ let S = (e, t, n, r) => {
             .replaceAll("*", "");
     },
     A = (e, t) =>
-        I.intl.formatToPlainString(I.t.Osmpr6, {
+        I.intl.formatToPlainString(I.t.Osmpr9, {
             username: t.username,
             artist: e.extra.artist.name,
         }),
@@ -44,7 +44,7 @@ let S = (e, t, n, r) => {
             { parent_title: T, provider: C, image_url: N } = n.extra.media,
             R = n.extra.artist.name,
             P = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
-            { primaryColor: w, secondaryColor: D } = (0, m.Z)(N),
+            { primaryColor: D, secondaryColor: w } = (0, m.Z)(N),
             L = (0, _.Nq)(n),
             x = i.useCallback(() => {
                 if (null == t || null == P || !(0, d.Hi)(L, g.y9)) return;
@@ -55,10 +55,10 @@ let S = (e, t, n, r) => {
                     mediaImageSrc: N,
                     artist: R,
                     description: e,
-                    colors: [w, D],
+                    colors: [D, w],
                     badges: (0, p.UU)(n),
                 });
-            }, [N, R, t, n, w, L, D, P]),
+            }, [N, R, t, n, D, L, w, P]),
             M = (0, h.Z)(O.ABu.SPOTIFY);
         if (null == P || !(0, d.Hi)(L, g.y9)) return null;
         let k = () => {
@@ -88,10 +88,10 @@ let S = (e, t, n, r) => {
                             ? (0, r.jsx)(y.Z, {
                                   onClick: M,
                                   Icon: u.Z,
-                                  "aria-label": I.intl.string(I.t["0ZB/XF"]),
+                                  "aria-label": I.intl.string(I.t["0ZB/XE"]),
                               })
                             : null,
-                    userDescription: I.t.CcVI1d,
+                    userDescription: I.t.CcVI1T,
                     title: T,
                     subtitle: R,
                     badges: (0, r.jsx)(E.Gk, {

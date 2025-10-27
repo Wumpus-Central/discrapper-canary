@@ -52,7 +52,7 @@ let f = (e) => {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(o.nn4, {
-                                  children: d.intl.format(d.t.niC6DA, {
+                                  children: d.intl.format(d.t.niC6DK, {
                                       price: g,
                                       discountPercentage: y.discountPercentage,
                                   }),
@@ -72,7 +72,7 @@ let f = (e) => {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["6C36MD"], { price: g }) }),
+                              (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["6C36MF"], { price: g }) }),
                               (0, r.jsx)("span", {
                                   "aria-hidden": !0,
                                   className: a()({ [p.priceStrikethrough]: v }, f),
@@ -86,8 +86,8 @@ let f = (e) => {
             children: [
                 "tooltip" === l
                     ? (0, r.jsx)(i.u, {
-                          text: d.intl.string(d.t.MPFyJy),
-                          "aria-label": d.intl.string(d.t.X3Ekj4),
+                          text: d.intl.string(d.t.MPFyJ5),
+                          "aria-label": d.intl.string(d.t.X3Ekj8),
                           children: (0, r.jsx)(o.SrA, {
                               size: u,
                               color: "currentColor",
@@ -107,10 +107,10 @@ let f = (e) => {
                         variant: "heading-md/semibold",
                         className: p.discountPill,
                         children: [
-                            (0, r.jsx)(o.nn4, { children: d.intl.format(d.t.rItDb2, { discountOfferAmount: b }) }),
+                            (0, r.jsx)(o.nn4, { children: d.intl.format(d.t.rItDbx, { discountOfferAmount: b }) }),
                             (0, r.jsx)("span", {
                                 "aria-hidden": !0,
-                                children: d.intl.formatToPlainString(d.t.AYcXGR, { discountOfferAmount: b }),
+                                children: d.intl.formatToPlainString(d.t.AYcXGW, { discountOfferAmount: b }),
                             }),
                         ],
                     }),
@@ -123,7 +123,7 @@ let f = (e) => {
             variant: "text-md/semibold",
             className: a()(p.container, n),
             children: [
-                (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["a/Y8PD"], { orbAmount: t }) }),
+                (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["a/Y8PK"], { orbAmount: t }) }),
                 (0, r.jsx)(o.aQr, {
                     color: "currentColor",
                     size: "sm",

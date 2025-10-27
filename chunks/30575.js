@@ -27,11 +27,11 @@ function p(e) {
         { device: n, certifiedDeviceMetadata: p, onClose: f, transitionState: v } = e,
         [U, h] = (0, i.useState)(null != n ? T(n.type) : null),
         _ = (0, i.useRef)(!1);
-    function x() {
+    function D() {
         (_.current = !0), d.Wz(n.displayName);
     }
     (0, o.zq)(() => {
-        _.current || x();
+        _.current || D();
     }),
         (0, i.useEffect)(() => {
             c.default.track(u.rMx.OPEN_MODAL, {
@@ -39,35 +39,35 @@ function p(e) {
                 device_name: null != p ? "".concat(p.vendor.name, " ").concat(p.model.name) : n.displayName,
             });
         }, [n.displayName, p]);
-    let D = null != p ? m.intl.string(m.t.kiqvHR) : m.intl.string(m.t.AbnGIy);
+    let x = null != p ? m.intl.string(m.t.kiqvHd) : m.intl.string(m.t.AbnGI5);
     switch (n.type) {
         case s.Q.INPUT:
             t =
                 null != p
-                    ? m.intl.format(m.t.NqNqy8, {
+                    ? m.intl.format(m.t.NqNqy2, {
                           vendorName: p.vendor.name,
                           modelName: p.model.name,
                       })
-                    : m.intl.format(m.t.stSaRk, { name: n.displayName });
+                    : m.intl.format(m.t.stSaRi, { name: n.displayName });
             break;
         case s.Q.OUTPUT:
             t =
                 null != p
-                    ? m.intl.format(m.t.uPgqIC, {
+                    ? m.intl.format(m.t.uPgqIA, {
                           vendorName: p.vendor.name,
                           modelName: p.model.name,
                       })
-                    : m.intl.format(m.t.jyhYp6, { name: n.displayName });
+                    : m.intl.format(m.t.jyhYp1, { name: n.displayName });
             break;
         default:
             t = (0, a.jsxs)(i.Fragment, {
                 children: [
                     null != p
-                        ? m.intl.format(m.t["4Xyzx8"], {
+                        ? m.intl.format(m.t["4Xyzxy"], {
                               vendorName: p.vendor.name,
                               modelName: p.model.name,
                           })
-                        : m.intl.format(m.t.Z7XQcn, { name: n.displayName }),
+                        : m.intl.format(m.t.Z7XQcr, { name: n.displayName }),
                     (0, a.jsx)(r.FXm, {
                         value: (function (e) {
                             if (null == e) return null;
@@ -85,15 +85,15 @@ function p(e) {
                         onChange: (e) => h(T(e)),
                         options: [
                             {
-                                name: m.intl.string(m.t.vhxqwc),
+                                name: m.intl.string(m.t.vhxqwT),
                                 value: s.Q.INPUT_AND_OUTPUT,
                             },
                             {
-                                name: m.intl.string(m.t["Kqs9+P"]),
+                                name: m.intl.string(m.t["Kqs9+J"]),
                                 value: s.Q.INPUT,
                             },
                             {
-                                name: m.intl.string(m.t.GGlM3d),
+                                name: m.intl.string(m.t.GGlM3e),
                                 value: s.Q.OUTPUT,
                             },
                         ],
@@ -103,14 +103,14 @@ function p(e) {
     }
     return (0, a.jsxs)(r.Y0X, {
         transitionState: v,
-        "aria-label": D,
+        "aria-label": x,
         parentComponent: "ConnectedDeviceDetectionModal",
         children: [
             (0, a.jsx)(r.xBx, {
                 separator: !1,
                 children: (0, a.jsx)(r.Heading, {
                     variant: "heading-lg/semibold",
-                    children: D,
+                    children: x,
                 }),
             }),
             (0, a.jsx)(r.hzk, {
@@ -138,7 +138,7 @@ function p(e) {
                                             }),
                                             f();
                                     },
-                                    children: m.intl.formatToPlainString(m.t.cwS3Ex, { device: n.displayName }),
+                                    children: m.intl.formatToPlainString(m.t.cwS3E6, { device: n.displayName }),
                                 }),
                             ],
                         },
@@ -155,15 +155,15 @@ function p(e) {
                             className: N.cancelButton,
                             children: (0, a.jsx)(r.Button, {
                                 variant: "secondary",
-                                text: m.intl.string(m.t.vPBgq6),
+                                text: m.intl.string(m.t.vPBgq7),
                                 onClick: () => {
-                                    x(), f();
+                                    D(), f();
                                 },
                             }),
                         }),
                         (0, a.jsx)(r.Button, {
                             variant: "primary",
-                            text: m.intl.string(m.t.ydkoDQ),
+                            text: m.intl.string(m.t.ydkoDT),
                             onClick: () => {
                                 (_.current = !0),
                                     null != U && d.mo(n.displayName, U, "New Audio Device Detected Modal"),

@@ -51,16 +51,16 @@ let f = [
             secondary_color: null,
             tertiary_color: null,
         },
-        labelString: c.t["8Qyaho"],
+        labelString: c.t["8Qyahn"],
     },
     {
         id: a.g.GRADIENT,
         colors: o.Eg,
-        labelString: c.t.XpWmJy,
+        labelString: c.t.XpWmJz,
     },
     {
         id: a.g.HOLOGRAPHIC,
         colors: o.SK,
-        labelString: c.t.QTKppa,
+        labelString: c.t.QTKppe,
     },
 ];

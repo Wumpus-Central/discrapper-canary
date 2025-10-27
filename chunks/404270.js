@@ -35,7 +35,7 @@ let x = (e) => {
             (0, r.jsx)(s.Heading, {
                 className: b.heading,
                 variant: "heading-xl/semibold",
-                children: h.intl.string(h.t["3x1PFB"]),
+                children: h.intl.string(h.t["3x1PFE"]),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
@@ -62,7 +62,7 @@ let x = (e) => {
                               discountPercent: (0, g.T3)(n, f.Rr / 100),
                           })
                         : m.ZP.isPremium(t, f.PremiumTypes.TIER_1)
-                          ? h.intl.format(h.t.nQLVBA, {
+                          ? h.intl.format(h.t.nQLVBF, {
                                 price: c,
                                 originalPrice: d,
                                 originalPriceHook: (e, t) =>
@@ -76,7 +76,7 @@ let x = (e) => {
                                     ),
                                 discountPercent: (0, g.T3)(n, f.Rr / 100),
                             })
-                          : h.intl.format(h.t.Mmf63N, { price: c });
+                          : h.intl.format(h.t.Mmf63F, { price: c });
                 })({
                     currentUser: i,
                     locale: x,

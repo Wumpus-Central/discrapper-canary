@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => o,
+    I: () => s,
     s: () => a,
 });
 var r = n(823379),
@@ -8,16 +8,16 @@ var r = n(823379),
 function a(e) {
     switch (e) {
         case i.GlobalDiscoveryTab.SERVERS:
-            return l.intl.string(l.t["+Anbp6"]);
+            return l.intl.string(l.t["+Anbp9"]);
         case i.GlobalDiscoveryTab.APPS:
-            return l.intl.string(l.t.bGwCoa);
+            return l.intl.string(l.t.bGwCoR);
         case i.GlobalDiscoveryTab.QUESTS:
             return l.intl.string(l.t.EcaD4e);
         default:
             (0, r.vE)(e);
     }
 }
-function o(e) {
+function s(e) {
     if (e.startsWith("/discovery/applications")) return i.GlobalDiscoveryTab.APPS;
     switch (e) {
         case "/discovery/quests":

@@ -30,19 +30,19 @@ function O(t) {
         }, [f, n, e, E, I]),
         h = [
             {
-                label: p.intl.string(p.t.yeaXw8),
+                label: p.intl.string(p.t.yeaXw5),
                 value: c.$l.LEGITIMATE_ACTIVITY,
             },
             {
-                label: p.intl.string(p.t["o++3Bw"]),
+                label: p.intl.string(p.t["o++3B8"]),
                 value: c.$l.DM_SPAM,
             },
             {
-                label: p.intl.string(p.t.UfHAwc),
+                label: p.intl.string(p.t.UfHAwZ),
                 value: c.$l.JOIN_RAID,
             },
             {
-                label: p.intl.string(p.t.K3UWeX),
+                label: p.intl.string(p.t.K3UWeR),
                 value: c.$l.OTHER,
             },
         ],
@@ -52,16 +52,16 @@ function O(t) {
     return (0, r.jsx)(i.Modal, {
         onClose: f,
         transitionState: O,
-        title: p.intl.string(p.t["1zmw/P"]),
-        subtitle: p.intl.string(p.t.nF79oK),
+        title: p.intl.string(p.t["1zmw/H"]),
+        subtitle: p.intl.string(p.t.nF79oO),
         actions: [
             {
-                text: p.intl.string(p.t["ETE/oK"]),
+                text: p.intl.string(p.t["ETE/oC"]),
                 onClick: f,
                 variant: "secondary",
             },
             {
-                text: p.intl.string(p.t.Gh3A0N),
+                text: p.intl.string(p.t.Gh3A0O),
                 onClick: g,
             },
         ],
@@ -77,7 +77,7 @@ function O(t) {
                     (0, r.jsx)("div", {
                         className: b.textboxContainer,
                         children: (0, r.jsx)(a.Kx8, {
-                            placeholder: p.intl.string(p.t["PAM+JS"]),
+                            placeholder: p.intl.string(p.t["PAM+JR"]),
                             onChange: y,
                             value: E,
                             autoFocus: !0,

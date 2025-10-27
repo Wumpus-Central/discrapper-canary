@@ -1,10 +1,10 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(570140),
     i = n(846027),
     l = n(872810),
     a = n(317770),
-    o = n(569545),
-    s = n(199902),
+    s = n(569545),
+    o = n(199902),
     c = n(314897),
     u = n(592125),
     d = n(131951),
@@ -43,12 +43,12 @@ class h extends a.Z {
                 });
             }),
             f(this, "handleStopStream", (e) => {
-                let t = s.Z.getActiveStreamForUser(e.userId, e.guildId);
-                null != t && (0, l.g)((0, o.V9)(t), !1);
+                let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
+                null != t && (0, l.g)((0, s.V9)(t), !1);
             }),
             f(this, "handleStopUserVideo", () => {
                 d.Z.isVideoEnabled() && i.Z.setVideoEnabled(!1);
             });
     }
 }
-let g = new h();
+let m = new h();

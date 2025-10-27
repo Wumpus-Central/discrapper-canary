@@ -1,19 +1,19 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(921944),
     a = n(388032),
-    o = n(46456);
-function s(e) {
+    s = n(46456);
+function o(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsxs)("div", {
-        className: o.container,
+        className: s.container,
         children: [
-            (0, r.jsx)("div", { className: o.pointer }),
+            (0, r.jsx)("div", { className: s.pointer }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                className: o.content,
+                className: s.content,
                 children: a.intl.string(a.t.rdzeVP),
             }),
             (0, r.jsx)(i.Button, {

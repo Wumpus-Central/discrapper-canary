@@ -9,8 +9,8 @@ r.d(e, {
     r(781311);
 var n = r(951288),
     i = r(647438),
-    o = r(481060),
-    a = r(881052),
+    a = r(481060),
+    o = r(881052),
     l = r(246364),
     c = r(915509),
     s = r(592286),
@@ -44,11 +44,11 @@ function p(t) {
     var e, r, l;
     let { type: p, title: b, description: g, field: y, onSave: _, onClose: f } = t,
         [m, O] = i.useState(null != (e = null == y ? void 0 : y.label) ? e : ""),
-        [j, x] = i.useState(null),
-        h = async () => {
-            null != j && x(null);
+        [j, h] = i.useState(null),
+        x = async () => {
+            null != j && h(null);
             let t = m.trim();
-            if ("" === t) return void x(u.intl.string(u.t["G+TI4+"]));
+            if ("" === t) return void h(u.intl.string(u.t["G+TI44"]));
             try {
                 await _({
                     field_type: p,
@@ -57,7 +57,7 @@ function p(t) {
                 }),
                     f();
             } catch (t) {
-                x(new a.Hx(t).getAnyErrorMessage());
+                h(new o.Hx(t).getAnyErrorMessage());
             }
         };
     return (0, n.jsx)(
@@ -68,17 +68,17 @@ function p(t) {
                 errorText: j,
                 title: b,
                 description: g,
-                onConfirm: h,
+                onConfirm: x,
                 onCancel: f,
-                children: (0, n.jsx)(o.oil, {
+                children: (0, n.jsx)(a.oil, {
                     onChange: (t) => {
-                        null != j && x(null);
+                        null != j && h(null);
                         let e = t.replace(/(\r\n|\n|\r)/g, " ");
                         e.length > s.XN && (e = e.slice(0, s.XN)), O(e);
                     },
-                    placeholder: u.intl.string(u.t.fqVmbG),
+                    placeholder: u.intl.string(u.t.fqVmbL),
                     value: m,
-                    onKeyDown: (t) => "Enter" === t.key && h(),
+                    onKeyDown: (t) => "Enter" === t.key && x(),
                 }),
             }),
         Object.getOwnPropertyDescriptors
@@ -101,8 +101,8 @@ function b(t) {
         p,
         d(
             {
-                title: u.intl.string(u.t.w6Q9w8),
-                description: u.intl.string(u.t["A6M+qq"]),
+                title: u.intl.string(u.t.w6Q9wz),
+                description: u.intl.string(u.t["A6M+qv"]),
                 type: l.QJ.TEXT_INPUT,
             },
             t,
@@ -114,8 +114,8 @@ function g(t) {
         p,
         d(
             {
-                title: u.intl.string(u.t.gG0JBA),
-                description: u.intl.string(u.t.SMX0iY),
+                title: u.intl.string(u.t.gG0JBN),
+                description: u.intl.string(u.t.SMX0ia),
                 type: l.QJ.PARAGRAPH,
             },
             t,

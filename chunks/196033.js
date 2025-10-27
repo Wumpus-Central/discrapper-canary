@@ -72,8 +72,8 @@ let g = () => {
                     : {
                           asset: f,
                           popoutAsset: d,
-                          title: u.intl.string(u.t.QZVVBg),
-                          body: u.intl.string(u.t.sajmAg),
+                          title: u.intl.string(u.t.QZVVBh),
+                          body: u.intl.string(u.t.sajmAq),
                           version: 0,
                           revertTextColor: !1,
                       },

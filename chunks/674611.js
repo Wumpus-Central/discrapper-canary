@@ -14,7 +14,7 @@ function u(e) {
         }, [n, t]);
     return (0, r.jsx)(o.Button, {
         variant: "secondary",
-        text: c.intl.string(c.t["4q1ElZ"]),
+        text: c.intl.string(c.t["4q1Elf"]),
         onClick: d,
         disabled: !u,
     });

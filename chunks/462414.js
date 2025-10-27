@@ -3,24 +3,24 @@ var r = n(243814),
     i = n(846027),
     l = n(131951),
     a = n(13140),
-    o = n(996106),
-    s = n(452426),
+    s = n(996106),
+    o = n(452426),
     c = n(186901),
     u = n(981631),
     d = n(65154);
 function p(e) {
     let t = e.application.id;
-    if (null == t) throw new o.Z({ errorCode: u.lTL.INVALID_COMMAND }, "No application.");
+    if (null == t) throw new s.Z({ errorCode: u.lTL.INVALID_COMMAND }, "No application.");
     return t;
 }
 let f = {
     [u.Etm.SET_VOICE_SETTINGS_2]: {
         scope: c.lH,
         validation: (e) =>
-            (0, s.Z)(e)
+            (0, o.Z)(e)
                 .required()
                 .keys({
-                    input_mode: (0, s.Z)(e).keys({
+                    input_mode: (0, o.Z)(e).keys({
                         type: e.string().valid(Object.keys(u.pM4)),
                         shortcut: e.string().required(),
                     }),
@@ -30,18 +30,18 @@ let f = {
         handler(e) {
             let {
                     socket: t,
-                    args: { input_mode: n, self_mute: r, self_deaf: o },
+                    args: { input_mode: n, self_mute: r, self_deaf: s },
                 } = e,
-                s = p(t);
-            null != n && i.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, s),
-                null != r && r !== l.Z.isSelfMute(s) && i.Z.toggleSelfMute({ context: s }),
-                null != o && o !== l.Z.isSelfDeaf(s) && i.Z.toggleSelfDeaf({ context: s });
+                o = p(t);
+            null != n && i.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, o),
+                null != r && r !== l.Z.isSelfMute(o) && i.Z.toggleSelfMute({ context: o }),
+                null != s && s !== l.Z.isSelfDeaf(o) && i.Z.toggleSelfDeaf({ context: o });
         },
     },
     [u.Etm.SET_USER_VOICE_SETTINGS_2]: {
         scope: c.lH,
         validation: (e) =>
-            (0, s.Z)(e)
+            (0, o.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
@@ -53,16 +53,16 @@ let f = {
                     socket: t,
                     args: { user_id: n, mute: r, volume: a },
                 } = e,
-                o = p(t);
-            null != r && r !== l.Z.isLocalMute(n, o) && i.Z.toggleLocalMute(n, o),
-                null != a && i.Z.setLocalVolume(n, a, o);
+                s = p(t);
+            null != r && r !== l.Z.isLocalMute(n, s) && i.Z.toggleLocalMute(n, s),
+                null != a && i.Z.setLocalVolume(n, a, s);
         },
     },
     [u.Etm.PUSH_TO_TALK]: {
         scope: {
             [c.Gp.ALL]: [r.x.RPC, r.x.RPC_VOICE_WRITE],
         },
-        validation: (e) => (0, s.Z)(e).required().keys({ active: e.boolean() }),
+        validation: (e) => (0, o.Z)(e).required().keys({ active: e.boolean() }),
         handler(e) {
             let {
                 args: { active: t },

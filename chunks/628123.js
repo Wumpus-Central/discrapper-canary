@@ -60,7 +60,7 @@ function A() {
         onClick: n,
         submitting: e,
         className: T.clearOverrideButton,
-        children: I.intl.string(I.t["/Nz9ra"]),
+        children: I.intl.string(I.t["/Nz9rY"]),
     });
 }
 let C = o().throttle(
@@ -124,8 +124,8 @@ class N extends i.PureComponent {
         if (null !== this.state.error) {
             let e = (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)("p", { children: I.intl.string(I.t.tx8CkJ) }),
-                        (0, r.jsx)("p", { children: I.intl.string(I.t.CvQlAA) }),
+                        (0, r.jsx)("p", { children: I.intl.string(I.t.tx8CkI) }),
+                        (0, r.jsx)("p", { children: I.intl.string(I.t.CvQlAH) }),
                     ],
                 }),
                 n = (0, r.jsxs)("div", {
@@ -134,13 +134,13 @@ class N extends i.PureComponent {
                         (0, r.jsx)(f.zx, {
                             size: f.Ph.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: I.intl.string(I.t["+hivLS"]),
+                            children: I.intl.string(I.t["+hivLW"]),
                         }),
                         (0, r.jsx)(A, {}),
                     ],
                 });
             return (0, r.jsx)(m.Z, {
-                title: I.intl.string(I.t["3h+n+/"]),
+                title: I.intl.string(I.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,
                 className: T.errorPage,

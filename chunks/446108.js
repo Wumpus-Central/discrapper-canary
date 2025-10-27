@@ -23,11 +23,11 @@ function c() {
         },
         {
             id: s,
-            text: i.intl.string(i.t.gHp0Cw),
+            text: i.intl.string(i.t.gHp0C4),
         },
         {
             id: l,
-            text: i.intl.string(i.t.SO93ur),
+            text: i.intl.string(i.t.SO93uu),
         },
     ].forEach((e) => {
         let { id: t, text: n } = e,

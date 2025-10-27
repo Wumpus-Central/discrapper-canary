@@ -86,13 +86,13 @@ class w extends i.Component {
                 (0, r.jsx)(g.Text, {
                     variant: "text-md/medium",
                     color: "header-primary",
-                    children: I.intl.string(I.t["76OoX1"]),
+                    children: I.intl.string(I.t["76OoX8"]),
                 }),
                 (0, r.jsx)(g.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     className: S.tierDefaultUnlockedDescription,
-                    children: I.intl.string(I.t.DaYNQU),
+                    children: I.intl.string(I.t.DaYNQQ),
                 }),
             ],
         });

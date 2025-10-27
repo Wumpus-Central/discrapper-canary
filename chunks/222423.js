@@ -20,6 +20,6 @@ function f(e) {
             [c.md]: "md" === n,
         }),
         src: i,
-        alt: l.intl.string(l.t.htEhYm),
+        alt: l.intl.string(l.t.htEhYu),
     });
 }

@@ -22,8 +22,8 @@ let _ = (0, c.B)(function (e) {
             disableManageChannels: _,
             sorting: O,
             sortingType: y,
-            sortingPosition: v,
-            connectChannelDragSource: j,
+            sortingPosition: j,
+            connectChannelDragSource: v,
             connectChannelDropTarget: x,
             tabIndex: C,
         } = e,
@@ -91,11 +91,11 @@ let _ = (0, c.B)(function (e) {
             [E],
         );
     if (null == E) return null;
-    let Z = (0, f.jo)(c, v),
-        w = (0, f.CN)(E, O, y),
-        T = (0, r.jsx)("div", {
+    let Z = (0, f.jo)(c, j),
+        T = (0, f.CN)(E, O, y),
+        w = (0, r.jsx)("div", {
             className: o()(Z, {
-                [b.disabled]: w,
+                [b.disabled]: T,
                 [b.selected]: I,
             }),
             "data-dnd-name": E.name,
@@ -120,5 +120,5 @@ let _ = (0, c.B)(function (e) {
                 ],
             }),
         });
-    return P && (T = x(j(T))), T;
+    return P && (w = x(v(w))), w;
 });

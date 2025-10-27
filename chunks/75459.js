@@ -27,6 +27,6 @@ let p = [
     a.Z.GIFTING_PROMOTION_COACHMARK,
     l.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
     r.Z.NEUTRAL_71,
-    c.t.xFKdb2,
-    c.t.GnL3Gh,
-    () => c.intl.string(c.t.eZrmtr);
+    c.t.xFKdb9,
+    c.t.GnL3Gv,
+    () => c.intl.string(c.t.eZrmtq);

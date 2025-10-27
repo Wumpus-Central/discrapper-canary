@@ -26,7 +26,7 @@ let f = {
                 ctaText: n,
                 ctaOnClick: i,
                 analyticsPage: g,
-                linkText: b = h.intl.string(h.t.XRdyj4),
+                linkText: b = h.intl.string(h.t.XRdyjz),
                 cardAlignment: v = f.START,
                 className: j,
             } = e,

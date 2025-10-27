@@ -7,31 +7,31 @@ var s = n(951288),
     C = n(481060),
     c = n(607070),
     d = n(22267),
-    L = n(70097),
-    u = n(594174),
+    u = n(70097),
+    L = n(594174),
     o = n(526167),
     H = n(741245),
     M = n(388032),
     h = n(127290),
-    p = n(667325),
-    Z = n(552039),
+    Z = n(667325),
+    p = n(552039),
     m = n(445161);
 let g = (e) => {
     let { type: t, text: n, buttonText: l, buttonLoading: g, hideClose: N, onClose: f } = e,
         x = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-        _ = (0, a.e7)([u.default], () => {
-            let e = u.default.getCurrentUser();
+        E = (0, a.e7)([L.default], () => {
+            let e = L.default.getCurrentUser();
             return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        E = (0, o.rO)() ? p.Z : Z.Z,
+        _ = (0, o.rO)() ? Z.Z : p.Z,
         I = ((e) => {
             switch (e) {
                 case H.Yk.PREMIUM_UPDATED:
-                    return M.intl.string(M.t["75Wt0N"]);
+                    return M.intl.string(M.t["75Wt0E"]);
                 case H.Yk.PREMIUM_ACTIVATED:
-                    return M.intl.string(M.t.QWljxM);
+                    return M.intl.string(M.t.QWljxE);
                 default:
-                    return M.intl.string(M.t.X79Az8);
+                    return M.intl.string(M.t.X79Az5);
             }
         })(t);
     return (0, s.jsxs)("div", {
@@ -52,19 +52,19 @@ let g = (e) => {
                               alt: "",
                               className: h.nameplateGlow,
                           })
-                        : (0, s.jsx)(L.Z, {
+                        : (0, s.jsx)(u.Z, {
                               playsInline: !0,
                               muted: !0,
                               autoPlay: !0,
                               loop: !0,
                               className: h.nameplateGlow,
-                              children: (0, s.jsx)("source", { src: E }),
+                              children: (0, s.jsx)("source", { src: _ }),
                           }),
                     (0, s.jsx)(d.Z, {
-                        user: _,
+                        user: E,
                         isHighlighted: !0,
                         nameplate: null,
-                        nameplateData: _.nameplate,
+                        nameplateData: E.nameplate,
                         className: h.nameplatePreview,
                         nameplatePreviewSize: "large",
                     }),

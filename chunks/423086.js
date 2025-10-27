@@ -90,7 +90,7 @@ function E(e) {
         : (0, r.jsx)(a.sNh, {
               id: "report-app",
               color: n.color,
-              label: u.intl.string(u.t.NgA5vr),
+              label: u.intl.string(u.t.NgA5vp),
               action: () => b(t, n),
           });
 }
@@ -109,7 +109,7 @@ function b(e, t) {
                     p(
                         f(
                             {
-                                title: u.intl.string(u.t.Bd10bW),
+                                title: u.intl.string(u.t.Bd10bR),
                                 actions: [],
                             },
                             e,
@@ -119,14 +119,14 @@ function b(e, t) {
                                 children: [
                                     (0, r.jsx)(s.JZ, {
                                         variant: "clickable",
-                                        title: u.intl.string(u.t.eyEkGx),
-                                        description: u.intl.string(u.t.ptItsr),
+                                        title: u.intl.string(u.t.eyEkG1),
+                                        description: u.intl.string(u.t.ptItsj),
                                         onButtonPress: () => (0, o.pX)(t.user, t.guildId, n, t.appContext),
                                     }),
                                     (0, r.jsx)(s.JZ, {
                                         variant: "clickable",
-                                        title: u.intl.string(u.t.atP0yc),
-                                        description: u.intl.string(u.t.UGg609),
+                                        title: u.intl.string(u.t.atP0yX),
+                                        description: u.intl.string(u.t.UGg603),
                                         onButtonPress: () => {
                                             var e;
                                             (0, o.uu)({

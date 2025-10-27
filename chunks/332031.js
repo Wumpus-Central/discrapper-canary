@@ -13,7 +13,7 @@ function d(e, n) {
         ? null
         : (0, l.jsx)(r.sNh, {
               id: "watch-stream",
-              label: s.intl.string(s.t["7Xq/nZ"]),
+              label: s.intl.string(s.t["7Xq/nV"]),
               action: () => {
                   null == n || n(), window.open(t, "_blank");
               },

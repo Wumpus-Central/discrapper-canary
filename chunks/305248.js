@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(404616),
     d = n(470623),
     p = n(344185),
-    h = n(488131),
-    f = n(592125),
+    f = n(488131),
+    h = n(592125),
     g = n(823379),
     m = n(709054),
     b = n(981631),
@@ -19,7 +19,7 @@ var r = n(951288),
 function y(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
         y = (0, a.Wu)(
-            [p.Z, f.Z],
+            [p.Z, h.Z],
             () =>
                 o()(p.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
@@ -29,7 +29,7 @@ function y(e) {
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return f.Z.getChannel(t);
+                        return h.Z.getChannel(t);
                     })
                     .filter(g.lm)
                     .sort((e, t) => m.default.compare(e.id, t.id))
@@ -37,7 +37,7 @@ function y(e) {
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
         j = i.useCallback((e, t) => {
-            (0, h.ok)(e, t, _.on.INBOX);
+            (0, f.ok)(e, t, _.on.INBOX);
         }, []);
     return (
         i.useEffect(() => {

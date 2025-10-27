@@ -26907,9 +26907,9 @@ span.clanTag__5d473 {
     border-radius: 3px;
     color: var(--white-500);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -47778,12 +47778,12 @@ img.thumbnail__0f2e8 {
     fill: ButtonText !important
 }
 
-.popoutRoleDot_b77a0c {
+.popoutRoleDot__50e22 {
     -webkit-margin-end: 4px;
     margin-inline-end: 4px
 }
 
-.popoutRoleCircle_b77a0c {
+.popoutRoleCircle__50e22 {
     -webkit-margin-end: 8px;
     margin-inline-end: 8px
 }

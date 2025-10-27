@@ -21,25 +21,25 @@ let E =
 function N(e) {
     let { onBack: t, onComplete: n, onConnect: a, isSlideReady: o } = e,
         [N, x] = r.useState(""),
-        [T, A] = r.useState(!1),
+        [A, T] = r.useState(!1),
         [C, j] = r.useState(null),
-        O = r.useRef(null);
+        y = r.useRef(null);
     r.useEffect(() => {
         var e;
-        o && (null == (e = O.current) || e.focus());
+        o && (null == (e = y.current) || e.focus());
     }, [o]);
-    let y = r.useCallback(
+    let O = r.useCallback(
         (e) => {
             e.preventDefault();
             let t = N.trim();
-            if ("" === t) return void j(h.intl.string(h.t.IRq5am));
-            j(null), A(!0);
+            if ("" === t) return void j(h.intl.string(h.t.IRq5ah));
+            j(null), T(!0);
             let a = t.split("/"),
                 o = a[a.length - 1];
             c.ZP.resolveInvite(o, "Join Guild", { inputValue: t }).then(
                 (e) => {
                     let { invite: t } = e;
-                    if ((A(!1), null == t)) return void j(h.intl.string(h.t["GEYI+f"]));
+                    if ((T(!1), null == t)) return void j(h.intl.string(h.t["GEYI+Z"]));
                     if (null != t.channel) {
                         let e = c.ZP.getInviteContext("Join Guild", t);
                         c.ZP.acceptInvite({
@@ -49,18 +49,18 @@ function N(e) {
                                 n(), c.ZP.transitionToInvite(e);
                             },
                         }).catch((e) => {
-                            e instanceof u.yZ || e instanceof u.Hx ? j((0, f.O)(e.code)) : j(h.intl.string(h.t.dDZRd3));
+                            e instanceof u.yZ || e instanceof u.Hx ? j((0, f.O)(e.code)) : j(h.intl.string(h.t.dDZRdy));
                         });
                     }
                 },
                 (e) => {
-                    A(!1);
+                    T(!1);
                     let t = new u.yZ(e);
                     j((0, f.O)(t.code));
                 },
             );
         },
-        [N, A, j, n],
+        [N, T, j, n],
     );
     return {
         content: (0, s.jsxs)(s.Fragment, {
@@ -74,7 +74,7 @@ function N(e) {
                             variant: "heading-xl/bold",
                             color: "header-primary",
                             className: b.title,
-                            children: h.intl.string(h.t.riOUtL),
+                            children: h.intl.string(h.t.riOUtB),
                         }),
                         (0, s.jsx)(l.Text, {
                             variant: "text-md/normal",
@@ -86,20 +86,20 @@ function N(e) {
                 (0, s.jsxs)(l.hzk, {
                     children: [
                         (0, s.jsx)("form", {
-                            onSubmit: y,
+                            onSubmit: O,
                             className: b.inputForm,
                             children: (0, s.jsx)(l.oil, {
-                                label: h.intl.string(h.t.qreV29),
+                                label: h.intl.string(h.t.qreV25),
                                 error: C,
                                 value: N,
                                 onChange: x,
-                                inputRef: O,
+                                inputRef: y,
                             }),
                         }),
                         (0, s.jsx)(l.Text, {
                             color: "header-secondary",
                             variant: "text-xs/normal",
-                            children: h.intl.format(h.t.lHTZl5, {
+                            children: h.intl.format(h.t.lHTZl2, {
                                 examples: "".concat(E).concat("wumpus-friends", ", ").concat("hTKzmak"),
                             }),
                         }),
@@ -121,17 +121,17 @@ function N(e) {
             children: [
                 (0, s.jsx)(l.Button, {
                     variant: "primary",
-                    text: h.intl.string(h.t.VJlc0d),
-                    onClick: y,
+                    text: h.intl.string(h.t.VJlc0S),
+                    onClick: O,
                     disabled: 0 === N.length,
-                    loading: T,
+                    loading: A,
                 }),
                 (0, s.jsx)(i.zx, {
                     className: b.__invalid_skipButton,
                     look: i.zx.Looks.BLANK,
                     size: i.zx.Sizes.MIN,
                     onClick: t,
-                    children: h.intl.string(h.t["13/7kZ"]),
+                    children: h.intl.string(h.t["13/7kX"]),
                 }),
             ],
         }),

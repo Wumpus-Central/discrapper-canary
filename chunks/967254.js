@@ -92,13 +92,13 @@ let C = (e) => {
                             color: "text-default",
                             children:
                                 "active" === t
-                                    ? O.intl.formatToPlainString(O.t.IeV2oa, { count: a.toString() })
-                                    : O.intl.formatToPlainString(O.t.fZAHBQ, { count: a.toString() }),
+                                    ? O.intl.formatToPlainString(O.t.IeV2oY, { count: a.toString() })
+                                    : O.intl.formatToPlainString(O.t.fZAHBT, { count: a.toString() }),
                         }),
                         (0, r.jsx)(l.Heading, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: "active" === t ? O.intl.string(O.t.XJ2YVV) : O.intl.string(O.t.SzGV0t),
+                            children: "active" === t ? O.intl.string(O.t.XJ2YVR) : O.intl.string(O.t.SzGV0g),
                         }),
                     ],
                 }),
@@ -134,12 +134,12 @@ let C = (e) => {
                 (0, r.jsx)(l.Heading, {
                     variant: "heading-md/bold",
                     className: v.emptyStateText,
-                    children: O.intl.string(O.t.reLFaW),
+                    children: O.intl.string(O.t.reLFaV),
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: "text-xs/normal",
                     className: v.emptyStateSubtext,
-                    children: O.intl.string(O.t.ERdH1t),
+                    children: O.intl.string(O.t.ERdH1o),
                 }),
             ],
         }),
@@ -149,7 +149,7 @@ let C = (e) => {
             children: (0, r.jsx)(l.Text, {
                 variant: "text-xs/normal",
                 className: v.emptyStateSubtext,
-                children: O.intl.string(O.t.RV3AXV),
+                children: O.intl.string(O.t.RV3AXf),
             }),
         }),
     P = (e) => {
@@ -160,13 +160,13 @@ let C = (e) => {
             children: (0, h.XX)(t),
         });
     },
-    w = () =>
+    D = () =>
         (0, r.jsx)(l.Text, {
             variant: "text-xs/bold",
             className: v.newBadge,
-            children: O.intl.string(O.t.QKMRCw),
+            children: O.intl.string(O.t.QKMRC4),
         }),
-    D = (e) => {
+    w = (e) => {
         let { classification: t } = e,
             { id: a, description: s } = t,
             c = f.default.extractTimestamp(a),
@@ -185,7 +185,7 @@ let C = (e) => {
                 return (0, h.FB)(t)
                     ? (null == t || null == (e = t.guild_metadata) ? void 0 : e.member_type) === _.wO.OWNER
                         ? O.intl.format(
-                              O.t.Lb0HVl,
+                              O.t.Lb0HVv,
                               A(T({}, a), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
                           )
                         : O.intl.format(O.t.rmpEPD, {
@@ -193,7 +193,7 @@ let C = (e) => {
                               classification_type: a.description,
                               classificationHook: a.descriptionHook,
                           })
-                    : O.intl.format(O.t.QY4g5u, a);
+                    : O.intl.format(O.t.QY4g5t, a);
             }, [t, s]),
             p = () => {
                 (0, l.ZDy)(async () => {
@@ -219,7 +219,7 @@ let C = (e) => {
                 children: (0, r.jsxs)("div", {
                     className: v.descriptionContainer,
                     children: [
-                        u ? (0, r.jsx)(w, {}) : (0, r.jsx)(P, { timestamp: c }),
+                        u ? (0, r.jsx)(D, {}) : (0, r.jsx)(P, { timestamp: c }),
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/normal",
                             children: d,
@@ -268,7 +268,7 @@ let C = (e) => {
                                     width: "100%",
                                 },
                             }),
-                            h.length > 0 && h.map((e) => (0, r.jsx)(D, { classification: e }, e.id)),
+                            h.length > 0 && h.map((e) => (0, r.jsx)(w, { classification: e }, e.id)),
                             h.length < n.length &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
@@ -281,7 +281,7 @@ let C = (e) => {
                                         (0, r.jsx)("button", {
                                             className: v.paginationButton,
                                             onClick: () => u((e) => e + m),
-                                            children: O.intl.format(O.t["9Ml56O"], { nextPageSize: m }),
+                                            children: O.intl.format(O.t["9Ml56H"], { nextPageSize: m }),
                                         }),
                                     ],
                                 }),

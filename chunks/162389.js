@@ -98,8 +98,8 @@ function y(e) {
             [r, t],
         ),
         {
-            handleDragStart: O,
-            handleDragReset: N,
+            handleDragStart: N,
+            handleDragReset: O,
             handleDragComplete: Z,
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, d.pW)({ availableTags: e });
@@ -117,8 +117,8 @@ function y(e) {
                               canManageChannels: r,
                               onTagClick: S,
                               onDragComplete: Z,
-                              onDragReset: N,
-                              onDragStart: O,
+                              onDragReset: O,
+                              onDragStart: N,
                           },
                           e.id,
                       ),
@@ -130,7 +130,7 @@ function y(e) {
                       className: s()(x.addTags, { [x.disabled]: !r || u }),
                       children: (0, i.jsx)(c.qJs, {
                           size: "custom",
-                          "aria-label": b.intl.string(b.t["/jubeH"]),
+                          "aria-label": b.intl.string(b.t["/jubeD"]),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
                           width: 20,
                           height: 20,
@@ -138,7 +138,7 @@ function y(e) {
                   })
                 : (0, i.jsx)(c.Button, {
                       variant: "primary",
-                      text: b.intl.string(b.t["/jubeH"]),
+                      text: b.intl.string(b.t["/jubeD"]),
                       disabled: !r,
                       onClick: y,
                   }),
@@ -182,7 +182,7 @@ function C(e) {
         children: (0, i.jsx)(p.Z, {
             tag: t,
             disabled: !l,
-            ariaLabel: b.intl.formatToPlainString(b.t.jhSvBw, { name: t.name }),
+            ariaLabel: b.intl.formatToPlainString(b.t.jhSvB9, { name: t.name }),
             onClick: l ? () => r(t) : void 0,
         }),
     });

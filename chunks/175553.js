@@ -19,7 +19,7 @@ function c(e, t) {
         icon: d,
         title: n,
         body: c,
-        hint: (e) => (0, i.Yj)(e, a.intl.string(a.t.WRj1Wl)),
+        hint: (e) => (0, i.Yj)(e, a.intl.string(a.t.WRj1Wn)),
         onNotificationShow: () => {
             u();
         },

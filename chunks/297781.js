@@ -98,7 +98,7 @@ function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -106,7 +106,7 @@ function P(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -115,7 +115,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = {
+let w = {
     [c.s.TOP_ARTIST]: [K],
     [c.s.PLAYED_GAME]: [G, B, U, q, F, Y, z, H, V],
     [c.s.TOP_GAME]: [W],
@@ -256,7 +256,7 @@ function F(e) {
     return (0, y.Ol)(t)
         ? (0, r.jsx)(j, {
               Icon: _._IE,
-              text: T.intl.string(T.t.keY6mZ),
+              text: T.intl.string(T.t.keY6mW),
               iconColor: i,
           })
         : null;
@@ -288,7 +288,7 @@ function H(e) {
         Icon: _.Oe7,
         showTooltip: !i,
         tooltipText: o,
-        text: i ? o : T.intl.string(T.t.adnLsL),
+        text: i ? o : T.intl.string(T.t.adnLsB),
     });
 }
 function Y(e) {
@@ -300,7 +300,7 @@ function Y(e) {
               Icon: _.qOE,
               showTooltip: 0 === n,
               text: T.intl.formatToPlainString(T.t["Klie/P"], { days: i }),
-              tooltipText: T.intl.formatToPlainString(T.t.PwMe0t, { days: i }),
+              tooltipText: T.intl.formatToPlainString(T.t.PwMe0s, { days: i }),
           })
         : null;
 }
@@ -311,11 +311,11 @@ function W(e) {
         a = (0, y.yA)(t);
     if (null == a) return null;
     let o = i ? " \u2014 " : ": ",
-        s = i ? T.t.C0Axoa : T.t.SDRHgo;
+        s = i ? T.t.C0AxoR : T.t.SDRHgr;
     return (0, r.jsx)(j, {
         Icon: _.rm8,
         text: (0, r.jsxs)(r.Fragment, {
-            children: [T.intl.string(T.t["/50eHh"]), o, T.intl.format(s, { hours: Math.round(a / h.Z.Seconds.HOUR) })],
+            children: [T.intl.string(T.t["/50eHi"]), o, T.intl.format(s, { hours: Math.round(a / h.Z.Seconds.HOUR) })],
         }),
     });
 }
@@ -326,8 +326,8 @@ function K(e) {
         a = null == (t = (0, y.PJ)(n, u.N.AGGREGATE_COUNT)) ? void 0 : t.count;
     if (null == a) return null;
     let o = (0, m.Hi)(i, [1, 2, 5])
-        ? T.intl.formatToPlainString(T.t.HtifnJ, { count: a })
-        : T.intl.formatToPlainString(T.t["jq/Bmp"], { count: a });
+        ? T.intl.formatToPlainString(T.t.HtifnG, { count: a })
+        : T.intl.formatToPlainString(T.t["jq/Bmu"], { count: a });
     return (0, r.jsx)(j, {
         Icon: _.rm8,
         text: o,
@@ -342,7 +342,7 @@ function z(e) {
         ? null
         : (0, r.jsx)(j, {
               Icon: _.YqE,
-              text: T.intl.string(T.t.kAlUs7),
+              text: T.intl.string(T.t.kAlUsy),
           });
 }
 function q(e) {
@@ -354,7 +354,7 @@ function q(e) {
         ? null
         : (0, r.jsx)(j, {
               Icon: _.rIT,
-              text: T.intl.string(T.t.vYuyWV),
+              text: T.intl.string(T.t.vYuyWf),
           });
 }
 function X(e) {
@@ -428,15 +428,15 @@ function J(e) {
 function $(e) {
     switch (e.content_type) {
         case c.s.TOP_ARTIST:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.PLAYED_GAME:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.TOP_GAME:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.WATCHED_MEDIA:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.LAUNCHED_ACTIVITY:
-            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         default:
             return null;
     }

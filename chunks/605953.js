@@ -25,7 +25,7 @@ function h(e) {
             }),
                 (0, a.e7)();
         },
-        tooltip: n ? p.intl.string(p.t.nGs3kJ) : p.intl.string(p.t.bIm2sL),
+        tooltip: n ? p.intl.string(p.t.nGs3kO) : p.intl.string(p.t.bIm2sF),
         selected: n,
         "aria-expanded": n,
     });

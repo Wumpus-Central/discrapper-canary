@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(926526),
-    o = n(388032),
-    s = n(394121);
+    s = n(388032),
+    o = n(394121);
 let c = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
         c = null == n ? void 0 : n.id;
@@ -13,30 +13,30 @@ let c = function (e) {
             null != c && (0, a.Pq)(c);
         }, [c]),
         (0, r.jsxs)("div", {
-            className: s.confirmation,
+            className: o.confirmation,
             children: [
                 (0, r.jsx)("div", {
-                    className: s.iconWrapper,
+                    className: o.iconWrapper,
                     children: (0, r.jsx)(l.wGF, {
                         size: "md",
                         color: l.TVs.colors.INTERACTIVE_ACTIVE,
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: s.statusTextContainer,
+                    className: o.statusTextContainer,
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
                             color: "header-primary",
                             children:
                                 (null == n ? void 0 : n.name) != null
-                                    ? o.intl.formatToPlainString(o.t["0Qlu//"], { guildName: n.name })
-                                    : o.intl.string(o.t["5iLvS0"]),
+                                    ? s.intl.formatToPlainString(s.t["0Qlu/6"], { guildName: n.name })
+                                    : s.intl.string(s.t["5iLvSx"]),
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-md/medium",
                             color: "header-secondary",
-                            children: o.intl.string(o.t.FdsK4u),
+                            children: s.intl.string(s.t.FdsK4h),
                         }),
                     ],
                 }),
@@ -45,7 +45,7 @@ let c = function (e) {
                     onClick: t,
                     variant: "critical-primary",
                     size: "md",
-                    text: o.intl.string(o.t.g9tK0t),
+                    text: s.intl.string(s.t.g9tK0o),
                 }),
             ],
         })

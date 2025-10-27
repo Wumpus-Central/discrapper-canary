@@ -27,8 +27,8 @@ function x(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(s.xBx, {
-                title: d.intl.formatToPlainString(d.t.T7aLYW, { guildName: o }),
-                subtitle: d.intl.string(d.t["RA+St7"]),
+                title: d.intl.formatToPlainString(d.t.T7aLYT, { guildName: o }),
+                subtitle: d.intl.string(d.t["RA+St6"]),
             }),
             (0, i.jsx)(s.fef, {
                 children: (0, i.jsx)(r.w0Z, {
@@ -83,7 +83,7 @@ function x(e) {
                                 className: u.optionHeader,
                                 color: "header-secondary",
                                 variant: "text-xs/bold",
-                                children: d.intl.string(d.t.JGDkfn),
+                                children: d.intl.string(d.t.JGDkfg),
                             }),
                             (0, i.jsx)(m, {
                                 guildTemplate: x[c.sE.HUB_STUDY],
@@ -117,7 +117,7 @@ function x(e) {
                 leading: (0, i.jsx)(r.Avr, {
                     textVariant: "text-sm/medium",
                     variant: "secondary",
-                    text: d.intl.string(d.t["13/7kZ"]),
+                    text: d.intl.string(d.t["13/7kX"]),
                     onClick: l,
                 }),
             }),

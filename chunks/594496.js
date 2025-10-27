@@ -28,8 +28,8 @@ var i = n(512722),
     N = n(18438),
     R = n(778825),
     P = n(52597),
-    w = n(430131),
-    D = n(291334),
+    D = n(430131),
+    w = n(291334),
     L = n(474936),
     x = n(388032),
     M = n(737788);
@@ -96,7 +96,7 @@ function k(e) {
         className: M.sectionsContainer,
         children: [
             (0, r.jsx)(
-                w.Z,
+                D.Z,
                 {
                     errors: null != (i = null == K ? void 0 : K.nick) ? i : null == Q ? void 0 : Q.nick,
                     username: C.ZP.getName(G),
@@ -110,7 +110,7 @@ function k(e) {
             (0, r.jsx)(
                 O.Z,
                 {
-                    sectionTitle: x.intl.string(x.t["+T3RIy"]),
+                    sectionTitle: x.intl.string(x.t["+T3RI/"]),
                     errors: null == K ? void 0 : K.pronouns,
                     onPronounsChange: (e) => {
                         (0, P.xs)(e, eo);
@@ -120,7 +120,7 @@ function k(e) {
                 },
                 "pronouns",
             ),
-            (0, r.jsxs)(D.Z, {
+            (0, r.jsxs)(w.Z, {
                 user: G,
                 showOverlay: !et,
                 children: [
@@ -129,9 +129,9 @@ function k(e) {
                         {
                             sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    x.intl.string(x.t.lqaIxM),
+                                    x.intl.string(x.t.lqaIxI),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuL"]),
+                                        text: x.intl.string(x.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",
@@ -155,7 +155,7 @@ function k(e) {
                                 children: [
                                     x.intl.string(x.t["7v0T9P"]),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuL"]),
+                                        text: x.intl.string(x.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",
@@ -182,7 +182,7 @@ function k(e) {
                                 user: G,
                                 guild: X,
                                 titleIcon: (0, r.jsx)(s.u, {
-                                    text: x.intl.string(x.t["5AFxuL"]),
+                                    text: x.intl.string(x.t["5AFxuK"]),
                                     children: (0, r.jsx)(l.SrA, {
                                         size: "md",
                                         color: "currentColor",
@@ -197,9 +197,9 @@ function k(e) {
                         {
                             sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    x.intl.string(x.t.wR5wOj),
+                                    x.intl.string(x.t.wR5wOo),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuL"]),
+                                        text: x.intl.string(x.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",
@@ -237,12 +237,12 @@ function k(e) {
                     (0, r.jsx)(
                         _.Z,
                         {
-                            placeholder: x.intl.string(x.t["/7NKgo"]),
+                            placeholder: x.intl.string(x.t["/7NKgv"]),
                             sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    x.intl.string(x.t.jGoPJS),
+                                    x.intl.string(x.t.jGoPJT),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuL"]),
+                                        text: x.intl.string(x.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",

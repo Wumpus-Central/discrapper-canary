@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(884902),
     y = n(670188),
     _ = n(271383),
-    j = n(496675),
-    O = n(158776),
+    O = n(496675),
+    j = n(158776),
     x = n(471253),
     v = n(431328),
     C = n(145834),
@@ -74,7 +74,7 @@ let w = i.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
             i = (0, r.jsx)(m.ZP.Icon, {
                 icon: u.Dio,
-                tooltip: P.intl.string(P.t.cpT0Cg),
+                tooltip: P.intl.string(P.t.cpT0Cq),
                 onClick: t,
             });
         return (0, r.jsxs)(m.ZP, {
@@ -84,9 +84,9 @@ let w = i.memo(function (e) {
                 (0, r.jsx)(m.ZP.Icon, {
                     icon: u.V9,
                     disabled: !0,
-                    "aria-label": P.intl.string(P.t.TYZgzc),
+                    "aria-label": P.intl.string(P.t.TYZgzW),
                 }),
-                (0, r.jsx)(m.ZP.Title, { children: P.intl.string(P.t.TYZgzc) }),
+                (0, r.jsx)(m.ZP.Title, { children: P.intl.string(P.t.TYZgzW) }),
             ],
         });
     }),
@@ -94,17 +94,17 @@ let w = i.memo(function (e) {
         var t;
         let { channel: l, participant: a, tempDisableOnInit: s = !1 } = e,
             m = i.useRef(null),
-            [j, v] = i.useState(s);
+            [O, v] = i.useState(s);
         (0, f.ZP)(() => {
-            if (!j) return;
+            if (!O) return;
             let e = setTimeout(() => v(!1), 1000);
             return () => clearTimeout(e);
         });
         let S = l.getGuildId();
         o()(null != S, "Channel cannot be guildless");
-        let { isMobile: E, status: Z } = (0, c.cj)([O.Z], () => ({
-                isMobile: O.Z.isMobileOnline(a.user.id),
-                status: O.Z.getStatus(a.user.id, S),
+        let { isMobile: E, status: Z } = (0, c.cj)([j.Z], () => ({
+                isMobile: j.Z.isMobileOnline(a.user.id),
+                status: j.Z.getStatus(a.user.id, S),
             })),
             w = (0, c.e7)([_.ZP], () => _.ZP.getMember(S, a.user.id)),
             A = (0, b.X7)(
@@ -196,23 +196,23 @@ let w = i.memo(function (e) {
                     className: T.buttonContainer,
                     children: [
                         (0, r.jsx)(d.u, {
-                            text: L ? P.intl.string(P.t.h9rsTU) : P.intl.string(P.t.f0T7hI),
+                            text: L ? P.intl.string(P.t.h9rsTd) : P.intl.string(P.t.f0T7hI),
                             asContainer: !0,
                             children: (0, r.jsx)(u.hU, {
                                 onClick: function () {
                                     (0, x.DT)(l, a.user.id, !1);
                                 },
-                                disabled: L || j,
+                                disabled: L || O,
                                 icon: u.Lrb,
                                 variant: "secondary",
-                                "aria-label": L ? P.intl.string(P.t.h9rsTU) : P.intl.string(P.t.f0T7hI),
+                                "aria-label": L ? P.intl.string(P.t.h9rsTd) : P.intl.string(P.t.f0T7hI),
                             }),
                         }),
                         (0, r.jsx)(d.u, {
-                            text: P.intl.string(P.t.moABMz),
+                            text: P.intl.string(P.t.moABMy),
                             asContainer: !0,
                             children: (0, r.jsx)(u.hU, {
-                                "aria-label": P.intl.string(P.t.moABMz),
+                                "aria-label": P.intl.string(P.t.moABMy),
                                 onClick: function () {
                                     (0, x.DT)(l, a.user.id, !0);
                                 },
@@ -229,7 +229,7 @@ let w = i.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, S.h)(t.id);
         return (0, r.jsx)(u.rsf, {
-            label: P.intl.string(P.t.GYCh0d),
+            label: P.intl.string(P.t.GYCh0W),
             checked: n,
             onChange: i,
         });
@@ -243,13 +243,13 @@ let w = i.memo(function (e) {
                     className: T.emptyStateTitle,
                     variant: "text-lg/semibold",
                     color: "header-primary",
-                    children: P.intl.string(P.t["7R24mZ"]),
+                    children: P.intl.string(P.t["7R24mX"]),
                 }),
                 (0, r.jsx)(u.Text, {
                     className: T.emptyStateBody,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: P.intl.string(P.t.Rpr2s7),
+                    children: P.intl.string(P.t.Rpr2s0),
                 }),
             ],
         });
@@ -258,7 +258,7 @@ function M(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, v.Fd)(t.id),
         s = [
-            +!!(0, c.e7)([j.Z], () => j.Z.can(Z.Pl.MANAGE_CHANNELS, t) || j.Z.can(Z.Pl.MANAGE_ROLES, t)),
+            +!!(0, c.e7)([O.Z], () => O.Z.can(Z.Pl.MANAGE_CHANNELS, t) || O.Z.can(Z.Pl.MANAGE_ROLES, t)),
             Math.max(1, l.length),
         ];
     return (0, r.jsxs)("div", {
@@ -316,8 +316,8 @@ function M(e) {
                                   color: "header-secondary",
                                   children:
                                       l.length > 0
-                                          ? P.intl.formatToPlainString(P.t["5z7q5e"], { numHands: l.length })
-                                          : P.intl.string(P.t.TYZgzc),
+                                          ? P.intl.formatToPlainString(P.t["5z7q5a"], { numHands: l.length })
+                                          : P.intl.string(P.t.TYZgzW),
                               },
                               "participants-section",
                           )

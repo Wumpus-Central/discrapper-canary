@@ -84,7 +84,7 @@ let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
                 size: b,
                 onlyAnimateOnHoverOrFocus: !i,
             }),
-            I = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: t.label });
+            I = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label });
         return (0, r.jsx)(
             g,
             m(p({}, O), {

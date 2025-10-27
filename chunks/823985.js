@@ -1,15 +1,15 @@
 i.d(n, {
-    j: () => e,
-    r: () => l,
+    j: () => l,
+    r: () => e,
 }),
     i(35282);
 var a = i(981631);
-function e(t, n) {
+function l(t, n) {
     return (
         n === a.ABu.MASTODON && /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(t), /^.+\.[^.@]{2,}$/.test(t)
     );
 }
-function l(t) {
+function e(t) {
     return t === a.ABu.MASTODON
         ? "@example@mastodon.social"
         : t === a.ABu.BLUESKY

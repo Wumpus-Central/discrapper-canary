@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(512722),
     i = n.n(r),
     a = n(846519),
@@ -52,7 +52,7 @@ function P(e) {
         return n && i && r;
     });
 }
-class w extends l.Z {
+class D extends l.Z {
     constructor(...e) {
         super(...e),
             T(this, "rollbackCommandTimeout", new a.V7()),
@@ -121,8 +121,8 @@ class w extends l.Z {
                 this.awaitRemoteTimeout.start(C, () => {
                     (0, m.s6)(),
                         o.Z.show({
-                            title: I.intl.string(I.t.wGMxr6),
-                            body: I.intl.string(I.t.i5k8b2),
+                            title: I.intl.string(I.t.wGMxr3),
+                            body: I.intl.string(I.t.i5k8b5),
                         });
                 });
             }),
@@ -139,8 +139,8 @@ class w extends l.Z {
                             ? o
                             : {
                                   id: "id",
-                                  platform: I.intl.string(I.t["UQMV/P"]),
-                                  name: I.intl.string(I.t["UQMV/P"]),
+                                  platform: I.intl.string(I.t["UQMV/E"]),
+                                  name: I.intl.string(I.t["UQMV/E"]),
                               },
                         r,
                         i,
@@ -161,4 +161,4 @@ class w extends l.Z {
             });
     }
 }
-let D = new w();
+let w = new D();

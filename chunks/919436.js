@@ -9,16 +9,16 @@ var r,
     u = n(239091),
     d = n(358221),
     p = n(43267),
-    h = n(933557),
-    f = n(93687),
+    f = n(933557),
+    h = n(93687),
     g = n(266076),
     m = n(199902),
     b = n(19780),
     _ = n(306680),
     O = n(944486),
     y = n(594174),
-    v = n(451478),
-    j = n(276952),
+    j = n(451478),
+    v = n(276952),
     x = n(682662),
     C = n(662146),
     E = n(674552),
@@ -93,7 +93,7 @@ class R extends (r = l.PureComponent) {
         e(),
             t
                 .update({
-                    immediate: !v.Z.isFocused(),
+                    immediate: !j.Z.isFocused(),
                     height: 1,
                     opacity: 1,
                     scale: 1,
@@ -119,7 +119,7 @@ class R extends (r = l.PureComponent) {
         this.setState({ animating: !0 }, () =>
             t
                 .update({
-                    immediate: !v.Z.isFocused(),
+                    immediate: !j.Z.isFocused(),
                     height: 0,
                     opacity: 0,
                     scale: 0,
@@ -159,9 +159,9 @@ class R extends (r = l.PureComponent) {
                 isCurrentUserInThisDMCall: u,
                 unread: d,
                 isGDMFacepileEnabled: p,
-                treeItemProps: h,
+                treeItemProps: f,
             } = this.props,
-            { hovered: f, animating: m } = this.state,
+            { hovered: h, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon && p,
             _ = () =>
                 (0, i.jsx)(
@@ -171,7 +171,7 @@ class R extends (r = l.PureComponent) {
                             to: S.Z5c.CHANNEL(S.ME, e.id),
                             onMouseEnter: () => this.setState({ hovered: !0 }),
                             onMouseLeave: () => this.setState({ hovered: !1 }),
-                            selected: n || f,
+                            selected: n || h,
                             ariaLabel:
                                 null != t
                                     ? I.intl.formatToPlainString(I.t.hKarnZ, {
@@ -192,15 +192,15 @@ class R extends (r = l.PureComponent) {
                                   })
                                 : void 0,
                         },
-                        h,
+                        f,
                     ),
                 );
         return (0, i.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(x.H, {
                 children: [
-                    (0, i.jsx)(j.Z, {
-                        hovered: !m && f,
+                    (0, i.jsx)(v.Z, {
+                        hovered: !m && h,
                         selected: !m && n,
                         unread: !m && d,
                         className: P.pill,
@@ -280,18 +280,18 @@ N(R, "defaultProps", {
 });
 let D = l.forwardRef(function (e, t) {
     let n = e.channel.id,
-        r = (0, h.ZP)(e.channel),
+        r = (0, f.ZP)(e.channel),
         l = (0, a.Ie)(n, 2),
         o = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : S.WtW.VOICE), [o]),
         p = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
         g = (0, s.e7)([O.Z], () => O.Z.getChannelId(), []),
         y = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: v } = f.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
-        j = o === n,
+        { isFacepileEnabled: j } = h.Z.useExperiment({ location: "unread_direct_message" }, { autoTrackExposure: !1 }),
+        v = o === n,
         x = !1,
         C = !1;
-    j && ((x = u === S.WtW.VOICE), (C = u === S.WtW.VIDEO));
+    v && ((x = u === S.WtW.VOICE), (C = u === S.WtW.VIDEO));
     let E = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
@@ -304,8 +304,8 @@ let D = l.forwardRef(function (e, t) {
             audio: x,
             video: C,
             stream: p,
-            isCurrentUserInThisDMCall: j,
-            isGDMFacepileEnabled: v,
+            isCurrentUserInThisDMCall: v,
+            isGDMFacepileEnabled: j,
             size: E,
             treeItemProps: l,
         }),

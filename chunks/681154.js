@@ -17,7 +17,7 @@ function l() {
     return a(0, i.intl.string(i.t["71wuR0"]));
 }
 function s() {
-    return a(0, i.intl.string(i.t["w/BT3N"]));
+    return a(0, i.intl.string(i.t["w/BT3G"]));
 }
 function o(e, t) {
     return a(1, (0, r.$q)(e, null == t ? void 0 : t.id));

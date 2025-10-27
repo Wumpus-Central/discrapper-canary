@@ -20,15 +20,15 @@ var l = i(442837),
     O = i(430824),
     h = i(496675),
     N = i(158776),
-    g = i(699516),
-    S = i(944486),
+    S = i(699516),
+    g = i(944486),
     E = i(885110),
     m = i(594174),
     _ = i(979651),
     P = i(181106),
-    C = i(5192),
-    T = i(566620),
-    x = i(317381),
+    x = i(5192),
+    C = i(566620),
+    T = i(317381),
     A = i(638880),
     G = i(790920),
     L = i(255621),
@@ -39,12 +39,12 @@ var l = i(442837),
     V = i(275920),
     k = i(701488),
     M = i(981631),
-    F = i(616922),
-    R = i(388032);
+    R = i(616922),
+    F = i(388032);
 function J(t, e) {
     let { analyticsLocations: J } = (0, c.ZP)(),
         W = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
-        X = (0, l.e7)([x.ZP], () => x.ZP.getSelfEmbeddedActivities()),
+        X = (0, l.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),
         q = (0, l.Wu)([E.Z], () =>
             E.Z.getActivities().filter(
                 (t) => null == t.application_id || !(null == X ? void 0 : X.has(t.application_id)),
@@ -54,8 +54,8 @@ function J(t, e) {
             e,
             t,
         ]),
-        z = (0, l.Wu)([x.ZP], () => {
-            let i = (null == t ? void 0 : t.id) != null ? x.ZP.getEmbeddedActivitiesForChannel(t.id) : x.i6;
+        z = (0, l.Wu)([T.ZP], () => {
+            let i = (null == t ? void 0 : t.id) != null ? T.ZP.getEmbeddedActivitiesForChannel(t.id) : T.i6;
             return null != e
                 ? i.filter((t) => {
                       let { userIds: i } = t;
@@ -80,7 +80,7 @@ function J(t, e) {
         ]),
         Q = null == t ? void 0 : t.id,
         tt = (0, l.Wu)(
-            [Z.Z, O.Z, j.Z, g.Z, S.Z, _.Z, h.Z],
+            [Z.Z, O.Z, j.Z, S.Z, g.Z, _.Z, h.Z],
             () => [
                 ...$.map((t) =>
                     (0, L.Z)({
@@ -93,8 +93,8 @@ function J(t, e) {
                         ChannelStore: Z.Z,
                         GuildStore: O.Z,
                         GuildMemberCountStore: j.Z,
-                        RelationshipStore: g.Z,
-                        SelectedChannelStore: S.Z,
+                        RelationshipStore: S.Z,
+                        SelectedChannelStore: g.Z,
                         VoiceStateStore: _.Z,
                         PermissionStore: h.Z,
                     }),
@@ -144,7 +144,7 @@ function J(t, e) {
         },
         tl = async (t) => {
             let i = (0, D.Z)(t, M.xjy.EMBEDDED),
-                n = S.Z.getVoiceChannelId(),
+                n = g.Z.getVoiceChannelId(),
                 l = Z.Z.getChannel(n);
             if (
                 (await d.Z.join({
@@ -198,7 +198,7 @@ function J(t, e) {
                             a.sNh,
                             {
                                 id: "invite-to-join-embedded",
-                                label: R.intl.string(R.t["3fRyS0"]),
+                                label: F.intl.string(F.t["3fRySx"]),
                                 subtext: r.name,
                                 action: () => {
                                     ((l, o) => {
@@ -206,7 +206,7 @@ function J(t, e) {
                                             r = null == d ? void 0 : O.Z.getGuild(d.guild_id);
                                         if (null != d && null != r) {
                                             if (null != e)
-                                                return T.pu({
+                                                return C.pu({
                                                     channelId: d.id,
                                                     applicationId: o,
                                                     userId: e.id,
@@ -296,7 +296,7 @@ function J(t, e) {
                                                     { modalKey: "use-activity-items-embedded-invite-modal" },
                                                 );
                                             if ((null == t ? void 0 : t.id) != null)
-                                                return T.sN({
+                                                return C.sN({
                                                     activityChannelId: d.id,
                                                     invitedChannelId: t.id,
                                                     applicationId: o,
@@ -319,7 +319,7 @@ function J(t, e) {
                               a.sNh,
                               {
                                   id: "invite-to-join",
-                                  label: R.intl.string(R.t["3fRyS0"]),
+                                  label: F.intl.string(F.t["3fRySx"]),
                                   subtext: t.name,
                                   action: () => tn(M.mFx.JOIN, t),
                               },
@@ -333,7 +333,7 @@ function J(t, e) {
                               a.sNh,
                               {
                                   id: "invite-to-listen",
-                                  label: R.intl.string(R.t["5vvGpa"]),
+                                  label: F.intl.string(F.t["5vvGpV"]),
                                   subtext: t.name,
                                   action: () => tn(M.mFx.LISTEN, t),
                               },
@@ -359,7 +359,7 @@ function J(t, e) {
                             a.sNh,
                             {
                                 id: "join",
-                                label: t ? R.intl.string(R.t.bf6Ci4) : R.intl.string(R.t.VJlc0d),
+                                label: t ? F.intl.string(F.t.bf6Ci7) : F.intl.string(F.t.VJlc0S),
                                 disabled: t,
                                 hint: t ? (0, n.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : null,
                                 subtext: i.name,
@@ -374,7 +374,7 @@ function J(t, e) {
                             a.sNh,
                             {
                                 id: "ask-to-join",
-                                label: R.intl.string(R.t.OKsSCQ),
+                                label: F.intl.string(F.t.OKsSCR),
                                 subtext: i.name,
                                 action: () => tn(M.mFx.JOIN_REQUEST, i),
                             },
@@ -389,13 +389,13 @@ function J(t, e) {
                         a.sNh,
                         {
                             id: "spotify-play-".concat(i.session_id),
-                            action: () => (0, f.Z)(o, F.kG.USER_ACTIVITY_PLAY),
-                            label: (0, p.Z)(o, F.kG.USER_ACTIVITY_PLAY),
+                            action: () => (0, f.Z)(o, R.kG.USER_ACTIVITY_PLAY),
+                            label: (0, p.Z)(o, R.kG.USER_ACTIVITY_PLAY),
                             subtext: d
                                 ? (0, I.Z)(
                                       o,
-                                      F.kG.USER_ACTIVITY_PLAY,
-                                      null != t ? C.ZP.getNickname(t.guild_id, t.id, e) : void 0,
+                                      R.kG.USER_ACTIVITY_PLAY,
+                                      null != t ? x.ZP.getNickname(t.guild_id, t.id, e) : void 0,
                                   )
                                 : void 0,
                             disabled: d,
@@ -406,13 +406,13 @@ function J(t, e) {
                         a.sNh,
                         {
                             id: "spotify-sync-".concat(i.session_id),
-                            action: () => (0, y.Z)(o, F.kG.USER_ACTIVITY_SYNC),
-                            label: R.intl.string(R.t.gXYoq6),
+                            action: () => (0, y.Z)(o, R.kG.USER_ACTIVITY_SYNC),
+                            label: F.intl.string(F.t.gXYoq2),
                             subtext: r
                                 ? (0, I.Z)(
                                       o,
-                                      F.kG.USER_ACTIVITY_SYNC,
-                                      null != t ? C.ZP.getNickname(t.guild_id, t.id, e) : void 0,
+                                      R.kG.USER_ACTIVITY_SYNC,
+                                      null != t ? x.ZP.getNickname(t.guild_id, t.id, e) : void 0,
                                   )
                                 : void 0,
                             disabled: r,
@@ -427,8 +427,8 @@ function J(t, e) {
             let l = t.userIds.has(null != (i = null == W ? void 0 : W.id) ? i : M.lds),
                 o = e + $.length,
                 d = B[o] || l,
-                r = R.intl.string(R.t["4i2vj4"]);
-            l ? (r = R.intl.string(R.t["0OiwfH"])) : B[o] && (r = R.intl.string(R.t.bf6Ci4));
+                r = F.intl.string(F.t["4i2vj+"]);
+            l ? (r = F.intl.string(F.t["0OiwfH"])) : B[o] && (r = F.intl.string(F.t.bf6Ci7));
             let c = K.find((e) => (null == e ? void 0 : e.id) === t.applicationId);
             tt[o] &&
                 null != c &&

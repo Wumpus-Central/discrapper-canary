@@ -21,34 +21,34 @@ function p(t) {
         } = t,
         [m, x] = n.useState(!1),
         [S, w] = n.useState(""),
-        [b, k] = n.useState(!1),
-        [v, C] = n.useState(null),
+        [C, b] = n.useState(!1),
+        [k, v] = n.useState(null),
         E = n.useRef(null),
         j = async (t) => {
-            t.preventDefault(), C(null), x(!0);
+            t.preventDefault(), v(null), x(!0);
             try {
                 let t = await a(S);
                 null != y && y(t), d();
             } catch (t) {
-                C(new o.Z(t).getAnyErrorMessage());
+                v(new o.Z(t).getAnyErrorMessage());
             } finally {
                 x(!1);
             }
         },
-        A = async () => {
-            if (!b) {
-                k(!0);
+        M = async () => {
+            if (!C) {
+                b(!0);
                 try {
-                    await p(), (0, l.showToast)((0, l.createToast)(c.intl.string(c.t["84yeo6"]), l.ToastType.SUCCESS));
+                    await p(), (0, l.showToast)((0, l.createToast)(c.intl.string(c.t["84yeoz"]), l.ToastType.SUCCESS));
                 } catch (e) {
                     let t = new o.Z(e).getAnyErrorMessage();
                     null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE));
                 } finally {
-                    k(!1);
+                    b(!1);
                 }
             }
         },
-        M = m || b;
+        A = m || C;
     return (0, s.jsx)("form", {
         onSubmit: j,
         children: (0, s.jsx)(r.ExpressiveModal, {
@@ -62,18 +62,18 @@ function p(t) {
                 type: "image",
             },
             title: h,
-            subtitle: c.intl.string(c.t.SZJow8),
+            subtitle: c.intl.string(c.t.SZJowy),
             actions: [
                 {
-                    text: c.intl.string(c.t["ETE/oK"]),
+                    text: c.intl.string(c.t["ETE/oC"]),
                     onClick: d,
                     variant: "secondary",
-                    disabled: M,
+                    disabled: A,
                 },
                 {
                     text: g,
                     variant: T,
-                    loading: M,
+                    loading: A,
                     type: "submit",
                 },
             ],
@@ -82,15 +82,15 @@ function p(t) {
                 gap: 8,
                 children: [
                     (0, s.jsx)(l.oil, {
-                        label: c.intl.string(c.t["8mZX6O"]),
-                        error: v,
+                        label: c.intl.string(c.t["8mZX6M"]),
+                        error: k,
                         value: S,
                         onChange: w,
                         inputRef: E,
                     }),
                     (0, s.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: c.intl.format(c.t.P0sak5, { onResend: A }),
+                        children: c.intl.format(c.t.P0sak5, { onResend: M }),
                     }),
                 ],
             }),

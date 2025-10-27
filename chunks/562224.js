@@ -91,10 +91,10 @@ async function C(e, t) {
     var n, p, E, O, I, S, C, N;
     let R = _.default.getCurrentUser(),
         P = f.Z.getVoiceChannelId(),
-        w = c.Z.getChannel(P),
-        D = null == w ? void 0 : w.getGuildId(),
-        L = null == (n = u.Z.getGuild(D)) ? void 0 : n.premiumTier;
-    if (null == R || null == w || null == P) return [!1, "no user or channel"];
+        D = c.Z.getChannel(P),
+        w = null == D ? void 0 : D.getGuildId(),
+        L = null == (n = u.Z.getGuild(w)) ? void 0 : n.premiumTier;
+    if (null == R || null == D || null == P) return [!1, "no user or channel"];
     let x = null;
     if (null == (x = "number" == typeof e ? a.ZP.getGameForPID(e) : e)) return [!1, "no source"];
     if (
@@ -113,7 +113,7 @@ async function C(e, t) {
         W = null != (C = null == t ? void 0 : t.previewDisabled) ? C : s.I0.getSetting(),
         K = null != (N = null == t ? void 0 : t.soundshareEnabled) ? N : U;
     return (
-        (0, m.Z)(Z, H, Y, R, L, w) ||
+        (0, m.Z)(Z, H, Y, R, L, D) ||
             ((G = b.ApplicationStreamPresets.PRESET_VIDEO),
             (H = b.ApplicationStreamResolutions.RESOLUTION_720),
             (Y = b.ApplicationStreamFPS.FPS_30)),
@@ -124,7 +124,7 @@ async function C(e, t) {
             soundshareEnabled: K,
         }),
         (0, i.WH)(
-            D,
+            w,
             P,
             T(v({}, A(x)), {
                 audioSourceId: (null == (p = x.id) ? void 0 : p.startsWith(r.vA.CAMERA))

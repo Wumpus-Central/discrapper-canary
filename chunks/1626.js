@@ -11,7 +11,7 @@ function c(e, t) {
         ? null
         : (0, r.jsx)(i.sNh, {
               id: "resend",
-              label: s.intl.string(s.t.lXHojo),
+              label: s.intl.string(s.t.lXHojr),
               action: () => (0, a.Z)(t, e, void 0, l.Z.getOptions(e.id)),
           });
 }

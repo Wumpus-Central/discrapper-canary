@@ -98,7 +98,7 @@ function U() {
                 tag: "span",
                 color: "always-white",
                 variant: "text-md/normal",
-                children: M.intl.string(M.t.Ol3MIi),
+                children: M.intl.string(M.t.Ol3MIt),
             }),
             (0, r.jsxs)("div", {
                 className: G.nagbarActionContainer,
@@ -106,13 +106,13 @@ function U() {
                     (0, r.jsx)(c.NoS, {
                         onClick: e,
                         noticeType: k.kVF.LOGIN,
-                        children: M.intl.string(M.t["825cFx"]),
+                        children: M.intl.string(M.t["825cFy"]),
                     }),
                     (0, r.jsx)(c.NoS, {
                         onClick: t,
                         noticeType: k.kVF.REGISTER,
                         minor: !0,
-                        children: M.intl.string(M.t.HAkXzs),
+                        children: M.intl.string(M.t.HAkXzo),
                     }),
                 ],
             }),
@@ -128,9 +128,9 @@ let F = function () {
         z = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
         { applicationId: H, section: V } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
         { query: Y, categoryId: W } = (null == R ? void 0 : R.type) === N.m_.SEARCH ? R : {},
-        K = (0, o.e7)([I.Z], () => I.Z.getCategories()),
-        X = a.useMemo(() => [(0, S.KQ)(), ...K], [K]),
-        q = a.useMemo(() => X.find((e) => e.id === Number(W)), [X, W]),
+        X = (0, o.e7)([I.Z], () => I.Z.getCategories()),
+        K = a.useMemo(() => [(0, S.KQ)(), ...X], [X]),
+        q = a.useMemo(() => K.find((e) => e.id === Number(W)), [K, W]),
         { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, E.i)(null == z ? void 0 : z.toString()),
         [ee, et] = a.useState(!0),
         en = N.z8.useField("trackedOpenedFromExternalEntrypoint"),
@@ -243,12 +243,12 @@ let F = function () {
                                                     className: G.searchHeader,
                                                     children:
                                                         null != Y && "" !== Y
-                                                            ? M.intl.formatToPlainString(M.t.zHdzqa, { query: Y })
-                                                            : M.intl.formatToPlainString(M.t.Qhj5Bg, {
+                                                            ? M.intl.formatToPlainString(M.t.zHdzqW, { query: Y })
+                                                            : M.intl.formatToPlainString(M.t.Qhj5Br, {
                                                                   categoryName:
                                                                       null != (e = null == q ? void 0 : q.name)
                                                                           ? e
-                                                                          : M.intl.string(M.t.E407b2),
+                                                                          : M.intl.string(M.t.E407b7),
                                                               }),
                                                 })
                                               : (0, r.jsx)(h.Z, {
@@ -259,7 +259,7 @@ let F = function () {
                                                 }),
                                           (0, r.jsx)(g.Z, {
                                               query: eo,
-                                              placeholder: M.intl.string(M.t["5h0QOD"]),
+                                              placeholder: M.intl.string(M.t["5h0QOP"]),
                                               onTextChange: ec,
                                               onClear: ed,
                                               onSubmit: eu,

@@ -20,10 +20,10 @@ function c(e) {
             [c],
         );
     return (0, r.jsx)(l.C3N, {
-        label: o.intl.string(o.t["oQ/7BQ"]),
-        description: o.intl.string(o.t.fZ0qZW),
+        label: o.intl.string(o.t["oQ/7Bc"]),
+        description: o.intl.string(o.t.fZ0qZU),
         children: (0, r.jsx)(l.rsf, {
-            label: o.intl.string(o.t.WompT0),
+            label: o.intl.string(o.t.WompT5),
             checked: t,
             onChange: d,
             disabled: !n,

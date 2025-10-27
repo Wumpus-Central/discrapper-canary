@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(981631),
     R = n(388032),
     P = n(534887);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-let D = o().throttle(
+let w = o().throttle(
         () => {
             m.Z.increment(
                 {
@@ -78,7 +78,7 @@ function x(e) {
                 null == o || o(),
                 null == u || u();
         }, [_, o, u]),
-        w = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 O ||
                     (v(!0),
@@ -96,7 +96,7 @@ function x(e) {
             },
             [o, l, O],
         ),
-        D = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 e.stopPropagation(), e.shiftKey ? (y(!0), null != m.current && clearTimeout(m.current)) : y(!1);
             },
@@ -153,8 +153,8 @@ function x(e) {
             height: 40,
             className: P.notificationIcon,
         }),
-        onNotificationClick: D,
-        onConfirmClick: w,
+        onNotificationClick: w,
+        onConfirmClick: D,
         onCancelClick: null != M ? x : void 0,
         onDismissClick: o,
         expand: !0,
@@ -191,7 +191,7 @@ class M extends i.PureComponent {
             sentry_issue_id: i,
             error_level: "fatal",
         }),
-            D(),
+            w(),
             (this.pid = r);
     }
     render() {
@@ -231,12 +231,12 @@ class M extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, "state", {
+            D(this, "state", {
                 error: null,
                 showError: !0,
                 info: null,
             }),
-            w(this, "pid", null);
+            D(this, "pid", null);
     }
 }
 let k = M;

@@ -74,7 +74,7 @@ function m(e) {
                     variant: "heading-sm/semibold",
                     color: "header-secondary",
                     className: d.header,
-                    children: o.intl.string(o.t.hvVgAQ),
+                    children: o.intl.string(o.t.hvVgAZ),
                 }),
             n,
         ],

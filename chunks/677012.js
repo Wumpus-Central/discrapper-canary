@@ -6,8 +6,8 @@ var r = n(951288),
     c = n(481060),
     s = n(208156),
     l = n(385499),
-    d = n(264165),
-    u = n(885006),
+    u = n(264165),
+    d = n(885006),
     p = n(624138),
     f = n(293979),
     b = n(674563),
@@ -21,7 +21,7 @@ function _(e) {
     var t, n, o;
     let { title: p, onClose: _ } = e,
         { applicationIconURL: v, applicationName: y, queryParams: x, iframeUrl: I } = (0, f.b8)(e),
-        { width: M, height: N } = (0, u.Z)(),
+        { width: M, height: N } = (0, d.Z)(),
         A = a.useMemo(() => {
             let e = Math.min(((N - w - 2 * j) * 16) / 9, g);
             return Math.max(m, Math.min(M - 2 * j, e));
@@ -102,7 +102,7 @@ function _(e) {
                                     className: h.closeButtonContainer,
                                     look: i.zx.Looks.BLANK,
                                     size: i.zx.Sizes.NONE,
-                                    "aria-label": O.intl.string(O.t.WAI6xs),
+                                    "aria-label": O.intl.string(O.t.WAI6xu),
                                     "data-migration-pending": !0,
                                     children: (0, r.jsx)(c.Dio, {
                                         size: "md",
@@ -112,7 +112,7 @@ function _(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(d.Z, {
+                        (0, r.jsx)(u.Z, {
                             aspectRatio: 16 / 9,
                             children: (0, r.jsx)(s.J, {
                                 url: I,

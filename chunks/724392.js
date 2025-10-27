@@ -15,7 +15,7 @@ let s = a.ZP.connectStores([i.ZP], (e) => {
         streams: t,
         context: n,
         index: a,
-        title: o.intl.string(o.t["3u0gIC"]),
+        title: o.intl.string(o.t["3u0gII"]),
         showUserInfo: !1,
         showSimulcastOverride: !1,
     });

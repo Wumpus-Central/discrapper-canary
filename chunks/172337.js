@@ -6,8 +6,8 @@ var n = i(442837),
     o = i(981631),
     s = i(388032);
 let u = {
-    title: () => s.intl.string(s.t.aTFQKi),
-    description: () => s.intl.string(s.t.oTbFQk),
+    title: () => s.intl.string(s.t.aTFQKh),
+    description: () => s.intl.string(s.t.oTbFQg),
     canCreateGuild: !1,
     useIsGuildSupported: () =>
         (0, n.e7)(

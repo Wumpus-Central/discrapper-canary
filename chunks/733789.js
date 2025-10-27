@@ -1,19 +1,19 @@
-n.d(t, { Z: () => v }), n(953529), n(388685);
+n.d(t, { Z: () => I }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(28664),
-    s = n(481060),
+    s = n(28664),
+    o = n(481060),
     c = n(100527),
     u = n(707409),
     d = n(670188),
     p = n(237583),
     f = n(51144),
     h = n(981631),
-    g = n(388032),
-    m = n(157684);
-function b(e, t, n) {
+    m = n(388032),
+    g = n(157684);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function b(e, t, n) {
         e
     );
 }
-function _(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -45,48 +45,48 @@ function _(e) {
 let E = {
     [h.AzA.NOW_PLAYING]: {
         single: (e, t) =>
-            g.intl.format(g.t.NEckzc, {
+            m.intl.format(m.t.NEckza, {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            g.intl.format(g.t["6uWulZ"], {
+            m.intl.format(m.t["6uWulc"], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => g.intl.format(g.t["8fMgRU"], { count: e }),
+        other: (e) => m.intl.format(m.t["8fMgRU"], { count: e }),
     },
     [h.AzA.RECENTLY_PLAYED]: {
         single: (e, t) =>
-            g.intl.format(g.t["nB/JND"], {
+            m.intl.format(m.t["nB/JNB"], {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            g.intl.format(g.t.AZCcHR, {
+            m.intl.format(m.t.AZCcHU, {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => g.intl.format(g.t.yNuaTU, { count: e }),
+        other: (e) => m.intl.format(m.t.yNuaTU, { count: e }),
     },
     [h.AzA.EVER_PLAYED]: {
         single: (e, t) =>
-            g.intl.format(g.t.Fecf3N, {
+            m.intl.format(m.t.Fecf3N, {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            g.intl.format(g.t["0LiGbG"], {
+            m.intl.format(m.t["0LiGbJ"], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => g.intl.format(g.t.Yx1rjY, { count: e }),
+        other: (e) => m.intl.format(m.t.Yx1rjU, { count: e }),
     },
 };
 class O extends i.PureComponent {
@@ -110,10 +110,10 @@ class O extends i.PureComponent {
                     var n, i;
                     return (0, r.jsx)(
                         "span",
-                        ((n = _(
+                        ((n = b(
                             {
                                 ref: this.activityDiscordTagRef,
-                                className: m.username,
+                                className: g.username,
                             },
                             t,
                         )),
@@ -143,10 +143,10 @@ class O extends i.PureComponent {
         return 0 === i.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: a()(m.recommendationActivity, t),
+                  className: a()(g.recommendationActivity, t),
                   children: [
                       (0, r.jsx)(p.Z, {
-                          className: m.players,
+                          className: g.players,
                           users: i.map((e) => {
                               let { user: t } = e;
                               return t;
@@ -156,7 +156,7 @@ class O extends i.PureComponent {
                           renderMoreUsers: this.renderPlayerOverflow,
                       }),
                       (0, r.jsx)("div", {
-                          className: m.description,
+                          className: g.description,
                           children: this.renderDescription(n, i),
                       }),
                   ],
@@ -164,15 +164,15 @@ class O extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, "activityDiscordTagRef", i.createRef()),
-            b(this, "playerAvatarRef", i.createRef()),
-            b(this, "renderUserTooltip", (e, t, n) =>
+            _(this, "activityDiscordTagRef", i.createRef()),
+            _(this, "playerAvatarRef", i.createRef()),
+            _(this, "renderUserTooltip", (e, t, n) =>
                 (0, r.jsxs)("div", {
-                    className: m.tooltip,
+                    className: g.tooltip,
                     children: [
                         (0, r.jsx)("div", { children: f.ZP.getUserTag(e) }),
                         (0, r.jsx)(u.ZP, {
-                            className: m.tooltipTimestamp,
+                            className: g.tooltipTimestamp,
                             start: t,
                             end: n,
                             location: u.ZP.Locations.ACTIVITY_FEED,
@@ -180,7 +180,7 @@ class O extends i.PureComponent {
                     ],
                 }),
             ),
-            b(this, "renderPlayer", (e, t, n, i) => {
+            _(this, "renderPlayer", (e, t, n, i) => {
                 if (null == e) return null;
                 let l = this.props.reason.userInfo.find((t) => t.user === e);
                 return null == l
@@ -193,18 +193,18 @@ class O extends i.PureComponent {
                               newAnalyticsLocations: [c.Z.AVATAR],
                               clickTrap: !0,
                               children: (t) =>
-                                  (0, r.jsx)(o.u, {
+                                  (0, r.jsx)(s.u, {
                                       __unsupportedReactNodeAsText: this.renderUserTooltip(e, l.startTime, l.endTime),
                                       "aria-label": (0, f.W5)(e, { decoration: "never" }),
                                       children: (0, r.jsx)(
-                                          s.qEK,
-                                          _(
+                                          o.qEK,
+                                          b(
                                               {
                                                   ref: this.playerAvatarRef,
-                                                  className: a()(m.playerAvatar, { [m.avatarMasked]: !i }),
+                                                  className: a()(g.playerAvatar, { [g.avatarMasked]: !i }),
                                                   src: e.getAvatarURL(void 0, 32),
                                                   "aria-label": e.username,
-                                                  size: s.EFr.SIZE_32,
+                                                  size: o.EFr.SIZE_32,
                                               },
                                               t,
                                           ),
@@ -214,11 +214,11 @@ class O extends i.PureComponent {
                           e.id,
                       );
             }),
-            b(this, "renderPlayerOverflow", (e, t, n) =>
+            _(this, "renderPlayerOverflow", (e, t, n) =>
                 (0, r.jsx)(
                     "div",
                     {
-                        className: m.playerOverflow,
+                        className: g.playerOverflow,
                         children: e,
                     },
                     n,
@@ -226,4 +226,4 @@ class O extends i.PureComponent {
             );
     }
 }
-let v = O;
+let I = O;

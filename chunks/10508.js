@@ -31,11 +31,11 @@ let f = (t) => {
                             variant: "text-md/semibold",
                             children:
                                 l.status === o.O0b.CANCELED
-                                    ? c.intl.format(c.t["DC+nPD"], {
+                                    ? c.intl.format(c.t["DC+nPC"], {
                                           numMonths: e.discount.user_usage_limit,
                                           discountedPrice: i,
                                       })
-                                    : c.intl.format(c.t.tQvNlp, { numMonths: e.discount.user_usage_limit }),
+                                    : c.intl.format(c.t.tQvNll, { numMonths: e.discount.user_usage_limit }),
                         }),
                         (0, r.jsx)(p, {
                             userDiscountOffer: e,
@@ -55,7 +55,7 @@ let f = (t) => {
                     return (0, r.jsx)(a.xvT, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: c.intl.formatToPlainString(c.t.h2g1IS, {
+                        children: c.intl.formatToPlainString(c.t.h2g1Ia, {
                             billingPeriod: (0, l.JP)(e.discount.user_usage_limit_interval),
                             numMonths: e.discount.user_usage_limit,
                             fullPrice: u,
@@ -64,7 +64,7 @@ let f = (t) => {
                 return (0, r.jsx)(a.xvT, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: c.intl.formatToPlainString(c.t.gPzMHR, {
+                    children: c.intl.formatToPlainString(c.t.gPzMHa, {
                         numMonths: e.discount.user_usage_limit,
                         discountedPrice: i,
                         regularPrice: u,
@@ -75,7 +75,7 @@ let f = (t) => {
                     return (0, r.jsx)(a.xvT, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: c.intl.formatToPlainString(c.t.iDFk3t, {
+                        children: c.intl.formatToPlainString(c.t.iDFk3v, {
                             billingPeriod: (0, l.JP)(e.discount.user_usage_limit_interval),
                             numMonths: e.discount.user_usage_limit,
                             fullPrice: u,
@@ -84,7 +84,7 @@ let f = (t) => {
                 return (0, r.jsx)(a.xvT, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: c.intl.formatToPlainString(c.t.Eq1RHB, {
+                    children: c.intl.formatToPlainString(c.t.Eq1RHL, {
                         percent: e.discount.amount,
                         numMonths: e.discount.user_usage_limit,
                         price: u,
@@ -94,7 +94,7 @@ let f = (t) => {
                 return (0, r.jsx)(a.xvT, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    children: c.intl.formatToPlainString(c.t["2gem09"], {
+                    children: c.intl.formatToPlainString(c.t["2gem05"], {
                         percent: e.discount.amount,
                         numMonths: e.discount.user_usage_limit,
                     }),

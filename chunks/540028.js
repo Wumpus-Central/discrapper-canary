@@ -85,12 +85,12 @@ function T(e) {
             var t;
             let e = null == (t = d.Z.getApplication(b.applicationId)) ? void 0 : t.name;
             return null == e
-                ? E.intl.string(E.t["8raC1N"])
-                : E.intl.formatToPlainString(E.t["a9+V+f"], { activityName: e });
+                ? E.intl.string(E.t["8raC1P"])
+                : E.intl.formatToPlainString(E.t["a9+V+V"], { activityName: e });
         }
         return null == e.participant || e.participant.type !== g.fO.STREAM
-            ? E.intl.string(E.t["ng/Kws"])
-            : E.intl.formatToPlainString(E.t.sqmFRk, { username: e.participant.userNick });
+            ? E.intl.string(E.t["ng/Kwl"])
+            : E.intl.formatToPlainString(E.t.sqmFRg, { username: e.participant.userNick });
     }
     function S() {
         let e = [],

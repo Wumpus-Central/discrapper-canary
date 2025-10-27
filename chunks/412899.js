@@ -30,13 +30,13 @@ var r = n(951288),
     S = n(884902),
     A = n(48950),
     C = n(635042),
-    N = n(345162),
-    R = n(271383),
-    P = n(485386),
-    D = n(496675),
-    w = n(594174),
-    L = n(700785),
-    x = n(944613),
+    N = n(608798),
+    R = n(345162),
+    P = n(271383),
+    D = n(485386),
+    w = n(496675),
+    L = n(594174),
+    x = n(700785),
     M = n(981631),
     k = n(388032),
     j = n(85703);
@@ -296,15 +296,15 @@ function X(e) {
         { guild: n, user: a, handleAddRole: s, roleClassName: l, addButtonClassName: c, addButtonIconClassName: d } = e,
         f = (0, u.JA)("overflow-add-roles-".concat(a.id)),
         p = (0, _.e7)([b.Z], () => b.Z.roleStyle),
-        m = D.Z.getHighestRole(n),
-        g = R.ZP.getMember(n.id, a.id),
+        m = w.Z.getHighestRole(n),
+        g = P.ZP.getMember(n.id, a.id),
         E = (e) =>
-            !(0, N.fI)(e) && !e.managed && D.Z.isRoleHigher(n, m, e) && (null == g || -1 === g.roles.indexOf(e.id));
+            !(0, R.fI)(e) && !e.managed && w.Z.isRoleHigher(n, m, e) && (null == g || -1 === g.roles.indexOf(e.id));
     return (0, r.jsx)(h.yRy, {
         targetElementRef: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(x.Z, {
+            return (0, r.jsx)(N.Z, {
                 guild: n,
                 roleStyle: p,
                 roleFilter: E,
@@ -375,9 +375,9 @@ function Q(e) {
             [s, a.id, n.id],
         ),
         [S, A] = i.useState(null),
-        N = (0, _.Wu)([P.Z], () => P.Z.getManyRoles(a.id, s).sort(C.Z)),
+        N = (0, _.Wu)([D.Z], () => D.Z.getManyRoles(a.id, s).sort(C.Z)),
         R = i.useMemo(() => (null != S ? N.slice(0, S) : N), [N, S]),
-        x = s.length - R.length;
+        P = s.length - R.length;
     i.useLayoutEffect(() => {
         if (f) return;
         if ("number" != typeof p) throw Error("Unexpected null width");
@@ -394,10 +394,10 @@ function Q(e) {
         }
         A((t) => (e < R.length ? e : t));
     }, [f, p, R]);
-    let U = w.default.getCurrentUser();
+    let U = L.default.getCurrentUser();
     l()(null != U, "MemberRolesList: currentUser cannot be undefined");
-    let B = !m && D.Z.can(M.Plq.MANAGE_ROLES, a),
-        V = L.e9(a, U.id),
+    let B = !m && w.Z.can(M.Plq.MANAGE_ROLES, a),
+        V = x.e9(a, U.id),
         K = i.useMemo(() => "roles-".concat((0, c.Z)()), []),
         Q = (0, d.ZP)({
             id: K,
@@ -416,7 +416,7 @@ function Q(e) {
                     canRemove:
                         (null == (t = e.tags) ? void 0 : t.guild_connections) === null
                             ? n.id === U.id
-                            : B && L.r6(a, U.id, V, e),
+                            : B && x.r6(a, U.id, V, e),
                     onRemove: () => v(e),
                     ref: (t) => O(e.id, t),
                     guildId: a.id,
@@ -426,8 +426,8 @@ function Q(e) {
             );
         });
     return (
-        null != S && 0 !== x
-            ? (t = (0, r.jsx)(q, Z(G({}, e), { numRolesHidden: x })))
+        null != S && 0 !== P
+            ? (t = (0, r.jsx)(q, Z(G({}, e), { numRolesHidden: P })))
             : B && (t = (0, r.jsx)(X, Z(G({}, e), { handleAddRole: I }))),
         (0, r.jsx)(u.bG, {
             navigator: Q,
@@ -459,9 +459,9 @@ function Q(e) {
 let J = (0, E.Z)(Q);
 function $(e) {
     return (
-        (0, _.e7)([D.Z], () => {
+        (0, _.e7)([w.Z], () => {
             var t;
-            return D.Z.getGuildVersion(null == (t = e.guild) ? void 0 : t.id);
+            return w.Z.getGuildVersion(null == (t = e.guild) ? void 0 : t.id);
         }),
         !1 === e.wrap ? (0, r.jsx)(J, G({}, e)) : (0, r.jsx)(Q, G({}, e))
     );

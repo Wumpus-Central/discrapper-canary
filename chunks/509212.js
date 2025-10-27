@@ -3,7 +3,7 @@ n.d(t, {
     $J: () => ta,
     $V: () => t_,
     AV: () => eg,
-    B2: () => tD,
+    B2: () => tw,
     B3: () => tv,
     BM: () => tl,
     Bg: () => eI,
@@ -18,7 +18,7 @@ n.d(t, {
     GN: () => eE,
     Gd: () => tT,
     HJ: () => ti,
-    Jg: () => eD,
+    Jg: () => ew,
     K: () => eN,
     KM: () => eB,
     Kr: () => ev,
@@ -48,8 +48,8 @@ n.d(t, {
     _D: () => q,
     _j: () => th,
     _p: () => tO,
-    b7: () => e2,
-    bA: () => tw,
+    b7: () => e3,
+    bA: () => tD,
     f$: () => ty,
     f2: () => eH,
     fY: () => tu,
@@ -78,7 +78,7 @@ n.d(t, {
     xn: () => ey,
     yH: () => tb,
     yI: () => ec,
-    ys: () => ew,
+    ys: () => eD,
     zE: () => eb,
     zK: () => eZ,
     zi: () => $,
@@ -120,8 +120,8 @@ var _ = n(231757),
     N = n(617136),
     R = n(272008),
     P = n(569984),
-    w = n(497505),
-    D = n(184299),
+    D = n(497505),
+    w = n(184299),
     L = n(937797),
     x = n(566078),
     M = n(312046),
@@ -397,15 +397,15 @@ function eh(e, t, n) {
 }
 let em = (e) => {
     switch (e) {
-        case w.y$.XBOX:
+        case D.y$.XBOX:
             return G.intl.string(G.t.G84UWZ);
-        case w.y$.PLAYSTATION:
+        case D.y$.PLAYSTATION:
             return G.intl.string(G.t["6IeKx2"]);
-        case w.y$.SWITCH:
+        case D.y$.SWITCH:
             return G.intl.string(G.t["1pp0su"]);
-        case w.y$.PC:
+        case D.y$.PC:
             return G.intl.string(G.t["YK+wUg"]);
-        case w.y$.CROSS_PLATFORM:
+        case D.y$.CROSS_PLATFORM:
             return G.intl.string(G.t.UWVbzV);
     }
 };
@@ -427,11 +427,11 @@ function eg(e) {
     return G.intl.formatToPlainString(G.t.EQa7os, { questName: r.config.messages.questName });
 }
 function eE(e) {
-    return Object.keys(k.a_).includes(w.jn[e]);
+    return Object.keys(k.a_).includes(D.jn[e]);
 }
 function eb(e, t) {
     if (!eE(t)) return !1;
-    let n = w.jn[t];
+    let n = D.jn[t];
     return (0, S.yE)(e.dismissedQuestContent, k.a_[n]);
 }
 function ey(e) {
@@ -489,10 +489,10 @@ function eR(e) {
 function eP(e, t) {
     return e.targetedContent.includes(t);
 }
-function ew(e, t) {
+function eD(e, t) {
     C.Z.captureException(e, V(Z({}, t), { tags: V(Z({}, null == t ? void 0 : t.tags), { app_context: "quests" }) }));
 }
-function eD(e, t) {
+function ew(e, t) {
     if (null == t || null == e) return null;
     for (let n of t) {
         let t = X(e, n);
@@ -711,7 +711,7 @@ let eW = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
                     taskType: o.X.STREAM_ON_DESKTOP,
                 });
     };
-function e2(e) {
+function e3(e) {
     var t, n, r, i;
     let a = x.r.build(e.config).defaultInGameTask;
     if (null == a) return null;
@@ -729,7 +729,7 @@ function e2(e) {
         percentComplete: s,
     };
 }
-let e3 = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
+let e2 = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
 function e4(e) {
     return Array.from(o.T.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
@@ -752,10 +752,10 @@ function e7(e) {
 function e9(e, t) {
     return "".concat(String(e).padStart(2, "0"), ":").concat(String(t).padStart(2, "0"));
 }
-let te = e3([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
-    tt = e3([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]),
-    tn = e3([o.X.WATCH_VIDEO]),
-    tr = e3([o.X.WATCH_VIDEO_ON_MOBILE]),
+let te = e2([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
+    tt = e2([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]),
+    tn = e2([o.X.WATCH_VIDEO]),
+    tr = e2([o.X.WATCH_VIDEO_ON_MOBILE]),
     ti = (e) => tr(e) && !tn(e);
 function ta(e) {
     return te(e);
@@ -918,9 +918,9 @@ function tS(e, t) {
 }
 function tA(e) {
     return {
-        [w.jn.QUEST_BAR]: w.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
-        [w.jn.QUEST_BAR_V2]: w.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
-        [w.jn.QUEST_BAR_MOBILE]: w.Ok.MOBILE_HOME_DOCK_AREA,
+        [D.jn.QUEST_BAR]: D.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
+        [D.jn.QUEST_BAR_V2]: D.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
+        [D.jn.QUEST_BAR_MOBILE]: D.Ok.MOBILE_HOME_DOCK_AREA,
     }[e];
 }
 function tC(e) {
@@ -936,10 +936,10 @@ let tP = (e) =>
     e.percentComplete > 0
         ? G.intl.formatToPlainString(G.t["c59/Tp"], { remainTime: e7(e) })
         : G.intl.formatToPlainString(G.t.GNsKiW, { remainTime: e7(e) });
-function tw(e, t) {
+function tD(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function tD(e) {
+function tw(e) {
     var t, n, r, i;
     let a = x.r.build(e).defaultWatchVideoTask;
     return null !=
@@ -996,14 +996,14 @@ function tU(e, t) {
 function tG(e) {
     var t, n;
     let { questId: r, sourceQuestContent: i, videoSessionId: a } = e,
-        o = D.ZP.getState().getVideoProgress(r);
+        o = w.ZP.getState().getVideoProgress(r);
     if (null == o) return;
     let s = P.Z.getQuest(r);
     null != s &&
         (null == (t = s.userStatus) ? void 0 : t.enrolledAt) != null &&
         (null == (n = s.userStatus) ? void 0 : n.completedAt) == null &&
         tS(s, o.maxTimestampSec);
-    let l = tw(o.maxTimestampSec, o.duration);
+    let l = tD(o.maxTimestampSec, o.duration);
     (0, N.dA)({
         questId: r,
         event: j.rMx.QUEST_VIDEO_PROGRESSED,

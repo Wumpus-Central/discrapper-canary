@@ -32,7 +32,7 @@ function y(e) {
         C = f.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: N } = (0, c.ZP)(),
         { pendingProfileEffect: R, errors: P } = (0, _.bd)(n),
-        w = i.useCallback(
+        D = i.useCallback(
             () =>
                 (0, u.H)({
                     analyticsLocations: N,
@@ -48,7 +48,7 @@ function y(e) {
                 location_stack: N,
             });
     }, [C, N]);
-    let D = null != n,
+    let w = null != n,
         L = S || void 0 !== R ? null != R : null != A;
     function x() {
         (0, _.UK)(null, A, null == n ? void 0 : n.id);
@@ -67,7 +67,7 @@ function y(e) {
             children: [
                 (0, r.jsx)(M, {
                     size: s.zx.Sizes.SMALL,
-                    onClick: w,
+                    onClick: D,
                     className: o()({ [b.buttonHighlighted]: I }),
                     children: E.intl.string(E.t["/dRfCf"]),
                 }),
@@ -78,7 +78,7 @@ function y(e) {
                         children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: D ? E.intl.string(E.t.CHf9iJ) : E.intl.string(E.t.uMuafO),
+                            text: w ? E.intl.string(E.t.CHf9iJ) : E.intl.string(E.t.uMuafO),
                             onClick: x,
                         }),
                     }),

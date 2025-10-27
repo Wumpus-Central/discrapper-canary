@@ -29,15 +29,15 @@ function g() {
                 role: void 0,
                 ctaComponent: null,
                 imageUrl: (0, s.b)("server_products/storefront/preview-thumbnail.png"),
-                name: b.intl.string(b.t.U2hvDg),
-                description: b.intl.string(b.t["w/TNGR"]),
+                name: b.intl.string(b.t.U2hvDo),
+                description: b.intl.string(b.t["w/TNGT"]),
                 formattedPrice: (0, d.T4)(0, f.pKx.USD, {
                     localeMatcher: "best fit",
                     style: "currency",
                     maximumSignificantDigits: 1,
                 }),
                 shouldShowFullDescriptionButton: !1,
-                productType: b.intl.string(b.t.ih4QMT),
+                productType: b.intl.string(b.t.ih4QMU),
                 onTapCard: () => null,
                 hideRoleTag: !0,
                 lineClamp: 3,
@@ -65,7 +65,7 @@ function h() {
             (0, n.jsx)(o.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: b.intl.format(b.t.umfZ8v, { learnMoreLink: p.P4 }),
+                children: b.intl.format(b.t.umfZ8q, { learnMoreLink: p.P4 }),
             }),
         ],
     });

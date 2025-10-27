@@ -64,7 +64,7 @@ function p(e) {
                       d(u({}, e), {
                           channel: t,
                           navId: "recents-thread-notifications",
-                          label: c.intl.string(c.t.ljs3OT),
+                          label: c.intl.string(c.t.ljs3Oe),
                       }),
                   )
                 : (0, r.jsx)(
@@ -72,7 +72,7 @@ function p(e) {
                       d(u({}, e), {
                           channel: t,
                           navId: "recents-notifications",
-                          label: c.intl.string(c.t.ljs3OT),
+                          label: c.intl.string(c.t.ljs3Oe),
                           location: { section: s.jXE.INBOX },
                           includeGuildMute: !0,
                       }),
@@ -81,7 +81,7 @@ function p(e) {
             let { onClick: t } = e;
             return (0, r.jsx)(l.M0o, {
                 ref: n,
-                tooltip: c.intl.string(c.t.h850Sk),
+                tooltip: c.intl.string(c.t.h850Ss),
                 color: l.YX$.TERTIARY,
                 icon: (0, r.jsx)(l.Dkj, {
                     size: "xs",

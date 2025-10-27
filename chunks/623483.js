@@ -7,8 +7,8 @@ var i = n(481060),
 function c(e) {
     return (0, r.jsx)(i.sNh, {
         id: "delete-channel",
-        label: o.intl.string(o.t.Jg0R7e),
-        subtext: o.intl.string(o.t["+mNKMz"]),
+        label: o.intl.string(o.t.Jg0R7Q),
+        subtext: o.intl.string(o.t["+mNKM9"]),
         color: "danger",
         action: () =>
             (0, i.ZDy)(async () => {

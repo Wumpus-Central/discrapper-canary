@@ -4,18 +4,18 @@ n(647438);
 var i = n(481060),
     l = n(570140),
     a = n(317770),
-    o = n(81643),
-    s = n(681678),
+    s = n(81643),
+    o = n(681678),
     c = n(601964),
     u = n(944486),
     d = n(914010),
     p = n(622822),
     f = n(165540),
     h = n(920644),
-    g = n(723359),
-    m = n(981631),
-    b = n(484710);
-function _(e) {
+    m = n(723359),
+    g = n(981631),
+    _ = n(484710);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -73,24 +73,24 @@ class E extends a.Z {
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e("1716"), n.e("83737")]).then(n.bind(n, 701509));
-                return (n) => (0, r.jsx)(e, _({ source: t }, n));
+                return (n) => (0, r.jsx)(e, b({ source: t }, n));
             },
             {
-                modalKey: g.dG,
-                onCloseRequest: m.dG4,
-                backdropStyle: (0, o.bj)(t) ? i.fCB.LIGHTBOX : void 0,
+                modalKey: m.dG,
+                onCloseRequest: g.dG4,
+                backdropStyle: (0, s.bj)(t) ? i.fCB.LIGHTBOX : void 0,
             },
         );
     }
     handleAgeGateSuccess() {
-        s.Z.showSuccessToast(b.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(g.dG);
+        o.Z.showSuccessToast(_.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(m.dG);
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, i.oav)(g.dG, (e) => (0, r.jsx)(h.default, _({ underageMessage: t }, e)));
+        (0, i.oav)(m.dG, (e) => (0, r.jsx)(h.default, b({ underageMessage: t }, e)));
     }
     handleAgeGateModalClose() {
-        (0, i.Mr3)(g.dG);
+        (0, i.Mr3)(m.dG);
     }
     handleGuildUpdate(e) {
         let { guild: t } = e,
@@ -98,7 +98,7 @@ class E extends a.Z {
         if (
             null != n &&
             t.id === n &&
-            (t.owner_configured_content_level === m.V_K.AGE_RESTRICTED ||
+            (t.owner_configured_content_level === g.V_K.AGE_RESTRICTED ||
                 ((0, f.X)("age_gate_manager") && c.Ov.has(t.nsfw_level)))
         )
             return void (0, p.I8)(t.id, null);

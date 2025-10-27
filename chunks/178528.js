@@ -21,8 +21,8 @@ var i = n(951288),
     E = n(430824),
     x = n(496675),
     S = n(878884),
-    C = n(19780),
-    Z = n(944486),
+    Z = n(19780),
+    C = n(944486),
     j = n(9156),
     I = n(938475),
     P = n(518084),
@@ -258,14 +258,14 @@ function z(e) {
             let { channelId: t } = e;
             return t;
         }),
-        w = (0, o.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
+        w = (0, o.e7)([C.Z], () => C.Z.getVoiceChannelId()),
         T = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
         D = (0, o.e7)([m.Z], () => m.Z.version),
         k = (0, o.e7)([v.default], () => v.default.getGuildChangeSentinel(n)),
         R = (0, a.QN)(null == r ? void 0 : r.id),
         A = (0, c.gM)(null == r ? void 0 : r.id),
         L = null != (t = null == r ? void 0 : r.features.has(N.GuildFeatures.COMMUNITY)) && t,
-        z = (0, o.e7)([C.Z], () => C.Z.getChannelId()),
+        z = (0, o.e7)([Z.Z], () => Z.Z.getChannelId()),
         V = (0, o.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(M, {
         guildId: n,

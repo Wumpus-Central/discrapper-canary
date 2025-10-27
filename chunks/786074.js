@@ -5,7 +5,7 @@ let a = {
     MENTION_EVERYONE: () => ({
         test: "everyone",
         text: "@everyone",
-        description: i.intl.string(i.t.lHC4z8),
+        description: i.intl.string(i.t.lHC4zy),
     }),
     MENTION_HERE: () => ({
         test: "here",
@@ -16,7 +16,7 @@ let a = {
         test: "game",
         text: "@game",
         inlineAutocompleteType: "gameMentionInput",
-        description: i.intl.string(i.t["1kR88/"]),
+        description: i.intl.string(i.t["1kR88y"]),
     }),
     LAUNCHABLE_APPLICATIONS: () => r.Z.launchableApplicationViewItems,
 };

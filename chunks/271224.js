@@ -38,7 +38,7 @@ function _(e) {
             }
             return r;
         })(e, ["guildId", "powerup", "onClose"]);
-    let [g, j] = r.useState(void 0),
+    let [j, g] = r.useState(void 0),
         v = (0, d.ZP)(a, _),
         x = v.type === b.A3.TIER_OVERRIDE_ACTIVATED,
         y = (0, l.Z)(a),
@@ -101,11 +101,11 @@ function _(e) {
                                             children: _.title,
                                         }),
                                         (0, n.jsx)(u.Z, { powerup: _ }),
-                                        null != g &&
+                                        null != j &&
                                             (0, n.jsx)(s.Text, {
                                                 color: "status-danger",
                                                 variant: "text-sm/semibold",
-                                                children: g,
+                                                children: j,
                                             }),
                                         (0, n.jsxs)("div", {
                                             className: c()(f.footer, { [f.disabled]: C }),
@@ -115,14 +115,14 @@ function _(e) {
                                                     (0, n.jsx)(p.ZP, {
                                                         guildId: a,
                                                         powerup: _,
-                                                        onError: j,
+                                                        onError: g,
                                                         grow: !1,
                                                         compact: !C,
                                                     }),
                                                 (0, n.jsx)(s.Button, {
                                                     variant: C ? "secondary" : "primary",
                                                     onClick: O,
-                                                    text: m.intl.string(m.t.cpT0Cg),
+                                                    text: m.intl.string(m.t.cpT0Cq),
                                                 }),
                                             ],
                                         }),

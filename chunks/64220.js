@@ -5,8 +5,8 @@ var o = r(399606),
     c = r(481060),
     i = r(239091),
     l = r(367907),
-    a = r(496675),
-    s = r(626135),
+    s = r(496675),
+    a = r(626135),
     p = r(934415),
     O = r(572004),
     b = r(629481),
@@ -15,19 +15,19 @@ var o = r(399606),
     f = r(388032);
 function d(e) {
     let { guild: t, onSelect: r } = e,
-        d = (0, o.e7)([a.Z], () => null != t && a.Z.can(u.Plq.ADMINISTRATOR, t));
+        d = (0, o.e7)([s.Z], () => null != t && s.Z.can(u.Plq.ADMINISTRATOR, t));
     return (0, n.jsx)(c.v2r, {
         navId: "guild-shop-context",
-        "aria-label": f.intl.string(f.t.g3KvYG),
+        "aria-label": f.intl.string(f.t.g3KvYF),
         onClose: i.Zy,
         onSelect: r,
         children: (0, n.jsx)(c.kSQ, {
             children: (0, n.jsx)(c.sNh, {
                 id: "role-subscription-copy-link",
-                label: f.intl.string(f.t.WqhZsr),
+                label: f.intl.string(f.t.WqhZss),
                 action: () => {
                     var e, r;
-                    s.default.track(
+                    a.default.track(
                         u.rMx.GUILD_SHOP_COPY_LINK,
                         ((e = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {

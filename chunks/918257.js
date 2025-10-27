@@ -16,8 +16,8 @@ function f() {
         (e = (0, l.A)(n)), (0, a.xz)(e, t);
     }
     return (0, r.jsx)(c.Z, {
-        description: d.intl.format(d.t.BPbGq6, { helpCenterArticle: s.Z.getArticleURL(u.BhN.SOUNDBOARD) }),
-        label: d.intl.string(d.t.kbFsAA),
+        description: d.intl.format(d.t.BPbGq7, { helpCenterArticle: s.Z.getArticleURL(u.BhN.SOUNDBOARD) }),
+        label: d.intl.string(d.t.kbFsAD),
         volume: e,
         onVolumeChange: n,
     });

@@ -40,11 +40,11 @@ function E(e) {
         R = (0, c.dQu)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
         P = (0, u.Cf)(N, R, !1);
     if (null == S || null == A) return null;
-    let w = (e) => {
+    let D = (e) => {
         o(s()(e, null == T ? void 0 : T.themeColors) ? void 0 : e);
     };
     return (0, r.jsx)(h.Z, {
-        title: m.intl.string(m.t.DMeO2d),
+        title: m.intl.string(m.t.DMeO2X),
         disabled: !C && !E,
         className: a()(g.__invalid_profileThemesSection, y),
         showPremiumIcon: O,
@@ -55,7 +55,7 @@ function E(e) {
                 (0, r.jsx)("div", {
                     className: g.sparkleContainer,
                     children: (0, r.jsx)(p.Z, {
-                        onChange: (e) => w([e, A]),
+                        onChange: (e) => D([e, A]),
                         color: S,
                         suggestedColors: P,
                         showEyeDropper: !0,
@@ -71,7 +71,7 @@ function E(e) {
                 (0, r.jsx)("div", {
                     className: g.sparkleContainer,
                     children: (0, r.jsx)(p.Z, {
-                        onChange: (e) => w([S, e]),
+                        onChange: (e) => D([S, e]),
                         color: A,
                         suggestedColors: P,
                         showEyeDropper: !0,
@@ -80,7 +80,7 @@ function E(e) {
                             color: "header-secondary",
                             variant: "text-xs/normal",
                             "aria-hidden": !0,
-                            children: m.intl.string(m.t["8elvy8"]),
+                            children: m.intl.string(m.t["8elvy6"]),
                         }),
                     }),
                 }),
@@ -92,8 +92,8 @@ function E(e) {
                         children: (0, r.jsx)(c.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: m.intl.string(m.t["L+Gmoa"]),
-                            onClick: () => w([null, null]),
+                            text: m.intl.string(m.t["L+GmoR"]),
+                            onClick: () => D([null, null]),
                         }),
                     }),
             ],

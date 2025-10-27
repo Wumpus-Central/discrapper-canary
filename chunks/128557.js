@@ -130,8 +130,8 @@ function M(e) {
         { guildPopulated: k, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
         {
             handleInvite: H,
-            handleMessage: V,
-            handlePersonalize: F,
+            handleMessage: F,
+            handlePersonalize: V,
             handleDownload: G,
             handleAddApplication: z,
         } = (function (e) {
@@ -211,7 +211,7 @@ function M(e) {
             };
         })(l),
         W = !(D || k || U || B),
-        { titleAnimatedStyle: K, opacities: Y } = (function (e) {
+        { titleAnimatedStyle: q, opacities: Y } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
                 i = (0, d.Z)(() => [new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0), new o.Z.Value(0)]);
@@ -266,8 +266,8 @@ function M(e) {
                 }
             );
         })(W),
-        [q, X] = r.useState([]),
-        J = q.length > 0;
+        [K, X] = r.useState([]),
+        J = K.length > 0;
     if (
         (r.useEffect(() => {
             (async () => {
@@ -292,7 +292,7 @@ function M(e) {
                         style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
-                            header: Z.intl.string(Z.t.q9n0TU),
+                            header: Z.intl.string(Z.t.q9n0Ta),
                             completed: k,
                             onClick: H,
                         }),
@@ -309,9 +309,9 @@ function M(e) {
                         style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
-                            header: Z.intl.string(Z.t.c5kxPj),
+                            header: Z.intl.string(Z.t.c5kxPh),
                             completed: B,
-                            onClick: F,
+                            onClick: V,
                         }),
                     },
                     "customize",
@@ -326,9 +326,9 @@ function M(e) {
                         style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.qMX,
-                            header: Z.intl.string(Z.t["SoP7+v"]),
+                            header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: V,
+                            onClick: F,
                         }),
                     },
                     "message",
@@ -343,7 +343,7 @@ function M(e) {
                         style: W ? { opacity: Y[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
-                            header: Z.intl.string(Z.t.pGVNIy),
+                            header: Z.intl.string(Z.t.pGVNI9),
                             completed: D,
                             onClick: G,
                         }),
@@ -359,7 +359,7 @@ function M(e) {
                     style: W ? { opacity: Y[Q.length] } : {},
                     children: (0, i.jsx)(w, {
                         iconUrl: u.Tg$,
-                        header: Z.intl.string(Z.t.IhHDEB),
+                        header: Z.intl.string(Z.t.IhHDEO),
                         completed: J,
                         onClick: z,
                     }),
@@ -367,8 +367,8 @@ function M(e) {
                 "addapp",
             ),
         ));
-    let $ = v ? Z.intl.string(Z.t["1ach9P"]) : Z.intl.string(Z.t["ezm+/v"]);
-    p && ($ = Z.intl.string(Z.t["gwyU/P"]));
+    let $ = v ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
+    p && ($ = Z.intl.string(Z.t["gwyU/J"]));
     let ee = "".concat(
         O.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),
         "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm",
@@ -381,12 +381,12 @@ function M(e) {
                 className: T.inner,
                 children: [
                     (0, i.jsxs)(o.Z.div, {
-                        style: K,
+                        style: q,
                         children: [
                             (0, i.jsx)(u.Heading, {
                                 className: T.titleName,
                                 variant: "heading-xxl/medium",
-                                children: Z.intl.format(Z.t.rkHVKS, { guildName: l.name }),
+                                children: Z.intl.format(Z.t.rkHVKf, { guildName: l.name }),
                             }),
                             (0, i.jsxs)(u.Text, {
                                 color: "header-secondary",
@@ -395,7 +395,7 @@ function M(e) {
                                     [T.noChildren]: 0 === Q.length,
                                 }),
                                 variant: "text-sm/normal",
-                                children: [$, " ", Q.length > 0 ? Z.intl.format(Z.t.UOtD39, { guideURL: ee }) : null],
+                                children: [$, " ", Q.length > 0 ? Z.intl.format(Z.t.UOtD32, { guideURL: ee }) : null],
                             }),
                         ],
                     }),

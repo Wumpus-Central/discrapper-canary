@@ -18,7 +18,7 @@ let h = (e) => {
         let e = Math.floor(i / d.Z.Seconds.HOUR),
             t = Math.floor((i - e * d.Z.Seconds.HOUR) / d.Z.Seconds.MINUTE),
             r = i - e * d.Z.Seconds.HOUR - t * d.Z.Seconds.MINUTE;
-        n = u.intl.formatToPlainString(u.t.oEwLe3, {
+        n = u.intl.formatToPlainString(u.t.oEwLez, {
             hours: e,
             minutes: t,
             seconds: r,
@@ -29,7 +29,7 @@ let h = (e) => {
             minutes: e,
             seconds: i - 60 * e,
         });
-    } else n = u.intl.formatToPlainString(u.t["9yE8GR"], { seconds: i });
+    } else n = u.intl.formatToPlainString(u.t["9yE8Ga"], { seconds: i });
     if (!h && l > 0) {
         let e = s().duration(l);
         if (l > d.Z.Millis.HOUR) {
@@ -40,7 +40,7 @@ let h = (e) => {
             let n = "".concat(e.seconds()).padStart(2, "0");
             t = "".concat(e.minutes(), ":").concat(n);
         }
-    } else t = h ? u.intl.string(u.t.SSzXvb) : u.intl.string(u.t.Icu3bW);
+    } else t = h ? u.intl.string(u.t.SSzXvQ) : u.intl.string(u.t.Icu3bf);
     let f = (0, r.jsx)(c.Text, {
             variant: "text-sm/normal",
             color: "text-muted",

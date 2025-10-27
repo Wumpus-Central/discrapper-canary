@@ -11,7 +11,7 @@ function d(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(i.Z.SlideHeader, {
-                subtitle: a.intl.string(a.t["XQaT+/"]),
+                subtitle: a.intl.string(a.t["XQaT+8"]),
                 onClose: d,
                 headerAlignStart: u,
             }),

@@ -28,9 +28,9 @@ function l(e, t) {
 }
 function c(e) {
     return (0, r.EQ)(e)
-        .with("all_messages", () => o.intl.string(o.t.hZrr6u))
-        .with("mentions", () => o.intl.string(o.t.y59NJi))
-        .with("nothing", () => o.intl.string(o.t["pGn/bG"]))
-        .with("custom", () => o.intl.string(o.t["32yow8"]))
+        .with("all_messages", () => o.intl.string(o.t.hZrr6k))
+        .with("mentions", () => o.intl.string(o.t.y59NJm))
+        .with("nothing", () => o.intl.string(o.t["pGn/bJ"]))
+        .with("custom", () => o.intl.string(o.t["32yow9"]))
         .exhaustive();
 }

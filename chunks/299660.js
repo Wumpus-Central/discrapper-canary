@@ -9,7 +9,7 @@ var s = t(481060),
 function a(n) {
     return (0, r.jsx)(s.sNh, {
         id: "role-subscription-copy-link",
-        label: l.intl.string(l.t.WqhZsr),
+        label: l.intl.string(l.t.WqhZss),
         action: () => {
             (0, e.JG)((0, o.wR)(n, c.oC.ROLE_SUBSCRIPTIONS));
         },

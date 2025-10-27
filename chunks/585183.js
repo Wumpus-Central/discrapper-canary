@@ -1,6 +1,6 @@
 t.d(a, { h: () => C }), t(388685);
-var r = t(951288),
-    n = t(647438),
+var n = t(951288),
+    r = t(647438),
     s = t(512722),
     l = t.n(s),
     i = t(481060),
@@ -23,20 +23,20 @@ function C(e) {
             onClose: p,
             redirectUri: v,
         } = e,
-        [f, k] = n.useState(!1),
-        b = n.useCallback(
+        [b, f] = r.useState(!1),
+        k = r.useCallback(
             async (e) => {
                 let t,
-                    r,
-                    { location: n } = e,
+                    n,
+                    { location: r } = e,
                     { callbackCode: s, callbackState: l } = d;
                 try {
-                    t = await o.Z.completeTwoWayLink(a, n, s, l);
+                    t = await o.Z.completeTwoWayLink(a, r, s, l);
                 } catch (e) {
                     var i;
-                    N.error("".concat(a, " link error:"), e), (r = null == (i = e.body) ? void 0 : i.code);
+                    N.error("".concat(a, " link error:"), e), (n = null == (i = e.body) ? void 0 : i.code);
                 }
-                null != t ? C() : j(r);
+                null != t ? C() : j(n);
             },
             [a, d, C, j],
         ),
@@ -49,43 +49,43 @@ function C(e) {
             clientId: t,
             scopes: s,
             responseType: "code",
-            callback: b,
+            callback: k,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
             redirectUri: v,
             isTwoWayLinkDiscordConsent: !0,
         }),
-        y = n.useCallback(() => {
-            l()(null != O, "sendAuthorize not available"), k(!0), O(!0);
+        R = r.useCallback(() => {
+            l()(null != O, "sendAuthorize not available"), f(!0), O(!0);
         }, [O]);
-    return (0, r.jsxs)(u.Z, {
+    return (0, n.jsxs)(u.Z, {
         children: [
-            (0, r.jsxs)(i.xBx, {
+            (0, n.jsxs)(i.xBx, {
                 direction: c.Z.Direction.VERTICAL,
                 className: m.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, n.jsx)(i.Text, {
                         className: m.stepHeader,
                         variant: "text-xs/bold",
                         color: "header-secondary",
-                        children: h.intl.format(h.t.fHz6eX, {
+                        children: h.intl.format(h.t.fHz6eR, {
                             number: 2,
                             total: 2,
                         }),
                     }),
                     null != p &&
-                        (0, r.jsx)(i.olH, {
+                        (0, n.jsx)(i.olH, {
                             className: m.closeButton,
                             onClick: p,
                         }),
                 ],
             }),
-            (0, r.jsxs)(i.hzk, {
+            (0, n.jsxs)(i.hzk, {
                 className: m.consentContent,
                 paddingFix: !1,
                 children: [
-                    (0, r.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: m.consentHeader,
                         children: g,
                     }),
@@ -93,16 +93,16 @@ function C(e) {
                     T,
                 ],
             }),
-            (0, r.jsx)(i.mzw, {
+            (0, n.jsx)(i.mzw, {
                 className: m.footer,
-                children: (0, r.jsx)("div", {
+                children: (0, n.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: m.footerButton,
-                    children: (0, r.jsx)(i.Button, {
+                    children: (0, n.jsx)(i.Button, {
                         variant: "primary",
-                        text: h.intl.string(h.t.ZN4hkZ),
-                        loading: f,
-                        onClick: y,
+                        text: h.intl.string(h.t.ZN4hkc),
+                        loading: b,
+                        onClick: R,
                     }),
                 }),
             }),

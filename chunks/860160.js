@@ -54,7 +54,7 @@ function b(e) {
         I = i.useMemo(() => {
             if ("contentInventory" === n.data.kind) return n.data.content.author_id;
         }, [n]),
-        y = i.useMemo(() => {
+        v = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
                 case "forumThread":
@@ -69,8 +69,8 @@ function b(e) {
                     return n.timestamp;
             }
         }, [n]),
-        v = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
-        C = null != (t = null == v ? void 0 : v.guild_id) ? t : O,
+        y = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
+        C = null != (t = null == y ? void 0 : y.guild_id) ? t : O,
         S = (0, a.e7)([p.Z], () => (null != C ? p.Z.getGuild(C) : null), [C]),
         T = (0, a.e7)([f.default], () => (null != I ? f.default.getUser(I) : null), [I]);
     return "unknown" === b
@@ -123,7 +123,7 @@ function b(e) {
                                                 : null,
                                           (0, r.jsx)("div", {
                                               className: _.timestamp,
-                                              children: (0, u.a3)(y),
+                                              children: (0, u.a3)(v),
                                           }),
                                       ],
                                   }),
@@ -164,8 +164,8 @@ function b(e) {
                                               children: e,
                                           }),
                                       });
-                                  if (null != v && null != e) {
-                                      let t = (0, s.KS)(v, S);
+                                  if (null != y && null != e) {
+                                      let t = (0, s.KS)(y, S);
                                       return (0, r.jsxs)("div", {
                                           className: _.subtitle,
                                           children: [
@@ -187,7 +187,7 @@ function b(e) {
                                                               height: 16,
                                                               className: _.channelIcon,
                                                           }),
-                                                      v.name,
+                                                      y.name,
                                                   ],
                                               }),
                                           ],

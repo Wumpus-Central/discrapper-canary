@@ -59,8 +59,8 @@ function P(e) {
             user: n,
             guildId: N,
             channelId: P,
-            messageId: w,
-            roleId: D,
+            messageId: D,
+            roleId: w,
             openedAt: L,
             setPopoutRef: x,
             closePopout: M,
@@ -75,8 +75,8 @@ function P(e) {
             userId: n.id,
             guildId: N,
             channelId: P,
-            messageId: w,
-            roleId: D,
+            messageId: D,
+            roleId: w,
         }),
         F = i.useRef(null),
         V = (0, u.X)(F);
@@ -100,7 +100,7 @@ function P(e) {
             Y
                 ? (0, r.jsx)(a.sNh, {
                       id: "view-profile",
-                      label: A.intl.string(A.t["+Xp3ho"]),
+                      label: A.intl.string(A.t["+Xp3hq"]),
                       action: () => {
                           H(),
                               (0, p.pQ)(
@@ -133,7 +133,7 @@ function P(e) {
                     (0, r.jsx)(a.nn4, {
                         children: (0, r.jsx)(a.H, {
                             id: z,
-                            children: A.intl.format(A.t.KRe1Fh, { name: q }),
+                            children: A.intl.format(A.t.KRe1Fk, { name: q }),
                         }),
                     }),
                     (0, r.jsxs)(O.Z, {

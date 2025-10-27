@@ -7,6 +7,6 @@ let a = (e) => {
         n = t.getAnyErrorMessage();
     return (0, r.jsx)(i.qXd, {
         color: i.DM8.DANGER,
-        children: (0, r.jsx)("div", { children: null != n ? n : l.intl.string(l.t.ZErSg4) }),
+        children: (0, r.jsx)("div", { children: null != n ? n : l.intl.string(l.t.ZErSg5) }),
     });
 };

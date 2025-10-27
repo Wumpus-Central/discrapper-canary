@@ -1,4 +1,4 @@
-n.d(t, { f: () => S }), n(388685);
+n.d(t, { f: () => b }), n(388685);
 var i = n(951288),
     s = n(647438),
     l = n(755721),
@@ -29,7 +29,7 @@ function N(e, t, n) {
         e
     );
 }
-class S extends s.PureComponent {
+class b extends s.PureComponent {
     highlight() {
         this.setState({ highlight: !0 }, () => {
             null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000));
@@ -92,12 +92,12 @@ class S extends s.PureComponent {
         let s = (0, c.KS)(n);
         if (n.type === v.d4z.GUILD_CATEGORY && null != n.guild_id && "" !== n.guild_id) {
             let e = g.Z.getCategories(n.guild_id);
-            t = j.intl.formatToPlainString(j.t["2KzH8/"], { num: null != e[n.id] ? e[n.id].length : 0 });
+            t = j.intl.formatToPlainString(j.t["2KzH89"], { num: null != e[n.id] ? e[n.id].length : 0 });
         } else
             t =
                 null != e
-                    ? j.intl.formatToPlainString(j.t.L1zJgY, { categoryName: (0, d.F6)(e, x.default, m.Z) })
-                    : j.intl.string(j.t.uIzfCA);
+                    ? j.intl.formatToPlainString(j.t.L1zJgb, { categoryName: (0, d.F6)(e, x.default, m.Z) })
+                    : j.intl.string(j.t.uIzfCE);
         return (0, i.jsxs)(u.Z, {
             grow: 1,
             className: f.nameContainer,

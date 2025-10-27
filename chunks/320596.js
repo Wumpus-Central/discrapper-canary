@@ -90,12 +90,12 @@ let h = (e) => {
                       (0, r.jsx)(a.Text, {
                           variant: "text-xs/normal",
                           color: "header-secondary",
-                          children: m.intl.string(m.t["P/KFX1"]),
+                          children: m.intl.string(m.t["P/KFXz"]),
                       }),
                       (0, r.jsx)(a.P3F, {
                           className: x.blockedButton,
                           onClick: o,
-                          children: m.intl.string(m.t.rUEjBQ),
+                          children: m.intl.string(m.t.rUEjBe),
                       }),
                   ],
               })
@@ -107,12 +107,12 @@ let h = (e) => {
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "header-secondary",
-                            children: m.intl.format(m.t.Ri3o39, { number: l }),
+                            children: m.intl.format(m.t.Ri3o33, { number: l }),
                         }),
                         (0, r.jsx)(a.P3F, {
                             className: x.blockedButton,
                             onClick: o,
-                            children: m.intl.string(m.t.rUEjBQ),
+                            children: m.intl.string(m.t.rUEjBe),
                         }),
                     ],
                 })
@@ -131,7 +131,7 @@ let h = (e) => {
                         (0, r.jsx)(a.P3F, {
                             className: x.blockedButton,
                             onClick: o,
-                            children: m.intl.string(m.t.rUEjBQ),
+                            children: m.intl.string(m.t.rUEjBe),
                         }),
                     ],
                 });
@@ -142,7 +142,7 @@ let h = (e) => {
             h = (0, l.e7)([c.Z], () => c.Z.isBlocked(t.id)),
             v = null;
         return (
-            n && (v = i ? m.intl.string(m.t.LqMmGx) : g ? m.intl.string(m.t.GMZqSk) : m.intl.string(m.t.suRAp6)),
+            n && (v = i ? m.intl.string(m.t.LqMmG2) : g ? m.intl.string(m.t.GMZqSi) : m.intl.string(m.t.suRApw)),
             (0, r.jsxs)("div", {
                 className: x.user,
                 children: [
@@ -189,7 +189,7 @@ let h = (e) => {
                                     (0, r.jsx)(a.Text, {
                                         variant: "text-xs/normal",
                                         color: h ? "text-danger" : "text-default",
-                                        children: h ? m.intl.string(m.t["4bDptL"]) : m.intl.string(m.t.tFY5ZW),
+                                        children: h ? m.intl.string(m.t["4bDptI"]) : m.intl.string(m.t.tFY5Zb),
                                     }),
                                     (0, r.jsxs)(a.Text, {
                                         variant: "text-xs/normal",

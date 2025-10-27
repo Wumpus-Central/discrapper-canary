@@ -27,14 +27,14 @@ function m(e) {
                             (0, i.jsx)(a.Heading, {
                                 className: u.title,
                                 variant: "heading-xl/semibold",
-                                children: d.intl.string(d.t.CueiPT),
+                                children: d.intl.string(d.t.CueiPY),
                             }),
                             (0, i.jsx)(a.Text, {
                                 color: "header-secondary",
                                 variant: "text-md/normal",
                                 children: l
                                     ? d.intl.formatToPlainString(d.t.R7Pqn5, { guildName: t })
-                                    : d.intl.formatToPlainString(d.t.eIxPSk, { guildName: t }),
+                                    : d.intl.formatToPlainString(d.t.eIxPSv, { guildName: t }),
                             }),
                         ],
                     }),
@@ -44,19 +44,19 @@ function m(e) {
                     actions: l
                         ? [
                               {
-                                  text: d.intl.string(d.t["X0WK+/"]),
+                                  text: d.intl.string(d.t["X0WK+6"]),
                                   variant: "primary",
                                   onClick: m,
                               },
                           ]
                         : [
                               {
-                                  text: d.intl.string(d.t["X/VABg"]),
+                                  text: d.intl.string(d.t["X/VABv"]),
                                   variant: "secondary",
                                   onClick: m,
                               },
                               {
-                                  text: d.intl.string(d.t.DymAQk),
+                                  text: d.intl.string(d.t.DymAQt),
                                   variant: "primary",
                                   onClick: () => {
                                       (0, c.XU)(n.id), null == m || m();

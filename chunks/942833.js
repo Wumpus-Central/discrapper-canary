@@ -11,11 +11,11 @@ function o(e) {
         let t = null != e.role_id,
             n = e.attachments_count > 0;
         return t && n
-            ? a.intl.string(a.t.ih4QMT)
+            ? a.intl.string(a.t.ih4QMU)
             : t
-              ? a.intl.string(a.t.o9xphY)
+              ? a.intl.string(a.t.o9xphc)
               : n
-                ? a.intl.string(a.t.DWYJub)
+                ? a.intl.string(a.t.DWYJua)
                 : void 0;
     }, [e]);
 }

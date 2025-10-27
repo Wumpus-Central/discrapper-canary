@@ -42,15 +42,15 @@ function f() {
     return [
         {
             setting: u.ALL_MESSAGES,
-            label: i.intl.string(i.t["n/bTaW"]),
+            label: i.intl.string(i.t["n/bTaY"]),
         },
         {
             setting: u.ONLY_MENTIONS,
-            label: i.intl.format(i.t.L2hmY2, {}),
+            label: i.intl.format(i.t.L2hmYy, {}),
         },
         {
             setting: u.NO_MESSAGES,
-            label: i.intl.string(i.t.CtVGyc),
+            label: i.intl.string(i.t.CtVGyQ),
         },
     ];
 }

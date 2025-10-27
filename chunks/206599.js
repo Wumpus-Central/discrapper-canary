@@ -10,18 +10,18 @@ var r = n(647438),
     a = n(669764),
     l = n(592183),
     o = n(224724),
-    s = n(938236),
-    c = n(747101);
+    c = n(938236),
+    s = n(747101);
 function u(e) {
     var t;
     let [n, l] = (0, i.Wu)([a.Z], () => [a.Z.numNoDataAvailable(), a.Z.numSupplementalGames()]),
-        { bump: o, bumpMultiple: u, gameIds: d } = (0, s.b)();
+        { bump: o, bumpMultiple: u, gameIds: d } = (0, c.b)();
     !(function (e) {
         var t, n;
-        let { remove: i, peekedGameIds: l } = (0, s.b)();
-        (0, c.qU)(null != (t = l[e]) ? t : []);
+        let { remove: i, peekedGameIds: l } = (0, c.b)();
+        (0, s.qU)(null != (t = l[e]) ? t : []);
         let o = r.useCallback((e) => a.Z.isFetching(e), []),
-            u = (0, c.kN)(null != (n = l[e]) ? n : []);
+            u = (0, s.kN)(null != (n = l[e]) ? n : []);
         r.useEffect(() => {
             var t;
             for (let n of null != (t = l[e]) ? t : []) {
@@ -40,8 +40,8 @@ function u(e) {
             },
             [o, e],
         );
-    (0, c.qU)(f);
-    let p = (0, c.kN)(f),
+    (0, s.qU)(f);
+    let p = (0, s.kN)(f),
         [m, b] = r.useState([]),
         h = ((t = f.map((e) => a.Z.isFetching(e))), r.useMemo(() => t.join("\x1F"), [t]));
     return (
@@ -68,13 +68,13 @@ function u(e) {
     );
 }
 function d(e, t) {
-    let [n, a, c, u] = (0, i.Wu)([o.Z], () => [
+    let [n, a, s, u] = (0, i.Wu)([o.Z], () => [
             o.Z.suggestedFetchAttempted,
             o.Z.suggestedFetchError,
             o.Z.suggestedGameIds,
             o.Z.suggestedFetchIsLoading,
         ]),
-        { onLoad: d } = (0, s.b)();
+        { onLoad: d } = (0, c.b)();
     r.useEffect(() => {
         !n && e && l.Z.fetchSuggestedGames();
     }, [n, e]);
@@ -83,6 +83,6 @@ function d(e, t) {
         var e, n;
         if (!f) return;
         let r = t.map((e) => e.games).flat();
-        if (!a) d(null != (e = c.suggestedGamesIds) ? e : [], null != (n = c.suggestedWishlistGamesIds) ? n : [], r);
+        if (!a) d(null != (e = s.suggestedGamesIds) ? e : [], null != (n = s.suggestedWishlistGamesIds) ? n : [], r);
     }, [f]);
 }

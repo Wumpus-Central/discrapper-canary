@@ -163,8 +163,8 @@ function v(e) {
             onDoubleClick: N,
             onMouseDown: R,
             onMouseUp: P,
-            onMouseEnter: w,
-            onMouseLeave: D,
+            onMouseEnter: D,
+            onMouseLeave: w,
             onKeyDown: L,
             children: x,
             rel: M,
@@ -203,13 +203,13 @@ function v(e) {
             "submittingFinishedLabel",
         ]);
     let F = _ || m,
-        V = F && (null != w || null != D),
+        V = F && (null != D || null != w),
         H = V ? null : T,
         Y = y(j, t),
         W = i.useRef(!1);
     i.useEffect(() => {
-        !0 === m && ((W.current = !0), l.uvj.announce(null != G ? G : c.intl.string(c.t.pfChQk))),
-            !1 === m && !0 === W.current && l.uvj.announce(null != B ? B : c.intl.string(c.t.SVPara));
+        !0 === m && ((W.current = !0), l.uvj.announce(null != G ? G : c.intl.string(c.t.pfChQr))),
+            !1 === m && !0 === W.current && l.uvj.announce(null != B ? B : c.intl.string(c.t.SVParY));
     }, [m, G, B]);
     let K = (0, r.jsx)(
         l.tEY,
@@ -225,8 +225,8 @@ function v(e) {
                     onDoubleClick: F ? (e) => e.preventDefault() : N,
                     onMouseUp: _ ? void 0 : P,
                     onMouseDown: _ ? void 0 : R,
-                    onMouseEnter: w,
-                    onMouseLeave: D,
+                    onMouseEnter: D,
+                    onMouseLeave: w,
                     onKeyDown: _ ? void 0 : L,
                     type: v,
                     disabled: _,
@@ -271,8 +271,8 @@ function v(e) {
               children: [
                   K,
                   (0, r.jsx)("span", {
-                      onMouseEnter: w,
-                      onMouseLeave: D,
+                      onMouseEnter: D,
+                      onMouseLeave: w,
                       className: u.disabledButtonOverlay,
                   }),
               ],

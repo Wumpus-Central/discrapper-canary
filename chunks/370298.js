@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(585483),
     R = n(619895),
     P = n(844439),
-    w = n(981631),
-    D = n(388032),
+    D = n(981631),
+    w = n(388032),
     L = n(491856);
 function x(e, t, n) {
     return (
@@ -88,7 +88,7 @@ function k(e) {
                   let { onClick: n } = e;
                   return (0, r.jsx)(s.u, {
                       asContainer: !0,
-                      text: D.intl.string(D.t.emnnEB),
+                      text: w.intl.string(w.t.emnnEB),
                       children: (0, r.jsx)(l.P3F, {
                           className: c,
                           focusProps: { offset: 2 },
@@ -98,7 +98,7 @@ function k(e) {
                               E(!0), h.onMouseEnter();
                           },
                           onMouseLeave: h.onMouseLeave,
-                          "aria-label": D.intl.string(D.t.emnnEB),
+                          "aria-label": w.intl.string(w.t.emnnEB),
                           children: (0, r.jsx)(p, {
                               size: "custom",
                               width: 20,
@@ -128,7 +128,7 @@ function j(e) {
             j.forEach((e) => {
                 n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id));
             }),
-                C.default.track(w.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+                C.default.track(D.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
                     guild_id: null != (e = null == o ? void 0 : o.guild_id) ? e : "",
                     channel_id: null != (t = null == o ? void 0 : o.id) ? t : "",
                     application_ids: [...j.map((e) => Number(e.command.applicationId))],
@@ -190,7 +190,7 @@ function j(e) {
                         location: n,
                         sectionName: t.name,
                     }),
-                    N.S.dispatch(w.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.id });
+                    N.S.dispatch(D.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.id });
             },
             [o.id, F, G, B, Z],
         ),
@@ -242,7 +242,7 @@ function j(e) {
         onSelect: t,
         navId: "image-context-commands-popout",
         onClose: n,
-        "aria-label": D.intl.string(D.t["P3ShV+"]),
+        "aria-label": w.intl.string(w.t["P3ShV+"]),
         children: [
             (0, r.jsx)(
                 l.sNh,
@@ -253,7 +253,7 @@ function j(e) {
                             className: L.title,
                             variant: "text-md/bold",
                             color: "header-primary",
-                            children: D.intl.string(D.t.emnnEB),
+                            children: w.intl.string(w.t.emnnEB),
                         }),
                     navigable: !1,
                     disabled: !0,
@@ -315,8 +315,8 @@ function j(e) {
                                                               l.sNh,
                                                               {
                                                                   id: "".concat(e.command.id, "-send"),
-                                                                  label: D.intl.string(D.t["M+BhUW"]),
-                                                                  subtext: D.intl.string(D.t.zXFjJV),
+                                                                  label: w.intl.string(w.t["M+BhUW"]),
+                                                                  subtext: w.intl.string(w.t.zXFjJV),
                                                                   action: () =>
                                                                       H(t, m.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
                                                                   icon: l.Uuj,
@@ -327,8 +327,8 @@ function j(e) {
                                                               l.sNh,
                                                               {
                                                                   id: "".concat(e.command.id, "-edit"),
-                                                                  label: D.intl.string(D.t["wTaN+K"]),
-                                                                  subtext: D.intl.string(D.t.bIB3bs),
+                                                                  label: w.intl.string(w.t["wTaN+K"]),
+                                                                  subtext: w.intl.string(w.t.bIB3bs),
                                                                   action: () => {
                                                                       V(
                                                                           e.command,

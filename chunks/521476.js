@@ -27,14 +27,14 @@ function y(e) {
                 color: "currentColor",
                 className: C.bannerIcon,
             }),
-            bannerHeader: b.intl.format(b.t.GgMwjo, { guildName: null != (t = null == n ? void 0 : n.name) ? t : "" }),
-            bannerSubtext: b.intl.string(b.t.ONjwDw),
+            bannerHeader: b.intl.format(b.t.GgMwjk, { guildName: null != (t = null == n ? void 0 : n.name) ? t : "" }),
+            bannerSubtext: b.intl.string(b.t.ONjwD5),
             textStyles: C.bannerContainer,
             headerStyles: C.bannerHeader,
             children: (0, i.jsx)(l.Button, {
                 variant: "primary",
                 size: "sm",
-                text: b.intl.string(b.t.Viksoq),
+                text: b.intl.string(b.t.Viksoo),
                 onClick: () => r(),
             }),
         }),
@@ -49,7 +49,7 @@ function _(e) {
             analyticsLocations: c,
         }),
         p = d ? b.intl.string(b.t["9ph2v7"]) : b.intl.string(b.t.ldh9Cg),
-        m = d ? b.intl.string(b.t["/PGQf3"]) : b.intl.string(b.t.WikgZ2);
+        m = d ? b.intl.string(b.t["/PGQf0"]) : b.intl.string(b.t.WikgZ1);
     return (0, i.jsx)("div", {
         children: (0, i.jsx)(s.i, {
             bannerIcon: (0, i.jsx)(l.ics, {
@@ -57,7 +57,7 @@ function _(e) {
                 color: "currentColor",
                 className: C.bannerIcon,
             }),
-            bannerHeader: b.intl.format(b.t.kcYdTk, { guildName: null != (n = null == r ? void 0 : r.name) ? n : "" }),
+            bannerHeader: b.intl.format(b.t.kcYdTq, { guildName: null != (n = null == r ? void 0 : r.name) ? n : "" }),
             bannerSubtext: p,
             textStyles: C.bannerContainer,
             headerStyles: C.bannerHeader,

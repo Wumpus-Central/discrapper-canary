@@ -12,12 +12,12 @@ let E = (0, l.x1)(r.n.NITRO_PANE, {
         render: s.Z,
     }),
     d = (0, l.wf)(r.n.NITRO_PANEL, {
-        useTitle: () => c.intl.string(c.t.Ipxkoq),
+        useTitle: () => c.intl.string(c.t.Ipxkog),
         buildLayout: () => [E],
     }),
     T = (0, l.m7)(r.n.NITRO_SIDEBAR_ITEM, {
         icon: i.SrA,
-        useTitle: () => c.intl.string(c.t.Ipxkoq),
+        useTitle: () => c.intl.string(c.t.Ipxkog),
         legacySearchKey: o.s6.PREMIUM,
         buildLayout: () => [d],
         trailing: {

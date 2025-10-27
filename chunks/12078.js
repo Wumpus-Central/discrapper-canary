@@ -26,11 +26,11 @@ function v(e) {
         });
     return (0, r.jsx)(o.u, {
         asContainer: !0,
-        text: x.intl.string(x.t.W4Nd7e),
+        text: x.intl.string(x.t.W4Nd7Q),
         children: (0, r.jsx)(c.P3F, {
             "aria-disabled": !n,
             tabIndex: n ? 0 : -1,
-            "aria-label": x.intl.string(x.t.W4Nd7e),
+            "aria-label": x.intl.string(x.t.W4Nd7Q),
             onClick: n ? i : void 0,
             style: { background: (0, d.dG)(u) },
             className: a()(j.itemContainer, { [j.disabled]: !n }),
@@ -109,7 +109,7 @@ function C(e) {
         ),
         y = i.useCallback((e) => (!p || null == n.customBanner) && e === n.brandColorPrimary, [n, p]);
     return (0, r.jsx)(c.gNt, {
-        label: x.intl.string(x.t.BSVog4),
+        label: x.intl.string(x.t.BSVog8),
         children: (0, r.jsxs)("div", {
             className: j.grid,
             children: [

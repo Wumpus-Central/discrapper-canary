@@ -33,19 +33,19 @@ class _ extends i.PureComponent {
                               (0, r.jsx)(o.Heading, {
                                   variant: l.length < 25 ? "heading-xl/bold" : "heading-lg/bold",
                                   className: f.connectionInstructions,
-                                  children: d.intl.format(d.t["ze/1yM"], { cashtag: l }),
+                                  children: d.intl.format(d.t["ze/1yE"], { cashtag: l }),
                               }),
                               (0, r.jsx)(o.Text, {
                                   variant: "text-md/medium",
                                   className: f.connectionInstructions,
-                                  children: d.intl.string(d.t.VPOx7O),
+                                  children: d.intl.string(d.t.VPOx7N),
                               }),
                           ],
                       })
                     : (0, r.jsx)(o.Text, {
                           variant: "text-md/medium",
                           className: f.connectionInstructions,
-                          children: null == i ? d.intl.string(d.t["CgVe//"]) : d.intl.string(d.t["1MqcjI"]),
+                          children: null == i ? d.intl.string(d.t["CgVe/w"]) : d.intl.string(d.t["1MqcjI"]),
                       }),
             ],
         });

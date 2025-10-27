@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(591472),
     a = n(262734),
-    o = n(408491);
-function s() {
+    s = n(408491);
+function o() {
     let e = (0, i.e7)([l.Z], () => l.Z.getConnectedFrame());
-    return (0, i.e7)([l.Z], () => l.Z.getFrameLayoutMode()) !== o.U.FOCUSED || null == e
+    return (0, i.e7)([l.Z], () => l.Z.getFrameLayoutMode()) !== s.U.FOCUSED || null == e
         ? null
         : (0, r.jsx)(a.Z, { frame: e });
 }

@@ -28,12 +28,12 @@ function _(e) {
             ? {
                   variant: "overlay-secondary",
                   icon: c.FmF,
-                  text: b.intl.string(b.t.b0y3DA),
+                  text: b.intl.string(b.t.b0y3DL),
               }
             : {
                   variant: "expressive",
                   icon: c.Ucv,
-                  text: b.intl.string(b.t["+7XY39"]),
+                  text: b.intl.string(b.t["+7XY31"]),
               };
     return (0, l.jsx)("div", {
         className: j.editButtonContainer,
@@ -114,7 +114,7 @@ let Z = r.memo(function (e) {
                                             className: j.inviteButton,
                                             children: (0, l.jsx)(c.Button, {
                                                 variant: "secondary",
-                                                text: b.intl.string(b.t.VINpSE),
+                                                text: b.intl.string(b.t.VINpSK),
                                                 onClick: () =>
                                                     (0, c.ZDy)(async () => {
                                                         let { default: e } = await Promise.all([

@@ -21,7 +21,7 @@ let m = (e) => {
     return !j && m === d.GuildFeatures.VANITY_URL && v
         ? null
         : (j
-                ? (null != _ && (i = u.intl.string(u.t.hUgjyM)),
+                ? (null != _ && (i = u.intl.string(u.t.hUgjyP)),
                   (t = (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Ucv, {
@@ -31,11 +31,11 @@ let m = (e) => {
                           (0, r.jsx)(s.Heading, {
                               variant: "eyebrow",
                               className: g.description,
-                              children: u.intl.string(u.t["0O+87u"]),
+                              children: u.intl.string(u.t["0O+87i"]),
                           }),
                       ],
                   })))
-                : (null != _ && (i = u.intl.string(u.t.L2wYYm)),
+                : (null != _ && (i = u.intl.string(u.t.L2wYYj)),
                   (t = (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Ucv, {

@@ -28,7 +28,7 @@ let g = (e) => {
         );
     })
         ? (0, i.jsx)(a.u, {
-              text: f.intl.string(f.t.DJXW3N),
+              text: f.intl.string(f.t.DJXW3G),
               children: (0, i.jsxs)("div", {
                   className: m.clipsEnabledIndicator,
                   children: [
@@ -39,7 +39,7 @@ let g = (e) => {
                           className: m.clipBadgeIcon,
                       }),
                       (0, i.jsx)(o.IGR, {
-                          text: f.intl.string(f.t.pCMkDQ),
+                          text: f.intl.string(f.t.pCMkDb),
                           shape: o.Dv2.ROUND_RIGHT,
                           color: l.Z.unsafe_rawColors.PRIMARY_500.css,
                           className: m.clipBadgeText,

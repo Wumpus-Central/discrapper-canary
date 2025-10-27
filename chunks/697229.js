@@ -16,7 +16,7 @@ function u(e) {
               id: "add-channel-to-category",
               icon: l.oFk,
               color: "brand",
-              label: s.intl.string(s.t["6uDHk5"]),
+              label: s.intl.string(s.t["6uDHk6"]),
               action: function () {
                   (0, l.ZDy)(async () => {
                       let { default: t } = await n.e("29608").then(n.bind(n, 610617));

@@ -15,7 +15,7 @@ function d(e, t) {
     return (0, c.Z)(e, n) && d && !f
         ? (0, r.jsx)(l.sNh, {
               id: "edit",
-              label: u.intl.string(u.t.fsBWmZ),
+              label: u.intl.string(u.t.fsBWmS),
               action: () => a.Z.startEditMessageRecord(t.id, e),
               icon: l.vdY,
           })

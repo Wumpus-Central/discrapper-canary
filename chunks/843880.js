@@ -19,7 +19,7 @@ function f(e) {
     if ((i()(null != _, "guild cannot be null"), i()(null != f, "guildProductListing cannot be null"), (0, s.SO)(_)))
         return {
             variant: "primary",
-            text: d.intl.string(d.t.xUi3BA),
+            text: d.intl.string(d.t.xUi3BL),
             disabled: !0,
         };
     if (f.has_entitlement)
@@ -27,7 +27,7 @@ function f(e) {
             ? p
             : {
                   variant: "secondary",
-                  text: d.intl.string(d.t.RcTOGB),
+                  text: d.intl.string(d.t.RcTOGF),
                   disabled: !0,
               };
     {
@@ -39,7 +39,7 @@ function f(e) {
             });
         return {
             variant: "primary",
-            text: d.intl.string(d.t.xUi3BA),
+            text: d.intl.string(d.t.xUi3BL),
             onClick: e,
         };
     }

@@ -34,7 +34,7 @@ function p() {
         : (0, r.jsx)("div", {
               className: d.cameraWrapper,
               children: (0, r.jsx)(o.u, {
-                  text: h ? null : u.intl.string(u.t["8jSzSU"]),
+                  text: h ? null : u.intl.string(u.t["8jSzSe"]),
                   children: (0, r.jsx)(s.Button, {
                       variant: "primary",
                       text: u.intl.string(u.t.JIf4v7),

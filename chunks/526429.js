@@ -19,7 +19,7 @@ class E extends (n = a.ZP.Store) {
         return [
             {
                 categoryId: s.Hk,
-                name: c.intl.string(c.t.Ym2Ri4),
+                name: c.intl.string(c.t.Ym2Ri6),
             },
             ...e,
         ];
@@ -41,7 +41,7 @@ class E extends (n = a.ZP.Store) {
         return d;
     }
     getCategoryName(e) {
-        return e === s.Hk ? c.intl.string(c.t.Ym2Ri4) : p[e];
+        return e === s.Hk ? c.intl.string(c.t.Ym2Ri6) : p[e];
     }
 }
 (i = "displayName") in E

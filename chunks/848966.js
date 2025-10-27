@@ -16,7 +16,7 @@ function p(e) {
         p = (0, r.Z)({
             userId: e.user.id,
             section: d.oh.ACTIVITY,
-            label: _.intl.string(_.t.pD1L1t),
+            label: _.intl.string(_.t.pD1L1u),
             onAction: () => (null == t ? void 0 : t({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" })),
         });
     return [

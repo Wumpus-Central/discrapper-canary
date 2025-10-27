@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(924826),
     a = n(91192),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(607070),
     u = n(617015),
     d = n(983703);
@@ -17,19 +17,19 @@ let p = function (e) {
             let a = l[i];
             return null == a ? null : n(a);
         },
-        g = i.useCallback(
+        m = i.useCallback(
             (e) => {
                 let { section: t } = e;
                 return p(t);
             },
             [p],
         ),
-        m = (0, o.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        b = i.useRef(null),
-        _ = i.useCallback(
+        g = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        _ = i.useRef(null),
+        b = i.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = b.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -38,7 +38,7 @@ let p = function (e) {
         E = i.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = b.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -46,7 +46,7 @@ let p = function (e) {
         ),
         O = i.useCallback((e) => {
             let t = document.querySelector(e),
-                n = b.current;
+                n = _.current;
             null != t &&
                 null != n &&
                 n.scrollIntoViewNode({
@@ -55,16 +55,16 @@ let p = function (e) {
                     callback: () => (null == t ? void 0 : t.focus()),
                 });
         }, []),
-        v = (0, l.ZP)({
+        I = (0, l.ZP)({
             id: "people-list",
-            isEnabled: m,
-            scrollToStart: _,
+            isEnabled: g,
+            scrollToStart: b,
             scrollToEnd: E,
             setFocus: O,
         }),
-        y = i.useMemo(() => t.map((e) => e.length), [t]);
+        v = i.useMemo(() => t.map((e) => e.length), [t]);
     return (0, r.jsx)(a.bG, {
-        navigator: v,
+        navigator: I,
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var { ref: t } = e,
@@ -94,7 +94,7 @@ let p = function (e) {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(
-                            s._2F,
+                            o._2F,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -123,15 +123,15 @@ let p = function (e) {
                                 {
                                     ref: (e) => {
                                         var n;
-                                        (b.current = e),
+                                        (_.current = e),
                                             (t.current =
                                                 null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                     },
                                     renderRow: h,
                                     rowHeight: u.NV,
-                                    renderSection: g,
+                                    renderSection: m,
                                     sectionHeight: u.aS,
-                                    sections: y,
+                                    sections: v,
                                     className: d.peopleList,
                                 },
                                 n,

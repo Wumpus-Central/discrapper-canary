@@ -136,7 +136,7 @@ function v(e) {
                   })
                 : null,
             (0, r.jsx)(s.nn4, {
-                children: m.intl.format(m.t.rH95Gh, {
+                children: m.intl.format(m.t.rH95Gu, {
                     user0: p.ZP.getName(n, i, v),
                     user1: p.ZP.getName(n, i, I),
                     countOthers: T,

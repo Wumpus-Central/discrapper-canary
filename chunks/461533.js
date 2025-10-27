@@ -28,16 +28,16 @@ function c(t) {
         );
     return (0, r.jsx)(i.Modal, {
         transitionState: n,
-        title: o.intl.string(o.t.uYPGsb),
-        subtitle: o.intl.format(o.t.Hg8Ee3, { onClick: p }),
+        title: o.intl.string(o.t.uYPGsS),
+        subtitle: o.intl.format(o.t.Hg8Ee7, { onClick: p }),
         actions: [
             {
-                text: o.intl.string(o.t["ETE/oK"]),
+                text: o.intl.string(o.t["ETE/oC"]),
                 onClick: c,
                 variant: "secondary",
             },
             {
-                text: o.intl.string(o.t.geKm7u),
+                text: o.intl.string(o.t.geKm7t),
                 onClick: _,
             },
         ],

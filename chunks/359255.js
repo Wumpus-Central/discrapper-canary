@@ -36,7 +36,7 @@ let d = (e) => {
                 size: "sm",
                 icon: s.V_R,
                 onClick: E,
-                "aria-label": l.intl.string(l.t["k+ohJi"]),
+                "aria-label": l.intl.string(l.t["k+ohJm"]),
                 disabled: h,
             }),
             (0, r.jsx)("div", {
@@ -51,7 +51,7 @@ let d = (e) => {
                 variant: "icon-only",
                 icon: s.qJs,
                 onClick: b,
-                "aria-label": l.intl.string(l.t.w8Sc4O),
+                "aria-label": l.intl.string(l.t.w8Sc4B),
                 disabled: m,
             }),
         ],

@@ -89,7 +89,7 @@ function v(e) {
                     (0, r.jsx)(l.whL, {
                         size: "custom",
                         color: "currentColor",
-                        "aria-label": m.intl.string(m.t.mSfLs7),
+                        "aria-label": m.intl.string(m.t.mSfLs0),
                         className: g.backButton,
                         width: 20,
                         height: 20,
@@ -105,7 +105,7 @@ function v(e) {
             p && null != i
                 ? (0, r.jsx)(h.Z, {
                       onClick: i,
-                      label: m.intl.string(m.t.BEuDEh),
+                      label: m.intl.string(m.t.BEuDEn),
                   })
                 : null,
             d,

@@ -154,7 +154,7 @@ let m = {
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: d.intl.string(d.t.clQc1d) },
+                modalProps: { title: d.intl.string(d.t.clQc1f) },
                 hooks: {
                     onEarlyClose: () =>
                         a.Z.dispatch({

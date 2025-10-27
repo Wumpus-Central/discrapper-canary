@@ -115,8 +115,8 @@ let v = (e) => {
             N = (0, _.Z)(),
             R = (0, h.mN)(),
             { fractionalState: P } = (0, l.Z)(),
-            w = (0, d.W)(),
-            D = (0, u.bg)({ location: "PremiumPerks" }),
+            D = (0, d.W)(),
+            w = (0, u.bg)({ location: "PremiumPerks" }),
             L = (0, c.cL)({ location: "PremiumPerks" }),
             x = (0, h.ZM)({
                 perksCards: N,
@@ -124,8 +124,8 @@ let v = (e) => {
                 hideCardsOnNarrowScreen: !1,
                 isPremiumSubscriber: R,
                 fractionalState: P,
-                isInReverseTrial: w,
-                showProfileWidgets: D,
+                isInReverseTrial: D,
+                showProfileWidgets: w,
                 showDisplayNameStyles: L,
             }),
             M = x.some((e) => null != e.pillText);

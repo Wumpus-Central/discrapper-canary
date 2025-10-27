@@ -67,8 +67,8 @@ let N = function () {
 function T(e) {
     let { guild: r, toUser: f, fromUser: T, onClose: y, transitionState: I } = e,
         [v, w] = i.useState(!1),
-        A = r.features.has(x.GuildFeatures.VERIFIED) || r.features.has(x.GuildFeatures.PARTNERED),
-        R = A ? j.intl.format(j.t.A37vwM, { ticketUrl: N() }) : null,
+        R = r.features.has(x.GuildFeatures.VERIFIED) || r.features.has(x.GuildFeatures.PARTNERED),
+        A = R ? j.intl.format(j.t.A37vwK, { ticketUrl: N() }) : null,
         S =
             r.features.has(x.GuildFeatures.CREATOR_MONETIZABLE) ||
             r.features.has(x.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
@@ -93,8 +93,8 @@ function T(e) {
                                   onFormSubmit: k,
                                   onResend: P,
                                   onSuccess: o.xf,
-                                  headerText: j.intl.string(j.t.Z5s7PD),
-                                  confirmButtonText: j.intl.string(j.t.Z5s7PD),
+                                  headerText: j.intl.string(j.t.Z5s7PM),
+                                  confirmButtonText: j.intl.string(j.t.Z5s7PM),
                                   confirmButtonVariant: "critical-primary",
                                   impression: {
                                       impressionName: a.ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE,
@@ -108,12 +108,12 @@ function T(e) {
                     (0, n.jsx)(
                         c.ConfirmModal,
                         O(g({}, e), {
-                            header: j.intl.string(j.t["m+nQlp"]),
-                            confirmText: j.intl.string(j.t["NX+WJC"]),
+                            header: j.intl.string(j.t["m+nQlm"]),
+                            confirmText: j.intl.string(j.t["NX+WJN"]),
                             confirmButtonColor: s.zx.Colors.BRAND,
                             children: (0, n.jsx)(c.Text, {
                                 variant: "text-md/normal",
-                                children: j.intl.format(j.t.wG747e, {
+                                children: j.intl.format(j.t.wG747U, {
                                     server_subscription_owner_transfer_article: x.T23,
                                 }),
                             }),
@@ -162,7 +162,7 @@ function T(e) {
                     children: (0, n.jsx)(c.Heading, {
                         variant: "heading-lg/semibold",
                         className: E.header,
-                        children: j.intl.string(j.t.Z5s7PD),
+                        children: j.intl.string(j.t.Z5s7PM),
                     }),
                 }),
                 (0, n.jsxs)(c.hzk, {
@@ -172,7 +172,7 @@ function T(e) {
                             className: E.subHeader,
                             children:
                                 null != C || G
-                                    ? j.intl.format(j.t.E90vgo, {
+                                    ? j.intl.format(j.t.E90vgp, {
                                           GuildHook: F,
                                           user: (0, h.W5)(f),
                                           AKAHook: function () {
@@ -180,7 +180,7 @@ function T(e) {
                                                   className: E.akaTransfer,
                                                   children: [
                                                       (0, n.jsx)(c.IGR, {
-                                                          text: j.intl.string(j.t.l1QVfn),
+                                                          text: j.intl.string(j.t.l1QVfj),
                                                           disableColor: !0,
                                                           className: E.akaBadge,
                                                       }),
@@ -201,7 +201,7 @@ function T(e) {
                                               });
                                           },
                                       })
-                                    : j.intl.format(j.t["2XLnGx"], {
+                                    : j.intl.format(j.t["2XLnG0"], {
                                           GuildHook: F,
                                           user: (0, h.W5)(f),
                                       }),
@@ -230,22 +230,22 @@ function T(e) {
                             (0, n.jsx)(c.Wn, {
                                 messageType: c.QYI.INFO,
                                 className: E.roleSubscriptionText,
-                                children: j.intl.format(j.t.LAlucX, {
+                                children: j.intl.format(j.t.LAlucb, {
                                     server_subscription_owner_transfer_article: x.T23,
                                 }),
                             }),
                         (0, n.jsx)(c.Checkbox, {
-                            label: j.intl.format(j.t.xm6ACA, { username: (0, h.W5)(f) }),
-                            disabled: A,
+                            label: j.intl.format(j.t.xm6ACJ, { username: (0, h.W5)(f) }),
+                            disabled: R,
                             checked: v,
                             onChange: function (e) {
                                 w(e);
                             },
                         }),
-                        A &&
+                        R &&
                             (0, n.jsx)(c.Wn, {
                                 messageType: c.QYI.WARNING,
-                                children: R,
+                                children: A,
                             }),
                     ],
                 }),
@@ -255,13 +255,13 @@ function T(e) {
                         children: [
                             (0, n.jsx)(c.Button, {
                                 variant: "critical-primary",
-                                text: j.intl.string(j.t.Z5s7PD),
+                                text: j.intl.string(j.t.Z5s7PM),
                                 type: "submit",
                                 disabled: !v,
                             }),
                             (0, n.jsx)(c.Button, {
                                 variant: "secondary",
-                                text: j.intl.string(j.t["ETE/oK"]),
+                                text: j.intl.string(j.t["ETE/oC"]),
                                 onClick: y,
                             }),
                         ],

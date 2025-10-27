@@ -54,19 +54,19 @@ class d {
     }
     showAlert(e) {
         let t = {
-            [o.Eu.CAMERA]: "".concat(l.intl.string(l.t["68G7fH"]), ". ").concat(l.intl.string(l.t["5Jvu1d"])),
-            [o.Eu.AUDIO]: "".concat(l.intl.string(l.t.xisTfX), ". ").concat(l.intl.string(l.t["5Jvu1d"])),
-            [o.Eu.PHOTOS]: "".concat(l.intl.string(l.t.jQHU4O), ". ").concat(l.intl.string(l.t["5Jvu1d"])),
-            [o.Eu.INPUT_MONITORING]: "".concat(l.intl.string(l.t.UIBqsb), ". ").concat(l.intl.string(l.t["5Jvu1d"])),
-            [o.Eu.CONTACTS]: "".concat(l.intl.string(l.t.kTtf7u), ". ").concat(l.intl.string(l.t["5Jvu1d"])),
+            [o.Eu.CAMERA]: "".concat(l.intl.string(l.t["68G7fD"]), ". ").concat(l.intl.string(l.t["5Jvu1R"])),
+            [o.Eu.AUDIO]: "".concat(l.intl.string(l.t.xisTfe), ". ").concat(l.intl.string(l.t["5Jvu1R"])),
+            [o.Eu.PHOTOS]: "".concat(l.intl.string(l.t.jQHU4M), ". ").concat(l.intl.string(l.t["5Jvu1R"])),
+            [o.Eu.INPUT_MONITORING]: "".concat(l.intl.string(l.t.UIBqsS), ". ").concat(l.intl.string(l.t["5Jvu1R"])),
+            [o.Eu.CONTACTS]: "".concat(l.intl.string(l.t.kTtf7o), ". ").concat(l.intl.string(l.t["5Jvu1R"])),
         }[e];
         null != t &&
             this.openAlertModal({
-                title: l.intl.string(l.t.u1Gxpq),
+                title: l.intl.string(l.t.u1Gxpu),
                 body: t,
                 onConfirm: () => this.openSettings(e),
-                cancelText: l.intl.string(l.t["ETE/oK"]),
-                confirmText: l.intl.string(l.t["XgZk+v"]),
+                cancelText: l.intl.string(l.t["ETE/oC"]),
+                confirmText: l.intl.string(l.t["XgZk+u"]),
             });
     }
     static defaultNativePermissionsRequestOptions(e) {

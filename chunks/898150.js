@@ -81,7 +81,7 @@ function u(e) {
                     l.sNh,
                     {
                         id: "create-reminder-custom",
-                        label: c.intl.string(c.t.OLA8Zm),
+                        label: c.intl.string(c.t.OLA8Zi),
                         action: a,
                     },
                     "custom",

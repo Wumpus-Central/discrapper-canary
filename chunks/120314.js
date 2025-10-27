@@ -79,7 +79,7 @@ t.a(e, async function (e, r) {
                                     width: 16,
                                     height: 16,
                                 }),
-                                O.intl.string(O.t.dpFK4O),
+                                O.intl.string(O.t.dpFK4M),
                             ],
                         }),
                     ],

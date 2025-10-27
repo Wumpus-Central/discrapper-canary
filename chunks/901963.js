@@ -55,7 +55,7 @@ let O = "premiumRetentionEmojiPickerNotice",
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/normal",
-                            children: b.intl.format(b.t.bTMjiI, {
+                            children: b.intl.format(b.t.bTMjiO, {
                                 planName: h.ZP.getDisplayPremiumType(T.planId),
                                 endsAt: A.toDate(),
                             }),
@@ -67,7 +67,7 @@ let O = "premiumRetentionEmojiPickerNotice",
                                         t(),
                                         (0, _.openUserSettings)(f.n.NITRO_PANEL, { section: g.oAB.PREMIUM });
                                 },
-                                children: b.intl.string(b.t.W3aavr),
+                                children: b.intl.string(b.t.W3aavh),
                             }),
                         }),
                     ],

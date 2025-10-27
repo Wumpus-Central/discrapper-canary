@@ -1,7 +1,7 @@
 n.d(t, { getApplicationPaymentSteps: () => p }), n(388685);
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(409813),
+var i = n(409813),
     l = n(276442),
     a = n(961830),
     o = n(721165),
@@ -12,24 +12,24 @@ var r = n(409813),
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -40,11 +40,11 @@ function p(e) {
         {
             key: null,
             renderStep: (e) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     c.Z,
                     m(
                         {
-                            initialStep: n ? r.h8.BENEFITS : r.h8.REVIEW,
+                            initialStep: n ? i.h8.BENEFITS : i.h8.REVIEW,
                             guildId: t,
                         },
                         e,
@@ -52,28 +52,28 @@ function p(e) {
                 ),
         },
         {
-            key: r.h8.BENEFITS,
-            renderStep: (e) => (0, i.jsx)(o.Z, m({}, e)),
-            options: { useBreadcrumbLabel: () => d.intl.string(d.t["5LD2+P"]) },
+            key: i.h8.BENEFITS,
+            renderStep: (e) => (0, r.jsx)(o.Z, m({}, e)),
+            options: { useBreadcrumbLabel: () => d.intl.string(d.t["5LD2+B"]) },
         },
         {
-            key: r.h8.ADD_PAYMENT_STEPS,
+            key: i.h8.ADD_PAYMENT_STEPS,
             renderStep: (e) => {
                 var t, n;
-                return (0, i.jsx)(
+                return (0, r.jsx)(
                     l.J,
                     ((t = m({}, e)),
                     (n = n =
                         {
-                            breadcrumbSteps: [r.h8.ADD_PAYMENT_STEPS, r.h8.REVIEW, r.h8.CONFIRM],
+                            breadcrumbSteps: [i.h8.ADD_PAYMENT_STEPS, i.h8.REVIEW, i.h8.CONFIRM],
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
                               return n;
                           })(Object(n)).forEach(function (e) {
@@ -86,26 +86,26 @@ function p(e) {
         },
         ...a.yp,
         {
-            key: r.h8.REVIEW,
+            key: i.h8.REVIEW,
             renderStep: (e) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     u.Z,
                     m(
                         {
                             backButtonEligible: !!n || void 0,
-                            prevStep: n ? r.h8.BENEFITS : void 0,
+                            prevStep: n ? i.h8.BENEFITS : void 0,
                         },
                         e,
                     ),
                 ),
             options: {
                 renderHeader: !0,
-                useBreadcrumbLabel: () => d.intl.string(d.t.QBnNHh),
+                useBreadcrumbLabel: () => d.intl.string(d.t.QBnNHq),
             },
         },
         {
-            key: r.h8.CONFIRM,
-            renderStep: (e) => (0, i.jsx)(s.Z, m({ showBenefits: !n }, e)),
+            key: i.h8.CONFIRM,
+            renderStep: (e) => (0, r.jsx)(s.Z, m({ showBenefits: !n }, e)),
         },
     ];
 }

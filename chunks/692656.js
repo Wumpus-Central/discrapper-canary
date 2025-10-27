@@ -97,7 +97,7 @@ function et(e) {
             (0, i.jsx)(ei, {
                 searchQuery: r,
                 setSearchQuery: a,
-                placeholder: h ? Q.intl.string(Q.t.ziyFv7) : Q.intl.string(Q.t["pw+r5e"]),
+                placeholder: h ? Q.intl.string(Q.t.ziyFv2) : Q.intl.string(Q.t["pw+r5b"]),
             }),
             (0, i.jsx)(f.Ttm, {
                 ref: o,
@@ -138,7 +138,7 @@ function et(e) {
                                   (0, i.jsx)(V.A, {
                                       type: R.LG.HOME_EMPTY,
                                       textContent:
-                                          n === R._b.TEXT ? Q.intl.string(Q.t.iKZctb) : Q.intl.string(Q.t.RL7Ncn),
+                                          n === R._b.TEXT ? Q.intl.string(Q.t.iKZctW) : Q.intl.string(Q.t.RL7Ncg),
                                   }),
                               _ && (0, i.jsx)(F.Z, {}),
                           ],
@@ -154,7 +154,7 @@ function en() {
             (0, i.jsx)(f.Text, {
                 className: X.developerShelfControlsLabel,
                 variant: "text-sm/normal",
-                children: Q.intl.string(Q.t.tZ3FNj),
+                children: Q.intl.string(Q.t.tZ3FNs),
             }),
             (0, i.jsx)(b.W, { hideSearch: !0 }),
         ],
@@ -241,9 +241,9 @@ function el(e) {
             for (let t of o) null != t.application && e.push({ application: t.application });
             return e;
         }, [o]),
-        u = Q.intl.string(Q.t["s+UQpa"]),
+        u = Q.intl.string(Q.t["s+UQpc"]),
         d = u;
-    a && (d = Q.intl.string(Q.t["2pFD8P"]));
+    a && (d = Q.intl.string(Q.t["2pFD8L"]));
     let { items: p, handleViewMore: m } = eu({
         title: d,
         look: n === R._b.VOICE ? D.U4.LARGE_BANNER : D.U4.ROW,
@@ -354,7 +354,7 @@ function er(e) {
                       ref: (e) => {
                           s.current = e;
                       },
-                      children: (0, i.jsx)(W.Z, { title: Q.intl.string(Q.t.shUONj) }),
+                      children: (0, i.jsx)(W.Z, { title: Q.intl.string(Q.t.shUONg) }),
                   }),
                   (0, i.jsx)("div", {
                       className: X.sectionTwoColumnContentContainer,
@@ -385,7 +385,7 @@ function ea(e) {
         r = R.L3.APPS_IN_THIS_SERVER,
         { appsInThisServer: a, isLoading: o } = (0, w.Z)({ context: t }),
         { items: s, handleViewMore: c } = eu({
-            title: Q.intl.string(Q.t.KfkuGR),
+            title: Q.intl.string(Q.t.KfkuGc),
             look: D.U4.ROW,
             items: a,
             limit: 4,
@@ -409,7 +409,7 @@ function ea(e) {
                           u.current = e;
                       },
                       children: (0, i.jsx)(W.Z, {
-                          title: Q.intl.string(Q.t.KfkuGR),
+                          title: Q.intl.string(Q.t.KfkuGc),
                           buttonType: W.Z.buttonTypes.VIEW_MORE,
                           onClickViewButton: c,
                       }),

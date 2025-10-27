@@ -9,16 +9,16 @@ var r = n(951288),
     u = n(866442),
     d = n(477690),
     p = n(481060),
-    h = n(153867),
-    f = n(591146),
+    f = n(153867),
+    h = n(591146),
     g = n(771845),
     m = n(624138),
     b = n(727258),
     _ = n(276952),
     O = n(199540),
     y = n(40153),
-    v = n(252686),
-    j = n(682662),
+    j = n(252686),
+    v = n(682662),
     x = n(662146),
     C = n(981631),
     E = n(388032),
@@ -53,7 +53,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
             Q = K || q,
-            J = (0, f.Ml)("FolderItem");
+            J = (0, h.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
@@ -67,7 +67,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -96,7 +96,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 config: { duration: P },
             }),
             es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
-            ec = (0, r.jsxs)(j.H, {
+            ec = (0, r.jsxs)(v.H, {
                 children: [
                     (0, r.jsx)(_.Z, {
                         disabled: $ || s,
@@ -122,7 +122,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             }),
                             "data-dnd-name": er,
                             children: $
-                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
+                                ? (0, r.jsx)(j.Z, { isFolder: !0 })
                                 : (0, r.jsx)(O.Z, {
                                       folderNode: t,
                                       expanded: s,

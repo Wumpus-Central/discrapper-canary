@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(736530),
     h = n(981631),
     m = n(388032),
-    g = n(933554);
+    g = n(500275);
 function E(e) {
     let { ingress: t, guildId: n } = e,
         l = s.SE.useSetting().includes(n),
@@ -35,10 +35,10 @@ function E(e) {
         : (0, r.jsx)(c.U, {
               setting: _.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
               children: (0, r.jsx)(u.ZP, {
-                  title: m.intl.string(g.default.WhdCGB),
+                  title: m.intl.string(g.default.WhdCGP),
                   value: !l,
                   onChange: f,
-                  note: m.intl.string(g.default.UQ9RHB),
+                  note: m.intl.string(g.default.UQ9RHJ),
               }),
           });
 }

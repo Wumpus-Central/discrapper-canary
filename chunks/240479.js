@@ -39,13 +39,13 @@ function A(e) {
               size: l.zx.Sizes.SMALL,
               color: l.zx.Colors.CUSTOM,
               onClick: n,
-              textOptions: { textOverride: T.intl.string(T.t.pj0XBA) },
+              textOptions: { textOverride: T.intl.string(T.t.pj0XBN) },
           })
         : a === y.y.JOIN_GUILD
           ? (0, r.jsx)(c.Button, {
                 variant: "primary",
                 size: "sm",
-                text: T.intl.string(T.t.riu2R0),
+                text: T.intl.string(T.t.riu2R5),
                 fullWidth: !0,
                 onClick: o,
             })
@@ -59,21 +59,21 @@ function C(e) {
         [C, N] = i.useState(),
         R = (0, b.V2)({ location: "SoundmojiGuildInfo" }),
         P = E || v || null != C || !R,
-        [w, D] = i.useState(!P);
+        [D, w] = i.useState(!P);
     i.useEffect(() => {
         P ||
-            (D(!0),
+            (w(!0),
             (0, p.xU)(t.soundId, t.guildId)
                 .then((e) => {
                     N(e);
                 })
                 .finally(() => {
-                    D(!1), u();
+                    w(!1), u();
                 }));
     }, [u, P, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, y.Z)(t, n, v, C),
         M = L === y.y.JOIN_GUILD,
-        k = !E && w,
+        k = !E && D,
         j = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
             [O, v, C],
@@ -109,7 +109,7 @@ function C(e) {
                                           variant: "eyebrow",
                                           color: "header-muted",
                                           className: S.infoExpandedGuildTitle,
-                                          children: v ? T.intl.string(T.t.tGDabm) : T.intl.string(T.t.rnOmOT),
+                                          children: v ? T.intl.string(T.t.tGDabk) : T.intl.string(T.t.rnOmOa),
                                       }),
                                       (0, r.jsx)("div", {
                                           className: S.infoExpandedGuildInfo,

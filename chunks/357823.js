@@ -11,8 +11,8 @@ var l = n(481060),
     _ = n(819403),
     s = n(286694),
     E = n(314897),
-    A = n(238296),
-    f = n(933409),
+    f = n(238296),
+    A = n(933409),
     g = n(981631),
     v = n(388032);
 let C = (0, a.Z)(
@@ -21,27 +21,27 @@ let C = (0, a.Z)(
             let { user: t, channel: n, guildId: u, onSelect: a, onInteraction: d, context: g } = e,
                 C = n.id,
                 M = t.isNonUserBot(),
-                S = t.id === E.default.getId(),
-                O = (0, _.Z)(t),
+                O = t.id === E.default.getId(),
+                S = (0, _.Z)(t),
                 b = (0, s.Z)(t, u, C),
-                I = (0, A.Y)({
-                    isOwnSettings: S,
+                I = (0, f.Y)({
+                    isOwnSettings: O,
                     userId: t.id,
                     channelId: C,
                     guildId: u,
                     context: g,
                 }),
-                [Z, T] = (0, A.E)(t, C, u),
-                h = (0, f.Z)(t, u, C),
+                [Z, T] = (0, f.E)(t, C, u),
+                h = (0, A.Z)(t, u, C),
                 N = (0, o.Z)({
                     id: t.id,
-                    label: v.intl.string(v.t["/AXYnJ"]),
+                    label: v.intl.string(v.t["/AXYnE"]),
                 }),
-                k = (0, c.Z)(t.id, n);
+                p = (0, c.Z)(t.id, n);
             return (0, i.jsx)(l.v2r, {
                 navId: "user-context",
                 onClose: r.Zy,
-                "aria-label": v.intl.string(v.t.liqwPD),
+                "aria-label": v.intl.string(v.t.liqwPJ),
                 onSelect: a,
                 onInteraction: d,
                 variant: "fixed",
@@ -50,19 +50,19 @@ let C = (0, a.Z)(
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)(l.kSQ, {
-                                children: [O, b],
+                                children: [S, b],
                             }),
-                            k,
+                            p,
                             I,
-                            !S &&
+                            !O &&
                                 (0, i.jsx)(l.kSQ, {
                                     children: (0, i.jsxs)(l.sNh, {
                                         id: "more-options",
-                                        label: v.intl.string(v.t.PdRCRk),
+                                        label: v.intl.string(v.t.PdRCRg),
                                         children: [Z, (0, i.jsx)(l.kSQ, { children: h }), T],
                                     }),
                                 }),
-                            S && (0, i.jsx)(l.kSQ, { children: N }),
+                            O && (0, i.jsx)(l.kSQ, { children: N }),
                         ],
                     }),
             });

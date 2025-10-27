@@ -51,7 +51,7 @@ let P = (0, s.Kb)([E.Z, b.Z, m.Z], {
             o()(null != e, "skuId is null"), await (0, u.km)(e);
         },
     }),
-    w = (0, s.Kb)([E.Z], {
+    D = (0, s.Kb)([E.Z], {
         getQueryId: A.McO.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
         get: (e) => {
             var t;
@@ -61,13 +61,13 @@ let P = (0, s.Kb)([E.Z, b.Z, m.Z], {
             o()(null != e && null != t, "appId is null"), await (0, u.oJ)(t);
         },
     });
-function D(e, t) {
+function w(e, t) {
     var n, r;
     let { data: i } = P(e),
         a = null == i ? void 0 : i.sku,
         o = null == i ? void 0 : i.subscriptionPlan,
         s = null == i ? void 0 : i.storeListing,
-        { data: l } = w(
+        { data: l } = D(
             e,
             null != (r = null == a || null == (n = a.application) ? void 0 : n.id)
                 ? r
@@ -101,15 +101,15 @@ function L(e) {
         S = i.useMemo(
             () =>
                 b > 0 && O > 0
-                    ? N.intl.formatToPlainString(N.t["jA648/"], {
+                    ? N.intl.formatToPlainString(N.t["jA648+"], {
                           subCount: b,
                           itemCount: O,
                       })
                     : b > 0
-                      ? N.intl.formatToPlainString(N.t.GSfibG, { count: b })
+                      ? N.intl.formatToPlainString(N.t.GSfibA, { count: b })
                       : O > 0
-                        ? N.intl.formatToPlainString(N.t.j7Go5O, { count: O })
-                        : N.intl.string(N.t.rMA98v),
+                        ? N.intl.formatToPlainString(N.t.j7Go5A, { count: O })
+                        : N.intl.string(N.t.rMA98g),
             [O, b],
         );
     if (!o || null == u) return null;
@@ -125,14 +125,14 @@ function L(e) {
                     });
             });
         },
-        w = () => {
+        D = () => {
             P(),
                 y.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
                     area: "app_icon",
                 });
         },
-        D = () => {
+        w = () => {
             P(),
                 y.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
@@ -144,7 +144,7 @@ function L(e) {
         };
     return (0, r.jsx)(M, {
         appName: u.name,
-        title: N.intl.formatToPlainString(N.t.XDRjs7, { appName: u.name }),
+        title: N.intl.formatToPlainString(N.t.XDRjs5, { appName: u.name }),
         description: S,
         link: ""
             .concat(location.protocol, "//")
@@ -152,12 +152,12 @@ function L(e) {
             .concat(A.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, C.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: L,
         iconSrc: E,
-        onIconClick: w,
+        onIconClick: D,
         children: (0, r.jsx)("div", {
             className: R.openStoreButton,
             children: (0, r.jsx)(l.Button, {
-                onClick: D,
-                text: N.intl.string(N.t.kRvlKC),
+                onClick: w,
+                text: N.intl.string(N.t.kRvlKJ),
             }),
         }),
     });
@@ -165,19 +165,19 @@ function L(e) {
 function x(e) {
     var t, a;
     let { appId: o, skuId: c, message: u } = e,
-        { parentSku: f, sku: m, subscriptionPlan: g, storeListing: E } = D(c, o),
+        { parentSku: f, sku: m, subscriptionPlan: g, storeListing: E } = w(c, o),
         { data: b } = (0, d.IX)(null == m ? void 0 : m.applicationId),
         O = (0, s.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getBasicChannel(u.channel_id)) ? void 0 : e.guild_id;
         }, [u]),
         P = i.useMemo(() => (null != b ? (0, v.y)(b, 45) : void 0), [b]),
-        w = (0, T.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
+        D = (0, T.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
         { openModal: L, subscriptionPurchaseButtonState: x } = (0, p.Z)({
             skuId: c,
             initialSubscribeForGuild: O,
         });
-    if (!w || null == b || null == m) return null;
+    if (!D || null == b || null == m) return null;
     let k = m.type === A.epS.SUBSCRIPTION,
         j = !!k && (0, _.KW)(m.flags),
         U = () => {
@@ -233,7 +233,7 @@ function x(e) {
                               height: B,
                           }),
                           " ",
-                          N.intl.string(N.t.wnifjI),
+                          N.intl.string(N.t.wnifjC),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -244,7 +244,7 @@ function x(e) {
                               height: B,
                           }),
                           " ",
-                          N.intl.string(N.t.NRC3am),
+                          N.intl.string(N.t.NRC3ar),
                       ],
                   })
             : null == E || null == (t = E.description)
@@ -294,7 +294,7 @@ function x(e) {
                 (0, r.jsx)(l.Button, {
                     variant: "secondary",
                     onClick: V,
-                    text: N.intl.string(N.t.DXYfjI),
+                    text: N.intl.string(N.t.DXYfjO),
                 }),
                 k
                     ? null != g
@@ -310,7 +310,7 @@ function x(e) {
                           })
                         : (0, r.jsx)(l.Button, {
                               variant: "primary",
-                              text: N.intl.string(N.t.uuzaAA),
+                              text: N.intl.string(N.t.uuzaAK),
                               onClick: G,
                           })
                     : (0, r.jsx)(S.YG, {
@@ -344,13 +344,13 @@ function M(e) {
                     }),
                     O.wS &&
                         (0, r.jsx)(l.hU, {
-                            "aria-label": N.intl.string(N.t.WqhZsr),
+                            "aria-label": N.intl.string(N.t.WqhZss),
                             icon: () => (0, r.jsx)(l.xPt, { size: "xs" }),
                             size: "sm",
                             onClick: () => {
                                 (0, O.JG)(a, () => {
                                     (0, l.showToast)(
-                                        (0, l.createToast)(N.intl.string(N.t["L/PwZW"]), l.ToastType.SUCCESS),
+                                        (0, l.createToast)(N.intl.string(N.t["L/PwZf"]), l.ToastType.SUCCESS),
                                     ),
                                         c();
                                 });

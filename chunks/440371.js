@@ -71,7 +71,7 @@ function m(e) {
         E = i()().add(s.G3, "days"),
         N = i()().add(s.Ib, "days");
     null != v && (E.add(s.hn, "years"), N.add(s.hn, "years"));
-    let C = (e) => {
+    let P = (e) => {
         n(g(d({}, h), { endDate: e }));
     };
     return (
@@ -84,10 +84,10 @@ function m(e) {
                                   className: u.doubleInput,
                                   children: [
                                       (0, r.jsx)(a.Wrb, {
-                                          label: c.intl.string(c.t.CTLgZG),
+                                          label: c.intl.string(c.t.CTLgZJ),
                                           required: j,
                                           value: h.endDate,
-                                          onSelect: C,
+                                          onSelect: P,
                                           minDate: h.startDate,
                                           maxDate: N,
                                       }),
@@ -95,7 +95,7 @@ function m(e) {
                                           label: c.intl.string(c.t.j2RuXF),
                                           required: j,
                                           value: h.endDate,
-                                          onChange: C,
+                                          onChange: P,
                                       }),
                                   ],
                               }),
@@ -105,9 +105,9 @@ function m(e) {
                                         children: [
                                             (0, r.jsx)(a.Avr, {
                                                 onClick: () => {
-                                                    C(void 0);
+                                                    P(void 0);
                                                 },
-                                                text: c.intl.string(c.t.petdfn),
+                                                text: c.intl.string(c.t.petdfk),
                                                 size: "sm",
                                             }),
                                             (0, r.jsx)(a.LZC, { size: 24 }),
@@ -119,7 +119,7 @@ function m(e) {
                           children: [
                               (0, r.jsx)(a.Avr, {
                                   onClick: () => {
-                                      C(i()(h.startDate).add(1, "hour"));
+                                      P(i()(h.startDate).add(1, "hour"));
                                   },
                                   text: c.intl.string(c.t.ncdPcn),
                                   size: "sm",
@@ -134,7 +134,7 @@ function m(e) {
                     className: u.doubleInput,
                     children: [
                         (0, r.jsx)(a.Wrb, {
-                            label: c.intl.string(c.t.kKOIwM),
+                            label: c.intl.string(c.t.kKOIwJ),
                             required: !0,
                             value: h.startDate,
                             onSelect: (e) => {
@@ -145,7 +145,7 @@ function m(e) {
                             disabled: f,
                         }),
                         (0, r.jsx)(a.MGJ, {
-                            label: c.intl.string(c.t["6dGmCA"]),
+                            label: c.intl.string(c.t["6dGmCD"]),
                             required: !0,
                             value: h.startDate,
                             onChange: (e) => {

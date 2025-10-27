@@ -60,7 +60,7 @@ function s(e) {
         (n = n =
             {
                 iconComponent: r.Dio,
-                label: o.intl.string(o.t.WAI6xs),
+                label: o.intl.string(o.t.WAI6xu),
                 onClick: () => l.Z.stopRinging(s.id),
             }),
         Object.getOwnPropertyDescriptors

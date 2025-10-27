@@ -14,11 +14,11 @@ function d() {
         n = [
             {
                 value: i.Q4.BLUR,
-                label: u.intl.string(u.t.S49UaW),
+                label: u.intl.string(u.t.S49Uad),
             },
             {
                 value: i.Q4.BLOCK,
-                label: u.intl.string(u.t["D/157e"]),
+                label: u.intl.string(u.t["D/157Y"]),
             },
         ];
     if (null == t || null == e) return null;
@@ -27,10 +27,10 @@ function d() {
         },
         { explicitContentFriendDm: f, explicitContentNonFriendDm: _ } = t;
     return (0, r.jsxs)(a.n, {
-        description: u.intl.string(u.t.Wnojv7),
+        description: u.intl.string(u.t.Wnojv1),
         children: [
             (0, r.jsx)(o.Z, {
-                title: u.intl.string(u.t["+uI23N"]),
+                title: u.intl.string(u.t["+uI23H"]),
                 value: f,
                 onChange: (e) => d({ explicitContentFriendDm: e }),
                 options: n,

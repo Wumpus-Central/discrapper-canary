@@ -26,7 +26,7 @@ let l = (e) => {
                     (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: i.intl.string(i.t["/GAO1N"]),
+                        children: i.intl.string(i.t["/GAO1P"]),
                     }),
                 ],
             }),
@@ -35,7 +35,7 @@ let l = (e) => {
                 className: o.footerButton,
                 children: (0, r.jsx)(a.Button, {
                     variant: "primary",
-                    text: i.intl.string(i.t["7NqTJi"]),
+                    text: i.intl.string(i.t["7NqTJn"]),
                     onClick: t,
                 }),
             }),

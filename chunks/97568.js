@@ -15,7 +15,7 @@ let r = (e) => {
                   (0, i.jsx)(a.Text, {
                       variant: "eyebrow",
                       color: "text-muted",
-                      children: l.intl.string(l.t.s64CMj),
+                      children: l.intl.string(l.t.s64CMg),
                   }),
                   (0, i.jsx)(o.Z, { flaggedContent: t }),
               ],

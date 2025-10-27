@@ -77,7 +77,7 @@ function b(e) {
         let e = g[i.extra.platform];
         null != e && (t = { type: e });
     }
-    n = i.content_type === r.s.PLAYED_GAME && (0, l.kr)(i) && !(0, l.n2)(i) ? f.t.vPg1JS : f.t.rPqqtr;
+    n = i.content_type === r.s.PLAYED_GAME && (0, l.kr)(i) && !(0, l.n2)(i) ? f.t.vPg1JT : f.t.rPqqts;
     let b = E[o],
         y = {
             onClick: (0, s.Z)({
@@ -87,7 +87,7 @@ function b(e) {
                 trackEntryPointImpression: !0,
                 sourceUserId: i.author_id,
             }),
-            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVl"], { gameName: h }),
+            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVp"], { gameName: h }),
         };
     return m(p({}, c), {
         thumbnailUrl: _,

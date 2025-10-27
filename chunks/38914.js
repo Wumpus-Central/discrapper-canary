@@ -7,7 +7,7 @@ var i = n(481060),
     o = n(156716),
     s = n(302681);
 let c = () => {
-    let e = [l.t.E1NP29, l.t.kpMomJ, l.t.xT1Vfn, l.t.myyAEh, l.t.zTk8Ul];
+    let e = [l.t.E1NP2x, l.t.kpMomJ, l.t.xT1Vfn, l.t.myyAEr, l.t.zTk8Ul];
     return (0, r.jsxs)("div", {
         className: o.container,
         children: [

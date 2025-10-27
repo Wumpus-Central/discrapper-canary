@@ -42,10 +42,10 @@ n.d(e, {
             }
             return e;
         },
-    ax: () => A,
+    ax: () => S,
     k4: () => d,
     m7: () => o,
-    qs: () => S,
+    qs: () => A,
     so: () => s,
     vB: () => a,
     wf: () => c,
@@ -133,10 +133,10 @@ function O(t, e, n) {
         type: e,
     });
 }
-function A(t, e) {
+function S(t, e) {
     return O(t, i.Jq.BUTTON, e);
 }
-function S(t, e) {
+function A(t, e) {
     return O(t, i.Jq.TOGGLE, e);
 }
 function y(t, e) {

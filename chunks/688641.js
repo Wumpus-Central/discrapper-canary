@@ -52,7 +52,7 @@ function c(e) {
                                       variant: "text-xs/normal",
                                       color: "text-primary",
                                       className: s.inline,
-                                      children: o.intl.format(o.t.NywdIi, { count: d }),
+                                      children: o.intl.format(o.t.NywdIj, { count: d }),
                                   }),
                               ],
                           })

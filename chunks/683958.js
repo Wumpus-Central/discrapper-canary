@@ -88,23 +88,23 @@ function _(e) {
         [A, k] = r.useState(O && null != Z ? [Z] : []),
         I = A.length,
         F = I >= 5,
-        [R, U] = r.useState(""),
-        { results: q, updateSearchText: H } = (0, c.s)({
+        [R, q] = r.useState(""),
+        { results: U, updateSearchText: z } = (0, c.s)({
             selectedDestinations: A,
             originDestination: null != Z ? Z : void 0,
             includeMissingDMs: !0,
         }),
-        z = r.useCallback(
+        H = r.useCallback(
             (e) => {
-                U(e), H(e);
+                q(e), z(e);
             },
-            [H],
+            [z],
         ),
         G = r.useCallback(() => (P(!1), _()), [P, _]),
         [W] = (0, o.Z)([n]),
         V = r.useCallback(() => {
-            U("");
-        }, [U]),
+            q("");
+        }, [q]),
         X = r.useRef(null);
     r.useEffect(() => {
         if ("" === R) {
@@ -112,21 +112,21 @@ function _(e) {
             null == (e = X.current) || e.focus();
         }
     }, [R]);
-    let Q = r.useCallback(
+    let Y = r.useCallback(
             (e) => {
                 k((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: l } = t;
                         return n === e.type && l === e.id;
                     });
-                    if (-1 === n) return F ? t : (U(""), H(""), (D.current += 1), [e, ...t]);
+                    if (-1 === n) return F ? t : (q(""), z(""), (D.current += 1), [e, ...t]);
                     let l = [...t];
                     return l.splice(n, 1), (D.current += 1), l;
                 });
             },
-            [F, H],
+            [F, z],
         ),
-        [Y, B] = r.useMemo(() => {
+        [Q, B] = r.useMemo(() => {
             if (T) return [null, !1];
             let e = M.find((e) => e.untranslatedName === y.name);
             return void 0 !== e ? [e, !1] : [null, !0];
@@ -134,7 +134,7 @@ function _(e) {
         J = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                if (null === Y) return;
+                if (null === Q) return;
                 N(!0);
                 let n = (await Promise.all(e.map(u.qx))).filter(p.lm);
                 t && (P(!0), C()),
@@ -164,27 +164,27 @@ function _(e) {
                             i = f.Z.getGuild(null == l ? void 0 : l.guild_id);
                         null !=
                             (await (0, m.Z)({
-                                command: Y,
+                                command: Q,
                                 optionValues: r,
                                 context: {
                                     channel: l,
                                     guild: i,
                                 },
                             })) &&
-                            (0, a.showToast)((0, a.createToast)(v.intl.string(v.t["5WjJcn"]), a.ToastType.MESSAGE));
+                            (0, a.showToast)((0, a.createToast)(v.intl.string(v.t["5WjJcl"]), a.ToastType.MESSAGE));
                     }),
                     P(!0),
                     C();
             },
-            [P, Y, y.options],
+            [P, Q, y.options],
         ),
         K = r.useCallback(() => {
             J(A, { closeAfterSend: !0 });
         }, [J, A]);
     if (T)
         return (0, l.jsx)(i.Modal, {
-            title: v.intl.string(v.t.fuFvw8),
-            "aria-label": v.intl.string(v.t.fuFvw8),
+            title: v.intl.string(v.t.fuFvwx),
+            "aria-label": v.intl.string(v.t.fuFvwx),
             transitionState: w.transitionState,
             onClose: _,
             actions: [],
@@ -192,24 +192,24 @@ function _(e) {
         });
     if (B)
         return (0, l.jsx)(i.Modal, {
-            title: v.intl.string(v.t.fuFvw8),
-            "aria-label": v.intl.string(v.t.fuFvw8),
+            title: v.intl.string(v.t.fuFvwx),
+            "aria-label": v.intl.string(v.t.fuFvwx),
             transitionState: w.transitionState,
             onClose: _,
             actions: [
                 {
-                    text: v.intl.string(v.t.cpT0Cg),
+                    text: v.intl.string(v.t.cpT0Cq),
                     onClick: _,
                     variant: "primary",
                 },
             ],
-            children: v.intl.string(v.t.yAk8ZW),
+            children: v.intl.string(v.t.yAk8ZT),
         });
     let $ =
-            q.length > 0
+            U.length > 0
                 ? (0, l.jsx)(g.F, {
-                      rowData: q,
-                      handleToggleDestination: Q,
+                      rowData: U,
+                      handleToggleDestination: Y,
                       selectedDestinations: A,
                       disableSelection: F,
                       originDestination: Z,
@@ -224,15 +224,15 @@ function _(e) {
                           (0, l.jsx)(a.Text, {
                               variant: "text-md/normal",
                               color: "text-muted",
-                              children: v.intl.string(v.t.V6nAfH),
+                              children: v.intl.string(v.t.V6nAfF),
                           }),
                       ],
                   }),
-        ee = v.intl.format(v.t.hajTk5, { appName: null == W ? void 0 : W.name });
-    null == W && (ee = v.intl.string(v.t.fuFvw8));
-    let et = v.intl.format(v.t["DF+q2t"], { appName: null == W ? void 0 : W.name });
+        ee = v.intl.format(v.t.hajTkz, { appName: null == W ? void 0 : W.name });
+    null == W && (ee = v.intl.string(v.t.fuFvwx));
+    let et = v.intl.format(v.t["DF+q2l"], { appName: null == W ? void 0 : W.name });
     return (
-        F && (et = v.intl.format(v.t["/KhyPT"], { count: 5 })),
+        F && (et = v.intl.format(v.t["/KhyPe"], { count: 5 })),
         (0, l.jsx)(i.Modal, {
             title: ee.toString(),
             subtitle: et,
@@ -242,12 +242,12 @@ function _(e) {
             size: "md",
             actions: [
                 {
-                    text: v.intl.string(v.t.cpT0Cg),
+                    text: v.intl.string(v.t.cpT0Cq),
                     onClick: G,
                     variant: "secondary",
                 },
                 {
-                    text: v.intl.string(v.t.TXNS7e),
+                    text: v.intl.string(v.t.TXNS7S),
                     onClick: K,
                     disabled: 0 === I || L,
                     variant: "primary",
@@ -257,10 +257,10 @@ function _(e) {
             input: (0, l.jsx)(a.E1j, {
                 ref: X,
                 query: R,
-                onChange: z,
+                onChange: H,
                 onClear: V,
-                placeholder: v.intl.string(v.t["5h0QOD"]),
-                "aria-label": v.intl.string(v.t["5h0QOD"]),
+                placeholder: v.intl.string(v.t["5h0QOP"]),
+                "aria-label": v.intl.string(v.t["5h0QOP"]),
                 autoFocus: !0,
             }),
             children: $,

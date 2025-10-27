@@ -35,7 +35,7 @@ function m(e) {
     let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: s } = e;
     return t.length > 0
         ? (0, r.jsx)(p, {
-              text: d.intl.string(d.t["qiS+xs"]),
+              text: d.intl.string(d.t["qiS+xj"]),
               quest: n,
               sourceQuestContent: s,
           })
@@ -47,7 +47,7 @@ function g(e) {
             (0, r.jsx)(s.Text, {
                 color: "text-muted",
                 variant: "text-xs/medium",
-                children: d.intl.string(d.t.EJFSvL),
+                children: d.intl.string(d.t.EJFSvD),
             }),
             (0, r.jsx)(
                 m,

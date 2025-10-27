@@ -9,7 +9,7 @@ function s(e) {
     return [
         {
             section: o.oh.BOT_INFO,
-            text: r.intl.string(r.t.jGoPJS),
+            text: r.intl.string(r.t.jGoPJT),
         },
         {
             section: o.oh.MUTUAL_GUILDS,
@@ -17,7 +17,7 @@ function s(e) {
         },
         {
             section: o.oh.BOT_DATA_ACCESS,
-            text: r.intl.string(r.t.WstFb2),
+            text: r.intl.string(r.t.WstFb0),
         },
     ];
 }

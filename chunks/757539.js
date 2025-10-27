@@ -34,20 +34,20 @@ function u(e) {
                 variant: "text-xs/bold",
                 color: "text-muted",
                 className: d.eyebrow,
-                children: t ? c.intl.string(c.t.DjWsyc) : c.intl.string(c.t.AmwmLi),
+                children: t ? c.intl.string(c.t.DjWsya) : c.intl.string(c.t.AmwmLg),
             }),
             (0, i.jsxs)(a.hE2, {
                 children: [
                     (0, i.jsx)(o.Button, {
                         variant: b ? "primary" : "critical-secondary",
-                        text: b ? c.intl.string(c.t["/dbw3N"]) : c.intl.string(c.t.Uwsjn5),
+                        text: b ? c.intl.string(c.t["/dbw3H"]) : c.intl.string(c.t.Uwsjn6),
                         onClick: u,
                         disabled: !m,
                     }),
                     !0 === g
                         ? (0, i.jsx)(o.Button, {
                               variant: "primary",
-                              text: c.intl.string(c.t.KmK3q6),
+                              text: c.intl.string(c.t.KmK3q4),
                               onClick: p,
                           })
                         : null,

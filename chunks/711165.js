@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(724757),
-    h = n(294218),
-    f = n(703656),
+    f = n(294218),
+    h = n(703656),
     g = n(45251),
     m = n(156012),
     b = n(74365),
@@ -174,7 +174,7 @@ function w(e) {
                     children: [
                         (0, r.jsx)(C.Z, {
                             channel: n,
-                            gotoChannel: () => (0, f.uL)(S.Z5c.CHANNEL(n.getGuildId(), n.id)),
+                            gotoChannel: () => (0, h.uL)(S.Z5c.CHANNEL(n.getGuildId(), n.id)),
                             children: null,
                         }),
                         i.map((e) => {
@@ -271,7 +271,7 @@ let A = i.memo(function (e) {
                               className: P.channelMessageAndCancelButton,
                               children: [
                                   (0, r.jsx)(
-                                      h.Z,
+                                      f.Z,
                                       {
                                           message: a,
                                           channel: n,

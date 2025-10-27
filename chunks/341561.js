@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(951288);
 n(647438);
 var i = n(952265),
@@ -63,7 +63,7 @@ function R(e, t) {
 function P(e) {
     return "".concat(E.Iv).concat(e.name).concat(E.Iv);
 }
-function w(e) {
+function D(e) {
     var t;
     let n = e.animated ? "a" : "";
     return e.managed || null == e.id
@@ -73,7 +73,7 @@ function w(e) {
               .concat(null != (t = e.originalName) ? t : e.name, ":")
               .concat(e.id, ">");
 }
-let D = {
+let w = {
     sentinel: E.Iv,
     stores: [u.Z],
     matches: (e, t, n, r, i) => n.length > 1,
@@ -149,8 +149,8 @@ let D = {
                     autocompletes: t,
                     onHover: d,
                     onClick: f,
-                    titleWithQuery: y.t.ksAVYm,
-                    titleWithoutQuery: y.intl.string(y.t.sMOuub),
+                    titleWithQuery: y.t.ksAVYt,
+                    titleWithoutQuery: y.intl.string(y.t.sMOuuS),
                     Component: a.ZP.Emoji,
                     getProps: (e) => ({
                         emoji: e,
@@ -168,8 +168,8 @@ let D = {
                           autocompletes: l,
                           onHover: d,
                           onClick: p,
-                          titleWithQuery: 0 === t.length ? y.t.ksAVYm : null,
-                          titleWithoutQuery: 0 === t.length ? y.intl.string(y.t.sMOuub) : null,
+                          titleWithQuery: 0 === t.length ? y.t.ksAVYt : null,
+                          titleWithoutQuery: 0 === t.length ? y.intl.string(y.t.sMOuuS) : null,
                           Component: a.ZP.EmojiUpsell,
                           getProps: (e) => {
                               let { emojis: t } = e;
@@ -190,8 +190,8 @@ let D = {
                     autocompletes: o,
                     onHover: d,
                     onClick: f,
-                    titleWithQuery: y.t.uferGB,
-                    titleWithoutQuery: y.intl.string(y.t["fT+Yjo"]),
+                    titleWithQuery: y.t.uferGG,
+                    titleWithoutQuery: y.intl.string(y.t["fT+Yjp"]),
                     Component: a.ZP.Sticker,
                     getProps: (e) => {
                         let { comparator: t, sticker: n } = e;
@@ -214,8 +214,8 @@ let D = {
                     autocompletes: s,
                     onHover: d,
                     onClick: f,
-                    titleWithQuery: y.t["0cKBGB"],
-                    titleWithoutQuery: y.intl.string(y.t.EHlAMT),
+                    titleWithQuery: y.t["0cKBGM"],
+                    titleWithoutQuery: y.intl.string(y.t.EHlAMc),
                     Component: a.ZP.Soundmoji,
                     getProps: (e) => {
                         let { sound: t } = e;
@@ -242,7 +242,7 @@ let D = {
         if (a < t.length) {
             let e = t[a];
             return (
-                o.insertText(P(e), w(e)),
+                o.insertText(P(e), D(e)),
                 {
                     type: g.z2.EMOJI,
                     metadata: {

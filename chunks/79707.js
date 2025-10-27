@@ -7,7 +7,7 @@ function l(e) {
     let { tabs: t, selectedTab: n, onTabSelect: l, onClose: s } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "global-discovery-tabs-overflow-menu",
-        "aria-label": i.intl.string(i.t.riPnr6),
+        "aria-label": i.intl.string(i.t.riPnr0),
         hideScroller: !0,
         onClose: s,
         onSelect: s,

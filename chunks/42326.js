@@ -10,12 +10,12 @@ var r = n(951288),
     d = n(63063),
     f = n(618158),
     p = n(981631),
-    m = n(388032),
-    _ = n(606630);
+    _ = n(388032),
+    m = n(606630);
 function g(e) {
     let { errorMessage: t, className: n, avError: l } = e,
         g = "",
-        { text: b, node: v } = (function (e) {
+        { text: v, node: b } = (function (e) {
             var t;
             if (null == e)
                 return {
@@ -23,8 +23,8 @@ function g(e) {
                     node: null,
                 };
             let n = null == (t = (0, s.hp)(e)) ? void 0 : t.errorCode,
-                i = m.intl.formatToPlainString(m.t.ejOT95, { errorCode: n }),
-                l = m.intl.format(m.t.If5Q0h, {
+                i = _.intl.formatToPlainString(_.t.ejOT95, { errorCode: n }),
+                l = _.intl.format(_.t.If5Q0h, {
                     errorCode: n,
                     helpDeskURL: d.Z.getArticleURL(p.BhN.AV_ERROR_CODES),
                 }),
@@ -38,7 +38,7 @@ function g(e) {
                     : l,
             };
         })(l);
-    null != t && null != b ? (g = "".concat(t, " ").concat(b)) : null != t && (g = t);
+    null != t && null != v ? (g = "".concat(t, " ").concat(v)) : null != t && (g = t);
     let [E] = i.useState(new o.V7()),
         [h, S] = i.useState(!1);
     function y() {
@@ -58,12 +58,12 @@ function g(e) {
                 onMouseLeave: y,
                 children: [
                     t,
-                    null != v &&
+                    null != b &&
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/semibold",
                             color: "text-muted",
-                            className: _.errorCodeMessage,
-                            children: v,
+                            className: m.errorCodeMessage,
+                            children: b,
                         }),
                 ],
             }),
@@ -104,7 +104,7 @@ function g(e) {
                     {
                         onMouseEnter: O,
                         onMouseLeave: y,
-                        className: a()(n, _.root),
+                        className: a()(n, m.root),
                         children: (0, r.jsx)(f.Z, {
                             children: (0, r.jsx)(c.Mgn, {
                                 onMouseEnter: O,
@@ -114,7 +114,7 @@ function g(e) {
                                 height: 20,
                                 color: "currentColor",
                                 "aria-label": g,
-                                className: _.warningIcon,
+                                className: m.warningIcon,
                             }),
                         }),
                     }),

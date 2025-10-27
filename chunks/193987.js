@@ -12,12 +12,12 @@ function o(t) {
         return e
             ? (0, i.jsx)(a.sNh, {
                   id: "unlock-thread",
-                  label: t.isForumPost() ? s.intl.string(s.t["/OKSxs"]) : s.intl.string(s.t["jeyb/f"]),
+                  label: t.isForumPost() ? s.intl.string(s.t["/OKSxp"]) : s.intl.string(s.t["jeyb/W"]),
                   action: () => l.Z.unlockThread(t),
               })
             : (0, i.jsx)(a.sNh, {
                   id: "lock-thread",
-                  label: t.isForumPost() ? s.intl.string(s.t["Ur/0NT"]) : s.intl.string(s.t.HoCqm5),
+                  label: t.isForumPost() ? s.intl.string(s.t["Ur/0Na"]) : s.intl.string(s.t.HoCqm8),
                   action: () => l.Z.lockThread(t),
               });
 }

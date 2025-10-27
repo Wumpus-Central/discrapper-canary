@@ -22,8 +22,8 @@ function b() {
             var e;
             return null != (e = c.Z.getChannelId(h.ME)) ? e : _;
         }),
-        [y, v] = i.useState(!1),
-        j = (0, o.Ie)("dms");
+        [y, j] = i.useState(!1),
+        v = (0, o.Ie)("dms");
     return (0, r.jsxs)(p.H, {
         children: [
             (0, r.jsx)(d.Z, {
@@ -34,7 +34,7 @@ function b() {
             (0, r.jsx)(f.Z, {
                 color: s.aML.Colors.PRIMARY,
                 hideOnClick: !0,
-                text: g.intl.string(g.t.YUU0RE),
+                text: g.intl.string(g.t.YUU0RF),
                 selected: b,
                 children: (0, r.jsx)(s.aRk, {
                     selected: !0,
@@ -68,15 +68,15 @@ function b() {
                             return e;
                         })(
                             {
-                                onMouseEnter: () => v(!0),
-                                onMouseLeave: () => v(!1),
+                                onMouseEnter: () => j(!0),
+                                onMouseLeave: () => j(!1),
                                 onClick: h.dG4,
                                 selected: b || y,
-                                ariaLabel: g.intl.string(g.t.YUU0RE),
+                                ariaLabel: g.intl.string(g.t.YUU0RF),
                                 "aria-owns": "guild-list-dms",
                                 "aria-selected": b || y,
                             },
-                            j,
+                            v,
                         )),
                         (t = t =
                             {

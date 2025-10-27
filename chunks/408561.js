@@ -3,9 +3,9 @@ var l = n(951288),
     a = n(647438),
     i = n(442837),
     r = n(704215),
-    o = n(481060),
-    u = n(211266),
-    d = n(266454),
+    d = n(481060),
+    o = n(211266),
+    u = n(266454),
     s = n(624659),
     b = n(594174),
     c = n(626135),
@@ -15,7 +15,7 @@ var l = n(951288),
     v = n(388032);
 function _(e) {
     let { transitionState: t, onClose: _, channel: h } = e,
-        g = (0, u.Z)(O.TL),
+        g = (0, o.Z)(O.TL),
         S = (0, i.e7)([b.default], () => b.default.getUser(h.getRecipientId()));
     return (
         a.useEffect(() => {
@@ -23,22 +23,22 @@ function _(e) {
         }, []),
         (0, l.jsx)(s.Z, {
             hasCloseButton: !0,
-            header: v.intl.string(v.t.SxsBFB),
-            body: v.intl.formatToPlainString(v.t["7kb7z8"], { username: null == S ? void 0 : S.username }),
+            header: v.intl.string(v.t.SxsBFD),
+            body: v.intl.formatToPlainString(v.t["7kb7z4"], { username: null == S ? void 0 : S.username }),
             problems: g,
             feedbackProblems: {
                 [O.YA.OTHER]: {
-                    subheader: v.intl.string(v.t.VQkdtL),
-                    hint: v.intl.string(v.t.EG3N9f),
+                    subheader: v.intl.string(v.t.VQkdtK),
+                    hint: v.intl.string(v.t.EG3N9c),
                 },
             },
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: a, feedback: i, closeClicked: u } = e;
-                a && (0, d.Q3)(r.z.USER_DM_MUTE_FEEDBACK);
-                let s = null == t || u;
+                let { problem: t, dontShowAgain: a, feedback: i, closeClicked: o } = e;
+                a && (0, u.Q3)(r.z.USER_DM_MUTE_FEEDBACK);
+                let s = null == t || o;
                 (0, E.Z)(t, i, s, a),
                     s ||
-                        (0, o.ZDy)(async () => {
+                        (0, d.ZDy)(async () => {
                             let { default: e } = await n.e("14466").then(n.bind(n, 729328));
                             return (t) =>
                                 (0, l.jsx)(
@@ -67,7 +67,7 @@ function _(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: v.intl.string(v.t.sYrCub) }, t),
+                                    })({ body: v.intl.string(v.t.sYrCuZ) }, t),
                                 );
                         });
             },

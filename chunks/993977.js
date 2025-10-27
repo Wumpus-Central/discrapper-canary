@@ -1,20 +1,20 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(58642),
-    s = n(600164),
+    s = n(58642),
+    o = n(600164),
     c = n(695346),
     u = n(490983),
     d = n(626135),
     p = n(630388),
     f = n(804739),
     h = n(957657),
-    g = n(34305),
-    m = n(981631),
-    b = n(388032),
-    _ = n(77839);
+    m = n(34305),
+    g = n(981631),
+    _ = n(388032),
+    b = n(77839);
 function E(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function O(e) {
     }
     return e;
 }
-function v(e) {
+function I(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
     let i = t.map((e) => {
@@ -52,31 +52,31 @@ function v(e) {
         return (0, r.jsxs)(
             "div",
             {
-                className: _.hiddenLibraryApplication,
+                className: b.hiddenLibraryApplication,
                 children: [
-                    (0, r.jsxs)(s.Z, {
-                        direction: s.Z.Direction.VERTICAL,
-                        className: _.hiddenLibraryApplicationContent,
+                    (0, r.jsxs)(o.Z, {
+                        direction: o.Z.Direction.VERTICAL,
+                        className: b.hiddenLibraryApplicationContent,
                         children: [
                             (0, r.jsx)("div", {
-                                className: _.applicationName,
+                                className: b.applicationName,
                                 children: e.libraryApplication.getBranchedName(e.application),
                             }),
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: _.applicationSubText,
-                                      children: m.EOG[t],
+                                      className: b.applicationSubText,
+                                      children: g.EOG[t],
                                   })
                                 : null,
                         ],
                     }),
                     (0, r.jsx)(a.P3F, {
-                        className: _.restoreButton,
+                        className: b.restoreButton,
                         onClick: () => n(e.libraryApplication),
                         children: (0, r.jsx)(a.Dio, {
                             size: "md",
                             color: "currentColor",
-                            className: _.restoreIcon,
+                            className: b.restoreIcon,
                         }),
                     }),
                 ],
@@ -85,18 +85,18 @@ function v(e) {
         );
     });
     return (0, r.jsxs)("div", {
-        className: _.hiddenLibraryApplications,
+        className: b.hiddenLibraryApplications,
         children: [
             (0, r.jsx)(a.Heading, {
                 variant: "heading-md/semibold",
-                className: _.hiddenLibraryApplicationsTitle,
-                children: b.intl.string(b.t["5PJtrH"]),
+                className: b.hiddenLibraryApplicationsTitle,
+                children: _.intl.string(_.t["5PJtrH"]),
             }),
             i,
         ],
     });
 }
-class y extends i.PureComponent {
+class v extends i.PureComponent {
     handleToggleShortcutDesktop(e) {
         c.Xc.updateSetting(e);
     }
@@ -104,7 +104,7 @@ class y extends i.PureComponent {
         c.Pe.updateSetting(e);
     }
     trackRestoreApplication(e, t) {
-        d.default.track(m.rMx.APPLICATION_SETTINGS_UPDATED, O({ hidden_enabled: t }, e.getAnalyticsData()));
+        d.default.track(g.rMx.APPLICATION_SETTINGS_UPDATED, O({ hidden_enabled: t }, e.getAnalyticsData()));
     }
     renderBody() {
         let {
@@ -113,31 +113,31 @@ class y extends i.PureComponent {
             installShortcutStartMenu: n,
         } = this.props;
         return (0, r.jsxs)("div", {
-            className: _.body,
+            className: b.body,
             children: [
                 (0, f.Q)()
                     ? (0, r.jsxs)(a.Kqy, {
                           gap: 16,
                           children: [
                               (0, r.jsx)(a.rsf, {
-                                  label: b.intl.string(b.t["9ID+Kh"]),
-                                  description: b.intl.string(b.t.vT61N0),
+                                  label: _.intl.string(_.t["9ID+Kh"]),
+                                  description: _.intl.string(_.t.vT61N0),
                                   checked: t,
                                   onChange: this.handleToggleShortcutDesktop,
                               }),
                               (0, r.jsx)(a.izJ, {}),
                               (0, r.jsx)(a.rsf, {
-                                  label: b.intl.string(b.t.vNpUMz),
-                                  description: b.intl.string(b.t.cpYp0H),
+                                  label: _.intl.string(_.t.vNpUMz),
+                                  description: _.intl.string(_.t.cpYp0H),
                                   checked: n,
                                   onChange: this.handleToggleShortcutStartMenu,
                               }),
                               (0, r.jsx)(a.izJ, {}),
-                              (0, r.jsx)(g.Z, {}),
+                              (0, r.jsx)(m.Z, {}),
                           ],
                       })
                     : null,
-                (0, r.jsx)(v, {
+                (0, r.jsx)(I, {
                     restoreApplication: this.handleRestoreHiddenLibraryApplication,
                     applicationViewItems: e,
                 }),
@@ -147,9 +147,9 @@ class y extends i.PureComponent {
     render() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(h.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, r.jsx)(h.Z, { currentRoute: g.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, r.jsx)(a.w0Z, {
-                    className: _.scroller,
+                    className: b.scroller,
                     children: this.renderBody(),
                 }),
             ],
@@ -158,16 +158,16 @@ class y extends i.PureComponent {
     constructor(...e) {
         super(...e),
             E(this, "handleRestoreHiddenLibraryApplication", (e) => {
-                let t = p.x9(e.getFlags(), m.eHb.HIDDEN);
-                o.h(e.id, e.branchId, t), this.trackRestoreApplication(e, p.yE(t, m.eHb.HIDDEN));
+                let t = p.x9(e.getFlags(), g.eHb.HIDDEN);
+                s.h(e.id, e.branchId, t), this.trackRestoreApplication(e, p.yE(t, g.eHb.HIDDEN));
             });
     }
 }
-function I() {
+function y() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),
         hiddenLibraryApplicationViewItems: (0, l.e7)([u.Z], () => u.Z.hiddenLibraryApplicationViewItems),
     };
-    return (0, r.jsx)(y, O({}, e));
+    return (0, r.jsx)(v, O({}, e));
 }

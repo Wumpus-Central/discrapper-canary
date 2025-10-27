@@ -12,7 +12,7 @@ function c(e) {
     return c
         ? (0, r.jsx)(i.sNh, {
               id: "create-event",
-              label: a.intl.string(a.t["60lJ0N"]),
+              label: a.intl.string(a.t["60lJ0C"]),
               icon: t ? i.VZI : void 0,
               action: () => {
                   (0, i.ZDy)(async () => {

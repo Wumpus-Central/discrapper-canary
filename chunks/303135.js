@@ -18,7 +18,7 @@ function u(e) {
         }),
         timestamp: t.timestamp,
         compact: u,
-        children: c.intl.format(c.t["4wLp29"], {
+        children: c.intl.format(c.t["4wLp25"], {
             username: d.nick,
             usernameHook: f,
             editGroupButton: (0, r.jsx)(
@@ -27,7 +27,7 @@ function u(e) {
                     tag: "span",
                     variant: "text-md/medium",
                     color: "text-link",
-                    children: c.intl.string(c.t["5Q9+/P"]),
+                    children: c.intl.string(c.t["5Q9+/L"]),
                 },
                 "edit-group-button-".concat(t.id),
             ),

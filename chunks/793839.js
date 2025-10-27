@@ -3,13 +3,13 @@ var r = n(243814),
     i = n(601964),
     l = n(430824),
     a = n(996106),
-    o = n(452426),
-    s = n(981631);
+    s = n(452426),
+    o = n(981631);
 let c = {
-    [s.Etm.GET_GUILD]: {
+    [o.Etm.GET_GUILD]: {
         scope: r.x.RPC,
         validation: (e) =>
-            (0, o.Z)(e)
+            (0, s.Z)(e)
                 .required()
                 .keys({
                     guild_id: e.string(),
@@ -19,16 +19,16 @@ let c = {
             let {
                 socket: t,
                 server: n,
-                args: { guild_id: r, timeout: o = 0 },
+                args: { guild_id: r, timeout: s = 0 },
             } = e;
             return n
-                .storeWait(t, () => l.Z.getGuild(r), o)
+                .storeWait(t, () => l.Z.getGuild(r), s)
                 .catch(() => {
-                    throw new a.Z({ errorCode: s.lTL.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
+                    throw new a.Z({ errorCode: o.lTL.GET_GUILD_TIMED_OUT }, "Request to get guild timed out.");
                 })
                 .then((e) => {
                     var t;
-                    if (null == e) throw new a.Z({ errorCode: s.lTL.INVALID_GUILD }, "Invalid guild id: ".concat(r));
+                    if (null == e) throw new a.Z({ errorCode: o.lTL.INVALID_GUILD }, "Invalid guild id: ".concat(r));
                     return {
                         id: e.id,
                         name: e.name,
@@ -39,7 +39,7 @@ let c = {
                 });
         },
     },
-    [s.Etm.GET_GUILDS]: {
+    [o.Etm.GET_GUILDS]: {
         scope: r.x.RPC,
         handler: () => ({
             guilds: l.Z.getGuildsArray().map((e) => {

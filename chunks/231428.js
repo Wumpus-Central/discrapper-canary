@@ -27,7 +27,7 @@ var r,
     N = n(388032),
     R = n(504333),
     P = n(982710);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -129,7 +129,7 @@ function U(e) {
                 return (0, i.jsx)(
                     b.Z,
                     x(
-                        D(
+                        w(
                             {
                                 className: R.verticalFit,
                                 currentPageIndex: c,
@@ -181,11 +181,11 @@ class G extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)("div", {
                         className: R.externalRowHeader,
-                        children: N.intl.format(N.t["6mIX6u"], { paymentGatewayName: C.Vz[e.paymentGateway] }),
+                        children: N.intl.format(N.t["6mIX6s"], { paymentGatewayName: C.Vz[e.paymentGateway] }),
                     }),
                     (0, i.jsx)("div", {
                         className: R.externalRowBody,
-                        children: N.intl.format(N.t.eG0uZG, {
+                        children: N.intl.format(N.t.eG0uZB, {
                             paymentGatewayName: C.Vz[e.paymentGateway],
                             billingHistoryLink: (0, I.JE)(e.paymentGateway, "BILLING_HISTORY"),
                         }),
@@ -215,7 +215,7 @@ class G extends (r = a.PureComponent) {
                                                   children: [
                                                       (0, i.jsx)("div", {
                                                           className: P.date,
-                                                          children: N.intl.string(N.t["5t11BQ"]),
+                                                          children: N.intl.string(N.t["5t11BV"]),
                                                       }),
                                                       (0, i.jsx)("div", {
                                                           className: R.paymentRowHeaderDescription,
@@ -242,7 +242,7 @@ class G extends (r = a.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), w(this, "scrollerRef", a.createRef());
+        super(...e), D(this, "scrollerRef", a.createRef());
     }
 }
 function B(e) {
@@ -286,11 +286,11 @@ function Z(e) {
         }, [l, o]),
         (0, i.jsx)(
             G,
-            x(D({}, e), {
+            x(w({}, e), {
                 payments: c,
                 subscription: n,
             }),
         )
     );
 }
-w(G, "defaultProps", { compactMode: !1 });
+D(G, "defaultProps", { compactMode: !1 });

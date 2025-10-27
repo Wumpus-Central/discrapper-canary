@@ -31,12 +31,12 @@ function c(e) {
         null != m
             ? (b = m)
             : g
-              ? (b = s.intl.string(s.t.MyJpJS))
+              ? (b = s.intl.string(s.t.MyJpJT))
               : null != p
-                ? ((b = p), (t = s.intl.string(s.t["YKw/NT"])))
+                ? ((b = p), (t = s.intl.string(s.t["YKw/NQ"])))
                 : h
-                  ? (b = s.intl.string(s.t.e2g9sb))
-                  : f && (b = s.intl.string(s.t.rxI9sr)),
+                  ? (b = s.intl.string(s.t.e2g9sW))
+                  : f && (b = s.intl.string(s.t.rxI9sl)),
         null != b
             ? (0, r.jsx)("div", {
                   className: o.noticeContainer,

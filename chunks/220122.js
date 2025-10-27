@@ -16,7 +16,7 @@ class m extends c.Z {
     showClipsToast() {
         (0, r.showToast)({
             id: h,
-            message: p.intl.string(p.t["d+41qK"]),
+            message: p.intl.string(p.t["d+41qJ"]),
             type: r.ToastType.CLIP,
             options: { duration: _.G$ },
         });

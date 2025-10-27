@@ -127,17 +127,17 @@ function h(e) {
 }
 function m(e, t) {
     return t === u.Si.TIER_0
-        ? d.intl.string(d.t.IBYG5e)
+        ? d.intl.string(d.t.IBYG5U)
         : e === u.PremiumTypes.TIER_0
-          ? d.intl.string(d.t.qYKftb)
+          ? d.intl.string(d.t.qYKftX)
           : null;
 }
 function g(e, t, n, r, i) {
     if (null != n && (0, l.Wp)(n, u.Si.TIER_2) && void 0 !== n.discount.amount)
-        return e ? d.intl.string(d.t.EyjDRE) : d.intl.formatToPlainString(d.t.iiLbvr, { percent: n.discount.amount });
+        return e ? d.intl.string(d.t.EyjDRE) : d.intl.formatToPlainString(d.t.iiLbvu, { percent: n.discount.amount });
     if (i === u.Si.TIER_2) {
-        let e = d.intl.string(d.t.IBYG5e);
-        return (null == r ? void 0 : r.trial_id) === u.a7 && (e = d.intl.string(d.t.gtNqJS)), e;
+        let e = d.intl.string(d.t.IBYG5U);
+        return (null == r ? void 0 : r.trial_id) === u.a7 && (e = d.intl.string(d.t.gtNqJQ)), e;
     }
-    return t === u.PremiumTypes.TIER_2 ? d.intl.string(d.t.qYKftb) : e ? d.intl.string(d.t.EyjDRE) : null;
+    return t === u.PremiumTypes.TIER_2 ? d.intl.string(d.t.qYKftX) : e ? d.intl.string(d.t.EyjDRE) : null;
 }

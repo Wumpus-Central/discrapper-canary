@@ -27,8 +27,8 @@ var r = n(278074),
     N = n(826581),
     R = n(409059),
     P = n(264229),
-    w = n(413605),
-    D = n(366980),
+    D = n(413605),
+    w = n(366980),
     L = n(467512),
     x = n(779832),
     M = n(786761),
@@ -132,8 +132,8 @@ function eP(e, t) {
         e
     );
 }
-let ew = null,
-    eD = new O.Z("MessageActionCreators"),
+let eD = null,
+    ew = new O.Z("MessageActionCreators"),
     eL = new O.Z("MessageQueue"),
     ex = !1;
 class eM {
@@ -219,7 +219,7 @@ function ej(e) {
         c = ea.default.getId(),
         u = es.Z.getInvite(r),
         f = (0, P.fU)(r),
-        _ = null != u && (0, w.P1)(u),
+        _ = null != u && (0, D.P1)(u),
         p = null == u || null == (t = u.target_application) ? void 0 : t.id;
     null != p && _ && (0, g.z$)(p, eI.U.ACTIVITY_INVITE, c);
     let h = eo.Z.getChannel(i);
@@ -555,7 +555,7 @@ let eZ = {
             } = e;
             return (
                 "string" == typeof o && eF.trackJump(n, r, o, s),
-                null == ew || null == (t = ew.pauseAllMediaPlayers) || t.call(ew),
+                null == eD || null == (t = eD.pauseAllMediaPlayers) || t.call(eD),
                 eF.fetchMessages({
                     channelId: n,
                     limit: ev.Z8P,
@@ -618,7 +618,7 @@ let eZ = {
             if (null != m && m.type === ev.d4z.GUILD_STORE) return !1;
             if (
                 t === E.V ||
-                (eD.log(
+                (ew.log(
                     "Fetching messages for "
                         .concat(t, " between ")
                         .concat(r, " and ")
@@ -688,7 +688,7 @@ let eZ = {
                                         a[0].id === e && (h = !1);
                                     }
                                 }
-                                eD.log(
+                                ew.log(
                                     "Fetched "
                                         .concat(a.length, " messages for ")
                                         .concat(t, " isBefore:")
@@ -715,7 +715,7 @@ let eZ = {
                             !0
                         ),
                         () => (
-                            eD.log("Failed to fetch messages for ".concat(t)),
+                            ew.log("Failed to fetch messages for ".concat(t)),
                             s.Z.dispatch({
                                 type: "LOAD_MESSAGES_FAILURE",
                                 channelId: t,
@@ -734,7 +734,7 @@ let eZ = {
             let u = await (0, _.dI)(() => p.ZP.load(l, e, r));
             if (null == u) return void er.Z.addLocalMessages(e, -3);
             if (
-                (eD.log(
+                (ew.log(
                     "fetched "
                         .concat(u.messages.length, " messages from local database (channel_id: ")
                         .concat(e, ", remote_fetch_completed: ")
@@ -766,7 +766,7 @@ let eZ = {
             if (null == o) return;
             let l = null == (n = (a = c.Z.getOrCreate(e)).last()) ? void 0 : n.id,
                 u = null == l ? o.messages : o.messages.filter((e) => eb.default.compare(e.id, l) > 0);
-            eD.log(
+            ew.log(
                 "Fetched "
                     .concat(o.messages.length, " messages from the cache after foregrounding. ")
                     .concat(u.length, " are new"),
@@ -925,7 +925,7 @@ let eZ = {
             return eN({}, t, n, r, i);
         },
         sendInvite(e, t, n, r, i) {
-            let a = (0, D.Z)(t);
+            let a = (0, w.Z)(t);
             return (
                 null != i && (a = "".concat(i, "\n").concat(a)),
                 eF._sendMessage(
@@ -999,7 +999,7 @@ let eZ = {
                     ),
                     (t) => {
                         throw (
-                            (eD.log("Failed to send greeting"),
+                            (ew.log("Failed to send greeting"),
                             429 !== t.status && eF.sendClydeError(e, t.body.code),
                             s.Z.dispatch({
                                 type: "MESSAGE_SEND_FAILED",
@@ -1067,8 +1067,8 @@ let eZ = {
                     contentInventoryEntry: S,
                     attachments: R,
                     attachmentsToUpload: P,
-                    onAttachmentUploadError: w,
-                    announcementSendOptions: D,
+                    onAttachmentUploadError: D,
+                    announcementSendOptions: w,
                 } = n,
                 x = null != (i = n.flags) ? i : 0,
                 [M, Y] = (0, et.Z)(d);
@@ -1116,7 +1116,7 @@ let eZ = {
                 eF.sendBotMessage(e, n, r);
             }
             let eo = {
-                type: null != D ? u.$V.SEND_ANNOUNCEMENT : u.$V.SEND,
+                type: null != w ? u.$V.SEND_ANNOUNCEMENT : u.$V.SEND,
                 message: {
                     channelId: e,
                     content: d,
@@ -1130,10 +1130,10 @@ let eZ = {
             };
             if (
                 (null != t.components && (eo.message.components = t.components),
-                null != D &&
-                    ((eo.message.create_thread = D.createThread),
-                    (eo.message.title = D.threadName),
-                    (eo.message.publish = null != (o = D.publish) && o)),
+                null != w &&
+                    ((eo.message.create_thread = w.createThread),
+                    (eo.message.title = w.threadName),
+                    (eo.message.publish = null != (o = w.publish) && o)),
                 null != h)
             ) {
                 let e,
@@ -1185,7 +1185,7 @@ let eZ = {
                         failureCode: t,
                         errorMessage: null == n ? void 0 : n.msg,
                     }),
-                        null == w || w(e, t, n, r);
+                        null == D || D(e, t, n, r);
                     return;
                 }
             return new Promise((t, r) => {
@@ -1270,7 +1270,7 @@ let eZ = {
                             } else {
                                 var f, p;
                                 let t;
-                                eD.log("Failed to send message", {
+                                ew.log("Failed to send message", {
                                     hasErr: o.hasErr,
                                     status: o.status,
                                     code: null == (f = o.body) ? void 0 : f.code,
@@ -1334,7 +1334,7 @@ let eZ = {
                                           errorMessage: o.hasErr ? o.err.message : void 0,
                                       }),
                                       u.ZP.cancelPendingSendRequests(e).forEach((e) => {
-                                          eD.log("Cancelling pending message", e.nonce),
+                                          ew.log("Cancelling pending message", e.nonce),
                                               s.Z.dispatch({
                                                   type: "MESSAGE_SEND_FAILED",
                                                   messageId: e.nonce,

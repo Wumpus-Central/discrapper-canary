@@ -30,17 +30,17 @@ function s(t) {
     return (0, e.jsx)(i.Modal, {
         transitionState: u.transitionState,
         onClose: s,
-        title: l.intl.string(l.t["06YebG"]),
+        title: l.intl.string(l.t["06YebE"]),
         actions: [
             {
-                text: l.intl.string(l.t["ETE/oK"]),
+                text: l.intl.string(l.t["ETE/oC"]),
                 onClick: () => {
                     r(), s();
                 },
                 variant: "secondary",
             },
             {
-                text: l.intl.string(l.t["3PatS0"]),
+                text: l.intl.string(l.t["3PatSz"]),
                 onClick: () => {
                     c(), s();
                 },
@@ -51,13 +51,13 @@ function s(t) {
             children: [
                 (0, e.jsxs)(a.Text, {
                     variant: "text-sm/normal",
-                    children: [l.intl.format(l.t["s+WDGx"], { activityName: n.name }), " "],
+                    children: [l.intl.format(l.t["s+WDGz"], { activityName: n.name }), " "],
                 }),
                 (0, e.jsx)(a.Text, {
                     variant: "text-sm/normal",
                     children: (0, e.jsx)(a.Anchor, {
                         href: o.OF,
-                        children: l.intl.string(l.t.E0gf5u),
+                        children: l.intl.string(l.t.E0gf5l),
                     }),
                 }),
             ],

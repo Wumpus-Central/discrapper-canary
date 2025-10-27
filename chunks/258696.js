@@ -37,7 +37,7 @@ function S(e) {
 }
 function A(e) {
     var t, n, i, f, _, p, y;
-    let { type: O, disabled: A, channel: N, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
+    let { type: O, disabled: A, channel: N, handleSubmit: R, isEmpty: P, showAllButtons: D, children: w } = e,
         L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         x = C(N.id, O, P),
         { activeCommand: M, activeCommandOption: k } = (0, o.cj)([c.Z], () => ({
@@ -66,7 +66,7 @@ function A(e) {
             ),
         (null == (p = O.gifs) ? void 0 : p.button) != null &&
             null == M &&
-            w &&
+            D &&
             U.push(
                 (0, r.jsx)(
                     E.Z,
@@ -92,7 +92,7 @@ function A(e) {
         !Z &&
             (null == (y = O.stickers) ? void 0 : y.button) != null &&
             null == M &&
-            w &&
+            D &&
             U.push(
                 (0, r.jsx)(
                     I.Z,
@@ -115,7 +115,7 @@ function A(e) {
                 "emoji",
             ),
         ),
-    null != D && U.push(D),
+    null != w && U.push(w),
     (null == (i = O.submit) ? void 0 : i.button) != null &&
         ((null == (f = O.submit) ? void 0 : f.ignorePreference) || L) &&
         U.push(

@@ -6,6 +6,6 @@ var i = n(509613),
     s = n(191694),
     a = n(388032);
 let o = (0, i.vB)(l.n.ACTIVITY_SECTION, {
-    useLabel: () => a.intl.string(a.t.SmHCFR),
+    useLabel: () => a.intl.string(a.t.SmHCFf),
     buildLayout: () => [u.t, s.q, r.b],
 });

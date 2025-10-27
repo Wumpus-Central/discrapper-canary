@@ -15,12 +15,12 @@ function d(e) {
             { autoTrackExposure: !1 },
         ),
         _ = (0, i.EQ)(t)
-            .with(s.h8.REVIEW, () => c.intl.string(c.t.JbRd5u))
-            .with(s.h8.ADD_PAYMENT_STEPS, () => c.intl.string(c.t.QiGOam))
+            .with(s.h8.REVIEW, () => c.intl.string(c.t.JbRd5s))
+            .with(s.h8.ADD_PAYMENT_STEPS, () => c.intl.string(c.t.QiGOak))
             .with(s.h8.GIFT_CUSTOMIZATION, () =>
-                f && d === l.Wt.DM_CHANNEL ? c.intl.string(c.t["xU+d9P"]) : c.intl.string(c.t["JCFN//"]),
+                f && d === l.Wt.DM_CHANNEL ? c.intl.string(c.t["xU+d9M"]) : c.intl.string(c.t["JCFN/y"]),
             )
-            .with(s.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => c.intl.string(c.t.lDbi6O))
+            .with(s.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => c.intl.string(c.t.lDbi6H))
             .with(s.h8.CONFIRM, () => "")
             .otherwise(() => null);
     return null == _

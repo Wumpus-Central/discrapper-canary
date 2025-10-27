@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(981631),
     v = n(388032);
 let I = (e, t, n) => {
-        let r = v.t.LHF6Dw,
+        let r = v.t.LHF6D9,
             i = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             a = e.extra.media_title;
         return v.intl
@@ -32,7 +32,7 @@ let I = (e, t, n) => {
             .replaceAll("*", "");
     },
     T = (e, t) =>
-        v.intl.formatToPlainString(v.t.kCbfbG, {
+        v.intl.formatToPlainString(v.t.kCbfbN, {
             username: t.username,
             activity: e.extra.media_title,
         }),
@@ -42,8 +42,8 @@ let I = (e, t, n) => {
             { largeImage: C } = (0, f.rv)({ entry: n }),
             { primaryColor: N, secondaryColor: R } = (0, m.Z)(null == C ? void 0 : C.src),
             P = (0, a.e7)([s.default], () => s.default.locale),
-            w = (0, h.Z)(O.ABu.CRUNCHYROLL),
-            D = (0, _.ap)(n.extra.media_assets_large_text),
+            D = (0, h.Z)(O.ABu.CRUNCHYROLL),
+            w = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
                 (e) => {
                     if (null != A && (null == C ? void 0 : C.src) != null)
@@ -53,12 +53,12 @@ let I = (e, t, n) => {
                             avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                             description: I(n, t, A),
                             timestamp: (0, _.yh)(n, P),
-                            episodeDescription: D,
+                            episodeDescription: w,
                             colors: [N, R],
                             channelId: e,
                         });
                 },
-                [t, n, D, P, null == C ? void 0 : C.src, N, R, A],
+                [t, n, w, P, null == C ? void 0 : C.src, N, R, A],
             ),
             x = () => {
                 if (null == n.extra.url) return;
@@ -78,13 +78,13 @@ let I = (e, t, n) => {
                       (0, r.jsx)(b.wG, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, _.kr)(n) ? v.t["LH+Z39"] : v.t.YuKgmp,
+                          userDescription: (0, _.kr)(n) ? v.t["LH+Z3y"] : v.t.YuKgml,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
-                              onClick: w,
+                              onClick: D,
                               Icon: o.omf,
-                              "aria-label": v.intl.string(v.t.jdJYX1),
+                              "aria-label": v.intl.string(v.t.jdJYXw),
                           }),
                           badges: (0, r.jsx)(E.Gk, {
                               location: E.Gt.POPOUT,

@@ -19,8 +19,8 @@ var i = n(243814),
     E = n(928518),
     O = n(23750),
     I = n(592125),
-    y = n(293273),
-    v = n(885110),
+    v = n(293273),
+    y = n(885110),
     C = n(451478),
     S = n(630388),
     T = n(823379),
@@ -38,13 +38,13 @@ var i = n(243814),
     k = n(701488);
 async function U(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-        l = y.Z.getApplicationActivity(t);
+        l = v.Z.getApplicationActivity(t);
     if (null == l || null == l.secrets || !(0, A.t9)(r, l.party, l.secrets))
         throw new x.Z(
             { errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY },
             "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
         );
-    let a = (0, m.Z)(l, v.Z);
+    let a = (0, m.Z)(l, y.Z);
     if (a) {
         let { lock: t } = (0, D.jU)(e);
         return (0, o.h7)(l, a).then(() => {
@@ -182,7 +182,7 @@ let G = {
             if (((0, P.Pr)({}, null == d ? void 0 : d.document), null != c)) {
                 if (c.applicationId !== i.id)
                     throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "Application is not currently mounted.");
-                let e = y.Z.getApplicationActivity(i.id);
+                let e = v.Z.getApplicationActivity(i.id);
                 if (null != e) (0, o.h7)(e, !1, p);
                 else
                     throw new x.Z(

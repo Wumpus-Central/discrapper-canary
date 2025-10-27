@@ -5,15 +5,15 @@ var i = n(37234),
     a = n(566898),
     l = n(769654),
     o = n(785717),
-    s = n(806729),
-    c = n(821179),
+    c = n(806729),
+    s = n(821179),
     u = n(264481),
     d = n(661462),
     f = n(443680);
 function g(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: g } = (0, o.KZ)(),
-        { mutualGuilds: p, isFetching: m } = (0, s.Z)(t);
+        { mutualGuilds: p, isFetching: m } = (0, c.Z)(t);
     return (0, r.jsx)(d.F, {
         className: f.scroller,
         fade: !0,
@@ -44,7 +44,7 @@ function g(e) {
                       : p.map((e) => {
                             let { guild: a, nick: o } = e;
                             return (0, r.jsx)(
-                                c.Z,
+                                s.Z,
                                 {
                                     user: t,
                                     guild: a,

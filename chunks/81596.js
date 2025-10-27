@@ -11,22 +11,22 @@ var e = i(951288),
     u = i(518596),
     _ = i(527790),
     T = i(540440),
-    N = i(365583),
-    R = i(981631),
-    h = i(388032),
-    C = i(569162);
+    C = i(365583),
+    N = i(981631),
+    R = i(388032),
+    h = i(569162);
 function O(t) {
-    let { user: n, entry: i, transitionState: O, onAction: p, onClose: I, onOpenGameSettings: S } = t,
-        [f, x] = (0, l.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
+    let { user: n, entry: i, transitionState: O, onAction: p, onClose: I, onOpenGameSettings: f } = t,
+        [x, S] = (0, l.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
     return (
         r.useEffect(() => c.Bt, []),
         (0, e.jsxs)(s.Modal, {
             title: (0, T.y)(i),
-            subtitle: h.intl.format(h.t.KV72oa, {
+            subtitle: R.intl.format(R.t.KV72oe, {
                 settingsHook: (t, n) => {
-                    let r = (0, N.C)({
+                    let r = (0, C.C)({
                         entry: i,
-                        onOpenGameSettings: S,
+                        onOpenGameSettings: f,
                     });
                     return (0, e.jsx)(
                         a.Anchor,
@@ -36,7 +36,7 @@ function O(t) {
                                     null != r
                                         ? r()
                                         : (0, u.openUserSettings)(E.n.PROFILE_PANEL, {
-                                              section: R.oAB.PROFILE_CUSTOMIZATION,
+                                              section: N.oAB.PROFILE_CUSTOMIZATION,
                                           }),
                                     I();
                             },
@@ -49,17 +49,17 @@ function O(t) {
             size: "sm",
             actions: [
                 {
-                    text: h.intl.string(h.t["ETE/oK"]),
+                    text: R.intl.string(R.t["ETE/oC"]),
                     onClick: I,
                     variant: "secondary",
                     size: "sm",
                 },
                 {
-                    text: null != x ? h.intl.string(h.t["5911LS"]) : h.intl.string(h.t.VkKicX),
+                    text: null != S ? R.intl.string(R.t["5911Lb"]) : R.intl.string(R.t.VkKicb),
                     onClick: () => {
                         null == p || p({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, d.CV)(i, n.id, I);
                     },
-                    disabled: f,
+                    disabled: x,
                     variant: "critical-primary",
                     size: "sm",
                 },
@@ -67,14 +67,14 @@ function O(t) {
             onClose: I,
             transitionState: O,
             children: [
-                null != x
+                null != S
                     ? (0, e.jsxs)("div", {
-                          className: C.error,
+                          className: h.error,
                           children: [
                               (0, e.jsx)(a.k$p, { color: a.TVs.colors.STATUS_DANGER }),
                               (0, e.jsx)(a.Text, {
                                   variant: "text-sm/medium",
-                                  children: h.intl.string(h.t.FMbL3t),
+                                  children: R.intl.string(R.t.FMbL3s),
                               }),
                           ],
                       })
@@ -82,7 +82,7 @@ function O(t) {
                 (0, e.jsx)(_.Z, {
                     user: n,
                     entry: i,
-                    className: C.card,
+                    className: h.card,
                     hideContextMenu: !0,
                 }),
             ],

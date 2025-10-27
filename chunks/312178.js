@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(951288),
     r = n(647438),
     s = n(442837),
@@ -218,7 +218,7 @@ function Z(e, t) {
         e,
     );
 }
-let j = s.ZP.connectStores([d.Z, p.Z], () => {
+let C = s.ZP.connectStores([d.Z, p.Z], () => {
     var e;
     return {
         layout: null != (e = d.Z.getLayout(f.OVERLAY_LAYOUT_ID)) ? e : void 0,

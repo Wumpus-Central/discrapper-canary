@@ -71,7 +71,7 @@ let g = i.memo(function (e) {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
                 onChange: (e) => i(u(d({}, t), { exemptRoles: e })),
-                placeholder: o.intl.string(o.t.aFO1Iy),
+                placeholder: o.intl.string(o.t.aFO1I6),
                 disableEveryoneRole: !0,
             })),
         (0, r.jsxs)("div", {
@@ -81,7 +81,7 @@ let g = i.memo(function (e) {
                     color: "header-secondary",
                     variant: "text-xs/normal",
                     className: c.exemptionHint,
-                    children: o.intl.string(o.t.GKlYaW),
+                    children: o.intl.string(o.t.GKlYaS),
                 }),
             ],
         })

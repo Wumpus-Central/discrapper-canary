@@ -44,7 +44,7 @@ function O(e) {
                             className: _.title,
                             variant: "text-md/semibold",
                             color: "interactive-active",
-                            children: b.intl.format(b.t.vtUO3d, { username: l }),
+                            children: b.intl.format(b.t.vtUO3Y, { username: l }),
                         }),
                         (0, r.jsxs)("div", {
                             className: _.buttonContainer,
@@ -56,7 +56,7 @@ function O(e) {
                                 }),
                                 (0, r.jsx)(u.M0o, {
                                     className: _.deleteButton,
-                                    tooltip: b.intl.string(b.t.oyYWHB),
+                                    tooltip: b.intl.string(b.t.oyYWHE),
                                     color: u.YX$.SECONDARY,
                                     icon: (0, r.jsx)(u.XHJ, { size: "xs" }),
                                     onClick: () => {
@@ -84,7 +84,7 @@ function O(e) {
                                     variant: "text-xxs/semibold",
                                     className: _.__invalid_metaText,
                                     color: "text-muted",
-                                    children: b.intl.string(b.t["//8Uqa"]),
+                                    children: b.intl.string(b.t["//8UqT"]),
                                 }),
                             }),
                     ],
@@ -120,7 +120,7 @@ function y(e) {
                 disabled: g,
                 size: c.Ph.SMALL,
                 onClick: O,
-                children: b.intl.string(b.t["s+J8Dg"]),
+                children: b.intl.string(b.t["s+J8Dl"]),
             });
         else return null;
     return o && p
@@ -130,7 +130,7 @@ function y(e) {
               disabled: g,
               size: c.Ph.SMALL,
               onClick: y,
-              children: b.intl.string(b.t["/loN9/"]),
+              children: b.intl.string(b.t["/loN98"]),
           })
         : null != n.fallback_url
           ? (0, r.jsx)(c.zx, {
@@ -139,10 +139,10 @@ function y(e) {
                 size: c.Ph.SMALL,
                 color: c.Tt.TRANSPARENT,
                 onClick: () => (0, d.Z)(n.fallback_url),
-                children: b.intl.string(b.t["27y8KC"]),
+                children: b.intl.string(b.t["27y8KF"]),
             })
           : (0, r.jsx)(s.u, {
-                text: b.intl.formatToPlainString(b.t.issFLC, { gameTitle: n.application_name }),
+                text: b.intl.formatToPlainString(b.t.issFLA, { gameTitle: n.application_name }),
                 children: (0, r.jsx)(c.zx, {
                     className: _.primaryButton,
                     disabled: !0,
@@ -156,7 +156,7 @@ function y(e) {
                                 variant: "text-xxs/medium",
                                 className: _.launchToJoinText,
                                 color: "text-muted",
-                                children: b.intl.string(b.t.dai1Oz),
+                                children: b.intl.string(b.t.dai1Ow),
                             }),
                             (0, r.jsx)(u.d3s, {
                                 size: "xxs",

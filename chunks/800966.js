@@ -70,7 +70,7 @@ function b(e) {
                 (0, i.jsx)(o.zx, {
                     "data-migration-pending": !0,
                     className: f.closeButton,
-                    "aria-label": h.intl.string(h.t.cpT0Cg),
+                    "aria-label": h.intl.string(h.t.cpT0Cq),
                     look: o.zx.Looks.BLANK,
                     size: o.zx.Sizes.NONE,
                     onClick: () => {
@@ -90,7 +90,7 @@ function b(e) {
                             (0, i.jsx)(s.Text, {
                                 className: f.infoText,
                                 variant: "text-sm/medium",
-                                children: h.intl.format(h.t.ruvD7u, {}),
+                                children: h.intl.format(h.t.ruvD7i, {}),
                             }),
                             (0, i.jsxs)("div", {
                                 className: f.poweredByNitroContainer,
@@ -99,7 +99,7 @@ function b(e) {
                                     (0, i.jsx)(s.Text, {
                                         className: f.infoText,
                                         variant: "text-sm/medium",
-                                        children: h.intl.string(h.t["BMw+7O"]),
+                                        children: h.intl.string(h.t["BMw+7I"]),
                                     }),
                                 ],
                             }),

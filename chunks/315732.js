@@ -8,7 +8,7 @@ function c(e) {
     return l.wS
         ? (0, r.jsx)(i.sNh, {
               id: "copy-channel-topic",
-              label: o.intl.string(o.t.Tb3Vsr),
+              label: o.intl.string(o.t.Tb3Vst),
               action: () => (0, l.JG)(e.topic),
           })
         : null;

@@ -25,7 +25,7 @@ function f(e) {
                 className: d.rowDetails,
                 children: (0, r.jsx)(o.Heading, {
                     variant: "heading-md/semibold",
-                    children: u.intl.string(u.t.DFMPWV),
+                    children: u.intl.string(u.t.DFMPWS),
                 }),
             }),
             (0, r.jsx)(o.Text, {
@@ -38,13 +38,13 @@ function f(e) {
 }
 function _(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: i, fractionalState: s, activationDate: l } = e,
-        f = t ? u.intl.string(u.t["hT6i//"]) : u.intl.string(u.t["3G0CTE"]),
+        f = t ? u.intl.string(u.t["hT6i/0"]) : u.intl.string(u.t["3G0CTC"]),
         _ = t
             ? void 0 === l
                 ? null
-                : u.intl.format(u.t["0Vwb/v"], { activateDate: l })
+                : u.intl.format(u.t["0Vwb/l"], { activateDate: l })
             : s === c.a$.FP_SUB_PAUSED
-              ? u.intl.format(u.t.MMvaIC, { resumeDate: i.toDate() })
+              ? u.intl.format(u.t.MMvaIG, { resumeDate: i.toDate() })
               : null,
         p = a()({
             [d.fractionalUnactivatedPill]: t,

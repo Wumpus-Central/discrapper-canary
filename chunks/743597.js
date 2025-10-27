@@ -89,7 +89,7 @@ function _(e, t, n) {
             },
             [e, t, n, _],
         ),
-        E = r.useCallback(
+        v = r.useCallback(
             (r, a, o) => {
                 p.cancel(),
                     (0, c.Df)(t, n, i.current),
@@ -114,9 +114,9 @@ function _(e, t, n) {
         () => ({
             handleMouseDown: m,
             handleMouseMove: g,
-            handleMouseUp: E,
+            handleMouseUp: v,
             handleMouseEnter: b,
         }),
-        [m, b, g, E],
+        [m, b, g, v],
     );
 }

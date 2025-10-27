@@ -44,7 +44,7 @@ function b(e) {
                                       }),
                                   (0, r.jsx)(a.Text, {
                                       variant: "text-xs/medium",
-                                      children: g.intl.string(g.t.IQjdmZ),
+                                      children: g.intl.string(g.t.IQjdmV),
                                   }),
                               ],
                           }),

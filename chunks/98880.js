@@ -200,7 +200,7 @@ function Q(e) {
               className: b,
               onClick: n,
               onContextMenu: v,
-              "aria-label": B.intl.formatToPlainString(B.t["zLhr9/"], {
+              "aria-label": B.intl.formatToPlainString(B.t["zLhr9+"], {
                   applicationName: y,
                   applicationDescription: x,
               }),
@@ -284,7 +284,7 @@ function J(e) {
                                                 children: (0, l.jsx)(u.Heading, {
                                                     variant: "text-xxs/medium",
                                                     color: "header-primary",
-                                                    children: B.intl.string(B.t["/eVltr"]),
+                                                    children: B.intl.string(B.t["/eVltv"]),
                                                 }),
                                             }),
                                         S && (0, l.jsx)(K, {}),
@@ -326,7 +326,7 @@ function J(e) {
                                               children: (0, l.jsx)(u.Text, {
                                                   variant: "text-xxs/semibold",
                                                   color: "text-muted",
-                                                  children: B.intl.string(B.t["/eVltr"]),
+                                                  children: B.intl.string(B.t["/eVltv"]),
                                               }),
                                           })
                                         : null,
@@ -349,7 +349,7 @@ function J(e) {
 }
 function K() {
     return (0, l.jsx)(c.u, {
-        text: B.intl.string(B.t.CfTySU),
+        text: B.intl.string(B.t.CfTySQ),
         children: (0, l.jsx)("div", {
             className: V.devShelfBadge,
             children: (0, l.jsx)(S.Z, { className: V.devShelfIcon }),
@@ -596,7 +596,7 @@ function ea(e) {
                           variant: N,
                           disabled: m || h,
                           onClick: x,
-                          "aria-label": B.intl.formatToPlainString(B.t["XjP/R0"], {
+                          "aria-label": B.intl.formatToPlainString(B.t["XjP/R+"], {
                               buttonText: j,
                               applicationName: n.name,
                           }),

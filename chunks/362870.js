@@ -1,41 +1,41 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(13941),
-    s = n(91192),
+    s = n(13941),
+    o = n(91192),
     c = n(704215),
     u = n(481060),
     d = n(515753),
     p = n(393903),
     f = n(266454),
     h = n(426032),
-    g = n(626135),
-    m = n(937797),
-    b = n(150560),
-    _ = n(551913),
+    m = n(626135),
+    g = n(937797),
+    _ = n(150560),
+    b = n(551913),
     E = n(46140),
     O = n(981631),
-    v = n(921944),
-    y = n(388032),
-    I = n(228624);
+    I = n(921944),
+    v = n(388032),
+    y = n(228624);
 let C = Math.ceil(Math.sqrt(115200)),
     S = (C - 240) / 2,
-    N = function (e) {
+    T = function (e) {
         var t, n;
         let { selected: l } = e,
-            N = (0, s.JA)("quests"),
-            T = i.useRef(null),
+            T = (0, o.JA)("quests"),
+            N = i.useRef(null),
             {
-                shouldShowPopover: P,
-                shouldShowGradientAndBadge: j,
+                shouldShowPopover: j,
+                shouldShowGradientAndBadge: P,
                 dismissContent: x,
             } = (function () {
-                let { enabled: e } = m.GE.useConfig({ location: E.dr.PRIVATE_CHANNELS_LIST }),
-                    [t, n] = (0, h.US)(e ? [c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [], v.R.PRIVATE_CHANNELS_LIST, !0),
+                let { enabled: e } = g.GE.useConfig({ location: E.dr.PRIVATE_CHANNELS_LIST }),
+                    [t, n] = (0, h.US)(e ? [c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [], I.R.PRIVATE_CHANNELS_LIST, !0),
                     r = i.useCallback(() => {
-                        e && n(v.L.TAKE_ACTION);
+                        e && n(I.L.TAKE_ACTION);
                     }, [n, e]);
                 return {
                     shouldShowPopover: t === c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING,
@@ -44,7 +44,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                 };
             })(),
             A = i.useCallback(() => {
-                b.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
+                _.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
             }, []),
             [{ glowSpring: Z }, w] = (0, u.q_F)(() => ({
                 from: { glowSpring: 0 },
@@ -55,7 +55,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                     friction: 12,
                 },
             })),
-            [{ shineSpring: L }, R] = (0, u.q_F)(() => ({
+            [{ shineSpring: L }, D] = (0, u.q_F)(() => ({
                 from: { shineSpring: 0 },
                 config: {
                     clamp: !0,
@@ -64,15 +64,15 @@ let C = Math.ceil(Math.sqrt(115200)),
                     friction: 38,
                 },
             })),
-            D = i.useCallback(() => {
-                R({ shineSpring: 1 }),
+            R = i.useCallback(() => {
+                D({ shineSpring: 1 }),
                     w({
                         glowSpring: 1,
                         delay: 200,
                     });
-            }, [R, w]),
+            }, [D, w]),
             M = i.useCallback(() => {
-                R({
+                D({
                     shineSpring: 0,
                     immediate: !0,
                 }),
@@ -80,9 +80,9 @@ let C = Math.ceil(Math.sqrt(115200)),
                         glowSpring: 0,
                         delay: 0,
                     });
-            }, [R, w]),
+            }, [D, w]),
             k = i.useCallback(() => {
-                R({
+                D({
                     shineSpring: 1,
                     delay: 500,
                 }),
@@ -90,8 +90,8 @@ let C = Math.ceil(Math.sqrt(115200)),
                         glowSpring: 1,
                         delay: 700,
                     }),
-                    g.default.track(O.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
-            }, [R, w]),
+                    m.default.track(O.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+            }, [D, w]),
             [U, G] = i.useState(-1),
             B = i.useCallback((e) => {
                 G(e.contentRect.width);
@@ -100,10 +100,10 @@ let C = Math.ceil(Math.sqrt(115200)),
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: I.wrapper,
-                    onMouseEnter: D,
+                    className: y.wrapper,
+                    onMouseEnter: R,
                     onMouseLeave: M,
-                    onFocus: D,
+                    onFocus: R,
                     onBlur: M,
                     ref: H,
                     style: {
@@ -138,24 +138,24 @@ let C = Math.ceil(Math.sqrt(115200)),
                             return e;
                         })(
                             {
-                                className: a()({ [I.withGradientAndBadge]: j }),
+                                className: a()({ [y.withGradientAndBadge]: P }),
                                 icon: u.qDn,
-                                listItemRef: T,
+                                listItemRef: N,
                                 onClick: A,
                                 route: O.Z5c.QUEST_HOME_V2,
                                 selected: l,
-                                text: y.intl.string(y.t.JALI2K),
+                                text: v.intl.string(v.t.JALI2K),
                             },
-                            N,
+                            T,
                         )),
                         (n = n =
                             {
                                 children:
-                                    j &&
+                                    P &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(o.animated.div, {
-                                                className: I.shine,
+                                            (0, r.jsx)(s.animated.div, {
+                                                className: y.shine,
                                                 style: {
                                                     transform: L.to((e) =>
                                                         "translateX(calc("
@@ -164,8 +164,8 @@ let C = Math.ceil(Math.sqrt(115200)),
                                                     ),
                                                 },
                                             }),
-                                            (0, r.jsx)(o.animated.div, {
-                                                className: I.glow,
+                                            (0, r.jsx)(s.animated.div, {
+                                                className: y.glow,
                                                 style: {
                                                     opacity: Z.to({
                                                         range: [0, 1],
@@ -174,8 +174,8 @@ let C = Math.ceil(Math.sqrt(115200)),
                                                 },
                                             }),
                                             (0, r.jsx)(u.IGR, {
-                                                className: I.badge,
-                                                text: y.intl.string(y.t.y2b7CA),
+                                                className: y.badge,
+                                                text: v.intl.string(v.t.y2b7CA),
                                                 color: u.TVs.colors.BG_BRAND.css,
                                             }),
                                         ],
@@ -196,9 +196,9 @@ let C = Math.ceil(Math.sqrt(115200)),
                         t),
                     ),
                 }),
-                P &&
-                    (0, r.jsx)(_.Z, {
-                        targetElementRef: T,
+                j &&
+                    (0, r.jsx)(b.Z, {
+                        targetElementRef: N,
                         onNavigateToQuestHome: A,
                         onRender: k,
                         onRequestClose: x,

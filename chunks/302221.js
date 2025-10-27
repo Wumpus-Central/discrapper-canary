@@ -3,13 +3,13 @@ n.d(t, {
     BM: () => M,
     Cj: () => d,
     WY: () => C,
-    YD: () => D,
+    YD: () => w,
     aD: () => h,
     j: () => P,
     oo: () => f,
     rj: () => p,
     vq: () => g,
-    wh: () => w,
+    wh: () => D,
     xj: () => x,
 }),
     n(415506),
@@ -216,30 +216,30 @@ u(
     l(
         {},
         {
-            "#1abc9c": () => o.intl.string(o.t.fBawRk),
-            "#2ecc71": () => o.intl.string(o.t.hvv3QU),
-            "#3498db": () => o.intl.string(o.t.JwX6JS),
-            "#9b59b6": () => o.intl.string(o.t.H3xljo),
-            "#e91e63": () => o.intl.string(o.t.X9izyc),
-            "#11806a": () => o.intl.string(o.t.Kw7K29),
-            "#1f8b4c": () => o.intl.string(o.t.z5AZKS),
-            "#206694": () => o.intl.string(o.t.JqBqKy),
-            "#71368a": () => o.intl.string(o.t.edPgnJ),
-            "#ad1457": () => o.intl.string(o.t.ti7gsb),
-            "#f1c40f": () => o.intl.string(o.t["H9jz+f"]),
-            "#e67e22": () => o.intl.string(o.t.UmsfHB),
-            "#e74c3c": () => o.intl.string(o.t.GoDlAA),
-            "#95a5a6": () => o.intl.string(o.t["9GpDYG"]),
-            "#607d8b": () => o.intl.string(o.t.lwrNQE),
-            "#c27c0e": () => o.intl.string(o.t.Lf10GB),
-            "#a84300": () => o.intl.string(o.t["H+AjY2"]),
-            "#992d22": () => o.intl.string(o.t.XTkde3),
-            "#979c9f": () => o.intl.string(o.t.Ve0Lio),
-            "#546e7a": () => o.intl.string(o.t.BwbOAA),
-            "#99aab5": () => o.intl.string(o.t["/po5rK"]),
+            "#1abc9c": () => o.intl.string(o.t.fBawRj),
+            "#2ecc71": () => o.intl.string(o.t.hvv3QR),
+            "#3498db": () => o.intl.string(o.t.JwX6Jd),
+            "#9b59b6": () => o.intl.string(o.t.H3xljj),
+            "#e91e63": () => o.intl.string(o.t.X9izyR),
+            "#11806a": () => o.intl.string(o.t.Kw7K2z),
+            "#1f8b4c": () => o.intl.string(o.t.z5AZKW),
+            "#206694": () => o.intl.string(o.t.JqBqKz),
+            "#71368a": () => o.intl.string(o.t.edPgnK),
+            "#ad1457": () => o.intl.string(o.t.ti7gsS),
+            "#f1c40f": () => o.intl.string(o.t["H9jz+S"]),
+            "#e67e22": () => o.intl.string(o.t.UmsfHL),
+            "#e74c3c": () => o.intl.string(o.t.GoDlAC),
+            "#95a5a6": () => o.intl.string(o.t["9GpDYK"]),
+            "#607d8b": () => o.intl.string(o.t.lwrNQG),
+            "#c27c0e": () => o.intl.string(o.t.Lf10GG),
+            "#a84300": () => o.intl.string(o.t["H+AjY7"]),
+            "#992d22": () => o.intl.string(o.t.XTkdex),
+            "#979c9f": () => o.intl.string(o.t.Ve0Lip),
+            "#546e7a": () => o.intl.string(o.t.BwbOAO),
+            "#99aab5": () => o.intl.string(o.t["/po5rJ"]),
         },
     ),
-    { "#5865f2": () => o.intl.string(o.t["Cn/LJy"]) },
+    { "#5865f2": () => o.intl.string(o.t["Cn/LJ4"]) },
 );
 let O = 30,
     v = 80,
@@ -320,7 +320,7 @@ function P(e, t) {
         R(r.hue, r.saturation, r.lightness)
     );
 }
-function w(e) {
+function D(e) {
     let { foreground: t, background: n, ratio: r = 5, saturationFactor: a = 1 } = e;
     a < 1 && ((t = t.set("hsl.s", t.get("hsl.s") * a)), (n = n.set("hsl.s", n.get("hsl.s") * a)));
     let o = 0.5 >= n.luminance(),
@@ -336,7 +336,7 @@ function w(e) {
     }
     return t.alpha(1);
 }
-function D(e) {
+function w(e) {
     return e
         .slice(0, 3)
         .map((e) => {

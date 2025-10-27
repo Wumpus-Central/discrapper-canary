@@ -1,28 +1,28 @@
-e.d(i, { default: () => r });
+e.d(i, { default: () => c });
 var s = e(951288);
 e(647438);
 var n = e(793030),
     l = e(430824),
     a = e(614812),
-    c = e(388032);
-let r = (t) => {
+    r = e(388032);
+let c = (t) => {
     let { onClose: i, guildId: e } = t,
-        r = c.intl.format(c.t.ZqkXsL, { helpdeskArticle: a.z }),
+        c = r.intl.format(r.t.ZqkXsC, { helpdeskArticle: a.z }),
         d = l.Z.getGuild(e);
     return (
         null != d &&
-            (r = c.intl.format(c.t.jn0Xy8, {
+            (c = r.intl.format(r.t.jn0Xyx, {
                 guildName: d.name,
                 helpdeskArticle: a.z,
             })),
         (0, s.jsx)(n.Modal, {
             transitionState: t.transitionState,
             onClose: i,
-            title: c.intl.string(c.t.kJwpBQ),
-            subtitle: r,
+            title: r.intl.string(r.t.kJwpBW),
+            subtitle: c,
             actions: [
                 {
-                    text: c.intl.string(c.t.BddRzc),
+                    text: r.intl.string(r.t.BddRzS),
                     onClick: i,
                 },
             ],

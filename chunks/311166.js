@@ -40,12 +40,12 @@ function o(e) {
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-xl/semibold",
-                            children: a.intl.string(a.t.GG6vbm),
+                            children: a.intl.string(a.t.GG6vbr),
                         }),
                         (0, r.jsx)(l.Text, {
                             color: "text-secondary",
                             variant: "text-sm/normal",
-                            children: a.intl.string(a.t.q5lgwc),
+                            children: a.intl.string(a.t.q5lgwV),
                         }),
                     ],
                 }),

@@ -31,11 +31,11 @@ function h(e, t) {
                 e.push(
                     {
                         id: d.Sk.ONLINE,
-                        label: u.intl.string(u.t.WbGtnJ),
+                        label: u.intl.string(u.t.WbGtnH),
                     },
                     {
                         id: d.Sk.OFFLINE,
-                        label: u.intl.string(u.t.Vv0abG),
+                        label: u.intl.string(u.t.Vv0abJ),
                     },
                 ),
                 e.map((e) => {

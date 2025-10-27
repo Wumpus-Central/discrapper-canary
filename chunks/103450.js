@@ -27,8 +27,8 @@ var r = n(647438),
     N = n(699516),
     R = n(944486),
     P = n(594174),
-    w = n(979651),
-    D = n(181106),
+    D = n(979651),
+    w = n(181106),
     L = n(417363),
     x = n(358085),
     M = n(804739),
@@ -81,8 +81,8 @@ function G(e) {
             }),
         ),
         er = (0, i.e7)(
-            [D.Z],
-            () => null != B && null != B.application_id && D.Z.getState(B.application_id, k.mFx.JOIN) === k.OcF.LOADING,
+            [w.Z],
+            () => null != B && null != B.application_id && w.Z.getState(B.application_id, k.mFx.JOIN) === k.OcF.LOADING,
         ),
         ei = (0, b.q)(X),
         ea = (0, y.A)(ei),
@@ -92,7 +92,7 @@ function G(e) {
             channelId: ee,
             application: ei,
         }),
-        es = (0, i.e7)([v.Z, S.Z, T.Z, N.Z, R.Z, w.Z, C.Z], () =>
+        es = (0, i.e7)([v.Z, S.Z, T.Z, N.Z, R.Z, D.Z, C.Z], () =>
             null != Z
                 ? eo === p.Fw.CAN_JOIN
                 : (0, d.Z)({
@@ -107,7 +107,7 @@ function G(e) {
                       GuildMemberCountStore: T.Z,
                       RelationshipStore: N.Z,
                       SelectedChannelStore: R.Z,
-                      VoiceStateStore: w.Z,
+                      VoiceStateStore: D.Z,
                       PermissionStore: C.Z,
                   }),
         ),
@@ -130,7 +130,7 @@ function G(e) {
     let ed = !$ || (Q && !el),
         ef = ed && (eu || et) && !z && !en;
     ed
-        ? eu || et || null == B || (G = U.intl.formatToPlainString(U.t.SqJBnJ, { name: B.name }))
+        ? eu || et || null == B || (G = U.intl.formatToPlainString(U.t.SqJBnN, { name: B.name }))
         : (G = U.intl.string(U.t["0OiwfH"]));
     let e_ = null != (n = null == Z ? void 0 : Z.launchId) ? n : null == B ? void 0 : B.session_id,
         ep = async (e, t) => {
@@ -204,9 +204,9 @@ function G(e) {
             }
         };
     if ((!es && !W) || (!ef && null == G)) return null;
-    let em = es ? U.intl.string(U.t.VJlc0d) : U.intl.string(U.t.OKsSCQ);
+    let em = es ? U.intl.string(U.t.VJlc0S) : U.intl.string(U.t.OKsSCR);
     return (
-        el && (em = U.intl.string(U.t.DPfdsr)),
+        el && (em = U.intl.string(U.t.DPfdsq)),
         {
             buttonCTA: em,
             tooltip: G,

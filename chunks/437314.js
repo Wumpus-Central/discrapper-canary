@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => b,
     j: () => h,
 }),
     n(415506),
@@ -8,8 +8,8 @@ var r,
     i = n(951288),
     l = n(647438),
     a = n(748780),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(210887),
     u = n(981631),
     d = n(388032),
@@ -28,7 +28,7 @@ function f(e, t, n) {
     );
 }
 var h = (((r = {}).SECTION_NO_RESULTS = "SECTION_NO_RESULTS"), r);
-let g = Object.freeze({
+let m = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
             darkSrc: n(67764),
@@ -37,13 +37,13 @@ let g = Object.freeze({
             renderContent: (e) =>
                 (0, i.jsxs)(l.Fragment, {
                     children: [
-                        (0, i.jsx)(s.OZU, { note: d.intl.string(d.t.Y4vMY2) }),
+                        (0, i.jsx)(o.OZU, { note: d.intl.string(d.t.Y4vMY8) }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: p.button,
-                            children: (0, i.jsx)(s.Button, {
+                            children: (0, i.jsx)(o.Button, {
                                 variant: "primary",
-                                text: d.intl.string(d.t.w5uwoK),
+                                text: d.intl.string(d.t.w5uwoI),
                                 onClick: e,
                             }),
                         }),
@@ -55,14 +55,14 @@ let g = Object.freeze({
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t.v7HbiY) }),
+            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t.v7HbiQ) }),
         },
         SECTION_BLOCKED: {
             lightSrc: n(459505),
             darkSrc: n(356634),
             width: 433,
             height: 232,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["9xdyWF"]) }),
+            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["9xdyWB"]) }),
         },
         SECTION_PENDING: {
             lightSrc: n(979770),
@@ -73,11 +73,11 @@ let g = Object.freeze({
                 (0, i.jsxs)("div", {
                     className: p.emptyStateContainer,
                     children: [
-                        (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["aCYQ+P"]) }),
+                        (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["aCYQ+P"]) }),
                         null != e &&
-                            (0, i.jsx)(s.Button, {
+                            (0, i.jsx)(o.Button, {
                                 variant: "secondary",
-                                text: t ? d.intl.string(d.t.R40bU1) : d.intl.string(d.t.rXl8fn),
+                                text: t ? d.intl.string(d.t.R40bU2) : d.intl.string(d.t.rXl8fj),
                                 onClick: e,
                                 size: "sm",
                             }),
@@ -89,25 +89,25 @@ let g = Object.freeze({
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["vgI/EB"]) }),
+            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["vgI/EF"]) }),
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(55346),
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t["7sW4h4"]) }),
+            renderContent: () => (0, i.jsx)(o.OZU, { note: d.intl.string(d.t["7sW4h1"]) }),
         },
     }),
-    m = (e) => {
+    g = (e) => {
         let { theme: t } = e,
-            n = d.intl.string(d.t["oi+B4u"]);
-        return (0, i.jsx)(s.ubH, {
+            n = d.intl.string(d.t["oi+B4p"]);
+        return (0, i.jsx)(o.ubH, {
             theme: t,
-            children: (0, i.jsx)(s.OZU, { note: n }),
+            children: (0, i.jsx)(o.OZU, { note: n }),
         });
     };
-class b extends l.PureComponent {
+class _ extends l.PureComponent {
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
             r = { opacity: this.state.opacity },
@@ -115,15 +115,15 @@ class b extends l.PureComponent {
                 switch (e) {
                     case u.pJs.ADD_FRIEND:
                     case u.pJs.ALL:
-                        return g.SECTION_ALL;
+                        return m.SECTION_ALL;
                     case u.pJs.ONLINE:
-                        return g.SECTION_ONLINE;
+                        return m.SECTION_ONLINE;
                     case u.pJs.PENDING:
-                        return g.SECTION_PENDING;
+                        return m.SECTION_PENDING;
                     case u.pJs.SUGGESTIONS:
-                        return g.SECTION_SUGGESTIONS;
+                        return m.SECTION_SUGGESTIONS;
                     case "SECTION_NO_RESULTS":
-                        return g.SECTION_NO_RESULTS;
+                        return m.SECTION_NO_RESULTS;
                     default:
                         throw Error("FriendsEmptyState: Invalid empty state");
                 }
@@ -132,12 +132,12 @@ class b extends l.PureComponent {
             ? (0, i.jsx)(a.Z.div, {
                   className: p.friendsEmpty,
                   style: r,
-                  children: (0, i.jsx)(m, { theme: n }),
+                  children: (0, i.jsx)(g, { theme: n }),
               })
             : (0, i.jsx)(a.Z.div, {
                   className: p.friendsEmpty,
                   style: r,
-                  children: (0, i.jsx)(s.ubH, {
+                  children: (0, i.jsx)(o.ubH, {
                       theme: n,
                       children: l.renderContent(t),
                   }),
@@ -161,4 +161,4 @@ class b extends l.PureComponent {
             });
     }
 }
-let _ = o.ZP.connectStores([c.Z], () => ({ theme: c.Z.theme }), { forwardRef: !0 })(b);
+let b = s.ZP.connectStores([c.Z], () => ({ theme: c.Z.theme }), { forwardRef: !0 })(_);

@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(115849),
-    o = n(645792),
-    s = n(787642),
+    s = n(645792),
+    o = n(787642),
     c = n(388032),
     u = n(979493);
 function d() {
@@ -14,7 +14,7 @@ function d() {
             (0, r.jsx)(l.Heading, {
                 variant: "heading-lg/semibold",
                 className: u.title,
-                children: c.intl.string(c.t.w5uwoK),
+                children: c.intl.string(c.t.w5uwoI),
             }),
             (0, r.jsx)(a.Z, {}),
         ],
@@ -22,6 +22,6 @@ function d() {
 }
 let p = function () {
     return (0, r.jsxs)(i.Fragment, {
-        children: [(0, r.jsx)(d, {}), (0, o.b)() && (0, r.jsx)(s.Z, {})],
+        children: [(0, r.jsx)(d, {}), (0, s.b)() && (0, r.jsx)(o.Z, {})],
     });
 };

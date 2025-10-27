@@ -122,8 +122,8 @@ function C() {
         [n, o] = (0, s.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
         c = l.useMemo(
             () => ({
-                title: O.intl.string(O.t.Kv519f),
-                body: O.intl.string(O.t.cTGJBQ),
+                title: O.intl.string(O.t.Kv519a),
+                body: O.intl.string(O.t.cTGJBZ),
                 badge: "new",
                 position: "right",
                 align: "center",
@@ -169,12 +169,12 @@ function _() {
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: O.intl.string(O.t.zihbmp),
+                children: O.intl.string(O.t.zihbmv),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: O.intl.string(O.t.XclvsL),
+                children: O.intl.string(O.t.XclvsB),
             }),
         ],
     });

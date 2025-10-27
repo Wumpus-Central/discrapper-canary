@@ -3,36 +3,36 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(846519),
+    s = n(442837),
+    o = n(846519),
     c = n(28664),
     u = n(780384),
     d = n(755721),
     p = n(481060),
     f = n(570140),
     h = n(659429),
-    g = n(496929),
-    m = n(558381),
-    b = n(410575),
-    _ = n(224336),
+    m = n(496929),
+    g = n(558381),
+    _ = n(410575),
+    b = n(224336),
     E = n(730749),
     O = n(666743),
-    v = n(115130),
-    y = n(812206),
-    I = n(770146),
+    I = n(115130),
+    v = n(812206),
+    y = n(770146),
     C = n(600164),
     S = n(606081),
-    N = n(252618),
-    T = n(100159),
-    P = n(646288),
-    j = n(984370),
+    T = n(252618),
+    N = n(100159),
+    j = n(646288),
+    P = n(984370),
     x = n(706454),
-    Z = n(210887),
-    A = n(430824),
+    A = n(210887),
+    Z = n(430824),
     w = n(496675),
     L = n(525395),
-    R = n(558314),
-    D = n(580130),
+    D = n(558314),
+    R = n(580130),
     M = n(55563),
     k = n(551428),
     U = n(695103),
@@ -42,13 +42,13 @@ var r = n(951288),
     V = n(630388),
     F = n(937615),
     z = n(73346),
-    W = n(3570),
-    Y = n(689796),
+    Y = n(3570),
+    W = n(689796),
     q = n(15470),
     K = n(506648),
     Q = n(449275),
-    X = n(445986),
-    J = n(119520),
+    J = n(445986),
+    X = n(119520),
     $ = n(450233),
     ee = n(726581),
     et = n(74153),
@@ -57,8 +57,8 @@ var r = n(951288),
     ei = n(176055),
     el = n(843445),
     ea = n(981631),
-    eo = n(186901),
-    es = n(388032),
+    es = n(186901),
+    eo = n(388032),
     ec = n(561537);
 function eu(e, t, n) {
     return (
@@ -126,7 +126,7 @@ class ef extends i.PureComponent {
             (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = ea.SaU;
         (null == t || t.isSlimDirectoryVersion()) && a(),
-            null != e && (n || i || (0, g.yD)(e.applicationId), r && f.Z.wait(() => (0, h.$)(e.applicationId))),
+            null != e && (n || i || (0, m.yD)(e.applicationId), r && f.Z.wait(() => (0, h.$)(e.applicationId))),
             this.trackViewed(),
             this.replaceUrlWithSlug();
     }
@@ -138,17 +138,17 @@ class ef extends i.PureComponent {
             skuId: i,
             storeListingId: l,
             slug: a,
-            storeListing: o,
-            fetchStoreListing: s,
+            storeListing: s,
+            fetchStoreListing: o,
         } = this.props;
         if (
-            (o !== e.storeListing &&
-                null != o &&
-                (0, W.s)(eo.jE.STORE_LISTING, {
+            (s !== e.storeListing &&
+                null != s &&
+                (0, Y.s)(es.jE.STORE_LISTING, {
                     skuId: i,
                     slug: a,
                 }),
-            (t !== e.locale || i !== e.skuId) && s(),
+            (t !== e.locale || i !== e.skuId) && o(),
             r && !e.shouldFetchStatistics)
         ) {
             if (null == n) throw Error("Unexpected missing sku");
@@ -190,33 +190,33 @@ class ef extends i.PureComponent {
                     location: r.location.page,
                     source: this._analyticsSource,
                 }),
-                (0, T.Z)(e, !0),
+                (0, N.Z)(e, !0),
             ),
         ),
             (this._trackedViewed = !0);
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
-        return (0, r.jsx)(j.Z, {
+        return (0, r.jsx)(P.Z, {
             isAuthenticated: l,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(j.Z.Icon, {
+                              (0, r.jsx)(P.Z.Icon, {
                                   icon: p.lO_,
-                                  "aria-label": es.intl.string(es.t["P1/Erq"]),
+                                  "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                               }),
-                              (0, r.jsx)(j.Z.Title, { children: n.name }),
+                              (0, r.jsx)(P.Z.Title, { children: n.name }),
                           ],
                       })
                     : null != t && t.premium
                       ? (0, r.jsxs)(i.Fragment, {
                             children: [
-                                (0, r.jsx)(j.Z.Icon, {
+                                (0, r.jsx)(P.Z.Icon, {
                                     icon: p.SrA,
-                                    "aria-label": es.intl.string(es.t.Ipxkog),
+                                    "aria-label": eo.intl.string(eo.t.Ipxkog),
                                 }),
                                 (0, r.jsx)(et.Z, { sku: t }),
                             ],
@@ -224,11 +224,11 @@ class ef extends i.PureComponent {
                       : null != t
                         ? (0, r.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsx)(j.Z.Icon, {
+                                  (0, r.jsx)(P.Z.Icon, {
                                       icon: p.lO_,
-                                      "aria-label": es.intl.string(es.t["P1/Erq"]),
+                                      "aria-label": eo.intl.string(eo.t["P1/Erq"]),
                                   }),
-                                  (0, r.jsx)(j.Z.Title, { children: t.name }),
+                                  (0, r.jsx)(P.Z.Title, { children: t.name }),
                               ],
                           })
                         : null,
@@ -323,11 +323,11 @@ class ef extends i.PureComponent {
         if (null == l) throw Error("Rendering ApplicationStoreListing without description");
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(I.Z, {
+                (0, r.jsx)(y.Z, {
                     tag: "h1",
-                    children: es.intl.format(es.t.tluX4B, { name: n.name }),
+                    children: eo.intl.format(eo.t.tluX4B, { name: n.name }),
                 }),
-                (0, r.jsx)(_.Z, {}),
+                (0, r.jsx)(b.Z, {}),
                 (0, r.jsx)(q.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
@@ -339,7 +339,7 @@ class ef extends i.PureComponent {
         });
     }
     renderApplicationContentRating(e) {
-        return (0, r.jsx)(Y.Z, {
+        return (0, r.jsx)(W.Z, {
             sku: e,
             className: ec.contentRating,
         });
@@ -363,16 +363,16 @@ class ef extends i.PureComponent {
                 image: S.Z.Product.Image(i),
                 sku: e.id,
             }),
-            o = e.getPrice();
-        if (null != o) {
-            let { amount: e, currency: t } = o;
+            s = e.getPrice();
+        if (null != s) {
+            let { amount: e, currency: t } = s;
             a.offers = S.Z.Offer({
                 priceCurrency: t.toUpperCase(),
                 price: (0, F.T4)(e, t, { style: "decimal" }),
             });
         }
-        let s = S.Z.ItemPage({ mainEntity: a });
-        return (0, r.jsx)(S.Z, { data: s });
+        let o = S.Z.ItemPage({ mainEntity: a });
+        return (0, r.jsx)(S.Z, { data: o });
     }
     renderSmall(e, t, n) {
         return (0, r.jsxs)("div", {
@@ -443,10 +443,10 @@ class ef extends i.PureComponent {
                   });
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)(N.yY, { location: e.name }),
+                    (0, r.jsx)(T.yY, { location: e.name }),
                     this.renderJsonLD(),
                     this.renderHeader(e, t),
-                    (0, r.jsx)(J.Z, { game: e }),
+                    (0, r.jsx)(X.Z, { game: e }),
                     n,
                 ],
             });
@@ -455,13 +455,13 @@ class ef extends i.PureComponent {
             ? (0, r.jsxs)("div", {
                   className: ec.listingWrapper,
                   children: [
-                      (0, r.jsx)(N.yY, { location: e.name }),
+                      (0, r.jsx)(T.yY, { location: e.name }),
                       this.renderJsonLD(),
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(_.Z, {
                           section: ea.jXE.NAVIGATION,
                           children: this.renderHeader(e, t),
                       }),
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(_.Z, {
                           section: ea.jXE.BODY,
                           children: this.renderListing(),
                       }),
@@ -469,7 +469,7 @@ class ef extends i.PureComponent {
               })
             : (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(N.yY, { location: e.name }),
+                      (0, r.jsx)(T.yY, { location: e.name }),
                       this.renderJsonLD(),
                       this.renderHeader(e, t),
                       this.renderListing(),
@@ -478,7 +478,7 @@ class ef extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            eu(this, "showCopyLinkTextTimeout", new s.V7()),
+            eu(this, "showCopyLinkTextTimeout", new o.V7()),
             eu(this, "_trackedViewed", !1),
             eu(this, "_analyticsSource", null),
             eu(this, "_extraAnalyticsProperties", null),
@@ -491,7 +491,7 @@ class ef extends i.PureComponent {
                 null != r &&
                     B.default.track(
                         ea.rMx.STORE_LISTING_MEDIA_SCROLLED,
-                        ep(ed({}, (0, T.Z)(r)), {
+                        ep(ed({}, (0, N.Z)(r)), {
                             card_index: n,
                             card_type: e.type === ea.s9s.IMG ? "image" : "video",
                         }),
@@ -530,7 +530,7 @@ class ef extends i.PureComponent {
                 let { channel: e, guild: t } = this.props;
                 return null != e && null != t && (w.Z.can(ea.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, r.jsx)(d.zx, {
-                          "aria-label": es.intl.string(es.t.zJrgTG),
+                          "aria-label": eo.intl.string(eo.t.zJrgTG),
                           look: d.zx.Looks.BLANK,
                           size: d.zx.Sizes.NONE,
                           onClick: this.handleCreateInstantInvite,
@@ -548,11 +548,11 @@ class ef extends i.PureComponent {
                 return this.isChannelType
                     ? this.renderInviteLink()
                     : (0, r.jsx)(c.u, {
-                          text: e ? es.intl.string(es.t.uvTCOY) : null,
+                          text: e ? eo.intl.string(eo.t.uvTCOY) : null,
                           position: "left",
                           forceOpen: e,
                           children: (0, r.jsx)(d.zx, {
-                              "aria-label": e ? es.intl.string(es.t.uvTCOY) : es.intl.string(es.t.WqhZss),
+                              "aria-label": e ? eo.intl.string(eo.t.uvTCOY) : eo.intl.string(eo.t.WqhZss),
                               look: d.zx.Looks.BLANK,
                               size: d.zx.Sizes.NONE,
                               onClick: this.copyCurrentUrl,
@@ -570,9 +570,9 @@ class ef extends i.PureComponent {
                         isInTestMode: n,
                         slug: i,
                         storeListing: l,
-                        analyticsContext: { location: o },
+                        analyticsContext: { location: s },
                     } = this.props,
-                    { showHeaderPurchaseUnit: s } = this.state;
+                    { showHeaderPurchaseUnit: o } = this.state;
                 return (0, r.jsxs)("div", {
                     className: ec.headerBarListing,
                     children: [
@@ -590,10 +590,10 @@ class ef extends i.PureComponent {
                                           currentStoreListingId: null != l ? l.id : null,
                                           onStoreListingSelect: (e) => {
                                               null != t &&
-                                                  (0, m.yt)(t.id, {
+                                                  (0, g.yt)(t.id, {
                                                       slug: i,
                                                       analyticsSource: {
-                                                          page: o.page,
+                                                          page: s.page,
                                                           section: ea.jXE.NAVIGATION,
                                                           object: null,
                                                       },
@@ -606,9 +606,9 @@ class ef extends i.PureComponent {
                         (0, r.jsx)("div", {
                             className: ec.headerSection,
                             children: (0, r.jsxs)("div", {
-                                className: a()(ec.headerPurchase, { [ec.active]: s }),
+                                className: a()(ec.headerPurchase, { [ec.active]: o }),
                                 children: [
-                                    null != t ? (0, P.Z)(t) : null,
+                                    null != t ? (0, j.Z)(t) : null,
                                     null != e && null != t ? (0, r.jsx)("div", { children: "deprecated!" }) : null,
                                     (0, r.jsx)($.Z, {
                                         messageStyle: $.G.SHORT,
@@ -624,9 +624,9 @@ class ef extends i.PureComponent {
             eu(this, "renderCarousel", (e, t) => {
                 if (0 === t.carouselItems.length) return null;
                 let { pageSize: n, isFocused: i } = this.props;
-                return (0, r.jsx)(b.Z, {
+                return (0, r.jsx)(_.Z, {
                     section: ea.jXE.HERO,
-                    children: (0, r.jsx)(X.Z, {
+                    children: (0, r.jsx)(J.Z, {
                         pageSize: n,
                         items: t.carouselItems.map((n) => this.parseMediaItems(e, n, t.assets)),
                         autoplayInterval: 8000,
@@ -651,39 +651,39 @@ class ef extends i.PureComponent {
 }
 let eh = (0, E.Z)(
     (0, O.Z)(
-        o.ZP.connectStores([R.Z, Z.Z, x.default, G.Z, k.Z, M.Z, U.Z, v.Z, y.Z, L.Z, A.Z, D.Z], (e) => {
+        s.ZP.connectStores([D.Z, A.Z, x.default, G.Z, k.Z, M.Z, U.Z, I.Z, v.Z, L.Z, Z.Z, R.Z], (e) => {
             let t,
                 n,
                 r,
-                { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
+                { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: s, channel: o } = e;
             if (null == l) {
                 if (null == i) throw Error("Needs applicationId or skuId");
-                (t = i), null != (l = null != (n = M.Z.get(i)) ? n.applicationId : null) && (r = y.Z.getApplication(l));
+                (t = i), null != (l = null != (n = M.Z.get(i)) ? n.applicationId : null) && (r = v.Z.getApplication(l));
             } else if (null == i) {
                 if (null == l) throw Error("Needs applicationId or skuId");
-                null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? M.Z.get(t) : null);
+                null != (r = v.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? M.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, ea.l4R.STICKER) && (n = null);
-            let c = null != l && (U.Z.inTestModeForApplication(l) || v.Z.inDevModeForApplication(l));
+            let c = null != l && (U.Z.inTestModeForApplication(l) || I.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
-                application: null != l ? y.Z.getApplication(l) : null,
-                isFetchingEntitlements: null != l && D.Z.applicationIdsFetching.has(l),
-                didFetchEntitlements: null != l && D.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: o && null != l && L.Z.shouldFetchStatisticsForApplication(l),
+                application: null != l ? v.Z.getApplication(l) : null,
+                isFetchingEntitlements: null != l && R.Z.applicationIdsFetching.has(l),
+                didFetchEntitlements: null != l && R.Z.applicationIdsFetched.has(l),
+                shouldFetchStatistics: s && null != l && L.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: G.Z.isFocused(),
                 storeListing: k.Z.getStoreListing({
                     storeListingId: a,
                     skuId: t,
-                    channelId: null != s ? s.id : null,
+                    channelId: null != o ? o.id : null,
                     isTestMode: c,
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: R.Z.didMatureAgree,
-                theme: Z.Z.theme,
+                matureAgree: D.Z.didMatureAgree,
+                theme: A.Z.theme,
                 locale: x.default.locale,
-                guild: null != s ? A.Z.getGuild(s.getGuildId()) : null,
+                guild: null != o ? Z.Z.getGuild(o.getGuildId()) : null,
             };
         })(ef),
     ),

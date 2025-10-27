@@ -22,20 +22,20 @@ function g(e) {
             (0, r.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: d.intl.string(d.t.Ms33Dg),
+                children: d.intl.string(d.t.Ms33Ds),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                children: d.intl.string(d.t.xK7oiY),
+                children: d.intl.string(d.t.xK7oic),
             }),
             (0, r.jsx)(l.u, {
-                text: d.intl.string(d.t.VAIHXV),
+                text: d.intl.string(d.t.VAIHXQ),
                 shouldShow: !n,
                 children: (0, r.jsx)("div", {
                     children: (0, r.jsx)(a.Button, {
                         variant: "primary",
-                        text: d.intl.string(d.t.ZXeJbW),
+                        text: d.intl.string(d.t.ZXeJbS),
                         disabled: !n,
                         onClick: () => {
                             (0, s.q)(t.id, { demonetized: !0 });

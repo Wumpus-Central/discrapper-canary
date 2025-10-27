@@ -21,7 +21,7 @@ function E(e) {
         [u, h] = i.useState(c),
         [v, C] = i.useState(!1);
     return (0, a.jsx)(r.Modal, {
-        title: I.intl.string(I.t["4wcdEx"]),
+        title: I.intl.string(I.t["4wcdE/"]),
         actions: [],
         transitionState: n,
         onClose: t,
@@ -34,7 +34,7 @@ function E(e) {
         actionBarInput: (0, a.jsx)(d.rsf, {
             checked: v,
             onChange: (e) => C(e),
-            label: I.intl.string(I.t.UwOLJC),
+            label: I.intl.string(I.t.UwOLJO),
         }),
         children: (0, a.jsx)(m, {
             guildId: u,
@@ -127,7 +127,7 @@ function N(e) {
     return (0, a.jsx)(d.Button, {
         variant: "primary",
         size: "sm",
-        text: I.intl.string(I.t.OYkgVl),
+        text: I.intl.string(I.t.OYkgVk),
         onClick: function () {
             (0, v.kj)(n, t);
         },
@@ -138,7 +138,7 @@ function y(e) {
     return (0, a.jsx)(d.Button, {
         variant: "secondary",
         size: "sm",
-        text: I.intl.string(I.t.N86XcH),
+        text: I.intl.string(I.t.N86XcP),
         onClick: function () {
             (0, v.oC)(n);
         },

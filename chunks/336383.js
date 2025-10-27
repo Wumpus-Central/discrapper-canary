@@ -122,7 +122,7 @@ let I = i.forwardRef(function (e, t) {
               "aria-labelledby": I,
               children: (0, r.jsx)(s.kL8, {
                   className: m.clickableContainer,
-                  "aria-label": h.intl.string(h.t.pD1L1t),
+                  "aria-label": h.intl.string(h.t.pD1L1u),
                   focusProps: { ringTarget: t },
                   onClick: () => {
                       null == g || g({ action: "PRESS_CARD" }),

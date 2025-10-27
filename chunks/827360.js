@@ -3,14 +3,14 @@ var r = n(951288),
     i = n(647438),
     l = n(907862),
     a = n(100527),
-    o = n(906732),
-    s = n(335131),
+    s = n(906732),
+    o = n(335131),
     c = n(215023),
     u = n(388032),
     d = n(595619);
 let p = (e) => {
     let { targetElementRef: t, onRequestClose: n, onClick: p } = e,
-        { analyticsLocations: f } = (0, o.ZP)(a.Z.HOME_PAGE_SHOP_TAB),
+        { analyticsLocations: f } = (0, s.ZP)(a.Z.HOME_PAGE_SHOP_TAB),
         h = i.useRef(n);
     return (
         (h.current = n),
@@ -27,8 +27,8 @@ let p = (e) => {
             align: "top",
             size: "md",
             caretConfig: { align: "start" },
-            title: u.intl.string(u.t.epBu6O),
-            body: u.intl.string(u.t["o8+3AQ"]),
+            title: u.intl.string(u.t.epBu6F),
+            body: u.intl.string(u.t["o8+3AX"]),
             graphic: {
                 type: "image",
                 src: d.Z,
@@ -36,11 +36,11 @@ let p = (e) => {
             gradientColor: "blue",
             actions: [
                 {
-                    text: u.intl.string(u.t.dp9qDg),
+                    text: u.intl.string(u.t.dp9qDi),
                     variant: "primary",
                     onClick: () => {
                         null == p || p(),
-                            (0, s.mK)({
+                            (0, o.mK)({
                                 analyticsLocations: f,
                                 analyticsSource: a.Z.HOME_PAGE_SHOP_TAB,
                                 tab: c.AW.HOME,

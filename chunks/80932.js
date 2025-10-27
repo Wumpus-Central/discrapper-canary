@@ -155,8 +155,8 @@ function C(e) {
             (e) =>
                 ((e.emojis = S(e.emojis)), i().size(e.emojis) >= E.oX)
                     ? (m.Z.show({
-                          title: b.intl.string(b.t["+XYXtb"]),
-                          body: b.intl.formatToPlainString(b.t.JaIyFh, { count: E.oX }),
+                          title: b.intl.string(b.t["+XYXtZ"]),
+                          body: b.intl.formatToPlainString(b.t.JaIyFi, { count: E.oX }),
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),

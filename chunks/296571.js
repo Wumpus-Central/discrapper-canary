@@ -24,7 +24,7 @@ function d(e) {
             var e;
             return o.Z.getChannel(null == (e = n.messageReference) ? void 0 : e.channel_id);
         }),
-        b = c.intl.format(c.t.cZ9Uf3, {
+        b = c.intl.format(c.t.cZ9Uf2, {
             actorName: m.nick,
             actorHook: g,
             threadName: null != (t = null == E ? void 0 : E.name) ? t : n.content,

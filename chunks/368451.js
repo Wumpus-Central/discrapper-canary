@@ -182,8 +182,8 @@ function T(e) {
                   }
                 : void 0,
         ),
-        w = null != S.modal,
-        D = s > 1,
+        D = null != S.modal,
+        w = s > 1,
         L = N === p.gH.LOADING,
         [x, M] = i.useState(!1),
         [k, j] = i.useState(() => new Set(n.filter((e) => e.default).map((e) => e.value))),
@@ -210,7 +210,7 @@ function T(e) {
         !x && ((k.size === U.size && Array.from(U).every((e) => k.has(e))) || Z());
     }, [x, k, U, Z]);
     let F = c.UNb;
-    D ? (F = c.gzz) : 0 === u && (F = c.s6k);
+    w ? (F = c.gzz) : 0 === u && (F = c.s6k);
     let V = (0, c.cYr)({
         value: k,
         onChange: (e) => j(e),
@@ -226,29 +226,29 @@ function T(e) {
                         {
                             isProcessing: L,
                             isDisabled: g || N === p.gH.DISABLED || R,
-                            className: o()(m.select, { [m.inModal]: w }),
-                            options: n.map((e) => y(E({}, e), { disabled: D && !k.has(e.value) && k.size === s })),
+                            className: o()(m.select, { [m.inModal]: D }),
+                            options: n.map((e) => y(E({}, e), { disabled: w && !k.has(e.value) && k.size === s })),
                             placeholder: b,
                             onClose: () => M(!1),
                             onOpen: () => M(!0),
                             maxVisibleItems: 5,
-                            closeOnSelect: !D,
+                            closeOnSelect: !w,
                             optionClassName: m.selectOption,
                             renderOptionLabel: (e) =>
                                 (0, r.jsx)(
                                     O,
                                     y(E({}, e), {
-                                        isDisabled: D && !k.has(e.value) && k.size === s,
+                                        isDisabled: w && !k.has(e.value) && k.size === s,
                                         isOffset: B,
                                     }),
                                 ),
-                            renderOptionValue: (e) => (D ? (0, r.jsx)(I, { options: e }) : (0, r.jsx)(v, E({}, e[0]))),
+                            renderOptionValue: (e) => (w ? (0, r.jsx)(I, { options: e }) : (0, r.jsx)(v, E({}, e[0]))),
                         },
                         V,
                     ),
                 ),
             }),
-            null == P || w ? null : (0, r.jsx)(f.st, y(E({}, (0, f.c4)(P)), { className: m.error })),
+            null == P || D ? null : (0, r.jsx)(f.st, y(E({}, (0, f.c4)(P)), { className: m.error })),
         ],
     });
 }

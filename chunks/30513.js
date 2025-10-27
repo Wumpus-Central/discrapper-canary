@@ -16,7 +16,7 @@ var s = n(388032);
 let l = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: i.Ka2,
-        description: s.intl.string(s.t.iGuEFR),
+        description: s.intl.string(s.t.iGuEFe),
     }),
     c = function () {
         let e =
@@ -32,17 +32,17 @@ let l = () => ({
     u = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: i.Ka2,
-        description: s.intl.string(s.t["n/HqCg"]),
+        description: s.intl.string(s.t["n/HqCh"]),
     }),
     d = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: i.OUq,
-        description: s.intl.string(s.t.AU0zcX),
+        description: s.intl.string(s.t.AU0zcQ),
     }),
     f = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css,
         icon: i.lZ8,
-        description: s.intl.string(s.t.zZe94u),
+        description: s.intl.string(s.t.zZe94m),
     }),
     _ = function () {
         let e =
@@ -75,7 +75,7 @@ let l = () => ({
         return {
             color: t,
             icon: i.SlE,
-            description: s.intl.formatToPlainString(s.t["12vFYG"], {
+            description: s.intl.formatToPlainString(s.t["12vFYK"], {
                 numStickers: n,
                 numEmojis: a,
             }),
@@ -84,10 +84,10 @@ let l = () => ({
     h = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
         icon: i.r7p,
-        description: s.intl.string(s.t["ThRK/v"]),
+        description: s.intl.string(s.t["ThRK/u"]),
     }),
     m = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.intl.string(s.t.SQV8g4);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.intl.string(s.t.SQV8g6);
         return {
             color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
             icon: i.EO4,
@@ -97,7 +97,7 @@ let l = () => ({
     g = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
         icon: a.Z,
-        description: s.intl.string(s.t.Tm40TU),
+        description: s.intl.string(s.t.Tm40TZ),
     }),
     E = function () {
         let e =
@@ -107,7 +107,7 @@ let l = () => ({
         return {
             color: e,
             icon: i.hGI,
-            description: s.intl.string(s.t.oIKhwc),
+            description: s.intl.string(s.t.oIKhwT),
         };
     };
 function b() {

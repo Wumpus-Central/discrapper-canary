@@ -31,9 +31,9 @@ let g = (e) => {
         }, [t, g, n]),
         v = i.useMemo(() => _ || h, [_, h]);
     return (0, r.jsx)(o.JZ, {
-        title: p.intl.formatToPlainString(p.t.U3yyFh, { username: x }),
-        description: p.intl.string(p.t.naWE6e),
-        buttonText: v ? p.intl.string(p.t.nDdxOD) : p.intl.string(p.t.ICYEfX),
+        title: p.intl.formatToPlainString(p.t.U3yyFs, { username: x }),
+        description: p.intl.string(p.t.naWE6W),
+        buttonText: v ? p.intl.string(p.t.nDdxOG) : p.intl.string(p.t.ICYEfY),
         buttonDisabled: v,
         onButtonPress: f,
     });

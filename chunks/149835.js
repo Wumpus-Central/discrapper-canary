@@ -10,8 +10,8 @@ var i = n(442837),
     s = n(626135),
     d = n(630388),
     b = n(981631),
-    p = n(388032);
-function f(t) {
+    f = n(388032);
+function p(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
@@ -45,12 +45,12 @@ function O(t, e) {
         c.h(t.id, t.branchId, e),
             s.default.track(
                 b.rMx.APPLICATION_SETTINGS_UPDATED,
-                f({ hidden_enabled: (0, d.yE)(e, b.eHb.HIDDEN) }, t.getAnalyticsData()),
+                p({ hidden_enabled: (0, d.yE)(e, b.eHb.HIDDEN) }, t.getAnalyticsData()),
             );
     }
     return (0, r.jsx)(a.sNh, {
         id: "in-library",
-        label: t.isHidden() ? p.intl.string(p.t["0dnEUF"]) : p.intl.string(p.t.TuJXLy),
+        label: t.isHidden() ? f.intl.string(f.t["0dnEUJ"]) : f.intl.string(f.t.TuJXLx),
         action: function () {
             null != t &&
                 null != e &&
@@ -60,11 +60,11 @@ function O(t, e) {
                           var n, i;
                           return (0, r.jsx)(
                               a.ConfirmModal,
-                              ((n = f(
+                              ((n = p(
                                   {
-                                      header: p.intl.string(p.t.oB7isr),
-                                      confirmText: p.intl.string(p.t.OWjIiY),
-                                      cancelText: p.intl.string(p.t["ETE/oK"]),
+                                      header: f.intl.string(f.t.oB7isi),
+                                      confirmText: f.intl.string(f.t.OWjIiV),
+                                      cancelText: f.intl.string(f.t["ETE/oC"]),
                                       onConfirm: () => y(),
                                       confirmButtonColor: l.zx.Colors.BRAND,
                                   },
@@ -74,7 +74,7 @@ function O(t, e) {
                                   {
                                       children: (0, r.jsx)(a.Text, {
                                           variant: "text-md/normal",
-                                          children: p.intl.format(p.t.HXfjKi, { name: e.name }),
+                                          children: f.intl.format(f.t.HXfjKt, { name: e.name }),
                                       }),
                                   }),
                               Object.getOwnPropertyDescriptors

@@ -129,8 +129,8 @@ class I extends (r = a.Component) {
             } = this.props,
             R = S ? f.g : "textarea",
             P = this.hasError(),
-            w = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
-            D = this.getAriaDescribedBy();
+            D = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
+            w = this.getAriaDescribedBy();
         return (0, i.jsxs)("div", {
             className: s()(h.inputWrapper, { [p.flex]: T }),
             children: [
@@ -145,8 +145,8 @@ class I extends (r = a.Component) {
                                     [h.disabled]: n,
                                     [p.resizeable]: E,
                                 }),
-                                "aria-labelledby": w,
-                                "aria-describedby": D,
+                                "aria-labelledby": D,
+                                "aria-describedby": w,
                                 "aria-invalid": P,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: v,

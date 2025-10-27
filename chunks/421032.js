@@ -1,4 +1,4 @@
-t.d(n, { Z: () => v });
+t.d(n, { Z: () => f });
 var i = t(951288);
 t(647438);
 var a = t(120356),
@@ -13,12 +13,12 @@ var a = t(120356),
     p = t(894017),
     g = t(954313),
     m = t(390966),
-    b = t(765305),
-    h = t(388032),
-    f = t(709380);
-function v(e) {
-    let { recurrenceId: n, originalScheduledStartTime: a, guildEventId: v, onClick: x, isActive: C } = e,
-        I = (0, l.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(v)),
+    h = t(765305),
+    b = t(388032),
+    v = t(709380);
+function f(e) {
+    let { recurrenceId: n, originalScheduledStartTime: a, guildEventId: f, onClick: x, isActive: C } = e,
+        I = (0, l.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(f)),
         j = (0, p.Z)(n, null == I ? void 0 : I.id),
         k = (0, l.e7)([u.Z], () => u.Z.getGuild(null == I ? void 0 : I.guild_id)),
         w = (0, l.e7)([d.Z], () => d.Z.getChannel(null == I ? void 0 : I.channel_id));
@@ -28,10 +28,10 @@ function v(e) {
             (null == j ? void 0 : j.scheduled_start_time) != null
                 ? new Date(null == j ? void 0 : j.scheduled_start_time)
                 : a,
-        E = (0, g.DK)(I),
-        S = y ? b.p1.CANCELED : b.p1.SCHEDULED;
-    E === n && (S = I.status);
-    let Z =
+        Z = (0, g.DK)(I),
+        S = y ? h.p1.CANCELED : h.p1.SCHEDULED;
+    Z === n && (S = I.status);
+    let E =
             (null == I ? void 0 : I.scheduled_start_time) != null
                 ? (0, g.lh)(j, N, new Date(null == I ? void 0 : I.scheduled_start_time))
                 : null,
@@ -81,10 +81,10 @@ function v(e) {
                     });
         };
     return (0, i.jsxs)(c.kL8, {
-        className: r()(f.container, {
-            [f.canceled]: y,
-            [f.clickable]: null != x,
-            [f.active]: C,
+        className: r()(v.container, {
+            [v.canceled]: y,
+            [v.clickable]: null != x,
+            [v.active]: C,
         }),
         onClick: (e) => {
             e.stopPropagation(), y || null == x || x(n);
@@ -94,32 +94,32 @@ function v(e) {
         children: [
             (0, i.jsx)(m.z, {
                 startTime: N.toISOString(),
-                status: null != Z ? Z : S,
+                status: null != E ? E : S,
                 eventType: I.entity_type,
                 guildEventId: I.id,
                 recurrenceId: n,
-                className: f.timeStatus,
+                className: v.timeStatus,
             }),
             y &&
                 (0, i.jsx)(c.Text, {
                     variant: "text-sm/semibold",
                     color: "text-danger",
-                    className: f.canceledStatus,
-                    children: h.intl.string(h.t.fyBVRm),
+                    className: v.canceledStatus,
+                    children: b.intl.string(b.t.fyBVRm),
                 }),
             (0, i.jsx)(o.u, {
-                text: h.intl.string(h.t["UKOtz+"]),
+                text: b.intl.string(b.t["UKOtz+"]),
                 position: "top",
-                "aria-label": h.intl.string(h.t.bt75uw),
+                "aria-label": b.intl.string(b.t.bt75uw),
                 children: (0, i.jsx)(c.P3F, {
                     onClick: P,
-                    className: f.iconButton,
+                    className: v.iconButton,
                     children: (0, i.jsx)(c.xhG, {
                         size: "custom",
                         color: "currentColor",
                         width: 20,
                         height: 20,
-                        className: f.icon,
+                        className: v.icon,
                     }),
                 }),
             }),

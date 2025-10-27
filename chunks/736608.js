@@ -7,7 +7,7 @@ var i = n(509613),
     a = n(663623),
     o = n(388032);
 let c = (0, i.k4)(r.n.NOTIFICATIONS_EMAIL_CATEGORY, {
-    useTitle: () => o.intl.string(o.t["w/qqKC"]),
+    useTitle: () => o.intl.string(o.t["w/qqKK"]),
     init: function () {
         let { initialized: t } = u.Z.getEmailSettings();
         t || (0, l.Y7)();

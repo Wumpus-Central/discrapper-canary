@@ -25,7 +25,7 @@ function C(t) {
         }, [i, v]),
         (0, s.jsx)(o.ExpressiveModal, {
             title: _.intl.string(_.t["2tv5YG"]),
-            subtitle: _.intl.string(_.t.pgwlDw),
+            subtitle: _.intl.string(_.t.pgwlD7),
             transitionState: C,
             size: "sm",
             graphic: {
@@ -49,7 +49,7 @@ function C(t) {
                 },
                 {
                     variant: "primary",
-                    text: _.intl.string(_.t["5e8Mrq"]),
+                    text: _.intl.string(_.t["5e8Mrp"]),
                     onClick: () => {
                         h(),
                             (0, c.Q3)(v, {
@@ -80,7 +80,7 @@ function C(t) {
                             (0, s.jsx)(l.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: _.intl.string(_.t["0vKo5O"]),
+                                children: _.intl.string(_.t["0vKo5F"]),
                             }),
                         ],
                     }),
@@ -95,7 +95,7 @@ function C(t) {
                             (0, s.jsx)(l.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: _.intl.string(_.t.CprEDA),
+                                children: _.intl.string(_.t.CprEDO),
                             }),
                         ],
                     }),
@@ -110,7 +110,7 @@ function C(t) {
                             (0, s.jsx)(l.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: _.intl.string(_.t.wQJMPD),
+                                children: _.intl.string(_.t.wQJMPC),
                             }),
                         ],
                     }),

@@ -13,7 +13,7 @@ function l(e) {
                 variant: "text-xs/semibold",
                 color: "text-default",
                 className: s.header,
-                children: o.intl.string(o.t["Uv/eT0"]),
+                children: o.intl.string(o.t["Uv/eTx"]),
             }),
             (0, r.jsx)("div", {
                 className: s.list,

@@ -21,7 +21,7 @@ function g(e) {
     return g && b && !h
         ? (0, r.jsx)(o.sNh, {
               id: "secure-frames-stream-verification",
-              label: f.intl.string(f.t.tjbJbW),
+              label: f.intl.string(f.t.tjbJbf),
               action: j,
           })
         : null;

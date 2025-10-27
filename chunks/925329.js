@@ -100,8 +100,8 @@ let g = i.forwardRef(function (e, t) {
     let v = null == i ? void 0 : i.name,
         I =
             null != v && "" !== v
-                ? d.intl.formatToPlainString(d.t.tiKyYm, { applicationName: v })
-                : d.intl.string(d.t["2B/phI"]);
+                ? d.intl.formatToPlainString(d.t.tiKyYg, { applicationName: v })
+                : d.intl.string(d.t["2B/phM"]);
     return (0, r.jsx)("img", {
         ref: t,
         alt: I,

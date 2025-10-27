@@ -57,7 +57,7 @@ function s(e) {
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             className: c.textInGrid,
-                            children: o.intl.format(o.t["185ggI"], { count: _ }),
+                            children: o.intl.format(o.t["185ggO"], { count: _ }),
                         }),
                     ],
                 }),

@@ -15,7 +15,7 @@ let h = i.memo(function (e) {
     let { width: t, height: n, src: a, url: h, format: m, className: g } = e,
         [E, b] = i.useState(!1),
         y = (0, u.hb)((0, c.iy)(h)),
-        O = y ? _.intl.string(_.t["5/NS7+"]) : _.intl.string(_.t.nIH0v7),
+        O = y ? _.intl.string(_.t["5/NS74"]) : _.intl.string(_.t.nIH0v8),
         v = y ? l.r7p : l.vxU;
     i.useEffect(() => {
         if (!E) return;

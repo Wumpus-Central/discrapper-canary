@@ -1,11 +1,11 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(685072),
     l = n(287734),
     a = n(906732),
-    o = n(522651),
-    s = n(15274),
+    s = n(522651),
+    o = n(15274),
     c = n(389303),
     u = n(881824),
     d = n(719100),
@@ -13,7 +13,7 @@ var i = n(685072),
     f = n(388032);
 function h(e) {
     var t, n;
-    let { tooltipText: l, onClick: s } = e,
+    let { tooltipText: l, onClick: o } = e,
         { parentAnalyticsLocation: c } = (0, a.ZP)(),
         { events: u, Component: d } = (0, i.K)();
     return (0, r.jsx)(
@@ -46,7 +46,7 @@ function h(e) {
             {
                 tooltipText: l,
                 onClick: () => {
-                    (0, o.v)(c, o.d.DISCONNECT), s();
+                    (0, s.v)(c, s.d.DISCONNECT), o();
                 },
             },
             u,
@@ -67,27 +67,27 @@ function h(e) {
         t),
     );
 }
-function g(e) {
+function m(e) {
     let { channel: t } = e;
     return (0, r.jsx)(h, {
-        tooltipText: f.intl.string(f.t.SMKyio),
+        tooltipText: f.intl.string(f.t.SMKyih),
         onClick: () => {
             if ((0, d.Z)(t)) return void (0, u.Us)(t);
             l.default.disconnect();
         },
     });
 }
-function m(e) {
+function g(e) {
     let { channel: t } = e;
     return (0, r.jsx)(h, {
-        tooltipText: f.intl.string(f.t["6vrfgo"]),
+        tooltipText: f.intl.string(f.t["6vrfgt"]),
         onClick: () => {
-            if ((0, c.Z)(t)) return void (0, s.lC)(t);
+            if ((0, c.Z)(t)) return void (0, o.lC)(t);
             l.default.disconnect();
         },
     });
 }
-function b(e) {
+function _(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, r.jsx)(g, { channel: t }) : (0, r.jsx)(m, { channel: t });
+    return t.isGuildStageVoice() ? (0, r.jsx)(m, { channel: t }) : (0, r.jsx)(g, { channel: t });
 }

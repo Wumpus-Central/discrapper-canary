@@ -49,7 +49,7 @@ function w(e) {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         className: b.heading,
-                        children: N.intl.string(N.t["0/Yz+f"]),
+                        children: N.intl.string(N.t["0/Yz+Y"]),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
@@ -61,7 +61,7 @@ function w(e) {
             (0, r.jsx)(s.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: m ? N.intl.string(N.t.hjaYYm) : N.intl.string(N.t.MAS7uL),
+                text: m ? N.intl.string(N.t.hjaYYn) : N.intl.string(N.t.MAS7uK),
                 loading: "applying" === o,
                 disabled: "claimed" !== o || m,
                 onClick: i,
@@ -74,8 +74,8 @@ function T(e) {
     var n, t;
     let { quest: s, onClose: c, transitionState: x, preview: h, location: N, sourceQuestContent: b } = e,
         T = a.useMemo(() => (0, g.xn)(s.config), [s]),
-        E = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        [A, P] = (function (e) {
+        P = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        [E, A] = (function (e) {
             let { product: n, isFetching: t } = (0, d.T)(e),
                 r = a.useMemo(() => {
                     if (null == n || t) return null;
@@ -94,20 +94,20 @@ function T(e) {
             return [r, l];
         })(null != (t = null == T ? void 0 : T.skuId) ? t : null),
         D = (null == (n = s.userStatus) ? void 0 : n.claimedAt) != null,
-        O = !h && !D,
-        [L, S] = a.useState(O ? "loading" : "claimed");
+        L = !h && !D,
+        [O, S] = a.useState(L ? "loading" : "claimed");
     a.useEffect(() => {
-        O &&
+        L &&
             (0, C.QB)(s.id, v.y$.CROSS_PLATFORM, N)
                 .then(() => S("claimed"))
                 .catch(() => S("error"));
-    }, [s.id, N, O]);
-    let R = !0 === h && null === A && (null == T ? void 0 : T.skuId) !== "",
-        I = null == E,
-        k = I || (null == A && !0 !== h) || R || "loading" === L,
-        M = "error" === L || null == T,
+    }, [s.id, N, L]);
+    let R = !0 === h && null === E && (null == T ? void 0 : T.skuId) !== "",
+        k = null == P,
+        I = k || (null == E && !0 !== h) || R || "loading" === O,
+        M = "error" === O || null == T,
         Z = async () => {
-            S("applying"), S((await P()) ? "applied" : "claimed");
+            S("applying"), S((await A()) ? "applied" : "claimed");
         };
     return (0, r.jsx)(j.Z, {
         onClose: c,
@@ -115,18 +115,18 @@ function T(e) {
         quest: s,
         sourceQuestContent: b,
         location: y.dr.COLLECTIBLE_REWARD_MODAL,
-        isRewardContentLoading: k,
+        isRewardContentLoading: I,
         rewardContentHasError: M,
         rewardContent:
-            M || I
+            M || k
                 ? null
                 : (0, r.jsx)(_.Z, {
                       rewardName: T.messages.name,
                       children: (0, r.jsx)(w, {
                           quest: s,
-                          avatarDeco: A,
-                          user: E,
-                          mode: L,
+                          avatarDeco: E,
+                          user: P,
+                          mode: O,
                           onUseNow: Z,
                       }),
                   }),

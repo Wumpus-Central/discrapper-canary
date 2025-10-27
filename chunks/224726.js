@@ -73,13 +73,13 @@ let I = function () {
                                           (0, r.jsx)(a.Heading, {
                                               variant: "heading-lg/semibold",
                                               color: "header-primary",
-                                              children: E.intl.string(E.t.txdaxc),
+                                              children: E.intl.string(E.t.txdaxf),
                                           }),
                                           (0, r.jsx)(a.Text, {
                                               variant: "text-sm/medium",
                                               color: "header-secondary",
                                               className: N.description,
-                                              children: E.intl.string(E.t["5PGZWV"]),
+                                              children: E.intl.string(E.t["5PGZWS"]),
                                           }),
                                       ],
                                   }),

@@ -15,8 +15,8 @@ var r = n(442837),
     m = n(703656),
     v = n(321051),
     b = n(594174),
-    x = n(55563),
-    h = n(937615),
+    h = n(55563),
+    x = n(937615),
     j = n(164670),
     C = n(210218),
     y = n(703400),
@@ -60,7 +60,7 @@ let E = {
         ),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => N.intl.string(N.t["W685+f"]),
+        useBreadcrumbLabel: () => N.intl.string(N.t["W685+b"]),
     },
 };
 function S(e) {
@@ -73,7 +73,7 @@ function S(e) {
                 onClick: () => t(u),
                 disabled: a,
                 loading: o,
-                text: N.intl.string(N.t.XiOHRU),
+                text: N.intl.string(N.t.XiOHRX),
             }),
             r ? (0, i.jsx)(p.Z, { onClick: n }) : null,
         ],
@@ -93,10 +93,10 @@ function k(e) {
         } = (0, s.wD)(),
         { selectedSkuId: M, application: A } = (0, c.JL)(),
         B = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-        D = (0, r.e7)([x.Z], () => (null != M ? x.Z.get(M) : null), [M]),
+        D = (0, r.e7)([h.Z], () => (null != M ? h.Z.get(M) : null), [M]),
         L = (0, j.Do)(D),
-        W = (0, j.a7)(D),
-        H = (0, P.K)(D, { shouldFetchIfMissing: !0 }),
+        H = (0, j.a7)(D),
+        W = (0, P.K)(D, { shouldFetchIfMissing: !0 }),
         R = async (e, t) => {};
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -111,7 +111,7 @@ function k(e) {
                                     (0, i.jsx)(_.p, {
                                         className: T.skuCardImage,
                                         cardImage: L,
-                                        cardBackgroundImage: W,
+                                        cardBackgroundImage: H,
                                         altText: null != (t = null == D ? void 0 : D.name) ? t : "",
                                     }),
                                 (0, i.jsxs)("div", {
@@ -140,7 +140,7 @@ function k(e) {
                                     searchableSelectWrapperClassName: T.recipientPickerSelectWrapper,
                                 }),
                                 (0, i.jsx)(f.Z, {
-                                    sectionTitle: N.intl.string(N.t.B3miEx),
+                                    sectionTitle: N.intl.string(N.t.B3miE8),
                                     onTextChange: (e) => (null == m ? void 0 : m(e)),
                                     pendingText: p,
                                     currentText: p,
@@ -151,7 +151,7 @@ function k(e) {
                                 (() => {
                                     var e, t, n, r;
                                     if (null == D) return null;
-                                    let a = (0, h.T4)(
+                                    let a = (0, x.T4)(
                                         null != (n = null == (e = D.price) ? void 0 : e.amount) ? n : 0,
                                         null != (r = null == (t = D.price) ? void 0 : t.currency) ? r : I.pK.USD,
                                     );
@@ -160,7 +160,7 @@ function k(e) {
                                         children: [
                                             (0, i.jsx)(l.vwX, {
                                                 className: T.giftPreviewTitle,
-                                                children: N.intl.string(N.t.PpoJzs),
+                                                children: N.intl.string(N.t.PpoJzt),
                                             }),
                                             (0, i.jsxs)("div", {
                                                 className: T.giftPreviewContent,
@@ -173,7 +173,7 @@ function k(e) {
                                                             (0, i.jsx)(_.p, {
                                                                 className: T.giftPreviewCardContainer,
                                                                 cardImage: L,
-                                                                cardBackgroundImage: W,
+                                                                cardBackgroundImage: H,
                                                                 altText: D.name,
                                                             }),
                                                     }),
@@ -196,12 +196,12 @@ function k(e) {
                                         ],
                                     });
                                 })(),
-                                null != H &&
+                                null != W &&
                                     null != D &&
                                     (0, i.jsx)(Z, {
                                         handleClose: d,
                                         sku: D,
-                                        guild: H,
+                                        guild: W,
                                     }),
                             ],
                         }),
@@ -229,7 +229,7 @@ function Z(e) {
     return (0, i.jsx)("div", {
         className: T.viewItemButton,
         children: (0, i.jsx)(l.Avr, {
-            text: N.intl.string(N.t.ImioFB),
+            text: N.intl.string(N.t.ImioFL),
             onClick: function () {
                 var e;
                 t();

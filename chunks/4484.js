@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(732659),
     R = n(86724),
     P = n(847302),
-    w = n(657198),
-    D = n(321127),
+    D = n(657198),
+    w = n(321127),
     L = n(645174),
     x = n(981631),
     M = n(867641);
@@ -204,7 +204,7 @@ let k = i.forwardRef(function (e, t) {
                 );
         }, [k.id, eN, $, eR, ei]);
     (0, S.Z)(t, eN, k, eP), (0, N.Z)(eN, ey, W);
-    let { handleKeyDown: ew, handleKeyUp: eD } = (0, A.Z)({
+    let { handleKeyDown: eD, handleKeyUp: ew } = (0, A.Z)({
             editor: eN,
             channel: k,
             disableEnterToSubmit: es,
@@ -257,12 +257,12 @@ let k = i.forwardRef(function (e, t) {
         ),
         eU = i.useCallback(
             (e) => {
-                let t = (0, w.Z)(eN, e, k.id);
+                let t = (0, D.Z)(eN, e, k.id);
                 return null == t && (t = (0, L.Z)(eN, e)), t;
             },
             [k.id, eN],
         ),
-        eG = i.useCallback((e) => (0, D.Z)(e), []);
+        eG = i.useCallback((e) => (0, w.Z)(e), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.d9, {
@@ -288,8 +288,8 @@ let k = i.forwardRef(function (e, t) {
                     onBlur: z,
                     onClick: eM,
                     onPaste: eL,
-                    onKeyDown: ew,
-                    onKeyUp: eD,
+                    onKeyDown: eD,
+                    onKeyUp: ew,
                     decorate: ej,
                     renderExtraElement: eU,
                     renderExtraLeaf: eG,

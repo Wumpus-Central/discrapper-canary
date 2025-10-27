@@ -4,17 +4,17 @@ n(647438);
 var i = n(481060),
     l = n(531826),
     a = n(812206),
-    o = n(69580),
-    s = n(787025),
+    s = n(69580),
+    o = n(787025),
     c = n(397394),
     u = n(358085),
     d = n(998502),
     p = n(996106),
     f = n(703912),
     h = n(852926),
-    g = n(981631),
-    m = n(388032);
-function b(e) {
+    m = n(981631),
+    g = n(388032);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,20 +67,20 @@ let E = (0, f.Z)(
                 parsedPermissions: f,
                 responseType: E,
                 redirectUri: O,
-                codeChallenge: v,
-                codeChallengeMethod: y,
-                state: I,
+                codeChallenge: I,
+                codeChallengeMethod: v,
+                state: y,
                 guildId: C,
                 channelId: S,
-                prompt: N,
-                disableGuildSelect: T,
-                disclosures: P,
-                integrationType: j,
+                prompt: T,
+                disableGuildSelect: N,
+                disclosures: j,
+                integrationType: P,
                 pid: x,
                 signal: A,
             } = e,
             Z = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S),
-            w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
+            w = null != P ? (null == u ? void 0 : u.get(P)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
             let a = (0, h.jU)(x),
@@ -92,20 +92,20 @@ let E = (0, f.Z)(
                     channelId: S,
                 })
                 ? (w = i.u1M)
-                : a.context === g.IlC.POPOUT && (w = i.u1M);
-            let R = !1,
-                D = (l) => {
-                    let { clientId: o, location: s } = l;
-                    if (null == o || o === n) {
-                        if (((R = !0), null == s)) {
-                            t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                : a.context === m.IlC.POPOUT && (w = i.u1M);
+            let D = !1,
+                R = (l) => {
+                    let { clientId: s, location: o } = l;
+                    if (null == s || s === n) {
+                        if (((D = !0), null == o)) {
+                            t(new p.Z({ errorCode: m.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
                                 a.lock();
                             return;
                         }
-                        if ((e(s), null == O || null == L)) return void a.lock();
-                        null == new URL(s).searchParams.get("error")
+                        if ((e(o), null == O || null == L)) return void a.lock();
+                        null == new URL(o).searchParams.get("error")
                             ? (0, i.h7j)(
-                                  (e) => (0, r.jsx)(c.$0, b({ application: L }, e)),
+                                  (e) => (0, r.jsx)(c.$0, _({ application: L }, e)),
                                   {
                                       onCloseCallback: () => {
                                           a.lock();
@@ -114,7 +114,7 @@ let E = (0, f.Z)(
                                   w,
                               )
                             : (0, i.h7j)(
-                                  (e) => (0, r.jsx)(c.ks, b({}, e)),
+                                  (e) => (0, r.jsx)(c.ks, _({}, e)),
                                   {
                                       onCloseCallback: () => {
                                           a.lock();
@@ -129,13 +129,13 @@ let E = (0, f.Z)(
                         (0, i.Mr3)(e) &&
                             (0, i.h7j)((e) =>
                                 (0, r.jsx)(
-                                    s.j,
-                                    _(b({}, e), {
-                                        title: m.intl.string(m.t.j2d6Ki),
-                                        subtitle: m.intl.string(m.t["4LKmNz"]),
+                                    o.j,
+                                    b(_({}, e), {
+                                        title: g.intl.string(g.t.j2d6Km),
+                                        subtitle: g.intl.string(g.t["4LKmN5"]),
                                         actions: [
                                             {
-                                                text: m.intl.string(m.t.cpT0Cg),
+                                                text: g.intl.string(g.t.cpT0Cq),
                                                 onClick: e.onClose,
                                             },
                                         ],
@@ -155,24 +155,24 @@ let E = (0, f.Z)(
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
-                        o.OAuth2AuthorizeModal,
-                        _(b({}, e), {
+                        s.OAuth2AuthorizeModal,
+                        b(_({}, e), {
                             authorizations: u,
                             clientId: n,
                             scopes: null != d ? d : [],
-                            disclosures: null != P ? P : [],
-                            callback: D,
+                            disclosures: null != j ? j : [],
+                            callback: R,
                             responseType: E,
                             redirectUri: O,
-                            codeChallenge: v,
-                            codeChallengeMethod: y,
-                            state: I,
+                            codeChallenge: I,
+                            codeChallengeMethod: v,
+                            state: y,
                             permissions: f,
                             guildId: C,
                             channelId: S,
-                            prompt: N,
-                            disableGuildSelect: "boolean" == typeof T ? T : "true" === T,
-                            integrationType: j,
+                            prompt: T,
+                            disableGuildSelect: "boolean" == typeof N ? N : "true" === N,
+                            integrationType: P,
                             cancelCompletesFlow: !0,
                         }),
                     ),
@@ -180,8 +180,8 @@ let E = (0, f.Z)(
                     modalKey: Z,
                     onCloseCallback: () => {
                         M(),
-                            R ||
-                                (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
+                            D ||
+                                (t(new p.Z({ errorCode: m.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
                                 a.lock());
                     },
                 },

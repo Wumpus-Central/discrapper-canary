@@ -89,7 +89,7 @@ function T(e) {
         ),
         f = !s.fS(u, p);
     return (0, r.jsx)(c.u, {
-        text: f ? y.intl.string(y.t["IQ/6Sk"]) : null,
+        text: f ? y.intl.string(y.t["IQ/6Sg"]) : null,
         position: "top",
         children: (0, r.jsx)("div", {
             className: E.clearButtonWrapper,
@@ -98,7 +98,7 @@ function T(e) {
                 textVariant: "text-sm/semibold",
                 onClick: () => (0, b.TY)(n.id),
                 disabled: s.fS(n.permissions, h.Hn) || f || l,
-                text: y.intl.string(y.t["UYq7+P"]),
+                text: y.intl.string(y.t["UYq7+O"]),
             }),
         }),
     });
@@ -112,15 +112,15 @@ function P(e) {
                 (0, r.jsx)(x.Z, { className: E.noResults }),
                 (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
-                    children: y.intl.string(y.t.DEBGqK),
+                    children: y.intl.string(y.t.DEBGqA),
                 }),
             ],
         });
     function a(e) {
         return g.Z.can(e, t)
             ? !g.Z.can(e, t, null, { [n.id]: S(I({}, n), { permissions: s.Od(n.permissions, e) }) }) &&
-                  y.intl.string(y.t["K+D+GB"])
-            : y.intl.string(y.t.nOtPMD);
+                  y.intl.string(y.t["K+D+GF"])
+            : y.intl.string(y.t.nOtPMM);
     }
     return (0, r.jsxs)("div", {
         className: E.permissionsWrapper,
@@ -203,8 +203,8 @@ function w(e) {
                                     query: c,
                                     onChange: u,
                                     onClear: () => u(""),
-                                    placeholder: y.intl.string(y.t.OLJAk5),
-                                    "aria-label": y.intl.string(y.t.OLJAk5),
+                                    placeholder: y.intl.string(y.t.OLJAk3),
+                                    "aria-label": y.intl.string(y.t.OLJAk3),
                                 }),
                             }),
                         ],

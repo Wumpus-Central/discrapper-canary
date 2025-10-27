@@ -29,18 +29,18 @@ function d(t) {
             type: "image",
             src: _,
         },
-        title: u.intl.string(u.t.uFxYq6),
+        title: u.intl.string(u.t.uFxYq0),
         onClose: n,
         transitionState: d,
         actions: [
             {
                 variant: "secondary",
-                text: u.intl.string(u.t["ETE/oK"]),
+                text: u.intl.string(u.t["ETE/oC"]),
                 onClick: n,
             },
             {
                 variant: "primary",
-                text: u.intl.string(u.t.rXV81N),
+                text: u.intl.string(u.t.rXV81H),
                 loading: A,
                 onClick: g,
             },
@@ -48,7 +48,7 @@ function d(t) {
         children: (0, a.jsx)(l.Text, {
             className: E.description,
             variant: "text-md/normal",
-            children: u.intl.format(u.t.oMFSgo, { oldEmail: null == C ? void 0 : C.email }),
+            children: u.intl.format(u.t.oMFSgi, { oldEmail: null == C ? void 0 : C.email }),
         }),
     });
 }

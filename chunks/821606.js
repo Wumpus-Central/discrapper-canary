@@ -30,12 +30,12 @@ function d(t) {
                             id: x,
                             variant: "heading-lg/semibold",
                             className: c.title,
-                            children: o.intl.string(o.t["2B3wj4"]),
+                            children: o.intl.string(o.t["2B3wj8"]),
                         }),
                         (0, n.jsx)(l.Text, {
                             variant: "text-md/normal",
                             className: c.body,
-                            children: o.intl.format(o.t.jnHyYW, {}),
+                            children: o.intl.format(o.t.jnHyYU, {}),
                         }),
                         (0, n.jsxs)(l.Ttm, {
                             className: c.linkCalloutContainer,

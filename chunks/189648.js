@@ -24,7 +24,7 @@ function d(e) {
         children: [
             (0, r.jsx)(l.Heading, {
                 variant: "heading-md/medium",
-                children: c.intl.string(c.t["2AGBWF"]),
+                children: c.intl.string(c.t["2AGBWH"]),
             }),
             (0, o.VE)(n),
         ],

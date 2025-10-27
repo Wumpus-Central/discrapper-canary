@@ -122,7 +122,7 @@ class O extends o.PureComponent {
                         (0, a.jsx)(p.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: g.intl.string(g.t["+IrDzM"]),
+                            text: g.intl.string(g.t["+IrDzN"]),
                             onClick: this.handleDismiss,
                         }),
                         (0, a.jsx)(d.zx, {
@@ -131,7 +131,7 @@ class O extends o.PureComponent {
                             onClick: s,
                             color: (0, u.ap)(o) ? d.zx.Colors.PRIMARY : d.zx.Colors.WHITE,
                             className: h ? b.buttonSkipLeftAlign : b.buttonSkipCenterAlign,
-                            children: g.intl.string(g.t["33wtxs"]),
+                            children: g.intl.string(g.t["33wtxt"]),
                         }),
                     ],
                 }),

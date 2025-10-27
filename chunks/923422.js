@@ -35,8 +35,8 @@ let D = (0, s.Z)(
             L = (0, A.Z)(),
             R = (0, j.Z)(),
             m = (0, S.Z)(),
-            k = (0, N.Z)(),
-            Z = (0, h.Z)(),
+            Z = (0, N.Z)(),
+            k = (0, h.Z)(),
             { analyticsLocations: V } = (0, u.ZP)(),
             M = i.useMemo(() => (0, g.j)(), []);
         async function B() {
@@ -70,7 +70,7 @@ let D = (0, s.Z)(
             children: (0, a.jsxs)(l.v2r, {
                 navId: "user-settings-cog",
                 onClose: r.Zy,
-                "aria-label": _.intl.string(_.t.opYYHh),
+                "aria-label": _.intl.string(_.t.opYYHn),
                 onSelect: n,
                 onInteraction: s,
                 children: [
@@ -142,7 +142,7 @@ let D = (0, s.Z)(
                                             case w.oAB.EXPERIMENTS:
                                                 return m;
                                             case w.oAB.DEVELOPER_OPTIONS:
-                                                return k;
+                                                return Z;
                                             default:
                                                 return null;
                                         }
@@ -164,7 +164,7 @@ let D = (0, s.Z)(
                             s,
                         );
                     }),
-                    e.user.isStaff() && Z,
+                    e.user.isStaff() && k,
                     e.user.isStaff() && M.length > 0
                         ? (0, a.jsx)(l.sNh, {
                               label: "Build Overrides",
@@ -195,7 +195,7 @@ let D = (0, s.Z)(
                               children: (0, a.jsx)(l.sNh, {
                                   id: "clear-build-override",
                                   disabled: c,
-                                  label: _.intl.string(_.t["/Nz9ra"]),
+                                  label: _.intl.string(_.t["/Nz9rY"]),
                                   action: B,
                                   color: "danger",
                               }),

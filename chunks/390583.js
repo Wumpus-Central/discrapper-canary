@@ -115,7 +115,7 @@ function f() {
                     );
                 },
                 disabled: x,
-                children: g.intl.string(g.t.PLSCUl),
+                children: g.intl.string(g.t.PLSCUg),
             }),
         ],
     });

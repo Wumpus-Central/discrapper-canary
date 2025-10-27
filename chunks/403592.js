@@ -163,7 +163,7 @@ class R extends i.Component {
         let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: i } = this.props,
             { hasSpoiler: a } = this.state;
         return (0, r.jsxs)(l.Y0X, {
-            "aria-label": b.intl.string(b.t["3AS4UF"]),
+            "aria-label": b.intl.string(b.t["3AS4UM"]),
             size: l.CgR.DYNAMIC,
             transitionState: t,
             className: y.uploadModal,
@@ -182,13 +182,13 @@ class R extends i.Component {
                                         (0, r.jsx)("div", {
                                             className: y.filename,
                                             children: e.showLargeMessageDialog
-                                                ? b.intl.formatToPlainString(b.t.QWQxtL, { maxLength: n })
+                                                ? b.intl.formatToPlainString(b.t.QWQxtC, { maxLength: n })
                                                 : e.filename,
                                         }),
                                         e.showLargeMessageDialog
                                             ? (0, r.jsx)("div", {
                                                   className: y.subtitle,
-                                                  children: b.intl.string(b.t.Plcu09),
+                                                  children: b.intl.string(b.t.Plcu02),
                                               })
                                             : null,
                                     ],
@@ -204,7 +204,7 @@ class R extends i.Component {
                                         gap: 16,
                                         children: [
                                             (0, r.jsx)(l.oil, {
-                                                label: b.intl.string(b.t.ILJuBg),
+                                                label: b.intl.string(b.t.ILJuBq),
                                                 value: this.state.filename,
                                                 onChange: (e) => this.setState({ filename: e }),
                                                 onKeyDown: (e) => {
@@ -213,8 +213,8 @@ class R extends i.Component {
                                             }),
                                             e.isImage
                                                 ? (0, r.jsx)(l.oil, {
-                                                      label: b.intl.string(b.t.eOB2eX),
-                                                      placeholder: b.intl.string(b.t.RNH1jo),
+                                                      label: b.intl.string(b.t.eOB2eR),
+                                                      placeholder: b.intl.string(b.t.RNH1jn),
                                                       value: this.state.description,
                                                       onChange: (e) => this.setState({ description: e }),
                                                       onKeyDown: (e) => {
@@ -228,7 +228,7 @@ class R extends i.Component {
                                         (0, r.jsx)(l.Checkbox, {
                                             checked: a,
                                             onChange: (e) => this.setState({ hasSpoiler: e }),
-                                            label: b.intl.string(b.t["gsI+xM"]),
+                                            label: b.intl.string(b.t["gsI+xC"]),
                                         }),
                                 ],
                             }),
@@ -245,12 +245,12 @@ class R extends i.Component {
                                 look: s.zx.Looks.LINK,
                                 color: s.zx.Colors.PRIMARY,
                                 onClick: this.cancel,
-                                children: (0, r.jsx)("span", { children: b.intl.string(b.t["ETE/oK"]) }),
+                                children: (0, r.jsx)("span", { children: b.intl.string(b.t["ETE/oC"]) }),
                             }),
                             (0, r.jsx)(s.zx, {
                                 type: "submit",
                                 onClick: this.handleSubmit,
-                                children: (0, r.jsx)("span", { children: b.intl.string(b.t["TY+auL"]) }),
+                                children: (0, r.jsx)("span", { children: b.intl.string(b.t["TY+auE"]) }),
                             }),
                         ],
                     }),

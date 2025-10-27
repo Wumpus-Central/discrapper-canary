@@ -34,7 +34,7 @@ function _(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("img", {
-                alt: null != (t = null == p ? void 0 : p.alt) ? t : d.intl.string(d.t.P84bAA),
+                alt: null != (t = null == p ? void 0 : p.alt) ? t : d.intl.string(d.t.P84bAD),
                 className: null != (n = null == p ? void 0 : p.className) ? n : f.image,
                 src: T,
                 onLoad: g,

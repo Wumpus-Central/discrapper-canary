@@ -28,7 +28,7 @@ function p(e) {
         v = y ? s.gtL : o.zx;
     return (0, r.jsx)(u.Z, {
         className: h,
-        title: f.intl.string(f.t.Vgdusr),
+        title: f.intl.string(f.t.Vgdusv),
         showPremiumIcon: g,
         errors: n,
         disabled: m,
@@ -46,7 +46,7 @@ function p(e) {
                             guildId: p,
                             isTryItOutFlow: E,
                         }),
-                    children: f.intl.string(f.t.N0bC3N),
+                    children: f.intl.string(f.t.N0bC3P),
                 }),
                 t &&
                     (0, r.jsx)("div", {
@@ -55,7 +55,7 @@ function p(e) {
                         children: (0, r.jsx)(s.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != p ? f.intl.string(f.t.jHlJNT) : f.intl.string(f.t.tT9n7O),
+                            text: null != p ? f.intl.string(f.t.jHlJNS) : f.intl.string(f.t.tT9n7D),
                             onClick: () => i(null),
                         }),
                     }),

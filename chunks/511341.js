@@ -22,16 +22,16 @@ let O = (e) => {
         a = ":".concat(t.name, ":");
     switch (r) {
         case h.n_.ACTIVITY:
-            let o = b.intl.formatToPlainString(b.t.EUFEJi, { username: n }),
+            let o = b.intl.formatToPlainString(b.t.EUFEJt, { username: n }),
                 s = "\n> ".concat(i);
             return null != i
                 ? "".concat(_.jd).concat(o, "*").concat(s, "\n").concat(a)
                 : "".concat(_.jd).concat(o, "*\n").concat(a);
         case h.n_.AVATAR:
-            let l = b.intl.formatToPlainString(b.t.E6H15u, { username: n });
+            let l = b.intl.formatToPlainString(b.t.E6H15q, { username: n });
             return "".concat(_.jd).concat(l, "*\n").concat(a);
         case h.n_.STATUS:
-            let u = b.intl.formatToPlainString(b.t.XPQgLy, { username: n }),
+            let u = b.intl.formatToPlainString(b.t.XPQgL2, { username: n }),
                 d = "\n> ".concat(i);
             return null != i
                 ? "".concat(_.jd).concat(u, "*").concat(d, "\n").concat(a)
@@ -70,7 +70,7 @@ function v(e) {
                 }
             );
         }, [T, S]);
-    let w = async (e) => {
+    let D = async (e) => {
         if (null == e) return;
         _ === h.n_.AVATAR
             ? I({ action: "SEND_REACT_AVATAR" })
@@ -102,7 +102,7 @@ function v(e) {
         closePopout: g.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
-            await w(t), n && (S(), null == T || T());
+            await D(t), n && (S(), null == T || T());
         },
         pickerIntention: m.Hz.PROFILE,
     });

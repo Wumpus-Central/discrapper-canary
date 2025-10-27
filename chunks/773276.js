@@ -20,7 +20,7 @@ function _(e) {
                 (0, d.s)(p), o.Z.disableFalsePositiveButton(t, n);
             },
             onError: () => {
-                (0, a.showToast)((0, a.createToast)(f.intl.string(f.t.R0RpRU), a.ToastType.FAILURE));
+                (0, a.showToast)((0, a.createToast)(f.intl.string(f.t.R0RpRX), a.ToastType.FAILURE));
             },
             report: () => {
                 (0, s.Eq)(t, n, m, g);

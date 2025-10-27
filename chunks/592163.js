@@ -32,7 +32,7 @@ function f(t) {
             return o;
         })(t, ["onClose", "analyticsSource", "onLearnMore"]);
     let p = a.Si.TIER_2,
-        d = l.intl.format(l.t.hDMlqK, {
+        d = l.intl.format(l.t.hDMlqD, {
             onLearnMore: function () {
                 null == f || f(), e(), (0, o.z)();
             },
@@ -68,7 +68,7 @@ function f(t) {
                 artURL: s.Z,
                 artContainerClassName: u.videoBackgroundArt,
                 type: a.cd.VIDEO_BACKGROUNDS_MODAL,
-                title: l.intl.string(l.t.fHqiDQ),
+                title: l.intl.string(l.t.fHqiDW),
                 body: d,
                 glowUp: d,
                 analyticsSource: n,

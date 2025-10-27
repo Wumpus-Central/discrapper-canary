@@ -19,7 +19,7 @@ function d(e) {
             new a.Z("UserActivityActions").log("notify", t.id, n);
     };
     return (0, r.jsx)(s.O1, {
-        text: u.intl.string(u.t.vwl1PD),
+        text: u.intl.string(u.t.vwl1PK),
         fullWidth: !_,
         onClick: p,
     });

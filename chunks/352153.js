@@ -16,11 +16,11 @@ function m(e) {
         [g, _] = r.useState(!1),
         { unreadItems: b, readItems: E, allUnreadItemsHydrated: O } = (0, p.Z)(),
         I = (0, i.e7)([c.Z], () => c.Z.getVersion(), []),
-        y = (0, i.e7)([c.Z], () => !(c.Z.isFirstPageHydrated() && I > 0));
+        v = (0, i.e7)([c.Z], () => !(c.Z.isFirstPageHydrated() && I > 0));
     r.useEffect(() => {
         null != c.Z.getLoadId() && s.m.trackFeedShown({ homeSessionId: "gravity" });
     }, [I]);
-    let v = (0, i.e7)([c.Z], () => c.Z.isRefreshing(), []),
+    let y = (0, i.e7)([c.Z], () => c.Z.isRefreshing(), []),
         C = (0, i.e7)([c.Z], () => c.Z.isHydrating(), []),
         [S, T] = r.useState([]),
         { loadId: N, lastScrollEventTimestamp: j } = (0, i.cj)([c.Z], () => ({
@@ -38,10 +38,10 @@ function m(e) {
             .pop(),
         x = (0, l.Z)(P);
     r.useEffect(() => {
-        if (v || y || null == x || null == P || P === x) return;
+        if (y || v || null == x || null == P || P === x) return;
         let e = Date.now();
         e - j > h.C && (a.Z.gravityScrollEvent(e), s.m.trackFeedFirstScrollStarted());
-    }, [v, j, x, P, N, y]);
+    }, [y, j, x, P, N, v]);
     let A = r.useCallback(
             (e) => {
                 var t, n;
@@ -177,7 +177,7 @@ function m(e) {
         { data: R, stickyHeaderIndices: M } = r.useMemo(() => {
             let e = [];
             return (
-                y &&
+                v &&
                     null != n &&
                     n.type === u.Ni.CUSTOM_STATUS &&
                     e.push({
@@ -190,7 +190,7 @@ function m(e) {
                         score: n.score,
                         unread: !0,
                     }),
-                y
+                v
                     ? e.push({
                           id: "loading",
                           timestamp: 0,
@@ -223,14 +223,14 @@ function m(e) {
                     stickyHeaderIndices: [],
                 }
             );
-        }, [y, n, b, O, E, C]);
+        }, [v, n, b, O, E, C]);
     return {
         data: R,
-        loading: y,
+        loading: v,
         version: I,
         visibleItemIds: S,
         endVisible: g,
-        isRefreshing: v,
+        isRefreshing: y,
         handleOnRefresh: D,
         stickyHeaderIndices: M,
         viewabilityConfigCallbackPairs: L,

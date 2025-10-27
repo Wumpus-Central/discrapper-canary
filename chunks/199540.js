@@ -82,8 +82,8 @@ function b(e) {
             folderGroupId: _,
             folderButtonContent: O,
             onClick: y,
-            onContextMenu: v,
-            onHoverChange: j,
+            onContextMenu: j,
+            onHoverChange: v,
             onKeyDown: x,
             treeItemProps: { onFocus: C },
             "aria-setsize": E,
@@ -112,12 +112,12 @@ function b(e) {
         })(e.treeItemProps, ["onFocus"]),
         [P, N] = i.useState(!1),
         Z = i.useCallback(() => {
-            a || N(!0), null == j || j(!0);
-        }, [a, j]),
-        w = i.useCallback(() => {
-            a || N(!1), null == j || j(!1);
-        }, [a, j]),
-        T = o || null == u ? null : (0, p.Or)(u),
+            a || N(!0), null == v || v(!0);
+        }, [a, v]),
+        T = i.useCallback(() => {
+            a || N(!1), null == v || v(!1);
+        }, [a, v]),
+        w = o || null == u ? null : (0, p.Or)(u),
         A = !o && d > 0 ? (0, p.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
     return (0, r.jsx)(s.tEY, {
         children: (0, r.jsxs)(
@@ -150,9 +150,9 @@ function b(e) {
                 {
                     className: h.folderButton,
                     onClick: y,
-                    onContextMenu: v,
+                    onContextMenu: j,
                     onMouseEnter: Z,
-                    onMouseLeave: w,
+                    onMouseLeave: T,
                     onKeyDown: x,
                     onFocus: C,
                     focusProps: { enabled: !1 },
@@ -176,7 +176,7 @@ function b(e) {
                         (0, r.jsx)(s.aRk, {
                             "aria-hidden": !0,
                             isFolder: !0,
-                            upperBadge: T,
+                            upperBadge: w,
                             lowerBadge: A,
                             lowerBadgeSize: { width: (0, s.OVM)(d) },
                             children: (0, r.jsx)("div", {

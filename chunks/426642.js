@@ -32,39 +32,39 @@ let d = (e) => {
         } = {
             0: {
                 icon: o.gm1,
-                description: l.intl.string(l.t.YbdEFB),
+                description: l.intl.string(l.t.YbdEFK),
                 color: i.Z.unsafe_rawColors.RED_400.css,
-                tooltip: l.intl.string(l.t.PanA4O),
+                tooltip: l.intl.string(l.t.PanA4J),
             },
             4: {
                 icon: o.LB9,
-                description: l.intl.string(l.t["01Papq"]),
+                description: l.intl.string(l.t["01Papm"]),
                 color: i.Z.unsafe_rawColors.RED_400.css,
-                tooltip: l.intl.string(l.t.PanA4O),
+                tooltip: l.intl.string(l.t.PanA4J),
             },
             5: {
                 icon: s.Z,
-                description: l.intl.string(l.t.sp16MT),
+                description: l.intl.string(l.t.sp16MU),
                 color: i.Z.unsafe_rawColors.RED_400.css,
-                tooltip: l.intl.string(l.t.PanA4O),
+                tooltip: l.intl.string(l.t.PanA4J),
             },
             1: {
                 icon: o.EmW,
-                description: l.intl.string(l.t["4rjikp"]),
+                description: l.intl.string(l.t["4rjikl"]),
                 color: i.Z.unsafe_rawColors.ORANGE_345.css,
-                tooltip: l.intl.string(l.t.dq9aTk),
+                tooltip: l.intl.string(l.t.dq9aTi),
             },
             2: {
                 icon: o.d3s,
-                description: l.intl.string(l.t["5VmbbG"]),
+                description: l.intl.string(l.t["5VmbbF"]),
                 color: i.Z.unsafe_rawColors.RED_400.css,
-                tooltip: l.intl.string(l.t.PanA4O),
+                tooltip: l.intl.string(l.t.PanA4J),
             },
             3: {
                 icon: o.d3s,
                 description: l.intl.string(l.t.rjFOZ2),
                 color: i.Z.unsafe_rawColors.RED_400.css,
-                tooltip: l.intl.string(l.t.PanA4O),
+                tooltip: l.intl.string(l.t.PanA4J),
             },
         }[n];
     return (0, r.jsxs)("div", {

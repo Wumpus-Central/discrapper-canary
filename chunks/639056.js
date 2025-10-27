@@ -50,7 +50,7 @@ function y(e) {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
-                        children: E.intl.format(E.t.LzobT0, { planName: O }),
+                        children: E.intl.format(E.t.LzobT9, { planName: O }),
                     }),
                     n.hasFreePremium() || (null != s && s.isPurchasedExternally)
                         ? null
@@ -60,7 +60,7 @@ function y(e) {
                               color: "header-secondary",
                               children:
                                   y && null != s
-                                      ? E.intl.formatToPlainString(E.t["5CNRRE"], { date: null != t ? t : 0 })
+                                      ? E.intl.formatToPlainString(E.t["5CNRRA"], { date: null != t ? t : 0 })
                                       : E.intl.formatToPlainString(E.t.eNXZ5O, { planName: O }),
                           }),
                 ],
@@ -68,7 +68,7 @@ function y(e) {
             (0, r.jsx)(c.Text, {
                 className: b.rowCreditCount,
                 variant: "text-md/semibold",
-                children: E.intl.format(E.t["ess/xs"], { count: o }),
+                children: E.intl.format(E.t["ess/xl"], { count: o }),
             }),
         ],
     });
@@ -113,7 +113,7 @@ let O = function (e) {
                               (0, r.jsx)(c.Text, {
                                   className: b.tier1AccountCreditHeader,
                                   variant: "text-md/normal",
-                                  children: E.intl.string(E.t["VNr4+P"]),
+                                  children: E.intl.string(E.t["VNr4+O"]),
                               }),
                               (0, r.jsx)(h.R, {}),
                           ],

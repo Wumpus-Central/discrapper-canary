@@ -62,8 +62,8 @@ function b(e) {
             {
                 header: s.intl.string(s.t.HlAPoq),
                 confirmButtonColor: c.zx.Colors.GREEN,
-                confirmText: s.intl.string(s.t.rimG2d),
-                cancelText: s.intl.string(s.t["ETE/oK"]),
+                confirmText: s.intl.string(s.t.rimG2R),
+                cancelText: s.intl.string(s.t["ETE/oC"]),
                 onConfirm: b,
                 onClose: () => (f && l.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), u()),
             },
@@ -74,14 +74,14 @@ function b(e) {
                 children: [
                     (0, n.jsx)(i.Text, {
                         variant: "text-md/normal",
-                        children: s.intl.string(s.t.Jz3oqK),
+                        children: s.intl.string(s.t.Jz3oqA),
                     }),
                     (0, n.jsx)("div", {
                         className: a.checkbox,
                         children: (0, n.jsx)(i.Checkbox, {
                             checked: f,
                             onChange: (e) => O(e),
-                            label: s.intl.string(s.t["JdIQ/f"]),
+                            label: s.intl.string(s.t["JdIQ/Y"]),
                             labelType: "secondary",
                         }),
                     }),

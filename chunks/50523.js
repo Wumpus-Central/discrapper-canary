@@ -28,8 +28,8 @@ function v(e) {
             botUserId: null == I || null == (n = I.bot) ? void 0 : n.id,
         }),
         P = null != I && (0, l.ye)(I),
-        w = null != N && P && R,
-        { analyticsLocations: D } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
+        D = null != N && P && R,
+        { analyticsLocations: w } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
         L = (0, i.e7)([h.Z], () => h.Z.getChannelId()),
         x = (0, y.KF)(L),
         M = (0, i.e7)([E.ZP], () => {
@@ -45,7 +45,7 @@ function v(e) {
         Z = [];
     U &&
         Z.push({
-            label: null == M ? O.intl.string(O.t.RscU7O) : G ? O.intl.string(O.t.DPfdsr) : O.intl.string(O.t.sqe0ho),
+            label: null == M ? O.intl.string(O.t.RscU7I) : G ? O.intl.string(O.t.DPfdsq) : O.intl.string(O.t.sqe0hj),
             trackingArea: f.j_.PLAY,
             onClick() {
                 (0, g.G6)({
@@ -55,21 +55,21 @@ function v(e) {
                     embeddedActivitiesManager: j,
                     customId: B,
                     referrerId: A,
-                    analyticsLocations: D,
+                    analyticsLocations: w,
                 });
             },
             disabled: G,
         }),
-        w &&
+        D &&
             !U &&
             Z.push({
-                label: O.intl.string(O.t.JeK1Wl),
+                label: O.intl.string(O.t.JeK1Wg),
                 trackingArea: f.j_.PLAY,
                 onClick() {
                     (0, s.W)({
                         appId: I.id,
                         botId: N,
-                        analyticsLocations: D,
+                        analyticsLocations: w,
                         customId: B,
                         referrerId: A,
                     });

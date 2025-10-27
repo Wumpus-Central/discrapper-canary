@@ -102,10 +102,10 @@ function P(e) {
         }, !1)
     );
 }
-function w(e) {
+function D(e) {
     return A(e.guildId);
 }
-function D() {
+function w() {
     E = {};
 }
 function L(e) {
@@ -144,11 +144,11 @@ class x extends (r = o.ZP.Store) {
 g(x, "displayName", "StageChannelRoleStore");
 let M = new x(s.Z, {
     CHANNEL_UPDATES: C,
-    CONNECTION_OPEN: D,
+    CONNECTION_OPEN: w,
     GUILD_MEMBER_REMOVE: R,
     GUILD_MEMBER_UPDATE: R,
     GUILD_ROLE_UPDATE: N,
-    PASSIVE_UPDATE_V2: w,
+    PASSIVE_UPDATE_V2: D,
     VOICE_STATE_UPDATES: P,
     GUILD_CREATE: L,
     GUILD_DELETE: L,

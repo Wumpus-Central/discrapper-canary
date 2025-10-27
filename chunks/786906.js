@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(951288),
     r = n(647438),
     s = n(120356),
@@ -47,10 +47,10 @@ class Z extends r.Component {
         return (
             r
                 ? s
-                    ? ((e = E.intl.string(E.t["4ry6ys"])), (l = a.gkL))
-                    : (e = E.intl.string(E.t["0D/6R0"]))
+                    ? ((e = E.intl.string(E.t["4ry6yi"])), (l = a.gkL))
+                    : (e = E.intl.string(E.t["0D/6Rz"]))
                 : o
-                  ? ((e = E.intl.string(E.t.PHzjvb)), (t = a.aML.Colors.RED), (c = !0))
+                  ? ((e = E.intl.string(E.t.PHzjvX)), (t = a.aML.Colors.RED), (c = !0))
                   : (e = E.intl.string(E.t.focH1t)),
             (0, i.jsx)(p.Z.Icon, {
                 icon: l,
@@ -83,7 +83,7 @@ class Z extends r.Component {
                       (0, i.jsx)(p.Z.Icon, {
                           icon: a.Dio,
                           onClick: this.handleCloseOpacitySettings,
-                          tooltip: E.intl.string(E.t.cpT0Cg),
+                          tooltip: E.intl.string(E.t.cpT0Cq),
                       }),
                   ],
               })
@@ -143,7 +143,7 @@ class Z extends r.Component {
             }),
             S(this, "renderWidgetButtons", () => {
                 let { locked: e, handlePin: t, pinned: n } = this.props,
-                    s = n ? E.intl.string(E.t.cSu80t) : E.intl.string(E.t.cM8Vnp);
+                    s = n ? E.intl.string(E.t.cSu80j) : E.intl.string(E.t.cM8Vnm);
                 return e
                     ? null
                     : (0, i.jsxs)(r.Fragment, {
@@ -152,7 +152,7 @@ class Z extends r.Component {
                               n
                                   ? (0, i.jsx)(p.Z.Icon, {
                                         icon: a._S3,
-                                        tooltip: E.intl.string(E.t.OVovCQ),
+                                        tooltip: E.intl.string(E.t.OVovCb),
                                         onClick: this.handleOpenOpacitySettings,
                                     })
                                   : null,
@@ -167,7 +167,7 @@ class Z extends r.Component {
             });
     }
 }
-function j(e) {
+function C(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};

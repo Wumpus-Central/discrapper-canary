@@ -15,7 +15,7 @@ let d = () => {
     return n || t !== l.Si.TIER_2 || !e
         ? null
         : (0, r.jsx)(s.Z, {
-              copy: c.intl.string(c.t.OejPtr),
+              copy: c.intl.string(c.t.OejPtl),
               bannerImage: u,
               textColor: "text-invert",
               hideGiftIcon: !0,

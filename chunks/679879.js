@@ -12,7 +12,7 @@ function s(t) {
         ? null
         : (0, r.jsx)(i.S89, {
               id: "private",
-              label: u.intl.string(u.t.fHDNJi),
+              label: u.intl.string(u.t.fHDNJv),
               action: function () {
                   if (null == t) return;
                   let e = (0, c.x9)(t.getFlags(), o.eHb.PRIVATE);

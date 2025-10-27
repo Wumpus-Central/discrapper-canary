@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(981631),
     O = n(675999),
     y = n(388032),
-    v = n(816827);
-let j = {
+    j = n(816827);
+let v = {
     origin: {
         x: -16,
         y: 0,
@@ -88,22 +88,22 @@ function C(e) {
             },
             selected: S,
             onContextMenu: x,
-            tooltip: y.intl.string(y.t.l5WIbW),
+            tooltip: y.intl.string(y.t.l5WIbf),
             icon: o.oFk,
         });
     return t
         ? P
         : (0, r.jsx)("div", {
-              className: v.tutorialContainer,
+              className: j.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
                   tutorialId: E ? "create-more-servers" : "create-first-server",
-                  inlineSpecs: j,
+                  inlineSpecs: v,
                   position: "right",
                   children: [
                       P,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
-                              name: y.intl.string(y.t["45xjMz"]),
+                              name: y.intl.string(y.t["45xjM5"]),
                               targetNode: n,
                               below: !0,
                               noCombine: !0,

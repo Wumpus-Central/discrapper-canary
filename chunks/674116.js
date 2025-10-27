@@ -49,7 +49,7 @@ function A() {
                                     (0, r.jsx)(h.Z, {}),
                                     (0, r.jsx)(i.Text, {
                                         variant: "text-sm/normal",
-                                        children: T.intl.format(T.t["V+B3FB"], { guideURL: S }),
+                                        children: T.intl.format(T.t["V+B3FH"], { guideURL: S }),
                                     }),
                                 ],
                             }),
@@ -77,11 +77,11 @@ function A() {
             }),
             (0, r.jsx)(l.Z, {
                 webSetting: v.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                title: T.intl.string(T.t["6I6GUl"]),
+                title: T.intl.string(T.t["6I6GUv"]),
                 children: (0, r.jsx)(b.Z, {}),
             }),
             (0, r.jsx)(l.Z, {
-                title: T.intl.string(T.t["8/udY2"]),
+                title: T.intl.string(T.t["8/udY0"]),
                 webSetting: v.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
                 children: (0, r.jsxs)(c.Z, {
                     children: [

@@ -34,7 +34,7 @@ function h(e, t) {
             canAnimate: !1,
         }),
         timestampLabel: t,
-        accessibilityLabel: f.intl.formatToPlainString(f.t["+l04BA"], {
+        accessibilityLabel: f.intl.formatToPlainString(f.t["+l04BN"], {
             origin: e.name,
             timestamp: t,
         }),
@@ -70,7 +70,7 @@ class m {
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: I,
-                    accessibilityLabel: f.intl.formatToPlainString(f.t["+l04BA"], {
+                    accessibilityLabel: f.intl.formatToPlainString(f.t["+l04BN"], {
                         origin: t,
                         timestamp: I,
                     }),

@@ -4,9 +4,9 @@ n.d(t, {
     Db: () => U,
     Dx: () => N,
     R: () => k,
-    TB: () => w,
+    TB: () => D,
     XE: () => x,
-    hs: () => D,
+    hs: () => w,
     w: () => C,
     xR: () => M,
     xU: () => L,
@@ -148,21 +148,21 @@ async function P(e, t) {
         rejectWithError: !1,
     });
 }
-function w(e) {
+function D(e) {
     c.DZ.updateAsync(
         "favoriteSoundboardSounds",
         (t) =>
             i().size(t.soundIds) >= E.oX
                 ? (s.Z.show({
-                      title: b.intl.string(b.t["+XYXtb"]),
-                      body: b.intl.formatToPlainString(b.t.JaIyFh, { count: E.oX }),
+                      title: b.intl.string(b.t["+XYXtZ"]),
+                      body: b.intl.formatToPlainString(b.t.JaIyFi, { count: E.oX }),
                   }),
                   !1)
                 : !t.soundIds.includes(e) && void t.soundIds.push(e),
         E.fy.INFREQUENT_USER_ACTION,
     );
 }
-function D(e) {
+function w(e) {
     c.DZ.updateAsync(
         "favoriteSoundboardSounds",
         (t) => {

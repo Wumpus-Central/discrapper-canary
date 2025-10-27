@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(913527),
@@ -21,16 +21,16 @@ var r = n(951288),
     O = n(765305),
     E = n(981631),
     N = n(388032),
-    C = n(138324);
-let P = (e) => {
+    P = n(138324);
+let C = (e) => {
         let { guildId: t, channelType: n, channel: l, onSelectChannel: i, disabled: a, entityType: s } = e,
             d = n === E.d4z.GUILD_STAGE_VOICE,
             g = (0, f.Q)(l, s),
             h = (0, p.sR)(t, n);
         return (0, r.jsx)(o.VcW, {
-            label: d ? N.intl.string(N.t.S7GjDw) : N.intl.string(N.t["7RYWCA"]),
+            label: d ? N.intl.string(N.t.S7GjDz) : N.intl.string(N.t["7RYWCP"]),
             required: !0,
-            helperText: g ? void 0 : N.intl.string(N.t.F3bDaW),
+            helperText: g ? void 0 : N.intl.string(N.t.F3bDaX),
             value: null == l ? void 0 : l.id,
             options: h.map((e) => ({
                 value: e.id,
@@ -51,7 +51,7 @@ let P = (e) => {
                     return (0, r.jsx)(l ? s : a, {
                         color: "currentColor",
                         size: "md",
-                        className: C.channelOptionIcon,
+                        className: P.channelOptionIcon,
                     });
                 })(null == e ? void 0 : e.value, s),
             isDisabled: a,
@@ -90,19 +90,19 @@ function I(e) {
         ? null
         : c === O.WX.EXTERNAL
           ? (0, r.jsx)(o.oil, {
-                label: N.intl.string(N.t.yx785O),
+                label: N.intl.string(N.t.yx785A),
                 required: !0,
                 onChange: (e) => {
                     i({ entityMetadata: { location: e } });
                 },
-                placeholder: N.intl.string(N.t.mkCMiY),
+                placeholder: N.intl.string(N.t.mkCMia),
                 maxLength: O.gG,
                 value: null != v ? v : "",
                 inputRef: m,
             })
           : null == p
             ? null
-            : (0, r.jsx)(P, {
+            : (0, r.jsx)(C, {
                   guildId: t,
                   channelType: p,
                   onSelectChannel: x,
@@ -111,7 +111,7 @@ function I(e) {
                   disabled: j,
               });
 }
-function Z(e) {
+function T(e) {
     let { guildId: t, guildEvent: n, onChange: i } = e,
         a = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
         c = (0, v.Z)(t, void 0),
@@ -122,33 +122,33 @@ function Z(e) {
         f = null == a ? void 0 : a.features.has(E.GuildFeatures.COMMUNITY),
         b = (0, h.xt)(n),
         y = S(i, n),
-        C = l.useMemo(() => {
+        P = l.useMemo(() => {
             let e = !u || 0 === m.length,
-                t = u ? N.intl.string(N.t["DkY+cH"]) : N.intl.string(N.t.HeF1kZ),
+                t = u ? N.intl.string(N.t["DkY+cO"]) : N.intl.string(N.t.HeF1kV),
                 n = [
                     {
-                        name: N.intl.string(N.t.BVZqJi),
+                        name: N.intl.string(N.t.BVZqJl),
                         value: O.WX.VOICE,
-                        desc: e ? t : N.intl.string(N.t["EV//4e"]),
+                        desc: e ? t : N.intl.string(N.t["EV//4f"]),
                         leadingIcon: o.gj8,
                         disabled: e,
                     },
                     {
-                        name: N.intl.string(N.t.w7ipb2),
+                        name: N.intl.string(N.t.w7ipbz),
                         value: O.WX.EXTERNAL,
-                        desc: c ? N.intl.string(N.t.DYxrHh) : N.intl.string(N.t.HeF1kZ),
+                        desc: c ? N.intl.string(N.t.DYxrHm) : N.intl.string(N.t.HeF1kV),
                         leadingIcon: o._tJ,
                         disabled: !c,
                     },
                 ];
             if (f) {
                 let e = !g || 0 === x.length,
-                    t = g ? N.intl.string(N.t["DkY+cH"]) : N.intl.string(N.t.HeF1kZ);
+                    t = g ? N.intl.string(N.t["DkY+cO"]) : N.intl.string(N.t.HeF1kV);
                 return [
                     {
-                        name: N.intl.string(N.t.EErMzM),
+                        name: N.intl.string(N.t.EErMzA),
                         value: O.WX.STAGE_INSTANCE,
-                        desc: e ? t : N.intl.string(N.t.LgALpq),
+                        desc: e ? t : N.intl.string(N.t.LgALpp),
                         leadingIcon: o.ewx,
                         disabled: e,
                     },
@@ -159,13 +159,13 @@ function Z(e) {
         }, [c, u, g, f, m.length, x.length]);
     return (0, r.jsx)(o.FXm, {
         value: n.entityType,
-        options: C,
+        options: P,
         onChange: y,
         disabled: b,
-        helperText: b ? N.intl.string(N.t.yutP5e) : void 0,
+        helperText: b ? N.intl.string(N.t.yutP5U) : void 0,
     });
 }
-function T(e) {
+function Z(e) {
     let { guildId: t, guildEvent: l, validationErrorMessage: i, onChange: a, isSlideReady: c = !1 } = e,
         { entityType: u } = l,
         m = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]),
@@ -175,23 +175,23 @@ function T(e) {
         p = S(a, l),
         f = v && u !== O.WX.EXTERNAL && 0 === x.length && h && null != u;
     return (0, r.jsxs)("div", {
-        className: C.container,
+        className: P.container,
         children: [
             (0, r.jsxs)(o.Kqy, {
                 gap: 4,
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-xl/semibold",
-                        children: N.intl.string(N.t["DC+Qm5"]),
+                        children: N.intl.string(N.t["DC+Qm8"]),
                     }),
                     (0, r.jsx)(o.Text, {
                         color: "text-secondary",
                         variant: "text-sm/normal",
-                        children: N.intl.string(N.t.IwmXLC),
+                        children: N.intl.string(N.t.IwmXLP),
                     }),
                 ],
             }),
-            (0, r.jsx)(Z, {
+            (0, r.jsx)(T, {
                 guildId: t,
                 guildEvent: l,
                 onChange: a,

@@ -6,9 +6,9 @@ n.d(t, {
 var i = n(399606),
     l = n(818083),
     s = n(430824),
-    a = n(971130),
-    r = n(981631);
-let o = a.ZP.INVITE_OPTIONS_7_DAYS.value,
+    r = n(971130),
+    a = n(981631);
+let o = r.ZP.INVITE_OPTIONS_7_DAYS.value,
     d = (0, l.B)({
         kind: "guild",
         id: "2025-08_default_invite_expiration_guild",
@@ -35,7 +35,7 @@ let o = a.ZP.INVITE_OPTIONS_7_DAYS.value,
 function u(e) {
     let { guildId: t, location: n } = e,
         l = d.useExperiment({
-            guildId: null != t ? t : r.lds,
+            guildId: null != t ? t : a.lds,
             location: n,
         }),
         u = (0, i.e7)([s.Z], () => s.Z.getGuild(t));
@@ -44,12 +44,12 @@ function u(e) {
         : (function (e) {
               var t;
               let { guild: n, experimentConfig: i } = e;
-              if (null == n ? void 0 : n.features.has(r.GuildFeatures.HUB)) return a.ZP.INVITE_OPTIONS_FOREVER.value;
+              if (null == n ? void 0 : n.features.has(a.GuildFeatures.HUB)) return r.ZP.INVITE_OPTIONS_FOREVER.value;
               let { defaultMaxAge: l } =
                   null != i
                       ? i
                       : d.getCurrentConfig({
-                            guildId: null != (t = null == n ? void 0 : n.id) ? t : r.lds,
+                            guildId: null != (t = null == n ? void 0 : n.id) ? t : a.lds,
                             location: "getDefaultInviteExpiration",
                         });
               return null != l ? l : o;
@@ -61,8 +61,8 @@ function u(e) {
 function c(e) {
     let { guildId: t, location: n } = e,
         i = d.useExperiment({
-            guildId: null != t ? t : r.lds,
+            guildId: null != t ? t : a.lds,
             location: n,
         });
-    return a.ZP.getMaxAgeOptions({ includeExperimentalValues: [null == i ? void 0 : i.defaultMaxAge] });
+    return r.ZP.getMaxAgeOptions({ includeExperimentalValues: [null == i ? void 0 : i.defaultMaxAge] });
 }

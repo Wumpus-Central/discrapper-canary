@@ -22,13 +22,13 @@ var i,
     x = n(925329),
     S = n(569545),
     Z = n(914923),
-    j = n(662304),
-    C = n(989941),
+    C = n(662304),
+    j = n(989941),
     I = n(552282),
-    P = n(345243),
+    P = n(582642),
     w = n(565799),
-    N = n(501655),
-    T = n(786915),
+    T = n(501655),
+    N = n(786915),
     D = n(7188),
     k = n(597998),
     R = n(199902),
@@ -126,11 +126,11 @@ function eo(e) {
             context: f,
         }),
         Z = (0, a.e7)([W.Z], () => W.Z.isPrioritySpeaker(i.id, f)),
-        j = (0, a.e7)([R.Z], () => null != R.Z.getStreamForUser(i.id, g)),
-        C = s.useMemo(() => null != E && E.ownerId !== i.id && x.includes(i.id), [E, i.id, x]);
+        C = (0, a.e7)([R.Z], () => null != R.Z.getStreamForUser(i.id, g)),
+        j = s.useMemo(() => null != E && E.ownerId !== i.id && x.includes(i.id), [E, i.id, x]);
     if (d === $.OYC.ONLY_WHILE_SPEAKING && n && !S) return null;
     let I = i.id === b,
-        { mute: P, selfMute: w, suppress: N, deaf: T, selfDeaf: D } = m,
+        { mute: P, selfMute: w, suppress: T, deaf: N, selfDeaf: D } = m,
         L = y && O,
         M = w && (!I || !L);
     return (0, r.jsxs)(r.Fragment, {
@@ -147,17 +147,17 @@ function eo(e) {
                 nick: o,
                 speaking: !1,
                 flipped: t,
-                isStreaming: j,
+                isStreaming: C,
                 iconClassName: l()(en.voiceIcon, { [en.locked]: n }),
-                isWatching: C,
+                isWatching: j,
                 isOverlay: !0,
                 size: u,
                 priority: Z,
                 mute: P || M || v,
                 localMute: v,
-                serverMute: P || N,
-                deaf: T || D,
-                serverDeaf: T,
+                serverMute: P || T,
+                deaf: N || D,
+                serverDeaf: N,
                 userNameClassName: l()(en.username, {
                     [en.locked]: n,
                     [en.hidden]: n && (c === $.wC$.NEVER || (!S && c === $.wC$.ONLY_WHILE_SPEAKING)),
@@ -168,7 +168,7 @@ function eo(e) {
                 (0, r.jsx)(X.Z, {
                     value: w,
                     action: $.kg4.TOGGLE_MUTE,
-                    shouldShow: !P && !N,
+                    shouldShow: !P && !T,
                 }),
         ],
     });
@@ -257,7 +257,7 @@ class el extends (i = s.PureComponent) {
                     ? null
                     : (0, r.jsx)(J.ZP.Icon, {
                           icon: h.ewm,
-                          label: et.intl.string(et.t.NiTd0d),
+                          label: et.intl.string(et.t.NiTd0e),
                           onClick: this.handleOpenVoiceSettings,
                           tooltipPosition: "left",
                           size: 18,
@@ -266,7 +266,7 @@ class el extends (i = s.PureComponent) {
                     ? null
                     : (0, r.jsx)(J.ZP.Icon, {
                           icon: e ? h.QVc : h.k5M,
-                          label: e ? et.intl.string(et.t.cSu80t) : et.intl.string(et.t.cM8Vnp),
+                          label: e ? et.intl.string(et.t.cSu80j) : et.intl.string(et.t.cM8Vnm),
                           onClick: this.handlePin,
                           tooltipPosition: "left",
                           size: 18,
@@ -306,7 +306,7 @@ class el extends (i = s.PureComponent) {
                                       className: en.gameIcon,
                                       game: o,
                                   })
-                                : (0, r.jsx)(j.Z, { title: f }),
+                                : (0, r.jsx)(C.Z, { title: f }),
                             (0, r.jsxs)(v.Z, {
                                 direction: v.Z.Direction.VERTICAL,
                                 justify: v.Z.Justify.BETWEEN,
@@ -315,7 +315,7 @@ class el extends (i = s.PureComponent) {
                                     (0, r.jsx)(h.Text, {
                                         className: en.streaming,
                                         variant: "text-sm/normal",
-                                        children: et.intl.string(et.t.XKYej4),
+                                        children: et.intl.string(et.t.XKYej5),
                                     }),
                                     (0, r.jsx)(P.Z, { children: null != (e = null == c ? void 0 : c.name) ? e : g }),
                                 ],
@@ -327,7 +327,7 @@ class el extends (i = s.PureComponent) {
                         children: [
                             (0, r.jsx)("div", {
                                 className: en.streamerIconWrapper,
-                                children: (0, r.jsx)(T.Z, {
+                                children: (0, r.jsx)(N.Z, {
                                     stream: u,
                                     iconClassName: en.streamerIcon,
                                     appContext: $.IlC.OVERLAY,
@@ -344,7 +344,7 @@ class el extends (i = s.PureComponent) {
                                 className: en.streamerIconWrapper,
                                 children: (0, r.jsx)(d.u, {
                                     asContainer: !0,
-                                    text: et.intl.string(et.t.S5anIS),
+                                    text: et.intl.string(et.t.S5anIc),
                                     children: (0, r.jsx)(p.zx, {
                                         onClick: this.handleStopStream,
                                         look: p.zx.Looks.BLANK,
@@ -465,7 +465,7 @@ function ea(e) {
                         return null == e
                             ? [[], -1]
                             : e.isGuildStageVoice()
-                              ? [w.Z.getMutableParticipants(e.id, N.pV.SPEAKER), w.Z.getParticipantsVersion(e.id)]
+                              ? [w.Z.getMutableParticipants(e.id, T.pV.SPEAKER), w.Z.getParticipantsVersion(e.id)]
                               : [G.ZP.getVoiceStatesForChannel(e), G.ZP.getVoiceStateVersion(e.getGuildId())];
                     },
                     [],
@@ -481,12 +481,12 @@ function ea(e) {
         l = (0, a.e7)([R.Z], () => R.Z.getStreamerActiveStreamMetadata()),
         c = (0, a.e7)([E.ZP, U.Z, M.Z], () => {
             var e;
-            let t = (0, C.Z)(E.ZP, U.Z);
+            let t = (0, j.Z)(E.ZP, U.Z);
             return null != t ? (null == (e = M.Z.getGameByGameData(t)) ? void 0 : e.id) : null;
         }),
         d = (0, O.q)(c),
         u = (0, a.cj)([E.ZP, U.Z, R.Z, B.default], () => {
-            let e = (0, C.Z)(E.ZP, U.Z),
+            let e = (0, j.Z)(E.ZP, U.Z),
                 t = R.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: B.default.getDisplayUserMode(),

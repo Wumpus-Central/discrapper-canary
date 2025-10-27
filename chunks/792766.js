@@ -18,7 +18,7 @@ let u = (e) => {
                 variant: "heading-md/normal",
                 color: "header-muted",
                 className: c.alignStart,
-                children: o.intl.string(o.t.Eabu19),
+                children: o.intl.string(o.t.Eabu1z),
             }),
             (0, r.jsxs)("div", {
                 className: c.guild,
@@ -47,7 +47,7 @@ let u = (e) => {
                                     null != n && n > 0
                                         ? (0, r.jsx)(i.Text, {
                                               variant: "text-sm/normal",
-                                              children: o.intl.format(o.t["LC+S+v"], { membersOnline: n }),
+                                              children: o.intl.format(o.t["LC+S+m"], { membersOnline: n }),
                                           })
                                         : null,
                                 ],

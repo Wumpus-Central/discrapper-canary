@@ -18,7 +18,7 @@ function d(e) {
         ? null
         : (0, r.jsx)(l.sNh, {
               id: "collapse-all-categories",
-              label: u.intl.string(u.t["9dqzUl"]),
+              label: u.intl.string(u.t["9dqzUr"]),
               action: () => (0, o.N5)(e.guild_id),
           });
 }

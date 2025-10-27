@@ -63,11 +63,11 @@ function f(e) {
         _ = n.extra.artist.name,
         p = {
             onClick: () => (0, i.o)(o.Hw.ALBUM, n.extra.media.external_parent_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: n.extra.media.parent_title }),
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: n.extra.media.parent_title }),
         },
         h = {
             onClick: () => (0, i.o)(o.Hw.ARTIST, n.extra.artist.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: _ }),
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: _ }),
         };
     return (
         u === r.p.SPOTIFY && (t = { type: a.kG.SPOTIFY }),
@@ -77,7 +77,7 @@ function f(e) {
             titleClickable: h,
             subtitleClickable: p,
             thumbnailClickable: p,
-            userDescription: s.t.CcVI1d,
+            userDescription: s.t.CcVI1T,
             providerIconProps: t,
         })
     );

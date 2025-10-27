@@ -31,7 +31,7 @@ function b() {
     return (0, r.jsxs)("div", {
         className: p.rowContainer,
         children: [
-            (0, r.jsx)("div", { children: m.intl.string(m.t["9Oq93t"]) }),
+            (0, r.jsx)("div", { children: m.intl.string(m.t["9Oq93m"]) }),
             e &&
                 (0, r.jsx)(a.rgF, {
                     size: "xs",

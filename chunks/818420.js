@@ -31,7 +31,7 @@ function p(e) {
             (null == n ? void 0 : n.id) != null ? (0, l.RH)(null) : (0, o.Rx)(null);
         }, [null == n ? void 0 : n.id]);
     return (0, r.jsx)(d.Z, {
-        title: f.intl.string(f.t.x5CoXV),
+        title: f.intl.string(f.t.x5CoXR),
         titleIcon: p,
         errors: y,
         children: (0, r.jsxs)("div", {
@@ -40,14 +40,14 @@ function p(e) {
                 (0, r.jsx)(a.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: f.intl.string(f.t.BwdeMz),
+                    text: f.intl.string(f.t.BwdeM1),
                     onClick: v,
                 }),
                 O &&
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: m ? f.intl.string(f.t.CHf9iI) : f.intl.string(f.t["9zwziY"]),
+                        text: m ? f.intl.string(f.t.CHf9iJ) : f.intl.string(f.t["9zwziY"]),
                         onClick: I,
                     }),
             ],

@@ -180,7 +180,7 @@ function G(e) {
                         onClick: P,
                         focusProps: { ringTarget: b },
                         onContextMenu: R,
-                        "aria-label": D.intl.formatToPlainString(D.t.pgYN6e, {
+                        "aria-label": D.intl.formatToPlainString(D.t.pgYN6c, {
                             title: n.name,
                             count: y,
                         }),
@@ -263,13 +263,13 @@ function V(e) {
         }));
     return s
         ? (0, r.jsx)($, {
-              message: D.intl.string(D.t.Lkp2fH),
+              message: D.intl.string(D.t.Lkp2fB),
               containerWidth: l.width,
               channel: t,
           })
         : c
           ? (0, r.jsx)($, {
-                message: D.intl.string(D.t.yWK7ZG),
+                message: D.intl.string(D.t.yWK7ZM),
                 containerWidth: l.width,
                 channel: t,
             })
@@ -397,8 +397,8 @@ function q(e) {
         ],
     });
 }
-let X = (e) => e.preventDefault(),
-    K = i.memo(function (e) {
+let K = (e) => e.preventDefault(),
+    X = i.memo(function (e) {
         return (0, r.jsx)(r.Fragment, {
             children: (0, v.Yi)(B(z({}, e), { analyticsSource: "ForumPostMediaPreviewImage" })),
         });
@@ -436,7 +436,7 @@ let X = (e) => e.preventDefault(),
                                 width: e.width,
                                 height: e.height,
                                 alt: null != e.alt && a ? g : e.alt,
-                                onClick: X,
+                                onClick: K,
                                 shouldRenderAccessory: !m && !u,
                             }),
                             b = (0, x.d$)(e.src) ? "".concat(e.src, "?format=png") : e.src,
@@ -468,7 +468,7 @@ let X = (e) => e.preventDefault(),
                                                 }),
                                             )
                                           : (0, r.jsx)(
-                                                K,
+                                                X,
                                                 B(z({}, f), {
                                                     autoPlay: o && !a,
                                                     containerClassName: H.mosaicMediaContainer,
@@ -582,7 +582,7 @@ function Q(e) {
                         (0, r.jsx)(d.Text, {
                             variant: "text-sm/normal",
                             color: o ? "header-secondary" : "text-muted",
-                            children: D.intl.string(D.t.mE3KJC),
+                            children: D.intl.string(D.t.mE3KJN),
                         }),
                     a &&
                         null != n &&

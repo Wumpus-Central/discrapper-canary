@@ -1,26 +1,26 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(481060),
     l = n(314897),
     o = n(825354),
-    s = n(635318);
-function c(e) {
+    c = n(635318);
+function s(e) {
     let {
         userId: t,
         headingId: n,
         widget: i,
         disableInteraction: l = !1,
         title: o,
-        subtitle: c,
+        subtitle: s,
         actionButtons: d = [],
     } = e;
     return (0, r.jsxs)("div", {
-        className: s.headerRow,
+        className: c.headerRow,
         children: [
             (0, r.jsxs)("div", {
-                className: s.title,
+                className: c.title,
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-sm/medium",
@@ -28,11 +28,11 @@ function c(e) {
                         id: n,
                         children: o,
                     }),
-                    null != c &&
+                    null != s &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: c,
+                            children: s,
                         }),
                 ],
             }),
@@ -46,22 +46,22 @@ function c(e) {
     });
 }
 function u(e) {
-    let { widget: t, actionButtons: n, disabledInteraction: a, userId: c } = e,
+    let { widget: t, actionButtons: n, disabledInteraction: a, userId: s } = e,
         u = (0, i.e7)([l.default], () => l.default.getId());
     return a
         ? null
         : null != n && n.length > 0
           ? (0, r.jsx)("div", {
-                className: s.actions,
+                className: c.actions,
                 children: n,
             })
-          : u !== c
+          : u !== s
             ? (0, r.jsx)("div", {
-                  className: s.actions,
+                  className: c.actions,
                   children: (0, r.jsx)(o.Z, {
                       widget: t,
-                      userId: c,
-                      className: s.menuButton,
+                      userId: s,
+                      className: c.menuButton,
                   }),
               })
             : null;

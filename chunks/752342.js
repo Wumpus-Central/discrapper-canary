@@ -20,8 +20,8 @@ var i = t(481060),
     b = t(952124),
     I = t(53558),
     y = t(544989),
-    Z = t(30556),
-    _ = t(4517),
+    _ = t(30556),
+    Z = t(4517),
     O = t(740628),
     N = t(398145),
     A = t(228168),
@@ -35,30 +35,30 @@ function S(e) {
             currentUser: t,
             guildId: S,
             channelId: w,
-            messageId: R,
-            roleId: D,
+            messageId: D,
+            roleId: R,
             sessionId: L,
             initialSection: M,
             initialSubsection: B,
             transitionState: U,
             openedAt: k,
             onClose: G,
-            sourceAnalyticsLocations: F = [],
-            showGuildProfile: V,
+            sourceAnalyticsLocations: V = [],
+            showGuildProfile: F,
         } = e,
         W = S === T.ME ? void 0 : S,
-        H = (0, u.ZP)(n.id, V ? W : void 0),
+        H = (0, u.ZP)(n.id, F ? W : void 0),
         z = c.ZP.getName(W, w, n),
         Y = (0, a.Dt)(),
-        { analyticsLocations: K } = (0, s.ZP)([...F, r.Z.USER_PROFILE_MODAL]),
+        { analyticsLocations: K } = (0, s.ZP)([...V, r.Z.USER_PROFILE_MODAL]),
         J = (0, d.ZB)({
             layout: "MODAL",
             userId: n.id,
             sourceSessionId: L,
             guildId: W,
             channelId: w,
-            messageId: R,
-            roleId: D,
+            messageId: D,
+            roleId: R,
         }),
         q = (0, N.Z)(n),
         X = (0, m.Z)({
@@ -87,7 +87,7 @@ function S(e) {
                     component: (0, l.jsx)(i.nn4, {
                         children: (0, l.jsx)(i.H, {
                             id: Y,
-                            children: E.intl.format(E.t.KRe1Fh, { name: z }),
+                            children: E.intl.format(E.t.KRe1Fk, { name: z }),
                         }),
                     }),
                     children: (0, l.jsxs)(v.Z, {
@@ -120,7 +120,7 @@ function S(e) {
                                                 channelId: w,
                                                 themeType: P.l.MODAL,
                                             }),
-                                            (0, l.jsx)(_.Z, {
+                                            (0, l.jsx)(Z.Z, {
                                                 user: n,
                                                 themeType: P.l.MODAL,
                                                 hasEntered: U === i.Dvm.ENTERED,
@@ -132,7 +132,7 @@ function S(e) {
                                                 children: [
                                                     (0, l.jsx)("div", {
                                                         className: C.messageTextButton,
-                                                        children: (0, l.jsx)(Z.H, {
+                                                        children: (0, l.jsx)(_.H, {
                                                             variant: "secondary",
                                                             userId: n.id,
                                                             onClose: o.Z.popAll,
@@ -140,7 +140,7 @@ function S(e) {
                                                     }),
                                                     (0, l.jsx)("div", {
                                                         className: C.messageIconButton,
-                                                        children: (0, l.jsx)(Z.v, {
+                                                        children: (0, l.jsx)(_.v, {
                                                             variant: "secondary",
                                                             userId: n.id,
                                                             onClose: o.Z.popAll,

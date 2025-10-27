@@ -20,10 +20,10 @@ function l(e) {
     if (!t) return null;
     switch (t) {
         case "SELECT_PAYMENT_METHOD":
-            n = a.intl.string(a.t.Tdb5qa);
+            n = a.intl.string(a.t.Tdb5qb);
             break;
         case "ADD_NEW_PAYMENT_METHOD":
-            n = a.intl.string(a.t["6d44Fx"]);
+            n = a.intl.string(a.t["6d44F5"]);
     }
     return (0, r.jsxs)("div", {
         className: o.paymentRestrictionBannerContainer,

@@ -11,25 +11,25 @@ function c(t) {
     return (0, e.jsx)(a.Modal, {
         onClose: c,
         transitionState: u,
-        title: o.intl.string(o.t.Df4aUF),
-        subtitle: o.intl.string(o.t.eOWEmJ),
+        title: o.intl.string(o.t.Df4aUN),
+        subtitle: o.intl.string(o.t.eOWEmL),
         actions: [
             {
-                text: o.intl.string(o.t["ETE/oK"]),
+                text: o.intl.string(o.t["ETE/oC"]),
                 onClick: () => {
                     c();
                 },
                 variant: "secondary",
             },
             {
-                text: o.intl.string(o.t.bt75u7),
+                text: o.intl.string(o.t.bt75uw),
                 onClick: () => {
                     i(d);
                 },
             },
         ],
         children: (0, e.jsx)(l.Kx8, {
-            placeholder: o.intl.string(o.t.gDZw7O),
+            placeholder: o.intl.string(o.t.gDZw7A),
             value: d,
             onChange: h,
             maxLength: r._6,

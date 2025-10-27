@@ -7,16 +7,16 @@ var r = n(951288),
     o = n(544891),
     c = n(481060),
     d = n(497321),
-    u = n(841470),
-    g = n(142497),
-    m = n(706454),
-    p = n(650774),
-    f = n(430824),
-    h = n(246946),
-    b = n(626135),
-    x = n(999382),
-    j = n(798528),
-    v = n(743676),
+    u = n(142497),
+    g = n(706454),
+    m = n(650774),
+    p = n(430824),
+    f = n(246946),
+    h = n(626135),
+    b = n(999382),
+    x = n(798528),
+    j = n(743676),
+    v = n(795145),
     _ = n(981631),
     C = n(190378),
     O = n(388032),
@@ -51,10 +51,10 @@ let N = function (e, t, n) {
             i = null;
         return (
             null == t || Number.isNaN(t)
-                ? (null == t || Number.isNaN(t)) && null != e && (i = O.intl.string(O.t.xO2msb))
-                : (i = O.intl.formatToPlainString(O.t.nskeMz, { percentage: (0, a.o)(Math.abs(t), n) })),
+                ? (null == t || Number.isNaN(t)) && null != e && (i = O.intl.string(O.t.xO2msf))
+                : (i = O.intl.formatToPlainString(O.t.nskeMw, { percentage: (0, a.o)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? "".concat((0, a.o)(e, n)).concat(r ? "%" : "") : O.intl.string(O.t.jHpxws),
+                localizedNumber: null != e ? "".concat((0, a.o)(e, n)).concat(r ? "%" : "") : O.intl.string(O.t.jHpxwo),
                 subtext: i,
                 isTrendingUp: t > 0,
                 isTrendingDown: t < 0,
@@ -68,29 +68,29 @@ let N = function (e, t, n) {
                   className: y.notEnoughMembersError,
                   children: (0, r.jsx)(c.M14, {
                       type: "info",
-                      children: O.intl.string(O.t["FsgE/P"]),
+                      children: O.intl.string(O.t["FsgE/B"]),
                   }),
               })
             : null == e
               ? null
               : (0, r.jsx)(c.M14, {
                     type: "critical",
-                    children: O.intl.string(O.t.Iju63d),
+                    children: O.intl.string(O.t.Iju63e),
                 });
     },
     S = () => {
         let [e, t] = i.useState(!1),
-            n = (0, s.e7)([x.Z], () => x.Z.getGuildId());
+            n = (0, s.e7)([b.Z], () => b.Z.getGuildId());
         return (0, r.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
             className: y.developerPortalCta,
             children: (0, r.jsx)(c.Button, {
                 variant: "primary",
-                text: O.intl.string(O.t.Uskgx8),
+                text: O.intl.string(O.t.Uskgxx),
                 onClick: () => {
                     t(!0),
                         (function (e) {
-                            b.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+                            h.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
                             let t = null == e ? _.E07.DEVELOPER_PORTAL : _.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
                                 n = (0, l.Z)();
                             return o.tn
@@ -118,15 +118,15 @@ let N = function (e, t, n) {
         });
     },
     T = () => {
-        let e = (0, s.e7)([x.Z], () => x.Z.getGuildId()),
-            t = (0, s.e7)([p.Z], () => p.Z.getMemberCount(e)),
-            n = (0, s.e7)([f.Z], () => f.Z.getGuild(e)),
-            l = (0, s.e7)([m.default], () => m.default.locale),
-            { analytics: a, errorCode: o } = (0, s.cj)([v.Z], () => ({
-                analytics: null != e ? v.Z.getOverviewAnalytics(e) : null,
-                errorCode: v.Z.getError(),
+        let e = (0, s.e7)([b.Z], () => b.Z.getGuildId()),
+            t = (0, s.e7)([m.Z], () => m.Z.getMemberCount(e)),
+            n = (0, s.e7)([p.Z], () => p.Z.getGuild(e)),
+            l = (0, s.e7)([g.default], () => g.default.locale),
+            { analytics: a, errorCode: o } = (0, s.cj)([j.Z], () => ({
+                analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
+                errorCode: j.Z.getError(),
             })),
-            b = (0, s.e7)([h.Z], () => h.Z.getSettings().enabled),
+            h = (0, s.e7)([f.Z], () => f.Z.getSettings().enabled),
             T =
                 null == t ||
                 null == n ||
@@ -136,10 +136,10 @@ let N = function (e, t, n) {
                     !n.features.has(_.GuildFeatures.PARTNERED) &&
                     !n.features.has(_.GuildFeatures.VERIFIED));
         i.useEffect(() => {
-            null == e || T || ((0, j.Vk)(e), (0, j.SR)(e), (0, j.xl)(e));
+            null == e || T || ((0, x.Vk)(e), (0, x.SR)(e), (0, x.xl)(e));
         }, [e, T]),
             i.useEffect(() => {
-                (0, g.Kw)(C.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
+                (0, u.Kw)(C.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
             }, []);
         let P =
             null != a
@@ -149,35 +149,35 @@ let N = function (e, t, n) {
                           className: y.overviewData,
                           children: [
                               (0, r.jsx)(
-                                  u.Z,
+                                  v.Z,
                                   E(
                                       {
-                                          title: O.intl.string(O.t.i0Nora),
-                                          tooltipText: O.intl.string(O.t.KiRbLC),
+                                          title: O.intl.string(O.t.i0NorT),
+                                          tooltipText: O.intl.string(O.t.KiRbLJ),
                                       },
                                       N(a.visitors, a.visitorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
-                                  u.Z,
+                                  v.Z,
                                   E(
                                       {
-                                          title: O.intl.string(O.t.DDAHdX),
-                                          tooltipText: O.intl.string(O.t.HxWUkZ),
+                                          title: O.intl.string(O.t.DDAHdQ),
+                                          tooltipText: O.intl.string(O.t.HxWUkU),
                                       },
                                       N(a.communicators, a.communicatorsChange, l),
                                   ),
                               ),
                               (0, r.jsx)(
-                                  u.Z,
-                                  E({ title: O.intl.string(O.t.hYeOqK) }, N(a.newMembers, a.newMembersChange, l)),
+                                  v.Z,
+                                  E({ title: O.intl.string(O.t.hYeOqC) }, N(a.newMembers, a.newMembersChange, l)),
                               ),
                               (0, r.jsx)(
-                                  u.Z,
+                                  v.Z,
                                   E(
                                       {
-                                          title: O.intl.string(O.t.jj7OPz),
-                                          tooltipText: O.intl.string(O.t.MQCsl5),
+                                          title: O.intl.string(O.t.jj7OPw),
+                                          tooltipText: O.intl.string(O.t.MQCslz),
                                       },
                                       N(a.pctRetained, a.pctRetainedChange, l, !0),
                                   ),
@@ -190,11 +190,11 @@ let N = function (e, t, n) {
             children: [
                 (0, r.jsx)(c.Heading, {
                     variant: "heading-lg/semibold",
-                    children: O.intl.string(O.t["0wWfUF"]),
+                    children: O.intl.string(O.t["0wWfUG"]),
                 }),
                 (0, r.jsx)(c.Text, {
                     variant: "text-sm/normal",
-                    children: O.intl.format(O.t.NIZ60d, {}),
+                    children: O.intl.format(O.t.NIZ60a, {}),
                 }),
                 I(o, T),
                 (0, r.jsxs)("div", {
@@ -204,12 +204,12 @@ let N = function (e, t, n) {
                         (0, r.jsx)(c.Text, {
                             className: y.developerPortalCtaText,
                             variant: "text-sm/normal",
-                            children: O.intl.string(O.t.A5vsws),
+                            children: O.intl.string(O.t.A5vswv),
                         }),
                         (0, r.jsx)(S, {}),
                     ],
                 }),
-                b
+                h
                     ? (0, r.jsx)("div", {
                           className: y.streamerMode,
                           children: (0, r.jsx)(d.Z, {}),

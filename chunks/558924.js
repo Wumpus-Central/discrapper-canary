@@ -18,8 +18,8 @@ var i = t(120356),
     Z = t(213609),
     f = t(358221),
     b = t(985588),
-    m = t(933557),
-    O = t(243778),
+    O = t(933557),
+    m = t(243778),
     p = t(359110),
     h = t(163612),
     j = t(592125),
@@ -47,19 +47,19 @@ function _(e, n) {
             [n, e.id],
         ),
         u = (0, o.e7)([j.Z], () => j.Z.getChannel(n)),
-        m = (0, b.s)(e, "context_menu", n),
+        O = (0, b.s)(e, "context_menu", n),
         { enabled: P } = h.Z.useExperiment({
             guildId: null == u ? void 0 : u.guild_id,
             location: "useRingHangupItem",
         }),
-        E = !m || (null == t ? void 0 : t.length) === 0 || null == n,
+        E = !O || (null == t ? void 0 : t.length) === 0 || null == n,
         _ = P && (null == u ? void 0 : u.guild_id) != null,
         S = null == i,
         T = null != i && i.type === v.fO.USER && i.ringing,
         U = [];
     _ && !E && (S || T) && U.push(s.z.RING_USER_TO_VC_NEW_BADGE);
-    let [A, k] = (0, O.US)(U),
-        M = A === s.z.RING_USER_TO_VC_NEW_BADGE,
+    let [A, M] = (0, m.US)(U),
+        k = A === s.z.RING_USER_TO_VC_NEW_BADGE,
         { analyticsLocations: w } = (0, g.ZP)();
     return ((0, Z.Z)(
         {
@@ -82,12 +82,12 @@ function _(e, n) {
                 label: _
                     ? (0, l.jsxs)("div", {
                           className: N.label,
-                          children: [y.intl.string(y.t["3Hv9qa"]), M && (0, l.jsx)(I, {})],
+                          children: [y.intl.string(y.t["3Hv9qQ"]), k && (0, l.jsx)(I, {})],
                       })
-                    : y.intl.string(y.t.bHa9kJ),
+                    : y.intl.string(y.t.bHa9kN),
                 subtext: _ ? (0, l.jsx)(C, { channel: u }) : null,
                 action: () => {
-                    M && k(x.L.TAKE_ACTION), c.Z.ring(n, [e.id], "user_context_menu"), _ && null != n && (0, p.Kh)(n);
+                    k && M(x.L.TAKE_ACTION), c.Z.ring(n, [e.id], "user_context_menu"), _ && null != n && (0, p.Kh)(n);
                 },
                 className: N.menuItem,
             })
@@ -96,17 +96,17 @@ function _(e, n) {
                   id: "stop-ringing",
                   label: (0, l.jsxs)("div", {
                       className: N.label,
-                      children: [y.intl.string(y.t.ygslb2), M && (0, l.jsx)(I, {})],
+                      children: [y.intl.string(y.t.ygslb0), k && (0, l.jsx)(I, {})],
                   }),
                   subtext: _
                       ? (0, l.jsx)(d.Text, {
                             variant: "text-xs/medium",
                             className: r()(N.subtext, N.ringing),
-                            children: y.intl.format(y.t.dwfzZm, { channelName: (0, l.jsx)(C, { channel: u }) }),
+                            children: y.intl.format(y.t.dwfzZi, { channelName: (0, l.jsx)(C, { channel: u }) }),
                         })
                       : null,
                   action: () => {
-                      M && k(x.L.TAKE_ACTION), c.Z.stopRinging(n, [e.id]);
+                      k && M(x.L.TAKE_ACTION), c.Z.stopRinging(n, [e.id]);
                   },
                   className: N.menuItem,
               })
@@ -114,7 +114,7 @@ function _(e, n) {
 }
 let C = (e) => {
         let { channel: n } = e,
-            t = (0, m.ZP)(n);
+            t = (0, O.ZP)(n);
         return (0, l.jsxs)("div", {
             className: N.subtext,
             children: [

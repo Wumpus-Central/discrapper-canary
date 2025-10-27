@@ -22,8 +22,8 @@ var r = n(951288),
     E = n(413557),
     O = n(300986),
     I = n(314451),
-    y = n(35583),
-    v = n(821020),
+    v = n(35583),
+    y = n(821020),
     C = n(340137),
     S = n(522474),
     T = n(141321),
@@ -50,19 +50,19 @@ let k = i.memo(function () {
     i.useLayoutEffect(() => {
         x.ZP.setMinimumSize(L.J, L.N);
     }, []);
-    let { notificationCenterVariant: e, entrypoint: t } = (0, v.pN)({ location: "AppTitleBar" }),
+    let { notificationCenterVariant: e, entrypoint: t } = (0, y.pN)({ location: "AppTitleBar" }),
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, m.t)({ location: "AppTitleBar" }),
         { backForwardButtons: s, titlebarIconSize: _ } = (0, h.T)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: Z } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         { enabled: R } = d.c.useConfig({ location: "AppTitleBar" }),
         k = (0, o.e7)([j.Z], () => j.Z.isDeveloper),
-        U = null !== e && t === v.u3.TITLE_BAR_LEFT,
+        U = null !== e && t === y.u3.TITLE_BAR_LEFT,
         G = null === e;
     i.useLayoutEffect(() => {
         x.ZP.setMinimumSize(L.J, L.N);
     }, []);
-    let H = (0, N.Ll)(),
-        B = (0, o.e7)([P.Z, S.Z], () => (0, A.rB)()),
+    let B = (0, N.Ll)(),
+        H = (0, o.e7)([P.Z, S.Z], () => (0, A.rB)()),
         V = (function (e) {
             let {
                 showBackForwardButtons: t,
@@ -89,12 +89,12 @@ let k = i.memo(function () {
             titlebarFastTravel: n,
             showRecentsButton: G,
         });
-    if (B) return null;
+    if (H) return null;
     let F = a()(D.button, { [D.smallButton]: "sm" === _ });
     return (0, r.jsx)(c.Wdt, {
         children: (e) =>
             (0, r.jsx)(c.f6W, {
-                theme: H,
+                theme: B,
                 children: (t) => {
                     var i, a;
                     return (0, r.jsx)(w.TF, {
@@ -178,7 +178,7 @@ let k = i.memo(function () {
                                           focusSectionProps: "HELP" === V ? e : void 0,
                                           className: F,
                                       }),
-                                (0, r.jsx)(y.Z, { className: F }),
+                                (0, r.jsx)(v.Z, { className: F }),
                             ],
                         }),
                     });

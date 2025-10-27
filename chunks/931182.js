@@ -13,13 +13,13 @@ function f() {
         t = [
             {
                 setting: "SEXUALLY_EXPLICIT_MEDIA_REDACTION",
-                title: u.intl.string(u.t.GYpoAg),
+                title: u.intl.string(u.t.GYpoAq),
                 component: () => (0, r.jsx)(l.P, {}),
                 orientation: "vertical",
             },
             {
                 setting: "GORE_MEDIA_REDACTION",
-                title: u.intl.string(u.t["16/3Bg"]),
+                title: u.intl.string(u.t["16/3Bi"]),
                 component: () => (0, r.jsx)(c.I, {}),
                 orientation: "vertical",
             },
@@ -27,8 +27,8 @@ function f() {
     return (0, r.jsxs)(o.U, {
         children: [
             (0, r.jsx)(o.H, {
-                header: u.intl.string(u.t["Hj/Bur"]),
-                description: u.intl.format(u.t["H/Icz8"], { learnMoreLink: s.Z.getArticleURL(e) }),
+                header: u.intl.string(u.t["Hj/But"]),
+                description: u.intl.format(u.t["H/Icz+"], { learnMoreLink: s.Z.getArticleURL(e) }),
             }),
             (0, r.jsx)(a.z, {
                 tabs: t,

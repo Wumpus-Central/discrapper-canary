@@ -3,14 +3,14 @@ var r = n(951288),
     i = n(442837),
     l = n(481060),
     a = n(37234),
-    o = n(594174),
-    s = n(981631);
+    s = n(594174),
+    o = n(981631);
 function c() {
-    return (0, i.e7)([o.default], () => {
+    return (0, i.e7)([s.default], () => {
         var e, t;
         return (
-            (null == (e = o.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0 ||
-            (null == (t = o.default.getCurrentUser()) ? void 0 : t.isStaffPersonal()) === !0
+            (null == (e = s.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0 ||
+            (null == (t = s.default.getCurrentUser()) ? void 0 : t.isStaffPersonal()) === !0
         );
     })
         ? (0, r.jsx)(
@@ -19,7 +19,7 @@ function c() {
                   id: "playgrounds",
                   label: "Playgrounds",
                   action: () => {
-                      (0, a.jN)(s.S9g.MANA_PLAYGROUND);
+                      (0, a.jN)(o.S9g.MANA_PLAYGROUND);
                   },
                   children: (0, r.jsx)(
                       l.kSQ,
@@ -28,7 +28,7 @@ function c() {
                               id: "mana-playground",
                               label: "Mana Playground",
                               action: () => {
-                                  (0, a.jN)(s.S9g.MANA_PLAYGROUND);
+                                  (0, a.jN)(o.S9g.MANA_PLAYGROUND);
                               },
                           }),
                       },

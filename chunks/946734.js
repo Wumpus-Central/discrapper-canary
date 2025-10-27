@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(594174),
     O = n(251625),
     y = n(823379),
-    v = n(665149),
-    j = n(228168),
+    j = n(665149),
+    v = n(228168),
     x = n(388032),
     C = n(130370);
 function E(e, t, n) {
@@ -128,7 +128,7 @@ class S {
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
-                    section: j.oh.MUTUAL_GUILDS,
+                    section: v.oh.MUTUAL_GUILDS,
                 });
             }),
             (this.userId = e),
@@ -170,7 +170,7 @@ function I(e) {
             channelId: t.id,
         }),
         [O, y] = i.useState(!1),
-        j = i.useCallback(() => {
+        v = i.useCallback(() => {
             y(!0);
         }, [y]),
         E = i.useCallback(() => {
@@ -181,7 +181,7 @@ function I(e) {
         : (0, r.jsxs)(p.Gt, {
               value: g,
               children: [
-                  (0, r.jsx)(v.iz, { className: C.divider }),
+                  (0, r.jsx)(j.iz, { className: C.divider }),
                   (0, r.jsx)(c.IGR, {
                       text: x.intl.string(x.t.l1QVfj),
                       disableColor: !0,
@@ -226,7 +226,7 @@ function I(e) {
                             position: "bottom",
                             className: C.nicknames,
                             delay: 0,
-                            onTooltipShow: j,
+                            onTooltipShow: v,
                             onTooltipHide: E,
                             children: m.renderNicknamePairs(!O),
                         })

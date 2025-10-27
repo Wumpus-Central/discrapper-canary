@@ -14,9 +14,9 @@ n.d(t, {
     f7: () => m,
     kN: () => S,
     lb: () => O,
-    o0: () => w,
+    o0: () => D,
     o8: () => N,
-    xg: () => D,
+    xg: () => w,
     yf: () => h,
 }),
     n(388685);
@@ -80,8 +80,8 @@ let R = {
         FRACTIONAL_PREMIUM: f.a.PREMIUM_TIER_2_3_DAY,
     },
     P = new Set(Object.values(R)),
-    w = (e) => P.has(e),
-    D = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
+    D = (e) => P.has(e),
+    w = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
     L = [
         {
             sortType: d.E.RELEVANCE,

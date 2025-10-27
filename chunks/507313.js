@@ -12,6 +12,6 @@ var i = n(509613),
     T = n(798922),
     I = n(388032);
 let O = (0, i.vB)(l.n.USER_SECTION, {
-    useLabel: () => I.intl.string(I.t.cduTBA),
+    useLabel: () => I.intl.string(I.t.cduTBL),
     buildLayout: () => [u.x, o.r, c.f, E.a, r.h, T.F, a.J, d.e_, s.K],
 });

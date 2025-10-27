@@ -169,7 +169,7 @@ class N extends (i = a.ZP.PersistedStore) {
     getLabelFromPath(e) {
         var t, n;
         return e === m
-            ? u.intl.string(u.t.VdDrjo)
+            ? u.intl.string(u.t.VdDrjm)
             : null !=
                 (n =
                     null != (t = s.Z.fileManager.basename(e))

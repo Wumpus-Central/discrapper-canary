@@ -249,32 +249,32 @@ n.d(t, {
                     let N = [
                             f,
                             ...A
-                        ], R = await o(t, O), P = [], w = (null == (i = u.flip) ? void 0 : i.overflows) || [];
+                        ], R = await o(t, O), P = [], D = (null == (i = u.flip) ? void 0 : i.overflows) || [];
                     if (h && P.push(R[v]), m) {
                         let e = (0, r.i8)(c, d, S);
                         P.push(R[e[0]], R[e[1]]);
                     }
-                    if (w = [
-                            ...w,
+                    if (D = [
+                            ...D,
                             {
                                 placement: c,
                                 overflows: P
                             }
                         ], !P.every(e => e <= 0)) {
                         let e = ((null == (a = u.flip) ? void 0 : a.index) || 0) + 1, t = N[e];
-                        if (t && ('alignment' !== m || I === (0, r.Qq)(t) || w.every(e => (0, r.Qq)(e.placement) !== I || e.overflows[0] > 0)))
+                        if (t && ('alignment' !== m || I === (0, r.Qq)(t) || D.every(e => (0, r.Qq)(e.placement) !== I || e.overflows[0] > 0)))
                             return {
                                 data: {
                                     index: e,
-                                    overflows: w
+                                    overflows: D
                                 },
                                 reset: { placement: t }
                             };
-                        let n = null == (s = w.filter(e => e.overflows[0] <= 0).sort((e, t) => e.overflows[1] - t.overflows[1])[0]) ? void 0 : s.placement;
+                        let n = null == (s = D.filter(e => e.overflows[0] <= 0).sort((e, t) => e.overflows[1] - t.overflows[1])[0]) ? void 0 : s.placement;
                         if (!n)
                             switch (E) {
                             case 'bestFit': {
-                                    let e = null == (l = w.filter(e => {
+                                    let e = null == (l = D.filter(e => {
                                         if (C) {
                                             let t = (0, r.Qq)(e.placement);
                                             return t === I || 'y' === t;

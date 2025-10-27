@@ -1,16 +1,16 @@
 n.d(t, {
-    GC: () => b,
-    _X: () => m,
+    GC: () => _,
+    _X: () => g,
     br: () => f,
-    em: () => g,
+    em: () => m,
     jU: () => h,
 });
 var r = n(13245),
     i = n(371651),
     l = n(610394),
     a = n(998502),
-    o = n(13140),
-    s = n(996106),
+    s = n(13140),
+    o = n(996106),
     c = n(914946),
     u = n(186901),
     d = n(981631);
@@ -40,15 +40,15 @@ function h(e) {
                 context: d.IlC.APP,
             });
 }
-let g = async (e, t, n) => {
+let m = async (e, t, n) => {
         if (((0, c.YK)(e, t), (null == n || "" === n) && (0, c.s9)(t)))
             return (e.authorization.scopes = [u.cE, u.CN]), Promise.resolve();
         if (null == n || "" === n)
-            return Promise.reject(new s.Z({ closeCode: d.$VG.INVALID_CLIENTID }, "No Client ID Specified"));
+            return Promise.reject(new o.Z({ closeCode: d.$VG.INVALID_CLIENTID }, "No Client ID Specified"));
         let r = a.ZP.releaseChannel !== d.R5N.CANARY && !p.includes(n) && e.transport !== u.He.POST_MESSAGE;
         return await (0, c.vv)(n, r), (0, c.YS)(e, n, t);
     },
-    m = () =>
+    g = () =>
         (0, c.tr)((e) => {
             let t = [];
             return (
@@ -59,19 +59,19 @@ let g = async (e, t, n) => {
                         return {
                             type: e[0],
                             code: e[1],
-                            name: null != (t = (0, o.H9)(e)) ? t : "unknown",
+                            name: null != (t = (0, s.H9)(e)) ? t : "unknown",
                         };
                     })),
                 t
             );
         }),
-    b = (e) =>
+    _ = (e) =>
         (0, c.FJ)(e, (e) => {
             let t = "";
             return (
                 null != e.modeOptions.shortcut &&
                     Array.isArray(e.modeOptions.shortcut) &&
-                    (t = (0, o.BB)(e.modeOptions.shortcut)),
+                    (t = (0, s.BB)(e.modeOptions.shortcut)),
                 t
             );
         });

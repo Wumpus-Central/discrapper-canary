@@ -87,7 +87,7 @@ function E(e) {
     let [E, b] = i.useState(l.KX.SERIES),
         y = (0, l.X2)(t.id, null),
         O = (null == y ? void 0 : y.response) === c.gv.INTERESTED ? c.gv.UNINTERESTED : c.gv.INTERESTED,
-        v = O === c.gv.INTERESTED ? u.intl.string(u.t.WtOReX) : u.intl.string(u.t["8MPCVl"]),
+        v = O === c.gv.INTERESTED ? u.intl.string(u.t.WtORed) : u.intl.string(u.t["8MPCVr"]),
         I = () => {
             E === l.KX.SERIES ? s.Z.updateRsvp(t.id, null, f, O) : s.Z.updateRsvp(t.id, n, f, O),
                 null == p || p(),
@@ -97,8 +97,8 @@ function E(e) {
         o.ConfirmModal,
         h(_({}, g), {
             header: v,
-            confirmText: u.intl.string(u.t.TyCVIi),
-            cancelText: u.intl.string(u.t["ETE/oK"]),
+            confirmText: u.intl.string(u.t.TyCVIq),
+            cancelText: u.intl.string(u.t["ETE/oC"]),
             onConfirm: I,
             confirmButtonColor: a.zx.Colors.BRAND,
             children: (0, r.jsx)("div", {

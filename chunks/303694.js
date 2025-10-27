@@ -8,13 +8,13 @@ let a = (e) => {
         switch (e) {
             case "home":
             case "guide":
-                return i.intl.string(i.t.VbpLyc);
+                return i.intl.string(i.t.VbpLyU);
             case "browse":
-                return i.intl.string(i.t.et6wam);
+                return i.intl.string(i.t.et6wav);
             case "customize":
-                return i.intl.string(i.t.h9mGOD);
+                return i.intl.string(i.t.h9mGOP);
             case "linked-roles":
-                return i.intl.string(i.t.ghtnsr);
+                return i.intl.string(i.t.ghtnss);
         }
         return null;
     },

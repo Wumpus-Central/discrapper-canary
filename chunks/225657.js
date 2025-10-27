@@ -21,7 +21,7 @@ let f = (e) => {
         className: f,
         children: (0, r.jsx)(a.VcW, {
             wrapperClassName: _,
-            label: d.intl.string(d.t.xFn72t),
+            label: d.intl.string(d.t.xFn72s),
             placeholder: d.intl.string(d.t.R0vK0N),
             renderOptionPrefix: (e) =>
                 (null == e ? void 0 : e.value) == null

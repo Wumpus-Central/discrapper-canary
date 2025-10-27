@@ -17,7 +17,7 @@ function d(e) {
             [d],
         );
     return (0, r.jsx)(a.oil, {
-        label: c.intl.string(c.t.X56QcH),
+        label: c.intl.string(c.t.X56QcF),
         type: "text",
         disabled: !n,
         value: t.name,

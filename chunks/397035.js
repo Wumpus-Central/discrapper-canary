@@ -67,7 +67,7 @@ function h(e) {
         m = (0, a.xF)(n.extra.application_id, n.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
         g = n.extra.media_title,
         E = n.extra.media_subtitle,
-        b = (0, s.Jg)(n) ? u.t["LH+Z39"] : u.t.YuKgmp,
+        b = (0, s.Jg)(n) ? u.t["LH+Z3y"] : u.t.YuKgml,
         y = { type: l.kG.CRUNCHYROLL },
         O = r.useMemo(() => {
             if (null == n.extra.url) return;
@@ -78,7 +78,7 @@ function h(e) {
         null != O &&
             (t = {
                 href: o.Z.format(O),
-                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: g }),
+                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3g, { title: g }),
             }),
         p(f({}, d), {
             thumbnailUrl: null != m ? m : h,

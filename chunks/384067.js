@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(622535),
-    s = n(481060),
+    s = n(622535),
+    o = n(481060),
     c = n(63063),
     u = n(597688),
     d = n(297651),
@@ -38,7 +38,7 @@ let _ = (e) => {
         { bannerURL: k } = (0, g.UI)(_);
     if (null == k) return null;
     let T = b === p.AW.ORBS;
-    return (0, r.jsx)(o.$, {
+    return (0, r.jsx)(s.$, {
         innerRef: E,
         onChange: j,
         threshold: 0,
@@ -62,18 +62,18 @@ let _ = (e) => {
                     children: (0, r.jsxs)("div", {
                         className: h.wideBannerTextContainer,
                         children: [
-                            (0, r.jsx)(s.Heading, {
+                            (0, r.jsx)(o.Heading, {
                                 style: { color: null != (n = _.bannerTextColor) ? n : "var(--header-primary)" },
                                 className: T ? h.wideBannerOrbsHeading : void 0,
                                 variant: T ? "heading-xl/bold" : "heading-lg/semibold",
                                 children: _.title,
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 style: { color: null != (i = _.bannerTextColor) ? i : "var(--text-muted)" },
                                 lineClamp: 2,
                                 variant: T ? "text-md/medium" : "text-sm/medium",
                                 children: T
-                                    ? C.intl.format(C.t.SFFP7O, {
+                                    ? C.intl.format(C.t.SFFP7K, {
                                           helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE),
                                       })
                                     : _.body,
@@ -84,10 +84,10 @@ let _ = (e) => {
                 !0 !== _.disableCta &&
                     (0, r.jsx)("div", {
                         className: h.wideBannerBlockButton,
-                        children: (0, r.jsx)(s.Button, {
+                        children: (0, r.jsx)(o.Button, {
                             variant: "overlay-primary",
                             onClick: () => m("shop wide banner", y, void 0, !0),
-                            text: C.intl.string(C.t.jVcuVV),
+                            text: C.intl.string(C.t.jVcuVY),
                         }),
                     }),
             ],

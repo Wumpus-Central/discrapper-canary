@@ -4,7 +4,7 @@ var r = n(589414),
 function a(e) {
     let t = (0, r.a)(e);
     if (null != e.privacy_policy_url && null != e.terms_of_service_url) {
-        let n = t ? i.t.yVfotr : i.t.rxlyKC;
+        let n = t ? i.t.yVfotv : i.t.rxlyKL;
         return i.intl.format(n, {
             application: e.name,
             privacyPolicyURL: e.privacy_policy_url,
@@ -12,19 +12,19 @@ function a(e) {
         });
     }
     if (null != e.privacy_policy_url) {
-        let n = t ? i.t.pYVSam : i.t.TBvmMz;
+        let n = t ? i.t.pYVSah : i.t.TBvmM2;
         return i.intl.format(n, {
             application: e.name,
             privacyPolicyURL: e.privacy_policy_url,
         });
     }
     if (null != e.terms_of_service_url) {
-        let n = t ? i.t.nBLOp6 : i.t["q0T/Q0"];
+        let n = t ? i.t.nBLOp5 : i.t["q0T/Q1"];
         return i.intl.format(n, {
             application: e.name,
             termsOfServiceURL: e.terms_of_service_url,
         });
     }
-    let n = t ? i.t["8LemYm"] : i.t["3Ywek5"];
+    let n = t ? i.t["8LemYv"] : i.t["3Ywek3"];
     return i.intl.formatToPlainString(n, { application: e.name });
 }

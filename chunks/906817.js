@@ -59,15 +59,15 @@ let _ = i.memo(function (e) {
             disableManageChannels: O,
         } = e,
         { isFavoritesPerk: y } = (0, a.z)("ChannelListSection"),
-        v = i.useCallback(() => {
+        j = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
             null != _ && r.includes(_) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t);
         }, [n.id, _, m, b]),
-        { density: j } = (0, l.TCT)(),
-        x = "compact" === j ? 8 : p.$k;
+        { density: v } = (0, l.TCT)(),
+        x = "compact" === v ? 8 : p.$k;
     switch (t) {
         case u.wZ:
             return (0, r.jsx)("div", { style: { height: x } });
@@ -75,11 +75,11 @@ let _ = i.memo(function (e) {
             if (n.features.has(f.GuildFeatures.HUB)) return null;
             return (0, r.jsx)("div", { style: { height: x } });
         case u.p2:
-            return (0, r.jsx)(d.P, { name: y ? h.intl.string(h.t.mlPMCw) : h.intl.string(h.t.k8fFjo) });
+            return (0, r.jsx)(d.P, { name: y ? h.intl.string(h.t.mlPMCy) : h.intl.string(h.t.k8fFjp) });
         case m.recentsSectionNumber:
             return (0, r.jsx)(d.P, {
-                name: h.intl.string(h.t.gKcrqK),
-                onDismiss: v,
+                name: h.intl.string(h.t.gKcrqM),
+                onDismiss: j,
             });
         case m.voiceChannelsSectionNumber: {
             var C;

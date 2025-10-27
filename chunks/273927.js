@@ -39,14 +39,14 @@ function v(e) {
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/semibold",
                         color: "interactive-active",
-                        children: b.intl.string(i ? b.t.PFOUKS : b.t["93ZDWF"]),
+                        children: b.intl.string(i ? b.t.PFOUKW : b.t["93ZDWE"]),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/medium",
                         color: "header-secondary",
                         children: i
-                            ? b.intl.format(b.t["r91W/v"], { numberOfBlockedUsers: n })
-                            : b.intl.format(b.t.rXUeOj, { numberOfIgnoredUsers: n }),
+                            ? b.intl.format(b.t["r91W/h"], { numberOfBlockedUsers: n })
+                            : b.intl.format(b.t.rXUeOl, { numberOfIgnoredUsers: n }),
                     }),
                 ],
             }),
@@ -100,7 +100,7 @@ function I(e) {
                   }),
                   (0, r.jsx)(l.Button, {
                       variant: "secondary",
-                      text: b.intl.string(p ? b.t.XyHpKC : b.t["8wXU9P"]),
+                      text: b.intl.string(p ? b.t.XyHpKH : b.t["8wXU9B"]),
                       onClick: E,
                       loading: m,
                   }),
@@ -144,7 +144,7 @@ function T(e) {
                               children: (0, r.jsx)(l.Text, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: b.intl.format(b.t.jULEDg, {
+                                  children: b.intl.format(b.t.jULEDr, {
                                       numberOfUsers: o + O < n.length ? O : n.length - o,
                                   }),
                               }),
@@ -178,8 +178,8 @@ function C() {
         scrollHighlightDelay: 900,
         children: [
             (0, r.jsx)(h.H, {
-                header: b.intl.string(b.t["3wRorq"]),
-                description: b.intl.format(b.t["0aNQo6"], {
+                header: b.intl.string(b.t["3wRort"]),
+                description: b.intl.format(b.t["0aNQo9"], {
                     helpArticle: p.Z.getArticleURL(E.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
                 }),
             }),

@@ -32,14 +32,14 @@ function u(e) {
 }
 function d() {
     return (0, r.jsx)(u, {
-        label: l.intl.string(l.t["I+02Gh"]),
+        label: l.intl.string(l.t["I+02Gs"]),
         backgroundColor: "#207B8D",
         icon: i.T$Z,
     });
 }
 function f() {
     return (0, r.jsx)(u, {
-        label: l.intl.string(l.t.TgsPaG),
+        label: l.intl.string(l.t.TgsPaP),
         icon: i.vdY,
         iconColor: (0, a.Lq)(s.Ilk.PRIMARY_330),
     });

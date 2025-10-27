@@ -36,10 +36,10 @@ function x(e) {
     if (!j) return null;
     y ||
         (t = _
-            ? h.intl.format(h.t.nFwNyc, {
+            ? h.intl.format(h.t.nFwNyR, {
                   settingsHook: () => (0, c.openUserSettings)(o.n.ACCOUNT_PANEL, { section: f.oAB.ACCOUNT }),
               })
-            : h.intl.string(h.t["9Ghu4+"]));
+            : h.intl.string(h.t["9Ghu40"]));
     let N = n.features.has(f.GuildFeatures.DISCOVERABLE);
     return (0, r.jsxs)("div", {
         className: b.simpleItemWrapper,
@@ -50,22 +50,22 @@ function x(e) {
                     (0, r.jsx)(s.Heading, {
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: h.intl.string(h.t.lbBfER),
+                        children: h.intl.string(h.t.lbBfEQ),
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: "text-sm/medium",
                         color: "header-secondary",
-                        children: [h.intl.string(h.t["a/93Jy"]), " ", t],
+                        children: [h.intl.string(h.t["a/93J6"]), " ", t],
                     }),
                 ],
             }),
             !y || (O && N)
                 ? (0, r.jsx)(a.u, {
                       text: N
-                          ? h.intl.string(h.t["KG1V/P"])
+                          ? h.intl.string(h.t["KG1V/E"])
                           : _
-                            ? h.intl.string(h.t.NmsheX)
-                            : h.intl.string(h.t.LieBtb),
+                            ? h.intl.string(h.t.NmsheT)
+                            : h.intl.string(h.t.LieBta),
                       children: (0, r.jsx)(p.Z, {
                           checked: O,
                           disabled: !0,

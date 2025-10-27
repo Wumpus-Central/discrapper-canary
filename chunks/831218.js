@@ -17,8 +17,8 @@ var r,
     _ = n(367907),
     O = n(906732),
     y = n(453542),
-    v = n(702321),
-    j = n(82295),
+    j = n(702321),
+    v = n(82295),
     x = n(313201),
     C = n(860144),
     E = n(214852),
@@ -27,8 +27,8 @@ var r,
     P = n(869404),
     N = n(333984),
     Z = n(984802),
-    w = n(592125),
-    T = n(158776),
+    T = n(592125),
+    w = n(158776),
     A = n(55589),
     R = n(515753),
     D = n(981631),
@@ -313,7 +313,7 @@ class F extends (r = l.Component) {
                                 {
                                     fade: !0,
                                     innerRole: o,
-                                    innerAriaLabel: L.intl.string(L.t.YUU0RE),
+                                    innerAriaLabel: L.intl.string(L.t.YUU0RF),
                                     innerTag: "ul",
                                     ref: (e) => {
                                         var t;
@@ -362,10 +362,10 @@ class F extends (r = l.Component) {
                 let o = Math.round((t.offsetHeight - 44 * i) / 44),
                     a = o > n.length ? n.slice(0, o + 1) : n,
                     s = a.map((e) => (null != r[e] ? r[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, v.Z)(e)),
+                    c = n.some((e) => (0, j.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && T.Z.isMobileOnline(e))
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && w.Z.isMobileOnline(e))
                             .length,
                     };
                 (this.hasReportedAnalytics = !0),
@@ -433,13 +433,13 @@ class F extends (r = l.Component) {
                     { showDMHeader: n, createDMCTAButtonVariant: r } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
-                          j.Z,
+                          v.Z,
                           {
                               className: a()(M.privateChannelsHeaderContainer, { [M.tall]: "side" === r }),
                               children: [
                                   (0, i.jsx)("span", {
                                       className: M.headerText,
-                                      children: L.intl.string(L.t.YUU0RE),
+                                      children: L.intl.string(L.t.YUU0RF),
                                   }),
                                   null == r &&
                                       (0, i.jsx)(S.Z, {
@@ -498,20 +498,20 @@ let V = (e) => {
             hideAllDMs: f,
         } = e,
         g = l.Children.count(o),
-        _ = w.Z.getMutablePrivateChannels(),
+        _ = T.Z.getMutablePrivateChannels(),
         y = f ? {} : (0, P.k1)(_),
-        v = (0, p.Wu)([A.Z, I.Z, N.Z], () => {
+        j = (0, p.Wu)([A.Z, I.Z, N.Z], () => {
             let e = A.Z.getPrivateChannelIds(),
                 t = (0, P.tU)(e, [I.Z, N.Z]);
             return f ? [] : t;
         }, [f]);
     (0, E.z)(C.R);
-    let { analyticsLocations: j } = (0, O.ZP)(b.Z.CONTACTS_LIST),
+    let { analyticsLocations: v } = (0, O.ZP)(b.Z.CONTACTS_LIST),
         S = (0, Z.Ll)(),
-        { keyboardModeEnabled: T, version: R } = (0, p.cj)([m.Z, w.Z], () => ({
+        { keyboardModeEnabled: w, version: R } = (0, p.cj)([m.Z, T.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
-                null != n ? "".concat(n, ":").concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion(),
+                null != n ? "".concat(n, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion(),
         })),
         D = l.useRef(null),
         L = null != s ? s : D,
@@ -560,14 +560,14 @@ let V = (e) => {
         V = (0, x.Dt)(),
         H = (0, d.ZP)({
             id: "private-channels-".concat(V),
-            isEnabled: T,
+            isEnabled: w,
             scrollToStart: k,
             scrollToEnd: B,
             defaultFocused: (g + +!!a).toString(),
             setFocus: M,
         });
     return (0, i.jsx)(O.Gt, {
-        value: j,
+        value: v,
         children: (0, i.jsx)(u.bG, {
             navigator: H,
             children: (0, i.jsx)(
@@ -575,7 +575,7 @@ let V = (e) => {
                 U(G({}, e), {
                     density: t,
                     channels: y,
-                    privateChannelIds: v,
+                    privateChannelIds: j,
                     listRef: L,
                     theme: null != S ? S : r,
                     version: R,

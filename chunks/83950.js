@@ -1,12 +1,12 @@
-n.d(a, { default: () => m });
+n.d(a, { default: () => h });
 var e = n(951288),
     s = n(647438),
     c = n(990547),
     i = n(793030),
     r = n(481060),
     o = n(37234),
-    p = n(809206),
-    d = n(410030),
+    d = n(809206),
+    p = n(410030),
     u = n(100527),
     l = n(906732),
     _ = n(213609),
@@ -16,42 +16,42 @@ var e = n(951288),
     C = n(335131),
     b = n(981631),
     k = n(388032),
-    g = n(890767),
-    h = n(480443);
-function m(t) {
-    let { transitionState: a, onClose: n, skuId: m } = t,
-        { analyticsLocations: y } = (0, l.ZP)(u.Z.COLLECTIBLES_EXPIRY_MODAL),
-        I = (0, r.wjy)((0, d.ZP)()),
-        O = (0, f.Z)({ analyticsLocations: y }),
+    y = n(890767),
+    g = n(480443);
+function h(t) {
+    let { transitionState: a, onClose: n, skuId: h } = t,
+        { analyticsLocations: m } = (0, l.ZP)(u.Z.COLLECTIBLES_EXPIRY_MODAL),
+        I = (0, r.wjy)((0, p.ZP)()),
+        O = (0, f.Z)({ analyticsLocations: m }),
         Z = s.useRef(null);
     s.useEffect(
         () => (
-            (0, p.Mn)({ avatarDecoration: null }),
+            (0, d.Mn)({ avatarDecoration: null }),
             () => {
                 E.default.track(b.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, {
                     reason: Z.current,
-                    sku_id: m,
+                    sku_id: h,
                 });
             }
         ),
-        [m],
+        [h],
     ),
         (0, _.Z)({
             type: c.ImpressionTypes.MODAL,
             name: c.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
             properties: {
-                location_stack: y,
-                sku_id: m,
+                location_stack: m,
+                sku_id: h,
             },
         });
     let M = async () => {
-            (Z.current = "change_avatar_decoration"), await n(), (0, o.xf)(), O(), (0, L.ps)({ analyticsLocations: y });
+            (Z.current = "change_avatar_decoration"), await n(), (0, o.xf)(), O(), (0, L.ps)({ analyticsLocations: m });
         },
         x = async () => {
             (Z.current = "go_to_shop"),
                 await n(),
                 (0, C.mK)({
-                    analyticsLocations: y,
+                    analyticsLocations: m,
                     analyticsSource: u.Z.COLLECTIBLES_EXPIRY_MODAL,
                 });
         },
@@ -60,12 +60,12 @@ function m(t) {
         },
         S = [
             {
-                text: k.intl.string(k.t["x8T+k5"]),
+                text: k.intl.string(k.t["x8T+k9"]),
                 variant: "secondary",
                 onClick: M,
             },
             {
-                text: k.intl.string(k.t.fmqMER),
+                text: k.intl.string(k.t.fmqMEd),
                 variant: "primary",
                 onClick: x,
             },
@@ -73,10 +73,10 @@ function m(t) {
     return (0, e.jsx)(i.ExpressiveModal, {
         graphic: {
             type: "image",
-            src: I ? g.Z : h.Z,
+            src: I ? y.Z : g.Z,
         },
-        title: k.intl.string(k.t.xz81o6),
-        subtitle: k.intl.string(k.t.Vrbnnp),
+        title: k.intl.string(k.t.xz81oy),
+        subtitle: k.intl.string(k.t.Vrbnnu),
         onClose: D,
         transitionState: a,
         actions: S,

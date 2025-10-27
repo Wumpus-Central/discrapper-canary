@@ -15,7 +15,7 @@ function g(e, n, t) {
         ? null
         : (0, l.jsx)(r.sNh, {
               id: "message-user",
-              label: c.intl.string(c.t.OAJQlJ),
+              label: c.intl.string(c.t.OAJQlP),
               action: () => {
                   (0, o.i)(n, !0),
                       a.Z.openPrivateChannel({ recipientIds: e }),

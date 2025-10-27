@@ -1,18 +1,18 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(287734),
-    s = n(367907),
+    s = n(287734),
+    o = n(367907),
     c = n(359110),
     u = n(769654),
     d = n(496675),
     p = n(205129),
     f = n(626135),
     h = n(981631),
-    g = n(388032);
-function m(e) {
+    m = n(388032);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function m(e) {
     }
     return e;
 }
-function b(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,10 +55,10 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
+function b(e) {
     let t = i.useContext(f.AnalyticsContext),
         n = e.voiceChannels[0],
-        _ = (0, l.e7)([d.Z], () => null != n && d.Z.can(h.Plq.CONNECT, n.channel));
+        b = (0, l.e7)([d.Z], () => null != n && d.Z.can(h.Plq.CONNECT, n.channel));
     return null == n
         ? null
         : [
@@ -68,12 +68,12 @@ function _(e) {
                       id: "join-voice",
                       action: function () {
                           (0, c.Kh)(n.channel.id),
-                              o.default.selectVoiceChannel(n.channel.id),
-                              s.ZP.trackWithMetadata(
+                              s.default.selectVoiceChannel(n.channel.id),
+                              o.ZP.trackWithMetadata(
                                   h.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED,
-                                  m(
+                                  g(
                                       {
-                                          source: b(m({}, t.location), { object: h.qAy.LIST_ITEM }),
+                                          source: _(g({}, t.location), { object: h.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
                                           channel_id: n.channel.id,
                                       },
@@ -81,8 +81,8 @@ function _(e) {
                                   ),
                               );
                       },
-                      label: g.intl.string(g.t["8yOlh4"]),
-                      disabled: !_,
+                      label: m.intl.string(m.t["8yOlh9"]),
+                      disabled: !b,
                   },
                   "join-voice",
               ),
@@ -92,11 +92,11 @@ function _(e) {
                       id: "goto-server",
                       action: function () {
                           (0, u.X)(n.guild.id),
-                              s.ZP.trackWithMetadata(
+                              o.ZP.trackWithMetadata(
                                   h.rMx.ACTIVITY_FEED_GUILD_VISITED,
-                                  m(
+                                  g(
                                       {
-                                          source: b(m({}, t.location), { object: h.qAy.LIST_ITEM }),
+                                          source: _(g({}, t.location), { object: h.qAy.LIST_ITEM }),
                                           guild_id: n.guild.id,
                                           af_recently_played: !1,
                                       },
@@ -104,7 +104,7 @@ function _(e) {
                                   ),
                               );
                       },
-                      label: g.intl.string(g.t.RGgqm5),
+                      label: m.intl.string(m.t.RGgqm1),
                   },
                   "goto-server",
               ),

@@ -96,7 +96,7 @@ function N(e) {
                     throw (
                         ("object" == typeof e && "message" in e
                             ? R(e.message)
-                            : R(O.intl.formatToPlainString(O.t.aTVNen, { statusPageURL: _.yXt.STATUS })),
+                            : R(O.intl.formatToPlainString(O.t.aTVNes, { statusPageURL: _.yXt.STATUS })),
                         e)
                     );
                 }
@@ -120,7 +120,7 @@ function N(e) {
                         ? [
                               {
                                   field_type: u.QJ.TERMS,
-                                  label: O.intl.string(O.t["9suSIC"]),
+                                  label: O.intl.string(O.t["9suSIA"]),
                                   values: t,
                                   required: !0,
                               },
@@ -191,13 +191,13 @@ function N(e) {
             if (l.joinType === j.A.INVITE || l.joinType === j.A.DISCOVERABLE) {
                 let { requireTerms: e, termRules: t = [] } = l;
                 if (t.map((e) => e.value.trim()).filter((e) => "" !== e).length < 1 && e)
-                    return void R(O.intl.string(O.t.TCHkcX));
+                    return void R(O.intl.string(O.t.TCHkcd));
             }
             if (
                 l.joinType === j.A.APPLY &&
                 !(null == (e = l.pendingVerificationFields) ? void 0 : e.some((e) => (0, g._C)(e)))
             )
-                return void R(O.intl.string(O.t.HGVrIy));
+                return void R(O.intl.string(O.t.HGVrI3));
             ((e) => {
                 if (D && A > 0 && l.joinType !== j.A.APPLY)
                     return (0, a.ZDy)(async () => {
@@ -234,8 +234,8 @@ function N(e) {
         H = l.joinType === j.A.DISCOVERABLE && l.settingsView === v.U.ELIGIBLE_DISABLED,
         W = null != N.description && I.primaryCategoryId !== C.o3 && I.keywords.length > 0;
     return (0, r.jsx)(s.Z, {
-        message: H ? O.intl.string(O.t.V2G2Ym) : void 0,
-        onSaveText: H ? O.intl.string(O.t["qjtt/v"]) : void 0,
+        message: H ? O.intl.string(O.t.V2G2Yr) : void 0,
+        onSaveText: H ? O.intl.string(O.t["qjtt/p"]) : void 0,
         submitting: P,
         errorMessage: Z,
         onReset: L,
@@ -266,7 +266,7 @@ function I() {
         ? null
         : e.joinType === j.A.DISCOVERABLE && e.settingsView === v.U.INELIGIBLE
           ? (0, r.jsx)(s.Z, {
-                message: O.intl.string(O.t.TEXwRk),
+                message: O.intl.string(O.t.TEXwRt),
                 onReset: () => f.Z.init(n.id, _.pNK.ACCESS),
             })
           : (0, r.jsx)(N, {

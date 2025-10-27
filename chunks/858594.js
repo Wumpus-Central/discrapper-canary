@@ -1,58 +1,44 @@
-n.d(t, { Z: () => m });
-var l = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    r = n(481060),
-    s = n(578756),
-    u = n(162190),
-    o = n(269794),
-    c = n(388032),
-    d = n(722417);
-function m(e) {
-    let {
-            className: t,
-            guildId: n,
-            game: i,
-            onClick: m,
-            imageClassName: v,
-            titleClassName: g,
-            disabled: f = !1,
-            location: p,
-        } = e,
-        b = (0, u.Z)(i.gameId, "cover");
+t.d(n, { Z: () => d });
+var l = t(951288);
+t(647438);
+var a = t(120356),
+    i = t.n(a),
+    r = t(481060),
+    s = t(162190),
+    o = t(269794),
+    u = t(388032),
+    c = t(722417);
+function d(e) {
+    let { className: n, game: t, onClick: a, imageClassName: d, titleClassName: m, disabled: v = !1 } = e,
+        g = (0, s.Z)(t.gameId, "cover");
     return (0, l.jsxs)(r.P3F, {
-        "aria-disabled": f,
-        className: a()(d.game, { [d.disabled]: f }, t),
-        onClick: f
-            ? void 0
-            : () => {
-                  (0, s.GA)(n, i.id, i.name, p), m(i);
-              },
+        "aria-disabled": v,
+        className: i()(c.game, { [c.disabled]: v }, n),
+        onClick: v ? void 0 : () => a(t),
         children: [
             (0, l.jsxs)("div", {
-                className: a()(d.gameImageContainer, v),
+                className: i()(c.gameImageContainer, d),
                 children: [
                     (0, l.jsx)("img", {
-                        className: d.image,
+                        className: c.image,
                         alt: "",
-                        src: null != b ? b : "",
+                        src: null != g ? g : "",
                     }),
-                    (0, l.jsx)("div", { className: d.gameImageBorder }),
-                    (0, l.jsx)("div", { className: d.gameImageOverlay }),
+                    (0, l.jsx)("div", { className: c.gameImageBorder }),
+                    (0, l.jsx)("div", { className: c.gameImageOverlay }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: a()(d.textContainer, g),
+                className: i()(c.textContainer, m),
                 children: [
                     (0, l.jsx)(r.Heading, {
                         variant: "heading-sm/semibold",
                         lineClamp: 1,
-                        title: i.name,
-                        children: i.name,
+                        title: t.name,
+                        children: t.name,
                     }),
                     (0, l.jsxs)("div", {
-                        className: d.boostContainer,
+                        className: c.boostContainer,
                         children: [
                             (0, l.jsx)(r.Ucv, {
                                 size: "sm",
@@ -60,9 +46,9 @@ function m(e) {
                             }),
                             (0, l.jsx)(r.Text, {
                                 variant: "text-sm/medium",
-                                children: c.intl.formatToPlainString(
-                                    i.plans.length > 1 ? o.default["G/aTXi"] : o.default.r9pa9K,
-                                    { boostCount: i.baseCost },
+                                children: u.intl.formatToPlainString(
+                                    t.plans.length > 1 ? o.default["G/aTXi"] : o.default.r9pa9K,
+                                    { boostCount: t.baseCost },
                                 ),
                             }),
                         ],

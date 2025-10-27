@@ -118,8 +118,8 @@ function m(e) {
             type: "image",
             src: b,
         },
-        title: null != O ? O : f.intl.string(f.t.FpoiHR),
-        subtitle: null != g ? g : f.intl.string(f.t["/CidxM"]),
+        title: null != O ? O : f.intl.string(f.t.FpoiHe),
+        subtitle: null != g ? g : f.intl.string(f.t["/CidxO"]),
         children: j,
     });
 }

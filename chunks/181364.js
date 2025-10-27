@@ -9,7 +9,7 @@ var r = n(13245),
     c = n(312839),
     d = n(987650),
     u = n(388032);
-let p = (e) => (0, s.QR)(e, (0, c.P)(), u.t["z8/sgI"]);
+let p = (e) => (0, s.QR)(e, (0, c.P)(), u.t["z8/sgJ"]);
 function h(e) {
     let { type: t } = e,
         {
@@ -33,7 +33,7 @@ function h(e) {
         })(
             {
                 icon: n(328756),
-                title: u.intl.string(u.t.pkXAeH),
+                title: u.intl.string(u.t.pkXAeG),
                 body: null,
                 hint: p,
                 notifType: d.n0.WelcomeNudge,

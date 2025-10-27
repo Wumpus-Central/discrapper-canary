@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(979038),
     R = n(448980),
     P = n(576759),
-    w = n(336383),
-    D = n(194811),
+    D = n(336383),
+    w = n(194811),
     L = n(373826),
     x = n(668700),
     M = n(262210),
@@ -138,7 +138,7 @@ function K(e) {
             i.type !== U.IIU.HANG_STATUS || t.id !== n.id || null == K
                 ? null
                 : (0, r.jsx)(o.u, {
-                      text: Z.intl.string(Z.t.QSOBam),
+                      text: Z.intl.string(Z.t.QSOBaq),
                       children: (0, r.jsx)(s.d3s, { size: "xxs" }),
                   }),
         eu = () => {
@@ -218,7 +218,7 @@ function K(e) {
             if ((0, d.Z)(i) && null != Y)
                 return (0, r.jsx)(L.Z, {
                     variant: "text-xs/normal",
-                    text: Z.intl.formatToPlainString(Z.t["hq/Qzc"], { guildName: Y.name }),
+                    text: Z.intl.formatToPlainString(Z.t["hq/Qze"], { guildName: Y.name }),
                     onClick: () => {
                         (0, O.X)(Y.id), en({ action: "OPEN_VOICE_GUILD" }), null == q || q();
                     },
@@ -255,7 +255,7 @@ function K(e) {
                 (null == (e = i.party) ? void 0 : e.size) != null &&
                 (null == (t = i.party) ? void 0 : t.size.length) >= 2
             ) {
-                let e = Z.intl.formatToPlainString(Z.t["JC/3x8"], {
+                let e = Z.intl.formatToPlainString(Z.t["JC/3xw"], {
                     numSpeakers: null == (a = i.party) ? void 0 : a.size[0],
                     numListeners:
                         (null == (o = i.party) ? void 0 : o.size[1]) - (null == (s = i.party) ? void 0 : s.size[0]),
@@ -290,7 +290,7 @@ function K(e) {
                           }),
                           (0, r.jsx)(L.Z, {
                               variant: "text-xs/normal",
-                              text: Z.intl.formatToPlainString(Z.t["u//9Bw"], {
+                              text: Z.intl.formatToPlainString(Z.t["u//9By"], {
                                   count: "0",
                                   max: null != (a = null == V ? void 0 : V.getMaxParticipants()) ? a : 0,
                               }),
@@ -315,7 +315,7 @@ function K(e) {
                                 text:
                                     0 === i.party.size[1]
                                         ? Z.intl.formatToPlainString(Z.t.IM4J4e, { count: i.party.size[0] })
-                                        : Z.intl.formatToPlainString(Z.t["u//9Bw"], {
+                                        : Z.intl.formatToPlainString(Z.t["u//9By"], {
                                               count: i.party.size[0],
                                               max: i.party.size[1],
                                           }),
@@ -377,7 +377,7 @@ function K(e) {
                   });
     return (0, r.jsx)(_.Gt, {
         value: $,
-        children: (0, r.jsxs)(w.Z, {
+        children: (0, r.jsxs)(D.Z, {
             ref: er,
             className: a()(F.card, z),
             onAction: en,
@@ -385,7 +385,7 @@ function K(e) {
             "aria-labelledby": ea ? "".concat(J, " ").concat(Q) : Q,
             children: [
                 (0, r.jsx)(
-                    D.Z,
+                    w.Z,
                     W(
                         H(
                             {

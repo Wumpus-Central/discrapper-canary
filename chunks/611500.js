@@ -91,7 +91,7 @@ function h(e) {
             isTrayButton: !1,
             onClick: d,
             iconComponent: a.Dio,
-            label: l.intl.string(l.t.cpT0Cg),
+            label: l.intl.string(l.t.cpT0Cq),
         }),
     );
 }

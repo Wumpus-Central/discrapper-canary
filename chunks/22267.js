@@ -36,8 +36,8 @@ let C = {
                 nameplateData: N,
                 className: R,
                 innerClassName: P,
-                isHighlighted: w,
-                showStatus: D,
+                isHighlighted: D,
+                showStatus: w,
                 showPlaceholderUser: L,
                 pendingGlobalName: x,
                 pendingNickname: M,
@@ -85,7 +85,7 @@ let C = {
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(R, T.nameplatePreview, {
-                    [T.nameplatePurchased]: G && !w,
+                    [T.nameplatePurchased]: G && !D,
                     [T.large]: "large" === U,
                     [T.xlarge]: "xlarge" === U,
                     [T.inheritWidth]: null != Z,
@@ -96,7 +96,7 @@ let C = {
                             g.Z,
                             {
                                 nameplate: V,
-                                hovered: w,
+                                hovered: D,
                                 placement: m.i.PREVIEW,
                                 content: L ? void 0 : W,
                             },
@@ -114,7 +114,7 @@ let C = {
                                               user: t,
                                               guildId: n,
                                               avatarSize: q,
-                                              status: D ? H : void 0,
+                                              status: w ? H : void 0,
                                               "aria-hidden": !0,
                                               avatarDecorationOverride: null != j ? { asset: j.asset } : void 0,
                                           }),

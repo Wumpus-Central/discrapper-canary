@@ -31,7 +31,7 @@ function m(e) {
             null == m || m();
     };
     return (0, r.jsx)(_.O1, {
-        text: h.intl.string(h.t.ZYO5OD),
+        text: h.intl.string(h.t.ZYO5OK),
         fullWidth: !E,
         disabled: v,
         onClick: S,

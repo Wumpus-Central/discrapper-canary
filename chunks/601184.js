@@ -26,7 +26,7 @@ function _(e, t) {
         ? null
         : (0, i.jsx)(s.sNh, {
               id: "delete",
-              label: m.intl.string(m.t.xwMqDw),
+              label: m.intl.string(m.t.xwMqD7),
               action: function (n) {
                   e.state === f.yb.SEND_FAILED
                       ? r.Z.deleteMessage(t.id, e.id, !0)

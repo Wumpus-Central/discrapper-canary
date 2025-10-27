@@ -21,7 +21,7 @@ var r = n(951288),
     b = n(567126),
     y = n(615161),
     C = n(761274),
-    O = n(637824),
+    O = n(529822),
     w = n(388032),
     P = n(602804);
 function Z(e) {
@@ -62,7 +62,7 @@ function I(e) {
                                 children: (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "button-filled-white-text",
-                                    children: w.intl.string(w.t.z7WGho),
+                                    children: w.intl.string(w.t.z7WGhv),
                                 }),
                             }),
                         }),
@@ -123,11 +123,11 @@ function E(e) {
         if (!1 === E) {
             let e = !1;
             if ((0, x.isMac)()) {
-                var B, L;
+                var L, B;
                 let t =
-                    null === f.Z || void 0 === f.Z || null == (L = f.Z.remoteApp) || null == (B = L.getVersion)
+                    null === f.Z || void 0 === f.Z || null == (B = f.Z.remoteApp) || null == (L = B.getVersion)
                         ? void 0
-                        : B.call(L);
+                        : L.call(B);
                 e = !v.o || "0.0.0" === t || a().satisfies(t, "0.0.363");
             }
             return (0, r.jsxs)("div", {
@@ -137,11 +137,11 @@ function E(e) {
                         className: P.errorText,
                         variant: "text-md/normal",
                         color: "text-danger",
-                        children: [w.intl.string(w.t["kW5h/f"]), (0, r.jsx)("br", {}), w.intl.string(w.t["5Jvu1d"])],
+                        children: [w.intl.string(w.t["kW5h/W"]), (0, r.jsx)("br", {}), w.intl.string(w.t["5Jvu1R"])],
                     }),
                     e &&
                         (0, r.jsx)(u.Button, {
-                            text: w.intl.string(w.t["XgZk+v"]),
+                            text: w.intl.string(w.t["XgZk+u"]),
                             onClick: () => {
                                 m.Z.openSettings(C.Eu.SCREEN_RECORDING);
                             },
@@ -188,17 +188,17 @@ function T() {
                 variant: "text-lg/medium",
                 color: "header-primary",
                 className: P.emptyHeader,
-                children: w.intl.string(O.default["/z3YaW"]),
+                children: w.intl.string(O.default["/z3YaZ"]),
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
                 className: P.emptyBody,
-                children: w.intl.string(O.default.agwSGB),
+                children: w.intl.string(O.default.agwSGA),
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/semibold",
-                children: w.intl.format(O.default.xpVzr6, { helpdeskURL: g.Z.getArticleURL(360040816151) }),
+                children: w.intl.format(O.default.xpVzr3, { helpdeskURL: g.Z.getArticleURL(360040816151) }),
             }),
         ],
     });

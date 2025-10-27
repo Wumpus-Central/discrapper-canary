@@ -35,19 +35,19 @@ function c() {
     return [
         {
             value: "DUPLICATED",
-            label: i.intl.string(i.t.wwXl5u),
+            label: i.intl.string(i.t.wwXl5h),
         },
         {
             value: "TOO_GENERIC",
-            label: i.intl.string(i.t["t+6knp"]),
+            label: i.intl.string(i.t["t+6knu"]),
         },
         {
             value: "TOO_MANY",
-            label: i.intl.string(i.t.xnKDnp),
+            label: i.intl.string(i.t.xnKDnv),
         },
         {
             value: "INACCURATE",
-            label: i.intl.string(i.t.JW5VFh),
+            label: i.intl.string(i.t.JW5VFj),
         },
         {
             value: "NOT_USEFUL",
@@ -55,7 +55,7 @@ function c() {
         },
         {
             value: "OTHER",
-            label: i.intl.string(i.t.BufsKi),
+            label: i.intl.string(i.t.BufsKk),
         },
     ];
 }

@@ -27,8 +27,8 @@ let _ = (e) => {
         }, [t, _, n]);
     return (0, r.jsx)(c.JZ, {
         title: g.intl.formatToPlainString(g.t["Q1o/f3"], { username: f }),
-        description: g.intl.string(g.t.G08MKi),
-        buttonText: b ? g.intl.string(g.t.ot2tSk) : g.intl.string(g.t["l+7PZW"]),
+        description: g.intl.string(g.t.G08MKu),
+        buttonText: b ? g.intl.string(g.t.ot2tSp) : g.intl.string(g.t["l+7PZY"]),
         buttonDisabled: b,
         onButtonPress: v,
         buttonVariant: "application" === h.name && b ? "secondary" : "critical-primary",

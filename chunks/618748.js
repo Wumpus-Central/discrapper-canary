@@ -46,44 +46,44 @@ function L(e) {
         d = null != t && n.features.has(w.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
         u = [
             {
-                title: D.intl.string(D.t.p2Rsdn),
+                title: D.intl.string(D.t.p2Rsdl),
                 items: [
                     {
-                        description: D.intl.string(D.t.zbO7fX),
+                        description: D.intl.string(D.t.zbO7fU),
                         completed: d,
                     },
                 ],
             },
             {
-                title: D.intl.string(D.t["/CfKoK"]),
+                title: D.intl.string(D.t["/CfKoD"]),
                 items: [
                     {
-                        description: D.intl.string(D.t.zvuI3d),
+                        description: D.intl.string(D.t.zvuI3S),
                         completed: !0,
                     },
                     {
-                        description: D.intl.string(D.t.cVcEYG),
+                        description: D.intl.string(D.t.cVcEYK),
                         completed: (null == l ? void 0 : l.description) != null && "" !== l.description,
                     },
                     {
-                        description: D.intl.string(D.t["88XnXF"]),
+                        description: D.intl.string(D.t["88XnXE"]),
                         completed: (null == l ? void 0 : l.cover_image_asset) != null,
                     },
                 ],
             },
             {
-                title: D.intl.string(D.t.pXbGYW),
+                title: D.intl.string(D.t.pXbGYc),
                 items: [
                     {
-                        description: D.intl.string(D.t.pCxWKC),
+                        description: D.intl.string(D.t.pCxWKL),
                         completed: s,
                     },
                     {
-                        description: D.intl.string(D.t["+amv5e"]),
+                        description: D.intl.string(D.t["+amv5Z"]),
                         completed: o,
                     },
                     {
-                        description: D.intl.string(D.t["/P03Cw"]),
+                        description: D.intl.string(D.t["/P03C6"]),
                         completed: c,
                     },
                 ],
@@ -106,7 +106,7 @@ function k(e) {
                   (0, r.jsx)(a.LZC, { size: 16 }),
                   (0, r.jsx)(a.M14, {
                       type: "warning",
-                      children: D.intl.format(D.t.Yo0ZBw, { url: w.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
+                      children: D.intl.format(D.t.Yo0ZB2, { url: w.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
                   }),
                   (0, r.jsx)(a.LZC, { size: 16 }),
               ],
@@ -174,11 +174,11 @@ function M(e) {
                         children: [
                             (0, r.jsx)(a.Heading, {
                                 variant: "heading-lg/semibold",
-                                children: D.intl.string(D.t["KzCF//"]),
+                                children: D.intl.string(D.t["KzCF/6"]),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-sm/normal",
-                                children: D.intl.string(D.t.KyGv0t),
+                                children: D.intl.string(D.t.KyGv0k),
                             }),
                         ],
                     }),
@@ -189,7 +189,7 @@ function M(e) {
                         children: [
                             (0, r.jsxs)(a.njP, {
                                 className: A.tabBar,
-                                "aria-label": D.intl.string(D.t["+1H47u"]),
+                                "aria-label": D.intl.string(D.t["+1H47t"]),
                                 selectedItem: p,
                                 type: "top",
                                 look: "brand",
@@ -197,27 +197,27 @@ function M(e) {
                                 children: [
                                     (0, r.jsx)(s.Z, {
                                         id: T.ue.BASIC_INFO,
-                                        disabledTooltip: D.intl.string(D.t.NVDuUV),
+                                        disabledTooltip: D.intl.string(D.t.NVDuUX),
                                         disabled: !d,
-                                        children: D.intl.string(D.t["/CfKoK"]),
+                                        children: D.intl.string(D.t["/CfKoD"]),
                                     }),
                                     (0, r.jsx)(s.Z, {
                                         id: T.ue.TIERS,
-                                        disabledTooltip: D.intl.string(D.t.NVDuUV),
+                                        disabledTooltip: D.intl.string(D.t.NVDuUX),
                                         disabled: !d,
-                                        children: D.intl.string(D.t.pXbGYW),
+                                        children: D.intl.string(D.t.pXbGYc),
                                     }),
                                     (0, r.jsx)(s.Z, {
                                         id: T.ue.EMOJIS,
-                                        disabledTooltip: D.intl.string(D.t.NVDuUV),
+                                        disabledTooltip: D.intl.string(D.t.NVDuUX),
                                         disabled: !d,
-                                        children: D.intl.string(D.t.XBkDoK),
+                                        children: D.intl.string(D.t.XBkDoA),
                                     }),
                                     G
                                         ? (0, r.jsx)(a.njP.Item, {
                                               className: A.__invalid_tabBarItem,
                                               id: T.ue.PAYMENT,
-                                              children: D.intl.string(D.t.p2Rsdn),
+                                              children: D.intl.string(D.t.p2Rsdl),
                                           })
                                         : null,
                                 ],
@@ -226,7 +226,7 @@ function M(e) {
                                 (0, r.jsx)("div", {
                                     className: A.previewButton,
                                     children: (0, r.jsx)(l.u, {
-                                        text: D.intl.string(D.t["1wCH4O"]),
+                                        text: D.intl.string(D.t["1wCH4M"]),
                                         children: (0, r.jsx)(a.Button, {
                                             disabled: R,
                                             onClick: () => {
@@ -242,7 +242,7 @@ function M(e) {
                                                     (0, C.be)(n.id),
                                                     (0, m.uL)(w.Z5c.CHANNEL(n.id, Z.oC.ROLE_SUBSCRIPTIONS));
                                             },
-                                            text: D.intl.string(D.t.vM81yc),
+                                            text: D.intl.string(D.t.vM81yY),
                                             size: "sm",
                                             variant: "secondary",
                                         }),

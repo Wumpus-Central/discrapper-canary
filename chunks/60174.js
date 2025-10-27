@@ -97,7 +97,7 @@ class C extends i.Component {
                       let { isShown: s } = i;
                       return (0, r.jsx)(u.u, {
                           asContainer: !0,
-                          text: y.intl.string(y.t.lfIHs7),
+                          text: y.intl.string(y.t.lfIHs4),
                           children: (0, r.jsxs)(
                               d.P3F,
                               A(T({}, e), {
@@ -150,7 +150,7 @@ class C extends i.Component {
                         let { inDialog: t } = e;
                         return t
                             ? (0, r.jsx)(d.VqE, {
-                                  "aria-label": y.intl.string(y.t["7Xqzdn"]),
+                                  "aria-label": y.intl.string(y.t["7Xqzdj"]),
                                   children: o,
                               })
                             : o;

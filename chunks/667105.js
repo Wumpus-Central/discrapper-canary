@@ -37,8 +37,8 @@ var u = n(98278),
     N = n(669041),
     R = n(46140),
     P = n(981631),
-    w = n(215023),
-    D = n(388032);
+    D = n(215023),
+    w = n(388032);
 function L(e, t, n) {
     return (
         t in e
@@ -187,19 +187,19 @@ function B(e) {
         ? (0, m.pO)(e)
             ? e.config.features.includes(R.S7.CLOUD_GAMING_ACTIVITY)
                 ? {
-                      text: D.intl.string(D.t["+qoymD"]),
+                      text: w.intl.string(w.t["+qoymD"]),
                       questContentCTA: p.jZ.START_QUEST,
                   }
                 : {
-                      text: D.intl.string(D.t["Ie9++s"]),
+                      text: w.intl.string(w.t["Ie9++s"]),
                       questContentCTA: p.jZ.START_QUEST,
                   }
             : {
-                  text: D.intl.string(D.t["hRIVy+"]),
+                  text: w.intl.string(w.t["hRIVy+"]),
                   questContentCTA: p.jZ.START_QUEST,
               }
         : {
-              text: D.intl.string(D.t.l7E81v),
+              text: w.intl.string(w.t.l7E81v),
               questContentCTA: p.jZ.ACCEPT_QUEST,
           };
 }
@@ -236,7 +236,7 @@ function Z(e) {
                 ctaObject: P.qAy.CTA_TO_ORBS_SHOP,
             }),
                 (0, c.mK)({
-                    tab: w.AW.ORBS,
+                    tab: D.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: l.Z.QUEST_HOME_PAGE,
                 });
@@ -247,7 +247,7 @@ function Z(e) {
         Z = i.useMemo(() => n.config.features.includes(R.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE), [n.config.features]);
     return i.useMemo(() => {
         if (!Z && (0, m.HJ)(n) && r !== E.OH.COMPLETED && r !== E.OH.CLAIMED) {
-            let e = D.intl.string(D.t.BkZhUI);
+            let e = w.intl.string(w.t.BkZhUI);
             return {
                 text: e,
                 tooltipText: e,
@@ -256,10 +256,10 @@ function Z(e) {
         }
         switch (r) {
             case E.OH.UNACCEPTED:
-                let e = D.intl.string(D.t.kUQLMJ),
+                let e = w.intl.string(w.t.kUQLMJ),
                     t = p.jZ.ACCEPT_QUEST;
                 return (
-                    b && ((e = D.intl.string(D.t.umdNin)), (t = p.jZ.START_QUEST)),
+                    b && ((e = w.intl.string(w.t.umdNin)), (t = p.jZ.START_QUEST)),
                     (y || (0, m.pO)(n)) && ({ text: e, questContentCTA: t } = B(n)),
                     {
                         text: e,
@@ -332,7 +332,7 @@ function Z(e) {
             case E.OH.IN_PROGRESS:
                 if (I && _)
                     return {
-                        text: D.intl.string(D.t.Cfye4v),
+                        text: w.intl.string(w.t.Cfye4v),
                         tooltipText: null,
                         onClick: () =>
                             (0, m.gI)(
@@ -349,7 +349,7 @@ function Z(e) {
                     };
                 if (Z && (0, m.HJ)(n))
                     return {
-                        text: D.intl.string(D.t.IsH2Sp),
+                        text: w.intl.string(w.t.IsH2Sp),
                         tooltipText: null,
                         onClick: () => {
                             (0, C.openPushToPhoneModal)(n);
@@ -358,7 +358,7 @@ function Z(e) {
                 if (b)
                     return {
                         text: (0, m.F9)(A),
-                        tooltipText: D.intl.string(D.t.hsbwjv),
+                        tooltipText: w.intl.string(w.t.hsbwjv),
                         onClick: () =>
                             (0, C.openVideoQuestModal)({
                                 quest: n,
@@ -371,20 +371,20 @@ function Z(e) {
                     let { text: e } = B(n);
                     return {
                         text: e,
-                        tooltipText: D.intl.string(D.t.hsbwjv),
+                        tooltipText: w.intl.string(w.t.hsbwjv),
                         onClick: () => {
                             n.config.features.includes(R.S7.START_QUEST_CTA) && U();
                         },
                     };
                 }
                 return {
-                    text: D.intl.string(D.t.cfY4PE),
-                    tooltipText: D.intl.string(D.t.hsbwjv),
+                    text: w.intl.string(w.t.cfY4PE),
+                    tooltipText: w.intl.string(w.t.hsbwjv),
                     onClick: null,
                 };
             case E.OH.COMPLETED:
                 return {
-                    text: D.intl.string(D.t.cfY4PE),
+                    text: w.intl.string(w.t.cfY4PE),
                     tooltipText: null,
                     onClick: v,
                 };
@@ -397,23 +397,23 @@ function Z(e) {
                     return {
                         tooltipText: null,
                         onClick: v,
-                        text: (0, m.wj)(n.config) ? D.intl.string(D.t.bAGFz3) : D.intl.string(D.t.vTgCWx),
+                        text: (0, m.wj)(n.config) ? w.intl.string(w.t.bAGFz3) : w.intl.string(w.t.vTgCWx),
                     };
-                if (a) return k(x({}, i), { text: D.intl.string(D.t.MAS7uK) });
-                if ((0, m.vQ)(n.config)) return k(x({}, i), { text: D.intl.string(D.t.vTgCWx) });
+                if (a) return k(x({}, i), { text: w.intl.string(w.t.MAS7uK) });
+                if ((0, m.vQ)(n.config)) return k(x({}, i), { text: w.intl.string(w.t.vTgCWx) });
                 if ((0, m.Bg)(n.config))
                     return {
                         tooltipText: null,
                         onClick: N,
-                        text: D.intl.string(D.t["eQX+gg"]),
+                        text: w.intl.string(w.t["eQX+gg"]),
                     };
                 else if ((0, m.xN)(n.config))
                     return {
                         tooltipText: null,
-                        text: D.intl.string(D.t.WYchde),
+                        text: w.intl.string(w.t.WYchde),
                         onClick: L,
                     };
-                return k(x({}, i), { text: D.intl.string(D.t.bAGFz3) });
+                return k(x({}, i), { text: w.intl.string(w.t.bAGFz3) });
         }
     }, [r, b, I, _, v, a, n, o, s, f, M, A, N, L, y, U, O, Z, G]);
 }

@@ -120,7 +120,7 @@ let h = (e) => {
                                                       );
                                               });
                                           },
-                                          "aria-label": p.intl.string(p.t.bt75u7),
+                                          "aria-label": p.intl.string(p.t.bt75uw),
                                           children: (0, r.jsx)(o.vdY, {
                                               size: "xs",
                                               color: "currentColor",
@@ -130,7 +130,7 @@ let h = (e) => {
                                       (0, r.jsx)(o.P3F, {
                                           className: a()(f.action, f.actionRemove),
                                           onClick: C,
-                                          "aria-label": p.intl.string(p.t.N86XcH),
+                                          "aria-label": p.intl.string(p.t.N86XcP),
                                           children: (0, r.jsx)(o.Dio, {
                                               size: "md",
                                               color: "currentColor",

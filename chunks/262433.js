@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => m,
-    Z: () => E,
+    Z: () => v,
 }),
     n(539854);
 var r = n(392711),
@@ -34,23 +34,23 @@ function g(e, t) {
     var n;
     i()(null != (n = m.getState().particles[e.id]) ? n : {}).forEach(t);
 }
-function E(e) {
+function v(e) {
     var t, n, r;
     let {
         emojiHose: a,
-        context: E,
+        context: v,
         canvasWidth: b,
-        canvasHeight: v,
+        canvasHeight: E,
         fallbackColor: h,
         outlineColorDark: S,
         outlineColorLight: y,
         streamerId: O,
         deadDrawables: I,
     } = e;
-    E.save();
+    v.save();
     let C = s.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ""),
         w = (0, d.np)(a.x, b),
-        j = (0, d.np)(a.y, v),
+        P = (0, d.np)(a.y, E),
         { outlineColor: Z } = (0, d.bg)(a.userId, S, y, h);
     g(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
@@ -95,9 +95,9 @@ function E(e) {
                         return (r.particles[e.id] = o), (r.lastSpawned[e.id] = Date.now()), r;
                     });
                 });
-        })(a, w, j),
-        (0, f.I)(E, w, j, Z, p.q2),
-        (0, f.T)(E, w, j, a.userId),
+        })(a, w, P),
+        (0, f.I)(v, w, P, Z, p.q2),
+        (0, f.T)(v, w, P, a.userId),
         g(a, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -105,11 +105,11 @@ function E(e) {
                     i = n.x - (r / 2) * window.devicePixelRatio,
                     l = n.y - 1.2 * r * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, r / 2 + i, r / 2 + l, r, r);
-            })(E, C, e),
+            })(v, C, e),
         ),
         a.lastUpdatedAt + p.FO < Date.now() && (0, c.ZZ)(O, a),
         a.state !== u.f.STOP ||
             Object.keys(null != (r = m.getState().particles[a.id]) ? r : {}).length > 0 ||
             I.push(a),
-        E.restore();
+        v.restore();
 }

@@ -1,13 +1,13 @@
 n.d(t, {
     Z: () => f,
-    p: () => s,
+    p: () => o,
 });
 var r,
     i,
     l,
     a = n(442837),
-    o = n(570140),
-    s =
+    s = n(570140),
+    o =
         (((r = {})[(r.INIT = 0)] = "INIT"),
         (r[(r.FETCHING = 1)] = "FETCHING"),
         (r[(r.SUCCESS = 2)] = "SUCCESS"),
@@ -37,7 +37,7 @@ class p extends (l = a.ZP.Store) {
           writable: !0,
       })
     : (p[i] = "CheckpointStore");
-let f = new p(o.Z, {
+let f = new p(s.Z, {
     CONNECTION_OPEN: d,
     CHECKPOINT_FETCH_START: function () {
         u = 1;

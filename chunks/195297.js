@@ -9,8 +9,8 @@ var i = n(951288),
     d = n(906732),
     u = n(455708),
     f = n(222062),
-    g = n(530329),
-    _ = n(626135),
+    _ = n(530329),
+    g = n(626135),
     p = n(488499),
     x = n(58384),
     m = n(981631),
@@ -76,7 +76,7 @@ function P(e) {
             );
     }
     a.useEffect(() => {
-        _.default.track(m.rMx.OPEN_MODAL, {
+        g.default.track(m.rMx.OPEN_MODAL, {
             type: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
             location_stack: I,
             location: { page: E },
@@ -90,7 +90,7 @@ function P(e) {
             onClose: r,
             transitionState: t,
             children: [
-                (0, i.jsx)(l.xBx, { title: h.intl.string(h.t["xsC+//"]) }),
+                (0, i.jsx)(l.xBx, { title: h.intl.string(h.t["xsC+/y"]) }),
                 v &&
                     !O &&
                     (0, i.jsx)("div", {
@@ -114,7 +114,7 @@ function P(e) {
                         j && (0, i.jsx)(c.$jN, { className: A.spinner }),
                         v &&
                             O &&
-                            (0, i.jsx)(g.Z, {
+                            (0, i.jsx)(_.Z, {
                                 uploadType: b,
                                 analyticsSource: C,
                                 showUpsell: !0,

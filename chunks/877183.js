@@ -11,7 +11,7 @@ var r = n(704215),
     u = n(312839),
     p = n(987650),
     h = n(388032);
-let f = (e) => (0, l.QR)(e, (0, u.P)(), h.t["z8/sgI"]);
+let f = (e) => (0, l.QR)(e, (0, u.P)(), h.t["z8/sgJ"]);
 function g(e) {
     let { isFirstTimeNux: t } = e,
         {
@@ -52,7 +52,7 @@ function g(e) {
                     (i = i =
                         {
                             title: h.intl.string(h.t.xxADho),
-                            body: h.intl.string(h.t.GtUrGB),
+                            body: h.intl.string(h.t.GtUrGD),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -73,8 +73,8 @@ function g(e) {
         })(
             {
                 icon: n(639525),
-                title: h.intl.string(h.t.r0ObgY),
-                body: h.intl.string(h.t.hc6XFx),
+                title: h.intl.string(h.t.r0ObgV),
+                body: h.intl.string(h.t.hc6XF7),
                 hint: f,
                 notifType: p.n0.OopWelcomeNudge,
             },
@@ -94,7 +94,7 @@ function g(e) {
                 },
                 children: h.intl.string(h.t["9MyuT0"]),
             }),
-        confirmText: t ? h.intl.string(h.t.TxyTbm) : void 0,
+        confirmText: t ? h.intl.string(h.t.TxyTbk) : void 0,
         onConfirmClick: t
             ? () => {
                   b("unlock"), s.Z.setInputLocked(!1, (0, d.getPID)());

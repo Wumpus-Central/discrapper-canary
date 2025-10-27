@@ -64,12 +64,12 @@ let g = (e, t) =>
             (7 >= i()().diff(i()(r), "days") &&
                 n.push({
                     iconPath: _.As,
-                    text: p.intl.string(p.t.vYuyWV),
+                    text: p.intl.string(p.t.vYuyWf),
                 }),
             (0, d.Ol)(e) &&
                 n.push({
                     iconPath: _.fO,
-                    text: p.intl.string(p.t.keY6mZ),
+                    text: p.intl.string(p.t.keY6mW),
                 }),
             (0, d.q_)(e))
         ) {
@@ -82,7 +82,7 @@ let g = (e, t) =>
         (0, d.ig)(e) === a.o.GLOBAL &&
             n.push({
                 iconPath: _.Op,
-                text: p.intl.string(p.t.kAlUs7),
+                text: p.intl.string(p.t.kAlUsy),
             });
         let o = (0, d.dw)(e);
         if (
@@ -103,11 +103,11 @@ let g = (e, t) =>
         if ((0, d.Jd)(e)) {
             let t = (0, d.yA)(e);
             if (null != t) {
-                let e = p.intl.formatToPlainString(p.t.C0Axoa, { hours: Math.round(t / c.Z.Seconds.HOUR) });
+                let e = p.intl.formatToPlainString(p.t.C0AxoR, { hours: Math.round(t / c.Z.Seconds.HOUR) });
                 return [
                     {
                         iconPath: _.eF,
-                        text: "".concat(p.intl.string(p.t["/50eHh"]), " \u2014 ").concat(e),
+                        text: "".concat(p.intl.string(p.t["/50eHi"]), " \u2014 ").concat(e),
                     },
                 ];
             }

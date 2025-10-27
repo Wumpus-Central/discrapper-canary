@@ -105,12 +105,12 @@ function _(e) {
                 children: [
                     (0, a.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
-                        children: m.intl.format(m.t["5WZ9Cg"], { tierName: t.listings[0].name }),
+                        children: m.intl.format(m.t["5WZ9Ct"], { tierName: t.listings[0].name }),
                     }),
                     (0, a.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         className: x.bodyText,
-                        children: m.intl.format(m.t["5i7UhY"], {
+                        children: m.intl.format(m.t["5i7Uhb"], {
                             price: (0, o.T4)(t.listings[0].price_tier, d.pKx.USD),
                         }),
                     }),
@@ -129,7 +129,7 @@ function _(e) {
             }),
             (0, a.jsx)(s.Button, {
                 variant: "primary",
-                text: m.intl.string(m.t["1W7mCg"]),
+                text: m.intl.string(m.t["1W7mCt"]),
                 onClick: () => {
                     n(u(p({}, t), { listings: [u(p({}, t.listings[0]), { price_tier: r[l] })] }));
                 },

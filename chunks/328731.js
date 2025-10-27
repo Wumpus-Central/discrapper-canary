@@ -121,7 +121,7 @@ function y(e) {
                 color: "text-secondary",
                 className: o()(h.truncatedText, h.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: p.intl.format(p.t.rH95Gh, {
+                children: p.intl.format(p.t.rH95Gu, {
                     user0: c.ZP.getName(n.guild_id, n.id, S[0]),
                     user1: c.ZP.getName(n.guild_id, n.id, S[1]),
                     countOthers: I,

@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(636977),
-    s = n(442837),
+    s = n(636977),
+    o = n(442837),
     c = n(481060),
     u = n(410030),
     d = n(857595),
@@ -36,8 +36,8 @@ function I(e) {
     });
 }
 function B(e) {
-    let { tab: t, selected: n, displayText: i, handleTransition: o } = e,
-        [s, u] = l.useState(!1),
+    let { tab: t, selected: n, displayText: i, handleTransition: s } = e,
+        [o, u] = l.useState(!1),
         f = l.useRef(null),
         [C, h] = l.useState(0),
         _ = l.useRef(!1),
@@ -59,7 +59,7 @@ function B(e) {
         onMouseLeave: () => m(!1),
         children: (0, r.jsx)(c.yRy, {
             targetElementRef: f,
-            shouldShow: s,
+            shouldShow: o,
             position: "bottom",
             align: "left",
             onRequestOpen: () => m(!0),
@@ -70,16 +70,16 @@ function B(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(O.Z, {
-                    handleTransition: o,
+                    handleTransition: s,
                     onClose: t,
                 });
             },
             children: (e, l) => {
-                var s, u;
+                var o, u;
                 let { isShown: d } = l;
                 return (0, r.jsx)(
                     p.Z.Title,
-                    ((s = (function (e) {
+                    ((o = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -107,7 +107,7 @@ function B(e) {
                     (u = u =
                         {
                             ref: f,
-                            onClick: () => o(t),
+                            onClick: () => s(t),
                             onKeyDown: b,
                             wrapperClassName: L.tabWrapper,
                             className: a()(L.tab, { [L.selected]: n }),
@@ -128,7 +128,7 @@ function B(e) {
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(u))
+                        ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(u))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -137,9 +137,9 @@ function B(e) {
                               }
                               return n;
                           })(Object(u)).forEach(function (e) {
-                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(u, e));
+                              Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(u, e));
                           }),
-                    s),
+                    o),
                 );
             },
         }),
@@ -148,23 +148,23 @@ function B(e) {
 function A(e) {
     let { selectedTab: t, handleTransition: n } = e,
         i = (0, u.ZP)(),
-        d = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        d = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
         { enabled: g } = (0, m.WX)({ location: "collectibles_shop_header_bar" }),
         O = (0, C.Y)({ location: "CollectiblesShopHeaderBar" }),
         A = [
             {
                 tab: y.AW.HOME,
-                displayText: T.intl.string(T.t.ijDDw8),
+                displayText: T.intl.string(T.t.ijDDwz),
             },
             {
                 tab: y.AW.CATALOG,
-                displayText: T.intl.string(T.t.Ah5sJi),
+                displayText: T.intl.string(T.t.Ah5sJo),
             },
         ];
     g &&
         A.push({
             tab: y.AW.ORBS,
-            displayText: T.intl.string(T.t.EBYkzs),
+            displayText: T.intl.string(T.t.EBYkzk),
         });
     let N = t === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
         P = l.useCallback(() => {
@@ -173,7 +173,7 @@ function A(e) {
                 sectionType: j.jXE.ORBS_BALANCE_MENU,
                 ctaObject: j.qAy.CTA_TO_QUEST_HOME,
             }),
-                (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
+                (0, f.navigateToQuestHome)({ fromContent: s.j.ORBS_BALANCE_MENU });
         }, [N]),
         R = (0, x.eN)("collectibles_shop_header_bar"),
         Z = l.useCallback(() => {
@@ -195,10 +195,10 @@ function A(e) {
                     (0, r.jsxs)(c.P3F, {
                         className: L.shopHomeLink,
                         onClick: () => n(y.AW.HOME),
-                        "aria-label": T.intl.string(T.t.pWG4zc) + " home",
+                        "aria-label": T.intl.string(T.t.pWG4ze) + " home",
                         children: [
                             (0, r.jsx)(E.Z, { className: L.discordLogo }),
-                            (0, r.jsx)(p.Z.Title, { children: T.intl.string(T.t.pWG4zc) }),
+                            (0, r.jsx)(p.Z.Title, { children: T.intl.string(T.t.pWG4ze) }),
                         ],
                     }),
                     (0, r.jsx)("div", {
@@ -241,7 +241,7 @@ function A(e) {
                                     (0, r.jsx)(c.P3F, {
                                         className: L.wishlistButton,
                                         onClick: Z,
-                                        "aria-label": T.intl.string(T.t["7lZ31N"]),
+                                        "aria-label": T.intl.string(T.t["7lZ31J"]),
                                         children: (0, r.jsx)(c.h_8, {
                                             size: "xs",
                                             color: "currentColor",
@@ -251,7 +251,7 @@ function A(e) {
                                     (0, r.jsx)(b.V9, {
                                         analyticsPage: N,
                                         cardAlignment: b.V9.CardAlignment.END,
-                                        ctaText: T.intl.string(T.t.VC4Mq6),
+                                        ctaText: T.intl.string(T.t.VC4Mq0),
                                         ctaOnClick: P,
                                         className: L.balanceWidgetMenu,
                                     }),

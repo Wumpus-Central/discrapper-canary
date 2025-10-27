@@ -59,12 +59,12 @@ function I(e) {
                                 variant: "text-md/semibold",
                                 color: "header-primary",
                                 className: E.header,
-                                children: y.intl.string(y.t.LYju5O),
+                                children: y.intl.string(y.t.LYju5J),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: y.intl.string(y.t["53LhIy"]),
+                                children: y.intl.string(y.t["53LhI6"]),
                             }),
                         ],
                     }),
@@ -74,12 +74,12 @@ function I(e) {
                                 variant: "text-xs/bold",
                                 color: "text-muted",
                                 className: E.subHeader,
-                                children: y.intl.string(y.t.JaecVF),
+                                children: y.intl.string(y.t.JaecVH),
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: y.intl.string(y.t.VJMq8f),
+                                children: y.intl.string(y.t.VJMq8R),
                             }),
                             (0, r.jsxs)("div", {
                                 className: E.buttonList,
@@ -88,7 +88,7 @@ function I(e) {
                                         className: E.editableSection,
                                         children: (0, r.jsx)(u.Z, {
                                             onChange: c,
-                                            text: y.intl.string(y.t["3UB9aW"]),
+                                            text: y.intl.string(y.t["3UB9ad"]),
                                             size: "sm",
                                             variant: "secondary",
                                         }),
@@ -100,7 +100,7 @@ function I(e) {
                                               children: (0, r.jsx)(s.Button, {
                                                   variant: "critical-secondary",
                                                   size: "sm",
-                                                  text: y.intl.string(y.t.N86XcH),
+                                                  text: y.intl.string(y.t.N86XcP),
                                                   onClick: d,
                                               }),
                                           })
@@ -115,18 +115,18 @@ function I(e) {
                                 variant: "text-xs/bold",
                                 color: "text-muted",
                                 className: E.subHeader,
-                                children: [y.intl.string(y.t["1Ts7QE"]), o ? (0, r.jsx)(N, {}) : null],
+                                children: [y.intl.string(y.t["1Ts7QP"]), o ? (0, r.jsx)(N, {}) : null],
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: y.intl.string(y.t["6Y9q8f"]),
+                                children: y.intl.string(y.t["6Y9q8d"]),
                             }),
                             (0, r.jsx)("div", {
                                 className: E.editableSection,
                                 children: (0, r.jsx)(s.Kx8, {
                                     value: null != (t = n.description) ? t : "",
-                                    placeholder: y.intl.string(y.t.Nvfows),
+                                    placeholder: y.intl.string(y.t.Nvfowl),
                                     onChange: p,
                                     maxLength: l.Us,
                                 }),
@@ -155,7 +155,7 @@ function S(e) {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         className: E.header,
-                        children: y.intl.string(y.t["5b4VCQ"]),
+                        children: y.intl.string(y.t["5b4VCV"]),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
@@ -170,12 +170,12 @@ function S(e) {
                         variant: "text-xs/bold",
                         color: "text-muted",
                         className: E.subHeader,
-                        children: [y.intl.string(y.t.Rv9An5), i ? (0, r.jsx)(N, {}) : null],
+                        children: [y.intl.string(y.t.Rv9Anz), i ? (0, r.jsx)(N, {}) : null],
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: y.intl.string(y.t.CE5Gyc),
+                        children: y.intl.string(y.t.CE5Gya),
                     }),
                     (0, r.jsx)("div", {
                         className: E.editableSection,
@@ -192,12 +192,12 @@ function S(e) {
                         variant: "text-xs/bold",
                         color: "text-muted",
                         className: E.subHeader,
-                        children: y.intl.string(y.t.oOPlPD),
+                        children: y.intl.string(y.t.oOPlPA),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: y.intl.string(y.t["4jnzlZ"]),
+                        children: y.intl.string(y.t["4jnzla"]),
                     }),
                     (0, r.jsx)("div", {
                         className: E.editableSection,
@@ -247,7 +247,7 @@ function T(e) {
                             text: e,
                             onClick: () => p(e),
                             disabled: t,
-                            tooltipText: t ? y.intl.string(y.t.Xx7XeH) : void 0,
+                            tooltipText: t ? y.intl.string(y.t.Xx7XeB) : void 0,
                         };
                     }),
             [n.keywords, n.primaryCategoryId, p],
@@ -268,16 +268,16 @@ function T(e) {
                 children: [
                     (0, r.jsx)(o.Z, {
                         required: l,
-                        label: y.intl.string(y.t["0PJZXl"]),
-                        description: y.intl.string(y.t.ztiTDA),
-                        tagsLabel: y.intl.string(y.t["0PJZXl"]),
+                        label: y.intl.string(y.t["0PJZXj"]),
+                        description: y.intl.string(y.t.ztiTDH),
+                        tagsLabel: y.intl.string(y.t["0PJZXj"]),
                         tags: x,
                         onRemoveTag: m,
                         onAddTag: p,
                         onAddTagError: g,
                         maxTags: C.G7,
                         maxTaxLength: C._0,
-                        placeholder: n.keywords.length < 1 ? y.intl.string(y.t.EL4Lho) : void 0,
+                        placeholder: n.keywords.length < 1 ? y.intl.string(y.t.EL4Lhs) : void 0,
                     }),
                     null != b
                         ? (0, r.jsx)(s.Text, {
@@ -296,7 +296,7 @@ function T(e) {
                               variant: "text-xs/bold",
                               color: "text-muted",
                               className: E.subHeader,
-                              children: y.intl.string(y.t.sF28Oj),
+                              children: y.intl.string(y.t.sF28Ou),
                           }),
                           (0, r.jsx)("div", {
                               className: E.editableSection,
@@ -329,14 +329,14 @@ function P(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: y.intl.string(y.t["/RSSlZ"]),
+                        children: y.intl.string(y.t["/RSSlV"]),
                     }),
                     (0, r.jsx)("div", {
                         className: E.editableSection,
                         children: (0, r.jsx)(s.Button, {
                             size: "sm",
                             variant: l ? "secondary" : "active",
-                            text: l ? y.intl.string(y.t.XnrNLi) : y.intl.string(y.t.bHbZLC),
+                            text: l ? y.intl.string(y.t.XnrNLi) : y.intl.string(y.t.bHbZLP),
                             onClick: o,
                         }),
                     }),
@@ -366,12 +366,12 @@ function w(e) {
                         variant: "text-md/semibold",
                         color: "header-primary",
                         className: E.header,
-                        children: y.intl.string(y.t.pO60f3),
+                        children: y.intl.string(y.t.pO60fy),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
-                        children: y.intl.string(y.t["SF/GRk"]),
+                        children: y.intl.string(y.t["SF/GRh"]),
                     }),
                 ],
             }),

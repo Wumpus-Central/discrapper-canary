@@ -31,7 +31,7 @@ function m(e) {
             let { closePopout: n, onFocus: r } = e;
             return (0, i.jsx)(u.Z, {
                 children: (0, i.jsx)(p.Z, {
-                    title: f.intl.string(f.t.XYLOyM),
+                    title: f.intl.string(f.t.XYLOyF),
                     channel: t,
                     closePopout: n,
                     onFocus: r,

@@ -7,7 +7,7 @@ var r = n(951288),
     s = n(430824),
     c = n(914010),
     u = n(797670),
-    d = n(933554),
+    d = n(500275),
     p = n(388032),
     f = n(906530);
 function h(e) {
@@ -51,7 +51,7 @@ function g(e) {
                 (0, r.jsx)(o.Text, {
                     variant: "text-xs/medium",
                     color: "text-secondary",
-                    children: p.intl.format(d.default.bAzBIS, { numServers: n }),
+                    children: p.intl.format(d.default.bAzBIf, { numServers: n }),
                 }),
         ],
     });
@@ -87,7 +87,7 @@ function m(e) {
                   };
         }, [m, n]);
     return (0, r.jsx)(o.jSM, {
-        "aria-label": p.intl.string(d.default.TG0Qsb),
+        "aria-label": p.intl.string(d.default.TG0QsS),
         text: (0, r.jsx)(g, {
             guilds: O,
             numTruncated: y,

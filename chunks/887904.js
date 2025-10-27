@@ -2,14 +2,14 @@ n.d(t, { Z: () => o });
 var i = n(951288);
 n(647438);
 var r = n(481060),
-    l = n(557239),
-    a = n(388032);
+    a = n(557239),
+    l = n(388032);
 function o(e) {
-    let { guildFriendsEnabled: t } = l.Z.useExperiment({ location: "useFriendsItem" }, { autoTrackExposure: !1 });
+    let { guildFriendsEnabled: t } = a.Z.useExperiment({ location: "useFriendsItem" }, { autoTrackExposure: !1 });
     return t
         ? (0, i.jsx)(r.sNh, {
               id: "friends",
-              label: a.intl.string(a.t.kYxEcH),
+              label: l.intl.string(l.t.kYxEcH),
               icon: r.iFz,
               action: () => {
                   (0, r.ZDy)(async () => {

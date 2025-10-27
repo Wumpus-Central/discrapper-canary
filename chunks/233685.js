@@ -15,11 +15,11 @@ function u() {
             e.length > 0 && l.T1(e[0]);
         };
     return (0, r.jsx)(a.gNt, {
-        label: c.intl.string(c.t.s4773N),
+        label: c.intl.string(c.t.s4773E),
         description: c.intl.string(c.t.svjwGh),
         layout: "horizontal",
         children: (0, r.jsx)(a.P3F, {
-            "aria-label": c.intl.formatToPlainString(c.t.iMONTk, { storageLocation: e }),
+            "aria-label": c.intl.formatToPlainString(c.t.iMONTj, { storageLocation: e }),
             onClick: t,
             children: (0, r.jsx)(a.oil, {
                 tabIndex: -1,

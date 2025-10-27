@@ -4,24 +4,24 @@ var r = n(647438),
     a = n(100568),
     l = n(417865),
     o = n(665379),
-    s = n(592183),
-    c = n(517157);
+    c = n(592183),
+    s = n(517157);
 function u(e) {
     let { dropRef: t, dragRef: n, userId: u, widget: d, index: f, disableInteraction: g = !1, onReorder: p } = e,
-        m = (0, c.Z)(u),
+        m = (0, s.Z)(u),
         { isDragging: b, currentItem: h } = (0, i.f)((e) => ({
             isDragging: e.isDragging(),
             currentItem: e.getItem(),
         })),
-        v = (0, r.useCallback)(
+        y = (0, r.useCallback)(
             (e, t) => {
                 let n = m.slice(),
                     [r] = n.splice(e, 1);
-                n.splice(t, 0, r), s.Z.setPendingWidgets(n);
+                n.splice(t, 0, r), c.Z.setPendingWidgets(n);
             },
             [m],
         ),
-        [, y, j] = (0, a.c)({
+        [, v, O] = (0, a.c)({
             type: "WIDGET",
             item: {
                 widgetType: d.type,
@@ -37,9 +37,9 @@ function u(e) {
             end: p,
         });
     (0, r.useEffect)(() => {
-        j((0, o.r)(), { captureDraggingState: !0 });
-    }, [j]);
-    let [{ dragSourcePosition: O }, x] = (0, l.L)({
+        O((0, o.r)(), { captureDraggingState: !0 });
+    }, [O]);
+    let [{ dragSourcePosition: j }, x] = (0, l.L)({
         accept: "WIDGET",
         canDrop: () => !g,
         collect: (e) => {
@@ -55,7 +55,7 @@ function u(e) {
         },
         drop: (e) => {
             let t = null != f ? f : 0;
-            v(e.index, t), (e.index = t);
+            y(e.index, t), (e.index = t);
         },
     });
     return null == f || g
@@ -63,10 +63,10 @@ function u(e) {
               isDragging: !1,
               dragSourcePosition: null,
           }
-        : (y(n),
+        : (v(n),
           x(t),
           {
               isDragging: b && (null == h ? void 0 : h.widgetType) === d.type,
-              dragSourcePosition: O,
+              dragSourcePosition: j,
           });
 }

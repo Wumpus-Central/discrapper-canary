@@ -54,7 +54,7 @@ function b(e) {
                       case x.kEZ.OPEN:
                           return (0, r.jsxs)(d.ZP, {
                               children: [
-                                  (0, r.jsx)(d.Dx, { children: v.intl.string(v.t.csrAMD) }),
+                                  (0, r.jsx)(d.Dx, { children: v.intl.string(v.t.csrAMJ) }),
                                   (0, r.jsx)(d.DK, {
                                       children: "Check your Discord app to continue with one-time login.",
                                   }),
@@ -63,7 +63,7 @@ function b(e) {
                       case x.kEZ.OPENING:
                           return (0, r.jsxs)(d.ZP, {
                               children: [
-                                  (0, r.jsx)(d.Dx, { children: v.intl.string(v.t["Z+hCVV"]) }),
+                                  (0, r.jsx)(d.Dx, { children: v.intl.string(v.t["Z+hCVU"]) }),
                                   (0, r.jsx)(d.Hh, {}),
                               ],
                           });
@@ -86,13 +86,13 @@ function b(e) {
                                       (0, r.jsx)(d.zx, {
                                           onClick: () => (0, p.uL)((0, u.M)()),
                                           style: { marginTop: "8px" },
-                                          children: v.intl.string(v.t["2ixEBg"]),
+                                          children: v.intl.string(v.t["2ixEBi"]),
                                       }),
                                   ],
                               });
                           return (0, r.jsxs)(d.ZP, {
                               children: [
-                                  (0, r.jsx)(d.Dx, { children: v.intl.string(v.t.qllnGh) }),
+                                  (0, r.jsx)(d.Dx, { children: v.intl.string(v.t.qllnGm) }),
                                   (0, r.jsx)(d.DK, {
                                       children: g
                                           ? "Unable to open Discord automatically. Please open Discord manually and try again, or continue in browser."

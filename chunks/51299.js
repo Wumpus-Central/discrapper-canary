@@ -105,7 +105,7 @@ function h(n) {
         onCompleteApplication: r,
     } = n;
     return (0, t.jsxs)(o.Modal, {
-        title: d.intl.string(d.t.syl6HR),
+        title: d.intl.string(d.t.syl6HS),
         transitionState: a,
         onClose: e,
         actions: [],

@@ -25,11 +25,11 @@ var r = n(951288),
 function O(e) {
     let { message: t, rendered: n } = e;
     return null == (0, g.xE)(t.content)
-        ? b.intl.format(b.t.k6Jc9f, {
+        ? b.intl.format(b.t.k6Jc9Y, {
               username: null,
               usernameHook: () => null,
           })
-        : b.intl.format(b.t.IihHBw, {
+        : b.intl.format(b.t.IihHB0, {
               emojiPreview: n,
               emojiName: null,
               username: null,
@@ -80,7 +80,7 @@ function v(e) {
                       variant: "text-sm/semibold",
                       color: "text-secondary",
                       className: y.ctaText,
-                      children: b.intl.format(b.t.z5Rnl5, {
+                      children: b.intl.format(b.t.z5Rnl8, {
                           renderedEmoji: (0, r.jsx)(u.Z, {
                               emojiName: f.name,
                               size: "default",
@@ -139,11 +139,11 @@ function I(e) {
         children: (0, r.jsx)("span", {
             children:
                 null == v || null == T
-                    ? b.intl.format(b.t.k6Jc9f, {
+                    ? b.intl.format(b.t.k6Jc9Y, {
                           username: p.nick,
                           usernameHook: O,
                       })
-                    : b.intl.format(b.t.IihHBw, {
+                    : b.intl.format(b.t.IihHB0, {
                           username: p.nick,
                           usernameHook: O,
                           emojiPreview: (0, r.jsx)(f.Y, {

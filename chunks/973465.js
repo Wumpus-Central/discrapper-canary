@@ -8,7 +8,7 @@ var r = n(951288),
 function c() {
     let e = (0, i.e7)([o.Z], () => o.Z.isVideoAvailable());
     return (0, r.jsx)(a.j, {
-        label: l.intl.string(l.t.FsQ3OT),
+        label: l.intl.string(l.t.FsQ3OR),
         deviceType: s.h7.VIDEO_INPUT,
         location: "UserSettingsCameraSelect",
         isDisabled: !e,

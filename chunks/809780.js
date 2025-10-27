@@ -16,8 +16,8 @@ var r,
     u = n.n(c),
     d = n(570140),
     p = n(904245),
-    h = n(45114),
-    f = n(607070),
+    f = n(45114),
+    h = n(607070),
     g = n(622822),
     m = n(853856),
     b = n(181945),
@@ -245,7 +245,7 @@ class z extends o.EventEmitter {
             (this.markChannelRead = (e) => {
                 let { channelId: t, newestUnreadMessageId: n } = e;
                 d.Z.wait(() =>
-                    h.ack(
+                    f.ack(
                         t,
                         {
                             section: M.jXE.INBOX,
@@ -261,14 +261,14 @@ class z extends o.EventEmitter {
                 if ((null != r && this.undoStack.push(r), 1 === this.state.channels.length))
                     return void this.deleteChannel(t);
                 this.setState({ channels: this.updateChannel(t, (e) => B(U({}, e), { deleted: !0 })) }),
-                    f.Z.useReducedMotion && this.deleteChannel(t),
+                    h.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
             (this.undoMarkChannelRead = () => {
                 if (0 === this.undoStack.length) return;
                 let e = this.undoStack.pop();
                 if (null == e) return;
-                h.ack(
+                f.ack(
                     e.channelId,
                     {
                         section: M.jXE.INBOX,
@@ -300,7 +300,7 @@ class z extends o.EventEmitter {
                     this.maybeLoadMore();
             }),
             (this.markAllRead = () => {
-                h.y5(
+                f.y5(
                     this.state.channels.map((e) => ({
                         channelId: e.channelId,
                         messageId: e.newestUnreadMessageId,

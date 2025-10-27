@@ -12,8 +12,8 @@ var i = e(951288),
     x = e(589253);
 function h(t) {
     let { channelId: n, onClose: e, transitionState: h, heading: m, formTitle: f, allowReset: v = !1 } = t,
-        k = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
-        C = (0, o.ZP)(k),
+        C = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
+        k = (0, o.ZP)(C),
         g = u.Z.getNickname(n),
         [j, b] = a.useState(null != g ? g : "");
     function y(t) {
@@ -25,7 +25,7 @@ function h(t) {
             title: m,
             actions: [
                 {
-                    text: p.intl.string(p.t["ETE/oK"]),
+                    text: p.intl.string(p.t["ETE/oC"]),
                     onClick: e,
                     variant: "secondary",
                 },
@@ -43,7 +43,7 @@ function h(t) {
                     label: f,
                     value: j,
                     onChange: b,
-                    placeholder: null != C ? C : void 0,
+                    placeholder: null != k ? k : void 0,
                     maxLength: 100,
                     autoFocus: !0,
                 }),
@@ -51,7 +51,7 @@ function h(t) {
                     ? (0, i.jsx)("div", {
                           className: x.reset,
                           children: (0, i.jsx)(r.Avr, {
-                              text: p.intl.string(p.t.aE02R0),
+                              text: p.intl.string(p.t.aE02Rz),
                               onClick: function () {
                                   (0, d.UT)(n, null), e();
                               },
@@ -63,7 +63,7 @@ function h(t) {
                     className: x.description,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: p.intl.string(p.t["2vyz+P"]),
+                    children: p.intl.string(p.t["2vyz+N"]),
                 }),
             ],
         }),

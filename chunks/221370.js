@@ -1,6 +1,6 @@
 n.d(t, { Z: () => x }), n(388685), n(539854);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     s = n(758713),
@@ -11,24 +11,24 @@ var i = n(951288),
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -39,61 +39,61 @@ function p(e) {
         n = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
-                r = (function (e, t) {
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        i,
-                        r = {},
+                        r,
+                        i = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++)
-                    (n = l[i]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ["platform"]);
     switch (t) {
         case s.z.DESKTOP:
-            return (0, i.jsx)(o.pzj, m({ size: "xs" }, n));
+            return (0, r.jsx)(o.pzj, m({ size: "xs" }, n));
         case s.z.XBOX:
-            return (0, i.jsx)(o.Mko, m({ size: "xs" }, n));
+            return (0, r.jsx)(o.Mko, m({ size: "xs" }, n));
         case s.z.PLAYSTATION:
-            return (0, i.jsx)(o.Tsp, m({ size: "xs" }, n));
+            return (0, r.jsx)(o.Tsp, m({ size: "xs" }, n));
         case s.z.NINTENDO:
-            return (0, i.jsx)(o.aPH, m({ size: "xs" }, n));
+            return (0, r.jsx)(o.aPH, m({ size: "xs" }, n));
         default:
             return null;
     }
 }
 function g(e) {
     let { platforms: t } = e;
-    return (0, i.jsx)("div", {
+    return (0, r.jsx)("div", {
         className: a()(u.row, u.gapSm),
         style: { alignItems: "center" },
         children: t.map((e) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 c.u,
                 {
                     text: (function (e) {
                         switch (e) {
                             case s.z.DESKTOP:
-                                return d.intl.string(d.t.KT6uCA);
+                                return d.intl.string(d.t.KT6uCJ);
                             case s.z.XBOX:
-                                return d.intl.string(d.t.DDWUJi);
+                                return d.intl.string(d.t.DDWUJp);
                             case s.z.PLAYSTATION:
-                                return d.intl.string(d.t.fzMz2t);
+                                return d.intl.string(d.t.fzMz2s);
                             case s.z.NINTENDO:
-                                return d.intl.string(d.t.AMW8jY);
+                                return d.intl.string(d.t.AMW8je);
                             default:
                                 return null;
                         }
                     })(e),
-                    children: (0, i.jsx)(p, { platform: e }),
+                    children: (0, r.jsx)(p, { platform: e }),
                 },
                 e,
             ),
@@ -102,7 +102,7 @@ function g(e) {
 }
 function x(e) {
     let { detectedGame: t, className: n } = e,
-        l = r.useMemo(() => {
+        l = i.useMemo(() => {
             let e = new Set(t.platforms),
                 n = [...e];
             return (
@@ -112,8 +112,8 @@ function x(e) {
         }, [t.platforms]);
     return 0 === l.length
         ? null
-        : (0, i.jsx)("div", {
+        : (0, r.jsx)("div", {
               className: a()(u.column, u.gapLg, n),
-              children: l.length > 0 && (0, i.jsx)(g, { platforms: l }),
+              children: l.length > 0 && (0, r.jsx)(g, { platforms: l }),
           });
 }

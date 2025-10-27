@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => s,
-    U: () => c,
+    U: () => o,
 });
 var r = n(442837),
     l = n(650774),
@@ -9,7 +9,7 @@ var r = n(442837),
 function s(e) {
     return (0, r.e7)([i.Z], () => null != e && i.Z.can(a.Pl.MENTION_EVERYONE, e), [e]);
 }
-function c(e) {
+function o(e) {
     let t = null == e ? void 0 : e.guild_id,
         n = (0, r.e7)([l.Z], () => l.Z.getMemberCount(t), [t]);
     return null == e || (null != n && !(n > 50000));

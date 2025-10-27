@@ -11,12 +11,12 @@ let c = (0, l.x1)(r.n.LINUX_PANE, {
         render: s.Z,
     }),
     E = (0, l.wf)(r.n.LINUX_PANEL, {
-        useTitle: () => o.intl.string(o.t["7pPjTU"]),
+        useTitle: () => o.intl.string(o.t["7pPjTW"]),
         buildLayout: () => [c],
     }),
     d = (0, l.m7)(r.n.LINUX_SIDEBAR_ITEM, {
         icon: i.pzj,
-        useTitle: () => o.intl.string(o.t["7pPjTU"]),
+        useTitle: () => o.intl.string(o.t["7pPjTW"]),
         legacySearchKey: a.s6.LINUX_SETTINGS,
         usePredicate: () => u.isPlatformEmbedded && (0, u.isLinux)(),
         buildLayout: () => [E],

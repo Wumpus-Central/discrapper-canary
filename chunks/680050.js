@@ -19,7 +19,7 @@ let m = (e) => {
                     var e, t;
                     (0, a.showToast)(
                         (0, l.Y)(
-                            u.intl.formatToPlainString(u.t.wr4IT0, {
+                            u.intl.formatToPlainString(u.t.wr4IT5, {
                                 count: m.length,
                                 parent1: m[0].username,
                                 parent2: null == (e = m[1]) ? void 0 : e.username,
@@ -35,7 +35,7 @@ let m = (e) => {
                 });
         }, [m]);
     if (0 === m.length || !p) return null;
-    let b = u.intl.formatToPlainString(u.t.HqyWeH, {
+    let b = u.intl.formatToPlainString(u.t.HqyWeO, {
         count: m.length,
         parent1: m[0].username,
         parent2: null == (t = m[1]) ? void 0 : t.username,
@@ -43,8 +43,8 @@ let m = (e) => {
     });
     return (0, r.jsx)(d.JZ, {
         title: b,
-        description: u.intl.string(u.t["5l/hlp"]),
-        buttonText: g ? u.intl.string(u.t.ntuuk5) : u.intl.string(u.t["sYdX/P"]),
+        description: u.intl.string(u.t["5l/hlt"]),
+        buttonText: g ? u.intl.string(u.t.ntuuk7) : u.intl.string(u.t["sYdX/H"]),
         buttonDisabled: g,
         onButtonPress: h,
     });

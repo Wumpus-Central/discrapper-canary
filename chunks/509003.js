@@ -100,7 +100,7 @@ function p(e) {
 }
 function h(e) {
     if (!p(e)) return e;
-    let t = r.m.getConfig({ location: "transformRobloxSubgameNames" }).alternativeTitle ? o.t.HjVwGx : o.t.G6BGd3;
+    let t = r.m.getConfig({ location: "transformRobloxSubgameNames" }).alternativeTitle ? o.t.HjVwG3 : o.t.G6BGdx;
     return u(l({}, e), { name: o.intl.formatToPlainString(t, { subgameName: e.name }) });
 }
 function m(e) {

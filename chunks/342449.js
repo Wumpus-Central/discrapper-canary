@@ -38,10 +38,10 @@ function m(e) {
         O = l.useCallback(
             (e) =>
                 0 === e.section
-                    ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t["4E27f3"], { count: j.length }) }, e.section)
+                    ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t["4E27fz"], { count: j.length }) }, e.section)
                     : 1 === e.section
-                      ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t.csPc4O, { count: v.length }) }, e.section)
-                      : (0, r.jsx)(f, { text: u.intl.string(u.t["wUNQ+/"]) }, e.section),
+                      ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t.csPc4D, { count: v.length }) }, e.section)
+                      : (0, r.jsx)(f, { text: u.intl.string(u.t["wUNQ+w"]) }, e.section),
             [j.length, v.length],
         ),
         S = l.useCallback(
@@ -66,7 +66,7 @@ function m(e) {
                 className: h.list,
                 children: (0, r.jsx)(c.Z, {
                     channel: t,
-                    header: u.intl.string(u.t.HgTQ8v),
+                    header: u.intl.string(u.t.HgTQ8p),
                     startThread: n,
                 }),
             });

@@ -71,7 +71,7 @@ let C = r.memo(function (e) {
             })(
                 {
                     className: s.root,
-                    "aria-label": p.intl.string(p.t.shUONj),
+                    "aria-label": p.intl.string(p.t.shUONg),
                     size: i.CgR.DYNAMIC,
                 },
                 f,

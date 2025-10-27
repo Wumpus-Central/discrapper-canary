@@ -40,32 +40,32 @@ function u() {
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return [
         {
-            name: s.intl.string(s.t.PEzffn),
-            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t.nDQy0t),
+            name: s.intl.string(s.t.PEzffq),
+            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t.nDQy0p),
             value: o.sFg.NONE,
             disabled: e,
         },
         {
-            name: s.intl.string(s.t.SsCK8P),
-            desc: s.intl.string(s.t["8GCOX1"]),
+            name: s.intl.string(s.t.SsCK8I),
+            desc: s.intl.string(s.t["8GCOX6"]),
             value: o.sFg.LOW,
             color: t ? void 0 : (0, i.Fw)("GREEN_360"),
         },
         {
-            name: s.intl.string(s.t.WwNoR0),
-            desc: s.intl.formatToPlainString(s.t.VS14gY, { min: o.YeM.ACCOUNT_AGE }),
+            name: s.intl.string(s.t.WwNoR4),
+            desc: s.intl.formatToPlainString(s.t.VS14ga, { min: o.YeM.ACCOUNT_AGE }),
             value: o.sFg.MEDIUM,
             color: t ? void 0 : (0, i.Fw)("YELLOW_360"),
         },
         {
             name: s.intl.string(s.t.I2jMUF),
-            desc: s.intl.formatToPlainString(s.t["r+b3Iy"], { min: o.YeM.MEMBER_AGE }),
+            desc: s.intl.formatToPlainString(s.t["r+b3I4"], { min: o.YeM.MEMBER_AGE }),
             value: o.sFg.HIGH,
             color: t ? void 0 : (0, i.Fw)("ORANGE_345"),
         },
         {
-            name: s.intl.string(s.t.cJY8w8),
-            desc: s.intl.string(s.t.PWaKmZ),
+            name: s.intl.string(s.t.cJY8w9),
+            desc: s.intl.string(s.t.PWaKme),
             value: o.sFg.VERY_HIGH,
             color: t ? void 0 : (0, i.Fw)("RED_400"),
         },
@@ -75,21 +75,21 @@ function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return [
         {
-            name: s.intl.string(s.t.iHuPEx),
+            name: s.intl.string(s.t.iHuPE6),
             desc: s.intl.string(s.t["Z+yUWF"]),
             value: o.lxg.ALL_MEMBERS,
             color: (0, i.Fw)("RED_400"),
         },
         {
-            name: s.intl.string(s.t.ynfFaG),
-            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t["3fRINz"]),
+            name: s.intl.string(s.t.ynfFaI),
+            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t["3fRIN4"]),
             value: o.lxg.MEMBERS_WITHOUT_ROLES,
             disabled: e,
             color: (0, i.Fw)("YELLOW_360"),
         },
         {
-            name: s.intl.string(s.t.VbSyAw),
-            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t.M6GNsL),
+            name: s.intl.string(s.t.VbSyAx),
+            desc: e ? s.intl.string(s.t.j9WtHx) : s.intl.string(s.t.M6GNsJ),
             value: o.lxg.DISABLED,
             disabled: e,
             color: (0, i.Fw)("PRIMARY_400"),
@@ -99,20 +99,20 @@ function d() {
 function f() {
     return [
         {
-            name: s.intl.string(s.t["4IaoCA"]),
-            desc: s.intl.string(s.t.TgipjI),
+            name: s.intl.string(s.t["4IaoCI"]),
+            desc: s.intl.string(s.t.TgipjE),
             value: r.Xr.FRIENDS_AND_NON_FRIENDS,
             color: (0, i.Fw)("GREEN_360"),
         },
         {
-            name: s.intl.string(s.t["6NnX6O"]),
-            desc: s.intl.string(s.t["+dw1qq"]),
+            name: s.intl.string(s.t["6NnX6F"]),
+            desc: s.intl.string(s.t["+dw1qu"]),
             value: r.Xr.NON_FRIENDS,
             color: (0, i.Fw)("YELLOW_360"),
         },
         {
-            name: s.intl.string(s.t["1tiAFx"]),
-            desc: s.intl.string(s.t.LKTyeH),
+            name: s.intl.string(s.t["1tiAFz"]),
+            desc: s.intl.string(s.t.LKTyeA),
             value: r.Xr.DISABLED,
             color: (0, i.Fw)("RED_400"),
         },

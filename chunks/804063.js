@@ -8,24 +8,24 @@ function s(e) {
     return (
         i.Z.isBlockedForMessage(e)
             ? (t = {
-                  title: o.t["j7eA/v"],
-                  body: o.t.dTNNgo,
+                  title: o.t["j7eA/g"],
+                  body: o.t.dTNNgr,
               })
             : i.Z.isIgnoredForMessage(e)
               ? (t = {
-                    title: o.t.XyWoKS,
+                    title: o.t.XyWoKV,
                     body: o.t["8t8doK"],
                 })
               : (0, a.DQ)(e) &&
                 (t = {
-                    title: o.t["6vJKFh"],
-                    body: o.t.zKNgPD,
+                    title: o.t["6vJKFk"],
+                    body: o.t.zKNgPF,
                 }),
         null == t ||
             (r.Z.show({
                 title: o.intl.string(t.title),
                 body: o.intl.formatToPlainString(t.body, { name: e.author.username }),
-                confirmText: o.intl.string(o.t.BddRzc),
+                confirmText: o.intl.string(o.t.BddRzS),
             }),
             !1)
     );

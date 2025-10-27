@@ -61,7 +61,7 @@ function j(e) {
                       (0, a.jsx)("div", {
                           className: f.pinIcon,
                           children: (0, a.jsx)(i.u, {
-                              text: h.intl.string(h.t["1QLRYW"]),
+                              text: h.intl.string(h.t["1QLRYb"]),
                               children: (0, a.jsx)(o.qQX, {
                                   size: "custom",
                                   width: 16,

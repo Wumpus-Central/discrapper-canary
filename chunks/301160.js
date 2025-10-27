@@ -52,25 +52,25 @@ function h(e) {
             onClose: u,
         } = e,
         x = (0, m.Z)(i),
-        [p, f] = n.useState(new Set()),
-        g = p.size > 0;
+        [p, v] = n.useState(new Set()),
+        C = p.size > 0;
     return (0, a.jsx)(o.Modal, {
         transitionState: h,
         onClose: u,
-        title: d.intl.string(d.t.xC6tUl),
+        title: d.intl.string(d.t.xC6tUv),
         actions: [
             {
-                text: d.intl.string(d.t["ETE/oK"]),
+                text: d.intl.string(d.t["ETE/oC"]),
                 variant: "secondary",
                 onClick: u,
             },
             {
-                text: d.intl.format(d.t.pX74jo, { totalEmoji: p.size }),
+                text: d.intl.format(d.t.pX74jh, { totalEmoji: p.size }),
                 variant: "primary",
                 onClick: function () {
                     s(p), u();
                 },
-                disabled: !g,
+                disabled: !C,
             },
         ],
         children: (0, a.jsxs)(l.Kqy, {
@@ -78,7 +78,7 @@ function h(e) {
             children: [
                 (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
-                    children: d.intl.format(d.t["OnK+Cw"], { transitionToManageEmoji: r }),
+                    children: d.intl.format(d.t["OnK+C1"], { transitionToManageEmoji: r }),
                 }),
                 null != x &&
                     x.length > 0 &&
@@ -95,7 +95,7 @@ function h(e) {
                                               var i;
                                               return (
                                                   (i = e.id),
-                                                  void f((e) => {
+                                                  void v((e) => {
                                                       let t = new Set(e);
                                                       return p.has(i) ? t.delete(i) : t.add(i), t;
                                                   })

@@ -21,11 +21,11 @@ var d = (function (e) {
 function f() {
     return [
         {
-            name: c.intl.string(c.t.uoorxs),
+            name: c.intl.string(c.t.uoorxi),
             value: 0,
         },
         {
-            name: c.intl.string(c.t.lwZCFR),
+            name: c.intl.string(c.t.lwZCFT),
             value: 1,
         },
     ];

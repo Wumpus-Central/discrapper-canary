@@ -3,8 +3,8 @@ var r = n(647438),
     i = n(115434),
     l = n(264181),
     a = n(442837),
-    o = n(704215),
-    s = n(481060),
+    s = n(704215),
+    o = n(481060),
     c = n(243778),
     u = n(874703),
     d = n(794324),
@@ -13,18 +13,18 @@ var r = n(647438),
 let h = () => {
     var e;
     let t = (0, a.e7)([u.Z], () => u.Z.getMarketingBySurface(i.K.DESKTOP_SHOP_BUTTON)),
-        n = !(0, s.$sL)(),
-        [h, g] = (0, c.XR)(
-            n ? o.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null,
+        n = !(0, o.$sL)(),
+        [h, m] = (0, c.XR)(
+            n ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null,
             null != (e = null == t ? void 0 : t.version) ? e : 0,
             void 0,
             !0,
         ),
-        m = (0, d.mB)(t),
-        b =
+        g = (0, d.mB)(t),
+        _ =
             null != h
                 ? ((e, t) => {
-                      var n, r, i, a, o, s, c, u;
+                      var n, r, i, a, s, o, c, u;
                       if ((null == t ? void 0 : t.type) === l.Z.COACHTIP || e.hasPreviewAssets) {
                           let i =
                               null != t
@@ -103,18 +103,18 @@ let h = () => {
                                   srcDarkHovered:
                                       null == e || null == (a = e.asset) || null == (i = a.hovered) ? void 0 : i.dark,
                                   srcLightHovered:
-                                      null == e || null == (s = e.asset) || null == (o = s.hovered) ? void 0 : o.light,
+                                      null == e || null == (o = e.asset) || null == (s = o.hovered) ? void 0 : s.light,
                               },
                           };
                       }
                       return null;
-                  })(m, t)
+                  })(g, t)
                 : null,
-        _ = r.useCallback(() => {
-            null != b && g(f.L.AUTO);
-        }, [b, g]);
+        b = r.useCallback(() => {
+            null != _ && m(f.L.AUTO);
+        }, [_, m]);
     return {
-        shopButtonDisplayOptions: b,
-        dismissShopButtonDC: _,
+        shopButtonDisplayOptions: _,
+        dismissShopButtonDC: b,
     };
 };

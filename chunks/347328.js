@@ -19,7 +19,7 @@ function h(e) {
     if (!E)
         return (0, r.jsx)(a.sNh, {
             id: "connect-crunchyroll",
-            label: p.intl.formatToPlainString(p.t.XWSHTU, { platform: o.Z.get(_.ABu.CRUNCHYROLL).name }),
+            label: p.intl.formatToPlainString(p.t.XWSHTb, { platform: o.Z.get(_.ABu.CRUNCHYROLL).name }),
             action: () => {
                 null == m || m({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
                     (0, d.openUserSettings)(u.n.CONNECTIONS_PANEL, { section: _.oAB.CONNECTIONS }),
@@ -32,7 +32,7 @@ function h(e) {
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "watch-on-crunchyroll",
-              label: p.intl.string(p.t.OpxQVF),
+              label: p.intl.string(p.t.OpxQVH),
               action: () => {
                   null == m || m({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, l.Y)(b);
               },

@@ -10,7 +10,7 @@ function c(n) {
         l.v2r,
         {
             navId: "guild-role-connections-context",
-            "aria-label": r.intl.string(r.t.vytvJC),
+            "aria-label": r.intl.string(r.t.vytvJF),
             onClose: o.Zy,
             onSelect: c,
             children: (0, i.jsx)(l.kSQ, {
@@ -18,7 +18,7 @@ function c(n) {
                     l.sNh,
                     {
                         id: "guild-role-connections-leave-role",
-                        label: r.intl.string(r.t.vytvJC),
+                        label: r.intl.string(r.t.vytvJF),
                         action: e,
                         color: "danger",
                     },

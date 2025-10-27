@@ -1,7 +1,7 @@
 n.d(t, {
     AH: () => U,
     Ag: () => z,
-    CS: () => w,
+    CS: () => D,
     EW: () => W,
     MG: () => et,
     OR: () => K,
@@ -12,7 +12,7 @@ n.d(t, {
     eT: () => H,
     gU: () => ee,
     gl: () => Z,
-    is: () => D,
+    is: () => w,
     it: () => L,
     lL: () => $,
     lx: () => X,
@@ -101,7 +101,7 @@ function R(e, t) {
     );
 }
 let P = 5;
-async function w(e) {
+async function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
         let n = (
@@ -147,7 +147,7 @@ async function w(e) {
     }
     return { errorHints: [] };
 }
-async function D(e) {
+async function w(e) {
     await i.tn.post({
         url: T.ANM.QUEST_ON_CONSOLE_STOP(e),
         rejectWithError: !1,

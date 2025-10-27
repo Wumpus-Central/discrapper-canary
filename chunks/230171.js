@@ -35,8 +35,8 @@ var r = n(951288),
     N = n(943762),
     R = n(914498),
     P = n(172109),
-    w = n(880251),
-    D = n(515344),
+    D = n(880251),
+    w = n(515344),
     L = n(967249),
     x = n(388032),
     M = n(217648);
@@ -51,7 +51,7 @@ function k(e) {
             icon: n.icon,
             bot: O,
         }),
-        { staticBannerSrc: N, videoBannerSrc: L, bannerAspectRatio: M } = (0, w.E)(n),
+        { staticBannerSrc: N, videoBannerSrc: L, bannerAspectRatio: M } = (0, D.E)(n),
         k = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
         { analyticsLocations: G } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: B, instanceId: Z, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, A.c)(n.id),
@@ -63,8 +63,8 @@ function k(e) {
         }),
         W = null != v && I && Y,
         K = V && I,
-        z = (0, D.G)(n),
-        q = (0, D.z)(n),
+        z = (0, w.G)(n),
+        q = (0, w.z)(n),
         X = i.useMemo(() => {
             let e = [];
             return (
@@ -73,10 +73,10 @@ function k(e) {
                           e.push({
                               label:
                                   null == Z
-                                      ? x.intl.string(x.t.RscU7O)
+                                      ? x.intl.string(x.t.RscU7I)
                                       : F
-                                        ? x.intl.string(x.t.DPfdsr)
-                                        : x.intl.string(x.t.sqe0ho),
+                                        ? x.intl.string(x.t.DPfdsq)
+                                        : x.intl.string(x.t.sqe0hj),
                               trackingArea: R.j_.PLAY,
                               onClick() {
                                   (0, c.G6)({
@@ -94,7 +94,7 @@ function k(e) {
                       !K &&
                           W &&
                           e.push({
-                              label: x.intl.string(x.t.JeK1Wl),
+                              label: x.intl.string(x.t.JeK1Wg),
                               trackingArea: R.j_.PLAY,
                               onClick() {
                                   (0, _.W)({
@@ -153,7 +153,7 @@ function j(e) {
                     compactDisplay: "short",
                 }),
                 r = null != (t = null == (e = c.directoryEntry) ? void 0 : e.guild_count) ? t : 0;
-            return 0 === r ? null : x.intl.format(x.t["6IW6Wl"], { guildCount: n.format(r) });
+            return 0 === r ? null : x.intl.format(x.t["6IW6Wi"], { guildCount: n.format(r) });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
         _ = null == (o = c.categories) || null == (n = o.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
@@ -205,7 +205,7 @@ function U(e) {
                 return (0, r.jsx)(N.K, {
                     activityUsers: d,
                     guildId: c,
-                    activityText: x.intl.formatToPlainString(x.t["IJa+4+"], { count: d.length }),
+                    activityText: x.intl.formatToPlainString(x.t["IJa+46"], { count: d.length }),
                 });
             if (u.some((e) => (0, m.ig)(e) === o.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
@@ -214,10 +214,10 @@ function U(e) {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        x.intl.string(x.t.TsWCdX),
+                        x.intl.string(x.t.TsWCdW),
                     ],
                 });
-            let e = a > 0 ? x.intl.format(x.t.z8EAJS, { count: a }) : x.intl.string(x.t.RjceQU);
+            let e = a > 0 ? x.intl.format(x.t.z8EAJW, { count: a }) : x.intl.string(x.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(l.tBG, {

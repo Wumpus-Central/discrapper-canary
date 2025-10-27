@@ -74,8 +74,8 @@ function T(e) {
         [A, C] = i.useState(0),
         [N, R] = i.useState(null),
         { confettiCanvas: P } = i.useContext(u.h),
-        w = (0, a.uR)(P, N),
-        D = i.useMemo(
+        D = (0, a.uR)(P, N),
+        w = i.useMemo(
             () => [
                 {
                     src:
@@ -132,7 +132,7 @@ function T(e) {
         i.useEffect(() => {
             T > 0 &&
                 A > 0 &&
-                w.createConfetti(
+                D.createConfetti(
                     y(E({}, h.We), {
                         position: {
                             type: "static",
@@ -143,12 +143,12 @@ function T(e) {
                         },
                     }),
                 );
-        }, [w, T, A]),
+        }, [D, T, A]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.Ji, {
                     ref: R,
-                    sprites: D,
+                    sprites: w,
                     colors: I,
                     spriteWidth: h.Ko,
                     spriteHeight: h.Ko,

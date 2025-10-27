@@ -43,9 +43,9 @@ function u(t) {
                 (0, e.jsx)(a.xBx, {
                     graphic: void 0,
                     gradientColor: "purple",
-                    title: p.intl.string(p.t.xREzoa),
+                    title: p.intl.string(p.t.xREzoQ),
                     titleTextVariant: "heading-xl/semibold",
-                    subtitle: p.intl.string(p.t.va4ap6),
+                    subtitle: p.intl.string(p.t.va4ap4),
                     alignCenter: !0,
                 }),
                 (0, e.jsx)(a.fef, {
@@ -72,12 +72,12 @@ function u(t) {
                                                     (0, e.jsx)(o.Text, {
                                                         color: "text-primary",
                                                         variant: "text-md/semibold",
-                                                        children: p.intl.string(p.t["9g594e"]),
+                                                        children: p.intl.string(p.t["9g594S"]),
                                                     }),
                                                     (0, e.jsx)(o.Text, {
                                                         color: "text-secondary",
                                                         variant: "text-md/normal",
-                                                        children: p.intl.string(p.t.Vye3DQ),
+                                                        children: p.intl.string(p.t.Vye3DX),
                                                     }),
                                                 ],
                                             }),
@@ -90,7 +90,7 @@ function u(t) {
                                             d.default.track(m.rMx.FORTNITE_DOWNLOAD_CLICKED),
                                                 (0, r.Z)("https://fn.gg/GetGame");
                                         },
-                                        text: p.intl.string(p.t.ZDtJ19),
+                                        text: p.intl.string(p.t.ZDtJ10),
                                         variant: "secondary",
                                     }),
                                 ],
@@ -115,12 +115,12 @@ function u(t) {
                                                     (0, e.jsx)(o.Text, {
                                                         color: "text-primary",
                                                         variant: "text-md/semibold",
-                                                        children: p.intl.string(p.t.kOjtOD),
+                                                        children: p.intl.string(p.t.kOjtOC),
                                                     }),
                                                     (0, e.jsx)(o.Text, {
                                                         color: "text-secondary",
                                                         variant: "text-md/normal",
-                                                        children: p.intl.string(p.t.X3zPLy),
+                                                        children: p.intl.string(p.t.X3zPL1),
                                                     }),
                                                 ],
                                             }),
@@ -133,7 +133,7 @@ function u(t) {
                                             d.default.track(m.rMx.FORTNITE_GFNJOIN_CLICKED),
                                                 (0, r.Z)("https://geforcenow.com/discord");
                                         },
-                                        text: p.intl.string(p.t.ycbXPz),
+                                        text: p.intl.string(p.t.ycbXPw),
                                         variant: "secondary",
                                     }),
                                 ],

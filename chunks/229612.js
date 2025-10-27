@@ -50,7 +50,7 @@ function v(t) {
                     (0, l.jsx)(r.Heading, {
                         variant: "heading-lg/semibold",
                         color: "text-primary",
-                        children: o.intl.string(o.t.oV10fn),
+                        children: o.intl.string(o.t.oV10fv),
                     }),
                     (0, l.jsx)(r.Kx8, {
                         value: u,
@@ -72,9 +72,9 @@ let O = function (t) {
             let t = [],
                 e = [];
             return (
-                c && (t.push(E), e.push(o.intl.string(o.t.UyBQFx))),
+                c && (t.push(E), e.push(o.intl.string(o.t.UyBQF7))),
                 t.push(f),
-                e.push(o.intl.string(o.t.LhMLCg)),
+                e.push(o.intl.string(o.t.LhMLCk)),
                 {
                     questionItems: t,
                     questionTitles: e,
@@ -87,8 +87,8 @@ let O = function (t) {
             searchContext: e,
         });
     }, [n, e]);
-    let [h, S] = a.useState(0),
-        p = 0 === h,
+    let [h, p] = a.useState(0),
+        S = 0 === h,
         N = h === g.length - 1,
         D = a.useMemo(() => {
             let t = g[h],
@@ -122,13 +122,13 @@ let O = function (t) {
                 })({ title: e }, t),
             );
         }, [g, _, h]),
-        C = a.useMemo(() => g.every(s.cp), [g]),
+        L = a.useMemo(() => g.every(s.cp), [g]),
         I = a.useMemo(() => {
             let t = g[h];
             return (0, s.cp)(t);
         }, [g, h]),
-        T = a.useCallback(() => {
-            C &&
+        C = a.useCallback(() => {
+            L &&
                 ((0, u.z4)({
                     rating: n,
                     searchContext: e,
@@ -138,46 +138,46 @@ let O = function (t) {
                     describeSearchQuestionText: (0, s.sG)(f),
                 }),
                 O());
-        }, [C, n, e, c, E, f, O]),
-        L = a.useCallback(() => {
-            if (p) return void O();
-            S(h - 1);
-        }, [p, h, O]),
+        }, [L, n, e, c, E, f, O]),
+        T = a.useCallback(() => {
+            if (S) return void O();
+            p(h - 1);
+        }, [S, h, O]),
         M = a.useCallback(() => {
-            S(h + 1);
+            p(h + 1);
         }, [h]),
         y = a.useMemo(() => {
             let t = [];
             return (
-                p
+                S
                     ? t.push({
                           variant: "secondary",
-                          text: o.intl.string(o.t["ETE/oK"]),
+                          text: o.intl.string(o.t["ETE/oC"]),
                           onClick: O,
                       })
                     : t.push({
                           variant: "secondary",
-                          text: o.intl.string(o.t["13/7kZ"]),
-                          onClick: L,
+                          text: o.intl.string(o.t["13/7kX"]),
+                          onClick: T,
                       }),
                 N
                     ? t.push({
                           variant: "primary",
-                          text: o.intl.string(o.t["4Zpxtr"]),
-                          onClick: T,
-                          disabled: !C,
+                          text: o.intl.string(o.t["4Zpxtl"]),
+                          onClick: C,
+                          disabled: !L,
                       })
                     : t.push({
                           variant: "primary",
-                          text: o.intl.string(o.t.PDTjLC),
+                          text: o.intl.string(o.t.PDTjLN),
                           onClick: M,
                           disabled: !I,
                       }),
                 t
             );
-        }, [p, N, C, I, O, L, T, M]);
+        }, [S, N, L, I, O, T, C, M]);
     return (0, l.jsx)(i.Modal, {
-        title: o.intl.string(o.t.LRGdV1),
+        title: o.intl.string(o.t.LRGdVy),
         actions: y,
         onClose: O,
         transitionState: r,

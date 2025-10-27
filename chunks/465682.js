@@ -10,6 +10,6 @@ function l(e) {
         onClick: t,
         icon: i.$Eu,
         iconPosition: "start",
-        text: s.intl.string(s.t["+7XY39"]),
+        text: s.intl.string(s.t["+7XY31"]),
     });
 }

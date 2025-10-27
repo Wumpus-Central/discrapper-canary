@@ -15,23 +15,23 @@ function m(e) {
             () => [
                 {
                     value: o,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 1 }),
+                    label: s.intl.formatToPlainString(s.t.iXLF9W, { minutes: 1 }),
                 },
                 {
                     value: c,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 5 }),
+                    label: s.intl.formatToPlainString(s.t.iXLF9W, { minutes: 5 }),
                 },
                 {
                     value: d,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 15 }),
+                    label: s.intl.formatToPlainString(s.t.iXLF9W, { minutes: 15 }),
                 },
                 {
                     value: u,
-                    label: s.intl.formatToPlainString(s.t.iXLF9f, { minutes: 30 }),
+                    label: s.intl.formatToPlainString(s.t.iXLF9W, { minutes: 30 }),
                 },
                 {
                     value: g,
-                    label: s.intl.formatToPlainString(s.t.xCjYxM, { hours: 1 }),
+                    label: s.intl.formatToPlainString(s.t.xCjYxK, { hours: 1 }),
                 },
             ],
             [],

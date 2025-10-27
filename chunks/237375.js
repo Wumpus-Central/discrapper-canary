@@ -67,7 +67,7 @@ function g(e) {
                           (0, r.jsx)(l.Heading, {
                               className: p.optionalHeader,
                               variant: "heading-deprecated-12/semibold",
-                              children: _.intl.string(_.t["5C107O"]),
+                              children: _.intl.string(_.t["5C107K"]),
                           }),
                           c.map((e) => m(e, null == n ? void 0 : n[e.name], a)),
                       ],
@@ -85,8 +85,8 @@ function g(e) {
                           variant: "text-sm/normal",
                           children:
                               0 === c.length
-                                  ? _.intl.formatToPlainString(_.t["0mI72t"], { count: u.length })
-                                  : _.intl.formatToPlainString(_.t.BP8N0N, { count: u.length }),
+                                  ? _.intl.formatToPlainString(_.t["0mI72g"], { count: u.length })
+                                  : _.intl.formatToPlainString(_.t.BP8N0K, { count: u.length }),
                       }),
                   })
                 : null;

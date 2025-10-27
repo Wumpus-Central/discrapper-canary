@@ -18,7 +18,7 @@ var i = n(120356),
     _ = n(51144),
     O = n(754231),
     y = n(342273);
-function v(e) {
+function j(e) {
     var t;
     let { guildId: n, member: i, className: o } = e,
         c = null != i.member ? (0, b.CA)(i.member) : null;
@@ -33,7 +33,7 @@ function v(e) {
         }),
     });
 }
-function j(e) {
+function v(e) {
     let { members: t, guildId: n } = e;
     return (0, r.jsx)(f.Z, {
         className: y.partyMembers,
@@ -42,7 +42,7 @@ function j(e) {
         max: 6,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                v,
+                j,
                 {
                     guildId: n,
                     member: e,
@@ -78,7 +78,7 @@ let x = (e) => {
         });
     if (null == b) return null;
     let _ = s || (0, u.Z)(n),
-        v = (0, h.vd)(t.type);
+        j = (0, h.vd)(t.type);
     return (0, r.jsxs)("div", {
         className: y.activity,
         children: [
@@ -91,9 +91,9 @@ let x = (e) => {
                           user: b,
                           channel: t,
                           sortedVoiceStates: i,
-                          onOpenSpotifyTrack: v ? p.aG : void 0,
-                          onOpenSpotifyArtist: v ? p.d$ : void 0,
-                          onOpenSpotifyAlbum: v ? p.Z5 : void 0,
+                          onOpenSpotifyTrack: j ? p.aG : void 0,
+                          onOpenSpotifyArtist: j ? p.d$ : void 0,
+                          onOpenSpotifyAlbum: j ? p.Z5 : void 0,
                       })
                     : (0, r.jsx)(c.Z, {
                           type: c.P.VOICE_CHANNEL,
@@ -104,7 +104,7 @@ let x = (e) => {
                           renderHeaderAccessory:
                               null != i
                                   ? () =>
-                                        (0, r.jsx)(j, {
+                                        (0, r.jsx)(v, {
                                             guildId: t.guild_id,
                                             members: i,
                                         })

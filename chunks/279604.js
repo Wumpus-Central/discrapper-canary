@@ -1,9 +1,9 @@
 n.d(t, {
     KE: () => y,
     KT: () => O,
-    Td: () => v,
+    Td: () => j,
     ZP: () => C,
-    _C: () => j,
+    _C: () => v,
 }),
     n(388685),
     n(457542);
@@ -90,7 +90,7 @@ function y(e, t) {
         { modalKey: m.H2 },
     );
 }
-function v(e, t) {
+function j(e, t) {
     var n;
     let r = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
         o = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(e)),
@@ -114,11 +114,11 @@ function v(e, t) {
         c = null == s ? void 0 : s.reduce((e, t) => e + t.cost, 0);
     return Math.max((null != (n = null == r ? void 0 : r.premiumSubscriberCount) ? n : 0) - a + (null != c ? c : 0), 0);
 }
-function j(e, t) {
+function v(e, t) {
     let { analyticsLocations: n } = (0, a.ZP)(),
         { onToggle: r } = x(e, t),
         d = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        p = v(e, t);
+        p = j(e, t);
     return {
         onActivate: i.useCallback(
             function (e) {
@@ -185,7 +185,7 @@ function x(e, t) {
 }
 function C(e, t) {
     let { isLoading: l, error: a, onToggle: s } = x(e, t),
-        { onActivate: c } = j(e, t),
+        { onActivate: c } = v(e, t),
         u = i.useCallback((e) => (e.stopPropagation(), s(!1)), [s]);
     return {
         isLoading: l,

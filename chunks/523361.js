@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(373228),
     i = n(388032);
-let a = () => [i.intl.string(i.t.b6wEe3), i.intl.string(i.t.i8o9hY)],
-    o = () => [i.intl.string(i.t.vqnToa), i.intl.string(i.t["9yh+dH"])],
+let a = () => [i.intl.string(i.t.b6wEe6), i.intl.string(i.t.i8o9hX)],
+    o = () => [i.intl.string(i.t.vqnToc), i.intl.string(i.t["9yh+dM"])],
     s = [
         {
             id: "781323471249604648",

@@ -22,12 +22,12 @@ function _(e) {
             subtitle: _,
             onClick: O,
             enableHangStatus: y,
-            showEmptyChannelTopic: v,
+            showEmptyChannelTopic: j,
         } = e,
-        j = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        x = null != j && j.length > 0,
+        v = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        x = null != v && v.length > 0,
         C = (0, c.ZP)(t, !0),
-        E = (!y || !!v) && C,
+        E = (!y || !!j) && C,
         S = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
@@ -48,7 +48,7 @@ function _(e) {
               children: (0, r.jsx)(s.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(j, !0, { channelId: t.id }) }),
+                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) }),
               }),
           })
         : n && E && (!S || l)
@@ -59,7 +59,7 @@ function _(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         className: m.statusText,
-                        children: g.intl.string(g.t.Mgpxi4),
+                        children: g.intl.string(g.t.Mgpxiw),
                     }),
                     (0, r.jsx)(s.vdY, {
                         color: "currentColor",

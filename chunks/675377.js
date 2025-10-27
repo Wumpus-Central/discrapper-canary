@@ -91,7 +91,7 @@ function F() {
                   children: [
                       (0, r.jsx)(g.Heading, {
                           variant: "heading-lg/semibold",
-                          children: k.intl.string(k.t.OWQNYm),
+                          children: k.intl.string(k.t.OWQNYr),
                       }),
                       (0, r.jsx)(K, { guild: e }),
                   ],
@@ -113,7 +113,7 @@ function W(e) {
         a = null != l ? (0, P.nL)(l) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
-              children: k.intl.format(k.t["7E9Hd3"], {
+              children: k.intl.format(k.t["7E9Hdz"], {
                   slots: n,
                   totalSlots: a,
               }),
@@ -121,7 +121,7 @@ function W(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(u.u, {
-                      text: k.intl.formatToPlainString(k.t.tuuJJS, { currentBoostLevel: t }),
+                      text: k.intl.formatToPlainString(k.t.tuuJJT, { currentBoostLevel: t }),
                       children: (0, r.jsx)(g.P3F, {
                           className: G.boostingIconWrapper,
                           onClick: () => {
@@ -137,7 +137,7 @@ function W(e) {
                           children: (0, r.jsx)(S.Z, {}),
                       }),
                   }),
-                  k.intl.format(k.t.HHCdvb, {
+                  k.intl.format(k.t.HHCdvU, {
                       slots: n,
                       totalSlots: a,
                       boostLevel: t,
@@ -145,7 +145,7 @@ function W(e) {
               ],
           });
 }
-let V = (e) => {
+let z = (e) => {
         var { renderPopoutBody: t, renderPopoutChildren: n, popoutTargetRef: l } = e,
             a = (function (e, t) {
                 if (null == e) return {};
@@ -203,14 +203,14 @@ let V = (e) => {
             ),
         );
     },
-    z = () => {
+    V = () => {
         let e = i.useRef(null);
-        return (0, r.jsx)(V, {
+        return (0, r.jsx)(z, {
             renderPopoutBody: () =>
                 (0, r.jsx)(g.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: k.intl.format(k.t.bGXPVl, {}),
+                    children: k.intl.format(k.t.bGXPVt, {}),
                 }),
             renderPopoutChildren: (t, n) =>
                 (0, r.jsx)(
@@ -221,7 +221,7 @@ let V = (e) => {
                             U(M({}, t), {
                                 disabled: !0,
                                 variant: "primary",
-                                text: k.intl.string(k.t["/uNYPD"]),
+                                text: k.intl.string(k.t["/uNYPJ"]),
                             }),
                         ),
                     }),
@@ -268,7 +268,7 @@ function K(e) {
     let x = B
         ? (0, r.jsx)(g.Button, {
               variant: "primary",
-              text: k.intl.string(k.t["/uNYPD"]),
+              text: k.intl.string(k.t["/uNYPJ"]),
               onClick: function () {
                   (0, g.ZDy)(async () => {
                       let { default: e } = await n.e("56035").then(n.bind(n, 758961));
@@ -277,7 +277,7 @@ function K(e) {
               },
               disabled: m <= 0 || !s,
           })
-        : (0, r.jsx)(z, {});
+        : (0, r.jsx)(V, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -286,7 +286,7 @@ function K(e) {
                         className: G.helpText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: k.intl.string(k.t.BohnsL),
+                        children: k.intl.string(k.t.BohnsE),
                     }),
                     (0, r.jsx)("div", {
                         className: G.buttons,
@@ -306,9 +306,9 @@ function K(e) {
                               height: 212,
                           }),
                           (0, r.jsx)(g.OZU, {
-                              note: k.intl.string(k.t.ZhoSBA),
+                              note: k.intl.string(k.t.ZhoSBI),
                               noteClassName: G.emptyText,
-                              children: k.intl.string(k.t.I6P1p6),
+                              children: k.intl.string(k.t.I6P1p7),
                           }),
                           x,
                       ],
@@ -337,9 +337,9 @@ function K(e) {
                                   (0, r.jsxs)("div", {
                                       className: G.tableHeaders,
                                       children: [
-                                          (0, r.jsx)(H, { children: k.intl.string(k.t.sMOuub) }),
-                                          (0, r.jsx)(H, { children: k.intl.string(k.t.lLFvlZ) }),
-                                          (0, r.jsx)(H, { children: k.intl.string(k.t["85qMS0"]) }),
+                                          (0, r.jsx)(H, { children: k.intl.string(k.t.sMOuuS) }),
+                                          (0, r.jsx)(H, { children: k.intl.string(k.t.lLFvlT) }),
+                                          (0, r.jsx)(H, { children: k.intl.string(k.t["85qMS/"]) }),
                                       ],
                                   }),
                                   l.map((e) =>
@@ -468,7 +468,7 @@ function Y(e) {
                                               );
                                       });
                               },
-                              "aria-label": k.intl.string(k.t.bt75u7),
+                              "aria-label": k.intl.string(k.t.bt75uw),
                               children: (0, r.jsx)(g.vdY, {
                                   size: "xs",
                                   color: "currentColor",
@@ -485,11 +485,11 @@ function Y(e) {
                                               U(
                                                   M(
                                                       {
-                                                          header: k.intl.formatToPlainString(k.t["PR/VbG"], {
+                                                          header: k.intl.formatToPlainString(k.t["PR/VbI"], {
                                                               soundName: u,
                                                           }),
-                                                          confirmText: k.intl.string(k.t.oyYWHB),
-                                                          cancelText: k.intl.string(k.t["ETE/oK"]),
+                                                          confirmText: k.intl.string(k.t.oyYWHE),
+                                                          cancelText: k.intl.string(k.t["ETE/oC"]),
                                                           onConfirm: A,
                                                       },
                                                       e,
@@ -497,14 +497,14 @@ function Y(e) {
                                                   {
                                                       children: (0, r.jsx)(g.Text, {
                                                           variant: "text-md/normal",
-                                                          children: k.intl.format(k.t["u6+CmJ"], { soundName: u }),
+                                                          children: k.intl.format(k.t["u6+CmN"], { soundName: u }),
                                                       }),
                                                   },
                                               ),
                                           ),
                                       );
                               },
-                              "aria-label": k.intl.string(k.t.N86XcH),
+                              "aria-label": k.intl.string(k.t.N86XcP),
                               children: (0, r.jsx)(g.Dio, {
                                   size: "md",
                                   color: "currentColor",

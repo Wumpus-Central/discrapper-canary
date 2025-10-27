@@ -1,17 +1,17 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(703656),
-    o = n(769654),
-    s = n(430824),
+    s = n(769654),
+    o = n(430824),
     c = n(626135),
     u = n(768581),
     d = n(125631),
     p = n(981631),
     f = n(388032),
     h = n(184904);
-function g(e, t, n) {
+function m(e, t, n) {
     return (0, r.jsxs)(
         "button",
         {
@@ -42,8 +42,8 @@ function g(e, t, n) {
         t,
     );
 }
-function m() {
-    let e = s.Z.getGuildsArray().filter((e) => e.features.has(p.GuildFeatures.HUB));
+function g() {
+    let e = o.Z.getGuildsArray().filter((e) => e.features.has(p.GuildFeatures.HUB));
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("header", {
@@ -52,12 +52,12 @@ function m() {
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
-                        children: f.intl.string(f.t.IuMx1d),
+                        children: f.intl.string(f.t.IuMx1Y),
                     }),
                     (0, r.jsx)(l.Text, {
                         tag: "div",
                         variant: "heading-md/normal",
-                        children: f.intl.string(f.t.DwevPj),
+                        children: f.intl.string(f.t.DwevPs),
                     }),
                 ],
             }),
@@ -65,7 +65,7 @@ function m() {
                 className: h.grid,
                 children: [
                     e.map((e) =>
-                        g(
+                        m(
                             u.ZP.getGuildIconURL({
                                 id: e.id,
                                 icon: e.icon,
@@ -76,11 +76,11 @@ function m() {
                                 var t;
                                 (t = e.id),
                                     c.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: t }),
-                                    (0, o.X)(t);
+                                    (0, s.X)(t);
                             },
                         ),
                     ),
-                    g(l.Jmo, f.intl.string(f.t.AhKnz8), () => {
+                    m(l.Jmo, f.intl.string(f.t.AhKnz4), () => {
                         c.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
                             (0, a.uL)(p.Z5c.GUILD_DISCOVERY);
                     }),

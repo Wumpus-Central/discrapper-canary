@@ -25,7 +25,7 @@ var r = n(951288),
     N = n(981631),
     I = n(921944),
     S = n(131085),
-    T = n(659854),
+    T = n(562915),
     P = n(388032),
     w = n(764009);
 let Z = function () {
@@ -58,7 +58,7 @@ let Z = function () {
         W = () => {
             (0, f.Z)(D.id, c.Z.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), b.Z.close();
         },
-        V = (0, r.jsxs)(r.Fragment, {
+        z = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(C.Z, {
                     className: w.section,
@@ -88,7 +88,7 @@ let Z = function () {
             (0, r.jsx)(o.Heading, {
                 className: w.title,
                 variant: "heading-lg/semibold",
-                children: P.intl.string(T.default.mf2OwM),
+                children: P.intl.string(T.default.mf2OwH),
             }),
             (0, r.jsxs)("div", {
                 className: w.container,
@@ -102,7 +102,7 @@ let Z = function () {
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-secondary",
-                                        children: P.intl.format(T.default["655Un5"], {
+                                        children: P.intl.format(T.default["655Uny"], {
                                             onClickServerProfile: () => {
                                                 b.Z.setSection(N.pNK.PROFILE);
                                             },
@@ -116,7 +116,7 @@ let Z = function () {
                                             className: w.privateProfileWarning,
                                             children: (0, r.jsx)(o.Text, {
                                                 variant: "text-xs/medium",
-                                                children: P.intl.format(T.default.CRbkIy, {
+                                                children: P.intl.format(T.default.CRbkIz, {
                                                     onClickEditSetting: () =>
                                                         b.Z.setSection(N.pNK.PROFILE, N.KsC.PROFILE_VISIBILITY),
                                                 }),
@@ -133,7 +133,7 @@ let Z = function () {
                                               children: (0, r.jsx)(o.Text, {
                                                   variant: "text-md/semibold",
                                                   color: "header-primary",
-                                                  children: P.intl.string(T.default["1zams7"]),
+                                                  children: P.intl.string(T.default["1zams8"]),
                                               }),
                                           }),
                                           (0, r.jsx)(o.rsf, {
@@ -161,10 +161,10 @@ let Z = function () {
                                 ? (0, r.jsx)(o.nuw, {
                                       children: (0, r.jsx)("div", {
                                           className: w.disabledForm,
-                                          children: V,
+                                          children: z,
                                       }),
                                   })
-                                : V,
+                                : z,
                         ],
                     }),
                     (0, r.jsxs)("div", {

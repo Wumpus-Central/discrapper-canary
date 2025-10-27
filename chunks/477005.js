@@ -35,7 +35,7 @@ function p(e) {
                         ? {
                               asset: E,
                               assetId: "QuestTileBanner",
-                              alt: f.intl.string(f.t.jnijW1),
+                              alt: f.intl.string(f.t.jnijWz),
                               className: o()(_.heroAsset, m),
                           }
                         : void 0,

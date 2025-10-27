@@ -4,8 +4,8 @@ n(647438);
 var i = n(481060),
     l = n(561716),
     a = n(51596),
-    o = n(82950),
-    s = n(981631),
+    s = n(82950),
+    o = n(981631),
     c = n(921944),
     u = n(388032),
     d = n(454703),
@@ -15,14 +15,14 @@ let f = (e) => {
         shortcut: l.$.binds["0"],
         keyClassName: d.key,
     });
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(s.Z, {
         guild: e.guild,
         onDismissed: () => e.markAsDismissed(c.L.UNKNOWN),
         onClick: () => (0, a.$Z)("CHANNEL_NOTICE"),
-        message: u.intl.string(u.t.Qhk8cn),
+        message: u.intl.string(u.t.Qhk8cs),
         cta: t,
-        trackingSource: s.PsQ.QUICK_SWITCHER_NOTICE,
-        type: s.vID.QUICKSWITCHER,
+        trackingSource: o.PsQ.QUICK_SWITCHER_NOTICE,
+        type: o.vID.QUICKSWITCHER,
         image: p,
         imageMarginX: 50,
     });

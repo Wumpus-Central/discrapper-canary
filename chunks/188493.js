@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(89182),
-    o = n(706454),
-    s = n(762692),
+    s = n(706454),
+    o = n(762692),
     c = n(959165),
     u = n(164991),
     d = n(726115),
@@ -12,14 +12,14 @@ var r = n(951288),
     f = n(388032);
 function h(e) {
     let { loadId: t } = e,
-        n = (0, l.e7)([o.default], () => (0, d.Xp)([o.default])),
+        n = (0, l.e7)([s.default], () => (0, d.Xp)([s.default])),
         h = u.Z.useField("languageCode"),
-        g = null != h ? h : n,
-        m = i.useCallback(
+        m = null != h ? h : n,
+        g = i.useCallback(
             (e) => {
                 u.Z.setState({ languageCode: e });
                 let n = u.Z.getField("fetchedQuery");
-                s.Z.clearSearchResults({ ignoreQueries: [n] }),
+                o.Z.clearSearchResults({ ignoreQueries: [n] }),
                     c.Z.loadCategoryResults({
                         loadId: t,
                         categoryId: u.Z.getField("categoryId"),
@@ -29,7 +29,7 @@ function h(e) {
             },
             [t],
         ),
-        b = i.useMemo(
+        _ = i.useMemo(
             () =>
                 (0, p.Cf)().map((e) => ({
                     id: e.code,
@@ -37,16 +37,16 @@ function h(e) {
                 })),
             [],
         ),
-        _ = i.useMemo(() => {
+        b = i.useMemo(() => {
             var e;
-            let t = (0, p.Cf)().find((e) => e.code === g);
-            return null != (e = null == t ? void 0 : t.name) ? e : f.intl.string(f.t.LQLMGB);
-        }, [g]);
+            let t = (0, p.Cf)().find((e) => e.code === m);
+            return null != (e = null == t ? void 0 : t.name) ? e : f.intl.string(f.t.LQLMGP);
+        }, [m]);
     return (0, r.jsx)(a.ZP, {
-        items: b,
-        title: _,
-        onSelect: m,
-        selected: g,
-        "aria-label": f.intl.string(f.t.Ng5cTE),
+        items: _,
+        title: b,
+        onSelect: g,
+        selected: m,
+        "aria-label": f.intl.string(f.t.Ng5cTK),
     });
 }

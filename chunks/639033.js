@@ -1,11 +1,11 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(570140),
     a = n(317770),
-    o = n(314897),
-    s = n(592125),
+    s = n(314897),
+    o = n(592125),
     c = n(797258),
     u = n(590415),
     d = n(981631);
@@ -35,19 +35,19 @@ class h extends a.Z {
             p(this, "handleVoiceStateUpdates", (e) => {
                 var t;
                 let { voiceStates: l } = e,
-                    a = o.default.getId(),
+                    a = s.default.getId(),
                     h = null == (t = c.Z.getSession()) ? void 0 : t.sessionId,
-                    g = l.find((e) => e.userId === a && e.sessionId === h);
-                if (null == g) return;
-                let m = g.channelId;
-                if (null == m) {
+                    m = l.find((e) => e.userId === a && e.sessionId === h);
+                if (null == m) return;
+                let g = m.channelId;
+                if (null == g) {
                     (0, i.nfh)(f) && (0, i.Mr3)(f);
                     return;
                 }
-                let b = s.Z.getChannel(m);
-                if (!(null == b ? void 0 : b.isGuildStageVoice())) return;
-                let _ = (0, u.gf)(g) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-                if (null != b && _) {
+                let _ = o.Z.getChannel(g);
+                if (!(null == _ ? void 0 : _.isGuildStageVoice())) return;
+                let b = (0, u.gf)(m) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+                if (null != _ && b) {
                     if ((0, i.nfh)(f)) return;
                     (0, i.ZDy)(
                         async () => {
@@ -93,7 +93,7 @@ class h extends a.Z {
                                             }
                                             return e;
                                         })({}, t),
-                                        { channel: b },
+                                        { channel: _ },
                                     ),
                                 );
                         },
@@ -106,4 +106,4 @@ class h extends a.Z {
             });
     }
 }
-let g = new h();
+let m = new h();

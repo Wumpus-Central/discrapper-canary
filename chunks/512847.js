@@ -3,36 +3,36 @@ var r = n(951288),
     i = n(647438),
     l = n(392711),
     a = n(442837),
-    o = n(317381),
-    s = n(16609),
+    s = n(317381),
+    o = n(16609),
     c = n(591472),
     u = n(258609),
     d = n(569545),
     p = n(106301),
     f = n(460181),
     h = n(979283),
-    g = n(590415),
-    m = n(131704),
-    b = n(199902),
-    _ = n(314897),
+    m = n(590415),
+    g = n(131704),
+    _ = n(199902),
+    b = n(314897),
     E = n(592125),
     O = n(430824),
-    v = n(131951),
-    y = n(292959),
-    I = n(19780),
+    I = n(131951),
+    v = n(292959),
+    y = n(19780),
     C = n(944486),
     S = n(606304),
-    N = n(979651),
-    T = n(938475),
-    P = n(823379),
-    j = n(981631);
+    T = n(979651),
+    N = n(938475),
+    j = n(823379),
+    P = n(981631);
 function x(e, t, n, r) {
     i.useEffect(() => {
         let i = t(),
             l = new a.Fh(e, () => {
                 let e = t(),
                     l = n(i, e);
-                null == l || y.Z.isSoundDisabled(l) || (0, f.GN)(l, null != r ? r : 0.4), (i = e);
+                null == l || v.Z.isSoundDisabled(l) || (0, f.GN)(l, null != r ? r : 0.4), (i = e);
             });
         return l.attach("useSound"), () => l.detach();
     });
@@ -40,13 +40,13 @@ function x(e, t, n, r) {
 function A() {
     return (
         x(
-            [v.Z, C.Z],
+            [I.Z, C.Z],
             () => ({
                 inVoiceChannel: null != C.Z.getVoiceChannelId(),
-                selfMute: v.Z.isSelfMute(),
-                selfDeaf: v.Z.isSelfDeaf(),
-                audioPermissionReady: v.Z.isNativeAudioPermissionReady(),
-                shouldSkipMuteUnmuteSound: v.Z.shouldSkipMuteUnmuteSound(),
+                selfMute: I.Z.isSelfMute(),
+                selfDeaf: I.Z.isSelfDeaf(),
+                audioPermissionReady: I.Z.isNativeAudioPermissionReady(),
+                shouldSkipMuteUnmuteSound: I.Z.shouldSkipMuteUnmuteSound(),
             }),
             (e, t) => {
                 let {
@@ -58,7 +58,7 @@ function A() {
                 } = t;
                 if (e.selfDeaf !== i) return i ? "deafen" : "undeafen";
                 if (l && (n || e.audioPermissionReady) && e.selfMute !== r)
-                    return a ? void v.Z.notifyMuteUnmuteSoundWasSkipped() : r ? "mute" : "unmute";
+                    return a ? void I.Z.notifyMuteUnmuteSoundWasSkipped() : r ? "mute" : "unmute";
             },
         ),
         null
@@ -67,9 +67,9 @@ function A() {
 function Z() {
     return (
         x(
-            [v.Z, C.Z],
+            [I.Z, C.Z],
             () => ({
-                videoEnabled: v.Z.isVideoEnabled(),
+                videoEnabled: I.Z.isVideoEnabled(),
                 inVoiceChannel: null != C.Z.getVoiceChannelId(),
             }),
             (e, t) => {
@@ -85,33 +85,33 @@ function Z() {
 function w() {
     return (
         x(
-            [E.Z, I.Z, C.Z, u.default],
+            [E.Z, y.Z, C.Z, u.default],
             () => {
                 let e = E.Z.getChannel(C.Z.getVoiceChannelId()),
                     t = null == e ? void 0 : e.type,
                     n = null == e ? void 0 : e.getGuildId(),
-                    r = I.Z.getWasEverRtcConnected(),
-                    i = I.Z.getState();
+                    r = y.Z.getWasEverRtcConnected(),
+                    i = y.Z.getState();
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: i === j.hes.RTC_CONNECTED,
-                    connectHasStarted: (!r && i !== j.hes.DISCONNECTED) || i === j.hes.RTC_CONNECTED,
+                    connected: i === P.hes.RTC_CONNECTED,
+                    connectHasStarted: (!r && i !== P.hes.DISCONNECTED) || i === P.hes.RTC_CONNECTED,
                     awaitingRemote: null != u.default.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != u.default.getRemoteSessionId(),
                 };
             },
             (e, t) => {
                 let { channelType: n, connected: r, connectHasStarted: i, awaitingRemote: l, connectedRemote: a } = t,
-                    o = e.channelType,
-                    s = e.connectedRemote,
+                    s = e.channelType,
+                    o = e.connectedRemote,
                     c = e.connected;
-                if ((!e.connectHasStarted && i) || (a && !s)) {
-                    if (null != n && m.Lr.has(n)) return;
+                if ((!e.connectHasStarted && i) || (a && !o)) {
+                    if (null != n && g.Lr.has(n)) return;
                     return "user_join";
                 }
                 if (c && !r) {
-                    if (l || a || (null != o && m.Lr.has(o))) return;
+                    if (l || a || (null != s && g.Lr.has(s))) return;
                     return "disconnect";
                 }
             },
@@ -126,19 +126,19 @@ function L() {
             () => S.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
-                    let e = v.Z.isSelfMute();
-                    if (v.Z.getMode() === j.pM4.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
+                    let e = I.Z.isSelfMute();
+                    if (I.Z.getMode() === P.pM4.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
                 }
             },
         ),
         null
     );
 }
-function R() {
+function D() {
     return (
         x(
-            [v.Z],
-            () => v.Z.getActiveVoiceFilter(),
+            [I.Z],
+            () => I.Z.getActiveVoiceFilter(),
             (e, t) => {
                 if (e !== t)
                     if (null != t) return null != e ? "voice_filter_swap" : "voice_filter_on";
@@ -148,15 +148,15 @@ function R() {
         null
     );
 }
-function D() {
+function R() {
     return (
         x(
-            [v.Z],
-            () => v.Z.isSelfMutedTemporarily(),
+            [I.Z],
+            () => I.Z.isSelfMutedTemporarily(),
             (e, t) => {
                 if (e !== t) {
-                    let e = v.Z.isSelfMute();
-                    if (v.Z.getMode() === j.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
+                    let e = I.Z.isSelfMute();
+                    if (I.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
                 }
             },
         ),
@@ -170,8 +170,8 @@ function M() {
             () => S.Z.isCurrentUserPrioritySpeaker(),
             (e, t) => {
                 if (e !== t) {
-                    let e = v.Z.isSelfMute();
-                    if (v.Z.getMode() === j.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
+                    let e = I.Z.isSelfMute();
+                    if (I.Z.getMode() === P.pM4.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
                 }
             },
         ),
@@ -181,8 +181,8 @@ function M() {
 function k() {
     return (
         x(
-            [N.Z],
-            () => N.Z.userHasBeenMovedVersion,
+            [T.Z],
+            () => T.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return "user_moved";
             },
@@ -193,15 +193,15 @@ function k() {
 function U() {
     return (
         x(
-            [C.Z, N.Z],
+            [C.Z, T.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
-                if (null == e) return g.xO.NONE;
-                let t = N.Z.getVoiceStateForChannel(e);
-                return (0, g.gf)(t);
+                if (null == e) return m.xO.NONE;
+                let t = T.Z.getVoiceStateForChannel(e);
+                return (0, m.gf)(t);
             },
             (e, t) => {
-                if (e !== t && t === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
+                if (e !== t && t === m.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
             },
         ),
         null
@@ -210,28 +210,28 @@ function U() {
 function G() {
     return (
         x(
-            [C.Z, b.Z, _.default, N.Z, E.Z],
+            [C.Z, _.Z, b.default, T.Z, E.Z],
             () => {
                 let e,
                     t,
                     n = C.Z.getVoiceChannelId(),
-                    r = _.default.getId(),
+                    r = b.default.getId(),
                     i = [],
                     l = null,
                     a = 0,
-                    o = b.Z.getAllActiveStreams();
+                    s = _.Z.getAllActiveStreams();
                 if (null != n) {
                     let r = E.Z.getChannel(n);
                     null != r &&
                         ((e = r.type),
-                        (t = T.ZP.countVoiceStatesForChannel(r.id) - !!N.Z.isInChannel(r.id)),
-                        (i = b.Z.getAllApplicationStreamsForChannel(r.id).map((e) => e.ownerId)));
+                        (t = N.ZP.countVoiceStatesForChannel(r.id) - !!T.Z.isInChannel(r.id)),
+                        (i = _.Z.getAllApplicationStreamsForChannel(r.id).map((e) => e.ownerId)));
                 }
-                let s = null;
+                let o = null;
                 return (
-                    (null == (s = 1 === o.length ? o[0] : b.Z.getCurrentUserActiveStream()) ? void 0 : s.state) ===
-                        j.jm8.CONNECTING && (s = null),
-                    null != s && ((l = (0, d.V9)(s)), (a = b.Z.getViewerIds(l).filter((e) => e !== r).length)),
+                    (null == (o = 1 === s.length ? s[0] : _.Z.getCurrentUserActiveStream()) ? void 0 : o.state) ===
+                        P.jm8.CONNECTING && (o = null),
+                    null != o && ((l = (0, d.V9)(o)), (a = _.Z.getViewerIds(l).filter((e) => e !== r).length)),
                     {
                         channelType: e,
                         voiceChannelId: n,
@@ -240,7 +240,7 @@ function G() {
                         singleActiveStreamKey: l,
                         singleActiveStreamViewerCount: a,
                         currentUserId: r,
-                        allActiveStreams: o,
+                        allActiveStreams: s,
                     }
                 );
             },
@@ -251,8 +251,8 @@ function G() {
                     voiceChannelUserCount: i,
                     streamingUserIds: l,
                     singleActiveStreamKey: a,
-                    singleActiveStreamViewerCount: o,
-                    currentUserId: s,
+                    singleActiveStreamViewerCount: s,
+                    currentUserId: o,
                 } = t;
                 if (
                     e.voiceChannelId !== r ||
@@ -265,16 +265,16 @@ function G() {
                         let r = O.Z.getGuild(n);
                         return null != r && r.afkChannelId === t.id;
                     })(r) ||
-                    (null != n && m.Lr.has(n))
+                    (null != n && g.Lr.has(n))
                 )
                     return;
                 let c = null != a && e.singleActiveStreamKey === a,
                     u = l.some((t) => !e.streamingUserIds.includes(t)),
                     d = e.allActiveStreams.map((e) => e.ownerId),
-                    p = e.streamingUserIds.some((e) => !l.includes(e) && (e === s || d.includes(e)));
+                    p = e.streamingUserIds.some((e) => !l.includes(e) && (e === o || d.includes(e)));
                 if (u) return "stream_started";
                 if (p) return "stream_ended";
-                if (e.singleActiveStreamViewerCount <= 25 && c && o > e.singleActiveStreamViewerCount)
+                if (e.singleActiveStreamViewerCount <= 25 && c && s > e.singleActiveStreamViewerCount)
                     return "stream_user_joined";
                 if (
                     null != e.voiceChannelUserCount &&
@@ -290,7 +290,7 @@ function G() {
                     i < e.voiceChannelUserCount
                 )
                     return "user_leave";
-                else if (e.singleActiveStreamViewerCount <= 25 && c && o < e.singleActiveStreamViewerCount)
+                else if (e.singleActiveStreamViewerCount <= 25 && c && s < e.singleActiveStreamViewerCount)
                     return "stream_user_left";
             },
         ),
@@ -300,17 +300,17 @@ function G() {
 function B() {
     return (
         x(
-            [C.Z, o.ZP, c.Z, _.default],
+            [C.Z, s.ZP, c.Z, b.default],
             () => {
                 let e = C.Z.getVoiceChannelId(),
                     t = C.Z.getChannelId(),
-                    n = o.ZP.getConnectedActivityLocation(),
-                    r = (0, s.p)(n),
-                    i = _.default.getId(),
-                    l = (0, P.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-                    a = (0, P.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-                    u = (0, P.lm)(r) ? o.ZP.getEmbeddedActivitiesForChannel(r) : o.i6,
-                    d = (0, P.lm)(n) ? o.ZP.getSelfEmbeddedActivityForLocation(n) : null;
+                    n = s.ZP.getConnectedActivityLocation(),
+                    r = (0, o.p)(n),
+                    i = b.default.getId(),
+                    l = (0, j.lm)(t) ? s.ZP.getEmbeddedActivitiesForChannel(t) : s.i6,
+                    a = (0, j.lm)(e) ? s.ZP.getEmbeddedActivitiesForChannel(e) : s.i6,
+                    u = (0, j.lm)(r) ? s.ZP.getEmbeddedActivitiesForChannel(r) : s.i6,
+                    d = (0, j.lm)(n) ? s.ZP.getSelfEmbeddedActivityForLocation(n) : null;
                 return {
                     connectedActivityLocation: n,
                     voiceChannelId: e,
@@ -329,37 +329,37 @@ function B() {
                         voiceChannelId: i,
                         currentUserId: l,
                         channelActivities: a,
-                        connectedChannelActivities: o,
-                        userConnectedActivity: s,
+                        connectedChannelActivities: s,
+                        userConnectedActivity: o,
                         voiceChannelActivities: c,
                         connectedFrame: u,
                     } = t,
                     d = c.some(
-                        (e) => e.applicationId === (null == s ? void 0 : s.applicationId) && e.launchId === s.launchId,
+                        (e) => e.applicationId === (null == o ? void 0 : o.applicationId) && e.launchId === o.launchId,
                     );
-                if ((0, P.lm)(i)) {
+                if ((0, j.lm)(i)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(l)),
                         r = c.find((e) => e.userIds.has(l));
                     e.voiceChannelActivities.length < c.length &&
-                        (0, P.lm)(e.voiceChannelId) &&
+                        (0, j.lm)(e.voiceChannelId) &&
                         (n = "activity_launch"),
-                        void 0 === r && (0, P.lm)(t) && (n = "activity_end"),
-                        void 0 === t && (0, P.lm)(r) && r.userIds.size > 1 && (n = "activity_user_join"),
-                        (0, P.lm)(r) &&
-                            (0, P.lm)(t) &&
+                        void 0 === r && (0, j.lm)(t) && (n = "activity_end"),
+                        void 0 === t && (0, j.lm)(r) && r.userIds.size > 1 && (n = "activity_user_join"),
+                        (0, j.lm)(r) &&
+                            (0, j.lm)(t) &&
                             (r.userIds.size > t.userIds.size && (n = "activity_user_join"),
                             r.userIds.size < t.userIds.size && (n = "activity_user_left"));
                 }
                 if (!d) {
-                    e.connectedChannelActivities.length < o.length &&
+                    e.connectedChannelActivities.length < s.length &&
                         e.channelActivities.length < a.length &&
                         (n = "activity_launch");
                     let t = e.userConnectedActivity;
-                    null == s && (0, P.lm)(t) && (n = "activity_end"),
-                        (0, P.lm)(s) &&
-                            (0, P.lm)(t) &&
-                            (s.userIds.size > t.userIds.size && (n = "activity_user_join"),
-                            s.userIds.size < t.userIds.size && (n = "activity_user_left"));
+                    null == o && (0, j.lm)(t) && (n = "activity_end"),
+                        (0, j.lm)(o) &&
+                            (0, j.lm)(t) &&
+                            (o.userIds.size > t.userIds.size && (n = "activity_user_join"),
+                            o.userIds.size < t.userIds.size && (n = "activity_user_left"));
                 }
                 return (
                     null == n &&
@@ -368,11 +368,11 @@ function B() {
                             ? (n = "activity_launch")
                             : null != e.connectedActivityLocation && null == r
                               ? (n = "activity_end")
-                              : null != s &&
+                              : null != o &&
                                 null != e.userConnectedActivity &&
-                                (e.userConnectedActivity.userIds.size < s.userIds.size
+                                (e.userConnectedActivity.userIds.size < o.userIds.size
                                     ? (n = "activity_user_join")
-                                    : e.userConnectedActivity.userIds.size > s.userIds.size &&
+                                    : e.userConnectedActivity.userIds.size > o.userIds.size &&
                                       (n = "activity_user_leave"))),
                     null == n &&
                         (null != e.connectedFrame || null != u) &&
@@ -398,14 +398,14 @@ function H() {
             }),
             (e, t) => {
                 var n, r;
-                let { hangStatus: i, customHangStatus: a, gameActivityHangStatus: o } = t;
+                let { hangStatus: i, customHangStatus: a, gameActivityHangStatus: s } = t;
                 if (
                     e.inVoice &&
                     ((null != i && i !== e.hangStatus) ||
                         (null != a &&
                             (a.status !== (null == (n = e.customHangStatus) ? void 0 : n.status) ||
                                 !(0, l.isEqual)(a.emoji, null == (r = e.customHangStatus) ? void 0 : r.emoji))) ||
-                        (null != o && e.gameActivityHangStatus !== o))
+                        (null != s && e.gameActivityHangStatus !== s))
                 )
                     return "hang_status_select";
             },
@@ -421,12 +421,12 @@ function V() {
             (0, r.jsx)(Z, {}),
             (0, r.jsx)(w, {}),
             (0, r.jsx)(L, {}),
-            (0, r.jsx)(D, {}),
+            (0, r.jsx)(R, {}),
             (0, r.jsx)(k, {}),
             (0, r.jsx)(G, {}),
             (0, r.jsx)(U, {}),
             (0, r.jsx)(B, {}),
-            (0, r.jsx)(R, {}),
+            (0, r.jsx)(D, {}),
             (0, r.jsx)(M, {}),
             (0, r.jsx)(H, {}),
         ],

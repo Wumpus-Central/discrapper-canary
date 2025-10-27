@@ -18,7 +18,7 @@ function u() {
                 color: "header-secondary",
                 children: (0, o.jsx)(i.Anchor, {
                     href: r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
-                    children: a.intl.string(a.t.hvVgAQ),
+                    children: a.intl.string(a.t.hvVgAZ),
                 }),
             }),
         }),
@@ -33,8 +33,8 @@ function C(n) {
             height: "104",
             alt: "",
         }),
-        title: a.intl.string(a.t.Fnvxvr),
-        body: a.intl.string(a.t.YwXcen),
+        title: a.intl.string(a.t.Fnvxvk),
+        body: a.intl.string(a.t.YwXceg),
         content: (0, o.jsx)(u, {}),
         onClose: e,
     });

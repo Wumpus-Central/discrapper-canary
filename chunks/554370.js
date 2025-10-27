@@ -47,7 +47,7 @@ var i = n(951288),
     Q = n(981631),
     K = n(977594);
 let X = !Z.isPlatformEmbedded && !1,
-    q = X
+    J = X
         ? (0, i.jsx)(m.Z, {
               src: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdpcnRrYXdrNzVuNjZ3NXpmeTJvNGl4Z2N4OXBsamx5aXphdHhxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/OPg2B0FPBL94H12uM0/giphy480p.mp4",
               className: K.videoDev,
@@ -56,7 +56,7 @@ let X = !Z.isPlatformEmbedded && !1,
               muted: !0,
           })
         : null;
-function J(e) {
+function q(e) {
     e.preventDefault();
 }
 function $(e) {
@@ -285,12 +285,12 @@ function ea(e) {
             if ((C.S.dispatch(Q.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), m))
                 return (
                     (0, s.Ay)(u.u1M),
-                    n.addEventListener("contextmenu", J, !1),
+                    n.addEventListener("contextmenu", q, !1),
                     () => {
-                        n.removeEventListener("contextmenu", J, !1);
+                        n.removeEventListener("contextmenu", q, !1);
                     }
                 );
-            n.removeEventListener("contextmenu", J, !1);
+            n.removeEventListener("contextmenu", q, !1);
         }, [m, n]),
         (0, i.jsx)(f.Gt, {
             value: W,
@@ -301,7 +301,7 @@ function ea(e) {
                           id: "overlay-container",
                           className: K.overlay,
                           children: [
-                              !t && q,
+                              !t && J,
                               (0, i.jsx)(ee, {
                                   locked: m,
                                   keybind: L,

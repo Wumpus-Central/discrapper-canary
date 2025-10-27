@@ -72,7 +72,7 @@ class C extends r.PureComponent {
                 }));
         return (0, i.jsx)(s.nsm, {
             className: h.root,
-            label: p.intl.string(p.t.w8gMqq),
+            label: p.intl.string(p.t.w8gMqh),
             options: r,
             value: n,
             onChange: this.handleChangeVoiceRegion,
@@ -109,7 +109,7 @@ class C extends r.PureComponent {
                           }
                     : {
                           id: "automatic",
-                          name: p.intl.string(p.t.JEmsam),
+                          name: p.intl.string(p.t.JEmsap),
                           vip: !1,
                           deprecated: !1,
                           hidden: !1,

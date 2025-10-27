@@ -17,10 +17,10 @@ function d(e) {
                 .concat(c.Z5c.COLLECTIBLES_SHOP)
                 .concat((0, s.aK)(n) ? "?tab=".concat(n) : "", "#itemSkuId=")
                 .concat(t);
-            (0, o.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.intl.string(u.t["L/PwZW"]), a.ToastType.SUCCESS)));
+            (0, o.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.intl.string(u.t["L/PwZf"]), a.ToastType.SUCCESS)));
         }, [t, n]);
     return (0, r.jsx)(a.hU, {
-        "aria-label": u.intl.string(u.t.WqhZsr),
+        "aria-label": u.intl.string(u.t.WqhZss),
         onClick: d,
         icon: a.xPt,
         variant: "overlay-secondary",

@@ -75,10 +75,10 @@ let C = 50,
     N = 0.9,
     R = 0.1,
     P = 0;
-function w(e) {
+function D(e) {
     return (null != e ? e : v.Qx) / v.Qx;
 }
-function D(e) {
+function w(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
 class L extends _.Z {
@@ -414,7 +414,7 @@ class L extends _.Z {
                     ssrc: t,
                     videoSsrc: r,
                     videoSsrcs: n,
-                    rtxSsrc: D(r),
+                    rtxSsrc: w(r),
                     mute: this.getLocalMute(e),
                     volume: this.getLocalVolume(e),
                 };
@@ -511,7 +511,7 @@ class L extends _.Z {
     }
     getLocalVolume(e) {
         let t = this.localVolumes[e];
-        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), w(t);
+        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), D(t);
     }
     setLocalVolume(e, t) {
         this.localVolumes[e] = t;
@@ -819,7 +819,7 @@ class L extends _.Z {
                     null,
                     this.audioSSRC,
                     this.videoStreamParameters[s].ssrc,
-                    D(this.videoStreamParameters[s].ssrc),
+                    w(this.videoStreamParameters[s].ssrc),
                     this.videoStreamParameters,
                 ),
                 this.conn.setTransportOptions(this.applyQualityConstraints().constraints));
@@ -915,7 +915,7 @@ class L extends _.Z {
                 ssrc: this.remoteAudioSSRCs[e],
                 videoSsrc: t,
                 videoSsrcs: this.remoteVideoSSRCs[e],
-                rtxSsrc: D(t),
+                rtxSsrc: w(t),
                 mute: this.getLocalMute(e),
                 volume: this.getLocalVolume(e),
             };
@@ -1270,7 +1270,7 @@ class L extends _.Z {
                               });
                           })
                         : t > 0
-                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = D(t)))
+                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = w(t)))
                           : (i[0].active = !1)
                     : t > 0 &&
                       (void 0 !== this.remoteVideoSSRCs[e]
@@ -1284,7 +1284,7 @@ class L extends _.Z {
                         null != n && "" !== n ? n : null,
                         e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e],
                         t,
-                        D(t),
+                        w(t),
                         this.videoStreamParameters,
                     );
             }),

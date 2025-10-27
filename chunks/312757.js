@@ -22,14 +22,14 @@ function o(e) {
             {
                 onClick: d,
                 variant: "secondary",
-                text: a.intl.string(a.t.P60OAQ),
+                text: a.intl.string(a.t.P60OAX),
             },
             {
                 onClick: () => {
                     u.Z.endEvent(s.id, s.guild_id), d();
                 },
                 variant: "critical-primary",
-                text: a.intl.string(a.t.mjB9pa),
+                text: a.intl.string(a.t.mjB9pd),
             },
         ],
     });

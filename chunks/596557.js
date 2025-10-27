@@ -1,26 +1,26 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(704215),
     a = n(481060),
-    o = n(785697),
-    s = n(626135),
+    s = n(785697),
+    o = n(626135),
     c = n(700785),
     u = n(645041),
     d = n(981631),
     p = n(921944),
     f = n(647086),
     h = n(135899);
-function g(e) {
+function m(e) {
     var t;
-    let g = (0, o.SE)(e),
-        m = h.$X.some((t) => (null == e ? void 0 : e.id) !== f._ && c.oz(t, e)),
-        b = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
-        _ = (0, u.FT)(
+    let m = (0, s.SE)(e),
+        g = h.$X.some((t) => (null == e ? void 0 : e.id) !== f._ && c.oz(t, e)),
+        _ = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
+        b = (0, u.FT)(
             l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
             null != (t = null == e ? void 0 : e.id) ? t : d.lds,
         ),
-        E = g && (m || b) && !_,
+        E = m && (g || _) && !b,
         O = i.useCallback(() => {
             var t;
             (0, u.Qd)(
@@ -30,13 +30,13 @@ function g(e) {
                 p.L.DISMISS,
             );
         }, [e]),
-        v = i.useRef(!1);
+        I = i.useRef(!1);
     i.useEffect(() => {
-        if (E && !v.current) {
+        if (E && !I.current) {
             var t;
             (0, a.ZDy)(
                 async () => {
-                    let { default: t } = await n.e("23353").then(n.bind(n, 29022));
+                    let { default: t } = await n.e("54597").then(n.bind(n, 29022));
                     return (n) =>
                         (0, r.jsx)(
                             t,
@@ -67,8 +67,8 @@ function g(e) {
                             })(
                                 {
                                     guild: e,
-                                    canEveryoneModerate: m,
-                                    isDefaultNotificationsAllMessages: b,
+                                    canEveryoneModerate: g,
+                                    isDefaultNotificationsAllMessages: _,
                                 },
                                 n,
                             ),
@@ -76,11 +76,11 @@ function g(e) {
                 },
                 { onCloseCallback: O },
             ),
-                s.default.track(d.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                o.default.track(d.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null != (t = null == e ? void 0 : e.id) ? t : d.lds,
                 }),
-                (v.current = !0);
+                (I.current = !0);
         }
-    }, [m, e, O, b, E]);
+    }, [g, e, O, _, E]);
 }

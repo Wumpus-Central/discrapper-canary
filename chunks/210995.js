@@ -1,8 +1,8 @@
 r.d(t, { default: () => c });
 var n = r(951288),
     l = r(647438),
-    i = r(793030),
-    o = r(434404),
+    o = r(793030),
+    i = r(434404),
     a = r(388032);
 let c = (e) => {
     var { name: t, guildId: r, onClose: c } = e,
@@ -15,37 +15,37 @@ let c = (e) => {
                     var r,
                         n,
                         l = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             }
             return l;
         })(e, ["name", "guildId", "onClose"]);
     let s = l.useCallback(() => {
-            null == c || c(), o.Z.leaveGuild(r);
+            null == c || c(), i.Z.leaveGuild(r);
         }, [r, c]),
-        f = l.useMemo(
+        b = l.useMemo(
             () => [
                 {
                     variant: "secondary",
-                    text: a.intl.string(a.t.J2TBi4),
+                    text: a.intl.string(a.t.J2TBi3),
                     onClick: s,
                 },
                 {
-                    text: a.intl.string(a.t.TyCVIi),
+                    text: a.intl.string(a.t.TyCVIq),
                     onClick: c,
                 },
             ],
             [s, c],
         );
     return (0, n.jsx)(
-        i.Modal,
+        o.Modal,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -72,9 +72,9 @@ let c = (e) => {
             return e;
         })(
             {
-                title: a.intl.string(a.t.aCAiGh),
-                subtitle: a.intl.format(a.t["4cJV9f"], { serverName: t }),
-                actions: f,
+                title: a.intl.string(a.t.aCAiGl),
+                subtitle: a.intl.format(a.t["4cJV9S"], { serverName: t }),
+                actions: b,
                 onClose: c,
             },
             u,

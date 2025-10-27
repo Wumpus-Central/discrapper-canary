@@ -57,16 +57,16 @@ function y(e) {
                       .filter(h.lm)
                       .map((e) => e.username)
                       .join(", ")
-                : E.intl.string(E.t.LJpTRE));
-    let P = E.intl.string(E.t.XpeFYm),
-        w = d.Z.Button.Colors.GREEN;
-    C && ((P = E.intl.string(E.t.cEnaW1)), (w = d.Z.Button.Colors.PRIMARY));
-    let D = E.intl.string(E.t["3p3/BA"]);
+                : E.intl.string(E.t.LJpTRF));
+    let P = E.intl.string(E.t.XpeFYr),
+        D = d.Z.Button.Colors.GREEN;
+    C && ((P = E.intl.string(E.t.cEnaWx)), (D = d.Z.Button.Colors.PRIMARY));
+    let w = E.intl.string(E.t["3p3/BK"]);
     return (
-        I && (D = E.intl.string(E.t.qmtuXF)),
+        I && (w = E.intl.string(E.t.qmtuXE)),
         (0, r.jsxs)(d.Z, {
             children: [
-                (0, r.jsx)(d.Z.Header, { text: D }),
+                (0, r.jsx)(d.Z.Header, { text: w }),
                 (0, r.jsxs)(d.Z.Body, {
                     children: [
                         (0, r.jsxs)("div", {
@@ -87,7 +87,7 @@ function y(e) {
                             onClick: N,
                             submitting: T,
                             isDisabled: C,
-                            color: w,
+                            color: D,
                             children: P,
                         }),
                     ],

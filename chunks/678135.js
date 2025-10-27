@@ -33,8 +33,8 @@ function v(e) {
             pendingAvatarDecoration: N,
             pendingNickname: R,
             pendingGlobalName: P,
-            pendingThemeColors: w,
-            pendingProfileEffect: D,
+            pendingThemeColors: D,
+            pendingProfileEffect: w,
             pendingLegacyUsernameDisabled: L,
             pendingDisplayNameStyles: x,
             avatarClassName: M,
@@ -59,20 +59,20 @@ function v(e) {
             showPending: !0,
         }),
         q = (0, _.IG)({
-            pendingProfileEffect: D,
+            pendingProfileEffect: w,
             displayProfile: W,
         }),
         { theme: X, primaryColor: Q } = (0, c.Z)({
             user: t,
             displayProfile: W,
-            pendingThemeColors: w,
+            pendingThemeColors: D,
             isPreview: i,
         }),
         J = (0, r.jsxs)(d.Z, {
             user: t,
             displayProfile: W,
             themeType: b.l.POPOUT,
-            pendingThemeColors: w,
+            pendingThemeColors: D,
             className: a()(O.container, k),
             forceShowPremium: i,
             children: [
@@ -140,7 +140,7 @@ function v(e) {
         ? J
         : (0, r.jsx)("div", {
               role: "img",
-              "aria-label": y.intl.string(y.t.ayozFh),
+              "aria-label": y.intl.string(y.t.ayozFl),
               children: (0, r.jsx)(o.Rny, { children: J }),
           });
 }

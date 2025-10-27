@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(959165),
-    s = n(164991),
+    s = n(959165),
+    o = n(164991),
     c = n(526429),
     u = n(128449),
     d = n(388032),
@@ -12,19 +12,19 @@ var r = n(951288),
     f = n(882008);
 let h = function (e) {
     let { loadId: t } = e,
-        n = s.Z.useField("categoryId"),
+        n = o.Z.useField("categoryId"),
         h = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
-        g = i.useCallback(() => {
-            s.Z.setState({ categoryId: u.Hk }),
-                o.Z.loadCategoryResults({
+        m = i.useCallback(() => {
+            o.Z.setState({ categoryId: u.Hk }),
+                s.Z.loadCategoryResults({
                     loadId: t,
                     categoryId: u.Hk,
-                    query: s.Z.getField("fetchedQuery"),
-                    languageCode: s.Z.getField("languageCode"),
+                    query: o.Z.getField("fetchedQuery"),
+                    languageCode: o.Z.getField("languageCode"),
                 });
         }, [t]),
-        m = n === u.Hk ? d.intl.string(d.t.Ivw1Ii) : d.intl.formatToPlainString(d.t["+1WAFR"], { categoryName: h }),
-        b = n === u.Hk ? d.intl.string(d.t.aXvEjY) : d.intl.format(d.t.XLioqq, { onClick: g });
+        g = n === u.Hk ? d.intl.string(d.t.Ivw1Is) : d.intl.formatToPlainString(d.t["+1WAFb"], { categoryName: h }),
+        _ = n === u.Hk ? d.intl.string(d.t.aXvEjd) : d.intl.format(d.t.XLioqn, { onClick: m });
     return (0, r.jsxs)("div", {
         className: p.container,
         children: [
@@ -36,12 +36,12 @@ let h = function (e) {
             (0, r.jsx)(a.Heading, {
                 variant: "heading-xl/semibold",
                 className: p.header,
-                children: m,
+                children: g,
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                children: b,
+                children: _,
             }),
         ],
     });

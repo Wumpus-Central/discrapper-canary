@@ -111,7 +111,7 @@ function p() {
                     );
                 },
                 disabled: h,
-                children: u.intl.string(u.t["6dwqo6"]),
+                children: u.intl.string(u.t["6dwqo0"]),
             }),
         ],
     });

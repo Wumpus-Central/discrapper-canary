@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -17,19 +17,19 @@ var i = n(951288),
     x = n(981631),
     j = n(388032),
     v = n(473059);
-function y(e) {
+function O(e) {
     var t, n, l;
     let {
-            name: y,
-            icon: O,
+            name: O,
+            icon: y,
             imageSrc: _,
             iconBackgroundColor: C,
             iconClassName: N,
             iconWrapperClassName: S,
             details: E,
             integration: I,
-            buttonText: P,
-            buttonDisabled: w,
+            buttonText: w,
+            buttonDisabled: P,
             hasNextSection: T,
             onButtonClick: Z,
             guildId: k,
@@ -38,11 +38,11 @@ function y(e) {
             trailing: R,
         } = e,
         [L, M] = r.useState(!1),
-        B = D && !A && !L && void 0 !== k && null != I,
-        U = r.useRef(null),
+        U = D && !A && !L && void 0 !== k && null != I,
+        B = r.useRef(null),
         W = r.useRef(null),
         H =
-            null == P || null == Z
+            null == w || null == Z
                 ? null
                 : T
                   ? (0, i.jsxs)(d.Kqy, {
@@ -53,7 +53,7 @@ function y(e) {
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: P,
+                                children: w,
                             }),
                             T
                                 ? (0, i.jsx)(d.Fbu, {
@@ -68,14 +68,14 @@ function y(e) {
                     })
                   : (0, i.jsx)(d.Button, {
                         size: "sm",
-                        buttonRef: U,
-                        disabled: w,
+                        buttonRef: B,
+                        disabled: P,
                         onClick: Z,
-                        text: P,
+                        text: w,
                     });
     r.useEffect(() => {
         var e, t;
-        B &&
+        U &&
             g.default.track(
                 x.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((e = (function (e) {
@@ -122,13 +122,13 @@ function y(e) {
                       }),
                 e),
             );
-    }, [k, null == I ? void 0 : I.application.id, B]);
+    }, [k, null == I ? void 0 : I.application.id, U]);
     let G =
-            B && (null != W.current || null != U.current)
+            U && (null != W.current || null != B.current)
                 ? (0, i.jsx)(c.J2, {
-                      targetElementRef: T ? W : U,
-                      title: j.intl.string(j.t.ufFDiI),
-                      body: j.intl.string(j.t.TyMJwM),
+                      targetElementRef: T ? W : B,
+                      title: j.intl.string(j.t.ufFDiC),
+                      body: j.intl.string(j.t.TyMJwC),
                       onRequestClose: () => {
                           M(!0), h.Z.dismissOverviewTooltip(k, I.integration);
                       },
@@ -137,17 +137,17 @@ function y(e) {
                       caretConfig: { align: "center" },
                   })
                 : null,
-        K = (0, s.Wu)([m.Z], () => {
+        F = (0, s.Wu)([m.Z], () => {
             var e;
             return null != I && null != k && null != (e = m.Z.getApplicationEntitlementsForGuild(I.application.id, k))
                 ? e
                 : [];
         }),
-        F = (0, p.LD)(k, !0),
+        K = (0, p.LD)(k, !0),
         z =
             (null == I ? void 0 : I.application) != null &&
             Object.keys(
-                null != (l = null == (n = F.result) || null == (t = n.sections[I.application.id]) ? void 0 : t.commands)
+                null != (l = null == (n = K.result) || null == (t = n.sections[I.application.id]) ? void 0 : t.commands)
                     ? l
                     : {},
             ).length > 0,
@@ -156,14 +156,14 @@ function y(e) {
             align: "center",
             children: [
                 (0, i.jsx)(f.Z, {
-                    name: y,
-                    icon: O,
+                    name: O,
+                    icon: y,
                     imageSrc: _,
                     iconBackgroundColor: C,
                     iconClassName: N,
                     iconWrapperClassName: S,
                     details: E,
-                    isPremium: K.length > 0,
+                    isPremium: F.length > 0,
                     children: (function (e, t) {
                         var n, r;
                         if (null == e) return null;
@@ -175,14 +175,14 @@ function y(e) {
                                 l.push({
                                     id: "bot",
                                     label: new b.Z(a.bot).isVerifiedBot()
-                                        ? j.intl.string(j.t.xxcTGx)
-                                        : j.intl.string(j.t.AOdOYm),
+                                        ? j.intl.string(j.t.xxcTGy)
+                                        : j.intl.string(j.t.AOdOYr),
                                     icon: d.wGt,
                                 }),
                             c.length > 0 &&
                                 l.push({
                                     id: "webhooks",
-                                    label: j.intl.formatToPlainString(j.t["6HqDfX"], { count: c.length }),
+                                    label: j.intl.formatToPlainString(j.t["6HqDfT"], { count: c.length }),
                                     icon: d.tYf,
                                 }),
                             (null == s || null == (r = s.scopes) ? void 0 : r.includes(o.x.APPLICATIONS_COMMANDS)) ===
@@ -190,14 +190,14 @@ function y(e) {
                                 t &&
                                 l.push({
                                     id: "commands",
-                                    label: j.intl.string(j.t["0hKkS0"]),
+                                    label: j.intl.string(j.t["0hKkS+"]),
                                     icon: d.SsZ,
                                 }),
                             (0, i.jsx)(d.Kqy, {
                                 direction: "horizontal",
                                 gap: 4,
                                 children: (0, i.jsx)(d.QSK, {
-                                    label: j.intl.string(j.t.G8u3JS),
+                                    label: j.intl.string(j.t.G8u3Jf),
                                     layout: "inline",
                                     items: l,
                                 }),

@@ -122,5 +122,5 @@ let I = [1, 2, 3, 5, 6],
 function S() {
     return (0, i.getLanguages)()
         .filter((e) => !T.includes(e.code))
-        .map((e) => ("en-US" === e.code ? l(o({}, e), { name: i.intl.string(i.t.LQLMGB) }) : e));
+        .map((e) => ("en-US" === e.code ? l(o({}, e), { name: i.intl.string(i.t.LQLMGP) }) : e));
 }

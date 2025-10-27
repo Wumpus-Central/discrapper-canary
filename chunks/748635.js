@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(857192),
     i = n(901077),
     l = n(915357),
     a = n(981631);
-let o = (e) => {
-    let { origin: t, postMessageToRPCClient: n, frameId: o, version: s, encoding: c, logger: u, postClose: d } = e;
+let s = (e) => {
+    let { origin: t, postMessageToRPCClient: n, frameId: s, version: o, encoding: c, logger: u, postClose: d } = e;
     return new l.Z({
         origin: t,
         postMessageToRPCClient: n,
-        frameId: o,
-        version: s,
+        frameId: s,
+        version: o,
         encoding: c,
         logger: u,
         postClose: d,

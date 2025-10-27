@@ -27,15 +27,15 @@ var r = n(951288),
     N = n(388032),
     R = n(119835),
     P = n(951948);
-function w(e, t) {
-    return N.intl.formatToPlainString(N.t.h2yWWV, {
+function D(e, t) {
+    return N.intl.formatToPlainString(N.t.h2yWWX, {
         username: t.username,
         activity: e,
     });
 }
-let D = (e, t, n) => {
+let w = (e, t, n) => {
     let { artist: r, media: i } = e,
-        a = N.t["6iNxrq"],
+        a = N.t["6iNxrl"],
         o = m.ZP.getName(t.guild_id, t.id, n);
     return N.intl
         .formatToMarkdownString(a, {
@@ -113,7 +113,7 @@ function x(e) {
                 channel: R,
                 mediaImageSrc: null == U ? void 0 : U.src,
                 artist: Z,
-                description: D(
+                description: w(
                     {
                         artist: Z,
                         media: F,
@@ -161,7 +161,7 @@ function x(e) {
                         variant: "primary",
                         size: "md",
                         fullWidth: !0,
-                        text: N.intl.string(N.t.eU3inJ),
+                        text: N.intl.string(N.t.eU3inB),
                         icon: l.iOO,
                         onClick: e,
                     },
@@ -182,7 +182,7 @@ function x(e) {
                       Icon: h.Z,
                   })
                 : null,
-        userDescription: (0, E.kr)(x) ? N.t.Tzx5Dw : N.t.CcVI1d,
+        userDescription: (0, E.kr)(x) ? N.t.Tzx5D2 : N.t.CcVI1T,
         title: F,
         onClickTitle: m,
         subtitle: q,
@@ -199,7 +199,7 @@ function x(e) {
                     user: V,
                     channel: R,
                     generateReactionImage: z,
-                    reactionImageAltText: w(Z, V),
+                    reactionImageAltText: D(Z, V),
                     entry: x,
                     buttons: X,
                 }),

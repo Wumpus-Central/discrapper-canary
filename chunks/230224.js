@@ -1,5 +1,5 @@
 n.d(t, {
-    GB: () => y,
+    GB: () => O,
     JI: () => N,
     UM: () => A,
     V6: () => S,
@@ -44,7 +44,7 @@ let x = 100,
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
-    O = (e) =>
+    y = (e) =>
         !N(e) &&
         (!!j(e) ||
             (null != e.inviter &&
@@ -54,7 +54,7 @@ let x = 100,
                     let n = E(e);
                     return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > x;
                 })(e))),
-    y = (e) => {
+    O = (e) => {
         let { guild: t, user: n, application: i } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
@@ -81,7 +81,7 @@ function S(e) {
     var t;
     let { invite: n, textClassName: i, className: s } = e,
         a = E(n);
-    return null == a || O(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
+    return null == a || y(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
         ? null
         : (0, r.jsx)(o.EJ, {
               className: l()(_.activityCount, s),
@@ -99,27 +99,27 @@ function C(e) {
                     ? null
                     : v(t) && null != t.target_user
                       ? d.ZP.getUserAvatarURL(t.target_user)
-                      : O(t) && null != t.inviter
+                      : y(t) && null != t.inviter
                         ? d.ZP.getUserAvatarURL(t.inviter)
                         : null,
             [t, n],
         ),
-        l = f.intl.string(f.t["3rE1Pz"]);
+        l = f.intl.string(f.t["3rE1P8"]);
     if (b(t)) {
         var c, u;
         l =
             (null == (c = t.channel) ? void 0 : c.name) != null &&
             (null == (u = t.inviter) ? void 0 : u.username) != null
-                ? f.intl.format(f.t.Lu4h19, { username: t.inviter.username })
-                : f.intl.string(f.t.OsdY8P);
+                ? f.intl.format(f.t.Lu4h18, { username: t.inviter.username })
+                : f.intl.string(f.t.OsdY8B);
     } else
         v(t) && null != t.target_user
-            ? (l = f.intl.formatToPlainString(f.t.x2L32d, { username: t.target_user.username }))
+            ? (l = f.intl.formatToPlainString(f.t.x2L32Q, { username: t.target_user.username }))
             : I(t)
-              ? (l = f.intl.string(f.t["FDsl+P"]))
-              : O(t) &&
+              ? (l = f.intl.string(f.t["FDsl+J"]))
+              : y(t) &&
                 null != t.inviter &&
-                (l = f.intl.format(f.t.spU2mJ, { username: h.ZP.getFormattedName(t.inviter) }));
+                (l = f.intl.format(f.t.spU2mI, { username: h.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)("div", {
         className: _.inviteJoinContainer,
         children: [
@@ -158,7 +158,7 @@ function A(e) {
                     children: [
                         (0, r.jsx)(o.DK, {
                             className: _.appIn,
-                            children: f.intl.string(f.t["3gg9fH"]),
+                            children: f.intl.string(f.t["3gg9fF"]),
                         }),
                         (0, r.jsxs)("div", {
                             className: _.guildContainer,
@@ -189,10 +189,10 @@ function A(e) {
             : (n = e);
     } else if (null != s) {
         let e = h.ZP.getFormattedName(s);
-        (n = f.intl.formatToPlainString(f.t["4aF92d"], { username: e })),
+        (n = f.intl.formatToPlainString(f.t["4aF92R"], { username: e })),
             (i = (0, r.jsx)(o.DK, {
                 className: _.directInviteSubTitle,
-                children: f.intl.format(f.t.Quj7HR, { username: e }),
+                children: f.intl.format(f.t.Quj7HX, { username: e }),
             }));
     }
     return (0, r.jsxs)(r.Fragment, {

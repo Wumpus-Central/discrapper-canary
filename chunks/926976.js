@@ -334,11 +334,11 @@ function D() {
                         size: d.zx.Sizes.ICON,
                         onClick: j.Zw,
                         children: (0, a.jsx)("span", {
-                            title: E.intl.string(E.t.VkKicX),
+                            title: E.intl.string(E.t.VkKicb),
                             children: (0, a.jsx)(u.XHJ, {
                                 size: "md",
                                 color: "currentColor",
-                                "aria-label": E.intl.string(E.t.VkKicX),
+                                "aria-label": E.intl.string(E.t.VkKicb),
                             }),
                         }),
                     }),

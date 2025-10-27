@@ -58,7 +58,7 @@ function o(e) {
                     onChange: n,
                     multiple: !1,
                     tabIndex: 0,
-                    "aria-label": r.intl.string(r.t.DWB2YW),
+                    "aria-label": r.intl.string(r.t.DWB2YZ),
                 }),
             ],
         }),

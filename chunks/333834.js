@@ -17,20 +17,20 @@ var r = n(951288),
     _ = n(709054),
     O = n(821020),
     y = n(804932),
-    v = n(389160),
-    j = n(787879),
+    j = n(389160),
+    v = n(787879),
     x = n(370774),
     C = n(334426),
     E = n(862149),
     S = n(982183),
     I = n(981631),
-    P = n(677642),
+    P = n(400705),
     N = n(388032),
     Z = n(809946);
-function w(e) {
+function T(e) {
     e.stopPropagation();
 }
-function T(e) {
+function w(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(p.P3F, {
         "aria-expanded": n,
@@ -78,7 +78,7 @@ function R() {
                             variant: "text-sm/medium",
                             color: I.tPk.TEXT_MUTED,
                             style: { textAlign: "center" },
-                            children: N.intl.string(P.default["O+racX"]),
+                            children: N.intl.string(P.default["O+racd"]),
                         }),
                     ],
                 }),
@@ -86,7 +86,7 @@ function R() {
                     onClick: () => (0, x.j4)(e),
                     color: d.zx.Colors.PRIMARY,
                     style: { fontWeight: 600 },
-                    children: N.intl.string(P.default.klSpfn),
+                    children: N.intl.string(P.default.klSpfs),
                 }),
             ],
         }),
@@ -112,20 +112,20 @@ function D(e) {
             isLoading: U,
             isLoadingComplete: B,
             hasLoadedEver: F,
-        } = (0, u.cj)([j.Z], () => ({
-            isLoading: j.Z.isLoading,
-            isLoadingComplete: j.Z.isLoadingComplete,
-            hasLoadedEver: j.Z.hasLoadedEver,
+        } = (0, u.cj)([v.Z], () => ({
+            isLoading: v.Z.isLoading,
+            isLoadingComplete: v.Z.isLoadingComplete,
+            hasLoadedEver: v.Z.hasLoadedEver,
         })),
         V = !F && U,
-        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, v.Z)(),
+        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, j.Z)(),
         W = (function () {
-            let e = (0, u.Wu)([j.Z], () => {
+            let e = (0, u.Wu)([v.Z], () => {
                 var e;
-                return null != (e = j.Z.getNotifyingChannelIds()) ? e : [];
+                return null != (e = v.Z.getNotifyingChannelIds()) ? e : [];
             });
-            return (0, u.e7)([j.Z, m.ZP], () => {
-                let t = j.Z.getChannelInfoMap();
+            return (0, u.e7)([v.Z, m.ZP], () => {
+                let t = v.Z.getChannelInfoMap();
                 for (let r of e) {
                     var n;
                     let e = t[r];
@@ -219,7 +219,7 @@ function D(e) {
                               0 !== Y[t].length &&
                                   (e.push(
                                       (0, r.jsx)(
-                                          T,
+                                          w,
                                           {
                                               group: t,
                                               isOpen: H[t],
@@ -242,7 +242,7 @@ function D(e) {
             );
         }, [t, n, a, H, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
-        $ = i.isValidElement(J) && J.type === T,
+        $ = i.isValidElement(J) && J.type === w,
         ee = (0, C.d)((e) => e.setInboxReadState);
     i.useEffect(() => {
         X || ee(0 === Y.UNREAD.length);
@@ -252,7 +252,7 @@ function D(e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             r = i.useRef(!1),
             l = n.UNREAD.length > 0,
-            { setOpenStateFromUnreads: o } = (0, v.Z)();
+            { setOpenStateFromUnreads: o } = (0, j.Z)();
         i.useEffect(() => {
             t || r.current || (o(l), (r.current = !0));
         }, [o, l, t]);
@@ -287,8 +287,8 @@ function D(e) {
         }),
         (0, r.jsx)("div", {
             className: o()(g, Z.messagesPopoutWrap),
-            onClick: w,
-            onDoubleClick: w,
+            onClick: T,
+            onDoubleClick: T,
             "aria-label": e["aria-label"],
             children: (0, r.jsx)(c.bG, {
                 navigator: M,

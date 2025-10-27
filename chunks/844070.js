@@ -37,7 +37,7 @@ function d(e) {
     });
 }
 function f(e) {
-    u(e, c.intl.string(c.t.MYr3KS), () => {
+    u(e, c.intl.string(c.t.MYr3Ka), () => {
         r.Z.openPrivateChannel({ recipientIds: e.id });
     });
 }

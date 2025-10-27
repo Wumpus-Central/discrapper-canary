@@ -28,11 +28,11 @@ let A = (e, t) => {
             N = (0, _.Nx)(),
             R = (0, b.$)(),
             P = (0, p.Z)(),
-            w = null != P,
-            D = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-            { visibilityPercentageRef: L, visibilityPercentage: x } = (0, O.E)(!D),
+            D = null != P,
+            w = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+            { visibilityPercentageRef: L, visibilityPercentage: x } = (0, O.E)(!w),
             M = (0, s.e7)([f.Z], () => f.Z.affinities),
-            k = !w && M.length > 0;
+            k = !D && M.length > 0;
         return (0, r.jsx)(d.Gt, {
             value: C,
             children: (0, r.jsx)("div", {
@@ -67,7 +67,7 @@ let A = (e, t) => {
                             (0, r.jsxs)("div", {
                                 className: S.body,
                                 children: [
-                                    w &&
+                                    D &&
                                         (0, r.jsx)("div", {
                                             className: S.referrerAttributionContainer,
                                             children: (0, r.jsx)(y.Z, {

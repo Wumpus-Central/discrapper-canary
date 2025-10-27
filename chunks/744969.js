@@ -100,19 +100,19 @@ function y(e) {
         if (null == e || (null != a && !a.available))
             return {
                 disabled: !0,
-                label: E.intl.string(E.t.CHa0vL),
+                label: E.intl.string(E.t.CHa0vN),
             };
         if (a.type === g.epS.SUBSCRIPTION) {
             if (null == l || 0 === l.length)
                 return {
                     disabled: !0,
-                    label: E.intl.string(E.t.CHa0vL),
+                    label: E.intl.string(E.t.CHa0vN),
                 };
             let e = l[0],
                 t = (0, _.aS)(e.id);
             return {
                 disabled: !1,
-                label: E.intl.formatToPlainString(E.t["c6Q+Bw"], {
+                label: E.intl.formatToPlainString(E.t["c6Q+B3"], {
                     skuName: a.name,
                     price: (0, p.T4)(t.amount, t.currency),
                 }),
@@ -122,11 +122,11 @@ function y(e) {
         return null == a.price
             ? {
                   disabled: !0,
-                  label: E.intl.string(E.t.CHa0vL),
+                  label: E.intl.string(E.t.CHa0vN),
               }
             : {
                   disabled: !1,
-                  label: E.intl.formatToPlainString(E.t["c6Q+Bw"], {
+                  label: E.intl.formatToPlainString(E.t["c6Q+B3"], {
                       skuName: a.name,
                       price: (0, p.T4)(a.price.amount, a.price.currency),
                   }),

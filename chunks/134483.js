@@ -243,7 +243,7 @@ function k(e) {
                                                           quest: k,
                                                           taskDetails: eA,
                                                       })
-                                                    : q.intl.formatToPlainString(q.t.EQa7oq, {
+                                                    : q.intl.formatToPlainString(q.t.EQa7os, {
                                                           questName: k.config.messages.questName,
                                                       }),
                                             }),
@@ -259,7 +259,7 @@ function k(e) {
                                                         u.P3F,
                                                         V(D({}, e), {
                                                             className: M.submenuWrapper,
-                                                            "aria-label": q.intl.string(q.t.DEoVWV),
+                                                            "aria-label": q.intl.string(q.t.DEoVWZ),
                                                             children: (0, r.jsx)(u.xhG, {
                                                                 size: "md",
                                                                 color: "currentColor",
@@ -274,8 +274,8 @@ function k(e) {
                                         color: "header-secondary",
                                         variant: "text-xs/medium",
                                         children: eS
-                                            ? q.intl.formatToPlainString(q.t.APddvL, { expirationDate: ed })
-                                            : q.intl.formatToPlainString(q.t["pX+fmp"], { expirationDate: ec }),
+                                            ? q.intl.formatToPlainString(q.t.APddvF, { expirationDate: ed })
+                                            : q.intl.formatToPlainString(q.t["pX+fmn"], { expirationDate: ec }),
                                     }),
                                 ],
                             }),
@@ -330,7 +330,7 @@ function k(e) {
                                     variant: "primary",
                                     size: "sm",
                                     fullWidth: !0,
-                                    text: q.intl.string(q.t.VN1Ajo),
+                                    text: q.intl.string(q.t.VN1Ajl),
                                     onClick: ef,
                                 }),
                             eS &&
@@ -338,7 +338,7 @@ function k(e) {
                                     variant: "primary",
                                     size: "sm",
                                     fullWidth: !0,
-                                    text: q.intl.string(q.t.cfY4PD),
+                                    text: q.intl.string(q.t.cfY4PE),
                                     onClick: eb,
                                 }),
                         ],

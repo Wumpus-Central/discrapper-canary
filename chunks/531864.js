@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(979554),
-    s = n(876917),
+    s = n(979554),
+    o = n(876917),
     c = n(597688),
     u = n(616066),
     d = n(215023),
@@ -125,7 +125,7 @@ let p = {
                     let { top: a, left: c, rotation: f, size: C, skuId: h } = e,
                         m = null == (l = _[t]) ? void 0 : l.items[0],
                         b = null == (i = _[t]) ? void 0 : i.type,
-                        v = b === o.Z.AVATAR_DECORATION ? 384 : 512;
+                        v = b === s.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         "div",
                         {
@@ -140,10 +140,10 @@ let p = {
                                 transitionDuration: "".concat(d.lb - 200 * Math.random(), "ms"),
                             },
                             children: [
-                                null != m && b === o.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: m }),
+                                null != m && b === s.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: m }),
                                 null != m &&
-                                    b === o.Z.PROFILE_EFFECT &&
-                                    (0, r.jsx)(s.Z, {
+                                    b === s.Z.PROFILE_EFFECT &&
+                                    (0, r.jsx)(o.Z, {
                                         skuId: m.skuId,
                                         isPurchased: !1,
                                         isHighlighted: !0,

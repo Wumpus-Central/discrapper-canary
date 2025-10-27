@@ -71,7 +71,7 @@ function m(e) {
         _ = i.useCallback(() => {
             c.Z.showAgeVerificationGetStartedModal({ entryPoint: d.cU.NSFW_GUILD });
         }, []),
-        j =
+        O =
             ((t = g({}, m)),
             (n = n =
                 {
@@ -103,7 +103,7 @@ function m(e) {
                         onDisagree: b,
                         modalType: f,
                     },
-                    j,
+                    O,
                 ),
             );
         default:
@@ -115,7 +115,7 @@ function m(e) {
                         onDisagree: b,
                         modalType: f,
                     },
-                    j,
+                    O,
                 ),
             );
     }

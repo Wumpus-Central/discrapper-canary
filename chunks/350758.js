@@ -17,7 +17,7 @@ function d(t) {
     return n && !e && d
         ? (0, r.jsx)(l.sNh, {
               id: "repair",
-              label: s.intl.string(s.t.CKCcd3),
+              label: s.intl.string(s.t.CKCcdz),
               action: () => o.repairApplication(t.id, t.branchId, u.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
           })
         : null;

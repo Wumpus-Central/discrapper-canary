@@ -1,4 +1,4 @@
-n.d(t, { default: () => h }), n(388685);
+n.d(t, { default: () => x }), n(388685);
 var i = n(951288);
 n(647438);
 var r = n(100527),
@@ -47,7 +47,7 @@ let b = function () {
             isGift: e,
         });
 };
-function x(e) {
+function h(e) {
     let {
             onClose: t,
             onComplete: n,
@@ -71,11 +71,11 @@ function x(e) {
         transitionState: r,
     });
 }
-function h(e) {
+function x(e) {
     let { loadId: t, applicationId: n, skuId: d, analyticsLocations: g, isGift: b = !1 } = e,
-        { analyticsLocations: h } = (0, l.ZP)(g, r.Z.PREMIUM_PAYMENT_MODAL);
+        { analyticsLocations: x } = (0, l.ZP)(g, r.Z.PREMIUM_PAYMENT_MODAL);
     return (0, i.jsx)(l.Gt, {
-        value: h,
+        value: x,
         children: (0, i.jsx)(o.PaymentContextProvider, {
             loadId: t,
             stepConfigs: (function () {
@@ -100,7 +100,7 @@ function h(e) {
             children: (0, i.jsx)(c.c1, {
                 children: (0, i.jsx)(a.KB, {
                     isGift: b,
-                    children: (0, i.jsx)(x, v({}, e)),
+                    children: (0, i.jsx)(h, v({}, e)),
                 }),
             }),
         }),

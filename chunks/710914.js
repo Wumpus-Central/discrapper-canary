@@ -3,42 +3,42 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(392711),
-    s = n(843611),
+    s = n(392711),
+    o = n(843611),
     c = n(481060),
     u = n(497505),
     d = n(415104),
     p = n(388032),
     f = n(334525);
 function h(e) {
-    let { quests: t, isFetching: n, hasFetched: l, hasFiltersApplied: h = !1, onClearFilters: g } = e,
-        m = i.useRef(!1),
-        b = (0, s.TH)(),
-        _ = i.useMemo(() => {
-            if (b.hash.length > 0) {
-                let e = b.hash.slice(1);
+    let { quests: t, isFetching: n, hasFetched: l, hasFiltersApplied: h = !1, onClearFilters: m } = e,
+        g = i.useRef(!1),
+        _ = (0, o.TH)(),
+        b = i.useMemo(() => {
+            if (_.hash.length > 0) {
+                let e = _.hash.slice(1);
                 for (let n of t) if (n.id === e) return e;
             }
             return null;
-        }, [t, b.hash]);
+        }, [t, _.hash]);
     i.useEffect(() => {
-        m.current = !1;
-    }, [b.hash]),
+        g.current = !1;
+    }, [_.hash]),
         i.useEffect(() => {
-            if (null == _ || m.current || n || !l) return;
-            let e = document.getElementById("quest-tile-".concat(_));
+            if (null == b || g.current || n || !l) return;
+            let e = document.getElementById("quest-tile-".concat(b));
             null == e ||
                 e.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
                 }),
-                (m.current = !0);
-        }, [t, _, b, n, l]);
-    let E = null != _,
-        [O, v] = i.useState(window.innerWidth);
+                (g.current = !0);
+        }, [t, b, _, n, l]);
+    let E = null != b,
+        [O, I] = i.useState(window.innerWidth);
     i.useEffect(() => {
-        let e = (0, o.debounce)(() => {
-            v(window.innerWidth);
+        let e = (0, s.debounce)(() => {
+            I(window.innerWidth);
         }, 250);
         return (
             window.addEventListener("resize", e),
@@ -47,7 +47,7 @@ function h(e) {
             }
         );
     }, []);
-    let y = O >= 1610 ? 3 : O >= 1340 ? 2 : 1;
+    let v = O >= 1610 ? 3 : O >= 1340 ? 2 : 1;
     return n && 0 === t.length
         ? (0, r.jsx)(c.$jN, { className: f.spinner })
         : 0 === t.length
@@ -61,7 +61,7 @@ function h(e) {
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: h ? p.intl.format(p.t.LdYS1H, { onClick: g }) : p.intl.string(p.t.LhD4yH),
+                        children: h ? p.intl.format(p.t.LdYS1H, { onClick: m }) : p.intl.string(p.t.LhD4yH),
                     }),
                 ],
             })
@@ -70,7 +70,7 @@ function h(e) {
                 {
                     className: f.container,
                     children: t.map((e, t) => {
-                        let n = Math.floor(t / y);
+                        let n = Math.floor(t / v);
                         return (0, r.jsx)(
                             d.Z,
                             {
@@ -79,8 +79,8 @@ function h(e) {
                                 contentPosition: t,
                                 rowIndex: n,
                                 className: a()(f.questTile, {
-                                    [f.selected]: E && e.id === _,
-                                    [f.unselected]: E && e.id !== _,
+                                    [f.selected]: E && e.id === b,
+                                    [f.unselected]: E && e.id !== b,
                                 }),
                                 sourceQuestContent: u.jn.QUEST_HOME_DESKTOP,
                             },
@@ -88,6 +88,6 @@ function h(e) {
                         );
                     }),
                 },
-                _,
+                b,
             );
 }

@@ -12,7 +12,7 @@ function d(t) {
     let d = null == (e = null == (n = t.threadMetadata) ? void 0 : n.invitable) || e;
     return (0, i.jsx)(a.S89, {
         id: "toggle-thread-invitable",
-        label: o.intl.string(o.t.s2rpNT),
+        label: o.intl.string(o.t.s2rpNf),
         checked: d,
         action: () => l.Z.setInvitable(t, !d),
     });

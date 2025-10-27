@@ -4,8 +4,8 @@ var r = n(524437),
     l = n(82554),
     a = n(388032);
 let s = {
-    getTitle: () => a.intl.string(a.t["Gtck/v"]),
-    getDisabledTitle: () => a.intl.string(a.t.E6UmXV),
+    getTitle: () => a.intl.string(a.t["Gtck/t"]),
+    getDisabledTitle: () => a.intl.string(a.t.E6UmXa),
     getDescription: () => a.intl.string(a.t.jcRSp6),
     eligibleReportSubtypes: [
         l.i5.SUB_CSAM,

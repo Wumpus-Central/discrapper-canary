@@ -59,7 +59,7 @@ function f(e) {
                       variant: "text-md/medium",
                       children:
                           m === c.cd.AVATAR_DECORATION_MODAL_UPSELL
-                              ? a.intl.format(a.t["aFR/EB"], {
+                              ? a.intl.format(a.t["aFR/EI"], {
                                     onClick: () => {
                                         (0, l.ZDy)(async () => {
                                             let { default: e } = await n.e("43360").then(n.bind(n, 73415));
@@ -69,9 +69,9 @@ function f(e) {
                                                     d(
                                                         {
                                                             premiumUpsellType: m,
-                                                            title: a.intl.string(a.t.JI7uhY),
-                                                            body: a.intl.string(a.t["5XvsdX"]),
-                                                            glowUp: a.intl.string(a.t["5XvsdX"]),
+                                                            title: a.intl.string(a.t.JI7uhc),
+                                                            body: a.intl.string(a.t["5XvsdZ"]),
+                                                            glowUp: a.intl.string(a.t["5XvsdZ"]),
                                                             analyticsSource: p,
                                                             onSecondaryClick: f,
                                                         },
@@ -82,7 +82,7 @@ function f(e) {
                                     },
                                 })
                               : m === c.cd.PROFILE_EFFECT_MODAL_UPSELL
-                                ? a.intl.format(a.t.eWNOND, {
+                                ? a.intl.format(a.t.eWNONM, {
                                       onClick: () => {
                                           (0, l.ZDy)(async () => {
                                               let { default: e } = await n.e("43360").then(n.bind(n, 73415));
@@ -92,9 +92,9 @@ function f(e) {
                                                       d(
                                                           {
                                                               premiumUpsellType: m,
-                                                              title: a.intl.string(a.t.sYm15e),
-                                                              body: a.intl.string(a.t["Hza+Bg"]),
-                                                              glowUp: a.intl.string(a.t["Hza+Bg"]),
+                                                              title: a.intl.string(a.t.sYm15X),
+                                                              body: a.intl.string(a.t["Hza+Bu"]),
+                                                              glowUp: a.intl.string(a.t["Hza+Bu"]),
                                                               analyticsSource: p,
                                                               onSecondaryClick: f,
                                                           },
@@ -105,7 +105,7 @@ function f(e) {
                                       },
                                   })
                                 : m === c.cd.NAMEPLATE_MODAL_UPSELL
-                                  ? a.intl.format(a.t.G6b8TE, {
+                                  ? a.intl.format(a.t.G6b8TF, {
                                         onClick: () => {
                                             (0, l.ZDy)(async () => {
                                                 let { default: e } = await n.e("43360").then(n.bind(n, 73415));
@@ -115,9 +115,9 @@ function f(e) {
                                                         d(
                                                             {
                                                                 premiumUpsellType: m,
-                                                                title: a.intl.string(a.t.k7UN4u),
-                                                                body: a.intl.string(a.t["0/QPxM"]),
-                                                                glowUp: a.intl.string(a.t["0/QPxM"]),
+                                                                title: a.intl.string(a.t.k7UN4k),
+                                                                body: a.intl.string(a.t["0/QPxO"]),
+                                                                glowUp: a.intl.string(a.t["0/QPxO"]),
                                                                 analyticsSource: p,
                                                                 onSecondaryClick: f,
                                                             },

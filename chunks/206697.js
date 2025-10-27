@@ -61,12 +61,12 @@ function v() {
                           className: g.header,
                           variant: "heading-xl/semibold",
                           color: "text-default",
-                          children: m.intl.string(m.t.erEf2t),
+                          children: m.intl.string(m.t.erEf2g),
                       }),
                       (0, r.jsx)(o.xvT, {
                           variant: "text-md/medium",
                           color: "text-muted",
-                          children: m.intl.string(m.t.NaRCXV),
+                          children: m.intl.string(m.t.NaRCXT),
                       }),
                   ],
               }),
@@ -86,12 +86,12 @@ function v() {
                               className: g.header,
                               variant: "heading-xl/semibold",
                               color: "text-default",
-                              children: m.intl.string(m.t.w4DRbW),
+                              children: m.intl.string(m.t.w4DRbZ),
                           }),
                           (0, r.jsx)(o.xvT, {
                               variant: "text-md/medium",
                               color: "text-muted",
-                              children: m.intl.string(m.t.F6u3Ex),
+                              children: m.intl.string(m.t.F6u3E3),
                           }),
                       ],
                   }),
@@ -109,7 +109,7 @@ function I() {
                 }),
             [],
         ),
-        _ = m.intl.format(m.t.qXh3fn, {
+        _ = m.intl.format(m.t.qXh3fo, {
             nitroTierName: e,
             onClick: t,
         });

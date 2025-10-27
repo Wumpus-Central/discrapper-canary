@@ -22,8 +22,8 @@ var i = n(951288),
     x = n(837268),
     S = n(692546),
     Z = n(518084),
-    j = n(987650),
-    C = n(981631),
+    C = n(987650),
+    j = n(981631),
     I = n(388032),
     P = n(975290);
 function w(e, t, n) {
@@ -39,13 +39,13 @@ function w(e, t, n) {
         e
     );
 }
-let N = 10 * b.Z.Millis.SECOND,
-    T = new p.Yd("LegacyOverlayErrorBoundary");
+let T = 10 * b.Z.Millis.SECOND,
+    N = new p.Yd("LegacyOverlayErrorBoundary");
 function D() {
     let e = (0, v.getPID)(),
         t = (0, v.getRPCAuthToken)();
     (0, g.lW)({
-        type: C.BmY.DISPATCH,
+        type: j.BmY.DISPATCH,
         pid: e,
         token: t,
         payloads: [
@@ -59,8 +59,8 @@ function D() {
 }
 class k extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, N)),
-            f.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: j.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, T)),
+            f.Z.track(j.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -76,7 +76,7 @@ class k extends r.PureComponent {
                   contentDomRef: this.contentDomRef,
                   observe: !1,
                   children: (0, i.jsx)(h.f6W, {
-                      theme: C.BRd.DARK,
+                      theme: j.BRd.DARK,
                       children: (r) =>
                           (0, i.jsxs)(h.P3F, {
                               innerRef: this.contentDomRef,
@@ -90,8 +90,8 @@ class k extends r.PureComponent {
                                           height: 40,
                                           className: P.notificationIcon,
                                       }),
-                                      title: I.intl.string(I.t.U38qZm),
-                                      confirmText: I.intl.string(I.t.TzAl1d),
+                                      title: I.intl.string(I.t.U38qZj),
+                                      confirmText: I.intl.string(I.t.TzAl1a),
                                       onNotificationClick: this.handleNotificationClick,
                                       onConfirmClick: this.handleReload,
                                       onDismissClick: this.hideNotification,
@@ -134,9 +134,9 @@ class k extends r.PureComponent {
                 this.setState({ busy: !0 }),
                     D(),
                     f.Z.track(
-                        C.rMx.NOTIFICATION_CLICKED,
+                        j.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: j.n0.OverlayCrashed,
+                            notif_type: C.n0.OverlayCrashed,
                             action_type: "reload",
                         },
                         !0,
@@ -171,14 +171,14 @@ class A extends r.PureComponent {
             error: e,
             info: t,
         }),
-            T.error("ErrorBoundary caught error: ".concat(e.message), {
+            N.error("ErrorBoundary caught error: ".concat(e.message), {
                 error: e,
                 info: t,
             });
         let i = (0, v.getPID)(),
             r = (0, v.getRPCAuthToken)();
         (0, g.lW)({
-            type: C.BmY.DISPATCH,
+            type: j.BmY.DISPATCH,
             pid: (0, v.getPID)(),
             token: r,
             payloads: [
@@ -196,7 +196,7 @@ class A extends r.PureComponent {
         }),
             setImmediate(() => window.addEventListener("click", D));
         let s = (0, E.V6)(e, x.gl.Hook, { extra: t });
-        f.Z.track(C.rMx.APP_CRASHED, {
+        f.Z.track(j.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,

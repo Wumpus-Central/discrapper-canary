@@ -6,6 +6,6 @@ function i(e) {
         : e.applications.length > 0
           ? e.applications.map((e) => e.name).join(", ")
           : e.displays.length > 0
-            ? r.intl.string(r.t.R4wpLC)
+            ? r.intl.string(r.t.R4wpLN)
             : null;
 }

@@ -9,17 +9,17 @@ var i = n(951288),
     c = n(726985),
     E = n(388032);
 let d = (0, r.x1)(a.n.SESSIONS_PANE, {
-        useTitle: () => E.intl.string(E.t["+1h0k5"]),
+        useTitle: () => E.intl.string(E.t["+1h0k/"]),
         buildLayout: () => [],
         render: () => (0, i.jsx)(o.Z, {}),
     }),
     T = (0, r.wf)(a.n.SESSIONS_PANEL, {
-        useTitle: () => E.intl.string(E.t["+1h0k5"]),
+        useTitle: () => E.intl.string(E.t["+1h0k/"]),
         buildLayout: () => [d],
     }),
     I = (0, r.m7)(a.n.SESSIONS_SIDEBAR_ITEM, {
         icon: l.dW3,
-        useTitle: () => E.intl.string(E.t["+1h0k5"]),
+        useTitle: () => E.intl.string(E.t["+1h0k/"]),
         legacySearchKey: c.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
         buildLayout: () => [T],
         trailing: {

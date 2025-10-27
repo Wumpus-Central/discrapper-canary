@@ -30,7 +30,7 @@ function d(e) {
                       className: o()(n, u.cover, { [u.active]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
-                      "aria-label": c.intl.string(c.t.RscU7O),
+                      "aria-label": c.intl.string(c.t.RscU7I),
                       focusProps: { ringTarget: d },
                       children: f,
                   }),

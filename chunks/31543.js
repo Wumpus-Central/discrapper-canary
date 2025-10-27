@@ -57,7 +57,7 @@ let p = i.forwardRef(function (e, t) {
                 disabled: !m,
                 query: E,
                 ref: g,
-                placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t["Pck/4e"]),
+                placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1C) : f.intl.string(f.t["Pck/4U"]),
                 onClear: I,
                 onKeyDown: n,
                 onChange: v,

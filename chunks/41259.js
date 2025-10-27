@@ -30,7 +30,7 @@ function E(e) {
                               (0, r.jsx)(s.x, {
                                   variant: "text-lg/normal",
                                   color: "header-secondary",
-                                  children: m.intl.string(m.t.uT1CPT),
+                                  children: m.intl.string(m.t.uT1CPa),
                               }),
                               (0, r.jsx)(a.X6q, {
                                   variant: "heading-xxl/bold",
@@ -65,7 +65,7 @@ function E(e) {
                                   : (0, r.jsx)(s.x, {
                                         variant: "text-md/normal",
                                         color: "header-secondary",
-                                        children: m.intl.string(m.t["X+Fdpq"]),
+                                        children: m.intl.string(m.t["X+Fdpo"]),
                                     }),
                           ],
                       }),
@@ -108,7 +108,7 @@ function E(e) {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: [
-                              m.intl.format(m.t.qRvpYW, {
+                              m.intl.format(m.t.qRvpYU, {
                                   userHook: () =>
                                       (0, r.jsxs)(
                                           s.x,
@@ -132,7 +132,7 @@ function E(e) {
                                   tag: "a",
                                   className: g.logoutLink,
                                   onClick: () => (0, d.c$)(O, "oauth2_logout"),
-                                  children: m.intl.string(m.t["yV/hjI"]),
+                                  children: m.intl.string(m.t["yV/hjC"]),
                               }),
                           ],
                       }),

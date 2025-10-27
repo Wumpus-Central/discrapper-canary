@@ -8,8 +8,8 @@ var l = e(951288),
     u = e(493773),
     c = e(906732),
     d = e(346486),
-    p = e(594174),
-    h = e(626135),
+    h = e(594174),
+    p = e(626135),
     f = e(71619),
     m = e(590433),
     v = e(981631),
@@ -17,48 +17,48 @@ var l = e(951288),
     y = e(266973);
 function g(t) {
     var n, e;
-    let { guildId: g, userId: w, anaylticsLocations: x, transitionState: C, onClose: D } = t,
+    let { guildId: g, userId: w, anaylticsLocations: C, transitionState: x, onClose: D } = t,
         { analyticsLocations: k } = (0, c.ZP)(),
-        T = null != (e = null != (n = null == x ? void 0 : x[0]) ? n : null == k ? void 0 : k[0]) ? e : null,
-        _ = (0, s.e7)([p.default], () => p.default.getUser(w), [w]),
-        [S, Z] = (0, f.ZP)(w, g),
-        [E, P] = i.useState(!1),
-        U = i.useCallback(async () => {
-            if (null != _) {
-                P(!0);
+        _ = null != (e = null != (n = null == C ? void 0 : C[0]) ? n : null == k ? void 0 : k[0]) ? e : null,
+        T = (0, s.e7)([h.default], () => h.default.getUser(w), [w]),
+        [S, U] = (0, f.ZP)(w, g),
+        [Z, E] = i.useState(!1),
+        P = i.useCallback(async () => {
+            if (null != T) {
+                E(!0);
                 try {
-                    await o.Z.setCommunicationDisabledDuration(g, w, null, null, T),
-                        (0, r.showToast)((0, r.createToast)(b.intl.string(b.t["/Mmbfn"]), r.ToastType.SUCCESS)),
+                    await o.Z.setCommunicationDisabledDuration(g, w, null, null, _),
+                        (0, r.showToast)((0, r.createToast)(b.intl.string(b.t["/Mmbfv"]), r.ToastType.SUCCESS)),
                         D();
                 } catch (t) {
-                    (0, r.showToast)((0, r.createToast)(b.intl.string(b.t.epyCur), r.ToastType.FAILURE));
+                    (0, r.showToast)((0, r.createToast)(b.intl.string(b.t.epyCuh), r.ToastType.FAILURE));
                 } finally {
-                    P(!1);
+                    E(!1);
                 }
             }
-        }, [g, _, w, D, T]),
+        }, [g, T, w, D, _]),
         j = i.useCallback(() => {
-            Z || D();
-        }, [Z, D]);
+            U || D();
+        }, [U, D]);
     return ((0, u.ZP)(() => {
-        null != _ &&
-            h.default.track(v.rMx.OPEN_MODAL, {
+        null != T &&
+            p.default.track(v.rMx.OPEN_MODAL, {
                 type: m.av,
                 guild_id: g,
-                other_user_id: _.id,
+                other_user_id: T.id,
             });
     }),
     i.useEffect(() => {
-        (null == _ || null == g) && D();
+        (null == T || null == g) && D();
     }),
-    null == _ || null == g)
+    null == T || null == g)
         ? null
         : (0, l.jsx)(a.Modal, {
-              transitionState: C,
+              transitionState: x,
               onClose: D,
-              title: b.intl.string(b.t["+ZD3oq"]),
-              subtitle: b.intl.format(b.t["t+abNT"], {
-                  username: _.username,
+              title: b.intl.string(b.t["+ZD3ou"]),
+              subtitle: b.intl.format(b.t["t+abNU"], {
+                  username: T.username,
                   countdown: (t) =>
                       null == S
                           ? null
@@ -72,21 +72,21 @@ function g(t) {
               }),
               actions: [
                   {
-                      text: b.intl.string(b.t["ETE/oK"]),
+                      text: b.intl.string(b.t["ETE/oC"]),
                       onClick: D,
                       variant: "secondary",
                   },
                   {
-                      text: b.intl.string(b.t.qXtNtb),
-                      onClick: U,
-                      loading: E,
+                      text: b.intl.string(b.t.qXtNtS),
+                      onClick: P,
+                      loading: Z,
                       variant: "critical-primary",
                   },
               ],
               children: (0, l.jsx)(r.Text, {
                   variant: "text-md/normal",
                   color: "interactive-normal",
-                  children: b.intl.format(b.t.KtENkJ, { link: m.cu }),
+                  children: b.intl.format(b.t.KtENkK, { link: m.cu }),
               }),
           });
 }

@@ -67,7 +67,7 @@ function d(e) {
                           (0, r.jsx)(o.x, {
                               variant: "text-sm/medium",
                               color: "header-secondary",
-                              children: c.intl.format(c.t.sOaT2t, {
+                              children: c.intl.format(c.t.sOaT2j, {
                                   applicationName: t.name,
                                   guildName: _.name,
                               }),
@@ -85,7 +85,7 @@ function d(e) {
                           (0, r.jsx)(o.x, {
                               variant: "text-sm/medium",
                               color: "header-secondary",
-                              children: c.intl.format(c.t.fsOkFx, { applicationName: t.name }),
+                              children: c.intl.format(c.t.fsOkF4, { applicationName: t.name }),
                           }),
                           (0, r.jsx)("ul", {
                               className: u.permissionsList,

@@ -3,15 +3,15 @@ var r,
     i,
     l = n(442837),
     a = n(570140),
-    o = n(331114),
-    s = n(356164);
+    s = n(331114),
+    o = n(356164);
 let c = [];
 function u() {
     c = [];
 }
 class d extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, s.Z);
+        this.waitFor(s.Z, o.Z);
     }
     getVisibleTabs() {
         return c;
@@ -30,7 +30,7 @@ let p = new d(a.Z, {
     GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: u,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t } = e,
-            n = o.Z.getCounts(t);
+            n = s.Z.getCounts(t);
         if (null == n) return !1;
         c = n;
     },

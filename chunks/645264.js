@@ -18,15 +18,15 @@ var r = n(951288),
 let b = () =>
         (0, r.jsx)(u.Z, {
             submitting: !1,
-            message: g.intl.string(g.t["8g514e"]),
+            message: g.intl.string(g.t["8g514U"]),
             onReset: () => {
                 (0, f.PE)(!1);
             },
-            onResetText: g.intl.string(g.t["ETE/oK"]),
+            onResetText: g.intl.string(g.t["ETE/oC"]),
             onSave: () => {
                 (0, f.PE)(!1), (0, c.Mr3)(p.Pn);
             },
-            onSaveText: g.intl.string(g.t["Xt+UaW"]),
+            onSaveText: g.intl.string(g.t["Xt+Uab"]),
             onSaveButtonColor: o.Tt.RED,
         }),
     j = (e) => {

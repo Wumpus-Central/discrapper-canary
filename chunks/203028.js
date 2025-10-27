@@ -1,26 +1,26 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(512722),
     l = n.n(i),
     a = n(841784),
-    o = n(503438),
-    s = n(802856),
+    s = n(503438),
+    o = n(802856),
     c = n(810568),
     u = n(168524),
     d = n(707409),
     p = n(51144),
     f = n(761282),
     h = n(358924),
-    g = n(817915),
-    m = n(981631),
-    b = n(388032);
-function _(e) {
+    m = n(817915),
+    g = n(981631),
+    _ = n(388032);
+function b(e) {
     var t, i;
-    let { party: _, onUserContextMenu: E } = e,
-        { priorityMembers: O, guildContext: v } = _,
-        y = O[0],
-        I = (function (e) {
+    let { party: b, onUserContextMenu: E } = e,
+        { priorityMembers: O, guildContext: I } = b,
+        v = O[0],
+        y = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 r = new Set(
                     t.map((e) => {
@@ -35,97 +35,97 @@ function _(e) {
                 case 1:
                     return l;
                 case 2:
-                    return b.intl.format(b.t.t1DyCw, {
+                    return _.intl.format(_.t.t1DyC1, {
                         user1: l,
                         user2: a,
                     });
                 default:
-                    return b.intl.format(b.t["5CSEcH"], {
+                    return _.intl.format(_.t["5CSEcJ"], {
                         user1: l,
                         user2: a,
                         extras: n.length - 2,
                     });
             }
-        })(_),
+        })(b),
         { subtitle: C, icon: S } = (function (e) {
             var t;
             let { priorityMembers: i, partiedMembers: c, voiceChannels: u, currentActivities: p } = e,
-                _ = i.length,
-                E = c.length - _,
+                b = i.length,
+                E = c.length - b,
                 O = p[0],
-                v = null == O ? void 0 : O.activity,
-                y = null == O ? void 0 : O.startedPlayingTime,
-                I = { name: null != (t = null == v ? void 0 : v.name) ? t : "" };
-            if ((0, a.Z)(v) && null != v)
+                I = null == O ? void 0 : O.activity,
+                v = null == O ? void 0 : O.startedPlayingTime,
+                y = { name: null != (t = null == I ? void 0 : I.name) ? t : "" };
+            if ((0, a.Z)(I) && null != I)
                 return {
                     subtitle: (0, r.jsx)(d.ZP, {
-                        start: y,
+                        start: v,
                         location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: I,
+                        messageProps: y,
                     }),
                     icon: null,
                 };
-            if (_ + E === 1 && null != O) {
+            if (b + E === 1 && null != O) {
                 let { game: e } = O;
-                if (null == v)
+                if (null == I)
                     return {
                         subtitle: null,
                         icon: null,
                     };
-                let t = f.dc(v);
+                let t = f.dc(I);
                 if (null != t) return t;
-                switch (v.type) {
-                    case m.IIU.PLAYING:
-                        if ((0, s.Z)(v))
+                switch (I.type) {
+                    case g.IIU.PLAYING:
+                        if ((0, o.Z)(I))
                             return {
-                                subtitle: b.intl.string(b.t.tO8wOz),
+                                subtitle: _.intl.string(_.t.tO8wOx),
                                 icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.XBOX }),
                             };
                         return {
                             subtitle: (0, r.jsx)(d.ZP, {
-                                start: y,
+                                start: v,
                                 location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: I,
+                                messageProps: y,
                             }),
                             icon:
                                 null != e
                                     ? (0, r.jsx)(h.Z.Header.Icon, {
-                                          src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827),
+                                          src: null != e.getIconURL(m.Z) ? e.getIconURL(m.Z) : n(211827),
                                       })
                                     : null,
                         };
-                    case m.IIU.STREAMING:
+                    case g.IIU.STREAMING:
                         return {
-                            subtitle: b.intl.string(b.t.HyGHj4),
+                            subtitle: _.intl.string(_.t.HyGHj7),
                             icon:
-                                null != e && null != e.getIconURL(g.Z)
-                                    ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(g.Z) })
+                                null != e && null != e.getIconURL(m.Z)
+                                    ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(m.Z) })
                                     : null,
                         };
-                    case m.IIU.LISTENING:
+                    case g.IIU.LISTENING:
                         let i;
                         return (
-                            (i = (0, o.Z)(v)
+                            (i = (0, s.Z)(I)
                                 ? (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.SPOTIFY })
-                                : null != e.getIconURL(g.Z)
-                                  ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(g.Z) })
+                                : null != e.getIconURL(m.Z)
+                                  ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(m.Z) })
                                   : (0, r.jsx)(h.Z.Header.Icon, { src: n(211827) })),
                             {
-                                subtitle: b.intl.formatToPlainString(b.t.NF5xoq, { name: v.name }),
+                                subtitle: _.intl.formatToPlainString(_.t.NF5xop, { name: I.name }),
                                 icon: i,
                             }
                         );
-                    case m.IIU.WATCHING:
+                    case g.IIU.WATCHING:
                         return {
-                            subtitle: b.intl.formatToPlainString(b.t.pW3Ip6, { name: v.name }),
+                            subtitle: _.intl.formatToPlainString(_.t.pW3Ip3, { name: I.name }),
                             icon:
-                                null != e && null != e.getIconURL(g.Z)
-                                    ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(g.Z) })
+                                null != e && null != e.getIconURL(m.Z)
+                                    ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(m.Z) })
                                     : null,
                         };
                     default:
                         return {
-                            subtitle: b.intl.string(b.t.grGyaW),
+                            subtitle: _.intl.string(_.t.grGyaf),
                             icon: null,
                         };
                 }
@@ -133,7 +133,7 @@ function _(e) {
             if (0 === p.length) {
                 if (u.length > 0)
                     return {
-                        subtitle: b.intl.string(b.t.grGyaW),
+                        subtitle: _.intl.string(_.t.grGyaf),
                         icon: null,
                     };
                 let e = p[0];
@@ -143,9 +143,9 @@ function _(e) {
                         let e = f.dc(t);
                         if (null != e) return e;
                     }
-                    if (null != t && t.type === m.IIU.LISTENING)
+                    if (null != t && t.type === g.IIU.LISTENING)
                         return {
-                            subtitle: b.intl.string(b.t.rmnkz8),
+                            subtitle: _.intl.string(_.t.rmnkz4),
                             icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.SPOTIFY }),
                         };
                 }
@@ -163,33 +163,33 @@ function _(e) {
                         subtitle: (0, r.jsx)(d.ZP, {
                             start: i,
                             location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: I,
+                            messageProps: y,
                         }),
                         icon:
-                            null != n && null != n.getIconURL(g.Z)
-                                ? (0, r.jsx)(h.Z.Header.Icon, { src: n.getIconURL(g.Z) })
+                            null != n && null != n.getIconURL(m.Z)
+                                ? (0, r.jsx)(h.Z.Header.Icon, { src: n.getIconURL(m.Z) })
                                 : null,
                     }
                 );
             }
             return {
-                subtitle: b.intl.string(b.t.sau5tr),
+                subtitle: _.intl.string(_.t.sau5tt),
                 icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.MULTIPLE }),
             };
-        })(_),
-        N = (0, u.Z)({
-            applicationId: null == (i = _.currentActivities[0]) || null == (t = i.activity) ? void 0 : t.application_id,
+        })(b),
+        T = (0, u.Z)({
+            applicationId: null == (i = b.currentActivities[0]) || null == (t = i.activity) ? void 0 : t.application_id,
             location: "FriendsActivityFeed",
             source: c.m1.FriendsActivityFeed,
         });
     return (0, r.jsx)(h.Z.Header, {
-        priorityUser: y,
-        guildId: null == v ? void 0 : v.id,
-        title: I,
+        priorityUser: v,
+        guildId: null == I ? void 0 : I.id,
+        title: y,
         subtitle: C,
         icon: S,
-        onSubtitleClick: N,
-        onIconClick: N,
-        onContextMenu: (e) => E(e, y.user),
+        onSubtitleClick: T,
+        onIconClick: T,
+        onContextMenu: (e) => E(e, v.user),
     });
 }

@@ -64,15 +64,15 @@ function _(e, t) {
 }
 let p = () => ({
         [a.tN.BRB]: {
-            title: s.intl.string(s.t.fFTJTE),
+            title: s.intl.string(s.t.fFTJTI),
             icon: c,
         },
         [a.tN.CHILLING]: {
-            title: s.intl.string(s.t.vybY9f),
+            title: s.intl.string(s.t.vybY9c),
             icon: r.s_,
         },
         [a.tN.GAMING]: {
-            title: s.intl.string(s.t.wvWdTU),
+            title: s.intl.string(s.t.wvWdTV),
             icon: r.mB,
         },
         [a.tN.WATCHING]: {
@@ -80,27 +80,27 @@ let p = () => ({
             icon: l,
         },
         [a.tN.FOCUSING]: {
-            title: s.intl.string(s.t.D5eCT0),
+            title: s.intl.string(s.t.D5eCTx),
             icon: r.Nl,
         },
     }),
     h = () => ({
         [a.tN.BRB]: {
-            title: s.intl.string(s.t.fFTJTE),
+            title: s.intl.string(s.t.fFTJTI),
             emoji: {
                 id: void 0,
                 name: "\uD83E\uDDFB",
             },
         },
         [a.tN.CHILLING]: {
-            title: s.intl.string(s.t.vybY9f),
+            title: s.intl.string(s.t.vybY9c),
             emoji: {
                 id: void 0,
                 name: "\uD83C\uDF68",
             },
         },
         [a.tN.GAMING]: {
-            title: s.intl.string(s.t.wvWdTU),
+            title: s.intl.string(s.t.wvWdTV),
             emoji: {
                 id: void 0,
                 name: "\u2694️",
@@ -114,7 +114,7 @@ let p = () => ({
             },
         },
         [a.tN.FOCUSING]: {
-            title: s.intl.string(s.t.D5eCT0),
+            title: s.intl.string(s.t.D5eCTx),
             emoji: {
                 id: void 0,
                 name: "\uD83E\uDDE0",
@@ -124,7 +124,7 @@ let p = () => ({
     m = () =>
         _(d({}, h()), {
             [a.tN.CHILLING]: {
-                title: s.intl.string(s.t.IeolFR),
+                title: s.intl.string(s.t.IeolFa),
                 emoji: {
                     id: void 0,
                     name: "\uD83D\uDCAD",

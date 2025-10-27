@@ -17,11 +17,11 @@ function u() {
         children: [
             (0, o.jsx)("div", {
                 className: d.message,
-                children: r.intl.format(r.t.RzEB5u, { name: n.name }),
+                children: r.intl.format(r.t.RzEB5v, { name: n.name }),
             }),
             (0, o.jsx)("div", {
                 className: i()(d.message, d.details),
-                children: r.intl.string(r.t["Q+lNwc"]),
+                children: r.intl.string(r.t["Q+lNwZ"]),
             }),
         ],
     });

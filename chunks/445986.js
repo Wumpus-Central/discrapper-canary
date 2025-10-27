@@ -128,7 +128,7 @@ class b extends a.Component {
                                 m(
                                     {
                                         size: i.CgR.DYNAMIC,
-                                        "aria-label": u.intl.string(u.t.X4IxWF),
+                                        "aria-label": u.intl.string(u.t.X4IxWL),
                                     },
                                     e,
                                 ),

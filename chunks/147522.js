@@ -24,7 +24,7 @@ function d(e, t, n) {
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
-                                  children: c.intl.string(c.t.roBMzs),
+                                  children: c.intl.string(c.t.roBMzj),
                               },
                               "old-divider",
                           ),
@@ -37,7 +37,7 @@ function d(e, t, n) {
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
-                                  children: c.intl.string(c.t["2Ys7np"]),
+                                  children: c.intl.string(c.t["2Ys7nu"]),
                               },
                               "disabled-divider",
                           ),

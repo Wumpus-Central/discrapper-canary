@@ -33,8 +33,8 @@ var i = n(120356),
     N = n(884338),
     R = n(617552),
     P = n(981631),
-    w = n(231338),
-    D = n(388032),
+    D = n(231338),
+    w = n(388032),
     L = n(702952),
     x = n(186880);
 function M(e) {
@@ -43,7 +43,7 @@ function M(e) {
         iconClassName: a()(L.arrowIcon, { [L.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: s.CJ0,
-        label: n ? D.intl.string(D.t["2TiKgS"]) : D.intl.string(D.t.oN8bqe),
+        label: n ? w.intl.string(w.t["2TiKgS"]) : w.intl.string(w.t.oN8bqe),
     });
 }
 function k(e) {
@@ -54,7 +54,7 @@ function k(e) {
             onMouseDown: y,
             onMouseMove: I,
             onMouseLeave: N,
-            onJumpToChannel: D,
+            onJumpToChannel: w,
             idle: M,
             selectedParticipant: k,
             embeddedActivity: j,
@@ -95,7 +95,7 @@ function k(e) {
                         null != (i = null != (n = null == F ? void 0 : F.name) ? n : null == a ? void 0 : a.name)
                             ? i
                             : "",
-                    onJumpToChannel: D,
+                    onJumpToChannel: w,
                     preventIdleComponent: E.Z,
                 }),
             }),
@@ -141,7 +141,7 @@ function k(e) {
                                       className: L.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: K,
-                                      onClosePopout: w.Vq,
+                                      onClosePopout: D.Vq,
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,

@@ -20,17 +20,17 @@ function b(e) {
         E = (0, l.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(b), [b]),
         O = (0, l.e7)([m.Z], () => m.Z.getGuild(null == E ? void 0 : E.guild_id), [E]),
         I = (0, l.e7)([h.Z], () => h.Z.getChannel(null == E ? void 0 : E.channel_id), [E]),
-        y = (0, u.zI)(b, null),
-        v = null != E && (0, o.xt)(E),
+        v = (0, u.zI)(b, null),
+        y = null != E && (0, o.xt)(E),
         C = null != E ? (0, f.DK)(E) : null,
         S = (0, d.Z)(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, C),
-        T = null == y ? void 0 : y.startTime.toISOString(),
+        T = null == v ? void 0 : v.startTime.toISOString(),
         { startDateTimeString: N } = i.useMemo(
             () =>
-                v
+                y
                     ? { startDateTimeString: g.intl.string(g.t.TxqPQR) }
                     : (0, f.ub)(null != T ? T : new Date().toISOString()),
-            [T, v],
+            [T, y],
         ),
         j = null != E ? (0, p.cS)(E) : void 0,
         P = null != (t = null == I ? void 0 : I.name) ? t : j,
@@ -44,7 +44,7 @@ function b(e) {
                 className: _.eventTimeAndUser,
                 children: (0, r.jsx)(a.Text, {
                     variant: "text-sm/semibold",
-                    color: v ? "status-positive" : "text-brand",
+                    color: y ? "status-positive" : "text-brand",
                     children: N,
                 }),
             }),

@@ -2,16 +2,16 @@ let r, i;
 n.d(t, { Z: () => Z }), n(388685);
 var l,
     a = n(392711),
-    o = n.n(a),
-    s = n(442837),
+    s = n.n(a),
+    o = n(442837),
     c = n(433517),
     u = n(570140),
     d = n(700785),
     p = n(388610),
     f = n(592125),
     h = n(981631),
-    g = n(71080);
-function m(e, t, n) {
+    m = n(71080);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function b(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +35,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,52 +60,52 @@ function _(e, t) {
 }
 let E = new Set(),
     O = h.QZA.CLOSED,
-    v = !1,
+    I = !1,
+    v = null,
     y = null,
-    I = null,
     C = null,
     S = null,
-    N = null,
     T = null,
-    P = c.K.get(g.kf) || !1;
-function j(e) {
+    N = null,
+    j = c.K.get(m.kf) || !1;
+function P(e) {
     let t = e.getGuildId(),
-        n = b({}, e.permissionOverwrites);
+        n = _({}, e.permissionOverwrites);
     return null != t && null == n[t] && (n[t] = d.we(t)), n;
 }
 function x() {
     if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C)) return !1;
     let e = C.getGuildId();
-    (I = y = j(C)),
-        null == y[N] && (N = e),
+    (y = v = P(C)),
+        null == v[T] && (T = e),
         (i = null != S),
         (r = d.o4(C, S)),
-        (T = null),
-        (v = !1),
+        (N = null),
+        (I = !1),
         (O = h.QZA.CLOSED),
         E.clear();
 }
-class A extends (l = s.ZP.Store) {
+class A extends (l = o.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, f.Z);
     }
     hasChanges() {
-        return v;
+        return I;
     }
     showNotice() {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == y ? void 0 : y[e];
+        return null == v ? void 0 : v[e];
     }
     get editedPermissionIds() {
         return Array.from(E);
     }
     get permissionOverwrites() {
-        return y;
+        return v;
     }
     get selectedOverwriteId() {
-        return N;
+        return T;
     }
     get formState() {
         return O;
@@ -123,10 +123,10 @@ class A extends (l = s.ZP.Store) {
         return S;
     }
     get advancedMode() {
-        return P;
+        return j;
     }
 }
-m(A, "displayName", "ChannelSettingsPermissionsStore");
+g(A, "displayName", "ChannelSettingsPermissionsStore");
 let Z = new A(u.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
@@ -136,31 +136,31 @@ let Z = new A(u.Z, {
     CHANNEL_SETTINGS_PERMISSIONS_INIT: x,
     CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
         let { id: t, allow: n, deny: i } = e,
-            l = null == y ? void 0 : y[t];
+            l = null == v ? void 0 : v[t];
         if (null == l || null == C) return !1;
-        (l = _(b({}, l), {
+        (l = b(_({}, l), {
             allow: n,
             deny: i,
         })),
-            (y = _(b({}, y), { [t]: l })),
+            (v = b(_({}, v), { [t]: l })),
             E.add(t),
             (O = h.QZA.OPEN),
-            (v = !o().isEqual(y, I)),
+            (I = !s().isEqual(v, y)),
             (r = d.o4(C, S));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != y && null != y[t]) N = t;
+        if (null != v && null != v[t]) T = t;
         else {
             if (null == C) return !1;
-            T = t;
+            N = t;
         }
     },
     CHANNEL_SETTINGS_INIT: function () {
         p.Z.getSection() === h.CoT.PERMISSIONS && x();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (O = h.QZA.CLOSED), (y = null), (I = null), (C = null), (S = null), (v = !1), E.clear(), (N = null), (T = null);
+        (O = h.QZA.CLOSED), (v = null), (y = null), (C = null), (S = null), (I = !1), E.clear(), (T = null), (N = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -173,16 +173,16 @@ let Z = new A(u.Z, {
                     S = p.Z.getCategory();
                     let t = C.getGuildId();
                     if (null == t) return !1;
-                    I = j(C);
+                    y = P(C);
                     let n = {};
                     return (
                         E.forEach((e) => {
-                            null != y && (n[e] = y[e]);
+                            null != v && (n[e] = v[e]);
                         }),
                         null == n[t] && null == C.permissionOverwrites[t] && (n[t] = d.we(t)),
-                        null == (y = b({}, C.permissionOverwrites, n))[N]
-                            ? (N = t)
-                            : null != T && null != y[T] && ((N = T), (T = null)),
+                        null == (v = _({}, C.permissionOverwrites, n))[T]
+                            ? (T = t)
+                            : null != N && null != v[N] && ((T = N), (N = null)),
                         (r = d.o4(C, S)),
                         !0
                     );
@@ -198,6 +198,6 @@ let Z = new A(u.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (P = t), c.K.set(g.kf, t);
+        (j = t), c.K.set(m.kf, t);
     },
 });

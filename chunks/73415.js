@@ -66,7 +66,7 @@ function r(e) {
                 onSecondaryClick: () => {
                     u(), (0, a.$)(i);
                 },
-                secondaryCTA: f.intl.string(f.t.PcTCBw),
+                secondaryCTA: f.intl.string(f.t.PcTCB7),
                 onClose: i,
                 enableArtBoxShadow: !1,
                 analyticsSource: p,

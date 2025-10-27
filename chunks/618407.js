@@ -10,9 +10,9 @@ var l = t(209739),
 function d() {
     return s.Z.supports(o.AN.SOUNDSHARE)
         ? (0, a.isWindows)() && !r().satisfies(null === i.Z || void 0 === i.Z ? void 0 : i.Z.os.release, c.T6)
-            ? u.intl.string(u.t.voRPTE)
+            ? u.intl.string(u.t.voRPTF)
             : (0, a.isMac)() && !r().satisfies(null === i.Z || void 0 === i.Z ? void 0 : i.Z.os.release, c.Ec)
-              ? u.intl.string(u.t.v2y9PT)
+              ? u.intl.string(u.t.v2y9PY)
               : null
-        : u.intl.string(u.t["1b0Gm5"]);
+        : u.intl.string(u.t["1b0Gm7"]);
 }

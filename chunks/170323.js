@@ -69,7 +69,7 @@ function p(e) {
         selectedOption: h,
         isCustomDateRange: g,
         menuName: "account-age",
-        accessibilityLabel: C.intl.string(C.t["D++TgY"]),
+        accessibilityLabel: C.intl.string(C.t["D++Tgf"]),
         onClose: n,
         onSelectDateOption: function (e, n) {
             let r = null != n ? a()().subtract(n.input, n.unit).valueOf() : null;

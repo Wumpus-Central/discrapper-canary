@@ -274,7 +274,7 @@ class N extends (r = i.PureComponent) {
                         }
                         {
                             var c;
-                            let t = null != (c = e.alt) ? c : b.intl.string(b.t.X4IxWF);
+                            let t = null != (c = e.alt) ? c : b.intl.string(b.t.X4IxWL);
                             n = (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(o.$jN, {

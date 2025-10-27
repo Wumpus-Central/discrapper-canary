@@ -14,7 +14,7 @@ function l(e) {
     return "recent" === t && u
         ? (0, r.jsx)(i.sNh, {
               id: "view-activity",
-              label: s.intl.string(s.t.GDWYR0),
+              label: s.intl.string(s.t.GDWYR8),
               action: () => {
                   null == l || l({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), d();
               },

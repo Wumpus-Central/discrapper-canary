@@ -14,7 +14,7 @@ let f = () =>
             children: [
                 (0, r.jsx)("img", {
                     src: d,
-                    alt: c.intl.string(c.t["9wkT19"]),
+                    alt: c.intl.string(c.t["9wkT13"]),
                     className: u.coachtipAsset,
                 }),
                 (0, r.jsxs)("div", {
@@ -22,12 +22,12 @@ let f = () =>
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
-                            children: c.intl.string(c.t.V5y3qa),
+                            children: c.intl.string(c.t.V5y3qZ),
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             color: "text-secondary",
-                            children: c.intl.string(c.t.eSDHDg),
+                            children: c.intl.string(c.t.eSDHDk),
                         }),
                     ],
                 }),

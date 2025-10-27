@@ -14,21 +14,21 @@ let l = (e) => {
             subscriptionTrial: c,
         } = e;
         return t && l
-            ? s.intl.string(s.t.bXTClZ)
+            ? s.intl.string(s.t.bXTClc)
             : t && (n === o.Si.TIER_2 || a)
               ? (0, r.Rt)({
                     intervalType: null == c ? void 0 : c.interval,
                     intervalCount: null == c ? void 0 : c.interval_count,
                 })
               : t
-                ? s.intl.formatToPlainString(s.t.nTmm2t, { freeTrialText: i })
+                ? s.intl.formatToPlainString(s.t.nTmm2v, { freeTrialText: i })
                 : void 0;
     },
     c = (e, t, n, r) =>
         t || n
-            ? s.intl.string(s.t.fkPGam)
+            ? s.intl.string(s.t.fkPGat)
             : e === o.Si.TIER_2
-              ? s.intl.formatToPlainString(s.t.bkQ4bG, { percent: r })
+              ? s.intl.formatToPlainString(s.t.bkQ4bH, { percent: r })
               : void 0,
     u = (e) => {
         var t, n;
@@ -49,7 +49,7 @@ let l = (e) => {
             O = (null == p ? void 0 : p.trial_id) === o.a7;
         return {
             buttonText: d
-                ? s.intl.string(s.t.J61px8)
+                ? s.intl.string(s.t.J61px0)
                 : null != m
                   ? c(b, f, _, m.discount.amount)
                   : l({

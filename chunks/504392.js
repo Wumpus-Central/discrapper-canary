@@ -40,7 +40,7 @@ var r = n(951288),
     y = n(857666),
     N = n(535396),
     O = n(921944),
-    S = n(149829),
+    S = n(459196),
     A = n(388032),
     k = n(823441);
 let R = [N.Us.LEVEL, N.Us.PERK];
@@ -57,10 +57,10 @@ function L(e) {
     let U = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
         M = (0, _.Z)(t),
         D = i.useRef(!1),
-        { shouldShow: V, modalConfig: G } = (0, P.K)(t, "GuildPowerupsOverview"),
-        B = null == o && null != G,
+        { shouldShow: G, modalConfig: V } = (0, P.K)(t, "GuildPowerupsOverview"),
+        B = null == o && null != V,
         W = [];
-    V && B && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    G && B && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
     let [z, F] = (0, u.US)(W),
         K = i.useMemo(
             () =>
@@ -108,7 +108,7 @@ function L(e) {
     }, [t, o, K, H]),
     i.useEffect(() => {
         null != z &&
-            null != G &&
+            null != V &&
             (0, c.ZDy)(
                 async () => {
                     let { default: e } = await n.e("61879").then(n.bind(n, 802426));
@@ -141,7 +141,7 @@ function L(e) {
                                 return e;
                             })(
                                 {
-                                    modalConfig: G,
+                                    modalConfig: V,
                                     markAsDismissed: F,
                                 },
                                 t,
@@ -155,7 +155,7 @@ function L(e) {
                     modalKey: "dismissible_content_".concat(z),
                 },
             );
-    }, [t, z, F, G]),
+    }, [t, z, F, V]),
     (null == U ? void 0 : U.powerupCatalog) == null)
         ? null
         : (0, r.jsxs)("div", {

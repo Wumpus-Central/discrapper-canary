@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(359110),
-    o = n(6025),
-    s = n(433355),
+    s = n(6025),
+    o = n(433355),
     c = n(26373),
     u = n(486622),
     d = n(376191),
@@ -12,31 +12,31 @@ var r = n(951288),
     f = n(513245);
 function h(e) {
     let { active: t, user: n, channel: h } = e,
-        g = (0, c.K)(),
-        m = i.useCallback(() => {
+        m = (0, c.K)(),
+        g = i.useCallback(() => {
             (0, l.showToast)((0, l.createToast)(p.intl.string(p.t["EDYbS+"]), l.ToastType.FAILURE));
         }, []),
-        b = i.useCallback(() => {
-            o.Z.closeChannelSidebar(s.uZ);
-        }, []),
         _ = i.useCallback(() => {
-            o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(h.id);
-        }, [h.id, g]),
+            s.Z.closeChannelSidebar(o.uZ);
+        }, []),
+        b = i.useCallback(() => {
+            s.Z.closeChannelSidebar(o.uZ), m && (0, a.Kh)(h.id);
+        }, [h.id, m]),
         {
             acceptMessageRequest: E,
             rejectMessageRequest: O,
-            isAcceptLoading: v,
-            isRejectLoading: y,
-            isUserProfileLoading: I,
+            isAcceptLoading: I,
+            isRejectLoading: v,
+            isUserProfileLoading: y,
             isOptimisticAccepted: C,
             isOptimisticRejected: S,
         } = (0, u.m)({
             user: n,
-            onAcceptSuccess: _,
-            onRejectSuccess: b,
-            onError: m,
+            onAcceptSuccess: b,
+            onRejectSuccess: _,
+            onError: g,
         }),
-        N = v || y || I || C || S;
+        T = I || v || y || C || S;
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
@@ -58,8 +58,8 @@ function h(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), O(h.id);
                             },
-                            disabled: N,
-                            loading: y || S,
+                            disabled: T,
+                            loading: v || S,
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -72,8 +72,8 @@ function h(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), E(h.id);
                             },
-                            disabled: N,
-                            loading: v || I || C,
+                            disabled: T,
+                            loading: I || y || C,
                         }),
                     }),
                 ],

@@ -1,4 +1,4 @@
-t.r(e), t.d(e, { default: () => _ });
+t.r(e), t.d(e, { default: () => R });
 var s = t(951288);
 t(647438);
 var a = t(442837),
@@ -20,14 +20,14 @@ function p() {
                 tag: "span",
                 color: "always-white",
                 variant: "text-md/normal",
-                children: g.intl.string(g.t["MG+Bzc"]),
+                children: g.intl.string(g.t["MG+Bzb"]),
             }),
             (0, s.jsx)(r.u3T, {
                 href: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
                 children: (0, s.jsx)(r.Text, {
                     variant: "text-md/normal",
                     color: "always-white",
-                    children: g.intl.string(g.t["9JceHB"]),
+                    children: g.intl.string(g.t["9JceHN"]),
                 }),
             }),
         ],
@@ -41,21 +41,21 @@ function x(n) {
         : e === d.oE.SUCCESS
           ? (0, s.jsx)(r.Wn, {
                 messageType: r.QYI.POSITIVE,
-                children: g.intl.format(g.t.maZDLy, { login: "/login" }),
+                children: g.intl.format(g.t.maZDL6, { login: "/login" }),
             })
           : e === d.oE.ERROR
             ? (0, s.jsx)(r.Wn, {
                   messageType: r.QYI.ERROR,
-                  children: g.intl.string(g.t["4sILBQ"]),
+                  children: g.intl.string(g.t["4sILBU"]),
               })
             : e === d.oE.FAILURE
               ? (0, s.jsx)(r.Wn, {
                     messageType: r.QYI.ERROR,
-                    children: g.intl.string(g.t["40R63t"]),
+                    children: g.intl.string(g.t["40R63o"]),
                 })
               : (0, s.jsx)(r.Wn, {
                     messageType: r.QYI.INFO,
-                    children: g.intl.string(g.t["nhhy/f"]),
+                    children: g.intl.string(g.t["nhhy/R"]),
                 });
 }
 function E() {
@@ -64,7 +64,7 @@ function E() {
         children: [(0, s.jsx)(x, {}), (0, s.jsx)(o.Z, {})],
     });
 }
-function _() {
+function R() {
     return (
         null == (0, a.e7)([l.default], () => l.default.getSuspendedUserToken()) &&
             (0, i.uL)(u.Z5c.LOGIN, { source: "suspended_user_safety_hub_page" }),

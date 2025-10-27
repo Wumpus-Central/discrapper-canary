@@ -5,8 +5,8 @@ n.d(t, {
     en: () => j,
     fi: () => O,
     n_: () => T,
-    rS: () => E,
-    tS: () => S,
+    rS: () => S,
+    tS: () => E,
 }),
     n(415506),
     n(388685);
@@ -69,18 +69,18 @@ function p() {
     r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET" });
 }
 function N(e, t, n) {
-    S(
+    E(
         e,
         u.Z.editedOnboardingPrompts.map((e) => (e.id === t ? f({}, e, n) : e)),
     );
 }
 function O(e, t) {
-    S(
+    E(
         e,
         u.Z.editedOnboardingPrompts.filter((e) => e.id !== t),
     );
 }
-function S(e, t) {
+function E(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (
         (r.Z.dispatch({
@@ -96,7 +96,7 @@ function S(e, t) {
         });
     }
 }
-async function E(e, t) {
+async function S(e, t) {
     let n = u.Z.getChangedPrompts();
     if (0 === n.length) return;
     null != t && t.ignoreDefaultPrompt && 1 === n.length && (0, g.RF)(n[0]) && (n = []);
@@ -138,8 +138,8 @@ async function E(e, t) {
     if (m.length > g.b3)
         throw (
             (i.Z.show({
-                title: h.intl.string(h.t.iLdiqa),
-                body: h.intl.formatToPlainString(h.t["cTb/rq"], { numQuestions: g.b3 }),
+                title: h.intl.string(h.t.iLdiqY),
+                body: h.intl.formatToPlainString(h.t["cTb/rg"], { numQuestions: g.b3 }),
             }),
             r.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
@@ -157,11 +157,11 @@ async function E(e, t) {
                 updates: { prompts: O },
             });
     } catch (n) {
-        var S;
-        let { fieldName: e, error: t } = null != (S = new a.Hx(n).getAnyErrorMessageAndField()) ? S : {};
+        var E;
+        let { fieldName: e, error: t } = null != (E = new a.Hx(n).getAnyErrorMessageAndField()) ? E : {};
         throw (
             (i.Z.show({
-                title: h.intl.string(h.t.iLdiqa),
+                title: h.intl.string(h.t.iLdiqY),
                 body: [e, t].filter(d.lm).join(": "),
             }),
             r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED" }),
@@ -181,7 +181,7 @@ async function x(e, t) {
         var n;
         let { fieldName: e, error: t } = null != (n = new a.Hx(l).getAnyErrorMessageAndField()) ? n : {};
         i.Z.show({
-            title: h.intl.string(h.t.iLdiqa),
+            title: h.intl.string(h.t.iLdiqY),
             body: [e, t].filter(d.lm).join(": "),
         });
     }
@@ -197,11 +197,11 @@ function _(e, t, n) {
     let l = { optionErrors: [] },
         r = !1;
     return (
-        n.title.length <= 0 && ((l.title = h.intl.string(h.t.h8Hg1d)), (r = !0)),
-        n.options.length <= 0 && ((l.options = h.intl.string(h.t["64tF+f"])), (r = !0)),
+        n.title.length <= 0 && ((l.title = h.intl.string(h.t.h8Hg1T)), (r = !0)),
+        n.options.length <= 0 && ((l.options = h.intl.string(h.t["64tF+W"])), (r = !0)),
         n.inOnboarding &&
             t.filter((e) => e.inOnboarding).length > g.b3 &&
-            ((l.config = h.intl.formatToPlainString(h.t["cTb/rq"], { numQuestions: g.b3 })), (r = !0)),
+            ((l.config = h.intl.formatToPlainString(h.t["cTb/rg"], { numQuestions: g.b3 })), (r = !0)),
         (l.optionErrors = n.options.map((l) => j(e, t, n, l))),
         (r = r || l.optionErrors.some((e) => null != e)) ? l : null
     );
@@ -213,10 +213,10 @@ function j(e, t, n, l) {
         for (let l of t)
             if (l.id !== n.id) {
                 for (let t of l.options)
-                    if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return h.intl.string(h.t.rKxyvb);
+                    if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return h.intl.string(h.t.rKxyvd);
             }
     }
     let s = (null != (i = l.roleIds) ? i : []).filter((t) => null != c.Z.getRole(e.id, t)),
         d = (null != (a = l.channelIds) ? a : []).filter((e) => null != o.Z.getChannel(e));
-    return 0 === s.length && 0 === d.length ? h.intl.string(h.t.F6SUWF) : null;
+    return 0 === s.length && 0 === d.length ? h.intl.string(h.t.F6SUWB) : null;
 }

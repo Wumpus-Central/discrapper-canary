@@ -18,14 +18,14 @@ class f extends i.PureComponent {
     render() {
         let { braintreeEmail: e, paypalClient: t } = this.props;
         return (0, r.jsx)(o.oil, {
-            label: d.intl.string(d.t.QQBAoq),
+            label: d.intl.string(d.t.QQBAos),
             leading: {
                 type: "image",
                 src: (0, l.hx)(l.ZP.Types.PAYPAL),
             },
             value: e,
             readOnly: !0,
-            placeholder: null == t ? d.intl.string(d.t.dte2Mz) : d.intl.string(d.t.hopw7e),
+            placeholder: null == t ? d.intl.string(d.t.dte2M9) : d.intl.string(d.t.hopw7X),
         });
     }
 }

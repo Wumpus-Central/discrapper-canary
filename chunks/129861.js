@@ -86,7 +86,7 @@ let v = (e) => {
             className: a()(m.info, { [m.withDisplayNameStyles]: y && null != E }, f),
             children: [
                 (0, r.jsx)(s.u, {
-                    text: h.intl.string(h.t.Br1ls7),
+                    text: h.intl.string(h.t.Br1ls3),
                     shouldShow: g,
                     "aria-label": !!g && void 0,
                     children: (0, r.jsx)("span", {

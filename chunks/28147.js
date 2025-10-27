@@ -125,7 +125,7 @@ function k(e) {
           ? (0, i.jsx)(C.A, {
                 type: y.LG.SEARCH_EMPTY,
                 searchQuery: n,
-                textContent: r === y._b.TEXT ? I.intl.string(I.t.LSNOYW) : I.intl.string(I.t.Clu7Qk),
+                textContent: r === y._b.TEXT ? I.intl.string(I.t.LSNOYf) : I.intl.string(I.t.Clu7Qh),
             })
           : (0, i.jsxs)("div", {
                 children: [
@@ -182,7 +182,7 @@ function M(e) {
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(E.Z, {
-                title: I.intl.string(I.t["0hKkS0"]),
+                title: I.intl.string(I.t["0hKkS+"]),
                 buttonType: k,
                 onClickViewButton: m ? C : void 0,
             }),
@@ -298,7 +298,7 @@ function D(e) {
           })
         : (0, i.jsxs)("div", {
               children: [
-                  (0, i.jsx)(E.Z, { title: I.intl.string(I.t.shUONj) }),
+                  (0, i.jsx)(E.Z, { title: I.intl.string(I.t.shUONg) }),
                   (0, i.jsxs)("div", {
                       className: S.sectionActivitiesContentContainer,
                       children: [
@@ -337,7 +337,7 @@ function H(e) {
 function B() {
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(E.Z, { title: I.intl.string(I.t["0hKkS0"]) }),
+            (0, i.jsx)(E.Z, { title: I.intl.string(I.t["0hKkS+"]) }),
             (0, i.jsx)("div", {
                 className: S.sectionContentContainer,
                 children: L.map((e) => (0, i.jsx)(A.Z, {}, e)),

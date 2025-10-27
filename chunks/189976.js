@@ -41,7 +41,7 @@ function p(e, t) {
                         b.has(e.id) || b.set(e.id, e.content),
                             (0, o.showToast)(
                                 (0, o.createToast)(
-                                    f.intl.formatToPlainString(f.t.Znl8Z2, { targetLanguage: p }),
+                                    f.intl.formatToPlainString(f.t.Znl8Z8, { targetLanguage: p }),
                                     o.ToastType.AI,
                                 ),
                             );
@@ -66,7 +66,7 @@ function p(e, t) {
                                 }),
                                 (0, o.showToast)(
                                     (0, o.createToast)(
-                                        f.intl.formatToPlainString(f.t.FtVUqq, { targetLanguage: p }),
+                                        f.intl.formatToPlainString(f.t.FtVUqm, { targetLanguage: p }),
                                         o.ToastType.SUCCESS,
                                     ),
                                 ));
@@ -128,14 +128,14 @@ function p(e, t) {
         ? h
             ? (0, r.jsx)(o.sNh, {
                   id: "revert-translation",
-                  label: f.intl.string(f.t.JC9BXl),
+                  label: f.intl.string(f.t.JC9BXn),
                   icon: o.os0,
                   action: y,
                   disabled: m,
               })
             : (0, r.jsx)(o.sNh, {
                   id: "translate",
-                  label: m ? f.intl.string(f.t.SVKIdX) : f.intl.string(f.t["6epDlZ"]),
+                  label: m ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
                   action: () => O(),
                   disabled: m,
                   children: v,

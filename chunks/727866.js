@@ -31,9 +31,9 @@ let o = (e, t) => {
     },
     s = {
         getTextInVoiceSendMessageChannelPermissionText: function (e) {
-            return e ? a.intl.format(a.t.Q1rwpq, { warningHook: o }) : a.intl.string(a.t.WQ6zpa);
+            return e ? a.intl.format(a.t.Q1rwpr, { warningHook: o }) : a.intl.string(a.t.WQ6zpT);
         },
         getTextInVoiceReadMessageHistoryChannelPermissionText: function (e) {
-            return e ? a.intl.format(a.t.Rx4pbG, { warningHook: o }) : a.intl.string(a.t.cuMfHx);
+            return e ? a.intl.format(a.t.Rx4pbJ, { warningHook: o }) : a.intl.string(a.t.cuMfH0);
         },
     };

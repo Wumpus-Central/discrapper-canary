@@ -69,7 +69,7 @@ function v(e) {
     return (0, s.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
             type: c.K.RATE_LIMIT,
-            message: d.intl.string(d.t.T15lqq),
+            message: d.intl.string(d.t.T15lqn),
         }))
         .with({ error: s.P.not(s.P.nullish) }, (e) => {
             let { error: t } = e;
@@ -80,11 +80,11 @@ function v(e) {
         })
         .with({ taken: !1 }, () => ({
             type: c.K.AVAILABLE,
-            message: d.intl.string(d.t.PgfBS0),
+            message: d.intl.string(d.t.PgfBSx),
         }))
         .with({ taken: !0 }, () => ({
             type: c.K.ERROR,
-            message: d.intl.string(d.t.mCrAUV),
+            message: d.intl.string(d.t.mCrAUb),
         }))
         .with({ error: s.P.nullish }, () => ({
             type: c.K.INTERNAL_ERROR,

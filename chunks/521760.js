@@ -9,13 +9,13 @@ function e(t) {
         size: "sm",
         transitionState: i,
         onClose: n,
-        title: r.intl.string(r.t["iE/uS0"]),
-        subtitle: r.intl.string(r.t.G6Snvb),
+        title: r.intl.string(r.t["iE/uSw"]),
+        subtitle: r.intl.string(r.t.G6SnvT),
         actions: [
             {
                 variant: "primary",
                 onClick: () => n(),
-                text: r.intl.string(r.t.cpT0Cg),
+                text: r.intl.string(r.t.cpT0Cq),
             },
         ],
     });

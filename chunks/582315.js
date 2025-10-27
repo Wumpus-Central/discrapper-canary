@@ -74,13 +74,13 @@ function p(e) {
     let N = n.isLink(p) && "override" === T,
         R = v && "action" === e.UNSTABLE_itemBehavior,
         P = n.isLink(p) && "selection" !== T && "none" !== T,
-        w = !O && n.canSelectItem(p) && !N && !R,
-        D = (v || P) && !O,
-        L = D && ("replace" === n.selectionBehavior ? !w : !w || n.isEmpty),
-        x = D && w && "replace" === n.selectionBehavior,
+        D = !O && n.canSelectItem(p) && !N && !R,
+        w = (v || P) && !O,
+        L = w && ("replace" === n.selectionBehavior ? !D : !D || n.isEmpty),
+        x = w && D && "replace" === n.selectionBehavior,
         M = L || x,
         k = (0, _.useRef)(null),
-        j = M && w,
+        j = M && D,
         U = (0, _.useRef)(!1),
         G = (0, _.useRef)(!1),
         B = n.getItemProps(p),
@@ -103,23 +103,23 @@ function p(e) {
                   ? ((F.onPressUp = L
                         ? void 0
                         : (e) => {
-                              "mouse" === e.pointerType && w && A(e);
+                              "mouse" === e.pointerType && D && A(e);
                           }),
                     (F.onPress = L
                         ? Z
                         : (e) => {
-                              "keyboard" !== e.pointerType && "mouse" !== e.pointerType && w && A(e);
+                              "keyboard" !== e.pointerType && "mouse" !== e.pointerType && D && A(e);
                           }))
                   : (F.onPress = (e) => {
                         L || (x && "mouse" !== e.pointerType)
                             ? ("keyboard" !== e.pointerType || h()) && Z(e)
-                            : "keyboard" !== e.pointerType && w && A(e);
+                            : "keyboard" !== e.pointerType && D && A(e);
                     }))
             : ((F.onPressStart = (e) => {
                   (k.current = e.pointerType),
                       (U.current = j),
                       (G.current = L),
-                      w && (("mouse" === e.pointerType && !L) || ("keyboard" === e.pointerType && (!D || m()))) && A(e);
+                      D && (("mouse" === e.pointerType && !L) || ("keyboard" === e.pointerType && (!w || m()))) && A(e);
               }),
               (F.onPress = (e) => {
                   ("touch" === e.pointerType ||
@@ -127,7 +127,7 @@ function p(e) {
                       "virtual" === e.pointerType ||
                       ("keyboard" === e.pointerType && M && h()) ||
                       ("mouse" === e.pointerType && G.current)) &&
-                      (M ? Z(e) : w && A(e));
+                      (M ? Z(e) : D && A(e));
               })),
         (C["data-collection"] = (0, r.Zx)(n.collection)),
         (C["data-key"] = p),
@@ -169,7 +169,7 @@ function p(e) {
     return {
         itemProps: (0, s.d)(
             C,
-            w || L || (b && !O) ? V : {},
+            D || L || (b && !O) ? V : {},
             j ? W : {},
             {
                 onDoubleClick: Y,
@@ -183,7 +183,7 @@ function p(e) {
         isSelected: n.isSelected(p),
         isFocused: n.isFocused && n.focusedKey === p,
         isDisabled: O,
-        allowsSelection: w,
+        allowsSelection: D,
         hasAction: M,
     };
 }

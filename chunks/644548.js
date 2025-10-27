@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(797342),
     E = n(388032);
 function b(e) {
-    if (e === a._.WEEK) return E.t["7TXfc3"];
+    if (e === a._.WEEK) return E.t["7TXfc6"];
 }
 let y = (e, t, n, r) => {
         let i = b(r),
@@ -30,7 +30,7 @@ let y = (e, t, n, r) => {
             .replaceAll("*", "");
     },
     O = (e, t) =>
-        E.intl.formatToPlainString(E.t.tAwI1t, {
+        E.intl.formatToPlainString(E.t.tAwI1k, {
             username: t.username,
             activity: e.extra.game_name,
         }),
@@ -49,7 +49,7 @@ let y = (e, t, n, r) => {
                             applicationImageSrc: null == v ? void 0 : v.src,
                             avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                             description: y(n, t, I, R),
-                            timestamp: E.intl.formatToPlainString(E.t.YL7UEx, {
+                            timestamp: E.intl.formatToPlainString(E.t.YL7UE3, {
                                 hours: Math.round(N / o.Z.Seconds.HOUR),
                             }),
                             colors: [A, C],
@@ -59,20 +59,20 @@ let y = (e, t, n, r) => {
                 [null == v ? void 0 : v.src, t, N, n, A, R, C, I],
             );
         if (null == I || null == N || null == R || !(0, _.qy)(R)) return null;
-        let w = null != n.extra.platform ? f.v[n.extra.platform] : null;
+        let D = null != n.extra.platform ? f.v[n.extra.platform] : null;
         return (0, r.jsxs)(h.yR, {
             children: [
                 (0, r.jsx)(h.wG, {
                     channel: t,
                     headerIcons:
-                        null == w
+                        null == D
                             ? null
                             : (0, r.jsx)(m.Z, {
-                                  Icon: w,
-                                  "aria-label": E.intl.string(E.t.YR4cHB),
+                                  Icon: D,
+                                  "aria-label": E.intl.string(E.t.YR4cHH),
                               }),
                     entry: n,
-                    userDescription: E.t.rPqqtr,
+                    userDescription: E.t.rPqqts,
                     title: S,
                     subtitle: T,
                     badges: (0, r.jsx)(p.Gk, {

@@ -46,7 +46,7 @@ class v extends (i = s.PureComponent) {
                           e,
                       )
                     : (0, r.jsx)(m.Z, {
-                          title: y.intl.string(y.t.YUU0RE),
+                          title: y.intl.string(y.t.YUU0RF),
                           renderSettings: b,
                           onDragStart: this.onDragStart,
                           children: (0, r.jsx)(g.Z, {}),

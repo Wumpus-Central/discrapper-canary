@@ -73,8 +73,8 @@ function O(t) {
               })({}, g)),
               (r = r =
                   {
-                      title: p.intl.string(p.t.DJ8ojI),
-                      subtitle: p.intl.string(p.t["E+Ph7O"]),
+                      title: p.intl.string(p.t.DJ8ojF),
+                      subtitle: p.intl.string(p.t["E+Ph7D"]),
                       actions: [
                           {
                               variant: "secondary",
@@ -83,7 +83,7 @@ function O(t) {
                           },
                           {
                               variant: "primary",
-                              text: p.intl.string(p.t.ELRJQk),
+                              text: p.intl.string(p.t.ELRJQu),
                               onClick: () => {
                                   u.isPlatformEmbedded ? a.ZP.focus() : window.focus(), y();
                               },

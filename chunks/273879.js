@@ -16,7 +16,7 @@ let f = () =>
             (0, r.jsx)(o.k, {}),
             (0, r.jsx)("div", {
                 children: (0, r.jsxs)(a.N, {
-                    title: d.intl.string(d.t.SRZyHh),
+                    title: d.intl.string(d.t.SRZyHg),
                     children: [(0, r.jsx)(u.Z, {}), (0, r.jsx)(c.Z, {}), (0, r.jsx)(l.Z, {}), (0, r.jsx)(s.Z, {})],
                 }),
             }),

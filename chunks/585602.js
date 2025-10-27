@@ -9,7 +9,7 @@ function s(e) {
     return t.taxInclusive || t.tax <= 0
         ? null
         : (0, r.jsx)(a.B1, {
-              label: o.intl.string(o.t.jiRvCw),
+              label: o.intl.string(o.t.jiRvC7),
               value: (0, i.T4)(t.tax, t.currency),
           });
 }

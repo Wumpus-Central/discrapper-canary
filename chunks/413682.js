@@ -22,7 +22,7 @@ function m(e) {
                 className: d.column,
                 children: (0, r.jsx)(a.rsf, {
                     label: c.intl.string(c.t.Dl4mJS),
-                    description: c.intl.string(c.t.xzHcoa),
+                    description: c.intl.string(c.t.xzHcod),
                     checked: n,
                     onChange: p,
                     disabled: !t,
@@ -31,7 +31,7 @@ function m(e) {
             (0, r.jsx)("div", {
                 className: d.column,
                 children: (0, r.jsx)("img", {
-                    alt: c.intl.string(c.t.UOJp5e),
+                    alt: c.intl.string(c.t.UOJp5a),
                     src: (0, l.ap)(m) ? g : u,
                     className: d.progressBarImage,
                 }),

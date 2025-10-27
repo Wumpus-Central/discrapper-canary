@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(687158),
     R = n(518950),
     P = n(184325),
-    w = n(867176),
-    D = n(25990),
+    D = n(867176),
+    w = n(25990),
     L = n(594174),
     x = n(572004),
     M = n(51144),
@@ -553,7 +553,7 @@ function eo() {
         n = (0, N.ZP)(t.id),
         i = (0, C.Z)(n),
         a = j.co.useSetting(),
-        o = (0, c.e7)([D.Z], () => D.Z.getErrors()),
+        o = (0, c.e7)([w.Z], () => w.Z.getErrors()),
         s = null == o || null == (e = o.avatar) ? void 0 : e[0],
         { avatarSrc: u, avatarDecorationSrc: d } = (0, R.Z)({
             userId: null == t ? void 0 : t.id,
@@ -563,7 +563,7 @@ function eo() {
     return (0, r.jsxs)("div", {
         className: W.accountProfileCard,
         children: [
-            (0, r.jsx)(w.b, {
+            (0, r.jsx)(D.b, {
                 user: t,
                 displayProfile: n,
                 avatarSize: f.EFr.SIZE_80,

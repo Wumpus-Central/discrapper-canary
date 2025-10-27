@@ -63,7 +63,7 @@ function m(e) {
         action: a.yM.SEND_MESSAGE,
         icon: o.kBi,
         onClick: l,
-        text: c.intl.string(c.t.zROXER),
+        text: c.intl.string(c.t.zROXEV),
     };
 }
 function p(e) {

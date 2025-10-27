@@ -73,7 +73,7 @@ let x = r.forwardRef(function (e, t) {
                         tabIndex: 0,
                         className: a()(v.button, { [v.buttonActive]: m }),
                         onClick: O,
-                        "aria-label": _.intl.string(_.t.erHFxM),
+                        "aria-label": _.intl.string(_.t.erHFxI),
                         "aria-expanded": m,
                         "aria-haspopup": "dialog",
                         focusProps: {

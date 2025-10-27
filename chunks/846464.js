@@ -1,39 +1,39 @@
-n.d(t, { q: () => v });
+n.d(t, { q: () => y });
 var r = n(951288),
     i = n(120356),
     a = n.n(i),
     l = n(481060),
-    s = n(140465),
-    o = n(283066),
+    o = n(140465),
+    s = n(283066),
     d = n(639119),
-    c = n(973007),
-    C = n(701464),
+    C = n(973007),
+    c = n(701464),
     u = n(602733),
     p = n(74538),
-    h = n(987209),
-    _ = n(563132),
+    _ = n(987209),
+    h = n(563132),
     m = n(409813),
     f = n(614223),
     x = n(48175),
     g = n(474936),
     j = n(388032),
     b = n(360026);
-function v(e) {
+function y(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: i } = e,
         {
             setSelectedSkuId: a,
             activeSubscription: l,
-            startedPaymentFlowWithPaymentSourcesRef: c,
-            setSelectedPlanId: C,
+            startedPaymentFlowWithPaymentSourcesRef: C,
+            setSelectedPlanId: c,
             priceOptions: u,
             defaultPlanId: j,
-        } = (0, _.JL)(),
-        { isGift: b, claimableRewards: v } = (0, h.wD)(),
-        L = b && null != v && v.length > 0,
-        y = (0, d.N)(i),
-        I = (0, s.Nx)(),
-        w = (0, o.Z)({ location: "PremiumPaymentSelect" });
-    return (0, r.jsx)(S, {
+        } = (0, h.JL)(),
+        { isGift: b, claimableRewards: y } = (0, _.wD)(),
+        v = b && null != y && y.length > 0,
+        S = (0, d.N)(i),
+        w = (0, o.Nx)(),
+        I = (0, s.Z)({ location: "PremiumPaymentSelect" });
+    return (0, r.jsx)(L, {
         selectSku: (e) =>
             (function (e) {
                 let {
@@ -43,57 +43,57 @@ function v(e) {
                     handleStepChange: i,
                     isGift: a,
                     userTrialOffer: l,
-                    setSelectedPlanId: s,
-                    startedPaymentFlowWithPaymentSources: o,
+                    setSelectedPlanId: o,
+                    startedPaymentFlowWithPaymentSources: s,
                     defaultPlanId: d,
                 } = e;
                 r(n);
-                let c = m.h8.PLAN_SELECT,
-                    C = (0, p.k5)(t);
-                (C !== g.Si.TIER_1 && C !== g.Si.TIER_2) || n !== g.Si.TIER_0 || a || (c = m.h8.WHAT_YOU_LOSE);
+                let C = m.h8.PLAN_SELECT,
+                    c = (0, p.k5)(t);
+                (c !== g.Si.TIER_1 && c !== g.Si.TIER_2) || n !== g.Si.TIER_0 || a || (C = m.h8.WHAT_YOU_LOSE);
                 let u = (0, x.T)({
                         userTrialOffer: l,
                         isGift: a,
                         skuId: n,
                     }),
-                    h = (0, f.Kp)({
+                    _ = (0, f.Kp)({
                         isTrial: u,
                         isGift: a,
                         selectedSkuId: n,
-                        startedPaymentFlowWithPaymentSources: o,
+                        startedPaymentFlowWithPaymentSources: s,
                     });
-                c !== m.h8.WHAT_YOU_LOSE && h && ((c = m.h8.REVIEW), s((0, f.nA)(n, t, d))),
-                    i(c, { analyticsDataOverride: { sku_id: n } });
+                C !== m.h8.WHAT_YOU_LOSE && _ && ((C = m.h8.REVIEW), o((0, f.nA)(n, t, d))),
+                    i(C, { analyticsDataOverride: { sku_id: n } });
             })({
                 activeSubscription: l,
                 newSkuId: e,
                 setSelectedSkuId: a,
                 handleStepChange: t,
                 isGift: b,
-                userTrialOffer: y,
-                startedPaymentFlowWithPaymentSources: c.current,
-                setSelectedPlanId: C,
+                userTrialOffer: S,
+                startedPaymentFlowWithPaymentSources: C.current,
+                setSelectedPlanId: c,
                 defaultPlanId: j,
             }),
         onClose: n,
         isGift: b,
-        inOfferExperience: I,
+        inOfferExperience: w,
         priceOptions: u,
-        showPromotionalGiftBanner: L,
-        enablePremiumBrandRefresh: w,
+        showPromotionalGiftBanner: v,
+        enablePremiumBrandRefresh: I,
     });
 }
-function S(e) {
+function L(e) {
     let {
             selectSku: t,
             onClose: n,
             isGift: i,
-            inOfferExperience: s,
-            priceOptions: o,
+            inOfferExperience: o,
+            priceOptions: s,
             showPromotionalGiftBanner: d,
-            enablePremiumBrandRefresh: _,
+            enablePremiumBrandRefresh: h,
         } = e,
-        { giftRecipient: m } = (0, h.wD)(),
+        { giftRecipient: m } = (0, _.wD)(),
         f = (0, u.ao)({
             location: "PremiumPaymentSelect",
             giftRecipient: m,
@@ -102,22 +102,22 @@ function S(e) {
         x = f
             ? (0, r.jsx)(l.Heading, {
                   variant: "heading-lg/bold",
-                  children: j.intl.string(j.t["wg/30t"]),
+                  children: j.intl.string(j.t["wg/30i"]),
               })
-            : _
+            : h
               ? (0, r.jsx)(l.Heading, {
                     variant: "heading-lg/bold",
-                    children: j.intl.string(j.t["r+SebW"]),
+                    children: j.intl.string(j.t["r+SebU"]),
                 })
               : (0, r.jsx)(l.Heading, {
                     variant: "heading-md/semibold",
-                    children: j.intl.string(j.t["r+SebW"]),
+                    children: j.intl.string(j.t["r+SebU"]),
                 });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.xBx, {
                 "data-migration-pending": !0,
-                className: a()(b.skuSelectModalHeader, { [b.premiumBrandRefreshHeader]: _ }),
+                className: a()(b.skuSelectModalHeader, { [b.premiumBrandRefreshHeader]: h }),
                 separator: !1,
                 children: (0, r.jsxs)(l.Kqy, {
                     direction: "horizontal",
@@ -136,26 +136,26 @@ function S(e) {
             (0, r.jsx)(l.hzk, {
                 "data-migration-pending": !0,
                 className: a()(b.skuSelectModalContent, {
-                    [b.modalSize]: !_,
-                    [b.modalPadding]: s && !_,
-                    [b.premiumBrandRefreshContent]: _,
+                    [b.modalSize]: !h,
+                    [b.modalPadding]: o && !h,
+                    [b.premiumBrandRefreshContent]: h,
                     [b.wishlistModalSize]: f,
                 }),
                 children:
                     null != m && f
-                        ? (0, r.jsx)(C.Z, {
+                        ? (0, r.jsx)(c.Z, {
                               onSelectSku: (e) => t((0, p.Wz)(e)),
                               isGift: i,
-                              priceOptions: o,
+                              priceOptions: s,
                               showPromotionalGiftBanner: d,
                               giftRecipient: m,
                           })
-                        : (0, r.jsx)(c.ZP, {
+                        : (0, r.jsx)(C.ZP, {
                               onSelectSku: (e) => t((0, p.Wz)(e)),
                               isGift: i,
-                              priceOptions: o,
+                              priceOptions: s,
                               showPromotionalGiftBanner: d,
-                              enablePremiumBrandRefresh: _,
+                              enablePremiumBrandRefresh: h,
                           }),
             }),
         ],

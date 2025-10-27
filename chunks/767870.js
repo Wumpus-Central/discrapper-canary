@@ -1,11 +1,11 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(704215),
-    o = n(927359),
-    s = n(706140),
+    s = n(927359),
+    o = n(706140),
     c = n(325767),
     u = n(382791),
     d = n(966677);
@@ -36,11 +36,11 @@ function p(e) {
 }
 let f = "premium_tier_gradient",
     h = "smaller_sparkle_gradient";
-function g(e) {
+function m(e) {
     var t,
         n,
-        { width: i = 14, height: l = 15, color: a = "white", foreground: o } = e,
-        s = (function (e, t) {
+        { width: i = 14, height: l = 15, color: a = "white", foreground: s } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -63,14 +63,14 @@ function g(e) {
         })(e, ["width", "height", "color", "foreground"]);
     return (0, r.jsxs)(
         "svg",
-        ((t = p({}, (0, c.Z)(p({}, s)))),
+        ((t = p({}, (0, c.Z)(p({}, o)))),
         (n = n =
             {
                 preserveAspectRatio: "none",
                 width: i,
                 height: l,
                 viewBox: "0 0 14 15",
-                className: o,
+                className: s,
                 xmlns: "http://www.w3.org/2000/svg",
                 children: [
                     (0, r.jsx)("defs", {
@@ -136,27 +136,27 @@ function g(e) {
         t),
     );
 }
-function m(e) {
-    let { className: t, startsAt: n, endsAt: i, messageStyle: c, upperCase: p, showSparkles: m } = e,
-        [b] = (0, s.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
+function g(e) {
+    let { className: t, startsAt: n, endsAt: i, messageStyle: c, upperCase: p, showSparkles: g } = e,
+        [_] = (0, o.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
             showAfterTimestamp: n.valueOf(),
             cooldownDurationMs: 0,
         }),
-        _ = (0, o.ZP)(i, c);
-    return "" === _
+        b = (0, s.ZP)(i, c);
+    return "" === b
         ? null
-        : (p && (_ = _.toUpperCase()),
+        : (p && (b = b.toUpperCase()),
           (0, r.jsxs)("div", {
               className: l()(t, d.countDown),
               children: [
-                  m
+                  g
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(g, {
+                                (0, r.jsx)(m, {
                                     foreground: d.sparkleStar1,
                                     color: "url(#".concat(h, ")"),
                                 }),
-                                (0, r.jsx)(g, {
+                                (0, r.jsx)(m, {
                                     foreground: d.sparkleStar2,
                                     color: "url(#".concat(f, ")"),
                                 }),
@@ -164,9 +164,9 @@ function m(e) {
                         })
                       : null,
                   (0, r.jsx)(u.mn, {
-                      text: _,
+                      text: b,
                       colorOptions:
-                          b === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL
+                          _ === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL
                               ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                               : u.VE.PREMIUM_TIER_2_GREY_FILL,
                   }),

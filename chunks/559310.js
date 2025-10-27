@@ -1,5 +1,5 @@
 n.d(t, {
-    am: () => a,
+    am: () => r,
     s6: () => s,
 });
 var i = n(973285);
@@ -18,7 +18,7 @@ let l = (0, n(818083).B)({
 });
 function s(e) {
     let { autoTrackExposure: t, location: n, guildId: s } = e,
-        { enabled: a } = i.W.getCurrentConfig({
+        { enabled: r } = i.W.getCurrentConfig({
             guildId: s,
             location: n,
         });
@@ -29,13 +29,13 @@ function s(e) {
         },
         {
             autoTrackExposure: t,
-            disable: !a,
+            disable: !r,
         },
     );
 }
-function a(e) {
+function r(e) {
     let { autoTrackExposure: t, location: n, guildId: s } = e,
-        { enabled: a } = i.W.useExperiment({
+        { enabled: r } = i.W.useExperiment({
             guildId: s,
             location: n,
         });
@@ -46,7 +46,7 @@ function a(e) {
         },
         {
             autoTrackExposure: t,
-            disable: !a,
+            disable: !r,
         },
     );
 }

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(647438),
     a = n(785717),
     l = n(86419),
     o = n(206599),
-    s = n(977416);
-function c(e) {
+    c = n(977416);
+function s(e) {
     var { widgetType: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -28,7 +28,7 @@ function c(e) {
             }
             return i;
         })(e, ["widgetType"]);
-    let { games: c, onAddGame: u } = (0, o.K)(t),
+    let { games: s, onAddGame: u } = (0, o.K)(t),
         { trackUserProfileEditAction: d } = (0, a.KZ)(),
         f = i.useCallback(
             (e, n, r) => {
@@ -47,7 +47,7 @@ function c(e) {
             [u, t, d],
         );
     return (0, r.jsx)(
-        s.Z,
+        c.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +74,7 @@ function c(e) {
             return e;
         })(
             {
-                games: c,
+                games: s,
                 onClick: f,
             },
             n,

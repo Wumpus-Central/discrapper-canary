@@ -5,9 +5,9 @@ var r = n(592204),
     a = n(82554),
     s = n(388032);
 let o = {
-    getTitle: () => s.intl.string(s.t.DPVOLS),
-    getDisabledTitle: () => s.intl.string(s.t["B/dag4"]),
-    getDescription: () => s.intl.string(s.t["+Esd3N"]),
+    getTitle: () => s.intl.string(s.t.DPVOLW),
+    getDisabledTitle: () => s.intl.string(s.t["B/dag/"]),
+    getDescription: () => s.intl.string(s.t["+Esd3D"]),
     eligibleReportSubtypes: [
         a.i5.SUB_GENERAL_HARASSMENT,
         a.i5.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY,

@@ -20,8 +20,8 @@ function f() {
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS,
         children: (0, r.jsx)(a.rsf, {
-            label: d.intl.string(d.t["1CzWUF"]),
-            description: d.intl.string(d.t.jTNPHB),
+            label: d.intl.string(d.t["1CzWUK"]),
+            description: d.intl.string(d.t.jTNPHM),
             checked: e,
             onChange: n,
         }),

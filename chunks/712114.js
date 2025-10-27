@@ -35,13 +35,13 @@ function h(e) {
                       className: p.header,
                       color: "header-primary",
                       variant: "heading-md/extrabold",
-                      children: d.intl.format(d.t["+qxkzM"], { count: n.newClipIds.length }),
+                      children: d.intl.format(d.t["+qxkzC"], { count: n.newClipIds.length }),
                   }),
                   (0, i.jsx)(a.Text, {
                       color: "text-default",
                       className: p.__invalid_content,
                       variant: "text-sm/medium",
-                      children: d.intl.format(d.t["7XX0/f"], { applicationName: n.applicationName }),
+                      children: d.intl.format(d.t["7XX0/X"], { applicationName: n.applicationName }),
                   }),
                   (0, i.jsx)("div", {
                       className: p.buttonsContainer,
@@ -56,7 +56,7 @@ function h(e) {
                               }),
                               (0, i.jsx)(a.Button, {
                                   variant: "primary",
-                                  text: d.intl.string(d.t.md4qKy),
+                                  text: d.intl.string(d.t.md4qKz),
                                   onClick: t,
                               }),
                           ],

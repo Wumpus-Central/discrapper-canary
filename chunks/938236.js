@@ -28,7 +28,7 @@ function o(e) {
     }
     return e;
 }
-function s(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -46,7 +46,7 @@ function s(e, t) {
         e
     );
 }
-let c = (0, r.sampleSize)(l.J6, l.J6.length),
+let s = (0, r.sampleSize)(l.J6, l.J6.length),
     u = (0, i.U)((e, t) => ({
         stack: [],
         wishlistStack: [],
@@ -55,8 +55,8 @@ let c = (0, r.sampleSize)(l.J6, l.J6.length),
         onLoad: (n, r, i) => {
             let l = new Set(i.map((e) => e.applicationId));
             for (let i of (e({
-                stack: [...n.filter((e) => !l.has(e)), ...c],
-                wishlistStack: [...r.filter((e) => !l.has(e)), ...c],
+                stack: [...n.filter((e) => !l.has(e)), ...s],
+                wishlistStack: [...r.filter((e) => !l.has(e)), ...s],
             }),
             Object.values(a.l)))
                 t().setNext(6, i);
@@ -82,8 +82,8 @@ let c = (0, r.sampleSize)(l.J6, l.J6.length),
             let l = [...i];
             l.splice(a, 1);
             let o = t().getNext(1, n),
-                s = t().peekNext(7, n);
-            t()._setGameIds(n, [...l, ...o]), t()._setPeekedGameIds(n, [...s, ...o]);
+                c = t().peekNext(7, n);
+            t()._setGameIds(n, [...l, ...o]), t()._setPeekedGameIds(n, [...c, ...o]);
         },
         bumpMultiple: (e, n) => {
             var r;
@@ -97,12 +97,12 @@ let c = (0, r.sampleSize)(l.J6, l.J6.length),
             t()._setStack(n, r), t()._setPeekedGameIds(n, t().peekNext(7, n));
         },
         _setGameIds: (t, n) => {
-            e((e) => ({ gameIds: s(o({}, e.gameIds), { [t]: n }) }));
+            e((e) => ({ gameIds: c(o({}, e.gameIds), { [t]: n }) }));
         },
         _setStack: (t, n) => {
             t === a.l.WANT_TO_PLAY_GAMES ? e({ wishlistStack: n }) : e({ stack: n });
         },
         _setPeekedGameIds: (t, n) => {
-            e((e) => ({ peekedGameIds: s(o({}, e.peekedGameIds), { [t]: n }) }));
+            e((e) => ({ peekedGameIds: c(o({}, e.peekedGameIds), { [t]: n }) }));
         },
     }));

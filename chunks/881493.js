@@ -35,13 +35,13 @@ let g = () => {
         },
         S = [
             {
-                text: f.intl.string(f.t.h9tkAA),
+                text: f.intl.string(f.t.h9tkAK),
                 onClick: () => a(),
                 variant: "secondary",
             },
             {
                 text: "".concat(
-                    f.intl.format(f.t.yxFzdH, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(e)) }),
+                    f.intl.format(f.t.yxFzdO, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(e)) }),
                 ),
                 onClick: E,
                 disabled: C,
@@ -55,14 +55,14 @@ let g = () => {
     return (0, i.jsxs)(s.Modal, {
         size: "md",
         transitionState: t,
-        title: "".concat(f.intl.format(f.t.LZunzc, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(e)) })),
+        title: "".concat(f.intl.format(f.t.LZunzZ, { planPremiumType: o.ZP.getDisplayPremiumType("".concat(e)) })),
         subtitle:
             0 !== n.total
-                ? f.intl.format(f.t.ycyeBw, {
+                ? f.intl.format(f.t.ycyeBx, {
                       renewalDate: n.subscriptionPeriodStart,
                       rate: (0, c.og)((0, c.T4)(n.total, n.currency), _, N),
                   })
-                : f.intl.format(f.t["+y0Tj4"], { renewalDate: n.subscriptionPeriodStart }),
+                : f.intl.format(f.t["+y0Tjy"], { renewalDate: n.subscriptionPeriodStart }),
         actions: S,
         onClose: async () => a(),
         children: [
@@ -70,9 +70,9 @@ let g = () => {
                 isPremiumRebrand: !0,
                 className: l()({ [p.hasError]: v }),
                 children: [
-                    (0, i.jsx)(u.Z9, { children: f.intl.string(f.t.iqhIp6) }),
+                    (0, i.jsx)(u.Z9, { children: f.intl.string(f.t.iqhIp4) }),
                     (0, i.jsx)(u.B1, {
-                        label: f.intl.formatToPlainString(f.t.r3jVZm, { planName: o.ZP.getDisplayName("".concat(e)) }),
+                        label: f.intl.formatToPlainString(f.t.r3jVZq, { planName: o.ZP.getDisplayName("".concat(e)) }),
                         value: "".concat(j),
                         className: p.canceled,
                     }),
@@ -87,7 +87,7 @@ let g = () => {
             v
                 ? (0, i.jsx)(s.M14, {
                       type: "critical",
-                      children: f.intl.string(f.t["5mlOCQ"]),
+                      children: f.intl.string(f.t["5mlOCW"]),
                   })
                 : null,
         ],

@@ -16,13 +16,13 @@ let o = (t) => {
             return t.type === a.d.GUILD_CATEGORY
                 ? {
                       title: e.intl.string(e.t["4VpUw8"]),
-                      body: e.intl.format(e.t.GuhMa2, { channelName: i }),
-                      confirm: e.intl.string(e.t.xOscRk),
+                      body: e.intl.format(e.t.GuhMa5, { channelName: i }),
+                      confirm: e.intl.string(e.t.xOscRh),
                   }
                 : {
                       title: e.intl.string(e.t["4VpUw8"]),
                       body: e.intl.format(e.t["2z/hBg"], { channelName: i }),
-                      confirm: e.intl.string(e.t.gGs6TU),
+                      confirm: e.intl.string(e.t.gGs6TT),
                   };
         })(i);
     return (0, r.jsx)(l.u_l, {
@@ -30,7 +30,7 @@ let o = (t) => {
         subtitle: p,
         actions: [
             {
-                text: e.intl.string(e.t["ETE/oK"]),
+                text: e.intl.string(e.t["ETE/oC"]),
                 onClick: n,
                 variant: "secondary",
             },

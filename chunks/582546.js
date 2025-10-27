@@ -25,7 +25,7 @@ function m(e) {
     if (!O)
         return (0, r.jsx)(a.sNh, {
             id: "connect-spotify",
-            label: h.intl.formatToPlainString(h.t.XWSHTU, { platform: p.ai }),
+            label: h.intl.formatToPlainString(h.t.XWSHTb, { platform: p.ai }),
             action: () => {
                 null == E || E({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
                     (0, d.openUserSettings)(u.n.CONNECTIONS_PANEL, { section: _.oAB.CONNECTIONS }),

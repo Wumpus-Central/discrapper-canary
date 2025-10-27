@@ -13,12 +13,12 @@ function u(e) {
         h = i.useMemo(
             () => [
                 {
-                    name: d.intl.string(d.t["n/bTaW"]),
+                    name: d.intl.string(d.t["n/bTaY"]),
                     value: c.bL.ALL_MESSAGES,
-                    desc: null != f && f >= c.qWG ? d.intl.string(d.t["L+P4t7"]) : null,
+                    desc: null != f && f >= c.qWG ? d.intl.string(d.t["L+P4t2"]) : null,
                 },
                 {
-                    name: d.intl.string(d.t["6fQPho"]),
+                    name: d.intl.string(d.t["6fQPhu"]),
                     value: c.bL.ONLY_MENTIONS,
                 },
             ],

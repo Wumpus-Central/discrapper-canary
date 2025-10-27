@@ -13,8 +13,8 @@ function m(t) {
     let { transitionState: e, onClose: r } = t;
     return (0, i.jsx)(n.Modal, {
         transitionState: e,
-        title: d.intl.string(d.t.pWLGnJ),
-        subtitle: d.intl.string(d.t.WKxo8v),
+        title: d.intl.string(d.t.pWLGnF),
+        subtitle: d.intl.string(d.t.WKxo8n),
         actions: [],
         onClose: r,
         children: (0, i.jsx)(u, { onClose: r }),
@@ -28,28 +28,28 @@ function u(t) {
                     size: "refresh_sm",
                     color: "currentColor",
                 }),
-                text: d.intl.string(d.t.vXBrdn),
+                text: d.intl.string(d.t.vXBrdg),
             },
             {
                 icon: (0, i.jsx)(s.kBi, {
                     size: "refresh_sm",
                     color: "currentColor",
                 }),
-                text: d.intl.string(d.t["i7/QHB"]),
+                text: d.intl.string(d.t["i7/QHN"]),
             },
             {
                 icon: (0, i.jsx)(s.lMe, {
                     size: "refresh_sm",
                     color: "currentColor",
                 }),
-                text: d.intl.string(d.t.ZmBfKC),
+                text: d.intl.string(d.t.ZmBfKJ),
             },
             {
                 icon: (0, i.jsx)(s.ewm, {
                     size: "refresh_sm",
                     color: "currentColor",
                 }),
-                text: d.intl.format(d.t.wBlJCg, {
+                text: d.intl.format(d.t.wBlJCr, {
                     recentActivityURL: l.Z.getArticleURL(c.BhN.MEMBER_LIST_ACTIVITY_FEED),
                     handleActivityPrivacyClick: () => {
                         e(), (0, o.Z)(a.Z.ACTIVITY_PRIVACY);
@@ -62,7 +62,7 @@ function u(t) {
         children: [
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/semibold",
-                children: d.intl.string(d.t.YjqBbm),
+                children: d.intl.string(d.t.YjqBbg),
             }),
             r.map((t, e) => {
                 let { icon: r, text: n } = t;

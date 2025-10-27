@@ -86,8 +86,8 @@ function x(e) {
                               p(
                                   {
                                       header: m.intl.string(m.t["49+ONj"]),
-                                      confirmText: m.intl.string(m.t.R9GHyc),
-                                      cancelText: m.intl.string(m.t["ETE/oK"]),
+                                      confirmText: m.intl.string(m.t.R9GHya),
+                                      cancelText: m.intl.string(m.t["ETE/oC"]),
                                       confirmButtonColor: a.zx.Colors.BRAND,
                                       onConfirm: () => (0, d.Ts)(t, e),
                                   },
@@ -96,7 +96,7 @@ function x(e) {
                               {
                                   children: (0, r.jsx)(s.Text, {
                                       variant: "text-md/normal",
-                                      children: m.intl.string(m.t.TLkoOj),
+                                      children: m.intl.string(m.t.TLkoOt),
                                   }),
                               },
                           ),
@@ -109,8 +109,8 @@ function x(e) {
                               p(
                                   {
                                       header: m.intl.string(m.t.YB9xUF),
-                                      confirmText: m.intl.string(m.t.ts6u6u),
-                                      cancelText: m.intl.string(m.t["ETE/oK"]),
+                                      confirmText: m.intl.string(m.t.ts6u6r),
+                                      cancelText: m.intl.string(m.t["ETE/oC"]),
                                       confirmButtonColor: a.zx.Colors.BRAND,
                                       onConfirm: () => (0, d.Ts)(t, e),
                                   },
@@ -119,7 +119,7 @@ function x(e) {
                               {
                                   children: (0, r.jsx)(s.Text, {
                                       variant: "text-md/normal",
-                                      children: m.intl.string(m.t.BcGGVl),
+                                      children: m.intl.string(m.t.BcGGVn),
                                   }),
                               },
                           ),
@@ -133,7 +133,7 @@ function x(e) {
             children: (0, r.jsx)(s.Text, {
                 variant: "text-sm/medium",
                 color: "text-link",
-                children: c ? m.intl.string(m.t.OmpxW1) : m.intl.string(m.t.ozsQBA),
+                children: c ? m.intl.string(m.t.OmpxWy) : m.intl.string(m.t.ozsQBC),
             }),
         }),
     });

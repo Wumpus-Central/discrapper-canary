@@ -62,11 +62,11 @@ let h = {
             c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             h =
                 !1 === /^[A-Za-z0-9_.]*$/.test(e)
-                    ? d.intl.string(d.t.z7c4bG)
+                    ? d.intl.string(d.t.z7c4bP)
                     : e.includes("..")
-                      ? d.intl.string(d.t["C7G+go"])
+                      ? d.intl.string(d.t["C7G+gr"])
                       : e.length < 2 || e.length > 32
-                        ? d.intl.formatToPlainString(d.t.IpijXF, {
+                        ? d.intl.formatToPlainString(d.t.IpijXA, {
                               maxNum: 32,
                               minNum: 2,
                           })

@@ -23,7 +23,7 @@ function g(t) {
     return (0, e.jsx)(a.ExpressiveModal, {
         transitionState: i,
         title: u.intl.string(u.t.G9HG5O),
-        subtitle: u.intl.format(u.t.ZtUieH, {
+        subtitle: u.intl.format(u.t.ZtUieE, {
             openSettingsHook: (t, n) =>
                 (0, e.jsx)(
                     o.Anchor,
@@ -42,12 +42,12 @@ function g(t) {
         actions: [
             {
                 variant: "secondary",
-                text: u.intl.string(u.t.f3Pet7),
+                text: u.intl.string(u.t.f3Pet9),
                 onClick: n,
             },
             {
                 variant: "primary",
-                text: u.intl.string(u.t.VdzwlJ),
+                text: u.intl.string(u.t.VdzwlA),
                 onClick: function () {
                     l.default.track(p.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                         enabled: !1,

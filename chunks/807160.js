@@ -27,8 +27,8 @@ var r,
     N = n(378233),
     R = n(419922),
     P = n(342386),
-    w = n(46141),
-    D = n(485386),
+    D = n(46141),
+    w = n(485386),
     L = n(430824),
     x = n(853872),
     M = n(509545),
@@ -188,7 +188,7 @@ function ef(e) {
         s = (0, f.e7)([L.Z], () => L.Z.getGuild(t)),
         l =
             (null == r ? void 0 : r.role_id) != null && (null == r ? void 0 : r.attachments_count) === 0
-                ? K.intl.string(K.t.H11qcX)
+                ? K.intl.string(K.t.H11qcT)
                 : o,
         c = a.useCallback(async () => {
             (null == s ? void 0 : s.features.has(H.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE))
@@ -200,7 +200,7 @@ function ef(e) {
         children: [
             null != l &&
                 (0, i.jsx)(ed, {
-                    description: K.intl.string(K.t.lXPbJS),
+                    description: K.intl.string(K.t.lXPbJb),
                     detail: l,
                 }),
             null != s &&
@@ -220,7 +220,7 @@ function e_(e) {
         o = (0, y.hO)(r, a, { requireCurrentGuild: !1 }),
         s = (0, f.e7)([O.Z], () => O.Z.getGuildProductFetchState(a) === O.M.FETCHING),
         l = null == o ? void 0 : o.role_id,
-        c = (0, f.e7)([D.Z], () => (null != l ? D.Z.getRole(r, l) : void 0), [r, l]),
+        c = (0, f.e7)([w.Z], () => (null != l ? w.Z.getRole(r, l) : void 0), [r, l]),
         u = (0, T.Z)({
             guildId: r,
             productId: a,
@@ -243,7 +243,7 @@ function e_(e) {
                                     variant: "text-xs/semibold",
                                     color: "header-secondary",
                                     className: z.guildProductBenefitLabel,
-                                    children: K.intl.string(K.t.hxawo6),
+                                    children: K.intl.string(K.t.hxawoy),
                                 }),
                                 (0, i.jsx)(_.zxk, X({}, u)),
                             ],
@@ -256,7 +256,7 @@ function e_(e) {
                                     variant: "text-xs/semibold",
                                     color: "header-secondary",
                                     className: z.guildProductBenefitLabel,
-                                    children: K.intl.string(K.t.gWBNen),
+                                    children: K.intl.string(K.t.gWBNet),
                                 }),
                                 (0, i.jsx)(I.Z, { role: c }),
                             ],
@@ -293,22 +293,22 @@ class ep extends (r = a.PureComponent) {
             case H.PyE.PENDING:
                 return (0, i.jsx)("span", {
                     className: z.statusTagGrey,
-                    children: K.intl.string(K.t.y7F0RU),
+                    children: K.intl.string(K.t.y7F0Re),
                 });
             case H.PyE.FAILED:
                 return (0, i.jsx)("span", {
                     className: z.statusTagRed,
-                    children: K.intl.string(K.t.Yo4ru7),
+                    children: K.intl.string(K.t.Yo4ru6),
                 });
             case H.PyE.REFUNDED:
                 if (e.amountRefunded !== e.amount)
                     return (0, i.jsx)("span", {
                         className: z.statusTagGreen,
-                        children: K.intl.string(K.t.lYbZz8),
+                        children: K.intl.string(K.t.lYbZzz),
                     });
                 return (0, i.jsx)("span", {
                     className: z.statusTagGreen,
-                    children: K.intl.string(K.t.ZBb6ND),
+                    children: K.intl.string(K.t.ZBb6NK),
                 });
             case H.PyE.REVERSED:
                 return (0, i.jsx)("span", {
@@ -318,7 +318,7 @@ class ep extends (r = a.PureComponent) {
             case H.PyE.CANCELED:
                 return (0, i.jsx)("span", {
                     className: z.statusTagRed,
-                    children: K.intl.string(K.t.ttkBh4),
+                    children: K.intl.string(K.t.ttkBhy),
                 });
             default:
                 return null;
@@ -339,11 +339,11 @@ class ep extends (r = a.PureComponent) {
             children: (0, i.jsxs)("div", {
                 className: z.paymentInfo,
                 children: [
-                    (0, i.jsx)("div", { children: K.intl.string(K.t["UQim+v"]) }),
+                    (0, i.jsx)("div", { children: K.intl.string(K.t["UQim+r"]) }),
                     (0, i.jsx)(eu, {
                         value: e.id,
-                        copyText: K.intl.string(K.t["Mdk9+P"]),
-                        copyFeedbackText: K.intl.string(K.t["7eIrAw"]),
+                        copyText: K.intl.string(K.t["Mdk9+A"]),
+                        copyFeedbackText: K.intl.string(K.t["7eIrA2"]),
                     }),
                 ],
             }),
@@ -366,7 +366,7 @@ class ep extends (r = a.PureComponent) {
                       })
                     : e.paymentGateway === W.gg.APPLE_PARTNER
                       ? (0, i.jsx)(V.Z, {
-                            paymentSource: new w.$z({}),
+                            paymentSource: new D.$z({}),
                             locale: t,
                             descriptionClassName: z.paymentText,
                             showLabels: !0,
@@ -384,14 +384,14 @@ class ep extends (r = a.PureComponent) {
                                           cost: (0, F.T4)(l - o, u),
                                       }),
                                       (0, i.jsx)(ec, {
-                                          description: K.intl.string(K.t.QgWXho),
+                                          description: K.intl.string(K.t.QgWXht),
                                           cost: (0, F.T4)(o, u),
                                       }),
                                   ],
                               })
                             : null,
                         (0, i.jsx)(ec, {
-                            description: K.intl.string(K.t.txajQE),
+                            description: K.intl.string(K.t.txajQG),
                             cost: (0, F.T4)(l, u),
                         }),
                         e.isGuildProductPurchase &&
@@ -405,11 +405,11 @@ class ep extends (r = a.PureComponent) {
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(ec, {
-                                        description: K.intl.string(K.t["A+I0AA"]),
+                                        description: K.intl.string(K.t["A+I0AP"]),
                                         cost: (0, F.T4)(c, u),
                                     }),
                                     (0, i.jsx)(ec, {
-                                        description: K.intl.string(K.t.xER6Wl),
+                                        description: K.intl.string(K.t.xER6Wi),
                                         cost: (0, F.T4)(l - c, u),
                                     }),
                                 ],
@@ -441,7 +441,7 @@ class ep extends (r = a.PureComponent) {
             l = this.isPremium ? en : et;
         return (
             (e = r.includes("SKU_TYPE")
-                ? K.intl.format(K.t["5lvoVV"], { supportURL: s })
+                ? K.intl.format(K.t["5lvoVS"], { supportURL: s })
                 : o
                   ? n.isPremiumSubscription || n.isPremiumGuildSubscription
                       ? K.intl.format(K.t.EPYteX, {
@@ -449,22 +449,22 @@ class ep extends (r = a.PureComponent) {
                             supportURL: s,
                         })
                       : n.isGift
-                        ? K.intl.format(K.t["16eP/P"], {
+                        ? K.intl.format(K.t["16eP/L"], {
                               dateLimit: l,
                               supportURL: s,
                           })
-                        : K.intl.format(K.t["1LDI4O"], {
+                        : K.intl.format(K.t["1LDI4J"], {
                               dateLimit: l,
                               playtimeLimit: er,
                               supportURL: s,
                           })
                   : n.isCollectible
-                    ? K.intl.string(K.t.s9TZMz)
+                    ? K.intl.string(K.t.s9TZM1)
                     : n.isGift
-                      ? K.intl.formatToPlainString(K.t.owlOWV, { dateLimit: l })
+                      ? K.intl.formatToPlainString(K.t.owlOWc, { dateLimit: l })
                       : n.isPremiumSubscription || n.isPremiumGuildSubscription
-                        ? K.intl.formatToPlainString(K.t.dk7vyM, { dateLimit: l })
-                        : K.intl.formatToPlainString(K.t.s4Kk0N, {
+                        ? K.intl.formatToPlainString(K.t.dk7vyL, { dateLimit: l })
+                        : K.intl.formatToPlainString(K.t.s4Kk0C, {
                               dateLimit: l,
                               playtimeLimit: er,
                           })),
@@ -472,7 +472,7 @@ class ep extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)(p.H, {
                         className: z.paymentHeader,
-                        children: K.intl.string(K.t["n/27pq"]),
+                        children: K.intl.string(K.t["n/27pr"]),
                     }),
                     (0, i.jsxs)("div", {
                         className: z.paymentText,
@@ -519,14 +519,14 @@ class ep extends (r = a.PureComponent) {
                     children:
                         !n.isCollectible &&
                         this.renderRefundCriteria(
-                            K.intl.string(K.t.H0RNz8),
+                            K.intl.string(K.t.H0RNz4),
                             r,
-                            K.intl.formatToPlainString(K.t["7dtXa2"], { daysSincePurchase: this.daysSincePurchase }),
+                            K.intl.formatToPlainString(K.t["7dtXa/"], { daysSincePurchase: this.daysSincePurchase }),
                         ),
                 }),
                 (0, i.jsx)(p.Anchor, {
                     href: ei(t),
-                    children: K.intl.string(K.t.re5nOD),
+                    children: K.intl.string(K.t.re5nOB),
                 }),
             ],
         });
@@ -552,15 +552,15 @@ class ep extends (r = a.PureComponent) {
                 });
             else if (_.type === H.NYc.GUILD) {
                 if (null != u) {
-                    let e = u.interval === Y.rV.YEAR ? K.t.V6UFQE : K.t["6oq129"];
+                    let e = u.interval === Y.rV.YEAR ? K.t.V6UFQM : K.t["6oq128"];
                     n.push(K.intl.format(e, { planName: u.name })), (a = u.skuId);
                 }
             } else
                 _.type === H.NYc.APPLICATION &&
                     (null != u && (a = u.skuId),
                     null != o
-                        ? n.push(K.intl.formatToPlainString(K.t["0wL/VF"], { tier: null == f ? void 0 : f.name }))
-                        : n.push(K.intl.string(K.t["9czSYm"])));
+                        ? n.push(K.intl.formatToPlainString(K.t["0wL/VI"], { tier: null == f ? void 0 : f.name }))
+                        : n.push(K.intl.string(K.t["9czSYu"])));
             (t = 0 !== n.length ? n.join(", ") : r.description),
                 (e = (0, i.jsx)(b.Z, {
                     className: z.descriptionIcon,
@@ -573,7 +573,7 @@ class ep extends (r = a.PureComponent) {
         } else if (null != f) {
             var m;
             if (
-                ((t = r.isGuildProductPurchase && r.isSoftDeletedProduct ? K.intl.string(K.t.O7uLm5) : f.name),
+                ((t = r.isGuildProductPurchase && r.isSoftDeletedProduct ? K.intl.string(K.t.O7uLmw) : f.name),
                 null != l)
             ) {
                 let t = (0, N.Zt)(l);
@@ -617,7 +617,7 @@ class ep extends (r = a.PureComponent) {
             E = r.isGift
                 ? (0, i.jsx)(p.aML, {
                       "data-migration-pending": !0,
-                      text: K.intl.string(K.t.QddTpq),
+                      text: K.intl.string(K.t.QddTpm),
                       children: (e) =>
                           (0, i.jsx)(
                               p.OgN,
@@ -665,10 +665,10 @@ class ep extends (r = a.PureComponent) {
                                 messageType: p.QYI.WARNING,
                                 action: (0, i.jsx)(_.zxk, {
                                     variant: "overlay-secondary",
-                                    text: K.intl.string(K.t.zoztQE),
+                                    text: K.intl.string(K.t.zoztQA),
                                     onClick: () => (0, h.Z)(ei(n)),
                                 }),
-                                children: K.intl.string(K.t["3AvulJ"]),
+                                children: K.intl.string(K.t["3AvulN"]),
                             })
                           : null != r &&
                             null != e.sku &&
@@ -688,7 +688,7 @@ class ep extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)(p.H, {
                         className: z.paymentHeader,
-                        children: K.intl.string(K.t.nyzoFR),
+                        children: K.intl.string(K.t.nyzoFb),
                     }),
                     this.renderPaymentBreakdown(),
                     this.renderGuildProductBenefits(),

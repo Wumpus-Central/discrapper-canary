@@ -175,7 +175,7 @@ class S extends i.Component {
                 (0, r.jsx)(l.Text, {
                     variant: "text-md/medium",
                     className: E.connectionInstructions,
-                    children: g.intl.string(g.t.f19PPT),
+                    children: g.intl.string(g.t.f19PPV),
                 }),
             ],
         });
@@ -185,7 +185,7 @@ class S extends i.Component {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: u.ZP.Types.PAYMENT_REQUEST,
-                  buttonText: g.intl.string(g.t.f19PPT),
+                  buttonText: g.intl.string(g.t.f19PPV),
                   loading: !(0, _.isDesktop)() && this.state.submitting,
               });
     }
@@ -298,7 +298,7 @@ class A extends S {
                 (0, r.jsx)(l.Text, {
                     variant: "text-md/medium",
                     className: E.connectionInstructions,
-                    children: g.intl.string(g.t.ueoGeX),
+                    children: g.intl.string(g.t.ueoGef),
                 }),
             ],
         });
@@ -308,7 +308,7 @@ class A extends S {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: u.ZP.Types.G_PAY,
-                  buttonText: g.intl.string(g.t.p2jr2N),
+                  buttonText: g.intl.string(g.t.p2jr2E),
                   loading: !(0, _.isDesktop)() && this.state.submitting,
               });
     }
@@ -359,7 +359,7 @@ class C extends S {
                 (0, r.jsx)(l.Text, {
                     variant: "text-md/medium",
                     className: E.connectionInstructions,
-                    children: g.intl.string(g.t.iv8pQU),
+                    children: g.intl.string(g.t.iv8pQV),
                 }),
             ],
         });
@@ -369,7 +369,7 @@ class C extends S {
             ? this.renderConnectorView()
             : this.renderButton({
                   iconType: u.ZP.Types.APPLE_LIGHT,
-                  buttonText: g.intl.string(g.t.xdGS1t),
+                  buttonText: g.intl.string(g.t.xdGS1o),
                   loading: !(0, _.isDesktop)() && this.state.submitting,
               });
     }

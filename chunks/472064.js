@@ -1,4 +1,4 @@
-s.d(e, { default: () => N }), s(388685), s(415506);
+s.d(e, { default: () => E }), s(388685), s(415506);
 var l = s(951288),
     n = s(647438),
     a = s(442837),
@@ -21,7 +21,7 @@ var l = s(951288),
     C = s(981631),
     Z = s(388032),
     b = s(912278);
-function L(t, e, s) {
+function S(t, e, s) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -34,7 +34,7 @@ function L(t, e, s) {
         t
     );
 }
-class S extends n.Component {
+class N extends n.Component {
     fetchInstallSize() {
         let { applicationId: t, branchId: e, buildId: s, manifestIds: l, buildSizeKB: n } = this.props;
         null != s &&
@@ -59,7 +59,7 @@ class S extends n.Component {
             { hasError: e, hasAcceptedNeccessaryTerms: s } = this.state;
         return (0, l.jsx)(i.Button, {
             variant: "active",
-            text: Z.intl.string(Z.t.nL0WvL),
+            text: Z.intl.string(Z.t.nL0WvC),
             disabled: e || null == t || !s,
             onClick: this.handleInstall,
         });
@@ -71,7 +71,7 @@ class S extends n.Component {
         return (0, l.jsxs)(i.Y0X, {
             transitionState: s,
             size: i.CgR.SMALL,
-            "aria-label": Z.intl.string(Z.t.PphjtL),
+            "aria-label": Z.intl.string(Z.t.PphjtJ),
             parentComponent: "ApplicationInstallationModal",
             children: [
                 null != r
@@ -87,7 +87,7 @@ class S extends n.Component {
                             grow: 1,
                             children: (0, l.jsx)(i.Heading, {
                                 variant: "heading-lg/semibold",
-                                children: Z.intl.string(Z.t.PphjtL),
+                                children: Z.intl.string(Z.t.PphjtJ),
                             }),
                         }),
                         (0, l.jsx)(I.Z.Child, {
@@ -141,20 +141,20 @@ class S extends n.Component {
     }
     constructor(...t) {
         super(...t),
-            L(this, "state", {
+            S(this, "state", {
                 selectedInstallationPath: this.props.defaultInstallationPath,
                 hasError: !1,
                 isInstalling: !1,
                 hasAcceptedNeccessaryTerms: !1,
             }),
-            L(this, "isUnmounted", !1),
-            L(this, "handleChangePath", (t, e) => {
+            S(this, "isUnmounted", !1),
+            S(this, "handleChangePath", (t, e) => {
                 this.setState({
                     selectedInstallationPath: t,
                     hasError: e,
                 });
             }),
-            L(this, "install", (t, e) => {
+            S(this, "install", (t, e) => {
                 let { application: s, branchId: l, analyticsLocation: n } = this.props;
                 if (null == s) return null;
                 (0, u.LO)({
@@ -168,21 +168,21 @@ class S extends n.Component {
                     (0, g.uL)(C.Z5c.APPLICATION_LIBRARY),
                     this.close();
             }),
-            L(this, "handleInstall", () => {
+            S(this, "handleInstall", () => {
                 let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
                 if (null != e && null != s)
                     l || (0, d.B)(), null != t && null != t.eulaId && (0, d.D)(t.eulaId), this.install(e, s);
                 else throw Error("Unexpected missing build info for non-premium product");
             }),
-            L(this, "handlePurchaseTermsChange", (t) => {
+            S(this, "handlePurchaseTermsChange", (t) => {
                 this.setState({ hasAcceptedNeccessaryTerms: t });
             }),
-            L(this, "close", () => {
+            S(this, "close", () => {
                 this.props.onClose();
             });
     }
 }
-let N = a.ZP.connectStores([f.Z, _.Z, P.Z, p.Z], (t) => {
+let E = a.ZP.connectStores([f.Z, _.Z, P.Z, p.Z], (t) => {
     let { applicationId: e, branchId: s } = t,
         l = f.Z.getTargetBuildId(e, s);
     return {
@@ -193,4 +193,4 @@ let N = a.ZP.connectStores([f.Z, _.Z, P.Z, p.Z], (t) => {
         buildSizeKB: null != l ? f.Z.getBuildSize(l) : null,
         hasPreviouslyAcceptedStoreTerms: P.Z.hasAcceptedStoreTerms,
     };
-})(S);
+})(N);

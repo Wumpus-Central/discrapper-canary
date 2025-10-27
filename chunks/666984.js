@@ -32,7 +32,7 @@ function m(e) {
                   (0, r.jsx)(i.u, {
                       text: T.tooltip,
                       children: (0, r.jsx)(d.O1, {
-                          text: null != (t = T.label) ? t : p.intl.string(p.t.eU3inJ),
+                          text: null != (t = T.label) ? t : p.intl.string(p.t.eU3inB),
                           onClick: A,
                           disabled: T.disabled,
                           loading: T.loading,
@@ -67,8 +67,8 @@ function m(e) {
                   }),
                   (0, r.jsx)(d.pt, {
                       icon: a.iOO,
-                      tooltipText: null != (g = T.tooltip) ? g : p.intl.string(p.t.eU3inJ),
-                      "aria-label": null != (E = T.label) ? E : p.intl.string(p.t.eU3inJ),
+                      tooltipText: null != (g = T.tooltip) ? g : p.intl.string(p.t.eU3inB),
+                      "aria-label": null != (E = T.label) ? E : p.intl.string(p.t.eU3inB),
                       disabled: T.disabled,
                       loading: T.loading,
                       onClick: A,

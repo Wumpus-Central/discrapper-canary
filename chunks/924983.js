@@ -39,7 +39,7 @@ function f(e) {
             tag: "span",
             variant: "text-xxs/normal",
             color: "currentColor",
-            children: c.intl.format(c.t["3EjT8/"], {
+            children: c.intl.format(c.t["3EjT81"], {
                 keybind: n,
                 bugIcon: () =>
                     (0, r.jsx)(o.nnZ, {

@@ -27,7 +27,7 @@ function g(t) {
         ? null
         : (0, i.jsx)(o.sNh, {
               id: "join-thread-voice",
-              label: l ? f.intl.string(f.t["0D/6R0"]) : f.intl.string(f.t.My50nZ),
+              label: l ? f.intl.string(f.t["0D/6Rz"]) : f.intl.string(f.t.My50nf),
               action: v,
           });
 }

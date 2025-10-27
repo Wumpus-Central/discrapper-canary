@@ -15,12 +15,12 @@ function d(t) {
         return (null == (n = t.threadMetadata) ? void 0 : n.archived)
             ? (0, i.jsx)(a.sNh, {
                   id: "unarchive-thread",
-                  label: t.isForumPost() ? o.intl.string(o.t.cnRubW) : o.intl.string(o.t.S9E4Gx),
+                  label: t.isForumPost() ? o.intl.string(o.t.cnRubV) : o.intl.string(o.t.S9E4G7),
                   action: () => r.Z.unarchiveThread(t, !1),
               })
             : (0, i.jsx)(a.sNh, {
                   id: "archive-thread",
-                  label: t.isForumPost() ? o.intl.string(o.t.BTs4KS) : o.intl.string(o.t.wiIevb),
+                  label: t.isForumPost() ? o.intl.string(o.t.BTs4Kb) : o.intl.string(o.t.wiIevd),
                   action: () => r.Z.archiveThread(t, !1),
               });
 }

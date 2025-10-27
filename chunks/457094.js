@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(503737),
     O = n(513202),
     I = n(318891),
-    y = n(687751),
-    v = n(64514),
+    v = n(687751),
+    y = n(64514),
     C = n(912471),
     S = n(100527),
     T = n(77987),
@@ -72,8 +72,8 @@ var r = n(951288),
     eE = n(329557),
     eO = n(304445),
     eI = n(893607),
-    ey = n(703656),
-    ev = n(298969),
+    ev = n(703656),
+    ey = n(298969),
     eC = n(719256),
     eS = n(6025),
     eT = n(897473),
@@ -166,7 +166,7 @@ n(117240),
 let te = !1;
 (0, C.DL)(),
     s.ZP.initialize(),
-    ev.Z.loadServer(),
+    ey.Z.loadServer(),
     e1.isPlatformEmbedded &&
         (e8.ZP.on("USER_SETTINGS_OPEN", (e, t) => {
             eW.Z.getLayers().includes(e3.S9g.USER_SETTINGS) || (0, eU.openUserSettings)();
@@ -495,13 +495,13 @@ function to(e) {
 function tc(e) {
     let { channelId: t, guildId: n, pathname: r } = e;
     if (!q.Z.isConnected()) return;
-    let { location: i } = (0, ey.s1)();
-    i.pathname === r && (null == eF.Z.getChannel(t) ? (0, ey.dL)(e3.Z5c.CHANNEL(n)) : (0, ey.dL)(r));
+    let { location: i } = (0, ev.s1)();
+    i.pathname === r && (null == eF.Z.getChannel(t) ? (0, ev.dL)(e3.Z5c.CHANNEL(n)) : (0, ev.dL)(r));
 }
 class tu extends i.PureComponent {
     componentDidMount() {
         e8.ZP.setZoomFactor(g.Z.zoom),
-            ev.Z.init(),
+            ey.Z.init(),
             N.Z.initialize(),
             em.Z.initialize(),
             F.Z.initialize(),
@@ -514,7 +514,7 @@ class tu extends i.PureComponent {
             W.Z.init(),
             Y.Z.init(),
             eu.Z.initialize(),
-            y.Z.initialize(),
+            v.Z.initialize(),
             G.Z.initialize(),
             eb.Z.initialize(),
             I.ZP.initialize(),
@@ -558,12 +558,12 @@ class tu extends i.PureComponent {
             R.Z.initialize(),
             P.Z.initialize(),
             x.Z.initialize(),
-            v.Z.initialize(),
+            y.Z.initialize(),
             (this.rewriterUnlisten = eO.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eO.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        ev.Z.terminate(),
+        ey.Z.terminate(),
             eB.Z.terminate(),
             e_.Z.terminate(),
             em.Z.terminate(),
@@ -592,7 +592,7 @@ class tu extends i.PureComponent {
             H.Z.terminate(),
             P.Z.terminate(),
             x.Z.terminate(),
-            v.Z.terminate(),
+            y.Z.terminate(),
             V.Z.terminate(),
             ei.Z.terminate(),
             this.historyUnlisten(),
@@ -649,7 +649,7 @@ class tu extends i.PureComponent {
                         let e = eV.ZP.getCurrentSidebarChannelId(n),
                             t = e !== o;
                         if (null != i && null != o && t)
-                            if (c) (0, ey.dL)(e3.Z5c.CHANNEL(r, o, s));
+                            if (c) (0, ev.dL)(e3.Z5c.CHANNEL(r, o, s));
                             else {
                                 let e = { type: eT.Ff.THREAD };
                                 null != s && (e.initialMessageId = s),
@@ -673,7 +673,7 @@ class tu extends i.PureComponent {
                     tl.some((t) => {
                         var n;
                         return (null == (n = (0, a.LX)(e, t)) ? void 0 : n.isExact) === !0;
-                    }) || (0, ey.dL)(ez.Z.fallbackRoute);
+                    }) || (0, ev.dL)(ez.Z.fallbackRoute);
             })(n, r),
             (0, k.pN)(n, i, "REPLACE" === t);
     }

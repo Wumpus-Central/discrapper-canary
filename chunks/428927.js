@@ -47,7 +47,7 @@ function m(e) {
                             (0, l.jsx)("div", { className: u.emptyIconGuilds }),
                             (0, l.jsx)("div", {
                                 className: u.emptyText,
-                                children: d.intl.string(d.t.zjVh8v),
+                                children: d.intl.string(d.t.zjVh8h),
                             }),
                         ],
                     }),

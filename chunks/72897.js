@@ -86,14 +86,14 @@ function b(e) {
             getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.h7.AUDIO_OUTPUT),
             getCurrentDeviceId: (e) => e.getOutputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().outputDeviceId,
-            getNoDevicesMessage: () => p.intl.string(p.t.xlUg0t),
+            getNoDevicesMessage: () => p.intl.string(p.t.xlUg0v),
         },
         [_.h7.VIDEO_INPUT]: {
             getRawDevices: (e) => e.getVideoDevices(),
             getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.h7.VIDEO_INPUT),
             getCurrentDeviceId: (e) => e.getVideoDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().videoDeviceId,
-            getNoDevicesMessage: () => p.intl.string(p.t.WKWARU),
+            getNoDevicesMessage: () => p.intl.string(p.t.WKWARY),
         },
     }[e];
 }
@@ -101,11 +101,11 @@ function y() {
     let { showDeviceSelectionImprovements: e } = (0, f.M)({ location: "getDefaultDevicePrefix" });
     return e
         ? (0, u.isWindows)()
-            ? p.intl.string(p.t.n4dQ2d)
+            ? p.intl.string(p.t.n4dQ2c)
             : (0, u.isMac)()
-              ? p.intl.string(p.t.aYrsiI)
-              : p.intl.string(p.t.Q3YKwc)
-        : p.intl.string(p.t.bBvAEB);
+              ? p.intl.string(p.t.aYrsiB)
+              : p.intl.string(p.t.Q3YKwS)
+        : p.intl.string(p.t.bBvAEH);
 }
 function O(e, t) {
     let { getNoDevicesMessage: n } = b(e);

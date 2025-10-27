@@ -1,20 +1,20 @@
-n.d(t, { Z: () => T }), n(388685), n(781311), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(781311), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(512722),
-    s = n.n(o),
+    s = n(512722),
+    o = n.n(s),
     c = n(755721),
     u = n(481060),
     d = n(194359),
     p = n(313201),
     f = n(657682),
     h = n(981631),
-    g = n(295907),
-    m = n(388032),
-    b = n(470840),
-    _ = n(197571);
+    m = n(295907),
+    g = n(388032),
+    _ = n(470840),
+    b = n(197571);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,24 +58,24 @@ function O(e, t) {
         e
     );
 }
-let v = n(349181),
-    y = {
+let I = n(349181),
+    v = {
         canSend: !1,
         hint: null,
         success: null,
         error: null,
     },
-    I = (0, p.hQ)(),
-    C = "".concat(I, "-decription"),
-    S = "".concat(I, "-error");
-function N(e, t) {
+    y = (0, p.hQ)(),
+    C = "".concat(y, "-decription"),
+    S = "".concat(y, "-error");
+function T(e, t) {
     switch (t.type) {
         case "RESET":
-            return y;
+            return v;
         case "SUCCESS":
-            return O(E({}, y), { success: t.text });
+            return O(E({}, v), { success: t.text });
         case "HINT":
-            return O(E({}, y), {
+            return O(E({}, v), {
                 canSend: !0,
                 hint: t.text,
             });
@@ -86,22 +86,22 @@ function N(e, t) {
             });
     }
 }
-function T(e) {
-    let { placeholder: t = m.intl.string(m.t["Rn/sLl"]) } = e,
+function N(e) {
+    let { placeholder: t = g.intl.string(g.t["Rn/sLl"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [o, p] = i.useReducer(N, y),
-        { canSend: E, hint: O, error: T, success: P } = o;
+        [s, p] = i.useReducer(T, v),
+        { canSend: E, hint: O, error: N, success: j } = s;
     return (
         i.useEffect(() => {
-            null != P &&
-                (s()(null != n.current, "Input is submitting when not mounted"),
+            null != j &&
+                (o()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
-        }, [P, n]),
+        }, [j, n]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
-                e.preventDefault(), s()(null != n.current, "Input is submitted when not mounted");
+                e.preventDefault(), o()(null != n.current, "Input is submitted when not mounted");
                 let t = n.current.value.trim();
                 !t.includes("#") && t.startsWith("@") && (t = t.substring(1));
                 let r = (0, f.Zy)(t);
@@ -117,7 +117,7 @@ function T(e) {
                     () =>
                         p({
                             type: "SUCCESS",
-                            text: m.intl.format(m.t.Rtl1Ep, { discordTag: t }),
+                            text: g.intl.format(g.t.Rtl1Ep, { discordTag: t }),
                         }),
                     (e) => {
                         var n;
@@ -131,15 +131,15 @@ function T(e) {
             autoComplete: "off",
             children: [
                 (0, r.jsxs)("div", {
-                    className: b.addFriendWumpusWrapper,
+                    className: _.addFriendWumpusWrapper,
                     children: [
                         (0, r.jsx)(u.Text, {
                             tag: "div",
                             variant: "heading-md/normal",
-                            children: m.intl.string(m.t["Rn/sLl"]),
+                            children: g.intl.string(g.t["Rn/sLl"]),
                         }),
                         (0, r.jsx)("img", {
-                            src: v,
+                            src: I,
                             alt: "Wumpus Waving",
                         }),
                     ],
@@ -147,29 +147,29 @@ function T(e) {
                 (0, r.jsx)(u.tEY, {
                     focusTarget: n,
                     ringTarget: l,
-                    ringClassName: b.ring,
+                    ringClassName: _.ring,
                     children: (0, r.jsxs)("div", {
                         ref: l,
-                        className: a()(b.addFriendInputWrapper, {
-                            [b.success]: P,
-                            [b.error]: T,
+                        className: a()(_.addFriendInputWrapper, {
+                            [_.success]: j,
+                            [_.error]: N,
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
-                                id: I,
+                                id: y,
                                 inputRef: n,
-                                className: b.addFriendInput,
-                                inputClassName: b.input,
+                                className: _.addFriendInput,
+                                inputClassName: _.input,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
-                                    if (e.key !== g.mR.Enter && t.includes("#")) {
-                                        s()(null != n.current, "Input is handling keypress when not mounted");
+                                    if (e.key !== m.mR.Enter && t.includes("#")) {
+                                        o()(null != n.current, "Input is handling keypress when not mounted");
                                         let r = t.indexOf("#"),
                                             i = n.current.selectionStart,
                                             l =
-                                                e.key === g.mR.Backspace ||
-                                                e.key === g.mR.ArrowRight ||
-                                                e.key === g.mR.ArrowLeft,
+                                                e.key === m.mR.Backspace ||
+                                                e.key === m.mR.ArrowRight ||
+                                                e.key === m.mR.ArrowLeft,
                                             a = e.which >= 48 && e.which <= 57;
                                         null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l
                                             ? e.preventDefault()
@@ -195,44 +195,44 @@ function T(e) {
                                 "data-1p-ignore": !0,
                                 placeholder: t,
                                 "aria-label": t,
-                                "aria-invalid": null != T || void 0,
-                                "aria-describedby": null != T ? S : C,
+                                "aria-invalid": null != N || void 0,
+                                "aria-describedby": null != N ? S : C,
                             }),
                             null != O &&
                                 (0, r.jsx)("div", {
-                                    className: b.addFriendHint,
+                                    className: _.addFriendHint,
                                     "aria-hidden": !0,
                                     children: O,
                                 }),
                             (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 size: "sm",
-                                text: m.intl.string(m.t["PMsq/b"]),
+                                text: g.intl.string(g.t["PMsq/b"]),
                                 disabled: !E,
                                 type: "submit",
                             }),
                         ],
                     }),
                 }),
-                null != T &&
+                null != N &&
                     (0, r.jsx)("div", {
                         role: "alert",
                         children: (0, r.jsx)(u.Text, {
                             id: S,
                             variant: "text-sm/normal",
-                            className: _.marginTop8,
+                            className: b.marginTop8,
                             color: "text-feedback-critical",
-                            children: T,
+                            children: N,
                         }),
                     }),
-                null != P &&
+                null != j &&
                     (0, r.jsx)("div", {
                         role: "status",
                         children: (0, r.jsx)(u.Text, {
                             variant: "text-sm/normal",
-                            className: _.marginTop8,
+                            className: b.marginTop8,
                             color: "text-feedback-positive",
-                            children: P,
+                            children: j,
                         }),
                     }),
             ],

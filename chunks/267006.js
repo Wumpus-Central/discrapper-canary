@@ -13,7 +13,7 @@ function d() {
     return (0, r.jsx)(s.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, r.jsx)(a.rsf, {
-            label: u.intl.string(u.t.AxnPm5),
+            label: u.intl.string(u.t.AxnPm1),
             checked: e,
             onChange: o.Z.setExperimentalEncoders,
         }),
@@ -29,7 +29,7 @@ function f() {
                 (0, r.jsx)(s.F, {
                     setting: c.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                     children: (0, r.jsx)(a.rsf, {
-                        label: u.intl.string(u.t["71Ve19"]),
+                        label: u.intl.string(u.t["71Ve1y"]),
                         checked: e,
                         onChange: o.Z.setOpenH264,
                     }),

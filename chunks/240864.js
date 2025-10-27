@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => u,
-    Z: () => D,
+    Z: () => w,
 }),
     n(539854),
     n(388685);
@@ -100,7 +100,7 @@ function P(e) {
     let { productId: t } = e;
     b.delete(t);
 }
-class w extends (r = i.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
         return null != (t = d[e]) ? t : 0;
@@ -121,8 +121,8 @@ class w extends (r = i.ZP.Store) {
         return Date.now() - (null != (t = _[e]) ? t : 0) > p;
     }
 }
-c(w, "displayName", "GuildProductsStore");
-let D = new w(o.Z, {
+c(D, "displayName", "GuildProductsStore");
+let w = new D(o.Z, {
     CONNECTION_OPEN: O,
     GUILD_PRODUCTS_FETCH: v,
     GUILD_PRODUCTS_FETCH_SUCCESS: I,

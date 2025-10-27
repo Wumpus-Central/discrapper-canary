@@ -18,7 +18,7 @@ let u = (e) => {
         variant: u,
         className: a()(c.striked, i),
         children: [
-            (0, r.jsx)(l.nn4, { children: s.intl.format(s.t["2CEGlp"], { price: d }) }),
+            (0, r.jsx)(l.nn4, { children: s.intl.format(s.t["2CEGln"], { price: d }) }),
             (0, r.jsx)("span", {
                 "aria-hidden": !0,
                 children: d,

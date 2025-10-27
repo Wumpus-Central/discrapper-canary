@@ -1,4 +1,4 @@
-n.d(e, { default: () => g });
+n.d(e, { default: () => O });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -12,30 +12,30 @@ var i = n(442837),
     d = n(914010),
     b = n(981631),
     f = n(388032);
-function g(t) {
+function O(t) {
     let { guild: e, onSelect: n } = t,
-        g = e.id,
-        O = (0, c.Z)({
+        O = e.id,
+        g = (0, c.Z)({
             id: e.id,
-            label: f.intl.string(f.t["94lLDw"]),
+            label: f.intl.string(f.t["94lLD7"]),
         }),
-        j = (0, i.e7)([u.Z], () => u.Z.getRequest(g)),
+        j = (0, i.e7)([u.Z], () => u.Z.getRequest(O)),
         y = () => {
-            a.Z.removeGuildJoinRequest(g), d.Z.getGuildId() === g && (0, p.uL)(b.Z5c.ME);
+            a.Z.removeGuildJoinRequest(O), d.Z.getGuildId() === O && (0, p.uL)(b.Z5c.ME);
         };
     return (0, r.jsxs)(o.v2r, {
         navId: "join-request-guild-context",
         onClose: l.Zy,
-        "aria-label": f.intl.string(f.t.HpQykZ),
+        "aria-label": f.intl.string(f.t.HpQykc),
         onSelect: n,
         children: [
             (null == j ? void 0 : j.applicationStatus) === s.wB.REJECTED &&
                 (0, r.jsx)(o.sNh, {
                     id: "reapply",
-                    label: f.intl.string(f.t.rpFCLi),
+                    label: f.intl.string(f.t.rpFCLs),
                     action: () => {
-                        a.Z.resetGuildJoinRequest(g).then(() => {
-                            (0, p.uL)(b.Z5c.GUILD_MEMBER_VERIFICATION(g));
+                        a.Z.resetGuildJoinRequest(O).then(() => {
+                            (0, p.uL)(b.Z5c.GUILD_MEMBER_VERIFICATION(O));
                         });
                     },
                     color: "default",
@@ -44,8 +44,8 @@ function g(t) {
                 id: "withdraw",
                 label:
                     (null == j ? void 0 : j.applicationStatus) === s.wB.STARTED
-                        ? f.intl.string(f.t.OQFlFB)
-                        : f.intl.string(f.t.mqtdmZ),
+                        ? f.intl.string(f.t.OQFlFD)
+                        : f.intl.string(f.t.mqtdmQ),
                 action: () => {
                     (0, o.h7j)((t) => {
                         var n, i;
@@ -77,9 +77,9 @@ function g(t) {
                                 return t;
                             })(
                                 {
-                                    header: f.intl.string(f.t.y0CVen),
-                                    confirmText: f.intl.string(f.t.p89ACg),
-                                    cancelText: f.intl.string(f.t.oEAioK),
+                                    header: f.intl.string(f.t.y0CVes),
+                                    confirmText: f.intl.string(f.t.p89ACt),
+                                    cancelText: f.intl.string(f.t.oEAioF),
                                     onConfirm: y,
                                 },
                                 t,
@@ -90,8 +90,8 @@ function g(t) {
                                         variant: "text-md/normal",
                                         children:
                                             (null == j ? void 0 : j.applicationStatus) === s.wB.STARTED
-                                                ? f.intl.string(f.t.fJwWVl)
-                                                : f.intl.format(f.t["9ZezpK"], { name: e.name }),
+                                                ? f.intl.string(f.t.fJwWVt)
+                                                : f.intl.format(f.t["9ZezpN"], { name: e.name }),
                                     }),
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -112,7 +112,7 @@ function g(t) {
                 },
                 color: "danger",
             }),
-            (0, r.jsx)(o.kSQ, { children: O }),
+            (0, r.jsx)(o.kSQ, { children: g }),
         ],
     });
 }

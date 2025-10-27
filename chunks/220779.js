@@ -202,7 +202,7 @@ let A = (e, t) => {
                     }),
                 children: () =>
                     (0, r.jsx)(s.u, {
-                        text: E.intl.string(E.t.lfIHs7),
+                        text: E.intl.string(E.t.lfIHs4),
                         children: (0, r.jsx)("div", {
                             ref: f,
                             className: b.reaction,

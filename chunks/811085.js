@@ -44,39 +44,39 @@ function g() {
     }, [b]);
     let y = {
             [u.Sn.ALL_GOOD]: {
-                title: p.t.uaKrRk,
-                description: p.intl.format(p.t.pEdBDw, {
+                title: p.t.uaKrRi,
+                description: p.intl.format(p.t.pEdBD4, {
                     termsOfService: _.sQ.TOS_LINK,
                     communityGuidelines: _.sQ.COMMUNITY_GUIDELINES,
                 }),
-                status: p.t["/Idfam"],
+                status: p.t["/Idfao"],
                 Icon: l.owK,
                 color: s.Z.colors.STATUS_POSITIVE,
             },
             [u.Sn.LIMITED]: {
-                title: p.t.epkcmZ,
-                description: p.intl.string(p.t["774jub"]),
-                status: p.t.umleq6,
+                title: p.t.epkcmS,
+                description: p.intl.string(p.t["774juc"]),
+                status: p.t.umleq4,
                 Icon: l.Mgn,
                 color: s.Z.colors.STATUS_WARNING,
             },
             [u.Sn.VERY_LIMITED]: {
-                title: p.t.crzE2d,
-                description: p.intl.string(p.t["T/Ufh4"]),
-                status: p.t.WBtMHR,
+                title: p.t.crzE2X,
+                description: p.intl.string(p.t["T/Ufh9"]),
+                status: p.t.WBtMHf,
                 Icon: l.Mgn,
                 color: s.Z.unsafe_rawColors.ORANGE_345,
             },
             [u.Sn.AT_RISK]: {
-                title: p.t.XRNVzM,
-                description: p.intl.string(p.t["hbH+9f"]),
-                status: p.t["7f+4Li"],
+                title: p.t.XRNVzO,
+                description: p.intl.string(p.t["hbH+9S"]),
+                status: p.t["7f+4Lg"],
                 Icon: l.Mgn,
                 color: s.Z.colors.STATUS_DANGER,
             },
             [u.Sn.SUSPENDED]: {
-                title: p.t.MExFk5,
-                description: p.intl.string(p.t["2liUvr"]),
+                title: p.t.MExFkz,
+                description: p.intl.string(p.t["2liUvt"]),
                 status: p.t["0OONGB"],
                 Icon: l.k$p,
                 color: s.Z.colors.ICON_MUTED,

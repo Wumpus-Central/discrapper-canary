@@ -19,7 +19,7 @@ function u(e) {
                   onClear: () => g(""),
               }),
               inModal: !1,
-              title: c.intl.string(c.t["0hKkS0"]),
+              title: c.intl.string(c.t["0hKkS+"]),
               children: m.map((e, a) =>
                   (0, i.jsxs)(
                       r.Fragment,
@@ -45,7 +45,7 @@ function u(e) {
               children: (0, i.jsx)(l.Text, {
                   color: "text-muted",
                   variant: "text-sm/normal",
-                  children: c.intl.string(c.t["x78c+P"]),
+                  children: c.intl.string(c.t["x78c+J"]),
               }),
           });
 }

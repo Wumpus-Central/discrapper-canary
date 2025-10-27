@@ -11,12 +11,12 @@ let c = (0, l.x1)(r.n.WINDOWS_PANE, {
         render: s.Z,
     }),
     E = (0, l.wf)(r.n.WINDOWS_PANEL, {
-        useTitle: () => o.intl.string(o.t.ZkDZoq),
+        useTitle: () => o.intl.string(o.t.ZkDZov),
         buildLayout: () => [c],
     }),
     d = (0, l.m7)(r.n.WINDOWS_SIDEBAR_ITEM, {
         icon: i.pzj,
-        useTitle: () => o.intl.string(o.t.ZkDZoq),
+        useTitle: () => o.intl.string(o.t.ZkDZov),
         legacySearchKey: a.s6.WINDOW_SETTINGS,
         usePredicate: () => u.isPlatformEmbedded && (0, u.isWindows)(),
         buildLayout: () => [E],

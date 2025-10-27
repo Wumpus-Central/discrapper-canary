@@ -114,14 +114,14 @@ async function N(e) {
                     success: !0,
                     source: e,
                 }),
-                C((0, i.createToast)(h.intl.string(h.t.kQnWb2), i.ToastType.SUCCESS), t),
+                C((0, i.createToast)(h.intl.string(h.t.kQnWby), i.ToastType.SUCCESS), t),
                 I("after-install");
         } catch (r) {
             let n = A(r);
             if (null == n && r instanceof Error) {
                 C(
                     (0, i.createToast)(
-                        h.intl.formatToPlainString(h.t.sdKYCA, { error: r.message }),
+                        h.intl.formatToPlainString(h.t.sdKYCE, { error: r.message }),
                         i.ToastType.FAILURE,
                     ),
                     t,
@@ -136,7 +136,7 @@ async function N(e) {
                 return;
             }
             if (null == n) {
-                C((0, i.createToast)(h.intl.formatToPlainString(h.t.sdKYCA, { error: r }), i.ToastType.FAILURE), t),
+                C((0, i.createToast)(h.intl.formatToPlainString(h.t.sdKYCE, { error: r }), i.ToastType.FAILURE), t),
                     u.Z.captureMessage("Really unknown error during system service installation", {
                         extra: { error: r },
                     }),
@@ -157,13 +157,13 @@ async function N(e) {
                 }),
                 n.error_code === g)
             ) {
-                C((0, i.createToast)(h.intl.string(h.t.xu9k8P), i.ToastType.FAILURE), t),
+                C((0, i.createToast)(h.intl.string(h.t.xu9k8G), i.ToastType.FAILURE), t),
                     m.error("User cancelled system service install.");
                 return;
             }
             C(
                 (0, i.createToast)(
-                    h.intl.formatToPlainString(h.t.sdKYCA, { error: n.error_message }),
+                    h.intl.formatToPlainString(h.t.sdKYCE, { error: n.error_message }),
                     i.ToastType.FAILURE,
                 ),
                 t,
@@ -179,7 +179,7 @@ async function R(e) {
             await S(),
                 await d.ZP.UninstallSystemService(),
                 m.info("System service uninstalled."),
-                C((0, i.createToast)(h.intl.string(h.t.dThS5O), i.ToastType.SUCCESS), t),
+                C((0, i.createToast)(h.intl.string(h.t.dThS5H), i.ToastType.SUCCESS), t),
                 l.default.track(p.rMx.SYSTEM_SERVICE_UNINSTALL_ATTEMPTED, {
                     success: !0,
                     source: e,
@@ -189,7 +189,7 @@ async function R(e) {
             if (null == n && r instanceof Error) {
                 C(
                     (0, i.createToast)(
-                        h.intl.formatToPlainString(h.t.oHh3oK, { error: r.message }),
+                        h.intl.formatToPlainString(h.t.oHh3oI, { error: r.message }),
                         i.ToastType.FAILURE,
                     ),
                     t,
@@ -204,7 +204,7 @@ async function R(e) {
                 return;
             }
             if (null == n) {
-                C((0, i.createToast)(h.intl.formatToPlainString(h.t.oHh3oK, { error: r }), i.ToastType.FAILURE), t),
+                C((0, i.createToast)(h.intl.formatToPlainString(h.t.oHh3oI, { error: r }), i.ToastType.FAILURE), t),
                     u.Z.captureMessage("Really unknown error during system service uninstallation", {
                         extra: { error: r },
                     }),
@@ -224,7 +224,7 @@ async function R(e) {
             }),
                 C(
                     (0, i.createToast)(
-                        h.intl.formatToPlainString(h.t.oHh3oK, { error: n.error_message }),
+                        h.intl.formatToPlainString(h.t.oHh3oI, { error: n.error_message }),
                         i.ToastType.FAILURE,
                     ),
                     t,

@@ -44,9 +44,9 @@ let S = function (e) {
             lazyLoad: N = !1,
             style: R,
             showShine: P = !0,
-            location: w,
+            location: D,
         } = e,
-        D = (0, _.O5)(),
+        w = (0, _.O5)(),
         L = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         x = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
@@ -55,7 +55,7 @@ let S = function (e) {
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    D({
+                    w({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -68,7 +68,7 @@ let S = function (e) {
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [D, a.id, e, C],
+            [w, a.id, e, C],
         ),
         U = i.useRef(null),
         G = i.useRef(h),
@@ -104,7 +104,7 @@ let S = function (e) {
                                   asset: k,
                                   assetId: "QuestRewardTile_rewardTileStatic",
                                   className: I.imageVideoOverlay,
-                                  alt: v.intl.string(v.t.UMclVF),
+                                  alt: v.intl.string(v.t.UMclVN),
                               }
                             : void 0,
                     videoAsset: {
@@ -164,7 +164,7 @@ let S = function (e) {
                           !x &&
                           (0, r.jsx)(T, {
                               appFocused: L,
-                              location: w,
+                              location: D,
                           }),
                       "text" === S &&
                           (0, r.jsx)(c.Text, {
@@ -172,7 +172,7 @@ let S = function (e) {
                               variant: "text-xs/normal",
                               className: I.questRewardTileDetailsLearnMore,
                               style: { fontSize: A },
-                              children: v.intl.format(v.t.DYAleX, {}),
+                              children: v.intl.format(v.t.DYAleT, {}),
                           }),
                       "icon" === S &&
                           (0, r.jsx)("div", {

@@ -10,11 +10,11 @@ function l(e) {
     return r.useMemo(
         () =>
             null != l
-                ? s.intl.format(s.t.rSUACQ, {
+                ? s.intl.format(s.t.rSUACb, {
                       helpdeskArticle: i.Z.getArticleURL(o.BhN.SLAYER_PROVISIONAL_ACCOUNTS),
                       applicationName: () => n(l),
                   })
-                : s.intl.format(s.t["q+N8Ly"], {
+                : s.intl.format(s.t["q+N8L6"], {
                       helpdeskArticle: i.Z.getArticleURL(o.BhN.SLAYER_PROVISIONAL_ACCOUNTS),
                   }),
         [l, n],

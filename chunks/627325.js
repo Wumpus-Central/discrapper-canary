@@ -17,10 +17,10 @@ var r = n(951288),
     y = n(388032),
     j = n(335189);
 let O = [51],
-    h = [y.t.OpqAoq];
+    h = [y.t.OpqAok];
 function x(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: o = !1, query: l } = e,
-        a = _(),
+        a = P(),
         x = (0, s.e7)([p.default], () => (0, m.I5)(p.default.getCurrentUser())),
         C = w(l, x),
         E = Math.ceil(C.length / t),
@@ -46,7 +46,7 @@ function x(e) {
                   (0, r.jsx)(u.Heading, {
                       variant: "heading-sm/medium",
                       color: "header-muted",
-                      children: y.intl.string(y.t.ZzukHh),
+                      children: y.intl.string(y.t.ZzukHk),
                   }),
               ],
           })
@@ -63,12 +63,12 @@ function x(e) {
                     (0, r.jsx)(u.Heading, {
                         variant: "heading-md/normal",
                         color: "header-muted",
-                        children: y.intl.string(y.t.DpZNJy),
+                        children: y.intl.string(y.t.DpZNJw),
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "header-muted",
-                        children: y.intl.format(y.t["5afO9f"], { onClick: I ? g.wV : g.r5 }),
+                        children: y.intl.format(y.t["5afO9U"], { onClick: I ? g.wV : g.r5 }),
                     }),
                 ],
             })
@@ -87,7 +87,7 @@ function x(e) {
                       let n = e * t,
                           i = C.slice(n, n + t);
                       return (0, r.jsx)(
-                          P,
+                          _,
                           {
                               children: i.map((n, i) =>
                                   (0, r.jsx)(
@@ -128,7 +128,7 @@ function x(e) {
                   sectionFooterHeight: 40 * !x,
               });
 }
-function P(e) {
+function _(e) {
     let { children: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)("div", {
@@ -140,7 +140,7 @@ function P(e) {
         }),
     });
 }
-let _ = () =>
+let P = () =>
         (0, s.e7)([b.Z], () => {
             var e;
             return (

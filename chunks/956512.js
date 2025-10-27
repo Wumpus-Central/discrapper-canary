@@ -19,7 +19,7 @@ var i = n(442837),
     b = n(709054),
     y = n(915553),
     O = n(967249),
-    v = n(658805),
+    v = n(978967),
     I = n(388032);
 function T(e, t, n) {
     return (
@@ -75,7 +75,7 @@ function C(e, t) {
 }
 function N(e) {
     let { currentUserId: t, message: T, application: A, channel: N, analyticsLocations: R, onView: P } = e,
-        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: L } = (0, d.E)(A),
+        { staticBannerSrc: D, videoBannerSrc: w, bannerAspectRatio: L } = (0, d.E)(A),
         x = g.ZP.getApplicationIconURL({
             id: A.id,
             icon: A.icon,
@@ -93,21 +93,21 @@ function N(e) {
         U = b.default.extractTimestamp(T.id) + y.O < Date.now(),
         G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(T, N, t) }),
         { newestAnalyticsLocation: B } = (0, l.ZP)(R, s.Z.REQUEST_TO_STREAM_INVITE_EMBED),
-        Z = I.intl.string(v.default["5+172d"]),
+        Z = I.intl.string(v.default["5+172e"]),
         F = !1;
     return (
         U
             ? ((Z = I.intl.string(v.default.u4QmWl)), (F = !0))
             : null != k
-              ? ((Z = I.intl.string(v.default.P0wwmJ)), (F = !0))
+              ? ((Z = I.intl.string(v.default.P0wwmM)), (F = !0))
               : j !== N.id
-                ? ((Z = I.intl.string(v.default.qRXatr)), (F = !0))
-                : null == M && ((Z = I.intl.string(v.default["43zohI"])), (F = !0)),
+                ? ((Z = I.intl.string(v.default.qRXats)), (F = !0))
+                : null == M && ((Z = I.intl.string(v.default["43zohO"])), (F = !0)),
         (0, r.jsx)(c.W, {
-            header: I.intl.string(v.default.nAyuPj),
+            header: I.intl.string(v.default.nAyuPp),
             title: A.name,
-            staticBannerSrc: w,
-            videoBannerSrc: D,
+            staticBannerSrc: D,
+            videoBannerSrc: w,
             bannerAspectRatio: L,
             iconSrc: null != x ? x : void 0,
             info: G,
@@ -128,7 +128,7 @@ function N(e) {
                                                     n.e("38697"),
                                                     n.e("4093"),
                                                     n.e("47863"),
-                                                    n.e("53448"),
+                                                    n.e("65174"),
                                                 ]).then(n.bind(n, 60594));
                                                 return (t) => (0, r.jsx)(e, C(S({}, t), { analyticsLocation: B }));
                                             }));

@@ -9,17 +9,17 @@ let c = (t) => {
     let { channel: i, transitionState: n, onClose: c } = t;
     return (0, a.jsx)(r.Modal, {
         transitionState: n,
-        title: l.intl.string(l.t.xrYNBA),
-        subtitle: l.intl.string(l.t.TP1D8v),
+        title: l.intl.string(l.t.xrYNBI),
+        subtitle: l.intl.string(l.t.TP1D8l),
         onClose: c,
         actions: [
             {
-                text: l.intl.string(l.t["ETE/oK"]),
+                text: l.intl.string(l.t["ETE/oC"]),
                 onClick: c,
                 variant: "secondary",
             },
             {
-                text: l.intl.string(l.t.saZaRU),
+                text: l.intl.string(l.t.saZaRb),
                 onClick: () => {
                     (0, e.NZ)(i), s.default.disconnect(), c();
                 },

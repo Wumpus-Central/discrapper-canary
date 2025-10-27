@@ -92,7 +92,7 @@ function x() {
     return (0, r.jsx)(s.Text, {
         variant: "text-xs/medium",
         className: m.unpublishedBadge,
-        children: g.intl.string(g.t.TJ4CCw),
+        children: g.intl.string(g.t.TJ4CCy),
     });
 }
 function j(e) {

@@ -35,8 +35,8 @@ function b(e) {
                 onAttachmentUploadError: (r, i, a, c) => {
                     var d;
                     (0, o.openUploadError)({
-                        title: m.intl.string(m.t.B3vFdX),
-                        help: null != (d = null == c ? void 0 : c.message) ? d : m.intl.string(m.t.zMEjJi),
+                        title: m.intl.string(m.t.B3vFdU),
+                        help: null != (d = null == c ? void 0 : c.message) ? d : m.intl.string(m.t.zMEjJg),
                     }),
                         "" !== n &&
                             "" === p.Z.getDraft(e.id, p.d.FirstThreadMessage) &&

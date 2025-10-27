@@ -21,21 +21,21 @@ let h = function (e) {
             loading: E,
             isRefreshing: O,
             handleOnRefresh: I,
-            viewabilityConfigCallbackPairs: y,
+            viewabilityConfigCallbackPairs: v,
         } = (0, u.a)({
             showDot: h,
             notificationItem: n,
         }),
-        v = (0, o.G)();
+        y = (0, o.G)();
     i.useEffect(
         () => () => {
-            v();
+            y();
         },
-        [v],
+        [y],
     );
     let C = (0, l.e7)([a.Z], () => a.Z.hasNewContent(), []),
         S = (0, l.e7)([a.Z], () => a.Z.isHydrating(), []),
-        T = i.useMemo(() => y[0].onViewableItemsChanged, [y]),
+        T = i.useMemo(() => v[0].onViewableItemsChanged, [v]),
         { registerItemRef: N } = (0, p.m)(b, T, t),
         j = i.useMemo(() => b.some((e) => "end" === e.data.kind), [b]),
         P = i.useCallback(() => {

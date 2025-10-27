@@ -23,15 +23,15 @@ function x(e) {
         { isFullServerGating: y } = (0, c.Z)(x),
         E = (0, a.mY)();
     return (0, r.jsx)(d.Z, {
-        title: b.intl.string(b.t.YNw2Sk),
-        description: b.intl.string(b.t.zMW5r6),
+        title: b.intl.string(b.t.YNw2Sm),
+        description: b.intl.string(b.t.zMW5r0),
         children: (0, r.jsxs)(l.Kqy, {
             gap: 24,
             children: [
                 (0, r.jsxs)(l.gNt, {
                     disabled: E,
-                    label: b.intl.string(b.t.DFlDaG),
-                    description: b.intl.string(b.t.kHalVF),
+                    label: b.intl.string(b.t.DFlDaE),
+                    description: b.intl.string(b.t.kHalVA),
                     children: [
                         (0, r.jsx)(u.Z, {
                             channelBenefits: j,
@@ -67,8 +67,8 @@ function x(e) {
                     ],
                 }),
                 (0, r.jsx)(l.gNt, {
-                    label: b.intl.string(b.t.S2kKzM),
-                    description: b.intl.string(b.t["5a4Axc"]),
+                    label: b.intl.string(b.t.S2kKzP),
+                    description: b.intl.string(b.t["5a4AxV"]),
                     disabled: E,
                     children: (e) =>
                         (0, r.jsxs)(r.Fragment, {
@@ -88,8 +88,8 @@ function x(e) {
                         }),
                 }),
                 (0, r.jsx)(l.gNt, {
-                    label: b.intl.string(b.t.RdwKw8),
-                    description: b.intl.string(b.t.zAww7e),
+                    label: b.intl.string(b.t.RdwKw7),
+                    description: b.intl.string(b.t.zAww7V),
                     disabled: E,
                     children: (0, r.jsx)(f.Z, {}),
                 }),

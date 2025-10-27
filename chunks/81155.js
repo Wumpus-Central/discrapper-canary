@@ -2,8 +2,8 @@ o.d(e, { default: () => p });
 var l = o(951288),
     n = o(647438),
     s = o(481060),
-    r = o(782568),
-    i = o(690221),
+    i = o(782568),
+    r = o(690221),
     a = o(460181),
     d = o(388032),
     u = o(943584);
@@ -38,7 +38,7 @@ function p(t) {
     return (0, l.jsx)(s.Y0X, {
         className: u.bugReporterSubmitModalRoot,
         transitionState: e,
-        "aria-label": d.intl.string(d.t.mCCdws),
+        "aria-label": d.intl.string(d.t.mCCdwi),
         parentComponent: "BugReporterSubmitModal",
         children: (0, l.jsxs)(s.hzk, {
             style: {
@@ -59,8 +59,8 @@ function p(t) {
                     variant: "text-sm/normal",
                     children: [
                         "Thanks for submitting a ",
-                        (0, l.jsx)(i.Z, {
-                            onClick: () => (0, r.Z)(p.permalink_url),
+                        (0, l.jsx)(r.Z, {
+                            onClick: () => (0, i.Z)(p.permalink_url),
                             children: "bug",
                         }),
                         "!",

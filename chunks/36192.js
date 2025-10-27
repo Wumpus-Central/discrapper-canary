@@ -61,7 +61,7 @@ function N() {
                                 className: C.sessions,
                                 children: [
                                     (0, r.jsx)(d.C3N, {
-                                        label: A.intl.string(A.t.LLS19v),
+                                        label: A.intl.string(A.t.LLS19o),
                                         children:
                                             null != t
                                                 ? (0, r.jsx)(R, {
@@ -73,7 +73,7 @@ function N() {
                                     !(n.length > 0) && (null == o ? void 0 : o.mfaEnabled)
                                         ? null
                                         : (0, r.jsxs)(d.C3N, {
-                                              label: A.intl.string(A.t.xx1MWV),
+                                              label: A.intl.string(A.t.xx1MWc),
                                               children: [
                                                   n.map((e) =>
                                                       (0, r.jsx)(
@@ -97,8 +97,8 @@ function N() {
                             }),
                             n.length > 0
                                 ? (0, r.jsx)(d.gNt, {
-                                      label: O.size > 0 ? A.intl.string(A.t.mMEmRE) : A.intl.string(A.t.Vij32N),
-                                      description: A.intl.string(A.t.OTXyaW),
+                                      label: O.size > 0 ? A.intl.string(A.t.mMEmRO) : A.intl.string(A.t.Vij32M),
+                                      description: A.intl.string(A.t.OTXyaf),
                                       children: (0, r.jsx)("div", {
                                           "data-button-hoisted-classname-wrapper": !0,
                                           className: C.logOutAllButton,
@@ -107,8 +107,8 @@ function N() {
                                               size: "sm",
                                               text:
                                                   O.size > 0
-                                                      ? A.intl.formatToPlainString(A.t["83CPLi"], { count: O.size })
-                                                      : A.intl.string(A.t.cLmmeX),
+                                                      ? A.intl.formatToPlainString(A.t["83CPLj"], { count: O.size })
+                                                      : A.intl.string(A.t.cLmmeY),
                                               onClick: () => {
                                                   O.size > 0
                                                       ? (0, p.L$)(Array.from(O))
@@ -121,12 +121,12 @@ function N() {
                         ],
                     })),
           (0, r.jsxs)(v.N, {
-              header: A.intl.string(A.t["+1h0k5"]),
+              header: A.intl.string(A.t["+1h0k/"]),
               children: [
                   (0, r.jsx)(d.Text, {
                       variant: "text-sm/normal",
                       className: C.description,
-                      children: A.intl.string(A.t.zZp619),
+                      children: A.intl.string(A.t.zZp618),
                   }),
                   (null == o ? void 0 : o.isStaff())
                       ? (0, r.jsxs)("div", {
@@ -169,7 +169,7 @@ function R(e) {
                   ? void 0
                   : n.ip,
         g = null == (i = l.client_info) ? void 0 : i.platform,
-        { text: E, icon: b } = w(null == (a = l.client_info) ? void 0 : a.os),
+        { text: E, icon: b } = D(null == (a = l.client_info) ? void 0 : a.os),
         O = c ? null : (0, h.p)(l.approx_last_used_time),
         v = [E, g].filter(y.lm),
         I = [m, O].filter(y.lm);
@@ -235,7 +235,7 @@ function R(e) {
                             onClick: (e) => {
                                 e.shiftKey ? null == u || u(!0) : (0, p.L$)(l.id_hash);
                             },
-                            "aria-label": A.intl.string(A.t.E4MJNj),
+                            "aria-label": A.intl.string(A.t.E4MJNt),
                             children: (0, r.jsx)(d.Dio, {
                                 size: "md",
                                 color: "currentColor",
@@ -264,14 +264,14 @@ function P() {
                         variant: "eyebrow",
                         className: C.sessionInfoRow,
                         color: "text-muted",
-                        children: (0, r.jsx)("span", { children: A.intl.string(A.t.iUa0sr) }),
+                        children: (0, r.jsx)("span", { children: A.intl.string(A.t.iUa0sn) }),
                     }),
                     (0, r.jsx)(d.Text, {
                         variant: "text-sm/medium",
                         className: C.sessionInfoRow,
                         color: "text-muted",
                         children: (0, r.jsx)("span", {
-                            children: A.intl.format(A.t["044+8v"], {
+                            children: A.intl.format(A.t["044+8i"], {
                                 onClick: () =>
                                     (0, I.openUserSettings)(O.n.ACCOUNT_PANEL, {
                                         section: T.oAB.ACCOUNT,
@@ -285,13 +285,13 @@ function P() {
         ],
     });
 }
-function w(e) {
+function D(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
         case null:
         case void 0:
         case "":
             return {
-                text: A.intl.string(A.t.cDHCNT),
+                text: A.intl.string(A.t.cDHCNY),
                 icon: d.pzj,
             };
         case "ios":

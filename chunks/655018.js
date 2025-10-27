@@ -79,8 +79,8 @@ function U(e, t) {
 }
 function B(e) {
     var t, n, l, o;
-    let { channel: B, setIsHangStatusInputFocused: H, setPopoutRef: V } = e,
-        F = r.useRef(null),
+    let { channel: B, setIsHangStatusInputFocused: H, setPopoutRef: F } = e,
+        V = r.useRef(null),
         G = (0, u.e7)([_.Z], () => _.Z.getCustomHangStatus()),
         z = (0, E.Z)(),
         W = (0, u.e7)([_.Z], () => _.Z.getFavoritedStatuses()),
@@ -122,8 +122,8 @@ function B(e) {
             et || (J !== (null != (e = null == G ? void 0 : G.status) ? e : "") && "" !== J.trim()) ? H(!0) : H(!1);
         }, [J, null == G ? void 0 : G.status, $, null == G ? void 0 : G.emoji, H, et]),
         r.useEffect(() => {
-            null == V || V(null == X ? void 0 : X.current);
-        }, [X, V]);
+            null == F || F(null == X ? void 0 : X.current);
+        }, [X, F]);
     let em = r.useCallback(
             (e) => {
                 e !== ei && ((0, C.Zx)(e, !0), null != $ && ee(null), "" !== J.trim() && Q(""));
@@ -158,7 +158,7 @@ function B(e) {
                                           animated: !1,
                                       },
                         }),
-                        null == (n = F.current) || n.blur(),
+                        null == (n = V.current) || n.blur(),
                         en(!1));
             },
             [J, $, eb, ea],
@@ -191,7 +191,7 @@ function B(e) {
                 (ee(i),
                 Q(n.name),
                 en(!0),
-                null == (e = F.current) || e.focus(),
+                null == (e = V.current) || e.focus(),
                 b.default.track(A.rMx.HANG_STATUS_RANDOMIZER_CLICKED, (0, x.Z)(B.id)));
         }, [eo, $, B.id]),
         e_ = r.useCallback(
@@ -285,7 +285,7 @@ function B(e) {
                             className: R.inputRow,
                             children: [
                                 (0, i.jsx)(h.oil, {
-                                    inputRef: F,
+                                    inputRef: V,
                                     value: et || ep ? J : null != (o = null == er ? void 0 : er.title) ? o : "",
                                     onBlur: ev,
                                     onFocus: ex,

@@ -29,7 +29,7 @@ function _(e) {
     if (null == c) return null;
     let y = (0, l.EY)(c.thumbnail),
         O = !b && c.has_media_attachment,
-        v = b ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
+        v = b ? d.intl.string(d.t.UsZEBI) : d.intl.string(d.t.ReFzYZ),
         I = null != g ? s.ZP.getName(c.guild_id, c.channel_id, g) : void 0,
         T = null == g ? void 0 : g.getAvatarURL(null == _ ? void 0 : _.id, f);
     (null == T || E !== c.guild_id) &&
@@ -48,7 +48,7 @@ function _(e) {
         subtitle: c.description,
         ctaText: v,
         coverImage: y,
-        coverImageOverlayText: O ? d.intl.string(d.t.YonliY) : void 0,
+        coverImageOverlayText: O ? d.intl.string(d.t.Yonlia) : void 0,
         parentChannelId: c.parent_channel_id,
         threadId: c.channel_id,
         postThread: m,

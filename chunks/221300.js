@@ -2,21 +2,21 @@ r.d(t, { Z: () => d });
 var n = r(951288);
 r(647438);
 var i = r(979554),
-    s = r(481060),
-    l = r(616066),
+    l = r(481060),
+    s = r(616066),
     a = r(22267),
-    o = r(876917),
-    c = r(688192),
+    c = r(876917),
+    o = r(688192),
     u = r(232644);
 function d(e) {
-    let { item: t, profileOwner: r, isHighlighted: d, surface: f = c.Y.PROFILE_MODAL } = e,
-        p = t.collectiblesItem;
-    switch (p.type) {
+    let { item: t, profileOwner: r, isHighlighted: d, surface: f = o.Y.PROFILE_MODAL } = e,
+        m = t.collectiblesItem;
+    switch (m.type) {
         case i.Z.PROFILE_EFFECT:
             return (0, n.jsx)("div", {
                 className: u.profileEffectPreview,
-                children: (0, n.jsx)(o.Z, {
-                    skuId: p.skuId,
+                children: (0, n.jsx)(c.Z, {
+                    skuId: m.skuId,
                     isHighlighted: d,
                     isPurchased: !1,
                     removeSetHeight: !0,
@@ -25,12 +25,12 @@ function d(e) {
         case i.Z.AVATAR_DECORATION:
             return (0, n.jsx)("div", {
                 className: u.avatarDecorationPreview,
-                children: (0, n.jsx)(l.R, {
-                    item: p,
+                children: (0, n.jsx)(s.R, {
+                    item: m,
                     user: r,
                     isHighlighted: d,
                     isPurchased: !1,
-                    avatarSize: s.EFr.SIZE_80,
+                    avatarSize: l.EFr.SIZE_80,
                 }),
             });
         case i.Z.NAMEPLATE:
@@ -41,13 +41,13 @@ function d(e) {
                         className: u.nameplateTopLeft,
                         children: (0, n.jsx)(a.Z, {
                             user: r,
-                            nameplate: p,
+                            nameplate: m,
                             isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: f === c.Y.GIFTING_FLOW ? 136 : 200,
+                            width: f === o.Y.GIFTING_FLOW ? 136 : 200,
                         }),
                     }),
                     (0, n.jsx)("div", {
@@ -55,13 +55,13 @@ function d(e) {
                         "aria-hidden": !0,
                         children: (0, n.jsx)(a.Z, {
                             user: r,
-                            nameplate: p,
+                            nameplate: m,
                             isHighlighted: d,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: f === c.Y.GIFTING_FLOW ? 136 : 200,
+                            width: f === o.Y.GIFTING_FLOW ? 136 : 200,
                         }),
                     }),
                 ],

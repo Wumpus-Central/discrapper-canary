@@ -19,16 +19,16 @@ function g(e, t) {
         ? null
         : (0, r.jsx)(l.sNh, {
               id: "remove-reactions",
-              label: f.intl.string(f.t.ZbtGBg),
+              label: f.intl.string(f.t.ZbtGBm),
               action: function (n) {
                   n.shiftKey
                       ? (0, s.wX)(t.id, e.id)
                       : a.Z.show({
-                            title: f.intl.string(f.t.iz3vYW),
-                            body: f.intl.string(f.t.VpjOCg),
-                            confirmText: f.intl.string(f.t.p89ACg),
+                            title: f.intl.string(f.t.iz3vYX),
+                            body: f.intl.string(f.t.VpjOCo),
+                            confirmText: f.intl.string(f.t.p89ACt),
                             confirmVariant: "critical-primary",
-                            cancelText: f.intl.string(f.t.gm1Ven),
+                            cancelText: f.intl.string(f.t.gm1Vej),
                             onConfirm: () => {
                                 (0, s.wX)(t.id, e.id);
                             },

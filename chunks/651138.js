@@ -19,11 +19,11 @@ function p(e) {
     return (0, r.jsx)(i.v2r, {
         navId: "progress-bar-context",
         onClose: d.Zy,
-        "aria-label": u.intl.string(u.t["m85s/v"]),
+        "aria-label": u.intl.string(u.t["m85s/h"]),
         onSelect: s,
         children: (0, r.jsx)(i.S89, {
             id: "progress-bar-enabled",
-            label: u.intl.string(u.t["0CJWPz"]),
+            label: u.intl.string(u.t["0CJWP2"]),
             checked: p,
             disabled: h,
             action: m,

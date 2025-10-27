@@ -17,8 +17,8 @@ function _() {
         children: (0, r.jsx)(l.ZP, {
             value: e,
             onChange: a.Q,
-            title: f.intl.string(f.t.qFsx5u),
-            note: f.intl.format(f.t.lunaRk, { learnMoreLink: o.Z.getArticleURL(d.BhN.SAFETY_ALERTS) }),
+            title: f.intl.string(f.t.qFsx5q),
+            note: f.intl.format(f.t.lunaRv, { learnMoreLink: o.Z.getArticleURL(d.BhN.SAFETY_ALERTS) }),
         }),
     });
 }

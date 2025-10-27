@@ -38,11 +38,11 @@ let m = a.$e(
     p = [],
     C = [],
     D = !0,
-    L = !1,
     U = !1,
+    L = !1,
     M = !0,
-    x = !1,
-    b = null,
+    b = !1,
+    x = null,
     v = I.rsA.ALL,
     P = null,
     j = {},
@@ -185,22 +185,22 @@ class F extends (r = o.ZP.Store) {
         return D;
     }
     get isLoading() {
-        return L;
+        return U;
     }
     get isLoadingNextPage() {
-        return U;
+        return L;
     }
     get hasOlderLogs() {
         return M;
     }
     get hasError() {
-        return x;
+        return b;
     }
     get userIds() {
         return O;
     }
     get userIdFilter() {
-        return b;
+        return x;
     }
     get targetIdFilter() {
         return P;
@@ -225,15 +225,15 @@ class F extends (r = o.ZP.Store) {
     : (F[l] = "GuildSettingsAuditLogStore");
 let w = new F(u.Z, {
     AUDIT_LOG_FETCH_START: function () {
-        L = !0;
+        U = !0;
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
         var t;
         (y = 0),
             (D = !1),
-            (L = !1),
+            (U = !1),
             (M = !0),
-            (x = !1),
+            (b = !1),
             (N = G(e.logs)),
             (h = e.integrations),
             (f = e.webhooks),
@@ -244,11 +244,11 @@ let w = new F(u.Z, {
             e.logs.length < I.Rg9 && (M = !1);
     },
     AUDIT_LOG_FETCH_FAIL: function () {
-        (L = !1), (x = !0), (N = []);
+        (U = !1), (b = !0), (N = []);
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
         let { isGroupedFetch: t } = e;
-        (U = !0), t && y++;
+        (L = !0), t && y++;
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let {
@@ -261,7 +261,7 @@ let w = new F(u.Z, {
             applicationCommands: a,
         } = e;
         if (
-            ((U = !1),
+            ((L = !1),
             (h = n),
             (f = r),
             (R = l),
@@ -276,7 +276,7 @@ let w = new F(u.Z, {
         }
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_FAIL: function () {
-        U = !1;
+        L = !1;
     },
     AUDIT_LOG_FILTER_BY_ACTION: function (e) {
         let { action: t } = e;
@@ -284,7 +284,7 @@ let w = new F(u.Z, {
     },
     AUDIT_LOG_FILTER_BY_USER: function (e) {
         let { userId: t } = e;
-        b = t;
+        x = t;
     },
     AUDIT_LOG_FILTER_BY_TARGET: function (e) {
         let { targetId: t } = e;
@@ -299,7 +299,7 @@ let w = new F(u.Z, {
         (N = []),
             (O = []),
             (v = I.rsA.ALL),
-            (b = null),
+            (x = null),
             (P = null),
             (j = {}),
             (y = 0),

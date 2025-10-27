@@ -18,8 +18,8 @@ var r = n(647438),
     h = n(981631),
     m = n(526761),
     g = n(388032),
-    E = n(687101),
-    b = n(592186),
+    E = n(531421),
+    b = n(352609),
     y = n(509614),
     O = n(880511),
     v = n(985443),
@@ -31,8 +31,8 @@ var r = n(647438),
     N = n(404583),
     R = n(295349),
     P = n(631572),
-    w = n(999675),
-    D = n(238027),
+    D = n(999675),
+    w = n(238027),
     L = n(997585),
     x = n(138431),
     M = n(305516),
@@ -139,8 +139,8 @@ let ec = (e, t) =>
                           assetUrl: e ? N.Z : P.Z,
                       },
                       noLimits: {
-                          thumbnail: D.Z,
-                          assetUrl: e ? w.Z : L.Z,
+                          thumbnail: w.Z,
+                          assetUrl: e ? D.Z : L.Z,
                       },
                   }
                 : {
@@ -233,7 +233,7 @@ let ec = (e, t) =>
                 badgeText: g.intl.string(g.t.y2b7CA).toLocaleUpperCase(),
                 videoUrl: A.displayNameStyles.assetUrl,
             },
-            w = {
+            D = {
                 name: "showYourStyle",
                 title: g.intl.string(g.t.Ij3Zmv),
                 description: g.intl.string(g.t.UsOUxY),
@@ -242,7 +242,7 @@ let ec = (e, t) =>
                 onClick: y,
                 videoUrl: A.showYourStyle.assetUrl,
             },
-            D = {
+            w = {
                 name: "yourSpace",
                 title: g.intl.string(g.t.Wme3nX),
                 description: g.intl.string(g.t["/aAIqV"]),
@@ -259,8 +259,8 @@ let ec = (e, t) =>
                 videoUrl: A.emojis.assetUrl,
             },
             x = [
-                [w],
                 [D],
+                [w],
                 [
                     L,
                     {

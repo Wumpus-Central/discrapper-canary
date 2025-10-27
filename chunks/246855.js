@@ -1,4 +1,4 @@
-n.d(t, { default: () => P }), n(388685);
+n.d(t, { default: () => I }), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(120356),
@@ -27,8 +27,8 @@ var a = n(951288),
     S = n(345554),
     T = n(88490),
     L = n(466674),
-    O = n(201284);
-function Z(e) {
+    Z = n(201284);
+function w(e) {
     let { onVideoLoaded: t } = e;
     return (0, a.jsx)(p.Z, {
         className: N.smallOrb,
@@ -38,12 +38,12 @@ function Z(e) {
         loop: !0,
         onCanPlayThrough: t,
         children: (0, a.jsx)("source", {
-            src: O.Z,
+            src: Z.Z,
             type: "video/webm",
         }),
     });
 }
-function w(e) {
+function O(e) {
     let { onVideoLoaded: t, isLoading: n } = e,
         i = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [u, m] = r.useState(!i),
@@ -67,7 +67,7 @@ function w(e) {
                     null == (e = h.current) || e.play();
                 }, 200);
         }, [n, i]);
-    let O = r.useCallback(() => {
+    let Z = r.useCallback(() => {
         if (!i) {
             var e;
             m(!1), null == (e = x.current) || e.play();
@@ -98,7 +98,7 @@ function w(e) {
                 className: N.centerOrb,
                 controls: !1,
                 onCanPlayThrough: r.useCallback(() => y(!0), []),
-                onEnded: O,
+                onEnded: Z,
                 children: (0, a.jsx)("source", {
                     src: _,
                     type: "video/webm",
@@ -107,16 +107,16 @@ function w(e) {
             (0, a.jsxs)("div", {
                 className: N.smallOrbContainer,
                 children: [
-                    (0, a.jsx)(Z, { onVideoLoaded: r.useCallback(() => R(!0), []) }),
-                    (0, a.jsx)(Z, {}),
-                    (0, a.jsx)(Z, {}),
-                    (0, a.jsx)(Z, {}),
+                    (0, a.jsx)(w, { onVideoLoaded: r.useCallback(() => R(!0), []) }),
+                    (0, a.jsx)(w, {}),
+                    (0, a.jsx)(w, {}),
+                    (0, a.jsx)(w, {}),
                 ],
             }),
         ],
     });
 }
-function I(e) {
+function P(e) {
     let { isLoading: t, onClose: n, orbsEarned: r, orbsBalance: i, onVideoLoaded: s } = e,
         o = async () => {
             (0, f.Y)({
@@ -134,7 +134,7 @@ function I(e) {
     return (0, a.jsxs)("div", {
         className: N.contentContainer,
         children: [
-            (0, a.jsx)(w, {
+            (0, a.jsx)(O, {
                 isLoading: t,
                 onVideoLoaded: s,
             }),
@@ -151,7 +151,7 @@ function I(e) {
                             (0, a.jsx)(l.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: R.intl.formatToPlainString(R.t.YMor7u, { count: r }),
+                                children: R.intl.formatToPlainString(R.t.YMor7k, { count: r }),
                             }),
                         ],
                     }),
@@ -159,7 +159,7 @@ function I(e) {
                         ? (0, a.jsx)(l.Text, {
                               variant: "text-sm/medium",
                               color: "text-secondary",
-                              children: R.intl.format(R.t.g4t9a2, {
+                              children: R.intl.format(R.t.g4t9aw, {
                                   orbsBalance: i,
                                   orbsBalanceHook: (e, t) =>
                                       (0, a.jsx)(
@@ -180,14 +180,14 @@ function I(e) {
             (0, a.jsx)(l.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: R.intl.string(R.t.WYchdX),
+                text: R.intl.string(R.t.WYchde),
                 onClick: o,
                 fullWidth: !0,
             }),
         ],
     });
 }
-function P(e) {
+function I(e) {
     var t;
     let { quest: n, onClose: i, transitionState: s, sourceQuestContent: o, location: l } = e,
         c = (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null,
@@ -218,8 +218,8 @@ function P(e) {
         rewardContent: A
             ? null
             : (0, a.jsx)(y.Z, {
-                  rewardName: R.intl.string(R.t.Lmysvb),
-                  children: (0, a.jsx)(I, {
+                  rewardName: R.intl.string(R.t.Lmysvd),
+                  children: (0, a.jsx)(P, {
                       onClose: i,
                       orbsEarned: m,
                       orbsBalance: d,

@@ -31,7 +31,7 @@ function _(e) {
                 color: "currentColor",
                 className: w.speakerIcon,
             }),
-            j.intl.format(j.t["8Dyg1N"], { slots: n }),
+            j.intl.format(j.t["8Dyg1C"], { slots: n }),
         ],
     });
 }
@@ -69,7 +69,7 @@ function C(e) {
                 }),
             [N, S],
         ),
-        E = l.useCallback(
+        P = l.useCallback(
             (e) =>
                 null == e || "" === e.value
                     ? null
@@ -81,7 +81,7 @@ function C(e) {
                       }),
             [N],
         ),
-        P = l.useCallback(
+        E = l.useCallback(
             (e) => {
                 let n = null == e ? void 0 : e.value;
                 return null == n || "" === n
@@ -118,9 +118,9 @@ function C(e) {
         value: Z,
         multi: !1,
         options: O,
-        renderOptionPrefix: E,
-        renderOptionSuffix: P,
+        renderOptionPrefix: P,
+        renderOptionSuffix: E,
         renderOptionLabel: I,
-        placeholder: 0 === O.length ? j.intl.string(j.t.O3i2gY) : j.intl.string(j.t.CunCMD),
+        placeholder: 0 === O.length ? j.intl.string(j.t.O3i2gV) : j.intl.string(j.t.CunCMN),
     });
 }

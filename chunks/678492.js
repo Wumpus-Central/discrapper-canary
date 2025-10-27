@@ -4,9 +4,9 @@ n(647438);
 var i = n(755721),
     l = n(481060),
     a = n(570140),
-    o = n(317770),
-    s = n(388032);
-class c extends o.Z {
+    s = n(317770),
+    o = n(388032);
+class c extends s.Z {
     _initialize() {
         a.Z.subscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled);
     }
@@ -45,12 +45,12 @@ class c extends o.Z {
                 })({}, e)),
                 (n = n =
                     {
-                        header: s.intl.string(s.t.wDQgnZ),
-                        confirmText: s.intl.string(s.t["cY+Ooa"]),
+                        header: o.intl.string(o.t.wDQgnX),
+                        confirmText: o.intl.string(o.t["cY+Oob"]),
                         confirmButtonColor: i.zx.Colors.GREEN,
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-md/normal",
-                            children: s.intl.string(s.t.OJklbW),
+                            children: o.intl.string(o.t.OJklbS),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

@@ -6,8 +6,8 @@ var i = t(859097),
 function s(n) {
     let { onContinue: e, onClose: t } = n;
     return (0, o.jsx)(i.C, {
-        title: r.intl.string(r.t["8YK70d"]),
-        body: r.intl.string(r.t.moyYLS),
+        title: r.intl.string(r.t["8YK70c"]),
+        body: r.intl.string(r.t.moyYLf),
         onClose: t,
         onContinue: e,
     });

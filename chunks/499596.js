@@ -42,17 +42,17 @@ function x(e) {
                     return e.length <= 1
                         ? null
                         : 2 === e.length
-                          ? d.intl.formatToPlainString(d.t.MlgLFx, {
+                          ? d.intl.formatToPlainString(d.t.MlgLF2, {
                                 nickname0: u.ZP.getName(l, t, e[0]),
                                 nickname1: u.ZP.getName(l, t, e[1]),
                             })
                           : 3 === e.length
-                            ? d.intl.formatToPlainString(d.t.sihix8, {
+                            ? d.intl.formatToPlainString(d.t.sihixx, {
                                   nickname0: u.ZP.getName(l, t, e[0]),
                                   nickname1: u.ZP.getName(l, t, e[1]),
                                   nickname2: u.ZP.getName(l, t, e[2]),
                               })
-                            : d.intl.formatToPlainString(d.t["824IXV"], {
+                            : d.intl.formatToPlainString(d.t["824IXR"], {
                                   nickname0: u.ZP.getName(l, t, e[0]),
                                   nickname1: u.ZP.getName(l, t, e[1]),
                                   remainingCount: e.length - 2,

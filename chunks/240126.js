@@ -39,7 +39,7 @@ function s(e) {
                               className: a.protip,
                               variant: "text-xs/bold",
                               color: "text-feedback-positive",
-                              children: [o.intl.string(o.t["8tvIiI"]), ":", " "],
+                              children: [o.intl.string(o.t["8tvIiN"]), ":", " "],
                           }),
                     s,
                 ],

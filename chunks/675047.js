@@ -22,14 +22,14 @@ var r = n(951288),
 function I() {
     return (0, r.jsxs)(E.Z, {
         title: v.intl.string(v.t.WWaFn5),
-        description: v.intl.format(v.t["/6sFWV"], { helpArticle: (0, s.uV)() }),
+        description: v.intl.format(v.t["/6sFWa"], { helpArticle: (0, s.uV)() }),
         webSetting: O.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
         children: [(0, r.jsx)(g.Z, {}), (0, r.jsx)(y.Z, {})],
     });
 }
 function T() {
     return (0, r.jsx)(E.Z, {
-        title: v.intl.string(v.t.BG7Qsb),
+        title: v.intl.string(v.t.BG7QsQ),
         webSetting: O.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
         children: (0, r.jsx)(d.Z, {}),
     });
@@ -37,7 +37,7 @@ function T() {
 function S() {
     let e = (0, c.W)("UserSettingsDataAndPrivacy");
     return (0, r.jsxs)(E.Z, {
-        title: v.intl.string(v.t.SRZyHh),
+        title: v.intl.string(v.t.SRZyHg),
         webSetting: O.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
         children: [
             (0, r.jsx)(m.Z, {}),
@@ -54,7 +54,7 @@ function A() {
             (0, a.I)(), (0, l.A)();
         }),
         (0, r.jsx)(u.N, {
-            header: v.intl.string(v.t.OAuOHB),
+            header: v.intl.string(v.t.OAuOHD),
             notice: (0, r.jsx)(b.Z, { page: b.N.DATA_AND_PRIVACY }),
             children: (0, r.jsxs)(i.l09, {
                 children: [(0, r.jsx)(S, {}), (0, r.jsx)(T, {}), (0, r.jsx)(I, {})],

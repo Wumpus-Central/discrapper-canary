@@ -101,8 +101,8 @@ function A(e) {
             labelledBy: N,
         }),
         { ref: P } = R,
-        w = T(R, ["ref"]),
-        D = (e) => {
+        D = T(R, ["ref"]),
+        w = (e) => {
             l.Z.dispatch({
                 type: "APP_ICON_UPDATED",
                 id: e,
@@ -112,7 +112,7 @@ function A(e) {
         ref: C,
         children: (0, r.jsx)(
             "div",
-            I(O({}, w), {
+            I(O({}, D), {
                 ref: P,
                 className: E.__invalid_container,
                 children: (0, r.jsxs)("div", {
@@ -162,7 +162,7 @@ function A(e) {
                                         {
                                             icon: e,
                                             isSelected: S === e.id,
-                                            onSelect: (e) => D(e),
+                                            onSelect: (e) => w(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,
                                             locked: !1,

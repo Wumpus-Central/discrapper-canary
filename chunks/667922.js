@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -18,7 +18,7 @@ var r = n(951288),
     h = n(185923),
     v = n(388032),
     j = n(576311);
-function S(e, t) {
+function E(e, t) {
     let { reducedMotion: n } = i.useContext(s.Sfi),
         l = (0, f.$R)(t),
         a = (0, o.e7)([b.Z], () => (t.isPrivate() || b.Z.can(m.Plq.ADD_REACTIONS, t)) && l, [t, l]),
@@ -45,7 +45,7 @@ function S(e, t) {
                     icon: (e) => {
                         var t, l;
                         return (0, r.jsx)(
-                            E,
+                            S,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -101,7 +101,7 @@ function S(e, t) {
         });
     return (0, r.jsx)(s.sNh, {
         id: "add-reaction",
-        label: v.intl.string(v.t.lfIHs7),
+        label: v.intl.string(v.t.lfIHs4),
         action: () => {
             O.S.dispatchKeyed(m.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
@@ -113,7 +113,7 @@ function S(e, t) {
                 (0, r.jsx)(s.sNh, {
                     color: "default",
                     id: "other-reactions",
-                    label: v.intl.string(v.t["OBCR+v"]),
+                    label: v.intl.string(v.t["OBCR+p"]),
                     icon: s.EO4,
                     action: () => {
                         O.S.dispatchKeyed(m.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
@@ -123,7 +123,7 @@ function S(e, t) {
         }),
     });
 }
-function E(e) {
+function S(e) {
     var t;
     let { emoji: n, reducedMotionEnabled: i, className: l = "", isFocused: o = !1 } = e;
     return (0, r.jsx)("img", {

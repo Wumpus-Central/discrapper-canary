@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854);
+n.d(t, { Z: () => v }), n(539854);
 var r = n(647438),
     i = n(846519),
     l = n(692547),
@@ -13,9 +13,9 @@ var r = n(647438),
     _ = n(400321),
     m = n(813900);
 let g = 1000 / 60;
-function E(e, t, n, E) {
+function v(e, t, n, v) {
     let b = (0, a.dQu)(l.Z.unsafe_rawColors.BRAND_500).hex(),
-        v = (0, a.dQu)(l.Z.unsafe_rawColors.BLACK_500).hex(),
+        E = (0, a.dQu)(l.Z.unsafe_rawColors.BLACK_500).hex(),
         h = (0, a.dQu)(l.Z.unsafe_rawColors.WHITE_500).hex(),
         S = r.useRef({}),
         y = r.useRef(new i.Xp()),
@@ -39,7 +39,7 @@ function E(e, t, n, E) {
                         if (null == f) return;
                         let m = f.getContext("2d");
                         if (null == m) return;
-                        let { width: g, height: E } = f.getBoundingClientRect(),
+                        let { width: g, height: v } = f.getBoundingClientRect(),
                             b = [];
                         n.forEach((e) => {
                             if (null == c.Z.getVoiceStateForChannel(a, e.userId)) return void b.push(e);
@@ -86,7 +86,7 @@ function E(e, t, n, E) {
                                 drawable: e,
                                 context: m,
                                 canvasWidth: g,
-                                canvasHeight: E,
+                                canvasHeight: v,
                                 fallbackColor: r,
                                 outlineColorDark: o,
                                 outlineColorLight: u,
@@ -102,12 +102,12 @@ function E(e, t, n, E) {
                         fallbackColor: b,
                         linesDrawnAt: S,
                         streamerId: t,
-                        outlineColorDark: v,
+                        outlineColorDark: E,
                         outlineColorLight: h,
-                        channelId: E,
+                        channelId: v,
                     });
             },
-            [e, E, b, v, h],
+            [e, v, b, E, h],
         );
     r.useEffect(() => {
         let t = new ResizeObserver(() => {

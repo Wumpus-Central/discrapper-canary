@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(918559),
     P = n(354459),
-    w = n(408491),
-    D = n(639965);
+    D = n(408491),
+    w = n(639965);
 function L(e, t, n) {
     return (
         t in e
@@ -94,7 +94,7 @@ class j extends i.PureComponent {
                     resizeConfig: M,
                     getDockedRectPositionY: u,
                 }),
-                (0, r.jsx)(g.mK, { className: v ? D.belowSidebar : void 0 }),
+                (0, r.jsx)(g.mK, { className: v ? w.belowSidebar : void 0 }),
             ],
         });
     }
@@ -113,7 +113,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
     let h,
         { popoutWindowKey: m, popoutWindowHasTitleBar: g = !1 } = e,
         v = b.Z.getWindowOpen(N.KJ3.CHANNEL_CALL_POPOUT),
-        D = b.Z.getWindowOpen(N.KJ3.ACTIVITY_POPOUT),
+        w = b.Z.getWindowOpen(N.KJ3.ACTIVITY_POPOUT),
         L = s.ZP.getCurrentEmbeddedActivity(),
         x = (0, c.p)(null == L ? void 0 : L.location),
         M = null != L && !(0, u.Z)(x, I.Z, S.Z),
@@ -121,7 +121,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         U = M && j === R.Ez.PANEL,
         G = null != L && null != x && (null == (t = f.Z.getSelectedParticipant(x)) ? void 0 : t.type) === P.fO.ACTIVITY,
         B = p.Z.getConnectedFrame(),
-        Z = p.Z.getFrameLayoutMode() === w.U.FOCUSED,
+        Z = p.Z.getFrameLayoutMode() === D.U.FOCUSED,
         F = null != m,
         V = F ? b.Z.getWindow(m) : null,
         H = !!F && b.Z.isWindowFullScreen(m),
@@ -144,7 +144,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
                 ? e - (0, _.Y7)({ isPopoutWindow: F })
                 : e;
     h =
-        (null != L && D) || (F && M) || (F && null != B)
+        (null != L && w) || (F && M) || (F && null != B)
             ? null
             : F || !v || M || null != B
               ? null != L && U

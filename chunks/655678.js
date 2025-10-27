@@ -26,7 +26,7 @@ function p(e, t) {
                   childClassName: o()(_.messageConfettiIcon, { [_.active]: p }),
                   onClick: h,
                   isActive: p,
-                  "aria-label": f.intl.string(f.t.yvN8bG),
+                  "aria-label": f.intl.string(f.t.yvN8bE),
                   "aria-haspopup": "false",
                   children: (0, r.jsx)(s.l22, {
                       size: "refresh_sm",

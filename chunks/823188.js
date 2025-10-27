@@ -37,8 +37,8 @@ var i = n(120356),
     N = n(382791),
     R = n(63802),
     P = n(52741),
-    w = n(318990),
-    D = n(575732),
+    D = n(318990),
+    w = n(575732),
     L = n(474936),
     x = n(217702),
     M = n(388032),
@@ -85,7 +85,7 @@ function Z(e) {
 }
 function F(e) {
     let { isApplicationHome: t, enablePremiumBrandRefresh: n } = e,
-        i = t && !n ? D.X : D.FV;
+        i = t && !n ? w.X : w.FV;
     return (0, r.jsx)(r.Fragment, {
         children: i.map((e, i) => {
             let { Icon: a, getText: o } = e;
@@ -242,13 +242,13 @@ function W(e) {
         g = (() => {
             switch (t) {
                 case 3:
-                    return D.CD;
+                    return w.CD;
                 case 1:
-                    return D.x7;
+                    return w.x7;
                 case 2:
-                    return D.Pc;
+                    return w.Pc;
                 default:
-                    return D.Nv;
+                    return w.Nv;
             }
         })();
     return (0, r.jsxs)(r.Fragment, {
@@ -274,7 +274,7 @@ function W(e) {
                     n,
                 );
             }),
-            p && h && (0, r.jsx)(w.Z, {}),
+            p && h && (0, r.jsx)(D.Z, {}),
         ],
     });
 }
@@ -296,15 +296,15 @@ function K(e) {
         A = (0, T.Ng)(),
         N = null != g ? L.C.PREMIUM_TRIAL : null != A ? L.C.PREMIUM_DISCOUNT : null,
         R = (0, y.Vi)(),
-        w = !f && b,
-        D = null == (n = (0, v.Z)()) ? void 0 : n.planSelection,
-        x = null == D || null == (i = D.getBackgroundImageUrl) ? void 0 : i.call(D),
-        M = null == D || null == (o = D.getCardImageUrl) ? void 0 : o.call(D),
+        D = !f && b,
+        w = null == (n = (0, v.Z)()) ? void 0 : n.planSelection,
+        x = null == w || null == (i = w.getBackgroundImageUrl) ? void 0 : i.call(w),
+        M = null == w || null == (o = w.getCardImageUrl) ? void 0 : o.call(w),
         k = (0, C.W)();
     return (0, r.jsxs)("div", {
         className: a()(j.card, j.tier2, j.tier2ApplicationHomeBackground, d, {
-            [j.withTier2Rim]: w,
-            [j.withCardHover]: w,
+            [j.withTier2Rim]: D,
+            [j.withCardHover]: D,
             [j.withPromotionalGradientBanner]: h,
             [j.withPromotionalCardImage]: h && null != M,
         }),
@@ -383,8 +383,8 @@ function z(e) {
             className: E,
             isGift: b = !1,
             isModal: A = !1,
-            priceOptions: w,
-            showPromotionalGiftBanner: D = !1,
+            priceOptions: D,
+            showPromotionalGiftBanner: w = !1,
         } = e,
         M = (0, o.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
         k = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
@@ -409,18 +409,18 @@ function z(e) {
         className: a()(j.card, j.tier2, E, {
             [j.withTier2Rim]: z,
             [j.withCardHover]: z,
-            [j.withPromotionalGradientBanner]: D,
-            [j.withPromotionalCardImage]: D && null != Q,
+            [j.withPromotionalGradientBanner]: w,
+            [j.withPromotionalCardImage]: w && null != Q,
         }),
         children: [
-            D &&
+            w &&
                 null !== Q &&
                 (0, r.jsx)("img", {
                     className: j.promotionalCardImage,
                     alt: "",
                     src: Q,
                 }),
-            D &&
+            w &&
                 null !== X &&
                 (0, r.jsx)("img", {
                     className: j.promotionalBackgroundImage,
@@ -473,7 +473,7 @@ function z(e) {
                                 offerType: Y,
                                 offerTierMatchesCard: G === L.Si.TIER_2 || (0, T.Wp)(V, L.Si.TIER_2),
                                 showYearlyPrice: _,
-                                priceOptions: w,
+                                priceOptions: D,
                                 headingVariant: "heading-md/normal",
                                 headingColor: "always-white",
                             }),
@@ -490,7 +490,7 @@ function z(e) {
             }),
             b || (G !== L.Si.TIER_2 && null == V) ? null : (0, r.jsx)(R.t, { tier: L.PremiumTypes.TIER_2 }),
             f,
-            D && (0, r.jsx)(I.K, {}),
+            w && (0, r.jsx)(I.K, {}),
         ],
     });
 }

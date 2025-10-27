@@ -13,14 +13,14 @@ function c(e) {
         switch (e) {
             case i.u.STREAM_SEND_LOW_FPS:
             case i.u.STREAM_SEND_HIGH_PACKET_LOSS:
-                return o.intl.string(o.t["1f1LHh"]);
+                return o.intl.string(o.t["1f1LHp"]);
             case i.u.STREAM_BAD_NETWORK_QUALITY:
-                return o.intl.string(o.t.Ic588P);
+                return o.intl.string(o.t.Ic588B);
             case i.u.STREAM_SOUNDSHARE_FAILED:
-                return o.intl.string(o.t["9lcycn"]);
+                return o.intl.string(o.t["9lcych"]);
             case i.u.STREAM_VIEW_HIGH_PACKET_LOSS:
             case i.u.STREAM_VIEW_LOW_FPS:
-                return o.intl.string(o.t.BcOif3);
+                return o.intl.string(o.t.BcOifw);
             default:
                 return;
         }

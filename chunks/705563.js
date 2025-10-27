@@ -50,12 +50,12 @@ function y(e) {
               className: C.buttons,
               children: [
                   (0, i.jsx)(l.u, {
-                      text: b.intl.string(b.t.cdPGbG),
+                      text: b.intl.string(b.t.cdPGbE),
                       shouldShow: S,
                       children: (0, i.jsx)(a.Button, {
                           variant: "active",
                           size: "sm",
-                          text: b.intl.string(b.t.BzjDQE),
+                          text: b.intl.string(b.t.BzjDQJ),
                           loading: Z,
                           onClick: P,
                           disabled: S,
@@ -64,7 +64,7 @@ function y(e) {
                   (0, i.jsx)(a.Button, {
                       variant: "critical-primary",
                       size: "sm",
-                      text: b.intl.string(b.t.hDtbs7),
+                      text: b.intl.string(b.t.hDtbsz),
                       onClick: I,
                       disabled: Z || v.applicationStatus !== f.wB.SUBMITTED,
                   }),
@@ -78,7 +78,7 @@ function y(e) {
                           },
                           variant: "secondary",
                           size: "sm",
-                          text: b.intl.string(b.t.iXAna2),
+                          text: b.intl.string(b.t.iXAna6),
                       }),
                   y && (0, i.jsx)(o.ZP.Divider, {}),
               ],

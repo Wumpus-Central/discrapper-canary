@@ -21,8 +21,8 @@ var r = n(951288),
     _ = n(48131),
     O = n(668519),
     y = n(803647),
-    v = n(131704),
-    j = n(944486),
+    j = n(131704),
+    v = n(944486),
     x = n(626135),
     C = n(381096),
     E = n(870569),
@@ -50,7 +50,7 @@ let Z = i.memo(function (e) {
             p,
             Z,
             {
-                stream: T,
+                stream: w,
                 canGoLive: A,
                 guildId: R,
                 isStreaming: D,
@@ -105,10 +105,10 @@ let Z = i.memo(function (e) {
                 [K],
             ),
             J = i.useCallback(() => {
-                (0, y.Z)(T);
-            }, [T]),
+                (0, y.Z)(w);
+            }, [w]),
             $ = i.useCallback(() => {
-                let e = null != L && (0, v.vd)(L.type) ? L : null,
+                let e = null != L && (0, j.vd)(L.type) ? L : null,
                     t = null != e ? e.getGuildId() : R;
                 (0, c.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
@@ -146,7 +146,7 @@ let Z = i.memo(function (e) {
                             (l = l =
                                 {
                                     sourcePID: null == k ? void 0 : k.pid,
-                                    selectSource: !!W && null != j.Z.getVoiceChannelId(),
+                                    selectSource: !!W && null != v.Z.getVoiceChannelId(),
                                     guildId: t,
                                     analyticsLocation: S.Sbl.ACTIVITY_PANEL,
                                 }),
@@ -208,7 +208,7 @@ let Z = i.memo(function (e) {
                               (a = null),
                               (p = c.hGI),
                               (Z =
-                                  null != L && (0, v.vd)(L.type)
+                                  null != L && (0, j.vd)(L.type)
                                       ? I.intl.string(I.t.uQn9B8)
                                       : null != R
                                         ? I.intl.string(I.t.fBXEoJ)
@@ -248,10 +248,10 @@ let Z = i.memo(function (e) {
                           onClick: Q(U.applicationId),
                           icon: c.PBZ,
                       }),
-            ep = null == T ? null : (0, r.jsx)(b.Z, {}),
+            ep = null == w ? null : (0, r.jsx)(b.Z, {}),
             ef =
                 ei && ee && !en
-                    ? (0, r.jsx)(w, {
+                    ? (0, r.jsx)(T, {
                           runningGame: k,
                           startAuthorization: () => {
                               ea(!0),
@@ -287,7 +287,7 @@ let Z = i.memo(function (e) {
                   children: [null != ef ? ef : ec, es, null != (t = null != eu ? eu : ed) ? t : ep, eh],
               });
     }),
-    w = i.forwardRef(function (e, t) {
+    T = i.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: i, connectionApp: l } = e;
         return (0, r.jsx)(E.Z, {
             ref: t,

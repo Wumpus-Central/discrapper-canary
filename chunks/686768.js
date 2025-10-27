@@ -9,11 +9,11 @@ var i = n(951288),
     u = n(168107),
     d = n(480916),
     p = n(81643),
-    R = n(981631),
-    f = n(800530),
-    x = n(388032),
-    g = n(740076),
-    E = n(736056);
+    f = n(981631),
+    x = n(800530),
+    g = n(388032),
+    E = n(740076),
+    R = n(736056);
 let b = function (t) {
     let { transitionState: e, entryPoint: n, onClose: b } = t,
         { loading: m, initiateAgeVerification: O } = (0, p.WD)({
@@ -27,21 +27,21 @@ let b = function (t) {
     let T = r.useMemo(
         () => [
             {
-                title: x.intl.string(x.t.FYkioq),
-                description: x.intl.string(x.t.xMfbR0),
-                buttonText: x.intl.string(x.t.RtOE1t),
+                title: g.intl.string(g.t.FYkioq),
+                description: g.intl.string(g.t.xMfbRz),
+                buttonText: g.intl.string(g.t.RtOE1v),
                 buttonLoading: m,
                 onButtonPress: () => {
                     O(d.cU.RETRY_MODAL), (0, d.x3)(_, d.d_.RETRY, d.sU.GET_STARTED);
                 },
             },
             {
-                title: x.intl.string(x.t["LZO+HR"]),
-                description: x.intl.string(x.t.N2mHaG),
-                buttonText: x.intl.string(x.t["LZO+HR"]),
+                title: g.intl.string(g.t["LZO+Hd"]),
+                description: g.intl.string(g.t.N2mHaK),
+                buttonText: g.intl.string(g.t["LZO+Hd"]),
                 buttonLoading: m,
                 onButtonPress: () => {
-                    u.Z.openUrl(f.sQ.APPEALS_LINK), (0, d.x3)(_, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
+                    u.Z.openUrl(x.sQ.APPEALS_LINK), (0, d.x3)(_, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
                 },
             },
         ],
@@ -52,21 +52,21 @@ let b = function (t) {
         onClose: b,
         gradientColor: "blue",
         graphic: {
-            src: E.Z,
+            src: R.Z,
             type: "image",
         },
-        title: x.intl.string(x.t["5l3R/v"]),
-        subtitle: x.intl.string(x.t.O7SO0N),
+        title: g.intl.string(g.t["5l3R/m"]),
+        subtitle: g.intl.string(g.t.O7SO0D),
         children: (0, i.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 16,
             children: [
                 (0, i.jsx)(s.Wn, {
                     messageType: s.QYI.INFO,
-                    className: g.infoBox,
+                    className: E.infoBox,
                     textColor: "text-feedback-info",
                     textVariant: "text-sm/medium",
-                    children: x.intl.string(x.t.El4aXl),
+                    children: g.intl.string(g.t.El4aXl),
                 }),
                 T.map((t, e) =>
                     (0, i.jsx)(
@@ -102,9 +102,9 @@ let b = function (t) {
                 (0, i.jsx)(s.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    children: x.intl.format(x.t["L+FgkZ"], {
+                    children: g.intl.format(g.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
-                            u.Z.openUrl(c.Z.getArticleURL(R.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                            u.Z.openUrl(c.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)),
                                 (0, d.x3)(_, d.d_.RETRY, d.sU.LEARN_MORE);
                         },
                     }),

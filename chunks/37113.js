@@ -209,13 +209,13 @@ function _(e, t) {
         },
     };
 }
-let p = [_(720), _(1080), _(1440), _(0, () => a.intl.string(a.t.XjXqzs))],
+let p = [_(720), _(1080), _(1440), _(0, () => a.intl.string(a.t.XjXqzh))],
     h = [_(720), _(1080), _(1440)],
-    m = (e) => (0 === e ? a.intl.string(a.t.XjXqzs) : a.intl.formatToPlainString(a.t.TEOC0N, { resolution: e })),
+    m = (e) => (0 === e ? a.intl.string(a.t.XjXqzh) : a.intl.formatToPlainString(a.t.TEOC0I, { resolution: e })),
     g = [_(480, () => m(480)), _(720, () => m(720)), _(1080, () => m(1080)), _(1440, () => m(1440)), _(0, () => m(0))],
     E = [_(15), _(30), _(60)],
     b = [
-        _(15, () => a.intl.formatToPlainString(a.t["bW+JCQ"], { value: 15 })),
-        _(30, () => a.intl.formatToPlainString(a.t["bW+JCQ"], { value: 30 })),
-        _(60, () => a.intl.formatToPlainString(a.t["bW+JCQ"], { value: 60 })),
+        _(15, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 15 })),
+        _(30, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 30 })),
+        _(60, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 60 })),
     ];

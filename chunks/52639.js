@@ -19,8 +19,8 @@ var i = n(81897),
 function _(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: _ } = (0, l.ZP)(),
-        { context: j } = (0, o.KZ)(),
-        O = (0, i.Z)(),
+        { context: O } = (0, o.KZ)(),
+        j = (0, i.Z)(),
         { mutualFriendsCount: x, mutualFriends: v, mutualGuilds: C } = (0, c.Z)(t),
         I = !t.bot && null != x && x > 0,
         S = null != C && C.length > 0;
@@ -31,7 +31,7 @@ function _(e) {
                   S &&
                       (0, r.jsx)(m.Z, {
                           section: "MUTUAL_GUILDS",
-                          header: b.intl.string(b.t["4lTDZm"]),
+                          header: b.intl.string(b.t["4lTDZq"]),
                           listClassName: y.list,
                           items: C.map((e) => {
                               let { guild: n, nick: i } = e;
@@ -51,9 +51,9 @@ function _(e) {
                   I &&
                       (0, r.jsx)(m.Z, {
                           section: "MUTUAL_FRIENDS",
-                          header: b.intl.string(b.t["0mTJ3t"]),
+                          header: b.intl.string(b.t["0mTJ3j"]),
                           listClassName: y.list,
-                          onExpand: () => (0, d.Z)(t.id, O),
+                          onExpand: () => (0, d.Z)(t.id, j),
                           items:
                               null == v
                                   ? Array.from({ length: x }).map((e, t) =>
@@ -115,7 +115,7 @@ function _(e) {
                                                                     });
                                                             }
                                                             return e;
-                                                        })({}, j)),
+                                                        })({}, O)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,

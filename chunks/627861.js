@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(829820),
     R = n(789407),
     P = n(314897),
-    w = n(831506),
-    D = n(293273),
+    D = n(831506),
+    w = n(293273),
     L = n(158776),
     x = n(885110),
     M = n(594174),
@@ -122,7 +122,7 @@ function ed(e) {
             if (!y) {
                 var t;
                 e.push({
-                    label: null != (t = O.label) ? t : ea.intl.string(ea.t.VJlc0d),
+                    label: null != (t = O.label) ? t : ea.intl.string(ea.t.VJlc0S),
                     trackingArea: m.j_.SYNC,
                     onClick: () => {
                         O.onClick();
@@ -143,7 +143,7 @@ function ed(e) {
             className: eo.description,
             color: "none",
             lineClamp: 1,
-            children: ea.intl.string(ea.t["84qx9v"]),
+            children: ea.intl.string(ea.t["84qx9r"]),
         });
         return (0, r.jsx)(h.W, {
             header: A,
@@ -166,7 +166,7 @@ function ed(e) {
     {
         let e =
                 null != g && null != g.details && null != g.state
-                    ? ea.intl.formatToPlainString(ea.t.JCvHt7, {
+                    ? ea.intl.formatToPlainString(ea.t.JCvHtx, {
                           track: g.details,
                           artist: g.state,
                       })
@@ -288,7 +288,7 @@ function e_(e) {
             [a],
         );
     if (!(null != n || o.length > 0)) return null;
-    let l = null != n ? (0, K.V)(n) : ea.intl.string(ea.t["4dGUPz"]);
+    let l = null != n ? (0, K.V)(n) : ea.intl.string(ea.t["4dGUP0"]);
     return (0, r.jsxs)("div", {
         className: eo.footer,
         children: [
@@ -324,8 +324,8 @@ function ep(e) {
             currentUserPresenceActivity: N,
             hideParty: R,
             message: P,
-            onView: w,
-            partyStatusElement: D,
+            onView: D,
+            partyStatusElement: w,
             presenceActivity: L,
         } = e,
         x = (0, O.A)(S),
@@ -359,7 +359,7 @@ function ep(e) {
                 null == es
                     ? null
                     : {
-                          label: ea.intl.string(ea.t["jaYS/v"]),
+                          label: ea.intl.string(ea.t["jaYS/h"]),
                           icon: c.v3n,
                           trackingArea: m.j_.CLOUD_PLAY,
                           onClick: es,
@@ -388,7 +388,7 @@ function ep(e) {
             () =>
                 ec
                     ? {
-                          label: ea.intl.string(ea.t.VJlc0d),
+                          label: ea.intl.string(ea.t.VJlc0S),
                           trackingArea: m.j_.JOIN,
                           submitting: eg,
                           onClick: () => {
@@ -420,7 +420,7 @@ function ep(e) {
                       }
                     : ep
                       ? {
-                            label: ea.intl.string(ea.t.VJlc0d),
+                            label: ea.intl.string(ea.t.VJlc0S),
                             trackingArea: m.j_.SYNC,
                             onClick: () => {
                                 null != L && f.Z_(L, P.author.id);
@@ -428,7 +428,7 @@ function ep(e) {
                         }
                       : em
                         ? {
-                              label: ea.intl.string(ea.t["hC/Ze3"]),
+                              label: ea.intl.string(ea.t["hC/Zey"]),
                               trackingArea: m.j_.INVITE,
                               onClick: () => {
                                   null != L &&
@@ -440,11 +440,11 @@ function ep(e) {
                                       });
                               },
                               disabled: P.author.id === C,
-                              disabledReason: P.author.id === C ? ea.intl.string(ea.t.IBl8IC) : void 0,
+                              disabledReason: P.author.id === C ? ea.intl.string(ea.t.IBl8ID) : void 0,
                           }
                         : eh
                           ? {
-                                label: ea.intl.string(ea.t.KC26NT),
+                                label: ea.intl.string(ea.t.KC26NR),
                                 trackingArea: m.j_.PLAY,
                                 onClick: () => {},
                                 disabled: !0,
@@ -458,7 +458,7 @@ function ep(e) {
             () =>
                 ei && null != et
                     ? {
-                          label: ea.intl.string(ea.t.RscU7O),
+                          label: ea.intl.string(ea.t.RscU7I),
                           trackingArea: m.j_.PLAY,
                           onClick: () => {
                               d.Z.launch({
@@ -495,7 +495,7 @@ function ep(e) {
                           size: "xxs",
                           color: "currentColor",
                       }),
-                      ea.intl.string(ea.t.TsWCdX),
+                      ea.intl.string(ea.t.TsWCdW),
                   ],
               })
             : null,
@@ -527,7 +527,7 @@ function ep(e) {
             trackingConfig: {
                 id: S.id,
                 linkType: er.U.RICH_PRESENCE_INVITE,
-                onView: w,
+                onView: D,
                 referrerId: P.author.id,
                 guildId: A.guild_id,
                 channelId: P.channel_id,
@@ -571,7 +571,7 @@ function ep(e) {
         }),
         eP = (0, r.jsxs)("div", {
             className: eo.info,
-            children: [eR, R || Q ? null : D],
+            children: [eR, R || Q ? null : w],
         });
     return (0, r.jsx)(h.W, {
         header: eT,
@@ -586,7 +586,7 @@ function ep(e) {
         trackingConfig: {
             id: S.id,
             linkType: er.U.RICH_PRESENCE_INVITE,
-            onView: w,
+            onView: D,
             referrerId: P.author.id,
             guildId: A.guild_id,
             channelId: P.channel_id,
@@ -610,13 +610,13 @@ function eh(e) {
                 );
             }
         }, [c, s, _]),
-        h = (0, l.e7)([D.Z, x.Z], () => {
+        h = (0, l.e7)([w.Z, x.Z], () => {
             var e;
-            return null != (e = D.Z.getApplicationActivity(f.id)) ? e : x.Z.getApplicationActivity(f.id, !0);
+            return null != (e = w.Z.getApplicationActivity(f.id)) ? e : x.Z.getApplicationActivity(f.id, !0);
         }, [f.id]),
-        m = (0, l.Wu)([w.Z], () => {
+        m = (0, l.Wu)([D.Z], () => {
             var e;
-            return null == p || null == p.party ? [] : Array.from(null != (e = w.Z.getParty(p.party.id)) ? e : []);
+            return null == p || null == p.party ? [] : Array.from(null != (e = D.Z.getParty(p.party.id)) ? e : []);
         }, [p]),
         { partySize: E, maxPartySize: b } = (0, W._)(p),
         y = i.useMemo(

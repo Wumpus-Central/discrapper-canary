@@ -18,7 +18,7 @@ function f() {
     return e === p.IlC.APP || d.isPlatformEmbedded || f
         ? (0, i.jsx)(r.sNh, {
               id: "voice-and-video-settings",
-              label: h.intl.string(h.t.dsXapK),
+              label: h.intl.string(h.t.dsXapM),
               action: () => {
                   f || (0, a.Z)(),
                       (0, u.openUserSettings)(s.n.VOICE_AND_VIDEO_PANEL, {

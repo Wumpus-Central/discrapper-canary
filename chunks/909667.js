@@ -32,17 +32,17 @@ function c(e) {
     let c =
         (0, l.mY)() || null == t
             ? null
-            : o.intl.format(o.t.d1sCiY, { url: s.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
+            : o.intl.format(o.t.d1sCiW, { url: s.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
     return 0 === n.payoutsByPeriod.length
         ? (0, r.jsxs)(i.Text, {
               variant: "text-sm/medium",
-              children: [o.intl.string(o.t.RrtXu7), " ", c],
+              children: [o.intl.string(o.t.RrtXuy), " ", c],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)(i.Text, {
                       variant: "text-sm/medium",
-                      children: [o.intl.string(o.t["9Ub4KS"]), " ", c],
+                      children: [o.intl.string(o.t["9Ub4KY"]), " ", c],
                   }),
                   (0, r.jsx)(i.LZC, { size: 16 }),
                   (0, r.jsx)(

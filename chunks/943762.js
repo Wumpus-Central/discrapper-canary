@@ -33,17 +33,17 @@ function u(e) {
     switch (null == t ? void 0 : t.type) {
         case o.IIU.STREAMING:
             return {
-                text: s.intl.formatToPlainString(s.t.tyCw2t, { count: n }),
+                text: s.intl.formatToPlainString(s.t.tyCw2q, { count: n }),
                 Icon: i.m3e,
             };
         case o.IIU.LISTENING:
             return {
-                text: s.intl.formatToPlainString(s.t["2l8ykZ"], { count: n }),
+                text: s.intl.formatToPlainString(s.t["2l8yka"], { count: n }),
                 Icon: i.RZG,
             };
         default:
             return {
-                text: s.intl.formatToPlainString(s.t.yJj039, { count: n }),
+                text: s.intl.formatToPlainString(s.t.yJj035, { count: n }),
                 Icon: i.iWm,
             };
     }

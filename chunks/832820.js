@@ -51,8 +51,8 @@ let b = function (e) {
                 null != y && y > 0
                     ? (null == b ? void 0 : b.type) === h.qc2.DEVELOPER_GIFT
                         ? m.intl.format(m.t["b+P6ra"], { numPotions: y })
-                        : m.intl.format(m.t.RiQ4cn, { numPotions: y })
-                    : m.intl.string(m.t.hvVgAQ),
+                        : m.intl.format(m.t.RiQ4ci, { numPotions: y })
+                    : m.intl.string(m.t.hvVgAZ),
             [y, b],
         ),
         [A, C] = i.useState(!1 === s);
@@ -76,7 +76,7 @@ let b = function (e) {
                 source: u.YD.MessageConfettiBar,
             });
         }, [t.id]),
-        w = i.useRef(null);
+        D = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: g.bar,
         children: [
@@ -85,12 +85,12 @@ let b = function (e) {
                 shouldShow: A,
                 onRequestClose: N,
                 setEmojiConfetti: R,
-                positionRef: w,
+                positionRef: D,
                 position: "top",
                 align: "left",
                 children: () =>
                     (0, r.jsxs)(o.P3F, {
-                        innerRef: w,
+                        innerRef: D,
                         onClick: () => C(!A),
                         className: g.emojiSelectContainer,
                         children: [
@@ -101,7 +101,7 @@ let b = function (e) {
                             (0, r.jsx)(a.xvT, {
                                 variant: "text-sm/medium",
                                 children:
-                                    null == n ? m.intl.string(m.t.mzfiGR) : m.intl.format(m.t.Hcd9OT, { emojiName: I }),
+                                    null == n ? m.intl.string(m.t.mzfiGW) : m.intl.format(m.t.Hcd9OU, { emojiName: I }),
                             }),
                         ],
                     }),

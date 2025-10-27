@@ -8,13 +8,13 @@ var r = n(951288),
     a = n(819557),
     d = n(138201),
     u = n(626135),
-    f = n(63063),
-    O = n(5192),
+    O = n(63063),
+    f = n(5192),
     m = n(478923),
     j = n(858380),
-    p = n(981631),
-    x = n(388032),
-    g = n(230784);
+    g = n(981631),
+    p = n(388032),
+    x = n(230784);
 function b(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -62,18 +62,18 @@ function h() {
     return (0, r.jsxs)(a.z, {
         children: [
             (0, r.jsx)(a.q, {
-                title: x.intl.string(x.t.ruhGkp),
-                description: x.intl.string(x.t["/FWKKC"]),
+                title: p.intl.string(p.t.ruhGkg),
+                description: p.intl.string(p.t["/FWKKC"]),
                 icon: c.owK,
             }),
             (0, r.jsx)(a.q, {
-                title: x.intl.string(x.t.N9v3en),
-                description: x.intl.string(x.t.ddpuJi),
+                title: p.intl.string(p.t.N9v3eq),
+                description: p.intl.string(p.t.ddpuJg),
                 icon: c.owK,
             }),
             (0, r.jsx)(a.q, {
-                title: x.intl.string(x.t["4ycGEx"]),
-                description: x.intl.string(x.t["5yfN+v"]),
+                title: p.intl.string(p.t["4ycGE0"]),
+                description: p.intl.string(p.t["5yfN+o"]),
                 icon: c.d3s,
             }),
         ],
@@ -105,7 +105,7 @@ function E(t) {
     return (
         i.useLayoutEffect(
             () => () => {
-                u.default.track(p.rMx.USER_REMEDIATION_ACTION, {
+                u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
                     action: j.l.DISMISS_IGNORE,
                     location: N,
                 });
@@ -117,15 +117,15 @@ function E(t) {
             I(
                 b(
                     {
-                        confirmText: x.intl.string(x.t.ytCpKi),
-                        cancelText: x.intl.string(x.t["ETE/oK"]),
+                        confirmText: p.intl.string(p.t.ytCpKs),
+                        cancelText: p.intl.string(p.t["ETE/oC"]),
                         onConfirm: () => {
                             null == E || E(),
                                 s.Z.ignoreUser(e.id, N, null != a ? a : void 0),
-                                u.default.track(p.rMx.IGNORE_USER_CONFIRMED);
+                                u.default.track(g.rMx.IGNORE_USER_CONFIRMED);
                         },
                         onCancel: () => {
-                            u.default.track(p.rMx.USER_REMEDIATION_ACTION, {
+                            u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
                                 action: j.l.CANCEL_IGNORE,
                                 location: N,
                             });
@@ -137,13 +137,13 @@ function E(t) {
                 ),
                 {
                     children: (0, r.jsxs)("div", {
-                        className: g.container,
+                        className: x.container,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: g.confirmationHeader,
+                                className: x.confirmationHeader,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: g.iconContainer,
+                                        className: x.iconContainer,
                                         children: [
                                             (0, r.jsx)(c.qEK, {
                                                 size: c.EFr.SIZE_56,
@@ -151,7 +151,7 @@ function E(t) {
                                                 "aria-hidden": !0,
                                             }),
                                             (0, r.jsx)("div", {
-                                                className: g.icon,
+                                                className: x.icon,
                                                 children: (0, r.jsx)(c.kZF, {}),
                                             }),
                                         ],
@@ -161,14 +161,14 @@ function E(t) {
                                             (0, r.jsx)(c.Heading, {
                                                 variant: "heading-xl/bold",
                                                 color: "header-primary",
-                                                children: x.intl.format(x.t["WrQD/f"], {
-                                                    username: O.ZP.getName(n, a, e),
+                                                children: p.intl.format(p.t["WrQD/Y"], {
+                                                    username: f.ZP.getName(n, a, e),
                                                 }),
                                             }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-md/medium",
                                                 color: "header-secondary",
-                                                children: x.intl.string(x.t.JKL1u7),
+                                                children: p.intl.string(p.t.JKL1u1),
                                             }),
                                         ],
                                     }),
@@ -176,18 +176,18 @@ function E(t) {
                             }),
                             (0, r.jsx)(h, {}),
                             (0, r.jsxs)("div", {
-                                className: g.otherOptions,
+                                className: x.otherOptions,
                                 children: [
                                     (0, r.jsx)(d.rT, {
-                                        title: x.intl.string(x.t["1v01go"]),
+                                        title: p.intl.string(p.t["1v01gh"]),
                                         children: (0, r.jsx)(d.JZ, {
-                                            title: x.intl.string(x.t.bwxY39),
-                                            description: x.intl.string(x.t.NTnf1d),
+                                            title: p.intl.string(p.t.bwxY30),
+                                            description: p.intl.string(p.t.NTnf1T),
                                             titleVariant: "text-md/medium",
                                             descriptionVariant: "text-xs/medium",
-                                            buttonText: x.intl.string(x.t.QdfUHB),
+                                            buttonText: p.intl.string(p.t.QdfUHE),
                                             onButtonPress: () => {
-                                                u.default.track(p.rMx.USER_REMEDIATION_ACTION, {
+                                                u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
                                                     action: j.l.GOTO_BLOCK,
                                                     location: N,
                                                 }),
@@ -210,9 +210,9 @@ function E(t) {
                                     }),
                                     (0, r.jsx)(c.Text, {
                                         variant: "text-sm/medium",
-                                        className: g.featureGuide,
-                                        children: x.intl.format(x.t.Hjvqr6, {
-                                            articleLink: f.Z.getArticleURL(p.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                                        className: x.featureGuide,
+                                        children: p.intl.format(p.t.Hjvqr6, {
+                                            articleLink: O.Z.getArticleURL(g.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
                                         }),
                                     }),
                                 ],

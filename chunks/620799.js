@@ -26,8 +26,8 @@ function h(e) {
                           variant: "expressive",
                       }
                     : void 0,
-                title: p.intl.string(p.t.gxcsSk),
-                body: p.intl.string(p.t["8L7E5u"]),
+                title: p.intl.string(p.t.gxcsSq),
+                body: p.intl.string(p.t["8L7E5l"]),
                 caretConfig: { align: "start" },
                 graphic: {
                     type: "image",
@@ -44,7 +44,7 @@ function h(e) {
                 },
                 actions: [
                     {
-                        text: p.intl.string(p.t.RzWDqa),
+                        text: p.intl.string(p.t.RzWDqY),
                         variant: "primary",
                         onClick: () => {
                             n(m.L.TAKE_ACTION),

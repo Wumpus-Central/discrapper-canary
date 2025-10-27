@@ -3,7 +3,7 @@ var r = n(786761),
     i = n(23750),
     l = n(306680),
     a = n(709054);
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,7 +27,7 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
@@ -59,7 +59,7 @@ class u {
         return null == n
             ? -1 / 0
             : n.generation !== t && null != n.message && n.message.id === l.ZP.lastMessageId(e)
-              ? (this.messages.set(e, c(s({}, n), { generation: t })), t)
+              ? (this.messages.set(e, c(o({}, n), { generation: t })), t)
               : n.generation;
     }
     messageId(e) {
@@ -86,10 +86,10 @@ class u {
     }
     putNew(e, t, n) {
         var r, i, l;
-        let o = this.messages.get(e);
+        let s = this.messages.get(e);
         null != t &&
             ((i = t.id),
-            null == (l = null == o || null == (r = o.message) ? void 0 : r.id) || a.default.compare(i, l) > 0) &&
+            null == (l = null == s || null == (r = s.message) ? void 0 : r.id) || a.default.compare(i, l) > 0) &&
             this.put(e, t, n);
     }
     putMany(e, t) {
@@ -102,12 +102,12 @@ class u {
             l = this.messages.get(n);
         if ((null == l || null == (t = l.message) ? void 0 : t.id) !== e.id) return;
         let a = l.message instanceof i.ZP ? (0, r.wi)(l.message, e) : (0, r.gx)(l.message, e);
-        this.messages.set(n, c(s({}, l), { message: a }));
+        this.messages.set(n, c(o({}, l), { message: a }));
     }
     delete(e) {
         this.messages.delete(e);
     }
     constructor() {
-        o(this, "localNeeded", !0), o(this, "messages", new Map());
+        s(this, "localNeeded", !0), s(this, "messages", new Map());
     }
 }

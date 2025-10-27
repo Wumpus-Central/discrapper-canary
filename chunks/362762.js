@@ -3,15 +3,15 @@ var r,
     i,
     l = n(442837),
     a = n(570140),
-    o = n(981631);
-let s = null,
+    s = n(981631);
+let o = null,
     c = {};
 class u extends (i = l.ZP.Store) {
     getState(e) {
         return c[e];
     }
     getHighestState() {
-        return s;
+        return o;
     }
 }
 (r = "displayName") in u
@@ -25,14 +25,14 @@ class u extends (i = l.ZP.Store) {
 let d = new u(a.Z, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
-        (c[t] = o.kEZ.OPENING), null === s && (s = o.kEZ.OPENING);
+        (c[t] = s.kEZ.OPENING), null === o && (o = s.kEZ.OPENING);
     },
     NATIVE_APP_MODAL_OPENED: function (e) {
         let { code: t } = e;
-        (c[t] = o.kEZ.OPEN), (s = o.kEZ.OPEN);
+        (c[t] = s.kEZ.OPEN), (o = s.kEZ.OPEN);
     },
     NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
         let { code: t } = e;
-        (c[t] = o.kEZ.OPEN_FAIL), (null === s || s === o.kEZ.OPENING) && (s = o.kEZ.OPEN_FAIL);
+        (c[t] = s.kEZ.OPEN_FAIL), (null === o || o === s.kEZ.OPENING) && (o = s.kEZ.OPEN_FAIL);
     },
 });

@@ -13,16 +13,16 @@ var i = t(481060),
 function Z(e) {
     let { user: n, guildId: t, channelId: Z, context: f } = e,
         { id: b } = n,
-        { loading: m, note: O } = (0, a.Z)(b),
-        p = !m && null != O && O.length > 0,
+        { loading: O, note: m } = (0, a.Z)(b),
+        p = !O && null != m && m.length > 0,
         h = f === d.IlC.POPOUT || f === d.IlC.OVERLAY,
         { analyticsLocations: j } = (0, r.ZP)();
     return b === o.default.getId() || s.Z.hidePersonalInformation || h
         ? null
         : (0, l.jsx)(i.sNh, {
               id: "note",
-              label: m ? g.intl.string(g.t["WLKx//"]) : p ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
-              subtext: g.intl.string(g.t.r1BOdX),
+              label: O ? g.intl.string(g.t["WLKx/9"]) : p ? g.intl.string(g.t.sHHsOM) : g.intl.string(g.t.Dglxrf),
+              subtext: g.intl.string(g.t.r1BOdd),
               action: () => {
                   (0, u.openUserProfileModal)({
                       userId: n.id,

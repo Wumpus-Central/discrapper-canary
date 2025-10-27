@@ -24,8 +24,8 @@ function p(e) {
             string: "",
             isOverdue: !1,
         };
-    let i = 0 === r ? f.t.TjNWND : f.t.H4gnX1,
-        o = 0 === r ? f.t.haia19 : f.t["Uq7Y+/"],
+    let i = 0 === r ? f.t.TjNWNF : f.t.H4gnX9,
+        o = 0 === r ? f.t.haia16 : f.t["Uq7Y+7"],
         s = n > t,
         l = s ? o : i;
     return {
@@ -48,7 +48,7 @@ function h(e) {
                         id: e.saveData.channelId,
                         guild_id: e.saveData.guildId,
                         type: d.d4z.UNKNOWN,
-                        name: f.intl.string(f.t.J90oLS),
+                        name: f.intl.string(f.t.J90oLW),
                     })
                   : void 0,
         [t, e],

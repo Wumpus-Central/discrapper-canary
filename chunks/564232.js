@@ -8,8 +8,8 @@ var n = r(951288),
     c = r(481060),
     d = r(239091),
     a = r(276264),
-    m = r(670188),
-    f = r(271383),
+    f = r(670188),
+    m = r(271383),
     b = r(699516),
     p = r(594174),
     g = r(432496),
@@ -45,7 +45,7 @@ function w(e) {
         l = p.default.getUser(u.userId),
         o = i.useRef(null);
     return (0, n.jsx)(
-        m.Z,
+        f.Z,
         {
             targetElementRef: o,
             userId: u.userId,
@@ -123,8 +123,8 @@ function I(e) {
     i.useEffect(() => {
         g.Z.fetchFriendMembersIfNotFetched(t.id, d);
     }, [t.id, d]);
-    let a = (0, o.e7)([f.ZP], () => f.ZP.getMembers(t.id)),
-        m = i.useMemo(
+    let a = (0, o.e7)([m.ZP], () => m.ZP.getMembers(t.id)),
+        f = i.useMemo(
             () =>
                 u()(a)
                     .filter((e) => !!d.includes(e.userId) && null != p.default.getUser(e.userId))
@@ -150,13 +150,13 @@ function I(e) {
         j = g.Z.isFetchingFriendsForGuild(t.id);
     return (0, n.jsxs)(l.Modal, {
         title: O.intl.string(O.t.kYxEcH),
-        subtitle: O.intl.format(j ? O.t.EtQnZm : O.t.OgMdNT, {
+        subtitle: O.intl.format(j ? O.t.EtQnZi : O.t.OgMdNS, {
             guildName: t.name,
-            numFriends: m.length,
+            numFriends: f.length,
         }),
         actions: void 0,
         transitionState: r,
         onClose: s,
-        children: [j && (0, n.jsx)(c.$jN, {}), m],
+        children: [j && (0, n.jsx)(c.$jN, {}), f],
     });
 }

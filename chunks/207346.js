@@ -22,7 +22,7 @@ function d(e) {
             (0, l.jsx)(r.Heading, {
                 className: u.title,
                 variant: "heading-xxl/bold",
-                children: c.intl.string(c.t.z2jK6e),
+                children: c.intl.string(c.t.z2jK6X),
             }),
             (0, l.jsx)("div", {
                 className: u.betaTag,
@@ -30,22 +30,22 @@ function d(e) {
             }),
             (0, l.jsx)(r.E1j, {
                 autoFocus: !0,
-                placeholder: c.intl.string(c.t["5h0QOD"]),
+                placeholder: c.intl.string(c.t["5h0QOP"]),
                 query: t,
                 onChange: n,
                 onClear: () => n(""),
             }),
             (0, l.jsx)(r.PhF, {
-                placeholder: c.intl.string(c.t["0XtAW1"]),
+                placeholder: c.intl.string(c.t["0XtAW0"]),
                 className: u.sortInput,
                 options: [
                     {
                         value: "descending",
-                        label: c.intl.string(c.t.SCsC5u),
+                        label: c.intl.string(c.t.SCsC5m),
                     },
                     {
                         value: "ascending",
-                        label: c.intl.string(c.t.fdx7aG),
+                        label: c.intl.string(c.t.fdx7aF),
                     },
                 ],
                 isSelected: (e) => e === p,

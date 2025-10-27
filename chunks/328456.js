@@ -60,8 +60,8 @@ let l = (e) => {
     },
     c = (e) => {
         let t = a.intl.string(a.t["7v0T9P"]),
-            n = a.intl.string(a.t.wR5wOj),
-            r = a.intl.string(a.t.x5CoXV);
+            n = a.intl.string(a.t.wR5wOo),
+            r = a.intl.string(a.t.x5CoXR);
         if (null != e.bundledProducts) {
             var i, o, s;
             e.bundledProducts.length > 0 && (t = null == (i = e.bundledProducts[0]) ? void 0 : i.name),

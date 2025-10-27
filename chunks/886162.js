@@ -1,53 +1,53 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(990547),
     a = n(399606),
-    o = n(481060),
-    s = n(232567),
+    s = n(481060),
+    o = n(232567),
     c = n(213609),
     u = n(313201),
     d = n(23434),
     p = n(981631),
     f = n(388032),
     h = n(734305);
-function g(e) {
+function m(e) {
     let { transitionState: t } = e,
-        g = (0, a.e7)([d.Z], () => d.Z.getAction()),
-        [m, b] = i.useState(!1),
-        _ = (0, u.Dt)();
+        m = (0, a.e7)([d.Z], () => d.Z.getAction()),
+        [g, _] = i.useState(!1),
+        b = (0, u.Dt)();
     async function E() {
-        return b(!0), g === p.c2C.AGREEMENTS && b(await (0, s.Lr)()), null;
+        return _(!0), m === p.c2C.AGREEMENTS && _(await (0, o.Lr)()), null;
     }
     return (
         (0, c.Z)(
             {
                 type: l.ImpressionTypes.VIEW,
                 name: l.ImpressionNames.USER_AGREEMENTS,
-                properties: { required_action: g },
+                properties: { required_action: m },
             },
             {},
             [],
         ),
-        (0, r.jsxs)(o.Y0X, {
-            "aria-labelledby": _,
+        (0, r.jsxs)(s.Y0X, {
+            "aria-labelledby": b,
             transitionState: t,
             parentComponent: "UserAgreementsModal",
             children: [
-                (0, r.jsx)("div", { id: _ }),
-                (0, r.jsx)(o.xBx, {
+                (0, r.jsx)("div", { id: b }),
+                (0, r.jsx)(s.xBx, {
                     separator: !1,
-                    children: (0, r.jsx)(o.Heading, {
+                    children: (0, r.jsx)(s.Heading, {
                         variant: "heading-lg/semibold",
-                        children: f.intl.string(f.t["7glvXl"]),
+                        children: f.intl.string(f.t["7glvXu"]),
                     }),
                 }),
-                (0, r.jsxs)(o.hzk, {
+                (0, r.jsxs)(s.hzk, {
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             children:
-                                g === p.c2C.AGREEMENTS ? f.intl.format(f.t.CN0Hvb, { url: p.EYA.TERMS_SUMMARY }) : null,
+                                m === p.c2C.AGREEMENTS ? f.intl.format(f.t.CN0Hvb, { url: p.EYA.TERMS_SUMMARY }) : null,
                         }),
                         (0, r.jsxs)("div", {
                             className: h.container,
@@ -55,15 +55,15 @@ function g(e) {
                                 (0, r.jsxs)("ul", {
                                     className: h.links,
                                     children: [
-                                        (0, r.jsx)("li", { children: f.intl.format(f.t.iw0hFh, { url: p.EYA.TERMS }) }),
+                                        (0, r.jsx)("li", { children: f.intl.format(f.t.iw0hFi, { url: p.EYA.TERMS }) }),
                                         (0, r.jsx)("li", {
-                                            children: f.intl.format(f.t["36klnJ"], { url: p.EYA.PAID_TERMS }),
+                                            children: f.intl.format(f.t["36klnD"], { url: p.EYA.PAID_TERMS }),
                                         }),
                                         (0, r.jsx)("li", {
-                                            children: f.intl.format(f.t.TquFBA, { url: p.EYA.PRIVACY }),
+                                            children: f.intl.format(f.t.TquFBF, { url: p.EYA.PRIVACY }),
                                         }),
                                         (0, r.jsx)("li", {
-                                            children: f.intl.format(f.t.ia96TU, { url: p.EYA.GUIDELINES }),
+                                            children: f.intl.format(f.t.ia96Tb, { url: p.EYA.GUIDELINES }),
                                         }),
                                     ],
                                 }),
@@ -74,18 +74,18 @@ function g(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             className: h.agreementDescription,
                             children: f.intl.string(f.t["+USXQE"]),
                         }),
                     ],
                 }),
-                (0, r.jsx)(o.mzw, {
-                    children: (0, r.jsx)(o.Button, {
+                (0, r.jsx)(s.mzw, {
+                    children: (0, r.jsx)(s.Button, {
                         variant: "active",
-                        text: f.intl.string(f.t["+TBKLy"]),
-                        loading: m,
+                        text: f.intl.string(f.t["+TBKL1"]),
+                        loading: g,
                         onClick: E,
                     }),
                 }),

@@ -21,7 +21,7 @@ function f(e) {
         ? null
         : (0, l.jsx)(r.II_, {
               id: "user-volume",
-              label: m ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH),
+              label: m ? g.intl.string(g.t.t4JBnI) : g.intl.string(g.t.m7TNdF),
               control: (t, i) => {
                   var o, s;
                   return (0, l.jsx)(
@@ -59,7 +59,7 @@ function f(e) {
                               onChange: (t) => {
                                   a.Z.setLocalVolume(e, (0, u.A)(t), n), null == f || f(t);
                               },
-                              "aria-label": m ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH),
+                              "aria-label": m ? g.intl.string(g.t.t4JBnI) : g.intl.string(g.t.m7TNdF),
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(s))

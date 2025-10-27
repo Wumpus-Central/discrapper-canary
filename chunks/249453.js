@@ -2,8 +2,8 @@ r.d(t, { Z: () => s });
 var n = r(951288),
     o = r(647438),
     i = r(392711),
-    l = r(481060),
-    c = r(765250),
+    c = r(481060),
+    l = r(765250),
     a = r(444295),
     u = r(388032);
 let f = (0, i.throttle)((e, t) => {
@@ -11,14 +11,14 @@ let f = (0, i.throttle)((e, t) => {
 }, 1000);
 function s(e) {
     let t = o.useCallback((t) => f(e, t), [e]);
-    return (0, n.jsx)(l.II_, {
+    return (0, n.jsx)(c.II_, {
         id: "opacity",
         "aria-haspopup": !0,
-        label: u.intl.string(u.t.OVovCQ),
+        label: u.intl.string(u.t.OVovCb),
         control: (r, o) => {
             var i, a;
             return (0, n.jsx)(
-                l._wy,
+                c._wy,
                 ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -50,13 +50,13 @@ function s(e) {
                         value: 100 * e.opacity,
                         maxValue: 100,
                         onChange: (r) => {
-                            (0, c.nv)({
+                            (0, l.nv)({
                                 widgetId: e.id,
                                 opacity: r / 100,
                             }),
                                 t(Math.floor(r));
                         },
-                        "aria-label": u.intl.string(u.t.kbFsAA),
+                        "aria-label": u.intl.string(u.t.kbFsAD),
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))

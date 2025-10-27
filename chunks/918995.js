@@ -28,13 +28,13 @@ class s extends i.Component {
             premiumModalType: c.C.Types.UNCLAIMED,
             primary: {
                 onClick: this.claimAccount,
-                label: l.intl.string(l.t.fiNVio),
+                label: l.intl.string(l.t.fiNVin),
             },
             secondary: {
                 onClick: this.cancel,
-                label: l.intl.string(l.t.oEAioK),
+                label: l.intl.string(l.t.oEAioF),
             },
-            children: l.intl.string(l.t["7btfmJ"]),
+            children: l.intl.string(l.t["7btfmI"]),
         });
     }
     constructor(...e) {

@@ -57,7 +57,7 @@ function p(e) {
         : e.id === o._
           ? (0, r.jsx)(l.sNh, {
                 id: "create-category",
-                label: u.intl.string(u.t["ISN+ND"]),
+                label: u.intl.string(u.t["ISN+NM"]),
                 action: () =>
                     (0, l.ZDy)(async () => {
                         let { default: e } = await n.e("1812").then(n.bind(n, 477782));
@@ -70,7 +70,7 @@ function p(e) {
                       l.sNh,
                       {
                           id: "create-channel",
-                          label: u.intl.string(u.t["fUYU+v"]),
+                          label: u.intl.string(u.t["fUYU+j"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
                                   let { default: t } = await Promise.all([
@@ -94,7 +94,7 @@ function p(e) {
                       l.sNh,
                       {
                           id: "create-category",
-                          label: u.intl.string(u.t["ISN+ND"]),
+                          label: u.intl.string(u.t["ISN+NM"]),
                           action: () =>
                               (0, l.ZDy)(async () => {
                                   let { default: t } = await Promise.all([

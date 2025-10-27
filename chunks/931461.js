@@ -17,7 +17,7 @@ function d() {
             window.open(l.Z.getArticleURL(e), "_blank");
         };
     return (0, r.jsx)(s.f, {
-        label: u.t.EUo0ys,
+        label: u.t.EUo0yj,
         labelHook: t,
         noticeType: c.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
     });
@@ -27,7 +27,7 @@ function f() {
         i.Z.showAgeVerificationGetStartedModal({ entryPoint: a.cU.CONTENT_AND_SOCIAL_NOTICE });
     };
     return (0, r.jsx)(s.f, {
-        label: u.t.OX4ybm,
+        label: u.t.OX4ybh,
         labelHook: e,
         noticeType: c.nq.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
     });

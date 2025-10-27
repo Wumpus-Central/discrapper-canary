@@ -30,7 +30,7 @@ function _(e) {
                             variant: "text-sm/normal",
                             color: "always-white",
                             className: f.__invalid_unlockText,
-                            children: d.intl.string(d.t.YmIiSU),
+                            children: d.intl.string(d.t.YmIiSe),
                         }),
                     ],
                 }),
@@ -49,7 +49,7 @@ function p(e) {
                 (0, r.jsx)(o.Text, {
                     variant: n,
                     color: null != t ? "text-link" : "interactive-hover",
-                    children: d.intl.string(d.t["5fmYjY"]),
+                    children: d.intl.string(d.t["5fmYjW"]),
                 }),
                 (0, r.jsx)(o.ZSh, {
                     size: "xs",
@@ -95,10 +95,10 @@ function h(e) {
             isDraft: R = !1,
         } = e,
         P = (0, s.hQ)(),
-        w = (e) => {
+        D = (e) => {
             e.stopPropagation();
         },
-        D = (0, r.jsxs)(r.Fragment, {
+        w = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(_, {
                     showDraftBadge: R,
@@ -153,7 +153,7 @@ function h(e) {
                             variant: "text-md/medium",
                             color: "interactive-active",
                             className: f.__invalid_productPrice,
-                            children: null != c ? c : d.intl.string(d.t["4uLhAg"]),
+                            children: null != c ? c : d.intl.string(d.t["4uLhAp"]),
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: "text-xxs/normal",
@@ -163,7 +163,7 @@ function h(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: f.productActionButton,
-                            onClick: w,
+                            onClick: D,
                             children: m,
                         }),
                     ],
@@ -174,7 +174,7 @@ function h(e) {
         ? (0, r.jsx)("article", {
               className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground),
               "aria-labelledby": P,
-              children: D,
+              children: w,
           })
         : (0, r.jsx)("div", {
               style: {
@@ -183,10 +183,10 @@ function h(e) {
               },
               children: (0, r.jsx)(o.kL8, {
                   tag: "article",
-                  "aria-label": d.intl.formatToPlainString(d.t["e+TmJS"], { productName: n }),
+                  "aria-label": d.intl.formatToPlainString(d.t["e+TmJa"], { productName: n }),
                   className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground, f.cardClickableContainer),
                   onClick: y,
-                  children: D,
+                  children: w,
               }),
           });
 }

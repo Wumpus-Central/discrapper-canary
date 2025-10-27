@@ -3,8 +3,8 @@ var r = n(951288),
     l = n(647438),
     i = n(442837),
     a = n(607070),
-    o = n(594174),
-    s = n(960048),
+    s = n(594174),
+    o = n(960048),
     c = n(597688),
     u = n(1870),
     d = n(884697),
@@ -21,8 +21,8 @@ function E(e) {
     let {
             tab: t,
             sortedCategories: n,
-            transitionToTab: o,
-            transitionState: s,
+            transitionToTab: s,
+            transitionState: o,
             updateAnalyticsState: c,
             refreshCategories: u,
         } = e,
@@ -36,9 +36,9 @@ function E(e) {
                 c(e, t);
                 let l = n && !E,
                     i = (0, d.$2)(t) ? b.AW.ORBS : b.AW.CATALOG;
-                y(t), k(!r), await o(i, l);
+                y(t), k(!r), await s(i, l);
             },
-            [E, o, c],
+            [E, s, c],
         ),
         L = (0, g.FF)("CollectiblesContent"),
         { searchError: I } = (0, p.a)();
@@ -54,7 +54,7 @@ function E(e) {
             ? (0, r.jsx)(_.Z, {
                   handleTransition: T,
                   tab: t,
-                  transitionState: s,
+                  transitionState: o,
               })
             : (0, r.jsx)(f.Z, {
                   tab: t,
@@ -77,12 +77,12 @@ let x = () =>
                     : void 0,
         ),
     O = (e) => {
-        let t = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
             { noCache: n, includeUnpublished: r } = (0, h.Z)();
         l.useEffect(() => {
             var l, i;
             null != e &&
-                s.Z.captureMessage(e, {
+                o.Z.captureMessage(e, {
                     tags: {
                         isStaff:
                             null != (i = null == t || null == (l = t.isStaff()) ? void 0 : l.toString())

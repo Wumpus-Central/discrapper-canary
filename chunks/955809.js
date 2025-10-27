@@ -9,7 +9,7 @@ function o(t) {
     return (0, i.e7)([a.Z], () => a.Z.hasContext(t.id), [t.id])
         ? (0, r.jsx)(l.sNh, {
               id: "ingame-voice",
-              label: c.intl.string(c.t["pOul5+"]),
+              label: c.intl.string(c.t["pOul5/"]),
               action: () =>
                   (0, l.ZDy)(async () => {
                       let { default: e } = await n.e("51749").then(n.bind(n, 800740));

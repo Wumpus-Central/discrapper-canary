@@ -131,7 +131,7 @@ function S(e) {
             I
                 ? (0, i.jsx)(s.aML, {
                       "data-migration-pending": !0,
-                      text: T ? void 0 : v.intl.string(v.t["0LMpW1"]),
+                      text: T ? void 0 : v.intl.string(v.t["0LMpW+"]),
                       children: (e) =>
                           (0, i.jsx)(
                               "div",
@@ -139,7 +139,7 @@ function S(e) {
                                   children: (0, i.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "secondary",
-                                      text: v.intl.string(v.t["0eHzpq"]),
+                                      text: v.intl.string(v.t["0eHzpm"]),
                                       onClick: A,
                                       disabled: !T,
                                   }),
@@ -150,7 +150,7 @@ function S(e) {
                   (0, i.jsx)(s.Button, {
                       size: "sm",
                       variant: "secondary",
-                      text: v.intl.string(v.t["B/dHXF"]),
+                      text: v.intl.string(v.t["B/dHXL"]),
                       onClick: N,
                   }),
         ],

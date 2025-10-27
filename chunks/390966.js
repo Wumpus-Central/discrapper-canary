@@ -20,26 +20,26 @@ function b(e, t) {
         r = n.toLocaleString(m.intl.currentLocale, { weekday: "long" });
     switch (e) {
         case p.z.WEEKLY:
-            return m.intl.formatToPlainString(m.t.xQM9X1, { weekday: r });
+            return m.intl.formatToPlainString(m.t.xQM9X0, { weekday: r });
         case p.z.BIWEEKLY:
-            return m.intl.formatToPlainString(m.t.RYscaW, { weekday: r });
+            return m.intl.formatToPlainString(m.t.RYscac, { weekday: r });
         case p.z.MONTHLY:
             let i = Math.ceil(n.getDate() / 7);
-            return m.intl.formatToPlainString(m.t["4ZN9Ag"], {
+            return m.intl.formatToPlainString(m.t["4ZN9Ap"], {
                 weekday: r,
                 nth: i,
             });
         case p.z.YEARLY:
-            return m.intl.formatToPlainString(m.t["rXUS+v"], {
+            return m.intl.formatToPlainString(m.t["rXUS+j"], {
                 date: n.toLocaleString(m.intl.currentLocale, {
                     month: "short",
                     day: "2-digit",
                 }),
             });
         case p.z.WEEKDAY_ONLY:
-            return m.intl.string(m.t["2BX6bG"]);
+            return m.intl.string(m.t["2BX6bC"]);
         case p.z.WEEKEND_ONLY:
-            return m.intl.string(m.t["IEi+R0"]);
+            return m.intl.string(m.t["IEi+Rw"]);
         default:
             return null;
     }
@@ -47,12 +47,12 @@ function b(e, t) {
 function y(e, t, n, i, a) {
     switch (e) {
         case 1:
-            return a > 0 ? m.intl.formatToPlainString(m.t.PQlCWl, { minutes: a }) : m.intl.string(m.t.WINqKS);
+            return a > 0 ? m.intl.formatToPlainString(m.t.PQlCWk, { minutes: a }) : m.intl.string(m.t.WINqKV);
         case 2:
-            return m.intl.string(m.t.WINqKS);
+            return m.intl.string(m.t.WINqKV);
         case 3:
             return null != i && "" !== i
-                ? m.intl.format(m.t.vHYgJS, {
+                ? m.intl.format(m.t.vHYgJW, {
                       start: n,
                       startHook: (e) =>
                           (0, r.jsx)(d.Text, {
@@ -146,9 +146,9 @@ function T(e) {
         } = e,
         R = (0, d.dQu)(c.Z.colors.TEXT_BRAND).hex(),
         P = (0, d.dQu)(c.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        w = (0, d.dQu)(c.Z.colors.TEXT_DANGER).hex();
-    null == p && (p = a === h.WX.EXTERNAL ? m.intl.string(m.t.IyZxjI) : m.intl.string(m.t["X2K3//"]));
-    let D = (0, f.Z)(N, C),
+        D = (0, d.dQu)(c.Z.colors.TEXT_DANGER).hex();
+    null == p && (p = a === h.WX.EXTERNAL ? m.intl.string(m.t.IyZxjH) : m.intl.string(m.t["X2K3/4"]));
+    let w = (0, f.Z)(N, C),
         [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] =
             i.useState((0, _.ub)(t, u));
     i.useEffect(() => {
@@ -161,13 +161,13 @@ function T(e) {
     let G = L;
     null != x &&
         "" !== x &&
-        (G = m.intl.formatToPlainString(m.t.tXbu7O, {
+        (G = m.intl.formatToPlainString(m.t.tXbu7I, {
             start: L,
             end: x,
         }));
     let B = i.useMemo(
             () =>
-                n === h.p1.CANCELED || (null == D ? void 0 : D.is_canceled)
+                n === h.p1.CANCELED || (null == w ? void 0 : w.is_canceled)
                     ? 5
                     : n === h.p1.ACTIVE
                       ? 3
@@ -176,7 +176,7 @@ function T(e) {
                         : M
                           ? 2
                           : +!!k,
-            [n, null == D ? void 0 : D.is_canceled, M, k],
+            [n, null == w ? void 0 : w.is_canceled, M, k],
         ),
         Z = y(B, G, p, x, j),
         {
@@ -190,16 +190,16 @@ function T(e) {
                     timeStatus: B,
                     textBrand: R,
                     textPositive: P,
-                    textDanger: w,
+                    textDanger: D,
                     endDateTimeString: x,
                     startDateTimeString: L,
                 }),
-            [B, R, P, w, x, L],
+            [B, R, P, D, x, L],
         ),
         W = null;
     if (null != A) {
         let e = (0, _.Ho)(A);
-        W = m.intl.formatToPlainString(m.t.HmKEqa, { recurrenceRule: e.toText() });
+        W = m.intl.formatToPlainString(m.t.HmKEqW, { recurrenceRule: e.toText() });
         let n = l()(t);
         W = b((0, _.zi)(n, A), n);
     }

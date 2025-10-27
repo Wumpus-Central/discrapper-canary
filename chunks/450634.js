@@ -10,8 +10,8 @@ var i = n(951288),
     s = n(701488),
     u = n(981631),
     b = n(531578),
-    p = n(388032);
-let m = [s.K8.OTHER, s.K8.ADS, s.K8.NOT_FUN];
+    m = n(388032);
+let p = [s.K8.OTHER, s.K8.ADS, s.K8.NOT_FUN];
 function f(e) {
     var t;
     let {
@@ -31,14 +31,14 @@ function f(e) {
             source: "Activity End",
         });
     }, [g]);
-    let T = (null == (t = g.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
+    let j = (null == (t = g.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
     return (0, i.jsx)(c.Z, {
         modalType: "activity",
-        header: p.intl.formatToPlainString(p.t.QXYwoK, { applicationName: g.name }),
-        body: p.intl.string(p.t["9hk2KC"]),
-        problemTitle: p.intl.string(p.t.g1q5fn),
-        problems: (0, _.Z)(!0, T),
-        freeformNeededProblems: m,
+        header: m.intl.formatToPlainString(m.t.QXYwoD, { applicationName: g.name }),
+        body: m.intl.string(m.t["9hk2KF"]),
+        problemTitle: m.intl.string(m.t.g1q5fr),
+        problems: (0, _.Z)(!0, j),
+        freeformNeededProblems: p,
         onSubmit: function (e) {
             var t;
             let { rating: a, problem: c, dontShowAgain: _, feedback: s } = e;
@@ -92,7 +92,7 @@ function f(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: p.intl.string(p.t["zuHR+/"]) }, t),
+                                    })({ body: m.intl.string(m.t["zuHR+y"]) }, t),
                                 );
                         }));
         },

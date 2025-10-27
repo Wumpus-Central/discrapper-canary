@@ -75,8 +75,8 @@ function E(e) {
                     g(
                         h(
                             {
-                                header: _.intl.string(_.t.LykQYm),
-                                confirmText: _.intl.string(_.t.BddRzc),
+                                header: _.intl.string(_.t.LykQYk),
+                                confirmText: _.intl.string(_.t.BddRzS),
                                 confirmButtonColor: c.zx.Colors.BRAND,
                             },
                             t,
@@ -84,7 +84,7 @@ function E(e) {
                         {
                             children: (0, r.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                children: _.intl.format(_.t.azKEPz, { email: e.email }),
+                                children: _.intl.format(_.t.azKEPy, { email: e.email }),
                             }),
                         },
                     ),
@@ -93,7 +93,7 @@ function E(e) {
         })
         .catch((e) => {
             let { body: t } = e,
-                n = _.intl.string(_.t.XcrQNz);
+                n = _.intl.string(_.t.XcrQN5);
             null != t && t.email && (n = t.email),
                 (0, u.h7j)((e) =>
                     (0, r.jsx)(
@@ -103,11 +103,11 @@ function E(e) {
                                 actions: [
                                     {
                                         variant: "primary",
-                                        text: _.intl.string(_.t.BddRzc),
+                                        text: _.intl.string(_.t.BddRzS),
                                         onClick: e.onClose,
                                     },
                                 ],
-                                title: _.intl.string(_.t.VbTh0N),
+                                title: _.intl.string(_.t.VbTh0E),
                                 subtitle: n,
                             },
                             e,
@@ -128,7 +128,7 @@ function b(e) {
         size: t,
         variant: n,
         onClick: d,
-        text: _.intl.string(_.t.lm1UKi),
+        text: _.intl.string(_.t.lm1UKt),
         disabled: s,
     });
 }

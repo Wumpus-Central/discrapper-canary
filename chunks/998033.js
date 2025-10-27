@@ -35,7 +35,7 @@ function _(e, t, n, _) {
             e
                 ? (0, i.jsx)("div", {
                       style: { textAlign: "center" },
-                      children: y.intl.string(y.t["+MJm39"]),
+                      children: y.intl.string(y.t["+MJm3w"]),
                   })
                 : null,
         maxBodyLines: 2,

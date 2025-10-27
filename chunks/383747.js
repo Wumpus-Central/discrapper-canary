@@ -1,13 +1,13 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(481060),
     l = n(410030),
     a = n(388032);
-function o(e) {
+function s(e) {
     let { onClick: t } = e,
-        o = (0, l.ZP)();
+        s = (0, l.ZP)();
     return (0, r.jsxs)(i.ubH, {
-        theme: o,
+        theme: s,
         children: [
             (0, r.jsx)(i.oxh, {
                 lightSrc: n(979770),
@@ -15,7 +15,7 @@ function o(e) {
                 width: 415,
                 height: 200,
             }),
-            (0, r.jsx)(i.OZU, { note: a.intl.format(a.t.Pv8u2t, { onClick: t }) }),
+            (0, r.jsx)(i.OZU, { note: a.intl.format(a.t.Pv8u2u, { onClick: t }) }),
         ],
     });
 }

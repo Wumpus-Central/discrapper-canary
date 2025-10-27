@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var i = n(951288);
 n(647438);
 var r = n(120356),
@@ -73,7 +73,7 @@ function H(e) {
               ],
           });
 }
-function V(e) {
+function F(e) {
     let t,
         { focusedApplication: n, focusedParticipant: r, channel: l } = e,
         a = (0, T.Z)(l, !0),
@@ -132,7 +132,7 @@ function V(e) {
         children: t,
     });
 }
-function F(e) {
+function V(e) {
     let { channel: t, guild: r, appContext: c, inCall: u, isChatOpen: m, exitFullScreen: g } = e,
         { focusedParticipant: b } = (0, a.cj)(
             [I.Z],
@@ -145,15 +145,15 @@ function F(e) {
         C = (0, h.ZP)(t),
         x = (0, f.KS)(t),
         [S] = (0, d.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
-        P = D.intl.string(D.t.BVZqJi);
-    t.isDM() ? (P = D.intl.string(D.t.jN2DfX)) : t.isGroupDM() && (P = D.intl.string(D.t["e5y+go"]));
+        P = D.intl.string(D.t.BVZqJl);
+    t.isDM() ? (P = D.intl.string(D.t.jN2DfZ)) : t.isGroupDM() && (P = D.intl.string(D.t["e5y+gm"]));
     let T = (0, a.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         A = t.isGuildVoice() && u && null != T && T.length > 0,
         R = (0, Z.ZP)(t),
         B = A
             ? (0, i.jsx)(o.u, {
                   asContainer: !0,
-                  text: D.intl.string(D.t.Mgpxi4),
+                  text: D.intl.string(D.t.Mgpxiw),
                   delay: 500,
                   position: "bottom",
                   shouldShow: R,
@@ -252,10 +252,10 @@ function F(e) {
                                         C,
                                         H &&
                                             (0, i.jsx)(o.u, {
-                                                text: D.intl.string(D.t.QyZ4TU),
+                                                text: D.intl.string(D.t.QyZ4Td),
                                                 children: (0, i.jsx)(s.tQf, {
                                                     size: "xs",
-                                                    "aria-label": D.intl.string(D.t.VHXh8f),
+                                                    "aria-label": D.intl.string(D.t.VHXh8a),
                                                     color: s.TVs.colors.INTERACTIVE_NORMAL,
                                                     className: k.secureFramesIcon,
                                                 }),
@@ -267,7 +267,7 @@ function F(e) {
                                 channel: t,
                                 guild: r,
                             }),
-                            (0, i.jsx)(V, {
+                            (0, i.jsx)(F, {
                                 focusedApplication: S,
                                 focusedParticipant: b,
                                 channel: t,

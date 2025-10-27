@@ -90,7 +90,7 @@ class h extends (r = a.PureComponent) {
                     }),
                     (0, i.jsx)(l.zx, {
                         className: f.volumeButton,
-                        "aria-label": d.intl.string(d.t["19lt29"]),
+                        "aria-label": d.intl.string(d.t["19lt24"]),
                         size: l.zx.Sizes.NONE,
                         look: l.zx.Looks.BLANK,
                         onClick: this.handleToggleMute,

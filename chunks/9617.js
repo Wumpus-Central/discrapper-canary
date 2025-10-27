@@ -18,8 +18,8 @@ let g = () => {
         n = e === a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         g = (0, i.e7)([u.default], () => u.default.getId());
     return (0, r.jsx)(d.Z, {
-        title: h.intl.string(h.t.Jzj9q6),
-        description: h.intl.string(h.t.lfF1Sk),
+        title: h.intl.string(h.t.Jzj9q4),
+        description: h.intl.string(h.t.lfF1Sp),
         titleIcon: n
             ? (0, r.jsx)(o.IGR, {
                   className: m.newBadge,
@@ -30,7 +30,7 @@ let g = () => {
         showBorder: n,
         hasBackground: n,
         children: (0, r.jsx)(o.Button, {
-            text: h.intl.string(h.t.Geikws),
+            text: h.intl.string(h.t.Geikwq),
             onClick: () => {
                 n && t(_.L.TAKE_ACTION),
                     (0, c.openUserProfileModal)({

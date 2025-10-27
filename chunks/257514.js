@@ -1,22 +1,22 @@
-n.d(e, { default: () => O }), n(388685);
+n.d(e, { default: () => A }), n(388685);
 var i = n(951288),
     a = n(647438),
     l = n(793030),
     r = n(481060),
     s = n(355467),
-    o = n(100527),
-    c = n(906732),
+    c = n(100527),
+    o = n(906732),
     u = n(740492),
     C = n(626135),
     _ = n(171246),
     d = n(225715),
     p = n(553334),
     I = n(981631),
-    A = n(388032),
-    N = n(304495);
-function O(t) {
-    let { transitionState: e, application: n, storeListing: O, subscription: E, guild: S, onClose: P } = t,
-        { analyticsLocations: T } = (0, c.ZP)(o.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
+    N = n(388032),
+    O = n(304495);
+function A(t) {
+    let { transitionState: e, application: n, storeListing: A, subscription: E, guild: S, onClose: P } = t,
+        { analyticsLocations: T } = (0, o.ZP)(c.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
         {
             cancelSubscription: f,
             error: g,
@@ -86,13 +86,13 @@ function O(t) {
     a.useEffect(() => {
         C.default.track(I.rMx.CANCELLATION_FLOW_STARTED, { location_stack: T });
     }, [T]);
-    let L = (0, _.KW)(O.skuFlags);
+    let L = (0, _.KW)(A.skuFlags);
     return (0, i.jsx)(l.ExpressiveModal, {
         actions: [
             {
                 loading: m,
                 onClick: b,
-                text: A.intl.string(A.t.KSqyfX),
+                text: N.intl.string(N.t.KSqyfW),
                 variant: "critical-primary",
             },
         ],
@@ -102,16 +102,16 @@ function O(t) {
             aspectRatio: "16/9",
             props: {
                 application: n,
-                className: N.largeAppIcon,
+                className: O.largeAppIcon,
             },
         },
-        title: A.intl.string(A.t.CeCHk5),
+        title: N.intl.string(N.t.CeCHk1),
         subtitle: L
-            ? A.intl.format(A.t.fZP9QE, {
+            ? N.intl.format(N.t.fZP9QD, {
                   applicationName: n.name,
                   timestamp: E.currentPeriodEnd.getTime(),
               })
-            : A.intl.format(A.t["3LeWBA"], {
+            : N.intl.format(N.t["3LeWBF"], {
                   guild: null == S ? void 0 : S.name,
                   applicationName: n.name,
                   timestamp: E.currentPeriodEnd.getTime(),
@@ -119,7 +119,7 @@ function O(t) {
         transitionState: e,
         onClose: P,
         children: (0, i.jsxs)("div", {
-            className: N.cancelModalBody,
+            className: O.cancelModalBody,
             children: [
                 null != g
                     ? (0, i.jsx)(l.M14, {
@@ -129,8 +129,8 @@ function O(t) {
                     : null,
                 (0, i.jsx)(d.G9, {
                     applicationId: n.id,
-                    storeListingBenefits: O.benefits,
-                    className: N.benefitsContainer,
+                    storeListingBenefits: A.benefits,
+                    className: O.benefitsContainer,
                 }),
             ],
         }),

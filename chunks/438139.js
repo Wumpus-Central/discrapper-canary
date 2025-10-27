@@ -130,9 +130,9 @@ function h(e) {
                     seconds: this.renderTime(c),
                 };
             return null != n.end
-                ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t["I/J7vL"], f) }))
+                ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t["I/J7vI"], f) }))
                 : null != n.start
-                  ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t.M9Fexc, f) }))
+                  ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t.M9Fexd, f) }))
                   : null;
         }
         constructor(e) {

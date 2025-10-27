@@ -20,17 +20,17 @@ function x(t) {
             0 !== a.length &&
             (0, i.jsx)(r.q4e, {
                 options: a,
-                placeholder: h.intl.string(h.t.QXf93N),
+                placeholder: h.intl.string(h.t.QXf93A),
                 value: e,
                 onChange: n,
-                "aria-label": h.intl.string(h.t.QXf93N),
+                "aria-label": h.intl.string(h.t.QXf93A),
             }),
     });
 }
 function f(t) {
     let { guildId: e, requireTeamSetup: n, onClose: g, transitionState: f } = t,
-        [C, v] = a.useState(),
-        [E, S] = a.useState(!1),
+        [C, E] = a.useState(),
+        [v, S] = a.useState(!1),
         { teams: j } = (0, u.Z)(),
         y = j.filter((t) => t.payout_account_status === p.C.ACTIVE),
         T = a.useMemo(
@@ -44,21 +44,21 @@ function f(t) {
         b = () => {
             S((t) => !t);
         },
-        k = () => {
+        _ = () => {
             g(), (0, d.df)(e, C);
         },
-        _ = a.useCallback(() => {
+        k = a.useCallback(() => {
             (0, o.Z)(m.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
     if (!n)
         return (0, i.jsx)(l.Modal, {
-            title: h.intl.string(h.t.GfObDA),
+            title: h.intl.string(h.t.GfObDE),
             actions: [
                 {
                     variant: "primary",
-                    text: h.intl.string(h.t.geKm7u),
-                    onClick: k,
-                    disabled: !E,
+                    text: h.intl.string(h.t.geKm7t),
+                    onClick: _,
+                    disabled: !v,
                 },
             ],
             onClose: g,
@@ -68,7 +68,7 @@ function f(t) {
                 onChange: b,
                 size: 20,
                 type: s.M0.INVERTED,
-                value: E,
+                value: v,
                 children: (0, i.jsx)(r.Text, {
                     variant: "text-md/normal",
                     color: "header-secondary",
@@ -79,13 +79,13 @@ function f(t) {
     {
         let t = 0 === T.length;
         return (0, i.jsxs)(l.Modal, {
-            title: h.intl.string(h.t.inJKQk),
-            subtitle: t ? h.intl.format(h.t.Jyy4pa, {}) : h.intl.string(h.t.U1Vz29),
+            title: h.intl.string(h.t.inJKQv),
+            subtitle: t ? h.intl.format(h.t.Jyy4pV, {}) : h.intl.string(h.t.U1Vz24),
             actions: [
                 {
                     variant: "primary",
-                    text: t ? h.intl.string(h.t.JddVgI) : h.intl.string(h.t.geKm7u),
-                    onClick: t ? _ : k,
+                    text: t ? h.intl.string(h.t.JddVgE) : h.intl.string(h.t.geKm7t),
+                    onClick: t ? k : _,
                 },
             ],
             onClose: g,
@@ -95,14 +95,14 @@ function f(t) {
                 !t &&
                     (0, i.jsx)(x, {
                         selectedTeamId: C,
-                        onSetSelectedTeamId: v,
+                        onSetSelectedTeamId: E,
                         teamOptions: T,
                     }),
                 (0, i.jsx)(s.$q, {
                     onChange: b,
                     size: 20,
                     type: s.M0.INVERTED,
-                    value: E,
+                    value: v,
                     children: (0, i.jsx)(r.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",

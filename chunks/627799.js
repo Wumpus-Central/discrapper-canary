@@ -16,52 +16,52 @@ function f(e) {
         p = (0, s.Z)(n);
     return (a.includes(i.x.SDK_SOCIAL_LAYER)
         ? ((t = p
-              ? u.intl.format(u.t.GxjwZG, {
+              ? u.intl.format(u.t.GxjwZM, {
                     applicationName: n.name,
                     learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
+              : u.intl.format(u.t.DfBeUq, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           f.push(
               {
                   icon: o.iFz,
                   text: p
-                      ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X })
-                      : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X }),
+                      ? u.intl.formatToPlainString(u.t.z9peav, { maxFriends: c.L4X })
+                      : u.intl.formatToPlainString(u.t.WNKzo9, { maxFriends: c.L4X }),
               },
               {
                   icon: o.mrm,
-                  text: p ? u.intl.string(u.t.daY6xs) : u.intl.string(u.t.j7peBg),
+                  text: p ? u.intl.string(u.t.daY6xj) : u.intl.string(u.t.j7peBh),
               },
               {
                   icon: o.iWm,
-                  text: p ? u.intl.string(u.t["/bdaND"]) : u.intl.string(u.t["feD3+v"]),
+                  text: p ? u.intl.string(u.t["/bdaNN"]) : u.intl.string(u.t["feD3+i"]),
               },
               {
                   icon: o.ewm,
-                  text: p ? u.intl.string(u.t.mSqazM) : u.intl.string(u.t.YFFVMz),
+                  text: p ? u.intl.string(u.t.mSqazC) : u.intl.string(u.t.YFFVM1),
               },
           ))
         : a.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
           ((t = p
-              ? u.intl.format(u.t.GxjwZG, {
+              ? u.intl.format(u.t.GxjwZM, {
                     applicationName: n.name,
                     learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS),
                 })
-              : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
+              : u.intl.format(u.t.DfBeUq, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           f.push(
               {
                   icon: o.iFz,
                   text: p
-                      ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X })
-                      : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X }),
+                      ? u.intl.formatToPlainString(u.t.z9peav, { maxFriends: c.L4X })
+                      : u.intl.formatToPlainString(u.t.WNKzo9, { maxFriends: c.L4X }),
               },
               {
                   icon: o.iWm,
-                  text: p ? u.intl.string(u.t["/bdaND"]) : u.intl.string(u.t["feD3+v"]),
+                  text: p ? u.intl.string(u.t["/bdaNN"]) : u.intl.string(u.t["feD3+i"]),
               },
               {
                   icon: o.ewm,
-                  text: p ? u.intl.string(u.t.mSqazM) : u.intl.string(u.t.YFFVMz),
+                  text: p ? u.intl.string(u.t.mSqazC) : u.intl.string(u.t.YFFVM1),
               },
           )),
     0 === f.length)

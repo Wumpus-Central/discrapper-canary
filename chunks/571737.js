@@ -24,9 +24,9 @@ let m = function (e) {
         g = a.useMemo(() => {
             let e = [];
             return (
-                (0, s.vJ)(t) && e.push(u.intl.string(u.t.LO4f0N)),
-                (0, s.Cb)(t) && (0 !== e.length && e.push("\u2022"), e.push(u.intl.string(u.t["8z5B2d"]))),
-                (0, s.Hu)(t) && (0 !== e.length && e.push("\u2022"), e.push(u.intl.string(u.t["5khEk5"]))),
+                (0, s.vJ)(t) && e.push(u.intl.string(u.t.LO4f0P)),
+                (0, s.Cb)(t) && (0 !== e.length && e.push("\u2022"), e.push(u.intl.string(u.t["8z5B2U"]))),
+                (0, s.Hu)(t) && (0 !== e.length && e.push("\u2022"), e.push(u.intl.string(u.t["5khEk8"]))),
                 e
             );
         }, [t]);

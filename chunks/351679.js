@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(295790),
     O = n(145807),
     I = n(592125),
-    y = n(709054),
-    v = n(981631),
+    v = n(709054),
+    y = n(981631),
     C = n(7938),
     S = n(360514);
 function T(e) {
@@ -93,10 +93,10 @@ let N = i.memo(function (e) {
             "subscribeToComponentDispatch",
             "renderThreadAccessory",
         ]),
-        k = N.type === v.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        k = N.type === y.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
         U = N.isFirstMessageInForumPost(Z),
         G = (0, u.A)((null != (n = N.editedTimestamp) ? n : N.timestamp).valueOf()),
-        { content: H, hasSpoilerEmbeds: B } = (0, m.Z)(N, {
+        { content: B, hasSpoilerEmbeds: H } = (0, m.Z)(N, {
             hideSimpleEmbedContent: A,
             allowList: U || G,
             allowHeading: U || G,
@@ -105,11 +105,11 @@ let N = i.memo(function (e) {
         }),
         V = (0, s.JA)(N.id),
         F = (0, p.ZP)(N),
-        Y = (0, o.e7)(
+        z = (0, o.e7)(
             [I.Z],
-            () => N.hasFlag(v.iLy.HAS_THREAD) && I.Z.getChannel(y.default.castMessageIdAsChannelId(N.id)),
+            () => N.hasFlag(y.iLy.HAS_THREAD) && I.Z.getChannel(v.default.castMessageIdAsChannelId(N.id)),
         ),
-        z = (0, c.p9)({
+        Y = (0, c.p9)({
             guildId: Z.guild_id,
             roleId: F.iconRoleId,
         }),
@@ -134,12 +134,12 @@ let N = i.memo(function (e) {
                     compact: !1,
                     animateAvatar: L,
                     isGroupStart: !0,
-                    roleIcon: z,
+                    roleIcon: Y,
                     hideTimestamp: !0,
                     hideGuildTag: !1,
                 }),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, B),
-                childrenMessageContent: (0, _.Z)(e, H),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, g.Q)(e, H),
+                childrenMessageContent: (0, _.Z)(e, B),
                 childrenSystemMessage: (0, E.Z)(
                     ((i = T({}, e)),
                     (l = l = { disableInteraction: k }),
@@ -159,7 +159,7 @@ let N = i.memo(function (e) {
                 ),
                 onContextMenu: P,
                 onClick: x,
-                hasThread: R && null != Y && N.hasFlag(v.iLy.HAS_THREAD),
+                hasThread: R && null != z && N.hasFlag(y.iLy.HAS_THREAD),
                 hasReply: !1,
                 "aria-labelledby": W,
                 "aria-describedby": q,

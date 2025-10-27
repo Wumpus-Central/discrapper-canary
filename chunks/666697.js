@@ -78,7 +78,7 @@ let O = function (e) {
             () => [
                 {
                     id: y.GlobalDiscoveryAppsSections.ABOUT,
-                    label: S.intl.string(S.t.DkyHMD),
+                    label: S.intl.string(S.t.DkyHMK),
                 },
                 {
                     id: y.GlobalDiscoveryAppsSections.STORE,

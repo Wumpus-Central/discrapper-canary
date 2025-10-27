@@ -56,7 +56,7 @@ let o = (e) => {
             let e = j.trim();
             if (0 !== e.length) {
                 if (null != f && o.length >= f) {
-                    null == m || m(s.intl.string(s.t.Xx7XeH));
+                    null == m || m(s.intl.string(s.t.Xx7XeB));
                     return;
                 }
                 g(e), v("");

@@ -8,15 +8,15 @@ var i = n(951288),
     u = n(13245),
     c = n(355863),
     d = n(237997),
-    h = n(451478),
-    p = n(434529),
+    p = n(451478),
+    h = n(434529),
     f = n(145597),
     m = n(830917),
-    g = n(111628),
-    y = n(837268),
-    O = n(353038),
-    v = n(430561),
-    E = n(561064),
+    g = n(837268),
+    y = n(353038),
+    O = n(338949),
+    E = n(430561),
+    v = n(561064),
     S = n(981631),
     b = n(377409);
 function x(e) {
@@ -73,22 +73,22 @@ let I = r.memo(function (e) {
             dragContainerClassName: N,
         } = e,
         w = (0, a.e7)([c.Z], () => c.Z.getWidgetConfig(t.type), [t.type]),
-        T = (0, v.xZ)(t.id, v.bc),
+        T = (0, E.xZ)(t.id, E.bc),
         _ = (0, a.e7)([d.default], () => d.default.isLocked((0, f.getPID)())),
-        P = (0, E.Z)(),
-        D = (0, a.e7)([h.Z], () => h.Z.windowSize((0, m.ZY)(P))),
-        A = r.useCallback((e, t, n, i, r) => {
-            let l = h.Z.windowSize((0, m.ZY)((0, E.i)())),
-                o = (0, p.jL)(n, l),
-                a = (0, p.Ox)(i, l);
+        P = (0, v.Z)(),
+        A = (0, a.e7)([p.Z], () => p.Z.windowSize((0, m.ZY)(P))),
+        D = r.useCallback((e, t, n, i, r) => {
+            let l = p.Z.windowSize((0, m.ZY)((0, v.i)())),
+                o = (0, h.jL)(n, l),
+                a = (0, h.Ox)(i, l);
             (0, s.Os)(t),
                 (0, s.nv)({
                     widgetId: t,
                     anchor: o,
                     size: a,
                 });
-            let d = e === O.B.MOVE,
-                f = (0, p.PY)(n, l.width, l.height, r.width, r.height);
+            let d = e === y.B.MOVE,
+                f = (0, h.PY)(n, l.width, l.height, r.width, r.height);
             u.Z.track(S.rMx.OVERLAY_LAYOUT_UPDATED, {
                 was_resized: !d,
                 was_dragged: d,
@@ -105,18 +105,18 @@ let I = r.memo(function (e) {
             (0, s.Os)(e);
         }, []),
         { id: k, pinned: L, zIndex: M, size: V, anchor: z, minSize: U } = t,
-        W = r.useMemo(() => (0, p.w_)(V, D), [V, D]),
-        G = (0, p.KR)(z, D),
+        W = r.useMemo(() => (0, h.w_)(V, A), [V, A]),
+        G = (0, h.KR)(z, A),
         { resizeX: F, resizeY: H, dragAnywhere: B } = null != w ? w : {},
         Y = L || !_,
         Q = r.useMemo(
             () => ({
                 minX: 0,
                 minY: 0,
-                maxX: D.width,
-                maxY: D.height,
+                maxX: A.width,
+                maxY: A.height,
             }),
-            [D],
+            [A],
         ),
         K = r.useCallback(
             (e) =>
@@ -139,16 +139,16 @@ let I = r.memo(function (e) {
                     : null,
             [t, l, T, I],
         ),
-        q = (0, a.e7)([g.Z], () => g.Z.hasRenderDebugMode(y.GO.WidgetAreas)),
-        J = r.useMemo(() => {
+        J = (0, a.e7)([O.Z], () => O.Z.hasRenderDebugMode(g.GO.WidgetAreas)),
+        q = r.useMemo(() => {
             if (null != C) return (e) => C(j(x({}, e), { widget: t }));
         }, [C, t]);
-    return (0, i.jsx)(O.Z, {
+    return (0, i.jsx)(y.Z, {
         className: o()(
             {
-                [b.debug]: q,
-                [b.debugUnpinned]: q && !L,
-                [b.debugPinned]: q && L,
+                [b.debug]: J,
+                [b.debugUnpinned]: J && !L,
+                [b.debugPinned]: J && L,
             },
             N,
         ),
@@ -170,12 +170,12 @@ let I = r.memo(function (e) {
         style: { zIndex: M },
         dragAnywhere: null != B && B,
         active: !_,
-        onUpdate: A,
+        onUpdate: D,
         onClick: R,
         targetWindow: P,
         forceShowExtras: T,
         renderExtras: X,
-        resizeValidation: J,
+        resizeValidation: q,
         children: K,
     });
 });

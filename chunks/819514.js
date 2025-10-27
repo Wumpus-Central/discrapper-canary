@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(332148),
     d = n(904245),
     p = n(933557),
-    h = n(576855),
-    f = n(372900),
+    f = n(576855),
+    h = n(372900),
     g = n(726521),
     m = n(501517),
     b = n(699516),
@@ -99,7 +99,7 @@ class N extends i.PureComponent {
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
             g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, O.yE)(s.flags, v.iLy.CROSSPOSTED);
         u &&
-            (e = (0, r.jsx)(h.Z, {
+            (e = (0, r.jsx)(f.Z, {
                 className: E.spacingTop,
                 children: x.intl.format(x.t.IxY7E6, {}),
             })),
@@ -129,7 +129,7 @@ class N extends i.PureComponent {
             });
         if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
             let { isFlagResolved: e } = d;
-            return (0, r.jsx)(f.Z.Provider, {
+            return (0, r.jsx)(h.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
@@ -184,7 +184,7 @@ class N extends i.PureComponent {
                 ),
             });
         }
-        return (0, r.jsx)(f.Z.Provider, {
+        return (0, r.jsx)(h.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
                 title: g ? x.intl.string(x.t.aIz1oV) : x.intl.string(x.t.MWMcg7),
@@ -254,7 +254,7 @@ let Z = {
                 (i = e.isPrivate()
                     ? x.intl.string(x.t.hMRngA)
                     : x.intl.formatToPlainString(x.t["3IRluI"], { channelName: l })),
-                (0, r.jsx)(f.Z.Provider, {
+                (0, r.jsx)(h.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsxs)(
                         c.ConfirmModal,
@@ -295,7 +295,7 @@ let Z = {
     },
     confirmUnpin: function (e, t) {
         (0, c.h7j)((n) =>
-            (0, r.jsx)(f.Z.Provider, {
+            (0, r.jsx)(h.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     c.ConfirmModal,
@@ -324,7 +324,7 @@ let Z = {
                                         disableInteraction: !0,
                                     }),
                                 }),
-                                (0, r.jsx)(h.Z, { children: x.intl.format(x.t.oCVB3Y, {}) }),
+                                (0, r.jsx)(f.Z, { children: x.intl.format(x.t.oCVB3Y, {}) }),
                             ],
                         },
                     ),

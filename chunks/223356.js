@@ -6,17 +6,17 @@ n.d(t, {
 }),
     n(953529),
     n(539854);
-var r = n(990547),
-    i = n(544891),
-    l = n(729345),
-    a = n(210887);
+var i = n(990547),
+    r = n(544891),
+    a = n(729345),
+    l = n(210887);
 n(358085);
 var o = n(573261),
     s = n(981631),
     u = n(388032);
 async function c() {
     return (
-        await i.tn.get({
+        await r.tn.get({
             url: s.ANM.BUG_REPORTS,
             rejectWithError: !1,
         })
@@ -29,33 +29,33 @@ function d(e) {
 function m() {
     return [
         {
-            title: u.intl.string(u.t.VwIij4),
-            description: u.intl.format(u.t.DOP8yc, {}),
+            title: u.intl.string(u.t.VwIij9),
+            description: u.intl.format(u.t.DOP8yY, {}),
             emoji: "801497159479722084",
             value: 0,
         },
         {
-            title: u.intl.string(u.t.rYfJoq),
-            description: u.intl.format(u.t["+LEfDA"], {}),
+            title: u.intl.string(u.t.rYfJop),
+            description: u.intl.format(u.t["+LEfDL"], {}),
             emoji: "410336837563973632",
             value: 1,
         },
         {
-            title: u.intl.string(u.t["9LSuy8"]),
-            description: u.intl.format(u.t.nC7pv7, {}),
+            title: u.intl.string(u.t["9LSuy3"]),
+            description: u.intl.format(u.t.nC7pvx, {}),
             emoji: "841420679643529296",
             value: 2,
         },
         {
-            title: u.intl.string(u.t.Ia0skZ),
-            description: u.intl.format(u.t.D4rbgY, {}),
+            title: u.intl.string(u.t.Ia0ska),
+            description: u.intl.format(u.t.D4rbgX, {}),
             emoji: "827645852352512021",
             value: 3,
         },
     ];
 }
 async function p(e, t, n) {
-    var i, u;
+    var r, u;
     let c = [
         {
             name: "name",
@@ -71,7 +71,7 @@ async function p(e, t, n) {
         },
         {
             name: "theme",
-            value: a.Z.theme,
+            value: l.Z.theme,
         },
     ];
     "" !== e.description &&
@@ -94,7 +94,7 @@ async function p(e, t, n) {
                 name: "experiment_overrides",
                 value: e.experimentOverrides.map((e) => "".concat(e.experimentId, ":").concat(e.variantId)).join(","),
             });
-    let d = null == (i = e.feature) ? void 0 : i.asana_inbox_id;
+    let d = null == (r = e.feature) ? void 0 : r.asana_inbox_id;
     null != d &&
         "" !== d &&
         c.push({
@@ -137,14 +137,14 @@ async function p(e, t, n) {
                 name: "locale",
                 value: t.locale,
             })),
-        (0, l.E)(s.GU0.WEB_APP);
+        (0, a.E)(s.GU0.WEB_APP);
     try {
         return await o.Z.post({
             url: s.ANM.BUG_REPORTS,
             attachments: n,
             fields: c,
             trackedActionData: {
-                event: r.NetworkActionNames.BUG_REPORT_SUBMIT,
+                event: i.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: {
                     priority: e.priority,
                     asana_inbox_id: d,

@@ -90,14 +90,14 @@ function T(e) {
                         },
                     });
         },
-        _ = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn5) : m.nW(l),
+        _ = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn6) : m.nW(l),
         y = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
                     className: b.tierTooltipTitle,
                     children: _,
                 }),
-                (0, r.jsx)("div", { children: E.intl.format(E.t.If4iTU, { subscriberCount: c }) }),
+                (0, r.jsx)("div", { children: E.intl.format(E.t.If4iTS, { subscriberCount: c }) }),
             ],
         });
     return (0, r.jsx)("div", {

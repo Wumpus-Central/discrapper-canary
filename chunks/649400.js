@@ -8,22 +8,22 @@ var l = t(481060),
     a = t(299206),
     u = t(323597),
     s = t(852245),
-    d = t(367722),
-    b = t(388032);
+    b = t(367722),
+    d = t(388032);
 let E = (0, c.Z)(
     function (n) {
         let { channel: e, guild: t, onSelect: c } = n,
             o = (0, s.Z)(e),
-            E = (0, d.Z)(e, t),
+            E = (0, b.Z)(e, t),
             f = (0, u.Z)(e),
             p = (0, a.Z)({
                 id: e.id,
-                label: b.intl.string(b.t.gFHI3t),
+                label: d.intl.string(d.t.gFHI3k),
             });
         return (0, r.jsxs)(l.v2r, {
             navId: "channel-context",
             onClose: i.Zy,
-            "aria-label": b.intl.string(b.t.Xm41aW),
+            "aria-label": d.intl.string(d.t.Xm41aV),
             onSelect: c,
             children: [
                 (0, r.jsx)(l.kSQ, { children: o }),

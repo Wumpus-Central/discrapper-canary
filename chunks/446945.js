@@ -15,33 +15,33 @@ function g(e) {
         navId: "add-questions",
         className: u.menu,
         onClose: l.Zy,
-        "aria-label": d.intl.string(d.t.liqwPD),
+        "aria-label": d.intl.string(d.t.liqwPJ),
         onSelect: n,
         children: (0, r.jsxs)(i.kSQ, {
             children: [
                 (0, r.jsx)(i.sNh, {
                     id: "text-input",
                     icon: (0, i.GSL)(a.Z),
-                    label: d.intl.string(d.t.w6Q9w8),
+                    label: d.intl.string(d.t.w6Q9wz),
                     action: () => (0, c.Md)(s.QJ.TEXT_INPUT, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: "paragraph",
                     icon: i.OvV,
-                    label: d.intl.string(d.t.gG0JBA),
+                    label: d.intl.string(d.t.gG0JBN),
                     action: () => (0, c.Md)(s.QJ.PARAGRAPH, t, o),
                 }),
                 (0, r.jsx)(i.sNh, {
                     id: "multiple-choice",
                     icon: i.jE$,
-                    label: d.intl.string(d.t.ooKh3t),
+                    label: d.intl.string(d.t.ooKh3m),
                     action: () => (0, c.Md)(s.QJ.MULTIPLE_CHOICE, t, o),
                 }),
                 g &&
                     (0, r.jsx)(i.sNh, {
                         id: "terms",
                         icon: i.snC,
-                        label: d.intl.string(d.t["3pz9t7"]),
+                        label: d.intl.string(d.t["3pz9t3"]),
                         action: () => (0, c.Md)(s.QJ.TERMS, t, o),
                     }),
             ],
@@ -51,8 +51,8 @@ function g(e) {
 let m = function (e) {
     let { addFormField: t, guild: n, allowTerms: i } = e;
     return (0, r.jsx)(o.A, {
-        text: d.intl.string(d.t.CoHdoK),
-        tooltipText: d.intl.string(d.t.nsI4dX),
+        text: d.intl.string(d.t.CoHdoG),
+        tooltipText: d.intl.string(d.t.nsI4dU),
         onClick: (e) => {
             (0, l.vq)(
                 e,

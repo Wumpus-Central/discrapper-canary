@@ -13,16 +13,16 @@ var r = n(951288),
     u = n(28664),
     d = n(481060),
     p = n(666188),
-    h = n(340541),
-    f = n(159300),
+    f = n(340541),
+    h = n(159300),
     g = n(553984),
     m = n(695346),
     b = n(496675),
     _ = n(768581),
     O = n(598056),
     y = n(358555),
-    v = n(981631),
-    j = n(647086),
+    j = n(981631),
+    v = n(647086),
     x = n(388032),
     C = n(869786);
 function E(e) {
@@ -103,7 +103,7 @@ function I(e) {
 function P(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: s } = n.springs,
-        c = t.features.has(v.GuildFeatures.DISCOVERABLE),
+        c = t.features.has(j.GuildFeatures.DISCOVERABLE),
         p = (0, r.jsx)("div", {
             className: C.communityInfo,
             children:
@@ -185,7 +185,7 @@ function w(e) {
                 guild: i,
                 isBannerVisible: n,
             }),
-            i.id === j._ && (0, r.jsx)(N, {}),
+            i.id === v._ && (0, r.jsx)(N, {}),
             (0, r.jsx)(T, { guild: i }),
             null != l &&
                 (0, r.jsx)(d.P3F, {
@@ -209,11 +209,11 @@ function w(e) {
         ],
     });
 }
-let A = [j._, v.STv];
+let A = [v._, j.STv];
 function R(e) {
     var t;
-    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: h, children: m } = e,
-        _ = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, o)),
+    let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: p, ariaExpanded: f, children: m } = e,
+        _ = (0, c.e7)([b.Z], () => (0, h.b)(b.Z, o)),
         O = i.useCallback(() => {
             _
                 ? (0, d.ZDy)(async () => {
@@ -223,7 +223,7 @@ function R(e) {
                               e,
                               S(E({}, t), {
                                   guild: o,
-                                  source: v.t4x.GUILD_HEADER_INVITE_BUTTON,
+                                  source: j.t4x.GUILD_HEADER_INVITE_BUTTON,
                               }),
                           );
                   })
@@ -240,7 +240,7 @@ function R(e) {
                     guildName: null != (t = null == o ? void 0 : o.name) ? t : "",
                 }),
                 "aria-controls": p,
-                "aria-expanded": h,
+                "aria-expanded": f,
                 onContextMenu: s,
                 onClick: a,
                 children: [
@@ -251,7 +251,7 @@ function R(e) {
                                 guild: o,
                                 isBannerVisible: l,
                             }),
-                            o.id === j._ && (0, r.jsx)(N, {}),
+                            o.id === v._ && (0, r.jsx)(N, {}),
                             (0, r.jsx)(T, { guild: o }),
                         ],
                     }),
@@ -277,7 +277,7 @@ function R(e) {
                         }),
                     }),
                 }),
-            o.id === v.STv && (0, r.jsx)(g.p, {}),
+            o.id === j.STv && (0, r.jsx)(g.p, {}),
         ],
     });
 }
@@ -289,11 +289,11 @@ let D = i.memo(function (e) {
             className: a,
             onClick: c,
             onContextMenu: u,
-            onMouseDown: f,
+            onMouseDown: h,
             disableBannerAnimation: g,
             "aria-expanded": b,
             "aria-controls": y,
-            guild: j,
+            guild: v,
             guildBanner: x,
             animationOverlayHeight: N,
             children: Z,
@@ -301,9 +301,9 @@ let D = i.memo(function (e) {
             communityInfoVisible: A,
             hasSubheader: D,
         } = e,
-        M = j.features.has(v.GuildFeatures.ANIMATED_BANNER),
-        k = (0, p.Z)(j),
-        G = !k && (0, O.Z)(j),
+        M = v.features.has(j.GuildFeatures.ANIMATED_BANNER),
+        k = (0, p.Z)(v),
+        G = !k && (0, O.Z)(v),
         U = !k && A,
         B = (0, _.xR)(x) && M && !g,
         [F, V] = i.useState(!1),
@@ -331,10 +331,10 @@ let D = i.memo(function (e) {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        X = (0, h._k)({ location: "guild_header" }),
+        X = (0, f._k)({ location: "guild_header" }),
         Q = {
             bannerVisible: n,
-            guild: j,
+            guild: v,
             onClick: c,
             onContextMenu: u,
             ariaControls: y,
@@ -342,7 +342,7 @@ let D = i.memo(function (e) {
             guildHeaderRef: W,
         };
     return (0, r.jsx)(d.f6W, {
-        theme: n ? v.BRd.DARK : void 0,
+        theme: n ? j.BRd.DARK : void 0,
         children: (e) =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -360,7 +360,7 @@ let D = i.memo(function (e) {
                             [C.communityInfoVisible]: U || (D && G),
                             [C.invitesRefresh]: X.isGuildEntrypointEnabled,
                         }),
-                        onMouseDown: f,
+                        onMouseDown: h,
                         onClick: X.isGuildEntrypointEnabled ? void 0 : c,
                         onContextMenu: u,
                         children: [
@@ -375,7 +375,7 @@ let D = i.memo(function (e) {
                                     }),
                                     G &&
                                         (0, r.jsx)(P, {
-                                            guild: j,
+                                            guild: v,
                                             controller: l,
                                             hasBanner: null != x,
                                             hasSubheader: null != D && D,
@@ -384,7 +384,7 @@ let D = i.memo(function (e) {
                             }),
                             null != x
                                 ? (0, r.jsx)(I, {
-                                      guild: j,
+                                      guild: v,
                                       controller: l,
                                       guildBanner: x,
                                       animate: F,

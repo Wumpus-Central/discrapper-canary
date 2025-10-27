@@ -19,15 +19,15 @@ var l = t(392711),
 function v(e, n) {
     return e.type === g.d4z.GROUP_DM
         ? n
-            ? h.intl.string(h.t["0BWmSE"])
-            : h.intl.string(h.t.uuVTOD)
+            ? h.intl.string(h.t["0BWmSM"])
+            : h.intl.string(h.t.uuVTOK)
         : e.type === g.d4z.DM
           ? n
-              ? h.intl.string(h.t["2wfKGh"])
-              : h.intl.string(h.t.wPbAsb)
+              ? h.intl.string(h.t["2wfKGo"])
+              : h.intl.string(h.t.wPbAse)
           : n
-            ? h.intl.string(h.t.Bou7lZ)
-            : h.intl.string(h.t["4wcdEx"]);
+            ? h.intl.string(h.t.Bou7lT)
+            : h.intl.string(h.t["4wcdE/"]);
 }
 function b(e) {
     let n = (0, a.e7)([u.ZP], () => u.ZP.getChannels(g.I_8))[g.d4z.GUILD_CATEGORY],

@@ -49,7 +49,7 @@ let f = function (e) {
                             className: d.shrinkingContainer,
                             children: (0, r.jsx)("div", {
                                 className: d.message,
-                                children: null != (t = null != f ? f : n) ? t : u.intl.string(u.t.GP7JLC),
+                                children: null != (t = null != f ? f : n) ? t : u.intl.string(u.t.GP7JLE),
                             }),
                         }),
                         (0, r.jsxs)("div", {
@@ -63,7 +63,7 @@ let f = function (e) {
                                         look: o.zx.Looks.LINK,
                                         onClick: p,
                                         children: (0, r.jsx)("span", {
-                                            children: null != g ? g : u.intl.string(u.t.yBZMsb),
+                                            children: null != g ? g : u.intl.string(u.t.yBZMsQ),
                                         }),
                                     }),
                                 null != h
@@ -75,7 +75,7 @@ let f = function (e) {
                                               submitting: _,
                                               disabled: b,
                                               onClick: h,
-                                              children: null != m ? m : u.intl.string(u.t.K344S0),
+                                              children: null != m ? m : u.intl.string(u.t.K344S7),
                                           }),
                                       })
                                     : null,

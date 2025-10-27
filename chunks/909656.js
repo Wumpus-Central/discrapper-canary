@@ -43,10 +43,10 @@ function S(e) {
         { loading: G, error: M, updateSubscriptionsSettings: U } = (0, j.QV)(),
         { imageCTA: B, imageAriaLabel: F, setFilename: H } = (0, _.Z)(null == d ? void 0 : d.cover_image_asset),
         W = (0, p.Dt)();
-    function V(e, t) {
+    function z(e, t) {
         a()(null != e, "Null value not allowed"), null != t && H(t.name), R(e);
     }
-    let z = i.useMemo(() => {
+    let V = i.useMemo(() => {
             var e;
             return (
                 (null != P && P !== (null != (e = null == d ? void 0 : d.description) ? e : "")) ||
@@ -74,11 +74,11 @@ function S(e) {
         X = i.useMemo(
             () => [
                 {
-                    label: E.intl.string(E.t.X6h2g4),
+                    label: E.intl.string(E.t.X6h2gz),
                     value: y.a3.PRODUCTS_FIRST,
                 },
                 {
-                    label: E.intl.string(E.t["KzCF//"]),
+                    label: E.intl.string(E.t["KzCF/6"]),
                     value: y.a3.SUBS_FIRST,
                 },
             ],
@@ -102,8 +102,8 @@ function S(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(g.FXm, {
-                              label: E.intl.string(E.t["PAVi+/"]),
-                              description: E.intl.string(E.t.x87YqK),
+                              label: E.intl.string(E.t["PAVi++"]),
+                              description: E.intl.string(E.t.x87YqH),
                               value: S,
                               onChange: (e) => {
                                   s !== e &&
@@ -141,11 +141,11 @@ function S(e) {
                                               (n = n =
                                                   {
                                                       header: E.intl.string(E.t.dmVoOz),
-                                                      confirmText: E.intl.string(E.t["NX+WJC"]),
+                                                      confirmText: E.intl.string(E.t["NX+WJN"]),
                                                       confirmButtonColor: u.zx.Colors.BRAND,
                                                       children: (0, r.jsx)(g.Text, {
                                                           variant: "text-md/normal",
-                                                          children: E.intl.string(E.t.mtwzdH),
+                                                          children: E.intl.string(E.t.mtwzdD),
                                                       }),
                                                   }),
                                               Object.getOwnPropertyDescriptors
@@ -172,14 +172,14 @@ function S(e) {
                               disabled: Y,
                               options: [
                                   {
-                                      name: E.intl.string(E.t.rXqxhI),
-                                      desc: E.intl.string(E.t.yQiJnZ),
+                                      name: E.intl.string(E.t.rXqxhF),
+                                      desc: E.intl.string(E.t.yQiJne),
                                       value: O.e3.SOME_CHANNELS,
                                       icon: g.VL1,
                                   },
                                   {
-                                      name: E.intl.string(E.t.WzC9s7),
-                                      desc: E.intl.string(E.t.WmagiI),
+                                      name: E.intl.string(E.t.WzC9s6),
+                                      desc: E.intl.string(E.t.WmagiB),
                                       value: O.e3.ALL_CHANNELS,
                                       icon: g._m8,
                                   },
@@ -189,8 +189,8 @@ function S(e) {
                       ],
                   }),
             (0, r.jsx)(g.Kx8, {
-                label: E.intl.string(E.t["1+Ho1d"]),
-                placeholder: l ? E.intl.string(E.t.SD6LRU) : E.intl.string(E.t["aVhW/f"]),
+                label: E.intl.string(E.t["1+Ho1X"]),
+                placeholder: l ? E.intl.string(E.t.SD6LRZ) : E.intl.string(E.t["aVhW/W"]),
                 maxLength: 1500,
                 value: P,
                 autosize: !0,
@@ -200,8 +200,8 @@ function S(e) {
             }),
             (0, r.jsx)(g.izJ, { className: N.divider }),
             (0, r.jsxs)(g.gNt, {
-                label: E.intl.string(E.t["0kpTpK"]),
-                description: E.intl.string(E.t.i2rCwc),
+                label: E.intl.string(E.t["0kpTpM"]),
+                description: E.intl.string(E.t.i2rCwT),
                 children: [
                     (0, r.jsx)(h.Z, {
                         image: Z,
@@ -213,12 +213,12 @@ function S(e) {
                         iconWrapperClassName: N.coverImageUploaderIconWrapper,
                         imageClassName: N.coverImageUploaderInner,
                         iconClassName: N.coverImageUploaderIcon,
-                        onChange: V,
+                        onChange: z,
                         "aria-label": F,
                         disabled: Y,
                     }),
                     (0, r.jsx)(f.Z, {
-                        onChange: V,
+                        onChange: z,
                         "aria-label": F,
                         disabled: Y,
                         text: B,
@@ -232,8 +232,8 @@ function S(e) {
                       children: [
                           (0, r.jsx)(g.izJ, { className: N.divider }),
                           (0, r.jsx)(g.q4e, {
-                              label: E.intl.string(E.t.aaZ9pK),
-                              description: E.intl.string(E.t.TILN8v),
+                              label: E.intl.string(E.t.aaZ9pE),
+                              description: E.intl.string(E.t.TILN8u),
                               value: D,
                               placeholder: E.intl.string(E.t.XqMe3N),
                               options: q,
@@ -247,8 +247,8 @@ function S(e) {
                     children: [
                         (0, r.jsx)(g.izJ, { className: N.divider }),
                         (0, r.jsx)(g.q4e, {
-                            label: E.intl.string(E.t["+dtmw8"]),
-                            description: E.intl.string(E.t.n8WSWF),
+                            label: E.intl.string(E.t["+dtmw+"]),
+                            description: E.intl.string(E.t.n8WSWJ),
                             value: L,
                             placeholder: E.intl.string(E.t.XqMe3N),
                             options: X,
@@ -260,7 +260,7 @@ function S(e) {
                 component: "div",
                 className: N.contentRegion,
                 children:
-                    z &&
+                    V &&
                     (0, r.jsx)(g.oXn, {
                         children: (0, r.jsx)(m.Z, {
                             submitting: G,
@@ -284,7 +284,7 @@ function S(e) {
                                     L !== d.server_shop_tab_order && (e.server_shop_tab_order = L),
                                     o().isEmpty(e) || U(n.id, e);
                             },
-                            saveButtonTooltip: K ? void 0 : E.intl.string(E.t["6HRvio"]),
+                            saveButtonTooltip: K ? void 0 : E.intl.string(E.t["6HRvit"]),
                         }),
                     }),
             }),

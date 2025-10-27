@@ -92,7 +92,7 @@ function N(e) {
                 src: a,
                 className: O.avatar,
                 size: o.EFr.SIZE_152,
-                "aria-label": y.intl.string(y.t.lqaIxM),
+                "aria-label": y.intl.string(y.t.lqaIxI),
             }),
         ),
     });
@@ -126,7 +126,7 @@ function P(e) {
         }),
     });
 }
-let w = (e) => {
+let D = (e) => {
         let { sku: t } = e,
             { selectedGiftStyle: n } = (0, E.wD)(),
             { product: o } = (0, c.T)(null == t ? void 0 : t.id),
@@ -157,7 +157,7 @@ let w = (e) => {
               })
             : l;
     },
-    D = (e) => {
+    w = (e) => {
         let { sku: t } = e;
         return (0, r.jsx)("div", {
             className: O.slayerStorefrontReviewImageWrapper,
@@ -170,8 +170,8 @@ let w = (e) => {
 function L(e) {
     let { sku: t } = e;
     return t.productLine === b.POd.COLLECTIBLES
-        ? (0, r.jsx)(w, { sku: t })
+        ? (0, r.jsx)(D, { sku: t })
         : t.productLine === b.POd.SOCIAL_LAYER_GAME_ITEM
-          ? (0, r.jsx)(D, { sku: t })
+          ? (0, r.jsx)(w, { sku: t })
           : null;
 }

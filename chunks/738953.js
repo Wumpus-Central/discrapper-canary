@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(481932),
     R = n(195387),
     P = n(664794),
-    w = n(4517),
-    D = n(978395),
+    D = n(4517),
+    w = n(978395),
     L = n(161572),
     x = n(671955),
     M = n(388032),
@@ -243,7 +243,7 @@ function Z(e) {
                                             themeType: x.l.POPOUT,
                                             onOpenProfile: K ? void 0 : ed,
                                         }),
-                                        (0, r.jsx)(w.Z, {
+                                        (0, r.jsx)(D.Z, {
                                             ref: es,
                                             user: n,
                                             guildId: G,
@@ -254,7 +254,7 @@ function Z(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(D.Z, {
+                                (0, r.jsx)(w.Z, {
                                     user: n,
                                     currentUser: j,
                                     displayProfile: en,

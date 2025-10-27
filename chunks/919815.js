@@ -11,7 +11,7 @@ function a(e, t) {
         a = (0, r.e7)([l.default], () => l.default.getGuildHasUnreadIgnoreMuted(n), [n]);
     return (0, i.jsx)(s.sNh, {
         id: "mark-guild-read",
-        label: c.intl.string(c.t.e6RscX),
+        label: c.intl.string(c.t.e6RscS),
         icon: void 0,
         action: () => (0, o.Z)([n], t.section),
         disabled: !a,

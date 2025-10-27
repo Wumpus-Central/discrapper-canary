@@ -24,7 +24,7 @@ function x(e) {
         (0, r.jsx)(c.JZ, {
             title: t,
             description: n,
-            buttonText: o ? h.intl.string(h.t["h+WsPT"]) : h.intl.string(h.t.A8t4NT),
+            buttonText: o ? h.intl.string(h.t["h+WsPb"]) : h.intl.string(h.t.A8t4Nf),
             buttonDisabled: o,
             onButtonPress: () => {
                 l(), d(!0), a(g.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
@@ -45,7 +45,7 @@ function f(e) {
                   (0, r.jsx)(a.Heading, {
                       variant: "text-sm/semibold",
                       className: b.header,
-                      children: h.intl.string(h.t["1yxTIC"]),
+                      children: h.intl.string(h.t["1yxTIJ"]),
                   }),
                   (0, r.jsx)("div", {
                       className: b.upsellsContainer,

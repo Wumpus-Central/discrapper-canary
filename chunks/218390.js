@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(703656),
     R = n(313789),
     P = n(342386),
-    w = n(518596),
-    D = n(246946),
+    D = n(518596),
+    w = n(246946),
     L = n(78839),
     x = n(483444),
     M = n(626135),
@@ -79,16 +79,16 @@ function ed(e) {
             return h
                 ? ""
                 : o
-                  ? et.intl.format(et.t["2CGBrq"], {
+                  ? et.intl.format(et.t["2CGBri"], {
                         remainingTime: u,
                         price: _,
                     })
                   : s
-                    ? et.intl.format(et.t["+qqh6u"], {
+                    ? et.intl.format(et.t["+qqh6g"], {
                           percent: null != (e = null == i ? void 0 : i.percentage) ? e : $.Bo,
                           regularPrice: _,
                       })
-                    : et.intl.formatToPlainString(et.t["3Ziutb"], {
+                    : et.intl.formatToPlainString(et.t["3ZiutU"], {
                           percent: null != (t = null == i ? void 0 : i.percentage) ? t : $.M_,
                           regularPrice: _,
                           numMonths: null != (n = null == i ? void 0 : i.duration) ? n : $.rt,
@@ -99,7 +99,7 @@ function ed(e) {
               children: [
                   (o || !s) &&
                       (0, r.jsx)(z.Cy, {
-                          text: o ? et.intl.string(et.t.qYKftb) : et.intl.string(et.t.EyjDRE),
+                          text: o ? et.intl.string(et.t.qYKftX) : et.intl.string(et.t.EyjDRE),
                           className: en.topRimPillWithSparkles,
                           colorOptions: (0, f.wj)(a)
                               ? z.VE.PREMIUM_TIER_2_WHITE_FILL
@@ -139,7 +139,7 @@ function ef() {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(z.mn, {
-                              text: et.intl.string(et.t.uXF4c3),
+                              text: et.intl.string(et.t.uXF4c4),
                               className: en.fractionalPremiumTopRimPill,
                               colorOptions: z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                           }),
@@ -147,7 +147,7 @@ function ef() {
                               variant: "heading-md/normal",
                               color: "always-white",
                               className: en.fractionalPremiumSubheader,
-                              children: et.intl.format(et.t.sK7fGh, {
+                              children: et.intl.format(et.t.sK7fGl, {
                                   helpCenterLink: k.Z.getArticleURL(ee.BhN.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
@@ -164,7 +164,7 @@ function ef() {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(z.Cy, {
-                                  text: et.intl.string(et.t.qYKftb),
+                                  text: et.intl.string(et.t.qYKftX),
                                   className: en.topRimPillWithSparkles,
                                   colorOptions: (0, f.wj)(n)
                                       ? z.VE.PREMIUM_TIER_2_WHITE_FILL
@@ -174,7 +174,7 @@ function ef() {
                                   variant: "heading-md/normal",
                                   color: "always-white",
                                   className: en.trialHeader,
-                                  children: et.intl.format(et.t["/SfHws"], { weeks: 1 }),
+                                  children: et.intl.format(et.t["/SfHwl"], { weeks: 1 }),
                               }),
                           ],
                       })
@@ -186,7 +186,7 @@ function ef() {
                       direction: "vertical",
                       children: [
                           (0, r.jsx)(K.Z, {
-                              defaultTextOverride: s ? et.intl.string(et.t.YScQSE) : et.intl.string(et.t["0b3YRk"]),
+                              defaultTextOverride: s ? et.intl.string(et.t.YScQSF) : et.intl.string(et.t["0b3YRn"]),
                           }),
                           (0, r.jsx)(d.zxk, {
                               onClick: () => {
@@ -200,7 +200,7 @@ function ef() {
                               variant: "overlay-secondary",
                               fullWidth: !0,
                               size: "md",
-                              text: s ? et.intl.string(et.t.VR2iVF) : et.intl.string(et.t.T1aUAQ),
+                              text: s ? et.intl.string(et.t.VR2iVB) : et.intl.string(et.t.T1aUAX),
                           }),
                       ],
                   })
@@ -219,7 +219,7 @@ function ef() {
                                       (0, P.default)(),
                                       (0, N.uL)(ee.Z5c.APPLICATION_STORE);
                               },
-                              text: et.intl.string(et.t.VR2iVF),
+                              text: et.intl.string(et.t.VR2iVB),
                               size: "md",
                           }),
                           (0, r.jsx)(d.zxk, {
@@ -229,11 +229,11 @@ function ef() {
                                       cta_type: ea,
                                       target: eo,
                                   }),
-                                      (0, w.openUserSettings)(R.n.SUBSCRIPTIONS_PANEL, {
+                                      (0, D.openUserSettings)(R.n.SUBSCRIPTIONS_PANEL, {
                                           section: ee.oAB.SUBSCRIPTIONS,
                                       });
                               },
-                              text: et.intl.string(et.t["9uDy6O"]),
+                              text: et.intl.string(et.t["9uDy6C"]),
                               fullWidth: !0,
                               size: "md",
                           }),
@@ -333,17 +333,17 @@ function ep() {
                     (0, r.jsx)(p.Heading, {
                         className: en.giftTitle,
                         variant: "heading-xl/extrabold",
-                        children: et.intl.string(et.t["3KomGR"]),
+                        children: et.intl.string(et.t["3KomGa"]),
                     }),
                     (0, r.jsx)(p.Text, {
                         className: en.giftText,
                         variant: "text-sm/normal",
-                        children: et.intl.string(et.t.yQ06u7),
+                        children: et.intl.string(et.t.yQ06u1),
                     }),
                     (0, r.jsx)(Y.Z, {
                         className: o()(en.giftCardButton, en.giftCardButtonColor),
                         textOptions: {
-                            textOverride: et.intl.string(et.t.Ve9Ge3),
+                            textOverride: et.intl.string(et.t.Ve9Ge6),
                             textClassName: en.giftButtonCTA,
                         },
                         color: _.zx.Colors.CUSTOM,
@@ -369,7 +369,7 @@ let eh = function () {
         [l, d] = i.useState(!0),
         f = (0, T.Z)({ forceFetch: !0 }),
         _ = null == (e = (0, Z.Z)()) ? void 0 : e.billingSettingsMarketingBanner,
-        b = (0, c.e7)([D.Z], () => D.Z.enabled),
+        b = (0, c.e7)([w.Z], () => w.Z.enabled),
         y = i.useRef(null);
     (0, H.B)();
     let N = (0, V.b)();
@@ -381,14 +381,14 @@ let eh = function () {
     let [R, P] = i.useState(!1);
     if (b) return (0, r.jsx)(E.Z, {});
     if (t) return (0, r.jsx)(A.c8, {});
-    let w = o && null !== a && s,
+    let D = o && null !== a && s,
         x = f.fetched && f.isFractionalPremiumActive;
-    if (!w && !x && !l)
+    if (!D && !x && !l)
         return (0, r.jsx)(C.Z, {
-            title: et.intl.string(et.t.dyq9TU),
+            title: et.intl.string(et.t.dyq9TR),
             note: null,
         });
-    if ((!w && !x) || l) return (0, r.jsx)(p.$jN, {});
+    if ((!D && !x) || l) return (0, r.jsx)(p.$jN, {});
     let k = !!(null == a ? void 0 : a.hasActiveTrial);
     return (0, r.jsx)(v.Gt, {
         value: n,
@@ -402,7 +402,7 @@ let eh = function () {
                         null == _ && (0, r.jsx)(ep, {}),
                         (0, r.jsx)(Q.Z, {
                             hideCTAs: !0,
-                            headingOverride: et.intl.string(et.t.dnVvQU),
+                            headingOverride: et.intl.string(et.t.dnVvQS),
                             hidePill: !k,
                             selectedPlanColumnClassName: en.tier2PlanComparisonTableBackground,
                             selectedPlanTier: $.PremiumTypes.TIER_2,

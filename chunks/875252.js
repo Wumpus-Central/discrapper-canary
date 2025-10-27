@@ -17,12 +17,12 @@ function u(e) {
               children: [
                   (0, i.jsx)(l.sNh, {
                       id: "delete-safety-warnings",
-                      label: c.intl.string(c.t.g7o9bm),
+                      label: c.intl.string(c.t.g7o9bs),
                       action: () => (0, o.Vp)(e.id),
                   }),
                   (0, i.jsx)(l.sNh, {
                       id: "clear-safety-warnings",
-                      label: c.intl.string(c.t.VuSvGh),
+                      label: c.intl.string(c.t.VuSvGu),
                       action: () => (0, a.wS)(e.id),
                   }),
               ],

@@ -3,34 +3,34 @@ var r = n(951288),
     l = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(642909),
+    s = n(481060),
+    o = n(642909),
     c = n(215023),
     u = n(388032),
     d = n(345213);
 function g(e) {
     let { handleTransition: t, onClose: n } = e,
-        i = (0, s.G)("CollectiblesIndexPageContextMenu"),
+        i = (0, o.G)("CollectiblesIndexPageContextMenu"),
         g = l.useMemo(
             () => [
                 {
-                    label: u.intl.string(u.t.dRZYND),
+                    label: u.intl.string(u.t.dRZYNE),
                     value: c.AW.AVATAR_DECORATIONS,
                 },
                 {
-                    label: u.intl.string(u.t["1cNjt7"]),
+                    label: u.intl.string(u.t["1cNjtx"]),
                     value: c.AW.PROFILE_EFFECTS,
                 },
                 {
-                    label: u.intl.string(u.t.V68Fq6),
+                    label: u.intl.string(u.t.V68Fqz),
                     value: c.AW.NAMEPLATES,
                 },
                 {
-                    label: u.intl.string(u.t.FYFppq),
+                    label: u.intl.string(u.t.FYFpps),
                     value: c.AW.BUNDLES,
                 },
                 {
-                    label: u.intl.string(u.t.xFcotb),
+                    label: u.intl.string(u.t.xFcotU),
                     value: c.AW.CATALOG,
                 },
             ],
@@ -38,15 +38,15 @@ function g(e) {
         );
     return (0, r.jsx)("div", {
         className: a()({ [d.shopTakeOver]: i }),
-        children: (0, r.jsx)(o.v2r, {
+        children: (0, r.jsx)(s.v2r, {
             navId: "collectibles-index-page-menu",
             className: a()({ [d.shopTakeOver]: i }),
             onClose: n,
-            "aria-label": u.intl.string(u.t.xFcotb),
+            "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},
             children: g.map((e) =>
                 (0, r.jsx)(
-                    o.sNh,
+                    s.sNh,
                     {
                         id: e.value,
                         label: e.label,

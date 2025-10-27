@@ -92,9 +92,9 @@ let A = () => {
                     S(
                         I(
                             {
-                                header: b.intl.string(b.t.aIz1oa),
-                                confirmText: b.intl.string(b.t["cY+Ooa"]),
-                                cancelText: b.intl.string(b.t["ETE/oK"]),
+                                header: b.intl.string(b.t.aIz1oV),
+                                confirmText: b.intl.string(b.t["cY+Oob"]),
+                                cancelText: b.intl.string(b.t["ETE/oC"]),
                                 onConfirm: () => f.Z.removeGuildJoinRequest(v.id),
                                 confirmButtonColor: l.zx.Colors.BRAND,
                             },
@@ -116,20 +116,20 @@ let A = () => {
                 return (t) => (0, r.jsx)(e, I({ guildId: v.id }, t));
             });
         },
-        w = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
-        D = null,
+        D = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
+        w = null,
         L = null,
         x = null,
         M = [y.notice, O.notice];
-    switch (w) {
+    switch (D) {
         case p.wB.SUBMITTED:
-            (D = b.intl.string(b.t["5iLvS0"])), (L = b.intl.string(b.t.mqtdmZ)), (x = R);
+            (w = b.intl.string(b.t["5iLvSx"])), (L = b.intl.string(b.t.mqtdmQ)), (x = R);
             break;
         case p.wB.REJECTED:
-            (D = b.intl.string(b.t.lk30cX)), (L = b.intl.string(b.t["8RrsHh"])), (x = P), M.push(y.error);
+            (w = b.intl.string(b.t.lk30cY)), (L = b.intl.string(b.t["8RrsHr"])), (x = P), M.push(y.error);
             break;
         default:
-            (D = b.intl.string(b.t.G5YKXF)), (L = b.intl.string(b.t["r8/DT0"])), (x = N);
+            (w = b.intl.string(b.t.G5YKXP)), (L = b.intl.string(b.t["r8/DT+"])), (x = N);
     }
     return (0, r.jsxs)("div", {
         className: a()(...M),
@@ -137,7 +137,7 @@ let A = () => {
             (0, r.jsx)(c.Text, {
                 className: y.header,
                 variant: "text-sm/normal",
-                children: D,
+                children: w,
             }),
             (0, r.jsx)(c.Button, {
                 variant: "overlay-primary",

@@ -43,7 +43,7 @@ function f(e) {
             })
             .value();
     return (0, i.jsx)(a.VcW, {
-        description: v.intl.string(v.t["2Y9ZfH"]),
+        description: v.intl.string(v.t["2Y9ZfA"]),
         value: p.lds,
         onChange: n,
         options: f,
@@ -58,6 +58,6 @@ function f(e) {
                 subtitle: s,
             });
         },
-        placeholder: v.intl.string(v.t["Z+oF8v"]),
+        placeholder: v.intl.string(v.t["Z+oF8h"]),
     });
 }

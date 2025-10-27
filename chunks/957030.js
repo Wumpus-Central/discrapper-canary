@@ -20,7 +20,7 @@ function f() {
                       noticeType: c.kVF.SYSTEM_SERVICE_WARNING,
                       onClick: () => (0, o.c)(),
                   }),
-                  u.intl.string(u.t["5rPt+v"]),
+                  u.intl.string(u.t["5rPt+j"]),
                   (0, r.jsx)(a.NoS, {
                       onClick: d,
                       noticeType: c.kVF.SYSTEM_SERVICE_WARNING,

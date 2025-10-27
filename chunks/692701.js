@@ -8,8 +8,8 @@ var i = n(647438),
     u = n(70956),
     c = n(709054),
     d = n(26033),
-    h = n(561308);
-let p = u.Z.Millis.WEEK;
+    p = n(561308);
+let h = u.Z.Millis.WEEK;
 function f(e, t) {
     let n = (0, o.N)(e),
         r = (0, l.cj)([s.Z], () => s.Z.getUserAffinitiesMap()),
@@ -17,7 +17,7 @@ function f(e, t) {
     return i.useMemo(() => {
         if (null == u || null == n) return [];
         let t = n.filter(
-            (t) => (0, d.dX)(t) && (0, d.m9)(t) && t.extra.application_id === e && c.default.age(t.id) < p,
+            (t) => (0, d.dX)(t) && (0, d.m9)(t) && t.extra.application_id === e && c.default.age(t.id) < h,
         );
         return "recency" === u
             ? t.sort((e, t) => c.default.compare(t.id, e.id))
@@ -39,6 +39,6 @@ function g(e, t) {
         ),
         l = Math.exp(-((c.default.age(t.id) / 1000 / m) * 0.01)),
         o = t.traits.some((e) => e.type !== r.N.DURATION_SECONDS),
-        a = (0, h.n2)(t);
+        a = (0, p.n2)(t);
     return i * l * (1 + 0.6 * (o && !a ? 1 : 0));
 }

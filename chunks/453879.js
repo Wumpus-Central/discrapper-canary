@@ -15,7 +15,7 @@ function a(e, t) {
         s = new Set(a.map((e) => e.guildId));
     a.length > 0 &&
         n.push({
-            header: l.intl.string(l.t.CbaapK),
+            header: l.intl.string(l.t.CbaapP),
             entries: a,
             appendEndCard: !1,
         });
@@ -23,7 +23,7 @@ function a(e, t) {
     return (
         (o = (0, r.Th)(o)).length > 0 &&
             n.push({
-                header: l.intl.string(l.t.wxbhER),
+                header: l.intl.string(l.t.wxbhEe),
                 entries: o,
                 appendEndCard: !0,
             }),

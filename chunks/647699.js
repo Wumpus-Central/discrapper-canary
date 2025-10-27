@@ -8,5 +8,5 @@ function a() {
     (0, r.showToast)((0, r.createToast)(i.intl.string(i.t["84MExs"]), r.ToastType.FAILURE));
 }
 function o() {
-    (0, r.showToast)((0, r.createToast)(i.intl.string(i.t.s35OuL), r.ToastType.FAILURE));
+    (0, r.showToast)((0, r.createToast)(i.intl.string(i.t.s35OuK), r.ToastType.FAILURE));
 }

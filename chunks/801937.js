@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(539854);
+n.d(t, { Z: () => w }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -92,7 +92,7 @@ let C = new p.Z("ChoosePaymentSourceType"),
     },
     R = 1000,
     P = "40c266_1";
-class w extends i.PureComponent {
+class D extends i.PureComponent {
     componentDidMount() {
         var e;
         (0, u.GE)(),
@@ -165,7 +165,7 @@ class w extends i.PureComponent {
             h = null != (e = this.props.paymentRequestWallets) ? e : [],
             m = {
                 iconClassName: O.buttonIcon,
-                paymentLabel: y.intl.string(y.t.ZURqX1),
+                paymentLabel: y.intl.string(y.t.ZURqX0),
                 onStripePaymentMethodReceived: a,
                 onChooseType: n,
                 paymentRequestPaymentContext: u,
@@ -209,7 +209,7 @@ class w extends i.PureComponent {
                     children: (0, r.jsxs)(c.P3F, {
                         onClick: () => this.toggleAllPayments(),
                         className: o()(v.flex, O.allPaymentsToggleButton),
-                        children: [y.intl.string(y.t["4uiQm5"]), (0, r.jsx)(d.Z, { open: t })],
+                        children: [y.intl.string(y.t["4uiQmz"]), (0, r.jsx)(d.Z, { open: t })],
                     }),
                 }),
                 t &&
@@ -237,7 +237,7 @@ class w extends i.PureComponent {
                     (0, r.jsx)("div", {
                         className: i,
                         children: (0, r.jsx)(c.gNt, {
-                            label: p ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t["8lqkf3"]),
+                            label: p ? y.intl.string(y.t.tywMsW) : y.intl.string(y.t["8lqkf8"]),
                             children: S,
                         }),
                     }),
@@ -255,7 +255,7 @@ class w extends i.PureComponent {
             });
     }
 }
-let D = s.ZP.connectStores([g.Z], () => ({
+let w = s.ZP.connectStores([g.Z], () => ({
     ipCountryCode: g.Z.ipCountryCode,
     ipCountryCodeHasError: g.Z.ipCountryCodeHasError,
-}))(w);
+}))(D);

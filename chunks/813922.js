@@ -74,7 +74,7 @@ function b(e) {
         children: [
             (0, r.jsxs)(d.Z, {
                 step: 1,
-                header: m.intl.string(m.t["ue+tnZ"]),
+                header: m.intl.string(m.t["ue+tnb"]),
                 children: [
                     (0, r.jsx)(o.Z, {
                         onChangeText: O,
@@ -101,7 +101,7 @@ function b(e) {
             (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
             (0, r.jsx)(d.Z, {
                 step: 2,
-                header: m.intl.string(m.t["18TOiY"]),
+                header: m.intl.string(m.t["18TOiQ"]),
                 children: (0, r.jsx)(a.Z, {
                     rule: _,
                     onChangeRule: C,
@@ -110,7 +110,7 @@ function b(e) {
             (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
             (0, r.jsx)(d.Z, {
                 step: 3,
-                header: m.intl.string(m.t.u5xPPT),
+                header: m.intl.string(m.t.u5xPPW),
                 children: (0, r.jsx)(c.Z, {
                     rule: _,
                     onChangeRule: C,

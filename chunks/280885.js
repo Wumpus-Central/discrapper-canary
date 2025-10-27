@@ -36,7 +36,7 @@ function h(e) {
                   (0, r.jsx)(s.nn4, {
                       children: (0, r.jsx)(s.H, {
                           id: y,
-                          children: _.intl.string(_.t.jGoPJS),
+                          children: _.intl.string(_.t.jGoPJT),
                       }),
                   }),
                   (0, r.jsx)(s.Text, {

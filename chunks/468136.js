@@ -1,9 +1,9 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => s }), n(388685);
 var r = n(544891),
     i = n(626135),
     l = n(186901),
     a = n(981631);
-let o = {
+let s = {
     [a.Etm.GET_NETWORKING_CONFIG]: {
         scope: l.lH,
         handler: () =>

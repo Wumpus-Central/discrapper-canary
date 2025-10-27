@@ -11,12 +11,12 @@ let c = (0, u.x1)(r.n.ACTIVITY_PRIVACY_PANE, {
         render: () => (0, i.jsx)(s.Z, {}),
     }),
     E = (0, u.wf)(r.n.ACTIVITY_PRIVACY_PANEL, {
-        useTitle: () => o.intl.string(o.t.Cq98yM),
+        useTitle: () => o.intl.string(o.t.Cq98yL),
         buildLayout: () => [c],
     }),
     d = (0, u.m7)(r.n.ACTIVITY_PRIVACY_SIDEBAR_ITEM, {
         icon: l.KED,
-        useTitle: () => o.intl.string(o.t.Cq98yM),
+        useTitle: () => o.intl.string(o.t.Cq98yL),
         legacySearchKey: a.s6.ACTIVITY_PRIVACY,
         buildLayout: () => [E],
     });

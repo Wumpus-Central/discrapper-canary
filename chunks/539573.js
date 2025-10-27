@@ -26,7 +26,7 @@ function u(e, t) {
     if (null == t) return null;
     let s = i.Z.getChannel(t);
     return (null == s ? void 0 : s.isThread())
-        ? o.intl.string(o.t.DVdG9P)
+        ? o.intl.string(o.t.DVdG9E)
         : ((null == s ? void 0 : s.isForumPost()) || (null == s ? void 0 : s.isForumLikeChannel())) &&
             (n === a.evJ.AUTOMOD_TITLE_BLOCKED || n === a.evJ.AUTOMOD_MESSAGE_BLOCKED)
           ? o.intl.string(o.t.ipgKDg)
@@ -35,14 +35,14 @@ function u(e, t) {
 function d(e) {
     let t = i.Z.getChannel(e.message.channelId);
     return (0, r.Bz)(e)
-        ? o.intl.string(o.t.bU6o09)
+        ? o.intl.string(o.t.bU6o0z)
         : (null == t ? void 0 : t.isThread())
-          ? o.intl.string(o.t.DVdG9P)
+          ? o.intl.string(o.t.DVdG9E)
           : (null == t ? void 0 : t.isForumPost()) || (null == t ? void 0 : t.isForumLikeChannel())
             ? o.intl.string(o.t.ipgKDg)
-            : o.intl.string(o.t.zQ69pq);
+            : o.intl.string(o.t.zQ69pv);
 }
 function f(e, t) {
     let n = u(t);
-    return null != n ? n : null == e ? o.intl.string(o.t.zQ69pq) : d(e);
+    return null != n ? n : null == e ? o.intl.string(o.t.zQ69pv) : d(e);
 }

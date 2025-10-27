@@ -18,7 +18,7 @@ let f = (e) => {
         n.clientId === i.t.PLAYSTATION_APPLICATION_ID || n.clientId === i.t.PLAYSTATION_STAGING_APPLICATION_ID
             ? (p = d.Z)
             : x && (p = u.Z),
-        null != n.twoWayLinkCode ? (h = l.intl.string(l.t.QhATl5)) : x && (h = l.intl.string(l.t.vBPvKy)),
+        null != n.twoWayLinkCode ? (h = l.intl.string(l.t.QhATl2)) : x && (h = l.intl.string(l.t.vBPvK3)),
         (0, r.jsxs)("div", {
             className: c.content,
             children: [
@@ -36,7 +36,7 @@ let f = (e) => {
                         (0, r.jsx)(o.Heading, {
                             variant: "heading-xl/extrabold",
                             id: f,
-                            children: l.intl.string(l.t.qDtJmJ),
+                            children: l.intl.string(l.t.qDtJmD),
                         }),
                         null != h
                             ? (0, r.jsx)(o.Text, {
@@ -52,7 +52,7 @@ let f = (e) => {
                     className: c.footerButton,
                     children: (0, r.jsx)(o.Button, {
                         variant: "primary",
-                        text: l.intl.string(l.t.i4jeWV),
+                        text: l.intl.string(l.t.i4jeWR),
                         onClick: t,
                     }),
                 }),

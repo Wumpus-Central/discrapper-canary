@@ -1,4 +1,4 @@
-n.d(t, { default: () => E }), n(388685);
+n.d(t, { default: () => w }), n(388685);
 var a = n(951288),
     i = n(647438),
     r = n(120356),
@@ -13,32 +13,32 @@ var a = n(951288),
     u = n(44315),
     f = n(210887),
     _ = n(626135),
-    g = n(923726),
-    h = n(570849),
+    h = n(923726),
+    g = n(570849),
     j = n(853439),
     T = n(303737),
     v = n(862239),
     N = n(847004),
     C = n(981631),
-    y = n(388032),
-    b = n(207417);
+    b = n(388032),
+    y = n(207417);
 function I(e) {
     let { name: t, imageUrl: n, selected: i, onTap: r } = e;
     return (0, a.jsxs)(d.P3F, {
         onClick: r,
-        className: b.templateCard,
+        className: y.templateCard,
         children: [
             (0, a.jsx)("img", {
                 src: n,
                 alt: "",
-                className: b.templateCardImage,
+                className: y.templateCardImage,
             }),
             (0, a.jsxs)("div", {
-                className: b.templateNameRow,
+                className: y.templateNameRow,
                 children: [
                     (0, a.jsx)(d.Heading, {
                         variant: "heading-md/normal",
-                        className: l()({ [b.unselectedTemplateName]: !i }),
+                        className: l()({ [y.unselectedTemplateName]: !i }),
                         children: t,
                     }),
                     i &&
@@ -65,7 +65,7 @@ function O(e) {
           : null == i || 0 === i.length
             ? null
             : (0, a.jsx)("div", {
-                  className: b.templateCardList,
+                  className: y.templateCardList,
                   children: i.map((e, t) =>
                       (0, a.jsx)(
                           I,
@@ -121,7 +121,7 @@ function R(e) {
                 handleSelectTemplate: u,
             });
 }
-function E(e) {
+function w(e) {
     let {
             transitionState: t,
             onClose: n,
@@ -131,7 +131,7 @@ function E(e) {
             priceTiers: u,
         } = e,
         f = (0, c.e7)([j.Z], () => j.Z.getTemplates(r)),
-        [T, { loading: v, error: N }] = (0, m.Z)(h.u),
+        [T, { loading: v, error: N }] = (0, m.Z)(g.u),
         I = i.useRef("voluntarily_exit");
     i.useEffect(() => {
         (null == f || 0 === f.length) && T(r);
@@ -167,18 +167,18 @@ function E(e) {
                     })({ exit_reason: I.current }, (0, x.hH)(r)),
                 );
         }, [t, r, I]);
-    let [E, w] = i.useState(0),
+    let [w, E] = i.useState(0),
         [S, B] = i.useState(!1),
         L = i.useCallback(
             (e) => {
-                (I.current = "template_selected"), (0, h.l)(e, r), l(e), n();
+                (I.current = "template_selected"), (0, g.l)(e, r), l(e), n();
             },
             [r, l, n],
         ),
         P = i.useCallback(() => {
             S ? B(!1) : n();
         }, [S, n]),
-        k = (0, g.yi)(r);
+        k = (0, h.yi)(r);
     return (
         (0, p.Z)({
             type: s.ImpressionTypes.MODAL,
@@ -189,62 +189,62 @@ function E(e) {
             "data-migration-pending": !0,
             transitionState: t,
             size: d.CgR.DYNAMIC,
-            className: b.modalRoot,
+            className: y.modalRoot,
             parentComponent: "GuildRoleSubscriptionsTierTemplateModal",
             children: [
                 (0, a.jsx)(d.P3F, {
                     onClick: P,
-                    className: b.closeButton,
+                    className: y.closeButton,
                     children: (0, a.jsx)(d.Dio, {
                         size: "xxs",
                         color: "currentColor",
                     }),
                 }),
                 (0, a.jsxs)(d.hzk, {
-                    className: b.modalContent,
+                    className: y.modalContent,
                     "data-migration-pending": !0,
                     children: [
                         (0, a.jsxs)("div", {
-                            className: b.templatesContainer,
+                            className: y.templatesContainer,
                             children: [
                                 S &&
                                     (0, a.jsx)(d.P3F, {
-                                        className: b.blackoutOverlay,
+                                        className: y.blackoutOverlay,
                                         onClick: () => {
                                             S && B(!1);
                                         },
                                         "aria-label": "overlay",
                                     }),
                                 (0, a.jsxs)(d.zJl, {
-                                    className: b.templatesContainerBody,
+                                    className: y.templatesContainerBody,
                                     children: [
                                         (0, a.jsx)(d.Heading, {
                                             variant: "heading-xl/semibold",
-                                            children: y.intl.string(y.t["9QQ+i4"]),
+                                            children: b.intl.string(b.t["9QQ+i+"]),
                                         }),
                                         (0, a.jsx)(d.Text, {
                                             variant: "text-sm/normal",
-                                            className: b.modalBodyText,
-                                            children: y.intl.string(y.t.CvFFOj),
+                                            className: y.modalBodyText,
+                                            children: b.intl.string(b.t.CvFFOv),
                                         }),
                                         k &&
                                             (0, a.jsx)(d.Text, {
                                                 variant: "text-sm/normal",
-                                                className: b.creatorPortalText,
-                                                children: y.intl.format(y.t.iQML2t, {
+                                                className: y.creatorPortalText,
+                                                children: b.intl.format(b.t.iQML2g, {
                                                     creatorPortalUrl:
                                                         "https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons",
                                                 }),
                                             }),
                                         (0, a.jsx)("div", {
-                                            className: b.templatesContentContainer,
+                                            className: y.templatesContentContainer,
                                             children: (0, a.jsx)(O, {
                                                 loading: v,
                                                 error: N,
                                                 templates: f,
-                                                selectedTemplateIndex: E,
+                                                selectedTemplateIndex: w,
                                                 handleTapTemplate: (e) => {
-                                                    w(e);
+                                                    E(e);
                                                 },
                                             }),
                                         }),
@@ -252,7 +252,7 @@ function E(e) {
                                 }),
                                 (0, a.jsx)(d.Text, {
                                     variant: "text-sm/normal",
-                                    children: y.intl.string(y.t.jymUTE),
+                                    children: b.intl.string(b.t.jymUTC),
                                 }),
                                 (0, a.jsx)(d.Button, {
                                     onClick: () => {
@@ -260,14 +260,14 @@ function E(e) {
                                     },
                                     variant: "secondary",
                                     icon: d.vdY,
-                                    text: y.intl.string(y.t.a3ycUV),
+                                    text: b.intl.string(b.t.a3ycUX),
                                 }),
                             ],
                         }),
                         (0, a.jsx)(R, {
                             guildId: r,
                             templates: f,
-                            selectedTemplateIndex: E,
+                            selectedTemplateIndex: w,
                             priceTiers: u,
                             showPriceReselection: S,
                             setShowPriceReselection: B,

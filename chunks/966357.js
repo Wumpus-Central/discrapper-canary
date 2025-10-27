@@ -7,7 +7,7 @@ var r = n(951288),
     o = n(314852),
     c = n(434404),
     d = n(999382),
-    u = n(659854),
+    u = n(562915),
     g = n(388032);
 function m() {
     let e = (0, l.e7)([d.Z], () => d.Z.getGuild()),
@@ -18,7 +18,7 @@ function m() {
         f = i.useMemo(
             () =>
                 (null == n ? void 0 : n.status) === 429
-                    ? g.intl.string(u.default["bFRS/v"])
+                    ? g.intl.string(u.default["bFRS/s"])
                     : null == n
                       ? void 0
                       : n.getAnyErrorMessage(),

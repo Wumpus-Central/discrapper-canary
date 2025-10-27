@@ -35,10 +35,10 @@ class f extends s.Z {
                 if (!n) {
                     let e = "audio" !== t;
                     o.Z.show({
-                        title: e ? u.intl.string(u.t.OqloHx) : u.intl.string(u.t["kI+OOT"]),
-                        body: e ? u.intl.string(u.t.l3P7Ky) : u.intl.string(u.t.l3jwOT),
+                        title: e ? u.intl.string(u.t.OqloH8) : u.intl.string(u.t["kI+OOV"]),
+                        body: e ? u.intl.string(u.t.l3P7K0) : u.intl.string(u.t.l3jwOd),
                         onConfirm: () => window.open(l.Z.getArticleURL(r), "_blank"),
-                        confirmText: u.intl.string(u.t.psXQHB),
+                        confirmText: u.intl.string(u.t.psXQHP),
                     });
                 }
             });

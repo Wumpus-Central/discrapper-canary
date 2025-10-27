@@ -136,7 +136,7 @@ class T extends i.PureComponent {
                             t.stopPropagation(), (0, _.op)(E, e);
                         },
                         className: o()(N.reaction, O, N.remainingReactions),
-                        "aria-label": p.intl.string(p.t.lfIHs7),
+                        "aria-label": p.intl.string(p.t.lfIHs4),
                         children: (0, r.jsxs)(l.Text, {
                             className: N.reactionInner,
                             variant: "text-sm/normal",

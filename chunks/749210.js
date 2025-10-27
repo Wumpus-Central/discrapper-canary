@@ -33,7 +33,7 @@ var r = n(990547),
     N = n(981631),
     R = n(723359),
     P = n(388032);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -108,8 +108,8 @@ function k(e, t) {
 }
 let j = (e) => {
         C.Z.show({
-            title: P.intl.string(P.t.cTaRxM),
-            body: P.intl.formatToPlainString(P.t["VSd+Ag"], { quantity: e }),
+            title: P.intl.string(P.t.cTaRxF),
+            body: P.intl.formatToPlainString(P.t["VSd+Aj"], { quantity: e }),
         });
     },
     U = (e) => {
@@ -120,8 +120,8 @@ let j = (e) => {
     },
     G = () => {
         C.Z.show({
-            title: P.intl.string(P.t.ZZlox8),
-            body: P.intl.string(P.t.ZUEGFh),
+            title: P.intl.string(P.t.ZZlox4),
+            body: P.intl.string(P.t.ZUEGFn),
         });
     };
 function B(e) {
@@ -224,7 +224,7 @@ let F = {
             a = t;
         (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) &&
             null == t.welcomeModalChannelId &&
-            (a = x(D({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
+            (a = x(w({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
             (0, d.Z)(N.Z5c.CHANNEL(e, i, r), a),
             await new Promise(setImmediate);
     },
@@ -348,7 +348,7 @@ let F = {
         }),
     async createRole(e, t, n, r) {
         let l = {
-            name: null != t && "" !== t ? t : P.intl.string(P.t.QBMHvL),
+            name: null != t && "" !== t ? t : P.intl.string(P.t.QBMHvB),
             color: null != n ? n : 0,
             colors:
                 null != r
@@ -388,7 +388,7 @@ let F = {
             s = null === r || (null == r ? void 0 : r.startsWith("data:")) ? r : void 0,
             l = await a.tn.patch({
                 url: N.ANM.GUILD_ROLE(e, t),
-                body: x(D({}, o), {
+                body: x(w({}, o), {
                     icon: s,
                     unicode_emoji: i,
                 }),

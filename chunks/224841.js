@@ -14,15 +14,15 @@ let u = () =>
             children: [
                 (0, r.jsx)(s.Dx, {
                     className: c.title,
-                    children: o.intl.string(o.t.nCB6GR),
+                    children: o.intl.string(o.t.nCB6Ga),
                 }),
                 (0, r.jsx)(s.DK, {
                     className: c.subtitle,
-                    children: o.intl.format(o.t.KQgoxM, { underageMessage: o.intl.string(o.t.WqEH4O) }),
+                    children: o.intl.format(o.t.KQgoxG, { underageMessage: o.intl.string(o.t.WqEH4D) }),
                 }),
                 (0, r.jsx)(i.Button, {
                     icon: i.Gr1,
-                    text: o.intl.string(o.t.hvVgAQ),
+                    text: o.intl.string(o.t.hvVgAZ),
                     onClick: () => window.open(l.Z.getArticleURL(a.BhN.AGE_GATE), "_blank"),
                     iconPosition: "end",
                 }),

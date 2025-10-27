@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(236091),
     y = n(623624),
     _ = n(665149),
-    j = n(984370),
-    O = n(616286),
+    O = n(984370),
+    j = n(616286),
     x = n(975146),
     v = n(430824),
     C = n(496675),
@@ -46,8 +46,8 @@ function M(e) {
         ),
         y = (0, Z.B)(t.id),
         _ = (0, S.Rk)(t.id, E.pV.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: j } = (0, f.Z)({ location: "StageChannelCallHeader" }),
-        v = j && m;
+        { hasParticipantsPanel: O } = (0, f.Z)({ location: "StageChannelCallHeader" }),
+        v = O && m;
     return (0, r.jsxs)(p.Gt, {
         value: l,
         children: [
@@ -68,7 +68,7 @@ function M(e) {
                   })
                 : null,
             !m &&
-                j &&
+                O &&
                 (0, r.jsx)(
                     x.Z,
                     {
@@ -82,7 +82,7 @@ function M(e) {
             !c &&
                 (0, r.jsx)("div", {
                     className: a()(L.button, { [L.sidebarOpen]: v || i }),
-                    children: (0, r.jsx)(O.T, {
+                    children: (0, r.jsx)(j.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
@@ -100,11 +100,11 @@ function k(e) {
         f = (0, S.Io)(n.id),
         g = (0, S.Rk)(n.id, E.pV.AUDIENCE),
         b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
-        O = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        j = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
         x =
             null != b && b.features.has(w.GuildFeatures.COMMUNITY)
-                ? O < w.TU7
-                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && O <= w.eez,
+                ? j < w.TU7
+                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && j <= w.eez,
         Z = (0, R.Z)(n),
         N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
         k = () => {
@@ -146,14 +146,14 @@ function k(e) {
                     showRequestToSpeakSidebar: u,
                     channel: n,
                 }),
-                onDoubleClick: j.O,
+                onDoubleClick: O.O,
                 transparent: !0,
                 className: a()(e, L.participants),
                 children: [
                     (0, r.jsx)(_.ZP.Icon, {
                         icon: c.ewx,
                         disabled: !0,
-                        "aria-label": D.intl.string(D.t.EErMzM),
+                        "aria-label": D.intl.string(D.t.EErMzA),
                         className: L.icon,
                         color: null != h ? o.Z.colors.HEADER_MUTED.css : void 0,
                     }),
@@ -173,7 +173,7 @@ function k(e) {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: L.speakerCount,
-                                children: D.intl.format(D.t.chmM9P, { count: f }),
+                                children: D.intl.format(D.t.chmM9N, { count: f }),
                             }),
                             (0, r.jsx)(c.BFJ, {
                                 size: "xs",
@@ -184,7 +184,7 @@ function k(e) {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: L.speakerCount,
-                                children: D.intl.format(D.t["+v2pNz"], { count: g }),
+                                children: D.intl.format(D.t["+v2pN2"], { count: g }),
                             }),
                         ],
                     }),
@@ -206,12 +206,12 @@ function k(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
                                       color: "header-primary",
-                                      children: x ? D.intl.string(D.t["T+zF9P"]) : D.intl.string(D.t["IZ+SVl"]),
+                                      children: x ? D.intl.string(D.t["T+zF9M"]) : D.intl.string(D.t["IZ+SVv"]),
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
-                                      children: x ? D.intl.string(D.t.Izgpmp) : D.intl.string(D.t["7FHbPD"]),
+                                      children: x ? D.intl.string(D.t.Izgpmv) : D.intl.string(D.t["7FHbPG"]),
                                   }),
                               ],
                           }),
@@ -249,7 +249,7 @@ function k(e) {
                                         variant: "primary",
                                         onClick: k,
                                         size: "sm",
-                                        text: D.intl.string(D.t.WAI6xs),
+                                        text: D.intl.string(D.t.WAI6xu),
                                     }),
                           }),
                       ],

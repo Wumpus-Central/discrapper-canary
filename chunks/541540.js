@@ -74,20 +74,20 @@ class b extends i.Component {
         let { obscureInput: e } = this.props,
             { codeInput: t, submitting: n, hasError: i, isPromoCode: a } = this.state;
         return (0, r.jsx)(o.C3N, {
-            label: _.intl.string(_.t["il+VCg"]),
+            label: _.intl.string(_.t["il+VCo"]),
             children: (0, r.jsx)("form", {
                 onSubmit: this.handleSubmit,
                 children: (0, r.jsxs)(o.NIo, {
                     children: [
                         (0, r.jsx)(o.oil, {
-                            label: _.intl.string(_.t.SeKIoa),
+                            label: _.intl.string(_.t.SeKIoS),
                             type: e ? "password" : "text",
                             value: t,
                             onChange: this.handleChange,
                             placeholder: E,
-                            error: !a && i ? _.intl.string(_.t.Y11a2t) : null,
+                            error: !a && i ? _.intl.string(_.t.Y11a2u) : null,
                             helperText: a
-                                ? _.intl.format(_.t.gPt3PD, {
+                                ? _.intl.format(_.t.gPt3PE, {
                                       promoLink: () => {
                                           window.open("https://discord.com/billing/promotions/".concat(t));
                                       },
@@ -97,7 +97,7 @@ class b extends i.Component {
                         }),
                         (0, r.jsx)(o.Button, {
                             variant: "primary",
-                            text: _.intl.string(_.t.KIpp7O),
+                            text: _.intl.string(_.t.KIpp7M),
                             type: "submit",
                             loading: n,
                         }),

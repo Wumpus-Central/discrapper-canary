@@ -31,11 +31,11 @@ function g(e) {
         C = r.Z.getFirstWishlistId(n.id),
         S = null != C,
         w = S ? r.Z.getWishlistSettings(n.id, C) : null,
-        R = (S ? i.Z.getWishlistItems(C) : []).length > 0,
-        D = O.length > 0;
-    ((E && _) || (D && Z)) &&
+        D = (S ? i.Z.getWishlistItems(C) : []).length > 0,
+        R = O.length > 0;
+    ((E && _) || (R && Z)) &&
         P.push({
-            text: j.intl.string(j.t.laViw8),
+            text: j.intl.string(j.t.laViwx),
             section: v.oh.WIDGETS,
             subsection: void 0,
         }),
@@ -48,9 +48,9 @@ function g(e) {
         M = o.Z.isFriend(n.id),
         B = (null == w ? void 0 : w.visibility) === l.f.PUBLIC;
     return (
-        ((E && N) || (!E && A && R && B && T && (!L || (L && M)))) &&
+        ((E && N) || (!E && A && D && B && T && (!L || (L && M)))) &&
             P.push({
-                text: j.intl.string(j.t["7lZ31N"]),
+                text: j.intl.string(j.t["7lZ31J"]),
                 section: v.oh.WISHLIST,
                 subsection: void 0,
             }),

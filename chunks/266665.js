@@ -222,17 +222,17 @@ function Z(e) {
                                         className: T.titleText,
                                         variant: "text-md/semibold",
                                         color: "none",
-                                        children: S.intl.string(S.t["13/7kZ"]),
+                                        children: S.intl.string(S.t["13/7kX"]),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(d.u, {
                                 position: "top",
-                                "aria-label": S.intl.string(S.t.AbxKtr),
+                                "aria-label": S.intl.string(S.t.AbxKtv),
                                 __unsupportedReactNodeAsText: (0, r.jsx)(u.Text, {
                                     className: T.tooltip,
                                     variant: "text-sm/normal",
-                                    children: S.intl.string(S.t.AbxKtr),
+                                    children: S.intl.string(S.t.AbxKtv),
                                 }),
                                 children: (0, r.jsx)(u.P3F, {
                                     className: T.addRole,

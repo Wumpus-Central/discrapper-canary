@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => v,
-    Z: () => j,
+    F: () => y,
+    Z: () => O,
 }),
     n(388685);
 var r = n(951288),
@@ -8,8 +8,8 @@ var r = n(951288),
     a = n(120356),
     l = n.n(a),
     o = n(481060),
-    s = n(785717),
-    c = n(128156),
+    c = n(785717),
+    s = n(128156),
     u = n(311044),
     d = n(408986),
     f = n(778414),
@@ -59,7 +59,7 @@ function h(e, t) {
         e
     );
 }
-function v(e) {
+function y(e) {
     var { children: t, className: n, scrollerRef: i } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -97,7 +97,7 @@ function v(e) {
         ),
     );
 }
-function y(e) {
+function v(e) {
     let {
         user: t,
         currentUser: n,
@@ -105,16 +105,16 @@ function y(e) {
         subsection: a,
         displayProfile: l,
         guildId: o,
-        channelId: s,
+        channelId: c,
         onClose: m,
     } = e;
     return i === p.oh.ACTIVITY
-        ? (0, r.jsx)(c.Z, {
+        ? (0, r.jsx)(s.Z, {
               user: t,
               currentUser: n,
               displayProfile: l,
               guildId: o,
-              channelId: s,
+              channelId: c,
               subsection: a,
               onClose: m,
           })
@@ -122,7 +122,7 @@ function y(e) {
           ? (0, r.jsx)(u.Z, {
                 user: t,
                 guildId: o,
-                channelId: s,
+                channelId: c,
                 onClose: m,
             })
           : i === p.oh.MUTUAL_GUILDS
@@ -134,27 +134,27 @@ function y(e) {
               ? (0, r.jsx)(f.C, {
                     user: t,
                     guildId: o,
-                    channelId: s,
+                    channelId: c,
                 })
               : i === p.oh.WISHLIST
                 ? (0, r.jsx)(g.Z, { profileOwner: t })
                 : null;
 }
-function j(e) {
+function O(e) {
     var t;
     let {
             user: n,
             currentUser: a,
             displayProfile: l,
-            guildId: c,
+            guildId: s,
             channelId: u,
             items: d,
             initialSection: f,
             initialSubsection: g,
             onClose: p,
         } = e,
-        { trackUserProfileAction: v } = (0, s.KZ)(),
-        [{ section: j, subsection: O, text: x }, _] = i.useState(
+        { trackUserProfileAction: y } = (0, c.KZ)(),
+        [{ section: O, subsection: j, text: x }, _] = i.useState(
             h(
                 b(
                     {},
@@ -180,9 +180,9 @@ function j(e) {
                 children: (0, r.jsx)(o.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: j,
+                    selectedItem: O,
                     onItemSelect: (e) => {
-                        v({
+                        y({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
@@ -206,19 +206,19 @@ function j(e) {
                 }),
             }),
             (0, r.jsx)(o.njP.Panel, {
-                id: j,
+                id: O,
                 "aria-label": x,
                 className: m.tabBarPanel,
                 children: (0, r.jsx)(o.y5t, {
                     component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: x }) }),
-                    children: (0, r.jsx)(y, {
+                    children: (0, r.jsx)(v, {
                         user: n,
                         currentUser: a,
                         displayProfile: l,
-                        guildId: c,
+                        guildId: s,
                         channelId: u,
-                        section: j,
-                        subsection: O,
+                        section: O,
+                        subsection: j,
                         onClose: p,
                     }),
                 }),

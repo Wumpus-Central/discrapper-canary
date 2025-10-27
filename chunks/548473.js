@@ -1,8 +1,8 @@
 n.d(t, {
-    B0: () => P,
+    B0: () => A,
     ZP: () => L,
-    _I: () => A,
-    xm: () => C,
+    _I: () => C,
+    xm: () => P,
 }),
     n(49124);
 var l = n(951288),
@@ -22,8 +22,8 @@ var l = n(951288),
     p = n(956664),
     N = n(45966),
     O = n(819553),
-    S = n(487533),
-    E = n(279876),
+    E = n(487533),
+    S = n(279876),
     x = n(180504),
     T = n(790711),
     _ = n(535170),
@@ -96,7 +96,7 @@ function G(e) {
         n
     );
 }
-function C() {
+function P() {
     let e = G(x);
     return (0, l.jsx)("div", {
         className: a()(b.leftArt, b.altFloat),
@@ -106,7 +106,7 @@ function C() {
         }),
     });
 }
-function P() {
+function A() {
     let e = G(_);
     return (0, l.jsx)("div", {
         className: a()(b.rightArt, b.altFloat),
@@ -116,11 +116,11 @@ function P() {
         }),
     });
 }
-function A(e) {
+function C(e) {
     let { guild: t, mainIslandClassName: n, balloonDogClassName: i } = e,
         s = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         d = r.useRef(null),
-        u = G(E),
+        u = G(S),
         g = I.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
@@ -132,7 +132,7 @@ function A(e) {
             return (
                 null != d.current && null != g
                     ? (0, p.OF)(g).then((t) => {
-                          let n = (0, S.Z)(JSON.parse(JSON.stringify(T)), g, t[0]);
+                          let n = (0, E.Z)(JSON.parse(JSON.stringify(T)), g, t[0]);
                           e = o().loadAnimation({
                               container: d.current,
                               renderer: "svg",
@@ -223,7 +223,7 @@ function L(e) {
                                 variant: "text-lg/normal",
                                 color: "always-white",
                                 id: a,
-                                children: v.intl.format(v.t["j59F/f"], { guildName: null == t ? void 0 : t.name }),
+                                children: v.intl.format(v.t["j59F/c"], { guildName: null == t ? void 0 : t.name }),
                             }),
                             o
                                 ? (0, l.jsx)(d.$jN, { className: b.__invalid_subtitle })
@@ -232,13 +232,13 @@ function L(e) {
                                         className: b.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",
-                                        children: v.intl.string(v.t.Q5ibtb),
+                                        children: v.intl.string(v.t.Q5ibtV),
                                     })
                                   : (0, l.jsx)(d.Heading, {
                                         className: b.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",
-                                        children: v.intl.string(v.t["Alcl/f"]),
+                                        children: v.intl.string(v.t["Alcl/e"]),
                                     }),
                         ],
                     }),

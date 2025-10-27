@@ -19,13 +19,13 @@ var i = n(951288),
 function O(t) {
     let { senderId: e, channelId: n, hasReported: O, onReport: v, trackAnalyticsEvent: j } = t,
         T = (0, a.e7)([p.Z], () => p.Z.isBlocked(e)),
-        [E, y] = r.useState(T),
-        S = (0, d.o)(),
+        [E, S] = r.useState(T),
+        y = (0, d.o)(),
         A = (0, d.Q)(),
         [N, C] = r.useState(!1),
         I = (0, g.q)(n),
-        M = r.useMemo(() => (S ? 0 : A ? 2 : 1), [S, A]),
-        R = async () => {
+        R = r.useMemo(() => (y ? 0 : A ? 2 : 1), [y, A]),
+        M = async () => {
             null != I &&
                 (C(!0),
                 await (0, l.J7)(
@@ -41,35 +41,35 @@ function O(t) {
                 j(x.NM.USER_TAKEOVER_MODAL_REPORT));
         },
         Z = r.useMemo(() => {
-            switch (M) {
+            switch (R) {
                 case 0:
-                    return _.intl.string(_.t.sZf6c3);
+                    return _.intl.string(_.t.sZf6cz);
                 case 2:
-                    return _.intl.string(_.t.HQ2nKi);
+                    return _.intl.string(_.t.HQ2nKl);
                 default:
-                    return _.intl.string(_.t["65XQam"]);
+                    return _.intl.string(_.t["65XQar"]);
             }
-        }, [M]);
+        }, [R]);
     return (0, i.jsx)(h.Z, {
         heroImageSrc: b,
-        heroImageAlt: _.intl.string(_.t.RVyYCA),
+        heroImageAlt: _.intl.string(_.t.RVyYCK),
         header: _.intl.string(_.t["mWO+ys"]),
-        description: _.intl.string(_.t.S0XtKC),
+        description: _.intl.string(_.t.S0XtKF),
         children: (0, i.jsxs)("div", {
             className: f.buttonContainer,
             children: [
                 (0, i.jsx)(s.Button, {
-                    text: E ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
+                    text: E ? _.intl.string(_.t.XyHpKH) : _.intl.string(_.t.l4Emac),
                     variant: "primary",
                     fullWidth: !0,
                     icon: s.k$p,
                     onClick: () => {
                         E
-                            ? (y(!1),
+                            ? (S(!1),
                               o.Z.unblockUser(e, { location: m.DL }),
                               j(x.NM.USER_TAKEOVER_MODAL_UNBLOCK),
                               u.Z.showUnblockSuccessToast(e, n))
-                            : (y(!0),
+                            : (S(!0),
                               j(x.NM.USER_TAKEOVER_MODAL_BLOCK),
                               o.Z.blockUser(e, { location: m.DL }).then(() => {
                                   u.Z.showBlockSuccessToast(e, n);
@@ -77,11 +77,11 @@ function O(t) {
                     },
                 }),
                 (0, i.jsx)(s.Button, {
-                    text: O ? _.intl.string(_.t.QvwOJy) : _.intl.string(_.t["7fHyEx"]),
+                    text: O ? _.intl.string(_.t.QvwOJ6) : _.intl.string(_.t["7fHyE6"]),
                     variant: "secondary",
                     fullWidth: !0,
                     icon: s.U65,
-                    onClick: R,
+                    onClick: M,
                     loading: N,
                     disabled: O,
                 }),
@@ -91,9 +91,9 @@ function O(t) {
                     fullWidth: !0,
                     icon: s.kBi,
                     onClick: () => {
-                        0 === M
+                        0 === R
                             ? ((0, c.Z)(m.EI), j(x.NM.USER_TAKEOVER_MODAL_CTL))
-                            : 2 === M
+                            : 2 === R
                               ? ((0, c.Z)(m.$l), j(x.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
                               : ((0, c.Z)(m.n4), j(x.NM.USER_TAKEOVER_MODAL_NO_FILTR));
                     },

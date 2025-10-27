@@ -51,7 +51,7 @@ let x = {
         ),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => j.intl.string(j.t["W685+f"]),
+        useBreadcrumbLabel: () => j.intl.string(j.t["W685+b"]),
     },
 };
 function O(e) {
@@ -64,7 +64,7 @@ function O(e) {
                 onClick: () => n(u),
                 disabled: r,
                 loading: s,
-                text: j.intl.string(j.t.XiOHRU),
+                text: j.intl.string(j.t.XiOHRX),
             }),
             i ? (0, l.jsx)(c.Z, { onClick: t }) : null,
         ],
@@ -114,7 +114,7 @@ function C(e) {
                                     validateSelectedGift: M,
                                 }),
                                 (0, l.jsx)(o.Z, {
-                                    sectionTitle: j.intl.string(j.t.B3miEx),
+                                    sectionTitle: j.intl.string(j.t.B3miE8),
                                     onTextChange: (e) => (null == x ? void 0 : x(e)),
                                     pendingText: b,
                                     currentText: b,

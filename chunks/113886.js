@@ -44,9 +44,9 @@ let l = (e) => {
             return e;
         })(
             {
-                header: s.intl.string(s.t["mFP/q6"]),
-                cancelText: s.intl.string(s.t["ETE/oK"]),
-                confirmText: s.intl.string(s.t.hDtbs7),
+                header: s.intl.string(s.t["mFP/qw"]),
+                cancelText: s.intl.string(s.t["ETE/oC"]),
+                confirmText: s.intl.string(s.t.hDtbsz),
                 onConfirm: g,
             },
             f,

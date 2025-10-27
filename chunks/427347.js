@@ -57,12 +57,12 @@ function v(e) {
                                           variant: "heading-md/bold",
                                           color: void 0,
                                           className: b.specialText,
-                                          children: g.intl.string(g.t.zUhr3N),
+                                          children: g.intl.string(g.t.zUhr3D),
                                       }),
                                       (0, a.jsx)(r.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
-                                          children: g.intl.format(g.t.Xw2XUV, {
+                                          children: g.intl.format(g.t.Xw2XUT, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
                                                       r.P3F,

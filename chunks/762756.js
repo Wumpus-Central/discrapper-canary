@@ -87,7 +87,7 @@ class b extends (a = i.PureComponent) {
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV1"], { helpCenterURL: g }),
+                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: g }),
                                         }),
                                     ],
                                 }),
@@ -111,7 +111,7 @@ class b extends (a = i.PureComponent) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             className: x.footer,
-                            children: h.intl.string(h.t.qqYun5),
+                            children: h.intl.string(h.t.qqYun3),
                         }),
                         (0, r.jsxs)(c.Kqy, {
                             gap: 8,
@@ -122,7 +122,7 @@ class b extends (a = i.PureComponent) {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     className: x.footer,
-                                    children: h.intl.format(h.t.WL51ZW, { supportURL: u.Z.getSubmitRequestURL() }),
+                                    children: h.intl.format(h.t.WL51ZR, { supportURL: u.Z.getSubmitRequestURL() }),
                                 }),
                                 (0, r.jsx)("div", {
                                     className: o()(x.footer, x.footerBullet),
@@ -131,7 +131,7 @@ class b extends (a = i.PureComponent) {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     className: x.footer,
-                                    children: h.intl.format(h.t.Hv7ztb, { logoutOnClick: this.props.onLogout }),
+                                    children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
                         }),

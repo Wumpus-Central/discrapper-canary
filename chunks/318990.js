@@ -48,9 +48,9 @@ function _() {
         p = i.useMemo(
             () =>
                 e.length >= 2
-                    ? c.intl.formatToPlainString(c.t.c7ETJC, { username: _(e[0]) })
+                    ? c.intl.formatToPlainString(c.t.c7ETJH, { username: _(e[0]) })
                     : 1 === e.length
-                      ? c.intl.formatToPlainString(c.t.dpjXPD, { username: _(e[0]) })
+                      ? c.intl.formatToPlainString(c.t.dpjXPL, { username: _(e[0]) })
                       : "",
             [e],
         );

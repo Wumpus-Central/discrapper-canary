@@ -36,7 +36,7 @@ function d(e) {
 }
 function f(e) {
     let { code: t, message: n } = e,
-        i = "".concat(c.intl.formatToPlainString(c.t.hbiAOz, { code: t }), ": ").concat(n);
+        i = "".concat(c.intl.formatToPlainString(c.t.hbiAO6, { code: t }), ": ").concat(n);
     (0, r.showToast)((0, r.createToast)(i, r.ToastType.FAILURE));
 }
 class _ extends i.Z {

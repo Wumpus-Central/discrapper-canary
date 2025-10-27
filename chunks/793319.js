@@ -43,8 +43,8 @@ var i = n(951288),
     U = n(853170),
     B = n(140465),
     H = n(800966),
-    V = n(641015),
-    F = n(618158),
+    F = n(641015),
+    V = n(618158),
     G = n(390322),
     z = n(791592),
     W = n(136995),
@@ -180,7 +180,7 @@ function eE(e) {
                         },
                     });
             })(),
-            (0, i.jsx)(F.Z, {
+            (0, i.jsx)(V.Z, {
                 children: (0, i.jsx)(p.yRy, {
                     targetElementRef: C,
                     renderPopout: (e) => {
@@ -489,7 +489,7 @@ let eT = function (e) {
             var e;
             return (null != (e = null == L ? void 0 : L.channelId) ? e : er.Z.getVoiceChannelId()) === n.id;
         }),
-        F = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
+        V = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, eo.Z)(n),
         { analyticsLocations: q } = (0, v.ZP)(_.Z.VOICE_CONTROL_TRAY),
         Y = (0, $.Hu)({
@@ -497,7 +497,7 @@ let eT = function (e) {
             autoTrackExposure: !0,
         }),
         { showRefreshedAudioContextMenu: J } = (0, U.e)({ location: _.Z.VOICE_CONTROL_TRAY }),
-        et = (0, V.Z)(n),
+        et = (0, F.Z)(n),
         en = r.useRef(null),
         eu = r.useRef(null),
         ep = Y
@@ -670,7 +670,7 @@ let eT = function (e) {
                                   ],
                               }),
                               (0, i.jsx)(eP, {
-                                  connectedEmbeddedActivity: F,
+                                  connectedEmbeddedActivity: V,
                                   currentUser: y,
                                   channel: n,
                                   onDisconnectCall: o,

@@ -21,20 +21,20 @@ function d() {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
         children: [
             (0, r.jsx)(a.iRW, {
-                label: u.intl.string(u.t.oSdBvb),
-                description: u.intl.string(u.t["0A/8Rk"]),
+                label: u.intl.string(u.t.oSdBvW),
+                description: u.intl.string(u.t["0A/8Rt"]),
                 initialValue: e,
                 onValueChange: (e) => {
                     o.Z.setAttenuation(e, t, n);
                 },
             }),
             (0, r.jsx)(a.rsf, {
-                label: u.intl.string(u.t["9dHxRU"]),
+                label: u.intl.string(u.t["9dHxRY"]),
                 checked: t,
                 onChange: (t) => o.Z.setAttenuation(e, t, n),
             }),
             (0, r.jsx)(a.rsf, {
-                label: u.intl.string(u.t.SMt0Gh),
+                label: u.intl.string(u.t.SMt0Gr),
                 checked: n,
                 onChange: (n) => o.Z.setAttenuation(e, t, n),
             }),

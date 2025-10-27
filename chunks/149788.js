@@ -1,22 +1,22 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(749210),
-    o = n(322665),
-    s = n(17845),
+    s = n(322665),
+    o = n(17845),
     c = n(374939),
     u = n(283293),
     d = n(469988),
     p = n(526383),
     f = n(294330),
     h = n(388032),
-    g = n(663448),
-    m = n(988050);
-let b = function (e) {
+    m = n(663448),
+    g = n(988050);
+let _ = function (e) {
     let { onScroll: t } = e,
         n = (0, p.Z)(),
-        b = i.useMemo(
+        _ = i.useMemo(
             () =>
                 n.map((e) => {
                     var t, n;
@@ -73,10 +73,10 @@ let b = function (e) {
     return (0, r.jsxs)(u.Z, {
         onScroll: t,
         children: [
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(o.Z, {
                 title: h.intl.string(h.t.X5xPlb),
                 description: h.intl.string(h.t["F/IQCI"]),
-                children: (0, r.jsx)(o.Z, {}),
+                children: (0, r.jsx)(s.Z, {}),
             }),
             (0, r.jsxs)(c.Z, {
                 children: [
@@ -84,15 +84,15 @@ let b = function (e) {
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(l.Heading, {
-                                      className: g.sectionTitle,
+                                      className: m.sectionTitle,
                                       variant: "heading-lg/semibold",
                                       color: "header-primary",
                                       children: h.intl.string(h.t["2DfZIQ"]),
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: g.content,
+                                      className: m.content,
                                       children: [
-                                          b.map((e) =>
+                                          _.map((e) =>
                                               (0, r.jsx)(
                                                   f.VD,
                                                   {
@@ -108,21 +108,21 @@ let b = function (e) {
                               ],
                           })
                         : (0, r.jsx)("div", {
-                              className: g.content,
+                              className: m.content,
                               children: (0, r.jsx)(d.Z, { hasHub: !1 }),
                           }),
-                    (0, r.jsx)("div", { className: m.divider }),
+                    (0, r.jsx)("div", { className: g.divider }),
                     (0, r.jsxs)("div", {
-                        className: m.disclaimer,
+                        className: g.disclaimer,
                         children: [
                             (0, r.jsxs)(l.Text, {
-                                className: m.text,
+                                className: g.text,
                                 variant: "text-sm/medium",
                                 color: "header-secondary",
                                 children: [h.intl.string(h.t.O1k9XX), " "],
                             }),
                             (0, r.jsx)(l.Text, {
-                                className: m.text,
+                                className: g.text,
                                 variant: "text-sm/medium",
                                 color: "header-secondary",
                                 children: h.intl.string(h.t.FV5dvh),

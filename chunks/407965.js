@@ -55,25 +55,25 @@ let C = (t) => {
         return (
             null != p
                 ? E.push({
-                      text: x.intl.string(x.t.zrCzVF),
+                      text: x.intl.string(x.t.zrCzVB),
                       onClick: () => a(g.R.CONFIRM_DISCOUNT),
                       variant: "secondary",
                       icon: c.SrA,
                   })
                 : E.push({
-                      text: x.intl.string(x.t.h9tkAA),
+                      text: x.intl.string(x.t.h9tkAK),
                       onClick: () => e(),
                       variant: "secondary",
                   }),
             E.push({
-                text: T ? x.intl.string(x.t.PfnxqK) : x.intl.string(x.t["3PatS0"]),
+                text: T ? x.intl.string(x.t.PfnxqD) : x.intl.string(x.t["3PatSz"]),
                 onClick: () => a(g.R.CONFIRM),
                 variant: "primary",
             }),
             (0, i.jsx)(s.Modal, {
                 transitionState: t,
-                title: x.intl.string(x.t.PWq8TE),
-                subtitle: x.intl.formatToPlainString(x.t.nsGVzs, {}),
+                title: x.intl.string(x.t.PWq8TL),
+                subtitle: x.intl.formatToPlainString(x.t.nsGVzg, {}),
                 actions: E,
                 preview: null !== p && (0, i.jsx)(C, { churnUserDiscountOffer: p }),
                 onClose: async () => e(),

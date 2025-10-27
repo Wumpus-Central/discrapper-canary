@@ -31,13 +31,13 @@ function m(e) {
                 maxLength: f.l$U,
                 onChange: T,
                 disabled: !O,
-                helperText: O ? void 0 : p.intl.string(p.t.gzjxQk),
+                helperText: O ? void 0 : p.intl.string(p.t.gzjxQi),
             }),
             !O &&
                 (0, r.jsx)(a.Text, {
                     variant: "text-sm/normal",
                     className: h.nicknameDisabled,
-                    children: p.intl.string(p.t.gzjxQk),
+                    children: p.intl.string(p.t.gzjxQi),
                 }),
             I &&
                 v &&

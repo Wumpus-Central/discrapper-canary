@@ -9,7 +9,7 @@ function s(e) {
         { nick: d } = (0, i.ZP)(t),
         f = l(),
         _ = c(),
-        p = o.intl.format(o.t.MMN2Ji, {
+        p = o.intl.format(o.t.MMN2Jq, {
             username: d,
             usernameHook: f,
             otherUsername: s,

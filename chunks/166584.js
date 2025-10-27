@@ -94,13 +94,13 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let w = 4,
-    D = 268,
+let D = 4,
+    w = 268,
     L = 2,
     x = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
-        return t > 0 ? t + w : 0;
+        return t > 0 ? t + D : 0;
     };
 function M(e) {
     let {
@@ -119,7 +119,7 @@ function M(e) {
             null != t ? (S.current[e] = t) : delete S.current[e];
         },
         [P, M] = i.useState(f),
-        [k, j] = i.useState(D),
+        [k, j] = i.useState(w),
         [U, G] = i.useState(!1),
         B = i.useRef(null),
         Z = i.useRef(null),
@@ -132,9 +132,9 @@ function M(e) {
             let e = x(B.current),
                 t = x(Z.current),
                 n = [],
-                r = D - e - t;
+                r = w - e - t;
             for (let e = 0; e < L; e++) {
-                let t = e === L - 1 ? r : D;
+                let t = e === L - 1 ? r : w;
                 for (let e = 0, r = n.length; r < f.length; r++) {
                     let i = f[r],
                         a = S.current[i.id];
@@ -144,7 +144,7 @@ function M(e) {
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
                     if (e + o > t) break;
-                    (e += o + w), n.push(i);
+                    (e += o + D), n.push(i);
                 }
             }
             M(n.length === P.length ? P : n), j(r), F.current++;
@@ -158,7 +158,7 @@ function M(e) {
             wrap: !0,
         }),
         Y = f.length,
-        W = 0 === Y ? I.intl.string(I.t["vR7M+/"]) : I.intl.formatToPlainString(I.t.PCs0oq, { numRoles: Y }),
+        W = 0 === Y ? I.intl.string(I.t["vR7M+y"]) : I.intl.formatToPlainString(I.t.PCs0oo, { numRoles: Y }),
         K = (U ? f : P).map((e, i) => {
             var a;
             return (0, r.jsx)(
@@ -166,7 +166,7 @@ function M(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: U || i !== P.length - 1 ? D : k },
+                    style: { maxWidth: U || i !== P.length - 1 ? w : k },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => b(e),
@@ -209,7 +209,7 @@ function M(e) {
                                     ? U
                                         ? (0, r.jsx)(c.u, {
                                               asContainer: !0,
-                                              text: I.intl.string(I.t.XnXtCg),
+                                              text: I.intl.string(I.t.XnXtCt),
                                               children: (0, r.jsx)(u.P3F, {
                                                   onClick: X,
                                                   className: T.collapseButton,
@@ -222,7 +222,7 @@ function M(e) {
                                           })
                                         : (0, r.jsx)(c.u, {
                                               asContainer: !0,
-                                              text: I.intl.string(I.t.DY6n4u),
+                                              text: I.intl.string(I.t.DY6n4q),
                                               children: (0, r.jsx)(u.P3F, {
                                                   innerRef: B,
                                                   onClick: q,

@@ -40,7 +40,7 @@ function p(e) {
                 () =>
                     s
                         ? (0, r.jsx)(u, {
-                              text: c.intl.string(c.t.RfAAHx),
+                              text: c.intl.string(c.t.RfAAH9),
                               hasScrolled: p,
                           })
                         : null,

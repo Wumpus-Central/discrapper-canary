@@ -99,7 +99,7 @@ let h = (e) => {
             A = (0, b.SQ)(n);
         return (0, r.jsx)(c.u, {
             asContainer: !0,
-            text: y.intl.string(y.t["6cfuDg"]),
+            text: y.intl.string(y.t["6cfuDj"]),
             "aria-label": !1,
             shouldShow: P,
             children: (0, r.jsx)(

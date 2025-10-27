@@ -9,7 +9,7 @@ n.d(t, {
     hW: () => x,
     lY: () => N,
     pk: () => A,
-    qB: () => w,
+    qB: () => D,
 }),
     n(953529),
     n(539854);
@@ -203,24 +203,24 @@ function P(e, t, n) {
         draftType: n,
     });
 }
-function w(e, t) {
+function D(e, t) {
     o.Z.dispatch({
         type: "CLEAR_STICKER_PREVIEW",
         channelId: e,
         draftType: t,
     });
 }
-function D(e) {
+function w(e) {
     return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
 function L(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) =>
-            ((t.stickerIds = D(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
+            ((t.stickerIds = w(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
                 ? (s.Z.show({
-                      title: E.intl.string(E.t["+XYXtb"]),
-                      body: E.intl.formatToPlainString(E.t.JaIyFh, { count: g.oX }),
+                      title: E.intl.string(E.t["+XYXtZ"]),
+                      body: E.intl.formatToPlainString(E.t.JaIyFi, { count: g.oX }),
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
@@ -231,7 +231,7 @@ function x(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = D(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = w(t.stickerIds));
         },
         g.fy.INFREQUENT_USER_ACTION,
     );

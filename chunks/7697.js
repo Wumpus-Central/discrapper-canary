@@ -25,7 +25,7 @@ function p(e, n, t) {
             );
             d.Z.getGuildEventUserCounts(n, e, t);
         }, [e, n, g]);
-    let b = i.useMemo(() => {
+    let h = i.useMemo(() => {
         if (null == t || 0 === g.length || (null == a ? void 0 : a.scheduled_start_time) == null) return !1;
         let e = new Date();
         e.setFullYear(e.getFullYear() + _.hn);
@@ -35,7 +35,7 @@ function p(e, n, t) {
     }, [t, g, null == a ? void 0 : a.scheduled_start_time]);
     return {
         recurrenceStartTimes: g,
-        canViewMoreRecurrences: b,
+        canViewMoreRecurrences: h,
         updateRecurrenceStartTimes: () => {
             if (null == t || null == a) return;
             let e = (0, _.Ho)(t),

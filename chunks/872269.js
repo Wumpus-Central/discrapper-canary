@@ -1,5 +1,5 @@
 n.d(t, {
-    L$: () => a,
+    L$: () => l,
     be: () => i,
 });
 let r = (0, n(191336).U)((e) => ({
@@ -7,6 +7,6 @@ let r = (0, n(191336).U)((e) => ({
         showToast: (t) => e({ toastType: t }),
     })),
     i = () => r((e) => e.toastType),
-    a = (e) => {
+    l = (e) => {
         r.getState().showToast(e);
     };

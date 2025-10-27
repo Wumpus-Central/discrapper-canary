@@ -32,8 +32,8 @@ var r = n(951288),
     N = n(136015),
     R = n(426563),
     P = n(145597),
-    w = n(444295),
-    D = n(804570),
+    D = n(444295),
+    w = n(804570),
     L = n(388627),
     x = n(532658),
     M = n(501787),
@@ -161,7 +161,7 @@ let K = i.memo(function (e) {
             avatarSizeMode: b,
             maxDisplayedVoiceStates: y = M.At,
         } = e,
-        O = (0, w.ee)(() => W(o), [o]),
+        O = (0, D.ee)(() => W(o), [o]),
         [v, I] = o,
         T = I.length > 0 && null != n && null != a && (!d || f),
         S = (0, s.Wu)(
@@ -175,7 +175,7 @@ let K = i.memo(function (e) {
         );
     i.useEffect(() => {
         T &&
-            (0, w.zi)(k.Odu.VOICE_V3, {
+            (0, D.zi)(k.Odu.VOICE_V3, {
                 locked: A.default.isInstanceLocked(),
                 shownUserIds: Array.from(O),
                 liveUserIds: S,
@@ -185,8 +185,8 @@ let K = i.memo(function (e) {
     let N = () =>
             d || !p
                 ? null
-                : (0, r.jsx)(D.E, {
-                      emptyText: U.intl.string(U.t.hEh0l5),
+                : (0, r.jsx)(w.E, {
+                      emptyText: U.intl.string(U.t.hEh0l1),
                       icon: l.gj8,
                   }),
         R = y !== M.Og ? I.slice(0, y) : I,

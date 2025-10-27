@@ -27,7 +27,7 @@ class d extends i.Component {
                           value: e.id,
                       }))
                     : [],
-            placeholder: s ? c.intl.string(c.t.hKcgPz) : c.intl.string(c.t.QV60Ul),
+            placeholder: s ? c.intl.string(c.t.hKcgP5) : c.intl.string(c.t.QV60Uq),
             value: t,
             onChange: this.handleChange,
             className: n,

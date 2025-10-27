@@ -24,7 +24,7 @@ function h(e) {
     return (0, r.jsxs)("div", {
         className: p.thankYouCard,
         role: "img",
-        "aria-label": _.intl.formatToPlainString(_.t["utf8+f"], { username: s }),
+        "aria-label": _.intl.formatToPlainString(_.t["utf8+W"], { username: s }),
         children: [
             (0, r.jsx)(d.Z, { avatar: u }),
             (0, r.jsx)(a.Text, {
@@ -32,7 +32,7 @@ function h(e) {
                 tag: "p",
                 color: "status-positive-text",
                 variant: "heading-xl/medium",
-                children: _.intl.format(_.t["52BAtL"], {
+                children: _.intl.format(_.t["52BAtC"], {
                     username: s,
                     usernameHook: (e, t) =>
                         (0, r.jsx)(
@@ -61,7 +61,7 @@ function m(e) {
             guildId: o.guild_id,
             messageId: d.id,
         })(m),
-        E = _.intl.format(_.t.TQs67u, {
+        E = _.intl.format(_.t.TQs67g, {
             username: m.nick,
             usernameHook: g,
             productName:

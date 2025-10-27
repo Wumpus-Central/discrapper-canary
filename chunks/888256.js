@@ -11,8 +11,8 @@ function c(e) {
     return (0, r.jsx)(a.F, {
         setting: o.s6.ACCOUNT_DISABLE_ACCOUNT,
         children: (0, r.jsx)(i.gNt, {
-            label: s.intl.string(s.t.ZKsIkp),
-            description: d ? s.intl.string(s.t.TIh3Ym) : s.intl.string(s.t.czsGAw),
+            label: s.intl.string(s.t.ZKsIks),
+            description: d ? s.intl.string(s.t.TIh3Yj) : s.intl.string(s.t.czsGA8),
             children: (0, r.jsxs)(i.ButtonGroup, {
                 size: "sm",
                 className: l.buttonContainer,
@@ -21,7 +21,7 @@ function c(e) {
                         ? (0, r.jsx)(i.Button, {
                               variant: "critical-primary",
                               size: "sm",
-                              text: s.intl.string(s.t.jf5GGR),
+                              text: s.intl.string(s.t.jf5GGb),
                               disabled: n,
                               onClick: c,
                           })
@@ -31,7 +31,7 @@ function c(e) {
                         children: (0, r.jsx)(i.Button, {
                             variant: "critical-secondary",
                             size: "sm",
-                            text: s.intl.string(s.t["8lQ2ra"]),
+                            text: s.intl.string(s.t["8lQ2rR"]),
                             disabled: n,
                             onClick: u,
                         }),

@@ -11,12 +11,12 @@ let c = (0, l.x1)(u.n.OVERLAY_PANE, {
         render: r.Z,
     }),
     E = (0, l.wf)(u.n.OVERLAY_PANEL, {
-        useTitle: () => o.intl.string(o.t["9cb1U1"]),
+        useTitle: () => o.intl.string(o.t["9cb1Uz"]),
         buildLayout: () => [c],
     }),
     d = (0, l.m7)(u.n.OVERLAY_SIDEBAR_ITEM, {
         icon: i.epB,
-        useTitle: () => o.intl.string(o.t["9cb1U1"]),
+        useTitle: () => o.intl.string(o.t["9cb1Uz"]),
         legacySearchKey: a.s6.OVERLAY,
         usePredicate: s.bC,
         buildLayout: () => [E],

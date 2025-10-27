@@ -11,16 +11,16 @@ async function d(e, t) {
     let n,
         d,
         f,
-        _ = u.intl.string(u.t["IOy+Iy"]);
+        _ = u.intl.string(u.t["IOy+I5"]);
     if (e instanceof r.Z) {
         (n = 0), (f = e.reason);
         let i = s.Z.getFetchState();
         switch ((o.Sb.getSetting() && i !== s.O.LOADED && (await (0, l.$h)()), e.reason)) {
             case r.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                s.Z.inDevModeForApplication(t) && (_ = u.intl.string(u.t.hXRXf3));
+                s.Z.inDevModeForApplication(t) && (_ = u.intl.string(u.t.hXRXfz));
                 break;
             case r.Z.Reasons.INVALID_CHANNEL:
-                _ = u.intl.string(u.t.j29zCg);
+                _ = u.intl.string(u.t.j29zCr);
                 break;
             case r.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
                 d = e.detailCode;
@@ -31,25 +31,25 @@ async function d(e, t) {
     } else
         switch (((n = 2), (d = e.status), (f = e.code), e.code)) {
             case c.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-                _ = u.intl.string(u.t.Gyzcra);
+                _ = u.intl.string(u.t.GyzcrS);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-                _ = u.intl.string(u.t.zxv7EB);
+                _ = u.intl.string(u.t.zxv7EF);
                 break;
             case c.evJ.INVALID_PERMISSIONS:
-                _ = u.intl.string(u.t.hHGrW1);
+                _ = u.intl.string(u.t.hHGrWz);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-                _ = u.intl.string(u.t.j29zCg);
+                _ = u.intl.string(u.t.j29zCr);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
                 _ = u.intl.string(u.t["4WuFRE"]);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-                _ = u.intl.string(u.t.RvkXdX);
+                _ = u.intl.string(u.t.RvkXdb);
                 break;
             case c.evJ.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
-                _ = u.intl.string(u.t.uGDCc3);
+                _ = u.intl.string(u.t.uGDCcw);
         }
     return {
         message: _,

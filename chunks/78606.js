@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(509212),
-    o = n(113434),
-    s = n(670362),
+    s = n(113434),
+    o = n(670362),
     c = n(388032);
 let u = function (e) {
     let { onChange: t, optionClassName: n, selectedSortMethod: u } = e,
@@ -14,7 +14,7 @@ let u = function (e) {
             },
             [t],
         ),
-        p = (0, o.$I)(),
+        p = (0, s.$I)(),
         f = i.useMemo(
             () =>
                 p.map((e) => ({
@@ -24,12 +24,12 @@ let u = function (e) {
                 })),
             [p, n],
         );
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(o.Z, {
         renderPopout: (e, t) => {
             let { closePopout: n } = e;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(s.g, {
+                    (0, r.jsx)(o.g, {
                         id: t,
                         children: c.intl.string(c.t.tZXJIS),
                     }),

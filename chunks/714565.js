@@ -3,7 +3,7 @@ var r = n(981631),
     i = n(388032);
 function a(e) {
     return e.hasAnyStaffLevel() || e.hasFlag(r.xW$.PARTNER)
-        ? i.intl.string(i.t.Sq6Q1t)
+        ? i.intl.string(i.t.Sq6Q1u)
         : null == e.email
           ? i.intl.string(i.t.LfCBZG)
           : null;
