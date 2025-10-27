@@ -1,29 +1,34 @@
-n.d(t, { t: () => f });
+n.d(t, { t: () => h });
 var r = n(951288);
 n(647438);
-var i = n(722687),
-    a = n(838436),
-    o = n(51331),
-    s = n(63063),
-    l = n(915009),
-    c = n(652262),
-    u = n(981631),
-    d = n(388032);
-function f() {
+var i = n(168107),
+    a = n(480916),
+    o = n(750832),
+    s = n(722687),
+    l = n(838436),
+    c = n(51331),
+    u = n(63063),
+    d = n(915009),
+    f = n(652262),
+    _ = n(981631),
+    p = n(388032);
+function h() {
     var e;
-    let t = null != (e = (0, c.M)()) ? e : void 0,
-        n = (0, l.q1)(),
-        f = i.IU.useControlledSetting(t);
-    function _(e) {
-        i.IU.updateControlledSetting(t, !e);
+    let t = null != (e = (0, f.M)()) ? e : void 0,
+        n = (0, d.q1)(),
+        h = s.IU.useControlledSetting(t);
+    function m(e) {
+        if (!e && (0, o.S)())
+            return void i.Z.showAgeVerificationGetStartedModal({ entryPoint: a.cU.MESSAGE_REQUESTS_SETTINGS });
+        s.IU.updateControlledSetting(t, !e);
     }
-    return (0, r.jsx)(a.U, {
-        children: (0, r.jsx)(o.ZP, {
-            title: d.intl.string(d.t["3o2ojo"]),
-            value: !n && !f,
-            onChange: (e) => _(e),
+    return (0, r.jsx)(l.U, {
+        children: (0, r.jsx)(c.ZP, {
+            title: p.intl.string(p.t["3o2ojh"]),
+            value: !n && !h,
+            onChange: (e) => m(e),
             disabled: n,
-            note: d.intl.format(d.t.IoztJy, { helpdeskArticle: s.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS) }),
+            note: p.intl.format(p.t.IoztJ0, { helpdeskArticle: u.Z.getArticleURL(_.BhN.MESSAGE_REQUESTS) }),
         }),
     });
 }
