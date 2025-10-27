@@ -203,6 +203,20 @@ class b extends a.yh {
             return g.call(n, t) || ((r = e(this.state.root)), (n[t] = r)), r;
         };
     }
+    memoizedSecondaryIndex() {
+        let e = this.memoized((e) => {
+            let t = {};
+            for (let n in e) {
+                let r = e[n];
+                for (let e in r.root) {
+                    if (Object.prototype.hasOwnProperty.call(t, e)) throw Error("Duplicate clustering key: ".concat(e));
+                    t[e] = r.root[e];
+                }
+            }
+            return t;
+        });
+        return (t) => e()[t];
+    }
     setKkvState(e) {
         this.state = e;
     }
