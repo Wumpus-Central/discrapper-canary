@@ -252,7 +252,7 @@ function T(e) {
     let { documentsIndexed: t } = e;
     return (0, r.jsx)(c.u, {
         asContainer: !0,
-        text: v.intl.formatToPlainString(v.t["4Y3O+O"], { count: t }),
+        text: v.intl.formatToPlainString(v.t["4Y3O+O"], { count: null != t ? t : "" }),
         children: (0, r.jsxs)("div", {
             className: C.totalResultsWrapper,
             children: [

@@ -295,14 +295,15 @@ function J(e) {
                     ],
                 });
             }
-            if (n && null != eY && null != ex && j === B.Xh.PREMIUM_MONTH_TIER_2)
+            if (n && null != eY && null != ex && j === B.Xh.PREMIUM_MONTH_TIER_2) {
+                var i;
                 return (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             className: H.trialPlanSelectHeader,
                             children: V.intl.format(V.t["nG7g/E"], {
-                                numMonths: null == eS ? void 0 : eS.discount.user_usage_limit,
+                                numMonths: null != (i = null == eS ? void 0 : eS.discount.user_usage_limit) ? i : "",
                                 discountedPrice: (0, I.T4)(ex.amount - eY, ex.currency),
                                 regularPrice: (0, I.T4)(ex.amount, ex.currency),
                             }),
@@ -310,6 +311,7 @@ function J(e) {
                         (0, r.jsx)("hr", { className: H.planSelectSeparator }),
                     ],
                 });
+            }
         },
         eK = (e, t, n) =>
             (0, r.jsxs)("div", {

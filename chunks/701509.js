@@ -257,7 +257,7 @@ function C(t) {
             : (0, l.jsx)(u.Modal, {
                   transitionState: e,
                   onClose: K,
-                  title: R.intl.formatToPlainString(R.t.wumolR, { age: q }),
+                  title: R.intl.formatToPlainString(R.t.wumolR, { age: null != q ? q : "" }),
                   subtitle: R.intl.formatToPlainString(R.t.n3QjDE, { helpURL: m.Z.getArticleURL(O.BhN.AGE_GATE) }),
                   actions: [
                       {

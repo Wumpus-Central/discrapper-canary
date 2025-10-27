@@ -215,16 +215,17 @@ let w = i.forwardRef((e, t) => {
                                             (0, r.jsx)("div", {
                                                 className: I.title,
                                                 children: (function () {
-                                                    let e,
-                                                        { user: t, target: n, options: i } = l;
-                                                    e = (0, v.lM)(n) ? n.name : n.toString();
-                                                    let a = O.N5(l);
-                                                    return null != a
+                                                    var e;
+                                                    let t,
+                                                        { user: n, target: i, options: a } = l;
+                                                    t = (0, v.lM)(i) ? i.name : i.toString();
+                                                    let s = O.N5(l);
+                                                    return null != s
                                                         ? (0, r.jsx)("div", {
                                                               className: I.overflowEllipsis,
-                                                              children: N.intl.format(a, {
-                                                                  user: t,
-                                                                  target: e,
+                                                              children: N.intl.format(s, {
+                                                                  user: n,
+                                                                  target: t,
                                                                   userHook: (e, t) => {
                                                                       if (null != l.user)
                                                                           return (0, r.jsx)(
@@ -243,7 +244,7 @@ let w = i.forwardRef((e, t) => {
                                                                               ? n
                                                                               : N.intl.string(N.t["n+olu7"]);
                                                                       }
-                                                                      return N.intl.string(N.t["30mdIy"]);
+                                                                      return N.intl.string(N.t["30mdIx"]);
                                                                   },
                                                                   targetHook: (e, t) =>
                                                                       l.targetType === E.KFR.USER &&
@@ -264,11 +265,11 @@ let w = i.forwardRef((e, t) => {
                                                                                 },
                                                                                 t,
                                                                             ),
-                                                                  count: i.count,
+                                                                  count: null != (e = a.count) ? e : "",
                                                                   channel:
-                                                                      null == i.channel || "string" == typeof i.channel
-                                                                          ? i.channel
-                                                                          : (0, m.F6)(i.channel, x.default, b.Z, !0),
+                                                                      null == a.channel || "string" == typeof a.channel
+                                                                          ? a.channel
+                                                                          : (0, m.F6)(a.channel, x.default, b.Z, !0),
                                                                   channelHook: (e, t) =>
                                                                       (0, r.jsx)(
                                                                           "span",
@@ -278,7 +279,7 @@ let w = i.forwardRef((e, t) => {
                                                                           },
                                                                           t,
                                                                       ),
-                                                                  subtarget: i.subtarget,
+                                                                  subtarget: a.subtarget,
                                                               }),
                                                           })
                                                         : null;
