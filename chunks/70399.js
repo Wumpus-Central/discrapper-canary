@@ -7,7 +7,7 @@ var r = n(951288),
     l = n.n(i),
     a = n(793030),
     s = n(442837),
-    o = n(20471),
+    o = n(535139),
     c = n(835473),
     u = n(621853),
     d = n(388032),
@@ -53,7 +53,7 @@ function f(e) {
 function h(e) {
     let { applicationId: t, size: n = "default" } = e,
         i = (0, c.q)(t),
-        { hasAlreadyLinked: l, canStartAuthorization: s, startAuthorization: u, fetched: f } = (0, o.FG)(i);
+        { hasAlreadyLinked: l, canStartAuthorization: s, startAuthorization: u, fetched: f } = (0, o.F)(i);
     return "default" !== n || null == i
         ? null
         : (0, r.jsxs)("div", {

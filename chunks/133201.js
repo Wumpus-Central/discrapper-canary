@@ -5,7 +5,7 @@ var a = e(120356),
     s = e.n(a),
     l = e(793030),
     o = e(481060),
-    r = e(20471),
+    r = e(535139),
     c = e(22928),
     u = e(438926),
     d = e(388032),
@@ -20,7 +20,7 @@ function x(t) {
             onSuccessButtonClick: u,
             isSuccessButtonLoading: x,
         } = t,
-        { hasAlreadyLinked: f, canStartAuthorization: h, startAuthorization: C, fetched: g } = (0, r.FG)(e);
+        { hasAlreadyLinked: m, canStartAuthorization: h, startAuthorization: C, fetched: g } = (0, r.F)(e);
     if (!g)
         return (0, i.jsx)(l.IX, {
             transitionState: a,
@@ -32,7 +32,7 @@ function x(t) {
                 }),
             }),
         });
-    let S = f
+    let S = m
         ? {
               variant: "primary",
               text: c,
@@ -46,19 +46,19 @@ function x(t) {
               icon: l.uIJ,
               disabled: !h,
           };
-    return (0, i.jsx)(m, {
+    return (0, i.jsx)(f, {
         sku: n,
         application: e,
         transitionState: a,
         onClose: s,
-        hasAlreadyLinked: f,
+        hasAlreadyLinked: m,
         canStartAuthorization: h,
         primaryCTAButtonProps: S,
         bodyText: d.intl.formatToPlainString(d.t.PaYE38, { applicationName: e.name }),
         title: d.intl.string(d.t["Bn1J+a"]),
     });
 }
-function m(t) {
+function f(t) {
     let {
         sku: n,
         application: e,
@@ -67,7 +67,7 @@ function m(t) {
         onClose: r,
         hasAlreadyLinked: c,
         canStartAuthorization: x,
-        bodyText: m,
+        bodyText: f,
         title: h,
     } = t;
     return (0, i.jsxs)(l.IX, {
@@ -86,9 +86,9 @@ function m(t) {
                             (0, i.jsx)(o.Text, {
                                 variant: "text-md/normal",
                                 className: p.modalBodyText,
-                                children: m,
+                                children: f,
                             }),
-                            (0, i.jsx)(f, {
+                            (0, i.jsx)(m, {
                                 isConnected: c,
                                 application: e,
                             }),
@@ -111,7 +111,7 @@ function m(t) {
         ],
     });
 }
-function f(t) {
+function m(t) {
     let { isConnected: n, application: e } = t;
     return (0, i.jsx)("div", {
         className: p.statusContainer,

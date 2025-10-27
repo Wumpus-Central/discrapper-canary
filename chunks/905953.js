@@ -4,7 +4,7 @@ var a = n(951288),
     i = n(442837),
     l = n(704215),
     o = n(907862),
-    s = n(20471),
+    s = n(535139),
     c = n(243778),
     d = n(931847),
     u = n(50130),
@@ -20,7 +20,7 @@ function b(e) {
         [v, j] = r.useState(!1),
         _ = (0, i.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
-        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, s.FG)(C),
+        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, s.F)(C),
         N = (0, m.ZP)(_),
         P =
             null == N || null == (t = N.widgets)
