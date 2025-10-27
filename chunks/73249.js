@@ -52,9 +52,9 @@ function x(e) {
 function P() {
     (0, c.Mr3)(j.Q);
 }
-let R = r.forwardRef(function (e, t) {
-    var { tooltipText: n } = e,
-        r = (function (e, t) {
+function R(e) {
+    var { tooltipText: t } = e,
+        n = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -76,22 +76,22 @@ let R = r.forwardRef(function (e, t) {
             return r;
         })(e, ["tooltipText"]);
     return (0, i.jsx)(s.u, {
-        text: n,
+        text: t,
         position: "bottom",
+        asContainer: !0,
         children: (0, i.jsx)(
             c.hU,
             x(
                 {
-                    buttonRef: t,
                     variant: "icon-only",
-                    "aria-label": n,
+                    "aria-label": t,
                     size: "sm",
                 },
-                r,
+                n,
             ),
         ),
     });
-});
+}
 function L() {
     let { zoomed: e, setZoomed: t } = (0, v.Y)();
     return (0, i.jsx)(R, {
@@ -352,7 +352,7 @@ function Z(e) {
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, i.jsx)(R, {
-                      ref: a,
+                      buttonRef: a,
                       tooltipText: C.intl.string(C.t["UKOtz+"]),
                       onClick: () => {
                           (0, S.yg)(S.uG.MORE_BUTTON_PRESSED), s(!o);
