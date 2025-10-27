@@ -6,7 +6,6 @@ n.d(t, {
     Ub: () => r.Ub,
     X6: () => r.X6,
     gi: () => r.gi,
-    oC: () => r.oC,
     pf: () => r.pf,
     rs: () => r.rs,
 });

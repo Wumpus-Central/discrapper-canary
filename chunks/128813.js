@@ -1,8 +1,7 @@
 n.d(t, {
-    Qw: () => u,
-    ZP: () => _,
+    Qw: () => c,
+    ZP: () => f,
     mX: () => o,
-    oC: () => l,
 }),
     n(415506);
 var r = n(252117);
@@ -36,39 +35,36 @@ async function a() {
         }
 }
 function o() {
-    let e = d();
+    let e = u();
     if (null != e) return e;
     {
         let e = (async () => {
             await a(),
-                c(
+                l(
                     await (0, r.wE)({
                         createPromise: () => n.e("18639").then(n.bind(n, 718493)),
                         webpackId: 718493,
                     }),
                 );
         })();
-        return f(e), e;
+        return d(e), e;
     }
 }
 function s(e) {
     window._libdiscoreUnsupportedBrowser = e;
 }
-function l() {
-    return !0 === window._libdiscoreUnsupportedBrowser;
-}
-function c(e) {
+function l(e) {
     window._libdiscoreWasm = e;
 }
-function u() {
+function c() {
     if (void 0 !== window._libdiscoreWasm) return window._libdiscoreWasm;
     throw Error("libdiscoreWasm is not initialized");
 }
-function d() {
+function u() {
     var e;
     return null != (e = window._libdiscoreInitPromise) ? e : null;
 }
-function f(e) {
+function d(e) {
     window._libdiscoreInitPromise = e;
 }
-let _ = u;
+let f = c;
