@@ -85,8 +85,8 @@ function O(e) {
     let { compact: _ = !1 } = e,
         m = (0, d.Dt)(),
         E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        O = "459318",
-        v = "6e470c6e780d0fb1a4b74598c1ac49761c378cc5".substring(0, 7),
+        O = "461880",
+        v = "49b9b5f3fb5750e64e22e5ccca19cddf579b609b".substring(0, 7),
         I = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         T = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
         S = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),
@@ -102,8 +102,9 @@ function O(e) {
               children: [
                   (0, r.jsx)(f.Z, {
                       copyValue: N.join(" "),
-                      text: p.intl.string(p.t["9Al4QU"]),
+                      text: p.intl.string(p.t["9Al4Qd"]),
                       "aria-label": !1,
+                      "data-mtctest-ignore": "true",
                       children: (e) =>
                           (0, r.jsxs)(
                               l.P3F,
@@ -166,7 +167,7 @@ function O(e) {
                   }),
                   (0, r.jsx)(l.nn4, {
                       id: m,
-                      children: p.intl.string(p.t["9Al4QU"]),
+                      children: p.intl.string(p.t["9Al4Qd"]),
                   }),
               ],
           })
@@ -174,7 +175,7 @@ function O(e) {
               children: [
                   (0, r.jsx)(f.Z, {
                       copyValue: N.join(" "),
-                      text: p.intl.string(p.t["9Al4QU"]),
+                      text: p.intl.string(p.t["9Al4Qd"]),
                       "aria-label": !1,
                       children: (e) =>
                           (0, r.jsx)(
@@ -259,7 +260,7 @@ function O(e) {
                   }),
                   (0, r.jsx)(l.nn4, {
                       id: m,
-                      children: p.intl.string(p.t["9Al4QU"]),
+                      children: p.intl.string(p.t["9Al4Qd"]),
                   }),
               ],
           });
