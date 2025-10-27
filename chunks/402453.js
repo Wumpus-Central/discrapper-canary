@@ -1,12 +1,13 @@
 n.d(t, {
-    A: () => l,
-    KJ: () => o,
-    ZF: () => s,
-    kb: () => c,
+    A: () => c,
+    KJ: () => s,
+    ZF: () => l,
+    kb: () => u,
 });
 var r = n(951288),
-    i = n(647438);
-let a = {
+    i = n(647438),
+    a = n(594886);
+let o = {
         i18n: {
             SPINNER_LOADING_LABEL: "Loading",
             BUTTON_LOADING_STARTED_LABEL: "Loading",
@@ -42,29 +43,36 @@ let a = {
             KEY_BACKSPACE_A11Y_LABEL: "Backspace",
             KEY_DELETE_A11Y_LABEL: "Delete",
             KEY_SHIFT: "Shift",
+            DATE_INPUT_OPEN_CALENDAR_LABEL: "Open calendar",
+            CALENDAR_PREVIOUS_MONTH_LABEL: "Previous month",
+            CALENDAR_NEXT_MONTH_LABEL: "Next month",
         },
         theme: "light",
+        locale: "en-US",
         saturation: 0.5,
         defaultLayerContext: void 0,
         trackImpression: void 0,
         isWindowFocused: void 0,
         dynamicGraphicComponents: void 0,
     },
-    o = i.createContext(a);
-function s() {
-    let e = i.useContext(o);
-    return e === a && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
+    s = i.createContext(o);
+function l() {
+    let e = i.useContext(s);
+    return e === o && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
-function l(e) {
+function c(e) {
     var t, n;
-    return (null != (n = null == (t = s().experiments) ? void 0 : t.enabledExperiments) ? n : []).includes(
+    return (null != (n = null == (t = l().experiments) ? void 0 : t.enabledExperiments) ? n : []).includes(
         "mana-toggle-inputs",
     );
 }
-function c(e) {
+function u(e) {
     let { children: t, value: n } = e;
-    return (0, r.jsx)(o.Provider, {
+    return (0, r.jsx)(s.Provider, {
         value: n,
-        children: t,
+        children: (0, r.jsx)(a.b, {
+            locale: n.locale,
+            children: t,
+        }),
     });
 }

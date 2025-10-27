@@ -1,42 +1,41 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(951288),
     s = n(647438),
     a = n(120356),
     o = n.n(a),
-    i = n(74655),
-    l = n(481060),
-    c = n(53281),
-    d = n(557441);
-function u(e) {
-    let { filename: t, className: n, filters: a, buttonText: u, placeholder: p, onFileSelect: m } = e,
-        g = s.useRef(null),
-        f = s.useRef(null);
-    return (0, r.jsx)(l.tEY, {
-        ringTarget: g,
+    i = n(481060),
+    l = n(53281),
+    c = n(557441);
+function d(e) {
+    let { filename: t, className: n, filters: a, buttonText: d, placeholder: u, onFileSelect: p } = e,
+        m = s.useRef(null),
+        g = s.useRef(null);
+    return (0, r.jsx)(i.tEY, {
+        ringTarget: m,
         within: !0,
-        children: (0, r.jsxs)(i.U, {
-            ref: g,
-            className: o()(n, d.fileUpload),
+        children: (0, r.jsxs)(i.UPk, {
+            ref: m,
+            className: o()(n, c.fileUpload),
             children: [
-                (0, r.jsx)(l.rG2, { size: "sm" }),
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(i.rG2, { size: "sm" }),
+                (0, r.jsx)(i.Text, {
                     variant: "text-md/normal",
                     color: "" !== t ? "text-default" : "text-muted",
                     lineClamp: 1,
-                    children: "" !== t ? t : p,
+                    children: "" !== t ? t : u,
                 }),
-                (0, r.jsx)(l.Button, {
+                (0, r.jsx)(i.Button, {
                     "aria-hidden": !0,
                     variant: "secondary",
                     size: "sm",
-                    text: u,
+                    text: d,
                     tabIndex: -1,
                 }),
-                (0, r.jsx)(c.Z, {
-                    ref: f,
+                (0, r.jsx)(l.Z, {
+                    ref: g,
                     onChange: (e) => {
                         var t;
-                        m(null == (t = e.currentTarget.files) ? void 0 : t[0]);
+                        p(null == (t = e.currentTarget.files) ? void 0 : t[0]);
                     },
                     multiple: !1,
                     filters: a,

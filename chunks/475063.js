@@ -1,4 +1,4 @@
-n.d(t, { K: () => T });
+n.d(t, { K: () => I });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -6,13 +6,12 @@ var r = n(951288),
     s = n(793030),
     l = n(15127),
     c = n(841878),
-    u = n(74655),
-    d = n(897037),
-    f = n(377089),
-    _ = n(680874),
-    p = n(231282),
-    h = n(154257);
-function m(e, t, n) {
+    u = n(897037),
+    d = n(377089),
+    f = n(680874),
+    _ = n(231282),
+    p = n(154257);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +35,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,22 +52,22 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -76,7 +75,7 @@ function y(e, t) {
     }
     return i;
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,25 +84,25 @@ function O(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = 10,
-    I = 7.23;
-function T(e) {
+let O = 10,
+    v = 7.23;
+function I(e) {
     var t,
         {
             value: n,
             placeholder: a = "",
             autoFocus: l = !1,
-            autosize: _ = !1,
-            minLength: m,
-            maxLength: E,
-            error: O,
-            defaultDirty: T,
-            showCharacterCount: N,
-            showRemainingCharacterCount: R = !0,
-            rows: P = 3,
-            inputRef: w,
+            autosize: f = !1,
+            minLength: h,
+            maxLength: g,
+            error: y,
+            defaultDirty: I,
+            showCharacterCount: C,
+            showRemainingCharacterCount: N = !0,
+            rows: R = 3,
+            inputRef: P,
         } = e,
-        D = y(e, [
+        D = b(e, [
             "value",
             "placeholder",
             "autoFocus",
@@ -117,86 +116,86 @@ function T(e) {
             "rows",
             "inputRef",
         ]);
-    let { fieldProps: L, props: x } = (0, s.XF_)(D),
-        { disabled: M } = L,
-        k = (0, f.U)("UserSettingsDesignSystems"),
-        j = (0, d.m)({
+    let { fieldProps: w, props: L } = (0, s.XF_)(D),
+        { disabled: x } = w,
+        M = (0, d.U)("UserSettingsDesignSystems"),
+        k = (0, u.m)({
             validateOn: "change",
-            error: O,
+            error: y,
             value: n,
-            minLength: m,
-            maxLength: E,
-            defaultDirty: T,
+            minLength: h,
+            maxLength: g,
+            defaultDirty: I,
         }),
-        U = i.useMemo(() => {
-            if (k) return;
-            if (null == E) return v;
-            let e = "".concat(E).length;
-            return I * (e += "".concat(E, " / ").length) + v;
-        }, [k, E]),
-        G = (e) => {
-            let { onChange: t } = x;
-            null == t || t(e.currentTarget.value), j.setShouldValidate(!0);
+        j = i.useMemo(() => {
+            if (M) return;
+            if (null == g) return O;
+            let e = "".concat(g).length;
+            return v * (e += "".concat(g, " / ").length) + O;
+        }, [M, g]),
+        U = (e) => {
+            let { onChange: t } = L;
+            null == t || t(e.currentTarget.value), k.setShouldValidate(!0);
         },
-        B =
-            k && N
+        G =
+            M && C
                 ? (0, r.jsx)(c.H, {
                       value: n,
-                      maxLength: R && null != E ? E : void 0,
+                      maxLength: N && null != g ? g : void 0,
                   })
                 : null;
     return (0, r.jsx)(
         s.gNt,
-        b(g({}, L), {
-            trailingContent: B,
-            errorMessage: j.hasError && null != (t = j.errorMessage) ? t : void 0,
-            children: (0, r.jsxs)(u.U, {
-                validation: j,
-                disabled: M,
+        E(m({}, w), {
+            trailingContent: G,
+            errorMessage: k.hasError && null != (t = k.errorMessage) ? t : void 0,
+            children: (0, r.jsxs)(s.UPk, {
+                validation: k,
+                disabled: x,
                 children: [
                     (0, r.jsx)(s.tEY, {
                         children: (0, r.jsx)(
-                            S,
-                            b(
-                                g(
+                            T,
+                            E(
+                                m(
                                     {
-                                        autosize: _,
-                                        className: o()(p.textArea, h.scrollbarDefault),
-                                        style: { paddingRight: U },
+                                        autosize: f,
+                                        className: o()(_.textArea, p.scrollbarDefault),
+                                        style: { paddingRight: j },
                                         placeholder: a,
                                         value: n,
                                         autoFocus: l,
-                                        minLength: m,
-                                        maxLength: E,
-                                        rows: P,
-                                        disabled: M,
+                                        minLength: h,
+                                        maxLength: g,
+                                        rows: R,
+                                        disabled: x,
                                         "data-mana-component": "text-area",
                                     },
-                                    x,
+                                    L,
                                 ),
                                 {
-                                    onChange: G,
-                                    ref: w,
+                                    onChange: U,
+                                    ref: P,
                                 },
                             ),
                         ),
                     }),
-                    k
+                    M
                         ? null
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  N
-                                      ? (0, r.jsx)(A, {
+                                  C
+                                      ? (0, r.jsx)(S, {
                                             value: n,
-                                            maxLength: E,
-                                            hasError: j.hasError,
+                                            maxLength: g,
+                                            hasError: k.hasError,
                                         })
                                       : null,
-                                  N || !1 === R
+                                  C || !1 === N
                                       ? null
-                                      : (0, r.jsx)(C, {
+                                      : (0, r.jsx)(A, {
                                             value: n,
-                                            maxLength: E,
+                                            maxLength: g,
                                         }),
                               ],
                           }),
@@ -205,15 +204,15 @@ function T(e) {
         }),
     );
 }
-function S(e) {
+function T(e) {
     var { "aria-labelledby": t, autosize: n } = e,
-        a = y(e, ["aria-labelledby", "autosize"]);
+        a = b(e, ["aria-labelledby", "autosize"]);
     let o = (0, l.Gc)(),
         c = i.useContext(s.zbb),
-        u = n ? _.l : "textarea";
+        u = n ? f.l : "textarea";
     return (0, r.jsx)(
         u,
-        b(g({}, a), {
+        E(m({}, a), {
             id: null == c ? void 0 : c.controlId,
             "aria-labelledby": null != t ? t : o.titleId,
             "aria-describedby": null == c ? void 0 : c.describedById,
@@ -222,22 +221,22 @@ function S(e) {
         }),
     );
 }
-function A(e) {
+function S(e) {
     var t;
     let { value: n, maxLength: i, hasError: a } = e;
     return (0, r.jsxs)("div", {
-        className: o()(p.maxLength, { [p.errorOverflow]: a }),
+        className: o()(_.maxLength, { [_.errorOverflow]: a }),
         "aria-hidden": "true",
         children: [null != (t = null == n ? void 0 : n.length) ? t : 0, " ", null != i && "/ ".concat(i)],
     });
 }
-function C(e) {
+function A(e) {
     let { value: t, maxLength: n } = e,
         a = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
     return null == a
         ? null
         : (0, r.jsx)("div", {
-              className: o()(p.maxLength, { [p.errorOverflow]: a < 0 }),
+              className: o()(_.maxLength, { [_.errorOverflow]: a < 0 }),
               "aria-hidden": "true",
               children: a,
           });

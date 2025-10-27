@@ -1,17 +1,23 @@
-n.d(t, { xQ: () => a });
+n.d(t, {
+    gb: () => o,
+    xQ: () => a,
+});
 let r = 7000,
     i = null;
 function a(e, t = "assertive", n = r) {
     i
         ? i.announce(e, t, n)
-        : ((i = new o()),
+        : ((i = new s()),
           ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "undefined" != typeof jest)
               ? i.announce(e, t, n)
               : setTimeout(() => {
                     (null == i ? void 0 : i.isAttached()) && (null == i || i.announce(e, t, n));
                 }, 100));
 }
-class o {
+function o(e) {
+    i && i.clear(e);
+}
+class s {
     isAttached() {
         var e;
         return null == (e = this.node) ? void 0 : e.isConnected;

@@ -1,4 +1,5 @@
 n.d(t, {
+    E7: () => x,
     MT: () => h,
     QL: () => L,
 });
@@ -20,17 +21,17 @@ function h(e) {
         c = (0, d.useRef)(null),
         u = (0, d.useRef)([]),
         { parentNode: h } = (0, d.useContext)(f) || {},
-        g = (0, d.useMemo)(() => new M({ scopeRef: u }), [u]);
+        g = (0, d.useMemo)(() => new j({ scopeRef: u }), [u]);
     (0, r.b)(() => {
-        let e = h || k.root;
-        if (k.getTreeNode(e.scopeRef) && p && !T(p, e.scopeRef)) {
-            let t = k.getTreeNode(p);
+        let e = h || U.root;
+        if (U.getTreeNode(e.scopeRef) && p && !T(p, e.scopeRef)) {
+            let t = U.getTreeNode(p);
             t && (e = t);
         }
-        e.addChild(g), k.addNode(g);
+        e.addChild(g), U.addNode(g);
     }, [g, h]),
         (0, r.b)(() => {
-            let e = k.getTreeNode(u);
+            let e = U.getTreeNode(u);
             e && (e.contain = !!n);
         }, [n]),
         (0, r.b)(() => {
@@ -48,24 +49,24 @@ function h(e) {
         }, [t]),
         R(u, o, n),
         y(u, n),
-        w(u, o, n),
+        D(u, o, n),
         N(u, s),
         (0, d.useEffect)(() => {
             let e = (0, i.vY)((0, a.r3)(u.current ? u.current[0] : void 0)),
                 t = null;
             if (v(e, u.current)) {
-                for (let n of k.traverse()) n.scopeRef && v(e, n.scopeRef.current) && (t = n);
-                t === k.getTreeNode(u) && (p = t.scopeRef);
+                for (let n of U.traverse()) n.scopeRef && v(e, n.scopeRef.current) && (t = n);
+                t === U.getTreeNode(u) && (p = t.scopeRef);
             }
         }, [u]),
         (0, r.b)(
             () => () => {
                 var e, t, n;
                 let r =
-                    null != (n = null == (t = k.getTreeNode(u)) || null == (e = t.parent) ? void 0 : e.scopeRef)
+                    null != (n = null == (t = U.getTreeNode(u)) || null == (e = t.parent) ? void 0 : e.scopeRef)
                         ? n
                         : null;
-                (u === p || T(u, p)) && (!r || k.getTreeNode(r)) && (p = r), k.removeTreeNode(u);
+                (u === p || T(u, p)) && (!r || U.getTreeNode(r)) && (p = r), U.removeTreeNode(u);
             },
             [u],
         );
@@ -167,7 +168,7 @@ function g(e) {
     return e[0].parentElement;
 }
 function E(e) {
-    let t = k.getTreeNode(p);
+    let t = U.getTreeNode(p);
     for (; t && t.scopeRef !== e; ) {
         if (t.contain) return !1;
         t = t.parent;
@@ -265,12 +266,12 @@ function v(e, t) {
 }
 function I(e, t = null) {
     if (e instanceof Element && e.closest("[data-react-aria-top-layer]")) return !0;
-    for (let { scopeRef: n } of k.traverse(k.getTreeNode(t))) if (n && v(e, n.current)) return !0;
+    for (let { scopeRef: n } of U.traverse(U.getTreeNode(t))) if (n && v(e, n.current)) return !0;
     return !1;
 }
 function T(e, t) {
     var n;
-    let r = null == (n = k.getTreeNode(t)) ? void 0 : n.parent;
+    let r = null == (n = U.getTreeNode(t)) ? void 0 : n.parent;
     for (; r; ) {
         if (r.scopeRef === e) return !0;
         r = r.parent;
@@ -330,14 +331,14 @@ function R(e, t, n) {
     }, [e, t, n]);
 }
 function P(e) {
-    let t = k.getTreeNode(p);
+    let t = U.getTreeNode(p);
     for (; t && t.scopeRef !== e; ) {
         if (t.nodeToRestore) return !1;
         t = t.parent;
     }
     return (null == t ? void 0 : t.scopeRef) === e;
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let o = (0, d.useRef)(
         "undefined" != typeof document ? (0, i.vY)((0, a.r3)(e.current ? e.current[0] : void 0)) : null,
     );
@@ -364,7 +365,7 @@ function w(e, t, n) {
                 if ("Tab" !== t.key || t.altKey || t.ctrlKey || t.metaKey || !E(e) || t.isComposing) return;
                 let n = r.activeElement;
                 if (!I(n, e) || !P(e)) return;
-                let i = k.getTreeNode(e);
+                let i = U.getTreeNode(e);
                 if (!i) return;
                 let a = i.nodeToRestore,
                     o = L(r.body, { tabbable: !0 });
@@ -391,28 +392,28 @@ function w(e, t, n) {
             var n;
             let r = (0, a.r3)(e.current ? e.current[0] : void 0);
             if (!t) return;
-            let s = k.getTreeNode(e);
+            let s = U.getTreeNode(e);
             if (s)
                 return (
                     (s.nodeToRestore = null != (n = o.current) ? n : void 0),
                     () => {
-                        let n = k.getTreeNode(e);
+                        let n = U.getTreeNode(e);
                         if (!n) return;
                         let a = n.nodeToRestore,
                             o = (0, i.vY)(r);
                         if (t && a && ((o && I(o, e)) || (o === r.body && P(e)))) {
-                            let t = k.clone();
+                            let t = U.clone();
                             requestAnimationFrame(() => {
                                 if (r.activeElement === r.body) {
                                     let n = t.getTreeNode(e);
                                     for (; n; ) {
                                         if (n.nodeToRestore && n.nodeToRestore.isConnected)
-                                            return void D(n.nodeToRestore);
+                                            return void w(n.nodeToRestore);
                                         n = n.parent;
                                     }
                                     for (n = t.getTreeNode(e); n; ) {
-                                        if (n.scopeRef && n.scopeRef.current && k.getTreeNode(n.scopeRef))
-                                            return void D(A(n.scopeRef.current, !0));
+                                        if (n.scopeRef && n.scopeRef.current && U.getTreeNode(n.scopeRef))
+                                            return void w(A(n.scopeRef.current, !0));
                                         n = n.parent;
                                     }
                                 }
@@ -422,7 +423,7 @@ function w(e, t, n) {
                 );
         }, [e, t]);
 }
-function D(e) {
+function w(e) {
     e.dispatchEvent(
         new CustomEvent(_, {
             bubbles: !0,
@@ -453,7 +454,75 @@ function L(e, t, n) {
         });
     return (null == t ? void 0 : t.from) && (c.currentNode = t.from), c;
 }
-class x {
+function x(e, t = {}) {
+    return {
+        focusNext(n = {}) {
+            let r = e.current;
+            if (!r) return null;
+            let { from: o, tabbable: s = t.tabbable, wrap: l = t.wrap, accept: c = t.accept } = n,
+                u = o || (0, i.vY)((0, a.r3)(r)),
+                d = L(r, {
+                    tabbable: s,
+                    accept: c,
+                });
+            r.contains(u) && (d.currentNode = u);
+            let f = d.nextNode();
+            return !f && l && ((d.currentNode = r), (f = d.nextNode())), f && S(f, !0), f;
+        },
+        focusPrevious(n = t) {
+            let r = e.current;
+            if (!r) return null;
+            let { from: o, tabbable: s = t.tabbable, wrap: l = t.wrap, accept: c = t.accept } = n,
+                u = o || (0, i.vY)((0, a.r3)(r)),
+                d = L(r, {
+                    tabbable: s,
+                    accept: c,
+                });
+            if (r.contains(u)) d.currentNode = u;
+            else {
+                let e = M(d);
+                return e && S(e, !0), null != e ? e : null;
+            }
+            let f = d.previousNode();
+            if (!f && l) {
+                d.currentNode = r;
+                let e = M(d);
+                if (!e) return null;
+                f = e;
+            }
+            return f && S(f, !0), null != f ? f : null;
+        },
+        focusFirst(n = t) {
+            let r = e.current;
+            if (!r) return null;
+            let { tabbable: i = t.tabbable, accept: a = t.accept } = n,
+                o = L(r, {
+                    tabbable: i,
+                    accept: a,
+                }).nextNode();
+            return o && S(o, !0), o;
+        },
+        focusLast(n = t) {
+            let r = e.current;
+            if (!r) return null;
+            let { tabbable: i = t.tabbable, accept: a = t.accept } = n,
+                o = M(
+                    L(r, {
+                        tabbable: i,
+                        accept: a,
+                    }),
+                );
+            return o && S(o, !0), null != o ? o : null;
+        },
+    };
+}
+function M(e) {
+    let t, n;
+    do (t = e.lastChild()) && (n = t);
+    while (t);
+    return n;
+}
+class k {
     get size() {
         return this.fastMap.size;
     }
@@ -463,7 +532,7 @@ class x {
     addTreeNode(e, t, n) {
         let r = this.fastMap.get(null != t ? t : null);
         if (!r) return;
-        let i = new M({ scopeRef: e });
+        let i = new j({ scopeRef: e });
         r.addChild(i), (i.parent = r), this.fastMap.set(e, i), n && (i.nodeToRestore = n);
     }
     addNode(e) {
@@ -490,7 +559,7 @@ class x {
     }
     clone() {
         var e, t;
-        let n = new x();
+        let n = new k();
         for (let r of this.traverse())
             n.addTreeNode(
                 r.scopeRef,
@@ -500,10 +569,10 @@ class x {
         return n;
     }
     constructor() {
-        (this.fastMap = new Map()), (this.root = new M({ scopeRef: null })), this.fastMap.set(null, this.root);
+        (this.fastMap = new Map()), (this.root = new j({ scopeRef: null })), this.fastMap.set(null, this.root);
     }
 }
-class M {
+class j {
     addChild(e) {
         this.children.add(e), (e.parent = this);
     }
@@ -514,4 +583,4 @@ class M {
         (this.children = new Set()), (this.contain = !1), (this.scopeRef = e.scopeRef);
     }
 }
-let k = new x();
+let U = new k();

@@ -1,7 +1,7 @@
-n.d(t, { w: () => D }), n(388685), n(539854);
+n.d(t, { w: () => w }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
-    a = n(233905),
+    a = n(400497),
     o = n(120356),
     s = n.n(o),
     l = n(442837),
@@ -25,11 +25,11 @@ var r = n(951288),
     A = n(998502),
     C = n(264783),
     N = n(892071),
-    R = n(751611),
+    R = n(982519),
     P = n(388032);
-function w(e, t, n, r) {
-    let o = i.useContext(_.Z),
-        s = i.useCallback(
+function D(e, t, n, r, o) {
+    let s = i.useContext(_.Z),
+        l = i.useCallback(
             () => ({
                 i18n: {
                     SPINNER_LOADING_LABEL: P.intl.string(P.t.ZTNur7),
@@ -66,29 +66,33 @@ function w(e, t, n, r) {
                     KEY_BACKSPACE: P.intl.string(P.t["L+36+h"]),
                     KEY_BACKSPACE_A11Y_LABEL: P.intl.string(P.t["9c/Ikv"]),
                     KEY_DELETE_A11Y_LABEL: P.intl.string(P.t.BTFDmq),
+                    DATE_INPUT_OPEN_CALENDAR_LABEL: P.intl.string(R.default.I8kUqR),
+                    CALENDAR_PREVIOUS_MONTH_LABEL: P.intl.string(R.default.raS6yf),
+                    CALENDAR_NEXT_MONTH_LABEL: P.intl.string(R.default["/cp93l"]),
                 },
+                locale: o,
                 theme: e,
                 saturation: t,
                 defaultLayerContext: y.nz,
                 experiments: { enabledExperiments: n },
-                trackImpression: o,
+                trackImpression: s,
                 isWindowFocused: () => r,
                 dynamicGraphicComponents: c._,
             }),
-            [e, t, n, o, r],
+            [e, t, n, s, r, o],
         ),
-        [l, u] = i.useState(s);
+        [u, d] = i.useState(l);
     return (
         i.useLayoutEffect(() => {
             function e() {
-                u(s);
+                d(l);
             }
             (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), P.intl.onLocaleChange(e);
-        }, [s]),
-        l
+        }, [l]),
+        u
     );
 }
-function D(e) {
+function w(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
         [c] = i.useState(() => A.ZP.getEnableHardwareAcceleration()),
@@ -97,7 +101,7 @@ function D(e) {
             theme: y,
             focused: R,
             currentWindow: P,
-            fontScale: D,
+            fontScale: w,
             fontScaleClass: L,
             keyboardModeEnabled: x,
             saturation: M,
@@ -140,7 +144,7 @@ function D(e) {
         Q = (0, b.A)("RootThemeContextProvider"),
         J = p.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
         $ = (0, h.On)({ isPopoutWindow: o }),
-        ee = w(
+        ee = D(
             y,
             M,
             i.useMemo(() => {
@@ -155,6 +159,7 @@ function D(e) {
                 );
             }, [K, z, q, X, Q]),
             R,
+            _,
         );
     return (0, r.jsx)(u.kb5, {
         value: ee,
@@ -168,7 +173,7 @@ function D(e) {
                 theme: y,
                 density: W,
                 focused: R,
-                fontScale: D,
+                fontScale: w,
                 fontScaleClass: L,
                 keyboardModeEnabled: x,
                 mouseMode: H,

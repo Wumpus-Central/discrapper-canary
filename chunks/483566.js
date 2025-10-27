@@ -126,29 +126,30 @@ function g(e) {
             badge: O,
             icon: v = null,
             interactiveLabel: I = !1,
+            ref: T,
         } = e,
-        T = h(e),
-        { labelId: S, controlId: A, errorMessageId: C, describedById: N, helperTextId: R, descriptionId: P } = T,
+        S = h(e),
+        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: D } = S,
         w = "group" === b || "radiogroup" === b,
-        D = w ? "span" : "label",
-        L = w ? "fieldset" : "div",
-        x = w
+        L = w ? "span" : "label",
+        x = w ? "fieldset" : "div",
+        M = w
             ? (0, r.jsx)("legend", {
-                  id: S,
+                  id: A,
                   children: (0, r.jsx)(s.n, { children: t }),
               })
             : null,
-        M = null != t && "" !== t,
-        k = null != l && "" !== l,
-        j = M
+        k = null != t && "" !== t,
+        j = null != l && "" !== l,
+        U = k
             ? (0, r.jsxs)(u.x, {
                   "aria-hidden": w,
                   "data-interactive": I,
-                  id: S,
-                  tag: D,
+                  id: A,
+                  tag: L,
                   variant: "text-md/medium",
                   color: "text-primary",
-                  htmlFor: A,
+                  htmlFor: C,
                   className: f.label,
                   children: [
                       null != v
@@ -177,27 +178,28 @@ function g(e) {
               })
             : null;
     return (0, r.jsx)(d.z.Provider, {
-        value: T,
-        children: (0, r.jsxs)(L, {
+        value: S,
+        children: (0, r.jsxs)(x, {
             role: b,
+            ref: T,
             className: f.container,
             "data-layout": y,
             "data-disabled": a,
-            "aria-describedby": w ? N : void 0,
+            "aria-describedby": w ? R : void 0,
             disabled: w ? a : void 0,
             children: [
-                x,
-                M || k
+                M,
+                k || j
                     ? (0, r.jsxs)("div", {
                           className: f.labelContainer,
                           children: [
-                              n ? (0, r.jsx)(s.n, { children: j }) : j,
-                              k &&
+                              n ? (0, r.jsx)(s.n, { children: U }) : U,
+                              j &&
                                   (0, r.jsx)(u.x, {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",
                                       className: f.description,
-                                      id: P,
+                                      id: D,
                                       children: l,
                                   }),
                           ],
@@ -206,14 +208,14 @@ function g(e) {
                 (0, r.jsxs)("div", {
                     className: f.control,
                     children: [
-                        "function" == typeof _ ? _(T) : _,
+                        "function" == typeof _ ? _(S) : _,
                         (0, r.jsx)(E, {
                             successMessage: m,
                             errorMessage: p,
                             helperText: c,
                             trailingContent: g,
-                            helperTextId: R,
-                            errorMessageId: C,
+                            helperTextId: P,
+                            errorMessageId: N,
                         }),
                     ],
                 }),
