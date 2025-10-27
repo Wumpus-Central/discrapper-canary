@@ -28,10 +28,10 @@ function E(e) {
         : t.id;
 }
 function h(e) {
-    var t, n, c, j, h, y;
+    var t, n, c, j, h, S;
     let {
-        guildId: O,
-        initialGameServerInstance: S,
+        guildId: y,
+        initialGameServerInstance: O,
         initialGameServerGame: I,
         stepConfig: k = _.IX,
         children: C,
@@ -39,32 +39,32 @@ function h(e) {
         analyticsLocation: N,
     } = e;
     i.useEffect(() => {
-        (0, g.ce)(O), (0, m.BN)(O, !0), null == S && (0, g.mF)(O);
-    }, [O, S]);
-    let Z = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(O)),
-        w = (0, a.e7)([o.Z], () => o.Z.getGuild(O)),
+        (0, g.ce)(y), (0, m.BN)(y, !0), null == O && (0, g.mF)(y);
+    }, [y, O]);
+    let Z = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(y)),
+        w = (0, a.e7)([o.Z], () => o.Z.getGuild(y)),
         { analyticsLocations: M } = (0, r.ZP)(N),
         [T, G] = i.useState(null != (t = k.initialStep) ? t : Object.keys(k.steps)[0]),
-        L = (0, v.Td)(O, void 0),
+        L = (0, v.Td)(y, void 0),
         R = k.steps[T],
         [A, D] = i.useState(null == I ? void 0 : I.id);
     i.useEffect(() => {
         var e, t, n;
-        if (null != A || (null == S ? void 0 : S.entitlementId) == null) return;
+        if (null != A || (null == O ? void 0 : O.entitlementId) == null) return;
         let l =
-            null == Z || null == (n = Z.entitlements) || null == (t = n[S.entitlementId]) || null == (e = t.sku)
+            null == Z || null == (n = Z.entitlements) || null == (t = n[O.entitlementId]) || null == (e = t.sku)
                 ? void 0
                 : e.product_id;
         null != l && D(l);
-    }, [null == Z ? void 0 : Z.entitlements, null == S ? void 0 : S.entitlementId, A]);
+    }, [null == Z ? void 0 : Z.entitlements, null == O ? void 0 : O.entitlementId, A]);
     let [B, V] = i.useState(void 0),
         z = i.useMemo(() => {
             var e;
             if (null != A)
                 return Object.values(null != (e = null == Z ? void 0 : Z.catalog) ? e : {}).find((e) => e.id === A);
         }, [null == Z ? void 0 : Z.catalog, A]),
-        [K, U] = i.useState(S),
-        [F, J] = i.useState(null != (n = E(I)) ? n : null == S ? void 0 : S.planId),
+        [K, U] = i.useState(O),
+        [F, J] = i.useState(null != (n = E(I)) ? n : null == O ? void 0 : O.planId),
         H = (function (e, t, n, l) {
             var i, r, s, u, o, c, d, m;
             let v = (0, a.e7)([p.Z], () => {
@@ -87,7 +87,7 @@ function h(e) {
                               : r.boost_price)
                           ? m
                           : 0);
-        })(O, z, F, K),
+        })(y, z, F, K),
         X = i.useCallback(
             (e) => {
                 var t, n, l, i, a, r;
@@ -113,10 +113,11 @@ function h(e) {
             [X],
         ),
         [q, W] = i.useState(),
-        [$, Q] = i.useState(null != (c = null == S ? void 0 : S.name) ? c : ""),
-        [ee, et] = i.useState(null != (j = null == S ? void 0 : S.regionId) ? j : ""),
+        [$, Q] = i.useState(null != (c = null == O ? void 0 : O.name) ? c : ""),
+        [ee, et] = i.useState(null != (j = null == O ? void 0 : O.regionId) ? j : ""),
         [en, el] = i.useState(!1),
-        ei = i.useCallback(() => {
+        ei = i.useRef(!1),
+        ea = i.useCallback(() => {
             var e, t, n;
             if ((V(void 0), null == w || null == z || "" === $ || "" === ee || null == F)) return;
             let l = z.plans.find((e) => e.id === F);
@@ -132,7 +133,8 @@ function h(e) {
                 type: null == K ? "create" : "edit",
             });
             let i = () => {
-                el(!0);
+                if (ei.current) return;
+                (ei.current = !0), el(!0);
                 let e = new Promise((e) => {
                     setTimeout(() => e(void 0), _.tq);
                 });
@@ -144,7 +146,7 @@ function h(e) {
                     })
                     .catch((e) => {
                         var t, n;
-                        V(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
+                        V(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message), (ei.current = !1);
                     })
                     .finally(() => {
                         el(!1);
@@ -160,11 +162,16 @@ function h(e) {
                       onLoading: (e) => {
                           el(e);
                       },
-                      onSubscribeComplete: i,
+                      onSubscribeComplete: () => {
+                          i();
+                      },
+                      handleSubscribeModalClose: (e) => {
+                          e && i();
+                      },
                   })
                 : i();
         }, [M, w, L, F, N, z, $, ee, P, H, K]),
-        ea = i.useCallback(
+        er = i.useCallback(
             (e) => {
                 switch (e.type) {
                     case "close":
@@ -174,18 +181,18 @@ function h(e) {
                         G(e.step);
                         break;
                     case "save":
-                        ei();
+                        ea();
                 }
             },
-            [P, ei],
+            [P, ea],
         ),
-        er = i.useCallback(() => {
-            null != R && ea(R.onBack);
-        }, [R, ea]),
         es = i.useCallback(() => {
-            null != R && ea(R.onNext);
-        }, [R, ea]),
-        eu = i.useMemo(() => {
+            null != R && er(R.onBack);
+        }, [R, er]),
+        eu = i.useCallback(() => {
+            null != R && er(R.onNext);
+        }, [R, er]),
+        eo = i.useMemo(() => {
             var e;
             return new Set(
                 Object.values(null != (e = null == Z ? void 0 : Z.catalog) ? e : {})
@@ -195,14 +202,14 @@ function h(e) {
         }, [null == Z ? void 0 : Z.catalog]);
     return (0, l.jsx)(x.Provider, {
         value: {
-            guildId: O,
+            guildId: y,
             step: T,
             stepAction: R,
             stepLoading: en,
-            onBack: er,
-            onNext: es,
+            onBack: es,
+            onNext: eu,
             gameServerGames: null != (h = null == Z ? void 0 : Z.catalog) ? h : {},
-            instances: Object.values(null != (y = null == Z ? void 0 : Z.instances) ? y : {}),
+            instances: Object.values(null != (S = null == Z ? void 0 : Z.instances) ? S : {}),
             currentGame: z,
             setCurrentGame: Y,
             gameServerInstance: K,
@@ -218,7 +225,7 @@ function h(e) {
             setFooterNode: W,
             availableBoostCount: L,
             error: B,
-            gameProvider: eu.size > 0 ? Array.from(eu)[0] : null,
+            gameProvider: eo.size > 0 ? Array.from(eo)[0] : null,
         },
         children: C,
     });
