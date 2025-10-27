@@ -34,8 +34,11 @@ var r = n(230367),
     _ = (function (e) {
         return (
             (e[(e.FULL = 0)] = "FULL"),
-            (e[(e.FORCE_DEFAULT = 1)] = "FORCE_DEFAULT"),
-            (e[(e.OVERRIDE_ONLY = 2)] = "OVERRIDE_ONLY"),
+            (e[(e.DEPRECATED_FORCE_DEFAULT = 1)] = "DEPRECATED_FORCE_DEFAULT"),
+            (e[(e.DEPRECATED_OVERRIDE_ONLY = 2)] = "DEPRECATED_OVERRIDE_ONLY"),
+            (e[(e.FORCE_CONTROL = 3)] = "FORCE_CONTROL"),
+            (e[(e.OVERRIDES_ONLY = 4)] = "OVERRIDES_ONLY"),
+            (e[(e.OFF = 5)] = "OFF"),
             e
         );
     })({}),
