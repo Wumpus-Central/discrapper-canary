@@ -1,4 +1,4 @@
-n.d(t, { l: () => p }), n(388685);
+n.d(t, { l: () => p });
 var r = n(314897),
     i = n(131951),
     a = n(19780),
@@ -44,14 +44,7 @@ let f = 10,
             let t = e.getMediaEngineConnectionId();
             if (null == t || !i.Z.isVideoEnabled()) return null;
             let n = a.Z.getLastNonZeroRemoteVideoSinkWantsTime();
-            if (
-                (null != n && performance.now() - n < _) ||
-                Object.entries(e.getRemoteVideoSinkWants()).every((e) => {
-                    let [t, n] = e;
-                    return "any" === t || 0 === n;
-                })
-            )
-                return null;
+            if ((null != n && performance.now() - n < _) || !e.hasActiveRemoteWants()) return null;
             let o = (0, c.hj)(t, r.default.getId());
             return null == o
                 ? null

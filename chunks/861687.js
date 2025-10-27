@@ -369,8 +369,13 @@ class eC extends d.Z {
     getBandwidthEstimationExperiment() {
         return this._bandwidthEstimationExperiment;
     }
-    getRemoteVideoSinkWants() {
-        return this._remoteVideoSinkWants;
+    hasActiveRemoteWants() {
+        return Object.entries(this._remoteVideoSinkWants).some((e) => {
+            let [t, n] = e;
+            return Number.isInteger(t)
+                ? 0 !== n
+                : "any" !== t && ("pixelCounts" === t ? Object.values(n).some((e) => 0 !== e) : void 0);
+        });
     }
     pauseStatsCollectionForUser(e, t) {
         let n = this.getOrCreateVideoQuality();

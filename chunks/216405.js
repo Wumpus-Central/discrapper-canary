@@ -41,7 +41,7 @@ class S extends o.Z {
         if (null == o) return;
         let h = f.Z.getRTCConnection((0, m.V9)(o)),
             b = d.Z.getGoLiveSource();
-        if (null == h || null == b) return;
+        if (null == h || null == b || !h.hasActiveRemoteWants()) return;
         let S = l.Z.getState();
         if (S.preset !== E.ApplicationStreamPresets.PRESET_AUTO) return;
         if ((null == (e = c.Z.getStreamerActiveStreamMetadata()) ? void 0 : e.id) != null)
