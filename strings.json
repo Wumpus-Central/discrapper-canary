@@ -10989,6 +10989,7 @@
   "9Akp1s": "Ask !!{username}!! for a new invite!",
   "GzD/aa": "Uh-oh. Looks like you've been banned.",
   "57nBty": "Uh-oh. Looks like you've been banned.",
+  "MkSwTR": "Recipients will land in $[!!{channelName}!!]({{channelNameHook}})",
   "Quj7HX": "Accepting this invite will add **!!{username}!!** as your friend on Discord.",
   "6r4JiR": "Create an account and add **!!{username}!!** as your friend on Discord.",
   "QRXqzO": "An admin has temporarily disabled invites",
