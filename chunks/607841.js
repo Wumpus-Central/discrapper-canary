@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(539854), n(388685);
+n.d(t, { Z: () => w }), n(539854), n(388685);
 var r = n(147913),
     i = n(43267),
     a = n(933557),
@@ -9,10 +9,12 @@ var r = n(147913),
     u = n(944486),
     d = n(594174),
     f = n(768581),
-    _ = n(495527),
-    p = n(403011),
-    h = n(981631);
-function m(e, t, n) {
+    _ = n(823379),
+    p = n(51144),
+    h = n(495527),
+    m = n(403011),
+    g = n(981631);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,34 +27,34 @@ function m(e, t, n) {
         e
     );
 }
-function g() {
-    return p.Z.getCurrentConfig(
+function b() {
+    return m.Z.getCurrentConfig(
         { location: "NativeIntentsManager" },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasSearch(),
+            disable: !h.Z.hasSearch(),
         },
     ).searchEnabled;
 }
-function E() {
-    return p.Z.getCurrentConfig(
+function y() {
+    return m.Z.getCurrentConfig(
         { location: "NativeIntentsManager" },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasSearch(),
+            disable: !h.Z.hasSearch(),
         },
     ).clearEnabled;
 }
-function b() {
-    return p.Z.getCurrentConfig(
+function O() {
+    return m.Z.getCurrentConfig(
         { location: "NativeIntentsManager" },
         {
             autoTrackExposure: !0,
-            disable: !_.Z.hasUserActivity(),
+            disable: !h.Z.hasUserActivity(),
         },
     ).activityEnabled;
 }
-function y(e) {
+function v(e) {
     var t;
     return (null == e || null == (t = e.startsWith) ? void 0 : t.call(e, "/"))
         ? location.origin + e
@@ -60,7 +62,7 @@ function y(e) {
           ? e
           : void 0;
 }
-function O(e, t) {
+function I(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         s = (0, a.F6)(e, d.default, c.Z, !0),
@@ -76,24 +78,24 @@ function O(e, t) {
         _.push(e), _.push(t), u.push(e);
     }
     null != t && (_.push(t.name), u.push(t.name));
-    let m = s + (u.length > 0 ? " (".concat(u.join(", "), ")") : ""),
-        g = h.Z5c.CHANNEL(null != (n = null == t ? void 0 : t.id) ? n : h.ME, e.id);
+    let h = s + (u.length > 0 ? " (".concat(u.join(", "), ")") : ""),
+        m = g.Z5c.CHANNEL(null != (n = null == t ? void 0 : t.id) ? n : g.ME, e.id);
     return {
-        id: g,
-        relatedUniqueIdentifier: g,
+        id: m,
+        relatedUniqueIdentifier: m,
         type: "url",
-        title: m,
-        displayName: m,
-        thumbnailURL: y((0, i.x)(e, 128, !1)),
-        rankingHint: e.type === h.d4z.DM ? 75 : 50,
+        title: h,
+        displayName: h,
+        thumbnailURL: v((0, i.x)(e, 128, !1)),
+        rankingHint: e.type === g.d4z.DM ? 75 : 50,
         keywords: _,
         alternateNames: f,
         isUpdate: r,
     };
 }
-function v(e) {
+function T(e) {
     return null != e
-        ? y(
+        ? v(
               f.ZP.getGuildIconURL({
                   id: e.id,
                   icon: e.icon,
@@ -102,10 +104,10 @@ function v(e) {
           )
         : void 0;
 }
-function I(e) {
+function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = v(e),
-        r = h.Z5c.CHANNEL(e.id),
+        n = T(e),
+        r = g.Z5c.CHANNEL(e.id),
         i = [
             {
                 id: r,
@@ -120,9 +122,9 @@ function I(e) {
         a = o.Z.getMutableGuildChannelsForGuild(e.id);
     for (let n in a) {
         let r = a[n];
-        l.Z.can(h.Plq.VIEW_CHANNEL, r) && i.push(O(r, e, t));
+        l.Z.can(g.Plq.VIEW_CHANNEL, r) && i.push(I(r, e, t));
     }
-    for (let n of o.Z.getAllThreadsForGuild(e.id)) l.Z.can(h.Plq.VIEW_CHANNEL, n) && i.push(O(n, e, t));
+    for (let n of o.Z.getAllThreadsForGuild(e.id)) l.Z.can(g.Plq.VIEW_CHANNEL, n) && i.push(I(n, e, t));
     return {
         id: e.id,
         items: i,
@@ -130,58 +132,76 @@ function I(e) {
         isUpdate: t,
     };
 }
-function T(e) {
-    if (!b()) return;
+function A(e) {
+    let t = [];
+    if (("" !== e.name && t.push(e.name), null != e.nicks && t.push(...Object.values(e.nicks)), e.type === g.d4z.DM)) {
+        let [n] = e.recipients.map(d.default.getUser).filter(_.lm);
+        if (null != n) {
+            let e = p.ZP.getGlobalName(n);
+            null != e && t.push(e), t.push(n.username), t.push("@" + n.username);
+            let r = c.Z.getNickname(n.id);
+            null != r && t.push(r);
+            let i = p.ZP.getName(n);
+            null != i && t.push(i);
+        }
+    }
+    return t;
+}
+function C(e) {
+    if (!O()) return;
     let t = null != e ? o.Z.getChannel(e) : void 0;
-    if (null == t) return void _.Z.resignActivity();
+    if (null == t) return void h.Z.resignActivity();
     let n = s.Z.getGuild(t.guild_id),
-        r = (0, a.F6)(t, d.default, c.Z, !0) + (null != n ? " (".concat(n.name, ")") : ""),
-        i = h.Z5c.CHANNEL(t.guild_id, t.id),
-        l = {
-            webpageURL: "".concat(h.yXt.BASE_URL).concat(i),
-            relatedUniqueIdentifier: i,
+        r = (0, a.F6)(t, d.default, c.Z, !0),
+        i = r + (null != n ? " (".concat(n.name, ")") : ""),
+        l = [...new Set([r, ...A(t)])],
+        u = g.Z5c.CHANNEL(t.guild_id, t.id),
+        f = {
+            webpageURL: "".concat(g.yXt.BASE_URL).concat(u),
+            relatedUniqueIdentifier: u,
             eligibleForHandoff: !0,
             eligibleForSearch: !0,
-            title: r,
-            displayName: r,
+            title: i,
+            keywords: l,
+            displayName: i,
             type: "com.discord.view-channel",
         };
-    _.Z.setActivity(l);
+    h.Z.setActivity(f);
 }
-function S() {
-    if (!g()) return;
-    let e = s.Z.getGuildsArray().map((e) => I(e)),
+function N() {
+    if (!b()) return;
+    let e = s.Z.getGuildsArray().map((e) => S(e)),
         t = [],
         n = o.Z.getMutablePrivateChannels();
     for (let e in n) {
         let r = n[e];
-        t.push(O(r));
+        t.push(I(r));
     }
     e.push({
-        id: h.ME,
+        id: g.ME,
         items: t,
     }),
-        _.Z.indexDomains(e);
+        h.Z.indexDomains(e);
 }
-function A(e) {
+function R(e) {
     let t = o.Z.getDMChannelFromUserId(e);
-    null != t && C([t]);
+    null != t && P([t]);
 }
-function C(e) {
-    if (!g()) return;
+function P(e) {
+    if (!b()) return;
     let t = [],
         n = [],
         r = {};
     for (let a of e)
-        if (l.Z.can(h.Plq.VIEW_CHANNEL, a)) {
+        if (l.Z.can(g.Plq.VIEW_CHANNEL, a)) {
             var i;
             let e = s.Z.getGuild(a.guild_id),
-                n = null != (i = null == e ? void 0 : e.id) ? i : h.ME,
-                o = O(a, e, !0),
+                n = null != (i = null == e ? void 0 : e.id) ? i : g.ME,
+                o = I(a, e, !0),
                 l = r[n];
             if (null != l) l.push(o);
             else {
-                let i = v(e),
+                let i = T(e),
                     a = [o];
                 t.push({
                     id: n,
@@ -191,68 +211,68 @@ function C(e) {
                     (r[n] = a);
             }
         } else n.push(a.id);
-    t.length > 0 && _.Z.indexDomains(t), n.length > 0 && _.Z.deleteSearchItems(n);
+    t.length > 0 && h.Z.indexDomains(t), n.length > 0 && h.Z.deleteSearchItems(n);
 }
-class N extends r.Z {
+class D extends r.Z {
     handleInit() {
-        T(u.Z.getCurrentlySelectedChannelId()), E() && _.Z.clearSearchIndex(), g() && S();
+        C(u.Z.getCurrentlySelectedChannelId()), y() && h.Z.clearSearchIndex(), b() && N();
     }
     handleLogout() {
-        E() && _.Z.clearSearchIndex();
+        y() && h.Z.clearSearchIndex();
     }
     handleChannelSelect(e) {
         let { channelId: t } = e;
-        T(t);
+        C(t);
     }
     handleChannelCreate(e) {
         var t;
         let { channel: n } = e;
-        if (!g() || !l.Z.can(h.Plq.VIEW_CHANNEL, n)) return;
+        if (!b() || !l.Z.can(g.Plq.VIEW_CHANNEL, n)) return;
         let r = s.Z.getGuild(n.guild_id);
         if (null == r && null != n.guild_id) return;
-        let i = v(r);
-        _.Z.indexDomains([
+        let i = T(r);
+        h.Z.indexDomains([
             {
-                id: null != (t = null == r ? void 0 : r.id) ? t : h.ME,
-                items: [O(n, r)],
+                id: null != (t = null == r ? void 0 : r.id) ? t : g.ME,
+                items: [I(n, r)],
                 defaultThumbnailURL: i,
             },
         ]);
     }
     handleChannelDelete(e) {
         let { channel: t } = e;
-        g() && _.Z.deleteSearchItems([t.id]);
+        b() && h.Z.deleteSearchItems([t.id]);
     }
     handleChannelUpdates(e) {
         let { channels: t } = e;
-        C(t);
+        P(t);
     }
     handleGuildCreateOrUpdate(e) {
         let { guild: t, type: n } = e;
-        if (g()) {
+        if (b()) {
             let e = s.Z.getGuild(t.id);
-            null != e ? _.Z.indexDomains([I(e, "GUILD_UPDATE" === n)]) : _.Z.deleteSearchDomains([t.id]);
+            null != e ? h.Z.indexDomains([S(e, "GUILD_UPDATE" === n)]) : h.Z.deleteSearchDomains([t.id]);
         }
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
-        g() && _.Z.deleteSearchDomains([t.id]);
+        b() && h.Z.deleteSearchDomains([t.id]);
     }
     handleThreadUpdate(e) {
         let { channel: t } = e;
-        C([t]);
+        P([t]);
     }
     handleUserUpdate(e) {
         let { user: t } = e;
-        A(t.id);
+        R(t.id);
     }
     handleRelationshipChange(e) {
         let { relationship: t } = e;
-        A(t.id);
+        R(t.id);
     }
     constructor(...e) {
         super(...e),
-            m(this, "actions", {
+            E(this, "actions", {
                 POST_CONNECTION_OPEN: this.handleInit,
                 LOGOUT: this.handleLogout,
                 CHANNEL_SELECT: this.handleChannelSelect,
@@ -272,4 +292,4 @@ class N extends r.Z {
             });
     }
 }
-let R = new N();
+let w = new D();
