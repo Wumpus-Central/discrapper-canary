@@ -109,7 +109,7 @@ function O(e) {
         G = !k && null != U && null != D && h.nG[U.trial_id].skus.includes(D),
         B = () => {
             c(Object.values(T).length < 1 && null == n ? f.h8.PLAN_SELECT : f.h8.REVIEW, {
-                trackedFromStep: f.h8.PAYMENT_TYPE,
+                trackedFromStep: M ? f.h8.PAYMENT_ELEMENT : f.h8.PAYMENT_TYPE,
             });
         },
         Z = null != E ? E : B;
