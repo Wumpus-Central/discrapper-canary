@@ -193,6 +193,9 @@ class q extends (r = o.ZP.Store) {
     getFavorites() {
         return A;
     }
+    getAllTopSoundsForGuilds() {
+        return y;
+    }
     isLocalSoundboardMuted(e) {
         return v.has(e);
     }
