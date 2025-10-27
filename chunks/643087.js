@@ -1,14 +1,15 @@
-r.d(t, { default: () => f }), r(388685);
+r.d(t, { default: () => g }), r(388685);
 var n = r(951288),
-    i = r(647438),
-    s = r(481060),
-    o = r(153867),
-    l = r(663993),
-    a = r(771845),
-    c = r(981631),
-    h = r(388032),
-    p = r(542560);
-function u(e, t, r) {
+    o = r(647438),
+    s = r(159691),
+    i = r(481060),
+    l = r(153867),
+    a = r(663993),
+    c = r(771845),
+    h = r(981631),
+    p = r(388032),
+    u = r(542560);
+function d(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,90 +22,74 @@ function u(e, t, r) {
         e
     );
 }
-let d = (0, l.Un)({
+let b = (0, a.Un)({
     createPromise: () => r.e("4848").then(r.bind(r, 797967)),
     webpackId: 797967,
 });
-class b extends i.PureComponent {
+class f extends o.PureComponent {
     render() {
-        let { transitionState: e } = this.props,
-            { name: t, color: r } = this.state;
-        return (0, n.jsxs)(s.Y0X, {
-            transitionState: e,
-            "aria-label": h.intl.string(h.t.Dx7im5),
-            size: s.CgR.DYNAMIC,
-            parentComponent: "GuildFolderSettings",
-            children: [
-                (0, n.jsxs)(s.xBx, {
-                    className: p.header,
-                    separator: !1,
+        let { transitionState: e, onClose: t } = this.props,
+            { name: r, color: o } = this.state;
+        return (0, n.jsx)("form", {
+            onSubmit: this.handleSubmit,
+            children: (0, n.jsx)(s.u_l, {
+                title: p.intl.string(p.t.Dx7im5),
+                actions: [
+                    {
+                        variant: "primary",
+                        text: p.intl.string(p.t.i4jeWR),
+                        type: "submit",
+                    },
+                ],
+                transitionState: e,
+                onClose: t,
+                children: (0, n.jsxs)(i.Kqy, {
+                    gap: 16,
+                    className: u.container,
                     children: [
-                        (0, n.jsx)(s.Heading, {
-                            variant: "heading-lg/semibold",
-                            children: h.intl.string(h.t.Dx7im5),
+                        (0, n.jsx)(i.oil, {
+                            label: p.intl.string(p.t.tGRbjA),
+                            maxLength: h.dYL,
+                            value: r,
+                            onChange: this.handleNameChange,
+                            placeholder: p.intl.string(p.t.xV9hVh),
+                            autoFocus: !0,
                         }),
-                        (0, n.jsx)(s.olH, { onClick: this.close }),
+                        (0, n.jsx)(i.gNt, {
+                            label: p.intl.string(p.t.xpurRF),
+                            children: (0, n.jsx)(b, {
+                                defaultColor: h.Wyy,
+                                colors: h.pmI,
+                                value: null != o ? o : h.Wyy,
+                                onChange: this.handleColorChange,
+                            }),
+                        }),
                     ],
                 }),
-                (0, n.jsx)(s.hzk, {
-                    children: (0, n.jsx)("form", {
-                        onSubmit: this.handleSubmit,
-                        children: (0, n.jsxs)(s.Kqy, {
-                            gap: 16,
-                            children: [
-                                (0, n.jsx)(s.oil, {
-                                    label: h.intl.string(h.t.tGRbjI),
-                                    maxLength: c.dYL,
-                                    value: t,
-                                    onChange: this.handleNameChange,
-                                    placeholder: h.intl.string(h.t.xV9hVl),
-                                    autoFocus: !0,
-                                }),
-                                (0, n.jsx)(s.gNt, {
-                                    label: h.intl.string(h.t.xpurRE),
-                                    children: (0, n.jsx)(d, {
-                                        defaultColor: c.Wyy,
-                                        colors: c.pmI,
-                                        value: null != r ? r : c.Wyy,
-                                        onChange: this.handleColorChange,
-                                    }),
-                                }),
-                            ],
-                        }),
-                    }),
-                }),
-                (0, n.jsx)(s.mzw, {
-                    children: (0, n.jsx)(s.Button, {
-                        variant: "primary",
-                        text: h.intl.string(h.t.i4jeWV),
-                        type: "submit",
-                        onClick: this.handleSubmit,
-                    }),
-                }),
-            ],
+            }),
         });
     }
     constructor(...e) {
         var t;
         super(...e),
-            u(this, "state", {
+            d(this, "state", {
                 name: null != (t = this.props.folderName) ? t : "",
                 color: this.props.folderColor,
             }),
-            u(this, "close", () => {
+            d(this, "close", () => {
                 this.props.onClose();
             }),
-            u(this, "handleNameChange", (e) => {
+            d(this, "handleNameChange", (e) => {
                 this.setState({ name: e });
             }),
-            u(this, "handleColorChange", (e) => {
+            d(this, "handleColorChange", (e) => {
                 this.setState({ color: e });
             }),
-            u(this, "handleSubmit", (e) => {
+            d(this, "handleSubmit", (e) => {
                 e.preventDefault();
                 let { folderId: t } = this.props,
                     { name: r, color: n } = this.state,
-                    i = a.ZP.getGuildFolders().map((e) =>
+                    o = c.ZP.getGuildFolders().map((e) =>
                         e.folderId === t
                             ? (function (e, t) {
                                   return (
@@ -135,7 +120,7 @@ class b extends i.PureComponent {
                                                   }),
                                               )),
                                               n.forEach(function (t) {
-                                                  u(e, t, r[t]);
+                                                  d(e, t, r[t]);
                                               });
                                       }
                                       return e;
@@ -147,8 +132,8 @@ class b extends i.PureComponent {
                               )
                             : e,
                     );
-                (0, o.V1)(i), this.close();
+                (0, l.V1)(o), this.close();
             });
     }
 }
-let f = b;
+let g = f;
