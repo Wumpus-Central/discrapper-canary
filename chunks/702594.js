@@ -1,6 +1,6 @@
 n.d(t, {
     Hl: () => h,
-    gj: () => b,
+    gj: () => y,
 }),
     n(388685);
 var r = n(647438),
@@ -38,21 +38,22 @@ let s = [a.h8.PAYMENT_TYPE],
         SHARED_IDEAL_STEPS: [a.h8.PAYMENT_ELEMENT, a.h8.ADDRESS],
         SHARED_TYPE_AND_ADDRESS_STEPS: [a.h8.PAYMENT_ELEMENT, a.h8.ADDRESS],
     },
-    E = (e, t) => {
-        let { prependSteps: n, appendSteps: r, paymentElementsEnabled: a } = t;
+    E = (e) => null == e || e === o.He.UNKNOWN || (0, i.qH)(e),
+    b = (e, t) => {
+        let { prependSteps: n, appendSteps: r, paymentElementsEnabled: i } = t;
         return e.map((e) => {
-            let { sharedStepsKey: t, methodType: o } = e;
+            let { sharedStepsKey: t, methodType: a } = e;
             return {
-                steps: [...n, ...(a && (null == o || (0, i.qH)(o)) ? g[t] : m[t]), ...r],
-                methodType: o,
+                steps: [...n, ...(i && E(a) ? g[t] : m[t]), ...r],
+                methodType: a,
             };
         });
     },
-    b = (e) => {
+    y = (e) => {
         let { prependSteps: t, appendSteps: n, paymentElementsEnabled: i } = e,
             [a, s, l, c, u, d, f, _, p, h] = (0, r.useMemo)(
                 () =>
-                    E(
+                    b(
                         [
                             {
                                 sharedStepsKey: "SHARED_CREDIT_CARD_STEPS",
