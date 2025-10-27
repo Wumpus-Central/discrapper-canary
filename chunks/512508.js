@@ -16,10 +16,10 @@ var r = n(951288),
     d = n(794433),
     C = n(933557),
     m = n(471445),
-    b = n(91218),
-    p = n(313201),
-    f = n(518738),
-    h = n(884902),
+    b = n(313201),
+    p = n(518738),
+    f = n(884902),
+    h = n(48950),
     g = n(439170),
     j = n(592125),
     x = n(485386),
@@ -86,8 +86,8 @@ function S(e) {
 function N(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-let Z = (0, p.hQ)(),
-    D = (0, p.hQ)(),
+let Z = (0, b.hQ)(),
+    D = (0, b.hQ)(),
     R = "text-sm/medium";
 function L(e) {
     return 1 === e.type;
@@ -129,16 +129,16 @@ let M = l.memo(function (e) {
     var t;
     let { row: n, guildId: l, className: i } = e,
         { id: a, name: s } = n.record,
-        d = (0, f.p9)({
+        d = (0, p.p9)({
             guildId: l,
             roleId: a,
             size: 16,
         }),
         C = (0, c.e7)([x.Z], () => x.Z.getRole(l, a)),
         m = s.includes(g.CR) ? "" : "@",
-        p = (0, u.dQu)(u.TVs.unsafe_rawColors.PRIMARY_300).hsl(),
-        j = null != (t = null == C ? void 0 : C.colorString) ? t : p,
-        v = (0, h._f)(l, C, null == C ? void 0 : C.colorStrings);
+        b = (0, u.dQu)(u.TVs.unsafe_rawColors.PRIMARY_300).hsl(),
+        j = null != (t = null == C ? void 0 : C.colorString) ? t : b,
+        v = (0, f._f)(l, C, null == C ? void 0 : C.colorStrings);
     return (0, r.jsxs)("div", {
         className: o()(H.rowLabel, H.roleTagContainer, i),
         children: [
@@ -149,7 +149,7 @@ let M = l.memo(function (e) {
                 background: !1,
                 tooltip: !1,
             }),
-            null != d ? (0, r.jsx)(b.Z, w(_({ className: H.roleTagIcon }, d), { enableTooltip: !1 })) : m,
+            null != d ? (0, r.jsx)(h.Z, w(_({ className: H.roleTagIcon }, d), { enableTooltip: !1 })) : m,
             (0, r.jsx)(u.Text, {
                 variant: R,
                 className: H.roleTagLabel,

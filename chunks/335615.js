@@ -24,11 +24,11 @@ var r = n(951288),
     I = n(178762),
     S = n(868671),
     E = n(82295),
-    Z = n(91218),
-    P = n(313201),
-    T = n(623624),
-    N = n(518738),
-    R = n(850020),
+    Z = n(313201),
+    P = n(623624),
+    T = n(518738),
+    N = n(850020),
+    R = n(48950),
     w = n(155409),
     A = n(670188),
     D = n(706454),
@@ -166,7 +166,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
             ]),
             S = i.useRef(null),
             [E, Z] = i.useState(!1),
-            P = null != v ? new Date(v) : null,
+            T = null != v ? new Date(v) : null,
             N = i.useCallback(
                 (e) => {
                     (0, f.jW)(e, async () => {
@@ -206,7 +206,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != O &&
                         (e.stopPropagation(),
-                        (0, T.f)({
+                        (0, P.f)({
                             guildId: O,
                             location: {
                                 section: W.jXE.MEMBER_LIST,
@@ -247,7 +247,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             activities: h,
                             applicationStream: g,
                             isOwner: o,
-                            premiumSince: P,
+                            premiumSince: T,
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
@@ -283,7 +283,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                 var e;
                 return null != t ? (null == (e = M.Z.getRole(i.guild_id, t)) ? void 0 : e.name) : void 0;
             }, [i, t]),
-            h = (0, R.K)({
+            h = (0, N.K)({
                 user: l,
                 guildId: i.guild_id,
                 location: "ChannelMembers",
@@ -300,7 +300,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
     }),
     er = i.memo(function (e) {
         let { id: t, title: n, count: i, guildId: l } = e,
-            a = (0, N.p9)({
+            a = (0, T.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
@@ -323,7 +323,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [
-                              null != a ? (0, r.jsx)(Z.Z, Q({ className: q.roleIcon }, a)) : null,
+                              null != a ? (0, r.jsx)(R.Z, Q({ className: q.roleIcon }, a)) : null,
                               n,
                               " \u2014 ",
                               s,
@@ -389,7 +389,7 @@ class el extends i.Component {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
         return (0, r.jsx)(h.Wdt, {
             children: (l) =>
-                (0, r.jsx)(P.FG, {
+                (0, r.jsx)(Z.FG, {
                     children: (s) =>
                         (0, r.jsx)("aside", {
                             className: a()(q.membersWrap, q.hiddenMembers),

@@ -47668,13 +47668,13 @@ img.thumbnail__0f2e8 {
     display: inline-block
 }
 
-.roleIcon__1e6f1 {
+.roleIcon_ee71ee {
     display: inline-block;
     object-fit: contain;
     overflow: hidden
 }
 
-.roleIcon__1e6f1:before {
+.roleIcon_ee71ee:before {
     background-color: var(--background-mod-subtle);
     border-radius: 50%;
     content: "";
@@ -47683,7 +47683,7 @@ img.thumbnail__0f2e8 {
     width: 100%
 }
 
-.clickable__1e6f1 {
+.clickable_ee71ee {
     cursor: pointer
 }
 

@@ -4,10 +4,10 @@ n(647438);
 var i = n(481060),
     l = n(367907),
     a = n(906732),
-    s = n(91218),
-    o = n(807582),
-    c = n(518738),
-    d = n(26323),
+    s = n(807582),
+    o = n(518738),
+    c = n(26323),
+    d = n(48950),
     u = n(84058),
     g = n(981631),
     m = n(30513),
@@ -58,7 +58,7 @@ function b(e, t) {
 }
 let x = function (e) {
     let { guild: t, disabled: x, role: j } = e,
-        v = (0, c.oC)(t.id, j),
+        v = (0, o.oC)(t.id, j),
         { analyticsLocations: _ } = (0, a.ZP)(),
         C = t.features.has(g.GuildFeatures.ROLE_ICONS),
         O = (e) => {
@@ -68,7 +68,7 @@ let x = function (e) {
                     guild_id: null == t ? void 0 : t.id,
                     location_stack: _,
                 }),
-                (0, d.Z)({
+                (0, c.Z)({
                     analyticsLocations: _,
                     analyticsSourceLocation: {
                         page: g.ZY5.GUILD_SETTINGS,
@@ -79,7 +79,7 @@ let x = function (e) {
                     perks: (0, m.Yp)(),
                 }));
         },
-        y = (0, r.jsx)(o.Z, {
+        y = (0, r.jsx)(s.Z, {
             className: f.availabilityIndicator,
             guild: t,
             guildFeature: g.GuildFeatures.ROLE_ICONS,
@@ -110,7 +110,7 @@ let x = function (e) {
                         children:
                             null != v
                                 ? (0, r.jsx)(
-                                      s.Z,
+                                      d.Z,
                                       b(h({}, v), {
                                           className: f.roleIconPreview,
                                           enableTooltip: !1,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -12,13 +12,13 @@ var i = n(951288),
     m = n(895924),
     b = n(581364),
     g = n(471445),
-    f = n(91218),
-    h = n(518738),
+    f = n(518738),
+    h = n(48950),
     x = n(592125),
     j = n(271383),
     v = n(485386),
-    y = n(246946),
-    O = n(594174),
+    O = n(246946),
+    y = n(594174),
     _ = n(51144),
     C = n(981631),
     N = n(388032),
@@ -66,7 +66,7 @@ function I(e, t) {
         e
     );
 }
-function P(e) {
+function w(e) {
     let { guild: t, id: l, type: a, isLocked: o, lockTooltipText: c } = e,
         d = !o || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
@@ -79,7 +79,7 @@ function P(e) {
                         e,
                         I(E({}, t), {
                             id: l,
-                            label: N.intl.string(N.t.oJ1Mu7),
+                            label: N.intl.string(N.t.oJ1Muw),
                         }),
                     );
             });
@@ -88,7 +88,7 @@ function P(e) {
     );
     switch (a) {
         case m.Kw.CHANNEL:
-            return (0, i.jsx)(w, {
+            return (0, i.jsx)(P, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -113,7 +113,7 @@ function P(e) {
             });
     }
 }
-function w(e) {
+function P(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         d = (0, b.bD)(t.id),
         {
@@ -174,7 +174,7 @@ function T(e) {
     var t;
     let { guild: l, id: o, isLocked: s, lockTooltipText: d } = e,
         m = (0, c.e7)([v.Z], () => v.Z.getRole(l.id, o)),
-        b = (0, h.p9)({
+        b = (0, f.p9)({
             guildId: l.id,
             roleId: o,
             size: 24,
@@ -204,7 +204,7 @@ function T(e) {
               className: S.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(f.Z, E({ className: a()(S.__invalid_icon, S.image) }, b))
+                      ? (0, i.jsx)(h.Z, E({ className: a()(S.__invalid_icon, S.image) }, b))
                       : (0, i.jsx)(u.lZ8, {
                             size: "custom",
                             width: 23,
@@ -224,12 +224,12 @@ function T(e) {
 }
 function Z(e) {
     let { guild: t, id: n, isLocked: r, lockTooltipText: l, openEntryContextMenu: a } = e,
-        o = (0, c.e7)([O.default], () => O.default.getUser(n)),
+        o = (0, c.e7)([y.default], () => y.default.getUser(n)),
         s = (0, c.e7)([j.ZP], () => {
             var e;
             return null == (e = j.ZP.getMember(t.id, n)) ? void 0 : e.nick;
         }, [t.id, n]),
-        d = (0, c.e7)([y.Z], () => y.Z.hidePersonalInformation);
+        d = (0, c.e7)([O.Z], () => O.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)("div", {

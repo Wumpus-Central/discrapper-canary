@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
-var i = n(91218),
-    l = n(518738),
+var i = n(518738),
+    l = n(48950),
     a = n(134433);
-function o(e) {
-    let { guildId: t, role: n, size: o, className: s } = e,
-        c = (0, l.p9)({
+function s(e) {
+    let { guildId: t, role: n, size: s, className: o } = e,
+        c = (0, i.p9)({
             guildId: t,
             roleId: n.id,
-            size: o,
+            size: s,
         });
     return null != c
         ? (0, r.jsx)(
-              i.Z,
+              l.Z,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
@@ -38,11 +38,11 @@ function o(e) {
                           });
                   }
                   return e;
-              })({ className: s }, c),
+              })({ className: o }, c),
           )
         : (0, r.jsx)(a.Z, {
               color: n.colorString,
-              className: s,
-              size: o,
+              className: o,
+              size: s,
           });
 }

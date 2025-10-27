@@ -13,9 +13,9 @@ var r = n(951288),
     p = n(607070),
     h = n(134433),
     m = n(111028),
-    g = n(91218),
-    E = n(518738),
-    b = n(884902),
+    g = n(518738),
+    E = n(884902),
+    b = n(48950),
     y = n(388032),
     O = n(787185);
 function v(e, t, n) {
@@ -94,14 +94,14 @@ function C(e, t) {
 let N = i.forwardRef(function (e, t) {
     var a, v, T;
     let C,
-        { canRemove: N, className: R, role: P, onRemove: w, guildId: D, disableBorderColor: L, onMouseDown: x } = e,
+        { canRemove: N, className: R, role: P, onRemove: D, guildId: w, disableBorderColor: L, onMouseDown: x } = e,
         M = (0, s.JA)(P.id),
         { tabIndex: k } = M,
         j = A(M, ["tabIndex"]),
-        U = (0, E.p9)({
+        U = (0, g.p9)({
             roleId: P.id,
             size: 16,
-            guildId: D,
+            guildId: w,
         }),
         G = (0, c.e7)([p.Z], () => p.Z.roleStyle),
         B = (null == (a = P.tags) ? void 0 : a.guild_connections) === null,
@@ -114,7 +114,7 @@ let N = i.forwardRef(function (e, t) {
                             e,
                             S(I({}, t), {
                                 id: P.id,
-                                label: y.intl.string(y.t.sMsaLi),
+                                label: y.intl.string(y.t.sMsaLg),
                             }),
                         );
                 });
@@ -127,7 +127,7 @@ let N = i.forwardRef(function (e, t) {
         Y = u.Z.unsafe_rawColors.WHITE_500.css,
         W = (0, l._i)(V);
     null != W && 0.3 > (0, l.Bd)(W) && (Y = u.Z.unsafe_rawColors.PRIMARY_630.css);
-    let K = (0, b._f)(D, P, P.colorStrings);
+    let K = (0, E._f)(w, P, P.colorStrings);
     C = B
         ? (0, r.jsx)(h.Z, {
               className: O.roleFlowerStar,
@@ -156,10 +156,10 @@ let N = i.forwardRef(function (e, t) {
             N
                 ? (0, r.jsx)(d.u, {
                       asContainer: !0,
-                      text: y.intl.string(y.t.u3RVsL),
+                      text: y.intl.string(y.t.u3RVsH),
                       children: (0, r.jsxs)(f.P3F, {
                           className: o()(O.roleRemoveButtonCanRemove, O.roleRemoveButton),
-                          onClick: w,
+                          onClick: D,
                           tabIndex: k,
                           focusProps: { focusClassName: O.roleRemoveIconFocused },
                           "aria-hidden": !1,
@@ -202,7 +202,7 @@ let N = i.forwardRef(function (e, t) {
                 {
                     children: [
                         q(),
-                        null != U ? (0, r.jsx)(g.Z, S(I({ className: O.roleIcon }, U), { enableTooltip: !1 })) : null,
+                        null != U ? (0, r.jsx)(b.Z, S(I({ className: O.roleIcon }, U), { enableTooltip: !1 })) : null,
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
                             className: O.roleName,

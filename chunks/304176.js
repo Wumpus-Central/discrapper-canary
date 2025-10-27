@@ -6,10 +6,10 @@ var i = n(442837),
     o = n(493773),
     s = n(367907),
     l = n(111028),
-    c = n(91218),
-    u = n(829883),
-    d = n(623624),
-    f = n(973542),
+    c = n(829883),
+    u = n(623624),
+    d = n(973542),
+    f = n(48950),
     _ = n(703656),
     p = n(592125),
     h = n(485386),
@@ -89,24 +89,24 @@ let C = 40,
             );
         });
         let S = (0, i.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
-            N = (0, f.Z)(S),
+            N = (0, d.Z)(S),
             R = N
-                ? O.intl.formatToPlainString(O.t.t0928f, { name: I })
-                : O.intl.formatToPlainString(O.t.UDDkGx, { name: I }),
+                ? O.intl.formatToPlainString(O.t.t0928V, { name: I })
+                : O.intl.formatToPlainString(O.t.UDDkGy, { name: I }),
             P = A(T({}, t), {
-                src: null == t.src ? t.src : (0, u.o)(t.src, C),
+                src: null == t.src ? t.src : (0, c.o)(t.src, C),
                 size: C,
             }),
-            w = () => {
-                (0, d.f)({
+            D = () => {
+                (0, u.f)({
                     guildId: n.id,
                     location: { section: b.jXE.ROLE_ICON_POPOUT },
                 });
             },
-            D = () => {
+            w = () => {
                 (0, _.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
             },
-            L = N ? D : w;
+            L = N ? w : D;
         return (0, r.jsx)(a.VqE, {
             children: (0, r.jsx)(E.W_, {
                 children: (0, r.jsxs)("div", {
@@ -118,7 +118,7 @@ let C = 40,
                                 (0, r.jsx)("div", {
                                     className: v.roleIconContainer,
                                     children: (0, r.jsx)(
-                                        c.Z,
+                                        f.Z,
                                         A(T({}, P), {
                                             enableTooltip: !1,
                                             className: v.__invalid_roleIcon,
@@ -145,7 +145,7 @@ let C = 40,
                         (0, r.jsx)(a.Button, {
                             size: "sm",
                             variant: "secondary",
-                            text: O.intl.string(O.t["H930+P"]),
+                            text: O.intl.string(O.t["H930+H"]),
                             onClick: L,
                             icon: a.Ucv,
                             fullWidth: !0,

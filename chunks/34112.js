@@ -12,12 +12,12 @@ var r = n(951288),
     m = n(239091),
     p = n(493544),
     f = n(134433),
-    h = n(91218),
-    b = n(646892),
-    x = n(741247),
-    j = n(518738),
-    v = n(549631),
-    _ = n(402235),
+    h = n(646892),
+    b = n(741247),
+    x = n(518738),
+    j = n(549631),
+    v = n(402235),
+    _ = n(48950),
     C = n(496675),
     O = n(626135),
     y = n(480608),
@@ -158,8 +158,8 @@ function M(e) {
     let {
             role: d,
             guild: p,
-            highestRole: h,
-            currentPosition: j,
+            highestRole: x,
+            currentPosition: v,
             memberCount: _,
             onDragStart: C,
             onDragReset: O,
@@ -169,7 +169,7 @@ function M(e) {
             setEditRoleId: S,
             setSelectedSection: P,
         } = e,
-        k = (0, I.T)(p, h, d),
+        k = (0, I.T)(p, x, d),
         G = null != k,
         [M, B] = i.useState(!1),
         F = i.useMemo(
@@ -179,7 +179,7 @@ function M(e) {
                     C(d.id),
                     {
                         id: d.id,
-                        position: j,
+                        position: v,
                     }
                 ),
                 canDrag: () => M && !G,
@@ -190,7 +190,7 @@ function M(e) {
                     y(n.roleId);
                 },
             }),
-            [d, C, O, y, G, M, j],
+            [d, C, O, y, G, M, v],
         ),
         [{ isDragging: H }, W] = (0, s.c)(F),
         z = i.useMemo(
@@ -224,7 +224,7 @@ function M(e) {
             },
             [p, d],
         ),
-        q = (0, x.e)(p, d);
+        q = (0, b.e)(p, d);
     if (H)
         return (0, r.jsx)("div", {
             ref: (e) => {
@@ -238,8 +238,8 @@ function M(e) {
     return (0, r.jsxs)(g.P3F, {
         className: a()(Z.roleRow, {
             [Z.roleRowDisableHover]: E,
-            [Z.containerDragBefore]: null != V && j < V,
-            [Z.containerDragAfter]: null != V && j > V,
+            [Z.containerDragBefore]: null != V && v < V,
+            [Z.containerDragAfter]: null != V && v > V,
         }),
         onClick: X,
         onContextMenu: Y,
@@ -290,11 +290,11 @@ function M(e) {
                         children: d.name,
                     }),
                     (null == (l = d.tags) ? void 0 : l.subscription_listing_id) != null &&
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(j.Z, {
                             className: Z.subscriptionRoleIcon,
                             "aria-label": w.intl.string(w.t.a2Ak8b),
                         }),
-                    (null == (c = d.tags) ? void 0 : c.is_guild_product_role) === !0 && (0, r.jsx)(b.Z, {}),
+                    (null == (c = d.tags) ? void 0 : c.is_guild_product_role) === !0 && (0, r.jsx)(h.Z, {}),
                 ],
             }),
             (0, r.jsx)(u.u, {
@@ -355,22 +355,22 @@ function U(e) {
     let { guildId: s, role: o, size: c, enableTooltip: u, className: m, defaultIconClassName: p } = e,
         {
             hasGradient: f,
-            stops: b,
-            gradientId: x,
+            stops: h,
+            gradientId: b,
         } = (0, d.De)(
             null == (t = o.colorStrings) ? void 0 : t.primaryColor,
             null == (n = o.colorStrings) ? void 0 : n.secondaryColor,
             null == (i = o.colorStrings) ? void 0 : i.tertiaryColor,
         ),
-        v = (0, _.yH)(s, o),
-        C = (0, j.p9)({
+        j = (0, v.yH)(s, o),
+        C = (0, x.p9)({
             guildId: s,
             roleId: o.id,
             size: c,
         });
     if (null != C)
         return (0, r.jsx)(
-            h.Z,
+            _.Z,
             A(D({}, C), {
                 className: m,
                 enableTooltip: u,
@@ -378,22 +378,22 @@ function U(e) {
         );
     let O = null != (l = o.colorString) ? l : P.Pbq;
     return (
-        v && f && (O = "url(#".concat(x, ")")),
+        j && f && (O = "url(#".concat(b, ")")),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                v &&
+                j &&
                     f &&
                     (0, r.jsx)("svg", {
                         width: "0",
                         height: "0",
                         style: { position: "absolute" },
                         children: (0, r.jsx)("linearGradient", {
-                            id: x,
+                            id: b,
                             x1: "0%",
                             y1: "0%",
                             x2: "0%",
                             y2: "100%",
-                            children: b,
+                            children: h,
                         }),
                     }),
                 (0, r.jsx)(g.lZ8, {
