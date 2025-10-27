@@ -58,7 +58,7 @@ function _(e) {
                                           guildId: n,
                                           stepConfig: x,
                                           initialGameServerInstance: t,
-                                          analyticsLocation: s.Z.GAME_SERVER_OVERVIEW,
+                                          analyticsLocation: s.Z.GAME_SERVER_PAGE,
                                       });
                                   },
                               }),

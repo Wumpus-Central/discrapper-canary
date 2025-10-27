@@ -1,4 +1,4 @@
-n.d(e, { default: () => N });
+n.d(e, { default: () => j });
 var s = n(951288),
     i = n(647438),
     r = n(120356),
@@ -8,31 +8,37 @@ var s = n(951288),
     c = n(442837),
     d = n(198168),
     p = n(481060),
-    f = n(494620),
-    u = n(905551),
-    m = n(60482),
-    x = n(587065),
-    _ = n(986841),
-    h = n(269794),
-    v = n(388032),
-    I = n(71124);
-function N(t) {
-    let { guildId: e, instance: n, onClose: r, transitionState: N } = t,
-        j = (0, c.e7)([m.Z], () => {
+    f = n(100527),
+    u = n(494620),
+    m = n(905551),
+    x = n(60482),
+    _ = n(587065),
+    h = n(986841),
+    v = n(269794),
+    I = n(388032),
+    N = n(71124);
+function j(t) {
+    let { guildId: e, instance: n, onClose: r, transitionState: j } = t,
+        C = (0, c.e7)([x.Z], () => {
             var t;
-            return null == (t = m.Z.getStateForGuild(e)) ? void 0 : t.instructions[n.planId];
+            return null == (t = x.Z.getStateForGuild(e)) ? void 0 : t.instructions[n.planId];
         });
     i.useEffect(() => {
-        null == j && (0, u.iX)(e, n.planId);
-    }, [e, n.planId, j]);
-    let C = (0, _.Z)(n),
-        { handleCopyServerIp: S, animateCopyIcon: T } = (0, x.Z)(null != C ? C : ""),
-        g = i.useMemo(() => {
+        null == C && (0, m.iX)(e, n.planId);
+    }, [e, n.planId, C]);
+    let S = (0, h.Z)(n),
+        { handleCopyServerIp: T, animateCopyIcon: E } = (0, _.Z)(
+            e,
+            n.id,
+            f.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
+            null != S ? S : "",
+        ),
+        A = i.useMemo(() => {
             switch (n.status) {
                 case l.V.STARTING:
-                    return v.intl.string(h.default.ud4hxY);
+                    return I.intl.string(v.default.ud4hxY);
                 case l.V.OFFLINE:
-                    return v.intl.string(h.default.ABAm7x);
+                    return I.intl.string(v.default.ABAm7x);
                 default:
                     return;
             }
@@ -44,35 +50,35 @@ function N(t) {
             props: { instance: n },
         },
         title: n.name,
-        subtitle: v.intl.string(h.default["4HqfaU"]),
+        subtitle: I.intl.string(v.default["4HqfaU"]),
         size: "md",
-        transitionState: N,
+        transitionState: j,
         onClose: r,
         children:
-            null == j
+            null == C
                 ? (0, s.jsx)(p.$jN, {})
                 : (0, s.jsxs)("div", {
-                      className: I.content,
+                      className: N.content,
                       children: [
-                          null != g &&
-                              (0, s.jsx)(f.Z, {
-                                  className: I.infoBox,
-                                  children: g,
+                          null != A &&
+                              (0, s.jsx)(u.Z, {
+                                  className: N.infoBox,
+                                  children: A,
                               }),
                           (0, s.jsx)("div", {
-                              className: I.stepsContainer,
-                              children: j.map((t, e) =>
+                              className: N.stepsContainer,
+                              children: C.map((t, e) =>
                                   (0, s.jsxs)(
                                       "div",
                                       {
-                                          className: I.step,
+                                          className: N.step,
                                           children: [
                                               (0, s.jsx)("div", {
-                                                  className: I.stepNumber,
+                                                  className: N.stepNumber,
                                                   children: (0, s.jsx)(p.Text, {
                                                       variant: "text-xs/semibold",
                                                       color: "text-secondary",
-                                                      children: v.intl.formatToPlainString(h.default.oSU1fF, {
+                                                      children: I.intl.formatToPlainString(v.default.oSU1fF, {
                                                           step: e + 1,
                                                       }),
                                                   }),
@@ -88,22 +94,22 @@ function N(t) {
                                   ),
                               ),
                           }),
-                          null != C &&
+                          null != S &&
                               (0, s.jsxs)("div", {
-                                  className: I.serverIpContainer,
+                                  className: N.serverIpContainer,
                                   children: [
                                       (0, s.jsx)("div", {
-                                          className: a()(I.serverIpInput, T && I.animate),
+                                          className: a()(N.serverIpInput, E && N.animate),
                                           children: (0, s.jsx)(p.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
-                                              children: C,
+                                              children: S,
                                           }),
                                       }),
                                       (0, s.jsx)(p.Button, {
-                                          variant: T ? "active" : "primary",
-                                          text: T ? v.intl.string(v.t.t5VZ88) : v.intl.string(v.t.OpuAlK),
-                                          onClick: S,
+                                          variant: E ? "active" : "primary",
+                                          text: E ? I.intl.string(I.t.t5VZ88) : I.intl.string(I.t.OpuAlK),
+                                          onClick: T,
                                           icon: p.TIy,
                                       }),
                                   ],

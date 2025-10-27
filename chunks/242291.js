@@ -89,7 +89,6 @@ function x(e) {
         n = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
         a = [];
     if (!t && !w()) {
-        a.push(i.z.CUSTOM_CALL_SOUNDS_SPARKLES);
         let e = (0, g.Fc)(n);
         (m.ZP.canUseCustomCallSounds(n) || e) && a.push(i.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
     }

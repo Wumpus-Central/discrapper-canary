@@ -1,29 +1,31 @@
-t.d(n, { Z: () => c }), t(388685);
+t.d(n, { Z: () => d }), t(388685);
 var r = t(647438),
     a = t(345332),
     i = t(481060),
     l = t(572004),
     s = t(70956),
-    o = t(388032);
-function c(e) {
-    let n = r.useRef(null),
-        [t, c] = r.useState(!1);
+    o = t(578756),
+    c = t(388032);
+function d(e, n, t, d) {
+    let u = r.useRef(null),
+        [m, g] = r.useState(!1);
     return {
         handleCopyServerIp: r.useCallback(
             () => (
-                null != n.current && clearTimeout(n.current),
-                (0, l.JG)(null != e ? e : ""),
-                (0, i.showToast)((0, a.Y)(o.intl.string(o.t["+5kSoW"]), i.ToastType.SUCCESS)),
-                c(!0),
-                (n.current = setTimeout(() => {
-                    c(!1);
+                null != u.current && clearTimeout(u.current),
+                (0, o.Se)(e, n, t),
+                (0, l.JG)(null != d ? d : ""),
+                (0, i.showToast)((0, a.Y)(c.intl.string(c.t["+5kSoW"]), i.ToastType.SUCCESS)),
+                g(!0),
+                (u.current = setTimeout(() => {
+                    g(!1);
                 }, 2 * s.Z.Millis.SECOND)),
                 () => {
-                    null != n.current && clearTimeout(n.current);
+                    null != u.current && clearTimeout(u.current);
                 }
             ),
-            [e],
+            [e, n, t, d],
         ),
-        animateCopyIcon: t,
+        animateCopyIcon: m,
     };
 }
