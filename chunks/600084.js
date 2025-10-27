@@ -98,12 +98,10 @@ function V(e) {
                       className: B.buttonContainer,
                       children: [
                           (0, i.jsx)(T.W, {
-                              className: B.button,
                               channel: p,
                               user: P,
                           }),
                           (0, i.jsx)(Z.n, {
-                              className: B.button,
                               user: P,
                               application: G,
                               channel: p,

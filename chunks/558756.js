@@ -1,22 +1,21 @@
-n.d(t, { W: () => c });
+n.d(t, { W: () => s });
 var i = n(951288),
     r = n(442837),
-    l = n(755721),
-    a = n(481060),
-    o = n(9156),
-    s = n(388032);
-let c = (e) => {
-    let { className: t, channel: c, user: u } = e,
-        d = (0, r.e7)([o.ZP], () => o.ZP.isChannelMuted(null, c.id));
-    return u.bot
-        ? (0, i.jsx)(l.zx, {
-              className: t,
-              size: l.Ph.SMALL,
-              color: d ? l.zx.Colors.PRIMARY : l.zx.Colors.RED,
+    l = n(481060),
+    a = n(9156),
+    o = n(388032);
+let s = (e) => {
+    let { channel: t, user: s } = e,
+        c = (0, r.e7)([a.ZP], () => a.ZP.isChannelMuted(null, t.id));
+    return s.bot
+        ? (0, i.jsx)(l.Button, {
+              variant: c ? "secondary" : "critical-primary",
+              size: "sm",
+              text: c ? o.intl.string(o.t.YqAjXy) : o.intl.string(o.t.w4m945),
               onClick: function () {
-                  (0, a.ZDy)(async () => {
+                  (0, l.ZDy)(async () => {
                       let { default: e } = await n.e("83545").then(n.bind(n, 53149));
-                      return (t) =>
+                      return (n) =>
                           (0, i.jsx)(
                               e,
                               (function (e) {
@@ -43,11 +42,10 @@ let c = (e) => {
                                           });
                                   }
                                   return e;
-                              })({ channelId: c.id }, t),
+                              })({ channelId: t.id }, n),
                           );
                   });
               },
-              children: d ? s.intl.string(s.t.YqAjXy) : s.intl.string(s.t.w4m945),
           })
         : null;
 };

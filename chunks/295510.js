@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var r = n(951288);
-n(647438);
-var l = n(153867),
-    i = n(468026),
-    o = n(394059),
+n.d(t, { Z: () => s }), n(388685);
+var r = n(951288),
+    l = n(647438),
+    i = n(159691),
+    o = n(153867),
+    a = n(394059),
     c = n(388032);
-function a(e) {
-    var { type: t, onConfirm: n } = e,
-        a = (function (e, t) {
+function s(e) {
+    var { type: t, onConfirm: n, onClose: s } = e,
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -27,11 +27,15 @@ function a(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ["type", "onConfirm"]);
-    let s = t === o.K.STREAM ? c.intl.string(c.t["/lFMWr"]) : c.intl.string(c.t.xzxhZS),
-        u = t === o.K.STREAM ? c.intl.string(c.t.xaOX7d) : c.intl.string(c.t.oU1p9O);
+        })(e, ["type", "onConfirm", "onClose"]);
+    let [d, p] = l.useState(!1),
+        f = l.useCallback(() => {
+            d && o.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n(), s();
+        }, [n, d, s]),
+        b = t === a.K.STREAM ? c.intl.string(c.t["/lFMWr"]) : c.intl.string(c.t.xzxhZS),
+        h = t === a.K.STREAM ? c.intl.string(c.t.xaOX7d) : c.intl.string(c.t.oU1p9O);
     return (0, r.jsx)(
-        i.default,
+        i.u_l,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,17 +62,30 @@ function a(e) {
             return e;
         })(
             {
-                confirmText: c.intl.string(c.t["cY+Oob"]),
-                secondaryConfirmText: c.intl.string(c.t["JdIQ/Y"]),
-                title: s,
-                cancelText: c.intl.string(c.t["ETE/oC"]),
-                onConfirm: n,
-                onConfirmSecondary: () => {
-                    l.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 });
-                },
-                body: u,
+                size: "md",
+                actionBarInput: (0, r.jsx)(i.XZJ, {
+                    checked: d,
+                    onChange: (e) => p(e),
+                    label: c.intl.string(c.t["JdIQ/Y"]),
+                    labelType: "secondary",
+                }),
+                actions: [
+                    {
+                        variant: "secondary",
+                        text: c.intl.string(c.t["ETE/oC"]),
+                        onClick: s,
+                    },
+                    {
+                        variant: "primary",
+                        text: c.intl.string(c.t.BddRzS),
+                        onClick: f,
+                    },
+                ],
+                title: b,
+                subtitle: h,
+                onClose: s,
             },
-            a,
+            u,
         ),
     );
 }
