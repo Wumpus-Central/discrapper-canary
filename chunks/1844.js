@@ -143,7 +143,7 @@ class w extends (r = i.ZP.PersistedStore) {
     get lastFetchedActivePromotions() {
         return g;
     }
-    get isFetchingActiveOutboundPromotions() {
+    get isFetchingActivePromotions() {
         return m;
     }
     get hasFetchedConsumedInboundPromotionId() {
@@ -183,9 +183,9 @@ u(w, "displayName", "PromotionsStore"),
         },
     ]);
 let L = new w(a.Z, {
-    ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: T,
-    ACTIVE_OUTBOUND_PROMOTIONS_FETCH: S,
-    ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: A,
+    ACTIVE_PROMOTIONS_FETCH_SUCCESS: T,
+    ACTIVE_PROMOTIONS_FETCH: S,
+    ACTIVE_PROMOTIONS_FETCH_FAIL: A,
     ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: I,
     ACTIVE_BOGO_PROMOTION_FETCH: O,
     ACTIVE_BOGO_PROMOTION_FETCH_FAIL: v,

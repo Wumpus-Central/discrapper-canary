@@ -41,19 +41,16 @@ class j extends c.Z {
     _initialize() {
         o.Z.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal),
             o.Z.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview),
-            o.Z.subscribe("ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS", this.handleActiveOutboundPromotionsFetchSuccess);
+            o.Z.subscribe("ACTIVE_PROMOTIONS_FETCH_SUCCESS", this.handleActivePromotionsFetchSuccess);
     }
     _terminate() {
         o.Z.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal),
             o.Z.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview),
-            o.Z.unsubscribe(
-                "ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS",
-                this.handleActiveOutboundPromotionsFetchSuccess,
-            );
+            o.Z.unsubscribe("ACTIVE_PROMOTIONS_FETCH_SUCCESS", this.handleActivePromotionsFetchSuccess);
     }
     constructor(...e) {
         super(...e),
-            T(this, "handleActiveOutboundPromotionsFetchSuccess", (e) => {
+            T(this, "handleActivePromotionsFetchSuccess", (e) => {
                 let { promotions: t } = e;
                 for (let e of t)
                     if (null != e.marketing_components) {

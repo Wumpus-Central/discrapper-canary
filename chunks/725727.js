@@ -57,7 +57,7 @@ function g() {
             ).enabled || T;
     r.useEffect(() => {
         a.Z.wait(() => {
-            S && (null == e || E) && _.ZP.fetchActiveOutboundPromotions();
+            S && (null == e || E) && _.ZP.fetchActivePromotions();
         });
     }, [e, S, E]),
         r.useEffect(() => {

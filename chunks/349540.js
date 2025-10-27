@@ -22,20 +22,20 @@ function u(e, t, n) {
 }
 class d extends r.Z {
     async onPostConnectionOpen() {
-        this.maybeFetchActiveOutboundPromotions(), await this.maybeFetchBogoPromotion();
+        this.maybeFetchActivePromotions(), await this.maybeFetchBogoPromotion();
     }
-    maybeFetchActiveOutboundPromotions() {
+    maybeFetchActivePromotions() {
         let e = i.default.getCurrentUser(),
             t = a.ZP.isPremiumExactly(e, c.PremiumTypes.TIER_2),
-            n = (0, s.$)({ location: "maybeFetchActiveOutboundPromotions" }),
+            n = (0, s.$)({ location: "maybeFetchActivePromotions" }),
             r = o.g.getCurrentConfig(
-                { location: "maybeFetchActiveOutboundPromotions" },
+                { location: "maybeFetchActivePromotions" },
                 {
                     autoTrackExposure: !1,
                     disable: t,
                 },
             ).enabled;
-        (n || t || r) && (0, l.vM)();
+        (n || t || r) && (0, l.Br)();
     }
     constructor(...e) {
         super(...e),

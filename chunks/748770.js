@@ -1,7 +1,7 @@
 n.d(t, {
+    Br: () => m,
     L9: () => g,
     ZP: () => E,
-    vM: () => m,
 });
 var r = n(32662),
     i = n(544891),
@@ -17,10 +17,10 @@ var r = n(32662),
     p = n(474936),
     h = n(981631);
 async function m() {
-    if (!_.Z.isFetchingActiveOutboundPromotions)
+    if (!_.Z.isFetchingActivePromotions)
         try {
             let t;
-            o.Z.dispatch({ type: "ACTIVE_OUTBOUND_PROMOTIONS_FETCH" }),
+            o.Z.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH" }),
                 (t = d.e.getCurrentConfig({ location: "5731cc_1" }, { autoTrackExposure: !1 }).enabled
                     ? h.ANM.PROMOTIONS
                     : f.t.getCurrentConfig({ location: "5731cc_1" }, { autoTrackExposure: !1 }).previewEnabled
@@ -43,12 +43,12 @@ async function m() {
                 c = null != (e = null == t ? void 0 : t.promotion_id) ? e : null;
             }
             o.Z.dispatch({
-                type: "ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS",
+                type: "ACTIVE_PROMOTIONS_FETCH_SUCCESS",
                 promotions: a.body,
                 consumedInboundPromotionId: c,
             });
         } catch (e) {
-            o.Z.dispatch({ type: "ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL" });
+            o.Z.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH_FAIL" });
         }
 }
 async function g() {
@@ -71,7 +71,7 @@ async function g() {
         }
 }
 let E = {
-    fetchActiveOutboundPromotions: m,
+    fetchActivePromotions: m,
     dismissOutboundPromotionNotice: function () {
         o.Z.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
         let e = _.Z.lastDismissedOutboundPromotionStartDate;
