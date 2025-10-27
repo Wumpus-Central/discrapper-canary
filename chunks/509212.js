@@ -868,13 +868,10 @@ function tE(e) {
                   gamePublisher: n,
                   cosponsorName: i,
               })
-        : G.intl.formatToPlainString(
-              L.m8.getConfig({ location: k.dr.QUEST_DISCLOSURE_MODAL }).enabled ? G.t.euizJY : G.t.tOWwxN,
-              {
-                  gamePublisher: n,
-                  gameTitle: r,
-              },
-          );
+        : G.intl.formatToPlainString(G.t.euizJY, {
+              gamePublisher: n,
+              gameTitle: r,
+          });
 }
 function tb(e) {
     let t = eM({ quest: e }) || ek({ quest: e }),

@@ -1,9 +1,8 @@
 n.d(t, {
     CD: () => o,
     DL: () => i,
-    GE: () => c,
-    m8: () => s,
-    yE: () => l,
+    GE: () => l,
+    yE: () => s,
 });
 var r = n(427164);
 let i = (0, r.le)({
@@ -27,23 +26,14 @@ let i = (0, r.le)({
     o = (e) => {
         let { enabled: t } = a.getConfig({ location: e });
         return t;
-    },
-    s = (0, r.le)({
-        name: "2025-08-quest-home-v2-entrypoint-relocation",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: {
-            1: { enabled: !1 },
-            2: { enabled: !0 },
-        },
-    });
+    };
 (0, r.le)({
     name: "2025-10-mobile-quest-home-v2-entrypoint-relocation",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var l = (function (e) {
+var s = (function (e) {
     return (
         (e[(e.DISCOVER = 0)] = "DISCOVER"),
         (e[(e.ACTION = 1)] = "ACTION"),
@@ -52,7 +42,7 @@ var l = (function (e) {
         e
     );
 })({});
-let c = (0, r.le)({
+let l = (0, r.le)({
     name: "2025-10-quest-home-entrypoint-onboarding",
     kind: "user",
     defaultConfig: {

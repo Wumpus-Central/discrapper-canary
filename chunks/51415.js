@@ -1,17 +1,14 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var a = n(951288);
 n(647438);
 var r = n(481060),
     i = n(703656),
     l = n(272008),
-    o = n(937797),
-    s = n(46140),
-    c = n(981631),
-    d = n(840846);
-let u = function () {
-    let { enabled: e } = o.m8.useConfig({ location: s.dr.INTERNAL_TOOLING });
+    o = n(981631),
+    s = n(840846);
+let c = function () {
     return (0, a.jsxs)("div", {
-        className: d.container,
+        className: s.container,
         children: [
             (0, a.jsx)(r.Text, {
                 variant: "text-md/normal",
@@ -21,7 +18,7 @@ let u = function () {
             }),
             (0, a.jsx)(r.Button, {
                 onClick: () => {
-                    (0, l.it)(), (0, i.uL)(e ? c.Z5c.QUEST_HOME_V2 : c.Z5c.QUEST_HOME);
+                    (0, l.it)(), (0, i.uL)(o.Z5c.QUEST_HOME_V2);
                 },
                 text: "Clear History",
             }),
