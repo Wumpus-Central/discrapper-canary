@@ -1,18 +1,19 @@
-n.d(t, { Z: () => O }), n(314940);
+n.d(t, { Z: () => _ }), n(314940);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
     s = n(278074),
     c = n(481060),
-    a = n(171019),
-    u = n(74538),
-    d = n(731896),
-    f = n(528439),
-    p = n(388032),
-    m = n(364705),
-    g = n(223223);
-function h(e) {
+    a = n(578976),
+    u = n(171019),
+    d = n(74538),
+    f = n(731896),
+    p = n(528439),
+    m = n(388032),
+    g = n(364705),
+    h = n(223223);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,7 +56,7 @@ function x(e, t) {
         e
     );
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -75,54 +76,55 @@ function b(e, t) {
     }
     return i;
 }
-let y = () => 80,
-    j = (e) => {
+let j = () => 80,
+    P = (e) => {
         var { children: t, className: n, isSelected: i = !1 } = e,
-            l = b(e, ["children", "className", "isSelected"]);
+            l = y(e, ["children", "className", "isSelected"]);
         return (0, r.jsx)(
             c.P3F,
-            x(h({ className: o()(m.effectGridItem, n, { [m.selected]: i }) }, l), {
+            b(x({ className: o()(g.effectGridItem, n, { [g.selected]: i }) }, l), {
                 onClick: l.onSelect,
                 children: t,
             }),
         );
     },
-    P = (e) => {
+    O = (e) => {
         var t,
             { profileEffect: n, innerRef: l, section: o, isSelected: s, canUsePremiumCollectibles: c } = e,
-            u = b(e, ["profileEffect", "innerRef", "section", "isSelected", "canUsePremiumCollectibles"]);
-        let p = (0, d.V)(n.skuId),
-            y = i.useRef(null),
+            d = y(e, ["profileEffect", "innerRef", "section", "isSelected", "canUsePremiumCollectibles"]);
+        let m = (0, f.V)(n.skuId),
+            j = i.useRef(null),
             {
-                accessibilityLabel: P,
-                thumbnailPreviewSrc: O,
-                title: _,
-            } = null != (t = null == p ? void 0 : p.config) ? t : {};
+                accessibilityLabel: O,
+                thumbnailPreviewSrc: _,
+                title: v,
+            } = null != (t = null == m ? void 0 : m.config) ? t : {},
+            E = i.useMemo(() => (0, a.JE)(_), [_]);
         return (0, r.jsxs)(
-            j,
-            x(
-                h(
+            P,
+            b(
+                x(
                     {
-                        innerRef: null != l ? l : y,
+                        innerRef: null != l ? l : j,
                         isSelected: s,
                     },
-                    u,
+                    d,
                 ),
                 {
                     children: [
                         (0, r.jsx)("img", {
-                            src: g,
-                            alt: P,
-                            className: m.presetEffectBackground,
+                            src: h,
+                            alt: O,
+                            className: g.presetEffectBackground,
                         }),
                         (0, r.jsx)("img", {
-                            className: m.presetEffectImg,
-                            src: O,
-                            alt: _,
+                            className: g.presetEffectImg,
+                            src: E,
+                            alt: v,
                         }),
-                        (0, r.jsx)(a.Z, {
-                            isPurchaseSection: o === f.$0.PURCHASE,
-                            isPremiumSection: o === f.$0.PREMIUM_PURCHASE,
+                        (0, r.jsx)(u.Z, {
+                            isPurchaseSection: o === p.$0.PURCHASE,
+                            isPremiumSection: o === p.$0.PREMIUM_PURCHASE,
                             canUsePremiumCollectibles: c,
                             skuId: n.skuId,
                         }),
@@ -131,56 +133,56 @@ let y = () => 80,
             ),
         );
     },
-    O = (e) => {
+    _ = (e) => {
         let { user: t, guild: n, pendingProfileEffect: i, selectedProfileEffectRef: l, onSelect: o, onOpenShop: a } = e,
-            d = (0, f.ZP)(),
-            g = null != i,
-            b = u.ZP.canUseCollectibles(t);
+            u = (0, p.ZP)(),
+            f = null != i,
+            h = d.ZP.canUseCollectibles(t);
         return (0, r.jsx)("section", {
-            className: m.section,
+            className: g.section,
             children: (0, r.jsx)(c.GMG, {
                 fade: !0,
                 itemGutter: 12,
                 sectionGutter: 16,
                 paddingVertical: 0,
                 paddingHorizontal: 12,
-                className: m.list,
+                className: g.list,
                 columns: 3,
-                sections: d.map((e) => {
+                sections: u.map((e) => {
                     let { items: t } = e;
                     return t.length;
                 }),
-                renderItem: (e, t, u, x) => {
-                    let { section: y, items: O } = d[e];
-                    return (0, s.EQ)(O[t])
-                        .with(f.Tm, () =>
+                renderItem: (e, t, d, b) => {
+                    let { section: y, items: j } = u[e];
+                    return (0, s.EQ)(j[t])
+                        .with(p.Tm, () =>
                             (0, r.jsxs)(
-                                j,
+                                P,
                                 {
-                                    style: h({}, u),
-                                    isSelected: !g,
+                                    style: x({}, d),
+                                    isSelected: !f,
                                     onSelect: () => o(null),
                                     children: [
                                         (0, r.jsx)(c.t6m, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: m.notAllowedIcon,
+                                            className: g.notAllowedIcon,
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-primary",
-                                            children: null != n ? p.intl.string(p.t.CHf9iJ) : p.intl.string(p.t.PoWNfe),
+                                            children: null != n ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.PoWNfe),
                                         }),
                                     ],
                                 },
-                                x,
+                                b,
                             ),
                         )
-                        .with(f.oT, () =>
+                        .with(p.oT, () =>
                             (0, r.jsxs)(
-                                j,
+                                P,
                                 {
-                                    style: u,
+                                    style: d,
                                     onSelect: a,
                                     children: [
                                         (0, r.jsx)(c.EOn, {
@@ -188,39 +190,39 @@ let y = () => 80,
                                             width: 23,
                                             height: 23,
                                             color: "currentColor",
-                                            className: m.shopIcon,
+                                            className: g.shopIcon,
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-primary",
-                                            children: p.intl.string(p.t.pWG4ze),
+                                            children: m.intl.string(m.t.pWG4ze),
                                         }),
                                     ],
                                 },
-                                x,
+                                b,
                             ),
                         )
                         .otherwise((e) => {
                             let t = (null == i ? void 0 : i.skuId) === e.skuId;
                             return (0, r.jsx)(
-                                P,
+                                O,
                                 {
-                                    style: h({}, u),
+                                    style: x({}, d),
                                     section: y,
                                     profileEffect: e,
                                     innerRef: t ? l : void 0,
                                     isSelected: t,
                                     onSelect: () => o(e),
-                                    canUsePremiumCollectibles: b,
+                                    canUsePremiumCollectibles: h,
                                 },
-                                x,
+                                b,
                             );
                         });
                 },
                 renderSection: (e, t) => {
-                    let { header: n } = d[e];
+                    let { header: n } = u[e];
                     return (0, r.jsx)("div", {
-                        style: x(h({}, t), {
+                        style: b(x({}, t), {
                             height: "".concat(16, "px"),
                             position: "absolute",
                         }),
@@ -231,8 +233,8 @@ let y = () => 80,
                     });
                 },
                 getSectionHeight: () => 16,
-                getItemKey: (e, t) => d[e].items[t].skuId,
-                getItemHeight: y,
+                getItemKey: (e, t) => u[e].items[t].skuId,
+                getItemHeight: j,
                 removeEdgeItemGutters: !0,
             }),
         });
