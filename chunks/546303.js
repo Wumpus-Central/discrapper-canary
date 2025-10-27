@@ -13,7 +13,7 @@ var r,
     f = t(899789),
     x = t(735276),
     _ = t(619733),
-    v = t(470658),
+    v = t(269794),
     b = t(388032),
     p = t(62525);
 let j =
@@ -99,17 +99,19 @@ function h(e) {
                               (0, i.jsx)(
                                   g.Z,
                                   {
+                                      guildId: n,
                                       game: e,
                                       onClick: () =>
                                           (0, x.Z)({
                                               guildId: n,
                                               stepConfig: j,
                                               initialGameServerGame: e,
-                                              analyticsLocation: d.Z.GAME_SERVER_OVERVIEW,
+                                              analyticsLocation: d.Z.GAME_SERVER_PAGE_SIDEBAR,
                                           }),
                                       imageClassName: p.image,
                                       titleClassName: p.title,
                                       disabled: h,
+                                      location: d.Z.GAME_SERVER_PAGE_SIDEBAR,
                                   },
                                   "sidebar-game-".concat(t, "-").concat(e.id),
                               ),

@@ -1,6 +1,6 @@
 n.d(t, {
     $7l: () => b.$7,
-    $92: () => e2,
+    $92: () => e3,
     $Ab: () => L,
     $R1: () => E.$R,
     $VG: () => E.$V,
@@ -18,7 +18,7 @@ n.d(t, {
     AzA: () => rm,
     B1h: () => E.B1,
     B9o: () => tf,
-    BFP: () => t3,
+    BFP: () => t2,
     BRd: () => E.BR,
     BVn: () => rV,
     BZL: () => E.BZ,
@@ -32,7 +32,7 @@ n.d(t, {
     Cyb: () => E.Cy,
     DJE: () => re,
     DJj: () => eM,
-    DZw: () => ew,
+    DZw: () => eD,
     E07: () => tS,
     EKQ: () => E.EK,
     EOG: () => n1,
@@ -90,7 +90,7 @@ n.d(t, {
     McO: () => rY,
     NYc: () => E.NY,
     NYg: () => nV,
-    N_j: () => n2,
+    N_j: () => n3,
     NgX: () => T,
     O0b: () => n_,
     O0n: () => es,
@@ -104,7 +104,7 @@ n.d(t, {
     OYC: () => $,
     OcF: () => e9,
     Odu: () => ee,
-    PEY: () => e3,
+    PEY: () => e2,
     PNu: () => ek,
     POd: () => rf,
     PRK: () => e0,
@@ -116,7 +116,7 @@ n.d(t, {
     PsQ: () => tW,
     PyE: () => E.Py,
     QCD: () => n$,
-    QIO: () => tD,
+    QIO: () => tw,
     QKv: () => V,
     QL: () => E.QL,
     QR$: () => r_,
@@ -148,10 +148,10 @@ n.d(t, {
     TzF: () => nJ,
     U66: () => E.U6,
     ULH: () => P,
-    UWR: () => t2,
+    UWR: () => t3,
     Ucd: () => rU,
     Uk1: () => E.Uk,
-    UkZ: () => rw,
+    UkZ: () => rD,
     Usc: () => Y,
     Uvt: () => l.U,
     V$x: () => c.V,
@@ -169,7 +169,7 @@ n.d(t, {
     X6Q: () => E.X6,
     X7u: () => E.X7,
     XAJ: () => eT,
-    XKF: () => n3,
+    XKF: () => n2,
     XmY: () => e1,
     Xyh: () => e4,
     YeM: () => ec,
@@ -190,7 +190,7 @@ n.d(t, {
     aIt: () => rc,
     aO5: () => E.aO,
     aZC: () => tJ,
-    aib: () => tw,
+    aib: () => tD,
     ane: () => nj,
     apO: () => rr,
     b2L: () => na,
@@ -211,7 +211,7 @@ n.d(t, {
     eHb: () => nQ,
     eRX: () => nt,
     eWB: () => ta,
-    ecB: () => nD,
+    ecB: () => nw,
     eez: () => t_,
     en1: () => eB,
     epS: () => ru,
@@ -241,7 +241,7 @@ n.d(t, {
     j8d: () => E.j8,
     jXE: () => tU,
     jm8: () => rT,
-    jwA: () => nw,
+    jwA: () => nD,
     kEZ: () => U,
     kGb: () => rd,
     kNB: () => rl,
@@ -266,7 +266,7 @@ n.d(t, {
     p3w: () => tm,
     p6O: () => t5,
     pAY: () => th,
-    pJs: () => w,
+    pJs: () => D,
     pKx: () => E.pK,
     pM4: () => M,
     pNK: () => A,
@@ -279,7 +279,7 @@ n.d(t, {
     qWG: () => rx,
     qc2: () => rs,
     qhL: () => tn,
-    qrD: () => D,
+    qrD: () => w,
     r2o: () => j,
     rMx: () => nb,
     rnv: () => tA,
@@ -293,7 +293,7 @@ n.d(t, {
     si2: () => rS,
     t4x: () => tY,
     tG9: () => eZ,
-    tHP: () => eD,
+    tHP: () => ew,
     tPV: () => eK,
     tPk: () => E.tP,
     t_t: () => et,
@@ -328,7 +328,7 @@ n.d(t, {
     yXt: () => E.yX,
     yYS: () => E.yY,
     yb: () => W,
-    ylB: () => rD,
+    ylB: () => rw,
     yqN: () => ng,
     ys_: () => e8,
     z7k: () => tI,
@@ -611,7 +611,7 @@ var o = n(106351),
             e
         );
     })({}),
-    w = (function (e) {
+    D = (function (e) {
         return (
             (e.ADD_FRIEND = "ADD_FRIEND"),
             (e.ALL = "ALL"),
@@ -623,7 +623,7 @@ var o = n(106351),
             e
         );
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL = "ALL"), e;
     })({}),
     L = (function (e) {
@@ -2146,8 +2146,8 @@ var eR = (function (e) {
             e
         );
     })({});
-let ew = 100,
-    eD = 200,
+let eD = 100,
+    ew = 200,
     eL = 50,
     ex = 50,
     eM = 25,
@@ -2186,8 +2186,8 @@ let ew = 100,
     e$ = 10485760,
     e0 = 524288000,
     e1 = (e) => "||".concat(e, "||"),
-    e2 = /^\|\|([\s\S]+?)\|\|/,
-    e3 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
+    e3 = /^\|\|([\s\S]+?)\|\|/,
+    e2 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     e4 = /^\d{17,19}$/;
 var e8 = (function (e) {
         return (
@@ -2317,7 +2317,7 @@ let te = 128,
     tN = /^FILTER_/,
     tR = /^ANSWER_/,
     tP = 32;
-var tw = (function (e) {
+var tD = (function (e) {
         return (
             (e.GUILD = "GUILD"),
             (e.FAVORITES = "FAVORITES"),
@@ -2340,7 +2340,7 @@ var tw = (function (e) {
             e
         );
     })({}),
-    tD = (function (e) {
+    tw = (function (e) {
         return (e.NEWEST = "newest"), (e.OLDEST = "oldest"), (e.MOST_RELEVANT = "most_relevant"), e;
     })({}),
     tL = (function (e) {
@@ -3672,8 +3672,8 @@ var t$ = (function (e) {
     t1 = (function (e) {
         return (e[(e.PRIVATE = 0)] = "PRIVATE"), (e[(e.PUBLIC = 1)] = "PUBLIC"), e;
     })({});
-let t2 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
-    t3 = new Set(["facebook", "contacts"]),
+let t3 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
+    t2 = new Set(["facebook", "contacts"]),
     t4 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
     t8 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
@@ -5280,6 +5280,14 @@ var nE = (function (e) {
             (e.ACTIVITY_PANEL_SDK_LINK_VIEWED = "activity_panel_sdk_link_viewed"),
             (e.PROMOTION_REWARD_REDEMPTION_ATTEMPTED = "promotion_reward_redemption_attempted"),
             (e.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED = "game_server_hosting_third_party_consent_accepted"),
+            (e.GAME_SERVER_GAME_SELECT_OPENED = "game_server_game_select_opened"),
+            (e.GAME_SERVER_GAME_CLICKED = "game_server_game_clicked"),
+            (e.GAME_SERVER_SETTINGS_OPENED = "game_server_settings_opened"),
+            (e.GAME_SERVER_SKU_SELECTED = "game_server_sku_selected"),
+            (e.GAME_SERVER_JOIN_CLICKED = "game_server_join_clicked"),
+            (e.GAME_SERVER_COPY_IP_CLICKED = "game_server_copy_ip_clicked"),
+            (e.GAME_SERVER_VIEW_GAME_PANEL_CLICKED = "game_server_view_game_panel_clicked"),
+            (e.IMPRESSION_GAME_SERVERS_TAB_VIEWED = "impression_game_servers_tab_viewed"),
             (e.MEDIA_PICKER_ASSETS_DEBUG = "media_picker_assets_debug"),
             (e.DEBUG_MISSING_STRING = "debug_missing_string"),
             (e.ORB_BALANCE_ACTION_SHEET_ACTION = "orb_balance_action_sheet_action"),
@@ -5500,10 +5508,10 @@ let nR = Object.freeze({
 var nP = (function (e) {
         return (e.ALL = "ALL"), (e.CREATE = "CREATE"), (e.UPDATE = "UPDATE"), (e.DELETE = "DELETE"), e;
     })({}),
-    nw = (function (e) {
+    nD = (function (e) {
         return (e.USER = "1"), (e.ROLE = "0"), e;
     })({}),
-    nD = (function (e) {
+    nw = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
     nL = (function (e) {
@@ -6039,8 +6047,8 @@ let n1 = Object.freeze({
         nvidia_gdn_app: "NVIDIA Cloud Gaming Application",
         roblox: "Roblox",
     }),
-    n2 = 6016,
-    n3 = 3384;
+    n3 = 6016,
+    n2 = 3384;
 var n4 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
@@ -6294,10 +6302,10 @@ var rv = (function (e) {
         );
     })({});
 let rP = "discodoEasterEgg";
-var rw = (function (e) {
+var rD = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rD = (function (e) {
+    rw = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
     rL = (function (e) {

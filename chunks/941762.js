@@ -8,7 +8,7 @@ var r = t(951288),
     c = t(639777),
     d = t(735276),
     u = t(619733),
-    m = t(470658),
+    m = t(269794),
     g = t(388032),
     f = t(799070);
 let x = {
@@ -58,7 +58,7 @@ function _(e) {
                                           guildId: n,
                                           stepConfig: x,
                                           initialGameServerInstance: t,
-                                          analyticsLocation: s.Z.GAME_SERVER_OVERVIEW,
+                                          analyticsLocation: s.Z.GAME_SERVER_PAGE,
                                       });
                                   },
                               }),

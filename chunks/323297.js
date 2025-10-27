@@ -1,16 +1,18 @@
-t.d(n, { default: () => v });
-var r = t(951288),
-    i = t(793030),
+t.d(n, { default: () => h });
+var r = t(951288);
+t(647438);
+var i = t(793030),
     l = t(481060),
     a = t(906732),
-    o = t(899789),
-    s = t(796724),
-    d = t(343312),
-    c = t(619733),
-    u = t(470658),
-    g = t(388032),
-    m = t(871404);
-function f(e) {
+    o = t(578756),
+    s = t(899789),
+    d = t(796724),
+    c = t(343312),
+    u = t(619733),
+    g = t(269794),
+    m = t(388032),
+    f = t(871404);
+function x(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -35,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function x(e, n) {
+function p(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -53,52 +55,52 @@ function x(e, n) {
         e
     );
 }
-function p(e) {
-    let { step: n, setFooterNode: t } = (0, d.JL)(),
-        { title: a, subtitle: p } = (function (e) {
+function v(e) {
+    let { step: n, setFooterNode: t } = (0, c.JL)(),
+        { title: a, subtitle: o } = (function (e) {
             switch (e) {
-                case c.EK.SELECT_GAME:
+                case u.EK.SELECT_GAME:
                     return {
-                        title: g.intl.string(u.default["3vWDMz"]),
-                        subtitle: g.intl.string(u.default.Az5bjs),
+                        title: m.intl.string(g.default["3vWDMz"]),
+                        subtitle: m.intl.string(g.default.Az5bjs),
                     };
-                case c.EK.SERVER_SETTINGS:
-                    return { title: g.intl.string(u.default.RLGW9z) };
+                case u.EK.SERVER_SETTINGS:
+                    return { title: m.intl.string(g.default.RLGW9z) };
             }
         })(n);
     return (0, r.jsxs)(
         i.IX,
-        x(f({}, e), {
+        p(x({}, e), {
             size: "lg",
             children: [
                 (0, r.jsx)(i.xBx, {
                     title: a,
-                    subtitle: p,
+                    subtitle: o,
                 }),
                 (0, r.jsx)(l.zJl, {
-                    className: m.modalContent,
-                    style: { width: c.AK },
+                    className: f.modalContent,
+                    style: { width: u.AK },
                     children: (0, r.jsx)("div", {
-                        style: { padding: c.TG },
+                        style: { padding: u.TG },
                         children: (0, r.jsxs)(l.MyZ, {
-                            width: c.SY,
+                            width: u.SY,
                             activeSlide: n,
                             children: [
                                 (0, r.jsx)(
                                     l.Mi4,
                                     {
-                                        id: c.EK.SELECT_GAME,
-                                        children: (0, r.jsx)(o.Z, {}),
+                                        id: u.EK.SELECT_GAME,
+                                        children: (0, r.jsx)(s.Z, {}),
                                     },
-                                    c.EK.SELECT_GAME,
+                                    u.EK.SELECT_GAME,
                                 ),
                                 (0, r.jsx)(
                                     l.Mi4,
                                     {
-                                        id: c.EK.SERVER_SETTINGS,
-                                        children: (0, r.jsx)(s.Z, {}),
+                                        id: u.EK.SERVER_SETTINGS,
+                                        children: (0, r.jsx)(d.Z, {}),
                                     },
-                                    c.EK.SERVER_SETTINGS,
+                                    u.EK.SERVER_SETTINGS,
                                 ),
                             ],
                         }),
@@ -109,10 +111,13 @@ function p(e) {
         }),
     );
 }
-function v(e) {
+function h(e) {
     let { analyticsLocations: n } = (0, a.ZP)();
-    return (0, r.jsx)(a.Gt, {
-        value: n,
-        children: (0, r.jsx)(d.BT, x(f({}, e), { children: (0, r.jsx)(p, f({}, e)) })),
-    });
+    return (
+        (0, o.lY)(e.guildId, n, e.analyticsLocation),
+        (0, r.jsx)(a.Gt, {
+            value: n,
+            children: (0, r.jsx)(c.BT, p(x({}, e), { children: (0, r.jsx)(v, x({}, e)) })),
+        })
+    );
 }
