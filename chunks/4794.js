@@ -11,9 +11,8 @@ let s = l.memo(function (e) {
         [d, f] = l.useState(!1),
         { navTransition: b } = (0, o.t)();
     l.useEffect(() => {
-        var e;
-        (null == b || null == (e = b.targetAccordion) ? void 0 : e.key) === t.key && f(!0);
-    }, [null == b ? void 0 : b.targetAccordion, t.key]);
+        (null == b ? void 0 : b.targetAccordionKey) === t.key && f(!0);
+    }, [null == b ? void 0 : b.targetAccordionKey, t.key]);
     let p = null == n ? void 0 : n(d),
         y = null == u ? void 0 : u();
     return (0, r.jsx)("div", {

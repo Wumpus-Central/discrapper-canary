@@ -96,8 +96,8 @@ function b(e) {
 function p(e) {
     let { node: t, visibleContent: n, hoisted: o = !1 } = e,
         i = l.useMemo(() => t.layout[0], [t]),
-        c = s.Z.useField("currentPanel"),
-        u = null != c && c.key === (null == i ? void 0 : i.key),
+        c = s.Z.useField("currentPanelKey"),
+        u = null != c && c === (null == i ? void 0 : i.key),
         f =
             null != i
                 ? () =>
