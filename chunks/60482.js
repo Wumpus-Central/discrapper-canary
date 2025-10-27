@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -162,6 +162,13 @@ class S extends (r = i.ZP.Store) {
     }
     getStateForGuild(e) {
         return null != e ? d[e] : void 0;
+    }
+    getLowestGameCostForGuild(e) {
+        var t;
+        if (null == e) return null;
+        let n = d[e],
+            r = Object.values(null != (t = null == n ? void 0 : n.catalog) ? t : {});
+        return 0 === r.length ? null : Math.min(...r.map((e) => e.baseCost));
     }
     hasFetchedCatalog(e) {
         var t;

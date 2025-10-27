@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(953529);
+n.d(t, { Z: () => I }), n(953529);
 var r = n(951288),
     i = n(647438),
     o = n(120356),
@@ -12,8 +12,8 @@ var r = n(951288),
     f = n(279475),
     m = n(60482),
     g = n(735276),
-    v = n(149829),
-    x = n(470658),
+    v = n(459196),
+    x = n(269794),
     _ = n(388032),
     b = n(237522),
     h = n(922434),
@@ -21,8 +21,11 @@ var r = n(951288),
     C = n(611087);
 function I(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([m.Z], () => m.Z.getStateForGuild(t)),
-        o = i.useMemo(() => {
+        { state: n, lowestGameServerCost: o } = (0, s.cj)([m.Z], () => ({
+            state: m.Z.getStateForGuild(t),
+            lowestGameServerCost: m.Z.getLowestGameCostForGuild(t),
+        })),
+        I = i.useMemo(() => {
             var e;
             let t = Object.values(null != (e = null == n ? void 0 : n.entitlements) ? e : {});
             if (0 === t.length) return;
@@ -37,19 +40,14 @@ function I(e) {
                       statusText: _.intl.string(v.default.FFLkmx),
                   };
         }, [null == n ? void 0 : n.entitlements]),
-        I = (0, f.d)((null == o ? void 0 : o.type) === "active"),
-        w = i.useMemo(() => {
-            if ((null == n ? void 0 : n.catalog) == null) return 0;
-            let e = Object.values(n.catalog);
-            return 0 === e.length ? 0 : Math.min(...e.map((e) => e.baseCost));
-        }, [null == n ? void 0 : n.catalog]);
+        w = (0, f.d)((null == I ? void 0 : I.type) === "active");
     return null == n
         ? null
         : (0, r.jsxs)(p.aB, {
               label: _.intl.string(x.default["B3OfL/"]),
               badge: "beta",
-              isActive: (null == o ? void 0 : o.type) === "active",
-              isWarning: (null == o ? void 0 : o.type) === "expiring",
+              isActive: (null == I ? void 0 : I.type) === "active",
+              isWarning: (null == I ? void 0 : I.type) === "expiring",
               onClick: () =>
                   (0, g.Z)({
                       guildId: t,
@@ -69,15 +67,15 @@ function I(e) {
                   }),
                   (0, r.jsx)(p.Q9, {
                       title: _.intl.string(x.default["B3OfL/"]),
-                      textColor: I,
+                      textColor: w,
                       footer: (0, r.jsx)(p.uf, {
-                          cost: w,
+                          cost: null != o ? o : 0,
                           costDecorator: "+",
-                          status: o,
+                          status: I,
                       }),
                       children: (0, r.jsx)(a.xvT, {
                           className: b.description,
-                          color: I,
+                          color: w,
                           variant: "text-sm/medium",
                           children: _.intl.string(x.default.EGkJAG),
                       }),
