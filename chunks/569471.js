@@ -173,7 +173,7 @@ function P(e) {
     }),
         O(e.id);
 }
-function w(e) {
+function D(e) {
     let { id: t, userId: n, guildId: r, isJoining: i } = e;
     if (u.default.getId() !== n || null === r) return !1;
     i
@@ -187,7 +187,7 @@ function w(e) {
           })
         : delete h[t];
 }
-function D(e) {
+function w(e) {
     var t, n;
     let r = !1;
     return (
@@ -212,6 +212,9 @@ function D(e) {
     );
 }
 class L extends (r = o.ZP.Store) {
+    initialize() {
+        this.waitFor(u.default);
+    }
     hasJoined(e) {
         return e in h;
     }
@@ -251,7 +254,7 @@ let x = new L(s.Z, {
         LOAD_ARCHIVED_THREADS_SUCCESS: C,
         THREAD_DELETE: R,
         THREAD_MEMBER_UPDATE: P,
-        THREAD_MEMBER_LOCAL_UPDATE: w,
-        THREAD_MEMBERS_UPDATE: D,
+        THREAD_MEMBER_LOCAL_UPDATE: D,
+        THREAD_MEMBERS_UPDATE: w,
     }),
     M = x;

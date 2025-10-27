@@ -122,7 +122,7 @@ function C(e) {
 }
 class N extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, u.Z, f.default);
+        this.waitFor(c.ZP, u.Z, d.Z, f.default);
     }
     getCheck(e) {
         var t;

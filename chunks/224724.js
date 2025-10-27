@@ -54,6 +54,9 @@ function T(e) {
         (f.suggestedWishlistGamesIds = f.suggestedWishlistGamesIds.filter((e) => e !== t));
 }
 class S extends a.ZP.Store {
+    initialize() {
+        this.waitFor(s.default);
+    }
     getPendingWidgets() {
         return c;
     }

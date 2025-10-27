@@ -109,11 +109,11 @@ function P(e) {
     let { guild: t } = e;
     delete v[t.id];
 }
-function w(e) {
+function D(e) {
     let { guildId: t } = e;
     delete v[t];
 }
-function D(e) {
+function w(e) {
     let { channel: t } = e;
     return null != t.guild_id && N(t.guild_id, t.id);
 }
@@ -133,7 +133,7 @@ function M(e) {
 }
 class k extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: "1" }, () => R());
+        this.waitFor(h.Z, m.ZP, g.Z, E.Z, f.Z, b.default), l.Zo.subscribe({ location: "1" }, () => R());
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
@@ -161,13 +161,13 @@ let j = new k(a.Z, {
     GUILD_CREATE: P,
     GUILD_UPDATE: P,
     GUILD_DELETE: P,
-    GUILD_ROLE_CREATE: w,
-    GUILD_ROLE_UPDATE: w,
-    GUILD_ROLE_DELETE: w,
-    IMPERSONATE_UPDATE: w,
-    IMPERSONATE_STOP: w,
-    CHANNEL_CREATE: D,
-    CHANNEL_DELETE: D,
+    GUILD_ROLE_CREATE: D,
+    GUILD_ROLE_UPDATE: D,
+    GUILD_ROLE_DELETE: D,
+    IMPERSONATE_UPDATE: D,
+    IMPERSONATE_STOP: D,
+    CHANNEL_CREATE: w,
+    CHANNEL_DELETE: w,
     CHANNEL_UPDATES: L,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: x,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: M,

@@ -3,57 +3,60 @@ var r,
     i,
     l,
     a,
-    o = n(392711),
-    s = n.n(o),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     u = n(570140),
-    d = n(592125);
-n(914010);
-var p = n(709054),
-    f = n(176505);
-let h = {},
+    d = n(592125),
+    p = n(914010),
+    f = n(709054),
+    h = n(176505);
+let m = {},
     g = {},
-    m = {},
+    _ = {},
     b = {};
-function _(e) {
+function E(e) {
     let t = g[e];
     if (null == t) return;
-    let n = p.default.fromTimestamp(Date.now() - 900000),
-        r = s().findIndex(t, (e) => p.default.compare(e.id, n) > 0);
+    let n = f.default.fromTimestamp(Date.now() - 900000),
+        r = o().findIndex(t, (e) => f.default.compare(e.id, n) > 0);
     if (-1 === r) g[e] = [];
     else {
         let n = Math.max(r, t.length - 26);
-        g[e] = s().slice(t, n);
+        g[e] = o().slice(t, n);
     }
-    m[e] = Date.now();
+    _[e] = Date.now();
 }
-function E(e, t, n, r) {
-    h[e].add(t);
-    let i = m[t];
-    (null == i || i + 300000 > Date.now()) && _(t),
+function O(e, t, n, r) {
+    m[e].add(t);
+    let i = _[t];
+    (null == i || i + 300000 > Date.now()) && E(t),
         null == g[t] && (g[t] = []),
         g[t].push({
             id: n,
             userId: r,
         });
 }
-function O(e) {
+function I(e) {
     let { channel: t } = e;
-    delete g[t.id], delete m[t.id];
+    delete g[t.id], delete _[t.id];
 }
 class v extends (a = c.ZP.Store) {
+    initialize() {
+        this.waitFor(d.Z, p.Z);
+    }
     getActiveChannelsFetchStatus(e) {
         return b[e];
     }
     getActiveChannelIds(e) {
-        return h[e];
+        return m[e];
     }
     getChannelMessageData(e) {
         return g[e];
     }
     shouldFetch(e) {
         var t;
-        return null == h[e] && !(null == (t = b[e]) ? void 0 : t.loading);
+        return null == m[e] && !(null == (t = b[e]) ? void 0 : t.loading);
     }
 }
 (l = "ActiveChannelsStore"),
@@ -68,14 +71,14 @@ class v extends (a = c.ZP.Store) {
     new v(u.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
-            if (!(0, f.ME)(t) || null == n) return !1;
-            let r = h[n];
+            if (!(0, h.ME)(t) || null == n) return !1;
+            let r = m[n];
             if (null == r) return !1;
             r.forEach((e) => {
                 var t;
-                _(e), (null == (t = g[e]) ? void 0 : t.length) === 0 && delete g[e];
+                E(e), (null == (t = g[e]) ? void 0 : t.length) === 0 && delete g[e];
             });
-            let i = s()
+            let i = o()
                 .chain(Array.from(r))
                 .filter((e) => e in g)
                 .sortBy((e) => {
@@ -83,7 +86,7 @@ class v extends (a = c.ZP.Store) {
                     return -(null != (n = null == (t = g[e]) ? void 0 : t.length) ? n : 0);
                 })
                 .value();
-            h[n] = new Set(i);
+            m[n] = new Set(i);
         },
         MESSAGE_CREATE: function (e) {
             var t;
@@ -91,16 +94,16 @@ class v extends (a = c.ZP.Store) {
             if (i || l) return !1;
             let a = d.Z.getChannel(n);
             if (null == a) return !1;
-            let o = a.guild_id;
-            if (null == o || null == h[o]) return !1;
-            E(o, n, r.id, null == (t = r.author) ? void 0 : t.id);
+            let s = a.guild_id;
+            if (null == s || null == m[s]) return !1;
+            O(s, n, r.id, null == (t = r.author) ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete h[t.id];
+            delete m[t.id];
         },
-        CHANNEL_DELETE: O,
-        THREAD_DELETE: O,
+        CHANNEL_DELETE: I,
+        THREAD_DELETE: I,
         ACTIVE_CHANNELS_FETCH_START: function (e) {
             let { guildId: t } = e;
             b[t] = {
@@ -116,11 +119,11 @@ class v extends (a = c.ZP.Store) {
                 error: null,
                 fetchedAt: Date.now(),
             }),
-                (h[t] = new Set()),
+                (m[t] = new Set()),
                 n.forEach((e) => {
                     let { channel_id: n, messages: r } = e;
                     r.forEach((e) => {
-                        E(t, n, e.message_id, e.user_id);
+                        O(t, n, e.message_id, e.user_id);
                     });
                 });
         },

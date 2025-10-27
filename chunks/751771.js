@@ -1,4 +1,4 @@
-let i, l, s, a, r, o;
+let i, l, s, r, a, o;
 n.d(t, { Z: () => Z }), n(388685), n(642613);
 var d,
     u,
@@ -13,8 +13,8 @@ var d,
     S = n(496675),
     f = n(699516),
     E = n(981631),
-    y = n(245335);
-let C = new Set(),
+    C = n(245335);
+let y = new Set(),
     _ = [],
     N = new Map(),
     T = {
@@ -30,15 +30,15 @@ function b(e) {
             autoTrackExposure: !1,
         }),
         n = new Set(),
-        i = (null == a ? void 0 : a.type) === E.d4z.GUILD_VOICE,
+        i = (null == r ? void 0 : r.type) === E.d4z.GUILD_VOICE,
         l = null;
-    null == s || o === y.Iq.EMBEDDED_APPLICATION || (t && i) || (l = s.id);
-    let r = (0, x.rh)(C, l);
-    for (let e of (null == r || f.Z.isBlockedOrIgnored(r.id) || n.add(r.id), v.Z.getUserAffinities()))
+    null == s || o === C.Iq.EMBEDDED_APPLICATION || (t && i) || (l = s.id);
+    let a = (0, x.rh)(y, l);
+    for (let e of (null == a || f.Z.isBlockedOrIgnored(a.id) || n.add(a.id), v.Z.getUserAffinities()))
         n.add(e.otherUserId);
     let d = new Set();
     return (
-        o === y.Iq.EMBEDDED_APPLICATION &&
+        o === C.Iq.EMBEDDED_APPLICATION &&
             m.Z.getChannelHistory()
                 .map((e) => I.Z.getChannel(e))
                 .filter(p.lm)
@@ -48,7 +48,7 @@ function b(e) {
                 .forEach((e) => d.add(e.id)),
         (0, x.an)({
             query: e,
-            omitUserIds: C,
+            omitUserIds: y,
             suggestedUserIds: n,
             maxRowsWithoutQuery: 100,
             omitGuildId: l,
@@ -66,7 +66,7 @@ function j(e) {
 }
 class A extends (d = c.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, v.Z);
+        this.waitFor(I.Z, S.Z, m.Z, f.Z, v.Z);
     }
     getInviteSuggestionRows() {
         return _;
@@ -102,15 +102,15 @@ let Z = new A(g.Z, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: d, applicationId: u, inviteTargetType: c } = e;
         (s = null != d ? n : null),
-            (a = d),
-            (r = u),
+            (r = d),
+            (a = u),
             (o = c),
-            (C = new Set([
+            (y = new Set([
                 ...t,
                 ...f.Z.getBlockedOrIgnoredIDs(),
                 ...(0, x.Sz)({
-                    channel: a,
-                    applicationId: r,
+                    channel: r,
+                    applicationId: a,
                     inviteTargetType: c,
                 }),
             ])),

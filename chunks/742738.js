@@ -82,7 +82,7 @@ function S(e) {
 }
 class A extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, d.Z, m.Z, u.Z);
+        this.waitFor(l.Z, c.Z, u.Z, d.Z, _.Z, m.Z);
     }
     getActivity() {
         return O;

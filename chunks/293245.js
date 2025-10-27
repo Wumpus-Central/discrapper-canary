@@ -74,7 +74,7 @@ function v(e) {
 }
 class I extends (o = s.ZP.Store) {
     initialize() {
-        _.isPlatformEmbedded && p.S(), (r = {}), (i = new Set()), (a = []);
+        this.waitFor(d.Z, u.ZP), _.isPlatformEmbedded && p.S(), (r = {}), (i = new Set()), (a = []);
     }
     getState(e, t) {
         return r[(0, f.Tu)(e, t)];

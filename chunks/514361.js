@@ -54,14 +54,14 @@ let A = !0,
     P = (e) => {
         r = void 0;
     },
-    w = (e) => {
+    D = (e) => {
         let { channelId: t, guildId: n } = e,
             r = E.default.getCurrentUser();
         if (null == t || null == n || (0, c.zu)(s.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(r)) return;
         let i = g.Z.getChannel(t);
         null != i && (0, m.zi)(i.type) && (C = !0);
     };
-function D() {
+function w() {
     A && (r = void 0), (C = !1);
 }
 let L = () => {
@@ -95,7 +95,7 @@ let L = () => {
 class k extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0),
-            this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z),
+            this.waitFor(g.Z, u.Z, f.Z, _.ZP, h.Z, E.default),
             this.syncWith([E.default], L),
             this.syncWith([u.Z], x);
     }
@@ -132,9 +132,9 @@ let j = new k(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: N,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,
     RESET_PREVIEW_CLIENT_THEME: P,
-    CLIENT_THEMES_EDITOR_CLOSE: D,
-    CHANNEL_SELECT: w,
-    LOGOUT: D,
+    CLIENT_THEMES_EDITOR_CLOSE: w,
+    CHANNEL_SELECT: D,
+    LOGOUT: w,
     CACHE_LOADED: M,
     CONNECTION_OPEN: M,
     OVERLAY_INITIALIZE: M,

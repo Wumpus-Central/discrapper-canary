@@ -44,8 +44,8 @@ let O = [],
     N = [],
     R = !1,
     P = [],
-    w = o().chain(O),
     D = o().chain(O),
+    w = o().chain(O),
     L = new Set(),
     x = new Set();
 function M(e) {
@@ -86,8 +86,8 @@ function G() {
         (A = s.z.MATCH_SOME),
         (C = 0),
         (P = []),
-        (w = o().chain(O)),
         (D = o().chain(O)),
+        (w = o().chain(O)),
         x.clear(),
         L.clear();
 }
@@ -121,8 +121,8 @@ function F(e) {
         0 !== L.size && ((P = P.filter((e) => !L.has(e))), L.clear()),
         0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) &&
-            ((D = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(j(l.z.CREATION_DATE))));
-    let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
+            ((w = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (D = o().chain(P).sort(j(l.z.CREATION_DATE))));
+    let n = (S === l.z.LATEST_ACTIVITY ? w : D).value(),
         i = (N = 0 === T.size ? n : n.filter(U(T, A))).find((e) => k(e));
     r = null == i ? null : i;
 }
@@ -170,7 +170,7 @@ function q(e) {
 }
 class X extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, f.Z, g.Z, m.ZP);
+        this.waitFor(f.Z, p.default, h.Z, m.ZP, g.Z, _.Z);
     }
     getNewThreadCount() {
         return C;

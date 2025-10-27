@@ -40,8 +40,8 @@ function N(e, t, n) {
 let R = window.DiscordNative;
 I.Wb.dispatcher.getDispatchHandler = S.Z;
 let P = new c.Z("ConnectionStore"),
-    w = 100,
-    D = 0,
+    D = 100,
+    w = 0,
     L = null,
     x = !0,
     M = null,
@@ -61,7 +61,7 @@ function G() {
     );
 }
 async function B(e) {
-    (D = Date.now()), (L = e.sessionId), I.RR.handleConnectionOpen();
+    (w = Date.now()), (L = e.sessionId), I.RR.handleConnectionOpen();
     let t = {},
         n = E.Z.getVoiceChannelId();
     if (null != n) {
@@ -93,7 +93,7 @@ async function B(e) {
     I.GC.update(t, !0), (x = !1), (k = null);
 }
 function Z() {
-    P.verbose("connection closed dispatched"), (D = Date.now());
+    P.verbose("connection closed dispatched"), (w = Date.now());
 }
 function F() {
     k = null;
@@ -199,7 +199,7 @@ function et(e) {
         I.Wb.isSessionEstablished() &&
             ("userIds" in e
                 ? a()(e.userIds)
-                      .chunk(w)
+                      .chunk(D)
                       .forEach((t) => {
                           I.Wb.requestGuildMembers(e.guildIds, {
                               userIds: t,
@@ -300,7 +300,9 @@ function eg(e) {
 }
 class eE extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.default, E.Z, p.Z, _.Z, d.Z), this.syncWith([h.Z], $), this.syncWith([b.Z], ee);
+        this.waitFor(f.default, _.Z, p.Z, h.Z, m.Z, g.Z, E.Z, b.Z, y.Z, d.Z),
+            this.syncWith([h.Z], $),
+            this.syncWith([b.Z], ee);
     }
     getSocket() {
         return I.Wb;
@@ -315,7 +317,7 @@ class eE extends (r = o.ZP.Store) {
         return I.Wb.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return D;
+        return w;
     }
 }
 N(eE, "displayName", "GatewayConnectionStore");

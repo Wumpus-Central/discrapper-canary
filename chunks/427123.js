@@ -87,7 +87,7 @@ function A() {
 class C extends (r = o.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(_.ZP, m.Z, h.Z), (v = null != (e = s.K.get(b)) ? e : v);
+        this.waitFor(f.Z, h.Z, _.ZP, m.Z, p.default), (v = null != (e = s.K.get(b)) ? e : v);
     }
     getDetectedOffPlatformPremiumPerks() {
         return a().values(y);

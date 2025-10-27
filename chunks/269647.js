@@ -65,7 +65,7 @@ function y() {
 }
 class O extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, l.Z, u.Z, d.Z);
+        this.waitFor(o.default, s.Z, l.Z, c.Z, u.Z, d.Z);
     }
     shouldShowWarning() {
         return !h;

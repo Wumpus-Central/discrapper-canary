@@ -43,6 +43,9 @@ function N(e, t, n) {
     );
 }
 class I extends (r = d.ZP.Store) {
+    initialize() {
+        this.waitFor(_.Z, j.Z);
+    }
     getTemplate() {
         let e = _.Z.getProps().guild;
         if (null == e) return null;

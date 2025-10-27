@@ -98,6 +98,9 @@ function y(e) {
     t || null == r || v.recordGatewayResponse(r);
 }
 class O extends r.ZP.Store {
+    initialize() {
+        this.waitFor(l.Z, c.Z, u.Z);
+    }
     recordMessageSendAttempt(e, t) {
         var n, r, i, a;
         let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},

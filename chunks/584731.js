@@ -3,8 +3,8 @@ var r = n(442837),
     i = n(570140),
     l = n(513418),
     a = n(710845),
-    o = n(592125),
-    s = n(375954),
+    s = n(592125),
+    o = n(375954),
     c = n(625236);
 function u(e, t, n) {
     return (
@@ -22,6 +22,9 @@ function u(e, t, n) {
 let d = -1 / 0,
     p = new a.Z("MessagePreviewStore");
 class f extends r.ZP.Store {
+    initialize() {
+        this.waitFor(s.Z, o.Z);
+    }
     isLatest(e, t) {
         var n;
         let r = this.guilds.get(null != e ? e : null);
@@ -63,7 +66,7 @@ class f extends r.ZP.Store {
         var t, n;
         let r = null != (n = e.guildId) ? n : null;
         if ((null == (t = this.data(r)) ? void 0 : t.messageId(e.channelId)) === e.id) {
-            let t = s.Z.getMessages(e.channelId),
+            let t = o.Z.getMessages(e.channelId),
                 n = t.hasMoreAfter ? null : t.last();
             null != n ? this.data(r).put(e.channelId, n, this.generation) : this.data(r).delete(e.channelId);
         }
@@ -84,7 +87,7 @@ class f extends r.ZP.Store {
     }
     handleLoadMessagesSuccess(e) {
         var t, n;
-        let r = o.Z.getBasicChannel(e.channelId);
+        let r = s.Z.getBasicChannel(e.channelId);
         if (null == r) return !1;
         (0, l.Z)(e.messages),
             e.isAfter || e.isBefore || e.hasMoreAfter
@@ -92,7 +95,7 @@ class f extends r.ZP.Store {
                 : this.data(r.guild_id).put(e.channelId, null != (t = e.messages[0]) ? t : null, this.generation);
     }
     handleLocalMessagesLoaded(e) {
-        let t = o.Z.getBasicChannel(e.channelId);
+        let t = s.Z.getBasicChannel(e.channelId);
         if (null != t) {
             var n;
             (0, l.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null != (n = e.messages[0]) ? n : null, d);

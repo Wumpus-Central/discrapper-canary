@@ -74,7 +74,7 @@ function v(e) {
 }
 class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
+        this.waitFor(s.Z, l.Z, c.ZP), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
     }
     getState() {
         return f;

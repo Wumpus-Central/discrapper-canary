@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => v,
-    Z: () => w,
+    Z: () => D,
 }),
     n(35282),
     n(539854);
@@ -147,7 +147,7 @@ function N() {
 let R = { pendingUsages: [] };
 class P extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.Z, f.Z),
+        this.waitFor(u.Z, d.Z, f.Z, _.Z, c.Z),
             null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (R = e)),
             this.syncWith([c.Z], N);
     }
@@ -179,7 +179,7 @@ class P extends (r = o.ZP.PersistedStore) {
     }
 }
 m(P, "displayName", "FrecencyStore"), m(P, "persistKey", "FrecencyStore");
-let w = new P(s.Z, {
+let D = new P(s.Z, {
     CHANNEL_SELECT: A,
     VOICE_CHANNEL_SELECT: A,
     USER_SETTINGS_PROTO_UPDATE: C,

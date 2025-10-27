@@ -24,7 +24,7 @@ class d extends (r = i.ZP.PersistedStore) {
         return u;
     }
     initialize(e) {
-        null != e && (u = e);
+        this.waitFor(a.Z, o.Z), null != e && (u = e);
     }
     getNotificationStateForGuild(e) {
         return u[e];

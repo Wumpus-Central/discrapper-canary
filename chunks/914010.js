@@ -69,13 +69,13 @@ class C extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         var t, n, r, a;
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
-            this.waitFor(f.Z, u.default, d.Z),
+            this.waitFor(u.default, d.Z, f.Z, s.Z),
             (E = null != (n = null == e ? void 0 : e.selectedGuildTimestampMillis) ? n : {}),
             (m = null != (r = null == e ? void 0 : e.selectedGuildId) ? r : null),
             (g = null != (a = null == e ? void 0 : e.lastSelectedGuildId) ? a : null);
         let o = d.Z.lastNonVoiceRoute,
-            s = (0, i.LX)(o, { path: _.Z5c.CHANNEL(l.Hw.guildId()) });
-        null == s || null == (t = s.params) || t.guildId;
+            c = (0, i.LX)(o, { path: _.Z5c.CHANNEL(l.Hw.guildId()) });
+        null == c || null == (t = c.params) || t.guildId;
     }
     getState() {
         return {

@@ -48,7 +48,7 @@ function h(e) {
 class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t, n;
-        if ((this.syncWith([s.Z], p), null == e)) return;
+        if ((this.waitFor(o.Z, s.Z, l.ZP), this.syncWith([s.Z], p), null == e)) return;
         let { suggestedChannels: r, dismissedSuggestions: i, channelOpensByChannelId: a } = e;
         if (null != r) for (let e in r) (t = new Set(r[e])), (d[e] = void 0 !== t ? t : new Set());
         if (null != i) for (let e in i) (n = new Set(i[e])), (f[e] = void 0 !== n ? n : new Set());

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var i,
     a = n(442837),
     o = n(544891),
@@ -169,6 +169,9 @@ function R(e) {
     return t === b ? 0 : Object.keys(t).length;
 }
 class P extends (i = a.ZP.Store) {
+    initialize() {
+        this.waitFor(u.default);
+    }
     getTypingUsers(e) {
         return y(e);
     }
@@ -177,7 +180,7 @@ class P extends (i = a.ZP.Store) {
     }
 }
 _(P, "displayName", "TypingStore");
-let w = new P(s.Z, {
+let D = new P(s.Z, {
     TYPING_START: S,
     TYPING_STOP: A,
     TYPING_START_LOCAL: O,

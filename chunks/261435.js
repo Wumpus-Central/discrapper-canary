@@ -22,13 +22,13 @@ var i,
     x = n(371651),
     S = n(624864),
     Z = n(695346),
-    j = n(163612),
-    C = n(314897),
+    C = n(163612),
+    j = n(314897),
     I = n(592125),
     P = n(292959),
     w = n(158776),
-    N = n(944486),
-    T = n(885110),
+    T = n(944486),
+    N = n(885110),
     D = n(246946),
     k = n(594174),
     R = n(974180),
@@ -138,18 +138,18 @@ function er(e, t) {
 function es(e) {
     let { channelId: t, ringing: n } = e,
         i = ei(t);
-    if (!n.includes(C.default.getId())) return et(i);
+    if (!n.includes(j.default.getId())) return et(i);
     if (null != i) return !1;
     let r = I.Z.getChannel(t);
     if (
         null == r ||
         !r.isRingable() ||
         ("GUILD_RING_START" === e.type &&
-            !j.Z.getCurrentConfig({
+            !C.Z.getCurrentConfig({
                 guildId: e.guildId,
                 location: "OverlayStartRinging",
             }).enabled) ||
-        T.Z.getStatus() === U.Skl.DND ||
+        N.Z.getStatus() === U.Skl.DND ||
         Z.QZ.getSetting()
     )
         return !1;
@@ -164,7 +164,22 @@ function es(e) {
 }
 class eo extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(L.default, I.Z, k.default, S.Z);
+        this.waitFor(
+            j.default,
+            I.Z,
+            O.Z,
+            P.Z,
+            A.default,
+            x.default,
+            W.Z,
+            S.Z,
+            L.default,
+            w.Z,
+            T.Z,
+            N.Z,
+            D.Z,
+            k.default,
+        );
     }
     getNotifications() {
         return $;
@@ -236,7 +251,7 @@ let el = new eo(
                       if (!(0, v.eF)(o, r, !0, !0)) return !1;
                       let e = (function (e, t, n) {
                           let i, r;
-                          if ((s()(null != t.activity, "received null message activity"), n.id === C.default.getId()))
+                          if ((s()(null != t.activity, "received null message activity"), n.id === j.default.getId()))
                               return !1;
                           let o = W.Z.getGame();
                           if (null == o) return !1;
@@ -252,7 +267,7 @@ let el = new eo(
                                   break;
                               case U.mFx.JOIN_REQUEST:
                                   if (
-                                      null == (i = T.Z.getApplicationActivity(o.id)) ||
+                                      null == (i = N.Z.getApplicationActivity(o.id)) ||
                                       null == i.party ||
                                       i.party.id !== t.activity.party_id
                                   )
@@ -270,7 +285,7 @@ let el = new eo(
                       if (!1 !== e) return e;
                   }
                   if (
-                      ((!L.default.isInstanceLocked() || L.default.isPinned(U.Odu.TEXT)) && r === N.Z.getChannelId()) ||
+                      ((!L.default.isInstanceLocked() || L.default.isPinned(U.Odu.TEXT)) && r === T.Z.getChannelId()) ||
                       S.Z.isNotificationDisabled(G.n0.TextChat) ||
                       D.Z.disableNotifications ||
                       !(0, v.eF)(o, r)
@@ -301,13 +316,13 @@ let el = new eo(
               GUILD_RING_STOP: function (e) {
                   let { channelId: t, guildId: n, ringing: i } = e;
                   if (
-                      !j.Z.getCurrentConfig({
+                      !C.Z.getCurrentConfig({
                           guildId: n,
                           location: "OverlayStopRinging",
                       }).enabled
                   )
                       return !1;
-                  i.includes(C.default.getId()) && et(ei(t));
+                  i.includes(j.default.getId()) && et(ei(t));
               },
               ACTIVITY_USER_ACTION: function (e) {
                   let t,
@@ -325,19 +340,19 @@ let el = new eo(
                   );
               },
               CLIPS_SAVE_CLIP_START: function () {
-                  er((0, b.f)(B.intl.string(B.t.NBMK9v)));
+                  er((0, b.f)(B.intl.string(B.t.NBMK9m)));
               },
               CLIPS_SAVE_CLIP: function () {
                   er(
                       (0, b.f)(
-                          B.intl.formatToPlainString(B.t.KLhk6u, {
+                          B.intl.formatToPlainString(B.t.KLhk6s, {
                               duration: (0, z.A)(O.Z.getSettings().clipsLength / 1000, !0),
                           }),
                       ),
                   );
               },
               CLIPS_SAVE_CLIP_ERROR: function () {
-                  er((0, b.f)(B.intl.string(B.t["1ZbZur"])));
+                  er((0, b.f)(B.intl.string(B.t["1ZbZuh"])));
               },
               STREAM_START: function (e) {
                   let t = (0, b.y)();

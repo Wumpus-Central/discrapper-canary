@@ -45,7 +45,7 @@ function f(e) {
 }
 class m extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        if (null != e) {
+        if ((this.waitFor(a.default, o.ZP), null != e)) {
             var t, n;
             (p = null != (t = e.upcomingEventDismissals) ? t : {}),
                 (h = null != (n = e.upcomingEventSeenTimestamps) ? n : {});

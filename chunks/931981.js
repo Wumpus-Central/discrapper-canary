@@ -34,7 +34,7 @@ function g(e, t, n) {
 let E = new Set();
 class b extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (E = new Set(e));
+        this.waitFor(d.Z, f.ZP, _.Z, p.default), null != e && (E = new Set(e));
     }
     hasId(e) {
         return E.has(e);
@@ -67,7 +67,7 @@ let y = new b(c.Z, {}),
                 (0, i.jsx)(l.Text, {
                     variant: "text-sm/medium",
                     className: o()(m.text, m.replyLabel),
-                    children: h.intl.string(h.t["2UvR1N"]),
+                    children: h.intl.string(h.t["2UvR1E"]),
                 }),
                 (0, i.jsx)("div", {
                     className: m.actions,

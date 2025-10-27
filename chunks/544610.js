@@ -154,7 +154,9 @@ function L() {
 }
 class D extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(C.default, f.Z, b.Z, c.Z, m.Z), this.syncWith([C.default, f.Z], Z), this.syncWith([b.Z], T);
+        this.waitFor(f.Z, m.Z, c.Z, g.Z, b.Z, u.Z, C.default),
+            this.syncWith([C.default, f.Z], Z),
+            this.syncWith([b.Z], T);
     }
     getResults() {
         return O;

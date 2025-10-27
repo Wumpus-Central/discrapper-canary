@@ -32,6 +32,9 @@ function _(e) {
     }
 }
 class p extends (r = o.ZP.Store) {
+    initialize() {
+        this.waitFor(c.default);
+    }
     shouldShowReactivateNotice() {
         let e = c.default.getCurrentUser();
         return !(0, u.I5)(e) && f;

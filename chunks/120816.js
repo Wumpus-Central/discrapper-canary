@@ -14,7 +14,7 @@ let u = 0,
     x = !1;
 class f extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z);
+        this.waitFor(c.default, d.Z);
     }
     get loggedEvents() {
         return m;

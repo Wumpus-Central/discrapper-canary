@@ -48,7 +48,7 @@ function b(e) {
 }
 class y extends (a = o.ZP.Store) {
     initialize() {
-        h = s.K.get(f) || h;
+        this.waitFor(c.Z, u.Z), (h = s.K.get(f) || h);
     }
     isAFKChannel() {
         let e = c.Z.getChannel(i);

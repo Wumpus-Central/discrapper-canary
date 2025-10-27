@@ -103,7 +103,7 @@ function C() {
 }
 class N extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, c.Z, l.Z), this.syncWith([c.Z, l.Z], A);
+        this.waitFor(l.Z, c.Z, s.Z, u.default), this.syncWith([c.Z, l.Z], A);
     }
     get videoFilterAssets() {
         return b;

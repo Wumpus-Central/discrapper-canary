@@ -177,13 +177,14 @@ function g(e) {
 }
 class E extends (r = i.ZP.Store) {
     initialize() {
-        o.ZP.addChangeListener(() => {
-            let e = s.Z.getChannelId();
-            if (null == e) return (d = {}), !0;
-            let t = o.ZP.getCurrentSidebarChannelId(e);
-            if (null != t && t in d) return !1;
-            d = e in d ? { [e]: d[e] } : {};
-        });
+        this.waitFor(o.ZP, s.Z),
+            o.ZP.addChangeListener(() => {
+                let e = s.Z.getChannelId();
+                if (null == e) return (d = {}), !0;
+                let t = o.ZP.getCurrentSidebarChannelId(e);
+                if (null != t && t in d) return !1;
+                d = e in d ? { [e]: d[e] } : {};
+            });
     }
     getActiveCommand(e) {
         return _(e).activeCommand;

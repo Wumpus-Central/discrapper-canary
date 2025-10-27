@@ -109,7 +109,7 @@ function S(e) {
 class A extends (r = i.ZP.Store) {
     initialize() {
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(c.Z);
+            this.waitFor(s.Z, l.Z, c.Z, u.Z);
     }
     getSpeakingDuration(e, t) {
         var n, r;

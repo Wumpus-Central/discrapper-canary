@@ -52,6 +52,9 @@ function m(e) {
     n.forEach((e) => a.users.set(e.id, new l.Z(e)));
 }
 class g extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(c.Z, o.Z, u.default);
+    }
     getReactions(e, t, n, r, i) {
         let a = _.ensure(t, n, i);
         if (!a.fetched) {

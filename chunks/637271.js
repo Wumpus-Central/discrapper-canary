@@ -22,7 +22,7 @@ let c = {},
 class d extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        c = null != (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) ? t : {};
+        this.waitFor(a.Z), (c = null != (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) ? t : {});
     }
     getState() {
         return { selectedResourceChannelIdByGuildId: c };

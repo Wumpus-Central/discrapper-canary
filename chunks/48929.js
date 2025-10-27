@@ -10,6 +10,9 @@ var i,
     d = n(522579);
 let p = new Set();
 class h extends (i = l.ZP.Store) {
+    initialize() {
+        this.waitFor(s.default, c.Z, o.Z);
+    }
     shouldDisplayPrompt(e) {
         return p.has(e);
     }

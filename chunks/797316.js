@@ -88,12 +88,12 @@ function R(e) {
 function P() {
     A(!1, !1);
 }
-function w(e) {
+function D(e) {
     let { idle: t } = e;
     if (!t) return !1;
     A(!1, !0);
 }
-function D() {
+function w() {
     S.reset();
 }
 function L(e) {
@@ -185,7 +185,9 @@ function K(e) {
 }
 class z extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, E.Z, v.Z, O.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], W), this.syncWith([p.ZP], V);
+        this.waitFor(f.default, p.ZP, h.Z, u.Z, m.Z, g.ZP, E.Z, b.Z, y.Z, O.Z, v.Z, d.Z),
+            this.syncWith([d.Z], W),
+            this.syncWith([p.ZP], V);
     }
     getSubscribedThreadIds() {
         return S.getSubscribedThreadIds();
@@ -209,8 +211,8 @@ let q = new z(l.Z, {
     CONNECTION_OPEN: R,
     CONNECTION_RESUMED: R,
     CONNECTION_CLOSED: P,
-    IDLE: w,
-    LOGOUT: D,
+    IDLE: D,
+    LOGOUT: w,
     VOICE_CHANNEL_SELECT: F,
     CHANNEL_SELECT: F,
     GUILD_CREATE: L,

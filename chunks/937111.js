@@ -136,6 +136,9 @@ function N() {
     u = null;
 }
 class R extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(o.default);
+    }
     getRequest(e) {
         return d[e];
     }

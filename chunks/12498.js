@@ -32,6 +32,9 @@ function p(e) {
     for (let { id: t, status: n } of ((u[e.guildId] = {}), e.channels)) u[e.guildId][t] = n;
 }
 class h extends (r = a.ZP.Store) {
+    initialize() {
+        this.waitFor(s.Z);
+    }
     getChannelStatus(e) {
         var t;
         if (null != e && null != e.guild_id && e.type === i.d.GUILD_VOICE)

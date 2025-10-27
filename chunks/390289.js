@@ -111,7 +111,7 @@ function N(e, t) {
 }
 class A extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (x.channels = e.channels), this.syncWith([u.ZP], I), this.waitFor(u.ZP, c.Z, o.Z);
+        null != e && (x.channels = e.channels), this.syncWith([u.ZP], I), this.waitFor(a.default, o.Z, s.Z, c.Z, u.ZP);
     }
     getState() {
         return x;

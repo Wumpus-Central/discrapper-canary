@@ -109,7 +109,7 @@ function S() {
 }
 class A extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], S);
+        null != e && (b = e), this.waitFor(u.ZP, d.Z), this.syncWith([d.Z], S);
     }
     getState() {
         return b;

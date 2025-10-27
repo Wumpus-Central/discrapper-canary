@@ -69,7 +69,7 @@ class S extends (o = s.ZP.PersistedStore) {
     initialize(e) {
         (r = (m = p({}, null != e ? e : h)).applicationId),
             (i = m.originURL),
-            this.waitFor(d.Z, c.Z),
+            this.waitFor(f.Z, c.Z, d.Z),
             this.syncWith([d.Z, c.Z], () => !0),
             f.Z.whenInitialized(() => {
                 E = !0;

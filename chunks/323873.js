@@ -92,6 +92,9 @@ function b(e) {
     (null == (t = p[n]) ? void 0 : t.messageId) === r && (delete p[n], delete h[n]);
 }
 class y extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(c.Z);
+    }
     isEditing(e, t) {
         var n;
         return (null == (n = p[e]) ? void 0 : n.messageId) === t;

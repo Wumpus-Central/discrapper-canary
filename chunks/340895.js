@@ -87,11 +87,11 @@ function P(e) {
         N(t)
     );
 }
-function w(e) {
+function D(e) {
     let { channelId: t } = e;
     return N(t);
 }
-function D(e) {
+function w(e) {
     let { x: t, y: n } = e;
     return (
         (r = {
@@ -119,7 +119,10 @@ function M() {
 }
 class k extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, p.Z), this.syncWith([p.Z], x), this.syncWith([u.Z], x), this.syncWith([l.Z], M);
+        this.waitFor(f.default, l.Z, _.Z, p.Z, u.Z, h.Z),
+            this.syncWith([p.Z], x),
+            this.syncWith([u.Z], x),
+            this.syncWith([l.Z], M);
     }
     getIncomingCalls() {
         return A ? I : Array.from(T.values());
@@ -141,7 +144,7 @@ let j = new k(s.Z, {
     CALL_DELETE: P,
     GUILD_RING_START: R,
     GUILD_RING_STOP: P,
-    VOICE_CHANNEL_SELECT: w,
-    INCOMING_CALL_MOVE: D,
+    VOICE_CHANNEL_SELECT: D,
+    INCOMING_CALL_MOVE: w,
     CHANNEL_DELETE: L,
 });

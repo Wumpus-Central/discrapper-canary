@@ -44,6 +44,9 @@ function h() {
     (u = 0), (d = null), (f = null);
 }
 class m extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(s.Z);
+    }
     get purchaseTokenAuthState() {
         return u;
     }

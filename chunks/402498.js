@@ -8,8 +8,8 @@ var r,
     a = n(579092),
     o = n(570140),
     s = n(188274),
-    l = n(111628),
-    c = n(837268);
+    l = n(837268),
+    c = n(338949);
 function u(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ let d = new a.Yd("LegacyOverlayClient"),
     E = null;
 function b(e) {
     let { level: t, message: n, timestamp: r, context: i } = e;
-    if (!l.Z.hasRenderDebugMode(c.GO.LegacyOverlayLogging) || __OVERLAY__) return !1;
+    if (!c.Z.hasRenderDebugMode(l.GO.LegacyOverlayLogging) || __OVERLAY__) return !1;
     if (
         (m.push({
             level: t,
@@ -76,7 +76,7 @@ function O() {
 }
 function v(e) {
     let { enabled: t, mode: n } = e;
-    return n === c.GO.LegacyOverlayLogging && (t ? y() : O()), !1;
+    return n === l.GO.LegacyOverlayLogging && (t ? y() : O()), !1;
 }
 function I(e) {
     let { logs: t } = e;
@@ -84,7 +84,7 @@ function I(e) {
 }
 class T extends (r = i.ZP.Store) {
     initialize() {
-        l.Z.hasRenderDebugMode(c.GO.LegacyOverlayLogging) && y();
+        this.waitFor(c.Z), c.Z.hasRenderDebugMode(l.GO.LegacyOverlayLogging) && y();
     }
     getAllLogs() {
         return m;

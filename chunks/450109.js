@@ -139,6 +139,9 @@ function I(e, t) {
     return null == n || n.length <= t ? null : n[n.length - t - 1];
 }
 class T extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(s.default, l.Z);
+    }
     getConnectionStats(e) {
         return I(e, 0);
     }

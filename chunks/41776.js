@@ -92,7 +92,7 @@ function S() {
 }
 class A extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, c.default);
+        this.waitFor(s.ZP, l.Z, c.default);
     }
     lurkingGuildIds() {
         return f;

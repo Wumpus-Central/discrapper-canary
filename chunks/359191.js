@@ -24,7 +24,7 @@ function _(e) {
 }
 class C extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, g.Z, p.Z, m.Z, d.Z), this.syncWith([s.Z, g.Z, p.Z, m.Z, d.Z], () => !0);
+        this.waitFor(s.Z, g.Z, m.Z, p.Z, d.Z, c.Z), this.syncWith([s.Z, g.Z, p.Z, m.Z, d.Z], () => !0);
     }
     isEducationUpsellDismissed(e) {
         return x.has(e);

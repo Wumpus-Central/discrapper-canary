@@ -35,8 +35,8 @@ var r,
     N = n(160404),
     R = n(41776),
     P = n(332473),
-    w = n(30684),
-    D = n(616106),
+    D = n(30684),
+    w = n(616106),
     L = n(107756),
     x = n(518638),
     M = n(1844),
@@ -89,7 +89,7 @@ var r,
     eN = n(46140),
     eR = n(231338),
     eP = n(65154);
-function ew(e, t, n) {
+function eD(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -102,7 +102,7 @@ function ew(e, t, n) {
         e
     );
 }
-function eD(e) {
+function ew(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -113,7 +113,7 @@ function eD(e) {
                 }),
             )),
             r.forEach(function (t) {
-                ew(e, t, n[t]);
+                eD(e, t, n[t]);
             });
     }
     return e;
@@ -664,7 +664,7 @@ let eQ = [
             },
         },
         [eS.kVF.PREMIUM_REACTIVATE]: {
-            predicate: () => !eX(eS.kVF.PREMIUM_REACTIVATE) && D.Z.shouldShowReactivateNotice(),
+            predicate: () => !eX(eS.kVF.PREMIUM_REACTIVATE) && w.Z.shouldShowReactivateNotice(),
         },
         [eS.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT]: {
             predicate: (e) => {
@@ -747,7 +747,7 @@ let eQ = [
                 var t;
                 let { currentUser: n } = e,
                     r = null != (t = eh.Z.paymentSources) ? t : {};
-                return w.Z.getIsTargeted() && !(0, eO.I5)(n) && 0 !== Object.keys(r).length;
+                return D.Z.getIsTargeted() && !(0, eO.I5)(n) && 0 !== Object.keys(r).length;
             },
         },
         [eS.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -811,7 +811,7 @@ function e0() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eH = ex(eD({}, eV), {
+            eH = ex(ew({}, eV), {
                 type: n,
                 metadata: o,
             });
@@ -836,10 +836,10 @@ function e1(e) {
         e0()
     );
 }
-function e2(e) {
+function e3(e) {
     eH = e.notice;
 }
-function e3(e) {
+function e2(e) {
     return null != eH && (null == e.id || e.id === eH.id) && (eq(eH.type, e.isTemporary, e.untilAtLeast), e0());
 }
 function e4(e) {
@@ -871,37 +871,54 @@ class tn extends (r = o.ZP.Store) {
     initialize() {
         this.syncWith([ed.Z, ea.Z, $.Z, el.Z, M.Z, eg.Z, q.Z, J.Z, Y.Z, S.Z, U.Z, K.Z, O.ZP, W.Z], e0),
             this.waitFor(
-                e_.default,
-                ec.Z,
-                et.Z,
-                ee.ZP,
-                eo.Z,
-                en.Z,
-                eu.Z,
-                y.Z,
-                el.Z,
-                ef.Z,
-                F.Z,
-                O.ZP,
-                ea.Z,
+                b.Z,
+                _.Z,
+                K.Z,
+                z.default,
+                q.Z,
+                X.Z,
+                Q.Z,
+                D.Z,
+                J.Z,
+                h.Z,
+                $.Z,
                 ev.Z,
                 eI.Z,
-                eb.Z,
-                er.Z,
-                em.Z,
                 eT.Z,
-                $.Z,
+                eE.Z,
+                y.Z,
+                v.Z,
+                C.Z,
+                S.Z,
+                ee.ZP,
+                et.Z,
+                N.Z,
+                R.Z,
+                en.Z,
+                er.Z,
                 eh.Z,
                 ei.Z,
+                ea.Z,
                 M.Z,
-                eE.Z,
-                eg.Z,
-                J.Z,
-                R.Z,
-                h.Z,
                 j.Z,
                 U.Z,
-                K.Z,
+                eo.Z,
+                O.ZP,
+                es.Z,
+                el.Z,
+                F.Z,
+                ec.Z,
+                eu.Z,
+                w.Z,
+                em.Z,
+                ed.Z,
+                eb.Z,
+                eg.Z,
+                ef.Z,
+                Y.Z,
+                e_.default,
+                ep.Z,
+                W.Z,
             );
     }
     hasNotice() {
@@ -914,7 +931,7 @@ class tn extends (r = o.ZP.Store) {
         return eX(e);
     }
 }
-ew(tn, "displayName", "NoticeStore");
+eD(tn, "displayName", "NoticeStore");
 let tr = new tn(u.Z, {
     CURRENT_USER_UPDATE: e0,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: e0,
@@ -962,8 +979,8 @@ let tr = new tn(u.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: e6,
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: e7,
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: e9,
-    NOTICE_SHOW: e2,
-    NOTICE_DISMISS: e3,
+    NOTICE_SHOW: e3,
+    NOTICE_DISMISS: e2,
     NOTICE_DISABLE: e4,
     LOGOUT: tt,
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: e0,

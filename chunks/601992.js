@@ -49,6 +49,9 @@ function E(e) {
         i && ((f = a), null != t && (h[t] = a));
 }
 class b extends r.ZP.Store {
+    initialize() {
+        this.waitFor(a.ZP, o.ZP, s.default);
+    }
     getGlobalStats() {
         let e = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1000));
         return {

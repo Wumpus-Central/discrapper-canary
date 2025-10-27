@@ -39,8 +39,8 @@ let T = !1,
     N = [],
     R = [],
     P = !1,
-    w = !0,
-    D = Object.freeze([]),
+    D = !0,
+    w = Object.freeze([]),
     L = Object.freeze([]),
     x = [],
     M = [];
@@ -75,11 +75,11 @@ function G(e) {
     }
 }
 function B() {
-    (w = !0), (A = S), Z();
+    (D = !0), (A = S), Z();
 }
 function Z() {
     var e;
-    if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (P = g.Z.isAFK()), w)) S = A;
+    if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (P = g.Z.isAFK()), D)) S = A;
     else if (T) S = v.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
@@ -87,15 +87,15 @@ function Z() {
     }
     S === v.Skl.ONLINE && C > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = w || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
+        n = D || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
     a()(N, n) || ((N = n), (R = k(n)), (t = !0));
     let r = O.Z.getRemoteActivities();
-    D !== r && ((D = r), (t = !0));
+    w !== r && ((w = r), (t = !0));
     let i = O.Z.getHiddenActivities();
     L !== i && (L = i),
         t &&
             (M = k(
-                (x = s()([...N, ...D.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
+                (x = s()([...N, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
                     .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
                     .value()),
             ));
@@ -107,14 +107,14 @@ function V() {
     return (T = !1), Z();
 }
 function H() {
-    (w = !1), (A = v.Skl.UNKNOWN), Z(), y.Z.setCurrentUserOnConnectionOpen(S, x);
+    (D = !1), (A = v.Skl.UNKNOWN), Z(), y.Z.setCurrentUserOnConnectionOpen(S, x);
 }
 function Y() {
     H();
 }
 class W extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], Z);
+        this.waitFor(m.Z, g.Z, E.Z, b.Z, y.Z, O.Z, d.Z, _.Z), this.syncWith([b.Z], Z);
     }
     getLocalPresence() {
         return {

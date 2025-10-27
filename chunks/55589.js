@@ -87,11 +87,11 @@ function P(e) {
     let r = _.Z.getChannel(t);
     return null != r && v.set(t, S(r, n.id));
 }
-function w(e) {
+function D(e) {
     let t = e.guild.id;
     return v.delete(t);
 }
-function D() {
+function w() {
     let e = _.Z.getMutablePrivateChannels();
     for (let t in e) v.set(t, S(e[t]));
 }
@@ -121,7 +121,7 @@ let L = (() => {
 })();
 class x extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, p.Z, g.default, u.Z, m.ZP), this.syncWith([m.ZP, u.Z], A);
+        this.waitFor(_.Z, p.Z, u.Z, h.ZP, d.Z, m.ZP, g.default), this.syncWith([m.ZP, u.Z], A);
     }
     getPrivateChannelIds() {
         return L();
@@ -145,12 +145,12 @@ let M = new x(l.Z, {
     CONNECTION_OPEN: A,
     CONNECTION_OPEN_SUPPLEMENTAL: A,
     OVERLAY_INITIALIZE: A,
-    CACHE_LOADED: D,
-    CACHE_LOADED_LAZY: D,
+    CACHE_LOADED: w,
+    CACHE_LOADED_LAZY: w,
     CHANNEL_UPDATES: N,
     CHANNEL_CREATE: C,
     CHANNEL_DELETE: R,
     MESSAGE_CREATE: P,
-    GUILD_CREATE: w,
+    GUILD_CREATE: D,
     LOGOUT: I,
 });

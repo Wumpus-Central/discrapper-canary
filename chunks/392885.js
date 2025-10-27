@@ -29,6 +29,9 @@ function g(e) {
     }
 }
 class m extends (i = l.ZP.Store) {
+    initialize() {
+        this.waitFor(s.Z);
+    }
     getCurrentPage() {
         return d;
     }

@@ -38,6 +38,9 @@ function f(e) {
     });
 }
 class _ extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(s.Z);
+    }
     getTemplates(e) {
         return c[e];
     }

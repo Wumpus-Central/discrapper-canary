@@ -19,6 +19,9 @@ function g(e) {
     d.delete(e.guild.id);
 }
 class m extends (r = o.ZP.Store) {
+    initialize() {
+        this.waitFor(s.Z);
+    }
     getStartTime(e) {
         var t;
         if (null != e && null != e.guild_id && e.type === l.d.GUILD_VOICE)

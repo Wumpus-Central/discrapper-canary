@@ -20,6 +20,9 @@ let u = {},
         ],
     });
 class d extends (i = r.ZP.Store) {
+    initialize() {
+        this.waitFor(s.default);
+    }
     areSlayerNotificationsSuppressed() {
         if (c.getCurrentConfig({ location: "Store" }, { autoTrackExposure: !1 }).enabled) return !1;
         for (let e in u) if (u[e] === s.default.getId()) return !0;

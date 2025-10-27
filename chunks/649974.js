@@ -137,7 +137,7 @@ function b() {
 }
 class v extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z), this.syncWith([s.Z], b);
+        this.waitFor(o.Z, s.Z, c.default), this.syncWith([s.Z], b);
     }
     get games() {
         return h;

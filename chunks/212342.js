@@ -63,7 +63,7 @@ function v(e) {
 }
 class I extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), (m = new Set(a.K.get(h)));
+        this.waitFor(s.default, l.Z, c.Z, u.default), (m = new Set(a.K.get(h)));
     }
     shouldShowBump(e) {
         return g.has(e);

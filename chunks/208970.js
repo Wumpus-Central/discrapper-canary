@@ -123,6 +123,9 @@ function O() {
     d = {};
 }
 class v extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(o.Z);
+    }
     getSearchQuery(e) {
         let t = d[e];
         return null == t ? void 0 : t.query;

@@ -144,7 +144,7 @@ function A() {
 }
 class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = e);
+        this.waitFor(o.Z), null != e && (h = e);
     }
     getState() {
         return h;

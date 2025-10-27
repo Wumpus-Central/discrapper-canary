@@ -25,6 +25,9 @@ function d(e) {
     r = e.associatedGame;
 }
 class f extends (i = a.ZP.Store) {
+    initialize() {
+        this.waitFor(l.Z, s.ZP);
+    }
     getGameForPID(e) {
         if (__OVERLAY__ || null == e) return null;
         let t = s.ZP.getGameOrTransformedSubgameForPID(e);
