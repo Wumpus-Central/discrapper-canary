@@ -5,13 +5,13 @@ var r = n(951288),
     o = n.n(l),
     a = n(91192),
     s = n(442837),
-    c = n(28664),
-    u = n(481060),
-    d = n(493683),
-    p = n(239091),
-    f = n(99690),
-    h = n(471445),
-    g = n(111028),
+    c = n(194983),
+    u = n(28664),
+    d = n(481060),
+    p = n(493683),
+    f = n(239091),
+    h = n(99690),
+    g = n(471445),
     m = n(569471),
     b = n(488131),
     _ = n(592125),
@@ -79,7 +79,7 @@ function L(e) {
             className: o()(A.spine, { [A.spineWithGuildIcon]: n }, { [A.invertedSpine]: i }),
             style: t,
         },
-        { density: a } = (0, u.TCT)();
+        { density: a } = (0, d.TCT)();
     switch (a) {
         case "cozy":
             return (0, r.jsxs)(
@@ -150,10 +150,10 @@ function M(e) {
     let { thread: t } = e,
         n = i.useMemo(() => {
             var e;
-            return null != (e = (0, h.KS)(t)) ? e : u.or_;
+            return null != (e = (0, g.KS)(t)) ? e : d.or_;
         }, [t]),
-        l = (0, h.bT)(t);
-    return (0, r.jsx)(c.u, {
+        l = (0, g.bT)(t);
+    return (0, r.jsx)(u.u, {
         text: l,
         delay: 500,
         asContainer: !0,
@@ -169,7 +169,7 @@ function M(e) {
     });
 }
 let k = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: c, isLast: h, withGuildIcon: A } = e,
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: u, isLast: g, withGuildIcon: A } = e,
         k = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(t), [t]),
         G = (0, s.e7)([j.Z], () => j.Z.hasVideo(t.id)),
         {
@@ -191,13 +191,13 @@ let k = i.memo(function (e) {
             [t],
         ),
         K = i.useCallback(() => {
-            d.Z.preload(t.guild_id, t.id);
+            p.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
         Y = i.useCallback(
             (e) => {
                 let i = _.Z.getChannel(t.id);
                 null != i &&
-                    (0, p.jW)(e, async () => {
+                    (0, f.jW)(e, async () => {
                         let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                         return (t) => (0, r.jsx)(e, D(R({}, t), { channel: i }));
                     });
@@ -243,14 +243,14 @@ let k = i.memo(function (e) {
         className: o()(T.containerDefault, { [T.selected]: l }),
         children: [
             (0, r.jsx)(L, { withGuildIcon: A }),
-            h
+            g
                 ? null
                 : (0, r.jsx)(L, {
                       withGuildIcon: A,
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
                   }),
-            (0, r.jsx)(u.tEY, {
+            (0, r.jsx)(d.tEY, {
                 focusTarget: $,
                 ringTarget: $,
                 offset: {
@@ -273,7 +273,7 @@ let k = i.memo(function (e) {
                     children: [
                         !U || V || l ? null : (0, r.jsx)("div", { className: o()(w.unread, w.unreadImportant) }),
                         (0, r.jsx)(
-                            u.P3F,
+                            d.P3F,
                             D(R({}, J), {
                                 innerRef: $,
                                 className: w.link,
@@ -290,15 +290,15 @@ let k = i.memo(function (e) {
                                                       (0, r.jsx)(M, { thread: t }),
                                                       null == z
                                                           ? null
-                                                          : (0, r.jsx)(f.Z, {
+                                                          : (0, r.jsx)(h.Z, {
                                                                 user: z,
-                                                                size: u.EFr.SIZE_16,
+                                                                size: d.EFr.SIZE_16,
                                                             }),
                                                   ],
                                               })
                                             : null,
                                         "icon-in-bubble" === H.variant ? (0, r.jsx)(M, { thread: t }) : null,
-                                        (0, r.jsx)(g.Z, {
+                                        (0, r.jsx)(c.Z, {
                                             className: w.name,
                                             "aria-hidden": !0,
                                             children: t.name,
@@ -330,7 +330,7 @@ let k = i.memo(function (e) {
             }),
             (0, r.jsx)(I.Z, {
                 channel: t,
-                collapsed: !c && 1 !== k.length,
+                collapsed: !u && 1 !== k.length,
                 collapsedMax: 6,
                 voiceStates: k,
                 location: P.Sbl.GUILD_CHANNEL_LIST,

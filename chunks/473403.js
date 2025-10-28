@@ -10,12 +10,12 @@ var t = l(951288),
     s = l.n(i);
 if (12633 == l.j) var a = l(91192);
 var o = l(442837),
-    c = l(28664),
-    u = l(481060),
-    d = l(43267),
-    f = l(933557),
-    h = l(471445),
-    p = l(111028),
+    c = l(194983),
+    u = l(28664),
+    d = l(481060),
+    f = l(43267),
+    h = l(933557),
+    p = l(471445),
     m = l(131016),
     E = l(821795),
     v = l(892567),
@@ -42,17 +42,17 @@ let L = {
 function S(e) {
     e.preventDefault(), e.stopPropagation();
 }
-let A = D.ZP.getEnableHardwareAcceleration() ? u.Xo$ : u.qEK;
+let A = D.ZP.getEnableHardwareAcceleration() ? d.Xo$ : d.qEK;
 function C(e) {
-    let { channel: n, size: l = u.EFr.SIZE_20 } = e;
+    let { channel: n, size: l = d.EFr.SIZE_20 } = e;
     return (0, t.jsx)(A, {
-        src: (0, d.x)(n),
+        src: (0, f.x)(n),
         "aria-hidden": !0,
         size: l,
     });
 }
 function P(e) {
-    let { channel: n, size: l = u.EFr.SIZE_20 } = e,
+    let { channel: n, size: l = d.EFr.SIZE_20 } = e,
         r = (0, o.e7)([_.default], () => _.default.getUser(null == n ? void 0 : n.recipients[0])),
         i = (0, o.e7)(
             [y.Z],
@@ -82,12 +82,12 @@ function P(e) {
     });
 }
 let U = (e) => {
-        let { className: n, containerClassName: l, channel: r, locked: i, hasActiveThreads: a, withGuildIcon: u } = e,
+        let { className: n, containerClassName: l, channel: r, locked: i, hasActiveThreads: a, withGuildIcon: c } = e,
             d = (0, o.e7)([N.Z], () => N.Z.getGuild(r.guild_id), [r.guild_id]),
             f = r.type === T.d4z.DM || r.type === T.d4z.GROUP_DM,
-            p = null;
-        if (u && null != d && !f)
-            p = (0, t.jsx)(b.Z, {
+            h = null;
+        if (c && null != d && !f)
+            h = (0, t.jsx)(b.Z, {
                 size: b.E.SMALL_32,
                 className: I.iconContainerWithGuildIcon,
                 iconClassName: I.iconWithGuildIcon,
@@ -108,28 +108,28 @@ let U = (e) => {
                             return (0, t.jsx)(C, { channel: e });
                         };
                     default:
-                        return (0, h.KS)(e, n, l);
+                        return (0, p.KS)(e, n, l);
                 }
             })(r, d, {
                 locked: i,
                 hasActiveThreads: a,
             });
             if (null == e) return null;
-            p = (0, t.jsx)(e, {
+            h = (0, t.jsx)(e, {
                 color: "currentColor",
                 className: s()(I.icon, n),
             });
         }
-        let m = u ? (null == d ? void 0 : d.name) : (0, h.bT)(r, d, i, a),
-            E = u && null != d ? "".concat(d.name, " - ").concat(m, " icon") : "".concat(m, " icon");
-        return (0, t.jsx)(c.u, {
+        let m = c ? (null == d ? void 0 : d.name) : (0, p.bT)(r, d, i, a),
+            E = c && null != d ? "".concat(d.name, " - ").concat(m, " icon") : "".concat(m, " icon");
+        return (0, t.jsx)(u.u, {
             text: m,
             delay: 500,
             children: (0, t.jsx)("div", {
                 role: "img",
                 "aria-label": E,
                 className: s()(I.iconContainer, l),
-                children: p,
+                children: h,
             }),
         });
     },
@@ -138,9 +138,9 @@ let U = (e) => {
             ? r.forwardRef(function (e, n) {
                   var l, i, o;
                   let {
-                          channel: c,
-                          name: d,
-                          muted: h,
+                          channel: u,
+                          name: f,
+                          muted: p,
                           selected: m,
                           connected: E,
                           unread: v,
@@ -170,7 +170,7 @@ let U = (e) => {
                           hasActiveEvent: J = !1,
                       } = e,
                       Q = X === M.i.ALL_MESSAGES || (null != B && B > 0),
-                      $ = (0, a.JA)(c.id),
+                      $ = (0, a.JA)(u.id),
                       { role: ee } = $,
                       en = (function (e, n) {
                           if (null == e) return {};
@@ -197,10 +197,10 @@ let U = (e) => {
                       })($, ["role"]),
                       el = r.useRef(null),
                       et = r.useRef(null),
-                      er = (0, O.Z)(c),
-                      ei = T.Z5c.CHANNEL(er, c.id),
-                      es = (0, f.ZP)(c),
-                      ea = c.isGuildVocal(),
+                      er = (0, O.Z)(u),
+                      ei = T.Z5c.CHANNEL(er, u.id),
+                      es = (0, h.ZP)(u),
+                      ea = u.isGuildVocal(),
                       eo = (0, t.jsx)("div", {
                           className: s()({ [I.favoritesSuggestion]: Y }),
                           ref: et,
@@ -237,7 +237,7 @@ let U = (e) => {
                                       target: "_blank",
                                       ref: el,
                                       className: I.link,
-                                      onClick: () => (null == g ? void 0 : g(c)),
+                                      onClick: () => (null == g ? void 0 : g(u)),
                                   },
                                   en,
                               )),
@@ -251,18 +251,18 @@ let U = (e) => {
                                               children: [
                                                   (0, t.jsx)(U, {
                                                       className: P,
-                                                      channel: c,
+                                                      channel: u,
                                                       guild: K,
                                                       hasActiveThreads: N,
                                                       locked: b,
                                                       withGuildIcon: q,
                                                   }),
-                                                  (0, t.jsx)(p.Z, {
+                                                  (0, t.jsx)(c.Z, {
                                                       className: s()(I.name, { [I.activeEvent]: J }),
                                                       "aria-hidden": !0,
                                                       children: (0, t.jsx)(R, {
-                                                          channel: c,
-                                                          name: null != d ? d : es,
+                                                          channel: u,
+                                                          name: null != f ? f : es,
                                                       }),
                                                   }),
                                                   r.Children.count(F) > 0
@@ -277,7 +277,7 @@ let U = (e) => {
                                           null != w
                                               ? (0, t.jsx)("div", {
                                                     className: s()(I.linkBottom, { [I.withGuildIcon]: q }),
-                                                    children: (0, t.jsx)(u.Text, {
+                                                    children: (0, t.jsx)(d.Text, {
                                                         color: null != G ? G : "text-muted",
                                                         variant: "text-xs/medium",
                                                         className: I.subtitle,
@@ -302,7 +302,7 @@ let U = (e) => {
                               i),
                           ),
                       });
-                  return (0, t.jsx)(u.tEY, {
+                  return (0, t.jsx)(d.tEY, {
                       focusTarget: el,
                       ringTarget: et,
                       offset: {
@@ -319,7 +319,7 @@ let U = (e) => {
                                   if (m) return s()(x.selectedChannel, L.SELECTED);
                                   if (E) return s()(x.selectedChannel, L.CONNECTED);
                                   if (b) return L.LOCKED;
-                                  if (h) return L.MUTED;
+                                  if (p) return L.MUTED;
                                   if (v)
                                       if (Q) return L.UNREAD_IMPORTANT;
                                       else return L.UNREAD_LESS_IMPORTANT;
@@ -344,13 +344,13 @@ let U = (e) => {
                                   }
                               })(null != V ? V : Z),
                           ),
-                          onMouseUp: (e) => (null == _ ? void 0 : _(e, c)),
-                          onMouseDown: (e) => (null == y ? void 0 : y(e, c)),
-                          onContextMenu: (e) => (null == D ? void 0 : D(e, c)),
+                          onMouseUp: (e) => (null == _ ? void 0 : _(e, u)),
+                          onMouseDown: (e) => (null == y ? void 0 : y(e, u)),
+                          onContextMenu: (e) => (null == D ? void 0 : D(e, u)),
                           onMouseEnter: k,
                           onMouseLeave: z,
                           children: [
-                              h || !v
+                              p || !v
                                   ? null
                                   : (0, t.jsx)("div", { className: s()(I.unread, Q ? I.unreadImportant : void 0) }),
                               null != (l = null == A ? void 0 : A(eo)) ? l : eo,

@@ -7,12 +7,12 @@ var r = n(951288),
     l = n(866442),
     c = n(442837),
     u = n(692547),
-    d = n(28664),
-    f = n(481060),
-    _ = n(239091),
-    p = n(607070),
-    h = n(134433),
-    m = n(111028),
+    d = n(194983),
+    f = n(28664),
+    _ = n(481060),
+    p = n(239091),
+    h = n(607070),
+    m = n(134433),
     g = n(518738),
     E = n(884902),
     b = n(48950),
@@ -103,12 +103,12 @@ let N = i.forwardRef(function (e, t) {
             size: 16,
             guildId: D,
         }),
-        G = (0, c.e7)([p.Z], () => p.Z.roleStyle),
+        G = (0, c.e7)([h.Z], () => h.Z.roleStyle),
         B = (null == (a = P.tags) ? void 0 : a.guild_connections) === null,
         Z = i.useCallback(
             (e) => {
-                (0, _.jW)(e, async () => {
-                    let { default: e } = await n.e("5396").then(n.bind(n, 731646));
+                (0, p.jW)(e, async () => {
+                    let { default: e } = await n.e("5396").then(n.bind(n, 999588));
                     return (t) =>
                         (0, r.jsx)(
                             e,
@@ -121,7 +121,7 @@ let N = i.forwardRef(function (e, t) {
             },
             [P.id],
         ),
-        F = (0, f.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
+        F = (0, _.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         V = null != (v = P.colorString) ? v : F,
         H = null != (T = (0, l.wK)(V, 0.6)) ? T : void 0,
         Y = u.Z.unsafe_rawColors.WHITE_500.css,
@@ -129,21 +129,21 @@ let N = i.forwardRef(function (e, t) {
     null != W && 0.3 > (0, l.Bd)(W) && (Y = u.Z.unsafe_rawColors.PRIMARY_630.css);
     let K = (0, E._f)(D, P, P.colorStrings);
     C = B
-        ? (0, r.jsx)(h.Z, {
+        ? (0, r.jsx)(m.Z, {
               className: O.roleFlowerStar,
               iconClassName: N ? O.roleVerifiedIcon : void 0,
               color: V,
               size: 14,
           })
         : "dot" === G
-          ? (0, r.jsx)(f.FhE, {
+          ? (0, r.jsx)(_.FhE, {
                 className: O.roleDot,
                 color: V,
                 background: !1,
                 colors: K,
                 tooltip: !1,
             })
-          : (0, r.jsx)(f.xko, {
+          : (0, r.jsx)(_.xko, {
                 color: V,
                 colors: K,
                 className: O.roleCircle,
@@ -154,10 +154,10 @@ let N = i.forwardRef(function (e, t) {
         }, [H, L, e.style]),
         q = () =>
             N
-                ? (0, r.jsx)(d.u, {
+                ? (0, r.jsx)(f.u, {
                       asContainer: !0,
                       text: y.intl.string(y.t.u3RVsH),
-                      children: (0, r.jsxs)(f.P3F, {
+                      children: (0, r.jsxs)(_.P3F, {
                           className: o()(O.roleRemoveButtonCanRemove, O.roleRemoveButton),
                           onClick: w,
                           tabIndex: k,
@@ -166,7 +166,7 @@ let N = i.forwardRef(function (e, t) {
                           "aria-label": y.intl.formatToPlainString(y.t.QrxwhY, { roleName: P.name }),
                           children: [
                               C,
-                              (0, r.jsx)(f.Dio, {
+                              (0, r.jsx)(_.Dio, {
                                   size: "md",
                                   color: Y,
                                   className: O.roleRemoveIcon,
@@ -175,7 +175,7 @@ let N = i.forwardRef(function (e, t) {
                           ],
                       }),
                   })
-                : (0, r.jsx)(f.P3F, {
+                : (0, r.jsx)(_.P3F, {
                       className: O.roleRemoveButton,
                       tabIndex: -1,
                       focusProps: { focusClassName: O.roleRemoveIconFocused },
@@ -183,7 +183,7 @@ let N = i.forwardRef(function (e, t) {
                       "aria-label": y.intl.formatToPlainString(y.t.QrxwhY, { roleName: P.name }),
                       children: C,
                   });
-    return (0, r.jsx)(f.tEY, {
+    return (0, r.jsx)(_.tEY, {
         children: (0, r.jsxs)(
             "div",
             S(
@@ -206,9 +206,9 @@ let N = i.forwardRef(function (e, t) {
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
                             className: O.roleName,
-                            children: (0, r.jsx)(f.Text, {
+                            children: (0, r.jsx)(_.Text, {
                                 variant: "text-xs/medium",
-                                children: (0, r.jsx)(m.Z, { children: P.name }),
+                                children: (0, r.jsx)(d.Z, { children: P.name }),
                             }),
                         }),
                     ],

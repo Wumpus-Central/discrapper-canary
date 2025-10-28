@@ -1,11 +1,11 @@
 n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
-var i = n(780384),
-    l = n(481060),
-    o = n(239091),
-    a = n(44315),
-    s = n(111028),
+var i = n(194983),
+    l = n(780384),
+    o = n(481060),
+    a = n(239091),
+    s = n(44315),
     c = n(565138),
     u = n(5192),
     d = n(652853),
@@ -13,12 +13,12 @@ var i = n(780384),
     f = n(981631),
     h = n(671955),
     g = n(323759);
-let m = (0, l.pxk)(l.EFr.SIZE_16);
+let m = (0, o.pxk)(o.EFr.SIZE_16);
 function b(e) {
     let { user: t, guild: b, nick: _, onSelect: O } = e,
         { theme: y, themeType: j } = (0, d.z)(),
         v = t.hasAvatarForGuild(b.id);
-    return (0, r.jsxs)(l.P3F, {
+    return (0, r.jsxs)(o.P3F, {
         focusProps:
             j === h.l.MODAL_V2
                 ? {
@@ -32,7 +32,7 @@ function b(e) {
         className: g.row,
         onClick: O,
         onContextMenu: (e) => {
-            (0, o.jW)(e, async () => {
+            (0, a.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("57804"),
                     n.e("13599"),
@@ -115,8 +115,8 @@ function b(e) {
                 guild: b,
                 showBadge: !0,
                 className: null != b.icon ? g.icon : g.noIcon,
-                badgeStrokeColor: (0, a.Lq)((0, i.wj)(y) ? f.Ilk.PRIMARY_600 : f.Ilk.WHITE_500),
-                badgeTooltipColor: l.r6K.PRIMARY,
+                badgeStrokeColor: (0, s.Lq)((0, l.wj)(y) ? f.Ilk.PRIMARY_600 : f.Ilk.WHITE_500),
+                badgeTooltipColor: o.r6K.PRIMARY,
                 badgeTooltipDelay: p.vB,
                 size: c.Z.Sizes.MEDIUM,
                 active: !0,
@@ -132,15 +132,15 @@ function b(e) {
                         (0, r.jsxs)("div", {
                             className: g.nick,
                             children: [
-                                (0, r.jsx)(l.qEK, {
+                                (0, r.jsx)(o.qEK, {
                                     src: t.getAvatarURL(b.id, m),
-                                    size: l.EFr.SIZE_16,
+                                    size: o.EFr.SIZE_16,
                                     className: g.avatar,
                                     "aria-hidden": !0,
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
-                                    children: (0, r.jsx)(s.Z, {
+                                    children: (0, r.jsx)(i.Z, {
                                         delay: p.vB,
                                         children: null != _ ? _ : u.ZP.getName(b.id, void 0, t),
                                     }),
@@ -149,9 +149,9 @@ function b(e) {
                         }),
                     !v &&
                         null != _ &&
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-xs/medium",
-                            children: (0, r.jsx)(s.Z, {
+                            children: (0, r.jsx)(i.Z, {
                                 delay: p.vB,
                                 children: _,
                             }),

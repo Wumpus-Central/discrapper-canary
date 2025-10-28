@@ -4,14 +4,14 @@ var o = t(951288),
     a = t(120356),
     i = t.n(a),
     c = t(442837),
-    l = t(28664),
-    u = t(755721),
-    _ = t(481060),
-    d = t(13245),
-    s = t(367907),
-    p = t(753972),
-    f = t(812206),
-    m = t(111028),
+    l = t(194983),
+    u = t(28664),
+    _ = t(755721),
+    d = t(481060),
+    s = t(13245),
+    p = t(367907),
+    f = t(753972),
+    m = t(812206),
     b = t(322155),
     h = t(522474),
     v = t(788983),
@@ -45,7 +45,7 @@ var o = t(951288),
 let K = L.u8.SIZE_24;
 function Y(e) {
     let { applicationId: n, channelId: t } = e,
-        a = (0, c.e7)([f.Z], () => f.Z.getApplication(n)),
+        a = (0, c.e7)([m.Z], () => m.Z.getApplication(n)),
         Y = (0, c.e7)([W.ZP], () => W.ZP.getSelfEmbeddedActivities().get(n)),
         J = (0, c.e7)([O.Z], () => O.Z.getChannel(t)),
         V = g.Sb.useSetting(),
@@ -71,7 +71,7 @@ function Y(e) {
                 let r = X.get(e.id),
                     a = null != (t = null == r ? void 0 : r.nick) ? t : T.ZP.getName(e);
                 return (0, o.jsx)(
-                    l.u,
+                    u.u,
                     {
                         asContainer: !0,
                         text: a,
@@ -102,7 +102,7 @@ function Y(e) {
         ),
         en = r.useCallback(() => {
             let e = (0, A.getPID)();
-            d.Z.setInputLocked(!b.Z.isInputLocked(e), e);
+            s.Z.setInputLocked(!b.Z.isInputLocked(e), e);
         }, []),
         et = (0, E.P)(),
         {
@@ -156,20 +156,20 @@ function Y(e) {
         })(),
         e_ = r.useRef(null);
     if (null == a || null == Y) return null;
-    let ed = (0, o.jsx)(p.Z, {
+    let ed = (0, o.jsx)(f.Z, {
         application: a,
         size: 24,
         className: G.appIcon,
     });
     return (
         V &&
-            (ed = (0, o.jsx)(l.u, {
+            (ed = (0, o.jsx)(u.u, {
                 asContainer: !0,
                 text: Y.compositeInstanceId,
                 position: "bottom",
                 children: ed,
             })),
-        (0, o.jsx)(_.f6W, {
+        (0, o.jsx)(d.f6W, {
             theme: F.BRd.DARK,
             children: (e) =>
                 (0, o.jsxs)("div", {
@@ -179,15 +179,15 @@ function Y(e) {
                             className: i()(G.headerSection, G.headerSectionLeft),
                             children: [
                                 ed,
-                                (0, o.jsx)(_.Text, {
+                                (0, o.jsx)(d.Text, {
                                     variant: "text-md/normal",
                                     color: "header-primary",
                                     className: G.applicationName,
-                                    children: (0, o.jsx)(m.Z, { children: a.name }),
+                                    children: (0, o.jsx)(l.Z, { children: a.name }),
                                 }),
                                 (0, o.jsx)("div", {
                                     className: G.dotSpacer,
-                                    children: (0, o.jsx)(_.Text, {
+                                    children: (0, o.jsx)(d.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
                                         children: ".",
@@ -215,15 +215,15 @@ function Y(e) {
                                             channel: J,
                                             shouldPrioritizeGroupPlusIcon: !0,
                                             iconClassName: G.inviteButtonIcon,
-                                            size: u.zx.Sizes.TINY,
-                                            look: u.zx.Looks.FILLED,
+                                            size: _.zx.Sizes.TINY,
+                                            look: _.zx.Looks.FILLED,
                                             buttonText: H.intl.string(H.t["6F9ivu"]),
-                                            color: u.zx.Colors.TRANSPARENT,
+                                            color: _.zx.Colors.TRANSPARENT,
                                         }),
                                         et
                                             ? (0, o.jsx)(I.Z, {
                                                   onClick: en,
-                                                  iconComponent: _.epB,
+                                                  iconComponent: d.epB,
                                                   label: H.intl.string(H.t.mseZsD),
                                               })
                                             : null,
@@ -238,7 +238,7 @@ function Y(e) {
                                                   popoutOpen: !0,
                                                   onOpenPopout: () => {},
                                                   onClosePopout: () => {
-                                                      (0, s.yw)(F.rMx.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
+                                                      (0, p.yw)(F.rMx.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
                                                           (0, U.Z)({
                                                               onConfirm: () => {
                                                                   z.Z.popInActivity();
@@ -253,7 +253,7 @@ function Y(e) {
                                             onClick: eu,
                                         }),
                                         (0, o.jsx)(
-                                            _.yRy,
+                                            d.yRy,
                                             {
                                                 targetElementRef: e_,
                                                 position: "bottom",

@@ -2,9 +2,9 @@ n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(392711),
-    a = n(28664),
-    o = n(481060),
-    s = n(111028),
+    a = n(194983),
+    o = n(28664),
+    s = n(481060),
     l = n(5192),
     c = n(652853),
     u = n(671955),
@@ -174,17 +174,17 @@ function g(e) {
                               b && i === O
                                   ? (0, r.jsx)("div", {
                                         className: d.overflowCount,
-                                        children: (0, r.jsx)(o.Text, {
+                                        children: (0, r.jsx)(s.Text, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
-                                            children: (0, r.jsx)(s.Z, { children: y > 99 ? ">99" : "+".concat(y) }),
+                                            children: (0, r.jsx)(a.Z, { children: y > 99 ? ">99" : "+".concat(y) }),
                                         }),
                                     })
-                                  : (0, r.jsx)(a.u, {
+                                  : (0, r.jsx)(o.u, {
                                         text: l.ZP.getName(n.guild_id, n.id, c),
                                         children: (0, r.jsx)("img", {
                                             className: d.avatar,
-                                            src: c.getAvatarURL(n.guild_id, (0, o.pxk)(o.EFr.SIZE_80)),
+                                            src: c.getAvatarURL(n.guild_id, (0, s.pxk)(s.EFr.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),

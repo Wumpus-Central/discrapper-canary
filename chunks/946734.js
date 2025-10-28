@@ -4,12 +4,12 @@ var r = n(951288),
     l = n(392711),
     o = n.n(l),
     a = n(442837),
-    s = n(28664),
-    c = n(481060),
-    u = n(884338),
-    d = n(100527),
-    p = n(906732),
-    f = n(111028),
+    s = n(194983),
+    c = n(28664),
+    u = n(481060),
+    d = n(884338),
+    p = n(100527),
+    f = n(906732),
     h = n(150039),
     g = n(892001),
     m = n(271383),
@@ -19,8 +19,8 @@ var r = n(951288),
     y = n(823379),
     j = n(665149),
     v = n(228168),
-    x = n(388032),
-    C = n(130370);
+    C = n(388032),
+    x = n(130370);
 function E(e, t, n) {
     return (
         t in e
@@ -45,14 +45,14 @@ class S {
     renderNicknamePairs(e) {
         return this.getNicknameGuildPairs().map((t, n) => {
             let [l, o] = t,
-                a = (0, r.jsx)(c.P3F, {
+                a = (0, r.jsx)(u.P3F, {
                     tag: "span",
                     onClick: this.handleClick,
                     children: l,
                 });
             return (
                 o.length > 0 &&
-                    (a = (0, r.jsx)(s.u, {
+                    (a = (0, r.jsx)(c.u, {
                         asContainer: !0,
                         tag: "span",
                         text: o.join(", "),
@@ -104,19 +104,19 @@ class S {
             ),
             E(this, "renderMoreAvatars", () =>
                 (0, r.jsx)(
-                    s.u,
+                    c.u,
                     {
                         asContainer: !0,
                         tag: "span",
-                        text: x.intl.string(x.t["UTjRE/"]),
+                        text: C.intl.string(C.t["UTjRE/"]),
                         position: "bottom",
-                        children: (0, r.jsx)(c.P3F, {
-                            className: C.moreAvatars,
+                        children: (0, r.jsx)(u.P3F, {
+                            className: x.moreAvatars,
                             onClick: this.handleClick,
-                            children: (0, r.jsx)(c.oFk, {
+                            children: (0, r.jsx)(u.oFk, {
                                 size: "xs",
                                 color: "currentColor",
-                                className: C.plusIcon,
+                                className: x.plusIcon,
                             }),
                         }),
                     },
@@ -142,7 +142,7 @@ function I(e) {
         n = t.getRecipientId(),
         l = (0, h.gc)(n),
         o = Array(l.length).fill(null),
-        { analyticsLocations: g } = (0, p.ZP)(d.Z.AKA),
+        { analyticsLocations: g } = (0, f.ZP)(p.Z.AKA),
         m = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: r } = e,
                 l = (0, a.e7)([_.default], () => _.default.getUser(t), [t]),
@@ -177,18 +177,18 @@ function I(e) {
             y(!1);
         }, [y]);
     return 0 === m.getNicknameGuildPairs().length && 0 === l.length
-        ? (0, r.jsx)("div", { className: C.spacer })
-        : (0, r.jsxs)(p.Gt, {
+        ? (0, r.jsx)("div", { className: x.spacer })
+        : (0, r.jsxs)(f.Gt, {
               value: g,
               children: [
-                  (0, r.jsx)(j.iz, { className: C.divider }),
-                  (0, r.jsx)(c.IGR, {
-                      text: x.intl.string(x.t.l1QVfj),
+                  (0, r.jsx)(j.iz, { className: x.divider }),
+                  (0, r.jsx)(u.IGR, {
+                      text: C.intl.string(C.t.l1QVfj),
                       disableColor: !0,
-                      className: C.akaBadge,
+                      className: x.akaBadge,
                   }),
                   l.length > 0
-                      ? (0, r.jsx)(u.ZP, {
+                      ? (0, r.jsx)(d.ZP, {
                             size: 16,
                             users: o,
                             showUserPopout: !1,
@@ -199,14 +199,14 @@ function I(e) {
                                 return null == a || null == o
                                     ? null
                                     : (0, r.jsx)(
-                                          s.u,
+                                          c.u,
                                           {
                                               asContainer: !0,
                                               text: null == (i = b.Z.getGuild(a)) ? void 0 : i.name,
                                               position: "bottom",
                                               children: (0, r.jsx)("img", {
                                                   alt: "",
-                                                  className: C.avatar,
+                                                  className: x.avatar,
                                                   onClick: m.handleClick,
                                                   src: o.getAvatarURL(a, 16),
                                                   "aria-hidden": !0,
@@ -218,13 +218,13 @@ function I(e) {
                             renderMoreUsers: m.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: C.avatars,
+                            className: x.avatars,
                         })
                       : null,
                   m.getNicknameGuildPairs().length > 0
-                      ? (0, r.jsx)(f.Z, {
+                      ? (0, r.jsx)(s.Z, {
                             position: "bottom",
-                            className: C.nicknames,
+                            className: x.nicknames,
                             delay: 0,
                             onTooltipShow: v,
                             onTooltipHide: E,
