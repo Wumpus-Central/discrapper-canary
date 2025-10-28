@@ -75,12 +75,14 @@ function c(e, t) {
 }
 class u extends r.Z {
     static fromServer(e) {
-        var { sku_id: t, sku_product_line: n, sku_name: r } = e;
+        var { sku_id: t, sku_product_line: n, sku_name: r, is_owned: i, gifter_user_id: o } = e;
         return new u(
-            s(a({}, l(e, ["sku_id", "sku_product_line", "sku_name"])), {
+            s(a({}, l(e, ["sku_id", "sku_product_line", "sku_name", "is_owned", "gifter_user_id"])), {
                 sku_id: t,
                 sku_product_line: n,
                 sku_name: r,
+                is_owned: i,
+                gifter_user_id: o,
             }),
         );
     }
@@ -89,8 +91,12 @@ class u extends r.Z {
             i(this, "skuId", void 0),
             i(this, "skuProductLine", void 0),
             i(this, "skuName", void 0),
+            i(this, "isOwned", void 0),
+            i(this, "gifterUserId", void 0),
             (this.skuId = e.sku_id),
             (this.skuProductLine = e.sku_product_line),
-            (this.skuName = e.sku_name);
+            (this.skuName = e.sku_name),
+            (this.isOwned = e.is_owned),
+            (this.gifterUserId = e.gifter_user_id);
     }
 }

@@ -3,7 +3,7 @@ e.exports = {
     container: "container__39b32",
     smallCard: "smallCard__39b32",
     largeCard: "largeCard__39b32",
-    giftSent: "giftSent__39b32",
+    isOwned: "isOwned__39b32",
     cardPreview: "cardPreview__39b32",
     cardStateIconWrapper: "cardStateIconWrapper__39b32",
     cardStateIcon: "cardStateIcon__39b32",
