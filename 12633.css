@@ -41555,7 +41555,6 @@ screen and (max-width:485px) {
 }
 
 .previewContainer__1e458 {
-    border-radius: var(--radius-md);
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -41574,13 +41573,10 @@ screen and (max-width:485px) {
 
 .preview__1e458 {
     height: 100%;
+    object-fit: cover;
+    object-position: top;
     position: relative;
     width: 100%
-}
-
-.previewForCollected__1e458 {
-    object-fit: contain;
-    object-position: top
 }
 
 .purchasedEffect__1e458 {
@@ -41895,6 +41891,7 @@ screen and (max-width:485px) {
 }
 
 .container__6d099.threeItemBundle__6d099 .profileEffectShopPreview__6d099 {
+    border-radius: var(--radius-md);
     height: 190px;
     inset-inline-start: 25px;
     top: 25px;
@@ -56645,9 +56642,9 @@ h3.improved__1689b:after {
 
 .message_fcf29c {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

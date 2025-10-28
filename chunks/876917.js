@@ -35,7 +35,7 @@ let d = 0.1,
                       (0, r.jsx)("img", {
                           src: u,
                           alt: " ",
-                          className: a ? c.previewForCollected : c.preview,
+                          className: c.preview,
                           "aria-hidden": !0,
                       }),
                       !m &&

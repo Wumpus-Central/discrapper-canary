@@ -1,10 +1,15 @@
 e.exports = {
     productCardContainer: "productCardContainer_fcbddd",
     productCardContentContainer: "productCardContentContainer_fcbddd",
+    productPreviewContainer: "productPreviewContainer_fcbddd",
+    hasBottomContent: "hasBottomContent_fcbddd",
     headerContainer: "headerContainer_fcbddd",
     footerContainer: "footerContainer_fcbddd",
-    footerHideOnHover: "footerHideOnHover_fcbddd",
-    footerShowOnHover: "footerShowOnHover_fcbddd",
+    footerContent: "footerContent_fcbddd",
+    footerGradient: "footerGradient_fcbddd",
     footerInfoContainer: "footerInfoContainer_fcbddd",
     footerInteractibleContainer: "footerInteractibleContainer_fcbddd",
+    footerHideOnHover: "footerHideOnHover_fcbddd",
+    footerShowOnHover: "footerShowOnHover_fcbddd",
+    shadowOnHover: "shadowOnHover_fcbddd",
 };
