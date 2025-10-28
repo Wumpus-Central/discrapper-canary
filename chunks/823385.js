@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => eo }), n(539854), n(388685), n(583741), n(290780), n(781311), n(35282);
+n.d(t, { Z: () => el }), n(539854), n(388685), n(583741), n(290780), n(781311), n(35282);
 var i,
     a = n(392711),
     o = n.n(a),
@@ -41,28 +41,30 @@ function P(e, t, n) {
 }
 let w = "seenQSTutorial",
     D = 5,
-    L = 100,
-    x = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
-    M = 0,
-    k = !1,
-    j = !1,
-    U = null,
-    G = [],
+    L = 7,
+    x = 3,
+    M = 100,
+    k = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
+    j = 0,
+    U = !1,
+    G = !1,
     B = null,
-    Z = 0,
-    F = [],
-    V = [],
-    H = null;
-function Y() {
-    (j = y.Z.getGuildCount() >= 3 || o().size(m.Z.getMutablePrivateChannels()) >= 20), (F = []);
+    Z = [],
+    F = null,
+    V = 0,
+    H = [],
+    Y = [],
+    W = null;
+function K() {
+    (G = y.Z.getGuildCount() >= 3 || o().size(m.Z.getMutablePrivateChannels()) >= 20), (H = []);
 }
-function W(e) {
+function z(e) {
     let t = [];
     return (
         g.Z.getRecentlyEditedDrafts(g.d.ChannelMessage).forEach((n) => {
             let { channelId: r } = n;
             if (e(r)) return;
-            let i = K(r);
+            let i = q(r);
             if (null != i) {
                 let e = {
                     record: i,
@@ -74,15 +76,15 @@ function W(e) {
         t
     );
 }
-function K(e) {
+function q(e) {
     let t = (0, d.Z)(e);
-    return null == t || (null != U && U !== t.type) ? null : t;
+    return null == t || (null != B && B !== t.type) ? null : t;
 }
-function z() {
+function X() {
     var e, t;
     let n = null != (e = T.Z.getGuildId()) ? e : void 0,
         r = null != (t = I.Z.getChannelId()) ? t : void 0;
-    switch (U) {
+    switch (B) {
         case u.h8.USER: {
             let e = h.default.getId();
             return A.ZP.getRecentlyTalked(r, 100).filter((t) => {
@@ -123,24 +125,15 @@ function z() {
     }
     let i = [],
         a = new Set(),
-        o = [];
-    for (let e = 1; e < V.length; e += 1) {
-        let t = K(V[e]);
-        null != t &&
-            ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) ||
-                O.Z.can(N.Plq.VIEW_CHANNEL, t.record)) &&
-            (o.push(t), a.add(t.record.id));
-    }
-    o.length > 0 && i.push((0, u.o6)(R.intl.string(R.t["80lOZ1"])), ...o);
-    let s = W((e) => e === r || V.includes(e) || a.has(e));
-    if (s.length > 0)
-        for (let e of (i.push((0, u.o6)(R.intl.string(R.t["4B63jZ"]))), s)) a.add(e.channelId), i.push(e.record);
-    let l = v.ZP.getMentionChannelIds()
-        .filter((e) => e !== r && !V.includes(e) && !a.has(e))
-        .map((e) => K(e))
+        o = z((e) => e === r || Y.includes(e) || a.has(e));
+    if (o.length > 0)
+        for (let e of (i.push((0, u.o6)(R.intl.string(R.t["4B63jZ"]))), o)) a.add(e.channelId), i.push(e.record);
+    let s = v.ZP.getMentionChannelIds()
+        .filter((e) => e !== r && !Y.includes(e) && !a.has(e))
+        .map((e) => q(e))
         .filter(C.lm)
         .reverse();
-    if (l.length > 0) for (let e of (i.push((0, u.o6)(R.intl.string(R.t["61Df13"]))), l)) a.add(e.record.id), i.push(e);
+    if (s.length > 0) for (let e of (i.push((0, u.o6)(R.intl.string(R.t["61Df13"]))), s)) a.add(e.record.id), i.push(e);
     if (null != n) {
         let e = E.ZP.getSelectableChannelIds(n)
             .filter((e) => {
@@ -149,27 +142,36 @@ function z() {
                     !(
                         null == t ||
                         e === r ||
-                        V.includes(e) ||
+                        Y.includes(e) ||
                         a.has(e) ||
                         S.ZP.isChannelMuted(t.guild_id, e) ||
                         (null != t.parent_id && S.ZP.isChannelMuted(t.guild_id, t.parent_id))
                     ) && (0, f.d)(t)
                 );
             })
-            .map((e) => K(e))
+            .map((e) => q(e))
             .filter((e) => e);
         Object.values(_.Z.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
             for (let n in t) {
-                let t = K(n);
+                let t = q(n);
                 null == t || a.has(t.record.id) || e.push(t);
             }
         }),
             e.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t.ieCAhD))), (i = i.concat(e)));
     }
-    return i;
+    let l = Math.min((i.length > 0 ? x : L) + 1, Y.length),
+        c = [];
+    for (let e = 1; e < l; e += 1) {
+        let t = q(Y[e]);
+        null != t &&
+            ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) ||
+                O.Z.can(N.Plq.VIEW_CHANNEL, t.record)) &&
+            (c.push(t), a.add(t.record.id));
+    }
+    return c.length > 0 && (i = [(0, u.o6)(R.intl.string(R.t["80lOZ1"])), ...c, ...i]), i;
 }
-function q(e, t) {
-    switch (U) {
+function Q(e, t) {
+    switch (B) {
         case u.h8.USER: {
             let t = y.Z.getGuild(T.Z.getGuildId());
             e.unshift(
@@ -177,64 +179,64 @@ function q(e, t) {
                     null != t ? R.intl.formatToPlainString(R.t.FREzQs, { name: t.name }) : R.intl.string(R.t.XFYW1o),
                 ),
             ),
-                (G = e);
+                (Z = e);
             break;
         }
         case u.h8.TEXT_CHANNEL:
-            e.unshift((0, u.o6)(R.intl.string(R.t.W26k4V))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.W26k4V))), (Z = e);
             break;
         case u.h8.VOICE_CHANNEL:
-            e.unshift((0, u.o6)(R.intl.string(R.t.zUoI5C))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.zUoI5C))), (Z = e);
             break;
         case u.h8.GUILD:
-            e.unshift((0, u.o6)(R.intl.string(R.t.olADPs))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.olADPs))), (Z = e);
             break;
         case u.h8.APPLICATION:
-            e.unshift((0, u.o6)(R.intl.string(R.t.VwK1ld))), (G = e);
+            e.unshift((0, u.o6)(R.intl.string(R.t.VwK1ld))), (Z = e);
             break;
         default:
-            G = e;
+            Z = e;
     }
-    if (t !== B) (B = t), (Z = Math.max(t.length, Z)), (M = (0, u.gJ)(u.a8.DOWN, -1, G));
+    if (t !== F) (F = t), (V = Math.max(t.length, V)), (j = (0, u.gJ)(u.a8.DOWN, -1, Z));
     else {
-        let e = G[M];
-        null != e && e.type === u.h8.HEADER && (M = (0, u.gJ)(u.a8.DOWN, M, G));
+        let e = Z[j];
+        null != e && e.type === u.h8.HEADER && (j = (0, u.gJ)(u.a8.DOWN, j, Z));
     }
-    ea.emitChange();
+    es.emitChange();
 }
-function X(e) {
+function J(e) {
     var t;
     let { query: n, queryMode: i } = e,
         a = n.trim(),
         o = null != (t = T.Z.getGuildId()) ? t : void 0,
         s = new Set(["user:".concat(h.default.getId())]);
     null != o && s.add("guild:".concat(o)),
-        (H = Date.now()),
+        (W = Date.now()),
         (r =
             null != r
                 ? r
                 : new u.ZP(
-                      $,
-                      x,
-                      null != i ? L : D,
+                      et,
+                      k,
+                      null != i ? M : D,
                       {
                           frecencyBoosters: !0,
                           blacklist: s,
                           allowSnowflake: !0,
                       },
-                      L,
+                      M,
                   )),
-        (B = null),
-        (Z = a.length),
-        (U = i),
+        (F = null),
+        (V = a.length),
+        (B = i),
         r.search(a);
 }
-function Q(e) {
+function $(e) {
     let { channelId: t } = e;
     if (null == t) return !1;
-    (V = V.filter((e) => e !== t)).unshift(t), V.length > 4 && (V.length = 4);
+    (Y = Y.filter((e) => e !== t)).unshift(t), Y.length > L + 1 && (Y.length = L + 1);
 }
-function J(e, t) {
+function ee(e, t) {
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) {
         let r = e[n],
@@ -243,19 +245,19 @@ function J(e, t) {
     }
     return !0;
 }
-function $(e, t) {
-    J((e = "" === (t = t.trim()).trim() ? z() : e), F) || ((F = e), q(e, t));
+function et(e, t) {
+    ee((e = "" === (t = t.trim()).trim() ? X() : e), H) || ((H = e), Q(e, t));
 }
-function ee() {
-    (B = null), (Z = 0), (F = []), null != r && (r.destroy(), (r = null));
+function en() {
+    (F = null), (V = 0), (H = []), null != r && (r.destroy(), (r = null));
 }
-function et(e) {
+function er(e) {
     var t, n;
     let { query: i, queryMode: a } = e,
         o = i.trim();
     if (null == r) return !1;
-    if (U !== a) {
-        r.setResultTypes(null != a ? [a] : x), r.setLimit(null != a ? L : D);
+    if (B !== a) {
+        r.setResultTypes(null != a ? [a] : k), r.setLimit(null != a ? M : D);
         let e = null != (t = T.Z.getGuildId()) ? t : void 0;
         a === u.h8.USER && null != e
             ? r.setOptions(
@@ -277,28 +279,28 @@ function et(e) {
                     !0,
                 );
     }
-    if ((U = a) === u.h8.USER) {
+    if ((B = a) === u.h8.USER) {
         let e = null != (n = T.Z.getGuildId()) ? n : null;
         r.search(o, e);
     } else r.search(o, void 0);
 }
-function en(e) {
-    M = e.selectedIndex;
+function ei(e) {
+    j = e.selectedIndex;
 }
-function er() {
-    if (k) return !1;
-    (k = !0), l.K.set(w, !0);
+function ea() {
+    if (U) return !1;
+    (U = !0), l.K.set(w, !0);
 }
-class ei extends (i = s.ZP.PersistedStore) {
+class eo extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         this.waitFor(_.Z, h.default, m.Z, g.Z, E.ZP, b.ZP, y.Z, O.Z, v.ZP, I.Z, T.Z, p.Z, S.ZP),
             this.syncWith([p.Z], () => !0),
-            (k = l.K.get(w) || !1),
-            (V = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
+            (U = l.K.get(w) || !1),
+            (Y = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {
-        return { channelHistory: V };
+        return { channelHistory: Y };
     }
     isOpen() {
         return null != r;
@@ -312,7 +314,7 @@ class ei extends (i = s.ZP.PersistedStore) {
     }
     channelNoticePredicate(e, t) {
         let n = Date.now() - t >= N.Hqc;
-        return j && n;
+        return G && n;
     }
     getFrequentGuilds() {
         return null != r ? r.queryGuilds("", 100) : null;
@@ -321,35 +323,35 @@ class ei extends (i = s.ZP.PersistedStore) {
         return null != r ? r.queryGuilds("", 100).length : 0;
     }
     getChannelHistory() {
-        return V;
+        return Y;
     }
     getLastShowTimestamp() {
-        return H;
+        return W;
     }
     getProps() {
         return {
             theme: p.Z.theme,
             query: null != r ? r.query : "",
-            queryMode: U,
-            results: G,
-            selectedIndex: M,
-            seenTutorial: k,
-            maxQueryLength: Z,
+            queryMode: B,
+            results: Z,
+            selectedIndex: j,
+            seenTutorial: U,
+            maxQueryLength: V,
         };
     }
 }
-P(ei, "displayName", "QuickSwitcherStore"), P(ei, "persistKey", "QuickSwitcherStore");
-let ea = new ei(c.Z, {
-        CONNECTION_OPEN: Y,
-        CONNECTION_OPEN_SUPPLEMENTAL: Y,
-        QUICKSWITCHER_SHOW: X,
-        SHOW_ACTION_SHEET_QUICK_SWITCHER: X,
-        QUICKSWITCHER_HIDE: ee,
-        OVERLAY_SET_INPUT_LOCKED: ee,
-        HIDE_ACTION_SHEET_QUICK_SWITCHER: ee,
-        QUICKSWITCHER_SEARCH: et,
-        QUICKSWITCHER_SELECT: en,
-        QUICKSWITCHER_SWITCH_TO: er,
-        CHANNEL_SELECT: Q,
+P(eo, "displayName", "QuickSwitcherStore"), P(eo, "persistKey", "QuickSwitcherStore");
+let es = new eo(c.Z, {
+        CONNECTION_OPEN: K,
+        CONNECTION_OPEN_SUPPLEMENTAL: K,
+        QUICKSWITCHER_SHOW: J,
+        SHOW_ACTION_SHEET_QUICK_SWITCHER: J,
+        QUICKSWITCHER_HIDE: en,
+        OVERLAY_SET_INPUT_LOCKED: en,
+        HIDE_ACTION_SHEET_QUICK_SWITCHER: en,
+        QUICKSWITCHER_SEARCH: er,
+        QUICKSWITCHER_SELECT: ei,
+        QUICKSWITCHER_SWITCH_TO: ea,
+        CHANNEL_SELECT: $,
     }),
-    eo = ea;
+    el = es;
