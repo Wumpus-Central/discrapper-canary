@@ -348,6 +348,19 @@ let w = {
             })
         );
     },
+    async oneTimeLogin(e) {
+        l.Z.dispatch({ type: "LOGIN" });
+        let t = (
+            await o.tn.post({
+                url: b.ANM.ONE_TIME_LOGIN,
+                body: { ticket: e },
+                oldFormErrors: !0,
+                rejectWithError: !0,
+            })
+        ).body.token;
+        if (!t) throw Error("No token in response");
+        return await this.loginToken(t, !1), t;
+    },
     loginReset(e) {
         l.Z.dispatch({
             type: "LOGIN_RESET",
