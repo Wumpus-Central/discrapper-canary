@@ -17,12 +17,13 @@ var r = n(951288),
 function _(e) {
     let { wishlistItems: t = [], profileOwner: n, onClick: _ } = e,
         { analyticsLocations: y } = (0, o.ZP)(),
-        x = (0, i.useMemo)(() => {
+        v = (0, i.useMemo)(() => {
             let e = [];
             for (let i = 0; i < t.length && e.length < 4; i++) {
                 let s = t[i],
-                    o = 3 === e.length && t.length > 4,
-                    u = o ? m.intl.string(m.t.TxBQzD) : m.intl.string(m.t.ilhtIa);
+                    o = 3 === e.length && t.length > 4;
+                if (s.isOwned) continue;
+                let u = o ? m.intl.string(m.t.TxBQzD) : m.intl.string(m.t.ilhtIa);
                 if ((0, d.Q)(s)) {
                     let i = () => {
                             if (o) return void _();
@@ -61,7 +62,7 @@ function _(e) {
             }
             return e;
         }, [t, n, y, _]);
-    return 0 === x.length
+    return 0 === v.length
         ? null
         : (0, r.jsxs)(u.Z.Overlay, {
               className: b.container,
@@ -75,7 +76,7 @@ function _(e) {
                   }),
                   (0, r.jsx)("div", {
                       className: b.cardsContainer,
-                      children: x,
+                      children: v,
                   }),
               ],
           });
