@@ -552,7 +552,9 @@ let eZ = (0, y.Z)(function (e) {
             canStartAuthorization: q,
             connectionApp: Q,
             startAuthorization: ed,
-        } = (0, P.F)(y, { allowedFlows: [P.r.RPC] }),
+        } = (0, P.F)(y, {
+            allowedFlows: [P.r.RPC, P.r.WEB],
+        }),
         { isQuestBarEmpty: eh, hasLoadedQuestBar: eg } = (0, X.Ws)({ location: ev.dr.CONFLICT_CHECKS }),
         em = ef.Z.useConfig({ location: "RunningGameCard" }).enabled,
         { parentAnalyticsLocation: eb } = (0, I.ZP)(),

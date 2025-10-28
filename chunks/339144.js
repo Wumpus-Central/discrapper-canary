@@ -172,7 +172,9 @@ let Z = i.memo(function (e) {
                 startAuthorization: et,
                 hasAlreadyLinked: en,
                 connectionApp: er,
-            } = (0, g.F)(F, { allowedFlows: [g.r.RPC] }),
+            } = (0, g.F)(F, {
+                allowedFlows: [g.r.RPC, g.r.WEB],
+            }),
             ei = C.Z.useConfig({ location: "ActivityActions" }).enabled,
             el = i.useRef(null),
             [eo, ea] = i.useState(!1);
