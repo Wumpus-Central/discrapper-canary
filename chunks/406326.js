@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(465524),
     _ = n(611004),
     y = n(770092),
-    v = n(125085),
-    j = n(981631),
-    x = n(921944),
+    x = n(125085),
+    v = n(981631),
+    j = n(921944),
     O = n(388032),
     C = n(865239);
 function I(e) {
@@ -73,7 +73,7 @@ function E(e) {
             isIndexing: p,
             isSearching: h,
             documentsIndexed: _,
-            selectedChannelId: v,
+            selectedChannelId: x,
         } = e,
         E = (0, m.nP)({ location: "SearchHeader" }),
         P = (0, m.KS)({ location: "SearchHeader" }),
@@ -81,7 +81,7 @@ function E(e) {
         N = (0, y.I)(t),
         { totalFilters: R } = (0, b.p4)(N, t),
         D = i.useMemo(() => {
-            if (t.type === j.aib.DMS) {
+            if (t.type === v.aib.DMS) {
                 var e, n;
                 let t = null != (n = null == (e = (0, f.$G)(N).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? O.intl.format(O.t.A2dqWG, { filterCount: t }) : O.intl.string(O.t.tc619d);
@@ -94,13 +94,13 @@ function E(e) {
         H = U === s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
         F = i.useCallback(
             (e) => {
-                null != e && G(x.L.USER_DISMISS), M(e);
+                null != e && G(j.L.USER_DISMISS), M(e);
             },
             [G],
         ),
         B = i.useCallback(
             (e) => {
-                G("user:explicit" === e ? x.L.USER_DISMISS : x.L.AUTO_DISMISS);
+                G("user:explicit" === e ? j.L.USER_DISMISS : j.L.AUTO_DISMISS);
             },
             [G],
         ),
@@ -113,7 +113,7 @@ function E(e) {
         }, [t, F]),
         z = i.useMemo(() => (R > 0 ? O.intl.format(O.t.uaR4sI, { filterCount: R }) : O.intl.string(O.t.UdhTtk)), [R]),
         W = (0, g.u5)({ location: "SearchHeader" }),
-        Y = t.type === j.aib.DMS || t.type === j.aib.CHANNEL,
+        Y = t.type === v.aib.DMS || t.type === v.aib.CHANNEL,
         q = i.useMemo(
             () =>
                 T && W
@@ -136,7 +136,7 @@ function E(e) {
                               Y &&
                                   (0, r.jsx)(w, {
                                       searchContext: t,
-                                      selectedChannelId: v,
+                                      selectedChannelId: x,
                                       isPopoutOpen: "settings" === L,
                                       setOpenPopout: F,
                                       isPopoverVisible: H,
@@ -176,7 +176,7 @@ function E(e) {
                                   Y &&
                                       (0, r.jsx)(w, {
                                           searchContext: t,
-                                          selectedChannelId: v,
+                                          selectedChannelId: x,
                                           isPopoutOpen: "settings" === L,
                                           setOpenPopout: F,
                                           isPopoverVisible: H,
@@ -192,22 +192,22 @@ function E(e) {
                               children: [
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.NEWEST,
+                                      id: v.QIO.NEWEST,
                                       children: O.intl.string(O.t.rLjqbS),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.OLDEST,
+                                      id: v.QIO.OLDEST,
                                       children: O.intl.string(O.t.a1BaUr),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.MOST_RELEVANT,
+                                      id: v.QIO.MOST_RELEVANT,
                                       children: O.intl.string(O.t.FtR97k),
                                   }),
                               ],
                           }),
-            [z, V, T, L, W, Y, o, t, l, v, H, F, B],
+            [z, V, T, L, W, Y, o, t, l, x, H, F, B],
         );
     return (0, r.jsxs)("header", {
         className: a()(C.searchHeader, { [C.searchHeaderWithSubtitle]: null != D }),
@@ -261,7 +261,7 @@ function T(e) {
                     color: "text-muted",
                     children: (0, r.jsx)(d.Anchor, {
                         className: C.helpdeskLink,
-                        href: h.Z.getArticleURL(j.BhN.SEARCH_INDEXING),
+                        href: h.Z.getArticleURL(v.BhN.SEARCH_INDEXING),
                         children: O.intl.string(O.t["G3EA+4"]),
                     }),
                 }),
@@ -284,17 +284,16 @@ function N() {
 }
 function R(e) {
     let { totalResults: t, subtitle: n } = e,
-        l = i.useMemo(() => t.toLocaleString(), [t]),
-        a = (0, r.jsx)(d.Text, {
+        i = (0, r.jsx)(d.Text, {
             variant: "text-md/medium",
             color: "header-primary",
-            children: O.intl.format(O.t.ZGVL3g, { count: l }),
+            children: O.intl.format(O.t.ZGVL3g, { count: t }),
         });
     return null != n
         ? (0, r.jsxs)("div", {
               className: C.totalResultsWithSubtitle,
               children: [
-                  a,
+                  i,
                   (0, r.jsx)(d.Text, {
                       variant: "text-xs/medium",
                       color: "text-secondary",
@@ -302,7 +301,7 @@ function R(e) {
                   }),
               ],
           })
-        : a;
+        : i;
 }
 function w(e) {
     var t;
@@ -315,12 +314,12 @@ function w(e) {
             isPopoverVisible: u,
         } = e,
         h = i.useRef(null),
-        f = null != (t = p.rR.useSetting()) ? t : v.K,
+        f = null != (t = p.rR.useSetting()) ? t : x.K,
         g = i.useCallback(
             (e) => {
                 if (f !== e) {
                     if (e) {
-                        let e = { type: j.aib.DMS };
+                        let e = { type: v.aib.DMS };
                         _.Z.transitionQueryStateToSearchContext(n, e, (t) => {
                             _.Z.cleanUpPrivateChannelSearchState(),
                                 _.Z.fetchMessages({
@@ -331,7 +330,7 @@ function w(e) {
                         });
                     } else {
                         let e = {
-                            type: j.aib.CHANNEL,
+                            type: v.aib.CHANNEL,
                             channelId: l,
                         };
                         _.Z.transitionQueryStateToSearchContext(n, e, (t) => {
@@ -422,15 +421,15 @@ function A(e) {
             () => [
                 {
                     label: O.intl.string(O.t.CbaapP),
-                    value: j.QIO.NEWEST,
+                    value: v.QIO.NEWEST,
                 },
                 {
                     label: O.intl.string(O.t.OukXZj),
-                    value: j.QIO.OLDEST,
+                    value: v.QIO.OLDEST,
                 },
                 {
                     label: O.intl.string(O.t.q8gB52),
-                    value: j.QIO.MOST_RELEVANT,
+                    value: v.QIO.MOST_RELEVANT,
                 },
             ],
             [],
