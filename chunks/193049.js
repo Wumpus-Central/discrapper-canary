@@ -256,6 +256,7 @@ function A(e) {
                 ? (t = I.intl.formatToPlainString(I.t.AJh8BR, { source: K.username }))
                 : G === x.Wq.SUGGESTION && (Y || null != X) && (t = I.intl.string(I.t["i/2SgP"]))),
         (0, r.jsxs)(u.Y0X, {
+            "data-migration-pending": !0,
             className: P.modalRoot,
             impression: {
                 impressionName: s.ImpressionNames.POMELO_LANDING,
