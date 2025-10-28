@@ -1,55 +1,47 @@
 n.d(t, {
-    BO: () => d,
-    QH: () => C,
-    sp: () => m,
+    BO: () => s,
+    QH: () => c,
+    sp: () => u,
 });
 var r = n(951288),
     l = n(647438),
-    i = n(120356),
-    o = n.n(i),
-    a = n(755721),
-    s = n(489813),
-    c = n(707592),
-    u = n(624463);
-function d(e) {
-    let { disabled: t, field: n, value: i, radioItemClassName: s, radioItemIconClassName: c, onChange: d } = e,
-        { choices: C } = n,
-        m = l.useMemo(
+    i = n(793030),
+    o = n(489813),
+    a = n(707592);
+function s(e) {
+    let { disabled: t, field: n, value: o, onChange: a } = e,
+        { choices: s } = n,
+        c = l.useMemo(
             () =>
-                C.map((e, t) => ({
+                s.map((e, t) => ({
                     name: e,
                     value: t,
-                    radioItemIconClassName: o()(u.multipleChoiceIcon, c),
-                    radioBarClassName: u.multipleChoiceItem,
                 })),
-            [C, c],
+            [s],
         );
-    return (0, r.jsx)(a.Gu, {
-        radioPosition: "right",
+    return (0, r.jsx)(i.Eep, {
+        options: c,
+        value: o,
+        onChange: (e) => (null == a ? void 0 : a({ value: e })),
         disabled: t,
-        options: m,
-        value: i,
-        onChange: d,
-        radioItemClassName: s,
-        itemTitleClassName: u.multipleChoiceTitle,
     });
 }
-function C(e) {
+function c(e) {
     let { formField: t } = e,
         n = null != t.response ? t.choices[t.response] : "";
-    return (0, r.jsx)(s.CA, {
+    return (0, r.jsx)(o.CA, {
         title: t.label,
-        children: (0, r.jsx)(c.Gi, {
+        children: (0, r.jsx)(a.Gi, {
             value: n,
             disabled: !0,
         }),
     });
 }
-function m(e) {
+function u(e) {
     let { formField: t, onChange: n } = e;
-    return (0, r.jsx)(s.hK, {
+    return (0, r.jsx)(o.hK, {
         title: t.label,
-        children: (0, r.jsx)(d, {
+        children: (0, r.jsx)(s, {
             field: t,
             value: t.response,
             onChange: n,

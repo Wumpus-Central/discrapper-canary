@@ -1,38 +1,37 @@
-n.d(t, { Z: () => g }), n(35282);
+n.d(t, { Z: () => m }), n(35282);
 var i = n(951288);
 n(647438);
 var r = n(120356),
     l = n.n(r),
     a = n(91192),
     o = n(442837),
-    s = n(755721),
-    c = n(481060),
-    u = n(129861),
-    d = n(700582),
-    p = n(600164),
-    h = n(158776),
-    f = n(51144),
-    m = n(469407);
-function g(e) {
+    s = n(481060),
+    c = n(129861),
+    u = n(700582),
+    d = n(600164),
+    p = n(158776),
+    h = n(51144),
+    f = n(469407);
+function m(e) {
     var t, n;
     let {
             user: r,
-            row: g,
-            hideDiscriminator: b,
-            comparator: C,
-            selected: y,
-            checked: _,
-            disabled: v = !1,
-            inlineUsername: x = !0,
-            onClick: O,
-            onMouseEnter: j,
-            "aria-setsize": E,
-            "aria-posinset": S,
+            row: m,
+            hideDiscriminator: g,
+            comparator: b,
+            selected: C,
+            checked: y,
+            disabled: _ = !1,
+            inlineUsername: v = !0,
+            onClick: x,
+            onMouseEnter: O,
+            "aria-setsize": j,
+            "aria-posinset": E,
         } = e,
-        P = (0, o.e7)([h.Z], () => h.Z.getStatus(r.id)),
-        I = (0, a.JA)(String(r.id));
+        S = (0, o.e7)([p.Z], () => p.Z.getStatus(r.id)),
+        P = (0, a.JA)(String(r.id));
     return (0, i.jsx)(
-        c.P3F,
+        s.P3F,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -59,73 +58,70 @@ function g(e) {
             return e;
         })(
             {
-                id: "user-row-".concat(g),
-                className: l()(m.friendWrapper, { [m.disabled]: v }),
+                id: "user-row-".concat(m),
+                className: l()(f.friendWrapper, { [f.disabled]: _ }),
                 onClick: () => {
-                    null != O && O(r.id);
+                    null != x && x(r.id);
                 },
                 onMouseEnter: () => {
-                    null != j && j(g);
+                    null != O && O(m);
                 },
             },
-            I,
+            P,
         )),
         (n = n =
             {
                 role: "option",
-                "aria-selected": _,
-                "aria-disabled": v,
-                "aria-setsize": E,
-                "aria-posinset": S,
-                children: (0, i.jsxs)(p.Z, {
-                    align: p.Z.Align.CENTER,
-                    className: l()(m.friend, {
-                        [m.friendSelected]: y,
-                        [m.twoRows]: !x,
+                "aria-selected": y,
+                "aria-disabled": _,
+                "aria-setsize": j,
+                "aria-posinset": E,
+                children: (0, i.jsxs)(d.Z, {
+                    align: d.Z.Align.CENTER,
+                    className: l()(f.friend, {
+                        [f.friendSelected]: C,
+                        [f.twoRows]: !v,
                     }),
                     children: [
-                        (0, i.jsx)(d.Z, {
+                        (0, i.jsx)(u.Z, {
                             user: r,
-                            status: P,
-                            className: m.avatar,
+                            status: S,
+                            className: f.avatar,
                         }),
-                        (0, i.jsxs)(p.Z, {
-                            className: m.match,
-                            align: p.Z.Align.BASELINE,
-                            direction: x ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL,
+                        (0, i.jsxs)(d.Z, {
+                            className: f.match,
+                            align: d.Z.Align.BASELINE,
+                            direction: v ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(s.Text, {
                                     tag: "strong",
-                                    className: m.nickname,
+                                    className: f.nickname,
                                     "aria-hidden": !0,
                                     variant: "text-md/medium",
                                     children:
-                                        null != C && C === r.tag
-                                            ? f.ZP.getName(r)
-                                            : null != C && "" !== C
-                                              ? C
-                                              : f.ZP.getName(r),
+                                        null != b && b === r.tag
+                                            ? h.ZP.getName(r)
+                                            : null != b && "" !== b
+                                              ? b
+                                              : h.ZP.getName(r),
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: (0, i.jsx)(u.Z, {
+                                    children: (0, i.jsx)(c.Z, {
                                         user: r,
-                                        hideDiscriminator: b,
-                                        className: m.discordTag,
-                                        usernameClass: m.__invalid_weightMedium,
-                                        discriminatorClass: m.__invalid_weightMedium,
+                                        hideDiscriminator: g,
+                                        className: f.discordTag,
+                                        usernameClass: f.__invalid_weightMedium,
+                                        discriminatorClass: f.__invalid_weightMedium,
                                         forceUsername: !0,
                                     }),
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(s.$q, {
-                            displayOnly: !0,
-                            size: 22,
-                            value: _,
-                            disabled: v,
-                            className: m.checkbox,
+                        (0, i.jsx)(s.FZ5, {
+                            checked: y,
+                            disabled: _,
                         }),
                     ],
                 }),

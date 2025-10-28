@@ -19,6 +19,5 @@ e.exports = {
     fieldPadding: "fieldPadding_eaaeee",
     fieldFooterContainer: "fieldFooterContainer_eaaeee",
     termsFieldCaretIcon: "termsFieldCaretIcon_eaaeee",
-    multipleChoiceFixedTextColor: "multipleChoiceFixedTextColor_eaaeee",
     typeTag: "typeTag_eaaeee",
 };
