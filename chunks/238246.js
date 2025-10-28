@@ -27,9 +27,8 @@ var r,
     T = n(260035),
     S = n(628123),
     A = n(686546),
-    C = n(950796);
-n(151851);
-var N = n(587061),
+    C = n(950796),
+    N = n(587061),
     R = n(280049),
     P = n(314910),
     w = n(728285),
@@ -164,59 +163,56 @@ class z extends (r = a.Component) {
     }
     render() {
         let {
-            focused: e,
-            forcedColors: t,
-            children: n,
-            windowKey: r,
-            isFullScreen: a,
-            withTitleBar: o,
-            guestWindow: l,
-            clientThemesClassName: c,
-            contentClassName: d,
-            themeOverride: _,
-            hideModals: m = !1,
-            appContext: g,
-        } = this.props;
-        (0, M.getPlatform)();
-        let E = K({
-                withTitleBar: o,
-                isFullScreen: a,
+                forcedColors: e,
+                children: t,
+                windowKey: n,
+                isFullScreen: r,
+                withTitleBar: a,
+                guestWindow: o,
+                clientThemesClassName: l,
+                contentClassName: c,
+                themeOverride: d,
+                hideModals: _ = !1,
+                appContext: m,
+            } = this.props,
+            g = K({
+                withTitleBar: a,
+                isFullScreen: r,
             }),
-            y = r === Z.$J ? D.Z : S.Z;
+            E = n === Z.$J ? D.Z : S.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
                 L.w,
                 {
-                    windowKey: r,
-                    themeOverride: _,
+                    windowKey: n,
+                    themeOverride: d,
                     children: (0, i.jsx)(b.Z, {
                         children: (0, i.jsxs)(p.JcV, {
                             containerRef: this.rootRef,
                             children: [
                                 (0, i.jsx)(q, {
-                                    guestWindow: l,
-                                    className: c,
-                                    children: (0, i.jsxs)(y, {
+                                    guestWindow: o,
+                                    className: l,
+                                    children: (0, i.jsxs)(E, {
                                         children: [
                                             (0, i.jsx)(A.Co, {}),
                                             (0, i.jsx)(w.Wu, {
-                                                appContext: null != g ? g : B.IlC.POPOUT,
-                                                renderWindow: l,
+                                                appContext: null != m ? m : B.IlC.POPOUT,
+                                                renderWindow: o,
                                                 children: (0, i.jsx)(T.m, {
                                                     children: (0, i.jsxs)(P.yP, {
                                                         children: [
                                                             (0, i.jsxs)("div", {
                                                                 className: F.popout,
                                                                 children: [
-                                                                    E && (0, i.jsx)(C.TF, { windowKey: r }),
-                                                                    null,
+                                                                    g && (0, i.jsx)(C.TF, { windowKey: n }),
                                                                     (0, i.jsx)("div", {
-                                                                        className: s()(F.content, d),
-                                                                        children: n,
+                                                                        className: s()(F.content, c),
+                                                                        children: t,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            !m && (0, i.jsx)(p.nKe, {}),
+                                                            !_ && (0, i.jsx)(p.nKe, {}),
                                                             (0, i.jsx)(h.Z, {}),
                                                             (0, i.jsx)(P.Un, {}),
                                                         ],
@@ -231,7 +227,7 @@ class z extends (r = a.Component) {
                         }),
                     }),
                 },
-                t,
+                e,
             ),
         });
     }
@@ -281,38 +277,32 @@ let q = a.forwardRef(function (e, t) {
         );
     }),
     X = a.forwardRef(function (e, t) {
-        let {
-            guestWindow: n,
-            focused: r,
-            isFullScreen: a,
-        } = (0, _.cj)([G.Z], () => ({
+        let { guestWindow: n, isFullScreen: r } = (0, _.cj)([G.Z], () => ({
             guestWindow: G.Z.getWindow(e.windowKey),
-            focused: G.Z.getWindowFocused(e.windowKey),
             isFullScreen: G.Z.isWindowFullScreen(e.windowKey),
         }));
         c()(null != n, "Missing guestWindow reference");
-        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, _.cj)([E.Z, y.ZP], () => ({
+        let { forcedColors: a, connectedEmbeddedActivity: o } = (0, _.cj)([E.Z, y.ZP], () => ({
             forcedColors: E.Z.useForcedColors ? "yes" : "no",
             connectedEmbeddedActivity: y.ZP.getCurrentEmbeddedActivity(),
         }));
         (0, N.Z)(n, !1);
-        let { analyticsLocations: l } = (0, v.ZP)(O.Z.POPOUT_WINDOW),
-            { clientThemesClassName: u, clientThemesCSS: d } = (0, I.ZP)();
+        let { analyticsLocations: s } = (0, v.ZP)(O.Z.POPOUT_WINDOW),
+            { clientThemesClassName: l, clientThemesCSS: u } = (0, I.ZP)();
         return null == n
             ? null
             : (0, i.jsx)(p.Sle, {
                   children: (0, i.jsx)(v.Gt, {
-                      value: l,
+                      value: s,
                       children: (0, i.jsx)(
                           z,
                           W(H({ ref: t }, e), {
                               guestWindow: n,
-                              focused: r,
-                              isFullScreen: a,
-                              forcedColors: o,
-                              connectedEmbeddedActivity: s,
-                              clientThemesClassName: u,
-                              clientThemesCSS: d,
+                              isFullScreen: r,
+                              forcedColors: a,
+                              connectedEmbeddedActivity: o,
+                              clientThemesClassName: l,
+                              clientThemesCSS: u,
                           }),
                       ),
                   }),
