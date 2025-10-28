@@ -1,15 +1,14 @@
 n.d(t, {
-    $p: () => T,
-    FQ: () => I,
-    Il: () => S,
-    Jf: () => R,
-    SA: () => L,
-    Um: () => C,
-    eu: () => P,
-    hW: () => x,
-    lY: () => N,
-    pk: () => A,
-    qB: () => D,
+    $p: () => I,
+    FQ: () => v,
+    Il: () => T,
+    Jf: () => C,
+    SA: () => D,
+    Um: () => S,
+    eu: () => N,
+    hW: () => w,
+    lY: () => A,
+    qB: () => R,
 }),
     n(953529),
     n(539854);
@@ -21,15 +20,14 @@ var r = n(392711),
     l = n(38618),
     c = n(706454),
     u = n(675478),
-    d = n(598077),
-    f = n(486472),
-    _ = n(594174),
-    p = n(73346),
-    h = n(926491),
-    m = n(981631),
-    g = n(526761),
-    E = n(388032);
-function b(e, t, n) {
+    d = n(486472),
+    f = n(594174),
+    _ = n(73346),
+    p = n(926491),
+    h = n(981631),
+    m = n(526761),
+    g = n(388032);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +40,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +51,12 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,20 +68,20 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = async (e, t) => {
-        let { body: n } = await (0, p.Kb)({
-            url: m.ANM.STICKER_PACK(e),
+let v = async (e, t) => {
+        let { body: n } = await (0, _.Kb)({
+            url: h.ANM.STICKER_PACK(e),
             rejectWithError: !1,
         });
         return (
@@ -96,16 +94,16 @@ let I = async (e, t) => {
             n
         );
     },
-    T = async function () {
+    I = async function () {
         let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
+        if (p.Z.isFetchingStickerPacks || p.Z.hasLoadedStickerPacks) return;
         o.Z.wait(() => {
             o.Z.dispatch({ type: "STICKER_PACKS_FETCH_START" });
         });
         let {
             body: { sticker_packs: t },
         } = await a.tn.get({
-            url: m.ANM.STICKER_PACKS,
+            url: h.ANM.STICKER_PACKS,
             query: { locale: e },
             rejectWithError: !1,
         });
@@ -114,9 +112,9 @@ let I = async (e, t) => {
             packs: t,
         });
     },
-    S = async (e) => {
+    T = async (e) => {
         let { body: t } = await a.tn.get({
-            url: m.ANM.STICKER(e),
+            url: h.ANM.STICKER(e),
             rejectWithError: !1,
         });
         o.Z.dispatch({
@@ -124,27 +122,16 @@ let I = async (e, t) => {
             sticker: t,
         });
     },
-    A = async (e) => {
-        let { body: t } = await a.tn.get({
-            url: m.ANM.GUILD_STICKER_PACKS(e),
-            rejectWithError: !1,
-        });
-        o.Z.dispatch({
-            type: "GUILD_STICKERS_FETCH_SUCCESS",
-            guildId: e,
-            stickers: t.map((e) => (null != e.user ? v(y({}, e), { user: new d.Z(e.user) }) : e)),
-        });
-    },
-    C = async (e) => {
+    S = async (e) => {
         await a.tn.del({
-            url: m.ANM.GUILD_STICKER(e.guild_id, e.id),
+            url: h.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1,
         });
     },
-    N = async (e) => {
+    A = async (e) => {
         let { guildId: t } = e,
             n = await a.tn.post({
-                url: m.ANM.GUILD_STICKER_PACKS(t),
+                url: h.ANM.GUILD_STICKER_PACKS(t),
                 body: "web" === e.platform ? e.body : void 0,
                 fields:
                     "mobile" === e.platform
@@ -182,20 +169,20 @@ let I = async (e, t) => {
             o.Z.dispatch({
                 type: "GUILD_STICKERS_CREATE_SUCCESS",
                 guildId: t,
-                sticker: v(y({}, n.body), { user: _.default.getCurrentUser() }),
+                sticker: O(b({}, n.body), { user: f.default.getCurrentUser() }),
             }),
             n.body
         );
     },
-    R = async (e, t, n) =>
+    C = async (e, t, n) =>
         (
             await a.tn.patch({
-                url: m.ANM.GUILD_STICKER(e, t),
+                url: h.ANM.GUILD_STICKER(e, t),
                 body: n,
                 rejectWithError: !1,
             })
         ).body;
-function P(e, t, n) {
+function N(e, t, n) {
     o.Z.dispatch({
         type: "ADD_STICKER_PREVIEW",
         channelId: e,
@@ -203,36 +190,36 @@ function P(e, t, n) {
         draftType: n,
     });
 }
-function D(e, t) {
+function R(e, t) {
     o.Z.dispatch({
         type: "CLEAR_STICKER_PREVIEW",
         channelId: e,
         draftType: t,
     });
 }
-function w(e) {
-    return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
+function P(e) {
+    return d.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != p.Z.getStickerById(e));
 }
-function L(e) {
+function D(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) =>
-            ((t.stickerIds = w(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
+            ((t.stickerIds = P(t.stickerIds)), i().size(t.stickerIds) >= m.oX)
                 ? (s.Z.show({
-                      title: E.intl.string(E.t["+XYXtZ"]),
-                      body: E.intl.formatToPlainString(E.t.JaIyFi, { count: g.oX }),
+                      title: g.intl.string(g.t["+XYXtZ"]),
+                      body: g.intl.formatToPlainString(g.t.JaIyFi, { count: m.oX }),
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
-        g.fy.INFREQUENT_USER_ACTION,
+        m.fy.INFREQUENT_USER_ACTION,
     );
 }
-function x(e) {
+function w(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = w(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = P(t.stickerIds));
         },
-        g.fy.INFREQUENT_USER_ACTION,
+        m.fy.INFREQUENT_USER_ACTION,
     );
 }
