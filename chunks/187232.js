@@ -1,4 +1,7 @@
-n.d(t, { p: () => N });
+n.d(t, {
+    GV: () => N,
+    py: () => R,
+});
 var r = n(242433),
     i = n(100527),
     a = n(717401),
@@ -90,7 +93,8 @@ let b = {
     C = {
         gradient: ["rgb(35, 86, 53)", "rgb(3, 15, 40)"],
     },
-    N = {
+    N = 4,
+    R = {
         variants: [
             {
                 name: () => l.intl.string(l.t["9PzTtM"]),
@@ -152,10 +156,10 @@ let b = {
                         }),
             },
         },
-        dismissibleContentVersion: 4,
+        dismissibleContentVersion: N,
         firstTimeNotice: {
             getImageUrl: (e, t) => (t ? _.Z : f.Z),
-            title: () => l.intl.string(l.t.UPFiIi),
+            title: () => l.intl.string(l.t.MzahXU),
             description: () => l.intl.string(l.t["F/5kFJ"]),
             cta: () => l.intl.string(l.t.RzWDqY),
             analyticsLocation: i.Z.GIFTING_PROMOTION_COACHMARK,

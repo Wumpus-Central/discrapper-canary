@@ -6,7 +6,7 @@ var r = n(115434),
     s = n(317381),
     l = n(416587),
     c = n(874703),
-    u = n(75459);
+    u = n(187232);
 function d(e) {
     switch (e) {
         case i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
@@ -18,7 +18,7 @@ function d(e) {
         case i.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
         case i.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
         case i.z.GIFTING_PROMOTION_REMINDER:
-            return u.D_;
+            return u.GV;
         case i.z.ACTIVITIES_VOICE_LAUNCHER_BADGE:
             return (0, l.O)({
                 storeState: s.ZP.getState(),
