@@ -10,7 +10,7 @@ function i(e) {
         fill: "none",
         children: [
             (0, r.jsxs)("g", {
-                "clip-path": "url(#clip0_2732_42516)",
+                clipPath: "url(#clip0_2732_42516)",
                 children: [
                     (0, r.jsx)("path", {
                         d: "M64.8828 23.5441L26.6128 26.5941L26.1843 29.4645L26.1333 29.8034L24.178 42.9828L22.5661 53.5595C22.5202 53.8649 22.5439 54.1766 22.6356 54.4716C22.7273 54.7665 22.8846 55.0371 23.0957 55.2631C23.3068 55.4891 23.5663 55.6648 23.855 55.777C24.1436 55.8893 24.4539 55.9352 24.7629 55.9114L30.6493 55.4539C30.6493 55.4539 29.017 60.0425 28.7313 60.8185C28.7115 60.9106 28.7157 61.0061 28.7434 61.0961C28.771 61.1861 28.8213 61.2675 28.8895 61.3327C28.9576 61.3979 29.0413 61.4446 29.1327 61.4685C29.224 61.4924 29.32 61.4926 29.4114 61.4692C29.4523 61.4692 31.36 60.256 33.788 58.7208L34.8966 58.0193L35.0938 57.8939L34.9102 54.4644L55.7829 52.6343L56.2488 53.4375L59.7582 53.1359C60.6838 53.0634 61.5576 52.6806 62.2369 52.0497C62.9162 51.4189 63.361 50.5774 63.4988 49.6623L67.0694 25.8757C67.1157 25.5721 67.0923 25.262 67.0011 24.9687C66.9099 24.6753 66.7533 24.4064 66.5429 24.1821C66.3325 23.9577 66.0738 23.7838 65.7863 23.6733C65.4988 23.5628 65.1899 23.5186 64.8828 23.5441Z",
@@ -136,10 +136,10 @@ function i(e) {
                         y2: "-25.4118",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", { "stop-color": "#FF78B8" }),
+                            (0, r.jsx)("stop", { stopColor: "#FF78B8" }),
                             (0, r.jsx)("stop", {
                                 offset: "0.99",
-                                "stop-color": "#EA459E",
+                                stopColor: "#EA459E",
                             }),
                         ],
                     }),
@@ -153,19 +153,19 @@ function i(e) {
                         children: [
                             (0, r.jsx)("stop", {
                                 offset: "0.01",
-                                "stop-color": "#0A1BAC",
+                                stopColor: "#0A1BAC",
                             }),
                             (0, r.jsx)("stop", {
                                 offset: "0.31",
-                                "stop-color": "#1D2DC0",
+                                stopColor: "#1D2DC0",
                             }),
                             (0, r.jsx)("stop", {
                                 offset: "0.68",
-                                "stop-color": "#2D3DD2",
+                                stopColor: "#2D3DD2",
                             }),
                             (0, r.jsx)("stop", {
                                 offset: "0.95",
-                                "stop-color": "#3343D8",
+                                stopColor: "#3343D8",
                             }),
                         ],
                     }),
@@ -177,10 +177,10 @@ function i(e) {
                         y2: "31.0068",
                         gradientUnits: "userSpaceOnUse",
                         children: [
-                            (0, r.jsx)("stop", { "stop-color": "#FFC518" }),
+                            (0, r.jsx)("stop", { stopColor: "#FFC518" }),
                             (0, r.jsx)("stop", {
                                 offset: "1",
-                                "stop-color": "#FF8B18",
+                                stopColor: "#FF8B18",
                             }),
                         ],
                     }),
@@ -194,15 +194,15 @@ function i(e) {
                         children: [
                             (0, r.jsx)("stop", {
                                 offset: "0.05",
-                                "stop-color": "#5765F1",
+                                stopColor: "#5765F1",
                             }),
                             (0, r.jsx)("stop", {
                                 offset: "0.65",
-                                "stop-color": "#3645DA",
+                                stopColor: "#3645DA",
                             }),
                             (0, r.jsx)("stop", {
                                 offset: "0.69",
-                                "stop-color": "#3343D8",
+                                stopColor: "#3343D8",
                             }),
                         ],
                     }),
@@ -216,15 +216,15 @@ function i(e) {
                         children: [
                             (0, r.jsx)("stop", {
                                 offset: "0.05",
-                                "stop-color": "#5765F1",
+                                stopColor: "#5765F1",
                             }),
                             (0, r.jsx)("stop", {
                                 offset: "0.47",
-                                "stop-color": "#4857E7",
+                                stopColor: "#4857E7",
                             }),
                             (0, r.jsx)("stop", {
                                 offset: "0.91",
-                                "stop-color": "#3343D8",
+                                stopColor: "#3343D8",
                             }),
                         ],
                     }),

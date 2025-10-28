@@ -32,7 +32,7 @@ let a = r.ZP.getEnableHardwareAcceleration()
               },
               children: [
                   (0, i.jsxs)("g", {
-                      "clip-path": "url(#a)",
+                      clipPath: "url(#a)",
                       children: [
                           (0, i.jsx)("path", {
                               fill: "#000",
@@ -73,11 +73,11 @@ let a = r.ZP.getEnableHardwareAcceleration()
                               height: "1926",
                               x: "-890",
                               y: "-883",
-                              "color-interpolation-filters": "sRGB",
+                              colorInterpolationFilters: "sRGB",
                               filterUnits: "userSpaceOnUse",
                               children: [
                                   (0, i.jsx)("feFlood", {
-                                      "flood-opacity": "0",
+                                      floodOpacity: "0",
                                       result: "BackgroundImageFix",
                                   }),
                                   (0, i.jsx)("feBlend", {
@@ -97,11 +97,11 @@ let a = r.ZP.getEnableHardwareAcceleration()
                               height: "928.8",
                               x: "-429",
                               y: "-518",
-                              "color-interpolation-filters": "sRGB",
+                              colorInterpolationFilters: "sRGB",
                               filterUnits: "userSpaceOnUse",
                               children: [
                                   (0, i.jsx)("feFlood", {
-                                      "flood-opacity": "0",
+                                      floodOpacity: "0",
                                       result: "BackgroundImageFix",
                                   }),
                                   (0, i.jsx)("feBlend", {

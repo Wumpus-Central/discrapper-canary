@@ -34,7 +34,7 @@ function v() {
                 height: "60",
                 rx: "8",
                 stroke: "url(#paint0_linear_1368_16544)",
-                "stroke-width": "2",
+                strokeWidth: "2",
             }),
             (0, r.jsx)("defs", {
                 children: (0, r.jsxs)("linearGradient", {
@@ -45,10 +45,10 @@ function v() {
                     y2: "65.75",
                     gradientUnits: "userSpaceOnUse",
                     children: [
-                        (0, r.jsx)("stop", { "stop-color": "#B473F5" }),
+                        (0, r.jsx)("stop", { stopColor: "#B473F5" }),
                         (0, r.jsx)("stop", {
                             offset: "1",
-                            "stop-color": "#E292AA",
+                            stopColor: "#E292AA",
                         }),
                     ],
                 }),

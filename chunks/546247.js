@@ -27,7 +27,7 @@ let o = l.ZP.getEnableHardwareAcceleration()
               },
               children: [
                   (0, i.jsxs)("g", {
-                      "clip-path": "url(#a)",
+                      clipPath: "url(#a)",
                       children: [
                           (0, i.jsx)("path", {
                               fill: "#000",
@@ -53,7 +53,7 @@ let o = l.ZP.getEnableHardwareAcceleration()
                               filter: "url(#d)",
                               children: (0, i.jsx)("path", {
                                   stroke: "#5865F2",
-                                  "stroke-width": "14.648",
+                                  strokeWidth: "14.648",
                                   d: "M500 1664.5c368.098 0 666.5-298.4 666.5-666.5 0-368.098-298.402-666.5-666.5-666.5S-166.5 629.902-166.5 998c0 368.1 298.402 666.5 666.5 666.5Z",
                               }),
                           }),
@@ -74,11 +74,11 @@ let o = l.ZP.getEnableHardwareAcceleration()
                               height: "2182.48",
                               x: "-376.941",
                               y: "-16.241",
-                              "color-interpolation-filters": "sRGB",
+                              colorInterpolationFilters: "sRGB",
                               filterUnits: "userSpaceOnUse",
                               children: [
                                   (0, i.jsx)("feFlood", {
-                                      "flood-opacity": "0",
+                                      floodOpacity: "0",
                                       result: "BackgroundImageFix",
                                   }),
                                   (0, i.jsx)("feBlend", {
@@ -98,11 +98,11 @@ let o = l.ZP.getEnableHardwareAcceleration()
                               height: "1389.94",
                               x: "-113.969",
                               y: "331.031",
-                              "color-interpolation-filters": "sRGB",
+                              colorInterpolationFilters: "sRGB",
                               filterUnits: "userSpaceOnUse",
                               children: [
                                   (0, i.jsx)("feFlood", {
-                                      "flood-opacity": "0",
+                                      floodOpacity: "0",
                                       result: "BackgroundImageFix",
                                   }),
                                   (0, i.jsx)("feBlend", {
@@ -122,11 +122,11 @@ let o = l.ZP.getEnableHardwareAcceleration()
                               height: "1738.27",
                               x: "-369.137",
                               y: "128.863",
-                              "color-interpolation-filters": "sRGB",
+                              colorInterpolationFilters: "sRGB",
                               filterUnits: "userSpaceOnUse",
                               children: [
                                   (0, i.jsx)("feFlood", {
-                                      "flood-opacity": "0",
+                                      floodOpacity: "0",
                                       result: "BackgroundImageFix",
                                   }),
                                   (0, i.jsx)("feBlend", {
@@ -146,11 +146,11 @@ let o = l.ZP.getEnableHardwareAcceleration()
                               height: "1234.59",
                               x: "-143.797",
                               y: "486.203",
-                              "color-interpolation-filters": "sRGB",
+                              colorInterpolationFilters: "sRGB",
                               filterUnits: "userSpaceOnUse",
                               children: [
                                   (0, i.jsx)("feFlood", {
-                                      "flood-opacity": "0",
+                                      floodOpacity: "0",
                                       result: "BackgroundImageFix",
                                   }),
                                   (0, i.jsx)("feBlend", {

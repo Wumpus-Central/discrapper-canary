@@ -82,7 +82,7 @@ let f = ["#847D8B", "#D1CDD5"],
                     xmlns: "http://www.w3.org/2000/svg",
                     children: [
                         (0, v.jsxs)("g", {
-                            "clip-path": "url(#clip0_290_14574)",
+                            clipPath: "url(#clip0_290_14574)",
                             children: [
                                 (0, v.jsx)("path", {
                                     d: "M13 8V6H14V4H15V1H11V3H10V7H11V8H5V7H6V3H5V1H1V4H2V6H3V8H4V9H3V10H2V12H1V14H2V15H14V14H15V12H14V10H13V9H12V8H13Z",

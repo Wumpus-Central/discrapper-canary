@@ -125,11 +125,11 @@ function l(e) {
                             children: [
                                 (0, i.jsx)("stop", {
                                     offset: "0.14",
-                                    "stop-color": "#FFE45C",
+                                    stopColor: "#FFE45C",
                                 }),
                                 (0, i.jsx)("stop", {
                                     offset: "0.83",
-                                    "stop-color": "#FFC31A",
+                                    stopColor: "#FFC31A",
                                 }),
                             ],
                         }),

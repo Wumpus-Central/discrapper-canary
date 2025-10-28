@@ -129,10 +129,10 @@ function d(e) {
                             y2: "188",
                             gradientUnits: "userSpaceOnUse",
                             children: [
-                                (0, r.jsx)("stop", { "stop-color": "#686bff" }),
+                                (0, r.jsx)("stop", { stopColor: "#686bff" }),
                                 (0, r.jsx)("stop", {
                                     offset: "1",
-                                    "stop-color": "#c356fd",
+                                    stopColor: "#c356fd",
                                 }),
                             ],
                         }),
@@ -144,7 +144,7 @@ function d(e) {
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         children: (0, r.jsxs)("g", {
-                            "clip-path": "url(#clip0_2645_182555)",
+                            clipPath: "url(#clip0_2645_182555)",
                             children: [
                                 (0, r.jsx)("path", {
                                     fillRule: "evenodd",

@@ -91,7 +91,7 @@ function d(e) {
             fill: "none",
             children: [
                 (0, r.jsxs)("g", {
-                    "clip-path": "url(#clip0_2645_182555)",
+                    clipPath: "url(#clip0_2645_182555)",
                     children: [
                         (0, r.jsx)("path", {
                             fillRule: "evenodd",
@@ -132,7 +132,7 @@ function f(e) {
             fill: "none",
             children: [
                 (0, r.jsxs)("g", {
-                    "clip-path": "url(#clip0_2645_182555)",
+                    clipPath: "url(#clip0_2645_182555)",
                     children: [
                         (0, r.jsx)("path", {
                             fillRule: "evenodd",
