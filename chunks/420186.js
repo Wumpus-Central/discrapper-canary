@@ -1,109 +1,72 @@
-n.d(t, { R: () => _ }), n(388685);
+n.d(t, { R: () => m });
 var r = n(951288),
     i = n(647438),
-    s = n(120356),
-    l = n.n(s),
-    a = n(481060),
-    o = n(590965),
-    c = n(695346),
-    u = n(51331),
-    d = n(259580),
-    h = n(626135),
-    g = n(978986),
-    p = n(981631),
-    m = n(388032),
-    f = n(181174);
-let _ = () => {
+    s = n(481060),
+    l = n(590965),
+    a = n(590149),
+    o = n(695346),
+    c = n(51331),
+    u = n(626135),
+    d = n(978986),
+    h = n(981631),
+    g = n(388032),
+    p = n(181174);
+let m = () => {
     var e;
-    let [t, n] = i.useState(!1),
-        s = c.G6.useSetting(),
+    let t = o.G6.useSetting(),
         {
-            nickname: _,
-            dmsAllowed: x,
-            showActivity: E,
-            setNickname: v,
-            setDmsAllowed: b,
-            setShowActivity: j,
-            guildId: I,
-            inviteCode: N,
-        } = (0, g.XW)(),
-        y = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
-    return (0, r.jsxs)("div", {
-        className: l()(f.editProfileContainer, { [f.opened]: t }),
+            nickname: n,
+            dmsAllowed: m,
+            showActivity: f,
+            setNickname: _,
+            setDmsAllowed: x,
+            setShowActivity: E,
+            guildId: v,
+            inviteCode: b,
+        } = (0, d.XW)(),
+        j = null == (e = l.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
+        I = i.useCallback(() => {
+            u.default.track(h.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                guild_id: v,
+                invite_code: b,
+            });
+        }, [v, b]);
+    return (0, r.jsxs)(a.Z, {
+        className: p.accordion,
+        icon: (0, r.jsx)(s.ewm, { size: "md" }),
+        title: g.intl.string(g.t["A5wHQ/"]),
+        subtitle: g.intl.string(g.t.UKCSEd),
+        onOpen: I,
+        maxHeight: j ? 220 : 130,
         children: [
-            (0, r.jsxs)(a.P3F, {
-                className: f.header,
-                onClick: () => {
-                    t ||
-                        h.default.track(p.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: I,
-                            invite_code: N,
+            j &&
+                (0, r.jsxs)("div", {
+                    className: p.serverNickname,
+                    children: [
+                        (0, r.jsx)(s.Text, {
+                            variant: "eyebrow",
+                            color: "header-secondary",
+                            children: g.intl.string(g.t.me1lRk),
                         }),
-                        n(!t);
-                },
-                children: [
-                    (0, r.jsx)("div", {
-                        className: f.headerIconWrapper,
-                        children: (0, r.jsx)(a.ewm, { size: "md" }),
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: f.title,
-                        children: [
-                            (0, r.jsx)(a.Text, {
-                                variant: "eyebrow",
-                                color: "header-secondary",
-                                children: m.intl.string(m.t["A5wHQ/"]),
-                            }),
-                            (0, r.jsx)(a.Text, {
-                                variant: "text-sm/medium",
-                                color: "interactive-normal",
-                                children: m.intl.string(m.t.UKCSEd),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)("div", {
-                        className: l()(f.caret, { [f.opened]: t }),
-                        children: (0, r.jsx)(d.Z, {
-                            width: 18,
-                            height: 18,
-                            direction: d.Z.Directions.DOWN,
+                        (0, r.jsx)(s.oil, {
+                            placeholder: g.intl.string(g.t["09Q8yp"]),
+                            maxLength: h.l$U,
+                            value: n,
+                            onChange: _,
                         }),
-                    }),
-                ],
+                    ],
+                }),
+            (0, r.jsx)(c.ZP, {
+                title: g.intl.string(g.t["/2ed37"]),
+                value: m,
+                onChange: x,
             }),
-            (0, r.jsxs)("div", {
-                className: l()(f.customizationSection, { [f.opened]: t }, y ? null : f.condensed),
-                children: [
-                    y &&
-                        (0, r.jsxs)("div", {
-                            className: f.serverNickname,
-                            children: [
-                                (0, r.jsx)(a.Text, {
-                                    variant: "eyebrow",
-                                    color: "header-secondary",
-                                    children: m.intl.string(m.t.me1lRk),
-                                }),
-                                (0, r.jsx)(a.oil, {
-                                    placeholder: m.intl.string(m.t["09Q8yp"]),
-                                    maxLength: p.l$U,
-                                    value: _,
-                                    onChange: v,
-                                }),
-                            ],
-                        }),
-                    (0, r.jsx)(u.ZP, {
-                        title: m.intl.string(m.t["/2ed37"]),
-                        value: x,
-                        onChange: b,
-                    }),
-                    s &&
-                        (0, r.jsx)(u.ZP, {
-                            title: m.intl.string(m.t.bN4m1G),
-                            value: E,
-                            onChange: j,
-                        }),
-                ],
-            }),
+            t &&
+                (0, r.jsx)(c.ZP, {
+                    title: g.intl.string(g.t.bN4m1G),
+                    value: f,
+                    onChange: E,
+                }),
         ],
     });
 };
