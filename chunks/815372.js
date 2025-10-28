@@ -25,6 +25,7 @@ var o = (function (e) {
         (e.QUEST_HOME = "QUEST_HOME"),
         (e.APPS_HOME = "APPS_HOME"),
         (e.SETTINGS = "SETTINGS"),
+        (e.REVENUE_PLAYGROUND = "REVENUE_PLAYGROUND"),
         e
     );
 })(o || {});
@@ -56,6 +57,11 @@ class s extends r.Z {
                     path: null != t ? t : i.Z5c.SETTINGS("account"),
                     label: n,
                     type: "SETTINGS",
+                });
+            case "REVENUE_PLAYGROUND":
+                return new s({
+                    path: null != t ? t : i.Z5c.APP,
+                    type: "REVENUE_PLAYGROUND",
                 });
             default:
                 throw Error("Unhandled InAppNavigationType");

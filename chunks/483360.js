@@ -333,10 +333,10 @@ function e1(e, t, n) {
         e === t || ((!!n || !!(0, L.Km)(t)) && (e === B.sH ? (0, L.r8)(t) || (0, L.bw)(t) : e === B.Zb && (0, L.bw)(t)))
     );
 }
-function e3(e, t) {
+function e2(e, t) {
     return e === B.sH && (0, L.bw)(t);
 }
-function e2(e) {
+function e3(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e
             .split(" ")
@@ -585,7 +585,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     allowSnowflake: p,
                     includeAllThreads: h,
                 } = e,
-                m = e2(n, c),
+                m = e3(n, c),
                 g = e0(l);
             t =
                 null != r
@@ -624,7 +624,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     0 !== c &&
                         !(t.length > 1) &&
                         (1 !== t.length || t[0].isFullMatch || s) &&
-                        (e3(l, e.type) && (c = Math.max(c - eA, eS / 2)),
+                        (e2(l, e.type) && (c = Math.max(c - eA, eS / 2)),
                         e.isThread() && (e.isActiveThread() || (c -= eC), w.Z.hasJoined(e.id) || (c -= eN)),
                         (c = Math.min(
                             c + Math.min(null != (O = U.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eR,
@@ -768,22 +768,24 @@ let e7 = (0, $.oH)((e, t, n) => {
                     containQuery: RegExp(ei.Z.escape(i), "i"),
                     queryLower: i,
                 },
-                s = {
+                s = es.ZP.getUserIsStaff(),
+                l = {
                     [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4ze)],
                     [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkog)],
                     [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2K)],
                     [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUj)],
-                },
-                l = [];
-            for (let e in s) {
+                };
+            s && (l[d.Ky.REVENUE_PLAYGROUND] = [ef.intl.string(ef.t["4Y3g1V"]), ef.intl.string(ef.t.OZJY67)]);
+            let c = [];
+            for (let e in l) {
                 let t = d.Ky[e],
-                    n = s[t];
+                    n = l[t];
                 if (null != n)
                     for (let e of n) {
                         let n = e.toLocaleLowerCase(),
                             i = eq(n, a, r);
                         i > 0 &&
-                            l.push({
+                            c.push({
                                 type: ec.h8.IN_APP_NAVIGATION,
                                 record: d.FL.fromType(t),
                                 score: eY(i),
@@ -798,7 +800,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     let n = [e.title].concat(e.searchableTitles),
                         i = null != (t = (0, o.max)(n.map((e) => eY(eq(e.toLocaleLowerCase(), a, r))))) ? t : 0;
                     i > 0 &&
-                        l.push({
+                        c.push({
                             type: ec.h8.IN_APP_NAVIGATION,
                             record: d.FL.fromType(d.Ky.SETTINGS, e.path, e.title),
                             score: i,
@@ -806,9 +808,9 @@ let e7 = (0, $.oH)((e, t, n) => {
                             sortable: e.title.toLocaleLowerCase(),
                         });
                 }),
-                l.sort(f.Z),
-                l.length > n && (l.length = n),
-                l
+                c.sort(f.Z),
+                c.length > n && (c.length = n),
+                c
             );
         },
         querySKUs(e) {

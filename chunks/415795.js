@@ -577,6 +577,13 @@ class L extends a.Component {
                         color: "currentColor",
                     }));
                 break;
+            case l.Ky.REVENUE_PLAYGROUND:
+                (e = v.intl.string(v.t.OZJY67)),
+                    (t = (0, i.jsx)(o.uMN, {
+                        size: "xs",
+                        color: "currentColor",
+                    }));
+                break;
             default:
                 (e = n.id),
                     (t = (0, i.jsx)(o.xPt, {

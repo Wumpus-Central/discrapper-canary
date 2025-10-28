@@ -1,54 +1,54 @@
-n.d(t, { i: () => l }), n(781311);
-var r = n(951288),
-    i = n(49800),
-    a = n(481060),
-    o = n(383838),
-    s = n(512983);
-let l = {
+t.d(l, { i: () => s }), t(781311);
+var a = t(951288),
+    n = t(49800),
+    o = t(481060),
+    i = t(383838),
+    r = t(512983);
+let s = {
     title: "Form Components",
     stories: [
         {
             id: "formnotice",
             name: "FormNotice",
             component: function (e) {
-                let { type: t, title: n, body: i, hasButton: s } = e,
-                    l = s ? (0, r.jsx)(a.Button, { text: "Action" }) : void 0;
-                return (0, r.jsx)(o.To, {
-                    type: t,
-                    title: n,
-                    body: i,
-                    button: l,
+                let { type: l, title: t, body: n, hasButton: r } = e,
+                    s = r ? (0, a.jsx)(o.Button, { text: "Action" }) : void 0;
+                return (0, a.jsx)(i.To, {
+                    type: l,
+                    title: t,
+                    body: n,
+                    button: s,
                 });
             },
             controls: {
                 type: {
                     type: "select",
                     label: "Type",
-                    defaultValue: i.Z.Types.DANGER,
+                    defaultValue: n.Z.Types.DANGER,
                     options: [
                         {
                             label: "Primary",
-                            value: i.Z.Types.PRIMARY,
+                            value: n.Z.Types.PRIMARY,
                         },
                         {
                             label: "Danger",
-                            value: i.Z.Types.DANGER,
+                            value: n.Z.Types.DANGER,
                         },
                         {
                             label: "Warning",
-                            value: i.Z.Types.WARNING,
+                            value: n.Z.Types.WARNING,
                         },
                         {
                             label: "Success",
-                            value: i.Z.Types.SUCCESS,
+                            value: n.Z.Types.SUCCESS,
                         },
                         {
                             label: "Brand",
-                            value: i.Z.Types.BRAND,
+                            value: n.Z.Types.BRAND,
                         },
                         {
                             label: "Custom",
-                            value: i.Z.Types.CUSTOM,
+                            value: n.Z.Types.CUSTOM,
                         },
                     ],
                 },
@@ -73,17 +73,16 @@ let l = {
             id: "formtitle",
             name: "FormTitle",
             component: function (e) {
-                let { children: t, disabled: n, required: i, errorMessage: a } = e,
-                    o = (null == a ? void 0 : a.trim()) === "" ? void 0 : a,
-                    l = ["h1", "h2", "h3", "h4", "h5", "legend"];
-                return (0, r.jsx)("div", {
+                let { children: l, disabled: t, required: n, errorMessage: o } = e,
+                    i = (null == o ? void 0 : o.trim()) === "" ? void 0 : o;
+                return (0, a.jsx)("div", {
                     style: {
                         display: "flex",
                         flexDirection: "column",
                         gap: "16px",
                     },
-                    children: l.map((e) =>
-                        (0, r.jsxs)(
+                    children: ["h1", "h2", "h3", "h4", "h5", "legend"].map((e) =>
+                        (0, a.jsxs)(
                             "div",
                             {
                                 style: {
@@ -92,7 +91,7 @@ let l = {
                                     gap: "8px",
                                 },
                                 children: [
-                                    (0, r.jsxs)("code", {
+                                    (0, a.jsxs)("code", {
                                         style: {
                                             minWidth: "60px",
                                             fontSize: "12px",
@@ -100,13 +99,13 @@ let l = {
                                         },
                                         children: [e, ":"],
                                     }),
-                                    (0, r.jsx)(s.v, {
+                                    (0, a.jsx)(r.v, {
                                         tag: e,
-                                        disabled: n,
-                                        required: i,
-                                        error: o,
-                                        errorId: null != o ? "error-id-".concat(e) : void 0,
-                                        children: t,
+                                        disabled: t,
+                                        required: n,
+                                        error: i,
+                                        errorId: null != i ? "error-id-".concat(e) : void 0,
+                                        children: l,
                                     }),
                                 ],
                             },

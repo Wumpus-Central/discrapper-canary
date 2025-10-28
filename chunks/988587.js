@@ -1,38 +1,9 @@
-n.d(t, { b: () => u }), n(388685);
+n.d(t, { b: () => c }), n(388685);
 var r = n(951288),
-    i = n(647438),
-    a = n(255432),
-    o = n(624315);
-function s(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function l(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function c(e) {
+    l = n(647438),
+    o = n(255432),
+    a = n(624315);
+function i(e) {
     let t = e.controls,
         n = {};
     return (
@@ -44,36 +15,64 @@ function c(e) {
         n
     );
 }
-function u(e) {
+function c(e) {
     let { story: t } = e,
-        n = i.useMemo(() => c(t), [t]),
-        [s, u] = i.useState(n);
-    i.useEffect(() => {
-        u(c(t));
-    }, [t]);
-    let d = () => {
-        let e = t.component;
-        return (0, r.jsx)(e, l({}, s));
-    };
-    return (0, r.jsxs)("div", {
-        className: o.main,
-        children: [
-            (0, r.jsx)("div", {
-                className: o.canvas,
-                children: (0, r.jsx)("div", {
-                    className: o.storyContent,
-                    children: d(),
-                }),
-            }),
-            null != t.controls &&
+        n = l.useMemo(() => i(t), [t]),
+        [c, u] = l.useState(n);
+    return (
+        l.useEffect(() => {
+            u(i(t));
+        }, [t]),
+        (0, r.jsxs)("div", {
+            className: a.main,
+            children: [
                 (0, r.jsx)("div", {
-                    className: o.controls,
-                    children: (0, r.jsx)(a.a, {
-                        controls: t.controls,
-                        props: s,
-                        onPropsChange: u,
+                    className: a.canvas,
+                    children: (0, r.jsx)("div", {
+                        className: a.storyContent,
+                        children: (() => {
+                            let e = t.component;
+                            return (0, r.jsx)(
+                                e,
+                                (function (e) {
+                                    for (var t = 1; t < arguments.length; t++) {
+                                        var n = null != arguments[t] ? arguments[t] : {},
+                                            r = Object.keys(n);
+                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                            (r = r.concat(
+                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                }),
+                                            )),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
+                                                    t in e
+                                                        ? Object.defineProperty(e, t, {
+                                                              value: r,
+                                                              enumerable: !0,
+                                                              configurable: !0,
+                                                              writable: !0,
+                                                          })
+                                                        : (e[t] = r);
+                                            });
+                                    }
+                                    return e;
+                                })({}, c),
+                            );
+                        })(),
                     }),
                 }),
-        ],
-    });
+                null != t.controls &&
+                    (0, r.jsx)("div", {
+                        className: a.controls,
+                        children: (0, r.jsx)(o.a, {
+                            controls: t.controls,
+                            props: c,
+                            onPropsChange: u,
+                        }),
+                    }),
+            ],
+        })
+    );
 }

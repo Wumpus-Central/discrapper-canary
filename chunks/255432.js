@@ -1,111 +1,100 @@
-n.d(t, { a: () => _ }), n(388685);
+n.d(t, { a: () => u }), n(388685);
 var r = n(951288),
-    i = n(793030),
-    a = n(619307),
-    o = n(463208),
-    s = n(481060),
-    l = n(624315);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    l = n(793030),
+    o = n(619307),
+    a = n(463208),
+    i = n(481060),
+    c = n(624315);
 function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function _(e) {
-    let { controls: t, props: n, onPropsChange: c } = e,
-        d = (e, t) => {
-            c(f(u({}, n), { [e]: t }));
+    let { controls: t, props: n, onPropsChange: u } = e,
+        s = (e, t) => {
+            var r, l;
+            u(
+                ((r = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                }),
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, n)),
+                (l = l = { [e]: t }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                      }),
+                r),
+            );
         },
-        _ = Object.entries(t);
-    return 0 === _.length
+        d = Object.entries(t);
+    return 0 === d.length
         ? null
         : (0, r.jsx)("div", {
-              className: l.controlsSection,
-              children: (0, r.jsx)(i.Kqy, {
+              className: c.controlsSection,
+              children: (0, r.jsx)(l.Kqy, {
                   gap: 16,
-                  children: _.map((e) => {
+                  children: d.map((e) => {
                       var t;
-                      let [l, c] = e,
-                          u = null != (t = n[l]) ? t : c.defaultValue;
+                      let [c, u] = e,
+                          d = null != (t = n[c]) ? t : u.defaultValue;
                       return (0, r.jsxs)(
-                          i.gNt,
+                          l.gNt,
                           {
-                              label: "boolean" === c.type ? void 0 : c.label,
+                              label: "boolean" === u.type ? void 0 : u.label,
                               children: [
-                                  "select" === c.type &&
-                                      null != c.options &&
-                                      (0, r.jsx)(a.q4, {
-                                          value: u,
-                                          onChange: (e) => d(l, e),
-                                          options: c.options,
+                                  "select" === u.type &&
+                                      null != u.options &&
+                                      (0, r.jsx)(o.q4, {
+                                          value: d,
+                                          onChange: (e) => s(c, e),
+                                          options: u.options,
                                       }),
-                                  "boolean" === c.type &&
-                                      (0, r.jsx)(s.Checkbox, {
-                                          checked: u,
-                                          onChange: (e) => d(l, e),
-                                          label: c.label,
+                                  "boolean" === u.type &&
+                                      (0, r.jsx)(i.Checkbox, {
+                                          checked: d,
+                                          onChange: (e) => s(c, e),
+                                          label: u.label,
                                       }),
-                                  "text" === c.type &&
-                                      (0, r.jsx)(o.o, {
-                                          value: u,
-                                          onChange: (e) => d(l, e),
+                                  "text" === u.type &&
+                                      (0, r.jsx)(a.o, {
+                                          value: d,
+                                          onChange: (e) => s(c, e),
                                       }),
-                                  "number" === c.type &&
-                                      (0, r.jsx)(o.o, {
+                                  "number" === u.type &&
+                                      (0, r.jsx)(a.o, {
                                           type: "number",
-                                          value: String(u),
-                                          min: c.minValue,
-                                          onChange: (e) => d(l, Number(e)),
+                                          value: String(d),
+                                          min: u.minValue,
+                                          onChange: (e) => s(c, Number(e)),
                                       }),
                               ],
                           },
-                          l,
+                          c,
                       );
                   }),
               }),

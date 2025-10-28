@@ -1,64 +1,55 @@
-n.d(t, { B: () => d });
-var r = n(951288);
-n(647438);
-var i = n(793030),
-    a = n(481060);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+t.d(l, { B: () => u });
+var a = t(951288);
+t(647438);
+var n = t(793030),
+    o = t(481060);
+function i(e) {
+    for (var l = 1; l < arguments.length; l++) {
+        var t = null != arguments[l] ? arguments[l] : {},
+            a = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
+            a.forEach(function (l) {
+                var a;
+                (a = t[l]),
+                    l in e
+                        ? Object.defineProperty(e, l, {
+                              value: a,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[l] = a);
             });
     }
     return e;
 }
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
+function r(e, l) {
     return (
-        (t = null != t ? t : {}),
+        (l = null != l ? l : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(l))
+            : (function (e, l) {
+                  var t = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var a = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, a);
+                  }
+                  return t;
+              })(Object(l)).forEach(function (t) {
+                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(l, t));
               }),
         e
     );
 }
-let u = {
+let s = {
         name: "Button",
         id: "button",
-        component: i.zxk,
+        component: n.zxk,
         docs: "https://design.discord.tools/components/web/buttons/button",
         controls: {
             text: {
@@ -142,19 +133,19 @@ let u = {
             },
         },
     },
-    d = {
+    u = {
         title: "Buttons",
         stories: [
-            u,
+            s,
             {
                 name: "IconButton",
                 id: "icon-button",
                 docs: "https://design.discord.tools/components/web/buttons/icon-button",
                 component: function (e) {
-                    return (0, r.jsx)(
-                        i.hU,
-                        c(s({}, e), {
-                            icon: a.gw7,
+                    return (0, a.jsx)(
+                        n.hU,
+                        r(i({}, e), {
+                            icon: o.gw7,
                             "aria-label": "Clyde",
                         }),
                     );
@@ -230,7 +221,7 @@ let u = {
                 name: "TextButton",
                 id: "text-button",
                 docs: "https://design.discord.tools/components/web/buttons/text-button",
-                component: i.Avr,
+                component: n.Avr,
                 controls: {
                     text: {
                         label: "Text",
@@ -272,15 +263,15 @@ let u = {
                 id: "button-group",
                 docs: "https://design.discord.tools/components/web/buttons/button-group",
                 component: function (e) {
-                    return (0, r.jsxs)(
-                        i.hE2,
-                        c(s({}, e), {
+                    return (0, a.jsxs)(
+                        n.hE2,
+                        r(i({}, e), {
                             children: [
-                                (0, r.jsx)(i.zxk, {
+                                (0, a.jsx)(n.zxk, {
                                     variant: "secondary",
                                     text: "Cancel",
                                 }),
-                                (0, r.jsx)(i.zxk, {
+                                (0, a.jsx)(n.zxk, {
                                     variant: "primary",
                                     text: "Submit",
                                 }),

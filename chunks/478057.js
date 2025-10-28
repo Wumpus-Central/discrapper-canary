@@ -21,16 +21,25 @@ function c() {
                   action: () => {
                       (0, a.jN)(o.S9g.MANA_PLAYGROUND);
                   },
-                  children: (0, r.jsx)(
+                  children: (0, r.jsxs)(
                       l.kSQ,
                       {
-                          children: (0, r.jsx)(l.sNh, {
-                              id: "mana-playground",
-                              label: "Mana Playground",
-                              action: () => {
-                                  (0, a.jN)(o.S9g.MANA_PLAYGROUND);
-                              },
-                          }),
+                          children: [
+                              (0, r.jsx)(l.sNh, {
+                                  id: "mana-playground",
+                                  label: "Mana Playground",
+                                  action: () => {
+                                      (0, a.jN)(o.S9g.MANA_PLAYGROUND);
+                                  },
+                              }),
+                              (0, r.jsx)(l.sNh, {
+                                  id: "revenue-playground",
+                                  label: "Revenue Playground",
+                                  action: () => {
+                                      (0, a.jN)(o.S9g.REVENUE_PLAYGROUND);
+                                  },
+                              }),
+                          ],
                       },
                       "design-systems",
                   ),
