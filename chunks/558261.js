@@ -33,16 +33,17 @@ let A = (e) => {
         let {
                 product: t,
                 cardRef: n,
-                analyticsLocations: i,
-                selectedVariantIndex: s,
-                hasDiscountOffer: a,
-                discountOfferAmount: u,
-                text: d,
+                isPremiumUser: i,
+                analyticsLocations: s,
+                selectedVariantIndex: a,
+                hasDiscountOffer: u,
+                discountOfferAmount: d,
+                text: g,
             } = e,
-            g = (0, m.XM)(t, !1, !1),
-            p = a
-                ? I.intl.formatToPlainString(I.t["5U5RB5"], { discountOfferAmount: u })
-                : I.intl.formatToPlainString(I.t["cNSL/j"], { price: g });
+            p = (0, m.XM)(t, i, !1),
+            f = u
+                ? I.intl.formatToPlainString(I.t["5U5RB5"], { discountOfferAmount: d })
+                : I.intl.formatToPlainString(I.t["cNSL/j"], { price: p });
         return (0, r.jsx)(o.Button, {
             variant: "primary",
             onClick: (e) => {
@@ -50,14 +51,14 @@ let A = (e) => {
                     (0, c.Z)({
                         skuId: (0, O.S)({
                             product: t,
-                            selectedVariantIndex: s,
+                            selectedVariantIndex: a,
                         }),
                         returnRef: n,
-                        analyticsLocations: i,
+                        analyticsLocations: s,
                         variantsReturnStyle: l.v.VARIANTS_GROUP,
                     });
             },
-            text: null != d ? d : p,
+            text: null != g ? g : f,
             fullWidth: !0,
         });
     },
@@ -281,6 +282,7 @@ let A = (e) => {
                             : (0, r.jsx)(A, {
                                   product: t,
                                   cardRef: n,
+                                  isPremiumUser: C,
                                   analyticsLocations: V,
                                   selectedVariantIndex: l,
                                   hasDiscountOffer: B,
