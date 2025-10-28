@@ -16,41 +16,17 @@ function o() {
                 ? (0, e.jsx)(n.xvT, {
                       variant: "display-sm",
                       color: "text-primary",
-                      children: c.intl.format(d.default.Xu0QsX, {
-                          numHours: Math.floor(i / 60),
-                          hoursHook: (i, t) =>
-                              (0, e.jsx)(
-                                  n.xvT,
-                                  {
-                                      variant: "display-lg",
-                                      color: "text-primary",
-                                      children: i,
-                                  },
-                                  t,
-                              ),
-                      }),
+                      children: c.intl.format(d.default.Xu0QsX, { numHours: Math.floor(i / 60) }),
                   })
                 : (0, e.jsx)(n.xvT, {
                       variant: "display-sm",
                       color: "text-primary",
-                      children: c.intl.format(d.default.UZbUtl, {
-                          numMinutes: Math.floor(i),
-                          minutesHook: (i, t) =>
-                              (0, e.jsx)(
-                                  n.xvT,
-                                  {
-                                      variant: "display-lg",
-                                      color: "text-primary",
-                                      children: i,
-                                  },
-                                  t,
-                              ),
-                      }),
+                      children: c.intl.format(d.default.UZbUtl, { numMinutes: Math.floor(i) }),
                   }),
             (0, e.jsx)(n.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: c.intl.format(d.default["36PZwu"], { percent: t }),
+                children: c.intl.format(d.default["36PZwu"], { percent: 100 - t }),
             }),
         ],
     });

@@ -15,24 +15,12 @@ function o() {
             (0, e.jsx)(n.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: c.intl.format(d.default.nPTMHj, {
-                    numMessages: i,
-                    messagesHook: (i, t) =>
-                        (0, e.jsx)(
-                            n.xvT,
-                            {
-                                variant: "display-lg",
-                                color: "text-primary",
-                                children: i,
-                            },
-                            t,
-                        ),
-                }),
+                children: c.intl.format(d.default.nPTMHj, { numMessages: i }),
             }),
             (0, e.jsx)(n.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: c.intl.format(d.default.ixvOza, { percent: t }),
+                children: c.intl.format(d.default.ixvOza, { percent: 100 - t }),
             }),
         ],
     });
