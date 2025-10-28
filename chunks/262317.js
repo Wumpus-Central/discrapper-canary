@@ -159,20 +159,21 @@ let H = (0, h.$)(function (e) {
         [ex, eO] = r.useState(!1),
         [ej, eE] = r.useState(!1),
         [eS, eP] = r.useState(!1),
-        eI = ej || eS,
-        eZ = ex || eI,
-        eT = (null == eg ? void 0 : eg.session_id) != null,
-        eN = () => {
+        [eI, eZ] = r.useState(!1),
+        eT = ej || eI || eS,
+        eN = ex || eT,
+        eA = (null == eg ? void 0 : eg.session_id) != null,
+        ew = () => {
             e_(!ey);
         },
-        eA = (e, t) => {
+        eM = (e, t) => {
             let n = new Set(["system:click_outside", "user:escape", "user:explicit"]);
-            null != t && n.has(t) && (eS && eP(!1), ej && eE(!1)), ew();
+            null != t && n.has(t) && (eS && eP(!1), ej && eE(!1)), eR();
         },
-        ew = () => {
-            (ee || eb || eT) && (null == el || el(h.id));
+        eR = () => {
+            (ee || eb || eA) && (null == el || el(h.id));
         },
-        eM = (e) => {
+        eL = (e) => {
             e
                 ? (ev.current = setTimeout(() => {
                       eO(!0);
@@ -180,10 +181,10 @@ let H = (0, h.$)(function (e) {
                 : clearTimeout(ev.current);
         };
     r.useEffect(() => () => clearTimeout(ev.current), []);
-    let eR = (e) => {
+    let eD = (e) => {
             e && eO(!1);
         },
-        eL = () => {
+        ek = () => {
             if (!(ee && (0, _.p9)(U, A.Z, Z.Z, T.Z, b.default)[0])) return;
             let e = {
                 streamType: M.lo.GUILD,
@@ -195,7 +196,7 @@ let H = (0, h.$)(function (e) {
                 et ? ((0, v.Z)(e), c.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, p.iV)(e),
                 null == el || el(h.id);
         },
-        eD = (e) => {
+        eU = (e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("79695"),
@@ -220,13 +221,14 @@ let H = (0, h.$)(function (e) {
                     );
             });
         },
-        ek = (e) =>
+        eB = (e) =>
             eh
                 ? (0, i.jsx)(
                       O.$,
                       k(D({}, e), {
                           channel: U,
                           setIsHangStatusInputFocused: eE,
+                          setIsEmojiPickerOpen: eZ,
                       }),
                   )
                 : null != em
@@ -239,30 +241,30 @@ let H = (0, h.$)(function (e) {
                         }),
                     )
                   : null,
-        eU = () =>
+        eH = () =>
             (0, i.jsx)(E.Z, {
                 userId: h.id,
                 channel: U,
             }),
-        eB = () =>
+        eF = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
                 : (0, i.jsx)(x.Z, {
                       user: h,
                       channel: U,
-                      onWatch: eL,
+                      onWatch: ek,
                       previewIsOpen: eo,
                       location: ep,
                   }),
-        eH = (0, i.jsx)("div", {
+        eV = (0, i.jsx)("div", {
             className: L.draggable,
             "data-dnd-name": U.name,
             onMouseEnter: eu
                 ? void 0
                 : () => {
-                      (ee || eb || eT) && !ey && (null == er || er(h.id));
+                      (ee || eb || eA) && !ey && (null == er || er(h.id));
                   },
-            onMouseLeave: eu ? void 0 : ew,
+            onMouseLeave: eu ? void 0 : eR,
             children: (0, i.jsx)(S.Z, {
                 clickTrap:
                     (null == h ? void 0 : h.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && ey,
@@ -301,9 +303,9 @@ let H = (0, h.$)(function (e) {
                                 avatarContainerClass: a()({ [L.userAvatar]: !0 }),
                                 disabled: eu && !t,
                                 selected: ey,
-                                onClick: t ? void 0 : eN,
-                                onDoubleClick: eL,
-                                onContextMenu: eD,
+                                onClick: t ? void 0 : ew,
+                                onDoubleClick: ek,
+                                onContextMenu: eU,
                                 guildId: U.guild_id,
                                 isSelf: eh,
                                 application: ef,
@@ -320,21 +322,21 @@ let H = (0, h.$)(function (e) {
                         }
                         let c = () => null;
                         return (
-                            eb && eZ
-                                ? (c = ek)
+                            eb && eN
+                                ? (c = eB)
                                 : ee
-                                  ? (c = eB)
-                                  : eT && h.id !== I.default.getId()
-                                    ? (c = eU)
-                                    : eb && (c = ek),
+                                  ? (c = eF)
+                                  : eA && h.id !== I.default.getId()
+                                    ? (c = eH)
+                                    : eb && (c = eB),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: eC,
                                 position: "right",
                                 renderPopout: c,
-                                shouldShow: (ea || (eb && eI)) && !ey,
-                                onRequestClose: eA,
-                                align: eb && eZ && !eh ? "center" : void 0,
-                                spacing: eb && eZ ? 8 : 0,
+                                shouldShow: (ea || (eb && eT)) && !ey,
+                                onRequestClose: eM,
+                                align: eb && eN && !eh ? "center" : void 0,
+                                spacing: eb && eN ? 8 : 0,
                                 children: () =>
                                     (0, i.jsx)(
                                         P.ZP,
@@ -342,8 +344,8 @@ let H = (0, h.$)(function (e) {
                                             ref: eC,
                                             onMouseDown: e.onMouseDown,
                                             onKeyDown: e.onKeyDown,
-                                            handleHoverHangStatus: eM,
-                                            handleHoverIcons: eR,
+                                            handleHoverHangStatus: eL,
+                                            handleHoverIcons: eD,
                                             onAddHangStatusClicked: () => eP(!0),
                                         }),
                                     ),
@@ -352,5 +354,5 @@ let H = (0, h.$)(function (e) {
                     })(e),
             }),
         });
-    return $ ? Q(eH) : eH;
+    return $ ? Q(eV) : eV;
 });

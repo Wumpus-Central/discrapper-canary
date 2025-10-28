@@ -14,10 +14,16 @@ var i = n(951288),
     m = n(185923),
     g = n(787267);
 function b(e) {
-    let { customStatusEmoji: t, setCustomStatusEmoji: n, selectedDefaultStatus: b, defaultStatusVariant: C } = e,
-        y = r.useRef(null),
-        _ = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
-        v = r.useCallback(
+    let {
+            customStatusEmoji: t,
+            setCustomStatusEmoji: n,
+            selectedDefaultStatus: b,
+            setIsEmojiPickerOpen: C,
+            defaultStatusVariant: y,
+        } = e,
+        _ = r.useRef(null),
+        v = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
+        x = r.useCallback(
             () =>
                 null != t
                     ? (0, i.jsx)(o.Z, {
@@ -34,19 +40,21 @@ function b(e) {
                                 type: f.IIU.HANG_STATUS,
                                 state: b,
                             },
-                            fallbackVariant: C,
+                            fallbackVariant: y,
                         })
                       : null,
-            [t, C, b],
+            [t, y, b],
         );
     return (0, i.jsx)(a.yRy, {
-        targetElementRef: y,
+        targetElementRef: _,
+        onRequestOpen: () => C(!0),
+        onRequestClose: () => C(!1),
         renderPopout: (e) => {
             var t;
             let { closePopout: r } = e;
             return (0, i.jsx)(c.Z, {
-                channel: _,
-                guildId: null != (t = null == _ ? void 0 : _.guild_id) ? t : void 0,
+                channel: v,
+                guildId: null != (t = null == v ? void 0 : v.guild_id) ? t : void 0,
                 closePopout: r,
                 onSelectEmoji: (e) => {
                     let { emoji: t, willClose: i } = e;
@@ -107,10 +115,10 @@ function b(e) {
                 })({}, e)),
                 (l = l =
                     {
-                        ref: y,
+                        ref: _,
                         active: a,
                         tabIndex: 0,
-                        renderButtonContents: null == t && null == b ? null : v,
+                        renderButtonContents: null == t && null == b ? null : x,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
