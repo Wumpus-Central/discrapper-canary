@@ -17,20 +17,27 @@ var r = n(442837),
 let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
     f = 3,
     _ = (e) => {
-        let { cards: t, perksCards: n, showProfileWidgets: r, showDisplayNameStyles: i } = e,
-            a = null != n.tenureBadge ? [n.tenureBadge] : [],
-            o = f - a.length,
-            s = (e) => {
+        let {
+                cards: t,
+                perksCards: n,
+                showProfileWidgets: r,
+                showDisplayNameStyles: i,
+                recurring3PPromotionExperiment: a,
+            } = e,
+            o = null != n.tenureBadge ? [n.tenureBadge] : [],
+            s = f - o.length,
+            l = (e) => {
                 let { card: n } = e;
-                t.length < o && t.push(n);
+                t.length < s && t.push(n);
             };
         return (
-            r && s({ card: n.profileWidgets }),
-            i && s({ card: n.displayNameStyles }),
-            s({ card: n.customThemes }),
-            s({ card: n.permadecos }),
-            s({ card: n.newAppStylesUpdateJune2024 }),
-            t.push(...a),
+            a && l({ card: n.recurring3PPromotions }),
+            r && l({ card: n.profileWidgets }),
+            i && l({ card: n.displayNameStyles }),
+            l({ card: n.customThemes }),
+            l({ card: n.permadecos }),
+            l({ card: n.newAppStylesUpdateJune2024 }),
+            t.push(...o),
             t
         );
     },
@@ -44,11 +51,12 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                 isInReverseTrial: o,
                 showProfileWidgets: s,
                 showDisplayNameStyles: u,
+                recurring3PPromotionExperiment: d,
             } = e,
-            d = [];
+            f = [];
         switch (n) {
             case l.gM.PERKS_DISCOVERABILITY:
-                d =
+                f =
                     !1 === i
                         ? [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]
                         : a === c.a$.FP_ONLY
@@ -56,21 +64,22 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                           : [t.profiles, t.clientThemes, t.serverBoosts];
                 break;
             case l.gM.WHATS_NEW:
-                d = _({
-                    cards: d,
+                f = _({
+                    cards: f,
                     perksCards: t,
                     showProfileWidgets: s,
                     showDisplayNameStyles: u,
+                    recurring3PPromotionExperiment: d,
                 });
                 break;
             case l.gM.CARD_CAROUSEL_FIRST_ROW:
-                d =
+                f =
                     !1 === i
                         ? [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
                         : [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess];
                 break;
             case l.gM.CARD_CAROUSEL_SECOND_ROW:
-                d =
+                f =
                     !1 === i
                         ? [t.customSoundsEverywhere, t.specialStickerAccess]
                         : a === c.a$.FP_ONLY
@@ -99,14 +108,14 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                             ];
                 break;
             case l.gM.CARD_CAROUSEL_THIRD_ROW:
-                d =
+                f =
                     a === c.a$.FP_ONLY
                         ? o
                             ? [t.entranceSoundsSeeAllVariation]
                             : [t.entranceSoundsSeeAllVariation, t.greyBadge]
                         : [t.entranceSoundsSeeAllVariation, t.badge];
         }
-        return r && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
+        return r && (f = f.filter((e) => !e.hideOnNarrowScreen)), f;
     },
     h = (e) => {
         let t = (0, r.e7)([o.Z], () => o.Z.getPremiumTypeSubscription()),
