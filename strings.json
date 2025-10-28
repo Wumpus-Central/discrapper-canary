@@ -5297,6 +5297,8 @@
   "ydhbwt": "Persistent",
   "7CXSaG": "Gives your current device persistent verification codes. If this setting is on, your friends only have to verify your device once, instead of every time you enter a voice call.\" [Learn more about this setting.](Learn more about this setting.)",
   "/T+ZlP": "Gives your current device persistent verification codes. If this setting is on, your friends only have to verify your device once, instead of every time you enter a voice call. [Learn more](Learn more)",
+  "CQLWvo": "A temporary verification code will be used for this call. You may be able to resolve this by restarting your device.",
+  "fJUioH": "Failed to load your device's saved verification key",
   "aTuFYT": "Reconnect",
   "FJN+kh": "This code should match any time these devices are on a call together. [Learn more about end-to-end encryption.](Learn more about end-to-end encryption.)",
   "zC6o3s": "Privacy",
