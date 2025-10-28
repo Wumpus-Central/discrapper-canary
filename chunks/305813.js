@@ -6,13 +6,13 @@ var l = n(951288),
     a = n(442837),
     s = n(481060),
     c = n(410030),
-    d = n(22267),
-    u = n(778825),
-    p = n(786761),
-    m = n(3148),
-    f = n(739566),
-    g = n(753206),
-    h = n(4242),
+    d = n(778825),
+    u = n(786761),
+    p = n(3148),
+    m = n(739566),
+    f = n(753206),
+    g = n(4242),
+    h = n(566697),
     x = n(150039),
     b = n(678135),
     _ = n(643879),
@@ -89,13 +89,13 @@ function A(e) {
             size: 413,
             canAnimate: !1,
         }),
-        z = (0, a.cj)([v.Z, u.Z], () => (null == n ? v.Z.getAllPending() : u.Z.getAllPending())),
+        z = (0, a.cj)([v.Z, d.Z], () => (null == n ? v.Z.getAllPending() : d.Z.getAllPending())),
         U = (0, _.SD)({
             userId: t.id,
             image: z.pendingAvatar,
         }),
         { userNameplate: q, guildNameplate: K, pendingNameplate: X } = (0, x.Zx)(t, null == n ? void 0 : n.id),
-        V = null != K ? (0, h.Pb)(K) : void 0,
+        V = null != K ? (0, g.Pb)(K) : void 0,
         W = G ? y.BRd.DARK : y.BRd.LIGHT;
     ((M && G) || (!M && !G)) && (W = Z);
     let $ = (0, o.useCallback)(() => {
@@ -106,7 +106,7 @@ function A(e) {
         }, []),
         Q = (0, o.useMemo)(
             () =>
-                R(D({}, (0, f.ij)(t, null)), {
+                R(D({}, (0, m.ij)(t, null)), {
                     nick: r,
                     displayNameStyles: {
                         fontId: A,
@@ -172,13 +172,13 @@ function A(e) {
                                     },
                                 ),
                             ),
-                            (0, l.jsx)(g.Z, {
+                            (0, l.jsx)(f.Z, {
                                 author: Q,
-                                message: (0, p.e5)(
+                                message: (0, u.e5)(
                                     R(
                                         D(
                                             {},
-                                            (0, m.ZP)({
+                                            (0, p.ZP)({
                                                 channelId: "1337",
                                                 content: T.intl.string(O.default.h5Cuej),
                                             }),
@@ -195,7 +195,7 @@ function A(e) {
                                 className: E.chatMessage,
                                 previewGuildId: null == n ? void 0 : n.id,
                             }),
-                            (0, l.jsx)(d.Z, {
+                            (0, l.jsx)(h.Z, {
                                 user: t,
                                 guildId: null == n ? void 0 : n.id,
                                 nameplate: X,

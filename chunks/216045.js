@@ -13,10 +13,10 @@ var r = n(951288),
     p = n(100527),
     h = n(906732),
     m = n(475977),
-    g = n(22267),
-    E = n(266454),
-    b = n(243778),
-    y = n(957730),
+    g = n(266454),
+    E = n(243778),
+    b = n(957730),
+    y = n(566697),
     O = n(53691),
     v = n(267717),
     I = n(296810),
@@ -113,14 +113,14 @@ function K(e, t) {
 }
 function z() {
     let e = (0, N.T)({ location: "UserSettingsProfileCustomization" }),
-        t = (0, E.Nj)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+        t = (0, g.Nj)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
         n = e && !t;
     i.useEffect(() => {
-        n && (0, E.Q3)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+        n && (0, g.Q3)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [n]);
 }
 function q() {
-    let [e, t] = (0, b.US)([l.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
+    let [e, t] = (0, E.US)([l.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
         n = e === l.z.DISPLAY_NAME_STYLES_NEW_BADGE;
     i.useEffect(() => {
         n && t(G.L.TAKE_ACTION);
@@ -133,14 +133,14 @@ function X() {
         }),
         t = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
         n = (0, s.cj)([P.Z], () => P.Z.getAllPending()),
-        { pendingBio: a, pendingAvatar: l, pendingNameplate: E } = n,
-        b = W(n, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
+        { pendingBio: a, pendingAvatar: l, pendingNameplate: g } = n,
+        E = W(n, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
         N = (0, C.SD)({
             userId: e.id,
             image: l,
         }),
         G = (0, s.e7)([P.Z], () => P.Z.showNotice()),
-        F = M.dN.useSetting() && null != a ? y.ZP.parse(void 0, a).content : a,
+        F = M.dN.useSetting() && null != a ? b.ZP.parse(void 0, a).content : a,
         H = L.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: K, newestAnalyticsLocation: X } = (0, h.ZP)(p.Z.USER_SETTINGS_USER_PROFILE);
     z(), q(), i.useEffect(() => () => d.Z.wait(f.W3), []);
@@ -165,21 +165,21 @@ function X() {
                                       onUpsellClick: k.Z,
                                       pendingBio: F,
                                   },
-                                  b,
+                                  E,
                               ),
                               { pendingAvatar: N },
                           ),
                       ),
                       nameplatePreview: (0, r.jsx)(
-                          g.Z,
+                          y.Z,
                           Y(
                               V(
                                   {
                                       user: e,
-                                      nameplate: E,
-                                      nameplateData: void 0 === E ? e.nameplate : void 0,
+                                      nameplate: g,
+                                      nameplateData: void 0 === g ? e.nameplate : void 0,
                                   },
-                                  b,
+                                  E,
                               ),
                               {
                                   className: Z.nameplatePreview,

@@ -6,8 +6,8 @@ var s = n(951288),
     r = n(159691),
     C = n(481060),
     c = n(607070),
-    d = n(22267),
-    u = n(70097),
+    d = n(70097),
+    u = n(566697),
     L = n(594174),
     o = n(526167),
     H = n(741245),
@@ -52,7 +52,7 @@ let g = (e) => {
                               alt: "",
                               className: h.nameplateGlow,
                           })
-                        : (0, s.jsx)(u.Z, {
+                        : (0, s.jsx)(d.Z, {
                               playsInline: !0,
                               muted: !0,
                               autoPlay: !0,
@@ -60,7 +60,7 @@ let g = (e) => {
                               className: h.nameplateGlow,
                               children: (0, s.jsx)("source", { src: _ }),
                           }),
-                    (0, s.jsx)(d.Z, {
+                    (0, s.jsx)(u.Z, {
                         user: E,
                         isHighlighted: !0,
                         nameplate: null,

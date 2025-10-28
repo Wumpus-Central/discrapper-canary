@@ -6,20 +6,20 @@ var r = n(979554),
     l = n(481060),
     a = n(1585),
     o = n(125988),
-    c = n(479446),
-    u = n(981632),
-    d = n(876917),
-    p = n(594174),
-    f = n(583434),
-    h = n(216541),
-    m = n(22267),
+    c = n(566697),
+    u = n(479446),
+    d = n(981632),
+    p = n(876917),
+    f = n(594174),
+    h = n(583434),
+    m = n(216541),
     g = n(948067);
 let b = l.EFr.SIZE_152,
     y = (0, a.y9)(b),
     O = (t) => {
         var e, n;
         let { item: r } = t,
-            a = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+            a = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
             {
                 avatarDecorationSrc: c,
                 avatarPlaceholderSrc: u,
@@ -85,7 +85,7 @@ let b = l.EFr.SIZE_152,
         let { item: e } = t;
         return (0, i.jsx)("div", {
             className: g.profileEffectPreview,
-            children: (0, i.jsx)(d.Z, {
+            children: (0, i.jsx)(p.Z, {
                 isHighlighted: !0,
                 skuId: null == e ? void 0 : e.skuId,
             }),
@@ -95,7 +95,7 @@ let b = l.EFr.SIZE_152,
         let { item: e } = t;
         return (0, i.jsx)("div", {
             className: g.nameplatePreview,
-            children: (0, i.jsx)(m.Z, {
+            children: (0, i.jsx)(c.Z, {
                 nameplate: e,
                 className: g.nameplate,
                 nameplatePreviewSize: "xlarge",
@@ -108,7 +108,7 @@ let b = l.EFr.SIZE_152,
         let { product: e } = t;
         return (0, i.jsx)("div", {
             className: g.bundlePreview,
-            children: (0, i.jsx)(h.d, {
+            children: (0, i.jsx)(m.d, {
                 product: e,
                 isPurchased: !1,
                 isHighlighted: !1,
@@ -117,7 +117,7 @@ let b = l.EFr.SIZE_152,
     },
     x = (t) => {
         let { giftCode: e } = t,
-            { product: n, isFetching: s } = (0, f.T)(e.skuId, !0);
+            { product: n, isFetching: s } = (0, h.T)(e.skuId, !0);
         if (s || null == n)
             return (0, i.jsx)("div", {
                 className: g.spinnerContainer,
@@ -134,9 +134,9 @@ let b = l.EFr.SIZE_152,
                 return (0, i.jsx)(v, { item: a });
             default:
                 return null != e.giftStyle
-                    ? (0, i.jsx)(u.Z, {
-                          defaultAnimationState: c.SR.ACTION,
-                          idleAnimationState: c.SR.LOOP,
+                    ? (0, i.jsx)(d.Z, {
+                          defaultAnimationState: u.SR.ACTION,
+                          idleAnimationState: u.SR.LOOP,
                           className: g.giftAnimation,
                           giftStyle: e.giftStyle,
                       })

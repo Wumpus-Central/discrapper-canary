@@ -9,13 +9,13 @@ var n = r(951288),
     u = r(314794),
     d = r(399606),
     f = r(481060),
-    p = r(283066),
-    g = r(876917),
-    h = r(594174),
-    m = r(508925),
-    b = r(616066),
-    j = r(216541),
-    v = r(22267),
+    p = r(566697),
+    g = r(283066),
+    h = r(876917),
+    m = r(594174),
+    b = r(508925),
+    j = r(616066),
+    v = r(216541),
     w = r(302800),
     y = r(388032),
     P = r(186175),
@@ -50,24 +50,24 @@ function _(e) {
 let C = (e) => {
         let { product: t, itemConsumed: r, forCollectedModal: i } = e,
             [a] = t.items,
-            l = (0, d.e7)([h.default], () => {
-                let e = h.default.getCurrentUser();
+            l = (0, d.e7)([m.default], () => {
+                let e = m.default.getCurrentUser();
                 return s()(null != e, "User cannot be undefined"), e;
             }),
             w = Object.values(u.a).includes(t.skuId),
-            _ = (0, p.Z)({ location: "CollectiblesProductPreview" });
+            _ = (0, g.Z)({ location: "CollectiblesProductPreview" });
         return (0, o.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
                 (0, n.jsx)("div", {
                     className: P.profileEffectShopPreview,
-                    children: (0, n.jsx)(g.Z, {
+                    children: (0, n.jsx)(h.Z, {
                         forCollectedModal: !0,
                         skuId: a.skuId,
                     }),
                 }),
             )
             .with(c.Z.AVATAR_DECORATION, () =>
-                (0, n.jsx)(b.R, {
+                (0, n.jsx)(j.R, {
                     item: a,
                     user: l,
                     avatarSize: f.EFr.SIZE_120,
@@ -78,7 +78,7 @@ let C = (e) => {
             .with(c.Z.NAMEPLATE, () =>
                 (0, n.jsx)("div", {
                     className: P.nameplate,
-                    children: (0, n.jsx)(v.Z, {
+                    children: (0, n.jsx)(p.Z, {
                         nameplate: a,
                         user: l,
                         nameplatePreviewSize: "large",
@@ -89,7 +89,7 @@ let C = (e) => {
             .with(c.Z.BUNDLE, () =>
                 (0, n.jsx)("div", {
                     className: P.bundlePreview,
-                    children: (0, n.jsx)(j.d, {
+                    children: (0, n.jsx)(v.d, {
                         containerClassName: P.bundlePreviewContainer,
                         product: t,
                         user: l,
@@ -112,7 +112,7 @@ let C = (e) => {
                             src: O,
                             alt: y.intl.string(y.t.g5W1g8),
                         });
-                return (0, n.jsx)(m.b, { product: t });
+                return (0, n.jsx)(b.b, { product: t });
             })
             .otherwise(() => null);
     },

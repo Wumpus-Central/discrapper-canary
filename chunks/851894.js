@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(100527),
     f = n(367907),
     _ = n(906732),
-    p = n(22267),
-    h = n(346811),
-    m = n(850020),
+    p = n(346811),
+    h = n(850020),
+    m = n(566697),
     g = n(150039),
     E = n(296810),
     b = n(678135),
@@ -125,7 +125,7 @@ function Z(e) {
             userId: a.id,
             image: F,
         }),
-        W = (0, m.K)({
+        W = (0, h.K)({
             user: a,
             guildId: null == t ? void 0 : t.id,
         }),
@@ -139,7 +139,7 @@ function Z(e) {
                     source: Z,
                 });
         }, [Z]);
-    let { enabled: z } = h.Z.useConfig({ location: "GuildIdentitySettingsPage" });
+    let { enabled: z } = p.Z.useConfig({ location: "GuildIdentitySettingsPage" });
     return k
         ? (0, r.jsx)(u.Z, {})
         : x
@@ -182,7 +182,7 @@ function Z(e) {
                                       ),
                                       nameplatePreview: z
                                           ? (0, r.jsx)(
-                                                p.Z,
+                                                m.Z,
                                                 j(M({}, H), {
                                                     pendingDisplayNameStyles: K,
                                                     user: a,
