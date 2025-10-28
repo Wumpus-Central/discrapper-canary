@@ -96,7 +96,7 @@ function j(e) {
         className: l()(m.container, t),
         children: [
             p &&
-                (0, r.jsx)(u.ZP, {
+                (0, r.jsx)(u.Z, {
                     guildId: n,
                     powerup: i,
                     onError: o,

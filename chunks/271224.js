@@ -112,7 +112,7 @@ function _(e) {
                                             children: [
                                                 !x &&
                                                     y &&
-                                                    (0, n.jsx)(p.ZP, {
+                                                    (0, n.jsx)(p.Z, {
                                                         guildId: a,
                                                         powerup: _,
                                                         onError: g,
