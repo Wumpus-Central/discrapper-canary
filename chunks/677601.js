@@ -279,7 +279,7 @@ class ez extends r.PureComponent {
                             renderBottomLeft: this.renderBottomLeft,
                             renderBottomCenter: this.renderBottomCenter,
                             renderBottomRight: this.renderBottomRight,
-                            renderChatToasts: p.isGuildVoice() ? this.renderChatToasts : void 0,
+                            renderChatToasts: p.isGuildVoiceOrThread() ? this.renderChatToasts : void 0,
                             renderVoiceChannelEffects: this.renderVoiceChannelEffects,
                         },
                         e,

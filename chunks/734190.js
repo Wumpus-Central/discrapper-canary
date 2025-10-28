@@ -19,8 +19,8 @@ var r = n(951288),
     y = n(594174),
     j = n(979651),
     v = n(938475),
-    x = n(990734),
-    C = n(714794),
+    C = n(990734),
+    x = n(714794),
     E = n(876548),
     S = n(25601),
     I = n(207055),
@@ -182,7 +182,7 @@ let k = i.memo(function (e) {
             isMentionLowImportance: O.ZP.getIsMentionLowImportance(t.id),
         })),
         V = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
-        H = (0, x.p)({ location: "GuildSidebarThreadListEntry" }),
+        H = (0, C.p)({ location: "GuildSidebarThreadListEntry" }),
         z = (0, s.e7)([y.default], () => y.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {
@@ -313,7 +313,7 @@ let k = i.memo(function (e) {
                                                           channel: t,
                                                       })
                                                     : null,
-                                                (0, C.Z)(B)
+                                                (0, x.Z)(B)
                                                     ? (0, r.jsx)(S.Z, {
                                                           mentionsCount: B,
                                                           isMentionLowImportance: F,
@@ -330,10 +330,11 @@ let k = i.memo(function (e) {
             }),
             (0, r.jsx)(I.Z, {
                 channel: t,
-                collapsed: !c,
+                collapsed: !c && 1 !== k.length,
                 collapsedMax: 6,
                 voiceStates: k,
                 location: P.Sbl.GUILD_CHANNEL_LIST,
+                isThread: !0,
             }),
         ],
     });

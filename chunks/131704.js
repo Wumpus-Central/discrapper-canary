@@ -543,6 +543,9 @@ class em extends e_ {
     isGuildVoice() {
         return this.type === m.d4z.GUILD_VOICE;
     }
+    isGuildVoiceOrThread() {
+        return this.isGuildVoice() || this.isVocalThread();
+    }
     isGuildStageVoice() {
         return this.type === m.d4z.GUILD_STAGE_VOICE;
     }

@@ -174,39 +174,40 @@ let k = [],
                 withGuildIcon: b = !1,
                 className: C,
                 children: y,
+                isThread: _ = !1,
             } = e,
-            [_, O] = r.useState(null),
-            [E, S] = r.useState(!1),
-            Z = r.useRef(null),
-            T = (0, v.Es)(l.id, null != c ? c : k),
-            N = r.useRef(
-                new s.sW(50, () => {
-                    O(Z.current), (Z.current = null);
-                }),
-            ),
+            [O, E] = r.useState(null),
+            [S, Z] = r.useState(!1),
+            T = r.useRef(null),
+            N = (0, v.Es)(l.id, null != c ? c : k),
             A = r.useRef(
-                new s.sW(175, () => {
-                    O(null);
+                new s.sW(50, () => {
+                    E(T.current), (T.current = null);
                 }),
             ),
-            R = r.useCallback(
-                (e) => {
-                    t && (S(!0), A.current.cancel(), (Z.current = e), N.current.delay());
-                },
-                [t],
+            R = r.useRef(
+                new s.sW(175, () => {
+                    E(null);
+                }),
             ),
             U = r.useCallback(
                 (e) => {
-                    t && (N.current.cancel(), _ === e && (S(!1), A.current.delay()));
+                    t && (Z(!0), R.current.cancel(), (T.current = e), A.current.delay());
                 },
-                [t, _],
+                [t],
             ),
-            B = (0, o.Wu)([I.Z], () => {
+            B = r.useCallback(
+                (e) => {
+                    t && (A.current.cancel(), O === e && (Z(!1), R.current.delay()));
+                },
+                [t, O],
+            ),
+            H = (0, o.Wu)([I.Z], () => {
                 if (u) return [];
                 let e = new Set();
                 return (
-                    null == T ||
-                        T.forEach((t) => {
+                    null == N ||
+                        N.forEach((t) => {
                             let { user: n } = t;
                             I.Z.getActivities(n.id, l.guild_id).forEach((t) => {
                                 null != t.application_id && e.add(t.application_id);
@@ -215,10 +216,10 @@ let k = [],
                     Array.from(e)
                 );
             });
-        (0, p.Z)(B);
-        let H = (() => {
-            if (null == T || 0 === T.length) return null;
-            let e = u && T.length > d + 1 ? T.slice(0, d) : T,
+        (0, p.Z)(H);
+        let F = (() => {
+            if (null == N || 0 === N.length) return null;
+            let e = u && N.length > d + 1 ? N.slice(0, d) : N,
                 t = h.Z.getGuildRingingUsers(l.id),
                 r = e.map((e) => {
                     var r;
@@ -239,10 +240,10 @@ let k = [],
                             channel: l,
                             collapsed: u,
                             canDrag: n && P.Z.can(M.Plq.MOVE_MEMBERS, l),
-                            showPreview: R,
-                            hidePreview: U,
-                            previewIsOpen: E,
-                            shouldShowHoverPopout: _ === a.id,
+                            showPreview: U,
+                            hidePreview: B,
+                            previewIsOpen: S,
+                            shouldShowHoverPopout: O === a.id,
                             tabIndex: f,
                             location: m,
                         },
@@ -257,18 +258,19 @@ let k = [],
                               numAudience: g,
                           }),
                       )
-                    : u && T.length > d + 1 && r.push((0, i.jsx)(w.XX, { numUsers: T.length - d })),
+                    : u && N.length > d + 1 && r.push((0, i.jsx)(w.XX, { numUsers: N.length - d })),
                 r
             );
         })();
-        return null == H && null == y
+        return null == F && null == y
             ? null
             : (0, i.jsxs)(x.eJ, {
                   className: a()(C, L.list, {
                       [L.collapsed]: u,
                       [L.withGuildIcon]: b,
+                      [L.isThread]: _,
                   }),
                   collapsed: u,
-                  children: [H, y],
+                  children: [F, y],
               });
     };

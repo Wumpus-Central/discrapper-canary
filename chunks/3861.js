@@ -48,7 +48,7 @@ let _ = (0, a.Z)((e) => {
         ),
         k = (0, l.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(E.id), [E.id]);
     if ((null == R ? void 0 : R.channelId) === E.id) return (0, i.jsx)(h.Z, { height: N });
-    if ((null == E ? void 0 : E.isGuildVocal()) && !I)
+    if ((null == E ? void 0 : E.isGuildVocalOrThread()) && !I)
         return (0, i.jsx)(p.Z, {
             channel: E,
             participants: t,
