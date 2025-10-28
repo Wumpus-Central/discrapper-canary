@@ -1,83 +1,62 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => p }), n(539854);
 var r = n(951288),
     i = n(647438),
-    l = n(979554),
-    a = n(311570),
-    s = n(481060),
-    o = n(906732),
-    c = n(333867),
-    d = n(541699),
-    u = n(502762),
-    p = n(221300),
-    h = n(688192),
-    f = n(766717),
-    g = n(474936),
-    m = n(388032),
-    b = n(815743);
-function _(e) {
-    let { wishlistItems: t = [], profileOwner: n, onClick: _ } = e,
-        { analyticsLocations: y } = (0, o.ZP)(),
-        v = (0, i.useMemo)(() => {
-            let e = [];
+    l = n(481060),
+    a = n(906732),
+    s = n(541699),
+    o = n(502762),
+    c = n(5337),
+    d = n(388032),
+    u = n(815743);
+function p(e) {
+    let { wishlistItems: t = [], profileOwner: n, onClick: p } = e,
+        { analyticsLocations: h } = (0, a.ZP)(),
+        { cards: f, singleCollectibleItem: g } = (0, i.useMemo)(() => {
+            let e = [],
+                r = null;
             for (let i = 0; i < t.length && e.length < 4; i++) {
-                let s = t[i],
-                    o = 3 === e.length && t.length > 4;
-                if (s.isOwned) continue;
-                let u = o ? m.intl.string(m.t.TxBQzD) : m.intl.string(m.t.ilhtIa);
-                if ((0, d.Q)(s)) {
-                    let i = () => {
-                            if (o) return void _();
-                            (0, c.Z)({
-                                skuId: s.skuId,
-                                isGift: !0,
-                                giftingOrigin: g.Wt.USER_PROFILE_WISHLIST,
-                                analyticsLocations: y,
-                                giftRecipient: n,
-                                variantsReturnStyle: a.v.VARIANTS_GROUP,
-                            });
-                        },
-                        d = () =>
-                            (0, r.jsx)(p.Z, {
-                                item: s,
-                                profileOwner: n,
-                                isHighlighted: !1,
-                                surface: h.Y.PROFILE_SIDEBAR,
-                            }),
-                        m = s.collectiblesItem.type === l.Z.PROFILE_EFFECT;
+                let l = t[i],
+                    a = 3 === e.length && t.length > 4;
+                !l.isOwned &&
+                    (0, s.Q)(l) &&
+                    (0 === e.length && (r = l),
                     e.push(
-                        (0, r.jsx)(
-                            f.Z,
-                            {
-                                onCardClick: i,
-                                tooltipText: u,
-                                shouldScalePreview: !m,
-                                renderPreview: d,
-                                showMoreOverlay: o,
-                                moreCount: t.length - 4,
-                            },
-                            s.skuId,
-                        ),
-                    );
-                }
+                        (0, c.c)(l, {
+                            showMoreOverlay: a,
+                            moreCount: t.length - 4,
+                            profileOwner: n,
+                            analyticsLocations: h,
+                            onViewWishlist: p,
+                        }),
+                    ));
             }
-            return e;
-        }, [t, n, y, _]);
-    return 0 === v.length
-        ? null
-        : (0, r.jsxs)(u.Z.Overlay, {
-              className: b.container,
-              children: [
-                  (0, r.jsx)("div", {
-                      className: b.header,
-                      children: (0, r.jsx)(s.Text, {
-                          variant: "text-sm/medium",
-                          children: m.intl.string(m.t["7lZ31J"]),
-                      }),
-                  }),
-                  (0, r.jsx)("div", {
-                      className: b.cardsContainer,
-                      children: v,
-                  }),
-              ],
-          });
+            return {
+                cards: e,
+                singleCollectibleItem: 1 === e.length ? r : null,
+            };
+        }, [t, n, h, p]);
+    if (0 === f.length) return null;
+    let m =
+        1 === f.length && null != g
+            ? (0, c.g)(g, f[0], {
+                  profileOwner: n,
+                  analyticsLocations: h,
+              })
+            : f;
+    return (0, r.jsxs)(o.Z.Overlay, {
+        className: u.container,
+        children: [
+            (0, r.jsx)("div", {
+                className: u.header,
+                children: (0, r.jsx)(l.Text, {
+                    variant: "text-sm/medium",
+                    children: d.intl.string(d.t["7lZ31J"]),
+                }),
+            }),
+            (0, r.jsx)("div", {
+                className: u.cardsContainer,
+                children: m,
+            }),
+        ],
+    });
 }
