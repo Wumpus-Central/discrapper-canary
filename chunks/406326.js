@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(465524),
     _ = n(611004),
     y = n(770092),
-    x = n(125085),
-    v = n(981631),
-    j = n(921944),
+    v = n(125085),
+    j = n(981631),
+    x = n(921944),
     O = n(388032),
     C = n(865239);
 function I(e) {
@@ -73,7 +73,7 @@ function E(e) {
             isIndexing: p,
             isSearching: h,
             documentsIndexed: _,
-            selectedChannelId: x,
+            selectedChannelId: v,
         } = e,
         E = (0, m.nP)({ location: "SearchHeader" }),
         P = (0, m.KS)({ location: "SearchHeader" }),
@@ -81,7 +81,7 @@ function E(e) {
         N = (0, y.I)(t),
         { totalFilters: R } = (0, b.p4)(N, t),
         D = i.useMemo(() => {
-            if (t.type === v.aib.DMS) {
+            if (t.type === j.aib.DMS) {
                 var e, n;
                 let t = null != (n = null == (e = (0, f.$G)(N).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? O.intl.format(O.t.A2dqWG, { filterCount: t }) : O.intl.string(O.t.tc619d);
@@ -94,13 +94,13 @@ function E(e) {
         H = U === s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
         F = i.useCallback(
             (e) => {
-                null != e && G(j.L.USER_DISMISS), M(e);
+                null != e && G(x.L.USER_DISMISS), M(e);
             },
             [G],
         ),
         B = i.useCallback(
             (e) => {
-                G("user:explicit" === e ? j.L.USER_DISMISS : j.L.AUTO_DISMISS);
+                G("user:explicit" === e ? x.L.USER_DISMISS : x.L.AUTO_DISMISS);
             },
             [G],
         ),
@@ -113,7 +113,7 @@ function E(e) {
         }, [t, F]),
         z = i.useMemo(() => (R > 0 ? O.intl.format(O.t.uaR4sI, { filterCount: R }) : O.intl.string(O.t.UdhTtk)), [R]),
         W = (0, g.u5)({ location: "SearchHeader" }),
-        Y = t.type === v.aib.DMS || t.type === v.aib.CHANNEL,
+        Y = t.type === j.aib.DMS || t.type === j.aib.CHANNEL,
         q = i.useMemo(
             () =>
                 T && W
@@ -136,7 +136,7 @@ function E(e) {
                               Y &&
                                   (0, r.jsx)(w, {
                                       searchContext: t,
-                                      selectedChannelId: x,
+                                      selectedChannelId: v,
                                       isPopoutOpen: "settings" === L,
                                       setOpenPopout: F,
                                       isPopoverVisible: H,
@@ -176,7 +176,7 @@ function E(e) {
                                   Y &&
                                       (0, r.jsx)(w, {
                                           searchContext: t,
-                                          selectedChannelId: x,
+                                          selectedChannelId: v,
                                           isPopoutOpen: "settings" === L,
                                           setOpenPopout: F,
                                           isPopoverVisible: H,
@@ -192,22 +192,22 @@ function E(e) {
                               children: [
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: v.QIO.NEWEST,
+                                      id: j.QIO.NEWEST,
                                       children: O.intl.string(O.t.rLjqbS),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: v.QIO.OLDEST,
+                                      id: j.QIO.OLDEST,
                                       children: O.intl.string(O.t.a1BaUr),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: v.QIO.MOST_RELEVANT,
+                                      id: j.QIO.MOST_RELEVANT,
                                       children: O.intl.string(O.t.FtR97k),
                                   }),
                               ],
                           }),
-            [z, V, T, L, W, Y, o, t, l, x, H, F, B],
+            [z, V, T, L, W, Y, o, t, l, v, H, F, B],
         );
     return (0, r.jsxs)("header", {
         className: a()(C.searchHeader, { [C.searchHeaderWithSubtitle]: null != D }),
@@ -261,7 +261,7 @@ function T(e) {
                     color: "text-muted",
                     children: (0, r.jsx)(d.Anchor, {
                         className: C.helpdeskLink,
-                        href: h.Z.getArticleURL(v.BhN.SEARCH_INDEXING),
+                        href: h.Z.getArticleURL(j.BhN.SEARCH_INDEXING),
                         children: O.intl.string(O.t["G3EA+4"]),
                     }),
                 }),
@@ -315,32 +315,29 @@ function w(e) {
             isPopoverVisible: u,
         } = e,
         h = i.useRef(null),
-        g = null != (t = p.rR.useSetting()) ? t : x.K,
-        m = i.useCallback(
+        f = null != (t = p.rR.useSetting()) ? t : v.K,
+        g = i.useCallback(
             (e) => {
-                if (g !== e) {
+                if (f !== e) {
                     if (e) {
-                        let e = { type: v.aib.DMS };
+                        let e = { type: j.aib.DMS };
                         _.Z.transitionQueryStateToSearchContext(n, e, (t) => {
                             _.Z.cleanUpPrivateChannelSearchState(),
-                                _.Z.fetchCrossDMMessages({
+                                _.Z.fetchMessages({
                                     searchContext: e,
-                                    selectedPageIndex: 0,
-                                    queryString: t,
+                                    offset: 0,
+                                    searchQueryString: t,
                                 });
                         });
                     } else {
                         let e = {
-                            type: v.aib.CHANNEL,
+                            type: j.aib.CHANNEL,
                             channelId: l,
                         };
                         _.Z.transitionQueryStateToSearchContext(n, e, (t) => {
-                            let n = (0, f.kG)(t),
-                                r = (0, f.$G)(n);
                             _.Z.fetchMessages({
                                 searchContext: e,
-                                queryString: t,
-                                searchQuery: r,
+                                searchQueryString: t,
                                 offset: 0,
                             });
                         });
@@ -348,9 +345,9 @@ function w(e) {
                     p.rR.updateSetting(e);
                 }
             },
-            [n, l, g],
+            [n, l, f],
         ),
-        b = i.useMemo(() => ({ align: "end" }), []);
+        m = i.useMemo(() => ({ align: "end" }), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.yRy, {
@@ -376,15 +373,15 @@ function w(e) {
                                         id: "xdm-search-disabled",
                                         group: "xdm-search-items",
                                         label: O.intl.string(O.t.jRkYAh),
-                                        checked: !g,
-                                        action: () => m(!1),
+                                        checked: !f,
+                                        action: () => g(!1),
                                     }),
                                     (0, r.jsx)(d.k5B, {
                                         id: "xdm-search-enabled",
                                         group: "xdm-search-items",
                                         label: O.intl.string(O.t["lWpJ/t"]),
-                                        checked: g,
-                                        action: () => m(!0),
+                                        checked: f,
+                                        action: () => g(!0),
                                     }),
                                 ],
                             },
@@ -413,7 +410,7 @@ function w(e) {
                 onRequestClose: c,
                 title: O.intl.string(O.t.qha2Zv),
                 body: O.intl.string(O.t.IQWEoV),
-                caretConfig: b,
+                caretConfig: m,
             }),
         ],
     });
@@ -425,15 +422,15 @@ function A(e) {
             () => [
                 {
                     label: O.intl.string(O.t.CbaapP),
-                    value: v.QIO.NEWEST,
+                    value: j.QIO.NEWEST,
                 },
                 {
                     label: O.intl.string(O.t.OukXZj),
-                    value: v.QIO.OLDEST,
+                    value: j.QIO.OLDEST,
                 },
                 {
                     label: O.intl.string(O.t.q8gB52),
-                    value: v.QIO.MOST_RELEVANT,
+                    value: j.QIO.MOST_RELEVANT,
                 },
             ],
             [],

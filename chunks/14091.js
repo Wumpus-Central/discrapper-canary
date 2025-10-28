@@ -16,9 +16,9 @@ var r = n(951288),
     b = n(171900),
     _ = n(607802),
     y = n(375123),
-    x = n(56522),
-    v = n(759209),
-    j = n(532428),
+    v = n(56522),
+    j = n(759209),
+    x = n(532428),
     O = n(406326),
     C = n(994463),
     I = n(991896),
@@ -137,8 +137,8 @@ function H(e) {
             searchResultsQuery: m,
             isFavoritesSearch: b,
         } = e,
-        { totalResults: _, isSearching: y, isIndexing: x, hasError: v } = l;
-    if (v)
+        { totalResults: _, isSearching: y, isIndexing: v, hasError: j } = l;
+    if (j)
         return (0, r.jsxs)(U, {
             children: [
                 (0, r.jsx)("div", { className: M.errorImage }),
@@ -148,7 +148,7 @@ function H(e) {
                 }),
             ],
         });
-    if (x) {
+    if (v) {
         let e = s.type === A.aib.GUILD ? L.intl.string(L.t.AXPbZr) : L.intl.string(L.t.Q0JJjv);
         return (0, r.jsxs)(U, {
             children: [
@@ -178,13 +178,13 @@ function H(e) {
             searchResultsQuery: m,
             isFavoritesSearch: b,
         });
-    let { showNoResultsAlt: j } = l,
-        O = j ? L.intl.string(L.t["VrK/2R"]) : L.intl.string(L.t.V6nAfF);
+    let { showNoResultsAlt: x } = l,
+        O = x ? L.intl.string(L.t["VrK/2R"]) : L.intl.string(L.t.V6nAfF);
     return (0, r.jsxs)(U, {
         children: [
-            (0, r.jsx)("div", { className: a()(M.noResultsImage, { [M.alt]: j }) }),
+            (0, r.jsx)("div", { className: a()(M.noResultsImage, { [M.alt]: x }) }),
             (0, r.jsx)("div", {
-                className: a()(M.emptyResultsText, M.noResults, { [M.alt]: j }),
+                className: a()(M.emptyResultsText, M.noResults, { [M.alt]: x }),
                 children: O,
             }),
         ],
@@ -201,8 +201,8 @@ let F = [],
                 blockCount: h,
                 ignoreCount: f,
                 isFeedbackVisible: b,
-                dismissFeedbackEntrypoint: x,
-                onSearchModeChange: v,
+                dismissFeedbackEntrypoint: v,
+                onSearchModeChange: j,
                 onPageChange: C,
                 searchMode: I,
                 onBlockedResultsClick: E,
@@ -273,9 +273,9 @@ let F = [],
                             searchRequestAnalyticsId: a,
                             mode: e,
                         }),
-                        v(e));
+                        j(e));
                 },
-                [v, n.isSearching, t, I, a],
+                [j, n.isSearching, t, I, a],
             ),
             K = i.useCallback(
                 (e, r) => {
@@ -338,7 +338,7 @@ let F = [],
             ei = en === o.z.SEARCH_AUTHOR_TYPE_SEARCH_RESULTS_HINT,
             el = i.useCallback(() => {
                 if (n.isSearching) return;
-                let e = "".concat(j.ZP[A.dCx.FILTER_AUTHOR_TYPE].key, " ").concat(L.intl.string(L.t.tPZo4p)) + " ";
+                let e = "".concat(x.ZP[A.dCx.FILTER_AUTHOR_TYPE].key, " ").concat(L.intl.string(L.t.tPZo4p)) + " ";
                 S.Z.appendToSearchInputText(t, e);
             }, [t, n.isSearching]);
         return (0, r.jsxs)("section", {
@@ -394,7 +394,7 @@ let F = [],
                 (0, r.jsx)(G, {
                     searchContext: t,
                     isFeedbackVisible: b,
-                    dismissFeedbackEntrypoint: x,
+                    dismissFeedbackEntrypoint: v,
                 }),
             ],
         });
@@ -403,8 +403,8 @@ function V(e) {
     let { searchContext: t, selectedChannelId: n } = e,
         { isFeedbackVisible: l, dismissFeedbackEntrypoint: a } = (function (e) {
             let [t, n] = i.useState(!1),
-                r = (0, x.M)({ location: "SearchResults" }),
-                { enabled: l, force: a } = (0, v.f)({ location: "SearchResults" }),
+                r = (0, v.M)({ location: "SearchResults" }),
+                { enabled: l, force: a } = (0, j.f)({ location: "SearchResults" }),
                 s = e.type === A.aib.DMS || e.type === A.aib.CHANNEL,
                 o = (r && s) || l;
             return (
@@ -449,50 +449,30 @@ function V(e) {
             var e;
             return null != (e = R.Z.getSearchMode(o)) ? e : A.QIO.NEWEST;
         }),
-        j = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 if (c.isSearching) return;
                 I.Z.updateSearchMode(t, e);
-                let n = S.Z.getSearchInputText(t),
-                    r = (0, _.Tm)(t),
-                    i = R.Z.getSearchResultsQuery(r);
+                let n = S.Z.getSearchInputText(t);
                 null != n &&
-                    null != i &&
-                    (t.type === A.aib.DMS
-                        ? S.Z.fetchCrossDMMessages({
-                              searchContext: t,
-                              queryString: n,
-                              selectedPageIndex: 0,
-                          })
-                        : S.Z.fetchMessages({
-                              searchContext: t,
-                              queryString: n,
-                              searchQuery: i,
-                              offset: 0,
-                          }));
+                    S.Z.fetchMessages({
+                        searchContext: t,
+                        searchQueryString: n,
+                        offset: 0,
+                    });
             },
             [c.isSearching, t],
         ),
         O = i.useCallback(
             (e) => {
                 if (c.isSearching) return;
-                let n = S.Z.getSearchInputText(t),
-                    r = (0, _.Tm)(t),
-                    i = R.Z.getSearchResultsQuery(r);
+                let n = S.Z.getSearchInputText(t);
                 null != n &&
-                    null != i &&
-                    (t.type === A.aib.DMS
-                        ? S.Z.fetchCrossDMMessages({
-                              searchContext: t,
-                              queryString: n,
-                              selectedPageIndex: e,
-                          })
-                        : S.Z.fetchMessages({
-                              searchContext: t,
-                              queryString: n,
-                              searchQuery: i,
-                              offset: e * A.vpv,
-                          }));
+                    S.Z.fetchMessages({
+                        searchContext: t,
+                        searchQueryString: n,
+                        offset: e * A.vpv,
+                    });
             },
             [c.isSearching, t],
         ),
@@ -518,7 +498,7 @@ function V(e) {
                 isFeedbackVisible: l,
                 dismissFeedbackEntrypoint: a,
                 onPageChange: O,
-                onSearchModeChange: j,
+                onSearchModeChange: x,
                 searchMode: y,
                 onBlockedResultsClick: Z,
                 searchResultsQuery: C,

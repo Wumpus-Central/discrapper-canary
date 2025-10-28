@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(781311);
+n.d(t, { Z: () => E }), n(388685), n(781311);
 var r = n(392711),
     i = n.n(r),
     a = n(570140),
@@ -37,15 +37,38 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e) {
     if (!Array.isArray(e.pinned)) return;
     let t = e.pinned.some((e) => !0 === e);
     e.pinned = t;
 }
-function h(e) {
+function g(e) {
     return e === d.I_8 ? null : e;
 }
-let m = {
+let E = {
     fetchTabMessages: function (e) {
         let {
                 searchContext: t,
@@ -53,50 +76,50 @@ let m = {
                 searchQueryString: r,
                 pagination: s,
                 trackExactTotalHits: c,
-                getId: f,
-                getLimit: m,
-                onFetchStart: g,
-                onFetchSuccess: E,
-                searchMode: b = d.QIO.NEWEST,
+                getId: d,
+                getLimit: f,
+                onFetchStart: p,
+                onFetchSuccess: h,
+                searchMode: E,
             } = e,
-            y = (0, l.kG)(r),
-            O = (0, l.$G)(y);
-        p(O);
-        let v = _({}, O, (0, l.zH)(b)),
-            I = (0, l.s5)(t);
-        null != I && (0, l.jW)(v, I);
-        let T = u.Z.create({
+            b = (0, l.kG)(r),
+            y = (0, l.$G)(b);
+        m(y);
+        let O = _({}, y, (0, l.zH)(E)),
+            v = (0, l.s5)(t);
+        null != v && (0, l.jW)(O, v);
+        let I = u.Z.create({
             id: (0, l.Tm)(t),
             searchContext: t,
-            searchQuery: v,
+            searchQuery: O,
             searchTabs: n,
-            getLimit: m,
+            getLimit: f,
             pagination: s,
             trackExactTotalHits: c,
         });
-        null == g ||
-            g({
+        null == p ||
+            p({
                 searchContext: t,
                 searchQueryString: r,
-                searchQuery: v,
+                searchQuery: O,
             });
-        let S = n.map((e) => f(e));
+        let T = n.map((e) => d(e));
         return (
             a.Z.dispatch({
                 type: "SEARCH_MESSAGES_START",
-                ids: S,
+                ids: T,
             }),
-            T.fetch(
+            I.fetch(
                 (e) => {
                     let { body: n } = e,
                         r = Object.entries(n.tabs);
                     a.Z.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: h(I),
+                        guildId: g(v),
                         data: r.map((e) => {
                             var t, r, a;
                             let [s, l] = e,
-                                c = f(s),
+                                c = d(s),
                                 u = l.cursor;
                             return {
                                 id: c,
@@ -112,8 +135,8 @@ let m = {
                             };
                         }),
                     }),
-                        null == E ||
-                            E({
+                        null == h ||
+                            h({
                                 searchContext: t,
                                 tabEntries: r,
                             });
@@ -121,13 +144,13 @@ let m = {
                 () => {
                     a.Z.dispatch({
                         type: "SEARCH_MESSAGES_INDEXING",
-                        ids: S,
+                        ids: T,
                     });
                 },
                 (e) => {
                     a.Z.dispatch({
                         type: "SEARCH_MESSAGES_FAILURE",
-                        ids: S,
+                        ids: T,
                         error: e,
                     });
                 },
@@ -136,28 +159,43 @@ let m = {
         );
     },
     fetchMessages: function (e) {
-        let { searchContext: t, query: n, searchEverywhere: r } = e,
-            i = (0, l.s5)(t);
-        null != i && (0, l.jW)(n, i), r && (n.search_everywhere = !0);
-        let s = (0, l.Tm)(t),
-            u = c.Z.create({
-                id: s,
+        let {
+                searchContext: t,
+                searchQueryString: n,
+                pagination: r,
+                searchMode: i,
+                searchEverywhere: s,
+                onFetchStart: u,
+            } = e,
+            d = (0, l.kG)(n),
+            f = h(_({}, (0, l.$G)(d), (0, l.zH)(i)), { offset: r.offset }),
+            p = (0, l.s5)(t);
+        null != p && (0, l.jW)(f, p), s && (f.search_everywhere = !0);
+        let m = (0, l.Tm)(t),
+            E = c.Z.create({
+                id: m,
                 searchType: t.type,
-                searchQuery: n,
+                searchQuery: f,
             });
-        a.Z.dispatch({
-            type: "SEARCH_MESSAGES_START",
-            ids: [s],
-        }),
-            u.fetch(
+        null == u ||
+            u({
+                searchContext: t,
+                searchQueryString: n,
+                searchQuery: f,
+            }),
+            a.Z.dispatch({
+                type: "SEARCH_MESSAGES_START",
+                ids: [m],
+            }),
+            E.fetch(
                 (e) => {
                     var t, n, r;
                     a.Z.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: h(i),
+                        guildId: g(p),
                         data: [
                             {
-                                id: s,
+                                id: m,
                                 analyticsId: e.body.analytics_id,
                                 totalResults: e.body.total_results,
                                 messages: e.body.messages,
@@ -174,13 +212,13 @@ let m = {
                 () => {
                     a.Z.dispatch({
                         type: "SEARCH_MESSAGES_INDEXING",
-                        ids: [s],
+                        ids: [m],
                     });
                 },
                 (e) => {
                     a.Z.dispatch({
                         type: "SEARCH_MESSAGES_FAILURE",
-                        ids: [s],
+                        ids: [m],
                         error: e,
                     });
                 },

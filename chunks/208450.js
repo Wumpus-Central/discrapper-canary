@@ -481,19 +481,12 @@ function K(e) {
                         queryString: n,
                     }),
                     D.Z.updateSearchMode(t, G.QIO.NEWEST),
-                    t.type === G.aib.DMS
-                        ? L.Z.fetchCrossDMMessages({
-                              searchContext: t,
-                              selectedPageIndex: 0,
-                              queryString: n,
-                          })
-                        : Y({
-                              searchContext: t,
-                              searchQuery: r,
-                              queryString: n,
-                              searchEverywhere: i,
-                              offset: 0,
-                          });
+                    Y({
+                        searchContext: t,
+                        searchQueryString: n,
+                        searchEverywhere: i,
+                        offset: 0,
+                    });
             },
             [t],
         ),
