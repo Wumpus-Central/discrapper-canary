@@ -1,9 +1,9 @@
 e.exports = {
+    productVariantsOuterContainer: "productVariantsOuterContainer__2c397",
     productVariantsContainer: "productVariantsContainer__2c397",
-    productVariantsInteractiveContainer: "productVariantsInteractiveContainer__2c397",
-    productVariantsPreviewContainer: "productVariantsPreviewContainer__2c397",
-    productVariantButton: "productVariantButton__2c397",
     productVariant: "productVariant__2c397",
-    miniPreview: "miniPreview__2c397",
+    productVariantCheckmark: "productVariantCheckmark__2c397",
+    expanded: "expanded__2c397",
     selected: "selected__2c397",
+    collapsed: "collapsed__2c397",
 };

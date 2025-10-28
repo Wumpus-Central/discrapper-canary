@@ -7,9 +7,10 @@ e.exports = {
     footerContainer: "footerContainer_fcbddd",
     footerContent: "footerContent_fcbddd",
     footerGradient: "footerGradient_fcbddd",
+    priceContainer: "priceContainer_fcbddd",
+    footerButtonContainer: "footerButtonContainer_fcbddd",
     footerInfoContainer: "footerInfoContainer_fcbddd",
-    footerInteractibleContainer: "footerInteractibleContainer_fcbddd",
-    footerHideOnHover: "footerHideOnHover_fcbddd",
-    footerShowOnHover: "footerShowOnHover_fcbddd",
+    removePaddingOnHover: "removePaddingOnHover_fcbddd",
+    hovered: "hovered_fcbddd",
     shadowOnHover: "shadowOnHover_fcbddd",
 };
