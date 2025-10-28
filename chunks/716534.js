@@ -176,8 +176,8 @@ function Q(e) {
     }, [e$, eN]);
     let e0 = (0, u.e7)([T.Z], () => T.Z.enabled),
         e1 = et.paymentSourceId,
-        e3 = (0, I.$)(ee, e1),
-        { hasEntitlements: e2, entitlements: e4 } = (0, V.H)(eU.id, eD),
+        e2 = (0, I.$)(ee, e1),
+        { hasEntitlements: e3, entitlements: e4 } = (0, V.H)(eU.id, eD),
         e8 = (0, P.Ap)(et.paymentSourceId),
         e5 = (0, O.sE)(ec, e1, J),
         e6 = (0, v.Kp)({
@@ -307,7 +307,7 @@ function Q(e) {
         : eD && eJ
           ? (tc = "")
           : (0, P.PV)(eU.id) && (tc = P.ZP.getBillingReviewSubheader(null, eU));
-    let tu = null != eV && eV.length > 0 && (e1 === C.c || null === e3) && eR ? B.w.SELECT_PAYMENT_METHOD : void 0;
+    let tu = null != eV && eV.length > 0 && (e1 === C.c || null === e2) && eR ? B.w.SELECT_PAYMENT_METHOD : void 0;
     return e5
         ? null
         : (0, r.jsxs)("div", {
@@ -390,7 +390,7 @@ function Q(e) {
                               paymentSources: Object.values(ee),
                               selectedPaymentSourceId: e1,
                               prependOption:
-                                  e2 && !em
+                                  e3 && !em
                                       ? {
                                             label: z.intl.string(z.t.IGU7El),
                                             value: null,
@@ -403,7 +403,7 @@ function Q(e) {
                               paymentGatewayRestrictions: eV,
                               className: o()({ [q.premiumBrandRefreshInputBackground]: eP }),
                           }),
-                          e2 && null == e1
+                          e3 && null == e1
                               ? (0, r.jsx)("div", {
                                     className: q.paymentSourceOptionalWarning,
                                     children: z.intl.format(z.t["2wPRSF"], { months: e4.length }),
@@ -440,7 +440,7 @@ function Q(e) {
                                         subscriptionPlan: eU,
                                         renewalInvoice: eW,
                                         isGift: eD,
-                                        paymentSourceType: e3,
+                                        paymentSourceType: e2,
                                         isEmbeddedIAP: eb,
                                         basePrice: (0, P.aS)(eU.id, !1, eD, et),
                                     }),

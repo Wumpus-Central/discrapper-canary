@@ -1,36 +1,36 @@
-n.d(t, { N: () => o });
+n.d(t, { N: () => l });
 var r = n(951288),
     i = n(647438),
-    a = n(481060);
-function o(e) {
-    let { groups: t, selectedStory: n, onStorySelect: o } = e;
-    return (0, r.jsx)(a.njP, {
+    o = n(481060);
+function l(e) {
+    let { groups: t, selectedStory: n, onStorySelect: l } = e;
+    return (0, r.jsx)(o.njP, {
         selectedItem: n,
         orientation: "vertical",
         onItemSelect: (e) => {
-            null != e && o(e);
+            null != e && l(e);
         },
         children: t.map((e, s) =>
             (0, r.jsxs)(
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(a.njP.Header, { children: e.title }),
+                        (0, r.jsx)(o.njP.Header, { children: e.title }),
                         e.stories.map((e) =>
                             (0, r.jsx)(
-                                a.njP.Item,
+                                o.njP.Item,
                                 {
                                     selectedItem: n,
                                     id: e.id,
                                     onItemSelect: () => {
-                                        o(e.id);
+                                        l(e.id);
                                     },
                                     children: e.name,
                                 },
                                 e.id,
                             ),
                         ),
-                        s < t.length - 1 && (0, r.jsx)(a.njP.Separator, {}),
+                        s < t.length - 1 && (0, r.jsx)(o.njP.Separator, {}),
                     ],
                 },
                 e.title,

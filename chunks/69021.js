@@ -64,13 +64,13 @@ function f() {
             isLoggingGatewayEvents: f,
             isLoggingOverlayEvents: S,
             isLoggingAnalyticsEvents: v,
-            isAnalyticsDebuggerEnabled: h,
-            isTracingRequests: P,
+            isAnalyticsDebuggerEnabled: P,
+            isTracingRequests: h,
             isForcedCanary: j,
             isSourceMapsEnabled: A,
             isIdleStatusIndicatorEnabled: N,
-            isAxeEnabled: w,
-            preventPopoutClose: _,
+            isAxeEnabled: _,
+            preventPopoutClose: w,
             onlyShowPreviewAppCollections: D,
             disableAppCollectionsCache: x,
         } = (0, i.cj)([c.default, u.default, s.Z], () => {
@@ -93,8 +93,8 @@ function f() {
                 disableAppCollectionsCache: c.default.disableAppCollectionsCache,
             };
         }),
-        { horizontalSpacing: I, verticalSpacing: T, maxHorizontalSpacing: C, maxVerticalSpacing: L } = (0, o.i)(),
-        { setHorizontalSpacing: R, setVerticalSpacing: m } = o.i.getState(),
+        { horizontalSpacing: I, verticalSpacing: T, maxHorizontalSpacing: R, maxVerticalSpacing: C } = (0, o.i)(),
+        { setHorizontalSpacing: L, setVerticalSpacing: m } = o.i.getState(),
         Z = d.zY.useSetting(),
         k = [];
     return (
@@ -150,9 +150,9 @@ function f() {
                                 {
                                     id: "tracing-requests",
                                     label: "Tracing Requests",
-                                    checked: P,
+                                    checked: h,
                                     action: () => {
-                                        (0, r.y)({ trace: !P });
+                                        (0, r.y)({ trace: !h });
                                     },
                                 },
                                 "tracing-requests",
@@ -210,9 +210,9 @@ function f() {
                                 {
                                     id: "accessibility-auditing",
                                     label: "Accessibility Auditing",
-                                    checked: w,
+                                    checked: _,
                                     action: () => {
-                                        (0, r.y)({ axeEnabled: !w });
+                                        (0, r.y)({ axeEnabled: !_ });
                                     },
                                 },
                                 "accessibility-auditing",
@@ -222,9 +222,9 @@ function f() {
                                 {
                                     id: "prevent-popout-close",
                                     label: "Prevent Popouts From Closing",
-                                    checked: _,
+                                    checked: w,
                                     action: () => {
-                                        (0, r.y)({ preventPopoutClose: !_ });
+                                        (0, r.y)({ preventPopoutClose: !w });
                                     },
                                 },
                                 "prevent-popout-close",
@@ -312,9 +312,9 @@ function f() {
                                 {
                                     id: "analytics-debugger",
                                     label: "Analytics Debugger",
-                                    checked: h,
+                                    checked: P,
                                     action: () => {
-                                        (0, r.y)({ analyticsDebuggerEnabled: !h });
+                                        (0, r.y)({ analyticsDebuggerEnabled: !P });
                                     },
                                 },
                                 "analytics-debugger",
@@ -366,8 +366,8 @@ function f() {
                                         ref: t,
                                         value: I,
                                         minValue: 0,
-                                        maxValue: C,
-                                        onChange: (e) => R(e),
+                                        maxValue: R,
+                                        onChange: (e) => L(e),
                                         renderValue: (e) => "".concat(Math.round(e), "px"),
                                         "aria-label": "Horizontal Spacing",
                                     }),
@@ -389,7 +389,7 @@ function f() {
                                         ref: t,
                                         value: T,
                                         minValue: 0,
-                                        maxValue: L,
+                                        maxValue: C,
                                         onChange: (e) => m(e),
                                         "aria-label": "Horizontal Spacing",
                                         renderValue: (e) => "".concat(Math.round(e), "px"),

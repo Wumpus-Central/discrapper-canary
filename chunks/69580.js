@@ -363,11 +363,11 @@ function ec(e) {
                 null == eC && null == eh && (null != (e = null == ed ? void 0 : ed.length) ? e : 0) === 0 && null == er
             );
         }, [eC, null == ed ? void 0 : ed.length, er, eh]),
-        [e1, e3] = i.useState(null);
+        [e1, e2] = i.useState(null);
     i.useEffect(() => {
-        e0 && v.ZP.fetchApplication($).then((e) => e3(P.ZP.createFromServer(e)));
+        e0 && v.ZP.fetchApplication($).then((e) => e2(P.ZP.createFromServer(e)));
     }, [$, e0]);
-    let e2 = i.useMemo(() => {
+    let e3 = i.useMemo(() => {
             var e, t;
             return null == eJ
                 ? null
@@ -377,19 +377,19 @@ function ec(e) {
         }, [null == e1 ? void 0 : e1.integrationTypesConfig, eJ]),
         e4 = O.w.useExperiment({ location: "oauth2_authorize" }),
         { requestedScopes: e8, accountScopes: e5 } = i.useMemo(() => {
-            let e = e0 ? (null == e2 ? void 0 : e2.scopes) : ed,
+            let e = e0 ? (null == e3 ? void 0 : e3.scopes) : ed,
                 t = (0, k.K)(null != e ? e : []),
                 n = B.Qe.filter((e) => t.includes(e));
             return {
                 requestedScopes: t,
                 accountScopes: n,
             };
-        }, [null == e2 ? void 0 : e2.scopes, ed, e0]),
+        }, [null == e3 ? void 0 : e3.scopes, ed, e0]),
         e6 = i.useMemo(() => {
             var e;
-            let t = e0 ? f.vB(null != (e = null == e2 ? void 0 : e2.permissions) ? e : 0) : ef;
+            let t = e0 ? f.vB(null != (e = null == e3 ? void 0 : e3.permissions) ? e : 0) : ef;
             return null != t ? t : x.Hn;
-        }, [null == e2 ? void 0 : e2.permissions, ef, e0]),
+        }, [null == e3 ? void 0 : e3.permissions, ef, e0]),
         e7 = i.useRef(!1),
         [e9, te] = i.useState(null != eT ? eT : []),
         [tt, tn] = i.useState(null != eT && eT.length > 0);

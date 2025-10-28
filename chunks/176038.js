@@ -1,8 +1,8 @@
 n.d(t, {
-    _Y: () => T,
+    _Y: () => O,
     aB: () => S,
     th: () => E,
-    ub: () => O,
+    ub: () => T,
 }),
     n(388685),
     n(457542);
@@ -87,7 +87,7 @@ async function E() {
             await (0, l.Mn)(i).finally(l.si);
         } catch (e) {}
 }
-function T() {
+function O() {
     try {
         let e = C(g.yqN.FONT_SIZES);
         (0, o.oL)(e);
@@ -97,7 +97,7 @@ function T() {
         p.YC.updateSetting(n);
     } catch (e) {}
 }
-function O() {
+function T() {
     a.useEffect(() => {
         var e, t, n, a, r;
         let b = f.default.getCurrentUser(),
@@ -109,8 +109,8 @@ function O() {
             C = g.backgroundGradientPresetId,
             S = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
             E = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-            T = null != S && null != (a = j.find((e) => e.skuId === S)) ? a : null,
-            O = null != E && null != (r = _.find((e) => e.skuId === E)) ? r : null,
+            O = null != S && null != (a = j.find((e) => e.skuId === S)) ? a : null,
+            T = null != E && null != (r = _.find((e) => e.skuId === E)) ? r : null,
             N = s.Z.fontSize,
             P = s.Z.messageGroupSpacing,
             I = p.YC.getSetting();
@@ -124,8 +124,8 @@ function O() {
                     },
                     h.fy.INFREQUENT_USER_ACTION,
                 ),
-                    (0, l.cV)(T),
-                    (0, l.Rx)(O);
+                    (0, l.cV)(O),
+                    (0, l.Rx)(T);
                 let e = x.Z.getAllPending(),
                     t = (0, u.ED)(e);
                 (0, l.Mn)(t).finally(l.si), (0, o.oL)(N), (0, o.ZZ)(P), p.YC.updateSetting(I);

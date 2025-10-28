@@ -592,9 +592,9 @@ let eZ = i.memo(function () {
             });
         case ey.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
             if (null == T.metadata) return null;
-            let { skuId: e3, applicationId: e2 } = T.metadata,
-                e4 = ed.Z.get(e3),
-                e8 = A.Z.getApplication(e2);
+            let { skuId: e2, applicationId: e3 } = T.metadata,
+                e4 = ed.Z.get(e2),
+                e8 = A.Z.getApplication(e3);
             if (null == e4 || null == e8) return null;
             let e5 = { page: ey.ZY5.IN_APP };
             return (0, r.jsxs)(u.qXd, {

@@ -836,10 +836,10 @@ function e1(e) {
         e0()
     );
 }
-function e3(e) {
+function e2(e) {
     eH = e.notice;
 }
-function e2(e) {
+function e3(e) {
     return null != eH && (null == e.id || e.id === eH.id) && (eq(eH.type, e.isTemporary, e.untilAtLeast), e0());
 }
 function e4(e) {
@@ -979,8 +979,8 @@ let tr = new tn(u.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: e6,
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: e7,
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: e9,
-    NOTICE_SHOW: e3,
-    NOTICE_DISMISS: e2,
+    NOTICE_SHOW: e2,
+    NOTICE_DISMISS: e3,
     NOTICE_DISABLE: e4,
     LOGOUT: tt,
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: e0,

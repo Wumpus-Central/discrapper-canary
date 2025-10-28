@@ -4,9 +4,9 @@ r.d(t, {
 }),
     r(388685);
 var n = r(951288),
-    o = r(647438),
-    l = r(120356),
-    u = r.n(l),
+    l = r(647438),
+    o = r(120356),
+    u = r.n(o),
     a = r(481060),
     c = r(490093),
     i = r(317257),
@@ -19,66 +19,66 @@ let p = () =>
             src: r(808824),
             alt: "",
         }),
-    O = (0, o.forwardRef)(function (e, t) {
+    O = (0, l.forwardRef)(function (e, t) {
         let {
                 id: r,
-                balance: l,
+                balance: o,
                 balanceWidgetMode: O = i.b.DEFAULT,
                 showNotificationBadge: y,
-                onClick: j,
-                onMouseDown: d,
+                onClick: d,
+                onMouseDown: m,
                 disabled: g,
-                isInModalOverlay: m,
+                isInModalOverlay: j,
                 className: v,
             } = e,
-            [P, h] = (0, o.useState)(!1),
-            w = (0, o.useMemo)(() => (O === i.b.SELECTED ? f.selected : P ? f.highlighted : f.default), [O, P]),
-            [D, S] = (0, o.useState)(!1),
-            [x, C] = (0, o.useState)(!1),
-            [E, k] = (0, o.useState)(0.9 * c.D2),
-            R = null === l;
-        (0, o.useEffect)(() => {
-            R &&
+            [h, P] = (0, l.useState)(!1),
+            w = (0, l.useMemo)(() => (O === i.b.SELECTED ? f.selected : h ? f.highlighted : f.default), [O, h]),
+            [D, C] = (0, l.useState)(!1),
+            [S, x] = (0, l.useState)(!1),
+            [k, E] = (0, l.useState)(0.9 * c.D2),
+            M = null === o;
+        (0, l.useEffect)(() => {
+            M &&
                 !D &&
-                (S(!0),
+                (C(!0),
                 setTimeout(() => {
-                    C(!0);
+                    x(!0);
                 }, 500));
-        }, [R, S, D]),
-            (0, o.useEffect)(() => {
-                x && !R && S(!1);
-            }, [R, x]);
-        let M = R || D,
-            N = D ? null : l,
-            [L, A] = (0, o.useState)(null),
-            Z = (0, o.useRef)(null),
-            T = (0, o.useCallback)(() => {
-                (Z.current = null), A(null);
+        }, [M, C, D]),
+            (0, l.useEffect)(() => {
+                S && !M && C(!1);
+            }, [M, S]);
+        let L = M || D,
+            N = D ? null : o,
+            [R, A] = (0, l.useState)(null),
+            T = (0, l.useRef)(null),
+            F = (0, l.useCallback)(() => {
+                (T.current = null), A(null);
             }, []),
-            F = (0, o.useCallback)(
+            Z = (0, l.useCallback)(
                 (e) => {
-                    let t = L === Z.current;
-                    e > 0 && ("earn" !== L || !t) && A("earn");
+                    let t = R === T.current;
+                    e > 0 && ("earn" !== R || !t) && A("earn");
                 },
-                [A, L],
+                [A, R],
             );
         return (0, n.jsx)(a.P3F, {
-            onClick: M ? void 0 : j,
+            onClick: L ? void 0 : d,
             className: u()(f.clickable, { [f.disabled]: g }),
             id: null != r ? r : "balance-widget-pill",
             children: (0, n.jsxs)("span", {
-                onMouseDown: d,
-                onMouseEnter: g ? void 0 : () => h(!0),
-                onMouseLeave: g ? void 0 : () => h(!1),
+                onMouseDown: m,
+                onMouseEnter: g ? void 0 : () => P(!0),
+                onMouseLeave: g ? void 0 : () => P(!1),
                 ref: t,
                 className: u()(f.container, w, v, {
-                    [f.containerLoading]: M,
-                    [f.inModalOverlay]: m,
+                    [f.containerLoading]: L,
+                    [f.inModalOverlay]: j,
                     [f.disabled]: g,
                 }),
                 children: [
                     (0, n.jsx)("div", {
-                        className: u()(f.orbsLottieContainer, M ? f.orbIconloading : void 0),
+                        className: u()(f.orbsLottieContainer, L ? f.orbIconloading : void 0),
                         children: (0, n.jsx)(
                             b.ZP,
                             (function (e) {
@@ -108,19 +108,19 @@ let p = () =>
                             })(
                                 {},
                                 {
-                                    currentAnimationType: L,
-                                    animationTypeRef: Z,
-                                    onSetAnimationDurationMS: k,
+                                    currentAnimationType: R,
+                                    animationTypeRef: T,
+                                    onSetAnimationDurationMS: E,
                                 },
                             ),
                         ),
                     }),
                     (0, n.jsx)(s.Z, {
                         value: N,
-                        onValueChange: F,
-                        onValueReached: T,
-                        targetTotalCounterTime: E,
-                        className: M ? f.counterLoading : void 0,
+                        onValueChange: Z,
+                        onValueReached: F,
+                        targetTotalCounterTime: k,
+                        className: L ? f.counterLoading : void 0,
                     }),
                     y && (0, n.jsx)(p, {}),
                 ],

@@ -884,8 +884,8 @@ let eJ = async (e, t) => {
     },
     e0 = 5000,
     e1 = 60000,
-    e3 = 0,
-    e2,
+    e2 = 0,
+    e3,
     e4 = !1,
     e8 = [],
     e5 = (e) => {
@@ -952,7 +952,7 @@ let eJ = async (e, t) => {
         if (!te)
             try {
                 te = !0;
-                let t = parseInt(e2 ?? "0");
+                let t = parseInt(e3 ?? "0");
                 if (0 === t) return;
                 let n = await ev.getPendingCaptures({
                         beforePresent: !0,
@@ -962,8 +962,8 @@ let eJ = async (e, t) => {
                 await Promise.all(
                     n.map(async (e) => (await r.delete("pendingCaptures", e.uuid), tl(e.captureParams, e.canUpload))),
                 ),
-                    (e2 = (t - n.length).toString()),
-                    l.a.setItem("sprig.pendingCount", e2);
+                    (e3 = (t - n.length).toString()),
+                    l.a.setItem("sprig.pendingCount", e3);
             } finally {
                 te = !1;
             }
@@ -1192,7 +1192,7 @@ let eJ = async (e, t) => {
         }, "Error in scheduling/capturing replay");
     },
     tc = async () => {
-        parseInt(e2 ?? "0") || l.a.removeItem("sprig.isCapturingHeatmap"),
+        parseInt(e3 ?? "0") || l.a.removeItem("sprig.isCapturingHeatmap"),
             l.a.getItem("sprig.teardownAfterCapture") && (em(), tu(), l.a.removeItem("sprig.teardownAfterCapture"));
     },
     tu = async () =>
@@ -1212,11 +1212,11 @@ let eJ = async (e, t) => {
         t &&
             (eO(),
             l.a.setItem("sprig.isCapturingHeatmap", "true"),
-            (e3 = Date.now()),
+            (e2 = Date.now()),
             el.inactivityInterval ||
                 (el.inactivityInterval = window.setInterval(() => {
                     var e;
-                    (e = e3),
+                    (e = e2),
                         Date.now() - e >= 30000 &&
                             ey(() => ev.markPendingHeatmapsReady(), "Error in heatmap inactivity");
                 }, 1000)));
@@ -1228,8 +1228,8 @@ let eJ = async (e, t) => {
             (a.replayParams.replayDurationType = "before");
         let o = e.triggerTimestamp + 1000 * e.replayParams.replayDurationSeconds;
         (a.triggerTimestamp = o),
-            (e2 = (parseInt(e2 ?? "0") + 1).toString()),
-            l.a.setItem("sprig.pendingCount", e2),
+            (e3 = (parseInt(e3 ?? "0") + 1).toString()),
+            l.a.setItem("sprig.pendingCount", e3),
             await (await ev.openDB()).add("pendingCaptures", {
                 canUpload: !1,
                 captureParams: a,
@@ -1304,7 +1304,7 @@ let eJ = async (e, t) => {
                                     eO();
                                 },
                             }),
-                        (e2 = l.a.getItem("sprig.pendingCount")),
+                        (e3 = l.a.getItem("sprig.pendingCount")),
                         el.isRecording)
                     )
                         return;
@@ -1373,7 +1373,7 @@ let eJ = async (e, t) => {
                                 };
                             (el.stopRecording = s({
                                 emit: (e, t) => {
-                                    if ((e.type === f.Custom && (e3 = Date.now()), ef() || e_())) return;
+                                    if ((e.type === f.Custom && (e2 = Date.now()), ef() || e_())) return;
                                     if (t && e.type === f.Meta) u = performance.now();
                                     else if (t && u && e.type === f.FullSnapshot) {
                                         let e = performance.now() - u;

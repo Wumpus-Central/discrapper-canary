@@ -48,7 +48,7 @@ n.d(t, {
     _D: () => q,
     _j: () => th,
     _p: () => tO,
-    b7: () => e3,
+    b7: () => e2,
     bA: () => tw,
     f$: () => ty,
     f2: () => eH,
@@ -711,7 +711,7 @@ let eW = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
                     taskType: o.X.STREAM_ON_DESKTOP,
                 });
     };
-function e3(e) {
+function e2(e) {
     var t, n, r, i;
     let a = x.r.build(e.config).defaultInGameTask;
     if (null == a) return null;
@@ -729,7 +729,7 @@ function e3(e) {
         percentComplete: s,
     };
 }
-let e2 = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
+let e3 = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
 function e4(e) {
     return Array.from(o.T.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
@@ -752,10 +752,10 @@ function e7(e) {
 function e9(e, t) {
     return "".concat(String(e).padStart(2, "0"), ":").concat(String(t).padStart(2, "0"));
 }
-let te = e2([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
-    tt = e2([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]),
-    tn = e2([o.X.WATCH_VIDEO]),
-    tr = e2([o.X.WATCH_VIDEO_ON_MOBILE]),
+let te = e3([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
+    tt = e3([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]),
+    tn = e3([o.X.WATCH_VIDEO]),
+    tr = e3([o.X.WATCH_VIDEO_ON_MOBILE]),
     ti = (e) => tr(e) && !tn(e);
 function ta(e) {
     return te(e);

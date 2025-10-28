@@ -622,7 +622,7 @@ function e1(e) {
         ],
     });
 }
-function e3(e) {
+function e2(e) {
     let { message: t, channel: n, compact: i } = e;
     return (0, r.jsx)(_.Z, {
         message: t,
@@ -630,7 +630,7 @@ function e3(e) {
         compact: i,
     });
 }
-function e2(e) {
+function e3(e) {
     let { message: t, channel: n, compact: i } = e;
     return (0, r.jsx)(f.Z, {
         message: t,
@@ -759,9 +759,9 @@ let tn = Object.freeze({
     [eC.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: C.P,
     [eC.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: C.e,
     [eC.uaV.PREMIUM_REFERRAL]: te,
-    [eC.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e3,
+    [eC.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: e2,
     [eC.uaV.CUSTOM_GIFT]: void 0,
-    [eC.uaV.GUILD_GAMING_STATS_PROMPT]: e2,
+    [eC.uaV.GUILD_GAMING_STATS_PROMPT]: e3,
     [eC.uaV.VOICE_HANGOUT_INVITE]: void 0,
     [eC.uaV.POLL_RESULT]: T.Z,
     [eC.uaV.CHANGELOG]: void 0,

@@ -117,7 +117,7 @@ function y() {
         [y, C] = r.useState(null),
         S = r.useRef(null),
         E = r.useRef(null),
-        [T, O] = r.useState(0.5),
+        [O, T] = r.useState(0.5),
         {
             krispModels: N,
             krispModelOverride: P,
@@ -161,7 +161,7 @@ function y() {
         let n = G.createBufferSource();
         (n.buffer = e.audioBuffer),
             (E.current = G.createGain()),
-            (E.current.gain.value = T),
+            (E.current.gain.value = O),
             n.connect(E.current),
             E.current.connect(G.destination),
             (n.loop = !0),
@@ -339,9 +339,9 @@ function y() {
                     }),
                     (0, a.jsx)(c.iRW, {
                         label: "Volume",
-                        initialValue: T,
+                        initialValue: O,
                         asValueChanges: function (e) {
-                            null != E.current && ((E.current.gain.value = e), O(e));
+                            null != E.current && ((E.current.gain.value = e), T(e));
                         },
                         minValue: 0,
                         maxValue: 1,

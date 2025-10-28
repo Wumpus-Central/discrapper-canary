@@ -1,13 +1,13 @@
-r.r(n),
-    r.d(n, {
-        ManaPlayground: () => i,
-        default: () => s,
+n.r(a),
+    n.d(a, {
+        ManaPlayground: () => d,
+        default: () => f,
     });
-var t = r(951288);
-r(647438);
-var u = r(51251),
-    c = r(997612);
-function i() {
-    return (0, t.jsx)(c.X, { config: u.g });
+var r = n(951288);
+n(647438);
+var o = n(51251),
+    t = n(997612);
+function d() {
+    return (0, r.jsx)(t.X, { config: o.g });
 }
-let s = i;
+let f = d;

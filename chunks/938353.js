@@ -154,7 +154,7 @@ function e1(e, t) {
     }
     return n;
 }
-function e3(e, t) {
+function e2(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -165,7 +165,7 @@ function e3(e, t) {
         e
     );
 }
-function e2(e, t) {
+function e3(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -433,7 +433,7 @@ class tt extends (r = a.Component) {
         let f = d
                 .map((t) => {
                     var n;
-                    return e3(e0({}, (0, W.JD)(t, e)), {
+                    return e2(e0({}, (0, W.JD)(t, e)), {
                         original: t.url,
                         srcIsAnimated: (0, ey.yE)(null != (n = t.flags) ? n : 0, ez.J0y.IS_ANIMATED),
                     });
@@ -993,9 +993,9 @@ function tn(e) {
         U = (0, C.m8)();
     return (0, i.jsx)(
         tt,
-        e3(
+        e2(
             e0(
-                e3(
+                e2(
                     e0(
                         {
                             canSuppressEmbeds: I,
@@ -1045,7 +1045,7 @@ let tr = (e) => {
             disableComponentInteractivity: c = !0,
             isSearchResult: u = !1,
         } = e,
-        d = e2(e, [
+        d = e3(e, [
             "message",
             "channel",
             "disableReactionReads",
@@ -1066,7 +1066,7 @@ let tr = (e) => {
         y = (0, Q.Z)(n);
     return (0, i.jsx)(
         tt,
-        e3(e0({}, d), {
+        e2(e0({}, d), {
             message: n,
             channel: r,
             disableReactionReads: a,

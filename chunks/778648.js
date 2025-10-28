@@ -22,8 +22,8 @@ var a = n(951288),
     C = n(87484),
     S = n(736519),
     E = n(43747),
-    T = n(970815),
-    O = n(430824),
+    O = n(970815),
+    T = n(430824),
     N = n(78839),
     P = n(246992),
     I = n(981631),
@@ -94,7 +94,7 @@ function D(e) {
 let Z = function () {
     let [e, t] = r.useState(w.Si.TIER_2),
         [n, v] = r.useState(null),
-        j = (0, s.Wu)([O.Z], () => O.Z.getGuildsArray()),
+        j = (0, s.Wu)([T.Z], () => T.Z.getGuildsArray()),
         [Z] = (0, s.Wu)([N.Z], () => [N.Z.getPremiumSubscription()]),
         M = j.map((e) => ({
             value: e,
@@ -366,9 +366,9 @@ let Z = function () {
                                                               ee.message,
                                                           ],
                                                       }),
-                                                  (0, a.jsx)(T.A4, {
+                                                  (0, a.jsx)(O.A4, {
                                                       balance: null != Q ? Q : 0,
-                                                      balanceWidgetMode: T.b6.SELECTED,
+                                                      balanceWidgetMode: O.b6.SELECTED,
                                                   }),
                                               ],
                                           }),

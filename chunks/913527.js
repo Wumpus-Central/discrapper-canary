@@ -487,20 +487,20 @@
         }
         function e0(e, n) {
             return function (r) {
-                return null != r ? (e3(this, e, r), t.updateOffset(this, n), this) : e1(this, e);
+                return null != r ? (e2(this, e, r), t.updateOffset(this, n), this) : e1(this, e);
             };
         }
         function e1(e, t) {
             return e.isValid() ? e._d["get" + (e._isUTC ? "UTC" : "") + t]() : NaN;
         }
-        function e3(e, t, n) {
+        function e2(e, t, n) {
             e.isValid() &&
                 !isNaN(n) &&
                 ("FullYear" === t && eQ(e.year()) && 1 === e.month() && 29 === e.date()
                     ? e._d["set" + (e._isUTC ? "UTC" : "") + t](n, e.month(), e5(n, e.month()))
                     : e._d["set" + (e._isUTC ? "UTC" : "") + t](n));
         }
-        function e2(e) {
+        function e3(e) {
             return k(this[(e = ee(e))]) ? this[e]() : this;
         }
         function e4(e, t) {
@@ -1089,10 +1089,10 @@
         function t1(e) {
             return e ? e.toLowerCase().replace("_", "-") : e;
         }
-        function t3(e) {
+        function t2(e) {
             for (var t, n, r, i, a = 0; a < e.length; ) {
                 for (t = (i = t1(e[a]).split("-")).length, n = (n = t1(e[a + 1])) ? n.split("-") : null; t > 0; ) {
-                    if ((r = t2(i.slice(0, t).join("-")))) return r;
+                    if ((r = t3(i.slice(0, t).join("-")))) return r;
                     if (n && n.length >= t && w(i, n, !0) >= t - 1) break;
                     t--;
                 }
@@ -1100,7 +1100,7 @@
             }
             return O;
         }
-        function t2(t) {
+        function t3(t) {
             var r = null;
             if (!t$[t] && e && e.exports)
                 try {
@@ -1137,7 +1137,7 @@
             else if (null != t.parentLocale)
                 if (null != t$[t.parentLocale]) r = t$[t.parentLocale]._config;
                 else {
-                    if (null == (n = t2(t.parentLocale)))
+                    if (null == (n = t3(t.parentLocale)))
                         return (
                             t0[t.parentLocale] || (t0[t.parentLocale] = []),
                             t0[t.parentLocale].push({
@@ -1163,7 +1163,7 @@
                 var n,
                     r,
                     i = tJ;
-                null != (r = t2(e)) && (i = r._config),
+                null != (r = t3(e)) && (i = r._config),
                     ((n = new G((t = U(i, t)))).parentLocale = t$[e]),
                     (t$[e] = n),
                     t4(e);
@@ -1176,10 +1176,10 @@
             var t;
             if ((e && e._locale && e._locale._abbr && (e = e._locale._abbr), !e)) return O;
             if (!i(e)) {
-                if ((t = t2(e))) return t;
+                if ((t = t3(e))) return t;
                 e = [e];
             }
-            return t3(e);
+            return t2(e);
         }
         function t7() {
             return b(t$);
@@ -1706,10 +1706,10 @@
         function n1() {
             return !!this.isValid() && !this._isUTC;
         }
-        function n3() {
+        function n2() {
             return !!this.isValid() && this._isUTC;
         }
-        function n2() {
+        function n3() {
             return !!this.isValid() && this._isUTC && 0 === this._offset;
         }
         t.updateOffset = function () {};
@@ -1820,7 +1820,7 @@
             e.isValid() &&
                 ((i = null == i || i),
                 s && ti(e, e1(e, "Month") + s * r),
-                o && e3(e, "Date", e1(e, "Date") + o * r),
+                o && e2(e, "Date", e1(e, "Date") + o * r),
                 a && e._d.setTime(e._d.valueOf() + a * r),
                 i && t.updateOffset(e, o || s));
         }
@@ -2254,10 +2254,10 @@
         function r1(e) {
             return nN(1000 * e);
         }
-        function r3() {
+        function r2() {
             return nN.apply(null, arguments).parseZone();
         }
-        function r2(e) {
+        function r3(e) {
             return e;
         }
         (r0.add = rn),
@@ -2270,7 +2270,7 @@
             (r0.fromNow = ry),
             (r0.to = rO),
             (r0.toNow = rv),
-            (r0.get = e2),
+            (r0.get = e3),
             (r0.invalidAt = rk),
             (r0.isAfter = rs),
             (r0.isBefore = rl),
@@ -2325,9 +2325,9 @@
             (r0.hasAlignedHourOffset = nJ),
             (r0.isDST = n$),
             (r0.isLocal = n1),
-            (r0.isUtcOffset = n3),
-            (r0.isUtc = n2),
-            (r0.isUTC = n2),
+            (r0.isUtcOffset = n2),
+            (r0.isUtc = n3),
+            (r0.isUTC = n3),
             (r0.zoneAbbr = rJ),
             (r0.zoneName = r$),
             (r0.dates = L("dates accessor is deprecated. Use date instead.", rW)),
@@ -2383,8 +2383,8 @@
             (r4.longDateFormat = V),
             (r4.invalidDate = Y),
             (r4.ordinal = z),
-            (r4.preparse = r2),
-            (r4.postformat = r2),
+            (r4.preparse = r3),
+            (r4.postformat = r3),
             (r4.relativeTime = X),
             (r4.pastFuture = Q),
             (r4.set = j),
@@ -2694,7 +2694,7 @@
             (t.duration = n5),
             (t.isMoment = N),
             (t.weekdays = ie),
-            (t.parseZone = r3),
+            (t.parseZone = r2),
             (t.localeData = t6),
             (t.isDuration = nB),
             (t.monthsShort = r9),

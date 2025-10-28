@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(413496), n(433524), n(35282);
+n.d(t, { Z: () => T }), n(413496), n(433524), n(35282);
 var a,
     r,
     l = n(951288),
@@ -176,7 +176,7 @@ let C = j(v({}, d().defaultRules), {
     }),
     S = d().parserFor(C),
     E = d().reactFor(d().ruleOutput(C, "react"));
-class T extends (r = i.PureComponent) {
+class O extends (r = i.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: a, output: r } = this.props,
             i = r(a("".concat(t, "\n\n"), v({ inline: !1 }, n)));
@@ -186,9 +186,9 @@ class T extends (r = i.PureComponent) {
         });
     }
 }
-g(T, "rules", C),
-    g(T, "defaultProps", {
+g(O, "rules", C),
+    g(O, "defaultProps", {
         parser: S,
         output: E,
     });
-let O = T;
+let T = O;

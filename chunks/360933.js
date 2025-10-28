@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = {
+t.d(a, { Z: () => u });
+var u = {};
+u = {
     dateRange: (e) => `${e.startDate} kuni ${e.endDate}`,
     dateSelected: (e) => `${e.date} valitud`,
     finishRangeSelectionPrompt: `Kl\xf5psake kuup\xe4evavahemiku valimise l\xf5petamiseks`,

@@ -20,7 +20,7 @@ function g(e) {
         [v, j] = r.useState(!1),
         _ = (0, l.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
-        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, s.F)(C),
+        { fetched: S, hasAlreadyLinked: E, canStartAuthorization: O, startAuthorization: T } = (0, s.F)(C),
         N = (0, m.ZP)(_),
         P =
             null == N || null == (t = N.widgets)
@@ -32,7 +32,7 @@ function g(e) {
                   ? P
                       ? []
                       : [i.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
-                  : T
+                  : O
                     ? [i.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
@@ -69,7 +69,7 @@ function g(e) {
                               : {
                                     text: b.intl.string(b.t["DSJi3+"]),
                                     onClick: () => {
-                                        O(),
+                                        T(),
                                             j(!0),
                                             (0, p.openUserProfileModal)({
                                                 userId: _,

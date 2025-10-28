@@ -81,8 +81,8 @@ let y = {
             { upsertConfig: n } = (0, h.n6)(),
             l = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
             [S, E] = r.useState(!0),
-            T = r.useRef({}),
-            [O, N] = r.useState(!1),
+            O = r.useRef({}),
+            [T, N] = r.useState(!1),
             [P, I] = r.useState(!1),
             [w, k] = r.useState([]),
             [R, A] = r.useState(y),
@@ -177,7 +177,7 @@ let y = {
                           children: [
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.animated = e;
+                                      O.current.animated = e;
                                   },
                                   onChange: (e) => {
                                       let t = F(e);
@@ -191,21 +191,21 @@ let y = {
                               }),
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.thumbnail = e;
+                                      O.current.thumbnail = e;
                                   },
                                   onChange: (e) => B(x.cq.THUMBNAIL, e),
                                   multiple: !1,
                               }),
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.static = e;
+                                      O.current.static = e;
                                   },
                                   onChange: (e) => B(x.cq.STATIC, e),
                                   multiple: !1,
                               }),
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.reducedMotion = e;
+                                      O.current.reducedMotion = e;
                                   },
                                   onChange: (e) => B(x.cq.REDUCED_MOTION, e),
                                   multiple: !1,
@@ -219,7 +219,7 @@ let y = {
                                   className: i()(b.col, b.preview),
                                   children: [
                                       (0, a.jsx)("img", {
-                                          src: O ? g : v,
+                                          src: T ? g : v,
                                           alt: "",
                                           width: 450,
                                       }),
@@ -258,10 +258,10 @@ let y = {
                                                       }),
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
-                                                          checked: O,
+                                                          checked: T,
                                                           className: b.checkBox,
                                                           onChange: () => {
-                                                              N(!O);
+                                                              N(!T);
                                                           },
                                                       }),
                                                   ],
@@ -293,7 +293,7 @@ let y = {
                                                   text: "Upload Animated Layer",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.animated)
+                                                      return null == (e = O.current.animated)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -312,7 +312,7 @@ let y = {
                                                   text: "Upload thumbnail.png",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.thumbnail)
+                                                      return null == (e = O.current.thumbnail)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -322,7 +322,7 @@ let y = {
                                                   text: "Upload static.png",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.static)
+                                                      return null == (e = O.current.static)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -332,7 +332,7 @@ let y = {
                                                   text: "Upload reduced_motion.png",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.reducedMotion)
+                                                      return null == (e = O.current.reducedMotion)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -682,7 +682,7 @@ let y = {
                                                           style: { display: "none" },
                                                           children: (0, a.jsx)(u.Z, {
                                                               ref: (e) => {
-                                                                  T.current["randomized-".concat(t)] = e;
+                                                                  O.current["randomized-".concat(t)] = e;
                                                               },
                                                               onChange: (e) =>
                                                                   ((e, t) => {
@@ -719,7 +719,7 @@ let y = {
                                                                   onClick: () => {
                                                                       var e;
                                                                       return null ==
-                                                                          (e = T.current["randomized-".concat(t)])
+                                                                          (e = O.current["randomized-".concat(t)])
                                                                           ? void 0
                                                                           : e.activateUploadDialogue();
                                                                   },

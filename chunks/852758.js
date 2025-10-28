@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var a = n(951288),
     r = n(647438),
     l = n(990547),
@@ -46,7 +46,7 @@ function E(e) {
     }
     return e;
 }
-function T(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,25 +64,25 @@ function T(e, t) {
         e
     );
 }
-function O() {
+function T() {
     let { action: e, theme: t } = (0, i.cj)([g.Z, b.Z], () => ({
             action: g.Z.getAction(),
             theme: b.Z.theme,
         })),
-        O = v.Z.getVerificationTypes(e),
+        T = v.Z.getVerificationTypes(e),
         [N, P] = r.useState(0),
-        I = (0, m.Z)(O);
+        I = (0, m.Z)(T);
     (0, h.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: O[0],
-                verification_types: O,
+                verification_type: T[0],
+                verification_types: T,
             },
         },
         {},
-        [O.toString()],
+        [T.toString()],
     );
     let w = () => {
         (0, u.FD)(),
@@ -109,14 +109,14 @@ function O() {
         ),
         r.useEffect(() => {
             (null == I ? void 0 : I[0]) === y.PUi.PHONE &&
-                (null == O ? void 0 : O[0]) === y.PUi.EMAIL &&
+                (null == T ? void 0 : T[0]) === y.PUi.EMAIL &&
                 (0, s.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, a.jsx)(
                                 e,
-                                T(E({}, t), {
+                                O(E({}, t), {
                                     title: S.intl.string(S.t.KLnLIP),
                                     body: S.intl.string(S.t.XGbCq3),
                                     confirmText: S.intl.string(S.t["3oK4qw"]),
@@ -129,9 +129,9 @@ function O() {
                         onCloseCallback: w,
                     },
                 );
-        }, [O, I]),
+        }, [T, I]),
         (0, a.jsx)(j.Z, {
-            types: O,
+            types: T,
             captchaKey: N,
             onCaptchaVerify: (e) => {
                 o.tn
@@ -177,7 +177,7 @@ function O() {
                         return (n) =>
                             (0, a.jsx)(
                                 e,
-                                T(
+                                O(
                                     E(
                                         {
                                             header: S.intl.string(S.t["2jxGer"]),

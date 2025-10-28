@@ -22,7 +22,7 @@ var a = n(951288),
     C = n(70402),
     S = n(736056);
 let E = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: E, onComplete: T, dismissable: O, classificationId: N } = e,
+    let { transitionState: t, entryPoint: n, onClose: E, onComplete: O, dismissable: T, classificationId: N } = e,
         [P, I] = r.useState(o.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         w = r.useRef(P),
         [k, R] = (0, c.US)([P], void 0, !0),
@@ -34,7 +34,7 @@ let E = function (e) {
     }, [k]);
     let { loading: M, ageVerificationMethods: L } = (0, g.Z)({
         onClose: () => {
-            null == T || T(), E();
+            null == O || O(), E();
         },
         onMethodClick: () => {
             I(o.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
@@ -62,7 +62,7 @@ let E = function (e) {
             transitionState: t,
             onClose: E,
             gradientColor: "blue",
-            dismissable: O,
+            dismissable: T,
             graphic: {
                 type: "image",
                 src: S.Z,

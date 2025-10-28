@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(675957),
     d = n(474936),
     p = n(388032),
-    f = n(295234);
+    f = n(398300);
 let h = (e) => {
     let { targetElementRef: t } = e,
         n =
@@ -37,7 +37,7 @@ let h = (e) => {
             {
                 text: p.intl.string(p.t["CDdYB/"]),
                 onClick: () => {
-                    (0, c.w)({ analyticsLocations: [a.Z.HOME_PAGE_PREMIUM_TAB] }), (0, u.ow)();
+                    (0, c.wQ)({ analyticsLocations: [a.Z.HOME_PAGE_PREMIUM_TAB] }), (0, u.ow)();
                 },
             },
         ],

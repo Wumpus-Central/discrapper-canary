@@ -1,7 +1,7 @@
 r.d(t, { D: () => a });
 var n = r(951288),
-    o = r(647438),
-    l = r(709014);
+    l = r(647438),
+    o = r(709014);
 let u = {
         earn: {
             name: "earn",
@@ -15,20 +15,20 @@ let u = {
         },
     },
     a = (e) => {
-        let t = o.useRef(null),
-            a = o.useRef(e);
+        let t = l.useRef(null),
+            a = l.useRef(e);
         a.current = e;
-        let c = o.useMemo(
+        let c = l.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e],
             ),
-            i = o.useCallback((e) => {
-                var o, c;
+            i = l.useCallback((e) => {
+                var l, c;
                 return (0, n.jsx)(
-                    l.L,
-                    ((o = (function (e) {
+                    o.L,
+                    ((l = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
                                 n = Object.keys(r);
@@ -61,7 +61,7 @@ let u = {
                             markers: u,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
+                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(c))
                         : (function (e, t) {
                               var r = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -70,19 +70,19 @@ let u = {
                               }
                               return r;
                           })(Object(c)).forEach(function (e) {
-                              Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(c, e));
+                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(c, e));
                           }),
-                    o),
+                    l),
                 );
             }, []);
         return {
             events: {},
             play: c,
-            getDuration: o.useCallback(() => {
+            getDuration: l.useCallback(() => {
                 var e;
                 return null == (e = t.current) ? void 0 : e.getDuration();
             }, []),
-            getCurrentFrame: o.useCallback(() => {
+            getCurrentFrame: l.useCallback(() => {
                 var e, r;
                 return null != (r = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? r : null;
             }, []),

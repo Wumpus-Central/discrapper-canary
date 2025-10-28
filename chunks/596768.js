@@ -22,7 +22,7 @@ var a = n(951288),
     C = n(388032),
     S = n(599832),
     E = n(451429);
-let T = [
+let O = [
         {
             key: "id",
             cellClassName: S.eventColumn,
@@ -48,7 +48,7 @@ let T = [
             },
         },
     ],
-    O = [
+    T = [
         {
             id: "details",
             name: "Details",
@@ -142,7 +142,7 @@ function N() {
         ),
         [c, d] = r.useState(void 0),
         x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: v } = (0, y.ZP)({ tabs: O }, []),
+        { TabBar: f, renderSelectedTab: v } = (0, y.ZP)({ tabs: T }, []),
         N = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
         P = r.useCallback((e) => {
             h.Z.dispatch({
@@ -185,7 +185,7 @@ function N() {
                 ],
             }),
             (0, a.jsx)(_.Z, {
-                columns: T,
+                columns: O,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key),

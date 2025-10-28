@@ -338,7 +338,7 @@ class w extends o.C {
                     a.broadcast = e0.internalBinaryRead(e, e.uint32(), n, a.broadcast);
                     break;
                 case 19:
-                    a.clips = e3.internalBinaryRead(e, e.uint32(), n, a.clips);
+                    a.clips = e2.internalBinaryRead(e, e.uint32(), n, a.clips);
                     break;
                 case 20:
                     a.forLater = e5.internalBinaryRead(e, e.uint32(), n, a.forLater);
@@ -390,7 +390,7 @@ class w extends o.C {
                 eW.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(),
             e.communities && ez.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(),
             e.broadcast && e0.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
-            e.clips && e3.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
+            e.clips && e2.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
             e.forLater && e5.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(),
             e.safetySettings &&
                 e4.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(),
@@ -517,7 +517,7 @@ class w extends o.C {
                 no: 19,
                 name: "clips",
                 kind: "message",
-                T: () => e3,
+                T: () => e2,
             },
             {
                 no: 20,
@@ -4847,8 +4847,8 @@ class e1 extends o.C {
         ]);
     }
 }
-let e3 = new e1();
-class e2 extends o.C {
+let e2 = new e1();
+class e3 extends o.C {
     create(e) {
         let t = {
             safetySettingsPreset: 0,
@@ -4910,7 +4910,7 @@ class e2 extends o.C {
         ]);
     }
 }
-let e4 = new e2();
+let e4 = new e3();
 class e8 extends o.C {
     create(e) {
         let t = { currentTab: 0 };

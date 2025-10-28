@@ -82,7 +82,7 @@ function p(e) {
         C = null != b ? b : y,
         S = null != f,
         E = S && g,
-        T = {
+        O = {
             offset: {
                 top: -8,
                 left: -8,
@@ -90,7 +90,7 @@ function p(e) {
                 bottom: -8,
             },
         },
-        O = r.useCallback(() => {
+        T = r.useCallback(() => {
             _(!0);
         }, []),
         N = r.useCallback(() => {
@@ -138,7 +138,7 @@ function p(e) {
                               (0, a.jsx)(i.P3F, {
                                   className: c.menuItemContent,
                                   onClick: v,
-                                  focusProps: { offset: u(d({}, T.offset), { right: 0 }) },
+                                  focusProps: { offset: u(d({}, O.offset), { right: 0 }) },
                                   children: P(),
                               }),
                               (0, a.jsx)(
@@ -152,8 +152,8 @@ function p(e) {
                                           e,
                                       ),
                                       {
-                                          onClick: O,
-                                          focusProps: T,
+                                          onClick: T,
+                                          focusProps: O,
                                           children: (0, a.jsx)(l.Fbu, {
                                               size: "xs",
                                               color: "currentColor",
@@ -167,8 +167,8 @@ function p(e) {
                       ? (0, a.jsxs)(
                             i.P3F,
                             u(d({ className: c.menuItemContent }, e), {
-                                onClick: O,
-                                focusProps: T,
+                                onClick: T,
+                                focusProps: O,
                                 children: [
                                     P(),
                                     (0, a.jsx)("div", {
@@ -184,7 +184,7 @@ function p(e) {
                       : (0, a.jsx)(i.P3F, {
                             className: c.menuItemContent,
                             onClick: v,
-                            focusProps: T,
+                            focusProps: O,
                             children: P(),
                         })),
                 (0, a.jsx)("div", {
@@ -197,7 +197,7 @@ function p(e) {
     return S
         ? (0, a.jsx)("li", {
               className: c.menuItem,
-              onMouseEnter: O,
+              onMouseEnter: T,
               onMouseLeave: N,
               children: (0, a.jsx)(i.yRy, {
                   targetElementRef: C,

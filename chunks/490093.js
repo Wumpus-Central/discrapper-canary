@@ -1,15 +1,15 @@
 r.d(t, {
     D2: () => n,
-    nL: () => l,
+    nL: () => o,
 });
 let n = 3000,
-    o = {
+    l = {
         EARN: 0.25,
         SPEND: 0.3,
     },
-    l = (e, t) => {
+    o = (e, t) => {
         let r = e > 0,
-            n = t * o[r ? "EARN" : "SPEND"];
+            n = t * l[r ? "EARN" : "SPEND"];
         return {
             duration: n,
             delay: r ? t - n : 0,

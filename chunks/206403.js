@@ -1,7 +1,7 @@
 n.d(t, { x: () => s }), n(953529);
 var r = n(951288),
-    l = n(120356),
-    o = n.n(l),
+    o = n(120356),
+    l = n.n(o),
     i = n(793030),
     a = n(481060),
     c = n(845442);
@@ -9,7 +9,7 @@ function s(e) {
     let {
         leadingElement: t,
         primaryTrailingElement: n,
-        secondaryTrailingElement: l,
+        secondaryTrailingElement: o,
         title: s,
         secondaryTitle: u,
         description: d,
@@ -17,7 +17,7 @@ function s(e) {
         onClick: b,
     } = e;
     return (0, r.jsxs)(a.P3F, {
-        className: o()(c.baseControlItem, { [c.compact]: f }),
+        className: l()(c.baseControlItem, { [c.compact]: f }),
         onClick: b,
         children: [
             null != t &&
@@ -53,10 +53,10 @@ function s(e) {
                         }),
                 ],
             }),
-            (null != n || null != l) &&
+            (null != n || null != o) &&
                 (0, r.jsxs)("div", {
                     className: c.baseControlItemTrailingElements,
-                    children: [n, l],
+                    children: [n, o],
                 }),
         ],
     });

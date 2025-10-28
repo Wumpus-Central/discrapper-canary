@@ -970,7 +970,7 @@ var y = new WeakMap(),
             o = r && (0, _.isKeyHotkey)(r);
         return (e) => !!((i && i(e)) || (es && a && a(e)) || (!es && o && o(e)));
     },
-    e3 = {
+    e2 = {
         isBold: e1("bold"),
         isCompose: e1("compose"),
         isMoveBackward: e1("moveBackward"),
@@ -996,7 +996,7 @@ var y = new WeakMap(),
         isTransposeCharacter: e1("transposeCharacter"),
         isUndo: e1("undo"),
     },
-    e2 = (e, t) => {
+    e3 = (e, t) => {
         var n = [],
             r = () => {
                 n = [];
@@ -1043,7 +1043,7 @@ class e8 extends c.Component {
     componentDidMount() {
         var { receivedUserInput: e } = this.props,
             t = this.context;
-        (this.manager = e2(t, e)),
+        (this.manager = e3(t, e)),
             (this.mutationObserver = new MutationObserver(this.manager.registerMutations)),
             this.observe();
     }
@@ -2514,19 +2514,19 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                 var { selection: n } = N,
                                                     r = N.children[null !== n ? n.focus.path[0] : 0],
                                                     a = "rtl" === i()(d.NB.string(r));
-                                                if (e3.isRedo(t)) {
+                                                if (e2.isRedo(t)) {
                                                     e.preventDefault();
                                                     var o = N;
                                                     "function" == typeof o.redo && o.redo();
                                                     return;
                                                 }
-                                                if (e3.isUndo(t)) {
+                                                if (e2.isUndo(t)) {
                                                     e.preventDefault();
                                                     var s = N;
                                                     "function" == typeof s.undo && s.undo();
                                                     return;
                                                 }
-                                                if (e3.isMoveLineBackward(t)) {
+                                                if (e2.isMoveLineBackward(t)) {
                                                     e.preventDefault(),
                                                         d.YR.move(N, {
                                                             unit: "line",
@@ -2534,11 +2534,11 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                         });
                                                     return;
                                                 }
-                                                if (e3.isMoveLineForward(t)) {
+                                                if (e2.isMoveLineForward(t)) {
                                                     e.preventDefault(), d.YR.move(N, { unit: "line" });
                                                     return;
                                                 }
-                                                if (e3.isExtendLineBackward(t)) {
+                                                if (e2.isExtendLineBackward(t)) {
                                                     e.preventDefault(),
                                                         d.YR.move(N, {
                                                             unit: "line",
@@ -2547,7 +2547,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                         });
                                                     return;
                                                 }
-                                                if (e3.isExtendLineForward(t)) {
+                                                if (e2.isExtendLineForward(t)) {
                                                     e.preventDefault(),
                                                         d.YR.move(N, {
                                                             unit: "line",
@@ -2555,21 +2555,21 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                         });
                                                     return;
                                                 }
-                                                if (e3.isMoveBackward(t)) {
+                                                if (e2.isMoveBackward(t)) {
                                                     e.preventDefault(),
                                                         n && d.e6.isCollapsed(n)
                                                             ? d.YR.move(N, { reverse: !a })
                                                             : d.YR.collapse(N, { edge: "start" });
                                                     return;
                                                 }
-                                                if (e3.isMoveForward(t)) {
+                                                if (e2.isMoveForward(t)) {
                                                     e.preventDefault(),
                                                         n && d.e6.isCollapsed(n)
                                                             ? d.YR.move(N, { reverse: a })
                                                             : d.YR.collapse(N, { edge: "end" });
                                                     return;
                                                 }
-                                                if (e3.isMoveWordBackward(t)) {
+                                                if (e2.isMoveWordBackward(t)) {
                                                     e.preventDefault(),
                                                         n && d.e6.isExpanded(n) && d.YR.collapse(N, { edge: "focus" }),
                                                         d.YR.move(N, {
@@ -2578,7 +2578,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                         });
                                                     return;
                                                 }
-                                                if (e3.isMoveWordForward(t)) {
+                                                if (e2.isMoveWordForward(t)) {
                                                     e.preventDefault(),
                                                         n && d.e6.isExpanded(n) && d.YR.collapse(N, { edge: "focus" }),
                                                         d.YR.move(N, {
@@ -2591,7 +2591,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                     if (
                                                         (ef || eu) &&
                                                         n &&
-                                                        (e3.isDeleteBackward(t) || e3.isDeleteForward(t)) &&
+                                                        (e2.isDeleteBackward(t) || e2.isDeleteForward(t)) &&
                                                         d.e6.isCollapsed(n)
                                                     ) {
                                                         var l = d.NB.parent(N, n.anchor.path);
@@ -2606,52 +2606,52 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                                         }
                                                     }
                                                 } else {
-                                                    if (e3.isBold(t) || e3.isItalic(t) || e3.isTransposeCharacter(t))
+                                                    if (e2.isBold(t) || e2.isItalic(t) || e2.isTransposeCharacter(t))
                                                         return void e.preventDefault();
-                                                    if (e3.isSoftBreak(t)) {
+                                                    if (e2.isSoftBreak(t)) {
                                                         e.preventDefault(), d.ML.insertSoftBreak(N);
                                                         return;
                                                     }
-                                                    if (e3.isSplitBlock(t)) {
+                                                    if (e2.isSplitBlock(t)) {
                                                         e.preventDefault(), d.ML.insertBreak(N);
                                                         return;
                                                     }
-                                                    if (e3.isDeleteBackward(t)) {
+                                                    if (e2.isDeleteBackward(t)) {
                                                         e.preventDefault(),
                                                             n && d.e6.isExpanded(n)
                                                                 ? d.ML.deleteFragment(N, { direction: "backward" })
                                                                 : d.ML.deleteBackward(N);
                                                         return;
                                                     }
-                                                    if (e3.isDeleteForward(t)) {
+                                                    if (e2.isDeleteForward(t)) {
                                                         e.preventDefault(),
                                                             n && d.e6.isExpanded(n)
                                                                 ? d.ML.deleteFragment(N, { direction: "forward" })
                                                                 : d.ML.deleteForward(N);
                                                         return;
                                                     }
-                                                    if (e3.isDeleteLineBackward(t)) {
+                                                    if (e2.isDeleteLineBackward(t)) {
                                                         e.preventDefault(),
                                                             n && d.e6.isExpanded(n)
                                                                 ? d.ML.deleteFragment(N, { direction: "backward" })
                                                                 : d.ML.deleteBackward(N, { unit: "line" });
                                                         return;
                                                     }
-                                                    if (e3.isDeleteLineForward(t)) {
+                                                    if (e2.isDeleteLineForward(t)) {
                                                         e.preventDefault(),
                                                             n && d.e6.isExpanded(n)
                                                                 ? d.ML.deleteFragment(N, { direction: "forward" })
                                                                 : d.ML.deleteForward(N, { unit: "line" });
                                                         return;
                                                     }
-                                                    if (e3.isDeleteWordBackward(t)) {
+                                                    if (e2.isDeleteWordBackward(t)) {
                                                         e.preventDefault(),
                                                             n && d.e6.isExpanded(n)
                                                                 ? d.ML.deleteFragment(N, { direction: "backward" })
                                                                 : d.ML.deleteBackward(N, { unit: "word" });
                                                         return;
                                                     }
-                                                    if (e3.isDeleteWordForward(t)) {
+                                                    if (e2.isDeleteWordForward(t)) {
                                                         e.preventDefault(),
                                                             n && d.e6.isExpanded(n)
                                                                 ? d.ML.deleteFragment(N, { direction: "forward" })

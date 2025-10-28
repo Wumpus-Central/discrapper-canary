@@ -72,15 +72,15 @@ let f = (e) => {
             _ = b || (!g && j.size > 0),
             [y, C] = r.useState(""),
             [S, E] = r.useState(null),
-            [T, O] = r.useState(null);
+            [O, T] = r.useState(null);
         return (r.useEffect(() => {
             if ("" === y.trim() || !_) {
-                E(null), O(null);
+                E(null), T(null);
                 return;
             }
             let e = c.Z.getProduct(y),
                 t = c.Z.getCategoryForProduct(y);
-            null != e && null != t ? (E(e), O(t)) : (E(null), O(null));
+            null != e && null != t ? (E(e), T(t)) : (E(null), T(null));
         }, [y, _]),
         g)
             ? (0, a.jsx)(i.Text, {
@@ -147,14 +147,14 @@ let f = (e) => {
                                     variant: "heading-lg/semibold",
                                     children: "Product Preview",
                                 }),
-                                null != S && null != T
+                                null != S && null != O
                                     ? (0, a.jsxs)("div", {
                                           className: x.previewContainer,
                                           children: [
                                               (0, a.jsx)(f, {
                                                   product: S,
                                                   user: e,
-                                                  category: T,
+                                                  category: O,
                                                   tab: h.AW.HOME,
                                               }),
                                               (0, a.jsx)(i.Button, {

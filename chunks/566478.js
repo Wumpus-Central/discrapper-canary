@@ -1,3 +1,3 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = { Empty: `Pr\xe1zdne` };
+t.d(a, { Z: () => u });
+var u = {};
+u = { Empty: `Pr\xe1zdne` };

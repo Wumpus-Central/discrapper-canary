@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
-    l = n(647438),
-    o = n(442837),
+    o = n(647438),
+    l = n(442837),
     i = n(352065),
     a = n(481060),
     c = n(607070),
@@ -26,22 +26,22 @@ function b(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        o = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return l;
+            return o;
         })(e, [
             "root",
             "directory",
@@ -52,13 +52,13 @@ function b(e) {
             "sidebarFooter",
             "emptyState",
         ]);
-    let [x, P] = l.useState(!1),
-        [S, C] = l.useState(1.4),
-        _ = l.useRef(null),
-        w = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        E = (0, o.e7)([s.Z], () => s.Z.isFocused());
+    let [x, P] = o.useState(!1),
+        [S, C] = o.useState(1.4),
+        _ = o.useRef(null),
+        w = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        E = (0, l.e7)([s.Z], () => s.Z.isFocused());
     return (
-        l.useEffect(() => {
+        o.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
                 !w &&

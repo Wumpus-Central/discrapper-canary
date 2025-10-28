@@ -1,76 +1,76 @@
-n.d(t, {
-    $H: () => d,
-    MJ: () => u,
-    Vq: () => f,
+t.d(a, {
+    $H: () => c,
+    MJ: () => d,
+    Vq: () => m,
 });
-var r = n(188366),
-    i = n(922387),
-    a = n(386843),
-    o = n(749468),
-    s = n(735437),
-    l = n(43341),
-    c = n(647438);
-let u = (0, c.createContext)(null),
-    d = (0, c.createContext)(null),
-    f = (0, c.forwardRef)(function (e, t) {
-        let n = e["aria-labelledby"];
-        [e, t] = (0, i.pE)(e, t, u);
-        let { dialogProps: f, titleProps: _ } = (0, o.R)(
+var u = t(188366),
+    n = t(922387),
+    r = t(386843),
+    i = t(749468),
+    o = t(735437),
+    l = t(43341),
+    s = t(647438);
+let d = (0, s.createContext)(null),
+    c = (0, s.createContext)(null),
+    m = (0, s.forwardRef)(function (e, a) {
+        let t = e["aria-labelledby"];
+        [e, a] = (0, n.pE)(e, a, d);
+        let { dialogProps: m, titleProps: D } = (0, i.R)(
                 {
                     ...e,
-                    "aria-labelledby": n,
+                    "aria-labelledby": t,
                 },
-                t,
+                a,
             ),
-            p = (0, c.useContext)(d);
-        f["aria-label"] ||
-            f["aria-labelledby"] ||
-            (e["aria-labelledby"] && (f["aria-labelledby"] = e["aria-labelledby"]));
-        let h = (0, i.aX)({
+            h = (0, s.useContext)(c);
+        m["aria-label"] ||
+            m["aria-labelledby"] ||
+            (e["aria-labelledby"] && (m["aria-labelledby"] = e["aria-labelledby"]));
+        let f = (0, n.aX)({
                 defaultClassName: "react-aria-Dialog",
                 className: e.className,
                 style: e.style,
                 children: e.children,
                 values: {
-                    close: (null == p ? void 0 : p.close) || (() => {}),
+                    close: (null == h ? void 0 : h.close) || (() => {}),
                 },
             }),
-            m = (0, s.z)(e, { global: !0 });
-        return c.createElement(
+            y = (0, o.z)(e, { global: !0 });
+        return s.createElement(
             "section",
             {
-                ...(0, l.d)(m, h, f),
-                ref: t,
+                ...(0, l.d)(y, f, m),
+                ref: a,
                 slot: e.slot || void 0,
             },
-            c.createElement(
-                i.zt,
+            s.createElement(
+                n.zt,
                 {
                     values: [
                         [
-                            a.ni,
+                            r.ni,
                             {
                                 slots: {
-                                    [i.hO]: {},
+                                    [n.hO]: {},
                                     title: {
-                                        ..._,
+                                        ...D,
                                         level: 2,
                                     },
                                 },
                             },
                         ],
                         [
-                            r.b,
+                            u.b,
                             {
                                 slots: {
-                                    [i.hO]: {},
-                                    close: { onPress: () => (null == p ? void 0 : p.close()) },
+                                    [n.hO]: {},
+                                    close: { onPress: () => (null == h ? void 0 : h.close()) },
                                 },
                             },
                         ],
                     ],
                 },
-                h.children,
+                f.children,
             ),
         );
     });

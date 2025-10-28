@@ -303,8 +303,8 @@ let eu = (e, t) => {
         let { location: eq } = (0, m.O)(),
             { page: eX, section: eQ, object: eJ, openPopoutType: e$, popoutLocation: e0 } = eO,
             e1 = i.useMemo(() => ei(en({}, eq), { section: null != eQ ? eQ : Q.jXE.EMOJI_PICKER_POPOUT }), [eq, eQ]),
-            { analyticsLocations: e3 } = (0, b.ZP)(g.Z.EMOJI_PICKER),
-            { diversitySurrogate: e2 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
+            { analyticsLocations: e2 } = (0, b.ZP)(g.Z.EMOJI_PICKER),
+            { diversitySurrogate: e3 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
             e4 = (0, U.DV)(eB, c, l, eP),
             e8 = null == e4 ? 0 : e4.locked.length + e4.unlocked.length,
             e5 = D.d4.useSetting(),
@@ -406,7 +406,7 @@ let eu = (e, t) => {
                 isBurstReaction: eY,
             });
         ef(eu, eF),
-            e_(eu, e2, eV, ex),
+            e_(eu, e3, eV, ex),
             i.useEffect(() => {
                 eE || (0, S.ql)("");
             }, [eE]),
@@ -482,7 +482,7 @@ let eu = (e, t) => {
                 autoFocus: ex,
                 accessory: eM,
                 headerClassName: ey,
-                diversitySurrogate: e2,
+                diversitySurrogate: e3,
                 isBurstReaction: eY,
                 onBurstReactionToggle: tm,
                 renderHeader: eA,
@@ -541,7 +541,7 @@ let eu = (e, t) => {
                                                           children: tp
                                                               ? (0, r.jsx)(K.Z, {
                                                                     collapsedSections: e6,
-                                                                    diversitySurrogate: e2,
+                                                                    diversitySurrogate: e3,
                                                                     emojiGrid: tn,
                                                                     emojiListRef: eF,
                                                                     emojiSize: A,
@@ -594,7 +594,7 @@ let eu = (e, t) => {
             }),
         );
         return (0, r.jsx)(b.Gt, {
-            value: e3,
+            value: e2,
             children: tb,
         });
     },

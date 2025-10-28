@@ -34,12 +34,12 @@ let C = [
         s.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
     E = [s.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    T = [
+    O = [
         s.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         s.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function O(e) {
+function T(e) {
     switch (e) {
         case s.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -186,7 +186,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: O(t),
+                                    label: T(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -207,7 +207,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: O(t),
+                                    label: T(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -228,7 +228,7 @@ function I() {
                             className: y.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        T.map((e) =>
+                        O.map((e) =>
                             (0, a.jsx)(
                                 u.Z,
                                 {

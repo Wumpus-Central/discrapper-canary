@@ -561,12 +561,12 @@ function ek(e, t) {
         e$ = i.useRef(null);
     null == eG || eG(eQ.current);
     let e0 = (0, y.Z)(k),
-        [e1, e3] = i.useState(!e0);
+        [e1, e2] = i.useState(!e0);
     (0, m.PM)(eq, (e) => {
         let { width: t } = e;
-        return e3(!e0 && (null == t || t > em));
+        return e2(!e0 && (null == t || t > em));
     });
-    let { activeCommand: e2, activeCommandSection: e4 } = (0, _.cj)([v.Z], () => {
+    let { activeCommand: e3, activeCommandSection: e4 } = (0, _.cj)([v.Z], () => {
             var e, t;
             return {
                 activeCommand: (null == (e = j.commands) ? void 0 : e.enabled) ? v.Z.getActiveCommand(k.id) : null,
@@ -582,7 +582,7 @@ function ek(e, t) {
             canAttachFiles: e7,
             canCreateThreads: e9,
             canEveryoneSendMessages: te,
-        } = eP(k, j, e2, w),
+        } = eP(k, j, e3, w),
         tt = j.toolbarType === Q.OW.STATIC,
         tn = !G.dN.useSetting() && !(0, q.isAndroidWeb)() && null != window.ResizeObserver,
         tr = !tn || !(null == (n = j.commands) ? void 0 : n.enabled) || !U || f !== ec.GI,
@@ -628,15 +628,15 @@ function ek(e, t) {
     let tx = null != Y,
         tM = (e6 && !((e8 || e5) && te)) || (td && (null == (s = j.submit) ? void 0 : s.useDisabledStylesOnSubmit)),
         tk = null;
-    null != e2
-        ? (tk = null == F ? void 0 : F(e2, e4, ed.attachButton))
+    null != e3
+        ? (tk = null == F ? void 0 : F(e3, e4, ed.attachButton))
         : (!e6 || e9) && (tk = null == Z ? void 0 : Z(tx, ed.attachButton));
-    let tj = tn && null != h && !e6 && j.showCharacterCount && null == e2,
-        tU = tn && !__OVERLAY__ && null != h && null == e2 && j.toolbarType !== Q.OW.NONE && !e6,
+    let tj = tn && null != h && !e6 && j.showCharacterCount && null == e3,
+        tU = tn && !__OVERLAY__ && null != h && null == e3 && j.toolbarType !== Q.OW.NONE && !e6,
         tG = (0, et.c)({
             channel: k,
             type: j,
-            activeCommand: e2,
+            activeCommand: e3,
             pendingReply: Y,
             pendingScheduledMessage: eW,
             selectedAutocompleteInputType: tP,

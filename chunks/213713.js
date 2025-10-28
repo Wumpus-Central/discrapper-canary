@@ -22,8 +22,8 @@ var a = n(951288),
     C = n(550532),
     S = n(71585),
     E = n(146282),
-    T = n(780106),
-    O = n(650613),
+    O = n(780106),
+    T = n(650613),
     N = n(789086),
     P = n(206583),
     I = n(680027),
@@ -204,7 +204,7 @@ function A() {
                     ],
                 }),
                 !1,
-                (0, a.jsx)(O.Z, {}),
+                (0, a.jsx)(T.Z, {}),
                 (0, a.jsxs)(p.Kqy, {
                     gap: 8,
                     children: [
@@ -248,7 +248,7 @@ function A() {
                             children: "Force show game:",
                         }),
                         (0, a.jsx)(p.PhF, {
-                            options: T.h.map((e) => ({
+                            options: O.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),

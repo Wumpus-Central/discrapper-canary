@@ -33,7 +33,7 @@ let f = {
             { balance: _ } = (0, c.A)(),
             [y, C] = r.useState(d.b.DEFAULT),
             [S, E] = r.useState(!1),
-            [T, O] = r.useState(!1),
+            [O, T] = r.useState(!1),
             N = r.useRef(null),
             P = r.useCallback(() => {
                 let e = !S;
@@ -65,8 +65,8 @@ let f = {
             );
         return (0, a.jsxs)("div", {
             className: i()(x.container, j, {
-                [x.hidden]: T,
-                [x.visible]: !T,
+                [x.hidden]: O,
+                [x.visible]: !O,
             }),
             children: [
                 (0, a.jsx)(m.y, {
@@ -82,8 +82,8 @@ let f = {
                 S &&
                     (0, a.jsx)("div", {
                         className: i()(x.cardContainer, v, {
-                            [x.hidden]: T,
-                            [x.visible]: !T,
+                            [x.hidden]: O,
+                            [x.visible]: !O,
                         }),
                         ref: w,
                         children: k,

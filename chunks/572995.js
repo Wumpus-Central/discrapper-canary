@@ -248,7 +248,7 @@ let ef = (e, t) =>
                 descriptionCta: b.intl.formatToPlainString(b.t.Bf1cBD, {
                     helpdeskArticle: _.Z.getArticleURL(g.BhN.RECURRING_PROMOTION),
                 }),
-                onClick: () => (0, m.w)({ analyticsLocations: e }),
+                onClick: () => (0, m.wQ)({ analyticsLocations: e }),
                 badgeText: b.intl.string(b.t.oW0eUd).toLocaleUpperCase(),
                 previewImage: N.recurring3PPromotions.thumbnail,
                 videoUrl: N.recurring3PPromotions.thumbnail,

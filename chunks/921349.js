@@ -434,7 +434,7 @@ let j = i.forwardRef(function (e, t) {
         }, [eD, eC, eS, eW]);
     let e$ = h ? W : Y,
         e0 = i.useRef(null),
-        { focusPreviousItem: e1, focusNextItem: e3 } = Z(e0, ey, ex);
+        { focusPreviousItem: e1, focusNextItem: e2 } = Z(e0, ey, ex);
     return (0, r.jsxs)(u.bG, {
         navigator: eW,
         children: [
@@ -633,7 +633,7 @@ let j = i.forwardRef(function (e, t) {
                             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                             eq(e, t);
                         },
-                        focusNextItem: e3,
+                        focusNextItem: e2,
                         focusPreviousItem: e1,
                         renderCustomPill: el,
                         customPillContainerClassName: ec,

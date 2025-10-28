@@ -22,8 +22,8 @@ var a = n(951288),
     C = n(880421),
     S = n(209698),
     E = n(687158),
-    T = n(612600),
-    O = n(892001),
+    O = n(612600),
+    T = n(892001),
     N = n(899007),
     P = n(648052),
     I = n(867176),
@@ -111,11 +111,11 @@ function ed(e) {
     let eC = (0, o.e7)([G.Z], () => G.Z.getStatus(t.id)),
         eS = B.Cr.useSetting(),
         eE = (0, ee.F)(eS),
-        { expiringStatusProfileFeedback: eT } = b.Y.useExperiment(
+        { expiringStatusProfileFeedback: eO } = b.Y.useExperiment(
             { location: "UserProfileAccountPopout" },
             { autoTrackExposure: !1 },
         ),
-        eO = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation),
+        eT = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation),
         eN = (0, g.p)(),
         eP = B.Sb.useSetting(),
         eI = (0, ee.I)(eC),
@@ -136,7 +136,7 @@ function ed(e) {
     }, []);
     let eG = (e) => {
             null == n || n(),
-                (0, O.openUserProfileModal)(
+                (0, T.openUserProfileModal)(
                     ec(
                         {
                             customStatusPrompt: eU,
@@ -147,7 +147,7 @@ function ed(e) {
                     ),
                 );
         },
-        ez = (0, T.Z)({ location: "UserProfileAccountPopout" }),
+        ez = (0, O.Z)({ location: "UserProfileAccountPopout" }),
         eV = (null == ef ? void 0 : ef.widgets) != null && ef.widgets.length > 0,
         eH = eV ? [] : [s.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
         [eW, eK] = (0, f.US)(eH),
@@ -239,7 +239,7 @@ function ed(e) {
                                     (0, a.jsx)(F.Z, {
                                         user: t,
                                         bio: null == ef ? void 0 : ef.bio,
-                                        hidePersonalInformation: eO,
+                                        hidePersonalInformation: eT,
                                         onClose: n,
                                     }),
                                     ez &&
@@ -301,7 +301,7 @@ function ed(e) {
                                                         (0, a.jsx)(X.V4, {
                                                             action: "PRESS_SET_STATUS",
                                                             label: (0, a.jsx)(Q.Z, {}),
-                                                            sublabel: eT && null != eE && eE,
+                                                            sublabel: eO && null != eE && eE,
                                                             icon: () =>
                                                                 (0, a.jsx)(c.qbd, {
                                                                     status: eC,

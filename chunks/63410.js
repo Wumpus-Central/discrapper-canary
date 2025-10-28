@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = {
+t.d(a, { Z: () => u });
+var u = {};
+u = {
     calendar: "Takvim",
     day: `g\xfcn`,
     dayPeriod: `\xd6\xd6/\xd6S`,

@@ -760,10 +760,10 @@
             });
         }),
         (eX.prototype.sort = function (e) {
-            return tM(t2(this, e));
+            return tM(t3(this, e));
         }),
         (eX.prototype.sortBy = function (e, t) {
-            return tM(t2(this, t, e));
+            return tM(t3(this, t, e));
         }),
         (eX.prototype.withMutations = function (e) {
             var t = this.asMutable();
@@ -808,10 +808,10 @@
     function e1(e, t, n) {
         (this.ownerID = e), (this.bitmap = t), (this.nodes = n);
     }
-    function e3(e, t, n) {
+    function e2(e, t, n) {
         (this.ownerID = e), (this.count = t), (this.nodes = n);
     }
-    function e2(e, t, n) {
+    function e3(e, t, n) {
         (this.ownerID = e), (this.keyHash = t), (this.entries = n);
     }
     function e4(e, t, n) {
@@ -859,10 +859,10 @@
         return e ? e.update(t, n, r, i, a, o, s) : a === R ? e : (L(s), L(o), new e4(t, r, [i, a]));
     }
     function tn(e) {
-        return e.constructor === e4 || e.constructor === e2;
+        return e.constructor === e4 || e.constructor === e3;
     }
     function tr(e, t, n, r, i) {
-        if (e.keyHash === r) return new e2(t, r, [e.entry, i]);
+        if (e.keyHash === r) return new e3(t, r, [e.entry, i]);
         var a,
             o = (0 === n ? e.keyHash : e.keyHash >>> n) & N,
             s = (0 === n ? r : r >>> n) & N,
@@ -886,7 +886,7 @@
     }
     function to(e, t, n, r, i) {
         for (var a = 0, o = Array(C), s = 0; 0 !== n; s++, n >>>= 1) o[s] = 1 & n ? t[a++] : void 0;
-        return (o[r] = i), new e3(e, a + 1, o);
+        return (o[r] = i), new e2(e, a + 1, o);
     }
     function ts(e, t, n) {
         for (var r = [], i = 0; i < n.length; i++) {
@@ -1020,13 +1020,13 @@
                 g = u ? (p ? t_(f, d, p, h) : th(f, d, h)) : tp(f, d, p, h);
             return h ? ((this.bitmap = m), (this.nodes = g), this) : new e1(e, m, g);
         }),
-        (e3.prototype.get = function (e, t, n, r) {
+        (e2.prototype.get = function (e, t, n, r) {
             void 0 === t && (t = eM(n));
             var i = (0 === e ? t : t >>> e) & N,
                 a = this.nodes[i];
             return a ? a.get(e + A, t, n, r) : r;
         }),
-        (e3.prototype.update = function (e, t, n, r, i, a, o) {
+        (e2.prototype.update = function (e, t, n, r, i, a, o) {
             void 0 === n && (n = eM(r));
             var s = (0 === t ? n : n >>> t) & N,
                 l = i === R,
@@ -1041,13 +1041,13 @@
             } else f++;
             var _ = e && e === this.ownerID,
                 p = t_(c, s, d, _);
-            return _ ? ((this.count = f), (this.nodes = p), this) : new e3(e, f, p);
+            return _ ? ((this.count = f), (this.nodes = p), this) : new e2(e, f, p);
         }),
-        (e2.prototype.get = function (e, t, n, r) {
+        (e3.prototype.get = function (e, t, n, r) {
             for (var i = this.entries, a = 0, o = i.length; a < o; a++) if (eT(n, i[a][0])) return i[a][1];
             return r;
         }),
-        (e2.prototype.update = function (e, t, n, r, i, a, o) {
+        (e3.prototype.update = function (e, t, n, r, i, a, o) {
             void 0 === n && (n = eM(r));
             var s = i === R;
             if (n !== this.keyHash) return s ? this : (L(o), L(a), tr(this, e, t, n, [r, i]));
@@ -1059,7 +1059,7 @@
                 _ = f ? l : M(l);
             return (d ? (s ? (c === u - 1 ? _.pop() : (_[c] = _.pop())) : (_[c] = [r, i])) : _.push([r, i]), f)
                 ? ((this.entries = _), this)
-                : new e2(e, this.keyHash, _);
+                : new e3(e, this.keyHash, _);
         }),
         (e4.prototype.get = function (e, t, n, r) {
             return eT(n, this.entry[0]) ? this.entry[1] : r;
@@ -1077,12 +1077,12 @@
                         : new e4(e, this.keyHash, [r, i])
                     : (L(a), tr(this, e, t, eM(r), [r, i]));
         }),
-        (e0.prototype.iterate = e2.prototype.iterate =
+        (e0.prototype.iterate = e3.prototype.iterate =
             function (e, t) {
                 for (var n = this.entries, r = 0, i = n.length - 1; r <= i; r++)
                     if (!1 === e(n[t ? i - r : r])) return !1;
             }),
-        (e1.prototype.iterate = e3.prototype.iterate =
+        (e1.prototype.iterate = e2.prototype.iterate =
             function (e, t) {
                 for (var n = this.nodes, r = 0, i = n.length - 1; r <= i; r++) {
                     var a = n[t ? i - r : r];
@@ -1875,7 +1875,7 @@
             })
             .flatten(!0);
     }
-    function t3(e, t) {
+    function t2(e, t) {
         var n = nt(e);
         return (
             (n.size = e.size && 2 * e.size - 1),
@@ -1900,7 +1900,7 @@
             n
         );
     }
-    function t2(e, t, n) {
+    function t3(e, t, n) {
         t || (t = nr);
         var r = g(e),
             i = 0,
@@ -2387,10 +2387,10 @@
             return this.union.apply(this, t);
         }),
         (nd.prototype.sort = function (e) {
-            return nE(t2(this, e));
+            return nE(t3(this, e));
         }),
         (nd.prototype.sortBy = function (e, t) {
-            return nE(t2(this, t, e));
+            return nE(t3(this, t, e));
         }),
         (nd.prototype.wasAltered = function () {
             return this._map.wasAltered();
@@ -2758,7 +2758,7 @@
                 return !this.every(nx(e), t);
             },
             sort: function (e) {
-                return t6(this, t2(this, e));
+                return t6(this, t3(this, e));
             },
             values: function () {
                 return this.__iterator(H);
@@ -2881,7 +2881,7 @@
                 return this.skipWhile(nx(e), t);
             },
             sortBy: function (e, t) {
-                return t6(this, t2(this, t, e));
+                return t6(this, t3(this, t, e));
             },
             take: function (e) {
                 return this.slice(0, Math.max(0, e));
@@ -3116,7 +3116,7 @@
                 );
             },
             interpose: function (e) {
-                return t6(this, t3(this, e));
+                return t6(this, t2(this, e));
             },
             interleave: function () {
                 var e = [this].concat(M(arguments)),

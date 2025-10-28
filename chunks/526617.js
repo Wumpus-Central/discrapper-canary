@@ -376,14 +376,14 @@ function eu(e) {
             });
         }, [e$]),
         e1 = i.useCallback((e) => (eJ(e, t) ? er : en), [t, eJ]),
-        e3 = i.useCallback(
+        e2 = i.useCallback(
             (e) => {
                 let t = e === eB.length - 1;
                 return eF && t ? 50 : eF && e === eZ ? 20 : 0;
             },
             [eB.length, eF, eZ],
         ),
-        e2 = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
+        e3 = i.useCallback((e, t) => (0, r.jsx)("div", { children: t }, e), []),
         e4 = i.useCallback(
             (e, n) => {
                 let i = "".concat(e.key),
@@ -576,12 +576,12 @@ function eu(e) {
                     renderRow: eQ,
                     renderSectionHeader: e4,
                     renderSectionFooter: e8,
-                    renderSection: e2,
+                    renderSection: e3,
                     renderCategoryList: e9,
                     renderHeaderAccessories: e7,
                     rowHeight: et,
                     sectionHeaderHeight: e1,
-                    sectionFooterHeight: e3,
+                    sectionFooterHeight: e2,
                     listPadding: eV,
                     itemNodeWidth: ei,
                     gridNavigatorId: eR,

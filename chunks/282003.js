@@ -61,7 +61,7 @@ let g = () => {
             [j, _] = r.useState(null),
             [y, C] = r.useState(h.Xh.PREMIUM_MONTH_TIER_0),
             [S, E] = r.useState([]),
-            [T, O] = r.useState(() => {
+            [O, T] = r.useState(() => {
                 let e = new Date();
                 return e.setMonth(e.getMonth() + 1), e;
             }),
@@ -85,7 +85,7 @@ let g = () => {
                     case h.Xh.PREMIUM_YEAR_TIER_2:
                         e.setFullYear(e.getFullYear() + 1);
                 }
-                O(e);
+                T(e);
             }, [y]),
             (0, r.useEffect)(() => {
                 switch (e) {
@@ -159,12 +159,12 @@ let g = () => {
                                 tax: 0,
                                 taxInclusive: !0,
                                 subscriptionPeriodStart: new Date(),
-                                subscriptionPeriodEnd: T,
+                                subscriptionPeriodEnd: O,
                                 status: m.hUK.PAID,
                             }),
                         ),
                     n !== o.R.PREVIEW && null !== N && P(null);
-            }, [n, j, T, y, N]);
+            }, [n, j, O, y, N]);
         let Z = r.useCallback(async () => {
             D(!0),
                 await (0, l.ZDy)(
@@ -197,7 +197,7 @@ let g = () => {
                                     createdAt: new Date(),
                                     canceledAt: null,
                                     currentPeriodStart: new Date(),
-                                    currentPeriodEnd: T,
+                                    currentPeriodEnd: O,
                                     status: m.O0b.ACTIVE,
                                     paymentSourceId: null,
                                     paymentGateway: null,
@@ -214,7 +214,7 @@ let g = () => {
                             }),
                         ),
                 );
-        }, [e, j, y, N, I, k, n, T]);
+        }, [e, j, y, N, I, k, n, O]);
         return (
             (0, r.useEffect)(() => {
                 A && Z();

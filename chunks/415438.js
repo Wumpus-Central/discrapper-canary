@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = {
+t.d(a, { Z: () => u });
+var u = {};
+u = {
     dateRange: (e) => `${e.startDate} tot ${e.endDate}`,
     dateSelected: (e) => `${e.date} geselecteerd`,
     finishRangeSelectionPrompt: "Klik om de selectie van het datumbereik te voltooien",

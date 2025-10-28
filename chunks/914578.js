@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+    o = n(647438),
+    l = n(120356),
+    i = n.n(l),
     a = n(481060),
     c = n(782568),
     s = n(163379),
@@ -43,7 +43,7 @@ function v(e) {
     });
 }
 function g() {
-    let e = l.useRef(null),
+    let e = o.useRef(null),
         t = d.Z.isDeveloper;
     return (0, r.jsxs)("div", {
         children: [
@@ -96,10 +96,10 @@ function g() {
                             return (0, r.jsx)(v, { onClose: t });
                         },
                         children: (t, n) => {
-                            var l, o;
+                            var o, l;
                             return (0, r.jsx)(
                                 a.Anchor,
-                                ((l = (function (e) {
+                                ((o = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -124,7 +124,7 @@ function g() {
                                     }
                                     return e;
                                 })({}, t)),
-                                (o = o =
+                                (l = l =
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
@@ -137,7 +137,7 @@ function g() {
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -145,10 +145,10 @@ function g() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(o)).forEach(function (e) {
-                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
-                                l),
+                                o),
                             );
                         },
                     }),

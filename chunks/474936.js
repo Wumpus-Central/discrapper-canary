@@ -6,7 +6,7 @@ n.d(t, {
     $n: () => eQ,
     A5: () => B,
     AU: () => X,
-    Bo: () => e2,
+    Bo: () => e3,
     C: () => s,
     C2: () => J,
     CL: () => _,
@@ -23,7 +23,7 @@ n.d(t, {
     HO: () => ek,
     IW: () => S,
     Lw: () => eC,
-    M_: () => e3,
+    M_: () => e2,
     NV: () => Y,
     Nl: () => eh,
     OT: () => el,
@@ -767,8 +767,8 @@ var eJ = (function (e) {
         );
     })({});
 let e1 = 3,
-    e3 = 30,
-    e2 = 20;
+    e2 = 30,
+    e3 = 20;
 var e4 = (function (e) {
     return (
         (e.PREMIUM_TENURE_1_MONTH = "premium_tenure_1_month_v2"),

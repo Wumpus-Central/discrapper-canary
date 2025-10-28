@@ -502,7 +502,7 @@ let ey = () => {
                 name: "recurring3PPromotions",
                 title: B.intl.string(B.t.m7PucM),
                 subtitle: " ",
-                onCtaClick: () => (0, N.w)({ analyticsLocations: e }),
+                onCtaClick: () => (0, N.wQ)({ analyticsLocations: e }),
                 pillText: B.intl.string(B.t.oW0eUd).toLocaleUpperCase(),
                 description: B.intl.format(B.t.zh1X7u, {}),
                 descriptionCta: B.intl.string(B.t.w7s5Qr),

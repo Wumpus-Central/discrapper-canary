@@ -22,8 +22,8 @@ var a = n(951288),
     C = n(237012),
     S = n(981631),
     E = n(231338),
-    T = n(388032),
-    O = n(306197),
+    O = n(388032),
+    T = n(306197),
     N = n(818033);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -114,13 +114,13 @@ function R() {
         [v, _] = r.useState(!1),
         y = (0, s.e7)([j.Z], () => j.Z.paymentSources),
         S = (0, s.e7)([j.Z], () => j.Z.hasFetchedPaymentSources),
-        T = (0, s.e7)([j.Z], () => j.Z.defaultPaymentSourceId);
+        O = (0, s.e7)([j.Z], () => j.Z.defaultPaymentSourceId);
     r.useEffect(() => {
         S || (0, m.tZ)();
     }, [S]),
         r.useEffect(() => {
-            null != T && null == b && g(T);
-        }, [T, b]);
+            null != O && null == b && g(O);
+        }, [O, b]);
     let N = r.useMemo(
             () =>
                 Object.values(y).map((e) => {
@@ -215,7 +215,7 @@ function R() {
                 children: [
                     (0, a.jsx)(u.Text, {
                         variant: "text-md/normal",
-                        className: O.labelSpacing,
+                        className: T.labelSpacing,
                         children:
                             "This section tests the orderSKU function, order signing, and 3DS authentication with example parameters. Check the console for detailed logs.",
                     }),
@@ -224,7 +224,7 @@ function R() {
                         children: [
                             (0, a.jsx)(u.Text, {
                                 variant: "text-sm/medium",
-                                className: O.labelSpacing,
+                                className: T.labelSpacing,
                                 children: "Payment Source:",
                             }),
                             (0, a.jsx)(
@@ -241,7 +241,7 @@ function R() {
                                 (0, a.jsx)(u.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    className: O.labelSpacing,
+                                    className: T.labelSpacing,
                                     children: "Loading payment sources...",
                                 }),
                         ],
@@ -279,7 +279,7 @@ function R() {
                     }),
                     null != c &&
                         (0, a.jsx)("div", {
-                            className: O.labelSpacing,
+                            className: T.labelSpacing,
                             children: c.split("\n").map((e, t) =>
                                 (0, a.jsx)(
                                     u.Text,
@@ -312,7 +312,7 @@ function A() {
                 (0, a.jsx)(u.Text, {
                     variant: "text-md/normal",
                     color: "text-feedback-info",
-                    className: O.labelSpacing,
+                    className: T.labelSpacing,
                     children:
                         "Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.",
                 }),
@@ -404,7 +404,7 @@ function Z() {
 function M(e) {
     let t = r.useRef(null),
         n = {
-            paymentLabel: T.intl.string(T.t.ZURqX0),
+            paymentLabel: O.intl.string(O.t.ZURqX0),
             paymentRequestRef: t,
             onStripePaymentMethodReceived: () => {},
             onPaymentRequestFailure: () => {},
@@ -424,16 +424,16 @@ function M(e) {
 function L(e) {
     let { children: t, footer: n, className: r } = e;
     return (0, a.jsx)("div", {
-        className: o()(N.root, N.focusLock, N.small, N.rootWithShadow, O.modal, r),
-        "aria-label": T.intl.string(T.t.eQ2bLp),
+        className: o()(N.root, N.focusLock, N.small, N.rootWithShadow, T.modal, r),
+        "aria-label": O.intl.string(O.t.eQ2bLp),
         children: (0, a.jsxs)("form", {
-            className: O.form,
+            className: T.form,
             onSubmit: (e) => {
                 e.preventDefault();
             },
             children: [
                 (0, a.jsx)(u.hzk, {
-                    className: O.scrollerContent,
+                    className: T.scrollerContent,
                     children: t,
                 }),
                 n,
@@ -448,7 +448,7 @@ function U(e) {
     return (0, a.jsx)(L, {
         footer: (0, a.jsx)(g.Z, {
             primaryCTA: g.Z.CTAType.CONTINUE,
-            primaryText: T.intl.string("applePay" === t ? T.t.WoXvJL : T.t.wnVVr0),
+            primaryText: O.intl.string("applePay" === t ? O.t.WoXvJL : O.t.wnVVr0),
             primaryDisabled: !l,
             onPrimary: () => void (null != n.current && n.current.show()),
             onBack: () => {},
@@ -465,9 +465,9 @@ function U(e) {
 function F(e) {
     let { children: t } = e;
     return (0, a.jsx)(L, {
-        className: O.choosePaymentTypeModal,
+        className: T.choosePaymentTypeModal,
         children: (0, a.jsx)("div", {
-            className: O.choosePaymentTypeContainer,
+            className: T.choosePaymentTypeContainer,
             children: t,
         }),
     });
@@ -609,7 +609,7 @@ function K() {
         children: [
             (0, a.jsxs)(u.Text, {
                 variant: "text-md/normal",
-                className: O.labelSpacing,
+                className: T.labelSpacing,
                 children: [
                     "Try configuring options for the Stripe Element container and Express Checkout Element here. Not all settings will change the appearance or functionality of the checkout button - use this to figure out the customizability of the Express Checkout Element.",
                     (0, a.jsx)("br", {}),
@@ -619,7 +619,7 @@ function K() {
             }),
             (0, a.jsxs)(u.Text, {
                 variant: "text-md/normal",
-                className: O.labelSpacing,
+                className: T.labelSpacing,
                 children: [
                     (0, a.jsx)("b", { children: "elements.options:" }),
                     (0, a.jsx)("br", {}),
@@ -629,7 +629,7 @@ function K() {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: O.textarea,
+                className: T.textarea,
                 children: (0, a.jsx)(u.Kx8, {
                     placeholder: "Stripe Elements Container Options",
                     showCharacterCount: !0,
@@ -640,7 +640,7 @@ function K() {
             }),
             (0, a.jsxs)(u.Text, {
                 variant: "text-md/normal",
-                className: O.labelSpacing,
+                className: T.labelSpacing,
                 children: [
                     (0, a.jsx)("b", { children: "expressCheckoutElement.options:" }),
                     (0, a.jsx)("br", {}),
@@ -654,7 +654,7 @@ function K() {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: O.textarea,
+                className: T.textarea,
                 children: (0, a.jsx)(u.Kx8, {
                     placeholder: "Stripe Express Checkout Element Options",
                     showCharacterCount: !0,
@@ -671,7 +671,7 @@ function K() {
                 }),
             (0, a.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: O.applyChangesButton,
+                className: T.applyChangesButton,
                 children: (0, a.jsx)(d.zxk, {
                     variant: "primary",
                     size: "sm",
@@ -686,7 +686,7 @@ function K() {
                                         children: [
                                             (0, a.jsxs)(u.Text, {
                                                 variant: "text-md/normal",
-                                                className: O.labelSpacing,
+                                                className: T.labelSpacing,
                                                 children: ["Element updated at: ", new Date().toString()],
                                             }),
                                             (0, a.jsx)(C.DS, {
@@ -714,20 +714,20 @@ function K() {
             }),
             (0, a.jsx)(u.Text, {
                 variant: "text-md/normal",
-                className: O.labelSpacing,
+                className: T.labelSpacing,
                 children: "Current Element Options:",
             }),
             (0, a.jsx)(f.Z, {
-                className: O.markdown,
+                className: T.markdown,
                 children: "".concat("``", " ").concat(W(n), " ").concat("``"),
             }),
             (0, a.jsx)(u.Text, {
                 variant: "text-md/normal",
-                className: O.labelSpacing,
+                className: T.labelSpacing,
                 children: "Current Express Checkout Element Options:",
             }),
             (0, a.jsx)(f.Z, {
-                className: O.markdown,
+                className: T.markdown,
                 children: "".concat("``", " ").concat(W(c), " ").concat("``"),
             }),
             x,
@@ -765,11 +765,11 @@ function q() {
                             children: [
                                 (0, a.jsx)(u.Text, {
                                     variant: "text-md/normal",
-                                    className: O.labelSpacing,
+                                    className: T.labelSpacing,
                                     children: "expressCheckoutElement.options:",
                                 }),
                                 (0, a.jsx)(f.Z, {
-                                    className: O.markdown,
+                                    className: T.markdown,
                                     children: "".concat("``").concat(W(z[e]), " ").concat("``"),
                                 }),
                                 (0, a.jsx)(C.DS, {

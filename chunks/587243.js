@@ -175,7 +175,7 @@ function _(e) {
             currentStatus: e,
             description: _(p.Skl.DND),
         }),
-        T = v({
+        O = v({
             status: p.Skl.INVISIBLE,
             currentStatus: e,
             description: _(p.Skl.INVISIBLE),
@@ -186,7 +186,7 @@ function _(e) {
             (0, a.jsx)(l.Clw, {}, "menu-separator-statuses"),
             S,
             E,
-            T,
+            O,
             u || d
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [

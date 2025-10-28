@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: () => ew,
-        openDevToolsPopout: () => eO,
+        openDevToolsPopout: () => eT,
         useDevToolsTabConfig: () => eE,
     }),
     n(539854),
@@ -30,8 +30,8 @@ var a = n(951288),
     S = n(432877);
 n(381996);
 var E = n(392750),
-    T = n(926976),
-    O = n(789654),
+    O = n(926976),
+    T = n(789654),
     N = n(866730),
     P = n(582344),
     I = n(691867),
@@ -90,7 +90,7 @@ function eE() {
                 id: "analytics",
                 name: "Analytics",
                 group: ev.v0.EXPERIMENTS,
-                render: () => (0, a.jsx)(T.Z, {}),
+                render: () => (0, a.jsx)(O.Z, {}),
             },
             {
                 id: "triggers",
@@ -201,7 +201,7 @@ function eE() {
                 id: "colors",
                 name: "Colors",
                 group: ev.v0.UI,
-                render: () => (0, a.jsx)(O.Z, {}),
+                render: () => (0, a.jsx)(T.Z, {}),
             }),
             e.push({
                 id: "design_toggles",
@@ -408,7 +408,7 @@ function eE() {
         );
     }, []);
 }
-function eT(e) {
+function eO(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
             minDimension: C.h,
@@ -422,7 +422,7 @@ function eT(e) {
         className: eC.resizeHandle,
     });
 }
-function eO() {
+function eT() {
     (0, b.bA)(
         ej.KJ3.DEVTOOLS_POPOUT,
         () =>
@@ -476,7 +476,7 @@ function eN(e) {
                                   (0, a.jsx)(h.ZP.Icon, {
                                       icon: c.rgF,
                                       tooltip: "Pop Out",
-                                      onClick: eO,
+                                      onClick: eT,
                                   }),
                                   (0, a.jsx)(h.ZP.Icon, {
                                       icon: c.Dio,
@@ -519,7 +519,7 @@ function eP() {
               },
               "data-app-right-panel": !0,
               children: [
-                  (0, a.jsx)(eT, {
+                  (0, a.jsx)(eO, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: i,

@@ -75,19 +75,19 @@ let _ = {
     ];
 function S(e) {
     var t, n, l, o, b, S, E;
-    let { subscription: T, onUpdated: O } = e,
+    let { subscription: O, onUpdated: T } = e,
         [N, P] = r.useState(!1),
         [I, w] = r.useState(!1),
         [k, R] = r.useState(!1),
         [A, D] = r.useState(!1),
         [Z, M] = r.useState(null),
-        L = (e) => ((null == e && (e = T.status), e in _) ? _[e] : "Unknown status ".concat(e)),
+        L = (e) => ((null == e && (e = O.status), e in _) ? _[e] : "Unknown status ".concat(e)),
         U = (e) => {
             let t = new Date(e);
             return p.default.fromTimestamp(t.getTime());
         },
         F = async (e) => {
-            let { status: t = T.status, premiumStreakStart: n, endedAt: a } = e,
+            let { status: t = O.status, premiumStreakStart: n, endedAt: a } = e,
                 r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -118,16 +118,16 @@ function S(e) {
                     null != a ? { ended_at: U(a) } : null,
                 );
             await c.tn.patch({
-                url: "/debug/subscriptions/".concat(T.id),
+                url: "/debug/subscriptions/".concat(O.id),
                 body: r,
                 rejectWithError: !1,
             }),
-                O();
+                T();
         },
         B = async () => {
             try {
                 await c.tn.post({
-                    url: "/debug/subscriptions/".concat(T.id, "/transition"),
+                    url: "/debug/subscriptions/".concat(O.id, "/transition"),
                     body: {
                         target_datetime: new Date().toISOString(),
                         payment_type: 0,
@@ -139,23 +139,23 @@ function S(e) {
             } catch (e) {
                 M(e.body.message);
             }
-            O();
+            T();
         },
-        G = (null == (t = g.GP[T.planIdFromItems]) ? void 0 : t.premiumType) === g.PremiumTypes.TIER_0,
-        z = null == (n = T.metadata) ? void 0 : n.ended_at,
+        G = (null == (t = g.GP[O.planIdFromItems]) ? void 0 : t.premiumType) === g.PremiumTypes.TIER_0,
+        z = null == (n = O.metadata) ? void 0 : n.ended_at,
         V = null != z ? new Date(z).toISOString().substring(0, 10) : "",
         H = [
             {
                 id: "id",
-                label: "ID: ".concat(T.id),
+                label: "ID: ".concat(O.id),
             },
             {
                 id: "status",
                 label: "Status: ".concat(L()),
             },
         ],
-        W = T.hasActiveTrial,
-        K = (null == (l = T.metadata) ? void 0 : l.active_discount_id) != null;
+        W = O.hasActiveTrial,
+        K = (null == (l = O.metadata) ? void 0 : l.active_discount_id) != null;
     return (
         W &&
             H.push({
@@ -167,18 +167,18 @@ function S(e) {
                 id: "active-discount",
                 label: "Has Active Discount",
             }),
-        T.status !== f.O0b.ACTIVE &&
+        O.status !== f.O0b.ACTIVE &&
             H.push({
                 id: "dates",
                 label: "Dates: "
-                    .concat((0, m.vc)(T.createdAt, "LL"), " - ")
-                    .concat((0, m.vc)(T.currentPeriodEnd, "LL")),
+                    .concat((0, m.vc)(O.createdAt, "LL"), " - ")
+                    .concat((0, m.vc)(O.currentPeriodEnd, "LL")),
             }),
-        T.status === f.O0b.PAUSED &&
+        O.status === f.O0b.PAUSED &&
             H.push({
                 id: "pause-reason",
                 label: "Pause Reason: ".concat(
-                    T.pauseReason in y ? y[T.pauseReason] : "Unknown pause reason ".concat(T.pauseReason),
+                    O.pauseReason in y ? y[O.pauseReason] : "Unknown pause reason ".concat(O.pauseReason),
                 ),
             }),
         (0, a.jsx)("div", {
@@ -186,7 +186,7 @@ function S(e) {
             children: (0, a.jsxs)(d.C3N, {
                 label: "Type: ".concat(
                     (() => {
-                        let e = T.planIdFromItems;
+                        let e = O.planIdFromItems;
                         return null == e ? "No plan id" : e in g.GP ? g.GP[e].name : "Unknown plan id ".concat(e);
                     })(),
                 ),
@@ -227,7 +227,7 @@ function S(e) {
                                                     }),
                                                     (0, a.jsx)(d.Text, {
                                                         variant: "text-sm/normal",
-                                                        children: T.trialId,
+                                                        children: O.trialId,
                                                     }),
                                                 ],
                                             }),
@@ -240,8 +240,8 @@ function S(e) {
                                                     (0, a.jsx)(d.Text, {
                                                         variant: "text-sm/normal",
                                                         children:
-                                                            null != T.trialEndsAt
-                                                                ? (0, m.vc)(T.trialEndsAt, "LL")
+                                                            null != O.trialEndsAt
+                                                                ? (0, m.vc)(O.trialEndsAt, "LL")
                                                                 : "N/A",
                                                     }),
                                                 ],
@@ -282,7 +282,7 @@ function S(e) {
                                                     (0, a.jsx)(d.Text, {
                                                         variant: "text-sm/normal",
                                                         children:
-                                                            null == (o = T.metadata) ? void 0 : o.active_discount_id,
+                                                            null == (o = O.metadata) ? void 0 : o.active_discount_id,
                                                     }),
                                                 ],
                                             }),
@@ -295,12 +295,12 @@ function S(e) {
                                                     (0, a.jsx)(d.Text, {
                                                         variant: "text-sm/normal",
                                                         children:
-                                                            (null == (b = T.metadata)
+                                                            (null == (b = O.metadata)
                                                                 ? void 0
                                                                 : b.active_discount_expires_at) != null
                                                                 ? (0, m.vc)(
                                                                       new Date(
-                                                                          null == (S = T.metadata)
+                                                                          null == (S = O.metadata)
                                                                               ? void 0
                                                                               : S.active_discount_expires_at,
                                                                       ),
@@ -314,7 +314,7 @@ function S(e) {
                                     }),
                             ],
                         }),
-                    null != T.metadata &&
+                    null != O.metadata &&
                         (0, a.jsxs)("div", {
                             className: j.collapsablePane,
                             children: [
@@ -336,7 +336,7 @@ function S(e) {
                                 N &&
                                     (0, a.jsx)("ul", {
                                         className: j.collapsiblePaneList,
-                                        children: Object.entries(T.metadata).map((e) => {
+                                        children: Object.entries(O.metadata).map((e) => {
                                             let [t, n] = e;
                                             return (0, a.jsxs)(
                                                 "li",
@@ -383,7 +383,7 @@ function S(e) {
                                         (0, a.jsx)(d.PhF, {
                                             label: "Status",
                                             serialize: (e) => L(e),
-                                            isSelected: (e) => e === T.status,
+                                            isSelected: (e) => e === O.status,
                                             options: C,
                                             select: (e) => F({ status: e }),
                                             popoutLayerContext: h.O$,
@@ -412,7 +412,7 @@ function S(e) {
                                                 (0, a.jsx)(d.Wrb, {
                                                     label: "Premium Streak Start Date",
                                                     value: s()(
-                                                        null == (E = T.premiumSince)
+                                                        null == (E = O.premiumSince)
                                                             ? void 0
                                                             : E.toISOString().substring(0, 10),
                                                     ),

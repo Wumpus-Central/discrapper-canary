@@ -646,7 +646,7 @@ function e1(e) {
         eL(),
         i && eS();
 }
-function e3(e) {
+function e2(e) {
     let t = eA(e.game);
     delete eo.gameOverrides[t],
         delete eo.enableOverlay[t],
@@ -661,7 +661,7 @@ function e3(e) {
         ej(),
         eL();
 }
-function e2(e) {
+function e3(e) {
     var t;
     if (__OVERLAY__ || !w.isPlatformEmbedded) return;
     let n = D.ZP.getDiscordUtils().notifyGameLaunched;
@@ -993,9 +993,9 @@ let e6 = new e5(d.Z, {
         RUNNING_GAME_TOGGLE_OVERLAY: e$,
         RUNNING_GAME_TOGGLE_DETECTION: e0,
         RUNNING_GAME_EDIT_NAME: e1,
-        RUNNING_GAME_DELETE_ENTRY: e3,
+        RUNNING_GAME_DELETE_ENTRY: e2,
         GAMES_DATABASE_UPDATE: es,
-        GAME_LAUNCH_SUCCESS: e2,
+        GAME_LAUNCH_SUCCESS: e3,
         GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: eq,
         GAME_DETECTION_DEBUGGING_START: eX,
         GAME_DETECTION_DEBUGGING_STOP: eQ,

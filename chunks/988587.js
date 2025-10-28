@@ -1,9 +1,9 @@
 n.d(t, { b: () => c }), n(388685);
 var r = n(951288),
-    l = n(647438),
+    i = n(647438),
     o = n(255432),
-    a = n(624315);
-function i(e) {
+    l = n(624315);
+function s(e) {
     let t = e.controls,
         n = {};
     return (
@@ -17,19 +17,19 @@ function i(e) {
 }
 function c(e) {
     let { story: t } = e,
-        n = l.useMemo(() => i(t), [t]),
-        [c, u] = l.useState(n);
+        n = i.useMemo(() => s(t), [t]),
+        [c, a] = i.useState(n);
     return (
-        l.useEffect(() => {
-            u(i(t));
+        i.useEffect(() => {
+            a(s(t));
         }, [t]),
         (0, r.jsxs)("div", {
-            className: a.main,
+            className: l.main,
             children: [
                 (0, r.jsx)("div", {
-                    className: a.canvas,
+                    className: l.canvas,
                     children: (0, r.jsx)("div", {
-                        className: a.storyContent,
+                        className: l.storyContent,
                         children: (() => {
                             let e = t.component;
                             return (0, r.jsx)(
@@ -65,11 +65,11 @@ function c(e) {
                 }),
                 null != t.controls &&
                     (0, r.jsx)("div", {
-                        className: a.controls,
+                        className: l.controls,
                         children: (0, r.jsx)(o.a, {
                             controls: t.controls,
                             props: c,
-                            onPropsChange: u,
+                            onPropsChange: a,
                         }),
                     }),
             ],

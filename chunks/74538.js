@@ -46,7 +46,7 @@ n.d(t, {
     jP: () => en,
     jp: () => eI,
     k: () => tj,
-    k5: () => e2,
+    k5: () => e3,
     lY: () => ey,
     m3: () => eT,
     nd: () => eS,
@@ -1480,10 +1480,10 @@ function e0(e) {
 function e1(e) {
     return null == e ? null : e.items.find((e) => R.Z1.has(e.planId));
 }
-function e3(e) {
+function e2(e) {
     return null != e && null == Z(e) && null != e1(e);
 }
-function e2(e) {
+function e3(e) {
     let t = null != e ? Z(e) : null;
     return null != t ? ef(t.planId) : null;
 }
@@ -1694,8 +1694,8 @@ let tU = Object.freeze({
     getIntervalForInvoice: eZ,
     getPremiumPlanItem: Z,
     getGuildBoostPlanItem: e1,
-    isBoostOnlySubscription: e3,
-    getPremiumSkuIdForSubscription: e2,
+    isBoostOnlySubscription: e2,
+    getPremiumSkuIdForSubscription: e3,
     getPremiumTypeFromSubscription: e4,
     getPremiumTypeFromSubscriptionRenewalMutations: e8,
     getPremiumGradientColor: e5,

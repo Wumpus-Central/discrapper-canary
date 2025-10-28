@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var r = {};
-r = {
+t.d(a, { Z: () => u });
+var u = {};
+u = {
     calendar: `\u{41A}\u{430}\u{43B}\u{435}\u{43D}\u{434}\u{430}\u{440}\u{44C}`,
     day: `\u{434}\u{435}\u{43D}\u{44C}`,
     dayPeriod: "AM/PM",

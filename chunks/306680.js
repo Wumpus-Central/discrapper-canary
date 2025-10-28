@@ -1149,9 +1149,9 @@ function e$(e) {
     ej(i),
     n))
         ej("full_sync" === e.channels.op ? e.channels.items : e.channels.writes),
-            null != e.channelTimestampUpdates && e2(e.channelTimestampUpdates),
+            null != e.channelTimestampUpdates && e3(e.channelTimestampUpdates),
             eG(e);
-    e0(), (eE = setTimeout(() => e3(a.entries), 10 * M.Z.Millis.SECOND));
+    e0(), (eE = setTimeout(() => e2(a.entries), 10 * M.Z.Millis.SECOND));
 }
 function e0() {
     null != eE && clearTimeout(eE);
@@ -1160,7 +1160,7 @@ eo(ek, "_guildReadStateSentinels", {}), eo(ek, "_readStates", new Map()), eo(ek,
 let e1 = (0, a.throttle)((e) => {
     e.delete();
 }, 100);
-function e3(e) {
+function e2(e) {
     let t = ev();
     for (let r of e) {
         var n;
@@ -1169,7 +1169,7 @@ function e3(e) {
         i.shouldDeleteReadState(t) && e1(i);
     }
 }
-function e2(e) {
+function e3(e) {
     for (let t of e) {
         let e = ek.get(t.id);
         null != t.last_message_id && (e.lastMessageId = t.last_message_id),
@@ -1199,7 +1199,7 @@ function e5(e) {
         e.guildId === t.id && e.shouldDeleteReadState(n) && e.delete(!1);
     }),
         ej("full_sync" === t.channels.op ? t.channels.items : t.channels.writes),
-        null != t.channelTimestampUpdates && e2(t.channelTimestampUpdates),
+        null != t.channelTimestampUpdates && e3(t.channelTimestampUpdates),
         eG(t);
 }
 function e6(e) {

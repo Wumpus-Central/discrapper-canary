@@ -21,10 +21,10 @@ function g() {
     let C = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         S = p.L1.useSetting(),
         E = (0, r.e7)([m.Z], () => m.Z.theme),
-        T = S.backgroundGradientPresetId,
-        O = (0, r.e7)([c.Z], () => c.Z.purchases),
-        N = (0, d.Ad)(O),
-        P = (0, d.jT)(O),
+        O = S.backgroundGradientPresetId,
+        T = (0, r.e7)([c.Z], () => c.Z.purchases),
+        N = (0, d.Ad)(T),
+        P = (0, d.jT)(T),
         I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
         w = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
         k = null != I && null != (v = N.find((e) => e.skuId === I)) ? v : null,
@@ -85,7 +85,7 @@ function g() {
                             children: [
                                 "Client Theme ID:",
                                 " ",
-                                null != T ? (null == (g = f.qt[T]) ? void 0 : g.getName()) : "None",
+                                null != O ? (null == (g = f.qt[O]) ? void 0 : g.getName()) : "None",
                             ],
                         }),
                         (0, a.jsxs)(i.Text, {
