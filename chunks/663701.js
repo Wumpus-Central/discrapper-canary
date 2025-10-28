@@ -1,8 +1,9 @@
 n.d(t, {
-    Z: () => eP,
-    d: () => ej,
+    Z: () => ew,
+    d: () => eZ,
 }),
-    n(388685);
+    n(388685),
+    n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,8 +15,8 @@ var r = n(951288),
     d = n(873546),
     p = n(442837),
     f = n(704215),
-    h = n(952265),
-    m = n(755721),
+    m = n(952265),
+    h = n(755721),
     g = n(481060),
     _ = n(493683),
     b = n(529103),
@@ -25,48 +26,52 @@ var r = n(951288),
     v = n(463119),
     y = n(377171),
     C = n(111028),
-    S = n(243778),
-    T = n(702456),
-    N = n(882579),
-    j = n(518311),
-    P = n(518929),
-    x = n(488634),
-    A = n(899740),
-    Z = n(28476),
-    w = n(880257),
-    L = n(631885),
-    D = n(365113),
-    R = n(849862),
-    M = n(522558),
-    k = n(795448),
-    U = n(441623),
-    G = n(93237),
-    B = n(138176),
-    H = n(457396),
-    V = n(108989),
-    F = n(362870),
-    z = n(51596),
-    Y = n(905423),
-    W = n(155409),
-    q = n(210887),
-    K = n(695346),
-    Q = n(283595),
-    J = n(923834),
-    X = n(55563),
-    $ = n(774343),
-    ee = n(974042),
-    et = n(626135),
-    en = n(814225),
-    er = n(515753),
-    ei = n(831218),
-    el = n(339149),
-    ea = n(981631),
-    es = n(675654),
-    eo = n(474936),
-    ec = n(388032),
-    eu = n(602698),
-    ed = n(686918);
-function ep(e) {
+    S = n(211644),
+    T = n(426032),
+    N = n(243778),
+    j = n(702456),
+    P = n(882579),
+    x = n(518311),
+    A = n(518929),
+    Z = n(488634),
+    w = n(899740),
+    L = n(28476),
+    R = n(880257),
+    D = n(631885),
+    M = n(365113),
+    k = n(849862),
+    U = n(522558),
+    G = n(795448),
+    B = n(441623),
+    H = n(382834),
+    V = n(675957),
+    F = n(93237),
+    z = n(138176),
+    Y = n(457396),
+    W = n(108989),
+    q = n(362870),
+    K = n(51596),
+    Q = n(905423),
+    J = n(155409),
+    X = n(210887),
+    $ = n(695346),
+    ee = n(283595),
+    et = n(923834),
+    en = n(55563),
+    er = n(774343),
+    ei = n(974042),
+    el = n(626135),
+    ea = n(814225),
+    es = n(515753),
+    eo = n(831218),
+    ec = n(339149),
+    eu = n(981631),
+    ed = n(675654),
+    ep = n(474936),
+    ef = n(388032),
+    em = n(602698),
+    eh = n(686918);
+function eg(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -91,7 +96,7 @@ function ep(e) {
     }
     return e;
 }
-function ef(e, t) {
+function e_(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -109,7 +114,7 @@ function ef(e, t) {
         e
     );
 }
-function eh(e, t) {
+function eb(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -129,27 +134,27 @@ function eh(e, t) {
     }
     return i;
 }
-let em = (e) => {
+let eE = (e) => {
         var { selected: t } = e,
-            n = eh(e, ["selected"]);
-        let i = (0, P.b5)("PrivateChannels.ICYMIButton"),
+            n = eb(e, ["selected"]);
+        let i = (0, A.b5)("PrivateChannels.ICYMIButton"),
             l = (0, u.JA)("icymi");
         return i
             ? (0, r.jsx)("div", {
-                  className: ed.friendsButtonContainer,
+                  className: eh.friendsButtonContainer,
                   children: (0, r.jsx)(
-                      er.Qj,
-                      ep(
+                      es.Qj,
+                      eg(
                           {
                               selected: t,
-                              route: ea.Z5c.ICYMI,
+                              route: eu.Z5c.ICYMI,
                               icon: g.qOE,
                               text: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      ec.intl.string(ec.t["jnXV/V"]),
+                                      ef.intl.string(ef.t["jnXV/V"]),
                                       (0, r.jsx)("span", {
-                                          className: ed.preAlphaText,
-                                          children: ec.intl.string(ec.t.Ac2OZA),
+                                          className: eh.preAlphaText,
+                                          children: ef.intl.string(ef.t.Ac2OZA),
                                       }),
                                   ],
                               }),
@@ -161,54 +166,54 @@ let em = (e) => {
               })
             : null;
     },
-    eg = (e) => {
+    eO = (e) => {
         var { selected: t } = e,
-            n = eh(e, ["selected"]);
+            n = eb(e, ["selected"]);
         let l = (0, u.JA)("friends"),
-            a = (0, R.If)(),
-            s = (0, p.e7)([U.Z], () => U.Z.canShowFriendsTabBadge()),
+            a = (0, k.If)(),
+            s = (0, p.e7)([B.Z], () => B.Z.canShowFriendsTabBadge()),
             o = (0, p.e7)([E.Z], () => E.Z.useReducedMotion),
-            { enabled: d } = M.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
+            { enabled: d } = U.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
             f = s && d;
         i.useEffect(() => {
             f &&
                 (0, I.h)({
                     name: c.ImpressionNames.GIFT_INTENT_BADGE,
                     type: c.ImpressionTypes.VIEW,
-                    properties: { gift_intent_type: eo.hX.FRIEND_ANNIVERSARY },
+                    properties: { gift_intent_type: ep.hX.FRIEND_ANNIVERSARY },
                 });
         }, [f]);
-        let [h, m] = i.useState(!1);
+        let [m, h] = i.useState(!1);
         return (0, r.jsxs)("div", {
-            className: ed.friendsButtonContainer,
+            className: eh.friendsButtonContainer,
             children: [
                 (0, r.jsx)(
-                    er.Qj,
-                    ef(
-                        ep(
+                    es.Qj,
+                    e_(
+                        eg(
                             {
                                 onClick: () => {
                                     let e;
                                     f
-                                        ? (et.default.track(ea.rMx.GIFT_INTENT_BADGE_CLICKED, {
-                                              gift_intent_type: eo.hX.FRIEND_ANNIVERSARY,
+                                        ? (el.default.track(eu.rMx.GIFT_INTENT_BADGE_CLICKED, {
+                                              gift_intent_type: ep.hX.FRIEND_ANNIVERSARY,
                                           }),
-                                          (e = ea.pJs.ALL),
-                                          b.Z.setSection(ea.pJs.ALL),
-                                          (0, k.Gk)())
-                                        : (e = ee.ZP.getState().section),
+                                          (e = eu.pJs.ALL),
+                                          b.Z.setSection(eu.pJs.ALL),
+                                          (0, G.Gk)())
+                                        : (e = ei.ZP.getState().section),
                                         (0, O.Z)({ tab_opened: e });
                                 },
-                                interactiveClassName: f ? ed.friendsBadge : void 0,
+                                interactiveClassName: f ? eh.friendsBadge : void 0,
                                 selected: t,
-                                route: ea.Z5c.FRIENDS,
+                                route: eu.Z5c.FRIENDS,
                                 icon: g.iFz,
-                                text: ec.intl.string(ec.t.TdEu5X),
+                                text: ef.intl.string(ef.t.TdEu5X),
                                 onMouseEnter: () => {
-                                    m(!0);
+                                    h(!0);
                                 },
                                 onMouseLeave: () => {
-                                    m(!1);
+                                    h(!1);
                                 },
                             },
                             n,
@@ -219,12 +224,12 @@ let em = (e) => {
                 ),
                 f &&
                     !o &&
-                    (0, r.jsx)(V.Z, {
-                        className: ed.confetti,
+                    (0, r.jsx)(W.Z, {
+                        className: eh.confetti,
                         wind: 0,
-                        sprites: es.CA,
-                        spriteColors: es.Br,
-                        firing: h,
+                        sprites: ed.CA,
+                        spriteColors: ed.Br,
+                        firing: m,
                         confettiConfig: {
                             opacity: {
                                 type: "static",
@@ -242,20 +247,20 @@ let em = (e) => {
             ],
         });
     },
-    e_ = (e) => {
+    eI = (e) => {
         var { selected: t } = e,
-            n = eh(e, ["selected"]);
+            n = eb(e, ["selected"]);
         let i = (0, u.JA)("activity");
         return (0, r.jsx)("div", {
-            className: ed.friendsButtonContainer,
+            className: eh.friendsButtonContainer,
             children: (0, r.jsx)(
-                er.Qj,
-                ep(
+                es.Qj,
+                eg(
                     {
                         selected: t,
-                        route: ea.Z5c.ME_ACTIVITY,
+                        route: eu.Z5c.ME_ACTIVITY,
                         icon: g.g8d,
-                        text: ec.intl.string(ec.t.IC5Ann),
+                        text: ef.intl.string(ef.t.IC5Ann),
                     },
                     n,
                     i,
@@ -263,81 +268,81 @@ let em = (e) => {
             ),
         });
     },
-    eb = (e) => {
+    ev = (e) => {
         var { selected: t, hideGameUpdateProgressIndicator: n } = e,
-            i = eh(e, ["selected", "hideGameUpdateProgressIndicator"]);
+            i = eb(e, ["selected", "hideGameUpdateProgressIndicator"]);
         let l = (0, u.JA)("library");
         return (0, r.jsx)(
-            er.Qj,
-            ef(
-                ep(
+            es.Qj,
+            e_(
+                eg(
                     {
                         selected: t,
-                        route: ea.Z5c.APPLICATION_LIBRARY,
+                        route: eu.Z5c.APPLICATION_LIBRARY,
                         icon: g.vqy,
-                        text: ec.intl.string(ec.t.cw57ar),
+                        text: ef.intl.string(ef.t.cw57ar),
                     },
                     i,
                     l,
                 ),
                 {
-                    children: (0, r.jsx)(el.Z, {
-                        className: a()(ed.downloadProgressCircle, { [ed.hideGameUpdateProgressIndicator]: n }),
+                    children: (0, r.jsx)(ec.Z, {
+                        className: a()(eh.downloadProgressCircle, { [eh.hideGameUpdateProgressIndicator]: n }),
                     }),
                 },
             ),
         );
     },
-    eE = () =>
+    ey = () =>
         (0, r.jsx)("li", {
-            className: ed.createDMButtonContainer,
-            children: (0, r.jsx)(j.l, {
+            className: eh.createDMButtonContainer,
+            children: (0, r.jsx)(x.l, {
                 fullWidth: !0,
-                text: ec.intl.string(ec.t["6Urw1t"]),
+                text: ef.intl.string(ef.t["6Urw1t"]),
                 icon: g.kL_,
                 size: "sm",
                 subscribeToGlobalHotkey: !0,
             }),
         }),
-    eO = () => {
-        let e = (0, A.q)();
+    eC = () => {
+        let e = (0, w.q)();
         return e > 0 ? (0, r.jsx)(g.mAB, { count: e }) : null;
     },
-    eI = (e) => {
+    eS = (e) => {
         let { selected: t } = e,
             n = (0, u.JA)("messageRequests"),
-            { channelId: i } = (0, x._)();
-        if (!(0, Z.a)()) return null;
-        let l = null == i ? void 0 : () => _.Z.preload(ea.ME, i);
+            { channelId: i } = (0, Z._)();
+        if (!(0, L.a)()) return null;
+        let l = null == i ? void 0 : () => _.Z.preload(eu.ME, i);
         return (0, r.jsx)(
-            er.Qj,
-            ef(
-                ep(
+            es.Qj,
+            e_(
+                eg(
                     {
                         selected: t,
-                        route: ea.Z5c.MESSAGE_REQUESTS,
+                        route: eu.Z5c.MESSAGE_REQUESTS,
                         icon: g._XJ,
-                        text: ec.intl.string(ec.t.e7GWjQ),
+                        text: ef.intl.string(ef.t.e7GWjQ),
                         onClick: l,
                     },
                     n,
                 ),
-                { children: (0, r.jsx)(eO, {}) },
+                { children: (0, r.jsx)(eC, {}) },
             ),
         );
     },
-    ev = (e) => {
+    eT = (e) => {
         let { selected: t } = e,
-            n = ec.intl.string(eu.default.Rkdixs),
+            n = ef.intl.string(em.default.Rkdixs),
             l = (0, u.JA)("family-center"),
             [a, s] = i.useState(!0);
         return (0, r.jsx)(
-            er.Qj,
-            ef(
-                ep(
+            es.Qj,
+            e_(
+                eg(
                     {
                         selected: t,
-                        route: ea.Z5c.FAMILY_CENTER,
+                        route: eu.Z5c.FAMILY_CENTER,
                         icon: g.BFJ,
                         text: n,
                         onMouseEnter: () => {
@@ -346,45 +351,45 @@ let em = (e) => {
                         onMouseLeave: () => {
                             s(!1);
                         },
-                        interactiveClassName: ed.familyCenterLinkButton,
+                        interactiveClassName: eh.familyCenterLinkButton,
                     },
                     l,
                 ),
-                { children: (0, r.jsx)(ey, { isParentHovered: a }) },
+                { children: (0, r.jsx)(eN, { isParentHovered: a }) },
             ),
         );
     },
-    ey = (e) => {
+    eN = (e) => {
         let { isParentHovered: t } = e,
-            i = (0, L.gU)();
+            i = (0, D.gU)();
         return t
             ? (0, r.jsx)("div", {
-                  className: ed.familyCenterButtonContainer,
-                  children: (0, r.jsx)(er.bU, {
+                  className: eh.familyCenterButtonContainer,
+                  children: (0, r.jsx)(es.bU, {
                       onClick: () => {
-                          (0, h.ZD)(async () => {
+                          (0, m.ZD)(async () => {
                               let { default: e } = await n.e("44153").then(n.bind(n, 760949));
-                              return (t) => (0, r.jsx)(e, ep({}, t));
+                              return (t) => (0, r.jsx)(e, eg({}, t));
                           });
                       },
-                      "aria-label": ec.intl.string(ec.t.cpT0Cq),
+                      "aria-label": ef.intl.string(ef.t.cpT0Cq),
                       icon: g.Dio,
                   }),
               })
             : i > 0
               ? (0, r.jsx)("div", {
-                    className: a()(ed.familyCenterButtonContainer, ed.withPadding),
+                    className: a()(eh.familyCenterButtonContainer, eh.withPadding),
                     children: (0, r.jsx)(g.mAB, { count: i }),
                 })
               : (0, r.jsx)("div", {
-                    className: ed.familyCenterButtonContainer,
-                    children: (0, r.jsx)(S.ZP, {
+                    className: eh.familyCenterButtonContainer,
+                    children: (0, r.jsx)(N.ZP, {
                         contentTypes: [f.z.FAMILY_CENTER_NEW_BADGE],
                         children: (e) => {
                             let { visibleContent: t } = e;
                             return t === f.z.FAMILY_CENTER_NEW_BADGE
                                 ? (0, r.jsx)(g.IGR, {
-                                      text: ec.intl.string(ec.t.y2b7CA),
+                                      text: ef.intl.string(ef.t.y2b7CA),
                                       color: y.Z.BG_BRAND,
                                   })
                                 : null;
@@ -392,248 +397,261 @@ let em = (e) => {
                     }),
                 });
     },
-    eC = () =>
+    ej = () =>
         (0, r.jsxs)("div", {
-            className: ed.directMessagesHeader,
+            className: eh.directMessagesHeader,
             children: [
                 (0, r.jsx)(g.Text, {
                     variant: "text-md/semibold",
-                    children: ec.intl.string(ec.t.YUU0RF),
+                    children: ef.intl.string(ef.t.YUU0RF),
                 }),
                 (0, r.jsx)("div", {
-                    className: ed.directMessagesButton,
-                    children: (0, r.jsx)(j.Z, {
-                        tooltip: ec.intl.string(ec.t["6Urw1t"]),
+                    className: eh.directMessagesButton,
+                    children: (0, r.jsx)(x.Z, {
+                        tooltip: ef.intl.string(ef.t["6Urw1t"]),
                         location: "DirectMessagesHeader-CreateDMButton",
                     }),
                 }),
             ],
         }),
-    eS = () => (0, z.$Z)("DM_SEARCH");
-function eT(e) {
+    eP = () => (0, K.$Z)("DM_SEARCH");
+function ex(e) {
     switch (e) {
-        case ea.Z5c.APPLICATION_LIBRARY:
-            return ea.ZY5.LIBRARY;
-        case ea.Z5c.FRIENDS:
-            return ea.ZY5.FRIENDS_LIST;
-        case ea.Z5c.COLLECTIBLES_SHOP:
-            return ea.ZY5.COLLECTIBLES_SHOP;
+        case eu.Z5c.APPLICATION_LIBRARY:
+            return eu.ZY5.LIBRARY;
+        case eu.Z5c.FRIENDS:
+            return eu.ZY5.FRIENDS_LIST;
+        case eu.Z5c.COLLECTIBLES_SHOP:
+            return eu.ZY5.COLLECTIBLES_SHOP;
     }
-    return e.startsWith(ea.Z5c.APPLICATION_STORE)
-        ? e === ea.Z5c.APPLICATION_STORE
-            ? ea.ZY5.STORE_DIRECTORY_HOME
-            : e.startsWith(ea.Z5c.APPLICATION_STORE)
-              ? ea.ZY5.STORE_DIRECTORY_BROWSE
-              : ea.ZY5.STORE_LISTING
-        : ea.ZY5.DM_CHANNEL;
+    return e.startsWith(eu.Z5c.APPLICATION_STORE)
+        ? e === eu.Z5c.APPLICATION_STORE
+            ? eu.ZY5.STORE_DIRECTORY_HOME
+            : e.startsWith(eu.Z5c.APPLICATION_STORE)
+              ? eu.ZY5.STORE_DIRECTORY_BROWSE
+              : eu.ZY5.STORE_LISTING
+        : eu.ZY5.DM_CHANNEL;
 }
-let eN = i.memo(function (e) {
+let eA = i.memo(function (e) {
     let {
             showLibrary: t,
             hasLibraryApplication: n,
             homeLink: l,
             premiumTabSelected: s,
             shouldShowNitroTab: o,
-            isReferralProgramPopoverShowable: c,
-            shouldShowMessageRequestsRow: u,
-            shouldShowFamilyCenterRow: p,
-            createDMButtonVariant: f,
-            selectedChannelId: h,
-            path: g,
-            onlyShowDMs: _,
-            hideAllDMs: b,
+            showReferralProgramPopover: c,
+            showRecurring3PPopover: u,
+            shouldShowMessageRequestsRow: p,
+            shouldShowFamilyCenterRow: f,
+            createDMButtonVariant: m,
+            selectedChannelId: g,
+            path: _,
+            onlyShowDMs: b,
+            hideAllDMs: E,
         } = e,
-        E = i.useRef(null),
         O = i.useRef(null),
         I = i.useRef(null),
         y = i.useRef(null),
-        S = D.o.useConfig({ location: "privatechannels" }).friendsTab,
-        N = (0, P.b5)("PrivateChannels");
-    return (0, r.jsxs)("nav", {
-        className: ed.privateChannels,
-        "aria-label": ec.intl.string(ec.t.ZH9aP4),
-        children: [
-            _
-                ? (0, r.jsx)(eC, {})
-                : (0, r.jsx)(W.Z, {
-                      childRef: E,
-                      tutorialId: "direct-messages",
-                      position: "right",
-                      offsetX: -52,
-                      children: (0, r.jsx)("div", {
-                          ref: E,
-                          className: a()(ed.searchBar, { [ed.themedHeaderMobile]: d.tq }),
-                          children: (0, r.jsx)(m.zx, {
-                              grow: !0,
-                              color: m.zx.Colors.PRIMARY,
-                              size: m.zx.Sizes.SMALL,
-                              fullWidth: !0,
-                              onClick: eS,
-                              children: (0, r.jsx)(C.Z, { children: ec.intl.string(ec.t.LzcpeZ) }),
+        S = i.useRef(null),
+        T = M.o.useConfig({ location: "privatechannels" }).friendsTab,
+        N = (0, A.b5)("PrivateChannels"),
+        P = null;
+    return (
+        c ? (P = (0, r.jsx)(z.F, { targetElementRef: S })) : u && (P = (0, r.jsx)(H.d, { targetElementRef: S })),
+        (0, r.jsxs)("nav", {
+            className: eh.privateChannels,
+            "aria-label": ef.intl.string(ef.t.ZH9aP4),
+            children: [
+                b
+                    ? (0, r.jsx)(ej, {})
+                    : (0, r.jsx)(J.Z, {
+                          childRef: O,
+                          tutorialId: "direct-messages",
+                          position: "right",
+                          offsetX: -52,
+                          children: (0, r.jsx)("div", {
+                              ref: O,
+                              className: a()(eh.searchBar, { [eh.themedHeaderMobile]: d.tq }),
+                              children: (0, r.jsx)(h.zx, {
+                                  grow: !0,
+                                  color: h.zx.Colors.PRIMARY,
+                                  size: h.zx.Sizes.SMALL,
+                                  fullWidth: !0,
+                                  onClick: eP,
+                                  children: (0, r.jsx)(C.Z, { children: ef.intl.string(ef.t.LzcpeZ) }),
+                              }),
                           }),
                       }),
-                  }),
-            (0, r.jsxs)(
-                ei.Z,
-                ef(ep({}, e), {
-                    version: g,
-                    selectedChannelId: h,
-                    showDMHeader: !b && !_,
-                    hideAllDMs: b,
-                    listScrollerRef: I,
-                    createDMCTAButtonVariant: f,
-                    children: [
-                        S && !_
-                            ? (0, r.jsx)(
-                                  e_,
-                                  { selected: null != g ? g === ea.Z5c.ME_ACTIVITY : l === ea.Z5c.ME_ACTIVITY },
-                                  "activity_experimental",
-                              )
-                            : null,
-                        _
-                            ? null
-                            : (0, r.jsx)(
-                                  eg,
-                                  { selected: null != g ? g === ea.Z5c.FRIENDS : l === ea.Z5c.FRIENDS },
-                                  "friends",
-                              ),
-                        !_ && N
-                            ? (0, r.jsx)(em, { selected: null != g ? g === ea.Z5c.ICYMI : l === ea.Z5c.ICYMI }, "icymi")
-                            : null,
-                        n && t && !_
-                            ? (0, r.jsx)(
-                                  eb,
-                                  {
-                                      selected:
-                                          null == g
-                                              ? null != l && l.startsWith(ea.Z5c.APPLICATION_LIBRARY)
-                                              : g.startsWith(ea.Z5c.APPLICATION_LIBRARY),
-                                      hideGameUpdateProgressIndicator: l === ea.Z5c.APPLICATION_LIBRARY,
-                                  },
-                                  "library",
-                              )
-                            : null,
-                        u && !_
-                            ? (0, r.jsx)(
-                                  eI,
-                                  {
-                                      selected:
-                                          null == g
-                                              ? null != l && l.startsWith(ea.Z5c.MESSAGE_REQUESTS)
-                                              : g === ea.Z5c.MESSAGE_REQUESTS,
-                                  },
-                                  "message-requests",
-                              )
-                            : null,
-                        o && !_
-                            ? (0, r.jsxs)(
-                                  "div",
-                                  {
-                                      children: [
-                                          (0, r.jsx)(H.g, {
-                                              nitroTabButtonRef: y,
-                                              selected: null == g ? s : g.startsWith(ea.Z5c.APPLICATION_STORE),
-                                              route: ea.Z5c.APPLICATION_STORE,
-                                              locationState: {
-                                                  analyticsSource: {
-                                                      page: eT(l),
-                                                      section: ea.jXE.NAVIGATION,
-                                                      object: ea.qAy.NAVIGATION_LINK,
+                (0, r.jsxs)(
+                    eo.Z,
+                    e_(eg({}, e), {
+                        version: _,
+                        selectedChannelId: g,
+                        showDMHeader: !E && !b,
+                        hideAllDMs: E,
+                        listScrollerRef: y,
+                        createDMCTAButtonVariant: m,
+                        children: [
+                            T && !b
+                                ? (0, r.jsx)(
+                                      eI,
+                                      { selected: null != _ ? _ === eu.Z5c.ME_ACTIVITY : l === eu.Z5c.ME_ACTIVITY },
+                                      "activity_experimental",
+                                  )
+                                : null,
+                            b
+                                ? null
+                                : (0, r.jsx)(
+                                      eO,
+                                      { selected: null != _ ? _ === eu.Z5c.FRIENDS : l === eu.Z5c.FRIENDS },
+                                      "friends",
+                                  ),
+                            !b && N
+                                ? (0, r.jsx)(
+                                      eE,
+                                      { selected: null != _ ? _ === eu.Z5c.ICYMI : l === eu.Z5c.ICYMI },
+                                      "icymi",
+                                  )
+                                : null,
+                            n && t && !b
+                                ? (0, r.jsx)(
+                                      ev,
+                                      {
+                                          selected:
+                                              null == _
+                                                  ? null != l && l.startsWith(eu.Z5c.APPLICATION_LIBRARY)
+                                                  : _.startsWith(eu.Z5c.APPLICATION_LIBRARY),
+                                          hideGameUpdateProgressIndicator: l === eu.Z5c.APPLICATION_LIBRARY,
+                                      },
+                                      "library",
+                                  )
+                                : null,
+                            p && !b
+                                ? (0, r.jsx)(
+                                      eS,
+                                      {
+                                          selected:
+                                              null == _
+                                                  ? null != l && l.startsWith(eu.Z5c.MESSAGE_REQUESTS)
+                                                  : _ === eu.Z5c.MESSAGE_REQUESTS,
+                                      },
+                                      "message-requests",
+                                  )
+                                : null,
+                            o && !b
+                                ? (0, r.jsxs)(
+                                      i.Fragment,
+                                      {
+                                          children: [
+                                              (0, r.jsx)(Y.g, {
+                                                  nitroTabButtonRef: S,
+                                                  selected: null == _ ? s : _.startsWith(eu.Z5c.APPLICATION_STORE),
+                                                  route: eu.Z5c.APPLICATION_STORE,
+                                                  locationState: {
+                                                      analyticsSource: {
+                                                          page: ex(l),
+                                                          section: eu.jXE.NAVIGATION,
+                                                          object: eu.qAy.NAVIGATION_LINK,
+                                                      },
                                                   },
+                                              }),
+                                              P,
+                                          ],
+                                      },
+                                      "nitro-tab-group",
+                                  )
+                                : null,
+                            b
+                                ? null
+                                : (0, r.jsx)(
+                                      v.i,
+                                      {
+                                          selected:
+                                              _ === eu.Z5c.COLLECTIBLES_SHOP ||
+                                              (null == l ? void 0 : l.startsWith(eu.Z5c.COLLECTIBLES_SHOP)),
+                                          listItemRef: I,
+                                          locationState: {
+                                              analyticsSource: {
+                                                  page: ex(l),
+                                                  section: eu.jXE.NAVIGATION,
+                                                  object: eu.qAy.NAVIGATION_LINK,
                                               },
-                                          }),
-                                          c && (0, r.jsx)(B.F, { targetElementRef: y }),
-                                      ],
-                                  },
-                                  "nitro-tab-group",
-                              )
-                            : null,
-                        _
-                            ? null
-                            : (0, r.jsx)(
-                                  v.i,
-                                  {
-                                      selected:
-                                          g === ea.Z5c.COLLECTIBLES_SHOP ||
-                                          (null == l ? void 0 : l.startsWith(ea.Z5c.COLLECTIBLES_SHOP)),
-                                      listItemRef: O,
-                                      locationState: {
-                                          analyticsSource: {
-                                              page: eT(l),
-                                              section: ea.jXE.NAVIGATION,
-                                              object: ea.qAy.NAVIGATION_LINK,
                                           },
                                       },
-                                  },
-                                  "discord-shop",
-                              ),
-                        p && !_
-                            ? (0, r.jsx)(
-                                  ev,
-                                  {
-                                      selected:
-                                          (null != l && l.startsWith(ea.Z5c.FAMILY_CENTER)) ||
-                                          (null != g && g.startsWith(ea.Z5c.FAMILY_CENTER)),
-                                  },
-                                  "family-center",
-                              )
-                            : null,
-                        _
-                            ? null
-                            : (0, r.jsx)(
-                                  F.Z,
-                                  {
-                                      selected:
-                                          null == g
-                                              ? null != l && l.startsWith(ea.Z5c.QUEST_HOME_V2)
-                                              : g === ea.Z5c.QUEST_HOME_V2,
-                                  },
-                                  "quests",
-                              ),
-                        _ || b ? null : (0, r.jsx)(ej, {}, "section-divider-top"),
-                        b ? null : (0, r.jsx)(T.Z, {}, "frequent-friends"),
-                        "full-width" !== f || b || _ ? null : (0, r.jsx)(eE, {}, "create-dm"),
-                    ],
-                }),
-            ),
-        ],
-    });
+                                      "discord-shop",
+                                  ),
+                            f && !b
+                                ? (0, r.jsx)(
+                                      eT,
+                                      {
+                                          selected:
+                                              (null != l && l.startsWith(eu.Z5c.FAMILY_CENTER)) ||
+                                              (null != _ && _.startsWith(eu.Z5c.FAMILY_CENTER)),
+                                      },
+                                      "family-center",
+                                  )
+                                : null,
+                            b
+                                ? null
+                                : (0, r.jsx)(
+                                      q.Z,
+                                      {
+                                          selected:
+                                              null == _
+                                                  ? null != l && l.startsWith(eu.Z5c.QUEST_HOME_V2)
+                                                  : _ === eu.Z5c.QUEST_HOME_V2,
+                                      },
+                                      "quests",
+                                  ),
+                            b || E ? null : (0, r.jsx)(eZ, {}, "section-divider-top"),
+                            E ? null : (0, r.jsx)(j.Z, {}, "frequent-friends"),
+                            "full-width" !== m || E || b ? null : (0, r.jsx)(ey, {}, "create-dm"),
+                        ],
+                    }),
+                ),
+            ],
+        })
+    );
 });
-function ej() {
-    return (0, r.jsx)("div", { className: ed.sectionDivider });
+function eZ() {
+    return (0, r.jsx)("div", { className: eh.sectionDivider });
 }
-function eP() {
-    let e = (0, p.e7)([$.Z], () => $.Z.getHomeLink()),
-        t = (0, p.e7)([X.Z], () => {
-            if (e === ea.Z5c.APPLICATION_STORE) return !0;
-            let t = (0, en.ZK)(e);
+function ew() {
+    let e = (0, p.e7)([er.Z], () => er.Z.getHomeLink()),
+        t = (0, p.e7)([en.Z], () => {
+            if (e === eu.Z5c.APPLICATION_STORE) return !0;
+            let t = (0, ea.ZK)(e);
             if (null != t) {
                 var n, r;
-                return null != (r = null == (n = X.Z.get(t)) ? void 0 : n.premium) && r;
+                return null != (r = null == (n = en.Z.get(t)) ? void 0 : n.premium) && r;
             }
             return !1;
         }, [e]),
-        n = !K.bm.useSetting(),
-        { theme: i } = (0, p.cj)([q.Z], () => ({ theme: q.Z.theme })),
-        l = (0, p.e7)([Q.Z], () => Q.Z.hasLibraryApplication()),
-        a = (0, p.e7)([J.Z], () => J.Z.getCurrentPath()),
-        [c, u] = (0, Y.Z)((e) => {
+        n = !$.bm.useSetting(),
+        { theme: i } = (0, p.cj)([X.Z], () => ({ theme: X.Z.theme })),
+        l = (0, p.e7)([ee.Z], () => ee.Z.hasLibraryApplication()),
+        a = (0, p.e7)([et.Z], () => et.Z.getCurrentPath()),
+        [c, u] = (0, Q.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),
-        d = (0, H.i)({ selected: null == u ? t : u.startsWith(ea.Z5c.APPLICATION_STORE) }),
-        f = (0, G.eW)(),
-        h = (0, Z.a)(),
-        m = (function () {
-            let e = K.Ex.useSetting(),
-                t = (0, w.Z)();
+        d = (0, Y.i)({ selected: null == u ? t : u.startsWith(eu.Z5c.APPLICATION_STORE) }),
+        m = (0, F.eW)(),
+        h = (0, V._h)(),
+        g = [];
+    (0, S.Kl)() && (m && g.push(f.z.REFERRAL_PROGRAM_POPOVER), h && g.push(f.z.RECURRING_3P_PROMOTION_POPOVER));
+    let [_, b] = (0, T.US)(g, void 0, !0),
+        E = (0, L.a)(),
+        O = (function () {
+            let e = $.Ex.useSetting(),
+                t = (0, R.Z)();
             return !0 === e && !0 === t;
         })(),
-        g = (0, N.U)("PrivateChannels", { autoTrackExposure: !0 }),
-        { pathname: _ } = (0, s.TH)(),
-        b = _.startsWith(ea.Z5c.CHANNEL(ea.ME)) && _ !== ea.Z5c.CHANNEL(ea.ME) && _ !== ea.Z5c.ME_ACTIVITY,
-        E = D.o.useConfig({ location: "privatechannels" }).dmsTab;
-    return (0, r.jsx)(eN, {
+        I = (0, P.U)("PrivateChannels", { autoTrackExposure: !0 }),
+        { pathname: v } = (0, s.TH)(),
+        y = v.startsWith(eu.Z5c.CHANNEL(eu.ME)) && v !== eu.Z5c.CHANNEL(eu.ME) && v !== eu.Z5c.ME_ACTIVITY,
+        C = M.o.useConfig({ location: "privatechannels" }).dmsTab;
+    return (0, r.jsx)(eA, {
         theme: i,
         showLibrary: n,
         hasLibraryApplication: l,
@@ -641,13 +659,14 @@ function eP() {
         homeLink: e,
         premiumTabSelected: t,
         shouldShowNitroTab: d,
-        isReferralProgramPopoverShowable: f,
-        shouldShowMessageRequestsRow: h,
-        shouldShowFamilyCenterRow: m,
-        createDMButtonVariant: g,
+        showReferralProgramPopover: _ === f.z.REFERRAL_PROGRAM_POPOVER,
+        showRecurring3PPopover: _ === f.z.RECURRING_3P_PROMOTION_POPOVER,
+        shouldShowMessageRequestsRow: E,
+        shouldShowFamilyCenterRow: O,
+        createDMButtonVariant: I,
         selectedChannelId: c,
         path: u,
-        onlyShowDMs: b && E,
-        hideAllDMs: !b && E,
+        onlyShowDMs: y && C,
+        hideAllDMs: !y && C,
     });
 }
