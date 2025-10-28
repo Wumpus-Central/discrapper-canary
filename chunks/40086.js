@@ -1,4 +1,5 @@
 e.exports = {
-    noticeIcon: "noticeIcon__8ab7e",
+    noticeImage: "noticeImage__8ab7e",
     sectionLabel: "sectionLabel__8ab7e",
+    noticeCard: "noticeCard__8ab7e",
 };

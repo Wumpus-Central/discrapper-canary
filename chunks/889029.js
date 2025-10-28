@@ -54,17 +54,30 @@ function b() {
             enableContentProtection: v,
         } = (0, i.cj)([l.Z], () => E({}, l.Z.getSettings())),
         I = () =>
-            (0, r.jsx)(a.ToO, {
-                iconClassName: m.noticeIcon,
-                type: a.Dd5.PRIMARY,
-                imageData: {
-                    src: n(560264),
-                    width: 184,
-                    height: 110,
-                    position: a.SwA.RIGHT,
-                },
-                title: h.intl.string(h.t.bxGbHL),
-                body: h.intl.format(h.t["4rmZnx"], { streamkitURL: p.EYA.STREAMKIT }),
+            (0, r.jsxs)(a.Zbd, {
+                type: a.Zbd.Types.PRIMARY,
+                className: m.noticeCard,
+                children: [
+                    (0, r.jsxs)("div", {
+                        children: [
+                            (0, r.jsx)(a.Heading, {
+                                variant: "heading-md/medium",
+                                children: h.intl.string(h.t.bxGbHL),
+                            }),
+                            (0, r.jsx)(a.Text, {
+                                variant: "text-sm/normal",
+                                children: h.intl.format(h.t["4rmZnx"], { streamkitURL: p.EYA.STREAMKIT }),
+                            }),
+                        ],
+                    }),
+                    (0, r.jsx)("img", {
+                        src: n(560264),
+                        width: 184,
+                        height: 110,
+                        alt: "",
+                        className: m.noticeImage,
+                    }),
+                ],
             }),
         T = () => {
             if (c.isPlatformEmbedded)

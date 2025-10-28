@@ -1,6 +1,6 @@
 n.d(t, {
-    D: () => K,
-    Z: () => q,
+    D: () => W,
+    Z: () => z,
 });
 var r = n(951288),
     i = n(647438),
@@ -40,9 +40,8 @@ var r = n(951288),
     U = n(981631),
     G = n(801461),
     B = n(388032),
-    Z = n(343396),
-    F = n(197571);
-function V(e, t, n) {
+    Z = n(343396);
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +54,7 @@ function V(e, t, n) {
         e
     );
 }
-function H(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,12 +65,12 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
 }
-function Y(e, t) {
+function H(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -83,21 +82,21 @@ function Y(e, t) {
     }
     return n;
 }
-function W(e, t) {
+function Y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Y(Object(t)).forEach(function (n) {
+            : H(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var K = (function (e) {
+var W = (function (e) {
     return (e.SECURITY = "SECURITY"), (e.STANDING = "STANDING"), e;
 })({});
-class z extends i.PureComponent {
+class K extends i.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
         (0, y.Z)(e.id, e.getAvatarURL(void 0, 80));
@@ -107,75 +106,67 @@ class z extends i.PureComponent {
     }
     renderAccountWarning() {
         let { currentUser: e } = this.props;
-        if (!e.isClaimed()) {
-            let e = (0, r.jsxs)("section", {
-                children: [
-                    (0, r.jsx)("div", {
-                        className: Z.accountWarningBodyText,
-                        children: B.intl.string(B.t.qKs3vg),
-                    }),
-                    (0, r.jsx)(c.Button, {
-                        variant: "secondary",
-                        size: "sm",
-                        text: B.intl.string(B.t["7psymi"]),
-                        onClick: () => _.Z.openClaimAccountModal(),
-                    }),
-                ],
-            });
-            return (0, r.jsx)(c.ToO, {
-                type: c.ToO.Types.DANGER,
-                className: F.marginBottom20,
-                imageData: {
-                    src: n(418558),
-                    width: 60,
-                    height: 60,
-                },
-                title: B.intl.string(B.t["/3qnL/"]),
-                body: e,
-            });
-        }
-        if (null == e.email) return null;
-        if (!e.verified) {
-            let e = (0, r.jsxs)("section", {
-                children: [
-                    (0, r.jsx)("div", {
-                        className: Z.accountWarningBodyText,
-                        children: B.intl.string(B.t.NAzplE),
-                    }),
-                    (0, r.jsx)(P.Z, {
-                        size: "sm",
-                        variant: "secondary",
-                    }),
-                ],
-            });
-            return (0, r.jsx)(c.ToO, {
-                type: c.ToO.Types.PRIMARY,
-                className: F.marginBottom20,
-                imageData: {
-                    src: n(449125),
-                    width: 60,
-                    height: 60,
-                },
-                title: B.intl.string(B.t.tuGzBT),
-                body: e,
-            });
-        }
+        return e.isClaimed()
+            ? null == e.email
+                ? null
+                : e.verified
+                  ? void 0
+                  : (0, r.jsxs)(c.M14, {
+                        type: "warning",
+                        children: [
+                            (0, r.jsx)(c.Heading, {
+                                variant: "heading-md/medium",
+                                children: B.intl.string(B.t.tuGzBT),
+                            }),
+                            (0, r.jsx)(c.Text, {
+                                variant: "text-sm/normal",
+                                className: Z.inlineNoticeText,
+                                children: B.intl.string(B.t.NAzplE),
+                            }),
+                            (0, r.jsx)(P.Z, {
+                                size: "sm",
+                                variant: "secondary",
+                            }),
+                        ],
+                    })
+            : (0, r.jsxs)(c.M14, {
+                  type: "critical",
+                  children: [
+                      (0, r.jsx)(c.Heading, {
+                          variant: "heading-md/medium",
+                          children: B.intl.string(B.t["/3qnL/"]),
+                      }),
+                      (0, r.jsx)(c.Text, {
+                          variant: "text-sm/normal",
+                          className: Z.inlineNoticeText,
+                          children: B.intl.string(B.t.qKs3vg),
+                      }),
+                      (0, r.jsx)(c.Button, {
+                          variant: "secondary",
+                          size: "sm",
+                          text: B.intl.string(B.t["7psymi"]),
+                          onClick: () => _.Z.openClaimAccountModal(),
+                      }),
+                  ],
+              });
     }
     renderPomeloWarning() {
         return this.props.shouldRenderPomeloWarning
-            ? (0, r.jsxs)(c.Wn, {
-                  className: Z.accountWarningBodyText,
-                  messageType: c.QYI.WARNING,
-                  children: [
-                      B.intl.format(B.t.pdYZyg, {}),
-                      " ",
-                      "",
-                      (0, r.jsx)(p.Z, {
-                          className: Z.noticeTextButton,
-                          onClick: () => (0, m.Z)(G.Kq.USER_SETTINGS),
-                          children: B.intl.string(B.t.LhlgY9),
-                      }),
-                  ],
+            ? (0, r.jsx)(c.M14, {
+                  type: "warning",
+                  children: (0, r.jsxs)(c.Text, {
+                      variant: "text-sm/normal",
+                      children: [
+                          B.intl.format(B.t.pdYZyg, {}),
+                          " ",
+                          "",
+                          (0, r.jsx)(p.Z, {
+                              className: Z.noticeTextButton,
+                              onClick: () => (0, m.Z)(G.Kq.USER_SETTINGS),
+                              children: B.intl.string(B.t.LhlgY9),
+                          }),
+                      ],
+                  }),
               })
             : null;
     }
@@ -203,7 +194,7 @@ class z extends i.PureComponent {
                         variant: "primary",
                         size: "sm",
                         text: B.intl.string(B.t["FRep5/"]),
-                        onClick: () => (0, c.h7j)((e) => (0, r.jsx)(k.default, W(H({}, e), { onSuccess: e.onClose }))),
+                        onClick: () => (0, c.h7j)((e) => (0, r.jsx)(k.default, Y(V({}, e), { onSuccess: e.onClose }))),
                     }),
                 }),
                 (0, r.jsx)(E.F, {
@@ -375,7 +366,7 @@ class z extends i.PureComponent {
                     ? (0, c.h7j)((e) =>
                           (0, r.jsx)(
                               O.Z,
-                              W(H({}, e), {
+                              Y(V({}, e), {
                                   handleSubmit: (e) => this.handleSubmitDisableAccount(e, t),
                                   title: t ? B.intl.string(B.t["8lQ2rR"]) : B.intl.string(B.t.jf5GGb),
                                   actionText: t ? B.intl.string(B.t["8lQ2rR"]) : B.intl.string(B.t.jf5GGb),
@@ -396,7 +387,7 @@ class z extends i.PureComponent {
             });
     }
 }
-let q = () => {
+let z = () => {
     let e = (0, s.e7)([A.default], () => {
             let e = A.default.getCurrentUser();
             return o()(null != e, "ConnectedUserAccountSettings: currentUser cannot be undefined"), e;
@@ -408,7 +399,7 @@ let q = () => {
         l = (0, s.e7)([N.default], () => N.default.locale),
         c = (0, s.e7)([S.Z], () => S.Z.getSubsection()),
         { teams: u, loading: d } = (0, b.Z)({ refreshOnDepChange: !0 });
-    return (0, r.jsx)(z, {
+    return (0, r.jsx)(K, {
         theme: i,
         currentUser: e,
         backupCodes: t,

@@ -1,8 +1,4 @@
-n.d(t, {
-    Dd: () => h,
-    Sw: () => m,
-    To: () => g,
-});
+n.d(t, { To: () => m });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -62,19 +58,16 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = o.Z.Types,
-    m = {
-        LEFT: "left",
-        RIGHT: "right",
-    };
-function g(e) {
+o.Z.Types;
+let h = "right";
+function m(e) {
     let t,
         n,
         {
             type: i = o.Z.Types.DANGER,
             imageData: d,
             button: p,
-            className: h,
+            className: m,
             iconClassName: g,
             title: E,
             body: b,
@@ -99,13 +92,13 @@ function g(e) {
                 ),
             ),
         })),
-            e === m.RIGHT && (v = s.Z.Direction.HORIZONTAL_REVERSE);
+            e === h && (v = s.Z.Direction.HORIZONTAL_REVERSE);
     } else null != p && (n = p);
     let I = !0;
     return (
         i === o.Z.Types.PRIMARY && (I = !1),
         (0, r.jsx)(o.Z, {
-            className: a()(u.formNotice, h),
+            className: a()(u.formNotice, m),
             type: i,
             style: y,
             children: (0, r.jsxs)(s.Z, {
@@ -133,4 +126,4 @@ function g(e) {
         })
     );
 }
-g.Types = o.Z.Types;
+m.Types = o.Z.Types;

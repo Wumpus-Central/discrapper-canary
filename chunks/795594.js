@@ -743,11 +743,19 @@ let ef = (e) => {
             : (0, r.jsx)(Q.Z, {
                   title: en.intl.string(en.t["f6kk+r"]),
                   children: (0, r.jsx)(g.y5t, {
-                      component: (0, r.jsx)(g.ToO, {
-                          className: ea.marginBottom40,
-                          type: g.sje.PRIMARY,
-                          title: en.intl.string(en.t.HU3RFw),
-                          body: en.intl.string(en.t.Nu5Yi0),
+                      component: (0, r.jsxs)(g.Zbd, {
+                          type: g.Zbd.Types.PRIMARY,
+                          className: er.headingCard,
+                          children: [
+                              (0, r.jsx)(g.Heading, {
+                                  variant: "heading-md/medium",
+                                  children: en.intl.string(en.t.HU3RFw),
+                              }),
+                              (0, r.jsx)(g.Text, {
+                                  variant: "text-sm/normal",
+                                  children: en.intl.string(en.t.Nu5Yi0),
+                              }),
+                          ],
                       }),
                       children: T(),
                   }),

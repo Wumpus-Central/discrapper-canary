@@ -72,11 +72,12 @@ function g() {
                                 children: _.intl.string(_.t.TqdOvC),
                             }),
                             !e &&
-                                (0, r.jsx)(a.Wn, {
+                                (0, r.jsx)("div", {
                                     className: h.myServersIgnoredWarning,
-                                    messageType: a.QYI.WARNING,
-                                    textColor: "text-feedback-warning",
-                                    children: _.intl.string(p.default["xxI0/W"]),
+                                    children: (0, r.jsx)(a.M14, {
+                                        type: "warning",
+                                        children: _.intl.string(p.default["xxI0/W"]),
+                                    }),
                                 }),
                         ],
                     }),
@@ -135,11 +136,15 @@ function b() {
 function y() {
     return (0, r.jsx)(s.F, {
         setting: d.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, r.jsx)(a.ToO, {
-            type: a.ToO.Types.PRIMARY,
-            body: _.intl.format(_.t.xvCsx4, {
-                termsLink: f.EYA.TERMS,
-                privacyLink: f.EYA.PRIVACY,
+        children: (0, r.jsx)(a.Zbd, {
+            type: a.Zbd.Types.PRIMARY,
+            className: h.privacyTermsCard,
+            children: (0, r.jsx)(a.Text, {
+                variant: "text-sm/normal",
+                children: _.intl.format(_.t.xvCsx4, {
+                    termsLink: f.EYA.TERMS,
+                    privacyLink: f.EYA.PRIVACY,
+                }),
             }),
         }),
     });
