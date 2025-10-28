@@ -95,16 +95,16 @@ function g(e) {
             });
         },
         E = __OVERLAY__
-            ? (0, r.jsx)(o.Z.Button, {
-                  isDisabled: !0,
-                  color: o.Z.Button.Colors.PRIMARY,
-                  children: u.intl.string(u.t.W7NTWm),
+            ? (0, r.jsx)(a.Button, {
+                  disabled: !0,
+                  variant: "secondary",
+                  text: u.intl.string(u.t.W7NTWm),
               })
-            : (0, r.jsx)(o.Z.Button, {
+            : (0, r.jsx)(a.Button, {
                   onClick: g,
-                  submitting: h.state === c.Rj.ACCEPTING,
-                  color: o.Z.Button.Colors.GREEN,
-                  children: u.intl.string(u.t["a3Gl+e"]),
+                  loading: h.state === c.Rj.ACCEPTING,
+                  variant: "active",
+                  text: u.intl.string(u.t["a3Gl+e"]),
               });
     return (0, r.jsxs)(o.Z, {
         children: [

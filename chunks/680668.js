@@ -184,11 +184,12 @@ function T(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(_.Z.Button, {
+                        (0, r.jsx)(s.Button, {
                             onClick: $,
-                            submitting: U,
-                            color: _.Z.Button.Colors.GREEN,
-                            children: F
+                            loading: U,
+                            variant: "active",
+                            fullWidth: F,
+                            text: F
                                 ? V
                                     ? y.intl.string(y.t["7vb2cc"])
                                     : y.intl.string(y.t.gpqgah)
