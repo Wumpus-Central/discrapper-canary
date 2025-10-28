@@ -17,4 +17,5 @@ e.exports = {
     errorLink: "errorLink__67dba",
     acronym: "acronym__67dba",
     isFriendsInVCInvitesExperiment: "isFriendsInVCInvitesExperiment__67dba",
+    footerWithCheckbox: "footerWithCheckbox__67dba",
 };
