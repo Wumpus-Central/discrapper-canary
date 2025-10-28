@@ -1,24 +1,24 @@
-t.d(n, { Z: () => f });
-var l = t(951288),
-    a = t(763600),
-    i = t(793030),
-    r = t(410030),
-    s = t(343312),
-    o = t(231338),
-    u = t(269794),
-    c = t(388032),
-    d = t(731926),
-    m = t(737413),
-    v = t(688913);
+n.d(t, { Z: () => f });
+var l = n(951288),
+    i = n(763600),
+    a = n(793030),
+    r = n(410030),
+    s = n(343312),
+    u = n(231338),
+    o = n(269794),
+    c = n(388032),
+    d = n(731926),
+    m = n(737413),
+    v = n(688913);
 function g() {
     let e = (0, r.ZP)();
-    return (0, l.jsx)(i.xvT, {
+    return (0, l.jsx)(a.xvT, {
         variant: "text-sm/medium",
         className: d.text,
-        children: c.intl.format(u.default.fcJiY8, {
+        children: c.intl.format(o.default.fcJiY8, {
             provider: (0, l.jsx)("img", {
                 className: d.image,
-                src: e !== o.BR.LIGHT ? v : m,
+                src: e !== u.BR.LIGHT ? v : m,
                 alt: "Shockbyte",
             }),
         }),
@@ -26,5 +26,5 @@ function g() {
 }
 function f() {
     let { gameProvider: e } = (0, s.JL)();
-    return e === a.Z.SHOCKBYTE ? (0, l.jsx)(g, {}) : null;
+    return e === i.Z.SHOCKBYTE ? (0, l.jsx)(g, {}) : null;
 }

@@ -54,11 +54,11 @@ function P(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -66,7 +66,7 @@ function D(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -235,7 +235,7 @@ function k(e) {
             children: (0, r.jsx)(l.SJ, {
                 children: (e) => {
                     var { ref: t, role: i } = e,
-                        l = D(e, ["ref", "role"]);
+                        l = w(e, ["ref", "role"]);
                     return (0, r.jsx)(
                         c.aVo,
                         P(

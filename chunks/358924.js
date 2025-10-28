@@ -31,8 +31,8 @@ var r,
     Z = n(194082),
     w = n(377171),
     L = n(379357),
-    D = n(264165),
-    R = n(548816),
+    R = n(264165),
+    D = n(548816),
     M = n(266454),
     k = n(925329),
     U = n(102172),
@@ -324,7 +324,7 @@ let eO = (e) => {
         })(e, ["children", "className", "flat"]);
     return (0, i.jsx)(f.tEY, {
         children: (0, i.jsx)(
-            R.Z,
+            D.Z,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -377,7 +377,7 @@ let eO = (e) => {
 (eO.Header = eE),
     (eO.Body = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)(R.Z, {
+        return (0, i.jsx)(D.Z, {
             inset: !0,
             padded: !1,
             className: ea.body,
@@ -634,7 +634,7 @@ let eO = (e) => {
             { name: c, details: u, assets: d, application_id: p } = r;
         if (null != d && (0, y.Z)(r)) {
             var h;
-            t = (0, i.jsx)(D.Z, {
+            t = (0, i.jsx)(R.Z, {
                 className: ea.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, i.jsxs)(f.P3F, {

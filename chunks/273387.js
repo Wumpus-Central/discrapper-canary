@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -58,7 +58,7 @@ let u = Object.freeze({}),
     g = {},
     m = {},
     b = {};
-class y extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     isFetching() {
         return p;
     }
@@ -86,8 +86,8 @@ class y extends (r = i.ZP.Store) {
         return b[e];
     }
 }
-o(y, "displayName", "GuildDirectoryStore");
-let _ = new y(l.Z, {
+o(_, "displayName", "GuildDirectoryStore");
+let y = new _(l.Z, {
     GUILD_DIRECTORY_FETCH_START: function () {
         p = !0;
     },
@@ -140,23 +140,23 @@ let _ = new y(l.Z, {
     },
     GUILD_DIRECTORY_ENTRY_UPDATE: function (e) {
         var t, n, r, i, l, o, u, p, f;
-        let { channelId: b, entry: y } = e,
-            _ = (0, a.MQ)(y),
-            O = null == (t = h[b]) ? void 0 : t[_.guildId];
-        h[b] = d(c({}, h[b]), { [_.guildId]: c({}, O, _) });
-        let j = null != (i = null == O ? void 0 : O.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
-            x = null != (l = _.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
-            v = Object.assign({}, null == (n = g[b]) ? void 0 : n[j]);
-        null != O && j !== x && delete v[_.guildId],
+        let { channelId: b, entry: _ } = e,
+            y = (0, a.MQ)(_),
+            x = null == (t = h[b]) ? void 0 : t[y.guildId];
+        h[b] = d(c({}, h[b]), { [y.guildId]: c({}, x, y) });
+        let v = null != (i = null == x ? void 0 : x.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
+            j = null != (l = y.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
+            O = Object.assign({}, null == (n = g[b]) ? void 0 : n[v]);
+        null != x && v !== j && delete O[y.guildId],
             (g[b] = d(c({}, g[b]), {
-                [j]: v,
-                [x]: d(c({}, null == (r = g[b]) ? void 0 : r[x]), { [_.guildId]: c({}, O, _) }),
+                [v]: O,
+                [j]: d(c({}, null == (r = g[b]) ? void 0 : r[j]), { [y.guildId]: c({}, x, y) }),
             })),
-            x !== j &&
+            j !== v &&
                 null != m[b] &&
                 (m[b] = d(c({}, m[b]), {
-                    [j]: (null == (o = m[b]) ? void 0 : o[j]) > 0 ? (null == (u = m[b]) ? void 0 : u[j]) - 1 : 0,
-                    [x]: (null != (f = null == (p = m[b]) ? void 0 : p[x]) ? f : 0) + 1,
+                    [v]: (null == (o = m[b]) ? void 0 : o[v]) > 0 ? (null == (u = m[b]) ? void 0 : u[v]) - 1 : 0,
+                    [j]: (null != (f = null == (p = m[b]) ? void 0 : p[j]) ? f : 0) + 1,
                 }));
     },
     GUILD_DIRECTORY_CATEGORY_SELECT: function (e) {

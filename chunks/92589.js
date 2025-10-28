@@ -3,9 +3,9 @@ var r = n(951288);
 n(647438);
 var l = n(907331),
     i = n(481060),
-    a = n(168020),
+    o = n(168020),
     s = n(794324),
-    o = n(859788),
+    a = n(859788),
     c = n(388032),
     u = n(449177);
 function d(e) {
@@ -54,7 +54,7 @@ let g = (e) => {
                 className: u.banner,
                 children:
                     null != p &&
-                    (0, r.jsx)(o.Z, {
+                    (0, r.jsx)(a.Z, {
                         bannerStatic: p,
                         bannerAnimated: f,
                     }),
@@ -65,7 +65,7 @@ let g = (e) => {
                     className: u.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(a.R, {
+                            ? (0, r.jsx)(o.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })

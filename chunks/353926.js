@@ -85,11 +85,11 @@ let O = "scientist:triggered",
     N = {},
     R = new Map(),
     P = {},
-    D = {
+    w = {
         rawUserExperiments: [],
         rawGuildExperiments: [],
     },
-    w = {},
+    D = {},
     L = {},
     x = {},
     M = {},
@@ -190,7 +190,7 @@ function Q(e) {
                 assignment_fingerprint: n.fingerprint,
                 current_session_id: d.default.getSessionId(),
                 current_fingerprint: d.default.getFingerprint(),
-                current_source: D.source,
+                current_source: w.source,
             });
             _.default.track(m.rMx.EXPERIMENT_USER_TRIGGERED_IGNORED, t, {
                 flush: !1,
@@ -225,7 +225,7 @@ function Q(e) {
                 assignment_fingerprint: n.fingerprint,
                 current_session_id: d.default.getSessionId(),
                 current_fingerprint: d.default.getFingerprint(),
-                current_source: D.source,
+                current_source: w.source,
             });
             _.default.track(m.rMx.EXPERIMENT_GUILD_TRIGGERED_IGNORED, e, {
                 flush: !1,
@@ -280,14 +280,14 @@ function et(e) {
     !U && "CONNECTION_OPEN" === e.type && H(e.user) && (U = !0),
         "EXPERIMENTS_FETCH_SUCCESS" === e.type &&
             C &&
-            "ready_payload" === D.source &&
+            "ready_payload" === w.source &&
             _.default.track(m.rMx.EXPERIMENT_FETCH_IGNORED, {
                 fingerprint: e.fingerprint,
-                current_snapshot_source: D.source,
-                current_snapshot_session_id: D.sessionId,
-                current_snapshot_fingerprint: D.fingerprint,
+                current_snapshot_source: w.source,
+                current_snapshot_session_id: w.sessionId,
+                current_snapshot_fingerprint: w.fingerprint,
             }),
-        (w = {}),
+        (D = {}),
         (L = {}),
         (x = {});
     let r = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === d.default.getFingerprint(),
@@ -312,7 +312,7 @@ function et(e) {
 function en(e) {
     let { rawUserExperiments: t, rawGuildExperiments: n, source: r, sessionId: i, fingerprint: a } = e,
         o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    (D = {
+    (w = {
         rawUserExperiments: t,
         rawGuildExperiments: null != n ? n : [],
         source: r,
@@ -321,7 +321,7 @@ function en(e) {
     }),
         t.forEach((e) => {
             let [t, n, s, l, c, u, d, f, _, p, h] = e;
-            w[t] = {
+            D[t] = {
                 type: "user",
                 revision: n,
                 population: c,
@@ -466,10 +466,10 @@ function es(e) {
         (!U && H(n) && (U = !0),
         (C = t.hasLoadedExperiments),
         (N = t.trackedExposureExperiments),
-        (w = t.loadedUserExperiments),
+        (D = t.loadedUserExperiments),
         (M = t.userExperimentOverrides),
         (k = t.guildExperimentOverrides),
-        (D = y(E({}, D), {
+        (w = y(E({}, w), {
             source: t.assignmentSource,
             sessionId: t.assignmentSessionId,
             fingerprint: t.assignmentFingerprint,
@@ -489,8 +489,8 @@ function ec(e) {
     let { isSwitchingAccount: t } = e;
     s.K.remove(O),
         t || (s.K.remove(v), s.K.remove(I), s.K.remove(T), (M = {}), (k = {})),
-        (w = {}),
-        (D = y(E({}, D), { rawUserExperiments: [] })),
+        (D = {}),
+        (w = y(E({}, w), { rawUserExperiments: [] })),
         (N = {}),
         (C = !1);
 }
@@ -640,16 +640,16 @@ class eb extends f.Z {
         let e = this.readSnapshot(eb.LATEST_SNAPSHOT_VERSION);
         null != e &&
             ("loadedUserExperiments" in e
-                ? ((w = e.loadedUserExperiments),
+                ? ((D = e.loadedUserExperiments),
                   (L = eo(e.loadedGuildExperiments)),
-                  Object.values(w).forEach((e) => (e.loadedFromCache = !0)),
+                  Object.values(D).forEach((e) => (e.loadedFromCache = !0)),
                   Object.values(L).forEach((e) => (e.loadedFromCache = !0)))
                 : en(e, !0));
     }
     takeSnapshot() {
         return {
             version: eb.LATEST_SNAPSHOT_VERSION,
-            data: E({}, D),
+            data: E({}, w),
         };
     }
     get hasLoadedExperiments() {
@@ -664,7 +664,7 @@ class eb extends f.Z {
             if (null != t) return t;
         }
         let t = B(e);
-        return w["".concat(t)];
+        return D["".concat(t)];
     }
     getGuildExperimentDescriptor(e, t) {
         let n = null != t ? t : m.lds,
@@ -684,13 +684,13 @@ class eb extends f.Z {
         return null != n ? n.bucket : h.NZ.NOT_ELIGIBLE;
     }
     getAllUserExperimentDescriptors() {
-        return w;
+        return D;
     }
     getGuildExperiments() {
         return L;
     }
     getLoadedUserExperiment(e) {
-        return w[B(e)];
+        return D[B(e)];
     }
     getLoadedGuildExperiment(e) {
         return L[B(e)];
@@ -723,9 +723,9 @@ class eb extends f.Z {
         for (let n in (Object.keys(P).forEach((e) => {
             t[B("".concat(e))] = e;
         }),
-        w)) {
+        D)) {
             let r = t[n];
-            null != r && (e[r] = w[n].bucket);
+            null != r && (e[r] = D[n].bucket);
         }
         for (let t in x) {
             let n = x[t];
@@ -739,14 +739,14 @@ class eb extends f.Z {
         return {
             hasLoadedExperiments: C,
             trackedExposureExperiments: N,
-            loadedUserExperiments: w,
+            loadedUserExperiments: D,
             loadedGuildExperiments: e,
             userExperimentOverrides: M,
             guildExperimentOverrides: k,
             cookieOverrides: (0, c._S)(),
-            assignmentSource: D.source,
-            assignmentSessionId: D.sessionId,
-            assignmentFingerprint: D.fingerprint,
+            assignmentSource: w.source,
+            assignmentSessionId: w.sessionId,
+            assignmentFingerprint: w.fingerprint,
         };
     }
     hasExperimentTrackedExposure(e, t, n, r) {

@@ -11,7 +11,7 @@ n.d(t, {
     ji: () => u,
     lG: () => k,
     ls: () => E,
-    pL: () => w,
+    pL: () => D,
     wK: () => f,
 }),
     n(980754),
@@ -75,7 +75,7 @@ class c extends o.C {
                     a.heardSoundFrecency = P.internalBinaryRead(e, e.uint32(), n, a.heardSoundFrecency);
                     break;
                 case 11:
-                    a.playedSoundFrecency = w.internalBinaryRead(e, e.uint32(), n, a.playedSoundFrecency);
+                    a.playedSoundFrecency = D.internalBinaryRead(e, e.uint32(), n, a.playedSoundFrecency);
                     break;
                 case 12:
                     a.guildAndChannelFrecency = k.internalBinaryRead(e, e.uint32(), n, a.guildAndChannelFrecency);
@@ -114,7 +114,7 @@ class c extends o.C {
             e.heardSoundFrecency &&
                 P.internalBinaryWrite(e.heardSoundFrecency, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             e.playedSoundFrecency &&
-                w.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
+                D.internalBinaryWrite(e.playedSoundFrecency, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
             e.guildAndChannelFrecency &&
                 k.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.emojiReactionFrecency &&
@@ -188,7 +188,7 @@ class c extends o.C {
                 no: 11,
                 name: "played_sound_frecency",
                 kind: "message",
-                T: () => w,
+                T: () => D,
             },
             {
                 no: 12,
@@ -952,7 +952,7 @@ class R extends o.C {
     }
 }
 let P = new R();
-class D extends o.C {
+class w extends o.C {
     create(e) {
         let t = { playedSounds: {} };
         return (
@@ -1028,7 +1028,7 @@ class D extends o.C {
         ]);
     }
 }
-let w = new D();
+let D = new w();
 class L extends o.C {
     create(e) {
         let t = { applications: {} };

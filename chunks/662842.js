@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -31,13 +31,13 @@ var r = n(951288),
     Z = n(981631),
     w = n(765305),
     L = n(388032),
-    D = n(454703);
-function R(e) {
+    R = n(454703);
+function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, b.y)(t.id),
         d = (0, E.k5)(t.id),
         j = (0, s.e7)([T.Z], () => T.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
-        { isStageNoticeHidden: R, isEventNoticeHidden: k } = (0, s.cj)(
+        { isStageNoticeHidden: D, isEventNoticeHidden: k } = (0, s.cj)(
             [g.Z],
             () => ({
                 isStageNoticeHidden: g.Z.isLiveChannelNoticeHidden({ stageId: null == j ? void 0 : j.id }),
@@ -94,7 +94,7 @@ function R(e) {
                                 ? (0, r.jsx)(e, {
                                       size: "xs",
                                       color: "currentColor",
-                                      className: D.locationIcon,
+                                      className: R.locationIcon,
                                   })
                                 : null,
                         canListenIn: l,
@@ -119,7 +119,7 @@ function R(e) {
                                     color: "currentColor",
                                     width: 16,
                                     height: 16,
-                                    className: D.locationIcon,
+                                    className: R.locationIcon,
                                 }),
                                 canListenIn: l,
                                 buttonText: e,
@@ -129,19 +129,19 @@ function R(e) {
                                     u < 1
                                         ? null
                                         : (0, r.jsxs)("div", {
-                                              className: D.pill,
+                                              className: R.pill,
                                               children: [
                                                   (0, r.jsx)(c.VWR, {
                                                       size: "custom",
                                                       color: "currentColor",
                                                       width: 12,
                                                       height: 12,
-                                                      className: D.pillIcon,
+                                                      className: R.pillIcon,
                                                   }),
                                                   (0, r.jsx)(c.Text, {
                                                       variant: "text-xs/medium",
                                                       color: "header-secondary",
-                                                      className: D.pillLabel,
+                                                      className: R.pillLabel,
                                                       children: u,
                                                   }),
                                               ],
@@ -164,7 +164,7 @@ function R(e) {
                                 color: "currentColor",
                                 width: 16,
                                 height: 16,
-                                className: D.locationIcon,
+                                className: R.locationIcon,
                             }),
                             canListenIn: l,
                             buttonText: e,
@@ -174,19 +174,19 @@ function R(e) {
                                 u < 1
                                     ? null
                                     : (0, r.jsxs)("div", {
-                                          className: D.pill,
+                                          className: R.pill,
                                           children: [
                                               (0, r.jsx)(c.VWR, {
                                                   size: "custom",
                                                   color: "currentColor",
                                                   width: 12,
                                                   height: 12,
-                                                  className: D.pillIcon,
+                                                  className: R.pillIcon,
                                               }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: "text-xs/medium",
                                                   color: "header-secondary",
-                                                  className: D.pillLabel,
+                                                  className: R.pillLabel,
                                                   children: u,
                                               }),
                                           ],
@@ -206,7 +206,7 @@ function R(e) {
                             color: "currentColor",
                             width: 16,
                             height: 16,
-                            className: D.locationIcon,
+                            className: R.locationIcon,
                         }),
                         canListenIn: !1,
                         buttonText: L.intl.string(L.t.iW6Xuo),
@@ -216,19 +216,19 @@ function R(e) {
                             n < 1
                                 ? null
                                 : (0, r.jsxs)("div", {
-                                      className: D.pill,
+                                      className: R.pill,
                                       children: [
                                           (0, r.jsx)(c.r7p, {
                                               size: "custom",
                                               color: "currentColor",
                                               width: 12,
                                               height: 12,
-                                              className: D.pillIcon,
+                                              className: R.pillIcon,
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               variant: "text-xs/medium",
                                               color: "header-secondary",
-                                              className: D.pillLabel,
+                                              className: R.pillLabel,
                                               children: n,
                                           }),
                                       ],
@@ -246,7 +246,7 @@ function R(e) {
                                 ? (0, r.jsx)(e, {
                                       size: "xs",
                                       color: "currentColor",
-                                      className: D.locationIcon,
+                                      className: R.locationIcon,
                                   })
                                 : null,
                         canListenIn: l,
@@ -257,19 +257,19 @@ function R(e) {
                             n < 1
                                 ? null
                                 : (0, r.jsxs)("div", {
-                                      className: D.pill,
+                                      className: R.pill,
                                       children: [
                                           (0, r.jsx)(c.r7p, {
                                               size: "custom",
                                               color: "currentColor",
                                               width: 12,
                                               height: 12,
-                                              className: D.pillIcon,
+                                              className: R.pillIcon,
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               variant: "text-xs/medium",
                                               color: "header-secondary",
-                                              className: D.pillLabel,
+                                              className: R.pillLabel,
                                               children: n,
                                           }),
                                       ],
@@ -287,30 +287,30 @@ function R(e) {
                 speakers: G,
                 listenerCount: B,
                 isEventNoticeHidden: k,
-                isStageNoticeHidden: R,
+                isStageNoticeHidden: D,
                 isStudyRoomNotice: n,
             }),
-        [d, j, l, H, V, z, G, B, k, R, n],
+        [d, j, l, H, V, z, G, B, k, D, n],
     );
     return null == Y
         ? null
         : (0, r.jsxs)("div", {
-              className: D.container,
+              className: R.container,
               children: [
                   null != ee
                       ? (0, r.jsx)(c.P3F, {
                             onClick: ee,
-                            className: D.close,
+                            className: R.close,
                             "aria-label": L.intl.string(L.t.WAI6xu),
                             children: (0, r.jsx)(c.Dio, {
                                 size: "md",
                                 color: "currentColor",
-                                className: D.closeIcon,
+                                className: R.closeIcon,
                             }),
                         })
                       : null,
                   (0, r.jsxs)("div", {
-                      className: D.header,
+                      className: R.header,
                       children: [
                           (0, r.jsx)(A.Z, {
                               color: o.Z.unsafe_rawColors.GREEN_230.css,
@@ -326,7 +326,7 @@ function R(e) {
                   }),
                   (X.length > 0 || null != $) &&
                       (0, r.jsxs)("div", {
-                          className: D.participants,
+                          className: R.participants,
                           children: [
                               X.map((e) =>
                                   (0, r.jsx)(
@@ -344,17 +344,17 @@ function R(e) {
                   (0, r.jsx)(c.Text, {
                       variant: "text-md/medium",
                       color: "header-primary",
-                      className: a()(D.title, D.live),
+                      className: a()(R.title, R.live),
                       children: W,
                   }),
                   (0, r.jsxs)("div", {
-                      className: D.locationContainer,
+                      className: R.locationContainer,
                       children: [
                           K,
                           (0, r.jsx)(c.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              className: D.location,
+                              className: R.location,
                               children: q,
                           }),
                       ],
@@ -362,7 +362,7 @@ function R(e) {
                   Q || 1 === Y
                       ? (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: D.button,
+                            className: R.button,
                             children: (0, r.jsx)(c.Button, {
                                 variant: "active",
                                 size: "sm",
@@ -428,7 +428,7 @@ function M(e) {
                         src: t.getAvatarURL(n, 24),
                         "aria-label": t.username,
                         size: c.EFr.SIZE_24,
-                        className: D.avatar,
+                        className: R.avatar,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))

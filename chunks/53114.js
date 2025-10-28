@@ -460,8 +460,8 @@ class y extends o.Z {
                 pliCount: N,
                 qpSum: R,
                 pauseCount: P,
-                freezeCount: D,
-                totalPausesDuration: w,
+                freezeCount: w,
+                totalPausesDuration: D,
                 totalFreezesDuration: L,
                 totalFramesDuration: x,
                 keyframes: M,
@@ -481,14 +481,14 @@ class y extends o.Z {
             z = (null != U ? U : 0) - (null != (t = e.cryptorFailureBeforeSuccessCount) ? t : 0);
         return (
             e instanceof _.nt
-                ? ((b.sender_freeze_count = D),
+                ? ((b.sender_freeze_count = w),
                   (b.sender_total_freezes_duration = L),
                   (b.sender_total_frames_duration = x))
-                : ((b.receiver_freeze_count = D),
+                : ((b.receiver_freeze_count = w),
                   (b.receiver_total_freezes_duration = L),
                   (b.receiver_total_frames_duration = x),
                   (b.receiver_pause_count = P),
-                  (b.receiver_total_pauses_duration = w)),
+                  (b.receiver_total_pauses_duration = D)),
             g(h({}, b), {
                 avg_bitrate: i > 0 ? Math.round(((null != y ? y : 0) * 8) / i) : 0,
                 avg_fps: i > 0 ? Math.round((null != I ? I : 0) / i) : 0,

@@ -39,8 +39,8 @@ let T = !1,
     N = [],
     R = [],
     P = !1,
-    D = !0,
-    w = Object.freeze([]),
+    w = !0,
+    D = Object.freeze([]),
     L = Object.freeze([]),
     x = [],
     M = [];
@@ -75,11 +75,11 @@ function G(e) {
     }
 }
 function B() {
-    (D = !0), (A = S), Z();
+    (w = !0), (A = S), Z();
 }
 function Z() {
     var e;
-    if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (P = g.Z.isAFK()), D)) S = A;
+    if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (P = g.Z.isAFK()), w)) S = A;
     else if (T) S = v.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
@@ -87,15 +87,15 @@ function Z() {
     }
     S === v.Skl.ONLINE && C > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = D || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
+        n = w || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
     a()(N, n) || ((N = n), (R = k(n)), (t = !0));
     let r = O.Z.getRemoteActivities();
-    w !== r && ((w = r), (t = !0));
+    D !== r && ((D = r), (t = !0));
     let i = O.Z.getHiddenActivities();
     L !== i && (L = i),
         t &&
             (M = k(
-                (x = s()([...N, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
+                (x = s()([...N, ...D.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
                     .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
                     .value()),
             ));
@@ -107,7 +107,7 @@ function V() {
     return (T = !1), Z();
 }
 function H() {
-    (D = !1), (A = v.Skl.UNKNOWN), Z(), y.Z.setCurrentUserOnConnectionOpen(S, x);
+    (w = !1), (A = v.Skl.UNKNOWN), Z(), y.Z.setCurrentUserOnConnectionOpen(S, x);
 }
 function Y() {
     H();

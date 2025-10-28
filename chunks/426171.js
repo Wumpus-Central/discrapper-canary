@@ -11,9 +11,9 @@ n.d(t, {
 var r = n(647438),
     l = n(843611),
     i = n(442837),
-    a = n(607070),
+    o = n(607070),
     s = n(100527),
-    o = n(906732),
+    a = n(906732),
     c = n(597688),
     u = n(328347),
     d = n(429368),
@@ -38,8 +38,8 @@ let _ = "".concat("#").concat("itemSkuId", "="),
         let e = (0, f.R)(),
             t = r.useRef(null),
             n = (0, l.TH)(),
-            a = n.pathname === h.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : s.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: _ } = (0, o.ZP)(a),
+            o = n.pathname === h.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : s.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: _ } = (0, a.ZP)(o),
             b = (0, g.Z)();
         r.useEffect(() => {
             let e = m.exec(n.hash);
@@ -54,10 +54,10 @@ let _ = "".concat("#").concat("itemSkuId", "="),
                     ((e) => {
                         let { productSkuId: t, analyticsLocations: n, analyticsSource: r, tab: l } = e,
                             i = c.Z.getProduct(t),
-                            a = c.Z.getCategoryForProduct(t);
-                        if (null != i && null != a) {
+                            o = c.Z.getCategoryForProduct(t);
+                        if (null != i && null != o) {
                             let e = i,
-                                o = (0, C.oQ)({ product: i }),
+                                a = (0, C.oQ)({ product: i }),
                                 u = document.getElementById("shop-item-".concat(e.skuId));
                             if (
                                 (u !== document.activeElement && (null == u || u.focus()),
@@ -73,36 +73,36 @@ let _ = "".concat("#").concat("itemSkuId", "="),
                             }
                             (0, p.T)({
                                 product: e,
-                                category: a,
+                                category: o,
                                 analyticsSource: r,
                                 analyticsLocations: n,
                                 tab: l,
-                                shouldCheckoutWithOrbs: o,
+                                shouldCheckoutWithOrbs: a,
                             });
                         }
                     })({
                         productSkuId: n,
                         analyticsLocations: _,
-                        analyticsSource: a,
+                        analyticsSource: o,
                         tab: b,
                     });
                 }, 250);
                 return () => clearTimeout(e);
             }
-        }, [_, a, e, v, b]);
+        }, [_, o, e, v, b]);
     },
     x = (e) => {
         let t = r.useRef({}),
-            n = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+            n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
             l = (0, i.e7)([c.Z], () => c.Z.isFetchingCategories),
-            [s, o] = r.useState(null),
+            [s, a] = r.useState(null),
             u = r.useCallback((e, n) => {
                 t.current[e] = n;
             }, []),
             d = r.useCallback(
                 (r) => {
                     l
-                        ? o(r)
+                        ? a(r)
                         : setTimeout(() => {
                               let l = t.current[r];
                               null != l &&
@@ -115,12 +115,12 @@ let _ = "".concat("#").concat("itemSkuId", "="),
                                       }));
                           }, 100);
                 },
-                [e, n, l, o],
+                [e, n, l, a],
             );
         return (
             r.useEffect(() => {
-                l || null == s || (d(s), o(null));
-            }, [l, d, s, o]),
+                l || null == s || (d(s), a(null));
+            }, [l, d, s, a]),
             {
                 setCategoryRef: u,
                 handleScrollToCategory: d,

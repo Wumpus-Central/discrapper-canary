@@ -1,12 +1,12 @@
-n.d(e, { ZP: () => A }), n(415506), n(539854), n(388685);
+n.d(e, { ZP: () => S }), n(415506), n(539854), n(388685);
 var i = n(951288),
     l = n(647438),
     u = n(442837);
 n(481060);
 var r = n(292556),
     s = n(734934),
-    a = n(509613),
-    o = n(460181),
+    o = n(509613),
+    a = n(460181),
     c = n(292959),
     E = n(313789),
     d = n(388032);
@@ -112,12 +112,12 @@ let T = l.createContext(void 0),
             sound: "reconnect",
         },
     ].map((t) => ({
-        node: (0, a.qs)("".concat(E.n.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
+        node: (0, o.qs)("".concat(E.n.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
             useTitle: t.useLabel,
             useSubtitle: () =>
                 d.intl.format(d.t.OOiGCM, {
                     onClick: () => {
-                        (0, o.GN)(t.sound);
+                        (0, a.GN)(t.sound);
                     },
                 }),
             useValue: () => {
@@ -139,18 +139,18 @@ let T = l.createContext(void 0),
             useDisabledMessage: t.useDisabledMessage,
         }),
     })),
-    O = (0, a.qs)(E.n.SELECTED_CHANNEL_NOTIFICATIONS, {
+    O = (0, o.qs)(E.n.SELECTED_CHANNEL_NOTIFICATIONS, {
         useTitle: () => d.intl.string(d.t.TzjwV9),
         useValue: () => (0, u.e7)([c.Z], () => c.Z.getNotifyMessagesInSelectedChannel()),
         setValue: (t) => r.default.setNotifyMessagesInSelectedChannel(t),
     }),
-    S = (0, a.qs)(E.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
+    y = (0, o.qs)(E.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
         useTitle: () => d.intl.string(d.t["2ZhCOd"]),
         useSubtitle: () => d.intl.string(d.t["+B0XLE"]),
         useValue: () => (0, u.e7)([c.Z], () => c.Z.getDisableAllSounds()),
         setValue: (t) => r.default.toggleDisableAllSounds(t),
     }),
-    A = (0, a.$l)(E.n.NOTIFICATION_SOUNDS_LIST, {
+    S = (0, o.$l)(E.n.NOTIFICATION_SOUNDS_LIST, {
         collapseAfter: 4,
         useCollapsibleTitle: (t, e) =>
             t
@@ -163,7 +163,7 @@ let T = l.createContext(void 0),
                     e.stopPropagation(),
                         e.preventDefault(),
                         null != n.current && n.current.stop(),
-                        (n.current = (0, o.GN)(t));
+                        (n.current = (0, a.GN)(t));
                 }, []);
             l.useEffect(
                 () => () => {
@@ -178,5 +178,5 @@ let T = l.createContext(void 0),
                 children: e,
             });
         },
-        buildLayout: () => [I[0].node, O, I[1].node, S, ...I.slice(2).map((t) => t.node)],
+        buildLayout: () => [I[0].node, O, I[1].node, y, ...I.slice(2).map((t) => t.node)],
     });

@@ -115,8 +115,8 @@ async function h(e, t) {
             defaultSortOrder: N,
             defaultForumLayout: R,
             defaultTagSetting: P,
-            iconEmoji: D,
-            themeColor: w,
+            iconEmoji: w,
+            themeColor: D,
         } = t,
         L = s.Z.getChannel(e);
     return (
@@ -167,15 +167,15 @@ async function h(e, t) {
                     default_forum_layout: R,
                     default_tag_setting: P,
                     icon_emoji:
-                        null != D
+                        null != w
                             ? {
-                                  id: D.id,
-                                  name: D.name,
+                                  id: w.id,
+                                  name: w.name,
                               }
-                            : null === D
+                            : null === w
                               ? null
                               : void 0,
-                    theme_color: w,
+                    theme_color: D,
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1,

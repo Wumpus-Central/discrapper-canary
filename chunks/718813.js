@@ -122,8 +122,8 @@ let N = (0, m.Un)({
         [O.S9g.CHECKPOINT]: () => (0, i.jsx)(P, {}),
     },
     L = "SHOWN",
-    D = "HIDDEN",
-    R = {
+    R = "HIDDEN",
+    D = {
         friction: 10,
         tension: 100,
     };
@@ -143,8 +143,8 @@ class k extends (r = l.PureComponent) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === L && n === D) return this.animateIn();
-            if (t === D && n === L) return this.animateUnder();
+            if (t === L && n === R) return this.animateIn();
+            if (t === R && n === L) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -157,7 +157,7 @@ class k extends (r = l.PureComponent) {
     animateIn(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        o.Z.parallel([o.Z.spring(t, S({ toValue: 1 }, R)), o.Z.spring(n, S({ toValue: 1 }, R))]).start(() =>
+        o.Z.parallel([o.Z.spring(t, S({ toValue: 1 }, D)), o.Z.spring(n, S({ toValue: 1 }, D))]).start(() =>
             this.animateComplete(e),
         );
     }
@@ -165,14 +165,14 @@ class k extends (r = l.PureComponent) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
         E.S.dispatch(O.CkL.LAYER_POP_START),
-            o.Z.parallel([o.Z.spring(t, S({ toValue: 0 }, R)), o.Z.spring(n, S({ toValue: 1.1 }, R))]).start(() => {
+            o.Z.parallel([o.Z.spring(t, S({ toValue: 0 }, D)), o.Z.spring(n, S({ toValue: 1.1 }, D))]).start(() => {
                 e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
         c.ZP.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        o.Z.parallel([o.Z.spring(e, S({ toValue: 0 }, R)), o.Z.spring(t, S({ toValue: 0.93 }, R))]).start(() =>
+        o.Z.parallel([o.Z.spring(e, S({ toValue: 0 }, D)), o.Z.spring(t, S({ toValue: 0.93 }, D))]).start(() =>
             this.animateComplete(),
         );
     }
@@ -204,7 +204,7 @@ class k extends (r = l.PureComponent) {
                 }
                 return i;
             })(t, ["name", "mode", "children", "baseLayer"]),
-            u = r === D,
+            u = r === R,
             p = e || u ? this.getAnimatedStyle() : null,
             f = !u && !a,
             h = (0, i.jsx)(
@@ -238,7 +238,7 @@ class k extends (r = l.PureComponent) {
                             className: s()(y.layer, {
                                 [y.baseLayer]: a,
                                 [y.animating]: e,
-                                "stop-animations": r === D,
+                                "stop-animations": r === R,
                             }),
                             style: p,
                         },
@@ -267,7 +267,7 @@ class k extends (r = l.PureComponent) {
         super(e), C(this, "containerRef", l.createRef());
         let t = 1,
             n = 1;
-        e.mode === D && ((t = 0.93), (n = 0)),
+        e.mode === R && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
                 scale: new o.Z.Value(t),
@@ -293,7 +293,7 @@ class U extends l.PureComponent {
                 (0, i.jsx)(
                     k,
                     {
-                        mode: 0 !== r || n ? D : L,
+                        mode: 0 !== r || n ? R : L,
                         baseLayer: !0,
                         children: e,
                     },
@@ -312,7 +312,7 @@ class U extends l.PureComponent {
                 k,
                 {
                     name: "string" == typeof e ? e : void 0,
-                    mode: t === n - 1 ? L : D,
+                    mode: t === n - 1 ? L : R,
                     children: [(0, i.jsx)(M, {}), r],
                 },
                 "layer-".concat(t),

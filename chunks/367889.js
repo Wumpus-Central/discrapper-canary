@@ -1,24 +1,24 @@
-n.d(e, { F: () => S });
+n.d(e, { F: () => y });
 var i = n(951288),
     l = n(657707),
     u = n(793030),
     r = n(692547),
     s = n(160913),
-    a = n(813732),
-    o = n(509613),
+    o = n(813732),
+    a = n(509613),
     c = n(28682),
     E = n(313789),
     d = n(726985),
     T = n(388032);
-let I = (0, o.x1)(E.n.SUBSCRIPTIONS_PANE, {
+let I = (0, a.x1)(E.n.SUBSCRIPTIONS_PANE, {
         buildLayout: () => [],
-        render: a.Z,
+        render: o.Z,
     }),
-    O = (0, o.wf)(E.n.SUBSCRIPTIONS_PANEL, {
+    O = (0, a.wf)(E.n.SUBSCRIPTIONS_PANEL, {
         useTitle: () => T.intl.string(T.t.trSpHX),
         buildLayout: () => [I],
     }),
-    S = (0, o.m7)(E.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
+    y = (0, a.m7)(E.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
         icon: l.XOf,
         useTitle: () => T.intl.string(T.t.trSpHX),
         legacySearchKey: d.s6.SUBSCRIPTIONS,

@@ -97,7 +97,7 @@ let L = function (e) {
         { analyticsLocations: n } = (0, d.ZP)(u.Z.FRIENDS_LIST),
         { rows: s, section: A } = (0, l.cj)([m.ZP], () => m.ZP.getState()),
         L = (0, l.e7)([g.Z], () => g.Z.isFocused()),
-        { relationshipCount: D, hasBlockedOrIgnored: R } = (0, l.cj)([h.Z], () => ({
+        { relationshipCount: R, hasBlockedOrIgnored: D } = (0, l.cj)([h.Z], () => ({
             relationshipCount: h.Z.getRelationshipCount(),
             hasBlockedOrIgnored: h.Z.getBlockedOrIgnoredIDs().length > 0,
         })),
@@ -265,7 +265,7 @@ let L = function (e) {
         children: (0, r.jsxs)(c.Z, {
             section: S.jXE.FRIENDS_LIST,
             children: [
-                R && (0, r.jsx)(I.R, {}),
+                D && (0, r.jsx)(I.R, {}),
                 (0, r.jsx)("div", {
                     className: N.searchBar,
                     children: (0, r.jsx)(a.E1j, {
@@ -279,7 +279,7 @@ let L = function (e) {
                     renderRow: U,
                     renderSection: Q,
                     sectionFilter: A,
-                    isVirtualizedList: D >= C.nG,
+                    isVirtualizedList: R >= C.nG,
                     hasSearchQuery: J,
                     footer:
                         H && !X

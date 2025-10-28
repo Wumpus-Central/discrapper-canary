@@ -1,8 +1,8 @@
 n.d(t, {
     Ah: () => O,
-    CB: () => D,
+    CB: () => w,
     aU: () => C,
-    cp: () => w,
+    cp: () => D,
     eL: () => R,
     vg: () => P,
     zy: () => N,
@@ -206,7 +206,7 @@ function P(e, t) {
         i = S(e);
     return null == n[0] && null == i[0] && null != r[0];
 }
-function D(e, t) {
+function w(e, t) {
     var n;
     let r = u.Z.getChannel(t);
     if (null == r) return !1;
@@ -221,7 +221,7 @@ function D(e, t) {
         (0 === i.attachments.length || null == i.attachments.find((e) => E(e) || b(e)))
     );
 }
-function w(e) {
+function D(e) {
     return e.reduce(
         (e, t) => ({
             containsVideo: e.containsVideo || t.isVideo,

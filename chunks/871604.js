@@ -80,11 +80,11 @@ function R(e) {
             return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
         P = (0, a.e7)([h.Z, p.Z], () => p.Z.getChannel(h.Z.getChannelId())),
-        D = (0, s.Z)(P),
-        w = t.id,
+        w = (0, s.Z)(P),
+        D = t.id,
         L = i.useCallback(() => {
             if (null != R)
-                if (D) {
+                if (w) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
                         t = p.Z.getChannel(e),
                         r =
@@ -92,16 +92,16 @@ function R(e) {
                                 ? f.Ie.SIDEBAR
                                 : f.Ie.NORMAL;
                     l.__(c._b.TEXT, r, { applicationId: R.id }),
-                        (0, o.Mr3)((0, O.z)(w, null == P ? void 0 : P.guild_id)),
+                        (0, o.Mr3)((0, O.z)(D, null == P ? void 0 : P.guild_id)),
                         null == n || n(),
                         m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
                 } else (0, b.L)(A({ applicationId: R.id }, R));
-        }, [R, D, w, null == P ? void 0 : P.guild_id, n]),
-        x = D ? T.intl.string(T.t["Cia+A8"]) : T.intl.string(T.t.NgXl3C);
+        }, [R, w, D, null == P ? void 0 : P.guild_id, n]),
+        x = w ? T.intl.string(T.t["Cia+A8"]) : T.intl.string(T.t.NgXl3C);
     if (null == R || !(0, d.Eb)(R)) return null;
     let { customInstallUrl: M } = R,
         k = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
-        j = D ? void 0 : k;
+        j = w ? void 0 : k;
     return g.wS
         ? (0, r.jsx)(o.yRy, {
               targetElementRef: N,

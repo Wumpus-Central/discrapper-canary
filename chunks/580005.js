@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => v,
-    Z: () => D,
+    Z: () => w,
 }),
     n(35282),
     n(539854);
@@ -179,7 +179,7 @@ class P extends (r = o.ZP.PersistedStore) {
     }
 }
 m(P, "displayName", "FrecencyStore"), m(P, "persistKey", "FrecencyStore");
-let D = new P(s.Z, {
+let w = new P(s.Z, {
     CHANNEL_SELECT: A,
     VOICE_CHANNEL_SELECT: A,
     USER_SETTINGS_PROTO_UPDATE: C,

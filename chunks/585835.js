@@ -28,8 +28,8 @@ function O(e) {
             iconWrapperClassName: S,
             details: E,
             integration: I,
-            buttonText: w,
-            buttonDisabled: P,
+            buttonText: P,
+            buttonDisabled: w,
             hasNextSection: T,
             onButtonClick: Z,
             guildId: k,
@@ -42,7 +42,7 @@ function O(e) {
         B = r.useRef(null),
         W = r.useRef(null),
         H =
-            null == w || null == Z
+            null == P || null == Z
                 ? null
                 : T
                   ? (0, i.jsxs)(d.Kqy, {
@@ -53,7 +53,7 @@ function O(e) {
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: w,
+                                children: P,
                             }),
                             T
                                 ? (0, i.jsx)(d.Fbu, {
@@ -69,9 +69,9 @@ function O(e) {
                   : (0, i.jsx)(d.Button, {
                         size: "sm",
                         buttonRef: B,
-                        disabled: P,
+                        disabled: w,
                         onClick: Z,
-                        text: w,
+                        text: P,
                     });
     r.useEffect(() => {
         var e, t;

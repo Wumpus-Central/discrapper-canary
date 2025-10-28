@@ -117,14 +117,14 @@ function P(e) {
             headerClassName: Z,
             subHeader: w,
             subHeaderExtra: L,
-            featureCards: D,
-            changeLogId: R,
+            featureCards: R,
+            changeLogId: D,
             button: M,
             body: k,
         } = e,
         { onClose: U, transitionState: G } = n,
         B = (0, f.Dt)(),
-        H = D.length % 2 == 0,
+        H = R.length % 2 == 0,
         V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         [F, z] = i.useState(Date.now()),
         [Y, W] = i.useState(0),
@@ -186,31 +186,31 @@ function P(e) {
                 if ("video" === l.type || "embed" === l.type) {
                     let [e, t] = eo();
                     b.default.track(O.rMx.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: R,
+                        change_log_id: D,
                         seconds_played: Math.round(e / 1000),
                     }),
                         b.default.track(O.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: R,
+                            change_log_id: D,
                             seconds_unmuted: Math.round(t / 1000),
                         });
                 }
             },
-            [R, l.type],
+            [D, l.type],
         ),
         i.useEffect(() => {
             null != P && (0, g.kk)(P);
             let e = Date.now();
             return (
-                b.default.track(O.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
+                b.default.track(O.rMx.CHANGE_LOG_OPENED, { change_log_id: D }),
                 () => {
                     b.default.track(O.rMx.CHANGE_LOG_CLOSED, {
-                        change_log_id: R,
+                        change_log_id: D,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
                         null != P && (0, m.Q3)(P, { dismissAction: I.L.DISMISS });
                 }
             );
-        }, [P, R]),
+        }, [P, D]),
         (0, r.jsx)(c.Y0X, {
             "data-migration-pending": !0,
             className: a()(y.root, y.largeBorderRadius, t),
@@ -243,7 +243,7 @@ function P(e) {
                                       src: l.src,
                                       poster: l.poster,
                                       onPlay: (e) => {
-                                          b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }),
+                                          b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: D }),
                                               z(Date.now()),
                                               J(!0),
                                               $(e.currentTarget.muted);
@@ -292,7 +292,7 @@ function P(e) {
                                         renderImageComponent: _.Yi,
                                         renderLinkComponent: _.iT,
                                         onPlay: () => {
-                                            b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R });
+                                            b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: D });
                                         },
                                     })
                                   : "image" === l.type
@@ -320,10 +320,10 @@ function P(e) {
                                     className: y.bodyText,
                                     children: k,
                                 }),
-                            D.length > 0 &&
+                            R.length > 0 &&
                                 (0, r.jsx)("div", {
                                     className: a()(y.featureCardGroup, { [y.wideStyle]: H }),
-                                    children: D.map((e, t) =>
+                                    children: R.map((e, t) =>
                                         (0, r.jsx)(
                                             j,
                                             S(C({}, e), { wideStyle: H }),

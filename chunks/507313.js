@@ -4,8 +4,8 @@ var i = n(509613),
     u = n(837061),
     r = n(912400),
     s = n(212473),
-    a = n(51435),
-    o = n(217123),
+    o = n(51435),
+    a = n(217123),
     c = n(202841),
     E = n(603569),
     d = n(674574),
@@ -13,5 +13,5 @@ var i = n(509613),
     I = n(388032);
 let O = (0, i.vB)(l.n.USER_SECTION, {
     useLabel: () => I.intl.string(I.t.cduTBL),
-    buildLayout: () => [u.x, o.r, c.f, E.a, r.h, T.F, a.J, d.e_, s.K],
+    buildLayout: () => [u.x, a.r, c.f, E.a, r.h, T.F, o.J, d.e_, s.K],
 });

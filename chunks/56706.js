@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(481060),
-    l = n(570140),
+    l = n(481060),
+    i = n(570140),
     o = n(750180),
     s = n(358820),
     c = n(585483),
@@ -12,17 +12,17 @@ var a = n(951288),
 function p() {
     let [e, t] = r.useState(30),
         n = r.useCallback(() => {
-            l.Z.dispatch({
+            i.Z.dispatch({
                 type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE",
                 state: o.O.LOADING,
             });
         }, []);
-    return (0, a.jsx)(i.zJl, {
+    return (0, a.jsx)(l.zJl, {
         className: u.panel,
         children: (0, a.jsxs)("div", {
             className: m.panelInner,
             children: [
-                (0, a.jsx)(i.Text, {
+                (0, a.jsx)(l.Text, {
                     className: m.panelHeader,
                     variant: "text-lg/bold",
                     children: "Voice Filters",
@@ -30,22 +30,22 @@ function p() {
                 (0, a.jsxs)("div", {
                     className: m.panelRow,
                     children: [
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children: "Set number of seconds remaining in countdown",
                         }),
-                        (0, a.jsx)(i.oil, {
+                        (0, a.jsx)(l.oil, {
                             defaultValue: 30,
                             onChange: (e) => {
                                 t(parseInt(e));
                             },
                         }),
-                        (0, a.jsx)(i.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Set",
                             onClick: () =>
-                                void l.Z.dispatch({
+                                void i.Z.dispatch({
                                     type: "VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME",
                                     timeInSeconds: e,
                                 }),
@@ -55,11 +55,11 @@ function p() {
                 (0, a.jsxs)("div", {
                     className: m.panelRow,
                     children: [
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children: "Reset to API values",
                         }),
-                        (0, a.jsx)(i.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
@@ -72,12 +72,12 @@ function p() {
                 (0, a.jsxs)("div", {
                     className: m.panelRow,
                     children: [
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children:
                                 "Pretend the native module is loading so when you close your app it'll look as if it crashed on load",
                         }),
-                        (0, a.jsx)(i.Button, {
+                        (0, a.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Pretend",
@@ -87,7 +87,7 @@ function p() {
                 }),
                 (0, a.jsx)("div", {
                     className: m.panelRow,
-                    children: (0, a.jsx)(i.Button, {
+                    children: (0, a.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
                         text: "Open voice filters panel",

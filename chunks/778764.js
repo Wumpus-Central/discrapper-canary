@@ -1,6 +1,6 @@
 n.d(t, {
     RegisterWebAuthnCredentialModal: () => R,
-    Z: () => D,
+    Z: () => w,
 }),
     n(388685),
     n(49124),
@@ -91,12 +91,12 @@ function R(e) {
         S = (0, u.Dt)(),
         [A, C] = i.useState(I.intl.string(I.t["I/sJtJ"])),
         [N, R] = i.useState(!1),
-        [P, D] = i.useState(y),
-        [w, L] = i.useState(""),
+        [P, w] = i.useState(y),
+        [D, L] = i.useState(""),
         [x, M] = i.useState(null),
         k = async () => {
             let e;
-            D(O.x.REGISTER);
+            w(O.x.REGISTER);
             let t =
                 m.isPlatformEmbedded && E.ZP.supportsFeature(v.eRX.WEBAUTHN)
                     ? E.ZP.webAuthnRegister(c)
@@ -104,10 +104,10 @@ function R(e) {
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), M(I.intl.string(I.t.xSCvBf)), D(O.x.INIT);
+                g.Z.captureException(e), M(I.intl.string(I.t.xSCvBf)), w(O.x.INIT);
                 return;
             }
-            L(e), D(O.x.NAME);
+            L(e), w(O.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
@@ -213,12 +213,12 @@ function R(e) {
                             onSubmit: (e) => {
                                 e.preventDefault(),
                                     b
-                                        .Sr(A, s, w)
+                                        .Sr(A, s, D)
                                         .then(async () => {
-                                            h ? D(O.x.SUCCESS) : (await (0, _.Yn)(!1), o());
+                                            h ? w(O.x.SUCCESS) : (await (0, _.Yn)(!1), o());
                                         })
                                         .catch(() => {
-                                            M(I.intl.string(I.t.fEptJP)), D(O.x.INIT);
+                                            M(I.intl.string(I.t.fEptJP)), w(O.x.INIT);
                                         });
                             },
                             children: [
@@ -266,7 +266,7 @@ function R(e) {
                                                 variant: "secondary",
                                                 text: I.intl.string(I.t["13/7kX"]),
                                                 onClick: () => {
-                                                    D(O.x.INIT);
+                                                    w(O.x.INIT);
                                                 },
                                             }),
                                         ],
@@ -355,7 +355,7 @@ function P(e) {
         ],
     });
 }
-function D() {
+function w() {
     let {
         credentials: e,
         hasFetchedCredentials: t,

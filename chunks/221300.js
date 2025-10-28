@@ -1,67 +1,67 @@
-r.d(t, { Z: () => d });
-var n = r(951288);
-r(647438);
-var i = r(979554),
-    l = r(481060),
-    s = r(616066),
-    a = r(22267),
-    c = r(876917),
-    o = r(688192),
-    u = r(232644);
-function d(e) {
-    let { item: t, profileOwner: r, isHighlighted: d, surface: f = o.Y.PROFILE_MODAL } = e,
-        m = t.collectiblesItem;
-    switch (m.type) {
+n.d(t, { Z: () => u });
+var r = n(951288);
+n(647438);
+var i = n(979554),
+    l = n(481060),
+    a = n(616066),
+    s = n(22267),
+    o = n(876917),
+    c = n(688192),
+    d = n(232644);
+function u(e) {
+    let { item: t, profileOwner: n, isHighlighted: u, surface: p = c.Y.PROFILE_MODAL } = e,
+        h = t.collectiblesItem;
+    switch (h.type) {
         case i.Z.PROFILE_EFFECT:
-            return (0, n.jsx)("div", {
-                className: u.profileEffectPreview,
-                children: (0, n.jsx)(c.Z, {
-                    skuId: m.skuId,
-                    isHighlighted: d,
+            return (0, r.jsx)("div", {
+                className: d.profileEffectPreview,
+                children: (0, r.jsx)(o.Z, {
+                    skuId: h.skuId,
+                    isHighlighted: u,
                     isPurchased: !1,
                     removeSetHeight: !0,
                 }),
             });
         case i.Z.AVATAR_DECORATION:
-            return (0, n.jsx)("div", {
-                className: u.avatarDecorationPreview,
-                children: (0, n.jsx)(s.R, {
-                    item: m,
-                    user: r,
-                    isHighlighted: d,
+            return (0, r.jsx)("div", {
+                className: d.avatarDecorationPreview,
+                children: (0, r.jsx)(a.R, {
+                    item: h,
+                    user: n,
+                    isHighlighted: u,
                     isPurchased: !1,
                     avatarSize: l.EFr.SIZE_80,
                 }),
             });
         case i.Z.NAMEPLATE:
-            return (0, n.jsxs)("div", {
-                className: u.nameplatePreview,
+            return (0, r.jsxs)("div", {
+                className: d.nameplatePreview,
                 children: [
-                    (0, n.jsx)("div", {
-                        className: u.nameplateTopLeft,
-                        children: (0, n.jsx)(a.Z, {
-                            user: r,
-                            nameplate: m,
-                            isHighlighted: d,
+                    (0, r.jsx)("div", {
+                        className: d.nameplateTopLeft,
+                        children: (0, r.jsx)(s.Z, {
+                            user: n,
+                            nameplate: h,
+                            isHighlighted: u,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: f === o.Y.GIFTING_FLOW ? 136 : 200,
+                            width: p === c.Y.GIFTING_FLOW ? 136 : 200,
                         }),
                     }),
-                    (0, n.jsx)("div", {
-                        className: u.nameplateBottomRight,
+                    (0, r.jsx)("div", {
+                        className: d.nameplateBottomRight,
                         "aria-hidden": !0,
-                        children: (0, n.jsx)(a.Z, {
-                            user: r,
-                            nameplate: m,
-                            isHighlighted: d,
+                        children: (0, r.jsx)(s.Z, {
+                            user: n,
+                            nameplate: h,
+                            isHighlighted: u,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: f === o.Y.GIFTING_FLOW ? 136 : 200,
+                            width: p === c.Y.GIFTING_FLOW ? 136 : 200,
                         }),
                     }),
                 ],

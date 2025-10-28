@@ -19,22 +19,22 @@ function b(e) {
             guildId: t,
             channelId: n,
         }),
-        y = (0, c.GG)(t),
-        _ = (0, c.YB)(t),
-        O = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        j = null == O ? void 0 : O.name,
-        x = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
-        v = i.useMemo(() => {
+        _ = (0, c.GG)(t),
+        y = (0, c.YB)(t),
+        x = (0, l.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        v = null == x ? void 0 : x.name,
+        j = (0, l.e7)([s.Z], () => s.Z.getChannel(n)),
+        O = i.useMemo(() => {
             let e = {};
-            for (let t of y) for (let n of t.subscription_listings_ids) e[n] = t.id;
+            for (let t of _) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
-        }, [y]);
+        }, [_]);
     return ((0, u.Z)({
         guildId: t,
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: b.map((e) => e.id),
     }),
-    null == O)
+    null == x)
         ? (0, r.jsx)("div", {
               className: m.__invalid_spinnerContainer,
               children: (0, r.jsx)(a.$jN, { className: m.__invalid_spinner }),
@@ -46,27 +46,27 @@ function b(e) {
                       variant: "heading-xl/semibold",
                       className: m.joinCtaTitle,
                       children: g.intl.format(g.t.xHMpym, {
-                          serverName: j,
-                          channelName: null == x ? void 0 : x.name,
+                          serverName: v,
+                          channelName: null == j ? void 0 : j.name,
                       }),
                   }),
                   (0, r.jsx)(a.Text, {
                       className: m.joinCtaSubtitle,
                       variant: "text-md/normal",
                       color: "header-secondary",
-                      children: null == _ ? void 0 : _.description,
+                      children: null == y ? void 0 : y.description,
                   }),
                   (0, r.jsx)(p.Z, {
                       guildId: t,
                       children: b
-                          .filter((e) => null != v[e.id])
+                          .filter((e) => null != O[e.id])
                           .map((e) =>
                               (0, r.jsx)(
                                   h.Z,
                                   {
                                       guildId: t,
                                       listingId: e.id,
-                                      groupListingId: v[e.id],
+                                      groupListingId: O[e.id],
                                       analyticsLocation: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
                                   },
                                   e.id,

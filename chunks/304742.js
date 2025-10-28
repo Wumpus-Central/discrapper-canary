@@ -2,15 +2,15 @@ n.d(t, { Z: () => g });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(481060),
-    o = n(642909),
+    a = n(642909),
     c = n(215023),
     u = n(388032),
     d = n(345213);
 function g(e) {
     let { handleTransition: t, onClose: n } = e,
-        i = (0, o.G)("CollectiblesIndexPageContextMenu"),
+        i = (0, a.G)("CollectiblesIndexPageContextMenu"),
         g = l.useMemo(
             () => [
                 {
@@ -37,10 +37,10 @@ function g(e) {
             [],
         );
     return (0, r.jsx)("div", {
-        className: a()({ [d.shopTakeOver]: i }),
+        className: o()({ [d.shopTakeOver]: i }),
         children: (0, r.jsx)(s.v2r, {
             navId: "collectibles-index-page-menu",
-            className: a()({ [d.shopTakeOver]: i }),
+            className: o()({ [d.shopTakeOver]: i }),
             onClose: n,
             "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},

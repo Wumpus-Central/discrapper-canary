@@ -28,8 +28,8 @@ let j = (0, i.memo)(function (e) {
     var t, n, l, j, P, x;
     let { quest: A } = e,
         [Z, w] = (0, i.useState)(!1),
-        [L, D] = (0, i.useState)(24),
-        [R, M] = (0, i.useState)(!1),
+        [L, R] = (0, i.useState)(24),
+        [D, M] = (0, i.useState)(!1),
         k = (0, i.useRef)(null),
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
@@ -53,7 +53,7 @@ let j = (0, i.memo)(function (e) {
         let n = k.current.getBoundingClientRect(),
             r = U.current.getBoundingClientRect(),
             i = G.current.getBoundingClientRect();
-        D((r.top - n.top - i.height) / 2);
+        R((r.top - n.top - i.height) / 2);
     });
     let $ = (0, u.wj)(F),
         ee = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
@@ -122,7 +122,7 @@ let j = (0, i.memo)(function (e) {
                     quest_id: A.id,
                 });
         };
-    return null == W || R
+    return null == W || D
         ? null
         : (0, r.jsx)(d.tEY, {
               children: (0, r.jsxs)("div", {

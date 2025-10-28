@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(740508),
     R = n(315091),
     P = n(149715),
-    D = n(197571);
-function w(e, t, n) {
+    w = n(197571);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -116,7 +116,7 @@ function B(e) {
                         children: e.label,
                     }),
             }),
-            (0, r.jsx)(c.izJ, { className: o()(D.marginTop8, D.marginBottom8) }),
+            (0, r.jsx)(c.izJ, { className: o()(w.marginTop8, w.marginBottom8) }),
             (0, r.jsxs)("div", {
                 className: o()(N.actions, P.horizontal),
                 children: [
@@ -143,8 +143,8 @@ function Z(e) {
             canToggleDetection: null == v || _.ZP.isDetectionEnabled(v),
             isCurrentGameDetectionEnabled: _.ZP.isDetectionEnabled(I),
         })),
-        D = (0, s.e7)([_.ZP], () => _.ZP.getVisibleGame()),
-        [w, x] = i.useState(!1),
+        w = (0, s.e7)([_.ZP], () => _.ZP.getVisibleGame()),
+        [D, x] = i.useState(!1),
         k = i.useMemo(
             () =>
                 (0, g.le)(I)
@@ -208,7 +208,7 @@ function Z(e) {
             : u.Z.toggleDetection(I);
     }
     function z() {
-        if (w) return;
+        if (D) return;
         let e = null != I.id ? E.Z.getDetectableGame(I.id) : null;
         y.default.track(S.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
@@ -378,7 +378,7 @@ function Z(e) {
         });
     }
     function $() {
-        return w
+        return D
             ? null
             : (0, r.jsx)("div", {
                   className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
@@ -409,11 +409,11 @@ function Z(e) {
             onClick: V,
         });
     }
-    let et = null != D && (0, _.rH)(I) === (0, _.rH)(D),
+    let et = null != w && (0, _.rH)(I) === (0, _.rH)(w),
         en =
-            (null != v && v.id === (null == D ? void 0 : D.id)) ||
+            (null != v && v.id === (null == w ? void 0 : w.id)) ||
             et ||
-            (null != m && m.some((e) => e.id === (null == D ? void 0 : D.id)));
+            (null != m && m.some((e) => e.id === (null == w ? void 0 : w.id)));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -476,7 +476,7 @@ function F() {
 function V(e) {
     let { children: t } = e;
     return (0, r.jsxs)(k, {
-        className: D.marginTop40,
+        className: w.marginTop40,
         children: [
             (0, r.jsx)(c.oxh, {
                 darkSrc: n(879601),
@@ -512,7 +512,7 @@ let H = (0, O.oH)(function () {
             return 0 === d.length
                 ? (0, r.jsx)(V, { children: (0, r.jsx)(c.OZU, { children: C.intl.string(C.t["1yiJwn"]) }) })
                 : (0, r.jsx)(c.C3N, {
-                      className: D.marginTop40,
+                      className: w.marginTop40,
                       label: C.intl.string(C.t.jCOdvx),
                       description: C.intl.format(C.t.KPA3m9, { igdbLink: G }),
                       children: d.map((e) =>
@@ -547,7 +547,7 @@ let H = (0, O.oH)(function () {
                           )
                         : (0, r.jsx)(F, {}),
                     (0, r.jsxs)("div", {
-                        className: o()(N.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
+                        className: o()(N.nowPlayingAdd, w.marginReset, w.marginTop8, w.marginBottom20),
                         children: [
                             (0, r.jsx)("span", { children: C.intl.string(C.t.xwhoqM) }),
                             (0, r.jsx)(c.yRy, {

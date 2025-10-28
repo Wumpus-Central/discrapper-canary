@@ -102,8 +102,8 @@ function R(e) {
             onComplete: N,
             onSubscriptionConfirmation: R,
             analyticsLocations: P,
-            analyticsObject: D,
-            analyticsLocation: w,
+            analyticsObject: w,
+            analyticsLocation: D,
             analyticsSourceLocation: L,
             confirmationFooter: x,
             paymentModalBanner: M,
@@ -131,7 +131,7 @@ function R(e) {
         en = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("17938"), n.e("94758"), n.e("84992"), n.e("83301")]).then(
+            let { default: e } = await Promise.all([n.e("17938"), n.e("94758"), n.e("84992"), n.e("31029")]).then(
                 n.bind(n, 7305),
             );
             return (t) => {
@@ -177,8 +177,8 @@ function R(e) {
                         },
                         onSubscriptionConfirmation: R,
                         analyticsLocations: P,
-                        analyticsObject: D,
-                        analyticsLocation: w,
+                        analyticsObject: w,
+                        analyticsLocation: D,
                         analyticsSourceLocation: L,
                         confirmationFooter: x,
                         paymentModalBanner: M,
@@ -213,7 +213,7 @@ function R(e) {
                     m.default.track(O.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: Q,
                         payment_type: O.Zuq[O.GZQ.SUBSCRIPTION],
-                        location: null != w ? w : D,
+                        location: null != D ? D : w,
                         source: L,
                         subscription_type: O.NYc.PREMIUM,
                         is_gift: k,

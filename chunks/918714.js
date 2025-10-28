@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(481060),
-    l = n(493773),
+    l = n(481060),
+    i = n(493773),
     o = n(480916),
     s = n(17597),
     c = n(624138),
@@ -13,19 +13,19 @@ var a = n(951288),
     h = n(535188),
     x = n(856597),
     f = n(231338),
-    g = n(213360),
-    b = n(388032),
+    b = n(213360),
+    g = n(388032),
     v = n(104940);
 let j = n(575703);
 function _(e) {
-    let { task: t, handleSubmit: n, disabled: i } = e,
-        [l, o] = r.useState(t),
+    let { task: t, handleSubmit: n, disabled: l } = e,
+        [i, o] = r.useState(t),
         s = r.useMemo(
             () => ({
-                task: l,
+                task: i,
                 setTask: o,
             }),
-            [l, o],
+            [i, o],
         );
     return (
         r.useEffect(() => {
@@ -37,7 +37,7 @@ function _(e) {
                 (0, a.jsx)(x.Z, {}),
                 (0, a.jsx)(h.Z, {
                     onSubmit: n,
-                    disabled: i,
+                    disabled: l,
                 }),
             ],
         })
@@ -74,7 +74,7 @@ let y = function (e) {
                           },
                       });
             } catch (e) {
-                C(b.intl.string(g.default["/f++3g"]));
+                C(g.intl.string(b.default["/f++3g"]));
             } finally {
                 x(!1);
             }
@@ -91,7 +91,7 @@ let y = function (e) {
                         };
                         await (0, d.Wl)(t), T();
                     } catch (e) {
-                        C(b.intl.string(g.default["+QRSxc"]));
+                        C(g.intl.string(b.default["+QRSxc"]));
                     } finally {
                         E(!1);
                     }
@@ -99,7 +99,7 @@ let y = function (e) {
             },
             [n, T],
         );
-    (0, l.ZP)(() => {
+    (0, i.ZP)(() => {
         T();
     });
     let N = r.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
@@ -113,7 +113,7 @@ let y = function (e) {
             }),
             N
                 ? (0, a.jsx)(s.default, {
-                      transitionState: i.Dvm.ENTERED,
+                      transitionState: l.Dvm.ENTERED,
                       entryPoint: o.cU.SAFETY_FLOWS,
                       onClose: f.dG,
                       onComplete: async () => {
@@ -124,53 +124,53 @@ let y = function (e) {
                 : (0, a.jsx)("div", {
                       className: v.safetyFlow,
                       children: h
-                          ? (0, a.jsx)(i.$jN, { type: i.$jN.Type.SPINNING_CIRCLE })
+                          ? (0, a.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
                           : (0, a.jsx)("div", {
                                 className: v.container,
-                                children: (0, a.jsxs)(i.Kqy, {
+                                children: (0, a.jsxs)(l.Kqy, {
                                     direction: "horizontal",
                                     justify: "start",
                                     className: v.body,
                                     children: [
                                         null !== y &&
-                                            (0, a.jsxs)(i.Kqy, {
+                                            (0, a.jsxs)(l.Kqy, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
                                                 className: v.interimBody,
                                                 padding: 16,
                                                 children: [
-                                                    (0, a.jsxs)(i.Kqy, {
+                                                    (0, a.jsxs)(l.Kqy, {
                                                         direction: "vertical",
                                                         gap: 4,
                                                         children: [
-                                                            (0, a.jsx)(i.Heading, {
+                                                            (0, a.jsx)(l.Heading, {
                                                                 variant: "heading-xl/semibold",
-                                                                children: b.intl.string(b.t.c6kn6F),
+                                                                children: g.intl.string(g.t.c6kn6F),
                                                             }),
-                                                            (0, a.jsx)(i.Text, {
+                                                            (0, a.jsx)(l.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-muted",
-                                                                children: b.intl.string(b.t.ZUEGFn),
+                                                                children: g.intl.string(g.t.ZUEGFn),
                                                             }),
                                                         ],
                                                     }),
-                                                    (0, a.jsxs)(i.Kqy, {
+                                                    (0, a.jsxs)(l.Kqy, {
                                                         direction: "horizontal",
                                                         justify: "center",
                                                         align: "center",
                                                         children: [
-                                                            (0, a.jsx)(i.Button, {
+                                                            (0, a.jsx)(l.Button, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
-                                                                text: b.intl.string(b.t["2jxGer"]),
+                                                                text: g.intl.string(g.t["2jxGer"]),
                                                                 onClick: () => {
                                                                     (0, p.R)("safety_flows_modal");
                                                                 },
                                                             }),
-                                                            (0, a.jsx)(i.Button, {
+                                                            (0, a.jsx)(l.Button, {
                                                                 fullWidth: !0,
-                                                                text: b.intl.string(b.t["7NqTJn"]),
+                                                                text: g.intl.string(g.t["7NqTJn"]),
                                                                 onClick: () => {
                                                                     T();
                                                                 },

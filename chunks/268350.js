@@ -3,10 +3,10 @@ n.d(t, {
     FQ: () => v,
     Il: () => T,
     Jf: () => C,
-    SA: () => D,
+    SA: () => w,
     Um: () => S,
     eu: () => N,
-    hW: () => w,
+    hW: () => D,
     lY: () => A,
     qB: () => R,
 }),
@@ -200,7 +200,7 @@ function R(e, t) {
 function P(e) {
     return d.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != p.Z.getStickerById(e));
 }
-function D(e) {
+function w(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) =>
@@ -214,7 +214,7 @@ function D(e) {
         m.fy.INFREQUENT_USER_ACTION,
     );
 }
-function w(e) {
+function D(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) => {

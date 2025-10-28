@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => y,
+    F: () => h,
     Z: () => O,
 }),
     n(388685);
@@ -41,7 +41,7 @@ function b(e) {
     }
     return e;
 }
-function h(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function h(e, t) {
         e
     );
 }
-function y(e) {
+function h(e) {
     var { children: t, className: n, scrollerRef: i } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -84,7 +84,7 @@ function y(e) {
         })(e, ["children", "className", "scrollerRef"]);
     return (0, r.jsx)(
         o.Ttm,
-        h(
+        y(
             b(
                 {
                     ref: i,
@@ -153,9 +153,9 @@ function O(e) {
             initialSubsection: g,
             onClose: p,
         } = e,
-        { trackUserProfileAction: y } = (0, c.KZ)(),
+        { trackUserProfileAction: h } = (0, c.KZ)(),
         [{ section: O, subsection: j, text: x }, _] = i.useState(
-            h(
+            y(
                 b(
                     {},
                     null !=
@@ -182,7 +182,7 @@ function O(e) {
                     look: "custom",
                     selectedItem: O,
                     onItemSelect: (e) => {
-                        y({
+                        h({
                             action: "PRESS_SECTION",
                             section: e,
                         }),

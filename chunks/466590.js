@@ -111,11 +111,11 @@ function O(e) {
             null == I || I(N);
         }, [N, I]);
     let P = y[N],
-        D = N + 1 === y.length,
-        w = i.useCallback(() => {
+        w = N + 1 === y.length,
+        D = i.useCallback(() => {
             var e;
-            null == P || null == (e = P.onCta) || e.call(P), D ? null == T || T() : R((e) => e + 1);
-        }, [P, D, T]),
+            null == P || null == (e = P.onCta) || e.call(P), w ? null == T || T() : R((e) => e + 1);
+        }, [P, w, T]),
         L = i.useCallback(() => {
             null == T || T();
         }, [T]),
@@ -128,11 +128,11 @@ function O(e) {
             text:
                 null != (a = null == (t = P.action) ? void 0 : t.text)
                     ? a
-                    : D
+                    : w
                       ? _.intl.string(_.t.i4jeWR)
                       : _.intl.string(_.t.PDTjLN),
             variant: null != (h = null == (n = P.action) ? void 0 : n.variant) ? h : "primary",
-            onClick: w,
+            onClick: D,
         },
         P.action,
     );

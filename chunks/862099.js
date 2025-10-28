@@ -37,8 +37,8 @@ var r,
     Z = n(79874),
     w = n(554747),
     L = n(230900),
-    D = n(954313),
-    R = n(139712),
+    R = n(954313),
+    D = n(139712),
     M = n(765305),
     k = n(981631),
     U = n(388032),
@@ -154,14 +154,14 @@ function H(e) {
 }
 function V(e) {
     let { guildEvent: t, noticeType: n } = e,
-        r = (0, D.DK)(t),
+        r = (0, R.DK)(t),
         l = (0, o.e7)([T.ZP], () => T.ZP.isInterestedInEventRecurrence(t.id, r), [t.id, r]),
         a = (0, o.e7)([P.Z], () => P.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         l || null != a || (0, N._6)(t.id),
         (0, i.jsx)(c.Button, {
             onClick: function () {
-                (0, R.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, N.L_)(t.id), 1000)),
+                (0, D.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, N.L_)(t.id), 1000)),
                     y.default.track(k.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n,
@@ -187,7 +187,7 @@ function F(e) {
             startDateTimeString: m,
             upcomingEvent: g,
             diffMinutes: _,
-        } = (0, D.ub)(f.toISOString(), null == h ? void 0 : h.toISOString()),
+        } = (0, R.ub)(f.toISOString(), null == h ? void 0 : h.toISOString()),
         b = g
             ? _ > 0
                 ? U.intl.formatToPlainString(U.t.PQlCWk, { minutes: _ })

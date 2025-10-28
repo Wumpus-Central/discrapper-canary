@@ -2,9 +2,9 @@ n.d(t, { Z: () => v });
 var r = n(951288),
     l = n(647438),
     i = n(399606),
-    a = n(481060),
+    o = n(481060),
     s = n(594174),
-    o = n(74538),
+    a = n(74538),
     c = n(884697),
     u = n(290175),
     d = n(724994),
@@ -18,7 +18,7 @@ var r = n(951288),
 let b = (e) => {
         let { product: t, prioritizedCurrency: n } = e,
             p = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-            b = o.ZP.canUseCollectibles(p),
+            b = a.ZP.canUseCollectibles(p),
             { isDisabled: v } = (0, u.G)(t.skuId),
             { isPurchased: E, isPartiallyOwnedBundle: x } = (0, d.L)(t),
             O = (0, c.G1)(t),
@@ -33,28 +33,28 @@ let b = (e) => {
             }),
             L = O && !b;
         return v
-            ? (0, r.jsx)(a.Text, {
+            ? (0, r.jsx)(o.Text, {
                   variant: "text-md/semibold",
                   color: "header-muted",
                   children: _.intl.string(_.t.wu4gyV),
               })
             : x
-              ? (0, r.jsx)(a.Text, {
+              ? (0, r.jsx)(o.Text, {
                     variant: "text-md/semibold",
                     children: _.intl.string(_.t.BEjTij),
                 })
               : E && !L
-                ? (0, r.jsx)(a.Text, {
+                ? (0, r.jsx)(o.Text, {
                       variant: "text-md/semibold",
                       children: _.intl.string(_.t["6cfuDj"]),
                   })
                 : S
-                  ? (0, r.jsx)(a.Text, {
+                  ? (0, r.jsx)(o.Text, {
                         variant: "text-md/semibold",
                         children: _.intl.string(_.t.nBtvYB),
                     })
                   : O
-                    ? (0, r.jsx)(a.Text, {
+                    ? (0, r.jsx)(o.Text, {
                           variant: "text-md/semibold",
                           children: _.intl.string(_.t.rt69oo),
                       })

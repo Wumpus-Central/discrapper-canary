@@ -6,8 +6,8 @@ var l = n(533800),
     r = n(630388),
     a = n(971130),
     o = n(388032),
-    d = n(337709);
-let u = a.ZP.getMaxUsesOptions;
+    u = n(337709);
+let d = a.ZP.getMaxUsesOptions;
 function c(e) {
     var t;
     let {
@@ -15,39 +15,39 @@ function c(e) {
             maxAgeOptions: c,
             maxAge: g,
             maxUses: h,
-            temporary: m,
-            onGenerateNewLink: v,
-            onToggleTemporary: p,
-            onSelectMaxAge: x,
-            onSelectMaxUses: I,
+            temporary: v,
+            onGenerateNewLink: p,
+            onToggleTemporary: I,
+            onSelectMaxAge: m,
+            onSelectMaxUses: x,
             isGuestInviteCreationToggleEnabled: S,
             inviteFlags: f,
             onSetInviteFlags: E,
         } = e,
-        C = a.ZP.getMaxAgeOptionByValue(g),
-        y = u.find((e) => e.value === h);
+        y = a.ZP.getMaxAgeOptionByValue(g),
+        C = d.find((e) => e.value === h);
     return (0, i.jsx)("div", {
-        className: d.settingsContent,
+        className: u.settingsContent,
         children: (0, i.jsxs)("form", {
-            onSubmit: v,
-            className: d.settingsForm,
+            onSubmit: p,
+            className: u.settingsForm,
             children: [
                 (0, i.jsx)(s.VcW, {
                     label: o.intl.string(o.t["60qw2x"]),
                     options: c,
-                    value: null != (t = null == C ? void 0 : C.value) ? t : c[0].value,
-                    onChange: x,
+                    value: null != (t = null == y ? void 0 : y.value) ? t : c[0].value,
+                    onChange: m,
                 }),
                 (0, i.jsx)(s.VcW, {
                     label: o.intl.string(o.t.jDqWHW),
-                    options: u,
-                    value: null == y ? void 0 : y.value,
-                    onChange: I,
+                    options: d,
+                    value: null == C ? void 0 : C.value,
+                    onChange: x,
                 }),
                 !n &&
                     (0, i.jsx)(s.rsf, {
-                        checked: m,
-                        onChange: (e) => p(e),
+                        checked: v,
+                        onChange: (e) => I(e),
                         description: o.intl.string(o.t.UN5IRX),
                         label: o.intl.string(o.t["wE+9dr"]),
                     }),

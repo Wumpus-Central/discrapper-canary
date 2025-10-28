@@ -31,8 +31,8 @@ var r = n(951288),
     Z = n(825102),
     w = n(775451),
     L = n(451478),
-    D = n(626135),
-    R = n(526167),
+    R = n(626135),
+    D = n(526167),
     M = n(63063),
     k = n(617136),
     U = n(113434),
@@ -79,7 +79,7 @@ function ef(e) {
         }, [l, c, s]),
         n)
     ) {
-        let e = (0, R.rO)();
+        let e = (0, D.rO)();
         return (0, r.jsx)(I.Z, {
             ref: (e) => {
                 (d.current = e), (o.current = e);
@@ -131,7 +131,7 @@ function em(e) {
     let { onLoadComplete: t, onScroll: n, onSelectTab: l, selectedTabId: a, scrollerRef: s, tabs: c } = e,
         u = i.useCallback(() => {
             (0, Y.navigateToQuestHome)({ fromContent: B.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
-                D.default.track(
+                R.default.track(
                     en.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -222,11 +222,11 @@ let eg = function (e) {
         l = (0, s.TH)(),
         o = (null == (t = (0, s.LX)(l.pathname, en.Z5c.QUEST_HOME)) ? void 0 : t.isExact) === !0,
         h = (0, u.e7)([b.Z], () => b.Z.getState("quests")),
-        { selectedTab: I, onSelectTab: L, tabs: D } = (0, ee.z)({ withClaimedQuestsTab: !o });
+        { selectedTab: I, onSelectTab: L, tabs: R } = (0, ee.z)({ withClaimedQuestsTab: !o });
     i.useLayoutEffect(() => {
         o && I === U.e5.CLAIMED && H.Z.setState({ tab: U.e5.ALL });
     }, [o, I]);
-    let { onScroll: R, scrollPosition: k } = (0, C.M)(),
+    let { onScroll: D, scrollPosition: k } = (0, C.M)(),
         B = W.Z.getState().getUtmCurrentContext(),
         Y = (0, G._)({ location: et.dr.QUEST_HOME_DESKTOP }) ? Q.Z : Q.j,
         q = (0, J.z)((e) => e.registerAssetLoad),
@@ -302,11 +302,11 @@ let eg = function (e) {
                 children: o
                     ? (0, r.jsx)(em, {
                           onSelectTab: L,
-                          onScroll: R,
+                          onScroll: D,
                           onLoadComplete: q,
                           scrollerRef: ep,
                           selectedTabId: I,
-                          tabs: D,
+                          tabs: R,
                       })
                     : eo
                       ? (0, r.jsxs)($.t.Provider, {
@@ -315,7 +315,7 @@ let eg = function (e) {
                                 (0, r.jsx)(P.a, {
                                     selectedTabId: I,
                                     handleTransition: L,
-                                    tabs: D,
+                                    tabs: R,
                                     icon: p.qDn,
                                     children: (0, r.jsx)(w.V9, {
                                         analyticsPage: en.ZY5.GLOBAL_DISCOVERY_QUESTS,
@@ -325,7 +325,7 @@ let eg = function (e) {
                                     }),
                                 }),
                                 (0, r.jsxs)(x.Z, {
-                                    onScroll: R,
+                                    onScroll: D,
                                     ref: ep,
                                     children: [
                                         I !== U.e5.PREVIEW_TOOL &&
@@ -393,7 +393,7 @@ let eg = function (e) {
                                 (0, r.jsx)($.t.Provider, {
                                     value: ep,
                                     children: (0, r.jsxs)(x.Z, {
-                                        onScroll: R,
+                                        onScroll: D,
                                         ref: ep,
                                         children: [
                                             (0, r.jsxs)(S.Z, {
@@ -419,7 +419,7 @@ let eg = function (e) {
                                                     (0, r.jsx)("div", {
                                                         className: ea.tabs,
                                                         children: (0, r.jsx)(N.Z, {
-                                                            tabs: D,
+                                                            tabs: R,
                                                             selectedTab: I,
                                                             onTabSelect: L,
                                                         }),

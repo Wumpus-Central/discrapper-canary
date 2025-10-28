@@ -13,9 +13,9 @@ var i = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(260300),
-    h = n(997638),
-    f = n(819640),
-    m = n(451478),
+    h = n(819640),
+    f = n(451478),
+    m = n(350707),
     g = n(21825),
     b = n(232495),
     C = n(10401),
@@ -133,8 +133,8 @@ class O extends r.PureComponent {
                 isLongText: c,
                 highPriority: u,
                 spacing: p,
-                arrowAlignment: f = h.cy.TOP,
-                popoutPosition: m,
+                arrowAlignment: h = m.cy.TOP,
+                popoutPosition: f,
             } = l,
             { offsetX: b, offsetY: C } = this.state,
             _ = {
@@ -151,19 +151,19 @@ class O extends r.PureComponent {
             },
             j = this.getTutorialPopoutText();
         return (0, i.jsx)(
-            h.ZP,
+            m.ZP,
             x(
                 v(
                     {
                         innerRef: this.contentRef,
-                        position: m,
+                        position: f,
                         renderMedia: o,
                         textAlign: s,
                         spacing: p,
                         isLongText: c,
                         uniqueId: e,
                         autoInvert: t,
-                        arrowAlignment: f,
+                        arrowAlignment: h,
                         onSkipAll: this.handleSkipTips,
                         onComplete: this.handleDismiss,
                     },
@@ -233,11 +233,11 @@ let j =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: r,
-              } = (0, u.cj)([C.Z, m.Z, f.Z], () => ({
+              } = (0, u.cj)([C.Z, f.Z, h.Z], () => ({
                   indicators: C.Z.getIndicators(),
                   tutorialData: C.Z.getData(),
-                  shouldShowAny: C.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
-                  windowFocused: m.Z.isFocused(),
+                  shouldShowAny: C.Z.shouldShowAnyIndicators() && !h.Z.hasLayers(),
+                  windowFocused: f.Z.isFocused(),
               }));
               return r
                   ? (0, i.jsx)(i.Fragment, {

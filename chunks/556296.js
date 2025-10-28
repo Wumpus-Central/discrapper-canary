@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    Ek: () => w,
+    Ek: () => D,
     I1: () => j,
     ZP: () => ev,
 }),
@@ -83,8 +83,8 @@ function P(e, t) {
         e
     );
 }
-let D = new f.Z("KeybindsStore"),
-    w = {
+let w = new f.Z("KeybindsStore"),
+    D = {
         id: "1000",
         action: v.kg4.TOGGLE_MUTE,
         shortcut: (0, y.Kd)("mod+shift+m"),
@@ -118,7 +118,7 @@ let x = "1001",
         var i, a;
         let o = (0, b.pz)(!1).get("Backquote"),
             s = (0, b.pz)(!0).get("Backquote");
-        D.log(e, {
+        w.log(e, {
             tags: {
                 backquoteKey: null != o ? o : "unknown",
                 nativeBackquoteKey: null != s ? s : "unknown",
@@ -179,8 +179,8 @@ let B = () => {
     q = [];
 function X(e) {
     switch (e) {
-        case w.id:
-            return w;
+        case D.id:
+            return D;
         case B().id:
             return B();
         default:
@@ -244,16 +244,16 @@ function et() {
 }
 function en() {
     let { showKeybindIndicators: e } = p.Z.getCurrentConfig({ location: "KeybindsStore" });
-    null == l().find(F, (e) => w.action === e.action && e.enabled && e.shortcut.length > 0) &&
+    null == l().find(F, (e) => D.action === e.action && e.enabled && e.shortcut.length > 0) &&
         !__OVERLAY__ &&
         !W &&
         H &&
         e &&
-        (es(w), (W = !0));
+        (es(D), (W = !0));
 }
 function er() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    (W || e) && (eo(w.id), (W = !1));
+    (W || e) && (eo(D.id), (W = !1));
 }
 function ei(e) {
     let { showKeybindIndicators: t } = e;
@@ -265,7 +265,7 @@ function ea(e, t, n, r) {
             E.ZP.inputEventRegister(parseInt(e), t, n, r);
         } catch (n) {
             throw (
-                (D.error(
+                (w.error(
                     "Failed to register native keybind",
                     {
                         eventId: e,
@@ -303,7 +303,7 @@ function es(e) {
     let { shortcut: t, action: n, enabled: r } = e;
     if (0 === t.length || null == t || n === v.kg4.UNASSIGNED || !r) return;
     if (null == Y[n])
-        return void D.error(
+        return void w.error(
             "[kb store] KeybindStore: Looking for callback action ".concat(
                 n,
                 " but it doesn't exist in this version. Skipping",
@@ -403,7 +403,7 @@ function ep(e) {
             try {
                 es(e);
             } catch (t) {
-                D.error("Failed to register keybind", e, t);
+                w.error("Failed to register keybind", e, t);
             }
         }),
         (H = !0),
@@ -503,7 +503,7 @@ d.Z.setGetKeybindList(() => {
     let e = [];
     for (let t in F) F.hasOwnProperty(t) && e.push((0, y.BB)(F[t].shortcut));
     let { showKeybindIndicators: t } = p.Z.getCurrentConfig({ location: "KeybindsStore" });
-    return t && e.push((0, y.BB)(w.shortcut)), e;
+    return t && e.push((0, y.BB)(D.shortcut)), e;
 });
 class ey extends (i = c.ZP.DeviceSettingsStore) {
     initialize(e) {
@@ -530,7 +530,7 @@ class ey extends (i = c.ZP.DeviceSettingsStore) {
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             { showKeybindIndicators: r } = p.Z.getCurrentConfig({ location: "KeybindsStore" }),
             i = l().find(F, (r) => r.action === e && (!t || r.managed) && (!n || (r.shortcut.length > 0 && r.enabled)));
-        return null != i ? i : r && e === v.kg4.TOGGLE_MUTE ? w : null;
+        return null != i ? i : r && e === v.kg4.TOGGLE_MUTE ? D : null;
     }
     getOverlayKeybind() {
         let e = this.getKeybindForAction(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, !0);

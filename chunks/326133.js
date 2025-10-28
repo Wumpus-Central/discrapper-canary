@@ -94,8 +94,8 @@ function R(e, t) {
     return i;
 }
 let P = 490,
-    D = 490,
-    w = 245,
+    w = 490,
+    D = 245,
     L = 200,
     x = 120,
     M = i.forwardRef(function (e, t) {
@@ -171,8 +171,8 @@ let P = 490,
             (ei = (null == (M = B.autocomplete) ? void 0 : M.small)
                 ? L
                 : (null == (k = z.query) ? void 0 : k.type) === b.eq.EMOJIS_AND_STICKERS
-                  ? D
-                  : w);
+                  ? w
+                  : D);
         let ea = Math.max(Z, null != (j = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? j : 0),
             eo = Math.min(0.5 * window.innerHeight, ea);
         ei = Math.min(window.innerHeight - x - eo - (null != H ? H : 0), ei);

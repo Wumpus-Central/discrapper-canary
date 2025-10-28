@@ -39,7 +39,7 @@ function P(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function L(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -210,7 +210,7 @@ function G(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        L(D({}, n), {
+                        L(w({}, n), {
                             backgroundOption: t,
                             optionIsInUse: a,
                         }),
@@ -334,7 +334,7 @@ function V(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        D(
+                        w(
                             {
                                 maxFileSizeBytes: I.SJ,
                                 onComplete: (e) => {

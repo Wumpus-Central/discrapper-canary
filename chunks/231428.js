@@ -27,7 +27,7 @@ var r,
     N = n(388032),
     R = n(504333),
     P = n(982710);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -129,7 +129,7 @@ function U(e) {
                 return (0, i.jsx)(
                     b.Z,
                     x(
-                        w(
+                        D(
                             {
                                 className: R.verticalFit,
                                 currentPageIndex: c,
@@ -242,7 +242,7 @@ class G extends (r = a.PureComponent) {
             : null;
     }
     constructor(...e) {
-        super(...e), D(this, "scrollerRef", a.createRef());
+        super(...e), w(this, "scrollerRef", a.createRef());
     }
 }
 function B(e) {
@@ -286,11 +286,11 @@ function Z(e) {
         }, [l, o]),
         (0, i.jsx)(
             G,
-            x(w({}, e), {
+            x(D({}, e), {
                 payments: c,
                 subscription: n,
             }),
         )
     );
 }
-D(G, "defaultProps", { compactMode: !1 });
+w(G, "defaultProps", { compactMode: !1 });

@@ -55,7 +55,7 @@ function L(e) {
     }
     return e;
 }
-function D(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +73,7 @@ function D(e, t) {
         e
     );
 }
-function R(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -128,7 +128,7 @@ let M = (e) => {
                 onMouseLeave: p,
                 children: f,
             } = e,
-            g = R(e, [
+            g = D(e, [
                 "selected",
                 "locationState",
                 "icon",
@@ -162,7 +162,7 @@ let M = (e) => {
                 O && (0, r.jsx)(k, {}),
                 (0, r.jsx)(
                     d.Qj,
-                    D(
+                    R(
                         L(
                             {
                                 selected: t,
@@ -185,7 +185,7 @@ let M = (e) => {
             ],
         });
     },
-    G = (e) => (0, r.jsx)(U, D(L({}, e), { children: (0, r.jsx)(M, {}) })),
+    G = (e) => (0, r.jsx)(U, R(L({}, e), { children: (0, r.jsx)(M, {}) })),
     B = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -239,7 +239,7 @@ let M = (e) => {
             O,
             v,
             { displayOptions: y } = e,
-            C = R(e, ["displayOptions"]);
+            C = D(e, ["displayOptions"]);
         let S = (0, a.e7)([f.Z], () => f.Z.useReducedMotion),
             [T, N] = i.useState(0),
             [j, P] = i.useState(!1),
@@ -282,9 +282,9 @@ let M = (e) => {
             children: (e) =>
                 (0, r.jsxs)(
                     U,
-                    D(
+                    R(
                         L(
-                            D(
+                            R(
                                 L(
                                     {
                                         className:
@@ -321,7 +321,7 @@ let M = (e) => {
     },
     V = (e) => {
         var { displayOptions: t } = e,
-            n = R(e, ["displayOptions"]);
+            n = D(e, ["displayOptions"]);
         let l = i.useMemo(() => {
             var e;
             let n = null != t.emojiName ? (null == (e = E.ZP.getByName(t.emojiName)) ? void 0 : e.surrogates) : null;
@@ -339,14 +339,14 @@ let M = (e) => {
             delay: 100,
             hideOnClick: !1,
             "aria-label": t.title(),
-            children: (e) => (0, r.jsx)(U, D(L({}, n, e), { children: (0, r.jsx)(M, { color: t.badgeColor }) })),
+            children: (e) => (0, r.jsx)(U, R(L({}, n, e), { children: (0, r.jsx)(M, { color: t.badgeColor }) })),
         });
     },
     F = (e) => {
         var t,
             n,
             { displayOptions: l, dismissContent: a } = e,
-            s = R(e, ["displayOptions", "dismissContent"]);
+            s = D(e, ["displayOptions", "dismissContent"]);
         let c = i.useRef(null),
             u = (0, p.ZP)(),
             d = (0, o.wj)(u),
@@ -364,7 +364,7 @@ let M = (e) => {
             children: [
                 (0, r.jsxs)(
                     U,
-                    D(L({}, s), {
+                    R(L({}, s), {
                         onClick: () => a(A.L.TAKE_ACTION),
                         listItemRef: c,
                         children: [
@@ -395,13 +395,13 @@ let M = (e) => {
     },
     z = (e) => {
         var { dismissContent: t } = e,
-            n = R(e, ["dismissContent"]);
+            n = D(e, ["dismissContent"]);
         let l = i.useRef(null);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
                     U,
-                    D(L({}, n), {
+                    R(L({}, n), {
                         onClick: () => t(A.L.TAKE_ACTION),
                         listItemRef: l,
                     }),
@@ -431,15 +431,15 @@ let M = (e) => {
         if (null != a)
             switch (a.type) {
                 case j.k2.TOOLTIP:
-                    return (0, r.jsx)(V, D(L({}, h), { displayOptions: a }));
+                    return (0, r.jsx)(V, R(L({}, h), { displayOptions: a }));
                 case j.k2.COACHTIP:
-                    return (0, r.jsx)(H, D(L({}, h), { displayOptions: a }));
+                    return (0, r.jsx)(H, R(L({}, h), { displayOptions: a }));
                 case j.k2.BADGE:
                     return (0, r.jsx)(G, L({}, h));
                 case j.k2.COACHMARK:
-                    return (0, r.jsx)(F, D(L({ dismissContent: o }, h), { displayOptions: a }));
+                    return (0, r.jsx)(F, R(L({ dismissContent: o }, h), { displayOptions: a }));
             }
         return p === s.z.WISHLIST_SHOP_BUTTON_POPOVER
-            ? (0, r.jsx)(z, D(L({}, h), { dismissContent: f }))
+            ? (0, r.jsx)(z, R(L({}, h), { dismissContent: f }))
             : (0, r.jsx)(U, L({}, h));
     };

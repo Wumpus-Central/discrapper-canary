@@ -30,8 +30,8 @@ var r = n(951288),
     N = n(981631),
     R = n(957825),
     P = n(268685),
-    D = n(388032),
-    w = n(553517),
+    w = n(388032),
+    D = n(553517),
     L = (function (e) {
         return (e.SYSTEM_MESSAGE = "system_message"), (e.COACHMARK = "coachmark"), e;
     })({});
@@ -64,23 +64,23 @@ function x(e) {
     }, [t, n]);
     let V = () =>
             t === C.hX.FRIEND_ANNIVERSARY
-                ? D.intl.formatToPlainString(D.t.BWJvAK, { friendUserName: v.ZP.getName(a) })
+                ? w.intl.formatToPlainString(w.t.BWJvAK, { friendUserName: v.ZP.getName(a) })
                 : (0, I.Ou)(t),
         H = () =>
-            t === C.hX.FRIEND_ANNIVERSARY ? D.intl.formatToPlainString(D.t.S3fdq7, { numberOfYears: F }) : (0, I.Ou)(t),
+            t === C.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq7, { numberOfYears: F }) : (0, I.Ou)(t),
         Y = () => {
             switch (G) {
                 case C.X2.VIEW_ALL:
-                    return D.intl.string(D.t.WkxniM);
+                    return w.intl.string(w.t.WkxniM);
                 case C.X2.SEND_MESSAGE:
-                    return D.intl.string(D.t.I61IsE);
+                    return w.intl.string(w.t.I61IsE);
                 default:
                     return;
             }
         },
         W = () =>
             t === C.hX.FRIEND_ANNIVERSARY
-                ? D.intl.formatToPlainString(D.t["L2s/N3"], { numberOfYears: F })
+                ? w.intl.formatToPlainString(w.t["L2s/N3"], { numberOfYears: F })
                 : (0, I.Ou)(t),
         K = (e) => {
             e.stopPropagation();
@@ -114,37 +114,37 @@ function x(e) {
                           setTimeout(() => {
                               (0, E.PG)(R.X1.GIF, g.Ie.NORMAL),
                                   setTimeout(() => {
-                                      (0, E.ql)(D.intl.string(D.t.jrtJi4), !0);
+                                      (0, E.ql)(w.intl.string(w.t.jrtJi4), !0);
                                   }, 50);
                           }, 100);
                       }));
         },
         q = "coachmark" === n,
-        X = q ? w.innerContentCoachmark : w.innerContent,
-        Q = q ? w.recipientUserAvatarCoachmark : w.recipientUserAvatar,
-        J = q ? w.currentUserAvatarCoachmark : w.currentUserAvatar,
+        X = q ? D.innerContentCoachmark : D.innerContent,
+        Q = q ? D.recipientUserAvatarCoachmark : D.recipientUserAvatar,
+        J = q ? D.currentUserAvatarCoachmark : D.currentUserAvatar,
         $ = q ? "header-primary" : "always-white",
-        ee = q ? w.subHeaderTextCoachmark : w.subHeaderText,
+        ee = q ? D.subHeaderTextCoachmark : D.subHeaderText,
         et = q ? u.zx.Colors.BRAND : u.zx.Colors.WHITE,
         en = q ? c.Z.colors.WHITE : c.Z.colors.BG_BRAND,
-        er = q ? w.buttonTextPrimaryCoachmark : w.buttonTextPrimary,
-        ei = q ? w.buttonSecondaryCoachmark : w.buttonSecondary,
-        ea = q ? w.buttonTextSecondaryCoachmark : w.buttonTextSecondary;
+        er = q ? D.buttonTextPrimaryCoachmark : D.buttonTextPrimary,
+        ei = q ? D.buttonSecondaryCoachmark : D.buttonSecondary,
+        ea = q ? D.buttonTextSecondaryCoachmark : D.buttonTextSecondary;
     return (0, r.jsx)("div", {
-        className: o()(w.content, {
-            [w.outerGlow]: U,
-            [w.contentCoachmark]: q,
+        className: o()(D.content, {
+            [D.outerGlow]: U,
+            [D.contentCoachmark]: q,
         }),
         onMouseEnter: L,
         onMouseLeave: x,
         children: (0, r.jsxs)("div", {
-            className: o()(X, { [w.innerGlow]: U }),
+            className: o()(X, { [D.innerGlow]: U }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: w.subContent,
+                    className: D.subContent,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: w.avatars,
+                            className: D.avatars,
                             children: [
                                 (0, r.jsx)(p.Z, {
                                     className: Q,
@@ -162,7 +162,7 @@ function x(e) {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: w.textContainer,
+                            className: D.textContainer,
                             children: [
                                 (0, r.jsx)(d.Text, {
                                     variant: "text-md/medium",
@@ -180,33 +180,33 @@ function x(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: w.buttonContainer,
+                    className: D.buttonContainer,
                     children: [
                         null != G &&
                             (0, r.jsx)(u.zx, {
                                 "data-migration-pending": !0,
-                                className: o()(w.button, ei),
+                                className: o()(D.button, ei),
                                 onClick: z,
                                 size: u.zx.Sizes.MEDIUM,
                                 color: u.zx.Colors.CUSTOM,
                                 look: u.zx.Looks.OUTLINED,
                                 children: (0, r.jsx)("div", {
-                                    className: w.buttonContentContainer,
+                                    className: D.buttonContentContainer,
                                     children: (0, r.jsx)(d.Text, {
                                         variant: "text-sm/medium",
-                                        className: o()(w.buttonText, ea),
+                                        className: o()(D.buttonText, ea),
                                         children: Y(),
                                     }),
                                 }),
                             }),
                         (0, r.jsx)(u.zx, {
                             "data-migration-pending": !0,
-                            className: w.button,
+                            className: D.button,
                             onClick: K,
                             size: u.zx.Sizes.MEDIUM,
                             color: et,
                             children: (0, r.jsxs)("div", {
-                                className: w.buttonContentContainer,
+                                className: D.buttonContentContainer,
                                 children: [
                                     (0, r.jsx)(d.OgN, {
                                         color: en,
@@ -216,8 +216,8 @@ function x(e) {
                                     }),
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-sm/medium",
-                                        className: o()(w.buttonText, er),
-                                        children: D.intl.string(D.t["wg/30i"]),
+                                        className: o()(D.buttonText, er),
+                                        children: w.intl.string(w.t["wg/30i"]),
                                     }),
                                 ],
                             }),
@@ -226,9 +226,9 @@ function x(e) {
                 }),
                 null != M &&
                     (0, r.jsx)("div", {
-                        className: o()(w.connector, {
-                            [w.leftPopoutConnector]: "left" === M,
-                            [w.rightPopoutConnector]: "right" === M,
+                        className: o()(D.connector, {
+                            [D.leftPopoutConnector]: "left" === M,
+                            [D.rightPopoutConnector]: "right" === M,
                         }),
                     }),
             ],

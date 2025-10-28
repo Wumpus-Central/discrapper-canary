@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(35282), n(388685), n(49124), n(975844), n(781311);
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(392711),
     s = n(913527),
     c = n.n(s),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(665149),
     x = n(886118),
     f = n(301801),
-    g = n(4912),
-    b = n(572004),
+    b = n(4912),
+    g = n(572004),
     v = n(55935),
     j = n(428530),
     _ = n(257785),
@@ -110,7 +110,7 @@ let w = [
 ];
 function k(e) {
     let { actionLog: t, initialHeight: n } = e,
-        i = r.useMemo(
+        l = r.useMemo(
             () =>
                 t.error
                     ? [
@@ -118,7 +118,7 @@ function k(e) {
                           {
                               id: "error",
                               name: (0, a.jsxs)(a.Fragment, {
-                                  children: [(0, a.jsx)(g.Z, { className: T.errorIcon }), "Error"],
+                                  children: [(0, a.jsx)(b.Z, { className: T.errorIcon }), "Error"],
                               }),
                               group: S.v0.NONE,
                               render(e) {
@@ -126,7 +126,7 @@ function k(e) {
                                   return (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           (0, a.jsx)("div", {
-                                              className: l()(T.errorToolbar, O.toolbar),
+                                              className: i()(T.errorToolbar, O.toolbar),
                                               children: (0, a.jsx)("div", {
                                                   className: O.toolbarGroup,
                                                   children: (0, a.jsx)(u.zx, {
@@ -149,7 +149,7 @@ function k(e) {
                     : w,
             [t],
         ),
-        { TabBar: o, renderSelectedTab: s } = (0, S.ZP)({ tabs: i }, [i]);
+        { TabBar: o, renderSelectedTab: s } = (0, S.ZP)({ tabs: l }, [l]);
     return (0, a.jsxs)(y.Z, {
         className: T.subPanel,
         minHeight: 100,
@@ -157,14 +157,14 @@ function k(e) {
         children: [
             (0, a.jsx)(o, {}),
             (0, a.jsxs)(h.ZP, {
-                className: l()(O.headerBar, T.subPanelHeaderBar),
+                className: i()(O.headerBar, T.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(h.ZP.Icon, {
                         icon: m.xVZ,
                         tooltip: t.name,
                     }),
                     (0, a.jsx)(h.ZP.Title, {
-                        wrapperClassName: l()(O.headerTitle, O.dispatcherHeader),
+                        wrapperClassName: i()(O.headerTitle, O.dispatcherHeader),
                         className: O.headerTitleText,
                         children: t.name,
                     }),
@@ -181,7 +181,7 @@ function k(e) {
                                 null,
                                 2,
                             );
-                            (0, b.JG)(n, () =>
+                            (0, g.JG)(n, () =>
                                 (0, m.showToast)({
                                     id: "copy-action-log-name",
                                     type: m.ToastType.SUCCESS,
@@ -203,7 +203,7 @@ let R = [
             render(e) {
                 let { actionLog: t } = e;
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [t.error && (0, a.jsx)(g.Z, { className: T.errorIcon }), t.name],
+                    children: [t.error && (0, a.jsx)(b.Z, { className: T.errorIcon }), t.name],
                 });
             },
         },
@@ -235,7 +235,7 @@ let R = [
 function D() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
-        i = (function (e) {
+        l = (function (e) {
             let [t, n] = r.useState(e.logs),
                 a = r.useCallback(() => {
                     (0, o.debounce)(() => {
@@ -257,34 +257,34 @@ function D() {
         })(p.Z.actionLogger),
         s = r.useMemo(
             () =>
-                i
+                l
                     .map((e) => ({
                         key: e.id.toString(),
                         actionLog: e,
                     }))
                     .toReversed(),
-            [i],
+            [l],
         ),
         [c, u] = r.useState(s),
         [h, x] = r.useState(s),
-        [g, b] = r.useState(!1),
+        [b, g] = r.useState(!1),
         [v, j] = r.useState(),
         _ = r.useCallback((e) => {
             x(e);
         }, []);
-    (0, f.BO)(t, g ? c : s, _, A);
+    (0, f.BO)(t, b ? c : s, _, A);
     let y = r.useCallback(
             (e) => {
-                u(s), b(e);
+                u(s), g(e);
             },
             [s],
         ),
         S = t.trim().length > 0,
-        E = r.useMemo(() => (S ? h : g ? c : s), [s, h, S, g, c]),
-        N = g ? "Enable Event Tracking" : "Pause Event Tracking";
+        E = r.useMemo(() => (S ? h : b ? c : s), [s, h, S, b, c]),
+        N = b ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(O.panel, T.panel),
+        className: i()(O.panel, T.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: T.toolbar,
@@ -293,10 +293,10 @@ function D() {
                         text: N,
                         children: (0, a.jsx)(m.hU, {
                             size: "sm",
-                            variant: g ? "primary" : "active",
-                            icon: g ? m.o1U : m.fpf,
+                            variant: b ? "primary" : "active",
+                            icon: b ? m.o1U : m.fpf,
                             "aria-label": N,
-                            onClick: () => y(!g),
+                            onClick: () => y(!b),
                         }),
                     }),
                     (0, a.jsx)(m.E1j, {

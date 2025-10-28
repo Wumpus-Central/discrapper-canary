@@ -14,8 +14,8 @@ var i = n(442837),
     p = n(29899),
     m = n(151545),
     b = n(527790),
-    h = n(769140),
-    y = n(864141),
+    y = n(769140),
+    h = n(864141),
     v = n(264481),
     O = n(693408),
     j = n(661462),
@@ -28,21 +28,21 @@ function w(e) {
         { voiceActivityStatusEnabled: D } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
         k = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: N, recent: A, stream: Z } = (0, g.Z)(t.id),
-        { voiceChannel: R, voiceActivity: B } = (0, p.Z)({
+        { voiceChannel: R, voiceActivity: G } = (0, p.Z)({
             userId: t.id,
             guildId: S,
         }),
-        G = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
+        B = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
         L = t.id === n.id,
         M = (0, i.e7)([u.Z, s.Z], () => {
             let e = L ? u.Z.getStatus() : s.Z.getStatus(t.id);
             return e === a.Skl.OFFLINE || e === a.Skl.INVISIBLE;
         }),
-        F = N.length > 0 || null != Z,
-        U = D && null == Z && null == B && null != R,
-        W = !M && (F || U),
+        U = N.length > 0 || null != Z,
+        F = D && null == Z && null == G && null != R,
+        W = !M && (U || F),
         H = A.length > 0;
-    if (!W && !H && G)
+    if (!W && !H && B)
         return (0, r.jsx)("div", {
             className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -65,7 +65,7 @@ function w(e) {
                 ),
             ),
         });
-    if (!W && !H && !G) {
+    if (!W && !H && !B) {
         var z;
         return L
             ? (0, r.jsx)(v.Uf, { onClose: C })
@@ -87,9 +87,9 @@ function w(e) {
                           className: I.cards,
                           children: [
                               !k &&
-                                  U &&
+                                  F &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: R,
@@ -98,7 +98,7 @@ function w(e) {
                                   }),
                               null != Z &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(h.Z, {
+                                      children: (0, r.jsx)(y.Z, {
                                           user: t,
                                           currentUser: n,
                                           stream: Z,
@@ -120,9 +120,9 @@ function w(e) {
                                   ),
                               ),
                               k &&
-                                  U &&
+                                  F &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(y.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: R,

@@ -129,7 +129,7 @@ function m(e, t) {
                 ),
             [N, R, P],
         );
-        let D = i.useCallback(
+        let w = i.useCallback(
             (e) => {
                 null == T.current ? C(!0) : clearTimeout(T.current),
                     (T.current = setTimeout(() => {
@@ -170,7 +170,7 @@ function m(e, t) {
                             }),
                             style: v,
                             dir: b,
-                            onScroll: D,
+                            onScroll: w,
                         },
                         I,
                     ),

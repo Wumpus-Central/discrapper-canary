@@ -1,6 +1,6 @@
 n.d(t, {
     wl: () => v,
-    yX: () => y,
+    yX: () => h,
 }),
     n(388685),
     n(781311);
@@ -78,9 +78,9 @@ function b(e, t) {
     }
     return i;
 }
-function h(e) {
-    var { widgetType: t, widget: n, children: h } = e,
-        y = b(e, ["widgetType", "widget", "children"]);
+function y(e) {
+    var { widgetType: t, widget: n, children: y } = e,
+        h = b(e, ["widgetType", "widget", "children"]);
     let [v] = (0, o.ynZ)(),
         [O, j] = i.useState(""),
         x = i.useRef(""),
@@ -126,7 +126,7 @@ function h(e) {
         );
     return (0, r.jsx)(
         o.yRy,
-        m(p({}, y), {
+        m(p({}, h), {
             onRequestOpen: () => {
                 P({
                     action: "PRESS_ADD_GAME",
@@ -178,16 +178,16 @@ function h(e) {
                         ),
                 });
             },
-            children: (e) => h(e),
+            children: (e) => y(e),
         }),
     );
 }
-function y(e) {
+function h(e) {
     var { disabled: t } = e,
         n = b(e, ["disabled"]);
     let a = i.useRef(null);
     return (0, r.jsx)(
-        h,
+        y,
         m(
             p(
                 {
@@ -220,7 +220,7 @@ function y(e) {
 function v(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
-        h,
+        y,
         m(
             p(
                 {

@@ -310,7 +310,7 @@ e.exports = function (e) {
             match: /->/,
             relevance: 0,
         },
-        D = [
+        w = [
             P,
             {
                 className: "operator",
@@ -318,14 +318,14 @@ e.exports = function (e) {
                 variants: [{ match: g }, { match: `\\.(\\.|${m})+` }],
             },
         ],
-        w = "([0-9]_*)+",
+        D = "([0-9]_*)+",
         L = "([0-9a-fA-F]_*)+",
         x = {
             className: "number",
             relevance: 0,
             variants: [
-                { match: `\\b(${w})(\\.(${w}))?([eE][+-]?(${w}))?\\b` },
-                { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${w}))?\\b` },
+                { match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b` },
+                { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${D}))?\\b` },
                 { match: /\b0o([0-7]_*)+\b/ },
                 { match: /\b0b([01]_*)+\b/ },
             ],
@@ -414,7 +414,7 @@ e.exports = function (e) {
                             begin: /\(/,
                             end: /\)/,
                             keywords: I,
-                            contains: [...D, x, B],
+                            contains: [...w, x, B],
                         },
                     ],
                 },
@@ -478,7 +478,7 @@ e.exports = function (e) {
                 H,
                 ...N,
                 ...R,
-                ...D,
+                ...w,
                 x,
                 B,
                 ...W,
@@ -514,7 +514,7 @@ e.exports = function (e) {
                 },
                 ...h,
                 ...N,
-                ...D,
+                ...w,
                 x,
                 B,
                 ...K,
@@ -599,7 +599,7 @@ e.exports = function (e) {
     for (let e of B.variants) {
         let t = e.contains.find((e) => "interpol" === e.label);
         t.keywords = C;
-        let n = [...N, ...R, ...D, x, B, ...W];
+        let n = [...N, ...R, ...w, x, B, ...W];
         t.contains = [
             ...n,
             {
@@ -630,7 +630,7 @@ e.exports = function (e) {
             H,
             ...N,
             ...R,
-            ...D,
+            ...w,
             x,
             B,
             ...W,

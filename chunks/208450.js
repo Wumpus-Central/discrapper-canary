@@ -32,8 +32,8 @@ var r = n(951288),
     N = n(28964),
     R = n(971128),
     P = n(532428),
-    D = n(583642),
-    w = n(991896),
+    w = n(583642),
+    D = n(991896),
     L = n(611004),
     x = n(778177),
     M = n(165017),
@@ -211,7 +211,7 @@ class W extends i.PureComponent {
             F(this, "renderPopout", () => {
                 let { isSearchFiltersRedesignEnabled: e } = this.props;
                 return e
-                    ? (0, r.jsx)(D.Z, {
+                    ? (0, r.jsx)(w.Z, {
                           ref: this._searchFiltersRedesignPopoutRef,
                           searchContext: this.props.searchContext,
                           navId: H,
@@ -385,7 +385,7 @@ class W extends i.PureComponent {
             }),
             F(this, "setEditorState", (e) => {
                 let { searchContext: t } = this.props;
-                w.Z.updateSearchEditorState(t, e);
+                D.Z.updateSearchEditorState(t, e);
             }),
             F(this, "getPopoutRef", () => {
                 let { current: e } = this._searchFiltersRedesignPopoutRef,
@@ -404,7 +404,7 @@ class W extends i.PureComponent {
                     if ((e.preventDefault(), O.xb(a))) this.blurEditor();
                     else {
                         let e = O.FZ(a);
-                        w.Z.updateSearchEditorState(o, e), this.setState({ focused: !0 });
+                        D.Z.updateSearchEditorState(o, e), this.setState({ focused: !0 });
                     }
                     return !0;
                 }
@@ -480,7 +480,7 @@ function K(e) {
                         query: r,
                         queryString: n,
                     }),
-                    w.Z.updateSearchMode(t, G.QIO.NEWEST),
+                    D.Z.updateSearchMode(t, G.QIO.NEWEST),
                     t.type === G.aib.DMS
                         ? L.Z.fetchCrossDMMessages({
                               searchContext: t,
@@ -511,8 +511,8 @@ function K(e) {
             return null;
         }),
         A = (0, N.nP)({ location: "Search" }),
-        D = (0, N.KS)({ location: "Search" }),
-        x = A || D,
+        w = (0, N.KS)({ location: "Search" }),
+        x = A || w,
         M = (0, C.UX)({ location: "Search" }),
         U = i.useMemo(
             () =>

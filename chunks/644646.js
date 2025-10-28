@@ -44,9 +44,9 @@ let S = function (e) {
             lazyLoad: N = !1,
             style: R,
             showShine: P = !0,
-            location: D,
+            location: w,
         } = e,
-        w = (0, _.O5)(),
+        D = (0, _.O5)(),
         L = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         x = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
@@ -55,7 +55,7 @@ let S = function (e) {
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    w({
+                    D({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -68,7 +68,7 @@ let S = function (e) {
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [w, a.id, e, C],
+            [D, a.id, e, C],
         ),
         U = i.useRef(null),
         G = i.useRef(h),
@@ -164,7 +164,7 @@ let S = function (e) {
                           !x &&
                           (0, r.jsx)(T, {
                               appFocused: L,
-                              location: D,
+                              location: w,
                           }),
                       "text" === S &&
                           (0, r.jsx)(c.Text, {

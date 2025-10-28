@@ -23,9 +23,9 @@ function f(e) {
         m = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
         b = (0, l.zPA)();
     if (!0 !== f || null == p || null == g) return null;
-    let h = null == n || null == (t = n.current) ? void 0 : t.getBoundingClientRect();
-    if (null == h || null == m) return null;
-    let y = (function (e, t) {
+    let y = null == n || null == (t = n.current) ? void 0 : t.getBoundingClientRect();
+    if (null == y || null == m) return null;
+    let h = (function (e, t) {
         let { id: n, itemType: i, itemPreviewProps: a } = e;
         if ("WIDGET" === i && (null == a ? void 0 : a.widget) != null)
             return (0, r.jsx)("div", {
@@ -67,12 +67,12 @@ function f(e) {
         }
         return null;
     })(g, m);
-    if (null == y) return null;
-    let v = p.x - h.left - 60 * !!b,
-        O = p.y - h.top;
+    if (null == h) return null;
+    let v = p.x - y.left - 60 * !!b,
+        O = p.y - y.top;
     return (0, r.jsx)("div", {
         className: d.container,
         style: { transform: "translate(".concat(v, "px, ").concat(O, "px)") },
-        children: y,
+        children: h,
     });
 }

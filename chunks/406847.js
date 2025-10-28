@@ -1,24 +1,24 @@
-n.d(e, { Z: () => o });
+n.d(e, { Z: () => a });
 var i = n(524437),
     l = n(995774),
     u = n(509613),
     r = n(695346),
     s = n(313789),
-    a = n(388032);
-let o = (0, u.Em)(s.n.REACTION_NOTIFICATIONS, {
-    useTitle: () => a.intl.string(a.t.Rq0NFs),
-    useSubtitle: () => a.intl.string(a.t.oWF6eQ),
+    o = n(388032);
+let a = (0, u.Em)(s.n.REACTION_NOTIFICATIONS, {
+    useTitle: () => o.intl.string(o.t.Rq0NFs),
+    useSubtitle: () => o.intl.string(o.t.oWF6eQ),
     useOptions: () => [
         {
-            label: a.intl.string(a.t["9x/RtT"]),
+            label: o.intl.string(o.t["9x/RtT"]),
             value: i.Ns.NOTIFICATIONS_ENABLED,
         },
         {
-            label: a.intl.string(a.t.fJAbQd),
+            label: o.intl.string(o.t.fJAbQd),
             value: i.Ns.ONLY_DMS,
         },
         {
-            label: a.intl.string(a.t["xu+UDU"]),
+            label: o.intl.string(o.t["xu+UDU"]),
             value: i.Ns.NOTIFICATIONS_DISABLED,
         },
     ],

@@ -40,8 +40,8 @@ function _(e, t) {
                               h = (null == c ? void 0 : c[o.IN]) != null,
                               j = g.intl.string(m.default["/egwJA"]),
                               C = h ? void 0 : g.intl.string(m.default.W6Vwn3),
-                              I = h ? void 0 : g.intl.string(m.default.lvk1Gc),
-                              w = h ? g.intl.string(m.default["9CfkLO"]) : g.intl.string(g.t["+7XY31"]),
+                              w = h ? void 0 : g.intl.string(m.default.lvk1Gc),
+                              I = h ? g.intl.string(m.default["9CfkLO"]) : g.intl.string(g.t["+7XY31"]),
                               E = h ? "secondary" : "expressive",
                               Z = i
                                   ? () => {
@@ -93,12 +93,12 @@ function _(e, t) {
                                                           title: d,
                                                           description: g.intl.string(m.default.BBRFRd),
                                                           powerups: e,
-                                                          footerInfoText: I,
+                                                          footerInfoText: w,
                                                           footerAction:
-                                                              i && null != Z && null != w
+                                                              i && null != Z && null != I
                                                                   ? {
                                                                         variant: E,
-                                                                        text: w,
+                                                                        text: I,
                                                                         icon: "expressive" === E ? a.Ucv : void 0,
                                                                         onClick: Z,
                                                                     }

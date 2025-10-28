@@ -1,8 +1,8 @@
-n.d(t, { Z: () => g }), n(388685), n(781311);
+n.d(t, { Z: () => b }), n(388685), n(781311);
 var a = n(951288),
     r = n(647438),
-    i = n(399606),
-    l = n(481060),
+    l = n(399606),
+    i = n(481060),
     o = n(100527),
     s = n(594174),
     c = n(597688),
@@ -57,19 +57,19 @@ let f = (e) => {
             )
         );
     },
-    g = () => {
-        let e = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-            t = (0, i.e7)([c.Z], () => c.Z.categories),
-            n = (0, i.e7)([d.Z], () => d.Z.purchases),
-            m = (0, i.e7)([c.Z], () => c.Z.lastSuccessfulFetch),
-            g = t.size > 0 && n.size > 0 && null != m,
-            { isFetching: b, categories: v } = (0, u.ZP)({
+    b = () => {
+        let e = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
+            t = (0, l.e7)([c.Z], () => c.Z.categories),
+            n = (0, l.e7)([d.Z], () => d.Z.purchases),
+            m = (0, l.e7)([c.Z], () => c.Z.lastSuccessfulFetch),
+            b = t.size > 0 && n.size > 0 && null != m,
+            { isFetching: g, categories: v } = (0, u.ZP)({
                 logPerf: !1,
                 stalePurchasesOK: !0,
-                noOp: g,
+                noOp: b,
             }),
-            j = g ? t : v,
-            _ = g || (!b && j.size > 0),
+            j = b ? t : v,
+            _ = b || (!g && j.size > 0),
             [y, C] = r.useState(""),
             [S, E] = r.useState(null),
             [T, O] = r.useState(null);
@@ -82,13 +82,13 @@ let f = (e) => {
                 t = c.Z.getCategoryForProduct(y);
             null != e && null != t ? (E(e), O(t)) : (E(null), O(null));
         }, [y, _]),
-        b)
-            ? (0, a.jsx)(l.Text, {
+        g)
+            ? (0, a.jsx)(i.Text, {
                   variant: "text-md/normal",
                   children: "Loading categories and collectibles...",
               })
             : null == e
-              ? (0, a.jsx)(l.Text, {
+              ? (0, a.jsx)(i.Text, {
                     variant: "text-md/normal",
                     children: "No user found",
                 })
@@ -98,26 +98,26 @@ let f = (e) => {
                         (0, a.jsxs)("div", {
                             className: x.section,
                             children: [
-                                (0, a.jsx)(l.Heading, {
+                                (0, a.jsx)(i.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Configuration",
                                 }),
                                 (0, a.jsxs)("div", {
                                     className: x.inputSection,
                                     children: [
-                                        (0, a.jsx)(l.Text, {
+                                        (0, a.jsx)(i.Text, {
                                             variant: "text-md/semibold",
                                             className: x.inputLabel,
                                             children: "Primary Product SKU ID",
                                         }),
-                                        (0, a.jsx)(l.oil, {
+                                        (0, a.jsx)(i.oil, {
                                             value: y,
                                             onChange: C,
                                             placeholder: "Enter product SKU ID",
                                         }),
                                         !_ &&
                                             "" !== y.trim() &&
-                                            (0, a.jsx)(l.Text, {
+                                            (0, a.jsx)(i.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.loadingText,
                                                 children: "Loading products...",
@@ -125,13 +125,13 @@ let f = (e) => {
                                         _ &&
                                             "" !== y.trim() &&
                                             null == S &&
-                                            (0, a.jsx)(l.Text, {
+                                            (0, a.jsx)(i.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.errorText,
                                                 children: "Product not found",
                                             }),
                                         null != S &&
-                                            (0, a.jsxs)(l.Text, {
+                                            (0, a.jsxs)(i.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.successText,
                                                 children: ["Found: ", S.name],
@@ -143,7 +143,7 @@ let f = (e) => {
                         (0, a.jsxs)("div", {
                             className: x.section,
                             children: [
-                                (0, a.jsx)(l.Heading, {
+                                (0, a.jsx)(i.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Preview",
                                 }),
@@ -157,7 +157,7 @@ let f = (e) => {
                                                   category: T,
                                                   tab: h.AW.HOME,
                                               }),
-                                              (0, a.jsx)(l.Button, {
+                                              (0, a.jsx)(i.Button, {
                                                   variant: "primary",
                                                   onClick: () => {
                                                       null != S &&
@@ -173,7 +173,7 @@ let f = (e) => {
                                       })
                                     : (0, a.jsx)("div", {
                                           className: x.placeholder,
-                                          children: (0, a.jsx)(l.Text, {
+                                          children: (0, a.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               className: x.mutedText,
                                               children: "Enter a valid product SKU ID to see the preview",

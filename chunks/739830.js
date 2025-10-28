@@ -66,7 +66,7 @@ function g(e) {
             }
         );
     }, []);
-    let y = p.intl.string(p.t.h850Ss);
+    let _ = p.intl.string(p.t.h850Ss);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: b,
         shouldShow: g,
@@ -91,9 +91,9 @@ function g(e) {
                 f(h({}, e), {
                     ref: b,
                     onClick: () => m((e) => !e),
-                    tooltip: i ? null : y,
+                    tooltip: i ? null : _,
                     icon: n === d.iN.NO_MESSAGES ? l.owu : l.Dkj,
-                    "aria-label": y,
+                    "aria-label": _,
                     selected: i,
                 }),
             );

@@ -80,8 +80,8 @@ let C = {
     N = (0, a.range)(0, 11),
     R = (0, a.range)(0, 2.25, 0.25),
     P = (0, a.range)(1, 11),
-    D = (0, a.range)(1, 26),
-    w = () => [
+    w = (0, a.range)(1, 26),
+    D = () => [
         {
             location: y.Hn.CHAT_INPUT,
             title: O.intl.string(O.t.elTtyz),
@@ -251,10 +251,10 @@ function j(e) {
                     (0, r.jsx)(M, { children: O.intl.string(O.t.xoldVn) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: c,
-                        markers: D,
+                        markers: w,
                         stickToMarkers: !0,
-                        minValue: D[0],
-                        maxValue: D[D.length - 1],
+                        minValue: w[0],
+                        maxValue: w[w.length - 1],
                         initialValue: a,
                         onValueChange: (e) => s({ confettiSize: e }, 0),
                         onValueRender: (e) => "".concat(e),
@@ -263,7 +263,7 @@ function j(e) {
             }),
             (0, r.jsx)(x, {
                 disabled: c,
-                locations: w(),
+                locations: D(),
                 settingsLocations: o,
                 onChange: (e) => s({ confettiEnabledLocations: e }, 0),
             }),

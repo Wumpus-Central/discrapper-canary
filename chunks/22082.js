@@ -101,15 +101,15 @@ function P(e) {
         )),
         (v[e] = Date.now()));
 }
-function D() {
+function w() {
     g.default.keys(O).forEach((e) => {
         let t = O[e];
         O[e] = new Set([...t].filter((t) => !h.ZP.isChannelOrParentOptedIn(e, t)));
     });
 }
-class w extends (r = i.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(c.default, u.Z, d.ZP, f.ZP, _.Z, p.ZP, h.ZP, l.Z), this.syncWith([h.ZP], D);
+        this.waitFor(c.default, u.Z, d.ZP, f.ZP, _.Z, p.ZP, h.ZP, l.Z), this.syncWith([h.ZP], w);
     }
     getNewChannelIds(e) {
         var t;
@@ -127,8 +127,8 @@ class w extends (r = i.ZP.Store) {
         );
     }
 }
-b(w, "displayName", "NewChannelsStore");
-let L = new w(a.Z, {
+b(D, "displayName", "NewChannelsStore");
+let L = new D(a.Z, {
     BULK_CLEAR_RECENTS: S,
     CHANNEL_ACK: () => !0,
     CHANNEL_SELECT: A,

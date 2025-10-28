@@ -43,10 +43,10 @@ function E(e) {
             [v, O, n],
         ),
         P = O || void 0 !== A ? null != A : (I ? S : T) != null;
-    function D() {
+    function w() {
         (0, p.PO)(null == n ? void 0 : n.id, null);
     }
-    let w = b ? l.gtL : s.zx;
+    let D = b ? l.gtL : s.zx;
     return (0, r.jsxs)(h.Z, {
         className: a,
         forcedDivider: E,
@@ -57,7 +57,7 @@ function E(e) {
             (0, r.jsxs)("div", {
                 className: g.buttonsContainer,
                 children: [
-                    (0, r.jsx)(w, {
+                    (0, r.jsx)(D, {
                         size: s.zx.Sizes.SMALL,
                         onClick: R,
                         className: o()({ [g.buttonHighlighted]: b }),
@@ -71,7 +71,7 @@ function E(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 text: (0, u.ad)(t, n) ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.OrokWm),
-                                onClick: D,
+                                onClick: w,
                             }),
                         }),
                 ],

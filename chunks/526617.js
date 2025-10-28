@@ -34,8 +34,8 @@ var r = n(951288),
     N = n(594174),
     R = n(979651),
     P = n(259580),
-    D = n(626135),
-    w = n(74538),
+    w = n(626135),
+    D = n(74538),
     L = n(887766),
     x = n(763296),
     M = n(697426),
@@ -243,7 +243,7 @@ function eu(e) {
         ey = i.useMemo(() => $(Q({}, eb), { section: Y.jXE.SOUNDBOARD_SOUND_PICKER }), [eb]),
         [eO, ev] = i.useState(null),
         eI = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
-        eT = (0, w.I5)(eI, K.PremiumTypes.TIER_2),
+        eT = (0, D.I5)(eI, K.PremiumTypes.TIER_2),
         eS = (0, l.e7)([R.Z], () => {
             var e;
             return R.Z.getVoiceState(t, null != (e = null == eI ? void 0 : eI.id) ? e : Y.lds);
@@ -256,14 +256,14 @@ function eu(e) {
         eN = null != eC && "" !== eC,
         eR = (0, m.Dt)(),
         eP = L.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
-        { categories: eD, allSounds: ew, soundCounts: eL } = (0, B.ZP)(a, {}, e_),
+        { categories: ew, allSounds: eD, soundCounts: eL } = (0, B.ZP)(a, {}, e_),
         [ex, eM] = i.useState([]),
-        ek = (0, B.FS)(eD, ex, eC),
+        ek = (0, B.FS)(ew, ex, eC),
         ej = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
         [eU, eG] = i.useState(!1),
         eB = i.useMemo(() => ek.filter((e) => e.items.length > 0), [ek]),
         eZ = i.useMemo(
-            () => eB.findLastIndex((e) => !!(0, w._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+            () => eB.findLastIndex((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
             [eB],
         ),
         eF = !eT && J && -1 !== eZ,
@@ -271,7 +271,7 @@ function eu(e) {
         eH = A.T4.useSetting(),
         eY = i.useMemo(() => new Set(eH), [eH]),
         eW = null == a,
-        eK = w.ZP.canUseCustomCallSounds(eI),
+        eK = D.ZP.canUseCustomCallSounds(eI),
         ez = i.useCallback(
             (e) => {
                 eY.has(e) ? eY.delete(e) : eY.add(e), A.T4.updateSetting(Array.from(eY));
@@ -287,7 +287,7 @@ function eu(e) {
                     var i;
                     (0, k.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
                         eN &&
-                            D.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
+                            w.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
                                 channel_id: null == a ? void 0 : a.id,
                                 query: eC,
@@ -369,7 +369,7 @@ function eu(e) {
             null != e && ev(e);
         }, []),
         e0 = i.useCallback(() => {
-            let e = (0, w.Px)(K.PremiumTypes.TIER_2);
+            let e = (0, D.Px)(K.PremiumTypes.TIER_2);
             return z.intl.format(z.t["tw/SSq"], {
                 nitroTierName: e,
                 onClick: e$,
@@ -391,7 +391,7 @@ function eu(e) {
                     o = eJ(n, t),
                     s = eY.has(i),
                     l = () => {
-                        D.default.track(Y.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                        w.default.track(Y.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: { page: Y.ZY5.SOUNDBOARD_POPOUT },
                             tab: W.X1.SOUNDBOARD,
                             guild_id: null != t ? t : null,
@@ -427,7 +427,7 @@ function eu(e) {
             },
             [eZ, eF, eB.length],
         ),
-        e5 = i.useCallback((e) => eM((0, G.cK)(e, Array.from(ew.values()).flat(), eI, a, eg)), [a, eI, ew, eg]),
+        e5 = i.useCallback((e) => eM((0, G.cK)(e, Array.from(eD.values()).flat(), eI, a, eg)), [a, eI, eD, eg]),
         e6 = i.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
@@ -468,13 +468,13 @@ function eu(e) {
             (e) =>
                 (0, r.jsx)(Z.Z, {
                     soundboardListRef: e,
-                    categories: eD,
+                    categories: ew,
                     shouldUpsellLockedCategories: eF,
                     listPadding: ed,
                     guildId: t,
                     inExpressionPicker: ep,
                 }),
-            [eD, eF, ed, t, ep],
+            [ew, eF, ed, t, ep],
         ),
         te = i.useCallback(() => {
             if (eF) {
@@ -557,7 +557,7 @@ function eu(e) {
                               is_external: !0,
                               location: $(Q({}, ey), { object: Y.qAy.SOUNDBOARD_SOUND }),
                               location_stack: eE,
-                              sku_id: w.ZP.getSkuIdForPremiumType(K.PremiumTypes.TIER_2),
+                              sku_id: D.ZP.getSkuIdForPremiumType(K.PremiumTypes.TIER_2),
                           },
                           onClose: () => ev(null),
                           onLearnMore: g,

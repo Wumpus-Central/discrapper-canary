@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -28,15 +28,15 @@ var i = n(120356),
     N = n(757182),
     R = n(910424),
     P = n(981631),
-    D = n(964719);
-let w = (0, u.Z)((e) => {
+    w = n(964719);
+let D = (0, u.Z)((e) => {
     let {
             activity: t,
             embeddedActivity: n,
             user: i,
             applicationStream: o,
             className: u,
-            guildId: w,
+            guildId: D,
             channelId: L,
             source: x,
             buttonVariant: M,
@@ -74,7 +74,7 @@ let w = (0, u.Z)((e) => {
                 let e = (0, r.jsx)(C.Z, {
                         activity: t,
                         user: i,
-                        guildId: w,
+                        guildId: D,
                         channelId: L,
                         source: x,
                         onAction: j,
@@ -150,7 +150,7 @@ let w = (0, u.Z)((e) => {
         align: f.Z.Align.STRETCH,
         direction: Z,
         wrap: Y ? f.Z.Wrap.WRAP : f.Z.Wrap.NO_WRAP,
-        className: a()(u, D.buttonsWrapper, Y ? D.vertical : D.horizontal),
+        className: a()(u, w.buttonsWrapper, Y ? w.vertical : w.horizontal),
         children: H(),
     });
 });

@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(602733),
     m = n(594174),
     b = n(221292),
-    h = n(621853),
-    y = n(661462),
+    y = n(621853),
+    h = n(661462),
     v = n(319396),
     O = n(778567),
     j = n(228168),
@@ -26,12 +26,12 @@ function P(e) {
             wishlistId: n,
             currentUser: P,
             wishlistSettings: I,
-        } = (0, l.cj)([h.Z, m.default], () => {
-            let e = h.Z.getFirstWishlistId(t.id);
+        } = (0, l.cj)([y.Z, m.default], () => {
+            let e = y.Z.getFirstWishlistId(t.id);
             return {
                 wishlistId: e,
                 currentUser: m.default.getCurrentUser(),
-                wishlistSettings: null != e ? h.Z.getWishlistSettings(t.id, e) : null,
+                wishlistSettings: null != e ? y.Z.getWishlistSettings(t.id, e) : null,
             };
         }),
         { analyticsLocations: w } = (0, d.ZP)(),
@@ -63,7 +63,7 @@ function P(e) {
     return null != k
         ? null
         : null == D || 0 === D.items.length
-          ? (0, r.jsx)(y.F, {
+          ? (0, r.jsx)(h.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
                     className: _.emptyStateContainer,
@@ -94,7 +94,7 @@ function P(e) {
                     ],
                 }),
             })
-          : (0, r.jsxs)(y.F, {
+          : (0, r.jsxs)(h.F, {
                 className: _.scroller,
                 fade: !0,
                 children: [

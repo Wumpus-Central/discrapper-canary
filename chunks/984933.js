@@ -46,8 +46,8 @@ let T = "SELECTABLE",
     N = {},
     R = {},
     P = null,
-    D = {},
-    w = {
+    w = {},
+    D = {
         comparator: -1,
         channel: (0, _.createChannelRecord)({
             id: v.Sc2,
@@ -63,7 +63,7 @@ function k(e) {
         id: e,
         [T]: [],
         [S]: [],
-        [v.d4z.GUILD_CATEGORY]: [w],
+        [v.d4z.GUILD_CATEGORY]: [D],
         count: 0,
     };
 }
@@ -123,18 +123,18 @@ function V(e) {
             )
                 return;
             let i = B(r.type);
-            r.type === v.d4z.GUILD_DIRECTORY && (null == D[t] && (D[t] = []), D[t].push(n)),
+            r.type === v.d4z.GUILD_DIRECTORY && (null == w[t] && (w[t] = []), w[t].push(n)),
                 null != e[i] && e[i].push(n);
         }),
         e
     );
 }
 function H() {
-    (C = {}), (D = {}), (N = {}), (R = {}), null != A && Y(A);
+    (C = {}), (w = {}), (N = {}), (R = {}), null != A && Y(A);
 }
 function Y(e) {
     let t = k(e);
-    return (C[e] = t), (D[e] = []), V(t), G(t), W(t), en(e), t;
+    return (C[e] = t), (w[e] = []), V(t), G(t), W(t), en(e), t;
 }
 function W(e) {
     let t = (N[e.id] = {}),
@@ -161,7 +161,7 @@ function z(e) {
     let {
         guild: { id: t },
     } = e;
-    return delete C[t], delete N[t], delete R[t], delete D[t], !0;
+    return delete C[t], delete N[t], delete R[t], delete w[t], !0;
 }
 function q(e) {
     let { guildId: t, user: n } = e;
@@ -289,7 +289,7 @@ class el extends (r = s.ZP.Store) {
         var t, n;
         return null !=
             (n =
-                null == (t = D[e])
+                null == (t = w[e])
                     ? void 0
                     : t.map((e) => {
                           let { channel: t } = e;

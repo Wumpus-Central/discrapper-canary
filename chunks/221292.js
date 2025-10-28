@@ -3,9 +3,9 @@ n.d(t, {
     NE: () => P,
     Of: () => L,
     QN: () => A,
-    Qf: () => D,
+    Qf: () => w,
     RV: () => N,
-    TY: () => w,
+    TY: () => D,
     V1: () => x,
     pQ: () => C,
     te: () => T,
@@ -272,7 +272,7 @@ let v = (e) => {
             }),
         );
     },
-    D = (e) => {
+    w = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         u.default.track(
             m.rMx.USER_PROFILE_BADGE_HOVERED,
@@ -282,7 +282,7 @@ let v = (e) => {
             }),
         );
     },
-    w = (e) => {
+    D = (e) => {
         var t, n, r;
         let { displayProfile: i, isProfileOpen: o } = e,
             c = null == i ? void 0 : i.userId,

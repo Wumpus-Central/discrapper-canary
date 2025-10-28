@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,26 +14,26 @@ var r = n(951288),
     g = n(5192),
     m = n(501655),
     b = n(504185),
-    y = n(388032),
-    _ = n(427538);
-let O = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
-    j = function (e) {
+    _ = n(388032),
+    y = n(427538);
+let x = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
+    v = function (e) {
         let { participants: t, channel: n, hasConnectPermission: g } = e,
-            j = (0, u.J)(n.guild_id),
-            x = i.useCallback(() => {
-                j
+            v = (0, u.J)(n.guild_id),
+            j = i.useCallback(() => {
+                v
                     ? (0, d.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id))
                     : s.default.selectVoiceChannel(n.id);
-            }, [n.id, n.guild_id, j]),
-            v = t.filter((e) => e.type === m.Ui.VOICE),
-            C = 4 === v.length ? 2 : 3,
-            I = (0, l.Wu)([o.Z], () => v.map((e) => o.Z.getParticipant(n.id, e.id)).filter(f.lm), [n.id, v]);
+            }, [n.id, n.guild_id, v]),
+            O = t.filter((e) => e.type === m.Ui.VOICE),
+            C = 4 === O.length ? 2 : 3,
+            I = (0, l.Wu)([o.Z], () => O.map((e) => o.Z.getParticipant(n.id, e.id)).filter(f.lm), [n.id, O]);
         return (0, r.jsxs)("div", {
-            className: _.container,
+            className: y.container,
             children: [
                 (0, r.jsx)(h.Z, {}),
                 (0, r.jsx)("div", {
-                    className: _.tiles,
+                    className: y.tiles,
                     style: { maxWidth: 168 * C },
                     children: I.slice(0, 5).map((e) =>
                         (0, r.jsx)(
@@ -41,7 +41,7 @@ let O = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
                             {
                                 participant: e,
                                 channel: n,
-                                className: _.tile,
+                                className: y.tile,
                                 inCall: !0,
                                 noVideoRender: !0,
                                 popoutType: c.P.NO_POPOUT,
@@ -52,44 +52,44 @@ let O = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
                     ),
                 }),
                 (0, r.jsx)(a.Heading, {
-                    className: _.channelName,
+                    className: y.channelName,
                     variant: "heading-xxl/normal",
                     children: n.name,
                 }),
                 (0, r.jsx)("div", {
-                    className: _.participantsRow,
+                    className: y.participantsRow,
                     children: (0, r.jsx)(a.Text, {
                         tag: "div",
                         color: "header-secondary",
                         variant: "heading-lg/normal",
                         children:
-                            0 === v.length
-                                ? y.intl.string(y.t.FUVhyC)
-                                : 1 === v.length
-                                  ? y.intl.formatToPlainString(y.t.EQwZlN, { a: O(n, v[0]) })
-                                  : 2 === v.length
-                                    ? y.intl.formatToPlainString(y.t.zBcKoA, {
-                                          a: O(n, v[0]),
-                                          b: O(n, v[1]),
+                            0 === O.length
+                                ? _.intl.string(_.t.FUVhyC)
+                                : 1 === O.length
+                                  ? _.intl.formatToPlainString(_.t.EQwZlN, { a: x(n, O[0]) })
+                                  : 2 === O.length
+                                    ? _.intl.formatToPlainString(_.t.zBcKoA, {
+                                          a: x(n, O[0]),
+                                          b: x(n, O[1]),
                                       })
-                                    : v.length > 2
-                                      ? y.intl.formatToPlainString(y.t["3AqFaG"], {
-                                            a: O(n, v[0]),
-                                            b: O(n, v[1]),
-                                            n: v.length - 2,
+                                    : O.length > 2
+                                      ? _.intl.formatToPlainString(_.t["3AqFaG"], {
+                                            a: x(n, O[0]),
+                                            b: x(n, O[1]),
+                                            n: O.length - 2,
                                         })
                                       : void 0,
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: _.buttonContainer,
+                    className: y.buttonContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: _.joinButton,
+                            className: y.joinButton,
                             children: (0, r.jsx)(a.Button, {
                                 variant: "overlay-primary",
-                                text: g ? y.intl.string(y.t["7vb2cc"]) : y.intl.string(y.t.TVBCKZ),
-                                onClick: x,
+                                text: g ? _.intl.string(_.t["7vb2cc"]) : _.intl.string(_.t.TVBCKZ),
+                                onClick: j,
                                 disabled: !g,
                             }),
                         }),

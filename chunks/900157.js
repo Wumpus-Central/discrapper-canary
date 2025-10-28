@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(287746),
     m = n(541716),
     b = n(665149),
-    y = n(910611),
-    _ = n(359110),
-    O = n(592125),
-    j = n(703558),
-    x = n(430824),
-    v = n(979651),
+    _ = n(910611),
+    y = n(359110),
+    x = n(592125),
+    v = n(703558),
+    j = n(430824),
+    O = n(979651),
     C = n(664342),
     I = n(124368),
     S = n(981631),
@@ -70,11 +70,11 @@ function T(e, t) {
 }
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
-        R = (0, s.e7)([O.Z], () => O.Z.getChannel(t)),
-        w = (0, s.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
+        R = (0, s.e7)([x.Z], () => x.Z.getChannel(t)),
+        w = (0, s.e7)([j.Z], () => j.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
     var D = R;
-    let L = (0, s.e7)([v.Z], () => null != D && !a().isEmpty(v.Z.getVoiceStatesForChannel(D.id)));
+    let L = (0, s.e7)([O.Z], () => null != D && !a().isEmpty(O.Z.getVoiceStatesForChannel(D.id)));
     i.useEffect(() => {
         L &&
             null != D &&
@@ -82,14 +82,14 @@ function N(e) {
                 type: "SIDEBAR_CLOSE",
                 baseChannelId: D.parent_id,
             }),
-            (0, _.ad)(D, { source: I.on.VOICE_AUTO_OPEN }));
+            (0, y.ad)(D, { source: I.on.VOICE_AUTO_OPEN }));
     }, [L, D]);
     let M = i.useRef(!1);
     if (
         (i.useEffect(() => {
             if (null == R || M.current) return;
             M.current = !0;
-            let e = (0, p.K)(O.Z.getChannel(R.id), !0);
+            let e = (0, p.K)(x.Z.getChannel(R.id), !0);
             (0, u.yw)(S.rMx.CHANNEL_OPENED, T(P({}, e, (0, u.$H)(R.id)), { channel_view: N })),
                 (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
         }, [R, N]),
@@ -104,12 +104,12 @@ function N(e) {
         children: [
             (0, r.jsx)(d.Z, {
                 channel: R,
-                draftType: j.d.ChannelMessage,
+                draftType: v.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: k,
                 "aria-label": E.intl.string(E.t.Pwe8tN),
-                children: (0, y.ud)({
+                children: (0, _.ud)({
                     channel: R,
                     channelName: A,
                     guild: w,
@@ -121,7 +121,7 @@ function N(e) {
                         });
                     },
                     handleClick: function () {
-                        null != R && (0, _.Kh)(R.id);
+                        null != R && (0, y.Kh)(R.id);
                     },
                 }),
             }),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(990547),
-    l = n(442837),
+    l = n(990547),
+    i = n(442837),
     o = n(544891),
     s = n(481060),
     c = n(893776),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(213609),
     x = n(429142),
     f = n(144114),
-    g = n(210887),
-    b = n(23434),
+    b = n(210887),
+    g = n(23434),
     v = n(1964),
     j = n(762756),
     _ = n(308569),
@@ -65,17 +65,17 @@ function T(e, t) {
     );
 }
 function O() {
-    let { action: e, theme: t } = (0, l.cj)([b.Z, g.Z], () => ({
-            action: b.Z.getAction(),
-            theme: g.Z.theme,
+    let { action: e, theme: t } = (0, i.cj)([g.Z, b.Z], () => ({
+            action: g.Z.getAction(),
+            theme: b.Z.theme,
         })),
         O = v.Z.getVerificationTypes(e),
         [N, P] = r.useState(0),
         I = (0, m.Z)(O);
     (0, h.Z)(
         {
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.USER_ACTION_REQUIRED,
+            type: l.ImpressionTypes.MODAL,
+            name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
                 verification_type: O[0],
                 verification_types: O,

@@ -75,7 +75,7 @@ function P(e, t) {
         e
     );
 }
-let D = () =>
+let w = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
@@ -84,7 +84,7 @@ let D = () =>
                 children: O.intl.string(O.t.TR2B4T),
             }),
         }),
-    w = () =>
+    D = () =>
         (0, r.jsx)("div", {
             className: v.comparisonTablePill,
             children: (0, r.jsx)(c.Heading, {
@@ -275,7 +275,7 @@ let D = () =>
             j = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_2),
             B = (0, b.e)();
         if (!I || !T) return null;
-        n = l ? null : null != S ? (0, r.jsx)(w, {}) : (0, r.jsx)(D, {});
+        n = l ? null : null != S ? (0, r.jsx)(D, {}) : (0, r.jsx)(w, {});
         let Z = A === y.Si.TIER_0 || u === y.PremiumTypes.TIER_0;
         return (0, r.jsx)(f.Gt, {
             value: O,

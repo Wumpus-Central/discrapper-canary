@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(455731),
     m = n(272289),
     b = n(39642);
-function h(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function y(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -60,23 +60,23 @@ function y(e, t) {
 }
 let v = (e) => {
         var { widget: t } = e,
-            n = y(e, ["widget"]);
+            n = h(e, ["widget"]);
         switch (t.type) {
             case i.l.FAVORITE_GAMES:
-                return (0, r.jsx)(f.Z, h({ widget: t }, n));
+                return (0, r.jsx)(f.Z, y({ widget: t }, n));
             case i.l.CURRENT_GAMES:
-                return (0, r.jsx)(d.Z, h({ widget: t }, n));
+                return (0, r.jsx)(d.Z, y({ widget: t }, n));
             case i.l.WANT_TO_PLAY_GAMES:
-                return (0, r.jsx)(p.Z, h({ widget: t }, n));
+                return (0, r.jsx)(p.Z, y({ widget: t }, n));
             case i.l.PLAYED_GAMES:
-                return (0, r.jsx)(g.Z, h({ widget: t }, n));
+                return (0, r.jsx)(g.Z, y({ widget: t }, n));
             default:
                 return null;
         }
     },
     O = (e) => {
         var { widget: t, user: n, disableInteraction: i } = e,
-            d = y(e, ["widget", "user", "disableInteraction"]);
+            d = h(e, ["widget", "user", "disableInteraction"]);
         let f = (0, c.FX)(t),
             { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(f),
             O = (0, a.e7)([l.default], () => l.default.getId() === n.id),
@@ -87,7 +87,7 @@ let v = (e) => {
             I = 1 === (0, o.Gv)(f.type);
         return (0, r.jsx)(
             v,
-            h(
+            y(
                 {
                     widget: f,
                     user: n,

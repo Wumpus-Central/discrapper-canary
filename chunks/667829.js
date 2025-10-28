@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(4484),
     R = n(925994),
     P = n(981631),
-    D = n(388032),
-    w = n(564355);
+    w = n(388032),
+    D = n(564355);
 function L(e, t, n) {
     return (
         t in e
@@ -228,7 +228,7 @@ class G extends i.Component {
     }
     getPlaceholder() {
         let { disabled: e, placeholder: t, isPreviewing: n, showValueWhenDisabled: r } = this.props;
-        return e && !n ? (r ? "" : D.intl.string(D.t.IYKTTc)) : t;
+        return e && !n ? (r ? "" : w.intl.string(w.t.IYKTTc)) : t;
     }
     render() {
         var e, t, n, i, a, s;
@@ -249,7 +249,7 @@ class G extends i.Component {
                 className: S,
                 id: A,
                 required: R,
-                maxCharacterCount: D,
+                maxCharacterCount: w,
                 allowNewLines: L,
                 isEditorIdle: M,
                 currentAutocompleteType: j,
@@ -261,9 +261,9 @@ class G extends i.Component {
             { submitting: F, popup: V } = this.state,
             H = {
                 channel: m,
-                className: o()(S, w.textArea, {
-                    [w.textAreaSlate]: E,
-                    [w.textAreaDisabled]: u || F,
+                className: o()(S, D.textArea, {
+                    [D.textAreaSlate]: E,
+                    [D.textAreaDisabled]: u || F,
                 }),
                 id: A,
                 placeholder: this.getPlaceholder(),
@@ -286,10 +286,10 @@ class G extends i.Component {
                 onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: o()({
-                    [w.textAreaForPostCreation]: g === I.Ie.CREATE_FORUM_POST,
-                    [w.textAreaCustomGift]: g === I.Ie.CUSTOM_GIFT,
-                    [w.textAreaForUserProfile]: g === I.Ie.USER_PROFILE,
-                    [w.textAreaForOverlayInlineReply]: g === I.Ie.OVERLAY_INLINE_REPLY,
+                    [D.textAreaForPostCreation]: g === I.Ie.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === I.Ie.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === I.Ie.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === I.Ie.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: b,
                 useNewSlashCommands: y,
@@ -301,7 +301,7 @@ class G extends i.Component {
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== V.id || void 0,
                 "aria-activedescendant": null != (s = V.activeDescendant) ? s : void 0,
-                "aria-invalid": l.length > D,
+                "aria-invalid": l.length > w,
                 "aria-describedby": U,
                 "aria-labelledby": G,
                 "aria-autocomplete": "list",
@@ -484,8 +484,8 @@ class G extends i.Component {
                                 return "is_directory" === t;
                             })) &&
                           (0, h.openUploadError)({
-                              title: D.intl.string(D.t.azO1Pe),
-                              help: D.intl.string(D.t["Koklr/"]),
+                              title: w.intl.string(w.t.azO1Pe),
+                              help: w.intl.string(w.t["Koklr/"]),
                           }),
                       !1)
                     : (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), O(I), this.focus(), !0);

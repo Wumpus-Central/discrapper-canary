@@ -51,7 +51,7 @@ function E(e) {
     function P(e) {
         S(e);
     }
-    function D() {
+    function w() {
         return null == E
             ? null
             : (0, r.jsx)("div", {
@@ -62,7 +62,7 @@ function E(e) {
                   }),
               });
     }
-    function w() {
+    function D() {
         return "localhost" !== T
             ? null
             : (0, r.jsx)("div", {
@@ -99,7 +99,7 @@ function E(e) {
         onClose: t,
         transitionState: n,
         children: [
-            D(),
+            w(),
             (0, r.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 align: d.Z.Align.START,
@@ -138,7 +138,7 @@ function E(e) {
                             placeholder: "URL Origin Type",
                         }),
                     }),
-                    w(),
+                    D(),
                 ],
             }),
         ],

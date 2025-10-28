@@ -110,12 +110,12 @@ function S(e) {
         N = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: R } = (0, p.Y)(),
         P = C(R, g, b, n.contentType, n.originalContentType),
-        D = null != d && 0 !== d && null != _ && 0 !== _;
-    if ("VIDEO" === I && D && null != b) {
-        var w;
+        w = null != d && 0 !== d && null != _ && 0 !== _;
+    if ("VIDEO" === I && w && null != b) {
+        var D;
         let e = T(b);
         if (null == e) return null;
-        let t = null != (w = n.renderLinkComponent) ? w : c.iT;
+        let t = null != (D = n.renderLinkComponent) ? D : c.iT;
         return (0, r.jsx)(
             s.Z,
             y(E({}, N), {
@@ -141,7 +141,7 @@ function S(e) {
     }
     return (
         "IMAGE" === I &&
-            (t = D
+            (t = w
                 ? (0, r.jsx)(
                       o.ZP,
                       y(E({}, N), {

@@ -30,13 +30,13 @@ function d(e) {
         N = i.useContext(l.S),
         R = (0, s.C)(),
         P = null != (a = null == (t = (n = (0, c.ZF)()).isWindowFocused) ? void 0 : t.call(n)) ? a : R,
-        [D, w] = i.useState(void 0),
+        [w, D] = i.useState(void 0),
         L = i.useRef(null),
         { rive: x, RiveComponent: M } = (0, o.useRive)({
             eventTarget: null == E ? void 0 : E.current,
             buffer: d,
             autoplay: _,
-            stateMachines: D,
+            stateMachines: w,
             artboard: b,
             useOffscreenRenderer: !0,
             layout: new o.Layout({
@@ -94,8 +94,8 @@ function d(e) {
         }, [x, h]),
         i.useEffect(() => {
             null != x &&
-                null == D &&
-                (w(x.stateMachineNames),
+                null == w &&
+                (D(x.stateMachineNames),
                 x.reset({
                     stateMachines: x.stateMachineNames,
                     autoplay: _,
@@ -103,7 +103,7 @@ function d(e) {
                     autoBind: !0,
                 }),
                 x.setupRiveListeners());
-        }, [x, _, D, b]);
+        }, [x, _, w, b]);
     let k = i.useRef(0);
     i.useEffect(() => {
         if (null == x) return;

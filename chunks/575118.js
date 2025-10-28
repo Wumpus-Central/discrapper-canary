@@ -176,13 +176,13 @@ function I(e) {
             color: "text-primary",
             children: a,
         }),
-        D = (0, r.jsx)(p.x, {
+        w = (0, r.jsx)(p.x, {
             className: m.headerSubtitle,
             variant: "text-md/normal",
             color: "text-secondary",
             children: l,
         }),
-        w = null != n ? R : P,
+        D = null != n ? R : P,
         L = (0, r.jsx)("header", {
             className: o()(m.section, m.header, { [m.headerCentered]: g }),
             children: (0, r.jsxs)(_.K, {
@@ -196,13 +196,13 @@ function I(e) {
                             hasGradient: A,
                             children: (0, r.jsx)("div", {
                                 className: m.headerMain,
-                                children: w,
+                                children: D,
                             }),
                         }),
                     }),
                     (0, r.jsx)(T, { badge: i }),
                     null != n && null != a && P,
-                    null != l && D,
+                    null != l && w,
                 ],
             }),
         });

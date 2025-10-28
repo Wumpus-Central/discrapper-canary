@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(464891),
     R = n(348238),
     P = n(83561),
-    D = n(834129),
-    w = n(981631),
+    w = n(834129),
+    D = n(981631),
     L = n(674563),
     x = n(388032),
     M = n(682392);
@@ -390,7 +390,7 @@ function W(e) {
             });
     }
     function f() {
-        null != o && v.Z.open(o, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+        null != o && v.Z.open(o, D.pNK.GUILD_AUTOMOD, void 0, D.KsC.AUTOMOD_MENTION_SPAM);
     }
     return (0, r.jsx)(K, {
         compact: a,
@@ -494,7 +494,7 @@ function z(e) {
     return (0, r.jsx)("div", {
         onMouseEnter: l,
         onMouseLeave: c,
-        children: (0, r.jsx)(D.Z, {
+        children: (0, r.jsx)(w.Z, {
             className: o()(M.mainContainer, { [M.compact]: n }),
             iconNode: n ? null : (0, r.jsx)(P.S, { src: s }),
             iconContainerClassName: M.iconContainer,

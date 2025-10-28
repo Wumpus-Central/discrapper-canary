@@ -28,8 +28,8 @@ var i = n(442837),
     N = n(981631),
     R = n(474936),
     P = n(388032),
-    D = n(359739),
-    w = n(611344);
+    w = n(359739),
+    D = n(611344);
 function L(e, t, n) {
     return (
         t in e
@@ -138,7 +138,7 @@ function j(e) {
                     price: a,
                     isSelected: e === B,
                     onSelect: (e) => J(e),
-                    className: D.recommendedGiftPreview,
+                    className: w.recommendedGiftPreview,
                 },
                 e,
             );
@@ -150,18 +150,18 @@ function j(e) {
                 pendingText: s,
                 currentText: s,
                 disableThemedBackground: !0,
-                className: D.customGiftMessageWrapper,
-                innerClassName: D.customGiftMessage,
+                className: w.customGiftMessageWrapper,
+                innerClassName: w.customGiftMessage,
             }),
         et = () =>
             q
                 ? (0, r.jsxs)("div", {
-                      className: D.bodyColumnLeft,
+                      className: w.bodyColumnLeft,
                       children: [
                           (0, r.jsx)(a.Text, {
                               variant: "text-xs/bold",
                               color: "header-secondary",
-                              className: D.selectGiftTitle,
+                              className: w.selectGiftTitle,
                               children: X.toLocaleUpperCase(),
                           }),
                           x.map((e) => $(e)),
@@ -169,19 +169,19 @@ function j(e) {
                       ],
                   })
                 : (0, r.jsx)("div", {
-                      className: D.bodyColumnMiddle,
+                      className: w.bodyColumnMiddle,
                       children: (0, r.jsx)(m.q, { isShopGift: !0 }),
                   }),
         en = () => {
             if (q)
                 return (0, r.jsxs)("div", {
-                    className: D.bodyColumnRight,
+                    className: w.bodyColumnRight,
                     children: [
                         (0, r.jsx)(E.s, { giftRecipient: L }),
                         (0, r.jsx)(m.q, {
                             isShopGift: !0,
-                            className: w.adjustedGiftMainAnimation,
-                            optionsContainerClassName: w.adjustedGiftBoxOptionContainer,
+                            className: D.adjustedGiftMainAnimation,
+                            optionsContainerClassName: D.adjustedGiftBoxOptionContainer,
                         }),
                         ee(),
                     ],
@@ -196,7 +196,7 @@ function j(e) {
             });
             return M === R.Wt.USER_PROFILE_WISHLIST || M === R.Wt.DM_CHANNEL_WISHLIST
                 ? (0, r.jsxs)("div", {
-                      className: D.bodyColumnRight,
+                      className: w.bodyColumnRight,
                       children: [
                           (0, r.jsx)(E.s, { giftRecipient: L }),
                           ee(),
@@ -205,7 +205,7 @@ function j(e) {
                               (0, r.jsx)(d.Z, {
                                   skuId: B,
                                   price: e,
-                                  className: D.giftPreview,
+                                  className: w.giftPreview,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
                               }),
@@ -216,11 +216,11 @@ function j(e) {
                       ],
                   })
                 : (0, r.jsxs)("div", {
-                      className: D.bodyColumnRight,
+                      className: w.bodyColumnRight,
                       children: [
                           (0, r.jsx)(f.Z, {
                               selectedSkuId: B,
-                              className: D.sendTo,
+                              className: w.sendTo,
                               validateSelectedGift: Q,
                           }),
                           ee(),
@@ -228,7 +228,7 @@ function j(e) {
                               (0, r.jsx)(d.Z, {
                                   skuId: B,
                                   price: e,
-                                  className: D.giftPreview,
+                                  className: w.giftPreview,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
                               }),
@@ -239,7 +239,7 @@ function j(e) {
         children: [
             (0, r.jsx)(C.C3, {
                 children: (0, r.jsxs)("div", {
-                    className: D.stepBody,
+                    className: w.stepBody,
                     children: [et(), en()],
                 }),
             }),
@@ -273,13 +273,13 @@ function U(e) {
     return (0, r.jsx)(a.P3F, {
         onClick: i,
         children: (0, r.jsxs)("div", {
-            className: D.navigateToShopButton,
+            className: w.navigateToShopButton,
             children: [
                 (0, r.jsxs)("div", {
-                    className: D.navigateToShopBody,
+                    className: w.navigateToShopBody,
                     children: [
                         (0, r.jsx)("div", {
-                            className: D.shopIcon,
+                            className: w.shopIcon,
                             children: (0, r.jsx)(a.EOn, {
                                 size: "custom",
                                 width: 18,
@@ -288,7 +288,7 @@ function U(e) {
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: D.navigateToShopTextWrapper,
+                            className: w.navigateToShopTextWrapper,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     color: "header-primary",

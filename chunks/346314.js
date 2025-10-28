@@ -116,8 +116,8 @@ function O(e) {
         R = A && N,
         {
             gradientStyle: P,
-            gradientClassname: D,
-            gradientGlowClassname: w,
+            gradientClassname: w,
+            gradientGlowClassname: D,
         } = (0, f.Ic)({
             colorStrings: c,
             roleStyle: "username",
@@ -127,12 +127,12 @@ function O(e) {
         x = {
             className: o()(p.name, g, y, {
                 [p.username]: A,
-                [D]: R,
+                [w]: R,
             }),
             children: L,
         },
         M = {
-            className: o()(p.nameGlow, w, y),
+            className: o()(p.nameGlow, D, y),
             children: n,
         },
         k = C

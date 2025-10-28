@@ -31,8 +31,8 @@ var r = n(951288),
     Z = n(258871),
     w = n(340541),
     L = n(972264),
-    D = n(691698),
-    R = n(639777),
+    R = n(691698),
+    D = n(639777),
     M = n(304445),
     k = n(155409),
     U = n(10401),
@@ -536,7 +536,7 @@ function e_(e) {
         er = (0, c.e7)([z.Z], () => z.Z.hasLayers()),
         es = (0, c.e7)([U.Z], () => U.Z.shouldShow(eh)),
         eo =
-            (0, D.cT)(n, "GuildSidebar") &&
+            (0, R.cT)(n, "GuildSidebar") &&
             m &&
             (null == s ? void 0 : s.premiumProgressBarEnabled) === !1 &&
             !J.s.isDisallowPopupsSet(),
@@ -558,7 +558,7 @@ function e_(e) {
         ev = (0, N.Z)(n),
         ey = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
         eC = (0, c.e7)([W.Z], () => W.Z.desyncedVoiceStatesCount),
-        eS = (0, R.Z)(n);
+        eS = (0, D.Z)(n);
     return (0, r.jsx)(eg, {
         guildId: n,
         hideSelectedChannel: l,

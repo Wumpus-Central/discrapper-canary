@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(283595),
     R = n(594174),
     P = n(509545),
-    D = n(55563),
-    w = n(199480),
+    w = n(55563),
+    D = n(199480),
     L = n(626135),
     x = n(669079),
     M = n(74538),
@@ -427,7 +427,7 @@ class q extends i.Component {
                 return (0, r.jsxs)("div", {
                     className: i,
                     children: [
-                        n && (0, r.jsx)(w.Z, { className: F.headerIcon }),
+                        n && (0, r.jsx)(D.Z, { className: F.headerIcon }),
                         null != e.giftStyle &&
                             (0, r.jsx)(y.Z, {
                                 defaultAnimationState: e.redeemed ? E.SR.LOOP : E.SR.IDLE,
@@ -440,10 +440,10 @@ class q extends i.Component {
     }
 }
 let X = (0, p.Z)((0, _.Z)(q)),
-    Q = c.ZP.connectStores([C.Z, D.Z, R.default, N.Z, P.Z, A.default, h.Z], (e) => {
+    Q = c.ZP.connectStores([C.Z, w.Z, R.default, N.Z, P.Z, A.default, h.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
             i = C.Z.get(t),
-            a = null != i ? D.Z.get(i.skuId) : null,
+            a = null != i ? w.Z.get(i.skuId) : null,
             o = null != i && null != i.userId ? R.default.getUser(i.userId) : null;
         return {
             sku: a,

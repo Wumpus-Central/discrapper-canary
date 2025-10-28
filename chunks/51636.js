@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(953529);
+n.d(t, { Z: () => w }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -77,8 +77,8 @@ let R = i.memo((e) => {
     let { name: t, canReveal: n = !0, dismissibleContentType: a, forceShadow: h, cardType: b } = e,
         y = null == e ? void 0 : e.onCtaClick,
         S = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-        [C, D] = i.useState(!1),
-        [w, L] = i.useState(!1),
+        [C, w] = i.useState(!1),
+        [D, L] = i.useState(!1),
         x =
             b === E.gM.CARD_CAROUSEL_FIRST_ROW ||
             b === E.gM.CARD_CAROUSEL_SECOND_ROW ||
@@ -100,7 +100,7 @@ let R = i.memo((e) => {
             null == y || y(), V();
         };
     e = N(A({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
-    let Y = k !== a || null == a || w,
+    let Y = k !== a || null == a || D,
         W = (e) => {
             C &&
                 "transform" === e.propertyName &&
@@ -169,10 +169,10 @@ let R = i.memo((e) => {
                     children: (0, r.jsx)("div", {
                         className: o()(T.flipCardContainer, { [T.forceShadow]: h }),
                         children: (0, r.jsxs)(u.P3F, {
-                            onClick: () => D(!0),
+                            onClick: () => w(!0),
                             className: o()(T.flipCard, T.clickable, {
                                 [T.flipped]: C,
-                                [T.partialFlipCard]: !w && !C,
+                                [T.partialFlipCard]: !D && !C,
                                 [T.reducedMotion]: S,
                             }),
                             onTransitionEnd: W,
@@ -195,7 +195,7 @@ let R = i.memo((e) => {
                                     children: (0, r.jsx)(u.Button, {
                                         variant: "primary",
                                         text: I.intl.string(I.t.dcztdU),
-                                        onClick: () => D(!0),
+                                        onClick: () => w(!0),
                                     }),
                                 }),
                             ],
@@ -232,10 +232,10 @@ let P = i.forwardRef((e, t) => {
             v === E.gM.CARD_CAROUSEL_FIRST_ROW ||
             v === E.gM.CARD_CAROUSEL_SECOND_ROW ||
             v === E.gM.CARD_CAROUSEL_THIRD_ROW,
-        D = "" !== l || "" !== c || ("" !== s && O === E.zW.REWARD),
-        w = (0, h._)(O);
+        w = "" !== l || "" !== c || ("" !== s && O === E.zW.REWARD),
+        D = (0, h._)(O);
     return (0, r.jsxs)(u.P3F, {
-        className: o()(T.card, m, null == (n = w.cardContainer) ? void 0 : n.className, {
+        className: o()(T.card, m, null == (n = D.cardContainer) ? void 0 : n.className, {
             [T.clickable]: null != I,
             [T.hideOverflow]: P,
             [T.nitroGradientBackground]: R,
@@ -269,7 +269,7 @@ let P = i.forwardRef((e, t) => {
                 cardVariant: O,
                 imageOverlayText: N,
             }),
-            D &&
+            w &&
                 (0, r.jsx)(y.Z, {
                     title: i,
                     titleClassName: a,
@@ -289,4 +289,4 @@ let P = i.forwardRef((e, t) => {
     });
 });
 P.displayName = "PerkCardContent";
-let D = R;
+let w = R;

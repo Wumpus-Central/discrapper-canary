@@ -31,8 +31,8 @@ function b() {
         N = _.nc.useSetting(),
         R = _.HV.useSetting(),
         P = null != (e = _.rR.useSetting()) ? e : g.K,
-        { analyticsLocations: D } = (0, s.ZP)(o.Z.TEXT_AND_IMAGES),
-        w = i.useCallback((e) => {
+        { analyticsLocations: w } = (0, s.ZP)(o.Z.TEXT_AND_IMAGES),
+        D = i.useCallback((e) => {
             let t = 1 === e;
             t ? u.Z.cleanUpPrivateChannelSearchState() : u.Z.cleanUpSearchState({ type: m.aib.DMS }),
                 _.rR.updateSetting(t);
@@ -158,7 +158,7 @@ function b() {
                                         f.default.track(m.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                             enabled: e,
                                             location: { section: m.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                            location_stack: D,
+                                            location_stack: w,
                                         }),
                                             _.fq.updateSetting(e);
                                     },
@@ -264,7 +264,7 @@ function b() {
                                         value: 1,
                                     },
                                 ],
-                                onChange: w,
+                                onChange: D,
                                 value: +!!P,
                             }),
                         }),

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => O });
+r.d(t, { Z: () => h });
 var n = r(951288);
 r(647438);
 var i = r(399606),
@@ -53,7 +53,7 @@ function g() {
         ],
     });
 }
-function h() {
+function O() {
     return (0, n.jsxs)("div", {
         className: j.learnMoreTipContainer,
         children: [
@@ -70,7 +70,7 @@ function h() {
         ],
     });
 }
-function O(e) {
+function h(e) {
     let { guildId: t } = e;
     return (0, n.jsxs)("div", {
         className: j.previewContentContainer,
@@ -85,7 +85,7 @@ function O(e) {
                     }),
                 ],
             }),
-            (0, n.jsx)(h, {}),
+            (0, n.jsx)(O, {}),
         ],
     });
 }

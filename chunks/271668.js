@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(388032),
     P = n(57507),
-    D = n(239840);
-let w = 512,
+    w = n(239840);
+let D = 512,
     L = 7,
     x = 56,
     M = 16,
@@ -91,7 +91,7 @@ let w = 512,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - w;
+                let t = q.length * (k + M) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? L : 0)) * x - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -200,7 +200,7 @@ let w = 512,
                                 0 === a.length &&
                                     (0, r.jsx)(c.Z, {
                                         message: R.intl.format(R.t.WoQXT6, { applicationName: i.name }),
-                                        noResultsImageURL: D,
+                                        noResultsImageURL: w,
                                         className: P.noSearchResults,
                                     }),
                             ],

@@ -39,8 +39,8 @@ var r = n(512722),
     N = n(555573),
     R = n(160062),
     P = n(456007),
-    D = n(10718),
-    w = n(998698),
+    w = n(10718),
+    D = n(998698),
     L = n(895924),
     x = n(581364),
     M = n(981631),
@@ -102,7 +102,7 @@ async function F(e) {
     var t, n, r, o, l, u, d, p, h, m, g, E, b, v, T, S, A;
     let {
         command: C,
-        optionValues: D,
+        optionValues: w,
         context: k,
         commandTargetId: j,
         maxSizeCallback: U,
@@ -112,8 +112,8 @@ async function F(e) {
         source: F,
     } = e;
     if (null == k.channel) return;
-    let H = null != (r = w.Z.getSource(k.channel.id)) ? r : F,
-        W = null != (o = w.Z.getCommandOrigin(k.channel.id)) ? o : G;
+    let H = null != (r = D.Z.getSource(k.channel.id)) ? r : F,
+        W = null != (o = D.Z.getCommandOrigin(k.channel.id)) ? o : G;
     null == k.autocomplete &&
         a.Z.dispatch({
             type: "APPLICATION_COMMAND_USED",
@@ -128,10 +128,10 @@ async function F(e) {
     if (null != C.options)
         for (let e of C.options) {
             let t;
-            if (e.type === c.jw.SUB_COMMAND || e.type === c.jw.SUB_COMMAND_GROUP || !(e.name in D)) continue;
+            if (e.type === c.jw.SUB_COMMAND || e.type === c.jw.SUB_COMMAND_GROUP || !(e.name in w)) continue;
             let n = (null == (l = k.autocomplete) ? void 0 : l.name) === e.name || void 0;
             if (e.type === c.jw.STRING) {
-                let r = null != (d = null == (u = P.li(D, e.name)) ? void 0 : u.trim()) ? d : "";
+                let r = null != (d = null == (u = P.li(w, e.name)) ? void 0 : u.trim()) ? d : "";
                 if (
                     (null != e.choices
                         ? (t = (0, R.cT)(e.choices, r))
@@ -164,7 +164,7 @@ async function F(e) {
                     });
                 continue;
             }
-            let r = P.OU(D[e.name]);
+            let r = P.OU(w[e.name]);
             if (
                 (i()(
                     null != k.autocomplete || 1 === r.length,
@@ -320,7 +320,7 @@ async function F(e) {
             application_command: C.rootCommand,
         },
         $ = () => {
-            V(D);
+            V(w);
         };
     null != j && (J.target_id = j),
         null != k.autocomplete
@@ -438,7 +438,7 @@ function W(e, t) {
 async function K(e, t, n) {
     var r;
     if (null == t.channel) return {};
-    let i = D.Nk(
+    let i = w.Nk(
         {
             channel: t.channel,
             type: "channel",

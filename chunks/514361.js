@@ -54,14 +54,14 @@ let A = !0,
     P = (e) => {
         r = void 0;
     },
-    D = (e) => {
+    w = (e) => {
         let { channelId: t, guildId: n } = e,
             r = E.default.getCurrentUser();
         if (null == t || null == n || (0, c.zu)(s.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(r)) return;
         let i = g.Z.getChannel(t);
         null != i && (0, m.zi)(i.type) && (C = !0);
     };
-function w() {
+function D() {
     A && (r = void 0), (C = !1);
 }
 let L = () => {
@@ -132,9 +132,9 @@ let j = new k(l.Z, {
     UPDATE_BACKGROUND_GRADIENT_PRESET: N,
     UPDATE_MOBILE_PENDING_THEME_INDEX: R,
     RESET_PREVIEW_CLIENT_THEME: P,
-    CLIENT_THEMES_EDITOR_CLOSE: w,
-    CHANNEL_SELECT: D,
-    LOGOUT: w,
+    CLIENT_THEMES_EDITOR_CLOSE: D,
+    CHANNEL_SELECT: w,
+    LOGOUT: D,
     CACHE_LOADED: M,
     CONNECTION_OPEN: M,
     OVERLAY_INITIALIZE: M,

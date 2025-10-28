@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -94,8 +94,8 @@ function N(e, t) {
 }
 let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
     P = (0, l.Mg)(v.__invalid_stickerPickerPreviewPadding),
-    D = 250,
-    w = i.memo(function (e) {
+    w = 250,
+    D = i.memo(function (e) {
         let {
                 isDisplayingIndividualStickers: t = !1,
                 preferAnimation: a = !0,
@@ -103,7 +103,7 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 getStickerRowProps: I,
                 gutterWidth: S,
                 inspectedStickerPosition: N,
-                isScrolling: w,
+                isScrolling: D,
                 isUsingKeyboardNavigation: L,
                 onInspect: x,
                 onSelect: M,
@@ -156,19 +156,19 @@ let R = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                 e.columnIndex === (null == N ? void 0 : N.columnIndex),
                             I = e.type === m.al.STICKER && F && f,
                             S = (t) => {
-                                if ((null == w ? void 0 : w.current) === !0 || (null == L ? void 0 : L.current) === !0)
+                                if ((null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0)
                                     return;
                                 let n = t.altKey;
                                 n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && Q(e.sticker.id),
                                     null == M || M(e, n);
                             },
                             R = (0, s.throttle)(() => {
-                                (null == w ? void 0 : w.current) === !0 ||
+                                (null == D ? void 0 : D.current) === !0 ||
                                     (null == L ? void 0 : L.current) === !0 ||
                                     f ||
                                     null == x ||
                                     x(e);
-                            }, D),
+                            }, w),
                             P = () => {
                                 e.type === m.al.CREATE_STICKER &&
                                     (p.default.track(y.rMx.OPEN_MODAL, {

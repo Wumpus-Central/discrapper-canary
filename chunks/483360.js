@@ -42,8 +42,8 @@ var i = n(658722),
     N = n(926491),
     R = n(373228),
     P = n(601070),
-    D = n(569471),
-    w = n(675478),
+    w = n(569471),
+    D = n(675478),
     L = n(131704),
     x = n(345162),
     M = n(598077),
@@ -146,8 +146,8 @@ let eb = new h.Z("AutocompleteUtils"),
     eN = 5,
     eR = 3,
     eP = 11,
-    eD = 6,
-    ew = 8,
+    ew = 6,
+    eD = 8,
     eL = 1,
     ex = 1000,
     eM = 0.2,
@@ -315,12 +315,12 @@ function e$(e) {
         case R.MO.STICKER_NAME:
             return eP;
         case R.MO.CORRELATED_EMOJI:
-            return eD;
+            return ew;
         case R.MO.TAG:
             return eL;
         case R.MO.GUILD_NAME:
         case R.MO.PACK_NAME:
-            return ew;
+            return eD;
         default:
             return 1;
     }
@@ -625,7 +625,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                         !(t.length > 1) &&
                         (1 !== t.length || t[0].isFullMatch || s) &&
                         (e3(l, e.type) && (c = Math.max(c - eA, eS / 2)),
-                        e.isThread() && (e.isActiveThread() || (c -= eC), D.Z.hasJoined(e.id) || (c -= eN)),
+                        e.isThread() && (e.isActiveThread() || (c -= eC), w.Z.hasJoined(e.id) || (c -= eN)),
                         (c = Math.min(
                             c + Math.min(null != (O = U.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eR,
                             c >= ev ? ey : ev,
@@ -1099,7 +1099,7 @@ let e7 = (0, $.oH)((e, t, n) => {
         queryEmojiResults(e) {
             let { query: t, channel: n, intention: r, maxCount: i = el.rnv, matchComparator: a } = e;
             return (
-                w.DZ.loadIfNecessary(),
+                D.DZ.loadIfNecessary(),
                 {
                     emojis: m.ZP.searchWithoutFetchingLatest({
                         channel: n,
@@ -1117,7 +1117,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                 i = X.default.getCurrentUser(),
                 a = new Set(),
                 o = [];
-            for (let s of (w.DZ.loadIfNecessary(), e)) {
+            for (let s of (D.DZ.loadIfNecessary(), e)) {
                 if ("" === s) continue;
                 let e = s.toLocaleLowerCase(),
                     l = (0, eo._I)(e),
@@ -1168,7 +1168,7 @@ let e7 = (0, $.oH)((e, t, n) => {
         },
         querySoundmoji(e, t) {
             let n = X.default.getCurrentUser();
-            T.Z.isFetching() || T.Z.hasFetchedAllSounds() || (0, I.w)(), w.DZ.loadIfNecessary();
+            T.Z.isFetching() || T.Z.hasFetchedAllSounds() || (0, I.w)(), D.DZ.loadIfNecessary();
             let r = Array.from(T.Z.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {

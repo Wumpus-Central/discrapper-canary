@@ -6680,19 +6680,19 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     flex: unset
 }
 
-.spacing_f0f2d9 {
+.spacing_a959b1 {
     margin-bottom: 20px
 }
 
-.error_f0f2d9 {
+.error_a959b1 {
     margin-top: 8px
 }
 
-.card_f0f2d9 {
+.card_a959b1 {
     padding: 10px
 }
 
-.warning_f0f2d9 {
+.warning_a959b1 {
     color: var(--white-500)
 }
 
@@ -75576,19 +75576,6 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     background: var(--background-gradient-chat-preview)
 }
 
-.card__594f1,
-.spacing__594f1 {
-    margin-bottom: 20px
-}
-
-.card__594f1 {
-    padding: 10px
-}
-
-.error__594f1 {
-    margin-top: 8px
-}
-
 .avatarBackground_eb2508 {
     align-items: center;
     background-color: var(--background-mod-strong);
@@ -75895,6 +75882,19 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 div.nagbar_d74ef8 {
     border-radius: 0 0 10px 10px;
     margin-top: -24px
+}
+
+.card__6aefd,
+.spacing__6aefd {
+    margin-bottom: 20px
+}
+
+.card__6aefd {
+    padding: 10px
+}
+
+.error__6aefd {
+    margin-top: 8px
 }
 
 .tabBar_f8303a {

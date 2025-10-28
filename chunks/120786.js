@@ -1,8 +1,8 @@
 n.d(t, { L: () => _ });
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(442837),
     s = n(159691),
     c = n(481060),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(981631),
     x = n(388032),
     f = n(97127),
-    g = n(665923),
-    b = n(477154),
+    b = n(665923),
+    g = n(477154),
     v = n(387888);
 let j = () => {
         let e = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
@@ -22,7 +22,7 @@ let j = () => {
             className: f.assetContainer,
             children: e
                 ? (0, a.jsx)("img", {
-                      src: b.Z,
+                      src: g.Z,
                       className: f.orbAsset,
                       alt: "Orb",
                   })
@@ -36,7 +36,7 @@ let j = () => {
                               type: "video/webm",
                           }),
                           (0, a.jsx)("img", {
-                              src: b.Z,
+                              src: g.Z,
                               className: f.orbAsset,
                               alt: "Orb",
                           }),
@@ -48,20 +48,20 @@ let j = () => {
         let {
                 ctaText: t,
                 ctaOnClick: n,
-                analyticsPage: i,
+                analyticsPage: l,
                 linkPreText: o = x.intl.string(x.t["5qZv9E"]),
                 linkText: d = x.intl.string(x.t.XRdyjz),
             } = e,
             u = r.useCallback(() => {
-                null != i &&
+                null != l &&
                     (0, p.Y)({
-                        pageType: i,
+                        pageType: l,
                         sectionType: h.jXE.ORBS_BALANCE_MENU,
                         ctaObject: h.qAy.ORBS_LEARN_MORE_LINK,
                     });
-            }, [i]);
+            }, [l]);
         return (0, a.jsxs)("div", {
-            className: l()(f.container, g.baseCardOutline),
+            className: i()(f.container, b.baseCardOutline),
             children: [
                 (0, a.jsx)(j, {}),
                 (0, a.jsx)(s.zxk, {

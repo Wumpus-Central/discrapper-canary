@@ -97,10 +97,10 @@ function A(e) {
         Z = i.useCallback(() => A(!0), []),
         w = i.useCallback(() => A(!1), []),
         { launchInGameActivity: L } = (0, f.zB)(_),
-        D = i.useCallback((e) => {
+        R = i.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        R = i.useCallback(() => {
+        D = i.useCallback(() => {
             (0, p.AH)(_.id, {
                 questContent: m.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST,
@@ -156,8 +156,8 @@ function A(e) {
             c.current = e;
         },
         className: a()(j.wrapper, { [j.wrapperQuestAccepted]: G }),
-        onClick: D,
-        onKeyPress: D,
+        onClick: R,
+        onKeyPress: R,
         onFocus: Z,
         onMouseEnter: Z,
         onBlur: w,
@@ -247,7 +247,7 @@ function A(e) {
                                 (0, r.jsx)(o.Button, {
                                     variant: "primary",
                                     text: Y,
-                                    onClick: R,
+                                    onClick: D,
                                     loading: E,
                                     icon: (0, I.getPrimaryCtaIcon)(_),
                                 }),

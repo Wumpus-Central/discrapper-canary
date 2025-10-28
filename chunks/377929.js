@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(933793),
     m = n(192127),
     b = n(13736),
-    y = n(732393),
-    _ = n(137591),
-    O = n(299206),
-    j = n(665149),
-    x = n(695346),
-    v = n(979651),
+    _ = n(732393),
+    y = n(137591),
+    x = n(299206),
+    v = n(665149),
+    j = n(695346),
+    O = n(979651),
     C = n(488131),
     I = n(388032);
 function S(e) {
@@ -87,7 +87,7 @@ function Z(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                j.ZP.Icon,
+                v.ZP.Icon,
                 E(S({}, e), {
                     ref: a,
                     onClick: s,
@@ -103,10 +103,10 @@ function Z(e) {
 function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        j = (0, f.Z)(t),
-        S = (0, y.Z)(t.id),
+        v = (0, f.Z)(t),
+        S = (0, _.Z)(t.id),
         E = (0, b.Z)(t),
-        Z = (0, O.Z)({
+        Z = (0, x.Z)({
             id: t.id,
             label: I.intl.string(I.t.DQ797g),
         }),
@@ -115,10 +115,10 @@ function P(e) {
         N = (0, p.Z)(t, "Toolbar Overflow"),
         R = (0, g.Z)(t),
         w = (0, h.Z)(t),
-        A = (0, _.Z)(t),
+        A = (0, y.Z)(t),
         D = (0, m.Z)(t),
-        L = x.vF.useSetting(),
-        M = (0, s.e7)([v.Z], () => !a().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
+        L = j.vF.useSetting(),
+        M = (0, s.e7)([O.Z], () => !a().isEmpty(O.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(o.v2r, {
         navId: "thread-context",
         onClose: n,
@@ -146,7 +146,7 @@ function P(e) {
                 ],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [A, l, j, T],
+                children: [A, l, v, T],
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [P, Z],

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(392711),
     s = n.n(o),
     c = n(876215),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(570140),
     x = n(812206),
     f = n(835473),
-    g = n(246992),
-    b = n(681619),
+    b = n(246992),
+    g = n(681619),
     v = n(810568),
     j = n(168524),
     _ = n(77498),
@@ -31,7 +31,7 @@ var a = n(951288),
 let k = [
     {
         key: "type",
-        cellClassName: l()(I.cell, I.cellType),
+        cellClassName: i()(I.cell, I.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(p.Text, {
@@ -42,7 +42,7 @@ let k = [
     },
     {
         key: "count",
-        cellClassName: l()(I.cell, I.cellCount),
+        cellClassName: i()(I.cell, I.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
@@ -65,12 +65,12 @@ let k = [
 function R(e) {
     var t, n;
     let { type: r } = e,
-        i = (0, u.e7)([E.Z], () => E.Z.getFilters()),
-        l = null != (n = null == i || null == (t = i.types) ? void 0 : t.has(r)) && n;
+        l = (0, u.e7)([E.Z], () => E.Z.getFilters()),
+        i = null != (n = null == l || null == (t = l.types) ? void 0 : t.has(r)) && n;
     return (0, a.jsx)(p.rsf, {
-        checked: l,
+        checked: i,
         onChange: function () {
-            l
+            i
                 ? h.Z.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
                       filters: void 0,
@@ -85,8 +85,8 @@ function R(e) {
 function A() {
     var e, t;
     let n = (0, u.e7)([E.Z], () => E.Z.getFeed(P.YN.GLOBAL_FEED)),
-        i = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
-        l = (0, u.e7)([S.Z], () => S.Z.getDebugFastImpressionCappingEnabled()),
+        l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
+        i = (0, u.e7)([S.Z], () => S.Z.getDebugFastImpressionCappingEnabled()),
         o = (function (e) {
             let t = s().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -142,7 +142,7 @@ function A() {
                             children: "Inventory",
                         }),
                         o.length > 0 &&
-                            (0, a.jsx)(b.Z, {
+                            (0, a.jsx)(g.Z, {
                                 columns: k,
                                 data: o,
                             }),
@@ -187,7 +187,7 @@ function A() {
                         }),
                         (0, a.jsx)(p.Button, {
                             variant: "primary",
-                            text: i ? "Enable Impression Capping" : "Disable Impression Capping",
+                            text: l ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
@@ -195,7 +195,7 @@ function A() {
                         }),
                         (0, a.jsx)(p.Button, {
                             variant: "primary",
-                            text: l ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
+                            text: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING" });
@@ -260,7 +260,7 @@ function A() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: g.O$,
+                            popoutLayerContext: b.O$,
                         }),
                     ],
                 }),

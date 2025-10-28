@@ -1,6 +1,6 @@
 n.d(t, {
     AG: () => R,
-    Z$: () => w,
+    Z$: () => D,
     jH: () => P,
     zH: () => L,
 }),
@@ -211,7 +211,7 @@ class P extends i.PureComponent {
         });
     }
 }
-function D(e) {
+function w(e) {
     let {
             value: t,
             eagerUpdate: n = !1,
@@ -229,7 +229,7 @@ function D(e) {
         N = null != A ? A : 0,
         R = (0, c.Rf)(N),
         P = (0, c.O)(N),
-        [D, w] = i.useState({
+        [w, D] = i.useState({
             current: N,
             pending: {
                 hex: R,
@@ -238,10 +238,10 @@ function D(e) {
             input: R,
         });
     i.useEffect(() => {
-        if (null == A || A === D.current) return;
+        if (null == A || A === w.current) return;
         let e = (0, c.Rf)(A),
             t = (0, c.O)(A);
-        w({
+        D({
             current: A,
             pending: {
                 hex: e,
@@ -249,14 +249,14 @@ function D(e) {
             },
             input: e,
         });
-    }, [A, D]),
+    }, [A, w]),
         i.useEffect(() => s, [s]);
     let L = (e) => {
             let t = "#" === e[0] ? e : "#".concat(e);
-            if (!(0, c.FX)(t)) return void w((e) => O(b({}, e), { input: t }));
+            if (!(0, c.FX)(t)) return void D((e) => O(b({}, e), { input: t }));
             let n = (0, c._i)(t),
                 r = (0, c.O)(n);
-            w({
+            D({
                 current: n,
                 pending: {
                     hex: t,
@@ -275,7 +275,7 @@ function D(e) {
         },
         M = i.useCallback(
             (e) => {
-                w((t) =>
+                D((t) =>
                     O(b({}, t), {
                         pending: e,
                         input: e.hex,
@@ -298,12 +298,12 @@ function D(e) {
                             let { hex: t } = e;
                             return k(t);
                         },
-                        color: D.pending.hsl,
+                        color: w.pending.hsl,
                     }),
                 }),
                 p,
                 (0, r.jsx)(f.oil, {
-                    value: D.input.slice(1),
+                    value: w.input.slice(1),
                     onChange: L,
                     maxLength: S - 1,
                     leading: "#",
@@ -343,7 +343,7 @@ function D(e) {
         children: j,
     });
 }
-let w = i.memo(D);
+let D = i.memo(w);
 function L(e) {
     let {
             className: t,

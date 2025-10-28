@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(269794),
     P = n(459196),
-    D = n(388032),
-    w = n(765179),
+    w = n(388032),
+    D = n(765179),
     L = n(630564),
     x = n(611087);
 function M(e, t, n) {
@@ -145,7 +145,7 @@ function G(e) {
         }, []),
         z = (0, l.O)(K);
     return (0, r.jsxs)("div", {
-        className: o()(L.topPerksCard, L.animatedTopPerksCard, w.powerupCard, { [L.animate]: x }),
+        className: o()(L.topPerksCard, L.animatedTopPerksCard, D.powerupCard, { [L.animate]: x }),
         onMouseEnter: () => {
             G(!0), null == v || v(!0);
         },
@@ -160,7 +160,7 @@ function G(e) {
             (0, r.jsx)("div", {
                 className: L.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
-                    className: o()(L.topPerksCardImage, w.image),
+                    className: o()(L.topPerksCardImage, D.image),
                     src: E,
                     alt: "",
                     style: H,
@@ -168,12 +168,12 @@ function G(e) {
             }),
             (0, r.jsxs)(s.animated.div, {
                 style: U(k({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
-                className: o()(L.contentContainer, w.contentContainer),
+                className: o()(L.contentContainer, D.contentContainer),
                 children: [
                     (0, r.jsx)(h.xm, {
                         heading: a,
                         description: c,
-                        label: D.intl.formatToPlainString(P.default.QOacIS, {
+                        label: w.intl.formatToPlainString(P.default.QOacIS, {
                             quantity: u,
                             decorator: null != g ? g : "",
                         }),
@@ -187,7 +187,7 @@ function G(e) {
                                 className: L.button,
                                 children: (0, r.jsx)(d.Button, {
                                     variant: "primary",
-                                    text: D.intl.string(D.t.oPAx73),
+                                    text: w.intl.string(w.t.oPAx73),
                                     onClick: Z,
                                     fullWidth: !0,
                                 }),
@@ -197,7 +197,7 @@ function G(e) {
                                     className: L.button,
                                     children: (0, r.jsx)(d.Button, {
                                         variant: "secondary",
-                                        text: D.intl.string(D.t.GoCQxU),
+                                        text: w.intl.string(w.t.GoCQxU),
                                         onClick: F,
                                         fullWidth: !0,
                                     }),
@@ -209,7 +209,7 @@ function G(e) {
             y &&
                 (0, r.jsx)(d.IGR, {
                     className: L.topPerksCardNew,
-                    text: D.intl.string(D.t.y2b7CA),
+                    text: w.intl.string(w.t.y2b7CA),
                 }),
             x && (0, r.jsx)("div", { className: L.shineLine }),
         ],
@@ -247,20 +247,20 @@ let Z = 3,
             ? null
             : (0, r.jsxs)("div", {
                   ref: t,
-                  className: w.container,
+                  className: D.container,
                   children: [
                       (0, r.jsx)(c.X6q, {
                           variant: "heading-xxl/extrabold",
-                          children: D.intl.string(P.default.wjI18Q),
+                          children: w.intl.string(P.default.wjI18Q),
                       }),
                       (0, r.jsx)(c.xvT, {
                           variant: "text-lg/medium",
-                          children: D.intl.format(P.default.S562fn, {
+                          children: w.intl.format(P.default.S562fn, {
                               helpDeskArticle: g.Z.getArticleURL(N.BhN.GUILD_BOOSTING_FAQ),
                           }),
                       }),
                       (0, r.jsxs)("div", {
-                          className: w.powerupsContainer,
+                          className: D.powerupsContainer,
                           children: [
                               d.map((e) =>
                                   (0, r.jsx)(
@@ -279,8 +279,8 @@ let Z = 3,
                                   (0, r.jsx)(G, {
                                       guildId: n.id,
                                       activeStatus: C.A3.INACTIVE,
-                                      title: D.intl.string(R.default["B3OfL/"]),
-                                      description: D.intl.string(R.default.EGkJAG),
+                                      title: w.intl.string(R.default["B3OfL/"]),
+                                      description: w.intl.string(R.default.EGkJAG),
                                       cost: s,
                                       costDecorator: "+",
                                       imageUrl: x.Z,

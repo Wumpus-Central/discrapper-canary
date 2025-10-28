@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => es,
-    b2: () => w,
+    b2: () => D,
 }),
     n(388685);
 var r = n(952639),
@@ -31,7 +31,7 @@ var r = n(952639),
     N = n(799525),
     R = n(981631),
     P = n(526761);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function D(e, t, n) {
         e
     );
 }
-let w = 3000,
+let D = 3000,
     L = 800,
     x = {};
 function M(e) {
@@ -136,7 +136,7 @@ function F(e, t) {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     G(e);
-                }, w),
+                }, D),
             }));
     });
     let a = n || new Set(i.map((e) => e.channel_id)).size > 1;
@@ -496,7 +496,7 @@ function ea(e) {
 class eo extends c.Z {
     constructor(...e) {
         super(...e),
-            D(this, "actions", {
+            w(this, "actions", {
                 LOAD_MESSAGES_SUCCESS: X,
                 LOAD_FORUM_POSTS: $,
                 LOAD_THREADS_SUCCESS: ee,

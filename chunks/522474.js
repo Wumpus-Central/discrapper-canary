@@ -103,8 +103,8 @@ let A = new d.Z("PopoutWindowStore"),
     N = {},
     R = {},
     P = {},
-    D = {},
-    w = new Set(),
+    w = {},
+    D = new Set(),
     L = "app-mount",
     x = () => $.emitChange(),
     M = s().debounce(x, 150),
@@ -145,7 +145,7 @@ function G(e) {
         n.unmount(),
         delete R[e],
         delete N[e],
-        delete D[e],
+        delete w[e],
         delete P[e];
 }
 function B(e, t, r) {
@@ -166,7 +166,7 @@ function Z(e, t) {
 }
 function F(e) {
     let t = R[e],
-        n = D[e];
+        n = w[e];
     if (null == t) return void A.warn("Failed to open window", e);
     let r = t.document;
     (0, g.uF)(r, x),
@@ -228,12 +228,12 @@ function V(e) {
     }
     i ? A.verbose("Opening out of process overlay window", t) : null == v || v.focus(),
         (R[t] = v),
-        (D[t] = r),
+        (w[t] = r),
         h.isPlatformEmbedded && (m.ZP.setAlwaysOnTop(t, p), (N[t] = p), m.ZP.isAlwaysOnTop(t).then((e) => (N[t] = e))),
-        w.add(t);
+        D.add(t);
 }
 function H(e) {
-    w.has(e) && (F(e), w.delete(e), $.emitChange());
+    D.has(e) && (F(e), D.delete(e), $.emitChange());
 }
 function Y(e) {
     let t = R[e];
@@ -321,7 +321,7 @@ class J extends (r = c.ZP.PersistedStore) {
         return C;
     }
     isWindowFullyInitialized(e) {
-        return null != R[e] && null != P[e] && null != D[e];
+        return null != R[e] && null != P[e] && null != w[e];
     }
     isWindowFullScreen(e) {
         var t, n;

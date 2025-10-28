@@ -26,16 +26,16 @@ var r = n(98405),
     N = n(920029).forEach,
     R = n(108015),
     P = n(573078),
-    D = n(117895),
-    w = n(840991),
+    w = n(117895),
+    D = n(840991),
     L = n(335024),
     x = n(199838),
     M = n(176682),
     k = x.get,
     j = x.set,
     U = x.enforce,
-    G = D.f,
-    B = w.f,
+    G = w.f,
+    B = D.f,
     Z = i.RangeError,
     F = c.ArrayBuffer,
     V = F.prototype,
@@ -78,7 +78,7 @@ var r = n(98405),
             : G(e, t, n);
     };
 o
-    ? (Y || ((w.f = et), (D.f = en), J(z, "buffer"), J(z, "byteOffset"), J(z, "byteLength"), J(z, "length")),
+    ? (Y || ((D.f = et), (w.f = en), J(z, "buffer"), J(z, "byteOffset"), J(z, "byteLength"), J(z, "length")),
       r(
           {
               target: "Object",
@@ -182,13 +182,13 @@ o
               b.constructor !== E && f(b, "constructor", E),
               (U(b).TypedArrayConstructor = E),
               W && f(b, W, l);
-          var D = E !== _;
+          var w = E !== _;
           (y[l] = E),
               r(
                   {
                       global: !0,
                       constructor: !0,
-                      forced: D,
+                      forced: w,
                       sham: !Y,
                   },
                   y,

@@ -39,8 +39,8 @@ let d = {},
     N = null,
     R = !1,
     P = c.oE.NONE,
-    D = null;
-function w(e) {
+    w = null;
+function D(e) {
     p = !0;
 }
 function L(e) {
@@ -118,19 +118,19 @@ function q(e) {
 }
 function X(e) {
     let {} = e;
-    (P = c.oE.LOADING), (D = null);
+    (P = c.oE.LOADING), (w = null);
 }
 function Q(e) {
     let {} = e;
-    (P = c.oE.LOADING), (D = null), (C += 1);
+    (P = c.oE.LOADING), (w = null), (C += 1);
 }
 function J(e) {
     let { success: t } = e;
-    (P = t ? c.oE.SUCCESS : C < c.o6 ? c.oE.LOADING : c.oE.FAILURE), (D = null);
+    (P = t ? c.oE.SUCCESS : C < c.o6 ? c.oE.LOADING : c.oE.FAILURE), (w = null);
 }
 function $(e) {
     let { error: t } = e;
-    (P = c.oE.ERROR), (D = t);
+    (P = c.oE.ERROR), (w = t);
 }
 function ee() {
     (p = !1), (d = {}), (_ = { state: l.Sn.ALL_GOOD }), (g = null), (I = c.bK.DIDNT_VIOLATE_POLICY), (T = ""), (y = []);
@@ -197,7 +197,7 @@ class et extends (r = o.ZP.Store) {
         return P;
     }
     getAgeCheckError() {
-        return D;
+        return w;
     }
     getAgeCheckAttempts() {
         return C;
@@ -205,7 +205,7 @@ class et extends (r = o.ZP.Store) {
 }
 u(et, "displayName", "SafetyHubStore");
 let en = new et(s.Z, {
-    SAFETY_HUB_FETCH_START: w,
+    SAFETY_HUB_FETCH_START: D,
     SAFETY_HUB_FETCH_SUCCESS: L,
     SAFETY_HUB_FETCH_FAILURE: x,
     SAFETY_HUB_FETCH_CLASSIFICATION_START: M,

@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(785717),
     m = n(86419),
     b = n(747101),
-    h = n(780899),
-    y = n(733231),
+    y = n(780899),
+    h = n(733231),
     v = n(817053),
     O = n(248554),
     j = n(879877),
@@ -68,8 +68,8 @@ function E(e, t) {
 }
 function T(e) {
     let { index: t, widgetType: n, game: i, children: a } = e,
-        { manageFocusOnReorder: l } = (0, y.C)();
-    return (0, r.jsx)(h.yW, {
+        { manageFocusOnReorder: l } = (0, h.C)();
+    return (0, r.jsx)(y.yW, {
         index: t,
         itemId: i.applicationId,
         listType: n,
@@ -175,46 +175,46 @@ function A(e) {
     let { text: t, user: n, guildId: a, channelId: u, widgetType: d, applicationId: f } = e,
         g = (0, s.Dt)(),
         b = (0, s.Dt)(),
-        { trackUserProfileEditAction: h } = (0, p.KZ)(),
-        [y, v] = i.useState("idle"),
+        { trackUserProfileEditAction: y } = (0, p.KZ)(),
+        [h, v] = i.useState("idle"),
         [O, j] = i.useState(null != t ? t : ""),
         x = i.useRef(null),
         _ = i.useRef(null),
         I = P.intl.string(P.t.xKSfBT),
         S = null != t && "" !== t.trim(),
         E = i.useCallback(() => {
-            h({
+            y({
                 action: "PRESS_ADD_COMMENTARY",
                 widgetEdited: d,
             }),
                 v("editing");
-        }, [d, h]),
+        }, [d, y]),
         T = i.useCallback(() => {
             let e = O.trim(),
                 n = e !== (null != t ? t : "").trim();
             (0, m.Bu)(d, f, "" !== e ? e : void 0),
                 v("completed"),
                 n &&
-                    h({
+                    y({
                         action: "COMMENTARY_EDITED",
                         widgetEdited: d,
                         gameId: f,
                     });
-        }, [d, f, O, t, h]),
+        }, [d, f, O, t, y]),
         C = i.useCallback((e) => {
             j(e);
         }, []);
     return (
         i.useEffect(() => {
-            "editing" === y && j(null != t ? t : "");
-        }, [t, y]),
+            "editing" === h && j(null != t ? t : "");
+        }, [t, h]),
         i.useEffect(() => {
-            if ("completed" === y) {
+            if ("completed" === h) {
                 var e;
                 null == (e = x.current) || e.focus();
             }
-        }, [y]),
-        "editing" === y
+        }, [h]),
+        "editing" === h
             ? (0, r.jsxs)("div", {
                   className: w.textAreaContainer,
                   children: [
@@ -230,7 +230,7 @@ function A(e) {
                           onChange: C,
                           onBlur: T,
                           rows: 3,
-                          autoFocus: "editing" === y,
+                          autoFocus: "editing" === h,
                           onKeyDown: (e) => {
                               "Enter" !== e.key || e.shiftKey || (e.preventDefault(), T());
                           },
@@ -285,22 +285,22 @@ function Z(e) {
             coverRef: p,
             className: D,
         } = e,
-        { gameName: k = P.intl.string(P.t.GIWFlF), imageSrc: Z, applicationId: R, comment: B, tags: G } = o,
+        { gameName: k = P.intl.string(P.t.GIWFlF), imageSrc: Z, applicationId: R, comment: G, tags: B } = o,
         L = {
             variant: "heading-sm/medium",
             color: "text-default",
         },
         M = f.default.getCurrentUser(),
-        F = (null == M ? void 0 : M.id) === t.id,
-        U = 1 === (0, m.Gv)(s),
-        W = !u && F,
+        U = (null == M ? void 0 : M.id) === t.id,
+        F = 1 === (0, m.Gv)(s),
+        W = !u && U,
         H = W && (0, m.vI)(s),
-        z = W && !U,
+        z = W && !F,
         K = (0, b.kO)(R),
-        { registerDragHandleRef: V } = (0, y.C)(),
-        q = i.useRef(null);
+        { registerDragHandleRef: V } = (0, h.C)(),
+        Y = i.useRef(null);
     if (K) return (0, r.jsx)(O.i, {});
-    let X = () =>
+    let q = () =>
             (0, r.jsx)(v.Z, {
                 coverRef: p,
                 className: null == Z || u ? void 0 : I.hoverActiveEffect,
@@ -311,24 +311,24 @@ function Z(e) {
                 disableInteraction: u,
                 hideTooltip: !0,
             }),
-        Y = () =>
+        X = () =>
             (0, r.jsxs)("div", {
                 className: l()(w.card, D),
                 children: [
                     z
                         ? (0, r.jsxs)("div", {
-                              ref: q,
+                              ref: Y,
                               className: w.dragHandleContainer,
                               children: [
-                                  X(),
-                                  (0, r.jsx)(h.e_, {
+                                  q(),
+                                  (0, r.jsx)(y.e_, {
                                       buttonRef: V(o.applicationId),
                                       className: w.dragHandle,
-                                      focusProps: { ringTarget: q },
+                                      focusProps: { ringTarget: Y },
                                   }),
                               ],
                           })
-                        : X(),
+                        : q(),
                     (0, r.jsxs)("div", {
                         className: w.details,
                         children: [
@@ -347,7 +347,7 @@ function Z(e) {
                                   ),
                             H
                                 ? (0, r.jsx)(A, {
-                                      text: B,
+                                      text: G,
                                       user: t,
                                       guildId: n,
                                       channelId: a,
@@ -355,14 +355,14 @@ function Z(e) {
                                       applicationId: R,
                                   })
                                 : (0, r.jsx)(N, {
-                                      text: B,
+                                      text: G,
                                       user: t,
                                       guildId: n,
                                       channelId: a,
                                   }),
                             (0, r.jsx)(j.Z, {
-                                tags: G,
-                                isCurrentUser: F,
+                                tags: B,
+                                isCurrentUser: U,
                                 widgetType: s,
                                 applicationId: R,
                                 disableInteraction: u,
@@ -378,7 +378,7 @@ function Z(e) {
                         ],
                     }),
                     !u &&
-                        F &&
+                        U &&
                         (0, r.jsx)(x.Z, {
                             game: o,
                             widgetType: s,
@@ -392,7 +392,7 @@ function Z(e) {
               index: null != d ? d : 0,
               widgetType: s,
               game: o,
-              children: Y(),
+              children: X(),
           })
-        : Y();
+        : X();
 }

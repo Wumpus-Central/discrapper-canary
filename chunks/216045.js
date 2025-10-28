@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(373230),
     R = n(246946),
     P = n(25990),
-    D = n(594174),
-    w = n(626135),
+    w = n(594174),
+    D = n(626135),
     L = n(74538),
     x = n(413182),
     M = n(695346),
@@ -127,8 +127,8 @@ function q() {
     }, [n, t]);
 }
 function X() {
-    let e = (0, s.e7)([D.default], () => {
-            let e = D.default.getCurrentUser();
+    let e = (0, s.e7)([w.default], () => {
+            let e = w.default.getCurrentUser();
             return o()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
         t = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
@@ -215,7 +215,7 @@ function X() {
                               variant: "expressive",
                               onClick: () => {
                                   var e;
-                                  w.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, {
+                                  D.default.track(U.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
                                       null == et ||

@@ -139,10 +139,10 @@ function R(e) {
     function P(e) {
         S(!1), e.stopPropagation(), null == t || t(e.currentTarget.checked);
     }
-    function D(e) {
+    function w(e) {
         a || e.repeat || ((" " === e.key || "Enter" === e.key) && S(!0));
     }
-    function w(e) {
+    function D(e) {
         var t;
         a || !T || e.repeat || (S(!1), "Enter" === e.key && (null == (t = I.current) || t.click()));
     }
@@ -218,8 +218,8 @@ function R(e) {
                                     },
                                     className: p.input,
                                     tabIndex: a ? -1 : 0,
-                                    onKeyDown: D,
-                                    onKeyUp: w,
+                                    onKeyDown: w,
+                                    onKeyUp: D,
                                     onChange: P,
                                     checked: n,
                                     disabled: a,

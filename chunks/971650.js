@@ -2,8 +2,8 @@ n.d(t, { default: () => k }), n(388685);
 var r = n(951288),
     s = n(647438),
     i = n(512722),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     l = n(481060),
     c = n(570140),
     d = n(23645),
@@ -11,12 +11,12 @@ var r = n(951288),
     u = n(454585),
     p = n(365007),
     m = n(15980),
-    b = n(325067),
-    f = n(594174),
+    f = n(325067),
+    b = n(594174),
     x = n(63063),
     C = n(981631),
     g = n(388032),
-    j = n(505198);
+    j = n(468412);
 function y(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ function y(e, t, n) {
 let O = (e) => {
     var t,
         n,
-        { label: s, text: i, children: a } = e,
-        o = (function (e, t) {
+        { label: s, text: i, children: o } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -72,7 +72,7 @@ let O = (e) => {
                     });
             }
             return e;
-        })({ direction: h.Z.Direction.VERTICAL }, o)),
+        })({ direction: h.Z.Direction.VERTICAL }, a)),
         (n = n =
             {
                 children: [
@@ -89,7 +89,7 @@ let O = (e) => {
                         : null,
                     (0, r.jsx)(h.Z.Child, {
                         wrap: !0,
-                        children: a,
+                        children: o,
                     }),
                 ],
             }),
@@ -261,14 +261,14 @@ class P extends s.PureComponent {
             });
     }
 }
-let k = o.ZP.connectStores([f.default, b.Z], () => {
-    let e = f.default.getCurrentUser();
+let k = a.ZP.connectStores([b.default, f.Z], () => {
+    let e = b.default.getCurrentUser();
     return (
-        a()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
+        o()(null != e, "MFAEnableSuccess: currentUser cannot be undefined"),
         {
             currentUser: e,
-            backupCodes: b.Z.getBackupCodes(),
-            hasSeenBackupPrompt: b.Z.hasSeenBackupPrompt,
+            backupCodes: f.Z.getBackupCodes(),
+            hasSeenBackupPrompt: f.Z.hasSeenBackupPrompt,
         }
     );
 })(P);

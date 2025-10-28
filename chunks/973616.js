@@ -249,8 +249,8 @@ class m extends h {
             N,
             R,
             P,
-            D,
             w,
+            D,
             L,
             x,
             M,
@@ -300,8 +300,8 @@ class m extends h {
                     : null != this.embeddedActivityConfig
                       ? u({}, this.embeddedActivityConfig)
                       : void 0,
-            type: null != (D = e.type) ? D : this.type,
-            team: null != (w = e.team) ? w : this.team,
+            type: null != (w = e.type) ? w : this.type,
+            team: null != (D = e.team) ? D : this.team,
             roleConnectionsVerificationUrl:
                 null != (L = e.roleConnectionsVerificationUrl) ? L : this.roleConnectionsVerificationUrl,
             connectionEntrypointUrl: null != (x = e.connectionEntrypointUrl) ? x : this.connectionEntrypointUrl,

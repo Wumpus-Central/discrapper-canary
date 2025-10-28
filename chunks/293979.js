@@ -38,8 +38,8 @@ var r = n(647438),
     N = n(471073),
     R = n(892902),
     P = n(981631),
-    D = n(388032);
-let w = (e) => {
+    w = n(388032);
+let D = (e) => {
     let t = !0;
     return (
         e.forEach((e) => {
@@ -80,7 +80,7 @@ function M(e, t) {
         b = (0, o.e7)([N.Z], () => N.Z.getModalState(p), [p]),
         y = (0, d.Z)(() => new Set()),
         O = r.useCallback(async () => {
-            if ((_(null), h(null), w(y))) {
+            if ((_(null), h(null), D(y))) {
                 let t = T.default.fromTimestamp(Date.now());
                 h(t), await G(e, s, t);
             }
@@ -97,7 +97,7 @@ function M(e, t) {
                 E.d.InteractionModal,
             ),
             t()),
-            b === N.i.ERRORED && _(D.intl.string(D.t.uJgdEu));
+            b === N.i.ERRORED && _(w.intl.string(w.t.uJgdEu));
     }, [p, b, t, i, e.channelId]);
     let { applicationIconURL: v, applicationName: I } = x(n);
     return {

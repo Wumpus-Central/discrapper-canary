@@ -66,13 +66,13 @@ let N = null,
 function P(e) {
     return (null == e ? void 0 : e.ownerDocument) || document;
 }
-let D = {
+let w = {
     inert: new WeakMap(),
     "aria-hidden": new WeakMap(),
     none: new WeakMap(),
 };
-function w(e) {
-    return "inert" === e ? D.inert : "aria-hidden" === e ? D["aria-hidden"] : D.none;
+function D(e) {
+    return "inert" === e ? w.inert : "aria-hidden" === e ? w["aria-hidden"] : w.none;
 }
 let L = new WeakSet(),
     x = null,
@@ -107,7 +107,7 @@ function U(e, t, n, r) {
                     else {
                         let t = a ? e.getAttribute(a) : null,
                             n = null !== t && "false" !== t,
-                            r = w(a),
+                            r = D(a),
                             o = (r.get(e) || 0) + 1,
                             s = (u.get(e) || 0) + 1;
                         r.set(e, o),
@@ -126,7 +126,7 @@ function U(e, t, n, r) {
         M++,
         () => {
             c.forEach((e) => {
-                let t = w(a),
+                let t = D(a),
                     n = (t.get(e) || 0) - 1,
                     r = (u.get(e) || 0) - 1;
                 t.set(e, n),
@@ -135,9 +135,9 @@ function U(e, t, n, r) {
                     r || e.removeAttribute(i);
             }),
                 --M ||
-                    ((D.inert = new WeakMap()),
-                    (D["aria-hidden"] = new WeakMap()),
-                    (D.none = new WeakMap()),
+                    ((w.inert = new WeakMap()),
+                    (w["aria-hidden"] = new WeakMap()),
+                    (w.none = new WeakMap()),
                     (L = new WeakSet()),
                     (x = {}));
         }
@@ -218,7 +218,7 @@ function z(e, t) {
             };
             null == (t = (0, a.U9)(e)) || t.addEventListener("keydown", n);
         }),
-        D = (0, a.iW)((e) => {
+        w = (0, a.iW)((e) => {
             var t;
             let n = l.current.insideReactTree;
             l.current.insideReactTree = !1;
@@ -279,11 +279,11 @@ function z(e, t) {
             }
             r(!1, e, "outside-press");
         }),
-        w = (0, a.iW)((e) => {
+        D = (0, a.iW)((e) => {
             var t;
             let n = () => {
                 var t;
-                D(e), null == (t = (0, a.U9)(e)) || t.removeEventListener(f, n);
+                w(e), null == (t = (0, a.U9)(e)) || t.removeEventListener(f, n);
             };
             null == (t = (0, a.U9)(e)) || t.addEventListener(f, n);
         });
@@ -310,7 +310,7 @@ function z(e, t) {
             (_.addEventListener("keydown", T ? P : R, T),
             _.addEventListener("compositionstart", i),
             _.addEventListener("compositionend", d)),
-            y && _.addEventListener(f, S ? w : D, S);
+            y && _.addEventListener(f, S ? D : w, S);
         let p = [];
         return (
             h &&
@@ -331,14 +331,14 @@ function z(e, t) {
                     (_.removeEventListener("keydown", T ? P : R, T),
                     _.removeEventListener("compositionstart", i),
                     _.removeEventListener("compositionend", d)),
-                    y && _.removeEventListener(f, S ? w : D, S),
+                    y && _.removeEventListener(f, S ? D : w, S),
                     p.forEach((e) => {
                         e.removeEventListener("scroll", t);
                     }),
                     window.clearTimeout(e);
             }
         );
-    }, [l, s, u, y, f, n, r, h, c, v, I, R, T, P, D, S, w]),
+    }, [l, s, u, y, f, n, r, h, c, v, I, R, T, P, w, S, D]),
         i.useEffect(() => {
             l.current.insideReactTree = !1;
         }, [l, y, f]);

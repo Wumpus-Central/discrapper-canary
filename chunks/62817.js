@@ -132,11 +132,11 @@ function P(e) {
     }
     S(t, n);
 }
-function D(e) {
+function w(e) {
     let { file: t, messageId: n } = e;
     h[n] = t;
 }
-class w extends (r = i.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.Z);
     }
@@ -154,8 +154,8 @@ class w extends (r = i.ZP.Store) {
         if (null != e) return m[e];
     }
 }
-s(w, "displayName", "UploadStore");
-let L = new w(a.Z, {
+s(D, "displayName", "UploadStore");
+let L = new D(a.Z, {
     CONNECTION_OPEN: y,
     LOGOUT: O,
     UPLOAD_START: v,
@@ -166,5 +166,5 @@ let L = new w(a.Z, {
     UPLOAD_CANCEL_REQUEST: N,
     UPLOAD_ITEM_CANCEL_REQUEST: R,
     UPLOAD_FILE_UPDATE: P,
-    UPLOAD_RESTORE_FAILED_UPLOAD: D,
+    UPLOAD_RESTORE_FAILED_UPLOAD: w,
 });

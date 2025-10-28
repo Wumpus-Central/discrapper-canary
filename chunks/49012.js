@@ -35,7 +35,7 @@ function N(e, t) {
 function R(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         I = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: T, onClick: N, onConfirm: R, onCancel: P, shouldConfirm: D, messageId: w, channelId: L } = e,
+        { trusted: T, onClick: N, onConfirm: R, onCancel: P, shouldConfirm: w, messageId: D, channelId: L } = e,
         x = i().sanitizeUrl(e.href);
     if (null == x) {
         null != t && t.preventDefault(),
@@ -55,12 +55,12 @@ function R(e, t) {
     }
     let k = null,
         j = !1,
-        U = w,
+        U = D,
         G = L,
         B = null;
-    if (null != w && null != L) {
+    if (null != D && null != L) {
         var Z, F, V;
-        let e = v.Z.getMessage(L, w),
+        let e = v.Z.getMessage(L, D),
             t = E.Z.getBasicChannel(L);
         k = null != (V = null == t ? void 0 : t.guild_id) ? V : null;
         let n = b.Z.getGuild(k),
@@ -139,7 +139,7 @@ function R(e, t) {
         K = (0, O.E)(M),
         z = "http:" !== K && "https:" !== K;
     if ((!z && (W || y.Z.isTrustedDomain(M))) || (z && y.Z.isTrustedProtocol(M)))
-        return void (null == t || (null != D && D)
+        return void (null == t || (null != w && w)
             ? H()
             : j &&
               _.Z.trackAnnouncementMessageLinkClicked({

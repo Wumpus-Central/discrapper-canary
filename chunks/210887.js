@@ -112,11 +112,11 @@ function R() {
 function P(e) {
     return (T = null), !e.isSwitchingAccount && I !== h.BRd.DARK && ((I = h.BRd.DARK), (0, u.Z)(I), A());
 }
-function D(e) {
+function w(e) {
     let { systemTheme: t } = e;
     return (v = t), A();
 }
-function w(e) {
+function D(e) {
     return (O = g({}, O, e.preferences)), A();
 }
 function L(e) {
@@ -146,9 +146,9 @@ let k = new C(o.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: A,
     USER_SETTINGS_PROTO_UPDATE: A,
     RESET_PREVIEW_CLIENT_THEME: A,
-    SYSTEM_THEME_CHANGE: D,
+    SYSTEM_THEME_CHANGE: w,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
-    UPDATE_THEME_PREFERENCES: w,
+    UPDATE_THEME_PREFERENCES: D,
     SET_THEME_OVERRIDE: L,
     CLEAR_THEME_OVERRIDE: x,
     REFRESH_THEME: M,

@@ -103,8 +103,8 @@ function I(e) {
         N = c.Z.colors.BACKGROUND_ACCENT.css,
         R = (0, _.DP)(a),
         P = (0, l.Rf)(a),
-        D = P === C ? N : P,
-        w = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
+        w = P === C ? N : P,
+        D = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
         L = (0, d.Z)(I),
         x = (0, d.Z)(T),
         [M, k] = i.useState((0, s.Z)());
@@ -142,7 +142,7 @@ function I(e) {
                                 onClick: b ? p.dG4 : t,
                                 style: {
                                     backgroundColor: P,
-                                    borderColor: D,
+                                    borderColor: w,
                                 },
                                 className: m.swatch,
                                 "aria-label": h.intl.string(h.t.Qp04hK),
@@ -152,7 +152,7 @@ function I(e) {
                                     className: m.editPencilIcon,
                                     width: 14,
                                     height: 14,
-                                    color: w,
+                                    color: D,
                                 }),
                             }),
                         ),

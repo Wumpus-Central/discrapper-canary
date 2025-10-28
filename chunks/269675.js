@@ -33,21 +33,21 @@ function j(e) {
         A = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
         Z = (0, b.f)(),
         { shouldHideGuildPurchaseEntryPoints: w, restrictionsLoading: L } = (0, f.uP)(t),
-        D = null == n || !Z || A || L;
+        R = null == n || !Z || A || L;
     (0, u.Tt)({
         subsection: T.intl.string(T.t["KzCF/6"]),
         location: null == n ? void 0 : n.name,
     }),
         (0, c.Z)(l.tq ? "role-subscriptions-overview" : void 0);
-    let R = j && (null == n || !(P || x) || (w && !L));
+    let D = j && (null == n || !(P || x) || (w && !L));
     if (
         (i.useEffect(() => {
             o.jg();
         }, []),
         i.useEffect(() => {
-            R && !l.tq && (0, d.M)(t, S.oC.ROLE_SUBSCRIPTIONS);
-        }, [t, R]),
-        l.tq && R)
+            D && !l.tq && (0, d.M)(t, S.oC.ROLE_SUBSCRIPTIONS);
+        }, [t, D]),
+        l.tq && D)
     ) {
         let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
         return (0, r.jsx)(v.z, { errorType: e });
@@ -74,7 +74,7 @@ function j(e) {
                           className: N.scroller,
                           children: (0, r.jsx)("div", {
                               className: N.scrollerContent,
-                              children: D ? (0, r.jsx)(s.$jN, {}) : (0, r.jsx)(I.Z, { guild: n }),
+                              children: R ? (0, r.jsx)(s.$jN, {}) : (0, r.jsx)(I.Z, { guild: n }),
                           }),
                       })
                     : (0, r.jsx)(y.Z, {}),

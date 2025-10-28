@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(963614),
     R = n(917107),
     P = n(208156),
-    D = n(748492),
-    w = n(701488),
+    w = n(748492),
+    D = n(701488),
     L = n(918559),
     x = n(981631),
     M = n(354459),
@@ -153,7 +153,7 @@ function V(e) {
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s } = e;
         return ei && null != B && ((null == X ? void 0 : X.type) === M.fO.ACTIVITY || o)
             ? (null == (t = B.config) ? void 0 : t.useInteractivePIP)
-                ? (0, r.jsx)(D.of, {
+                ? (0, r.jsx)(w.of, {
                       onJumpToChannel: eo,
                       applicationId: B.applicationId,
                       channel: _,
@@ -167,7 +167,7 @@ function V(e) {
                       embeddedActivity: B,
                   })
                 : o
-                  ? (0, r.jsx)(D.q5, {
+                  ? (0, r.jsx)(w.q5, {
                         idle: a,
                         onMouseMove: n,
                         onMouseDown: n,
@@ -191,7 +191,7 @@ function V(e) {
                                   className: k.clickShield,
                                   onDoubleClick: eo,
                               }),
-                              (0, r.jsx)(D.YB, {
+                              (0, r.jsx)(w.YB, {
                                   idle: a,
                                   onMouseMove: n,
                                   onMouseDown: n,
@@ -209,7 +209,7 @@ function V(e) {
     if (
         (i.useEffect(() => {
             if (null != Z) {
-                let e = ei ? w.cE.PIP : w.cE.FOCUSED;
+                let e = ei ? D.cE.PIP : D.cE.FOCUSED;
                 c.Z.dispatch({
                     type: "ACTIVITY_LAYOUT_MODE_UPDATE",
                     layoutMode: e,
@@ -272,7 +272,7 @@ function V(e) {
                               })
                             : (0, r.jsx)(P.J, {
                                   allowPopups: (0, N.h)(H),
-                                  referrerPolicy: w.um.has(B.applicationId) ? "no-referrer" : "origin",
+                                  referrerPolicy: D.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: eu,
                                   className: o()(k.iframe, {
@@ -285,7 +285,7 @@ function V(e) {
                               }),
                         !ei &&
                             null != _ &&
-                            (0, r.jsx)(D.Ds, {
+                            (0, r.jsx)(w.Ds, {
                                 participantsOpen: J,
                                 showToggleParticipants: !1,
                                 channelId: _.id,

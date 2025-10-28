@@ -2,9 +2,9 @@ n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(907331),
-    o = n(399606),
+    a = n(399606),
     c = n(481060),
     u = n(594174),
     d = n(381585),
@@ -25,8 +25,8 @@ var r = n(951288),
     j = n(887353);
 function k(e) {
     let { products: t, header: n, category: l } = e,
-        i = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        a = (0, S.St)(t),
+        i = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        o = (0, S.St)(t),
         s = g.Z.useConfig({ location: "Products" }).showCardsV2,
         p = (0, d.sp)();
     return null == i || 0 === t.length
@@ -43,7 +43,7 @@ function k(e) {
                       : (0, r.jsx)(c.LZC, { size: 24 }),
                   (0, r.jsx)("div", {
                       className: j.cardsContainer,
-                      children: a.map((e, t) =>
+                      children: o.map((e, t) =>
                           (0, r.jsx)(
                               d.k0,
                               {
@@ -87,18 +87,18 @@ function T(e) {
 function L(e) {
     let { category: t } = e,
         [n, i] = l.useState(!1),
-        a = (0, s.O)((e) => {
+        o = (0, s.O)((e) => {
             i(e);
         }, 0.15);
     return (0, r.jsxs)("div", {
         className: j.categoryWrapper,
-        ref: a,
+        ref: o,
         children: [(0, r.jsx)(_.Z, { category: t }), (0, r.jsx)(T, { category: t })],
     });
 }
 function I(e) {
     var t;
-    let { sortedCategories: n, setCategoryRef: i, currentPage: s, handlePageChange: o } = e,
+    let { sortedCategories: n, setCategoryRef: i, currentPage: s, handlePageChange: a } = e,
         u = (0, d.sp)(),
         g = (0, x.R)(),
         f = null != (t = null == u ? void 0 : u.sessionId) ? t : "",
@@ -141,7 +141,7 @@ function I(e) {
     return g
         ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)("div", {
-              className: a()(j.categories, { [j.categoriesNoFilter]: !E }),
+              className: o()(j.categories, { [j.categoriesNoFilter]: !E }),
               children: [
                   v.map((e, t) =>
                       (0, r.jsx)(
@@ -162,7 +162,7 @@ function I(e) {
                           currentPage: s,
                           totalCount: b.length,
                           pageSize: y.kN,
-                          onPageChange: o,
+                          onPageChange: a,
                           disablePaginationGap: !0,
                       }),
                   }),

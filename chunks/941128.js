@@ -39,7 +39,7 @@ let y = [E.ff.AUTHENTICATION_FAILED, E.ff.NOT_ENTITLED],
     N = new Map(),
     R = !1,
     P = null;
-function D() {
+function w() {
     let e = {
         queue: v,
         paused: T,
@@ -47,7 +47,7 @@ function D() {
     };
     s.K.set(O, e);
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (null != S && S.applicationId === e && S.branchId === t) ||
         (null != A && A.applicationId === e && A.branchId === t)
@@ -58,7 +58,7 @@ function L() {
     if (null != e) {
         let { comboId: t, action: n } = e,
             { applicationId: r, branchId: i } = (0, _.CP)(t);
-        if (!w(r, i)) {
+        if (!D(r, i)) {
             let e = d.default.getToken(),
                 t = d.default.getId();
             if (null == e) throw Error("missing user token");
@@ -81,14 +81,14 @@ function M(e, t, n, r) {
     let s = x(e, t);
     0 !== s && (n ? -1 === s && (v.push(a), L()) : (s > 0 && v.splice(s, 1), v.unshift(a), L())),
         !n && T && p.Z.resume(),
-        D();
+        w();
 }
 function k(e, t) {
     let n = (0, _.Tu)(e, t),
         r = I.indexOf(n);
     -1 !== r && I.splice(r, 1);
     let i = x(e, t);
-    -1 !== i && (v.splice(i, 1), D()), L();
+    -1 !== i && (v.splice(i, 1), w()), L();
 }
 function j(e) {
     let { applicationId: t, branchId: n } = e;
@@ -113,7 +113,7 @@ function F(e) {
     let { applicationId: t, branchId: n } = e,
         r = x(t, n);
     if (r < 1) return !1;
-    v.splice(0, 0, v.splice(r, 1)[0]), L(), T && p.Z.resume(), D();
+    v.splice(0, 0, v.splice(r, 1)[0]), L(), T && p.Z.resume(), w();
 }
 function V(e) {
     let { applicationId: t, branchId: n } = e,
@@ -156,7 +156,7 @@ function H(e) {
         return !0;
     })),
         L(),
-        (r || n !== T) && D();
+        (r || n !== T) && w();
 }
 function Y() {
     let e = d.default.getToken(),

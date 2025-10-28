@@ -44,7 +44,7 @@ function P(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function D(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function L(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -177,7 +177,7 @@ let x = (0, h.Un)({
                 n.e("60831"),
                 n.e("9452"),
                 n.e("24920"),
-                n.e("98025"),
+                n.e("88295"),
                 n.e("204"),
                 n.e("83243"),
                 n.e("93964"),
@@ -260,7 +260,7 @@ let x = (0, h.Un)({
                 n.e("47840"),
                 n.e("60831"),
                 n.e("24920"),
-                n.e("98025"),
+                n.e("88295"),
                 n.e("30437"),
                 n.e("63141"),
             ]).then(n.bind(n, 290161)),
@@ -542,7 +542,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(o.l_, {
                                         from: C.Z5c.CONNECT_AUTHORIZE,
-                                        to: L(D({}, location), { pathname: C.Z5c.OAUTH2_AUTHORIZE }),
+                                        to: L(w({}, location), { pathname: C.Z5c.OAUTH2_AUTHORIZE }),
                                     }),
                                     (0, r.jsx)(o.AW, {
                                         path: [
@@ -597,7 +597,7 @@ function ea() {
 }
 function eo(e) {
     let t = ea();
-    return (0, r.jsx)(ei, L(D({}, e), { skipsSettingDefaultPageTitle: t }));
+    return (0, r.jsx)(ei, L(w({}, e), { skipsSettingDefaultPageTitle: t }));
 }
 let es = d.ZP.connectStores(
     [O.default, g.Z],

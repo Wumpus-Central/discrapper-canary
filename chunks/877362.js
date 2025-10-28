@@ -19,8 +19,8 @@ var r = n(951288),
     h = n(594174),
     j = n(5192),
     C = n(998502),
-    I = n(981631),
-    w = n(459196),
+    w = n(981631),
+    I = n(459196),
     E = n(388032),
     Z = n(127181),
     P = n(350618);
@@ -65,17 +65,17 @@ function y(e) {
                       children: [
                           (0, r.jsx)(l.xvT, {
                               variant: "text-md/semibold",
-                              children: E.intl.string(S ? w.default.KSWK1U : w.default.XXXX5l),
+                              children: E.intl.string(S ? I.default.KSWK1U : I.default.XXXX5l),
                           }),
                           (0, r.jsx)(l.xvT, {
                               variant: "text-sm/medium",
-                              children: E.intl.format(S ? w.default["7fWTg4"] : w.default["7PXeeQ"], {
+                              children: E.intl.format(S ? I.default["7fWTg4"] : I.default["7PXeeQ"], {
                                   onClick: () => {
                                       (0, p.f)({
                                           guildId: i,
                                           location: {
-                                              section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                              object: I.qAy.LEARN_MORE,
+                                              section: w.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                              object: w.qAy.LEARN_MORE,
                                           },
                                       });
                                   },
@@ -153,8 +153,8 @@ function y(e) {
                       guild: u,
                       className: Z.content,
                       analyticsLocation: {
-                          page: I.ZY5.GUILD_POWERUPS_OVERVIEW,
-                          section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                          page: w.ZY5.GUILD_POWERUPS_OVERVIEW,
+                          section: w.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
                       color: s.Tt.BRAND,
                       size: s.Ph.MEDIUM,

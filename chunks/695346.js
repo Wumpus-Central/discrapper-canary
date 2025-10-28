@@ -23,7 +23,7 @@ n.d(t, {
     Ou: () => Y,
     P4: () => eb,
     Pe: () => V,
-    QK: () => eD,
+    QK: () => ew,
     QZ: () => R,
     R$: () => y,
     RS: () => eI,
@@ -40,7 +40,7 @@ n.d(t, {
     Xk: () => k,
     Xr: () => ep,
     YC: () => e1,
-    Yk: () => ew,
+    Yk: () => eD,
     _O: () => L,
     _j: () => eF,
     bh: () => eo,
@@ -49,7 +49,7 @@ n.d(t, {
     cP: () => H,
     co: () => eg,
     d$: () => Z,
-    d4: () => w,
+    d4: () => D,
     d8: () => A,
     dN: () => b,
     eR: () => v,
@@ -221,23 +221,23 @@ let A = (0, f.Zc)(
         (e) => (null != e ? e : "0"),
         (e) => e,
     ),
-    D = [],
-    w = (0, f.Zc)(
+    w = [],
+    D = (0, f.Zc)(
         "textAndImages",
         "emojiPickerCollapsedSections",
-        (e) => (null != e ? e : D),
+        (e) => (null != e ? e : w),
         (e) => e,
     ),
     L = (0, f.Zc)(
         "textAndImages",
         "stickerPickerCollapsedSections",
-        (e) => (null != e ? e : D),
+        (e) => (null != e ? e : w),
         (e) => e,
     ),
     x = (0, f.Zc)(
         "textAndImages",
         "soundboardPickerCollapsedSections",
-        (e) => (null != e ? e : D),
+        (e) => (null != e ? e : w),
         (e) => e,
     ),
     M = (0, f.Zc)(
@@ -755,7 +755,7 @@ let eR = (0, f.KM)(
         }),
         { comparator: s.Z },
     ),
-    eD = (0, f.R2)(
+    ew = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",
@@ -780,7 +780,7 @@ let eR = (0, f.KM)(
                 return null == (e = _.Z.getOverride("gifAutoPlay")) ? void 0 : e.value;
             }),
     ),
-    ew = (0, f.R2)(
+    eD = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",

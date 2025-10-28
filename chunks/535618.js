@@ -10,8 +10,8 @@ var i = e(951288),
     d = e(594174),
     p = e(669079),
     x = e(823379),
-    m = e(133201),
-    f = e(519193),
+    f = e(133201),
+    m = e(519193),
     h = e(388032),
     C = e(167969),
     g = e(557256);
@@ -40,7 +40,7 @@ function S(t) {
     if (null == S) return null;
     switch (d.state) {
         case "LINK":
-            return (0, i.jsx)(m.Z, {
+            return (0, i.jsx)(f.Z, {
                 sku: e,
                 application: S,
                 transitionState: n,
@@ -50,7 +50,7 @@ function S(t) {
                 isSuccessButtonLoading: C,
             });
         case "SUCCESS":
-            return (0, i.jsx)(f.SocialLayerStorefrontItemClaimedSuccessfullyModal, {
+            return (0, i.jsx)(m.SocialLayerStorefrontItemClaimedSuccessfullyModal, {
                 transitionState: n,
                 application: S,
                 sku: e,

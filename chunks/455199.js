@@ -59,8 +59,8 @@ let C = "recentMentionFilterSettings",
     N = [],
     R = {},
     P = {},
-    D = !1,
-    w = !0,
+    w = !1,
+    D = !0,
     L = s.K.get(C, {
         guildFilter: T.NgX.ALL_SERVERS,
         everyoneFilter: !0,
@@ -88,7 +88,7 @@ function U(e) {
 }
 function G(e) {
     let { guildId: t } = e;
-    (D = !0), null == t && L.guildFilter === T.NgX.THIS_SERVER && X({ guildFilter: T.NgX.ALL_SERVERS });
+    (w = !0), null == t && L.guildFilter === T.NgX.THIS_SERVER && X({ guildFilter: T.NgX.ALL_SERVERS });
 }
 function B(e) {
     if (e instanceof h.ZP) return e;
@@ -131,13 +131,13 @@ function F(e) {
         a().forEach(i, (e) => {
             P[e.id] = !0;
         }),
-        (D = !1),
-        (w = t),
+        (w = !1),
+        (D = t),
         (M = (0, l.zO)()),
         (x = !0);
 }
 function V() {
-    D = !1;
+    w = !1;
 }
 function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -269,7 +269,7 @@ function er(e) {
     let { size: t } = e;
     U({ deletedMessages: N.slice(t) });
     for (let e = t; e < N.length; ++e) delete P[N[e].id];
-    N.length > (N = N.slice(0, t)).length && (w = !0);
+    N.length > (N = N.slice(0, t)).length && (D = !0);
 }
 function ei(e) {
     k = !0;
@@ -294,10 +294,10 @@ class ea extends (r = o.ZP.Store) {
         return P[e];
     }
     get loading() {
-        return D;
+        return w;
     }
     get hasMore() {
-        return w;
+        return D;
     }
     get guildFilter() {
         return L.guildFilter;

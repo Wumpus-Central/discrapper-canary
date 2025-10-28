@@ -65,16 +65,16 @@ let A = function (e) {
         A = (0, y.If)(),
         { section: Z, rows: w } = (0, o.cj)([I.ZP], () => I.ZP.getState()),
         L = (0, o.e7)([m.Z], () => m.Z.getSuggestionCount()),
-        D = i.useMemo(() => w.getRelationshipCounts(), [w]);
+        R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
         null != t && p.Z.setInitialSection(t),
-            0 === D[T.OGo.FRIEND] &&
-                0 === D[T.OGo.PENDING_INCOMING] &&
-                0 === D[T.OGo.PENDING_OUTGOING] &&
-                0 === D[T.OGo.BLOCKED] &&
+            0 === R[T.OGo.FRIEND] &&
+                0 === R[T.OGo.PENDING_INCOMING] &&
+                0 === R[T.OGo.PENDING_OUTGOING] &&
+                0 === R[T.OGo.BLOCKED] &&
                 p.Z.transitionToSection(T.pJs.ADD_FRIEND);
-    }, [t, D]);
-    let R = (e) => {
+    }, [t, R]);
+    let D = (e) => {
             p.Z.transitionToSection(e, { explicit: !0 });
         },
         M = (0, h.Dt)(),
@@ -88,7 +88,7 @@ let A = function (e) {
             },
             {
                 id: T.pJs.ALL,
-                show: D[T.OGo.FRIEND] > 0,
+                show: R[T.OGo.FRIEND] > 0,
                 content: j.intl.string(j.t.PfjFjR),
                 className: P.item,
             },
@@ -169,7 +169,7 @@ let A = function (e) {
                                     "aria-label": j.intl.string(j.t.TdEu5X),
                                     selectedItem: Z,
                                     type: "top-pill",
-                                    onItemSelect: R,
+                                    onItemSelect: D,
                                     className: P.tabBar,
                                     children: U.filter((e) => e.show).map((e) =>
                                         (0, r.jsx)(

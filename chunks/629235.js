@@ -1,17 +1,17 @@
 n.d(t, { Z: () => u }), n(953529);
 var a = n(647438),
     r = n(442837),
-    i = n(480916),
-    l = n(292263),
+    l = n(480916),
+    i = n(292263),
     o = n(352138),
     s = n(81643),
     c = n(469775),
     d = n(388032);
 let u = function (e) {
     let { onClose: t, onMethodClick: n, classificationId: u } = e,
-        { methods: m, loading: p } = (0, r.cj)([l.Z], () => ({
-            methods: l.Z.methods,
-            loading: l.Z.loading,
+        { methods: m, loading: p } = (0, r.cj)([i.Z], () => ({
+            methods: i.Z.methods,
+            loading: i.Z.loading,
         })),
         { initiateAgeVerification: h } = (0, s.WD)({
             onComplete: t,
@@ -36,9 +36,9 @@ let u = function (e) {
                                   title: d.intl.string(a),
                                   description: d.intl.string(r),
                                   onClick: async (t) => {
-                                      (0, i.x3)(t, i.d_.EXPRESSIVE_PRIMARY, i.sU.METHOD_SELECT, e),
+                                      (0, l.x3)(t, l.d_.EXPRESSIVE_PRIMARY, l.sU.METHOD_SELECT, e),
                                           null == n || n(),
-                                          await h(i.cU.EXPRESSIVE_GET_STARTED, e);
+                                          await h(l.cU.EXPRESSIVE_GET_STARTED, e);
                                   },
                               };
                           })

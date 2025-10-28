@@ -14,8 +14,8 @@ var i = n(120356),
     p = n(86419),
     m = n(872269),
     b = n(228168),
-    h = n(388032),
-    y = n(176870);
+    y = n(388032),
+    h = n(176870);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,20 +64,20 @@ let j = (e) => {
             i = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
             { isDragging: a } = (0, l.f)((e) => ({ isDragging: e.isDragging() }));
         return (0, r.jsx)(c.aML, {
-            "aria-label": h.intl.formatToPlainString(h.t.HWNJJN, { widgetTitle: t }),
+            "aria-label": y.intl.formatToPlainString(y.t.HWNJJN, { widgetTitle: t }),
             text: () =>
                 (0, r.jsxs)("div", {
-                    className: y.dragClickTooltipText,
+                    className: h.dragClickTooltipText,
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            children: h.intl.format(i ? h.t["zvln/l"] : h.t["7cdwhg"], {
+                            children: y.intl.format(i ? y.t["zvln/l"] : y.t["7cdwhg"], {
                                 emphasizeHook: (e) => (0, r.jsx)("strong", { children: e }),
                             }),
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/normal",
-                            children: h.intl.format(h.t["4e0rM4"], {
+                            children: y.intl.format(y.t["4e0rM4"], {
                                 emphasizeHook: (e) => (0, r.jsx)("strong", { children: e }),
                             }),
                         }),
@@ -130,13 +130,13 @@ let j = (e) => {
                         (0, s.Zy)(), t();
                     },
                     onSelect: () => {},
-                    "aria-label": h.intl.string(h.t.xpSHSk),
+                    "aria-label": y.intl.string(y.t.xpSHSk),
                     children: (0, r.jsxs)(c.kSQ, {
                         children: [
                             l,
                             (0, r.jsx)(c.sNh, {
                                 id: "remove-widget",
-                                label: h.intl.string(h.t.Mm07Yc),
+                                label: y.intl.string(y.t.Mm07Yc),
                                 action: u,
                                 color: "danger",
                                 icon: c.XHJ,
@@ -166,9 +166,9 @@ let j = (e) => {
                                 v(
                                     {
                                         innerRef: i,
-                                        className: a()(y.dragHandleButton, n),
+                                        className: a()(h.dragHandleButton, n),
                                         "data-dnd-name": o,
-                                        "aria-label": h.intl.formatToPlainString(h.t.HWNJJN, { widgetTitle: o }),
+                                        "aria-label": y.intl.formatToPlainString(y.t.HWNJJN, { widgetTitle: o }),
                                         "aria-describedby": s,
                                     },
                                     e,
@@ -179,7 +179,7 @@ let j = (e) => {
                                         (0, r.jsx)(c.Vni, { size: "sm" }),
                                         (0, r.jsx)(c.nn4, {
                                             id: s,
-                                            children: h.intl.string(h.t.bsuqFn),
+                                            children: y.intl.string(y.t.bsuqFn),
                                         }),
                                     ],
                                 },

@@ -33,16 +33,16 @@ function C() {
             onSearchSubmit: w,
             isSearchVisible: L,
         } = (0, g.H)({ loadId: e.current }),
-        D = h.Z.useField("searchBarState"),
+        R = h.Z.useField("searchBarState"),
         {
-            onTabsAvailableWidthChange: R,
+            onTabsAvailableWidthChange: D,
             onCollapsedSearchBarClick: M,
             onSearchBarBlur: k,
             tabsClassName: U,
         } = (0, s.U)({
             isSearchBarVisible: P,
             isSearchBarEmpty: "" === x.trim(),
-            searchBarState: D,
+            searchBarState: R,
             setSearchBarState: (e) => h.Z.setState({ searchBarState: e }),
         }),
         G = d.Z.useField("fetchedQuery"),
@@ -96,7 +96,7 @@ function C() {
                                 tabs: H,
                                 selectedTab: L ? null : T,
                                 onTabSelect: B,
-                                onAvailableWidthChange: R,
+                                onAvailableWidthChange: D,
                             }),
                         L &&
                             (0, r.jsx)(l.Heading, {
@@ -113,7 +113,7 @@ function C() {
                                 onClear: Z,
                                 onSubmit: w,
                                 onCollapsedClick: M,
-                                state: L ? I.GlobalDiscoverySearchBarState.DEFAULT : D,
+                                state: L ? I.GlobalDiscoverySearchBarState.DEFAULT : R,
                                 onBlur: k,
                             }),
                     ],

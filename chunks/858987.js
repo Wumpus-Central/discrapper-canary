@@ -123,10 +123,10 @@ function T(e) {
             needsPaymentSource: N,
             inReverseTrial: R,
             onNext: P,
-            onPaymentSourceAdd: D,
+            onPaymentSourceAdd: w,
         } = e,
         {
-            application: w,
+            application: D,
             selectedPlan: L,
             hasAcceptedTerms: x,
             purchaseType: M,
@@ -174,7 +174,7 @@ function T(e) {
                         {
                             type: "submit",
                             "data-testid": "submitButton",
-                            onClick: D,
+                            onClick: w,
                         },
                     ),
                 ),
@@ -202,7 +202,7 @@ function T(e) {
                     ),
                 ),
         });
-    if ((0, u.yE)(null != (t = null == w ? void 0 : w.flags) ? t : 0, h.udG.EMBEDDED) && U === s.O.LOADING)
+    if ((0, u.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, h.udG.EMBEDDED) && U === s.O.LOADING)
         return (0, r.jsx)(o.aML, {
             "data-migration-pending": !0,
             text: g.intl.string(g.t.cjA5tj),

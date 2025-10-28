@@ -25,8 +25,8 @@ var i = n(951288),
     S = n(399860),
     E = n(335049),
     I = n(617012),
-    w = n(981631),
-    P = n(388032),
+    P = n(981631),
+    w = n(388032),
     T = n(547063);
 function Z(e) {
     let {
@@ -75,13 +75,13 @@ function Z(e) {
                     }
                 });
         }, [l, c, h]),
-        w = r.useCallback(
+        P = r.useCallback(
             (e, t) => {
                 n({}, [(0, S.rE)(e, t)]);
             },
             [n],
         ),
-        P = r.useCallback(
+        w = r.useCallback(
             (e, t, i) => {
                 let r = (0, S.rE)(e, t);
                 null != c[r] &&
@@ -121,8 +121,8 @@ function Z(e) {
                   {
                       guild: g,
                       commandId: t,
-                      onChange: (t) => P(e.id, e.type, t),
-                      onRemove: () => w(e.id, e.type),
+                      onChange: (t) => w(e.id, e.type, t),
+                      onRemove: () => P(e.id, e.type),
                       overwrite: e,
                       integration: A,
                       canShowMigrationTooltip: D,
@@ -160,15 +160,15 @@ function k(e) {
     y
         ? x.canWrite ||
           (x.type === m.Kw.USER
-              ? (a = x.id === S ? P.intl.string(P.t["1VF/0x"]) : P.intl.string(P.t.P1GnEd))
-              : x.type === m.Kw.ROLE && (a = P.intl.string(P.t.mcAijf)))
-        : (a = null != d ? P.intl.string(P.t.tybdas) : P.intl.string(P.t["z2hjk/"]));
+              ? (a = x.id === S ? w.intl.string(w.t["1VF/0x"]) : w.intl.string(w.t.P1GnEd))
+              : x.type === m.Kw.ROLE && (a = w.intl.string(w.t.mcAijf)))
+        : (a = null != d ? w.intl.string(w.t.tybdas) : w.intl.string(w.t["z2hjk/"]));
     let Z = v && null != j && x.id === o.id && void 0 !== C && !x.permission;
     r.useEffect(() => {
         if (Z) {
             var e, t, n;
             O.default.track(
-                w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+                P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -235,8 +235,8 @@ function k(e) {
         }),
         R = (0, i.jsx)(s.J2, {
             targetElementRef: k,
-            title: P.intl.string(P.t.ufFDiC),
-            body: P.intl.format(P.t.pW4Crz, {
+            title: w.intl.string(w.t.ufFDiC),
+            body: w.intl.format(w.t.pW4Crz, {
                 botName: C,
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
@@ -289,7 +289,7 @@ function A(e) {
                 className: T.removeActions,
                 children: (0, i.jsx)(d.P3F, {
                     className: T.removeContainer,
-                    "aria-label": P.intl.string(P.t.mT0CQM),
+                    "aria-label": w.intl.string(w.t.mT0CQM),
                     onClick: l,
                     children: (0, i.jsx)(d.XHJ, {
                         size: "md",

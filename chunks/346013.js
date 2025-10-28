@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(495114),
     R = n(170140),
     P = n(981631),
-    D = n(959517),
-    w = n(388032),
+    w = n(959517),
+    D = n(388032),
     L = n(823708),
     x = n(527455);
 function M(e, t, n) {
@@ -89,7 +89,7 @@ function G(e) {
         Z = i.useRef(null),
         F = i.useRef(null),
         V = (0, R.J)(j, G),
-        { setPopout: H } = (0, b.Z)(G.id, D.d$),
+        { setPopout: H } = (0, b.Z)(G.id, w.d$),
         Y = (0, E.qo)(G, B, H, !0),
         W = v.QK.useSetting(),
         K = (0, C.n)(),
@@ -203,7 +203,7 @@ function G(e) {
                         (!0 === V.shouldShowBlurredThumbnailImage
                             ? (0, r.jsx)("img", {
                                   src: x,
-                                  alt: w.intl.string(w.t.rIbh8H),
+                                  alt: D.intl.string(D.t.rIbh8H),
                                   className: o()(L.thumbnail, { [L.spoiler]: V.shouldSpoiler }),
                                   onContextMenu: Y,
                                   onError: () => Q(!0),
@@ -211,7 +211,7 @@ function G(e) {
                             : (0, r.jsx)(h.Z, {
                                   src: !eg && em ? "".concat(eh, "?format=png") : eh,
                                   backgroundSrc: "".concat(eh, "?format=png"),
-                                  alt: w.intl.string(w.t.rIbh8H),
+                                  alt: D.intl.string(D.t.rIbh8H),
                                   aspectRatio: 16 / 9,
                                   className: o()(L.thumbnail, { [L.spoiler]: V.shouldSpoiler }),
                                   imageChildClassName: L.thumbnailImage,
@@ -283,7 +283,7 @@ function G(e) {
                                                     ref: F,
                                                     size: u.EFr.SIZE_40,
                                                     src: ef,
-                                                    "aria-label": w.intl.string(w.t.KXz3XB),
+                                                    "aria-label": D.intl.string(D.t.KXz3XB),
                                                     avatarDecoration: ed,
                                                 }),
                                             ),
@@ -317,7 +317,7 @@ function G(e) {
                                             variant: "text-sm/medium",
                                             color: "text-muted",
                                             className: L.descriptionFooterAuthorContainer,
-                                            children: w.intl.format(w.t.voIDKa, {
+                                            children: D.intl.format(D.t.voIDKa, {
                                                 authorName: V.authorName,
                                                 authorNameHook: ep,
                                             }),

@@ -60,7 +60,7 @@ function P(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,12 +72,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -219,8 +219,8 @@ function H(e) {
             className: O,
             listName: R,
         } = e,
-        D = i.useRef(null),
-        x = (0, p.Z)(R, D),
+        w = i.useRef(null),
+        x = (0, p.Z)(R, w),
         B = (0, u.e7)([v.ZP], () => v.ZP.hasNotice()),
         Z = (0, u.e7)([I.Z], () => I.Z.windowSize());
     i.useEffect(() => {
@@ -229,11 +229,11 @@ function H(e) {
         i.useEffect(() => {
             function e() {
                 var e;
-                null == (e = D.current) || e.scrollPageUp({ animate: !0 });
+                null == (e = w.current) || e.scrollPageUp({ animate: !0 });
             }
             function t() {
                 var e;
-                null == (e = D.current) || e.scrollPageDown({ animate: !0 });
+                null == (e = w.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
                 S.S.subscribe(A.CkL.SCROLL_PAGE_DOWN, t),
@@ -245,7 +245,7 @@ function H(e) {
         }, []);
     let F = i.useCallback(() => {
             var e;
-            let t = null == (e = D.current) ? void 0 : e.getScrollerState();
+            let t = null == (e = w.current) ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < U && a && !s && (null == _ || _());
         }, [a, _, s]),
         V = [],
@@ -326,7 +326,7 @@ function H(e) {
                 (0, r.jsxs)(f.Den, {
                     className: o()(N.messagesPopout, y),
                     onScroll: q ? F : void 0,
-                    ref: D,
+                    ref: w,
                     children: [
                         (0, r.jsx)(c.bG, {
                             navigator: x,
@@ -334,7 +334,7 @@ function H(e) {
                                 children: (e) => {
                                     var { ref: t } = e,
                                         n = L(e, ["ref"]);
-                                    return (0, r.jsx)("div", w(P({ ref: t }, n), { children: V }));
+                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: V }));
                                 },
                             }),
                         }),
@@ -377,7 +377,7 @@ function Y(e) {
             null != a && (_.Z.trackJump(i, r, t), (0, E.uL)(A.Z5c.CHANNEL(a.getGuildId(), i, r))), null == d || d(n);
         }
     }
-    function D(e) {
+    function w(e) {
         let { message: t, channel: n } = e;
         if (null == t) return [];
         if (null != O) return O(t, (e) => P(t, e));
@@ -413,7 +413,7 @@ function Y(e) {
     i.useEffect(() => {
         n(a);
     }, [a, n]);
-    let w = i.useMemo(
+    let D = i.useMemo(
         () =>
             null == o
                 ? void 0
@@ -426,7 +426,7 @@ function Y(e) {
     return (0, r.jsx)(H, {
         className: T,
         scrollerClassName: I,
-        items: w,
+        items: D,
         loading: l,
         analyticsName: t,
         renderEmptyState: h,
@@ -434,7 +434,7 @@ function Y(e) {
         hasMore: s,
         loadMore: c,
         getProTip: v,
-        renderItem: D,
+        renderItem: w,
         listName: C,
         "aria-label": e["aria-label"],
     });

@@ -53,7 +53,7 @@ function E(e) {
             }),
                 v(!1);
         }, [t, y, T, R]),
-        D = i.useCallback(
+        w = i.useCallback(
             async (e, n, r) => {
                 var i;
                 v(!0),
@@ -89,7 +89,7 @@ function E(e) {
                       ref: n,
                       tabIndex: 0,
                       disabled: R,
-                      onChange: D,
+                      onChange: w,
                       setLoading: b,
                   })
                 : null,

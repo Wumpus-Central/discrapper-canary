@@ -386,13 +386,13 @@ var R = function (e, t, n, r) {
     return !0;
 };
 let P = !1,
-    D,
-    w = {};
+    w,
+    D = {};
 function L() {
     if (!P) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || R(e, w) ? null != D && cancelAnimationFrame(D) : ((w = e), null == r || r.invalidate()),
-        (D = requestAnimationFrame(L));
+    null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()),
+        (w = requestAnimationFrame(L));
 }
 let x = !1,
     M = {
@@ -403,10 +403,10 @@ let x = !1,
             (x = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (P = !0), (D = requestAnimationFrame(L));
+            (P = !0), (w = requestAnimationFrame(L));
         },
         disableAnimationTracking() {
-            (P = !1), null != D && cancelAnimationFrame(D);
+            (P = !1), null != w && cancelAnimationFrame(w);
         },
     };
 function k(e) {

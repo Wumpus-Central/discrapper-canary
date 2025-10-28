@@ -74,7 +74,7 @@ function P(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,12 +86,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -125,12 +125,12 @@ function M(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     a.Z.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: w(P({}, t && { clipsEnabled: !0 }), { decoupledClipsEnabled: t }),
+        settings: D(P({}, t && { clipsEnabled: !0 }), { decoupledClipsEnabled: t }),
     }),
         n &&
             b.default.track(
                 N.rMx.CLIPS_SETTINGS_UPDATED,
-                w(P({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t }),
+                D(P({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t }),
             );
 }
 function k(e) {
@@ -200,7 +200,7 @@ function F(e, t) {
             a = null != (n = h.get(i)) ? n : 0;
         h.set(i, a + r);
     }
-    return w(P({}, e), {
+    return D(P({}, e), {
         frames_encoded_nvidia_cuda: null != (r = h.get(s.Su.NVIDIA_CUDA)) ? r : 0,
         frames_encoded_nvidia_direct3d: null != (i = h.get(s.Su.NVIDIA_DIRECT_3D)) ? i : 0,
         frames_encoded_openh264: null != (a = h.get(s.Su.OPENH264)) ? a : 0,
@@ -241,7 +241,7 @@ async function V(e) {
     null != e &&
         a.Z.dispatch({
             type: "CLIPS_SAVE_CLIP_PLACEHOLDER",
-            clip: w(P({}, n), { filepath: i }),
+            clip: D(P({}, n), { filepath: i }),
         });
     try {
         var f;
@@ -264,7 +264,7 @@ async function V(e) {
                     .concat(null != (f = null == a ? void 0 : a.length) ? f : 0, " bytes thumbnail."),
             ),
             await s.updateClipMetadata(i, JSON.stringify(n)),
-            w(P({}, n), { filepath: i })
+            D(P({}, n), { filepath: i })
         );
     } catch (i) {
         if (
@@ -376,7 +376,7 @@ async function q(e) {
     let n = await o.Z.clips.loadClipsDirectory(e),
         r = [];
     for (let e of n) {
-        let t = await (0, T.w)(w(P({}, e.metadata), { filepath: e.filepath }));
+        let t = await (0, T.w)(D(P({}, e.metadata), { filepath: e.filepath }));
         null != t && r.push(t);
     }
     a.Z.dispatch({

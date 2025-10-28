@@ -1,6 +1,6 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => a });
 var r = n(647438);
-let i = (e, t) => {
+let a = (e, t) => {
     let n = (0, r.useRef)(e);
     (0, r.useEffect)(() => {
         n.current = e;

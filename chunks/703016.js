@@ -31,11 +31,11 @@ let A = [],
     Z = null,
     w = null,
     L = null,
-    D = /\|\|([\s\S]+?)\|\|/g;
-function R(e, t, n, r) {
+    R = /\|\|([\s\S]+?)\|\|/g;
+function D(e, t, n, r) {
     let l = b.Z.getGuild(n),
         a = e
-            .replace(D, x.intl.string(x.t["F+x38C"]))
+            .replace(R, x.intl.string(x.t["F+x38C"]))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var r;
                 let i = C.default.getUser(t);
@@ -119,7 +119,7 @@ function H(e) {
                 : null,
         c = l.getGuildId(),
         d = null != (r = g.ZP.getNick(c, i.author.id)) ? r : S.ZP.getName(i.author);
-    return U(R(i.content, d, c, o), !0, l.id, i.id), !0;
+    return U(D(i.content, d, c, o), !0, l.id, i.id), !0;
 }
 function V(e) {
     var t, n, r, i, l, a;
@@ -147,7 +147,7 @@ function V(e) {
                     : "",
             c = o.type === P.uaV.REPLY ? (null == (r = o.referenced_message) ? void 0 : r.author) : null,
             d = null != c ? (null != (a = g.ZP.getNick(e, null == c ? void 0 : c.id)) ? a : S.ZP.getName(c)) : null;
-        U(R(o.content, t, e, d), !1, u.id, o.id, j.f);
+        U(D(o.content, t, e, d), !1, u.id, o.id, j.f);
     }
     return !1;
 }

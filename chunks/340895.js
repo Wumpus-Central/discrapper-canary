@@ -87,11 +87,11 @@ function P(e) {
         N(t)
     );
 }
-function D(e) {
+function w(e) {
     let { channelId: t } = e;
     return N(t);
 }
-function w(e) {
+function D(e) {
     let { x: t, y: n } = e;
     return (
         (r = {
@@ -144,7 +144,7 @@ let j = new k(s.Z, {
     CALL_DELETE: P,
     GUILD_RING_START: R,
     GUILD_RING_STOP: P,
-    VOICE_CHANNEL_SELECT: D,
-    INCOMING_CALL_MOVE: w,
+    VOICE_CHANNEL_SELECT: w,
+    INCOMING_CALL_MOVE: D,
     CHANNEL_DELETE: L,
 });

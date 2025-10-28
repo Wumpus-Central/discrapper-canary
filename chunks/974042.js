@@ -306,23 +306,23 @@ let A = !0,
     Z = !1,
     w = I.pJs.ONLINE,
     L = new x(),
-    D = !0,
-    R = !1;
+    R = !0,
+    D = !1;
 function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     A && (e || (w !== I.pJs.ONLINE && w !== I.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
 }
 function k() {
-    if (((A = !0), D ? (Z = !1) : M(), (L = L.reset()), R)) return;
+    if (((A = !0), R ? (Z = !1) : M(), (L = L.reset()), D)) return;
     let e = L.getRelationshipCounts();
     w = 0 === e[I.OGo.FRIEND] ? (0 !== e[I.OGo.PENDING_INCOMING] ? I.pJs.PENDING : I.pJs.ADD_FRIEND) : I.pJs.ONLINE;
 }
 function U() {
-    L = D ? new x() : L.reset();
+    L = R ? new x() : L.reset();
 }
 function G(e) {
     return function () {
-        return !D && !!L.update(e) && ((L = L.clone()), !0);
+        return !R && !!L.update(e) && ((L = L.clone()), !0);
     };
 }
 class B extends (r = a.ZP.Store) {
@@ -354,7 +354,7 @@ let H = new B(s.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (D = null != t), U(), !D;
+        return (R = null != t), U(), !R;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         Z = !1;
@@ -363,6 +363,6 @@ let H = new B(s.Z, {
         (A = !0), (Z = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (w = e.section), (R = !0);
+        (w = e.section), (D = !0);
     },
 });

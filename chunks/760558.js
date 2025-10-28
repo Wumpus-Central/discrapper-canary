@@ -34,8 +34,8 @@ let v = (e) => {
         ].filter((e) => null != e),
         [A, C] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
         [N, R] = i.useState(S[0]),
-        [P, D] = i.useState(!1),
-        [w, L] = i.useState(n),
+        [P, w] = i.useState(!1),
+        [D, L] = i.useState(n),
         [x, M] = i.useState(null != t ? t : T.slice(0, 1)),
         k = i.useMemo(
             () =>
@@ -120,13 +120,13 @@ let v = (e) => {
                     selectedSlotGuilds: k,
                 }),
             CONFIRM() {
-                if (null == w) return null;
+                if (null == D) return null;
                 let e = x.filter((e) => (0, h.tl)(e)).length,
                     t = x.length,
                     n = k.length,
                     i = "CONFIRM" === S[0] ? U : () => R(S[S.indexOf(N) - 1]),
                     a = async () => {
-                        if ((D(!1), null != w && (null == x ? void 0 : x.length) !== 0)) {
+                        if ((w(!1), null != D && (null == x ? void 0 : x.length) !== 0)) {
                             o()(
                                 !x.some((e) => e.isOnCooldown()),
                                 "Cannot use a premium guild subscription slot while on cooldown",
@@ -139,7 +139,7 @@ let v = (e) => {
                                     }),
                                 ),
                                     await (0, u.W3)(
-                                        w.id,
+                                        D.id,
                                         x.map((e) => {
                                             let { id: t } = e;
                                             return t;
@@ -147,7 +147,7 @@ let v = (e) => {
                                     ),
                                     R("SUCCESS");
                             } catch (e) {
-                                D(!0);
+                                w(!0);
                             }
                         }
                     },
@@ -176,7 +176,7 @@ let v = (e) => {
                     children: j
                         ? (0, r.jsx)(m.Z.TransferBody, {
                               fromGuilds: k,
-                              toGuild: w,
+                              toGuild: D,
                               blurb: y.intl.formatToPlainString(y.t.SSA2lu, {
                                   slotCount: t,
                                   guildCount: n,
@@ -187,7 +187,7 @@ let v = (e) => {
                               canceledCount: e,
                           })
                         : (0, r.jsx)(m.Z.ApplyBody, {
-                              guild: w,
+                              guild: D,
                               blurb: y.intl.string(y.t.yTlZV0),
                               warning: y.intl.formatToPlainString(y.t.KPnDlu, {
                                   days: b.o3l,
@@ -209,7 +209,7 @@ let v = (e) => {
                     title: e,
                     actions: [],
                     children: (0, r.jsx)(E.R7, {
-                        guild: w,
+                        guild: D,
                         isTransfer: j,
                         guildBoostQuantity: x.length,
                         onClose: U,

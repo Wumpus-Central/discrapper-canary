@@ -189,10 +189,10 @@ function A(e) {
         return Math.random().toString(36).substr(2, A);
     }
     var P = m();
-    function D(e) {
+    function w(e) {
         (0, r.Z)(X, e), (X.length = t.length), P.notifyListeners(X.location, X.action);
     }
-    function w(e) {
+    function D(e) {
         v(e) || M(N(e.state));
     }
     function L() {
@@ -200,12 +200,12 @@ function A(e) {
     }
     var x = !1;
     function M(e) {
-        if (x) (x = !1), D();
+        if (x) (x = !1), w();
         else {
             var t = "POP";
             P.confirmTransitionTo(e, t, h, function (n) {
                 n
-                    ? D({
+                    ? w({
                           action: t,
                           location: e,
                       })
@@ -253,7 +253,7 @@ function A(e) {
                             u = U.slice(0, l + 1);
                         u.push(a.key),
                             (U = u),
-                            D({
+                            w({
                                 action: i,
                                 location: a,
                             });
@@ -286,7 +286,7 @@ function A(e) {
                     else {
                         var l = U.indexOf(X.location.key);
                         -1 !== l && (U[l] = a.key),
-                            D({
+                            w({
                                 action: i,
                                 location: a,
                             });
@@ -307,8 +307,8 @@ function A(e) {
     var Y = 0;
     function W(e) {
         1 === (Y += e) && 1 === e
-            ? (window.addEventListener(I, w), i && window.addEventListener(T, L))
-            : 0 === Y && (window.removeEventListener(I, w), i && window.removeEventListener(T, L));
+            ? (window.addEventListener(I, D), i && window.addEventListener(T, L))
+            : 0 === Y && (window.removeEventListener(I, D), i && window.removeEventListener(T, L));
     }
     var K = !1;
     function z(e) {
@@ -373,10 +373,10 @@ function P() {
         t = e.indexOf("#");
     return -1 === t ? "" : e.substring(t + 1);
 }
-function D(e) {
+function w(e) {
     window.location.hash = e;
 }
-function w(e) {
+function D(e) {
     window.location.replace(R(window.location.href) + "#" + e);
 }
 function L(e) {
@@ -408,7 +408,7 @@ function L(e) {
     function x() {
         var e = P(),
             t = b(e);
-        if (e !== t) w(t);
+        if (e !== t) D(t);
         else {
             var n = v(),
                 r = J.location;
@@ -441,7 +441,7 @@ function L(e) {
     }
     var j = P(),
         U = b(j);
-    j !== U && w(U);
+    j !== U && D(U);
     var G = v(),
         B = [_(G)];
     function Z(e) {
@@ -458,7 +458,7 @@ function L(e) {
                     i = b(f + t),
                     a = P() !== i;
                 if (a) {
-                    (A = t), D(i);
+                    (A = t), w(i);
                     var o = B.lastIndexOf(_(J.location)),
                         s = B.slice(0, o + 1);
                     s.push(t),
@@ -479,7 +479,7 @@ function L(e) {
                 var t = _(r),
                     i = b(f + t),
                     a = P() !== i;
-                a && ((A = t), w(i));
+                a && ((A = t), D(i));
                 var o = B.indexOf(_(J.location));
                 -1 !== o && (B[o] = t),
                     T({

@@ -156,8 +156,8 @@ class I extends (r = a.PureComponent) {
                 defaultValue: N,
                 orientation: R,
                 onValueRender: P,
-                renderMarker: D,
-                getAriaValueText: w,
+                renderMarker: w,
+                getAriaValueText: D,
                 barClassName: L,
                 grabberClassName: x,
                 grabberStyles: M = {},
@@ -187,8 +187,8 @@ class I extends (r = a.PureComponent) {
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
-                                      null != D
-                                          ? D(n)
+                                      null != w
+                                          ? w(n)
                                           : (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)("div", {
@@ -206,7 +206,7 @@ class I extends (r = a.PureComponent) {
                       })
                     : null,
             Y = null != P ? P(t) : "".concat(F.toFixed(0), "%"),
-            W = null != (e = null == w ? void 0 : w(t)) ? e : void 0;
+            W = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
         return (0, i.jsx)(
             f.gNt,
             b(g({}, Z), {

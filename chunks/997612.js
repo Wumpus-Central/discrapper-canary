@@ -1,5 +1,5 @@
 n.d(t, {
-    $: () => w,
+    $: () => D,
     X: () => M,
 });
 var r = n(951288),
@@ -68,7 +68,7 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function D(e, t) {
         e
     );
 }
-let w = (0, m.H)(() => ({
+let D = (0, m.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
 }));
@@ -123,7 +123,7 @@ function x() {
         children: (t) =>
             (0, r.jsx)(
                 h.hU,
-                D(
+                w(
                     R(
                         {
                             size: "sm",
@@ -141,8 +141,8 @@ function x() {
 function M(e) {
     var t;
     let { config: n } = e,
-        c = w.useField("selectedCollection"),
-        u = w.useField("selectedStory"),
+        c = D.useField("selectedCollection"),
+        u = D.useField("selectedStory"),
         {
             collection: f,
             group: m,
@@ -165,13 +165,13 @@ function M(e) {
             };
         }, [c, u, n.collections]),
         b = (e) => {
-            w.setState({
+            D.setState({
                 selectedCollection: e,
                 selectedStory: null,
             });
         },
         y = (e) => {
-            w.setState({ selectedStory: e });
+            D.setState({ selectedStory: e });
         },
         S = null != (t = null == f ? void 0 : f.name) ? t : "Design System",
         A = null == E ? void 0 : E.name,

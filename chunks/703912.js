@@ -86,8 +86,8 @@ async function P(e, t, n) {
             channel_id: Z,
             prompt: w,
             disable_guild_select: L,
-            integration_type: D,
-            pid: R,
+            integration_type: R,
+            pid: D,
             signal: M,
             isSocketRpcPrivateScope: k,
         } = e;
@@ -104,7 +104,7 @@ async function P(e, t, n) {
         null == b.default.getCurrentUser())
     )
         throw new v.Z({ errorCode: C.lTL.OAUTH2_ERROR }, "Client is not logged in");
-    if (null != D) l = Number(D);
+    if (null != R) l = Number(R);
     else {
         let e = (e) => {
                 var t;
@@ -162,7 +162,7 @@ async function P(e, t, n) {
                 "OAuth2 Authorize Error: ".concat((null == e ? void 0 : e.message) || "Unknown Error"),
             );
         }
-    null == n || n(s.application, Z, R);
+    null == n || n(s.application, Z, D);
     let G = I.Hn;
     try {
         G = a.vB(null != x ? x : 0);
@@ -190,7 +190,7 @@ async function P(e, t, n) {
         disableGuildSelect: L,
         disclosures: o,
         integrationType: l,
-        pid: R,
+        pid: D,
         signal: M,
     });
 }

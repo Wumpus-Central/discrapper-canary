@@ -43,7 +43,7 @@ function L(e, t, n) {
         e
     );
 }
-function D(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function D(e) {
     }
     return e;
 }
-function R(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -536,7 +536,7 @@ let ex = new eP(a.Z, {
             };
             if (
                 ((z[t.message.id] = e),
-                (Y[t.message.id] = R(D({}, e), { message: (0, p.e5)(t.message) })),
+                (Y[t.message.id] = D(R({}, e), { message: (0, p.e5)(t.message) })),
                 null == G && null == F)
             ) {
                 let [t, n] = eI((U = [e, ...U]));
@@ -623,7 +623,7 @@ let ex = new eP(a.Z, {
             startingIndex: c,
             endingIndex: u,
         } = e;
-        (ep = !0), (Y = D({}, Y));
+        (ep = !0), (Y = R({}, Y));
         let d = t.reduce((e, t) => ((e[t.message.id] = t), e), {}),
             p = n.reduce((e, t) => ((e[t.id] = t), e), {}),
             f = r.reduce((e, t) => ((e[t.id] = t), e), {}),
@@ -651,7 +651,7 @@ let ex = new eP(a.Z, {
             let r = b.Z.getMessage(t.channel_id, t.message.id);
             if (null != r) {
                 let e = (0, A.IC)(t, n);
-                Y[t.message.id] = R(D({}, e), { message: r });
+                Y[t.message.id] = D(R({}, e), { message: r });
             } else Y[t.message.id] = (0, A.IC)(t, n);
         }),
             a.forEach((e) => {
@@ -665,7 +665,7 @@ let ex = new eP(a.Z, {
                     W[e.summary_id] = !0;
                     return;
                 }
-                Y[t.id] = R(D({}, n), { summary: (0, A.wV)(t, n.data.guild_id) });
+                Y[t.id] = D(R({}, n), { summary: (0, A.wV)(t, n.data.guild_id) });
             }),
             s.forEach((e) => {
                 let t = f[e.content_id];
@@ -678,7 +678,7 @@ let ex = new eP(a.Z, {
                     W[e.content_id] = !0;
                     return;
                 }
-                Y[t.id] = R(D({}, n), { activity: t });
+                Y[t.id] = D(R({}, n), { activity: t });
             }),
             o.forEach((e) => {
                 let t = h[e.content_id];
@@ -691,7 +691,7 @@ let ex = new eP(a.Z, {
                     W[e.content_id] = !0;
                     return;
                 }
-                Y[t.content_id] = R(D({}, n), { candidate: (0, A.NV)(t) });
+                Y[t.content_id] = D(R({}, n), { candidate: (0, A.NV)(t) });
             }),
             c === el && (el = u),
             eu.delete((0, A.y_)(c, u));
@@ -705,7 +705,7 @@ let ex = new eP(a.Z, {
                 null == K[e.guild_id] && (K[e.guild_id] = {}),
                     (K[e.guild_id][t] = e.custom_channel_scores[t]),
                     eC(t, e.custom_channel_scores[t]);
-        (q = D({}, q)), (K = D({}, K));
+        (q = R({}, q)), (K = R({}, K));
     },
     LOAD_ICYMI_RECOMMENDED_GUILDS: function (e) {
         let { guilds: t } = e;
@@ -713,11 +713,11 @@ let ex = new eP(a.Z, {
     },
     ICYMI_CUSTOM_SCORES_UPDATED: function (e) {
         let { channelScores: t, guildId: n, guildScore: r } = e;
-        null != r && ((q[n] = r), eT(n, r), (q = D({}, q))),
+        null != r && ((q[n] = r), eT(n, r), (q = R({}, q))),
             null == t ||
                 t.forEach((e) => {
                     let { channelId: t, score: r } = e;
-                    null == K[n] && (K[n] = {}), (K[n][t] = r), eC(t, r), (K = D({}, K));
+                    null == K[n] && (K[n] = {}), (K[n][t] = r), eC(t, r), (K = R({}, K));
                 });
     },
     RELOAD_ICYMI: function () {
@@ -810,7 +810,7 @@ let ex = new eP(a.Z, {
                 },
             };
         z[c] = u;
-        let d = R(D({}, u), {
+        let d = D(R({}, u), {
             summary: {
                 id: c,
                 topic: "",

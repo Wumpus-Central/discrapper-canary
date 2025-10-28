@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(829820),
     R = n(789407),
     P = n(314897),
-    D = n(831506),
-    w = n(293273),
+    w = n(831506),
+    D = n(293273),
     L = n(158776),
     x = n(885110),
     M = n(594174),
@@ -324,8 +324,8 @@ function ep(e) {
             currentUserPresenceActivity: N,
             hideParty: R,
             message: P,
-            onView: D,
-            partyStatusElement: w,
+            onView: w,
+            partyStatusElement: D,
             presenceActivity: L,
         } = e,
         x = (0, O.A)(S),
@@ -527,7 +527,7 @@ function ep(e) {
             trackingConfig: {
                 id: S.id,
                 linkType: er.U.RICH_PRESENCE_INVITE,
-                onView: D,
+                onView: w,
                 referrerId: P.author.id,
                 guildId: A.guild_id,
                 channelId: P.channel_id,
@@ -571,7 +571,7 @@ function ep(e) {
         }),
         eP = (0, r.jsxs)("div", {
             className: eo.info,
-            children: [eR, R || Q ? null : w],
+            children: [eR, R || Q ? null : D],
         });
     return (0, r.jsx)(h.W, {
         header: eT,
@@ -586,7 +586,7 @@ function ep(e) {
         trackingConfig: {
             id: S.id,
             linkType: er.U.RICH_PRESENCE_INVITE,
-            onView: D,
+            onView: w,
             referrerId: P.author.id,
             guildId: A.guild_id,
             channelId: P.channel_id,
@@ -610,13 +610,13 @@ function eh(e) {
                 );
             }
         }, [c, s, _]),
-        h = (0, l.e7)([w.Z, x.Z], () => {
+        h = (0, l.e7)([D.Z, x.Z], () => {
             var e;
-            return null != (e = w.Z.getApplicationActivity(f.id)) ? e : x.Z.getApplicationActivity(f.id, !0);
+            return null != (e = D.Z.getApplicationActivity(f.id)) ? e : x.Z.getApplicationActivity(f.id, !0);
         }, [f.id]),
-        m = (0, l.Wu)([D.Z], () => {
+        m = (0, l.Wu)([w.Z], () => {
             var e;
-            return null == p || null == p.party ? [] : Array.from(null != (e = D.Z.getParty(p.party.id)) ? e : []);
+            return null == p || null == p.party ? [] : Array.from(null != (e = w.Z.getParty(p.party.id)) ? e : []);
         }, [p]),
         { partySize: E, maxPartySize: b } = (0, W._)(p),
         y = i.useMemo(

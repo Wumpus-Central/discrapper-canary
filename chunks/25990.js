@@ -21,10 +21,10 @@ function N(e, t, n) {
 }
 let R = C.QZA.CLOSED,
     P = {};
-function D() {
+function w() {
     (R = C.QZA.OPEN), (P = {});
 }
-function w() {
+function D() {
     (R = C.QZA.CLOSED), (P = {});
 }
 function L() {
@@ -37,7 +37,7 @@ function x(e) {
 }
 function M(e) {
     let { section: t } = e;
-    return t === C.oAB.ACCOUNT && D();
+    return t === C.oAB.ACCOUNT && w();
 }
 function k(e) {
     let { avatar: t } = e;
@@ -147,7 +147,7 @@ function eu() {
     p = void 0;
 }
 function ed() {
-    ei(), es(), w();
+    ei(), es(), D();
 }
 class ef extends (v = I.ZP.Store) {
     getFormState() {
@@ -254,11 +254,11 @@ class ef extends (v = I.ZP.Store) {
 }
 N(ef, "displayName", "UserSettingsAccountStore");
 let e_ = new ef(T.Z, {
-    USER_SETTINGS_ACCOUNT_INIT: D,
-    USER_SETTINGS_MODAL_INIT: D,
-    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: D,
+    USER_SETTINGS_ACCOUNT_INIT: w,
+    USER_SETTINGS_MODAL_INIT: w,
+    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: w,
     USER_SETTINGS_MODAL_SET_SECTION: M,
-    USER_SETTINGS_ACCOUNT_CLOSE: w,
+    USER_SETTINGS_ACCOUNT_CLOSE: D,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: ed,
     USER_SETTINGS_ACCOUNT_SUBMIT: L,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: x,

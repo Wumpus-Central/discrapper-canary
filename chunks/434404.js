@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(953529);
+n.d(t, { Z: () => w }), n(953529);
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -287,8 +287,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     discoverySplash: C,
                     publicUpdatesChannelId: N,
                     premiumProgressBarEnabled: P,
-                    profile: D,
-                    moderatorReportingEnabled: w,
+                    profile: w,
+                    moderatorReportingEnabled: D,
                 } = t,
                 L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 x = A(
@@ -318,8 +318,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                         null != P ? { premium_progress_bar_enabled: P } : null,
                     ),
                     {
-                        profile: null != D ? (0, l.n)(D) : D,
-                        moderator_reporting_enabled: w,
+                        profile: null != w ? (0, l.n)(w) : w,
+                        moderator_reporting_enabled: D,
                     },
                 );
             return (
@@ -536,4 +536,4 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 );
         },
     },
-    D = P;
+    w = P;

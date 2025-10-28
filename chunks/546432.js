@@ -36,8 +36,8 @@ var r = n(951288),
     N = n(981631),
     R = n(388032),
     P = n(337595),
-    D = n(374299);
-function w(e, t, n) {
+    w = n(374299);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,7 +61,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -156,7 +156,7 @@ let F = (e) => {
                     toggleShowMenu: v,
                     showMenu: y,
                     channelId: p,
-                    className: o()(D.hoverButton, { [D.selected]: y }),
+                    className: o()(w.hoverButton, { [w.selected]: y }),
                     imageUrl: n,
                     mimeType: t,
                 },
@@ -170,7 +170,7 @@ let F = (e) => {
                     {
                         text: R.intl.string(R.t["/XT3ij"]),
                         children: (0, r.jsx)(c.P3F, {
-                            className: o()(D.hoverButton, P.removeMosaicItemHoverButton),
+                            className: o()(w.hoverButton, P.removeMosaicItemHoverButton),
                             focusProps: { offset: 2 },
                             onClick: a,
                             "aria-label": R.intl.string(R.t["0+xZH0"]),
@@ -194,7 +194,7 @@ let F = (e) => {
                         children: (0, r.jsx)(h.Z, {
                             target: "_blank",
                             rel: "noreferrer noopener",
-                            className: D.hoverButton,
+                            className: w.hoverButton,
                             iconClassName: P.downloadHoverButtonIcon,
                             focusProps: { offset: 2 },
                             href: n,
@@ -210,15 +210,15 @@ let F = (e) => {
             g > 0 &&
                 b.length > 0 &&
                 (0, r.jsx)("div", {
-                    className: o()(D.hoverButtonGroup, {
-                        [D.nonMediaMosaicItem]: !f,
-                        [D.forceShowHover]: y,
+                    className: o()(w.hoverButtonGroup, {
+                        [w.nonMediaMosaicItem]: !f,
+                        [w.forceShowHover]: y,
                     }),
                     children: b.slice(I),
                 }),
             (0, r.jsx)("div", {
                 ref: m,
-                className: D.sizer,
+                className: w.sizer,
             }),
         ],
     });
@@ -238,8 +238,8 @@ function V(e) {
             renderVideoComponent: E,
             renderAudioComponent: T,
             renderPlaintextFilePreview: A,
-            renderGenericFileComponent: D,
-            renderVisualPlaceholderComponent: w,
+            renderGenericFileComponent: w,
+            renderVisualPlaceholderComponent: D,
             className: L,
             imgContainerClassName: x,
             imgClassName: M,
@@ -402,8 +402,8 @@ function V(e) {
                 mediaPlayerClassName: Z ? P.hasFooter : void 0,
             });
         case "VISUAL_PLACEHOLDER":
-            if (null == w) return null;
-            return (0, r.jsx)(w, {
+            if (null == D) return null;
+            return (0, r.jsx)(D, {
                 item: n,
                 message: t,
                 className: x,
@@ -435,7 +435,7 @@ function V(e) {
                 renderAdjacentContent: e_,
             });
         case "OTHER":
-            return (0, r.jsx)(D, {
+            return (0, r.jsx)(w, {
                 item: n,
                 message: t,
                 className: L,
@@ -495,8 +495,8 @@ let Y = function (e) {
         S = c === C.hV.MOSAIC,
         N = !S && ((null != h && h < U) || (null != b && b < G)),
         R = B(y),
-        D = (0, A.R_)(y),
-        w = u && null != O && (0, m.yf)(h, b),
+        w = (0, A.R_)(y),
+        D = u && null != O && (0, m.yf)(h, b),
         [x, j] = i.useState(!1),
         Z = () => {
             j(!0);
@@ -523,8 +523,8 @@ let Y = function (e) {
                     focusable: !e,
                     mediaLayoutType: c,
                     hasFooter: null != d,
-                    useFullWidth: (!!w && !!e) || l,
-                    isVisualMediaType: D,
+                    useFullWidth: (!!D && !!e) || l,
+                    isVisualMediaType: w,
                     onVideoControlsShow: Z,
                     onVideoControlsHide: F,
                     forcePlaceholder: T && v,
@@ -542,7 +542,7 @@ let Y = function (e) {
             [P.mosaicItemNoJustify]: R,
             [P.mosaicItemFullWidth]: l,
             [P.mosaicItemMediaMosaic]: S,
-            [P.hideOverflow]: S && D,
+            [P.hideOverflow]: S && w,
             [P.mosaicItemWithFooter]: null != d,
         }),
         children: [

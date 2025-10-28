@@ -37,20 +37,20 @@ function h() {
         gameServerInstance: a,
         setGameServerInstance: o,
         setCurrentGame: h,
-        onNext: y,
+        onNext: S,
     } = (0, f.JL)();
     (0, d.cq)(e, null == a ? "create" : "edit");
-    let O = i.useCallback(
+    let y = i.useCallback(
             (e) => {
-                h(e), y();
+                h(e), S();
             },
-            [h, y],
+            [h, S],
         ),
-        S = i.useCallback(
+        O = i.useCallback(
             (e) => {
-                o(e), y();
+                o(e), S();
             },
-            [o, y],
+            [o, S],
         ),
         I = n.length >= b.YX,
         k = n.length > 0,
@@ -78,7 +78,7 @@ function h() {
                                           {
                                               guildId: e,
                                               gameInstance: t,
-                                              onClick: S,
+                                              onClick: O,
                                           },
                                           "instance-".concat(t.id, "-").concat(n),
                                       ),
@@ -104,7 +104,7 @@ function h() {
                                           guildId: e,
                                           game: t,
                                           disabled: I || !C,
-                                          onClick: O,
+                                          onClick: y,
                                           location: u.Z.GAME_SERVER_SETUP_MODAL,
                                       },
                                       "game-".concat(t.id, "-").concat(n),

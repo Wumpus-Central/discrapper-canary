@@ -4,13 +4,13 @@ var i = n(657707),
     u = n(28682),
     r = n(313789),
     s = n(620163),
-    a = n(501348),
-    o = n(726985),
+    o = n(501348),
+    a = n(726985),
     c = n(388032);
 let E = (0, l.x1)(r.n.APPEARANCE_PANE, {
         useTitle: () => c.intl.string(c.t["iHH+ky"]),
         buildLayout: () => [],
-        render: a.Z,
+        render: o.Z,
     }),
     d = (0, l.wf)(r.n.APPEARANCE_PANEL, {
         useTitle: () => c.intl.string(c.t["iHH+ky"]),
@@ -19,7 +19,7 @@ let E = (0, l.x1)(r.n.APPEARANCE_PANE, {
     T = (0, l.m7)(r.n.APPEARANCE_SIDEBAR_ITEM, {
         icon: i.V3v,
         useTitle: () => c.intl.string(c.t["iHH+ky"]),
-        legacySearchKey: o.s6.APPEARANCE,
+        legacySearchKey: a.s6.APPEARANCE,
         buildLayout: () => [d],
         trailing: {
             type: u.PU.BADGE_NEW,

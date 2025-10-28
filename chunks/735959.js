@@ -1,9 +1,9 @@
 n.d(t, { Z: () => f }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(400497),
-    l = n(913527),
-    o = n.n(l),
+    l = n(400497),
+    i = n(913527),
+    o = n.n(i),
     s = n(330711),
     c = n(442837),
     d = n(481060),
@@ -15,8 +15,8 @@ var a = n(951288),
 function f() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = r.useState(),
-        l = (0, i.runtimeHashMessageKey)(null != t ? t : ""),
-        f = r.useMemo(() => x.t[l], [l]);
+        i = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
+        f = r.useMemo(() => x.t[i], [i]);
     return (0, a.jsxs)("div", {
         children: [
             (0, a.jsxs)(u.ZP, {
@@ -85,7 +85,7 @@ function f() {
                 children: [
                     (0, a.jsx)(h.Z9, {
                         name: "Hashed key",
-                        children: l,
+                        children: i,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "Exists?",

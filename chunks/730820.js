@@ -9,11 +9,11 @@ var r = n(951288),
     u = n(816814),
     d = n(240872),
     f = n(23645),
-    _ = n(712364),
-    p = n(279837),
-    h = n(600164),
-    m = n(144114),
-    g = n(921801),
+    _ = n(600164),
+    p = n(183620),
+    h = n(144114),
+    m = n(921801),
+    g = n(355497),
     E = n(607018),
     b = n(778764),
     y = n(314897),
@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    D = n(343396),
-    w = n(197571);
+    w = n(343396),
+    D = n(197571);
 function L(e, t, n) {
     return (
         t in e
@@ -100,18 +100,18 @@ function j(e) {
             [a],
         );
     return (0, r.jsx)("li", {
-        className: w.marginBottom20,
+        className: D.marginBottom20,
         children: (0, r.jsx)(c.P3F, {
             innerRef: o,
-            className: D.backupCode,
+            className: w.backupCode,
             onKeyDown: s,
             children: (0, r.jsx)(l.$q, {
                 displayOnly: !0,
                 readOnly: !0,
-                className: D.codeCheckbox,
+                className: w.codeCheckbox,
                 value: n,
                 children: (0, r.jsx)("span", {
-                    className: D.code,
+                    className: w.code,
                     children: a,
                 }),
             }),
@@ -138,7 +138,7 @@ class U extends i.PureComponent {
                         P.intl.format(P.t.PXVoEO, { phoneNumber: e }),
                         (0, r.jsx)(c.Anchor, {
                             onClick: this.togglePhoneNumberVisibility,
-                            className: D.phoneRevealer,
+                            className: w.phoneRevealer,
                             children: n ? P.intl.string(P.t.FfltIN) : P.intl.string(P.t.llArAg),
                         }),
                     ],
@@ -176,7 +176,7 @@ class U extends i.PureComponent {
                     ],
                 });
             }
-            return (0, r.jsx)(g.F, {
+            return (0, r.jsx)(m.F, {
                 setting: C.s6.ACCOUNT_SMS_BACKUP,
                 children: (0, r.jsxs)(c.gNt, {
                     label: P.intl.string(P.t.uHAJ5v),
@@ -189,7 +189,7 @@ class U extends i.PureComponent {
     renderEnabled() {
         let e,
             { backupCodes: t } = this.props,
-            n = (0, r.jsx)(g.F, {
+            n = (0, r.jsx)(m.F, {
                 setting: C.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, r.jsx)(c.Button, {
                     variant: "primary",
@@ -217,17 +217,17 @@ class U extends i.PureComponent {
                         label: P.intl.string(P.t.GfqHPn),
                         description: P.intl.format(P.t.OhmvYt, {}),
                         children: [
-                            (0, r.jsxs)(h.Z, {
+                            (0, r.jsxs)(_.Z, {
                                 children: [
-                                    (0, r.jsx)(h.Z.Child, {
+                                    (0, r.jsx)(_.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: D.checkboxGroup,
+                                            className: w.checkboxGroup,
                                             children: i(t.slice(0, t.length / 2)),
                                         }),
                                     }),
-                                    (0, r.jsx)(h.Z.Child, {
+                                    (0, r.jsx)(_.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: D.checkboxGroup,
+                                            className: w.checkboxGroup,
                                             children: i(t.slice(t.length / 2)),
                                         }),
                                     }),
@@ -253,7 +253,7 @@ class U extends i.PureComponent {
                         size: "sm",
                         children: [
                             n,
-                            (0, r.jsx)(g.F, {
+                            (0, r.jsx)(m.F, {
                                 setting: C.s6.ACCOUNT_REMOVE_2FA,
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "critical-secondary",
@@ -262,7 +262,7 @@ class U extends i.PureComponent {
                                     onClick: this.handleDisableMFA,
                                 }),
                             }),
-                            (0, r.jsx)(g.F, {
+                            (0, r.jsx)(m.F, {
                                 setting: C.s6.ACCOUNT_ENABLE_2FA,
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "primary",
@@ -276,7 +276,7 @@ class U extends i.PureComponent {
                 }),
                 e,
                 this.renderMFASMS(),
-                (0, r.jsx)(g.F, {
+                (0, r.jsx)(m.F, {
                     setting: C.s6.ACCOUNT_SECURITY_KEYS,
                     children: (0, r.jsx)(b.Z, {}),
                 }),
@@ -324,7 +324,7 @@ class U extends i.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, c.h7j)((t) => (0, r.jsx)(E.default, x({ reason: m.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: R.M });
+        (0, c.h7j)((t) => (0, r.jsx)(E.default, x({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: R.M });
     }
     constructor(...e) {
         super(...e),
@@ -350,7 +350,7 @@ class U extends i.PureComponent {
             L(this, "sendMFABackupCodesVerificationKeyEmail", () => {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
-                        p.Z,
+                        g.Z,
                         k(x({}, e), {
                             handleSubmit: (e) =>
                                 u.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -366,7 +366,7 @@ class U extends i.PureComponent {
                 (0, c.h7j)(
                     (t) =>
                         (0, r.jsx)(
-                            _.Z,
+                            p.Z,
                             k(x({}, t), {
                                 handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                                 maxLength: 8,
@@ -406,7 +406,7 @@ class U extends i.PureComponent {
             L(this, "handleDisableSMS", () => {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
-                        p.Z,
+                        g.Z,
                         k(x({}, e), {
                             handleSubmit: u.Z.disableSMS,
                             title: P.intl.string(P.t.KLWnit),

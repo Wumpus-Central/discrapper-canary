@@ -1,16 +1,16 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    a = n(213301),
+    o = n(213301),
     s = n(586312);
-let o = (e) => {
+let a = (e) => {
     let { skipPulseAnimation: t = !1 } = e;
     return (0, r.jsx)("div", {
-        className: i()(a.productCardContainer, s.productSkeletonCardContainer, { [s.pulseAnimation]: !t }),
+        className: i()(o.productCardContainer, s.productSkeletonCardContainer, { [s.pulseAnimation]: !t }),
         children: (0, r.jsxs)("div", {
-            className: i()(a.productCardContentContainer, s.productSkeletonContent),
+            className: i()(o.productCardContentContainer, s.productSkeletonContent),
             children: [
                 (0, r.jsx)("div", { className: s.productSkeletonTitle }),
                 (0, r.jsx)("div", { className: s.productSkeletonDescription }),

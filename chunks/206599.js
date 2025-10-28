@@ -43,12 +43,12 @@ function u(e) {
     (0, s.qU)(f);
     let p = (0, s.kN)(f),
         [m, b] = r.useState([]),
-        h = ((t = f.map((e) => a.Z.isFetching(e))), r.useMemo(() => t.join("\x1F"), [t]));
+        y = ((t = f.map((e) => a.Z.isFetching(e))), r.useMemo(() => t.join("\x1F"), [t]));
     return (
         r.useEffect(() => {
             let t = f.filter((e) => a.Z.noDataAvailable(e));
             t.length > 0 && u(t, e);
-        }, [h, f, e, u, p]),
+        }, [y, f, e, u, p]),
         r.useEffect(() => {
             b(
                 f.map((e) => {

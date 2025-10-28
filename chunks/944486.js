@@ -52,7 +52,7 @@ function P(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -290,7 +290,7 @@ class eo extends (u = p.ZP.Store) {
                 (o = n.lastChannelFollowingDestination),
                 (l = n.lastConnectedTime),
                 (U = null != (t = n.mostRecentSelectedTextChannelIds) ? t : {}),
-                null != n.selectedChannelIds && (k = w(P({}, n.selectedChannelIds), { null: null }));
+                null != n.selectedChannelIds && (k = D(P({}, n.selectedChannelIds), { null: null }));
         }
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
             this.waitFor(y.default, O.Z, v.ZP, I.Z, T.Z, S.Z, A.Z);

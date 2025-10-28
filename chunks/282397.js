@@ -131,11 +131,11 @@ function P(e) {
     if (null == d.Z.getChannel(t)) return !1;
     for (let [e, t] of Object.entries(y)) t.state === _.F.FAILED && j(e);
 }
-function D(e) {
+function w(e) {
     let { nonce: t } = e;
     k(t);
 }
-function w(e) {
+function D(e) {
     let { application: t, nonce: n } = e;
     (i = t.id), k(n);
 }
@@ -217,9 +217,9 @@ let G = new U(s.Z, {
     INTERACTION_FAILURE: R,
     MESSAGE_CREATE: N,
     CHANNEL_SELECT: P,
-    INTERACTION_IFRAME_MODAL_CREATE: w,
+    INTERACTION_IFRAME_MODAL_CREATE: D,
     INTERACTION_IFRAME_MODAL_CLOSE: L,
     INTERACTION_IFRAME_MODAL_KEY_CREATE: x,
-    INTERACTION_MODAL_CREATE: D,
+    INTERACTION_MODAL_CREATE: w,
     EMBEDDED_ACTIVITY_UPDATE_V2: M,
 });

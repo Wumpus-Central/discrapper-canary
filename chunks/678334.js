@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(435020),
     R = n(612853),
     P = n(981631),
-    D = n(388032),
-    w = n(62868),
+    w = n(388032),
+    D = n(62868),
     L = n(133529);
 function x(e) {
     let {
@@ -99,8 +99,8 @@ function x(e) {
         [eA, eC] = i.useState(eI),
         [eN, eR] = i.useState(!1),
         { hasEntitlements: eP } = (0, E.H)(ev, ef),
-        eD = (0, v.Ap)(J.paymentSourceId),
-        ew = eP || eI,
+        ew = (0, v.Ap)(J.paymentSourceId),
+        eD = eP || eI,
         eL = (0, m.U)(),
         ex = (0, c.e7)([C.Z], () => C.Z.currentOrderId),
         eM = null,
@@ -175,13 +175,13 @@ function x(e) {
         : (0, r.jsxs)(u.mzw, {
               "data-migration-pending": !0,
               align: p.Z.Align.CENTER,
-              className: o()({ [w.modalFooterDiscount]: eG }, ed, w.modalFooter),
+              className: o()({ [D.modalFooterDiscount]: eG }, ed, D.modalFooter),
               children: [
                   eG &&
                       (0, r.jsx)("img", {
                           src: L.Z,
                           alt: "",
-                          className: w.discountFooterBackground,
+                          className: D.discountFooterBackground,
                       }),
                   (0, r.jsx)(b.Z, {
                       legalTermsNodeRef: x,
@@ -193,24 +193,24 @@ function x(e) {
                       premiumSubscription: t,
                       isGift: ef,
                       planGroup: F,
-                      isPrepaid: eD,
+                      isPrepaid: ew,
                       isTrial: q,
                       makePurchase: eB,
-                      needsPaymentSource: null == eS && !ew,
+                      needsPaymentSource: null == eS && !eD,
                       onNext: s,
                       inReverseTrial: eu,
                       onPaymentSourceAdd: X,
                   }),
                   (0, r.jsx)(R.Z, {
-                      iconClassName: eG ? w.discountColor : null,
-                      textClassName: eG ? w.discountColor : null,
+                      iconClassName: eG ? D.discountColor : null,
+                      textClassName: eG ? D.discountColor : null,
                   }),
                   eH
                       ? (0, r.jsx)("div", {
-                            className: w.back,
+                            className: D.back,
                             children: (0, r.jsx)(g.Z, {
                                 onClick: a,
-                                className: o()({ [w.discountColor]: eG }),
+                                className: o()({ [D.discountColor]: eG }),
                             }),
                         })
                       : null,
@@ -218,9 +218,9 @@ function x(e) {
                       !eH &&
                       (0, r.jsx)(u.Text, {
                           variant: "text-xs/semibold",
-                          className: w.discountFooterText,
+                          className: D.discountFooterText,
                           lineClamp: 2,
-                          children: D.intl.formatToPlainString(D.t.IhKBNX, { discountOfferAmount: eU }),
+                          children: w.intl.formatToPlainString(w.t.IhKBNX, { discountOfferAmount: eU }),
                       }),
               ],
           });

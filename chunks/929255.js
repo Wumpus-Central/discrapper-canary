@@ -2,9 +2,9 @@ n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(481060),
-    o = n(702486),
+    a = n(702486),
     c = n(626135),
     u = n(381585),
     d = n(870289),
@@ -26,7 +26,7 @@ function y(e) {
     (0, g.A)();
     let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
-        { handleScroll: h } = (0, o.z)(f, t),
+        { handleScroll: h } = (0, a.z)(f, t),
         { setCategoryRef: m, handleScrollToCategory: b } = (0, C.xV)(f.current),
         [v, E] = l.useState(p && c),
         [x, O] = l.useState(!1);
@@ -50,9 +50,9 @@ function y(e) {
             p || E(!1);
         }, [p, E]),
         (0, r.jsx)("div", {
-            className: a()(S.pageWrapper, { [S.pageWrapperFilter]: p }),
+            className: o()(S.pageWrapper, { [S.pageWrapperFilter]: p }),
             children: (0, r.jsxs)("main", {
-                className: a()(S.page, { [S.pageFilter]: p }),
+                className: o()(S.page, { [S.pageFilter]: p }),
                 children: [
                     (0, r.jsx)(s.yWw, {
                         className: S.shopScroll,
@@ -85,7 +85,7 @@ let j = (e) => {
             isSmallScreen: t,
             filterBarOpen: n,
             setFilterBarOpen: i,
-            tab: o,
+            tab: a,
             scrollerRef: C,
             sortedCategories: y,
             setCategoryRef: j,
@@ -98,7 +98,7 @@ let j = (e) => {
             scrollerRef: C,
             sortedCategories: y,
         }),
-        N = l.useCallback(
+        P = l.useCallback(
             (e) => {
                 c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -113,16 +113,16 @@ let j = (e) => {
             },
             [I, B],
         ),
-        P = l.useRef(null);
+        N = l.useRef(null);
     return (
         l.useEffect(() => {
             if (!t || !n) return;
             let e = (e) => {
                 let t = e.target;
                 null === T.current ||
-                    null === P.current ||
+                    null === N.current ||
                     T.current.contains(t) ||
-                    P.current.contains(t) ||
+                    N.current.contains(t) ||
                     (c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
                         page_section: null == I ? void 0 : I.pageSection,
@@ -139,7 +139,7 @@ let j = (e) => {
         (0, r.jsx)("div", {
             className: S.inventoryWrapper,
             children: (0, r.jsxs)("div", {
-                className: a()(S.inventory, { [S.inventoryFilter]: k }),
+                className: o()(S.inventory, { [S.inventoryFilter]: k }),
                 children: [
                     k &&
                         (0, r.jsxs)("div", {
@@ -150,7 +150,7 @@ let j = (e) => {
                                     children: (0, r.jsx)(p.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: a()(S.controlsRightSide, { [S.controlsRightSideResponsive]: t }),
+                                    className: o()(S.controlsRightSide, { [S.controlsRightSideResponsive]: t }),
                                     children: [
                                         (0, r.jsxs)("div", {
                                             className: S.sortBy,
@@ -163,7 +163,7 @@ let j = (e) => {
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
-                                            ref: P,
+                                            ref: N,
                                             children: (0, r.jsx)(s.Button, {
                                                 onClick: () => {
                                                     let e = !n;
@@ -203,18 +203,18 @@ let j = (e) => {
                               b.Z,
                               {
                                   scrollerRef: C,
-                                  tab: o,
+                                  tab: a,
                               },
-                              o,
+                              a,
                           )
-                        : (0, E.RE)(o)
+                        : (0, E.RE)(a)
                           ? (0, r.jsx)(
                                 v.Z,
                                 {
                                     scrollerRef: C,
-                                    tab: o,
+                                    tab: a,
                                 },
-                                o,
+                                a,
                             )
                           : (0, r.jsx)(u.k0, {
                                 newValue: { pageIndex: A },
@@ -222,7 +222,7 @@ let j = (e) => {
                                     sortedCategories: y,
                                     setCategoryRef: j,
                                     currentPage: A,
-                                    handlePageChange: N,
+                                    handlePageChange: P,
                                 }),
                             }),
                 ],

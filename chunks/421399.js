@@ -30,8 +30,8 @@ var r = n(951288),
     N = n(935910),
     R = n(392819),
     P = n(131085),
-    D = n(724913);
-function w(e, t, n) {
+    w = n(724913);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -110,7 +110,7 @@ var U = (function (e) {
 function G(e) {
     let { compact: t } = e;
     return (0, r.jsx)(h.Z, {
-        className: t ? D.botTagCompact : D.botTagCozy,
+        className: t ? w.botTagCompact : w.botTagCozy,
         type: h.Z.Types.REMIX,
         useRemSizes: !0,
     });
@@ -121,7 +121,7 @@ function B(e) {
             author: n,
             message: a,
             channel: h,
-            userOverride: w,
+            userOverride: D,
             compact: x = !1,
             withMentionPrefix: j = !1,
             showPopout: U = !1,
@@ -182,9 +182,9 @@ function B(e) {
         },
         eI = (0, u.EJ)(et + en),
         eT = {
-            className: o()(D.username, ed, {
+            className: o()(w.username, ed, {
                 [eO]: eE,
-                [D.usernameColorOnName]: "username" === es && null != er,
+                [w.usernameColorOnName]: "username" === es && null != er,
             }),
             style: ev(),
             onClick: V,
@@ -207,13 +207,13 @@ function B(e) {
                           primaryGuild: n.primaryGuild,
                           userId: a.author.id,
                           contextGuildId: $,
-                          className: D.clanTagChiplet,
+                          className: w.clanTagChiplet,
                           badgeSize: P.Gg.SIZE_12,
                       })
                     : null,
             [x, n.primaryGuild, $, a.author.id, B],
         ),
-        eA = null != w ? w : a.author,
+        eA = null != D ? D : a.author,
         eC =
             null != W && null != U
                 ? (0, r.jsx)(T.Z, {
@@ -250,7 +250,7 @@ function B(e) {
                                               n,
                                               eT,
                                           ),
-                                          { className: o()(eT.className, D.clickable, F) },
+                                          { className: o()(eT.className, w.clickable, F) },
                                       ),
                                   ),
                                   eS,
@@ -276,7 +276,7 @@ function B(e) {
                       color: er,
                       colors: eg ? ei : null,
                       name: ea,
-                      className: D.roleDot,
+                      className: w.roleDot,
                       hoverOverride: em,
                   })
                 : null,
@@ -287,7 +287,7 @@ function B(e) {
                     primaryGuild: n.primaryGuild,
                     userId: a.author.id,
                     contextGuildId: $,
-                    className: D.clanTagChiplet,
+                    className: w.clanTagChiplet,
                 }),
             null != eR ? eR : null,
             null == eN || Z || x ? null : eN,

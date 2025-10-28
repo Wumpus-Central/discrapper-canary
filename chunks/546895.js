@@ -22,8 +22,8 @@ n.d(t, { Z: () => d }),
     n(35282);
 var a = n(951288),
     r = n(647438),
-    i = n(108514),
-    l = n(793030),
+    l = n(108514),
+    i = n(793030),
     o = n(481060);
 let s = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
@@ -318,7 +318,7 @@ function c(e) {
             (e) =>
                 new Promise((t, n) => {
                     let a = new Uint8Array(e);
-                    i.Ri(a, (e, a) => {
+                    l.Ri(a, (e, a) => {
                         null != e && n(e);
                         let r = Object.keys(a).reduce((e, t) => {
                                 var n, r;
@@ -348,7 +348,7 @@ function c(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (r = r = { [t]: JSON.parse(i.T8(a[t])) }),
+                                    (r = r = { [t]: JSON.parse(l.T8(a[t])) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                         : (function (e, t) {
@@ -364,19 +364,19 @@ function c(e) {
                                     n
                                 );
                             }, {}),
-                            l = r["manifest.json"];
-                        t(r["animations/".concat(l.animations[0].id, ".json")]);
+                            i = r["manifest.json"];
+                        t(r["animations/".concat(i.animations[0].id, ".json")]);
                     });
                 }),
         );
 }
 function d() {
     let [e, t] = r.useState(void 0),
-        [n, i] = r.useState(400),
+        [n, l] = r.useState(400),
         [d, u] = r.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
-        children: (0, a.jsxs)(l.Kqy, {
+        children: (0, a.jsxs)(i.Kqy, {
             gap: 24,
             children: [
                 (0, a.jsx)(o.VcW, {
@@ -387,13 +387,13 @@ function d() {
                     value: e,
                     onChange: t,
                 }),
-                (0, a.jsxs)(l.Kqy, {
+                (0, a.jsxs)(i.Kqy, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
                         (0, a.jsx)(o.oil, {
                             value: n.toString(),
-                            onChange: (e) => i(Number(e)),
+                            onChange: (e) => l(Number(e)),
                             label: "Width",
                         }),
                         (0, a.jsx)(o.oil, {

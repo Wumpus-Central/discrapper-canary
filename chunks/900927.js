@@ -15,15 +15,15 @@ var i = n(399606),
 function g(e) {
     let { userId: t, guildId: n, textClassName: g, tooltipDelay: m } = e,
         b = (0, i.e7)([c.default], () => c.default.locale),
-        y = (0, i.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        _ = (0, i.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t) : null)),
-        O = (0, s.FI)(p.default.extractTimestamp(t), b),
-        j = (0, s.FI)(null == _ ? void 0 : _.joinedAt, b);
-    return null == y || null == _
+        _ = (0, i.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
+        y = (0, i.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t) : null)),
+        x = (0, s.FI)(p.default.extractTimestamp(t), b),
+        v = (0, s.FI)(null == y ? void 0 : y.joinedAt, b);
+    return null == _ || null == y
         ? (0, r.jsx)(a.Text, {
               variant: "text-sm/normal",
               className: g,
-              children: O,
+              children: x,
           })
         : (0, r.jsxs)("div", {
               className: f.memberSinceWrapper,
@@ -45,7 +45,7 @@ function g(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: g,
-                              children: O,
+                              children: x,
                           }),
                       ],
                   }),
@@ -54,10 +54,10 @@ function g(e) {
                       className: f.memberSince,
                       children: [
                           (0, r.jsx)(l.u, {
-                              text: y.name,
+                              text: _.name,
                               delay: m,
                               children: (0, r.jsx)(o.Z, {
-                                  guild: y,
+                                  guild: _,
                                   size: o.Z.Sizes.SMOL,
                                   className: f.guildIcon,
                               }),
@@ -65,7 +65,7 @@ function g(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: g,
-                              children: j,
+                              children: v,
                           }),
                       ],
                   }),

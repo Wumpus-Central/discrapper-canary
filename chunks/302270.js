@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(522651),
     m = n(933557),
     b = n(236091),
-    y = n(623624),
-    _ = n(665149),
-    O = n(984370),
-    j = n(616286),
-    x = n(975146),
-    v = n(430824),
+    _ = n(623624),
+    y = n(665149),
+    x = n(984370),
+    v = n(616286),
+    j = n(975146),
+    O = n(430824),
     C = n(496675),
     I = n(626135),
     S = n(431328),
@@ -44,15 +44,15 @@ function M(e) {
             }),
             [t.id],
         ),
-        y = (0, Z.B)(t.id),
-        _ = (0, S.Rk)(t.id, E.pV.REQUESTED_TO_SPEAK_ONLY),
-        { hasParticipantsPanel: O } = (0, f.Z)({ location: "StageChannelCallHeader" }),
-        v = O && m;
+        _ = (0, Z.B)(t.id),
+        y = (0, S.Rk)(t.id, E.pV.REQUESTED_TO_SPEAK_ONLY),
+        { hasParticipantsPanel: x } = (0, f.Z)({ location: "StageChannelCallHeader" }),
+        O = x && m;
     return (0, r.jsxs)(p.Gt, {
         value: l,
         children: [
             (0, r.jsx)(b.Z, { channelId: t.id }, "clips-enabled-indicator"),
-            !i && y
+            !i && _
                 ? (0, r.jsx)("div", {
                       className: L.button,
                       children: (0, r.jsx)(N.Z, {
@@ -63,14 +63,14 @@ function M(e) {
                                   n();
                           },
                           showRequestToSpeakSidebar: i,
-                          numRequestToSpeak: _,
+                          numRequestToSpeak: y,
                       }),
                   })
                 : null,
             !m &&
-                O &&
+                x &&
                 (0, r.jsx)(
-                    x.Z,
+                    j.Z,
                     {
                         className: a()(L.button, { [L.sidebarOpen]: c }),
                         onClick: () => {
@@ -81,8 +81,8 @@ function M(e) {
                 ),
             !c &&
                 (0, r.jsx)("div", {
-                    className: a()(L.button, { [L.sidebarOpen]: v || i }),
-                    children: (0, r.jsx)(j.T, {
+                    className: a()(L.button, { [L.sidebarOpen]: O || i }),
+                    children: (0, r.jsx)(v.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
@@ -99,12 +99,12 @@ function k(e) {
         h = (0, s.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
         f = (0, S.Io)(n.id),
         g = (0, S.Rk)(n.id, E.pV.AUDIENCE),
-        b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
-        j = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        x =
+        b = (0, s.e7)([O.Z], () => O.Z.getGuild(n.guild_id), [n.guild_id]),
+        v = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        j =
             null != b && b.features.has(w.GuildFeatures.COMMUNITY)
-                ? j < w.TU7
-                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && j <= w.eez,
+                ? v < w.TU7
+                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && v <= w.eez,
         Z = (0, R.Z)(n),
         N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
         k = () => {
@@ -140,30 +140,30 @@ function k(e) {
         theme: w.BRd.DARK,
         children: (e) => {
             var t;
-            return (0, r.jsxs)(_.ZP, {
+            return (0, r.jsxs)(y.ZP, {
                 toolbar: (0, r.jsx)(M, {
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: u,
                     channel: n,
                 }),
-                onDoubleClick: O.O,
+                onDoubleClick: x.O,
                 transparent: !0,
                 className: a()(e, L.participants),
                 children: [
-                    (0, r.jsx)(_.ZP.Icon, {
+                    (0, r.jsx)(y.ZP.Icon, {
                         icon: c.ewx,
                         disabled: !0,
                         "aria-label": D.intl.string(D.t.EErMzA),
                         className: L.icon,
                         color: null != h ? o.Z.colors.HEADER_MUTED.css : void 0,
                     }),
-                    (0, r.jsx)(_.ZP.Title, {
+                    (0, r.jsx)(y.ZP.Title, {
                         className: L.channelName,
                         wrapperClassName: L.channelNameWrapper,
                         children: null != (t = null == h ? void 0 : h.topic) ? t : p,
                     }),
-                    (0, r.jsx)(_.ZP.Divider, { className: L.divider }),
-                    (0, r.jsxs)(_.ZP.Title, {
+                    (0, r.jsx)(y.ZP.Divider, { className: L.divider }),
+                    (0, r.jsxs)(y.ZP.Title, {
                         children: [
                             (0, r.jsx)(c.S6n, {
                                 size: "xs",
@@ -206,18 +206,18 @@ function k(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
                                       color: "header-primary",
-                                      children: x ? D.intl.string(D.t["T+zF9M"]) : D.intl.string(D.t["IZ+SVv"]),
+                                      children: j ? D.intl.string(D.t["T+zF9M"]) : D.intl.string(D.t["IZ+SVv"]),
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
-                                      children: x ? D.intl.string(D.t.Izgpmv) : D.intl.string(D.t["7FHbPG"]),
+                                      children: j ? D.intl.string(D.t.Izgpmv) : D.intl.string(D.t["7FHbPG"]),
                                   }),
                               ],
                           }),
                           (0, r.jsx)("div", {
                               className: L.buttons,
-                              children: x
+                              children: j
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.Button, {
@@ -229,7 +229,7 @@ function k(e) {
                                             (0, r.jsx)(c.Button, {
                                                 variant: "expressive",
                                                 onClick: () => {
-                                                    (0, y.f)({
+                                                    (0, _.f)({
                                                         guildId: n.guild_id,
                                                         location: { section: w.jXE.STAGE_VIDEO_LIMIT },
                                                     }),

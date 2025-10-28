@@ -28,7 +28,7 @@ n.d(t, {
     Nl: () => eh,
     OT: () => el,
     PremiumTypes: () => l,
-    QF: () => ew,
+    QF: () => eD,
     QI: () => eX,
     QP: () => eU,
     Qh: () => e8,
@@ -372,8 +372,8 @@ let R = Object.freeze({
         },
     }),
     P = new Set(["511651880837840896"]),
-    D = 16,
-    w = 8,
+    w = 16,
+    D = 8,
     L = 5,
     x = 30,
     M = 2,
@@ -582,10 +582,10 @@ let eA = Object.freeze({
     eN = 52428800,
     eR = 524288000,
     eP = 52428800,
-    eD = 104857600,
-    ew = 5,
+    ew = 104857600,
+    eD = 5,
     eL = {
-        [i.Eu4.NONE]: ew,
+        [i.Eu4.NONE]: eD,
         [i.Eu4.TIER_1]: 10,
         [i.Eu4.TIER_2]: 15,
         [i.Eu4.TIER_3]: 30,
@@ -659,7 +659,7 @@ let eA = Object.freeze({
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: eD,
+                fileSize: ew,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
                 soundboardSounds: eM[i.Eu4.TIER_3],
@@ -696,10 +696,10 @@ var eU = (function (e) {
         return (e.FREE = "free"), (e.PREMIUM_STANDARD = "premium-standard"), e;
     })({});
 let eB = {
-    "1024422698568122368": D,
-    "511651876987469824": D,
-    "511651885459963904": D,
-    "944037208325619722": w,
+    "1024422698568122368": w,
+    "511651876987469824": w,
+    "511651885459963904": w,
+    "944037208325619722": D,
     "642251038925127690": L,
 };
 var eZ = (function (e) {

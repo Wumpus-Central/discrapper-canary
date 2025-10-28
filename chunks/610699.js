@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(768581),
     R = n(411198),
     P = n(358595),
-    D = n(981631),
-    w = n(967249),
+    w = n(981631),
+    D = n(967249),
     L = n(245335),
     x = n(388032),
     M = n(969016);
@@ -182,14 +182,14 @@ function F(e) {
     l()(E === L.Iq.EMBEDDED_APPLICATION && null != b, "invalid application invite");
     let O = i.useCallback(() => {
             var e;
-            C.default.track(D.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
+            C.default.track(w.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
                 application_id: b.id,
                 invite_inviter_id: null == (e = s.inviter) ? void 0 : e.id,
             });
         }, [null == (t = s.inviter) ? void 0 : t.id, b.id]),
         v = (0, c.e7)([T.Z], () => (null != s.guild ? T.Z.getGuild(s.guild.id) : null), [s]),
         N = (0, y.Z)([b.id])[0],
-        w = (0, c.e7)([f.ZP], () => {
+        D = (0, c.e7)([f.ZP], () => {
             var e;
             return (
                 (null == s ? void 0 : s.channel) != null &&
@@ -208,7 +208,7 @@ function F(e) {
             });
         }),
         k = I.Z.getChannel(null == (n = s.channel) ? void 0 : n.id),
-        j = (0, c.e7)([S.Z], () => null != k && S.Z.can(D.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
+        j = (0, c.e7)([S.Z], () => null != k && S.Z.can(w.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
         { analyticsLocations: U } = (0, p.ZP)(_.Z.INVITE_EMBED),
         G = (0, c.Wu)(
             [f.ZP],
@@ -237,20 +237,20 @@ function F(e) {
                     analyticsLocations: U,
                 });
         }, [s, u, U, h]),
-        F = s.state === D.r2o.ACCEPTING,
+        F = s.state === w.r2o.ACCEPTING,
         H = null != v;
     if (null == v) {
         if (null == s.guild) return (0, r.jsx)(P.Z, {});
         v = (0, R.Qs)(s.guild);
     }
     a = H
-        ? w
+        ? D
             ? x.intl.string(x.t.DPfdsq)
             : M
               ? x.intl.string(x.t.sqe0hj)
               : x.intl.string(x.t.RscU7I)
         : x.intl.string(x.t["2BP08E"]);
-    let Y = (H && !j) || (H && w);
+    let Y = (H && !j) || (H && D);
     return (j || (o = x.intl.string(x.t.hHGrWz)), null == s.code || "" === s.code || null == N)
         ? null
         : (0, r.jsx)(p.Gt, {
@@ -354,7 +354,7 @@ function V(e) {
                 onClickContent: A,
                 trackingConfig: {
                     id: t.id,
-                    linkType: w.U.ACTIVITY_INVITE,
+                    linkType: D.U.ACTIVITY_INVITE,
                     onView: v,
                     guildId: s.id,
                     channelId: null == o ? void 0 : o.id,

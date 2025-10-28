@@ -173,7 +173,7 @@ let N = function (e) {
                     );
             });
         },
-        D = () => {
+        w = () => {
             let e = d.ZP.isSwitchingPlansDisabled(t),
                 n = d.ZP.getSwitchingPlansDisabledMessage(t);
             return d.ZP.isBaseSubscriptionCanceled(t)
@@ -219,9 +219,9 @@ let N = function (e) {
                       ],
                   });
         },
-        w = d.ZP.getPlanIdFromInvoice(t, c),
+        D = d.ZP.getPlanIdFromInvoice(t, c),
         L = (0, p.eQ)(null == I ? void 0 : I.expires_at);
-    return (0, l.Q0)(w)
+    return (0, l.Q0)(D)
         ? null
         : (0, r.jsx)("div", {
               className: b.churnDiscountBannerBackground,
@@ -267,7 +267,7 @@ let N = function (e) {
                                                 }),
                                           (0, r.jsx)("div", {
                                               className: b.churnDiscountBannerButton,
-                                              children: D(),
+                                              children: w(),
                                           }),
                                       ],
                                   }),

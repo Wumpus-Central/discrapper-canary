@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var a = n(951288),
     r = n(647438),
-    i = n(660815),
-    l = n(442837),
+    l = n(660815),
+    i = n(442837),
     o = n(481060),
     s = n(570140),
     c = n(905551),
@@ -54,17 +54,17 @@ function x(e, t) {
     );
 }
 function f() {
-    let e = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        t = (0, l.e7)([u.Z], () => {
+    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
+        t = (0, i.e7)([u.Z], () => {
             var t;
             return null == (t = u.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, l.e7)([d.Z], () => {
+        n = (0, i.e7)([d.Z], () => {
             var t;
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
         f = r.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
-        g = r.useCallback(
+        b = r.useCallback(
             (t) => {
                 null != f &&
                     null != e &&
@@ -76,22 +76,22 @@ function f() {
             },
             [f, e],
         ),
-        b = r.useMemo(
+        g = r.useMemo(
             () =>
-                Object.values(i.V).map((e) =>
+                Object.values(l.V).map((e) =>
                     (0, a.jsx)(
                         o.Button,
                         {
                             variant: "primary",
                             text: e,
                             onClick: () => {
-                                g(e);
+                                b(e);
                             },
                         },
                         e,
                     ),
                 ),
-            [g],
+            [b],
         ),
         v = r.useCallback(() => {
             null != f &&
@@ -127,7 +127,7 @@ function f() {
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,
-                              children: b,
+                              children: g,
                           }),
                           (0, a.jsx)(o.Text, {
                               variant: "eyebrow",

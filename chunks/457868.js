@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(144144),
     m = n(607070),
     b = n(100527),
-    y = n(906732),
-    _ = n(82295),
-    O = n(623624),
-    j = n(518738),
-    x = n(850020),
-    v = n(48950),
+    _ = n(906732),
+    y = n(82295),
+    x = n(623624),
+    v = n(518738),
+    j = n(850020),
+    O = n(48950),
     C = n(965376),
     I = n(159299),
     S = n(670188),
@@ -82,11 +82,11 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                     : void 0;
             }, [t.guild_id, h]),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
-            y = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
-            _ = (null == b ? void 0 : b.id) === (null == y ? void 0 : y.id),
-            j = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
-            v = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
-            C = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
+            _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
+            y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
+            v = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
+            O = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
+            C = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([E.Z], () => E.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
             M = (0, p.e7)([I.Z], () => I.Z.canUserViewChannel(t.id, l, a)),
@@ -142,7 +142,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             Y = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, O.f)({
+                        (0, x.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: H.jXE.THREAD_MEMBER_LIST,
@@ -152,7 +152,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id],
             ),
-            q = (0, x.K)({
+            q = (0, j.K)({
                 user: b,
                 guildId: t.guild_id,
                 location: "ThreadMembers",
@@ -203,9 +203,9 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             onContextMenu: B,
                             shouldAnimateStatus: W,
                             user: b,
-                            currentUser: y,
+                            currentUser: _,
                             nick: null == h ? void 0 : h.nick,
-                            status: j,
+                            status: v,
                             activities: C,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -213,7 +213,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isTyping: d,
                             channel: t,
                             guildId: t.guild_id,
-                            isMobile: v,
+                            isMobile: O,
                             selected: K,
                             applicationStream: A,
                             premiumSince: null == X ? null : new Date(X),
@@ -237,7 +237,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = i.memo(function (e) {
         let { id: t, label: n, count: i, guildId: l } = e,
-            a = (0, j.p9)({
+            a = (0, v.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
@@ -247,14 +247,14 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                   className: V.membersGroup,
                   children: (0, r.jsx)("div", { className: V.memberGroupsPlaceholder }),
               })
-            : (0, r.jsxs)(_.Z, {
+            : (0, r.jsxs)(y.Z, {
                   className: V.membersGroup,
                   "aria-label": F.intl.formatToPlainString(F.t.Uaqbke, {
                       title: n,
                       count: i,
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(v.Z, z({ className: V.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(O.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [n, " \u2014 ", i],
@@ -294,10 +294,10 @@ let W = U.ZP.getEnableHardwareAcceleration(),
 function X(e) {
     let { channel: t, guild: n } = e,
         l = "members-".concat(t.id),
-        { analyticsLocations: s } = (0, y.ZP)(b.Z.MEMBER_LIST),
+        { analyticsLocations: s } = (0, _.ZP)(b.Z.MEMBER_LIST),
         u = (0, C.D)(t.id, n),
         f = u.filter((e) => e.userIds.length > 0).reverse()[0],
-        { navigator: g, listRef: _ } = (function (e, t) {
+        { navigator: g, listRef: y } = (function (e, t) {
             let n = (0, p.e7)([m.Z], () => m.Z.keyboardModeEnabled),
                 r = i.useRef(null),
                 l = i.useCallback(
@@ -356,7 +356,7 @@ function X(e) {
                 listRef: r,
             };
         })(l, Y),
-        O = 0 === u.length || u.every((e) => 0 === e.userIds.length);
+        x = 0 === u.length || u.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             D.default.track(H.rMx.MEMBER_LIST_VIEWED, {
@@ -365,12 +365,12 @@ function X(e) {
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id, t.type]),
-        O)
+        x)
     )
         return (0, r.jsx)(J, { channel: t });
-    let j = o().omit(g.containerProps, ["ref"]),
-        x = M.iJ(n);
-    return (0, r.jsx)(y.Gt, {
+    let v = o().omit(g.containerProps, ["ref"]),
+        j = M.iJ(n);
+    return (0, r.jsx)(_.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {
             navigator: g,
@@ -382,7 +382,7 @@ function X(e) {
                             h.aVo,
                             z(
                                 {
-                                    ref: _,
+                                    ref: y,
                                     className: V.members,
                                     paddingTop: 0,
                                     sectionHeight: 40,
@@ -410,7 +410,7 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: x,
+                                                guildOwnerId: j,
                                             },
                                             l[i],
                                         );
@@ -423,7 +423,7 @@ function X(e) {
                                     sections: u.map((e) => e.userIds.length),
                                     fade: !0,
                                 },
-                                j,
+                                v,
                                 e,
                             ),
                             l,

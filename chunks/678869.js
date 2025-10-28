@@ -27,13 +27,13 @@ var r = n(951288),
     N = n(388032),
     R = n(119835),
     P = n(951948);
-function D(e, t) {
+function w(e, t) {
     return N.intl.formatToPlainString(N.t.h2yWWX, {
         username: t.username,
         activity: e,
     });
 }
-let w = (e, t, n) => {
+let D = (e, t, n) => {
     let { artist: r, media: i } = e,
         a = N.t["6iNxrl"],
         o = m.ZP.getName(t.guild_id, t.id, n);
@@ -113,7 +113,7 @@ function x(e) {
                 channel: R,
                 mediaImageSrc: null == U ? void 0 : U.src,
                 artist: Z,
-                description: w(
+                description: D(
                     {
                         artist: Z,
                         media: F,
@@ -199,7 +199,7 @@ function x(e) {
                     user: V,
                     channel: R,
                     generateReactionImage: z,
-                    reactionImageAltText: D(Z, V),
+                    reactionImageAltText: w(Z, V),
                     entry: x,
                     buttons: X,
                 }),

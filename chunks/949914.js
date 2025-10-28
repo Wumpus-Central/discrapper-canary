@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(404203),
     R = n(330181),
     P = n(954821),
-    D = n(980864),
-    w = n(981631),
+    w = n(980864),
+    D = n(981631),
     L = n(176505),
     x = n(526761),
     M = n(388032),
@@ -137,15 +137,15 @@ let j = (e) => {
             B = (0, g.Dt)(),
             { analyticsLocations: Z } = (0, p.ZP)(),
             { shouldHideGuildPurchaseEntryPoints: F } = (0, E.uP)(null == l ? void 0 : l.id),
-            V = (null == t ? void 0 : t.paymentGateway) === w.gg$.APPLE_PARTNER;
+            V = (null == t ? void 0 : t.paymentGateway) === D.gg$.APPLE_PARTNER;
         if (null == a || null == n || null == y) return null;
         let H = () => {
                 null != l &&
-                    ((0, v.uL)(w.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)),
+                    ((0, v.uL)(D.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)),
                     (0, T.default)(),
-                    f.Z.show(w.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, M.intl.string(M.t.DvbaM4), () =>
+                    f.Z.show(D.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, M.intl.string(M.t.DvbaM4), () =>
                         (0, S.openUserSettings)(I.n.SUBSCRIPTIONS_PANEL, {
-                            section: w.oAB.SUBSCRIPTIONS,
+                            section: D.oAB.SUBSCRIPTIONS,
                             subsection: x.cP,
                         }),
                     ));
@@ -160,7 +160,7 @@ let j = (e) => {
             },
             W = async () => {
                 try {
-                    A(!0), await d.pl(t, Z), (0, D.h)();
+                    A(!0), await d.pl(t, Z), (0, w.h)();
                 } finally {
                     A(!1);
                 }

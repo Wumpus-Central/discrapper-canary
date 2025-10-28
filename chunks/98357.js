@@ -1,7 +1,7 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => l });
 var a = n(570140),
     r = n(432877);
-function i(e, t) {
+function l(e, t) {
     let n = "boolean" == typeof t ? t : !r.ZP.get(e);
     a.Z.dispatch({
         type: "DEV_TOOLS_DEV_SETTING_SET",

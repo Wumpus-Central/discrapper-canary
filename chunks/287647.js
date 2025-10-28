@@ -1,8 +1,8 @@
 n.d(t, { e: () => v });
 var a = n(951288),
     r = n(647438),
-    i = n(442837),
-    l = n(264418),
+    l = n(442837),
+    i = n(264418),
     o = n(906732),
     s = n(710845),
     c = n(313789),
@@ -13,13 +13,13 @@ var a = n(951288),
     h = n(921944),
     x = n(352609),
     f = n(388032),
-    g = n(374104);
-let b = new s.Z("DisplayNameStylesCoachmark");
+    b = n(374104);
+let g = new s.Z("DisplayNameStylesCoachmark");
 function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: s } = e,
         { analyticsLocations: v } = (0, o.ZP)(),
         j = (0, r.useRef)(null),
-        _ = (0, i.e7)([u.Z], () => u.Z.isFocused()),
+        _ = (0, l.e7)([u.Z], () => u.Z.isFocused()),
         y = (0, r.useCallback)(() => {
             t(h.L.TAKE_ACTION),
                 (0, d.openUserSettings)(
@@ -40,13 +40,13 @@ function v(e) {
         (0, r.useEffect)(() => {
             var e, t, n;
             _ && (null == (e = j.current) ? void 0 : e.paused)
-                ? null == (t = j.current) || t.play().catch(b.error)
+                ? null == (t = j.current) || t.play().catch(g.error)
                 : _ || null == (n = j.current) || n.pause();
         }, [_]),
         (0, a.jsxs)(a.Fragment, {
             children: [
                 s,
-                (0, a.jsx)(l.J, {
+                (0, a.jsx)(i.J, {
                     targetElementRef: n,
                     shouldShow: !0,
                     onRequestClose: C,
@@ -57,7 +57,7 @@ function v(e) {
                     graphic: {
                         type: "video",
                         ref: j,
-                        src: g.Z,
+                        src: b.Z,
                         aspectRatio: "21/9",
                         loop: !0,
                     },

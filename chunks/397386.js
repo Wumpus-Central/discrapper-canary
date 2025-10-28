@@ -4,11 +4,11 @@ var s = r(951288),
     i = r(481060),
     a = r(816814),
     o = r(600164),
-    c = r(198993),
-    l = r(594174),
+    l = r(198993),
+    c = r(594174),
     d = r(287880),
     u = r(388032),
-    h = r(186603);
+    h = r(873575);
 function p(e, t, r) {
     return (
         t in e
@@ -61,7 +61,7 @@ class f extends n.PureComponent {
         var e;
         let { transitionState: t, onClose: n } = this.props,
             { totpSecret: a, code: p, isVerifying: f } = this.state,
-            m = null == (e = l.default.getCurrentUser()) ? void 0 : e.email,
+            m = null == (e = c.default.getCurrentUser()) ? void 0 : e.email,
             x = (0, d.U0)(null != m ? m : "", a),
             b = (0, s.jsx)("form", {
                 onSubmit: this.handleActivate,
@@ -139,7 +139,7 @@ class f extends n.PureComponent {
                         }),
                         (0, s.jsx)(i.izJ, { className: h.divider }),
                         (0, s.jsx)(g, {
-                            image: (0, s.jsx)(c.ZP, { text: x }),
+                            image: (0, s.jsx)(l.ZP, { text: x }),
                             label: u.intl.string(u.t["91InF1"]),
                             text: u.intl.string(u.t.hFeBkl),
                             children: (0, s.jsxs)("div", {

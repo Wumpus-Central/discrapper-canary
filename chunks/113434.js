@@ -8,10 +8,10 @@ n.d(t, {
     I: () => ex,
     J2: () => H,
     Jf: () => ev,
-    KX: () => eD,
+    KX: () => ew,
     MP: () => eq,
     N8: () => eX,
-    OH: () => ew,
+    OH: () => eD,
     Qy: () => eH,
     Rf: () => eO,
     SU: () => eJ,
@@ -75,8 +75,8 @@ var p = n(703656),
     N = n(272008),
     R = n(569984),
     P = n(497505),
-    D = n(937797),
-    w = n(704161),
+    w = n(937797),
+    D = n(704161),
     L = n(36243),
     x = n(977156),
     M = n(373370),
@@ -104,7 +104,7 @@ function H() {
             lastFetchedCurrentQuests: R.Z.lastFetchedCurrentQuests,
         })),
         l = (0, x.c)({ location: U.dr.USE_QUESTS }),
-        u = D.DL.useConfig({ location: U.dr.USE_QUESTS });
+        u = w.DL.useConfig({ location: U.dr.USE_QUESTS });
     return (
         r.useEffect(() => {
             if (
@@ -115,7 +115,7 @@ function H() {
                 !o
             ) {
                 if ((n(!0), (0, N.xw)(), !u.enabled || "focused" === _.Z.getState())) {
-                    let { enableNewRequestBehavior: t } = w.Z.getConfig({ location: "QuestHookUseQuests" });
+                    let { enableNewRequestBehavior: t } = D.Z.getConfig({ location: "QuestHookUseQuests" });
                     if (t) return;
                     (0, N.w)(P.Ok.DESKTOP_ACCOUNT_PANEL_AREA, "use_quests_".concat(e.callerSource));
                 }
@@ -607,7 +607,7 @@ let eR = (e) => {
             i = 0 === n.length;
         return (0, C.$J)(t) && i && !r;
     },
-    eD = () => {
+    ew = () => {
         let { xboxAccounts: e, playstationAccounts: t } = eN(),
             n = e.length > 0,
             r = t.length > 0,
@@ -625,7 +625,7 @@ let eR = (e) => {
             playstationURL: a,
         };
     };
-var ew = (function (e) {
+var eD = (function (e) {
     return (
         (e[(e.UNACCEPTED = 0)] = "UNACCEPTED"),
         (e[(e.ACCEPTED = 1)] = "ACCEPTED"),

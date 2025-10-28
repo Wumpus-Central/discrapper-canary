@@ -1,4 +1,4 @@
-n.d(t, { J: () => D }), n(388685), n(583741);
+n.d(t, { J: () => w }), n(388685), n(583741);
 var r = n(951288),
     i = n(647438),
     a = n(748711),
@@ -106,7 +106,7 @@ function P(e, t, n) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let {
             checked: t,
             disabled: n,
@@ -119,9 +119,9 @@ function D(e) {
             innerRef: T,
         } = e,
         { reducedMotion: S } = i.useContext(f.S),
-        D = i.useRef(null),
         w = i.useRef(null),
-        L = null != T ? T : w,
+        D = i.useRef(null),
+        L = null != T ? T : D,
         x = (0, l.l)({
             isSelected: t,
             onChange: E,
@@ -179,7 +179,7 @@ function D(e) {
     return (0, r.jsx)(
         _.tE,
         b(g({}, y), {
-            ringTarget: D,
+            ringTarget: w,
             focusTarget: L,
             within: !0,
             offset: -2,
@@ -191,7 +191,7 @@ function D(e) {
                         (0, r.jsx)(
                             s.animated.div,
                             b(g({}, U), {
-                                ref: D,
+                                ref: w,
                                 className: h.switchIndicator,
                                 "data-size": "md",
                                 "data-mana-component": "switch",

@@ -94,10 +94,10 @@ function A(e) {
     let A = i.useRef(null),
         { mute: Z, suppress: w } = (0, E.Z)(t),
         L = (0, s.e7)([O.Z], () => O.Z.isDeaf()),
-        D = Z || w || L,
-        [R, M] = i.useState(!1),
+        R = Z || w || L,
+        [D, M] = i.useState(!1),
         k = t.getGuildId(),
-        U = (0, v.sR)({ isSoundboardButtonDisabled: D }),
+        U = (0, v.sR)({ isSoundboardButtonDisabled: R }),
         [G, B] = (0, b.cv)(U),
         { analyticsLocations: H, parentAnalyticsLocation: V } = (0, m.ZP)(h.Z.SOUNDBOARD_BUTTON);
     function F(e) {
@@ -126,8 +126,8 @@ function A(e) {
             events: { onMouseEnter: W, onMouseLeave: q },
         } = (0, c.j)(),
         K = i.useCallback(() => {
-            D || M(!R);
-        }, [D, R]);
+            R || M(!D);
+        }, [R, D]);
     return (
         (0, I.yp)({
             event: S.CkL.TOGGLE_SOUNDBOARD,
@@ -148,7 +148,7 @@ function A(e) {
                 children: (0, r.jsx)(p.yRy, {
                     targetElementRef: A,
                     animation: p.yRy.Animation.FADE,
-                    shouldShow: R,
+                    shouldShow: D,
                     position: "top",
                     onRequestClose: () => M(!1),
                     renderPopout: (e) => {
@@ -175,17 +175,17 @@ function A(e) {
                                     P(
                                         x(P({}, e), {
                                             className: a()(j.button, j.buttonColor, {
-                                                [j.greyButtonActive]: R,
-                                                [j.disabled]: D,
+                                                [j.greyButtonActive]: D,
+                                                [j.disabled]: R,
                                             }),
                                             wrapperClassName: j.button,
                                             innerClassName: j.buttonContents,
-                                            disabled: D,
+                                            disabled: R,
                                             onClick: () => {
                                                 null != G &&
                                                     G !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                                     B(T.L.UNKNOWN),
-                                                    M(!R),
+                                                    M(!D),
                                                     Y(),
                                                     (0, g.v)(V, g.d.SOUNDBOARD);
                                             },

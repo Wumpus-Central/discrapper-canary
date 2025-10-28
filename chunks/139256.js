@@ -87,7 +87,7 @@ function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = D(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -95,7 +95,7 @@ function P(e, t) {
     }
     return i;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,7 +104,7 @@ function D(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function w(e) {
+function D(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("ul", {
         "aria-label": T.intl.string(T.t.sJpqBS),
@@ -199,12 +199,12 @@ function j(e) {
                     answersInteraction: y.Y7.LIST,
                 },
                 () => ({
-                    ContainerComponent: w,
+                    ContainerComponent: D,
                     answerElementType: 3,
                 }),
             )
             .otherwise(() => ({
-                ContainerComponent: w,
+                ContainerComponent: D,
                 answerElementType: 0,
             }));
     return (0, r.jsx)(d, {

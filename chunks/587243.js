@@ -6,8 +6,8 @@ n.d(t, {
 var a = n(951288);
 n(647438);
 var r = n(722770),
-    i = n(481060),
-    l = n(440051),
+    l = n(481060),
+    i = n(440051),
     o = n(734934),
     s = n(158238),
     c = n(695346),
@@ -43,22 +43,22 @@ let f = [
             label: () => h.intl.string(h.t["46dqJY"]),
         },
     ],
-    g = "forever";
-function b(e, t) {
+    b = "forever";
+function g(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
 function v(e) {
     let { status: t, currentStatus: n, description: r } = e,
-        { showTempStatusOptions: o } = l.Y.useExperiment({ location: "UserProfileAccountPopout" }),
+        { showTempStatusOptions: o } = i.Y.useExperiment({ location: "UserProfileAccountPopout" }),
         s = o && t !== p.Skl.ONLINE,
         c = (0, a.jsx)(a.Fragment, {
             children: f.map((e) => {
-                let { duration: r, label: l } = e;
+                let { duration: r, label: i } = e;
                 return (0, a.jsx)(
-                    i.sNh,
+                    l.sNh,
                     {
                         id: "".concat(t, "-").concat(r),
-                        label: l(),
+                        label: i(),
                         action: () =>
                             (0, m.Z)({
                                 nextStatus: t,
@@ -67,11 +67,11 @@ function v(e) {
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : g,
+                    null != r ? r : b,
                 );
             }),
         });
-    return (0, a.jsx)(i.sNh, {
+    return (0, a.jsx)(l.sNh, {
         id: t,
         className: x.expiringStatusMenuItem,
         keepItemStyles: !0,
@@ -81,7 +81,7 @@ function v(e) {
             return (0, a.jsxs)("div", {
                 className: x.statusItem,
                 children: [
-                    (0, a.jsx)(i.qbd, {
+                    (0, a.jsx)(l.qbd, {
                         status: t,
                         className: x.icon,
                         size: 10,
@@ -112,10 +112,10 @@ function v(e) {
 function j(e) {
     if (null == e || "0" === e) return;
     let t = new Date(Number(e)),
-        n = b(t, new Date()),
+        n = g(t, new Date()),
         a = new Date();
     a.setDate(a.getDate() + 1);
-    let r = b(t, a);
+    let r = g(t, a);
     return n
         ? h.intl.formatToPlainString(h.t.ZxxHIO, { timeString: h.intl.data.formatTime(t, { format: "short" }) })
         : h.intl.formatToPlainString(h.t["9OFjSe"], {
@@ -126,12 +126,12 @@ function j(e) {
           });
 }
 function _(e) {
-    let { hasNewStrings: t } = l.Y.useExperiment({ location: "UserProfileAccountPopout" }),
+    let { hasNewStrings: t } = i.Y.useExperiment({ location: "UserProfileAccountPopout" }),
         n = c.Cr.useSetting(),
         d = (0, o.p)(),
         u = s.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || d,
         m = c.fv.useSetting(),
-        b = e === p.Skl.DND,
+        g = e === p.Skl.DND,
         _ = (a) => {
             let r = j(n);
             if (e === a && null != r) return r;
@@ -148,7 +148,7 @@ function _(e) {
             children: f.map((t) => {
                 let { duration: n, label: r } = t;
                 return (0, a.jsx)(
-                    i.sNh,
+                    l.sNh,
                     {
                         id: "".concat(e, "-").concat(n),
                         label: r(),
@@ -157,7 +157,7 @@ function _(e) {
                         },
                         dontCloseOnAction: !0,
                     },
-                    null != n ? n : g,
+                    null != n ? n : b,
                 );
             }),
         }),
@@ -183,16 +183,16 @@ function _(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             C,
-            (0, a.jsx)(i.Clw, {}, "menu-separator-statuses"),
+            (0, a.jsx)(l.Clw, {}, "menu-separator-statuses"),
             S,
             E,
             T,
             u || d
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(i.Clw, {}, "menu-separator-statuses"),
+                          (0, a.jsx)(l.Clw, {}, "menu-separator-statuses"),
                           (0, a.jsx)(
-                              i.sNh,
+                              l.sNh,
                               {
                                   id: "quiet-mode",
                                   "aria-label": "focus mode",
@@ -203,7 +203,7 @@ function _(e) {
                                       (0, a.jsxs)("div", {
                                           className: x.statusItem,
                                           children: [
-                                              (0, a.jsx)(i.owu, {
+                                              (0, a.jsx)(l.owu, {
                                                   size: "xxs",
                                                   className: x.icon,
                                               }),
@@ -211,13 +211,13 @@ function _(e) {
                                                   className: x.focusModeTitle,
                                                   children: [
                                                       h.intl.string(h.t.gJRnwK),
-                                                      (0, a.jsx)(i.IGR, {
+                                                      (0, a.jsx)(l.IGR, {
                                                           text: d
                                                               ? h.intl.string(h.t.ApAu9f)
-                                                              : b
+                                                              : g
                                                                 ? h.intl.string(h.t.gH3Frd)
                                                                 : h.intl.string(h.t["64pl82"]),
-                                                          color: d ? r.Z.BRAND_500 : b ? r.Z.RED_400 : r.Z.PRIMARY_500,
+                                                          color: d ? r.Z.BRAND_500 : g ? r.Z.RED_400 : r.Z.PRIMARY_500,
                                                       }),
                                                   ],
                                               }),

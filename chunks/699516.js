@@ -96,7 +96,7 @@ function P(e) {
     let n = p.get(e);
     null != n && (p.delete(e), null == (t = N.get(n)) || t.delete(e), C());
 }
-function D() {
+function w() {
     var e, t;
     (T = g.size),
         (S = b.size),
@@ -106,7 +106,7 @@ function D() {
         )),
         O++;
 }
-function w(e) {
+function D(e) {
     p.clear(),
         N.clear(),
         (h = {}),
@@ -125,11 +125,11 @@ function w(e) {
                 null != e.origin_application_id && (y[e.id] = e.origin_application_id),
                 e.user_ignored && (E.add(e.id), e.type === l.OGo.PENDING_INCOMING && b.add(e.id));
         }),
-        D();
+        w();
 }
 function L(e) {
     for (let [t, n] of (p.clear(), N.clear(), e.relationships)) R(t, n);
-    D();
+    w();
 }
 function x(e) {
     let t = p.get(e.relationship.id);
@@ -145,7 +145,7 @@ function x(e) {
                   ? b.add(e.relationship.id)
                   : e.relationship.type === l.OGo.FRIEND && b.delete(e.relationship.id))
             : (E.delete(e.relationship.id), b.delete(e.relationship.id)),
-        D(),
+        w(),
         e.relationship.type === l.OGo.FRIEND &&
             t === l.OGo.PENDING_OUTGOING &&
             a.Z.dispatch({
@@ -161,7 +161,7 @@ function M(e) {
         e.relationship.userIgnored || E.delete(e.relationship.id),
         b.delete(e.relationship.id),
         g.delete(e.relationship.id),
-        D();
+        w();
 }
 function k(e) {
     let { relationship: t } = e;
@@ -174,11 +174,11 @@ function k(e) {
         t.userIgnored
             ? (E.add(t.id), t.type === l.OGo.PENDING_INCOMING && b.add(t.id))
             : (E.delete(t.id), b.delete(t.id)),
-        D();
+        w();
 }
 function j(e) {
     for (let e of p.keys()) p.get(e) === l.OGo.PENDING_INCOMING && (P(e), g.delete(e), b.delete(e), delete v[e]);
-    D();
+    w();
 }
 function U(e) {
     v[e.userId] = {
@@ -303,7 +303,7 @@ class G extends (r = i.ZP.Store) {
 }
 c(G, "displayName", "RelationshipStore");
 let B = new G(a.Z, {
-    CONNECTION_OPEN: w,
+    CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     RELATIONSHIP_ADD: x,
     RELATIONSHIP_REMOVE: M,

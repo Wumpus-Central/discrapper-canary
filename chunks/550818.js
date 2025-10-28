@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(687158),
     m = n(316027),
     b = n(502762),
-    y = n(848780),
-    _ = n(907179),
-    O = n(671955),
-    j = n(388032),
-    x = n(491010),
-    v = n(268293);
+    _ = n(848780),
+    y = n(907179),
+    x = n(671955),
+    v = n(388032),
+    j = n(491010),
+    O = n(268293);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,32 +68,32 @@ function I(e) {
                 ref: N,
                 user: t,
                 displayProfile: S,
-                themeType: O.l.SIDEBAR,
+                themeType: x.l.SIDEBAR,
                 themeOverride: E,
                 children: (0, r.jsx)(l.u2D, {
                     children: (0, r.jsxs)("div", {
-                        className: x.container,
+                        className: j.container,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: v,
-                                className: x.preview,
+                                src: O,
+                                className: j.preview,
                                 "aria-hidden": !0,
                             }),
                             (0, r.jsxs)("div", {
-                                className: x.body,
+                                className: j.body,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: x.headerContainer,
+                                        className: j.headerContainer,
                                         children: [
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.Heading, {
                                                 variant: "heading-lg/bold",
-                                                children: j.intl.string(j.t.b33pLD),
+                                                children: v.intl.string(v.t.b33pLD),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: j.intl.format(Z ? j.t["8F+WNz"] : j.t["/cZp5s"], {
+                                                children: v.intl.format(Z ? v.t["8F+WNz"] : v.t["/cZp5s"], {
                                                     username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),
@@ -102,7 +102,7 @@ function I(e) {
                                     (0, r.jsxs)(s.Kqy, {
                                         align: "center",
                                         children: [
-                                            (0, r.jsx)(_.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 isBlocked: Z,
                                                 onClick: () => {
                                                     I(),
@@ -119,7 +119,7 @@ function I(e) {
                                                         );
                                                 },
                                             }),
-                                            (0, r.jsx)(y.Z, {
+                                            (0, r.jsx)(_.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
                                                     I(),

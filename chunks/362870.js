@@ -55,7 +55,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                     friction: 12,
                 },
             })),
-            [{ shineSpring: L }, D] = (0, u.q_F)(() => ({
+            [{ shineSpring: L }, R] = (0, u.q_F)(() => ({
                 from: { shineSpring: 0 },
                 config: {
                     clamp: !0,
@@ -64,15 +64,15 @@ let C = Math.ceil(Math.sqrt(115200)),
                     friction: 38,
                 },
             })),
-            R = i.useCallback(() => {
-                D({ shineSpring: 1 }),
+            D = i.useCallback(() => {
+                R({ shineSpring: 1 }),
                     w({
                         glowSpring: 1,
                         delay: 200,
                     });
-            }, [D, w]),
+            }, [R, w]),
             M = i.useCallback(() => {
-                D({
+                R({
                     shineSpring: 0,
                     immediate: !0,
                 }),
@@ -80,9 +80,9 @@ let C = Math.ceil(Math.sqrt(115200)),
                         glowSpring: 0,
                         delay: 0,
                     });
-            }, [D, w]),
+            }, [R, w]),
             k = i.useCallback(() => {
-                D({
+                R({
                     shineSpring: 1,
                     delay: 500,
                 }),
@@ -91,7 +91,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                         delay: 700,
                     }),
                     m.default.track(O.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
-            }, [D, w]),
+            }, [R, w]),
             [U, G] = i.useState(-1),
             B = i.useCallback((e) => {
                 G(e.contentRect.width);
@@ -101,9 +101,9 @@ let C = Math.ceil(Math.sqrt(115200)),
             children: [
                 (0, r.jsx)("div", {
                     className: y.wrapper,
-                    onMouseEnter: R,
+                    onMouseEnter: D,
                     onMouseLeave: M,
-                    onFocus: R,
+                    onFocus: D,
                     onBlur: M,
                     ref: H,
                     style: {

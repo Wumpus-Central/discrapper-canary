@@ -3,8 +3,8 @@ n.d(t, { Z: () => ez }), n(388685);
 var N,
     R = n(392711),
     P = n(754700),
-    D = n(887003),
-    w = n(442837),
+    w = n(887003),
+    D = n(442837),
     L = n(570140),
     x = n(70956),
     M = n(509212),
@@ -134,7 +134,7 @@ function et(e) {
     var t;
     let { entitlements: n } = e,
         r = null == (t = n.items[0].tenantMetadata) ? void 0 : t.questRewards.reward;
-    return (null == r ? void 0 : r.tag) !== D.w.REWARD_CODE ? null : r.rewardCode;
+    return (null == r ? void 0 : r.tag) !== w.w.REWARD_CODE ? null : r.rewardCode;
 }
 function en(e, t) {
     let n = new Map(b);
@@ -284,11 +284,11 @@ function eP(e) {
     let { dismissedQuestUserStatus: t } = e;
     J(t.questId, { userStatus: t }), eN(t.questId);
 }
-function eD(e) {
+function ew(e) {
     let { questId: t } = e;
     eN(t);
 }
-function ew(e) {
+function eD(e) {
     let { streamKey: t } = e;
     er(t);
 }
@@ -390,7 +390,7 @@ function eY(e) {
     S = null != t ? new Date(t) : null;
 }
 X();
-class eW extends (N = w.ZP.Store) {
+class eW extends (N = D.ZP.Store) {
     get quests() {
         return s;
     }
@@ -511,10 +511,10 @@ let eK = new eW(L.Z, {
         QUESTS_CLAIM_REWARD_FAILURE: eC,
         QUESTS_DISMISS_CONTENT_BEGIN: eR,
         QUESTS_DISMISS_CONTENT_SUCCESS: eP,
-        QUESTS_DISMISS_CONTENT_FAILURE: eD,
+        QUESTS_DISMISS_CONTENT_FAILURE: ew,
         QUESTS_USER_STATUS_UPDATE: eL,
         STREAM_CLOSE: eg,
-        QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: ew,
+        QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: eD,
         QUESTS_PREVIEW_UPDATE_SUCCESS: ex,
         QUESTS_DELIVERY_OVERRIDE: eM,
         QUESTS_SELECT_TASK_PLATFORM: ek,

@@ -37,11 +37,11 @@ function y(e) {
         }),
         R = (0, a.e7)([d.Z], () => d.Z.getState().soundshareEnabled),
         P = f.Z.supports(E.AN.DESKTOP_CAPTURE_APPLICATIONS),
-        D = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
-        w = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
+        w = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
+        D = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
         L = (0, h.Z)(O, A),
         x = (0, p.Z)(O, A, g.Vq),
-        M = null != C && D && (!C.startsWith("screen") || w),
+        M = null != C && w && (!C.startsWith("screen") || D),
         k = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, _.isLinux)()),
         j = i.useCallback(() => {
             (null == C ? void 0 : C.startsWith("prepicked:"))

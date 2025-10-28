@@ -53,22 +53,22 @@ let R = () =>
                 (0, r.jsx)(y.Z, {}),
             ],
         }),
-    D = () =>
+    w = () =>
         (0, r.jsxs)(m.Z, {
             title: N.intl.string(N.t["1Qn8iV"]),
             webSetting: S.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: [(0, r.jsx)(_.Z, {}), (0, r.jsx)(g.ZP, {})],
         }),
-    w = () =>
+    D = () =>
         (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)(R, {}), (0, r.jsx)(P, {}), (0, r.jsx)(D, {})],
+            children: [(0, r.jsx)(R, {}), (0, r.jsx)(P, {}), (0, r.jsx)(w, {})],
         });
 function L() {
     let e = (0, i.e7)([o.Z], () => o.Z.getSubsection()),
         t = [
             {
                 title: N.intl.string(N.t["/7xJCF"]),
-                component: () => (0, r.jsx)(w, {}),
+                component: () => (0, r.jsx)(D, {}),
                 setting: S.s6.CONTENT_SOCIAL_DISCORD_TAB,
             },
             {

@@ -1,8 +1,8 @@
 n.d(t, { P: () => v }), n(388685), n(35282), n(49124);
 var a = n(951288),
     r = n(647438),
-    i = n(394900),
-    l = n(661105),
+    l = n(394900),
+    i = n(661105),
     o = n(609067),
     s = n(94367),
     c = n(407146),
@@ -54,11 +54,11 @@ function f(e, t) {
         e
     );
 }
-let g = Object.keys(p.jQ).map((e) => ({
+let b = Object.keys(p.jQ).map((e) => ({
         value: e,
         label: e,
     })),
-    b = Array.from(
+    g = Array.from(
         Array.from(
             Object.keys(c.b).reduce((e, t) => {
                 let [n] = t.split(".");
@@ -71,13 +71,13 @@ let g = Object.keys(p.jQ).map((e) => ({
     }));
 function v(e) {
     let { state: t, setState: n } = e,
-        { scales: i } = t,
-        [l, o] = r.useState(null),
+        { scales: l } = t,
+        [i, o] = r.useState(null),
         s = (0, a.jsxs)("div", {
             className: h.section,
             children: [
                 (0, a.jsx)(d.VcW, {
-                    options: b,
+                    options: g,
                     placeholder: "Select a scale to edit...",
                     value: void 0,
                     onChange: (e) => {
@@ -105,7 +105,7 @@ function v(e) {
                 }),
                 (0, a.jsx)("ul", {
                     className: h.overrides,
-                    children: i.map((e) =>
+                    children: l.map((e) =>
                         (0, a.jsx)(
                             "li",
                             {
@@ -125,8 +125,8 @@ function v(e) {
                 }),
             ],
         }),
-        u = i.find((e) => e.name === l),
-        g =
+        u = l.find((e) => e.name === i),
+        b =
             null != u
                 ? (0, a.jsx)(j, {
                       onClose: () => o(null),
@@ -134,7 +134,7 @@ function v(e) {
                       setState: n,
                   })
                 : s;
-    return (0, a.jsx)("div", { children: g });
+    return (0, a.jsx)("div", { children: b });
 }
 function j(e) {
     let { scale: t, setState: n, onClose: r } = e,
@@ -142,7 +142,7 @@ function j(e) {
             name: c,
             base: x,
             lightness: f,
-            showColumnarPalettePreview: b,
+            showColumnarPalettePreview: g,
             colorSpace: v,
             easingStrength: j = 1,
             useP3ColorSpace: _,
@@ -171,7 +171,7 @@ function j(e) {
                                 let [n, a] = t;
                                 return (
                                     (e[n] = {
-                                        value: (0, i.Z)((0, l.Z)(a, p.HW.sRGB), { format: "hex" }),
+                                        value: (0, l.Z)((0, i.Z)(a, p.HW.sRGB), { format: "hex" }),
                                         type: "color",
                                     }),
                                     e
@@ -197,7 +197,7 @@ function j(e) {
                 label: "Color Space",
                 description:
                     "The color space used to generate the palette. Different color spaces will produce different results.",
-                options: g,
+                options: b,
                 value: v,
                 onChange: (e) => (0, p.t4)(c, e, n),
                 popoutLayerContext: m.O$,
@@ -242,7 +242,7 @@ function j(e) {
                 label: "Show columnar palette preview",
                 description:
                     "Renders the palette preview in a single column, useful for comparing the luminance of each step.",
-                checked: b,
+                checked: g,
                 onChange: (e) => (0, p.KB)(c, e, n),
             }),
             (0, a.jsx)(d.rsf, {
@@ -272,7 +272,7 @@ function j(e) {
                     }),
                     (0, a.jsx)("div", {
                         className: h.paletteOverrides,
-                        "data-columnar": b,
+                        "data-columnar": g,
                         children: Object.entries(S).map((e, n) => {
                             let [r, c] = e,
                                 u = (0, p.HI)(c),
@@ -284,18 +284,18 @@ function j(e) {
                                     style: { backgroundColor: u },
                                     children: [
                                         (0, a.jsxs)(d.Text, {
-                                            variant: b ? "text-sm/medium" : "text-xs/medium",
+                                            variant: g ? "text-sm/medium" : "text-xs/medium",
                                             style: { color: m },
                                             children: [
                                                 t.name,
                                                 ".",
                                                 n + 1,
-                                                b && null != h
+                                                g && null != h
                                                     ? (0, a.jsx)("strong", { children: " - ".concat(h) })
                                                     : "",
                                             ],
                                         }),
-                                        b &&
+                                        g &&
                                             (0, a.jsxs)(d.Text, {
                                                 variant: "text-xxs/medium",
                                                 style: {
@@ -303,7 +303,7 @@ function j(e) {
                                                     color: m,
                                                 },
                                                 children: [
-                                                    (0, i.Z)((0, l.Z)(c, p.HW.sRGB), { format: "hex" }).toUpperCase(),
+                                                    (0, l.Z)((0, i.Z)(c, p.HW.sRGB), { format: "hex" }).toUpperCase(),
                                                     " - ",
                                                     u,
                                                 ],
@@ -322,7 +322,7 @@ function j(e) {
 function _(e) {
     let { scale: t, onRemove: n } = e,
         o = r.useMemo(
-            () => Object.values((0, p.XM)(t)).map((e) => (0, i.Z)((0, l.Z)(e, p.HW.sRGB), { format: "hex" })),
+            () => Object.values((0, p.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, p.HW.sRGB), { format: "hex" })),
             [t],
         );
     return (0, a.jsxs)("li", {

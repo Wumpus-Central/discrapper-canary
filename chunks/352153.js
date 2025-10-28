@@ -173,8 +173,8 @@ function m(e) {
     r.useEffect(() => {
         a.Z.openICYMITab();
     }, []);
-    let D = (0, f.G)(t),
-        { data: R, stickyHeaderIndices: M } = r.useMemo(() => {
+    let R = (0, f.G)(t),
+        { data: D, stickyHeaderIndices: M } = r.useMemo(() => {
             let e = [];
             return (
                 v &&
@@ -225,13 +225,13 @@ function m(e) {
             );
         }, [v, n, b, O, E, C]);
     return {
-        data: R,
+        data: D,
         loading: v,
         version: I,
         visibleItemIds: S,
         endVisible: g,
         isRefreshing: y,
-        handleOnRefresh: D,
+        handleOnRefresh: R,
         stickyHeaderIndices: M,
         viewabilityConfigCallbackPairs: L,
     };

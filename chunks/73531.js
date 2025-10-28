@@ -54,7 +54,7 @@ function u(e) {
         N = A.styles,
         R = A.forceUpdate,
         P = A.update,
-        D = r.useMemo(
+        w = r.useMemo(
             function () {
                 return {
                     ref: O,
@@ -72,5 +72,5 @@ function u(e) {
             },
             [O, T, n, C, N, P, R],
         );
-    return (0, a.$p)(g)(D);
+    return (0, a.$p)(g)(w);
 }

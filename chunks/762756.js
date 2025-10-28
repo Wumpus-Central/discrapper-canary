@@ -1,9 +1,9 @@
 n.d(t, { Z: () => v }), n(388685);
 var a,
     r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    o = n.n(l),
+    l = n(647438),
+    i = n(120356),
+    o = n.n(i),
     s = n(873546),
     c = n(481060),
     d = n(599857),
@@ -25,8 +25,8 @@ function f(e, t, n) {
         e
     );
 }
-let g = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
-class b extends (a = i.PureComponent) {
+let b = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+class g extends (a = l.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: a } = this.props;
         return (0, r.jsx)(r.Fragment, {
@@ -87,7 +87,7 @@ class b extends (a = i.PureComponent) {
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: g }),
+                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: b }),
                                         }),
                                     ],
                                 }),
@@ -148,9 +148,9 @@ class b extends (a = i.PureComponent) {
             });
     }
 }
-f(b, "defaultProps", {
+f(g, "defaultProps", {
     types: [p.PUi.CAPTCHA],
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4,
 });
-let v = b;
+let v = g;

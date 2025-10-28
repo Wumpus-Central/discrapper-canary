@@ -34,8 +34,8 @@ var r = n(951288),
     N = n(496675),
     R = n(594174),
     P = n(768581),
-    D = n(585483),
-    w = n(630388),
+    w = n(585483),
+    D = n(630388),
     L = n(74538),
     x = n(276554),
     M = n(739566),
@@ -219,11 +219,11 @@ let $ = i.memo(function (e) {
                         : null,
             [N, c, A],
         ),
-        D = (0, l.e7)([R.default], () => R.default.getCurrentUser()),
-        w = i.useMemo(() => {
+        w = (0, l.e7)([R.default], () => R.default.getCurrentUser()),
+        D = i.useMemo(() => {
             let e = [],
                 n = L.ZP.isPremium(t.author),
-                i = L.ZP.isPremium(D),
+                i = L.ZP.isPremium(w),
                 o = null == a ? void 0 : a.isPrivate();
             return (
                 (0, x.R)(null != c, "Message Username") &&
@@ -268,7 +268,7 @@ let $ = i.memo(function (e) {
                     ),
                 e
             );
-        }, [t, a, c, s, P, A, D]);
+        }, [t, a, c, s, P, A, w]);
     return null == I
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -286,7 +286,7 @@ let $ = i.memo(function (e) {
                       onPopoutRequestClose: E,
                       decorations: {
                           [k.a.SYSTEM_TAG]: T,
-                          [k.a.BADGES]: w,
+                          [k.a.BADGES]: D,
                       },
                       renderRemixTag: !0,
                       previewGuildId: o,
@@ -366,7 +366,7 @@ function et(e) {
         T = i.useRef(null),
         [C, N] = i.useState(!1),
         { analyticsLocations: R } = (0, f.ZP)(d.Z.AVATAR),
-        w = (0, l.e7)([A.ZP], () => {
+        D = (0, l.e7)([A.ZP], () => {
             var e;
             return null != (e = a.displayCompactAvatars) ? e : A.ZP.displayCompactAvatars;
         }),
@@ -427,11 +427,11 @@ function et(e) {
         (i.useEffect(() => {
             if (null != g)
                 return (
-                    D.S.subscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, "".concat(g, ":").concat(p.author.id), N),
-                    () => void D.S.unsubscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, "".concat(g, ":").concat(p.author.id), N)
+                    w.S.subscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, "".concat(g, ":").concat(p.author.id), N),
+                    () => void w.S.unsubscribeKeyed(F.LPv.ANIMATE_CHAT_AVATAR, "".concat(g, ":").concat(p.author.id), N)
                 );
         }, [p.author.id, g]),
-        !m || w)
+        !m || D)
     )
         return null != c && null != v
             ? (0, r.jsx)(f.Gt, {
@@ -499,7 +499,7 @@ function en(e) {
             messageClassname: m,
             badges: g,
         } = e,
-        E = (0, w.yE)(t.flags, F.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? t.applicationId : null,
+        E = (0, D.yE)(t.flags, F.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? t.applicationId : null,
         b = (0, _.q)(E);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -602,7 +602,7 @@ let ea = i.memo(function (e) {
                 handleRenderPopout: I,
                 showCommunicationDisabledStyles: R,
             }),
-            D = (0, l.e7)([A.ZP], () => {
+            w = (0, l.e7)([A.ZP], () => {
                 var t;
                 return null != (t = e.displayCompactAvatars) ? t : A.ZP.displayCompactAvatars;
             }),
@@ -617,11 +617,11 @@ let ea = i.memo(function (e) {
                     }),
                 [t, y, a],
             ),
-            x = (0, l.e7)([C.Z], () => ei(a, D, f, C.Z.getGuild(e.guildId)), [a, D, f, e.guildId]),
+            x = (0, l.e7)([C.Z], () => ei(a, w, f, C.Z.getGuild(e.guildId)), [a, w, f, e.guildId]),
             M = i.useMemo(() => {
                 let e = [];
                 return (
-                    (0, w.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) &&
+                    (0, D.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) &&
                         e.push((0, r.jsx)(O.Z, {}, "suppress-notifications")),
                     t.hasPotions() && e.push((0, r.jsx)(g.Z, { message: t })),
                     e

@@ -1,5 +1,5 @@
 n.d(t, {
-    MM: () => w,
+    MM: () => D,
     hn: () => P,
 }),
     n(467055),
@@ -248,8 +248,8 @@ let A = [d.h8.PAYMENT_ELEMENT],
                   children: (0, r.jsx)(R, O({}, n)),
               });
     },
-    D = ["link"],
-    w = (e) => {
+    w = ["link"],
+    D = (e) => {
         let {
                 step: t,
                 handleStepChange: n,
@@ -270,7 +270,7 @@ let A = [d.h8.PAYMENT_ELEMENT],
                             _(e.complete),
                             g((0, m.hR)(e.value.type));
                     },
-                    wallets: D,
+                    wallets: w,
                 }),
                 [a, s],
             ),

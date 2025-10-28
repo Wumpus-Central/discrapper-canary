@@ -75,13 +75,13 @@ let b = [],
     N = 48,
     R = 0.01,
     P = new Set(["jack_o_lantern", "nose"]),
-    D = {
+    w = {
         jack_o_lantern: {
             sprites: (0, l.Z)(["chocolate_bar", "lollipop", "candy"]),
         },
         nose: { sprites: (0, l.Z)(["foot"]) },
     };
-function w(e) {
+function D(e) {
     if (null == e) return null;
     for (let t of P) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
     return null;
@@ -187,7 +187,7 @@ function j(e) {
         b = i.useCallback(
             (e) => {
                 if (!h) {
-                    let t = w(e);
+                    let t = D(e);
                     null != t && ((g.current = t), m(!0), s(null));
                 }
             },
@@ -225,8 +225,8 @@ function j(e) {
               value: y,
               children: [
                   t,
-                  Object.keys(D).map((e) => {
-                      let t = D[e];
+                  Object.keys(w).map((e) => {
+                      let t = w[e];
                       return (0, r.jsx)(
                           k,
                           {

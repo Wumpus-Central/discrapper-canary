@@ -14,8 +14,8 @@ var n = r(951288),
     b = r(623299),
     j = r(984370),
     g = r(430824),
-    h = r(76535),
-    O = r(423000),
+    O = r(76535),
+    h = r(423000),
     x = r(891561),
     m = r(847033),
     v = r(544978),
@@ -35,7 +35,7 @@ var n = r(951288),
 function E(e) {
     var t;
     let { guildId: r, productId: i } = e,
-        { loaded: o, subscriptionsSettings: l } = (0, h.H)(r),
+        { loaded: o, subscriptionsSettings: l } = (0, O.H)(r),
         s = (0, c.e7)([g.Z], () => g.Z.getGuild(r)),
         { selectedTab: d, isPhantomPreview: u, categoryTabs: C } = (0, m.m)(),
         p = !o || null == l;
@@ -73,13 +73,13 @@ function E(e) {
 function V(e) {
     let { guildId: t, productId: r } = e,
         o = (0, c.e7)([p.Z], () => p.Z.isConnected()),
-        h = (0, c.e7)([g.Z], () => g.Z.getGuild(t)),
+        O = (0, c.e7)([g.Z], () => g.Z.getGuild(t)),
         { shouldHideGuildPurchaseEntryPoints: x, restrictionsLoading: v } = (0, C.uP)(t),
         { selectedTab: y, isPhantomPreview: _, categoryTabs: w } = (0, m.m)(),
-        P = o && (null == h || (0 === w.length && !_) || (x && !v));
+        P = o && (null == O || (0 === w.length && !_) || (x && !v));
     return (
         i.useEffect(() => {
-            P && (0, O.M)(t, D.oC.GUILD_SHOP);
+            P && (0, h.M)(t, D.oC.GUILD_SHOP);
         }, [t, P]),
         (0, d.Z)(
             {

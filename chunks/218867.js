@@ -36,8 +36,8 @@ let d = i.memo(
                 initialScrollTop: N = 0,
                 role: R = "list",
             } = e,
-            [P, D] = i.useState(-1),
-            [w, L] = i.useState(-1),
+            [P, w] = i.useState(-1),
+            [D, L] = i.useState(-1),
             x = i.useRef(null),
             M = i.useRef(0),
             k = i.useRef(-1);
@@ -134,7 +134,7 @@ let d = i.memo(
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: r, scrollTop: i } = t;
             L(r),
-                D(i),
+                w(i),
                 null == a ||
                     a({
                         width: n,
@@ -142,8 +142,8 @@ let d = i.memo(
                     });
         }, [a]);
         i.useLayoutEffect(() => {
-            -1 === w && K();
-        }, [w, K]),
+            -1 === D && K();
+        }, [D, K]),
             i.useEffect(() => {
                 var e;
                 let t = null == (e = x.current) ? void 0 : e.getScrollerNode(),
@@ -161,7 +161,7 @@ let d = i.memo(
                 (r.cancelAnimationFrame(k.current),
                 (k.current = r.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (M.current = e), null == n || n(e), D(e);
+                    (M.current = e), null == n || n(e), w(e);
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -192,7 +192,7 @@ let d = i.memo(
                                 } = i,
                                 c = G(o),
                                 u = s - (T ? c : 0) - r <= M.current,
-                                d = l + r >= M.current + w;
+                                d = l + r >= M.current + D;
                             if (u) {
                                 let i = M.current + c - s,
                                     a = T ? M.current - i : s;
@@ -202,7 +202,7 @@ let d = i.memo(
                                         animate: n,
                                     });
                             } else if (d) {
-                                let e = l - (M.current + w);
+                                let e = l - (M.current + D);
                                 null == (a = x.current) ||
                                     a.scrollTo({
                                         to: M.current + e + r,
@@ -228,7 +228,7 @@ let d = i.memo(
                         });
                 },
                 getListDimensions: () => ({
-                    height: w,
+                    height: D,
                     totalHeight: H,
                 }),
                 getSectionDescriptors: () => F.current,
@@ -242,16 +242,16 @@ let d = i.memo(
                     return null == (t = x.current) ? void 0 : t.scrollIntoViewNode({ node: e });
                 },
             }),
-            [G, T, H, w],
+            [G, T, H, D],
         );
         let { visibleItems: q, listOffset: X } = i.useMemo(() => {
-                if (-1 === w || -1 === P)
+                if (-1 === D || -1 === P)
                     return {
                         visibleItems: null,
                         listOffset: 0,
                     };
                 let e = P,
-                    t = P + w,
+                    t = P + D,
                     n = 0,
                     r = d[0],
                     i = [],
@@ -299,7 +299,7 @@ let d = i.memo(
                     visibleItems: i,
                     listOffset: r,
                 };
-            }, [U, B, G, Z, d, f, _, h, p, P, W, T, m, j, w]),
+            }, [U, B, G, Z, d, f, _, h, p, P, W, T, m, j, D]),
             Q = i.useMemo(() => {
                 var e, t, n;
                 return {

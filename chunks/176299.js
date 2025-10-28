@@ -31,8 +31,8 @@ var r = n(951288),
     Z = n(591472),
     w = n(351051),
     L = n(724383),
-    D = n(135864),
-    R = n(372900),
+    R = n(135864),
+    D = n(372900),
     M = n(6039),
     k = n(637853),
     U = n(326145),
@@ -85,8 +85,8 @@ var r = n(951288),
     eZ = n(176505),
     ew = n(215023),
     eL = n(290511),
-    eD = n(186901),
-    eR = n(981028);
+    eR = n(186901),
+    eD = n(981028);
 function eM(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -118,7 +118,7 @@ let ek = (0, u.Un)({
     }),
     eU = () =>
         (0, r.jsx)("div", {
-            className: eR.loader,
+            className: eD.loader,
             children: (0, r.jsx)(h.$jN, {}),
         }),
     eG = (0, u.Un)({
@@ -289,7 +289,7 @@ let ek = (0, u.Un)({
         return window.location.pathname.startsWith(eA.Z5c.GLOBAL_DISCOVERY) ||
             window.location.pathname.startsWith(eA.Z5c.GUILD_DISCOVERY) ||
             (0, ei.$V)()
-            ? (0, r.jsx)(D.Z, {})
+            ? (0, r.jsx)(R.Z, {})
             : null != e
               ? (0, r.jsx)(
                     B.Z,
@@ -352,7 +352,7 @@ let e6 = (e) => (0, r.jsx)(v.Z, eM({}, e)),
     tr = (e) => {
         let t = e.location.pathname;
         return (0, r.jsx)(g.Z, {
-            deepLinkType: eD.jE.FEATURES,
+            deepLinkType: eR.jE.FEATURES,
             path: t,
             children: ((e) => {
                 let { match: t } = e;
@@ -443,11 +443,11 @@ function tl(e) {
                 ti(e);
                 let r = t < ej.li / 3;
                 t <= ej.li
-                    ? document.body.classList.add(eR.draggingMin)
-                    : document.body.classList.remove(eR.draggingMin),
+                    ? document.body.classList.add(eD.draggingMin)
+                    : document.body.classList.remove(eD.draggingMin),
                     t >= ej.zx
-                        ? document.body.classList.add(eR.draggingMax)
-                        : document.body.classList.remove(eR.draggingMax);
+                        ? document.body.classList.add(eD.draggingMax)
+                        : document.body.classList.remove(eD.draggingMax);
                 let i = t - e;
                 null == (n = O.current) ||
                     n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / ej.p8), 0.25))),
@@ -456,14 +456,14 @@ function tl(e) {
             [m],
         ),
         v = i.useCallback(() => {
-            document.body.classList.add(eR.dragging);
+            document.body.classList.add(eD.dragging);
         }, []),
         y = i.useCallback((e) => {
             var t;
-            document.body.classList.remove(eR.dragging),
-                document.body.classList.remove(eR.draggingMin),
-                document.body.classList.remove(eR.draggingMax),
-                document.body.classList.remove(eR.collapsing),
+            document.body.classList.remove(eD.dragging),
+                document.body.classList.remove(eD.draggingMin),
+                document.body.classList.remove(eD.draggingMax),
+                document.body.classList.remove(eD.collapsing),
                 null == (t = O.current) || t.style.setProperty("--custom-overdrag", "0px"),
                 f.K.set(ej.nT, e),
                 eI.default.track(eA.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
@@ -488,7 +488,7 @@ function tl(e) {
         l)
     )
         return null;
-    let N = { className: a()(eR.sidebarList, { [eR.sidebarListRounded]: !t }) };
+    let N = { className: a()(eD.sidebarList, { [eD.sidebarListRounded]: !t }) };
     return (0, r.jsx)(h.f6W, {
         theme: n,
         children: (e) => {
@@ -496,15 +496,15 @@ function tl(e) {
             return (0, r.jsxs)("div", {
                 ref: O,
                 "data-collapsed": g,
-                className: a()(eR.sidebar, e, {
-                    [eR.fullWidth]: d.tq,
-                    [eR.hidden]: u,
-                    [eR.channelListHidden]: s,
+                className: a()(eD.sidebar, e, {
+                    [eD.fullWidth]: d.tq,
+                    [eD.hidden]: u,
+                    [eD.channelListHidden]: s,
                 }),
                 children: [
                     o &&
                         (0, r.jsx)(H.Z, {
-                            className: eR.guilds,
+                            className: eD.guilds,
                             themeOverride: n,
                         }),
                     !s &&
@@ -531,7 +531,7 @@ function tl(e) {
                                 (0, r.jsx)(h.P3F, {
                                     onClick: T,
                                     "aria-label": "Resize Sidebar",
-                                    className: eR.sidebarResizeHandle,
+                                    className: eD.sidebarResizeHandle,
                                     onMouseDown: S,
                                 }),
                                 (0, r.jsx)(eC.b, {}),
@@ -601,17 +601,17 @@ function ta() {
         v = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         S = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
     return (0, r.jsx)("div", {
-        className: eR.container,
-        children: (0, r.jsx)(R.Z.Provider, {
+        className: eD.container,
+        children: (0, r.jsx)(D.Z.Provider, {
             value: (null == g ? void 0 : g.params.guildId) === eA.ME || null == g ? void 0 : g.params.guildId,
             children: (0, r.jsxs)("div", {
-                className: eR.base,
+                className: eD.base,
                 "data-fullscreen": v,
                 children: [
                     !v && (0, r.jsx)(ek, {}),
                     d.tq ? null : (0, r.jsx)(eT.Z, {}),
                     (0, r.jsxs)("div", {
-                        className: eR.content,
+                        className: eD.content,
                         children: [
                             (0, r.jsx)(T.Z, {}),
                             (0, r.jsx)(tl, {
@@ -622,7 +622,7 @@ function ta() {
                                 hideSidebar: !u,
                             }),
                             (0, r.jsx)("div", {
-                                className: eR.page,
+                                className: eD.page,
                                 "data-collapsed": !!E && O,
                                 children: (0, r.jsxs)(I.Z.Provider, {
                                     value: b,

@@ -54,7 +54,7 @@ function P(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,12 +66,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,7 +84,7 @@ function L(e) {
             highlightAddPaymentMethodButton: a,
             dropdownClassName: s,
             analyticsLocation: R,
-            currentInvoicePreview: D,
+            currentInvoicePreview: w,
             disabled: L = !1,
         } = e,
         M = (0, c.e7)([E.Z], () => E.Z.hidePersonalInformation),
@@ -112,7 +112,7 @@ function L(e) {
                     amount: i.subtotal,
                     currency: i.currency,
                 };
-            D.currency !== i.currency || (D.currency === i.currency && D.total !== i.total)
+            w.currency !== i.currency || (w.currency === i.currency && w.total !== i.total)
                 ? await x(
                       i,
                       () => {
@@ -144,7 +144,7 @@ function L(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         _.default,
-                        w(P({}, e), {
+                        D(P({}, e), {
                             onAddPaymentSource: q,
                             analyticsLocation: R,
                         }),

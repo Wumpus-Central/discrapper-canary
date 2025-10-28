@@ -117,8 +117,8 @@ function I(e) {
             "popoverRef",
         ]);
     let P = i.useRef(null),
-        D = (0, a.j1L)(b),
-        w = i.useCallback(
+        w = (0, a.j1L)(b),
+        D = i.useCallback(
             () => ({
                 type: "VIDEO",
                 url: g,
@@ -138,7 +138,7 @@ function I(e) {
         }, [C]),
         M = i.useCallback(() => {
             null !== P.current && P.current.pause();
-            let e = w();
+            let e = D();
             (0, l.K)({
                 items: [e],
                 startingIndex: 0,
@@ -147,8 +147,8 @@ function I(e) {
             }),
                 null == C || C(),
                 null == A || A();
-        }, [w, A, C]),
-        k = D
+        }, [D, A, C]),
+        k = w
             ? (0, r.jsx)(a.zsu, {
                   type: "image",
                   src: b,

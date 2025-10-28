@@ -27,13 +27,13 @@ let T = function (e) {
         N = (0, l.Z)(() => Date.now()),
         { analyticsLocations: R } = (0, c.ZP)(),
         P = i.useRef(null),
-        D = i.useRef(null),
         w = i.useRef(null),
+        D = i.useRef(null),
         L = i.useCallback(() => {
-            null != w.current &&
-                null != D.current &&
-                D.current.scrollTo({
-                    to: w.current.offsetTop,
+            null != D.current &&
+                null != w.current &&
+                w.current.scrollTo({
+                    to: D.current.offsetTop,
                     animate: !0,
                 });
         }, []),
@@ -97,7 +97,7 @@ let T = function (e) {
                         }),
                     }),
                 (0, r.jsxs)(o.yWw, {
-                    ref: D,
+                    ref: w,
                     className: I.scroller,
                     children: [
                         (0, r.jsxs)("div", {
@@ -132,7 +132,7 @@ let T = function (e) {
                         (0, r.jsx)("div", {
                             className: I.middleBodyContentWrapper,
                             children: (0, r.jsx)(d.Z, {
-                                ref: w,
+                                ref: D,
                                 guild: e.guild,
                                 onClose: x,
                             }),

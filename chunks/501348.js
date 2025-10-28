@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(921801),
     R = n(984802),
     P = n(594174),
-    D = n(358085),
-    w = n(210887),
+    w = n(358085),
+    D = n(210887),
     L = n(740492),
     x = n(695346),
     M = n(313789),
@@ -210,7 +210,7 @@ let Q = "cozy",
 class ea extends i.Component {
     renderZoomSlider() {
         return (
-            !D.isPlatformEmbedded,
+            !w.isPlatformEmbedded,
             (0, r.jsx)(d.iRW, {
                 label: H.intl.string(H.t.i19n5L),
                 description: H.intl.string(H.t.ip0uSf),
@@ -493,10 +493,10 @@ function es() {
             d && eo(l.z.HALLOWEEN_APP_ICONS_APPEARANCE_SETTINGS_WEB_BADGE);
         }, [d]);
     let f = (0, R.A6)(),
-        p = (0, s.cj)([w.Z, L.ZP, m.Z, P.default, b.Z], () => {
+        p = (0, s.cj)([D.Z, L.ZP, m.Z, P.default, b.Z], () => {
             var e, t;
             return {
-                theme: w.Z.theme,
+                theme: D.Z.theme,
                 useForcedColors: m.Z.useForcedColors,
                 useSystemTheme: L.ZP.useSystemTheme,
                 fontSize: m.Z.fontSize,

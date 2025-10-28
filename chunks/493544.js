@@ -225,7 +225,7 @@ let P = function (e) {
         mobileSidebarOpen: b,
         closeAction: p,
     });
-    function D() {
+    function w() {
         return null == r
             ? null
             : (0, i.jsx)(
@@ -237,7 +237,7 @@ let P = function (e) {
                   o,
               );
     }
-    function w() {
+    function D() {
         let e = null != y && null != p && b,
             t =
                 u.tq &&
@@ -249,7 +249,7 @@ let P = function (e) {
             return (0, i.jsxs)(d.W, {
                 component: "div",
                 className: m.contentRegion,
-                children: [t, n, !u.tq && P, D()],
+                children: [t, n, !u.tq && P, w()],
             });
         if ("scrollableCustom" === g)
             return (0, i.jsxs)(d.W, {
@@ -278,7 +278,7 @@ let P = function (e) {
                             !u.tq && P,
                         ],
                     }),
-                    D(),
+                    w(),
                 ],
             });
         let r = N[null != g ? g : "default"];
@@ -317,7 +317,7 @@ let P = function (e) {
                         }),
                     ],
                 }),
-                D(),
+                w(),
             ],
         });
     }
@@ -355,7 +355,7 @@ let P = function (e) {
             (0, i.jsxs)(l.animated.div, {
                 style: e,
                 className: m.standardSidebarView,
-                children: [!t && L(), w()],
+                children: [!t && L(), D()],
             }),
         ),
     });

@@ -93,11 +93,11 @@ let E = (0, f.Z)(
                 })
                 ? (w = i.u1M)
                 : a.context === m.IlC.POPOUT && (w = i.u1M);
-            let D = !1,
-                R = (l) => {
+            let R = !1,
+                D = (l) => {
                     let { clientId: s, location: o } = l;
                     if (null == s || s === n) {
-                        if (((D = !0), null == o)) {
+                        if (((R = !0), null == o)) {
                             t(new p.Z({ errorCode: m.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
                                 a.lock();
                             return;
@@ -161,7 +161,7 @@ let E = (0, f.Z)(
                             clientId: n,
                             scopes: null != d ? d : [],
                             disclosures: null != j ? j : [],
-                            callback: R,
+                            callback: D,
                             responseType: E,
                             redirectUri: O,
                             codeChallenge: I,
@@ -180,7 +180,7 @@ let E = (0, f.Z)(
                     modalKey: Z,
                     onCloseCallback: () => {
                         M(),
-                            D ||
+                            R ||
                                 (t(new p.Z({ errorCode: m.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
                                 a.lock());
                     },

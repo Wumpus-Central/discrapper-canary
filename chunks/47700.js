@@ -67,10 +67,10 @@ function O(e) {
 }
 function v(e) {
     if (((g = !1), O(e), !m))
-        if (null !== r(u)) (m = !0), D();
+        if (null !== r(u)) (m = !0), w();
         else {
             var t = r(d);
-            null !== t && w(v, t.startTime - e);
+            null !== t && D(v, t.startTime - e);
         }
 }
 var I = !1,
@@ -107,7 +107,7 @@ function N() {
                         if (null !== _) n = !0;
                         else {
                             var c = r(d);
-                            null !== c && w(v, c.startTime - e), (n = !1);
+                            null !== c && D(v, c.startTime - e), (n = !1);
                         }
                     }
                     break e;
@@ -135,10 +135,10 @@ else if ("undefined" != typeof MessageChannel) {
     o = function () {
         E(N, 0);
     };
-function D() {
+function w() {
     I || ((I = !0), o());
 }
-function w(e, n) {
+function D(e, n) {
     T = E(function () {
         e(t.unstable_now());
     }, n);
@@ -153,7 +153,7 @@ function w(e, n) {
         e.callback = null;
     }),
     (t.unstable_continueExecution = function () {
-        m || h || ((m = !0), D());
+        m || h || ((m = !0), w());
     }),
     (t.unstable_forceFrameRate = function (e) {
         0 > e || 125 < e
@@ -240,8 +240,8 @@ function w(e, n) {
             a > o
                 ? ((e.sortIndex = a),
                   n(d, e),
-                  null === r(u) && e === r(d) && (g ? (b(T), (T = -1)) : (g = !0), w(v, a - o)))
-                : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), D())),
+                  null === r(u) && e === r(d) && (g ? (b(T), (T = -1)) : (g = !0), D(v, a - o)))
+                : ((e.sortIndex = s), n(u, e), m || h || ((m = !0), w())),
             e
         );
     }),

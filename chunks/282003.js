@@ -1,8 +1,8 @@
-n.d(t, { k: () => b }), n(388685);
+n.d(t, { k: () => g }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(481060),
-    l = n(821849),
+    l = n(481060),
+    i = n(821849),
     o = n(45474),
     s = n(146528),
     c = n(246992),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,9 +55,9 @@ function g(e, t) {
         e
     );
 }
-let b = () => {
+let g = () => {
         let [e, t] = r.useState(h.PremiumTypes.TIER_0),
-            [n, b] = r.useState(o.R.WHAT_YOU_LOSE),
+            [n, g] = r.useState(o.R.WHAT_YOU_LOSE),
             [j, _] = r.useState(null),
             [y, C] = r.useState(h.Xh.PREMIUM_MONTH_TIER_0),
             [S, E] = r.useState([]),
@@ -70,7 +70,7 @@ let b = () => {
             [k, R] = r.useState(!1),
             [A, D] = r.useState(!1);
         (0, r.useEffect)(() => {
-            (0, l.Y2)();
+            (0, i.Y2)();
         }, []),
             (0, r.useEffect)(() => {
                 let e = new Date();
@@ -167,11 +167,11 @@ let b = () => {
             }, [n, j, T, y, N]);
         let Z = r.useCallback(async () => {
             D(!0),
-                await (0, i.ZDy)(
+                await (0, l.ZDy)(
                     async () => (t) =>
                         (0, a.jsx)(
                             u.x,
-                            g(f({}, t), {
+                            b(f({}, t), {
                                 onClose: () => {
                                     t.onClose(), D(!1);
                                 },
@@ -186,7 +186,7 @@ let b = () => {
                                 errorOnCancel: I,
                                 errorOnRedeem: k,
                                 setActiveStep: (e) => {
-                                    b(e), t.onClose();
+                                    g(e), t.onClose();
                                 },
                                 activeStep: n,
                                 premiumSubscription: {
@@ -221,7 +221,7 @@ let b = () => {
             }, [n, A, Z]),
             (0, a.jsxs)(d.$0, {
                 children: [
-                    (0, a.jsx)(i.Heading, {
+                    (0, a.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
                         children: "Cancellation Flow",
                     }),
@@ -229,11 +229,11 @@ let b = () => {
                         children: [
                             (0, a.jsxs)(d.BZ, {
                                 children: [
-                                    (0, a.jsx)(i.Text, {
+                                    (0, a.jsx)(l.Text, {
                                         variant: "text-md/semibold",
                                         children: "Premium Subscription",
                                     }),
-                                    (0, a.jsx)(i.PhF, {
+                                    (0, a.jsx)(l.PhF, {
                                         placeholder: "Premium Type",
                                         select: (e) => {
                                             t(e);
@@ -261,11 +261,11 @@ let b = () => {
                             S.length > 0 &&
                                 (0, a.jsxs)(d.BZ, {
                                     children: [
-                                        (0, a.jsx)(i.Text, {
+                                        (0, a.jsx)(l.Text, {
                                             variant: "text-md/semibold",
                                             children: "Subscription Interval",
                                         }),
-                                        (0, a.jsx)(i.PhF, {
+                                        (0, a.jsx)(l.PhF, {
                                             placeholder: "Premium Type",
                                             select: (e) => {
                                                 C(e);
@@ -279,14 +279,14 @@ let b = () => {
                                 }),
                             (0, a.jsxs)(d.BZ, {
                                 children: [
-                                    (0, a.jsx)(i.Text, {
+                                    (0, a.jsx)(l.Text, {
                                         variant: "text-md/semibold",
                                         children: "Modal Step",
                                     }),
-                                    (0, a.jsx)(i.PhF, {
+                                    (0, a.jsx)(l.PhF, {
                                         placeholder: "Premium Type",
                                         select: (e) => {
-                                            b(e);
+                                            g(e);
                                         },
                                         isSelected: (e) => n === e,
                                         serialize: (e) => "".concat(e),
@@ -317,7 +317,7 @@ let b = () => {
                                 ],
                             }),
                             (0, a.jsx)(d.BZ, {
-                                children: (0, a.jsx)(i.Checkbox, {
+                                children: (0, a.jsx)(l.Checkbox, {
                                     checked: null !== j,
                                     onChange: () => {
                                         if (null === j) return void _(v());
@@ -327,7 +327,7 @@ let b = () => {
                                 }),
                             }),
                             (0, a.jsx)(d.BZ, {
-                                children: (0, a.jsx)(i.Checkbox, {
+                                children: (0, a.jsx)(l.Checkbox, {
                                     checked: k,
                                     onChange: () => {
                                         R(!k);
@@ -336,7 +336,7 @@ let b = () => {
                                 }),
                             }),
                             (0, a.jsx)(d.BZ, {
-                                children: (0, a.jsx)(i.Checkbox, {
+                                children: (0, a.jsx)(l.Checkbox, {
                                     checked: I,
                                     onChange: () => {
                                         w(!I);
@@ -348,7 +348,7 @@ let b = () => {
                     }),
                     (0, a.jsx)(d.E_, {
                         label: "Cancellation Modal",
-                        children: (0, a.jsx)(i.Button, {
+                        children: (0, a.jsx)(l.Button, {
                             onClick: () => {
                                 D(!0);
                             },
@@ -364,7 +364,7 @@ let b = () => {
     v = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             { discount: t = {} } = e;
-        return g(
+        return b(
             f(
                 {
                     id: "",

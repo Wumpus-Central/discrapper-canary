@@ -28,8 +28,8 @@ var a = n(442837),
     N = n(78839),
     R = n(936101),
     P = n(868158),
-    D = n(483012),
-    w = n(955132);
+    w = n(483012),
+    D = n(955132);
 function L(e, t, n) {
     return (
         t in e
@@ -104,8 +104,8 @@ function U(e, t) {
     return i;
 }
 let G = new d.Z("ConnectionStore"),
-    B = new D.Z(
-        w.Wb,
+    B = new w.Z(
+        D.Wb,
         (e, t) => {
             var n;
             e =
@@ -130,8 +130,8 @@ let G = new d.Z("ConnectionStore"),
         },
         (e) => "CHANNEL_UPDATE" !== e,
     ),
-    Z = new D.Z(
-        w.Wb,
+    Z = new w.Z(
+        D.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -156,8 +156,8 @@ let G = new d.Z("ConnectionStore"),
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    F = new D.Z(
-        w.Wb,
+    F = new w.Z(
+        D.Wb,
         (e, t) => (
             (e =
                 null != e
@@ -170,8 +170,8 @@ let G = new d.Z("ConnectionStore"),
         ),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    V = new D.Z(
-        w.Wb,
+    V = new w.Z(
+        D.Wb,
         (e, t) => (
             (e =
                 null == e
@@ -231,7 +231,7 @@ function z(e) {
 }
 function q(e) {
     o.Z.dispatch(e).catch((t) =>
-        w.Wb.resetSocketOnDispatchError({
+        D.Wb.resetSocketOnDispatchError({
             error: t,
             action: e.type,
         }),
@@ -337,7 +337,7 @@ W(
     (e) => {
         g.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
-                let t = P.Fx(e, w.Wb.identifyStartTime);
+                let t = P.Fx(e, D.Wb.identifyStartTime);
                 null != S.default.getCurrentUser() &&
                     (q({
                         type: "GUILD_CREATE",
@@ -373,7 +373,7 @@ W(
         g.Z.readySupplemental.measure(() => {
             a.ZP.Emitter.batched(() => {
                 var t, n;
-                e = g.Z.hydrateReadySupplemental.measure(() => P.r$(e, w.Wb.identifyStartTime));
+                e = g.Z.hydrateReadySupplemental.measure(() => P.r$(e, D.Wb.identifyStartTime));
                 let r = (e) =>
                         e.map((e) => ({
                             user: e.user,
@@ -427,7 +427,7 @@ W(
                         voiceStates: l,
                         initial: !0,
                     }),
-                    w.GC.update();
+                    D.GC.update();
             });
         }),
             setTimeout(() => q({ type: "POST_CONNECTION_OPEN" }), 2000);
@@ -459,7 +459,7 @@ W(
             g.Z.ready.measure(() => {
                 a.ZP.Emitter.batched(() => {
                     let t = (e = g.Z.hydrateReady.measure(() =>
-                            P.IM(e, w.Wb.identifyStartTime, n),
+                            P.IM(e, D.Wb.identifyStartTime, n),
                         )).private_channels.map((e) => (0, b.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
@@ -514,8 +514,8 @@ W(
                                 token: e.auth_token,
                                 userId: e.user.id,
                             }),
-                        w.RR.update(),
-                        w.GC.update();
+                        D.RR.update(),
+                        D.GC.update();
                 });
             });
         },
@@ -529,7 +529,7 @@ W(
         });
     }),
     Y(["RESUMED"], () => {
-        w.RR.forceUpdate(), w.GC.forceUpdate(), q({ type: "CONNECTION_RESUMED" });
+        D.RR.forceUpdate(), D.GC.forceUpdate(), q({ type: "CONNECTION_RESUMED" });
     }),
     Y(["TYPING_START"], (e) => {
         null != e.member && X(e.guild_id, e.member.user, e.member),
@@ -917,7 +917,7 @@ W(
                             processedAtTimestamp: s,
                         });
                     }),
-                D.Z.flush("GUILD_MEMBERS_CHUNK");
+                w.Z.flush("GUILD_MEMBERS_CHUNK");
         });
     }),
     Y(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
@@ -948,7 +948,7 @@ W(
                             processedAtTimestamp: s,
                         });
                     }),
-                D.Z.flush();
+                w.Z.flush();
         });
     }),
     Y(
@@ -1430,7 +1430,7 @@ W(
                         t(i);
                 }
             }),
-                D.Z.flush(),
+                w.Z.flush(),
                 q({
                     type: "GUILD_MEMBER_LIST_UPDATE",
                     guildId: e.guild_id,

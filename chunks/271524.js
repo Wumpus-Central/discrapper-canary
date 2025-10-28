@@ -4,10 +4,10 @@ var i = n(442837),
     u = n(419363),
     r = n(509613),
     s = n(292959),
-    a = n(313789),
-    o = n(981631),
+    o = n(313789),
+    a = n(981631),
     c = n(388032);
-let E = (0, r.J9)(a.n.TEXT_TO_SPEECH_NOTIFICATIONS, {
+let E = (0, r.J9)(o.n.TEXT_TO_SPEECH_NOTIFICATIONS, {
     useTitle: () => c.intl.string(c.t.VIm5MO),
     useSubtitle: () => c.intl.string(c.t["+4dnA5"]),
     useValue: () => (0, i.e7)([s.Z], () => s.Z.getTTSType()),
@@ -16,15 +16,15 @@ let E = (0, r.J9)(a.n.TEXT_TO_SPEECH_NOTIFICATIONS, {
     useOptions: () => [
         {
             name: c.intl.string(c.t.B1AGeJ),
-            value: o.PrB.ALL_CHANNELS,
+            value: a.PrB.ALL_CHANNELS,
         },
         {
             name: c.intl.string(c.t.uM2rNr),
-            value: o.PrB.SELECTED_CHANNEL,
+            value: a.PrB.SELECTED_CHANNEL,
         },
         {
             name: c.intl.string(c.t.DYO5Oi),
-            value: o.PrB.NEVER,
+            value: a.PrB.NEVER,
         },
     ],
 });

@@ -34,8 +34,8 @@ var r,
     N = n(592125),
     R = n(52824),
     P = n(626135),
-    D = n(585483),
-    w = n(55935),
+    w = n(585483),
+    D = n(55935),
     L = n(408433),
     x = n(956664),
     M = n(624138),
@@ -143,7 +143,7 @@ function ea(e) {
             onControlsShow: C,
             onVolumeChange: N,
             onMute: P,
-            href: w,
+            href: D,
             placeholder: L,
             placeholderVersion: M,
             sourceMetadata: k,
@@ -157,12 +157,12 @@ function ea(e) {
                 null == I || I(!1),
                 G(!0),
                 Z &&
-                    (D.S.dispatch(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED),
-                    D.S.subscribeOnce(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED, F));
+                    (w.S.dispatch(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED),
+                    w.S.subscribeOnce(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED, F));
         };
     a.useEffect(
         () => () => {
-            Z && D.S.unsubscribe(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED, F);
+            Z && w.S.unsubscribe(B.CkL.VIDEO_EMBED_PLAYBACK_STARTED, F);
         },
         [Z, F],
     );
@@ -283,7 +283,7 @@ function ea(e) {
                     children: E
                         ? (0, i.jsx)(v.Z, {
                               onPlay: null != d ? H : null,
-                              externalURL: w,
+                              externalURL: D,
                               renderLinkComponent: g,
                               messageId: null == k || null == (t = k.message) ? void 0 : t.id,
                               channelId: null == k || null == (n = k.message) ? void 0 : n.channel_id,
@@ -881,7 +881,7 @@ class es extends (r = a.PureComponent) {
                                                 children: "\u2022",
                                             })
                                           : null,
-                                      null != n ? (0, w.Y4)(n) : null,
+                                      null != n ? (0, D.Y4)(n) : null,
                                   ],
                               }),
                           ],
@@ -893,7 +893,7 @@ class es extends (r = a.PureComponent) {
                     className: s()(V.embedFooter, V.embedMargin),
                     children: (0, i.jsx)("span", {
                         className: V.embedFooterText,
-                        children: (0, w.Y4)(n),
+                        children: (0, D.Y4)(n),
                     }),
                 })
               : void 0;

@@ -75,14 +75,14 @@ let _ = "mp4",
     N = "",
     R = "",
     P = [],
-    D = [],
     w = [],
+    D = [],
     L = [];
 function x(e) {
     C = e.analyticsID;
 }
 function M(e) {
-    "" === (N = e.query) && ((R = ""), (P = []), (w = []));
+    "" === (N = e.query) && ((R = ""), (P = []), (D = []));
 }
 function k(e) {
     switch (e) {
@@ -129,7 +129,7 @@ function G(e) {
 }
 function B(e) {
     let t = e.trendingCategories;
-    D = [
+    w = [
         ...(null != e.trendingGIFPreview
             ? [
                   {
@@ -151,7 +151,7 @@ function B(e) {
 }
 function Z(e) {
     let { items: t } = e;
-    w = t;
+    D = t;
 }
 function F(e) {
     let { items: t } = e;
@@ -171,13 +171,13 @@ class V extends (r = i.ZP.Store) {
         return P;
     }
     getTrendingCategories() {
-        return D;
+        return w;
     }
     getSelectedFormat() {
         return S;
     }
     getSuggestions() {
-        return w;
+        return D;
     }
     getTrendingSearchTerms() {
         return L;

@@ -34,8 +34,8 @@ var r,
     N = n(768581),
     R = n(51144),
     P = n(965386),
-    D = n(981631),
-    w = n(185923),
+    w = n(981631),
+    D = n(185923),
     L = n(388032),
     x = n(512746);
 function M(e, t, n) {
@@ -387,7 +387,7 @@ class Q extends H {
 class J extends H {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === D.d4z.GUILD_CATEGORY ? f.ROc : (0, E.KS)(e);
+            n = e.type === w.d4z.GUILD_CATEGORY ? f.ROc : (0, E.KS)(e);
         return (0, i.jsxs)(P.RX, {
             children: [
                 null != n && (0, i.jsx)(P.Tw, { children: (0, i.jsx)(n, { className: x.icon }) }),
@@ -450,7 +450,7 @@ class et extends H {
                                   ? N.ZP.getEmojiURL({
                                         id: e.id,
                                         animated: e.animated && r,
-                                        size: w.$U,
+                                        size: D.$U,
                                     })
                                   : e.url,
                       })

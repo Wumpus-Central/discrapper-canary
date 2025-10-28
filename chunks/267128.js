@@ -31,8 +31,8 @@ var r = n(951288),
     N = n(981631),
     R = n(388032),
     P = n(724913),
-    D = n(430864);
-function w(e) {
+    w = n(430864);
+function D(e) {
     let { width: t = 12, height: n = 8, color: i = "currentColor", className: a, foreground: o } = e;
     return (0, r.jsx)("svg", {
         className: a,
@@ -102,7 +102,7 @@ function M(e, t, n) {
               })
             : (0, r.jsx)("div", {
                   className: P.replyBadge,
-                  children: (0, r.jsx)(w, { className: P.replyIcon }),
+                  children: (0, r.jsx)(D, { className: P.replyIcon }),
               });
     if (
         a.message.type === N.uaV.USER_JOIN ||
@@ -245,7 +245,7 @@ function U(e, t, n, i, a, s) {
         S = (0, b.cv)(E).length > 0,
         A = null != E.interaction,
         C = E.hasFlag(N.iLy.IS_VOICE_MESSAGE),
-        w = E.isPoll(),
+        D = E.isPoll(),
         L = E.type === N.uaV.POLL_RESULT;
     if (
         ((0, _.Z)(e) &&
@@ -266,10 +266,10 @@ function U(e, t, n, i, a, s) {
             rendered: t,
         });
     else if (I)
-        if (w) {
+        if (D) {
             var x, M;
             u = (0, r.jsx)("div", {
-                className: o()(P.repliedTextContent, D.markup),
+                className: o()(P.repliedTextContent, w.markup),
                 children: null == E || null == (M = E.poll) || null == (x = M.question) ? void 0 : x.text,
             });
         } else

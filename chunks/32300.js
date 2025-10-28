@@ -6,7 +6,7 @@ n.d(t, {
     RD: () => v,
     Rb: () => u,
     Se: () => m,
-    Sy: () => w,
+    Sy: () => D,
     XE: () => f,
     YB: () => b,
     Yo: () => _,
@@ -15,7 +15,7 @@ n.d(t, {
     dj: () => p,
     eV: () => R,
     hS: () => g,
-    hb: () => D,
+    hb: () => w,
     lj: () => T,
     mB: () => E,
     o4: () => c,
@@ -370,16 +370,16 @@ let P = (0, a.B)({
         },
     ],
 });
-function D(e) {
-    let t = w(e, !1);
+function w(e) {
+    let t = D(e, !1);
     if (i()(P.definition.defaultConfig, t)) return "control";
     let n = P.definition.treatments.find((e) => i()(e.config, t));
     return null == n ? "control" : "treatment-".concat(n.id);
 }
-function w(e) {
+function D(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return P.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 function L() {
-    T("OVERLAY_INITIALIZED"), C("OVERLAY_INITIALIZED"), w("OVERLAY_INITIALIZED");
+    T("OVERLAY_INITIALIZED"), C("OVERLAY_INITIALIZED"), D("OVERLAY_INITIALIZED");
 }

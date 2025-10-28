@@ -75,11 +75,11 @@ function P(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -87,7 +87,7 @@ function D(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,9 +104,9 @@ function L(e) {
         N = (0, p.O5)(),
         R = (0, h.aM)(),
         P = (0, E.ly)(e.quest),
-        D = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
+        w = !0 === e.showShareLink && (0, m.vB)(e.quest.config),
         {
-            handleComplete: w,
+            handleComplete: D,
             handleProgress: L,
             handleResetDismissibilityClick: x,
             handleResetStatusClick: M,
@@ -125,7 +125,7 @@ function L(e) {
             });
         }, [R, e.quest, e.questContent, e.sourceQuestContent]),
         G = i.useCallback(() => {
-            D &&
+            w &&
                 ((0, m.f2)(e.quest.id, {
                     content: e.questContent,
                     position: e.questContentPosition,
@@ -134,7 +134,7 @@ function L(e) {
                     sourceQuestContent: e.sourceQuestContent,
                 }),
                 (0, o.showToast)((0, o.createToast)(A.intl.string(A.t["+5kSoW"]), o.ToastType.SUCCESS)));
-        }, [R, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent, D]),
+        }, [R, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent, w]),
         B = () => {
             (0, v.openDisclosureModal)(e.quest, {
                 content: e.questContent,
@@ -213,7 +213,7 @@ function L(e) {
                             action: U,
                             icon: o.zFc,
                         }),
-                        D &&
+                        w &&
                             (0, r.jsx)(o.sNh, {
                                 id: "share-link",
                                 label: A.intl.string(A.t.RDE0Sc),
@@ -278,7 +278,7 @@ function L(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: "complete",
                                 label: A.intl.string(A.t.jQEfRT),
-                                action: w,
+                                action: D,
                             }),
                             (0, m.$J)(e.quest) &&
                                 (0, r.jsxs)(o.sNh, {
@@ -333,7 +333,7 @@ function x(e) {
             questContentPosition: d,
             sourceQuestContent: f,
         } = e,
-        _ = D(e, [
+        _ = w(e, [
             "children",
             "onOpen",
             "onClose",

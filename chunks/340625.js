@@ -1,7 +1,7 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var r = n(818083),
     i = n(987338);
-let l = (0, r.B)({
+let a = (0, r.B)({
     kind: "user",
     id: "2025-10_recurring_3p_promotion",
     label: "Recurring 3P Promotion Experiment",

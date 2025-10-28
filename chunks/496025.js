@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685), n(35282);
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(602715),
     s = n(442837),
     c = n(481060),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(592125),
     x = n(699516),
     f = n(594174),
-    g = n(55589),
-    b = n(630388),
+    b = n(55589),
+    g = n(630388),
     v = n(98357),
     j = n(432877),
     _ = n(246992),
@@ -23,9 +23,9 @@ var a = n(951288),
     S = n(451429);
 function E() {
     var e;
-    let t = (0, s.Wu)([g.Z], () => g.Z.getSortedChannels()[1]),
-        [n, i] = r.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: l, options: d } = (0, s.cj)([h.Z, f.default, x.Z], () => ({
+    let t = (0, s.Wu)([b.Z], () => b.Z.getSortedChannels()[1]),
+        [n, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
+        { selectedChannel: i, options: d } = (0, s.cj)([h.Z, f.default, x.Z], () => ({
             selectedChannel: h.Z.getChannel(n),
             options: t.map((e) => {
                 let t = h.Z.getChannel(e.channelId);
@@ -37,14 +37,14 @@ function E() {
         })),
         v = r.useCallback(() => {
             var e;
-            if (null == l || !l.isPrivate()) return;
-            let t = (0, b.x9)(null != (e = l.recipientFlags) ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-            p.Z.updatePrivateChannelRecipientFlags(l.id, t);
-        }, [l]),
+            if (null == i || !i.isPrivate()) return;
+            let t = (0, g.x9)(null != (e = i.recipientFlags) ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            p.Z.updatePrivateChannelRecipientFlags(i.id, t);
+        }, [i]),
         j =
-            null != l &&
-            !!l.isPrivate() &&
-            (0, b.yE)(null != (e = l.recipientFlags) ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            null != i &&
+            !!i.isPrivate() &&
+            (0, g.yE)(null != (e = i.recipientFlags) ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Text, {
@@ -59,7 +59,7 @@ function E() {
                         options: d,
                         placeholder: "Select DM",
                         value: n,
-                        onChange: i,
+                        onChange: l,
                         renderOptionPrefix: (e) => {
                             if (null == e) return null;
                             let t = h.Z.getChannel(e.value);
@@ -111,7 +111,7 @@ function O() {
         );
     });
     return (0, a.jsxs)("div", {
-        className: l()(S.panel, C.panel),
+        className: i()(S.panel, C.panel),
         children: [
             e,
             (0, a.jsx)("div", { className: C.divider }),

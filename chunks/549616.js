@@ -104,7 +104,7 @@ class p extends o.Z {
                 mobile_banner_url: R,
                 mobile_bg_url: P,
             } = e,
-            D = d(e, [
+            w = d(e, [
                 "products",
                 "logo",
                 "hero_ranking",
@@ -130,7 +130,7 @@ class p extends o.Z {
                 "mobile_bg_url",
             ]);
         return new p(
-            u(l({}, super.fromServer(D)), {
+            u(l({}, super.fromServer(w)), {
                 products: t.reduce((e, t) => {
                     let n = a.Z.fromServer(t);
                     return (_(n.type) || 0 !== n.items.length) && e.push(n), e;

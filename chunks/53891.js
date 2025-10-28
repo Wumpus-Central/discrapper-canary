@@ -2,8 +2,8 @@ n.d(t, { ZP: () => j });
 var a = n(951288);
 n(647438);
 var r = n(442837),
-    i = n(704215),
-    l = n(198168),
+    l = n(704215),
+    i = n(198168),
     o = n(907862),
     s = n(570140),
     c = n(710845),
@@ -14,8 +14,8 @@ var r = n(442837),
     h = n(446094),
     x = n(921944),
     f = n(388032);
-let g = new c.Z("GuildTagCoachmark");
-function b(e) {
+let b = new c.Z("GuildTagCoachmark");
+function g(e) {
     function t(t) {
         var n;
         s.Z.dispatch({
@@ -25,7 +25,7 @@ function b(e) {
         }),
             null == (n = e.onDismiss) || n.call(e, t);
     }
-    let { isAdopting: n, onAdoptTag: r, onEditProfile: i } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
+    let { isAdopting: n, onAdoptTag: r, onEditProfile: l } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
         c = [
             {
                 text: f.intl.string(f.t.jwEaiX),
@@ -35,7 +35,7 @@ function b(e) {
             },
             {
                 text: f.intl.string(f.t.s5vZlQ),
-                onClick: i,
+                onClick: l,
                 variant: "secondary",
             },
         ];
@@ -48,7 +48,7 @@ function b(e) {
                 position: "top",
                 graphic: {
                     type: "dynamic",
-                    component: l.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
+                    component: i.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
                     props: {
                         guildId: e.guild.id,
                         guildProfile: e.guild.profile,
@@ -71,7 +71,7 @@ function v(e) {
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag },
         }),
-            (0, d.Qd)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, x.L.DISMISS),
+            (0, d.Qd)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, x.L.DISMISS),
             null == (n = e.onDismiss) || n.call(e, t);
     }
     let { isAdopting: n, onAdoptTag: r, onEditProfile: c } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
@@ -97,7 +97,7 @@ function v(e) {
                 position: "top",
                 graphic: {
                     type: "dynamic",
-                    component: l.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
+                    component: i.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
                     props: {
                         guildId: e.guild.id,
                         guildProfile: e.guild.profile,
@@ -117,7 +117,7 @@ function j(e) {
         n = (0, m.S3)(e.guildId);
     return null != t && (0, p.jq)(t) && null !== n
         ? "changed" === n
-            ? (0, a.jsx)(b, {
+            ? (0, a.jsx)(g, {
                   guild: t,
                   onDismiss: e.onDismiss,
                   targetElementRef: e.targetElementRef,
@@ -129,5 +129,5 @@ function j(e) {
                   targetElementRef: e.targetElementRef,
                   children: e.children,
               })
-        : (g.error("GuildTagCoachmark rendered without guildId or coachmark type."), e.children);
+        : (b.error("GuildTagCoachmark rendered without guildId or coachmark type."), e.children);
 }

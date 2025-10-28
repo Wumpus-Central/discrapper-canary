@@ -40,7 +40,7 @@ function j(e) {
         Z = (0, u.dQu)(o.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         w = i.useRef(null),
         L = i.useRef(null),
-        [D, R] = i.useState({
+        [R, D] = i.useState({
             width: 0,
             height: 0,
         }),
@@ -57,7 +57,7 @@ function j(e) {
         if (null == L.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            R({
+            D({
                 width: null != (n = null == (e = L.current) ? void 0 : e.clientWidth) ? n : 0,
                 height: null != (r = null == (t = L.current) ? void 0 : t.clientHeight) ? r : 0,
             });
@@ -81,16 +81,16 @@ function j(e) {
                 }
             );
         }, [t.applicationId, l]);
-    let U = D.width / Math.max(D.height, 1) < C.I0,
+    let U = R.width / Math.max(R.height, 1) < C.I0,
         G = 0,
         B = 0,
         H = (0, p.Z)(null == n ? void 0 : n.id);
     if (!H) {
-        let e = D.width,
-            t = D.height;
+        let e = R.width,
+            t = R.height;
         U
-            ? ((t = D.width / C.I0) > D.height && (e = (t = D.height) * C.I0), (B = (D.height - t) / 2))
-            : ((e = Math.min(D.height * C.I0)) > D.width && (t = (e = D.width) / C.I0), (G = (D.width - e) / 2));
+            ? ((t = R.width / C.I0) > R.height && (e = (t = R.height) * C.I0), (B = (R.height - t) / 2))
+            : ((e = Math.min(R.height * C.I0)) > R.width && (t = (e = R.width) / C.I0), (G = (R.width - e) / 2));
     }
     let V = C.MI.NO_CHAT;
     if (null == n) return null;

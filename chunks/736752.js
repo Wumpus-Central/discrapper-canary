@@ -12,15 +12,15 @@ var r = n(951288),
     u = n(816814),
     d = n(809206),
     f = n(497321),
-    _ = n(279837),
-    p = n(952306),
-    h = n(690221),
-    m = n(332473),
-    g = n(303172),
-    E = n(518560),
-    b = n(921801),
-    y = n(577275),
-    O = n(484459),
+    _ = n(952306),
+    p = n(690221),
+    h = n(332473),
+    m = n(303172),
+    g = n(518560),
+    E = n(921801),
+    b = n(577275),
+    y = n(484459),
+    O = n(355497),
     v = n(430824),
     I = n(325067),
     T = n(246946),
@@ -30,8 +30,8 @@ var r = n(951288),
     N = n(706454),
     R = n(210887),
     P = n(418632),
-    D = n(10298),
-    w = n(526156),
+    w = n(10298),
+    D = n(526156),
     L = n(730820),
     x = n(888256),
     M = n(2719),
@@ -100,7 +100,7 @@ var K = (function (e) {
 class z extends i.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
-        (0, O.Z)(e.id, e.getAvatarURL(void 0, 80));
+        (0, y.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
         u.Z.clearBackupCodes(), (0, d.Zy)();
@@ -118,7 +118,7 @@ class z extends i.PureComponent {
                         variant: "secondary",
                         size: "sm",
                         text: B.intl.string(B.t["7psymi"]),
-                        onClick: () => p.Z.openClaimAccountModal(),
+                        onClick: () => _.Z.openClaimAccountModal(),
                     }),
                 ],
             });
@@ -170,9 +170,9 @@ class z extends i.PureComponent {
                       B.intl.format(B.t.pdYZyg, {}),
                       " ",
                       "",
-                      (0, r.jsx)(h.Z, {
+                      (0, r.jsx)(p.Z, {
                           className: Z.noticeTextButton,
-                          onClick: () => (0, g.Z)(G.Kq.USER_SETTINGS),
+                          onClick: () => (0, m.Z)(G.Kq.USER_SETTINGS),
                           children: B.intl.string(B.t.LhlgY9),
                       }),
                   ],
@@ -197,7 +197,7 @@ class z extends i.PureComponent {
                           children: B.intl.string(B.t.FsmBy4),
                       })
                     : null,
-                (0, r.jsx)(b.F, {
+                (0, r.jsx)(E.F, {
                     setting: j.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, r.jsx)(c.Button, {
                         variant: "primary",
@@ -206,7 +206,7 @@ class z extends i.PureComponent {
                         onClick: () => (0, c.h7j)((e) => (0, r.jsx)(k.default, W(H({}, e), { onSuccess: e.onClose }))),
                     }),
                 }),
-                (0, r.jsx)(b.F, {
+                (0, r.jsx)(E.F, {
                     setting: j.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, r.jsx)(L.Z, { backupCodes: e }),
                 }),
@@ -305,15 +305,15 @@ class z extends i.PureComponent {
         return (0, r.jsxs)(c.l09, {
             children: [
                 this.renderConfirmModals(),
-                (0, r.jsx)(b.F, {
+                (0, r.jsx)(E.F, {
                     setting: j.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(),
                 }),
-                (0, r.jsx)(b.F, {
+                (0, r.jsx)(E.F, {
                     setting: j.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings(),
                 }),
-                (0, r.jsx)(b.F, {
+                (0, r.jsx)(E.F, {
                     setting: j.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings(),
                 }),
@@ -322,9 +322,9 @@ class z extends i.PureComponent {
     }
     renderUnhidden() {
         let { subsection: e } = this.props;
-        return (0, r.jsx)(D.N, {
+        return (0, r.jsx)(w.N, {
             header: B.intl.string(B.t["JAIM/m"]),
-            children: (0, r.jsx)(w.Z, {
+            children: (0, r.jsx)(D.Z, {
                 parentSetting: j.s6.ACCOUNT,
                 settingsSection: U.oAB.ACCOUNT,
                 panelClassName: Z.tabPanel,
@@ -342,7 +342,7 @@ class z extends i.PureComponent {
                     },
                     {
                         title: B.intl.string(B.t["Vov/9o"]),
-                        component: E.Z,
+                        component: g.Z,
                         setting: j.s6.PRIVACY_AND_SAFETY_STANDING,
                     },
                 ],
@@ -374,7 +374,7 @@ class z extends i.PureComponent {
               : void (n.isClaimed()
                     ? (0, c.h7j)((e) =>
                           (0, r.jsx)(
-                              _.Z,
+                              O.Z,
                               W(H({}, e), {
                                   handleSubmit: (e) => this.handleSubmitDisableAccount(e, t),
                                   title: t ? B.intl.string(B.t["8lQ2rR"]) : B.intl.string(B.t.jf5GGb),
@@ -404,10 +404,10 @@ let q = () => {
         t = (0, s.e7)([I.Z], () => I.Z.getBackupCodes()),
         n = (0, s.e7)([T.Z], () => T.Z.hidePersonalInformation),
         i = (0, s.e7)([R.Z], () => R.Z.theme),
-        a = (0, m.b)(),
+        a = (0, h.b)(),
         l = (0, s.e7)([N.default], () => N.default.locale),
         c = (0, s.e7)([S.Z], () => S.Z.getSubsection()),
-        { teams: u, loading: d } = (0, y.Z)({ refreshOnDepChange: !0 });
+        { teams: u, loading: d } = (0, b.Z)({ refreshOnDepChange: !0 });
     return (0, r.jsx)(z, {
         theme: i,
         currentUser: e,

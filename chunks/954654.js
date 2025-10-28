@@ -44,7 +44,7 @@ function P(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function D(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function L(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -93,41 +93,41 @@ function x(e) {
 function M(e, t) {
     switch (e.type) {
         case s.re.ACTION_ROW:
-            return (0, r.jsx)(S.Z, L(D({}, e), { renderComponents: x }), t);
+            return (0, r.jsx)(S.Z, L(w({}, e), { renderComponents: x }), t);
         case s.re.BUTTON:
-            return (0, r.jsx)(d.Z, D({}, e), t);
+            return (0, r.jsx)(d.Z, w({}, e), t);
         case s.re.STRING_SELECT:
-            return (0, r.jsx)(h.Z, D({}, e), t);
+            return (0, r.jsx)(h.Z, w({}, e), t);
         case s.re.CHANNEL_SELECT:
-            return (0, r.jsx)(f.Z, D({}, e), t);
+            return (0, r.jsx)(f.Z, w({}, e), t);
         case s.re.USER_SELECT:
         case s.re.ROLE_SELECT:
         case s.re.MENTIONABLE_SELECT:
-            return (0, r.jsx)(p.Z, D({}, e), t);
+            return (0, r.jsx)(p.Z, w({}, e), t);
         case s.re.TEXT_INPUT:
-            return (0, r.jsx)(m.Z, D({}, e), t);
+            return (0, r.jsx)(m.Z, w({}, e), t);
         case s.re.SECTION:
-            return (0, r.jsx)(N.Z, L(D({}, e), { renderComponents: x }), t);
+            return (0, r.jsx)(N.Z, L(w({}, e), { renderComponents: x }), t);
         case s.re.TEXT_DISPLAY:
-            return (0, r.jsx)(O.Z, D({}, e), t);
+            return (0, r.jsx)(O.Z, w({}, e), t);
         case s.re.MEDIA_GALLERY:
-            return (0, r.jsx)(b.Z, D({}, e), t);
+            return (0, r.jsx)(b.Z, w({}, e), t);
         case s.re.THUMBNAIL:
-            return (0, r.jsx)(v.Z, D({}, e), t);
+            return (0, r.jsx)(v.Z, w({}, e), t);
         case s.re.FILE:
-            return (0, r.jsx)(E.Z, D({}, e), t);
+            return (0, r.jsx)(E.Z, w({}, e), t);
         case s.re.SEPARATOR:
-            return (0, r.jsx)(y.Z, D({}, e), t);
+            return (0, r.jsx)(y.Z, w({}, e), t);
         case s.re.CONTENT_INVENTORY_ENTRY:
-            return (0, r.jsx)(T.Z, D({}, e), t);
+            return (0, r.jsx)(T.Z, w({}, e), t);
         case s.re.CONTAINER:
-            return (0, r.jsx)(A.Z, L(D({}, e), { renderComponents: x }), t);
+            return (0, r.jsx)(A.Z, L(w({}, e), { renderComponents: x }), t);
         case s.re.LABEL:
-            return (0, r.jsx)(C.Z, L(D({}, e), { renderComponent: M }), t);
+            return (0, r.jsx)(C.Z, L(w({}, e), { renderComponent: M }), t);
         case s.re.FILE_UPLOAD:
-            return (0, r.jsx)(_.Z, D({}, e), t);
+            return (0, r.jsx)(_.Z, w({}, e), t);
         case s.re.CHECKPOINT_CARD:
-            return (0, r.jsx)(g.Z, D({}, e), t);
+            return (0, r.jsx)(g.Z, w({}, e), t);
         default:
             return (0, r.jsx)(I.Z, {}, t);
     }

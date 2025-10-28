@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685), n(642613);
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(442837),
     s = n(481060),
     c = n(665149),
@@ -15,12 +15,12 @@ var a = n(951288),
 function f(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function g(e) {
+function b(e) {
     let { store: t, dataGetter: n } = e,
-        [i, l] = r.useState(n(t));
+        [l, i] = r.useState(n(t));
     return (
         r.useEffect(() => {
-            let e = () => l(n(t));
+            let e = () => i(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -31,11 +31,11 @@ function g(e) {
         }, [t, n]),
         (0, a.jsx)(s.zJl, {
             className: x.inspectorContainer,
-            children: (0, a.jsx)(d.Z, { data: i }),
+            children: (0, a.jsx)(d.Z, { data: l }),
         })
     );
 }
-let b = [
+let g = [
         {
             key: "name",
             cellClassName: x.__invalid_eventColumn,
@@ -61,7 +61,7 @@ let b = [
                               " method.",
                           ],
                       })
-                    : (0, a.jsx)(g, {
+                    : (0, a.jsx)(b, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars(),
                       });
@@ -73,7 +73,7 @@ let b = [
             group: p.v0.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, a.jsx)(g, {
+                return (0, a.jsx)(b, {
                     store: t,
                     dataGetter: (e) => e,
                 });
@@ -82,7 +82,7 @@ let b = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: i } = (0, p.ZP)({ tabs: v }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, p.ZP)({ tabs: v }, []);
     return (0, a.jsxs)(u.Z, {
         className: x.subPanel,
         minHeight: 100,
@@ -90,7 +90,7 @@ function j(e) {
         children: [
             (0, a.jsx)(r, {}),
             (0, a.jsxs)(c.ZP, {
-                className: l()(h.headerBar, x.subPanelHeaderBar),
+                className: i()(h.headerBar, x.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
                         icon: s.lO_,
@@ -99,24 +99,24 @@ function j(e) {
                     (0, a.jsx)(c.ZP.Title, { children: t.getName() }),
                 ],
             }),
-            i({ store: t }),
+            l({ store: t }),
         ],
     });
 }
 function _() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
-        i = o.yh.getAll(),
+        l = o.yh.getAll(),
         c = r
             .useMemo(
                 () =>
-                    i
+                    l
                         .map((e) => ({
                             key: e._dispatchToken,
                             store: e,
                         }))
                         .sort(f),
-                [i],
+                [l],
             )
             .filter((e) =>
                 (function (e, t) {
@@ -125,10 +125,10 @@ function _() {
                 })(e, t),
             ),
         [d, u] = r.useState(),
-        p = i.find((e) => e._dispatchToken === d);
+        p = l.find((e) => e._dispatchToken === d);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(h.panel, x.panel),
+        className: i()(h.panel, x.panel),
         children: [
             (0, a.jsx)("div", {
                 className: x.toolbar,
@@ -142,7 +142,7 @@ function _() {
                 }),
             }),
             (0, a.jsx)(m.Z, {
-                columns: b,
+                columns: g,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key),

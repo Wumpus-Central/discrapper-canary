@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r,
     i = n(392711),
     a = n(442837),
@@ -105,7 +105,7 @@ let u = {},
     P = (e) => {
         (u = {}), (_ = !1), (p = 0), (h = 0);
     };
-class D extends (r = a.ZP.Store) {
+class w extends (r = a.ZP.Store) {
     getAllProfileEffects() {
         return Object.values(u);
     }
@@ -119,8 +119,8 @@ class D extends (r = a.ZP.Store) {
         return Date.now() >= p;
     }
 }
-c(D, "displayName", "ProfileEffectStore");
-let w = new D(o.Z, {
+c(w, "displayName", "ProfileEffectStore");
+let D = new w(o.Z, {
     PROFILE_EFFECTS_FETCH_ALL: O,
     PROFILE_EFFECTS_FETCH_ALL_SUCCESS: v,
     PROFILE_EFFECTS_FETCH_ALL_FAILURE: I,

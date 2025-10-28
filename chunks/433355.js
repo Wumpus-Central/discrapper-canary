@@ -79,8 +79,8 @@ let S = "message_requests",
     N = !0,
     R = {},
     P = {},
-    D = !1,
-    w = null;
+    w = !1,
+    D = null;
 function L(e) {
     if (null == e) return null;
     if ((0, b.AB)(e)) {
@@ -94,12 +94,12 @@ function x(e) {
 }
 function M(e) {
     let t = !1;
-    D && ((D = !1), (t = !0));
+    w && ((w = !1), (t = !0));
     let n = L(h.Z.getChannelId());
     return null != n && n in R && (delete R[n], (t = !0)), t && e ? e : !e;
 }
 function k() {
-    D && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), C && (C = M(C)), (A = M(A));
+    w && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), C && (C = M(C)), (A = M(A));
 }
 function j() {
     A && (A = M(A)), (C = M(C));
@@ -109,7 +109,7 @@ function U() {
 }
 function G(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
-    D = !1;
+    w = !1;
     let a = L(r);
     return (
         null != a &&
@@ -128,7 +128,7 @@ function B(e) {
 }
 function Z(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
-    D = !1;
+    w = !1;
     let a = L(n);
     if (null == a) return !1;
     let o = {
@@ -140,7 +140,7 @@ function Z(e) {
 }
 function F(e) {
     let { parentChannelId: t, parentMessageId: n, location: r } = e;
-    D = !1;
+    w = !1;
     let i = L(t);
     null != i &&
         (R[i] = {
@@ -196,15 +196,15 @@ function K(e) {
     null != n && delete R[n];
 }
 function z() {
-    let e = null != w && l.Z.hasSearchState(w);
-    if (e === D) return !1;
-    D = e;
+    let e = null != D && l.Z.hasSearchState(D);
+    if (e === w) return !1;
+    w = e;
 }
 function q() {
     i.tq && A && ((A = !1), (C = !1));
 }
 function X(e) {
-    return (w = e.searchContextId), z();
+    return (D = e.searchContextId), z();
 }
 class Q extends (r = a.ZP.PersistedStore) {
     initialize(e) {
@@ -228,7 +228,7 @@ class Q extends (r = a.ZP.PersistedStore) {
         };
     }
     getSection(e, t) {
-        if (D) return E.ULH.SEARCH;
+        if (w) return E.ULH.SEARCH;
         let n = L(e);
         return null != n && null != R[n]
             ? E.ULH.SIDEBAR_CHAT
@@ -249,7 +249,7 @@ class Q extends (r = a.ZP.PersistedStore) {
     }
     getCurrentSidebarChannelId(e) {
         let t = L(e);
-        if (null == t || D) return null;
+        if (null == t || w) return null;
         let n = R[t];
         return null == n
             ? null
@@ -260,7 +260,7 @@ class Q extends (r = a.ZP.PersistedStore) {
     getCurrentSidebarMessageId(e) {
         var t;
         let n = L(e);
-        if (null == n || D) return null;
+        if (null == n || w) return null;
         let r = R[n];
         return null == r
             ? null

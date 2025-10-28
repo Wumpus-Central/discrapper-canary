@@ -80,8 +80,8 @@ function I(e) {
             editedWebhook: l,
             channelOptions: h,
             isExpanded: I,
-            isNew: w,
-            errors: P,
+            isNew: P,
+            errors: w,
             onToggleExpand: T,
         } = e,
         [Z, k] = r.useState(!1),
@@ -165,11 +165,11 @@ function I(e) {
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != P.avatar && "" !== P.avatar
+                                        null != w.avatar && "" !== w.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: "text-danger",
                                                   variant: "text-sm/normal",
-                                                  children: P.avatar,
+                                                  children: w.avatar,
                                               })
                                             : null,
                                     ],
@@ -190,7 +190,7 @@ function I(e) {
                                                         u.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: P.name,
+                                                    error: w.name,
                                                 }),
                                             }),
                                             (0, i.jsx)(m.Z.Child, {
@@ -306,7 +306,7 @@ function I(e) {
         (0, i.jsx)(c.Zbd, {
             editable: !0,
             id: t,
-            className: a()(C.card, w ? C.pulse : null),
+            className: a()(C.card, P ? C.pulse : null),
             children: (0, i.jsxs)(m.Z, {
                 direction: m.Z.Direction.VERTICAL,
                 children: [

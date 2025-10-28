@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var a = n(951288),
     r = n(647438),
-    i = n(13941),
-    l = n(481060),
+    l = n(13941),
+    i = n(481060),
     o = n(313201),
     s = n(921944),
     c = n(388032),
@@ -11,7 +11,7 @@ function u(e) {
     let { markAsDismissed: t, heading: n, subheading: u, children: m, height: p } = e,
         h = (0, o.Dt)(),
         x = r.useRef(null),
-        f = (0, l.q_F)({
+        f = (0, i.q_F)({
             from: {
                 transform: "translate3d(-110%, 0, 0)",
                 height: p,
@@ -29,7 +29,7 @@ function u(e) {
                 null != x.current && x.current.focus();
             },
         });
-    return (0, a.jsx)(i.animated.div, {
+    return (0, a.jsx)(l.animated.div, {
         className: d.container,
         style: f,
         children: (0, a.jsxs)("aside", {
@@ -39,16 +39,16 @@ function u(e) {
                 (0, a.jsxs)("div", {
                     className: d.headerRow,
                     children: [
-                        (0, a.jsx)(l.P3F, {
+                        (0, a.jsx)(i.P3F, {
                             innerRef: x,
                             "aria-label": c.intl.string(c.t.WAI6xu),
                             className: d.closeButton,
                             onClick: () => {
                                 t(s.L.USER_DISMISS);
                             },
-                            children: (0, a.jsx)(l.Dio, { color: "currentColor" }),
+                            children: (0, a.jsx)(i.Dio, { color: "currentColor" }),
                         }),
-                        (0, a.jsx)(l.Heading, {
+                        (0, a.jsx)(i.Heading, {
                             id: h,
                             variant: "heading-lg/semibold",
                             children: n,
@@ -56,12 +56,12 @@ function u(e) {
                     ],
                 }),
                 null != u &&
-                    (0, a.jsx)(l.Text, {
+                    (0, a.jsx)(i.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
                         children: u,
                     }),
-                (0, a.jsx)(l.Ttm, {
+                (0, a.jsx)(i.Ttm, {
                     className: d.scroller,
                     fade: !0,
                     children: (0, a.jsx)("div", {

@@ -1,6 +1,6 @@
 n.d(t, {
-    $d: () => w,
-    BQ: () => D,
+    $d: () => D,
+    BQ: () => w,
     Cb: () => F,
     Hu: () => V,
     L1: () => z,
@@ -122,26 +122,26 @@ function R(e, t) {
     return i;
 }
 let P = { id: O.bi.BUILT_IN };
-function D(e) {
+function w(e) {
     return e.id !== O.bi.BUILT_IN;
 }
-function w(e) {
-    return D(e) ? e.name : I.intl.string(I.t.UB2gG2);
+function D(e) {
+    return w(e) ? e.name : I.intl.string(I.t.UB2gG2);
 }
 function L(e) {
-    return D(e) ? e.description : I.intl.string(I.t.X9fusn);
+    return w(e) ? e.description : I.intl.string(I.t.X9fusn);
 }
 function x(e) {
     var t;
-    return D(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
+    return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
 }
 function M(e) {
     var t;
-    return D(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
+    return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
 function k(e) {
     var t;
-    return D(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
+    return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
 function j(e) {
     let t = G(e),
@@ -169,7 +169,7 @@ function U(e) {
     }
 }
 function G(e) {
-    return D(e) && x(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return w(e) && x(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function B(e) {
     let {
@@ -218,7 +218,7 @@ function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n } = t,
         r = N(t, ["fakeAppIconURL"]);
-    return D(e)
+    return w(e)
         ? {
               iconURL: h.ZP.getApplicationIconURL(
                   C(S({}, r), {
@@ -236,7 +236,7 @@ function Z(e) {
           };
 }
 function F(e) {
-    return !!D(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
+    return !!w(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
 }
 function V(e) {
     let t = G(e);

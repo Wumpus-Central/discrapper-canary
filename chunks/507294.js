@@ -77,8 +77,8 @@ let x = function (e) {
         A = (0, o.e7)([O.Z], () => O.Z.getSortedRoles(t)),
         Z = (0, o.e7)([b.default], () => b.default.getId()),
         w = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, Z)),
-        [L, D] = i.useState([]),
-        R = (0, f.ZP)();
+        [L, R] = i.useState([]),
+        D = (0, f.ZP)();
     if (
         (i.useEffect(() => {
             0 !== L.length &&
@@ -96,7 +96,7 @@ let x = function (e) {
                 );
         }, [t, L]),
         i.useEffect(() => {
-            p.Z.getGuildRoleConnectionsConfigurations(t).then((e) => D(e));
+            p.Z.getGuildRoleConnectionsConfigurations(t).then((e) => R(e));
         }, [t]),
         null == w)
     )
@@ -134,7 +134,7 @@ let x = function (e) {
                             } else {
                                 let t = h.Z.get(e.connection_type);
                                 s = (0, r.jsx)("img", {
-                                    src: (0, c.ap)(R) ? t.icon.lightSVG : t.icon.darkSVG,
+                                    src: (0, c.ap)(D) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
                                     className: N.avatar,
                                 });

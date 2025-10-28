@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var i = n(647438),
-    l = n(252618),
-    s = n(358085),
+n.d(t, { Z: () => d });
+var l = n(647438),
+    a = n(252618),
+    i = n(358085),
     r = n(388032);
-function a() {
+function d() {
     return (
-        i.useEffect(() => {
-            s.isPlatformEmbedded ||
-                (0, l.EM)({
+        l.useEffect(() => {
+            i.isPlatformEmbedded ||
+                (0, a.EM)({
                     messages: [r.intl.string(r.t.KIX3cl), r.intl.string(r.t["UbO+8i"]), r.intl.string(r.t.MbySu9)],
                     interval: 600,
                     count: 20,

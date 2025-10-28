@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(900211),
     m = n(740492),
     b = n(871499),
-    y = n(402113),
-    _ = n(800965),
-    O = n(592125),
-    j = n(271383),
-    x = n(944486),
-    v = n(594174),
+    _ = n(402113),
+    y = n(800965),
+    x = n(592125),
+    v = n(271383),
+    j = n(944486),
+    O = n(594174),
     C = n(585483),
     I = n(51144),
     S = n(566620),
@@ -76,7 +76,7 @@ function Y(e) {
         X = (0, w.Z)(),
         J = (0, s.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(K), [K]),
         $ = (0, N.p)(K),
-        ee = (0, s.e7)([O.Z], () => O.Z.getChannel($)),
+        ee = (0, s.e7)([x.Z], () => x.Z.getChannel($)),
         et = (0, P.gb)(J),
         en = (0, P.uF)(et),
         er = i.useCallback(() => {
@@ -117,25 +117,25 @@ function Y(e) {
             : ((e = Math.min(eu.height * G.I0)) > eu.width && (t = (e = eu.width) / G.I0), (ef = (eu.width - e) / 2));
     }
     let eb = en.get(null != (Y = null == X ? void 0 : X.id) ? Y : ""),
-        ey = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
-        e_ = (0, s.Wu)([j.ZP], () => {
+        e_ = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
+        ey = (0, s.Wu)([v.ZP], () => {
             var e;
             return null == ee
                 ? []
                 : Array.from(null != (e = null == eb ? void 0 : eb.embeddedActivity.userIds) ? e : []).map((e) =>
-                      j.ZP.getMember(ee.guild_id, e),
+                      v.ZP.getMember(ee.guild_id, e),
                   );
         }, [eb, ee]),
-        eO = i.useMemo(() => {
+        ex = i.useMemo(() => {
             let e = new Map();
             return (
-                e_.forEach((t) => {
+                ey.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [e_]),
-        ej = (function (e, t, n) {
+        }, [ey]),
+        ev = (function (e, t, n) {
             let r = (0, p.Z)(e),
                 l = e !== r,
                 [a, s] = i.useState(!1);
@@ -178,19 +178,19 @@ function Y(e) {
                     : l;
             }, [o, e, n, t]);
         })(ea, es, q),
-        ex = (0, k.y)(),
-        { data: ev } = (0, R.K)(Z.B);
+        ej = (0, k.y)(),
+        { data: eO } = (0, R.K)(Z.B);
     if (null == X) return null;
-    let eC = null == ev ? void 0 : ev.isFortniteActivity(X.id),
+    let eC = null == eO ? void 0 : eO.isFortniteActivity(X.id),
         eI = [];
     null != eb &&
         (eI = Array.from(eb.embeddedActivity.userIds)
-            .map((e) => v.default.getUser(e))
+            .map((e) => O.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
     let eS = (e) => {
         var t;
         if (null == e || void 0 === e || e === D.ag) return null;
-        let n = eO.get(e.id),
+        let n = ex.get(e.id),
             i = null != (t = null == n ? void 0 : n.nick) ? t : I.ZP.getName(e);
         return (0, r.jsx)(
             c.u,
@@ -217,7 +217,7 @@ function Y(e) {
             (0, r.jsxs)("div", {
                 className: a()(B.wrapper, W[el], e),
                 ref: ei,
-                style: ej,
+                style: ev,
                 children: [
                     null == Q ? void 0 : Q(),
                     (0, r.jsxs)("div", {
@@ -248,7 +248,7 @@ function Y(e) {
                                     embedId: (0, M.Z)(K.id, X.id),
                                 }),
                             }),
-                            null != ey
+                            null != e_
                                 ? (0, r.jsxs)("div", {
                                       className: B.footer,
                                       children: [
@@ -265,7 +265,7 @@ function Y(e) {
                                                   (0, r.jsxs)("div", {
                                                       className: B.buttonSection,
                                                       children: [
-                                                          (0, r.jsx)(U.Z, { channelId: ey }),
+                                                          (0, r.jsx)(U.Z, { channelId: e_ }),
                                                           (0, r.jsx)(b.d, {
                                                               isTrayButton: !0,
                                                               label: F.intl.string(F.t.brPQ5U),
@@ -277,7 +277,7 @@ function Y(e) {
                                                   }),
                                                   (0, r.jsx)("div", {
                                                       className: B.leaveButtonContainer,
-                                                      children: (0, r.jsx)(y.Z, {
+                                                      children: (0, r.jsx)(_.Z, {
                                                           applicationId: X.id,
                                                           location: K,
                                                           centerButton: !0,
@@ -305,8 +305,8 @@ function Y(e) {
                                                       variant: "color-mix",
                                                   }),
                                               }),
-                                          ex
-                                              ? (0, r.jsx)(_.Z, {
+                                          ej
+                                              ? (0, r.jsx)(y.Z, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {
                                                         (0, f.yw)(H.rMx.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),

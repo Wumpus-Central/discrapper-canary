@@ -28,8 +28,8 @@ var i = n(512722),
     N = n(18438),
     R = n(778825),
     P = n(52597),
-    D = n(430131),
-    w = n(291334),
+    w = n(430131),
+    D = n(291334),
     L = n(474936),
     x = n(388032),
     M = n(737788);
@@ -96,7 +96,7 @@ function k(e) {
         className: M.sectionsContainer,
         children: [
             (0, r.jsx)(
-                D.Z,
+                w.Z,
                 {
                     errors: null != (i = null == K ? void 0 : K.nick) ? i : null == Q ? void 0 : Q.nick,
                     username: C.ZP.getName(G),
@@ -120,7 +120,7 @@ function k(e) {
                 },
                 "pronouns",
             ),
-            (0, r.jsxs)(w.Z, {
+            (0, r.jsxs)(D.Z, {
                 user: G,
                 showOverlay: !et,
                 children: [

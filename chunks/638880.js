@@ -36,10 +36,10 @@ async function O(e) {
         N = (0, h.Z)(),
         R = i.Z.getChannel(l),
         P = null == R ? void 0 : R.getGuildId(),
-        D = null == P || "" === P,
-        w = o.default.getCurrentUser();
-    if (null == w) return !1;
-    if (null == R || (D && !R.isPrivate()) || null == l) return Promise.resolve(!1);
+        w = null == P || "" === P,
+        D = o.default.getCurrentUser();
+    if (null == D) return !1;
+    if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
     let L = u.ZP.getCurrentEmbeddedActivity();
     if (
         ((null == L ? void 0 : L.applicationId) != null &&
@@ -58,7 +58,7 @@ async function O(e) {
             channel: R,
             currentEmbeddedApplication: t,
             embeddedActivitiesManager: N,
-            user: w,
+            user: D,
         }))
     )
         return !1;

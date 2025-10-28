@@ -2,9 +2,9 @@ n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(442837),
-    a = n(607070),
+    o = n(607070),
     s = n(594174),
-    o = n(960048),
+    a = n(960048),
     c = n(597688),
     u = n(1870),
     d = n(884697),
@@ -22,13 +22,13 @@ function E(e) {
             tab: t,
             sortedCategories: n,
             transitionToTab: s,
-            transitionState: o,
+            transitionState: a,
             updateAnalyticsState: c,
             refreshCategories: u,
         } = e,
         h = x();
     O(h);
-    let E = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+    let E = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         [S, y] = l.useState(void 0),
         [j, k] = l.useState(!0),
         T = l.useCallback(
@@ -54,7 +54,7 @@ function E(e) {
             ? (0, r.jsx)(_.Z, {
                   handleTransition: T,
                   tab: t,
-                  transitionState: o,
+                  transitionState: a,
               })
             : (0, r.jsx)(f.Z, {
                   tab: t,
@@ -82,7 +82,7 @@ let x = () =>
         l.useEffect(() => {
             var l, i;
             null != e &&
-                o.Z.captureMessage(e, {
+                a.Z.captureMessage(e, {
                     tags: {
                         isStaff:
                             null != (i = null == t || null == (l = t.isStaff()) ? void 0 : l.toString())

@@ -4,10 +4,10 @@ var i = n(951288),
     u = n(481060),
     r = n(893776),
     s = n(509613),
-    a = n(313789),
-    o = n(342386),
+    o = n(313789),
+    a = n(342386),
     c = n(388032);
-let E = (0, s.m7)(a.n.LOGOUT_SIDEBAR_ITEM, {
+let E = (0, s.m7)(o.n.LOGOUT_SIDEBAR_ITEM, {
     useTitle: () => c.intl.string(c.t["2jxGer"]),
     icon: l.PBZ,
     onClick: () => {
@@ -46,7 +46,7 @@ let E = (0, s.m7)(a.n.LOGOUT_SIDEBAR_ITEM, {
                         cancelText: c.intl.string(c.t["ETE/oC"]),
                         onCancel: t.onClose,
                         onConfirm: () => {
-                            (0, o.default)(), r.Z.logout("settings");
+                            (0, a.default)(), r.Z.logout("settings");
                         },
                     },
                     t,

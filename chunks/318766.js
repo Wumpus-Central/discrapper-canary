@@ -117,19 +117,19 @@ let P = function (e) {
             focusProps: S,
             ref: P,
         } = e,
-        [D, w] = i.useState(!1),
+        [w, D] = i.useState(!1),
         [L, x] = i.useState(50),
-        M = D || y,
+        M = w || y,
         k = (0, h.l)(b, "emojiButton", M ? "Hovered" : "Normal"),
         j = R(L),
         U = i.useCallback(() => {
             if (M) return;
             let e = Math.floor(Math.random() * A);
-            w(!0), x(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
-        }, [M, w, x]),
+            D(!0), x(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
+        }, [M, D, x]),
         G = i.useCallback(() => {
-            w(!1);
-        }, [w]),
+            D(!1);
+        }, [D]),
         B = i.useCallback(() => (0, _.x)(g.qR.EmojiButtonFocused), []),
         Z = (0, p.B4)(),
         [F, V] = (0, f.US)(Z ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),

@@ -81,8 +81,8 @@ function p(e) {
             renderHeaderAccessories: N,
             rowHeight: R,
             sectionHeaderHeight: P,
-            sectionFooterHeight: D,
-            itemNodeWidth: w,
+            sectionFooterHeight: w,
+            itemNodeWidth: D,
             listPaddingRight: L,
             itemNodeMargin: x,
             listPadding: M,
@@ -113,7 +113,7 @@ function p(e) {
             collapsedCategories: n,
             gridWidth: W,
             listPaddingRight: L,
-            itemNodeWidth: w,
+            itemNodeWidth: D,
             itemNodeMargin: x,
         }),
         {
@@ -230,7 +230,7 @@ function p(e) {
                                                     rowCountBySection: q,
                                                     rowHeight: R,
                                                     sectionHeaderHeight: P,
-                                                    sectionFooterHeight: D,
+                                                    sectionFooterHeight: w,
                                                     renderUpsell: G,
                                                     onScroll: m,
                                                 })

@@ -2,7 +2,7 @@ n.d(t, {
     fz: () => P,
     ge: () => M,
     r5: () => k,
-    rk: () => D,
+    rk: () => w,
     wV: () => x,
 }),
     n(388685),
@@ -143,7 +143,7 @@ function P(e) {
         });
     return R.set(r, l), l;
 }
-async function D(e) {
+async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     await k();
     let n = performance.now();
@@ -166,7 +166,7 @@ async function D(e) {
             });
     }
 }
-async function w(e) {
+async function D(e) {
     if (
         null == e.getCatalogNonce ||
         null == e.getModuleVersion ||
@@ -209,7 +209,7 @@ async function x() {
         try {
             N = !0;
             let e = p.ZP.getVoiceFilters(),
-                t = await w(e),
+                t = await D(e),
                 n = null == m.Z.getCatalogLastFetchTime() ? await L(t) : void 0;
             await s.Z.dispatch({
                 type: "VOICE_FILTER_CATALOG_FETCH_SUCCESS",

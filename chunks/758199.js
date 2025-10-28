@@ -73,10 +73,10 @@ function O(e) {
     let { primaryColor: C, secondaryColor: N } = (0, f.Z)(null != v ? v : h),
         R = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")"),
         P = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
-        D = i.useRef(!1),
-        w = (0, l.O)(
+        w = i.useRef(!1),
+        D = (0, l.O)(
             (e) => {
-                if (!1 === D.current && e) {
+                if (!1 === w.current && e) {
                     var t;
                     null == T || null == (t = T.onView) || t.call(T),
                         (0, p.GF)({
@@ -88,7 +88,7 @@ function O(e) {
                             channelId: T.channelId,
                             messageId: T.messageId,
                         }),
-                        (D.current = !0);
+                        (w.current = !0);
                 }
             },
             void 0,
@@ -116,7 +116,7 @@ function O(e) {
                 };
         }, [A, T]);
     return (0, r.jsxs)("div", {
-        ref: w,
+        ref: D,
         className: g.embed,
         children: [
             M &&

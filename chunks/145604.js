@@ -31,8 +31,8 @@ var r = n(951288),
     Z = n(427679),
     w = n(695346),
     L = n(592125),
-    D = n(77498),
-    R = n(271383),
+    R = n(77498),
+    D = n(271383),
     M = n(430824),
     k = n(131951),
     U = n(375954),
@@ -97,7 +97,7 @@ async function et(e) {
         P = (0, j.NW)("ChatAutoAnalytics", !1),
         Z = d.enabledLegacy || (P && d.enabledOOP),
         L = T.v.legacyEnabled || (P && T.v.oopEnabled),
-        D = d.source;
+        R = d.source;
     K.default.track(X.rMx.LAUNCH_GAME, {
         game: I,
         game_id: v,
@@ -109,7 +109,7 @@ async function et(e) {
         distributor: C,
         is_overlay_enabled: L,
         is_overlay_game_enabled: Z,
-        is_overlay_game_source: D,
+        is_overlay_game_source: R,
         fullscreen_type: null != b ? c.Jx[b] : c.Jx.UNKNOWN.toString(),
         hardware_display_count:
             null !=
@@ -226,7 +226,7 @@ class en extends i.PureComponent {
             x = null != e.runningGame && null != I && e.runningGame.isLauncher !== I.isLauncher;
         if (e.runningGame !== I && null != I && !I.isLauncher && (!j || x)) {
             let { gameId: e } = (0, E.G8)(I),
-                a = void 0 !== e ? D.Z.getDetectableGame(e) : null,
+                a = void 0 !== e ? R.Z.getDetectableGame(e) : null,
                 p = O.ZP.getOverrideForGame(I),
                 f = M.Z.getGuildIds(),
                 h = w.SE.getSetting(),
@@ -257,7 +257,7 @@ class en extends i.PureComponent {
                         voiceChannelGuildId: c,
                     });
                 }, 10000),
-                null != I.name && null != v && D.Z.shouldReport(I.name))
+                null != I.name && null != v && R.Z.shouldReport(I.name))
             ) {
                 let e = I.name;
                 o.Z.identifyGame(v, e)
@@ -343,12 +343,12 @@ function er() {
         c = (0, s.e7)([H.Z], () => H.Z.getGuildId(), []),
         u = (0, s.e7)([M.Z], () => M.Z.getGuild(c), [c]),
         g = (0, s.e7)([z.default], () => z.default.getCurrentUser(), []),
-        b = (0, s.e7)([R.ZP], () => {
+        b = (0, s.e7)([D.ZP], () => {
             var e, t;
             return (
                 null != g &&
                 null != c &&
-                null != (t = null == (e = R.ZP.getMember(c, g.id)) ? void 0 : e.isPending) &&
+                null != (t = null == (e = D.ZP.getMember(c, g.id)) ? void 0 : e.isPending) &&
                 t
             );
         }, [g, c]),
@@ -385,9 +385,9 @@ function er() {
             isTextInVoice: l,
             numMessageRequests: Z,
         },
-        D = i.useRef(w);
+        R = i.useRef(w);
     i.useEffect(() => {
-        D.current = w;
+        R.current = w;
     }, [w]);
     let {
         connected: U,
@@ -402,8 +402,8 @@ function er() {
             let e = (0, f.K)(L.Z.getChannel(J), !0);
             (0, p.yw)(X.rMx.CHANNEL_OPENED, ee({}, e, (0, p.$H)(J))),
                 (0, h.a)(X.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: J }),
-                D.current.isTextInVoice &&
-                    (0, p.yw)(X.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: D.current.isNSFWChannel });
+                R.current.isTextInVoice &&
+                    (0, p.yw)(X.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: R.current.isNSFWChannel });
         }
     }, [U, J]),
         i.useEffect(() => {
@@ -418,13 +418,13 @@ function er() {
                         Q
                             ? {
                                   is_pending: Q,
-                                  preview_enabled: D.current.hasPreviewEnabled,
+                                  preview_enabled: R.current.hasPreviewEnabled,
                               }
                             : {},
                     )),
                     (r = r =
                         {
-                            postable_channels: D.current.postableChannelCount,
+                            postable_channels: R.current.postableChannelCount,
                             premium_progress_bar_enabled:
                                 null !=
                                     (t =
@@ -459,7 +459,7 @@ function er() {
                 !et.current &&
                 ((et.current = !0),
                 K.default.track(X.rMx.MESSAGE_REQUESTS_INITIALIZED, {
-                    num_message_requests: D.current.numMessageRequests,
+                    num_message_requests: R.current.numMessageRequests,
                 }));
         }, [U, $, q]),
         (0, r.jsx)(en, ee({}, w))

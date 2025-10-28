@@ -65,13 +65,13 @@ function m(e) {
         b = i.useCallback(() => {
             null != l && o.Z.nsfwReturnToSafety(l.id);
         }, [l]),
-        y = i.useCallback(() => {
+        _ = i.useCallback(() => {
             null != l && o.Z.nsfwAgree(l.id);
         }, [l]),
-        _ = i.useCallback(() => {
+        y = i.useCallback(() => {
             c.Z.showAgeVerificationGetStartedModal({ entryPoint: d.cU.NSFW_GUILD });
         }, []),
-        O =
+        x =
             ((t = g({}, m)),
             (n = n =
                 {
@@ -99,11 +99,11 @@ function m(e) {
                 p.Z,
                 g(
                     {
-                        onAgree: _,
+                        onAgree: y,
                         onDisagree: b,
                         modalType: f,
                     },
-                    O,
+                    x,
                 ),
             );
         default:
@@ -111,11 +111,11 @@ function m(e) {
                 p.Z,
                 g(
                     {
-                        onAgree: y,
+                        onAgree: _,
                         onDisagree: b,
                         modalType: f,
                     },
-                    O,
+                    x,
                 ),
             );
     }

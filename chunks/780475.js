@@ -7,9 +7,9 @@ n.d(t, {
 var r = n(647438),
     l = n(442837),
     i = n(100527),
-    a = n(906732),
+    o = n(906732),
     s = n(626135),
-    o = n(74538),
+    a = n(74538),
     c = n(328347),
     u = n(215023),
     d = n(981631),
@@ -34,33 +34,33 @@ let p = (e) => {
                         return i.Z.COLLECTIBLES_SHOP;
                 }
             })(e),
-            { analyticsLocations: s, newestAnalyticsLocation: o } = (0, a.ZP)([...n, i.Z.COLLECTIBLES_SHOP, r]);
+            { analyticsLocations: s, newestAnalyticsLocation: a } = (0, o.ZP)([...n, i.Z.COLLECTIBLES_SHOP, r]);
         return {
             analyticsSource: t,
             analyticsLocations: s,
-            newestAnalyticsLocation: o,
+            newestAnalyticsLocation: a,
             currentTabLocation: r,
         };
     },
     f = (e, t, n, l, i) => {
-        let { analyticsLocations: a, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: g } = p(t);
+        let { analyticsLocations: o, analyticsSource: a, currentTabLocation: c, newestAnalyticsLocation: g } = p(t);
         r.useEffect(() => {
             if (l !== u.f7.VISIBLE || g !== c) return;
-            let r = t === u.AW.CATALOG ? i : o;
+            let r = t === u.AW.CATALOG ? i : a;
             s.default.track(d.rMx.COLLECTIBLES_SHOP_VIEWED, {
-                location_stack: a,
+                location_stack: o,
                 source: r,
                 page_session_id: e,
                 page_type: t === u.AW.CATALOG ? "full" : t,
                 category: t === u.AW.HOME ? void 0 : n,
             });
-        }, [a, e, t, n, c, l, i, o, g]);
+        }, [o, e, t, n, c, l, i, a, g]);
     },
     C = (e, t) => {
         let { analyticsLocations: n } = p(e);
         r.useEffect(() => {
             null == t ||
-                o.ZP.canUseCollectibles(t) ||
+                a.ZP.canUseCollectibles(t) ||
                 s.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: g.cd.COLLECTIBLES_SHOP,
                     location_stack: n,

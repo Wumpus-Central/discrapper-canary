@@ -51,7 +51,7 @@ let P = (0, s.Kb)([E.Z, b.Z, m.Z], {
             o()(null != e, "skuId is null"), await (0, u.km)(e);
         },
     }),
-    D = (0, s.Kb)([E.Z], {
+    w = (0, s.Kb)([E.Z], {
         getQueryId: A.McO.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
         get: (e) => {
             var t;
@@ -61,13 +61,13 @@ let P = (0, s.Kb)([E.Z, b.Z, m.Z], {
             o()(null != e && null != t, "appId is null"), await (0, u.oJ)(t);
         },
     });
-function w(e, t) {
+function D(e, t) {
     var n, r;
     let { data: i } = P(e),
         a = null == i ? void 0 : i.sku,
         o = null == i ? void 0 : i.subscriptionPlan,
         s = null == i ? void 0 : i.storeListing,
-        { data: l } = D(
+        { data: l } = w(
             e,
             null != (r = null == a || null == (n = a.application) ? void 0 : n.id)
                 ? r
@@ -125,14 +125,14 @@ function L(e) {
                     });
             });
         },
-        D = () => {
+        w = () => {
             P(),
                 y.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
                     area: "app_icon",
                 });
         },
-        w = () => {
+        D = () => {
             P(),
                 y.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                     application_id: t,
@@ -152,11 +152,11 @@ function L(e) {
             .concat(A.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, C.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: L,
         iconSrc: E,
-        onIconClick: D,
+        onIconClick: w,
         children: (0, r.jsx)("div", {
             className: R.openStoreButton,
             children: (0, r.jsx)(l.Button, {
-                onClick: w,
+                onClick: D,
                 text: N.intl.string(N.t.kRvlKJ),
             }),
         }),
@@ -165,19 +165,19 @@ function L(e) {
 function x(e) {
     var t, a;
     let { appId: o, skuId: c, message: u } = e,
-        { parentSku: f, sku: m, subscriptionPlan: g, storeListing: E } = w(c, o),
+        { parentSku: f, sku: m, subscriptionPlan: g, storeListing: E } = D(c, o),
         { data: b } = (0, d.IX)(null == m ? void 0 : m.applicationId),
         O = (0, s.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getBasicChannel(u.channel_id)) ? void 0 : e.guild_id;
         }, [u]),
         P = i.useMemo(() => (null != b ? (0, v.y)(b, 45) : void 0), [b]),
-        D = (0, T.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
+        w = (0, T.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
         { openModal: L, subscriptionPurchaseButtonState: x } = (0, p.Z)({
             skuId: c,
             initialSubscribeForGuild: O,
         });
-    if (!D || null == b || null == m) return null;
+    if (!w || null == b || null == m) return null;
     let k = m.type === A.epS.SUBSCRIPTION,
         j = !!k && (0, _.KW)(m.flags),
         U = () => {

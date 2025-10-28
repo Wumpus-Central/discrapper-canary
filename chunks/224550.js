@@ -40,8 +40,8 @@ let g = (e, t, n, r) => {
                 productLine: N,
                 proratedAmount: R,
                 basePrice: P,
-                currentSubscription: D,
-                skuId: w,
+                currentSubscription: w,
+                skuId: D,
                 applicationName: L,
             } = e,
             x = (0, i.e7)([o.Z], () => o.Z.inReverseTrial());
@@ -57,7 +57,7 @@ let g = (e, t, n, r) => {
         let k = (0, a.K)({
                 purchaseType: C || f.GZQ.SUBSCRIPTION,
                 plan: b,
-                premiumSubscription: null == D ? null : D,
+                premiumSubscription: null == w ? null : w,
                 productLine: N,
                 isGift: !!y,
                 planGroup: M,
@@ -80,9 +80,9 @@ let g = (e, t, n, r) => {
             });
             let e = "";
             (e =
-                w === _.Vt.ORB_PROFILE_BADGE
+                D === _.Vt.ORB_PROFILE_BADGE
                     ? h.intl.string(h.t.APcKRo)
-                    : w === _.Vt.FRACTIONAL_PREMIUM
+                    : D === _.Vt.FRACTIONAL_PREMIUM
                       ? h.intl.string(h.t.FhJ74j)
                       : h.intl.string(h.t["Sxed/G"])),
                 Array.isArray(G) ? (G = [...G, " ".concat(e)]) : (G += " ".concat(e));
@@ -148,13 +148,13 @@ let g = (e, t, n, r) => {
                     productLine: N,
                     purchaseType: f.GZQ.SUBSCRIPTION,
                     plan: b,
-                    premiumSubscription: null == D ? null : D,
+                    premiumSubscription: null == w ? null : w,
                     isGift: !1,
                     planGroup: M,
                     isPrepaidPaymentSource: !1,
                 });
             O || (e = g(P, t, n, b.id)),
-                (G = (null == D ? void 0 : D.isPausedAllowsResumeButNotUpdates)
+                (G = (null == w ? void 0 : w.isPausedAllowsResumeButNotUpdates)
                     ? h.intl.format(h.t.B6oNwB, {
                           primaryText: r,
                           rate: e,
@@ -162,7 +162,7 @@ let g = (e, t, n, r) => {
                           contactLink: f.EYA.CONTACT,
                           helpdeskArticle: l.Z.getArticleURL(f.BhN.BILLING),
                       })
-                    : null != D && (0, d.GY)(D, b.id, M)
+                    : null != w && (0, d.GY)(w, b.id, M)
                       ? h.intl.format(h.t.LyBQUW, {
                             primaryText: r,
                             rate: e,

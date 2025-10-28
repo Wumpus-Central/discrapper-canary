@@ -290,7 +290,7 @@ function P(e) {
         gameSheetHook: r,
     });
 }
-function D(e) {
+function w(e) {
     let {
             quest: t,
             taskDetails: n,
@@ -322,7 +322,7 @@ function D(e) {
         gameSheetHook: _,
     });
 }
-function w(e) {
+function D(e) {
     let {
             quest: t,
             taskDetails: n,
@@ -339,7 +339,7 @@ function w(e) {
         p = (0, l.Kr)(t.config),
         m = (0, l.$J)(t) && (0, l.$H)(t);
     if ((0, l.Pb)(t))
-        return D({
+        return w({
             quest: t,
             taskDetails: n,
             sourceQuestContent: a,
@@ -398,7 +398,7 @@ function w(e) {
 }
 function L(e) {
     var t;
-    return w(
+    return D(
         y(E({}, e), {
             currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser(),
             popoutTargetElementRef: e.popoutTargetElementRef,

@@ -15,8 +15,8 @@ var r = n(951288),
     d = n(975298),
     p = n(866419),
     f = n(111028),
-    m = n(211644),
-    h = n(266454),
+    h = n(211644),
+    m = n(266454),
     g = n(243778),
     _ = n(172416),
     b = n(594174),
@@ -100,8 +100,8 @@ let q = (e) => {
             ed = (0, P.$)(),
             ep = (0, S.W)(),
             ef = (0, C.Vi)(),
-            em = (0, L.HI)({ trialOffer: ec }),
-            eh = (0, B.V)(),
+            eh = (0, L.HI)({ trialOffer: ec }),
+            em = (0, B.V)(),
             eg = (0, L.eW)(),
             e_ = (0, w._h)(),
             eb = (0, H.Kn)(),
@@ -121,7 +121,7 @@ let q = (e) => {
             eZ = (0, _.bg)({ location: "NitroTabButton" }),
             ew = [],
             eL = [];
-        (0, m.Kl)() &&
+        (0, h.Kl)() &&
             ((ev || (eO && !ex)) && ew.push(s.z.NITRO_TAB_BADGE_OFFER_REMINDER),
             e_ && ew.push(s.z.RECURRING_3P_PROMOTION_POPOVER),
             ef && ew.push(s.z.BOGO_2025_NITRO_TAB_BADGE),
@@ -161,7 +161,7 @@ let q = (e) => {
             ef)
         )
             (n = (0, r.jsx)(Z.Z, {})), (y = 0);
-        else if (em) {
+        else if (eh) {
             let e = (0, L.$q)();
             (n = (0, r.jsx)(M._y, {
                 isTabSelected: J,
@@ -194,9 +194,9 @@ let q = (e) => {
                     (y = 2))
                   : ep
                     ? ((n = (0, r.jsx)(G.S, { expiresAt: eT })), (y = 4))
-                    : null != eh
+                    : null != em
                       ? ((n = (0, r.jsx)(V.Z, {
-                            copy: eh,
+                            copy: em,
                             showStars: !1,
                         })),
                         (y = 1))
@@ -216,7 +216,7 @@ let q = (e) => {
                               ? ((n = (0, r.jsx)(U.l, {
                                     isSelected: J,
                                     onSelect: () =>
-                                        (0, h.Q3)(s.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
+                                        (0, m.Q3)(s.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, {
                                             dismissAction: Y.L.TAKE_ACTION,
                                         }),
                                 })),

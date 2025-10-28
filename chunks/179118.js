@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(74538),
     R = n(51144),
     P = n(987209),
-    D = n(981631),
-    w = n(474936),
+    w = n(981631),
+    D = n(474936),
     L = n(388032),
     x = n(769212);
 let M = 1500;
@@ -48,7 +48,7 @@ function k(e) {
         [O, I] = i.useState(f.kO8.Modes.DEFAULT),
         S = (0, c.e7)([T.Z], () => T.Z.enabled),
         k = _ || (null != l && null != p),
-        U = (null == a ? void 0 : a.productLine) === D.POd.COLLECTIBLES,
+        U = (null == a ? void 0 : a.productLine) === w.POd.COLLECTIBLES,
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, P.wD)(),
         Z = null == G ? void 0 : G.giftPurchaseConfirmation,
@@ -62,7 +62,7 @@ function k(e) {
                 : null == s
                   ? null
                   : ((e =
-                        s.interval === w.rV.MONTH
+                        s.interval === D.rV.MONTH
                             ? k
                                 ? V
                                     ? Z.monthGiftText
@@ -243,7 +243,7 @@ let j = (e) => {
         N = [...T, ...C],
         P = (0, c.e7)([S.default], () => S.default.filter((e) => N.includes(e.id) && !e.bot), [N]);
     if (null == P || 0 === P.length) return null;
-    let D = l().sortBy(P, (e) => N.indexOf(e.id));
+    let w = l().sortBy(P, (e) => N.indexOf(e.id));
     return (0, r.jsxs)("div", {
         className: x.giftRecipientSection,
         children: [
@@ -267,7 +267,7 @@ let j = (e) => {
                         onChange: (e) => {
                             o(e), d(!1);
                         },
-                        options: D.map((e) => ({
+                        options: w.map((e) => ({
                             value: e,
                             label: "".concat(R.ZP.getUserTag(e)),
                         })),

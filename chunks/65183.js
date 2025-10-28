@@ -63,8 +63,8 @@
         N = 31,
         R = {},
         P = { value: !1 },
-        D = { value: !1 };
-    function w(e) {
+        w = { value: !1 };
+    function D(e) {
         return (e.value = !1), e;
     }
     function L(e) {
@@ -400,8 +400,8 @@
         throw TypeError("Abstract");
     }
     function eP() {}
-    function eD() {}
     function ew() {}
+    function eD() {}
     (er.prototype[es] = !0),
         d(el, ea),
         (el.prototype.get = function (e, t) {
@@ -581,11 +581,11 @@
         }),
         d(eR, f),
         d(eP, eR),
-        d(eD, eR),
         d(ew, eR),
+        d(eD, eR),
         (eR.Keyed = eP),
-        (eR.Indexed = eD),
-        (eR.Set = ew);
+        (eR.Indexed = ew),
+        (eR.Set = eD);
     var eL =
         "function" == typeof Math.imul && -2 === Math.imul(4294967295, 2)
             ? Math.imul
@@ -841,8 +841,8 @@
         if (e._root) {
             var r,
                 i,
-                a = w(P),
-                o = w(D);
+                a = D(P),
+                o = D(w);
             if (((r = tt(e._root, e.__ownerID, 0, void 0, t, n, a, o)), !o.value)) return e;
             i = e.size + (a.value ? (n === R ? -1 : 1) : 0);
         } else {
@@ -1137,7 +1137,7 @@
     function ty(e) {
         return !!(e && e[tO]);
     }
-    d(tb, eD),
+    d(tb, ew),
         (tb.of = function () {
             return this(arguments);
         }),
@@ -1146,7 +1146,7 @@
         }),
         (tb.prototype.get = function (e, t) {
             if ((e = j(this, e)) >= 0 && e < this.size) {
-                var n = tD(this, (e += this._origin));
+                var n = tw(this, (e += this._origin));
                 return n && n.array[e & N];
             }
             return t;
@@ -1176,22 +1176,22 @@
             var e = arguments,
                 t = this.size;
             return this.withMutations(function (n) {
-                tw(n, 0, t + e.length);
+                tD(n, 0, t + e.length);
                 for (var r = 0; r < e.length; r++) n.set(t + r, e[r]);
             });
         }),
         (tb.prototype.pop = function () {
-            return tw(this, 0, -1);
+            return tD(this, 0, -1);
         }),
         (tb.prototype.unshift = function () {
             var e = arguments;
             return this.withMutations(function (t) {
-                tw(t, -e.length);
+                tD(t, -e.length);
                 for (var n = 0; n < e.length; n++) t.set(n, e[n]);
             });
         }),
         (tb.prototype.shift = function () {
-            return tw(this, 1);
+            return tD(this, 1);
         }),
         (tb.prototype.merge = function () {
             return tL(this, void 0, arguments);
@@ -1208,11 +1208,11 @@
             return tL(this, tc(e), t);
         }),
         (tb.prototype.setSize = function (e) {
-            return tw(this, 0, e);
+            return tD(this, 0, e);
         }),
         (tb.prototype.slice = function (e, t) {
             var n = this.size;
-            return G(e, t, n) ? this : tw(this, B(e, n), Z(t, n));
+            return G(e, t, n) ? this : tD(this, B(e, n), Z(t, n));
         }),
         (tb.prototype.__iterator = function (e, t) {
             var n = 0,
@@ -1345,12 +1345,12 @@
         if ((t = j(e, t)) != t) return e;
         if (t >= e.size || t < 0)
             return e.withMutations(function (e) {
-                t < 0 ? tw(e, t).set(0, n) : tw(e, 0, t + 1).set(t, n);
+                t < 0 ? tD(e, t).set(0, n) : tD(e, 0, t + 1).set(t, n);
             });
         t += e._origin;
         var r = e._tail,
             i = e._root,
-            a = w(D);
+            a = D(w);
         return (t >= tx(e._capacity)
             ? (r = tR(r, e.__ownerID, 0, t, n, a))
             : (i = tR(i, e.__ownerID, e._level, t, n, a)),
@@ -1377,14 +1377,14 @@
     function tP(e, t) {
         return t && e && t === e.ownerID ? e : new tI(e ? e.array.slice() : [], t);
     }
-    function tD(e, t) {
+    function tw(e, t) {
         if (t >= tx(e._capacity)) return e._tail;
         if (t < 1 << (e._level + A)) {
             for (var n = e._root, r = e._level; n && r > 0; ) (n = n.array[(t >>> r) & N]), (r -= A);
             return n;
         }
     }
-    function tw(e, t, n) {
+    function tD(e, t, n) {
         void 0 !== t && (t |= 0), void 0 !== n && (n |= 0);
         var r = e.__ownerID || new x(),
             i = e._origin,
@@ -1398,7 +1398,7 @@
         u && ((o += u), (i += u), (s += u), (a += u));
         for (var d = tx(a), f = tx(s); f >= 1 << (l + A); ) (c = new tI(c && c.array.length ? [c] : [], r)), (l += A);
         var _ = e._tail,
-            p = f < d ? tD(e, s - 1) : f > d ? new tI([], r) : _;
+            p = f < d ? tw(e, s - 1) : f > d ? new tI([], r) : _;
         if (_ && f > d && o < a && _.array.length) {
             for (var h = (c = tP(c, r)), m = l; m > A; m -= A) {
                 var g = (d >>> m) & N;
@@ -2311,7 +2311,7 @@
         (no.withMutations = e$.withMutations),
         (no.asMutable = e$.asMutable),
         (no.asImmutable = e$.asImmutable),
-        d(nd, ew),
+        d(nd, eD),
         (nd.of = function () {
             return this(arguments);
         }),
@@ -2485,7 +2485,7 @@
     (ny[T] = !0),
         (ny.__empty = nv),
         (ny.__make = nO),
-        d(nI, eD),
+        d(nI, ew),
         (nI.of = function () {
             return this(arguments);
         }),
@@ -2549,7 +2549,7 @@
         (nI.prototype.slice = function (e, t) {
             if (G(e, t, this.size)) return this;
             var n = B(e, this.size);
-            if (Z(t, this.size) !== this.size) return eD.prototype.slice.call(this, e, t);
+            if (Z(t, this.size) !== this.size) return ew.prototype.slice.call(this, e, t);
             for (var r = this.size - n, i = this._head; n--; ) i = i.next;
             return this.__ownerID
                 ? ((this.size = r), (this._head = i), (this.__hash = void 0), (this.__altered = !0), this)
@@ -2848,7 +2848,7 @@
                 return (e = "function" == typeof e.isSubset ? e : f(e)).isSubset(this);
             },
             keySeq: function () {
-                return this.toSeq().map(nw).toIndexedSeq();
+                return this.toSeq().map(nD).toIndexedSeq();
             },
             last: function () {
                 return this.toSeq().reverse().first();
@@ -2985,8 +2985,8 @@
                 );
             },
         });
-    var nD = _.prototype;
-    function nw(e, t) {
+    var nw = _.prototype;
+    function nD(e, t) {
         return t;
     }
     function nL(e, t) {
@@ -3050,10 +3050,10 @@
         return e ^ (t + 2654435769 + (e << 6) + (e >> 2));
     }
     return (
-        (nD[v] = !0),
-        (nD[z] = nP.entries),
-        (nD.__toJS = nP.toObject),
-        (nD.__toStringMapper = function (e, t) {
+        (nw[v] = !0),
+        (nw[z] = nP.entries),
+        (nw.__toJS = nP.toObject),
+        (nw.__toStringMapper = function (e, t) {
             return JSON.stringify(t) + ": " + nk(e);
         }),
         nR(p, {
@@ -3157,8 +3157,8 @@
         nR(ea, p.prototype),
         nR(eo, h.prototype),
         nR(eP, _.prototype),
-        nR(eD, p.prototype),
-        nR(ew, h.prototype),
+        nR(ew, p.prototype),
+        nR(eD, h.prototype),
         {
             Iterable: f,
             Seq: er,

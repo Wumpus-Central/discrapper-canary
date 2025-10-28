@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T });
 var a = n(780384),
     r = n(410030),
-    i = n(291175),
-    l = n(804413),
+    l = n(291175),
+    i = n(804413),
     o = n(474936),
     s = n(538092),
     c = n(533577),
@@ -13,8 +13,8 @@ var a = n(780384),
     h = n(298342),
     x = n(761822),
     f = n(131664),
-    g = n(389457),
-    b = n(673252),
+    b = n(389457),
+    g = n(673252),
     v = n(869708),
     j = n(288829),
     _ = n(943323),
@@ -61,11 +61,11 @@ let S = {
         },
         [o.VU.PREMIUM_TENURE_3_MONTH]: {
             dark: c.Z,
-            light: g.Z,
+            light: b.Z,
         },
         [o.VU.PREMIUM_TENURE_6_MONTH]: {
             dark: d.Z,
-            light: b.Z,
+            light: g.Z,
         },
         [o.VU.PREMIUM_TENURE_12_MONTH]: {
             dark: u.Z,
@@ -89,13 +89,13 @@ let S = {
         },
     };
 function T() {
-    let e = (0, l.Z)(),
+    let e = (0, i.Z)(),
         t = (0, a.wj)((0, r.ZP)());
     if (!e) return null;
     let n = S[e],
         s = E[e],
         c = {
-            currentBadge: (0, i.fv)(e),
+            currentBadge: (0, l.fv)(e),
             currentBadgeTextGradient: t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light,
             levelUpVideoSrc: t ? (null == s ? void 0 : s.dark) : null == s ? void 0 : s.light,
         },
@@ -103,7 +103,7 @@ function T() {
     if (d > 0) {
         let e = o.Qh[d - 1],
             n = S[e];
-        (c.prevBadge = (0, i.fv)(e)),
+        (c.prevBadge = (0, l.fv)(e)),
             (c.prevBadgeTextGradient = t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light);
     }
     return c;

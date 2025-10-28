@@ -4,12 +4,12 @@ var i = n(657707),
     u = n(509613),
     r = n(28682),
     s = n(313789),
-    a = n(387747),
-    o = n(726985),
+    o = n(387747),
+    a = n(726985),
     c = n(388032);
 let E = (0, u.x1)(s.n.GIFT_PANE, {
         buildLayout: () => [],
-        render: a.Z,
+        render: o.Z,
     }),
     d = (0, u.wf)(s.n.GIFT_PANEL, {
         useTitle: () => c.intl.string(c.t["jcSP+g"]),
@@ -18,7 +18,7 @@ let E = (0, u.x1)(s.n.GIFT_PANE, {
     T = (0, u.m7)(s.n.GIFT_SIDEBAR_ITEM, {
         icon: i.OgN,
         useTitle: () => c.intl.string(c.t["jcSP+g"]),
-        legacySearchKey: o.s6.GIFT_INVENTORY,
+        legacySearchKey: a.s6.GIFT_INVENTORY,
         buildLayout: () => [d],
         trailing: {
             type: r.PU.BADGE_COUNT,

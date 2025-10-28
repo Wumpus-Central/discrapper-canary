@@ -83,16 +83,16 @@ function R(e) {
 function P(e, t) {
     if (!f.Z.isOverlayEnabled) {
         if (0 === y.length) return;
-        D("overlay_disabled");
+        w("overlay_disabled");
         return;
     }
     A(e, t), (y = e), (O = [...e]);
 }
-function D(e) {
+function w(e) {
     for (let e of Object.values(v)) null != e && clearTimeout(e);
     (v = {}), (y = []), (O = []), A([], e);
 }
-function w() {
+function D() {
     0 !== y.length && ((O = [...y]), (y = []), A([], "store_click_zones"));
 }
 function L() {
@@ -115,14 +115,14 @@ function x(e, t, n, r) {
     null != l && l.dispatchEvent(s);
 }
 function M(e) {
-    return D("crashed"), !0;
+    return w("crashed"), !0;
 }
 function k(e) {
     let { zones: t } = e;
     return P(t, "set_click_zones"), !0;
 }
 function j() {
-    return D("refresh_host_window"), !0;
+    return w("refresh_host_window"), !0;
 }
 function U() {
     return null == (b = f.Z.getNativeModule()) || !!I || ((I = !0), b.setCaptureZoneCallback(x), !0);
@@ -132,7 +132,7 @@ function G() {
 }
 function B(e) {
     let { pid: t } = e;
-    return 0 === t ? w() : L(), !0;
+    return 0 === t ? D() : L(), !0;
 }
 class Z extends (r = o.ZP.Store) {
     initialize() {

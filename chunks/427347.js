@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var a = n(951288);
 n(647438);
 var r = n(481060),
-    i = n(100527),
-    l = n(906732),
+    l = n(100527),
+    i = n(906732),
     o = n(266454),
     s = n(314910),
     c = n(313789),
@@ -14,13 +14,13 @@ var r = n(481060),
     h = n(226625),
     x = n(981631),
     f = n(921944),
-    g = n(388032),
-    b = n(972663);
+    b = n(388032),
+    g = n(972663);
 function v(e) {
     let { dismissibleContent: t } = e,
         n = p.Z.useIsEligible(),
         m = (0, o.Nj)(t),
-        { analyticsLocations: v } = (0, l.ZP)(i.Z.HOLIDAY_COACHMARK),
+        { analyticsLocations: v } = (0, i.ZP)(l.Z.HOLIDAY_COACHMARK),
         j = (e) => {
             (0, o.Q3)(t, { dismissAction: e });
         },
@@ -35,40 +35,40 @@ function v(e) {
     return n && !m
         ? (0, a.jsx)(s.ZP, {
               children: (0, a.jsxs)("div", {
-                  className: b.wrapper,
+                  className: g.wrapper,
                   children: [
                       (0, a.jsxs)("div", {
-                          className: b.backgroundWrapper,
+                          className: g.backgroundWrapper,
                           children: [
                               (0, a.jsx)(h.Z, {
-                                  className: b.backgroundImage,
+                                  className: g.backgroundImage,
                                   pageMultiplier: 5,
                               }),
-                              (0, a.jsx)("div", { className: b.backgroundOverlay }),
+                              (0, a.jsx)("div", { className: g.backgroundOverlay }),
                           ],
                       }),
-                      (0, a.jsx)("div", { className: b.heroImage }),
+                      (0, a.jsx)("div", { className: g.heroImage }),
                       (0, a.jsxs)("div", {
-                          className: b.content,
+                          className: g.content,
                           children: [
                               (0, a.jsxs)("div", {
                                   children: [
                                       (0, a.jsx)(r.Heading, {
                                           variant: "heading-md/bold",
                                           color: void 0,
-                                          className: b.specialText,
-                                          children: g.intl.string(g.t.zUhr3D),
+                                          className: g.specialText,
+                                          children: b.intl.string(b.t.zUhr3D),
                                       }),
                                       (0, a.jsx)(r.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
-                                          children: g.intl.format(g.t.Xw2XUT, {
+                                          children: b.intl.format(b.t.Xw2XUT, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
                                                       r.P3F,
                                                       {
                                                           tag: "span",
-                                                          className: b.specialTextLink,
+                                                          className: g.specialTextLink,
                                                           onClick: _,
                                                           children: e,
                                                       },
@@ -79,7 +79,7 @@ function v(e) {
                                   ],
                               }),
                               (0, a.jsx)(r.P3F, {
-                                  className: b.closeClickable,
+                                  className: g.closeClickable,
                                   onClick: () => j(f.L.USER_DISMISS),
                                   children: (0, a.jsx)(r.Dio, {
                                       color: "currentColor",

@@ -37,8 +37,8 @@ var r,
     N = n(629710),
     R = n(262777),
     P = n(761538),
-    D = n(674611),
-    w = n(294734),
+    w = n(674611),
+    D = n(294734),
     L = n(947849),
     x = n(10433),
     M = n(715903),
@@ -91,8 +91,8 @@ var r,
     eN = n(461157),
     eR = n(901461),
     eP = n(432376),
-    eD = n(384203),
-    ew = n(633957),
+    ew = n(384203),
+    eD = n(633957),
     eL = n(530472),
     ex = n(29909),
     eM = n(782658),
@@ -259,7 +259,7 @@ class tt extends (r = a.Component) {
             r = null;
         switch (n) {
             case eI.aD.MARK_AS_FALSE_POSITIVE:
-                r = (0, i.jsx)(D.Z, {
+                r = (0, i.jsx)(w.Z, {
                     messageId: e.id,
                     channelId: t.id,
                 });
@@ -300,7 +300,7 @@ class tt extends (r = a.Component) {
                   if (n === S.g.EVENT) return (0, i.jsx)(U.Z, { code: r }, r);
                   if (n === S.g.CHANNEL_LINK)
                       return (0, i.jsx)(
-                          eD.Z,
+                          ew.Z,
                           {
                               code: r,
                               message: e,
@@ -689,7 +689,7 @@ class tt extends (r = a.Component) {
         let { application: t, activityInstance: n } = e;
         return null == t || null == n
             ? null
-            : (0, i.jsx)(ew.Z, {
+            : (0, i.jsx)(eD.Z, {
                   application: t,
                   channelId: this.props.channel.id,
                   guildId: this.props.channel.guild_id,
@@ -741,7 +741,7 @@ class tt extends (r = a.Component) {
         if (e.messageSnapshots.length > 0 && (0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(en.Z, { message: e });
     }
     renderForwardedMessage(e) {
-        if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(w.Z, { message: e });
+        if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(D.Z, { message: e });
     }
     renderEditedTag(e, t) {
         return (0, i.jsx)(eY.Z, {
@@ -776,8 +776,8 @@ class tt extends (r = a.Component) {
             N = this.renderMediaObscureNotice(t),
             R = this.renderPoll(t, n),
             P = this.renderForwardedMessage(t),
-            D = this.renderReportedMessage(t),
-            w = this.renderShareClientTheme(t);
+            w = this.renderReportedMessage(t),
+            D = this.renderShareClientTheme(t);
         return null == c &&
             null == d &&
             null == p &&
@@ -796,18 +796,18 @@ class tt extends (r = a.Component) {
             null != T &&
             null == R &&
             null == P &&
-            null == D &&
-            null == w
+            null == w &&
+            null == D
             ? null
             : (0, i.jsxs)("div", {
                   id: (0, ej.bX)(t),
                   className: s()(e, eQ.container),
                   children: [
-                      D,
+                      w,
                       P,
                       v,
                       R,
-                      w,
+                      D,
                       c,
                       u,
                       S,
@@ -985,8 +985,8 @@ function tn(e) {
             isAutomodQuarantined: y,
         }),
         P = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
-        D = (0, z.Z)(null == n ? void 0 : n.id),
-        w = (0, Q.Z)(r),
+        w = (0, z.Z)(null == n ? void 0 : n.id),
+        D = (0, Q.Z)(r),
         L = (0, R.v)(r),
         x = (0, eC._)(n),
         j = (0, eI.ro)(r.id, r.channel_id),
@@ -1018,10 +1018,10 @@ function tn(e) {
                 renderEmbeds: d,
                 gifAutoPlay: _,
                 canRenderReferralEmbed: n.isDM(),
-                poll: w,
+                poll: D,
                 showListsAndHeaders: P,
                 showMaskedLinks: P,
-                shouldHideMediaOptions: D,
+                shouldHideMediaOptions: w,
                 enabledContentHarmTypeFlags: L,
                 ctaButtonType: j,
                 shouldAgeVerify: U,

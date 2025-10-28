@@ -1,8 +1,8 @@
 n.d(t, { default: () => E }), n(388685), n(953529);
 var a = n(951288),
     r = n(647438),
-    i = n(772848),
-    l = n(793030),
+    l = n(772848),
+    i = n(793030),
     o = n(704215),
     s = n(481060),
     c = n(243778),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(63063),
     x = n(168107),
     f = n(480916),
-    g = n(352138),
-    b = n(629235),
+    b = n(352138),
+    g = n(629235),
     v = n(981631),
     j = n(800530),
     _ = n(153177),
@@ -26,13 +26,13 @@ let E = function (e) {
         [P, I] = r.useState(o.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         w = r.useRef(P),
         [k, R] = (0, c.US)([P], void 0, !0),
-        A = r.useMemo(() => (0, i.Z)(), []),
+        A = r.useMemo(() => (0, l.Z)(), []),
         D = r.useRef(!1),
         Z = (0, m.GE)();
     r.useEffect(() => {
         w.current = k;
     }, [k]);
-    let { loading: M, ageVerificationMethods: L } = (0, b.Z)({
+    let { loading: M, ageVerificationMethods: L } = (0, g.Z)({
         onClose: () => {
             null == T || T(), E();
         },
@@ -58,7 +58,7 @@ let E = function (e) {
         r.useEffect(() => {
             (0, f.lA)(A, f.d_.EXPRESSIVE_PRIMARY, n);
         }, [A, n]),
-        (0, a.jsx)(l.ExpressiveModal, {
+        (0, a.jsx)(i.ExpressiveModal, {
             transitionState: t,
             onClose: E,
             gradientColor: "blue",
@@ -139,7 +139,7 @@ let E = function (e) {
                                       size: "sm",
                                       text: y.intl.string(_.default.hDvmYP),
                                       onClick: () => {
-                                          (0, g.Jh)();
+                                          (0, b.Jh)();
                                       },
                                   }),
                               ],

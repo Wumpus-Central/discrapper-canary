@@ -28,8 +28,8 @@ function v(e) {
             botUserId: null == I || null == (n = I.bot) ? void 0 : n.id,
         }),
         P = null != I && (0, l.ye)(I),
-        D = null != N && P && R,
-        { analyticsLocations: w } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
+        w = null != N && P && R,
+        { analyticsLocations: D } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
         L = (0, i.e7)([h.Z], () => h.Z.getChannelId()),
         x = (0, y.KF)(L),
         M = (0, i.e7)([E.ZP], () => {
@@ -55,12 +55,12 @@ function v(e) {
                     embeddedActivitiesManager: j,
                     customId: B,
                     referrerId: A,
-                    analyticsLocations: w,
+                    analyticsLocations: D,
                 });
             },
             disabled: G,
         }),
-        D &&
+        w &&
             !U &&
             Z.push({
                 label: O.intl.string(O.t.JeK1Wg),
@@ -69,7 +69,7 @@ function v(e) {
                     (0, s.W)({
                         appId: I.id,
                         botId: N,
-                        analyticsLocations: w,
+                        analyticsLocations: D,
                         customId: B,
                         referrerId: A,
                     });

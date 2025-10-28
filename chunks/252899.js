@@ -1,8 +1,8 @@
 n.d(t, { F: () => d }), n(388685), n(539854), n(781311), n(642613);
 var a = n(951288),
     r = n(647438),
-    i = n(93582),
-    l = n(481060),
+    l = n(93582),
+    i = n(481060),
     o = n(621060),
     s = n(716768);
 function c(e) {
@@ -19,22 +19,22 @@ function d(e, t) {
             let t = n.toLowerCase().trim();
             return e.filter((e) => {
                 var n, a;
-                let r = (null != (n = (0, i.q)(e.name)) ? n : "").toLowerCase(),
-                    l = (null != (a = e.group) ? a : "").toLowerCase();
-                return r.includes(t) || e.id.toLowerCase().includes(t) || l.includes(t);
+                let r = (null != (n = (0, l.q)(e.name)) ? n : "").toLowerCase(),
+                    i = (null != (a = e.group) ? a : "").toLowerCase();
+                return r.includes(t) || e.id.toLowerCase().includes(t) || i.includes(t);
             });
         }, [e, n]);
     return [
         r.useMemo(
             () =>
                 (0, a.jsx)(
-                    l.II_,
+                    i.II_,
                     {
                         id: "devtools-search",
                         control: (e, t) => {
-                            var r, i;
+                            var r, l;
                             return (0, a.jsx)(
-                                l.ne,
+                                i.ne,
                                 ((r = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +60,7 @@ function d(e, t) {
                                     }
                                     return e;
                                 })({}, e)),
-                                (i = i =
+                                (l = l =
                                     {
                                         query: n,
                                         onChange: s,
@@ -68,7 +68,7 @@ function d(e, t) {
                                         ref: t,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -76,8 +76,8 @@ function d(e, t) {
                                               n.push.apply(n, a);
                                           }
                                           return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
                                 r),
                             );
@@ -92,7 +92,7 @@ function d(e, t) {
             if ("" !== n.trim() && 0 === d.length)
                 e.push(
                     (0, a.jsx)(
-                        l.sNh,
+                        i.sNh,
                         {
                             id: "devtools-no-results",
                             label: 'No DevTools found for "'.concat(n, '"'),
@@ -113,13 +113,13 @@ function d(e, t) {
                         return t;
                     })(d.filter((e) => e.group !== o.v0.NONE));
                 r.forEach((n) => {
-                    let { id: r, name: i } = n;
+                    let { id: r, name: l } = n;
                     return e.push(
                         (0, a.jsx)(
-                            l.sNh,
+                            i.sNh,
                             {
                                 id: r,
-                                label: (0, a.jsx)(c, { label: i }),
+                                label: (0, a.jsx)(c, { label: l }),
                                 action: () => t(r),
                             },
                             r,
@@ -131,21 +131,21 @@ function d(e, t) {
                         if (null != o && o.length > 0) {
                             let s = o.sort((e, t) => {
                                 var n, a;
-                                return (null != (n = (0, i.q)(e.name)) ? n : "").localeCompare(
-                                    null != (a = (0, i.q)(t.name)) ? a : "",
+                                return (null != (n = (0, l.q)(e.name)) ? n : "").localeCompare(
+                                    null != (a = (0, l.q)(t.name)) ? a : "",
                                 );
                             });
                             "" === n.trim()
                                 ? e.push(
                                       (0, a.jsx)(
-                                          l.sNh,
+                                          i.sNh,
                                           {
                                               id: "devtools-".concat(r),
                                               label: (0, a.jsx)(c, { label: r }),
-                                              children: (0, a.jsx)(l.kSQ, {
+                                              children: (0, a.jsx)(i.kSQ, {
                                                   children: s.map((e) =>
                                                       (0, a.jsx)(
-                                                          l.sNh,
+                                                          i.sNh,
                                                           {
                                                               id: "devtools-".concat(e.id),
                                                               label: (0, a.jsx)(c, { label: e.name }),
@@ -161,12 +161,12 @@ function d(e, t) {
                                   )
                                 : e.push(
                                       (0, a.jsx)(
-                                          l.kSQ,
+                                          i.kSQ,
                                           {
                                               label: r,
                                               children: s.map((e) =>
                                                   (0, a.jsx)(
-                                                      l.sNh,
+                                                      i.sNh,
                                                       {
                                                           id: "devtools-filtered-".concat(e.id),
                                                           label: (0, a.jsx)(c, { label: e.name }),

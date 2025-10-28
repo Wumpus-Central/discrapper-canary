@@ -12,8 +12,8 @@ t.default = (function () {
         var n,
             r = arguments.length > 1 ? arguments[1] : {},
             i = {},
-            a = { start: eD },
-            o = eD,
+            a = { start: ew },
+            o = ew,
             s = function (e) {
                 return {
                     type: "messageFormatPattern",
@@ -107,8 +107,8 @@ t.default = (function () {
                     options: e.options,
                 };
             },
-            D = "selectordinal",
-            w = {
+            w = "selectordinal",
+            D = {
                 type: "literal",
                 value: "selectordinal",
                 description: '"selectordinal"',
@@ -351,10 +351,10 @@ t.default = (function () {
                 l = i < t.length ? t.charAt(i) : null;
             return null !== r && a(r), new e(null !== n ? n : o(r, l), r, l, i, s.line, s.column);
         }
-        function eD() {
-            return ew();
-        }
         function ew() {
+            return eD();
+        }
+        function eD() {
             var e, t, n;
             for (e = eO, t = [], n = eL(); n !== i; ) t.push(n), (n = eL());
             return t !== i && ((ev = e), (t = s(t))), (e = t);
@@ -461,7 +461,7 @@ t.default = (function () {
             var e, n, r, a;
             return (
                 (e = eO),
-                t.substr(eO, 13) === D ? ((n = D), (eO += 13)) : ((n = i), 0 === eC && eR(w)),
+                t.substr(eO, 13) === w ? ((n = w), (eO += 13)) : ((n = i), 0 === eC && eR(D)),
                 n !== i && ez() !== i
                     ? (44 === t.charCodeAt(eO) ? ((r = m), eO++) : ((r = i), 0 === eC && eR(g)),
                       r !== i && ez() !== i && (a = eW()) !== i ? ((ev = e), (e = n = L(a))) : ((eO = e), (e = l)))
@@ -502,7 +502,7 @@ t.default = (function () {
                 (e = eO),
                 (n = ez()) !== i && (r = eV()) !== i && ez() !== i
                     ? (123 === t.charCodeAt(eO) ? ((a = _), eO++) : ((a = i), 0 === eC && eR(p)),
-                      a !== i && ez() !== i && (o = ew()) !== i && ez() !== i
+                      a !== i && ez() !== i && (o = eD()) !== i && ez() !== i
                           ? (125 === t.charCodeAt(eO) ? ((s = E), eO++) : ((s = i), 0 === eC && eR(b)),
                             s !== i ? ((ev = e), (e = n = G(r, o))) : ((eO = e), (e = l)))
                           : ((eO = e), (e = l)))

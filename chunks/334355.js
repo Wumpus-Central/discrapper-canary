@@ -251,7 +251,7 @@ e.exports = function (e) {
         contains: ["self"].concat(R),
     });
     let P = [].concat(N, I.contains),
-        D = P.concat([
+        w = P.concat([
             {
                 begin: /(\s*)\(/,
                 end: /\)/,
@@ -259,14 +259,14 @@ e.exports = function (e) {
                 contains: ["self"].concat(P),
             },
         ]),
-        w = {
+        D = {
             className: "params",
             begin: /(\s*)\(/,
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0,
             keywords: E,
-            contains: D,
+            contains: w,
         },
         L = {
             variants: [
@@ -321,7 +321,7 @@ e.exports = function (e) {
                 3: "title.function",
             },
             label: "func.def",
-            contains: [w],
+            contains: [D],
             illegal: /%/,
         },
         j = {
@@ -351,7 +351,7 @@ e.exports = function (e) {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [{ begin: /\(\)/ }, w],
+            contains: [{ begin: /\(\)/ }, D],
         },
         F = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + e.UNDERSCORE_IDENT_RE + ")\\s*=>",
         V = {
@@ -361,14 +361,14 @@ e.exports = function (e) {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [w],
+            contains: [D],
         };
     return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
         keywords: E,
         exports: {
-            PARAMS_CONTAINS: D,
+            PARAMS_CONTAINS: w,
             CLASS_REFERENCE: x,
         },
         illegal: /#(?![$_A-z])/,
@@ -426,7 +426,7 @@ e.exports = function (e) {
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: E,
-                                        contains: D,
+                                        contains: w,
                                     },
                                 ],
                             },
@@ -475,7 +475,7 @@ e.exports = function (e) {
                 returnBegin: !0,
                 label: "func.def",
                 contains: [
-                    w,
+                    D,
                     e.inherit(e.TITLE_MODE, {
                         begin: d,
                         className: "title.function",
@@ -494,7 +494,7 @@ e.exports = function (e) {
             {
                 match: [/\bconstructor(?=\s*\()/],
                 className: { 1: "title.function" },
-                contains: [w],
+                contains: [D],
             },
             G,
             j,

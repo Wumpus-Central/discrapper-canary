@@ -52,7 +52,7 @@ function P(e, t, n) {
         rejectWithError: !1,
     });
 }
-async function D(e, t) {
+async function w(e, t) {
     var n;
     let r = N[e];
     if (null != r) return r;
@@ -62,7 +62,7 @@ async function D(e, t) {
         a = null == (n = i[0]) ? void 0 : n.name;
     return (N[e] = a), a;
 }
-class w {
+class D {
     start() {
         this._started || ((this._started = !0), _.Z.isFetching() ? c.Z.fetch() : this._check());
     }
@@ -95,7 +95,7 @@ class w {
             if (null == o || "live" !== o.type) throw Error("no stream");
             let { thumbnail_url: s, game_id: l, title: c } = o,
                 f = { large_image: null != s && null != (r = (0, d.f)(h.ABu.TWITCH, s)) ? r : void 0 },
-                _ = await D(l, t),
+                _ = await w(l, t),
                 p = u.Z.get(h.ABu.TWITCH),
                 m = null != (i = R(s)) ? i : e.name,
                 g = null != c && "" !== c ? c.slice(0, I) : void 0,
@@ -192,7 +192,7 @@ class w {
         m(this, "_nextCheck", void 0), m(this, "_started", void 0), (this._started = !1);
     }
 }
-let L = new w();
+let L = new D();
 function x() {
     p.Z.enabled ? L.start() : L.stop();
 }

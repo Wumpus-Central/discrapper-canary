@@ -116,8 +116,8 @@ function I(e) {
     )
         return (0, r.jsx)(r.Fragment, { children: u({}) });
     let P = E >= v.length - 1,
-        D = P ? s.r6K.RED : s.r6K.GREEN,
-        w = T ? D : s.r6K.PRIMARY,
+        w = P ? s.r6K.RED : s.r6K.GREEN,
+        D = T ? w : s.r6K.PRIMARY,
         L = () => {
             var e;
             if (!T) return t;
@@ -146,7 +146,7 @@ function I(e) {
         text: L(),
         delay: h,
         "aria-label": _,
-        color: w,
+        color: D,
         forceOpen: A,
         onAnimationRest: x,
         children: (e) => {

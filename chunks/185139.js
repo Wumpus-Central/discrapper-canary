@@ -33,13 +33,13 @@ function O(e) {
             isLoading: N = !1,
             purchaseError: R,
             purchaseErrorBlockRef: P,
-            planError: D,
-            onScroll: w,
+            planError: w,
+            onScroll: D,
             scrollerClassName: L,
             hasCurrencies: x = !1,
         } = e,
         M = null;
-    null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != D && (M = D);
+    null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
     let k = null != M ? M.message : "";
     null != M &&
         M instanceof d.HF &&
@@ -120,7 +120,7 @@ function O(e) {
                                       steps: t,
                                       sideMargin: 20,
                                       children: (0, r.jsx)(c.h21, {
-                                          onScroll: w,
+                                          onScroll: D,
                                           className: s()(b.scroller, L),
                                           children: o,
                                       }),

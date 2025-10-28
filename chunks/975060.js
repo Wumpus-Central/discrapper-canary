@@ -74,10 +74,10 @@ function P(e) {
     let { billingAddressInfo: n } = s.az(f);
     R(n);
 }
-function D() {
+function w() {
     (c = ""), (u = null);
 }
-function w(e) {
+function D(e) {
     let { email: t, nonce: n, billingAddress: r } = e;
     (c = t), (u = n), R(r), (I = h.length > 0);
 }
@@ -187,8 +187,8 @@ let H = new V(a.Z, {
     NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: P,
     NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: M,
     NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: k,
-    BRAINTREE_TOKENIZE_PAYPAL_START: D,
-    BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: w,
+    BRAINTREE_TOKENIZE_PAYPAL_START: w,
+    BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: D,
     BRAINTREE_TOKENIZE_VENMO_START: L,
     BRAINTREE_TOKENIZE_VENMO_SUCCESS: x,
     BRAINTREE_TOKENIZE_PAYPAL_FAIL: B,

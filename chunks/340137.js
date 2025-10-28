@@ -52,10 +52,10 @@ function N(e) {
             color: O || P ? d.TVs.colors.ICON_PRIMARY : d.TVs.colors.ICON_TERTIARY,
             size: A,
         }),
-        { badge: L, badgeType: D } = (0, E.h6)({ isSelected: j }),
-        R = (0, g.isDesktop)() && x,
+        { badge: L, badgeType: R } = (0, E.h6)({ isSelected: j }),
+        D = (0, g.isDesktop)() && x,
         M = (0, h.A)(),
-        k = (0, g.isMac)() ? C[M] : R ? S[M] : T[M];
+        k = (0, g.isMac)() ? C[M] : D ? S[M] : T[M];
     return (0, r.jsxs)(d.Kqy, {
         gap: 0,
         direction: "horizontal",
@@ -118,7 +118,7 @@ function N(e) {
                                 (0, r.jsx)("div", {
                                     className: a()(y.iconWrapper, null),
                                     children:
-                                        "unread" === D
+                                        "unread" === R
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
                                                       (0, r.jsx)(p.ZP, {

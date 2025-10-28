@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => D,
-    Z: () => w,
+    S: () => w,
+    Z: () => D,
 }),
     n(704826),
     n(35282),
@@ -40,7 +40,7 @@ function P(e) {
         ? "ms-settings:camera" + (null != e ? "?cameraId=".concat(encodeURIComponent(e.replace(C, N))) : "")
         : "";
 }
-function D() {
+function w() {
     let [e, t] = i.useState(!1),
         n = (0, s.e7)([E.Z], () => E.Z.isMediaFilterSettingLoading());
     return (i.useEffect(() => {
@@ -61,7 +61,7 @@ function D() {
           })
         : null;
 }
-function w(e) {
+function D(e) {
     let {
             hideDeviceSelector: t = !1,
             hideDeviceHeader: n = !1,
@@ -75,13 +75,13 @@ function w(e) {
             onCancelPreview: C,
         } = e,
         { analyticsLocations: N } = (0, f.ZP)(),
-        { id: D } = (0, p.p6)(I.h7.VIDEO_INPUT),
-        w = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
+        { id: w } = (0, p.p6)(I.h7.VIDEO_INPUT),
+        D = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
         L = m.qF.useSetting();
     return (0, r.jsxs)(c.Kqy, {
         gap: 20,
         children: [
-            d(D),
+            d(w),
             E.Z.isEnabled()
                 ? null
                 : (0, r.jsx)(c.Text, {
@@ -111,7 +111,7 @@ function w(e) {
                                 ? T.intl.format(T.t.aJYgRt, {
                                       onCameraSettingsClick: () => {
                                           null == C || C(),
-                                              window.open(P(D)),
+                                              window.open(P(w)),
                                               b.default.track(O.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, {
                                                   location_stack: N,
                                               });
@@ -120,7 +120,7 @@ function w(e) {
                                 : void 0,
                         deviceType: I.h7.VIDEO_INPUT,
                         location: "CameraSettings",
-                        isDisabled: !w,
+                        isDisabled: !D,
                         showAllDevices: !0,
                     }),
                 }),
@@ -131,7 +131,7 @@ function w(e) {
                     onLearnMore: a,
                     selectedBackgroundOption: o,
                     onSelectBackgroundOption: l,
-                    currentDeviceId: D,
+                    currentDeviceId: w,
                     smallerBackgroundOptions: A,
                 }),
             }),

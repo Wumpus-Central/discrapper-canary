@@ -1,21 +1,21 @@
 n.d(t, {
     AK: () => c,
-    EK: () => l,
+    EK: () => i,
     IX: () => o,
     SW: () => h,
     SY: () => d,
     Sg: () => m,
     TG: () => s,
     YX: () => u,
-    Z4: () => g,
+    Z4: () => b,
     nd: () => f,
     tq: () => p,
     uz: () => x,
 });
 var a,
     r = n(763600),
-    i = n(48541),
-    l = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
+    l = n(48541),
+    i = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
 let o = {
         steps: {
             "select-game": {
@@ -48,10 +48,10 @@ let o = {
               : "1415025086791942144",
     x = {
         [r.Z.SHOCKBYTE]:
-            window.GLOBAL_ENV.RELEASE_CHANNEL === i.C.STAGING
+            window.GLOBAL_ENV.RELEASE_CHANNEL === l.C.STAGING
                 ? "https://purple-prod.shockbyte.dev/support"
                 : "https://discord.shockbyte.com/support",
     },
     f = { [r.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    g = (e, t) =>
+    b = (e, t) =>
         "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=".concat(e, "&guild_id=").concat(t);

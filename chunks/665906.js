@@ -1,5 +1,5 @@
 n.d(t, {
-    $R: () => w,
+    $R: () => D,
     C7: () => C,
     Ek: () => T,
     Gu: () => B,
@@ -11,7 +11,7 @@ n.d(t, {
     Y: () => G,
     cD: () => v,
     ki: () => y,
-    kn: () => D,
+    kn: () => w,
     tM: () => E,
     tc: () => P,
     xl: () => x,
@@ -121,12 +121,12 @@ function P(e) {
         n = k(e);
     return R(e, t, n);
 }
-function D(e) {
+function w(e) {
     let t = N(e, p.Z),
         n = j(e);
     return R(e, t, n);
 }
-function w(e) {
+function D(e) {
     var t;
     let n = (0, o.e7)([p.Z], () => null != e && p.Z.can(g.Plq.SEND_MESSAGES_IN_THREADS, e));
     return (
@@ -173,7 +173,7 @@ function U(e) {
 function G(e) {
     let t = (0, c.Z)(),
         n = (0, o.e7)([p.Z], () => p.Z.can(g.Plq.CONNECT, e)),
-        r = w(e),
+        r = D(e),
         i = E.useExperiment(
             {
                 guildId: e.guild_id,

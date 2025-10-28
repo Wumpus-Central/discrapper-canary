@@ -32,8 +32,8 @@ var r = n(951288),
     N = n(960048),
     R = n(735521),
     P = n(325100),
-    D = n(659848),
-    w = n(583046),
+    w = n(659848),
+    D = n(583046),
     L = n(897829),
     x = n(74179),
     M = n(896246),
@@ -143,7 +143,7 @@ function ee(e) {
             setCurrency: eI,
             currencyLoading: eT,
             currencies: eS,
-        } = (0, w.Z)({
+        } = (0, D.Z)({
             activeSubscription: K,
             skuIDs: $,
             paymentSourceId: eg,
@@ -155,8 +155,8 @@ function ee(e) {
         {
             step: eR,
             setStep: eP,
-            steps: eD,
-            breadcrumbsData: ew,
+            steps: ew,
+            breadcrumbsData: eD,
             previousStepRef: eL,
         } = (0, B.Z)({
             stepConfigs: q,
@@ -206,7 +206,7 @@ function ee(e) {
     i.useEffect(() => {
         null != tc.current || tl.isSame(s()(0)) || (tc.current = tl);
     }, [tl]),
-        (0, D.m)(ef, eg);
+        (0, w.m)(ef, eg);
     let {
             skusById: tu,
             hasFetchedSkus: td,
@@ -250,8 +250,8 @@ function ee(e) {
         { isDisplayingWowMomentConfirmation: tP } = (0, c.cj)([E.Z], () => ({
             isDisplayingWowMomentConfirmation: E.Z.isDisplayingWowMomentConfirmation,
         })),
-        tD = tR ? W.premiumBrandRefreshBackground : void 0,
-        { enabled: tw } = (0, g.l)({ location: "PaymentModal" }),
+        tw = tR ? W.premiumBrandRefreshBackground : void 0,
+        { enabled: tD } = (0, g.l)({ location: "PaymentModal" }),
         tL = (0, P.uH)({ location: "PaymentModal" }),
         tx = i.useMemo(() => {
             if (tL) return V.cL.APPLE_PAYMENT_LINK;
@@ -261,7 +261,7 @@ function ee(e) {
             z(
                 {
                     stripe: ec,
-                    paymentElementsEnabled: tw,
+                    paymentElementsEnabled: tD,
                     contextMetadata: eZ,
                     blockedPayments: eu,
                     activeSubscription: K,
@@ -288,9 +288,9 @@ function ee(e) {
                 setHasAcceptedTerms: eN,
                 step: eR,
                 setStep: eP,
-                steps: eD,
+                steps: ew,
                 stepConfigs: q,
-                breadcrumbs: ew,
+                breadcrumbs: eD,
                 previousStepRef: eL,
                 purchaseState: ex,
                 setPurchaseState: eM,
@@ -348,7 +348,7 @@ function ee(e) {
                 inReverseTrial: tN,
                 enablePremiumBrandRefresh: tR,
                 isDisplayingWowMomentConfirmation: tP,
-                premiumBrandRefreshBackgroundClassName: tD,
+                premiumBrandRefreshBackgroundClassName: tw,
                 wasTier2PremiumBeforePurchase: el,
                 customCheckoutFlow: tx,
             },

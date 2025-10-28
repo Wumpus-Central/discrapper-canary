@@ -60,8 +60,8 @@ let T = 26,
     N = "user",
     R = new c.Z("SessionHeartbeatScheduler"),
     P = null,
-    D = null,
-    w = 0,
+    w = null,
+    D = 0,
     L = 0,
     x = { state: "uninitialized" },
     M = _.Z.getState(),
@@ -171,8 +171,8 @@ function K() {
     W() ? U() : B(), J();
 }
 function z() {
-    null == D &&
-        (D = {
+    null == w &&
+        (w = {
             id: setInterval(() => {
                 V();
             }, S),
@@ -181,9 +181,9 @@ function z() {
 }
 function q(e) {
     let t = performance.now();
-    if (!(t - w < A))
+    if (!(t - D < A))
         try {
-            o.K.set(C, e), (w = t);
+            o.K.set(C, e), (D = t);
         } catch (e) {
             m.Z.captureException(e);
         }
@@ -270,7 +270,7 @@ async function eo() {
                           lastUsedTimestamp: e,
                           version: b.EI,
                       }),
-                      (w = 0)),
+                      (D = 0)),
                   (n.lastUsedTimestamp = e),
                   q(n))
                 : null != n && (0, b.qK)(n) && (n = null),

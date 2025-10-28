@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => b,
-    r: () => _,
+    r: () => y,
 });
 var r = n(647438),
     i = n(574583),
@@ -24,9 +24,9 @@ function b(e) {
             privateThreadMode: c,
             location: d,
             onThreadCreated: b,
-            useDefaultThreadName: y,
+            useDefaultThreadName: _,
         } = e,
-        _ = r.useCallback((e, t, n, r) => {
+        y = r.useCallback((e, t, n, r) => {
             a.Z.sendMessage(e.id, u.ZP.parse(e, n), void 0, {
                 eagerDispatch: !1,
                 location: g.dy.THREAD_CREATION,
@@ -57,11 +57,11 @@ function b(e) {
         privateThreadMode: c,
         location: d,
         onThreadCreated: b,
-        useDefaultThreadName: y,
-        uploadHandler: _,
+        useDefaultThreadName: _,
+        uploadHandler: y,
     });
 }
-async function y(e) {
+async function _(e) {
     let t = new c.Z(),
         n = await t.uploadFiles(e);
     return {
@@ -69,7 +69,7 @@ async function y(e) {
         files: n,
     };
 }
-function _(e) {
+function y(e) {
     let { parentChannel: t } = e,
         { name: n, appliedTags: r } = (0, d.xH)((e) => {
             let { name: t, appliedTags: n } = e;
@@ -82,6 +82,6 @@ function _(e) {
         parentChannel: t,
         name: n,
         appliedTags: r,
-        upload: y,
+        upload: _,
     });
 }

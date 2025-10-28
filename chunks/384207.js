@@ -2,8 +2,8 @@ n.d(t, { C: () => u });
 var a = n(951288);
 n(647438);
 var r = n(481060),
-    i = n(646466),
-    l = n(484486),
+    l = n(646466),
+    i = n(484486),
     o = n(812381),
     s = n(11075),
     c = n(511010),
@@ -22,9 +22,9 @@ let u = () =>
                     }),
                     (0, a.jsx)(o.a, {}),
                     (0, a.jsx)(c.Z, { className: d.divider }),
-                    (0, a.jsx)(l.Z, {}),
+                    (0, a.jsx)(i.Z, {}),
                     (0, a.jsx)(c.Z, { className: d.divider }),
-                    (0, a.jsx)(i.O, {}),
+                    (0, a.jsx)(l.O, {}),
                 ],
             }),
         ],

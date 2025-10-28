@@ -99,7 +99,7 @@ class y extends i.Component {
                                         applicationName: t,
                                         onClick: (t) => {
                                             (0, d.ZDy)(async () => {
-                                                let { default: t } = await n.e("51868").then(n.bind(n, 796504));
+                                                let { default: t } = await n.e("78662").then(n.bind(n, 949391));
                                                 return (n) => (0, r.jsx)(t, b({ eulaId: e }, n));
                                             }),
                                                 t.preventDefault();

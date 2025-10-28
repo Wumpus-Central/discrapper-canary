@@ -164,21 +164,21 @@ function P(e) {
         (y.notifCenterItems = [t, ...y.notifCenterItems]),
         y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
 }
-function D(e) {
+function w(e) {
     let { id: t } = e;
     if (!y.notifCenterIds.has(t)) return !1;
     y.notifCenterIds.delete(t), (y.notifCenterItems = y.notifCenterItems.filter((e) => e.id !== t));
 }
-function w(e, t) {
+function D(e, t) {
     y.notifCenterItems = y.notifCenterItems.map((n) => (e.includes(n.id) ? b(g({}, n), { acked: t }) : n)).filter(O);
 }
 function L(e) {
     let { ids: t } = e;
-    w(t, !0);
+    D(t, !0);
 }
 function x(e) {
     let { ids: t } = e;
-    w(t, !1);
+    D(t, !1);
 }
 function M(e) {
     let { active: t } = e;
@@ -352,7 +352,7 @@ let z = new K(a.Z, {
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: x,
     GUILD_SCHEDULED_EVENT_UPDATE: H,
     NOTIFICATION_CENTER_ITEM_CREATE: P,
-    NOTIFICATION_CENTER_ITEM_DELETE: D,
+    NOTIFICATION_CENTER_ITEM_DELETE: w,
     NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: P,
     LOAD_NOTIFICATION_CENTER_ITEMS: T,
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: S,

@@ -39,8 +39,8 @@ var r = n(647438),
     N = n(594174),
     R = n(128064),
     P = n(202527),
-    D = n(413182),
-    w = n(695346),
+    w = n(413182),
+    D = n(695346),
     L = n(695463),
     x = n(620163),
     M = n(168308),
@@ -181,7 +181,7 @@ function H(e) {
 }
 function Y() {
     let { shouldMergeGameSettings: e } = P.b.useExperiment({ location: "settings" }),
-        { showRedesign: t } = D.b.useExperiment({ location: "settings" }),
+        { showRedesign: t } = w.b.useExperiment({ location: "settings" }),
         n = H({
             shouldMergeGameSettings: e,
             showRedesignedThirdPartyAccessSettings: t,
@@ -207,7 +207,7 @@ function Y() {
 function W() {
     var e, t, n, o;
     let I = (0, m.YO)().length,
-        D = (0, h.U)(),
+        w = (0, h.U)(),
         k = (0, i.e7)([C.Z], () => C.Z.getSearchParams()),
         j = (0, p.gU)(),
         G = (0, M.bC)(),
@@ -222,7 +222,7 @@ function W() {
         z = (0, g.Z)({ location: U.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         q = (0, i.e7)([T.Z], () => T.Z.hasLibraryApplication()),
         X = (0, i.e7)([v.default], () => v.default.hasTOTPEnabled()),
-        Q = w.Sb.useSetting(),
+        Q = D.Sb.useSetting(),
         J = (0, f.Z)(),
         $ = null == (o = (0, _.Z)()) || o,
         ee = (null == (t = (0, E.s)()) ? void 0 : t.length) > 0,
@@ -247,7 +247,7 @@ function W() {
         () =>
             (0, x.iE)({
                 unseenGiftCount: I,
-                showPrepaidPaymentPastDueWarning: D,
+                showPrepaidPaymentPastDueWarning: w,
                 searchParams: k,
                 numOfPendingFamilyRequests: j,
                 isOverlaySupported: G,
@@ -275,7 +275,7 @@ function W() {
                 isChatMentionSuggestionsSettingEnabled: el,
                 isCrossDMSearchEnabledSettingVisible: ec,
             }),
-        [Q, Z, et, en, q, ee, X, k, $, z, W, Y, V, G, H, J, j, K, F, D, I, er, ei, ea, eo, es, el, ec],
+        [Q, Z, et, en, q, ee, X, k, $, z, W, Y, V, G, H, J, j, K, F, w, I, er, ei, ea, eo, es, el, ec],
     );
 }
 function K(e) {
@@ -372,7 +372,7 @@ function X(e, t) {
 function Q() {
     let e = W(),
         { shouldMergeGameSettings: t } = P.b.useExperiment({ location: "settings" }),
-        { showRedesign: n } = D.b.useExperiment({ location: "settings" }),
+        { showRedesign: n } = w.b.useExperiment({ location: "settings" }),
         i = r.useMemo(
             () =>
                 H({

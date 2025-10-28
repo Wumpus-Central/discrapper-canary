@@ -169,10 +169,10 @@ function P(e) {
     }),
         _.delete(e.id);
 }
-function D(e) {
+function w(e) {
     (_ = new Map()), (p = new Map()), (h = new Map());
 }
-class w extends (r = i.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.default, u.Z);
     }
@@ -213,14 +213,14 @@ class w extends (r = i.ZP.Store) {
         return _.has(e);
     }
 }
-d(w, "displayName", "SearchMessageStore");
-let L = new w(a.Z, {
+d(D, "displayName", "SearchMessageStore");
+let L = new D(a.Z, {
     SEARCH_MESSAGES_START: O,
     SEARCH_MESSAGES_SUCCESS: v,
     SEARCH_MESSAGES_INDEXING: N,
     SEARCH_MESSAGES_FAILURE: R,
     SEARCH_MESSAGES_CLEAR: P,
-    SEARCH_MESSAGES_CLEAR_ALL: D,
+    SEARCH_MESSAGES_CLEAR_ALL: w,
     MESSAGE_UPDATE: I,
     MESSAGE_REACTION_ADD: T,
     MESSAGE_REACTION_ADD_MANY: S,

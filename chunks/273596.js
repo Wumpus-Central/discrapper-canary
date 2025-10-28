@@ -48,8 +48,8 @@ function P(e) {
         A = 0 === o.length && !f,
         Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, g.PM)()),
-        [D, R] = i.useState(!0),
-        M = i.useRef(D),
+        [R, D] = i.useState(!0),
+        M = i.useRef(R),
         [k, U] = i.useState(3),
         G = i.useRef(k),
         B = i.useRef(null),
@@ -64,14 +64,14 @@ function P(e) {
                 let t = e.contentRect;
                 if (null == t) return;
                 let n = t.width;
-                n < 1024 && M.current ? ((M.current = !1), R(!1)) : n > 1024 && !M.current && ((M.current = !0), R(!0));
+                n < 1024 && M.current ? ((M.current = !1), D(!1)) : n > 1024 && !M.current && ((M.current = !0), D(!0));
                 let r = 1;
-                for (n -= 450 * !!D, n -= 280; n > 0; ) (n -= 264), (r += 1);
+                for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
                 r !== G.current && ((G.current = r), U(r)), H(t);
             },
-            [D, H],
+            [R, H],
         ),
-        F = (0, u.y)(V, [D, H]);
+        F = (0, u.y)(V, [R, H]);
     i.useEffect(() => {
         L((0, g.PM)());
     }, [y]),
@@ -98,9 +98,9 @@ function P(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16,
                                 },
-                                className: a()(C.heading, { [C.headingTopbar]: !D }),
+                                className: a()(C.heading, { [C.headingTopbar]: !R }),
                                 children: [
-                                    !D &&
+                                    !R &&
                                         (0, r.jsxs)("div", {
                                             className: C.headingFilters,
                                             children: [(0, r.jsx)(E.Z, { loadId: t }), (0, r.jsx)(I.Z, { loadId: t })],
@@ -111,16 +111,16 @@ function P(e) {
                             i,
                         );
                     case 1:
-                        return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: D }) }, i);
+                        return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
                 }
             },
-            [A, D, t],
+            [A, R, t],
         ),
         q = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
-                        let t = D ? 16 : 50;
+                        let t = R ? 16 : 50;
                         return A ? t + 448 : t;
                     case 1:
                         return 120;
@@ -128,7 +128,7 @@ function P(e) {
                         throw Error("[getSectionHeight] Failed for section: ".concat(e));
                 }
             },
-            [A, D],
+            [A, R],
         ),
         K = i.useCallback(
             (e, t) => {
@@ -221,7 +221,7 @@ function P(e) {
                 ),
             [P],
         ),
-        ee = D ? S : T;
+        ee = R ? S : T;
     return (0, r.jsx)("div", {
         className: C.container,
         ref: F,
@@ -240,7 +240,7 @@ function P(e) {
             chunkSize: 24,
             onScroll: $,
             renderAccessory: (e) =>
-                D
+                R
                     ? (0, r.jsx)("div", {
                           className: C.sidebar,
                           style: { height: e },

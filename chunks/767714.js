@@ -103,9 +103,9 @@ let y = function (e) {
             confirmationFooter: N,
             paymentModalBanner: R,
             color: P,
-            iconColor: D = "currentColor",
+            iconColor: w = "currentColor",
         } = e,
-        w = E(e, [
+        D = E(e, [
             "subscriptionTier",
             "onClick",
             "size",
@@ -168,14 +168,14 @@ let y = function (e) {
                                         p,
                                     ),
                                     buttonShineClassName:
-                                        "buttonShineClassName" in w
-                                            ? w.buttonShineClassName
+                                        "buttonShineClassName" in D
+                                            ? D.buttonShineClassName
                                             : n === s.Tt.BRAND_INVERTED
                                               ? _.brandShine
                                               : void 0,
                                     pauseAnimation: !L || T,
                                 },
-                                w,
+                                D,
                                 e,
                             ),
                             {
@@ -183,7 +183,7 @@ let y = function (e) {
                                     I &&
                                         (0, r.jsx)(l.SrA, {
                                             size: "md",
-                                            color: D,
+                                            color: w,
                                             className: a()(_.premiumIcon, b),
                                         }),
                                     (0, r.jsx)("span", {

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(856607),
     R = n(594496),
     P = n(856768),
-    D = n(981631),
-    w = n(388032),
+    w = n(981631),
+    D = n(388032),
     L = n(813709);
 function x(e, t, n) {
     return (
@@ -106,7 +106,7 @@ function G(e, t) {
 function B(e) {
     (0, l.ZDy)(async () => {
         let { default: t } = await n.e("84509").then(n.bind(n, 933696));
-        return (n) => (0, r.jsx)(t, M({ source: j(M({}, e), { page: D.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, r.jsx)(t, M({ source: j(M({}, e), { page: w.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
 function Z(e) {
@@ -133,9 +133,9 @@ function Z(e) {
     i.useEffect(() => () => c.Z.wait(A.W3), []),
         i.useEffect(() => {
             null != Z &&
-                f.ZP.trackWithMetadata(D.rMx.SETTINGS_PANE_VIEWED, {
+                f.ZP.trackWithMetadata(w.rMx.SETTINGS_PANE_VIEWED, {
                     settings_type: "guild",
-                    destination_pane: D.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                    destination_pane: w.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                     source: Z,
                 });
         }, [Z]);
@@ -148,8 +148,8 @@ function Z(e) {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: w.intl.format(w.t["/PTB2E"], {
-                            helpCenterLink: T.Z.getArticleURL(D.BhN.GUILD_PROFILES),
+                        children: D.intl.format(D.t["/PTB2E"], {
+                            helpCenterLink: T.Z.getArticleURL(w.BhN.GUILD_PROFILES),
                         }),
                     }),
                     null != t
@@ -165,7 +165,7 @@ function Z(e) {
                                       profilePreviewTitle: (0, r.jsx)(l.Heading, {
                                           variant: "heading-md/medium",
                                           className: L.profilePreviewTitle,
-                                          children: w.intl.formatToPlainString(w.t.Tc0slG, {
+                                          children: D.intl.formatToPlainString(D.t.Tc0slG, {
                                               guildName: null == t ? void 0 : t.name,
                                           }),
                                       }),

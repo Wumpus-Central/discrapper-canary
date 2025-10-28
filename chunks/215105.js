@@ -71,8 +71,8 @@ function C(e) {
             onClose: N,
             entry: R,
         } = e,
-        { resetInteraction: P, setInteractionToast: D } = (0, g.Xo)(),
-        { primaryColor: w } = (0, b.z)(),
+        { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
+        { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(""),
         [M, k] = i.useState((0, u.JM)(L)),
         j = i.useRef(!1),
@@ -99,7 +99,7 @@ function C(e) {
                 sourceType: s,
                 sourceDetails: f,
             });
-            D(null);
+            w(null);
             try {
                 await (0, m.Z)({
                     userId: t.id,
@@ -110,7 +110,7 @@ function C(e) {
                     entry: R,
                 });
             } catch (e) {}
-            D(y.P.REPLY);
+            w(y.P.REPLY);
         },
         Z = {
             [I.status]: s === y.n_.STATUS,
@@ -121,7 +121,7 @@ function C(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)("div", {
-            className: o()(I.container, Z, { [I.customProfileTheme]: null != w }),
+            className: o()(I.container, Z, { [I.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.ZP, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,

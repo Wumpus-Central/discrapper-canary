@@ -27,7 +27,7 @@ var r,
     N = n(944486),
     R = n(797258),
     P = n(981631);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -91,7 +91,7 @@ function j() {
     let i = g.Z.getActivities();
     n.push(...i);
     let o = A.Z.getStream();
-    null != o && n.push(w({ type: P.IIU.STREAMING }, o));
+    null != o && n.push(D({ type: P.IIU.STREAMING }, o));
     let l = new Set();
     s().forEach(k, (e) => {
         let [, t] = e;
@@ -105,7 +105,7 @@ function j() {
     if (null != c && null != c.name && !v) {
         let t = C.Z.getGameByName(c.name);
         n.push(
-            w(
+            D(
                 {
                     type: P.IIU.PLAYING,
                     name: c.name,
@@ -117,9 +117,9 @@ function j() {
         );
     }
     let I = y.Z.getActivity();
-    null != I && n.push(w({ type: P.IIU.LISTENING }, I));
-    let D = m.Z.getCurrentHangStatus();
-    if (null != D) {
+    null != I && n.push(D({ type: P.IIU.LISTENING }, I));
+    let w = m.Z.getCurrentHangStatus();
+    if (null != w) {
         let e = m.Z.getCustomHangStatus(),
             { defaultStatusVariant: r } = (0, h.gx)({
                 guildId: null == (t = S.Z.getChannel(N.Z.getVoiceChannelId())) ? void 0 : t.guild_id,
@@ -128,7 +128,7 @@ function j() {
         n.push({
             type: P.IIU.HANG_STATUS,
             name: "Hang Status",
-            state: "".concat(D, ":").concat(r),
+            state: "".concat(w, ":").concat(r),
             details: null == e ? void 0 : e.status,
             emoji: null == e ? void 0 : e.emoji,
         });
@@ -149,7 +149,7 @@ function B(e) {
 }
 function Z(e) {
     let { localActivities: t } = e;
-    (k = w({}, t)), j();
+    (k = D({}, t)), j();
 }
 function F() {
     let e = {},
@@ -164,7 +164,7 @@ function F() {
                 (0, d.D)(o),
                 s,
             );
-        c !== l ? ((e[i] = [a, x(w({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
+        c !== l ? ((e[i] = [a, x(D({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
     }
     return t ? ((k = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
@@ -199,7 +199,7 @@ class H extends (r = l.ZP.Store) {
         return null;
     }
 }
-D(H, "displayName", "LocalActivityStore");
+w(H, "displayName", "LocalActivityStore");
 let Y = new H(c.Z, {
     ROBLOX_SUBGAME_UPDATE: j,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: j,

@@ -86,14 +86,14 @@ function I(e) {
         });
     if (null == n || null == T) return null;
     let P = (0, f.a)(T).find((e) => e.value === c),
-        D = +(null != P),
-        w = null != S && null != P && S.variantId === P.value,
+        w = +(null != P),
+        D = null != S && null != P && S.variantId === P.value,
         L = () => {
-            null != P && (w ? (0, d.rX)(T.system, n, null) : (0, d.rX)(T.system, n, P.value));
+            null != P && (D ? (0, d.rX)(T.system, n, null) : (0, d.rX)(T.system, n, P.value));
         },
         x = (0, r.jsx)(v, { url: t }),
         M = null;
-    return (1 === D && null != P
+    return (1 === w && null != P
         ? (M = (0, r.jsx)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
@@ -142,8 +142,8 @@ function I(e) {
                   null != P
                       ? (0, r.jsx)(o.Button, {
                             fullWidth: !0,
-                            variant: w ? "critical-primary" : "primary",
-                            text: w ? "Clear Treatment ".concat(P.value) : "Apply Treatment ".concat(P.value),
+                            variant: D ? "critical-primary" : "primary",
+                            text: D ? "Clear Treatment ".concat(P.value) : "Apply Treatment ".concat(P.value),
                             onClick: L,
                         })
                       : (0, r.jsx)("div", {

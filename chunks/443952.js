@@ -32,8 +32,8 @@ var i = n(243814),
     Z = n(452426),
     w = n(561205),
     L = n(600027),
-    D = n(852926),
-    R = n(186901),
+    R = n(852926),
+    D = n(186901),
     M = n(981631),
     k = n(701488);
 async function U(e, t, n, r) {
@@ -46,7 +46,7 @@ async function U(e, t, n, r) {
         );
     let a = (0, m.Z)(l, y.Z);
     if (a) {
-        let { lock: t } = (0, D.jU)(e);
+        let { lock: t } = (0, R.jU)(e);
         return (0, o.h7)(l, a).then(() => {
             throw (
                 (t(),
@@ -68,7 +68,7 @@ async function U(e, t, n, r) {
 let G = {
     [M.Etm.SEND_ACTIVITY_JOIN_INVITE]: {
         scope: {
-            [R.Gp.ANY]: [i.x.RPC, R.lH],
+            [D.Gp.ANY]: [i.x.RPC, D.lH],
         },
         handler(e) {
             let {
@@ -82,7 +82,7 @@ let G = {
     },
     [M.Etm.CLOSE_ACTIVITY_JOIN_REQUEST]: {
         scope: {
-            [R.Gp.ANY]: [i.x.RPC, R.lH],
+            [D.Gp.ANY]: [i.x.RPC, D.lH],
         },
         handler(e) {
             let {
@@ -104,7 +104,7 @@ let G = {
     },
     [M.Etm.ACTIVITY_INVITE_USER]: {
         scope: {
-            [R.Gp.ANY]: [i.x.RPC, R.lH],
+            [D.Gp.ANY]: [i.x.RPC, D.lH],
         },
         validation: (e) =>
             (0, Z.Z)(e)
@@ -127,7 +127,7 @@ let G = {
     },
     [M.Etm.ACCEPT_ACTIVITY_INVITE]: {
         scope: {
-            [R.Gp.ANY]: [i.x.RPC, R.lH],
+            [D.Gp.ANY]: [i.x.RPC, D.lH],
         },
         validation: (e) =>
             (0, Z.Z)(e)
@@ -145,7 +145,7 @@ let G = {
                     socket: t,
                     args: { type: n, user_id: r, session_id: i, channel_id: l, message_id: a, application_id: s },
                 } = e,
-                o = t.transport === R.He.IPC && null != s ? s : t.application.id;
+                o = t.transport === D.He.IPC && null != s ? s : t.application.id;
             if (null == o) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No application.");
             let u = Promise.resolve(!1);
             return (
@@ -165,7 +165,7 @@ let G = {
     },
     [M.Etm.OPEN_INVITE_DIALOG]: {
         scope: {
-            [R.Gp.ANY]: [i.x.RPC, R.lH, R.wE],
+            [D.Gp.ANY]: [i.x.RPC, D.lH, D.wE],
         },
         handler(e) {
             let { socket: t } = e,
@@ -252,7 +252,7 @@ let G = {
     },
     [M.Etm.INITIATE_IMAGE_UPLOAD]: (0, l.S)(M.Etm.INITIATE_IMAGE_UPLOAD, {
         scope: {
-            [R.Gp.ANY]: [i.x.RPC, R.lH, R.wE],
+            [D.Gp.ANY]: [i.x.RPC, D.lH, D.wE],
         },
         handler(e) {
             var t;
@@ -307,7 +307,7 @@ let G = {
         },
     }),
     [M.Etm.OPEN_SHARE_MOMENT_DIALOG]: (0, l.S)(M.Etm.OPEN_SHARE_MOMENT_DIALOG, {
-        scope: { [R.Gp.ANY]: [R.wE] },
+        scope: { [D.Gp.ANY]: [D.wE] },
         handler(e) {
             var t;
             let {
@@ -331,7 +331,7 @@ let G = {
     }),
     [M.Etm.SHARE_INTERACTION]: (0, l.S)(M.Etm.SHARE_INTERACTION, {
         scope: {
-            [R.Gp.ANY]: [R.wE, R.lH],
+            [D.Gp.ANY]: [D.wE, D.lH],
         },
         handler(e) {
             var t;
@@ -379,7 +379,7 @@ let G = {
             }
             return new Promise((e) => {
                 let t = !1,
-                    r = (0, D.jU)(d),
+                    r = (0, R.jU)(d),
                     l = a.z1l;
                 (E.Z.getWindowOpen(M.KJ3.ACTIVITY_POPOUT) || r.context === M.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({

@@ -70,8 +70,8 @@ let C = v.QZA.CLOSED,
     N = {},
     R = {},
     P = !1,
-    D = !1,
-    w = null,
+    w = !1,
+    D = null,
     L = [
         "name",
         "type",
@@ -116,7 +116,7 @@ function M(e) {
     if (null == t) return j();
     (C = v.QZA.OPEN),
         (o = a = t),
-        (w = "location" in e && null != e.location ? e.location : null),
+        (D = "location" in e && null != e.location ? e.location : null),
         (i = "subsection" in e ? e.subsection : null),
         null != o && (o = o.set("nsfw", o.isNSFW())),
         (s = O.Z.getChannel(o.parent_id)),
@@ -156,7 +156,7 @@ function k(e) {
                 ));
 }
 function j() {
-    (D = !1), (C = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
+    (w = !1), (C = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
 }
 function U() {
     (C = v.QZA.SUBMITTING), (N = {});
@@ -290,7 +290,7 @@ class J extends (c = p.ZP.Store) {
         return o !== a;
     }
     isOpen() {
-        return D;
+        return w;
     }
     getSection() {
         return r;
@@ -323,7 +323,7 @@ class J extends (c = p.ZP.Store) {
             invites: R,
             selectedOverwriteId: l,
             hasChanges: this.hasChanges(),
-            analyticsLocation: w,
+            analyticsLocation: D,
         };
     }
 }

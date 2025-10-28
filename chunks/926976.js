@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(388685), n(49124);
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(886118),
     x = n(301801),
     f = n(594174),
-    g = n(572004),
-    b = n(55935),
+    b = n(572004),
+    g = n(55935),
     v = n(120816),
     j = n(31336),
     _ = n(257785),
@@ -50,15 +50,15 @@ function P(e) {
     });
 }
 function I(e) {
-    let { name: t, children: n, copyValue: i } = e,
-        [l, o] = r.useState(!1);
+    let { name: t, children: n, copyValue: l } = e,
+        [i, o] = r.useState(!1);
     return (
         r.useEffect(() => {
-            if (l) {
+            if (i) {
                 let e = setTimeout(() => o(!1), 1000);
                 return () => clearTimeout(e);
             }
-        }, [l]),
+        }, [i]),
         (0, a.jsxs)("div", {
             className: T.customProperty,
             children: [
@@ -70,8 +70,8 @@ function I(e) {
                 (0, a.jsx)(u.P3F, {
                     tag: "span",
                     className: T.copyPropertyButton,
-                    onClick: () => (0, g.JG)(JSON.stringify(i), () => o(!0)),
-                    children: l
+                    onClick: () => (0, b.JG)(JSON.stringify(l), () => o(!0)),
+                    children: i
                         ? (0, a.jsx)(u.kmB, {
                               color: "currentColor",
                               size: "sm",
@@ -93,17 +93,17 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
             group: S.v0.NONE,
             render: (e) => {
                 let {
-                        loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: i },
+                        loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
                         onClose: o,
                         filteredEvents: c,
                     } = e,
-                    d = f.default.getUser(i),
+                    d = f.default.getUser(l),
                     h = s()(r);
                 return (0, a.jsxs)("div", {
                     "data-mtctest-ignore": "true",
                     children: [
                         (0, a.jsxs)(p.ZP, {
-                            className: l()(O.headerBar, T.subPanelHeaderBar),
+                            className: i()(O.headerBar, T.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(p.ZP.Icon, {
                                     icon: u.IeX,
@@ -116,7 +116,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                         (0, a.jsx)(u.P3F, {
                                             tag: "span",
                                             className: T.copyEventButton,
-                                            onClick: () => (0, g.JG)(t),
+                                            onClick: () => (0, b.JG)(t),
                                             children: (0, a.jsx)(u.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -128,7 +128,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     icon: u.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, g.JG)(
+                                        (0, b.JG)(
                                             JSON.stringify(
                                                 (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -159,7 +159,7 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                     {
                                                         event: t,
                                                         timestamp: r,
-                                                        fingerprint: i,
+                                                        fingerprint: l,
                                                         user: null == d ? void 0 : d.id,
                                                     },
                                                     n,
@@ -185,8 +185,8 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     copyValue: r.toISOString(),
                                     children: (0, a.jsxs)("time", {
                                         dateTime: r.toISOString(),
-                                        title: (0, b.vc)(h, "LLLL"),
-                                        children: ["(", s().locale(), ") ", (0, b.Y4)(h)],
+                                        title: (0, g.vc)(h, "LLLL"),
+                                        children: ["(", s().locale(), ") ", (0, g.Y4)(h)],
                                     }),
                                 }),
                                 null != d &&
@@ -197,15 +197,15 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     }),
                                 (0, a.jsx)(_.Z9, {
                                     name: "Fingerprint",
-                                    copyValue: i,
-                                    children: (0, a.jsx)("code", { children: i }),
+                                    copyValue: l,
+                                    children: (0, a.jsx)("code", { children: l }),
                                 }),
                             ],
                         }),
                         (0, a.jsx)(P, {
                             children: Object.entries(n).map((e) => {
                                 let [n, r] = e,
-                                    i = w.has(n)
+                                    l = w.has(n)
                                         ? ((e, t, n) => {
                                               let a = e.filter((e) => e.event === t);
                                               if (0 === a.length)
@@ -214,14 +214,14 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                       count: 0,
                                                   };
                                               let r = null,
-                                                  i = 0;
+                                                  l = 0;
                                               for (let e of a) {
                                                   let t = e.properties[n];
-                                                  "number" == typeof t && ((i += 1), null == r ? (r = t) : (r += t));
+                                                  "number" == typeof t && ((l += 1), null == r ? (r = t) : (r += t));
                                               }
                                               return {
                                                   average: null !== r ? r / a.length : null,
-                                                  count: i,
+                                                  count: l,
                                               };
                                           })(c, t, n)
                                         : null;
@@ -244,15 +244,15 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                 },
                                                 n,
                                             ),
-                                            null !== i &&
-                                                null !== i.average &&
+                                            null !== l &&
+                                                null !== l.average &&
                                                 (0, a.jsx)(
                                                     I,
                                                     {
                                                         name: "".concat(n, "_avg:"),
                                                         copyValue: { [n]: r || null },
                                                         children: (0, a.jsxs)("code", {
-                                                            children: [i.average.toFixed(3), " (", i.count, ")"],
+                                                            children: [l.average.toFixed(3), " (", l.count, ")"],
                                                         }),
                                                     },
                                                     "".concat(n, "_avg"),
@@ -307,23 +307,23 @@ let w = new Set(["client_performance_cpu", "client_performance_memory"]),
 function D() {
     let e = r.useRef(null),
         [t, n] = r.useState(""),
-        i = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
+        l = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
         [o, s] = r.useState(() => Object.keys(R)),
         [m, p] = r.useState(v.Z.loggedEvents),
         h = r.useCallback((e) => {
             p(e);
         }, []);
-    (0, x.BO)(t, v.Z.loggedEvents, h, A, [i]);
+    (0, x.BO)(t, v.Z.loggedEvents, h, A, [l]);
     let f = m.filter((e) => {
             for (let t of o) if (R[t].filter(e)) return !0;
             return !1;
         }),
-        [g, b] = r.useState(void 0),
-        _ = f.find((e) => e.key === g),
+        [b, g] = r.useState(void 0),
+        _ = f.find((e) => e.key === b),
         { TabBar: P, renderSelectedTab: I } = (0, S.ZP)({ tabs: k }, []);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(O.panel, T.panel),
+        className: i()(O.panel, T.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: T.toolbar,
@@ -350,7 +350,7 @@ function D() {
                             return (0, a.jsx)(
                                 u.P3F,
                                 {
-                                    className: l()(T.filter, o.includes(t) && T.activeFilter),
+                                    className: i()(T.filter, o.includes(t) && T.activeFilter),
                                     onClick: () => {
                                         s((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -375,8 +375,8 @@ function D() {
             (0, a.jsx)(C.Z, {
                 columns: N,
                 data: f,
-                selectedRowKey: g,
-                onClickRow: (e) => b(e.key),
+                selectedRowKey: b,
+                onClickRow: (e) => g(e.key),
             }),
             null != _ &&
                 (0, a.jsxs)(y.Z, {
@@ -387,7 +387,7 @@ function D() {
                         (0, a.jsx)(P, {}),
                         I({
                             loggedEvent: _,
-                            onClose: () => b(void 0),
+                            onClose: () => g(void 0),
                             filteredEvents: f,
                         }),
                     ],

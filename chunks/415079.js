@@ -135,8 +135,8 @@ b((e) => ({
 }));
 let R = ["continue", "continuePrimaryKey", "advance"],
     P = {},
-    D = new WeakMap(),
     w = new WeakMap(),
+    D = new WeakMap(),
     L = {
         get(e, t) {
             if (!R.includes(t)) return e[t];
@@ -145,7 +145,7 @@ let R = ["continue", "continuePrimaryKey", "advance"],
                 n ||
                     (n = P[t] =
                         function (...e) {
-                            D.set(this, w.get(this)[t](...e));
+                            w.set(this, D.get(this)[t](...e));
                         }),
                 n
             );
@@ -155,7 +155,7 @@ async function* x(...e) {
     let t = this;
     if ((t instanceof IDBCursor || (t = await t.openCursor(...e)), !t)) return;
     let n = new Proxy(t, L);
-    for (w.set(n, t), g.set(n, I(t)); t; ) yield n, (t = await (D.get(n) || t.continue())), D.delete(n);
+    for (D.set(n, t), g.set(n, I(t)); t; ) yield n, (t = await (w.get(n) || t.continue())), w.delete(n);
 }
 function M(e, t) {
     return (
@@ -674,20 +674,20 @@ let ev = new (class {
     eN,
     eR,
     eP = [],
-    eD = !1,
-    ew = 0,
+    ew = !1,
+    eD = 0,
     eL = !1,
     ex = !1,
     eM = [],
     ek = !1,
-    ej = () => eL && !eD && Date.now() <= eA,
+    ej = () => eL && !ew && Date.now() <= eA,
     eU = ({ apiUrl: e, config: t, triggerSnapshot: n, forceInit: r = !1 }) => {
         (eL && !r) ||
             (l.a.isStorageAvailable
                 ? ((eP = []),
                   eM.splice(0),
                   eI.splice(0),
-                  (ew = 0),
+                  (eD = 0),
                   (eN = n),
                   (eS = e),
                   (eT = {
@@ -700,7 +700,7 @@ let ev = new (class {
                   eH(),
                   eL || (eR = window.setInterval(eF, 500)),
                   (eL = !0))
-                : (eD = !0));
+                : (ew = !0));
     },
     eG = [_.Drag, _.Input, _.MediaInteraction, _.MouseInteraction, _.MouseMove, _.Scroll, _.Selection, _.TouchMove],
     eB = (e) => e.type === f.Custom || (e.type === f.IncrementalSnapshot && eG.includes(e.data.source)),
@@ -715,7 +715,7 @@ let ev = new (class {
         if (eP.length || ek) return;
         ek = !0;
         let e = await ez();
-        if (!e) return void (eD = !0);
+        if (!e) return void (ew = !0);
         eM.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eP.push(e)), (ek = !1);
     },
     eH = () => {
@@ -723,10 +723,10 @@ let ev = new (class {
         if (e) {
             l.b.info("Read stored session state", e);
             let t = JSON.parse(e);
-            (eD = t.disabled),
+            (ew = t.disabled),
                 (eT = t.metadata),
                 (eP = t.uploadUrls),
-                (ew = t.currentIndex),
+                (eD = t.currentIndex),
                 (eA = t.expirationTimestamp),
                 t.pendingEventTimestamp &&
                     (l.b.info(`Uploading with pending timestamp: ${t.pendingEventTimestamp}`),
@@ -747,7 +747,7 @@ let ev = new (class {
             if (!n.ok) throw Error(`Error ${t}`);
             return n;
         } catch {
-            eD = !0;
+            ew = !0;
         }
     },
     eK = async (e, t) => {
@@ -775,7 +775,7 @@ let ev = new (class {
             n = {
                 responseGroupUuid: t,
                 surveyId: e,
-                index: ew + 1,
+                index: eD + 1,
             };
         l.b.info("Fetching always-on upload urls", n);
         let r = await eW(
@@ -807,11 +807,11 @@ let ev = new (class {
     eX = (e) => {
         var t, n, r;
         let i = e.length ? e[e.length - 1].timestamp : Date.now(),
-            a = ew,
+            a = eD,
             o =
                 (null == (n = null == (t = window.UserLeap) ? void 0 : t.config) ? void 0 : n.customMetadata) ??
                 (null == (r = window.__cfg) ? void 0 : r.customMetadata);
-        ew++,
+        eD++,
             e.push({
                 timestamp: i,
                 type: f.Custom,
@@ -850,10 +850,10 @@ window.addEventListener("beforeunload", async () => {
                 let e;
                 eI.length && (e = eI[0].timestamp);
                 let t = {
-                    disabled: eD,
+                    disabled: ew,
                     metadata: eT,
                     uploadUrls: eP,
-                    currentIndex: ew,
+                    currentIndex: eD,
                     pendingEventTimestamp: e,
                     expirationTimestamp: eA,
                 };

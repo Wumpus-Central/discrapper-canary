@@ -76,7 +76,7 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ function D(e, t) {
         e
     );
 }
-let w = (e, t) => {
+let D = (e, t) => {
         var n;
         return !!(null == (n = e.discounts) ? void 0 : n.some((e) => e.type === t));
     },
@@ -101,7 +101,7 @@ let w = (e, t) => {
         );
     };
 function x(e, t, n, r) {
-    let i = w(e, d.eW.PREMIUM_TRIAL);
+    let i = D(e, d.eW.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case T.Xh.PREMIUM_MONTH_LEGACY:
         case T.Xh.PREMIUM_YEAR_LEGACY:
@@ -176,7 +176,7 @@ function M(e) {
                     children: (e) =>
                         (0, r.jsx)(
                             u.idN,
-                            D(
+                            w(
                                 R(
                                     {
                                         size: "md",
@@ -219,7 +219,7 @@ function k(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         u.idN,
-                        D(
+                        w(
                             R(
                                 {
                                     size: "md",
@@ -285,7 +285,7 @@ function U(e) {
                 null != e.discounts &&
                 e.discounts.find((e) => e.type === d.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION),
         ),
-        f = w(s, d.eW.PREMIUM_TRIAL),
+        f = D(s, d.eW.PREMIUM_TRIAL),
         _ = L(s, d.eW.SUBSCRIPTION_PLAN),
         p = s.quantity * _,
         h = s.amount + (null != c ? c.amount : 0) - p + (null != u ? u.amount : 0),

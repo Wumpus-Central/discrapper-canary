@@ -31,8 +31,8 @@ var r = n(951288),
     Z = n(314533),
     w = n(9029),
     L = n(935347),
-    D = n(560067),
-    R = n(823169),
+    R = n(560067),
+    D = n(823169),
     M = n(845767),
     k = n(891304),
     U = n(96051),
@@ -85,8 +85,8 @@ var r = n(951288),
     eZ = n(703016),
     ew = n(892001),
     eL = n(497805),
-    eD = n(332754),
-    eR = n(313789),
+    eR = n(332754),
+    eD = n(313789),
     eM = n(507468),
     ek = n(722589),
     eU = n(518596),
@@ -323,7 +323,7 @@ let ts = [
         path: [e3.Z5c.GUILD_CREATE],
         render: function () {
             return (
-                (0, K.h)(() => D.Z.openCreateGuildModal({ location: "External link" })),
+                (0, K.h)(() => R.Z.openCreateGuildModal({ location: "External link" })),
                 (0, r.jsx)(a.l_, { to: ez.Z.defaultRoute })
             );
         },
@@ -393,7 +393,7 @@ let ts = [
         path: [e3.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
             return (
-                (0, K.h)(() => (0, eU.openUserSettings)(eR.n.GIFT_PANEL, { section: e3.oAB.INVENTORY })),
+                (0, K.h)(() => (0, eU.openUserSettings)(eD.n.GIFT_PANEL, { section: e3.oAB.INVENTORY })),
                 (0, r.jsx)(a.l_, { to: ez.Z.defaultRoute })
             );
         },
@@ -528,7 +528,7 @@ class tu extends i.PureComponent {
             E.Z.initialize(),
             eZ.Z.init(),
             eX.Z.init(),
-            eD.Z.init(),
+            eR.Z.init(),
             ej.Z.initialize(),
             eP.Z.initialize(),
             eL.Z.initialize(),
@@ -555,7 +555,7 @@ class tu extends i.PureComponent {
             ea.Z.initialize(),
             eE.Z.initialize(),
             eg.Z.initialize(),
-            R.Z.initialize(),
+            D.Z.initialize(),
             P.Z.initialize(),
             x.Z.initialize(),
             y.Z.initialize(),
@@ -588,7 +588,7 @@ class tu extends i.PureComponent {
             Z.Z.terminate(),
             w.Z.terminate(),
             eg.Z.terminate(),
-            R.Z.terminate(),
+            D.Z.terminate(),
             H.Z.terminate(),
             P.Z.terminate(),
             x.Z.terminate(),

@@ -57,7 +57,7 @@ function L(e, t, n) {
     let o = s.size > 0;
     v.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(o, t), l);
 }
-let D = {
+let R = {
         [x.kg4.TOGGLE_PRIORITY_SPEAKER]: {
             onTrigger() {},
             keyEvents: {},
@@ -68,7 +68,7 @@ let D = {
         },
         [x.kg4.PUSH_TO_TALK]: {
             onTrigger(e, t) {
-                v.Z.getMode(t.context) === x.pM4.PUSH_TO_TALK && ((D[x.kg4.PUSH_TO_TALK].isPressed = e), L(e, !1, t));
+                v.Z.getMode(t.context) === x.pM4.PUSH_TO_TALK && ((R[x.kg4.PUSH_TO_TALK].isPressed = e), L(e, !1, t));
             },
             keyEvents: {
                 keyup: !0,
@@ -79,7 +79,7 @@ let D = {
         [x.kg4.PUSH_TO_TALK_PRIORITY]: {
             onTrigger(e, t) {
                 (v.Z.getMode() === x.pM4.PUSH_TO_TALK || P.Z.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
-                    ((D[x.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), L(e, !0, t));
+                    ((R[x.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), L(e, !0, t));
             },
             keyEvents: {
                 keyup: !0,
@@ -91,7 +91,7 @@ let D = {
             onTrigger(e, t) {
                 v.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
                     P.Z.getCurrentConfig({ location: "keybinds" }).separateKeybind &&
-                    ((D[x.kg4.VAD_PRIORITY].isPressed = e), L(e, !0, t));
+                    ((R[x.kg4.VAD_PRIORITY].isPressed = e), L(e, !0, t));
             },
             keyEvents: {
                 keyup: !0,
@@ -102,7 +102,7 @@ let D = {
         [x.kg4.PUSH_TO_MUTE]: {
             onTrigger(e) {
                 v.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
-                    ((D[x.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
+                    ((R[x.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
             },
             keyEvents: {
                 keyup: !0,
@@ -287,7 +287,7 @@ let D = {
             },
         },
     },
-    R = null;
+    D = null;
 function M() {
     w.clear(),
         v.Z.getMediaEngine().eachConnection((e) => {
@@ -299,7 +299,7 @@ class k extends u.Z {
         r.Z.wait(() =>
             r.Z.dispatch({
                 type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
-                keybinds: D,
+                keybinds: R,
             }),
         ),
             r.Z.subscribe("AUDIO_SET_MODE", M),
@@ -310,7 +310,7 @@ class k extends u.Z {
     }
     handleVoiceChannelSelect(e) {
         let { currentVoiceChannelId: t } = e;
-        t !== R && M(), (R = t);
+        t !== D && M(), (D = t);
     }
 }
 let U = new k();

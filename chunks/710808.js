@@ -78,7 +78,7 @@ async function P() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
-function D() {
+function w() {
     let e = T.intl.string(T.t["fKBB8+"]),
         t = T.intl.string(T.t.BvyxE7);
     (0, s.h7j)((n) =>
@@ -103,7 +103,7 @@ function D() {
         ),
     );
 }
-function w(e) {
+function D(e) {
     var t;
     let n = T.intl.string(T.t.QZg0J7),
         i = null != e ? e : T.intl.string(T.t.VzHcSm),
@@ -187,9 +187,9 @@ function x() {
             await g.Z.getMediaEngine().writeAudioDebugState(),
                 await b.Z.submitLiveCrashReport({ message: { message: "User Live Dump" } }),
                 await (0, _.E)(v.GU0.RTC),
-                D();
+                w();
         } catch (e) {
-            w(e.displayMessage);
+            D(e.displayMessage);
         }
     }
     return (0, r.jsxs)(r.Fragment, {

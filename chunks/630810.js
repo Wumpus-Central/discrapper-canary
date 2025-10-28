@@ -8,10 +8,10 @@ var i,
     r = n(710845),
     a = n(592125),
     o = n(70956),
-    d = n(651655);
-let u = +o.Z.Millis.SECOND + 10;
+    u = n(651655);
+let d = +o.Z.Millis.SECOND + 10;
 var c = (((i = {})[(i.GROUP_DM = 0)] = "GROUP_DM"), (i[(i.USER = 1)] = "USER"), (i[(i.CHANNEL = 2)] = "CHANNEL"), i);
-class g extends d.Z {
+class g extends u.Z {
     _sendInvite(e, t, n, i, l) {
         s.Z.sendInvite(e.id, t, n, i).then(
             () => l(null, !0),
@@ -36,7 +36,7 @@ class g extends d.Z {
         }
     }
     constructor() {
-        super(new r.Z("InviteQueue"), u);
+        super(new r.Z("InviteQueue"), d);
     }
 }
 let h = new g();

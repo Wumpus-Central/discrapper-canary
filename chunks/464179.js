@@ -167,8 +167,8 @@ let O = "US",
     N = (0, u.hQ)(),
     R = (0, u.hQ)(),
     P = (0, u.hQ)(),
-    D = (0, u.hQ)(),
     w = (0, u.hQ)(),
+    D = (0, u.hQ)(),
     L = (0, u.hQ)();
 var x = (function (e) {
         return (
@@ -295,7 +295,7 @@ let k = {
     }),
     F = (e) => ({
         name: "city",
-        id: D,
+        id: w,
         title: () => _.intl.string(_.t.bUSWlw),
         autoComplete: "address-level2",
         placeholder: () => _.intl.string(_.t["5rRx31"]),
@@ -331,7 +331,7 @@ let k = {
         }
         return {
             name: "postalCode",
-            id: w,
+            id: D,
             title: () => t,
             autoComplete: "postal-code",
             placeholder: () => n,

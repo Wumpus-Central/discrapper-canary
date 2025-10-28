@@ -49,7 +49,7 @@ function P(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -130,7 +130,7 @@ function V(e) {
     let { streamKey: t } = e,
         n = (0, p.my)(t);
     r.delete(t),
-        r.set(t, w(P({}, n), { state: C.jm8.CONNECTING })),
+        r.set(t, D(P({}, n), { state: C.jm8.CONNECTING })),
         n.ownerId === b.default.getId() && (x[n.channelId] = !1);
 }
 function H(e) {
@@ -206,7 +206,7 @@ function W(e) {
         null != t &&
             (r.set(
                 e,
-                w(P({}, t), {
+                D(P({}, t), {
                     state: C.jm8.FAILED,
                     endReason: n,
                     errorCode: i,
@@ -239,7 +239,7 @@ function z(e) {
 }
 function q(e) {
     let { streamKey: t, region: n, viewerIds: i, paused: o } = e;
-    r.set(t, w(P({}, (0, p.my)(t)), { state: o ? C.jm8.PAUSED : C.jm8.ACTIVE })),
+    r.set(t, D(P({}, (0, p.my)(t)), { state: o ? C.jm8.PAUSED : C.jm8.ACTIVE })),
         (a[t] = {
             streamKey: t,
             region: n,
@@ -277,13 +277,13 @@ function J(e) {
             }),
             (l = C.jm8.ENDED);
     } else s.state === C.jm8.FAILED && o === C.si2.USER_REQUESTED && (l = C.jm8.FAILED);
-    r.set(t, w(P({}, s), { state: l })), l === C.jm8.ENDED && L !== t && G(t);
+    r.set(t, D(P({}, s), { state: l })), l === C.jm8.ENDED && L !== t && G(t);
 }
 function $(e) {
     let { streamKey: t } = e,
         n = r.get(t);
     if (null == n) return !1;
-    r.set(t, w(P({}, n), { state: C.jm8.FAILED }));
+    r.set(t, D(P({}, n), { state: C.jm8.FAILED }));
 }
 function ee(e) {
     let { streamKey: t, state: n } = e;
@@ -300,7 +300,7 @@ function ee(e) {
             a = C.jm8.ACTIVE;
     }
     if (a === i.state) return !1;
-    r.set(t, w(P({}, i), { state: a }));
+    r.set(t, D(P({}, i), { state: a }));
 }
 function et(e) {
     let { channelId: t, selfStreamHidden: n } = e;

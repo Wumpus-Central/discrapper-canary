@@ -103,22 +103,22 @@ function N(e) {
             [t],
         ),
         L = (0, d.ZP)(),
-        D = t.features.has(I.GuildFeatures.HUB),
-        R = i.useMemo(() => {
+        R = t.features.has(I.GuildFeatures.HUB),
+        D = i.useMemo(() => {
             let e = b.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, _.x_)(),
             });
             if (null != e) return e;
-            if (D) return T;
+            if (R) return T;
             switch (L) {
                 case I.BRd.DARK:
                     return C;
                 case I.BRd.LIGHT:
                     return S;
             }
-        }, [t.discoverySplash, t.id, D, L]),
+        }, [t.discoverySplash, t.id, R, L]),
         M = i.useMemo(
             () =>
                 b.ZP.getGuildIconURL({
@@ -158,7 +158,7 @@ function N(e) {
                                 (0, r.jsx)("div", {
                                     className: a()(y.banner, { [y.loaded]: j }),
                                     children: (0, r.jsx)("img", {
-                                        src: R,
+                                        src: D,
                                         alt: "",
                                         className: y.bannerImage,
                                         onLoad: () => P(!0),

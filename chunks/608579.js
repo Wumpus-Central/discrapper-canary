@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(215023),
     R = n(231338),
     P = n(206051);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -84,7 +84,7 @@ function M(e) {
     let {
             onClose: n,
             onComplete: a,
-            onStepChange: D,
+            onStepChange: w,
             transitionState: L,
             loadId: M,
             skuId: k,
@@ -148,7 +148,7 @@ function M(e) {
                     renderStep: (e) =>
                         (0, r.jsx)(
                             I.x,
-                            x(w({}, e), {
+                            x(D({}, e), {
                                 confettiCanvas: Y,
                                 analyticsLocations: V,
                                 hideConfetti: null != q,
@@ -199,7 +199,7 @@ function M(e) {
                             transitionState: L,
                             renderHeader: en,
                             returnRef: F,
-                            onStepChange: D,
+                            onStepChange: w,
                             skipConfirm: $,
                             hideShadow: !0,
                         }),

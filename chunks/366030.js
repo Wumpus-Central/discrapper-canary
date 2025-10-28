@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(977392),
     R = n(134433),
     P = n(753194),
-    D = n(458034),
-    w = n(856651),
+    w = n(458034),
+    D = n(856651),
     L = n(981631),
     x = n(228168),
     M = n(388032),
@@ -90,13 +90,13 @@ function Z(e) {
         { connectionType: n, connectionMetadataField: i, operator: a, value: o, description: s } = e;
     if (null != s)
         switch (a) {
-            case w.iO.LESS_THAN:
+            case D.iO.LESS_THAN:
                 t = M.intl.format(M.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) - 1),
                 });
                 break;
-            case w.iO.GREATER_THAN:
+            case D.iO.GREATER_THAN:
                 t = M.intl.format(M.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) + 1),
@@ -321,7 +321,7 @@ function H(e) {
                       channelId: s.id,
                       guildId: a.id,
                       onGetRolesClicked: () => {
-                          (0, D.Am)(a.id);
+                          (0, w.Am)(a.id);
                       },
                       onOpenProfile: () => {
                           (0, v.openUserProfileModal)({

@@ -15,8 +15,8 @@ var i = r(120356),
     b = r(307537),
     j = r(987513),
     g = r(895737),
-    h = r(629481),
-    O = r(981631),
+    O = r(629481),
+    h = r(981631),
     x = r(176505),
     m = r(388032),
     v = r(754540);
@@ -86,7 +86,7 @@ function _(e) {
     let { guild: t } = e,
         r = (0, C.RF)(t.id, "guild_shop_category_selector"),
         { selectedTab: i, setSelectedTab: o, categoryTabs: _, handlePreviewDismiss: w } = (0, p.m)(),
-        P = "false" === s.K.get(h.Hr, "false"),
+        P = "false" === s.K.get(O.Hr, "false"),
         L = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
         S = _.map((e) => {
             switch (e) {
@@ -117,7 +117,7 @@ function _(e) {
                             body: r
                                 ? m.intl.string(m.t["jqz+ly"])
                                 : m.intl.format(m.t.ycs4oO, {
-                                      openRoleSubPage: () => (0, u.uL)(O.Z5c.CHANNEL(t.id, x.oC.ROLE_SUBSCRIPTIONS)),
+                                      openRoleSubPage: () => (0, u.uL)(h.Z5c.CHANNEL(t.id, x.oC.ROLE_SUBSCRIPTIONS)),
                                   }),
                             disabled: !r,
                             selected: i === f.y.GUILD_ROLE_SUBSCRIPTIONS,
@@ -147,7 +147,7 @@ function _(e) {
                             body: m.intl.string(m.t["827i8I"]),
                             selected: i === f.y.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                o(f.y.GUILD_PRODUCTS_PREVIEW), s.K.set(h.Hr, "true");
+                                o(f.y.GUILD_PRODUCTS_PREVIEW), s.K.set(O.Hr, "true");
                             },
                             onPreviewDismiss: w,
                             isNew: P,

@@ -1,43 +1,43 @@
-t.d(n, { Z: () => i });
-var l = t(951288),
-    a = t(481060);
-function i(e, n, i) {
-    (0, a.ZDy)(async () => {
-        let { default: a } = await t.e("23735").then(t.bind(t, 104982));
-        return (t) =>
+n.d(t, { Z: () => a });
+var l = n(951288),
+    i = n(481060);
+function a(e, t, a) {
+    (0, i.ZDy)(async () => {
+        let { default: i } = await n.e("23735").then(n.bind(n, 104982));
+        return (n) =>
             (0, l.jsx)(
-                a,
+                i,
                 (function (e) {
-                    for (var n = 1; n < arguments.length; n++) {
-                        var t = null != arguments[n] ? arguments[n] : {},
-                            l = Object.keys(t);
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            l = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
                             (l = l.concat(
-                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            l.forEach(function (n) {
+                            l.forEach(function (t) {
                                 var l;
-                                (l = t[n]),
-                                    n in e
-                                        ? Object.defineProperty(e, n, {
+                                (l = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
                                               value: l,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[n] = l);
+                                        : (e[t] = l);
                             });
                     }
                     return e;
                 })(
                     {
-                        gameServerGame: n,
+                        gameServerGame: t,
                         guildId: e,
-                        status: i,
+                        status: a,
                     },
-                    t,
+                    n,
                 ),
             );
     });

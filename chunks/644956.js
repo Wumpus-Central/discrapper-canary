@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(485386),
     R = n(430824),
     P = n(594174),
-    D = n(51144),
-    w = n(388032),
+    w = n(51144),
+    D = n(388032),
     L = n(430864),
     x = n(329072);
 function M(e, t, n) {
@@ -189,7 +189,7 @@ function Z(e) {
                 .filter((e) => null != P.default.getUser(e.userId))
                 .sortBy((e) => {
                     var t;
-                    return null != (t = e.nick) ? t : D.ZP.getName(P.default.getUser(e.userId));
+                    return null != (t = e.nick) ? t : w.ZP.getName(P.default.getUser(e.userId));
                 })
                 .value();
         }, [a, n, p]),
@@ -220,7 +220,7 @@ function Z(e) {
     let O =
         null == E
             ? m.name
-            : w.intl.formatToPlainString(w.t.CuAQkJ, {
+            : D.intl.formatToPlainString(D.t.CuAQkJ, {
                   title: m.name,
                   count: E,
               });
@@ -242,7 +242,7 @@ function Z(e) {
                         children: [
                             (0, r.jsx)(g.Z, {
                                 className: L.roleHeader,
-                                "aria-label": w.intl.formatToPlainString(w.t.Uaqbke, {
+                                "aria-label": D.intl.formatToPlainString(D.t.Uaqbke, {
                                     title: m.name,
                                     count: y.length,
                                 }),
@@ -256,7 +256,7 @@ function Z(e) {
                                 ? null
                                 : (0, r.jsx)(g.Z, {
                                       className: L.roleHeader,
-                                      children: w.intl.formatToPlainString(w.t["9oMmZC"], { count: E - y.length }),
+                                      children: D.intl.formatToPlainString(D.t["9oMmZC"], { count: E - y.length }),
                                   }),
                         ],
                     }),

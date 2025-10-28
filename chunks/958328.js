@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var a = n(951288);
 n(647438);
 var r = n(120356),
-    i = n.n(r),
-    l = n(149765),
+    l = n.n(r),
+    i = n(149765),
     o = n(442837),
     s = n(481060),
     c = n(933557),
@@ -14,21 +14,21 @@ var r = n(120356),
     h = n(914010),
     x = n(233608),
     f = n(71080),
-    g = n(989295),
-    b = n(451429);
+    b = n(989295),
+    g = n(451429);
 function v(e) {
     let { title: t, can: n } = e,
         r = n ? s.dz2 : s.Dio,
-        l = (0, a.jsx)("div", {
-            className: i()(g.iconOuter, n ? g.iconCheck : g.iconCross),
-            children: (0, a.jsx)(r, { className: g.icon }),
+        i = (0, a.jsx)("div", {
+            className: l()(b.iconOuter, n ? b.iconCheck : b.iconCross),
+            children: (0, a.jsx)(r, { className: b.icon }),
         });
     return (0, a.jsxs)("div", {
-        className: g.scope,
+        className: b.scope,
         children: [
-            l,
+            i,
             (0, a.jsx)("div", {
-                className: g.scopeInner,
+                className: b.scopeInner,
                 children: (0, a.jsx)(s.Text, {
                     variant: "text-md/normal",
                     children: t,
@@ -49,7 +49,7 @@ function j() {
         S = null != r ? x.Z.getGuildPermissionSpecMap(r) : null,
         E = Object.values(null != C ? C : {}).map((e) => {
             let { title: t, flag: n } = e,
-                r = l.e$(j, n);
+                r = i.e$(j, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -61,7 +61,7 @@ function j() {
         }),
         T = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                r = l.e$(_, n);
+                r = i.e$(_, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -72,12 +72,12 @@ function j() {
             );
         });
     return (0, a.jsx)("div", {
-        className: i()(b.panel, g.panel),
+        className: l()(g.panel, b.panel),
         children: (0, a.jsxs)("div", {
-            className: g.panelInner,
+            className: b.panelInner,
             children: [
                 (0, a.jsxs)("section", {
-                    className: g.section,
+                    className: b.section,
                     children: [
                         (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
@@ -87,7 +87,7 @@ function j() {
                     ],
                 }),
                 (0, a.jsxs)("section", {
-                    className: g.section,
+                    className: b.section,
                     children: [
                         (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",

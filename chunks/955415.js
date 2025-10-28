@@ -187,7 +187,7 @@ let C = (e) => {
             ],
         });
     },
-    D = (e) => {
+    w = (e) => {
         let { membersOnline: t, members: n } = e,
             i = [];
         return (
@@ -232,7 +232,7 @@ let C = (e) => {
             })
         );
     },
-    w = (e) => {
+    D = (e) => {
         let { channel: t, guild: n } = e,
             i = (0, d.KS)(t, n);
         return null == t || null == i
@@ -327,8 +327,8 @@ let x = (e) => {
     (x.Body = N),
     (x.Icon = R),
     (x.Info = P),
-    (x.Data = D),
-    (x.Channel = w),
+    (x.Data = w),
+    (x.Channel = D),
     (x.Button = L),
     (x.GuildSplash = M),
     (x.GuildName = k),
@@ -337,8 +337,8 @@ let x = (e) => {
     (N.displayName = "InviteButton.Body"),
     (R.displayName = "InviteButton.Icon"),
     (P.displayName = "InviteButton.Info"),
-    (D.displayName = "InviteButton.Data"),
-    (w.displayName = "InviteButton.Channel"),
+    (w.displayName = "InviteButton.Data"),
+    (D.displayName = "InviteButton.Channel"),
     (L.displayName = "InviteButton.Button"),
     (M.displayName = "InviteButton.GuildSplash"),
     (k.displayName = "InviteButton.GuildName"),

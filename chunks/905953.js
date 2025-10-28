@@ -1,8 +1,8 @@
-n.d(t, { Z: () => b }), n(388685), n(457542);
+n.d(t, { Z: () => g }), n(388685), n(457542);
 var a = n(951288),
     r = n(647438),
-    i = n(442837),
-    l = n(704215),
+    l = n(442837),
+    i = n(704215),
     o = n(907862),
     s = n(535139),
     c = n(243778),
@@ -13,12 +13,12 @@ var a = n(951288),
     h = n(314897),
     x = n(921944),
     f = n(228168),
-    g = n(388032);
-function b(e) {
+    b = n(388032);
+function g(e) {
     var t;
-    let { targetElementRef: n, onClose: b } = e,
+    let { targetElementRef: n, onClose: g } = e,
         [v, j] = r.useState(!1),
-        _ = (0, i.e7)([h.default], () => h.default.getId()),
+        _ = (0, l.e7)([h.default], () => h.default.getId()),
         { config: y, application: C } = (0, u.G)(),
         { fetched: S, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: O } = (0, s.F)(C),
         N = (0, m.ZP)(_),
@@ -31,14 +31,14 @@ function b(e) {
               contentTypes: E
                   ? P
                       ? []
-                      : [l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
+                      : [i.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
                   : T
-                    ? [l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
+                    ? [i.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: r } = e;
                   if (null == t) return null;
-                  let i = t === l.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
+                  let l = t === i.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
                   return (0, a.jsx)(o.J2, {
                       targetElementRef: n,
                       position: "right",
@@ -47,12 +47,12 @@ function b(e) {
                           type: "image",
                           src: y.edit_profile_upsell_image,
                       },
-                      title: g.intl.format(g.t.TXDztH, { applicationName: C.name }),
-                      body: i ? g.intl.string(g.t["63Kso0"]) : g.intl.string(g.t.HwXoeC),
+                      title: b.intl.format(b.t.TXDztH, { applicationName: C.name }),
+                      body: l ? b.intl.string(b.t["63Kso0"]) : b.intl.string(b.t.HwXoeC),
                       actions: [
-                          i
+                          l
                               ? {
-                                    text: g.intl.string(g.t.VSLDly),
+                                    text: b.intl.string(b.t.VSLDly),
                                     onClick: () => {
                                         j(!0),
                                             (0, p.openUserProfileModal)({
@@ -60,14 +60,14 @@ function b(e) {
                                                 section: f.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    r(x.L.TAKE_ACTION), b();
+                                                    r(x.L.TAKE_ACTION), g();
                                                 })
                                                 .finally(() => j(!1));
                                     },
                                     loading: v,
                                 }
                               : {
-                                    text: g.intl.string(g.t["DSJi3+"]),
+                                    text: b.intl.string(b.t["DSJi3+"]),
                                     onClick: () => {
                                         O(),
                                             j(!0),
@@ -76,7 +76,7 @@ function b(e) {
                                                 section: f.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    r(x.L.TAKE_ACTION), b();
+                                                    r(x.L.TAKE_ACTION), g();
                                                 })
                                                 .finally(() => j(!1));
                                     },

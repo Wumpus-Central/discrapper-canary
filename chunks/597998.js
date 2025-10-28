@@ -72,7 +72,7 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function D(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -155,8 +155,8 @@ function j(e) {
             iconClassName: N,
             embeddedApplication: R,
             otherClientSessionType: P,
-            voicePlatform: D,
-            application: w,
+            voicePlatform: w,
+            application: D,
             guildId: L,
             channelId: x,
             user: k,
@@ -240,9 +240,9 @@ function j(e) {
                 "activity",
             ),
         ),
-        P === S.YE.XBOX || D === T.wR.XBOX
+        P === S.YE.XBOX || w === T.wR.XBOX
             ? K.push((0, r.jsx)(y.Z, { className: o()(C.icon, N) }, "xbox"))
-            : (P === S.YE.PLAYSTATION || D === T.wR.PLAYSTATION) &&
+            : (P === S.YE.PLAYSTATION || w === T.wR.PLAYSTATION) &&
               K.push((0, r.jsx)(b.Z, { className: o()(C.icon, N) }, "playstation")),
         v &&
             K.push(
@@ -260,7 +260,7 @@ function j(e) {
                 ),
             ),
         g && K.push((0, r.jsx)(_.ZP, { size: _.ZP.Sizes.SMALL }, "stream"));
-    let X = null != w && !(0, O.yE)(w.flags, I.udG.EMBEDDED),
+    let X = null != D && !(0, O.yE)(D.flags, I.udG.EMBEDDED),
         Q = null == U && X;
     return 0 !== K.length || 0 !== z.length || Z || Q
         ? (0, r.jsxs)("div", {
@@ -281,7 +281,7 @@ function j(e) {
                                 ? (0, r.jsx)(
                                       G,
                                       {
-                                          application: w,
+                                          application: D,
                                           iconClassName: N,
                                           guildId: L,
                                           channelId: x,
@@ -313,7 +313,7 @@ let U = function (e) {
             isOverlay: d = !1,
             ref: f,
         } = e,
-        _ = w(e, ["avatarContainerClass", "userNameClassName", "size", "selected", "disabled", "isOverlay", "ref"]);
+        _ = D(e, ["avatarContainerClass", "userNameClassName", "size", "selected", "disabled", "isOverlay", "ref"]);
     let {
             onClick: m,
             onKeyDown: E,
@@ -398,7 +398,7 @@ let U = function (e) {
                 className: o()(C.clanTag, d && C.isOverlay),
                 profileViewedAnalytics: { source: d ? I.jXE.OVERLAY : I.Sbl.VOICE_PANEL },
             };
-        return !P || d ? (0, r.jsx)(g.Z, D(R({}, t), { children: e })) : null;
+        return !P || d ? (0, r.jsx)(g.Z, w(R({}, t), { children: e })) : null;
     }
     function et() {
         return (0, r.jsx)(j, R({ disabled: u }, _));

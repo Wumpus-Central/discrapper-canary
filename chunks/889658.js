@@ -89,7 +89,7 @@ class i {
             } catch (e) {
                 return !1;
             }
-        for (let t = 0; t < this.set.length; t++) if (D(this.set[t], e, this.options)) return !0;
+        for (let t = 0; t < this.set.length; t++) if (w(this.set[t], e, this.options)) return !0;
         return !1;
     }
 }
@@ -250,7 +250,7 @@ let a = new (n(147567))(),
                     : `<=${l}`),
         `${n} ${l}`.trim()
     ),
-    D = (e, t, n) => {
+    w = (e, t, n) => {
         for (let n = 0; n < e.length; n++) if (!e[n].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {
             for (let n = 0; n < e.length; n++)

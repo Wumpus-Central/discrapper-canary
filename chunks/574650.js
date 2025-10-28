@@ -116,20 +116,20 @@ let A = () => {
                 return (t) => (0, r.jsx)(e, I({ guildId: v.id }, t));
             });
         },
-        D = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
-        w = null,
+        w = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
+        D = null,
         L = null,
         x = null,
         M = [y.notice, O.notice];
-    switch (D) {
+    switch (w) {
         case p.wB.SUBMITTED:
-            (w = b.intl.string(b.t["5iLvSx"])), (L = b.intl.string(b.t.mqtdmQ)), (x = R);
+            (D = b.intl.string(b.t["5iLvSx"])), (L = b.intl.string(b.t.mqtdmQ)), (x = R);
             break;
         case p.wB.REJECTED:
-            (w = b.intl.string(b.t.lk30cY)), (L = b.intl.string(b.t["8RrsHr"])), (x = P), M.push(y.error);
+            (D = b.intl.string(b.t.lk30cY)), (L = b.intl.string(b.t["8RrsHr"])), (x = P), M.push(y.error);
             break;
         default:
-            (w = b.intl.string(b.t.G5YKXP)), (L = b.intl.string(b.t["r8/DT+"])), (x = N);
+            (D = b.intl.string(b.t.G5YKXP)), (L = b.intl.string(b.t["r8/DT+"])), (x = N);
     }
     return (0, r.jsxs)("div", {
         className: a()(...M),
@@ -137,7 +137,7 @@ let A = () => {
             (0, r.jsx)(c.Text, {
                 className: y.header,
                 variant: "text-sm/normal",
-                children: w,
+                children: D,
             }),
             (0, r.jsx)(c.Button, {
                 variant: "overlay-primary",

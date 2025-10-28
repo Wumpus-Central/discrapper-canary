@@ -44,8 +44,8 @@ let C = 10,
     N = /^\/([a-zA-Z0-9-]+)$/,
     R = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     P = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
-    D = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-    w = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
+    w = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+    D = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
     L = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     x = /^\/activities\/([0-9-]+)\/?$/,
     M = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
@@ -112,7 +112,7 @@ function en(e) {
 }
 function er(e) {
     if (null == e) return null;
-    let t = e.match(D);
+    let t = e.match(w);
     return null != t && t.length >= 4
         ? {
               guildId: t[1],
@@ -213,7 +213,7 @@ function eo(e) {
                 (null == (a = e.scopes) ? void 0 : a.some((e) => e !== E.x.APPLICATIONS_COMMANDS)) ||
                 u(S.g.APP_OAUTH2_LINK, t);
         }
-        let _ = null == c ? void 0 : c.match(w);
+        let _ = null == c ? void 0 : c.match(D);
         if (null != _) {
             let e = _[2];
             u(S.g.APP_DIRECTORY_PROFILE, e);

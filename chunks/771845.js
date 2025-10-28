@@ -142,7 +142,7 @@ function P(e) {
         T.moveInto(a, e, r);
     } else T.moveNextTo(a, o, r);
 }
-function D(e) {
+function w(e) {
     let { sourceIds: t, name: n } = e,
         r = t.shift();
     if (null == r) return !1;
@@ -155,7 +155,7 @@ function D(e) {
             null != t && T.moveInto(t, a, !0);
         });
 }
-function w(e) {
+function D(e) {
     var { targetId: t, sourceIds: n } = e,
         r = v(e, ["targetId", "sourceIds"]);
     let i = T.getNode(t);
@@ -282,8 +282,8 @@ class V extends E.Z {
             GUILD_MEMBER_ADD: x,
             USER_SETTINGS_PROTO_UPDATE: R,
             GUILD_MOVE_BY_ID: P,
-            GUILD_FOLDER_CREATE_LOCAL: D,
-            GUILD_FOLDER_EDIT_LOCAL: w,
+            GUILD_FOLDER_CREATE_LOCAL: w,
+            GUILD_FOLDER_EDIT_LOCAL: D,
             GUILD_FOLDER_DELETE_LOCAL: L,
             TOGGLE_GUILD_FOLDER_EXPAND: M,
             SET_GUILD_FOLDER_EXPANDED: k,

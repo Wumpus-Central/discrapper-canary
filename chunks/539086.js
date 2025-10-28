@@ -30,9 +30,9 @@ function I(e) {
         })),
         N = (0, m.M)(),
         { selectedTab: R, handleTabChange: P } = (0, h.Z)(),
-        D = f.default.getCurrentUser(),
-        w = null != I,
-        L = A && null != D && !w;
+        w = f.default.getCurrentUser(),
+        D = null != I,
+        L = A && null != w && !D;
     (0, s.ZP)(() => {
         (0, d.e)("family-center"),
             null != n && n(),
@@ -54,7 +54,7 @@ function I(e) {
             M.current = x;
         }),
         r.useEffect(() => {
-            if (A && w) {
+            if (A && D) {
                 let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: r, selectedTeenId: a } = M.current;
                 _.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
@@ -65,7 +65,7 @@ function I(e) {
                 }),
                     u.Z.increment({ name: i.V.FAMILY_CENTER_VIEW });
             }
-        }, [A, w, t]),
+        }, [A, D, t]),
         r.useEffect(() => {
             L && (0, l.mN)(O.L0.FAMILY_CENTER);
         }, [L]),

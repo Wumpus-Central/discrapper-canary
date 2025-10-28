@@ -6,10 +6,10 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    o = n(997638),
-    a = n(362658),
-    s = n(216306),
-    c = n(155409),
+    o = n(362658),
+    a = n(216306),
+    s = n(155409),
+    c = n(350707),
     u = n(540126),
     d = n(301342),
     p = n(327530),
@@ -58,13 +58,13 @@ let _ = i.memo(function (e) {
             selectedChannelId: _,
             disableManageChannels: O,
         } = e,
-        { isFavoritesPerk: y } = (0, a.z)("ChannelListSection"),
+        { isFavoritesPerk: y } = (0, o.z)("ChannelListSection"),
         j = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
-            null != _ && r.includes(_) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t);
+            null != _ && r.includes(_) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t);
         }, [n.id, _, m, b]),
         { density: v } = (0, l.TCT)(),
         x = "compact" === v ? 8 : p.$k;
@@ -103,9 +103,9 @@ let _ = i.memo(function (e) {
                 channel: e.record,
                 position: e.position,
                 disableManageChannels: O,
-                children: (0, r.jsx)(c.Z, {
+                children: (0, r.jsx)(s.Z, {
                     inlineSpecs: p.MF,
-                    arrowAlignment: o.cy.TOP,
+                    arrowAlignment: c.cy.TOP,
                     tutorialId: "organize-by-topic",
                     position: "right",
                 }),

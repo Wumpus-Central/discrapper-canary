@@ -76,8 +76,8 @@ let C = (e) => {
         { product: C } = (0, m.T)(t, !0),
         { giftRecipient: N, giftRecipientError: R } = (0, f.wD)(),
         P = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-        D = (0, y.kd)(C),
-        w = i.useRef(null);
+        w = (0, y.kd)(C),
+        D = i.useRef(null);
     if (null == C) return null;
     let [L] = C.items;
     l()(null != L, "Product item should not be empty");
@@ -111,7 +111,7 @@ let C = (e) => {
                             (0, r.jsx)(
                                 d.yRy,
                                 {
-                                    targetElementRef: w,
+                                    targetElementRef: D,
                                     preload: () => (0, p.Z)(N.id, N.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
@@ -133,7 +133,7 @@ let C = (e) => {
                                             d.P3F,
                                             A(T({}, e), {
                                                 className: v.previewLink,
-                                                innerRef: w,
+                                                innerRef: D,
                                                 children: (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/medium",
                                                     color: "text-link",
@@ -166,7 +166,7 @@ let C = (e) => {
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-md/semibold",
-                                        children: D,
+                                        children: w,
                                     }),
                                     (0, r.jsx)(d.Heading, {
                                         variant: "heading-sm/medium",

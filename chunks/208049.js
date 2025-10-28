@@ -4,9 +4,9 @@ n.d(t, {
     Db: () => U,
     Dx: () => N,
     R: () => k,
-    TB: () => D,
+    TB: () => w,
     XE: () => x,
-    hs: () => w,
+    hs: () => D,
     w: () => C,
     xR: () => M,
     xU: () => L,
@@ -148,7 +148,7 @@ async function P(e, t) {
         rejectWithError: !1,
     });
 }
-function D(e) {
+function w(e) {
     c.DZ.updateAsync(
         "favoriteSoundboardSounds",
         (t) =>
@@ -162,7 +162,7 @@ function D(e) {
         E.fy.INFREQUENT_USER_ACTION,
     );
 }
-function w(e) {
+function D(e) {
     c.DZ.updateAsync(
         "favoriteSoundboardSounds",
         (t) => {

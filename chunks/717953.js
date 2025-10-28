@@ -71,8 +71,8 @@ function I(e) {
         N = null != a && null != a.colors && a.colors.length > 0,
         R = (0, l.e7)([h.Z], () => h.Z.getSavedCustomTheme()),
         P = N,
-        D = N || null != R,
-        w = i.useMemo(() => {
+        w = N || null != R,
+        D = i.useMemo(() => {
             let e, t;
             if (N) (e = a.colors), (t = a.gradientAngle);
             else {
@@ -87,7 +87,7 @@ function I(e) {
         }, [N, a, R]),
         L = (0, f.Sl)(E.Il.WHITE).hex,
         x = (0, f.Sl)(E.Il.RED_430).hex,
-        M = D ? L : void 0,
+        M = w ? L : void 0,
         k = i.useCallback(() => {
             I && T(), null == n || n();
         }, [I, T, n]);
@@ -99,12 +99,12 @@ function I(e) {
                 isSelected: !1,
                 showSelectionCircle: P,
                 name: y.intl.string(b.default.KSBBpC),
-                className: o()(O.container, D && C, t && O.disabled),
+                className: o()(O.container, w && C, t && O.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: w,
+                style: D,
                 children: [
-                    !S && !D && (0, r.jsx)(v, {}),
+                    !S && !w && (0, r.jsx)(v, {}),
                     (0, r.jsx)("div", { className: O.borderOverlay }),
                     (0, r.jsx)(s.V3v, {
                         color: M,

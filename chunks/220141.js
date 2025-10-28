@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var a = n(951288),
     r = n(647438),
-    i = n(371286),
-    l = n(785717),
+    l = n(371286),
+    i = n(785717),
     o = n(836197),
     s = n(299560),
     c = n(247397),
@@ -22,25 +22,25 @@ function p(e) {
                     var n,
                         a,
                         r = {},
-                        i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        l = Object.keys(e);
+                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++)
-                    (n = i[a]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < l.length; a++)
+                    (n = l[a]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
-    let { trackUserProfileEditAction: f } = (0, l.KZ)(),
-        g = c.rR.filter((e) => o.Ki.includes(e)),
-        b = r.useCallback(() => {
+    let { trackUserProfileEditAction: f } = (0, i.KZ)(),
+        b = c.rR.filter((e) => o.Ki.includes(e)),
+        g = r.useCallback(() => {
             h(d.L.TAKE_ACTION), f({ action: "PRESS_ADD_WIDGET" }), p();
         }, [p, h, f]);
     return (0, a.jsx)(
-        i.Z,
+        l.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -78,13 +78,13 @@ function p(e) {
                 children: (0, a.jsx)("ul", {
                     "aria-label": u.intl.string(u.t["+EIBSA"]),
                     className: m.options,
-                    children: g.map((e) =>
+                    children: b.map((e) =>
                         (0, a.jsx)(
                             s.Z,
                             {
                                 widgetType: e,
                                 size: "medium",
-                                onAddWidget: b,
+                                onAddWidget: g,
                                 trackUserProfileEditAction: f,
                             },
                             e,

@@ -27,8 +27,8 @@ var r,
     N = n(378233),
     R = n(419922),
     P = n(342386),
-    D = n(46141),
-    w = n(485386),
+    w = n(46141),
+    D = n(485386),
     L = n(430824),
     x = n(853872),
     M = n(509545),
@@ -220,7 +220,7 @@ function e_(e) {
         o = (0, y.hO)(r, a, { requireCurrentGuild: !1 }),
         s = (0, f.e7)([O.Z], () => O.Z.getGuildProductFetchState(a) === O.M.FETCHING),
         l = null == o ? void 0 : o.role_id,
-        c = (0, f.e7)([w.Z], () => (null != l ? w.Z.getRole(r, l) : void 0), [r, l]),
+        c = (0, f.e7)([D.Z], () => (null != l ? D.Z.getRole(r, l) : void 0), [r, l]),
         u = (0, T.Z)({
             guildId: r,
             productId: a,
@@ -366,7 +366,7 @@ class ep extends (r = a.PureComponent) {
                       })
                     : e.paymentGateway === W.gg.APPLE_PARTNER
                       ? (0, i.jsx)(V.Z, {
-                            paymentSource: new D.$z({}),
+                            paymentSource: new w.$z({}),
                             locale: t,
                             descriptionClassName: z.paymentText,
                             showLabels: !0,

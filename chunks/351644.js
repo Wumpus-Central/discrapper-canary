@@ -25,8 +25,8 @@ var i = n(951288),
     S = n(63063),
     E = n(709054),
     I = n(51144),
-    w = n(466070),
-    P = n(585835),
+    P = n(466070),
+    w = n(585835),
     T = n(997787),
     Z = n(981631),
     k = n(49898),
@@ -178,7 +178,7 @@ function W(e) {
                           text: A.intl.formatToPlainString(A.t.gcdJ8J, { timestamp: E.default.extractTimestamp(l.id) }),
                       }),
                 (0, i.jsx)(
-                    P.Z,
+                    w.Z,
                     {
                         name: r.name,
                         imageSrc: null != (t = r.getIconURL(48)) ? t : N.pK["0"],
@@ -268,14 +268,14 @@ function W(e) {
         (eS = null));
     let eE = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
         eI = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
-        ew = [];
+        eP = [];
     if (el) {
         let e, t, r, a, o;
-        ew.push(
+        eP.push(
             ((n = K.length),
             n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJK)),
             (0, i.jsx)(
-                P.Z,
+                w.Z,
                 {
                     name: A.intl.string(A.t.xOg4SP),
                     icon: u.tYf,
@@ -291,14 +291,14 @@ function W(e) {
         ),
             (null == H ? void 0 : H.type) === Z.d4z.GUILD_VOICE ||
                 ((null == H ? void 0 : H.type) != null && Z.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
-                ew.push(
+                eP.push(
                     ((l = z.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = Q))
                         : ((r = A.intl.string(A.t["ZwSt+T"])),
                           (a = () => open(S.Z.getArticleURL(Z.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        P.Z,
+                        w.Z,
                         {
                             name: A.intl.string(A.t.OrV60r),
                             icon: u.AsW,
@@ -314,10 +314,10 @@ function W(e) {
     }
     null == H &&
         ec.length > 0 &&
-        ew.push(
+        eP.push(
             ((o = ec.length),
             (0, i.jsx)(
-                P.Z,
+                w.Z,
                 {
                     name: A.intl.string(A.t.tqtDXC),
                     icon: u.DuK,
@@ -330,7 +330,7 @@ function W(e) {
             )),
         ),
         eb &&
-            ew.push(
+            eP.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -350,7 +350,7 @@ function W(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            P.Z,
+                            w.Z,
                             {
                                 name: A.intl.string(A.t.q4pBG3),
                                 icon: s.icon.whiteSVG,
@@ -368,7 +368,7 @@ function W(e) {
                 })(ed, ep, Y),
             ),
         eg &&
-            ew.push(
+            eP.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -388,7 +388,7 @@ function W(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            P.Z,
+                            w.Z,
                             {
                                 name: A.intl.string(A.t.aS6cK4),
                                 icon: s.icon.whiteSVG,
@@ -405,7 +405,7 @@ function W(e) {
                     );
                 })(eu, em, Y),
             );
-    let eP = null != H && eo && null != es;
+    let ew = null != H && eo && null != es;
     return (0, i.jsxs)("div", {
         className: a()(null != eS ? D.footerPlaceholder : null),
         children: [
@@ -421,17 +421,17 @@ function W(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          ew,
-                          eP &&
+                          eP,
+                          ew &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      ew.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                      eP.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                       (0, i.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
                                           className: D.sectionHeader,
                                           children: A.intl.string(A.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(w.t, {
+                                      (0, i.jsx)(P.t, {
                                           channel: H,
                                           application: es,
                                           showApplicationImage: !0,
@@ -445,7 +445,7 @@ function W(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        ew.length > 0 || eP ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                        eP.length > 0 || ew ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                         (0, i.jsx)(u.Heading, {
                                             variant: "heading-md/semibold",
                                             className: D.sectionHeader,

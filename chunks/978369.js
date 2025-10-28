@@ -83,7 +83,7 @@ function f(e) {
         p = (0, i.useRef)(null),
         { trackUserProfileEditAction: m } = (0, l.KZ)(),
         b = (0, i.useMemo)(() => (null != t ? t : []), [t]),
-        h = (0, i.useCallback)(
+        y = (0, i.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     r = new Set(b);
@@ -117,7 +117,7 @@ function f(e) {
             },
             [b, m, n, f],
         ),
-        y = (0, i.useCallback)(
+        h = (0, i.useCallback)(
             (e) => {
                 let t = new Set(b);
                 e.forEach((e) => {
@@ -146,8 +146,8 @@ function f(e) {
             let { closePopout: t } = e;
             return (0, r.jsx)(d, {
                 currentTags: b,
-                onTagSelect: h,
-                onNoneSelect: y,
+                onTagSelect: y,
+                onNoneSelect: h,
                 onClose: t,
             });
         },

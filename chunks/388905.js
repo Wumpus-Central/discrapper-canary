@@ -8,8 +8,8 @@ n.d(t, {
     MC: () => R,
     Vj: () => N,
     ZP: () => j,
-    gO: () => D,
-    i_: () => w,
+    gO: () => w,
+    i_: () => D,
     jQ: () => M,
     qE: () => C,
     v6: () => k,
@@ -211,14 +211,14 @@ let P = (e) => {
               })
             : v;
     },
-    D = (e) => {
+    w = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)("div", {
             className: a()(g.block, t),
             children: n,
         });
     },
-    w = (e) => {
+    D = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)(s.Text, {
             variant: "text-xs/normal",
@@ -307,14 +307,14 @@ let P = (e) => {
     },
     k = (e) => {
         let { className: t } = e;
-        return (0, r.jsxs)(D, {
+        return (0, r.jsxs)(w, {
             className: t,
             children: [
                 (0, r.jsx)(o.zx, {
                     onClick: () => window.open((0, _.t3)()),
                     children: m.intl.format(m.t.JoS1i3, { platform: (0, _.DW)() }),
                 }),
-                (0, r.jsx)(w, {
+                (0, r.jsx)(D, {
                     className: g.downloadButtonSubtext,
                     children: m.intl.format(m.t.wO1VBk, {
                         supportedBrowserURL: p.Z.getArticleURL(h.BhN.SUPPORTED_BROWSERS),

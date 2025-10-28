@@ -34,15 +34,15 @@ var r = n(98405),
     N = b.set,
     R = b.getterFor(v),
     P = "stack" in new T(v),
-    D = function (e) {
+    w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
-    w = function () {
+    D = function () {
         _(this, L);
         var e = arguments.length,
             t = m(e < 1 ? void 0 : arguments[0]),
             n = m(e < 2 ? void 0 : arguments[1], "Error"),
-            r = D(n);
+            r = w(n);
         if (
             (N(this, {
                 type: v,
@@ -57,7 +57,7 @@ var r = n(98405),
             (i.name = v), c(this, "stack", l(1, E(i.stack, 1)));
         }
     },
-    L = (w.prototype = s(C)),
+    L = (D.prototype = s(C)),
     x = function (e) {
         return {
             enumerable: !0,
@@ -70,7 +70,7 @@ var r = n(98405),
             return R(this)[e];
         });
     };
-y && (d(L, "code", M("code")), d(L, "message", M("message")), d(L, "name", M("name"))), c(L, "constructor", l(1, w));
+y && (d(L, "code", M("code")), d(L, "message", M("message")), d(L, "name", M("name"))), c(L, "constructor", l(1, D));
 var k = o(function () {
         return !(new S() instanceof T);
     }),
@@ -92,7 +92,7 @@ r(
         constructor: !0,
         forced: B,
     },
-    { DOMException: B ? w : S },
+    { DOMException: B ? D : S },
 );
 var Z = i(v),
     F = Z.prototype;
@@ -104,7 +104,7 @@ U &&
         F,
         "code",
         x(function () {
-            return D(p(this).name);
+            return w(p(this).name);
         }),
     ),
 g))

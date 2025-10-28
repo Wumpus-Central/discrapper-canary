@@ -34,8 +34,8 @@ function E(e) {
             C(), T({ action: b ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
         }, [C, b, T]),
         P = null != E,
-        D = (0, c.q)(E);
-    return P && null == D
+        w = (0, c.q)(E);
+    return P && null == w
         ? null
         : (0, r.jsxs)("div", {
               className: o()(g.container, y),
@@ -50,12 +50,12 @@ function E(e) {
                                         u.Z,
                                         {
                                             className: g.gameIcon,
-                                            game: D,
+                                            game: w,
                                             size: u.A.XXSMALL,
                                         },
-                                        null == D ? void 0 : D.id,
+                                        null == w ? void 0 : w.id,
                                     ),
-                                applicationName: null == D ? void 0 : D.name,
+                                applicationName: null == w ? void 0 : w.name,
                             }),
                         })
                       : (0, r.jsx)(s.Text, {

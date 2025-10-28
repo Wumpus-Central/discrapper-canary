@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(442837),
     s = n(524437),
     c = n(481060),
@@ -13,8 +13,8 @@ var a = n(951288),
     h = n(835473),
     x = n(594190),
     f = n(989941),
-    g = n(695346),
-    b = n(881998),
+    b = n(695346),
+    g = n(881998),
     v = n(449224),
     j = n(246992),
     _ = n(451429),
@@ -39,8 +39,8 @@ let C = [
 ];
 function S() {
     let e = r.useRef(null),
-        t = g.JG.useSetting(),
-        [n, i] = r.useState(""),
+        t = b.JG.useSetting(),
+        [n, l] = r.useState(""),
         s = (0, o.e7)([x.ZP, v.Z], () => (0, f.Z)(x.ZP, v.Z)),
         S = (0, h.q)(n),
         E = (0, o.Wu)([p.Z], () => {
@@ -57,7 +57,7 @@ function S() {
         O = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
         N = (0, m.F)(S),
         { canDeauthorize: P, deauthorize: I } = (function (e) {
-            let t = (0, o.e7)([b.Z], () => b.Z.getNewestTokenForApplication(e)),
+            let t = (0, o.e7)([g.Z], () => g.Z.getNewestTokenForApplication(e)),
                 n = r.useCallback(() => {
                     null != t && d.Z.delete(t.id);
                 }, [t]);
@@ -68,7 +68,7 @@ function S() {
         })(null == S ? void 0 : S.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(_.panel, y.panel),
+        className: i()(_.panel, y.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: y.container,
@@ -81,7 +81,7 @@ function S() {
                         label: "Receive DMs In Game",
                         options: C,
                         isSelected: (e) => e === t,
-                        select: g.JG.updateSetting,
+                        select: b.JG.updateSetting,
                         popoutLayerContext: j.O$,
                         serialize: (e) => e.toString(),
                     }),
@@ -97,11 +97,11 @@ function S() {
                     (0, a.jsx)(c.oil, {
                         label: "Application ID",
                         value: n,
-                        onChange: i,
+                        onChange: l,
                     }),
                     null != s && null != s.id
                         ? (0, a.jsx)(c.Button, {
-                              onClick: () => i(s.id),
+                              onClick: () => l(s.id),
                               variant: "primary",
                               text: "Use detected game: ".concat(s.name, " (").concat(s.id, ")"),
                           })

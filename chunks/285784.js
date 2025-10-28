@@ -5,8 +5,8 @@ t.d(n, {
     t(388685),
     t(539854);
 var i = t(951288),
-    a = t(647438),
-    r = t(846519),
+    r = t(647438),
+    a = t(846519),
     l = t(481060),
     o = t(493773),
     c = t(118998),
@@ -20,20 +20,20 @@ function u(e) {
             canInvite: u,
             isChannelPublic: _ = !0,
             entityType: p,
-            onJoinClick: g,
+            onJoinClick: v,
             onRsvpClick: m,
-            onStartClick: h,
-            onInviteClick: b,
-            onEndClick: v,
-            onJoinGuildClick: f,
+            onStartClick: f,
+            onInviteClick: g,
+            onEndClick: h,
+            onJoinGuildClick: b,
             isJoined: x = !1,
             channel: C,
         } = e,
-        I = void 0 !== g,
+        I = void 0 !== v,
         j = (function (e) {
             let { onInviteClick: n, canInvite: t, isChannelPublic: i, channel: s } = e,
-                u = new r.V7(),
-                [_, p] = a.useState(!1);
+                u = new a.V7(),
+                [_, p] = r.useState(!1);
             return ((0, o.ZP)(() => () => {
                 u.stop();
             }),
@@ -58,7 +58,7 @@ function u(e) {
                         "aria-label": d.intl.string(d.t.WqhZss),
                     };
         })({
-            onInviteClick: b,
+            onInviteClick: g,
             canInvite: u,
             isChannelPublic: _,
             channel: C,
@@ -71,7 +71,7 @@ function u(e) {
             k.push({
                 variant: "active",
                 size: "sm",
-                onClick: g,
+                onClick: v,
                 text: (function (e) {
                     let { isJoined: n, canJoin: t, isVoiceChannel: i } = e;
                     return t
@@ -89,12 +89,12 @@ function u(e) {
                 disabled: !I,
             }),
         t &&
-            null != f &&
+            null != b &&
             k.push({
                 variant: "active",
                 size: "sm",
                 text: d.intl.string(d.t["2BP08E"]),
-                onClick: f,
+                onClick: b,
             }),
         !t && !n && null != m)
     ) {
@@ -110,19 +110,19 @@ function u(e) {
     }
     return (
         n ||
-            null == h ||
+            null == f ||
             k.push({
                 variant: "primary",
                 size: "sm",
-                onClick: h,
+                onClick: f,
                 text: d.intl.string(d.t.I0v0Qv),
             }),
         n &&
-            null != v &&
+            null != h &&
             k.push({
                 variant: "secondary",
                 size: "sm",
-                onClick: v,
+                onClick: h,
                 text: d.intl.string(d.t.qaYzPA),
             }),
         k

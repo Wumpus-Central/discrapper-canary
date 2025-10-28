@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var i,
     a = n(442837),
     o = n(544891),
@@ -180,7 +180,7 @@ class P extends (i = a.ZP.Store) {
     }
 }
 _(P, "displayName", "TypingStore");
-let D = new P(s.Z, {
+let w = new P(s.Z, {
     TYPING_START: S,
     TYPING_STOP: A,
     TYPING_START_LOCAL: O,

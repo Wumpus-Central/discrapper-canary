@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-let w = (0, s.animated)(u.CJ0),
+let D = (0, s.animated)(u.CJ0),
     L = (e) => {
         var t;
         let {
@@ -300,7 +300,7 @@ let w = (0, s.animated)(u.CJ0),
                                             "aria-hidden": !x && !M,
                                             children: (0, r.jsx)(
                                                 u.P3F,
-                                                D(R({}, e), {
+                                                w(R({}, e), {
                                                     className: C.iconWrapper,
                                                     "aria-label": A.intl.string(A.t.DEoVWZ),
                                                     children: (0, r.jsx)(u.xhG, {
@@ -316,7 +316,7 @@ let w = (0, s.animated)(u.CJ0),
                                         onClick: en,
                                         className: C.iconWrapper,
                                         "aria-label": M ? A.intl.string(A.t.iTcuma) : A.intl.string(A.t.dcl9MQ),
-                                        children: (0, r.jsx)(w, {
+                                        children: (0, r.jsx)(D, {
                                             style: {
                                                 rotate: L.to({
                                                     range: [0, 1],

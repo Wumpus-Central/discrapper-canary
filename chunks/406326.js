@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(945577),
     m = n(28964),
     b = n(465524),
-    y = n(611004),
-    _ = n(770092),
-    O = n(125085),
-    j = n(981631),
-    x = n(921944),
-    v = n(388032),
+    _ = n(611004),
+    y = n(770092),
+    x = n(125085),
+    v = n(981631),
+    j = n(921944),
+    O = n(388032),
     C = n(865239);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -72,19 +72,19 @@ function E(e) {
             totalResults: c,
             isIndexing: p,
             isSearching: h,
-            documentsIndexed: y,
-            selectedChannelId: O,
+            documentsIndexed: _,
+            selectedChannelId: x,
         } = e,
         E = (0, m.nP)({ location: "SearchHeader" }),
         P = (0, m.KS)({ location: "SearchHeader" }),
         T = E || P,
-        N = (0, _.I)(t),
+        N = (0, y.I)(t),
         { totalFilters: R } = (0, b.p4)(N, t),
         D = i.useMemo(() => {
-            if (t.type === j.aib.DMS) {
+            if (t.type === v.aib.DMS) {
                 var e, n;
                 let t = null != (n = null == (e = (0, f.$G)(N).channel_id) ? void 0 : e.length) ? n : 0;
-                return t > 0 ? v.intl.format(v.t.A2dqWG, { filterCount: t }) : v.intl.string(v.t.tc619d);
+                return t > 0 ? O.intl.format(O.t.A2dqWG, { filterCount: t }) : O.intl.string(O.t.tc619d);
             }
             return null;
         }, [t.type, N]),
@@ -94,13 +94,13 @@ function E(e) {
         H = U === s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
         F = i.useCallback(
             (e) => {
-                null != e && G(x.L.USER_DISMISS), M(e);
+                null != e && G(j.L.USER_DISMISS), M(e);
             },
             [G],
         ),
         B = i.useCallback(
             (e) => {
-                G("user:explicit" === e ? x.L.USER_DISMISS : x.L.AUTO_DISMISS);
+                G("user:explicit" === e ? j.L.USER_DISMISS : j.L.AUTO_DISMISS);
             },
             [G],
         ),
@@ -111,9 +111,9 @@ function E(e) {
                     return (n) => (0, r.jsx)(e, S(I({}, n), { searchContext: t }));
                 });
         }, [t, F]),
-        z = i.useMemo(() => (R > 0 ? v.intl.format(v.t.uaR4sI, { filterCount: R }) : v.intl.string(v.t.UdhTtk)), [R]),
+        z = i.useMemo(() => (R > 0 ? O.intl.format(O.t.uaR4sI, { filterCount: R }) : O.intl.string(O.t.UdhTtk)), [R]),
         W = (0, g.u5)({ location: "SearchHeader" }),
-        Y = t.type === j.aib.DMS || t.type === j.aib.CHANNEL,
+        Y = t.type === v.aib.DMS || t.type === v.aib.CHANNEL,
         q = i.useMemo(
             () =>
                 T && W
@@ -136,7 +136,7 @@ function E(e) {
                               Y &&
                                   (0, r.jsx)(w, {
                                       searchContext: t,
-                                      selectedChannelId: O,
+                                      selectedChannelId: x,
                                       isPopoutOpen: "settings" === L,
                                       setOpenPopout: F,
                                       isPopoverVisible: H,
@@ -176,7 +176,7 @@ function E(e) {
                                   Y &&
                                       (0, r.jsx)(w, {
                                           searchContext: t,
-                                          selectedChannelId: O,
+                                          selectedChannelId: x,
                                           isPopoutOpen: "settings" === L,
                                           setOpenPopout: F,
                                           isPopoverVisible: H,
@@ -192,22 +192,22 @@ function E(e) {
                               children: [
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.NEWEST,
-                                      children: v.intl.string(v.t.rLjqbS),
+                                      id: v.QIO.NEWEST,
+                                      children: O.intl.string(O.t.rLjqbS),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.OLDEST,
-                                      children: v.intl.string(v.t.a1BaUr),
+                                      id: v.QIO.OLDEST,
+                                      children: O.intl.string(O.t.a1BaUr),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.MOST_RELEVANT,
-                                      children: v.intl.string(v.t.FtR97k),
+                                      id: v.QIO.MOST_RELEVANT,
+                                      children: O.intl.string(O.t.FtR97k),
                                   }),
                               ],
                           }),
-            [z, V, T, L, W, Y, o, t, l, O, H, F, B],
+            [z, V, T, L, W, Y, o, t, l, x, H, F, B],
         );
     return (0, r.jsxs)("header", {
         className: a()(C.searchHeader, { [C.searchHeaderWithSubtitle]: null != D }),
@@ -220,7 +220,7 @@ function E(e) {
                     subtitle: D,
                     isIndexing: p,
                     isSearching: h,
-                    documentsIndexed: y,
+                    documentsIndexed: _,
                 }),
             }),
             q,
@@ -252,7 +252,7 @@ function T(e) {
     let { documentsIndexed: t } = e;
     return (0, r.jsx)(c.u, {
         asContainer: !0,
-        text: v.intl.formatToPlainString(v.t["4Y3O+O"], { count: null != t ? t : "" }),
+        text: O.intl.formatToPlainString(O.t["4Y3O+O"], { count: null != t ? t : "" }),
         children: (0, r.jsxs)("div", {
             className: C.totalResultsWrapper,
             children: [
@@ -261,8 +261,8 @@ function T(e) {
                     color: "text-muted",
                     children: (0, r.jsx)(d.Anchor, {
                         className: C.helpdeskLink,
-                        href: h.Z.getArticleURL(j.BhN.SEARCH_INDEXING),
-                        children: v.intl.string(v.t["G3EA+4"]),
+                        href: h.Z.getArticleURL(v.BhN.SEARCH_INDEXING),
+                        children: O.intl.string(O.t["G3EA+4"]),
                     }),
                 }),
                 (0, r.jsx)(P, {}),
@@ -276,7 +276,7 @@ function N() {
             (0, r.jsx)(d.Text, {
                 variant: "text-md/medium",
                 color: "header-secondary",
-                children: v.intl.string(v.t.uixzLf),
+                children: O.intl.string(O.t.uixzLf),
             }),
             (0, r.jsx)(P, {}),
         ],
@@ -288,7 +288,7 @@ function R(e) {
         a = (0, r.jsx)(d.Text, {
             variant: "text-md/medium",
             color: "header-primary",
-            children: v.intl.format(v.t.ZGVL3g, { count: l }),
+            children: O.intl.format(O.t.ZGVL3g, { count: l }),
         });
     return null != n
         ? (0, r.jsxs)("div", {
@@ -315,15 +315,15 @@ function w(e) {
             isPopoverVisible: u,
         } = e,
         h = i.useRef(null),
-        g = null != (t = p.rR.useSetting()) ? t : O.K,
+        g = null != (t = p.rR.useSetting()) ? t : x.K,
         m = i.useCallback(
             (e) => {
                 if (g !== e) {
                     if (e) {
-                        let e = { type: j.aib.DMS };
-                        y.Z.transitionQueryStateToSearchContext(n, e, (t) => {
-                            y.Z.cleanUpPrivateChannelSearchState(),
-                                y.Z.fetchCrossDMMessages({
+                        let e = { type: v.aib.DMS };
+                        _.Z.transitionQueryStateToSearchContext(n, e, (t) => {
+                            _.Z.cleanUpPrivateChannelSearchState(),
+                                _.Z.fetchCrossDMMessages({
                                     searchContext: e,
                                     selectedPageIndex: 0,
                                     queryString: t,
@@ -331,13 +331,13 @@ function w(e) {
                         });
                     } else {
                         let e = {
-                            type: j.aib.CHANNEL,
+                            type: v.aib.CHANNEL,
                             channelId: l,
                         };
-                        y.Z.transitionQueryStateToSearchContext(n, e, (t) => {
+                        _.Z.transitionQueryStateToSearchContext(n, e, (t) => {
                             let n = (0, f.kG)(t),
                                 r = (0, f.$G)(n);
-                            y.Z.fetchMessages({
+                            _.Z.fetchMessages({
                                 searchContext: e,
                                 queryString: t,
                                 searchQuery: r,
@@ -365,24 +365,24 @@ function w(e) {
                     return (0, r.jsx)(d.v2r, {
                         navId: "search-settings-cog",
                         onClose: t,
-                        "aria-label": v.intl.string(v.t.fb59v0),
+                        "aria-label": O.intl.string(O.t.fb59v0),
                         onSelect: () => s(null),
                         children: (0, r.jsxs)(
                             d.kSQ,
                             {
-                                label: v.intl.string(v.t["/tMwrA"]),
+                                label: O.intl.string(O.t["/tMwrA"]),
                                 children: [
                                     (0, r.jsx)(d.k5B, {
                                         id: "xdm-search-disabled",
                                         group: "xdm-search-items",
-                                        label: v.intl.string(v.t.jRkYAh),
+                                        label: O.intl.string(O.t.jRkYAh),
                                         checked: !g,
                                         action: () => m(!1),
                                     }),
                                     (0, r.jsx)(d.k5B, {
                                         id: "xdm-search-enabled",
                                         group: "xdm-search-items",
-                                        label: v.intl.string(v.t["lWpJ/t"]),
+                                        label: O.intl.string(O.t["lWpJ/t"]),
                                         checked: g,
                                         action: () => m(!0),
                                     }),
@@ -402,7 +402,7 @@ function w(e) {
                             onClick: () => {
                                 s(a ? null : "settings");
                             },
-                            "aria-label": v.intl.string(v.t["3D5yo/"]),
+                            "aria-label": O.intl.string(O.t["3D5yo/"]),
                             size: "sm",
                         }),
                     ),
@@ -411,8 +411,8 @@ function w(e) {
                 targetElementRef: h,
                 shouldShow: u,
                 onRequestClose: c,
-                title: v.intl.string(v.t.qha2Zv),
-                body: v.intl.string(v.t.IQWEoV),
+                title: O.intl.string(O.t.qha2Zv),
+                body: O.intl.string(O.t.IQWEoV),
                 caretConfig: b,
             }),
         ],
@@ -424,16 +424,16 @@ function A(e) {
         o = i.useMemo(
             () => [
                 {
-                    label: v.intl.string(v.t.CbaapP),
-                    value: j.QIO.NEWEST,
+                    label: O.intl.string(O.t.CbaapP),
+                    value: v.QIO.NEWEST,
                 },
                 {
-                    label: v.intl.string(v.t.OukXZj),
-                    value: j.QIO.OLDEST,
+                    label: O.intl.string(O.t.OukXZj),
+                    value: v.QIO.OLDEST,
                 },
                 {
-                    label: v.intl.string(v.t.q8gB52),
-                    value: j.QIO.MOST_RELEVANT,
+                    label: O.intl.string(O.t.q8gB52),
+                    value: v.QIO.MOST_RELEVANT,
                 },
             ],
             [],
@@ -450,7 +450,7 @@ function A(e) {
             return (0, r.jsx)(d.v2r, {
                 navId: "search-result-sort-menu",
                 onClose: i,
-                "aria-label": v.intl.string(v.t.utp2hS),
+                "aria-label": O.intl.string(O.t.utp2hS),
                 onSelect: () => a(null),
                 children: (0, r.jsx)(d.kSQ, {
                     children: o.map((e) => {
@@ -480,7 +480,7 @@ function A(e) {
                     onClick: () => {
                         a(l ? null : "sort");
                     },
-                    "aria-label": v.intl.string(v.t.XvNMNk),
+                    "aria-label": O.intl.string(O.t.XvNMNk),
                     size: "sm",
                 }),
             ),

@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-function w(e) {
+function D(e) {
     return (0, r.jsx)(v.Z, {
         className: C.button,
         "aria-label": S.intl.string(S.t.Z1RnTk),
@@ -102,7 +102,7 @@ function L(e) {
         };
     return (0, r.jsx)(
         v.Z,
-        D(
+        w(
             R(
                 {
                     className: C.button,
@@ -149,7 +149,7 @@ function M(e) {
         C = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
         N = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         R = null != N ? b.default.age(N.id) : 0,
-        { giftBoxAnimation: P, trinketsAnimation: D } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
+        { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         M = null != n.firstTimeNotice && !s && C && R >= x,
         [k, j] = (0, f.XR)(
             M ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
@@ -179,14 +179,14 @@ function M(e) {
         },
         H =
             void 0 !== P
-                ? (0, r.jsx)(w, {
+                ? (0, r.jsx)(D, {
                       config: P,
                       hovered: G,
                       onClick: V,
                   })
-                : void 0 !== D && Z
+                : void 0 !== w && Z
                   ? (0, r.jsx)(L, {
-                        config: D,
+                        config: w,
                         hovered: G,
                         onClick: V,
                     })

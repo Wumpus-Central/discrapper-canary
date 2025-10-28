@@ -2,9 +2,9 @@ n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(979554),
-    o = n(876917),
+    a = n(876917),
     c = n(597688),
     u = n(616066),
     d = n(215023),
@@ -116,13 +116,13 @@ let p = {
             }, [n]),
             (0, r.jsx)("div", {
                 style: i,
-                className: a()(g.jumbleWrapper, {
+                className: o()(g.jumbleWrapper, {
                     [g.peaking]: t,
                     [g.transitioned]: C,
                 }),
                 children: f.map((e, t) => {
                     var l, i;
-                    let { top: a, left: c, rotation: f, size: C, skuId: h } = e,
+                    let { top: o, left: c, rotation: f, size: C, skuId: h } = e,
                         m = null == (l = _[t]) ? void 0 : l.items[0],
                         b = null == (i = _[t]) ? void 0 : i.type,
                         v = b === s.Z.AVATAR_DECORATION ? 384 : 512;
@@ -131,7 +131,7 @@ let p = {
                         {
                             className: g.asset,
                             style: {
-                                top: n ? -p - v : a,
+                                top: n ? -p - v : o,
                                 left: n ? "".concat(c - 75 - 350 * Math.random()) : c,
                                 transform: "rotate(".concat(f, "deg)"),
                                 height: C.y,
@@ -143,7 +143,7 @@ let p = {
                                 null != m && b === s.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: m }),
                                 null != m &&
                                     b === s.Z.PROFILE_EFFECT &&
-                                    (0, r.jsx)(o.Z, {
+                                    (0, r.jsx)(a.Z, {
                                         skuId: m.skuId,
                                         isPurchased: !1,
                                         isHighlighted: !0,

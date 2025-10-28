@@ -45,7 +45,7 @@ function N(e) {
             },
             [A],
         ),
-        D = (e) => {
+        R = (e) => {
             e.stopPropagation();
             let r = m.Z.getUserAffinity(t.id);
             g.default.track(y.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
@@ -64,10 +64,10 @@ function N(e) {
                         object: y.qAy.BUTTON_CTA,
                         objectType: y.AnalyticsObjectTypes.GIFT,
                     },
-                    giftMessage: R(),
+                    giftMessage: D(),
                 });
         },
-        R = () =>
+        D = () =>
             n === v.hX.FRIEND_ANNIVERSARY
                 ? C.intl.formatToPlainString(C.t["L2s/N3"], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) })
                 : (0, _.Ou)(n),
@@ -103,7 +103,7 @@ function N(e) {
                 ? (0, r.jsx)(u.P3F, {
                       innerRef: k,
                       "aria-label": M(),
-                      onClick: D,
+                      onClick: R,
                       className: a()(T.actionButton, S.popoutButton, { [T.highlight]: N }),
                       onMouseEnter: L,
                       onMouseLeave: Z,
@@ -115,7 +115,7 @@ function N(e) {
                 : (0, r.jsx)(c.zx, {
                       "data-migration-pending": !0,
                       buttonRef: k,
-                      onClick: D,
+                      onClick: R,
                       onMouseEnter: L,
                       onMouseLeave: Z,
                       children: (0, r.jsxs)("div", {

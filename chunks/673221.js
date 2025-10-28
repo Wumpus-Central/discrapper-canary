@@ -137,7 +137,7 @@ function P(e) {
         ea = null != P ? P : "multiple" !== t,
         eo = Array.isArray(V) ? V.length > 0 : null != V,
         es = l || _,
-        { measuredWidth: el, itemsForMeasurement: ec } = D(ee, t),
+        { measuredWidth: el, itemsForMeasurement: ec } = w(ee, t),
         eu = i.useCallback(() => {
             es || K(!W);
         }, [es, K, W]),
@@ -296,7 +296,7 @@ function P(e) {
                                     (0, r.jsxs)(u.n, {
                                         children: [M, ", "],
                                     }),
-                                    (0, r.jsx)(w, {
+                                    (0, r.jsx)(D, {
                                         tagGroupRef: Y,
                                         placeholder: x,
                                         selectionMode: t,
@@ -355,7 +355,7 @@ function P(e) {
         })
     );
 }
-function D(e, t) {
+function w(e, t) {
     let { ref: n, width: a } = (0, _.ZP)(),
         o = i.useId();
     return {
@@ -386,7 +386,7 @@ function D(e, t) {
         ),
     };
 }
-function w(e) {
+function D(e) {
     let { placeholder: t, selectionMode: n, selectedItems: i, onRemove: a, tagGroupRef: o } = e;
     return null == i || 0 === i.length
         ? (0, r.jsx)("div", {

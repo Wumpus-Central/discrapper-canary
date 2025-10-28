@@ -194,11 +194,11 @@ function P(e, t) {
     if (!b.has(e, t)) return !1;
     b.set(e, t, { state: 2 });
 }
-function D(e) {
+function w(e) {
     let { id: t, channelId: n } = e;
     return P(n, t);
 }
-function w(e) {
+function D(e) {
     let { ids: t, channelId: n } = e;
     return O(t, (e) => P(n, e));
 }
@@ -254,8 +254,8 @@ let U = new j(s.Z, {
     LOAD_FORUM_POSTS: k,
     MESSAGE_CREATE: S,
     MESSAGE_UPDATE: C,
-    MESSAGE_DELETE: D,
-    MESSAGE_DELETE_BULK: w,
+    MESSAGE_DELETE: w,
+    MESSAGE_DELETE_BULK: D,
     CREATE_PENDING_REPLY: L,
     CHANNEL_DELETE: N,
     THREAD_DELETE: N,

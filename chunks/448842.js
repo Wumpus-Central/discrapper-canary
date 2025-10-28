@@ -78,12 +78,12 @@ function A(e) {
             autocompletes: N,
             mode: R,
         }),
-        D = (0, E.Z)({
+        w = (0, E.Z)({
             setSearchQuery: A,
             searchContext: v,
             mode: R,
         }),
-        w = (e) => {
+        D = (e) => {
             let { searchEverywhere: t } = e;
             s.S.dispatch(b.CkL.PERFORM_SEARCH, { searchEverywhere: t });
         },
@@ -191,7 +191,7 @@ function A(e) {
                 }
                 let t = x(C);
                 if (C) {
-                    let n = [...D, t];
+                    let n = [...w, t];
                     e.push(
                         (0, _.fC)(f.i.GROUP, {
                             rows: n,
@@ -199,7 +199,7 @@ function A(e) {
                         }),
                     );
                 } else e.push(t);
-                let n = C ? e.length + D.length : e.length,
+                let n = C ? e.length + w.length : e.length,
                     { autocompleteCount: i, autocompleteGroups: o } = P({
                         filterFn: (e) => e.group === b.rtL.HISTORY && e.results.length > 0,
                         getAutocompleteRowItem: (e) => {
@@ -266,7 +266,7 @@ function A(e) {
                                           className: O.labelWithElements,
                                       }),
                             ariaLabel: y.intl.formatToPlainString(y.t.rCnaoo, { value: t.query }),
-                            onSelect: () => w({ searchEverywhere: !1 }),
+                            onSelect: () => D({ searchEverywhere: !1 }),
                         });
                     if ((e.push(i), v.type === b.aib.FAVORITES && (0, l.X$)())) {
                         let t = (0, _.fC)(f.i.ROW, {
@@ -276,7 +276,7 @@ function A(e) {
                                 className: O.itemIcon,
                             }),
                             label: (0, r.jsx)(d.Q0, { label: y.intl.string(y.t.FtSUxc) }),
-                            onSelect: () => w({ searchEverywhere: !0 }),
+                            onSelect: () => D({ searchEverywhere: !0 }),
                         });
                         e.push(t);
                     }
@@ -343,7 +343,7 @@ function A(e) {
                     o = C && 0 === n,
                     s = x(o);
                 if (o) {
-                    let t = [...D, s];
+                    let t = [...w, s];
                     e.push(
                         (0, _.fC)(f.i.GROUP, {
                             rows: t,

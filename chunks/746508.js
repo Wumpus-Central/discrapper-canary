@@ -31,8 +31,8 @@ var r = n(951288),
     Z = n(562129),
     w = n(793865),
     L = n(522651),
-    D = n(795318),
-    R = n(933557),
+    R = n(795318),
+    D = n(933557),
     M = n(600164),
     k = n(243778),
     U = n(258609),
@@ -85,8 +85,8 @@ var r = n(951288),
     eZ = n(594117),
     ew = n(226323),
     eL = n(981631),
-    eD = n(354459),
-    eR = n(921944),
+    eR = n(354459),
+    eD = n(921944),
     eM = n(190378),
     ek = n(345655),
     eU = n(388032),
@@ -324,7 +324,7 @@ function eQ(e) {
                                 return (0, r.jsx)(w.Z, {
                                     onClose: t,
                                     minimal: !0,
-                                    onInteraction: (0, D.u)("VideoDeviceMenu", o),
+                                    onInteraction: (0, R.u)("VideoDeviceMenu", o),
                                 });
                             },
                             position: "top",
@@ -450,7 +450,7 @@ function eJ(e) {
                                               }),
                                               null == (n = e.onClick) || n.call(e),
                                               (0, L.v)(l, L.d.ACTIVITY),
-                                              i === d.z.ACTIVITIES_VOICE_LAUNCHER_BADGE && c(eR.L.TAKE_ACTION);
+                                              i === d.z.ACTIVITIES_VOICE_LAUNCHER_BADGE && c(eD.L.TAKE_ACTION);
                                       },
                                       onMouseEnter: () => {
                                           var t;
@@ -511,7 +511,7 @@ function eX(e) {
         P = null != C,
         { Component: A, events: Z, play: w } = (0, p.P)(P ? "disable" : "enable");
     i.useEffect(() => () => w(), [w, P]);
-    let R = (0, r.jsx)(A, {
+    let D = (0, r.jsx)(A, {
         size: "md",
         color: "currentColor",
         className: a()(eG.buttonIcon, { [eG.withText]: !j }),
@@ -526,7 +526,7 @@ function eX(e) {
                 activeStreams: _,
                 onClose: t,
                 handleGoLive: l ? v : ed.Z,
-                onInteraction: (0, D.u)("ManageStreamsMenu", d, { entrypoint: eD.A5.OTHER_BUTTON }),
+                onInteraction: (0, R.u)("ManageStreamsMenu", d, { entrypoint: eR.A5.OTHER_BUTTON }),
             });
         },
         position: "top",
@@ -573,10 +573,10 @@ function eX(e) {
                                 wrapperClassName: eG.button,
                                 focusProps: eY,
                                 children: j
-                                    ? R
+                                    ? D
                                     : (0, r.jsxs)(M.Z, {
                                           align: M.Z.Align.CENTER,
-                                          children: [R, eU.intl.string(eU.t["r0/+v7"])],
+                                          children: [D, eU.intl.string(eU.t["r0/+v7"])],
                                       }),
                             },
                         ),
@@ -597,7 +597,7 @@ class e$ extends i.PureComponent {
                 hasVideo: s,
             } = this.props;
         if (null == t) return null;
-        let o = (0, R.F6)(t, eC.default, ey.Z);
+        let o = (0, D.F6)(t, eC.default, ey.Z);
         return (
             null != n
                 ? ((e = eL.Z5c.CHANNEL(n.id, t.id)), (o = "".concat(o, " / ").concat(n.name)))
@@ -804,7 +804,7 @@ class e$ extends i.PureComponent {
                                 e,
                                 eF(eV({}, n), {
                                     channel: t,
-                                    onInteraction: (0, D.u)("RTCConnectionMenu", P.Z.RTC_PANEL),
+                                    onInteraction: (0, R.u)("RTCConnectionMenu", P.Z.RTC_PANEL),
                                 }),
                             ),
                         });

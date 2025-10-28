@@ -317,7 +317,7 @@ function P(e, t) {
     for (; r && (0, a.Ze)(r) && N(r); ) r = R(r, t);
     return r && (0, a.Py)(r) && N(r) && !(0, a.hT)(r) ? n : r || (0, a.gQ)(e) || n;
 }
-let D = async function (e) {
+let w = async function (e) {
     let t = this.getOffsetParent || P,
         n = this.getDimensions,
         r = await n(e.floating);
@@ -331,7 +331,7 @@ let D = async function (e) {
         },
     };
 };
-function w(e) {
+function D(e) {
     return "rtl" === (0, a.Dx)(e).direction;
 }
 let L = {
@@ -339,12 +339,12 @@ let L = {
     getDocumentElement: a.tF,
     getClippingRect: S,
     getOffsetParent: P,
-    getElementRects: D,
+    getElementRects: w,
     getClientRects: m,
     getDimensions: A,
     getScale: l,
     isElement: a.kK,
-    isRTL: w,
+    isRTL: D,
 };
 function x(e, t) {
     return e.x === t.x && e.y === t.y && e.width === t.width && e.height === t.height;

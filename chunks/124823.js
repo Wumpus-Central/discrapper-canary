@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(221292),
     m = n(687158),
     b = n(892001),
-    y = n(899007),
-    _ = n(648052),
-    O = n(867176),
-    j = n(280885),
-    x = n(900927),
-    v = n(678738),
+    _ = n(899007),
+    y = n(648052),
+    x = n(867176),
+    v = n(280885),
+    j = n(900927),
+    O = n(678738),
     C = n(502762),
     I = n(530),
     S = n(679332),
@@ -101,13 +101,13 @@ function w(e) {
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(O.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         user: n,
                                         displayProfile: D,
                                         themeType: Z.l.SIDEBAR,
                                         animateOnHoverOrFocusOnly: !H,
                                     }),
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(_.Z, {
                                         user: n,
                                         displayProfile: D,
                                         channelId: w.id,
@@ -125,7 +125,7 @@ function w(e) {
                                         nickname: h.ZP.getName(null, w.id, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         onOpenProfile: A ? void 0 : B,
-                                        tags: (0, r.jsx)(_.Z, {
+                                        tags: (0, r.jsx)(y.Z, {
                                             displayProfile: D,
                                             themeType: Z.l.SIDEBAR,
                                         }),
@@ -133,20 +133,20 @@ function w(e) {
                                     (0, r.jsxs)(C.Z.Overlay, {
                                         className: N.overlay,
                                         children: [
-                                            (0, r.jsx)(v.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(j.Z, {
+                                                children: (0, r.jsx)(v.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
                                                     userId: n.id,
                                                     animateOnHoverOrFocusOnly: !0,
                                                     isHoveringOrFocusing: H,
                                                 }),
                                             }),
-                                            (0, r.jsx)(v.Z, {
+                                            (0, r.jsx)(O.Z, {
                                                 heading: P.intl.string(P.t["A//N4k"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(x.Z, { userId: n.id }),
+                                                children: (0, r.jsx)(j.Z, { userId: n.id }),
                                             }),
                                         ],
                                     }),

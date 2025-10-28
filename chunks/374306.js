@@ -17,23 +17,23 @@ function g(e) {
         n = (0, d.r_)(t),
         g = (0, i.e7)([a.Z], () => a.Z.hasHidden(t.id)),
         m = (0, u.c)(t.id),
-        { sortOrder: b, tagFilter: y, tagSetting: _ } = (0, c.H)(t.id),
-        O = (0, i.e7)(
+        { sortOrder: b, tagFilter: _, tagSetting: y } = (0, c.H)(t.id),
+        x = (0, i.e7)(
             [o.Z, p.Z],
-            () => !!(o.Z.getThreadIds(t.id, b, y, _).length > 0) || !!(p.Z.getThreads(t.id, b, y, _).length > 0),
-            [t.id, b, y, _],
+            () => !!(o.Z.getThreadIds(t.id, b, _, y).length > 0) || !!(p.Z.getThreads(t.id, b, _, y).length > 0),
+            [t.id, b, _, y],
         ),
-        j = t.isMediaChannel();
-    if (!n || m || (j && O)) return null;
-    let x = g
-        ? j
+        v = t.isMediaChannel();
+    if (!n || m || (v && x)) return null;
+    let j = g
+        ? v
             ? f.intl.string(f.t["WP/IE1"])
             : f.intl.string(f.t.zfq9V4)
-        : j
+        : v
           ? f.intl.string(f.t.p60yF1)
           : f.intl.string(f.t.SNOqYC);
     return (0, r.jsx)(h.JO, {
-        tooltip: x,
+        tooltip: j,
         icon: l.d3s,
         onClick: () => s.Z.hideAdminOnboarding(t.id, !g),
         selected: !g,

@@ -2,9 +2,9 @@ n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(622535),
-    o = n(481060),
+    a = n(481060),
     c = n(63063),
     u = n(597688),
     d = n(297651),
@@ -44,15 +44,15 @@ let _ = (e) => {
         threshold: 0,
         children: (0, r.jsxs)("div", {
             ref: E,
-            className: a()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: T }),
+            className: o()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: T }),
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(h.wideBannerBackgroundImg, { [h.extraRounded]: T }),
+                    className: o()(h.wideBannerBackgroundImg, { [h.extraRounded]: T }),
                     children: (0, r.jsx)("img", {
                         ref: x,
                         src: k,
                         alt: _.title,
-                        className: a()(h.wideBannerArt, { [h.wideBannerArtOrbs]: T }),
+                        className: o()(h.wideBannerArt, { [h.wideBannerArtOrbs]: T }),
                         style: { height: null != O ? "".concat(O, "px") : "auto" },
                     }),
                 }),
@@ -62,13 +62,13 @@ let _ = (e) => {
                     children: (0, r.jsxs)("div", {
                         className: h.wideBannerTextContainer,
                         children: [
-                            (0, r.jsx)(o.Heading, {
+                            (0, r.jsx)(a.Heading, {
                                 style: { color: null != (n = _.bannerTextColor) ? n : "var(--header-primary)" },
                                 className: T ? h.wideBannerOrbsHeading : void 0,
                                 variant: T ? "heading-xl/bold" : "heading-lg/semibold",
                                 children: _.title,
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 style: { color: null != (i = _.bannerTextColor) ? i : "var(--text-muted)" },
                                 lineClamp: 2,
                                 variant: T ? "text-md/medium" : "text-sm/medium",
@@ -84,7 +84,7 @@ let _ = (e) => {
                 !0 !== _.disableCta &&
                     (0, r.jsx)("div", {
                         className: h.wideBannerBlockButton,
-                        children: (0, r.jsx)(o.Button, {
+                        children: (0, r.jsx)(a.Button, {
                             variant: "overlay-primary",
                             onClick: () => m("shop wide banner", y, void 0, !0),
                             text: C.intl.string(C.t.jVcuVY),

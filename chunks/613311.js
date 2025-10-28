@@ -31,8 +31,8 @@ var r = n(951288),
     Z = n(430824),
     w = n(496675),
     L = n(525395),
-    D = n(558314),
-    R = n(580130),
+    R = n(558314),
+    D = n(580130),
     M = n(55563),
     k = n(551428),
     U = n(695103),
@@ -651,7 +651,7 @@ class ef extends i.PureComponent {
 }
 let eh = (0, E.Z)(
     (0, O.Z)(
-        s.ZP.connectStores([D.Z, A.Z, x.default, G.Z, k.Z, M.Z, U.Z, I.Z, v.Z, L.Z, Z.Z, R.Z], (e) => {
+        s.ZP.connectStores([R.Z, A.Z, x.default, G.Z, k.Z, M.Z, U.Z, I.Z, v.Z, L.Z, Z.Z, D.Z], (e) => {
             let t,
                 n,
                 r,
@@ -668,8 +668,8 @@ let eh = (0, E.Z)(
             return {
                 skuId: t,
                 application: null != l ? v.Z.getApplication(l) : null,
-                isFetchingEntitlements: null != l && R.Z.applicationIdsFetching.has(l),
-                didFetchEntitlements: null != l && R.Z.applicationIdsFetched.has(l),
+                isFetchingEntitlements: null != l && D.Z.applicationIdsFetching.has(l),
+                didFetchEntitlements: null != l && D.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: s && null != l && L.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: G.Z.isFocused(),
@@ -680,7 +680,7 @@ let eh = (0, E.Z)(
                     isTestMode: c,
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: D.Z.didMatureAgree,
+                matureAgree: R.Z.didMatureAgree,
                 theme: A.Z.theme,
                 locale: x.default.locale,
                 guild: null != o ? Z.Z.getGuild(o.getGuildId()) : null,

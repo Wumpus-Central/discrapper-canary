@@ -4,14 +4,14 @@ var i = n(657707),
     u = n(509613),
     r = n(906467),
     s = n(313789),
-    a = n(526665),
-    o = n(342386);
+    o = n(526665),
+    a = n(342386);
 let c = (0, u.m7)(s.n.LEGACY_SETTINGS_SIDEBAR_ITEM, {
     useTitle: () => "Open Legacy Settings",
     icon: i.ewm,
     onClick: () => {
-        (0, o.default)(), l.Z.open();
+        (0, a.default)(), l.Z.open();
     },
-    usePredicate: () => (0, a.NT)("LegacySettingsSidebarItem") || r.Z.isDeveloper,
+    usePredicate: () => (0, o.NT)("LegacySettingsSidebarItem") || r.Z.isDeveloper,
     buildLayout: () => [],
 });

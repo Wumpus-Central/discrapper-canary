@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(413496), n(433524), n(35282);
 var a,
     r,
-    i = n(951288),
-    l = n(647438),
+    l = n(951288),
+    i = n(647438),
     o = n(120356),
     s = n.n(o),
     c = n(159635),
@@ -13,8 +13,8 @@ var a,
     h = n(428595),
     x = n(532901),
     f = n(963071),
-    g = n(154257);
-function b(e, t, n) {
+    b = n(154257);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function v(e) {
                 }),
             )),
             a.forEach(function (t) {
-                b(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
@@ -69,7 +69,7 @@ let C = j(v({}, d().defaultRules), {
         heading: j(v({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let a = "h".concat(e.level);
-                return (0, i.jsx)(
+                return (0, l.jsx)(
                     m.Z,
                     {
                         tag: a,
@@ -81,7 +81,7 @@ let C = j(v({}, d().defaultRules), {
         }),
         paragraph: j(v({}, d().defaultRules.paragraph), {
             react: (e, t, n) =>
-                (0, i.jsx)(
+                (0, l.jsx)(
                     "div",
                     {
                         className: f.paragraph,
@@ -97,7 +97,7 @@ let C = j(v({}, d().defaultRules), {
         link: j(v({}, p.ZP, (0, x.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
         blockQuote: j(v({}, d().defaultRules.blockQuote), {
             react: (e, t, n) =>
-                (0, i.jsx)(
+                (0, l.jsx)(
                     "blockquote",
                     {
                         className: f.blockquote,
@@ -122,7 +122,7 @@ let C = j(v({}, d().defaultRules), {
         inlineCode: j(v({}, h.Z.RULES.inlineCode), {
             order: 6,
             react: (e, t, n) =>
-                (0, i.jsx)(
+                (0, l.jsx)(
                     "code",
                     {
                         className: f.codeInline,
@@ -134,17 +134,17 @@ let C = j(v({}, d().defaultRules), {
         codeBlock: j(v({}, d().defaultRules.codeBlock), {
             react(e, t, a) {
                 let r = () =>
-                    (0, i.jsx)(
+                    (0, l.jsx)(
                         "pre",
                         {
-                            children: (0, i.jsx)("code", {
-                                className: s()(g.scrollbarGhostHairline, "hljs"),
+                            children: (0, l.jsx)("code", {
+                                className: s()(b.scrollbarGhostHairline, "hljs"),
                                 children: y(e),
                             }),
                         },
                         a.key,
                     );
-                return (0, i.jsx)(
+                return (0, l.jsx)(
                     u.GI,
                     {
                         createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
@@ -156,11 +156,11 @@ let C = j(v({}, d().defaultRules), {
                                 let n = t.highlight(e.lang, e.content, !0);
                                 return null == n
                                     ? r()
-                                    : (0, i.jsx)(
+                                    : (0, l.jsx)(
                                           "pre",
                                           {
-                                              children: (0, i.jsx)("code", {
-                                                  className: s()(g.scrollbarGhostHairline, "hljs", n.language),
+                                              children: (0, l.jsx)("code", {
+                                                  className: s()(b.scrollbarGhostHairline, "hljs", n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value },
                                               }),
                                           },
@@ -176,18 +176,18 @@ let C = j(v({}, d().defaultRules), {
     }),
     S = d().parserFor(C),
     E = d().reactFor(d().ruleOutput(C, "react"));
-class T extends (r = l.PureComponent) {
+class T extends (r = i.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: a, output: r } = this.props,
-            l = r(a("".concat(t, "\n\n"), v({ inline: !1 }, n)));
-        return (0, i.jsx)("div", {
+            i = r(a("".concat(t, "\n\n"), v({ inline: !1 }, n)));
+        return (0, l.jsx)("div", {
             className: s()(f.markdown, e),
-            children: l,
+            children: i,
         });
     }
 }
-b(T, "rules", C),
-    b(T, "defaultProps", {
+g(T, "rules", C),
+    g(T, "defaultProps", {
         parser: S,
         output: E,
     });

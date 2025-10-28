@@ -116,7 +116,7 @@ function C(e) {
         onboardingPromptsSeen: o,
         onboardingResponsesSeen: s,
     }),
-        u || D(t, a),
+        u || w(t, a),
         (O[t] = Date.now());
 }
 function N() {
@@ -152,7 +152,7 @@ function P(e) {
             !0))
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == y[e]) return;
     let n = {};
     Object.keys(y[e]).forEach((r) => {
@@ -165,9 +165,9 @@ function D(e, t) {
     }),
         (b[e] = E(m({}, b[e]), { responses: r }));
 }
-function w(e) {
+function D(e) {
     let { guildId: t, options: n, prompts_seen: r, options_seen: i } = e;
-    D(t, n);
+    w(t, n);
     let a = b[t];
     if (null == a) return !1;
     let o = A(a.prompts, r, i);
@@ -293,7 +293,7 @@ let G = new U(s.Z, {
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: C,
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: N,
     GUILD_ONBOARDING_SELECT_OPTION: P,
-    GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: w,
+    GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: D,
     GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: R,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: R,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: L,

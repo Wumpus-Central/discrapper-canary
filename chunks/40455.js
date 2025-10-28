@@ -118,8 +118,8 @@ class S extends a.Z {
             CONNECTION_OPEN_SUPPLEMENTAL: C,
             GUILD_DELETE: L,
             LOGIN_SUCCESS: x,
-            THREAD_DELETE: w,
-            THREAD_UPDATE: D,
+            THREAD_DELETE: D,
+            THREAD_UPDATE: w,
         });
     }
 }
@@ -142,10 +142,10 @@ function R(e) {
 function P(e) {
     S.deleteChannel(e.channel.id);
 }
-function D(e) {
+function w(e) {
     N(e.channel);
 }
-function w(e) {
+function D(e) {
     S.deleteChannel(e.channel.id);
 }
 function L(e) {

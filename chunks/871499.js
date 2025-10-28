@@ -111,8 +111,8 @@ function I(e) {
         buttonRef: N,
         grow: R,
         "aria-label": P,
-        look: D,
-        buttonText: w,
+        look: w,
+        buttonText: D,
         size: L,
         color: x,
     } = e;
@@ -132,7 +132,7 @@ function I(e) {
                     y(
                         E(
                             {
-                                look: null != D ? D : l.zx.Looks.BLANK,
+                                look: null != w ? w : l.zx.Looks.BLANK,
                                 size: null != L ? L : l.zx.Sizes.NONE,
                                 color: x,
                                 onKeyDown: (e) => {
@@ -160,7 +160,7 @@ function I(e) {
                                     null == S || S(), null == u || u(e);
                                 },
                                 disabled: I,
-                                innerClassName: o()(m.lineHeightReset, { [m.buttonInnerWithText]: null != w }),
+                                innerClassName: o()(m.lineHeightReset, { [m.buttonInnerWithText]: null != D }),
                                 className: o()({ [m.active]: T }, f),
                                 wrapperClassName: p,
                                 buttonRef: N,
@@ -174,13 +174,13 @@ function I(e) {
                                 (0, r.jsx)(b, {
                                     size: s.Z.md,
                                     className: o()(h, {
-                                        [m.controlIcon]: null == w,
+                                        [m.controlIcon]: null == D,
                                         [m.themeable]: v,
                                         [m.active]: T,
                                     }),
                                     color: g,
                                 }),
-                                w,
+                                D,
                             ],
                         },
                     ),
@@ -241,8 +241,8 @@ function A(e) {
             "isTrayButton",
             "applyStyles",
         ]);
-    let D = (0, p.Z)(a, l),
-        w = null != s ? s : D,
+    let w = (0, p.Z)(a, l),
+        D = null != s ? s : w,
         L = (0, u.Z)("(max-width: 456px)"),
         x = i.useRef(null),
         M = i.useContext(f.h9);
@@ -263,7 +263,7 @@ function A(e) {
                     L || R ? g : null,
                     l && m.active,
                     m.centerButton,
-                    S[D],
+                    S[w],
                     j && m.fullRegionButton,
                     G && m.attachedButton,
                 ),
@@ -277,7 +277,7 @@ function A(e) {
                   m.attachedCaretButtonContainer,
                   A && m.popoutOpen,
                   g,
-                  U && [m.fullRegionDropdownButton, T[D]],
+                  U && [m.fullRegionDropdownButton, T[w]],
               ),
               children: [
                   B,
@@ -289,7 +289,7 @@ function A(e) {
                                 className: o()(
                                     m.contextMenuNub,
                                     N && m.attachedCaret,
-                                    S[w],
+                                    S[D],
                                     A && [m.popoutOpen, m.active],
                                     C && m.disabled,
                                 ),

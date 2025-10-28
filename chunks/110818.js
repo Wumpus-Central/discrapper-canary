@@ -471,7 +471,7 @@ let R = {
         WHITE: "#ebf0f7",
         PINK: "#fa6ef6",
     }),
-    D = [
+    w = [
         {
             left: 29,
             top: 100,
@@ -503,7 +503,7 @@ let R = {
             color: P.PINK,
         },
     ],
-    w = Object.freeze({
+    D = Object.freeze({
         SCALE_INITIAL: 0,
         SCALE_MIDDLE: 1,
         SCALE_END: 0,
@@ -524,14 +524,14 @@ function L(e) {
     let { animate: t } = e,
         [n, r] = l.useState(0),
         i = (0, _.bYB)(
-            D.length,
-            D.map((e, i) => {
-                let a = i > 0 ? w.DELAY_STAGGER * i + Math.random() * (w.DELAY_MAX - w.DELAY_MIN) + w.DELAY_MIN : 0,
-                    o = Math.random() * (w.SIZE_MAX - w.SIZE_MIN) + w.SIZE_MIN;
+            w.length,
+            w.map((e, i) => {
+                let a = i > 0 ? D.DELAY_STAGGER * i + Math.random() * (D.DELAY_MAX - D.DELAY_MIN) + D.DELAY_MIN : 0,
+                    o = Math.random() * (D.SIZE_MAX - D.SIZE_MIN) + D.SIZE_MIN;
                 return {
                     from: {
-                        scale: w.SCALE_INITIAL,
-                        rotate: w.ROTATE_INITIAL,
+                        scale: D.SCALE_INITIAL,
+                        rotate: D.ROTATE_INITIAL,
                         top: e.top,
                         left: e.left,
                         width: o,
@@ -540,31 +540,31 @@ function L(e) {
                     to: async (e) => {
                         t
                             ? (await e({
-                                  scale: w.SCALE_MIDDLE,
-                                  rotate: w.ROTATE_MIDDLE,
+                                  scale: D.SCALE_MIDDLE,
+                                  rotate: D.ROTATE_MIDDLE,
                                   delay: a,
                                   config: {
-                                      duration: w.DURATION_MIDDLE,
-                                      easing: w.EASING_MIDDLE,
+                                      duration: D.DURATION_MIDDLE,
+                                      easing: D.EASING_MIDDLE,
                                   },
                               }),
                               await e({
-                                  scale: w.SCALE_END,
-                                  rotate: w.ROTATE_END,
+                                  scale: D.SCALE_END,
+                                  rotate: D.ROTATE_END,
                                   config: {
-                                      duration: w.DURATION_END,
-                                      easing: w.EASING_END,
+                                      duration: D.DURATION_END,
+                                      easing: D.EASING_END,
                                   },
                               }),
                               await e({
-                                  scale: w.SCALE_INITIAL,
-                                  rotate: w.ROTATE_INITIAL,
+                                  scale: D.SCALE_INITIAL,
+                                  rotate: D.ROTATE_INITIAL,
                                   immediate: !0,
                               }),
-                              i === D.length - 1 && r(n + 1))
+                              i === w.length - 1 && r(n + 1))
                             : await e({
-                                  scale: w.SCALE_INITIAL,
-                                  rotate: w.ROTATE_INITIAL,
+                                  scale: D.SCALE_INITIAL,
+                                  rotate: D.ROTATE_INITIAL,
                               });
                     },
                 };
@@ -572,7 +572,7 @@ function L(e) {
         );
     return (0, s.jsx)(s.Fragment, {
         children: i.map((e, t) => {
-            let n = D[t];
+            let n = w[t];
             return (0, s.jsx)(
                 d.animated.svg,
                 {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -13,13 +13,13 @@ var r = n(951288),
     p = n(286957),
     m = n(388032),
     b = n(44258);
-function h(e) {
+function y(e) {
     var t;
-    let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: h = !1 } = e,
+    let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: y = !1 } = e,
         x = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         _ = x.length > 0,
         P = o.qH,
-        I = a && !h && (0, f.M8)(c) && x.length < P,
+        I = a && !y && (0, f.M8)(c) && x.length < P,
         { trackUserProfileAction: w } = (0, d.KZ)(),
         S = (0, i.useRef)(new Map()),
         E = (0, i.useRef)(null),
@@ -53,7 +53,7 @@ function h(e) {
                             "aria-label": m.intl.string(m.t.EfjTi4),
                             children: Z.map((e) =>
                                 (0, r.jsx)(
-                                    y,
+                                    h,
                                     {
                                         tag: e,
                                         isCurrentUser: a,
@@ -62,7 +62,7 @@ function h(e) {
                                         ref: (t) => {
                                             null != t && S.current.set(e, t);
                                         },
-                                        disableInteraction: h,
+                                        disableInteraction: y,
                                     },
                                     e,
                                 ),
@@ -81,7 +81,7 @@ function h(e) {
                                           N(!0), w({ action: "EXPAND_GAME_TAGS" });
                                       },
                                       ref: E,
-                                      disableInteraction: h,
+                                      disableInteraction: y,
                                   })),
                     ],
                 }),
@@ -95,21 +95,21 @@ function h(e) {
         ],
     });
 }
-let y = (e) => {
+let h = (e) => {
         let { tag: t, isCurrentUser: n, applicationId: i, widgetType: a, disableInteraction: l, ref: o } = e,
             { trackUserProfileEditAction: u } = (0, d.KZ)(),
             g = (0, p.zK)(t);
         if (null == g) return null;
-        let { getText: h, icon: y } = g;
+        let { getText: y, icon: h } = g;
         return (0, r.jsxs)("li", {
             className: b.tag,
             ref: o,
             children: [
-                (0, r.jsx)(y, { size: "xxs" }),
+                (0, r.jsx)(h, { size: "xxs" }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-xxs/medium",
                     color: "text-secondary",
-                    children: h(),
+                    children: y(),
                 }),
                 n &&
                     !l &&
@@ -125,7 +125,7 @@ let y = (e) => {
                                     });
                             },
                             className: b.removeButton,
-                            "aria-label": m.intl.formatToPlainString(m.t.GCn1ne, { tag: h() }),
+                            "aria-label": m.intl.formatToPlainString(m.t.GCn1ne, { tag: y() }),
                             children: (0, r.jsx)(s.Dio, {
                                 size: "xxs",
                                 color: "currentColor",

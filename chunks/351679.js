@@ -58,8 +58,8 @@ let N = i.memo(function (e) {
             channel: Z,
             isGroupStart: w,
             animateAvatar: L,
-            subscribeToComponentDispatch: D,
-            renderThreadAccessory: R,
+            subscribeToComponentDispatch: R,
+            renderThreadAccessory: D,
         } = e,
         M = (function (e, t) {
             if (null == e) return {};
@@ -159,7 +159,7 @@ let N = i.memo(function (e) {
                 ),
                 onContextMenu: P,
                 onClick: x,
-                hasThread: R && null != z && N.hasFlag(y.iLy.HAS_THREAD),
+                hasThread: D && null != z && N.hasFlag(y.iLy.HAS_THREAD),
                 hasReply: !1,
                 "aria-labelledby": W,
                 "aria-describedby": q,

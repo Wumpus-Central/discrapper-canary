@@ -14,12 +14,12 @@ var r = n(951288),
     g = n(941028),
     m = n(144144),
     b = n(276264),
-    y = n(607070),
-    _ = n(100527),
-    O = n(367907),
-    j = n(906732),
-    x = n(493324),
-    v = n(611064),
+    _ = n(607070),
+    y = n(100527),
+    x = n(367907),
+    v = n(906732),
+    j = n(493324),
+    O = n(611064),
     C = n(677432),
     I = n(178762),
     S = n(868671),
@@ -137,12 +137,12 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                 currentUser: p,
                 activities: h,
                 applicationStream: g,
-                status: y,
-                channel: _,
-                guildId: O,
-                isTyping: j,
-                isMobileOnline: x,
-                premiumSince: v,
+                status: _,
+                channel: y,
+                guildId: x,
+                isTyping: v,
+                isMobileOnline: j,
+                premiumSince: O,
                 nameplate: C,
             } = e,
             I = J(e, [
@@ -166,7 +166,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
             ]),
             S = i.useRef(null),
             [E, Z] = i.useState(!1),
-            T = null != v ? new Date(v) : null,
+            T = null != O ? new Date(O) : null,
             N = i.useCallback(
                 (e) => {
                     (0, f.jW)(e, async () => {
@@ -183,44 +183,44 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                                 e,
                                 X(Q({}, n), {
                                     user: d,
-                                    guildId: O,
-                                    channel: _,
+                                    guildId: x,
+                                    channel: y,
                                     showMediaItems: t,
                                 }),
                             );
                     });
                 },
-                [d, O, _],
+                [d, x, y],
             ),
             R = i.useCallback(() => {
                 let e = "@".concat(V.ZP.getUserTag(d, { decoration: "never" })),
                     t = "<@".concat(d.id, ">");
-                F.S.dispatch(W.CkL.TEXTAREA_FOCUS, { channelId: _.id }),
+                F.S.dispatch(W.CkL.TEXTAREA_FOCUS, { channelId: y.id }),
                     F.S.dispatchToLastSubscribed(W.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: t,
                     }),
-                    m.Z.startTyping(_.id);
-            }, [d, _.id]),
+                    m.Z.startTyping(y.id);
+            }, [d, y.id]),
             w = i.useCallback(
                 (e) => {
-                    null != O &&
+                    null != x &&
                         (e.stopPropagation(),
                         (0, P.f)({
-                            guildId: O,
+                            guildId: x,
                             location: {
                                 section: W.jXE.MEMBER_LIST,
                                 object: W.qAy.BOOST_GEM_ICON,
                             },
                         }));
                 },
-                [O],
+                [x],
             );
         return (0, r.jsx)(A.Z, {
             targetElementRef: S,
             user: d,
-            guildId: O,
-            channelId: _.id,
+            guildId: x,
+            channelId: y.id,
             roleId: s,
             position: u.tq ? "window_center" : "left",
             spacing: 16,
@@ -243,7 +243,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             user: d,
                             currentUser: p,
                             nick: c,
-                            status: y,
+                            status: _,
                             activities: h,
                             applicationStream: g,
                             isOwner: o,
@@ -251,10 +251,10 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: j,
-                            channel: _,
-                            guildId: O,
-                            isMobile: x,
+                            isTyping: v,
+                            channel: y,
+                            guildId: x,
+                            isMobile: j,
                             onClickPremiumGuildIcon: w,
                             selected: E,
                             itemProps: I,
@@ -348,7 +348,7 @@ class el extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, x.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, j.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -456,7 +456,7 @@ class el extends i.Component {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                if ((0, v.R)(a)) return (0, i.createElement)(v.Z, X(Q({}, a), { key: "section-".concat(t) }));
+                if ((0, O.R)(a)) return (0, i.createElement)(O.Z, X(Q({}, a), { key: "section-".concat(t) }));
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
@@ -582,7 +582,7 @@ class el extends i.Component {
             ),
             K(this, "getContentFeedGroup", () => {
                 let e = this.props.groups[S.T];
-                if ((0, v.R)(e)) return e;
+                if ((0, O.R)(e)) return e;
             }),
             K(this, "hasContentFeed", () => null != this.getContentFeedGroup()),
             K(this, "getRowHeightComputer", () => {
@@ -661,14 +661,14 @@ class el extends i.Component {
                     },
                 );
                 (this.lastReportedAnalyticsChannel = this.props.channel.id),
-                    O.ZP.trackWithMetadata(W.rMx.MEMBER_LIST_VIEWED, Q({}, i));
+                    x.ZP.trackWithMetadata(W.rMx.MEMBER_LIST_VIEWED, Q({}, i));
             });
     }
 }
 function ea(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, j.ZP)(_.Z.MEMBER_LIST),
-        s = (0, p.e7)([y.Z], () => y.Z.keyboardModeEnabled),
+        { analyticsLocations: l } = (0, v.ZP)(y.Z.MEMBER_LIST),
+        s = (0, p.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         o = (0, p.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
             rows: u,
@@ -681,8 +681,8 @@ function ea(e) {
             guildId: t.guild_id,
         }),
         b = i.useRef(null),
-        O = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
-        x = i.useCallback(
+        x = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
+        j = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -702,7 +702,7 @@ function ea(e) {
             },
             [42],
         ),
-        v = i.useCallback(
+        O = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -726,12 +726,12 @@ function ea(e) {
         ),
         I = (0, d.ZP)({
             id: "members-".concat(t.id),
-            setFocus: x,
+            setFocus: j,
             isEnabled: s,
-            scrollToStart: v,
+            scrollToStart: O,
             scrollToEnd: C,
         });
-    return (0, r.jsx)(j.Gt, {
+    return (0, r.jsx)(v.Gt, {
         value: l,
         children: (0, r.jsx)("div", {
             className: a()(q.container, n),
@@ -745,7 +745,7 @@ function ea(e) {
                         rows: u,
                         listRef: b,
                         updateMaxContentFeedRowSeen: m,
-                        sectionHeight: 18 + O,
+                        sectionHeight: 18 + x,
                         rowHeight: 42,
                     }),
                 ),

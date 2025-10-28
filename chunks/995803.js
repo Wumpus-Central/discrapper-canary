@@ -309,8 +309,8 @@ function b(e) {
         N = d.shouldResizeCanvasToContainer,
         R = d.useDevicePixelRatio,
         P = d.customDevicePixelRatio,
-        D = m(a, N),
-        w = u(P),
+        w = m(a, N),
+        D = u(P),
         L = null != c ? c : {},
         x = L.maxX,
         M = L.maxY,
@@ -347,9 +347,9 @@ function b(e) {
                         (d.fitCanvasToArtboardHeight && s && ((a.current.style.height = r + "px"), (o = !0)),
                         d.useDevicePixelRatio)
                     ) {
-                        if (s || t * w !== v || r * w !== O) {
-                            var c = w * t,
-                                u = w * r;
+                        if (s || t * D !== v || r * D !== O) {
+                            var c = D * t,
+                                u = D * r;
                             (i.width = c),
                                 (i.height = u),
                                 (i.style.width = t + "px"),
@@ -377,7 +377,7 @@ function b(e) {
                 l && (S || o) && l && l(), S && A(!1);
             }
         },
-        [i, a, D, w, k, S, A, O, v, p, h, l, N, C, R, n],
+        [i, a, w, D, k, S, A, O, v, p, h, l, N, C, R, n],
     ),
         r.useEffect(
             function () {

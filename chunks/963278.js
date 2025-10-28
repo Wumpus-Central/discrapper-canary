@@ -2,9 +2,9 @@ n.d(t, { Z: () => v });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(442837),
-    o = n(481060),
+    a = n(481060),
     c = n(594174),
     u = n(381585),
     d = n(597688),
@@ -26,16 +26,16 @@ let v = (e) => {
     return null == v
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(b.shelfBlockContainer, b.centeredSection),
+              className: o()(b.shelfBlockContainer, b.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
                       className: b.blockHeader,
                       children: [
-                          (0, r.jsx)(o.Heading, {
+                          (0, r.jsx)(a.Heading, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, r.jsx)(o.Button, {
+                          (0, r.jsx)(a.Button, {
                               variant: "secondary",
                               text: m.intl.formatToPlainString(m.t.bc9RBE, { category_name: t.name }),
                               onClick: () => n("shelf block see all", t.categorySkuId, void 0, !0),
@@ -48,7 +48,7 @@ let v = (e) => {
                           children: S.map((e, n) => {
                               let l = d.Z.getCategoryForProduct(e.skuId);
                               if (null == l || null == e) return null;
-                              let a = e.skuId;
+                              let o = e.skuId;
                               return (0, r.jsx)(
                                   u.k0,
                                   {
@@ -61,11 +61,11 @@ let v = (e) => {
                                           ? (0, r.jsx)(
                                                 C.Z,
                                                 {
-                                                    skuId: a,
+                                                    skuId: o,
                                                     prioritizedCurrency: i === _.AW.ORBS ? h.tA.ORBS : void 0,
                                                     onClickAnalytics: (0, h.wO)(e, i, x),
                                                 },
-                                                a,
+                                                o,
                                             )
                                           : (0, r.jsx)(
                                                 f.Z,
@@ -75,10 +75,10 @@ let v = (e) => {
                                                     user: v,
                                                     tab: i,
                                                 },
-                                                a,
+                                                o,
                                             ),
                                   },
-                                  a,
+                                  o,
                               );
                           }),
                       }),

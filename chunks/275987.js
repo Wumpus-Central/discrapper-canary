@@ -115,11 +115,11 @@ e.exports = (function (e) {
                 var N = I[C],
                     R = N.getKey(),
                     P = N.getType(),
-                    D = n(N),
-                    w = void 0,
+                    w = n(N),
+                    D = void 0,
                     L = void 0,
                     x = void 0;
-                D && ((w = D.component), (L = D.props), (x = D.editable));
+                w && ((D = w.component), (L = w.props), (x = w.editable));
                 var M = g || v.get(R),
                     k = c.encode(R, 0, 0),
                     j = {
@@ -146,7 +146,7 @@ e.exports = (function (e) {
                     var V = A !== G || null === S || Z > S;
                     F = f(F, p(P, Z, V, M));
                 }
-                var H = w || l,
+                var H = D || l,
                     Y = {
                         className: F,
                         "data-block": !0,

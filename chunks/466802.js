@@ -4,8 +4,8 @@ var i = n(657707),
     u = n(28682),
     r = n(313789),
     s = n(748717),
-    a = n(126848),
-    o = n(726985),
+    o = n(126848),
+    a = n(726985),
     c = n(388032);
 let E = (0, l.x1)(r.n.NITRO_PANE, {
         buildLayout: () => [],
@@ -18,10 +18,10 @@ let E = (0, l.x1)(r.n.NITRO_PANE, {
     T = (0, l.m7)(r.n.NITRO_SIDEBAR_ITEM, {
         icon: i.SrA,
         useTitle: () => c.intl.string(c.t.Ipxkog),
-        legacySearchKey: o.s6.PREMIUM,
+        legacySearchKey: a.s6.PREMIUM,
         buildLayout: () => [d],
         trailing: {
             type: u.PU.STRONGLY_DISCOURAGED_CUSTOM,
-            useDecoration: (t, e) => (0, a.x)(e),
+            useDecoration: (t, e) => (0, o.x)(e),
         },
     });

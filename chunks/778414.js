@@ -17,8 +17,8 @@ var r = n(951288),
     p = n(929677),
     m = n(314897),
     b = n(351402),
-    h = n(931847),
-    y = n(836197),
+    y = n(931847),
+    h = n(836197),
     v = n(880421),
     O = n(206599),
     j = n(50130),
@@ -37,8 +37,8 @@ var r = n(951288),
     A = n(661462),
     Z = n(795990),
     R = n(388032),
-    B = n(830202);
-function G(e) {
+    G = n(830202);
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -86,15 +86,15 @@ function L(e, t) {
 function M(e) {
     var { widget: t } = e,
         n = L(e, ["widget"]);
-    return t instanceof h.q
-        ? (0, r.jsx)(w.Z, G({ widget: t }, n))
-        : t instanceof y.zy
-          ? (0, r.jsx)(D.Z, G({ widget: t }, n))
+    return t instanceof y.q
+        ? (0, r.jsx)(w.Z, B({ widget: t }, n))
+        : t instanceof h.zy
+          ? (0, r.jsx)(D.Z, B({ widget: t }, n))
           : null;
 }
-function F() {
+function U() {
     return (0, r.jsxs)("div", {
-        className: B.ukTeenDisclaimer,
+        className: G.ukTeenDisclaimer,
         children: [
             (0, r.jsx)(s.d3s, { size: "xs" }),
             (0, r.jsx)(s.Text, {
@@ -106,13 +106,13 @@ function F() {
         ],
     });
 }
-function U(e) {
+function F(e) {
     let { user: t } = e,
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
         a = (0, I.Z)(t.id),
         l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
-        o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
+        o = a.some((e) => e instanceof y.q && e.applicationId === (null == n ? void 0 : n.id));
     return null == n || !l || null == i || o
         ? null
         : (0, r.jsx)(f.ZP, {
@@ -145,8 +145,8 @@ function W(e) {
         })(),
         d = (0, v.k)({ location: "UserProfileModalV2Widgets" }),
         f = 0 === l.length && c,
-        j = i.useMemo(() => l.filter(y.Wc), [l]),
-        x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
+        j = i.useMemo(() => l.filter(h.Wc), [l]),
+        x = i.useMemo(() => l.filter((e) => e instanceof y.q), [l]);
     (0, P.ZP)(j), (0, O.J)(c, j);
     var w = t.id;
     (0, _.s)(x);
@@ -159,8 +159,8 @@ function W(e) {
     let N = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
-                c && s && (0, r.jsx)(F, {}),
-                c && (0, r.jsx)(U, { user: t }),
+                c && s && (0, r.jsx)(U, {}),
+                c && (0, r.jsx)(F, { user: t }),
                 l.map((e, i) =>
                     (0, r.jsx)(
                         M,
@@ -191,8 +191,8 @@ function H(e) {
     return (0, r.jsxs)(A.F, {
         "data-scroller": !0,
         scrollerRef: a,
-        className: l()(B.scroller, { [B.hasToolbar]: o }),
+        className: l()(G.scroller, { [G.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(C.Z, { scrollerRef: a }), (0, r.jsx)(W, G({ user: t }, n))],
+        children: [(0, r.jsx)(C.Z, { scrollerRef: a }), (0, r.jsx)(W, B({ user: t }, n))],
     });
 }

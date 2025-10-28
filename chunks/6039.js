@@ -145,7 +145,7 @@ let N = (e) => {
             await m.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
         },
         L = Z(C.intl.format(C.t["9ZezpN"], { name: null == x ? void 0 : x.name }), A),
-        D = Z(C.intl.format(C.t.fJwWVt, { name: null == x ? void 0 : x.name }), A);
+        R = Z(C.intl.format(C.t.fJwWVt, { name: null == x ? void 0 : x.name }), A);
     return (0, r.jsxs)("div", {
         className: S.page,
         ref: n,
@@ -176,7 +176,7 @@ let N = (e) => {
                             });
                         default:
                             return (0, r.jsx)(E.s, {
-                                onDiscardApplication: D,
+                                onDiscardApplication: R,
                                 onContinueApplication: () => (0, g.hk)(t),
                                 guild: x,
                             });

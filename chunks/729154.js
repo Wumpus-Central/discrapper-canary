@@ -1,8 +1,8 @@
 n.d(t, { x: () => x }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(100527),
-    l = n(906732),
+    l = n(100527),
+    i = n(906732),
     o = n(562218),
     s = n(284829),
     c = n(586920),
@@ -22,11 +22,11 @@ let x = (e) => {
                 renewalInvoice: m,
                 renewalInvoiceDetails: p,
                 errorOnCancel: x,
-                errorOnRedeem: g,
-                setActiveStep: b,
+                errorOnRedeem: b,
+                setActiveStep: g,
                 activeStep: v,
             } = e,
-            { analyticsLocations: j } = (0, l.ZP)(i.Z.USER_SETTINGS),
+            { analyticsLocations: j } = (0, i.ZP)(l.Z.USER_SETTINGS),
             [_, y] = r.useState(f(v));
         return (
             (0, r.useEffect)(() => {
@@ -34,7 +34,7 @@ let x = (e) => {
             }, [v]),
             (0, a.jsx)(u.CancellationContext.Provider, {
                 value: {
-                    setStep: b,
+                    setStep: g,
                     premiumType: s,
                     onClose: n,
                     transitionState: t,
@@ -60,7 +60,7 @@ let x = (e) => {
                     applyOffer: () =>
                         new Promise((e, t) => {
                             setTimeout(() => {
-                                if (g) return void t();
+                                if (b) return void t();
                                 e();
                             }, 1000);
                         }),

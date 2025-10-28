@@ -55,8 +55,8 @@ var i,
     N = n(322155),
     R = n(509140),
     P = n(48481),
-    D = n(314897),
-    w = n(77498),
+    w = n(314897),
+    D = n(77498),
     L = n(355863),
     x = n(626135),
     M = n(866119),
@@ -404,7 +404,7 @@ function em() {
                 for (let l of (el.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
                     var t, n, r, i, a, o, s;
                     if (null == l) continue;
-                    let e = null != l.processName ? w.Z.getGameByExecutable(l.processName) : null;
+                    let e = null != l.processName ? D.Z.getGameByExecutable(l.processName) : null;
                     x.default.track(B.rMx.OVERLAY_HOOK_CRASHED, {
                         process_name: null == l ? void 0 : l.processName,
                         game_name: null != (t = null == e ? void 0 : e.name) ? t : null,
@@ -606,7 +606,7 @@ function eA(e) {
 function eC(e, t, n) {
     var r;
     let i = null == (r = b.ZP.getGameForPID(e)) ? void 0 : r.name,
-        a = w.Z.getGameByName(i),
+        a = D.Z.getGameByName(i),
         o = V(
             {
                 game_name: i,
@@ -629,8 +629,8 @@ function eC(e, t, n) {
             : (f.Z.updateOverlayState(e, I.mM.OVERLAY_CRASHED), eg(e, "CONNECT_FAILED", "CONNECTING"));
 }
 function eN() {
-    let e = D.default.getToken(),
-        t = D.default.getId();
+    let e = w.default.getToken(),
+        t = w.default.getId();
     null != e &&
         m.lW({
             type: B.BmY.DISPATCH,
@@ -651,7 +651,7 @@ function eR(e) {
 function eP(e) {
     switch ((es && el.info("[app data received]", e), e.type)) {
         case B.BmY.CONNECT:
-            let t = D.default.getToken();
+            let t = w.default.getToken();
             if (null == t) break;
             (0, d.te)(U.OVERLAY_LAYOUT_ID, L.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv),
                 Promise.all([(0, T.Z)(t, e.pid), o.ZP.PersistedStore.getAllStates()]).then((t) => {
@@ -689,7 +689,7 @@ function eP(e) {
             (0, y.K)(e.payload);
     }
 }
-async function eD(e, t) {
+async function ew(e, t) {
     let n = await (0, G.K)();
     if (null == n) return void el.error("setInputLocked: overlay module failed loaded");
     let r = null != t ? t : $;
@@ -706,8 +706,8 @@ async function eD(e, t) {
         (0, O.D1)(e, I.gl.Hook), el.error("Error during input lock", e);
     }
 }
-function ew(e, t) {
-    e ? setTimeout(() => eD(e, t), 200) : eD(e, t);
+function eD(e, t) {
+    e ? setTimeout(() => ew(e, t), 200) : ew(e, t);
 }
 let eL = null;
 function ex(e) {
@@ -716,24 +716,24 @@ function ex(e) {
     if ((ee.has(n) && ev(void 0), null != r && null != K[n]) && (t || "READY" === r || "CRASHED" === r)) {
         if ((t ? en.delete(n) : en.add(n), eo.clear(), null != eL && (clearTimeout(eL), (eL = null), t))) return;
         t
-            ? ew(t, n)
+            ? eD(t, n)
             : (eL = setTimeout(() => {
-                  ew(t, n), (eL = null);
+                  eD(t, n), (eL = null);
               }, 100));
     }
 }
 function eM(e) {
     let { region: t } = e;
-    eo.add(t), ew(!1, $);
+    eo.add(t), eD(!1, $);
 }
 function ek() {
-    eo.clear(), ew(!0, $);
+    eo.clear(), eD(!0, $);
 }
 function ej(e) {
     let { port: t } = e;
     et = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "c0a79a8af39b293d4f761df60cf0249a3f3aa921"),
+    n.append("build_id", "d9074464629b848e2ab18451a6f6cf84eb3c0ec4"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", et),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -844,10 +844,10 @@ class e$ extends (i = o.ZP.Store) {
     initialize() {
         !(0, U.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(D.default, E.Z, w.Z, L.Z, S.default, N.Z, R.Z, C.Z, b.ZP),
+            (this.waitFor(w.default, E.Z, D.Z, L.Z, S.default, N.Z, R.Z, C.Z, b.ZP),
             this.syncWith([E.Z], eX),
             m.sr(eP, eR),
-            D.default.addChangeListener(eN),
+            w.default.addChangeListener(eN),
             l.Z.addInterceptor(ei.queueDispatch));
     }
     isFocusedPidInputLocked() {

@@ -1,4 +1,4 @@
-n.d(t, { w: () => w }), n(388685), n(539854);
+n.d(t, { w: () => D }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(400497),
@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(892071),
     R = n(982519),
     P = n(388032);
-function D(e, t, n, r, o) {
+function w(e, t, n, r, o) {
     let s = i.useContext(_.Z),
         l = i.useCallback(
             () => ({
@@ -92,7 +92,7 @@ function D(e, t, n, r, o) {
         u
     );
 }
-function w(e) {
+function D(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
         [c] = i.useState(() => A.ZP.getEnableHardwareAcceleration()),
@@ -101,7 +101,7 @@ function w(e) {
             theme: y,
             focused: R,
             currentWindow: P,
-            fontScale: w,
+            fontScale: D,
             fontScaleClass: L,
             keyboardModeEnabled: x,
             saturation: M,
@@ -144,7 +144,7 @@ function w(e) {
         Q = (0, b.A)("RootThemeContextProvider"),
         J = p.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
         $ = (0, h.On)({ isPopoutWindow: o }),
-        ee = D(
+        ee = w(
             y,
             M,
             i.useMemo(() => {
@@ -173,7 +173,7 @@ function w(e) {
                 theme: y,
                 density: W,
                 focused: R,
-                fontScale: w,
+                fontScale: D,
                 fontScaleClass: L,
                 keyboardModeEnabled: x,
                 mouseMode: H,

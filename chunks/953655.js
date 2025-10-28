@@ -3,9 +3,9 @@ var r = n(951288);
 n(647438);
 var l = n(120356),
     i = n.n(l),
-    a = n(87290),
+    o = n(87290),
     s = n(960048),
-    o = n(381585),
+    a = n(381585),
     c = n(953528),
     u = n(788822),
     d = n(388032),
@@ -19,7 +19,7 @@ let p = (e) => {
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
-                          if (e.type === a.O.CATEGORY) {
+                          if (e.type === o.O.CATEGORY) {
                               let i =
                                   null != e.unpublishedAt
                                       ? d.intl.string(d.t["h/uBCR"])
@@ -40,7 +40,7 @@ let p = (e) => {
                                         ? d.intl.string(d.t.soka7y)
                                         : void 0;
                               return (0, r.jsx)(
-                                  o.k0,
+                                  a.k0,
                                   {
                                       newValue: {
                                           categoryPosition: 1,
@@ -70,9 +70,9 @@ let p = (e) => {
             l = (0, c.QH)("collectibles_featured_block");
         if (null == n || n.length < 2)
             return s.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
-        let [a, p] = n,
+        let [o, p] = n,
             f =
-                (null == a ? void 0 : a.unpublishedAt) != null
+                (null == o ? void 0 : o.unpublishedAt) != null
                     ? d.intl.string(d.t["h/uBCR"])
                     : (() => {
                             switch (l) {
@@ -83,8 +83,8 @@ let p = (e) => {
                                     return !1;
                             }
                         })() &&
-                        (null == a ? void 0 : a.storeListingId) != null &&
-                        "" !== a.storeListingId
+                        (null == o ? void 0 : o.storeListingId) != null &&
+                        "" !== o.storeListingId
                       ? d.intl.string(d.t.soka7y)
                       : void 0,
             C =
@@ -105,17 +105,17 @@ let p = (e) => {
                       : d.intl.string(d.t["o/oRJB"]);
         return (0, r.jsx)("div", {
             className: i()(g.col2, g.centeredSection),
-            children: (0, r.jsxs)(o.k0, {
+            children: (0, r.jsxs)(a.k0, {
                 newValue: {
                     categoryPosition: 1,
-                    pageCategory: null != a ? a.name : null == p ? void 0 : p.name,
+                    pageCategory: null != o ? o.name : null == p ? void 0 : p.name,
                     pageSection: "featured_block",
-                    tilePosition: +(null == a),
+                    tilePosition: +(null == o),
                 },
                 children: [
-                    null != a &&
+                    null != o &&
                         (0, r.jsx)(u.q, {
-                            category: a,
+                            category: o,
                             badgeText: f,
                             handleTransition: t,
                         }),
@@ -130,7 +130,7 @@ let p = (e) => {
         });
     },
     C = (e) => {
-        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: a } = e;
+        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: o } = e;
         return t
             ? (0, r.jsxs)("div", {
                   className: i()(g.col2, g.centeredSection),
@@ -145,9 +145,9 @@ let p = (e) => {
                       }),
                   ],
               })
-            : null != a
+            : null != o
               ? (0, r.jsx)(p, {
-                    featuredBlockRecord: a,
+                    featuredBlockRecord: o,
                     handleTransition: n,
                     isLoading: !1,
                 })

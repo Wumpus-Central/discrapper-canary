@@ -51,22 +51,22 @@ o(
                 p || (i = _(i));
                 var m = o.global;
                 m && ((P = o.unicode), (o.lastIndex = 0));
-                for (var b = []; null !== (w = E(o, s)) && (I(b, w), m); ) {
-                    "" === _(w[0]) && (o.lastIndex = h(s, f(o.lastIndex), P));
+                for (var b = []; null !== (D = E(o, s)) && (I(b, D), m); ) {
+                    "" === _(D[0]) && (o.lastIndex = h(s, f(o.lastIndex), P));
                 }
                 for (var C = "", N = 0, R = 0; R < b.length; R++) {
                     for (
-                        var P, D, w = b[R], L = _(w[0]), x = y(O(d(w.index), s.length), 0), M = [], k = 1;
-                        k < w.length;
+                        var P, w, D = b[R], L = _(D[0]), x = y(O(d(D.index), s.length), 0), M = [], k = 1;
+                        k < D.length;
                         k++
                     )
-                        I(M, A(w[k]));
-                    var j = w.groups;
+                        I(M, A(D[k]));
+                    var j = D.groups;
                     if (p) {
                         var U = v([L], M, x, s);
-                        void 0 !== j && I(U, j), (D = _(r(i, void 0, U)));
-                    } else D = g(L, s, x, M, j, i);
-                    x >= N && ((C += S(s, N, x) + D), (N = x + L.length));
+                        void 0 !== j && I(U, j), (w = _(r(i, void 0, U)));
+                    } else w = g(L, s, x, M, j, i);
+                    x >= N && ((C += S(s, N, x) + w), (N = x + L.length));
                 }
                 return C + S(s, N);
             },

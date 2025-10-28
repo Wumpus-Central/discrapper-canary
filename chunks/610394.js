@@ -75,8 +75,8 @@ function C(e, t) {
 let N = new s.Z("OverlayV3Store"),
     R = new Set(),
     P = new Set(),
-    D = null,
     w = null,
+    D = null,
     L = null,
     x = null,
     M = null,
@@ -91,8 +91,8 @@ function F() {
 }
 function V(e, t) {
     try {
-        if (null == D || (null != t && (G[e] = t), R.has(e))) return;
-        D.trackGame(e),
+        if (null == w || (null != t && (G[e] = t), R.has(e))) return;
+        w.trackGame(e),
             R.add(e),
             (0, _.PY)(e, "maybeTrackGame", { newOverlayMethod: null != t ? f.gl[t] : null }),
             o.Z.updateOverlayState(e, f.mM.WAITING_FOR_POPOUT_OPEN);
@@ -112,8 +112,8 @@ function H(e) {
         delete G[e],
         P.delete(e);
     try {
-        if (null == D) return;
-        D.untrackGame(e), N.verbose("Removing tracked game ".concat(e));
+        if (null == w) return;
+        w.untrackGame(e), N.verbose("Removing tracked game ".concat(e));
         let t = R.values().next().value;
         k === e && (k = null != t ? t : null);
     } catch (t) {
@@ -122,7 +122,7 @@ function H(e) {
 }
 function Y() {
     try {
-        for (let e of R) null == D || D.untrackGame(e);
+        for (let e of R) null == w || w.untrackGame(e);
         R.clear(),
             (0, _.bs)(null, "clearTrackedGames"),
             (U = {}),
@@ -152,10 +152,10 @@ function z() {
     var e;
     null != M &&
         x === M &&
-        null != D &&
+        null != w &&
         ((M = null),
         (0, _.PY)(x, "renderer_window_refreshing_finished"),
-        null == (e = D.readyToShow) || e.call(D, x),
+        null == (e = w.readyToShow) || e.call(w, x),
         o.Z.updateOverlayState(x, f.mM.OVERLAY_RENDERING),
         N.verbose("Showing overlay v3 for pid ".concat(x)));
 }
@@ -166,13 +166,13 @@ function q(e, t) {
         if (t !== j) {
             j = t;
             try {
-                "function" == typeof (null == D ? void 0 : D.setLimitedInteraction)
+                "function" == typeof (null == w ? void 0 : w.setLimitedInteraction)
                     ? (N.info("Setting limited interaction", t),
                       (0, _.bs)(e, "focus_and_interaction_set", {
                           isLimitedInteraction: t,
                           focusable: !t,
                       }),
-                      D.setLimitedInteraction(t))
+                      w.setLimitedInteraction(t))
                     : N.info("No setLimitedInteraction function found, skipping");
             } catch (t) {
                 N.error("Error setting limited interaction mode:", t), (0, _.PV)(e, t, { crashType: "native" });
@@ -216,7 +216,7 @@ function et(e) {
 }
 async function en(e) {
     e.overlayMethod === f.gl.OutOfProcess || e.overlayMethod === f.gl.OutOfProcessLimitedInteraction
-        ? (null == D && (await ee()), V(e.pid, e.overlayMethod))
+        ? (null == w && (await ee()), V(e.pid, e.overlayMethod))
         : H(e.pid),
         ev.emitChange();
 }
@@ -230,7 +230,7 @@ function ei(e) {
 function ea(e) {
     let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
     o.Z.updateOverlayState(t, f.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE),
-        (null == D ? void 0 : D.setOnWindowHandleInitializedCallback) == null && $(!0);
+        (null == w ? void 0 : w.setOnWindowHandleInitializedCallback) == null && $(!0);
 }
 function eo(e) {
     let { createWindowTriggeringPID: t, error: n, nativeWindowHandle: r } = e;
@@ -257,27 +257,27 @@ function el(e) {
     );
 }
 function ec(e, t) {
-    q(e, null != t ? (0, y.rd)(t) : null), e !== w && N.info("OverlayStore: Focused new PID", e);
+    q(e, null != t ? (0, y.rd)(t) : null), e !== D && N.info("OverlayStore: Focused new PID", e);
 }
 function eu(e) {
     return X(), !0;
 }
 function ed(e) {
     let { pid: t, windowHandle: n } = e;
-    if (w !== t || L !== n) {
+    if (D !== t || L !== n) {
         var r;
-        (0, _.bs)(null != (r = null != t ? t : w) ? r : d.UNSET_PID, "overlay_focused", {
+        (0, _.bs)(null != (r = null != t ? t : D) ? r : d.UNSET_PID, "overlay_focused", {
             focusedPID: t,
             focusedWindowHandle: L,
             windowHandle: n,
         });
     }
-    return (w = t), (L = n), !0;
+    return (D = t), (L = n), !0;
 }
 function ef() {
     var e;
     (Z = C(S({}, Z), { showInactiveCalled: !0 })),
-        null == D || null == (e = D.onNativePopoutShowInactiveSuccess) || e.call(D);
+        null == w || null == (e = w.onNativePopoutShowInactiveSuccess) || e.call(w);
 }
 function e_() {
     (Z = C(S({}, Z), { allDone: !0 })),
@@ -291,9 +291,9 @@ function ep(e) {
 }
 function eh(e) {
     let { pid: t, windowHandle: n } = e;
-    if (((x = t), z(), null != n && null != D)) {
+    if (((x = t), z(), null != n && null != w)) {
         var r;
-        null == (r = D.setRenderingWindowHandle) || r.call(D, (0, y.rd)(n), t);
+        null == (r = w.setRenderingWindowHandle) || r.call(w, (0, y.rd)(n), t);
     }
 }
 function em(e) {
@@ -303,13 +303,13 @@ function eg(e) {
     U[e.pid] = e.overlayState;
 }
 async function eE() {
-    return null != (D = b.Z.getNativeModule()) && (await et(D)), W(), !0;
+    return null != (w = b.Z.getNativeModule()) && (await et(w)), W(), !0;
 }
 function eb() {
     return eE(), !0;
 }
 function ey() {
-    return (D = null), !0;
+    return (w = null), !0;
 }
 class eO extends (r = i.ZP.Store) {
     initialize() {
@@ -337,17 +337,17 @@ class eO extends (r = i.ZP.Store) {
         return null != t && t.pinned;
     }
     getFocusedPID() {
-        return w;
+        return D;
     }
     getFocusedWindowHandle() {
         return L;
     }
     isFocused(e) {
-        return null != w && e !== d.UNSET_PID && (!!R.has(e) || e === d.DEV_PID) && w === e;
+        return null != D && e !== d.UNSET_PID && (!!R.has(e) || e === d.DEV_PID) && D === e;
     }
     getFocusedRunningGame() {
         var e;
-        return null == w ? null : null != (e = l.ZP.getGameOrTransformedSubgameForPID(w)) ? e : null;
+        return null == D ? null : null != (e = l.ZP.getGameOrTransformedSubgameForPID(D)) ? e : null;
     }
     getPopoutInitializationStages() {
         return Z;

@@ -100,8 +100,8 @@ class v extends (i = l.PureComponent) {
                 iconClassName: S,
                 iconWrapperClassName: E,
                 icon: I,
-                hideSize: w,
-                imageStyle: P,
+                hideSize: P,
+                imageStyle: w,
                 showRemoveButton: T,
                 maxFileSizeBytes: Z,
                 onFileSizeError: k,
@@ -124,7 +124,7 @@ class v extends (i = l.PureComponent) {
                 className: o()(g.imageUploader, g.disabled, C),
                 children: (0, r.jsxs)("div", {
                     className: o()(g.imageUploaderInner, N),
-                    style: x(h({}, P), { backgroundImage: n }),
+                    style: x(h({}, w), { backgroundImage: n }),
                     children: [
                         i,
                         _ &&
@@ -141,7 +141,7 @@ class v extends (i = l.PureComponent) {
                   onClick: this.handleRemove,
                   children: b.intl.string(b.t.N86XcP),
               }))
-            : w ||
+            : P ||
               (l = (0, r.jsx)("small", {
                   className: g.sizeInfo,
                   children: b.intl.format(b.t.AH4c7Y, { size: m.IXf }),
@@ -157,7 +157,7 @@ class v extends (i = l.PureComponent) {
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
-                                style: x(h({}, P), { backgroundImage: n }),
+                                style: x(h({}, w), { backgroundImage: n }),
                                 children: [
                                     (0, r.jsx)("span", {
                                         "aria-hidden": !0,

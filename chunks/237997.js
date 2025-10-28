@@ -94,7 +94,7 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = Object.freeze({
+let w = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
         displayUserMode: I.OYC.ALWAYS,
@@ -110,7 +110,7 @@ let D = Object.freeze({
         showGameInviteNotification: !0,
         customInviteMessage: void 0,
     }),
-    w = null,
+    D = null,
     L = {},
     x = null,
     M = new Set(),
@@ -123,10 +123,10 @@ let D = Object.freeze({
     F = new c.Z("OverlayStore");
 function V(e) {
     let t = L[e];
-    return null == t && (t = L[e] = A({}, D)), t;
+    return null == t && (t = L[e] = A({}, w)), t;
 }
 __OVERLAY__ && (0, d.m)((0, y.getRPCAuthToken)());
-let H = A({}, D),
+let H = A({}, w),
     Y = new Set([
         "AUDIO_SET_INPUT_DEVICE",
         "AUDIO_SET_INPUT_VOLUME",
@@ -303,7 +303,7 @@ function Q() {
 }
 function J(e) {
     let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
-    (w = t),
+    (D = t),
         __OVERLAY__ &&
             (n.forEach((e) => {
                 eS.set(e.pid, e);
@@ -331,7 +331,7 @@ function $() {
 }
 function ee() {
     if (!__OVERLAY__) return !1;
-    let e = w === (0, y.getPID)(),
+    let e = D === (0, y.getPID)(),
         t = M.has((0, y.getPID)()) || B.size > 0;
     e && t ? (0, s.T_)(window, !0) : (0, s.T_)(window, !1);
 }
@@ -342,16 +342,16 @@ function en(e) {
 }
 function er(e) {
     let { region: t } = e;
-    if (w !== (0, y.getPID)() || B.has(t)) return !1;
+    if (D !== (0, y.getPID)() || B.has(t)) return !1;
     B.add(t);
 }
 function ei() {
-    if (w !== (0, y.getPID)()) return !1;
+    if (D !== (0, y.getPID)()) return !1;
     B.clear();
 }
 function ea(e) {
     let { pid: t } = e;
-    (w = t), ee();
+    (D = t), ee();
 }
 function eo(e) {
     let { guildId: t, channelId: n } = e;
@@ -498,7 +498,7 @@ class eR extends (r = i.ZP.PersistedStore) {
             (this.waitFor(p.default, h.Z, m.ZP, g.Z, E.Z, v.Z),
             this.syncWith([p.default], () => {
                 let e = p.default.getId();
-                H = null != e ? V(e) : A({}, D);
+                H = null != e ? V(e) : A({}, w);
             }),
             __OVERLAY__)
         ) {
@@ -512,9 +512,9 @@ class eR extends (r = i.ZP.PersistedStore) {
             L = e;
             let t = p.default.getId();
             null != t &&
-                (null == (H = V(t)).textChatNotifications && (H.textChatNotifications = D.textChatNotifications),
-                null == H.textWidgetOpacity && (H.textWidgetOpacity = D.textWidgetOpacity),
-                null == H.disableClickableRegions && (H.disableClickableRegions = D.disableClickableRegions));
+                (null == (H = V(t)).textChatNotifications && (H.textChatNotifications = w.textChatNotifications),
+                null == H.textWidgetOpacity && (H.textWidgetOpacity = w.textWidgetOpacity),
+                null == H.disableClickableRegions && (H.disableClickableRegions = w.disableClickableRegions));
         }
     }
     getState() {
@@ -527,10 +527,10 @@ class eR extends (r = i.ZP.PersistedStore) {
         return !M.has((0, y.getPID)());
     }
     isInstanceFocused() {
-        return w === (0, y.getPID)();
+        return D === (0, y.getPID)();
     }
     isFocused(e) {
-        return w === e;
+        return D === e;
     }
     isPinned(e) {
         let t = g.Z.getLayout(y.OVERLAY_LAYOUT_ID);
@@ -580,7 +580,7 @@ class eR extends (r = i.ZP.PersistedStore) {
         return H.disableExternalLinkAlert;
     }
     getFocusedPID() {
-        return w;
+        return D;
     }
     get initialized() {
         return G;
@@ -609,7 +609,7 @@ S(eR, "displayName", "OverlayStore"),
             let e = A({}, a.K.get("OverlayStore")),
                 { pinnedWidgets: t, positions: n, sizes: r, v: i } = e,
                 o = R(e, ["pinnedWidgets", "positions", "sizes", "v"]);
-            return A({}, D, 5 === i ? o : null);
+            return A({}, w, 5 === i ? o : null);
         },
         (e) => {
             let t = p.default.getId();

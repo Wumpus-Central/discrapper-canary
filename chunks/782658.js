@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(143708),
     R = n(358595),
     P = n(135845),
-    D = n(981631),
-    w = n(723359);
+    w = n(981631),
+    D = n(723359);
 function L(e) {
     let { code: t, message: n, getAcceptInviteContext: L } = e,
         { invite: x, inviteError: M } = (0, a.cj)(
@@ -47,7 +47,7 @@ function L(e) {
             null != x
                 ? x
                 : {
-                      state: D.r2o.RESOLVING,
+                      state: w.r2o.RESOLVING,
                       code: "",
                   },
         { analyticsLocations: U } = (0, u.ZP)(),
@@ -64,14 +64,14 @@ function L(e) {
         H = () => {
             if (null == B && (null == x ? void 0 : x.guild) != null) {
                 let e = O.Qs(x.guild);
-                if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, l.mN)(w.L0.NSFW_SERVER_INVITE_EMBED);
+                if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, l.mN)(D.L0.NSFW_SERVER_INVITE_EMBED);
             }
             (0, m.yU)()
                 ? (0, g.Z)({
-                      analyticsSource: { page: D.ZY5.INVITE_EMBED },
+                      analyticsSource: { page: w.ZY5.INVITE_EMBED },
                       analyticsLocation: {
-                          page: D.ZY5.INVITE_EMBED,
-                          section: D.jXE.GUILD_CAP_UPSELL_MODAL,
+                          page: w.ZY5.INVITE_EMBED,
+                          section: w.jXE.GUILD_CAP_UPSELL_MODAL,
                       },
                       analyticsLocations: U,
                   })
@@ -89,18 +89,18 @@ function L(e) {
             message: n,
         });
     switch (j.state) {
-        case D.r2o.RESOLVING:
+        case w.r2o.RESOLVING:
             Y = (0, r.jsx)(R.Z, {});
             break;
-        case D.r2o.EXPIRED:
-        case D.r2o.BANNED:
+        case w.r2o.EXPIRED:
+        case w.r2o.BANNED:
             Y = (0, r.jsx)(N.Z, {
-                banned: j.state === D.r2o.BANNED,
+                banned: j.state === w.r2o.BANNED,
                 author: n.author,
                 channelId: n.channel_id,
             });
             break;
-        case D.r2o.ERROR:
+        case w.r2o.ERROR:
             Y = (0, r.jsx)(I.Z, {
                 author: n.author,
                 inviteError: M,
@@ -167,7 +167,7 @@ function L(e) {
             }
     }
     return (0, r.jsx)(s.Z, {
-        section: D.jXE.INVITE_LINK,
+        section: w.jXE.INVITE_LINK,
         children: Y,
     });
 }

@@ -40,8 +40,8 @@ function N(e, t, n) {
 let R = window.DiscordNative;
 I.Wb.dispatcher.getDispatchHandler = S.Z;
 let P = new c.Z("ConnectionStore"),
-    D = 100,
-    w = 0,
+    w = 100,
+    D = 0,
     L = null,
     x = !0,
     M = null,
@@ -61,7 +61,7 @@ function G() {
     );
 }
 async function B(e) {
-    (w = Date.now()), (L = e.sessionId), I.RR.handleConnectionOpen();
+    (D = Date.now()), (L = e.sessionId), I.RR.handleConnectionOpen();
     let t = {},
         n = E.Z.getVoiceChannelId();
     if (null != n) {
@@ -93,7 +93,7 @@ async function B(e) {
     I.GC.update(t, !0), (x = !1), (k = null);
 }
 function Z() {
-    P.verbose("connection closed dispatched"), (w = Date.now());
+    P.verbose("connection closed dispatched"), (D = Date.now());
 }
 function F() {
     k = null;
@@ -199,7 +199,7 @@ function et(e) {
         I.Wb.isSessionEstablished() &&
             ("userIds" in e
                 ? a()(e.userIds)
-                      .chunk(D)
+                      .chunk(w)
                       .forEach((t) => {
                           I.Wb.requestGuildMembers(e.guildIds, {
                               userIds: t,
@@ -317,7 +317,7 @@ class eE extends (r = o.ZP.Store) {
         return I.Wb.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return w;
+        return D;
     }
 }
 N(eE, "displayName", "GatewayConnectionStore");

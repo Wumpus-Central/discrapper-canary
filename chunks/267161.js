@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: () => k,
-        useAppSidebarState: () => R,
+        useAppSidebarState: () => D,
     });
 var r = n(951288),
     i = n(647438),
@@ -35,8 +35,8 @@ var r = n(951288),
     Z = n(403497),
     w = n(950796),
     L = n(741764),
-    D = n(82504);
-let R = (0, s.U)(() => ({ isOpen: !0 }));
+    R = n(82504);
+let D = (0, s.U)(() => ({ isOpen: !0 }));
 function M(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
     return n
@@ -54,7 +54,7 @@ let k = i.memo(function () {
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, m.t)({ location: "AppTitleBar" }),
         { backForwardButtons: s, titlebarIconSize: _ } = (0, h.T)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: Z } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
-        { enabled: R } = d.c.useConfig({ location: "AppTitleBar" }),
+        { enabled: D } = d.c.useConfig({ location: "AppTitleBar" }),
         k = (0, o.e7)([j.Z], () => j.Z.isDeveloper),
         U = null !== e && t === y.u3.TITLE_BAR_LEFT,
         G = null === e;
@@ -90,7 +90,7 @@ let k = i.memo(function () {
             showRecentsButton: G,
         });
     if (H) return null;
-    let F = a()(D.button, { [D.smallButton]: "sm" === _ });
+    let F = a()(R.button, { [R.smallButton]: "sm" === _ });
     return (0, r.jsx)(c.Wdt, {
         children: (e) =>
             (0, r.jsx)(c.f6W, {
@@ -115,7 +115,7 @@ let k = i.memo(function () {
                         }),
                         trailing: (0, r.jsxs)(r.Fragment, {
                             children: [
-                                R && (0, r.jsx)(p.Z, { className: F }),
+                                D && (0, r.jsx)(p.Z, { className: F }),
                                 (0, r.jsx)(b.Z, { className: F }),
                                 (0, r.jsx)(f.Z, {
                                     canShowReminder: !0,

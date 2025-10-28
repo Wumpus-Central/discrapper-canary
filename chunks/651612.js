@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => y }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -14,10 +14,10 @@ var r = n(951288),
     g = n(918559),
     m = n(981631),
     b = n(388032),
-    y = n(332139);
-function _(e) {
+    _ = n(332139);
+function y(e) {
     var { channelId: t, className: n } = e,
-        _ = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -38,13 +38,13 @@ function _(e) {
             }
             return i;
         })(e, ["channelId", "className"]);
-    let O = i.useRef(null),
-        j = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
-        x = i.useCallback(() => {
-            let e = j ? g.MI.NO_CHAT : g.MI.RESIZABLE;
+    let x = i.useRef(null),
+        v = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
+        j = i.useCallback(() => {
+            let e = v ? g.MI.NO_CHAT : g.MI.RESIZABLE;
             (0, h.gC)(e);
-        }, [j]),
-        { unreadCount: v, mentionCount: C } = (function (e) {
+        }, [v]),
+        { unreadCount: O, mentionCount: C } = (function (e) {
             let t = (0, a.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
                     [d.ZP],
@@ -62,21 +62,21 @@ function _(e) {
         })(t),
         I = i.useCallback(() => {
             var e;
-            null == (e = O.current) || e.focus();
+            null == (e = x.current) || e.focus();
         }, []);
     (0, p.yp)({
         event: m.CkL.FOCUS_CHAT_BUTTON,
         handler: I,
     });
-    let S = j ? b.intl.string(b.t["5MstTl"]) : b.intl.string(b.t.kkKapG),
+    let S = v ? b.intl.string(b.t["5MstTl"]) : b.intl.string(b.t.kkKapG),
         E = [S];
     C > 0 && E.push(b.intl.formatToPlainString(b.t["3l1GOx"], { mentionCount: C })),
-        v > 0 && E.push(b.intl.string(b.t.x5zAGZ));
+        O > 0 && E.push(b.intl.string(b.t.x5zAGZ));
     let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
-        P = C > 0 ? C : v,
+        P = C > 0 ? C : O,
         T = P > 0;
     return (0, r.jsxs)("div", {
-        className: y.wrapper,
+        className: _.wrapper,
         children: [
             (0, r.jsx)(
                 c.d,
@@ -107,8 +107,8 @@ function _(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: O,
-                        onClick: x,
+                        buttonRef: x,
+                        onClick: j,
                         label: S,
                         "aria-label": E.join(", "),
                         tooltipPosition: "top",
@@ -116,14 +116,14 @@ function _(e) {
                         themeable: !0,
                         className: n,
                     },
-                    _,
+                    y,
                 ),
             ),
             T
                 ? (0, r.jsx)(o.Z, {
                       hasMentions: C > 0,
                       truncatedCount: P > 99 ? "99+" : P,
-                      className: y.badge,
+                      className: _.badge,
                   })
                 : null,
         ],

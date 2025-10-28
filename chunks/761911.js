@@ -2,17 +2,17 @@ n.d(t, { D: () => o });
 var a = n(951288);
 n(647438);
 var r = n(289008),
-    i = n(622999),
-    l = n(955926);
+    l = n(622999),
+    i = n(955926);
 let o = (e) => {
     let { errorLabel: t, children: n, elementOptions: o } = e,
         s = Date.now();
     return (0, a.jsx)(
-        l.k,
+        i.k,
         {
             label: t,
             children: (0, a.jsx)(r.Elements, {
-                stripe: (0, i.d2)(),
+                stripe: (0, l.d2)(),
                 options: (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

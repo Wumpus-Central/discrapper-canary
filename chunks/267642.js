@@ -9,10 +9,10 @@ n.d(t, {
     Qi: () => F,
     Ro: () => O,
     _k: () => G,
-    _p: () => w,
+    _p: () => D,
     aq: () => j,
     cP: () => R,
-    e9: () => D,
+    e9: () => w,
     ee: () => z,
     gZ: () => Z,
     ge: () => L,
@@ -291,7 +291,7 @@ function P(e) {
             throw Error("Not a valid tier type");
     }
 }
-function D(e) {
+function w(e) {
     switch (e) {
         case g.Eu4.NONE:
             return y.intl.string(y.t.LcKgJd);
@@ -305,7 +305,7 @@ function D(e) {
             throw Error("Not a valid tier type");
     }
 }
-let w = i().memoize((e) =>
+let D = i().memoize((e) =>
         b.HO[g.Eu4.TIER_1].features.includes(e)
             ? g.Eu4.TIER_1
             : b.HO[g.Eu4.TIER_2].features.includes(e)

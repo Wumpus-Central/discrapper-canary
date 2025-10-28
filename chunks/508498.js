@@ -1,14 +1,14 @@
-n.d(t, { Db: () => o }), n(35282), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Db: () => a }), n(35282), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(647438),
     l = n(843611),
     i = n(37234),
-    a = n(703656),
+    o = n(703656),
     s = n(981631);
-function o() {
+function a() {
     let { search: e } = (0, l.TH)(),
         t = (0, l.UO)(),
         n = r.useMemo(() => new URLSearchParams(e), [e]).get("source"),
-        o = null != n ? parseInt(n, 10) : null;
+        a = null != n ? parseInt(n, 10) : null;
     return (function (e) {
         for (var t = 1; t < arguments.length; t++) {
             var n = null != arguments[t] ? arguments[t] : {},
@@ -36,14 +36,14 @@ function o() {
     })(
         {
             onClose: r.useCallback(() => {
-                if (0 === o) {
-                    (0, a.op)(), (0, i.jN)(s.S9g.USER_SETTINGS);
+                if (0 === a) {
+                    (0, o.op)(), (0, i.jN)(s.S9g.USER_SETTINGS);
                     return;
                 }
-                if ((0, a.uv)()) return void (0, a.op)();
-                (0, a.uL)(s.Z5c.APP);
-            }, [o]),
-            source: o,
+                if ((0, o.uv)()) return void (0, o.op)();
+                (0, o.uL)(s.Z5c.APP);
+            }, [a]),
+            source: a,
         },
         t,
     );

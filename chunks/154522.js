@@ -18,8 +18,8 @@ function g(e) {
         { listingsLoaded: o } = (0, u.eD)(t),
         s = (0, u.ue)(t),
         g = i.useRef(null),
-        { sortOption: h } = (0, p.s)(),
-        O = i.useMemo(
+        { sortOption: O } = (0, p.s)(),
+        h = i.useMemo(
             () =>
                 (function (e, t) {
                     let r, n;
@@ -40,14 +40,14 @@ function g(e) {
                             return e;
                     }
                     return c().orderBy(e, [r], [n]);
-                })(s, h),
-            [s, h],
+                })(s, O),
+            [s, O],
         );
     return o
         ? (0, n.jsx)("ul", {
               className: j.cardContainer,
               "aria-label": b.intl.string(b.t.qe4kTa),
-              children: O.map((e) =>
+              children: h.map((e) =>
                   (0, n.jsx)(
                       "li",
                       {

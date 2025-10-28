@@ -100,15 +100,15 @@ function w(e, t) {
     );
 }
 let L = null != (i = null == (r = N.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) ? void 0 : r.host) ? i : "localhost",
-    D = (function () {
+    R = (function () {
         let e = L.split(":")[0];
         if (!e.includes(".")) return e;
         let t = e.split("."),
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join(".");
     })(),
-    R = new RegExp(
-        "^".concat(T.Z.escape("https://"), "(?:[a-z]+\\.)?(").concat(T.Z.escape(D), "|discordapp.com|discord.com)$"),
+    D = new RegExp(
+        "^".concat(T.Z.escape("https://"), "(?:[a-z]+\\.)?(").concat(T.Z.escape(R), "|discordapp.com|discord.com)$"),
     ),
     M = +C.Z.Millis.MINUTE,
     k = {};
@@ -246,7 +246,7 @@ function W(e) {
     }
     return (
         (window.location.hostname === t && "localhost" === t) ||
-        (null == e.match("staging") && !!(R.test(e) && R.test(n)))
+        (null == e.match("staging") && !!(D.test(e) && D.test(n)))
     );
 }
 function q(e, t, n) {

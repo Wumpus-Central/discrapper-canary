@@ -1,9 +1,9 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var a = n(951288);
 n(647438);
 var r = n(442837),
-    i = n(524437),
-    l = n(481060),
+    l = n(524437),
+    i = n(481060),
     o = n(607070),
     s = n(597688),
     c = n(1870),
@@ -14,9 +14,9 @@ var r = n(442837),
     h = n(594174),
     x = n(176038),
     f = n(469115),
-    g = n(685960);
-function b() {
-    var e, t, n, b, v, j, _, y;
+    b = n(685960);
+function g() {
+    var e, t, n, g, v, j, _, y;
     (0, u.mw)();
     let C = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         S = p.L1.useSetting(),
@@ -37,32 +37,32 @@ function b() {
     return (
         (0, x.ub)(),
         (0, a.jsxs)("div", {
-            className: g.container,
+            className: b.container,
             children: [
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(l.Heading, {
+                        (0, a.jsx)(i.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Randomize customization settings",
                         }),
-                        (0, a.jsx)(l.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: "text-md/normal",
                             children:
                                 "Randomly sets appearance-related settings. Leaving this tab or closing devtools will reset to your initial state.",
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Theme",
                             onClick: x.aB,
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Collectibles",
                             onClick: x.th,
                         }),
-                        (0, a.jsx)(l.Button, {
+                        (0, a.jsx)(i.Button, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Appearance Settings",
@@ -72,39 +72,39 @@ function b() {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(l.Heading, {
+                        (0, a.jsx)(i.Heading, {
                             variant: "heading-lg/semibold",
                             children: "Current Settings",
                         }),
-                        (0, a.jsxs)(l.Text, {
+                        (0, a.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: ["Theme: ", E],
                         }),
-                        (0, a.jsxs)(l.Text, {
+                        (0, a.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: [
                                 "Client Theme ID:",
                                 " ",
-                                null != T ? (null == (b = f.qt[T]) ? void 0 : b.getName()) : "None",
+                                null != T ? (null == (g = f.qt[T]) ? void 0 : g.getName()) : "None",
                             ],
                         }),
-                        (0, a.jsxs)(l.Text, {
+                        (0, a.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: ["Avatar Decoration: ", null != (_ = null == A ? void 0 : A.name) ? _ : "None"],
                         }),
-                        (0, a.jsxs)(l.Text, {
+                        (0, a.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: ["Nameplate: ", null != (y = null == D ? void 0 : D.name) ? y : "None"],
                         }),
-                        (0, a.jsxs)(l.Text, {
+                        (0, a.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: ["Font Size: ", Z, "px"],
                         }),
-                        (0, a.jsxs)(l.Text, {
+                        (0, a.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: ["Message Spacing: ", M],
                         }),
-                        (0, a.jsxs)(l.Text, {
+                        (0, a.jsxs)(i.Text, {
                             variant: "text-md/normal",
                             children: [
                                 "UI Density: ",
@@ -112,13 +112,13 @@ function b() {
                                 " (",
                                 (function (e) {
                                     switch (e) {
-                                        case i.Pi.COMPACT:
+                                        case l.Pi.COMPACT:
                                             return "Compact";
-                                        case i.Pi.COZY:
+                                        case l.Pi.COZY:
                                             return "Cozy";
-                                        case i.Pi.DEFAULT:
+                                        case l.Pi.DEFAULT:
                                             return "Default";
-                                        case i.Pi.RESPONSIVE:
+                                        case l.Pi.RESPONSIVE:
                                             return "Responsive";
                                         default:
                                             return "Unknown";

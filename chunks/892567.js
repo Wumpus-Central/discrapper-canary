@@ -33,11 +33,11 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                 boldFontOpacity: R = 1,
                 shouldUnderlineOnHover: P = !1,
             } = e,
-            D = (0, O.j)({
+            w = (0, O.j)({
                 displayNameStyles: a,
                 inProfile: T,
             }),
-            { useReducedMotion: w, saturation: L } = (0, d.cj)([p.Z], () => ({
+            { useReducedMotion: D, saturation: L } = (0, d.cj)([p.Z], () => ({
                 useReducedMotion: p.Z.useReducedMotion,
                 saturation: p.Z.desaturateUserColors ? p.Z.saturation : 1,
             })),
@@ -69,9 +69,9 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
             }),
             V = S(j);
         return (0, r.jsxs)("div", {
-            className: l()(v.container, D, A, {
+            className: l()(v.container, w, A, {
                 [v.showEffect]: s !== E.F.PLAIN,
-                [v.animated]: s === E.F.ANIMATED && !w,
+                [v.animated]: s === E.F.ANIMATED && !D,
                 [v.loop]: C,
                 [v.inProfile]: T,
             }),

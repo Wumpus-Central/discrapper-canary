@@ -94,8 +94,8 @@ function R(e, t) {
     return i;
 }
 let P = [8, 8, 8, 8],
-    D = 40;
-function w(e) {
+    w = 40;
+function D(e) {
     var { icon: t, isSelected: n, onClick: i, listItemProps: a } = e,
         s = N(e, ["icon", "isSelected", "onClick", "listItemProps"]);
     return (0, r.jsx)(
@@ -114,7 +114,7 @@ function L(e, t, n, i, a, o) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return (0, r.jsx)(
-                w,
+                D,
                 C(S({}, i), {
                     icon: c.r7p,
                     onClick: t,
@@ -125,7 +125,7 @@ function L(e, t, n, i, a, o) {
             );
         case g.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
-                w,
+                D,
                 C(S({}, i), {
                     icon: c.T39,
                     onClick: t,
@@ -136,7 +136,7 @@ function L(e, t, n, i, a, o) {
             );
         case g.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
-                w,
+                D,
                 C(S({}, i), {
                     icon: c.IeX,
                     onClick: t,
@@ -161,7 +161,7 @@ function L(e, t, n, i, a, o) {
             );
         case g.bg.DEFAULTS:
             return (0, r.jsx)(
-                w,
+                D,
                 C(S({}, i), {
                     icon: c.gw7,
                     onClick: t,
@@ -260,6 +260,6 @@ function j(e) {
         listPadding: o,
         renderCategoryListItem: v,
         rowCount: n.length,
-        categoryHeight: D,
+        categoryHeight: w,
     });
 }

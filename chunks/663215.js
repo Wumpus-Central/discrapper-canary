@@ -121,11 +121,11 @@ function S(e) {
             );
         }),
         P = d.ZP.canUseSoundboardEverywhere(o),
-        D = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        w = (0, i.e7)([l.Z], () => {
-            let { canCreateExpressions: e } = (0, a.Gw)(D);
+        w = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        D = (0, i.e7)([l.Z], () => {
+            let { canCreateExpressions: e } = (0, a.Gw)(w);
             return e;
-        }, [D]),
+        }, [w]),
         { canSeeRecentlyHeard: L, canSeeFrequentlyPlayed: x } = (0, f.k)({
             location: "soundboard-useSoundGrid",
             autoTrackExposure: !0,
@@ -172,9 +172,9 @@ function S(e) {
                       potentialSoundIdsForSection: M.map((e) => e.soundId),
                       sectionType: h.bg.FREQUENTLY_USED,
                   }),
-              void 0 !== D &&
-                  I(i, D, {
-                      currentGuildHasAddPermissions: w,
+              void 0 !== w &&
+                  I(i, w, {
+                      currentGuildHasAddPermissions: D,
                       allSounds: E,
                       filterOutEmptyCurrentGuild: t,
                       sortSoundsFn: A,
@@ -183,7 +183,7 @@ function S(e) {
               v({
                   sections: i,
                   guilds: R,
-                  currentGuildId: null == D ? void 0 : D.id,
+                  currentGuildId: null == w ? void 0 : w.id,
                   allSounds: E,
                   hasNitro: u,
                   sortSoundsFn: A,
@@ -203,7 +203,7 @@ function S(e) {
                       lockedCustomSoundCount: r,
                   },
               });
-    }, [N, E, y, k, M, x, L, D, w, t, P, R, n, S, u, A]);
+    }, [N, E, y, k, M, x, L, w, D, t, P, R, n, S, u, A]);
 }
 function A(e, t, n) {
     return r.useMemo(

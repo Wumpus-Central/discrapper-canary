@@ -27,12 +27,12 @@ function v(e) {
         h = [];
     null == b || x || !v || _ || h.push(b.dismissibleContentType);
     let [j, C] = (0, u.US)(h),
-        I = i.useCallback(() => {
+        w = i.useCallback(() => {
             C(f.L.INDIRECT_ACTION);
         }, [C]);
     return ((0, p.Z)({
         targetRef: n,
-        onShouldClose: I,
+        onShouldClose: w,
         enabled: null != j,
     }),
     null == b || null == j)

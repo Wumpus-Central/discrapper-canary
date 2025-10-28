@@ -2,9 +2,9 @@ n.d(t, { I: () => A }), n(388685), n(539854);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(636977),
-    o = n(442837),
+    a = n(442837),
     c = n(481060),
     u = n(410030),
     d = n(857595),
@@ -31,13 +31,13 @@ function I(e) {
     return (0, r.jsx)(p.Z.Title, {
         onClick: () => i(t),
         wrapperClassName: L.tabWrapper,
-        className: a()(L.tab, { [L.selected]: l }),
+        className: o()(L.tab, { [L.selected]: l }),
         children: n,
     });
 }
 function B(e) {
     let { tab: t, selected: n, displayText: i, handleTransition: s } = e,
-        [o, u] = l.useState(!1),
+        [a, u] = l.useState(!1),
         f = l.useRef(null),
         [C, h] = l.useState(0),
         _ = l.useRef(!1),
@@ -59,7 +59,7 @@ function B(e) {
         onMouseLeave: () => m(!1),
         children: (0, r.jsx)(c.yRy, {
             targetElementRef: f,
-            shouldShow: o,
+            shouldShow: a,
             position: "bottom",
             align: "left",
             onRequestOpen: () => m(!0),
@@ -75,11 +75,11 @@ function B(e) {
                 });
             },
             children: (e, l) => {
-                var o, u;
+                var a, u;
                 let { isShown: d } = l;
                 return (0, r.jsx)(
                     p.Z.Title,
-                    ((o = (function (e) {
+                    ((a = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -110,7 +110,7 @@ function B(e) {
                             onClick: () => s(t),
                             onKeyDown: b,
                             wrapperClassName: L.tabWrapper,
-                            className: a()(L.tab, { [L.selected]: n }),
+                            className: o()(L.tab, { [L.selected]: n }),
                             children: (0, r.jsxs)("span", {
                                 className: L.tabWithChevron,
                                 children: [
@@ -128,7 +128,7 @@ function B(e) {
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(u))
+                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -137,9 +137,9 @@ function B(e) {
                               }
                               return n;
                           })(Object(u)).forEach(function (e) {
-                              Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(u, e));
+                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
                           }),
-                    o),
+                    a),
                 );
             },
         }),
@@ -148,7 +148,7 @@ function B(e) {
 function A(e) {
     let { selectedTab: t, handleTransition: n } = e,
         i = (0, u.ZP)(),
-        d = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+        d = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
         { enabled: g } = (0, m.WX)({ location: "collectibles_shop_header_bar" }),
         O = (0, C.Y)({ location: "CollectiblesShopHeaderBar" }),
         A = [
@@ -166,15 +166,15 @@ function A(e) {
             tab: y.AW.ORBS,
             displayText: T.intl.string(T.t.EBYkzk),
         });
-    let N = t === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
-        P = l.useCallback(() => {
+    let P = t === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
+        N = l.useCallback(() => {
             (0, _.Y)({
-                pageType: N,
+                pageType: P,
                 sectionType: j.jXE.ORBS_BALANCE_MENU,
                 ctaObject: j.qAy.CTA_TO_QUEST_HOME,
             }),
                 (0, f.navigateToQuestHome)({ fromContent: s.j.ORBS_BALANCE_MENU });
-        }, [N]),
+        }, [P]),
         R = (0, x.eN)("collectibles_shop_header_bar"),
         Z = l.useCallback(() => {
             (null == d ? void 0 : d.id) != null &&
@@ -189,7 +189,7 @@ function A(e) {
         children: (e) =>
             (0, r.jsxs)(p.Z, {
                 disableDoubleClick: !0,
-                className: a()(e, L.headerBar),
+                className: o()(e, L.headerBar),
                 innerClassname: g ? L.headerBarInner : void 0,
                 children: [
                     (0, r.jsxs)(c.P3F, {
@@ -249,10 +249,10 @@ function A(e) {
                                     }),
                                 g &&
                                     (0, r.jsx)(b.V9, {
-                                        analyticsPage: N,
+                                        analyticsPage: P,
                                         cardAlignment: b.V9.CardAlignment.END,
                                         ctaText: T.intl.string(T.t.VC4Mq0),
-                                        ctaOnClick: P,
+                                        ctaOnClick: N,
                                         className: L.balanceWidgetMenu,
                                     }),
                             ],

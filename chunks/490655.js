@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var i = n(951288),
     r = n(647438),
     l = n(392711),
@@ -45,13 +45,13 @@ function I(e, t) {
             return "";
     }
 }
-let w = r.memo(function (e) {
+let P = r.memo(function (e) {
     let {
             section: t,
             sectionId: n,
             guild: l,
-            channel: w,
-            integrations: P,
+            channel: P,
+            integrations: w,
             editedIntegration: T,
             webhooks: Z,
             editedWebhook: k,
@@ -74,7 +74,7 @@ let w = r.memo(function (e) {
                 "id",
             ),
         ),
-        H = null != w ? w : M,
+        H = null != P ? P : M,
         G = t === N.b4C.APPLICATION ? n : null,
         [F, K] = r.useState(d.$x),
         z = r.useCallback(
@@ -103,8 +103,8 @@ let w = r.memo(function (e) {
                 n = {},
                 i = [],
                 r = [];
-            if (null != P)
-                for (let i of P)
+            if (null != w)
+                for (let i of w)
                     if ("discord" === i.type) {
                         if (null != i.application) {
                             var l;
@@ -131,7 +131,7 @@ let w = r.memo(function (e) {
                 customWebhooks: i,
                 followedChannelWebhooks: r,
             };
-        }, [P, B, W, Z]);
+        }, [w, B, W, Z]);
     r.useEffect(() => {
         if (!A)
             switch (t) {
@@ -221,7 +221,7 @@ let w = r.memo(function (e) {
         case N.b4C.WEBHOOKS:
             $ = (0, i.jsx)(C.Z, {
                 guild: l,
-                channel: w,
+                channel: P,
                 customWebhooks: Q,
                 editedWebhook: k,
                 selectableWebhookChannels: (function (e) {
@@ -260,7 +260,7 @@ let w = r.memo(function (e) {
         default:
             $ = (0, i.jsx)(_.Z, {
                 guild: l,
-                channel: w,
+                channel: P,
                 applicationIntegrations: V,
                 builtInIntegrations: J,
                 customWebhooks: Q,

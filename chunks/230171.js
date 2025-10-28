@@ -35,8 +35,8 @@ var r = n(951288),
     N = n(943762),
     R = n(914498),
     P = n(172109),
-    D = n(880251),
-    w = n(515344),
+    w = n(880251),
+    D = n(515344),
     L = n(967249),
     x = n(388032),
     M = n(217648);
@@ -51,7 +51,7 @@ function k(e) {
             icon: n.icon,
             bot: O,
         }),
-        { staticBannerSrc: N, videoBannerSrc: L, bannerAspectRatio: M } = (0, D.E)(n),
+        { staticBannerSrc: N, videoBannerSrc: L, bannerAspectRatio: M } = (0, w.E)(n),
         k = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
         { analyticsLocations: G } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: B, instanceId: Z, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, A.c)(n.id),
@@ -63,8 +63,8 @@ function k(e) {
         }),
         W = null != v && I && Y,
         K = V && I,
-        z = (0, w.G)(n),
-        q = (0, w.z)(n),
+        z = (0, D.G)(n),
+        q = (0, D.z)(n),
         X = i.useMemo(() => {
             let e = [];
             return (

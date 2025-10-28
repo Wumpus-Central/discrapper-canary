@@ -5,7 +5,7 @@ n.d(t, {
     Nl: () => N,
     Ns: () => b,
     Rx: () => A,
-    nX: () => D,
+    nX: () => w,
     sc: () => R,
 }),
     n(388685),
@@ -551,7 +551,7 @@ function P(e) {
         .trim();
     return !(t.split(" ").length < 3) || (E.error("Incorrect c-line: ".concat(t)), !1);
 }
-function D(e) {
+function w(e) {
     return [...new Set(e.split(/\r\n/).filter((e) => e.startsWith("a=extmap:")))].map((e) => {
         let t = e.split(" ");
         return {

@@ -39,8 +39,8 @@ function R(e, t, n) {
     );
 }
 let P = 512,
-    D = 1000;
-class w extends i.PureComponent {
+    w = 1000;
+class D extends i.PureComponent {
     componentWillUnmount() {
         this._copyModeTimeout.stop();
     }
@@ -108,7 +108,7 @@ class w extends i.PureComponent {
                         () => this.setState({ copyMode: u.uA3.SUCCESS }),
                         () => this.setState({ copyMode: u.uA3.ERROR }),
                     ),
-                    this._copyModeTimeout.start(D, () => {
+                    this._copyModeTimeout.start(w, () => {
                         this.setState({ copyMode: u.uA3.DEFAULT });
                     });
             });
@@ -233,7 +233,7 @@ class L extends i.PureComponent {
                                         n.length < e.length ? this.renderGenerateGiftCodeRow() : null,
                                         n.map((e) =>
                                             (0, r.jsx)(
-                                                w,
+                                                D,
                                                 {
                                                     giftCode: e,
                                                     sku: o,

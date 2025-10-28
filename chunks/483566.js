@@ -129,11 +129,11 @@ function g(e) {
             ref: T,
         } = e,
         S = h(e),
-        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: D } = S,
-        w = "group" === b || "radiogroup" === b,
-        L = w ? "span" : "label",
-        x = w ? "fieldset" : "div",
-        M = w
+        { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: w } = S,
+        D = "group" === b || "radiogroup" === b,
+        L = D ? "span" : "label",
+        x = D ? "fieldset" : "div",
+        M = D
             ? (0, r.jsx)("legend", {
                   id: A,
                   children: (0, r.jsx)(s.n, { children: t }),
@@ -143,7 +143,7 @@ function g(e) {
         j = null != l && "" !== l,
         U = k
             ? (0, r.jsxs)(u.x, {
-                  "aria-hidden": w,
+                  "aria-hidden": D,
                   "data-interactive": I,
                   id: A,
                   tag: L,
@@ -185,8 +185,8 @@ function g(e) {
             className: f.container,
             "data-layout": y,
             "data-disabled": a,
-            "aria-describedby": w ? R : void 0,
-            disabled: w ? a : void 0,
+            "aria-describedby": D ? R : void 0,
+            disabled: D ? a : void 0,
             children: [
                 M,
                 k || j
@@ -199,7 +199,7 @@ function g(e) {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",
                                       className: f.description,
-                                      id: D,
+                                      id: w,
                                       children: l,
                                   }),
                           ],

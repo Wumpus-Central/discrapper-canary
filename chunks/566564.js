@@ -2,9 +2,9 @@ n.d(t, { Z: () => B }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
+    o = n.n(i),
     s = n(685816),
-    o = n(481060),
+    a = n(481060),
     c = n(702486),
     u = n(626135),
     d = n(381585),
@@ -28,7 +28,7 @@ var r = n(951288),
     L = n(310582);
 let I = (e) => {
         var t;
-        let { handleTransition: n, numVisibleItems: i, isFetchingCategories: o, tab: c } = e,
+        let { handleTransition: n, numVisibleItems: i, isFetchingCategories: a, tab: c } = e,
             { noCache: u, includeUnpublished: h } = (0, _.Z)(),
             [S, k] = l.useState(!1),
             I = (0, d.sp)(),
@@ -44,8 +44,8 @@ let I = (e) => {
         }, [c]);
         let {
                 isFetchingShopHome: A,
-                fetchShopHomeError: N,
-                shopBlocks: P,
+                fetchShopHomeError: P,
+                shopBlocks: N,
                 refreshShopHome: R,
             } = (0, p.E)(
                 c,
@@ -64,9 +64,9 @@ let I = (e) => {
                 R();
             }, [R]);
         return (l.useEffect(() => {
-            null != N ||
+            null != P ||
                 A ||
-                0 === P.length ||
+                0 === N.length ||
                 (0, f.n)({
                     sessionId: B,
                     checkpoint: f.a.SHOP_RENDERED,
@@ -74,16 +74,16 @@ let I = (e) => {
                     unpublishedCategoriesShown: h,
                     cacheDisabled: u,
                 });
-        }, [N, A, P.length, h, u, B, c]),
-        null != N)
+        }, [P, A, N.length, h, u, B, c]),
+        null != P)
             ? (0, r.jsx)(C.Z, {
                   onRetry: Z,
                   errorOrigin: C.i.SHOP_PAGE,
-                  errorMessage: N.message,
+                  errorMessage: P.message,
               })
-            : A || 0 === P.length
+            : A || 0 === N.length
               ? (0, r.jsxs)("div", {
-                    className: a()(L.loadingContainer, L.feedContent),
+                    className: o()(L.loadingContainer, L.feedContent),
                     children: [
                         (0, r.jsx)(E.Z, {
                             isLoading: A,
@@ -104,7 +104,7 @@ let I = (e) => {
                     ],
                 })
               : (0, r.jsx)(r.Fragment, {
-                    children: P.map((e, t) =>
+                    children: N.map((e, t) =>
                         ((e, t, l) => {
                             if (null == e) return null;
                             let u = null,
@@ -140,7 +140,7 @@ let I = (e) => {
                                         {
                                             title:
                                                 c === j.AW.ORBS ? T.intl.string(T.t.dFgeuZ) : T.intl.string(T.t.NSv5KV),
-                                            isLoading: A || o,
+                                            isLoading: A || a,
                                             numVisibleItems: i,
                                             sortedSkuIds: p,
                                             buttonContainerClassName:
@@ -205,7 +205,7 @@ let I = (e) => {
                                 children: (0, r.jsx)(
                                     "div",
                                     {
-                                        className: a()(L.blockContainer, L.feedContent, {
+                                        className: o()(L.blockContainer, L.feedContent, {
                                             [L.skipPadding]: 0 === l || d,
                                         }),
                                         children: u,
@@ -213,27 +213,27 @@ let I = (e) => {
                                     l,
                                 ),
                             });
-                        })(e, t > 0 ? P[t - 1] : null, t),
+                        })(e, t > 0 ? N[t - 1] : null, t),
                     ),
                 });
     },
     B = (e) => {
         let { handleTransition: t, tab: n, transitionState: i } = e,
-            a = l.useRef(null),
-            { handleScroll: s } = (0, c.z)(a, n),
+            o = l.useRef(null),
+            { handleScroll: s } = (0, c.z)(o, n),
             g = (0, h.R)(),
             p = (0, d.sp)(),
             [f, C] = l.useState(j.IV),
             [_, m] = l.useState(!1);
         return (
             l.useEffect(() => {
-                if (null != a.current) {
+                if (null != o.current) {
                     let e = () => {
-                            if (null == a.current) return;
-                            let e = a.current.getDistanceFromBottom();
+                            if (null == o.current) return;
+                            let e = o.current.getDistanceFromBottom();
                             f >= 36 ? m(e < 20) : e <= 200 && C((e) => e + j.IV);
                         },
-                        t = a.current.getScrollerNode();
+                        t = o.current.getScrollerNode();
                     return (
                         null == t || t.addEventListener("scroll", e),
                         () => {
@@ -241,10 +241,10 @@ let I = (e) => {
                         }
                     );
                 }
-            }, [a, f, C, m]),
-            (0, r.jsx)(o.Den, {
+            }, [o, f, C, m]),
+            (0, r.jsx)(a.Den, {
                 className: L.shopScroll,
-                ref: a,
+                ref: o,
                 onScroll: s,
                 children: (0, r.jsxs)("div", {
                     className: L.shop,
@@ -263,11 +263,11 @@ let I = (e) => {
                                     (0, r.jsxs)("div", {
                                         className: L.endOfFeed,
                                         children: [
-                                            (0, r.jsx)(o.Heading, {
+                                            (0, r.jsx)(a.Heading, {
                                                 variant: "heading-md/semibold",
                                                 children: T.intl.string(T.t.Yr70c4),
                                             }),
-                                            (0, r.jsx)(o.Button, {
+                                            (0, r.jsx)(a.Button, {
                                                 variant: "primary",
                                                 text: T.intl.string(T.t.AfrvRD),
                                                 onClick: () => {

@@ -97,8 +97,8 @@ function x(e) {
     var t, l;
     let p = i.useRef(null),
         { parentAnalyticsLocation: f } = (0, m.ZP)(),
-        { channel: O, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: D } = e,
-        R = (0, s.e7)([I.Z], () => I.Z.isLocalMute(x.id)),
+        { channel: O, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
+        D = (0, s.e7)([I.Z], () => I.Z.isLocalMute(x.id)),
         M = (0, d.Z)({
             userId: x.id,
             checkSoundSharing: !0,
@@ -119,11 +119,11 @@ function x(e) {
             if (l) return P.localMute;
             if (i) return P.mute;
         })({
-            serverDeaf: D,
+            serverDeaf: R,
             deaf: w,
             serverMute: L,
             mute: Z,
-            localMute: R,
+            localMute: D,
         }))
             ? l
             : {},

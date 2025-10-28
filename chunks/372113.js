@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(981631),
     R = n(388032),
     P = n(997267);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -206,7 +206,7 @@ function U(e) {
                       })
                     : (0, r.jsx)(
                           u.Button,
-                          x(w({}, e), {
+                          x(D({}, e), {
                               fullWidth: !0,
                               variant: "primary",
                               disabled: null == b.onClick,
@@ -231,7 +231,7 @@ function G(e) {
               className: o()({ [P.fullWidthShinyCtaButtonWrapper]: d }),
               children: (0, r.jsx)(
                   u.gtL,
-                  x(w({}, a), {
+                  x(D({}, a), {
                       "data-migration-pending": !0,
                       fullWidth: !0,
                       wrapperClassName: P.ctaButtonWrapper,
@@ -244,7 +244,7 @@ function G(e) {
           })
         : (0, r.jsx)(
               u.Button,
-              x(w({}, a), {
+              x(D({}, a), {
                   fullWidth: !0,
                   variant: "primary",
                   disabled: null == i.onClick,
@@ -267,12 +267,12 @@ let B = (e) => {
             sourceQuestContent: A,
         } = e,
         N = (0, g._Q)(n),
-        D = (0, g.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
+        w = (0, g.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
         }),
-        w = N >= g.OH.ACCEPTED,
+        D = N >= g.OH.ACCEPTED,
         L = N >= g.OH.COMPLETED,
         x = (0, m.Xv)(n.config),
         G = p || y,
@@ -345,7 +345,7 @@ let B = (e) => {
                     className: P.taskDetails,
                     children: [
                         (0, r.jsx)(u.Text, {
-                            variant: M(a, c, w),
+                            variant: M(a, c, D),
                             className: P.taskInstructions,
                             children: _
                                 ? R.intl.formatToPlainString(R.t["ge+AJp"], { questName: n.config.messages.questName })
@@ -360,7 +360,7 @@ let B = (e) => {
                                 isQuestExpired: _,
                                 sharedQuestFields: F,
                                 collectibleQuestRewardDescription: H,
-                                formattedCompletionDate: D,
+                                formattedCompletionDate: w,
                             }),
                         }),
                     ],

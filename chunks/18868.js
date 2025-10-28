@@ -1,8 +1,8 @@
 n.d(t, { L: () => h }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(481060),
     s = n(310752),
     c = n(897842),
@@ -56,15 +56,15 @@ let m = () => {
     },
     h = (e) => {
         let { className: t, onDrop: n } = e,
-            [i, h] = r.useState(!1),
+            [l, h] = r.useState(!1),
             x = r.useRef(null),
             f = r.useCallback((e) => {
                 p(e), h(!0), (0, o.Mr3)(c.A);
             }, []),
-            g = r.useCallback((e) => {
+            b = r.useCallback((e) => {
                 p(e), h(!1);
             }, []),
-            b = r.useCallback(
+            g = r.useCallback(
                 async (e) => {
                     p(e), h(!1);
                     let t = e.dataTransfer;
@@ -81,12 +81,12 @@ let m = () => {
             );
         return (0, a.jsx)("div", {
             ref: x,
-            className: l()(t, u.uploadArea),
+            className: i()(t, u.uploadArea),
             onDragEnter: f,
-            onDragLeave: g,
-            onDrop: b,
+            onDragLeave: b,
+            onDrop: g,
             children: (0, a.jsx)("div", {
-                className: l()(u.uploadModal, { [u.droppable]: i }),
+                className: i()(u.uploadModal, { [u.droppable]: l }),
                 children: (0, a.jsxs)("div", {
                     className: u.inner,
                     children: [

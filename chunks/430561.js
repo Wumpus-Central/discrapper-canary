@@ -1,7 +1,7 @@
 n.d(t, {
-    GY: () => D,
+    GY: () => w,
     PI: () => I,
-    RT: () => w,
+    RT: () => D,
     XM: () => R,
     bc: () => T,
     ls: () => P,
@@ -141,7 +141,7 @@ function P(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? O.intl.string(O.t.q2B3rh) : O.intl.string(O.t.JKGi6o),
         a = () => {
@@ -162,7 +162,7 @@ function D(e) {
               }),
           });
 }
-function w(e) {
+function D(e) {
     let { id: t, pinned: n } = e,
         i = n ? O.intl.string(O.t.cSu80j) : O.intl.string(O.t.cM8Vnm),
         a = (0, s.e7)([h.default], () => h.default.isLocked((0, m.getPID)()));

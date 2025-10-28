@@ -172,10 +172,10 @@ function P(e) {
             S(t.parent_id, 2);
     }
 }
-function D(e) {
+function w(e) {
     e.isSwitchingAccount || (b = {});
 }
-function w(e) {
+function D(e) {
     e.userId in b && delete b[e.userId];
 }
 function L() {
@@ -260,8 +260,8 @@ _(x, "displayName", "DraftStore"),
     ]);
 let M = new x(s.Z, {
     CONNECTION_OPEN: C,
-    LOGOUT: D,
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: w,
+    LOGOUT: w,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: D,
     GUILD_DELETE: N,
     CHANNEL_DELETE: R,
     THREAD_DELETE: R,

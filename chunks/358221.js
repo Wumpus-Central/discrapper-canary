@@ -65,7 +65,7 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-let w = new d.Z("ChannelRTCStore"),
+let D = new d.Z("ChannelRTCStore"),
     L = Object.freeze([]),
     x = [],
     M = {},
@@ -306,7 +306,7 @@ function eI(e) {
             let { ownerId: e } = (0, _.my)(n);
             e === m.default.getId() && X(e, [t]);
         } catch (e) {
-            w.warn("INVALID STREAM KEY FORMAT ".concat(n), e);
+            D.warn("INVALID STREAM KEY FORMAT ".concat(n), e);
         }
         et(r) || (B[t] = !1);
     }
@@ -350,7 +350,7 @@ function eC(e) {
 }
 function eN(e) {
     let { channelId: t, layout: n, appContext: r } = e;
-    G[t] = D(R({}, G[t]), { [r]: n });
+    G[t] = w(R({}, G[t]), { [r]: n });
 }
 function eR(e) {
     let { streamKey: t } = e,
@@ -362,11 +362,11 @@ function eP(e) {
         { channelId: n, ownerId: r } = (0, _.my)(t);
     return X(r, [n]);
 }
-function eD(e) {
+function ew(e) {
     let { channelId: t, userId: n } = e;
     return X(n, [t]);
 }
-function ew(e) {
+function eD(e) {
     let { channelId: t, userId: n } = e;
     return X(n, [t]);
 }
@@ -546,8 +546,8 @@ let eG = new eU(c.Z, {
     STREAM_UPDATE_SELF_HIDDEN: eE,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: eO,
     CHANNEL_RTC_UPDATE_PARTCIPANTS_LIST_OPEN: ev,
-    RTC_CONNECTION_VIDEO: eD,
-    RTC_CONNECTION_PLATFORM: ew,
+    RTC_CONNECTION_VIDEO: ew,
+    RTC_CONNECTION_PLATFORM: eD,
     AUDIO_SET_LOCAL_VIDEO_DISABLED: eL,
     MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: ex,
     STREAM_CLOSE: eR,

@@ -1,6 +1,6 @@
 n.d(t, {
-    H: () => x,
-    T: () => j,
+    H: () => j,
+    T: () => v,
 }),
     n(388685);
 var r = n(647438),
@@ -18,27 +18,27 @@ var r = n(647438),
     g = n(590026),
     m = n(178762),
     b = n(206583),
-    y = n(809017),
-    _ = n(981631),
-    O = n(388032);
-let j = 0;
-function x(e) {
+    _ = n(809017),
+    y = n(981631),
+    x = n(388032);
+let v = 0;
+function j(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: j },
-            channelId: x,
-            guildId: v,
+            memberStoreProps: { groups: t, rows: n, version: v },
+            channelId: j,
+            guildId: O,
         } = e,
         [C, I] = r.useState(!1),
-        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(x),
+        { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(j),
         P = (0, i.e7)([p.Z], () => p.Z.hidden),
         T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        N = (0, i.e7)([s.Z], () => s.Z.getChannel(x)),
-        R = (0, i.e7)([o.Z], () => o.Z.getGuild(v), [v]),
+        N = (0, i.e7)([s.Z], () => s.Z.getChannel(j)),
+        R = (0, i.e7)([o.Z], () => o.Z.getGuild(O), [O]),
         w = (0, h.E)(R),
         A = null != w && w && (null == N ? void 0 : N.isForumChannel()) === !1,
         [D, L, M, k] = r.useMemo(() => {
             let e;
-            if (null == E || 0 === E.length || null == S || !A) return [t, n, j];
+            if (null == E || 0 === E.length || null == S || !A) return [t, n, v];
             let r = C ? E.length : 3,
                 i = E.slice(0, r);
             e = P
@@ -49,19 +49,19 @@ function x(e) {
                       requestId: S,
                   }));
             let l = {
-                id: y.G,
+                id: _.G,
                 type: a.so.CONTENT_INVENTORY_GROUP,
-                key: y.G,
+                key: _.G,
                 count: e.length,
                 index: n.length,
-                title: O.intl.string(O.t["6gwSFY"]),
+                title: x.intl.string(x.t["6gwSFY"]),
                 onToggleExpand: () => {
                     I((e) => {
                         let t = !e;
                         return (
-                            d.default.track(_.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-                                channel_id: x,
-                                guild_id: v,
+                            d.default.track(y.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                                channel_id: j,
+                                guild_id: O,
                                 expanded: t,
                             }),
                             t
@@ -73,7 +73,7 @@ function x(e) {
                 feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [x, E, C, t, v, S, n, j, P, A]),
+        }, [j, E, C, t, O, S, n, v, P, A]),
         U = r.useRef(0),
         G = r.useRef(E),
         H = r.useRef(void 0),
@@ -106,13 +106,13 @@ function x(e) {
                     !P &&
                         T &&
                         A &&
-                        ((0, f.e)(_.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                        ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: S,
                             first_shown_at: H.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
-                            channel_id: x,
-                            guild_id: v,
+                            channel_id: j,
+                            guild_id: O,
                             all_item_ids: n,
                             impression_capped_item_ids: [...F.current.impressionCappedEntryIds],
                         }),
@@ -123,7 +123,7 @@ function x(e) {
                             }));
                 }
             ),
-            [S, x, v, P, T, A],
+            [S, j, O, P, T, A],
         ),
         {
             groups: D,

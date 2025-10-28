@@ -65,14 +65,14 @@ function O(e) {
         [N] = r.useState(!1),
         [S, E] = r.useState(g.Fl),
         I = (0, a.e7)([m.Z], () => m.Z.getGuildIncident(t)),
-        w = (0, u.BT)(_),
-        P = (0, p.SG)(I) || C,
+        P = (0, u.BT)(_),
+        w = (0, p.SG)(I) || C,
         T = (0, p.sN)(I),
-        [Z, k] = r.useState(P),
+        [Z, k] = r.useState(w),
         [A, D] = r.useState(T),
         [R, L] = r.useState(!1),
-        M = Z !== P || A !== T || R,
-        U = C && !w;
+        M = Z !== w || A !== T || R,
+        U = C && !P;
     if (null == _) return O(), null;
     function B() {
         k((e) => !e);
@@ -90,7 +90,7 @@ function O(e) {
             {
                 text: h.intl.string(h.t["pwm/z0"]),
                 onClick: () => {
-                    (P || T) && !Z && !A
+                    (w || T) && !Z && !A
                         ? ((0, d.n)(_.id, !1, !1),
                           (0, o.ZDy)(() => Promise.resolve((e) => (0, i.jsx)(b.default, v(j({}, e), { guildId: t })))))
                         : (0, d.n)(_.id, Z, A, S);

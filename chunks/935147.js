@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(296810),
     R = n(433411),
     P = n(532432),
-    D = n(235433),
-    w = n(504983),
+    w = n(235433),
+    D = n(504983),
     L = n(134795),
     x = n(513901),
     M = n(451392),
@@ -147,10 +147,10 @@ function W(e) {
     return W
         ? (0, r.jsx)(c.Gt, {
               value: ea,
-              children: (0, r.jsxs)(w.Z, {
+              children: (0, r.jsxs)(D.Z, {
                   ref: ei,
                   className: Z.tryItOutSection,
-                  type: w.Y.PREMIUM,
+                  type: D.Y.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
@@ -228,7 +228,7 @@ function W(e) {
                                       },
                                       "decoration",
                                   ),
-                                  (0, r.jsx)(D.Z, {
+                                  (0, r.jsx)(w.Z, {
                                       user: F,
                                       className: Z.customizationSection,
                                   }),

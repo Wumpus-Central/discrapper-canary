@@ -1,24 +1,24 @@
-r.d(t, { Z: () => s });
+r.d(t, { Z: () => f });
 var n = r(951288),
     o = r(647438),
     i = r(392711),
-    c = r(481060),
-    l = r(765250),
+    l = r(481060),
+    c = r(765250),
     a = r(444295),
     u = r(388032);
-let f = (0, i.throttle)((e, t) => {
+let s = (0, i.throttle)((e, t) => {
     (0, a.JS)(e.type, { opacity: t });
 }, 1000);
-function s(e) {
-    let t = o.useCallback((t) => f(e, t), [e]);
-    return (0, n.jsx)(c.II_, {
+function f(e) {
+    let t = o.useCallback((t) => s(e, t), [e]);
+    return (0, n.jsx)(l.II_, {
         id: "opacity",
         "aria-haspopup": !0,
         label: u.intl.string(u.t.OVovCb),
         control: (r, o) => {
             var i, a;
             return (0, n.jsx)(
-                c._wy,
+                l._wy,
                 ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -50,7 +50,7 @@ function s(e) {
                         value: 100 * e.opacity,
                         maxValue: 100,
                         onChange: (r) => {
-                            (0, l.nv)({
+                            (0, c.nv)({
                                 widgetId: e.id,
                                 opacity: r / 100,
                             }),

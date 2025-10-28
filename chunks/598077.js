@@ -195,7 +195,7 @@ class y extends i.Z {
         return (0, l.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
     }
     constructor(e) {
-        var t, n, i, a, l, u, d, f, _, h, g, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, L, x, M, k, j, U, G, B;
+        var t, n, i, a, l, u, d, f, _, h, g, E, b, y, O, v, I, T, S, A, C, N, R, P, w, D, L, x, M, k, j, U, G, B;
         super(),
             m(this, "id", void 0),
             m(this, "username", void 0),
@@ -252,8 +252,8 @@ class y extends i.Z {
             (this.phone = null != (N = e.phone) ? N : null),
             (this.nsfwAllowed = null != (R = e.nsfw_allowed) ? R : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (P = e.age_verification_status) ? P : e.ageVerificationStatus),
-            (this.guildMemberAvatars = null != (D = e.guildMemberAvatars) ? D : {}),
-            (this.hasBouncedEmail = null != (L = null != (w = e.has_bounced_email) ? w : e.hasBouncedEmail) && L),
+            (this.guildMemberAvatars = null != (w = e.guildMemberAvatars) ? w : {}),
+            (this.hasBouncedEmail = null != (L = null != (D = e.has_bounced_email) ? D : e.hasBouncedEmail) && L),
             (this.personalConnectionId =
                 null != (M = null != (x = e.personal_connection_id) ? x : e.personalConnectionId) ? M : null),
             (this.globalName = null != (k = e.global_name) ? k : e.globalName),

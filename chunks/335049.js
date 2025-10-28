@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => P });
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -66,7 +66,7 @@ function I(e, t) {
         e
     );
 }
-function w(e) {
+function P(e) {
     let { guild: t, id: l, type: a, isLocked: o, lockTooltipText: c } = e,
         d = !o || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
@@ -88,7 +88,7 @@ function w(e) {
     );
     switch (a) {
         case m.Kw.CHANNEL:
-            return (0, i.jsx)(P, {
+            return (0, i.jsx)(w, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -113,7 +113,7 @@ function w(e) {
             });
     }
 }
-function P(e) {
+function w(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         d = (0, b.bD)(t.id),
         {

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(231338),
     P = n(388032),
-    D = n(85468);
-function w(e, t, n) {
+    w = n(85468);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -61,7 +61,7 @@ let x = "8px",
     M = "11px",
     k = 222;
 function j(e) {
-    var t, I, w, j, U;
+    var t, I, D, j, U;
     let {
             quest: G,
             memberListItemRef: B,
@@ -83,7 +83,7 @@ function j(e) {
         }),
         q = (null == G || null == (t = G.userStatus) ? void 0 : t.claimedAt) != null,
         X = (null == G || null == (I = G.userStatus) ? void 0 : I.enrolledAt) != null,
-        Q = (null == G || null == (w = G.userStatus) ? void 0 : w.completedAt) != null,
+        Q = (null == G || null == (D = G.userStatus) ? void 0 : D.completedAt) != null,
         J = (0, s.e7)([m.Z], () => m.Z.getState().theme),
         $ = (0, c.wj)(J) ? R.BR.DARK : R.BR.LIGHT,
         ee = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -242,7 +242,7 @@ function j(e) {
             Y.current = e;
         },
         "aria-expanded": er,
-        className: D.wrapper,
+        className: w.wrapper,
         style: {
             width: null != (U = null == (j = B.current) ? void 0 : j.clientWidth) ? U : k,
             height: es.height,
@@ -253,21 +253,21 @@ function j(e) {
             ref: (e) => {
                 et.current = e;
             },
-            className: D.container,
+            className: w.container,
             style: { borderRadius: eu },
             children: [
                 (0, r.jsxs)("div", {
-                    className: D.top,
+                    className: w.top,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: D.left,
+                            className: w.left,
                             children: [
                                 (0, r.jsx)(u.Heading, {
                                     variant: "heading-sm/semibold",
                                     children: em.headerText,
                                 }),
                                 (0, r.jsxs)(u.P3F, {
-                                    className: D.help,
+                                    className: w.help,
                                     onClick: (e) => {
                                         ec(), e_(e);
                                     },
@@ -275,14 +275,14 @@ function j(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-xs/medium",
                                             color: "text-muted",
-                                            className: D.helpText,
+                                            className: w.helpText,
                                             children: P.intl.format(P.t["Lm8/mH"], {
                                                 gamePublisher: G.config.messages.gamePublisher,
                                             }),
                                         }),
                                         (0, r.jsx)(u.idN, {
                                             size: "custom",
-                                            className: D.helpIcon,
+                                            className: w.helpIcon,
                                             width: M,
                                             height: M,
                                             color: u.TVs.colors.INTERACTIVE_NORMAL,
@@ -292,16 +292,16 @@ function j(e) {
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: D.right,
+                            className: w.right,
                             children: (0, r.jsxs)("div", {
-                                className: D.imgWrapper,
+                                className: w.imgWrapper,
                                 children: [
                                     el(
                                         (e, t) =>
                                             t &&
                                             (0, r.jsx)(a.animated.div, {
                                                 style: e,
-                                                className: D.imgUnderlay,
+                                                className: w.imgUnderlay,
                                             }),
                                     ),
                                     "game" === em.tileAssetType &&
@@ -310,12 +310,12 @@ function j(e) {
                                                 gameTitle: G.config.messages.gameTitle,
                                                 gamePublisher: G.config.messages.gamePublisher,
                                             }),
-                                            className: D.assetTile,
+                                            className: w.assetTile,
                                             src: (0, v.fh)(G, v.eC.GAME_TILE, $).url,
                                         }),
                                     "reward" === em.tileAssetType &&
                                         (0, r.jsx)(T.Z, {
-                                            className: D.assetTile,
+                                            className: w.assetTile,
                                             quest: G,
                                             questContent: y.jn.MEMBERS_LIST,
                                             learnMoreStyle: "icon",

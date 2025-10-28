@@ -5,8 +5,8 @@ n.d(t, {
 var a = n(951288);
 n(647438);
 var r = n(481060),
-    i = n(570140),
-    l = n(71509);
+    l = n(570140),
+    i = n(71509);
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -40,12 +40,12 @@ function s() {
         },
         {
             onCloseCallback: () => {
-                i.Z.dispatch({
+                l.Z.dispatch({
                     type: "LOGIN_RESET",
                     isMultiAccount: !0,
                 });
             },
-            modalKey: l.Ui,
+            modalKey: i.Ui,
         },
     );
 }
@@ -77,12 +77,12 @@ function c() {
         },
         {
             onCloseCallback: () => {
-                i.Z.dispatch({
+                l.Z.dispatch({
                     type: "LOGIN_RESET",
                     isMultiAccount: !0,
                 });
             },
-            modalKey: l._5,
+            modalKey: i._5,
         },
     );
 }

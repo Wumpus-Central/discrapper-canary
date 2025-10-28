@@ -1,8 +1,8 @@
 n.d(t, { O: () => E }), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(481060),
-    l = n(373071),
+    l = n(481060),
+    i = n(373071),
     o = n(637443),
     s = n(619899),
     c = n(18868),
@@ -52,36 +52,36 @@ let h = [
         label: "[preview all]",
         value: null,
     },
-    g = () => {
-        (0, i.nfh)(o.g)
-            ? (0, i.Mr3)(o.g)
-            : (0, i.ZDy)(
+    b = () => {
+        (0, l.nfh)(o.g)
+            ? (0, l.Mr3)(o.g)
+            : (0, l.ZDy)(
                   async () => {
                       let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
                       modalKey: o.g,
-                      onCloseRequest: () => (0, i.Mr3)(o.g),
+                      onCloseRequest: () => (0, l.Mr3)(o.g),
                   },
               );
     },
-    b = () => {
-        (0, i.nfh)(o.c)
-            ? (0, i.Mr3)(o.c)
-            : (0, i.ZDy)(
+    g = () => {
+        (0, l.nfh)(o.c)
+            ? (0, l.Mr3)(o.c)
+            : (0, l.ZDy)(
                   async () => {
                       let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
                       modalKey: o.c,
-                      onCloseRequest: () => (0, i.Mr3)(o.c),
+                      onCloseRequest: () => (0, l.Mr3)(o.c),
                   },
               );
     },
     v = () => {
-        let e = (0, l.lb)(),
+        let e = (0, i.lb)(),
             { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: n } = (0, s.N9)(),
             o = r.useMemo(
                 () => [
@@ -96,24 +96,24 @@ let h = [
         return (0, a.jsxs)("div", {
             className: m.previewSelector,
             children: [
-                (0, a.jsx)(i.LZC, { size: 16 }),
+                (0, a.jsx)(l.LZC, { size: 16 }),
                 (0, a.jsxs)("div", {
                     className: m.headingContainer,
                     children: [
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-md/bold",
                             children: "Preview Profile Effect",
                         }),
-                        (0, a.jsx)(i.hU, {
+                        (0, a.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: b,
-                            icon: i.idN,
+                            onClick: g,
+                            icon: l.idN,
                             "aria-label": "Open PFX preview instructions",
                         }),
                     ],
                 }),
-                (0, a.jsx)(i.q4e, {
+                (0, a.jsx)(l.q4e, {
                     options: o,
                     value: t,
                     maxVisibleItems: 30,
@@ -125,7 +125,7 @@ let h = [
     j = () => {
         let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, s.N9)(),
             { avatarDecorationAssets: n } = (0, s.xq)(),
-            l = r.useMemo(
+            i = r.useMemo(
                 () => [
                     f,
                     ...n.map((e) => ({
@@ -140,13 +140,13 @@ let h = [
             : (0, a.jsxs)("div", {
                   className: m.previewSelector,
                   children: [
-                      (0, a.jsx)(i.LZC, { size: 16 }),
-                      (0, a.jsx)(i.Heading, {
+                      (0, a.jsx)(l.LZC, { size: 16 }),
+                      (0, a.jsx)(l.Heading, {
                           variant: "heading-md/bold",
                           children: "Preview Avatar Decorations",
                       }),
-                      (0, a.jsx)(i.q4e, {
-                          options: l,
+                      (0, a.jsx)(l.q4e, {
+                          options: i,
                           value: e,
                           maxVisibleItems: 30,
                           onChange: (e) => t(e),
@@ -156,15 +156,15 @@ let h = [
     },
     _ = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
-            { collectionAssets: l } = (0, s.xq)(),
+            { collectionAssets: i } = (0, s.xq)(),
             { deleteCollectionAsset: o, clearAssets: c } = (0, s.N9)(),
             d = r.useMemo(
                 () =>
-                    Object.values(l).map((e) => ({
+                    Object.values(i).map((e) => ({
                         label: e.name,
                         value: e.type,
                     })),
-                [l],
+                [i],
             ),
             u = r.useCallback((e) => o(e), [o]),
             p = r.useCallback(() => {
@@ -174,15 +174,15 @@ let h = [
             ? null
             : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, a.jsx)(i.LZC, { size: 16 }),
+                      (0, a.jsx)(l.LZC, { size: 16 }),
                       (0, a.jsxs)("div", {
                           className: m.headingContainer,
                           children: [
-                              (0, a.jsx)(i.Heading, {
+                              (0, a.jsx)(l.Heading, {
                                   variant: "heading-lg/bold",
                                   children: "Uploaded Assets",
                               }),
-                              (0, a.jsx)(i.Button, {
+                              (0, a.jsx)(l.Button, {
                                   variant: "critical-primary",
                                   size: "sm",
                                   onClick: p,
@@ -197,14 +197,14 @@ let h = [
                                   {
                                       className: m.uploadedFileListItem,
                                       children: [
-                                          (0, a.jsx)(i.hU, {
+                                          (0, a.jsx)(l.hU, {
                                               variant: "icon-only",
                                               size: "sm",
                                               onClick: () => u(e.value),
-                                              icon: i.Dio,
+                                              icon: l.Dio,
                                               "aria-label": "Remove asset",
                                           }),
-                                          (0, a.jsx)(i.Text, {
+                                          (0, a.jsx)(l.Text, {
                                               variant: "text-md/normal",
                                               children: e.label,
                                           }),
@@ -223,15 +223,15 @@ let h = [
             ? null
             : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, a.jsx)(i.LZC, { size: 16 }),
+                      (0, a.jsx)(l.LZC, { size: 16 }),
                       (0, a.jsxs)("div", {
                           className: m.headingContainer,
                           children: [
-                              (0, a.jsx)(i.Heading, {
+                              (0, a.jsx)(l.Heading, {
                                   variant: "heading-lg/bold",
                                   children: "Ignored Files",
                               }),
-                              (0, a.jsx)(i.Button, {
+                              (0, a.jsx)(l.Button, {
                                   variant: "primary",
                                   size: "sm",
                                   onClick: n,
@@ -245,7 +245,7 @@ let h = [
                                   "li",
                                   {
                                       className: m.ignoredFileListItem,
-                                      children: (0, a.jsx)(i.Text, {
+                                      children: (0, a.jsx)(l.Text, {
                                           variant: "text-md/normal",
                                           children: e,
                                       }),
@@ -258,9 +258,9 @@ let h = [
               });
     },
     C = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: l, errors: o } = (0, u.g)(),
+        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: o } = (0, u.g)(),
             s = Object.entries(o),
-            d = Object.entries(l),
+            d = Object.entries(i),
             p = s.length > 0,
             h = d.length > 0,
             x = r.useCallback(
@@ -276,17 +276,17 @@ let h = [
                     ? (0, a.jsxs)("div", {
                           className: m.validationSummary,
                           children: [
-                              (0, a.jsx)(i.Text, {
+                              (0, a.jsx)(l.Text, {
                                   variant: "text-md/normal",
                                   color: p ? "text-danger" : "text-default",
                                   children: "".concat(s.length, " errors"),
                               }),
-                              (0, a.jsx)(i.Text, {
+                              (0, a.jsx)(l.Text, {
                                   variant: "text-md/normal",
                                   color: h ? "text-feedback-warning" : "text-default",
                                   children: "".concat(d.length, " warnings"),
                               }),
-                              (0, a.jsx)(i.Button, {
+                              (0, a.jsx)(l.Button, {
                                   variant: "primary",
                                   size: "sm",
                                   onClick: t,
@@ -294,19 +294,19 @@ let h = [
                               }),
                           ],
                       })
-                    : (0, a.jsx)(i.Text, {
+                    : (0, a.jsx)(l.Text, {
                           variant: "text-md/normal",
                           children: "Drop asset folder to validate.",
                       }),
-                (0, a.jsx)(i.LZC, { size: 16 }),
+                (0, a.jsx)(l.LZC, { size: 16 }),
                 p &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(i.Heading, {
+                            (0, a.jsx)(l.Heading, {
                                 variant: "heading-lg/bold",
                                 children: "Errors",
                             }),
-                            (0, a.jsx)(i.LZC, { size: 8 }),
+                            (0, a.jsx)(l.LZC, { size: 8 }),
                             (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
                                 children: s.map((e, t) => {
@@ -315,7 +315,7 @@ let h = [
                                         "li",
                                         {
                                             children: [
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(l.Text, {
                                                     variant: "text-md/bold",
                                                     color: "text-danger",
                                                     children: n,
@@ -327,7 +327,7 @@ let h = [
                                                             (0, a.jsx)(
                                                                 "li",
                                                                 {
-                                                                    children: (0, a.jsx)(i.Text, {
+                                                                    children: (0, a.jsx)(l.Text, {
                                                                         variant: "text-sm/normal",
                                                                         color: "text-danger",
                                                                         children: e,
@@ -348,20 +348,20 @@ let h = [
                 h &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(i.Heading, {
+                            (0, a.jsx)(l.Heading, {
                                 variant: "heading-lg/bold",
                                 children: "Warnings",
                             }),
-                            (0, a.jsx)(i.LZC, { size: 8 }),
+                            (0, a.jsx)(l.LZC, { size: 8 }),
                             (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
-                                children: Object.entries(l).map((e, t) => {
+                                children: Object.entries(i).map((e, t) => {
                                     let [n, r] = e;
                                     return (0, a.jsxs)(
                                         "li",
                                         {
                                             children: [
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(l.Text, {
                                                     variant: "text-md/bold",
                                                     color: "text-feedback-warning",
                                                     children: n,
@@ -373,7 +373,7 @@ let h = [
                                                             (0, a.jsx)(
                                                                 "li",
                                                                 {
-                                                                    children: (0, a.jsx)(i.Text, {
+                                                                    children: (0, a.jsx)(l.Text, {
                                                                         variant: "text-sm/normal",
                                                                         color: "text-feedback-warning",
                                                                         children: e,
@@ -396,7 +396,7 @@ let h = [
     },
     S = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, s.N9)(),
-            { ignoredFilenames: l, clearAssets: o, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
+            { ignoredFilenames: i, clearAssets: o, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
             h = r.useCallback(
                 (e) => {
                     n(), p(e);
@@ -406,26 +406,26 @@ let h = [
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(c.L, { onDrop: h }),
-                (0, a.jsx)(i.Text, {
+                (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
                     children: "Drop files in this panel to begin preview.",
                 }),
                 (0, a.jsxs)("div", {
                     className: m.previewToggleContainer,
                     children: [
-                        (0, a.jsx)(i.rsf, {
+                        (0, a.jsx)(l.rsf, {
                             checked: e,
                             onChange: (e) => t(e),
                         }),
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children: "Enable Preview",
                         }),
-                        (0, a.jsx)(i.hU, {
+                        (0, a.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: g,
-                            icon: i.idN,
+                            onClick: b,
+                            icon: l.idN,
                             "aria-label": "Open preview instructions",
                         }),
                     ],
@@ -437,7 +437,7 @@ let h = [
                     clearIgnoredFiles: u,
                 }),
                 (0, a.jsx)(y, {
-                    ignoredFiles: l,
+                    ignoredFiles: i,
                     handleClearIgnoredFiles: u,
                 }),
             ],
@@ -448,7 +448,7 @@ let h = [
         return (0, a.jsxs)("div", {
             className: m.container,
             children: [
-                (0, a.jsx)(i.sY7, {
+                (0, a.jsx)(l.sY7, {
                     options: h,
                     value: e,
                     onChange: (e) => {
@@ -458,10 +458,10 @@ let h = [
                     className: m.panelModeControl,
                     optionClassName: m.panelModeControlOption,
                 }),
-                (0, a.jsx)(i.LZC, { size: 8 }),
+                (0, a.jsx)(l.LZC, { size: 8 }),
                 "preview" === e && (0, a.jsx)(S, {}),
                 "validate" === e && (0, a.jsx)(C, {}),
-                (0, a.jsx)(i.LZC, { size: 16 }),
+                (0, a.jsx)(l.LZC, { size: 16 }),
             ],
         });
     };

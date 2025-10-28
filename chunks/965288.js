@@ -17,12 +17,12 @@ var r = n(951288),
     g = n(906732),
     m = n(213609),
     b = n(795318),
-    y = n(728285),
-    _ = n(670188),
-    O = n(314897),
-    j = n(271383),
-    x = n(5192),
-    v = n(590415),
+    _ = n(728285),
+    y = n(670188),
+    x = n(314897),
+    v = n(271383),
+    j = n(5192),
+    O = n(590415),
     C = n(354459),
     I = n(383519);
 function S(e) {
@@ -90,7 +90,7 @@ let Z = i.memo(function (e) {
                     className: I.text,
                     variant: "text-sm/normal",
                     color: "header-primary",
-                    children: x.ZP.getName(t, n, i),
+                    children: j.ZP.getName(t, n, i),
                 }),
                 l
                     ? (0, r.jsx)(p.Ucv, {
@@ -105,8 +105,8 @@ let Z = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: s } = e,
             { user: o, blocked: c, ignored: d, rtsState: u } = n,
-            h = u === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            f = u === v.xO.REQUESTED_TO_SPEAK || h;
+            h = u === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            f = u === O.xO.REQUESTED_TO_SPEAK || h;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -141,16 +141,16 @@ let Z = i.memo(function (e) {
     N = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: s, blocked: u } = t,
-            x = l.getGuildId(),
-            v = O.default.getId(),
+            j = l.getGuildId(),
+            O = x.default.getId(),
             { newestAnalyticsLocation: Z } = (0, g.ZP)(f.Z.AUDIENCE_TILE),
-            T = (0, y.bp)(),
-            N = (0, d.e7)([j.ZP], () => {
+            T = (0, _.bp)(),
+            N = (0, d.e7)([v.ZP], () => {
                 var e;
-                return null != x && (null == (e = j.ZP.getMember(x, s.id)) ? void 0 : e.premiumSince) != null;
-            }, [x, s.id]),
+                return null != j && (null == (e = v.ZP.getMember(j, s.id)) ? void 0 : e.premiumSince) != null;
+            }, [j, s.id]),
             R = i.useRef(null);
-        o()(null != x, "Channel cannot be guildless");
+        o()(null != j, "Channel cannot be guildless");
         let w = i.useCallback(
             (e) => {
                 (0, m.h)({
@@ -158,7 +158,7 @@ let Z = i.memo(function (e) {
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: "AudienceTile",
-                        is_tile_owner: s.id === v,
+                        is_tile_owner: s.id === O,
                         tile_type: C.TH.USER,
                     },
                 }),
@@ -177,7 +177,7 @@ let Z = i.memo(function (e) {
                                     e,
                                     E(S({}, t), {
                                         user: s,
-                                        guildId: x,
+                                        guildId: j,
                                         channel: l,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
@@ -192,9 +192,9 @@ let Z = i.memo(function (e) {
                         { context: T },
                     );
             },
-            [s, v, T, x, l, Z],
+            [s, O, T, j, l, Z],
         );
-        return (0, r.jsx)(_.Z, {
+        return (0, r.jsx)(y.Z, {
             targetElementRef: R,
             user: s,
             guildId: l.guild_id,
@@ -218,7 +218,7 @@ let Z = i.memo(function (e) {
                         {
                             children: (0, r.jsx)(P, {
                                 participant: t,
-                                guildId: x,
+                                guildId: j,
                                 channel: l,
                                 isPremium: N,
                             }),

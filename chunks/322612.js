@@ -23,19 +23,19 @@ function O(e, t, n) {
         S = (0, i.J)(),
         { ariaLabel: A, ariaLabelledBy: C, ariaDescribedBy: N, focusManager: R } = r.Lh.get(t),
         P = e.isPlaceholder ? "" : e.text,
-        D = (0, m.useMemo)(() => t.dateFormatter.resolvedOptions(), [t.dateFormatter]),
-        w = (0, E.a)({
+        w = (0, m.useMemo)(() => t.dateFormatter.resolvedOptions(), [t.dateFormatter]),
+        D = (0, E.a)({
             month: "long",
-            timeZone: D.timeZone,
+            timeZone: w.timeZone,
         }),
         L = (0, E.a)({
             hour: "numeric",
-            hour12: D.hour12,
-            timeZone: D.timeZone,
+            hour12: w.hour12,
+            timeZone: w.timeZone,
         });
     if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (P = L.format(t.dateValue));
     else {
-        let e = w.format(t.dateValue);
+        let e = D.format(t.dateValue);
         P = e !== P ? `${P} \u{2013} ${e}` : e;
     }
     let { spinButtonProps: x } = (0, y.G)({
@@ -234,7 +234,7 @@ function O(e, t, n) {
     let $ = { caretColor: "transparent" };
     if ("rtl" === T) {
         $.unicodeBidi = "embed";
-        let t = D[e.type];
+        let t = w[e.type];
         ("numeric" === t || "2-digit" === t) && ($.direction = "ltr");
     }
     return {

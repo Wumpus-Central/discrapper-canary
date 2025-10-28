@@ -15,12 +15,12 @@ var i = n(657707),
     g = n(172351),
     m = n(648052),
     b = n(280885),
-    y = n(483424),
-    _ = n(681837),
-    O = n(78806),
-    j = n(91433),
-    x = n(900927),
-    v = n(944043),
+    _ = n(483424),
+    y = n(681837),
+    x = n(78806),
+    v = n(91433),
+    j = n(900927),
+    O = n(944043),
     C = n(678738),
     I = n(638970),
     S = n(502762),
@@ -59,7 +59,7 @@ function w(e) {
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(_.Z, { userId: t.id }),
+                        (0, r.jsx)(y.Z, { userId: t.id }),
                         !H &&
                             (0, r.jsx)(Z.Z, {
                                 userId: t.id,
@@ -71,7 +71,7 @@ function w(e) {
             }),
             M === P.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
-                    children: (0, r.jsx)(j.Z, {
+                    children: (0, r.jsx)(v.Z, {
                         user: t,
                         channelId: A.id,
                         applicationId: k,
@@ -81,7 +81,7 @@ function w(e) {
                 (0, r.jsx)(
                     S.Z.Overlay,
                     {
-                        children: (0, r.jsx)(j.Z, {
+                        children: (0, r.jsx)(v.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
@@ -91,7 +91,7 @@ function w(e) {
                     e.applicationId,
                 ),
             ),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(O.Z, {
                 user: t,
                 className: R.card,
             }),
@@ -114,7 +114,7 @@ function w(e) {
                       currentUser: n,
                       onOpenUserProfileModal: L,
                   })
-                : (0, r.jsx)(y.Z, {
+                : (0, r.jsx)(_.Z, {
                       user: t,
                       currentUser: n,
                       className: R.card,
@@ -145,12 +145,12 @@ function w(e) {
                         (0, r.jsx)(C.Z, {
                             heading: N.intl.string(N.t["Uv/eTx"]),
                             headingColor: "header-primary",
-                            children: (0, r.jsx)(O.Z, { applicationIds: G }),
+                            children: (0, r.jsx)(x.Z, { applicationIds: G }),
                         }),
                     (0, r.jsx)(C.Z, {
                         heading: t.bot ? N.intl.string(N.t["A//N4k"]) : N.intl.string(N.t.a6XYD9),
                         headingColor: "header-primary",
-                        children: (0, r.jsx)(x.Z, { userId: t.id }),
+                        children: (0, r.jsx)(j.Z, { userId: t.id }),
                     }),
                 ],
             }),

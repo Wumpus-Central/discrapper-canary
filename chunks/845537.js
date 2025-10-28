@@ -4,9 +4,9 @@ n.d(t, {
     N1: () => j,
     NY: () => x,
     Ox: () => P,
-    Vq: () => w,
+    Vq: () => D,
     Wf: () => M,
-    cB: () => D,
+    cB: () => w,
     dy: () => N,
     wP: () => R,
 });
@@ -68,7 +68,7 @@ function P(e) {
     let { text: t } = e;
     return (0, r.jsx)(_.Z, { children: t });
 }
-function D(e) {
+function w(e) {
     let { id: t, guildId: n, channelId: s } = e,
         c = (0, i.e7)([y.default], () => y.default.getUser(t)),
         u = (0, i.e7)([b.Z], () => b.Z.hidePersonalInformation),
@@ -108,7 +108,7 @@ function D(e) {
     }
     return f;
 }
-function w(e) {
+function D(e) {
     let { id: t, guildId: n } = e,
         a = (0, i.e7)([E.Z], () => (null != n ? E.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([c.Z], () => c.Z.roleStyle),

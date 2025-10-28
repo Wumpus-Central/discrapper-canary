@@ -9,11 +9,11 @@ var r = n(647438),
 function u(e) {
     let { dropRef: t, dragRef: n, userId: u, widget: d, index: f, disableInteraction: g = !1, onReorder: p } = e,
         m = (0, s.Z)(u),
-        { isDragging: b, currentItem: h } = (0, i.f)((e) => ({
+        { isDragging: b, currentItem: y } = (0, i.f)((e) => ({
             isDragging: e.isDragging(),
             currentItem: e.getItem(),
         })),
-        y = (0, r.useCallback)(
+        h = (0, r.useCallback)(
             (e, t) => {
                 let n = m.slice(),
                     [r] = n.splice(e, 1);
@@ -55,7 +55,7 @@ function u(e) {
         },
         drop: (e) => {
             let t = null != f ? f : 0;
-            y(e.index, t), (e.index = t);
+            h(e.index, t), (e.index = t);
         },
     });
     return null == f || g
@@ -66,7 +66,7 @@ function u(e) {
         : (v(n),
           x(t),
           {
-              isDragging: b && (null == h ? void 0 : h.widgetType) === d.type,
+              isDragging: b && (null == y ? void 0 : y.widgetType) === d.type,
               dragSourcePosition: j,
           });
 }

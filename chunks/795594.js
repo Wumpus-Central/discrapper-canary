@@ -36,8 +36,8 @@ var r = n(951288),
     N = n(589414),
     R = n(600164),
     P = n(240991),
-    D = n(713938),
-    w = n(973616),
+    w = n(713938),
+    D = n(973616),
     L = n(881998),
     x = n(592125),
     M = n(944486),
@@ -290,7 +290,7 @@ let ef = (e) => {
                 id: h,
             } = e,
             E = a.id,
-            O = i.useMemo(() => w.ZP.createFromServer(a), [a]),
+            O = i.useMemo(() => D.ZP.createFromServer(a), [a]),
             v = (0, G.yE)(O.flags, ee.udG.EMBEDDED),
             I = (0, p.e7)([K.Z], () => {
                 var e, t, n, r;
@@ -320,7 +320,7 @@ let ef = (e) => {
             eo = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, D.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
+                    e.push(...(0, w.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(g.zF9, {
                         className: er.appDetailsSection,

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(594174),
     R = n(626135),
     P = n(768581),
-    D = n(70956),
-    w = n(823379),
+    w = n(70956),
+    D = n(823379),
     L = n(506071),
     x = n(226378),
     M = n(981631),
@@ -39,7 +39,7 @@ var r = n(951288),
 function B(e) {
     var t, n, a;
     let l,
-        { application: d, channelId: I, guildId: D, message: L } = e,
+        { application: d, channelId: I, guildId: w, message: L } = e,
         { analyticsLocations: B } = (0, g.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED),
         F = (0, u.O)(),
         V = (0, s.e7)([A.Z], () => A.Z.getChannel(I), [I]),
@@ -66,7 +66,7 @@ function B(e) {
             () =>
                 Array.from(null != q ? q : [])
                     .map((e) => N.default.getUser(e))
-                    .filter(w.lm),
+                    .filter(D.lm),
             [q],
         ),
         Q = (0, s.e7)([C.Z], () => {
@@ -215,7 +215,7 @@ function B(e) {
                           ec > 0 &&
                               (0, r.jsx)(y.K, {
                                   activityUsers: X,
-                                  guildId: D,
+                                  guildId: w,
                                   activityText: ed.text,
                               }),
                       ],
@@ -226,7 +226,7 @@ function B(e) {
         trackingConfig: {
             id: d.id,
             linkType: j.U.ACTIVITY_INSTANCE,
-            guildId: D,
+            guildId: w,
             channelId: I,
             messageId: L.id,
         },
@@ -242,8 +242,8 @@ let Z = i.memo((e) => {
         i.useEffect(() => {
             let e = new l.Xp();
             return (
-                e.start(c ? 15 * D.Z.Millis.SECOND : D.Z.Millis.SECOND, () => {
-                    r((new Date().getTime() - t) / D.Z.Millis.SECOND);
+                e.start(c ? 15 * w.Z.Millis.SECOND : w.Z.Millis.SECOND, () => {
+                    r((new Date().getTime() - t) / w.Z.Millis.SECOND);
                 }),
                 () => e.stop()
             );

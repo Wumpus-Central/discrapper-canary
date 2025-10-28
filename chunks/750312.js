@@ -13,14 +13,14 @@ var r = n(951288),
     p = n(781040),
     m = n(840367),
     b = n(34335),
-    h = n(388032),
-    y = n(415734);
+    y = n(388032),
+    h = n(415734);
 function v(e) {
     let {
             userId: t,
             widget: n,
             children: a,
-            disableInteraction: h,
+            disableInteraction: y,
             className: v,
             index: j,
             trailingContent: x,
@@ -43,8 +43,8 @@ function v(e) {
             widgetType: n.type,
             onAction: N,
         }),
-        Z = E && null != j && !h,
-        { isDragging: R, dragSourcePosition: B } = (0, f.q)({
+        Z = E && null != j && !y,
+        { isDragging: R, dragSourcePosition: G } = (0, f.q)({
             dropRef: T,
             dragRef: k,
             userId: t,
@@ -53,24 +53,24 @@ function v(e) {
             disableInteraction: !Z,
             onReorder: () => D(n.type),
         }),
-        [G, L] = i.useState(!1);
+        [B, L] = i.useState(!1);
     return (0, r.jsx)(O, {
         ref: T,
         disableInteraction: !Z,
         onMouseEnter: () => L(!0),
         onMouseLeave: () => L(!1),
-        dragSourcePosition: B,
+        dragSourcePosition: G,
         index: null != j ? j : 0,
         children: (0, r.jsxs)("section", {
             ref: A,
-            className: l()(y.container, v, { [y.isDragging]: R }),
+            className: l()(h.container, v, { [h.isDragging]: R }),
             "aria-labelledby": S,
             children: [
                 Z &&
                     (0, r.jsx)(p.Z, {
                         buttonRef: k,
                         widget: n,
-                        className: l()(y.dragHandleButton, { [y.opacity]: G || R }),
+                        className: l()(h.dragHandleButton, { [h.opacity]: B || R }),
                         additionalMenuItems: w,
                     }),
                 (0, r.jsx)(m.Z, {
@@ -80,7 +80,7 @@ function v(e) {
                     subtitle: P,
                     actionButtons: I,
                     widget: n,
-                    disableInteraction: h,
+                    disableInteraction: y,
                 }),
                 (0, r.jsxs)(o.y5t, {
                     children: [a, x],
@@ -106,13 +106,13 @@ let O = (e) => {
         ? n
         : (0, r.jsx)("div", {
               ref: t,
-              className: l()(y.dragAndDropHitbox, {
-                  [y.dropIndicatorBefore]: d,
-                  [y.dropIndicatorAfter]: f,
+              className: l()(h.dragAndDropHitbox, {
+                  [h.dropIndicatorBefore]: d,
+                  [h.dropIndicatorAfter]: f,
               }),
               onMouseEnter: a,
               onMouseLeave: o,
-              "aria-label": h.intl.formatToPlainString(h.t.YLczh4, { positionNumber: s + 1 }),
+              "aria-label": y.intl.formatToPlainString(y.t.YLczh4, { positionNumber: s + 1 }),
               children: n,
           });
 };

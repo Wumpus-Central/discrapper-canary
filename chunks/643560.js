@@ -53,30 +53,30 @@ function h(e, t) {
 }
 function f(e) {
     let { entry: t, onSelect: f, closePopout: g, hideEditButton: m = !1 } = e,
-        { isEntryAdmin: b, canEdit: y, canRemove: _ } = (0, d.Z)(t),
-        O = (0, s.Z)({
+        { isEntryAdmin: b, canEdit: _, canRemove: y } = (0, d.Z)(t),
+        x = (0, s.Z)({
             id: t.guildId,
             label: u.intl.string(u.t["94lLD7"]),
             onSuccess: g,
         });
     i.useEffect(() => {
-        y || _ || null != O || (0, a.Zy)();
+        _ || y || null != x || (0, a.Zy)();
     });
-    let j = () => {
+    let v = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function x() {
+    function j() {
         (0, a.Zy)(), null == g || g();
     }
     return (0, r.jsxs)(l.v2r, {
         navId: "guild-entry-context",
-        onClose: x,
+        onClose: j,
         "aria-label": u.intl.string(u.t.HpQykc),
         onSelect: f,
         children: [
             (0, r.jsxs)(l.kSQ, {
                 children: [
-                    y && !m
+                    _ && !m
                         ? (0, r.jsx)(l.sNh, {
                               id: "update-entry",
                               label: u.intl.string(u.t.XnuOvN),
@@ -85,11 +85,11 @@ function f(e) {
                                       let { default: e } = await n.e("34191").then(n.bind(n, 303647));
                                       return (n) => (0, r.jsx)(e, h(p({}, n), { entry: t }));
                                   }),
-                                      x();
+                                      j();
                               },
                           })
                         : null,
-                    _
+                    y
                         ? (0, r.jsx)(l.sNh, {
                               id: "remove-from-hub",
                               label: u.intl.string(u.t.KUxYWH),
@@ -103,7 +103,7 @@ function f(e) {
                                                       header: u.intl.string(u.t.KUxYWH),
                                                       confirmText: u.intl.string(u.t.N86XcP),
                                                       cancelText: u.intl.string(u.t["ETE/oC"]),
-                                                      onConfirm: j,
+                                                      onConfirm: v,
                                                   },
                                                   e,
                                               ),
@@ -116,7 +116,7 @@ function f(e) {
                                           ),
                                       ),
                                   ),
-                                      x();
+                                      j();
                               },
                               color: "danger",
                           })
@@ -127,14 +127,14 @@ function f(e) {
                               id: "report-server-listing",
                               label: u.intl.string(u.t.Aen9eh),
                               action: function () {
-                                  null != t && ((0, o.sq)(t), x());
+                                  null != t && ((0, o.sq)(t), j());
                               },
                               icon: l.U65,
                               color: "danger",
                           }),
                 ],
             }),
-            (0, r.jsx)(l.kSQ, { children: O }),
+            (0, r.jsx)(l.kSQ, { children: x }),
         ],
     });
 }

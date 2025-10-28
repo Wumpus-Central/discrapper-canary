@@ -32,8 +32,8 @@ function R() {
         n = (0, s.e7)([f.Z, E.Z], () => f.Z.showNotice() || E.Z.showNotice()),
         a = null != e ? e : t,
         R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        { subsection: P, setSubsection: D } = (0, v.Z)(),
-        w = g.R.useField("hasSearchResults"),
+        { subsection: P, setSubsection: w } = (0, v.Z)(),
+        D = g.R.useField("hasSearchResults"),
         L = g.R.useField("searchResults");
     function x(t) {
         if (P !== t) {
@@ -45,7 +45,7 @@ function R() {
                     y.S.dispatch(I.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === S.NB.GUILD && null == e && null != a && (0, d.Fq)(a), D(t);
+            t === S.NB.GUILD && null == e && null != a && (0, d.Fq)(a), w(t);
         }
     }
     i.useEffect(() => {
@@ -56,7 +56,7 @@ function R() {
     let M = !0,
         k = !0;
     return (
-        w &&
+        D &&
             1 === L.length &&
             (L.includes(A.s6.PROFILE_SERVER_PROFILES)
                 ? (x(S.NB.GUILD), (k = !1))

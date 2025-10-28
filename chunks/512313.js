@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(642613), n(388685);
 var a = n(951288),
     r = n(647438),
-    i = n(481060),
-    l = n(131051),
+    l = n(481060),
+    i = n(131051),
     o = n(28682),
     s = n(920952),
     c = n(544651),
@@ -10,7 +10,7 @@ var a = n(951288),
     u = n(547481);
 function m(e) {
     var t;
-    let { setting: n, depth: i, highlight: l } = e,
+    let { setting: n, depth: l, highlight: i } = e,
         o = null == (t = r.useContext(h)) ? void 0 : t.get(n),
         s = null;
     return (
@@ -23,16 +23,16 @@ function m(e) {
                         m,
                         {
                             setting: e,
-                            depth: i + 1,
-                            highlight: l,
+                            depth: l + 1,
+                            highlight: i,
                         },
                         e,
                     ),
                 )),
         (0, a.jsx)(c.r, {
             title: n,
-            initExpanded: i <= 2,
-            highlight: l,
+            initExpanded: l <= 2,
+            highlight: i,
             children: s,
         })
     );
@@ -45,17 +45,17 @@ function p(e) {
                 t.layout.some((e) => (null == e ? void 0 : e.layout.some((e) => null != e.render)))) ||
                 (t.type === o.Jq.PANEL && t.layout.some((e) => null != e.render)) ||
                 (t.type === o.Jq.PANE && null != t.render)),
-        i = null;
+        l = null;
     if ((0, o.Lk)(t)) {
-        var l, s;
-        0 === t.layout.length && (null == (s = t.parent) || null == (l = s.parent) ? void 0 : l.legacySearchKey) != null
-            ? (i = (0, a.jsx)(m, {
+        var i, s;
+        0 === t.layout.length && (null == (s = t.parent) || null == (i = s.parent) ? void 0 : i.legacySearchKey) != null
+            ? (l = (0, a.jsx)(m, {
                   setting: t.parent.parent.legacySearchKey,
                   depth: n + 1,
                   highlight: !0,
               }))
             : t.layout.length > 0 &&
-              (i = t.layout.map((e) =>
+              (l = t.layout.map((e) =>
                   (0, a.jsx)(
                       p,
                       {
@@ -70,22 +70,22 @@ function p(e) {
         title: t.key,
         initExpanded: n <= 2,
         highlight: r,
-        children: i,
+        children: l,
     });
 }
 let h = r.createContext(null);
 function x() {
     let [e, t] = r.useState(!1),
         { legacySettingDirectory: n } = (0, d.q)(),
-        { node: o } = (0, l.Z)(s.Z, "");
-    return (0, a.jsxs)(i.zJl, {
+        { node: o } = (0, i.Z)(s.Z, "");
+    return (0, a.jsxs)(l.zJl, {
         className: u.root,
         children: [
-            (0, a.jsx)(i.Heading, {
+            (0, a.jsx)(l.Heading, {
                 variant: "heading-lg/bold",
                 children: "Settings Tree",
             }),
-            (0, a.jsx)(i.rsf, {
+            (0, a.jsx)(l.rsf, {
                 checked: e,
                 onChange: (e) => t(e),
                 label: "Show Legacy Settings Tree",
