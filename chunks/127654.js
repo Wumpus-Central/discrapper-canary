@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => T,
-    d: () => A,
+    d: () => S,
 }),
     n(388685),
     n(415506);
@@ -88,13 +88,7 @@ function T(e, t, n) {
         help: O.intl.formatToPlainString(O.t.tUOJdH, { maxSize: h.Ng(h.OC()) }),
     });
 }
-async function S(e) {
-    await Promise.resolve(),
-        e.forEach((e) => {
-            e.type, e.size;
-        });
-}
-async function A(e, t, n) {
+async function S(e, t, n) {
     let {
         filesMetadata: c,
         requireConfirm: _ = !0,
@@ -105,16 +99,20 @@ async function A(e, t, n) {
     if (e.length < 1) return;
     if (null != c && c.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
     let v = t.getGuildId(),
-        A = Array.from(e);
-    if ((await S(A), (0, g.Bf)(A, v))) return void T(t, A);
-    if (f.Z.getUploadCount(t.id, n) + A.length > E.dN1) {
+        S = Array.from(e),
+        A = S.map((e) => ({
+            originalContentType: e.type,
+            preCompressionSize: e.size,
+        }));
+    if ((await Promise.resolve(), (0, g.Bf)(S, v))) return void T(t, S);
+    if (f.Z.getUploadCount(t.id, n) + S.length > E.dN1) {
         (0, o.openUploadError)({
             title: O.intl.string(O.t.wOr6hB),
             help: O.intl.formatToPlainString(O.t["qqyp/e"], { limit: E.dN1 }),
         }),
             p.default.track(E.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: f.Z.getUploadCount(t.id, n),
-                new_count: A.length,
+                new_count: S.length,
             });
         return;
     }
@@ -124,13 +122,14 @@ async function A(e, t, n) {
             r.Z.updateChatOpen(t.id, !0),
         _)
     ) {
-        let e = A.map((e, t) =>
+        let e = S.map((e, t) =>
             I(
                 {
                     file: e,
                     platform: l.ow.WEB,
                     isThumbnail: m,
                     origin: y,
+                    compressionMetadata: A[t],
                 },
                 null == c ? void 0 : c[t],
             ),
@@ -142,7 +141,7 @@ async function A(e, t, n) {
             draftType: n,
         });
     } else {
-        let e = A.map((e, n) => {
+        let e = S.map((e, n) => {
             let r = null != c ? c[n] : {};
             return new s.nH(
                 I(
@@ -151,6 +150,7 @@ async function A(e, t, n) {
                         platform: l.ow.WEB,
                         isThumbnail: m,
                         origin: y,
+                        compressionMetadata: A[n],
                     },
                     r,
                 ),
