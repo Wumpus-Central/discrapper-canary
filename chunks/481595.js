@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(987209),
     R = n(563132),
     P = n(45572),
-    w = n(435020),
-    D = n(119226),
+    D = n(435020),
+    w = n(119226),
     L = n(982204),
     x = n(981631),
     M = n(388032),
@@ -86,7 +86,7 @@ function U(e) {
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),
         ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
-        ef = (0, w.m)(B, Z),
+        ef = (0, D.m)(B, Z),
         e_ = null != ef ? ef.type : null;
     i.useEffect(() => {
         en &&
@@ -103,7 +103,7 @@ function U(e) {
     }, [et, en, Z, er.applicationId, er.id, es, X, J]);
     let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0,
         eh = er.productLine === x.POd.SOCIAL_LAYER_GAME_ITEM,
-        em = ee || eh;
+        em = ee && !eh;
     return (0, r.jsxs)("div", {
         className: k.stepBody,
         children: [
@@ -139,7 +139,7 @@ function U(e) {
                 sku: er,
                 isEmbeddedIAP: W,
             }),
-            em && (0, r.jsx)(D.Z, { sku: er }),
+            em && (0, r.jsx)(w.Z, { sku: er }),
             null != $ ? (0, r.jsx)(b.s, { giftRecipient: $ }) : null,
             (0, r.jsx)(c.gNt, {
                 label: J ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),
@@ -160,22 +160,6 @@ function U(e) {
                                 value: "",
                             }),
             }),
-            eh &&
-                (0, r.jsxs)("div", {
-                    className: k.socialLayerGameItemDisclaimer,
-                    children: [
-                        (0, r.jsx)(c.aNP, {
-                            size: "custom",
-                            width: 16,
-                            height: 16,
-                        }),
-                        (0, r.jsx)(c.Text, {
-                            variant: "text-xs/normal",
-                            color: "text-secondary",
-                            children: M.intl.string(M.t["6fBC//"]),
-                        }),
-                    ],
-                }),
             (0, r.jsx)(_.ZP, {
                 label: M.intl.string(M.t["mmDvV+"]),
                 paymentSources: Object.values(B),
@@ -185,31 +169,41 @@ function U(e) {
                 hidePersonalInformation: ec,
                 paymentGatewayRestrictions: ei,
             }),
-            (0, r.jsx)(g.Z, {
+            (0, r.jsxs)(g.Z, {
                 isActive: t,
                 ref: n,
-                children: (0, r.jsx)(p.Z, {
-                    onChange: F,
-                    forceShow: !0,
-                    showWithdrawalWaiver: eu,
-                    disabled: ed,
-                    subscriptionPlan: null,
-                    finePrintClassname: k.fineprint,
-                    purchaseType: K,
-                    isGift: J,
-                    checkboxLabel:
-                        er.productLine === x.POd.COLLECTIBLES
-                            ? M.intl.format(M.t["1EdAld"], { paidURL: x.EYA.PAID_TERMS })
-                            : void 0,
-                    finePrint: (0, r.jsx)(d.Z, {
-                        paymentSourceType: e_,
-                        isEmbeddedIAP: W,
+                children: [
+                    (0, r.jsx)(p.Z, {
+                        onChange: F,
+                        forceShow: !0,
+                        showWithdrawalWaiver: eu,
+                        disabled: ed,
+                        subscriptionPlan: null,
+                        finePrintClassname: k.fineprint,
                         purchaseType: K,
-                        productLine: er.productLine,
                         isGift: J,
-                        applicationName: U.name,
+                        checkboxLabel:
+                            er.productLine === x.POd.COLLECTIBLES
+                                ? M.intl.format(M.t["1EdAld"], { paidURL: x.EYA.PAID_TERMS })
+                                : void 0,
+                        finePrint: (0, r.jsx)(d.Z, {
+                            paymentSourceType: e_,
+                            isEmbeddedIAP: W,
+                            purchaseType: K,
+                            productLine: er.productLine,
+                            isGift: J,
+                            applicationName: U.name,
+                        }),
                     }),
-                }),
+                    eh &&
+                        (0, r.jsx)("div", {
+                            className: k.socialLayerGameItemDisclaimer,
+                            children: (0, r.jsx)(c.M14, {
+                                type: "warning",
+                                children: M.intl.string(M.t["6fBC//"]),
+                            }),
+                        }),
+                ],
             }),
         ],
     });

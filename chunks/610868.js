@@ -6,6 +6,4 @@ e.exports = {
     giftMainAnimationWrapper: "giftMainAnimationWrapper_a84142",
     avatar: "avatar_a84142",
     bundlePreviewWrapper: "bundlePreviewWrapper_a84142",
-    slayerStorefrontReviewImageWrapper: "slayerStorefrontReviewImageWrapper_a84142",
-    slayerStorefrontReviewImage: "slayerStorefrontReviewImage_a84142",
 };

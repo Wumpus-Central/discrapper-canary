@@ -42050,25 +42050,6 @@ screen and (max-width:485px) {
     inset-inline-start: 10px
 }
 
-.cardContainer__47729 {
-    align-items: center;
-    background-position: 50%;
-    background-size: cover;
-    display: flex;
-    justify-content: center
-}
-
-.cardContainer__47729,
-.skuImage__47729 {
-    border-radius: var(--radius-md)
-}
-
-.skuImage__47729 {
-    max-width: 100%;
-    object-fit: contain;
-    width: 100%
-}
-
 .profileEffectContainer_a84142 {
     border-radius: var(--radius-sm);
     height: 296px;
@@ -42232,6 +42213,25 @@ screen and (max-width:485px) {
     margin-bottom: 8px
 }
 
+.cardContainer__47729 {
+    align-items: center;
+    background-position: 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: center
+}
+
+.cardContainer__47729,
+.skuImage__47729 {
+    border-radius: var(--radius-xs)
+}
+
+.skuImage__47729 {
+    max-width: 100%;
+    object-fit: contain;
+    width: 100%
+}
+
 .invoiceTable__25766 {
     margin-bottom: 16px
 }
@@ -42314,10 +42314,7 @@ screen and (max-width:485px) {
 }
 
 .socialLayerGameItemDisclaimer_b44961 {
-    align-items: center;
-    display: flex;
-    gap: 8px;
-    margin: -8px 0 8px
+    margin-top: 8px
 }
 
 .back_e125f1 {

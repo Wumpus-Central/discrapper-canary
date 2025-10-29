@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(314940);
+n.d(t, { Z: () => D }), n(314940);
 var r = n(951288);
 n(647438);
 var i = n(278074),
@@ -13,14 +13,13 @@ var i = n(278074),
     _ = n(981632),
     p = n(731896),
     h = n(680295),
-    m = n(848118),
-    g = n(998502),
-    E = n(987209),
-    b = n(981631),
-    y = n(388032),
-    O = n(610868),
-    v = n(241822);
-function I(e, t, n) {
+    m = n(998502),
+    g = n(987209),
+    E = n(981631),
+    b = n(388032),
+    y = n(610868),
+    O = n(241822);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +43,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,19 +60,19 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = g.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
-function N(e) {
+let A = m.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
+function C(e) {
     let { avatarDecoration: t } = e,
         {
             avatarDecorationSrc: n,
@@ -84,94 +83,80 @@ function N(e) {
             size: (0, s.y9)(o.EFr.SIZE_152),
         });
     return (0, r.jsx)("div", {
-        className: O.giftMainAnimationWrapper,
+        className: y.giftMainAnimationWrapper,
         children: (0, r.jsx)(
-            C,
-            A(T({}, i), {
+            A,
+            S(I({}, i), {
                 avatarDecoration: n,
                 src: a,
-                className: O.avatar,
+                className: y.avatar,
                 size: o.EFr.SIZE_152,
-                "aria-label": y.intl.string(y.t.lqaIxI),
+                "aria-label": b.intl.string(b.t.lqaIxI),
             }),
         ),
     });
 }
-function R(e) {
+function N(e) {
     var t;
     let { skuId: n } = e,
         i = null == (t = (0, p.V)(n)) ? void 0 : t.config;
     return (0, r.jsxs)("div", {
-        className: O.profileEffectContainer,
+        className: y.profileEffectContainer,
         children: [
             (0, r.jsx)("img", {
-                src: v,
+                src: O,
                 alt: null == i ? void 0 : i.accessibilityLabel,
-                className: O.profileEffectBackground,
+                className: y.profileEffectBackground,
             }),
             (0, r.jsx)(h.Z, { skuId: n }),
         ],
     });
 }
-function P(e) {
+function R(e) {
     let { nameplate: t } = e;
     return (0, r.jsx)("div", {
-        className: O.nameplateContainer,
+        className: y.nameplateContainer,
         children: (0, r.jsx)(d.Z, {
             nameplate: t,
-            className: O.nameplate,
+            className: y.nameplate,
             nameplatePreviewSize: "xlarge",
             isHighlighted: !0,
             showPlaceholderUser: !0,
         }),
     });
 }
-let w = (e) => {
-        let { sku: t } = e,
-            { selectedGiftStyle: n } = (0, E.wD)(),
-            { product: o } = (0, c.T)(null == t ? void 0 : t.id),
-            s = null == o ? void 0 : o.items[0];
-        if ((null == o ? void 0 : o.type) === a.Z.BUNDLE)
-            return (0, r.jsx)("div", {
-                className: O.bundlePreviewWrapper,
-                children: (0, r.jsx)(u.d, {
-                    product: o,
-                    isPurchased: !1,
-                    isHighlighted: !1,
-                }),
-            });
-        let l = (0, i.EQ)(s)
-            .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(N, { avatarDecoration: e }))
-            .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(R, { skuId: e.skuId }))
-            .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(P, { nameplate: e }))
-            .otherwise(() => null);
-        return null != n && null == l
-            ? (0, r.jsx)("div", {
-                  className: O.giftMainAnimationWrapper,
-                  children: (0, r.jsx)(_.Z, {
-                      defaultAnimationState: f.SR.LOOP,
-                      giftStyle: n,
-                      shouldAnimate: !0,
-                      className: O.__invalid_giftMainAnimation,
-                  }),
-              })
-            : l;
-    },
-    D = (e) => {
-        let { sku: t } = e;
+let P = (e) => {
+    let { sku: t } = e,
+        { selectedGiftStyle: n } = (0, g.wD)(),
+        { product: o } = (0, c.T)(null == t ? void 0 : t.id),
+        s = null == o ? void 0 : o.items[0];
+    if ((null == o ? void 0 : o.type) === a.Z.BUNDLE)
         return (0, r.jsx)("div", {
-            className: O.slayerStorefrontReviewImageWrapper,
-            children: (0, r.jsx)(m.A, {
-                className: O.slayerStorefrontReviewImage,
-                sku: t,
+            className: y.bundlePreviewWrapper,
+            children: (0, r.jsx)(u.d, {
+                product: o,
+                isPurchased: !1,
+                isHighlighted: !1,
             }),
         });
-    };
-function L(e) {
+    let l = (0, i.EQ)(s)
+        .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(C, { avatarDecoration: e }))
+        .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(N, { skuId: e.skuId }))
+        .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(R, { nameplate: e }))
+        .otherwise(() => null);
+    return null != n && null == l
+        ? (0, r.jsx)("div", {
+              className: y.giftMainAnimationWrapper,
+              children: (0, r.jsx)(_.Z, {
+                  defaultAnimationState: f.SR.LOOP,
+                  giftStyle: n,
+                  shouldAnimate: !0,
+                  className: y.__invalid_giftMainAnimation,
+              }),
+          })
+        : l;
+};
+function D(e) {
     let { sku: t } = e;
-    return t.productLine === b.POd.COLLECTIBLES
-        ? (0, r.jsx)(w, { sku: t })
-        : t.productLine === b.POd.SOCIAL_LAYER_GAME_ITEM
-          ? (0, r.jsx)(D, { sku: t })
-          : null;
+    return t.productLine === E.POd.COLLECTIBLES ? (0, r.jsx)(P, { sku: t }) : null;
 }
