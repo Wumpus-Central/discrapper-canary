@@ -11,7 +11,7 @@ var r = n(951288),
     p = n(388032),
     f = n(874622);
 function m(e) {
-    let { guildId: t, powerupNames: n, warningText: m } = e,
+    let { guildId: t, powerupNames: n, warnings: m } = e,
         { spent: g } = (0, u.Z)(t),
         v = (0, a.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t), [t]),
         x =
@@ -49,12 +49,20 @@ function m(e) {
                               boostCount: x,
                               perksString: n.join(", "),
                           }),
-                          null != m &&
-                              (0, r.jsx)(l.xvT, {
-                                  variant: "text-sm/medium",
-                                  color: "text-feedback-warning",
-                                  children: m,
-                              }),
+                          null == m
+                              ? void 0
+                              : m.map((e, t) =>
+                                    (0, r.jsx)(
+                                        l.xvT,
+                                        {
+                                            variant: "text-sm/medium",
+                                            color: "text-feedback-warning",
+                                            className: f.warning,
+                                            children: e,
+                                        },
+                                        "warning-".concat(t),
+                                    ),
+                                ),
                       ],
                   }),
               ],
