@@ -49,8 +49,8 @@ var i = n(951288),
     G = n(444295),
     F = n(388627),
     H = n(981631),
-    B = n(959517),
-    Y = n(388032),
+    Y = n(959517),
+    B = n(388032),
     Q = n(847121);
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -128,18 +128,18 @@ function J(e) {
                             !0 === t.extra.fake_inventory_item
                                 ? await (0, j.k)({
                                       channel: n,
-                                      content: Y.intl.formatToPlainString(Y.t.UVBA9g, { gameName: t.extra.game_name }),
+                                      content: B.intl.formatToPlainString(B.t.UVBA9g, { gameName: t.extra.game_name }),
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
-                                      location: B.dy.OVERLAY,
+                                      location: Y.dy.OVERLAY,
                                   })
                                 : await (0, j.p)({
                                       channel: n,
-                                      content: Y.intl.string(Y.t.DwAcMz),
+                                      content: B.intl.string(B.t.DwAcMz),
                                       entry: t,
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
-                                      location: B.dy.OVERLAY,
+                                      location: Y.dy.OVERLAY,
                                   });
                     }
                     y.Z.track(H.rMx.OVERLAY_GAME_INVITE_SENT, {
@@ -172,7 +172,7 @@ function J(e) {
                     userId: a.id,
                 });
         },
-        x = E ? Y.intl.string(Y.t["3fRySx"]) : Y.intl.string(Y.t.XHxDIV),
+        x = E ? B.intl.string(B.t["3fRySx"]) : B.intl.string(B.t.XHxDIV),
         I = E
             ? (0, i.jsx)(h.ejJ, {
                   color: "currentColor",
@@ -240,7 +240,7 @@ function q(e) {
                 }
             }
         },
-        y = Y.intl.string(Y.t.OKsSCR);
+        y = B.intl.string(B.t.OKsSCR);
     return (0, i.jsx)(d.u, {
         text: y,
         "aria-label": y,
@@ -379,7 +379,7 @@ function et(e) {
                               variant: "text-xs/medium",
                               color: "header-secondary",
                               tag: "div",
-                              children: Y.intl.string(Y.t.y9eo7a),
+                              children: B.intl.string(B.t.y9eo7a),
                           }),
                       }),
                   t.map((e, t) =>
@@ -398,7 +398,7 @@ function et(e) {
 }
 function en(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
-        l = (0, I.Z)(t, "useLiveActivityRows");
+        l = (0, I.Z)(t);
     (0, E.ZP)(() => {
         (0, w._)();
     });
@@ -518,7 +518,7 @@ function er(e) {
                             },
                             size: p.Ph.SMALL,
                             color: p.Tt.PRIMARY,
-                            children: Y.intl.string(Y.t["6Qgrev"]),
+                            children: B.intl.string(B.t["6Qgrev"]),
                         })
                       : null,
               ],
@@ -529,7 +529,7 @@ function el(e) {
         n = (0, F.II)(),
         r = null == n ? void 0 : n.id,
         l = null == n ? void 0 : n.altId,
-        o = (0, I.Z)(r, "ActivityWidget"),
+        o = (0, I.Z)(r),
         a = (0, c.e7)([L.default], () => L.default.getCurrentUser()),
         s = null != l ? l : r,
         u = (0, c.e7)([D.Z], () => (null == s ? null : D.Z.getApplicationActivity(s)), [s]);
