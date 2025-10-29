@@ -209,7 +209,7 @@ function G(e, t) {
         if (n > 0)
             return y.intl.formatToPlainString(y.t["SV/iZn"], {
                 a: e[0],
-                n: n.toLocaleString(),
+                n: n,
             });
         else return e[0];
     if (2 === e.length)
@@ -217,7 +217,7 @@ function G(e, t) {
             return y.intl.formatToPlainString(y.t.YBnZK0, {
                 a: e[0],
                 b: e[1],
-                n: n.toLocaleString(),
+                n: n,
             });
         else
             return y.intl.formatToPlainString(y.t["O5+f5c"], {
@@ -225,13 +225,13 @@ function G(e, t) {
                 b: e[1],
             });
     return 3 !== e.length
-        ? y.intl.formatToPlainString(y.t.yVX6kE, { n: n.toLocaleString() })
+        ? y.intl.formatToPlainString(y.t.yVX6kE, { n: n })
         : n > 0
           ? y.intl.formatToPlainString(y.t["ThXp+N"], {
                 a: e[0],
                 b: e[1],
                 c: e[2],
-                n: n.toLocaleString(),
+                n: n,
             })
           : y.intl.formatToPlainString(y.t["0UzBM3"], {
                 a: e[0],

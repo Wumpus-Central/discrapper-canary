@@ -201,7 +201,7 @@ function w(e, t) {
             showResults: H,
         } = S,
         Y = (0, E.cZ)(B),
-        W = T.intl.formatToPlainString(T.t.XRkuof, { count: Y.toLocaleString() }),
+        W = T.intl.formatToPlainString(T.t.XRkuof, { count: Y }),
         K = Math.max(
             ...v.map((e) => {
                 var t, n;
@@ -242,7 +242,7 @@ function w(e, t) {
                 votesPercentage: Math.round(100 * u),
                 votes: (0, r.EQ)(I)
                     .with(i.C.IMAGE_ONLY_ANSWERS, () => "(".concat(c.toLocaleString(), ")"))
-                    .otherwise(() => T.intl.formatToPlainString(T.t.XRkuof, { count: c.toLocaleString() })),
+                    .otherwise(() => T.intl.formatToPlainString(T.t.XRkuof, { count: c })),
             };
         }),
         q = (0, r.EQ)({
