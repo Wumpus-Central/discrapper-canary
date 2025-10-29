@@ -37,8 +37,8 @@ var r,
     N = n(629710),
     R = n(262777),
     P = n(761538),
-    w = n(674611),
-    D = n(294734),
+    D = n(674611),
+    w = n(294734),
     L = n(947849),
     x = n(10433),
     M = n(715903),
@@ -91,8 +91,8 @@ var r,
     eN = n(461157),
     eR = n(901461),
     eP = n(432376),
-    ew = n(384203),
-    eD = n(633957),
+    eD = n(384203),
+    ew = n(633957),
     eL = n(530472),
     ex = n(29909),
     eM = n(782658),
@@ -154,7 +154,7 @@ function e1(e, t) {
     }
     return n;
 }
-function e2(e, t) {
+function e3(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -165,7 +165,7 @@ function e2(e, t) {
         e
     );
 }
-function e3(e, t) {
+function e2(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -259,7 +259,7 @@ class tt extends (r = a.Component) {
             r = null;
         switch (n) {
             case eI.aD.MARK_AS_FALSE_POSITIVE:
-                r = (0, i.jsx)(w.Z, {
+                r = (0, i.jsx)(D.Z, {
                     messageId: e.id,
                     channelId: t.id,
                 });
@@ -300,7 +300,7 @@ class tt extends (r = a.Component) {
                   if (n === S.g.EVENT) return (0, i.jsx)(U.Z, { code: r }, r);
                   if (n === S.g.CHANNEL_LINK)
                       return (0, i.jsx)(
-                          ew.Z,
+                          eD.Z,
                           {
                               code: r,
                               message: e,
@@ -433,7 +433,7 @@ class tt extends (r = a.Component) {
         let f = d
                 .map((t) => {
                     var n;
-                    return e2(e0({}, (0, W.JD)(t, e)), {
+                    return e3(e0({}, (0, W.JD)(t, e)), {
                         original: t.url,
                         srcIsAnimated: (0, ey.yE)(null != (n = t.flags) ? n : 0, ez.J0y.IS_ANIMATED),
                     });
@@ -486,7 +486,6 @@ class tt extends (r = a.Component) {
                     renderMosaicItemFooter: ek.L9,
                     onPlay: s,
                     gifFavoriteButton: e9(l),
-                    isSearchResult: this.props.isSearchResult,
                 },
                 u = (0, em.q)({
                     proxyURL: i.proxy_url,
@@ -689,7 +688,7 @@ class tt extends (r = a.Component) {
         let { application: t, activityInstance: n } = e;
         return null == t || null == n
             ? null
-            : (0, i.jsx)(eD.Z, {
+            : (0, i.jsx)(ew.Z, {
                   application: t,
                   channelId: this.props.channel.id,
                   guildId: this.props.channel.guild_id,
@@ -741,7 +740,7 @@ class tt extends (r = a.Component) {
         if (e.messageSnapshots.length > 0 && (0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(en.Z, { message: e });
     }
     renderForwardedMessage(e) {
-        if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(D.Z, { message: e });
+        if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(w.Z, { message: e });
     }
     renderEditedTag(e, t) {
         return (0, i.jsx)(eY.Z, {
@@ -776,8 +775,8 @@ class tt extends (r = a.Component) {
             N = this.renderMediaObscureNotice(t),
             R = this.renderPoll(t, n),
             P = this.renderForwardedMessage(t),
-            w = this.renderReportedMessage(t),
-            D = this.renderShareClientTheme(t);
+            D = this.renderReportedMessage(t),
+            w = this.renderShareClientTheme(t);
         return null == c &&
             null == d &&
             null == p &&
@@ -796,18 +795,18 @@ class tt extends (r = a.Component) {
             null != T &&
             null == R &&
             null == P &&
-            null == w &&
-            null == D
+            null == D &&
+            null == w
             ? null
             : (0, i.jsxs)("div", {
                   id: (0, ej.bX)(t),
                   className: s()(e, eQ.container),
                   children: [
-                      w,
+                      D,
                       P,
                       v,
                       R,
-                      D,
+                      w,
                       c,
                       u,
                       S,
@@ -858,12 +857,11 @@ class tt extends (r = a.Component) {
                         canSuppressEmbeds: u,
                         hasSpoilerEmbeds: d,
                         enabledContentHarmTypeFlags: f,
-                        isSearchResult: _,
-                        shouldAgeVerify: p,
+                        shouldAgeVerify: _,
                     } = this.props,
-                    h = (0, eT.BP)(e, r, d, f);
+                    p = (0, eT.BP)(e, r, d, f);
                 if (e.type === ez.hBH.GIFT) return null;
-                let m = e5.includes(e.type)
+                let h = e5.includes(e.type)
                     ? e.url
                     : null != (s = null == (a = e.image) ? void 0 : a.url)
                       ? s
@@ -873,13 +871,13 @@ class tt extends (r = a.Component) {
                 return (0, i.jsx)(
                     L.h.Provider,
                     {
-                        value: (0, eW.P)(m, e.image, e.video),
+                        value: (0, eW.P)(h, e.image, e.video),
                         children: (0, i.jsx)(
                             I.ZP,
                             e0(
                                 {
                                     embed: e,
-                                    obscureReason: null != h ? h : void 0,
+                                    obscureReason: null != p ? p : void 0,
                                     autoPlayGif: l,
                                     hideMedia: !c,
                                     allowFullScreen: !this.props.disableComponentInteractivity,
@@ -887,10 +885,8 @@ class tt extends (r = a.Component) {
                                     renderTitle: this.renderEmbedTitle,
                                     renderDescription: this.renderEmbedDescription,
                                     message: r,
-                                    showImageRecs: !1,
-                                    isSearchResult: _,
                                     embedIndex: t,
-                                    shouldAgeVerify: null != p && p,
+                                    shouldAgeVerify: null != _ && _,
                                 },
                                 n,
                             ),
@@ -985,17 +981,17 @@ function tn(e) {
             isAutomodQuarantined: y,
         }),
         P = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
-        w = (0, z.Z)(null == n ? void 0 : n.id),
-        D = (0, Q.Z)(r),
+        D = (0, z.Z)(null == n ? void 0 : n.id),
+        w = (0, Q.Z)(r),
         L = (0, R.v)(r),
         x = (0, eC._)(n),
         j = (0, eI.ro)(r.id, r.channel_id),
         U = (0, C.m8)();
     return (0, i.jsx)(
         tt,
-        e2(
+        e3(
             e0(
-                e2(
+                e3(
                     e0(
                         {
                             canSuppressEmbeds: I,
@@ -1018,10 +1014,10 @@ function tn(e) {
                 renderEmbeds: d,
                 gifAutoPlay: _,
                 canRenderReferralEmbed: n.isDM(),
-                poll: D,
+                poll: w,
                 showListsAndHeaders: P,
                 showMaskedLinks: P,
-                shouldHideMediaOptions: w,
+                shouldHideMediaOptions: D,
                 enabledContentHarmTypeFlags: L,
                 ctaButtonType: j,
                 shouldAgeVerify: U,
@@ -1043,9 +1039,8 @@ let tr = (e) => {
             disableReactionCreates: s = !0,
             disableReactionUpdates: l = !0,
             disableComponentInteractivity: c = !0,
-            isSearchResult: u = !1,
         } = e,
-        d = e3(e, [
+        u = e2(e, [
             "message",
             "channel",
             "disableReactionReads",
@@ -1053,20 +1048,19 @@ let tr = (e) => {
             "disableReactionCreates",
             "disableReactionUpdates",
             "disableComponentInteractivity",
-            "isSearchResult",
         ]);
-    let f = ec.x4.useSetting(),
-        _ = ec.RS.useSetting(),
-        p = ec.NA.useSetting(),
-        h = ec.QK.useSetting(),
-        m = (0, H.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        g = (0, z.Z)(null == r ? void 0 : r.id),
-        E = (0, R.v)(n),
-        b = (0, eI.ro)(n.id, n.channel_id),
-        y = (0, Q.Z)(n);
+    let d = ec.x4.useSetting(),
+        f = ec.RS.useSetting(),
+        _ = ec.NA.useSetting(),
+        p = ec.QK.useSetting(),
+        h = (0, H.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        m = (0, z.Z)(null == r ? void 0 : r.id),
+        g = (0, R.v)(n),
+        E = (0, eI.ro)(n.id, n.channel_id),
+        b = (0, Q.Z)(n);
     return (0, i.jsx)(
         tt,
-        e2(e0({}, d), {
+        e3(e0({}, u), {
             message: n,
             channel: r,
             disableReactionReads: a,
@@ -1076,17 +1070,16 @@ let tr = (e) => {
             canSuppressEmbeds: !1,
             canDeleteAttachments: !1,
             renderThreadAccessory: o,
-            inlineAttachmentMedia: f,
-            inlineEmbedMedia: _,
-            renderEmbeds: p,
-            gifAutoPlay: h,
-            poll: y,
-            showListsAndHeaders: m,
-            showMaskedLinks: m,
-            shouldHideMediaOptions: g,
-            enabledContentHarmTypeFlags: E,
-            ctaButtonType: b,
-            isSearchResult: u,
+            inlineAttachmentMedia: d,
+            inlineEmbedMedia: f,
+            renderEmbeds: _,
+            gifAutoPlay: p,
+            poll: b,
+            showListsAndHeaders: h,
+            showMaskedLinks: h,
+            shouldHideMediaOptions: m,
+            enabledContentHarmTypeFlags: g,
+            ctaButtonType: E,
         }),
     );
 };

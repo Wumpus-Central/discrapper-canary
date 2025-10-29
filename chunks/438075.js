@@ -50,7 +50,6 @@ function s(e, t) {
         renderThreadAccessory: s,
         disableReactionCreates: l,
         disableReactionUpdates: c,
-        isSearchResult: u,
     } = e;
     return (0, r.jsx)(a.$p, {
         message: n,
@@ -60,6 +59,5 @@ function s(e, t) {
         renderThreadAccessory: s,
         disableReactionCreates: l,
         disableReactionUpdates: c,
-        isSearchResult: u,
     });
 }

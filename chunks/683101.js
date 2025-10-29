@@ -91,7 +91,6 @@ class T extends l.PureComponent {
                                         animateAvatar: !1,
                                         subscribeToComponentDispatch: !1,
                                         trackAnnouncementViews: !0,
-                                        isSearchResult: !0,
                                     }),
                                 },
                                 e.id,
