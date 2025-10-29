@@ -1,4 +1,4 @@
-n.d(e, { default: () => j });
+n.d(t, { default: () => C });
 var s = n(951288),
     i = n(647438),
     r = n(120356),
@@ -9,36 +9,37 @@ var s = n(951288),
     d = n(198168),
     p = n(481060),
     f = n(100527),
-    u = n(494620),
-    m = n(905551),
-    x = n(60482),
-    _ = n(587065),
-    h = n(986841),
-    v = n(269794),
-    I = n(388032),
-    N = n(71124);
-function j(t) {
-    let { guildId: e, instance: n, onClose: r, transitionState: j } = t,
-        C = (0, c.e7)([x.Z], () => {
-            var t;
-            return null == (t = x.Z.getStateForGuild(e)) ? void 0 : t.instructions[n.planId];
+    u = n(454585),
+    m = n(494620),
+    x = n(905551),
+    _ = n(60482),
+    h = n(587065),
+    v = n(986841),
+    I = n(269794),
+    N = n(388032),
+    j = n(71124);
+function C(e) {
+    let { guildId: t, instance: n, onClose: r, transitionState: C } = e,
+        S = (0, c.e7)([_.Z], () => {
+            var e;
+            return null == (e = _.Z.getStateForGuild(t)) ? void 0 : e.instructions[n.planId];
         });
     i.useEffect(() => {
-        null == C && (0, m.iX)(e, n.planId);
-    }, [e, n.planId, C]);
-    let S = (0, h.Z)(n),
-        { handleCopyServerIp: T, animateCopyIcon: E } = (0, _.Z)(
-            e,
+        null == S && (0, x.iX)(t, n.planId);
+    }, [t, n.planId, S]);
+    let T = (0, v.Z)(n),
+        { handleCopyServerIp: E, animateCopyIcon: A } = (0, h.Z)(
+            t,
             n.id,
             f.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
-            null != S ? S : "",
+            null != T ? T : "",
         ),
-        A = i.useMemo(() => {
+        g = i.useMemo(() => {
             switch (n.status) {
                 case l.V.STARTING:
-                    return I.intl.string(v.default.ud4hxY);
+                    return N.intl.string(I.default.ud4hxY);
                 case l.V.OFFLINE:
-                    return I.intl.string(v.default.ABAm7x);
+                    return N.intl.string(I.default.ABAm7x);
                 default:
                     return;
             }
@@ -50,66 +51,66 @@ function j(t) {
             props: { instance: n },
         },
         title: n.name,
-        subtitle: I.intl.string(v.default["4HqfaU"]),
+        subtitle: N.intl.string(I.default["4HqfaU"]),
         size: "md",
-        transitionState: j,
+        transitionState: C,
         onClose: r,
         children:
-            null == C
+            null == S
                 ? (0, s.jsx)(p.$jN, {})
                 : (0, s.jsxs)("div", {
-                      className: N.content,
+                      className: j.content,
                       children: [
-                          null != A &&
-                              (0, s.jsx)(u.Z, {
-                                  className: N.infoBox,
-                                  children: A,
+                          null != g &&
+                              (0, s.jsx)(m.Z, {
+                                  className: j.infoBox,
+                                  children: g,
                               }),
                           (0, s.jsx)("div", {
-                              className: N.stepsContainer,
-                              children: C.map((t, e) =>
+                              className: j.stepsContainer,
+                              children: S.map((e, t) =>
                                   (0, s.jsxs)(
                                       "div",
                                       {
-                                          className: N.step,
+                                          className: j.step,
                                           children: [
                                               (0, s.jsx)("div", {
-                                                  className: N.stepNumber,
+                                                  className: j.stepNumber,
                                                   children: (0, s.jsx)(p.Text, {
                                                       variant: "text-xs/semibold",
                                                       color: "text-secondary",
-                                                      children: I.intl.formatToPlainString(v.default.oSU1fF, {
-                                                          step: e + 1,
+                                                      children: N.intl.formatToPlainString(I.default.oSU1fF, {
+                                                          step: t + 1,
                                                       }),
                                                   }),
                                               }),
                                               (0, s.jsx)(p.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "text-secondary",
-                                                  children: t,
+                                                  children: u.Z.parse(e, !1, { allowLinks: !0 }),
                                               }),
                                           ],
                                       },
-                                      e,
+                                      t,
                                   ),
                               ),
                           }),
-                          null != S &&
+                          null != T &&
                               (0, s.jsxs)("div", {
-                                  className: N.serverIpContainer,
+                                  className: j.serverIpContainer,
                                   children: [
                                       (0, s.jsx)("div", {
-                                          className: a()(N.serverIpInput, E && N.animate),
+                                          className: a()(j.serverIpInput, A && j.animate),
                                           children: (0, s.jsx)(p.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
-                                              children: S,
+                                              children: T,
                                           }),
                                       }),
                                       (0, s.jsx)(p.Button, {
-                                          variant: E ? "active" : "primary",
-                                          text: E ? I.intl.string(I.t.t5VZ88) : I.intl.string(I.t.OpuAlK),
-                                          onClick: T,
+                                          variant: A ? "active" : "primary",
+                                          text: A ? N.intl.string(N.t.t5VZ88) : N.intl.string(N.t.OpuAlK),
+                                          onClick: E,
                                           icon: p.TIy,
                                       }),
                                   ],
