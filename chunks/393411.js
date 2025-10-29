@@ -373,6 +373,7 @@ let W = function (e) {
                               }),
                         (0, r.jsx)(l.u, {
                             text: t,
+                            asContainer: !0,
                             children: (0, r.jsx)(R.Z, {
                                 className: a()(x.toolsButton, x.premiumSettingsPushButton),
                                 disabled: e,

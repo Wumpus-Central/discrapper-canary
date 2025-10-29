@@ -5,6 +5,7 @@ var r = (function (e) {
         (e.GUILD_CHANNEL_MESSAGE = "gcm"),
         (e.PRIVATE_CHANNEL = "pc"),
         (e.PRIVATE_CHANNEL_MESSAGE = "pcm"),
+        (e.PARTY = "party"),
         e
     );
 })({});
