@@ -1,76 +1,81 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => y });
 var r = n(951288),
     l = n(120356),
     i = n.n(l),
-    o = n(979554),
+    a = n(979554),
     s = n(793030),
-    a = n(442837),
+    o = n(442837),
     c = n(481060),
     u = n(876917),
     d = n(594174),
     g = n(429368),
     p = n(724994),
     f = n(786040),
-    C = n(508925),
-    h = n(616066),
-    _ = n(396728),
-    m = n(58201),
-    b = n(201964),
-    v = n(1327);
-let E = new Set([o.Z.BUNDLE, o.Z.PROFILE_EFFECT]),
-    x = (e) => {
+    h = n(508925),
+    C = n(616066),
+    _ = n(684263),
+    m = n(396728),
+    b = n(58201),
+    v = n(201964),
+    E = n(1327);
+let x = (e) => {
         let { product: t, isCardHovered: n } = e,
             l = (0, f.rC)(t),
-            { isPurchased: o, isPartiallyOwnedBundle: s } = (0, p.L)(t),
-            a = null != l && E.has(l);
+            { isPurchased: s, isPartiallyOwnedBundle: o } = (0, p.L)(t),
+            c = l === a.Z.PROFILE_EFFECT;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: i()(v.productPreview, {
-                        [v.faded]: (o || s) && !n,
-                        [v.fullPreview]: a,
+                    className: i()(E.productPreview, {
+                        [E.faded]: (s || o) && !n,
+                        [E.fullPreview]: c,
                     }),
                     children: (0, r.jsx)(O, {
                         product: t,
                         isCardHovered: n,
                     }),
                 }),
-                o && (0, r.jsx)(S, { hidden: n }),
+                s && (0, r.jsx)(S, { hidden: n }),
             ],
         });
     },
     O = (e) => {
         let { product: t, isCardHovered: n } = e,
-            l = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+            l = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
             i = (0, f.rC)(t),
-            s = (0, b.o)(t);
+            s = (0, v.o)(t);
         switch (i) {
-            case o.Z.PROFILE_EFFECT:
+            case a.Z.PROFILE_EFFECT:
                 return (0, r.jsx)(u.Z, {
                     skuId: s.skuId,
                     isHighlighted: n,
                     isPurchased: !1,
                     removeSetHeight: !0,
                 });
-            case o.Z.AVATAR_DECORATION:
-                return (0, r.jsx)(h.R, {
+            case a.Z.AVATAR_DECORATION:
+                return (0, r.jsx)(C.R, {
                     item: s,
                     user: l,
                     isHighlighted: n,
                     isPurchased: !1,
                     avatarSize: c.EFr.SIZE_120,
                 });
-            case o.Z.NAMEPLATE:
-                return (0, r.jsx)(_.Z, {
+            case a.Z.NAMEPLATE:
+                return (0, r.jsx)(m.Z, {
                     nameplate: s,
                     user: l,
                     isHighlighted: n,
                     isPurchased: !1,
                 });
-            case o.Z.BUNDLE:
-                return null;
-            case o.Z.EXTERNAL_SKU:
-                return (0, r.jsx)(C.b, {
+            case a.Z.BUNDLE:
+                return (0, r.jsx)(_.U, {
+                    product: t,
+                    user: l,
+                    isHighlighted: n,
+                    isPurchased: !1,
+                });
+            case a.Z.EXTERNAL_SKU:
+                return (0, r.jsx)(h.b, {
                     product: t,
                     animationState: n ? "on" : "off",
                 });
@@ -85,7 +90,7 @@ let E = new Set([o.Z.BUNDLE, o.Z.PROFILE_EFFECT]),
             color: c.TVs.colors.INTERACTIVE_ACTIVE,
             width: 40,
             height: 40,
-            className: i()(v.productPreviewIconOverlay, { [v.hidden]: t }),
+            className: i()(E.productPreviewIconOverlay, { [E.hidden]: t }),
         });
     },
     y = (e) => {
@@ -93,9 +98,9 @@ let E = new Set([o.Z.BUNDLE, o.Z.PROFILE_EFFECT]),
             l = (0, f.LJ)(t),
             i = (0, g.o)(l);
         if (null == l) return null;
-        let o = (0, m.W)(l, i);
+        let a = (0, b.W)(l, i);
         return (0, r.jsx)(x, {
-            product: o,
+            product: a,
             isCardHovered: n,
         });
     };
