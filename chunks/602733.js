@@ -79,7 +79,7 @@ function T(e) {
 function S(e) {
     let { defaultWishlistId: t } = (0, o.cj)([f.Z], () => ({ defaultWishlistId: f.Z.getFirstWishlistId(e.id) })),
         { wishlist: n, isFetching: i, error: a } = O(t),
-        s = r.useMemo(() => null != n && n.items.filter(m.Q).length >= b, [n]),
+        s = r.useMemo(() => null != n && n.items.filter(m.Q).filter((e) => !0 !== e.isOwned).length >= b, [n]),
         {
             shopBlocks: l,
             isFetchingShopHome: d,
@@ -110,7 +110,7 @@ function A(e) {
                 displayItems: [],
                 wishlistLength: 0,
             };
-        let r = (null != (e = null == t ? void 0 : t.items) ? e : []).slice(0, b),
+        let r = (null != (e = null == t ? void 0 : t.items) ? e : []).filter((e) => !0 !== e.isOwned).slice(0, b),
             o = r.length,
             s = [];
         if (
@@ -151,7 +151,9 @@ function C(e) {
             !0 === n &&
             null != i &&
             !!a &&
-            ((null != (e = null == c ? void 0 : c.items.filter(m.Q)) ? e : []).length > 0 || s)
+            ((null != (e = null == c ? void 0 : c.items.filter(m.Q).filter((e) => !0 !== e.isOwned)) ? e : []).length >
+                0 ||
+                s)
         );
     }, [n, i, a, c, s]);
 }
