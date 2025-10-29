@@ -1,4 +1,4 @@
-n.d(t, { I: () => b }), n(290780);
+n.d(t, { I: () => y }), n(290780);
 var r = n(951288);
 n(647438);
 var i = n(524437),
@@ -9,12 +9,13 @@ var i = n(524437),
     c = n(294602),
     u = n(915009),
     d = n(880257),
-    f = n(400313),
-    _ = n(947707),
-    p = n(726985),
-    h = n(388032),
-    m = n(602698);
-function g(e, t, n) {
+    f = n(312870),
+    _ = n(400313),
+    p = n(947707),
+    h = n(726985),
+    m = n(388032),
+    g = n(602698);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,17 +39,18 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b() {
+function y() {
     var e;
     let t = null == (e = (0, d.Z)()) || e,
         n = (0, u.LN)(),
-        { goreContentGuilds: g, goreContentFriendDm: b, goreContentNonFriendDm: y } = (0, c.K)(),
-        O = (e) => {
+        E = (0, f.s)("gore_media_redaction_settings_web"),
+        { goreContentGuilds: y, goreContentFriendDm: O, goreContentNonFriendDm: v } = (0, c.K)(),
+        I = (e) => {
             let t = Object.values(e);
             if ((0, s.Ks)() && t.includes(i.Q4.SHOW))
                 return void a.Z.showAgeVerificationGetStartedModal({
@@ -56,66 +58,66 @@ function b() {
                 });
             (0, l.Jr)(e);
         },
-        v = [
+        T = [
             {
                 value: i.Q4.BLUR,
-                label: h.intl.string(h.t.S49Uad),
+                label: m.intl.string(m.t.S49Uad),
             },
             {
                 value: i.Q4.BLOCK,
-                label: h.intl.string(h.t["D/157Y"]),
+                label: m.intl.string(m.t["D/157Y"]),
             },
         ],
-        I = [
+        S = [
             {
                 value: i.Q4.BLUR,
-                label: h.intl.string(h.t.S49Uad),
+                label: m.intl.string(m.t.S49Uad),
             },
         ],
-        T = {
+        A = {
             value: i.Q4.SHOW,
-            label: h.intl.string(h.t["5k5OFp"]),
+            label: m.intl.string(m.t["5k5OFp"]),
         };
-    t && (v.unshift(T), I.unshift(T));
-    let S = {
-        isDisabled: n,
-        tooltipText: n ? h.intl.string(m.default["6Af/cw"]) : void 0,
+    t && (T.unshift(A), S.unshift(A));
+    let C = {
+        isDisabled: n || E,
+        tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
     };
-    return (0, r.jsxs)(f.n, {
-        setting: p.s6.GORE_MEDIA_REDACTION,
-        description: h.intl.string(h.t.XgH9eh),
+    return (0, r.jsxs)(_.n, {
+        setting: h.s6.GORE_MEDIA_REDACTION,
+        description: m.intl.string(m.t.XgH9eh),
         children: [
             (0, r.jsx)(
-                _.Z,
-                E(
+                p.Z,
+                b(
                     {
-                        title: h.intl.string(h.t["+uI23H"]),
-                        value: b,
-                        onChange: (e) => O({ goreContentFriendDm: e }),
-                        options: v,
+                        title: m.intl.string(m.t["+uI23H"]),
+                        value: O,
+                        onChange: (e) => I({ goreContentFriendDm: e }),
+                        options: T,
                     },
-                    S,
+                    C,
                 ),
             ),
             (0, r.jsx)(
-                _.Z,
-                E(
+                p.Z,
+                b(
                     {
-                        title: h.intl.string(h.t["Yh+HX1"]),
-                        value: y,
-                        onChange: (e) => O({ goreContentNonFriendDm: e }),
-                        options: v,
+                        title: m.intl.string(m.t["Yh+HX1"]),
+                        value: v,
+                        onChange: (e) => I({ goreContentNonFriendDm: e }),
+                        options: T,
                     },
-                    S,
+                    C,
                 ),
             ),
-            (0, r.jsx)(_.Z, {
-                title: h.intl.string(h.t["FP+a42"]),
-                value: g,
-                onChange: (e) => O({ goreContentGuilds: e }),
+            (0, r.jsx)(p.Z, {
+                title: m.intl.string(m.t["FP+a42"]),
+                value: y,
+                onChange: (e) => I({ goreContentGuilds: e }),
                 isDisabled: !t || n,
-                options: I,
-                tooltipText: n ? h.intl.string(m.default["6Af/cw"]) : void 0,
+                options: S,
+                tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
             }),
         ],
     });
