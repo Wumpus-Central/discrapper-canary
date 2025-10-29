@@ -8,17 +8,17 @@ var r = n(951288),
     c = n(410030),
     d = n(100527),
     u = n(906732),
-    p = n(104505),
-    h = n(680295),
+    h = n(104505),
+    p = n(680295),
     f = n(602733),
     g = n(785717),
     m = n(221292),
     b = n(621853),
-    _ = n(46841),
+    _ = n(787309),
     y = n(687158),
     x = n(612600),
-    v = n(510659),
-    j = n(892001),
+    j = n(510659),
+    v = n(892001),
     O = n(899007),
     C = n(867176),
     I = n(451834),
@@ -75,14 +75,14 @@ function H(e) {
             channelId: k.id,
         }),
         q = i.useRef(null),
-        { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
-        X = (0, v.$m)(),
+        { isHoveringOrFocusing: K, isHovering: Q } = (0, h.Z)(q),
+        X = (0, j.$m)(),
         J = (0, o.q_F)({
             opacity: +(null != X.interactionType),
             config: { duration: 150 },
         }),
         $ = (e) => {
-            (0, j.openUserProfileModal)(
+            (0, v.openUserProfileModal)(
                 G(
                     {
                         sourceAnalyticsLocations: W,
@@ -95,7 +95,7 @@ function H(e) {
         },
         ee = (0, x.Z)({ location: "UserProfileSidebar" }),
         et = (null == B ? void 0 : B.widgets) != null && B.widgets.length > 0,
-        en = (0, _.S)({ location: "UserProfileSidebar" }),
+        en = (0, _.g)({ location: "UserProfileSidebar" }),
         { defaultWishlistId: er } = (0, s.cj)([b.Z], () => ({ defaultWishlistId: b.Z.getFirstWishlistId(n.id) })),
         { wishlist: ei } = (0, f.kZ)(er, n.id),
         el = en && null != ei && ei.items.length > 0;
@@ -107,7 +107,7 @@ function H(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsx)(v.NJ, {
+            children: (0, r.jsx)(j.NJ, {
                 value: X,
                 children: (0, r.jsxs)(S.Z, {
                     ref: q,
@@ -204,7 +204,7 @@ function H(e) {
                                 context: Y,
                             }),
                         (null == B ? void 0 : B.profileEffect) != null &&
-                            (0, r.jsx)(h.Z, {
+                            (0, r.jsx)(p.Z, {
                                 skuId: null == B || null == (t = B.profileEffect) ? void 0 : t.skuId,
                                 isHovering: Q,
                                 urlQueryString: "dmView",
