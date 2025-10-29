@@ -14,12 +14,13 @@ var i = r(951288),
     x = r(703656),
     g = r(546247),
     j = r(981631),
-    m = r(816282);
-let E = r(575703),
-    I = r(2984),
-    O = [
+    E = r(816282);
+let I = r(575703),
+    O = r(2984),
+    m = [
         j.Z5c.LOGIN,
         j.Z5c.LOGIN_HANDOFF,
+        j.Z5c.LOGIN_ONE_TIME,
         j.Z5c.REGISTER,
         j.Z5c.INVITE(""),
         j.Z5c.GIFT_CODE(""),
@@ -45,7 +46,7 @@ let E = r(575703),
         j.Z5c.ACCOUNT_REVERT(""),
     ];
 function b(e) {
-    return O.some((t) => e.startsWith(t));
+    return m.some((t) => e.startsWith(t));
 }
 let _ = (e) => ((n = e), e),
     Z = [j.Z5c.VERIFY, j.Z5c.VERIFY_HUB_EMAIL];
@@ -72,13 +73,13 @@ function w(e) {
                     a
                         ? (0, i.jsx)(g.Z, {})
                         : (0, i.jsx)("img", {
-                              className: m.artwork,
-                              src: E,
+                              className: E.artwork,
+                              src: I,
                               alt: "",
                           }),
                     (0, i.jsx)("img", {
-                        className: m.logoWithText,
-                        src: I,
+                        className: E.logoWithText,
+                        src: O,
                         alt: "",
                     }),
                     t,
@@ -118,7 +119,7 @@ class y extends l.Component {
                 ),
             });
         return (0, i.jsx)("div", {
-            className: m.characterBackground,
+            className: E.characterBackground,
             children: (0, i.jsx)(a.y5t, {
                 forceLevel: 1,
                 children:
@@ -127,7 +128,7 @@ class y extends l.Component {
                               children: [
                                   (0, i.jsx)(h.Z, {
                                       show: !0,
-                                      className: m.logo,
+                                      className: E.logo,
                                   }),
                                   (0, i.jsx)(f.h, {
                                       splash: e,
