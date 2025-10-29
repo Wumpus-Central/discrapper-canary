@@ -636,7 +636,9 @@ function tq() {
                 });
             }),
             e.setBitRate(e_.Z.bitrate),
-            e.applyVideoQualityMode(eb.Z.mode);
+            e.applyVideoQualityMode(eb.Z.mode),
+            eq.supports(eS.AN.ASYNC_VIDEO_INPUT_DEVICE_INIT) &&
+                eq.setAsyncVideoInputDeviceInit((0, G.p)("setupMediaEngine").enabled);
     }),
         eq.on(b.aB.DeviceChange, (e, t, n) => {
             v.Z.dispatch({
@@ -1109,7 +1111,6 @@ function nl(e) {
               }),
               t3({ mostRecentlyRequestedVoiceFilter: null }))
             : n(358820).r5()),
-        eq.setAsyncVideoInputDeviceInit((0, G.p)("handleConnectionOpen").enabled),
         na();
 }
 function nc(e) {

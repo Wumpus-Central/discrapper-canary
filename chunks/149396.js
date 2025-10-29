@@ -78,6 +78,7 @@ var o = (function (e) {
             (e.SIDECHAIN_COMPRESSION = "sidechain_compression"),
             (e.VAAPI = "vaapi"),
             (e.GAMESCOPE_CAPTURE = "gamescope_capture"),
+            (e.ASYNC_VIDEO_INPUT_DEVICE_INIT = "async_video_input_device_init"),
             e
         );
     })({}),

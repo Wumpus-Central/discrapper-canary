@@ -224,6 +224,7 @@ var W = (function (e) {
             (e.SIDECHAIN_COMPRESSION = "SIDECHAIN_COMPRESSION"),
             (e.VAAPI = "VAAPI"),
             (e.GAMESCOPE_CAPTURE = "GAMESCOPE_CAPTURE"),
+            (e.ASYNC_VIDEO_INPUT_DEVICE_INIT = "ASYNC_VIDEO_INPUT_DEVICE_INIT"),
             e
         );
     })({}),
