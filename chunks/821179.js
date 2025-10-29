@@ -16,11 +16,11 @@ var i = n(194983),
 let m = (0, o.pxk)(o.EFr.SIZE_16);
 function b(e) {
     let { user: t, guild: b, nick: _, onSelect: O } = e,
-        { theme: y, themeType: j } = (0, d.z)(),
-        v = t.hasAvatarForGuild(b.id);
+        { theme: y, themeType: v } = (0, d.z)(),
+        j = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(o.P3F, {
         focusProps:
-            j === h.l.MODAL_V2
+            v === h.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -38,29 +38,28 @@ function b(e) {
                     n.e("13599"),
                     n.e("36599"),
                     n.e("49049"),
+                    n.e("38697"),
                     n.e("76692"),
                     n.e("8271"),
                     n.e("15851"),
                     n.e("51453"),
                     n.e("7654"),
-                    n.e("845"),
-                    n.e("38697"),
                     n.e("63575"),
+                    n.e("845"),
                     n.e("86736"),
                     n.e("6850"),
                     n.e("58227"),
+                    n.e("93375"),
                     n.e("62856"),
                     n.e("44686"),
                     n.e("30378"),
                     n.e("64982"),
                     n.e("66201"),
-                    n.e("93375"),
-                    n.e("39206"),
+                    n.e("67807"),
                     n.e("22516"),
-                    n.e("89442"),
                     n.e("87154"),
                     n.e("33213"),
-                    n.e("7756"),
+                    n.e("94512"),
                 ]).then(n.bind(n, 545135));
                 return (t) => {
                     var n, i;
@@ -128,7 +127,7 @@ function b(e) {
                         className: g.name,
                         children: b.name,
                     }),
-                    v &&
+                    j &&
                         (0, r.jsxs)("div", {
                             className: g.nick,
                             children: [
@@ -147,7 +146,7 @@ function b(e) {
                                 }),
                             ],
                         }),
-                    !v &&
+                    !j &&
                         null != _ &&
                         (0, r.jsx)(o.Text, {
                             variant: "text-xs/medium",

@@ -12,6 +12,7 @@ e.exports = {
     noBorder: "noBorder__2f4f7",
     overlayContainer: "overlayContainer__2f4f7",
     compact: "compact__2f4f7",
+    noPointerEvents: "noPointerEvents__2f4f7",
     overlayTop: "overlayTop__2f4f7",
     overlayBottom: "overlayBottom__2f4f7",
     overlayTitle: "overlayTitle__2f4f7",

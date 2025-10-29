@@ -116,7 +116,7 @@ function B(e) {
         let e = (0, S.i)("openQuestsRewardCodeModal"),
             s = C.r.build(t.config).rewardPlatforms.length > 1;
         if (e && !s) {
-            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("17013"), n.e("96861")]).then(
+            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("62006")]).then(
                 n.bind(n, 188209),
             );
             return (n) =>
@@ -130,7 +130,7 @@ function B(e) {
                     }),
                 );
         }
-        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("17013"), n.e("61624")]).then(
+        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("6006")]).then(
             n.bind(n, 985866),
         );
         return (e) =>

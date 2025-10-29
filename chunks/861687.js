@@ -450,6 +450,10 @@ class eN extends d.Z {
         null == (r = this._localMediaSinkWantsManager) || r.setVideoSize(e, t * n),
             null == (i = this._goLiveQualityManager) || i.setVideoSize(e, t, n);
     }
+    setVideoZoom(e, t) {
+        var n;
+        null == (n = this._goLiveQualityManager) || n.setVideoZoom(e, t);
+    }
     clearJoinVoiceId() {
         this.joinVoiceId = null;
     }

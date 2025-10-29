@@ -258,14 +258,18 @@ class E extends a.Z {
             (this.switchState = 0),
             (this.streamId = null),
             (this.resolutionWidth = 0),
-            (this.resolutionHeight = 0);
+            (this.resolutionHeight = 0),
+            (this.zoom = 1);
     }
     request(e, t) {
         if (void 0 !== this.userId) {
             let n = e;
             t.forEach((e) => {
                 null == n.pixelCounts && (n.pixelCounts = {}),
-                    n[e] > 0 && (n.pixelCounts[e] = this.resolutionWidth * this.resolutionHeight);
+                    n[e] > 0 &&
+                        (n.pixelCounts[e] = Math.floor(
+                            this.resolutionWidth * this.resolutionHeight * this.zoom * this.zoom,
+                        ));
             }),
                 this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, t),
                 this.emit("requested-streams-update", n);
@@ -360,7 +364,14 @@ class E extends a.Z {
     }
     setStreamId(e) {
         this.streamId !== e &&
-            ((this.streamId = e), (this.resolutionWidth = 0), (this.resolutionHeight = 0), this.delayedUpdate());
+            ((this.streamId = e),
+            (this.resolutionWidth = 0),
+            (this.resolutionHeight = 0),
+            (this.zoom = 1),
+            this.delayedUpdate());
+    }
+    setVideoZoom(e, t) {
+        this.streamId === e && this.zoom !== t && ((this.zoom = t), this.delayedUpdate());
     }
     constructor(e) {
         super(),
@@ -370,6 +381,7 @@ class E extends a.Z {
             f(this, "streamId", void 0),
             f(this, "resolutionWidth", void 0),
             f(this, "resolutionHeight", void 0),
+            f(this, "zoom", void 0),
             f(this, "videoStreams", void 0),
             f(this, "audioSSRC", void 0),
             f(this, "hqSSRC", void 0),
@@ -389,6 +401,7 @@ class E extends a.Z {
             (this.streamId = null),
             (this.resolutionWidth = 0),
             (this.resolutionHeight = 0),
+            (this.zoom = 1),
             (this.videoStreams = []),
             (this.audioSSRC = 0),
             (this.hqSSRC = 0),
