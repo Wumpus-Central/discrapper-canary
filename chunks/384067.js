@@ -2,21 +2,21 @@ n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    o = n.n(i),
-    s = n(622535),
-    a = n(481060),
+    s = n.n(i),
+    a = n(622535),
+    o = n(481060),
     c = n(63063),
     u = n(597688),
     d = n(297651),
     g = n(794324),
     p = n(215023),
     f = n(981631),
-    C = n(388032),
-    h = n(310582);
+    h = n(388032),
+    C = n(310582);
 let _ = (e) => {
     var t, n, i;
     let { wideBannerBlock: _, handleTransition: m, tab: b } = e,
-        v = null == (t = u.Z.getCategoryByStoreListingId(_.categoryStoreListingId)) ? void 0 : t.skuId,
+        v = u.Z.getCategoryByStoreListingId(_.categoryStoreListingId),
         E = l.useRef(null),
         x = l.useRef(null),
         [O, S] = l.useState();
@@ -33,47 +33,47 @@ let _ = (e) => {
             }
         );
     }, []);
-    let y = null != v ? v : "",
+    let y = null != (t = null == v ? void 0 : v.skuId) ? t : "",
         { handleCardVisibilityChange: j } = (0, d.E)(y, "home", "marketing wide banner"),
         { bannerURL: k } = (0, g.UI)(_);
     if (null == k) return null;
     let T = b === p.AW.ORBS;
-    return (0, r.jsx)(s.$, {
+    return (0, r.jsx)(a.$, {
         innerRef: E,
         onChange: j,
         threshold: 0,
         children: (0, r.jsxs)("div", {
             ref: E,
-            className: o()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: T }),
+            className: s()(C.row, C.between, C.bannerBlockContainer, C.centeredSection, { [C.extraRounded]: T }),
             children: [
                 (0, r.jsx)("div", {
-                    className: o()(h.wideBannerBackgroundImg, { [h.extraRounded]: T }),
+                    className: s()(C.wideBannerBackgroundImg, { [C.extraRounded]: T }),
                     children: (0, r.jsx)("img", {
                         ref: x,
                         src: k,
                         alt: _.title,
-                        className: o()(h.wideBannerArt, { [h.wideBannerArtOrbs]: T }),
+                        className: s()(C.wideBannerArt, { [C.wideBannerArtOrbs]: T }),
                         style: { height: null != O ? "".concat(O, "px") : "auto" },
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: h.wideBannerContentContainer,
+                    className: C.wideBannerContentContainer,
                     style: { maxHeight: null != O ? "".concat(O, "px") : "auto" },
                     children: (0, r.jsxs)("div", {
-                        className: h.wideBannerTextContainer,
+                        className: C.wideBannerTextContainer,
                         children: [
-                            (0, r.jsx)(a.Heading, {
+                            (0, r.jsx)(o.Heading, {
                                 style: { color: null != (n = _.bannerTextColor) ? n : "var(--header-primary)" },
-                                className: T ? h.wideBannerOrbsHeading : void 0,
+                                className: T ? C.wideBannerOrbsHeading : void 0,
                                 variant: T ? "heading-xl/bold" : "heading-lg/semibold",
                                 children: _.title,
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 style: { color: null != (i = _.bannerTextColor) ? i : "var(--text-muted)" },
                                 lineClamp: 2,
                                 variant: T ? "text-md/medium" : "text-sm/medium",
                                 children: T
-                                    ? C.intl.format(C.t.SFFP7K, {
+                                    ? h.intl.format(h.t.SFFP7K, {
                                           helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE),
                                       })
                                     : _.body,
@@ -83,11 +83,18 @@ let _ = (e) => {
                 }),
                 !0 !== _.disableCta &&
                     (0, r.jsx)("div", {
-                        className: h.wideBannerBlockButton,
-                        children: (0, r.jsx)(a.Button, {
+                        className: C.wideBannerBlockButton,
+                        children: (0, r.jsx)(o.Button, {
                             variant: "overlay-primary",
-                            onClick: () => m("shop wide banner", y, void 0, !0),
-                            text: C.intl.string(C.t.jVcuVY),
+                            onClick: () => {
+                                m({
+                                    sourceButton: "shop wide banner",
+                                    categorySkuId: y,
+                                    isInternalShopDeeplink: !0,
+                                    isOrbsExclusive: null == v ? void 0 : v.isOrbsExclusive,
+                                });
+                            },
+                            text: h.intl.string(h.t.jVcuVY),
                         }),
                     }),
             ],

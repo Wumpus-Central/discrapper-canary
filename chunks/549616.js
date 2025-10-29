@@ -1,9 +1,10 @@
-n.d(t, { Z: () => p }), n(539854);
+n.d(t, { Z: () => h }), n(539854);
 var r = n(979554),
     i = n(884697),
-    a = n(778787),
-    o = n(803358);
-function s(e, t, n) {
+    a = n(27123),
+    o = n(778787),
+    s = n(803358);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +17,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +28,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,22 +45,22 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function d(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -67,7 +68,7 @@ function d(e, t) {
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,18 +77,18 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
-class p extends o.Z {
+let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
+class h extends s.Z {
     static fromServer(e) {
         var {
                 products: t,
                 logo: n,
                 hero_ranking: r,
-                pdp_bg: o,
+                pdp_bg: a,
                 mobile_bg: s,
-                mobile_banner: c,
-                catalog_banner_asset: f,
-                hero_banner_asset: h,
+                mobile_banner: l,
+                catalog_banner_asset: u,
+                hero_banner_asset: _,
                 featured_block: m,
                 hero_logo: g,
                 hero_logo_display_config: E,
@@ -104,7 +105,7 @@ class p extends o.Z {
                 mobile_banner_url: R,
                 mobile_bg_url: P,
             } = e,
-            w = d(e, [
+            w = f(e, [
                 "products",
                 "logo",
                 "hero_ranking",
@@ -129,19 +130,19 @@ class p extends o.Z {
                 "mobile_banner_url",
                 "mobile_bg_url",
             ]);
-        return new p(
-            u(l({}, super.fromServer(w)), {
+        return new h(
+            d(c({}, super.fromServer(w)), {
                 products: t.reduce((e, t) => {
-                    let n = a.Z.fromServer(t);
-                    return (_(n.type) || 0 !== n.items.length) && e.push(n), e;
+                    let n = o.Z.fromServer(t);
+                    return (p(n.type) || 0 !== n.items.length) && e.push(n), e;
                 }, []),
                 logo: n,
                 heroRanking: r,
-                pdpBg: o,
+                pdpBg: a,
                 mobileBg: s,
-                mobileBanner: c,
-                catalogBannerAsset: f,
-                heroBannerAsset: h,
+                mobileBanner: l,
+                catalogBannerAsset: u,
+                heroBannerAsset: _,
                 featuredBlock: m,
                 heroLogo: g,
                 heroLogoDisplayConfig: (0, i.QG)(E),
@@ -162,29 +163,30 @@ class p extends o.Z {
     }
     constructor(e) {
         super(e),
-            s(this, "products", void 0),
-            s(this, "heroRanking", void 0),
-            s(this, "logo", void 0),
-            s(this, "pdpBg", void 0),
-            s(this, "mobileBg", void 0),
-            s(this, "mobileBanner", void 0),
-            s(this, "catalogBannerAsset", void 0),
-            s(this, "heroBannerAsset", void 0),
-            s(this, "featuredBlock", void 0),
-            s(this, "heroLogo", void 0),
-            s(this, "heroLogoDisplayConfig", void 0),
-            s(this, "heroBannerDisplayConfig", void 0),
-            s(this, "heroBannerUrl", void 0),
-            s(this, "heroBannerAnimatedUrl", void 0),
-            s(this, "heroRiveUrl", void 0),
-            s(this, "heroLogoUrl", void 0),
-            s(this, "catalogBannerUrl", void 0),
-            s(this, "catalogBannerAnimatedUrl", void 0),
-            s(this, "featuredBlockUrl", void 0),
-            s(this, "logoUrl", void 0),
-            s(this, "pdpBgUrl", void 0),
-            s(this, "mobileBannerUrl", void 0),
-            s(this, "mobileBgUrl", void 0),
+            l(this, "products", void 0),
+            l(this, "heroRanking", void 0),
+            l(this, "logo", void 0),
+            l(this, "pdpBg", void 0),
+            l(this, "mobileBg", void 0),
+            l(this, "mobileBanner", void 0),
+            l(this, "catalogBannerAsset", void 0),
+            l(this, "heroBannerAsset", void 0),
+            l(this, "featuredBlock", void 0),
+            l(this, "isOrbsExclusive", void 0),
+            l(this, "heroLogo", void 0),
+            l(this, "heroLogoDisplayConfig", void 0),
+            l(this, "heroBannerDisplayConfig", void 0),
+            l(this, "heroBannerUrl", void 0),
+            l(this, "heroBannerAnimatedUrl", void 0),
+            l(this, "heroRiveUrl", void 0),
+            l(this, "heroLogoUrl", void 0),
+            l(this, "catalogBannerUrl", void 0),
+            l(this, "catalogBannerAnimatedUrl", void 0),
+            l(this, "featuredBlockUrl", void 0),
+            l(this, "logoUrl", void 0),
+            l(this, "pdpBgUrl", void 0),
+            l(this, "mobileBannerUrl", void 0),
+            l(this, "mobileBgUrl", void 0),
             (this.products = e.products),
             (this.logo = e.logo),
             (this.heroRanking = e.heroRanking),
@@ -193,6 +195,8 @@ class p extends o.Z {
             (this.mobileBanner = e.mobileBanner),
             (this.catalogBannerAsset = e.catalogBannerAsset),
             (this.featuredBlock = e.featuredBlock),
+            (this.isOrbsExclusive =
+                Array.isArray(e.products) && e.products.length > 0 && void 0 === e.products.find((e) => !(0, a.r1)(e))),
             (this.heroLogo = e.heroLogo),
             (this.heroBannerAsset = e.heroBannerAsset),
             (this.heroLogoDisplayConfig = e.heroLogoDisplayConfig),

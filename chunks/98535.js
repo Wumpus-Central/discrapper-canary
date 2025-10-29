@@ -1,72 +1,78 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(442837),
-    o = n(607070),
-    s = n(594174),
-    a = n(960048),
+    s = n(607070),
+    a = n(594174),
+    o = n(960048),
     c = n(597688),
     u = n(1870),
-    d = n(884697),
-    g = n(870289),
-    p = n(149705),
-    f = n(929255),
-    C = n(752053),
+    d = n(870289),
+    g = n(149705),
+    p = n(929255),
+    f = n(752053),
     h = n(81136),
-    _ = n(566564),
-    m = n(795477),
-    b = n(215023);
-let v = [b.AW.HOME, b.AW.ORBS];
-function E(e) {
+    C = n(566564),
+    _ = n(795477),
+    m = n(215023);
+let b = [m.AW.HOME, m.AW.ORBS];
+function v(e) {
     let {
             tab: t,
             sortedCategories: n,
-            transitionToTab: s,
-            transitionState: a,
+            transitionToTab: a,
+            transitionState: o,
             updateAnalyticsState: c,
             refreshCategories: u,
         } = e,
-        h = x();
-    O(h);
-    let E = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        [S, y] = l.useState(void 0),
-        [j, k] = l.useState(!0),
-        T = l.useCallback(
-            async (e, t, n, r) => {
-                c(e, t);
-                let l = n && !E,
-                    i = (0, d.$2)(t) ? b.AW.ORBS : b.AW.CATALOG;
-                y(t), k(!r), await s(i, l);
+        h = E();
+    x(h);
+    let v = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        [O, S] = l.useState(void 0),
+        [y, j] = l.useState(!0),
+        k = l.useCallback(
+            (e) => {
+                let {
+                    sourceButton: t,
+                    categorySkuId: n,
+                    shouldAnimate: r,
+                    isInternalShopDeeplink: l,
+                    isOrbsExclusive: i,
+                } = e;
+                c(t, n);
+                let s = r && !v,
+                    o = i ? m.AW.ORBS : m.AW.CATALOG;
+                S(n), j(!l), a(o, s);
             },
-            [E, s, c],
+            [v, a, c],
         ),
-        L = (0, g.FF)("CollectiblesContent"),
-        { searchError: I } = (0, p.a)();
-    return L && null != I
-        ? (0, r.jsx)(m.Z, {})
+        T = (0, d.FF)("CollectiblesContent"),
+        { searchError: I } = (0, g.a)();
+    return T && null != I
+        ? (0, r.jsx)(_.Z, {})
         : null != h
-          ? (0, r.jsx)(C.Z, {
+          ? (0, r.jsx)(f.Z, {
                 onRetry: u,
                 errorMessage: h,
-                errorOrigin: C.i.SHOP_PAGE,
+                errorOrigin: f.i.SHOP_PAGE,
             })
-          : v.includes(t)
-            ? (0, r.jsx)(_.Z, {
-                  handleTransition: T,
+          : b.includes(t)
+            ? (0, r.jsx)(C.Z, {
+                  handleTransition: k,
                   tab: t,
-                  transitionState: a,
+                  transitionState: o,
               })
-            : (0, r.jsx)(f.Z, {
+            : (0, r.jsx)(p.Z, {
                   tab: t,
                   sortedCategories: n,
-                  initialCategoryId: S,
-                  showFilterInitially: j,
+                  initialCategoryId: O,
+                  showFilterInitially: y,
                   onUnmount: () => {
-                      y(void 0), k(!0);
+                      S(void 0), j(!0);
                   },
               });
 }
-let x = () =>
+let E = () =>
         (0, i.e7)([c.Z, u.Z], () =>
             null != c.Z.error
                 ? "shop load fetch categories error: ".concat(c.Z.error.message)
@@ -76,13 +82,13 @@ let x = () =>
                     ? "shop load fetch purchase error: ".concat(u.Z.fetchError.message)
                     : void 0,
         ),
-    O = (e) => {
-        let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+    x = (e) => {
+        let t = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
             { noCache: n, includeUnpublished: r } = (0, h.Z)();
         l.useEffect(() => {
             var l, i;
             null != e &&
-                a.Z.captureMessage(e, {
+                o.Z.captureMessage(e, {
                     tags: {
                         isStaff:
                             null != (i = null == t || null == (l = t.isStaff()) ? void 0 : l.toString())
