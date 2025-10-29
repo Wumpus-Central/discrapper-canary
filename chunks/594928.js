@@ -68,3 +68,21 @@ function c(e) {
         n = s.useExperiment({ location: t }).enabled;
     return l.useConfig({ location: t }).enabled && n;
 }
+(0, i.le)({
+    name: "2025-10-display-name-styles-mobile",
+    kind: "user",
+    defaultConfig: {
+        enabled: !1,
+        dmEffects: !1,
+    },
+    variations: {
+        1: {
+            enabled: !0,
+            dmEffects: !1,
+        },
+        2: {
+            enabled: !0,
+            dmEffects: !0,
+        },
+    },
+});

@@ -383,10 +383,11 @@ function eO(e) {
             handlePaymentElementStep: tb,
             onBackFromPaymentElement: ty,
             combinedStripeElementsRef: tO,
-            stripePaymentElementProps: tv,
-            stripeAddressElementProps: tI,
-            addressElementRerenderKey: tT,
-            rerenderAddressElement: tS,
+            lastConfirmedSetupIntentRef: tv,
+            stripePaymentElementProps: tI,
+            stripeAddressElementProps: tT,
+            addressElementKey: tS,
+            remountAddressElement: tA,
         } = (0, A.MM)({
             step: ek,
             continueSessionToInitialStep: es,
@@ -401,7 +402,7 @@ function eO(e) {
                 });
             },
         }),
-        tA = i.useCallback(
+        tC = i.useCallback(
             (e, t) => (ev && null != t && (0, I.qH)(e) ? () => tb(e) : () => eW(R.h8.PAYMENT_TYPE)),
             [ev, tb, eW],
         );
@@ -409,7 +410,7 @@ function eO(e) {
         case R.h8.ATTEMPT_GOOGLE_PAY:
         case R.h8.ATTEMPT_APPLE_PAY:
         case R.h8.PAYMENT_TYPE:
-            let tC = (e, t) => {
+            let tN = (e, t) => {
                     switch (e) {
                         case J.He.CARD:
                             ei ? eW(R.h8.AWAITING_BROWSER_CHECKOUT) : (eZ(eS), eW(R.h8.CREDIT_CARD_INFORMATION));
@@ -455,14 +456,14 @@ function eO(e) {
                     }
                     null != j.Z.error && (0, _.fw)();
                 },
-                tN = (e, t) => {
+                tR = (e, t) => {
                     e2((e) => ea(er({}, e), { info: t })), eZ(eN), tu(e);
                 },
-                tR = () => {
+                tP = () => {
                     eZ(eP), eW(R.h8.PAYMENT_TYPE);
                 },
-                tP = async (e, t) => {
-                    if (((0, _.Xt)(e), null == e)) return void tR();
+                tw = async (e, t) => {
+                    if (((0, _.Xt)(e), null == e)) return void tP();
                     eq(e);
                     let { billingAddressInfo: n } = (0, V.az)(e),
                         r = v._.every((e) => {
@@ -480,20 +481,20 @@ function eO(e) {
                         return void eW(R.h8.ADDRESS);
                     try {
                         let t = await (0, d.i6)(e, n, Y);
-                        tN(t, n);
+                        tR(t, n);
                     } catch (e) {
-                        tR();
+                        tP();
                     }
                 };
             if (ek === R.h8.ATTEMPT_GOOGLE_PAY || ek === R.h8.ATTEMPT_APPLE_PAY) {
                 let e = $.intl.string(ek === R.h8.ATTEMPT_APPLE_PAY ? $.t.czhXDv : $.t.Zj2xQ0),
                     t = $.intl.string(ek === R.h8.ATTEMPT_APPLE_PAY ? $.t.WoXvJL : $.t.wnVVr0);
                 (n = (0, r.jsx)(x.t, {
-                    onChooseType: tC,
+                    onChooseType: tN,
                     paymentRequestWallet: ek === R.h8.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
-                    onStripePaymentMethodReceived: tP,
+                    onStripePaymentMethodReceived: tw,
                     onPaymentRequestFailure: () => {
-                        tC(J.He.CARD), eG(e);
+                        tN(J.He.CARD), eG(e);
                     },
                     onValidPaymentRequest: () => t_(!0),
                     paymentRequestRef: tp,
@@ -508,8 +509,8 @@ function eO(e) {
                 break;
             }
             (n = (0, r.jsx)(ed, {
-                onChooseType: tC,
-                onStripePaymentMethodReceived: tP,
+                onChooseType: tN,
+                onStripePaymentMethodReceived: tw,
                 paymentRequestWallets: td,
                 isEligibleForTrial: en,
                 paymentRequestPaymentContext: {
@@ -522,7 +523,7 @@ function eO(e) {
             break;
         case R.h8.PAYMENT_ELEMENT:
             if (!ev) throw (0, d.PP)("Payment Elements not enabled, invalid step", !0);
-            let tw = async () => {
+            let tD = async () => {
                 e4(!0);
                 try {
                     if (null == tE || !(0, I.qH)(tE))
@@ -538,14 +539,7 @@ function eO(e) {
                         let e = tO.current,
                             { paymentMethod: t } = await (0, d.w$)(eu, e),
                             { billingAddressInfo: n } = (0, V.az)(t);
-                        e2((e) =>
-                            ea(er({}, e), {
-                                info: n,
-                                isValid: e3.isValid,
-                            }),
-                        ),
-                            tS(),
-                            eW(R.h8.ADDRESS);
+                        e2((e) => ea(er({}, e), { info: n })), tA(), eW(R.h8.ADDRESS);
                     } else {
                         let e = (0, I.Hx)(tE);
                         null != e ? eW(e) : eW(R.h8.ADDRESS);
@@ -570,11 +564,11 @@ function eO(e) {
                     primaryText: $.intl.string($.t.PDTjLN),
                     primarySubmitting: e1,
                     primaryDisabled: !tg,
-                    onPrimary: tw,
+                    onPrimary: tD,
                 }));
             break;
         case R.h8.CREDIT_CARD_INFORMATION:
-            let tD = async (e) => {
+            let tL = async (e) => {
                 e4(!0);
                 try {
                     let t = await (0, d.qv)(eu, e);
@@ -596,21 +590,21 @@ function eO(e) {
                         e2((t) => ea(er({}, t), { info: ea(er({}, t.info), { name: e.name }) }));
                 },
             });
-            let tL = !eQ.isValid,
-                tx = () => {
+            let tx = !eQ.isValid,
+                tM = () => {
                     eW(R.h8.PAYMENT_TYPE);
                 };
             o = (0, r.jsx)(a.ElementsConsumer, {
                 children: (e) => {
                     let { elements: t } = e;
                     return (0, r.jsx)(ey, {
-                        onBack: tx,
+                        onBack: tM,
                         primaryCTA: w.Z.CTAType.CONTINUE,
                         primaryType: "submit",
                         primaryText: $.intl.string($.t.PDTjLN),
                         primarySubmitting: e1,
-                        primaryDisabled: tL,
-                        onPrimary: () => tD(t),
+                        primaryDisabled: tx,
+                        onPrimary: () => tL(t),
                     });
                 },
             });
@@ -709,67 +703,75 @@ function eO(e) {
                 }));
             break;
         case R.h8.PAYPAL_INFORMATION:
-            let tM = 0 !== e6.length && null != e7;
+            let tk = 0 !== e6.length && null != e7;
             n = (0, r.jsx)(e_, {});
-            let tk = tA(J.He.PAYPAL, tE);
+            let tj = tC(J.He.PAYPAL, tE);
             o = (0, r.jsx)(ey, {
-                onBack: tk,
+                onBack: tj,
                 primaryCTA: w.Z.CTAType.CONTINUE,
-                primaryText: tM ? $.intl.string($.t.PDTjLN) : $.intl.string($.t.Djzd7L),
-                onPrimary: () => (tM ? eW(R.h8.ADDRESS) : (0, f.i0)()),
+                primaryText: tk ? $.intl.string($.t.PDTjLN) : $.intl.string($.t.Djzd7L),
+                onPrimary: () => (tk ? eW(R.h8.ADDRESS) : (0, f.i0)()),
             });
             break;
         case R.h8.VENMO_INFORMATION:
-            let tj = 0 !== e9.length && null != e7;
+            let tU = 0 !== e9.length && null != e7;
             n = (0, r.jsx)(ep, {});
-            let tU = tA(J.He.VENMO, tE);
+            let tG = tC(J.He.VENMO, tE);
             o = (0, r.jsx)(ey, {
-                onBack: tU,
+                onBack: tG,
                 primaryCTA: w.Z.CTAType.CONTINUE,
-                primaryText: tj ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["4KoTLM"]),
-                onPrimary: () => (tj ? eW(R.h8.ADDRESS) : (0, f.og)()),
+                primaryText: tU ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["4KoTLM"]),
+                onPrimary: () => (tU ? eW(R.h8.ADDRESS) : (0, f.og)()),
             });
             break;
         case R.h8.PAYMENT_REQUEST_INFORMATION:
             (n = (0, r.jsx)(em, {})), (o = (0, r.jsx)(ey, { onBack: () => eW(R.h8.PAYMENT_TYPE) }));
             break;
         case R.h8.CASH_APP_INFORMATION:
-            let tG = null != te,
-                tB = null != eV;
+            let tB = null != te,
+                tZ = null != eV;
             n = (0, r.jsx)(eh, {});
-            let tZ = tA(J.He.CASH_APP, tE);
+            let tF = tC(J.He.CASH_APP, tE);
             o = (0, r.jsx)(ey, {
-                onBack: tZ,
+                onBack: tF,
                 primaryCTA: w.Z.CTAType.CONTINUE,
-                primaryText: tG ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["9ALP8w"]),
-                onPrimary: () => (tG ? eW(R.h8.ADDRESS) : (0, q.cp)()),
-                primaryDisabled: !tB,
+                primaryText: tB ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["9ALP8w"]),
+                onPrimary: () => (tB ? eW(R.h8.ADDRESS) : (0, q.cp)()),
+                primaryDisabled: !tZ,
             });
             break;
         case R.h8.ADDRESS:
-            let tF = ev && null != tE,
-                tV = async () => {
+            let tV = ev && null != tE,
+                tH = async () => {
                     e4(!0);
-                    let e = tF ? tE : eB.methodType;
+                    let e = tV ? tE : eB.methodType,
+                        t = [
+                            eu,
+                            tO.current,
+                            {
+                                billingAddress: e3.info,
+                                paymentSourceType: null != e ? e : J.He.UNKNOWN,
+                                lastConfirmedSetupIntentRef: tv,
+                            },
+                            Y,
+                        ];
                     switch (e) {
                         case J.He.PAYMENT_REQUEST:
-                            if (tF) {
+                            if (tV) {
                                 try {
-                                    let e = await (0, d.Q5)(eu, e3.info, J.He.PAYMENT_REQUEST, tO.current, Y);
+                                    let e = await (0, d.Q5)(...t);
                                     tu(e);
                                 } catch (e) {
                                     e4(!1), el.warn("Error confirming Payment Element source for Payment Request: ", e);
                                 }
                                 break;
                             }
-                            if (null == ez) throw (tR(), (0, d.SQ)("Missing paymentRequestPaymentMethod"));
+                            if (null == ez) throw (tP(), (0, d.SQ)("Missing paymentRequestPaymentMethod"));
                             tu(await (0, d.i6)(ez, e3.info, Y));
                             break;
                         case J.He.CARD:
                             try {
-                                let e = tF
-                                    ? await (0, d.Q5)(eu, e3.info, J.He.CARD, tO.current, Y)
-                                    : await (0, d.f0)(eu, e$.token, e3.info, Y);
+                                let e = tV ? await (0, d.Q5)(...t) : await (0, d.f0)(eu, e$.token, e3.info, Y);
                                 tu(e);
                             } catch (e) {}
                             break;
@@ -791,9 +793,7 @@ function eO(e) {
                             break;
                         case J.He.IDEAL:
                             try {
-                                let e = tF
-                                    ? await (0, d.Q5)(eu, e3.info, J.He.IDEAL, tO.current, Y)
-                                    : await (0, d.aN)(eu, e3.info, Y);
+                                let e = tV ? await (0, d.Q5)(...t) : await (0, d.aN)(eu, e3.info, Y);
                                 tu(e);
                             } catch (e) {
                                 el.warn(e);
@@ -878,8 +878,8 @@ function eO(e) {
                 default:
                     (p = R.h8.PAYMENT_TYPE), (u = J.He.CARD);
             }
-            tF && (p = R.h8.PAYMENT_ELEMENT),
-                (n = tF
+            tV && (p = R.h8.PAYMENT_ELEMENT),
+                (n = tV
                     ? null
                     : (0, r.jsx)(eg, {
                           billingAddressInfo: e3.info,
@@ -897,7 +897,7 @@ function eO(e) {
                     primaryText: $.intl.string($.t.PDTjLN),
                     primarySubmitting: e1,
                     primaryDisabled: !e3.isValid || tt,
-                    onPrimary: tV,
+                    onPrimary: tH,
                 }));
             break;
         case R.h8.AWAITING_AUTHENTICATION:
@@ -906,19 +906,19 @@ function eO(e) {
         default:
             throw Error("Unexpected step: ".concat(ek));
     }
-    let tH = ev && tm,
-        tY = tH ? "combined_stripe_elements" : void 0,
-        tW = (0, r.jsxs)(c.qBt, {
+    let tY = ev && tm,
+        tW = tY ? "combined_stripe_elements" : void 0,
+        tK = (0, r.jsxs)(c.qBt, {
             className: et.sequencer,
             staticClassName: et.sequencerStatic,
             animatedNodeClassName: et.sequencerAnimatedNode,
             fillParent: !0,
-            overrideKey: tY,
+            overrideKey: tW,
             step: ek,
             steps: eB.steps,
             sideMargin: 20,
             children: [
-                tH &&
+                tY &&
                     (0, r.jsx)(A.hn, {
                         step: ek,
                         analyticsContext:
@@ -931,9 +931,9 @@ function eO(e) {
                                 : void 0,
                         paymentElementSelectedType: tE,
                         elementsRef: tO,
-                        stripePaymentElementProps: tv,
-                        stripeAddressElementProps: tI,
-                        addressElementRerenderKey: tT,
+                        stripePaymentElementProps: tI,
+                        stripeAddressElementProps: tT,
+                        addressElementKey: tS,
                         billingAddressInfo: e3.info,
                         onSetupError: () => {
                             ty(), eW(R.h8.PAYMENT_TYPE);
@@ -942,7 +942,7 @@ function eO(e) {
                 n,
             ],
         }),
-        tK = ek === R.h8.PAYMENT_TYPE && 0 === g.length ? null : o;
+        tz = ek === R.h8.PAYMENT_TYPE && 0 === g.length ? null : o;
     return Q
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -952,20 +952,20 @@ function eO(e) {
                           isEligibleForTrial: en,
                       }),
                   (0, r.jsxs)(D.C3, {
-                      children: [(0, r.jsx)(M.Z, { className: ee.paymentModalError }), tW],
+                      children: [(0, r.jsx)(M.Z, { className: ee.paymentModalError }), tK],
                   }),
-                  (0, r.jsx)(D.O3, { children: tK }),
+                  (0, r.jsx)(D.O3, { children: tz }),
               ],
           })
         : (0, r.jsx)(K.Z, {
               steps: null != C ? C : eB.steps,
               currentStep: null != k ? k : ek,
-              overrideKey: tY,
+              overrideKey: tW,
               paymentError: h.paymentError,
               header: U,
               hideBreadcrumbs: z,
-              body: tW,
-              footer: tK,
+              body: tK,
+              footer: tz,
           });
 }
 function ev(e) {

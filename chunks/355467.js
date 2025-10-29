@@ -47,7 +47,8 @@ n.d(t, {
     xt: () => M,
 }),
     n(49124),
-    n(415506);
+    n(415506),
+    n(388685);
 var r = n(289008),
     i = n(512722),
     a = n.n(i),
@@ -510,36 +511,45 @@ let X = (e, t, n) => {
             error: r,
         };
     };
-async function et(e, t, n, r, i) {
-    if (null == e) throw H("Stripe not loaded", !0);
-    if (null == r) throw H("Stripe Elements not loaded", !0);
+async function et() {
+    for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
+    let [i, a, { billingAddress: o, paymentSourceType: s, lastConfirmedSetupIntentRef: l }, u] = n;
+    if (null == i) throw H("Stripe not loaded", !0);
+    if (null == a) throw H("Stripe Elements not loaded", !0);
     c.Z.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-    let a = await G(t);
-    n !== A.He.PAYMENT_REQUEST && (await J(r));
-    let o = null;
-    if (n === A.He.CARD || n === A.He.PAYMENT_REQUEST) {
-        let t = await e.confirmSetup({
-            redirect: "if_required",
-            elements: r,
-        });
-        if (Q(t.error)) {
-            let i = await (0, f.V)();
-            n !== A.He.PAYMENT_REQUEST && (await J(r)),
-                (t = await e.confirmSetup({
+    let d = await G(o);
+    s !== A.He.PAYMENT_REQUEST && (await J(a));
+    let _ = null;
+    if (s === A.He.CARD || s === A.He.PAYMENT_REQUEST) {
+        let t = null != (e = l.current) ? e : void 0,
+            n =
+                null != t && s === A.He.PAYMENT_REQUEST
+                    ? {
+                          setupIntent: null != t ? t : void 0,
+                          error: void 0,
+                      }
+                    : await i.confirmSetup({
+                          redirect: "if_required",
+                          elements: a,
+                      });
+        if (Q(n.error) && s !== A.He.PAYMENT_REQUEST) {
+            let e = await (0, f.V)();
+            await J(a),
+                (n = await i.confirmSetup({
                     redirect: "if_required",
-                    clientSecret: i,
-                    elements: r,
+                    clientSecret: e,
+                    elements: a,
                 }));
         }
-        let { setupIntent: i } = X(t.setupIntent, t.error, (e) => H(e, !0));
-        o = i.payment_method;
+        let { setupIntent: r } = X(n.setupIntent, n.error, (e) => H(e, !0));
+        (l.current = r), (_ = r.payment_method);
     } else {
-        let { paymentMethod: t } = await $(e, r);
-        o = t.id;
+        let { paymentMethod: e } = await $(i, a);
+        _ = e.id;
     }
-    return Z(I.gg$.STRIPE, o, t, {
-        billingAddressToken: a,
-        analyticsLocation: i,
+    return Z(I.gg$.STRIPE, _, o, {
+        billingAddressToken: d,
+        analyticsLocation: u,
     });
 }
 async function en(e, t, n, r) {
