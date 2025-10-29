@@ -177,6 +177,7 @@ let J = (e) => {
             null != eV && "premiumTab" === eV.properties.properties.oneofKind)
         )
             (n = (0, r.jsx)(R.Z, {
+                componentId: eV.id,
                 badgeCopy: eV.properties.properties.premiumTab.badgeLabel,
                 acknowledgedBadgeCopy: eV.properties.properties.premiumTab.acknowledgedBadgeLabel,
                 isDismissed: eF !== o.z.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,

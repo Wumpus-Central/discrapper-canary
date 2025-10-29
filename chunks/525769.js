@@ -181,6 +181,7 @@ var r = (function (e) {
             (e.POMELO_LANDING = "impression_pomelo_landing"),
             (e.PREMIUM_GUILD_SUBSCRIPTION_MARKETING_PAGE = "impression_premium_guild_subscription_marketing_page"),
             (e.PREMIUM_MARKETING_BANNER = "impression_premium_marketing_banner"),
+            (e.PREMIUM_MARKETING_COMPONENT = "impression_premium_marketing_component"),
             (e.PREMIUM_MARKETING_SURFACE = "impression_premium_marketing_surface"),
             (e.PREMIUM_MARKETING_TENURE_REWARD_CARD = "impression_premium_marketing_tenure_reward_card"),
             (e.PUSH_NOTIFICATION_PREPROMPT = "impression_push_notification_preprompt"),

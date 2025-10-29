@@ -1,36 +1,47 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    s = n(65538);
-function o(e) {
-    let { badgeCopy: t, acknowledgedBadgeCopy: n, isDismissed: i } = e;
-    return i
+    a = n(990547),
+    s = n(79766),
+    o = n(481060),
+    c = n(213609),
+    u = n(65538);
+function d(e) {
+    let { componentId: t, badgeCopy: n, acknowledgedBadgeCopy: i, isDismissed: d } = e;
+    return ((0, c.Z)({
+        type: a.ImpressionTypes.VIEW,
+        name: a.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: {
+            component_type: s.I.PREMIUM_TAB,
+            component_id: t,
+        },
+    }),
+    d)
         ? (0, r.jsxs)("div", {
-              className: l()(s.premiumBadge, s.premiumAcknowledgedBadge),
+              className: l()(u.premiumBadge, u.premiumAcknowledgedBadge),
               children: [
-                  (0, r.jsx)(a.T39, {
+                  (0, r.jsx)(o.T39, {
                       size: "custom",
                       width: 10,
                       height: 10,
                       color: "currentColor",
-                      className: s.BadgeClockIcon,
+                      className: u.BadgeClockIcon,
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: n,
+                      children: i,
                   }),
               ],
           })
         : (0, r.jsx)("div", {
-              className: l()(s.premiumBadge, s.premiumUnacknowledgedBadge),
-              children: (0, r.jsx)(a.Text, {
+              className: l()(u.premiumBadge, u.premiumUnacknowledgedBadge),
+              children: (0, r.jsx)(o.Text, {
                   variant: "eyebrow",
-                  className: s.premiumUnacknowledgedBadgeCopy,
-                  children: t,
+                  className: u.premiumUnacknowledgedBadgeCopy,
+                  children: n,
               }),
           });
 }
