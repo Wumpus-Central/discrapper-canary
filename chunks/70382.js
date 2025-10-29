@@ -1,63 +1,71 @@
-t.d(a, { H: () => c });
-var u = t(720479),
-    n = t(745597);
-let r = 765433;
-function i(e) {
-    return 7 > (0, n.w)(7 * e + 1, 19);
-}
-function o(e) {
-    let a = Math.floor((235 * e - 234) / 19),
-        t = 29 * a + Math.floor((12084 + 13753 * a) / 25920);
-    return 3 > (0, n.w)(3 * (t + 1), 7) && (t += 1), t;
-}
+n.d(t, { H: () => h });
+var r = n(720479),
+    i = n(745597);
+let a = 347997,
+    o = 25920,
+    s = 765433;
 function l(e) {
-    let a, t;
-    return o(e) + ((a = o(e - 1)), (t = o(e)), o(e + 1) - t == 356 ? 2 : +(t - a == 382));
+    return 7 > (0, i.w)(7 * e + 1, 19);
 }
-function s(e) {
-    return l(e + 1) - l(e);
+function c(e) {
+    let t = Math.floor((235 * e - 234) / 19),
+        n = 12084 + 13753 * t,
+        r = 29 * t + Math.floor(n / 25920);
+    return 3 > (0, i.w)(3 * (r + 1), 7) && (r += 1), r;
 }
-function d(e, a) {
-    if ((a >= 6 && !i(e) && a++, 4 === a || 7 === a || 9 === a || 11 === a || 13 === a)) return 29;
-    let t = (function (e) {
-        let a = s(e);
-        switch ((a > 380 && (a -= 30), a)) {
-            case 353:
-                return 0;
-            case 354:
-                return 1;
-            case 355:
-                return 2;
-        }
-    })(e);
-    return 2 === a ? (2 === t ? 30 : 29) : 3 === a ? (0 === t ? 29 : 30) : 6 === a ? 30 * !!i(e) : 30;
+function u(e) {
+    let t = c(e - 1),
+        n = c(e);
+    return c(e + 1) - n == 356 ? 2 : +(n - t == 382);
 }
-class c {
+function d(e) {
+    return c(e) + u(e);
+}
+function f(e) {
+    return d(e + 1) - d(e);
+}
+function _(e) {
+    let t = f(e);
+    switch ((t > 380 && (t -= 30), t)) {
+        case 353:
+            return 0;
+        case 354:
+            return 1;
+        case 355:
+            return 2;
+    }
+}
+function p(e, t) {
+    if ((t >= 6 && !l(e) && t++, 4 === t || 7 === t || 9 === t || 11 === t || 13 === t)) return 29;
+    let n = _(e);
+    return 2 === t ? (2 === n ? 30 : 29) : 3 === t ? (0 === n ? 29 : 30) : 6 === t ? 30 * !!l(e) : 30;
+}
+class h {
     fromJulianDay(e) {
-        let a = e - 347997,
-            t = Math.floor((((25920 * a) / r) * 19 + 234) / 235) + 1,
-            n = l(t),
-            i = Math.floor(a - n);
-        for (; i < 1; ) i = Math.floor(a - (n = l(--t)));
-        let o = 1,
-            s = 0;
-        for (; s < i; ) (s += d(t, o)), o++;
-        let c = i - (s -= d(t, --o));
-        return new (0, u.aw)(this, t, o, c);
+        let t = e - a,
+            n = Math.floor((((t * o) / s) * 19 + 234) / 235) + 1,
+            i = d(n),
+            l = Math.floor(t - i);
+        for (; l < 1; ) l = Math.floor(t - (i = d(--n)));
+        let c = 1,
+            u = 0;
+        for (; u < l; ) (u += p(n, c)), c++;
+        let f = l - (u -= p(n, --c));
+        return new (0, r.aw)(this, n, c, f);
     }
     toJulianDay(e) {
-        let a = l(e.year);
-        for (let t = 1; t < e.month; t++) a += d(e.year, t);
-        return a + e.day + 347997;
+        let t = d(e.year);
+        for (let n = 1; n < e.month; n++) t += p(e.year, n);
+        return t + e.day + a;
     }
     getDaysInMonth(e) {
-        return d(e.year, e.month);
+        return p(e.year, e.month);
     }
     getMonthsInYear(e) {
-        return i(e.year) ? 13 : 12;
+        return l(e.year) ? 13 : 12;
     }
     getDaysInYear(e) {
-        return s(e.year);
+        return f(e.year);
     }
     getYearsInEra() {
         return 9999;
@@ -65,9 +73,9 @@ class c {
     getEras() {
         return ["AM"];
     }
-    balanceYearMonth(e, a) {
-        a.year !== e.year &&
-            (i(a.year) && !i(e.year) && a.month > 6 ? e.month-- : !i(a.year) && i(e.year) && a.month > 6 && e.month++);
+    balanceYearMonth(e, t) {
+        t.year !== e.year &&
+            (l(t.year) && !l(e.year) && t.month > 6 ? e.month-- : !l(t.year) && l(e.year) && t.month > 6 && e.month++);
     }
     constructor() {
         this.identifier = "hebrew";

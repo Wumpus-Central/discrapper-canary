@@ -535,58 +535,64 @@ class D extends a.Component {
 }
 class L extends a.Component {
     renderContent() {
-        let e,
-            t,
-            { navigationRecord: n, children: r } = this.props,
-            { enabled: a } = s.c.getCurrentConfig({ location: "QuickSwitcherResults" }, { autoTrackExposure: !0 }),
-            c = a ? o.iWm : o.jje;
-        switch (n.type) {
+        var e, t;
+        let n,
+            r,
+            { navigationRecord: a, children: c } = this.props,
+            { enabled: u } = s.c.getCurrentConfig({ location: "QuickSwitcherResults" }, { autoTrackExposure: !0 }),
+            d = u ? o.iWm : o.jje;
+        switch (a.type) {
             case l.Ky.SHOP:
-                (e = v.intl.string(v.t.pWG4ze)),
-                    (t = (0, i.jsx)(o.EOn, {
+                (n = v.intl.string(v.t.pWG4ze)),
+                    (r = (0, i.jsx)(o.EOn, {
                         size: "xs",
                         color: "currentColor",
                     }));
                 break;
             case l.Ky.NITRO_HOME:
-                (e = v.intl.string(v.t.Ipxkog)),
-                    (t = (0, i.jsx)(o.SrA, {
+                (n = v.intl.string(v.t.Ipxkog)),
+                    (r = (0, i.jsx)(o.SrA, {
                         size: "xs",
                         color: "currentColor",
                     }));
                 break;
             case l.Ky.QUEST_HOME:
-                (e = v.intl.string(v.t.JALI2K)),
-                    (t = (0, i.jsx)(o.qDn, {
+                (n = v.intl.string(v.t.JALI2K)),
+                    (r = (0, i.jsx)(o.qDn, {
                         size: "xs",
                         color: "currentColor",
                     }));
                 break;
             case l.Ky.APPS_HOME:
-                (e = v.intl.string(v.t.PHjkRE)),
-                    (t = (0, i.jsx)(c, {
+                (n = v.intl.string(v.t.PHjkRE)),
+                    (r = (0, i.jsx)(d, {
                         size: "xs",
                         color: "currentColor",
                     }));
                 break;
             case l.Ky.SETTINGS:
-                var u;
-                (e = null != (u = n.label) ? u : v.intl.string(v.t["3D5yo/"])),
-                    (t = (0, i.jsx)(o.ewm, {
+                (n = null != (e = a.label) ? e : v.intl.string(v.t["3D5yo/"])),
+                    (r = (0, i.jsx)(o.ewm, {
                         size: "xs",
                         color: "currentColor",
                     }));
                 break;
-            case l.Ky.REVENUE_PLAYGROUND:
-                (e = v.intl.string(v.t.OZJY67)),
-                    (t = (0, i.jsx)(o.uMN, {
-                        size: "xs",
-                        color: "currentColor",
-                    }));
+            case l.Ky.PLAYGROUND:
+                (n = null != (t = a.label) ? t : "".concat(a.collectionId, " Playground")),
+                    (r =
+                        "revenue" === a.collectionId
+                            ? (0, i.jsx)(o.uMN, {
+                                  size: "xs",
+                                  color: "currentColor",
+                              })
+                            : (0, i.jsx)(o.hh5, {
+                                  size: "xs",
+                                  color: "currentColor",
+                              }));
                 break;
             default:
-                (e = n.id),
-                    (t = (0, i.jsx)(o.xPt, {
+                (n = a.id),
+                    (r = (0, i.jsx)(o.xPt, {
                         size: "xs",
                         color: "currentColor",
                     }));
@@ -596,15 +602,15 @@ class L extends a.Component {
             children: [
                 (0, i.jsx)("div", {
                     className: I.iconContainer,
-                    children: t,
+                    children: r,
                 }),
                 (0, i.jsx)("div", {
                     className: I.name,
-                    children: e,
+                    children: n,
                 }),
                 (0, i.jsx)("div", {
                     className: I.misc,
-                    children: r,
+                    children: c,
                 }),
             ],
         });

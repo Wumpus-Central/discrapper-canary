@@ -14,7 +14,9 @@ n.d(t, {
     n(642613),
     n(290780),
     n(704826),
-    n(583741);
+    n(583741),
+    n(361932),
+    n(187205);
 var i = n(658722),
     a = n.n(i),
     o = n(392711),
@@ -333,10 +335,10 @@ function e1(e, t, n) {
         e === t || ((!!n || !!(0, L.Km)(t)) && (e === B.sH ? (0, L.r8)(t) || (0, L.bw)(t) : e === B.Zb && (0, L.bw)(t)))
     );
 }
-function e2(e, t) {
+function e3(e, t) {
     return e === B.sH && (0, L.bw)(t);
 }
-function e3(e) {
+function e2(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e
             .split(" ")
@@ -585,7 +587,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     allowSnowflake: p,
                     includeAllThreads: h,
                 } = e,
-                m = e3(n, c),
+                m = e2(n, c),
                 g = e0(l);
             t =
                 null != r
@@ -624,7 +626,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                     0 !== c &&
                         !(t.length > 1) &&
                         (1 !== t.length || t[0].isFullMatch || s) &&
-                        (e2(l, e.type) && (c = Math.max(c - eA, eS / 2)),
+                        (e3(l, e.type) && (c = Math.max(c - eA, eS / 2)),
                         e.isThread() && (e.isActiveThread() || (c -= eC), w.Z.hasJoined(e.id) || (c -= eN)),
                         (c = Math.min(
                             c + Math.min(null != (O = U.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eR,
@@ -761,56 +763,78 @@ let e7 = (0, $.oH)((e, t, n) => {
             return l.sort(f.Z), l.length > n && (l.length = n), l;
         },
         queryInAppNavigations(e) {
-            let { query: t, limit: n = 10, fuzzy: r = !0 } = e,
-                i = t.toLocaleLowerCase(),
-                a = {
-                    exactQuery: RegExp("^".concat(ei.Z.escape(i)), "i"),
-                    containQuery: RegExp(ei.Z.escape(i), "i"),
-                    queryLower: i,
+            let { query: t, limit: r = 10, fuzzy: i = !0 } = e,
+                a = t.toLocaleLowerCase(),
+                s = {
+                    exactQuery: RegExp("^".concat(ei.Z.escape(a)), "i"),
+                    containQuery: RegExp(ei.Z.escape(a), "i"),
+                    queryLower: a,
                 },
-                s = es.ZP.getUserIsStaff(),
-                l = {
+                l = es.ZP.getUserIsStaff(),
+                c = {
                     [d.Ky.SHOP]: [ef.intl.string(ef.t.pWG4ze)],
                     [d.Ky.NITRO_HOME]: [ef.intl.string(ef.t.Ipxkog)],
                     [d.Ky.QUEST_HOME]: [ef.intl.string(ef.t.JALI2K)],
                     [d.Ky.APPS_HOME]: [ef.intl.string(ef.t.PHjkRE), ef.intl.string(ef.t.AKcFUj)],
-                };
-            s && (l[d.Ky.REVENUE_PLAYGROUND] = [ef.intl.string(ef.t["4Y3g1V"]), ef.intl.string(ef.t.OZJY67)]);
-            let c = [];
-            for (let e in l) {
+                },
+                u = [];
+            for (let e in c) {
                 let t = d.Ky[e],
-                    n = l[t];
+                    n = c[t];
                 if (null != n)
                     for (let e of n) {
                         let n = e.toLocaleLowerCase(),
-                            i = eq(n, a, r);
-                        i > 0 &&
-                            c.push({
+                            r = eq(n, s, i);
+                        r > 0 &&
+                            u.push({
                                 type: ec.h8.IN_APP_NAVIGATION,
                                 record: d.FL.fromType(t),
-                                score: eY(i),
+                                score: eY(r),
                                 comparator: n,
                                 sortable: n,
                             });
+                    }
+            }
+            if (l) {
+                let { componentPlaygroundConfigs: e } = n(653592);
+                for (let t of e.flatMap((e) => e.collections))
+                    for (let e of [
+                        "".concat(t.name, " Playground"),
+                        "".concat(t.name, " Components"),
+                        "".concat(t.name, " Design System"),
+                        t.name,
+                    ]) {
+                        let n = e.toLocaleLowerCase(),
+                            r = eq(n, s, i);
+                        if (r > 0) {
+                            u.push({
+                                type: ec.h8.IN_APP_NAVIGATION,
+                                record: d.FL.fromType(d.Ky.PLAYGROUND, void 0, "".concat(t.name, " Playground"), t.id),
+                                score: eY(r),
+                                comparator: n,
+                                sortable: n,
+                            });
+                            break;
+                        }
                     }
             }
             return (
                 eg.getState().options.forEach((e) => {
                     var t;
                     let n = [e.title].concat(e.searchableTitles),
-                        i = null != (t = (0, o.max)(n.map((e) => eY(eq(e.toLocaleLowerCase(), a, r))))) ? t : 0;
-                    i > 0 &&
-                        c.push({
+                        r = null != (t = (0, o.max)(n.map((e) => eY(eq(e.toLocaleLowerCase(), s, i))))) ? t : 0;
+                    r > 0 &&
+                        u.push({
                             type: ec.h8.IN_APP_NAVIGATION,
                             record: d.FL.fromType(d.Ky.SETTINGS, e.path, e.title),
-                            score: i,
+                            score: r,
                             comparator: e.title.toLocaleLowerCase(),
                             sortable: e.title.toLocaleLowerCase(),
                         });
                 }),
-                c.sort(f.Z),
-                c.length > n && (c.length = n),
-                c
+                u.sort(f.Z),
+                u.length > r && (u.length = r),
+                u
             );
         },
         querySKUs(e) {

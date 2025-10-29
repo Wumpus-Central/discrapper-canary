@@ -1,42 +1,45 @@
-t.d(a, {
-    Wt: () => l,
-    Y0: () => d,
-    zY: () => s,
+n.d(t, {
+    Wt: () => d,
+    Y0: () => _,
+    zY: () => f,
 });
-var u = t(720479);
-function n(e, a, t, u) {
-    return e + 365 * a + Math.floor(a / 4) + 30 * (t - 1) + u - 1;
+var r = n(720479);
+let i = 1723856,
+    a = 1824665,
+    o = 5500;
+function s(e, t, n, r) {
+    return e + 365 * t + Math.floor(t / 4) + 30 * (n - 1) + r - 1;
 }
-function r(e, a) {
-    let t = Math.floor((4 * (a - e)) / 1461),
-        u = 1 + Math.floor((a - n(e, t, 1, 1)) / 30),
-        r = a + 1 - n(e, t, u, 1);
-    return [t, u, r];
+function l(e, t) {
+    let n = Math.floor((4 * (t - e)) / 1461),
+        r = 1 + Math.floor((t - s(e, n, 1, 1)) / 30),
+        i = t + 1 - s(e, n, r, 1);
+    return [n, r, i];
 }
-function i(e) {
+function c(e) {
     return Math.floor((e % 4) / 3);
 }
-function o(e, a) {
-    return a % 13 != 0 ? 30 : i(e) + 5;
+function u(e, t) {
+    return t % 13 != 0 ? 30 : c(e) + 5;
 }
-class l {
+class d {
     fromJulianDay(e) {
-        let [a, t, n] = r(1723856, e),
-            i = "AM";
-        return a <= 0 && ((i = "AA"), (a += 5500)), new (0, u.aw)(this, i, a, t, n);
+        let [t, n, a] = l(i, e),
+            s = "AM";
+        return t <= 0 && ((s = "AA"), (t += o)), new (0, r.aw)(this, s, t, n, a);
     }
     toJulianDay(e) {
-        let a = e.year;
-        return "AA" === e.era && (a -= 5500), n(1723856, a, e.month, e.day);
+        let t = e.year;
+        return "AA" === e.era && (t -= o), s(i, t, e.month, e.day);
     }
     getDaysInMonth(e) {
-        return o(e.year, e.month);
+        return u(e.year, e.month);
     }
     getMonthsInYear() {
         return 13;
     }
     getDaysInYear(e) {
-        return 365 + i(e.year);
+        return 365 + c(e.year);
     }
     getYearsInEra(e) {
         return "AA" === e.era ? 9999 : 9991;
@@ -48,10 +51,10 @@ class l {
         this.identifier = "ethiopic";
     }
 }
-class s extends l {
+class f extends d {
     fromJulianDay(e) {
-        let [a, t, n] = r(1723856, e);
-        return (a += 5500), new (0, u.aw)(this, "AA", a, t, n);
+        let [t, n, a] = l(i, e);
+        return (t += o), new (0, r.aw)(this, "AA", t, n, a);
     }
     getEras() {
         return ["AA"];
@@ -63,19 +66,19 @@ class s extends l {
         super(...e), (this.identifier = "ethioaa");
     }
 }
-class d extends l {
+class _ extends d {
     fromJulianDay(e) {
-        let [a, t, n] = r(1824665, e),
-            i = "CE";
-        return a <= 0 && ((i = "BCE"), (a = 1 - a)), new (0, u.aw)(this, i, a, t, n);
+        let [t, n, i] = l(a, e),
+            o = "CE";
+        return t <= 0 && ((o = "BCE"), (t = 1 - t)), new (0, r.aw)(this, o, t, n, i);
     }
     toJulianDay(e) {
-        let a = e.year;
-        return "BCE" === e.era && (a = 1 - a), n(1824665, a, e.month, e.day);
+        let t = e.year;
+        return "BCE" === e.era && (t = 1 - t), s(a, t, e.month, e.day);
     }
     getDaysInMonth(e) {
-        let a = e.year;
-        return "BCE" === e.era && (a = 1 - a), o(a, e.month);
+        let t = e.year;
+        return "BCE" === e.era && (t = 1 - t), u(t, e.month);
     }
     isInverseEra(e) {
         return "BCE" === e.era;

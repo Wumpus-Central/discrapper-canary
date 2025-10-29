@@ -1,99 +1,127 @@
-t.d(l, { A: () => y });
-var a = t(951288),
-    n = t(647438),
-    o = t(120356),
-    i = t.n(o),
-    r = t(13941),
-    s = t(990547),
-    u = t(793030),
-    d = t(481060),
-    c = t(984802),
-    b = t(163838),
-    p = t(325380);
-function y(e) {
-    var l, t, o;
+n.d(t, { A: () => E });
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(13941),
+    l = n(990547),
+    c = n(793030),
+    u = n(481060),
+    d = n(984802),
+    f = n(163838),
+    _ = n(325380);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function E(e) {
+    var t;
     let {
-            transitionState: y,
-            animationVariant: m = "default",
-            returnRef: f,
-            "aria-label": v,
-            onClose: h,
-            trackingProps: x,
-            children: g,
+            transitionState: n,
+            animationVariant: a = "default",
+            returnRef: p,
+            "aria-label": m,
+            onClose: E,
+            trackingProps: b,
+            children: y,
         } = e,
-        O = n.useId(),
-        j = n.useMemo(
+        O = i.useId(),
+        v = i.useMemo(
             () => ({
                 id: O,
                 headingId: "heading-".concat(O),
-                onClose: h,
+                onClose: E,
                 dismissable: !0,
             }),
-            [O, h],
+            [O, E],
         ),
-        V = (0, c.Ll)(),
-        { theme: w } = (0, d.TCT)(),
-        S = (0, u.hvB)(y, m);
-    return (0, a.jsx)(u.tCf.Provider, {
-        value: j,
-        children: (0, a.jsx)(
-            d.VqE,
-            ((t = (function (e) {
-                for (var l = 1; l < arguments.length; l++) {
-                    var t = null != arguments[l] ? arguments[l] : {},
-                        a = Object.keys(t);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (a = a.concat(
-                            Object.getOwnPropertySymbols(t).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                            }),
-                        )),
-                        a.forEach(function (l) {
-                            var a;
-                            (a = t[l]),
-                                l in e
-                                    ? Object.defineProperty(e, l, {
-                                          value: a,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[l] = a);
-                        });
-                }
-                return e;
-            })(
+        I = (0, d.Ll)(),
+        { theme: T } = (0, u.TCT)(),
+        S = (0, c.hvB)(n, a);
+    return (0, r.jsx)(c.tCf.Provider, {
+        value: v,
+        children: (0, r.jsx)(
+            u.VqE,
+            g(
+                h(
+                    {
+                        id: O,
+                        role: "dialog",
+                        "aria-label": m,
+                        "aria-labelledby": null != m ? void 0 : v.headingId,
+                        returnRef: p,
+                    },
+                    b,
+                ),
                 {
-                    id: O,
-                    role: "dialog",
-                    "aria-label": v,
-                    "aria-labelledby": null != v ? void 0 : j.headingId,
-                    returnRef: f,
-                },
-                x,
-            )),
-            (o = o =
-                {
-                    impressionType: null != (l = null == x ? void 0 : x.impressionType) ? l : s.ImpressionTypes.MODAL,
-                    children: (0, a.jsx)(u.y5t, {
+                    impressionType: null != (t = null == b ? void 0 : b.impressionType) ? t : l.ImpressionTypes.MODAL,
+                    children: (0, r.jsx)(c.y5t, {
                         forceLevel: 1,
-                        children: (0, a.jsx)("div", {
-                            className: b.outerContainer,
-                            children: (0, a.jsx)(d.f6W, {
-                                theme: V,
+                        children: (0, r.jsx)("div", {
+                            className: f.outerContainer,
+                            children: (0, r.jsx)(u.f6W, {
+                                theme: I,
                                 children: (e) =>
-                                    (0, a.jsx)(r.animated.div, {
+                                    (0, r.jsx)(s.animated.div, {
                                         "data-mana-component": "layer-modal",
-                                        className: i()(p.container, b.modal, e),
+                                        className: o()(_.container, f.modal, e),
                                         style: S,
-                                        children: (0, a.jsx)("div", {
-                                            className: b.modalContent,
-                                            children: (0, a.jsx)(d.f6W, {
-                                                theme: w,
+                                        children: (0, r.jsx)("div", {
+                                            className: f.modalContent,
+                                            children: (0, r.jsx)(u.f6W, {
+                                                theme: T,
                                                 children: (e) =>
-                                                    (0, a.jsx)("div", {
-                                                        className: i()(e, b.modalContentInner),
-                                                        children: g,
+                                                    (0, r.jsx)("div", {
+                                                        className: o()(e, f.modalContentInner),
+                                                        children: y,
                                                     }),
                                             }),
                                         }),
@@ -101,20 +129,8 @@ function y(e) {
                             }),
                         }),
                     }),
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o))
-                : (function (e, l) {
-                      var t = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var a = Object.getOwnPropertySymbols(e);
-                          t.push.apply(t, a);
-                      }
-                      return t;
-                  })(Object(o)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e));
-                  }),
-            t),
+                },
+            ),
         ),
     });
 }

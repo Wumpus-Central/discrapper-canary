@@ -245,9 +245,18 @@ function F(e) {
                         urlOrigin: "quickswitcher",
                     });
                 }
-            } else if (e.record.type === d.Ky.REVENUE_PLAYGROUND) {
+            } else if (e.record.type === d.Ky.PLAYGROUND) {
                 if (!(0, v.vP)()) return;
-                (0, l.jN)(S.S9g.REVENUE_PLAYGROUND);
+                {
+                    var T;
+                    let { PlaygroundStore: t } = n(156142),
+                        r = null != (T = e.record.collectionId) ? T : null;
+                    t.setState({
+                        selectedCollection: r,
+                        selectedStory: null,
+                    }),
+                        (0, l.jN)(S.S9g.COMPONENT_PLAYGROUND);
+                }
             } else (0, f.Z)(y.path, { navigationReplace: !0 });
     }
     i.Z.dispatch({

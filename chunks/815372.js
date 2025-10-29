@@ -25,12 +25,12 @@ var o = (function (e) {
         (e.QUEST_HOME = "QUEST_HOME"),
         (e.APPS_HOME = "APPS_HOME"),
         (e.SETTINGS = "SETTINGS"),
-        (e.REVENUE_PLAYGROUND = "REVENUE_PLAYGROUND"),
+        (e.PLAYGROUND = "PLAYGROUND"),
         e
     );
 })(o || {});
 class s extends r.Z {
-    static fromType(e, t, n) {
+    static fromType(e, t, n, r) {
         switch (e) {
             case "SHOP":
                 return new s({
@@ -58,10 +58,12 @@ class s extends r.Z {
                     label: n,
                     type: "SETTINGS",
                 });
-            case "REVENUE_PLAYGROUND":
+            case "PLAYGROUND":
                 return new s({
                     path: null != t ? t : i.Z5c.APP,
-                    type: "REVENUE_PLAYGROUND",
+                    type: "PLAYGROUND",
+                    label: n,
+                    collectionId: r,
                 });
             default:
                 throw Error("Unhandled InAppNavigationType");
@@ -73,9 +75,11 @@ class s extends r.Z {
             a(this, "path", void 0),
             a(this, "type", void 0),
             a(this, "label", void 0),
-            (this.id = e.type),
+            a(this, "collectionId", void 0),
+            (this.id = null != e.collectionId ? "".concat(e.type, "_").concat(e.collectionId) : e.type),
             (this.path = e.path),
             (this.type = e.type),
-            (this.label = e.label);
+            (this.label = e.label),
+            (this.collectionId = e.collectionId);
     }
 }

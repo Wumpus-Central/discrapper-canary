@@ -1,50 +1,60 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d }), n(361932), n(187205);
 var r = n(951288),
     i = n(442837),
     l = n(481060),
     a = n(37234),
-    s = n(594174),
-    o = n(981631);
-function c() {
-    return (0, i.e7)([s.default], () => {
-        var e, t;
-        return (
-            (null == (e = s.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0 ||
-            (null == (t = s.default.getCurrentUser()) ? void 0 : t.isStaffPersonal()) === !0
-        );
-    })
-        ? (0, r.jsx)(
-              l.sNh,
-              {
-                  id: "playgrounds",
-                  label: "Playgrounds",
-                  action: () => {
-                      (0, a.jN)(o.S9g.MANA_PLAYGROUND);
-                  },
-                  children: (0, r.jsxs)(
-                      l.kSQ,
-                      {
-                          children: [
-                              (0, r.jsx)(l.sNh, {
-                                  id: "mana-playground",
-                                  label: "Mana Playground",
-                                  action: () => {
-                                      (0, a.jN)(o.S9g.MANA_PLAYGROUND);
-                                  },
-                              }),
-                              (0, r.jsx)(l.sNh, {
-                                  id: "revenue-playground",
-                                  label: "Revenue Playground",
-                                  action: () => {
-                                      (0, a.jN)(o.S9g.REVENUE_PLAYGROUND);
-                                  },
-                              }),
-                          ],
-                      },
-                      "design-systems",
-                  ),
-              },
-              "playgrounds",
-          )
-        : null;
+    s = n(653592),
+    o = n(156142),
+    c = n(594174),
+    u = n(981631);
+function d() {
+    if (
+        !(0, i.e7)([c.default], () => {
+            var e, t;
+            return (
+                (null == (e = c.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0 ||
+                (null == (t = c.default.getCurrentUser()) ? void 0 : t.isStaffPersonal()) === !0
+            );
+        })
+    )
+        return null;
+    let e = s.componentPlaygroundConfigs.flatMap((e) => e.collections);
+    return (0, r.jsx)(
+        l.sNh,
+        {
+            id: "playgrounds",
+            label: "Playgrounds",
+            action: () => {
+                o.PlaygroundStore.setState({
+                    selectedCollection: null,
+                    selectedStory: null,
+                }),
+                    (0, a.jN)(u.S9g.COMPONENT_PLAYGROUND);
+            },
+            children: (0, r.jsx)(
+                l.kSQ,
+                {
+                    children: e.map((e) =>
+                        (0, r.jsx)(
+                            l.sNh,
+                            {
+                                id: "".concat(e.id, "-playground"),
+                                label: e.name,
+                                action: () => {
+                                    o.PlaygroundStore.setState({
+                                        selectedCollection: e.id,
+                                        selectedStory: null,
+                                    }),
+                                        (0, a.jN)(u.S9g.COMPONENT_PLAYGROUND);
+                                },
+                            },
+                            e.id,
+                        ),
+                    ),
+                },
+                "design-systems",
+            ),
+        },
+        "playgrounds",
+    );
 }

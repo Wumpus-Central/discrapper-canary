@@ -1,76 +1,86 @@
-t.d(l, { W: () => f }), t(388685), t(953529);
-var a = t(951288),
-    n = t(647438),
-    o = t(448814),
-    i = t(793030),
-    r = t(496600),
-    s = t(333200),
-    u = t(673221),
-    d = t(740353);
-function c(e) {
-    for (var l = 1; l < arguments.length; l++) {
-        var t = null != arguments[l] ? arguments[l] : {},
-            a = Object.keys(t);
+n.d(t, { W: () => b }), n(388685), n(953529);
+var r = n(951288),
+    i = n(647438),
+    a = n(448814),
+    o = n(793030),
+    s = n(496600),
+    l = n(333200),
+    c = n(673221),
+    u = n(740353);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            a.forEach(function (l) {
-                var a;
-                (a = t[l]),
-                    l in e
-                        ? Object.defineProperty(e, l, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[l] = a);
+            r.forEach(function (t) {
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, l) {
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
     return (
-        (l = null != l ? l : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(l))
-            : (function (e, l) {
-                  var t = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, a);
-                  }
-                  return t;
-              })(Object(l)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(l, t));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, l) {
+function h(e, t) {
     if (null == e) return {};
-    var t,
-        a,
-        n = (function (e, l) {
-            if (null == e) return {};
-            var t,
-                a,
-                n = {},
-                o = Object.keys(e);
-            for (a = 0; a < o.length; a++) (t = o[a]), l.indexOf(t) >= 0 || (n[t] = e[t]);
-            return n;
-        })(e, l);
+    var n,
+        r,
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (a = 0; a < o.length; a++)
-            (t = o[a]), !(l.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-    return n;
+    return i;
 }
-let y = [
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let g = [
         {
             label: "Aardvark",
             value: "aardvark",
@@ -103,12 +113,12 @@ let y = [
             disabled: !0,
         },
     ],
-    m = [
+    E = [
         {
             label: "Aardvark",
             value: "aardvark",
             id: "aardvark",
-            leading: i.VL1,
+            leading: o.VL1,
             trailing: {
                 type: "badge",
                 badgeType: "new",
@@ -118,14 +128,14 @@ let y = [
             label: "Cat",
             value: "cat",
             id: "cat",
-            leading: i.VL1,
+            leading: o.VL1,
             trailing: "20m",
         },
         {
             label: "Dog",
             value: "dog",
             id: "dog",
-            leading: i.VL1,
+            leading: o.VL1,
         },
         {
             label: "Kangaroo",
@@ -133,7 +143,7 @@ let y = [
             id: "kangaroo",
             leading: {
                 type: "image",
-                src: d,
+                src: u,
             },
         },
         {
@@ -142,46 +152,46 @@ let y = [
             id: "panda",
             leading: {
                 type: "avatar",
-                src: d,
+                src: u,
             },
         },
         {
             label: "Snake",
             value: "snake",
             id: "snake",
-            leading: i.VL1,
+            leading: o.VL1,
             disabled: !0,
         },
     ],
-    f = {
+    b = {
         title: "Select",
         stories: [
             {
                 id: "select",
                 name: "Select",
                 component: function (e) {
-                    var { selectionMode: l, withLeadingAndTrailing: t } = e,
-                        o = p(e, ["selectionMode", "withLeadingAndTrailing"]);
-                    let [i, r] = n.useState(null),
-                        [s, d] = n.useState([]),
-                        y = v(t, o.asyncOptions);
-                    return "single" === l
-                        ? (0, a.jsx)(
-                              u.P,
-                              b(c({}, o), {
-                                  selectionMode: l,
-                                  options: y,
-                                  onSelectionChange: r,
-                                  value: i,
+                    var { selectionMode: t, withLeadingAndTrailing: n } = e,
+                        a = h(e, ["selectionMode", "withLeadingAndTrailing"]);
+                    let [o, s] = i.useState(null),
+                        [l, u] = i.useState([]),
+                        d = y(n, a.asyncOptions);
+                    return "single" === t
+                        ? (0, r.jsx)(
+                              c.P,
+                              p(f({}, a), {
+                                  selectionMode: t,
+                                  options: d,
+                                  onSelectionChange: s,
+                                  value: o,
                               }),
                           )
-                        : (0, a.jsx)(
-                              u.P,
-                              b(c({}, o), {
-                                  selectionMode: l,
-                                  options: y,
-                                  onSelectionChange: d,
-                                  value: s,
+                        : (0, r.jsx)(
+                              c.P,
+                              p(f({}, a), {
+                                  selectionMode: t,
+                                  options: d,
+                                  onSelectionChange: u,
+                                  value: l,
                               }),
                           );
                 },
@@ -293,28 +303,28 @@ let y = [
                 id: "searchable-select",
                 name: "SearchableSelect",
                 component: function (e) {
-                    var { selectionMode: l, withLeadingAndTrailing: t, asyncOptions: o } = e,
-                        i = p(e, ["selectionMode", "withLeadingAndTrailing", "asyncOptions"]);
-                    let [r, u] = n.useState(null),
-                        [d, y] = n.useState([]),
-                        m = v(t, o);
-                    return "single" === l
-                        ? (0, a.jsx)(
-                              s.V,
-                              b(c({}, i), {
-                                  selectionMode: l,
-                                  onSelectionChange: u,
-                                  value: r,
-                                  options: m,
+                    var { selectionMode: t, withLeadingAndTrailing: n, asyncOptions: a } = e,
+                        o = h(e, ["selectionMode", "withLeadingAndTrailing", "asyncOptions"]);
+                    let [s, c] = i.useState(null),
+                        [u, d] = i.useState([]),
+                        _ = y(n, a);
+                    return "single" === t
+                        ? (0, r.jsx)(
+                              l.V,
+                              p(f({}, o), {
+                                  selectionMode: t,
+                                  onSelectionChange: c,
+                                  value: s,
+                                  options: _,
                               }),
                           )
-                        : (0, a.jsx)(
-                              s.V,
-                              b(c({}, i), {
-                                  selectionMode: l,
-                                  onSelectionChange: y,
-                                  value: d,
-                                  options: m,
+                        : (0, r.jsx)(
+                              l.V,
+                              p(f({}, o), {
+                                  selectionMode: t,
+                                  onSelectionChange: d,
+                                  value: u,
+                                  options: _,
                               }),
                           );
                 },
@@ -417,17 +427,17 @@ let y = [
                 name: "ComboBox",
                 component: function (e) {
                     var {
-                            selectionMode: l,
-                            label: t,
-                            hideLabel: o,
-                            description: i,
-                            helperText: s,
-                            errorMessage: u,
-                            successMessage: d,
-                            wrapTags: y,
-                            withLeadingAndTrailing: m,
+                            selectionMode: t,
+                            label: n,
+                            hideLabel: a,
+                            description: o,
+                            helperText: l,
+                            errorMessage: c,
+                            successMessage: u,
+                            wrapTags: d,
+                            withLeadingAndTrailing: _,
                         } = e,
-                        f = p(e, [
+                        m = h(e, [
                             "selectionMode",
                             "label",
                             "hideLabel",
@@ -438,35 +448,35 @@ let y = [
                             "wrapTags",
                             "withLeadingAndTrailing",
                         ]);
-                    let { required: h, disabled: x } = f,
-                        g = v(m, f.asyncOptions),
-                        [O, j] = n.useState(null);
-                    return (0, a.jsxs)(
-                        r.uz,
-                        b(
-                            c(
+                    let { required: g, disabled: E } = m,
+                        b = y(_, m.asyncOptions),
+                        [O, v] = i.useState(null);
+                    return (0, r.jsxs)(
+                        s.uz,
+                        p(
+                            f(
                                 {
-                                    selectionMode: l,
-                                    onSelectionChange: j,
-                                    options: g,
+                                    selectionMode: t,
+                                    onSelectionChange: v,
+                                    options: b,
                                     value: O,
                                 },
-                                f,
+                                m,
                             ),
                             {
                                 children: [
-                                    (0, a.jsx)(r.Ct, {
-                                        label: t,
-                                        hideLabel: o,
-                                        required: h,
-                                        disabled: x,
-                                        description: i,
-                                        helperText: s,
-                                        errorMessage: u,
-                                        successMessage: d,
-                                        wrapTags: y,
+                                    (0, r.jsx)(s.Ct, {
+                                        label: n,
+                                        hideLabel: a,
+                                        required: g,
+                                        disabled: E,
+                                        description: o,
+                                        helperText: l,
+                                        errorMessage: c,
+                                        successMessage: u,
+                                        wrapTags: d,
                                     }),
-                                    (0, a.jsx)(r.px, {}),
+                                    (0, r.jsx)(s.px, {}),
                                 ],
                             },
                         ),
@@ -565,15 +575,15 @@ let y = [
                 id: "listbox",
                 name: "ListBox",
                 component: function (e) {
-                    let { selectionMode: l, required: t, shouldFocusWrap: i, withLeadingAndTrailing: r } = e,
-                        [s, u] = n.useState(null);
-                    return (0, a.jsx)(o.w, {
-                        selectionMode: l,
-                        required: t,
-                        shouldFocusWrap: i,
-                        items: r ? m : y,
-                        onSelectionChange: u,
-                        selectedItems: s,
+                    let { selectionMode: t, required: n, shouldFocusWrap: o, withLeadingAndTrailing: s } = e,
+                        [l, c] = i.useState(null);
+                    return (0, r.jsx)(a.w, {
+                        selectionMode: t,
+                        required: n,
+                        shouldFocusWrap: o,
+                        items: s ? E : g,
+                        onSelectionChange: c,
+                        selectedItems: l,
                     });
                 },
                 controls: {
@@ -611,15 +621,15 @@ let y = [
             },
         ],
     };
-function v(e, l) {
-    let t = n.useRef(null);
-    return n.useMemo(() => {
-        let a = e ? m : y;
-        return l
+function y(e, t) {
+    let n = i.useRef(null);
+    return i.useMemo(() => {
+        let r = e ? E : g;
+        return t
             ? (e) =>
                   new Promise(
-                      null != t.current ? (e) => e(t.current) : (e) => setTimeout(() => ((t.current = a), e(a)), 1000),
+                      null != n.current ? (e) => e(n.current) : (e) => setTimeout(() => ((n.current = r), e(r)), 1000),
                   )
-            : a;
-    }, [e, l]);
+            : r;
+    }, [e, t]);
 }

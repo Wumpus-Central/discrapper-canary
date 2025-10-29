@@ -1,74 +1,84 @@
-t.d(l, { D: () => b });
-var a = t(951288),
-    n = t(647438),
-    o = t(481060),
-    i = t(454399),
-    r = t(28664),
-    s = t(518797);
+n.d(t, { D: () => h });
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(454399),
+    s = n(28664),
+    l = n(518797);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function u(e) {
-    for (var l = 1; l < arguments.length; l++) {
-        var t = null != arguments[l] ? arguments[l] : {},
-            a = Object.keys(t);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            a.forEach(function (l) {
-                var a;
-                (a = t[l]),
-                    l in e
-                        ? Object.defineProperty(e, l, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[l] = a);
+            r.forEach(function (t) {
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, l) {
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function f(e, t) {
     return (
-        (l = null != l ? l : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(l))
-            : (function (e, l) {
-                  var t = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, a);
-                  }
-                  return t;
-              })(Object(l)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(l, t));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function c(e, l) {
+function _(e, t) {
     if (null == e) return {};
-    var t,
-        a,
-        n = (function (e, l) {
-            if (null == e) return {};
-            var t,
-                a,
-                n = {},
-                o = Object.keys(e);
-            for (a = 0; a < o.length; a++) (t = o[a]), l.indexOf(t) >= 0 || (n[t] = e[t]);
-            return n;
-        })(e, l);
+    var n,
+        r,
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (a = 0; a < o.length; a++)
-            (t = o[a]), !(l.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-    return n;
+    return i;
 }
-let b = {
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let h = {
     title: "Tooltip",
     stories: [
         {
@@ -76,33 +86,33 @@ let b = {
             id: "tooltip",
             docs: "https://design.discord.tools/components/web/tooltip",
             component: function (e) {
-                var { text: l, position: t, align: i, caretAlign: s, customOffset: b, delay: p, spacing: y } = e,
-                    m = c(e, ["text", "position", "align", "caretAlign", "customOffset", "delay", "spacing"]);
-                let f = n.useMemo(() => {
-                    if ("center" !== s && null != s)
-                        return "custom" === s
+                var { text: t, position: n, align: o, caretAlign: l, customOffset: c, delay: d, spacing: p } = e,
+                    h = _(e, ["text", "position", "align", "caretAlign", "customOffset", "delay", "spacing"]);
+                let m = i.useMemo(() => {
+                    if ("center" !== l && null != l)
+                        return "custom" === l
                             ? {
-                                  align: s,
-                                  customOffset: b,
+                                  align: l,
+                                  customOffset: c,
                               }
-                            : { align: s };
-                }, [s, b]);
-                return (0, a.jsx)(
-                    r.u,
-                    d(
+                            : { align: l };
+                }, [l, c]);
+                return (0, r.jsx)(
+                    s.u,
+                    f(
                         u(
                             {
-                                text: l,
-                                position: t,
-                                align: i,
-                                delay: p,
-                                spacing: y,
-                                caretConfig: f,
+                                text: t,
+                                position: n,
+                                align: o,
+                                delay: d,
+                                spacing: p,
+                                caretConfig: m,
                             },
-                            m,
+                            h,
                         ),
                         {
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, r.jsx)(a.Button, {
                                 variant: "primary",
                                 text: "Hover me",
                             }),
@@ -217,17 +227,17 @@ let b = {
             docs: "https://design.discord.tools/components/web/tooltip",
             component: function (e) {
                 var {
-                        title: l,
-                        body: t,
-                        showAsset: r,
-                        position: b,
-                        align: p,
-                        caretAlign: y,
-                        customOffset: m,
-                        delay: f,
-                        spacing: v,
+                        title: t,
+                        body: n,
+                        showAsset: s,
+                        position: c,
+                        align: d,
+                        caretAlign: p,
+                        customOffset: h,
+                        delay: m,
+                        spacing: g,
                     } = e,
-                    h = c(e, [
+                    E = _(e, [
                         "title",
                         "body",
                         "showAsset",
@@ -238,43 +248,43 @@ let b = {
                         "delay",
                         "spacing",
                     ]);
-                let x = n.useMemo(() => {
-                        if ("center" !== y && null != y)
-                            return "custom" === y
+                let b = i.useMemo(() => {
+                        if ("center" !== p && null != p)
+                            return "custom" === p
                                 ? {
-                                      align: y,
-                                      customOffset: m,
+                                      align: p,
+                                      customOffset: h,
                                   }
-                                : { align: y };
-                    }, [y, m]),
-                    g = n.useMemo(
+                                : { align: p };
+                    }, [p, h]),
+                    y = i.useMemo(
                         () =>
-                            r
-                                ? (0, a.jsx)("img", {
-                                      src: s.Z,
+                            s
+                                ? (0, r.jsx)("img", {
+                                      src: l.Z,
                                       alt: "Graphic",
                                   })
                                 : void 0,
-                        [r],
+                        [s],
                     );
-                return (0, a.jsx)(
-                    i.i,
-                    d(
+                return (0, r.jsx)(
+                    o.i,
+                    f(
                         u(
                             {
-                                title: l,
-                                body: t,
-                                position: b,
-                                align: p,
-                                delay: f,
-                                spacing: v,
-                                caretConfig: x,
-                                asset: g,
+                                title: t,
+                                body: n,
+                                position: c,
+                                align: d,
+                                delay: m,
+                                spacing: g,
+                                caretConfig: b,
+                                asset: y,
                             },
-                            h,
+                            E,
                         ),
                         {
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, r.jsx)(a.Button, {
                                 variant: "primary",
                                 text: "Hover me (rich)",
                             }),

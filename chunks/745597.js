@@ -1,4 +1,4 @@
-t.d(a, { w: () => u });
-function u(e, a) {
-    return e - a * Math.floor(e / a);
+function r(e, t) {
+    return e - t * Math.floor(e / t);
 }
+n.d(t, { w: () => r });
