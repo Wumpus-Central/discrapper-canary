@@ -124,12 +124,12 @@ class u {
     }
     getPreviewBio(e) {
         var t;
-        return (0, r.Wx)(
-            e,
-            null == (t = this._guildMemberProfile) ? void 0 : t.bio,
-            this._userProfile.bio,
-            null != this.guildId,
-        );
+        return (0, r.Ys)({
+            pendingValue: e,
+            userValue: this._userProfile.bio,
+            guildValue: null == (t = this._guildMemberProfile) ? void 0 : t.bio,
+            guildId: this.guildId,
+        });
     }
     getPreviewThemeColors(e) {
         return (null == e ? void 0 : e[0]) != null && (null == e ? void 0 : e[1]) != null

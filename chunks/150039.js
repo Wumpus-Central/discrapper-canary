@@ -1,16 +1,15 @@
 n.d(t, {
     $U: () => h,
-    IG: () => A,
     Jw: () => O,
     Kg: () => E,
     PO: () => I,
     UK: () => T,
-    Wx: () => S,
+    Ys: () => S,
     Zx: () => m,
     bd: () => b,
-    f$: () => N,
+    f$: () => C,
     gc: () => p,
-    gd: () => C,
+    gd: () => A,
     mD: () => g,
     xQ: () => y,
 }),
@@ -138,39 +137,16 @@ function T(e, t, n) {
         return void (null == n ? (0, a.Fu)(void 0) : (0, l.Fu)(void 0));
     null == n ? (0, a.Fu)(e) : (0, l.Fu)(e);
 }
-function S(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return null != e
-        ? "string" == typeof e && "" === e
-            ? {
-                  value: r ? n : null,
-                  isUsingGuildValue: !1,
-              }
-            : {
-                  value: e,
-                  isUsingGuildValue: r,
-              }
-        : null != t && ("string" != typeof t || "" !== t)
-          ? {
-                value: t,
-                isUsingGuildValue: !0,
-            }
-          : {
-                value: n,
-                isUsingGuildValue: !1,
-            };
+function S(e) {
+    let { userValue: t, guildValue: n, pendingValue: r, guildId: i } = e,
+        a = "" === r || null === r,
+        o = "" !== r && null != r,
+        s = "" !== n && null != n;
+    return a ? (null != i ? t : null) : o ? r : null != i && s ? n : t;
 }
-function A(e) {
-    var t, n;
-    let { pendingProfileEffect: r, displayProfile: i } = e,
-        a = null == i || null == (t = i._userProfile) ? void 0 : t.profileEffect,
-        o = null == i || null == (n = i._guildMemberProfile) ? void 0 : n.profileEffect,
-        s = null === r;
-    return s && null != o ? a : s ? null : null != r ? r : null == i ? void 0 : i.profileEffect;
-}
-function C(e, t) {
+function A(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function N(e, t) {
+function C(e, t) {
     return void 0 === e ? null != t : null != e;
 }

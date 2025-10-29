@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(330349),
     p = n(619899),
     h = n(616066),
-    m = n(534542),
+    m = n(881937),
     g = n(63243),
     E = n(244488);
 let b = i.memo(function (e) {
@@ -65,7 +65,7 @@ let b = i.memo(function (e) {
                         isPurchased: n,
                         nameplatePreviewSize: "default",
                         showPlaceholderUser: !a,
-                        avatarDecorationOverride: null != S ? S : void 0,
+                        pendingAvatarDecoration: S,
                     }),
                 }),
         ],

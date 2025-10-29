@@ -91,7 +91,7 @@ let f = [
         });
     },
     P = (e) => {
-        let { user: t, guildId: r, avatarDecorationOverride: l, className: h } = e,
+        let { user: t, guildId: r, avatarDecoration: l, className: h } = e,
             g = (0, o.e7)([x.Z], () => x.Z.getStatus(t.id)),
             { product: P, purchase: b } = (0, d.Z)(null == l ? void 0 : l.skuId),
             E = v.ZP.canUseCollectibles(t),
@@ -100,7 +100,7 @@ let f = [
             A = !E && I,
             w = (0, p.M)(!C || E),
             T = (0, m.kd)(P),
-            N = i.useMemo(
+            Z = i.useMemo(
                 () =>
                     A
                         ? y.intl.string(y.t["7vkeu5"])
@@ -132,7 +132,7 @@ let f = [
                               }),
                               (0, n.jsx)(c.Text, {
                                   variant: "text-sm/normal",
-                                  children: N,
+                                  children: Z,
                               }),
                           ],
                       }),

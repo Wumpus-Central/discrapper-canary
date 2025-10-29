@@ -173,7 +173,7 @@ let I = (e) => {
             k = _.ZP.isPremium(i),
             D = _.ZP.canUsePremiumProfileCustomization(i),
             T = (0, h.ZP)(i.id),
-            U = !!(null == T ? void 0 : T.getPreviewBio(v).value),
+            U = !!(null == T ? void 0 : T.getPreviewBio(v)),
             B = {
                 user: i,
                 guild: f,

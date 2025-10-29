@@ -2,8 +2,8 @@ n.d(t, { U: () => m });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
-    s = n(780384),
+    s = n.n(i),
+    a = n(780384),
     o = n(481060),
     c = n(410030),
     u = n(566697),
@@ -19,11 +19,11 @@ let m = l.memo(function (e) {
         { firstProfileEffect: m, firstAvatarDecoration: b, firstNameplate: v } = (0, g.Rj)(t),
         E = (0, p.O1)(b),
         x = (0, c.ZP)(),
-        O = (0, s.ap)(x),
+        O = (0, a.ap)(x),
         S = null != v && null != b && null != m,
         y = S ? o.EFr.SIZE_80 : o.EFr.SIZE_96;
     return (0, r.jsxs)("div", {
-        className: a()(h.container, {
+        className: s()(h.container, {
             [h.twoItemBundle]: !S,
             [h.threeItemBundle]: S,
         }),
@@ -61,7 +61,7 @@ let m = l.memo(function (e) {
                         isPurchased: n,
                         nameplatePreviewSize: "default",
                         showPlaceholderUser: !l,
-                        avatarDecorationOverride: null != E ? E : void 0,
+                        pendingAvatarDecoration: E,
                     }),
                 }),
         ],

@@ -14,17 +14,17 @@ var l = n(951288),
     h = n(388032),
     g = n(763740);
 let v = (e) => {
-    let { user: t, guildId: n, selectedNameplate: i } = e,
+    let { user: t, guildId: n, nameplate: i } = e,
         v = (0, s.e7)([u.Z], () => u.Z.getPendingGlobalName()),
         { product: _, purchase: C } = (0, c.Z)(null == i ? void 0 : i.skuId),
         j = (0, d.kd)(_),
         E = p.ZP.canUseCollectibles(t),
         P = (0, o.qS)(C),
         y = (0, o.G1)(_),
-        N = !E && P,
-        f = null == C || N;
+        f = !E && P,
+        N = null == C || f;
     return (0, l.jsxs)("div", {
-        className: r()(g.previewBorder, { [g.upsell]: null != i && f }),
+        className: r()(g.previewBorder, { [g.upsell]: null != i && N }),
         children: [
             (0, l.jsx)("div", {
                 className: g.previewBox,
@@ -68,10 +68,10 @@ let v = (e) => {
                             variant: "text-sm/semibold",
                             children: j,
                         }),
-                        f &&
+                        N &&
                             (0, l.jsx)(a.Text, {
                                 variant: "text-sm/normal",
-                                children: N
+                                children: f
                                     ? h.intl.string(h.t.nD78oa)
                                     : y && E
                                       ? h.intl.string(h.t.hmyYK8)
