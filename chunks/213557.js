@@ -5,20 +5,20 @@ var l = t(951288),
     a = t(481060),
     o = t(239091),
     s = t(561472),
-    c = t(36311),
-    d = t(622822),
-    u = t(367907),
-    m = t(188471),
-    h = t(541716),
-    p = t(526120),
-    f = t(563534),
-    g = t(736052),
-    x = t(665149),
-    _ = t(442336),
-    C = t(910611),
-    b = t(41776),
-    j = t(703656),
-    v = t(6025),
+    c = t(622822),
+    d = t(367907),
+    u = t(188471),
+    m = t(541716),
+    h = t(526120),
+    p = t(563534),
+    f = t(736052),
+    g = t(665149),
+    x = t(442336),
+    _ = t(910611),
+    C = t(41776),
+    b = t(703656),
+    j = t(6025),
+    v = t(340501),
     y = t(592125),
     O = t(703558),
     N = t(430824),
@@ -76,40 +76,40 @@ function A(e) {
         D = (0, i.e7)([y.Z], () => y.Z.getChannel(n)),
         L = (0, i.e7)([N.Z], () => N.Z.getGuild(null == D ? void 0 : D.getGuildId())),
         M = (0, I.ZP)(D),
-        H = (0, i.e7)([b.Z], () => (null == L ? void 0 : L.id) != null && b.Z.isLurking(L.id), [L]),
-        U = (0, g.Z)(n),
-        W = (0, i.e7)([f.Z], () => {
+        H = (0, i.e7)([C.Z], () => (null == L ? void 0 : L.id) != null && C.Z.isLurking(L.id), [L]),
+        U = (0, f.Z)(n),
+        W = (0, i.e7)([p.Z], () => {
             var e;
-            return null == (e = f.Z.getResourceForChannel(null == L ? void 0 : L.id, n)) ? void 0 : e.title;
+            return null == (e = p.Z.getResourceForChannel(null == L ? void 0 : L.id, n)) ? void 0 : e.title;
         }),
-        G = (0, d.$5)(D),
+        G = (0, c.$5)(D),
         F = r.useRef(!1);
     if (
         (r.useEffect(() => {
             null == D ||
                 F.current ||
                 ((F.current = !0),
-                (0, u.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, u.$H)(D.id)), { channel_view: R })),
-                (0, m.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: D.id }));
+                (0, d.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, d.$H)(D.id)), { channel_view: R })),
+                (0, u.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: D.id }));
         }, [D, R]),
         null == D || null == L)
     )
         return null;
     let q = [];
-    return (H || q.push((0, l.jsx)(_.Z, { channel: D }, "notifications")),
+    return (H || q.push((0, l.jsx)(x.Z, { channel: D }, "notifications")),
     q.push(
         (0, l.jsx)(
-            x.ZP.Icon,
+            g.ZP.Icon,
             {
                 icon: a.Dio,
                 tooltip: E.intl.string(E.t.cpT0Cq),
-                onClick: () => v.Z.closeChannelSidebar(A),
+                onClick: () => j.Z.closeChannelSidebar(A),
             },
             "close",
         ),
     ),
     G)
-        ? (0, l.jsx)(c.Z, {
+        ? (0, l.jsx)(v.Z, {
               guild: L,
               channelId: D.id,
           })
@@ -119,10 +119,10 @@ function A(e) {
                       channel: D,
                       draftType: O.d.ChannelMessage,
                   }),
-                  (0, l.jsx)(x.ZP, {
+                  (0, l.jsx)(g.ZP, {
                       toolbar: q,
                       "aria-label": E.intl.string(E.t.BIYAqa),
-                      children: (0, C.ud)({
+                      children: (0, _.ud)({
                           channel: D,
                           channelName: U ? W : M,
                           guild: L,
@@ -145,10 +145,10 @@ function A(e) {
                           handleClick: () => {
                               let e = Z.Z.getMessages(D.id);
                               if (k) {
-                                  (0, j.uL)(P.Z5c.CHANNEL(D.guild_id, D.id)), (0, p.C3)(D.guild_id, null);
+                                  (0, b.uL)(P.Z5c.CHANNEL(D.guild_id, D.id)), (0, h.C3)(D.guild_id, null);
                                   return;
                               }
-                              (0, j.XU)(D.guild_id, D.id, e.jumpTargetId);
+                              (0, b.XU)(D.guild_id, D.id, e.jumpTargetId);
                           },
                       }),
                   }),
@@ -159,7 +159,7 @@ function A(e) {
                           {
                               channel: D,
                               guild: L,
-                              chatInputType: h.Ie.SIDEBAR,
+                              chatInputType: m.Ie.SIDEBAR,
                           },
                           n,
                       ),

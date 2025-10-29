@@ -6,18 +6,18 @@ var i = n(990547),
     l = n(46973),
     a = n(481060),
     s = n(846027),
-    c = n(284056),
-    u = n(410575),
-    d = n(906732),
-    p = n(213609),
-    m = n(650958),
-    f = n(453925),
-    b = n(967003),
-    g = n(632304),
-    v = n(131951),
-    y = n(19780),
-    j = n(556296),
-    O = n(358085),
+    c = n(410575),
+    u = n(906732),
+    d = n(213609),
+    p = n(650958),
+    m = n(453925),
+    f = n(967003),
+    b = n(632304),
+    g = n(131951),
+    v = n(19780),
+    y = n(556296),
+    j = n(358085),
+    O = n(130067),
     h = n(822556),
     x = n(981631),
     _ = n(345655),
@@ -40,40 +40,40 @@ function E(e) {
             maybeRenderInputMeter: A = !1,
             renderSettingsButton: R = !1,
         } = e,
-        { analyticsLocations: L } = (0, d.ZP)();
-    (0, p.Z)({
+        { analyticsLocations: L } = (0, u.ZP)();
+    (0, d.Z)({
         type: i.ImpressionTypes.MENU,
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: L },
     });
     let V = (0, h.Z)(t),
-        F = (0, m.M)({
+        F = (0, p.M)({
             deviceType: P.h7.AUDIO_INPUT,
             analyticsLocations: L,
             asSubmenu: !0,
         }),
-        U = (0, m.M)({
+        U = (0, p.M)({
             deviceType: P.h7.AUDIO_OUTPUT,
             analyticsLocations: L,
             asSubmenu: !0,
         }),
-        Y = (0, o.e7)([v.Z], () => v.Z.getActiveInputProfile()),
-        H = (0, b.Z)(L),
-        z = (0, f.Z)(L),
-        B = (0, g.Z)(L),
+        Y = (0, o.e7)([g.Z], () => g.Z.getActiveInputProfile()),
+        H = (0, f.Z)(L),
+        z = (0, m.Z)(L),
+        B = (0, b.Z)(L),
         q = l.Yn.DEFAULT,
-        W = v.Z.isSelfDeaf(q),
-        X = (0, o.e7)([v.Z], () => v.Z.getMode()),
+        W = g.Z.isSelfDeaf(q),
+        X = (0, o.e7)([g.Z], () => g.Z.getMode()),
         G = X === x.pM4.VOICE_ACTIVITY ? x.pM4.PUSH_TO_TALK : x.pM4.VOICE_ACTIVITY,
-        K = (0, o.e7)([v.Z, j.ZP], () => {
+        K = (0, o.e7)([g.Z, y.ZP], () => {
             var e;
-            let t = (null == (e = v.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
-                n = null != j.ZP.getKeybindForAction(x.kg4.PUSH_TO_TALK, !1, !0),
-                r = null != j.ZP.getKeybindForAction(x.kg4.PUSH_TO_TALK_PRIORITY, !1, !0);
+            let t = (null == (e = g.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
+                n = null != y.ZP.getKeybindForAction(x.kg4.PUSH_TO_TALK, !1, !0),
+                r = null != y.ZP.getKeybindForAction(x.kg4.PUSH_TO_TALK_PRIORITY, !1, !0);
             return t || n || r;
         }),
-        Q = (0, o.e7)([y.Z], () => null != y.Z.getChannelId());
-    return (0, r.jsx)(u.Z, {
+        Q = (0, o.e7)([v.Z], () => null != v.Z.getChannelId());
+    return (0, r.jsx)(c.Z, {
         object: x.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(a.v2r, {
             onSelect: E,
@@ -95,8 +95,8 @@ function E(e) {
                             (0, r.jsx)(a.II_, {
                                 id: "input-device-meter",
                                 control: () =>
-                                    (0, r.jsx)(c.Z, {
-                                        notchBackground: c._.BLACK,
+                                    (0, r.jsx)(O.Z, {
+                                        notchBackground: O._.BLACK,
                                         location: { section: x.jXE.CONTEXT_MENU },
                                         meterOnly: !0,
                                         containerClassName: C.customMenuItem,
@@ -108,7 +108,7 @@ function E(e) {
                 }),
                 (0, r.jsxs)(a.kSQ, {
                     children: [
-                        T && O.isPlatformEmbedded && K
+                        T && j.isPlatformEmbedded && K
                             ? (0, r.jsx)(a.S89, {
                                   checked: X === x.pM4.PUSH_TO_TALK,
                                   id: "input-mode",
