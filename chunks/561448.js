@@ -10,7 +10,7 @@ var r = n(409813),
     i = n(622999),
     a = n(231338),
     o = n(388032);
-let s = new Set([a.He.CARD, a.He.PAYPAL]),
+let s = new Set([a.He.CARD, a.He.PAYMENT_REQUEST, a.He.PAYPAL]),
     l = new Set([a.He.IDEAL, a.He.GOPAY_WALLET, a.He.KAKAOPAY, a.He.VENMO, a.He.CASH_APP]),
     c = {
         [a.He.PAYPAL]: {
@@ -121,6 +121,7 @@ let E = (e, t) =>
     b = (e) => {
         if ("card" === e || "link_card_brand" === e) return a.He.CARD;
         if ("ideal" === e) return a.He.IDEAL;
+        if ("google_pay" === e || "apple_pay" === e) return a.He.PAYMENT_REQUEST;
         let t = _[(0, i.rI)()];
         return e in t ? t[e] : null;
     };

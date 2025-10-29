@@ -1,48 +1,49 @@
 n.d(t, {
-    Dk: () => ea,
-    EH: () => eM,
-    EO: () => eS,
-    G: () => em,
-    GE: () => ej,
-    GM: () => eB,
-    GV: () => er,
-    K2: () => eG,
+    Dk: () => es,
+    EH: () => ej,
+    EO: () => eC,
+    G: () => eE,
+    GE: () => eG,
+    GM: () => eF,
+    GV: () => ea,
+    K2: () => eZ,
     LI: () => k,
-    MH: () => e_,
-    Mg: () => eC,
-    O1: () => eu,
-    OP: () => ey,
+    MH: () => eh,
+    Mg: () => eR,
+    O1: () => ef,
+    OP: () => ev,
     PP: () => H,
-    Q5: () => $,
+    Q5: () => et,
     SQ: () => Y,
-    UY: () => ex,
-    XW: () => eh,
+    UY: () => ek,
+    XW: () => eg,
     YQ: () => K,
-    Zv: () => es,
-    _H: () => eD,
+    Zv: () => ec,
+    _H: () => ex,
     aN: () => z,
-    cQ: () => ed,
-    dP: () => eR,
-    df: () => eF,
-    f0: () => ee,
-    fG: () => eP,
-    i6: () => et,
-    jg: () => ef,
-    lC: () => eU,
-    lO: () => ec,
-    lP: () => en,
-    ou: () => ep,
+    cQ: () => e_,
+    dP: () => ew,
+    df: () => eH,
+    f0: () => en,
+    fG: () => eD,
+    i6: () => er,
+    jg: () => ep,
+    lC: () => eB,
+    lO: () => ed,
+    lP: () => ei,
+    ou: () => em,
     pF: () => q,
-    pl: () => eN,
-    qu: () => eA,
+    pl: () => eP,
+    qu: () => eN,
     qv: () => W,
-    r5: () => eZ,
-    rt: () => ek,
-    sF: () => ei,
-    sk: () => eg,
-    tZ: () => el,
-    tq: () => ew,
-    w7: () => eL,
+    r5: () => eV,
+    rt: () => eU,
+    sF: () => eo,
+    sk: () => eb,
+    tZ: () => eu,
+    tq: () => eL,
+    w$: () => ee,
+    w7: () => eM,
     xt: () => M,
 }),
     n(49124),
@@ -477,37 +478,63 @@ let X = (e, t, n) => {
         null != e.setup_intent &&
         "succeeded" === e.setup_intent.status,
     J = async (e) => {
+        if (null == e) throw H("Stripe Elements not loaded", !0);
         let t = await e.submit();
         if ((x.info("Stripe Elements submit response: ", t), null != t.error))
             throw (x.error("Stripe Elements submit error: ", t.error), H(t.error, !0));
+        return t;
+    },
+    $ = async (e, t) => {
+        let { paymentMethod: n, error: r } = await e.createPaymentMethod({ elements: t });
+        if (null != r) throw (x.error("Stripe createPaymentMethod error: ", r), H(r, !0));
+        if (null == n)
+            throw (
+                (x.warn("Stripe createPaymentMethod failed to return payment method: ", {
+                    paymentMethod: n,
+                    error: r,
+                }),
+                H("paymentMethod not available with successful stripe call", !0))
+            );
+        return {
+            paymentMethod: n,
+            error: r,
+        };
+    },
+    ee = async (e, t) => {
+        if (null == e) throw H("Stripe not loaded", !0);
+        if (null == t) throw H("Stripe Elements not loaded", !0);
+        await J(t);
+        let { paymentMethod: n, error: r } = await $(e, t);
+        return {
+            paymentMethod: n,
+            error: r,
+        };
     };
-async function $(e, t, n, r, i) {
+async function et(e, t, n, r, i) {
     if (null == e) throw H("Stripe not loaded", !0);
     if (null == r) throw H("Stripe Elements not loaded", !0);
     c.Z.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
     let a = await G(t);
-    await J(r);
+    n !== A.He.PAYMENT_REQUEST && (await J(r));
     let o = null;
-    if (n === A.He.CARD) {
+    if (n === A.He.CARD || n === A.He.PAYMENT_REQUEST) {
         let t = await e.confirmSetup({
             redirect: "if_required",
             elements: r,
         });
         if (Q(t.error)) {
-            let n = await (0, f.V)();
-            await J(r),
+            let i = await (0, f.V)();
+            n !== A.He.PAYMENT_REQUEST && (await J(r)),
                 (t = await e.confirmSetup({
                     redirect: "if_required",
-                    clientSecret: n,
+                    clientSecret: i,
                     elements: r,
                 }));
         }
-        let { setupIntent: n } = X(t.setupIntent, t.error, (e) => H(e, !0));
-        o = n.payment_method;
+        let { setupIntent: i } = X(t.setupIntent, t.error, (e) => H(e, !0));
+        o = i.payment_method;
     } else {
-        let { paymentMethod: t, error: n } = await e.createPaymentMethod({ elements: r });
-        if (null != n) throw H(n, !0);
-        if (null == t) throw H("paymentMethod not available with successful stripe call", !0);
+        let { paymentMethod: t } = await $(e, r);
         o = t.id;
     }
     return Z(I.gg$.STRIPE, o, t, {
@@ -515,7 +542,7 @@ async function $(e, t, n, r, i) {
         analyticsLocation: i,
     });
 }
-async function ee(e, t, n, r) {
+async function en(e, t, n, r) {
     if (null == e || null == t) throw Y("Stripe or token not loaded");
     c.Z.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
     let i = null;
@@ -538,14 +565,14 @@ async function ee(e, t, n, r) {
         analyticsLocation: r,
     });
 }
-function et(e, t, n) {
+function er(e, t, n) {
     let { token: r, billingAddressInfo: i } = v.az(e);
     return Z(I.gg$.STRIPE, r, null != t ? t : i, { analyticsLocation: n });
 }
-function en(e, t, n) {
+function ei(e, t, n) {
     return Z(I.gg$.BRAINTREE, e, t, { analyticsLocation: n });
 }
-async function er(e, t, n, r) {
+async function ea(e, t, n, r) {
     if (null == e) throw Y("Stripe not loaded");
     let i = await G(t),
         { name: o, line1: s, line2: l, city: c, state: u, postalCode: d, country: f } = t,
@@ -572,7 +599,7 @@ async function er(e, t, n, r) {
         analyticsLocation: r,
     });
 }
-async function ei(e, t, n) {
+async function eo(e, t, n) {
     let r = await G(e),
         i = { type: A.QL.get(t) };
     return Z(I.gg$.ADYEN, JSON.stringify(i), e, {
@@ -580,12 +607,12 @@ async function ei(e, t, n) {
         analyticsLocation: n,
     });
 }
-async function ea(e, t, n, r) {
+async function es(e, t, n, r) {
     var i;
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         o = await G(e),
         s = R({ type: A.QL.get(t) }, null != (i = null == r ? void 0 : r.paymentMethod) ? i : {}),
-        f = await eM(t),
+        f = await ej(t),
         _ = (0, l.K0)() + I.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, null != f ? f : "", "success");
     try {
         return {
@@ -618,10 +645,10 @@ async function ea(e, t, n, r) {
             );
         let e = t.fields.adyen_redirect_url;
         if (null == e) throw Y("redirect url cannot be null on a redirect for adyen.");
-        return ev(e), { redirectConfirmation: !0 };
+        return eT(e), { redirectConfirmation: !0 };
     }
 }
-async function eo(e) {
+async function el(e) {
     if (I.ldS.has(e.type)) return null;
     let t = await v.d2();
     if (null == t) throw new u.HF("Stripe not loaded", u.HF.ErrorCodes.UNKNOWN);
@@ -671,10 +698,10 @@ async function eo(e) {
         );
     return _.id;
 }
-function es(e) {
-    return I.ldS.has(e.type) ? null : A.QL.has(e.type) ? B(e) : eo(e);
+function ec(e) {
+    return I.ldS.has(e.type) ? null : A.QL.has(e.type) ? B(e) : el(e);
 }
-async function el() {
+async function eu() {
     if (!m.Z.isPaymentSourceFetching)
         try {
             let e = l.tn.get({
@@ -700,7 +727,7 @@ async function el() {
             throw (c.Z.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_FAIL" }), e);
         }
 }
-async function ec(e) {
+async function ed(e) {
     try {
         let t = l.tn.get({
                 url: I.ANM.BILLING_PAYMENT_SOURCE(e),
@@ -720,7 +747,7 @@ async function ec(e) {
         throw (c.Z.dispatch({ type: "BILLING_PAYMENT_SOURCE_FETCH_FAIL" }), e);
     }
 }
-async function eu(e) {
+async function ef(e) {
     let t = await l.tn.get({
         url: I.ANM.BILLING_PAYMENT(e),
         rejectWithError: !0,
@@ -733,7 +760,7 @@ async function eu(e) {
         t
     );
 }
-async function ed() {
+async function e_() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10,
         t = arguments.length > 1 ? arguments[1] : void 0;
     c.Z.dispatch({ type: "BILLING_PAYMENTS_FETCH_START" });
@@ -758,7 +785,7 @@ async function ed() {
         throw (c.Z.dispatch({ type: "BILLING_PAYMENTS_FETCH_FAIL" }), e);
     }
 }
-async function ef() {
+async function ep() {
     c.Z.wait(() => {
         c.Z.dispatch({ type: "BILLING_SUBSCRIPTION_FETCH_START" });
     });
@@ -785,7 +812,7 @@ async function ef() {
         throw (c.Z.dispatch({ type: "BILLING_SUBSCRIPTION_FETCH_FAIL" }), e);
     }
 }
-async function e_() {
+async function eh() {
     try {
         let e = await l.tn.get({
             url: I.ANM.BILLING_NITRO_AFFINITY,
@@ -799,7 +826,7 @@ async function e_() {
         c.Z.dispatch({ type: "BILLING_NITRO_AFFINITY_FETCHED" });
     }
 }
-async function ep() {
+async function em() {
     c.Z.wait(() => {
         c.Z.dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START" });
     });
@@ -832,7 +859,7 @@ async function ep() {
         c.Z.dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL" });
     }
 }
-async function eh(e) {
+async function eg(e) {
     let {
         items: t,
         paymentSource: n,
@@ -848,7 +875,7 @@ async function eh(e) {
     c.Z.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" }), (t = (0, y.gB)(t));
     let h = null;
     if (null != n && A.QL.has(n.type)) {
-        let e = await eM(n.type);
+        let e = await ej(n.type);
         h = (0, l.K0)() + I.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success");
     }
     try {
@@ -863,7 +890,7 @@ async function eh(e) {
                     };
                 }),
                 payment_source_id: null != n ? n.id : null,
-                payment_source_token: null != n ? await es(n) : null,
+                payment_source_token: null != n ? await ec(n) : null,
                 trial_id: r,
                 return_url: h,
                 code: i,
@@ -900,13 +927,13 @@ async function eh(e) {
         )
             throw e;
         if (!t.body.payment_id) throw Y("payment id cannot be null on redirected confirmations.");
-        return eg(t.body, n);
+        return eb(t.body, n);
     }
 }
-async function em(e, t, n, r) {
+async function eE(e, t, n, r) {
     let i = null;
     if (null != n && A.Uk.has(n.type)) {
-        let e = await eM(n.type);
+        let e = await ej(n.type);
         i = (0, l.K0)() + I.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success");
     }
     try {
@@ -914,7 +941,7 @@ async function em(e, t, n, r) {
             url: I.ANM.BILLING_INVOICE_MANUAL_PAYMENT(e.id, t),
             body: {
                 payment_source_id: null != n ? n.id : null,
-                payment_source_token: null != n ? await es(n) : null,
+                payment_source_token: null != n ? await ec(n) : null,
                 return_url: i,
                 currency: r,
                 purchase_token: (0, O.d)(),
@@ -943,17 +970,17 @@ async function em(e, t, n, r) {
                 e)
             );
         if (!t.body.payment_id) throw Y("payment id cannot be null on redirected confirmations.");
-        return eg(t.body, n);
+        return eb(t.body, n);
     }
 }
-function eg(e, t) {
-    return null != t && A.QL.has(t.type) ? eE(e.adyen_redirect_url, t) : eb(e.payment_id, t);
+function eb(e, t) {
+    return null != t && A.QL.has(t.type) ? ey(e.adyen_redirect_url, t) : eO(e.payment_id, t);
 }
-async function eE(e, t) {
+async function ey(e, t) {
     if (null == e) throw Y("redirect url cannot be null on a redirect for adyen.");
     if (null == t) throw Y("Payment source cannot be null on a redirect.");
     return I.j8d.has(t.type)
-        ? (ev(e),
+        ? (eT(e),
           {
               redirectConfirmation: !0,
               redirectURL: e,
@@ -963,16 +990,16 @@ async function eE(e, t) {
               redirectURL: e,
           };
 }
-async function eb(e, t) {
+async function eO(e, t) {
     let n = await v.d2();
     if (null == t) throw Y("Payment source cannot be null on a redirect.");
     let { clientSecret: r, paymentMethodId: i } = await U(e);
     if (null == n) throw Y("Stripe cannot be null on a redirect.");
     if (I.j8d.has(t.type)) {
-        let e = await eM(t.type);
+        let e = await ej(t.type);
         return (
-            ev(
-                await eT({
+            eT(
+                await eA({
                     stripe: n,
                     paymentSource: t,
                     clientSecret: r,
@@ -983,7 +1010,7 @@ async function eb(e, t) {
         );
     }
     return (
-        await eI({
+        await eS({
             stripe: n,
             clientSecret: r,
             paymentMethodId: i,
@@ -992,16 +1019,16 @@ async function eb(e, t) {
         { redirectConfirmation: !1 }
     );
 }
-async function ey(e) {
+async function ev(e) {
     var t;
-    let n = await eu(e);
+    let n = await ef(e);
     if ((null == n ? void 0 : n.body) == null) throw Y("could not fetch payment");
     let r = p.ZP.createFromServer(n.body.payment_source);
     if (!I.j8d.has(r.type)) throw Y("unsupported redirect payment source");
     if ((null == n || null == (t = n.body) ? void 0 : t.status) === A.Py.FAILED) throw Y("payment failed");
-    return r.paymentGateway !== I.gg$.STRIPE || eO(e);
+    return r.paymentGateway !== I.gg$.STRIPE || eI(e);
 }
-async function eO(e) {
+async function eI(e) {
     let t = await v.d2();
     if (null == t) throw Y("Stripe has not loaded.");
     if (null == e) throw Y("payment intent id cannot be null.");
@@ -1012,10 +1039,10 @@ async function eO(e) {
     if (null != r.last_payment_error) throw Y("unable to retrieve payment intent ".concat(r.last_payment_error));
     return !0;
 }
-function ev(e) {
+function eT(e) {
     window.open(e);
 }
-async function eI(e) {
+async function eS(e) {
     let t,
         { stripe: n, paymentSource: r, paymentMethodId: i, clientSecret: a } = e,
         o = {};
@@ -1027,7 +1054,7 @@ async function eI(e) {
     if (null != l) throw Y(l);
     if (null == s) throw Y("paymentIntent not available with successful stripe call");
 }
-async function eT(e) {
+async function eA(e) {
     var t, n;
     let r,
         { stripe: i, paymentSource: a, clientSecret: o, state: s } = e,
@@ -1101,7 +1128,7 @@ async function eT(e) {
         throw Y("confirm payment did not return a redirect url");
     return u.next_action.redirect_to_url.url;
 }
-async function eS(e, t, n) {
+async function eC(e, t, n) {
     c.Z.dispatch({ type: "BILLING_SUBSCRIPTION_CANCEL_START" });
     try {
         let r = await l.tn.del({
@@ -1125,8 +1152,8 @@ async function eS(e, t, n) {
         );
     }
 }
-function eA(e, t) {
-    return eC(
+function eN(e, t) {
+    return eR(
         e,
         { items: e.items },
         {
@@ -1137,7 +1164,7 @@ function eA(e, t) {
         t,
     );
 }
-async function eC(e, t, n, r, i, a, o) {
+async function eR(e, t, n, r, i, a, o) {
     if (null != t.paymentSource && null == t.currency) throw Error("Currency must be specified with payment source");
     c.Z.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" });
     try {
@@ -1145,7 +1172,7 @@ async function eC(e, t, n, r, i, a, o) {
         let u = {
             status: t.status,
             payment_source_id: null == (s = t.paymentSource) ? void 0 : s.id,
-            payment_source_token: null != t.paymentSource ? await es(t.paymentSource) : null,
+            payment_source_token: null != t.paymentSource ? await ec(t.paymentSource) : null,
             currency: t.currency,
             gateway_checkout_context: await (0, b.cn)(t.paymentSource),
             load_id: o,
@@ -1155,7 +1182,7 @@ async function eC(e, t, n, r, i, a, o) {
             expected_renewal_price: r,
         };
         if (null != t.paymentSource && A.QL.has(t.paymentSource.type)) {
-            let e = await eM(t.paymentSource.type);
+            let e = await ej(t.paymentSource.type);
             u.return_url =
                 (0, l.K0)() +
                 I.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(
@@ -1201,11 +1228,11 @@ async function eC(e, t, n, r, i, a, o) {
                 e)
             );
         if (!n.body.payment_id) throw Y("payment id cannot be null on redirected confirmations.");
-        return eg(n.body, t.paymentSource);
+        return eb(n.body, t.paymentSource);
     }
 }
-function eN(e, t, n, r, i) {
-    return eC(
+function eP(e, t, n, r, i) {
+    return eR(
         e,
         {
             status: I.O0b.ACTIVE,
@@ -1221,9 +1248,9 @@ function eN(e, t, n, r, i) {
         i,
     );
 }
-function eR(e, t, n, r, i, a) {
+function ew(e, t, n, r, i, a) {
     let o = (0, y.XK)(e, t);
-    return eC(
+    return eR(
         e,
         {
             status: I.O0b.ACTIVE,
@@ -1235,8 +1262,8 @@ function eR(e, t, n, r, i, a) {
         a,
     );
 }
-function eP(e, t, n, r, i) {
-    return eC(
+function eD(e, t, n, r, i) {
+    return eR(
         e,
         { currency: t },
         {
@@ -1248,8 +1275,8 @@ function eP(e, t, n, r, i) {
         i,
     );
 }
-function ew(e, t, n, r, i, a) {
-    return eC(
+function eL(e, t, n, r, i, a) {
+    return eR(
         e,
         {
             paymentSource: t,
@@ -1264,20 +1291,20 @@ function ew(e, t, n, r, i, a) {
         a,
     );
 }
-function eD() {
+function ex() {
     c.Z.dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });
 }
-function eL() {
+function eM() {
     c.Z.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR" });
 }
-async function ex(e) {
+async function ek(e) {
     await l.tn.post({
         url: I.ANM.BILLING_PAYMENTS_VOID(e),
         oldFormErrors: !0,
         rejectWithError: !1,
     });
 }
-async function eM(e) {
+async function ej(e) {
     let {
         body: { state: t },
     } = await l.tn.post({
@@ -1294,7 +1321,7 @@ async function eM(e) {
         t
     );
 }
-function ek(e) {
+function eU(e) {
     let { paymentSourceType: t, state: n, path: r, query: i, insecure: a } = e;
     return (
         c.Z.dispatch({
@@ -1324,7 +1351,7 @@ function ek(e) {
             )
     );
 }
-async function ej() {
+async function eG() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && null != m.Z.ipCountryCodeRequest) return m.Z.ipCountryCodeRequest;
     try {
@@ -1351,7 +1378,7 @@ async function ej() {
         return c.Z.dispatch({ type: "BILLING_IP_COUNTRY_CODE_FAILURE" }), e;
     }
 }
-async function eU() {
+async function eB() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && null != m.Z.ipLocationRequest) return m.Z.ipLocationRequest;
     try {
@@ -1391,19 +1418,19 @@ async function eU() {
         );
     }
 }
-function eG() {
+function eZ() {
     c.Z.dispatch({ type: "RESET_PAYMENT_ID" });
 }
-function eB() {
+function eF() {
     c.Z.dispatch({ type: "BILLING_SUBSCRIPTION_RESET" });
 }
-function eZ(e) {
+function eV(e) {
     c.Z.dispatch({
         type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED",
         loadId: e,
     });
 }
-async function eF(e, t) {
+async function eH(e, t) {
     try {
         let n = await l.tn.post({
             url: I.ANM.REACTIVATION_OFFER_REDEEM(e.id, t.id),

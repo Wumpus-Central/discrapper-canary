@@ -105,13 +105,14 @@ let s = [a.h8.PAYMENT_TYPE],
                 () => ({
                     [o.He.CARD]: a,
                     [o.He.PAYPAL]: s,
+                    [o.He.PAYMENT_REQUEST]: u,
                     [o.He.IDEAL]: l,
                     [o.He.GOPAY_WALLET]: c,
                     [o.He.KAKAOPAY]: c,
                     [o.He.VENMO]: d,
                     [o.He.CASH_APP]: h,
                 }),
-                [a, s, l, c, d, h],
+                [a, s, l, u, c, d, h],
             );
         return {
             CREDIT_CARD_STEPS: a,

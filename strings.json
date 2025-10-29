@@ -2039,7 +2039,7 @@
   "p0UBvU": "This payment method was declined by issuer. Please try a different payment method.",
   "5mlOCW": "Something went wrong while processing your request, please try again!",
   "yX8s2v": "The card was declined due to insufficient funds.",
-  "yVIm/G": "Invalid payment source billing address. Please update your payment source and try again.",
+  "yVIm/G": "Invalid payment source billing address. Please update your payment source or billing address and try again.",
   "3s/vDN": "Invalid captcha response. Please try again.",
   "2ik8ih": "This plan is not available for this payment source. Please select a different plan or try a different payment source.",
   "+4Empk": "This purchase results in a negative balance and unfortunately cannot be completed. We know this is frustrating and are currently working on improving this system. Check back soon!",
