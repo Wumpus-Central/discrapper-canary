@@ -17,14 +17,14 @@ n.d(t, {
     tp: () => k,
     xR: () => X,
 }),
-    n(35282),
     n(190126),
     n(368063),
     n(65234),
     n(111804),
     n(490233),
     n(97749),
-    n(388685);
+    n(388685),
+    n(35282);
 var i = n(654861),
     a = n.n(i),
     o = n(664751),
@@ -132,16 +132,26 @@ function A(e) {
     );
 }
 function C(e) {
-    let { id: t, animated: n, size: r, forcePNG: i = !1 } = e,
-        a = O ? "webp" : "png",
-        o = O ? "webp" : "gif",
-        s = i ? "png" : n ? o : a,
-        c = O && n ? "&animated=true" : "",
-        u = "size=".concat((0, l.oO)(r * (0, l.x_)(), S));
-    return null != window.GLOBAL_ENV.CDN_HOST
-        ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/emojis/").concat(t, ".").concat(s) +
-              "?".concat(u).concat(c)
-        : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, s);
+    let { id: t, animated: n, size: r, forcePNG: i = !1, forceSDR: a = !1 } = e,
+        o = O ? "webp" : "png",
+        s = O ? "webp" : "gif",
+        c = i ? "png" : n ? s : o;
+    if (null != window.GLOBAL_ENV.CDN_HOST) {
+        let e = new URL(
+            "/emojis/".concat(t, ".").concat(c),
+            "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST),
+        );
+        return (
+            e.searchParams.set("size", (0, l.oO)(r * (0, l.x_)(), S).toString()),
+            O && n && e.searchParams.set("animated", "true"),
+            a && e.searchParams.set("force_sdr", "true"),
+            e.toString()
+        );
+    }
+    {
+        let e = new URL(f.ANM.EMOJI(t, c), location.protocol + window.GLOBAL_ENV.API_ENDPOINT);
+        return a && e.searchParams.set("force_sdr", "true"), e.toString();
+    }
 }
 function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
