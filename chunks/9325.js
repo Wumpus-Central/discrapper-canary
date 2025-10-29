@@ -42,10 +42,13 @@ function v(e) {
                         guildTemplate: n,
                         tall: !0,
                     }),
-                    (0, r.jsx)(a.zx, {
-                        onClick: (e) => E(e, t, n),
+                    (0, r.jsx)("div", {
                         className: x.marginTop20,
-                        children: _.intl.string(_.t["a3Gl+e"]),
+                        children: (0, r.jsx)(l.Button, {
+                            text: _.intl.string(_.t["a3Gl+e"]),
+                            fullWidth: !0,
+                            onClick: (e) => E(e, t, n),
+                        }),
                     }),
                 ],
             })

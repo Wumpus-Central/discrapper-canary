@@ -55,10 +55,13 @@ function m(e) {
                                 style: { color: l.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t,
                             }),
-                            (0, r.jsx)(o.zx, {
+                            (0, r.jsx)("div", {
                                 className: h.button,
-                                onClick: u,
-                                children: i,
+                                children: (0, r.jsx)(a.Button, {
+                                    text: i,
+                                    fullWidth: !0,
+                                    onClick: u,
+                                }),
                             }),
                         ],
                     }),

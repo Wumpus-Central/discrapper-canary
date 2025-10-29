@@ -41,7 +41,7 @@ function c(e) {
                 null == (e = w.current) || e.focus();
             }
         }, [f]);
-    let k = null == b ? u.intl.string(u.t.LQdCQE) : u.intl.formatToPlainString(u.t["8r6h7+"], { phoneNumber: b });
+    let E = null == b ? u.intl.string(u.t.LQdCQE) : u.intl.formatToPlainString(u.t["8r6h7+"], { phoneNumber: b });
     return (0, l.jsxs)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
@@ -60,48 +60,50 @@ function c(e) {
         },
         children: [
             (0, l.jsx)(o.Z.SlideHeader, {
-                subtitle: k,
+                subtitle: E,
                 onClose: h,
                 headerAlignStart: g,
             }),
-            (0, l.jsx)(o.Z.SlideContent, {
-                children: (0, l.jsxs)(a.NIo, {
-                    children: [
-                        (0, l.jsx)(a.oil, {
-                            label: u.intl.string(u.t.HZPBOd),
-                            inputRef: w,
-                            onChange: Z,
-                            placeholder: u.intl.string(u.t.tARzgo),
-                            maxLength: 10,
-                            value: C,
-                            autoComplete: "one-time-code",
-                            spellCheck: "false",
-                            disabled: x,
-                            error: y,
-                        }),
-                        (0, l.jsx)(a.Button, {
-                            variant: "secondary",
-                            text: u.intl.string(u.t.ZF29L6),
-                            loading: m,
-                            onClick: () => {
-                                s.tn
-                                    .post({
-                                        url: d.ANM.LOGIN_SMS_SEND,
-                                        body: { ticket: t.ticket },
-                                        oldFormErrors: !0,
-                                        rejectWithError: !1,
-                                    })
-                                    .then((e) => {
-                                        S(e.body.phone);
-                                    })
-                                    .catch((e) => {
-                                        var t;
-                                        v(e.message || (null == (t = e.body) ? void 0 : t.message));
-                                    });
-                            },
-                        }),
-                    ],
-                }),
+            (0, l.jsxs)(o.Z.SlideContent, {
+                children: [
+                    (0, l.jsxs)(a.NIo, {
+                        children: [
+                            (0, l.jsx)(a.oil, {
+                                label: u.intl.string(u.t.HZPBOd),
+                                inputRef: w,
+                                onChange: Z,
+                                placeholder: u.intl.string(u.t.tARzgo),
+                                maxLength: 10,
+                                value: C,
+                                autoComplete: "one-time-code",
+                                spellCheck: "false",
+                                disabled: x,
+                            }),
+                            (0, l.jsx)(a.Button, {
+                                variant: "secondary",
+                                text: u.intl.string(u.t.ZF29L6),
+                                loading: m,
+                                onClick: () => {
+                                    s.tn
+                                        .post({
+                                            url: d.ANM.LOGIN_SMS_SEND,
+                                            body: { ticket: t.ticket },
+                                            oldFormErrors: !0,
+                                            rejectWithError: !1,
+                                        })
+                                        .then((e) => {
+                                            S(e.body.phone);
+                                        })
+                                        .catch((e) => {
+                                            var t;
+                                            v(e.message || (null == (t = e.body) ? void 0 : t.message));
+                                        });
+                                },
+                            }),
+                        ],
+                    }),
+                    (0, l.jsx)(o.Z.SlideError, { error: y }),
+                ],
             }),
             (0, l.jsx)(o.Z.SlideFooter, {
                 mfaChallenge: t,

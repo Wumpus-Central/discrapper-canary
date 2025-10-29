@@ -19,24 +19,24 @@ let x = () => {
         [s, x] = i.useState(""),
         [E, v] = i.useState(!1),
         [b, j] = i.useState(!1),
-        [I, N] = i.useState(null),
-        [y, O] = i.useState(null),
-        S = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
-        C = S.code.split(" ")[0],
+        [I, y] = i.useState(null),
+        [O, S] = i.useState(null),
+        N = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
+        C = N.code.split(" ")[0],
         A = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                O(e.body.message);
+                S(e.body.message);
             }
         },
         T = async () => {
             v(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, s);
-                N(null), O(null), j(!0), c.Z.validatePhoneForSupport(t);
+                y(null), S(null), j(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (N(null), O(e.body.message)) : (N(e.body.phone), O(e.body.code));
+                e.body.message ? (y(null), S(e.body.message)) : (y(e.body.phone), S(e.body.code));
             } finally {
                 v(!1);
             }
@@ -71,7 +71,7 @@ let x = () => {
                       children: [
                           (0, r.jsx)(h.Z, {
                               label: m.intl.string(m.t["eJnn0+"]),
-                              alpha2: S.alpha2,
+                              alpha2: N.alpha2,
                               countryCode: C,
                               value: e,
                               autoComplete: "off",
@@ -86,19 +86,20 @@ let x = () => {
                               value: s,
                               onChange: x,
                               maxLength: p.z,
-                              error: y,
+                              error: O,
                           }),
-                          (0, r.jsx)(g.zx, {
-                              size: g.zx.Sizes.SMALL,
-                              look: g.zx.Looks.LINK,
+                          (0, r.jsx)(o.Avr, {
+                              text: m.intl.string(m.t["5b60gi"]),
                               onClick: A,
-                              children: m.intl.string(m.t["5b60gi"]),
                           }),
-                          (0, r.jsx)(g.zx, {
+                          (0, r.jsx)("div", {
                               className: _.marginTop20,
-                              onClick: T,
-                              submitting: E,
-                              children: m.intl.string(m.t.i4jeWR),
+                              children: (0, r.jsx)(o.Button, {
+                                  text: m.intl.string(m.t.i4jeWR),
+                                  fullWidth: !0,
+                                  onClick: T,
+                                  loading: E,
+                              }),
                           }),
                       ],
                   }),

@@ -1,208 +1,208 @@
-i.d(t, { Z: () => y }), i(388685);
+i.d(e, { Z: () => v }), i(388685);
 var n,
     s = i(951288),
     a = i(647438),
     l = i(120356),
-    o = i.n(l),
-    r = i(772848),
+    r = i.n(l),
+    o = i(772848),
     h = i(846519),
-    d = i(755721),
-    c = i(481060),
+    d = i(481060),
     u = i(981631),
-    m = i(388032),
-    g = i(831319),
+    c = i(388032),
+    m = i(831319),
     p = i(149715),
-    f = i(197571);
-function C(e, t, i) {
+    g = i(197571);
+function f(t, e, i) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
+        e in t
+            ? Object.defineProperty(t, e, {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = i),
-        e
+            : (t[e] = i),
+        t
     );
 }
-class v extends (n = a.PureComponent) {
+class C extends (n = a.PureComponent) {
     async componentDidMount() {
-        let [e, { default: t }] = await Promise.all([
+        let [t, { default: e }] = await Promise.all([
             i.e("27526").then(i.t.bind(i, 555589, 19)),
             Promise.resolve().then(i.t.bind(i, 500923, 23)),
         ]);
         null != this._lottieRef &&
-            (this._animItem = t.loadAnimation({
+            (this._animItem = e.loadAnimation({
                 container: this._lottieRef,
                 renderer: "svg",
                 loop: !0,
                 autoplay: !0,
-                animationData: e,
+                animationData: t,
             }));
     }
     componentWillUnmount() {
         this._timeout.stop(), null != this._animItem && (this._animItem.destroy(), (this._animItem = void 0));
     }
     renderInputs() {
-        let { emailError: e, passwordError: t, submitting: i } = this.props,
+        let { emailError: t, passwordError: e, submitting: i } = this.props,
             { email: n, password: a } = this.state;
         return (0, s.jsx)("div", {
-            className: g.container,
-            children: (0, s.jsxs)(c.Kqy, {
+            className: m.container,
+            children: (0, s.jsxs)(d.Kqy, {
                 gap: 40,
                 children: [
-                    (0, s.jsxs)(c.Kqy, {
+                    (0, s.jsxs)(d.Kqy, {
                         gap: 20,
                         children: [
-                            (0, s.jsx)(c.oil, {
-                                label: m.intl.string(m.t.dI4d4S),
+                            (0, s.jsx)(d.oil, {
+                                label: c.intl.string(c.t.dI4d4S),
                                 value: n,
-                                error: e,
+                                error: t,
                                 onChange: this.handleEmailChange,
                                 onKeyPress: this.handleKeyPress,
                                 autoFocus: !0,
                             }),
-                            (0, s.jsx)(c.oil, {
-                                label: m.intl.string(m.t["CIGa+7"]),
+                            (0, s.jsx)(d.oil, {
+                                label: c.intl.string(c.t["CIGa+7"]),
                                 type: "password",
                                 value: a,
-                                error: t,
+                                error: e,
                                 onChange: this.handlePasswordChange,
                                 onKeyPress: this.handleKeyPress,
                             }),
                         ],
                     }),
-                    (0, s.jsx)(d.zx, {
+                    (0, s.jsx)(d.Button, {
+                        text: c.intl.string(c.t.v740sh),
+                        variant: "primary",
                         fullWidth: !0,
-                        size: d.zx.Sizes.LARGE,
                         onClick: this.handleVerify,
-                        submitting: i,
+                        loading: i,
                         disabled: 0 === n.length || 0 === a.length,
-                        children: m.intl.string(m.t.v740sh),
                     }),
                 ],
             }),
         });
     }
     renderActions() {
-        let { canChange: e } = this.props;
+        let { canChange: t } = this.props;
         return (0, s.jsxs)("div", {
-            className: g.container,
+            className: m.container,
             children: [
-                (0, s.jsx)(d.zx, {
-                    className: f.marginTop20,
-                    fullWidth: !0,
-                    size: d.zx.Sizes.LARGE,
-                    color: d.Tt.PRIMARY,
-                    onClick: this.handleResendEmail,
-                    children: m.intl.string(m.t.LdUkO6),
-                }),
-                e &&
-                    (0, s.jsx)(d.zx, {
-                        className: f.marginTop20,
+                (0, s.jsx)("div", {
+                    className: g.marginTop20,
+                    children: (0, s.jsx)(d.Button, {
+                        text: c.intl.string(c.t.LdUkO6),
+                        variant: "secondary",
                         fullWidth: !0,
-                        size: d.zx.Sizes.MEDIUM,
-                        look: d.iL.LINK,
-                        color: d.Tt.LINK,
-                        onClick: this.handleChangeEmailClick,
-                        children: m.intl.string(m.t.oP5zGA),
+                        onClick: this.handleResendEmail,
+                    }),
+                }),
+                t &&
+                    (0, s.jsx)("div", {
+                        className: g.marginTop20,
+                        children: (0, s.jsx)(d.Button, {
+                            text: c.intl.string(c.t.oP5zGA),
+                            variant: "primary",
+                            fullWidth: !0,
+                            onClick: this.handleChangeEmailClick,
+                        }),
                     }),
             ],
         });
     }
     render() {
-        let e,
-            { resent: t } = this.state,
+        let t,
+            { resent: e } = this.state,
             { email: i, canResend: n, transitionState: a } = this.props;
         return (
-            (e =
-                t && null != i
-                    ? m.intl.format(m.t.JqLgQL, { email: i })
+            (t =
+                e && null != i
+                    ? c.intl.format(c.t.JqLgQL, { email: i })
                     : n
-                      ? m.intl.string(m.t.tSXg8O)
-                      : m.intl.string(m.t.KW5DEh)),
-            (0, s.jsxs)(c.Y0X, {
+                      ? c.intl.string(c.t.tSXg8O)
+                      : c.intl.string(c.t.KW5DEh)),
+            (0, s.jsxs)(d.Y0X, {
                 transitionState: a,
                 "aria-labelledby": this._headerId,
-                className: o()(g.emailVerificationModal, p.vertical, p.alignCenter, p.justifyCenter, f.marginTop60),
+                className: r()(m.emailVerificationModal, p.vertical, p.alignCenter, p.justifyCenter, g.marginTop60),
                 parentComponent: "EmailVerificationModal",
                 children: [
                     (0, s.jsx)("div", {
-                        className: g.animationContainer,
+                        className: m.animationContainer,
                         ref: this.setLottieRef,
                     }),
                     (0, s.jsx)("div", {
                         id: this._headerId,
-                        className: o()(g.title, f.marginBottom8),
-                        children: m.intl.string(m.t["1MPz27"]),
+                        className: r()(m.title, g.marginBottom8),
+                        children: c.intl.string(c.t["1MPz27"]),
                     }),
                     (0, s.jsx)("div", {
-                        className: o()(g.body, f.marginBottom20),
-                        children: e,
+                        className: r()(m.body, g.marginBottom20),
+                        children: t,
                     }),
                     n ? this.renderActions() : this.renderInputs(),
                 ],
             })
         );
     }
-    constructor(...e) {
-        super(...e),
-            C(this, "_lottieRef", void 0),
-            C(this, "_animItem", null),
-            C(this, "_timeout", new h.V7()),
-            C(this, "_headerId", (0, r.Z)()),
-            C(this, "state", {
+    constructor(...t) {
+        super(...t),
+            f(this, "_lottieRef", void 0),
+            f(this, "_animItem", null),
+            f(this, "_timeout", new h.V7()),
+            f(this, "_headerId", (0, o.Z)()),
+            f(this, "state", {
                 resent: !1,
                 shouldClose: !1,
                 email: "",
                 password: "",
             }),
-            C(this, "setLottieRef", (e) => {
-                this._lottieRef = e;
+            f(this, "setLottieRef", (t) => {
+                this._lottieRef = t;
             }),
-            C(this, "handleVerify", () => {
-                let { onVerify: e } = this.props;
-                e(this.state.email, this.state.password);
+            f(this, "handleVerify", () => {
+                let { onVerify: t } = this.props;
+                t(this.state.email, this.state.password);
             }),
-            C(this, "handleResendEmail", () => {
-                let { onResend: e, onClose: t } = this.props;
-                e(),
+            f(this, "handleResendEmail", () => {
+                let { onResend: t, onClose: e } = this.props;
+                t(),
                     this.state.resent ||
                         (this.setState({
                             resent: !0,
                             shouldClose: !0,
                         }),
                         this._timeout.start(3000, () => {
-                            this.state.shouldClose && t();
+                            this.state.shouldClose && e();
                         }));
             }),
-            C(this, "handleChangeEmailClick", () => {
-                let { onChangeEmailClick: e } = this.props;
+            f(this, "handleChangeEmailClick", () => {
+                let { onChangeEmailClick: t } = this.props;
                 this.setState({
                     resent: !1,
                     shouldClose: !1,
                 }),
-                    e();
+                    t();
             }),
-            C(this, "handleEmailChange", (e) => {
-                this.setState({ email: e });
+            f(this, "handleEmailChange", (t) => {
+                this.setState({ email: t });
             }),
-            C(this, "handlePasswordChange", (e) => {
-                this.setState({ password: e });
+            f(this, "handlePasswordChange", (t) => {
+                this.setState({ password: t });
             }),
-            C(this, "handleKeyPress", (e) => {
-                let { email: t, password: i } = this.state;
-                13 === e.which && t.length > 0 && i.length > 0 && (e.preventDefault(), this.handleVerify());
+            f(this, "handleKeyPress", (t) => {
+                let { email: e, password: i } = this.state;
+                13 === t.which && e.length > 0 && i.length > 0 && (t.preventDefault(), this.handleVerify());
             });
     }
 }
-C(v, "defaultProps", {
+f(C, "defaultProps", {
     canResend: !1,
     canChange: !0,
     onChangeEmailClick: u.dG4,
-    onVerify: (e, t) => {},
+    onVerify: (t, e) => {},
     onResend: u.dG4,
     onClose: u.dG4,
 });
-let y = v;
+let v = C;

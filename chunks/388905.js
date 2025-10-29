@@ -1,19 +1,18 @@
 n.d(t, {
-    DK: () => T,
-    Dx: () => I,
-    EJ: () => x,
-    Ee: () => S,
-    Hh: () => L,
-    II: () => P,
-    MC: () => R,
-    Vj: () => N,
-    ZP: () => j,
-    gO: () => w,
-    i_: () => D,
-    jQ: () => M,
-    qE: () => C,
-    v6: () => k,
-    zx: () => A,
+    DK: () => b,
+    Dx: () => E,
+    EJ: () => N,
+    Ee: () => y,
+    Hh: () => C,
+    II: () => T,
+    MC: () => I,
+    Vj: () => v,
+    ZP: () => w,
+    gO: () => S,
+    i_: () => A,
+    jQ: () => R,
+    qE: () => O,
+    v6: () => P,
 }),
     n(953529),
     n(472816),
@@ -22,129 +21,58 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(43267),
-    c = n(905656),
-    u = n(600164),
-    d = n(313201),
-    f = n(565138),
-    _ = n(361207),
-    p = n(63063),
-    h = n(981631),
-    m = n(388032),
-    g = n(28731);
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function y(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = O(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function O(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let v = s.qEK;
-null == v && (v = () => null);
-let I = (e) => {
-        let { className: t, id: n, children: i, variant: o = "heading-xl/semibold" } = e;
-        return (0, r.jsx)(s.Heading, {
-            variant: o,
+    o = n(481060),
+    s = n(43267),
+    l = n(905656),
+    c = n(600164),
+    u = n(313201),
+    d = n(565138),
+    f = n(361207),
+    _ = n(63063),
+    p = n(981631),
+    h = n(388032),
+    m = n(28731);
+let g = o.qEK;
+null == g && (g = () => null);
+let E = (e) => {
+        let { className: t, id: n, children: i, variant: s = "heading-xl/semibold" } = e;
+        return (0, r.jsx)(o.Heading, {
+            variant: s,
             color: "header-primary",
-            className: a()(g.title, t),
+            className: a()(m.title, t),
             id: n,
             children: i,
         });
     },
-    T = (e) => {
+    b = (e) => {
         let { className: t, children: n } = e;
-        return (0, r.jsx)(s.Text, {
+        return (0, r.jsx)(o.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
             className: t,
             children: n,
         });
     },
-    S = (e) => {
+    y = (e) => {
         let { className: t, src: n } = e;
         return (0, r.jsx)("img", {
             alt: "",
             src: n,
-            className: a()(g.image, t),
+            className: a()(m.image, t),
         });
     },
-    A = (e) => {
-        var { className: t } = e,
-            n = y(e, ["className"]);
-        let i = n.look === o.zx.Looks.LINK;
-        return (0, r.jsx)(
-            o.zx,
-            b(
-                {
-                    size: i ? o.zx.Sizes.MIN : o.zx.Sizes.LARGE,
-                    fullWidth: !i,
-                    className: a()(t, {
-                        [g.button]: !i,
-                        [g.linkButton]: i,
-                    }),
-                },
-                n,
-            ),
-        );
-    };
-(A.Looks = o.zx.Looks), (A.Colors = o.zx.Colors), (A.Sizes = o.zx.Sizes);
-let C = (e) => {
+    O = (e) => {
         let { className: t, src: n, size: i } = e;
-        return (0, r.jsx)(v, {
+        return (0, r.jsx)(g, {
             src: n,
             size: i,
-            className: a()(g.inviteLargeIcon, t),
+            className: a()(m.inviteLargeIcon, t),
             "aria-hidden": !0,
         });
     },
-    N = (e) => {
+    v = (e) => {
         let { guild: t, size: n, animate: i = !1, className: a } = e;
-        return (0, r.jsx)(f.Z, {
+        return (0, r.jsx)(d.Z, {
             active: !0,
             guild: t,
             size: n,
@@ -152,27 +80,27 @@ let C = (e) => {
             className: a,
         });
     };
-N.Sizes = f.Z.Sizes;
-let R = (e) => {
+v.Sizes = d.Z.Sizes;
+let I = (e) => {
     let { className: t, channel: n, size: i } = e;
-    return (0, r.jsx)(v, {
-        src: (0, l.x)(n),
+    return (0, r.jsx)(g, {
+        src: (0, s.x)(n),
         size: i,
-        className: a()(g.inviteIcon, t),
+        className: a()(m.inviteIcon, t),
         "aria-hidden": !0,
     });
 };
-R.Sizes = s.EFr;
-let P = (e) => {
+I.Sizes = o.EFr;
+let T = (e) => {
         let {
                 label: t,
                 error: n,
                 placeholder: i,
                 value: a,
-                className: o,
+                className: s,
                 setRef: l,
                 type: c = "text",
-                onChange: u,
+                onChange: d,
                 autoComplete: f,
                 autoFocus: _,
                 maxLength: p,
@@ -183,15 +111,15 @@ let P = (e) => {
                 onFocus: b,
                 onBlur: y,
             } = e,
-            O = (0, d.Dt)(),
-            v = (0, r.jsx)(s.oil, {
+            O = (0, u.Dt)(),
+            v = (0, r.jsx)(o.oil, {
                 name: m,
                 type: c,
                 value: a,
                 inputRef: l,
                 placeholder: i,
                 "aria-label": t,
-                onChange: u,
+                onChange: d,
                 autoComplete: f,
                 autoFocus: _,
                 maxLength: p,
@@ -204,99 +132,99 @@ let P = (e) => {
                 required: E,
                 description: g,
             });
-        return null != o
+        return null != s
             ? (0, r.jsx)("div", {
-                  className: o,
+                  className: s,
                   children: v,
               })
             : v;
     },
-    w = (e) => {
+    S = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)("div", {
-            className: a()(g.block, t),
+            className: a()(m.block, t),
             children: n,
         });
     },
-    D = (e) => {
+    A = (e) => {
         let { className: t, children: n } = e;
-        return (0, r.jsx)(s.Text, {
+        return (0, r.jsx)(o.Text, {
             variant: "text-xs/normal",
-            className: a()(g.subText, t),
+            className: a()(m.subText, t),
             children: n,
         });
     },
-    L = (e) => {
+    C = (e) => {
         let { className: t } = e;
-        return (0, r.jsx)(u.Z, {
-            direction: u.Z.Direction.VERTICAL,
-            align: u.Z.Align.CENTER,
+        return (0, r.jsx)(c.Z, {
+            direction: c.Z.Direction.VERTICAL,
+            align: c.Z.Align.CENTER,
             className: t,
-            children: (0, r.jsx)(c.Z, { className: g.spinnerVideo }),
+            children: (0, r.jsx)(l.Z, { className: m.spinnerVideo }),
         });
     },
-    x = (e) => {
+    N = (e) => {
         let t,
-            { online: n, total: i, className: o, flat: l, textClassName: c } = e;
+            { online: n, total: i, className: s, flat: l, textClassName: u } = e;
         return null == i
             ? null
             : (null != n &&
                   n > 0 &&
                   (t = (0, r.jsxs)("div", {
-                      className: a()(g.pill, g.pillOnline, l && g.pillFlat),
+                      className: a()(m.pill, m.pillOnline, l && m.pillFlat),
                       children: [
-                          (0, r.jsx)("i", { className: g.pillIconOnline }),
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)("i", { className: m.pillIconOnline }),
+                          (0, r.jsx)(o.Text, {
                               tag: "span",
-                              className: c,
+                              className: u,
                               variant: "text-sm/normal",
                               color: "header-secondary",
-                              children: m.intl.format(m.t["LC+S+m"], { membersOnline: n }),
+                              children: h.intl.format(h.t["LC+S+m"], { membersOnline: n }),
                           }),
                       ],
                   })),
-              (0, r.jsxs)(u.Z, {
-                  justify: u.Z.Justify.CENTER,
-                  className: o,
+              (0, r.jsxs)(c.Z, {
+                  justify: c.Z.Justify.CENTER,
+                  className: s,
                   children: [
                       t,
                       (0, r.jsxs)("div", {
-                          className: a()(g.pill, l && g.pillFlat),
+                          className: a()(m.pill, l && m.pillFlat),
                           children: [
-                              (0, r.jsx)("i", { className: g.pillIconTotal }),
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)("i", { className: m.pillIconTotal }),
+                              (0, r.jsx)(o.Text, {
                                   tag: "span",
-                                  className: c,
+                                  className: u,
                                   variant: "text-sm/normal",
                                   color: "header-secondary",
-                                  children: m.intl.format(m.t.zRl6XR, { count: i }),
+                                  children: h.intl.format(h.t.zRl6XR, { count: i }),
                               }),
                           ],
                       }),
                   ],
               }));
     },
-    M = (e) => {
+    R = (e) => {
         let { user: t } = e;
         return null == t
             ? null
             : (0, r.jsxs)("div", {
-                  className: g.joiningAs,
+                  className: m.joiningAs,
                   children: [
-                      (0, r.jsx)(s.Text, {
+                      (0, r.jsx)(o.Text, {
                           tag: "span",
                           variant: "text-md/normal",
                           color: "header-secondary",
-                          children: m.intl.string(m.t["/8WWvE"]),
+                          children: h.intl.string(h.t["/8WWvE"]),
                       }),
-                      (0, r.jsx)(C, {
-                          className: g.joiningAsAvatar,
+                      (0, r.jsx)(O, {
+                          className: m.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
-                          size: s.EFr.SIZE_24,
+                          size: o.EFr.SIZE_24,
                           "aria-label": t.username,
                       }),
-                      (0, r.jsx)(s.Text, {
-                          className: g.joiningAsUsername,
+                      (0, r.jsx)(o.Text, {
+                          className: m.joiningAsUsername,
                           tag: "span",
                           variant: "text-md/semibold",
                           color: "header-primary",
@@ -305,48 +233,50 @@ let P = (e) => {
                   ],
               });
     },
-    k = (e) => {
+    P = (e) => {
         let { className: t } = e;
-        return (0, r.jsxs)(w, {
+        return (0, r.jsxs)(S, {
             className: t,
             children: [
-                (0, r.jsx)(o.zx, {
-                    onClick: () => window.open((0, _.t3)()),
-                    children: m.intl.format(m.t.JoS1i3, { platform: (0, _.DW)() }),
+                (0, r.jsx)(o.Button, {
+                    text: h.intl.format(h.t.JoS1i3, { platform: (0, f.DW)() }),
+                    variant: "secondary",
+                    fullWidth: !0,
+                    onClick: () => window.open((0, f.t3)()),
                 }),
-                (0, r.jsx)(D, {
-                    className: g.downloadButtonSubtext,
-                    children: m.intl.format(m.t.wO1VBk, {
-                        supportedBrowserURL: p.Z.getArticleURL(h.BhN.SUPPORTED_BROWSERS),
+                (0, r.jsx)(A, {
+                    className: m.downloadButtonSubtext,
+                    children: h.intl.format(h.t.wO1VBk, {
+                        supportedBrowserURL: _.Z.getArticleURL(p.BhN.SUPPORTED_BROWSERS),
                     }),
                 }),
             ],
         });
     },
-    j = (e) => {
+    w = (e) => {
         let {
             className: t,
             contentClassName: n,
             tag: i = "section",
-            onSubmit: o,
+            onSubmit: s,
             children: l,
             expanded: c = !1,
-            theme: u = h.BRd.DARK,
+            theme: u = p.BRd.DARK,
             style: d,
         } = e;
-        return (0, r.jsx)(s.f6W, {
+        return (0, r.jsx)(o.f6W, {
             theme: u,
             disableAdaptiveTheme: !0,
             children: (e) =>
                 (0, r.jsxs)(i, {
                     "data-theme": u,
-                    onSubmit: o,
+                    onSubmit: s,
                     style: d,
-                    className: a()(c ? g.authBoxExpanded : g.authBox, e, t),
+                    className: a()(c ? m.authBoxExpanded : m.authBox, e, t),
                     children: [
-                        (0, r.jsx)("div", { className: g.discordLogo }),
+                        (0, r.jsx)("div", { className: m.discordLogo }),
                         (0, r.jsx)("div", {
-                            className: a()(g.centeringWrapper, n),
+                            className: a()(m.centeringWrapper, n),
                             children: l,
                         }),
                     ],

@@ -25,9 +25,9 @@ let E = (e) => {
                     gap: 8,
                     children: [(0, r.jsx)(u.Dx, { children: t }), (0, r.jsx)(u.DK, { children: n })],
                 }),
-                (0, r.jsx)(u.zx, {
+                (0, r.jsx)(o.Button, {
                     onClick: s,
-                    children: i,
+                    text: i,
                 }),
             ],
         }),

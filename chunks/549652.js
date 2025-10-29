@@ -1,19 +1,20 @@
-n.r(e), n.d(e, { default: () => B }), n(35282);
+n.r(e), n.d(e, { default: () => b }), n(35282);
 var s = n(951288),
     r = n(647438),
     i = n(593473),
     a = n(442837),
     l = n(544891),
-    o = n(536285),
-    d = n(388905),
+    o = n(481060),
+    d = n(536285),
+    h = n(388905),
     c = n(600164),
-    h = n(703656),
+    u = n(703656),
     f = n(314897),
-    u = n(981631),
-    p = n(388032),
-    m = n(796771),
-    g = n(197571);
-function x(t, e, n) {
+    p = n(981631),
+    m = n(388032),
+    g = n(796771),
+    x = n(197571);
+function j(t, e, n) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -27,22 +28,22 @@ function x(t, e, n) {
     );
 }
 a.ZP.initialize();
-let j = "done",
+let B = "done",
     D = "failed";
 function N() {
     try {
         window.close();
     } catch (t) {}
 }
-class B extends r.PureComponent {
+class b extends r.PureComponent {
     componentDidMount() {
         let { stage: t, key: e } = this.state;
-        t === j
+        t === B
             ? N()
             : f.default.isAuthenticated()
               ? l.tn
                     .post({
-                        url: u.ANM.HANDOFF,
+                        url: p.ANM.HANDOFF,
                         body: { key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0,
@@ -54,66 +55,68 @@ class B extends r.PureComponent {
               : this.handoff();
     }
     handoff(t) {
-        o.default
-            .requestRedirect(u.Etm.BROWSER_HANDOFF, {
+        d.default
+            .requestRedirect(p.Etm.BROWSER_HANDOFF, {
                 handoffToken: t,
                 fingerprint: f.default.getFingerprint(),
             })
             .then(this.done, this.failed);
     }
     renderDone() {
-        return (0, s.jsxs)(d.ZP, {
+        return (0, s.jsxs)(h.ZP, {
             children: [
-                (0, s.jsx)(d.Ee, {
+                (0, s.jsx)(h.Ee, {
                     src: n(69008),
-                    className: g.marginBottom20,
+                    className: x.marginBottom20,
                 }),
-                (0, s.jsx)(d.Dx, {
-                    className: g.marginBottom8,
-                    children: p.intl.string(p.t.YsLqvs),
+                (0, s.jsx)(h.Dx, {
+                    className: x.marginBottom8,
+                    children: m.intl.string(m.t.YsLqvs),
                 }),
-                (0, s.jsx)(d.DK, {
-                    className: g.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDo),
+                (0, s.jsx)(h.DK, {
+                    className: x.marginBottom40,
+                    children: m.intl.string(m.t.CSBYDo),
                 }),
-                (0, s.jsx)(d.zx, {
+                (0, s.jsx)(o.Button, {
+                    text: m.intl.string(m.t.fIv16B),
+                    fullWidth: !0,
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16B),
                 }),
             ],
         });
     }
     renderFailed() {
-        return (0, s.jsxs)(d.ZP, {
+        return (0, s.jsxs)(h.ZP, {
             children: [
-                (0, s.jsx)(d.Ee, {
+                (0, s.jsx)(h.Ee, {
                     src: n(69008),
-                    className: g.marginBottom20,
+                    className: x.marginBottom20,
                 }),
-                (0, s.jsx)(d.Dx, {
-                    className: g.marginBottom8,
-                    children: p.intl.string(p.t.hsLIsW),
+                (0, s.jsx)(h.Dx, {
+                    className: x.marginBottom8,
+                    children: m.intl.string(m.t.hsLIsW),
                 }),
-                (0, s.jsx)(d.DK, {
-                    className: g.marginBottom40,
-                    children: p.intl.string(p.t.CSBYDo),
+                (0, s.jsx)(h.DK, {
+                    className: x.marginBottom40,
+                    children: m.intl.string(m.t.CSBYDo),
                 }),
-                (0, s.jsx)(d.zx, {
+                (0, s.jsx)(o.Button, {
+                    text: m.intl.string(m.t.fIv16B),
+                    fullWidth: !0,
                     onClick: this.handleOpenApp,
-                    children: p.intl.string(p.t.fIv16B),
                 }),
             ],
         });
     }
     renderHandoff() {
-        return (0, s.jsxs)(d.ZP, {
+        return (0, s.jsxs)(h.ZP, {
             children: [
-                (0, s.jsx)(d.Hh, {}),
-                (0, s.jsx)(d.Dx, {
-                    className: g.marginBottom8,
-                    children: p.intl.string(p.t.ctWa65),
+                (0, s.jsx)(h.Hh, {}),
+                (0, s.jsx)(h.Dx, {
+                    className: x.marginBottom8,
+                    children: m.intl.string(m.t.ctWa65),
                 }),
-                (0, s.jsx)(d.DK, { children: p.intl.string(p.t["53IHoo"]) }),
+                (0, s.jsx)(h.DK, { children: m.intl.string(m.t["53IHoo"]) }),
             ],
         });
     }
@@ -121,7 +124,7 @@ class B extends r.PureComponent {
         let t,
             { stage: e } = this.state;
         switch (e) {
-            case j:
+            case B:
                 t = this.renderDone();
                 break;
             case D:
@@ -133,27 +136,27 @@ class B extends r.PureComponent {
         return (0, s.jsx)(c.Z, {
             justify: c.Z.Justify.CENTER,
             align: c.Z.Align.CENTER,
-            className: m.wrapper,
+            className: g.wrapper,
             children: t,
         });
     }
     constructor(t) {
         var e;
         super(t),
-            x(this, "done", () => {
-                N(), this.setState({ stage: j });
+            j(this, "done", () => {
+                N(), this.setState({ stage: B });
             }),
-            x(this, "failed", () => {
+            j(this, "failed", () => {
                 this.setState({ stage: D }), N();
             }),
-            x(this, "handleOpenApp", () => {
-                (0, h.uL)(u.Z5c.ME);
+            j(this, "handleOpenApp", () => {
+                (0, u.uL)(p.Z5c.ME);
             });
         let { search: n } = t.location,
             s = null != n && "" !== n ? (0, i.parse)(n) : {};
         this.state = {
             key: null != (e = s.key) ? e : "",
-            stage: "true" === s.done ? j : "handoff",
+            stage: "true" === s.done ? B : "handoff",
         };
     }
 }

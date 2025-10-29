@@ -58,17 +58,19 @@ function m(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
+            (0, r.jsxs)(l.ButtonGroup, {
+                direction: "vertical",
+                fullWidth: !0,
                 className: h.buttonContainer,
                 children: [
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(l.Button, {
+                        text: d.intl.string(d.t.GgCRqR),
                         onClick: () => t(c.n.PASSWORD),
-                        children: d.intl.string(d.t.GgCRqR),
                     }),
-                    (0, r.jsx)(a.zx, {
-                        color: a.zx.Colors.PRIMARY,
+                    (0, r.jsx)(l.Button, {
+                        text: d.intl.string(d.t["B/yHcQ"]),
+                        variant: "secondary",
                         onClick: () => i(u.Z5c.LOGIN, { source: "account_revert" }),
-                        children: d.intl.string(d.t["B/yHcQ"]),
                     }),
                 ],
             }),

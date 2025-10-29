@@ -79,17 +79,21 @@ class v extends (r = s.PureComponent) {
                     children: _.intl.string(_.t.f6rdLg),
                 }),
                 (0, i.jsx)(d.DK, { children: s }),
-                (0, i.jsx)(d.zx, {
+                (0, i.jsx)("div", {
                     className: x.marginTop20,
-                    onClick: () => r(n),
-                    children: _.intl.string(_.t.fIv16B),
+                    children: (0, i.jsx)(c.Button, {
+                        text: _.intl.string(_.t.fIv16B),
+                        fullWidth: !0,
+                        onClick: () => r(n),
+                    }),
                 }),
-                (0, i.jsx)(d.zx, {
+                (0, i.jsx)("div", {
                     className: x.marginTop8,
-                    color: d.zx.Colors.LINK,
-                    look: d.zx.Looks.LINK,
-                    onClick: () => r(m.Z5c.SETTINGS("notifications", f.vG)),
-                    children: _.intl.string(_.t.YYTirT),
+                    children: (0, i.jsx)(c.Avr, {
+                        text: _.intl.string(_.t.YYTirT),
+                        textVariant: "text-sm/normal",
+                        onClick: () => r(m.Z5c.SETTINGS("notifications", f.vG)),
+                    }),
                 }),
             ],
         });
@@ -113,10 +117,13 @@ class v extends (r = s.PureComponent) {
                     children: _.intl.string(_.t["6U6OMQ"]),
                 }),
                 (0, i.jsx)(d.DK, { children: _.intl.string(_.t["yaDJ4/"]) }),
-                (0, i.jsx)(d.zx, {
+                (0, i.jsx)("div", {
                     className: x.marginTop40,
-                    onClick: () => t(e),
-                    children: _.intl.string(_.t.fIv16B),
+                    children: (0, i.jsx)(c.Button, {
+                        text: _.intl.string(_.t.fIv16B),
+                        fullWidth: !0,
+                        onClick: () => t(e),
+                    }),
                 }),
             ],
         });
@@ -134,10 +141,13 @@ class v extends (r = s.PureComponent) {
                     children: _.intl.string(_.t.ox9hIS),
                 }),
                 (0, i.jsx)(d.DK, { children: _.intl.string(_.t["/dcuR5"]) }),
-                (0, i.jsx)(d.zx, {
+                (0, i.jsx)("div", {
                     className: x.marginTop40,
-                    onClick: () => t(e),
-                    children: _.intl.string(_.t.fIv16B),
+                    children: (0, i.jsx)(c.Button, {
+                        text: _.intl.string(_.t.fIv16B),
+                        fullWidth: !0,
+                        onClick: () => t(e),
+                    }),
                 }),
             ],
         });

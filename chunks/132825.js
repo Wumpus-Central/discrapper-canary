@@ -6,6 +6,4 @@ e.exports = {
     mainLoginContainer: "mainLoginContainer__1d5fc",
     mobile: "mobile__1d5fc",
     goBackButton: "goBackButton__1d5fc",
-    content: "content__1d5fc",
-    caret: "caret__1d5fc",
 };
