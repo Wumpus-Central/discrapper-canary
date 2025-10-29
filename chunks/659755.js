@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     l = n(120356),
     i = n.n(l),
@@ -13,36 +13,37 @@ var r = n(951288),
     f = n(786040),
     C = n(508925),
     h = n(616066),
-    _ = n(58201),
-    m = n(201964),
-    b = n(1327);
-let v = new Set([o.Z.BUNDLE, o.Z.NAMEPLATE, o.Z.PROFILE_EFFECT]),
-    E = (e) => {
+    _ = n(396728),
+    m = n(58201),
+    b = n(201964),
+    v = n(1327);
+let E = new Set([o.Z.BUNDLE, o.Z.PROFILE_EFFECT]),
+    x = (e) => {
         let { product: t, isCardHovered: n } = e,
             l = (0, f.rC)(t),
             { isPurchased: o, isPartiallyOwnedBundle: s } = (0, p.L)(t),
-            a = null != l && v.has(l);
+            a = null != l && E.has(l);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: i()(b.productPreview, {
-                        [b.faded]: (o || s) && !n,
-                        [b.fullPreview]: a,
+                    className: i()(v.productPreview, {
+                        [v.faded]: (o || s) && !n,
+                        [v.fullPreview]: a,
                     }),
-                    children: (0, r.jsx)(x, {
+                    children: (0, r.jsx)(O, {
                         product: t,
                         isCardHovered: n,
                     }),
                 }),
-                o && (0, r.jsx)(O, { hidden: n }),
+                o && (0, r.jsx)(S, { hidden: n }),
             ],
         });
     },
-    x = (e) => {
+    O = (e) => {
         let { product: t, isCardHovered: n } = e,
             l = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
             i = (0, f.rC)(t),
-            s = (0, m.o)(t);
+            s = (0, b.o)(t);
         switch (i) {
             case o.Z.PROFILE_EFFECT:
                 return (0, r.jsx)(u.Z, {
@@ -60,6 +61,12 @@ let v = new Set([o.Z.BUNDLE, o.Z.NAMEPLATE, o.Z.PROFILE_EFFECT]),
                     avatarSize: c.EFr.SIZE_120,
                 });
             case o.Z.NAMEPLATE:
+                return (0, r.jsx)(_.Z, {
+                    nameplate: s,
+                    user: l,
+                    isHighlighted: n,
+                    isPurchased: !1,
+                });
             case o.Z.BUNDLE:
                 return null;
             case o.Z.EXTERNAL_SKU:
@@ -71,23 +78,23 @@ let v = new Set([o.Z.BUNDLE, o.Z.NAMEPLATE, o.Z.PROFILE_EFFECT]),
                 return null;
         }
     },
-    O = (e) => {
+    S = (e) => {
         let { hidden: t } = e;
         return (0, r.jsx)(s.sV5, {
             size: "custom",
             color: c.TVs.colors.INTERACTIVE_ACTIVE,
             width: 40,
             height: 40,
-            className: i()(b.productPreviewIconOverlay, { [b.hidden]: t }),
+            className: i()(v.productPreviewIconOverlay, { [v.hidden]: t }),
         });
     },
-    S = (e) => {
+    y = (e) => {
         let { skuId: t, isCardHovered: n } = e,
             l = (0, f.LJ)(t),
             i = (0, g.o)(l);
         if (null == l) return null;
-        let o = (0, _.W)(l, i);
-        return (0, r.jsx)(E, {
+        let o = (0, m.W)(l, i);
+        return (0, r.jsx)(x, {
             product: o,
             isCardHovered: n,
         });
