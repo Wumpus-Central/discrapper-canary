@@ -1,18 +1,20 @@
 n.d(t, {
-    G: () => E,
-    j: () => b,
+    G: () => y,
+    j: () => O,
 });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(793030),
-    s = n(481060),
-    l = n(252618),
-    c = n(981631),
-    u = n(388032),
-    d = n(697257);
-function f(e, t, n) {
+    s = n(442837),
+    l = n(481060),
+    c = n(252618),
+    u = n(906467),
+    d = n(981631),
+    f = n(388032),
+    _ = n(697257);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +38,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,22 +55,22 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -76,7 +78,7 @@ function m(e, t) {
     }
     return i;
 }
-function g(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,34 +87,34 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function E(e) {
+function y(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
-    return (
-        (0, l.Tt)({ location: u.intl.string(u.t["3S2494"]) }),
-        (0, r.jsx)(s.f6W, {
-            theme: c.BRd.DARK,
-            children: (e) =>
-                (0, r.jsx)("div", {
-                    className: a()(e, d.oauth2PageWrapper, i),
-                    children:
-                        !0 === n
-                            ? t
-                            : (0, r.jsx)("div", {
-                                  className: d.oauth2PageContent,
-                                  children: t,
-                              }),
-                }),
-        })
-    );
+    (0, c.Tt)({ location: f.intl.string(f.t["3S2494"]) });
+    let o = (0, s.e7)([u.Z], () => u.Z.isDeveloper) ? "92px" : void 0;
+    return (0, r.jsx)(l.f6W, {
+        theme: d.BRd.DARK,
+        children: (e) =>
+            (0, r.jsx)("div", {
+                className: a()(e, _.oauth2PageWrapper, i),
+                style: { marginBottom: o },
+                children:
+                    !0 === n
+                        ? t
+                        : (0, r.jsx)("div", {
+                              className: _.oauth2PageContent,
+                              children: t,
+                          }),
+            }),
+    });
 }
-function b(e) {
+function O(e) {
     var t,
         n,
         { hideHeader: i } = e,
-        a = m(e, ["hideHeader"]);
+        a = E(e, ["hideHeader"]);
     return (0, r.jsxs)(
         o.IX,
-        h(_({}, a), {
+        g(h({}, a), {
             onClose: () => {
                 var e;
                 return Promise.resolve(null == (e = a.onClose) ? void 0 : e.call(a));
