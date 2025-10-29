@@ -99,69 +99,70 @@ let b = u.Z.Millis.SECOND,
         () => f.intl.string(f.t.gPg9fS),
     ];
 function I(e) {
-    let { text: t, copyValue: n, children: u, onCopy: f, "aria-label": _, delay: h = O } = e,
-        [E, I] = i.useState(0),
-        [T, S] = i.useState(!1),
-        [A, C] = i.useState(!1),
-        [N] = i.useState(() => new o.V7()),
-        [R] = i.useState(() => new o.V7());
+    let { text: t, copyValue: n, children: u, onCopy: f, "aria-label": _, delay: h = O, dataMeticulousIgnore: E } = e,
+        [I, T] = i.useState(0),
+        [S, A] = i.useState(!1),
+        [C, N] = i.useState(!1),
+        [R] = i.useState(() => new o.V7()),
+        [P] = i.useState(() => new o.V7());
     if (
         (i.useEffect(
             () => () => {
-                N.stop(), R.stop();
+                R.stop(), P.stop();
             },
-            [N, R],
+            [R, P],
         ),
         !c.wS)
     )
         return (0, r.jsx)(r.Fragment, { children: u({}) });
-    let P = E >= v.length - 1,
-        w = P ? s.r6K.RED : s.r6K.GREEN,
-        D = T ? w : s.r6K.PRIMARY,
-        L = () => {
+    let w = I >= v.length - 1,
+        D = w ? s.r6K.RED : s.r6K.GREEN,
+        L = S ? D : s.r6K.PRIMARY,
+        x = () => {
             var e;
-            if (!T) return t;
-            let n = (0, a.clamp)(E - 1, 0, v.length - 1),
+            if (!S) return t;
+            let n = (0, a.clamp)(I - 1, 0, v.length - 1),
                 i = null != (e = v[n]) ? e : v[0];
             return (0, r.jsx)(s.UkV, {
-                isShaking: P,
+                isShaking: w,
                 children: i(),
             });
         },
-        x = (e, t) => {
-            !A && T && t.phase === d.UkZ.LEAVE && S(!1);
+        M = (e, t) => {
+            !C && S && t.phase === d.UkZ.LEAVE && A(!1);
         },
-        M = () => {
+        k = () => {
             null == f || f(),
                 (0, c.JG)(n),
                 l.default.track(d.rMx.TEXT_COPIED),
-                A || I(E + 1),
-                C(!0),
-                S(!0),
-                N.start(b, () => C(!1)),
-                R.start(y, () => I(0));
+                C || T(I + 1),
+                N(!0),
+                A(!0),
+                R.start(b, () => N(!1)),
+                P.start(y, () => T(0));
         };
     return (0, r.jsx)(s.aML, {
         "data-migration-pending": !0,
-        text: L(),
+        text: x(),
         delay: h,
         "aria-label": _,
-        color: D,
-        forceOpen: A,
-        onAnimationRest: x,
+        dataMeticulousIgnore: E,
+        color: L,
+        forceOpen: C,
+        onAnimationRest: M,
         children: (e) => {
             var { onClick: t, onMouseEnter: n } = e;
             return u(
                 m(p({}, g(e, ["onClick", "onMouseEnter"])), {
                     onClick: () => {
-                        null == t || t(), M();
+                        null == t || t(), k();
                     },
                     onMouseEnter: () => {
-                        if (!T) {
+                        if (!S) {
                             null == n || n();
                             return;
                         }
-                        N.stop(), C(!1);
+                        R.stop(), N(!1);
                     },
                 }),
             );

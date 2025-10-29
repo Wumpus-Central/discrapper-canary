@@ -85,8 +85,8 @@ function O(e) {
     let { compact: _ = !1 } = e,
         m = (0, d.Dt)(),
         E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        O = "462481",
-        v = "b53dbffcd98a507871aab1fc76728f27f70763df".substring(0, 7),
+        O = "462891",
+        v = "b651ba81acb42501d303038e6700fe62d4229079".substring(0, 7),
         I = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         T = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
         S = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),
@@ -104,7 +104,7 @@ function O(e) {
                       copyValue: N.join(" "),
                       text: p.intl.string(p.t["9Al4Qd"]),
                       "aria-label": !1,
-                      "data-mtctest-ignore": "true",
+                      dataMeticulousIgnore: "true",
                       children: (e) =>
                           (0, r.jsxs)(
                               l.P3F,
@@ -177,6 +177,7 @@ function O(e) {
                       copyValue: N.join(" "),
                       text: p.intl.string(p.t["9Al4Qd"]),
                       "aria-label": !1,
+                      dataMeticulousIgnore: "true",
                       children: (e) =>
                           (0, r.jsx)(
                               l.P3F,

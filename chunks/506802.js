@@ -144,15 +144,16 @@ let D = (e) => {
                 allowOverflow: m = !1,
                 tooltipPointerClassName: b,
                 positionKeyStemOverride: O,
+                dataMeticulousIgnore: v,
             } = e,
-            v = "".concat(null != O ? O : "string" == typeof o ? o : "", ":").concat(r);
+            I = "".concat(null != O ? O : "string" == typeof o ? o : "", ":").concat(r);
         return (0, i.jsx)(g.W5, {
             disablePointerEvents: h,
             targetRef: t,
             position: r,
             autoInvert: !0,
             align: n,
-            positionKey: v,
+            positionKey: I,
             spacing: _,
             nudgeAlignIntoViewport: !0,
             children: (e) => {
@@ -161,6 +162,7 @@ let D = (e) => {
                     onClick: l,
                     className: s()(E.tooltip, P[null != t ? t : r], P[a], { [E.tooltipDisablePointerEvents]: h }, u),
                     style: y({}, p, d),
+                    "data-mtctest-ignore": v,
                     children: [
                         (0, i.jsx)("div", {
                             className: s()(E.tooltipPointer, E.tooltipPointerBg, b),
@@ -296,15 +298,16 @@ class j extends (r = a.Component) {
                 clickableOnMobile: _,
                 hideOnClick: p,
                 tooltipPointerClassName: h,
+                dataMeticulousIgnore: m,
             } = this.props,
-            m = (u.tq || u.Em) && !0 === _ && p,
-            g = (!1 !== c && !m) || !0 === c,
-            E = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement,
-            b = null;
+            g = (u.tq || u.Em) && !0 === _ && p,
+            E = (!1 !== c && !g) || !0 === c,
+            b = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement,
+            y = null;
         return (
-            (b = e instanceof Function ? (E ? e() : null) : e),
+            (y = e instanceof Function ? (b ? e() : null) : e),
             (0, i.jsx)(k, {
-                disableTooltipPointerEvents: g,
+                disableTooltipPointerEvents: E,
                 targetElementRef: this.domElementRef,
                 tooltipStyle: s,
                 tooltipClassName: o,
@@ -314,12 +317,13 @@ class j extends (r = a.Component) {
                 position: n,
                 color: r,
                 spacing: a,
-                isVisible: E,
+                isVisible: b,
                 onAnimationRest: d,
-                onNonAccessibleClick: m ? this.handleClick : void 0,
+                onNonAccessibleClick: g ? this.handleClick : void 0,
                 allowOverflow: f,
                 positionKeyStemOverride: this.props.positionKeyStemOverride,
-                children: b,
+                dataMeticulousIgnore: m,
+                children: y,
             })
         );
     }
