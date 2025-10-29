@@ -781,6 +781,7 @@ let tn = Object.freeze({
     [eC.uaV.REPORT_TO_MOD_TIMEOUT_USER]: N.Z,
     [eC.uaV.REPORT_TO_MOD_DELETED_MESSAGE]: N.Z,
     [eC.uaV.REPORT_TO_MOD_CLOSED_REPORT]: N.Z,
+    [eC.uaV.PREMIUM_GROUP_INVITE]: void 0,
 });
 function tr(e) {
     let { message: t, channel: n, compact: i, disableInteraction: a } = e,

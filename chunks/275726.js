@@ -68,6 +68,7 @@ var r = (function (e) {
         (e[(e.REPORT_TO_MOD_BAN_USER = 61)] = "REPORT_TO_MOD_BAN_USER"),
         (e[(e.REPORT_TO_MOD_CLOSED_REPORT = 62)] = "REPORT_TO_MOD_CLOSED_REPORT"),
         (e[(e.EMOJI_ADDED = 63)] = "EMOJI_ADDED"),
+        (e[(e.PREMIUM_GROUP_INVITE = 64)] = "PREMIUM_GROUP_INVITE"),
         e
     );
 })({});
