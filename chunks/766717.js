@@ -9,38 +9,34 @@ function s(e) {
             tooltipText: n,
             shouldScalePreview: s = !0,
             renderPreview: o,
-            showMoreOverlay: c = !1,
-            moreCount: d = 0,
+            moreCount: c,
+            isSingleCard: d = !1,
         } = e,
-        u = s ? a.cardPreview : a.cardPreviewNoScale;
+        u = s ? a.cardPreview : a.cardPreviewNoScale,
+        h = d ? a.cardSingle : a.card;
     return (0, r.jsx)(i.u, {
         text: n,
         position: "top",
-        children: (0, r.jsx)(l.P3F, {
+        children: (0, r.jsxs)(l.P3F, {
             onClick: t,
-            className: a.card,
+            className: h,
             "aria-label": n,
-            children: (0, r.jsxs)("div", {
-                className: a.cardContent,
-                children: [
+            children: [
+                (0, r.jsx)("div", {
+                    className: u,
+                    children: o(),
+                }),
+                null != c &&
+                    c > 0 &&
                     (0, r.jsx)("div", {
-                        className: a.cardPreviewWrapper,
-                        children: (0, r.jsx)("div", {
-                            className: u,
-                            children: o(),
+                        className: a.moreOverlay,
+                        children: (0, r.jsxs)(l.Text, {
+                            variant: "text-xs/medium",
+                            color: "always-white",
+                            children: ["+", c],
                         }),
                     }),
-                    c &&
-                        (0, r.jsx)("div", {
-                            className: a.moreOverlay,
-                            children: (0, r.jsxs)(l.Text, {
-                                variant: "text-xs/medium",
-                                color: "always-white",
-                                children: ["+", d],
-                            }),
-                        }),
-                ],
-            }),
+            ],
         }),
     });
 }

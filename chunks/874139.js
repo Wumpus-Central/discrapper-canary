@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854);
+n.d(t, { Z: () => h }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -8,9 +8,9 @@ var r = n(951288),
     c = n(5337),
     d = n(388032),
     u = n(815743);
-function p(e) {
-    let { wishlistItems: t = [], profileOwner: n, onClick: p } = e,
-        { analyticsLocations: h } = (0, a.ZP)(),
+function h(e) {
+    let { wishlistItems: t = [], profileOwner: n, onClick: h } = e,
+        { analyticsLocations: p } = (0, a.ZP)(),
         { cards: f, singleCollectibleItem: g } = (0, i.useMemo)(() => {
             let e = [],
                 r = null;
@@ -22,11 +22,10 @@ function p(e) {
                     (0 === e.length && (r = l),
                     e.push(
                         (0, c.c)(l, {
-                            showMoreOverlay: a,
-                            moreCount: t.length - 4,
+                            moreCount: a ? t.length - 4 : void 0,
                             profileOwner: n,
-                            analyticsLocations: h,
-                            onViewWishlist: p,
+                            analyticsLocations: p,
+                            onViewWishlist: h,
                         }),
                     ));
             }
@@ -34,13 +33,13 @@ function p(e) {
                 cards: e,
                 singleCollectibleItem: 1 === e.length ? r : null,
             };
-        }, [t, n, h, p]);
+        }, [t, n, p, h]);
     if (0 === f.length) return null;
     let m =
         1 === f.length && null != g
-            ? (0, c.g)(g, f[0], {
+            ? (0, c.g)(g, {
                   profileOwner: n,
-                  analyticsLocations: h,
+                  analyticsLocations: p,
               })
             : f;
     return (0, r.jsxs)(o.Z.Overlay, {
