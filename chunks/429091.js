@@ -148,9 +148,6 @@ class b extends a.yh {
         let t = this.state.root[e];
         return null != t ? t.root : h;
     }
-    getPartitionKeys() {
-        return Object.keys(this.state.root);
-    }
     getBoxedPartition(e) {
         let t = this.state.root[e];
         if (null == t) return m;
@@ -184,18 +181,18 @@ class b extends a.yh {
         let t = this.state.root[e];
         return null == t ? null : t.root;
     }
-    memoizedPartition(e, t) {
-        let n = Symbol(),
-            r = void 0 !== t ? t : e("", {});
-        return (t) => {
-            let i = this.state.root[t];
-            if (null == i) return r;
+    memoizedPartition(e) {
+        let t = Symbol(),
+            n = e({});
+        return (r) => {
+            let i = this.state.root[r];
+            if (null == i) return n;
             let {
                     root: a,
                     derived: { memoized: o },
                 } = i,
-                s = o[n];
-            return g.call(o, n) || ((s = e(t, a)), (o[n] = s)), s;
+                s = o[t];
+            return g.call(o, t) || ((s = e(a)), (o[t] = s)), s;
         };
     }
     memoized(e) {
@@ -241,7 +238,6 @@ class b extends a.yh {
         if ("typescript" == (t = "typescript") || "typescript-libdiscore-dual-read" === t) {
             let t = !1,
                 r = {
-                    getPartitionKeys: () => Object.keys(this.state.root),
                     reset: (e) => {
                         let n = {};
                         "function" == typeof e ? e(n, this.state.root) : null != e && (n = e);

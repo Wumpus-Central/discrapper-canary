@@ -60,12 +60,12 @@ class u extends i.d {
             l(
                 this,
                 "getSortedRoles",
-                this.memoizedPartition((e, t) => s.BL(Object.values(t))),
+                this.memoizedPartition((e) => s.BL(Object.values(e))),
             ),
             l(
                 this,
                 "getRolesSnapshot",
-                this.memoizedPartition((e, t) => c({}, t)),
+                this.memoizedPartition((e) => c({}, e)),
             );
     }
 }
