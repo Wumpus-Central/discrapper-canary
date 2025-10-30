@@ -7712,6 +7712,20 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     color: unset
 }
 
+.layerRoot__7b917 {
+    min-height: 600px;
+    position: relative;
+    width: 100%
+}
+
+.container__7b917 {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    min-height: 400px;
+    padding: 32px
+}
+
 .notice__6e2b9 {
     background: var(--custom-notice-background);
     border-radius: 8px 0 0;
@@ -56817,9 +56831,9 @@ h3.improved__1689b:after {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
