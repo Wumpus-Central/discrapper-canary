@@ -4,20 +4,20 @@ t.a(e, async function (e, r) {
         var l = t(951288),
             c = t(647438),
             a = t(269755),
-            i = t(95398),
-            o = t(488968),
+            i = t(488968),
+            o = t(411405),
             s = e([a]);
         function u(e) {
             let { children: n, node: t } = e,
                 r = c.useMemo(() => Array.from((0, a.h)([t])).some((e) => "link" === e.type), [t]),
-                s = (0, o.d)();
+                s = (0, i.d)();
             return (
                 c.useEffect(() => {
                     var e;
                     null == s || null == (e = s.setHasSpoilerEmbeds) || e.call(s, r);
                 }, [s, r]),
-                (0, l.jsx)(i.ZP, {
-                    type: i.ZP.Types.TEXT,
+                (0, l.jsx)(o.ZP, {
+                    type: o.ZP.Types.TEXT,
                     children: () => n,
                 })
             );

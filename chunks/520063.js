@@ -88,7 +88,7 @@ function h(e, n, h) {
                           color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e("36760").then(t.bind(t, 854360));
+                                  let { default: n } = await t.e("79939").then(t.bind(t, 495494));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
@@ -109,7 +109,7 @@ function h(e, n, h) {
                           color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e("43350").then(t.bind(t, 98746));
+                                  let { default: n } = await t.e("18910").then(t.bind(t, 497880));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
