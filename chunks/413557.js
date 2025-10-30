@@ -3,14 +3,14 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(31336),
-    s = n(678717),
-    o = n(252899),
+    s = n(252899),
+    o = n(682475),
     c = n(478057),
     u = n(665149);
 function d(e) {
     let { onClose: t } = e,
-        n = (0, s.useDevToolsTabConfig)(),
-        i = (0, o.F)(n, a.d8),
+        n = (0, o.F)(),
+        i = (0, s.F)(n, a.d8),
         u = (0, c.Z)();
     return (0, r.jsxs)(l.v2r, {
         onSelect: () => {},
@@ -26,7 +26,7 @@ function p(e) {
         [s, o] = i.useState(!1),
         [c, p] = i.useState(0),
         f = i.useRef(null),
-        h = (e) => {
+        m = (e) => {
             clearTimeout(c),
                 p(
                     setTimeout(() => {
@@ -35,8 +35,8 @@ function p(e) {
                 );
         };
     return (0, r.jsx)("div", {
-        onMouseEnter: () => h(!0),
-        onMouseLeave: () => h(!1),
+        onMouseEnter: () => m(!0),
+        onMouseLeave: () => m(!1),
         children: (0, r.jsx)(l.yRy, {
             targetElementRef: f,
             shouldShow: s,
