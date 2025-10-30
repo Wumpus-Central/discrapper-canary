@@ -27,7 +27,6 @@ let f = "MaskedLinkStore",
 function m(e) {
     let t = (0, c.F)(e);
     switch (t) {
-        case window.GLOBAL_ENV.CDN_HOST:
         case window.GLOBAL_ENV.INVITE_HOST:
         case window.GLOBAL_ENV.GIFT_CODE_HOST:
         case window.GLOBAL_ENV.GUILD_TEMPLATE_HOST:
