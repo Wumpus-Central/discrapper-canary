@@ -134,35 +134,39 @@ class E extends (r = l.Component) {
             h = this.state.tierMarkerActive >= t,
             b = !g && d && h,
             j = this.getTierMarkerTooltipText(e);
-        return (0, i.jsx)(m.AMe, {
-            from: { scale: 1 },
-            to: { scale: b ? 1.625 : 1 },
-            config: y,
-            children: (t) => {
-                var n, l, a;
-                return (0, i.jsx)(u.i_, {
-                    body: null != (n = null == j ? void 0 : j.body) ? n : "",
-                    title: null != (l = null == j ? void 0 : j.title) ? l : void 0,
-                    shouldShow: null != j,
-                    position: "right",
-                    "aria-label": null != (a = e.name) ? a : "",
-                    children: (0, i.jsx)(o.animated.div, {
-                        className: r,
-                        style: {
-                            top: f,
-                            transform: t.scale.interpolate((e) => "scale(".concat(e, ")")),
-                        },
-                        children:
-                            b &&
-                            (0, i.jsx)(m.dz2, {
-                                size: "md",
-                                color: "currentColor",
-                                className: x.currentTierIcon,
-                            }),
-                    }),
-                });
+        return (0, i.jsx)(
+            m.AMe,
+            {
+                from: { scale: 1 },
+                to: { scale: b ? 1.625 : 1 },
+                config: y,
+                children: (t) => {
+                    var n, l, a;
+                    return (0, i.jsx)(u.i_, {
+                        body: null != (n = null == j ? void 0 : j.body) ? n : "",
+                        title: null != (l = null == j ? void 0 : j.title) ? l : void 0,
+                        shouldShow: null != j,
+                        position: "right",
+                        "aria-label": null != (a = e.name) ? a : "",
+                        children: (0, i.jsx)(o.animated.div, {
+                            className: r,
+                            style: {
+                                top: f,
+                                transform: t.scale.interpolate((e) => "scale(".concat(e, ")")),
+                            },
+                            children:
+                                b &&
+                                (0, i.jsx)(m.dz2, {
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: x.currentTierIcon,
+                                }),
+                        }),
+                    });
+                },
             },
-        });
+            e.key,
+        );
     }
     renderProgressMask(e) {
         let { tiers: t } = this.props;

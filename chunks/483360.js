@@ -44,8 +44,8 @@ var i = n(658722),
     N = n(926491),
     R = n(373228),
     P = n(601070),
-    w = n(569471),
-    D = n(675478),
+    D = n(569471),
+    w = n(675478),
     L = n(131704),
     x = n(345162),
     M = n(598077),
@@ -148,8 +148,8 @@ let eb = new h.Z("AutocompleteUtils"),
     eN = 5,
     eR = 3,
     eP = 11,
-    ew = 6,
-    eD = 8,
+    eD = 6,
+    ew = 8,
     eL = 1,
     ex = 1000,
     eM = 0.2,
@@ -317,12 +317,12 @@ function e$(e) {
         case R.MO.STICKER_NAME:
             return eP;
         case R.MO.CORRELATED_EMOJI:
-            return ew;
+            return eD;
         case R.MO.TAG:
             return eL;
         case R.MO.GUILD_NAME:
         case R.MO.PACK_NAME:
-            return eD;
+            return ew;
         default:
             return 1;
     }
@@ -627,7 +627,7 @@ let e7 = (0, $.oH)((e, t, n) => {
                         !(t.length > 1) &&
                         (1 !== t.length || t[0].isFullMatch || s) &&
                         (e3(l, e.type) && (c = Math.max(c - eA, eS / 2)),
-                        e.isThread() && (e.isActiveThread() || (c -= eC), w.Z.hasJoined(e.id) || (c -= eN)),
+                        e.isThread() && (e.isActiveThread() || (c -= eC), D.Z.hasJoined(e.id) || (c -= eN)),
                         (c = Math.min(
                             c + Math.min(null != (O = U.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eR,
                             c >= ev ? ey : ev,
@@ -1125,7 +1125,7 @@ let e7 = (0, $.oH)((e, t, n) => {
         queryEmojiResults(e) {
             let { query: t, channel: n, intention: r, maxCount: i = el.rnv, matchComparator: a } = e;
             return (
-                D.DZ.loadIfNecessary(),
+                w.DZ.loadIfNecessary(),
                 {
                     emojis: m.ZP.searchWithoutFetchingLatest({
                         channel: n,
@@ -1140,60 +1140,61 @@ let e7 = (0, $.oH)((e, t, n) => {
         queryStickers(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [null, eU],
-                { stickerMetadata: i } = N.Z,
-                a = X.default.getCurrentUser(),
-                o = new Set(),
-                l = [];
-            for (let s of (D.DZ.loadIfNecessary(), e)) {
+                i = X.default.getCurrentUser(),
+                a = new Set(),
+                o = [];
+            for (let s of (w.DZ.loadIfNecessary(), e)) {
                 if ("" === s) continue;
                 let e = s.toLocaleLowerCase(),
-                    c = (0, eo._I)(e),
-                    u = RegExp("^".concat(ei.Z.escape(c)), "i"),
-                    d = RegExp("".concat(ei.Z.escape(c)), "i");
-                i.forEach((i, s) => {
-                    let c = 0,
-                        f = null,
-                        _ = N.Z.getStickerById(s);
-                    if (null == _ || !r(_, (0, A.cO)(_, a, n))) return;
-                    for (let n of i) {
-                        let { type: r, value: i } = n,
-                            a = e$(r),
-                            o = 0;
-                        t
-                            ? i === e
-                                ? (o = ey * a)
-                                : u.test(i)
-                                  ? (o = ev * a)
-                                  : (r === R.MO.GUILD_NAME || r === R.MO.PACK_NAME || r === R.MO.STICKER_NAME) &&
-                                    d.test(i) &&
-                                    (o = eI * a)
-                            : i === e && ((o = ey * a), (f = i)),
-                            o > c && ((c = o), (f = i));
-                    }
-                    let p = C.Z.stickerFrecencyWithoutFetchingLatest.getScore(s);
-                    null != p && (c *= p / 100),
-                        c > 0 &&
-                            null != f &&
-                            !o.has(_.id) &&
-                            (o.add(_.id),
-                            l.push({
-                                sticker: _,
-                                comparator: f,
-                                score: c,
-                            }));
+                    l = (0, eo._I)(e),
+                    c = RegExp("^".concat(ei.Z.escape(l)), "i"),
+                    u = RegExp("".concat(ei.Z.escape(l)), "i");
+                N.Z.getStickerMetadataArrays().forEach((s) => {
+                    s.forEach((s, l) => {
+                        let d = 0,
+                            f = null,
+                            _ = N.Z.getStickerById(l);
+                        if (null == _ || !r(_, (0, A.cO)(_, i, n))) return;
+                        for (let n of s) {
+                            let { type: r, value: i } = n,
+                                a = e$(r),
+                                o = 0;
+                            t
+                                ? i === e
+                                    ? (o = ey * a)
+                                    : c.test(i)
+                                      ? (o = ev * a)
+                                      : (r === R.MO.GUILD_NAME || r === R.MO.PACK_NAME || r === R.MO.STICKER_NAME) &&
+                                        u.test(i) &&
+                                        (o = eI * a)
+                                : i === e && ((o = ey * a), (f = i)),
+                                o > d && ((d = o), (f = i));
+                        }
+                        let p = C.Z.stickerFrecencyWithoutFetchingLatest.getScore(l);
+                        null != p && (d *= p / 100),
+                            d > 0 &&
+                                null != f &&
+                                !a.has(_.id) &&
+                                (a.add(_.id),
+                                o.push({
+                                    sticker: _,
+                                    comparator: f,
+                                    score: d,
+                                }));
+                    });
                 });
             }
             return (
                 0 ===
-                    (l = s()(l)
+                    (o = s()(o)
                         .sortBy((e) => -1 * e.score)
-                        .value()).length && (l = eB),
-                l
+                        .value()).length && (o = eB),
+                o
             );
         },
         querySoundmoji(e, t) {
             let n = X.default.getCurrentUser();
-            T.Z.isFetching() || T.Z.hasFetchedAllSounds() || (0, I.w)(), D.DZ.loadIfNecessary();
+            T.Z.isFetching() || T.Z.hasFetchedAllSounds() || (0, I.w)(), w.DZ.loadIfNecessary();
             let r = Array.from(T.Z.getSounds().values()).reduce(
                 (e, n) => (
                     n.forEach((n) => {

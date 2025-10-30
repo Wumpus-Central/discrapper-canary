@@ -1,6 +1,6 @@
 n.d(t, {
     Go: () => R,
-    LZ: () => D,
+    LZ: () => w,
     Pq: () => v,
     RJ: () => P,
     Sd: () => M,
@@ -123,13 +123,7 @@ let v = (e) => {
             };
         }, [t, n, i, o, s, u, d]);
     },
-    S = (e) => {
-        let t = (0, i.e7)([d.default], () => d.default.getCurrentUser());
-        return (0, i.e7)([g.Z], () => {
-            for (let n of g.Z.getAllStickersIterator()) if ((0, p.kl)(n, t, e)) return !0;
-            return !1;
-        }, [t, e]);
-    },
+    S = (e) => !0,
     A = () => {
         r.useEffect(() => {
             (0, h.$p)();
@@ -201,7 +195,7 @@ function P() {
         [e],
     );
 }
-function w() {
+function D() {
     var e, t;
     let n = (0, s.D)(),
         r = N;
@@ -211,8 +205,8 @@ function w() {
         r
     );
 }
-function D() {
-    let e = w();
+function w() {
+    let e = D();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
 let L = (e) => {

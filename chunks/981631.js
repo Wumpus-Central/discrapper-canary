@@ -32,7 +32,7 @@ n.d(t, {
     Cyb: () => E.Cy,
     DJE: () => re,
     DJj: () => eM,
-    DZw: () => ew,
+    DZw: () => eD,
     E07: () => tS,
     EKQ: () => E.EK,
     EOG: () => n1,
@@ -116,7 +116,7 @@ n.d(t, {
     PsQ: () => tW,
     PyE: () => E.Py,
     QCD: () => n$,
-    QIO: () => tD,
+    QIO: () => tw,
     QKv: () => V,
     QL: () => E.QL,
     QR$: () => r_,
@@ -151,7 +151,7 @@ n.d(t, {
     UWR: () => t3,
     Ucd: () => rU,
     Uk1: () => E.Uk,
-    UkZ: () => rw,
+    UkZ: () => rD,
     Usc: () => Y,
     Uvt: () => l.U,
     V$x: () => c.V,
@@ -190,7 +190,7 @@ n.d(t, {
     aIt: () => rc,
     aO5: () => E.aO,
     aZC: () => tJ,
-    aib: () => tw,
+    aib: () => tD,
     ane: () => nj,
     apO: () => rr,
     b2L: () => na,
@@ -211,7 +211,7 @@ n.d(t, {
     eHb: () => nQ,
     eRX: () => nt,
     eWB: () => ta,
-    ecB: () => nD,
+    ecB: () => nw,
     eez: () => t_,
     en1: () => eB,
     epS: () => ru,
@@ -241,7 +241,7 @@ n.d(t, {
     j8d: () => E.j8,
     jXE: () => tU,
     jm8: () => rT,
-    jwA: () => nw,
+    jwA: () => nD,
     kEZ: () => U,
     kGb: () => rd,
     kNB: () => rl,
@@ -266,7 +266,7 @@ n.d(t, {
     p3w: () => tm,
     p6O: () => t5,
     pAY: () => th,
-    pJs: () => w,
+    pJs: () => D,
     pKx: () => E.pK,
     pM4: () => M,
     pNK: () => A,
@@ -279,7 +279,7 @@ n.d(t, {
     qWG: () => rx,
     qc2: () => rs,
     qhL: () => tn,
-    qrD: () => D,
+    qrD: () => w,
     r2o: () => j,
     rMx: () => nb,
     rnv: () => tA,
@@ -293,7 +293,7 @@ n.d(t, {
     si2: () => rS,
     t4x: () => tY,
     tG9: () => eZ,
-    tHP: () => eD,
+    tHP: () => ew,
     tPV: () => eK,
     tPk: () => E.tP,
     t_t: () => et,
@@ -328,7 +328,7 @@ n.d(t, {
     yXt: () => E.yX,
     yYS: () => E.yY,
     yb: () => W,
-    ylB: () => rD,
+    ylB: () => rw,
     yqN: () => ng,
     ys_: () => e8,
     z7k: () => tI,
@@ -611,7 +611,7 @@ var o = n(106351),
             e
         );
     })({}),
-    w = (function (e) {
+    D = (function (e) {
         return (
             (e.ADD_FRIEND = "ADD_FRIEND"),
             (e.ALL = "ALL"),
@@ -623,7 +623,7 @@ var o = n(106351),
             e
         );
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL = "ALL"), e;
     })({}),
     L = (function (e) {
@@ -1608,7 +1608,6 @@ let em = "@me",
         PARTNERS_APPLY: "/partners/apply",
         STICKER_PACK: (e) => "/sticker-packs/".concat(e),
         STORE_DIRECTORY_LAYOUT_STICKER_PACKS: (e) => "/sticker-packs/directory-v2/".concat(e),
-        USER_STICKER_PACKS: "/users/@me/sticker-packs",
         STICKER_ASSET: (e, t) => "/stickers/".concat(e, ".").concat(t),
         STICKER: (e) => "/stickers/".concat(e),
         STICKER_PACKS: "/sticker-packs",
@@ -2150,8 +2149,8 @@ var eR = (function (e) {
             e
         );
     })({});
-let ew = 100,
-    eD = 200,
+let eD = 100,
+    ew = 200,
     eL = 50,
     ex = 50,
     eM = 25,
@@ -2321,7 +2320,7 @@ let te = 128,
     tN = /^FILTER_/,
     tR = /^ANSWER_/,
     tP = 32;
-var tw = (function (e) {
+var tD = (function (e) {
         return (
             (e.GUILD = "GUILD"),
             (e.FAVORITES = "FAVORITES"),
@@ -2344,7 +2343,7 @@ var tw = (function (e) {
             e
         );
     })({}),
-    tD = (function (e) {
+    tw = (function (e) {
         return (e.NEWEST = "newest"), (e.OLDEST = "oldest"), (e.MOST_RELEVANT = "most_relevant"), e;
     })({}),
     tL = (function (e) {
@@ -5512,10 +5511,10 @@ let nR = Object.freeze({
 var nP = (function (e) {
         return (e.ALL = "ALL"), (e.CREATE = "CREATE"), (e.UPDATE = "UPDATE"), (e.DELETE = "DELETE"), e;
     })({}),
-    nw = (function (e) {
+    nD = (function (e) {
         return (e.USER = "1"), (e.ROLE = "0"), e;
     })({}),
-    nD = (function (e) {
+    nw = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
     nL = (function (e) {
@@ -6306,10 +6305,10 @@ var rv = (function (e) {
         );
     })({});
 let rP = "discodoEasterEgg";
-var rw = (function (e) {
+var rD = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rD = (function (e) {
+    rw = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
     rL = (function (e) {

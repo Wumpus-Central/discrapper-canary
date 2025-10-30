@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: () => I,
-        default: () => ek,
+        default: () => ej,
         mergeUser: () => R,
         transformUser: () => C,
         users: () => O,
@@ -111,7 +111,7 @@ function R(e) {
         r = O[e.id],
         i = void 0 !== e.id && e.id === m.default.getId();
     if (null == r)
-        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = w((0, f.QI)(r), r.premiumType));
+        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = D((0, f.QI)(r), r.premiumType));
     else if (n) {
         var a;
         let n = C(e);
@@ -126,16 +126,16 @@ function R(e) {
 function P(e) {
     var t;
     let n = null != (t = e.premium_type) ? t : e.premiumType,
-        r = w((0, f.VR)(e), n);
+        r = D((0, f.VR)(e), n);
     return void 0 !== e.premiumType ? (e.premiumType = r) : void 0 !== e.premium_type && (e.premium_type = r), e;
 }
-function w(e, t) {
+function D(e, t) {
     if (!e) return t;
     let n = u.Z.getPremiumTypeOverride(),
         r = u.Z.getPremiumTypeActual();
     return n === b.F_ ? r : n;
 }
-function D(e, t) {
+function w(e, t) {
     if ((null == e ? void 0 : e.users) == null) return !1;
     for (let n in e.users) {
         let r = e.users[n];
@@ -160,7 +160,7 @@ function L(e, t) {
                         N(e) && R(e, t);
                     });
             }),
-        D(e.resolved, t),
+        w(e.resolved, t),
         (null == (o = e.interaction_metadata) ? void 0 : o.user) != null &&
             N(e.interaction_metadata.user) &&
             R(e.interaction_metadata.user, t),
@@ -521,11 +521,11 @@ function eP(e) {
         null != e.message && L(e.message, !0);
     }, !1);
 }
-function ew(e) {
+function eD(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, a.Z)(t) && R(t.member.user)) || e, !1);
 }
-function eD(e) {
+function ew(e) {
     let {} = e,
         t = O[m.default.getId()];
     return null != t && ((O[m.default.getId()] = t.set("ageVerificationStatus", i.F$.CLIENT_ONLY_PENDING)), !0);
@@ -541,21 +541,25 @@ function eL(e) {
 }
 function ex(e) {
     let { resolved: t } = e;
-    return D(t, !0);
+    return w(t, !0);
 }
-class eM extends g.Z {
+function eM(e) {
+    let { stickers: t } = e;
+    return t.reduce((e, t) => (null != t.user && R(t.user)) || e, !1);
+}
+class ek extends g.Z {
     initialize() {
         this.waitFor(m.default, u.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: eM.LATEST_SNAPSHOT_VERSION,
+            version: ek.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(h.lm) },
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(eM.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(ek.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) O[e.id] = new _.Z(e);
         if (null != e.users) for (let t of e.users) (t.id in O && k(t)) || (O[t.id] = new _.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
@@ -625,6 +629,7 @@ class eM extends g.Z {
             GUILD_BAN_REMOVE: ea,
             CHANNEL_RECIPIENT_ADD: eo,
             CHANNEL_RECIPIENT_REMOVE: eo,
+            GUILD_STICKERS_FETCH_SUCCESS: eM,
             GUILD_JOIN_REQUEST_CREATE: eI,
             GUILD_JOIN_REQUEST_UPDATE: eI,
             GUILD_MEMBER_ADD: es,
@@ -660,12 +665,12 @@ class eM extends g.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eA,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eR,
             LOAD_ICYMI_HYDRATED: eP,
-            EMBEDDED_ACTIVITY_UPDATE_V2: ew,
-            INITIATE_AGE_VERIFICATION: eD,
+            EMBEDDED_ACTIVITY_UPDATE_V2: eD,
+            INITIATE_AGE_VERIFICATION: ew,
             CLOSE_AGE_VERIFICATION_MODAL: eL,
             INTERACTION_MODAL_CREATE: ex,
         });
     }
 }
-y(eM, "displayName", "UserStore"), y(eM, "LATEST_SNAPSHOT_VERSION", 1);
-let ek = new eM();
+y(ek, "displayName", "UserStore"), y(ek, "LATEST_SNAPSHOT_VERSION", 1);
+let ej = new ek();

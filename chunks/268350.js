@@ -4,12 +4,12 @@ n.d(t, {
     Il: () => S,
     Jf: () => R,
     SA: () => L,
+    SV: () => A,
     Um: () => C,
     eu: () => P,
     hW: () => x,
     lY: () => N,
-    pk: () => A,
-    qB: () => w,
+    qB: () => D,
 }),
     n(953529),
     n(539854);
@@ -124,15 +124,23 @@ let I = async (e, t) => {
             sticker: t,
         });
     },
-    A = async (e) => {
-        let { body: t } = await a.tn.get({
+    A = async (e, t) => {
+        let { body: n } = await a.tn.get({
             url: m.ANM.GUILD_STICKER_PACKS(e),
             rejectWithError: !1,
+            signal: t,
         });
         o.Z.dispatch({
             type: "GUILD_STICKERS_FETCH_SUCCESS",
             guildId: e,
-            stickers: t.map((e) => (null != e.user ? v(y({}, e), { user: new d.Z(e.user) }) : e)),
+            stickers: n.map((e) =>
+                null != e.user
+                    ? v(y({}, e), {
+                          user_id: e.user.id,
+                          user: new d.Z(e.user),
+                      })
+                    : e,
+            ),
         });
     },
     C = async (e) => {
@@ -142,9 +150,10 @@ let I = async (e, t) => {
         });
     },
     N = async (e) => {
-        let { guildId: t } = e,
-            n = await a.tn.post({
-                url: m.ANM.GUILD_STICKER_PACKS(t),
+        var t;
+        let { guildId: n } = e,
+            r = await a.tn.post({
+                url: m.ANM.GUILD_STICKER_PACKS(n),
                 body: "web" === e.platform ? e.body : void 0,
                 fields:
                     "mobile" === e.platform
@@ -181,10 +190,10 @@ let I = async (e, t) => {
         return (
             o.Z.dispatch({
                 type: "GUILD_STICKERS_CREATE_SUCCESS",
-                guildId: t,
-                sticker: v(y({}, n.body), { user: _.default.getCurrentUser() }),
+                guildId: n,
+                sticker: v(y({}, r.body), { user_id: null == (t = _.default.getCurrentUser()) ? void 0 : t.id }),
             }),
-            n.body
+            r.body
         );
     },
     R = async (e, t, n) =>
@@ -203,21 +212,21 @@ function P(e, t, n) {
         draftType: n,
     });
 }
-function w(e, t) {
+function D(e, t) {
     o.Z.dispatch({
         type: "CLEAR_STICKER_PREVIEW",
         channelId: e,
         draftType: t,
     });
 }
-function D(e) {
+function w(e) {
     return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
 function L(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) =>
-            ((t.stickerIds = D(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
+            ((t.stickerIds = w(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
                 ? (s.Z.show({
                       title: E.intl.string(E.t["+XYXtZ"]),
                       body: E.intl.formatToPlainString(E.t.JaIyFi, { count: g.oX }),
@@ -231,7 +240,7 @@ function x(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = D(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = w(t.stickerIds));
         },
         g.fy.INFREQUENT_USER_ACTION,
     );
