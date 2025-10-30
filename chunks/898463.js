@@ -21,9 +21,9 @@ var r = n(951288),
     d = n(476326),
     f = n(543651),
     _ = n(377171),
-    p = n(70097),
-    h = n(312097),
-    m = n(411405),
+    p = n(95398),
+    h = n(70097),
+    m = n(312097),
     g = n(592125),
     E = n(956664),
     b = n(709054),
@@ -87,9 +87,9 @@ let N = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "vi
 function R(e) {
     let { alt: t, spoiler: n, renderContent: a, size: s } = e,
         [l, c] = i.useState(!1);
-    return (0, r.jsx)(m.aQ.Provider, {
+    return (0, r.jsx)(p.aQ.Provider, {
         value: !n,
-        children: (0, r.jsx)(m.ZP, {
+        children: (0, r.jsx)(p.ZP, {
             containerStyles:
                 s === O.q.CLIP
                     ? {
@@ -98,7 +98,7 @@ function R(e) {
                           boxShadow: "none",
                       }
                     : void 0,
-            type: m.ZP.Types.ATTACHMENT,
+            type: p.ZP.Types.ATTACHMENT,
             onReveal: () => c(!0),
             className: o()(I.spoilerContainer, {
                 [I.sizeXSmall]: s === O.q.XSMALL,
@@ -163,7 +163,7 @@ function P(e) {
             }
         );
     }, [t]);
-    let m = i.useCallback(
+    let h = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return null == u
@@ -185,7 +185,7 @@ function P(e) {
         ),
         g = i.useCallback(() => {
             null != u &&
-                (0, h.K)({
+                (0, m.K)({
                     location: "ChannelAttachmentUpload",
                     items: [
                         {
@@ -215,7 +215,7 @@ function P(e) {
                 size: s,
                 alt: n,
                 spoiler: a,
-                renderContent: m,
+                renderContent: h,
             }),
         }),
     });
@@ -243,7 +243,7 @@ function w(e) {
                 alt: n,
                 spoiler: a,
                 renderContent: (e) =>
-                    (0, r.jsx)(p.Z, {
+                    (0, r.jsx)(h.Z, {
                         ref: f,
                         src: u,
                         className: o()(I.media, {

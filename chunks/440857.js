@@ -3,10 +3,10 @@ var r = n(951288),
     l = n(647438),
     i = n(692547),
     o = n(215569),
-    a = n(755721),
-    s = n(481060),
-    c = n(749210),
-    u = n(852860),
+    a = n(796027),
+    s = n(755721),
+    c = n(481060),
+    u = n(749210),
     d = n(367907),
     C = n(314897),
     m = n(626135),
@@ -66,8 +66,8 @@ function y(e) {
         _ = O.size > 0,
         w = async (e, t, n, r) => {
             try {
-                let l = await c.Z.banMultipleUsers(e, t, n, r);
-                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.AsCe5I), s.ToastType.SUCCESS)),
+                let l = await u.Z.banMultipleUsers(e, t, n, r);
+                (0, c.showToast)((0, c.createToast)(g.intl.string(g.t.AsCe5I), c.ToastType.SUCCESS)),
                     m.default.track(
                         h.rMx.BULK_MODERATION_ACTION_COMPLETED,
                         v(x({}, (0, d.hH)(e)), {
@@ -79,7 +79,7 @@ function y(e) {
                         }),
                     );
             } catch (e) {
-                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.mICAWY), s.ToastType.FAILURE));
+                (0, c.showToast)((0, c.createToast)(g.intl.string(g.t.mICAWY), c.ToastType.FAILURE));
             }
             H();
         },
@@ -89,18 +89,18 @@ function y(e) {
         Z = (0, r.jsxs)("span", {
             className: j.messageContainer,
             children: [
-                (0, r.jsx)(s.tBG, {
+                (0, r.jsx)(c.tBG, {
                     size: "custom",
                     width: 24,
                     height: 24,
-                    color: (0, s.dQu)(i.Z.unsafe_rawColors.PRIMARY_500).hex(),
+                    color: (0, c.dQu)(i.Z.unsafe_rawColors.PRIMARY_500).hex(),
                 }),
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(c.Text, {
                     variant: "heading-md/bold",
                     color: "text-default",
                     children: g.intl.format(g.t.TstoSZ, { count: O.size }),
                 }),
-                (0, r.jsx)(s.Avr, {
+                (0, r.jsx)(c.Avr, {
                     text: g.intl.string(g.t.yW6ZdE),
                     onClick: S,
                 }),
@@ -109,13 +109,13 @@ function y(e) {
         N = (0, r.jsxs)("span", {
             className: j.buttonContainer,
             children: [
-                (0, r.jsx)(s.pgN, {
+                (0, r.jsx)(c.pgN, {
                     size: "custom",
                     color: "currentColor",
                     width: 20,
                     height: 20,
                 }),
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(c.Text, {
                     variant: "text-sm/semibold",
                     color: "currentColor",
                     children: g.intl.string(g.t["2a50fF"]),
@@ -128,8 +128,8 @@ function y(e) {
               className: j.saveNoticeContainer,
               children:
                   _ &&
-                  (0, r.jsx)(s.oXn, {
-                      children: (0, r.jsx)(u.Z, {
+                  (0, r.jsx)(c.oXn, {
+                      children: (0, r.jsx)(a.Z, {
                           onSave: () => {
                               m.default.track(
                                   h.rMx.BULK_MODERATION_ACTION_STARTED,
@@ -140,8 +140,8 @@ function y(e) {
                                       location,
                                   }),
                               ),
-                                  (0, s.ZDy)(async () => {
-                                      let { default: e } = await n.e("10533").then(n.bind(n, 497880));
+                                  (0, c.ZDy)(async () => {
+                                      let { default: e } = await n.e("4114").then(n.bind(n, 98746));
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
@@ -155,7 +155,7 @@ function y(e) {
                                   });
                           },
                           onSaveText: N,
-                          onSaveButtonColor: a.Tt.RED,
+                          onSaveButtonColor: s.Tt.RED,
                           message: Z,
                       }),
                   }),

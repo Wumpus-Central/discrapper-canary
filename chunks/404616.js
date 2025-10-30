@@ -31,17 +31,17 @@ var a = n(951288),
     y = n(480916),
     C = n(446489),
     O = n(824578),
-    P = n(247206),
-    Z = n(406432),
-    _ = n(169525),
-    w = n(566006),
-    T = n(255269),
-    S = n(937889),
-    M = n(443877),
-    k = n(524444),
-    I = n(287151),
-    E = n(267128),
-    R = n(411405),
+    P = n(95398),
+    Z = n(247206),
+    _ = n(406432),
+    w = n(169525),
+    T = n(566006),
+    S = n(255269),
+    M = n(937889),
+    k = n(443877),
+    I = n(524444),
+    E = n(287151),
+    R = n(267128),
     A = n(695346),
     L = n(433355),
     B = n(592125),
@@ -289,7 +289,7 @@ function em(e) {
         s = l.useMemo(() => (0, p.nC)(t && null != n ? n : "", a), [t, n, a]);
     return l.useMemo(
         () =>
-            (0, S.ZP)(
+            (0, M.ZP)(
                 {
                     content: e.name,
                     embeds: [],
@@ -330,7 +330,7 @@ let eh = l.memo(function (e) {
                       contentPlaceholder: null,
                       renderedContent: null,
                   }
-                : (0, E.f)(t, l, o, c, r()(es.messageContent, er.inlineFormat, er.__invalid_smallFontSize), {
+                : (0, R.f)(t, l, o, c, r()(es.messageContent, er.inlineFormat, er.__invalid_smallFontSize), {
                       leadingIconClass: es.messageContentLeadingIcon,
                       trailingIconClass: es.messageContentTrailingIcon,
                       iconSize: ea.WW,
@@ -352,8 +352,8 @@ let eh = l.memo(function (e) {
                         children: null == t ? (u ? null : el.intl.string(el.t.mE3KJN)) : e,
                     });
     }
-    return (0, a.jsxs)(R.aQ.Provider, {
-        value: (0, T.Z)(m, d),
+    return (0, a.jsxs)(P.aQ.Provider, {
+        value: (0, S.Z)(m, d),
         children: [
             !o &&
                 (0, a.jsx)(Y.Z, {
@@ -463,10 +463,10 @@ function ex(e) {
     let { firstMessage: t, channel: n } = e,
         l = (0, h.e7)([B.Z], () => B.Z.getChannel(n.parent_id)),
         s = (0, G.Bs)(l),
-        { disableReactionCreates: r, isLurking: i, isPendingMember: o } = (0, M.Z)(n);
+        { disableReactionCreates: r, isLurking: i, isPendingMember: o } = (0, k.Z)(n);
     return null == s || r
         ? null
-        : (0, a.jsx)(I.le, {
+        : (0, a.jsx)(E.le, {
               className: es.updateReactionButton,
               message: t,
               readOnly: n.isArchivedLockedThread(),
@@ -479,7 +479,7 @@ function ex(e) {
               burst_count: 0,
               me: !1,
               me_burst: !1,
-              type: w.O.NORMAL,
+              type: T.O.NORMAL,
               emojiSize: "reaction",
               emojiSizeTooltip: "reaction",
           });
@@ -488,11 +488,11 @@ function ej(e) {
     var t;
     let { firstMessage: n, channel: l } = e,
         s = (0, G.IN)(n),
-        { disableReactionUpdates: r, isLurking: i, isPendingMember: o } = (0, M.Z)(l);
+        { disableReactionUpdates: r, isLurking: i, isPendingMember: o } = (0, k.Z)(l);
     return null == s
         ? null
         : (0, a.jsx)(
-              I.le,
+              E.le,
               ei(
                   {
                       className: es.updateReactionButton,
@@ -501,7 +501,7 @@ function ej(e) {
                       isLurking: i,
                       isPendingMember: o,
                       useChatFontScaling: !1,
-                      type: s.burst_count >= s.count ? w.O.BURST : w.O.NORMAL,
+                      type: s.burst_count >= s.count ? T.O.BURST : T.O.NORMAL,
                       emojiSize: "reaction",
                       emojiSizeTooltip: "reaction",
                   },
@@ -547,9 +547,9 @@ function ep(e) {
 function ev(e) {
     let { firstMedia: t, shouldObscure: n, obscureReason: l, shouldShowAgeVerification: s } = e,
         i = (0, h.e7)([D.Z], () => D.Z.isFocused()),
-        o = (0, Z.d$)(t.src),
+        o = (0, _.d$)(t.src),
         c = A.QK.useSetting(),
-        u = (0, _.MC)(l),
+        u = (0, w.MC)(l),
         { src: d, width: m, height: g, alt: f } = t;
     if (s) {
         var j;
@@ -575,7 +575,7 @@ function ev(e) {
               className: es.thumbnailContainer,
               imageClassName: r()(es.thumbnailOverride, { [es.obscured]: n }),
           })
-        : (0, k.Yi)({
+        : (0, I.Yi)({
               src: d,
               width: m,
               height: g,
@@ -592,11 +592,11 @@ function ev(e) {
 }
 function eN(e) {
     let { channel: t, firstMedia: n } = e,
-        [l, s] = (0, _.hL)({
+        [l, s] = (0, w.hL)({
             media: n,
             channel: t,
         }),
-        r = (0, P.JO)(s);
+        r = (0, Z.JO)(s);
     return (0, a.jsx)(x.Rny, {
         enabled: !0,
         children: (0, a.jsxs)("div", {

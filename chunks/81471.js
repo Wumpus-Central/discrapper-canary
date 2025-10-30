@@ -5,11 +5,11 @@ var r = n(951288),
     a = n.n(l),
     s = n(442837),
     o = n(481060),
-    c = n(905405),
-    u = n(255269),
-    d = n(937889),
-    p = n(267128),
-    f = n(411405),
+    c = n(95398),
+    u = n(905405),
+    d = n(255269),
+    p = n(937889),
+    f = n(267128),
     m = n(695346),
     h = n(496675),
     g = n(699516),
@@ -22,7 +22,7 @@ var r = n(951288),
 let v = i.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: l, message: v } = (0, _.a)(t),
-        C = (0, c.p)(),
+        C = (0, u.p)(),
         { isBlocked: S, isIgnored: T } = (0, s.cj)(
             [g.Z],
             () => ({
@@ -36,7 +36,7 @@ let v = i.memo(function (e) {
         { content: P } = i.useMemo(
             () =>
                 (null == v ? void 0 : v.content) != null && "" !== v.content
-                    ? (0, d.ZP)(v, {
+                    ? (0, p.ZP)(v, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
                           shouldFilterKeywords: C,
@@ -68,7 +68,7 @@ let v = i.memo(function (e) {
                 children: O.intl.string(O.t.uxrh1O),
             });
         else if (null != v) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, p.f)(
+            let { contentPlaceholder: e, renderedContent: t } = (0, f.f)(
                 v,
                 P,
                 S,
@@ -103,8 +103,8 @@ let v = i.memo(function (e) {
                 children: O.intl.string(O.t["0KfDxM"]),
             });
     else x = null;
-    return (0, r.jsx)(f.aQ.Provider, {
-        value: (0, u.Z)(j, N),
+    return (0, r.jsx)(c.aQ.Provider, {
+        value: (0, d.Z)(j, N),
         children: (0, r.jsx)(o.Rny, {
             className: I.messageFocusBlock,
             children: x,

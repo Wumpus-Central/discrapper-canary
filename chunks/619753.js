@@ -11,13 +11,13 @@ var r = n(951288),
     d = n(607070),
     _ = n(933557),
     A = n(471445),
-    T = n(905405),
-    I = n(255269),
-    m = n(937889),
-    g = n(804063),
-    N = n(703656),
-    h = n(359110),
-    O = n(411405),
+    T = n(95398),
+    I = n(905405),
+    m = n(255269),
+    g = n(937889),
+    N = n(804063),
+    h = n(703656),
+    O = n(359110),
     f = n(695346),
     R = n(131704),
     S = n(592125),
@@ -73,8 +73,8 @@ function G(e) {
             highlighter: c,
             startIndex: E,
             resultRefs: d,
-            totalResults: g,
-            scrollTo: N,
+            totalResults: N,
+            scrollTo: h,
             renderEmbeds: R,
             offset: M,
             jumpToMessage: b,
@@ -82,11 +82,11 @@ function G(e) {
             favoriteSearch: G,
         } = e,
         k = f.cC.useSetting(),
-        F = (0, T.p)(),
+        F = (0, I.p)(),
         w = l.useCallback((e) => {
             if (e === U.Z.getChannelId()) return;
             let t = S.Z.getChannel(e);
-            null != t && (C.Z.can(v.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, h.Kh)(t.id);
+            null != t && (C.Z.can(v.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, O.Kh)(t.id);
         }, []),
         z = null != s ? (0, _.F6)(s, L.default, D.Z, !1) : "???",
         V = G && null != s.guild_id ? (null == (t = p.Z.getGuild(s.guild_id)) ? void 0 : t.name) : null,
@@ -94,7 +94,7 @@ function G(e) {
         B = null != (n = null == Z ? void 0 : Z.name) ? n : null,
         H = null != (i = (0, A.KS)(s)) ? i : u.VL1,
         K = C.Z.can(v.Plq.MANAGE_MESSAGES, s),
-        { content: W } = (0, m.ZP)(
+        { content: W } = (0, g.ZP)(
             {
                 content: z,
                 embeds: [],
@@ -111,8 +111,8 @@ function G(e) {
         null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
     let J = [z, B, V].filter((e) => null != e).join(", ");
-    return (0, r.jsx)(O.aQ.Provider, {
-        value: (0, I.Z)(k, K),
+    return (0, r.jsx)(T.aQ.Provider, {
+        value: (0, m.Z)(k, K),
         children: (0, r.jsxs)("ul", {
             role: "group",
             className: j.searchResultGroup,
@@ -153,8 +153,8 @@ function G(e) {
                             ref: (e) => {
                                 d.current[n] = e;
                             },
-                            totalResults: g,
-                            scrollTo: N,
+                            totalResults: N,
+                            scrollTo: h,
                             renderEmbeds: R,
                             searchOffset: M,
                             pageResultsLength: a.length,
@@ -180,7 +180,7 @@ let k = l.memo(function (e) {
             blockCount: T,
             ignoreCount: I,
             onPageChange: m,
-            onClick: h,
+            onClick: g,
             paginationTotalCount: O,
             renderPageWrapper: f,
             onBlockedResultsClick: R,
@@ -191,14 +191,14 @@ let k = l.memo(function (e) {
         { offset: L, totalResults: x, isSearching: y, showBlockedResults: k } = s,
         F = l.useCallback(
             (e, t) => {
-                if ((null == h || h(e, t), (0, g.Z)(e))) {
+                if ((null == g || g(e, t), (0, N.Z)(e))) {
                     let t = S.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
                     c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: p }),
-                        (0, N.uL)(v.Z5c.CHANNEL(n, e.channel_id, e.id));
+                        (0, h.uL)(v.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
-            [h, p],
+            [g, p],
         ),
         w = l.useMemo(() => {
             let e,
