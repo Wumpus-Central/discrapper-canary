@@ -32,8 +32,8 @@ function I(e, t, n) {
         e
     );
 }
-let T = null,
-    S = new Map(),
+let S = null,
+    T = new Map(),
     A = new Map(),
     C = 10,
     N = 3;
@@ -103,7 +103,7 @@ function L(e) {
 function x(e) {
     let { id: t } = e,
         n = A.get(t);
-    null != n && (n.context.destroy(), (n.results = []), A.delete(t)), S.delete(t), (T = null);
+    null != n && (n.context.destroy(), (n.results = []), A.delete(t)), T.delete(t), (S = null);
 }
 function M(e) {
     return null != e && (e === O.dCx.FILTER_FROM || e === O.dCx.FILTER_MENTIONS);
@@ -116,7 +116,7 @@ function j(e, t) {
     let { results: n } = t,
         r = (0, E.Tm)(e),
         i = A.get(r),
-        a = S.get(r);
+        a = T.get(r);
     if (null == i || null == a || !k(a.mode)) return;
     i.results = U(n, a.mode.type === O.Sap.FILTER ? C : N);
     let { query: o, mode: s, tokens: l, cursorScope: c } = a,
@@ -129,7 +129,7 @@ function j(e, t) {
             cursorScope: c,
             autocompletes: u,
         });
-    S.set(r, d), en.emitChange();
+    T.set(r, d), en.emitChange();
 }
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C,
@@ -148,7 +148,7 @@ function U(e) {
     return n;
 }
 function G(e) {
-    a()(T, e) || ((T = e), (0, E.WU)());
+    a()(S, e) || ((S = e), (0, E.WU)());
 }
 function B(e) {
     let { searchContext: t } = e;
@@ -161,7 +161,7 @@ function Z(e) {
     let a = (0, E.cl)(r),
         o = (0, E.qc)(i, r),
         s = (0, E.Tm)(n),
-        l = S.get(s),
+        l = T.get(s),
         c = !0;
     if (null != l && a === l.query && (null == l.mode || l.mode.filter === o.filter)) (t = l.autocompletes), (c = !1);
     else if (k(o)) {
@@ -192,7 +192,7 @@ function Z(e) {
         cursorScope: i,
         autocompletes: t,
     });
-    return S.set(s, f), c;
+    return T.set(s, f), c;
 }
 function F(e) {
     var t, n, r;
@@ -318,12 +318,19 @@ function W(e) {
             r = (0, E.BX)(e);
         if (null == r) return null;
         let i = t.getHistory(r);
-        return null == i
-            ? null
-            : {
-                  group: O.rtL.HISTORY,
-                  results: i.map((e) => ({ text: e })),
-              };
+        if (null == i) return null;
+        let a = [],
+            o = new Set();
+        return (
+            i.forEach((t) => {
+                let n = e.type === O.aib.CHANNEL ? (0, E.EX)(t) : t;
+                "" === n || o.has(n) || (o.add(n), a.push({ text: n }));
+            }),
+            {
+                group: O.rtL.HISTORY,
+                results: a,
+            }
+        );
     }
 }
 function K(e, t, n) {
@@ -353,7 +360,7 @@ function z() {
     (0, E.WU)();
 }
 function q(e) {
-    let t = S.get(e);
+    let t = T.get(e);
     if (null == t) return;
     let { searchContext: n, query: r, mode: i, tokens: a, cursorScope: o, autocompletes: s } = t,
         l = [];
@@ -368,18 +375,18 @@ function q(e) {
         cursorScope: o,
         autocompletes: l,
     });
-    S.set(e, c);
+    T.set(e, c);
 }
 function X(e) {
     let { id: t } = e;
     q(t);
 }
 function Q() {
-    for (let e of S.keys()) q(e);
+    for (let e of T.keys()) q(e);
 }
 function J(e) {
     let t = (0, E.Tm)(e),
-        n = S.get(t);
+        n = T.get(t);
     if (null == n) return !1;
     let { query: r, mode: i, tokens: a, cursorScope: o } = n,
         s = L({
@@ -390,13 +397,13 @@ function J(e) {
             cursorScope: o,
             autocompletes: K(e, i, a),
         });
-    S.set(t, s);
+    T.set(t, s);
 }
 function $() {
-    return null != T && J(T);
+    return null != S && J(S);
 }
 function ee() {
-    return null != T && J(T);
+    return null != S && J(S);
 }
 class et extends (r = o.ZP.Store) {
     initialize() {
@@ -405,10 +412,10 @@ class et extends (r = o.ZP.Store) {
     getState(e) {
         var t;
         let n = (0, E.Tm)(e);
-        return null != (t = S.get(n)) ? t : D(e);
+        return null != (t = T.get(n)) ? t : D(e);
     }
     getSelectedSearchContext() {
-        return T;
+        return S;
     }
 }
 I(et, "displayName", "SearchAutocompleteStore");

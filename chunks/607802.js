@@ -2,27 +2,28 @@ n.d(t, {
     $G: () => M,
     AH: () => N,
     BU: () => F,
-    BX: () => S,
-    Fr: () => z,
-    Fz: () => K,
+    BX: () => T,
+    EX: () => et,
+    Fr: () => q,
+    Fz: () => z,
     Jl: () => B,
     Ko: () => w,
-    Pe: () => q,
-    R6: () => X,
-    Tm: () => T,
+    Pe: () => X,
+    R6: () => Q,
+    Tm: () => S,
     UP: () => k,
     Vj: () => P,
-    WU: () => W,
-    X$: () => $,
-    X3: () => Q,
+    WU: () => K,
+    X$: () => ee,
+    X3: () => J,
     b7: () => C,
     cl: () => V,
     g9: () => U,
     i3: () => Z,
     jW: () => x,
-    kG: () => Y,
+    kG: () => W,
     nI: () => j,
-    nl: () => J,
+    nl: () => $,
     qc: () => G,
     s5: () => A,
     zH: () => R,
@@ -85,7 +86,7 @@ function I(e) {
     }
     return e;
 }
-function T(e) {
+function S(e) {
     switch (e.type) {
         case y.aib.GUILD:
             return e.guildId;
@@ -99,13 +100,13 @@ function T(e) {
             return y.I_8;
     }
 }
-function S(e) {
+function T(e) {
     let t = (0, g.N3)({ location: "getSearchHistoryStateId" });
     if (e.type === y.aib.DMS && t) {
         var n;
         return null != (n = d.Z.getChannelId(y.ME)) ? n : null;
     }
-    return T(e);
+    return S(e);
 }
 function A(e) {
     switch (e.type) {
@@ -396,27 +397,30 @@ function F(e) {
 function V(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let H = new a.ZP();
-function Y(e) {
+let H = new a.ZP(),
+    Y = new a.ZP();
+function W(e) {
     return H.tokenize(e);
 }
-function W() {
-    return H.clearCache();
+function K() {
+    H.clearCache(), Y.clearCache();
 }
-function K(e) {
+function z(e) {
     return null != e ? D[e] : null;
 }
-function z(e, t) {
+function q(e, t) {
     let n = y.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!y.KA4.test(t.type));
 }
-function q() {
-    (0, b.WK)(), H.reset(), i()(b.ZP).forOwn((e, t) => H.addRule(I({ type: t }, e))), m.Z.markSearchTokensRefreshed();
-}
-function X(e) {
-    return !!C(e) || (e.type === y.aib.DMS && !f.Z.hidePersonalInformation);
+function X() {
+    (0, b.WK)(), H.reset(), i()(b.ZP).forOwn((e, t) => H.addRule(I({ type: t }, e))), Y.reset();
+    let e = (0, b.mh)();
+    i()(e).forOwn((e, t) => Y.addRule(I({ type: t }, e))), m.Z.markSearchTokensRefreshed();
 }
 function Q(e) {
+    return !!C(e) || (e.type === y.aib.DMS && !f.Z.hidePersonalInformation);
+}
+function J(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, o.F6)(e, _.default, u.Z);
@@ -433,7 +437,7 @@ function Q(e) {
     }
     return ((t = B(t)), n) ? "#".concat(t) : t;
 }
-function J(e) {
+function $(e) {
     var t;
     if (e.isGroupDM()) return (0, o.F6)(e, _.default, u.Z);
     if (e.isDM()) {
@@ -444,7 +448,21 @@ function J(e) {
     let n = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return null != (t = null == n ? void 0 : n.name) ? t : e.name;
 }
-function $() {
+function ee() {
     var e, t;
     return null != (t = null == (e = _.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
+}
+function et(e) {
+    let t = Y.tokenize(e),
+        n = [];
+    t.forEach((e) => {
+        e.type !== y.dCx.FILTER_IN && e.type !== y.dCx.ANSWER_IN && n.push(e);
+    });
+    let r = "";
+    return (
+        n.forEach((e) => {
+            r += e.getFullMatch();
+        }),
+        r.trim()
+    );
 }

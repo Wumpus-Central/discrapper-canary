@@ -266,42 +266,42 @@ function L(e) {
             queryString: a,
         }),
         o = r.useMemo(() => {
-            let e = [],
-                t = new Set();
+            let t = [],
+                n = new Set();
             if (s.length > 0)
-                s.forEach((l) => {
-                    let n = l.channel,
-                        r = y({ channel: n });
-                    t.add(n.id), e.push(r);
+                s.forEach((e) => {
+                    let l = e.channel,
+                        r = y({ channel: l });
+                    n.add(l.id), t.push(r);
                 });
             else {
                 let { tokens: l } = i,
-                    n = l[l.length - 1];
-                if (null != n && n.type === _.dCx.ANSWER_IN && (0, T.Ni)(n)) {
-                    let l = n.getData("channelIds");
-                    null != l &&
-                        l.length > 0 &&
-                        l.forEach((l) => {
-                            let n = E.Z.getChannel(l);
-                            if (null != n) {
-                                let l = y({ channel: n });
-                                t.add(n.id), e.push(l);
+                    r = l[l.length - 1];
+                if (null != r && r.type === _.dCx.ANSWER_IN && (0, T.Ni)(r, e)) {
+                    let e = r.getData("channelIds");
+                    null != e &&
+                        e.length > 0 &&
+                        e.forEach((e) => {
+                            let l = E.Z.getChannel(e);
+                            if (null != l) {
+                                let e = y({ channel: l });
+                                n.add(l.id), t.push(e);
                             }
                         });
                 }
             }
             return (
                 l.length > 0 &&
-                    l.forEach((l) => {
-                        if (t.has(l)) return;
-                        let n = E.Z.getChannel(l);
-                        if (null == n) return;
-                        let r = y({ channel: n });
-                        t.add(l), e.unshift(r);
+                    l.forEach((e) => {
+                        if (n.has(e)) return;
+                        let l = E.Z.getChannel(e);
+                        if (null == l) return;
+                        let r = y({ channel: l });
+                        n.add(e), t.unshift(r);
                     }),
-                e
+                t
             );
-        }, [i, s, l]),
+        }, [i, s, l, e]),
         d = r.useCallback(() => {
             n([]), u("");
         }, []),

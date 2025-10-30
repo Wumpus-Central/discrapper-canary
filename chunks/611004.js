@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(704826), n(35282), n(539854), n(781311);
+n.d(t, { Z: () => C }), n(704826), n(35282), n(781311);
 var r = n(258863),
     i = n(349033),
     a = n(592125),
@@ -85,7 +85,7 @@ function I(e, t) {
     let c = (0, u.kG)(t).filter((e) => e.type !== i.ZP.NON_TOKEN_TYPE);
     (o = s.lv(c, o, _.ZP)), (o = s.iK(0 + t.length, o)), p.Z.updateSearchEditorState(e, o);
 }
-function T(e, t) {
+function S(e, t) {
     let n = v(e);
     if (null == n) return;
     let r = n.endsWith(" ") ? n + t : n + " " + t;
@@ -96,31 +96,17 @@ function T(e, t) {
             offset: 0,
         });
 }
-function S(e, t) {
-    let n = (0, u.kG)(t),
-        r = [];
-    n.forEach((t) => {
-        let n = t.type === E.dCx.FILTER_IN || t.type === E.dCx.ANSWER_IN;
-        ((0, u.R6)(e) || !n) && r.push(t);
-    });
-    let i = "";
-    return (
-        r.forEach((e) => {
-            i += e.getFullMatch();
-        }),
-        i
-    );
-}
-function A(e, t, n) {
+function T(e, t, n) {
     let r = (0, u.Tm)(e),
         i = h.Z.getEditorState(r);
     if (null == i) return;
-    let a = S(t, s.Sq(i));
-    I(t, (a = a.trim()));
-    let o = h.Z.getSearchMode(r);
-    p.Z.updateSearchMode(t, null != o ? o : g.o), c.Z.clearSearchMessages(r), p.Z.clearSearchEditorState(e), n(a);
+    let a = s.Sq(i),
+        o = t.type === E.aib.CHANNEL ? (0, u.EX)(a) : a;
+    I(t, (o = o.trim()));
+    let l = h.Z.getSearchMode(r);
+    p.Z.updateSearchMode(t, null != l ? l : g.o), c.Z.clearSearchMessages(r), p.Z.clearSearchEditorState(e), n(o);
 }
-function C() {
+function A() {
     h.Z.getSearchStateIds().forEach((e) => {
         let t = a.Z.getChannel(e);
         null != t &&
@@ -131,11 +117,11 @@ function C() {
             });
     });
 }
-let N = {
+let C = {
     cleanUpSearchState: b,
     fetchMessages: O,
     setSearchInputText: I,
-    appendToSearchInputText: T,
+    appendToSearchInputText: S,
     getSearchInputText: v,
     ensureSearchInputDecorators: function (e) {
         let t,
@@ -164,6 +150,6 @@ let N = {
             replace: r,
         });
     },
-    transitionQueryStateToSearchContext: A,
-    cleanUpPrivateChannelSearchState: C,
+    transitionQueryStateToSearchContext: T,
+    cleanUpPrivateChannelSearchState: A,
 };
