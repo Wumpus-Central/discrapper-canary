@@ -1,11 +1,11 @@
 r.d(t, {
-    Uw: () => F,
+    BO: () => F,
     ZP: () => A,
     w_: () => R,
 }),
     r(388685);
-var i = r(951288),
-    n = r(647438),
+var n = r(951288),
+    i = r(647438),
     l = r(120356),
     s = r.n(l),
     a = r(843611),
@@ -37,7 +37,7 @@ var i = r(951288),
     C = r(660097);
 let Z = (e) => {
     let { size: t = f.EFr.SIZE_80 } = e;
-    return (0, i.jsx)(f.qEK, {
+    return (0, n.jsx)(f.qEK, {
         className: _.placeholderAvatar,
         src: C,
         size: t,
@@ -46,56 +46,51 @@ let Z = (e) => {
 };
 function R(e) {
     let { surface: t = E.Y.PROFILE_MODAL } = e,
-        r = n.useRef(null),
-        l = n.useRef(null);
-    return (0, i.jsx)("div", {
+        r = i.useRef(null),
+        l = i.useRef(null);
+    return (0, n.jsx)("div", {
         ref: r,
         className: _.container,
-        children: (0, i.jsx)("div", {
+        children: (0, n.jsx)("div", {
             ref: l,
             className: s()(_.card, _.placeholderCard, {
                 [_.smallCard]: t === E.Y.GIFTING_FLOW,
                 [_.largeCard]: t === E.Y.PROFILE_MODAL,
             }),
-            children: (0, i.jsx)("div", {
+            children: (0, n.jsx)("div", {
                 className: _.cardPreview,
-                children: (0, i.jsx)("div", {
+                children: (0, n.jsx)("div", {
                     className: _.avatarDecorationPreview,
-                    children: (0, i.jsx)(Z, { size: f.EFr.SIZE_80 }),
+                    children: (0, n.jsx)(Z, { size: f.EFr.SIZE_80 }),
                 }),
             }),
         }),
     });
 }
 function F(e) {
-    let { item: t, profileOwner: r, size: l = "sm", remainingCount: a, onClick: c, surface: o } = e,
-        u = n.useRef(null),
-        d = n.useRef(null),
-        { isHoveringOrFocusing: m } = (0, g.Z)(d),
-        h = !0 === t.isOwned;
-    return (0, i.jsx)("div", {
-        ref: u,
+    let { item: t, size: r = "sm", remainingCount: l, onClick: a, renderItemPreview: c } = e,
+        o = i.useRef(null),
+        u = i.useRef(null),
+        { isHoveringOrFocusing: d } = (0, g.Z)(u),
+        m = !0 === t.isOwned;
+    return (0, n.jsx)("div", {
+        ref: o,
         className: _.container,
-        children: (0, i.jsx)(f.P3F, {
+        children: (0, n.jsx)(f.P3F, {
             tag: "div",
-            innerRef: d,
-            onClick: c,
-            className: s()(_.card, _.seeMoreCard, { [_.smallCard]: "sm" === l }),
-            children: (0, i.jsxs)("div", {
+            innerRef: u,
+            onClick: a,
+            className: s()(_.card, _.seeMoreCard, { [_.smallCard]: "sm" === r }),
+            children: (0, n.jsxs)("div", {
                 className: s()(_.cardPreview, _.seeMoreCardPreview),
                 children: [
-                    (0, i.jsx)(y.Z, {
-                        item: t,
-                        profileOwner: r,
-                        isHighlighted: !h && m,
-                        surface: o,
-                    }),
-                    (0, i.jsx)("div", {
+                    c(!m && d),
+                    (0, n.jsx)("div", {
                         className: _.seeMoreOverlay,
-                        children: (0, i.jsx)(f.Text, {
+                        children: (0, n.jsx)(f.Text, {
                             variant: "text-md/medium",
                             color: "always-white",
-                            children: L.intl.format(L.t.F6iMs4, { count: a }),
+                            children: L.intl.format(L.t.F6iMs4, { count: l }),
                         }),
                     }),
                 ],
@@ -115,33 +110,33 @@ function A(e) {
         R = (function (e, t) {
             if (null == e) return {};
             var r,
-                i,
-                n = (function (e, t) {
+                n,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
-                        i,
-                        n = {},
+                        n,
+                        i = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) (r = l[i]), t.indexOf(r) >= 0 || (n[r] = e[r]);
-                    return n;
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++)
-                    (r = l[i]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (n[r] = e[r]);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return n;
+            return i;
         })(e, ["profileOwner", "showIcons", "collectibleSource", "giftingOrigin"]);
     let { item: F, isOwner: A } = R,
         { analyticsLocations: G } = (0, h.ZP)(),
         D = (0, a.TH)(),
-        W = n.useRef(null),
+        W = i.useRef(null),
         { isHoveringOrFocusing: H } = (0, g.Z)(W),
-        [U] = (0, u.Wu)([b.Z], () => [b.Z.hasSentGift(F.skuId, l.id)], [F.skuId, l.id]),
-        M = U || !0 === F.isOwned,
+        [M] = (0, u.Wu)([b.Z], () => [b.Z.hasSentGift(F.skuId, l.id)], [F.skuId, l.id]),
+        U = M || !0 === F.isOwned,
         z = F.collectiblesItem.type,
-        V = (() => {
+        B = (() => {
             switch (z) {
                 case c.Z.AVATAR_DECORATION:
                     return L.intl.formatToPlainString(L.t.IQQYef, { itemName: F.skuName });
@@ -153,12 +148,12 @@ function A(e) {
                     (0, S.vE)(z);
             }
         })(),
-        Y = A || M ? L.intl.string(L.t.FdGl5A) : L.intl.string(L.t.ilhtIa),
-        B = A || M ? void 0 : f.OgN,
-        K = n.useCallback(() => {
+        V = A || U ? L.intl.string(L.t.FdGl5A) : L.intl.string(L.t.ilhtIa),
+        Y = A || U ? void 0 : f.OgN,
+        K = i.useCallback(() => {
             let e = D.pathname.startsWith(T.Z5c.COLLECTIBLES_SHOP);
-            if (A || M) {
-                let t = !A && M;
+            if (A || U) {
+                let t = !A && U;
                 if (e) {
                     let e = p.Z.getProduct(F.skuId),
                         r = p.Z.getCategoryForProduct(F.skuId);
@@ -188,17 +183,17 @@ function A(e) {
                     giftRecipient: l,
                     variantsReturnStyle: o.v.VARIANTS_GROUP,
                 });
-        }, [D.pathname, F.skuId, G, A, M, l, Z]),
-        q = n.useCallback(
+        }, [D.pathname, F.skuId, G, A, U, l, Z]),
+        q = i.useCallback(
             () =>
                 s
                     ? C === j.lr.WISHLIST
-                        ? (0, i.jsx)("div", {
+                        ? (0, n.jsx)("div", {
                               className: _.itemIcon,
-                              children: (0, i.jsx)(d.u, {
+                              children: (0, n.jsx)(d.u, {
                                   text: L.intl.formatToPlainString(L.t.p3RmJF, { username: w.ZP.getName(l) }),
                                   position: "top",
-                                  children: (0, i.jsx)(f.h_8, {
+                                  children: (0, n.jsx)(f.h_8, {
                                       size: "custom",
                                       width: 20,
                                       height: 20,
@@ -208,12 +203,12 @@ function A(e) {
                               }),
                           })
                         : C === j.lr.POPULAR
-                          ? (0, i.jsx)("div", {
+                          ? (0, n.jsx)("div", {
                                 className: _.itemIcon,
-                                children: (0, i.jsx)(d.u, {
+                                children: (0, n.jsx)(d.u, {
                                     text: L.intl.string(L.t.Ig6VDH),
                                     position: "top",
-                                    children: (0, i.jsx)(f.EOn, {
+                                    children: (0, n.jsx)(f.EOn, {
                                         size: "custom",
                                         width: 20,
                                         height: 20,
@@ -226,39 +221,39 @@ function A(e) {
                     : null,
             [s, C, l],
         ),
-        Q = n.useCallback(
+        Q = i.useCallback(
             () =>
-                (0, i.jsx)(y.Z, {
+                (0, n.jsx)(y.Z, {
                     item: F,
                     profileOwner: l,
-                    isHighlighted: !M && H,
+                    isHighlighted: !U && H,
                     surface: R.surface,
                 }),
-            [F, l, M, H, R.surface],
+            [F, l, U, H, R.surface],
         );
-    return (0, i.jsx)(
+    return (0, n.jsx)(
         E.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(r);
+                    n = Object.keys(r);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
+                    (n = n.concat(
                         Object.getOwnPropertySymbols(r).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         }),
                     )),
-                    i.forEach(function (t) {
-                        var i;
-                        (i = r[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: i,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = i);
+                                : (e[t] = n);
                     });
             }
             return e;
@@ -266,11 +261,11 @@ function A(e) {
         (r = r =
             {
                 cardRef: W,
-                accessibleLabel: V,
+                accessibleLabel: B,
                 onCardClick: K,
-                buttonCTALabel: Y,
-                buttonIcon: B,
-                isOwned: M,
+                buttonCTALabel: V,
+                buttonIcon: Y,
+                isOwned: U,
                 renderItemPreview: Q,
                 renderSourceIcon: q,
             }),
@@ -279,8 +274,8 @@ function A(e) {
             : (function (e, t) {
                   var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, i);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
                   return r;
               })(Object(r)).forEach(function (e) {

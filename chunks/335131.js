@@ -1,17 +1,18 @@
 n.d(t, {
     B1: () => B,
     F$: () => M,
-    Ov: () => F,
-    R2: () => Z,
+    Ov: () => V,
+    R2: () => F,
     Sm: () => w,
+    _o: () => Z,
     fK: () => G,
-    fi: () => V,
+    fi: () => H,
     jr: () => j,
     lW: () => U,
     mK: () => P,
     oK: () => D,
     oc: () => x,
-    p8: () => H,
+    p8: () => Y,
     qg: () => k,
 }),
     n(388685),
@@ -39,9 +40,9 @@ var u = n(703656),
     O = n(251728),
     v = n(303952),
     I = n(578976),
-    T = n(411700);
+    S = n(411700);
 n(215023);
-var S = n(981631);
+var T = n(981631);
 function A(e, t, n) {
     return (
         t in e
@@ -98,7 +99,7 @@ let P = (e) => {
             r = N(e, ["tab"]);
         {
             let { default: e } = n(342386);
-            w(r), e(), (0, u.uL)(t ? S.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t) : S.Z5c.COLLECTIBLES_SHOP);
+            w(r), e(), (0, u.uL)(t ? T.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t) : T.Z5c.COLLECTIBLES_SHOP);
         }
     },
     w = (e) => {
@@ -141,7 +142,7 @@ let P = (e) => {
         try {
             let a = (0, h.i)("CollectiblesActionCreators"),
                 l = await o.tn.get({
-                    url: a ? S.ANM.COLLECTIBLES_CATEGORIES_V2 : S.ANM.COLLECTIBLES_CATEGORIES,
+                    url: a ? T.ANM.COLLECTIBLES_CATEGORIES_V2 : T.ANM.COLLECTIBLES_CATEGORIES,
                     query: r,
                     rejectWithError: !0,
                 });
@@ -173,7 +174,7 @@ let P = (e) => {
                       });
         } catch (t) {
             let e = new l.Hx(t);
-            (0, T.G)(e),
+            (0, S.G)(e),
                 s.Z.dispatch({
                     type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
                     error: e,
@@ -188,7 +189,7 @@ let P = (e) => {
         t && (0, _.v)("fetchCollectiblesPurchases started, options: ".concat(JSON.stringify(e, null, 2)));
         try {
             let n = {
-                url: S.ANM.COLLECTIBLES_PURCHASES,
+                url: T.ANM.COLLECTIBLES_PURCHASES,
                 rejectWithError: !0,
             };
             (null == e ? void 0 : e.variantsReturnStyle) === a.v.VARIANTS_GROUP &&
@@ -203,7 +204,7 @@ let P = (e) => {
         } catch (n) {
             let e = new l.Hx(n);
             throw (
-                ((0, T.G)(e),
+                ((0, S.G)(e),
                 t && (0, _.v)("fetchCollectiblesPurchases failed: ".concat(e.message)),
                 s.Z.dispatch({
                     type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
@@ -226,7 +227,7 @@ let P = (e) => {
                 (null == t ? void 0 : t.includeBundles) !== null &&
                     (n.include_bundles = null == t ? void 0 : t.includeBundles);
             let r = await o.tn.get({
-                url: S.ANM.COLLECTIBLES_PRODUCTS(e),
+                url: T.ANM.COLLECTIBLES_PRODUCTS(e),
                 rejectWithError: !0,
                 query: n,
             });
@@ -237,7 +238,7 @@ let P = (e) => {
             });
         } catch (n) {
             let t = new l.Hx(n);
-            (0, T.G)(t),
+            (0, S.G)(t),
                 s.Z.dispatch({
                     type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
                     skuId: e,
@@ -256,7 +257,7 @@ let P = (e) => {
         try {
             var t;
             let n = await o.tn.put({
-                url: S.ANM.COLLECTIBLES_CLAIM,
+                url: T.ANM.COLLECTIBLES_CLAIM,
                 body: { sku_id: e },
                 rejectWithError: !0,
             });
@@ -281,7 +282,7 @@ let P = (e) => {
         try {
             return (
                 await o.tn.get({
-                    url: S.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,
+                    url: T.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,
                     query: {
                         sku_id: t,
                         recipient_id: e,
@@ -290,17 +291,33 @@ let P = (e) => {
                 })
             ).body.valid;
         } catch (e) {
-            return (0, T.G)(new l.Hx(e)), !1;
+            return (0, S.G)(new l.Hx(e)), !1;
         }
     },
-    Z = async (e) => {
+    Z = async (e, t) => {
+        try {
+            return (
+                await o.tn.get({
+                    url: T.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH,
+                    query: {
+                        sku_ids: t,
+                        recipient_id: e,
+                    },
+                    rejectWithError: !0,
+                })
+            ).body;
+        } catch (e) {
+            return (0, S.G)(new l.Hx(e)), {};
+        }
+    },
+    F = async (e) => {
         let { release: t = i.P.PROD } = e;
         s.Z.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
         let n = { platform: r.h.DESKTOP };
         t !== i.P.PROD && (n.release = t);
         try {
             let e = await o.tn.get({
-                url: S.ANM.COLLECTIBLES_MARKETING,
+                url: T.ANM.COLLECTIBLES_MARKETING,
                 query: n,
                 rejectWithError: !0,
             });
@@ -309,10 +326,10 @@ let P = (e) => {
                 marketings: E.s.fromServer(e.body),
             });
         } catch (e) {
-            (0, T.G)(new l.Hx(e)), s.Z.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+            (0, S.G)(new l.Hx(e)), s.Z.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
         }
     },
-    F = async (e, t, n) => {
+    V = async (e, t, n) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_SHOP_HOME_FETCH",
             tab: e,
@@ -329,7 +346,7 @@ let P = (e) => {
             });
         try {
             let i = await o.tn.get({
-                url: S.ANM.COLLECTIBLES_SHOP,
+                url: T.ANM.COLLECTIBLES_SHOP,
                 query: r,
                 rejectWithError: !0,
             });
@@ -348,7 +365,7 @@ let P = (e) => {
                 });
         } catch (n) {
             let t = new l.Hx(n);
-            (0, T.G)(t),
+            (0, S.G)(t),
                 s.Z.dispatch({
                     type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE",
                     tab: e,
@@ -356,13 +373,13 @@ let P = (e) => {
                 });
         }
     },
-    V = (e) => {
+    H = (e) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE",
             shopHomeConfigOverride: e,
         });
     },
-    H = (e) => {
+    Y = (e) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_SKIP_NUM_CATEGORIES",
             skipNumCategories: e,
