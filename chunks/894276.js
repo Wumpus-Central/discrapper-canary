@@ -2,8 +2,9 @@ n.d(t, {
     Ng: () => h,
     Re: () => l,
     fg: () => m,
+    iZ: () => g,
     j_: () => p,
-    l2: () => g,
+    l2: () => E,
 }),
     n(953529),
     n(539854),
@@ -138,6 +139,7 @@ class _ extends u {
 }
 let p = new f("2025-09-libdiscore-migrate-guildstore", "GuildStore", "Kv"),
     h = new f("2025-09-libdiscore-guildrolestore", "GuildRoleStore", "Kkv"),
-    m = new f("2025-09-libdiscore-rawguildemojistore", "RawGuildEmojiStore", "Kkv");
+    m = new f("2025-09-libdiscore-rawguildemojistore", "RawGuildEmojiStore", "Kkv"),
+    g = new f("2025-10-libdiscore-guildstickersstore", "GuildStickersStore", "Kkv");
 new _("2025-09-libdiscore-telemetry");
-let g = new d("2025-10-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+let E = new d("2025-10-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");

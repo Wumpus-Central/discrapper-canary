@@ -1,16 +1,17 @@
 n.d(t, {
     $p: () => T,
-    FQ: () => I,
-    Il: () => S,
-    Jf: () => R,
-    SA: () => L,
-    SV: () => A,
-    Um: () => C,
-    eu: () => P,
-    hW: () => x,
-    lY: () => N,
+    FQ: () => S,
+    Il: () => A,
+    Jf: () => P,
+    SA: () => x,
+    SV: () => C,
+    Um: () => N,
+    eu: () => w,
+    hW: () => M,
+    lY: () => R,
     qB: () => D,
 }),
+    n(415506),
     n(953529),
     n(539854);
 var r = n(392711),
@@ -26,10 +27,11 @@ var r = n(392711),
     _ = n(594174),
     p = n(73346),
     h = n(926491),
-    m = n(981631),
-    g = n(526761),
-    E = n(388032);
-function b(e, t, n) {
+    m = n(378233),
+    g = n(981631),
+    E = n(526761),
+    b = n(388032);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +44,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +55,12 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,20 +72,20 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = async (e, t) => {
+let S = async (e, t) => {
         let { body: n } = await (0, p.Kb)({
-            url: m.ANM.STICKER_PACK(e),
+            url: g.ANM.STICKER_PACK(e),
             rejectWithError: !1,
         });
         return (
@@ -105,7 +107,7 @@ let I = async (e, t) => {
         let {
             body: { sticker_packs: t },
         } = await a.tn.get({
-            url: m.ANM.STICKER_PACKS,
+            url: g.ANM.STICKER_PACKS,
             query: { locale: e },
             rejectWithError: !1,
         });
@@ -114,19 +116,26 @@ let I = async (e, t) => {
             packs: t,
         });
     },
-    S = async (e) => {
+    A = async (e) => {
         let { body: t } = await a.tn.get({
-            url: m.ANM.STICKER(e),
+            url: g.ANM.STICKER(e),
             rejectWithError: !1,
         });
-        o.Z.dispatch({
-            type: "STICKER_FETCH_SUCCESS",
-            sticker: t,
-        });
+        if ((0, m.J8)(t))
+            o.Z.dispatch({
+                type: "GUILD_STICKER_FETCH_SUCCESS",
+                sticker: t,
+            });
+        else if ((0, m.jl)(t))
+            o.Z.dispatch({
+                type: "PACK_STICKER_FETCH_SUCCESS",
+                sticker: t,
+            });
+        else throw Error("Invalid sticker type");
     },
-    A = async (e, t) => {
+    C = async (e, t) => {
         let { body: n } = await a.tn.get({
-            url: m.ANM.GUILD_STICKER_PACKS(e),
+            url: g.ANM.GUILD_STICKER_PACKS(e),
             rejectWithError: !1,
             signal: t,
         });
@@ -135,7 +144,7 @@ let I = async (e, t) => {
             guildId: e,
             stickers: n.map((e) =>
                 null != e.user
-                    ? v(y({}, e), {
+                    ? I(O({}, e), {
                           user_id: e.user.id,
                           user: new d.Z(e.user),
                       })
@@ -143,17 +152,17 @@ let I = async (e, t) => {
             ),
         });
     },
-    C = async (e) => {
+    N = async (e) => {
         await a.tn.del({
-            url: m.ANM.GUILD_STICKER(e.guild_id, e.id),
+            url: g.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1,
         });
     },
-    N = async (e) => {
+    R = async (e) => {
         var t;
         let { guildId: n } = e,
             r = await a.tn.post({
-                url: m.ANM.GUILD_STICKER_PACKS(n),
+                url: g.ANM.GUILD_STICKER_PACKS(n),
                 body: "web" === e.platform ? e.body : void 0,
                 fields:
                     "mobile" === e.platform
@@ -191,20 +200,20 @@ let I = async (e, t) => {
             o.Z.dispatch({
                 type: "GUILD_STICKERS_CREATE_SUCCESS",
                 guildId: n,
-                sticker: v(y({}, r.body), { user_id: null == (t = _.default.getCurrentUser()) ? void 0 : t.id }),
+                sticker: I(O({}, r.body), { user_id: null == (t = _.default.getCurrentUser()) ? void 0 : t.id }),
             }),
             r.body
         );
     },
-    R = async (e, t, n) =>
+    P = async (e, t, n) =>
         (
             await a.tn.patch({
-                url: m.ANM.GUILD_STICKER(e, t),
+                url: g.ANM.GUILD_STICKER(e, t),
                 body: n,
                 rejectWithError: !1,
             })
         ).body;
-function P(e, t, n) {
+function w(e, t, n) {
     o.Z.dispatch({
         type: "ADD_STICKER_PREVIEW",
         channelId: e,
@@ -219,29 +228,29 @@ function D(e, t) {
         draftType: t,
     });
 }
-function w(e) {
-    return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
-}
 function L(e) {
-    u.DZ.updateAsync(
-        "favoriteStickers",
-        (t) =>
-            ((t.stickerIds = w(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
-                ? (s.Z.show({
-                      title: E.intl.string(E.t["+XYXtZ"]),
-                      body: E.intl.formatToPlainString(E.t.JaIyFi, { count: g.oX }),
-                  }),
-                  !1)
-                : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
-        g.fy.INFREQUENT_USER_ACTION,
-    );
+    return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
 function x(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
+        (t) =>
+            ((t.stickerIds = L(t.stickerIds)), i().size(t.stickerIds) >= E.oX)
+                ? (s.Z.show({
+                      title: b.intl.string(b.t["+XYXtZ"]),
+                      body: b.intl.formatToPlainString(b.t.JaIyFi, { count: E.oX }),
+                  }),
+                  !1)
+                : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
+        E.fy.INFREQUENT_USER_ACTION,
+    );
+}
+function M(e) {
+    u.DZ.updateAsync(
+        "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = w(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = L(t.stickerIds));
         },
-        g.fy.INFREQUENT_USER_ACTION,
+        E.fy.INFREQUENT_USER_ACTION,
     );
 }

@@ -1,10 +1,9 @@
-n.d(t, { Z: () => v }), n(388685), n(781311), n(539854);
+n.d(t, { Z: () => E }), n(388685), n(953529), n(781311), n(539854);
 var r = n(732870),
     i = n(429091),
     a = n(70956),
-    o = n(373228),
-    s = n(378233);
-function l(e, t, n) {
+    o = n(373228);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,59 +16,29 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
+let l = new Map(),
+    c = new Map(),
+    u = !1,
+    d = null,
+    f = a.Z.Millis.HOUR;
+function _(e) {
+    return {
+        id: e.id,
+        tags: e.tags,
+        type: e.type,
+        name: e.name,
+        description: e.description,
+        format_type: e.format_type,
+        pack_id: e.pack_id,
+        [r.O]: "PackSticker",
+    };
 }
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let f = new Map(),
-    _ = new Map(),
-    p = !1,
-    h = null,
-    m = a.Z.Millis.HOUR;
-function g(e) {
-    return d(c({}, e), { [r.O]: "PackSticker" });
-}
-function E(e) {
+function p(e) {
     let t = {};
-    for (let n of e) t[n.id] = g(n);
+    for (let n of e) t[n.id] = _(n);
     return t;
 }
-function b(e, t) {
+function h(e, t) {
     let n = [];
     return (
         n.push({
@@ -84,22 +53,22 @@ function b(e, t) {
         n
     );
 }
-class y extends i.d {
+class m extends i.d {
     get isFetchingStickerPacks() {
-        return p;
+        return u;
     }
     get hasLoadedStickerPacks() {
-        return null != h && h + m > performance.now();
+        return null != d && d + f > performance.now();
     }
     isPremiumPack(e) {
-        return _.has(e);
+        return c.has(e);
     }
     getStickerPack(e) {
-        return f.get(e);
+        return l.get(e);
     }
     constructor(...e) {
         super(...e),
-            l(
+            s(
                 this,
                 "getAllPackStickers",
                 this.memoized((e) => {
@@ -108,51 +77,50 @@ class y extends i.d {
                     return t;
                 }),
             ),
-            l(
+            s(
                 this,
                 "getStickerMetadataMap",
                 this.memoized((e) => {
                     let t = new Map();
                     for (let n in e)
                         for (let [r, i] of Object.entries(e[n].root)) {
-                            let e = f.get(n);
-                            t.set(r, b(i, e));
+                            let e = l.get(n);
+                            t.set(r, h(i, e));
                         }
                     return t;
                 }),
             ),
-            l(this, "getStickerById", this.memoizedSecondaryIndex()),
-            l(
+            s(this, "getStickerById", this.memoizedSecondaryIndex()),
+            s(
                 this,
                 "getPremiumPacks",
-                this.memoized((e) => Array.from(_.values())),
+                this.memoized((e) => Array.from(c.values())),
             );
     }
 }
-function O(e, t, n) {
-    f.set(e.id, e), n && _.set(e.id, e), t.setPartition(e.id, E(e.stickers));
+function g(e, t, n) {
+    l.set(e.id, e), n && c.set(e.id, e), t.setPartition(e.id, p(e.stickers));
 }
-l(y, "displayName", "StickersPackStore");
-let v = new y(
+s(m, "displayName", "StickersPackStore");
+let E = new m(
     {
         LOGOUT: (e, t) => {
-            f.clear(), _.clear(), t.reset();
+            l.clear(), c.clear(), t.reset();
         },
         STICKER_PACK_FETCH_SUCCESS: (e, t) => {
             let { pack: n } = e;
-            O(n, t, !1);
+            g(n, t, !1);
         },
         STICKER_PACKS_FETCH_START: (e, t) => {
-            p = !0;
+            u = !0;
         },
         STICKER_PACKS_FETCH_SUCCESS: (e, t) => {
             let { packs: n } = e;
-            for (let e of ((p = !1), (h = performance.now()), n)) O(e, t, !0);
+            for (let e of ((u = !1), (d = performance.now()), n)) g(e, t, !0);
         },
-        STICKER_FETCH_SUCCESS: (e, t) => {
+        PACK_STICKER_FETCH_SUCCESS: (e, t) => {
             let { sticker: n } = e;
-            if (!(0, s.jl)(n)) return !1;
-            t.set(n.pack_id, n.id, g(n));
+            t.set(n.pack_id, n.id, _(n));
         },
     },
     "typescript",

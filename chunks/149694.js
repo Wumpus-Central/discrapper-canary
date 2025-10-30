@@ -1,10 +1,10 @@
 n.d(t, { Z: () => g }), n(953529), n(388685), n(781311), n(539854);
 var r = n(732870),
     i = n(633302),
-    a = n(429091),
-    o = n(430824),
-    s = n(373228),
-    l = n(378233);
+    a = n(894276),
+    o = n(429091),
+    s = n(430824),
+    l = n(373228);
 function c(e, t, n) {
     return (
         t in e
@@ -81,41 +81,41 @@ function h(e, t) {
     let n = [],
         { tags: r } = t,
         a = {
-            type: s.MO.STICKER_NAME,
+            type: l.MO.STICKER_NAME,
             value: t.name.trim().toLocaleLowerCase(),
         };
     if ((n.push(a), null != r)) {
         let t = {
-            type: s.MO.TAG,
+            type: l.MO.TAG,
             value: r.trim().toLocaleLowerCase(),
         };
         n.push(t);
-        let a = o.Z.getGuild(e);
+        let a = s.Z.getGuild(e);
         if (null != a) {
             let e = a.name.trim().toLocaleLowerCase();
             null != e &&
                 "" !== e &&
                 n.push({
-                    type: s.MO.GUILD_NAME,
+                    type: l.MO.GUILD_NAME,
                     value: e,
                 });
         }
-        let l = i.ZP.getByName(r);
-        null != l &&
+        let o = i.ZP.getByName(r);
+        null != o &&
             (n.push({
-                type: s.MO.CORRELATED_EMOJI,
-                value: l.surrogates,
+                type: l.MO.CORRELATED_EMOJI,
+                value: o.surrogates,
             }),
-            l.forEachDiversity((e) =>
+            o.forEachDiversity((e) =>
                 n.push({
-                    type: s.MO.CORRELATED_EMOJI,
+                    type: l.MO.CORRELATED_EMOJI,
                     value: e.surrogates,
                 }),
             ));
     }
     return n;
 }
-class m extends a.d {
+class m extends o.d {
     constructor(...e) {
         super(...e),
             c(
@@ -167,8 +167,7 @@ let g = new m(
         GUILD_STICKERS_CREATE_SUCCESS: (e, t) => {
             t.set(e.guildId, e.sticker.id, _(e.sticker));
         },
-        STICKER_FETCH_SUCCESS: (e, t) => {
-            if (!(0, l.J8)(e.sticker)) return !1;
+        GUILD_STICKER_FETCH_SUCCESS: (e, t) => {
             t.set(e.sticker.guild_id, e.sticker.id, _(e.sticker));
         },
         GUILD_STICKERS_UPDATE: (e, t) => {
@@ -189,5 +188,5 @@ let g = new m(
             t.setPartition(e.guildId, p(e.stickers));
         },
     },
-    "typescript",
+    a.iZ.getCachedBridgedStoreMode(),
 );
