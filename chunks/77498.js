@@ -78,17 +78,17 @@ function R(e) {
 }
 function P(e) {
     let { detectableApplications: t } = e;
-    for (let e of t) R(e);
-}
-function w() {
-    r = !0;
+    for (let e of (O.clear(), (v = {}), (I = {}), t)) R(e);
 }
 function D() {
+    r = !0;
+}
+function w() {
     r = !1;
 }
 function L(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && S !== n && (S = n), t)) R(C(e));
+    for (let e of (null != n && S !== n && (O.clear(), (v = {}), (I = {}), (S = n)), t)) R(C(e));
     (r = void 0), (A = Date.now());
 }
 class x extends (a = o.ZP.PersistedStore) {
@@ -212,7 +212,7 @@ g(x, "displayName", "GameStore"),
     ]);
 let M = new x(l.Z, {
     OVERLAY_INITIALIZE: P,
-    GAMES_DATABASE_FETCH: w,
-    GAMES_DATABASE_FETCH_FAIL: D,
+    GAMES_DATABASE_FETCH: D,
+    GAMES_DATABASE_FETCH_FAIL: w,
     GAMES_DATABASE_UPDATE: L,
 });
