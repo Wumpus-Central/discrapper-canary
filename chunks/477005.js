@@ -1,56 +1,52 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(974390),
-    l = n(475595),
-    c = n(18578),
-    u = n(251360),
-    d = n(46140),
-    f = n(388032),
-    _ = n(178833);
-function p(e) {
+    s = n(475595),
+    l = n(18578),
+    c = n(251360),
+    u = n(388032),
+    d = n(178833);
+function f(e) {
     let {
             quest: t,
             isInteracting: n,
             hideAssets: a,
-            imageSize: p,
-            containerClassName: h,
-            imageClassName: m,
-            assetRef: g,
+            imageSize: f,
+            containerClassName: _,
+            imageClassName: p,
+            assetRef: h,
         } = e,
-        E = i.useMemo(() => (0, l.fh)(t, l.eC.HERO_IMAGE), [t]),
-        b = i.useMemo(() => (0, l.fh)(t, l.eC.HERO_VIDEO), [t]),
-        y = (0, s.h)(t, d.dr.QUEST_HOME_DESKTOP),
-        { onAssetLoadComplete: O } = i.useContext(u.k),
-        v = !y && n;
+        m = i.useMemo(() => (0, s.fh)(t, s.eC.HERO_IMAGE), [t]),
+        g = i.useMemo(() => (0, s.fh)(t, s.eC.HERO_VIDEO), [t]),
+        { onAssetLoadComplete: E } = i.useContext(c.k);
     return (0, r.jsx)("div", {
-        className: o()(_.heroAssetCont, h),
+        className: o()(d.heroAssetCont, _),
         children:
             !a &&
-            (0, r.jsx)(c.K, {
+            (0, r.jsx)(l.K, {
                 imageAsset:
-                    null != E
+                    null != m
                         ? {
-                              asset: E,
+                              asset: m,
                               assetId: "QuestTileBanner",
-                              alt: f.intl.string(f.t.jnijWz),
-                              className: o()(_.heroAsset, m),
+                              alt: u.intl.string(u.t.jnijWz),
+                              className: o()(d.heroAsset, p),
                           }
                         : void 0,
                 videoAsset:
-                    null != b
+                    null != g
                         ? {
-                              asset: b,
+                              asset: g,
                               assetId: "QuestTileBanner_heroAnimated",
-                              className: _.heroAssetVideo,
+                              className: d.heroAssetVideo,
                           }
                         : void 0,
-                showVideo: v,
-                imageSize: p,
-                onLoadComplete: O,
-                assetRef: g,
+                showVideo: n,
+                imageSize: f,
+                onLoadComplete: E,
+                assetRef: h,
             }),
     });
 }
