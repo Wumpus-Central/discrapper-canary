@@ -20,8 +20,8 @@ var a = n(951288),
     h = n(665149),
     x = n(611565),
     f = n(238246),
-    b = n(788983),
-    g = n(36243),
+    g = n(788983),
+    b = n(36243),
     v = n(51415),
     j = n(906467),
     _ = n(259580),
@@ -48,8 +48,8 @@ var E = n(392750),
     B = n(735959),
     G = n(572444),
     z = n(636500),
-    V = n(246992),
-    H = n(484662),
+    H = n(246992),
+    V = n(484662),
     W = n(546895),
     K = n(496025),
     q = n(442954),
@@ -75,8 +75,8 @@ var E = n(392750),
     eh = n(200178),
     ex = n(260950),
     ef = n(63954),
-    eb = n(569157),
-    eg = n(490007),
+    eg = n(569157),
+    eb = n(490007),
     ev = n(621060),
     ej = n(981631),
     e_ = n(46140),
@@ -163,7 +163,7 @@ function eE() {
                 }),
                 e.push({
                     id: "generated_test_user",
-                    name: "Generated Test User",
+                    name: "Generated Test Users",
                     group: ev.v0.DEVELOPMENT,
                     render: () => (0, a.jsx)(M.Z, {}),
                 }),
@@ -177,7 +177,7 @@ function eE() {
                     id: "quick_switcher",
                     name: "Quick Switcher",
                     group: ev.v0.USERS,
-                    render: () => (0, a.jsx)(eb.Z, {}),
+                    render: () => (0, a.jsx)(eg.Z, {}),
                 })),
             e.push({
                 id: "rive",
@@ -249,7 +249,7 @@ function eE() {
                 id: "layers",
                 name: "Layers",
                 group: ev.v0.UI,
-                render: () => (0, a.jsx)(H.Z, {}),
+                render: () => (0, a.jsx)(V.Z, {}),
             }),
             e.push({
                 id: "affinity",
@@ -395,9 +395,9 @@ function eE() {
                 id: "Revenue Storybook",
                 name: "Revenue Storybook",
                 group: ev.v0.BILLING,
-                render: () => (0, a.jsx)(eg.Z, {}),
+                render: () => (0, a.jsx)(eb.Z, {}),
             }),
-            (0, g.X)({ location: e_.dr.QUEST_PREVIEW_TOOL }) &&
+            (0, b.X)({ location: e_.dr.QUEST_PREVIEW_TOOL }) &&
                 e.push({
                     id: "quest_preview",
                     name: "Quest Preview",
@@ -423,7 +423,7 @@ function eO(e) {
     });
 }
 function eT() {
-    (0, b.bA)(
+    (0, g.bA)(
         ej.KJ3.DEVTOOLS_POPOUT,
         () =>
             (0, a.jsx)(f.Z, {
@@ -465,7 +465,7 @@ function eN(e) {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: s },
         }),
-        (0, a.jsxs)(V.Gk, {
+        (0, a.jsxs)(H.Gk, {
             children: [
                 (0, a.jsxs)(h.ZP, {
                     className: eS.headerBar,
@@ -495,7 +495,7 @@ function eN(e) {
                 }),
                 (0, a.jsx)(l, {}),
                 i(),
-                (0, a.jsx)(V.Br, { className: eC.layerContainer }),
+                (0, a.jsx)(H.Br, { className: eC.layerContainer }),
             ],
         })
     );
