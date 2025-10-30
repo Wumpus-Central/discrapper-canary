@@ -69,8 +69,8 @@ function O(e, t) {
 }
 let v = "default",
     I = [],
-    S = [],
     T = [],
+    S = [],
     A = 0,
     C = null,
     N = null,
@@ -78,8 +78,8 @@ let v = "default",
     P = null,
     w = [],
     D = null,
-    L = {},
-    x = new Map(),
+    x = {},
+    L = new Map(),
     M = {
         clipsEnabled: !1,
         storageLocation: v,
@@ -106,7 +106,7 @@ let v = "default",
             yellDetector: !0,
             whisperTranscription: !0,
         },
-        autoClipPhrases: [],
+        autoClipPhrases: ["clip", "flip that", "flip it"],
     },
     k = {
         clipsSettings: M,
@@ -145,9 +145,9 @@ function U(e) {
 }
 function G(e) {
     let { clip: t } = e;
-    for (let [e, n] of S.entries())
+    for (let [e, n] of T.entries())
         if (n.id === t.id) {
-            (S[e] = t), (S = [...S]);
+            (T[e] = t), (T = [...T]);
             return;
         }
 }
@@ -166,8 +166,8 @@ function F(e) {
         var i;
         let e = Date.now();
         (D = null != D ? D : e),
-            (L[n] = [
-                ...(null != (i = L[n]) ? i : []),
+            (x[n] = [
+                ...(null != (i = x[n]) ? i : []),
                 {
                     timestamp: e,
                     thumbnail: r,
@@ -177,7 +177,7 @@ function F(e) {
 }
 function V(e) {
     let { streamKey: t, timestamp: n } = e;
-    D === n && (D = null), null == n ? (L[t] = []) : (L[t] = L[t].filter((e) => e.timestamp !== n));
+    D === n && (D = null), null == n ? (x[t] = []) : (x[t] = x[t].filter((e) => e.timestamp !== n));
 }
 function H() {
     A = Math.max(A - 1, 0);
@@ -201,20 +201,20 @@ function Y(e) {
         (k = O(b({}, k), {
             newClipIds: [...(null != (n = k.newClipIds) ? n : []), r.id],
         })),
-        (T = T.filter((e) => {
+        (S = S.filter((e) => {
             let { id: t } = e;
             return t !== r.id;
         })),
-        (S = [r, ...S]),
+        (T = [r, ...T]),
         (k.hasClips = !0);
 }
 function W(e) {
     let { clip: t } = e;
-    T = [t, ...T];
+    S = [t, ...S];
 }
 function K(e) {
     let { clipId: t } = e;
-    T = T.filter((e) => {
+    S = S.filter((e) => {
         let { id: n } = e;
         return n !== t;
     });
@@ -258,15 +258,15 @@ function J(e) {
 }
 function $(e) {
     let { streamKey: t } = e;
-    if (((D = null), (L[t] = []), null == N || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
+    if (((D = null), (x[t] = []), null == N || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
     N = 0 === N.newClipIds.length ? null : O(b({}, N), { ended: !0 });
 }
 function ee(e) {
-    (k.hasClips = e.clips.length > 0), (S = e.clips);
+    (k.hasClips = e.clips.length > 0), (T = e.clips);
 }
 function et(e) {
     0 ===
-        (S = S.filter((t) => {
+        (T = T.filter((t) => {
             let { filepath: n } = t;
             return n !== e.filepath;
         })).length && (k.hasClips = !1);
@@ -316,8 +316,8 @@ function el(e, t, n) {
             a = t.substring(n),
             o = JSON.parse(a);
         if (null == o.id) return !1;
-        let s = x.get(e);
-        return null == s && ((s = new Set()), x.set(e, s)), s.add(o.id), !0;
+        let s = L.get(e);
+        return null == s && ((s = new Set()), L.set(e, s)), s.add(o.id), !0;
     } catch (e) {
         return !1;
     }
@@ -339,10 +339,10 @@ class ed extends (r = i.ZP.DeviceSettingsStore) {
         null != e && (k = e), j(), this.waitFor(s.ZP);
     }
     getClips() {
-        return S;
+        return T;
     }
     getPendingClips() {
-        return T;
+        return S;
     }
     getUserAgnosticState() {
         return k;
@@ -364,10 +364,10 @@ class ed extends (r = i.ZP.DeviceSettingsStore) {
     }
     getStreamClipAnimations(e) {
         var t;
-        return null != (t = L[e]) ? t : I;
+        return null != (t = x[e]) ? t : I;
     }
     hasAnyClipAnimations() {
-        return Object.values(L).some((e) => e.length > 0);
+        return Object.values(x).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return k.hardwareClassification;
@@ -416,7 +416,7 @@ class ed extends (r = i.ZP.DeviceSettingsStore) {
     }
     getMatchingGroupClip(e, t) {
         if (null == e && null == t) return null;
-        for (let o of S) {
+        for (let o of T) {
             var n, r, i, a;
             if (
                 (null != t && o.id === t) ||
@@ -430,7 +430,7 @@ class ed extends (r = i.ZP.DeviceSettingsStore) {
     }
     wasClipSharedInChannel(e, t) {
         var n;
-        let r = x.get(t);
+        let r = L.get(t);
         return null != (n = null == r ? void 0 : r.has(e)) && n;
     }
 }
@@ -525,6 +525,15 @@ E(ed, "displayName", "ClipsStore"),
                 clipDecisionEngineConfig: null != (a = e.clipDecisionEngineConfig) ? a : (0, f.P_)(),
             });
         },
+        (e) =>
+            O(b({}, e), {
+                clipsSettings: O(b({}, e.clipsSettings), {
+                    autoClipPhrases:
+                        0 === e.clipsSettings.autoClipPhrases.length
+                            ? M.autoClipPhrases
+                            : e.clipsSettings.autoClipPhrases,
+                }),
+            }),
     ]);
 let ef = new ed(a.Z, {
         CLIPS_SETTINGS_UPDATE: B,
