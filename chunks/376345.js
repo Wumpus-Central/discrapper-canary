@@ -33,7 +33,7 @@ let O = {
             return { resolve: (n, r) => t(e[n].nativeStyles, r) };
         }
         return {
-            shadowOffset: t((e) => e.shadowOffset),
+            shadowOffset: t((e, t) => (t ? void 0 : e.shadowOffset)),
             shadowColor: t((e, t) => (t ? e.shadowColorAndroid : e.shadowColor)),
             shadowOpacity: t((e) => e.shadowOpacity),
             shadowRadius: t((e) => e.shadowRadius),
