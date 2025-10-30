@@ -35,8 +35,8 @@ var r = n(951288),
     P = n(51499),
     w = n(586585),
     D = n(614277),
-    L = n(35248),
-    x = n(439021),
+    x = n(35248),
+    L = n(439021),
     M = n(698708),
     k = n(351402),
     j = n(975060),
@@ -56,8 +56,8 @@ var r = n(951288),
     Q = n(850228),
     J = n(231338),
     $ = n(388032),
-    ee = n(750441),
-    et = n(987954);
+    ee = n(700739),
+    et = n(397519);
 function en(e, t, n) {
     return (
         t in e
@@ -279,8 +279,8 @@ function eO(e) {
             ADD_PAYMENT_STEPS: eP,
             PRZELEWY24_STEPS: ew,
             EPS_STEPS: eD,
-            CASH_APP_STEPS: eL,
-            PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: ex,
+            CASH_APP_STEPS: ex,
+            PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: eL,
         } = (0, W.gj)({
             prependSteps: g,
             appendSteps: E,
@@ -291,7 +291,7 @@ function eO(e) {
             case R.h8.CREDIT_CARD_INFORMATION:
                 return eS;
             case R.h8.CASH_APP_INFORMATION:
-                return eL;
+                return ex;
             default:
                 return { steps: [R.h8.ADD_PAYMENT_STEPS] };
         }
@@ -348,8 +348,8 @@ function eO(e) {
             tokenState: e$,
             setTokenState: e0,
             isSubmittingCurrentStep: e1,
-            billingAddressState: e3,
-            setBillingAddressState: e2,
+            billingAddressState: e2,
+            setBillingAddressState: e3,
             setIsSubmittingCurrentStep: e4,
             hasRedirectURL: e8,
             setHasRedirectURL: e5,
@@ -396,8 +396,8 @@ function eO(e) {
             logger: el,
             shouldLogOnChangeEvents: eT || !1,
             onBillingAddressChange: (e, t) => {
-                e2({
-                    info: er({}, e3.info, e),
+                e3({
+                    info: er({}, e2.info, e),
                     isValid: t,
                 });
             },
@@ -438,7 +438,7 @@ function eO(e) {
                             eZ(eC), eW(R.h8.IDEAL_INFORMATION);
                             break;
                         case J.He.CASH_APP:
-                            eZ(eL), eW(R.h8.CASH_APP_INFORMATION);
+                            eZ(ex), eW(R.h8.CASH_APP_INFORMATION);
                             break;
                         case J.He.GIROPAY:
                         case J.He.PAYSAFE_CARD:
@@ -457,7 +457,7 @@ function eO(e) {
                     null != j.Z.error && (0, _.fw)();
                 },
                 tR = (e, t) => {
-                    e2((e) => ea(er({}, e), { info: t })), eZ(eN), tu(e);
+                    e3((e) => ea(er({}, e), { info: t })), eZ(eN), tu(e);
                 },
                 tP = () => {
                     eZ(eP), eW(R.h8.PAYMENT_TYPE);
@@ -472,7 +472,7 @@ function eO(e) {
                         });
                     if (
                         ((null == n.name || "" === n.name) && null != t && (n.name = t),
-                        e2({
+                        e3({
                             isValid: r,
                             info: n,
                         }),
@@ -489,7 +489,7 @@ function eO(e) {
             if (ek === R.h8.ATTEMPT_GOOGLE_PAY || ek === R.h8.ATTEMPT_APPLE_PAY) {
                 let e = $.intl.string(ek === R.h8.ATTEMPT_APPLE_PAY ? $.t.czhXDv : $.t.Zj2xQ0),
                     t = $.intl.string(ek === R.h8.ATTEMPT_APPLE_PAY ? $.t.WoXvJL : $.t.wnVVr0);
-                (n = (0, r.jsx)(x.t, {
+                (n = (0, r.jsx)(L.t, {
                     onChooseType: tN,
                     paymentRequestWallet: ek === R.h8.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
                     onStripePaymentMethodReceived: tw,
@@ -528,7 +528,7 @@ function eO(e) {
                 try {
                     if (null == tE || !(0, I.qH)(tE))
                         throw (0, d.PP)("Valid Payment Element source type not found", !0);
-                    let { steps: e, methodType: t } = ex[tE];
+                    let { steps: e, methodType: t } = eL[tE];
                     if (
                         (eZ({
                             steps: e,
@@ -539,7 +539,7 @@ function eO(e) {
                         let e = tO.current,
                             { paymentMethod: t } = await (0, d.w$)(eu, e),
                             { billingAddressInfo: n } = (0, V.az)(t);
-                        e2((e) => ea(er({}, e), { info: n })), tA(), eW(R.h8.ADDRESS);
+                        e3((e) => ea(er({}, e), { info: n })), tA(), eW(R.h8.ADDRESS);
                     } else {
                         let e = (0, I.Hx)(tE);
                         null != e ? eW(e) : eW(R.h8.ADDRESS);
@@ -568,7 +568,7 @@ function eO(e) {
                 }));
             break;
         case R.h8.CREDIT_CARD_INFORMATION:
-            let tL = async (e) => {
+            let tx = async (e) => {
                 e4(!0);
                 try {
                     let t = await (0, d.qv)(eu, e);
@@ -587,10 +587,10 @@ function eO(e) {
                         info: e,
                         isValid: t,
                     }),
-                        e2((t) => ea(er({}, t), { info: ea(er({}, t.info), { name: e.name }) }));
+                        e3((t) => ea(er({}, t), { info: ea(er({}, t.info), { name: e.name }) }));
                 },
             });
-            let tx = !eQ.isValid,
+            let tL = !eQ.isValid,
                 tM = () => {
                     eW(R.h8.PAYMENT_TYPE);
                 };
@@ -603,8 +603,8 @@ function eO(e) {
                         primaryType: "submit",
                         primaryText: $.intl.string($.t.PDTjLN),
                         primarySubmitting: e1,
-                        primaryDisabled: tx,
-                        onPrimary: () => tL(t),
+                        primaryDisabled: tL,
+                        onPrimary: () => tx(t),
                     });
                 },
             });
@@ -614,7 +614,7 @@ function eO(e) {
         case R.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
             (n = (0, r.jsx)("div", {
                 className: ee.body,
-                children: (0, r.jsx)(L.M, {
+                children: (0, r.jsx)(x.M, {
                     step: ek,
                     onPurchaseComplete: () => y(ek),
                     onHandoffFailure: () => {
@@ -622,7 +622,7 @@ function eO(e) {
                     },
                 }),
             })),
-                (o = (0, r.jsx)(L.a, {
+                (o = (0, r.jsx)(x.a, {
                     onPrimaryClick: () => {
                         eZ(eS), eW(R.h8.CREDIT_CARD_INFORMATION);
                     },
@@ -632,124 +632,126 @@ function eO(e) {
                 }));
             break;
         case R.h8.EPS_INFORMATION:
-            (n = (0, r.jsx)(S.Z, {
+            n = (0, r.jsx)(S.Z, {
                 type: J.He.EPS,
                 onAccountHolderNameChange: (e) =>
-                    e2({
-                        info: ea(er({}, e3.info), { name: e }),
-                        isValid: e3.isValid,
+                    e3({
+                        info: ea(er({}, e2.info), { name: e }),
+                        isValid: e2.isValid,
                     }),
                 onEPSBankChange: (e) => tr(e),
                 epsBankValue: tn,
-                billingAddressInfo: e3.info,
-            })),
-                (o = (0, r.jsx)(ey, {
-                    onBack: () => eW(R.h8.PAYMENT_TYPE),
-                    primaryCTA: w.Z.CTAType.CONTINUE,
-                    primaryText: $.intl.string($.t.PDTjLN),
-                    primaryDisabled: void 0 === tn || "" === tn || "" === e3.info.name,
-                    onPrimary: () => eW(R.h8.ADDRESS),
-                }));
+                billingAddressInfo: e2.info,
+            });
+            let tk = tC(J.He.EPS, tE);
+            o = (0, r.jsx)(ey, {
+                onBack: tk,
+                primaryCTA: w.Z.CTAType.CONTINUE,
+                primaryText: $.intl.string($.t.PDTjLN),
+                primaryDisabled: void 0 === tn || "" === tn || "" === e2.info.name,
+                onPrimary: () => eW(R.h8.ADDRESS),
+            });
             break;
         case R.h8.IDEAL_INFORMATION:
             (n = (0, r.jsx)(T.Z, {
                 type: J.He.IDEAL,
                 onAccountHolderNameChange: (e) =>
-                    e2({
-                        info: ea(er({}, e3.info), { name: e }),
-                        isValid: e3.isValid,
+                    e3({
+                        info: ea(er({}, e2.info), { name: e }),
+                        isValid: e2.isValid,
                     }),
-                billingAddressInfo: e3.info,
+                billingAddressInfo: e2.info,
             })),
                 (o = (0, r.jsx)(ey, {
                     onBack: () => eW(R.h8.PAYMENT_TYPE),
                     primaryCTA: w.Z.CTAType.CONTINUE,
                     primaryText: $.intl.string($.t.PDTjLN),
-                    primaryDisabled: "" === e3.info.name,
+                    primaryDisabled: "" === e2.info.name,
                     onPrimary: () => eW(R.h8.ADDRESS),
                 }));
             break;
         case R.h8.PRZELEWY24_INFORMATION:
-            (n = (0, r.jsx)(S.Z, {
+            n = (0, r.jsx)(S.Z, {
                 type: J.He.PRZELEWY24,
                 onNameChange: (e) =>
-                    e2({
-                        info: ea(er({}, e3.info), { name: e }),
-                        isValid: e3.isValid,
+                    e3({
+                        info: ea(er({}, e2.info), { name: e }),
+                        isValid: e2.isValid,
                     }),
                 onEmailChange: (e) =>
-                    e2({
-                        info: ea(er({}, e3.info), { email: e }),
-                        isValid: e3.isValid,
+                    e3({
+                        info: ea(er({}, e2.info), { email: e }),
+                        isValid: e2.isValid,
                     }),
                 onP24BankChange: (e) => {
                     ta(e);
                 },
                 p24BankValue: ti,
-                billingAddressInfo: e3.info,
-            })),
-                (o = (0, r.jsx)(ey, {
-                    onBack: () => eW(R.h8.PAYMENT_TYPE),
-                    primaryCTA: w.Z.CTAType.CONTINUE,
-                    primaryText: $.intl.string($.t.PDTjLN),
-                    primaryDisabled:
-                        void 0 === e3.info.name ||
-                        "" === e3.info.name ||
-                        void 0 === e3.info.email ||
-                        "" === e3.info.email ||
-                        void 0 === ti ||
-                        "" === ti,
-                    onPrimary: () => eW(R.h8.ADDRESS),
-                }));
-            break;
-        case R.h8.PAYPAL_INFORMATION:
-            let tk = 0 !== e6.length && null != e7;
-            n = (0, r.jsx)(e_, {});
-            let tj = tC(J.He.PAYPAL, tE);
+                billingAddressInfo: e2.info,
+            });
+            let tj = tC(J.He.PRZELEWY24, tE);
             o = (0, r.jsx)(ey, {
                 onBack: tj,
                 primaryCTA: w.Z.CTAType.CONTINUE,
-                primaryText: tk ? $.intl.string($.t.PDTjLN) : $.intl.string($.t.Djzd7L),
-                onPrimary: () => (tk ? eW(R.h8.ADDRESS) : (0, f.i0)()),
+                primaryText: $.intl.string($.t.PDTjLN),
+                primaryDisabled:
+                    void 0 === e2.info.name ||
+                    "" === e2.info.name ||
+                    void 0 === e2.info.email ||
+                    "" === e2.info.email ||
+                    void 0 === ti ||
+                    "" === ti,
+                onPrimary: () => eW(R.h8.ADDRESS),
             });
             break;
-        case R.h8.VENMO_INFORMATION:
-            let tU = 0 !== e9.length && null != e7;
-            n = (0, r.jsx)(ep, {});
-            let tG = tC(J.He.VENMO, tE);
+        case R.h8.PAYPAL_INFORMATION:
+            let tU = 0 !== e6.length && null != e7;
+            n = (0, r.jsx)(e_, {});
+            let tG = tC(J.He.PAYPAL, tE);
             o = (0, r.jsx)(ey, {
                 onBack: tG,
                 primaryCTA: w.Z.CTAType.CONTINUE,
-                primaryText: tU ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["4KoTLM"]),
-                onPrimary: () => (tU ? eW(R.h8.ADDRESS) : (0, f.og)()),
+                primaryText: tU ? $.intl.string($.t.PDTjLN) : $.intl.string($.t.Djzd7L),
+                onPrimary: () => (tU ? eW(R.h8.ADDRESS) : (0, f.i0)()),
+            });
+            break;
+        case R.h8.VENMO_INFORMATION:
+            let tB = 0 !== e9.length && null != e7;
+            n = (0, r.jsx)(ep, {});
+            let tZ = tC(J.He.VENMO, tE);
+            o = (0, r.jsx)(ey, {
+                onBack: tZ,
+                primaryCTA: w.Z.CTAType.CONTINUE,
+                primaryText: tB ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["4KoTLM"]),
+                onPrimary: () => (tB ? eW(R.h8.ADDRESS) : (0, f.og)()),
             });
             break;
         case R.h8.PAYMENT_REQUEST_INFORMATION:
             (n = (0, r.jsx)(em, {})), (o = (0, r.jsx)(ey, { onBack: () => eW(R.h8.PAYMENT_TYPE) }));
             break;
         case R.h8.CASH_APP_INFORMATION:
-            let tB = null != te,
-                tZ = null != eV;
+            let tF = null != te,
+                tV = null != eV;
             n = (0, r.jsx)(eh, {});
-            let tF = tC(J.He.CASH_APP, tE);
+            let tH = tC(J.He.CASH_APP, tE);
             o = (0, r.jsx)(ey, {
-                onBack: tF,
+                onBack: tH,
                 primaryCTA: w.Z.CTAType.CONTINUE,
-                primaryText: tB ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["9ALP8w"]),
-                onPrimary: () => (tB ? eW(R.h8.ADDRESS) : (0, q.cp)()),
-                primaryDisabled: !tZ,
+                primaryText: tF ? $.intl.string($.t.PDTjLN) : $.intl.string($.t["9ALP8w"]),
+                onPrimary: () => (tF ? eW(R.h8.ADDRESS) : (0, q.cp)()),
+                primaryDisabled: !tV,
             });
             break;
         case R.h8.ADDRESS:
-            let tV = ev && null != tE,
-                tH = async () => {
+            let tY = ev && null != tE,
+                tW = async () => {
                     e4(!0);
-                    let e = tV ? tE : eB.methodType,
+                    let e = tY ? tE : eB.methodType,
                         t = [
                             eu,
                             tO.current,
                             {
-                                billingAddress: e3.info,
+                                billingAddress: e2.info,
                                 paymentSourceType: null != e ? e : J.He.UNKNOWN,
                                 lastConfirmedSetupIntentRef: tv,
                             },
@@ -757,7 +759,7 @@ function eO(e) {
                         ];
                     switch (e) {
                         case J.He.PAYMENT_REQUEST:
-                            if (tV) {
+                            if (tY) {
                                 try {
                                     let e = await (0, d.Q5)(...t);
                                     tu(e);
@@ -767,11 +769,11 @@ function eO(e) {
                                 break;
                             }
                             if (null == ez) throw (tP(), (0, d.SQ)("Missing paymentRequestPaymentMethod"));
-                            tu(await (0, d.i6)(ez, e3.info, Y));
+                            tu(await (0, d.i6)(ez, e2.info, Y));
                             break;
                         case J.He.CARD:
                             try {
-                                let e = tV ? await (0, d.Q5)(...t) : await (0, d.f0)(eu, e$.token, e3.info, Y);
+                                let e = tY ? await (0, d.Q5)(...t) : await (0, d.f0)(eu, e$.token, e2.info, Y);
                                 tu(e);
                             } catch (e) {}
                             break;
@@ -779,13 +781,13 @@ function eO(e) {
                         case J.He.PAYPAL:
                             try {
                                 s()(null != e7, "Missing braintreeNonce");
-                                let e = await (0, d.lP)(e7, e3.info, Y);
+                                let e = await (0, d.lP)(e7, e2.info, Y);
                                 tu(e);
                             } catch (e) {}
                             break;
                         case J.He.EPS:
                             try {
-                                let e = await (0, d.YQ)(eu, tn, e3.info, Y);
+                                let e = await (0, d.YQ)(eu, tn, e2.info, Y);
                                 tu(e);
                             } catch (e) {
                                 el.warn(e);
@@ -793,7 +795,7 @@ function eO(e) {
                             break;
                         case J.He.IDEAL:
                             try {
-                                let e = tV ? await (0, d.Q5)(...t) : await (0, d.aN)(eu, e3.info, Y);
+                                let e = tY ? await (0, d.Q5)(...t) : await (0, d.aN)(eu, e2.info, Y);
                                 tu(e);
                             } catch (e) {
                                 el.warn(e);
@@ -802,14 +804,14 @@ function eO(e) {
                         case J.He.PRZELEWY24:
                             try {
                                 if (void 0 === ti) throw (0, d.SQ)("Bank required for Przelewy24");
-                                let e = await (0, d.pF)(eu, { p24Bank: ti }, e3.info, Y);
+                                let e = await (0, d.pF)(eu, { p24Bank: ti }, e2.info, Y);
                                 tu(e);
                             } catch (e) {}
                             break;
                         case J.He.PAYSAFE_CARD:
                         case J.He.GRABPAY_MY:
                             try {
-                                let t = await (0, d.sF)(e3.info, e, Y);
+                                let t = await (0, d.sF)(e2.info, e, Y);
                                 tu(t);
                             } catch (e) {}
                             break;
@@ -818,21 +820,21 @@ function eO(e) {
                         case J.He.KAKAOPAY:
                         case J.He.GOPAY_WALLET:
                             try {
-                                let { redirectConfirmation: t } = await (0, d.Dk)(e3.info, e, Y);
+                                let { redirectConfirmation: t } = await (0, d.Dk)(e2.info, e, Y);
                                 e5(t);
                             } catch (e) {}
                             break;
                         case J.He.GIROPAY:
                         case J.He.BANCONTACT:
                             try {
-                                let t = await (0, d.GV)(eu, e3.info, e, Y);
+                                let t = await (0, d.GV)(eu, e2.info, e, Y);
                                 tu(t);
                             } catch (e) {}
                             break;
                         case J.He.CASH_APP:
                             try {
                                 s()(null != te, "Missing adyenPaymentData");
-                                let { paymentSource: t } = await (0, d.Dk)(e3.info, e, Y, te, ec);
+                                let { paymentSource: t } = await (0, d.Dk)(e2.info, e, Y, te, ec);
                                 s()(null != t, "Cash App Pay Payment Source missing"), tu(t);
                             } catch (e) {}
                             break;
@@ -878,14 +880,14 @@ function eO(e) {
                 default:
                     (p = R.h8.PAYMENT_TYPE), (u = J.He.CARD);
             }
-            tV && (p = R.h8.PAYMENT_ELEMENT),
-                (n = tV
+            tY && (p = R.h8.PAYMENT_ELEMENT),
+                (n = tY
                     ? null
                     : (0, r.jsx)(eg, {
-                          billingAddressInfo: e3.info,
+                          billingAddressInfo: e2.info,
                           onBillingAddressChange: (e, t) => {
-                              e2({
-                                  info: er({}, e3.info, e),
+                              e3({
+                                  info: er({}, e2.info, e),
                                   isValid: t,
                               });
                           },
@@ -896,8 +898,8 @@ function eO(e) {
                     primaryCTA: w.Z.CTAType.CONTINUE,
                     primaryText: $.intl.string($.t.PDTjLN),
                     primarySubmitting: e1,
-                    primaryDisabled: !e3.isValid || tt,
-                    onPrimary: tH,
+                    primaryDisabled: !e2.isValid || tt,
+                    onPrimary: tW,
                 }));
             break;
         case R.h8.AWAITING_AUTHENTICATION:
@@ -906,19 +908,19 @@ function eO(e) {
         default:
             throw Error("Unexpected step: ".concat(ek));
     }
-    let tY = ev && tm,
-        tW = tY ? "combined_stripe_elements" : void 0,
-        tK = (0, r.jsxs)(c.qBt, {
+    let tK = ev && tm,
+        tz = tK ? "combined_stripe_elements" : void 0,
+        tq = (0, r.jsxs)(c.qBt, {
             className: et.sequencer,
             staticClassName: et.sequencerStatic,
             animatedNodeClassName: et.sequencerAnimatedNode,
             fillParent: !0,
-            overrideKey: tW,
+            overrideKey: tz,
             step: ek,
             steps: eB.steps,
             sideMargin: 20,
             children: [
-                tY &&
+                tK &&
                     (0, r.jsx)(A.hn, {
                         step: ek,
                         analyticsContext:
@@ -934,7 +936,7 @@ function eO(e) {
                         stripePaymentElementProps: tI,
                         stripeAddressElementProps: tT,
                         addressElementKey: tS,
-                        billingAddressInfo: e3.info,
+                        billingAddressInfo: e2.info,
                         onSetupError: () => {
                             ty(), eW(R.h8.PAYMENT_TYPE);
                         },
@@ -942,7 +944,7 @@ function eO(e) {
                 n,
             ],
         }),
-        tz = ek === R.h8.PAYMENT_TYPE && 0 === g.length ? null : o;
+        tX = ek === R.h8.PAYMENT_TYPE && 0 === g.length ? null : o;
     return Q
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -952,20 +954,20 @@ function eO(e) {
                           isEligibleForTrial: en,
                       }),
                   (0, r.jsxs)(D.C3, {
-                      children: [(0, r.jsx)(M.Z, { className: ee.paymentModalError }), tK],
+                      children: [(0, r.jsx)(M.Z, { className: ee.paymentModalError }), tq],
                   }),
-                  (0, r.jsx)(D.O3, { children: tz }),
+                  (0, r.jsx)(D.O3, { children: tX }),
               ],
           })
         : (0, r.jsx)(K.Z, {
               steps: null != C ? C : eB.steps,
               currentStep: null != k ? k : ek,
-              overrideKey: tW,
+              overrideKey: tz,
               paymentError: h.paymentError,
               header: U,
               hideBreadcrumbs: z,
-              body: tK,
-              footer: tz,
+              body: tq,
+              footer: tX,
           });
 }
 function ev(e) {
@@ -1018,15 +1020,15 @@ function ev(e) {
         );
     }, []);
     let [P, w] = i.useState(!1),
-        [D, L] = i.useState(!1),
-        [x, M] = i.useState(null),
+        [D, x] = i.useState(!1),
+        [L, M] = i.useState(null),
         k = i.useRef(null),
         Z = (0, l.e7)([U.Z], () => U.Z.isAwaitingAuthentication),
         [F, V] = (0, l.Wu)([B.Z], () => [B.Z.purchaseTokenAuthState, B.Z.purchaseTokenHash]);
     return (
         i.useEffect(() => {
-            null != x && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
-        }, [x]),
+            null != L && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
+        }, [L]),
         {
             paymentSources: n,
             paymentSourceId: a,
@@ -1041,14 +1043,14 @@ function ev(e) {
             isSubmittingCurrentStep: P,
             setIsSubmittingCurrentStep: w,
             hasRedirectURL: D,
-            setHasRedirectURL: L,
+            setHasRedirectURL: x,
             braintreeEmail: I,
             braintreeNonce: T,
             venmoUsername: A,
             adyenPaymentData: C,
             paymentError: null != N ? N : S,
             paymentAuthenticationState: R ? Y.wr.PENDING : null != N ? Y.wr.ERROR : Y.wr.NONE,
-            purchaseError: x,
+            purchaseError: L,
             setPurchaseError: M,
             purchaseErrorBlockRef: k,
             isAuthenticating: Z,

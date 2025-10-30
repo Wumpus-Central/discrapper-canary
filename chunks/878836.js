@@ -1,18 +1,19 @@
 n.d(t, {
-    M: () => p,
-    S: () => h,
+    M: () => m,
+    S: () => g,
 }),
     n(388685);
 var r = n(647438),
     i = n(481060),
-    a = n(355467),
-    o = n(493773),
+    a = n(493773),
+    o = n(710845),
     s = n(351402),
-    l = n(51144),
-    c = n(947673),
-    u = n(720452),
-    d = n(561448);
-function f(e, t, n) {
+    l = n(122289),
+    c = n(51144),
+    u = n(947673),
+    d = n(720452),
+    f = n(561448);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,13 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-let p = function () {
+let h = new o.Z("useStripePaymentElementOptions"),
+    m = function () {
         var e, t, n, a, o;
         let s = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             l = (0, i.dQu)(i.TVs.colors.MODAL_BACKGROUND),
@@ -76,53 +78,54 @@ let p = function () {
             },
         };
     },
-    h = (e) => {
+    g = (e) => {
         let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
-            [i, f] = r.useState(void 0),
-            [h, m] = r.useState(null),
-            [g, E] = r.useState(!0),
-            [b, y] = r.useState([]),
-            O = r.useCallback(async () => {
+            [i, o] = r.useState(void 0),
+            [_, g] = r.useState(null),
+            [E, b] = r.useState(!0),
+            [y, O] = r.useState([]),
+            v = r.useCallback(async () => {
                 var e;
-                let n = (0, l.vP)(),
-                    r = n
-                        ? (0, u.Q)({
-                              ipCountryCode: null != (e = s.Z.ipCountryCode) ? e : "ALL",
-                              location: "stripe_payment_element_options",
-                          }).countryPaymentMethods
-                        : [];
-                y((0, d.lS)(r, n));
+                let n = (0, c.vP)(),
+                    r = (0, d.Q)({
+                        ipCountryCode: null != (e = s.Z.ipCountryCode) ? e : "ALL",
+                        location: "stripe_payment_element_options",
+                    }).countryPaymentMethods;
+                O((0, f.lS)(r, n));
                 try {
-                    let e = await (0, c.V)(r);
-                    f(e);
+                    let e = await (0, u.V)(r);
+                    o(e);
                 } catch (e) {
-                    m(e), null != t && t(e), (0, a.SQ)(e);
+                    g(e),
+                        null != t && t(e),
+                        h.error("there was an error on setup for Payment Elements: ", e),
+                        (0, l.q2)(e, { tags: { source: "payment_elements" } });
                 }
-                E(!1);
+                b(!1);
             }, [t]);
-        (0, o.ZP)(() => {
-            O();
+        (0, a.ZP)(() => {
+            v();
         });
-        let { elementsAppearance: v, elementsAppearanceOptions: I } = p(n);
+        let { elementsAppearance: I, elementsAppearanceOptions: T } = m(n);
         return {
-            setupError: h,
+            setupError: _,
             elementsOptions: r.useMemo(
                 () =>
-                    g
+                    E
                         ? null
-                        : _(
+                        : p(
                               { clientSecret: i },
                               {
-                                  appearance: v,
-                                  customPaymentMethods: b,
+                                  appearance: I,
+                                  customPaymentMethods: y,
                                   paymentMethodCreation: "manual",
                               },
                           ),
-                [v, i, b, g],
+                [I, i, y, E],
             ),
             setupIntentSecret: i,
-            customPaymentMethods: b,
-            isLoading: g,
-            elementsAppearanceOptions: I,
+            customPaymentMethods: y,
+            isLoading: E,
+            elementsAppearanceOptions: T,
         };
     };
