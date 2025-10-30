@@ -1,9 +1,11 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => f });
 var r = n(174609),
     i = n(728285),
-    a = n(555804),
-    o = n(981631);
-function s(e, t, n) {
+    a = n(522474),
+    o = n(788983),
+    s = n(555804),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -28,16 +30,18 @@ function l(e, t) {
     }
     return n;
 }
-async function c(e) {
+async function d(e) {
     let t = (0, i.GB)();
-    await a.launchFrame(e), t === o.IlC.POPOUT && (0, r.Z)();
+    a.Z.getWindowOpen(l.KJ3.ACTIVITY_POPOUT) && (0, o.xv)(l.KJ3.ACTIVITY_POPOUT),
+        await s.launchFrame(e),
+        t === l.IlC.POPOUT && (0, r.Z)();
 }
-let u = (function (e, t) {
+let f = (function (e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -54,10 +58,10 @@ let u = (function (e, t) {
                     }),
                 )),
                 r.forEach(function (t) {
-                    s(e, t, n[t]);
+                    c(e, t, n[t]);
                 });
         }
         return e;
-    })({}, a),
-    { launchFrame: c },
+    })({}, s),
+    { launchFrame: d },
 );
