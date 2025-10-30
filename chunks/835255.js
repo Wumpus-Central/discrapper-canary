@@ -6,8 +6,8 @@ r.d(t, {
     r(388685);
 var n = r(951288),
     i = r(647438),
-    l = r(120356),
-    s = r.n(l),
+    s = r(120356),
+    l = r.n(s),
     a = r(843611),
     c = r(979554),
     o = r(311570),
@@ -17,8 +17,8 @@ var n = r(951288),
     m = r(100527),
     h = r(906732),
     p = r(597688),
-    O = r(237031),
-    I = r(956472),
+    I = r(237031),
+    O = r(956472),
     g = r(104505),
     v = r(333867),
     P = r(703656),
@@ -47,13 +47,13 @@ let Z = (e) => {
 function R(e) {
     let { surface: t = E.Y.PROFILE_MODAL } = e,
         r = i.useRef(null),
-        l = i.useRef(null);
+        s = i.useRef(null);
     return (0, n.jsx)("div", {
         ref: r,
         className: _.container,
         children: (0, n.jsx)("div", {
-            ref: l,
-            className: s()(_.card, _.placeholderCard, {
+            ref: s,
+            className: l()(_.card, _.placeholderCard, {
                 [_.smallCard]: t === E.Y.GIFTING_FLOW,
                 [_.largeCard]: t === E.Y.PROFILE_MODAL,
             }),
@@ -68,7 +68,7 @@ function R(e) {
     });
 }
 function F(e) {
-    let { item: t, size: r = "sm", remainingCount: l, onClick: a, renderItemPreview: c } = e,
+    let { item: t, size: r = "sm", remainingCount: s, onClick: a, renderItemPreview: c } = e,
         o = i.useRef(null),
         u = i.useRef(null),
         { isHoveringOrFocusing: d } = (0, g.Z)(u),
@@ -80,9 +80,9 @@ function F(e) {
             tag: "div",
             innerRef: u,
             onClick: a,
-            className: s()(_.card, _.seeMoreCard, { [_.smallCard]: "sm" === r }),
+            className: l()(_.card, _.seeMoreCard, { [_.smallCard]: "sm" === r }),
             children: (0, n.jsxs)("div", {
-                className: s()(_.cardPreview, _.seeMoreCardPreview),
+                className: l()(_.cardPreview, _.seeMoreCardPreview),
                 children: [
                     c(!m && d),
                     (0, n.jsx)("div", {
@@ -90,7 +90,7 @@ function F(e) {
                         children: (0, n.jsx)(f.Text, {
                             variant: "text-md/medium",
                             color: "always-white",
-                            children: L.intl.format(L.t.F6iMs4, { count: l }),
+                            children: L.intl.format(L.t.F6iMs4, { count: s }),
                         }),
                     }),
                 ],
@@ -102,9 +102,9 @@ function A(e) {
     var t,
         r,
         {
-            profileOwner: l,
-            showIcons: s = !1,
-            collectibleSource: C = j.lr.WISHLIST,
+            profileOwner: s,
+            showIcons: l = !1,
+            source: C = j.lr.WISHLIST,
             giftingOrigin: Z = k.Wt.USER_PROFILE_WISHLIST,
         } = e,
         R = (function (e, t) {
@@ -116,27 +116,27 @@ function A(e) {
                     var r,
                         n,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        s = Object.keys(e);
+                    for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
+                var s = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < s.length; n++)
+                    (r = s[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["profileOwner", "showIcons", "collectibleSource", "giftingOrigin"]);
+        })(e, ["profileOwner", "showIcons", "source", "giftingOrigin"]);
     let { item: F, isOwner: A } = R,
         { analyticsLocations: G } = (0, h.ZP)(),
         D = (0, a.TH)(),
         W = i.useRef(null),
         { isHoveringOrFocusing: H } = (0, g.Z)(W),
-        [M] = (0, u.Wu)([b.Z], () => [b.Z.hasSentGift(F.skuId, l.id)], [F.skuId, l.id]),
+        [M] = (0, u.Wu)([b.Z], () => [b.Z.hasSentGift(F.skuId, s.id)], [F.skuId, s.id]),
         U = M || !0 === F.isOwned,
         z = F.collectiblesItem.type,
-        B = (() => {
+        Y = (() => {
             switch (z) {
                 case c.Z.AVATAR_DECORATION:
                     return L.intl.formatToPlainString(L.t.IQQYef, { itemName: F.skuName });
@@ -148,9 +148,9 @@ function A(e) {
                     (0, S.vE)(z);
             }
         })(),
-        V = A || U ? L.intl.string(L.t.FdGl5A) : L.intl.string(L.t.ilhtIa),
-        Y = A || U ? void 0 : f.OgN,
-        K = i.useCallback(() => {
+        B = A || U ? L.intl.string(L.t.FdGl5A) : L.intl.string(L.t.ilhtIa),
+        V = A || U ? void 0 : f.OgN,
+        q = i.useCallback(() => {
             let e = D.pathname.startsWith(T.Z5c.COLLECTIBLES_SHOP);
             if (A || U) {
                 let t = !A && U;
@@ -159,10 +159,10 @@ function A(e) {
                         r = p.Z.getCategoryForProduct(F.skuId);
                     if (null != e && null != r) {
                         t || (0, x.closeUserProfileModal)(),
-                            (0, O.T)({
+                            (0, I.T)({
                                 product: e,
                                 category: r,
-                                shouldCheckoutWithOrbs: (0, I.oQ)({ product: e }),
+                                shouldCheckoutWithOrbs: (0, O.oQ)({ product: e }),
                                 analyticsLocations: G,
                                 analyticsSource: m.Z.USER_PROFILE_WISHLIST,
                                 returnRef: void 0,
@@ -180,18 +180,18 @@ function A(e) {
                     isGift: !0,
                     giftingOrigin: Z,
                     analyticsLocations: G,
-                    giftRecipient: l,
+                    giftRecipient: s,
                     variantsReturnStyle: o.v.VARIANTS_GROUP,
                 });
-        }, [D.pathname, F.skuId, G, A, U, l, Z]),
-        q = i.useCallback(
+        }, [D.pathname, F.skuId, G, A, U, s, Z]),
+        K = i.useCallback(
             () =>
-                s
+                l
                     ? C === j.lr.WISHLIST
                         ? (0, n.jsx)("div", {
                               className: _.itemIcon,
                               children: (0, n.jsx)(d.u, {
-                                  text: L.intl.formatToPlainString(L.t.p3RmJF, { username: w.ZP.getName(l) }),
+                                  text: L.intl.formatToPlainString(L.t.p3RmJF, { username: w.ZP.getName(s) }),
                                   position: "top",
                                   children: (0, n.jsx)(f.h_8, {
                                       size: "custom",
@@ -208,7 +208,7 @@ function A(e) {
                                 children: (0, n.jsx)(d.u, {
                                     text: L.intl.string(L.t.Ig6VDH),
                                     position: "top",
-                                    children: (0, n.jsx)(f.EOn, {
+                                    children: (0, n.jsx)(f.YqE, {
                                         size: "custom",
                                         width: 20,
                                         height: 20,
@@ -219,17 +219,17 @@ function A(e) {
                             })
                           : null
                     : null,
-            [s, C, l],
+            [l, C, s],
         ),
         Q = i.useCallback(
             () =>
                 (0, n.jsx)(y.Z, {
                     item: F,
-                    profileOwner: l,
+                    profileOwner: s,
                     isHighlighted: !U && H,
                     surface: R.surface,
                 }),
-            [F, l, U, H, R.surface],
+            [F, s, U, H, R.surface],
         );
     return (0, n.jsx)(
         E.Z,
@@ -261,13 +261,13 @@ function A(e) {
         (r = r =
             {
                 cardRef: W,
-                accessibleLabel: B,
-                onCardClick: K,
-                buttonCTALabel: V,
-                buttonIcon: Y,
+                accessibleLabel: Y,
+                onCardClick: q,
+                buttonCTALabel: B,
+                buttonIcon: V,
                 isOwned: U,
                 renderItemPreview: Q,
-                renderSourceIcon: q,
+                renderSourceIcon: K,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

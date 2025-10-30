@@ -124,7 +124,7 @@ function O(e) {
                             isOwner: !1,
                             surface: h.Y.GIFTING_FLOW,
                             giftingOrigin: b.Wt.DM_CHANNEL_WISHLIST,
-                            collectibleSource: n,
+                            source: n,
                             showIcons: l,
                         }),
                     },
