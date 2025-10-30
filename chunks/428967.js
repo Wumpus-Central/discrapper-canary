@@ -43,6 +43,7 @@ let i = [
         r.z.GUILD_PIN_PERMISSION_MIGRATION_NOTIFICATION,
         r.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         r.z.GAME_SERVER_HOSTING_NEW_BADGE,
+        r.z.GAME_SERVER_HOSTING_NEW_COACHMARK,
     ],
     l = [];
 function c(e) {

@@ -18,25 +18,32 @@ var r = n(951288),
     O = n(990963);
 let y = i.memo(function (e) {
     let { guildId: t, selected: n } = e,
-        [y, j] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
-        v = i.useCallback(() => {
-            y === o.z.GAME_SERVER_HOSTING_NEW_BADGE && j(m.L.USER_DISMISS),
-                (0, d.uL)(h.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
-        }, [t, y, j]),
-        x = i.useRef(null),
-        C = y === o.z.GAME_SERVER_HOSTING_NEW_BADGE,
-        E = (0, a.f9)(),
-        S = (0, l.e7)([p.Z], () => p.Z.hasLayers());
+        y = (0, a.f9)(),
+        v = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
+        [j, C] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
+        E = j === o.z.GAME_SERVER_HOSTING_NEW_BADGE,
+        [x, S] = (0, c.ZT)(y || v || !E ? [] : [o.z.GAME_SERVER_HOSTING_NEW_COACHMARK], t),
+        I = i.useCallback(
+            (e) => {
+                C(e), S(e);
+            },
+            [C, S],
+        ),
+        P = i.useCallback(() => {
+            I(m.L.USER_DISMISS), (0, d.uL)(h.Z5c.CHANNEL(t, g.oC.GAME_SERVERS));
+        }, [t, I]),
+        N = i.useRef(null),
+        Z = x === o.z.GAME_SERVER_HOSTING_NEW_COACHMARK;
     return (0, r.jsx)(s.yRy, {
-        targetElementRef: x,
-        shouldShow: C && !E && !S,
+        targetElementRef: N,
+        shouldShow: Z,
         nudgeAlignIntoViewport: !0,
         animationPosition: "bottom",
         position: "right",
         renderPopout: () =>
             (0, r.jsx)(f.En, {
                 guildId: t,
-                markAsDismissed: j,
+                markAsDismissed: I,
             }),
         children: (e) => {
             var i, l;
@@ -69,7 +76,7 @@ let y = i.memo(function (e) {
                 })({}, e)),
                 (l = l =
                     {
-                        ref: x,
+                        ref: N,
                         id: "game-server-".concat(t),
                         renderIcon: (e) =>
                             (0, r.jsx)(s.iWm, {
@@ -79,8 +86,8 @@ let y = i.memo(function (e) {
                             }),
                         text: _.intl.string(b.default.vCzwM7),
                         selected: n,
-                        onClick: v,
-                        trailing: C
+                        onClick: P,
+                        trailing: E
                             ? (0, r.jsx)(s.IGR, {
                                   disableColor: !0,
                                   text: _.intl.string(_.t.y2b7CA),
