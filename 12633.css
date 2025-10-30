@@ -42233,19 +42233,24 @@ screen and (max-width:485px) {
     align-items: center;
     background-position: 50%;
     background-size: cover;
+    border-radius: var(--radius-xs);
     display: flex;
     justify-content: center
 }
 
-.cardContainer__47729,
-.skuImage__47729 {
-    border-radius: var(--radius-xs)
+.cardContainer__47729.square__47729 {
+    aspect-ratio: 1
 }
 
 .skuImage__47729 {
+    border-radius: var(--radius-xs);
     max-width: 100%;
     object-fit: contain;
     width: 100%
+}
+
+.skuImage__47729.square__47729 {
+    transform: scale(2)
 }
 
 .invoiceTable__25766 {
@@ -42298,7 +42303,6 @@ screen and (max-width:485px) {
 .slayerStorefrontProductPreview__25766 {
     box-sizing: border-box;
     height: 48px;
-    padding: 4px;
     width: 48px
 }
 

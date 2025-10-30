@@ -1,12 +1,13 @@
-r.r(c), r.d(c, { default: () => u });
-var s = r(951288);
-r(647438);
-var e = r(848118),
-    t = r(781908);
+e.r(s), e.d(s, { default: () => u });
+var r = e(951288);
+e(647438);
+var c = e(848118),
+    t = e(781908);
 function u(a) {
-    let { sku: c } = a;
-    return (0, s.jsx)(e.A, {
+    let { sku: s } = a;
+    return (0, r.jsx)(c.A, {
         className: t.cardImage,
-        sku: c,
+        sku: s,
+        shape: "square",
     });
 }

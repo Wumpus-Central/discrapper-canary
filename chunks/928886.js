@@ -25,8 +25,8 @@ function I(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: a, handleClose: I } = e,
         {
-            selectedSkuId: T,
-            step: S,
+            selectedSkuId: S,
+            step: T,
             selectedPlan: A,
             purchaseState: C,
             purchaseType: N,
@@ -35,25 +35,22 @@ function I(e) {
             isDisplayingWowMomentConfirmation: w,
         } = (0, m.JL)(),
         { isGift: D, selectedGiftStyle: L, giftRecipient: x } = (0, h.wD)(),
-        M =
-            D &&
-            (0, p.pO)(x) &&
-            S === g.h8.CONFIRM &&
-            null != L &&
-            (null == R ? void 0 : R.productLine) !== E.POd.COLLECTIBLES,
-        k = null != n && null != S,
-        j = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
-        U = null != S && !j.includes(S) && null != T,
-        G = (0, u.N)(a),
-        B = !D && null != G && null != T && b.nG[G.trial_id].skus.includes(T),
-        Z = (0, c.Ng)(),
-        F = null == Z || null == (t = Z.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === T),
-        V = !D && null != Z && null != T && F;
+        M = (null == R ? void 0 : R.productLine) === E.POd.COLLECTIBLES,
+        k = (null == R ? void 0 : R.productLine) === E.POd.SOCIAL_LAYER_GAME_ITEM,
+        j = D && (0, p.pO)(x) && T === g.h8.CONFIRM && null != L && !M && !k,
+        U = null != n && null != T,
+        G = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
+        B = null != T && !G.includes(T) && null != S,
+        Z = (0, u.N)(a),
+        F = !D && null != Z && null != S && b.nG[Z.trial_id].skus.includes(S),
+        V = (0, c.Ng)(),
+        H = null == V || null == (t = V.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === S),
+        Y = !D && null != V && null != S && H;
     return i.useMemo(() => {
-        if (null == S) return;
+        if (null == T) return;
         let e = null;
         return (
-            M
+            j
                 ? (e = (0, r.jsxs)("div", {
                       className: O.container,
                       children: [
@@ -69,29 +66,29 @@ function I(e) {
                           }),
                       ],
                   }))
-                : k
-                  ? (e = n(null != A ? A : null, I, S))
+                : U
+                  ? (e = n(null != A ? A : null, I, T))
                   : N === y.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(_.t, {
-                          step: S,
+                          step: T,
                           onClose: I,
                       }))
-                    : U &&
-                      (o()(v(T, b.y7), "invalid sku id: ".concat(T)),
+                    : B &&
+                      (o()(v(S, b.y7), "invalid sku id: ".concat(S)),
                       (e = (0, r.jsx)(f.Z, {
-                          currentStep: null != S ? S : void 0,
+                          currentStep: null != T ? T : void 0,
                           purchaseState: C,
-                          premiumType: b.y7[T],
+                          premiumType: b.y7[S],
                           onClose: I,
-                          showTrialBadge: B,
-                          showDiscountBadge: V,
+                          showTrialBadge: F,
+                          showDiscountBadge: Y,
                           isGift: D,
                           giftRecipient: x,
-                          isEligibleForTrial: B,
+                          isEligibleForTrial: F,
                           enablePremiumBrandRefresh: P,
                           isDisplayingWowMomentConfirmation: w,
                       }))),
             e
         );
-    }, [L, I, C, n, A, T, S, B, V, M, U, k, N, D, x, P, w]);
+    }, [L, I, C, n, A, S, T, F, Y, j, B, U, N, D, x, P, w]);
 }

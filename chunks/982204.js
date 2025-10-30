@@ -33,14 +33,14 @@ let v = (e, t) => {
         let t = e.discounts[0];
         return 0 === t.amount ? null : t;
     },
-    T = (e) => {
+    S = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
             className: a()(O.invoiceRow, n),
             children: t,
         });
     },
-    S = (e) => {
+    T = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
             className: a()(O.invoiceTagColumn, n),
@@ -73,6 +73,7 @@ let v = (e, t) => {
               ? (0, r.jsx)(h.A, {
                     className: O.slayerStorefrontProductPreview,
                     sku: t,
+                    shape: "square",
                 })
               : null;
     },
@@ -95,9 +96,9 @@ let v = (e, t) => {
             a = v(t, i);
         return (0, r.jsx)(_.aO, {
             className: O.invoiceTable,
-            children: (0, r.jsxs)(T, {
+            children: (0, r.jsxs)(S, {
                 children: [
-                    "THREE_COLUMN" === a && (0, r.jsx)(S, { children: (0, r.jsx)(N, { sku: t }) }),
+                    "THREE_COLUMN" === a && (0, r.jsx)(T, { children: (0, r.jsx)(N, { sku: t }) }),
                     (0, r.jsx)(A, {
                         className: O.invoiceRegularText,
                         children: t.name,
@@ -125,9 +126,9 @@ function w(e) {
     return (0, r.jsxs)(_.aO, {
         className: O.invoiceTable,
         children: [
-            (0, r.jsxs)(T, {
+            (0, r.jsxs)(S, {
                 children: [
-                    "THREE_COLUMN" === o && (0, r.jsx)(S, { children: (0, r.jsx)(N, { sku: t }) }),
+                    "THREE_COLUMN" === o && (0, r.jsx)(T, { children: (0, r.jsx)(N, { sku: t }) }),
                     (0, r.jsxs)(A, {
                         className: O.invoiceRegularText,
                         children: [g && (0, r.jsx)(p.e, { application: i }), t.name],
@@ -139,9 +140,9 @@ function w(e) {
                 ],
             }),
             null != h &&
-                (0, r.jsxs)(T, {
+                (0, r.jsxs)(S, {
                     children: [
-                        "THREE_COLUMN" === o && (0, r.jsx)(S, { children: (0, r.jsx)(R, { discount: h }) }),
+                        "THREE_COLUMN" === o && (0, r.jsx)(T, { children: (0, r.jsx)(R, { discount: h }) }),
                         (0, r.jsx)(A, {
                             className: O.invoiceDiscountText,
                             children: h.description,
@@ -153,9 +154,9 @@ function w(e) {
                     ],
                 }),
             f &&
-                (0, r.jsxs)(T, {
+                (0, r.jsxs)(S, {
                     children: [
-                        "THREE_COLUMN" === o && (0, r.jsx)(S, {}),
+                        "THREE_COLUMN" === o && (0, r.jsx)(T, {}),
                         (0, r.jsx)(A, {
                             className: O.invoiceRegularText,
                             children: y.intl.string(y.t["/I8zmP"]),
@@ -170,10 +171,10 @@ function w(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(_.UN, {}),
-                        (0, r.jsxs)(T, {
+                        (0, r.jsxs)(S, {
                             className: O.totalRow,
                             children: [
-                                (0, r.jsx)(S, {
+                                (0, r.jsx)(T, {
                                     className: O.invoiceRegularText,
                                     children: y.intl.format(y.t["+B5KfG"], {}),
                                 }),

@@ -12,40 +12,44 @@ var i = e(951288),
     x = e(388032),
     f = e(786081);
 function m(t) {
-    let { transitionState: n, onClose: e, sku: m, application: h } = t,
-        [C, g] = a.useState(null),
-        { fetched: S, hasAlreadyLinked: _, canStartAuthorization: T, startAuthorization: I } = (0, r.F)(h),
-        y = (0, l.e7)(
+    let { transitionState: n, onClose: e, sku: m, application: C } = t,
+        [h, g] = a.useState(null),
+        { fetched: S, hasAlreadyLinked: _, canStartAuthorization: T, startAuthorization: y } = (0, r.F)(C),
+        I = (0, l.e7)(
             [u.Z, c.Z],
-            () => null != u.Z.getApplicationActivity(h.id, !0) || null != c.Z.getApplication(h.id),
-            [h.id],
+            () => null != u.Z.getApplicationActivity(C.id, !0) || null != c.Z.getApplication(C.id),
+            [C.id],
         );
     a.useEffect(() => {
-        d.Z.isLaunchable(h).then(g);
-    }, [h]);
+        d.Z.isLaunchable(C).then(g);
+    }, [C]);
     let E = (0, i.jsx)(o.$jN, {}),
         j = [];
     return (
-        null != C && _
+        null != h && _
             ? ((E = (0, i.jsx)(o.Text, {
                   variant: "text-md/normal",
                   className: f.modalBodyText,
                   children: x.intl.formatToPlainString(x.t.W2znvX, {
                       skuName: m.name,
-                      applicationName: h.name,
+                      applicationName: C.name,
                   }),
               })),
-              C &&
-                  !y &&
-                  j.push({
-                      variant: "primary",
-                      text: x.intl.string(x.t["s+J8Dl"]),
-                      onClick: () => {
-                          d.Z.launchGame(h.id);
-                      },
-                      icon: s.rgF,
-                  }))
-            : null != C &&
+              h && !I
+                  ? j.push({
+                        variant: "primary",
+                        text: x.intl.string(x.t["s+J8Dl"]),
+                        onClick: () => {
+                            d.Z.launchGame(C.id);
+                        },
+                        icon: s.rgF,
+                    })
+                  : j.push({
+                        variant: "primary",
+                        text: x.intl.string(x.t.cpT0Cq),
+                        onClick: e,
+                    }))
+            : null != h &&
               S &&
               !_ &&
               ((E = (0, i.jsx)(o.Text, {
@@ -53,14 +57,14 @@ function m(t) {
                   className: f.modalBodyText,
                   children: x.intl.formatToPlainString(x.t["EgCl+Q"], {
                       skuName: m.name,
-                      applicationName: h.name,
+                      applicationName: C.name,
                   }),
               })),
               j.push({
                   variant: "primary",
                   text: x.intl.string(x.t["VDAhr+"]),
                   onClick: () => {
-                      I();
+                      y();
                   },
                   icon: s.rgF,
                   disabled: !T,

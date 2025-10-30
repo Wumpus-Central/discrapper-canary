@@ -1,4 +1,4 @@
-n.d(t, { jM: () => E });
+n.d(t, { jM: () => T });
 var i = n(951288);
 n(647438);
 var r = n(442837),
@@ -26,12 +26,12 @@ var r = n(442837),
     O = n(474936),
     I = n(231338),
     N = n(388032),
-    T = n(397263);
-let E = {
+    k = n(397263);
+let T = {
     key: d.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
-            k,
+            S,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ let E = {
         useBreadcrumbLabel: () => N.intl.string(N.t["W685+b"]),
     },
 };
-function S(e) {
+function E(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: r = !1, disabled: a = !1, loading: o = !1 } = e,
         { hasPaymentSources: s } = (0, c.JL)(),
         u = s ? d.h8.REVIEW : d.h8.ADD_PAYMENT_STEPS;
@@ -79,7 +79,7 @@ function S(e) {
         ],
     });
 }
-function k(e) {
+function S(e) {
     var t;
     let { handleStepChange: n, handleClose: d } = e,
         {
@@ -87,8 +87,8 @@ function k(e) {
             setCustomGiftMessage: m,
             giftRecipient: C,
             emojiConfetti: w,
-            soundEffect: E,
-            setEmojiConfetti: k,
+            soundEffect: T,
+            setEmojiConfetti: S,
             setSoundEffect: G,
         } = (0, s.wD)(),
         { selectedSkuId: M, application: A } = (0, c.JL)(),
@@ -102,29 +102,30 @@ function k(e) {
         children: [
             (0, i.jsx)(u.C3, {
                 children: (0, i.jsxs)("div", {
-                    className: T.stepBody,
+                    className: k.stepBody,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: T.bodyColumnLeft,
+                            className: k.bodyColumnLeft,
                             children: [
                                 null != L &&
                                     (0, i.jsx)(_.p, {
-                                        className: T.skuCardImage,
+                                        className: k.skuCardImage,
                                         cardImage: L,
                                         cardBackgroundImage: H,
                                         altText: null != (t = null == D ? void 0 : D.name) ? t : "",
+                                        shape: "square",
                                     }),
                                 (0, i.jsxs)("div", {
-                                    className: T.giftEffectsContainer,
+                                    className: k.giftEffectsContainer,
                                     children: [
                                         (0, i.jsx)(v.Z, {
-                                            sound: E,
+                                            sound: T,
                                             onSelect: (e) => {
                                                 null != G && G(null == e ? void 0 : e);
                                             },
                                         }),
                                         (0, i.jsx)(g.Z, {
-                                            setEmojiConfetti: k,
+                                            setEmojiConfetti: S,
                                             emojiConfetti: null == w ? void 0 : w,
                                         }),
                                     ],
@@ -132,12 +133,12 @@ function k(e) {
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: T.bodyColumnRight,
+                            className: k.bodyColumnRight,
                             children: [
                                 (0, i.jsx)(a.Z, {
                                     selectedSkuId: M,
                                     validateSelectedGift: R,
-                                    searchableSelectWrapperClassName: T.recipientPickerSelectWrapper,
+                                    searchableSelectWrapperClassName: k.recipientPickerSelectWrapper,
                                 }),
                                 (0, i.jsx)(f.Z, {
                                     sectionTitle: N.intl.string(N.t.B3miE8),
@@ -145,8 +146,8 @@ function k(e) {
                                     pendingText: p,
                                     currentText: p,
                                     disableThemedBackground: !0,
-                                    className: T.customGiftMessageWrapper,
-                                    innerClassName: T.customGiftMessage,
+                                    className: k.customGiftMessageWrapper,
+                                    innerClassName: k.customGiftMessage,
                                 }),
                                 (() => {
                                     var e, t, n, r;
@@ -156,29 +157,30 @@ function k(e) {
                                         null != (r = null == (t = D.price) ? void 0 : t.currency) ? r : I.pK.USD,
                                     );
                                     return (0, i.jsxs)("div", {
-                                        className: T.giftPreviewContainer,
+                                        className: k.giftPreviewContainer,
                                         children: [
                                             (0, i.jsx)(l.vwX, {
-                                                className: T.giftPreviewTitle,
+                                                className: k.giftPreviewTitle,
                                                 children: N.intl.string(N.t.PpoJzt),
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: T.giftPreviewContent,
+                                                className: k.giftPreviewContent,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: T.giftPreviewImageContainer,
+                                                        className: k.giftPreviewImageContainer,
                                                         children:
                                                             null != D &&
                                                             null != L &&
                                                             (0, i.jsx)(_.p, {
-                                                                className: T.giftPreviewCardContainer,
+                                                                className: k.giftPreviewCardContainer,
                                                                 cardImage: L,
                                                                 cardBackgroundImage: H,
                                                                 altText: D.name,
+                                                                shape: "square",
                                                             }),
                                                     }),
                                                     (0, i.jsxs)("div", {
-                                                        className: T.giftPreviewTextContainer,
+                                                        className: k.giftPreviewTextContainer,
                                                         children: [
                                                             null != A && (0, i.jsx)(y.e, { application: A }),
                                                             (0, i.jsx)(l.Text, {
@@ -213,8 +215,8 @@ function k(e) {
                     "data-migration-pending": !0,
                     justify: o.Z.Justify.BETWEEN,
                     align: o.Z.Align.CENTER,
-                    className: T.footer,
-                    children: (0, i.jsx)(S, {
+                    className: k.footer,
+                    children: (0, i.jsx)(E, {
                         onStepChange: n,
                         onBackClick: d,
                         disabled: null == C || C.id === (null == B ? void 0 : B.id) || p.length > O.$n,
@@ -227,7 +229,7 @@ function k(e) {
 function Z(e) {
     let { handleClose: t, guild: n, sku: r } = e;
     return (0, i.jsx)("div", {
-        className: T.viewItemButton,
+        className: k.viewItemButton,
         children: (0, i.jsx)(l.Avr, {
             text: N.intl.string(N.t.ImioFL),
             onClick: function () {
