@@ -1,13 +1,16 @@
-n.d(t, { Y: () => g }), n(388685), n(415506), n(539854);
+n.d(t, { Y: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(793030),
-    o = n(481060),
-    s = n(388905),
-    l = n(703656),
-    c = n(981631),
-    u = n(388032);
-function d(e, t, n) {
+    o = n(442837),
+    s = n(481060),
+    l = n(893776),
+    c = n(388905),
+    u = n(703656),
+    d = n(314897),
+    f = n(981631),
+    _ = n(388032);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +23,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +34,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,104 +51,68 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function E(e) {
     let { token: t, onClose: n } = e,
-        [a, d] = i.useState("loading"),
-        [f, _] = i.useState(null),
-        p = i.useCallback(async () => {
+        [a, s] = i.useState("loading"),
+        p = (0, o.e7)([d.default], () => d.default.isAuthenticated()),
+        h = i.useCallback(async () => {
             try {
-                if (null == t) {
-                    d("error"), _("Invalid login link - missing token");
-                    return;
-                }
-                d("loading"),
-                    await new Promise((e, n) => {
-                        setTimeout(() => {
-                            "test-fail" === t ? n(Error("Invalid token")) : e(!0);
-                        }, 2000);
-                    }),
-                    d("success"),
-                    setTimeout(() => {
-                        null == n || n(), (0, l.uL)(c.Z5c.ME);
-                    }, 1500);
+                if (null == t) return void s("error");
+                s("loading"), await l.Z.oneTimeLogin(t), s("success");
             } catch (e) {
-                d("error"), _(e instanceof Error ? e.message : "Login failed");
+                s("error");
             }
-        }, [t, n]);
+        }, [t]);
     i.useEffect(() => {
-        p();
-    }, [p]);
-    let h = i.useCallback(() => {
-            p();
-        }, [p]),
-        m = i.useCallback(() => {
-            null == n || n();
-        }, [n]),
-        g = [];
-    switch (a) {
+        if (p) return void s("success");
+        h();
+    }, [h, p]);
+    let m = i.useCallback(() => {
+        null == n || n();
+    }, [n]);
+    switch (
+        (i.useEffect(() => {
+            "success" === a && (null == n || n(), (0, u.uL)(f.Z5c.ME));
+        }, [a, n]),
+        a)
+    ) {
         case "loading":
-            return {
-                title: "Logging you in...",
-                subtitle: "Please wait while we process your one-time login.",
-                body: (0, r.jsx)(s.Hh, {}),
-            };
         case "success":
             return {
-                title: "Login Successful!",
-                subtitle: "Welcome back! Taking you to Discord...",
-                body: (0, r.jsx)(o.Text, {
-                    variant: "text-md/normal",
-                    color: "header-secondary",
-                    children: "\u2713 Successfully logged in with your one-time link",
-                }),
+                title: _.intl.string(_.t.W9uNdG),
+                body: (0, r.jsx)(c.Hh, {}),
             };
         case "error":
-            return (
-                g.push(
+            return {
+                title: _.intl.string(_.t.RtCSr1),
+                subtitle: _.intl.string(_.t["S+YjYJ"]),
+                actions: [
                     {
-                        variant: "secondary",
                         onClick: m,
-                        text: u.intl.string(u.t["ETE/oC"]),
+                        text: _.intl.string(_.t["ETE/oC"]),
                     },
-                    {
-                        onClick: h,
-                        text: "Try Again",
-                    },
-                ),
-                {
-                    title: "Login Failed",
-                    subtitle: null != f ? f : "Something went wrong. Please try again.",
-                    body: (0, r.jsx)(o.Text, {
-                        variant: "text-md/normal",
-                        color: "text-danger",
-                        children:
-                            null != f
-                                ? f
-                                : "Unable to log you in with this link. It may have expired or been used already.",
-                    }),
-                    actions: g,
-                }
-            );
+                ],
+            };
         default:
             return {};
     }
 }
-function m(e) {
-    let { title: t, subtitle: n, body: i, actions: o } = h(e);
+function b(e) {
+    let { title: t, subtitle: n, body: i, actions: o } = E(e);
     return (0, r.jsxs)(
         a.IX,
-        p(f({}, e), {
+        g(h({}, e), {
             onClose: () => {
                 var t;
                 return Promise.resolve(null == (t = e.onClose) ? void 0 : t.call(e));
@@ -165,18 +132,6 @@ function m(e) {
         }),
     );
 }
-function g(e) {
-    (0, o.ZDy)(() =>
-        Promise.resolve((t) =>
-            (0, r.jsx)(
-                m,
-                p(f({}, t, e), {
-                    onClose: () => {
-                        var n;
-                        null == (n = e.onClose) || n.call(e), t.onClose();
-                    },
-                }),
-            ),
-        ),
-    );
+function y(e) {
+    (0, s.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(b, h({}, t, e))));
 }
