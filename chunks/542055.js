@@ -1,27 +1,25 @@
-n.d(t, { default: () => N }), n(388685), n(781311), n(642613);
+n.d(t, {
+    U: () => O,
+    default: () => x,
+}),
+    n(388685);
 var l = n(951288),
-    a = n(647438),
-    r = n(658722),
-    i = n.n(r),
-    o = n(392711),
-    s = n.n(o),
-    c = n(990547),
-    u = n(442837),
-    d = n(952265),
-    p = n(481060),
-    m = n(100527),
-    f = n(906732),
-    g = n(213609),
-    b = n(709054),
-    h = n(435064),
-    x = n(39604),
-    j = n(680056),
-    y = n(10217),
-    _ = n(410426),
-    v = n(207346),
-    C = n(356659),
-    O = n(862220);
-function P(e) {
+    r = n(647438),
+    i = n(442837),
+    a = n(28664),
+    s = n(352065),
+    c = n(481060),
+    o = n(100527),
+    u = n(906732),
+    d = n(435064),
+    p = n(680056),
+    m = n(651587),
+    f = n(870731),
+    y = n(52436),
+    b = n(965762),
+    v = n(388032),
+    h = n(862220);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -46,7 +44,7 @@ function P(e) {
     }
     return e;
 }
-function w(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,174 +62,182 @@ function w(e, t) {
         e
     );
 }
-function N(e) {
-    let { channelId: t, onClose: r, transitionState: o } = e,
-        [N, E] = a.useState(""),
-        [T, I] = a.useState("descending"),
-        [S, k] = a.useState(!0),
-        [Z, L] = a.useState(null),
-        D = a.useDeferredValue(N),
-        M = (0, u.e7)([h.Z], () => h.Z.getClips()),
-        R = (0, u.e7)([h.Z], () => h.Z.getPendingClips()),
-        H = (0, u.e7)([h.Z], () => h.Z.getSettings().storageLocation),
-        A = (0, u.Wu)([h.Z], () => h.Z.getNewClipIds()),
-        { analyticsLocations: z } = (0, f.ZP)(m.Z.CLIPS_GALLERY),
-        B = a.useMemo(() => [...R, ...M], [M, R]);
-    (0, g.Z)(
-        {
-            type: c.ImpressionTypes.MODAL,
-            name: c.ImpressionNames.CLIP_GALLERY_VIEWED,
-            properties: { number_of_clips_loaded: B.length },
-        },
-        { disableTrack: S },
-        [B.length, S],
-    ),
-        a.useEffect(
-            () => (
-                (0, x.eL)(),
-                () => {
-                    (0, x.eL)(), (0, x.zq)();
-                }
-            ),
-            [],
-        );
-    let V = a.useMemo(
-        () =>
-            s()(B)
-                .filter((e) => {
-                    if ("" === D.trim()) return !0;
-                    let t = D.toLowerCase();
-                    return (
-                        (null != e.name && "" !== e.name && i()(t, e.name.toLowerCase())) ||
-                        i()(t, e.applicationName.toLowerCase())
-                    );
-                })
-                .sort((e, t) =>
-                    "ascending" === T
-                        ? b.default.compare(e.id, t.id)
-                        : "descending" === T
-                          ? b.default.compare(t.id, e.id)
-                          : 0,
-                )
-                .chunk(3)
-                .value(),
-        [B, D, T],
-    );
-    a.useEffect(() => {
-        !(async function () {
-            k(!0);
-            try {
-                await x.jv(H);
-            } finally {
-                k(!1);
+let O = r.createContext({
+    selectedClipIds: new Set(),
+    toggleClipSelection: () => {},
+    clearSelection: () => {},
+    isMultiSelectMode: !1,
+});
+function x(e) {
+    var { channelId: t, onClose: x, onClipClick: C } = e,
+        w = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                l,
+                r = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        l,
+                        r = {},
+                        i = Object.keys(e);
+                    for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    return r;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < i.length; l++)
+                    (n = i[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
-        })();
-    }, [H]);
-    let F = a.useCallback(
-            (e) => {
-                (0, p.ZDy)(
-                    async () => {
-                        let { default: a } = await n.e("61526").then(n.bind(n, 22989));
-                        return (n) =>
-                            (0, l.jsx)(
-                                a,
-                                w(P({}, n), {
-                                    channelId: t,
-                                    clip: e,
-                                }),
-                            );
-                    },
-                    { modalKey: C.Ut },
-                );
-            },
-            [t],
-        ),
-        { onShareClick: G } = (0, j.Z)({
-            channelId: t,
-            setExporting: L,
-        }),
-        K = a.useCallback((e, t) => {
-            (0, p.ZDy)(async () => {
-                let { default: a } = await n.e("15915").then(n.bind(n, 799677));
-                return (n) =>
-                    (0, l.jsx)(
-                        a,
-                        w(P({ clip: e }, n), {
-                            onBeforeDelete: t,
-                            onAfterDelete: () => n.onClose(),
-                        }),
-                    );
+            return r;
+        })(e, ["channelId", "onClose", "onClipClick"]);
+    let { analyticsLocations: P } = (0, u.ZP)(o.Z.CLIPS_GALLERY),
+        [k, I] = r.useState(new Set()),
+        { clipsByGame: S, filteredClips: E, favoriteClips: N, allClips: M } = (0, b.n)(),
+        { onShareClick: Z } = (0, p.Z)(t),
+        D = (0, i.e7)([d.Z], () => d.Z.getExportingClipIds().length > 0),
+        L = (0, y.f)((e) => e.selectedGameId),
+        H = r.useMemo(() => {
+            var e;
+            return null == L || "favorites" === L
+                ? null
+                : null != (e = S.find((e) => e.applicationId === L))
+                  ? e
+                  : null;
+        }, [L, S]),
+        A = r.useMemo(() => {
+            var e;
+            return "favorites" === L ? N : null != (e = null == H ? void 0 : H.filteredClips) ? e : E;
+        }, [L, H, E, N]),
+        T = r.useMemo(() => {
+            var e;
+            return "favorites" === L
+                ? v.intl.string(v.t["9rlCk1"])
+                : null != (e = null == H ? void 0 : H.name)
+                  ? e
+                  : v.intl.string(v.t.dPVrEv);
+        }, [L, H]),
+        R = r.useCallback((e) => {
+            I((t) => {
+                let n = new Set(t);
+                return n.has(e) ? n.delete(e) : n.add(e), n;
             });
         }, []),
-        Y = a.useCallback(
-            (e) => {
-                let { row: t } = e,
-                    n = V[t];
-                return (0, l.jsx)(
-                    "div",
-                    {
-                        className: O.clipsRow,
-                        children: n.map((e) => {
-                            let t = 0 === e.length;
-                            return (0, l.jsx)(
-                                y.Z,
-                                {
-                                    actionsDisabled: null != Z || t,
-                                    exporting: Z === e.id,
-                                    isNew: A.includes(e.id),
-                                    onDelete: K,
-                                    onEdit: F,
-                                    onShare: (e) =>
-                                        G({
-                                            clip: e,
-                                            onShareComplete: () => d.Mr(C.Qr),
-                                        }),
-                                    clip: e,
+        V = r.useCallback(() => {
+            I(new Set());
+        }, []),
+        _ = k.size > 0,
+        U = r.useCallback(() => {
+            let e = M.filter((e) => k.has(e.id));
+            (0, c.ZDy)(
+                async () => {
+                    let { default: t } = await n.e("81409").then(n.bind(n, 210480));
+                    return (n) =>
+                        (0, l.jsx)(
+                            t,
+                            j(g({}, n), {
+                                clips: e,
+                                onAfterDelete: () => {
+                                    V(), n.onClose();
                                 },
-                                e.id,
-                            );
-                        }),
-                    },
-                    "clips-gallery-".concat(t),
-                );
-            },
-            [V, A, Z, G, K, F],
-        ),
-        U =
-            S || 0 !== V.length
-                ? S
-                    ? (0, l.jsx)("div", {
-                          className: O.spinnerContainer,
-                          children: (0, l.jsx)(p.$jN, {}),
-                      })
-                    : (0, l.jsx)(p.aVo, {
-                          className: O.clipGrid,
-                          sections: [V.length],
-                          sectionHeight: 0,
-                          rowHeight: 328.25,
-                          renderRow: Y,
-                      })
-                : (0, l.jsx)(_.Z, {
-                      isEmptyBecauseQuery: B.length > 0,
-                      closePopout: r,
-                  });
-    return (0, l.jsx)(p.Y0X, {
-        size: p.CgR.DYNAMIC,
-        transitionState: o,
-        className: O.root,
-        parentComponent: "ClipsGalleryModal",
-        children: (0, l.jsxs)(f.Gt, {
-            value: z,
-            children: [
-                (0, l.jsx)(v.Z, {
-                    onClose: r,
-                    filterQuery: N,
-                    setFilterQuery: E,
-                    sortOrder: T,
-                    setSortOrder: I,
+                            }),
+                        );
+                },
+                { stackingBehavior: "stack" },
+            );
+        }, [M, k, V]),
+        z = r.useCallback(async () => {
+            let e = M.filter((e) => k.has(e.id));
+            await Z({ clips: e }), V();
+        }, [M, k, Z, V]),
+        B = r.useMemo(
+            () => ({
+                selectedClipIds: k,
+                toggleClipSelection: R,
+                clearSelection: V,
+                isMultiSelectMode: _,
+            }),
+            [k, R, V, _],
+        );
+    return (0, l.jsx)(u.Gt, {
+        value: P,
+        children: (0, l.jsx)(O.Provider, {
+            value: B,
+            children: (0, l.jsx)(
+                s.A,
+                j(g({ onClose: x }, w), {
+                    children: (0, l.jsxs)("div", {
+                        className: h.modalContainer,
+                        children: [
+                            (0, l.jsx)(f.Z, {
+                                clipsByGame: S,
+                                filteredClips: E,
+                                favoriteClips: N,
+                                allClips: M,
+                            }),
+                            (0, l.jsxs)("div", {
+                                className: h.content,
+                                children: [
+                                    (0, l.jsxs)("div", {
+                                        className: h.contentHeader,
+                                        children: [
+                                            (0, l.jsx)(c.Heading, {
+                                                variant: "heading-md/medium",
+                                                color: "header-secondary",
+                                                children: T,
+                                            }),
+                                            (0, l.jsxs)("div", {
+                                                className: h.headerActions,
+                                                children: [
+                                                    _ &&
+                                                        (0, l.jsxs)(l.Fragment, {
+                                                            children: [
+                                                                (0, l.jsx)(a.u, {
+                                                                    text: v.intl.string(v.t.RDE0Sc),
+                                                                    children: (0, l.jsx)(c.hU, {
+                                                                        onClick: z,
+                                                                        icon: c.aAc,
+                                                                        size: "sm",
+                                                                        variant: "icon-only",
+                                                                        "aria-label": v.intl.string(v.t.RDE0Sc),
+                                                                        loading: D,
+                                                                    }),
+                                                                }),
+                                                                (0, l.jsx)(a.u, {
+                                                                    text: v.intl.string(v.t.oyYWHE),
+                                                                    children: (0, l.jsx)(c.hU, {
+                                                                        onClick: U,
+                                                                        icon: c.XHJ,
+                                                                        size: "sm",
+                                                                        variant: "icon-only",
+                                                                        "aria-label": v.intl.string(v.t.oyYWHE),
+                                                                    }),
+                                                                }),
+                                                            ],
+                                                        }),
+                                                    (0, l.jsx)(c.hU, {
+                                                        onClick: x,
+                                                        icon: c.Uz9,
+                                                        size: "sm",
+                                                        variant: "icon-only",
+                                                        "aria-label": v.intl.string(v.t.cpT0Cq),
+                                                    }),
+                                                ],
+                                            }),
+                                        ],
+                                    }),
+                                    (0, l.jsx)(m.Z, {
+                                        channelId: t,
+                                        filteredClips: A,
+                                        totalClipCount: M.length,
+                                        onClipClick: C,
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
                 }),
-                U,
-            ],
+            ),
         }),
     });
 }

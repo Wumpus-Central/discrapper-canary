@@ -1,41 +1,63 @@
-n.d(t, { Z: () => u });
-var r = n(951288);
-n(647438);
-var i = n(755721),
-    l = n(481060),
-    a = n(39604),
-    s = n(176127),
-    o = n(388032),
-    c = n(703849);
-function u(e) {
-    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: u } = e;
-    return (0, r.jsxs)(l.gqK, {
-        tooltipClassName: c.reminderTooltip,
-        tooltipContentClassName: c.tooltipContent,
-        targetElementRef: { current: n },
-        position: "bottom",
-        color: l.r6K.PRIMARY,
-        children: [
-            (0, r.jsx)(s.Z, {}),
-            (0, r.jsx)(l.Heading, {
-                variant: "heading-md/extrabold",
-                children: o.intl.format(o.t["+qxkzC"], { count: u.newClipIds.length }),
-            }),
-            (0, r.jsxs)("div", {
-                className: c.buttonContainer,
-                children: [
-                    (0, r.jsx)(i.zx, {
-                        color: i.zx.Colors.TRANSPARENT,
-                        onClick: a.eL,
-                        children: o.intl.string(o.t.WAI6xu),
-                    }),
-                    (0, r.jsx)(l.Button, {
-                        variant: "primary",
-                        text: o.intl.string(o.t.tQPBml),
+n.d(t, { Z: () => p });
+var r = n(951288),
+    i = n(647438),
+    l = n(442837),
+    a = n(907862),
+    s = n(435064),
+    o = n(894694),
+    c = n(39604),
+    u = n(572720),
+    d = n(388032);
+function p(e) {
+    let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: p } = e,
+        f = (0, l.e7)([s.Z], () => {
+            var e;
+            let t = null == (e = s.Z.getLastClipsSession()) ? void 0 : e.newClipIds;
+            return null == t ? null : s.Z.getClips().filter((e) => t.includes(e.id))[0];
+        }),
+        m = (0, u.l)(f),
+        h = i.useCallback(() => {
+            (0, c.eL)();
+        }, []);
+    return null == f
+        ? null
+        : f.type !== o.NJ.SCREENSHOT && f.type !== o.NJ.VOICE_CLIP && null != m
+          ? (0, r.jsx)(a.Mb, {
+                targetElementRef: { current: n },
+                position: "bottom",
+                title: d.intl.string(d.t.JugHO7),
+                body: d.intl.format(d.t["+qxkzC"], { count: p.newClipIds.length }),
+                assetUrl: m,
+                disableMediaViewer: !0,
+                caretConfig: {
+                    position: "top",
+                    align: "center",
+                },
+                action: {
+                    text: d.intl.string(d.t.tQPBml),
+                    onClick: t,
+                },
+                onRequestClose: h,
+            })
+          : (0, r.jsx)(a.J2, {
+                targetElementRef: { current: n },
+                position: "bottom",
+                title: d.intl.string(d.t.JugHO7),
+                body: d.intl.format(d.t["+qxkzC"], { count: p.newClipIds.length }),
+                graphic:
+                    null != f.thumbnail
+                        ? {
+                              type: "image",
+                              src: f.thumbnail,
+                          }
+                        : void 0,
+                caretConfig: { align: "center" },
+                actions: [
+                    {
+                        text: d.intl.string(d.t.tQPBml),
                         onClick: t,
-                    }),
+                    },
                 ],
-            }),
-        ],
-    });
+                onRequestClose: h,
+            });
 }

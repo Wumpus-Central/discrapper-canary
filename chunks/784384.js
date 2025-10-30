@@ -38,45 +38,51 @@ function S(e) {
         [n],
     );
 }
-function Z(e, t, n) {
-    let l = n instanceof d.Sf;
-    if ((0, s.Y3)(t) && !(l && (0, s.Y3)(n))) return { label: E.intl.string(E.t.KgPx1D) };
-    if (l && (0, d.Km)(n.type)) {
-        if (
-            (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
-            !h.Z.can(y.Plq.ATTACH_FILES, n)
-        )
-            return { label: E.intl.string(E.t.P7yvbm) };
-        if (
-            (e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
-            !(0, g.eC)(n, h.Z) &&
-            !(0, g.En)(e)
-        )
-            return { label: E.intl.string(E.t.Wr4RIX) };
-        let t = [
-            ...(0, o.cv)(e),
-            ...e.messageSnapshots.flatMap((e) => {
-                let { message: t } = e;
-                return (0, o.cv)(t);
-            }),
-        ];
-        if (
-            t.length > 0 &&
-            !h.Z.can(y.Plq.USE_EXTERNAL_STICKERS, n) &&
-            t.some((e) =>
-                (function (e, t) {
-                    let n = c.Z.getStickerById(e.id);
-                    return null != n && !!(0, o.J8)(n) && (n.guild_id !== t.guild_id || void 0);
-                })(e, n),
+function Z(e, t, n, l) {
+    let r = n instanceof d.Sf;
+    if (null != l) {
+        let e = l(n);
+        if (null != e) return e;
+    }
+    if (null != e && null != t) {
+        if ((0, s.Y3)(t) && !(r && (0, s.Y3)(n))) return { label: E.intl.string(E.t.KgPx1D) };
+        if (r && (0, d.Km)(n.type)) {
+            if (
+                (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
+                !h.Z.can(y.Plq.ATTACH_FILES, n)
             )
-        )
-            return { label: E.intl.string(E.t["0Yyrua"]) };
-        if (
-            (e.hasFlag(y.iLy.IS_VOICE_MESSAGE) ||
-                e.messageSnapshots.some((e) => e.message.hasFlag(y.iLy.IS_VOICE_MESSAGE))) &&
-            !h.Z.can(y.Plq.SEND_VOICE_MESSAGES, n)
-        )
-            return { label: E.intl.string(E.t.quj4DY) };
+                return { label: E.intl.string(E.t.P7yvbm) };
+            if (
+                (e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
+                !(0, g.eC)(n, h.Z) &&
+                !(0, g.En)(e)
+            )
+                return { label: E.intl.string(E.t.Wr4RIX) };
+            let t = [
+                ...(0, o.cv)(e),
+                ...e.messageSnapshots.flatMap((e) => {
+                    let { message: t } = e;
+                    return (0, o.cv)(t);
+                }),
+            ];
+            if (
+                t.length > 0 &&
+                !h.Z.can(y.Plq.USE_EXTERNAL_STICKERS, n) &&
+                t.some((e) =>
+                    (function (e, t) {
+                        let n = c.Z.getStickerById(e.id);
+                        return null != n && !!(0, o.J8)(n) && (n.guild_id !== t.guild_id || void 0);
+                    })(e, n),
+                )
+            )
+                return { label: E.intl.string(E.t["0Yyrua"]) };
+            if (
+                (e.hasFlag(y.iLy.IS_VOICE_MESSAGE) ||
+                    e.messageSnapshots.some((e) => e.message.hasFlag(y.iLy.IS_VOICE_MESSAGE))) &&
+                !h.Z.can(y.Plq.SEND_VOICE_MESSAGES, n)
+            )
+                return { label: E.intl.string(E.t.quj4DY) };
+        }
     }
 }
 function v(e, t) {

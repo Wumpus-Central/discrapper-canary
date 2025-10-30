@@ -91,6 +91,8 @@ class c extends r.Z {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipBufferLength(e) {}
+    setClipsMLPipelineEnabled(e) {}
+    setClipsMLPipelineTypeEnabled(e, t) {}
     saveClip(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
@@ -101,6 +103,9 @@ class c extends r.Z {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     exportClip(e, t) {
+        return Promise.reject(Error("UNSUPPORTED"));
+    }
+    saveScreenshot(e, t, n, r, i) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setAudioSubsystem(e) {}

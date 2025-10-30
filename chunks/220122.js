@@ -8,8 +8,9 @@ var r = n(481060),
     c = n(474639),
     u = n(435064),
     d = n(779618),
-    f = n(39604),
-    _ = n(356659),
+    f = n(39604);
+n(460779);
+var _ = n(356659),
     p = n(388032);
 let h = "CLIPS_IN_CALL_WARNING";
 class m extends c.Z {
@@ -71,6 +72,13 @@ class m extends c.Z {
             clipsEnabled: !1,
             trackAnalytics: !1,
         });
+    }
+    loadClipsFromStorage() {
+        let e = u.Z.getSettings().storageLocation;
+        "" !== e &&
+            f.jv(e).catch((e) => {
+                _.jF.error("Failed to load clips directory on connection open", e);
+            });
     }
 }
 let g = new m();

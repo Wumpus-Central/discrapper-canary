@@ -19,6 +19,7 @@ function c(e) {
         iconContainerClassName: _,
         timestampClassName: p,
         compact: h = !1,
+        additionalContent: m,
     } = e;
     return (0, r.jsxs)("div", {
         className: a()(c, {
@@ -44,13 +45,18 @@ function c(e) {
             (0, r.jsxs)("div", {
                 className: a()(d, l.content),
                 children: [
-                    u,
-                    null != i &&
-                        (0, r.jsx)(s.Z, {
-                            timestamp: i,
-                            timestampFormat: o,
-                            className: p,
-                        }),
+                    (0, r.jsxs)("div", {
+                        children: [
+                            u,
+                            null != i &&
+                                (0, r.jsx)(s.Z, {
+                                    timestamp: i,
+                                    timestampFormat: o,
+                                    className: p,
+                                }),
+                        ],
+                    }),
+                    m,
                 ],
             }),
         ],

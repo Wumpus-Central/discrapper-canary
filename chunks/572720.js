@@ -1,9 +1,12 @@
-n.d(t, { l: () => r });
-var l = n(647438),
-    a = n(579806);
-function r(e) {
-    return (0, l.useMemo)(
-        () => (null == a.Z.clips.getClipProtocolURLFromPath ? null : a.Z.clips.getClipProtocolURLFromPath(e.filepath)),
-        [e.filepath],
+n.d(t, { l: () => l });
+var r = n(647438),
+    i = n(579806);
+function l(e) {
+    return (0, r.useMemo)(
+        () =>
+            null == e || null == i.Z.clips.getClipProtocolURLFromPath
+                ? null
+                : i.Z.clips.getClipProtocolURLFromPath(e.filepath),
+        [e],
     );
 }

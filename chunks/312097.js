@@ -59,42 +59,43 @@ function f(e, t) {
     return i;
 }
 let _ = "Media Viewer Modal";
-function p(e) {
-    var t,
-        c,
+function p(e, t) {
+    var c,
         f,
-        { location: p, contextKey: h } = e,
-        m = d(e, ["location", "contextKey"]);
-    let g =
-            null == (c = m.items[null != (f = m.startingIndex) ? f : 0]) || null == (t = c.sourceMetadata)
+        p,
+        { location: h, contextKey: m } = e,
+        g = d(e, ["location", "contextKey"]);
+    let E =
+            null == (f = g.items[null != (p = g.startingIndex) ? p : 0]) || null == (c = f.sourceMetadata)
                 ? void 0
-                : t.message,
-        E = a.Z.getChannel(null == g ? void 0 : g.channel_id);
+                : c.message,
+        b = a.Z.getChannel(null == E ? void 0 : E.channel_id);
     (0, s.fS)({
-        guildId: null == E ? void 0 : E.guild_id,
-        channelId: null == E ? void 0 : E.id,
-        channelType: null == E ? void 0 : E.type,
-        numMediaItems: m.items.length,
-        source: p,
-        hasMediaOptions: !m.shouldHideMediaOptions,
+        guildId: null == b ? void 0 : b.guild_id,
+        channelId: null == b ? void 0 : b.id,
+        channelType: null == b ? void 0 : b.type,
+        numMediaItems: g.items.length,
+        source: h,
+        hasMediaOptions: !g.shouldHideMediaOptions,
     }),
         o.default.track(l.rMx.OPEN_MODAL, {
             type: l.jXE.MEDIA_VIEWER,
-            source: p,
-            guild_id: null == E ? void 0 : E.guild_id,
-            channel_id: null == E ? void 0 : E.id,
-            channel_type: null == E ? void 0 : E.type,
+            source: h,
+            guild_id: null == b ? void 0 : b.guild_id,
+            channel_id: null == b ? void 0 : b.id,
+            channel_type: null == b ? void 0 : b.type,
         }),
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e("39476").then(n.bind(n, 97594));
-                return (t) => (0, r.jsx)(e, u({}, t, m));
+                return (t) => (0, r.jsx)(e, u({}, t, g));
             },
             {
                 modalKey: _,
-                contextKey: h,
+                contextKey: m,
                 onCloseCallback: s.VO,
                 backdropStyle: i.fCB.LIGHTBOX,
+                stackingBehavior: t,
             },
         );
 }

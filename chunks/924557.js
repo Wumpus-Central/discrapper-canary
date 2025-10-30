@@ -1,8 +1,12 @@
 n.d(t, {
     Go: () => d,
+    NS: () => m,
     NV: () => l,
+    PP: () => p,
     Zq: () => f,
+    iL: () => _,
     ln: () => u,
+    n7: () => h,
 });
 var r = n(818083),
     i = n(441167),
@@ -19,6 +23,9 @@ let l = (0, r.B)({
             enableClips: !1,
             ignorePlatformRestriction: !1,
             showClipsHeaderEntrypoint: !1,
+            enableScreenshotKeybind: !1,
+            enableVoiceOnlyClips: !1,
+            enableAdvancedSignals: !1,
         },
         treatments: [
             {
@@ -28,6 +35,9 @@ let l = (0, r.B)({
                     enableClips: !0,
                     ignorePlatformRestriction: !1,
                     showClipsHeaderEntrypoint: !0,
+                    enableScreenshotKeybind: !1,
+                    enableVoiceOnlyClips: !1,
+                    enableAdvancedSignals: !1,
                 },
             },
             {
@@ -37,6 +47,9 @@ let l = (0, r.B)({
                     enableClips: !0,
                     ignorePlatformRestriction: !1,
                     showClipsHeaderEntrypoint: !0,
+                    enableScreenshotKeybind: !1,
+                    enableVoiceOnlyClips: !1,
+                    enableAdvancedSignals: !1,
                 },
             },
             {
@@ -46,6 +59,9 @@ let l = (0, r.B)({
                     enableClips: !0,
                     ignorePlatformRestriction: !0,
                     showClipsHeaderEntrypoint: !0,
+                    enableScreenshotKeybind: !0,
+                    enableVoiceOnlyClips: !0,
+                    enableAdvancedSignals: !0,
                 },
             },
         ],
@@ -58,6 +74,9 @@ let l = (0, r.B)({
             enableClips: !1,
             enablePremiumEarlyAccessAnnouncementCoachmark: !1,
             enablePremiumEarlyAccessGoLiveRoadblock: !1,
+            enableScreenshotKeybind: !1,
+            enableVoiceOnlyClips: !1,
+            enableAdvancedSignals: !1,
         },
         treatments: [
             {
@@ -67,6 +86,9 @@ let l = (0, r.B)({
                     enableClips: !1,
                     enablePremiumEarlyAccessAnnouncementCoachmark: !0,
                     enablePremiumEarlyAccessGoLiveRoadblock: !0,
+                    enableScreenshotKeybind: !1,
+                    enableVoiceOnlyClips: !1,
+                    enableAdvancedSignals: !1,
                 },
             },
             {
@@ -76,6 +98,9 @@ let l = (0, r.B)({
                     enableClips: !0,
                     enablePremiumEarlyAccessAnnouncementCoachmark: !0,
                     enablePremiumEarlyAccessGoLiveRoadblock: !1,
+                    enableScreenshotKeybind: !1,
+                    enableVoiceOnlyClips: !1,
+                    enableAdvancedSignals: !1,
                 },
             },
         ],
@@ -105,3 +130,31 @@ let f = (e) => {
         );
     return !!n && r;
 };
+function _() {
+    let { enableScreenshotKeybind: e } = l.getCurrentConfig(
+        { location: "isScreenshotKeybindEnabled" },
+        { autoTrackExposure: !1 },
+    );
+    return e;
+}
+function p() {
+    let { enableScreenshotKeybind: e } = l.useExperiment(
+        { location: "useScreenshotKeybindEnabled" },
+        { autoTrackExposure: !1 },
+    );
+    return e;
+}
+function h() {
+    let { enableVoiceOnlyClips: e } = l.getCurrentConfig(
+        { location: "areVoiceOnlyClipsEnabled" },
+        { autoTrackExposure: !1 },
+    );
+    return e;
+}
+function m() {
+    let { enableAdvancedSignals: e } = l.getCurrentConfig(
+        { location: "areAdvancedSignalsEnabled" },
+        { autoTrackExposure: !1 },
+    );
+    return e;
+}

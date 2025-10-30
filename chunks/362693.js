@@ -1,63 +1,118 @@
-n.d(t, { Z: () => d });
-var a = n(951288),
-    r = n(647438),
-    l = n(481060),
-    i = n(673462),
-    o = n(826078),
-    s = n(917042),
-    u = n(20437),
-    c = n(285006);
-function d(e) {
-    let { isLoading: t, onDoneLoading: n, videoURL: d, audioURL: m, transitionState: p } = e,
-        { videoPlayerRef: f, cropData: v, applicationAudioEnabled: h, voiceAudioEnabled: g } = (0, u.S)(),
-        x = r.useCallback(() => {
-            var e;
-            null == (e = f.current) || e.seek(v.start), n();
-        }, [n, v.start, f]);
-    return (
-        r.useEffect(() => {
-            function e(e) {
-                var t, n;
-                if ((null == (t = document.activeElement) ? void 0 : t.tagName) === "INPUT") return;
-                let a = f.current;
-                if (null == a) return;
-                let r = null == (n = f.current) ? void 0 : n.videoElement;
-                if (null == r) return;
-                let l = (0, s.Z)(r.duration, e.shiftKey),
-                    i = !1;
-                switch (e.key) {
-                    case " ":
-                        (i = !0), r.paused ? a.play() : a.pause();
-                        break;
-                    case "ArrowLeft":
-                        (i = !0), a.seek(Math.max(r.currentTime - l, v.start));
-                        break;
-                    case "ArrowRight":
-                        (i = !0), a.seek(Math.min(r.currentTime + l, v.end));
-                }
-                i && (e.stopPropagation(), e.preventDefault());
+n.d(t, { Z: () => h });
+var l = n(951288),
+    a = n(647438),
+    i = n(481060),
+    r = n(312097),
+    s = n(894694),
+    o = n(673462),
+    u = n(826078),
+    c = n(917042),
+    d = n(115559),
+    m = n(285006);
+function h(e) {
+    let { transitionState: t, clip: n } = e,
+        {
+            applicationAudioEnabled: h,
+            voiceAudioEnabled: p,
+            soundboardAudioEnabled: f,
+            cropStart: v,
+            cropEnd: g,
+            videoPlayerRef: b,
+            videoURL: j,
+            audioTracks: x,
+        } = (0, d.D)(),
+        y = n.type === s.NJ.SCREENSHOT;
+    a.useEffect(() => {
+        if (!y) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+        function e(e) {
+            var t, n;
+            if ((null == (t = document.activeElement) ? void 0 : t.tagName) === "INPUT") return;
+            let l = b.current;
+            if (null == l) return;
+            let a = null == (n = b.current) ? void 0 : n.videoElement;
+            if (null == a) return;
+            let i = (0, c.Z)(a.duration, e.shiftKey),
+                r = !1;
+            switch (e.key) {
+                case " ":
+                    (r = !0), a.paused ? l.play() : l.pause();
+                    break;
+                case "ArrowLeft":
+                    (r = !0), l.seek(Math.max(v, a.currentTime - i));
+                    break;
+                case "ArrowRight":
+                    (r = !0), l.seek(Math.min(g, a.currentTime + i));
             }
-            return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
-        }, [v.start, v.end, f]),
-        (0, a.jsxs)("div", {
-            className: c.editorPane,
-            children: [
-                (0, a.jsx)("div", {
-                    className: c.videoSizer,
-                    children: (0, a.jsx)(i.Z, {
-                        applicationAudioEnabled: h,
-                        voiceAudioEnabled: g,
-                        ref: f,
-                        audioSrc: m,
-                        src: d,
-                        isLoading: t,
-                        onDoneLoading: x,
-                        startTime: v.start,
-                        endTime: v.end,
-                    }),
-                }),
-                !t && p && [l.Dvm.ENTERED, l.Dvm.HIDDEN].includes(p) ? (0, a.jsx)(o.Z, { sourceURL: d }) : null,
-            ],
-        })
-    );
+            r && (e.stopPropagation(), e.preventDefault());
+        }
+    }, [b, y, n.type, v, g]);
+    let C = a.useMemo(() => x.filter((e) => e.trackName.includes(":voice")), [x]),
+        k = a.useCallback(() => {
+            var e;
+            (0, r.K)(
+                {
+                    items: [
+                        {
+                            type: "IMAGE",
+                            url: n.thumbnail,
+                            proxyUrl: n.thumbnail,
+                            alt: null != (e = n.name) ? e : "",
+                        },
+                    ],
+                    startingIndex: 0,
+                    location: "ClipsEditModal",
+                },
+                "stack",
+            );
+        }, [n.thumbnail, n.name]);
+    if (y) {
+        var N;
+        return (0, l.jsx)("div", {
+            className: m.editorPane,
+            children:
+                t !== i.Dvm.ENTERED
+                    ? (0, l.jsx)("div", {
+                          className: m.spinnerContainer,
+                          children: (0, l.jsx)(i.$jN, {}),
+                      })
+                    : (0, l.jsx)("div", {
+                          className: m.editorContent,
+                          children: (0, l.jsx)(i.P3F, {
+                              className: m.videoSizer,
+                              onClick: k,
+                              children: (0, l.jsx)("img", {
+                                  className: m.displayScreenshot,
+                                  src: n.thumbnail,
+                                  alt: null != (N = n.name) ? N : "",
+                              }),
+                          }),
+                      }),
+        });
+    }
+    let E = null == j || 0 === x.length || t !== i.Dvm.ENTERED;
+    return (0, l.jsx)("div", {
+        className: m.editorPane,
+        children: E
+            ? (0, l.jsx)("div", {
+                  className: m.spinnerContainer,
+                  children: (0, l.jsx)(i.$jN, {}),
+              })
+            : (0, l.jsxs)("div", {
+                  className: m.editorContent,
+                  children: [
+                      (0, l.jsx)(o.Z, {
+                          applicationAudioEnabled: h,
+                          voiceAudioEnabled: p,
+                          soundboardAudioEnabled: f,
+                          ref: b,
+                          clip: n,
+                      }),
+                      (0, l.jsx)(u.Z, {
+                          sourceURL: j,
+                          clip: n,
+                          voiceAudioTracks: C,
+                      }),
+                  ],
+              }),
+    });
 }

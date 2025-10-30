@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         USER_SETTINGS_MODAL_KEY: () => b,
-        getUserSettingsSectionsByWebUserSettings: () => T,
+        getUserSettingsSectionsByWebUserSettings: () => S,
         getWebUserSettingsByUserSettingsSections: () => I,
         openUserSettings: () => y,
-        openUserSettingsFromParsedUrl: () => S,
+        openUserSettingsFromParsedUrl: () => T,
     }),
     n(388685),
     n(35282);
@@ -95,15 +95,15 @@ let b = "USER_SETTINGS_MODAL_MODAL_KEY";
 async function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { section: f.oAB.ACCOUNT },
         s = arguments.length > 2 ? arguments[2] : void 0;
-    var { subsection: c } = t,
-        u = g(t, ["subsection"]);
+    var { subsection: c, stackingBehavior: u = "replaceAll" } = t,
+        _ = g(t, ["subsection", "stackingBehavior"]);
     a.Z.dispatch(
         p(
             {
                 type: "USER_SETTINGS_MODAL_OPEN",
                 subsection: null != c ? c : null,
             },
-            u,
+            _,
         ),
     ),
         (0, d.yP)("openUserSettings")
@@ -116,7 +116,7 @@ async function y(e) {
                       },
                       {
                           modalKey: b,
-                          stackingBehavior: "replaceAll",
+                          stackingBehavior: u,
                           stackNextByDefault: !0,
                       },
                   )
@@ -175,13 +175,13 @@ function I() {
         [f.oAB.DEVELOPER_OPTIONS, u.n.DEVELOPER_OPTIONS_PANEL],
     ]);
 }
-function T() {
+function S() {
     let e = I(),
         t = new Map();
     for (let [n, r] of e.entries()) t.set(r, n);
     return t;
 }
-function S(e) {
+function T(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
     O({
         section: t.section,

@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i }), n(804061), n(704826), n(35282), n(781311);
-let r = /[<>:"/\\|?*\.]/g,
+n.d(t, { Z: () => i }), n(781311), n(804061), n(704826), n(35282);
+let r = /[^a-zA-Z0-9-_.]/g,
     i = function (e) {
-        return e.replaceAll(r, "").trim().replaceAll(" ", "_");
+        return e.trim().replaceAll(" ", "_").replaceAll(r, "");
     };

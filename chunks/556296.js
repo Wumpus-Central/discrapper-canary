@@ -28,8 +28,8 @@ var i,
     O = n(808506),
     v = n(981631),
     I = n(356659),
-    T = n(710111),
-    S = n(295907),
+    S = n(710111),
+    T = n(295907),
     A = n(444675);
 function C(e, t, n) {
     return (
@@ -130,7 +130,7 @@ let x = "1001",
                     keyCombo: t,
                     combo: n,
                     layoutMapBacktick: o,
-                    env: S.Cg[(0, y.dU)()],
+                    env: T.Cg[(0, y.dU)()],
                     backtickEventShape: (0, b.T_)("`"),
                     backquoteKeyShape: (0, b.T_)(null != o ? o : "`"),
                     nativeBackquoteKeyShape: (0, b.T_)(null != s ? s : "`"),
@@ -149,7 +149,7 @@ function G(e) {
         : null == i
           ? (U("Unable to get backtick code for overlay default keybind", e, n, { rawBacktickShape: r }), null)
           : (U("Default overlay keybind is unsupported", e, n, { rawBacktickCode: i }),
-            [...n, [S.Mo.KEYBOARD_KEY, i, (0, y.dU)()]]);
+            [...n, [T.Mo.KEYBOARD_KEY, i, (0, y.dU)()]]);
 }
 let B = () => {
         let e = L();
@@ -482,10 +482,13 @@ let eg = [
     },
     function () {
         let e = em(v.kg4.SOUNDBOARD_HOLD);
-        return eh(v.kg4.SOUNDBOARD_HOLD, T.D_, !1) || e;
+        return eh(v.kg4.SOUNDBOARD_HOLD, S.D_, !1) || e;
     },
     function () {
-        return eh(v.kg4.SAVE_CLIP, I.D_);
+        return eh(v.kg4.SAVE_CLIP, I.Fv);
+    },
+    function () {
+        return eh(v.kg4.SAVE_SCREENSHOT, I.$O);
     },
 ];
 function eE() {

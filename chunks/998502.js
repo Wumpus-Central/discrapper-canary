@@ -80,8 +80,8 @@ function v(e, t) {
     );
 }
 let I = window.DiscordNative,
-    T = new Set(["jpg", "jpeg", "png"]),
-    S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
+    S = new Set(["jpg", "jpeg", "png"]),
+    T = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
     A = (e) => e.startsWith("image/"),
     C = 5,
     N = null,
@@ -406,7 +406,7 @@ let q = {
                 l()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
             let n = await V(e),
                 r = K(e, t),
-                i = null != r && T.has(r) ? "image.".concat(r) : e;
+                i = null != r && S.has(r) ? "image.".concat(r) : e;
             I.clipboard.copyImage(E.from(n), i);
         },
         async copyImageBlob(e, t) {
@@ -416,7 +416,7 @@ let q = {
         canSaveImage(e, t) {
             if (null == e || !h.isPlatformEmbedded) return !1;
             let n = K(e, t);
-            return null == n || S.has(n);
+            return null == n || T.has(n);
         },
         async saveImage(e, t, n) {
             var r, i, a;
@@ -478,12 +478,26 @@ let q = {
         canCheckVoiceFilterFilesExist: () => "function" == typeof I.fileManager.checkVoiceFilterFilesExist,
         checkVoiceFilterFilesExist: async (e) => await I.fileManager.checkVoiceFilterFilesExist(e),
         cleanupUnusedVoiceFilterFiles: async (e) => await I.fileManager.cleanupUnusedVoiceFilterFiles(e),
+        async downloadMLModelFile(e, t, n) {
+            l()(h.isPlatformEmbedded, "Download ML model file method called outside native app");
+            let r = m.Z.toURLSafe(e);
+            return (
+                l()(r, "Could not download ML model, fileSrc was not a valid path"),
+                await I.fileManager.maybeDownloadMLModelFile(e, t, n)
+            );
+        },
+        stopMLModelDownloads() {
+            I.fileManager.stopMLModelDownloads();
+        },
+        canCheckMLModelFilesExist: () => "function" == typeof I.fileManager.checkMLModelFilesExist,
+        checkMLModelFilesExist: async (e) => await I.fileManager.checkMLModelFilesExist(e),
+        cleanupUnusedMLModelFiles: async (e) => await I.fileManager.cleanupUnusedMLModelFiles(e),
         canCopyImage() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (!h.isPlatformEmbedded || "function" != typeof I.clipboard.copyImage) return !1;
             if (null != e) {
                 let t = K(e, void 0);
-                if (null != t && !T.has(t)) return !1;
+                if (null != t && !S.has(t)) return !1;
             }
             return !0;
         },
@@ -874,12 +888,14 @@ let q = {
                 else if (t < o[e]) return !1;
             return !0;
         },
-        fetchRiotGamesLiveClientData: (e, t) =>
-            h.isPlatformEmbedded
+        fetchRiotGamesLiveClientData(e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            return h.isPlatformEmbedded
                 ? null == I.riotGames
                     ? Promise.reject(Error("Riot Games module not available"))
                     : I.riotGames.fetchLiveClientData(e, t)
-                : Promise.reject(Error("Not embedded!")),
+                : Promise.reject(Error("Not embedded!"));
+        },
         appViewed() {
             (0, h.isDesktop)() && this.send("APP_VIEWED");
         },

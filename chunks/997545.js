@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function T(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -260,8 +260,8 @@ class L extends _.Z {
                                         codecs: this.codecs,
                                     }),
                                     this.on(m.Sh.Stats, this.handleStats);
-                                let T = this.getUserOptions();
-                                for (let e of (T.forEach((e) => {
+                                let S = this.getUserOptions();
+                                for (let e of (S.forEach((e) => {
                                     var t, n;
                                     return this.logger.info(
                                         "Creating user: "
@@ -272,8 +272,8 @@ class L extends _.Z {
                                             ),
                                     );
                                 }),
-                                this.mergeUsers(T),
-                                this.emit(m.Sh.RemoteStreamsReady, T.length),
+                                this.mergeUsers(S),
+                                this.emit(m.Sh.RemoteStreamsReady, S.length),
                                 Object.keys(this.localSpeakingFlags)))
                                     e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                             });
@@ -483,13 +483,14 @@ class L extends _.Z {
     setClipRecordUser(e, t, n) {
         if (!this.destroyed) {
             var r, i;
-            null == (r = (i = this.conn).setClipRecordUser) ||
-                r.call(
-                    i,
-                    e,
-                    (this.context === v.Yn.STREAM ? "application" : "user").concat("audio" === t ? "Audio" : "Video"),
-                    n,
-                );
+            let a;
+            (a =
+                "soundboard" === t
+                    ? "soundboardAudio"
+                    : (this.context === v.Yn.STREAM ? "application" : "user").concat(
+                          "audio" === t ? "Audio" : "Video",
+                      )),
+                null == (r = (i = this.conn).setClipRecordUser) || r.call(i, e, a, n);
         }
     }
     setClipsKeyFrameInterval(e) {
@@ -876,7 +877,7 @@ class L extends _.Z {
                 if (-1 === r) return void n(Error("Invalid rid"));
                 let i = [];
                 l()(this.videoStreamParameters[r], e[r]) ||
-                    ((this.videoStreamParameters[r] = T({}, e[r])), i.push(T({}, e[r]))),
+                    ((this.videoStreamParameters[r] = S({}, e[r])), i.push(S({}, e[r]))),
                     this.conn.setTransportOptions({ streamParameters: i });
             }
             t();
@@ -1015,7 +1016,7 @@ class L extends _.Z {
             (n.params["hardware-h264"] = r),
                 c.push(n),
                 o.name === t &&
-                    ((u = A(T({}, n), { params: this.getCodecParams(o.name, !1) })),
+                    ((u = A(S({}, n), { params: this.getCodecParams(o.name, !1) })),
                     this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) &&
                         (u.params["fixed-rate-presentation-timestamps"] = "1"),
                     (u.params["hardware-h264"] = r));
@@ -1034,7 +1035,7 @@ class L extends _.Z {
     }
     getConnectionTransportOptions() {
         let e = A(
-            T(
+            S(
                 {
                     selfMute: this.selfMute,
                     inputMode: v.GO[this.inputMode],
@@ -1261,7 +1262,7 @@ class L extends _.Z {
                               i.forEach((t, n) => {
                                   if (t.rid === e.rid) {
                                       let r = this.simulcastLQDisabledSsrc !== e.ssrc && e.active;
-                                      i[n] = A(T({}, t), {
+                                      i[n] = A(S({}, t), {
                                           ssrc: e.ssrc,
                                           rtxSsrc: e.rtxSsrc,
                                           active: r,

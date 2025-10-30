@@ -1,38 +1,38 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => v });
 var l = n(951288),
-    a = n(647438),
-    r = n(120356),
-    i = n.n(r),
-    o = n(399606),
-    s = n(481060),
-    c = n(547972),
+    r = n(647438),
+    i = n(120356),
+    a = n.n(i),
+    s = n(399606),
+    c = n(481060),
+    o = n(547972),
     u = n(556296),
     d = n(13140),
     p = n(435064),
     m = n(981631),
     f = n(332325),
-    g = n(388032),
+    y = n(388032),
     b = n(641719);
-function h(e) {
-    let { isEmptyBecauseQuery: t, closePopout: n } = e,
-        r = (0, o.e7)([u.ZP], () => u.ZP.getKeybindForAction(m.kg4.SAVE_CLIP)),
-        h = (0, o.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
-        x = t ? b.noSearchResultsImage : b.noClipsImage,
-        j = a.useCallback(() => {
-            n(), (0, c.Z)(f.Z.CLIPS);
-        }, [n]),
-        y = (() => {
-            if (!h) return g.intl.format(g.t["3iveao"], { onClick: j });
-            if (t) return g.intl.string(g.t["xrEs6/"]);
-            if (null == r) return g.intl.format(g.t.jpKk7e, { onClick: j });
+function v(e) {
+    let { isEmptyBecauseQuery: t } = e,
+        n = (0, s.e7)([u.ZP], () => u.ZP.getKeybindForAction(m.kg4.SAVE_CLIP)),
+        i = (0, s.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
+        v = t ? b.noSearchResultsImage : b.noClipsImage,
+        h = r.useCallback(() => {
+            (0, o.Z)(f.Z.CLIPS, { stackingBehavior: "stack" });
+        }, []),
+        g = (() => {
+            if (!i) return y.intl.format(y.t["3iveao"], { onClick: h });
+            if (t) return y.intl.string(y.t["xrEs6/"]);
+            if (null == n) return y.intl.format(y.t.jpKk7e, { onClick: h });
             {
-                let e = d.BB(r.shortcut, !0);
-                return g.intl.format(g.t["xY/8K5"], {
+                let e = d.BB(n.shortcut, !0);
+                return y.intl.format(y.t["xY/8K5"], {
                     keybind: e,
                     keybindHook: () =>
                         (0, l.jsx)("span", {
                             className: b.keybindHintKeys,
-                            children: (0, l.jsx)(s.M2$, {
+                            children: (0, l.jsx)(c.M2$, {
                                 className: b.keybindShortcut,
                                 shortcut: e,
                             }),
@@ -45,11 +45,11 @@ function h(e) {
         children: (0, l.jsxs)("div", {
             className: b.content,
             children: [
-                (0, l.jsx)("div", { className: x }),
-                (0, l.jsx)(s.Text, {
+                (0, l.jsx)("div", { className: v }),
+                (0, l.jsx)(c.Text, {
                     variant: "text-md/medium",
-                    className: i()(b.noClipsText, { [b.noSearchResultsText]: t }),
-                    children: y,
+                    className: a()(b.noClipsText, { [b.noSearchResultsText]: t }),
+                    children: g,
                 }),
             ],
         }),

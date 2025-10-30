@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(365023),
     v = n(509140),
     I = n(825655),
-    T = n(131951),
-    S = n(556296),
+    S = n(131951),
+    T = n(556296),
     A = n(63063),
     C = n(358085),
     N = n(13140),
@@ -217,8 +217,14 @@ class Y extends i.PureComponent {
         f.Z.enableAll(!0);
     }
     get keybindActionTypes() {
-        let { overlaySupported: e, canGoLive: t, allowSoundboard: n, enableClips: r } = this.props,
-            i = y.Z.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind
+        let {
+                overlaySupported: e,
+                canGoLive: t,
+                allowSoundboard: n,
+                enableClips: r,
+                enableScreenshotKeybind: i,
+            } = this.props,
+            a = y.Z.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind
                 ? [
                       {
                           value: D.kg4.VAD_PRIORITY,
@@ -226,7 +232,7 @@ class Y extends i.PureComponent {
                       },
                   ]
                 : [],
-            a = [
+            o = [
                 {
                     value: D.kg4.UNASSIGNED,
                     label: x.intl.string(x.t["0Uh579"]),
@@ -243,7 +249,7 @@ class Y extends i.PureComponent {
                     value: D.kg4.PUSH_TO_MUTE,
                     label: x.intl.string(x.t.hSCRqd),
                 },
-                ...i,
+                ...a,
                 {
                     value: D.kg4.TOGGLE_MUTE,
                     label: x.intl.string(x.t.PlkYKD),
@@ -263,27 +269,27 @@ class Y extends i.PureComponent {
             ];
         return (
             (0, O.l)() &&
-                a.push({
+                o.push({
                     value: D.kg4.TOGGLE_CAMERA,
                     label: x.intl.string(x.t.hf8JVT),
                 }),
             e &&
-                (a.push({
+                (o.push({
                     value: D.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
                     label: x.intl.string(x.t.VsAZcC),
                 }),
-                a.push({
+                o.push({
                     value: D.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
                     label: x.intl.string(x.t.hurHWo),
                 })),
             t &&
-                ((0, C.isWindows)() || T.Z.getUseSystemScreensharePicker()) &&
-                a.push({
+                ((0, C.isWindows)() || S.Z.getUseSystemScreensharePicker()) &&
+                o.push({
                     value: D.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: x.intl.string(x.t.ybdjJD),
                 }),
             (0, C.isDesktop)() &&
-                (a.push(
+                (o.push(
                     {
                         value: D.kg4.NAVIGATE_BACK,
                         label: x.intl.string(x.t.gRSaOa),
@@ -302,7 +308,7 @@ class Y extends i.PureComponent {
                     },
                 ),
                 n &&
-                    a.push(
+                    o.push(
                         {
                             value: D.kg4.SOUNDBOARD,
                             label: x.intl.string(x.t.yPH4xm),
@@ -313,16 +319,21 @@ class Y extends i.PureComponent {
                         },
                     ),
                 r &&
-                    a.push({
+                    (o.push({
                         value: D.kg4.SAVE_CLIP,
                         label: x.intl.string(x.t.U4URzP),
-                    })),
-            a
+                    }),
+                    i &&
+                        o.push({
+                            value: D.kg4.SAVE_SCREENSHOT,
+                            label: x.intl.string(x.t["+WloFH"]),
+                        }))),
+            o
         );
     }
     get keybindDescriptions() {
-        let { overlaySupported: e, canGoLive: t, enableClips: n } = this.props,
-            r = {
+        let { overlaySupported: e, canGoLive: t, enableClips: n, enableScreenshotKeybind: r } = this.props,
+            i = {
                 [D.kg4.UNASSIGNED]: x.intl.string(x.t.rvlNLv),
                 [D.kg4.PUSH_TO_MUTE]: x.intl.string(x.t.xtESim),
                 [D.kg4.PUSH_TO_TALK]: x.intl.string(x.t.wTcBSy),
@@ -334,17 +345,19 @@ class Y extends i.PureComponent {
             };
         return (
             y.Z.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind &&
-                (r[D.kg4.VAD_PRIORITY] = x.intl.string(x.t.rSe8IZ)),
-            (0, O.l)() && (r[D.kg4.TOGGLE_CAMERA] = x.intl.string(x.t.v1JBtL)),
-            e && (r[D.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = x.intl.string(x.t.IoP5vc)),
-            t && (0, C.isWindows)() && (r[D.kg4.TOGGLE_GO_LIVE_STREAMING] = x.intl.string(x.t.s4C238)),
+                (i[D.kg4.VAD_PRIORITY] = x.intl.string(x.t.rSe8IZ)),
+            (0, O.l)() && (i[D.kg4.TOGGLE_CAMERA] = x.intl.string(x.t.v1JBtL)),
+            e && (i[D.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = x.intl.string(x.t.IoP5vc)),
+            t && (0, C.isWindows)() && (i[D.kg4.TOGGLE_GO_LIVE_STREAMING] = x.intl.string(x.t.s4C238)),
             (0, C.isDesktop)() &&
-                ((r[D.kg4.NAVIGATE_BACK] = x.intl.string(x.t.nKDlEt)),
-                (r[D.kg4.NAVIGATE_FORWARD] = x.intl.string(x.t.DK0FFk)),
-                (r[D.kg4.SOUNDBOARD] = (0, C.isWindows)() ? x.intl.string(x.t["5wJefL"]) : x.intl.string(x.t.gzjsSP)),
-                (r[D.kg4.SOUNDBOARD_HOLD] = (0, C.isWindows)() ? x.intl.string(x.t.RRkZc9) : x.intl.string(x.t.laNlTl)),
-                n && (r[D.kg4.SAVE_CLIP] = x.intl.string(x.t.z3Wbam))),
-            r
+                ((i[D.kg4.NAVIGATE_BACK] = x.intl.string(x.t.nKDlEt)),
+                (i[D.kg4.NAVIGATE_FORWARD] = x.intl.string(x.t.DK0FFk)),
+                (i[D.kg4.SOUNDBOARD] = (0, C.isWindows)() ? x.intl.string(x.t["5wJefL"]) : x.intl.string(x.t.gzjsSP)),
+                (i[D.kg4.SOUNDBOARD_HOLD] = (0, C.isWindows)() ? x.intl.string(x.t.RRkZc9) : x.intl.string(x.t.laNlTl)),
+                n &&
+                    ((i[D.kg4.SAVE_CLIP] = x.intl.string(x.t.z3Wbam)),
+                    r && (i[D.kg4.SAVE_SCREENSHOT] = x.intl.string(x.t.m0zd57)))),
+            i
         );
     }
     renderKeybinds(e) {
@@ -390,13 +403,17 @@ class Y extends i.PureComponent {
         });
     }
     render() {
-        let e = this.props.enableClips,
-            t = l()(this.props.keybinds)
+        let { enableClips: e, enableScreenshotKeybind: t } = this.props,
+            n = l()(this.props.keybinds)
                 .reject(
                     (e) =>
-                        e.managed && ![D.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, D.kg4.SAVE_CLIP].includes(e.action),
+                        e.managed &&
+                        ![D.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, D.kg4.SAVE_CLIP, D.kg4.SAVE_SCREENSHOT].includes(
+                            e.action,
+                        ),
                 )
-                .reject((t) => !e && t.action === D.kg4.SAVE_CLIP)
+                .reject((t) => !e && (t.action === D.kg4.SAVE_CLIP || t.action === D.kg4.SAVE_SCREENSHOT))
+                .reject((e) => !t && e.action === D.kg4.SAVE_SCREENSHOT)
                 .reject(
                     (e) =>
                         !this.props.allowSoundboard &&
@@ -405,7 +422,7 @@ class Y extends i.PureComponent {
                 .sortBy((e) => e.id)
                 .sortBy((e) => (!0 === e.managed ? -1 : 0))
                 .value(),
-            n = V();
+            a = V();
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(w.Z, {
@@ -433,8 +450,8 @@ class Y extends i.PureComponent {
                                       sourcePage: "keybinds",
                                   }),
                                   (0, r.jsx)(d.izJ, {}),
-                                  this.renderKeybinds(t),
-                                  this.renderEmpty(t),
+                                  this.renderKeybinds(n),
+                                  this.renderEmpty(n),
                               ],
                           })
                         : (0, r.jsx)(d.Wn, {
@@ -470,13 +487,13 @@ class Y extends i.PureComponent {
                             children: (e) =>
                                 (0, r.jsx)(r.Fragment, {
                                     children: e.map((e, t) => {
-                                        let a = (0, m.UD)(e),
+                                        let n = (0, m.UD)(e),
                                             o = (0, m.U6)(e),
-                                            s = n[e];
+                                            s = a[e];
                                         return (0, r.jsx)(
                                             d.C3N,
                                             {
-                                                label: a,
+                                                label: n,
                                                 description: o,
                                                 children: (0, r.jsx)("div", {
                                                     className: M.defaultKeybindGroup,
@@ -531,17 +548,19 @@ class Y extends i.PureComponent {
     }
 }
 function W() {
-    let e = (0, c.e7)([S.ZP], () => S.ZP.getState()),
-        t = (0, c.e7)([T.Z], () => (0, b.Z)(T.Z)),
+    let e = (0, c.e7)([T.ZP], () => T.ZP.getState()),
+        t = (0, c.e7)([S.Z], () => (0, b.Z)(S.Z)),
         n = (0, c.e7)([v.Z], () => v.Z.isSupported),
         i = (0, E.Go)(),
-        a = (0, R.wy)("UserSettingsKeybindsConnected");
+        a = (0, E.PP)(),
+        o = (0, R.wy)("UserSettingsKeybindsConnected");
     return (0, r.jsx)(Y, {
         keybinds: e,
         canGoLive: t,
         overlaySupported: n,
         allowSoundboard: (0, C.isWindows)(),
         enableClips: i,
-        isUserSettingsRedesignEnabled: a,
+        enableScreenshotKeybind: a,
+        isUserSettingsRedesignEnabled: o,
     });
 }

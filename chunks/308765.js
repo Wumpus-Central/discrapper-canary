@@ -576,6 +576,27 @@ let i = {
             "RTC_CONNECTION_VIDEO",
         ],
         inlineRequire: () => n(220122).Z,
+        neverLoadBeforeConnectionOpen: !0,
+    },
+    ClipDecisionEngineManager: {
+        actions: [
+            "CLIPS_SIGNAL_CREATED",
+            "CLIPS_ENGINE_CONFIG_UPDATE",
+            "SPEAKING",
+            "GUILD_SOUNDBOARD_SOUND_PLAY_START",
+            "GUILD_SOUNDBOARD_SOUND_PLAY_END",
+            "VOICE_CHANNEL_SELECT",
+        ],
+        inlineRequire: () => n(460779).Z,
+    },
+    ClipsSignalManager: {
+        actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
+        inlineRequire: () => n(269278).Z,
+    },
+    DistributedClipsManager: {
+        actions: ["MESSAGE_CREATE", "CLIPS_REMOTE_TRIGGER"],
+        inlineRequire: () => n(663879).Z,
+        neverLoadBeforeConnectionOpen: !0,
     },
     CustomCallSoundsManager: {
         actions: ["RTC_CONNECTION_STATE", "SOUNDBOARD_MUTE_JOIN_SOUND", "VOICE_STATE_UPDATES"],
