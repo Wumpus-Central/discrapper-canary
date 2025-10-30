@@ -1,12 +1,10 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(286379),
     i = n(15624),
     a = n(797614),
     o = n(626135),
-    s = n(446276),
-    l = n(46140),
-    c = n(981631);
-function u(e, t, n) {
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,17 +17,14 @@ function u(e, t, n) {
         e
     );
 }
-let d = 30000,
-    f = 0.1;
-class _ {
-    isEligible() {
-        return (0, s.M)(l.dr.QUESTS_BAR);
-    }
+let c = 30000,
+    u = 0.1;
+class d {
     clearTimeoutTimer() {
         null != this.timeoutTimer && (clearTimeout(this.timeoutTimer), (this.timeoutTimer = null));
     }
     sendMetric(e, t, n) {
-        Math.random() > f ||
+        Math.random() > u ||
             (a.Z.distribution(
                 {
                     name: r.V.QUEST_BAR_RENDER_DELAY,
@@ -37,26 +32,25 @@ class _ {
                 },
                 n,
             ),
-            o.default.track(c.rMx.QUEST_BAR_RENDER_DELAY, {
+            o.default.track(s.rMx.QUEST_BAR_RENDER_DELAY, {
                 quest_id: e,
                 timeout: t,
                 duration: n,
             }));
     }
     startTracking(e) {
-        this.isEligible() &&
-            (this.clearTracking(),
+        this.clearTracking(),
             (this.startTime = performance.now()),
             (this.questId = e),
             (this.timeoutTimer = setTimeout(() => {
                 this.stopTracking(e, !0);
-            }, d)));
+            }, c));
     }
     stopTracking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.isEligible() && null !== this.startTime && this.questId === e) {
+        if (null !== this.startTime && this.questId === e) {
             if ("focused" === i.Z.getState()) {
-                let n = Math.min(t ? d : Math.round(performance.now() - this.startTime), d);
+                let n = Math.min(t ? c : Math.round(performance.now() - this.startTime), c);
                 this.sendMetric(e, t, n);
             }
             this.clearTracking();
@@ -66,7 +60,7 @@ class _ {
         this.clearTimeoutTimer(), (this.startTime = null), (this.questId = null);
     }
     constructor() {
-        u(this, "startTime", null), u(this, "questId", null), u(this, "timeoutTimer", null);
+        l(this, "startTime", null), l(this, "questId", null), l(this, "timeoutTimer", null);
     }
 }
-let p = new _();
+let f = new d();
