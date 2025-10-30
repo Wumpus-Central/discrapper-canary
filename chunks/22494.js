@@ -1,9 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(81825),
     i = n(523080),
     a = n(541699),
-    o = n(981631);
-function s(e, t, n) {
+    o = n(321947),
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +17,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +28,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,22 +45,22 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function d(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -67,7 +68,7 @@ function d(e, t) {
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,15 +77,24 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class _ extends r.Z {
+class p extends r.Z {
     static fromServer(e) {
         var { user_id: t, wishlist_items: n } = e,
-            r = d(e, ["user_id", "wishlist_items"]);
-        let s = n.map((e) => (e.sku_product_line === o.POd.COLLECTIBLES ? a.Z.fromServer(e) : i.Z.fromServer(e)));
-        return new _(
-            u(l({}, r), {
+            r = f(e, ["user_id", "wishlist_items"]);
+        let l = n.map((e) => {
+            switch (e.sku_product_line) {
+                case s.POd.COLLECTIBLES:
+                    return a.Z.fromServer(e);
+                case s.POd.SOCIAL_LAYER_GAME_ITEM:
+                    return o.Z.fromServer(e);
+                default:
+                    return i.Z.fromServer(e);
+            }
+        });
+        return new p(
+            d(c({}, r), {
                 userId: t,
-                items: s,
+                items: l,
             }),
         );
     }
@@ -96,9 +106,9 @@ class _ extends r.Z {
     }
     constructor(e) {
         super(),
-            s(this, "id", void 0),
-            s(this, "userId", void 0),
-            s(this, "items", void 0),
+            l(this, "id", void 0),
+            l(this, "userId", void 0),
+            l(this, "items", void 0),
             (this.id = e.id),
             (this.userId = e.userId),
             (this.items = e.items);

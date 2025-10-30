@@ -18,4 +18,5 @@ e.exports = {
     bottomGradientLarge: "bottomGradientLarge_abfd90",
     iconAsset: "iconAsset_abfd90",
     badge: "badge_abfd90",
+    wishlistButtonContainer: "wishlistButtonContainer_abfd90",
 };

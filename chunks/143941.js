@@ -1,4 +1,8 @@
-n.d(t, { a: () => E }), n(388685);
+n.d(t, {
+    a: () => E,
+    s: () => _,
+}),
+    n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(120356),
@@ -9,13 +13,13 @@ var r = n(951288),
     u = n(481060),
     d = n(906732),
     p = n(104505),
-    f = n(243778),
-    b = n(621853),
+    b = n(243778),
+    f = n(621853),
     y = n(277511),
     O = n(602733),
     v = n(594174),
-    g = n(884697),
-    m = n(724994),
+    m = n(884697),
+    g = n(724994),
     h = n(27123),
     j = n(921944),
     x = n(388032),
@@ -23,55 +27,112 @@ var r = n(951288),
 let E = (e) => {
     let {
             product: t,
-            iconSize: a = 20,
-            className: E,
-            enableHoverEffect: _ = !1,
-            isCardHovered: C = !0,
-            selectedVariantIndex: S,
+            iconSize: n = 20,
+            className: a,
+            enableHoverEffect: s = !1,
+            isCardHovered: c = !0,
+            selectedVariantIndex: d,
         } = e,
-        [A, N] = (0, f.US)([s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-        w = A === s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-        { analyticsLocations: I } = (0, d.ZP)(),
-        L = v.default.getCurrentUser(),
-        k = null != L ? b.Z.getFirstWishlistId(L.id) : null,
-        R = l.useMemo(() => {
+        p = l.useMemo(() => {
             var e;
-            return t.type === o.Z.VARIANTS_GROUP && null != S && (null == (e = t.variants) ? void 0 : e[S]) != null
-                ? t.variants[S]
+            return t.type === o.Z.VARIANTS_GROUP && null != d && (null == (e = t.variants) ? void 0 : e[d]) != null
+                ? t.variants[d]
                 : t;
-        }, [t, S]),
-        T = R.skuId,
-        D = (0, O.ny)(k, T),
-        M = l.useRef(null),
-        [F, U] = l.useState(null);
+        }, [t, d]),
+        b = p.skuId,
+        { isPurchased: f } = (0, g.L)(p),
+        y = (0, h.r1)(p),
+        O = (0, m.x6)(p),
+        v = (0, m.G1)(p),
+        j = l.useMemo(() => {
+            let e = "6/4";
+            switch (t.type) {
+                case o.Z.NAMEPLATE:
+                case o.Z.AVATAR_DECORATION:
+                    e = "16/9";
+                    break;
+                case o.Z.BUNDLE:
+                case o.Z.PROFILE_EFFECT:
+                default:
+                    e = "6/4";
+            }
+            return {
+                type: "dynamic",
+                component: u.AX$.COLLECTIBLES_PREVIEW,
+                aspectRatio: e,
+                props: {
+                    product: t,
+                    forCollectedModal: !0,
+                },
+            };
+        }, [t]);
+    if (f) return null;
+    if (y || O || v) {
+        let e = x.intl.string(x.t["50TX9k"]);
+        return (
+            O ? (e = x.intl.string(x.t.UfDp3L)) : y && (e = x.intl.string(x.t.KsFBMs)),
+            (0, r.jsx)(_, {
+                skuId: b,
+                className: i()(P.disabledButton, a),
+                iconSize: n,
+                isCardHovered: c,
+                disabled: !0,
+                tooltipOverrideText: e,
+                nuxGraphic: j,
+            })
+        );
+    }
+    return (0, r.jsx)(_, {
+        skuId: b,
+        className: i()(s && P.withHover, a),
+        iconSize: n,
+        isCardHovered: c,
+        nuxGraphic: j,
+    });
+};
+function _(e) {
+    let {
+            skuId: t,
+            className: a,
+            iconSize: o = 20,
+            disabled: m,
+            isCardHovered: g,
+            tooltipOverrideText: h,
+            nuxGraphic: E,
+        } = e,
+        [_, C] = (0, b.US)([s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
+        S = _ === s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+        { analyticsLocations: A } = (0, d.ZP)(),
+        N = v.default.getCurrentUser(),
+        I = null != N ? f.Z.getFirstWishlistId(N.id) : null,
+        L = (0, O.ny)(I, t),
+        w = l.useRef(null),
+        [k, R] = l.useState(null);
     l.useEffect(() => {
-        U(null);
-    }, [T]);
-    let Z = null !== F ? F : D,
-        V = (0, p.X)(M),
-        Y = Z ? u.h_8 : u.Pzh,
-        B = Z || V ? P.wishlistedOrHoveredIconColor : P.normalIconColor,
-        { isPurchased: W } = (0, m.L)(R),
-        G = (0, h.r1)(R),
-        z = (0, g.x6)(R),
-        H = (0, g.G1)(R),
-        K = l.useCallback(
+        R(null);
+    }, [t]);
+    let T = null !== k ? k : L,
+        D = (0, p.X)(w),
+        M = T ? u.h_8 : u.Pzh,
+        F = T || D ? P.wishlistedOrHoveredIconColor : P.normalIconColor,
+        U = l.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), Z && null != k)) {
-                    U(!1);
+                if ((e.stopPropagation(), T && null != I)) {
+                    R(!1);
                     try {
-                        await y.Z.removeSkuFromWishlist(k, T, I), U(null);
+                        await y.Z.removeSkuFromWishlist(I, t, A), R(null);
                     } catch (e) {
-                        U(null),
+                        R(null),
                             (0, u.showToast)((0, u.createToast)(x.intl.string(x.t.F8FvUy), u.ToastType.FAILURE)),
                             u.uvj.announce(x.intl.string(x.t.F8FvUy));
                     }
                 } else {
-                    U(!0);
+                    R(!0);
                     try {
-                        await y.Z.addSkuToWishlist(T, I),
-                            U(null),
-                            w &&
+                        await y.Z.addSkuToWishlist(t, A),
+                            R(null),
+                            S &&
+                                null != E &&
                                 ((0, u.ZDy)(async () => {
                                     let { default: e } = await n.e("36340").then(n.bind(n, 874533));
                                     return (t) => {
@@ -103,7 +164,7 @@ let E = (e) => {
                                                 }
                                                 return e;
                                             })({}, t)),
-                                            (l = { product: R }),
+                                            (l = { graphic: E }),
                                             (l = null != l ? l : {}),
                                             Object.getOwnPropertyDescriptors
                                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -125,71 +186,68 @@ let E = (e) => {
                                         );
                                     };
                                 }),
-                                N(j.L.USER_DISMISS));
+                                C(j.L.USER_DISMISS));
                     } catch (e) {
-                        U(null),
+                        R(null),
                             (0, u.showToast)((0, u.createToast)(x.intl.string(x.t.F8FvUy), u.ToastType.FAILURE)),
                             u.uvj.announce(x.intl.string(x.t.F8FvUy));
                     }
                 }
             },
-            [I, Z, T, R, w, N, k, U],
-        );
-    if ((!C && !Z) || null == L || W) return null;
-    if (G || z || H) {
-        let e = x.intl.string(x.t["50TX9k"]);
-        return (
-            z ? (e = x.intl.string(x.t.UfDp3L)) : G && (e = x.intl.string(x.t.KsFBMs)),
-            (0, r.jsx)(c.u, {
-                text: e,
-                children: (0, r.jsx)(u.P3F, {
-                    className: i()(P.wishlistButton, P.disabledButton, E),
-                    innerRef: M,
-                    onClick: (e) => e.stopPropagation(),
-                    "aria-disabled": !0,
-                    children: (0, r.jsx)(Y, {
-                        colorClass: P.disabledIconColor,
-                        size: "custom",
-                        height: a,
-                        width: a,
+            [T, I, t, A, S, E, C],
+        ),
+        Z = T ? x.intl.string(x.t.yr9TTf) : x.intl.string(x.t["8DkMEQ"]);
+    return (g || T) && null != N
+        ? m
+            ? (0, r.jsx)(c.u, {
+                  text: null != h ? h : Z,
+                  "aria-label": null != h ? h : Z,
+                  children: (0, r.jsx)(u.P3F, {
+                      className: i()(P.wishlistButton, P.disabledButton, a),
+                      innerRef: w,
+                      onClick: (e) => e.stopPropagation(),
+                      "aria-disabled": !0,
+                      children: (0, r.jsx)(M, {
+                          colorClass: P.disabledIconColor,
+                          size: "custom",
+                          height: o,
+                          width: o,
+                      }),
+                  }),
+              })
+            : S
+              ? (0, r.jsx)(c.i_, {
+                    title: x.intl.string(x.t["47Rhc3"]),
+                    body: x.intl.string(x.t.PXjA0b),
+                    "aria-label": Z,
+                    children: (0, r.jsx)(u.P3F, {
+                        className: i()(P.wishlistButton, a),
+                        innerRef: w,
+                        onClick: U,
+                        "aria-label": Z,
+                        children: (0, r.jsx)(M, {
+                            colorClass: F,
+                            size: "custom",
+                            height: o,
+                            width: o,
+                        }),
                     }),
-                }),
-            })
-        );
-    }
-    let J = Z ? x.intl.string(x.t.yr9TTf) : x.intl.string(x.t["8DkMEQ"]);
-    return w
-        ? (0, r.jsx)(c.i_, {
-              title: x.intl.string(x.t["47Rhc3"]),
-              body: x.intl.string(x.t.PXjA0b),
-              "aria-label": J,
-              children: (0, r.jsx)(u.P3F, {
-                  className: i()(P.wishlistButton, _ && P.withHover, E),
-                  innerRef: M,
-                  onClick: K,
-                  "aria-label": J,
-                  children: (0, r.jsx)(Y, {
-                      colorClass: B,
-                      size: "custom",
-                      height: a,
-                      width: a,
-                  }),
-              }),
-          })
-        : (0, r.jsx)(c.u, {
-              text: J,
-              "aria-label": J,
-              children: (0, r.jsx)(u.P3F, {
-                  className: i()(P.wishlistButton, _ && P.withHover, E),
-                  innerRef: M,
-                  onClick: K,
-                  "aria-label": J,
-                  children: (0, r.jsx)(Y, {
-                      colorClass: B,
-                      size: "custom",
-                      height: a,
-                      width: a,
-                  }),
-              }),
-          });
-};
+                })
+              : (0, r.jsx)(c.u, {
+                    text: null != h ? h : Z,
+                    "aria-label": null != h ? h : Z,
+                    children: (0, r.jsx)(u.P3F, {
+                        className: i()(P.wishlistButton, a),
+                        innerRef: w,
+                        onClick: U,
+                        "aria-label": Z,
+                        children: (0, r.jsx)(M, {
+                            colorClass: F,
+                            size: "custom",
+                            height: o,
+                            width: o,
+                        }),
+                    }),
+                })
+        : null;
+}
