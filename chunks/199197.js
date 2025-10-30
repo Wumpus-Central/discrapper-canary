@@ -7,7 +7,14 @@ n.d(t, {
     n(539854);
 function r(e, t, n) {
     let r = [...t];
-    return "multiple" === e ? (t.includes(n) ? (r = t.filter((e) => e.id !== n.id)) : r.push(n)) : (r = [n]), r;
+    return (
+        "multiple" === e
+            ? null != t.find((e) => e.id === n.id)
+                ? (r = t.filter((e) => e.id !== n.id))
+                : r.push(n)
+            : (r = [n]),
+        r
+    );
 }
 function i() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
