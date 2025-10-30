@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(544891),
     i = n(570140),
     a = n(147913),
@@ -22,12 +22,16 @@ function _(e, t, n) {
         e
     );
 }
-let p = 0.5 * s.Z.Millis.MINUTE;
-function h() {
+let p = 5 * s.Z.Millis.MINUTE,
+    h = 0.5 * s.Z.Millis.MINUTE;
+function m() {
     return c.Z.getCurrentConfig({ location: "FriendOnlineTimer" }).useOnlineTimer;
 }
-async function m() {
-    if (h())
+function g() {
+    return c.Z.getCurrentConfig({ location: "FriendOnlineTimer" }).useTestTimerDuration ? h : p;
+}
+async function E() {
+    if (m())
         try {
             await r.tn.post({
                 url: d.ANM.USER_MEANINGFULLY_ONLINE,
@@ -41,10 +45,10 @@ async function m() {
             l.Z.captureException(e, { tags: { app_context: "session_timer" } });
         }
 }
-function g(e) {
+function b(e) {
     return [f.Sk.ONLINE, f.Sk.STREAMING].includes(e);
 }
-class E extends a.Z {
+class y extends a.Z {
     _initialize() {}
     _terminate() {
         this.clear();
@@ -60,17 +64,17 @@ class E extends a.Z {
                 SELF_PRESENCE_STORE_UPDATE: () => this.start(),
             }),
             _(this, "start", () => {
-                h() &&
+                m() &&
                     u.Z.isCooldownElapsed() &&
                     null == this.timerId &&
-                    g(o.Z.getStatus()) &&
+                    b(o.Z.getStatus()) &&
                     (this.timerId = setTimeout(() => {
-                        (this.timerId = null), g(o.Z.getStatus()) && u.Z.isCooldownElapsed() && m();
-                    }, p));
+                        (this.timerId = null), b(o.Z.getStatus()) && u.Z.isCooldownElapsed() && E();
+                    }, g()));
             }),
             _(this, "clear", () => {
                 null != this.timerId && (clearTimeout(this.timerId), (this.timerId = null));
             });
     }
 }
-let b = new E();
+let O = new y();
