@@ -105,8 +105,15 @@ let O = {
             id: "modal",
             docs: "https://design.discord.tools/components/web/modals/modal",
             component: function (e) {
-                var { showPreview: t, showInput: n } = e,
-                    i = b(e, ["showPreview", "showInput"]);
+                var t,
+                    { showPreview: n, showInput: i, subtitleIcon: a } = e,
+                    s = b(e, ["showPreview", "showInput", "subtitleIcon"]);
+                let c = a
+                    ? {
+                          text: null != (t = s.subtitle) ? t : "Default subtitle",
+                          leadingIcon: o.VL1,
+                      }
+                    : s.subtitle;
                 return (0, r.jsxs)(u.Kqy, {
                     gap: 16,
                     align: "center",
@@ -123,17 +130,17 @@ let O = {
                                     (e) =>
                                         (0, r.jsx)(
                                             o.Modal,
-                                            E(m({}, e, i), {
-                                                title: i.title,
-                                                subtitle: i.subtitle,
-                                                input: n
+                                            E(m({}, e, s), {
+                                                title: s.title,
+                                                subtitle: c,
+                                                input: i
                                                     ? (0, r.jsx)(u.E1j, {
                                                           placeholder: "Search...",
                                                           onChange: () => {},
                                                           query: "",
                                                       })
                                                     : void 0,
-                                                preview: t
+                                                preview: n
                                                     ? (0, r.jsxs)(u.Kqy, {
                                                           gap: 8,
                                                           children: [
@@ -226,7 +233,7 @@ let O = {
                                                 }),
                                             }),
                                         ),
-                                    { dismissable: i.dismissable },
+                                    { dismissable: s.dismissable },
                                 ),
                         }),
                     ],
@@ -242,6 +249,11 @@ let O = {
                     label: "Subtitle",
                     type: "text",
                     defaultValue: "This is a modal subtitle",
+                },
+                subtitleIcon: {
+                    label: "Subtitle Icon",
+                    type: "boolean",
+                    defaultValue: !1,
                 },
                 size: {
                     label: "Size",
@@ -280,44 +292,51 @@ let O = {
             id: "expressive-modal",
             docs: "https://design.discord.tools/components/web/modals/expressive-modal",
             component: function (e) {
-                var { graphic: t } = e,
-                    l = b(e, ["graphic"]);
-                let c = i.useMemo(
-                    () =>
-                        0 === t
-                            ? {
-                                  type: "image",
-                                  src: d,
-                              }
-                            : 1 === t
-                              ? {
-                                    type: "lottie",
-                                    lottie: () => n.e("94792").then(n.t.bind(n, 972951, 19)),
-                                    aspectRatio: "6/4",
-                                }
-                              : 2 === t
+                var t,
+                    { graphic: l, subtitleIcon: c } = e,
+                    _ = b(e, ["graphic", "subtitleIcon"]);
+                let p = c
+                        ? {
+                              text: null != (t = _.subtitle) ? t : "Default subtitle",
+                              leadingIcon: o.VL1,
+                          }
+                        : _.subtitle,
+                    h = i.useMemo(
+                        () =>
+                            0 === l
                                 ? {
-                                      type: "rive",
-                                      rive: a.PerfTestRive,
+                                      type: "image",
+                                      src: d,
                                   }
-                                : 3 === t
+                                : 1 === l
                                   ? {
-                                        type: "video",
-                                        src: f.Z,
-                                        fallbackImageSrc: d,
-                                        loop: !0,
-                                        loopAt: 2.5,
+                                        type: "lottie",
+                                        lottie: () => n.e("94792").then(n.t.bind(n, 972951, 19)),
+                                        aspectRatio: "6/4",
                                     }
-                                  : 4 === t
+                                  : 2 === l
                                     ? {
-                                          type: "dynamic",
-                                          component: s.DynamicGraphicComponent.DEMO,
-                                          aspectRatio: "6/4",
-                                          props: { text: "Dynamic Content" },
+                                          type: "rive",
+                                          rive: a.PerfTestRive,
                                       }
-                                    : void 0,
-                    [t],
-                );
+                                    : 3 === l
+                                      ? {
+                                            type: "video",
+                                            src: f.Z,
+                                            fallbackImageSrc: d,
+                                            loop: !0,
+                                            loopAt: 2.5,
+                                        }
+                                      : 4 === l
+                                        ? {
+                                              type: "dynamic",
+                                              component: s.DynamicGraphicComponent.DEMO,
+                                              aspectRatio: "6/4",
+                                              props: { text: "Dynamic Content" },
+                                          }
+                                        : void 0,
+                        [l],
+                    );
                 return (0, r.jsxs)(u.Kqy, {
                     gap: 16,
                     align: "center",
@@ -334,10 +353,10 @@ let O = {
                                     (e) =>
                                         (0, r.jsx)(
                                             o.ExpressiveModal,
-                                            E(m({}, e, l), {
-                                                title: l.title,
-                                                subtitle: l.subtitle,
-                                                graphic: c,
+                                            E(m({}, e, _), {
+                                                title: _.title,
+                                                subtitle: p,
+                                                graphic: h,
                                                 actions: [
                                                     {
                                                         variant: "secondary",
@@ -360,7 +379,7 @@ let O = {
                                                 }),
                                             }),
                                         ),
-                                    { dismissable: l.dismissable },
+                                    { dismissable: _.dismissable },
                                 ),
                         }),
                     ],
@@ -376,6 +395,11 @@ let O = {
                     label: "Subtitle",
                     type: "text",
                     defaultValue: "This modal has a gradient background",
+                },
+                subtitleIcon: {
+                    label: "Subtitle Icon",
+                    type: "boolean",
+                    defaultValue: !1,
                 },
                 gradientColor: {
                     label: "Gradient Color",

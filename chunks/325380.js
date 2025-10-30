@@ -23,6 +23,8 @@ var r = {
     headerLeadingAbsolute: "headerLeadingAbsolute__8a031",
     headerTrailingAbsolute: "headerTrailingAbsolute__8a031",
     headerMain: "headerMain__8a031",
+    headerSubtitleWrapper: "headerSubtitleWrapper__8a031",
+    headerSubtitleIcon: "headerSubtitleIcon__8a031",
     headerSubtitle: "headerSubtitle__8a031",
     headerTitle: "headerTitle__8a031",
     headerBadge: "headerBadge__8a031",

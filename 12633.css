@@ -2546,6 +2546,22 @@
     min-width: 0
 }
 
+.headerSubtitleWrapper__8a031 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.headerSubtitleIcon__8a031 {
+    flex-grow: 0;
+    flex-shrink: 0
+}
+
+.headerCentered__8a031 .headerSubtitleWrapper__8a031 {
+    justify-content: center
+}
+
 .headerSubtitle__8a031,
 .headerTitle__8a031 {
     overflow-wrap: break-word;
