@@ -120,15 +120,16 @@ function F(e) {
         B = A || z ? void 0 : f.OgN,
         K = i.useCallback(() => {
             let e = D.pathname.startsWith(T.Z5c.COLLECTIBLES_SHOP);
-            if (A) {
+            if (A || z) {
+                let t = !A && z;
                 if (e) {
                     let e = h.Z.getProduct(F.skuId),
-                        t = h.Z.getCategoryForProduct(F.skuId);
-                    if (null != e && null != t) {
-                        (0, y.closeUserProfileModal)(),
+                        r = h.Z.getCategoryForProduct(F.skuId);
+                    if (null != e && null != r) {
+                        t || (0, y.closeUserProfileModal)(),
                             (0, I.T)({
                                 product: e,
-                                category: t,
+                                category: r,
                                 shouldCheckoutWithOrbs: (0, O.oQ)({ product: e }),
                                 analyticsLocations: G,
                                 analyticsSource: m.Z.USER_PROFILE_WISHLIST,
@@ -139,7 +140,7 @@ function F(e) {
                         return;
                     }
                 }
-                (0, y.closeUserProfileModal)(),
+                t || (0, y.closeUserProfileModal)(),
                     (0, P.uL)("".concat(T.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(F.skuId));
             } else
                 (0, b.Z)({
@@ -150,7 +151,7 @@ function F(e) {
                     giftRecipient: l,
                     variantsReturnStyle: c.v.VARIANTS_GROUP,
                 });
-        }, [D.pathname, F.skuId, G, A, l, C]),
+        }, [D.pathname, F.skuId, G, A, z, l, C]),
         q = i.useCallback(
             () =>
                 s

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m }), n(388685);
-var i,
-    r = n(442837),
+var r,
+    i = n(442837),
     l = n(570140);
 function a(e, t, n) {
     return (
@@ -18,14 +18,14 @@ function a(e, t, n) {
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
+            r.forEach(function (t) {
                 a(e, t, n[t]);
             });
     }
@@ -39,8 +39,8 @@ function s(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -53,10 +53,10 @@ let c = !1,
     u = {},
     d = new Set(),
     p = {};
-function h() {
+function f() {
     p = {};
 }
-class f extends (i = r.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     getMessagesPendingDeletion() {
         return d;
     }
@@ -70,11 +70,15 @@ class f extends (i = r.ZP.Store) {
         return c;
     }
 }
-a(f, "displayName", "scheduledMessageStore");
-let m = new f(l.Z, {
+a(h, "displayName", "scheduledMessageStore");
+let m = new h(l.Z, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t, scheduledMessageSend: n } = e;
         (u = s(o({}, u), { [n.scheduledMessageId]: n })), (p = o({}, p)), delete p[t];
+    },
+    SCHEDULED_MESSAGES_UPDATE_SUCCESS: function (e) {
+        let { scheduledMessageSend: t } = e;
+        u = s(o({}, u), { [t.scheduledMessageId]: t });
     },
     SCHEDULED_MESSAGES_DELETE_START: function (e) {
         let { scheduledMessageId: t } = e;
@@ -117,6 +121,6 @@ let m = new f(l.Z, {
         let { channelId: t } = e;
         (p = o({}, p)), delete p[t];
     },
-    LOGOUT: h,
-    CONNECTION_OPEN: h,
+    LOGOUT: f,
+    CONNECTION_OPEN: f,
 });

@@ -1,4 +1,4 @@
-n.d(t, { _: () => Z }), n(642613), n(388685);
+n.d(t, { _: () => T }), n(642613), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -6,55 +6,56 @@ var r = n(951288),
     a = n(913527),
     s = n.n(a),
     c = n(91192),
-    u = n(442837),
-    d = n(481060),
-    p = n(724757),
-    f = n(294218),
-    h = n(703656),
-    g = n(45251),
-    m = n(156012),
-    b = n(74365),
-    _ = n(618857),
-    O = n(695346),
-    y = n(23750),
+    u = n(793030),
+    d = n(442837),
+    p = n(481060),
+    f = n(724757),
+    h = n(294218),
+    g = n(703656),
+    m = n(45251),
+    b = n(156012),
+    _ = n(74365),
+    O = n(618857),
+    y = n(695346),
+    v = n(23750),
     j = n(592125),
-    v = n(594174),
-    x = n(823379),
-    C = n(324081),
-    E = n(240126),
-    S = n(981631),
-    I = n(388032),
-    P = n(909136);
-let N = {
+    C = n(594174),
+    E = n(823379),
+    x = n(324081),
+    S = n(240126),
+    I = n(981631),
+    P = n(388032),
+    N = n(909136);
+let Z = {
     offset: {
         left: 4,
         right: -12,
     },
 };
-function Z() {
+function T() {
     return (
         i.useEffect(() => {
-            (0, g.kg)();
+            (0, m.kg)();
         }, []),
-        (0, r.jsx)(T, {})
+        (0, r.jsx)(w, {})
     );
 }
-function T() {
-    let e = (0, u.e7)([m.Z], () => m.Z.getScheduledMessagesForInbox(), []),
+function w() {
+    let e = (0, d.e7)([b.Z], () => b.Z.getScheduledMessagesForInbox(), []),
         t = i.useMemo(
             () => Object.values(e).sort((e, t) => (new Date(e.sendAtTimestamp) > new Date(t.sendAtTimestamp) ? -1 : 1)),
             [e],
         ),
-        n = (0, u.e7)([m.Z], () => m.Z.loading, []),
+        n = (0, d.e7)([b.Z], () => b.Z.loading, []),
         l = i.useRef(null),
-        o = (0, p.Z)("scheduled-messages", l);
+        o = (0, f.Z)("scheduled-messages", l);
     return n
-        ? (0, r.jsx)(d.$jN, { className: P.loadingPlaceholder })
+        ? (0, r.jsx)(p.$jN, { className: N.loadingPlaceholder })
         : 0 === t.length
-          ? (0, r.jsx)(E.Z, {
-                Icon: d.T39,
-                header: I.intl.string(I.t.aJQZfZ),
-                tip: I.intl.string(I.t.rCN4pN),
+          ? (0, r.jsx)(S.Z, {
+                Icon: p.T39,
+                header: P.intl.string(P.t.aJQZfZ),
+                tip: P.intl.string(P.t.rCN4pN),
             })
           : (0, r.jsx)(c.bG, {
                 navigator: o,
@@ -87,7 +88,7 @@ function T() {
                                 return i;
                             })(e, ["ref"]);
                         return (0, r.jsx)(
-                            d.Den,
+                            p.Den,
                             ((n = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -123,7 +124,7 @@ function T() {
                                 },
                                 a,
                             )),
-                            (i = i = { children: (0, r.jsx)(w, { scheduledMessages: t }) }),
+                            (i = i = { children: (0, r.jsx)(A, { scheduledMessages: t }) }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
@@ -142,7 +143,7 @@ function T() {
                 }),
             });
 }
-function w(e) {
+function A(e) {
     let { scheduledMessages: t } = e,
         n = i.useMemo(
             () =>
@@ -163,24 +164,24 @@ function w(e) {
                 }, {}),
             [t],
         ),
-        l = (0, u.e7)([m.Z], () => m.Z.getMessagesPendingDeletion(), []);
+        l = (0, d.e7)([b.Z], () => b.Z.getMessagesPendingDeletion(), []);
     return (0, r.jsx)(r.Fragment, {
         children: Object.entries(n).map((e) => {
             let [t, { channel: n, scheduledMessages: i }] = e;
             return (0, r.jsxs)(
                 "div",
                 {
-                    className: P.channelRow,
+                    className: N.channelRow,
                     children: [
-                        (0, r.jsx)(C.Z, {
+                        (0, r.jsx)(x.Z, {
                             channel: n,
-                            gotoChannel: () => (0, h.uL)(S.Z5c.CHANNEL(n.getGuildId(), n.id)),
+                            gotoChannel: () => (0, g.uL)(I.Z5c.CHANNEL(n.getGuildId(), n.id)),
                             children: null,
                         }),
                         i.map((e) => {
                             let t = l.has(e.scheduledMessageId);
                             return (0, r.jsx)(
-                                A,
+                                R,
                                 {
                                     scheduledMessage: e,
                                     channel: n,
@@ -196,96 +197,111 @@ function w(e) {
         }),
     });
 }
-let A = i.memo(function (e) {
+let R = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: l } = e,
-        a = new y.ZP({
+        a = new v.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
-            author: v.default.getUser(t.userId),
+            author: C.default.getUser(t.userId),
             timestamp: s()(t.sendAtTimestamp).toDate(),
             channel_id: t.scheduledMessage.channelId,
         }),
-        { isError: c, stateMessage: u } = (function (e) {
+        { isError: c, stateMessage: d } = (function (e) {
             switch (e) {
-                case b._.SCHEDULED:
+                case _._.SCHEDULED:
                     return {
                         isError: !1,
-                        stateMessage: I.intl.string(I.t.Fn6Odn),
+                        stateMessage: P.intl.string(P.t.Fn6Odn),
                     };
-                case b._.ERROR_CHANNEL_NOT_FOUND:
+                case _._.ERROR_CHANNEL_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.v5O2dK),
+                        stateMessage: P.intl.string(P.t.v5O2dK),
                     };
-                case b._.ERROR_USER_NOT_FOUND:
+                case _._.ERROR_USER_NOT_FOUND:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.j8uIfG),
+                        stateMessage: P.intl.string(P.t.j8uIfG),
                     };
-                case b._.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
+                case _._.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t["w6zHX/"]),
+                        stateMessage: P.intl.string(P.t["w6zHX/"]),
                     };
-                case b._.ERROR_SEND_FAILED:
+                case _._.ERROR_SEND_FAILED:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.pflV7z),
+                        stateMessage: P.intl.string(P.t.pflV7z),
                     };
-                case b._.ERROR_SCHEDULED_MESSAGES_DISABLED:
+                case _._.ERROR_SCHEDULED_MESSAGES_DISABLED:
                     return {
                         isError: !0,
-                        stateMessage: I.intl.string(I.t.j8uIfG),
+                        stateMessage: P.intl.string(P.t.j8uIfG),
                     };
                 default:
-                    (0, x.vE)(e);
+                    (0, E.vE)(e);
             }
         })(t.state),
-        p = i.useCallback(() => {
-            (0, g.gD)(t.scheduledMessageId)
+        f = i.useCallback(() => {
+            (0, m.gD)(t.scheduledMessageId)
                 .then(() => {
-                    (0, _.C$)();
+                    (0, O.C$)();
                 })
                 .catch((e) => {
-                    (0, _.wW)(e.message);
+                    (0, O.wW)(e.message);
                 });
-        }, [t.scheduledMessageId]);
+        }, [t.scheduledMessageId]),
+        g = i.useCallback(() => {
+            (0, O.uW)({ scheduledMessage: t });
+        }, [t]);
     return (0, r.jsx)(
         "div",
         {
-            className: o()(P.messageContainer, {
-                [P.messageSendError]: c,
-                [P.messageSendScheduled]: !c,
+            className: o()(N.messageContainer, {
+                [N.messageSendError]: c,
+                [N.messageSendScheduled]: !c,
             }),
             children: l
-                ? (0, r.jsx)(d.$jN, { className: P.messageSpinner })
+                ? (0, r.jsx)(p.$jN, { className: N.messageSpinner })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(d.Text, {
+                          (0, r.jsx)(p.Text, {
                               variant: "text-xs/semibold",
                               color: c ? "text-danger" : "text-feedback-positive",
-                              className: P.messageState,
-                              children: u,
+                              className: N.messageState,
+                              children: d,
                           }),
                           (0, r.jsxs)("div", {
-                              className: P.channelMessageAndCancelButton,
+                              className: N.channelMessageAndButtons,
                               children: [
                                   (0, r.jsx)(
-                                      f.Z,
+                                      h.Z,
                                       {
                                           message: a,
                                           channel: n,
-                                          className: P.message,
-                                          compact: O.jU.getSetting(),
+                                          className: N.message,
+                                          compact: y.jU.getSetting(),
                                           animateAvatar: !1,
-                                          focusProps: N,
+                                          focusProps: Z,
                                       },
                                       a.id,
                                   ),
-                                  (0, r.jsx)(d.P3F, {
-                                      className: P.cancelMessageButton,
-                                      onClick: p,
-                                      children: (0, r.jsx)(d.k$p, {}),
+                                  (0, r.jsxs)(u.hE2, {
+                                      size: "sm",
+                                      children: [
+                                          (0, r.jsx)(u.hU, {
+                                              icon: p.T39,
+                                              onClick: g,
+                                              variant: "icon-only",
+                                              "aria-label": P.intl.string(P.t.SBcdAN),
+                                          }),
+                                          (0, r.jsx)(u.hU, {
+                                              icon: p.k$p,
+                                              onClick: f,
+                                              "aria-label": P.intl.string(P.t.O3sL8F),
+                                              variant: "icon-only",
+                                          }),
+                                      ],
                                   }),
                               ],
                           }),

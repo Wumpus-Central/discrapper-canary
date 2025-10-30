@@ -1,9 +1,10 @@
 n.d(t, {
+    P4: () => d,
     PV: () => u,
-    _e: () => p,
-    gD: () => d,
-    kg: () => _,
-    pO: () => h,
+    _e: () => h,
+    gD: () => f,
+    kg: () => p,
+    pO: () => m,
 }),
     n(415506),
     n(388685),
@@ -69,7 +70,37 @@ async function u(e) {
         );
     }
 }
-async function d(e) {
+async function d(e, t) {
+    i.Z.dispatch({
+        type: "SCHEDULED_MESSAGES_UPDATE_START",
+        scheduledMessageId: e,
+    });
+    try {
+        let n = await r.tn.patch({
+            url: l.ANM.SCHEDULED_MESSAGE(e),
+            body: { scheduled_timestamp: t },
+            rejectWithError: !0,
+        });
+        if (!n.ok) throw Error("Failed to update scheduled message");
+        i.Z.dispatch({
+            type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS",
+            scheduledMessageSend: (0, s.IR)(n.body),
+        });
+    } catch (r) {
+        var n, a;
+        s.GO.error("Failed to update scheduled message", r);
+        let t = null != (a = null == (n = r.body) ? void 0 : n.message) ? a : r.message;
+        throw (
+            (i.Z.dispatch({
+                type: "SCHEDULED_MESSAGES_UPDATE_FAILURE",
+                scheduledMessageId: e,
+                errorMsg: t,
+            }),
+            Error(t))
+        );
+    }
+}
+async function f(e) {
     i.Z.dispatch({
         type: "SCHEDULED_MESSAGES_DELETE_START",
         scheduledMessageId: e,
@@ -102,7 +133,7 @@ async function d(e) {
         );
     }
 }
-async function f() {
+async function _() {
     let e = await r.tn.get({
         url: l.ANM.SCHEDULED_MESSAGES,
         rejectWithError: !0,
@@ -110,10 +141,10 @@ async function f() {
     if (!e.ok) throw Error("Failed to fetch scheduled messages");
     return e.body.map(s.IR);
 }
-async function _() {
+async function p() {
     i.Z.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
     try {
-        let e = await f();
+        let e = await _();
         s.GO.info("Fetched scheduled messages", e),
             i.Z.dispatch({
                 type: "FETCH_SCHEDULED_MESSAGES_SUCCESS",
@@ -127,7 +158,7 @@ async function _() {
             });
     }
 }
-function p(e) {
+function h(e) {
     let { channelId: t, scheduledTimestamp: n } = e;
     i.Z.dispatch({
         type: "CREATE_PENDING_SCHEDULED_MESSAGE",
@@ -135,7 +166,7 @@ function p(e) {
         scheduledTimestamp: n,
     });
 }
-function h(e) {
+function m(e) {
     i.Z.dispatch({
         type: "DELETE_PENDING_SCHEDULED_MESSAGE",
         channelId: e,
