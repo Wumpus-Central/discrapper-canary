@@ -1,29 +1,31 @@
-n.d(t, { d: () => h });
+n.d(t, { d: () => g });
 var r = n(951288),
     i = n(442837),
     l = n(907862),
     a = n(100527),
-    s = n(594174),
-    o = n(74538),
-    c = n(469165),
-    u = n(675957),
-    d = n(474936),
-    p = n(388032),
-    f = n(398300);
-let h = (e) => {
+    s = n(336197),
+    o = n(594174),
+    c = n(74538),
+    u = n(469165),
+    d = n(675957),
+    p = n(474936),
+    f = n(981631),
+    m = n(388032),
+    h = n(398300);
+let g = (e) => {
     let { targetElementRef: t } = e,
         n =
             !0 ===
-            (0, i.e7)([s.default], () => o.ZP.isPremiumExactly(s.default.getCurrentUser(), d.PremiumTypes.TIER_2))
-                ? p.intl.string(p.t.CMKNhr)
-                : p.intl.string(p.t.E1ONHQ);
+            (0, i.e7)([o.default], () => c.ZP.isPremiumExactly(o.default.getCurrentUser(), p.PremiumTypes.TIER_2))
+                ? m.intl.string(m.t.CMKNhr)
+                : m.intl.string(m.t.E1ONHQ);
     return (0, r.jsx)(l.J2, {
         targetElementRef: t,
-        title: p.intl.string(p.t["V8J+16"]),
+        title: m.intl.string(m.t["V8J+16"]),
         body: n,
         graphic: {
             type: "image",
-            src: f.Z,
+            src: h.Z,
         },
         badge: {
             type: "beta",
@@ -35,12 +37,14 @@ let h = (e) => {
         caretConfig: { align: "start" },
         actions: [
             {
-                text: p.intl.string(p.t["CDdYB/"]),
+                text: m.intl.string(m.t["CDdYB/"]),
                 onClick: () => {
-                    (0, c.wQ)({ analyticsLocations: [a.Z.HOME_PAGE_PREMIUM_TAB] }), (0, u.ow)();
+                    (0, s.Z)(f.Z5c.NITRO_HOME),
+                        (0, u.wQ)({ analyticsLocations: [a.Z.HOME_PAGE_PREMIUM_TAB] }),
+                        (0, d.ow)();
                 },
             },
         ],
-        onRequestClose: u.ow,
+        onRequestClose: d.ow,
     });
 };
