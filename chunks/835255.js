@@ -226,10 +226,10 @@ function A(e) {
                 (0, n.jsx)(y.Z, {
                     item: F,
                     profileOwner: s,
-                    isHighlighted: !U && H,
+                    isHighlighted: H,
                     surface: R.surface,
                 }),
-            [F, s, U, H, R.surface],
+            [F, s, H, R.surface],
         );
     return (0, n.jsx)(
         E.Z,
