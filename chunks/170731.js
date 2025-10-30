@@ -123,7 +123,7 @@ function O(e) {
                             wishlistId: s,
                             isOwner: !1,
                             surface: h.Y.GIFTING_FLOW,
-                            giftingOrigin: n === f.lr.WISHLIST ? b.Wt.DM_CHANNEL_WISHLIST : b.Wt.DM_CHANNEL,
+                            giftingOrigin: b.Wt.DM_CHANNEL_WISHLIST,
                             collectibleSource: n,
                             showIcons: l,
                         }),
@@ -188,14 +188,14 @@ let P = function (e) {
         }, [t.id]),
         R = y[i.useMemo(() => (T >= f.zL ? "FULL_WISHLIST" : T > 0 ? "MIXED" : "SHOP_ONLY"), [T])],
         F = g.ZP.getName(t),
-        H =
+        G =
             null == n
                 ? void 0
                 : n.getBannerURL({
                       canAnimate: !1,
                       size: 713,
                   }),
-        G = _ || h || m || x,
+        H = _ || h || m || x,
         U = P ? w.slice(0, f.zL - 1) : w,
         D = P ? w[f.zL - 1] : null,
         z = E - f.zL + 1;
@@ -205,10 +205,10 @@ let P = function (e) {
               className: l()(v.wishlistBanner, Z),
               style: B,
               children: [
-                  null != H &&
+                  null != G &&
                       (0, r.jsx)("div", {
                           className: v.backgroundImage,
-                          style: { backgroundImage: "url(".concat(H, ")") },
+                          style: { backgroundImage: "url(".concat(G, ")") },
                       }),
                   (0, r.jsx)(o.f6W, {
                       disableAdaptiveTheme: !0,
@@ -223,7 +223,7 @@ let P = function (e) {
                                   (0, r.jsx)("div", {
                                       className: e,
                                       children:
-                                          G || 0 === w.length
+                                          H || 0 === w.length
                                               ? (0, r.jsx)(I, {})
                                               : (0, r.jsx)(O, {
                                                     items: U,
