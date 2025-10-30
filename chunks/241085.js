@@ -94,7 +94,7 @@ function P(e) {
         ],
     });
 }
-function w() {
+function D() {
     return (0, r.jsxs)("div", {
         className: o()(R.mainWrapper, R.mainBody),
         children: [
@@ -115,7 +115,7 @@ function w() {
         ],
     });
 }
-function D(e) {
+function w(e) {
     var t;
     let { upload: n, handleRemoveFile: i, singleFileInput: a } = e;
     return (0, r.jsxs)(
@@ -170,8 +170,9 @@ function L(e) {
             var t;
             e.preventDefault(), (null == (t = e.dataTransfer) ? void 0 : t.types.includes("Files")) && m(!0);
         }, []),
-        U = i.useCallback(() => {
-            m(!1);
+        U = i.useCallback((e) => {
+            var t;
+            (null != (t = u.current) && t.contains(e.relatedTarget)) || m(!1);
         }, []),
         G = i.useCallback(
             (e, t) => {
@@ -235,7 +236,7 @@ function L(e) {
         );
     }, [j, U, B]),
     1 === a && 1 === x.length)
-        ? (0, r.jsx)(D, {
+        ? (0, r.jsx)(w, {
               upload: x[0],
               handleRemoveFile: F,
               singleFileInput: !0,
@@ -248,7 +249,7 @@ function L(e) {
               }),
               children: [
                   v.length >= a
-                      ? (0, r.jsx)(w, {})
+                      ? (0, r.jsx)(D, {})
                       : (0, r.jsx)(P, {
                             dropping: h,
                             fileInputRef: s,
@@ -261,7 +262,7 @@ function L(e) {
                           className: R.files,
                           children: x.map((e) =>
                               (0, r.jsx)(
-                                  D,
+                                  w,
                                   {
                                       upload: e,
                                       handleRemoveFile: F,
