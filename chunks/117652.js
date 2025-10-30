@@ -21,8 +21,8 @@ var i = n(442837),
     O = n(855775),
     v = n(626135),
     I = n(937615),
-    T = n(987209),
-    S = n(563132),
+    S = n(987209),
+    T = n(563132),
     A = n(409813),
     C = n(614277),
     N = n(981631),
@@ -69,7 +69,7 @@ let M = {
 };
 function k(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
-        { hasPaymentSources: l } = (0, S.JL)(),
+        { hasPaymentSources: l } = (0, T.JL)(),
         c = l ? A.h8.REVIEW : A.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -95,7 +95,7 @@ function j(e) {
             recommendedGiftSkuIds: x,
             giftingOrigin: M,
             setValidatingGiftRecipient: j,
-        } = (0, T.wD)(),
+        } = (0, S.wD)(),
         {
             selectedSkuId: B,
             setSelectedSkuId: Z,
@@ -103,7 +103,7 @@ function j(e) {
             paymentSourceId: V,
             skuPricePreviewsById: H,
             skusById: Y,
-        } = (0, S.JL)(),
+        } = (0, T.JL)(),
         W = (0, i.e7)([y.default], () => y.default.getCurrentUser()),
         { enabled: K, giftRecommendationAlgorithm: z } = p.G.useExperiment(
             { location: "CollectiblesPaymentModalGiftCustomizationStep" },
@@ -208,6 +208,7 @@ function j(e) {
                                   className: w.giftPreview,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
+                                  hideProfilePreview: M === R.Wt.DM_CHANNEL_WISHLIST,
                               }),
                           (0, r.jsx)(G, {
                               handleClose: n,

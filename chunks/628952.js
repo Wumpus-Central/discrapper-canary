@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function T(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,25 +65,33 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 let C = (e) => {
-    let { skuId: t, isSelected: n, price: a, onSelect: s, shouldDisplayHeader: I = !1, className: S } = e,
-        { product: C } = (0, m.T)(t, !0),
-        { giftRecipient: N, giftRecipientError: R } = (0, f.wD)(),
-        P = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-        w = (0, y.kd)(C),
-        D = i.useRef(null);
-    if (null == C) return null;
-    let [L] = C.items;
-    l()(null != L, "Product item should not be empty");
-    let x = () => {
-            if ((null == C ? void 0 : C.type) === c.Z.BUNDLE) return null;
-            switch (L.type) {
+    let {
+            skuId: t,
+            isSelected: n,
+            price: a,
+            onSelect: s,
+            shouldDisplayHeader: I = !1,
+            className: T,
+            hideProfilePreview: C = !1,
+        } = e,
+        { product: N } = (0, m.T)(t, !0),
+        { giftRecipient: R, giftRecipientError: P } = (0, f.wD)(),
+        w = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
+        D = (0, y.kd)(N),
+        L = i.useRef(null);
+    if (null == N) return null;
+    let [x] = N.items;
+    l()(null != x, "Product item should not be empty");
+    let M = () => {
+            if ((null == N ? void 0 : N.type) === c.Z.BUNDLE) return null;
+            switch (x.type) {
                 case c.Z.AVATAR_DECORATION:
                     return O.intl.string(O.t["7v0T9P"]);
                 case c.Z.PROFILE_EFFECT:
@@ -94,12 +102,17 @@ let C = (e) => {
                     return null;
             }
         },
-        M = null != N && N.id !== (null == P ? void 0 : P.id) && C.type !== c.Z.BUNDLE && L.type !== c.Z.NAMEPLATE,
-        k = () => {
+        k =
+            null != R &&
+            R.id !== (null == w ? void 0 : w.id) &&
+            N.type !== c.Z.BUNDLE &&
+            x.type !== c.Z.NAMEPLATE &&
+            !C,
+        j = () => {
             null != t && null != s && s(t);
         };
     return (0, r.jsxs)("div", {
-        className: S,
+        className: T,
         children: [
             I &&
                 (0, r.jsx)("div", {
@@ -107,20 +120,20 @@ let C = (e) => {
                     children: (0, r.jsx)(d.gNt, {
                         label: O.intl.string(O.t.PpoJzt),
                         children:
-                            M &&
+                            k &&
                             (0, r.jsx)(
                                 d.yRy,
                                 {
-                                    targetElementRef: D,
-                                    preload: () => (0, p.Z)(N.id, N.getAvatarURL(null, 80)),
+                                    targetElementRef: L,
+                                    preload: () => (0, p.Z)(R.id, R.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             _.Z,
-                                            A(T({}, e), {
-                                                user: N,
-                                                pendingAvatar: N.getAvatarURL(null, (0, d.pxk)(d.EFr.SIZE_80)),
-                                                pendingAvatarDecoration: (0, g.M)(L) ? L : null,
-                                                pendingProfileEffect: (0, E.H)(L) ? L : null,
+                                            A(S({}, e), {
+                                                user: R,
+                                                pendingAvatar: R.getAvatarURL(null, (0, d.pxk)(d.EFr.SIZE_80)),
+                                                pendingAvatarDecoration: (0, g.M)(x) ? x : null,
+                                                pendingProfileEffect: (0, E.H)(x) ? x : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0,
                                                 hideExampleButton: !0,
@@ -131,9 +144,9 @@ let C = (e) => {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             d.P3F,
-                                            A(T({}, e), {
+                                            A(S({}, e), {
                                                 className: v.previewLink,
-                                                innerRef: D,
+                                                innerRef: L,
                                                 children: (0, r.jsx)(d.Text, {
                                                     variant: "text-xs/medium",
                                                     color: "text-link",
@@ -142,23 +155,23 @@ let C = (e) => {
                                             }),
                                         ),
                                 },
-                                N.id,
+                                R.id,
                             ),
                     }),
                 }),
             (0, r.jsxs)(d.P3F, {
                 tag: "div",
-                onClick: k,
+                onClick: j,
                 className: o()(v.previewContainer, {
-                    [v.previewContainerSelected]: n && null == R,
-                    [v.previewContainerError]: n && null != R,
+                    [v.previewContainerSelected]: n && null == P,
+                    [v.previewContainerError]: n && null != P,
                 }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: v.giftInfoContainer,
                         children: [
                             (0, r.jsx)(b.O, {
-                                product: C,
+                                product: N,
                                 fallbackLabel: null,
                             }),
                             (0, r.jsxs)("div", {
@@ -166,12 +179,12 @@ let C = (e) => {
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-md/semibold",
-                                        children: w,
+                                        children: D,
                                     }),
                                     (0, r.jsx)(d.Heading, {
                                         variant: "heading-sm/medium",
                                         color: "header-secondary",
-                                        children: x(),
+                                        children: M(),
                                     }),
                                 ],
                             }),
@@ -182,13 +195,13 @@ let C = (e) => {
                         ],
                     }),
                     n &&
-                        null != R &&
+                        null != P &&
                         (0, r.jsx)("div", {
                             className: v.recipientError,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "status-danger",
-                                children: R,
+                                children: P,
                             }),
                         }),
                 ],
