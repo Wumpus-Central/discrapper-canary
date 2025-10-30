@@ -7,4 +7,5 @@ e.exports = {
     wishlistBannerTitleContainer: "wishlistBannerTitleContainer__39090",
     wishlistBannerTitle: "wishlistBannerTitle__39090",
     backgroundImage: "backgroundImage__39090",
+    wishlistBannerListItem: "wishlistBannerListItem__39090",
 };

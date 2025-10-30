@@ -104,38 +104,42 @@ function S(e) {
 function A(e) {
     let { wishlist: t, popularCollectiblesProducts: n, wishlistError: i, fetchShopHomeError: a } = e;
     return r.useMemo(() => {
-        var e;
+        var e, r;
         if (null != i || null != a)
             return {
                 displayItems: [],
-                wishlistLength: 0,
+                displayItemsFromWishlistCount: 0,
+                hasMoreItems: !1,
+                totalWishlistItemCount: 0,
             };
-        let r = (null != (e = null == t ? void 0 : t.items) ? e : []).filter((e) => !0 !== e.isOwned).slice(0, b),
-            o = r.length,
-            s = [];
+        let o = (null != (e = null == t ? void 0 : t.items) ? e : []).filter((e) => !0 !== e.isOwned),
+            s = o.slice(0, b),
+            l = [];
         if (
-            (s.push(
-                ...r.map((e) => ({
+            (l.push(
+                ...s.map((e) => ({
                     item: e,
                     source: "wishlist",
                 })),
             ),
-            s.length < b)
+            l.length < b)
         ) {
-            let e = new Set(r.map((e) => e.skuId)),
+            let e = new Set(s.map((e) => e.skuId)),
                 t = n.filter((t) => !e.has(t.skuId));
-            for (let e = 0; e < t.length && s.length < b; e++) {
+            for (let e = 0; e < t.length && l.length < b; e++) {
                 let n = I(t[e]);
                 null !== n &&
-                    s.push({
+                    l.push({
                         item: n,
                         source: "popular",
                     });
             }
         }
         return {
-            displayItems: s,
-            wishlistLength: o,
+            displayItems: l,
+            displayItemsFromWishlistCount: s.length,
+            hasMoreItems: o.length > b,
+            totalWishlistItemCount: null != (r = null == t ? void 0 : t.items.length) ? r : 0,
         };
     }, [t, i, n, a]);
 }

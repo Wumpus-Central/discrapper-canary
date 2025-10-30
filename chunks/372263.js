@@ -5,5 +5,5 @@ var i = n(835255),
     a = n(688192);
 function l(e) {
     let { surface: t = a.Y.PROFILE_MODAL } = e;
-    return (0, r.jsx)(i.w, { surface: t });
+    return (0, r.jsx)(i.w_, { surface: t });
 }
