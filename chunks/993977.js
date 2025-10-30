@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(626135),
     p = n(630388),
     f = n(804739),
-    h = n(957657),
-    m = n(34305),
+    m = n(957657),
+    h = n(34305),
     g = n(981631),
     _ = n(388032),
-    b = n(77839);
+    b = n(936390);
 function E(e, t, n) {
     return (
         t in e
@@ -96,7 +96,7 @@ function I(e) {
         ],
     });
 }
-class v extends i.PureComponent {
+class y extends i.PureComponent {
     handleToggleShortcutDesktop(e) {
         c.Xc.updateSetting(e);
     }
@@ -133,7 +133,7 @@ class v extends i.PureComponent {
                                   onChange: this.handleToggleShortcutStartMenu,
                               }),
                               (0, r.jsx)(a.izJ, {}),
-                              (0, r.jsx)(m.Z, {}),
+                              (0, r.jsx)(h.Z, {}),
                           ],
                       })
                     : null,
@@ -147,7 +147,7 @@ class v extends i.PureComponent {
     render() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(h.Z, { currentRoute: g.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, r.jsx)(m.Z, { currentRoute: g.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, r.jsx)(a.w0Z, {
                     className: b.scroller,
                     children: this.renderBody(),
@@ -163,11 +163,11 @@ class v extends i.PureComponent {
             });
     }
 }
-function y() {
+function v() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),
         hiddenLibraryApplicationViewItems: (0, l.e7)([u.Z], () => u.Z.hiddenLibraryApplicationViewItems),
     };
-    return (0, r.jsx)(v, O({}, e));
+    return (0, r.jsx)(y, O({}, e));
 }

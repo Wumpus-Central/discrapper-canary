@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(163612),
     w = n(601964),
     D = n(430824),
-    L = n(131951),
-    x = n(594174),
+    x = n(131951),
+    L = n(594174),
     M = n(451478),
     k = n(626135),
     j = n(768581),
@@ -44,9 +44,9 @@ var r = n(951288),
     Y = n(295907),
     W = n(65154),
     K = n(388032),
-    z = n(993103),
-    q = n(450943),
-    X = n(315091);
+    z = n(327667),
+    q = n(70623),
+    X = n(285236);
 function Q(e, t, n) {
     return (
         t in e
@@ -112,12 +112,12 @@ let et = {
     ea = 128;
 function eo(e) {
     let { header: t } = e,
-        n = L.Z.getCameraComponent(),
-        a = (0, l.e7)([L.Z], () => L.Z.getVideoDeviceId()),
+        n = x.Z.getCameraComponent(),
+        a = (0, l.e7)([x.Z], () => x.Z.getVideoDeviceId()),
         o = (0, I.Z)();
     return (
         i.useEffect(() => {
-            let e = x.default.getCurrentUser();
+            let e = L.default.getCurrentUser();
             if (o && null != e) {
                 let t = (0, O.P)(e);
                 (0, v.FU)(t, a, { track: !1 }).catch(H.dG4);
@@ -257,9 +257,9 @@ function el(e) {
                 : null,
         S = null != (t = (0, g.x)(h, ea, !0)) ? t : T,
         A = (0, E.ZP)(h),
-        [C, N] = (0, l.Wu)([L.Z], () => [L.Z.supports(W.AN.VIDEO), Object.keys(L.Z.getVideoDevices()).length]),
+        [C, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(W.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
         R = null != I ? "".concat(A, ", ").concat(I.name) : A,
-        x = (0, l.e7)([M.Z], () => M.Z.isFocused()),
+        L = (0, l.e7)([M.Z], () => M.Z.isFocused()),
         k = (0, l.e7)([U.Z], () => U.Z.getMode(h.id)),
         B = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
@@ -307,7 +307,7 @@ function el(e) {
                       })
                     : (0, r.jsx)(G.Z, {
                           className: q.icon,
-                          ringing: x,
+                          ringing: L,
                           src: null != S ? S : "",
                           ringingType: G.Z.RingingType.INCOMING,
                           size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80,

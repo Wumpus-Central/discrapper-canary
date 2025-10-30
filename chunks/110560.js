@@ -48,8 +48,8 @@ var i = n(772848),
     P = n(46140),
     w = n(981631),
     D = n(49898),
-    L = n(388032);
-function x(e, t, n) {
+    x = n(388032);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -73,7 +73,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -116,7 +116,7 @@ function B(e) {
         let e = (0, S.i)("openQuestsRewardCodeModal"),
             s = C.r.build(t.config).rewardPlatforms.length > 1;
         if (e && !s) {
-            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("62006")]).then(
+            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("49959"), n.e("36481")]).then(
                 n.bind(n, 188209),
             );
             return (n) =>
@@ -130,7 +130,7 @@ function B(e) {
                     }),
                 );
         }
-        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("6006")]).then(
+        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("49959"), n.e("7175")]).then(
             n.bind(n, 985866),
         );
         return (e) =>
@@ -229,7 +229,7 @@ function H(e, t, i, a) {
                     }),
                 );
         }
-        let { default: o } = await Promise.all([n.e("79589"), n.e("83175")]).then(n.bind(n, 920916));
+        let { default: o } = await Promise.all([n.e("79589"), n.e("70154")]).then(n.bind(n, 920916));
         return (n) =>
             (0, r.jsx)(
                 o,
@@ -306,7 +306,7 @@ function q(e) {
         });
 }
 function X() {
-    return Promise.all([n.e("13193"), n.e("52407"), n.e("32249"), n.e("89828")]).then(n.bind(n, 536687));
+    return Promise.all([n.e("13193"), n.e("52407"), n.e("32249"), n.e("2501")]).then(n.bind(n, 536687));
 }
 function Q(e) {
     var t;
@@ -471,14 +471,14 @@ async function er(e, t) {
             break;
         case E.wF.CAPTCHA_FAILED:
             l.Z.show({
-                title: L.intl.string(L.t["/CidxO"]),
-                body: L.intl.string(L.t.HQdHg6),
+                title: x.intl.string(x.t["/CidxO"]),
+                body: x.intl.string(x.t.HQdHg6),
             });
             break;
         case E.wF.UNKNOWN_ERROR:
             l.Z.show({
-                title: L.intl.string(L.t.R0RpRX),
-                body: L.intl.string(L.t.OXD41D),
+                title: x.intl.string(x.t.R0RpRX),
+                body: x.intl.string(x.t.OXD41D),
             });
         case E.wF.PREVIOUS_IN_FLIGHT_REQUEST:
     }

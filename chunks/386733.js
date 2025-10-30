@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(938736),
     O = n(981631),
     v = n(388032),
-    I = n(120472),
+    I = n(55282),
     T = n(691766);
 function S(e, t, n) {
     return (
@@ -160,7 +160,7 @@ let R = (e) => {
                 return (n) => (0, r.jsx)(e, N(A({}, n), { sourceAnalyticsLocations: t }));
             });
     },
-    L = (e) => {
+    x = (e) => {
         let { isInSettings: t = !1 } = e,
             n = (0, s.e7)([g.Z], () => g.Z.getRecipientStatus()),
             { referralSentUsers: a } = (0, E.G)(),
@@ -232,22 +232,22 @@ let R = (e) => {
                     }),
                 ],
             }),
-            L = p.redeemed === E.Q;
+            x = p.redeemed === E.Q;
         return (0, r.jsx)(d.Gt, {
             value: C,
             children: (0, r.jsx)("div", {
                 className: o()({
-                    [I.containerWithGlowWithoutBanner]: L,
-                    [I.containerWithoutGlow]: !L,
+                    [I.containerWithGlowWithoutBanner]: x,
+                    [I.containerWithoutGlow]: !x,
                     [I.containerWithMargins]: !t,
-                    [I.containerWithGlowOnSettingsPage]: L && t,
+                    [I.containerWithGlowOnSettingsPage]: x && t,
                 }),
                 children: (0, r.jsx)("div", {
                     ref: N,
                     className: o()({
                         [I.expandedProgressBarContainer]: !t,
                         [I.expandedProgressBarContainerSettingsPage]: t,
-                        [I.allReferralsSentBorder]: L,
+                        [I.allReferralsSentBorder]: x,
                     }),
                     children: P,
                 }),

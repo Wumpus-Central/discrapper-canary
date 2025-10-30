@@ -29,12 +29,12 @@ var r = n(951288),
     P = n(208156),
     w = n(748492),
     D = n(701488),
-    L = n(918559),
-    x = n(981631),
+    x = n(918559),
+    L = n(981631),
     M = n(354459),
-    k = n(505386),
-    j = n(186880),
-    U = n(315091);
+    k = n(51434),
+    j = n(533362),
+    U = n(285236);
 function G(e, t, n) {
     return (
         t in e
@@ -125,7 +125,7 @@ function V(e) {
         $ = W || null != q,
         ee = (0, R.Z)(null == _ ? void 0 : _.id),
         et = ee && (null == Q ? void 0 : Q.type) !== M.fO.ACTIVITY,
-        en = !ee && V === L.Ez.PIP,
+        en = !ee && V === x.Ez.PIP,
         er = $ && (et || en) && null == K,
         ei = (!$ || er) && !z,
         ea = ei && null != O.Z.pipVideoWindow && null != O.Z.pipActivityWindow;
@@ -140,7 +140,7 @@ function V(e) {
                         instanceId: B.compositeInstanceId,
                     }),
                 );
-            let t = null != (e = _.getGuildId()) ? e : x.ME;
+            let t = null != (e = _.getGuildId()) ? e : L.ME;
             d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id);
         }
         null == q && (0, f.Ou)();
@@ -173,7 +173,7 @@ function V(e) {
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            eo(), (0, T.tg)(L.Ez.PANEL);
+                            eo(), (0, T.tg)(x.Ez.PANEL);
                         },
                         channel: _,
                         applicationId: B.applicationId,

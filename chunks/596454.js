@@ -88,7 +88,7 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54453);
+n(521510);
 let S = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
 function A(e) {
     var t,
@@ -110,8 +110,8 @@ function A(e) {
             canSelect: P = !0,
             autoplay: w,
             registerInnerRef: D,
-            registerAnimatedElementRef: L,
-            surrogate: x,
+            registerAnimatedElementRef: x,
+            surrogate: L,
         } = e,
         M = I(e, [
             "src",
@@ -195,9 +195,9 @@ function A(e) {
     );
     let $ = i.useCallback(
             (e) => {
-                (K.current = e), null == D || D(e), null == L || L(e);
+                (K.current = e), null == D || D(e), null == x || x(e);
             },
-            [D, L],
+            [D, x],
         ),
         ee = (0, l.Z)(K);
     return null == z || "" === z
@@ -206,7 +206,7 @@ function A(e) {
               v(y({}, J), {
                   ref: $,
                   className: o()("emoji", "emoji-text"),
-                  children: null != x ? x : p,
+                  children: null != L ? L : p,
               }),
           )
         : (0, r.jsxs)(r.Fragment, {

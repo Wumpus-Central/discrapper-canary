@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => v,
+    ZP: () => j,
     ms: () => O,
 });
 var r = n(951288);
@@ -14,9 +14,9 @@ var i = n(120356),
     d = n(827397),
     p = n(279604),
     f = n(535396),
-    h = n(459196),
+    h = n(789142),
     g = n(388032),
-    m = n(292609);
+    m = n(38642);
 function b() {
     return (b =
         Object.assign ||
@@ -86,7 +86,7 @@ function y(e) {
         }),
     });
 }
-function j(e) {
+function v(e) {
     let { className: t, guildId: n, powerup: i, onError: o } = e,
         s = (0, c.ZP)(n, i).type !== f.A3.INACTIVE,
         d = (0, a.Z)(n, i, "GuildPowerupCardFooterAdmin"),
@@ -111,7 +111,7 @@ function j(e) {
         ],
     });
 }
-function v(e) {
+function j(e) {
     var t = b(
         {},
         (function (e) {
@@ -119,5 +119,5 @@ function v(e) {
             return e;
         })(e),
     );
-    return (0, s.Z)(t.guildId) ? (0, r.jsx)(j, _({}, t)) : (0, r.jsx)(y, _({}, t));
+    return (0, s.Z)(t.guildId) ? (0, r.jsx)(v, _({}, t)) : (0, r.jsx)(y, _({}, t));
 }

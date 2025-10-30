@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(665149),
     p = n(670188),
     f = n(592125),
-    h = n(158776),
-    m = n(699516),
+    m = n(158776),
+    h = n(699516),
     g = n(594174),
     _ = n(482798),
     b = n(167762),
     E = n(151459),
     O = n(981631),
     I = n(388032),
-    v = n(10058);
-function y(e) {
+    y = n(319763);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function C(e, t) {
 }
 function S(e) {
     let { className: t } = e,
-        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount() > 0),
+        n = (0, a.e7)([h.Z], () => h.Z.getPendingCount() > 0),
         _ = (0, s.dQu)(s.TVs.modules.chat.INPUT_ICON_SIZE),
         S = (function () {
             let [e, t] = i.useState(null),
@@ -83,12 +83,12 @@ function S(e) {
                                 0 === Object.keys(r.current[e]).length && delete r.current[e];
                         },
                         i = (n, i, a) => {
-                            var s, o, c, u, d, p, h, _, b;
-                            if (!m.Z.isFriend(n)) return !1;
+                            var s, o, c, u, d, p, m, _, b;
+                            if (!h.Z.isFriend(n)) return !1;
                             let E = g.default.getUser(n);
                             if (null == E) return !1;
                             let I = !1,
-                                v = null;
+                                y = null;
                             if (null != i) {
                                 let t = i.type;
                                 if (
@@ -109,11 +109,11 @@ function S(e) {
                                                   .concat(null != (u = i.name) ? u : "", "-")
                                                   .concat(null != (d = i.state) ? d : "", "-")
                                                   .concat(null != (p = i.details) ? p : "")
-                                            : "".concat(t, "-").concat(null != (h = i.name) ? h : "");
+                                            : "".concat(t, "-").concat(null != (m = i.name) ? m : "");
                                     (null == (c = r.current[n]) ? void 0 : c.presence) !== l &&
                                         ((I = !0),
                                         e(n, "presence", l),
-                                        (v = {
+                                        (y = {
                                             user: E,
                                             activity: i,
                                         }));
@@ -128,7 +128,7 @@ function S(e) {
                                     (null == (_ = r.current[n]) ? void 0 : _.voice) !== i &&
                                         ((I = !0),
                                         e(n, "voice", i),
-                                        (v = {
+                                        (y = {
                                             user: E,
                                             voiceChannel: t,
                                         }));
@@ -138,8 +138,8 @@ function S(e) {
                                     ((I = !0), e(n, "voice", null));
                             return (
                                 I &&
-                                    null != v &&
-                                    ((b = v),
+                                    null != y &&
+                                    ((b = y),
                                     null != l.current && (window.clearTimeout(l.current), (l.current = null)),
                                     t(b),
                                     (l.current = window.setTimeout(() => {
@@ -151,7 +151,7 @@ function S(e) {
                         a = (e) => {
                             for (let t of e.updates) {
                                 let e = t.user.id,
-                                    n = h.Z.getPrimaryActivity(e);
+                                    n = m.Z.getPrimaryActivity(e);
                                 if (i(e, n)) break;
                             }
                         },
@@ -205,7 +205,7 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: v.container,
+                className: y.container,
                 children: N((e, t) =>
                     null == t
                         ? null
@@ -219,10 +219,10 @@ function S(e) {
                                   return (0, r.jsxs)(
                                       l.animated.div,
                                       C(
-                                          y(
+                                          v(
                                               {
                                                   ref: T,
-                                                  className: v.activityWrapper,
+                                                  className: y.activityWrapper,
                                                   style: e,
                                               },
                                               n,
@@ -237,12 +237,12 @@ function S(e) {
                                                       ? (0, r.jsx)(u.Z, {
                                                             channel: t.voiceChannel,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: v.statusText,
+                                                            textClassName: y.statusText,
                                                         })
                                                       : (0, r.jsx)(c.Z, {
                                                             activity: t.activity,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: v.statusText,
+                                                            textClassName: y.statusText,
                                                         }),
                                               ],
                                           },
@@ -258,7 +258,7 @@ function S(e) {
                 children: (e, i, l, a) =>
                     (0, r.jsx)(
                         d.JO,
-                        C(y({}, l), {
+                        C(v({}, l), {
                             ref: a,
                             className: t,
                             onClick: e,

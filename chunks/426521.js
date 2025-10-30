@@ -17,18 +17,18 @@ var r = n(951288),
     _ = n(626135),
     O = n(709054),
     y = n(591759),
-    j = n(833592),
-    v = n(497089),
-    x = n(178480),
-    C = n(418316),
-    E = n(382865),
+    v = n(833592),
+    j = n(497089),
+    C = n(178480),
+    E = n(418316),
+    x = n(382865),
     S = n(526146),
     I = n(400565),
     P = n(148789),
     N = n(11825),
     Z = n(981631),
     T = n(388032),
-    w = n(231796),
+    w = n(17250),
     A = n(756688),
     R = n(886765);
 function D(e) {
@@ -107,7 +107,7 @@ let G = i.memo(function (e) {
             { analyticsLocations: u } = (0, c.ZP)(),
             f = (0, S.I)(l, s),
             g = i.useCallback(async () => {
-                if ((f || (0, j.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
+                if ((f || (0, v.wt)(l), null != l.item_enum && l.item_enum === j.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
                         let { default: e } = await n.e("6074").then(n.bind(n, 443189));
                         return (t) =>
@@ -158,7 +158,7 @@ let G = i.memo(function (e) {
                         } else await (0, d.Z)(r);
                     }
                     _.default.track(Z.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: v.ud.CLICKED,
+                        action_type: j.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
                         acked: f,
@@ -166,16 +166,16 @@ let G = i.memo(function (e) {
                 }
             }, [l, f, u]),
             m = null;
-        l.type === v.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
+        l.type === j.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
             ? (m = (0, r.jsx)(P.Z, { userId: l.other_user.id }))
-            : l.type === v.O7.INCOMING_GAME_FRIEND_REQUESTS &&
+            : l.type === j.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
               (m = (0, r.jsx)(P.Z, {
                   userId: l.other_user.id,
                   applicationId: l.applicationId,
               }));
         let b = null != l.local_id,
-            E = (0, C.Z)({
+            x = (0, E.Z)({
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(k, { applicationId: e }),
             }),
@@ -194,7 +194,7 @@ let G = i.memo(function (e) {
                 (0, r.jsxs)(o.kL8, {
                     className: w.rowContent,
                     focusProps: { offset: 4 },
-                    "aria-label": E,
+                    "aria-label": x,
                     onClick: g,
                     children: [
                         f ? null : (0, r.jsx)("div", { className: w.unread }),
@@ -206,7 +206,7 @@ let G = i.memo(function (e) {
                                 (0, r.jsxs)(o.Text, {
                                     variant: "text-md/normal",
                                     color: f ? "text-muted" : "text-default",
-                                    children: ["string" != typeof E ? E : p.Z.parse(E), R],
+                                    children: ["string" != typeof x ? x : p.Z.parse(x), R],
                                 }),
                                 (null == (t = l.message) ? void 0 : t.content) != null
                                     ? (0, r.jsx)(D, { item: l })
@@ -215,7 +215,7 @@ let G = i.memo(function (e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: f ? "text-muted" : "header-secondary",
-                                    children: (0, x.a3)(O.default.extractTimestamp(l.id)),
+                                    children: (0, C.a3)(O.default.extractTimestamp(l.id)),
                                 }),
                                 m,
                             ],
@@ -230,7 +230,7 @@ let G = i.memo(function (e) {
         let { items: t } = e,
             n = g.d$.useSetting();
         return (
-            (0, E.c)(t),
+            (0, x.c)(t),
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(

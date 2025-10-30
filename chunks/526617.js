@@ -36,8 +36,8 @@ var r = n(951288),
     P = n(259580),
     w = n(626135),
     D = n(74538),
-    L = n(887766),
-    x = n(763296),
+    x = n(887766),
+    L = n(763296),
     M = n(697426),
     k = n(242291),
     j = n(22382),
@@ -52,7 +52,7 @@ var r = n(951288),
     W = n(957825),
     K = n(474936),
     z = n(388032),
-    q = n(412553);
+    q = n(25220);
 function X(e, t, n) {
     return (
         t in e
@@ -255,10 +255,10 @@ function eu(e) {
         eC = (0, b.Iu)((e) => e.searchQuery),
         eN = null != eC && "" !== eC,
         eR = (0, m.Dt)(),
-        eP = L.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
-        { categories: ew, allSounds: eD, soundCounts: eL } = (0, B.ZP)(a, {}, e_),
-        [ex, eM] = i.useState([]),
-        ek = (0, B.FS)(ew, ex, eC),
+        eP = x.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
+        { categories: ew, allSounds: eD, soundCounts: ex } = (0, B.ZP)(a, {}, e_),
+        [eL, eM] = i.useState([]),
+        ek = (0, B.FS)(ew, eL, eC),
         ej = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
         [eU, eG] = i.useState(!1),
         eB = i.useMemo(() => ek.filter((e) => e.items.length > 0), [ek]),
@@ -365,7 +365,7 @@ function eu(e) {
             [eB, J, eT],
         ),
         e$ = i.useCallback(() => {
-            let e = x.Z.getSoundById(ea);
+            let e = L.Z.getSoundById(ea);
             null != e && ev(e);
         }, []),
         e0 = i.useCallback(() => {
@@ -480,10 +480,10 @@ function eu(e) {
             if (eF) {
                 let e;
                 switch (eP) {
-                    case L.o.ALWAYS_PINNED:
+                    case x.o.ALWAYS_PINNED:
                         e = !0;
                         break;
-                    case L.o.PINNED_ON_SCROLL_DOWN:
+                    case x.o.PINNED_ON_SCROLL_DOWN:
                         e = eU || ej;
                         break;
                     default:
@@ -516,7 +516,7 @@ function eu(e) {
         tr = "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png",
         ti = i.useCallback(() => {
             var e;
-            let t = x.Z.getSoundById(ea),
+            let t = L.Z.getSoundById(ea),
                 n = new Audio((0, j.Z)(ea));
             null != em.current && em.current.pause(),
                 (em.current = n),
@@ -533,9 +533,9 @@ function eu(e) {
                 source: eh,
                 guild_id: t,
                 media_session_id: ta,
-                available_custom_sounds_count: eL.unlockedCustomSoundCount,
-                unavailable_custom_sounds_count: eL.lockedCustomSoundCount,
-                favorite_sounds_count: eL.favoriteSoundCount,
+                available_custom_sounds_count: ex.unlockedCustomSoundCount,
+                unavailable_custom_sounds_count: ex.lockedCustomSoundCount,
+                favorite_sounds_count: ex.favoriteSoundCount,
             },
         }),
         (0, r.jsxs)(r.Fragment, {
@@ -571,7 +571,7 @@ function eu(e) {
                     store: E.Wq,
                     onSelectItem: eX,
                     onSearchExpressions: e5,
-                    hasSearchResults: ex.length > 0,
+                    hasSearchResults: eL.length > 0,
                     defaultSearchPlaceholder: z.intl.string(z.t.sKt3xS),
                     renderRow: eQ,
                     renderSectionHeader: e4,

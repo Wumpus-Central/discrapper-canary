@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(966902),
     f = n(562618),
     _ = n(803866),
-    p = n(982519),
+    p = n(893026),
     h = n(388032),
-    m = n(37751);
+    m = n(869918);
 function g(e, t, n) {
     return (
         t in e
@@ -94,11 +94,11 @@ function I(e) {
             previewUrl: b = g,
             disableMediaViewer: v = !1,
             action: I,
-            caretConfig: S = {
+            caretConfig: T = {
                 position: "bottom",
                 align: "center",
             },
-            badge: T,
+            badge: S,
             textLink: A,
             onWatchVideo: C,
             onRequestClose: N,
@@ -120,7 +120,7 @@ function I(e) {
         ]);
     let w = i.useRef(null),
         D = (0, a.j1L)(b),
-        L = i.useCallback(
+        x = i.useCallback(
             () => ({
                 type: "VIDEO",
                 url: g,
@@ -132,7 +132,7 @@ function I(e) {
             }),
             [g, t],
         ),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             null !== w.current && w.current.pause(), null == N || N();
         }, [N]),
         M = i.useCallback(() => {
@@ -140,7 +140,7 @@ function I(e) {
         }, [N]),
         k = i.useCallback(() => {
             null !== w.current && w.current.pause();
-            let e = L();
+            let e = x();
             (0, l.K)({
                 items: [e],
                 startingIndex: 0,
@@ -149,7 +149,7 @@ function I(e) {
             }),
                 null == N || N(),
                 null == C || C();
-        }, [L, C, N]),
+        }, [x, C, N]),
         j = D
             ? (0, r.jsx)(a.zsu, {
                   type: "image",
@@ -184,13 +184,13 @@ function I(e) {
     return (0, r.jsx)(
         c.m,
         y(E({}, P), {
-            onRequestClose: x,
+            onRequestClose: L,
             hasVideo: !0,
             children: (0, r.jsxs)("div", {
                 ref: R,
                 children: [
                     (0, r.jsx)(_.N, { onClick: M }),
-                    (0, r.jsx)(d.$, { caretConfig: S }),
+                    (0, r.jsx)(d.$, { caretConfig: T }),
                     (0, r.jsx)("div", {
                         className: m.assetContainer,
                         children: j,
@@ -198,7 +198,7 @@ function I(e) {
                     (0, r.jsx)(f.Y, {
                         title: t,
                         body: n,
-                        badge: T,
+                        badge: S,
                         textLink: A,
                     }),
                     null != I ? (0, r.jsx)(u.k, { actions: [I] }) : null,

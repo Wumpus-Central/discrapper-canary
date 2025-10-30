@@ -20,11 +20,11 @@ var r = n(951288),
     _ = n(728285),
     y = n(670188),
     x = n(314897),
-    v = n(271383),
+    O = n(271383),
     j = n(5192),
-    O = n(590415),
+    v = n(590415),
     C = n(354459),
-    I = n(383519);
+    I = n(28594);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,8 +105,8 @@ let Z = i.memo(function (e) {
         var t;
         let { participant: n, guildId: i, channel: l, isPremium: s } = e,
             { user: o, blocked: c, ignored: d, rtsState: u } = n,
-            h = u === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            f = u === O.xO.REQUESTED_TO_SPEAK || h;
+            h = u === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            f = u === v.xO.REQUESTED_TO_SPEAK || h;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -142,12 +142,12 @@ let Z = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: s, blocked: u } = t,
             j = l.getGuildId(),
-            O = x.default.getId(),
+            v = x.default.getId(),
             { newestAnalyticsLocation: Z } = (0, g.ZP)(f.Z.AUDIENCE_TILE),
             T = (0, _.bp)(),
-            N = (0, d.e7)([v.ZP], () => {
+            N = (0, d.e7)([O.ZP], () => {
                 var e;
-                return null != j && (null == (e = v.ZP.getMember(j, s.id)) ? void 0 : e.premiumSince) != null;
+                return null != j && (null == (e = O.ZP.getMember(j, s.id)) ? void 0 : e.premiumSince) != null;
             }, [j, s.id]),
             R = i.useRef(null);
         o()(null != j, "Channel cannot be guildless");
@@ -158,7 +158,7 @@ let Z = i.memo(function (e) {
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: "AudienceTile",
-                        is_tile_owner: s.id === O,
+                        is_tile_owner: s.id === v,
                         tile_type: C.TH.USER,
                     },
                 }),
@@ -170,7 +170,7 @@ let Z = i.memo(function (e) {
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387));
                             return (t) =>
                                 (0, r.jsx)(
@@ -192,7 +192,7 @@ let Z = i.memo(function (e) {
                         { context: T },
                     );
             },
-            [s, O, T, j, l, Z],
+            [s, v, T, j, l, Z],
         );
         return (0, r.jsx)(y.Z, {
             targetElementRef: R,

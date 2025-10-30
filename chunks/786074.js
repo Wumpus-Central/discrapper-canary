@@ -18,5 +18,11 @@ let a = {
         inlineAutocompleteType: "gameMentionInput",
         description: i.intl.string(i.t["1kR88y"]),
     }),
+    MENTION_TIMESTAMP: () => ({
+        test: "time",
+        text: "@time",
+        inlineAutocompleteType: "timestampMentionInput",
+        description: i.intl.string(i.t.V6L3TV),
+    }),
     LAUNCHABLE_APPLICATIONS: () => r.Z.launchableApplicationViewItems,
 };

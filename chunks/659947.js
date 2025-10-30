@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(914010),
     h = n(727785),
     m = n(388032),
-    g = n(704563);
+    g = n(47976);
 function E(e, t, n) {
     return (
         t in e
@@ -118,7 +118,7 @@ function P(e) {
             (0, o.ZDy)(
                 async () => (e) =>
                     (0, r.jsx)(
-                        L,
+                        x,
                         O(b({}, e), {
                             onSelect: (e) => {
                                 d(e), s.Z.setKeybind(O(b({}, l.current), { params: { channelId: e } }));
@@ -136,7 +136,7 @@ function P(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: g.selectedVoiceChannel,
-                        children: (0, r.jsx)(x, { channelId: u }),
+                        children: (0, r.jsx)(L, { channelId: u }),
                     }),
                     (0, r.jsx)(c.Z.Child, {
                         grow: 0,
@@ -180,7 +180,7 @@ function D(e) {
         }
     );
 }
-function L(e) {
+function x(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         s = i.useId(),
         c = i.useRef(null),
@@ -205,8 +205,8 @@ function L(e) {
                 row: S,
             });
     }, [S]);
-    let L = null != v ? v.length : O.length;
-    function x(e) {
+    let x = null != v ? v.length : O.length;
+    function L(e) {
         let { row: t } = e,
             i = (() => {
                 if (null != v) return v[t];
@@ -257,10 +257,10 @@ function L(e) {
                     break;
                 }
                 case "arrowup":
-                    0 === S ? P(L - 1) : P(S - 1);
+                    0 === S ? P(x - 1) : P(S - 1);
                     break;
                 case "arrowdown":
-                    S >= L - 1 ? P(0) : P(S + 1);
+                    S >= x - 1 ? P(0) : P(S + 1);
             }
     }
     let k = (() => {
@@ -288,21 +288,21 @@ function L(e) {
                         placeholder: m.intl.string(m.t.tG0r7g),
                         role: "combobox",
                         "aria-controls": s,
-                        "aria-expanded": L > 0,
-                        "aria-activedescendant": L > 0 && null != k ? k : void 0,
+                        "aria-expanded": x > 0,
+                        "aria-activedescendant": x > 0 && null != k ? k : void 0,
                         "aria-autocomplete": "list",
                         spellCheck: !1,
                     }),
                 }),
-                0 === L && "" !== b && (0, r.jsx)(N, {}),
-                (L > 0 || "" === b) &&
+                0 === x && "" !== b && (0, r.jsx)(N, {}),
+                (x > 0 || "" === b) &&
                     (0, r.jsx)(o.Tvr, {
                         innerId: s,
                         innerRole: "listbox",
                         "aria-label": m.intl.string(m.t["+N3fW7"]),
                         ref: c,
-                        sections: [L],
-                        renderRow: x,
+                        sections: [x],
+                        renderRow: L,
                         renderListHeader: C,
                         renderFooter: A,
                         sectionHeight: 0,
@@ -315,7 +315,7 @@ function L(e) {
         }),
     });
 }
-function x(e) {
+function L(e) {
     let { channelId: t } = e,
         {
             channel: n,

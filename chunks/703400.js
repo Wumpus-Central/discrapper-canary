@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     a = n(22928),
-    o = n(73930);
+    o = n(872246);
 let s = 20,
     l = (e) => {
         let { application: t, iconSize: n = s } = e;
@@ -17,7 +17,7 @@ let s = 20,
                           iconSize: n,
                       }),
                       (0, r.jsx)(i.Text, {
-                          variant: "text-xs/medium",
+                          variant: "text-sm/medium",
                           color: "text-muted",
                           children: t.name,
                       }),

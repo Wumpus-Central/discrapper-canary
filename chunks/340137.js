@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(481060),
     p = n(686546),
     f = n(719961),
-    h = n(264783),
-    m = n(944486),
+    m = n(264783),
+    h = n(944486),
     g = n(358085),
     _ = n(821020),
     b = n(370774),
     E = n(128008),
     O = n(961040),
     I = n(981631),
-    v = n(388032),
-    y = n(445202);
+    y = n(388032),
+    v = n(10663);
 let C = {
         cozy: 0,
         default: 0,
@@ -37,7 +37,7 @@ let C = {
     };
 function N(e) {
     var t, n;
-    let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: m, focusSectionProps: _ } = e,
+    let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: h, focusSectionProps: _ } = e,
         [O, I] = i.useState(!1),
         N = (0, b.D)(),
         j = s || N,
@@ -48,13 +48,13 @@ function N(e) {
             titlebarHoverHighlight: Z,
         } = (0, f.T)({ location: "NotificationsInboxTitleBarButton" }),
         w = (0, r.jsx)(d.Dkj, {
-            className: y.icon,
+            className: v.icon,
             color: O || P ? d.TVs.colors.ICON_PRIMARY : d.TVs.colors.ICON_TERTIARY,
             size: A,
         }),
         { badge: L, badgeType: R } = (0, E.h6)({ isSelected: j }),
         D = (0, g.isDesktop)() && x,
-        M = (0, h.A)(),
+        M = (0, m.A)(),
         k = (0, g.isMac)() ? C[M] : D ? S[M] : T[M];
     return (0, r.jsxs)(d.Kqy, {
         gap: 0,
@@ -67,7 +67,7 @@ function N(e) {
             (0, r.jsx)(u.u, {
                 asContainer: !0,
                 shouldShow: !P,
-                text: v.intl.string(v.t.HcoRu0),
+                text: y.intl.string(y.t.HcoRu0),
                 children: (0, r.jsxs)(
                     d.P3F,
                     ((t = (function (e) {
@@ -96,8 +96,8 @@ function N(e) {
                         return e;
                     })(
                         {
-                            innerRef: m,
-                            className: a()(y.clickableContainer, { [y.withHoverHighlight]: Z }),
+                            innerRef: h,
+                            className: a()(v.clickableContainer, { [v.withHoverHighlight]: Z }),
                         },
                         _,
                         o,
@@ -116,7 +116,7 @@ function N(e) {
                             },
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: a()(y.iconWrapper, null),
+                                    className: a()(v.iconWrapper, null),
                                     children:
                                         "unread" === R
                                             ? (0, r.jsxs)(r.Fragment, {
@@ -127,7 +127,7 @@ function N(e) {
                                                           mask: p.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                                           children: w,
                                                       }),
-                                                      (0, r.jsx)("div", { className: a()(y.unreadDot, y[A]) }),
+                                                      (0, r.jsx)("div", { className: a()(v.unreadDot, v[A]) }),
                                                   ],
                                               })
                                             : w,
@@ -157,7 +157,7 @@ function j() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
         { notificationCenterVariant: n } = (0, _.pN)({ location: "NotificationsInboxButton" }),
-        l = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
+        l = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
         a = i.useMemo(() => I.Z5c.CHANNEL(I.STv, null != l ? l : void 0), [l]),
         c = (0, E.mv)();
     return n === _.jP.SIDEBAR

@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(906732),
     y = n(82295),
     x = n(623624),
-    v = n(518738),
+    O = n(518738),
     j = n(850020),
-    O = n(48950),
+    v = n(48950),
     C = n(965376),
     I = n(159299),
     S = n(670188),
@@ -39,8 +39,8 @@ var r = n(951288),
     G = n(276264),
     H = n(981631),
     F = n(388032),
-    B = n(61722),
-    V = n(32482);
+    B = n(101265),
+    V = n(854641);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,8 +84,8 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
-            v = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
-            O = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
+            O = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
+            v = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
             C = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([E.Z], () => E.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
@@ -95,7 +95,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("96456")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("32646")]).then(
                                 n.bind(n, 654663),
                             );
                             return (n) => {
@@ -205,7 +205,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: _,
                             nick: null == h ? void 0 : h.nick,
-                            status: v,
+                            status: O,
                             activities: C,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -213,7 +213,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isTyping: d,
                             channel: t,
                             guildId: t.guild_id,
-                            isMobile: O,
+                            isMobile: v,
                             selected: K,
                             applicationStream: A,
                             premiumSince: null == X ? null : new Date(X),
@@ -237,7 +237,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = i.memo(function (e) {
         let { id: t, label: n, count: i, guildId: l } = e,
-            a = (0, v.p9)({
+            a = (0, O.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
@@ -254,7 +254,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                       count: i,
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(O.Z, z({ className: V.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(v.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)("span", {
                           "aria-hidden": !0,
                           children: [n, " \u2014 ", i],
@@ -368,7 +368,7 @@ function X(e) {
         x)
     )
         return (0, r.jsx)(J, { channel: t });
-    let v = o().omit(g.containerProps, ["ref"]),
+    let O = o().omit(g.containerProps, ["ref"]),
         j = M.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: s,
@@ -423,7 +423,7 @@ function X(e) {
                                     sections: u.map((e) => e.userIds.length),
                                     fade: !0,
                                 },
-                                v,
+                                O,
                                 e,
                             ),
                             l,

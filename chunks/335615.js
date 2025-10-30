@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(607070),
     y = n(100527),
     x = n(367907),
-    v = n(906732),
+    O = n(906732),
     j = n(493324),
-    O = n(611064),
+    v = n(611064),
     C = n(677432),
     I = n(178762),
     S = n(868671),
@@ -44,7 +44,7 @@ var r = n(951288),
     z = n(998502),
     W = n(981631),
     Y = n(388032),
-    q = n(32482);
+    q = n(854641);
 function K(e, t, n) {
     return (
         t in e
@@ -140,9 +140,9 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                 status: _,
                 channel: y,
                 guildId: x,
-                isTyping: v,
+                isTyping: O,
                 isMobileOnline: j,
-                premiumSince: O,
+                premiumSince: v,
                 nameplate: C,
             } = e,
             I = J(e, [
@@ -166,7 +166,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
             ]),
             S = i.useRef(null),
             [E, Z] = i.useState(!1),
-            T = null != O ? new Date(O) : null,
+            T = null != v ? new Date(v) : null,
             N = i.useCallback(
                 (e) => {
                     (0, f.jW)(e, async () => {
@@ -175,7 +175,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387)),
                             t = H.Z.isInChannel(k.Z.getVoiceChannelId(), d.id);
                         return (n) =>
@@ -251,7 +251,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: v,
+                            isTyping: O,
                             channel: y,
                             guildId: x,
                             isMobile: j,
@@ -456,7 +456,7 @@ class el extends i.Component {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                if ((0, O.R)(a)) return (0, i.createElement)(O.Z, X(Q({}, a), { key: "section-".concat(t) }));
+                if ((0, v.R)(a)) return (0, i.createElement)(v.Z, X(Q({}, a), { key: "section-".concat(t) }));
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
@@ -582,7 +582,7 @@ class el extends i.Component {
             ),
             K(this, "getContentFeedGroup", () => {
                 let e = this.props.groups[S.T];
-                if ((0, O.R)(e)) return e;
+                if ((0, v.R)(e)) return e;
             }),
             K(this, "hasContentFeed", () => null != this.getContentFeedGroup()),
             K(this, "getRowHeightComputer", () => {
@@ -667,7 +667,7 @@ class el extends i.Component {
 }
 function ea(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, v.ZP)(y.Z.MEMBER_LIST),
+        { analyticsLocations: l } = (0, O.ZP)(y.Z.MEMBER_LIST),
         s = (0, p.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         o = (0, p.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
@@ -702,7 +702,7 @@ function ea(e) {
             },
             [42],
         ),
-        O = i.useCallback(
+        v = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = b.current;
@@ -728,10 +728,10 @@ function ea(e) {
             id: "members-".concat(t.id),
             setFocus: j,
             isEnabled: s,
-            scrollToStart: O,
+            scrollToStart: v,
             scrollToEnd: C,
         });
-    return (0, r.jsx)(v.Gt, {
+    return (0, r.jsx)(O.Gt, {
         value: l,
         children: (0, r.jsx)("div", {
             className: a()(q.container, n),

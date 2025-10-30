@@ -10,17 +10,17 @@ var r = n(951288),
     d = n(998730),
     p = n(546247),
     f = n(430824),
-    h = n(768581),
-    m = n(302221),
+    m = n(768581),
+    h = n(302221),
     g = n(745752),
     _ = n(17181),
     b = n(388032),
-    E = n(76531),
-    O = n(718215);
+    E = n(812070),
+    O = n(904885);
 function I(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: l, width: I, height: v } = (0, c.ZP)(),
-        y = i.useCallback(() => {
+        { ref: l, width: I, height: y } = (0, c.ZP)(),
+        v = i.useCallback(() => {
             null != t &&
                 null != n &&
                 ((0, g.I1)(t),
@@ -34,7 +34,7 @@ function I(e) {
             () =>
                 null == C
                     ? null
-                    : h.ZP.getGuildSplashURL({
+                    : m.ZP.getGuildSplashURL({
                           id: C.id,
                           splash: C.splash,
                       }),
@@ -50,7 +50,7 @@ function I(e) {
                       className: O.artwork,
                       src: S,
                       width: I,
-                      height: v,
+                      height: y,
                       imageClassName: O.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
@@ -60,8 +60,8 @@ function I(e) {
                     className: O.gradient,
                     style: {
                         background: "linear-gradient(180deg, "
-                            .concat((0, m.aD)(T, 0.16), " 0%, ")
-                            .concat((0, m.aD)(T, 1), " 100%)"),
+                            .concat((0, h.aD)(T, 0.16), " 0%, ")
+                            .concat((0, h.aD)(T, 1), " 100%)"),
                     },
                 }),
             null != S && (0, r.jsx)("div", { className: O.gradient }),
@@ -87,7 +87,7 @@ function I(e) {
                         variant: "overlay-primary",
                         size: "md",
                         text: b.intl.string(b.t.VVFjAC),
-                        onClick: y,
+                        onClick: v,
                     }),
                 ],
             }),

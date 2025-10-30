@@ -3,11 +3,11 @@ var r = n(951288);
 n(647438);
 var l = n(907331),
     i = n(481060),
-    o = n(168020),
-    s = n(794324),
-    a = n(859788),
+    s = n(168020),
+    a = n(794324),
+    o = n(859788),
     c = n(388032),
-    u = n(449177);
+    u = n(80931);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,9 +42,9 @@ let g = (e) => {
             0.33,
             null != n,
         ),
-        { bannerUrl: p, bannerAnimatedUrl: f } = (0, s._M)(t),
-        C = null != t.textColor ? { color: t.textColor } : void 0,
-        h = null != t.body && "" !== t.body,
+        { bannerUrl: p, bannerAnimatedUrl: f } = (0, a._M)(t),
+        h = null != t.textColor ? { color: t.textColor } : void 0,
+        C = null != t.body && "" !== t.body,
         _ = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
         ref: g,
@@ -54,7 +54,7 @@ let g = (e) => {
                 className: u.banner,
                 children:
                     null != p &&
-                    (0, r.jsx)(a.Z, {
+                    (0, r.jsx)(o.Z, {
                         bannerStatic: p,
                         bannerAnimated: f,
                     }),
@@ -65,7 +65,7 @@ let g = (e) => {
                     className: u.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(o.R, {
+                            ? (0, r.jsx)(s.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })
@@ -74,21 +74,21 @@ let g = (e) => {
                             variant: "heading-xxl/bold",
                             className: u.title,
                             color: "header-primary",
-                            style: d({}, C),
+                            style: d({}, h),
                             children: t.title,
                         }),
-                        h || _
+                        C || _
                             ? (0, r.jsxs)(i.Text, {
                                   variant: "text-md/medium",
-                                  style: d({}, C),
+                                  style: d({}, h),
                                   children: [
-                                      h && t.body,
-                                      h && _ && " ",
+                                      C && t.body,
+                                      C && _ && " ",
                                       _ &&
                                           (0, r.jsx)(i.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,
-                                              style: d({}, C),
+                                              style: d({}, h),
                                               children: c.intl.string(c.t.O7ADgv),
                                           }),
                                   ],

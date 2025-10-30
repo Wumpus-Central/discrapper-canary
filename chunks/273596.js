@@ -10,17 +10,17 @@ var r = n(951288),
     d = n(626135),
     p = n(823379),
     f = n(900849),
-    h = n(356164),
-    m = n(164991),
+    m = n(356164),
+    h = n(164991),
     g = n(726115),
     _ = n(28494),
     b = n(746728),
     E = n(140700),
     O = n(665807),
     I = n(188493),
-    v = n(294330),
-    y = n(981631),
-    C = n(857847);
+    y = n(294330),
+    v = n(981631),
+    C = n(17923);
 let S = Object.freeze({
         top: 0,
         bottom: 0,
@@ -34,9 +34,9 @@ let S = Object.freeze({
         right: 32,
     }),
     N = {
-        page: y.ZY5.GUILD_DISCOVERY,
-        object: y.qAy.CARD,
-        section: y.jXE.DISCOVER_SEARCH,
+        page: v.ZY5.GUILD_DISCOVERY,
+        object: v.qAy.CARD,
+        section: v.jXE.DISCOVER_SEARCH,
     },
     j = o().throttle(f.c6, 1000, {
         leading: !1,
@@ -44,7 +44,7 @@ let S = Object.freeze({
     });
 function P(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: f, searchResultsQuery: y, loadMore: P, searchCategoryId: x } = (0, _.f)({ loadId: t }),
+        { guildIds: o, loading: f, searchResultsQuery: v, loadMore: P, searchCategoryId: x } = (0, _.f)({ loadId: t }),
         A = 0 === o.length && !f,
         Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, g.PM)()),
@@ -74,17 +74,17 @@ function P(e) {
         F = (0, u.y)(V, [R, H]);
     i.useEffect(() => {
         L((0, g.PM)());
-    }, [y]),
+    }, [v]),
         i.useEffect(() => {
             j({
                 loadId: t,
                 searchId: w,
-                query: y,
-                guildResults: o.map(h.Z.getGuild).filter(p.lm),
+                query: v,
+                guildResults: o.map(m.Z.getGuild).filter(p.lm),
                 analyticsContext: Z,
                 categoryId: x,
             });
-        }, [Z, o, t, x, w, y]);
+        }, [Z, o, t, x, w, v]);
     let z = i.useCallback((e) => n(e, x), [n, x]),
         Y = i.useMemo(() => (f ? [o.length, 0] : [o.length]), [o.length, f]),
         W = i.useCallback(
@@ -158,7 +158,7 @@ function P(e) {
                 var i, a;
                 await l(e, t, n, r);
                 let s = null == (a = B.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
-                null != s && m.Z.setState({ scrollPosition: s });
+                null != s && h.Z.setState({ scrollPosition: s });
             },
             [l],
         ),
@@ -171,7 +171,7 @@ function P(e) {
                         "div",
                         {
                             style: n,
-                            children: (0, r.jsx)(v.ZP, {
+                            children: (0, r.jsx)(y.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await J(e, t, x, N),
                                 onView: (e) => z(e),
@@ -188,11 +188,11 @@ function P(e) {
         return () => {
             var t;
             let n = null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollTop;
-            null != n && m.Z.setState({ scrollPosition: n });
+            null != n && h.Z.setState({ scrollPosition: n });
         };
     }, []),
         i.useLayoutEffect(() => {
-            let e = m.Z.getField("scrollPosition");
+            let e = h.Z.getField("scrollPosition");
             null != e &&
                 setTimeout(() => {
                     var t;
@@ -201,7 +201,7 @@ function P(e) {
                             to: e,
                             animate: !1,
                             callback: () => {
-                                m.Z.setState({ scrollPosition: null });
+                                h.Z.setState({ scrollPosition: null });
                             },
                         });
                 });

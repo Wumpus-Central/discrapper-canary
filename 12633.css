@@ -31281,6 +31281,11 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     vertical-align: top
 }
 
+.optionPill__1464f .optionPill__1464f {
+    margin-block: 0;
+    max-width: none
+}
+
 .optionPillKey__1464f {
     border-end-start-radius: 4px;
     border-start-start-radius: 4px;
@@ -31348,7 +31353,8 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     display: inline-block
 }
 
-.gameMention__1464f {
+.gameMention__1464f,
+.timestampMention__1464f {
     display: inline-flex;
     margin: -4px 0 -8px
 }
@@ -33151,6 +33157,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     margin-inline-end: 3px
 }
 
+.tabular__6b453 {
+    font-variant-numeric: tabular-nums
+}
+
 .syntaxAfter_ada32f,
 .syntaxBefore_ada32f {
     font-weight: var(--font-weight-semibold)
@@ -34845,6 +34855,17 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 .createThreadButton__841c8 {
     margin-inline: 8px;
     white-space: nowrap
+}
+
+.bar_d90114 {
+    align-items: center;
+    background: var(--background-surface-higher);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: start;
+    padding: var(--space-8) var(--space-16)
 }
 
 .small__258ba {

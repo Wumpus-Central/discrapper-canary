@@ -12,32 +12,32 @@ var a = n(951288),
     p = n(507808),
     h = n(981631),
     x = n(388032),
-    f = n(97127),
-    b = n(665923),
-    g = n(477154),
+    g = n(270469),
+    f = n(892260),
+    b = n(477154),
     v = n(387888);
 let j = () => {
         let e = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, a.jsx)("div", {
-            className: f.assetContainer,
+            className: g.assetContainer,
             children: e
                 ? (0, a.jsx)("img", {
-                      src: g.Z,
-                      className: f.orbAsset,
+                      src: b.Z,
+                      className: g.orbAsset,
                       alt: "Orb",
                   })
                 : (0, a.jsxs)(u.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: f.orbAsset,
+                      className: g.orbAsset,
                       children: [
                           (0, a.jsx)("source", {
                               src: v.Z,
                               type: "video/webm",
                           }),
                           (0, a.jsx)("img", {
-                              src: g.Z,
-                              className: f.orbAsset,
+                              src: b.Z,
+                              className: g.orbAsset,
                               alt: "Orb",
                           }),
                       ],
@@ -61,7 +61,7 @@ let j = () => {
                     });
             }, [l]);
         return (0, a.jsxs)("div", {
-            className: i()(f.container, b.baseCardOutline),
+            className: i()(g.container, f.baseCardOutline),
             children: [
                 (0, a.jsx)(j, {}),
                 (0, a.jsx)(s.zxk, {
@@ -72,19 +72,19 @@ let j = () => {
                     fullWidth: !0,
                 }),
                 (0, a.jsxs)("div", {
-                    className: f.linkContainer,
+                    className: g.linkContainer,
                     children: [
                         void 0 !== o &&
                             (0, a.jsxs)(c.Text, {
                                 variant: "text-xs/normal",
-                                className: f.linkPreText,
+                                className: g.linkPreText,
                                 children: [o, "\xA0"],
                             }),
                         (0, a.jsx)(c.Anchor, {
                             target: "_blank",
                             rel: "author",
                             href: m.Z.getArticleURL(h.BhN.ORBS_FAQ),
-                            className: f.learnMoreLink,
+                            className: g.learnMoreLink,
                             onClick: u,
                             children: d,
                         }),

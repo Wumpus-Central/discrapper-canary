@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => C,
-    NK: () => x,
+    I: () => E,
+    NK: () => C,
 }),
     n(388685);
 var r,
@@ -13,9 +13,9 @@ var r,
     u = n(695346),
     d = n(885110),
     p = n(223730),
-    f = n(500275),
+    f = n(959067),
     h = n(388032),
-    g = n(87587),
+    g = n(515438),
     m = n(354810);
 function b(e) {
     let { closePopout: t } = e;
@@ -107,7 +107,7 @@ function y(e) {
         ],
     });
 }
-function j(e) {
+function v(e) {
     let { closePopout: t } = e;
     return (0, i.jsxs)(O, {
         children: [
@@ -147,7 +147,7 @@ function j(e) {
         ],
     });
 }
-function v(e) {
+function j(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
     return (0, i.jsxs)(O, {
@@ -166,7 +166,7 @@ function v(e) {
         ],
     });
 }
-var x =
+var C =
     (((r = {})[(r.ActivityNux = 0)] = "ActivityNux"),
     (r[(r.StatusNux = 1)] = "StatusNux"),
     (r[(r.ActivityAndStatusNux = 2)] = "ActivityAndStatusNux"),
@@ -174,7 +174,7 @@ var x =
     (r[(r.Status = 4)] = "Status"),
     (r[(r.ActivityAndStatus = 5)] = "ActivityAndStatus"),
     r);
-function C(e) {
+function E(e) {
     let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
         [g, b] = (0, l.useState)(n),
         _ = (0, l.useRef)(null),
@@ -233,27 +233,27 @@ function C(e) {
                 case 4:
                     return {
                         type: "popout",
-                        children: j,
+                        children: v,
                     };
                 case 5:
                     return {
                         type: "popout",
-                        children: v,
+                        children: j,
                     };
                 default:
                     return null;
             }
         })(g),
-        x = (0, l.useRef)(t);
+        C = (0, l.useRef)(t);
     if (
         ((0, l.useEffect)(() => {
-            t && !x.current && b(n), t !== x.current && (x.current = t);
+            t && !C.current && b(n), t !== C.current && (C.current = t);
         }, [n, t]),
         null == O || !t)
     )
         return d;
     if ("popover" === O.type) {
-        var C, E;
+        var E, x;
         let { action: e, title: t, body: n, textLink: l } = O;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -272,7 +272,7 @@ function C(e) {
                         src: m.Z,
                     },
                     actions: [
-                        ((C = (function (e) {
+                        ((E = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -297,7 +297,7 @@ function C(e) {
                             }
                             return e;
                         })({}, e)),
-                        (E = E =
+                        (x = x =
                             {
                                 onClick: (t) => {
                                     var n;
@@ -305,7 +305,7 @@ function C(e) {
                                 },
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(C, Object.getOwnPropertyDescriptors(E))
+                            ? Object.defineProperties(E, Object.getOwnPropertyDescriptors(x))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -313,10 +313,10 @@ function C(e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(E)).forEach(function (e) {
-                                  Object.defineProperty(C, e, Object.getOwnPropertyDescriptor(E, e));
+                              })(Object(x)).forEach(function (e) {
+                                  Object.defineProperty(E, e, Object.getOwnPropertyDescriptor(x, e));
                               }),
-                        C),
+                        E),
                     ],
                 }),
                 d,

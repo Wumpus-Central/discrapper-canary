@@ -12,17 +12,17 @@ var a = n(951288),
     p = n(420846),
     h = n(63063),
     x = n(168107),
-    f = n(480916),
-    b = n(352138),
-    g = n(629235),
+    g = n(480916),
+    f = n(352138),
+    b = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(153177),
+    _ = n(953334),
     y = n(388032),
-    C = n(70402),
+    C = n(450192),
     S = n(736056);
 let E = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: E, onComplete: O, dismissable: T, classificationId: N } = e,
+    let { transitionState: t, entryPoint: n, onClose: E, onComplete: T, dismissable: O, classificationId: N } = e,
         [P, I] = r.useState(o.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         w = r.useRef(P),
         [k, R] = (0, c.US)([P], void 0, !0),
@@ -32,9 +32,9 @@ let E = function (e) {
     r.useEffect(() => {
         w.current = k;
     }, [k]);
-    let { loading: M, ageVerificationMethods: L } = (0, g.Z)({
+    let { loading: L, ageVerificationMethods: M } = (0, b.Z)({
         onClose: () => {
-            null == O || O(), E();
+            null == T || T(), E();
         },
         onMethodClick: () => {
             I(o.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
@@ -56,13 +56,13 @@ let E = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, f.lA)(A, f.d_.EXPRESSIVE_PRIMARY, n);
+            (0, g.lA)(A, g.d_.EXPRESSIVE_PRIMARY, n);
         }, [A, n]),
         (0, a.jsx)(i.ExpressiveModal, {
             transitionState: t,
             onClose: E,
             gradientColor: "blue",
-            dismissable: T,
+            dismissable: O,
             graphic: {
                 type: "image",
                 src: S.Z,
@@ -73,7 +73,7 @@ let E = function (e) {
                 : y.intl.format(_.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
                           x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                              (0, f.x3)(A, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                              (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
                       },
                   }),
             actionBarInput: Z
@@ -82,7 +82,7 @@ let E = function (e) {
                       children: y.intl.format(_.default.htWh1G, {
                           handleOnHelpUrlHook: () => {
                               x.Z.openUrl(j.sQ.LEARN_MORE_UU_APPEAL_LINK),
-                                  (0, f.x3)(A, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
+                                  (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
                           },
                       }),
                   })
@@ -91,7 +91,7 @@ let E = function (e) {
                       textVariant: "text-sm/medium",
                       text: y.intl.string(y.t["2jxGer"]),
                       onClick: () => {
-                          (0, f.x3)(A, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT),
+                          (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LOG_OUT),
                               (0, u.R)("age_verification_get_started_modal");
                       },
                   }),
@@ -123,7 +123,7 @@ let E = function (e) {
                             }),
                         ],
                     }),
-                    null == L || 0 === L.length
+                    null == M || 0 === M.length
                         ? (0, a.jsxs)(s.Kqy, {
                               direction: "vertical",
                               align: "center",
@@ -139,7 +139,7 @@ let E = function (e) {
                                       size: "sm",
                                       text: y.intl.string(_.default.hDvmYP),
                                       onClick: () => {
-                                          (0, b.Jh)();
+                                          (0, f.Jh)();
                                       },
                                   }),
                               ],
@@ -147,7 +147,7 @@ let E = function (e) {
                         : (0, a.jsx)(s.Kqy, {
                               direction: "vertical",
                               gap: 8,
-                              children: L.map((e) => {
+                              children: M.map((e) => {
                                   let { title: t, description: n, onClick: r } = e;
                                   return (0, a.jsx)(
                                       d.JZ,
@@ -155,7 +155,7 @@ let E = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: M,
+                                          buttonDisabled: L,
                                           onButtonPress: () => r(A),
                                       },
                                       t,

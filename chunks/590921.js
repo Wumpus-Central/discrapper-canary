@@ -67,6 +67,7 @@ var a = (function (e) {
             (e.COMMAND_OPTIONS = "COMMAND_OPTIONS"),
             (e.CHOICES = "CHOICES"),
             (e.GAME = "GAME"),
+            (e.TIMESTAMPS = "TIMESTAMPS"),
             e
         );
     })({}),
@@ -85,6 +86,7 @@ var a = (function (e) {
             (e.CHOICE = "CHOICE"),
             (e.EMOJI_UPSELL = "EMOJI_UPSELL"),
             (e.GAME_MENTION = "GAME_MENTION"),
+            (e.TIMESTAMP = "TIMESTAMP"),
             e
         );
     })({}),

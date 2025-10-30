@@ -17,11 +17,11 @@ var r,
     _ = n(576855),
     O = n(313201),
     y = n(991346),
-    j = n(592125),
-    v = n(888369),
-    x = n(430824),
-    C = n(158776),
-    E = n(306680),
+    v = n(592125),
+    j = n(888369),
+    C = n(430824),
+    E = n(158776),
+    x = n(306680),
     S = n(944486),
     I = n(938475),
     P = n(483360),
@@ -35,7 +35,7 @@ var r,
     L = n(558631),
     M = n(981631),
     k = n(388032),
-    G = n(712198);
+    G = n(227129);
 function U(e, t, n) {
     return (
         t in e
@@ -102,7 +102,7 @@ let V = () =>
     });
 class H extends (r = l.Component) {
     render() {
-        let e = x.Z.getGuild(this.props.channel.guild_id);
+        let e = C.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             R.$W,
             F(B({}, this.props), {
@@ -115,13 +115,13 @@ class H extends (r = l.Component) {
     }
 }
 U(H, "defaultProps", { unread: !1 });
-let z = c.ZP.connectStores([E.ZP, j.Z], (e) => {
+let z = c.ZP.connectStores([x.ZP, v.Z], (e) => {
         let { channel: t } = e;
         return {
-            unread: E.ZP.hasUnread(t.id),
-            mentions: E.ZP.getMentionCount(t.id),
-            isMentionLowImportance: E.ZP.getIsMentionLowImportance(t.id),
-            category: j.Z.getChannel(t.parent_id),
+            unread: x.ZP.hasUnread(t.id),
+            mentions: x.ZP.getMentionCount(t.id),
+            isMentionLowImportance: x.ZP.getIsMentionLowImportance(t.id),
+            category: v.Z.getChannel(t.parent_id),
         };
     })(H),
     W = c.ZP.connectStores([I.ZP], (e) => {
@@ -130,30 +130,30 @@ let z = c.ZP.connectStores([E.ZP, j.Z], (e) => {
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: I.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(H),
-    K = c.ZP.connectStores([v.default], (e) => {
+    K = c.ZP.connectStores([j.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: j.default.hasUnread(t.id) };
     })(R.ic),
-    Y = c.ZP.connectStores([E.ZP, C.Z], (e) => {
+    Y = c.ZP.connectStores([x.ZP, E.Z], (e) => {
         var t;
         let { channel: n } = e,
             r = null,
-            i = C.Z.getState().statuses;
+            i = E.Z.getState().statuses;
         return (
             (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === M.Skl.ONLINE)) && (r = M.Skl.ONLINE),
             {
-                mentions: E.ZP.getMentionCount(n.id),
+                mentions: x.ZP.getMentionCount(n.id),
                 status: r,
             }
         );
     })(R.PZ),
-    q = c.ZP.connectStores([j.Z, E.ZP, C.Z], (e) => {
+    q = c.ZP.connectStores([v.Z, x.ZP, E.Z], (e) => {
         let { user: t } = e,
-            n = j.Z.getDMFromUserId(t.id);
+            n = v.Z.getDMFromUserId(t.id);
         return {
-            mentions: null != n ? E.ZP.getMentionCount(n) : 0,
-            status: C.Z.getStatus(t.id),
-            isMobile: C.Z.isMobileOnline(t.id),
+            mentions: null != n ? x.ZP.getMentionCount(n) : 0,
+            status: E.Z.getStatus(t.id),
+            isMobile: E.Z.isMobileOnline(t.id),
         };
     })(R.n5);
 function X(e, t, n) {
@@ -332,16 +332,16 @@ class Q extends l.PureComponent {
                                 n.e("51453"),
                                 n.e("7654"),
                                 n.e("845"),
-                                n.e("86736"),
+                                n.e("99063"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("44686"),
                                 n.e("30378"),
-                                n.e("64982"),
+                                n.e("29679"),
                                 n.e("22516"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("73709"),
+                                n.e("8209"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
@@ -356,7 +356,7 @@ class Q extends l.PureComponent {
                     case g.h8.TEXT_CHANNEL:
                     case g.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = x.Z.getGuild(r.getGuildId());
+                            l = C.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case M.d4z.GUILD_TEXT:

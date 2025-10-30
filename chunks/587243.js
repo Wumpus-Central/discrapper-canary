@@ -8,14 +8,14 @@ n(647438);
 var r = n(722770),
     l = n(481060),
     i = n(734934),
-    o = n(158238),
+    o = n(29699),
     s = n(695346),
     c = n(70956),
     d = n(51144),
     u = n(246133),
     m = n(981631),
     p = n(388032),
-    h = n(54482);
+    h = n(138005);
 let x = [
         {
             duration: 15 * c.Z.Millis.MINUTE,
@@ -42,8 +42,8 @@ let x = [
             label: () => p.intl.string(p.t["46dqJY"]),
         },
     ],
-    f = "forever";
-function g(e, t) {
+    g = "forever";
+function f(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
 function b(e) {
@@ -65,7 +65,7 @@ function b(e) {
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : f,
+                    null != r ? r : g,
                 );
             }),
         });
@@ -110,10 +110,10 @@ function b(e) {
 function v(e) {
     if (null == e || "0" === e) return;
     let t = new Date(Number(e)),
-        n = g(t, new Date()),
+        n = f(t, new Date()),
         a = new Date();
     a.setDate(a.getDate() + 1);
-    let r = g(t, a);
+    let r = f(t, a);
     return n
         ? p.intl.formatToPlainString(p.t.ZxxHIO, { timeString: p.intl.data.formatTime(t, { format: "short" }) })
         : p.intl.formatToPlainString(p.t["9OFjSe"], {
@@ -129,7 +129,7 @@ function j(e) {
         c = o.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
         d = s.fv.useSetting(),
         u = e === m.Skl.DND,
-        g = (n) => {
+        f = (n) => {
             let a = v(t);
             if (e === n && null != a) return a;
             switch (n) {
@@ -154,7 +154,7 @@ function j(e) {
                         },
                         dontCloseOnAction: !0,
                     },
-                    null != n ? n : f,
+                    null != n ? n : g,
                 );
             }),
         }),
@@ -165,17 +165,17 @@ function j(e) {
         y = b({
             status: m.Skl.IDLE,
             currentStatus: e,
-            description: g(m.Skl.IDLE),
+            description: f(m.Skl.IDLE),
         }),
         C = b({
             status: m.Skl.DND,
             currentStatus: e,
-            description: g(m.Skl.DND),
+            description: f(m.Skl.DND),
         }),
         S = b({
             status: m.Skl.INVISIBLE,
             currentStatus: e,
-            description: g(m.Skl.INVISIBLE),
+            description: f(m.Skl.INVISIBLE),
         });
     return (0, a.jsxs)(a.Fragment, {
         children: [

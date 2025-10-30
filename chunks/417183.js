@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(239091),
     d = n(617015),
-    p = n(67165);
+    p = n(165342);
 function f(e, t, n) {
     return (
         t in e
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -96,8 +96,8 @@ class g extends i.PureComponent {
                     },
                     children: (0, r.jsx)(
                         s.Z.div,
-                        m(
-                            h(
+                        h(
+                            m(
                                 {
                                     className: a()(g, p.peopleListItem, null != _ ? { [_]: f || i } : null, {
                                         [p.active]: f || i,
@@ -143,7 +143,7 @@ class g extends i.PureComponent {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
                                 n.bind(n, 881351),
                             );
-                            return (n) => (0, r.jsx)(e, m(h({}, n), { user: t }));
+                            return (n) => (0, r.jsx)(e, h(m({}, n), { user: t }));
                         },
                         {
                             onClose: () => {

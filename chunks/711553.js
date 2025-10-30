@@ -1,39 +1,39 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var i = n(951288),
     r = n(647438),
-    s = n(120356),
-    o = n.n(s),
-    l = n(481060),
-    a = n(518084),
+    o = n(120356),
+    l = n.n(o),
+    a = n(481060),
+    s = n(518084),
     c = n(981631),
     d = n(388032),
-    u = n(71264);
-let p = function (e) {
+    u = n(924957);
+let h = function (e) {
     let t,
-        { title: n, header: s, children: p, renderSettings: h, onDragStart: f } = e,
+        { title: n, header: o, children: h, renderSettings: p, onDragStart: f } = e,
         g = r.useRef(null);
     return (
         (t =
             null != n
-                ? (0, i.jsxs)(a.ZP.Bar, {
-                      className: o()(u.header, u.draggableStartArea),
+                ? (0, i.jsxs)(s.ZP.Bar, {
+                      className: l()(u.header, u.draggableStartArea),
                       onMouseDown: f,
                       children: [
-                          (0, i.jsx)(a.ZP.Content, {
-                              className: o()(u.headerTitle, u.draggableStartArea),
+                          (0, i.jsx)(s.ZP.Content, {
+                              className: l()(u.headerTitle, u.draggableStartArea),
                               dynamicSize: !0,
                               children: n,
                           }),
-                          (0, i.jsx)(a.ZP.Content, {
-                              children: (0, i.jsx)(l.yRy, {
+                          (0, i.jsx)(s.ZP.Content, {
+                              children: (0, i.jsx)(a.yRy, {
                                   targetElementRef: g,
                                   position: "right",
-                                  renderPopout: null != h ? h : c.dG4,
+                                  renderPopout: null != p ? p : c.dG4,
                                   autoInvert: !1,
                                   children: (e) => {
                                       var t, n;
                                       return (0, i.jsx)(
-                                          a.ZP.Icon,
+                                          s.ZP.Icon,
                                           ((t = (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -61,7 +61,7 @@ let p = function (e) {
                                           })({}, e)),
                                           (n = n =
                                               {
-                                                  icon: l.ewm,
+                                                  icon: a.ewm,
                                                   label: d.intl.string(d.t["3D5yo/"]),
                                                   ref: g,
                                               }),
@@ -84,14 +84,14 @@ let p = function (e) {
                           }),
                       ],
                   })
-                : s),
+                : o),
         (0, i.jsxs)("div", {
             className: u.sidebar,
             children: [
                 t,
                 (0, i.jsx)("div", {
                     className: u.children,
-                    children: p,
+                    children: h,
                 }),
             ],
         })

@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(271383),
     w = n(542578),
     D = n(375954),
-    L = n(496675),
-    x = n(699516),
+    x = n(496675),
+    L = n(699516),
     M = n(594174),
     k = n(768581),
     j = n(176354),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(995774),
     V = n(981631),
     H = n(388032),
-    Y = n(302854),
-    W = n(197571);
+    Y = n(629969),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -246,8 +246,8 @@ function ea(e) {
         d = (0, u.e7)([N.default], () => N.default.getId()),
         f = (0, u.e7)([M.default], () => M.default.getUser(n.id), [n]),
         p = (0, A.$R)(a),
-        g = (0, u.e7)([L.Z], () => L.Z.can(V.Plq.MANAGE_MESSAGES, a) && p) || d === n.id,
-        b = (0, u.e7)([P.ZP, R.Z, x.Z], () => U.ZP.getName(o, a.id, n));
+        g = (0, u.e7)([x.Z], () => x.Z.can(V.Plq.MANAGE_MESSAGES, a) && p) || d === n.id,
+        b = (0, u.e7)([P.ZP, R.Z, L.Z], () => U.ZP.getName(o, a.id, n));
     function y() {
         Z.WO({
             channelId: a.id,

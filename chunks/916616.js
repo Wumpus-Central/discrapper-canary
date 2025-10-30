@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(981631),
     h = n(217702),
     m = n(388032),
-    g = n(12464),
+    g = n(609966),
     E = n(167969),
     b = n(557256);
 function y(e, t, n) {
@@ -106,8 +106,8 @@ let A = i.forwardRef((e, t) => {
             minWidth: P = 0,
             minHeight: w = 0,
             mediaLayoutType: D,
-            limitResponsiveWidth: L = !0,
-            accessory: x,
+            limitResponsiveWidth: x = !0,
+            accessory: L,
             zoomable: M = !0,
             original: k,
             children: j = (e) => {
@@ -189,7 +189,7 @@ let A = i.forwardRef((e, t) => {
         }));
     let q = null != U ? U() : null;
     return (
-        (q = null != q ? q : x),
+        (q = null != q ? q : L),
         (0, r.jsx)(l.tEY, {
             ringTarget: Y,
             focusTarget: W,
@@ -209,7 +209,7 @@ let A = i.forwardRef((e, t) => {
                                 },
                                 a,
                             ),
-                            style: N(K, L, F, D),
+                            style: N(K, x, F, D),
                         },
                         H,
                     ),

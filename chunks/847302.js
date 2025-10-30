@@ -31,7 +31,7 @@ let _ =
         "timestamp",
         "gameMention",
     ]),
-    h = new Set(["gameMentionInput"]),
+    h = new Set(["gameMentionInput", "timestampMentionInput"]),
     m = new Set(["line", "blockQuote"]),
     g = new Set(["applicationCommandOption"]);
 function E(e, t, n) {
@@ -216,6 +216,12 @@ function v(e, t, n, r) {
                     type: "gameMention",
                     applicationId: u.data.id,
                     children: [{ text: "" }],
+                };
+                break;
+            case "timestampMentionInput":
+                l = {
+                    type: "timestampMentionInput",
+                    children: [{ text: u.data.content }],
                 };
                 break;
             default:

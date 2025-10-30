@@ -64,7 +64,7 @@ function p(e, t) {
         e
     );
 }
-let h = ["gameMentionInput"];
+let h = ["gameMentionInput", "timestampMentionInput"];
 function m() {
     return {
         query: null,
@@ -89,7 +89,7 @@ class g extends r.EventEmitter {
                 this.props.optionText !== e.optionText,
             i = this.props.isEditorIdle !== e.isEditorIdle;
         if (((this.props = e), n || r || i))
-            this.updateResults(r, n),
+            this.updateResultsDebounced(r, n),
                 this.state.didInitialQuery || (this.state = p(f({}, this.state), { didInitialQuery: !0 }));
         else if (t) {
             let e = this.state.query;
@@ -144,10 +144,24 @@ class g extends r.EventEmitter {
         });
     }
     queryResults() {
-        this.updateResults();
+        this.updateResultsDebounced();
     }
     isVisible() {
         return this.state.isVisible;
+    }
+    updateResultsDebounced() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        null != this.updateTimeout && clearTimeout(this.updateTimeout);
+        let n = this;
+        (this.nextUpdateQueryChanged = this.nextUpdateQueryChanged || e),
+            (this.nextUpdateContextChanged = this.nextUpdateContextChanged || t),
+            (this.updateTimeout = setTimeout(() => {
+                n.updateResults(this.nextUpdateQueryChanged, this.nextUpdateContextChanged),
+                    (this.nextUpdateQueryChanged = !1),
+                    (this.nextUpdateContextChanged = !1),
+                    (this.updateTimeout = void 0);
+            }, 0));
     }
     updateResults() {
         var e, t;
@@ -249,6 +263,13 @@ class g extends r.EventEmitter {
             }
     }
     constructor(e) {
-        super(), d(this, "props", void 0), d(this, "state", void 0), (this.props = e), (this.state = m());
+        super(),
+            d(this, "props", void 0),
+            d(this, "state", void 0),
+            d(this, "nextUpdateQueryChanged", !1),
+            d(this, "nextUpdateContextChanged", !1),
+            d(this, "updateTimeout", void 0),
+            (this.props = e),
+            (this.state = m());
     }
 }

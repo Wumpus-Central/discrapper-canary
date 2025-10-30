@@ -18,19 +18,19 @@ var i = n(120356),
     _ = n(938475),
     O = n(823379),
     y = n(709054),
-    j = n(853856),
-    v = n(981631),
-    x = n(388032),
-    C = n(132789),
-    E = n(78480);
+    v = n(853856),
+    j = n(981631),
+    C = n(388032),
+    E = n(102647),
+    x = n(395530);
 function S(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)("div", {
-              className: C.row,
+              className: E.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: C.activityIcon,
+                      className: E.activityIcon,
                       color: "currentColor",
                   }),
                   (0, r.jsx)(p.ZP, {
@@ -42,15 +42,15 @@ function S(e, t) {
           });
 }
 function I() {
-    let e = (0, s.Wu)([j.Z, m.Z], () =>
+    let e = (0, s.Wu)([v.Z, m.Z], () =>
             y.default
-                .keys(j.Z.getFavoriteChannels())
+                .keys(v.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
                 .filter(O.lm),
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === v.d4z.GUILD_VOICE),
-        i = e.filter((e) => e.type === v.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
+        i = e.filter((e) => e.type === j.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, s.Wu)(
             [_.ZP],
             () =>
@@ -72,12 +72,12 @@ function I() {
                     }),
             ),
         ),
-        x = (0, s.e7)([f.Z], () => {
+        C = (0, s.e7)([f.Z], () => {
             let e = 0;
             for (let t of i) e += f.Z.getParticipantCount(t, h.pV.AUDIENCE);
             return e;
         }),
-        E = (0, s.Wu)(
+        x = (0, s.Wu)(
             [g.Z],
             () =>
                 g.Z.getAllApplicationStreams()
@@ -99,21 +99,21 @@ function I() {
             return n;
         }, [t]),
         P = (0, s.Wu)([b.default], () => I.map((e) => b.default.getUser(e)), [I]),
-        N = (0, s.Wu)([b.default], () => E.map((e) => b.default.getUser(e)), [E]),
+        N = (0, s.Wu)([b.default], () => x.map((e) => b.default.getUser(e)), [x]),
         Z = S(
             c.gj8,
-            l.filter((e) => !E.includes(e.id) && !I.includes(e.id)),
+            l.filter((e) => !x.includes(e.id) && !I.includes(e.id)),
         ),
         T =
             0 === o.length
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: C.row,
+                      className: E.row,
                       children: [
                           (0, r.jsx)(c.ewx, {
                               size: "lg",
                               color: "currentColor",
-                              className: C.activityIcon,
+                              className: E.activityIcon,
                           }),
                           (0, r.jsx)(p.ZP, {
                               guildId: void 0,
@@ -121,17 +121,17 @@ function I() {
                               max: 3,
                           }),
                           (0, r.jsxs)("div", {
-                              className: C.stageListenerPill,
+                              className: E.stageListenerPill,
                               children: [
                                   (0, r.jsx)(c.VWR, {
                                       size: "xs",
                                       color: "currentColor",
                                   }),
                                   (0, r.jsx)(c.Text, {
-                                      className: C.stageListenerCount,
+                                      className: E.stageListenerCount,
                                       color: "text-default",
                                       variant: "text-xs/medium",
-                                      children: x,
+                                      children: C,
                                   }),
                               ],
                           }),
@@ -151,10 +151,10 @@ function P() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: l()(C.row, C.rowGuildName),
+                className: l()(E.row, E.rowGuildName),
                 children: (0, r.jsx)("span", {
-                    className: l()(C.guildNameText, C.guildNameTextLimitedSize),
-                    children: x.intl.string(x.t.wMWyci),
+                    className: l()(E.guildNameText, E.guildNameTextLimitedSize),
+                    children: C.intl.string(C.t.wMWyci),
                 }),
             }),
             (0, r.jsx)(I, {}),
@@ -169,7 +169,7 @@ function N(e) {
         position: "right",
         text: (0, r.jsx)(P, {}),
         "aria-label": t,
-        tooltipClassName: E.listItemTooltip,
+        tooltipClassName: x.listItemTooltip,
         onTooltipShow: n,
         children: (e) => {
             var t, n;

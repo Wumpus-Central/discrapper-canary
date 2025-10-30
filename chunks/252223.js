@@ -27,7 +27,7 @@ var r = n(951288),
     N = n(556638),
     R = n(981631),
     P = n(388032),
-    w = n(80568);
+    w = n(666998);
 function D(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,7 +74,7 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -144,8 +144,8 @@ function Z(e) {
         hideTooltip: D = !1,
     } = e;
     (0, _.Z)(null == t ? void 0 : t.id);
-    let x = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        k = (0, m.Cf)(x),
+    let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        k = (0, m.Cf)(L),
         j = (0, E.E)("ActivityStatus", l),
         Z = i.useMemo(() => {
             var e, t;
@@ -196,7 +196,7 @@ function Z(e) {
         W = (null == t ? void 0 : t.bot) === !0,
         K = (0, c.e7)([y.Z], () => y.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (null == Z ? void 0 : Z.state) != null,
-        q = null != x,
+        q = null != L,
         X = !q && null != l,
         Q = H.length + (q || X ? 1 : 0),
         J = Q > 1,
@@ -210,9 +210,9 @@ function Z(e) {
     let et = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = !0 === e || D;
-            if (null != x)
+            if (null != L)
                 return (0, r.jsx)(T.Z, {
-                    stream: x,
+                    stream: L,
                     game: Y,
                     textVariant: "text-".concat(h, "/medium"),
                     textClassName: d,
@@ -253,14 +253,14 @@ function Z(e) {
                     canTruncate: !1,
                 };
             return (
-                null != x &&
+                null != L &&
                     e.push(
                         (0, r.jsx)(
                             T.Z,
                             M(
-                                L(
+                                x(
                                     {
-                                        stream: x,
+                                        stream: L,
                                         game: null == n ? void 0 : n.find(f.Z),
                                     },
                                     t,
@@ -271,9 +271,9 @@ function Z(e) {
                         ),
                     ),
                 H.forEach((n, i) => {
-                    e.push((0, r.jsx)(A.Z, L({ activity: n }, t), "activity-".concat(i)));
+                    e.push((0, r.jsx)(A.Z, x({ activity: n }, t), "activity-".concat(i)));
                 }),
-                X && e.push((0, r.jsx)(C.Z, M(L({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                X && e.push((0, r.jsx)(C.Z, M(x({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
@@ -302,7 +302,7 @@ function Z(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    M(L({ className: o()(w.activityContainer, $ && w.iconOnly) }, e), {
+                                    M(x({ className: o()(w.activityContainer, $ && w.iconOnly) }, e), {
                                         children: [et(!0), er()],
                                     }),
                                 ),

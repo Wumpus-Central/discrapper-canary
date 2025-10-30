@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(233398),
     g = n(866419),
     E = n(771934),
-    b = n(531421),
+    b = n(24864),
     y = n(388032),
-    O = n(209289);
+    O = n(970281);
 function v() {
     return (0, r.jsx)("div", {
         className: O.loader,
@@ -110,10 +110,10 @@ function P(e) {
                 (e[v] = t), s(e);
             }
         },
-        L = i.useCallback((e) => {
+        x = i.useCallback((e) => {
             P(e.hex);
         }, []),
-        x = (e) => {
+        L = (e) => {
             if (((0, E.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
                 (t[v] = e.hex), s(t);
@@ -155,8 +155,8 @@ function P(e) {
                     onColorSelect: U,
                 }),
             (0, r.jsx)(I, {
-                onChange: L,
-                onChangeComplete: x,
+                onChange: x,
+                onChangeComplete: L,
                 color: A,
             }),
             (0, r.jsxs)("div", {

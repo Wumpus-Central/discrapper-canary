@@ -25,12 +25,12 @@ var r = n(951288),
     A = n(441536),
     C = n(535396),
     N = n(981631),
-    R = n(269794),
-    P = n(459196),
+    R = n(97200),
+    P = n(789142),
     w = n(388032),
-    D = n(765179),
-    L = n(630564),
-    x = n(611087);
+    D = n(722177),
+    x = n(546241),
+    L = n(611087);
 function M(e, t, n) {
     return (
         t in e
@@ -100,7 +100,7 @@ function G(e) {
         { analyticsLocations: T } = (0, _.ZP)(),
         S = n !== C.A3.INACTIVE,
         R = (0, I.Z)(t),
-        [x, M] = i.useState(!1),
+        [L, M] = i.useState(!1),
         [j, G] = i.useState(!1),
         B = j,
         Z = i.useCallback(() => {
@@ -145,7 +145,7 @@ function G(e) {
         }, []),
         z = (0, l.O)(K);
     return (0, r.jsxs)("div", {
-        className: o()(L.topPerksCard, L.animatedTopPerksCard, D.powerupCard, { [L.animate]: x }),
+        className: o()(x.topPerksCard, x.animatedTopPerksCard, D.powerupCard, { [x.animate]: L }),
         onMouseEnter: () => {
             G(!0), null == v || v(!0);
         },
@@ -154,13 +154,13 @@ function G(e) {
         },
         children: [
             (0, r.jsx)("div", {
-                className: L.intObserver,
+                className: x.intObserver,
                 ref: z,
             }),
             (0, r.jsx)("div", {
-                className: L.topPerksCardImageWrapper,
+                className: x.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
-                    className: o()(L.topPerksCardImage, D.image),
+                    className: o()(x.topPerksCardImage, D.image),
                     src: E,
                     alt: "",
                     style: H,
@@ -168,7 +168,7 @@ function G(e) {
             }),
             (0, r.jsxs)(s.animated.div, {
                 style: U(k({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
-                className: o()(L.contentContainer, D.contentContainer),
+                className: o()(x.contentContainer, D.contentContainer),
                 children: [
                     (0, r.jsx)(h.xm, {
                         heading: a,
@@ -181,10 +181,10 @@ function G(e) {
                     }),
                     (0, r.jsxs)(s.animated.div, {
                         style: W,
-                        className: L.buttonsContainer,
+                        className: x.buttonsContainer,
                         children: [
                             (0, r.jsx)("div", {
-                                className: L.button,
+                                className: x.button,
                                 children: (0, r.jsx)(d.Button, {
                                     variant: "primary",
                                     text: w.intl.string(w.t.oPAx73),
@@ -194,7 +194,7 @@ function G(e) {
                             }),
                             R &&
                                 (0, r.jsx)("div", {
-                                    className: L.button,
+                                    className: x.button,
                                     children: (0, r.jsx)(d.Button, {
                                         variant: "secondary",
                                         text: w.intl.string(w.t.GoCQxU),
@@ -208,10 +208,10 @@ function G(e) {
             }),
             y &&
                 (0, r.jsx)(d.IGR, {
-                    className: L.topPerksCardNew,
+                    className: x.topPerksCardNew,
                     text: w.intl.string(w.t.y2b7CA),
                 }),
-            x && (0, r.jsx)("div", { className: L.shineLine }),
+            L && (0, r.jsx)("div", { className: x.shineLine }),
         ],
     });
 }
@@ -283,7 +283,7 @@ let Z = 3,
                                       description: w.intl.string(R.default.EGkJAG),
                                       cost: s,
                                       costDecorator: "+",
-                                      imageUrl: x.Z,
+                                      imageUrl: L.Z,
                                       onClose: a,
                                       isNew: !0,
                                   }),

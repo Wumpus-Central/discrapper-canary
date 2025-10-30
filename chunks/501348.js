@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(594174),
     w = n(358085),
     D = n(210887),
-    L = n(740492),
-    x = n(695346),
+    x = n(740492),
+    L = n(695346),
     M = n(313789),
     k = n(329013),
     j = n(333859),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(921944),
     V = n(959517),
     H = n(388032),
-    Y = n(226518),
-    W = n(197571);
+    Y = n(5874),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -321,7 +321,7 @@ class ea extends i.Component {
                     value: c.hg.H23,
                 },
             ],
-            onChange: (e) => x.hg.updateSetting(e),
+            onChange: (e) => L.hg.updateSetting(e),
             value: e,
         });
     }
@@ -458,11 +458,11 @@ class ea extends i.Component {
             }),
             K(this, "handleMessageDisplayModeChange", (e) => {
                 let { value: t } = e;
-                x.jU.updateSetting(t === J), (0, h.ZZ)();
+                L.jU.updateSetting(t === J), (0, h.ZZ)();
             }),
             K(this, "handleUIDensityChange", (e) => {
                 let { value: t } = e;
-                t !== c.Pi.UNSET_UI_DENSITY && x.YC.updateSetting(t);
+                t !== c.Pi.UNSET_UI_DENSITY && L.YC.updateSetting(t);
             });
     }
 }
@@ -474,12 +474,12 @@ let eo = (e) => {
         });
 };
 function es() {
-    let e = x.jU.useSetting(),
-        t = x.RS.useSetting(),
-        n = x.NA.useSetting(),
-        a = x.L1.useSetting(),
-        o = x.hg.useSetting(),
-        c = x.YC.useSetting(),
+    let e = L.jU.useSetting(),
+        t = L.RS.useSetting(),
+        n = L.NA.useSetting(),
+        a = L.L1.useSetting(),
+        o = L.hg.useSetting(),
+        c = L.YC.useSetting(),
         u = O.y.useConfig({ location: "UserSettingsAppearance" }).enabled,
         d = (0, E.T)("UserSettingsAppearance");
     (0, _.ZP)(() => {
@@ -493,16 +493,16 @@ function es() {
             d && eo(l.z.HALLOWEEN_APP_ICONS_APPEARANCE_SETTINGS_WEB_BADGE);
         }, [d]);
     let f = (0, R.A6)(),
-        p = (0, s.cj)([D.Z, L.ZP, m.Z, P.default, b.Z], () => {
+        p = (0, s.cj)([D.Z, x.ZP, m.Z, P.default, b.Z], () => {
             var e, t;
             return {
                 theme: D.Z.theme,
                 useForcedColors: m.Z.useForcedColors,
-                useSystemTheme: L.ZP.useSystemTheme,
+                useSystemTheme: x.ZP.useSystemTheme,
                 fontSize: m.Z.fontSize,
                 zoom: m.Z.zoom,
                 messageGroupSpacing: m.Z.messageGroupSpacing,
-                displayCompactAvatars: L.ZP.displayCompactAvatars,
+                displayCompactAvatars: x.ZP.displayCompactAvatars,
                 isStaff: null != (t = null == (e = P.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
                 gradientPreset: b.Z.gradientPreset,
             };

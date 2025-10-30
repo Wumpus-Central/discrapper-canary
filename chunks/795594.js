@@ -38,8 +38,8 @@ var r = n(951288),
     P = n(240991),
     w = n(713938),
     D = n(973616),
-    L = n(881998),
-    x = n(592125),
+    x = n(881998),
+    L = n(592125),
     M = n(944486),
     k = n(246946),
     j = n(9156),
@@ -62,9 +62,9 @@ var r = n(951288),
     ee = n(981631),
     et = n(468788),
     en = n(388032),
-    er = n(392082),
-    ei = n(430864),
-    ea = n(197571);
+    er = n(609157),
+    ei = n(602009),
+    ea = n(10198);
 function eo(e, t, n) {
     return (
         t in e
@@ -302,8 +302,8 @@ let ef = (e) => {
                     : e.allowMobilePush;
             }, [E]),
             C = S.w.useExperiment({ location: "oauth2_authorize" }),
-            L = a.bot,
-            M = (0, p.e7)([x.Z], () => x.Z.getDMFromUserId(null == L ? void 0 : L.id)),
+            x = a.bot,
+            M = (0, p.e7)([L.Z], () => L.Z.getDMFromUserId(null == x ? void 0 : x.id)),
             { appDMChannelMuteConfig: k, dmChannelMuted: B } = (0, p.cj)([j.ZP], () =>
                 null == M
                     ? {
@@ -523,9 +523,9 @@ let ef = (e) => {
                     });
             },
             em = i.useCallback(async () => {
-                u()(null != L, "dm channel mute setting requires having a bot user");
+                u()(null != x, "dm channel mute setting requires having a bot user");
                 let e = M;
-                null == e && (e = await b.Z.ensurePrivateChannel(L.id)),
+                null == e && (e = await b.Z.ensurePrivateChannel(x.id)),
                     B
                         ? y.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, Z.ZB.Unmuted)
                         : (0, g.ZDy)(async () => {
@@ -542,7 +542,7 @@ let ef = (e) => {
                                       ),
                                   );
                           });
-            }, [M, L, B, a.id]),
+            }, [M, x, B, a.id]),
             eg = () =>
                 C.enabled
                     ? (0, r.jsxs)("div", {
@@ -557,7 +557,7 @@ let ef = (e) => {
                               (0, r.jsxs)(g.Kqy, {
                                   gap: 20,
                                   children: [
-                                      null != L
+                                      null != x
                                           ? (0, r.jsx)(g.rsf, {
                                                 label: en.intl.string(en.t.NkwaBs),
                                                 description:
@@ -641,13 +641,13 @@ let ef = (e) => {
     em = (0, d.U)(() => ({ searchQuery: "" })),
     eg = () => {
         let e = (0, p.e7)([k.Z], () => k.Z.hidePersonalInformation),
-            { fetchState: t, appAuthTokens: n } = (0, p.cj)([L.Z], () => ({
-                fetchState: L.Z.getFetchState(),
-                appAuthTokens: L.Z.getNewestTokensForNonChildrenApplications(),
+            { fetchState: t, appAuthTokens: n } = (0, p.cj)([x.Z], () => ({
+                fetchState: x.Z.getFetchState(),
+                appAuthTokens: x.Z.getNewestTokensForNonChildrenApplications(),
             })),
             a = (0, p.e7)([V.default], () => V.default.locale),
             o = (0, p.e7)([v.ZP], () => v.ZP.getSelfEmbeddedActivities()),
-            s = (0, p.e7)([x.Z, M.Z], () => x.Z.getChannel(M.Z.getChannelId())),
+            s = (0, p.e7)([L.Z, M.Z], () => L.Z.getChannel(M.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId();
         i.useEffect(() => {
             E.Z.fetch();
@@ -705,7 +705,7 @@ let ef = (e) => {
                       : n.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [n, d]),
             T = () =>
-                null == n || null == y || t !== L.M.FETCHED
+                null == n || null == y || t !== x.M.FETCHED
                     ? (0, r.jsx)(g.$jN, {
                           className: ea.marginTop20,
                           type: g.$jN.Type.SPINNING_CIRCLE,

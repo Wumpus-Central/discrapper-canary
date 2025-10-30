@@ -51,6 +51,7 @@ let E = {
                 canMentionHere: o,
                 canMentionUsers: l,
                 canMentionRoles: c,
+                canMentionOtherGlobals: r.mentions.otherGlobals,
                 includeAllGuildUsers: d,
                 includeNonMentionableRoles: f,
                 request: i,

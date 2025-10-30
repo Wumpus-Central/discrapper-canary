@@ -14,8 +14,8 @@ var r = n(951288),
     p = n(809017),
     h = n(981631),
     f = n(388032),
-    g = n(532406),
-    m = n(32482);
+    g = n(489229),
+    m = n(854641);
 function b(e) {
     return (null == e ? void 0 : e.id) === p.G;
 }
@@ -23,7 +23,7 @@ let _ = i.memo(function (e) {
     let t,
         { title: p, onToggleExpand: b, expanded: _, expandedCount: y } = e,
         x = (0, l.e7)([d.Z], () => d.Z.hidden),
-        v = i.useCallback((e) => {
+        O = i.useCallback((e) => {
             (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
                 return () => (0, r.jsx)(e, { closePopout: s.Zy });
@@ -43,7 +43,7 @@ let _ = i.memo(function (e) {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
                         return x ? (0, c.lY)() : y > 3 ? b() : (0, h.dG4)();
                 },
-                onContextMenu: v,
+                onContextMenu: O,
                 tag: "span",
                 "aria-hidden": !0,
                 className: g.headerContainer,

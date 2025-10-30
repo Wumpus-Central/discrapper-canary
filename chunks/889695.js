@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(225675),
     O = n(981631),
     v = n(388032),
-    I = n(124650);
+    I = n(95457);
 function T(e, t, n) {
     return (
         t in e
@@ -61,17 +61,17 @@ function A(e) {
         })),
         w = R === y.z.SERVER_SHOP,
         D = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
-        L = null != T ? A[(0, u.lV)(T)] : null,
-        [x, M] = i.useState(() => {
+        x = null != T ? A[(0, u.lV)(T)] : null,
+        [L, M] = i.useState(() => {
             let e = null == P ? [] : g.default.keys(P);
-            return null != L && e.push(L.id), e;
+            return null != x && e.push(x.id), e;
         }),
         k = i.useRef(T);
     i.useEffect(() => {
         let e = {},
             t = k.current;
         if (null != t && null != R) {
-            for (let t of x) {
+            for (let t of L) {
                 let n = A[t];
                 null != n && (e[t] = n);
             }
@@ -80,7 +80,7 @@ function A(e) {
                 roles: e,
             });
         }
-    }, [x, R, A]);
+    }, [L, R, A]);
     let j = null != T && null != n && null != D ? N.find((e) => D.roles.includes(e.id)) : void 0,
         U = i.useMemo(
             () =>
@@ -104,17 +104,17 @@ function A(e) {
             }));
             return (
                 null != T &&
-                    null != L &&
+                    null != x &&
                     e.push({
-                        leading: C(L),
-                        value: L.id,
-                        label: L.name,
-                        id: L.id.toString(),
+                        leading: C(x),
+                        value: x.id,
+                        label: x.name,
+                        id: x.id.toString(),
                         disabled: !0,
                     }),
                 e
             );
-        }, [U, T, L]);
+        }, [U, T, x]);
     if (null == n || null == T || null == D) return null;
     let B = {};
     return (D.roles.forEach((e) => {
@@ -133,7 +133,7 @@ function A(e) {
               children: (0, r.jsxs)(s.uz, {
                   selectionMode: "multiple",
                   options: G,
-                  value: x,
+                  value: L,
                   onSelectionChange: (e) => {
                       M(e);
                   },

@@ -153,7 +153,7 @@ let s = {
     "discord_common/js/shared/animations/app/gifts/standard/coffee/coffee-loop.lottiejson": () =>
         n.e("93554").then(n.t.bind(n, 732573, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Anime_v01_Lottie.lottiejson": () =>
-        n.e("39690").then(n.t.bind(n, 725432, 19)),
+        n.e("219").then(n.t.bind(n, 725432, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Arcade_v01.lottiejson": () =>
         n.e("54931").then(n.t.bind(n, 488583, 19)),
     "discord_app/images/burst_reactions/BurstReaction_BlackHoles_v01.lottiejson": () =>
@@ -284,7 +284,7 @@ let s = {
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/coachmark/seasonal-gifting-coachmark.lottiejson":
         () => n.e("57802").then(n.t.bind(n, 719225, 19)),
     "discord_common/js/shared/animations/app/playstation/playstation_connecting.lottiejson": () =>
-        n.e("87522").then(n.t.bind(n, 141923, 19)),
+        n.e("78698").then(n.t.bind(n, 141923, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/emoji.lottiejson": () =>
         n.e("75317").then(n.t.bind(n, 833862, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/interstitial_wheel_dark.lottiejson": () =>

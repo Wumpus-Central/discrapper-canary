@@ -22,7 +22,7 @@ var r = n(951288),
     I = n(228168),
     T = n(231338),
     S = n(388032),
-    A = n(31948);
+    A = n(923805);
 function C(e, t, n) {
     return (
         t in e
@@ -77,7 +77,7 @@ function P(e, t) {
 }
 let w = 250,
     D = 24;
-function L(e, t) {
+function x(e, t) {
     switch (t.type) {
         case "MEASUREMENT_COMPLETE":
             return P(N({}, e), {
@@ -98,7 +98,7 @@ function L(e, t) {
             return (0, h.vE)(t);
     }
 }
-let x = {
+let L = {
     animationPhase: "awaitingInput",
     height: "auto",
 };
@@ -125,7 +125,7 @@ function M(e) {
         K = i.useRef(null),
         z = i.useRef(null),
         q = i.useRef(null),
-        [X, Q] = i.useReducer(L, x),
+        [X, Q] = i.useReducer(x, L),
         { height: J, animationPhase: $ } = X,
         ee = "awaitingInput" !== $,
         et = "animating" === $ || "done" === $,

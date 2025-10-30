@@ -15,8 +15,8 @@ var r = n(951288),
     f = n(970184),
     _ = n(280501),
     p = n(292419),
-    h = n(28517),
-    m = n(219879);
+    h = n(858372),
+    m = n(49739);
 function g(e, t, n) {
     return (
         t in e
@@ -91,15 +91,15 @@ function I(e) {
         [C, N] = i.useState(!1),
         [R, P] = i.useState(new Map(null == g ? void 0 : g.map((e) => [e.value, e]))),
         [w, D] = i.useState(new Set(R.keys())),
-        [L, x] = i.useState(() => (null != g ? g : []).map((e) => e.value)),
+        [x, L] = i.useState(() => (null != g ? g : []).map((e) => e.value)),
         [M, k] = i.useState(0);
     i.useEffect(() => {
         let e = (null != g ? g : []).map((e) => e.value);
-        if (e.every((e) => L.includes(e)) && L.every((t) => e.includes(t))) return;
-        x(e);
+        if (e.every((e) => x.includes(e)) && x.every((t) => e.includes(t))) return;
+        L(e);
         let t = new Map(null == g ? void 0 : g.map((e) => [e.value, e]));
         P(t), D(new Set(t.keys())), k((e) => e + 1);
-    }, [g, L]);
+    }, [g, x]);
     let j = (0, f.CJ)();
     l()(null != j, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
     let {

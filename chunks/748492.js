@@ -35,12 +35,12 @@ var i = n(120356),
     P = n(981631),
     w = n(231338),
     D = n(388032),
-    L = n(702952),
-    x = n(186880);
+    x = n(44149),
+    L = n(533362);
 function M(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(y.Z, {
-        iconClassName: a()(L.arrowIcon, { [L.arrowIconExpanded]: n }),
+        iconClassName: a()(x.arrowIcon, { [x.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: s.CJ0,
         label: n ? D.intl.string(D.t["2TiKgS"]) : D.intl.string(D.t.oN8bqe),
@@ -82,13 +82,13 @@ function k(e) {
                     });
         };
     return (0, r.jsxs)("div", {
-        className: x.videoControls,
+        className: L.videoControls,
         onMouseMove: I,
         onMouseDown: y,
         onMouseLeave: N,
         children: [
             (0, r.jsx)("div", {
-                className: x.topControls,
+                className: L.topControls,
                 children: (0, r.jsx)(b.r, {
                     idle: M,
                     title:
@@ -100,7 +100,7 @@ function k(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: x.bottomControls,
+                className: L.bottomControls,
                 children: [
                     (0, r.jsxs)(_.Z, {
                         grow: 0,
@@ -109,7 +109,7 @@ function k(e) {
                         align: _.Z.Align.CENTER,
                         children: [
                             (0, r.jsx)(T.C, {
-                                className: L.leftPipIcon,
+                                className: x.leftPipIcon,
                                 enabled: G,
                                 cameraUnavailable: !Z,
                                 hasPermission: V,
@@ -121,7 +121,7 @@ function k(e) {
                                     children: (0, r.jsx)(d.Z, {
                                         channelId: a.id,
                                         guildId: a.getGuildId(),
-                                        className: x.__invalid_leftTrayIcon,
+                                        className: L.__invalid_leftTrayIcon,
                                         participant: k,
                                         compact: !0,
                                     }),
@@ -138,7 +138,7 @@ function k(e) {
                             U || (0, A.R)()
                                 ? null
                                 : (0, r.jsx)(v.Z, {
-                                      className: L.rightPipIcon,
+                                      className: x.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: K,
                                       onClosePopout: w.Vq,
@@ -146,7 +146,7 @@ function k(e) {
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,
                                 location: j.location,
-                                className: L.rightPipIcon,
+                                className: x.rightPipIcon,
                             }),
                         ],
                     }),
@@ -170,14 +170,14 @@ function j(e) {
         } = e,
         m = (0, u.Z)([o])[0];
     return (0, r.jsxs)(s.P3F, {
-        className: a()(x.videoControls, x.videoControlsTextActivity),
+        className: a()(L.videoControls, L.videoControlsTextActivity),
         onMouseMove: c,
         onMouseDown: l,
         onMouseLeave: d,
         onDoubleClick: f,
         children: [
             (0, r.jsx)("div", {
-                className: x.topControls,
+                className: L.topControls,
                 children: (0, r.jsx)(b.r, {
                     idle: _,
                     title:
@@ -189,19 +189,19 @@ function j(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: x.bottomControls,
+                className: L.bottomControls,
                 children: [
                     (0, r.jsx)(N.ZP, {
                         renderIcon: !1,
                         users: p,
                         size: 24,
                         max: 3,
-                        className: L.__invalid_userSummaryContainer,
+                        className: x.__invalid_userSummaryContainer,
                     }),
                     (0, r.jsx)(O.Z, {
                         applicationId: o,
                         location: h.location,
-                        iconClassName: L.leaveActivityIcon,
+                        iconClassName: x.leaveActivityIcon,
                         isActive: !0,
                     }),
                 ],
@@ -215,7 +215,7 @@ function U(e) {
         ? (0, r.jsx)(I.Z, {
               channelId: t,
               isParticipantsOpen: n,
-              className: L.participantsButton,
+              className: x.participantsButton,
           })
         : null;
 }
@@ -236,18 +236,18 @@ function G(e) {
         } = e,
         y = (0, u.Z)([d])[0];
     return (0, r.jsx)("div", {
-        className: L.pipHeader,
+        className: x.pipHeader,
         onMouseMove: o,
         onMouseDown: i,
         onMouseLeave: l,
         children: (0, r.jsxs)("div", {
-            className: a()(x.topControls, L.pipHeaderContent, { [L.pipHeaderContentOpen]: c }),
+            className: a()(L.topControls, x.pipHeaderContent, { [x.pipHeaderContentOpen]: c }),
             children: [
                 !c &&
                     (0, r.jsx)(s.xhG, {
                         size: "xxs",
                         color: "currentColor",
-                        className: L.menuIcon,
+                        className: x.menuIcon,
                     }),
                 c &&
                     (0, r.jsxs)(r.Fragment, {
@@ -263,7 +263,7 @@ function G(e) {
                                 preventIdleComponent: E.Z,
                             }),
                             (0, r.jsxs)("div", {
-                                className: L.pipHeaderButtonsRight,
+                                className: x.pipHeaderButtonsRight,
                                 children: [
                                     m
                                         ? null
@@ -274,7 +274,7 @@ function G(e) {
                                     (0, r.jsx)(O.Z, {
                                         applicationId: d,
                                         location: g.location,
-                                        iconClassName: L.leaveActivityIcon,
+                                        iconClassName: x.leaveActivityIcon,
                                     }),
                                 ],
                             }),

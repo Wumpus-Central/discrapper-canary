@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(402113),
     y = n(800965),
     x = n(592125),
-    v = n(271383),
+    O = n(271383),
     j = n(944486),
-    O = n(594174),
+    v = n(594174),
     C = n(585483),
     I = n(51144),
     S = n(566620),
@@ -39,7 +39,7 @@ var r = n(951288),
     G = n(918559),
     H = n(981631),
     F = n(388032),
-    B = n(33985);
+    B = n(322678);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -118,12 +118,12 @@ function Y(e) {
     }
     let eb = en.get(null != (Y = null == X ? void 0 : X.id) ? Y : ""),
         e_ = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
-        ey = (0, s.Wu)([v.ZP], () => {
+        ey = (0, s.Wu)([O.ZP], () => {
             var e;
             return null == ee
                 ? []
                 : Array.from(null != (e = null == eb ? void 0 : eb.embeddedActivity.userIds) ? e : []).map((e) =>
-                      v.ZP.getMember(ee.guild_id, e),
+                      O.ZP.getMember(ee.guild_id, e),
                   );
         }, [eb, ee]),
         ex = i.useMemo(() => {
@@ -135,7 +135,7 @@ function Y(e) {
                 e
             );
         }, [ey]),
-        ev = (function (e, t, n) {
+        eO = (function (e, t, n) {
             let r = (0, p.Z)(e),
                 l = e !== r,
                 [a, s] = i.useState(!1);
@@ -179,13 +179,13 @@ function Y(e) {
             }, [o, e, n, t]);
         })(ea, es, q),
         ej = (0, k.y)(),
-        { data: eO } = (0, R.K)(Z.B);
+        { data: ev } = (0, R.K)(Z.B);
     if (null == X) return null;
-    let eC = null == eO ? void 0 : eO.isFortniteActivity(X.id),
+    let eC = null == ev ? void 0 : ev.isFortniteActivity(X.id),
         eI = [];
     null != eb &&
         (eI = Array.from(eb.embeddedActivity.userIds)
-            .map((e) => O.default.getUser(e))
+            .map((e) => v.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
     let eS = (e) => {
         var t;
@@ -217,7 +217,7 @@ function Y(e) {
             (0, r.jsxs)("div", {
                 className: a()(B.wrapper, W[el], e),
                 ref: ei,
-                style: ev,
+                style: eO,
                 children: [
                     null == Q ? void 0 : Q(),
                     (0, r.jsxs)("div", {

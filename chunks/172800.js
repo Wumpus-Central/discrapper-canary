@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(149203),
     S = n(981631),
     A = n(388032),
-    C = n(999642);
+    C = n(39162);
 function N(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function D(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,14 +97,14 @@ function L(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let x = (e) => {
+let L = (e) => {
     let {
             emojiDescriptors: t,
             emojiSize: a,
             onSelect: N,
             onSelectSoundmoji: P,
-            onInspect: L,
-            surrogateCodePoint: x,
+            onInspect: x,
+            surrogateCodePoint: L,
             getEmojiItemProps: M,
             getEmojiRowProps: k,
             isScrolling: j,
@@ -170,7 +170,7 @@ let x = (e) => {
                         b = D(h, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === _ && el.columnIndex === p,
                         O = () => {
-                            j.current || U.current || L(e);
+                            j.current || U.current || x(e);
                         };
                     return (0, i.createElement)(
                         "li",
@@ -280,11 +280,11 @@ let x = (e) => {
                             isInspected: o,
                             isScrolling: j,
                             isUsingKeyboardNavigation: U,
-                            surrogateCodePoint: x,
+                            surrogateCodePoint: L,
                             allowAnimatedEmoji: B,
                             selectedItemClassName: H,
                             onSelect: N,
-                            onInspect: L,
+                            onInspect: x,
                             channelGuildId: F,
                             getEmojiItemProps: M,
                             isMediumSize: ep,

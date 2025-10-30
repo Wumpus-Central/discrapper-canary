@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(993977),
     p = n(981631),
     f = n(388032),
-    h = n(50089);
-function m() {
+    m = n(801488);
+function h() {
     return (0, r.jsxs)(l.rs, {
         children: [
             (0, r.jsx)(s.Z, {
@@ -40,8 +40,8 @@ let g = i.memo(function () {
             (0, c.e)("application_library");
         }, []),
         (0, r.jsxs)("div", {
-            className: h.container,
-            children: [(0, r.jsx)(o.yY, { location: f.intl.string(f.t.cw57ar) }), (0, r.jsx)(m, {})],
+            className: m.container,
+            children: [(0, r.jsx)(o.yY, { location: f.intl.string(f.t.cw57ar) }), (0, r.jsx)(h, {})],
         })
     );
 });

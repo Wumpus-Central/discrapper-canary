@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(358595),
     O = n(981631),
     v = n(388032),
-    I = n(492681);
+    I = n(69643);
 let T = 292,
     S = 36,
     A = 48;
@@ -35,10 +35,10 @@ function C(e) {
         R((null != (t = null == (e = f.current) ? void 0 : e.clientHeight) ? t : 0) > T);
     }, [R]);
     let D = (0, _.PC)(t),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             C && p && m(!1);
         }, [p, C]),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             C && (p || m(!0));
         }, [p, C]),
         M = i.useMemo(() => {
@@ -54,7 +54,7 @@ function C(e) {
         ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(l.kL8, {
               className: o()(I.guildInviteContainer, { [I.clickable]: C && p }),
-              onClick: L,
+              onClick: x,
               style: M,
               "aria-label": v.intl.string(v.t.dcl9MQ),
               children: [
@@ -82,7 +82,7 @@ function C(e) {
                                 textVariant: "text-xs/medium",
                                 variant: "secondary",
                                 size: "sm",
-                                onClick: x,
+                                onClick: L,
                                 text: v.intl.string(v.t.xdCLeM),
                             }),
                         })

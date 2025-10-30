@@ -5,7 +5,7 @@ var r = n(951288),
     a = n(239091),
     s = n(129861),
     o = n(600164),
-    c = n(7675);
+    c = n(526229);
 class u extends i.PureComponent {
     handleContextMenu(e, t) {
         (0, a.jW)(e, async () => {

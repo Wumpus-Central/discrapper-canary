@@ -5,7 +5,7 @@ var a = n(951288),
     i = n.n(l),
     o = n(481060),
     s = n(259580),
-    c = n(422665);
+    c = n(81364);
 function d(e) {
     let {
             icon: t,
@@ -17,18 +17,18 @@ function d(e) {
             onExpandedChange: p,
             defaultExpanded: h = !1,
             onOpen: x,
-            maxHeight: f,
+            maxHeight: g,
         } = e,
-        [b, g] = r.useState(h),
+        [f, b] = r.useState(h),
         v = void 0 !== m,
-        j = v ? m : b,
+        j = v ? m : f,
         _ = r.useCallback(() => {
             let e = !j;
-            v || g(e), null == p || p(e), e && null != x && x();
+            v || b(e), null == p || p(e), e && null != x && x();
         }, [j, v, p, x]),
         y = r.useMemo(() => {
-            if (null != f && j) return { maxHeight: "number" == typeof f ? "".concat(f, "px") : f };
-        }, [f, j]);
+            if (null != g && j) return { maxHeight: "number" == typeof g ? "".concat(g, "px") : g };
+        }, [g, j]);
     return (0, a.jsxs)("div", {
         className: i()(c.accordionContainer, u, { [c.opened]: j }),
         children: [

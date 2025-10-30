@@ -1,49 +1,49 @@
-n.d(t, { Z: () => s }), n(953529), n(388685);
-var r = n(951288),
-    l = n(647438),
-    i = n(793030),
-    a = n(481060),
-    o = n(388032),
-    c = n(1904);
-function s(e) {
-    let { errorText: t, title: n, description: s, transitionState: d, onCancel: u, onConfirm: p, children: g } = e,
-        [m, b] = l.useState(!1),
-        h = l.useCallback(async () => {
-            b(!0);
+r.d(e, { Z: () => s }), r(953529), r(388685);
+var n = r(951288),
+    a = r(647438),
+    i = r(793030),
+    o = r(481060),
+    c = r(388032),
+    l = r(567147);
+function s(t) {
+    let { errorText: e, title: r, description: s, transitionState: u, onCancel: d, onConfirm: p, children: b } = t,
+        [g, y] = a.useState(!1),
+        f = a.useCallback(async () => {
+            y(!0);
             try {
                 await p();
-            } catch (e) {
-                throw e;
+            } catch (t) {
+                throw t;
             } finally {
-                b(!1);
+                y(!1);
             }
         }, [p]);
-    return (0, r.jsxs)(i.Modal, {
-        transitionState: d,
-        onClose: u,
-        title: n,
+    return (0, n.jsxs)(i.Modal, {
+        transitionState: u,
+        onClose: d,
+        title: r,
         subtitle: s,
         actions: [
             {
-                text: o.intl.string(o.t["ETE/oC"]),
+                text: c.intl.string(c.t["ETE/oC"]),
                 variant: "secondary",
-                onClick: u,
+                onClick: d,
             },
             {
-                text: o.intl.string(o.t["R3BPH+"]),
-                onClick: h,
+                text: c.intl.string(c.t["R3BPH+"]),
+                onClick: f,
                 variant: "primary",
-                loading: m,
+                loading: g,
             },
         ],
         children: [
-            g,
-            null != t && "" !== t
-                ? (0, r.jsx)(a.Text, {
-                      className: c.errorText,
+            b,
+            null != e && "" !== e
+                ? (0, n.jsx)(o.Text, {
+                      className: l.errorText,
                       variant: "text-xs/normal",
                       color: "text-danger",
-                      children: t,
+                      children: e,
                   })
                 : null,
         ],

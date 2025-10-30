@@ -35,12 +35,12 @@ var r = n(951288),
     P = n(984933),
     w = n(699516),
     D = n(9156),
-    L = n(594174),
-    x = n(938475),
+    x = n(594174),
+    L = n(938475),
     M = n(981631),
     k = n(388032),
-    j = n(132789),
-    U = n(78480);
+    j = n(102647),
+    U = n(395530);
 function G(e, t, n) {
     return (
         t in e
@@ -111,7 +111,7 @@ function V(e) {
         ),
         r = (0, S.ZP)(t),
         a = i.useMemo(() => r.map((e) => e.id), [r]),
-        o = (0, c.e7)([x.ZP], () => x.ZP.getVoiceStates(t), [t]),
+        o = (0, c.e7)([L.ZP], () => L.ZP.getVoiceStates(t), [t]),
         s = (0, c.Wu)([w.Z], () => w.Z.getBlockedOrIgnoredIDs()),
         u = l().flatMap(n, (t) => {
             var n;
@@ -149,11 +149,11 @@ function V(e) {
             let e = f.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
             return (0, p._j)(e, s);
         }, [t, s]),
-        g = (0, c.Wu)([L.default], () => {
-            let e = m.map((e) => L.default.getUser(e));
+        g = (0, c.Wu)([x.default], () => {
+            let e = m.map((e) => x.default.getUser(e));
             return (0, p.dq)(e);
         }, [m]),
-        E = (0, c.Wu)([L.default], () => h.map((e) => L.default.getUser(e)), [h]),
+        E = (0, c.Wu)([x.default], () => h.map((e) => x.default.getUser(e)), [h]),
         b = u.filter((e) => !h.includes(e.id) && !m.includes(e.id)),
         y = (0, p.dq)(b),
         O = E.filter((e) => null != e && !m.includes(e.id)),

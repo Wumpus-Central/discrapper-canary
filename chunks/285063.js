@@ -3,15 +3,18 @@ var r = n(951288);
 n(647438);
 var i = n(28664),
     a = n(916752),
-    o = n(430864);
+    o = n(602009);
 function s(e) {
-    let { node: t } = e,
-        n = (0, a.Z)(t);
-    return (0, r.jsx)(i.u, {
-        __unsupportedReactNodeAsText: t.full,
-        children: (0, r.jsx)("span", {
+    let { node: t, showTooltip: n = !0 } = e,
+        s = (0, a.Z)(t),
+        l = (0, r.jsx)("span", {
             className: o.timestamp,
-            children: n,
-        }),
-    });
+            children: s,
+        });
+    return !0 !== n
+        ? l
+        : (0, r.jsx)(i.u, {
+              __unsupportedReactNodeAsText: t.full,
+              children: l,
+          });
 }

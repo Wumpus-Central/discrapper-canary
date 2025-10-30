@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(951288),
     l = n(647438),
     r = n(688619),
@@ -12,7 +12,7 @@ var i = n(951288),
     m = n(783097),
     f = n(772606),
     h = n(488977),
-    v = n(42659);
+    v = n(236050);
 function y(e) {
     let [t, n] = l.useState(void 0);
     return (
@@ -22,15 +22,15 @@ function y(e) {
         t
     );
 }
-function x(e) {
-    let { application: t, context: n, name: r, iconURL: x, scrollerRef: g, sectionName: b } = e,
+function g(e) {
+    let { application: t, context: n, name: r, iconURL: g, scrollerRef: x, sectionName: b } = e,
         N = (0, s.ap)((0, u.ZP)()),
         j = l.useRef(null),
         C = l.useRef(null),
         E = l.useRef(null),
         P = l.useRef(null),
         A = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-        _ = (0, d.ZP)("number" == typeof x ? "" : x, null != A ? A : ""),
+        _ = (0, d.ZP)("number" == typeof g ? "" : g, null != A ? A : ""),
         O = l.useMemo(() => {
             var e, t;
             return null !=
@@ -51,7 +51,7 @@ function x(e) {
         S = y(C),
         T = l.useCallback(() => {
             var e, t, n, i;
-            let l = g.current,
+            let l = x.current,
                 r = j.current,
                 a = E.current,
                 s = null == P ? void 0 : P.current,
@@ -73,13 +73,13 @@ function x(e) {
                     (a.style.transform = "translateY(".concat((i = c / 4) + (0 - i) * f, "px)")),
                     null != s && (s.style.opacity = "".concat(1 + -1 * f));
             }
-        }, [O, _, null == S ? void 0 : S.height, N, g, null == I ? void 0 : I.height]);
+        }, [O, _, null == S ? void 0 : S.height, N, x, null == I ? void 0 : I.height]);
     return (
         l.useEffect(() => {
             T();
         }, [T, N]),
         l.useEffect(() => {
-            let e = g.current,
+            let e = x.current,
                 t = () => {
                     T();
                 };
@@ -89,7 +89,7 @@ function x(e) {
                     null == e || e.removeEventListener("scroll", t);
                 }
             );
-        }, [g, T]),
+        }, [x, T]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {

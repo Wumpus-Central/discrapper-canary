@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(51144),
     p = n(553393),
     f = n(981631),
-    h = n(388032),
-    m = n(818923),
-    g = n(746882);
+    m = n(388032),
+    h = n(674455),
+    g = n(6723);
 let _ = function (e) {
     let { quest: t } = e,
         [n, l] = i.useState(!1),
@@ -82,18 +82,18 @@ let _ = function (e) {
             [t, O, E],
         );
     return (0, r.jsx)("div", {
-        className: m.previewBackground,
+        className: h.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: m.previewCard,
+            className: h.previewCard,
             children: [
                 (0, r.jsx)(o.Heading, {
                     className: g.heading,
                     variant: "heading-md/semibold",
-                    children: h.intl.string(h.t.jY7Zxg),
+                    children: m.intl.string(m.t.jY7Zxg),
                 }),
                 (0, r.jsx)("div", {
                     className: g.previewDescription,
-                    children: h.intl.string(h.t.q3hbne),
+                    children: m.intl.string(m.t.q3hbne),
                 }),
                 (0, r.jsx)("div", {
                     className: g.memberListContainer,
@@ -136,7 +136,7 @@ let _ = function (e) {
                                                     (0, r.jsx)(o.Text, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
-                                                        children: h.intl.string(h.t.b9w3bO),
+                                                        children: m.intl.string(m.t.b9w3bO),
                                                     }),
                                                 ],
                                             }),

@@ -19,11 +19,11 @@ var r = n(951288),
     y = n(250285),
     O = n(292352),
     v = n(134612),
-    I = n(602698),
+    I = n(382402),
     T = n(388032),
-    S = n(519279),
-    A = n(790680),
-    C = n(197571),
+    S = n(152269),
+    A = n(153437),
+    C = n(10198),
     N = n(926895);
 function R(e, t, n) {
     return (
@@ -75,7 +75,7 @@ function D(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function L(e) {
+function x(e) {
     let { header: t, description: n, stepNumber: i } = e;
     return (0, r.jsxs)("div", {
         className: A.step,
@@ -104,7 +104,7 @@ function L(e) {
         ],
     });
 }
-function x() {
+function L() {
     return (0, r.jsxs)("div", {
         className: o()(A.box, S.box, A.linkingBanner, A.linkingBannerParent),
         children: [
@@ -136,17 +136,17 @@ function x() {
             (0, r.jsxs)("div", {
                 className: A.steps,
                 children: [
-                    (0, r.jsx)(L, {
+                    (0, r.jsx)(x, {
                         header: T.intl.string(I.default["7xxAni"]),
                         description: T.intl.string(I.default["1M9So2"]),
                         stepNumber: 1,
                     }),
-                    (0, r.jsx)(L, {
+                    (0, r.jsx)(x, {
                         header: T.intl.string(I.default["AXgx+a"]),
                         description: T.intl.string(I.default.GzMFnb),
                         stepNumber: 2,
                     }),
-                    (0, r.jsx)(L, {
+                    (0, r.jsx)(x, {
                         header: T.intl.string(I.default.MZn1tG),
                         description: T.intl.string(I.default["8rLBxD"]),
                         stepNumber: 3,
@@ -367,7 +367,7 @@ let j = () => {
         return (0, r.jsxs)("div", {
             className: A.container,
             children: [
-                e ? (0, r.jsx)(x, {}) : (0, r.jsx)(M, {}),
+                e ? (0, r.jsx)(L, {}) : (0, r.jsx)(M, {}),
                 (0, r.jsx)(j, {}),
                 (0, r.jsx)(B, {}),
                 (0, r.jsx)(U, {}),

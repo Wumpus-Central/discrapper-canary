@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(982183),
     O = n(981631),
     y = n(388032),
-    j = n(361584);
-function v(e) {
+    v = n(66449);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function x(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,14 +61,14 @@ function x(e, t) {
         e
     );
 }
-let C = {
+let E = {
     [_.ln.MENTION]: [_.r0.SETTINGS],
     [_.ln.REPLY]: [_.r0.SETTINGS],
     [_.ln.REACTION]: [_.r0.SETTINGS],
     [_.ln.ANNOUNCEMENT]: [_.r0.SETTINGS],
     [_.ln.MESSAGE]: [_.r0.SETTINGS],
 };
-function E(e) {
+function x(e) {
     let { label: t, onClick: n, message: l, Icon: s, interactionType: c } = e,
         [u, d] = (0, i.useState)(!1),
         p = (0, g.fJ)();
@@ -80,7 +80,7 @@ function E(e) {
         onTooltipShow: () => d(!0),
         onTooltipHide: () => d(!1),
         children: (0, r.jsx)(a.P3F, {
-            className: j.action,
+            className: v.action,
             onClick: (e) => {
                 (0, g.Qz)({
                     message: l,
@@ -92,7 +92,7 @@ function E(e) {
             },
             children: (0, r.jsx)(s, {
                 size: u ? "sm" : "xs",
-                className: j.actionIcon,
+                className: v.actionIcon,
             }),
         }),
     });
@@ -103,7 +103,7 @@ function S(e) {
         [f, h] = (0, i.useState)(!1),
         [m, _] = (0, i.useState)(!1),
         O = (0, i.useRef)(null),
-        { openMenu: y, closeMenu: C } = (0, b.z)();
+        { openMenu: y, closeMenu: E } = (0, b.z)();
     return (0, r.jsx)(a.yRy, {
         shouldShow: m,
         animation: a.yRy.Animation.NONE,
@@ -112,7 +112,7 @@ function S(e) {
         autoInvert: !1,
         targetElementRef: O,
         onRequestClose: () => {
-            _(!1), C(n.id, d);
+            _(!1), E(n.id, d);
         },
         renderPopout: (e) =>
             (0, r.jsx)(a.VqE, {
@@ -134,7 +134,7 @@ function S(e) {
                 onTooltipHide: () => h(!1),
                 children: (0, r.jsx)(a.P3F, {
                     innerRef: O,
-                    className: j.action,
+                    className: v.action,
                     onClick: (e) => {
                         (0, g.Qz)({
                             message: n,
@@ -143,14 +143,14 @@ function S(e) {
                         }),
                             e.stopPropagation();
                         let t = !m;
-                        _(t), t ? y(n.id, d) : C(n.id, d);
+                        _(t), t ? y(n.id, d) : E(n.id, d);
                     },
                     children: (0, r.jsx)(
                         s,
-                        x(v({}, e), {
+                        C(j({}, e), {
                             message: n,
                             "aria-label": l,
-                            className: j.actionIcon,
+                            className: v.actionIcon,
                             size: f ? "sm" : "xs",
                         }),
                     ),
@@ -187,8 +187,8 @@ let I = {
         label: y.intl.string(y.t["9p3D9p"]),
         Icon: (e) =>
             null != f.Z.getSavedMessage(e.message.channel_id, e.message.id)
-                ? (0, r.jsx)(a.plf, v({}, e))
-                : (0, r.jsx)(a.gt9, v({}, e)),
+                ? (0, r.jsx)(a.plf, j({}, e))
+                : (0, r.jsx)(a.gt9, j({}, e)),
         interactionType: g.s_.BOOKMARK,
         Menu: (e) => {
             let { message: t, renderPopoutProps: n } = e,
@@ -199,7 +199,7 @@ let I = {
                 });
             return (0, r.jsxs)(
                 a.v2r,
-                x(v({}, n), {
+                C(j({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": y.intl.string(y.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -246,7 +246,7 @@ let I = {
             return t.isThread()
                 ? (0, r.jsx)(
                       h.Z,
-                      x(v({}, n), {
+                      C(j({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: y.intl.string(y.t["1NBjqb"]),
@@ -254,7 +254,7 @@ let I = {
                   )
                 : (0, r.jsx)(
                       u.Z,
-                      x(v({}, n), {
+                      C(j({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: y.intl.string(y.t.Xm41aV),
@@ -270,7 +270,7 @@ function P(e) {
             return (0, i.useMemo)(() => {
                 let e = _.ln.MENTION,
                     r = new Set();
-                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), C[e].forEach((e) => r.add(e)), Array.from(r);
+                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), E[e].forEach((e) => r.add(e)), Array.from(r);
             }, [e, t, n]);
         })(t, l);
     return (0, r.jsx)(a.Kqy, {
@@ -278,14 +278,14 @@ function P(e) {
         gap: 4,
         align: "center",
         justify: "center",
-        className: j.actions,
+        className: v.actions,
         children: o.map((e) => {
             let i = I[e];
             switch (i.type) {
                 case "standard":
                     return (0, r.jsx)(
-                        E,
-                        x(v({}, i), {
+                        x,
+                        C(j({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -294,7 +294,7 @@ function P(e) {
                 case "menu":
                     return (0, r.jsx)(
                         S,
-                        x(v({}, i), {
+                        C(j({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

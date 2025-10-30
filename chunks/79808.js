@@ -1,14 +1,14 @@
 n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(493773),
+    l = n(647438),
+    o = n(493773),
     i = n(996733),
     a = n(636298),
     c = n(404975),
     s = n(924052),
     u = n(59662),
     d = n(996435),
-    f = n(990757);
+    f = n(4640);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,7 +66,7 @@ function y(e) {
             emptyState: P,
         } = e,
         S = null != m && (null == (t = j.entry(m)) ? void 0 : t.targetPanelKey) != null ? m : v;
-    (0, l.ZP)(() => {
+    (0, o.ZP)(() => {
         let e = j.entry(S).targetPanelKey;
         return (
             d.Z.setState({
@@ -79,17 +79,17 @@ function y(e) {
     });
     let C = d.Z.useField("currentPanelKey"),
         _ = d.Z.useField("targetKey"),
-        [w, E] = o.useState(j),
-        N = o.useMemo(() => w.get(null != C ? C : S), [w, C, S]),
-        T = o.useCallback(() => Z(void 0), []),
-        [k, Z] = o.useState({
+        [w, E] = l.useState(j),
+        N = l.useMemo(() => w.get(null != C ? C : S), [w, C, S]),
+        k = l.useCallback(() => Z(void 0), []),
+        [T, Z] = l.useState({
             target: S,
             targetAccordionKey: null == (n = j.entry(S)) ? void 0 : n.parentAccordionKey,
             animateScroll: !1,
-            complete: T,
+            complete: k,
         }),
         { navigateWithValidation: D } = (0, s.Cu)();
-    o.useEffect(() => {
+    l.useEffect(() => {
         if (null == _) return;
         let e = j.entry(_);
         if (null == e) return void i.Z.setState({ query: "" });
@@ -97,7 +97,7 @@ function y(e) {
         let t = {
             target: _,
             targetAccordion: e.parentAccordionKey,
-            complete: T,
+            complete: k,
         };
         if (e.targetPanelKey !== C) {
             let n = e.targetPanelKey;
@@ -111,8 +111,8 @@ function y(e) {
                     null == x || x(n);
             });
         } else Z(p(b({}, t), { animateScroll: !0 })), d.Z.setState({ targetKey: void 0 });
-    }, [C, _, T, j, D, x]);
-    let I = o.useMemo(() => ({ navTransition: k }), [k]),
+    }, [C, _, k, j, D, x]);
+    let I = l.useMemo(() => ({ navTransition: T }), [T]),
         A = () => D(g),
         R = null != C ? j.get(C) : void 0;
     return (0, r.jsx)(u.j.Provider, {

@@ -1,31 +1,31 @@
 n.d(t, { Z: () => c }), n(997841);
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(630388),
+var i = n(630388),
     l = n(901461),
     a = n(773176),
     o = n(981631),
-    s = n(360514);
+    s = n(5898);
 function c(e) {
     let {
             setPopout: t,
             messagePopouts: { emojiPicker: n, emojiBurstPicker: c, moreUtilities: u },
             isFocused: d,
-            buttonProps: { message: p, channel: h, groupId: f, compact: m = !1 },
+            buttonProps: { message: p, channel: f, groupId: h, compact: m = !1 },
             messageWindow: g,
         } = e,
         b = p.state === o.yb.SENDING,
-        C = p.id === f,
-        y = (0, r.yE)(p.flags, o.iLy.EPHEMERAL),
-        _ = p.state === o.yb.SEND_FAILED;
-    return b || (y && !_)
+        _ = p.id === h,
+        y = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
+        C = p.state === o.yb.SEND_FAILED;
+    return b || (y && !C)
         ? null
-        : (0, i.jsx)(a.Z, {
+        : (0, r.jsx)(a.Z, {
               className: s.buttons,
               innerClassName: s.buttonsInner,
-              isHeader: !m && C && !(0, l.Z)(p),
+              isHeader: !m && _ && !(0, l.Z)(p),
               isReply: !m && p.type === o.uaV.REPLY && null != p.messageReference,
-              channel: h,
+              channel: f,
               message: p,
               messageWindow: g,
               setPopout: t,

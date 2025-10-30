@@ -17,7 +17,7 @@ var l = n(442837),
     h = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(36973);
+    b = n(434652);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,26 +48,26 @@ let y = (e) => {
     let { type: t, guildId: r, closePopout: O } = e,
         y = (0, u.Dt)(),
         {
-            notClaimed: j,
-            notEmailVerified: v,
-            notPhoneVerified: x,
-            newAccount: C,
-            newMember: E,
+            notClaimed: v,
+            notEmailVerified: j,
+            notPhoneVerified: C,
+            newAccount: E,
+            newMember: x,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BI"]) : null,
         I = null,
         P = null;
     return (0 === t &&
-        (j
+        (v
             ? ((I = m.intl.string(m.t.IRxUlG)), (P = m.intl.string(m.t.fiNVin)))
-            : x
+            : C
               ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOv"])))
-              : v
+              : j
                 ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
-                : E
+                : x
                   ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: h.YeM.MEMBER_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))
-                  : C &&
+                  : E &&
                     ((I = m.intl.formatToPlainString(m.t.sncw41, { min: h.YeM.ACCOUNT_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
@@ -105,9 +105,9 @@ let y = (e) => {
                                                 variant: "primary",
                                                 text: P,
                                                 onClick: () => {
-                                                    j
+                                                    v
                                                         ? c.j()
-                                                        : x
+                                                        : C
                                                           ? (0, a.ZDy)(
                                                                 async () => {
                                                                     let { default: e } = await Promise.resolve().then(
@@ -121,7 +121,7 @@ let y = (e) => {
                                                                 },
                                                                 { modalKey: g.M },
                                                             )
-                                                          : v &&
+                                                          : j &&
                                                             (s.Z.verifyResend(),
                                                             (0, a.h7j)((e) => {
                                                                 var t, n, r;
@@ -176,7 +176,7 @@ let y = (e) => {
                                             }),
                                         })
                                       : null,
-                                  j || x || v
+                                  v || C || j
                                       ? (0, i.jsx)(a.Avr, {
                                             onClick: O,
                                             text: m.intl.string(m.t.oEAioF),

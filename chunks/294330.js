@@ -16,22 +16,22 @@ var r = n(951288),
     d = n(410030),
     p = n(686546),
     f = n(66637),
-    h = n(782738),
-    m = n(371260),
+    m = n(782738),
+    h = n(371260),
     g = n(372769),
     _ = n(134432),
     b = n(768581),
     E = n(356164),
     O = n(826946),
     I = n(981631),
-    v = n(388032),
-    y = n(972725),
+    y = n(388032),
+    v = n(8548),
     C = n(129512),
     S = n(330065),
     T = n(755386);
 function N(e) {
     let { guild: t, onClick: l, onView: s } = e,
-        [h, m] = i.useState(!1),
+        [m, h] = i.useState(!1),
         [E, N] = i.useState(!1),
         [j, P] = i.useState(!1),
         x = i.useRef(null),
@@ -45,9 +45,9 @@ function N(e) {
         }, [t.id, l]),
         Z = i.useCallback(
             (e) => {
-                e && !h && (m(!0), null == s || s(t.id));
+                e && !m && (h(!0), null == s || s(t.id));
             },
-            [t.id, h, s],
+            [t.id, m, s],
         ),
         w = i.useCallback(
             (e) => {
@@ -129,53 +129,53 @@ function N(e) {
             [t.icon, t.id],
         );
     return (0, r.jsxs)("div", {
-        className: y.container,
+        className: v.container,
         children: [
             E &&
                 (0, r.jsx)("div", {
-                    className: y.spinnerContainer,
+                    className: v.spinnerContainer,
                     children: (0, r.jsx)(c.$jN, {
                         type: c.$jN.Type.PULSING_ELLIPSIS,
-                        className: y.spinner,
+                        className: v.spinner,
                     }),
                 }),
             (0, r.jsx)(o.$, {
                 innerRef: x,
                 onChange: Z,
-                active: !h,
+                active: !m,
                 threshold: 0.55,
                 children: (0, r.jsxs)(f.Z, {
                     ref: x,
-                    className: y.card,
+                    className: v.card,
                     onClick: A,
                     disabled: E,
                     onContextMenu: w,
-                    "aria-label": v.intl.string(v.t["M9wQ+f"]),
+                    "aria-label": y.intl.string(y.t["M9wQ+f"]),
                     children: [
                         (0, r.jsxs)("div", {
-                            className: y.header,
+                            className: v.header,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: a()(y.banner, { [y.loaded]: j }),
+                                    className: a()(v.banner, { [v.loaded]: j }),
                                     children: (0, r.jsx)("img", {
                                         src: D,
                                         alt: "",
-                                        className: y.bannerImage,
+                                        className: v.bannerImage,
                                         onLoad: () => P(!0),
                                     }),
                                 }),
                                 (0, r.jsx)(O.Z, {
-                                    className: y.maximizeIcon,
+                                    className: v.maximizeIcon,
                                     guildId: t.id,
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: y.icon,
+                                    className: v.icon,
                                     children: (0, r.jsx)(p.ZP, {
                                         mask: p.ZP.Masks.SQUIRCLE,
                                         width: 56,
                                         height: 56,
                                         children: (0, r.jsx)("div", {
-                                            className: y.iconMask,
+                                            className: v.iconMask,
                                             children: (0, r.jsx)(p.ZP, {
                                                 mask: p.ZP.Masks.SQUIRCLE,
                                                 width: 48,
@@ -183,7 +183,7 @@ function N(e) {
                                                 children: (0, r.jsx)("img", {
                                                     src: M,
                                                     alt: "",
-                                                    className: y.avatar,
+                                                    className: v.avatar,
                                                 }),
                                             }),
                                         }),
@@ -192,42 +192,42 @@ function N(e) {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: y.guildDetails,
+                            className: v.guildDetails,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: y.title,
+                                    className: v.title,
                                     children: [
                                         (0, r.jsx)(g.Z, {
-                                            className: y.guildBadge,
+                                            className: v.guildBadge,
                                             guild: t,
                                             tooltipColor: c.aML.Colors.PRIMARY,
                                         }),
                                         (0, r.jsx)(c.Heading, {
                                             variant: "heading-md/semibold",
-                                            className: y.guildName,
+                                            className: v.guildName,
                                             children: t.name,
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(c.Text, {
-                                    className: y.description,
+                                    className: v.description,
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
                                     children: t.description,
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: y.memberDetails,
+                                    className: v.memberDetails,
                                     children: [
                                         null != t.presenceCount &&
                                             (0, r.jsxs)("div", {
-                                                className: y.memberDetailsCount,
+                                                className: v.memberDetailsCount,
                                                 children: [
-                                                    (0, r.jsx)("div", { className: y.presenceCountDot }),
+                                                    (0, r.jsx)("div", { className: v.presenceCountDot }),
                                                     (0, r.jsx)(c.Text, {
-                                                        className: y.memberDetailsText,
+                                                        className: v.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: v.intl.format(v.t["LC+S+m"], {
+                                                        children: y.intl.format(y.t["LC+S+m"], {
                                                             membersOnline: t.presenceCount,
                                                         }),
                                                     }),
@@ -235,14 +235,14 @@ function N(e) {
                                             }),
                                         null != t.memberCount &&
                                             (0, r.jsxs)("div", {
-                                                className: y.memberDetailsCount,
+                                                className: v.memberDetailsCount,
                                                 children: [
-                                                    (0, r.jsx)("div", { className: y.memberCountDot }),
+                                                    (0, r.jsx)("div", { className: v.memberCountDot }),
                                                     (0, r.jsx)(c.Text, {
-                                                        className: y.memberDetailsText,
+                                                        className: v.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: v.intl.format(v.t.zRl6XR, { count: t.memberCount }),
+                                                        children: y.intl.format(y.t.zRl6XR, { count: t.memberCount }),
                                                     }),
                                                 ],
                                             }),
@@ -274,16 +274,16 @@ function P(e) {
             (e, t, n, i) =>
                 null == t.guildId
                     ? (0, r.jsx)(
-                          m.Z,
+                          h.Z,
                           {
                               state: n,
                               cleanUp: i,
-                              children: (0, r.jsx)(h.Z, { className: y.placeholder }),
+                              children: (0, r.jsx)(m.Z, { className: v.placeholder }),
                           },
                           e,
                       )
                     : (0, r.jsx)(
-                          m.Z,
+                          h.Z,
                           {
                               state: n,
                               cleanUp: i,
@@ -312,7 +312,7 @@ function P(e) {
             [t, n],
         );
     return (0, r.jsx)("div", {
-        className: y.transitionGroup,
+        className: v.transitionGroup,
         children: (0, r.jsx)(c.W3x, {
             items: d,
             renderItem: o,

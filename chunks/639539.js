@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(70956),
     d = n(388032),
-    p = n(636433);
+    p = n(20887);
 function m(e) {
     if (null != e) {
         let t = new Date(),
@@ -142,7 +142,7 @@ let f = (e) => {
             children: [(0, r.jsx)("div", { className: p.tinyDot }), (0, r.jsx)("div", { className: p.tinyDot })],
         });
     },
-    g = (e) => {
+    v = (e) => {
         let { digits: t } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -157,16 +157,16 @@ let f = (e) => {
             ],
         });
     },
-    v = (e) => {
+    g = (e) => {
         let { countdown: t } = e;
         return (0, r.jsxs)("div", {
             className: p.digitsContainer,
             children: [
-                (0, r.jsx)(g, { digits: t.hours }),
+                (0, r.jsx)(v, { digits: t.hours }),
                 (0, r.jsx)(b, {}),
-                (0, r.jsx)(g, { digits: t.minutes }),
+                (0, r.jsx)(v, { digits: t.minutes }),
                 (0, r.jsx)(b, {}),
-                (0, r.jsx)(g, { digits: t.seconds }),
+                (0, r.jsx)(v, { digits: t.seconds }),
             ],
         });
     };
@@ -206,7 +206,7 @@ function y(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: p.digitsContainer,
-                    children: (0, r.jsx)(v, { countdown: s }),
+                    children: (0, r.jsx)(g, { countdown: s }),
                 }),
             ],
         })

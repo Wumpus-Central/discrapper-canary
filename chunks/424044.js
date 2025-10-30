@@ -14,7 +14,7 @@ var r = n(951288),
     m = n(314897),
     f = n(981631),
     _ = n(388032),
-    x = n(197571);
+    x = n(10198);
 s.ZP.initialize();
 let E = (e) => {
     let { location: t } = e,
@@ -22,36 +22,36 @@ let E = (e) => {
         E = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         v = (0, g.oK)("RSL - Landing Page"),
         [b, j] = i.useState(!1),
-        [I, N] = i.useState(_.intl.string(_.t["9exy+V"])),
-        [y, O] = i.useState(!0),
-        S = (e) => {
+        [I, y] = i.useState(_.intl.string(_.t["9exy+V"])),
+        [O, S] = i.useState(!0),
+        N = (e) => {
             switch (e) {
                 case f.evJ.INVALID_FORM_BODY:
                 case f.evJ.DSA_RSL_REPORT_NOT_FOUND:
-                    N(_.intl.string(_.t.bzXDfc));
+                    y(_.intl.string(_.t.bzXDfc));
                     break;
                 case f.evJ.DSA_RSL_ALREADY_REQUESTED:
-                    N(_.intl.string(_.t.rV00wq));
+                    y(_.intl.string(_.t.rV00wq));
                     break;
                 case f.evJ.DSA_RSL_LIMITED_TIME:
-                    N(_.intl.string(_.t["0dI29h"]));
+                    y(_.intl.string(_.t["0dI29h"]));
                     break;
                 case f.evJ.DSA_RSL_REPORT_INELIGIBLE:
-                    N(_.intl.string(_.t["RGa/Gb"]));
+                    y(_.intl.string(_.t["RGa/Gb"]));
                     break;
                 default:
-                    N(_.intl.string(_.t["0QLzfv"]));
+                    y(_.intl.string(_.t["0QLzfv"]));
             }
         };
     return (
         i.useEffect(() => {
             n
-                ? (O(!0),
+                ? (S(!0),
                   o
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => O(!1))
-                      .catch(() => O(!1)))
-                : O(!1);
+                      .then(() => S(!1))
+                      .catch(() => S(!1)))
+                : S(!1);
         }, [n]),
         i.useEffect(() => {
             E || v || a.Z.getExperiments();
@@ -61,9 +61,9 @@ let E = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? N(_.intl.string(_.t.e6mZMt)) : S(null == (t = n.body) ? void 0 : t.code);
+                    null != n ? y(_.intl.string(_.t.e6mZMt)) : N(null == (t = n.body) ? void 0 : t.code);
                 } catch (e) {
-                    S(null == (n = e.body) ? void 0 : n.code);
+                    N(null == (n = e.body) ? void 0 : n.code);
                 } finally {
                     j(!1);
                 }
@@ -71,7 +71,7 @@ let E = (e) => {
             j(!0), e((0, c.Z)(t)), (0, p.e)("report_second_look");
         }, [t]),
         v &&
-            !y &&
+            !O &&
             (0, r.jsxs)(u.ZP, {
                 children: [
                     (0, r.jsx)(u.Dx, {

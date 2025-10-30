@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(145807),
     S = n(56744),
     A = n(981631),
-    C = n(360514);
+    C = n(5898);
 function N(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function D(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,15 +97,15 @@ function L(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function x(e) {
+function L(e) {
     var t, n;
     let {
             message: i,
             compact: a = !1,
             className: N,
             onContextMenu: P,
-            onClick: L,
-            hideSimpleEmbedContent: x = !0,
+            onClick: x,
+            hideSimpleEmbedContent: L = !0,
             channel: M,
             isGroupStart: k,
             animateAvatar: j,
@@ -131,7 +131,7 @@ function x(e) {
         V = i.isFirstMessageInForumPost(M),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         { content: Y, hasSpoilerEmbeds: W } = (0, E.Z)(i, {
-            hideSimpleEmbedContent: x,
+            hideSimpleEmbedContent: L,
             allowList: V || H,
             allowHeading: V || H,
             allowLinks: !0,
@@ -179,7 +179,7 @@ function x(e) {
                 childrenMessageContent: (0, O.Z)(e, Y),
                 childrenSystemMessage: (0, I.Z)(w(R({}, e), { disableInteraction: F })),
                 onContextMenu: P,
-                onClick: L,
+                onClick: x,
                 hasThread: G && null != Q && i.hasFlag(A.iLy.HAS_THREAD),
                 hasReply: i.type === A.uaV.REPLY,
                 "aria-labelledby": ee,
@@ -192,4 +192,4 @@ function x(e) {
         ),
     );
 }
-let M = i.memo(x);
+let M = i.memo(L);

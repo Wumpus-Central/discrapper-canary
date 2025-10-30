@@ -22,16 +22,16 @@ var r = n(951288),
     _ = n(358085),
     O = n(143316),
     y = n(240126),
-    j = n(147522),
-    v = n(809780),
-    x = n(981631),
-    C = n(388032),
-    E = n(915087);
+    v = n(147522),
+    j = n(809780),
+    C = n(981631),
+    E = n(388032),
+    x = n(77902);
 function S(e) {
     var t, n, l, a, O, S, P;
     let { onJump: N, showTutorial: Z, setSeenTutorial: T, closePopout: w } = e,
         A = i.useRef(null),
-        [R, D] = (0, v.ZP)(A),
+        [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
         G = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
@@ -59,9 +59,9 @@ function S(e) {
                 null != e && O.markChannelRead(e);
             };
             return (
-                b.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                b.S.subscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    b.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    b.S.unsubscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
         }, [O, a.channels]),
@@ -82,7 +82,7 @@ function S(e) {
             );
         }, [S]),
         i.useEffect(() => {
-            m.default.track(x.rMx.OPEN_POPOUT, { type: "Inbox" });
+            m.default.track(C.rMx.OPEN_POPOUT, { type: "Inbox" });
         }, []),
         i.useEffect(
             () => (
@@ -95,9 +95,9 @@ function S(e) {
         ),
         (0, f.ZP)(
             () => (
-                b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
+                b.S.subscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
-                    b.S.unsubscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
+                    b.S.unsubscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
                 }
             ),
         );
@@ -105,11 +105,11 @@ function S(e) {
     if (0 === M.length) {
         return (0, r.jsx)(y.Z, {
             Icon: d.xx7,
-            header: C.intl.string(C.t["6XMM+D"]),
+            header: E.intl.string(E.t["6XMM+D"]),
             tip:
                 (null == (P = s().os) ? void 0 : P.family) === "OS X"
-                    ? C.intl.string(C.t.w9uDOW)
-                    : C.intl.string(C.t.BiUJC6),
+                    ? E.intl.string(E.t.w9uDOW)
+                    : E.intl.string(E.t.BiUJC6),
         });
     }
     return (0, r.jsx)(c.bG, {
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: L === v.jd.Done ? void 0 : k,
-                            className: o()(E.scroller, "group-spacing-".concat(G)),
+                            onScroll: L === j.jd.Done ? void 0 : k,
+                            className: o()(x.scroller, "group-spacing-".concat(G)),
                             children: [
                                 Z ? (0, r.jsx)(I, { setSeenTutorial: T }) : null,
-                                (0, j.Z)(M, D, N),
-                                L === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                (0, v.Z)(M, D, N),
+                                L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: x.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors
@@ -209,10 +209,10 @@ function S(e) {
 function I(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
-        className: E.tutorial,
+        className: x.tutorial,
         children: [
             (0, r.jsx)("div", {
-                className: E.tutorialIcon,
+                className: x.tutorialIcon,
                 children: (0, r.jsx)(d.xx7, {
                     size: "md",
                     color: "currentColor",
@@ -221,22 +221,22 @@ function I(e) {
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(d.Heading, {
-                        className: E.__invalid_tutorialHeader,
+                        className: x.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: C.intl.string(C.t.vZPktJ),
+                        children: E.intl.string(E.t.vZPktJ),
                     }),
                     (0, r.jsx)(d.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: C.intl.string(C.t.vWkIII),
+                        children: E.intl.string(E.t.vWkIII),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: E.tutorialButton,
+                        className: x.tutorialButton,
                         children: (0, r.jsx)(d.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: C.intl.string(C.t["+IrDzN"]),
+                            text: E.intl.string(E.t["+IrDzN"]),
                             onClick: t,
                         }),
                     }),
@@ -249,12 +249,12 @@ function P() {
     return (0, r.jsx)(y.Z, {
         Icon: d.xx7,
         disableStars: !0,
-        header: C.intl.string(C.t["KG/ynf"]),
-        tip: C.intl.string(C.t.cvcKzX),
+        header: E.intl.string(E.t["KG/ynf"]),
+        tip: E.intl.string(E.t.cvcKzX),
     });
 }
 let N = () =>
     (0, r.jsx)(O.Z, {
-        onClick: () => b.S.dispatch(x.CkL.INBOX_MARK_ALL_UNREADS_READ),
+        onClick: () => b.S.dispatch(C.CkL.INBOX_MARK_ALL_UNREADS_READ),
         type: "top-header",
     });

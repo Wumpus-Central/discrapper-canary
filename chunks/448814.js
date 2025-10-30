@@ -14,7 +14,7 @@ var r = n(951288),
     h = n(777207),
     m = n(194255),
     g = n(199197),
-    E = n(95632);
+    E = n(653913);
 function b(e, t, n) {
     return (
         t in e
@@ -105,8 +105,8 @@ function A(e) {
             renderListItem: P,
             renderEmptyState: w,
             maxVisibleItems: D = 5,
-            loading: L = !1,
-            onBlur: x,
+            loading: x = !1,
+            onBlur: L,
             onFocus: M,
             typeahead: k = !1,
         } = e,
@@ -153,7 +153,7 @@ function A(e) {
                 }),
             [],
         );
-    if (L)
+    if (x)
         t = (0, r.jsx)("div", {
             className: E.loadingSpinnerWrapper,
             "aria-busy": !0,
@@ -209,9 +209,9 @@ function A(e) {
                     v(
                         y(
                             {
-                                onBlur: x,
+                                onBlur: L,
                                 onFocus: M,
-                                "aria-busy": L,
+                                "aria-busy": x,
                                 ref: n,
                                 onKeyDown: (e) => {
                                     null == i || i(e), W(e);

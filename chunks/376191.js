@@ -11,15 +11,15 @@ var i = n(442837),
     d = n(1585),
     p = n(125988),
     f = n(43267),
-    h = n(699516),
-    m = n(51144),
+    m = n(699516),
+    h = n(51144),
     g = n(998502),
     _ = n(620924),
     b = n(332712),
     E = n(81471),
     O = n(388032),
-    I = n(79072);
-let v = (e) => {
+    I = n(418337);
+let y = (e) => {
         let { userId: t } = e,
             n = (0, b.O)(t);
         return null == n || 0 === n.length
@@ -47,12 +47,12 @@ let v = (e) => {
                   ],
               });
     },
-    y = g.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
+    v = g.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
 function C(e) {
     var t;
     let { channel: n, otherUser: l, active: u } = e,
         g = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        b = (0, i.e7)([h.Z], () => (null == l ? null : h.Z.getNickname(l.id))),
+        b = (0, i.e7)([m.Z], () => (null == l ? null : m.Z.getNickname(l.id))),
         C = !g && u,
         S = (0, _.c)(n),
         { avatarDecorationSrc: T } = (0, p.Z)({
@@ -62,7 +62,7 @@ function C(e) {
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y, {
+            (0, r.jsx)(v, {
                 className: I.avatar,
                 src: (0, f.x)(n, 40, C),
                 avatarDecoration: T,
@@ -81,7 +81,7 @@ function C(e) {
                                 showAccountIdentifier: !0,
                                 className: I.tagContainer,
                                 usernameClass: I.username,
-                                discriminatorClass: null != m.ZP.getGlobalName(l) ? I.globalName : I.discriminator,
+                                discriminatorClass: null != h.ZP.getGlobalName(l) ? I.globalName : I.discriminator,
                             }),
                             (0, r.jsx)(a.Text, {
                                 className: I.timestampWithPreview,
@@ -94,7 +94,7 @@ function C(e) {
                     (0, r.jsx)(c.Z, {
                         hoverText: (0, r.jsx)(E.Z, { channel: n }),
                         forceHover: u,
-                        children: (0, r.jsx)(v, { userId: l.id }),
+                        children: (0, r.jsx)(y, { userId: l.id }),
                     }),
                 ],
             }),

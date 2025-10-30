@@ -35,11 +35,11 @@ var r = n(951288),
     P = n(271383),
     w = n(485386),
     D = n(496675),
-    L = n(594174),
-    x = n(700785),
+    x = n(594174),
+    L = n(700785),
     M = n(981631),
     k = n(388032),
-    j = n(85703);
+    j = n(250781);
 function U(e, t, n) {
     return (
         t in e
@@ -170,8 +170,8 @@ let z = i.forwardRef(function (e, t) {
             guildId: v,
         }),
         D = (0, _.e7)([b.Z], () => b.Z.roleStyle),
-        L = (0, S._f)(v, E, E.colorStrings),
-        x = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
+        x = (0, S._f)(v, E, E.colorStrings),
+        L = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
         M = i.useCallback(
             (e) => {
                 (0, m.jW)(e, async () => {
@@ -194,7 +194,7 @@ let z = i.forwardRef(function (e, t) {
         H = p.Z.unsafe_rawColors.WHITE_500.css,
         Y = (0, f._i)(B);
     null != Y && 0.3 > (0, f.Bd)(Y) && (H = p.Z.unsafe_rawColors.PRIMARY_630.css),
-        (c = x
+        (c = L
             ? (0, r.jsx)(y.Z, {
                   className: j.roleFlowerStar,
                   iconClassName: d ? j.roleVerifiedIcon : void 0,
@@ -205,13 +205,13 @@ let z = i.forwardRef(function (e, t) {
               ? (0, r.jsx)(h.FhE, {
                     className: j.roleDot,
                     color: B,
-                    colors: L,
+                    colors: x,
                     background: !1,
                     tooltip: !1,
                 })
               : (0, r.jsx)(h.xko, {
                     color: B,
-                    colors: L,
+                    colors: x,
                 }));
     let W = i.useMemo(() => {
         var t;
@@ -394,10 +394,10 @@ function Q(e) {
         }
         A((t) => (e < R.length ? e : t));
     }, [f, p, R]);
-    let U = L.default.getCurrentUser();
+    let U = x.default.getCurrentUser();
     l()(null != U, "MemberRolesList: currentUser cannot be undefined");
     let B = !m && D.Z.can(M.Plq.MANAGE_ROLES, a),
-        V = x.e9(a, U.id),
+        V = L.e9(a, U.id),
         K = i.useMemo(() => "roles-".concat((0, c.Z)()), []),
         Q = (0, d.ZP)({
             id: K,
@@ -416,7 +416,7 @@ function Q(e) {
                     canRemove:
                         (null == (t = e.tags) ? void 0 : t.guild_connections) === null
                             ? n.id === U.id
-                            : B && x.r6(a, U.id, V, e),
+                            : B && L.r6(a, U.id, V, e),
                     onRemove: () => v(e),
                     ref: (t) => O(e.id, t),
                     guildId: a.id,

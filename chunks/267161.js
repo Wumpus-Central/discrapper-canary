@@ -14,55 +14,55 @@ var r = n(951288),
     d = n(99977),
     p = n(919842),
     f = n(320007),
-    h = n(719961),
-    m = n(336219),
+    m = n(719961),
+    h = n(336219),
     g = n(609174),
     _ = n(257966),
     b = n(111666),
     E = n(413557),
     O = n(300986),
     I = n(314451),
-    v = n(35583),
-    y = n(821020),
-    C = n(340137),
-    S = n(522474),
-    T = n(141321),
-    N = n(984802),
-    j = n(906467),
-    P = n(451478),
-    x = n(998502),
-    A = n(228488),
-    Z = n(403497),
+    y = n(35583),
+    v = n(273959),
+    C = n(821020),
+    S = n(340137),
+    T = n(522474),
+    N = n(141321),
+    j = n(984802),
+    P = n(906467),
+    x = n(451478),
+    A = n(998502),
+    Z = n(228488),
     w = n(950796),
     L = n(741764),
-    R = n(82504);
+    R = n(851352);
 let D = (0, s.U)(() => ({ isOpen: !0 }));
 function M(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
     return n
         ? (0, r.jsx)(_.R, { focusSectionProps: i })
-        : (0, r.jsx)(Z.d, {
+        : (0, r.jsx)(v.d, {
               withFastTravel: t,
               focusSectionProps: i,
           });
 }
 let k = i.memo(function () {
     i.useLayoutEffect(() => {
-        x.ZP.setMinimumSize(L.J, L.N);
+        A.ZP.setMinimumSize(L.J, L.N);
     }, []);
-    let { notificationCenterVariant: e, entrypoint: t } = (0, y.pN)({ location: "AppTitleBar" }),
-        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, m.t)({ location: "AppTitleBar" }),
-        { backForwardButtons: s, titlebarIconSize: _ } = (0, h.T)({ location: "AppTitleBar" }),
-        { hasBugReporterAccess: Z } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
+    let { notificationCenterVariant: e, entrypoint: t } = (0, C.pN)({ location: "AppTitleBar" }),
+        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, h.t)({ location: "AppTitleBar" }),
+        { backForwardButtons: s, titlebarIconSize: _ } = (0, m.T)({ location: "AppTitleBar" }),
+        { hasBugReporterAccess: v } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         { enabled: D } = d.c.useConfig({ location: "AppTitleBar" }),
-        k = (0, o.e7)([j.Z], () => j.Z.isDeveloper),
-        U = null !== e && t === y.u3.TITLE_BAR_LEFT,
+        k = (0, o.e7)([P.Z], () => P.Z.isDeveloper),
+        U = null !== e && t === C.u3.TITLE_BAR_LEFT,
         G = null === e;
     i.useLayoutEffect(() => {
-        x.ZP.setMinimumSize(L.J, L.N);
+        A.ZP.setMinimumSize(L.J, L.N);
     }, []);
-    let B = (0, N.Ll)(),
-        H = (0, o.e7)([P.Z, S.Z], () => (0, A.rB)()),
+    let B = (0, j.Ll)(),
+        H = (0, o.e7)([x.Z, T.Z], () => (0, Z.rB)()),
         V = (function (e) {
             let {
                 showBackForwardButtons: t,
@@ -105,7 +105,7 @@ let k = i.memo(function () {
                                     (0, r.jsx)(g.Z, {
                                         firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === V ? e : void 0,
                                     }),
-                                U && (0, r.jsx)(C.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === V ? e : void 0 }),
+                                U && (0, r.jsx)(S.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === V ? e : void 0 }),
                             ],
                         }),
                         title: (0, r.jsx)(M, {
@@ -123,7 +123,7 @@ let k = i.memo(function () {
                                 }),
                                 G &&
                                     (0, r.jsx)(
-                                        T.Z,
+                                        N.Z,
                                         ((i = (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -164,7 +164,7 @@ let k = i.memo(function () {
                                               }),
                                         i),
                                     ),
-                                Z
+                                v
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(I.H, {
@@ -178,7 +178,7 @@ let k = i.memo(function () {
                                           focusSectionProps: "HELP" === V ? e : void 0,
                                           className: F,
                                       }),
-                                (0, r.jsx)(v.Z, { className: F }),
+                                (0, r.jsx)(y.Z, { className: F }),
                             ],
                         }),
                     });

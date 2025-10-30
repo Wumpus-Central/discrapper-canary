@@ -10,16 +10,16 @@ var r,
     d = n(692547),
     p = n(28664),
     f = n(481060),
-    h = n(287734),
-    m = n(438139),
+    m = n(287734),
+    h = n(438139),
     g = n(2052),
     _ = n(726542),
     b = n(638880),
     E = n(655922),
     O = n(122810),
     I = n(833664),
-    v = n(503438),
-    y = n(420660),
+    y = n(503438),
+    v = n(420660),
     C = n(74433),
     S = n(206074),
     T = n(100527),
@@ -56,7 +56,7 @@ var r,
     er = n(599706),
     ei = n(981631),
     el = n(388032),
-    ea = n(84822);
+    ea = n(544284);
 let es = [14, 14, 12, 12, 10, 8, 6],
     eo = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -76,7 +76,7 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             children: e,
         });
     },
-    eu = (0, m.Z)((e) => {
+    eu = (0, h.Z)((e) => {
         let { message: t } = e;
         return (0, i.jsx)("div", {
             className: ea.__invalid_timestamp,
@@ -114,7 +114,7 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             })
         );
     },
-    eh = (e) => {
+    em = (e) => {
         let { activity: t, user: n } = e,
             r = (0, F.e)({
                 activity: t,
@@ -128,9 +128,9 @@ let es = [14, 14, 12, 12, 10, 8, 6],
             hasButton: i,
         };
     },
-    em = (e) => {
+    eh = (e) => {
         let { activity: t, user: n } = e,
-            { joinActivityButtonAction: r, isJoinActivityButtonShown: l } = eh({
+            { joinActivityButtonAction: r, isJoinActivityButtonShown: l } = em({
                 activity: t,
                 user: n,
             });
@@ -391,7 +391,7 @@ let eO = (e) => {
             u = l.useRef(null),
             d = (0, A.ZP)(r, !0),
             p = (0, q.EB)(n, 32),
-            m = (0, q.gM)(n);
+            h = (0, q.gM)(n);
         return (0, i.jsx)(ed, {
             children: (0, i.jsxs)("div", {
                 className: ea.voiceSection,
@@ -415,8 +415,8 @@ let eO = (e) => {
                                           className: ea.voiceSectionNoGuildImageWrapper,
                                           children: (0, i.jsx)("div", {
                                               className: ea.voiceSectionNoGuildImage,
-                                              style: { fontSize: null != (t = es[m.length]) ? t : es[es.length - 1] },
-                                              children: m,
+                                              style: { fontSize: null != (t = es[h.length]) ? t : es[es.length - 1] },
+                                              children: h,
                                           }),
                                       }),
                                 (0, i.jsx)("div", {
@@ -432,7 +432,7 @@ let eO = (e) => {
                     }),
                     (0, i.jsx)(f.P3F, {
                         onClick: () => {
-                            h.default.selectVoiceChannel(r.id), (0, z.Kh)(r.id);
+                            m.default.selectVoiceChannel(r.id), (0, z.Kh)(r.id);
                         },
                         focusProps: { ringTarget: u },
                         children: (0, i.jsxs)("div", {
@@ -488,8 +488,8 @@ let eO = (e) => {
         let { activity: o, getAssetImage: c, user: u } = e,
             { analyticsLocations: d } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
             { data: p } = (0, P.IX)(o.application_id),
-            { assets: f, details: h, state: m, application_id: g } = o,
-            { hasButton: _ } = eh({
+            { assets: f, details: m, state: h, application_id: g } = o,
+            { hasButton: _ } = em({
                 activity: o,
                 user: u,
             }),
@@ -535,11 +535,11 @@ let eO = (e) => {
                               (0, i.jsxs)("div", {
                                   className: ea.activitySectionDetails,
                                   children: [
-                                      eo(null != h && "" !== h ? h : o.name),
-                                      null != m ? ec(m) : null,
+                                      eo(null != m && "" !== m ? m : o.name),
+                                      null != h ? ec(h) : null,
                                       (() => {
                                           let { timestamps: e } = o;
-                                          return null == e || !(0, I.Z)(o) || (0, v.Z)(o)
+                                          return null == e || !(0, I.Z)(o) || (0, y.Z)(o)
                                               ? null
                                               : ec(
                                                     (0, O.Z)(o)
@@ -554,7 +554,7 @@ let eO = (e) => {
                                       })(),
                                   ],
                               }),
-                              (0, i.jsx)(em, {
+                              (0, i.jsx)(eh, {
                                   activity: o,
                                   user: u,
                               }),
@@ -632,8 +632,8 @@ let eO = (e) => {
         let t,
             { activity: r, user: l, getAssetImage: a, guildId: o } = e,
             { name: c, details: u, assets: d, application_id: p } = r;
-        if (null != d && (0, y.Z)(r)) {
-            var h;
+        if (null != d && (0, v.Z)(r)) {
+            var m;
             t = (0, i.jsx)(R.Z, {
                 className: ea.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
@@ -643,7 +643,7 @@ let eO = (e) => {
                     target: "_blank",
                     children: [
                         (0, i.jsx)("img", {
-                            alt: null != (h = d.large_text) ? h : "",
+                            alt: null != (m = d.large_text) ? m : "",
                             src: a(p, d.large_image, [900, 500]),
                             className: ea.twitchSectionPreview,
                         }),
@@ -691,7 +691,7 @@ let eO = (e) => {
         let { activity: r, user: l, applicationStream: a, onPreviewClick: s, guildId: o } = e,
             u = (0, c.e7)([Q.Z], () => Q.Z.getChannel(a.channelId)),
             [d, p] = (0, U.wq)(u),
-            h = (0, i.jsxs)(f.P3F, {
+            m = (0, i.jsxs)(f.P3F, {
                 onClick: d ? s : void 0,
                 className: ea.applicationStreamingPreviewWrapper,
                 children: [
@@ -707,7 +707,7 @@ let eO = (e) => {
                     }),
                 ],
             }),
-            m = null != (n = null == (t = (0, C.Z)(r, a)) ? void 0 : t.activityText) ? n : el.intl.string(el.t.eXan7B);
+            h = null != (n = null == (t = (0, C.Z)(r, a)) ? void 0 : t.activityText) ? n : el.intl.string(el.t.eXan7B);
         return (0, i.jsxs)(ed, {
             children: [
                 (0, i.jsxs)("div", {
@@ -720,12 +720,12 @@ let eO = (e) => {
                             className: ea.applicationStreamingAvatar,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [eo(en.ZP.getName(l)), ec(m)],
+                            children: [eo(en.ZP.getName(l)), ec(h)],
                         }),
                         (0, i.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL }),
                     ],
                 }),
-                h,
+                m,
             ],
         });
     }),
@@ -746,19 +746,19 @@ let eO = (e) => {
                     .filter(et.lm),
             ),
             p = (0, g.O)(),
-            { analyticsLocations: h } = (0, N.ZP)();
+            { analyticsLocations: m } = (0, N.ZP)();
         if (null == u) return null;
-        let m = x.Z.getApplication(u);
-        if (null == m) return null;
+        let h = x.Z.getApplication(u);
+        if (null == h) return null;
         let _ = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            E = (0, ee.xF)(m.id, s, 300);
+            E = (0, ee.xF)(h.id, s, 300);
         return (0, i.jsxs)(ed, {
             children: [
                 (0, i.jsxs)("div", {
                     className: ea.embeddedActivityTopRow,
                     children: [
                         (0, i.jsx)(k.Z, {
-                            game: m,
+                            game: h,
                             size: k.A.XSMALL,
                             className: ea.embeddedActivityIcon,
                         }),
@@ -766,7 +766,7 @@ let eO = (e) => {
                             className: ea.embeddedActivityName,
                             children: (0, i.jsx)(f.Text, {
                                 variant: "text-sm/semibold",
-                                children: m.name,
+                                children: h.name,
                             }),
                         }),
                         null != _
@@ -787,7 +787,7 @@ let eO = (e) => {
                         null != E
                             ? (0, i.jsx)("img", {
                                   src: E,
-                                  alt: m.name,
+                                  alt: h.name,
                                   className: ea.embeddedActivityImage,
                               })
                             : null,
@@ -811,7 +811,7 @@ let eO = (e) => {
                                                     applicationId: u,
                                                     activityChannelId: n.id,
                                                     locationObject: p.location,
-                                                    analyticsLocations: h,
+                                                    analyticsLocations: m,
                                                 });
                                         },
                                     }),

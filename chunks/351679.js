@@ -10,18 +10,18 @@ var r = n(951288),
     d = n(786761),
     p = n(739566),
     f = n(492593),
-    h = n(453687),
-    m = n(25015),
+    m = n(453687),
+    h = n(25015),
     g = n(438075),
     _ = n(963550),
     b = n(845080),
     E = n(295790),
     O = n(145807),
     I = n(592125),
-    v = n(709054),
-    y = n(981631),
-    C = n(7938),
-    S = n(360514);
+    y = n(709054),
+    v = n(981631),
+    C = n(268269),
+    S = n(5898);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,10 +93,10 @@ let N = i.memo(function (e) {
             "subscribeToComponentDispatch",
             "renderThreadAccessory",
         ]),
-        k = N.type === y.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        k = N.type === v.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
         U = N.isFirstMessageInForumPost(Z),
         G = (0, u.A)((null != (n = N.editedTimestamp) ? n : N.timestamp).valueOf()),
-        { content: B, hasSpoilerEmbeds: H } = (0, m.Z)(N, {
+        { content: B, hasSpoilerEmbeds: H } = (0, h.Z)(N, {
             hideSimpleEmbedContent: A,
             allowList: U || G,
             allowHeading: U || G,
@@ -107,14 +107,14 @@ let N = i.memo(function (e) {
         F = (0, p.ZP)(N),
         z = (0, o.e7)(
             [I.Z],
-            () => N.hasFlag(y.iLy.HAS_THREAD) && I.Z.getChannel(v.default.castMessageIdAsChannelId(N.id)),
+            () => N.hasFlag(v.iLy.HAS_THREAD) && I.Z.getChannel(y.default.castMessageIdAsChannelId(N.id)),
         ),
         Y = (0, c.p9)({
             guildId: Z.guild_id,
             roleId: F.iconRoleId,
         }),
-        W = (0, h.iG)(N),
-        q = (0, h.Gx)(N);
+        W = (0, m.iG)(N),
+        q = (0, m.Gx)(N);
     return (0, r.jsx)(
         f.Z,
         T(
@@ -159,7 +159,7 @@ let N = i.memo(function (e) {
                 ),
                 onContextMenu: P,
                 onClick: x,
-                hasThread: D && null != z && N.hasFlag(y.iLy.HAS_THREAD),
+                hasThread: D && null != z && N.hasFlag(v.iLy.HAS_THREAD),
                 hasReply: !1,
                 "aria-labelledby": W,
                 "aria-describedby": q,

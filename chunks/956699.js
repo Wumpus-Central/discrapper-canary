@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(171393),
     w = n(837268),
     D = n(32300),
-    L = n(371651),
-    x = n(398269),
+    x = n(371651),
+    L = n(398269),
     M = n(921801),
     k = n(857192),
     j = n(558724),
@@ -47,9 +47,9 @@ var r = n(951288),
     z = n(726985),
     q = n(981631),
     X = n(908442),
-    Q = n(674336),
-    J = n(620842),
-    $ = n(197571);
+    Q = n(670873),
+    J = n(504401),
+    $ = n(10198);
 function ee(e, t, n) {
     return (
         t in e
@@ -952,7 +952,7 @@ function ep(e) {
 }
 function eh() {
     let e = (0, D.XE)("developer_settings"),
-        t = (0, d.e7)([L.default], () => L.default.getForcedRenderMode()),
+        t = (0, d.e7)([x.default], () => x.default.getForcedRenderMode()),
         [n, a] = i.useState(!1),
         [o, s] = i.useState(""),
         l = e || t === w.R5.OUT_OF_PROCESS_V3 || t === w.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
@@ -974,7 +974,7 @@ function eh() {
                                   ? (0, r.jsx)(p.Button, {
                                         variant: "primary",
                                         text: "Open Overlay",
-                                        onClick: () => (0, x.f)(),
+                                        onClick: () => (0, L.f)(),
                                     })
                                   : (0, r.jsx)(p.Button, {
                                         variant: "primary",

@@ -29,8 +29,8 @@ var r = n(392711),
     P = n(364458),
     w = n(981631),
     D = n(689079),
-    L = n(388032);
-function x(e, t, n) {
+    x = n(388032);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -255,7 +255,7 @@ let H = (e) => {
                 if (null == d)
                     return {
                         type: "text",
-                        content: "@".concat(L.intl.string(L.t["YV4F/n"])),
+                        content: "@".concat(x.intl.string(x.t["YV4F/n"])),
                     };
                 let f = (0, u.zI)(null == l ? void 0 : l.id, d) && !(0, c.Gr)(d);
                 return {
@@ -310,7 +310,7 @@ let H = (e) => {
                 }
                 let l = e[1],
                     c = null != l && w.Xyh.test(l.trim()),
-                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(L.intl.string(L.t.sKdZ6U)) : e[0];
+                    u = c && n.unknownUserMentionPlaceholder ? "@".concat(x.intl.string(x.t.sKdZ6U)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -387,7 +387,7 @@ let H = (e) => {
                         content: [
                             {
                                 type: "text",
-                                content: L.intl.string(L.t["11pdXZ"]),
+                                content: x.intl.string(x.t["11pdXZ"]),
                             },
                         ],
                         icon: void 0,
@@ -402,7 +402,7 @@ let H = (e) => {
                         {
                             type: "text",
                             content: "".concat(
-                                null != (a = null == l ? void 0 : l.name) ? a : L.intl.string(L.t["11pdXZ"]),
+                                null != (a = null == l ? void 0 : l.name) ? a : x.intl.string(x.t["11pdXZ"]),
                             ),
                         },
                     ],
@@ -416,6 +416,15 @@ let H = (e) => {
                             : void 0,
                 };
             },
+        },
+        timestampMentionInput: {
+            order: o().defaultRules.text.order,
+            requiredFirstCharacters: ["<"],
+            match: (e, t) => (t.allowTimeMentionInput ? /^<@time:([^>]*)>/.exec(e) : null),
+            parse: (e) => ({
+                type: "timestampMentionInput",
+                content: e[1],
+            }),
         },
         emoji: {
             order: A.ZP.order,

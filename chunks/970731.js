@@ -12,7 +12,7 @@ var o = n(120356),
     c = n(481060),
     u = n(493773),
     d = n(921944),
-    p = n(164208);
+    p = n(12614);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,21 +91,21 @@ function y(e) {
         contentClassName: g,
         buttonCTA: m,
         secondaryButtonCTA: y,
-        onClick: j,
-        onSecondaryClick: v,
-        buttonProps: x = {
+        onClick: v,
+        onSecondaryClick: j,
+        buttonProps: C = {
             color: s.zx.Colors.BRAND,
             look: s.zx.Looks.FILLED,
         },
-        secondaryButtonProps: C = { color: s.zx.Colors.BRAND_INVERTED },
-        onComponentMount: E,
+        secondaryButtonProps: E = { color: s.zx.Colors.BRAND_INVERTED },
+        onComponentMount: x,
         asset: S,
         markAsDismissed: I,
         caretPosition: P = "caretTopCenter",
         buttonLayout: N = 0,
     } = e;
     (0, u.ZP)(() => {
-        null == E || E();
+        null == x || x();
     });
     let Z = null != y;
     return (0, l.jsxs)("div", {
@@ -136,10 +136,10 @@ function y(e) {
                           Z
                               ? (0, l.jsx)(
                                     s.zx,
-                                    h(f({}, C), {
+                                    h(f({}, E), {
                                         fullWidth: 1 === N,
                                         onClick: () => {
-                                            null == v || v(), null == I || I(d.L.SECONDARY);
+                                            null == j || j(), null == I || I(d.L.SECONDARY);
                                         },
                                         children: y,
                                     }),
@@ -149,10 +149,10 @@ function y(e) {
                               ? null
                               : (0, l.jsx)(
                                     s.zx,
-                                    h(f({}, x), {
+                                    h(f({}, C), {
                                         fullWidth: !Z || 1 === N,
                                         onClick: (e) => {
-                                            j(e), null == I || I(d.L.PRIMARY);
+                                            v(e), null == I || I(d.L.PRIMARY);
                                         },
                                         children: m,
                                     }),

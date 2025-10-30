@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,25 +10,25 @@ var r = n(951288),
     d = n(333984),
     p = n(26373),
     f = n(486622),
-    h = n(718538),
-    m = n(359110),
+    m = n(718538),
+    h = n(359110),
     g = n(6025),
     _ = n(433355),
     b = n(933557),
     E = n(287746),
     O = n(388032),
-    I = n(10832),
-    v = n(419246);
-function y(e) {
+    I = n(952713),
+    y = n(998603);
+function v(e) {
     let { channel: t, baseChannelId: n } = e,
-        y = (0, b.ZP)(t),
+        v = (0, b.ZP)(t),
         C = (0, p.K)(),
         S = (0, p.V)(),
         T = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
         N = (0, l.e7)([d.Z], () => d.Z.isSpam(t.id)),
-        j = (0, h.V)(t.id, t.getRecipientId()),
+        j = (0, m.V)(t.id, t.getRecipientId()),
         P = i.useCallback(() => {
-            g.Z.closeChannelSidebar(_.uZ), T && C && (0, m.Kh)(t.id), N && S && (0, m.Kh)(t.id);
+            g.Z.closeChannelSidebar(_.uZ), T && C && (0, h.Kh)(t.id), N && S && (0, h.Kh)(t.id);
         }, [t.id, N, S, T, C]),
         x = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.pIQ3h4), a.ToastType.FAILURE));
@@ -56,20 +56,20 @@ function y(e) {
                 "aria-label": O.intl.string(O.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
-                    channelName: y,
+                    channelName: v,
                     inSidebar: !0,
                 }),
             }),
             N &&
                 (0, r.jsxs)("div", {
-                    className: v.hamBanner,
+                    className: y.hamBanner,
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             children: O.intl.string(O.t.XVOKgj),
                         }),
                         (0, r.jsx)("div", {
-                            className: v.hamBannerButton,
+                            className: y.hamBannerButton,
                             children: (0, r.jsx)(a.Button, {
                                 size: "sm",
                                 onClick: () => A(t, j),

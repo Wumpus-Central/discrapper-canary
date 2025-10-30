@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(194359),
     p = n(313201),
     f = n(657682),
-    h = n(981631),
-    m = n(295907),
+    m = n(981631),
+    h = n(295907),
     g = n(388032),
-    _ = n(470840),
-    b = n(197571);
+    _ = n(118213),
+    b = n(10198);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,23 +59,23 @@ function O(e, t) {
     );
 }
 let I = n(349181),
-    v = {
+    y = {
         canSend: !1,
         hint: null,
         success: null,
         error: null,
     },
-    y = (0, p.hQ)(),
-    C = "".concat(y, "-decription"),
-    S = "".concat(y, "-error");
+    v = (0, p.hQ)(),
+    C = "".concat(v, "-decription"),
+    S = "".concat(v, "-error");
 function T(e, t) {
     switch (t.type) {
         case "RESET":
-            return v;
+            return y;
         case "SUCCESS":
-            return O(E({}, v), { success: t.text });
+            return O(E({}, y), { success: t.text });
         case "HINT":
-            return O(E({}, v), {
+            return O(E({}, y), {
                 canSend: !0,
                 hint: t.text,
             });
@@ -90,7 +90,7 @@ function N(e) {
     let { placeholder: t = g.intl.string(g.t["Rn/sLl"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [s, p] = i.useReducer(T, v),
+        [s, p] = i.useReducer(T, y),
         { canSend: E, hint: O, error: N, success: j } = s;
     return (
         i.useEffect(() => {
@@ -156,20 +156,20 @@ function N(e) {
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
-                                id: y,
+                                id: v,
                                 inputRef: n,
                                 className: _.addFriendInput,
                                 inputClassName: _.input,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
-                                    if (e.key !== m.mR.Enter && t.includes("#")) {
+                                    if (e.key !== h.mR.Enter && t.includes("#")) {
                                         o()(null != n.current, "Input is handling keypress when not mounted");
                                         let r = t.indexOf("#"),
                                             i = n.current.selectionStart,
                                             l =
-                                                e.key === m.mR.Backspace ||
-                                                e.key === m.mR.ArrowRight ||
-                                                e.key === m.mR.ArrowLeft,
+                                                e.key === h.mR.Backspace ||
+                                                e.key === h.mR.ArrowRight ||
+                                                e.key === h.mR.ArrowLeft,
                                             a = e.which >= 48 && e.which <= 57;
                                         null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l
                                             ? e.preventDefault()
@@ -180,7 +180,7 @@ function N(e) {
                                     if (e.length <= 0) return void p({ type: "RESET" });
                                     let t = "",
                                         [, n] = e.split("#");
-                                    null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)),
+                                    null != n && (t = e + m.LYt.slice(null != n ? n.length + 1 : 0)),
                                         p({
                                             type: "HINT",
                                             text: t,

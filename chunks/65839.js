@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(75666),
     u = n(231338),
     p = n(388032),
-    h = n(806328),
-    f = n(152013),
+    h = n(535140),
+    f = n(31171),
     g = n(584354),
     m = n(725060);
 let b = (e) => {
@@ -75,7 +75,7 @@ let b = (e) => {
             handleSelectCategory: _,
             categoryCounts: y,
             allEntriesCount: x,
-            isLoading: v,
+            isLoading: O,
         } = e;
         return (0, r.jsx)("div", {
             className: h.pageContainer,
@@ -125,7 +125,7 @@ let b = (e) => {
                             ],
                         }),
                     }),
-                    v && null == n
+                    O && null == n
                         ? (0, r.jsx)(s.$jN, { className: h.spinner })
                         : null == n
                           ? void 0

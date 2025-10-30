@@ -210,6 +210,11 @@ function O(e, t) {
             return (0, o.He)(e.parsed.timestamp, e.parsed.format);
         case "gameMention":
             return "<@$".concat(e.applicationId, ">");
+        case "timestampMentionInput": {
+            let n = y(e.children, t);
+            if (null == r) return "<@time:".concat(n, ">");
+            return n;
+        }
         case "applicationCommand":
             return y(
                 e.children,

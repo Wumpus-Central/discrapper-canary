@@ -1,32 +1,32 @@
 t.d(n, { Z: () => d });
-var a = t(951288),
-    l = t(647438),
-    r = t(481060),
-    i = t(87686),
-    o = t(586826),
-    s = t(507419),
+var l = t(951288),
+    a = t(647438),
+    i = t(481060),
+    r = t(87686),
+    s = t(586826),
+    o = t(507419),
     u = t(388032),
-    c = t(852545);
-let d = l.memo(function (e) {
-    let { sound: n, volume: t, disabled: l = !1, onChange: d } = e,
-        { file: f } = (0, o.p)();
-    return (0, a.jsx)(r.gNt, {
+    c = t(47903);
+let d = a.memo(function (e) {
+    let { sound: n, volume: t, disabled: a = !1, onChange: d } = e,
+        { file: f } = (0, s.p)();
+    return (0, l.jsx)(i.gNt, {
         label: u.intl.string(u.t.CCRKNz),
-        children: (0, a.jsxs)("div", {
+        children: (0, l.jsxs)("div", {
             className: c.fakeInput,
             children: [
                 null != n &&
-                    (0, a.jsx)(s.Z, {
+                    (0, l.jsx)(o.Z, {
                         sound: n,
                         volume: t,
-                        disabled: l,
+                        disabled: a,
                     }),
                 null == n &&
                     null != f &&
-                    (0, a.jsx)(i.Z, {
+                    (0, l.jsx)(r.Z, {
                         className: c.audioTrimmer,
                         volume: t,
-                        disabled: l,
+                        disabled: a,
                         onChange: d,
                     }),
             ],

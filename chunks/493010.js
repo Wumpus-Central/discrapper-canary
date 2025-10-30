@@ -1,6 +1,6 @@
 n.d(t, { Z: () => v });
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(704215),
     a = n(481060),
     o = n(475179),
@@ -9,50 +9,50 @@ var i = n(951288),
     u = n(325708),
     d = n(541716),
     p = n(266454),
-    h = n(665149),
-    f = n(703558),
+    f = n(665149),
+    h = n(703558),
     m = n(585483),
     g = n(909820),
     b = n(981631),
-    C = n(921944),
+    _ = n(921944),
     y = n(388032),
-    _ = n(952899);
+    C = n(229);
 let v = function (e) {
     let { channel: t, guild: n, maxWidth: v } = e;
-    r.useEffect(() => {
-        (0, p.Q3)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: C.L.AUTO });
+    i.useEffect(() => {
+        (0, p.Q3)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: _.L.AUTO });
     }, []);
-    let x = r.useCallback(() => {
+    let O = i.useCallback(() => {
             o.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
-        O = (0, i.jsx)(h.ZP.Icon, {
+        x = (0, r.jsx)(f.ZP.Icon, {
             icon: a.Dio,
             tooltip: y.intl.string(y.t.cpT0Cq),
-            onClick: x,
+            onClick: O,
         });
-    return (0, i.jsxs)(u.Z, {
+    return (0, r.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
         maxWidth: v,
         floatingLayer: g.ZP,
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, r.jsx)(s.Z, {
                 channel: t,
-                draftType: f.d.ChannelMessage,
+                draftType: h.d.ChannelMessage,
             }),
-            (0, i.jsxs)(h.ZP, {
-                toolbar: O,
+            (0, r.jsxs)(f.ZP, {
+                toolbar: x,
                 "aria-label": y.intl.string(y.t.BIYAqa),
                 children: [
-                    (0, i.jsx)(h.ZP.ChannelIcon, {
+                    (0, r.jsx)(f.ZP.ChannelIcon, {
                         icon: a.kBi,
                         "aria-label": y.intl.string(y.t.Kx5kCN),
                     }),
-                    (0, i.jsx)(h.ZP.Title, { children: t.name }),
+                    (0, r.jsx)(f.ZP.Title, { children: t.name }),
                 ],
             }),
-            (0, i.jsx)("div", {
-                className: _.chat,
-                children: (0, i.jsx)(
+            (0, r.jsx)("div", {
+                className: C.chat,
+                children: (0, r.jsx)(
                     c.Z,
                     {
                         channel: t,

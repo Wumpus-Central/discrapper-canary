@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S }), n(539854);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(990547),
     a = n(731965),
     o = n(442837),
@@ -9,19 +9,19 @@ var i = n(951288),
     u = n(374065),
     d = n(213609),
     p = n(358221),
-    h = n(266454),
-    f = n(159300),
+    f = n(266454),
+    h = n(159300),
     m = n(728285),
     g = n(800329),
     b = n(470956),
-    C = n(430824),
+    _ = n(430824),
     y = n(496675),
-    _ = n(434488),
+    C = n(434488),
     v = n(27457),
-    x = n(251564),
-    O = n(695492),
-    j = n(981631),
-    E = n(312439);
+    O = n(251564),
+    x = n(695492),
+    E = n(981631),
+    j = n(53155);
 function S(e) {
     let {
             participants: t,
@@ -34,38 +34,38 @@ function S(e) {
             totalNumberOfParticipants: N,
             popoutType: A,
         } = e,
-        w = (0, m.bp)() === j.IlC.POPOUT,
-        M = (0, o.e7)([C.Z], () => C.Z.getGuild(I.guild_id), [I.guild_id]),
-        { dismissedActivityEntryPointTileChannel: R } = (0, x.d)(),
-        L = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
-        D = (0, b.bt)(I.id, t),
-        k = r.useCallback(() => {
+        w = (0, m.bp)() === E.IlC.POPOUT,
+        M = (0, o.e7)([_.Z], () => _.Z.getGuild(I.guild_id), [I.guild_id]),
+        { dismissedActivityEntryPointTileChannel: R } = (0, O.d)(),
+        D = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
+        L = (0, b.bt)(I.id, t),
+        k = i.useCallback(() => {
             (0, a.j)(() => {
-                x.d.setState({ dismissedActivityEntryPointTileChannel: I.id });
+                O.d.setState({ dismissedActivityEntryPointTileChannel: I.id });
             });
         }, [I.id]);
-    r.useEffect(() => {
+    i.useEffect(() => {
         null != R &&
             I.id !== R &&
             (0, a.j)(() => {
-                x.d.setState({ dismissedActivityEntryPointTileChannel: null });
+                O.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [I.id, R]);
-    let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, f.b)(y.Z, M, I), [M, I]),
+    let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, h.b)(y.Z, M, I), [M, I]),
         B = (null == M ? void 0 : M.afkChannelId) === I.id,
-        H = I.userLimit <= 0 || I.userLimit > 1,
-        F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
-        V = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        F = I.userLimit <= 0 || I.userLimit > 1,
+        V = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        H = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
-        z = null != R && R === I.id,
-        W = D.map(
+        W = null != R && R === I.id,
+        z = L.map(
             (e) => (t) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     v.ZP,
                     {
                         participant: e,
                         channel: I,
-                        className: E.tile,
+                        className: j.tile,
                         onClick: n,
                         onDoubleClick: S,
                         onContextMenu: P,
@@ -92,51 +92,51 @@ function S(e) {
     ),
         null != M &&
             !B &&
-            (!(L >= 2) || !F || G || V || z
-                ? H &&
-                  1 === L &&
+            (!(D >= 2) || !V || G || H || W
+                ? F &&
+                  1 === D &&
                   U &&
-                  (F && !G
-                      ? W.push((e) =>
-                            (0, i.jsx)(_.h, {
+                  (V && !G
+                      ? z.push((e) =>
+                            (0, r.jsx)(C.h, {
                                 channel: I,
                                 guild: M,
                                 width: e,
                                 inPopout: w,
                                 handleClose: k,
-                                userParticipantCount: L,
+                                userParticipantCount: D,
                             }),
                         )
-                      : W.push((e) =>
-                            (0, i.jsx)(O.Z, {
+                      : z.push((e) =>
+                            (0, r.jsx)(x.Z, {
                                 width: e,
                                 channel: I,
                                 guild: M,
                                 inPopout: w,
                             }),
                         ))
-                : W.push((e) =>
-                      (0, i.jsx)(_.h, {
+                : z.push((e) =>
+                      (0, r.jsx)(C.h, {
                           channel: I,
                           guild: M,
                           width: e,
                           inPopout: w,
                           handleClose: k,
-                          userParticipantCount: L,
+                          userParticipantCount: D,
                       }),
                   ));
-    let q = r.useCallback(
+    let q = i.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = D[e]) ? void 0 : t.id) ? n : "empty-tile";
+            return null != (n = null == (t = L[e]) ? void 0 : t.id) ? n : "empty-tile";
         },
-        [D],
+        [L],
     );
-    return (0, i.jsx)(g.Z, {
+    return (0, r.jsx)(g.Z, {
         className: Z,
         keyExtractor: q,
         paddingTop: 64,
         paddingBottom: 64,
-        children: W,
+        children: z,
     });
 }

@@ -21,8 +21,8 @@ var r = n(951288),
     y = n(595816),
     C = n(863908),
     v = n(871118),
-    x = n(517525),
-    O = n(102793),
+    O = n(517525),
+    x = n(102793),
     E = n(347147),
     j = n(590076),
     S = n(507675),
@@ -43,7 +43,7 @@ var r = n(951288),
     F = n(354459),
     V = n(65154),
     H = n(388032),
-    G = n(7504);
+    G = n(400872);
 let W = new g.Z("StreamTile");
 function z(e) {
     let { participant: t, selected: n, focused: i, idle: l, width: a, premiumIndicator: s } = e,
@@ -54,7 +54,7 @@ function z(e) {
             n || i ? null : (0, r.jsx)(k.Z, { participant: t }),
             i || null == c || c.state === B.jm8.ENDED || c.state === B.jm8.FAILED
                 ? null
-                : (0, r.jsx)(x.Z, {
+                : (0, r.jsx)(O.Z, {
                       size: m.ZP.Sizes.SMALL,
                       className: G.liveIndicator,
                       participant: t,
@@ -72,7 +72,7 @@ function q(e) {
             onVideoResize: l,
             fit: m,
             popoutType: g,
-            width: x,
+            width: O,
             focused: k,
             wrapperClassName: U,
             paused: z = !1,
@@ -89,7 +89,7 @@ function q(e) {
         ei = (null == ee ? void 0 : ee.ownerId) === Y,
         el = ei && !er && g === h.P.NO_POPOUT,
         ea = null != ee ? (0, C.Z)(ee, J, J.id === Y, el) : null,
-        eo = x < 195;
+        eo = O < 195;
     (0, p.ZP)(() => {
         !en &&
             (null == $ ? void 0 : $.isGuildStageVoice()) &&
@@ -106,7 +106,7 @@ function q(e) {
                 .concat(T.Z.supports(V.AN.VIDEO)),
         );
     }, [q, ee, n]);
-    let { allowGoLiveZoomPan: ec } = (0, O.H)({ location: "StreamTile" });
+    let { allowGoLiveZoomPan: ec } = (0, x.H)({ location: "StreamTile" });
     if (K)
         return (0, r.jsx)(L.Z, {
             stream: t.stream,
@@ -118,7 +118,7 @@ function q(e) {
         return (0, r.jsx)(M.Z, {
             selected: n,
             stream: ee,
-            width: x,
+            width: O,
         });
     if (null != es || (null == ee ? void 0 : ee.state) === B.jm8.FAILED)
         return (0, r.jsx)(R.Z, {
@@ -126,13 +126,13 @@ function q(e) {
             avErrorContext: es,
             selected: n,
             stream: t.stream,
-            width: x,
+            width: O,
         });
     if (t.type === F.fO.HIDDEN_STREAM)
         return (0, r.jsx)(D.Z, {
             selected: n,
             participant: t,
-            width: x,
+            width: O,
         });
     if (!(null != ee && !n && null != q && T.Z.supports(V.AN.VIDEO)))
         return (0, r.jsxs)("div", {
@@ -153,7 +153,7 @@ function q(e) {
                                   children: (0, r.jsx)(c.Button, {
                                       variant: "secondary",
                                       size: eo ? "sm" : "md",
-                                      text: x < 175 ? H.intl.string(H.t.I6JG46) : H.intl.string(H.t["7Xq/nV"]),
+                                      text: O < 175 ? H.intl.string(H.t.I6JG46) : H.intl.string(H.t["7Xq/nV"]),
                                   }),
                               }),
                               en && !et
@@ -234,7 +234,7 @@ function q(e) {
                                       });
                               }
                               return e;
-                          })({ size: (0, A.L)(x) }, ea),
+                          })({ size: (0, A.L)(O) }, ea),
                       )
                     : null,
                 (0, r.jsx)(w.Z, {

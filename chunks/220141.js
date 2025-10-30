@@ -8,7 +8,7 @@ var a = n(951288),
     c = n(247397),
     d = n(921944),
     u = n(388032),
-    m = n(285932);
+    m = n(3721);
 function p(e) {
     var t,
         n,
@@ -34,11 +34,11 @@ function p(e) {
             }
             return r;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
-    let { trackUserProfileEditAction: f } = (0, i.KZ)(),
-        b = c.rR.filter((e) => o.Ki.includes(e)),
-        g = r.useCallback(() => {
-            h(d.L.TAKE_ACTION), f({ action: "PRESS_ADD_WIDGET" }), p();
-        }, [p, h, f]);
+    let { trackUserProfileEditAction: g } = (0, i.KZ)(),
+        f = c.rR.filter((e) => o.Ki.includes(e)),
+        b = r.useCallback(() => {
+            h(d.L.TAKE_ACTION), g({ action: "PRESS_ADD_WIDGET" }), p();
+        }, [p, h, g]);
     return (0, a.jsx)(
         l.Z,
         ((t = (function (e) {
@@ -78,14 +78,14 @@ function p(e) {
                 children: (0, a.jsx)("ul", {
                     "aria-label": u.intl.string(u.t["+EIBSA"]),
                     className: m.options,
-                    children: b.map((e) =>
+                    children: f.map((e) =>
                         (0, a.jsx)(
                             s.Z,
                             {
                                 widgetType: e,
                                 size: "medium",
-                                onAddWidget: g,
-                                trackUserProfileEditAction: f,
+                                onAddWidget: b,
+                                trackUserProfileEditAction: g,
                             },
                             e,
                         ),

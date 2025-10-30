@@ -2,12 +2,12 @@ r.d(t, { Z: () => h }), r(388685);
 var n = r(951288),
     s = r(647438),
     i = r(120356),
-    o = r.n(i),
-    a = r(13941),
+    a = r.n(i),
+    o = r(13941),
     l = r(481060),
     c = r(144114),
     u = r(317175),
-    d = r(33048);
+    d = r(597313);
 function h(e) {
     let { show: t, alpha2: r, countryCode: i } = e,
         h = s.useRef(null),
@@ -21,7 +21,7 @@ function h(e) {
         }
         return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
     }, [t, r, i]);
-    let C = (0, l.q_F)({
+    let O = (0, l.q_F)({
         width: "".concat(f, "px"),
         onStart: () => {
             y(!0);
@@ -43,11 +43,11 @@ function h(e) {
         children: (e) => {
             var s, c;
             return (0, n.jsx)("div", {
-                className: o()(d.outerContainer, { [d.hidden]: !(t || g) }),
+                className: a()(d.outerContainer, { [d.hidden]: !(t || g) }),
                 ref: h,
-                children: (0, n.jsx)(a.animated.div, {
+                children: (0, n.jsx)(o.animated.div, {
                     className: d.container,
-                    style: C,
+                    style: O,
                     children: (0, n.jsxs)("div", {
                         className: d.innerContainer,
                         ref: p,

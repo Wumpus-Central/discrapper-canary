@@ -23,11 +23,11 @@ var r,
     _ = n(313201),
     O = n(362658),
     y = n(915885),
-    j = n(258871),
-    v = n(216306),
+    v = n(258871),
+    j = n(216306),
     C = n(398758),
-    x = n(737982),
-    E = n(486311),
+    E = n(737982),
+    x = n(486311),
     S = n(620304),
     I = n(220444),
     P = n(31022),
@@ -55,7 +55,7 @@ var r,
     X = n(53425),
     Q = n(424785),
     J = n(770202),
-    $ = n(437621),
+    $ = n(79556),
     ee = n(428127),
     et = n(950969),
     en = n(233657),
@@ -65,7 +65,7 @@ var r,
     eo = n(981631),
     ea = n(176505),
     es = n(388032),
-    ec = n(776677);
+    ec = n(344110);
 function eu(e, t, n) {
     return (
         t in e
@@ -556,7 +556,7 @@ class eh extends (r = l.PureComponent) {
                 if (null == r) return;
                 let i = null,
                     l = r.getShownChannelAndThreadIds();
-                null != n && l.includes(n) && (i = (0, v.KY)(t)), (0, v.Uo)(e.id, l, i);
+                null != n && l.includes(n) && (i = (0, j.KY)(t)), (0, j.Uo)(e.id, l, i);
             }),
             eu(this, "renderSection", (e) => {
                 let { section: t } = e,
@@ -602,7 +602,7 @@ class eh extends (r = l.PureComponent) {
                     switch (t) {
                         case ei.z.GUILD_HUB_HEADER_OPTIONS:
                             return (0, i.jsx)(
-                                j.Z,
+                                v.Z,
                                 {
                                     guild: r,
                                     channel: A.ZP.getDefaultChannel(r.id),
@@ -696,7 +696,7 @@ class eh extends (r = l.PureComponent) {
                             );
                         case ei.z.GUILD_BOOSTS:
                             return (0, i.jsx)(
-                                E.Z,
+                                x.Z,
                                 {
                                     guildId: r.id,
                                     selected: a === ea.oC.GUILD_BOOSTS,
@@ -705,7 +705,7 @@ class eh extends (r = l.PureComponent) {
                             );
                         case ei.z.GAME_SERVERS:
                             return (0, i.jsx)(
-                                x.Z,
+                                E.Z,
                                 {
                                     guildId: r.id,
                                     selected: a === ea.oC.GAME_SERVERS,
@@ -721,9 +721,9 @@ class eh extends (r = l.PureComponent) {
                 if (null == m) return null;
                 let { category: b, channel: _ } = m,
                     O = b instanceof D.VR,
-                    v = _.record,
+                    j = _.record,
                     C = "".concat(t).concat(_.id);
-                switch (v.type) {
+                switch (j.type) {
                     case eo.d4z.GUILD_ANNOUNCEMENT:
                     case eo.d4z.GUILD_TEXT:
                     case eo.d4z.GUILD_FORUM:
@@ -735,7 +735,7 @@ class eh extends (r = l.PureComponent) {
                             {
                                 children: [
                                     (0, i.jsx)($.Z, {
-                                        channel: v,
+                                        channel: j,
                                         guild: r,
                                         position: _.position,
                                         selected: a === _.id,
@@ -749,12 +749,12 @@ class eh extends (r = l.PureComponent) {
                                     _.threadCount > 0
                                         ? (0, i.jsx)(X.Z, {
                                               withGuildIcon: g,
-                                              channel: v,
+                                              channel: j,
                                               sortedThreadIds: _.threadIds,
                                               selectedChannel:
-                                                  null != o && (o.id === _.id || o.parent_id === v.id) ? o : null,
+                                                  null != o && (o.id === _.id || o.parent_id === j.id) ? o : null,
                                               selectedVoiceChannelId:
-                                                  (null == s ? void 0 : s.parent_id) === v.id ? c : null,
+                                                  (null == s ? void 0 : s.parent_id) === j.id ? c : null,
                                           })
                                         : null,
                                 ],
@@ -766,7 +766,7 @@ class eh extends (r = l.PureComponent) {
                         return (0, i.jsx)(
                             Q.Z,
                             {
-                                channel: v,
+                                channel: j,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -783,7 +783,7 @@ class eh extends (r = l.PureComponent) {
                         return (0, i.jsx)(
                             er.Z,
                             {
-                                channel: v,
+                                channel: j,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -802,7 +802,7 @@ class eh extends (r = l.PureComponent) {
                         return (0, i.jsx)(
                             J.Z,
                             {
-                                channel: v,
+                                channel: j,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -811,13 +811,13 @@ class eh extends (r = l.PureComponent) {
                         );
                     case eo.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, i.jsx)(U.kw, { channel: v }, "readonly-".concat(v.id));
+                        return (0, i.jsx)(U.kw, { channel: j }, "readonly-".concat(j.id));
                     case eo.d4z.PUBLIC_THREAD:
                     case eo.d4z.PRIVATE_THREAD:
                         return (0, i.jsx)(
                             $.Z,
                             {
-                                channel: v,
+                                channel: j,
                                 guild: r,
                                 position: _.position,
                                 selected: a === _.id,
@@ -919,7 +919,7 @@ let eg = (e) => {
                     null == (r = document.querySelector(e)) || r.focus();
                 }
         }, []),
-        j = l.useCallback(
+        v = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = O.current;
@@ -928,7 +928,7 @@ let eg = (e) => {
                 }),
             [],
         ),
-        v = l.useCallback(
+        j = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = O.current;
@@ -937,29 +937,29 @@ let eg = (e) => {
                 }),
             [],
         ),
-        x = (0, c.ZP)({
+        E = (0, c.ZP)({
             id: "channels",
             defaultFocused: null != n ? n : void 0,
             isEnabled: o,
             setFocus: y,
-            scrollToStart: j,
-            scrollToEnd: v,
+            scrollToStart: v,
+            scrollToEnd: j,
         }),
-        E = x.setFocus;
+        x = E.setFocus;
     l.useEffect(() => {
-        null != n && E(n);
-    }, [n, E]);
+        null != n && x(n);
+    }, [n, x]);
     let S = (0, P.Z)(t);
     return (0, i.jsx)(b.Gt, {
         value: a,
         children: (0, i.jsx)(h.Z, {
             section: eo.jXE.GUILD_CHANNEL_LIST,
             children: (0, i.jsx)(s.bG, {
-                navigator: x,
+                navigator: E,
                 children: (0, i.jsx)(
                     eh,
                     ep(ed({}, e), {
-                        listNavigator: x,
+                        listNavigator: E,
                         ref: O,
                         selectedChannel: d,
                         selectedVoiceChannel: p,

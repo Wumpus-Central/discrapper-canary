@@ -17,19 +17,19 @@ var r = n(951288),
     _ = n(592125),
     O = n(306680),
     y = n(594174),
-    j = n(979651),
-    v = n(938475),
+    v = n(979651),
+    j = n(938475),
     C = n(990734),
-    x = n(714794),
-    E = n(876548),
+    E = n(714794),
+    x = n(876548),
     S = n(25601),
     I = n(207055),
     P = n(981631),
     N = n(124368),
     Z = n(388032),
-    T = n(55940),
-    w = n(509612),
-    A = n(113914);
+    T = n(33082),
+    w = n(516966),
+    A = n(95701);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -170,8 +170,8 @@ function M(e) {
 }
 let k = i.memo(function (e) {
     let { thread: t, isSelectedChannel: l, isSelectedVoice: u, isLast: g, withGuildIcon: A } = e,
-        k = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(t), [t]),
-        G = (0, s.e7)([j.Z], () => j.Z.hasVideo(t.id)),
+        k = (0, s.e7)([j.ZP], () => j.ZP.getVoiceStatesForChannel(t), [t]),
+        G = (0, s.e7)([v.Z], () => v.Z.hasVideo(t.id)),
         {
             unread: U,
             mentionCount: B,
@@ -307,13 +307,13 @@ let k = i.memo(function (e) {
                                             className: w.children,
                                             children: [
                                                 q > 0 && t.userLimit > 0
-                                                    ? (0, r.jsx)(E.Z, {
+                                                    ? (0, r.jsx)(x.Z, {
                                                           userCount: q,
                                                           video: G,
                                                           channel: t,
                                                       })
                                                     : null,
-                                                (0, x.Z)(B)
+                                                (0, E.Z)(B)
                                                     ? (0, r.jsx)(S.Z, {
                                                           mentionsCount: B,
                                                           isMentionLowImportance: F,

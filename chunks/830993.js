@@ -17,17 +17,17 @@ var r = n(951288),
     _ = n(823379),
     O = n(355363),
     y = n(449932),
-    j = n(561788),
-    v = n(876548),
-    x = n(543432),
-    C = n(981631),
-    E = n(388032),
-    S = n(413409),
-    I = n(21265);
+    v = n(561788),
+    j = n(876548),
+    C = n(543432),
+    E = n(981631),
+    x = n(388032),
+    S = n(333972),
+    I = n(934882);
 function P(e) {
     var t, l;
     let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: O } = e,
-        j = i.useMemo(() => {
+        v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
                 ? {}
@@ -42,9 +42,9 @@ function P(e) {
                               : [],
                   };
         }, [o, g]);
-    (0, c.$)(j, "VoiceChannelActivities");
-    let v = (0, u.ZP)(o),
-        x = Array.from((0, u.uF)(v).values()),
+    (0, c.$)(v, "VoiceChannelActivities");
+    let j = (0, u.ZP)(o),
+        C = Array.from((0, u.uF)(j).values()),
         I = null != (t = null == g ? void 0 : g.filter(_.lm)) ? t : [],
         P = (0, a.e7)(
             [m.Z],
@@ -55,10 +55,10 @@ function P(e) {
                         let n = m.Z.findActivity(
                             t.user.id,
                             (e) =>
-                                ([C.IIU.PLAYING, C.IIU.WATCHING].includes(e.type) &&
+                                ([E.IIU.PLAYING, E.IIU.WATCHING].includes(e.type) &&
                                     (null != e.assets || null != e.state || null != e.details || null != e.party) &&
                                     (null == e.session_id || e.session_id === t.voiceState.sessionId)) ||
-                                e.type === C.IIU.LISTENING,
+                                e.type === E.IIU.LISTENING,
                         );
                         if (null != n && !(0, p.Z)(n)) {
                             var r, i, l, o;
@@ -72,7 +72,7 @@ function P(e) {
                                               members: [],
                                               activity: n,
                                           };
-                            s.members.push(t), (0, d.Z)(s.activity, C.xjy.JOIN) || (s.activity = n), (e[a] = s);
+                            s.members.push(t), (0, d.Z)(s.activity, E.xjy.JOIN) || (s.activity = n), (e[a] = s);
                         }
                     }),
                     Object.values(e)
@@ -81,7 +81,7 @@ function P(e) {
             [I],
             a.pF,
         );
-    return P.length + x.length === 0
+    return P.length + C.length === 0
         ? null
         : (0, r.jsxs)(s.Ttm, {
               className: S.container,
@@ -92,7 +92,7 @@ function P(e) {
                       voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0,
                   }),
                   (0, r.jsx)("div", { className: S.headerDivider }),
-                  x.map((e, t) => {
+                  C.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
                           y.Z,
@@ -127,7 +127,7 @@ function P(e) {
                                   children: (0, r.jsx)(s.Text, {
                                       variant: "text-xs/normal",
                                       tag: "span",
-                                      children: E.intl.format(E.t.ePyoY2, {
+                                      children: x.intl.format(x.t.ePyoY2, {
                                           onClick: () => {
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e("59500").then(n.bind(n, 241420));
@@ -200,7 +200,7 @@ function P(e) {
 }
 function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
-        l = (0, a.e7)([g.Z], () => !g.Z.can(C.Plq.CONNECT, t)),
+        l = (0, a.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, t)),
         s = (0, a.e7)([b.Z], () => b.Z.hasVideo(t.id)),
         c = (0, O.ZP)({
             channel: t,
@@ -214,14 +214,14 @@ function N(e) {
         : (0, r.jsxs)("div", {
               className: o()(S.popoutHeaderContainer, I.popoutHeaderContainer),
               children: [
-                  (0, r.jsx)(j.Z, { channel: t }),
+                  (0, r.jsx)(v.Z, { channel: t }),
                   c
-                      ? (0, r.jsx)(v.Z, {
+                      ? (0, r.jsx)(j.Z, {
                             userCount: i,
                             video: s,
                             channel: t,
                         })
-                      : (0, r.jsx)(x.Z, { userCount: i }),
+                      : (0, r.jsx)(C.Z, { userCount: i }),
               ],
           });
 }

@@ -25,13 +25,13 @@ var i = n(120356),
     _ = n(795338),
     O = n(279604),
     y = n(535396),
-    j = n(981631),
-    v = n(176505),
-    x = n(921944),
-    C = n(269794),
-    E = n(459196),
+    v = n(981631),
+    j = n(176505),
+    C = n(921944),
+    E = n(97200),
+    x = n(789142),
     S = n(388032),
-    I = n(428197),
+    I = n(718908),
     P = n(611087),
     N = n(928381),
     Z = n(283902),
@@ -40,8 +40,8 @@ function w(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(k, {
         asset: (0, r.jsx)(_.g, { className: I.image }),
-        header: S.intl.formatToPlainString(E.default["Zg/m9K"], { perkName: n.title }),
-        content: S.intl.formatToPlainString(E.default["1EGXSK"], { perkName: n.title }),
+        header: S.intl.formatToPlainString(x.default["Zg/m9K"], { perkName: n.title }),
+        content: S.intl.formatToPlainString(x.default["1EGXSK"], { perkName: n.title }),
         buttonCTA: S.intl.string(S.t.RzWDqY),
         onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i,
@@ -56,15 +56,15 @@ function A(e) {
             src: N.Z,
             className: l()(I.image, I.newPerksImage),
         }),
-        header: S.intl.string(E.default.QpQBPQ),
-        content: i ? S.intl.string(E.default["6hn0xF"]) : S.intl.string(E.default.RDuvXp),
+        header: S.intl.string(x.default.QpQBPQ),
+        content: i ? S.intl.string(x.default["6hn0xF"]) : S.intl.string(x.default.RDuvXp),
         buttonCTA: S.intl.string(S.t.RzWDqY),
         onClick: () =>
             i
                 ? (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
                 : (0, d.f)({
                       guildId: t,
-                      location: { section: j.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
+                      location: { section: v.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
                   }),
         markAsDismissed: n,
         caretPosition: i ? f.DF.LEFT_TOP : f.DF.TOP_CENTER,
@@ -80,16 +80,16 @@ function R(e) {
     if (0 === n.length) return;
     let a =
             n.length >= 3
-                ? S.intl.formatToPlainString(E.default["6Sv+3M"], {
+                ? S.intl.formatToPlainString(x.default["6Sv+3M"], {
                       perk: n[0].title,
                       perk2: n[1].title,
                       perk3: n[2].title,
                   })
                 : 2 === n.length
-                  ? S.intl.formatToPlainString(E.default.wcQOqC, {
+                  ? S.intl.formatToPlainString(x.default.wcQOqC, {
                         perks: "".concat(n[0].title, " & ").concat(n[1].title),
                     })
-                  : S.intl.formatToPlainString(E.default.ZF8NT6, { perk: n[0].title }),
+                  : S.intl.formatToPlainString(x.default.ZF8NT6, { perk: n[0].title }),
         c = 1 === n.length;
     return (0, r.jsx)(k, {
         asset:
@@ -99,9 +99,9 @@ function R(e) {
                       powerup: n[0],
                   })
                 : (0, r.jsx)(_.g, { className: I.image }),
-        header: S.intl.formatToPlainString(E.default.LmpChE, { guildName: l }),
+        header: S.intl.formatToPlainString(x.default.LmpChE, { guildName: l }),
         content: a,
-        buttonCTA: c ? S.intl.string(E.default.gSxlHf) : S.intl.string(S.t.RzWDqY),
+        buttonCTA: c ? S.intl.string(x.default.gSxlHf) : S.intl.string(S.t.RzWDqY),
         onClick: (e) => (c ? o(e) : (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i,
     });
@@ -111,8 +111,8 @@ function D(e) {
         l = n.find((e) => e.skuId === o.A$);
     if (null != l)
         return (0, r.jsx)(k, {
-            header: S.intl.string(E.default.Ygpx4Q),
-            content: S.intl.string(E.default.mmNkUA),
+            header: S.intl.string(x.default.Ygpx4Q),
+            content: S.intl.string(x.default.mmNkUA),
             asset: (0, r.jsx)("img", {
                 alt: "",
                 src: T.Z,
@@ -125,8 +125,8 @@ function D(e) {
     let a = n.find((e) => y.NL.has(e.skuId));
     return null != a
         ? (0, r.jsx)(k, {
-              header: S.intl.string(E.default["kA2c+n"]),
-              content: S.intl.string(E.default.TUilLj),
+              header: S.intl.string(x.default["kA2c+n"]),
+              content: S.intl.string(x.default.TUilLj),
               asset: (0, r.jsx)("img", {
                   alt: "",
                   src: Z.Z,
@@ -147,11 +147,11 @@ function L(e) {
             src: P.Z,
             className: l()(I.image, I.newPerksImage),
         }),
-        header: S.intl.string(n === g.J.GAME_SERVER_HOSTING_AVAILABLE ? C.default.wXLChx : C.default["8z8RpY"]),
+        header: S.intl.string(n === g.J.GAME_SERVER_HOSTING_AVAILABLE ? E.default.wXLChx : E.default["8z8RpY"]),
         content:
             n === g.J.GAME_SERVER_HOSTING_AVAILABLE
-                ? S.intl.string(C.default.lZ6m7Q)
-                : S.intl.format(C.default["IQ1E+d"], { boostCount: o }),
+                ? S.intl.string(E.default.lZ6m7Q)
+                : S.intl.format(E.default["IQ1E+d"], { boostCount: o }),
         buttonCTA: S.intl.string(S.t.RzWDqY),
         onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE),
         markAsDismissed: i,
@@ -165,10 +165,10 @@ function M(e) {
             src: P.Z,
             className: l()(I.image, I.newPerksImage),
         }),
-        header: S.intl.string(C.default["eX64+z"]),
-        content: S.intl.string(C.default.NpgfEB),
+        header: S.intl.string(E.default["eX64+z"]),
+        content: S.intl.string(E.default.NpgfEB),
         buttonCTA: S.intl.string(S.t.RzWDqY),
-        onClick: () => (0, p.uL)(j.Z5c.CHANNEL(t, v.oC.GAME_SERVERS)),
+        onClick: () => (0, p.uL)(v.Z5c.CHANNEL(t, j.oC.GAME_SERVERS)),
         markAsDismissed: n,
     });
 }
@@ -233,7 +233,7 @@ function k(e) {
                         (0, r.jsx)(c.olH, {
                             "data-migration-pending": !0,
                             className: I.close,
-                            onClick: () => (null == s ? void 0 : s(x.L.USER_DISMISS)),
+                            onClick: () => (null == s ? void 0 : s(C.L.USER_DISMISS)),
                         }),
                     ],
                 }),

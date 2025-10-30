@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(122943),
     y = n(556638),
     O = n(981631),
-    v = n(80568);
+    v = n(666998);
 function I(e) {
     let {
         user: t,
@@ -36,10 +36,10 @@ function I(e) {
     (0, u.Z)(null == t ? void 0 : t.id);
     let w = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         D = (0, f.E)("ActivityStatus", I),
-        L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)),
-        x = (0, l.e7)([d.Z], () =>
+        x = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)),
+        L = (0, l.e7)([d.Z], () =>
             D
-                ? L
+                ? x
                     ? d.Z.getHangStatusActivity()
                     : null != n
                       ? n.find((e) => e.type === O.IIU.HANG_STATUS)
@@ -61,7 +61,7 @@ function I(e) {
         }, [n]);
     if ((0, l.e7)([p.Z], () => p.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
     let k = (null == t ? void 0 : t.bot) === !0,
-        j = ((null == M ? void 0 : M.state) != null || null != x) && "xs" === A,
+        j = ((null == M ? void 0 : M.state) != null || null != L) && "xs" === A,
         U = () => {
             if (null != w)
                 return (0, r.jsx)(m.Z, {
@@ -107,7 +107,7 @@ function I(e) {
             [v.textSm]: "sm" === A,
         }),
         B = () =>
-            null == M && null == x
+            null == M && null == L
                 ? null
                 : (0, r.jsx)(g.Z, {
                       customStatusActivity: M,
@@ -119,7 +119,7 @@ function I(e) {
                       iconClassName: S,
                       tooltipClassName: G,
                       voiceChannel: I,
-                      hangStatus: x,
+                      hangStatus: L,
                       userId: null == t ? void 0 : t.id,
                   });
     return (0, r.jsxs)("div", {

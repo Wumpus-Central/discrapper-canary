@@ -5,14 +5,14 @@ var o = n(120356),
     r = n.n(o),
     i = n(793030),
     a = n(481060),
-    s = n(821795),
-    c = n(892567),
-    d = n(203872),
+    s = n(489511),
+    c = n(821795),
+    d = n(892567),
     u = n(660662),
-    p = n(352609),
+    p = n(593082),
     m = n(388032),
-    f = n(959389),
-    g = n(771880);
+    f = n(77426),
+    g = n(6073);
 function h(e) {
     let { selectedEffectId: t, setSelectedEffectId: n, className: o } = e;
     return (0, l.jsxs)("div", {
@@ -51,15 +51,15 @@ function h(e) {
 }
 function x(e) {
     let { effectId: t, selected: n, onClick: o } = e,
-        i = (0, d.R)(t);
+        i = (0, s.R)(t);
     return (0, l.jsx)(
         a.P3F,
         {
             className: r()(g.effectContainer, { [g.selected]: n }),
             onClick: o,
-            children: (0, l.jsx)(c.Z, {
+            children: (0, l.jsx)(d.Z, {
                 userName: i.name,
-                effectDisplayType: s.F.STATIC,
+                effectDisplayType: c.F.STATIC,
                 displayNameStyles: i.previewStyles,
                 textClassName: g.effectText,
                 inProfile: !0,

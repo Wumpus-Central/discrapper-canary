@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(981631),
     f = n(185923),
     _ = n(388032),
-    p = n(41356);
+    p = n(508465);
 let h = {
         section: d.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: "gift_effect_emoji_picker",

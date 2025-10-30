@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => m,
-    W: () => g,
+    R: () => g,
+    W: () => E,
 });
 var r = n(590921),
     i = n(24397),
@@ -14,8 +14,9 @@ var r = n(590921),
     f = n(65090),
     _ = n(199054),
     p = n(591236),
-    h = n(233577);
-let m = [
+    h = n(233577),
+    m = n(542632);
+let g = [
         r.eq.CHOICES,
         r.eq.GAME,
         r.eq.GIFS,
@@ -27,9 +28,10 @@ let m = [
         r.eq.MENTIONS,
         r.eq.COMMANDS,
         r.eq.LEGACY_COMMANDS,
+        r.eq.TIMESTAMPS,
         r.eq.MENTION_SUGGESTIONS,
     ],
-    g = {
+    E = {
         [r.eq.CHANNELS]: l.Z,
         [r.eq.COMMANDS]: i.Z,
         [r.eq.COMMAND_OPTIONS]: o.Z,
@@ -42,4 +44,5 @@ let m = [
         [r.eq.MENTION_SUGGESTIONS]: _.Z,
         [r.eq.REACTIONS]: p.Z,
         [r.eq.GAME]: s.Z,
+        [r.eq.TIMESTAMPS]: m.Z,
     };

@@ -18,14 +18,14 @@ var i = n(442837),
     _ = n(968358),
     O = n(790901),
     y = n(714794),
-    j = n(355363),
-    v = n(259404),
-    x = n(876548),
-    C = n(25601),
-    E = n(981631),
+    v = n(355363),
+    j = n(687352),
+    C = n(876548),
+    E = n(25601),
+    x = n(981631),
     S = n(490897),
     I = n(388032),
-    P = n(885525);
+    P = n(88448);
 function N(e) {
     var t;
     let {
@@ -44,11 +44,11 @@ function N(e) {
         G = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         U = (0, i.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, a.ZP)(n),
-        F = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
+        F = (0, i.e7)([g.Z], () => !g.Z.can(x.Plq.CONNECT, n)),
         V = (0, s.P)(n),
         H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
         z = (0, p.PK)(n.id) && n.isGuildStageVoice(),
-        W = (0, j.ZP)({
+        W = (0, v.ZP)({
             channel: n,
             locked: F,
             video: (H || z) && null == V,
@@ -60,12 +60,12 @@ function N(e) {
             var e, t;
             return (
                 null !=
-                    (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
+                    (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(x.GuildFeatures.COMMUNITY)) &&
                 t
             );
         });
     if ((0, y.Z)(G))
-        return (0, r.jsx)(C.Z, {
+        return (0, r.jsx)(E.Z, {
             mentionsCount: G,
             isMentionLowImportance: U,
         });
@@ -90,7 +90,7 @@ function N(e) {
         });
     let X = null != (t = null == T ? void 0 : T.length) ? t : 0;
     return null != w && w && W
-        ? (0, r.jsx)(x.Z, {
+        ? (0, r.jsx)(C.Z, {
               userCount: X,
               video: H || z,
               channel: n,
@@ -106,7 +106,7 @@ function N(e) {
                   entry: { start: V },
               })
             : null != A && A && (0, O.u)(B)
-              ? (0, r.jsx)(v.Z, {
+              ? (0, r.jsx)(j.Z, {
                     embeddedApps: B,
                     muted: M,
                 })

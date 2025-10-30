@@ -1,95 +1,95 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
-    l = n(647438),
-    o = n(120356),
-    i = n.n(o),
+    o = n(647438),
+    l = n(120356),
+    i = n.n(l),
     a = n(481060),
     s = n(393903),
     c = n(448986),
     u = n(604162),
     d = n(295907),
-    m = n(412331);
-function f(e, t, n) {
+    m = n(16954);
+function p(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
-function p(e, t, n) {
+function f(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function v(e) {
     let {
             percent: t,
             animate: n,
-            interactionEnabled: o,
+            interactionEnabled: l,
             backgroundColor: v,
-            preloadedBuffers: g,
-            duration: E,
-            maxSeekableTime: b,
-            onClick: O,
+            preloadedBuffers: E,
+            duration: g,
+            maxSeekableTime: O,
+            onClick: b,
             onScrubBack: h,
-            onScrubForward: C,
+            onScrubForward: S,
         } = e,
-        [S, _] = l.useState(null),
-        [y, j] = l.useState(null),
-        [x, T] = l.useState(null),
-        [D, P] = l.useState(!1),
-        R = l.useRef(null),
+        [C, _] = o.useState(null),
+        [y, j] = o.useState(null),
+        [x, T] = o.useState(null),
+        [D, P] = o.useState(!1),
+        R = o.useRef(null),
         I = (e) => {
             (R.current = e), _(e);
         };
-    l.useEffect(() => {
-        null != S && (null == b ? T(null) : T(p(b, E, S)));
-    }, [S, b, E]);
-    let N = (0, c.Z)((e) => {
+    o.useEffect(() => {
+        null != C && (null == O ? T(null) : T(f(O, g, C)));
+    }, [C, O, g]);
+    let w = (0, c.Z)((e) => {
             I(e.contentRect);
         }),
-        k = (0, s.y)(N);
-    l.useLayoutEffect(() => {
-        null != k.current && I(k.current.getBoundingClientRect());
-    }, [k]),
-        l.useEffect(() => {
+        N = (0, s.y)(w);
+    o.useLayoutEffect(() => {
+        null != N.current && I(N.current.getBoundingClientRect());
+    }, [N]),
+        o.useEffect(() => {
             let e = () => {
-                null != k.current && I(k.current.getBoundingClientRect());
+                null != N.current && I(N.current.getBoundingClientRect());
             };
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-        }, [k]);
-    let w = (e) => {
+        }, [N]);
+    let k = (e) => {
             j(e.clientX);
         },
-        A = l.useCallback(
+        L = o.useCallback(
             (e) => {
                 let { key: t } = e;
                 t === d.mR.ArrowLeft && null != h
                     ? (e.preventDefault(), e.stopPropagation(), h())
-                    : t === d.mR.ArrowRight && null != C && (e.preventDefault(), e.stopPropagation(), C());
+                    : t === d.mR.ArrowRight && null != S && (e.preventDefault(), e.stopPropagation(), S());
             },
-            [h, C],
+            [h, S],
         ),
-        L = null != y && null != S ? f(y, S, E) : 0,
-        M = (0, u.yv)(L),
-        V = null != S ? S.right - p((t / 100) * E, E, S) : null,
-        Z = null != y && null != S ? S.right - y : null,
-        B = null != x && null != S ? S.right - x : null;
+        A = null != y && null != C ? p(y, C, g) : 0,
+        M = (0, u.yv)(A),
+        V = null != C ? C.right - f((t / 100) * g, g, C) : null,
+        Z = null != y && null != C ? C.right - y : null,
+        B = null != x && null != C ? C.right - x : null;
     return (0, r.jsxs)("div", {
         className: m.cont,
-        ref: k,
+        ref: N,
         children: [
             (0, r.jsxs)(a.P3F, {
-                className: i()(m.hitboxArea, { [m.interactionEnabled]: o }),
+                className: i()(m.hitboxArea, { [m.interactionEnabled]: l }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    o && null != O && O(f(e.clientX, e.currentTarget.getBoundingClientRect(), E));
+                    l && null != b && b(p(e.clientX, e.currentTarget.getBoundingClientRect(), g));
                 },
                 onMouseEnter: (e) => {
-                    o && (null != k.current && I(k.current.getBoundingClientRect()), P(!0), w(e));
+                    l && (null != N.current && I(N.current.getBoundingClientRect()), P(!0), k(e));
                 },
                 onMouseLeave: (e) => {
-                    o && (P(!1), j(null));
+                    l && (P(!1), j(null));
                 },
                 onMouseMove: (e) => {
-                    o && D && w(e);
+                    l && D && k(e);
                 },
-                onKeyDown: A,
-                tabIndex: o ? void 0 : -1,
+                onKeyDown: L,
+                tabIndex: l ? void 0 : -1,
                 focusProps: {
                     offset: {
                         top: 12,
@@ -97,9 +97,9 @@ function v(e) {
                     },
                 },
                 children: [
-                    null == g
+                    null == E
                         ? void 0
-                        : g.map((e) =>
+                        : E.map((e) =>
                               (0, r.jsx)(
                                   "div",
                                   {
@@ -112,7 +112,7 @@ function v(e) {
                                   "".concat(e.start, ":").concat(e.size),
                               ),
                           ),
-                    !o &&
+                    !l &&
                         null != B &&
                         B > 0 &&
                         (0, r.jsx)("div", {
@@ -142,7 +142,7 @@ function v(e) {
                             children: M,
                         }),
                     D &&
-                        o &&
+                        l &&
                         null != V &&
                         (0, r.jsx)("div", {
                             className: m.grabber,

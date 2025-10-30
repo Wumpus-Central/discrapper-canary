@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(46140),
     S = n(231338),
     A = n(388032),
-    C = n(310696);
+    C = n(74576);
 function N(e, t, n) {
     return (
         t in e
@@ -77,15 +77,15 @@ function w(e, t) {
     );
 }
 let D = (0, s.animated)(u.CJ0),
-    L = (e) => {
+    x = (e) => {
         var t;
         let {
                 isQuestExpired: n,
                 quest: a,
                 location: N,
                 size: P,
-                expansionSpring: L,
-                isAnimating: x,
+                expansionSpring: x,
+                isAnimating: L,
                 isExpanded: M,
                 isInteracting: k,
                 contentPosition: j,
@@ -157,7 +157,7 @@ let D = (0, s.animated)(u.CJ0),
                             className: o()(C.headerContent, { [C.headerContentEmbed]: q }),
                             style: {
                                 y: z
-                                    ? L.to({
+                                    ? x.to({
                                           range: [0, 1],
                                           output: [I.DJ, 0],
                                       })
@@ -168,13 +168,13 @@ let D = (0, s.animated)(u.CJ0),
                                     (0, r.jsx)(s.animated.div, {
                                         className: C.headerCollapsedContent,
                                         style: {
-                                            opacity: L.to({
+                                            opacity: x.to({
                                                 range: [0, 1],
                                                 output: [1, 0],
                                             }),
-                                            visibility: x || !M ? "inherit" : "hidden",
+                                            visibility: L || !M ? "inherit" : "hidden",
                                         },
-                                        "aria-hidden": !x && M,
+                                        "aria-hidden": !L && M,
                                         children: (0, r.jsxs)(u.kL8, {
                                             "aria-label": A.intl.string(A.t.dcl9MQ),
                                             onClick: en,
@@ -215,13 +215,13 @@ let D = (0, s.animated)(u.CJ0),
                                         [C.outerContainerEmbed]: q,
                                     }),
                                     style: {
-                                        opacity: L.to({
+                                        opacity: x.to({
                                             range: [0, 1],
                                             output: [0, 1],
                                         }),
-                                        visibility: x || M ? "inherit" : "hidden",
+                                        visibility: L || M ? "inherit" : "hidden",
                                     },
-                                    "aria-hidden": !x && !M,
+                                    "aria-hidden": !L && !M,
                                     children: (0, r.jsxs)("div", {
                                         className: C.headerExpandedWrapper,
                                         children: [
@@ -276,7 +276,7 @@ let D = (0, s.animated)(u.CJ0),
                             className: C.iconsContainer,
                             style: {
                                 top: z
-                                    ? L.to({
+                                    ? x.to({
                                           range: [0, 1],
                                           output: [I.DJ / 2 - I.Z$ / 2, I.jc],
                                       })
@@ -294,10 +294,10 @@ let D = (0, s.animated)(u.CJ0),
                                     children: (e) =>
                                         (0, r.jsx)(s.animated.div, {
                                             style: {
-                                                opacity: L,
-                                                visibility: x || M ? "inherit" : "hidden",
+                                                opacity: x,
+                                                visibility: L || M ? "inherit" : "hidden",
                                             },
-                                            "aria-hidden": !x && !M,
+                                            "aria-hidden": !L && !M,
                                             children: (0, r.jsx)(
                                                 u.P3F,
                                                 w(R({}, e), {
@@ -318,7 +318,7 @@ let D = (0, s.animated)(u.CJ0),
                                         "aria-label": M ? A.intl.string(A.t.iTcuma) : A.intl.string(A.t.dcl9MQ),
                                         children: (0, r.jsx)(D, {
                                             style: {
-                                                rotate: L.to({
+                                                rotate: x.to({
                                                     range: [0, 1],
                                                     output: [0, 180],
                                                 }),

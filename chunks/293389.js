@@ -24,10 +24,10 @@ var r = n(951288),
     S = n(981631),
     A = n(295907),
     C = n(388032),
-    N = n(740508),
-    R = n(315091),
-    P = n(149715),
-    w = n(197571);
+    N = n(313911),
+    R = n(285236),
+    P = n(465106),
+    w = n(10198);
 function D(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,7 +74,7 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -144,7 +144,7 @@ function Z(e) {
             isCurrentGameDetectionEnabled: _.ZP.isDetectionEnabled(I),
         })),
         w = (0, s.e7)([_.ZP], () => _.ZP.getVisibleGame()),
-        [D, x] = i.useState(!1),
+        [D, L] = i.useState(!1),
         k = i.useMemo(
             () =>
                 (0, g.le)(I)
@@ -185,7 +185,7 @@ function Z(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          M(L({}, t), {
+                          M(x({}, t), {
                               title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: k }),
                               subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: k }),
                               actions: [
@@ -214,14 +214,14 @@ function Z(e) {
             application_id: null == e ? void 0 : e.id,
             game_name: (0, g.le)(I) ? I.gameName : I.name,
         }),
-            x(!0),
+            L(!0),
             (0, c.ZDy)(async () => {
                 let { default: t } = await n.e("82077").then(n.bind(n, 953848));
                 return (n) => {
                     var i, a, o;
                     return (0, r.jsx)(
                         t,
-                        M(L({}, n), {
+                        M(x({}, n), {
                             detectedActivity: {
                                 name: null != (i = I.name) ? i : "",
                                 application_id:
@@ -250,7 +250,7 @@ function Z(e) {
                               (0, r.jsx)(
                                   h.Z,
                                   M(
-                                      L(
+                                      x(
                                           {
                                               className: N.gameVerifiedIcon,
                                               size: U,
@@ -317,7 +317,7 @@ function Z(e) {
                 ? (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
                       text: C.intl.string(C.t.Vfw2L5),
-                      children: (e) => (0, r.jsx)("i", L({ className: N.overlayWarningIcon }, e)),
+                      children: (e) => (0, r.jsx)("i", x({ className: N.overlayWarningIcon }, e)),
                   })
                 : null;
         return (0, r.jsxs)("div", {
@@ -330,7 +330,7 @@ function Z(e) {
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
-                            M(L({}, t), {
+                            M(x({}, t), {
                                 "aria-label": C.intl.string(C.t["1+O+Tu"]),
                                 className: N.toggleIcon,
                                 onClick: () => W(!e),
@@ -366,7 +366,7 @@ function Z(e) {
                     T
                         ? (0, r.jsx)(
                               c.P3F,
-                              M(L({}, e), {
+                              M(x({}, e), {
                                   "aria-label": C.intl.string(C.t.QmitzM),
                                   className: N.toggleIcon,
                                   onClick: K,
@@ -388,7 +388,7 @@ function Z(e) {
                       children: (e) =>
                           (0, r.jsx)(
                               c.P3F,
-                              M(L({}, e), {
+                              M(x({}, e), {
                                   "aria-label": C.intl.string(C.t["y0B+lo"]),
                                   className: N.toggleIcon,
                                   onClick: z,
@@ -561,7 +561,7 @@ let H = (0, O.oH)(function () {
                                 children: (e) =>
                                     (0, r.jsx)(
                                         c.Avr,
-                                        M(L({}, e), {
+                                        M(x({}, e), {
                                             buttonRef: h,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",

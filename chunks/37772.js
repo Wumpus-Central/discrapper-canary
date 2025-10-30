@@ -17,11 +17,11 @@ var r = n(951288),
     _ = n(594173),
     O = n(786761),
     y = n(493892),
-    j = n(901461),
-    v = n(739566),
-    x = n(443877),
-    C = n(492593),
-    E = n(453687),
+    v = n(901461),
+    j = n(739566),
+    C = n(443877),
+    E = n(492593),
+    x = n(453687),
     S = n(938353),
     I = n(25015),
     P = n(689674),
@@ -33,8 +33,8 @@ var r = n(951288),
     R = n(834129),
     D = n(981631),
     L = n(388032),
-    M = n(378661),
-    k = n(360514);
+    M = n(77162),
+    k = n(5898);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,7 +105,7 @@ let B = i.memo(function e(t) {
         $ = h.QK.useSetting(),
         ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
-        { disableReactionCreates: en } = (0, x.Z)(l),
+        { disableReactionCreates: en } = (0, C.Z)(l),
         { content: er, hasSpoilerEmbeds: ei } = (0, I.Z)(s, {
             hideSimpleEmbedContent: Q && J,
             allowList: ee,
@@ -113,7 +113,7 @@ let B = i.memo(function e(t) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        el = (0, v.ZP)(s),
+        el = (0, j.ZP)(s),
         eo = (0, a.e7)(
             [g.Z],
             () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id)),
@@ -128,7 +128,7 @@ let B = i.memo(function e(t) {
         eu = (0, c.v)(s),
         ed = (0, _.ro)(s.id, s.channel_id),
         ep = (0, p.Z)(s),
-        ef = (0, E.iG)(s);
+        ef = (0, x.iG)(s);
     return ea
         ? (0, r.jsx)(
               e,
@@ -150,7 +150,7 @@ let B = i.memo(function e(t) {
                 count: 1,
                 collapsedReason: i,
             })
-          : (0, r.jsx)(C.Z, {
+          : (0, r.jsx)(E.Z, {
                 compact: R,
                 className: o()(M, {
                     [k.ephemeral]: (0, O.Pv)(s),
@@ -194,7 +194,7 @@ let B = i.memo(function e(t) {
                 onClick: V,
                 hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
                 hasReply: s.type === D.uaV.REPLY,
-                isSystemMessage: (0, j.Z)(s),
+                isSystemMessage: (0, v.Z)(s),
                 messageRef: ec,
                 author: el,
                 "aria-labelledby": ef,
@@ -203,7 +203,7 @@ let B = i.memo(function e(t) {
 });
 function F(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
-    return (0, r.jsx)(C.Z, {
+    return (0, r.jsx)(E.Z, {
         className: t,
         compact: i,
         role: "group",

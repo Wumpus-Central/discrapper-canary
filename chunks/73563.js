@@ -1,81 +1,81 @@
 n.d(t, {
     Z: () => m,
-    e: () => h,
+    e: () => f,
 });
-var i,
-    r = n(951288),
+var r,
+    i = n(951288),
     l = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(481060),
     c = n(600164),
     u = n(507675),
-    d = n(349364);
+    d = n(86834);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-var h = (((i = {})[(i.TOP = 0)] = "TOP"), (i[(i.BOTTOM = 1)] = "BOTTOM"), i);
-function f(e) {
+var f = (((r = {})[(r.TOP = 0)] = "TOP"), (r[(r.BOTTOM = 1)] = "BOTTOM"), r);
+function h(e) {
     let {
             disableGradients: t = !1,
             renderHeader: n,
-            renderBottomLeft: i,
+            renderBottomLeft: r,
             renderBottomCenter: a,
             renderBottomRight: o,
             renderCenter: u,
         } = e,
         p = l.useRef(null);
-    return (0, r.jsx)(s.JcV, {
+    return (0, i.jsx)(s.JcV, {
         containerRef: p,
-        children: (0, r.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             className: d.videoControls,
             ref: p,
             children: [
-                0 !== t && !0 !== t && (0, r.jsx)("div", { className: d.gradientTop }),
-                1 !== t && !0 !== t && (0, r.jsx)("div", { className: d.gradientBottom }),
-                (0, r.jsx)("div", {
+                0 !== t && !0 !== t && (0, i.jsx)("div", { className: d.gradientTop }),
+                1 !== t && !0 !== t && (0, i.jsx)("div", { className: d.gradientBottom }),
+                (0, i.jsx)("div", {
                     className: d.topControls,
                     children: null == n ? void 0 : n(),
                 }),
                 null == u ? void 0 : u(),
-                (0, r.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: d.bottomControls,
                     children: [
-                        (0, r.jsx)(c.Z, {
+                        (0, i.jsx)(c.Z, {
                             grow: 1,
                             align: c.Z.Align.CENTER,
                             className: d.edgeControls,
-                            children: null == i ? void 0 : i(),
+                            children: null == r ? void 0 : r(),
                         }),
-                        (0, r.jsx)(c.Z, {
+                        (0, i.jsx)(c.Z, {
                             grow: 1,
                             justify: c.Z.Justify.CENTER,
                             align: c.Z.Align.CENTER,
                             children: null == a ? void 0 : a(),
                         }),
-                        (0, r.jsx)(c.Z, {
+                        (0, i.jsx)(c.Z, {
                             grow: 1,
                             justify: c.Z.Justify.END,
                             align: c.Z.Align.CENTER,
@@ -92,34 +92,34 @@ function m(e) {
     var {
             screenMessage: t,
             onDoubleClick: n,
-            onActive: i,
+            onActive: r,
             onForceIdle: l,
             idle: a,
             children: s,
             renderChatToasts: c,
-            renderVoiceChannelEffects: h,
+            renderVoiceChannelEffects: f,
             style: m,
         } = e,
         g = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
-                r = (function (e, t) {
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        i,
-                        r = {},
+                        r,
+                        i = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++)
-                    (n = l[i]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, [
             "screenMessage",
             "onDoubleClick",
@@ -131,19 +131,19 @@ function m(e) {
             "renderVoiceChannelEffects",
             "style",
         ]);
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: o()(d.root, { [d.idle]: a }),
         style: m,
-        onMouseMove: i,
-        onMouseDown: i,
+        onMouseMove: r,
+        onMouseDown: r,
         onMouseLeave: l,
         onDoubleClick: n,
         children: [
             s,
-            null != t ? (0, r.jsx)(u.Z, p({ size: "large" }, t)) : null,
-            (0, r.jsx)(f, p({}, g)),
+            null != t ? (0, i.jsx)(u.Z, p({ size: "large" }, t)) : null,
+            (0, i.jsx)(h, p({}, g)),
             null == c ? void 0 : c(),
-            null == h ? void 0 : h(),
+            null == f ? void 0 : f(),
         ],
     });
 }

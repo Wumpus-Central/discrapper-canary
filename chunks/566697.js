@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(359135),
     I = n(516817),
     T = n(388032),
-    S = n(63053),
+    S = n(365616),
     A = n(460400),
     C = n(943549);
 let N = {
@@ -38,8 +38,8 @@ let N = {
                 className: P,
                 innerClassName: w,
                 isHighlighted: D,
-                showStatus: L,
-                showPlaceholderUser: x,
+                showStatus: x,
+                showPlaceholderUser: L,
                 pendingGlobalName: M,
                 pendingNickname: k,
                 pendingAvatarDecoration: j,
@@ -105,7 +105,7 @@ let N = {
                                 nameplate: H,
                                 hovered: D,
                                 placement: v.i.PREVIEW,
-                                content: x ? void 0 : K,
+                                content: L ? void 0 : K,
                             },
                             null == a ? void 0 : a.skuId,
                         ),
@@ -114,14 +114,14 @@ let N = {
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: o()(S.avatarContainer, !x && S.avatarVisible),
+                                      className: o()(S.avatarContainer, !L && S.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
                                           ref: K,
                                           avatar: (0, r.jsx)(d.Z, {
                                               user: t,
                                               guildId: n,
                                               avatarSize: Q,
-                                              status: L ? Y : void 0,
+                                              status: x ? Y : void 0,
                                               avatarDecorationOverride: X,
                                               "aria-hidden": !0,
                                           }),
@@ -142,7 +142,7 @@ let N = {
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: o()(S.avatarContainer, x && S.avatarVisible),
+                                className: o()(S.avatarContainer, L && S.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: V ? A : C,

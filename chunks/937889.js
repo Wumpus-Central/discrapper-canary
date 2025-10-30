@@ -93,6 +93,7 @@ function g(e) {
         allowLinks: !!r.allowLinks,
         allowDevLinks: !!r.allowDevLinks,
         allowGameMentions: !!r.allowGameMentions,
+        allowTimeMentionInput: !!r.allowTimeMentionInput,
         formatInline: !!r.formatInline,
         noStyleAndInteraction: !!r.noStyleAndInteraction,
         allowHeading: !!r.allowHeading,

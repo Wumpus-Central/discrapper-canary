@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(481060),
     u = n(239091),
     d = n(687683),
-    p = n(978070);
+    p = n(24665);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -34,7 +34,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,11 +52,11 @@ function h(e, t) {
         e
     );
 }
-let m = function (e) {
+let h = function (e) {
     let {
             index: t,
             children: l,
-            user: m,
+            user: h,
             channel: g,
             onClick: _,
             isFocused: b,
@@ -64,13 +64,13 @@ let m = function (e) {
             onOtherHover: O,
             className: I,
         } = e,
-        [v, y] = i.useState(!1),
+        [y, v] = i.useState(!1),
         [C, S] = i.useState(!1),
         T = () => {
-            y(!0), !b || E || C || null == O || O();
+            v(!0), !b || E || C || null == O || O();
         },
         N = () => {
-            y(!1);
+            v(!1);
         };
     return (0, r.jsx)(o.mh, {
         id: g.id,
@@ -82,7 +82,7 @@ let m = function (e) {
                 },
                 children: (0, r.jsx)(
                     s.Z.div,
-                    h(
+                    m(
                         f(
                             {
                                 className: a()(p.messageRequestItem, I, {
@@ -90,7 +90,7 @@ let m = function (e) {
                                     [p.firstItem]: 0 === t,
                                 }),
                                 onContextMenu: (e) => {
-                                    null != m &&
+                                    null != h &&
                                         (S(!0),
                                         (0, u.jW)(
                                             e,
@@ -99,7 +99,7 @@ let m = function (e) {
                                                     n.e("79695"),
                                                     n.e("69220"),
                                                 ]).then(n.bind(n, 881351));
-                                                return (t) => (0, r.jsx)(e, h(f({}, t), { user: m }));
+                                                return (t) => (0, r.jsx)(e, m(f({}, t), { user: h }));
                                             },
                                             {
                                                 onClose: () => {
@@ -118,7 +118,7 @@ let m = function (e) {
                             },
                             e,
                         ),
-                        { children: l(v || E || C) },
+                        { children: l(y || E || C) },
                     ),
                 ),
             }),

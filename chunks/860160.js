@@ -10,10 +10,10 @@ var r = n(951288),
     d = n(592125),
     p = n(430824),
     f = n(594174),
-    h = n(709054),
-    m = n(981631),
+    m = n(709054),
+    h = n(981631),
     g = n(388032),
-    _ = n(25493);
+    _ = n(590981);
 function b(e) {
     var t;
     let { item: n } = e,
@@ -54,23 +54,23 @@ function b(e) {
         I = i.useMemo(() => {
             if ("contentInventory" === n.data.kind) return n.data.content.author_id;
         }, [n]),
-        v = i.useMemo(() => {
+        y = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
                 case "forumThread":
-                    return h.default.extractTimestamp(n.data.message.id);
+                    return m.default.extractTimestamp(n.data.message.id);
                 case "channelSummary":
-                    return h.default.extractTimestamp(n.data.topic.endId);
+                    return m.default.extractTimestamp(n.data.topic.endId);
                 case "guildEvent":
-                    return h.default.extractTimestamp(n.data.eventId);
+                    return m.default.extractTimestamp(n.data.eventId);
                 case "generatedCandidate":
-                    return h.default.extractTimestamp(n.data.item.content_id);
+                    return m.default.extractTimestamp(n.data.item.content_id);
                 default:
                     return n.timestamp;
             }
         }, [n]),
-        y = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
-        C = null != (t = null == y ? void 0 : y.guild_id) ? t : O,
+        v = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
+        C = null != (t = null == v ? void 0 : v.guild_id) ? t : O,
         S = (0, a.e7)([p.Z], () => (null != C ? p.Z.getGuild(C) : null), [C]),
         T = (0, a.e7)([f.default], () => (null != I ? f.default.getUser(I) : null), [I]);
     return "unknown" === b
@@ -123,7 +123,7 @@ function b(e) {
                                                 : null,
                                           (0, r.jsx)("div", {
                                               className: _.timestamp,
-                                              children: (0, u.a3)(v),
+                                              children: (0, u.a3)(y),
                                           }),
                                       ],
                                   }),
@@ -132,7 +132,7 @@ function b(e) {
                                   let e = (() => {
                                       switch (n.data.kind) {
                                           case "message":
-                                              if (n.channelType === m.d4z.GUILD_ANNOUNCEMENT)
+                                              if (n.channelType === h.d4z.GUILD_ANNOUNCEMENT)
                                                   return g.intl.string(g.t["8P08G9"]);
                                               return g.intl.string(g.t.hMFMY9);
                                           case "channelSummary":
@@ -164,8 +164,8 @@ function b(e) {
                                               children: e,
                                           }),
                                       });
-                                  if (null != y && null != e) {
-                                      let t = (0, s.KS)(y, S);
+                                  if (null != v && null != e) {
+                                      let t = (0, s.KS)(v, S);
                                       return (0, r.jsxs)("div", {
                                           className: _.subtitle,
                                           children: [
@@ -187,7 +187,7 @@ function b(e) {
                                                               height: 16,
                                                               className: _.channelIcon,
                                                           }),
-                                                      y.name,
+                                                      v.name,
                                                   ],
                                               }),
                                           ],

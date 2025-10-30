@@ -10,26 +10,26 @@ var r = n(951288),
     d = n(906732),
     p = n(213609),
     f = n(963249),
-    h = n(579185),
-    m = n(752048),
+    m = n(579185),
+    h = n(752048),
     g = n(626135),
     _ = n(479446),
     b = n(522558),
     E = n(441623),
     O = n(317271),
     I = n(674701),
-    v = n(474936),
-    y = n(981631),
+    y = n(474936),
+    v = n(981631),
     C = n(388032),
-    S = n(427954),
-    T = n(286389);
+    S = n(3254),
+    T = n(952602);
 function N(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: N } = e,
         { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: P, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, h.Z)(200, 300),
+        { isHovered: P, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, m.Z)(200, 300),
         { enableEmojiCTA: w } = b.w.useExperiment({ location: "GiftIntentActionButton" }, { autoTrackExposure: !1 });
     i.useEffect(() => {
-        let e = m.Z.getUserAffinity(t.id);
+        let e = h.Z.getUserAffinity(t.id);
         (0, p.h)({
             name: o.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
             type: o.ImpressionTypes.VIEW,
@@ -47,8 +47,8 @@ function N(e) {
         ),
         R = (e) => {
             e.stopPropagation();
-            let r = m.Z.getUserAffinity(t.id);
-            g.default.track(y.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            let r = h.Z.getUserAffinity(t.id);
+            g.default.track(v.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: n,
                 affinity: null == r ? void 0 : r.communicationProbability,
             }),
@@ -60,18 +60,18 @@ function N(e) {
                     analyticsLocations: j,
                     analyticsObject: {
                         page: l,
-                        section: y.jXE.FRIENDS_LIST_FRIEND_ROW,
-                        object: y.qAy.BUTTON_CTA,
-                        objectType: y.AnalyticsObjectTypes.GIFT,
+                        section: v.jXE.FRIENDS_LIST_FRIEND_ROW,
+                        object: v.qAy.BUTTON_CTA,
+                        objectType: v.AnalyticsObjectTypes.GIFT,
                     },
                     giftMessage: D(),
                 });
         },
         D = () =>
-            n === v.hX.FRIEND_ANNIVERSARY
+            n === y.hX.FRIEND_ANNIVERSARY
                 ? C.intl.formatToPlainString(C.t["L2s/N3"], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) })
                 : (0, _.Ou)(n),
-        M = () => (n === v.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t["4LohBA"]) : (0, _.Ou)(n)),
+        M = () => (n === y.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t["4LohBA"]) : (0, _.Ou)(n)),
         k = i.useRef(null);
     return (0, r.jsx)(u.yRy, {
         targetElementRef: k,
@@ -94,8 +94,8 @@ function N(e) {
                 onMouseLeave: Z,
                 popoutPosition: e.position,
                 analyticsPage: l,
-                analyticsSection: y.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
-                giftIntentSecondaryAction: v.X2.SEND_MESSAGE,
+                analyticsSection: v.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
+                giftIntentSecondaryAction: y.X2.SEND_MESSAGE,
                 glow: !0,
             }),
         children: () =>

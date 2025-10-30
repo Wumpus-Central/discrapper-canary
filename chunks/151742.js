@@ -1,40 +1,45 @@
-n.d(t, { Z: () => l }), n(358797), n(388685);
-var r = n(147913),
-    i = n(695346);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+n.d(t, {
+    GR: () => i,
+    NL: () => o,
+    Wu: () => r,
+    zU: () => a,
+});
+let r = {
+        零: 0,
+        一: 1,
+        二: 2,
+        兩: 2,
+        三: 3,
+        四: 4,
+        五: 5,
+        六: 6,
+        七: 7,
+        八: 8,
+        九: 9,
+        十: 10,
+        廿: 20,
+        卅: 30,
+    },
+    i = {
+        天: 0,
+        日: 0,
+        一: 1,
+        二: 2,
+        三: 3,
+        四: 4,
+        五: 5,
+        六: 6,
+    };
+function a(e) {
+    let t = 0;
+    for (let n = 0; n < e.length; n++) {
+        let i = e[n];
+        "十" === i ? (t = 0 === t ? r[i] : t * r[i]) : (t += r[i]);
+    }
+    return t;
 }
-let o = !1;
-class s extends r.Z {
-    maybeShowChangeLanguageToast() {}
-    setVerifyTimezone() {
-        o = !0;
-    }
-    ensureTimezoneUpdated() {
-        if (!o) return;
-        o = !1;
-        let e = new Date().getTimezoneOffset();
-        i.rN.getSetting() !== e && setImmediate(() => i.rN.updateSetting(e));
-    }
-    constructor(...e) {
-        super(...e),
-            a(this, "actions", {
-                POST_CONNECTION_OPEN: () => {
-                    this.setVerifyTimezone(), this.maybeShowChangeLanguageToast();
-                },
-                OVERLAY_INITIALIZE: this.setVerifyTimezone,
-                USER_SETTINGS_PROTO_UPDATE: this.ensureTimezoneUpdated,
-            });
-    }
+function o(e) {
+    let t = "";
+    for (let n = 0; n < e.length; n++) t += r[e[n]];
+    return parseInt(t);
 }
-let l = new s();

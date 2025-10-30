@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eh }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
+n.d(t, { Z: () => em }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(755721),
     p = n(481060),
     f = n(570140),
-    h = n(659429),
-    m = n(496929),
+    m = n(659429),
+    h = n(496929),
     g = n(558381),
     _ = n(410575),
     b = n(224336),
     E = n(730749),
     O = n(666743),
     I = n(115130),
-    v = n(812206),
-    y = n(770146),
+    y = n(812206),
+    v = n(770146),
     C = n(600164),
     S = n(606081),
     T = n(252618),
@@ -44,7 +44,7 @@ var r = n(951288),
     z = n(73346),
     Y = n(3570),
     W = n(689796),
-    q = n(15470),
+    q = n(978436),
     K = n(506648),
     Q = n(449275),
     J = n(445986),
@@ -59,7 +59,7 @@ var r = n(951288),
     ea = n(981631),
     es = n(186901),
     eo = n(388032),
-    ec = n(561537);
+    ec = n(868113);
 function eu(e, t, n) {
     return (
         t in e
@@ -126,7 +126,7 @@ class ef extends i.PureComponent {
             (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = ea.SaU;
         (null == t || t.isSlimDirectoryVersion()) && a(),
-            null != e && (n || i || (0, m.yD)(e.applicationId), r && f.Z.wait(() => (0, h.$)(e.applicationId))),
+            null != e && (n || i || (0, h.yD)(e.applicationId), r && f.Z.wait(() => (0, m.$)(e.applicationId))),
             this.trackViewed(),
             this.replaceUrlWithSlug();
     }
@@ -152,7 +152,7 @@ class ef extends i.PureComponent {
             r && !e.shouldFetchStatistics)
         ) {
             if (null == n) throw Error("Unexpected missing sku");
-            f.Z.wait(() => (0, h.$)(n.applicationId));
+            f.Z.wait(() => (0, m.$)(n.applicationId));
         }
         (i !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1),
             this.trackViewed(),
@@ -323,7 +323,7 @@ class ef extends i.PureComponent {
         if (null == l) throw Error("Rendering ApplicationStoreListing without description");
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(y.Z, {
+                (0, r.jsx)(v.Z, {
                     tag: "h1",
                     children: eo.intl.format(eo.t.tluX4B, { name: n.name }),
                 }),
@@ -514,7 +514,7 @@ class ef extends i.PureComponent {
                 null != e &&
                     null != t &&
                     (0, p.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
+                        let { default: i } = await Promise.all([n.e("7654"), n.e("28297")]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -649,25 +649,25 @@ class ef extends i.PureComponent {
             });
     }
 }
-let eh = (0, E.Z)(
+let em = (0, E.Z)(
     (0, O.Z)(
-        s.ZP.connectStores([R.Z, A.Z, x.default, G.Z, k.Z, M.Z, U.Z, I.Z, v.Z, L.Z, Z.Z, D.Z], (e) => {
+        s.ZP.connectStores([R.Z, A.Z, x.default, G.Z, k.Z, M.Z, U.Z, I.Z, y.Z, L.Z, Z.Z, D.Z], (e) => {
             let t,
                 n,
                 r,
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: s, channel: o } = e;
             if (null == l) {
                 if (null == i) throw Error("Needs applicationId or skuId");
-                (t = i), null != (l = null != (n = M.Z.get(i)) ? n.applicationId : null) && (r = v.Z.getApplication(l));
+                (t = i), null != (l = null != (n = M.Z.get(i)) ? n.applicationId : null) && (r = y.Z.getApplication(l));
             } else if (null == i) {
                 if (null == l) throw Error("Needs applicationId or skuId");
-                null != (r = v.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? M.Z.get(t) : null);
+                null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? M.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, ea.l4R.STICKER) && (n = null);
             let c = null != l && (U.Z.inTestModeForApplication(l) || I.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
-                application: null != l ? v.Z.getApplication(l) : null,
+                application: null != l ? y.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && D.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && D.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: s && null != l && L.Z.shouldFetchStatisticsForApplication(l),

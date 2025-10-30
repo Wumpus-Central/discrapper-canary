@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,15 +10,15 @@ var r = n(951288),
     d = n(804919),
     p = n(931847),
     f = n(836197),
-    h = n(86419),
-    m = n(50130),
+    m = n(86419),
+    h = n(50130),
     g = n(872269),
     _ = n(248554),
     b = n(70399),
     E = n(228168),
     O = n(388032),
-    I = n(229870);
-let v = {
+    I = n(73686);
+let y = {
     [s.l.FAVORITE_GAMES]: {
         placeholder: () => ({
             variant: "details",
@@ -65,12 +65,12 @@ let v = {
         },
     },
 };
-function y(e) {
+function v(e) {
     let t,
         { widgetType: n, onAddWidget: l, size: c = "default", loading: d = !1, trackUserProfileEditAction: O } = e,
-        { placeholder: y, getAriaLabel: C, icon: S } = v[n],
+        { placeholder: v, getAriaLabel: C, icon: S } = y[n],
         T = "small" === c,
-        { config: N } = (0, m.G)(),
+        { config: N } = (0, h.G)(),
         j = i.useMemo(() => {
             switch (n) {
                 case s.l.CURRENT_GAMES:
@@ -93,7 +93,7 @@ function y(e) {
         P = i.useCallback(() => {
             d ||
                 null == j ||
-                ((0, h.qH)(n, j),
+                ((0, m.qH)(n, j),
                 O({
                     action: "WIDGET_ADDED",
                     widgetEdited: n,
@@ -114,7 +114,7 @@ function y(e) {
                       children: [
                           (() => {
                               if (null == j) return null;
-                              let e = y(j);
+                              let e = v(j);
                               switch (e.variant) {
                                   case "details":
                                       return (0, r.jsx)(_.i, {
@@ -151,7 +151,7 @@ function y(e) {
                                           (0, r.jsx)(o.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
-                                              children: (0, h.mR)(j),
+                                              children: (0, m.mR)(j),
                                           }),
                                           null != t
                                               ? (0, r.jsx)("img", {
@@ -170,7 +170,7 @@ function y(e) {
                   }),
                   (() => {
                       if (null == j) return null;
-                      let e = y(j);
+                      let e = v(j);
                       return "application-widget" === e.variant
                           ? (0, r.jsx)(b.T, {
                                 applicationId: e.applicationId,

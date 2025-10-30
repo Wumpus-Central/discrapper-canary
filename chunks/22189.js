@@ -32,16 +32,16 @@ var r = n(951288),
     P = n(229555),
     w = n(768865),
     D = n(391110),
-    L = n(75077),
-    x = n(474936),
+    x = n(75077),
+    L = n(474936),
     M = n(981631),
     k = n(921944),
     j = n(228168),
     U = n(526761),
     G = n(332325),
     B = n(388032),
-    Z = n(531421),
-    F = n(352609),
+    Z = n(24864),
+    F = n(593082),
     V = n(660372),
     H = n(926433),
     Y = n(302036),
@@ -112,16 +112,16 @@ var r = n(951288),
 let ey = () => {
     let { analyticsLocations: e } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, s.ZP)(),
-        n = (0, S.BU)(x.Uq / 1024, { useKibibytes: !0 }),
+        n = (0, S.BU)(L.Uq / 1024, { useKibibytes: !0 }),
         eb = (0, a.e7)([T.Z], () => T.Z.getPremiumTypeSubscription()),
         ey = null != eb ? C.ZP.getPremiumPlanItem(eb) : null,
-        eO = (null != ey ? C.ZP.getSkuIdForPlan(ey.planId) : null) === x.Si.TIER_2,
+        eO = (null != ey ? C.ZP.getSkuIdForPlan(ey.planId) : null) === L.Si.TIER_2,
         ev = I.default.getCurrentUser(),
-        eI = (0, C.I5)(ev, x.PremiumTypes.TIER_2),
-        eT = (0, C.I5)(ev, x.PremiumTypes.TIER_0),
+        eI = (0, C.I5)(ev, L.PremiumTypes.TIER_2),
+        eT = (0, C.I5)(ev, L.PremiumTypes.TIER_0),
         eS = (0, d.Z)(v.Z),
         { isFractionalPremiumActive: eA } = (0, u.Z)(),
-        eC = null != eb && eb.hasPremiumAtLeast(x.PremiumTypes.TIER_2),
+        eC = null != eb && eb.hasPremiumAtLeast(L.PremiumTypes.TIER_2),
         eN = (0, _.Nj)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         eR = (0, p.cL)({ location: "usePremiumPerksCards" }),
         eP = (0, m.Z)({
@@ -140,14 +140,14 @@ let ey = () => {
                 analyticsLocations: e,
             });
         },
-        eL = () => {
+        ex = () => {
             (0, O.openUserSettings)(b.n.VOICE_AND_VIDEO_PANEL, {
                 section: M.oAB.VOICE,
                 subsection: U.GA,
                 analyticsLocations: e,
             });
         },
-        ex = () => {
+        eL = () => {
             (0, g.uL)(M.Z5c.COLLECTIBLES_SHOP);
         },
         eM = () => {
@@ -254,7 +254,7 @@ let ey = () => {
                       subtitle: B.intl.string(B.t["7ZCYvC"]),
                       description: B.intl.string(B.t.mUT8bO),
                       descriptionCta: B.intl.string(B.t.jVcuVY),
-                      onCtaClick: eL,
+                      onCtaClick: ex,
                       perkImage: et,
                   }
                 : {
@@ -271,7 +271,7 @@ let ey = () => {
                       subtitle: B.intl.string(B.t["7ZCYvC"]),
                       description: B.intl.string(B.t.mUT8bO),
                       descriptionCta: B.intl.string(B.t.jVcuVY),
-                      onCtaClick: eL,
+                      onCtaClick: ex,
                       perkImage: en,
                   }
                 : {
@@ -334,7 +334,7 @@ let ey = () => {
                 subtitle: B.intl.string(B.t.opgqDZ),
                 description: B.intl.string(B.t["t+QZSd"]),
                 descriptionCta: B.intl.string(B.t.dBJVnZ),
-                onCtaClick: ex,
+                onCtaClick: eL,
                 perkImage: er,
             },
             specialMemberPricingSeeAllVariant: {
@@ -343,7 +343,7 @@ let ey = () => {
                 subtitle: B.intl.string(B.t.opgqDZ),
                 description: B.intl.string(B.t["t+QZSd"]),
                 descriptionCta: B.intl.string(B.t.dBJVnZ),
-                onCtaClick: ex,
+                onCtaClick: eL,
                 perkImage: er,
             },
             specialShopPerks: {
@@ -352,7 +352,7 @@ let ey = () => {
                 subtitle: B.intl.string(B.t.chRZiX),
                 description: B.intl.string(B.t["t+QZSd"]),
                 descriptionCta: B.intl.string(B.t.dBJVnZ),
-                onCtaClick: ex,
+                onCtaClick: eL,
                 perkImage: er,
             },
             superReactions: {
@@ -403,14 +403,14 @@ let ey = () => {
                 name: "customSoundsEverywhere",
                 title: B.intl.string(B.t.LWsArT),
                 subtitle: B.intl.string(B.t.bTzbVk),
-                perkImage: (0, L.gx)(t, H, Y),
+                perkImage: (0, x.gx)(t, H, Y),
                 description: B.intl.string(B.t.JLnOM2),
             },
             specialStickerAccess: {
                 name: "specialStickerAccess",
                 title: B.intl.string(B.t.tzdIwI),
                 subtitle: B.intl.string(B.t.FXlU24),
-                perkImage: (0, L.gx)(t, W, ec),
+                perkImage: (0, x.gx)(t, W, ec),
                 description: B.intl.string(B.t.e7FKCi),
             },
             largeUploads: {
