@@ -1,18 +1,12 @@
-n.d(t, {
-    Vc: () => o,
-    g6: () => s,
-});
+n.d(t, { g6: () => s });
 var r = n(951288),
-    i = n(647438);
-let a = i.createContext(null);
-function o() {
-    return i.useContext(a);
-}
+    l = n(647438);
+let i = l.createContext(null);
 function s(e) {
     let { blockType: t, children: n } = e,
-        o = i.useMemo(() => ({ blockType: t }), [t]);
-    return (0, r.jsx)(a.Provider, {
-        value: o,
+        s = l.useMemo(() => ({ blockType: t }), [t]);
+    return (0, r.jsx)(i.Provider, {
+        value: s,
         children: n,
     });
 }

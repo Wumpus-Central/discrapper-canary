@@ -44,7 +44,6 @@ e.exports = {
     headingWithItemTypePill: "headingWithItemTypePill_c50f62",
     disabledReason: "disabledReason_c50f62",
     variantsSwitch: "variantsSwitch_c50f62",
-    variantsThumbnail: "variantsThumbnail_c50f62",
     externalProductProfilePreview: "externalProductProfilePreview_c50f62",
     wishlistButton: "wishlistButton_c50f62",
     orbIconAligned: "orbIconAligned_c50f62",
