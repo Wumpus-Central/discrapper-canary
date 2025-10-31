@@ -1,180 +1,237 @@
 n.d(t, {
-    $h: () => A,
-    En: () => M,
-    cO: () => D,
-    dJ: () => L,
+    $h: () => T,
+    En: () => L,
+    cO: () => R,
+    dJ: () => D,
     jG: () => w,
-    yI: () => R,
+    yI: () => A,
 });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     o = n(494497),
-    a = n(793030),
-    s = n(442837),
-    c = n(481060),
+    a = n(442837),
+    s = n(198168),
+    c = n(907862),
     u = n(100527),
-    d = n(623624),
-    p = n(703656),
-    f = n(970731),
-    h = n(430824),
-    g = n(326660),
-    m = n(639777),
-    b = n(441536),
-    _ = n(795338),
-    O = n(279604),
+    d = n(703656),
+    p = n(430824),
+    h = n(326660),
+    f = n(156732),
+    g = n(639777),
+    m = n(441536),
+    b = n(795338),
+    _ = n(279604),
     y = n(535396),
-    v = n(981631),
-    j = n(176505),
-    C = n(921944),
-    E = n(269794),
+    O = n(981631),
+    v = n(176505),
+    j = n(921944),
+    C = n(269794),
     x = n(459196),
-    S = n(388032),
-    I = n(428197),
-    P = n(611087),
-    N = n(928381),
-    Z = n(283902),
-    T = n(225375);
+    E = n(388032),
+    S = n(428197),
+    I = n(611087),
+    P = n(928381),
+    N = n(283902),
+    Z = n(225375);
 function w(e) {
-    let { guildId: t, powerup: n, markAsDismissed: i } = e;
-    return (0, r.jsx)(k, {
-        asset: (0, r.jsx)(_.g, { className: I.image }),
-        header: S.intl.formatToPlainString(x.default["Zg/m9K"], { perkName: n.title }),
-        content: S.intl.formatToPlainString(x.default["1EGXSK"], { perkName: n.title }),
-        buttonCTA: S.intl.string(S.t.RzWDqY),
-        onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
-        markAsDismissed: i,
+    let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: o } = e;
+    return (0, r.jsx)(M, {
+        asset: (0, r.jsx)(b.g, { className: l()(S.image, S.levelImage) }),
+        title: E.intl.formatToPlainString(x.default["Zg/m9K"], { perkName: n.title }),
+        body: E.intl.formatToPlainString(x.default["1EGXSK"], { perkName: n.title }),
+        actions: [
+            {
+                text: E.intl.string(E.t.RzWDqY),
+                variant: "primary",
+                onClick: () => (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
+            },
+        ],
+        targetElementRef: i,
+        markAsDismissed: o,
+    });
+}
+function T(e) {
+    let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
+        l = (0, g.Z)(t);
+    return (0, r.jsx)(c.Mb, {
+        targetElementRef: i,
+        assetUrl: P.Z,
+        title: E.intl.string(x.default.QpQBPQ),
+        body: E.intl.string(x.default["6hn0xF"]),
+        action: {
+            text: E.intl.string(E.t.RzWDqY),
+            variant: "primary",
+            onClick: () => {
+                (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS);
+            },
+        },
+        caretConfig: l
+            ? {
+                  position: "left",
+                  align: "start",
+              }
+            : {
+                  position: "top",
+                  align: "center",
+              },
+        position: l ? "right" : "bottom",
+        align: l ? "top" : "center",
+        onRequestClose: () => (null == n ? void 0 : n(j.L.USER_DISMISS)),
     });
 }
 function A(e) {
-    let { guildId: t, markAsDismissed: n } = e,
-        i = (0, m.Z)(t);
-    return (0, r.jsx)(k, {
-        asset: (0, r.jsx)("img", {
-            alt: "",
-            src: N.Z,
-            className: l()(I.image, I.newPerksImage),
-        }),
-        header: S.intl.string(x.default.QpQBPQ),
-        content: i ? S.intl.string(x.default["6hn0xF"]) : S.intl.string(x.default.RDuvXp),
-        buttonCTA: S.intl.string(S.t.RzWDqY),
-        onClick: () =>
-            i
-                ? (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
-                : (0, d.f)({
-                      guildId: t,
-                      location: { section: v.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
-                  }),
-        markAsDismissed: n,
-        caretPosition: i ? f.DF.LEFT_TOP : f.DF.TOP_CENTER,
-    });
-}
-function R(e) {
-    let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = (0, s.e7)([h.Z], () => {
+    let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: o } = e,
+        s = (0, a.e7)([p.Z], () => {
             var e;
-            return null == (e = h.Z.getGuild(t)) ? void 0 : e.name;
+            return null == (e = p.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        { onActivate: o } = (0, O.ZP)(t, n[0]);
+        { onActivate: c } = (0, _.ZP)(t, n[0]),
+        d = (0, f.Z)(n[0], !0);
     if (0 === n.length) return;
-    let a =
+    let h =
             n.length >= 3
-                ? S.intl.formatToPlainString(x.default["6Sv+3M"], {
+                ? E.intl.formatToPlainString(x.default["6Sv+3M"], {
                       perk: n[0].title,
                       perk2: n[1].title,
                       perk3: n[2].title,
                   })
                 : 2 === n.length
-                  ? S.intl.formatToPlainString(x.default.wcQOqC, {
+                  ? E.intl.formatToPlainString(x.default.wcQOqC, {
                         perks: "".concat(n[0].title, " & ").concat(n[1].title),
                     })
-                  : S.intl.formatToPlainString(x.default.ZF8NT6, { perk: n[0].title }),
-        c = 1 === n.length;
-    return (0, r.jsx)(k, {
+                  : E.intl.formatToPlainString(x.default.ZF8NT6, { perk: n[0].title }),
+        g = 1 === n.length;
+    return (0, r.jsx)(M, {
+        size: 1 === n.length ? "video" : "lg",
         asset:
-            1 === n.length
-                ? (0, r.jsx)(_.m, {
-                      className: I.image,
-                      powerup: n[0],
-                  })
-                : (0, r.jsx)(_.g, { className: I.image }),
-        header: S.intl.formatToPlainString(x.default.LmpChE, { guildName: l }),
-        content: a,
-        buttonCTA: c ? S.intl.string(x.default.gSxlHf) : S.intl.string(S.t.RzWDqY),
-        onClick: (e) => (c ? o(e) : (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
-        markAsDismissed: i,
+            n.length > 1
+                ? (0, r.jsx)(b.g, { className: l()(S.image, S.levelImage) })
+                : (0, r.jsx)("img", {
+                      alt: "",
+                      src: d,
+                      className: S.image,
+                  }),
+        title: E.intl.formatToPlainString(x.default.LmpChE, { guildName: s }),
+        body: h,
+        actions: [
+            {
+                text: g ? E.intl.string(x.default.gSxlHf) : E.intl.string(E.t.RzWDqY),
+                variant: "primary",
+                onClick: (e) => {
+                    g ? c(e) : (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
+                },
+            },
+        ],
+        targetElementRef: i,
+        markAsDismissed: o,
     });
 }
-function D(e) {
-    let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = n.find((e) => e.skuId === o.A$);
-    if (null != l)
-        return (0, r.jsx)(k, {
-            header: S.intl.string(x.default.Ygpx4Q),
-            content: S.intl.string(x.default.mmNkUA),
-            asset: (0, r.jsx)("img", {
-                alt: "",
-                src: T.Z,
-                className: I.image,
-            }),
-            onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, l.skuId),
-            markAsDismissed: i,
-            buttonCTA: S.intl.string(S.t.RzWDqY),
+function R(e) {
+    let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: l } = e,
+        a = n.find((e) => e.skuId === o.A$);
+    if (null != a)
+        return (0, r.jsx)(M, {
+            targetElementRef: i,
+            title: E.intl.string(x.default.Ygpx4Q),
+            body: E.intl.string(x.default.mmNkUA),
+            size: "video",
+            asset: Z.Z,
+            actions: [
+                {
+                    text: E.intl.string(E.t.RzWDqY),
+                    variant: "primary",
+                    onClick: () => {
+                        (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, a.skuId);
+                    },
+                },
+            ],
+            markAsDismissed: l,
         });
-    let a = n.find((e) => y.NL.has(e.skuId));
-    return null != a
-        ? (0, r.jsx)(k, {
-              header: S.intl.string(x.default["kA2c+n"]),
-              content: S.intl.string(x.default.TUilLj),
+    let s = n.find((e) => y.NL.has(e.skuId));
+    return null != s
+        ? (0, r.jsx)(M, {
+              targetElementRef: i,
+              title: E.intl.string(x.default["kA2c+n"]),
+              body: E.intl.string(x.default.TUilLj),
               asset: (0, r.jsx)("img", {
                   alt: "",
-                  src: Z.Z,
-                  className: I.image,
+                  src: N.Z,
+                  className: S.image,
               }),
-              onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, a.skuId),
-              markAsDismissed: i,
-              buttonCTA: S.intl.string(S.t.RzWDqY),
+              actions: [
+                  {
+                      text: E.intl.string(E.t.RzWDqY),
+                      variant: "primary",
+                      onClick: () => {
+                          (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, s.skuId);
+                      },
+                  },
+              ],
+              markAsDismissed: l,
           })
         : null;
 }
-function L(e) {
-    let { guildId: t, type: n, markAsDismissed: i } = e,
-        o = (0, O.Td)(t, void 0);
-    return (0, r.jsx)(k, {
+function D(e) {
+    let { guildId: t, type: n, markAsDismissed: i, channelRowRef: o } = e,
+        a = (0, _.Td)(t, void 0);
+    return (0, r.jsx)(M, {
+        targetElementRef: o,
         asset: (0, r.jsx)("img", {
             alt: "",
-            src: P.Z,
-            className: l()(I.image, I.newPerksImage),
+            src: I.Z,
+            className: l()(S.image, S.gameServerHostingImage),
         }),
-        header: S.intl.string(n === g.J.GAME_SERVER_HOSTING_AVAILABLE ? E.default.wXLChx : E.default["8z8RpY"]),
-        content:
-            n === g.J.GAME_SERVER_HOSTING_AVAILABLE
-                ? S.intl.string(E.default.lZ6m7Q)
-                : S.intl.format(E.default["IQ1E+d"], { boostCount: o }),
-        buttonCTA: S.intl.string(S.t.RzWDqY),
-        onClick: () => (0, b.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE),
+        title: E.intl.string(n === h.J.GAME_SERVER_HOSTING_AVAILABLE ? C.default.wXLChx : C.default["8z8RpY"]),
+        body:
+            n === h.J.GAME_SERVER_HOSTING_AVAILABLE
+                ? E.intl.string(C.default.lZ6m7Q)
+                : E.intl.format(C.default["IQ1E+d"], { boostCount: a }),
+        actions: [
+            {
+                text: E.intl.string(E.t.RzWDqY),
+                variant: "primary",
+                onClick: () => (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE),
+            },
+        ],
         markAsDismissed: i,
     });
 }
-function M(e) {
-    let { guildId: t, markAsDismissed: n } = e;
-    return (0, r.jsx)(k, {
+function L(e) {
+    let { guildId: t, markAsDismissed: n, channelRowRef: i } = e;
+    return (0, r.jsx)(M, {
+        size: "video",
+        targetElementRef: i,
         asset: (0, r.jsx)("img", {
             alt: "",
-            src: P.Z,
-            className: l()(I.image, I.newPerksImage),
+            src: I.Z,
+            className: l()(S.image, S.gameServerHostingImage),
         }),
-        header: S.intl.string(E.default["eX64+z"]),
-        content: S.intl.string(E.default.NpgfEB),
-        buttonCTA: S.intl.string(S.t.RzWDqY),
-        onClick: () => (0, p.uL)(v.Z5c.CHANNEL(t, j.oC.GAME_SERVERS)),
+        title: E.intl.string(C.default["eX64+z"]),
+        body: E.intl.string(C.default.NpgfEB),
+        actions: [
+            {
+                text: E.intl.string(E.t.RzWDqY),
+                variant: "primary",
+                onClick: () => (0, d.uL)(O.Z5c.CHANNEL(t, v.oC.GAME_SERVERS)),
+            },
+        ],
         markAsDismissed: n,
     });
 }
-function k(e) {
-    var { asset: t, header: n, content: i, caretPosition: o, markAsDismissed: s } = e,
-        u = (function (e, t) {
+function M(e) {
+    var t,
+        n,
+        {
+            caretConfig: i = { align: "start" },
+            position: l = "right",
+            align: o = "top",
+            markAsDismissed: a,
+            size: u = "lg",
+            asset: d,
+        } = e,
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -194,12 +251,10 @@ function k(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["asset", "header", "content", "caretPosition", "markAsDismissed"]);
-    let d = null != o ? o : f.DF.LEFT_TOP,
-        p = d === f.DF.TOP_CENTER || d === f.DF.LEFT_TOP ? I[d] : "";
+        })(e, ["caretConfig", "position", "align", "markAsDismissed", "size", "asset"]);
     return (0, r.jsx)(
-        f.ZP,
-        (function (e) {
+        c.J2,
+        ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
@@ -223,36 +278,33 @@ function k(e) {
                     });
             }
             return e;
-        })(
+        })({}, p)),
+        (n = n =
             {
-                "data-migration-pending": !0,
-                asset: (0, r.jsxs)("div", {
-                    className: I.imageContainer,
-                    children: [
-                        t,
-                        (0, r.jsx)(c.olH, {
-                            "data-migration-pending": !0,
-                            className: I.close,
-                            onClick: () => (null == s ? void 0 : s(C.L.USER_DISMISS)),
-                        }),
-                    ],
-                }),
-                header: (0, r.jsx)(a.xvT, {
-                    variant: "text-md/semibold",
-                    children: n,
-                }),
-                content: (0, r.jsx)(a.xvT, {
-                    variant: "text-sm/medium",
-                    color: "text-muted",
-                    children: i,
-                }),
-                className: l()(I.container, p),
-                headerClassName: I.header,
-                contentClassName: I.header,
-                caretPosition: d,
-                markAsDismissed: s,
-            },
-            u,
-        ),
+                graphic: {
+                    type: "dynamic",
+                    component: s.DynamicGraphicComponent.GUILD_POWERUPS_COACHMARK_ASSET,
+                    props: { asset: d },
+                },
+                size: u,
+                shouldShow: !0,
+                position: l,
+                caretConfig: i,
+                align: o,
+                onRequestClose: () => (null == a ? void 0 : a(j.L.USER_DISMISS)),
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
     );
 }

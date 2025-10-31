@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(782959),
     p = n(511342),
     f = n(933104),
-    h = n(337721),
-    m = n(921944);
+    m = n(337721),
+    h = n(921944);
 function g(e) {
     let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
         l = i.useRef(null);
@@ -35,16 +35,18 @@ function g(e) {
 }
 let _ = i.memo(function (e) {
     let { contentTypes: t, guild: n, renderGuildHeaderDropdownButton: i } = e,
-        [a, _] = (0, s.US)(t, m.R.GUILD_HEADER_TOOLTIPS);
+        [a, _] = (0, s.US)(t, h.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
             switch (a) {
                 case l.z.GUILD_POWERUP_PERKS_COACHMARK:
                     return (0, r.jsx)(g, {
-                        renderPopout: (0, r.jsx)(f.$h, {
-                            guildId: n.id,
-                            markAsDismissed: _,
-                        }),
+                        renderPopout: (e) =>
+                            (0, r.jsx)(f.$h, {
+                                guildId: n.id,
+                                markAsDismissed: _,
+                                channelRowRef: e,
+                            }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.z.GUILD_HEADER_BOOST_PROGRESS_BAR_UPSELL:
@@ -66,7 +68,7 @@ let _ = i.memo(function (e) {
                 case l.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
                     return (0, r.jsx)(g, {
                         renderPopout: (e) =>
-                            (0, r.jsx)(h.Z, {
+                            (0, r.jsx)(m.Z, {
                                 guild: n,
                                 markAsDismissed: _,
                                 targetElementRef: e,
