@@ -1,7 +1,7 @@
 n.d(t, {
     EA: () => k,
     Recurring3PModal: () => U,
-    gu: () => L,
+    gu: () => x,
     wQ: () => G,
 }),
     n(388685),
@@ -215,7 +215,12 @@ let R = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? M[e].logos.dark 
                                                         (0, r.jsx)(a.X6q, {
                                                             variant: "heading-sm/medium",
                                                             color: "text-secondary",
-                                                            children: e.body,
+                                                            children:
+                                                                null != e.code
+                                                                    ? O.intl.format(e.bodyWithExpiration, {
+                                                                          date: e.endDate,
+                                                                      })
+                                                                    : e.body,
                                                         }),
                                                     ],
                                                 }),
@@ -245,7 +250,7 @@ let R = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? M[e].logos.dark 
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(P, { recurrence: e }),
+                                null != e.code && (0, r.jsx)(P, { recurrence: e }),
                             ],
                         },
                         e.id,
@@ -266,7 +271,7 @@ let R = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? M[e].logos.dark 
             ],
         });
     },
-    L = (e) => {
+    x = (e) => {
         let { percentage: t } = e,
             n = () => {
                 let e = 1.8;
@@ -287,11 +292,12 @@ let R = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? M[e].logos.dark 
             ],
         });
     },
-    x = "kontrolfreek",
+    L = "kontrolfreek",
     M = {
         steelseries: {
             title: O.intl.string(O.t.sfGgOG),
             body: O.intl.string(O.t.igiSKe),
+            bodyWithExpiration: O.t.w8CXUl,
             redemptionURL: "https://steelseries.com/",
             logos: {
                 dark: (0, r.jsx)(g.U3, {}),
@@ -299,9 +305,10 @@ let R = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? M[e].logos.dark 
             },
             asset: T.Z,
         },
-        [x]: {
+        [L]: {
             title: O.intl.string(O.t["9N8obd"]),
             body: O.intl.string(O.t["34g+Z3"]),
+            bodyWithExpiration: O.t.rqmpXc,
             redemptionURL: "https://www.kontrolfreek.com/",
             logos: {
                 dark: (0, r.jsx)(g.dt, {}),
@@ -376,7 +383,7 @@ let R = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? M[e].logos.dark 
                                       children: O.intl.format(O.t["43kZKL"], { days: t - e.getDate() }),
                                   }),
                               }),
-                              (0, r.jsx)(L, { percentage: n }),
+                              (0, r.jsx)(x, { percentage: n }),
                               (0, r.jsx)("div", {
                                   className: v.cards,
                                   children: Object.entries(u).map((e) => {
