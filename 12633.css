@@ -57306,6 +57306,10 @@ h3.improved__1689b:after {
     white-space: nowrap
 }
 
+.nameplatePreviewPlaceholder__14af9 {
+    background: var(--background-mod-normal)
+}
+
 .settingsPage_f131e9 {
     display: flex;
     flex-direction: column;
@@ -57724,7 +57728,7 @@ h3.improved__1689b:after {
     z-index: 100
 }
 
-.nameplatePreview__39749 {
+.nameplatePreviewPlaceholder__39749 {
     background: var(--background-mod-normal)
 }
 

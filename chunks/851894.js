@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(856768),
     w = n(981631),
     D = n(388032),
-    L = n(813709);
-function x(e, t, n) {
+    x = n(813709);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -112,7 +112,7 @@ function B(e) {
 function Z(e) {
     var t, n;
     let { selectedGuild: a } = e,
-        { analyticsLocations: x } = (0, _.ZP)(d.Z.USER_SETTINGS_GUILD_PROFILE),
+        { analyticsLocations: L } = (0, _.ZP)(d.Z.USER_SETTINGS_GUILD_PROFILE),
         k = (0, s.e7)([I.default], () => {
             let e = I.default.getCurrentUser();
             return o()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
@@ -148,7 +148,7 @@ function Z(e) {
         ? (0, r.jsx)(u.Z, {})
         : Z
           ? (0, r.jsxs)(_.Gt, {
-                value: x,
+                value: L,
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
@@ -168,7 +168,7 @@ function Z(e) {
                                   (0, r.jsx)(g.Z, {
                                       profilePreviewTitle: (0, r.jsx)(l.Heading, {
                                           variant: "heading-md/medium",
-                                          className: L.profilePreviewTitle,
+                                          className: x.profilePreviewTitle,
                                           children: D.intl.formatToPlainString(D.t.Tc0slG, {
                                               guildName: null == a ? void 0 : a.name,
                                           }),
@@ -192,6 +192,7 @@ function Z(e) {
                                                     user: k,
                                                     guildId: null == a ? void 0 : a.id,
                                                     nameplate: q,
+                                                    className: null == q ? x.nameplatePreviewPlaceholder : void 0,
                                                     isHighlighted: !0,
                                                 }),
                                             )
