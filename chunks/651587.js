@@ -93,7 +93,7 @@ function x(e) {
             );
         }, [x]),
         { width: D } = I,
-        { tileWidth: L, columns: H } = r.useMemo(
+        { tileWidth: L, columns: T } = r.useMemo(
             () =>
                 (function (e, t) {
                     let n = t - j,
@@ -118,7 +118,7 @@ function x(e) {
             }
         })();
     }, [E]);
-    let A = r.useCallback(
+    let H = r.useCallback(
             (e) => {
                 (0, s.ZDy)(
                     async () => {
@@ -181,41 +181,40 @@ function x(e) {
             },
             [t],
         ),
-        T = r.useMemo(() => Z.map((e) => O(H, e.clips.length)), [Z, H]),
-        R = r.useMemo(() => T.reduce((e, t) => e + t, 0), [T]),
+        A = r.useMemo(() => Z.map((e) => O(T, e.clips.length)), [Z, T]),
+        R = r.useMemo(() => A.reduce((e, t) => e + t, 0), [A]),
         V = Math.floor(L / h),
         _ = r.useCallback(
             (e, t) => {
                 let { sectionIndex: n, sectionRowIndex: r } = t,
                     i = Z[n];
                 if (null == i) return null;
-                let a = r * H,
-                    s = i.clips.slice(a, a + H);
+                let a = r * T,
+                    s = i.clips.slice(a, a + T);
                 return (0, l.jsx)(
                     "div",
                     {
                         className: v.clipsRow,
-                        children: s.map((e) => {
-                            let t = 0 === e.length && "" === e.thumbnail;
-                            return (0, l.jsx)(
+                        children: s.map((e) =>
+                            (0, l.jsx)(
                                 "div",
                                 {
                                     style: { width: L },
                                     children: (0, l.jsx)(m.Z, {
-                                        actionsDisabled: M || t,
+                                        actionsDisabled: M,
                                         isNew: N.includes(e.id),
-                                        onClick: null != w ? w : A,
+                                        onClick: null != w ? w : H,
                                         clip: e,
                                     }),
                                 },
                                 e.id,
-                            );
-                        }),
+                            ),
+                        ),
                     },
                     "row-".concat(n, "-").concat(r),
                 );
             },
-            [Z, H, L, M, N, A, w],
+            [Z, T, L, M, N, H, w],
         ),
         U = r.useCallback(
             (e) => {
@@ -264,7 +263,7 @@ function x(e) {
                   renderRow: _,
                   renderSectionHeader: z,
                   rowCount: R,
-                  rowCountBySection: T,
+                  rowCountBySection: A,
                   rowHeight: V + 68 + 16,
                   sectionHeaderHeight: U,
                   onResize: S,

@@ -8,6 +8,7 @@ e.exports = {
     clipBadge: "clipBadge__1d12e",
     clipTemporaryBadge: "clipTemporaryBadge__1d12e",
     clipThumb: "clipThumb__1d12e",
+    clipThumbEmpty: "clipThumbEmpty__1d12e",
     clipThumbContainer: "clipThumbContainer__1d12e",
     clipProgressBar: "clipProgressBar__1d12e",
     clipProgressFill: "clipProgressFill__1d12e",
