@@ -1,0 +1,25 @@
+n.d(e, { Z: () => _ });
+var i = n(951288),
+    l = n(703288),
+    r = n(509613),
+    u = n(313789),
+    s = n(514986),
+    a = n(820978),
+    o = n(457217),
+    c = n(457379),
+    d = n(139342),
+    E = n(432248),
+    O = n(339063),
+    T = n(404937),
+    S = n(463561),
+    g = n(344949),
+    I = n(475167),
+    y = n(219247),
+    b = n(770715),
+    A = n(432796),
+    f = n(388032);
+let _ = (0, r.k4)(u.n.CLIPS_CATEGORY, {
+    useTitle: () => f.intl.string(f.t.z2jK6X),
+    useBadge: () => (0, i.jsx)(l.Z, {}),
+    buildLayout: () => [c.Z, I.Z, T.Z, y.Z, b.Z, E.Z, S.Z, o.Z, O.Z, d.Z, g.Z, A.Z, s.Z, a.Z],
+});
