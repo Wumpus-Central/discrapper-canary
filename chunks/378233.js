@@ -1,29 +1,22 @@
 n.d(t, {
     B0: () => R,
     Hc: () => D,
-    J8: () => L,
+    J8: () => x,
     Q6: () => N,
-    V9: () => k,
+    V9: () => j,
     WD: () => w,
     Zt: () => T,
     Zv: () => A,
     _V: () => C,
     cv: () => M,
     gM: () => G,
-    jl: () => x,
+    jl: () => L,
     z: () => P,
 }),
     n(413496),
     n(433524),
     n(35282),
     n(415506),
-    n(190126),
-    n(368063),
-    n(65234),
-    n(111804),
-    n(490233),
-    n(97749),
-    n(388685),
     n(781311);
 var r = n(586132),
     i = n(134432),
@@ -89,21 +82,24 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: m, PROJECT_ENV: g, ASSET_ENDPOINT: 
         e.format_type === f.u3.GIF && t && (a = f.u3.PNG);
         let o = S(a),
             s = p.ANM.STICKER_ASSET(e.id, o),
-            l = (0, r.W)({ location: "sticker_url" }).enabled;
+            l = (0, r.W)({ location: "sticker_url" }).enabled,
+            u = o === f.og.WEBP ? "&quality=lossless" : "",
+            d = l ? "&force_sdr=true" : "";
         if ("development" !== g) {
             if (e.format_type === f.u3.LOTTIE) return "".concat(location.protocol).concat(E).concat(s);
-            let r = Math.min(2, (0, i.x_)()),
-                a = new URL(s, location.protocol + m);
-            return (
-                a.searchParams.set("size", (0, i.oO)(n * r).toString()),
-                e.format_type === f.u3.APNG && t && !(0, c.isAndroid)() && a.searchParams.set("passthrough", "false"),
-                o === f.og.WEBP && a.searchParams.set("quality", "lossless"),
-                l && a.searchParams.set("force_sdr", "true"),
-                a.toString()
-            );
+            let r = e.format_type === f.u3.APNG && t && !(0, c.isAndroid)() ? "&passthrough=false" : "",
+                a = Math.min(2, (0, i.x_)());
+            return ""
+                .concat(location.protocol)
+                .concat(m)
+                .concat(s, "?size=")
+                .concat((0, i.oO)(n * a))
+                .concat(r)
+                .concat(u)
+                .concat(d);
         }
-        let u = new URL(s, location.protocol + m);
-        return l && u.searchParams.set("force_sdr", "true"), u.toString();
+        let h = "".concat(location.protocol).concat(m).concat(s);
+        return l ? "".concat(h, "?force_sdr=true") : h;
     },
     R = (e) => null != e.match("development" !== g ? v : I),
     P = (e) => ({
@@ -128,20 +124,20 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: m, PROJECT_ENV: g, ASSET_ENDPOINT: 
                 return !1;
         }
     },
-    L = (e) => e.type === f.n0.GUILD,
-    x = (e) => e.type === f.n0.STANDARD,
+    x = (e) => e.type === f.n0.GUILD,
+    L = (e) => e.type === f.n0.STANDARD,
     M = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
-    k = (e) => {
+    j = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
         return void 0 !== o.Z.getGuild(t);
     },
-    j = [];
+    k = [];
 function U() {
     var e, t;
     return null != (t = null == (e = a.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds)
         ? t
-        : j;
+        : k;
 }
 function G(e) {
     return U().includes(e);
