@@ -97,21 +97,21 @@ let m = () => (
         })
         .then(
             (e) => {
-                var t, n;
-                let r = new Map();
+                var t, n, r, a;
+                let o = new Map();
                 if (null != e.body && null != e.body.recipient_status)
                     for (let t in e.body.recipient_status) {
                         let n = e.body.recipient_status[t];
-                        r.set(t, n);
+                        o.set(t, n);
                     }
                 i.Z.dispatch({
                     type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
                     referrals_remaining:
                         null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
                     sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
-                    refresh_at: null != (n = null == (t = e.body) ? void 0 : t.refresh_at) ? n : null,
-                    recipient_status: r,
-                    has_eligible_friends: e.body.has_eligible_friends,
+                    refresh_at: null != (r = null == (t = e.body) ? void 0 : t.refresh_at) ? r : null,
+                    recipient_status: o,
+                    has_eligible_friends: null != (a = null == (n = e.body) ? void 0 : n.has_eligible_friends) && a,
                 });
             },
             (e) => {
