@@ -21,8 +21,8 @@ var i = n(442837),
     O = n(855775),
     v = n(626135),
     I = n(937615),
-    S = n(987209),
-    T = n(563132),
+    T = n(987209),
+    S = n(563132),
     A = n(409813),
     C = n(614277),
     N = n(981631),
@@ -30,7 +30,7 @@ var i = n(442837),
     P = n(388032),
     w = n(359739),
     D = n(611344);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,14 +54,14 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
 let M = {
     key: A.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(j, x({}, e)),
+    renderStep: (e) => (0, r.jsx)(j, L({}, e)),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => P.intl.string(P.t["W685+b"]),
@@ -69,7 +69,7 @@ let M = {
 };
 function k(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
-        { hasPaymentSources: l } = (0, T.JL)(),
+        { hasPaymentSources: l } = (0, S.JL)(),
         c = l ? A.h8.REVIEW : A.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -91,11 +91,11 @@ function j(e) {
             giftRecipientError: g,
             setGiftRecipientError: b,
             validatingGiftRecipient: A,
-            giftRecipient: L,
-            recommendedGiftSkuIds: x,
+            giftRecipient: x,
+            recommendedGiftSkuIds: L,
             giftingOrigin: M,
             setValidatingGiftRecipient: j,
-        } = (0, S.wD)(),
+        } = (0, T.wD)(),
         {
             selectedSkuId: B,
             setSelectedSkuId: Z,
@@ -103,7 +103,7 @@ function j(e) {
             paymentSourceId: V,
             skuPricePreviewsById: H,
             skusById: Y,
-        } = (0, T.JL)(),
+        } = (0, S.JL)(),
         W = (0, i.e7)([y.default], () => y.default.getCurrentUser()),
         { enabled: K, giftRecommendationAlgorithm: z } = p.G.useExperiment(
             { location: "CollectiblesPaymentModalGiftCustomizationStep" },
@@ -116,11 +116,11 @@ function j(e) {
         };
     (0, o.ZP)(() => {
         null != B &&
-            null != L &&
-            (v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: B }), Q(L, B));
+            null != x &&
+            (v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: B }), Q(x, B));
     });
     let J = (e) => {
-            v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != L && Q(L, e), Z(e);
+            v.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != x && Q(x, e), Z(e);
         },
         $ = (e) => {
             let t = H[e],
@@ -164,7 +164,7 @@ function j(e) {
                               className: w.selectGiftTitle,
                               children: X.toLocaleUpperCase(),
                           }),
-                          x.map((e) => $(e)),
+                          L.map((e) => $(e)),
                           (0, r.jsx)(U, { handleClose: n }),
                       ],
                   })
@@ -177,7 +177,7 @@ function j(e) {
                 return (0, r.jsxs)("div", {
                     className: w.bodyColumnRight,
                     children: [
-                        (0, r.jsx)(E.s, { giftRecipient: L }),
+                        (0, r.jsx)(E.s, { giftRecipient: x }),
                         (0, r.jsx)(m.q, {
                             isShopGift: !0,
                             className: D.adjustedGiftMainAnimation,
@@ -198,7 +198,7 @@ function j(e) {
                 ? (0, r.jsxs)("div", {
                       className: w.bodyColumnRight,
                       children: [
-                          (0, r.jsx)(E.s, { giftRecipient: L }),
+                          (0, r.jsx)(E.s, { giftRecipient: x }),
                           ee(),
                           null != e &&
                               null != B &&
@@ -208,7 +208,7 @@ function j(e) {
                                   className: w.giftPreview,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
-                                  hideProfilePreview: M === R.Wt.DM_CHANNEL_WISHLIST,
+                                  hideProfilePreview: !0,
                               }),
                           (0, r.jsx)(G, {
                               handleClose: n,
@@ -252,7 +252,7 @@ function j(e) {
                     children: (0, r.jsx)(k, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != g || null == L || L.id === (null == W ? void 0 : W.id) || s.length > R.$n,
+                        disabled: null != g || null == x || x.id === (null == W ? void 0 : W.id) || s.length > R.$n,
                         loading: A,
                     }),
                 }),
