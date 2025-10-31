@@ -4,7 +4,7 @@ n.d(t, {
 });
 let r = (0, n(427164).le)({
         kind: "user",
-        name: "2025-10-list-profile-effects-sunset",
+        name: "2025-10-list-profile-effects-sunset-again",
         defaultConfig: { isEnabled: !1 },
         variations: { 1: { isEnabled: !0 } },
     }),
