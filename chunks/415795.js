@@ -6,7 +6,7 @@ n.d(t, {
     ic: () => A,
     n5: () => R,
     rU: () => D,
-    s8: () => L,
+    s8: () => x,
 }),
     n(388685),
     n(35282);
@@ -533,7 +533,7 @@ class D extends a.Component {
         });
     }
 }
-class L extends a.Component {
+class x extends a.Component {
     renderContent() {
         var e, t;
         let n,
@@ -578,17 +578,20 @@ class L extends a.Component {
                     }));
                 break;
             case l.Ky.PLAYGROUND:
-                (n = null != (t = a.label) ? t : "".concat(a.collectionId, " Playground")),
-                    (r =
-                        "revenue" === a.collectionId
-                            ? (0, i.jsx)(o.uMN, {
-                                  size: "xs",
-                                  color: "currentColor",
-                              })
-                            : (0, i.jsx)(o.hh5, {
-                                  size: "xs",
-                                  color: "currentColor",
-                              }));
+                if (
+                    ((n = null != (t = a.label) ? t : "".concat(a.collectionId, " Playground")),
+                    null != a.IconComponent)
+                ) {
+                    let e = a.IconComponent;
+                    r = (0, i.jsx)(e, {
+                        size: "xs",
+                        color: "currentColor",
+                    });
+                } else
+                    r = (0, i.jsx)(o.hh5, {
+                        size: "xs",
+                        color: "currentColor",
+                    });
                 break;
             default:
                 (n = a.id),

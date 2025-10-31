@@ -1,42 +1,46 @@
 n.d(t, {
-    $L: () => m,
-    Oz: () => _,
+    $L: () => g,
+    Oz: () => p,
 });
-var r = n(864806),
-    i = n(706872),
-    a = n(400058),
-    o = n(112726),
-    s = n(244318),
-    l = n(461318),
-    c = n(231195),
-    u = n(610750),
-    d = n(80148),
-    f = n(472826),
-    _ = (function (e) {
+var r = n(481060),
+    i = n(864806),
+    a = n(706872),
+    o = n(400058),
+    s = n(112726),
+    l = n(244318),
+    c = n(461318),
+    u = n(231195),
+    d = n(610750),
+    f = n(80148),
+    _ = n(472826),
+    p = (function (e) {
         return (e.PAYMENTS = "payments"), (e.VIRTUAL_CURRENCY = "virtual-currency"), (e.NITRO = "nitro"), e;
     })({});
-let p = ["Revenue Storybook", "Revenue Playground"],
-    h = {
+let h = ["Revenue Storybook", "Revenue Playground"],
+    m = {
         id: "payments",
         name: "Payments",
-        groups: [a.C, f.iZ, s.R, o.pl, d.W],
-        tags: p,
+        groups: [o.C, _.iZ, l.R, s.pl, f.W],
+        tags: h,
+        IconComponent: r.uMN,
     },
-    m = {
+    g = {
         playgroundBaseUrl: "revenue",
         collections: [
-            h,
+            m,
             {
                 id: "virtual-currency",
                 name: "Virtual Currency",
-                groups: [i.Oi, r.vP, c.X, u.R],
-                tags: p,
+                groups: [a.Oi, i.vP, u.X, d.R],
+                tags: h,
+                IconComponent: r.aQr,
             },
             {
                 id: "nitro",
                 name: "Nitro",
-                groups: [l.De],
-                tags: p,
+                groups: [c.De],
+                tags: h,
+                IconComponent: r.SrA,
             },
         ],
     };

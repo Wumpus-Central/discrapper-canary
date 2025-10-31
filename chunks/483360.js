@@ -813,7 +813,13 @@ let te = (0, ee.oH)((e, t, n) => {
                         if (r > 0) {
                             u.push({
                                 type: eu.h8.IN_APP_NAVIGATION,
-                                record: d.FL.fromType(d.Ky.PLAYGROUND, void 0, "".concat(t.name, " Playground"), t.id),
+                                record: d.FL.fromType(
+                                    d.Ky.PLAYGROUND,
+                                    void 0,
+                                    "".concat(t.name, " Playground"),
+                                    t.id,
+                                    t.IconComponent,
+                                ),
                                 score: eK(r),
                                 comparator: n,
                                 sortable: n,

@@ -30,7 +30,7 @@ var o = (function (e) {
     );
 })(o || {});
 class s extends r.Z {
-    static fromType(e, t, n, r) {
+    static fromType(e, t, n, r, a) {
         switch (e) {
             case "SHOP":
                 return new s({
@@ -64,6 +64,7 @@ class s extends r.Z {
                     type: "PLAYGROUND",
                     label: n,
                     collectionId: r,
+                    IconComponent: a,
                 });
             default:
                 throw Error("Unhandled InAppNavigationType");
@@ -76,10 +77,12 @@ class s extends r.Z {
             a(this, "type", void 0),
             a(this, "label", void 0),
             a(this, "collectionId", void 0),
+            a(this, "IconComponent", void 0),
             (this.id = null != e.collectionId ? "".concat(e.type, "_").concat(e.collectionId) : e.type),
             (this.path = e.path),
             (this.type = e.type),
             (this.label = e.label),
-            (this.collectionId = e.collectionId);
+            (this.collectionId = e.collectionId),
+            (this.IconComponent = e.IconComponent);
     }
 }
