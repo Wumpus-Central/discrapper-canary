@@ -18,4 +18,5 @@ var r,
         (r[(r.EPICGAMES = 16)] = "EPICGAMES"),
         (r[(r.GOG = 17)] = "GOG"),
         (r[(r.DISCORD = 18)] = "DISCORD"),
+        (r[(r.BLUESKY = 19)] = "BLUESKY"),
         r);
