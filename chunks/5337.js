@@ -46,6 +46,7 @@ function g(e, t) {
                 }),
             moreCount: n,
             isSingleCard: u,
+            analyticsLocations: a,
         },
         e.skuId,
     );

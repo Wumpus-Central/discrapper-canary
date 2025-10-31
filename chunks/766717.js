@@ -1,39 +1,47 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288),
     i = n(681715),
     l = n(481060),
-    a = n(239990);
-function s(e) {
+    a = n(221292),
+    s = n(239990);
+function o(e) {
     let {
             onCardClick: t,
             tooltipText: n,
-            shouldScalePreview: s = !0,
-            renderPreview: o,
-            moreCount: c,
-            isSingleCard: d = !1,
+            shouldScalePreview: o = !0,
+            renderPreview: c,
+            moreCount: d,
+            isSingleCard: u = !1,
+            analyticsLocations: p,
         } = e,
-        u = s ? a.cardPreview : a.cardPreviewNoScale,
-        h = d ? a.cardSingle : a.card;
+        h = o ? s.cardPreview : s.cardPreviewNoScale,
+        f = u ? s.cardSingle : s.card,
+        g = null != d && d > 0;
     return (0, r.jsx)(i.u, {
         text: n,
         position: "top",
         children: (0, r.jsxs)(l.P3F, {
-            onClick: t,
-            className: h,
+            onClick: () => {
+                t(),
+                    (0, a.pQ)({
+                        action: g ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        analyticsLocations: p,
+                    });
+            },
+            className: f,
             "aria-label": n,
             children: [
                 (0, r.jsx)("div", {
-                    className: u,
-                    children: o(),
+                    className: h,
+                    children: c(),
                 }),
-                null != c &&
-                    c > 0 &&
+                g &&
                     (0, r.jsx)("div", {
-                        className: a.moreOverlay,
+                        className: s.moreOverlay,
                         children: (0, r.jsxs)(l.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", c],
+                            children: ["+", d],
                         }),
                     }),
             ],
