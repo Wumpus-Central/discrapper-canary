@@ -1,137 +1,138 @@
-n.d(t, { F: () => f });
-var r = n(951288);
-n(647438);
-var l = n(120356),
-    a = n.n(l),
-    i = n(28664),
-    o = n(481060),
-    s = n(937615),
-    c = n(884697),
-    u = n(231338),
-    d = n(388032),
-    p = n(239051);
+t.d(n, { F: () => f });
+var r = t(951288);
+t(647438);
+var l = t(120356),
+    i = t.n(l),
+    a = t(28664),
+    o = t(481060),
+    s = t(937615),
+    u = t(884697),
+    c = t(231338),
+    d = t(388032),
+    v = t(239051);
 let f = (e) => {
         let {
-            price: t,
-            nitroIconType: n,
+            price: n,
+            nitroIconType: t,
             nitroIconSize: l = "md",
-            className: a,
-            discountOfferAmount: i,
-            discount: o = c.f_,
-            variant: s = "heading-md/semibold",
+            className: i,
+            discountOfferAmount: a,
+            discount: o = u.f_,
+            variant: s = "text-md/semibold",
         } = e;
-        return t.currency === u.pK.DISCORD_ORB
-            ? (0, r.jsx)(y, {
-                  orbAmount: t.amount,
-                  className: a,
+        return n.currency === c.pK.DISCORD_ORB
+            ? (0, r.jsx)(b, {
+                  orbAmount: n.amount,
+                  className: i,
+                  variant: s,
               })
-            : (0, r.jsx)(b, {
-                  price: t,
-                  nitroIconType: n,
+            : (0, r.jsx)(p, {
+                  price: n,
+                  nitroIconType: t,
                   nitroIconSize: l,
-                  className: a,
-                  discountOfferAmount: i,
+                  className: i,
+                  discountOfferAmount: a,
                   discount: o,
                   variant: s,
               });
     },
-    b = (e) => {
+    p = (e) => {
         let {
-                price: { amount: t, currency: n },
+                price: { amount: n, currency: t },
                 nitroIconType: l,
-                nitroIconSize: u = "md",
+                nitroIconSize: c = "md",
                 className: f,
-                discountOfferAmount: b,
-                discount: y = c.f_,
-                variant: O = "heading-md/semibold",
+                discountOfferAmount: p,
+                discount: b = u.f_,
+                variant: g = "heading-md/semibold",
             } = e,
-            v = null != b,
-            g = (0, s.qr)(t, n),
-            m =
-                y !== c.f_ && y.discountPercentage >= 5 && !v
+            m = null != p,
+            x = (0, s.qr)(n, t),
+            h =
+                b !== u.f_ && b.discountPercentage >= 5 && !m
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(o.nn4, {
                                   children: d.intl.format(d.t.niC6DK, {
-                                      price: g,
-                                      discountPercentage: y.discountPercentage,
+                                      price: x,
+                                      discountPercentage: b.discountPercentage,
                                   }),
                               }),
                               (0, r.jsx)("span", {
                                   "aria-hidden": !0,
-                                  children: g,
+                                  children: x,
                               }),
                               (0, r.jsxs)(o.Text, {
-                                  variant: O,
+                                  variant: g,
                                   color: "text-feedback-positive",
-                                  className: p.discount,
+                                  className: v.discount,
                                   "aria-hidden": !0,
-                                  children: ["(-", y.discountPercentage, "%)"],
+                                  children: ["(-", b.discountPercentage, "%)"],
                               }),
                           ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["6C36MF"], { price: g }) }),
+                              (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["6C36MF"], { price: x }) }),
                               (0, r.jsx)("span", {
                                   "aria-hidden": !0,
-                                  className: a()({ [p.priceStrikethrough]: v }, f),
-                                  children: g,
+                                  className: i()({ [v.priceStrikethrough]: m }, f),
+                                  children: x,
                               }),
                           ],
                       });
         return (0, r.jsxs)(o.Text, {
-            variant: O,
-            className: a()({ [p.discountBackgroundColor]: v }, p.container, f),
+            variant: g,
+            className: i()({ [v.discountBackgroundColor]: m }, v.container, f),
             children: [
                 "tooltip" === l
-                    ? (0, r.jsx)(i.u, {
+                    ? (0, r.jsx)(a.u, {
                           text: d.intl.string(d.t.MPFyJ5),
                           "aria-label": d.intl.string(d.t.X3Ekj8),
                           children: (0, r.jsx)(o.SrA, {
-                              size: u,
+                              size: c,
                               color: "currentColor",
-                              className: p.icon,
+                              className: v.icon,
                           }),
                       })
                     : "default" === l
                       ? (0, r.jsx)(o.SrA, {
-                            size: u,
+                            size: c,
                             color: "currentColor",
-                            className: p.icon,
+                            className: v.icon,
                         })
                       : null,
-                m,
-                v &&
-                    (0, r.jsxs)(o.Heading, {
-                        variant: "heading-md/semibold",
-                        className: p.discountPill,
+                h,
+                m &&
+                    (0, r.jsxs)(o.Text, {
+                        variant: g,
+                        className: v.discountPill,
                         children: [
-                            (0, r.jsx)(o.nn4, { children: d.intl.format(d.t.rItDbx, { discountOfferAmount: b }) }),
+                            (0, r.jsx)(o.nn4, { children: d.intl.format(d.t.rItDbx, { discountOfferAmount: p }) }),
                             (0, r.jsx)("span", {
                                 "aria-hidden": !0,
-                                children: d.intl.formatToPlainString(d.t.AYcXGW, { discountOfferAmount: b }),
+                                children: d.intl.formatToPlainString(d.t.AYcXGW, { discountOfferAmount: p }),
                             }),
                         ],
                     }),
             ],
         });
     },
-    y = (e) => {
-        let { orbAmount: t, className: n } = e;
+    b = (e) => {
+        let { orbAmount: n, className: t, variant: l = "text-md/semibold" } = e;
         return (0, r.jsxs)(o.Text, {
-            variant: "text-md/semibold",
-            className: a()(p.container, n),
+            variant: l,
+            className: i()(v.container, t),
             children: [
-                (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["a/Y8PK"], { orbAmount: t }) }),
+                (0, r.jsx)(o.nn4, { children: d.intl.format(d.t["a/Y8PK"], { orbAmount: n }) }),
                 (0, r.jsx)(o.aQr, {
                     color: "currentColor",
                     size: "sm",
-                    className: p.icon,
+                    className: v.icon,
                 }),
                 (0, r.jsx)("span", {
                     "aria-hidden": !0,
-                    children: t,
+                    children: n,
                 }),
             ],
         });
