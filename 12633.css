@@ -12939,6 +12939,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     gap: 8px
 }
 
+.tabularNums__6132c {
+    font-variant-numeric: tabular-nums
+}
+
 .headerWithSpacing__6132c {
     margin-bottom: 8px;
     margin-top: 4px

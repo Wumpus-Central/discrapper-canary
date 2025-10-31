@@ -103,6 +103,11 @@ let p = {
             type: "boolean",
             defaultValue: !1,
         },
+        shouldUseTabularNums: {
+            label: "Use Tabular Nums Font Variant",
+            type: "boolean",
+            defaultValue: !1,
+        },
         disabled: {
             label: "Disabled",
             type: "boolean",
@@ -116,19 +121,25 @@ let p = {
                 name: "Balance Widget Pill",
                 id: "balance-widget-pill",
                 component: (e) => {
-                    var { loading: t } = e,
-                        n = f(e, ["loading"]);
-                    let [l, u] = (0, i.useState)(n.balance);
+                    var { loading: t, shouldUseTabularNums: n } = e,
+                        l = f(e, ["loading", "shouldUseTabularNums"]);
+                    let [u, _] = (0, i.useState)(l.balance);
                     return (
                         (0, i.useEffect)(() => {
-                            null == l && null != n.balance && u(n.balance);
-                        }, [n.balance, l]),
+                            null == u && null != l.balance && _(l.balance);
+                        }, [l.balance, u]),
                         (0, r.jsxs)("div", {
                             className: s.verticalContainer,
                             children: [
-                                (0, r.jsx)(o.A4, d(c({}, n), { balance: t ? null : l })),
+                                (0, r.jsx)(
+                                    o.A4,
+                                    d(c({}, l), {
+                                        balance: t ? null : u,
+                                        className: n ? s.tabularNums : void 0,
+                                    }),
+                                ),
                                 (0, r.jsx)(a.zxk, {
-                                    onClick: () => u(n.balance),
+                                    onClick: () => _(l.balance),
                                     text: "Update Balance",
                                 }),
                             ],
@@ -150,22 +161,28 @@ let p = {
                 name: "Balance Widget Pill Loading State",
                 id: "balance-widget-pill-loading",
                 component: (e) => {
-                    var { loadingDuration: t } = e,
-                        n = f(e, ["loadingDuration"]);
-                    let [l, u] = (0, i.useState)(n.balance);
+                    var { loadingDuration: t, shouldUseTabularNums: n } = e,
+                        l = f(e, ["loadingDuration", "shouldUseTabularNums"]);
+                    let [u, _] = (0, i.useState)(l.balance);
                     return (
                         (0, i.useEffect)(() => {
-                            u(n.balance);
-                        }, [n.balance]),
+                            _(l.balance);
+                        }, [l.balance]),
                         (0, r.jsxs)("div", {
                             className: s.verticalContainer,
                             children: [
-                                (0, r.jsx)(o.A4, d(c({}, n), { balance: l })),
+                                (0, r.jsx)(
+                                    o.A4,
+                                    d(c({}, l), {
+                                        balance: u,
+                                        className: n ? s.tabularNums : void 0,
+                                    }),
+                                ),
                                 (0, r.jsx)(a.zxk, {
                                     onClick: () => {
-                                        u(null),
+                                        _(null),
                                             setTimeout(() => {
-                                                u(n.balance);
+                                                _(l.balance);
                                             }, t);
                                     },
                                     text: "Simulate Loading State",
