@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(509545),
     w = n(55563),
     D = n(199480),
-    L = n(626135),
-    x = n(669079),
+    x = n(626135),
+    L = n(669079),
     M = n(74538),
     k = n(296848),
     j = n(51144),
@@ -380,7 +380,7 @@ class q extends i.Component {
                 let { channelId: t, code: n, content: r, type: i, giftInfo: a, sku: o, giftCode: s } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    L.default.track(G.rMx.OPEN_MODAL, {
+                    x.default.track(G.rMx.OPEN_MODAL, {
                         type: "gift_accept",
                         location: W(H({}, this.analyticsLocation), { object: G.qAy.BUTTON_CTA }),
                     });
@@ -390,6 +390,7 @@ class q extends i.Component {
                         sku: o,
                         giftCode: s,
                         channelContext: t,
+                        customGiftMessage: l,
                     });
                 (0, b.V)({
                     processedCode: n,
@@ -455,7 +456,7 @@ let X = (0, p.Z)((0, _.Z)(q)),
             resolved: C.Z.getIsResolved(t),
             libraryApplication:
                 null != a && (null == i ? void 0 : i.entitlementBranches) != null
-                    ? x.z2(i.entitlementBranches, a, N.Z)
+                    ? L.z2(i.entitlementBranches, a, N.Z)
                     : null,
         };
     })(X);

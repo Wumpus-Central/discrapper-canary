@@ -55,7 +55,7 @@ function l(e, t) {
 }
 let c = "social-layer-storefront-gift-code-claim-modal",
     u = (e) => {
-        let { sku: t, giftCode: a, channelContext: s } = e;
+        let { sku: t, giftCode: a, channelContext: s, customGiftMessage: u } = e;
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e("88742").then(n.bind(n, 535618));
@@ -66,6 +66,7 @@ let c = "social-layer-storefront-gift-code-claim-modal",
                             sku: t,
                             giftCode: a,
                             channelContext: s,
+                            customGiftMessage: u,
                         }),
                     );
             },
