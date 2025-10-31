@@ -31,9 +31,9 @@ var i = n(772848),
     _ = n(314897),
     p = n(626135),
     h = n(954824),
-    m = n(617136),
-    g = n(509212),
-    E = n(272008),
+    m = n(22095),
+    g = n(617136),
+    E = n(509212),
     b = n(569984),
     y = n(497505),
     O = n(184299),
@@ -256,7 +256,7 @@ function Y(e, t, i) {
     });
 }
 function W(e, t) {
-    (0, m._3)({
+    (0, g._3)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -318,27 +318,27 @@ function Q(e) {
         autoplay: c = !0,
         skipEnrollmentCheck: u = !1,
     } = e;
-    if ((0, g.HJ)(n) && n.config.features.includes(P.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) return void en(n);
+    if ((0, E.HJ)(n) && n.config.features.includes(P.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) return void en(n);
     let d = (0, i.Z)();
     if (
         (0, v.D)(P.dr.VIDEO_MODAL) &&
         !u &&
         (null == (t = n.userStatus) ? void 0 : t.enrolledAt) == null &&
-        !(0, g.zi)(n)
+        !(0, E.zi)(n)
     ) {
         b.Z.isEnrolling(n.id) ||
-            (0, E.AH)(n.id, {
+            (0, m.AH)(n.id, {
                 questContent: a,
-                questContentCTA: m.jZ.ACCEPT_QUEST,
+                questContentCTA: g.jZ.ACCEPT_QUEST,
                 sourceQuestContent: o,
             });
         let e = O.ZP.getState().getVideoProgress(n.id);
         null != e &&
             e.timestampSec > 1 &&
-            ((0, E.lx)(n.id),
+            ((0, m.lx)(n.id),
             p.default.track(w.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: n.id,
-                source_quest_content: (0, m._b)(o),
+                source_quest_content: (0, g._b)(o),
                 source_quest_content_cta: l,
                 video_session_id: d,
             }));
@@ -359,10 +359,10 @@ function Q(e) {
                 );
         },
         {
-            modalKey: (0, g.u7)(n.id),
+            modalKey: (0, E.u7)(n.id),
             backdropStyle: s.fCB.IMMERSIVE,
             onCloseCallback: () =>
-                (0, g.Mo)({
+                (0, E.Mo)({
                     questId: n.id,
                     sourceQuestContent: o,
                     videoSessionId: d,
@@ -453,7 +453,7 @@ function en(e) {
     });
 }
 async function er(e, t) {
-    let { type: n } = await (0, E.AH)(e.id, {
+    let { type: n } = await (0, m.AH)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
         sourceQuestContent: t.sourceQuestContent,
@@ -461,7 +461,7 @@ async function er(e, t) {
         questContentRowIndex: t.questContentRowIndex,
     });
     switch (n) {
-        case E.wF.SUCCESS:
+        case m.wF.SUCCESS:
             Q({
                 quest: e,
                 questContent: t.questContent,
@@ -469,20 +469,20 @@ async function er(e, t) {
                 sourceQuestContentCTA: t.sourceQuestContentCTA,
             });
             break;
-        case E.wF.CAPTCHA_FAILED:
+        case m.wF.CAPTCHA_FAILED:
             l.Z.show({
                 title: x.intl.string(x.t["/CidxO"]),
                 body: x.intl.string(x.t.HQdHg6),
             });
             break;
-        case E.wF.UNKNOWN_ERROR:
+        case m.wF.UNKNOWN_ERROR:
             l.Z.show({
                 title: x.intl.string(x.t.R0RpRX),
                 body: x.intl.string(x.t.OXD41D),
             });
-        case E.wF.PREVIOUS_IN_FLIGHT_REQUEST:
+        case m.wF.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
 function ei(e) {
-    if ((0, g.Rt)(e)) return e.config.features.includes(P.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : s.iWm;
+    if ((0, E.Rt)(e)) return e.config.features.includes(P.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : s.iWm;
 }

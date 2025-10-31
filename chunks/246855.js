@@ -13,8 +13,8 @@ var a = n(951288),
     f = n(507808),
     C = n(43747),
     _ = n(960919),
-    b = n(509212),
-    h = n(272008),
+    b = n(22095),
+    h = n(509212),
     x = n(497505),
     g = n(515108),
     y = n(291967),
@@ -22,7 +22,7 @@ var a = n(951288),
     v = n(981631),
     E = n(215023),
     R = n(388032),
-    N = n(561549),
+    N = n(651353),
     A = n(582425),
     S = n(345554),
     T = n(88490),
@@ -192,7 +192,7 @@ function I(e) {
     let { quest: n, onClose: i, transitionState: s, sourceQuestContent: o, location: l } = e,
         c = (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null,
         { balance: d, error: u } = (0, C.A)(),
-        m = (0, b.LM)(n.config),
+        m = (0, h.LM)(n.config),
         [p, f] = r.useState(c ? "success" : "loading"),
         [_, v] = r.useState(!1),
         E = r.useCallback(() => {
@@ -201,7 +201,7 @@ function I(e) {
     r.useEffect(() => {
         c ||
             "loading" !== p ||
-            (0, h.QB)(n.id, x.y$.CROSS_PLATFORM, l)
+            (0, b.QB)(n.id, x.y$.CROSS_PLATFORM, l)
                 .then(() => f("success"))
                 .catch(() => f("error"));
     }, [n.id, c, p, l]);

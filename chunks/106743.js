@@ -1,37 +1,37 @@
 n.d(t, { K: () => d }), n(35282), n(781311);
 var r = n(951288),
-    l = n(647438),
-    o = n(754700),
+    o = n(647438),
+    l = n(754700),
     i = n(481060),
-    a = n(272008),
+    a = n(22095),
     s = n(184299),
     c = n(720293),
-    u = n(430799);
+    u = n(946232);
 function d(e) {
     var t;
     let { quest: n, onClose: d } = e,
         m = (0, s.km)((e) => e.transcript);
-    l.useEffect(() => {
-        let e = (0, c.z0)(n, o.X.WATCH_VIDEO, c.n1.VIDEO, c.O.TRANSCRIPT);
+    o.useEffect(() => {
+        let e = (0, c.z0)(n, l.X.WATCH_VIDEO, c.n1.VIDEO, c.O.TRANSCRIPT);
         (null == m ||
             m.questId !== n.id ||
             m.fetchStatus === s.iF.NONE ||
             (m.fetchStatus === s.iF.SUCCESS && (null == e ? void 0 : e.url) !== m.url)) &&
-            (0, a.lL)(n, o.X.WATCH_VIDEO);
+            (0, a.lL)(n, l.X.WATCH_VIDEO);
     }, [m, n]);
-    let f =
+    let p =
             (null == m ? void 0 : m.questId) === n.id &&
             (null == m ? void 0 : m.fetchStatus) === s.iF.SUCCESS &&
             null != (t = m.text)
                 ? t
                 : "",
-        p = l.useMemo(
+        f = o.useMemo(
             () =>
-                f
+                p
                     .split("\n")
                     .map((e) => e.trim())
                     .filter((e) => e.length > 0),
-            [f],
+            [p],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -65,7 +65,7 @@ function d(e) {
                                 : (0, r.jsx)(i.Heading, {
                                       variant: "heading-md/normal",
                                       color: "text-muted",
-                                      children: p.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
+                                      children: f.map((e, t) => (0, r.jsx)("p", { children: e }, t)),
                                   }),
                     }),
                 }),

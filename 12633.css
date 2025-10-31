@@ -48748,6 +48748,7 @@ div.mobilePushContainer__3d3b0 {
 }
 
 .avatar__44b0c,
+.avatarLatched__44b0c,
 .avatarSpeaking__44b0c {
     grid-area: 1/1;
     height: 100%;
@@ -48771,6 +48772,11 @@ div.mobilePushContainer__3d3b0 {
 .avatarSpeaking__44b0c {
     border-radius: 50%;
     box-shadow: inset 0 0 0 2px var(--status-speaking), inset 0 0 0 3px var(--background-base-lower)
+}
+
+.avatarLatched__44b0c {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px var(--yellow-360), inset 0 0 0 3px var(--background-base-lower)
 }
 
 .pointerEvents__44b0c {
@@ -56831,9 +56837,9 @@ h3.improved__1689b:after {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -81751,6 +81757,10 @@ div.nagbar_d74ef8 {
 
 .avatarSpeaking__07f91 {
     box-shadow: inset 0 0 0 2px var(--green-360), inset 0 0 0 3px var(--background-base-lower)
+}
+
+.avatarLatched__07f91 {
+    box-shadow: inset 0 0 0 2px var(--yellow-360), inset 0 0 0 3px var(--background-base-lower)
 }
 
 .username__07f91 {

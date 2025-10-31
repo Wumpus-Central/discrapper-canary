@@ -23,8 +23,8 @@ var a = t(951288),
     b = t(25990),
     I = t(594174),
     T = t(960048),
-    R = t(509212),
-    P = t(272008),
+    R = t(22095),
+    P = t(509212),
     S = t(113434),
     y = t(497505),
     B = t(475595),
@@ -36,7 +36,7 @@ var a = t(951288),
     O = t(675654),
     Z = t(474936),
     D = t(388032),
-    F = t(824210);
+    F = t(794668);
 function z() {
     let e = b.Z.getAllPending(),
         n = (0, v.ED)(e);
@@ -60,13 +60,13 @@ function U(e) {
         w = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         N = (0, d.e7)([I.default], () => I.default.getCurrentUser()),
         b = (null == (n = s.userStatus) ? void 0 : n.claimedAt) != null,
-        [T, R] = o.useState(!0 === g || b ? "claimed" : "loading");
+        [T, P] = o.useState(!0 === g || b ? "claimed" : "loading");
     o.useEffect(() => {
         b ||
             !0 === g ||
-            (0, P.QB)(s.id, y.y$.CROSS_PLATFORM, u)
-                .then(() => R("claimed"))
-                .catch(() => R("error"));
+            (0, R.QB)(s.id, y.y$.CROSS_PLATFORM, u)
+                .then(() => P("claimed"))
+                .catch(() => P("error"));
     }, [s, u, b, g]);
     let S = !0 === g && null === p && (null == _ ? void 0 : _.skuId) !== "",
         B = null == N || (null == p && !0 !== g) || S || "loading" === T;
@@ -101,7 +101,7 @@ function U(e) {
                                     isSaving: "applying" === T,
                                     onClose: r,
                                     onConfirm: () => {
-                                        R("applying"), f().finally(r);
+                                        P("applying"), f().finally(r);
                                     },
                                 }),
                 }),
@@ -141,7 +141,7 @@ function q(e) {
 function H(e) {
     let { quest: n, user: t, decoration: o, isSaving: r, onClose: i, onConfirm: l } = e,
         s = (0, B.fh)(n, B.eC.REWARD).url,
-        d = (0, R.f$)(n.config),
+        d = (0, P.f$)(n.config),
         { fractionalState: u } = (0, f.Z)(),
         m = u === Z.a$.FP_ONLY,
         _ = (0, S.Qy)(n.config);
@@ -204,7 +204,7 @@ function H(e) {
                             loading: r,
                             onClick: l,
                         }),
-                        (0, R.zK)(n, M.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(q, { quest: n }),
+                        (0, P.zK)(n, M.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(q, { quest: n }),
                         d &&
                             !m &&
                             (0, a.jsx)(C.p, {
@@ -225,7 +225,7 @@ function H(e) {
 function W(e) {
     var n, t;
     let { quest: r, location: i, onClose: l, transitionState: d, preview: c } = e,
-        m = o.useMemo(() => (0, R.xn)(r.config), [r]),
+        m = o.useMemo(() => (0, P.xn)(r.config), [r]),
         [p, f] = (function (e) {
             let { product: n, isFetching: t } = (0, g.T)(e),
                 {} = (0, j.Z)({}),

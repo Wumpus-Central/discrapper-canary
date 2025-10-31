@@ -9,6 +9,7 @@ e.exports = {
     border: "border__2f4f7",
     voiceChannelEffect: "voiceChannelEffect__2f4f7",
     speaking: "speaking__2f4f7",
+    latchedNotSpeaking: "latchedNotSpeaking__2f4f7",
     noBorder: "noBorder__2f4f7",
     overlayContainer: "overlayContainer__2f4f7",
     compact: "compact__2f4f7",

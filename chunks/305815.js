@@ -11,8 +11,8 @@ var r = t(951288),
     m = t(25990),
     p = t(594174),
     f = t(960048),
-    g = t(509212),
-    C = t(272008),
+    g = t(22095),
+    C = t(509212),
     x = t(113434),
     v = t(497505),
     h = t(475595),
@@ -20,7 +20,7 @@ var r = t(951288),
     _ = t(291967),
     y = t(46140),
     N = t(388032),
-    b = t(129034);
+    b = t(255712);
 function w(e) {
     var n;
     let { quest: t, avatarDeco: a, onUseNow: i, user: l, mode: o } = e,
@@ -73,7 +73,7 @@ function w(e) {
 function T(e) {
     var n, t;
     let { quest: s, onClose: c, transitionState: x, preview: h, location: N, sourceQuestContent: b } = e,
-        T = a.useMemo(() => (0, g.xn)(s.config), [s]),
+        T = a.useMemo(() => (0, C.xn)(s.config), [s]),
         P = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         [E, A] = (function (e) {
             let { product: n, isFetching: t } = (0, d.T)(e),
@@ -98,7 +98,7 @@ function T(e) {
         [O, S] = a.useState(L ? "loading" : "claimed");
     a.useEffect(() => {
         L &&
-            (0, C.QB)(s.id, v.y$.CROSS_PLATFORM, N)
+            (0, g.QB)(s.id, v.y$.CROSS_PLATFORM, N)
                 .then(() => S("claimed"))
                 .catch(() => S("error"));
     }, [s.id, N, L]);

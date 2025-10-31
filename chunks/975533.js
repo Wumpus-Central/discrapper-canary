@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(570140),
     i = n(846027),
     l = n(13245),
@@ -13,62 +13,77 @@ var r = n(570140),
     m = n(891304),
     h = n(569545),
     g = n(722835),
-    _ = n(352527),
-    b = n(641015),
-    E = n(183584),
-    O = n(383451),
-    I = n(199902),
-    y = n(131951),
-    v = n(246946),
-    C = n(556296),
-    S = n(808506),
-    T = n(237997),
-    N = n(626135),
-    j = n(554174),
-    P = n(577153),
-    x = n(981631),
-    A = n(345655),
-    Z = n(65154);
-let w = new Map();
-function L(e, t, n) {
-    var r;
-    let i = performance.now(),
-        l = null != (r = n.context) ? r : Z.Yn.DEFAULT;
-    if (e) n.pressedTime = i;
+    _ = n(837968),
+    b = n(352527),
+    E = n(641015),
+    O = n(183584),
+    I = n(383451),
+    y = n(199902),
+    v = n(131951),
+    C = n(19780),
+    S = n(246946),
+    T = n(556296),
+    N = n(808506),
+    j = n(237997),
+    P = n(626135),
+    x = n(554174),
+    A = n(577153),
+    Z = n(981631),
+    w = n(345655),
+    L = n(65154);
+let R = !0,
+    D = new Map();
+function M(e, t, n, r) {
+    var i;
+    let l = performance.now();
+    if (!C.Z.isConnected()) return;
+    let a = null != (i = r.context) ? i : L.Yn.DEFAULT,
+        s = D.get(a);
+    null == s &&
+        ((s = {
+            held: new Set(),
+            latched: new Set(),
+            vadPriorityLatched: new Set(),
+            priorityHeldOrLatched: new Set(),
+        }),
+        D.set(a, s)),
+        n || (e ? s.held.add(r.id) : s.held.delete(r.id));
+    let o = !1;
+    if (e) r.pressedTime = l;
     else if (
-        null != n.pressedTime &&
-        (0, O.f)({
+        null != r.pressedTime &&
+        (0, I.f)({
             location: "doPTT",
             autoTrackExposure: !1,
         }).enableLatching
     ) {
-        let e = A._M,
-            { pttLatchingEnabled: t = !1 } = y.Z.getModeOptions(l);
-        if (!n.latched && !0 === t && i < n.pressedTime + e) {
-            n.latched = !0;
-            return;
-        }
-        n.latched = !1;
+        let e = w._M,
+            { pttLatchingEnabled: t = !1 } = v.Z.getModeOptions(a),
+            i = n ? s.vadPriorityLatched : s.latched;
+        (o = i.has(r.id)) || !0 !== t || !(l < r.pressedTime + e) || !R
+            ? (i.delete(r.id), (o = !1))
+            : (i.add(r.id), (o = !0));
     }
-    let a = w.get(l);
-    null == a && ((a = new Map()), w.set(l, a));
-    let s = a.get(t);
-    null == s && ((s = new Set()), a.set(t, s)), e ? s.add(n.id) : s.delete(n.id);
-    let o = s.size > 0;
-    y.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(o, t), l);
+    t && (e || o ? s.priorityHeldOrLatched.add(r.id) : s.priorityHeldOrLatched.delete(r.id));
+    let c = s.held.size > 0,
+        u = s.latched.size > 0,
+        d = c || u,
+        p = s.priorityHeldOrLatched.size > 0;
+    (0, _.I)(c, p, d);
 }
-let R = {
-        [x.kg4.TOGGLE_PRIORITY_SPEAKER]: {
+let k = {
+        [Z.kg4.TOGGLE_PRIORITY_SPEAKER]: {
             onTrigger() {},
             keyEvents: {},
         },
-        [x.kg4.UNASSIGNED]: {
+        [Z.kg4.UNASSIGNED]: {
             onTrigger() {},
             keyEvents: {},
         },
-        [x.kg4.PUSH_TO_TALK]: {
+        [Z.kg4.PUSH_TO_TALK]: {
             onTrigger(e, t) {
-                y.Z.getMode(t.context) === x.pM4.PUSH_TO_TALK && ((R[x.kg4.PUSH_TO_TALK].isPressed = e), L(e, !1, t));
+                v.Z.getMode(t.context) === Z.pM4.PUSH_TO_TALK &&
+                    ((k[Z.kg4.PUSH_TO_TALK].isPressed = e), M(e, !1, !1, t));
             },
             keyEvents: {
                 keyup: !0,
@@ -76,10 +91,10 @@ let R = {
             },
             isPressed: !1,
         },
-        [x.kg4.PUSH_TO_TALK_PRIORITY]: {
+        [Z.kg4.PUSH_TO_TALK_PRIORITY]: {
             onTrigger(e, t) {
-                (y.Z.getMode() === x.pM4.PUSH_TO_TALK || P.Z.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
-                    ((R[x.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), L(e, !0, t));
+                (v.Z.getMode() === Z.pM4.PUSH_TO_TALK || A.Z.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
+                    ((k[Z.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), M(e, !0, !1, t));
             },
             keyEvents: {
                 keyup: !0,
@@ -87,11 +102,11 @@ let R = {
             },
             isPressed: !1,
         },
-        [x.kg4.VAD_PRIORITY]: {
+        [Z.kg4.VAD_PRIORITY]: {
             onTrigger(e, t) {
-                y.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
-                    P.Z.getCurrentConfig({ location: "keybinds" }).separateKeybind &&
-                    ((R[x.kg4.VAD_PRIORITY].isPressed = e), L(e, !0, t));
+                v.Z.getMode() === Z.pM4.VOICE_ACTIVITY &&
+                    A.Z.getCurrentConfig({ location: "keybinds" }).separateKeybind &&
+                    ((k[Z.kg4.VAD_PRIORITY].isPressed = e), M(e, !0, !0, t));
             },
             keyEvents: {
                 keyup: !0,
@@ -99,10 +114,10 @@ let R = {
             },
             isPressed: !1,
         },
-        [x.kg4.PUSH_TO_MUTE]: {
+        [Z.kg4.PUSH_TO_MUTE]: {
             onTrigger(e) {
-                y.Z.getMode() === x.pM4.VOICE_ACTIVITY &&
-                    ((R[x.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
+                v.Z.getMode() === Z.pM4.VOICE_ACTIVITY &&
+                    ((k[Z.kg4.PUSH_TO_MUTE].isPressed = e), i.Z.setTemporarySelfMute(e));
             },
             keyEvents: {
                 keyup: !0,
@@ -110,7 +125,7 @@ let R = {
             },
             isPressed: !1,
         },
-        [x.kg4.TOGGLE_MUTE]: {
+        [Z.kg4.TOGGLE_MUTE]: {
             onTrigger: () =>
                 i.Z.toggleSelfMute({
                     usedKeybind: !0,
@@ -121,7 +136,7 @@ let R = {
                 keydown: !1,
             },
         },
-        [x.kg4.TOGGLE_DEAFEN]: {
+        [Z.kg4.TOGGLE_DEAFEN]: {
             onTrigger: () =>
                 i.Z.toggleSelfDeaf({
                     usedKeybind: !0,
@@ -132,16 +147,16 @@ let R = {
                 keydown: !1,
             },
         },
-        [x.kg4.TOGGLE_CAMERA]: {
+        [Z.kg4.TOGGLE_CAMERA]: {
             onTrigger: () => (0, c.r)(),
             keyEvents: {
                 keyup: !0,
                 keydown: !1,
             },
         },
-        [x.kg4.TOGGLE_VOICE_MODE]: {
+        [Z.kg4.TOGGLE_VOICE_MODE]: {
             onTrigger() {
-                let e = y.Z.getMode() === x.pM4.PUSH_TO_TALK ? x.pM4.VOICE_ACTIVITY : x.pM4.PUSH_TO_TALK;
+                let e = v.Z.getMode() === Z.pM4.PUSH_TO_TALK ? Z.pM4.VOICE_ACTIVITY : Z.pM4.PUSH_TO_TALK;
                 i.Z.setMode(e);
             },
             keyEvents: {
@@ -149,43 +164,43 @@ let R = {
                 keydown: !1,
             },
         },
-        [x.kg4.TOGGLE_OVERLAY]: {
+        [Z.kg4.TOGGLE_OVERLAY]: {
             onTrigger() {},
             keyEvents: {
                 keyup: !0,
                 keydown: !1,
             },
         },
-        [x.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
+        [Z.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
             onTrigger(e, t) {
-                if (!(0, C.I1)(t.shortcut)) return;
-                let n = (0, j.Z)();
-                null != n && l.Z.setInputLocked(!T.default.isLocked(n), n);
+                if (!(0, T.I1)(t.shortcut)) return;
+                let n = (0, x.Z)();
+                null != n && l.Z.setInputLocked(!j.default.isLocked(n), n);
             },
             keyEvents: {
                 keyup: !0,
                 keydown: !1,
             },
         },
-        [x.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
+        [Z.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
             onTrigger() {
-                let e = S.default.getFocusedPID(),
+                let e = N.default.getFocusedPID(),
                     t = null != e;
                 null != e &&
                     t &&
-                    T.default.isPinned(x.Odu.TEXT) &&
-                    T.default.isLocked(e) &&
-                    S.default.isReady(e) &&
-                    l.Z.activateRegion(x.O0n.TEXT_WIDGET);
+                    j.default.isPinned(Z.Odu.TEXT) &&
+                    j.default.isLocked(e) &&
+                    N.default.isReady(e) &&
+                    l.Z.activateRegion(Z.O0n.TEXT_WIDGET);
             },
             keyEvents: {
                 keyup: !0,
                 keydown: !1,
             },
         },
-        [x.kg4.TOGGLE_GO_LIVE_STREAMING]: {
+        [Z.kg4.TOGGLE_GO_LIVE_STREAMING]: {
             onTrigger() {
-                let e = I.Z.getCurrentUserActiveStream();
+                let e = y.Z.getCurrentUserActiveStream();
                 if (null != e) return (0, s.g)((0, h.V9)(e));
                 (0, g.Z)(!0, [d.Z.GO_LIVE_KEYBIND]);
             },
@@ -194,16 +209,16 @@ let R = {
                 keydown: !1,
             },
         },
-        [x.kg4.TOGGLE_STREAMER_MODE]: {
+        [Z.kg4.TOGGLE_STREAMER_MODE]: {
             onTrigger() {
-                o.Z.setEnabled(!v.Z.enabled);
+                o.Z.setEnabled(!S.Z.enabled);
             },
             keyEvents: {
                 keyup: !0,
                 keydown: !1,
             },
         },
-        [x.kg4.NAVIGATE_BACK]: {
+        [Z.kg4.NAVIGATE_BACK]: {
             onTrigger: () => (0, m.Hm)("global_keybind"),
             keyEvents: {
                 keyup: !0,
@@ -212,7 +227,7 @@ let R = {
                 blurred: !1,
             },
         },
-        [x.kg4.NAVIGATE_FORWARD]: {
+        [Z.kg4.NAVIGATE_FORWARD]: {
             onTrigger: () => (0, m.TL)("global_keybind"),
             keyEvents: {
                 keyup: !0,
@@ -221,14 +236,14 @@ let R = {
                 blurred: !1,
             },
         },
-        [x.kg4.SOUNDBOARD]: {
+        [Z.kg4.SOUNDBOARD]: {
             onTrigger: () => {
-                let e = (0, j.Z)();
+                let e = (0, x.Z)();
                 if (null != e)
-                    if (_.Z.enabled) (0, E.oZ)(e);
+                    if (b.Z.enabled) (0, O.oZ)(e);
                     else {
-                        if (!(0, b.D)()) return;
-                        (0, E.IN)(!0, e);
+                        if (!(0, E.D)()) return;
+                        (0, O.IN)(!0, e);
                     }
             },
             keyEvents: {
@@ -236,14 +251,14 @@ let R = {
                 keydown: !1,
             },
         },
-        [x.kg4.SOUNDBOARD_HOLD]: {
+        [Z.kg4.SOUNDBOARD_HOLD]: {
             onTrigger: (e) => {
-                let t = (0, j.Z)();
+                let t = (0, x.Z)();
                 if (null != t) {
                     if (e) {
-                        if (!(0, b.D)()) return;
-                        (0, E.IN)(!1, t);
-                    } else (0, E.oZ)(t);
+                        if (!(0, E.D)()) return;
+                        (0, O.IN)(!1, t);
+                    } else (0, O.oZ)(t);
                     return;
                 }
             },
@@ -252,25 +267,25 @@ let R = {
                 keydown: !0,
             },
         },
-        [x.kg4.SAVE_CLIP]: {
+        [Z.kg4.SAVE_CLIP]: {
             onTrigger: () => {
-                (0, p.ln)() && (N.default.track(x.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, f.br)());
+                (0, p.ln)() && (P.default.track(Z.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, f.br)());
             },
             keyEvents: {
                 keyup: !1,
                 keydown: !0,
             },
         },
-        [x.kg4.SAVE_SCREENSHOT]: {
+        [Z.kg4.SAVE_SCREENSHOT]: {
             onTrigger: () => {
-                (0, p.ln)() && (0, p.iL)() && (N.default.track(x.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, f.ZW)());
+                (0, p.ln)() && (0, p.iL)() && (P.default.track(Z.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, f.ZW)());
             },
             keyEvents: {
                 keyup: !1,
                 keydown: !0,
             },
         },
-        [x.kg4.SWITCH_TO_VOICE_CHANNEL]: {
+        [Z.kg4.SWITCH_TO_VOICE_CHANNEL]: {
             onTrigger(e, t) {
                 let {
                     params: { channelId: n },
@@ -284,7 +299,7 @@ let R = {
                 focused: !0,
             },
         },
-        [x.kg4.DISCONNECT_FROM_VOICE_CHANNEL]: {
+        [Z.kg4.DISCONNECT_FROM_VOICE_CHANNEL]: {
             onTrigger() {
                 a.default.selectVoiceChannel(null);
             },
@@ -296,30 +311,35 @@ let R = {
             },
         },
     },
-    D = null;
-function M() {
-    w.clear(),
-        y.Z.getMediaEngine().eachConnection((e) => {
-            e.setForceAudioInput(!1, !1), e.setForceAudioInput(!1, !0);
-        }, Z.Yn.DEFAULT);
+    U = null;
+function G() {
+    D.clear(), (0, _.I)(!1, !1, !1);
 }
-class k extends u.Z {
+function B(e) {
+    let { hasLatchPermission: t } = e;
+    if (t === R) return !1;
+    (R = t) || G();
+}
+class H extends u.Z {
     _initialize() {
         r.Z.wait(() =>
             r.Z.dispatch({
                 type: "KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS",
-                keybinds: R,
+                keybinds: k,
             }),
         ),
-            r.Z.subscribe("AUDIO_SET_MODE", M),
-            r.Z.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+            r.Z.subscribe("AUDIO_SET_MODE", G),
+            r.Z.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            r.Z.subscribe("SET_VAD_PERMISSION", B);
     }
     _terminate() {
-        r.Z.unsubscribe("AUDIO_SET_MODE", M), r.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+        r.Z.unsubscribe("AUDIO_SET_MODE", G),
+            r.Z.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            r.Z.unsubscribe("SET_VAD_PERMISSION", B);
     }
     handleVoiceChannelSelect(e) {
         let { currentVoiceChannelId: t } = e;
-        t !== D && M(), (D = t);
+        t !== U && G(), (U = t);
     }
 }
-let U = new k();
+let V = new H();

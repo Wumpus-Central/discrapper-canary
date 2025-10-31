@@ -9,8 +9,8 @@ var a = n(951288),
     c = n(607070),
     u = n(530618),
     m = n(70097),
-    g = n(509212),
-    h = n(272008),
+    g = n(22095),
+    h = n(509212),
     C = n(497505),
     x = n(475595),
     f = n(566078),
@@ -20,10 +20,10 @@ var a = n(951288),
     v = n(46140),
     N = n(675654),
     w = n(388032),
-    R = n(798144);
+    R = n(889179);
 function A(e) {
     var t;
-    let { transitionState: n, onClose: o, quest: m, location: g, reward: x, sourceQuestContent: j } = e,
+    let { transitionState: n, onClose: o, quest: m, location: h, reward: x, sourceQuestContent: j } = e,
         _ = r.useRef(null),
         [v, w] = r.useState(null),
         A = r.useRef(new s.qA()),
@@ -34,11 +34,11 @@ function A(e) {
         if (!B) {
             let e = f.r.build(m.config),
                 t = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : C.y$.CROSS_PLATFORM;
-            (0, h.QB)(m.id, t, g)
+            (0, g.QB)(m.id, t, h)
                 .then(() => I("claimed"))
                 .catch(() => I("error"));
         }
-    }, [m, g, B]);
+    }, [m, h, B]);
     let S = "loading" === M;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -63,7 +63,7 @@ function A(e) {
                           : (0, a.jsx)(k, {
                                 quest: m,
                                 rewardName: x.messages.name,
-                                location: g,
+                                location: h,
                                 useReducedMotion: y,
                                 onClose: o,
                                 sourceQuestContent: j,
@@ -154,7 +154,7 @@ function k(e) {
 }
 function y(e) {
     let { quest: t, location: n, onClose: o, transitionState: i, sourceQuestContent: s } = e,
-        d = r.useMemo(() => (0, g.K)(t.config), [t]);
+        d = r.useMemo(() => (0, h.K)(t.config), [t]);
     return null == d
         ? null
         : (0, a.jsx)(j.A, {

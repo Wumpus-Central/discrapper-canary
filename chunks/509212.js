@@ -58,15 +58,15 @@ n.d(t, {
     hQ: () => el,
     iQ: () => ee,
     il: () => e1,
-    jY: () => tx,
+    jY: () => tL,
     lQ: () => J,
     nc: () => eV,
     o9: () => eF,
-    oo: () => eL,
+    oo: () => ex,
     pO: () => ej,
     q6: () => et,
     q8: () => tt,
-    qe: () => tL,
+    qe: () => tx,
     t2: () => em,
     u7: () => tI,
     uN: () => tM,
@@ -117,13 +117,13 @@ var _ = n(231757),
     S = n(630388),
     A = n(823379),
     C = n(960048),
-    N = n(617136),
-    R = n(272008),
+    N = n(22095),
+    R = n(617136),
     P = n(569984),
     w = n(497505),
     D = n(184299),
-    L = n(937797),
-    x = n(566078),
+    x = n(937797),
+    L = n(566078),
     M = n(312046),
     k = n(46140),
     j = n(981631),
@@ -204,7 +204,7 @@ let K = (e) => e.application_id === U.Ev || e.platform === j.M7m.XBOX,
 function q(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
-        r = x.r.build(t.config).application.name.toLowerCase();
+        r = L.r.build(t.config).application.name.toLowerCase();
     return K(e) || z(e)
         ? n === r
         : (null != t && t.id === k.Jk && e.application_id === k.$z) ||
@@ -214,7 +214,7 @@ function X(e, t) {
     for (let [n, r] of e) if (q(t, r) && !$(r)) return r;
 }
 function Q(e, t) {
-    let n = x.r.build(t.config).applications;
+    let n = L.r.build(t.config).applications;
     return null != n && n.some((t) => t.id === e);
 }
 function J(e, t) {
@@ -500,7 +500,7 @@ function eD(e, t) {
     }
     return null;
 }
-function eL(e) {
+function ex(e) {
     let {
             quest: { config: t },
         } = e,
@@ -509,12 +509,12 @@ function eL(e) {
         n.assignmentMethod === s.j.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === c.w.REWARD_CODE)
     );
 }
-function ex(e) {
+function eL(e) {
     return null != e.taskConfigV2.tasks[o.X.PLAY_ON_DESKTOP];
 }
 function eM(e) {
     let { quest: t } = e;
-    return ex(t.config);
+    return eL(t.config);
 }
 function ek(e) {
     let { quest: t } = e;
@@ -527,16 +527,16 @@ function eU(e) {
     return null != e && eM({ quest: e });
 }
 function eG(e) {
-    if (!(0, L.CD)("QuestUtils") || null == e) return !1;
-    let t = x.r.build(e.config).applications;
+    if (!(0, x.CD)("QuestUtils") || null == e) return !1;
+    let t = L.r.build(e.config).applications;
     return null != t && t.length > 1;
 }
 function eB(e) {
-    let t = x.r.build(e.config).application.id;
+    let t = L.r.build(e.config).application.id;
     return ej(e) && t === k.Ts;
 }
 function eZ(e, t) {
-    return x.r.build(e.config).features.has(t);
+    return L.r.build(e.config).features.has(t);
 }
 function eF(e) {
     let { quest: t, idx: n } = e;
@@ -545,8 +545,8 @@ function eF(e) {
     return r.type === c.w.REWARD_CODE ? r : null;
 }
 function eV(e, t) {
-    let n = x.r.build(e.config).ctaLink;
-    (0, N._3)({
+    let n = L.r.build(e.config).ctaLink;
+    (0, R._3)({
         questId: e.id,
         questContent: t.content,
         questContentCTA: t.ctaContent,
@@ -558,7 +558,7 @@ function eV(e, t) {
         (0, f.Z)(n);
 }
 let eH = (e, t) => {
-    (0, N._3)({
+    (0, R._3)({
         questId: e,
         questContent: t.content,
         questContentCTA: t.ctaContent,
@@ -713,7 +713,7 @@ let eW = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
     };
 function e2(e) {
     var t, n, r, i;
-    let a = x.r.build(e.config).defaultInGameTask;
+    let a = L.r.build(e.config).defaultInGameTask;
     if (null == a) return null;
     let o =
             null !=
@@ -781,7 +781,7 @@ function tc() {
 }
 function tu(e, t) {
     let { platformType: n, quest: r } = e;
-    (0, N._3)({
+    (0, R._3)({
         questId: r.id,
         questContent: t.content,
         sourceQuestContent: t.sourceQuestContent,
@@ -795,7 +795,7 @@ function tu(e, t) {
 }
 function td(e, t) {
     let { quest: n } = e;
-    (0, N._3)({
+    (0, R._3)({
         questId: n.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -814,7 +814,7 @@ function td(e, t) {
 }
 function tf(e, t) {
     let { quest: n } = e;
-    (0, N._3)({
+    (0, R._3)({
         questId: n.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -840,7 +840,7 @@ function tm(e) {
 function tg(e) {
     var t, n, r, i;
     let { quest: a, rewardCode: o, selectedPlatformType: s, sharedQuestFields: l } = e,
-        c = eL({ quest: a }),
+        c = ex({ quest: a }),
         u = null != s ? s : null == o ? void 0 : o.platform,
         d = c
             ? eF({
@@ -914,7 +914,7 @@ function tS(e, t) {
     $(e) ||
         (null == (n = e.userStatus) ? void 0 : n.enrolledAt) == null ||
         (null == (r = e.userStatus) ? void 0 : r.completedAt) != null ||
-        (0, R.cT)(e.id, t);
+        (0, N.cT)(e.id, t);
 }
 function tA(e) {
     return {
@@ -941,7 +941,7 @@ function tw(e, t) {
 }
 function tD(e) {
     var t, n, r, i;
-    let a = x.r.build(e).defaultWatchVideoTask;
+    let a = L.r.build(e).defaultWatchVideoTask;
     return null !=
         (i =
             null !=
@@ -958,12 +958,12 @@ function tD(e) {
         ? i
         : G.intl.string(G.t.iiTtpJ);
 }
-function tL(e, t) {
+function tx(e, t) {
     var n;
     let { quest: r, adDecisionData: i } = null != (n = P.Z.questToDeliverForPlacement.get(tA(t))) ? n : {};
     return null != i && (null == r ? void 0 : r.id) === e ? i : k.Jp;
 }
-function tx(e) {
+function tL(e) {
     var t;
     let { metadataRaw: n } = null != (t = P.Z.questToDeliverForPlacement.get(tA(e))) ? t : {};
     return n;
@@ -1004,7 +1004,7 @@ function tG(e) {
         (null == (n = s.userStatus) ? void 0 : n.completedAt) == null &&
         tS(s, o.maxTimestampSec);
     let l = tw(o.maxTimestampSec, o.duration);
-    (0, N.dA)({
+    (0, R.dA)({
         questId: r,
         event: j.rMx.QUEST_VIDEO_PROGRESSED,
         properties: {
@@ -1014,7 +1014,7 @@ function tG(e) {
         },
         sourceQuestContent: i,
     }),
-        (0, N.dA)({
+        (0, R.dA)({
             questId: r,
             event: j.rMx.QUEST_VIDEO_MODAL_CLOSED,
             properties: {

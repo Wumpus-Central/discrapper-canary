@@ -317,7 +317,11 @@ class E extends s.Z {
             h(this, "setVideoSource", (e) => this.input.setVideoSource(e)),
             h(this, "setDesktopInput", (e) => this.input.setDesktop(e)),
             h(this, "setForceAudioInput", function (e) {
-                return arguments.length > 1 && void 0 !== arguments[1] && arguments[1], t.input.setPTTActive(e);
+                return (
+                    arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                    arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                    t.input.setPTTActive(e)
+                );
             }),
             h(this, "setSelfMute", (e) => {
                 (this.selfMute = e), this.input.setMute(e), this.emit(l.Sh.Mute, e);

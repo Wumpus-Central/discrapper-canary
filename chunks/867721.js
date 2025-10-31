@@ -15,6 +15,7 @@ e.exports = {
     avatarSmall: "avatarSmall__07f91",
     avatarLarge: "avatarLarge__07f91",
     avatarSpeaking: "avatarSpeaking__07f91",
+    avatarLatched: "avatarLatched__07f91",
     username: "username__07f91",
     usernameFont: "usernameFont__07f91",
     icons: "icons__07f91",

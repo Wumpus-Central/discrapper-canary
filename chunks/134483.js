@@ -13,9 +13,9 @@ var r = n(951288),
     m = n(937995),
     b = n(158776),
     E = n(594174),
-    j = n(617136),
-    v = n(509212),
-    T = n(272008),
+    j = n(22095),
+    v = n(617136),
+    T = n(509212),
     g = n(113434),
     S = n(569984),
     h = n(497505),
@@ -35,7 +35,7 @@ var r = n(951288),
     R = n(981631),
     U = n(354459),
     q = n(388032),
-    M = n(435413);
+    M = n(825048);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,7 +82,7 @@ function V(e, t) {
 function k(e) {
     var t, n, s, m;
     let { channelId: C, quest: k, previewQuest: B, isParticipatingOverride: W } = e,
-        H = (0, j.O5)(),
+        H = (0, v.O5)(),
         [z, G] = l.useState(!1),
         F = l.useCallback(() => G(!0), []),
         K = l.useCallback(() => G(!1), []),
@@ -92,7 +92,7 @@ function k(e) {
         J = (0, a.e7)([c.Z], () => c.Z.getParticipants(e.channelId), [e.channelId]),
         ee = (0, a.e7)(
             [S.Z],
-            () => (0, v.PM)(S.Z.quests, S.Z.questToDeliverForPlacement, h.Ok.DESKTOP_ACCOUNT_PANEL_AREA),
+            () => (0, T.PM)(S.Z.quests, S.Z.questToDeliverForPlacement, h.Ok.DESKTOP_ACCOUNT_PANEL_AREA),
             [],
         ),
         { isCurrentUserStreamingQuestApplication: et, isQuestInQuestBar: en } = (0, a.cj)([b.Z], () => {
@@ -105,7 +105,7 @@ function k(e) {
                     J.some((t) => {
                         if (t.type !== U.fO.STREAM || t.user.id !== X.id) return !1;
                         let n = (0, p.Um)(t.stream, e);
-                        return null != n && (0, v._D)(n, k);
+                        return null != n && (0, T._D)(n, k);
                     })),
                 isQuestInQuestBar: (null == ee ? void 0 : ee.id) === (null == k ? void 0 : k.id),
             };
@@ -114,9 +114,9 @@ function k(e) {
         el = null == er ? void 0 : er.application.id,
         es = (0, a.e7)([d.ZP, b.Z], () => {
             let e = d.ZP.getRunningGames().map((e) => e.id);
-            if ((0, v.$H)(k) && e.includes(el)) return !0;
+            if ((0, T.$H)(k) && e.includes(el)) return !0;
             let t = null != X ? b.Z.findActivity(X.id, (e) => e.type !== R.IIU.CUSTOM_STATUS) : null;
-            return !!(null != t && (0, v.$J)(k) && (0, v._D)(t, k));
+            return !!(null != t && (0, T.$J)(k) && (0, T._D)(t, k));
         }, [k, el, X]),
         ei = !0 === W || et || es,
         ea = (0, a.e7)([S.Z], () => null != k && S.Z.isEnrolling(k.id), [k]),
@@ -129,18 +129,18 @@ function k(e) {
         ec = (0, g.B6)(null == k ? void 0 : k.config.expiresAt),
         ed = (0, g.B6)(null == er ? void 0 : er.rewardsExpireAt),
         ep = l.useCallback(() => {
-            (0, T.AH)(k.id, {
+            (0, j.AH)(k.id, {
                 questContent: h.jn.QUEST_LIVE_STREAM,
-                questContentCTA: j.jZ.ACCEPT_QUEST,
+                questContentCTA: v.jZ.ACCEPT_QUEST,
                 sourceQuestContent: h.jn.QUEST_LIVE_STREAM,
             }),
-                (0, v.Rt)(k) && eu();
+                (0, T.Rt)(k) && eu();
         }, [k, eu]),
         ef = l.useCallback(() => {
             H({
                 questId: k.id,
                 questContent: h.jn.QUEST_LIVE_STREAM,
-                questContentCTA: j.jZ.TRACK_PROGRESS,
+                questContentCTA: v.jZ.TRACK_PROGRESS,
                 sourceQuestContent: h.jn.QUEST_LIVE_STREAM,
             }),
                 (0, I.navigateToQuestHome)({
@@ -152,7 +152,7 @@ function k(e) {
             H({
                 questId: k.id,
                 questContent: h.jn.QUEST_LIVE_STREAM,
-                questContentCTA: j.jZ.LEARN_MORE,
+                questContentCTA: v.jZ.LEARN_MORE,
                 sourceQuestContent: h.jn.QUEST_LIVE_STREAM,
             }),
                 (0, I.navigateToQuestHome)({
@@ -174,12 +174,12 @@ function k(e) {
             [k],
         ),
         ej = (0, O.CR)({ quest: k }),
-        ev = (0, v.Rt)(k),
+        ev = (0, T.Rt)(k),
         eT = (0, g.tP)(k),
         eg = (null == (t = k.userStatus) ? void 0 : t.enrolledAt) != null,
         eS = (null == (n = k.userStatus) ? void 0 : n.completedAt) != null,
-        eh = null != k.userStatus && (0, v.zE)(k.userStatus, h.jn.QUEST_LIVE_STREAM),
-        ey = null != k.userStatus && (0, v.zE)(k.userStatus, h.jn.QUEST_BAR),
+        eh = null != k.userStatus && (0, T.zE)(k.userStatus, h.jn.QUEST_LIVE_STREAM),
+        ey = null != k.userStatus && (0, T.zE)(k.userStatus, h.jn.QUEST_BAR),
         eO = en && !ey;
     eE.info({
         isQuestCallHeaderDismissed: eh,
@@ -189,7 +189,7 @@ function k(e) {
     });
     let ex = null != B && (null == (s = k.userStatus) ? void 0 : s.claimedAt) == null;
     if ((!ex && (eh || eT || eO)) || (!ex && !eo)) return null;
-    let eA = (0, v.il)(k),
+    let eA = (0, T.il)(k),
         eC = (0, r.jsx)(Z.Z, {
             className: M.rewardTile,
             autoplay: z,
@@ -239,7 +239,7 @@ function k(e) {
                                                 variant: "heading-md/semibold",
                                                 color: "header-primary",
                                                 children: ei
-                                                    ? (0, v.AV)({
+                                                    ? (0, T.AV)({
                                                           quest: k,
                                                           taskDetails: eA,
                                                       })
@@ -352,7 +352,7 @@ function B(e) {
     let t = l.useContext(m.h9),
         n = (0, a.e7)([S.Z], () => null != S.Z.questEnrollmentBlockedUntil, []),
         s = (0, a.e7)([S.Z], () => S.Z.quests),
-        i = l.useMemo(() => (0, v.NI)(s, N.Lv), [s]),
+        i = l.useMemo(() => (0, T.NI)(s, N.Lv), [s]),
         o = (0, a.e7)([c.Z], () => c.Z.getParticipants(e.channelId), [e.channelId]),
         u = (0, a.e7)(
             [b.Z],
@@ -364,14 +364,14 @@ function B(e) {
                               var r, l, s;
                               if (i.type === U.fO.STREAM) {
                                   let e = null != (l = (0, p.Um)(i.stream, n)) ? l : null,
-                                      s = (0, v.ZZ)(t, e);
+                                      s = (0, T.ZZ)(t, e);
                                   if (null != s && (null == (r = s.userStatus) ? void 0 : r.claimedAt) == null)
                                       return s;
                               }
                               for (let r of e)
                                   if (!(0, U.I)(r))
                                       for (let e of n.getActivities(r.user.id)) {
-                                          let n = (0, v.ZZ)(t, e);
+                                          let n = (0, T.ZZ)(t, e);
                                           if (null != n && (null == (s = n.userStatus) ? void 0 : s.claimedAt) == null)
                                               return n;
                                       }

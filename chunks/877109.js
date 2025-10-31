@@ -4,14 +4,14 @@ var r = n(951288),
     l = n(843611),
     a = n(442837),
     s = n(570140),
-    o = n(272008),
+    o = n(22095),
     c = n(113434),
     u = n(569984),
     d = n(606033),
     p = n(778680),
     f = n(751586),
-    h = n(981631);
-function m(e) {
+    m = n(981631);
+function h(e) {
     return new URLSearchParams(e).get(c.tR.QUEST_ID);
 }
 let g = function (e) {
@@ -22,15 +22,15 @@ let g = function (e) {
                 { search: a } = (0, l.TH)();
             return (
                 i.useEffect(() => {
-                    let t = m(a);
+                    let t = h(a);
                     null != t ? r(t) : null != e && r(e);
                 }, [e, a]),
                 i.useEffect(() => {
-                    if (null == n || m(a) === n) return;
+                    if (null == n || h(a) === n) return;
                     let e = new URLSearchParams();
                     e.set(c.tR.TAB, c.e5.PREVIEW_TOOL),
                         e.set(c.tR.QUEST_ID, n),
-                        t.push("".concat(h.Z5c.QUEST_HOME_V2, "?").concat(e.toString()));
+                        t.push("".concat(m.Z5c.QUEST_HOME_V2, "?").concat(e.toString()));
                 }, [n, t, a]),
                 {
                     questId: n,

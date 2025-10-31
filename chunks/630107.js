@@ -9,15 +9,15 @@ var s = a(951288),
     g = a(625128),
     o = a(362762),
     m = a(703656),
-    u = a(617136),
-    _ = a(272008),
+    u = a(22095),
+    _ = a(617136),
     x = a(497505),
     p = a(110560),
     h = a(46140),
     E = a(981631),
     T = a(186901),
     j = a(388032),
-    N = a(781984),
+    N = a(596009),
     k = a(74830),
     v = a(13299);
 l.ZP.initialize();
@@ -30,7 +30,7 @@ function b(e) {
             let [t, a] = n.useState(null);
             return (
                 n.useEffect(() => {
-                    (0, _.gU)(e)
+                    (0, u.gU)(e)
                         .then((e) =>
                             a({
                                 status: "ok",
@@ -45,7 +45,7 @@ function b(e) {
     n.useEffect(() => {
         I ||
             (null == a
-                ? ((0, u.dA)({
+                ? ((0, _.dA)({
                       questId: i,
                       event: E.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT,
                       properties: {},

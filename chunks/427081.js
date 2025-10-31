@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(754700),
     i = n(670081),
     a = n(147913),
@@ -12,9 +12,9 @@ var r = n(754700),
     _ = n(938475),
     p = n(70956),
     h = n(823379),
-    m = n(617136),
-    g = n(509212),
-    E = n(272008),
+    m = n(22095),
+    g = n(617136),
+    E = n(509212),
     b = n(569984),
     y = n(497505),
     O = n(937797),
@@ -38,24 +38,24 @@ let S = +p.Z.Millis.MINUTE,
     C = +p.Z.Millis.SECOND,
     N = (0, v.T)({ location: I.dr.QUESTS_MANAGER });
 function R(e) {
-    return !(0, g.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
+    return !(0, E.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 function P(e) {
     for (let r of b.Z.quests.values()) {
         var t, n;
         if (
             null != r &&
-            (0, g.Rt)(r) &&
+            (0, E.Rt)(r) &&
             r.config.features.includes(i.S.ACTIVITY_QUEST_AUTO_ENROLLMENT) &&
-            !(0, g.zi)(r) &&
+            !(0, E.zi)(r) &&
             r.config.application.id === e &&
             r.config.application.id !== I.Ts &&
             (null == (t = r.userStatus) ? void 0 : t.completedAt) == null &&
             (null == (n = r.userStatus) ? void 0 : n.enrolledAt) == null
         )
-            return void (0, E.AH)(r.id, {
+            return void (0, m.AH)(r.id, {
                 questContent: y.jn.RUNNING_ACTIVITY,
-                questContentCTA: m.jZ.ACCEPT_QUEST,
+                questContentCTA: g.jZ.ACCEPT_QUEST,
                 sourceQuestContent: y.jn.RUNNING_ACTIVITY,
             });
     }
@@ -66,7 +66,7 @@ function w(e, t) {
 function D(e) {
     return null != e && e.config.features.includes(i.S.MANUAL_HEARTBEAT_INITIALIZATION);
 }
-class L extends a.Z {
+class x extends a.Z {
     syncHeartbeats(e, t, n) {
         for (let r of ("VOICE_STATE_UPDATES" !== t &&
             "PASSIVE_UPDATE_V2" !== t &&
@@ -145,7 +145,7 @@ class L extends a.Z {
         let r = n.id;
         if (null == r) return e;
         for (let t of b.Z.quests.values())
-            R(t) && (0, g.Dr)({ quest: t }) && t.config.application.id === r && e.set(t.id, { applicationId: r });
+            R(t) && (0, E.Dr)({ quest: t }) && t.config.application.id === r && e.set(t.id, { applicationId: r });
         return (
             N.log(
                 "~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ",
@@ -162,8 +162,8 @@ class L extends a.Z {
         let r = b.Z.quests;
         for (let n of t.keys())
             for (let t of r.values())
-                R(t) && (0, g.pO)(t) && t.config.application.id === n && e.set(t.id, { applicationId: n });
-        for (let t of r.values()) R(t) && (0, g.KM)(t) && n && e.set(t.id, { applicationId: I.Ts });
+                R(t) && (0, E.pO)(t) && t.config.application.id === n && e.set(t.id, { applicationId: n });
+        for (let t of r.values()) R(t) && (0, E.KM)(t) && n && e.set(t.id, { applicationId: I.Ts });
         return (
             N.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e
@@ -179,7 +179,7 @@ class L extends a.Z {
             T(this, "calculateHeartbeatDurationMs", (e) => {
                 let t = b.Z.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return S;
-                let { progressSeconds: n, targetSeconds: i } = (0, g.il)(t, r.T.DESKTOP),
+                let { progressSeconds: n, targetSeconds: i } = (0, E.il)(t, r.T.DESKTOP),
                     a = Math.max(0, (i - n) * p.Z.Millis.SECOND);
                 return a <= S ? a + C : S;
             }),
@@ -206,14 +206,14 @@ class L extends a.Z {
                             }
                             let r = (0, l.V9)(n);
                             N.log("~ initiateHeartbeat -> Sending heartbeat for questId: ".concat(e)),
-                                (0, E.m0)({
+                                (0, m.m0)({
                                     questId: e,
                                     streamKey: r,
                                     applicationId: u,
                                 });
                         } else
                             N.log("~ initiateHeartbeat -> Sending heartbeat for questId: ".concat(e)),
-                                (0, E.m0)({
+                                (0, m.m0)({
                                     questId: e,
                                     applicationId: u,
                                 });
@@ -243,7 +243,7 @@ class L extends a.Z {
                     null != t &&
                         R(t) &&
                         (N.log("~ terminateHeartbeat -> Sending terminal heartbeat for questId: ".concat(e)),
-                        (0, E.m0)({
+                        (0, m.m0)({
                             questId: e,
                             terminal: !0,
                         }));
@@ -310,4 +310,4 @@ class L extends a.Z {
             });
     }
 }
-let x = new L();
+let L = new x();

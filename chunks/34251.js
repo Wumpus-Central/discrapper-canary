@@ -2,8 +2,8 @@ n.d(t, { default: () => g }), n(388685);
 var r = n(951288),
     a = n(647438),
     i = n(481060),
-    s = n(509212),
-    o = n(272008),
+    s = n(22095),
+    o = n(509212),
     l = n(497505),
     c = n(566078),
     d = n(644646),
@@ -11,7 +11,7 @@ var r = n(951288),
     m = n(291967),
     p = n(46140),
     f = n(388032),
-    x = n(258910);
+    x = n(522144);
 function C(e) {
     let { quest: t, rewardName: n, location: a, sourceQuestContent: s } = e;
     return (0, r.jsxs)("div", {
@@ -58,7 +58,7 @@ function C(e) {
 function g(e) {
     var t;
     let { quest: n, onClose: i, transitionState: d, location: f, sourceQuestContent: x } = e,
-        g = a.useMemo(() => (0, s.K)(n.config), [n]),
+        g = a.useMemo(() => (0, o.K)(n.config), [n]),
         h = (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null,
         _ = !n.preview && !h,
         [j, v] = a.useState(_ ? "loading" : "claimed");
@@ -66,7 +66,7 @@ function g(e) {
         if (_) {
             let e = c.r.build(n.config),
                 t = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : l.y$.CROSS_PLATFORM;
-            (0, o.QB)(n.id, t, f)
+            (0, s.QB)(n.id, t, f)
                 .then(() => v("claimed"))
                 .catch(() => v("error"));
         }

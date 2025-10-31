@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(569545),
     p = n(106301),
     f = n(460181),
-    h = n(979283),
-    m = n(590415),
+    m = n(979283),
+    h = n(590415),
     g = n(131704),
     _ = n(199902),
     b = n(314897),
     E = n(592125),
     O = n(430824),
     I = n(131951),
-    v = n(292959),
-    y = n(19780),
+    y = n(292959),
+    v = n(19780),
     C = n(944486),
     S = n(606304),
     T = n(979651),
@@ -32,7 +32,7 @@ function x(e, t, n, r) {
             l = new a.Fh(e, () => {
                 let e = t(),
                     l = n(i, e);
-                null == l || v.Z.isSoundDisabled(l) || (0, f.GN)(l, null != r ? r : 0.4), (i = e);
+                null == l || y.Z.isSoundDisabled(l) || (0, f.GN)(l, null != r ? r : 0.4), (i = e);
             });
         return l.attach("useSound"), () => l.detach();
     });
@@ -74,7 +74,7 @@ function Z() {
             }),
             (e, t) => {
                 let { videoEnabled: n, inVoiceChannel: r } = t;
-                if (!(0, h.O)()) return;
+                if (!(0, m.O)()) return;
                 let { videoEnabled: i, inVoiceChannel: l } = e;
                 if (i !== n && l && r) return n ? "camera_on" : "camera_off";
             },
@@ -85,13 +85,13 @@ function Z() {
 function w() {
     return (
         x(
-            [E.Z, y.Z, C.Z, u.default],
+            [E.Z, v.Z, C.Z, u.default],
             () => {
                 let e = E.Z.getChannel(C.Z.getVoiceChannelId()),
                     t = null == e ? void 0 : e.type,
                     n = null == e ? void 0 : e.getGuildId(),
-                    r = y.Z.getWasEverRtcConnected(),
-                    i = y.Z.getState();
+                    r = v.Z.getWasEverRtcConnected(),
+                    i = v.Z.getState();
                 return {
                     channelType: t,
                     guildId: n,
@@ -123,7 +123,7 @@ function L() {
     return (
         x(
             [S.Z],
-            () => S.Z.isCurrentUserSpeaking(),
+            () => S.Z.isCurrentUserPTTActive() || S.Z.isCurrentUserPTTLatched(),
             (e, t) => {
                 if (e !== t) {
                     let e = I.Z.isSelfMute();
@@ -196,12 +196,12 @@ function U() {
             [C.Z, T.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
-                if (null == e) return m.xO.NONE;
+                if (null == e) return h.xO.NONE;
                 let t = T.Z.getVoiceStateForChannel(e);
-                return (0, m.gf)(t);
+                return (0, h.gf)(t);
             },
             (e, t) => {
-                if (e !== t && t === m.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
+                if (e !== t && t === h.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
             },
         ),
         null
