@@ -151,66 +151,63 @@ let P = function (e) {
             wishlist: p,
             popularCollectiblesProducts: _,
             isFetchingWishlist: h,
-            isFetchingShopHome: m,
-            isFetchingCategories: x,
-            isValidatingPopularProducts: b,
-            wishlistError: L,
-            fetchShopHomeError: w,
+            isValidatingPopularProducts: m,
+            isFetchingPopularProducts: x,
+            wishlistError: b,
         } = (0, f.ZL)(t),
         {
-            displayItems: P,
-            hasMoreItems: E,
-            totalWishlistItemCount: T,
-            wishlistItemCountToBeDisplayed: k,
+            displayItems: L,
+            hasMoreItems: w,
+            totalWishlistItemCount: P,
+            wishlistItemCountToBeDisplayed: E,
         } = (0, f.UD)({
             wishlist: p,
             popularCollectiblesProducts: _,
-            wishlistError: L,
-            fetchShopHomeError: w,
+            wishlistError: b,
         }),
         {
-            theme: M,
-            primaryColor: A,
-            secondaryColor: B,
+            theme: T,
+            primaryColor: k,
+            secondaryColor: M,
         } = (0, d.Z)({
             user: t,
             displayProfile: a,
         }),
-        { profileThemeStyle: Z, profileThemeClassName: N } = (0, C.Z)({
-            theme: M,
+        { profileThemeStyle: A, profileThemeClassName: B } = (0, C.Z)({
+            theme: T,
             themeType: null,
-            primaryColor: A,
-            secondaryColor: B,
+            primaryColor: k,
+            secondaryColor: M,
         }),
-        R = i.useCallback(() => {
+        Z = i.useCallback(() => {
             (0, c.openUserProfileModal)({
                 userId: t.id,
                 section: j.oh.WISHLIST,
             });
         }, [t.id]),
-        F = y[i.useMemo(() => (k >= f.zL ? "FULL_WISHLIST" : k > 0 ? "MIXED" : "SHOP_ONLY"), [k])],
-        H = g.ZP.getName(t),
-        G =
+        N = y[i.useMemo(() => (E >= f.zL ? "FULL_WISHLIST" : E > 0 ? "MIXED" : "SHOP_ONLY"), [E])],
+        R = g.ZP.getName(t),
+        F =
             null == a
                 ? void 0
                 : a.getBannerURL({
                       canAnimate: !1,
                       size: 713,
                   }),
-        U = h || m || x || b,
-        D = E ? P.slice(0, f.zL - 1) : P,
-        z = E ? P[f.zL - 1] : null,
-        W = T - f.zL + 1;
-    return null != L || null != w
+        H = h || m || x,
+        G = w ? L.slice(0, f.zL - 1) : L,
+        U = w ? L[f.zL - 1] : null,
+        D = P - f.zL + 1;
+    return null != b
         ? null
         : (0, r.jsxs)("div", {
-              className: l()(v.wishlistBanner, N),
-              style: Z,
+              className: l()(v.wishlistBanner, B),
+              style: A,
               children: [
-                  null != G &&
+                  null != F &&
                       (0, r.jsx)("div", {
                           className: v.backgroundImage,
-                          style: { backgroundImage: "url(".concat(G, ")") },
+                          style: { backgroundImage: "url(".concat(F, ")") },
                       }),
                   (0, r.jsx)(o.f6W, {
                       disableAdaptiveTheme: !0,
@@ -218,24 +215,24 @@ let P = function (e) {
                           (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(S, {
-                                      title: F.title,
-                                      subtitle: F.getSubtitle(H),
+                                      title: N.title,
+                                      subtitle: N.getSubtitle(R),
                                       themeClass: e,
                                   }),
                                   (0, r.jsx)("div", {
                                       className: e,
                                       children:
-                                          U || 0 === P.length
+                                          H || 0 === L.length
                                               ? (0, r.jsx)(I, {})
                                               : (0, r.jsx)(O, {
-                                                    items: D,
-                                                    hasOverflow: E,
-                                                    overflowItem: z,
-                                                    overflowCount: W,
-                                                    showIcons: F.showIcons,
+                                                    items: G,
+                                                    hasOverflow: w,
+                                                    overflowItem: U,
+                                                    overflowCount: D,
+                                                    showIcons: N.showIcons,
                                                     giftRecipient: t,
                                                     defaultWishlistId: u,
-                                                    onOpenWishlist: R,
+                                                    onOpenWishlist: Z,
                                                     onWishlistItemClick: n,
                                                 }),
                                   }),
