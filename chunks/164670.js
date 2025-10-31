@@ -5,6 +5,7 @@ n.d(t, {
     Uc: () => u,
     a7: () => p,
     wK: () => c,
+    wQ: () => h,
     x6: () => d,
 }),
     n(953529);
@@ -66,6 +67,7 @@ function d(e) {
 function f(e, t) {
     var n, r, i;
     if (
+        null == t ||
         (null == e || null == (r = e.tenantMetadata) || null == (n = r.socialLayer) ? void 0 : n.carouselItems) ==
             null ||
         0 === e.tenantMetadata.socialLayer.carouselItems.length
@@ -111,4 +113,10 @@ function p(e) {
         return o.Z.toURLSafe(
             (0, a._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
         );
+}
+function h(e, t) {
+    return ""
+        .concat(location.protocol)
+        .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT)
+        .concat(s.Z5c.GAME_SHOP(e, t.id, t.slug));
 }

@@ -28,6 +28,7 @@ function u(e) {
             else if (t === s.g.EMBEDDED_ACTIVITY_INVITE);
             else if (t === s.g.GUILD_PRODUCT);
             else if (t === s.g.SERVER_SHOP);
+            else if (t === s.g.SOCIAL_LAYER_STOREFRONT);
             else if (t === s.g.QUESTS_EMBED);
             else if (t === s.g.APP_DIRECTORY_STOREFRONT);
             else if (t === s.g.APP_DIRECTORY_STOREFRONT_SKU);

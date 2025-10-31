@@ -1,74 +1,86 @@
 n.d(t, {
-    U: () => o,
-    g: () => i,
+    U: () => d,
+    g: () => u,
 });
-var a = n(951288),
-    l = n(481060);
-let r = "social-layer-storefront-product-details-modal",
-    i = (e) => {
-        let { skuId: t, applicationId: i, guildId: o, onClose: d } = e;
-        (0, l.ZDy)(
+var r = n(951288),
+    i = n(481060);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function s(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function l(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : s(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let c = "social-layer-storefront-product-details-modal",
+    u = (e) => {
+        let { skuId: t, applicationId: a, guildId: s, isStorefront: u, onClose: d } = e;
+        (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e("84802").then(n.bind(n, 250317));
-                return (n) => {
-                    var l, r;
-                    return (0, a.jsx)(
+                return (n) =>
+                    (0, r.jsx)(
                         e,
-                        ((l = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    a = Object.keys(n);
-                                "function" == typeof Object.getOwnPropertySymbols &&
-                                    (a = a.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        }),
-                                    )),
-                                    a.forEach(function (t) {
-                                        var a;
-                                        (a = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: a,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0,
-                                                  })
-                                                : (e[t] = a);
-                                    });
-                            }
-                            return e;
-                        })({}, n)),
-                        (r = r =
-                            {
-                                skuId: t,
-                                applicationId: i,
-                                guildId: o,
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var a = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, a);
-                                  }
-                                  return n;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
-                              }),
-                        l),
+                        l(o({}, n), {
+                            skuId: t,
+                            applicationId: a,
+                            guildId: s,
+                            isStorefront: u,
+                        }),
                     );
-                };
             },
             {
-                modalKey: r,
+                modalKey: c,
                 onCloseCallback: () => {
                     null == d || d();
                 },
             },
         );
     };
-function o() {
-    (0, l.nfh)(r) && (0, l.Mr3)(r);
+function d() {
+    (0, i.nfh)(c) && (0, i.Mr3)(c);
 }

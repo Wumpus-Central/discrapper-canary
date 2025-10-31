@@ -1,227 +1,252 @@
 n.d(t, {
-    C: () => T,
-    Z: () => w,
+    C: () => j,
+    Z: () => M,
 }),
     n(388685);
-var a,
-    l = n(951288),
-    r = n(647438),
-    i = n(688619),
-    o = n.n(i),
-    d = n(120356),
-    c = n.n(d),
-    s = n(913527),
-    u = n.n(s),
-    g = n(793030),
-    p = n(442837),
-    f = n(481060),
-    m = n(607070),
-    b = n(220082),
-    v = n(143941),
-    I = n(104505),
-    h = n(703656),
-    x = n(210887),
-    _ = n(55563),
-    j = n(937615),
-    y = n(73346),
-    C = n(591759),
-    k = n(164670),
-    O = n(210218),
-    L = n(594914),
-    S = n(433386),
-    A = n(981631),
-    N = n(231338),
-    E = n(388032),
-    Z = n(450433);
-let P = [
-    [0, 30],
-    [0, 30],
-    [0, 20],
-];
-var w = (((a = {})[(a.SMALL = 0)] = "SMALL"), (a[(a.MEDIUM = 1)] = "MEDIUM"), (a[(a.LARGE = 2)] = "LARGE"), a);
-function M(e) {
+var r = n(951288),
+    i = n(647438),
+    a = n(688619),
+    o = n.n(a),
+    s = n(120356),
+    l = n.n(s),
+    c = n(913527),
+    u = n.n(c),
+    d = n(793030),
+    f = n(442837),
+    _ = n(481060),
+    p = n(607070),
+    h = n(220082),
+    m = n(143941),
+    g = n(104505),
+    E = n(703656),
+    b = n(210887),
+    y = n(55563),
+    O = n(937615),
+    v = n(73346),
+    I = n(591759),
+    T = n(164670),
+    S = n(210218),
+    A = n(594914),
+    C = n(433386),
+    N = n(981631),
+    R = n(231338),
+    P = n(388032),
+    w = n(450433);
+let D = 80,
+    x = [
+        [0, 30],
+        [0, 30],
+        [0, 20],
+        [0, 0],
+    ],
+    L = 30;
+var M = (function (e) {
+    return (
+        (e[(e.SMALL = 0)] = "SMALL"),
+        (e[(e.MEDIUM = 1)] = "MEDIUM"),
+        (e[(e.LARGE = 2)] = "LARGE"),
+        (e[(e.EMBEDDED = 3)] = "EMBEDDED"),
+        e
+    );
+})({});
+function k(e) {
     let { sku: t, isCardHovered: n } = e;
-    return (0, l.jsx)("div", {
-        className: Z.wishlistButtonContainer,
-        children: (0, l.jsx)(v.s, {
+    return (0, r.jsx)("div", {
+        className: w.wishlistButtonContainer,
+        children: (0, r.jsx)(m.s, {
             skuId: t.id,
             isCardHovered: n,
         }),
     });
 }
-function T(e) {
-    var t, n, a, i, d, s, v, w, T, G, R, D, H, F, U, B;
-    let { applicationId: W, skuId: Y, variant: z = 0, guildId: K } = e,
-        J = r.useRef(null),
-        $ = (0, p.e7)([_.Z], () => _.Z.get(Y)),
-        q = (0, p.e7)([x.Z], () => (0, g.wjy)(x.Z.theme)),
-        X = (0, p.e7)([m.Z], () => m.Z.useReducedMotion),
-        { isHoveringOrFocusing: Q } = (0, I.Z)(J),
-        { primaryIconAsset: V, primaryIconLabel: ee } = r.useMemo(() => (0, k.FE)($, W), [$, W]),
-        et = (0, p.e7)([O.Z], () => {
+function j(e) {
+    var t, n, a, s, c, m, M, j, U, G, B, Z, F, V, H, Y;
+    let { applicationId: W, skuId: K, variant: z = 0, guildId: q, onClick: X } = e,
+        Q = i.useRef(null),
+        J = (0, f.e7)([y.Z], () => y.Z.get(K)),
+        $ = (0, f.e7)([b.Z], () => (0, d.wjy)(b.Z.theme)),
+        ee = (0, f.e7)([p.Z], () => p.Z.useReducedMotion),
+        { isHoveringOrFocusing: et } = (0, g.Z)(Q),
+        { primaryIconAsset: en, primaryIconLabel: er } = i.useMemo(() => (0, T.FE)(J, W), [J, W]),
+        ei = (0, f.e7)([S.Z], () => {
             var e, t;
-            return null != K && null != (t = null == (e = O.Z.getStorefrontState(K)) ? void 0 : e.activePage) ? t : 0;
+            return null != q && null != (t = null == (e = S.Z.getStorefrontState(q)) ? void 0 : e.activePage) ? t : 0;
         }),
-        en = r.useMemo(() => {
+        ea = i.useMemo(() => {
             var e, t;
             if (
-                (null == $ || null == (t = $.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
+                (null == J || null == (t = J.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
                 null
             )
                 return null;
             let n = u()(),
-                a = u()($.tenantMetadata.socialLayer.expiresAt).diff(n, "days");
-            return a <= 1 ? E.intl.string(E.t.Bc13HF) : E.intl.format(E.t.Io7ozn, { days: a });
-        }, [null == $ || null == (n = $.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
-        ea =
-            (null == $ || null == (i = $.tenantMetadata) || null == (a = i.socialLayer)
+                r = u()(J.tenantMetadata.socialLayer.expiresAt).diff(n, "days");
+            return r <= 1 ? P.intl.string(P.t.Bc13HF) : P.intl.format(P.t.Io7ozn, { days: r });
+        }, [null == J || null == (n = J.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
+        eo =
+            (null == J || null == (s = J.tenantMetadata) || null == (a = s.socialLayer)
                 ? void 0
                 : a.cardBackgroundImageAssetId) != null &&
             null !=
-                (R = C.Z.toURLSafe(
-                    (0, y._W)(
+                (B = I.Z.toURLSafe(
+                    (0, v._W)(
                         W,
-                        null == $ ? void 0 : $.tenantMetadata.socialLayer.cardBackgroundImageAssetId,
+                        null == J ? void 0 : J.tenantMetadata.socialLayer.cardBackgroundImageAssetId,
                         1024,
                         "png",
                     ),
                 ))
-                ? R
+                ? B
                 : void 0,
-        [el, er] = (0, b.Cf)(null == ea ? void 0 : ea.toString(), "#000000"),
-        ei = r.useMemo(() => {
-            let e = o()(el).darken(1.5).alpha(0.9).hex(),
-                t = o()(el).alpha(0).hex(),
-                [n, a] = P[z];
-            return "linear-gradient(to top, "
-                .concat(e, " ")
-                .concat(30 + n, "%, ")
-                .concat(t, " ")
-                .concat(30 + a, "%)");
-        }, [el, z]);
-    if (null == $) return null;
-    let eo =
-        (null == (s = $.tenantMetadata) || null == (d = s.socialLayer) ? void 0 : d.cardImageAssetId) != null &&
-        null != (D = C.Z.toURLSafe((0, y._W)(W, $.tenantMetadata.socialLayer.cardImageAssetId, 512, "png")))
-            ? D
+        [es, el] = (0, h.Cf)(null == eo ? void 0 : eo.toString(), "#000000"),
+        ec = i.useMemo(() => {
+            let e = o()(es).darken(1.5).alpha(0.9).hex(),
+                t = o()(es).alpha(0).hex(),
+                [n, r] = x[z];
+            return 0 === n && 0 === r
+                ? "none"
+                : "linear-gradient(to top, "
+                      .concat(e, " ")
+                      .concat(L + n, "%, ")
+                      .concat(t, " ")
+                      .concat(L + r, "%)");
+        }, [es, z]);
+    if (null == J) return null;
+    let eu =
+        (null == (m = J.tenantMetadata) || null == (c = m.socialLayer) ? void 0 : c.cardImageAssetId) != null &&
+        null != (Z = I.Z.toURLSafe((0, v._W)(W, J.tenantMetadata.socialLayer.cardImageAssetId, 512, "png")))
+            ? Z
             : void 0;
-    return (0, l.jsx)(g.tEY, {
-        children: (0, l.jsxs)(f.kL8, {
-            onClick: () => {
-                null != K && (0, h.uL)(A.Z5c.CHANNELS_GAME_SHOP(K, et, Y, $.slug));
-            },
-            className: c()(Z.card, {
-                [Z.cardAnimation]: !X,
-                [Z.cardDark]: q,
-                [q ? Z.cardDarkHighlighted : Z.cardHighlighted]: Q,
-                [Z.cardLarge]: 2 === z,
-                [Z.cardMedium]: 1 === z,
+    return (0, r.jsx)(d.tEY, {
+        children: (0, r.jsxs)(_.kL8, {
+            onClick:
+                null != X
+                    ? X
+                    : () => {
+                          null != q && (0, E.uL)(N.Z5c.CHANNELS_GAME_SHOP(q, ei, K, J.slug));
+                      },
+            className: l()(w.card, {
+                [w.cardAnimation]: !ee && 3 !== z,
+                [w.cardDark]: $,
+                [$ ? w.cardDarkHighlighted : w.cardHighlighted]: et,
+                [w.cardLarge]: 2 === z,
+                [w.cardMedium]: 1 === z,
+                [w.cardEmbedded]: 3 === z,
             }),
-            ref: J,
-            "aria-label": $.name,
+            ref: Q,
+            "aria-label": J.name,
             children: [
-                null != en &&
-                    (0, l.jsx)(f.IGR, {
-                        text: en,
+                null != ea &&
+                    (0, r.jsx)(_.IGR, {
+                        text: ea,
                         disableColor: !0,
-                        className: Z.badge,
+                        className: w.badge,
                     }),
-                (0, l.jsx)(M, {
-                    sku: $,
-                    isCardHovered: Q,
+                (0, r.jsx)(k, {
+                    sku: J,
+                    isCardHovered: et,
                 }),
-                null != eo || null != ea
-                    ? (0, l.jsxs)(l.Fragment, {
+                null != eu || null != eo
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, l.jsx)("div", {
-                                  className: Z.cardBackgroundImage,
-                                  style: { backgroundImage: null != ea ? "url(".concat(ea.toString(), ")") : void 0 },
+                              (0, r.jsx)("div", {
+                                  className: w.cardBackgroundImage,
+                                  style: { backgroundImage: null != eo ? "url(".concat(eo.toString(), ")") : void 0 },
                               }),
-                              null != eo &&
-                                  (0, l.jsx)("img", {
+                              null != eu &&
+                                  (0, r.jsx)("img", {
                                       draggable: "false",
-                                      src: eo.toString(),
-                                      alt: $.name,
-                                      className: Z.cardImage,
+                                      src: eu.toString(),
+                                      alt: J.name,
+                                      className: w.cardImage,
                                   }),
                           ],
                       })
-                    : (0, l.jsx)("div", {
-                          className: Z.ticketIconContainer,
-                          children: (0, l.jsx)(g.Prq, {
+                    : (0, r.jsx)("div", {
+                          className: w.ticketIconContainer,
+                          children: (0, r.jsx)(d.Prq, {
                               color: "white",
                               size: "custom",
-                              height: 80,
-                              width: 80,
-                              className: Z.ticketIcon,
+                              height: D,
+                              width: D,
+                              className: w.ticketIcon,
                           }),
                       }),
-                (0, l.jsx)("div", {
-                    className: c()(Z.bottomGradient, { [Z.bottomGradientLarge]: 2 === z }),
-                    style: { background: ei },
-                }),
-                (0, l.jsxs)("div", {
-                    className: Z.details,
-                    children: [
-                        (0, l.jsx)("div", {
-                            className: Z.titleContainer,
-                            children: (0, l.jsx)(f.Text, {
-                                color: "always-white",
-                                variant: "text-md/bold",
-                                lineClamp: 1,
-                                children: $.name,
-                            }),
-                        }),
-                        (0, l.jsxs)("div", {
-                            className: Z.descriptionContainer,
-                            children: [
-                                null != V &&
-                                    (0, l.jsx)("img", {
-                                        src: V.toString(),
-                                        alt: ee,
-                                        className: Z.iconAsset,
-                                    }),
-                                (0, l.jsx)(f.Text, {
-                                    variant: "text-md/semibold",
-                                    color: "always-white",
-                                    lineClamp: 1,
-                                    children: (0, j.T4)(
-                                        null != (H = null == (v = $.price) ? void 0 : v.amount) ? H : 0,
-                                        null != (F = null == (w = $.price) ? void 0 : w.currency) ? F : N.pK.USD,
-                                    ),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-                (0, l.jsx)("div", {
-                    className: Z.buttonHover,
-                    children: (0, l.jsxs)(g.hE2, {
-                        wrap: !1,
-                        fullWidth: !0,
-                        children: [
-                            (0, l.jsx)(g.zxk, {
-                                variant: "primary",
-                                onClick: (e) => {
-                                    e.stopPropagation(), (0, L.P)($, { isGift: !1 });
-                                },
-                                text: E.intl.format(E.t.Xp5WTn, {
-                                    price: (0, j.T4)(
-                                        null != (U = null == (T = $.price) ? void 0 : T.amount) ? U : 0,
-                                        null != (B = null == (G = $.price) ? void 0 : G.currency) ? B : N.pK.USD,
-                                    ),
-                                }),
-                                fullWidth: !0,
-                            }),
-                            (0, l.jsx)(S.Z, {
-                                onGift: (e) => {
-                                    e.stopPropagation(), (0, L.P)($, { isGift: !0 });
-                                },
-                                tooltipDelay: 250,
-                            }),
-                        ],
-                    }),
-                }),
+                3 !== z
+                    ? (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)("div", {
+                                  className: l()(w.bottomGradient, { [w.bottomGradientLarge]: 2 === z }),
+                                  style: { background: ec },
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: w.details,
+                                  children: [
+                                      (0, r.jsx)("div", {
+                                          className: w.titleContainer,
+                                          children: (0, r.jsx)(_.Text, {
+                                              color: "always-white",
+                                              variant: "text-md/bold",
+                                              lineClamp: 1,
+                                              children: J.name,
+                                          }),
+                                      }),
+                                      (0, r.jsxs)("div", {
+                                          className: w.descriptionContainer,
+                                          children: [
+                                              null != en &&
+                                                  (0, r.jsx)("img", {
+                                                      src: en.toString(),
+                                                      alt: er,
+                                                      className: w.iconAsset,
+                                                  }),
+                                              (0, r.jsx)(_.Text, {
+                                                  variant: "text-md/semibold",
+                                                  color: "always-white",
+                                                  lineClamp: 1,
+                                                  children: (0, O.T4)(
+                                                      null != (F = null == (M = J.price) ? void 0 : M.amount) ? F : 0,
+                                                      null != (V = null == (j = J.price) ? void 0 : j.currency)
+                                                          ? V
+                                                          : R.pK.USD,
+                                                  ),
+                                              }),
+                                          ],
+                                      }),
+                                  ],
+                              }),
+                              (0, r.jsx)("div", {
+                                  className: w.buttonHover,
+                                  children: (0, r.jsxs)(d.hE2, {
+                                      wrap: !1,
+                                      fullWidth: !0,
+                                      children: [
+                                          (0, r.jsx)(d.zxk, {
+                                              variant: "primary",
+                                              onClick: (e) => {
+                                                  e.stopPropagation(), (0, A.P)(J, { isGift: !1 });
+                                              },
+                                              text: P.intl.format(P.t.Xp5WTn, {
+                                                  price: (0, O.T4)(
+                                                      null != (H = null == (U = J.price) ? void 0 : U.amount) ? H : 0,
+                                                      null != (Y = null == (G = J.price) ? void 0 : G.currency)
+                                                          ? Y
+                                                          : R.pK.USD,
+                                                  ),
+                                              }),
+                                              fullWidth: !0,
+                                          }),
+                                          (0, r.jsx)(C.Z, {
+                                              onGift: (e) => {
+                                                  e.stopPropagation(), (0, A.P)(J, { isGift: !0 });
+                                              },
+                                          }),
+                                      ],
+                                  }),
+                              }),
+                          ],
+                      })
+                    : null,
             ],
         }),
     });

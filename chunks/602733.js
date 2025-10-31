@@ -4,7 +4,7 @@ n.d(t, {
     ao: () => R,
     kZ: () => I,
     lr: () => v,
-    ny: () => S,
+    ny: () => T,
     zL: () => y,
 }),
     n(388685),
@@ -44,8 +44,12 @@ function I(e, t) {
         });
     return (
         (0, r.useEffect)(() => {
-            null != e && !a && n && null == s && (null == i || (null != c && l !== c)) && h.Z.fetchWishlist(e, c);
-        }, [e, i, a, n, c, l, s]),
+            !(null == e || m.Z.isFetching(e)) &&
+                n &&
+                null == s &&
+                (null == i || (null != c && l !== c)) &&
+                h.Z.fetchWishlist(e, c);
+        }, [e, i, n, c, l, s]),
         {
             wishlist: i,
             isFetching: a,
@@ -53,10 +57,10 @@ function I(e, t) {
         }
     );
 }
-function S(e, t) {
+function T(e, t) {
     return (0, o.e7)([m.Z], () => null != e && m.Z.hasSkuId(e, t));
 }
-function T(e) {
+function S(e) {
     if (null == e.items || 0 === e.items.length) return null;
     let t = {
         sku_id: e.skuId,
@@ -159,7 +163,7 @@ function N(e) {
             let e = new Set(s.map((e) => e.skuId)),
                 t = n.filter((t) => !e.has(t.skuId));
             for (let e = 0; e < t.length && l.length < y; e++) {
-                let n = T(t[e]);
+                let n = S(t[e]);
                 null !== n &&
                     l.push({
                         item: n,

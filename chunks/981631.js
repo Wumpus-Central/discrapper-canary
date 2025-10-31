@@ -1,7 +1,7 @@
 n.d(t, {
     $7l: () => b.$7,
     $92: () => e3,
-    $Ab: () => L,
+    $Ab: () => x,
     $R1: () => E.$R,
     $VG: () => E.$V,
     $Y6: () => tb,
@@ -11,7 +11,7 @@ n.d(t, {
     ADE: () => nE,
     AEg: () => nA,
     ANM: () => eC,
-    AQB: () => eL,
+    AQB: () => ex,
     AeJ: () => nB,
     Ai1: () => E.Ai,
     AnalyticsObjectTypes: () => tB,
@@ -33,11 +33,11 @@ n.d(t, {
     DJE: () => re,
     DJj: () => eM,
     DZw: () => ew,
-    E07: () => tT,
+    E07: () => tS,
     EKQ: () => E.EK,
     EOG: () => n1,
     ETv: () => E.ET,
-    EYA: () => tS,
+    EYA: () => tT,
     EkH: () => v,
     Etm: () => E.Et,
     Eu4: () => ns,
@@ -57,7 +57,7 @@ n.d(t, {
     HGf: () => n5,
     HN8: () => eF,
     HeQ: () => E.He,
-    Hqc: () => nT,
+    Hqc: () => nS,
     IE4: () => F,
     IIU: () => e6,
     IWh: () => rN,
@@ -75,7 +75,7 @@ n.d(t, {
     JwP: () => np,
     K3D: () => rA,
     KA4: () => tR,
-    KFR: () => nL,
+    KFR: () => nx,
     KJ3: () => rv,
     KsC: () => C,
     L4X: () => eV,
@@ -91,7 +91,7 @@ n.d(t, {
     NYc: () => E.NY,
     NYg: () => nV,
     N_j: () => n3,
-    NgX: () => S,
+    NgX: () => T,
     O0b: () => n_,
     O0n: () => es,
     O42: () => b.O4,
@@ -111,7 +111,7 @@ n.d(t, {
     PUi: () => nU,
     Pbq: () => t6,
     Plq: () => E.Pl,
-    PrB: () => x,
+    PrB: () => L,
     PrS: () => tE,
     PsQ: () => tW,
     PyE: () => E.Py,
@@ -132,11 +132,11 @@ n.d(t, {
     S7T: () => E.S7,
     S9g: () => nN,
     SOq: () => n8,
-    SRg: () => nS,
+    SRg: () => nT,
     STv: () => eE,
     SaU: () => tZ,
     Sap: () => ni,
-    Sbl: () => tx,
+    Sbl: () => tL,
     Sc2: () => eI,
     Skl: () => E.Sk,
     T23: () => rF,
@@ -168,14 +168,14 @@ n.d(t, {
     X5t: () => E.X5,
     X6Q: () => E.X6,
     X7u: () => E.X7,
-    XAJ: () => eS,
+    XAJ: () => eT,
     XKF: () => n2,
     XmY: () => e1,
     Xyh: () => e4,
     YeM: () => ec,
     Ypu: () => ea,
     Z5c: () => eN,
-    Z8P: () => ex,
+    Z8P: () => eL,
     Z9p: () => nm,
     ZUi: () => H,
     ZY5: () => tk,
@@ -183,7 +183,7 @@ n.d(t, {
     Zuq: () => E.Zu,
     _1z: () => er,
     _8R: () => rk,
-    _s_: () => T,
+    _s_: () => S,
     _vf: () => ei,
     a5g: () => tz,
     aIL: () => ev,
@@ -194,7 +194,7 @@ n.d(t, {
     ane: () => nj,
     apO: () => rr,
     b2L: () => na,
-    b4C: () => rL,
+    b4C: () => rx,
     b8q: () => tj,
     bL: () => eP,
     c2C: () => nk,
@@ -216,7 +216,7 @@ n.d(t, {
     en1: () => eB,
     epS: () => ru,
     epw: () => ti,
-    evJ: () => tL,
+    evJ: () => tx,
     f07: () => rt,
     fK7: () => E.fK,
     fMv: () => b.fM,
@@ -240,7 +240,7 @@ n.d(t, {
     j3N: () => ej,
     j8d: () => E.j8,
     jXE: () => tU,
-    jm8: () => rS,
+    jm8: () => rT,
     jwA: () => nw,
     kEZ: () => U,
     kGb: () => rd,
@@ -276,7 +276,7 @@ n.d(t, {
     q5t: () => tM,
     q9n: () => nH,
     qAy: () => tG,
-    qWG: () => rx,
+    qWG: () => rL,
     qc2: () => rs,
     qhL: () => tn,
     qrD: () => D,
@@ -290,7 +290,7 @@ n.d(t, {
     sFg: () => el,
     sHY: () => ra,
     scU: () => tv,
-    si2: () => rT,
+    si2: () => rS,
     t4x: () => tY,
     tG9: () => eZ,
     tHP: () => eD,
@@ -334,7 +334,7 @@ n.d(t, {
     z7k: () => tI,
     zMe: () => E.zM,
     zQD: () => rK,
-    zUn: () => nx,
+    zUn: () => nL,
     zYc: () => rp,
     zo9: () => rH,
 }),
@@ -473,10 +473,10 @@ var o = n(106351),
             e
         );
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (e.ALL_SERVERS = "ALL_SERVERS"), (e.THIS_SERVER = "THIS_SERVER"), e;
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (
             (e.TRANSPORT = "TRANSPORT"),
             (e.OUTBOUND = "OUTBOUND"),
@@ -627,10 +627,10 @@ var o = n(106351),
     D = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL = "ALL"), e;
     })({}),
-    L = (function (e) {
+    x = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    x = (function (e) {
+    L = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
     M = (function (e) {
@@ -1068,8 +1068,8 @@ let em = "@me",
     eO = "null",
     ev = "0",
     eI = "null",
-    eS = "1096190356233670716",
-    eT = Object.freeze({
+    eT = "1096190356233670716",
+    eS = Object.freeze({
         USER: (e) => "/users/".concat(e),
         USER_RELATIONSHIPS: function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : em;
@@ -1553,6 +1553,8 @@ let em = "@me",
         STORE_LISTING: (e) => "/store/listings/".concat(e),
         STORE_LISTINGS_SKU: (e) => "/store/skus/".concat(e, "/listings"),
         SOCIAL_LAYER_APPLICATION_STOREFRONT: (e) => "/partner-sdk/guilds/".concat(e, "/application-storefront"),
+        SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU: (e, t) =>
+            "/partner-sdk/guilds/".concat(e, "/application-storefront/skus/").concat(t),
         ORDER_CREATE: "/billing/orders",
         ORDER_UPDATE: (e) => "/billing/orders/".concat(e),
         ORDER_SIGN: (e) => "/billing/orders/".concat(e, "/sign"),
@@ -2098,13 +2100,9 @@ let em = "@me",
                 i
             );
         },
-        GAME_SHOP: (e, t, n, r) => {
-            let i = "/game-shop/".concat(e);
-            return (
-                (i += "/".concat(null != t ? t : 0)),
-                null != n && ((i += "/".concat(n)), null != r && (i += "/".concat(r))),
-                i
-            );
+        GAME_SHOP: (e, t, n) => {
+            let r = "/game-shop/".concat(e);
+            return null != t && ((r += "/".concat(t)), null != n && (r += "/".concat(n))), r;
         },
         GUILD_PRODUCT: (e, t) => "/channels/".concat(e, "/shop/").concat(t),
         REPORT: "/report",
@@ -2126,7 +2124,7 @@ let em = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => "/quest-home?tab=preview_tool&quest_id=".concat(e),
         ICYMI: "/icymi",
     }),
-    eC = (0, f.Ft)(eT),
+    eC = (0, f.Ft)(eS),
     eN = (0, f.Ft)(eA, [":", "?", "@"]);
 var eR = (function (e) {
         return (
@@ -2153,8 +2151,8 @@ var eR = (function (e) {
     })({});
 let ew = 100,
     eD = 200,
-    eL = 50,
     ex = 50,
+    eL = 50,
     eM = 25,
     ek = 200,
     ej = 100,
@@ -2255,7 +2253,7 @@ let te = 128,
     tO = "DEVICE_TOKEN",
     tv = "DEVICE_VOIP_TOKEN",
     tI = "first_run_date_key",
-    tS = Object.freeze({
+    tT = Object.freeze({
         API_DOCS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/docs/intro"),
         API_DOCS_GAME_AND_SERVER_MANAGEMENT: "".concat(
             window.GLOBAL_ENV.MARKETING_ENDPOINT,
@@ -2311,7 +2309,7 @@ let te = 128,
         SAFETY_CENTER: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/safetycenter"),
         VOICE_FILTERS_BLOG: "https://discord.com/blog/voice-filters",
     }),
-    tT = Object.freeze({
+    tS = Object.freeze({
         DEVELOPER_PORTAL: "/developers",
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => "/developers/servers/".concat(e),
         DEVELOPER_PORTAL_TEAMS: "/developers/teams",
@@ -2348,7 +2346,7 @@ var tw = (function (e) {
     tD = (function (e) {
         return (e.NEWEST = "newest"), (e.OLDEST = "oldest"), (e.MOST_RELEVANT = "most_relevant"), e;
     })({}),
-    tL = (function (e) {
+    tx = (function (e) {
         return (
             (e[(e.UNKNOWN_ACCOUNT = 10001)] = "UNKNOWN_ACCOUNT"),
             (e[(e.UNKNOWN_APPLICATION = 10002)] = "UNKNOWN_APPLICATION"),
@@ -2543,7 +2541,7 @@ var tw = (function (e) {
             e
         );
     })({}),
-    tx = (function (e) {
+    tL = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -5387,7 +5385,7 @@ var nE = (function (e) {
             e
         );
     })({});
-let nS = Object.freeze({
+let nT = Object.freeze({
         STORAGE_MANIFEST: (e, t) => "".concat(e, "/storage/").concat(t, "/MANIFEST"),
         INSTALL_DIR: (e) => "".concat(e, "/content"),
         ROOT_PATTERN: ["**/*"],
@@ -5399,7 +5397,7 @@ let nS = Object.freeze({
             linux: "linux",
         },
     }),
-    nT = 86400000;
+    nS = 86400000;
 var nA = (function (e) {
         return (
             (e.NORMAL = "normal"), (e.MINIMUM = "minimum"), (e.NO_CHAT = "no-chat"), (e.FULL_SCREEN = "full-screen"), e
@@ -5519,7 +5517,7 @@ var nP = (function (e) {
     nD = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
-    nL = (function (e) {
+    nx = (function (e) {
         return (
             (e.ALL = "ALL"),
             (e.UNKNOWN = "UNKNOWN"),
@@ -5550,7 +5548,7 @@ var nP = (function (e) {
             e
         );
     })({}),
-    nx = (function (e) {
+    nL = (function (e) {
         return (
             (e.NAME = "name"),
             (e.DESCRIPTION = "description"),
@@ -6256,7 +6254,7 @@ var rv = (function (e) {
     rI = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rS = (function (e) {
+    rT = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6267,7 +6265,7 @@ var rv = (function (e) {
             e
         );
     })({}),
-    rT = (function (e) {
+    rS = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
@@ -6313,7 +6311,7 @@ var rw = (function (e) {
     rD = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
-    rL = (function (e) {
+    rx = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.OVERVIEW = 1)] = "OVERVIEW"),
@@ -6325,7 +6323,7 @@ var rw = (function (e) {
             e
         );
     })({});
-let rx = 2500,
+let rL = 2500,
     rM = 0,
     rk = 2592000000;
 var rj = (function (e) {

@@ -1,115 +1,102 @@
-n.r(t), n.d(t, { default: () => C }), n(35282);
-var a = n(951288),
-    l = n(647438),
-    r = n(120356),
-    i = n.n(r),
-    o = n(442837),
-    d = n(481060),
-    c = n(703656),
-    s = n(621853),
-    u = n(484459),
-    g = n(602733),
-    p = n(594174),
-    f = n(55563),
-    m = n(411935),
-    b = n(210218),
-    v = n(436585),
-    I = n(720983),
-    h = n(323540),
-    x = n(171524),
-    _ = n(981631),
-    j = n(140594);
-function y(e) {
-    var t, n;
-    let { storefront: r, guildId: i, selectedPageIndex: o, selectedSku: d } = e,
-        s = l.useRef(!1);
+l.r(n), l.d(n, { default: () => _ }), l(35282);
+var t = l(951288),
+    i = l(647438),
+    a = l(120356),
+    r = l.n(a),
+    d = l(442837),
+    o = l(481060),
+    s = l(703656),
+    c = l(55563),
+    u = l(411935),
+    p = l(210218),
+    g = l(242723),
+    I = l(436585),
+    v = l(720983),
+    x = l(323540),
+    m = l(171524),
+    f = l(981631),
+    h = l(140594);
+function C(e) {
+    var n, l;
+    let { storefront: a, guildId: r, selectedPageIndex: d, selectedSku: o } = e,
+        c = i.useRef(!1);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             let e = () => {
-                s.current = !0;
+                c.current = !0;
             };
             return window.addEventListener("popstate", e), () => window.removeEventListener("popstate", e);
         }, []),
-        l.useEffect(() => {
-            null != d
-                ? (0, v.g)({
-                      skuId: d.id,
-                      applicationId: r.applicationId,
-                      guildId: i,
+        i.useEffect(() => {
+            null != o
+                ? (0, I.g)({
+                      skuId: o.id,
+                      applicationId: a.applicationId,
+                      guildId: r,
+                      isStorefront: !0,
                       onClose: () => {
-                          s.current || (0, c.uL)(_.Z5c.CHANNELS_GAME_SHOP(i, o));
+                          c.current || (0, s.uL)(f.Z5c.CHANNELS_GAME_SHOP(r, d));
                       },
                   })
-                : null == d && (0, v.U)(),
-                (s.current = !1);
-        }, [i, o, d, r.applicationId]),
-        (0, a.jsxs)(a.Fragment, {
+                : null == o && (0, I.U)(),
+                (c.current = !1);
+        }, [r, d, o, a.applicationId]),
+        (0, t.jsxs)(t.Fragment, {
             children: [
-                (0, a.jsxs)("div", {
-                    className: j.container,
+                (0, t.jsxs)("div", {
+                    className: h.container,
                     children: [
-                        (0, a.jsx)(I.Z, {
-                            guildId: i,
-                            storefront: r,
-                            selectedPageIndex: o,
+                        (0, t.jsx)(v.Z, {
+                            guildId: r,
+                            storefront: a,
+                            selectedPageIndex: d,
                         }),
-                        (0, a.jsx)(h.$, {
-                            applicationId: r.applicationId,
-                            guildId: i,
-                            page: r.pages[o],
+                        (0, t.jsx)(x.$, {
+                            applicationId: a.applicationId,
+                            guildId: r,
+                            page: a.pages[d],
                         }),
                     ],
                 }),
-                (0, a.jsx)(x.n, {
-                    applicationId: r.applicationId,
+                (0, t.jsx)(m.n, {
+                    applicationId: a.applicationId,
                     backgroundImageAssetId:
-                        null == (n = r.pages[o]) || null == (t = n.leaderboard) ? void 0 : t.backgroundImageAssetId,
+                        null == (l = a.pages[d]) || null == (n = l.leaderboard) ? void 0 : n.backgroundImageAssetId,
                 }),
             ],
         })
     );
 }
-function C(e) {
-    let { match: t } = e,
-        { guildId: n, gameShopPageIndex: r, gameShopSkuId: c } = t.params,
-        v = (0, o.e7)([b.Z], () => (null != n ? b.Z.getStorefrontData(n) : void 0)),
-        I = l.useMemo(() => {
-            if (null == r) return 0;
-            let e = parseInt(r, 10);
-            return isNaN(e) || (null != v && null != v.storefront && e >= v.storefront.pages.length) ? 0 : e;
-        }, [r, v]),
-        h = (0, o.e7)([f.Z], () => (null != c ? f.Z.get(c) : null), [c]);
-    l.useEffect(() => {
-        null != n && (0, m.m)(n, I, null != c ? c : null);
-    }, [n, I, c]);
-    let x =
-        ((null == v ? void 0 : v.storefront) != null || (null == v ? void 0 : v.error)) &&
-        !(null == v ? void 0 : v.loading);
-    l.useEffect(() => {
-        null != n && null == v && (0, m.Y)(n);
-    }, [n, v]);
-    let _ = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        { userProfile: C, wishlistId: k } = (0, o.cj)(
-            [s.Z],
-            () => ({
-                userProfile: null != _ ? s.Z.getUserProfile(_.id) : null,
-                wishlistId: null != _ ? s.Z.getFirstWishlistId(_.id) : null,
-            }),
-            [_],
-        );
-    return (l.useEffect(() => {
-        null != _ && null == C && (0, u.Z)(_.id);
-    }, [_, C]),
-    (0, g.kZ)(k, null == _ ? void 0 : _.id),
-    x && null != n && (null == v ? void 0 : v.storefront) != null)
-        ? (0, a.jsx)(y, {
-              storefront: v.storefront,
-              guildId: n,
-              selectedPageIndex: I,
-              selectedSku: h,
+function _(e) {
+    let { match: n } = e,
+        { guildId: l, gameShopPageIndex: a, gameShopSkuId: s } = n.params,
+        I = (0, d.e7)([p.Z], () => (null != l ? p.Z.getStorefrontData(l) : void 0)),
+        v = (0, d.e7)([c.Z], () => c.Z.get(s), [s]);
+    (0, g.p)();
+    let x = i.useMemo(() => {
+        if (null == a) return 0;
+        let e = parseInt(a, 10);
+        return isNaN(e) || (null != I && null != I.storefront && e >= I.storefront.pages.length) ? 0 : e;
+    }, [a, I]);
+    return (i.useEffect(() => {
+        null != l && (0, u.m0)(l, x, null != s ? s : null);
+    }, [l, x, s]),
+    i.useEffect(() => {
+        var e;
+        null != l && (null == (e = p.Z.getStorefrontData(l)) ? void 0 : e.loading) !== !0 && (0, u.YL)(l);
+    }, [l]),
+    ((null == I ? void 0 : I.storefront) != null || (null == I ? void 0 : I.error)) &&
+        !(null == I ? void 0 : I.loading) &&
+        null != l &&
+        (null == I ? void 0 : I.storefront) != null)
+        ? (0, t.jsx)(C, {
+              storefront: I.storefront,
+              guildId: l,
+              selectedPageIndex: x,
+              selectedSku: v,
           })
-        : (0, a.jsx)("div", {
-              className: i()(j.spinner, j.container),
-              children: (0, a.jsx)(d.$jN, {}),
+        : (0, t.jsx)("div", {
+              className: r()(h.spinner, h.container),
+              children: (0, t.jsx)(o.$jN, {}),
           });
 }
