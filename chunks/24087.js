@@ -56,6 +56,7 @@ function f() {
                 ),
             [a],
         );
+    if (__OVERLAY__) return c;
     switch (e) {
         case l.du.TOP_SOUNDS:
             return f;
