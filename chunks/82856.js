@@ -1,118 +1,129 @@
 n.d(t, {
-    o: () => m,
-    y: () => p,
+    o: () => g,
+    y: () => E,
 });
-var a = n(951288),
-    r = n(647438),
-    l = n(442837),
-    i = n(481060),
-    o = n(493773),
-    s = n(751648),
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(493773),
+    l = n(751648),
     c = n(479766),
-    d = n(970815);
-function u(e) {
+    u = n(970815);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            a.forEach(function (t) {
-                var a;
-                (a = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: a,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = a);
+            r.forEach(function (t) {
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function m() {
-    let e = (0, l.e7)([c.Z], () => c.Z.balancePillOverlay);
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
     return (
-        (0, o.ZP)(() => {
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = m(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function g() {
+    let e = (0, a.e7)([c.Z], () => c.Z.balancePillOverlay);
+    return (
+        (0, s.ZP)(() => {
             setTimeout(() => {
-                e || (0, s.qD)(!0);
+                e || (0, l.qD)(!0);
             }, 300);
         }),
-        (0, r.useEffect)(
+        (0, i.useEffect)(
             () => () => {
-                !(0, i.$sL)() && e && (0, s.qD)(!1);
+                !(0, o.$sL)() && e && (0, l.qD)(!1);
             },
             [e],
         ),
         null
     );
 }
-function p(e) {
-    var t,
-        n,
-        { pillRef: r } = e,
-        o = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                a,
-                r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        a,
-                        r = {},
-                        l = Object.keys(e);
-                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < l.length; a++)
-                    (n = l[a]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
-            }
-            return r;
-        })(e, ["pillRef"]);
-    let { balancePillOverlay: s } = (0, l.cj)([c.Z], () => ({ balancePillOverlay: c.Z.balancePillOverlay })),
-        m = (0, a.jsx)(d.A4, u({ ref: r }, o)),
-        p = (0, a.jsx)(
-            d.A4,
-            ((t = u({}, o)),
-            (n = n =
-                {
-                    isInModalOverlay: !0,
-                    disabled: !0,
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var a = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, a);
-                      }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                  }),
-            t),
+function E(e) {
+    var { pillRef: t } = e,
+        n = h(e, ["pillRef"]);
+    let { balancePillOverlay: i } = (0, a.cj)([c.Z], () => ({ balancePillOverlay: c.Z.balancePillOverlay })),
+        s = (0, r.jsx)(u.A4, f({ ref: t }, n)),
+        l = (0, r.jsx)(
+            u.A4,
+            p(f({}, n), {
+                isInModalOverlay: !0,
+                disabled: !0,
+            }),
         ),
-        h = null != r.current ? r.current.offsetHeight : 36;
-    return (0, a.jsx)(i.yRy, {
+        d = null != t.current ? t.current.offsetHeight : 36;
+    return (0, r.jsx)(o.yRy, {
         fixed: !0,
         autoInvert: !1,
-        renderPopout: () => p,
+        renderPopout: () => l,
         position: "bottom",
         align: "right",
-        shouldShow: s,
-        spacing: -h,
-        animation: i.yRy.Animation.NONE,
-        targetElementRef: r,
-        positionKey: "".concat(o.balance, "-").concat(s),
-        children: () => m,
+        shouldShow: i,
+        spacing: -d,
+        animation: o.yRy.Animation.NONE,
+        targetElementRef: t,
+        positionKey: "".concat(n.balance, "-").concat(i),
+        children: () => s,
     });
 }

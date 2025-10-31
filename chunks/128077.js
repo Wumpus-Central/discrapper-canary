@@ -1,19 +1,37 @@
-n.d(t, { f: () => i }), n(388685);
+n.d(t, { f: () => o }), n(388685);
 var r = n(647438),
-    l = n(751648),
+    i = n(751648),
     a = n(388032);
-function i() {
+function o() {
     let [e, t] = (0, r.useState)(""),
-        [n, i] = (0, r.useState)([]),
-        [o, s] = (0, r.useState)(null),
+        [n, o] = (0, r.useState)([]),
+        [s, l] = (0, r.useState)(null),
         [c, u] = (0, r.useState)(!1);
+    function d(e, t, n) {
+        let r = () => {
+                u(!0), l(null);
+            },
+            a = (e) => {
+                o(e), u(!1), null == n || n(e);
+            },
+            s = (e) => {
+                l(e), u(!1);
+            };
+        return (0, i.df)({
+            skuId: e,
+            loadId: t,
+            onRedeemStart: r,
+            onRedeemSucceed: a,
+            onRedeemFail: s,
+        });
+    }
     return (
         (0, r.useEffect)(() => {
-            if (null != o)
+            if (null != s)
                 return void t(
                     a.intl.format(a.t["7gHWrd"], {
                         amount: "1 orb",
-                        errorMessage: o.message,
+                        errorMessage: s.message,
                     }),
                 );
             if (null != n && n.length > 0) {
@@ -34,27 +52,13 @@ function i() {
                 return;
             }
             t("");
-        }, [n, o]),
+        }, [n, s]),
         {
             entitlements: n,
-            error: o,
+            error: s,
             isSubmitting: c,
             responseMessage: e,
-            redeemVirtualCurrency: function (e, t, n) {
-                return (0, l.df)({
-                    skuId: e,
-                    loadId: t,
-                    onRedeemStart: () => {
-                        u(!0), s(null);
-                    },
-                    onRedeemSucceed: (e) => {
-                        i(e), u(!1), null == n || n(e);
-                    },
-                    onRedeemFail: (e) => {
-                        s(e), u(!1);
-                    },
-                });
-            },
+            redeemVirtualCurrency: d,
         }
     );
 }

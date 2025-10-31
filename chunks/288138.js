@@ -1,17 +1,7 @@
-n.d(t, { Z: () => a });
-var r = n(818083),
-    i = n(987338);
-let a = (0, r.B)({
+n.d(t, { Z: () => r });
+let r = (0, n(427164).le)({
+    name: "2025-10-payment-elements-launch",
     kind: "user",
-    id: "2025-06_payment_elements_experiment",
-    label: "Payment Elements Experiment",
-    commonTriggerPoint: i.$P.PAYMENT_FLOW_STARTED,
     defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "Enable Payment Element features",
-            config: { enabled: !0 },
-        },
-    ],
+    variations: { 1: { enabled: !0 } },
 });

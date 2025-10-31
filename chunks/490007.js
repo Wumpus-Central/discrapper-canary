@@ -1,50 +1,44 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(793030),
-    s = n(481060),
+    r = n.n(l),
+    s = n(793030),
+    o = n(481060),
     c = n(488922),
-    d = n(191767),
-    u = n(595925),
-    m = n(451429),
-    p = n(226800);
-let h = [
+    d = n(595925),
+    u = n(451429),
+    m = n(226800);
+let p = [
         {
             id: "virtual-currency",
             name: "Virtual Current (Orb) Components",
-        },
-        {
-            id: "payment",
-            name: "Payment Components",
         },
         {
             id: "nitro",
             name: "Nitro Components",
         },
     ],
-    x = {
-        "virtual-currency": u.O,
-        payment: d.f,
+    h = {
+        "virtual-currency": d.O,
         nitro: c.X,
     };
-function f() {
-    let [e, t] = r.useState("virtual-currency"),
-        n = r.useMemo(() => x[e], [e]);
+function x() {
+    let [e, t] = i.useState("virtual-currency"),
+        n = i.useMemo(() => h[e], [e]);
     return (0, a.jsxs)("div", {
-        className: i()(m.panel, p.container),
+        className: r()(u.panel, m.container),
         children: [
-            (0, a.jsx)(s.njP, {
-                className: p.tabBar,
+            (0, a.jsx)(o.njP, {
+                className: m.tabBar,
                 selectedItem: e,
                 onItemSelect: t,
                 look: "brand",
                 type: "top",
                 orientation: "horizontal",
-                children: h.map((e) =>
+                children: p.map((e) =>
                     (0, a.jsx)(
-                        s.njP.Item,
+                        o.njP.Item,
                         {
                             id: e.id,
                             children: e.name,
@@ -53,9 +47,9 @@ function f() {
                     ),
                 ),
             }),
-            (0, a.jsx)(o.w0Z, {
+            (0, a.jsx)(s.w0Z, {
                 children: (0, a.jsx)("div", {
-                    className: p.content,
+                    className: m.content,
                     children: (0, a.jsx)(n, {}),
                 }),
             }),

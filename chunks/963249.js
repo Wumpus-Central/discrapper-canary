@@ -104,11 +104,11 @@ function R(e) {
             analyticsLocations: P,
             analyticsObject: w,
             analyticsLocation: D,
-            analyticsSourceLocation: L,
-            confirmationFooter: x,
+            analyticsSourceLocation: x,
+            confirmationFooter: L,
             paymentModalBanner: M,
-            isGift: k = !1,
-            giftMessage: j,
+            isGift: j = !1,
+            giftMessage: k,
             giftStyle: U,
             giftingOrigin: G,
             subscriptionTier: B,
@@ -131,9 +131,7 @@ function R(e) {
         en = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("17938"), n.e("94758"), n.e("84992"), n.e("31029")]).then(
-                n.bind(n, 7305),
-            );
+            let { default: e } = await Promise.all([n.e("94758"), n.e("84992"), n.e("3270")]).then(n.bind(n, 7305));
             return (t) => {
                 var { onClose: n } = t,
                     a = C(t, ["onClose"]);
@@ -143,8 +141,8 @@ function R(e) {
                         loadId: Q,
                         subscriptionTier: B,
                         skuId: et,
-                        isGift: k,
-                        giftMessage: j,
+                        isGift: j,
+                        giftMessage: k,
                         giftStyle: U,
                         giftingOrigin: G,
                         giftRecipient: W,
@@ -158,7 +156,7 @@ function R(e) {
                                     null == S || S(e),
                                     e &&
                                         (null == R || R(),
-                                        (0, p.M)(k, $, t) && g.S.dispatch(O.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                        (0, p.M)(j, $, t) && g.S.dispatch(O.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                     l.Z.dispatch({
                                         type: "PREMIUM_PAYMENT_MODAL_CLOSE",
                                         didSucceed: e,
@@ -173,14 +171,14 @@ function R(e) {
                         onComplete: (e) => {
                             (X = !0),
                                 null == N || N(),
-                                (0, p.M)(k, $, (0, E.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
+                                (0, p.M)(j, $, (0, E.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
                         },
                         onSubscriptionConfirmation: R,
                         analyticsLocations: P,
                         analyticsObject: w,
                         analyticsLocation: D,
-                        analyticsSourceLocation: L,
-                        confirmationFooter: x,
+                        analyticsSourceLocation: x,
+                        confirmationFooter: L,
                         paymentModalBanner: M,
                         trialId: Z,
                         postSuccessGuild: F,
@@ -214,9 +212,9 @@ function R(e) {
                         load_id: Q,
                         payment_type: O.Zuq[O.GZQ.SUBSCRIPTION],
                         location: null != D ? D : w,
-                        source: L,
+                        source: x,
                         subscription_type: O.NYc.PREMIUM,
-                        is_gift: k,
+                        is_gift: j,
                         sku_id: et,
                         eligible_for_trial: null != Z,
                         application_id: H,

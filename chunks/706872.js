@@ -1,4 +1,4 @@
-n.d(t, { O: () => p }), n(388685);
+n.d(t, { Oi: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(159691),
@@ -78,68 +78,112 @@ function _(e, t) {
     return i;
 }
 let p = {
-    title: "Balance Widget Pill",
-    stories: [
-        {
-            name: "Balance Widget Pill",
-            id: "balance-widget-pill",
-            component: (e) => {
-                var { loading: t } = e,
-                    n = f(e, ["loading"]);
-                let [l, u] = (0, i.useState)(n.balance);
-                return (
-                    (0, i.useEffect)(() => {
-                        null == l && null != n.balance && u(n.balance);
-                    }, [n.balance, l]),
-                    (0, r.jsxs)("div", {
-                        className: s.verticalContainer,
-                        children: [
-                            (0, r.jsx)(o.A4, d(c({}, n), { balance: t ? null : l })),
-                            (0, r.jsx)(a.zxk, {
-                                onClick: () => u(n.balance),
-                                text: "Update Balance",
-                            }),
-                        ],
-                    })
-                );
-            },
-            controls: {
-                loading: {
-                    label: "Loading",
-                    type: "boolean",
-                    defaultValue: !1,
-                },
-                balance: {
-                    label: "Balance",
-                    type: "number",
-                    defaultValue: 0,
-                },
-                balanceWidgetMode: {
-                    label: "Balance Widget Mode",
-                    type: "select",
-                    options: [
-                        {
-                            label: "Default",
-                            value: o.b6.DEFAULT,
-                        },
-                        {
-                            label: "Selected",
-                            value: o.b6.SELECTED,
-                        },
-                    ],
-                    defaultValue: o.b6.DEFAULT,
-                },
-                showNotificationBadge: {
-                    label: "Show Notification Badge",
-                    type: "boolean",
-                    defaultValue: !1,
-                },
-                disabled: {
-                    label: "Disabled",
-                    type: "boolean",
-                    defaultValue: !1,
-                },
-            },
+        balance: {
+            label: "Balance",
+            type: "number",
+            defaultValue: 150,
         },
-    ],
-};
+        balanceWidgetMode: {
+            label: "Balance Widget Mode",
+            type: "select",
+            options: [
+                {
+                    label: "Default",
+                    value: o.b6.DEFAULT,
+                },
+                {
+                    label: "Selected",
+                    value: o.b6.SELECTED,
+                },
+            ],
+            defaultValue: o.b6.DEFAULT,
+        },
+        showNotificationBadge: {
+            label: "Show Notification Badge",
+            type: "boolean",
+            defaultValue: !1,
+        },
+        disabled: {
+            label: "Disabled",
+            type: "boolean",
+            defaultValue: !1,
+        },
+    },
+    h = {
+        title: "Balance Widget Pill",
+        stories: [
+            {
+                name: "Balance Widget Pill",
+                id: "balance-widget-pill",
+                component: (e) => {
+                    var { loading: t } = e,
+                        n = f(e, ["loading"]);
+                    let [l, u] = (0, i.useState)(n.balance);
+                    return (
+                        (0, i.useEffect)(() => {
+                            null == l && null != n.balance && u(n.balance);
+                        }, [n.balance, l]),
+                        (0, r.jsxs)("div", {
+                            className: s.verticalContainer,
+                            children: [
+                                (0, r.jsx)(o.A4, d(c({}, n), { balance: t ? null : l })),
+                                (0, r.jsx)(a.zxk, {
+                                    onClick: () => u(n.balance),
+                                    text: "Update Balance",
+                                }),
+                            ],
+                        })
+                    );
+                },
+                controls: c(
+                    {
+                        loading: {
+                            label: "Loading",
+                            type: "boolean",
+                            defaultValue: !1,
+                        },
+                    },
+                    p,
+                ),
+            },
+            {
+                name: "Balance Widget Pill Loading State",
+                id: "balance-widget-pill-loading",
+                component: (e) => {
+                    var { loadingDuration: t } = e,
+                        n = f(e, ["loadingDuration"]);
+                    let [l, u] = (0, i.useState)(n.balance);
+                    return (
+                        (0, i.useEffect)(() => {
+                            u(n.balance);
+                        }, [n.balance]),
+                        (0, r.jsxs)("div", {
+                            className: s.verticalContainer,
+                            children: [
+                                (0, r.jsx)(o.A4, d(c({}, n), { balance: l })),
+                                (0, r.jsx)(a.zxk, {
+                                    onClick: () => {
+                                        u(null),
+                                            setTimeout(() => {
+                                                u(n.balance);
+                                            }, t);
+                                    },
+                                    text: "Simulate Loading State",
+                                }),
+                            ],
+                        })
+                    );
+                },
+                controls: c(
+                    {
+                        loadingDuration: {
+                            label: "Loading Duration (ms)",
+                            type: "number",
+                            defaultValue: 500,
+                        },
+                    },
+                    p,
+                ),
+            },
+        ],
+    };

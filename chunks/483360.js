@@ -49,8 +49,8 @@ var i = n(658722),
     x = n(675478),
     L = n(131704),
     M = n(345162),
-    k = n(598077),
-    j = n(314897),
+    j = n(598077),
+    k = n(314897),
     U = n(592125),
     G = n(580005),
     B = n(77498),
@@ -153,8 +153,8 @@ let ey = new m.Z("AutocompleteUtils"),
     ex = 8,
     eL = 1,
     eM = 1000,
-    ek = 0.2,
-    ej = 0.1,
+    ej = 0.2,
+    ek = 0.1,
     eU = 50,
     eG = () => !0,
     eB = /(\t|\s)/,
@@ -206,8 +206,8 @@ function ez(e) {
             }
         } else o[n] = 1 + r / i;
     }
-    for (let e of z.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + ek;
-    for (let e of U.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ej;
+    for (let e of z.Z.getFriendIDs()) o[e] = (null != (t = o[e]) ? t : 1) + ej;
+    for (let e of U.Z.getDMUserIds()) o[e] = (null != (n = o[e]) ? n : 1) + ek;
     return o;
 }
 let eq = [Z.sH, Z.Zb, ec.d4z.GUILD_CATEGORY];
@@ -255,7 +255,7 @@ function e0(e) {
         let e,
             r,
             f = n[m];
-        f instanceof k.Z
+        f instanceof j.Z
             ? ((r = f), (e = null == (b = F.ZP.getNick(c, r.id)) ? void 0 : b.toLocaleLowerCase()))
             : ((e = null == (y = f.nick) ? void 0 : y.toLocaleLowerCase()), (r = l[f.userId]));
         let h = null == (E = el.ZP.getGlobalName(r)) ? void 0 : E.toLocaleLowerCase();
@@ -329,10 +329,10 @@ function e1(e) {
             return 1;
     }
 }
-function e2(e) {
+function e3(e) {
     return e === Z.sH || (e !== Z.Zb && !!(0, L.Q5)(e));
 }
-function e3(e, t, n) {
+function e2(e, t, n) {
     return (
         e === t || ((!!n || !!(0, L.Km)(t)) && (e === Z.sH ? (0, L.r8)(t) || (0, L.bw)(t) : e === Z.Zb && (0, L.bw)(t)))
     );
@@ -590,7 +590,7 @@ let te = (0, ee.oH)((e, t, n) => {
                     includeAllThreads: h,
                 } = e,
                 m = e8(n, c),
-                g = e2(l);
+                g = e3(l);
             t =
                 null != r
                     ? s()(Z.ZP.getChannels(r)[l])
@@ -607,7 +607,7 @@ let te = (0, ee.oH)((e, t, n) => {
             for (let e of t) {
                 var O;
                 if (
-                    !e3(l, e.type, null != r) ||
+                    !e2(l, e.type, null != r) ||
                     ((0, L.Km)(e.type) && !W.Z.can(u ? e.accessPermissions : ec.Plq.VIEW_CHANNEL, e)) ||
                     !o(e)
                 )
@@ -799,12 +799,14 @@ let te = (0, ee.oH)((e, t, n) => {
             }
             if (l) {
                 let { componentPlaygroundConfigs: e } = n(653592);
-                for (let t of e.flatMap((e) => e.collections))
+                for (let t of e.flatMap((e) => e.collections)) {
+                    var _;
                     for (let e of [
                         "".concat(t.name, " Playground"),
                         "".concat(t.name, " Components"),
                         "".concat(t.name, " Design System"),
                         t.name,
+                        ...(null != (_ = t.tags) ? _ : []),
                     ]) {
                         let n = e.toLocaleLowerCase(),
                             r = eQ(n, s, i);
@@ -819,6 +821,7 @@ let te = (0, ee.oH)((e, t, n) => {
                             break;
                         }
                     }
+                }
             }
             return (
                 eE.getState().options.forEach((e) => {
@@ -1275,7 +1278,7 @@ let te = (0, ee.oH)((e, t, n) => {
                           };
                       })
                     : F.ZP.getMembers(n.guild_id).filter(eJ),
-                s = j.default.getId(),
+                s = k.default.getId(),
                 l = Q.default.getUsers(),
                 c = X.Z.getGuildId(),
                 u = t.toLocaleLowerCase(),
@@ -1285,7 +1288,7 @@ let te = (0, ee.oH)((e, t, n) => {
                 var p, h, m, g;
                 let t, o;
                 if (_.length >= r) break;
-                e instanceof k.Z
+                e instanceof j.Z
                     ? ((o = e), (t = null == (m = F.ZP.getNick(c, o.id)) ? void 0 : m.toLocaleLowerCase()))
                     : ((t = null == (g = e.nick) ? void 0 : g.toLocaleLowerCase()), (o = l[e.userId]));
                 let f = null == (p = z.Z.getNickname(o.id)) ? void 0 : p.toLocaleLowerCase(),

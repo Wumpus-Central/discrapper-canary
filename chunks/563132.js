@@ -1,5 +1,6 @@
 n.d(t, {
     JL: () => J,
+    Lq: () => Q,
     PaymentContextProvider: () => ee,
 }),
     n(388685),
@@ -34,11 +35,11 @@ var r = n(951288),
     P = n(325100),
     w = n(659848),
     D = n(583046),
-    L = n(897829),
-    x = n(74179),
+    x = n(897829),
+    L = n(74179),
     M = n(896246),
-    k = n(320317),
-    j = n(994427),
+    j = n(320317),
+    k = n(994427),
     U = n(814076),
     G = n(712297),
     B = n(585686),
@@ -121,7 +122,7 @@ function ee(e) {
         } = e,
         ec = (0, Z.Z)(),
         eu = (0, h.Q)(),
-        ed = (0, L.Z)(),
+        ed = (0, x.Z)(),
         ef = $[0],
         e_ = (0, c.e7)([I.Z], () => I.Z.get(ef), [ef]),
         ep = null == e_ ? void 0 : e_.eligiblePaymentGateways,
@@ -131,7 +132,7 @@ function ee(e) {
             paymentSourceId: eg,
             setPaymentSourceId: eE,
             hasFetchedPaymentSources: eb,
-        } = (0, x.Z)({
+        } = (0, L.Z)({
             isGift: ee,
             activeSubscription: K,
             eligiblePaymentGateways: ep,
@@ -157,14 +158,14 @@ function ee(e) {
             setStep: eP,
             steps: ew,
             breadcrumbsData: eD,
-            previousStepRef: eL,
+            previousStepRef: ex,
         } = (0, B.Z)({
             stepConfigs: q,
             breadcrumbs: J,
         }),
-        [ex, eM] = (0, j.Z)(eR),
-        { paymentError: ek, paymentAuthenticationState: ej } = (0, M.Z)(),
-        { purchaseError: eU, purchaseErrorBlockRef: eG, setPurchaseError: eB } = (0, k.Z)(),
+        [eL, eM] = (0, k.Z)(eR),
+        { paymentError: ej, paymentAuthenticationState: ek } = (0, M.Z)(),
+        { purchaseError: eU, purchaseErrorBlockRef: eG, setPurchaseError: eB } = (0, j.Z)(),
         eZ = (0, u.Z)(() => {
             let e = null != S ? S : (0, l.Z)();
             return (
@@ -186,7 +187,7 @@ function ee(e) {
         [ez, eq] = (0, c.Wu)([O.Z], () => [O.Z.purchaseTokenAuthState, O.Z.purchaseTokenHash]),
         [eX, eQ, eJ, e$] = (0, c.Wu)([F.Z], () => [F.Z.browserCheckoutState, F.Z.loadId, F.Z.skuId, F.Z.planId]),
         [e0, e1] = i.useState(null),
-        [e2, e3] = i.useState(null),
+        [e3, e2] = i.useState(null),
         [e4, e8] = i.useState(null),
         [e5, e6] = i.useState(null),
         [e7, e9] = i.useState(null),
@@ -251,11 +252,11 @@ function ee(e) {
             isDisplayingWowMomentConfirmation: E.Z.isDisplayingWowMomentConfirmation,
         })),
         tw = tR ? W.premiumBrandRefreshBackground : void 0,
-        { enabled: tD } = (0, g.l)({ location: "PaymentModal" }),
-        tL = (0, P.uH)({ location: "PaymentModal" }),
-        tx = i.useMemo(() => {
-            if (tL) return V.cL.APPLE_PAYMENT_LINK;
-        }, [tL]);
+        { enabled: tD } = (0, g.l)({ location: "PaymentContext" }),
+        tx = (0, P.uH)({ location: "PaymentModal" }),
+        tL = i.useMemo(() => {
+            if (tx) return V.cL.APPLE_PAYMENT_LINK;
+        }, [tx]);
     return (0, r.jsx)(Q.Provider, {
         value: X(
             z(
@@ -291,11 +292,11 @@ function ee(e) {
                 steps: ew,
                 stepConfigs: q,
                 breadcrumbs: eD,
-                previousStepRef: eL,
-                purchaseState: ex,
+                previousStepRef: ex,
+                purchaseState: eL,
                 setPurchaseState: eM,
-                paymentAuthenticationState: ej,
-                paymentError: ek,
+                paymentAuthenticationState: ek,
+                paymentError: ej,
                 purchaseError: eU,
                 setPurchaseError: eB,
                 purchasePreviewError: tm,
@@ -309,8 +310,8 @@ function ee(e) {
                 browserCheckoutStatePlanId: e$,
                 bodyNode: e0,
                 setBodyNode: e1,
-                footerNode: e2,
-                setFooterNode: e3,
+                footerNode: e3,
+                setFooterNode: e2,
                 modalOverlayNode: e4,
                 setModalOverlayNode: e8,
                 selectedSkuId: eF,
@@ -350,7 +351,7 @@ function ee(e) {
                 isDisplayingWowMomentConfirmation: tP,
                 premiumBrandRefreshBackgroundClassName: tw,
                 wasTier2PremiumBeforePurchase: el,
-                customCheckoutFlow: tx,
+                customCheckoutFlow: tL,
             },
         ),
         children: (0, r.jsx)(a.Elements, {

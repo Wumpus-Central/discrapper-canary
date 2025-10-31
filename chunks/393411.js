@@ -34,8 +34,8 @@ var i = n(120356),
     P = n(45474),
     w = n(474936),
     D = n(981631),
-    L = n(388032),
-    x = n(965406);
+    x = n(388032),
+    L = n(965406);
 function M(e, t, n) {
     return (
         t in e
@@ -49,7 +49,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,7 +82,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -105,25 +105,25 @@ function F(e) {
         discountAmount: l,
     } = e;
     return (0, r.jsxs)("div", {
-        className: a()(x.banner, o),
+        className: a()(L.banner, o),
         children: [
-            (0, r.jsx)("div", { className: x.bannerBackgroundImage }),
+            (0, r.jsx)("div", { className: L.bannerBackgroundImage }),
             (0, r.jsxs)("div", {
-                className: x.detailsContainer,
+                className: L.detailsContainer,
                 children: [
-                    (0, r.jsx)("div", { className: x.image }),
+                    (0, r.jsx)("div", { className: L.image }),
                     (0, r.jsxs)("div", {
-                        className: x.details,
+                        className: L.details,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: x.headerLabel,
+                                className: L.headerLabel,
                                 children: [
                                     t,
                                     s &&
                                         null != l &&
                                         (0, r.jsx)(N.Cy, {
-                                            text: L.intl.formatToPlainString(L.t.iiLbvu, { percent: l }),
-                                            className: x.discountPill,
+                                            text: x.intl.formatToPlainString(x.t.iiLbvu, { percent: l }),
+                                            className: L.discountPill,
                                             colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
                                         }),
@@ -135,7 +135,7 @@ function F(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: x.buttons,
+                className: L.buttons,
                 children: i,
             }),
         ],
@@ -151,26 +151,26 @@ function V(e) {
         discountAmount: l,
     } = e;
     return (0, r.jsxs)("div", {
-        className: a()(x.banner, o, x.repositioned),
+        className: a()(L.banner, o, L.repositioned),
         children: [
-            (0, r.jsx)("div", { className: x.bannerBackgroundImage }),
+            (0, r.jsx)("div", { className: L.bannerBackgroundImage }),
             (0, r.jsx)("div", {
-                className: x.detailsContainer,
+                className: L.detailsContainer,
                 children: (0, r.jsx)("div", {
-                    className: x.details,
+                    className: L.details,
                     children: (0, r.jsxs)("div", {
-                        className: x.headerLabel,
+                        className: L.headerLabel,
                         children: [
-                            (0, r.jsx)("div", { className: x.image }),
+                            (0, r.jsx)("div", { className: L.image }),
                             (0, r.jsxs)("div", {
-                                className: x.headerColumnB,
+                                className: L.headerColumnB,
                                 children: [
                                     t,
                                     s &&
                                         null != l &&
                                         (0, r.jsx)(N.Cy, {
-                                            text: L.intl.formatToPlainString(L.t.iiLbvu, { percent: l }),
-                                            className: x.discountPill,
+                                            text: x.intl.formatToPlainString(x.t.iiLbvu, { percent: l }),
+                                            className: L.discountPill,
                                             colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
                                         }),
@@ -182,7 +182,7 @@ function V(e) {
                 }),
             }),
             (0, r.jsx)("div", {
-                className: x.buttons,
+                className: L.buttons,
                 children: i,
             }),
         ],
@@ -190,13 +190,13 @@ function V(e) {
 }
 function H() {
     return (0, r.jsxs)("div", {
-        className: x.wordMark,
+        className: L.wordMark,
         children: [
             (0, r.jsx)(b.Z, {
-                className: x.discordWordmark,
-                "aria-label": L.intl.string(L.t.FSOz78),
+                className: L.discordWordmark,
+                "aria-label": x.intl.string(x.t.FSOz78),
             }),
-            (0, r.jsx)("div", { className: x.classicWordmark }),
+            (0, r.jsx)("div", { className: L.classicWordmark }),
         ],
     });
 }
@@ -205,30 +205,30 @@ function Y() {
     return (0, r.jsx)(F, {
         wordMark: (0, r.jsx)(H, {}),
         subscriptionInfo: (0, r.jsx)("div", {
-            className: x.planInfo,
-            children: L.intl.string(L.t.R0GJL2),
+            className: L.planInfo,
+            children: x.intl.string(x.t.R0GJL2),
         }),
         buttons: (0, r.jsx)(R.Z, {
-            className: x.toolsButton,
+            className: L.toolsButton,
             onClick: () =>
                 (0, h.Z)({
                     subscriptionTier: w.Si.TIER_1,
                     analyticsLocations: e,
                     analyticsObject: B,
                 }),
-            text: L.intl.string(L.t["/ygMUY"]),
+            text: x.intl.string(x.t["/ygMUY"]),
         }),
-        statusClasses: { [x.tier1]: !0 },
+        statusClasses: { [L.tier1]: !0 },
     });
 }
 let W = function (e) {
     var t;
     let { subscription: i, renewalInvoicePreview: o, paymentSource: p, busy: N, analyticsLocation: M } = e,
-        j = "subscription_header",
+        k = "subscription_header",
         { analyticsLocations: Y } = (0, f.ZP)(d.Z.SUBSCRIPTION_HEADER),
         { fractionalState: W } = (0, _.Z)({ forceFetch: !1 }),
         K = W === w.a$.FP_SUB_PAUSED,
-        { enabled: z } = (0, A.ZP)({ location: j });
+        { enabled: z } = (0, A.ZP)({ location: k });
     (w.pj.has(i.planId) && D.JwP.ALL_PAUSEABLE.has(i.status) && !K) || (z = !1);
     let q = (0, C.Ng)(),
         X = null == q || null == (t = q.discount) ? void 0 : t.amount,
@@ -247,16 +247,11 @@ let W = function (e) {
         },
         er = (e) => {
             (0, c.ZDy)(async () => {
-                let { PremiumBrandRefreshSubscriptionCancellationModal: t } = await Promise.all([
-                    n.e("17938"),
-                    n.e("69432"),
-                    n.e("26526"),
-                    n.e("46573"),
-                ]).then(n.bind(n, 48813));
+                let { PremiumBrandRefreshSubscriptionCancellationModal: t } = await n.e("26526").then(n.bind(n, 48813));
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        U(k({}, n), {
+                        U(j({}, n), {
                             premiumSubscription: i,
                             analyticsLocation: M,
                             analyticsLocations: Y,
@@ -316,9 +311,9 @@ let W = function (e) {
         el = (e) => (
             s()(null != o, "Expected renewalInvoicePreview"),
             (0, r.jsx)("div", {
-                className: x.planInfo,
+                className: L.planInfo,
                 children: $
-                    ? L.intl.format(L.t["/SfHwl"], { weeks: 1 })
+                    ? x.intl.format(x.t["/SfHwl"], { weeks: 1 })
                     : (0, O.qV)({
                           planId: e,
                           subscription: i,
@@ -340,7 +335,7 @@ let W = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         loading: N,
-                        text: L.intl.string(L.t.obRG6Y).toLocaleUpperCase(),
+                        text: x.intl.string(x.t.obRG6Y).toLocaleUpperCase(),
                     }),
                 });
             }
@@ -348,34 +343,34 @@ let W = function (e) {
                 let e = O.ZP.isSwitchingPlansDisabled(i),
                     t = O.ZP.getSwitchingPlansDisabledMessage(i);
                 return (0, r.jsxs)("div", {
-                    className: x.toolsButtons,
+                    className: L.toolsButtons,
                     children: [
                         z
                             ? (0, r.jsx)("div", {
-                                  className: x.secondaryBannerTextButtonContainerWithPause,
+                                  className: L.secondaryBannerTextButtonContainerWithPause,
                                   children: (0, r.jsx)(c.Avr, {
                                       variant: "always-white",
                                       disabled: N,
                                       onClick: ee,
                                       size: "sm",
-                                      text: L.intl.string(L.t.eFlYVA),
+                                      text: x.intl.string(x.t.eFlYVA),
                                   }),
                               })
                             : (0, r.jsx)("div", {
-                                  className: x.secondaryBannerTextButtonContainer,
+                                  className: L.secondaryBannerTextButtonContainer,
                                   children: (0, r.jsx)(c.Avr, {
                                       variant: "always-white",
                                       onClick: et,
                                       disabled: N,
                                       size: "sm",
-                                      text: L.intl.string(L.t["ETE/oC"]),
+                                      text: x.intl.string(x.t["ETE/oC"]),
                                   }),
                               }),
                         (0, r.jsx)(l.u, {
                             text: t,
                             asContainer: !0,
                             children: (0, r.jsx)(R.Z, {
-                                className: a()(x.toolsButton, x.premiumSettingsPushButton),
+                                className: a()(L.toolsButton, L.premiumSettingsPushButton),
                                 disabled: e,
                                 onClick: () => {
                                     (0, h.Z)({
@@ -385,7 +380,7 @@ let W = function (e) {
                                         subscription: i,
                                     });
                                 },
-                                text: L.intl.string(L.t["dylp/7"]),
+                                text: x.intl.string(x.t["dylp/7"]),
                             }),
                         }),
                     ],
@@ -394,11 +389,11 @@ let W = function (e) {
             if (O.ZP.isBaseSubscriptionCanceled(i))
                 return (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: x.toolsButton,
+                    className: L.toolsButton,
                     children: (0, r.jsx)(c.Button, {
                         variant: "overlay-primary",
                         size: "sm",
-                        text: L.intl.string(L.t.iIvF2z),
+                        text: x.intl.string(x.t.iIvF2z),
                         loading: N,
                         onClick: ei,
                     }),
@@ -410,29 +405,29 @@ let W = function (e) {
                         size: "sm",
                         onClick: en,
                         loading: N,
-                        text: L.intl.string(L.t["ETE/oC"]),
+                        text: x.intl.string(x.t["ETE/oC"]),
                     });
                 case D.O0b.PAUSE_PENDING:
                     return (0, r.jsxs)("div", {
-                        className: x.toolsButtons,
+                        className: L.toolsButtons,
                         children: [
                             (0, r.jsx)("div", {
-                                className: x.secondaryBannerTextButtonContainer,
+                                className: L.secondaryBannerTextButtonContainer,
                                 children: (0, r.jsx)(c.Avr, {
                                     variant: "always-white",
                                     disabled: N,
                                     onClick: et,
                                     size: "sm",
-                                    text: L.intl.string(L.t.cM1H0K),
+                                    text: x.intl.string(x.t.cM1H0K),
                                 }),
                             }),
                             (0, r.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
-                                className: x.toolsButton,
+                                className: L.toolsButton,
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
-                                    text: L.intl.string(L.t.TgV5Qf),
+                                    text: x.intl.string(x.t.TgV5Qf),
                                     loading: N,
                                     onClick: ea,
                                 }),
@@ -443,10 +438,10 @@ let W = function (e) {
                     if (K) return t();
                     let { durations: n } = (0, I.AT)(i);
                     return (0, r.jsxs)("div", {
-                        className: x.toolsButtons,
+                        className: L.toolsButtons,
                         children: [
                             (0, r.jsx)("div", {
-                                className: x.secondaryBannerTextButtonContainer,
+                                className: L.secondaryBannerTextButtonContainer,
                                 children:
                                     n.length > 0
                                         ? (0, r.jsx)(c.Avr, {
@@ -454,23 +449,23 @@ let W = function (e) {
                                               onClick: eo,
                                               disabled: N,
                                               size: "sm",
-                                              text: L.intl.string(L.t.jNHWt6),
+                                              text: x.intl.string(x.t.jNHWt6),
                                           })
                                         : (0, r.jsx)(c.Avr, {
                                               variant: "always-white",
                                               onClick: es,
                                               disabled: N,
                                               size: "sm",
-                                              text: L.intl.string(L.t.cM1H0K),
+                                              text: x.intl.string(x.t.cM1H0K),
                                           }),
                             }),
                             (0, r.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
-                                className: x.toolsButton,
+                                className: L.toolsButton,
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
-                                    text: L.intl.string(L.t.zpi5pg),
+                                    text: x.intl.string(x.t.zpi5pg),
                                     loading: N,
                                     onClick: ea,
                                 }),
@@ -487,25 +482,25 @@ let W = function (e) {
     let ed = O.ZP.getStatusFromInvoice(i, o),
         ef = O.ZP.getPremiumType(eu),
         e_ = {
-            [x.tier0]: ef === w.PremiumTypes.TIER_0,
-            [x.tier1]: ef === w.PremiumTypes.TIER_1,
-            [x.tier2]: ef === w.PremiumTypes.TIER_2,
-            [x.canceled]: ed === D.O0b.CANCELED,
-            [x.pausePending]: ed === D.O0b.PAUSE_PENDING,
-            [x.paused]: ed === D.O0b.PAUSED && !K,
-            [x.failedPayment]: (0, O.zV)(ed),
+            [L.tier0]: ef === w.PremiumTypes.TIER_0,
+            [L.tier1]: ef === w.PremiumTypes.TIER_1,
+            [L.tier2]: ef === w.PremiumTypes.TIER_2,
+            [L.canceled]: ed === D.O0b.CANCELED,
+            [L.pausePending]: ed === D.O0b.PAUSE_PENDING,
+            [L.paused]: ed === D.O0b.PAUSED && !K,
+            [L.failedPayment]: (0, O.zV)(ed),
         },
         ep = null;
     switch (ef) {
         case w.PremiumTypes.TIER_0:
             ep = (0, r.jsxs)("div", {
-                className: x.wordMark,
+                className: L.wordMark,
                 children: [
                     (0, r.jsx)(b.Z, {
-                        className: x.discordWordmark,
-                        "aria-label": L.intl.string(L.t["t9uG/o"]),
+                        className: L.discordWordmark,
+                        "aria-label": x.intl.string(x.t["t9uG/o"]),
                     }),
-                    (0, r.jsx)("div", { className: x.basicWordmark }),
+                    (0, r.jsx)("div", { className: L.basicWordmark }),
                 ],
             });
             break;
@@ -514,8 +509,8 @@ let W = function (e) {
             break;
         case w.PremiumTypes.TIER_2:
             ep = (0, r.jsx)(E.Z, {
-                className: x.planName,
-                "aria-label": L.intl.string(L.t.lpNrPu),
+                className: L.planName,
+                "aria-label": x.intl.string(x.t.lpNrPu),
             });
     }
     let eh = Z.includes(i.status) && !K ? V : F;

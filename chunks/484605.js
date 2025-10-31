@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(264418),
@@ -11,26 +11,26 @@ var i = n(264418),
     d = n(474936),
     p = n(921944),
     f = n(388032),
-    h = n(288541);
-let m = (e) => {
-    let { targetElementRef: t, discountOffer: m, premiumSubscription: g, dismissCoachmark: _, children: b } = e,
+    m = n(288541);
+let h = (e) => {
+    let { targetElementRef: t, discountOffer: h, premiumSubscription: g, dismissCoachmark: _, children: b } = e,
         { analyticsLocations: E } = (0, s.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
-        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, m, g),
+        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, h, g),
         I = (0, r.jsx)(i.Z, {
             targetElementRef: t,
             position: "right",
             align: "top",
             size: "md",
             caretConfig: { align: "start" },
-            title: f.intl.format(f.t["3yZP0G"], { percent: m.discount.amount }).toString(),
+            title: f.intl.format(f.t["3yZP0G"], { percent: h.discount.amount }).toString(),
             body: f.intl.format(f.t["3Q4wCy"], {
                 discountedPrice: O,
-                billingPeriod: (0, o.JP)(m.discount.user_usage_limit_interval),
-                numMonths: m.discount.user_usage_limit,
+                billingPeriod: (0, o.JP)(h.discount.user_usage_limit_interval),
+                numMonths: h.discount.user_usage_limit,
             }),
             graphic: {
                 type: "image",
-                src: h.Z,
+                src: m.Z,
             },
             gradientColor: "nitro-pink",
             actions: [
@@ -40,10 +40,9 @@ let m = (e) => {
                     onClick: () => {
                         _(p.L.TAKE_ACTION),
                             (0, l.ZDy)(async () => {
-                                let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
-                                    n.e("26526"),
-                                    n.e("11456"),
-                                ]).then(n.bind(n, 48813));
+                                let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await n
+                                    .e("26526")
+                                    .then(n.bind(n, 48813));
                                 return (t) => {
                                     var n, i;
                                     return (0, r.jsx)(

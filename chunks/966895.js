@@ -1,9 +1,22 @@
-n.d(t, { k: () => o }), n(388685);
-var a = n(951288),
-    r = n(647438),
-    l = n(481060),
-    i = n(295136);
-class o extends r.PureComponent {
+n.d(t, { k: () => l }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(436912);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class l extends i.PureComponent {
     componentDidCatch(e, t) {
         console.error("Error rendering component (LocalErrorBoundary): ", e),
             this.setState({
@@ -13,11 +26,11 @@ class o extends r.PureComponent {
     }
     render() {
         return null != this.state.error
-            ? (0, a.jsx)("div", {
-                  children: (0, a.jsx)(l.Text, {
+            ? (0, r.jsx)("div", {
+                  children: (0, r.jsx)(a.Text, {
                       color: "text-danger",
                       variant: "text-md/normal",
-                      className: i.labelSpacing,
+                      className: o.labelSpacing,
                       children: "Error rendering component. Check console for more information on the error.",
                   }),
               })
@@ -25,16 +38,7 @@ class o extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            (function (e, t, n) {
-                t in e
-                    ? Object.defineProperty(e, t, {
-                          value: n,
-                          enumerable: !0,
-                          configurable: !0,
-                          writable: !0,
-                      })
-                    : (e[t] = n);
-            })(this, "state", {
+            s(this, "state", {
                 error: null,
                 info: null,
             });
