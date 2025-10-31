@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(147913),
     i = n(710845),
     a = n(522474),
@@ -26,98 +26,99 @@ function h(e, t, n) {
 }
 let m = new i.Z("OverlayWindowRAFManager"),
     g = window.requestAnimationFrame.bind(window),
-    E = [u.gl.OutOfProcess, u.gl.OutOfProcessLimitedInteraction];
-function b() {
-    for (let e of Object.values(f.default.getTrackedGames()))
-        if (E.includes(e.overlayMethod) && e.state === u.mM.OVERLAY_RENDERING) return !0;
+    E = new Set([u.gl.OutOfProcess, u.gl.OutOfProcessLimitedInteraction]),
+    b = new Set([u.mM.OVERLAY_CRASHED, u.mM.OVERLAY_CRASHED_DISABLED]);
+function y(e) {
+    for (let t of Object.values(f.default.getTrackedGames()))
+        if (!(!E.has(t.overlayMethod) || b.has(t.state)) && (!e || t.state === u.mM.OVERLAY_RENDERING)) return !0;
     return !1;
 }
-let y = null,
-    O = !1,
+let O = null,
     v = !1,
-    I = {},
-    T = (e, t) => {
-        I[e] = t;
+    I = !1,
+    T = {},
+    S = (e, t) => {
+        T[e] = t;
     },
-    S = (e) => {
-        delete I[e];
+    A = (e) => {
+        delete T[e];
     },
-    A = () => {
-        I = {};
+    C = () => {
+        T = {};
     },
-    C = () =>
-        Object.entries(I).map((e) => {
+    N = () =>
+        Object.entries(T).map((e) => {
             let [t, n] = e;
             return {
                 timeoutId: Number(t),
                 callback: n,
             };
         }),
-    N = (e) => {
+    R = (e) => {
         try {
             let t = a.Z.getWindow(p.$J);
-            if (null == t || "function" != typeof t.requestAnimationFrame) return (y = "OverlayNotAvailable"), g(e);
-            if (!v) return (y = "MainWindowFocused"), g(e);
-            if (!b()) return (y = "NoOverlayRendering"), g(e);
+            if (null == t || "function" != typeof t.requestAnimationFrame) return (O = "OverlayNotAvailable"), g(e);
+            if (!I) return (O = "MainWindowFocused"), g(e);
+            if (!y(!0)) return (O = "NoOverlayRendering"), g(e);
             let n = null !== _.Z.getFocusedRunningGame(),
                 r = o.Z.isFocused((0, l.ZY)(t));
             if ((o.Z.isFocused() && m.error("Main window is reported as focused when it should not be!"), n || r)) {
-                y = n ? "OverlayGameFocused" : "OverlayWindowFocused";
+                O = n ? "OverlayGameFocused" : "OverlayWindowFocused";
                 let r = t.requestAnimationFrame((t) => {
-                    S(r), e(t);
+                    A(r), e(t);
                 });
-                return T(r, e), r;
+                return S(r, e), r;
             }
         } catch (e) {
             m.error("RAF redirect failed, falling back to original. Cause:", e),
                 (0, c.D1)(e, f.default.getOverlayMethod((0, s.getPID)()));
         }
-        return (y = "None"), g(e);
+        return (O = "None"), g(e);
     };
-function R() {
+function P() {
     return !o.Z.isFocused() || !o.Z.isVisible();
 }
-function P() {
+function w() {
     let e = a.Z.getWindow(p.$J),
         t = null != e && "function" == typeof e.cancelAnimationFrame;
-    C().forEach((n) => {
+    N().forEach((n) => {
         let { timeoutId: r, callback: i } = n;
         t && e.cancelAnimationFrame(r), g(i);
     }),
-        A();
+        C();
 }
-function w(e) {
-    if (e === v) return;
-    let t = !e && v;
-    (v = e), t && P();
+function D(e) {
+    if (e === I) return;
+    let t = !e && I;
+    (I = e), t && w();
 }
-class D extends r.Z {
+class x extends r.Z {
     _initialize() {
-        w(R());
+        D(P());
     }
     _terminate() {
         window.requestAnimationFrame = g;
     }
     getLastRAFCallbackReason() {
-        return y;
+        return O;
     }
     handleUpdateOverlayMethod() {
         let { enabled: e } = (0, d.td)("OverlayWindowRAFManager");
         if (!(!e || __OVERLAY__)) {
-            if (!O && !b()) {
-                (window.requestAnimationFrame = g), (y = "NoOverlayRendering"), P();
+            if (!v && !y(!1)) {
+                (window.requestAnimationFrame = g), (O = "NoOverlayRendering"), w();
                 return;
             }
-            m.info("Patching window RAF to use overlay window"), (window.requestAnimationFrame = N);
+            m.info("Patching window RAF to use overlay window"), (window.requestAnimationFrame = R);
         }
     }
     handleWindowStateChage() {
-        w(R());
+        D(P());
     }
     handleOverlayRenderDebugMode(e) {
         let { enabled: t, mode: n } = e;
         n === u.GO.OverlayRafManagerForceEnabled &&
-            ((O = t), t ? (window.requestAnimationFrame = N) : v || ((window.requestAnimationFrame = g), P()));
+            ((v = t), t ? (window.requestAnimationFrame = R) : I || ((window.requestAnimationFrame = g), w()));
     }
     constructor(...e) {
         super(...e),
@@ -129,4 +130,4 @@ class D extends r.Z {
             });
     }
 }
-let x = new D();
+let L = new x();

@@ -1,6 +1,6 @@
-n.d(e, { default: () => tt }), n(388685), n(415506);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { default: () => er }), n(388685), n(415506);
+var r = n(951288),
+    i = n(647438),
     s = n(120356),
     l = n.n(s),
     a = n(979554),
@@ -8,8 +8,8 @@ var i = n(951288),
     c = n(780384),
     u = n(481060),
     d = n(533307),
-    p = n(410030),
-    f = n(607070),
+    f = n(410030),
+    p = n(607070),
     h = n(100527),
     m = n(906732),
     g = n(728345),
@@ -17,76 +17,94 @@ var i = n(951288),
     y = n(597688),
     O = n(884697),
     j = n(583434),
-    v = n(551425),
-    P = n(832149),
+    P = n(551425),
+    v = n(832149),
     x = n(745510),
     S = n(313201),
     w = n(925329),
     _ = n(703656),
-    Z = n(146779),
-    C = n(763296),
-    A = n(82142),
-    T = n(283595),
-    I = n(594174),
-    E = n(509545),
-    R = n(55563),
-    N = n(626135),
-    k = n(176354),
-    D = n(669079),
-    G = n(296848),
-    L = n(51144),
-    M = n(479446),
-    H = n(715627),
-    U = n(981632),
-    F = n(474936),
-    z = n(981631),
-    B = n(215023),
-    V = n(388032),
-    K = n(269142),
-    W = n(167969),
-    Y = n(557256);
-function $(t, e, n) {
+    Z = n(164670),
+    C = n(96418),
+    A = n(146779),
+    T = n(763296),
+    E = n(82142),
+    I = n(283595),
+    R = n(594174),
+    k = n(509545),
+    N = n(55563),
+    D = n(626135),
+    G = n(176354),
+    L = n(669079),
+    M = n(296848),
+    H = n(51144),
+    U = n(479446),
+    F = n(715627),
+    z = n(981632),
+    B = n(474936),
+    V = n(981631),
+    K = n(215023),
+    W = n(388032),
+    $ = n(269142),
+    Y = n(167969),
+    q = n(557256);
+function J(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-let q = (t) => {
-        let { openedGift: e } = t,
-            { createMultipleConfettiAt: n } = r.useContext(x.h);
+function Q(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                J(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let X = (e) => {
+        let { openedGift: t } = e,
+            { createMultipleConfettiAt: n } = i.useContext(x.h);
         return (
-            r.useEffect(() => {
-                e && n(window.innerWidth / 2, window.innerHeight / 4);
-            }, [n, e]),
+            i.useEffect(() => {
+                t && n(window.innerWidth / 2, window.innerHeight / 4);
+            }, [n, t]),
             null
         );
     },
-    J = (t) => {
-        let { step: e, soundId: n } = t;
+    ee = (e) => {
+        let { step: t, soundId: n } = e;
         return (
-            r.useEffect(() => {
-                var t;
-                if (e !== z.wZ8.CONFIRM) return;
-                let i = C.Z.getSoundById(n);
-                (0, Z.playGiftSound)(n, null != (t = null == i ? void 0 : i.volume) ? t : 1);
-            }, [e, n]),
+            i.useEffect(() => {
+                var e;
+                if (t !== V.wZ8.CONFIRM) return;
+                let r = T.Z.getSoundById(n);
+                (0, A.playGiftSound)(n, null != (e = null == r ? void 0 : r.volume) ? e : 1);
+            }, [t, n]),
             null
         );
     };
-class Q extends r.Component {
+class et extends i.Component {
     componentDidMount() {
-        let { application: t, sku: e, customGiftMessage: n, giftCode: i, emojiName: r } = this.props;
-        null == t && null != e && g.ZP.fetchApplication(e.applicationId);
-        let s = null != n || null != i.giftStyle,
-            l = (0, O.mO)(i),
-            a = null != r ? k.ZP.getURL(r) : void 0;
+        let { application: e, sku: t, customGiftMessage: n, giftCode: r, emojiName: i } = this.props;
+        null == e && null != t && g.ZP.fetchApplication(t.applicationId);
+        let s = null != n || null != r.giftStyle,
+            l = (0, O.mO)(r),
+            a = null != i ? G.ZP.getURL(i) : void 0;
         this.setState({
             isCustomGift: s,
             isCollectiblesGift: l,
@@ -96,222 +114,222 @@ class Q extends r.Component {
             this.trackStepAnalytics();
     }
     get step() {
-        let { libraryApplication: t, accepting: e, giftCode: n } = this.props,
-            { error: i, accepted: r, opened: s, isCustomGift: l } = this.state;
-        return (0, D.TO)(t, n, {
-            error: i,
-            accepted: r,
-            accepting: e,
+        let { libraryApplication: e, accepting: t, giftCode: n } = this.props,
+            { error: r, accepted: i, opened: s, isCustomGift: l } = this.state;
+        return (0, L.TO)(e, n, {
+            error: r,
+            accepted: i,
+            accepting: t,
             opened: s,
             isCustomGift: l,
         });
     }
     get buttonText() {
-        return (0, D.L2)(this.step, this.props.giftCode, { isCustomGift: this.state.isCustomGift });
+        return (0, L.L2)(this.step, this.props.giftCode, { isCustomGift: this.state.isCustomGift });
     }
     get firstHeaderText() {
-        let { isCustomGift: t, opened: e, accepted: n } = this.state,
-            { giftCode: i, subscriptionPlan: r, collectiblesItemType: s } = this.props;
-        if (t && this.step === z.wZ8.ERROR) return V.intl.formatToMarkdownString(V.t.JUvC0s, {});
-        if (t && !n)
-            if (!e)
-                return V.intl.formatToPlainString(V.t.xHzRub, {
-                    recipientDisplayName: L.ZP.getName(I.default.getCurrentUser()),
+        let { isCustomGift: e, opened: t, accepted: n } = this.state,
+            { giftCode: r, subscriptionPlan: i, collectiblesItemType: s } = this.props;
+        if (e && this.step === V.wZ8.ERROR) return W.intl.formatToMarkdownString(W.t.JUvC0s, {});
+        if (e && !n)
+            if (!t)
+                return W.intl.formatToPlainString(W.t.xHzRub, {
+                    recipientDisplayName: H.ZP.getName(R.default.getCurrentUser()),
                 });
             else {
-                let t = I.default.getUser(i.userId),
-                    e = L.ZP.getName(t);
+                let e = R.default.getUser(r.userId),
+                    t = H.ZP.getName(e);
                 if (null != s)
                     switch (s) {
                         case a.Z.AVATAR_DECORATION:
-                            return V.intl.formatToPlainString(V.t.SKduyh, { sender: e });
+                            return W.intl.formatToPlainString(W.t.SKduyh, { sender: t });
                         case a.Z.PROFILE_EFFECT:
-                            return V.intl.formatToPlainString(V.t["1w42T2"], { sender: e });
+                            return W.intl.formatToPlainString(W.t["1w42T2"], { sender: t });
                         case a.Z.NAMEPLATE:
-                            return V.intl.formatToPlainString(V.t.vFiQlU, { sender: e });
+                            return W.intl.formatToPlainString(W.t.vFiQlU, { sender: t });
                         default:
-                            return V.intl.formatToPlainString(V.t.U4Ko2y, { sender: e });
+                            return W.intl.formatToPlainString(W.t.U4Ko2y, { sender: t });
                     }
-                return V.intl.formatToPlainString(V.t["0UR0u4"], {
-                    sender: e,
+                return W.intl.formatToPlainString(W.t["0UR0u4"], {
+                    sender: t,
                     timeInterval:
-                        (null == r ? void 0 : r.interval) === F.rV.MONTH
-                            ? V.intl.string(V.t.FPybU7)
-                            : V.intl.string(V.t.tfqrhj),
+                        (null == i ? void 0 : i.interval) === B.rV.MONTH
+                            ? W.intl.string(W.t.FPybU7)
+                            : W.intl.string(W.t.tfqrhj),
                 });
             }
-        return null == this.props.sku ? null : (0, D.dQ)(this.step, this.props.giftCode, this.props.sku);
+        return null == this.props.sku ? null : (0, L.dQ)(this.step, this.props.giftCode, this.props.sku);
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let t = I.default.getUser(this.props.giftCode.userId);
-        return V.intl.formatToPlainString(V.t.DDO4Wz, { sender: L.ZP.getName(t) });
+        let e = R.default.getUser(this.props.giftCode.userId);
+        return W.intl.formatToPlainString(W.t.DDO4Wz, { sender: H.ZP.getName(e) });
     }
     get bodyText() {
-        let { sku: t, accepting: e, libraryApplication: n, subscriptionPlan: i } = this.props;
-        if (null == t) return null;
-        let { error: r, accepted: s, isCustomGift: l, opened: a } = this.state;
+        let { sku: e, accepting: t, libraryApplication: n, subscriptionPlan: r } = this.props;
+        if (null == e) return null;
+        let { error: i, accepted: s, isCustomGift: l, opened: a } = this.state;
         return !a && l
             ? null
-            : (0, D.iM)({
+            : (0, L.iM)({
                   step: this.step,
-                  sku: t,
+                  sku: e,
                   libraryApplication: n,
-                  error: r,
+                  error: i,
                   accepted: s,
-                  accepting: e,
+                  accepting: t,
                   onGoToLibrary: this.handleGoToLibrary,
-                  subscriptionPlan: i,
+                  subscriptionPlan: r,
               });
     }
     get errorMessage() {
-        let { libraryApplication: t, accepting: e } = this.props,
-            { error: n, accepted: i } = this.state;
-        return (0, D.e$)(t, n, i, e, this.handleGoToLibrary);
+        let { libraryApplication: e, accepting: t } = this.props,
+            { error: n, accepted: r } = this.state;
+        return (0, L.e$)(e, n, r, t, this.handleGoToLibrary);
     }
     get handleClick() {
-        let { giftCode: t, onClose: e } = this.props;
+        let { giftCode: e, onClose: t } = this.props;
         switch (this.step) {
-            case z.wZ8.ERROR:
-                return e;
-            case z.wZ8.SUCCESS:
-                if (__OVERLAY__ || null != t.subscriptionPlanId) return e;
+            case V.wZ8.ERROR:
+                return t;
+            case V.wZ8.SUCCESS:
+                if (__OVERLAY__ || null != e.subscriptionPlanId) return t;
                 return this.handleGoToLibrary;
-            case z.wZ8.OPEN:
+            case V.wZ8.OPEN:
                 return this.handleOpen;
-            case z.wZ8.CONFIRM:
+            case V.wZ8.CONFIRM:
             default:
                 return this.handleAccept;
         }
     }
     trackStepAnalytics() {
-        let { giftCode: t, customGiftMessage: e, emojiName: n, soundId: i, sku: r, analyticsLocations: s } = this.props,
+        let { giftCode: e, customGiftMessage: t, emojiName: n, soundId: r, sku: i, analyticsLocations: s } = this.props,
             { isCustomGift: l } = this.state;
-        N.default.track(z.rMx.GIFT_ACCEPT_STEP, {
+        D.default.track(V.rMx.GIFT_ACCEPT_STEP, {
             to_step: this.step,
             location_stack: s,
             has_custom_message: l,
-            is_custom_message_edited: l && e !== V.intl.string(V.t.ZkOo1U),
-            gift_style: t.giftStyle,
-            gift_code: t.code,
+            is_custom_message_edited: l && t !== W.intl.string(W.t.ZkOo1U),
+            gift_style: e.giftStyle,
+            gift_code: e.code,
             emoji_name: n,
-            sound_id: i,
-            product_line: null == r ? void 0 : r.productLine,
+            sound_id: r,
+            product_line: null == i ? void 0 : i.productLine,
         });
     }
     render() {
         let {
-                application: t,
-                accepting: e,
+                application: e,
+                accepting: t,
                 onClose: n,
-                giftCode: r,
+                giftCode: i,
                 headerId: s,
                 transitionState: a,
                 useReducedMotion: o,
                 onComplete: c,
                 customGiftMessage: d,
-                emojiName: p,
-                soundId: f,
+                emojiName: f,
+                soundId: p,
                 isThemeDark: h,
             } = this.props,
-            m = I.default.getUser(r.userId),
+            m = R.default.getUser(i.userId),
             { isCustomGift: g, isCollectiblesGift: b, accepted: y, opened: O, emojiURL: j } = this.state,
-            P = I.default.getCurrentUser(),
-            x = this.step === z.wZ8.ERROR,
+            v = R.default.getCurrentUser(),
+            x = this.step === V.wZ8.ERROR,
             S =
-                (null == r ? void 0 : r.userId) != null &&
-                null != P &&
-                (null == P ? void 0 : P.id) != null &&
-                r.userId === P.id;
+                (null == i ? void 0 : i.userId) != null &&
+                null != v &&
+                (null == v ? void 0 : v.id) != null &&
+                i.userId === v.id;
         switch (this.step) {
-            case z.wZ8.ERROR:
-                null == c || c(r, !1);
+            case V.wZ8.ERROR:
+                null == c || c(i, !1);
                 break;
-            case z.wZ8.SUCCESS:
-                null == c || c(r, !0);
+            case V.wZ8.SUCCESS:
+                null == c || c(i, !0);
         }
-        return (0, i.jsxs)("div", {
+        return (0, r.jsxs)("div", {
             ref: this.modalRef,
             children: [
-                (0, i.jsxs)(u.Y0X, {
+                (0, r.jsxs)(u.Y0X, {
                     "data-migration-pending": !0,
                     transitionState: a,
                     size: u.CgR.SMALL,
-                    className: K.modal,
+                    className: $.modal,
                     "aria-labelledby": s,
                     parentComponent: "GiftCodeModal",
                     children: [
-                        null != r.giftStyle &&
+                        null != i.giftStyle &&
                             !g &&
                             !b &&
-                            (0, i.jsx)(U.Z, {
+                            (0, r.jsx)(z.Z, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
-                                giftStyle: r.giftStyle,
-                                className: K.seasonalGiftIcon,
+                                giftStyle: i.giftStyle,
+                                className: $.seasonalGiftIcon,
                             }),
-                        !g && (0, i.jsx)("div", { className: K.backSplash }),
+                        !g && (0, r.jsx)("div", { className: $.backSplash }),
                         !b &&
-                            (0, i.jsx)(u.olH, {
+                            (0, r.jsx)(u.olH, {
                                 "data-migration-pending": !0,
                                 onClick: n,
-                                className: K.closeButton,
+                                className: $.closeButton,
                             }),
-                        (0, i.jsxs)(u.hzk, {
+                        (0, r.jsxs)(u.hzk, {
                             "data-migration-pending": !0,
                             className: l()({
-                                [K.content]: !g,
-                                [K.contentCustomGift]: g,
+                                [$.content]: !g,
+                                [$.contentCustomGift]: g,
                             }),
                             children: [
-                                !b && (null == r.giftStyle || (g && y))
-                                    ? (0, i.jsx)(w.Z, {
+                                !b && (null == i.giftStyle || (g && y))
+                                    ? (0, r.jsx)(w.Z, {
                                           size: w.A.LARGE,
-                                          game: t,
-                                          skuId: r.skuId,
+                                          game: e,
+                                          skuId: i.skuId,
                                       })
                                     : null,
                                 x &&
-                                    (0, i.jsx)("img", {
+                                    (0, r.jsx)("img", {
                                         alt: "",
-                                        src: h ? W : Y,
+                                        src: h ? Y : q,
                                     }),
-                                (0, i.jsxs)(u.Heading, {
+                                (0, r.jsxs)(u.Heading, {
                                     id: s,
                                     className: l()({
-                                        [K.customGiftHeader]: g && !y,
-                                        [K.header]: !g || y,
+                                        [$.customGiftHeader]: g && !y,
+                                        [$.header]: !g || y,
                                     }),
                                     variant: "heading-sm/semibold",
                                     children: [
-                                        (0, i.jsx)("div", {
-                                            className: l()({ [K.customGiftHeaderText]: g }),
+                                        (0, r.jsx)("div", {
+                                            className: l()({ [$.customGiftHeaderText]: g }),
                                             children: this.firstHeaderText,
                                         }),
-                                        (0, i.jsx)("div", { children: this.secondHeaderText }),
+                                        (0, r.jsx)("div", { children: this.secondHeaderText }),
                                     ],
                                 }),
                                 !(g && !y) &&
-                                    (0, i.jsx)(u.Text, {
-                                        className: K.body,
+                                    (0, r.jsx)(u.Text, {
+                                        className: $.body,
                                         variant: "text-sm/normal",
                                         children: this.bodyText,
                                     }),
                                 g &&
                                     !b &&
-                                    null != r.giftStyle &&
+                                    null != i.giftStyle &&
                                     !y &&
                                     !x &&
-                                    (0, i.jsx)(U.Z, {
+                                    (0, r.jsx)(z.Z, {
                                         defaultAnimationState: this.getDefaultAnimationStatus(),
                                         idleAnimationState: this.getIdleAnimationStatus(),
-                                        className: K.giftAnimation,
-                                        giftStyle: r.giftStyle,
+                                        className: $.giftAnimation,
+                                        giftStyle: i.giftStyle,
                                     }),
-                                this.state.opened && !x && b && (0, i.jsx)(v.Z, { giftCode: r }),
+                                this.state.opened && !x && b && (0, r.jsx)(P.Z, { giftCode: i }),
                                 x &&
-                                    (0, i.jsx)(u.Text, {
-                                        className: K.body,
+                                    (0, r.jsx)(u.Text, {
+                                        className: $.body,
                                         variant: "text-md/normal",
                                         children: this.errorMessage,
                                     }),
@@ -322,24 +340,24 @@ class Q extends r.Component {
                                     null != d &&
                                     "" !== d &&
                                     !S &&
-                                    (0, i.jsxs)(i.Fragment, {
+                                    (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, i.jsx)(u.Heading, {
+                                            (0, r.jsx)(u.Heading, {
                                                 id: s,
                                                 variant: "heading-md/semibold",
-                                                children: V.intl.format(V.t.DDO4Wz, { sender: L.ZP.getName(m) }),
+                                                children: W.intl.format(W.t.DDO4Wz, { sender: H.ZP.getName(m) }),
                                             }),
-                                            (0, i.jsx)(u.Text, {
-                                                className: K.customMessage,
+                                            (0, r.jsx)(u.Text, {
+                                                className: $.customMessage,
                                                 variant: "text-md/semibold",
                                                 children: d,
                                             }),
                                         ],
                                     }),
-                                (0, i.jsx)(u.Button, {
+                                (0, r.jsx)(u.Button, {
                                     variant: "primary",
                                     text: this.buttonText,
-                                    loading: e,
+                                    loading: t,
                                     onClick: () => {
                                         this.trackStepAnalytics(), this.handleClick();
                                     },
@@ -348,32 +366,32 @@ class Q extends r.Component {
                         }),
                     ],
                 }),
-                null != r.giftStyle &&
+                null != i.giftStyle &&
                     !o &&
-                    this.step !== z.wZ8.ERROR &&
+                    this.step !== V.wZ8.ERROR &&
                     !y &&
-                    !e &&
+                    !t &&
                     O &&
-                    (null == p || null == j
-                        ? (0, i.jsx)(q, { openedGift: O && !y && !e })
-                        : (0, i.jsx)(H.Z, {
+                    (null == f || null == j
+                        ? (0, r.jsx)(X, { openedGift: O && !y && !t })
+                        : (0, r.jsx)(F.Z, {
                               confettiTarget: this.modalRef.current,
                               emojiURL: j,
                           })),
                 !y &&
-                    !e &&
+                    !t &&
                     O &&
-                    null != f &&
-                    (0, i.jsx)(J, {
-                        soundId: f,
+                    null != p &&
+                    (0, r.jsx)(ee, {
+                        soundId: p,
                         step: this.step,
                     }),
             ],
         });
     }
-    constructor(...t) {
-        super(...t),
-            $(this, "state", {
+    constructor(...e) {
+        super(...e),
+            J(this, "state", {
                 error: null,
                 accepted: !1,
                 opened: !1,
@@ -382,110 +400,113 @@ class Q extends r.Component {
                 step: void 0,
                 emojiURL: void 0,
             }),
-            $(this, "modalRef", r.createRef()),
-            $(this, "handleOpen", () => {
+            J(this, "modalRef", i.createRef()),
+            J(this, "handleOpen", () => {
                 this.setState({ opened: !0 });
             }),
-            $(this, "handleAccept", async () => {
-                let { giftCode: t, channelContext: e, onAccept: n } = this.props;
-                if (null == t) throw Error("GiftCode is null at acceptance.");
+            J(this, "handleAccept", async () => {
+                let { giftCode: e, channelContext: t, onAccept: n } = this.props;
+                if (null == e) throw Error("GiftCode is null at acceptance.");
                 try {
                     await d.Z.redeemGiftCode({
-                        code: t.code,
-                        options: { channelId: e },
+                        code: e.code,
+                        options: { channelId: t },
                     }),
                         this.setState({ accepted: !0 }),
                         null == n || n();
-                } catch (t) {
-                    this.setState({ error: t });
+                } catch (e) {
+                    this.setState({ error: e });
                 }
             }),
-            $(this, "handleGoToLibrary", () => {
-                let { onClose: t, libraryApplication: e } = this.props;
-                (0, _.uL)(z.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
+            J(this, "handleGoToLibrary", () => {
+                let { onClose: e, libraryApplication: t } = this.props;
+                (0, _.uL)(V.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
             }),
-            $(this, "getDefaultAnimationStatus", () => (this.step === z.wZ8.OPEN ? M.SR.IDLE : M.SR.ACTION)),
-            $(this, "getIdleAnimationStatus", () => {
-                if (this.step !== z.wZ8.OPEN) return M.SR.LOOP;
+            J(this, "getDefaultAnimationStatus", () => (this.step === V.wZ8.OPEN ? U.SR.IDLE : U.SR.ACTION)),
+            J(this, "getIdleAnimationStatus", () => {
+                if (this.step !== V.wZ8.OPEN) return U.SR.LOOP;
             });
     }
 }
-let X = o.ZP.connectStores([T.Z, R.Z, b.Z, A.Z, E.Z, f.Z, y.Z], (t) => {
-        let { giftCode: e } = t,
-            n = R.Z.get(e.skuId),
-            i = null != n ? b.Z.getApplication(n.applicationId) : null,
-            r = f.Z.useReducedMotion;
+let en = o.ZP.connectStores([I.Z, N.Z, b.Z, E.Z, k.Z, p.Z, y.Z], (e) => {
+        let { giftCode: t } = e,
+            n = N.Z.get(t.skuId),
+            r = null != n ? b.Z.getApplication(n.applicationId) : null,
+            i = p.Z.useReducedMotion;
         return {
             sku: n,
             libraryApplication:
-                null != n && (null == e ? void 0 : e.entitlementBranches) != null
-                    ? (0, D.z2)(e.entitlementBranches, n, T.Z)
+                null != n && (null == t ? void 0 : t.entitlementBranches) != null
+                    ? (0, L.z2)(t.entitlementBranches, n, I.Z)
                     : null,
-            application: i,
-            subscriptionPlan: null != e.subscriptionPlanId ? (0, G.oE)(e.subscriptionPlanId) : null,
-            accepting: A.Z.getIsAccepting(e.code),
-            useReducedMotion: r,
+            application: r,
+            subscriptionPlan: null != t.subscriptionPlanId ? (0, M.oE)(t.subscriptionPlanId) : null,
+            accepting: E.Z.getIsAccepting(t.code),
+            useReducedMotion: i,
         };
-    })(Q),
-    tt = (t) => {
-        var e,
+    })((e) => {
+        let { sku: t, giftCode: n, channelContext: s, customGiftMessage: l, onClose: a } = e,
+            o = null != t && (0, Z.K$)(t);
+        return (i.useEffect(() => {
+            if (o) {
+                (0, C.L)({
+                    sku: t,
+                    giftCode: n,
+                    channelContext: s,
+                    customGiftMessage: l,
+                }),
+                    a();
+                return;
+            }
+        }, [t, o, s, l, n, a]),
+        o)
+            ? null
+            : (0, r.jsx)(et, Q({}, e));
+    }),
+    er = (e) => {
+        var t,
             n,
-            { channelContext: r, code: s, customGiftMessage: l, emojiName: a, soundId: u, onClose: d } = t,
-            f = (function (t, e) {
-                if (null == t) return {};
+            { channelContext: i, code: s, customGiftMessage: l, emojiName: a, soundId: u, onClose: d } = e,
+            p = (function (e, t) {
+                if (null == e) return {};
                 var n,
-                    i,
-                    r = (function (t, e) {
-                        if (null == t) return {};
+                    r,
+                    i = (function (e, t) {
+                        if (null == e) return {};
                         var n,
-                            i,
-                            r = {},
-                            s = Object.keys(t);
-                        for (i = 0; i < s.length; i++) (n = s[i]), e.indexOf(n) >= 0 || (r[n] = t[n]);
-                        return r;
-                    })(t, e);
+                            r,
+                            i = {},
+                            s = Object.keys(e);
+                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
+                    })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(t);
-                    for (i = 0; i < s.length; i++)
-                        (n = s[i]),
-                            !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]);
+                    var s = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < s.length; r++)
+                        (n = s[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
-                return r;
-            })(t, ["channelContext", "code", "customGiftMessage", "emojiName", "soundId", "onClose"]);
+                return i;
+            })(e, ["channelContext", "code", "customGiftMessage", "emojiName", "soundId", "onClose"]);
         let g = (0, S.Dt)(),
-            b = (0, o.e7)([A.Z], () => A.Z.get(s)),
-            y = (0, p.ZP)(),
-            { analyticsLocations: v } = (0, m.ZP)(h.Z.GIFT_CODE_MODAL),
+            b = (0, o.e7)([E.Z], () => E.Z.get(s)),
+            y = (0, f.ZP)(),
+            { analyticsLocations: P } = (0, m.ZP)(h.Z.GIFT_CODE_MODAL),
             { product: x } = (0, j.T)(null == b ? void 0 : b.skuId, !0);
         return null == b
             ? null
-            : (0, i.jsx)(
-                  X,
-                  ((e = (function (t) {
-                      for (var e = 1; e < arguments.length; e++) {
-                          var n = null != arguments[e] ? arguments[e] : {},
-                              i = Object.keys(n);
-                          "function" == typeof Object.getOwnPropertySymbols &&
-                              (i = i.concat(
-                                  Object.getOwnPropertySymbols(n).filter(function (t) {
-                                      return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                  }),
-                              )),
-                              i.forEach(function (e) {
-                                  $(t, e, n[e]);
-                              });
-                      }
-                      return t;
-                  })({}, f)),
+            : (0, r.jsx)(
+                  en,
+                  ((t = Q({}, p)),
                   (n = n =
                       {
                           customGiftMessage: l,
-                          channelContext: r,
+                          channelContext: i,
                           giftCode: b,
                           headerId: g,
                           emojiName: a,
                           soundId: u,
-                          analyticsLocations: v,
+                          analyticsLocations: P,
                           isThemeDark: (0, c.wj)(y),
                           onClose: d,
                           collectiblesItemType: (0, O.$W)(x),
@@ -493,26 +514,26 @@ let X = o.ZP.connectStores([T.Z, R.Z, b.Z, A.Z, E.Z, f.Z, y.Z], (t) => {
                               null != x
                                   ? () => {
                                         d(),
-                                            (0, P.Z)({
+                                            (0, v.Z)({
                                                 product: x,
-                                                analyticsLocations: v,
-                                                purchaseType: B.o8.GIFT,
+                                                analyticsLocations: P,
+                                                purchaseType: K.o8.GIFT,
                                             });
                                     }
                                   : void 0,
                       }),
                   Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                      : (function (t, e) {
-                            var n = Object.keys(t);
+                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                      : (function (e, t) {
+                            var n = Object.keys(e);
                             if (Object.getOwnPropertySymbols) {
-                                var i = Object.getOwnPropertySymbols(t);
-                                n.push.apply(n, i);
+                                var r = Object.getOwnPropertySymbols(e);
+                                n.push.apply(n, r);
                             }
                             return n;
-                        })(Object(n)).forEach(function (t) {
-                            Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                        })(Object(n)).forEach(function (e) {
+                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                         }),
-                  e),
+                  t),
               );
     };
