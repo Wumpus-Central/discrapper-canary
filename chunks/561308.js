@@ -11,7 +11,7 @@ n.d(t, {
     ap: () => C,
     bT: () => N,
     dw: () => S,
-    ig: () => L,
+    ig: () => x,
     kr: () => E,
     n2: () => y,
     q_: () => w,
@@ -51,11 +51,10 @@ let d = (e) => {
         function a(e) {
             return String(e).padStart(2, "0");
         }
-        return u.intl.formatToPlainString(u.t["l5PP/2"], {
-            hours: i,
-            minutes: i > 0 ? a(r) : r,
-            seconds: a(n),
-        });
+        let o = i,
+            s = i > 0 ? a(r) : r,
+            l = a(n);
+        return i > 0 ? "".concat(o, ":").concat(s, ":").concat(l) : "".concat(s, ":").concat(l);
     },
     p = {
         secondsAgo: (e) => u.intl.formatToPlainString(u.t.EOrEJl, { count: e }),
@@ -200,7 +199,7 @@ function D(e) {
               tooltipText: u.intl.formatToPlainString(u.t.S5F485, { hours: n }),
           };
 }
-function L(e) {
+function x(e) {
     var t;
     return null == (t = g(e, o.N.TRENDING_CONTENT)) ? void 0 : t.trending;
 }

@@ -123,16 +123,34 @@ function h(e) {
             let t = this.props,
                 { timestamps: n } = t,
                 i = d(t, ["timestamps"]),
-                { hours: a, minutes: s, seconds: c } = this.state,
-                f = {
-                    hours: this.renderTime(a, !0),
-                    minutes: this.renderTime(s),
-                    seconds: this.renderTime(c),
-                };
+                a = this.renderTime(this.state.hours, !0),
+                s = this.renderTime(this.state.minutes),
+                c = this.renderTime(this.state.seconds),
+                f = -1 === a ? "".concat(s, ":").concat(c) : "".concat(a, ":").concat(s, ":").concat(c);
             return null != n.end
-                ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t["I/J7vI"], f) }))
+                ? (0, r.jsx)(
+                      e,
+                      u(l({}, i), {
+                          message: o.intl.formatToPlainString(o.t["I/J7vI"], {
+                              duration: f,
+                              hours: a,
+                              minutes: s,
+                              seconds: c,
+                          }),
+                      }),
+                  )
                 : null != n.start
-                  ? (0, r.jsx)(e, u(l({}, i), { message: o.intl.formatToPlainString(o.t.M9Fexd, f) }))
+                  ? (0, r.jsx)(
+                        e,
+                        u(l({}, i), {
+                            message: o.intl.formatToPlainString(o.t.M9Fexd, {
+                                duration: f,
+                                hours: a,
+                                minutes: s,
+                                seconds: c,
+                            }),
+                        }),
+                    )
                   : null;
         }
         constructor(e) {
