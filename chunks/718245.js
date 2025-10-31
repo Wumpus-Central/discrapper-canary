@@ -84,18 +84,12 @@ function p(e) {
     )
         return (0, r.jsx)(o.C, d({}, e));
     let f = c({}, u(e)),
-        p = e.options.map((e) => {
-            var t, n;
-            return _(d({}, e), {
+        p = e.options.map((e) =>
+            _(d({}, e), {
                 icon: e.leadingIcon,
-                desc:
-                    "string" == typeof e.desc
-                        ? e.desc
-                        : null != (n = null == (t = e.desc) ? void 0 : t.toString())
-                          ? n
-                          : null,
-            });
-        }),
+                desc: e.desc,
+            }),
+        ),
         h = _(d({}, f), {
             options: p,
             errorMessage: e.errorMessage,
