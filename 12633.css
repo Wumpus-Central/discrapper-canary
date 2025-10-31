@@ -56851,9 +56851,9 @@ h3.improved__1689b:after {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -62429,6 +62429,10 @@ html .progress__61462 {
 .infoIcon_ae2544 {
     height: 16px;
     width: 16px
+}
+
+.buttonContainer_ae2544 {
+    flex: 1
 }
 
 .container__96554 {

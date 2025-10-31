@@ -4,4 +4,5 @@ e.exports = {
     infoBadge: "infoBadge_ae2544",
     headerLine: "headerLine_ae2544",
     infoIcon: "infoIcon_ae2544",
+    buttonContainer: "buttonContainer_ae2544",
 };
