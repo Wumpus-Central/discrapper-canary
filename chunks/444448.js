@@ -1,66 +1,66 @@
-n.d(t, { d: () => x });
-var i = n(951288),
-    r = n(647438),
+n.d(t, { d: () => O });
+var r = n(951288),
+    i = n(647438),
     l = n(512722),
     a = n.n(l),
     o = n(159691),
-    s = n(481060),
-    c = n(987209),
-    d = n(563132),
-    u = n(614277),
+    c = n(481060),
+    s = n(987209),
+    u = n(563132),
+    d = n(614277),
     f = n(698708),
-    g = n(844068),
-    p = n(517730),
-    m = n(436585),
-    v = n(848118),
-    b = n(388032),
-    h = n(216215);
-function x(e) {
+    p = n(844068),
+    g = n(517730),
+    b = n(436585),
+    m = n(848118),
+    v = n(388032),
+    j = n(216215);
+function O(e) {
     var t;
     let { handleClose: n } = e,
-        { skusById: l, selectedSkuId: x, application: j } = (0, d.JL)(),
-        { isGift: C, giftRecipient: y } = (0, c.wD)();
-    a()(null != x, "Expected selectedSkuId"), a()(null != j, "Expected application");
-    let P = l[x];
-    return (a()(null != P, "Expected sku"),
-    r.useEffect(() => {
-        C ||
-            ((0, m.U)(),
+        { skusById: l, selectedSkuId: O, application: y } = (0, u.JL)(),
+        { isGift: h, giftRecipient: x } = (0, s.wD)();
+    a()(null != O, "Expected selectedSkuId"), a()(null != y, "Expected application");
+    let C = l[O];
+    return (a()(null != C, "Expected sku"),
+    i.useEffect(() => {
+        h ||
+            ((0, b.U)(),
             n(),
-            (0, p.I)({
-                sku: P,
-                application: j,
+            (0, g.I)({
+                sku: C,
+                application: y,
             }));
-    }, [C, P, j, n]),
-    C)
-        ? (0, i.jsxs)(u.C3, {
+    }, [h, C, y, n]),
+    h)
+        ? (0, r.jsxs)(d.C3, {
               children: [
-                  (0, i.jsx)(g.Z, {}),
-                  (0, i.jsx)(f.Z, {}),
-                  (0, i.jsxs)("div", {
-                      className: h.confirmation,
+                  (0, r.jsx)(p.Z, {}),
+                  (0, r.jsx)(f.Z, {}),
+                  (0, r.jsxs)("div", {
+                      className: j.confirmation,
                       children: [
-                          (0, i.jsx)(v.A, {
-                              sku: P,
+                          (0, r.jsx)(m.A, {
+                              sku: C,
                               shape: "square",
-                              className: h.skuImage,
+                              containerClassName: j.skuImage,
                           }),
-                          (0, i.jsx)(s.Heading, {
+                          (0, r.jsx)(c.Heading, {
                               variant: "heading-xxl/bold",
-                              className: h.confirmationHeader,
-                              children: b.intl.string(b.t["5glWta"]),
+                              className: j.confirmationHeader,
+                              children: v.intl.string(v.t["5glWta"]),
                           }),
-                          (0, i.jsx)(s.Text, {
+                          (0, r.jsx)(c.Text, {
                               variant: "text-md/normal",
-                              children: b.intl.formatToPlainString(b.t["2VjPTw"], {
-                                  itemName: P.name,
-                                  giftRecipient: null != (t = null == y ? void 0 : y.username) ? t : "your recipient",
+                              children: v.intl.formatToPlainString(v.t["2VjPTw"], {
+                                  itemName: C.name,
+                                  giftRecipient: null != (t = null == x ? void 0 : x.username) ? t : "your recipient",
                               }),
                           }),
-                          (0, i.jsx)("div", { className: h.divider }),
-                          (0, i.jsx)(o.zxk, {
+                          (0, r.jsx)("div", { className: j.divider }),
+                          (0, r.jsx)(o.zxk, {
                               onClick: n,
-                              text: b.intl.string(b.t.cpT0Cq),
+                              text: v.intl.string(v.t.cpT0Cq),
                               fullWidth: !0,
                           }),
                       ],

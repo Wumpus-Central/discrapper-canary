@@ -42269,19 +42269,33 @@ screen and (max-width:485px) {
     background-position: 50%;
     background-size: cover;
     border-radius: var(--radius-xs);
+    box-sizing: border-box;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    overflow: hidden;
+    position: relative
 }
 
 .cardContainer__47729.square__47729 {
     aspect-ratio: 1
 }
 
+.cardBackgroundImage__47729 {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    inset-inline: 0;
+    bottom: 0;
+    position: absolute;
+    top: 0
+}
+
 .skuImage__47729 {
     border-radius: var(--radius-xs);
     max-width: 100%;
     object-fit: contain;
-    width: 100%
+    width: 100%;
+    z-index: 1
 }
 
 .skuImage__47729.square__47729 {
