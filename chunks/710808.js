@@ -258,7 +258,7 @@ function L() {
                                     onClick: A,
                                 }),
                                 (0, r.jsx)(s.Button, {
-                                    variant: "primary",
+                                    variant: "secondary",
                                     text: T.intl.string(T.t.nuPtYi),
                                     onClick: P,
                                 }),
