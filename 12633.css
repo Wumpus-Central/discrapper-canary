@@ -43183,6 +43183,20 @@ screen and (max-width:485px) {
     margin-inline-end: 16px
 }
 
+.wishlistGiftPreview_bf1b4a {
+    margin-bottom: 12px;
+    -webkit-margin-end: 16px;
+    margin-inline-end: 16px
+}
+
+.wishlistGiftPreviewHeader_bf1b4a {
+    margin-bottom: 0
+}
+
+.wishlistGiftPreviewFooter_bf1b4a {
+    margin-bottom: 4px
+}
+
 .selectGiftTitle_bf1b4a {
     margin-bottom: 16px;
     margin-top: 24px
@@ -56851,9 +56865,9 @@ h3.improved__1689b:after {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

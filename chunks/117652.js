@@ -205,14 +205,18 @@ function j(e) {
                               (0, r.jsx)(d.Z, {
                                   skuId: B,
                                   price: e,
-                                  className: w.giftPreview,
+                                  className: w.wishlistGiftPreview,
+                                  previewHeaderClassName: w.wishlistGiftPreviewHeader,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
                                   hideProfilePreview: !0,
                               }),
-                          (0, r.jsx)(G, {
-                              handleClose: n,
-                              selectedSkuId: B,
+                          (0, r.jsx)("div", {
+                              className: w.wishlistGiftPreviewFooter,
+                              children: (0, r.jsx)(G, {
+                                  handleClose: n,
+                                  selectedSkuId: B,
+                              }),
                           }),
                       ],
                   })
