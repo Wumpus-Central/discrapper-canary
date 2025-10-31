@@ -10,22 +10,22 @@ var r = n(951288),
     d = n(31569),
     p = n(258971),
     f = n(164991),
-    h = n(859921),
-    m = n(220068),
+    m = n(859921),
+    h = n(220068),
     g = n(626135),
     _ = n(836768),
     b = n(766219),
     E = n(749681),
     O = n(49898),
     I = n(981631),
-    v = n(46140),
-    y = n(388032),
+    y = n(46140),
+    v = n(388032),
     C = n(933767);
 function S(e) {
     let { tab: t } = e,
         { enabled: n } = c.c.useExperiment({ location: "GlobalDiscoverySidebar" }, { autoTrackExposure: !0 }),
         l = _.Z.useField("selectedTab"),
-        y = i.useMemo(
+        v = i.useMemo(
             () =>
                 (function (e, t) {
                     switch (e) {
@@ -47,11 +47,11 @@ function S(e) {
             switch (t) {
                 case O.GlobalDiscoveryTab.QUESTS:
                     return (
-                        T && m.Z.resetState(),
+                        T && h.Z.resetState(),
                         g.default.track(I.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
                         (0, E.transitionToGlobalDiscovery)({
                             tab: O.GlobalDiscoveryTab.QUESTS,
-                            location: v.dr.DISCOVERY_SIDEBAR,
+                            location: y.dr.DISCOVERY_SIDEBAR,
                             questContent: s.j.DISCOVERY_SIDEBAR,
                         })
                     );
@@ -68,7 +68,7 @@ function S(e) {
                     return;
                 case O.GlobalDiscoveryTab.SERVERS:
                     if (!T) return (0, E.transitionToGlobalDiscovery)({ tab: t });
-                    f.Z.resetState(), h.Z.resetState();
+                    f.Z.resetState(), m.Z.resetState();
                     return;
                 default:
                     return (0, E.transitionToGlobalDiscovery)({ tab: t });
@@ -80,7 +80,7 @@ function S(e) {
         children: [
             (0, r.jsx)("div", {
                 className: C.navItemIcon,
-                children: y,
+                children: v,
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-md/medium",
@@ -98,7 +98,7 @@ let T = function () {
                 className: C.header,
                 children: (0, r.jsx)(o.Heading, {
                     variant: "text-lg/semibold",
-                    children: y.intl.string(y.t["1KqYnl"]),
+                    children: v.intl.string(v.t["1KqYnl"]),
                 }),
             }),
             (0, r.jsx)("nav", {

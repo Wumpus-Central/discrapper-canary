@@ -1,11 +1,11 @@
 t.d(n, {
-    MN: () => o,
+    MN: () => s,
     XG: () => d,
-    ao: () => r,
+    ao: () => i,
     kD: () => u,
     lj: () => c,
-    my: () => i,
-    pN: () => s,
+    my: () => r,
+    pN: () => o,
 }),
     t(415506),
     t(190126),
@@ -15,19 +15,19 @@ t.d(n, {
     t(490233),
     t(97749),
     t(388685);
-var a = t(943351),
-    l = t(388032);
-let r = (e, n, t) => (-1 === e ? 0 : e - (n * e) / t);
-function i(e) {
+var l = t(943351),
+    a = t(388032);
+let i = (e, n, t) => (-1 === e ? 0 : e - (n * e) / t);
+function r(e) {
     return e / 1000;
 }
-let o = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
-    s = (e, n, t, a) => (n >= 0 && t > 0 ? ((e - (n - (t * n) / a)) * 100) / t : (100 * e) / a).toFixed(4),
-    u = (e, n, t, a) =>
-        (n >= 0 && t > 0 ? -((e - (n + (t * (a - n)) / a)) * 100) / t : -(100 * e * 1) / a + 100).toFixed(4);
+let s = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
+    o = (e, n, t, l) => (n >= 0 && t > 0 ? ((e - (n - (t * n) / l)) * 100) / t : (100 * e) / l).toFixed(4),
+    u = (e, n, t, l) =>
+        (n >= 0 && t > 0 ? -((e - (n + (t * (l - n)) / l)) * 100) / t : -(100 * e * 1) / l + 100).toFixed(4);
 async function c(e) {
-    if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !a.bp.has(e.type))
-        throw Error(l.intl.formatToPlainString(l.t["2y3xGU"], { fileType: e.type }));
+    if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !l.bp.has(e.type))
+        throw Error(a.intl.formatToPlainString(a.t["2y3xGU"], { fileType: e.type }));
     let n = new Audio(URL.createObjectURL(e));
     return (
         await new Promise((e) => {

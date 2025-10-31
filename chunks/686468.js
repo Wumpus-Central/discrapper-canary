@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(146085),
     y = n(979339),
     x = n(643632),
-    v = n(388032),
+    O = n(388032),
     j = n(196979);
-function O(e) {
+function v(e) {
     let { onClick: t, className: n } = e,
         i = c.S6n;
     return (0, r.jsx)(u.Z, {
@@ -32,8 +32,8 @@ function O(e) {
             width: 20,
         }),
         color: o.Z.unsafe_rawColors.PRIMARY_700.css,
-        title: v.intl.string(v.t["jMLfp/"]),
-        description: v.intl.string(v.t["Vd/rEX"]),
+        title: O.intl.string(O.t["jMLfp/"]),
+        description: O.intl.string(O.t["Vd/rEX"]),
         onClick: t,
         className: n,
     });
@@ -55,14 +55,14 @@ function C(e) {
                 color: "header-secondary",
                 children: (function (e) {
                     if (0 === e.length) return "";
-                    if (1 === e.length) return v.intl.formatToPlainString(v.t["5ULgaQ"], { first: e[0].userNick });
+                    if (1 === e.length) return O.intl.formatToPlainString(O.t["5ULgaQ"], { first: e[0].userNick });
                     if (2 === e.length)
-                        return v.intl.formatToPlainString(v.t.BHK0Op, {
+                        return O.intl.formatToPlainString(O.t.BHK0Op, {
                             first: e[0].userNick,
                             second: e[1].userNick,
                         });
                     let t = e.length - 2;
-                    return v.intl.formatToPlainString(v.t.T3MT4n, {
+                    return O.intl.formatToPlainString(O.t.T3MT4n, {
                         first: e[0].userNick,
                         second: e[1].userNick,
                         numOthers: t,
@@ -93,13 +93,13 @@ function I(e) {
                             (0, r.jsx)(c.Heading, {
                                 className: j.__invalid_title,
                                 variant: "heading-xxl/normal",
-                                children: v.intl.string(v.t.QGnDLs),
+                                children: O.intl.string(O.t.QGnDLs),
                             }),
                             (0, r.jsx)(c.Text, {
                                 tag: "div",
                                 className: j.subtitle,
                                 variant: "heading-lg/normal",
-                                children: v.intl.string(v.t.djfK36),
+                                children: O.intl.string(O.t.djfK36),
                             }),
                         ],
                     }),
@@ -117,7 +117,7 @@ function I(e) {
                           })
                         : null,
                     l
-                        ? (0, r.jsx)(O, {
+                        ? (0, r.jsx)(v, {
                               className: a()({ [j.eventPrompt]: !0 }),
                               onClick: n,
                           })

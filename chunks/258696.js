@@ -38,13 +38,13 @@ function S(e) {
 function A(e) {
     var t, n, i, f, _, p, y;
     let { type: O, disabled: A, channel: N, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
-        L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        x = C(N.id, O, P),
-        { activeCommand: M, activeCommandOption: k } = (0, o.cj)([c.Z], () => ({
+        x = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
+        L = C(N.id, O, P),
+        { activeCommand: M, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(N.id),
             activeCommandOption: c.Z.getActiveOption(N.id),
         })),
-        { paymentsBlocked: j } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: k } = u.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         U = [],
         G = !N.isDM() || void 0 === N.recipients || N.recipients.length > 1,
         B = (0, o.e7)([h.default], () => (G ? null : h.default.getUser(N.recipients[0]))),
@@ -52,7 +52,7 @@ function A(e) {
     return (a.tq ||
         ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
             null == M &&
-            !j &&
+            !k &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
             U.push(
                 (0, r.jsx)(
@@ -104,7 +104,7 @@ function A(e) {
                 ),
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == M || (null != k && k.type !== s.jw.ATTACHMENT)) &&
+        (null == M || (null != j && j.type !== s.jw.ATTACHMENT)) &&
         U.push(
             (0, r.jsx)(
                 g.Z,
@@ -117,13 +117,13 @@ function A(e) {
         ),
     null != D && U.push(D),
     (null == (i = O.submit) ? void 0 : i.button) != null &&
-        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || L) &&
+        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || x) &&
         U.push(
             (0, r.jsx)(
                 v.Z,
                 {
                     onClick: R,
-                    disabled: A || x,
+                    disabled: A || L,
                 },
                 "submit",
             ),

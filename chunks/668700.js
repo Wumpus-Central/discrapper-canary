@@ -50,7 +50,7 @@ function T(e) {
                 }),
             });
         },
-        L = () => {
+        x = () => {
             if (!w)
                 return (0, r.jsx)(l.Text, {
                     variant: "text-xs/normal",
@@ -76,7 +76,7 @@ function T(e) {
                 }),
             });
         },
-        x = C !== y.l.MODAL && C !== y.l.MODAL_V2 && C !== y.l.SIDEBAR;
+        L = C !== y.l.MODAL && C !== y.l.MODAL_V2 && C !== y.l.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(m.Z, { className: v.voiceChannelDivider }),
@@ -97,7 +97,7 @@ function T(e) {
                                 color: l.TVs.colors.TEXT_SECONDARY,
                                 className: v.voiceIcon,
                             }),
-                            L(),
+                            x(),
                         ],
                     }),
                     (0, r.jsx)(o.Z, {
@@ -112,7 +112,7 @@ function T(e) {
                             e.stopPropagation(), null == S || S({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                         },
                         onUserClick: (e) => e.stopPropagation(),
-                        disableUserPopout: !!x || ((e) => e === t.id),
+                        disableUserPopout: !!L || ((e) => e === t.id),
                         "aria-label": O.intl.string(O.t["jNqDh/"]),
                     }),
                 ],

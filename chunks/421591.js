@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685), n(482853);
+n.d(t, { Z: () => x }), n(388685), n(482853);
 var i = n(951288),
     l = n(647438),
     r = n(481060),
@@ -17,8 +17,8 @@ let y = {
         width: f.Gy,
         height: f.lv,
     },
-    x = { height: f.lv },
-    g = l.memo(
+    g = { height: f.lv },
+    x = l.memo(
         l.forwardRef(function (e, t) {
             let { context: n, entrypoint: r, initHistory: u } = e,
                 { analyticsLocations: d } = (0, s.ZP)(a.Z.APP_LAUNCHER);
@@ -170,13 +170,13 @@ function N(e) {
                 }
             );
         })(a),
-        { currentView: h, getMostRecentHistoryItemByType: y, setSlideReady: g } = (0, u.hH)();
+        { currentView: h, getMostRecentHistoryItemByType: y, setSlideReady: x } = (0, u.hH)();
     l.useEffect(() => {
-        g(!1);
-    }, [null == h ? void 0 : h.type, g]);
+        x(!1);
+    }, [null == h ? void 0 : h.type, x]);
     let b = l.useCallback(() => {
-        g(!0);
-    }, [g]);
+        x(!0);
+    }, [x]);
     if (null == h) return null;
     let N = y(u.gc.LIST),
         j = y(u.gc.APPLICATION);
@@ -189,7 +189,7 @@ function N(e) {
                 id: u.gc.HOME,
                 children: (0, i.jsx)("div", {
                     className: v.slideContent,
-                    style: x,
+                    style: g,
                     children: (0, i.jsx)(p.Z, {
                         isScrollCloseToBottom: c,
                         setScroller: s,
@@ -204,7 +204,7 @@ function N(e) {
                 id: u.gc.LIST,
                 children: (0, i.jsx)("div", {
                     className: v.slideContent,
-                    style: x,
+                    style: g,
                     children:
                         null != N &&
                         (0, i.jsx)(m.Z, {
@@ -222,7 +222,7 @@ function N(e) {
                 id: u.gc.APPLICATION,
                 children: (0, i.jsx)("div", {
                     className: v.slideContent,
-                    style: x,
+                    style: g,
                     children:
                         null != j &&
                         (0, i.jsx)(d.Z, {

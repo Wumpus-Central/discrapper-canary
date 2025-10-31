@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => j,
-    ms: () => O,
+    ms: () => y,
 });
 var r = n(951288);
 n(647438);
@@ -13,8 +13,8 @@ var i = n(120356),
     u = n(880419),
     d = n(827397),
     p = n(279604),
-    f = n(535396),
-    h = n(459196),
+    h = n(535396),
+    f = n(459196),
     g = n(388032),
     m = n(292609);
 function b() {
@@ -53,24 +53,24 @@ function _(e) {
     }
     return e;
 }
-function O(e) {
+function y(e) {
     let { className: t, guildId: n, powerup: i, onClick: a } = e,
         s = (0, d.Z)(n, i),
         { onShowMore: c } = (0, p.ZP)(n, i),
-        u = f.uc.has(i.skuId);
+        u = h.uc.has(i.skuId);
     return (0, r.jsx)("div", {
         className: l()(m.primaryButton, t),
         children: (0, r.jsx)(o.zxk, {
             variant: "primary",
             fullWidth: !0,
-            text: u ? g.intl.string(h.default.g5Ds69) : g.intl.string(g.t["0Q61kF"]),
+            text: u ? g.intl.string(f.default.g5Ds69) : g.intl.string(g.t["0Q61kF"]),
             onClick: (e) => {
                 null == a || a(e), u ? null == s || s(e) : null == c || c();
             },
         }),
     });
 }
-function y(e) {
+function O(e) {
     let { className: t, guildId: n, powerup: i } = e,
         { onShowMore: a } = (0, p.ZP)(n, i);
     return (0, r.jsx)("div", {
@@ -80,7 +80,7 @@ function y(e) {
             children: (0, r.jsx)(o.zxk, {
                 variant: "primary",
                 fullWidth: !0,
-                text: i.type === f.Us.LEVEL ? g.intl.string(g.t["0Q61kF"]) : g.intl.string(g.t.Xa11Ep),
+                text: i.type === h.Us.LEVEL ? g.intl.string(g.t["0Q61kF"]) : g.intl.string(g.t.Xa11Ep),
                 onClick: a,
             }),
         }),
@@ -88,10 +88,10 @@ function y(e) {
 }
 function v(e) {
     let { className: t, guildId: n, powerup: i, onError: o } = e,
-        s = (0, c.ZP)(n, i).type !== f.A3.INACTIVE,
+        s = (0, c.ZP)(n, i).type !== h.A3.INACTIVE,
         d = (0, a.Z)(n, i, "GuildPowerupCardFooterAdmin"),
         p = s || !d,
-        h = !s;
+        f = !s;
     return (0, r.jsxs)("div", {
         className: l()(m.container, t),
         children: [
@@ -100,11 +100,11 @@ function v(e) {
                     guildId: n,
                     powerup: i,
                     onError: o,
-                    grow: h,
-                    compact: !h,
+                    grow: f,
+                    compact: !f,
                 }),
             s &&
-                (0, r.jsx)(O, {
+                (0, r.jsx)(y, {
                     guildId: n,
                     powerup: i,
                 }),
@@ -119,5 +119,5 @@ function j(e) {
             return e;
         })(e),
     );
-    return (0, s.Z)(t.guildId) ? (0, r.jsx)(v, _({}, t)) : (0, r.jsx)(y, _({}, t));
+    return (0, s.Z)(t.guildId) ? (0, r.jsx)(v, _({}, t)) : (0, r.jsx)(O, _({}, t));
 }

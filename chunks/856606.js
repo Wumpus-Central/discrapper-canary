@@ -10,14 +10,14 @@ var i = n(951288),
     s = n.n(r),
     a = n(149765),
     o = n(442837),
-    c = n(780384),
-    d = n(481060),
-    u = n(668781),
-    h = n(493683),
-    g = n(741361),
-    p = n(239091),
-    m = n(668390),
-    f = n(852860),
+    c = n(796027),
+    d = n(780384),
+    u = n(481060),
+    h = n(668781),
+    g = n(493683),
+    p = n(741361),
+    m = n(239091),
+    f = n(668390),
     b = n(911969),
     x = n(410030),
     j = n(607070),
@@ -95,7 +95,7 @@ let Y = o.ZP.connectStores([E.Z, w.Z], () => {
     return {
         submitting: E.Z.formState === V.QZA.SUBMITTING,
         onReset() {
-            (0, g.S1)();
+            (0, p.S1)();
         },
         onSave() {
             if (null == e) return;
@@ -103,10 +103,10 @@ let Y = o.ZP.connectStores([E.Z, w.Z], () => {
                 let n = E.Z.getPermissionOverwrite(t);
                 return null != n && e.push(n), e;
             }, []);
-            (0, g.hw)(e.id, t);
+            (0, p.hw)(e.id, t);
         },
     };
-})(f.Z);
+})(c.Z);
 function J(e) {
     let { overwrite: t } = e,
         n = (0, o.e7)([E.Z], () => E.Z.channel),
@@ -117,7 +117,7 @@ function J(e) {
             location: "ChannelSettingsPermissions",
         }).enabled;
     if (null == n || null == l || null == t) return null;
-    let { guild_id: c, id: p } = n,
+    let { guild_id: c, id: d } = n,
         m = () => {
             var e;
             if (null == R.Z.getGuild(c)) return "";
@@ -143,7 +143,7 @@ function J(e) {
                     }),
                 })
             )
-                (0, g.kY)(n, t.id, l, r);
+                (0, p.kY)(n, t.id, l, r);
             else {
                 let e;
                 if (t.type === b.BN.MEMBER) {
@@ -195,16 +195,16 @@ function J(e) {
             ),
             c === t.id
                 ? null
-                : (0, i.jsx)(d.Button, {
+                : (0, i.jsx)(u.Button, {
                       variant: "critical-secondary",
                       text: W.intl.format(W.t.txPV7k, { name: m() }),
                       onClick: () => {
                           let e = m();
-                          u.Z.show({
+                          h.Z.show({
                               title: W.intl.string(W.t.GuPYQB),
                               body: W.intl.format(W.t.xERCnZ, { name: e }),
                               cancelText: W.intl.string(W.t["ETE/oC"]),
-                              onConfirm: () => h.Z.clearPermissionOverwrite(p, t.id),
+                              onConfirm: () => g.Z.clearPermissionOverwrite(d, t.id),
                           });
                       },
                   }),
@@ -225,14 +225,14 @@ function X(e) {
                 className: F.userRowSubText,
                 children: [
                     l.hasAvatarForGuild(t)
-                        ? (0, i.jsx)(d.qEK, {
+                        ? (0, i.jsx)(u.qEK, {
                               className: F.userRowSubAvatar,
-                              size: d.EFr.SIZE_16,
+                              size: u.EFr.SIZE_16,
                               src: l.getAvatarURL(void 0, 16),
                               "aria-label": l.username,
                           })
                         : null,
-                    (0, i.jsx)(d.Text, {
+                    (0, i.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: a,
@@ -242,8 +242,8 @@ function X(e) {
         (0, i.jsxs)("div", {
             className: F.inline,
             children: [
-                (0, i.jsx)(d.qEK, {
-                    size: d.EFr.SIZE_32,
+                (0, i.jsx)(u.qEK, {
+                    size: u.EFr.SIZE_32,
                     src: r,
                     "aria-label": l.username,
                     className: F.userRowAvatar,
@@ -251,7 +251,7 @@ function X(e) {
                 (0, i.jsxs)("div", {
                     className: F.userRowText,
                     children: [
-                        (0, i.jsx)(d.Text, {
+                        (0, i.jsx)(u.Text, {
                             className: F.userRowText,
                             variant: "text-md/normal",
                             children: o,
@@ -315,22 +315,22 @@ function K(e) {
 function $() {
     let e = l.useRef(null),
         { channel: t, permissionOverwrites: r, selectedOverwriteId: a } = (0, o.cj)([E.Z], () => E.Z),
-        f = null == t ? void 0 : t.getGuildId(),
+        c = null == t ? void 0 : t.getGuildId(),
         { guild: v, sortedGuildRoles: C } = (0, o.cj)([R.Z, _.Z], () => {
-            let e = null != f ? R.Z.getGuild(f) : void 0,
+            let e = null != c ? R.Z.getGuild(c) : void 0,
                 t = null != e ? _.Z.getSortedRoles(e.id) : void 0;
             return {
                 guild: e,
                 sortedGuildRoles: t,
             };
-        }, [f]),
-        S = (0, G.Z)(f, r),
+        }, [c]),
+        S = (0, G.Z)(c, r),
         N = (0, x.ZP)(),
         Z = (0, o.e7)([j.Z], () => j.Z.roleStyle),
         w = l.useCallback(
             (e, l) => {
                 if (null == t) return null;
-                (0, p.jW)(e, async () => {
+                (0, m.jW)(e, async () => {
                     let { id: e, role: r, name: s } = l,
                         a = null != v ? (0, O.lV)(v) : null,
                         o = null != r && a === r.id,
@@ -344,11 +344,11 @@ function $() {
                                 handleDeletePermission: o
                                     ? void 0
                                     : () => {
-                                          u.Z.show({
+                                          h.Z.show({
                                               title: W.intl.string(W.t.GuPYQB),
                                               body: W.intl.format(W.t.xERCnZ, { name: s }),
                                               cancelText: W.intl.string(W.t["ETE/oC"]),
-                                              onConfirm: () => h.Z.clearPermissionOverwrite(t.id, e),
+                                              onConfirm: () => g.Z.clearPermissionOverwrite(t.id, e),
                                           });
                                       },
                             }),
@@ -370,12 +370,12 @@ function $() {
             });
         },
         P = (e, n) => {
-            h.Z.updatePermissionOverwrite(t.id, {
+            g.Z.updatePermissionOverwrite(t.id, {
                 id: e,
                 type: n,
                 allow: B.Hn,
                 deny: B.Hn,
-            }).then(() => (0, g.Aj)(e));
+            }).then(() => (0, p.Aj)(e));
         };
     null != r && null == r[v.id] && (r[v.id] = B.we(v.id));
     let I = C.filter((e) => {
@@ -383,7 +383,7 @@ function $() {
             return (null == (t = r[e.id]) ? void 0 : t.type) === b.BN.ROLE;
         }).map((e) =>
             (0, i.jsx)(
-                m.Z,
+                f.Z,
                 {
                     theme: N,
                     roleStyle: Z,
@@ -408,7 +408,7 @@ function $() {
             .map((e) => {
                 let t = e.getAvatarURL(v.id, 24);
                 return (0, i.jsx)(
-                    m.Z,
+                    f.Z,
                     {
                         id: e.id,
                         guild: v,
@@ -423,8 +423,8 @@ function $() {
                         children: (0, i.jsxs)("div", {
                             className: F.inline,
                             children: [
-                                (0, i.jsx)(d.qEK, {
-                                    size: d.EFr.SIZE_20,
+                                (0, i.jsx)(u.qEK, {
+                                    size: u.EFr.SIZE_20,
                                     src: t,
                                     "aria-label": e.username,
                                     className: F.xsmallAvatar,
@@ -443,14 +443,14 @@ function $() {
     return (0, i.jsx)(y.ZP.Sidebar, {
         className: F.layoutStyle,
         scrollable: !0,
-        children: (0, i.jsxs)(d.njP, {
-            onItemSelect: g.Aj,
+        children: (0, i.jsxs)(u.njP, {
+            onItemSelect: p.Aj,
             selectedItem: a,
             orientation: "vertical",
             children: [
                 (() => {
-                    let t = (0, c.wj)(N) ? n(521715) : n(299603);
-                    return (0, i.jsx)(d.yRy, {
+                    let t = (0, d.wj)(N) ? n(521715) : n(299603);
+                    return (0, i.jsx)(u.yRy, {
                         targetElementRef: e,
                         renderPopout: T,
                         position: "bottom",
@@ -458,7 +458,7 @@ function $() {
                         clickTrap: !0,
                         children: (n) =>
                             (0, i.jsx)(
-                                d.njP.Header,
+                                u.njP.Header,
                                 q(z({ ref: e }, n), {
                                     children: (0, i.jsxs)("div", {
                                         className: F.sidebarHeaderDefault,
@@ -485,16 +485,16 @@ function $() {
                 L,
                 (0, i.jsxs)(l.Fragment, {
                     children: [
-                        (0, i.jsx)(d.njP.Separator, {
+                        (0, i.jsx)(u.njP.Separator, {
                             style: {
                                 marginTop: 20,
                                 marginBottom: 14,
                             },
                         }),
-                        (0, i.jsx)(d.Anchor, {
+                        (0, i.jsx)(u.Anchor, {
                             href: A.Z.getArticleURL(V.BhN.PERMISSIONS_TUTORIAL),
                             target: "_blank",
-                            children: (0, i.jsx)(d.Text, {
+                            children: (0, i.jsx)(u.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-link",
                                 children: W.intl.string(W.t.pfoA83),

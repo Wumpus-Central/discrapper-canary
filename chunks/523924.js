@@ -14,8 +14,8 @@ let p = (e) => {
             reapplyText: n,
             onReapply: p,
             confirmText: f,
-            onWithdrawApplication: h,
-            rejectionReason: m = null,
+            onWithdrawApplication: m,
+            rejectionReason: h = null,
             guild: g = null,
         } = e,
         _ = (0, l.e7)([c.Z], () => {
@@ -49,7 +49,7 @@ let p = (e) => {
                                 ? u.intl.formatToPlainString(u.t["P+/gzA"], { guildName: g.name })
                                 : u.intl.string(u.t.gBPcuP),
                     }),
-                    null != m && "" !== m
+                    null != h && "" !== h
                         ? (0, r.jsxs)(s.Text, {
                               variant: "text-md/medium",
                               color: "header-secondary",
@@ -58,7 +58,7 @@ let p = (e) => {
                                       className: d.rejectionReasonLabel,
                                       children: u.intl.string(u.t.cf1psW),
                                   }),
-                                  (0, r.jsx)("span", { children: m }),
+                                  (0, r.jsx)("span", { children: h }),
                               ],
                           })
                         : null,
@@ -82,7 +82,7 @@ let p = (e) => {
                         }),
                     }),
                     (0, r.jsx)(s.Button, {
-                        onClick: h,
+                        onClick: m,
                         variant: "critical-primary",
                         size: "md",
                         text: f,

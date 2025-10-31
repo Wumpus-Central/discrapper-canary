@@ -2,7 +2,7 @@ n.d(t, {
     BT: () => W,
     Hn: () => A,
     Hu: () => H,
-    I0: () => j,
+    I0: () => k,
     Og: () => G,
     TP: () => N,
     Uu: () => K,
@@ -13,7 +13,7 @@ n.d(t, {
     r6: () => F,
     uB: () => U,
     we: () => Y,
-    ym: () => L,
+    ym: () => x,
 }),
     n(388685);
 var r = n(392711),
@@ -113,7 +113,7 @@ let A = a.vB(0),
     ),
     w = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY),
     D = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.READ_MESSAGE_HISTORY, I.Plq.CHANGE_NICKNAME),
-    L = a.$e(
+    x = a.$e(
         I.Plq.MANAGE_GUILD,
         I.Plq.MANAGE_ROLES,
         I.Plq.ADMINISTRATOR,
@@ -124,7 +124,7 @@ let A = a.vB(0),
         I.Plq.MANAGE_WEBHOOKS,
         I.Plq.VIEW_AUDIT_LOG,
     );
-function x(e, t, n) {
+function L(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (r && t.mfaLevel === I.BpS.ELEVATED && n === h.default.getId()) {
         var i;
@@ -149,7 +149,7 @@ function M(e, t, n, r) {
     }
     return n;
 }
-function k(e) {
+function j(e) {
     let {
         userId: t,
         member: n,
@@ -172,10 +172,10 @@ function k(e) {
         (f = a.e$(f, I.Plq.ADMINISTRATOR) ? C : M(r.id, n, f, i)),
         (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, c)),
         g.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, P)),
-        x(f, r, t, s)
+        L(f, r, t, s)
     );
 }
-function j(e) {
+function k(e) {
     let t,
         { forceRoles: n, context: r, overwrites: i, roles: a, checkElevated: o = !0, excludeGuildPermissions: s } = e,
         l = R;
@@ -188,7 +188,7 @@ function j(e) {
                 ? A
                 : G(
                       r,
-                      j({
+                      k({
                           forceRoles: n,
                           context: e,
                           overwrites: i,
@@ -219,7 +219,7 @@ function j(e) {
         joinedAt: new Date().toISOString(),
         communicationDisabledUntil: null,
     };
-    return k({
+    return j({
         userId: I.lds,
         member: u,
         guild: t,
@@ -266,9 +266,9 @@ function U(e) {
         !(h === (null == (t = y.default.getCurrentUser()) ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) &&
         (0, _.eM)(i, h)
     )
-        return x(C, i, h, u);
+        return L(C, i, h, u);
     let O = g.ZP.getMember(i.id, h);
-    return k({
+    return j({
         userId: h,
         member: O,
         guild: i,

@@ -1,7 +1,7 @@
 n.d(t, {
     $1: () => b,
-    YT: () => S,
-    pn: () => T,
+    YT: () => T,
+    pn: () => S,
     u2: () => A,
 }),
     n(415506);
@@ -100,7 +100,7 @@ function I(e) {
     null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log("Hook: Enabling crash trigger."), (t |= 2)),
         e.setFlags(t);
 }
-function S(e, t) {
+function T(e, t) {
     return O().then((n) => {
         var l;
         let u = null == (l = o.ZP.getGameForPID(e)) ? void 0 : l.name,
@@ -135,7 +135,7 @@ function S(e, t) {
         });
     });
 }
-function T(e) {
+function S(e) {
     return O().then((t) => {
         t.cancelAttachToProcess(e);
     });

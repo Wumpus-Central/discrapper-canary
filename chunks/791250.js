@@ -23,8 +23,8 @@ var r = n(951288),
     E = n(529103),
     O = n(515753),
     I = n(831218),
-    v = n(339149),
-    y = n(607070),
+    y = n(339149),
+    v = n(607070),
     C = n(557968),
     S = n(213609),
     T = n(463119),
@@ -172,7 +172,7 @@ let eE = (e) => {
         let l = (0, u.JA)("friends"),
             a = (0, B.If)(),
             s = (0, p.e7)([F.Z], () => F.Z.canShowFriendsTabBadge()),
-            o = (0, p.e7)([y.Z], () => y.Z.useReducedMotion),
+            o = (0, p.e7)([v.Z], () => v.Z.useReducedMotion),
             { enabled: d } = H.w.useExperiment({ location: "Friends Tab" }, { autoTrackExposure: !1 }),
             f = s && d;
         i.useEffect(() => {
@@ -268,7 +268,7 @@ let eE = (e) => {
             ),
         });
     },
-    ev = (e) => {
+    ey = (e) => {
         var { selected: t, hideGameUpdateProgressIndicator: n } = e,
             i = eb(e, ["selected", "hideGameUpdateProgressIndicator"]);
         let l = (0, u.JA)("library");
@@ -286,14 +286,14 @@ let eE = (e) => {
                     l,
                 ),
                 {
-                    children: (0, r.jsx)(v.Z, {
+                    children: (0, r.jsx)(y.Z, {
                         className: a()(eh.downloadProgressCircle, { [eh.hideGameUpdateProgressIndicator]: n }),
                     }),
                 },
             ),
         );
     },
-    ey = () =>
+    ev = () =>
         (0, r.jsx)("li", {
             className: eh.createDMButtonContainer,
             children: (0, r.jsx)(w.l, {
@@ -449,8 +449,8 @@ let eA = i.memo(function (e) {
             onlyShowDMs: E,
             hideAllDMs: O,
         } = e,
-        v = i.useRef(null),
         y = i.useRef(null),
+        v = i.useRef(null),
         C = i.useRef(null),
         S = i.useRef(null),
         N = G.o.useConfig({ location: "privatechannels" }).friendsTab,
@@ -465,12 +465,12 @@ let eA = i.memo(function (e) {
                 E
                     ? (0, r.jsx)(ej, {})
                     : (0, r.jsx)(ee.Z, {
-                          childRef: v,
+                          childRef: y,
                           tutorialId: "direct-messages",
                           position: "right",
                           offsetX: -52,
                           children: (0, r.jsx)("div", {
-                              ref: v,
+                              ref: y,
                               className: a()(eh.searchBar, { [eh.themedHeaderMobile]: d.tq }),
                               children: (0, r.jsx)(g.zx, {
                                   grow: !0,
@@ -515,7 +515,7 @@ let eA = i.memo(function (e) {
                                 : null,
                             n && t && !E
                                 ? (0, r.jsx)(
-                                      ev,
+                                      ey,
                                       {
                                           selected:
                                               null == b
@@ -569,7 +569,7 @@ let eA = i.memo(function (e) {
                                           selected:
                                               b === eu.Z5c.COLLECTIBLES_SHOP ||
                                               (null == l ? void 0 : l.startsWith(eu.Z5c.COLLECTIBLES_SHOP)),
-                                          listItemRef: y,
+                                          listItemRef: v,
                                           locationState: {
                                               analyticsSource: {
                                                   page: ex(l),
@@ -605,7 +605,7 @@ let eA = i.memo(function (e) {
                                   ),
                             E || O ? null : (0, r.jsx)(eZ, {}, "section-divider-top"),
                             O ? null : (0, r.jsx)(A.Z, {}, "frequent-friends"),
-                            "full-width" !== m || O || E ? null : (0, r.jsx)(ey, {}, "create-dm"),
+                            "full-width" !== m || O || E ? null : (0, r.jsx)(ev, {}, "create-dm"),
                         ],
                     }),
                 ),
@@ -648,8 +648,8 @@ function ew() {
             return !0 === e && !0 === t;
         })(),
         I = (0, Z.U)("PrivateChannels", { autoTrackExposure: !0 }),
-        { pathname: v } = (0, s.TH)(),
-        y = v.startsWith(eu.Z5c.CHANNEL(eu.ME)) && v !== eu.Z5c.CHANNEL(eu.ME) && v !== eu.Z5c.ME_ACTIVITY,
+        { pathname: y } = (0, s.TH)(),
+        v = y.startsWith(eu.Z5c.CHANNEL(eu.ME)) && y !== eu.Z5c.CHANNEL(eu.ME) && y !== eu.Z5c.ME_ACTIVITY,
         C = G.o.useConfig({ location: "privatechannels" }).dmsTab;
     return (0, r.jsx)(eA, {
         theme: i,
@@ -666,7 +666,7 @@ function ew() {
         createDMButtonVariant: I,
         selectedChannelId: c,
         path: u,
-        onlyShowDMs: y && C,
-        hideAllDMs: !y && C,
+        onlyShowDMs: v && C,
+        hideAllDMs: !v && C,
     });
 }

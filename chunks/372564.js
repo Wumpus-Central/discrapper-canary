@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(454585),
     d = n(984370),
     p = n(981631),
-    f = n(388032),
-    h = n(413140),
+    h = n(388032),
+    f = n(413140),
     g = n(430864);
 function m(e, t, n) {
     return (
@@ -44,7 +44,7 @@ function b(e) {
 function _(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class O extends i.Component {
+class y extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -54,7 +54,7 @@ class O extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)("div", {
-                          className: o()(h.topic, h.expandable, g.markup),
+                          className: o()(f.topic, f.expandable, g.markup),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -63,12 +63,12 @@ class O extends i.Component {
                           children: [
                               (0, r.jsx)(s.P3F, {
                                   onClick: this.handleClick,
-                                  "aria-label": f.intl.string(f.t.mKwsSp),
-                                  className: h.topicClickTarget,
+                                  "aria-label": h.intl.string(h.t.mKwsSp),
+                                  className: f.topicClickTarget,
                               }),
                               null == e.linkedLobby || t
                                   ? u.Z.parseTopic(e.topic, !0, { channelId: e.id })
-                                  : f.intl.string(f.t["XJVlf/"]),
+                                  : h.intl.string(h.t["XJVlf/"]),
                           ],
                       }),
                   ],
@@ -115,7 +115,7 @@ class O extends i.Component {
                         n.e("30474"),
                         n.e("91053"),
                         n.e("24783"),
-                        n.e("73289"),
+                        n.e("30442"),
                     ]).then(n.bind(n, 439635));
                     return (n) =>
                         (0, r.jsx)(
@@ -154,4 +154,4 @@ class O extends i.Component {
             });
     }
 }
-let y = O;
+let O = y;

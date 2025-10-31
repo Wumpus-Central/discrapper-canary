@@ -1,17 +1,17 @@
-n.d(t, { n: () => i });
-var a = n(951288),
-    l = n(73346),
-    r = n(104869);
-function i(e) {
-    let { applicationId: t, backgroundImageAssetId: n } = e,
-        i = null != n ? (0, l._W)(t, n, 1024) : null;
-    return null == i
+l.d(n, { n: () => r });
+var t = l(951288),
+    i = l(73346),
+    a = l(104869);
+function r(e) {
+    let { applicationId: n, backgroundImageAssetId: l } = e,
+        r = null != l ? (0, i._W)(n, l, 1024) : null;
+    return null == r
         ? null
-        : (0, a.jsx)("div", {
-              className: r.backgroundContainer,
-              children: (0, a.jsx)("div", {
-                  className: r.backgroundImage,
-                  style: { backgroundImage: "url(".concat(i, ")") },
+        : (0, t.jsx)("div", {
+              className: a.backgroundContainer,
+              children: (0, t.jsx)("div", {
+                  className: a.backgroundImage,
+                  style: { backgroundImage: "url(".concat(r, ")") },
               }),
           });
 }

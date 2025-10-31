@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(583741), n(388685), n(539854);
+n.d(t, { Z: () => y }), n(583741), n(388685), n(539854);
 var r,
     i = n(951288),
     l = n(647438),
@@ -9,8 +9,8 @@ var r,
     u = n(748780),
     d = n(902704),
     p = n(481060),
-    f = n(247060);
-function h(e, t, n) {
+    h = n(247060);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -74,12 +74,12 @@ class b extends l.Component {
     render() {
         let { className: e, text: t, hide: n, onClick: r } = this.props;
         return (0, i.jsx)(u.Z.div, {
-            className: a()(f.bar, e, { [f.hidden]: n }),
+            className: a()(h.bar, e, { [h.hidden]: n }),
             onClick: r,
             style: this.getAnimatedStyle(),
             "aria-hidden": n,
             children: (0, i.jsx)("span", {
-                className: f.text,
+                className: h.text,
                 children: t,
             }),
         });
@@ -100,7 +100,7 @@ class b extends l.Component {
     }
     constructor(e) {
         super(e),
-            h(this, "_timeout", void 0),
+            f(this, "_timeout", void 0),
             (this.state = {
                 translateY: new u.Z.Value(),
                 reduceMotion: !1,
@@ -133,7 +133,7 @@ class _ extends (r = l.PureComponent) {
             className: null != o ? o : void 0,
             children: (0, i.jsx)(b, {
                 hide: !0 === c || (null == e && null == t),
-                className: a()(s, null != t ? f.mention : f.unread),
+                className: a()(s, null != t ? h.mention : h.unread),
                 text: null != t ? n : r,
                 reverse: l,
                 animate: u && !d.enabled,
@@ -143,11 +143,11 @@ class _ extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, "state", {
+            f(this, "state", {
                 unread: null,
                 mention: null,
             }),
-            h(
+            f(
                 this,
                 "calculateState",
                 c()(() => {
@@ -201,7 +201,7 @@ class _ extends (r = l.PureComponent) {
                         });
                 }, 200),
             ),
-            h(this, "handleClick", (e) => {
+            f(this, "handleClick", (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let { unread: t, mention: n } = this.state,
                     { onJumpTo: r } = this.props,
@@ -210,11 +210,11 @@ class _ extends (r = l.PureComponent) {
             });
     }
 }
-h(_, "contextType", p.Sfi),
-    h(_, "defaultProps", {
-        className: f.container,
+f(_, "contextType", p.Sfi),
+    f(_, "defaultProps", {
+        className: h.container,
         reverse: !1,
         hide: !1,
         animate: !0,
     });
-let O = _;
+let y = _;

@@ -1,11 +1,11 @@
 n.d(t, {
-    ZP: () => j,
-    cy: () => x,
+    ZP: () => E,
+    cy: () => O,
     iu: () => v,
 }),
     n(388685);
-var i,
-    r,
+var r,
+    i,
     l,
     a = n(951288),
     o = n(647438),
@@ -14,12 +14,12 @@ var i,
     u = n(780384),
     d = n(755721),
     p = n(481060),
-    h = n(600164),
-    f = n(626135),
+    f = n(600164),
+    h = n(626135),
     m = n(981631),
     g = n(388032),
     b = n(105853);
-function C(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,20 +35,20 @@ function C(e, t, n) {
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                C(e, t, n[t]);
+            r.forEach(function (t) {
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,8 +56,8 @@ function _(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -66,15 +66,15 @@ function _(e, t) {
         e
     );
 }
-var v = (((r = {}).CENTER = "center"), (r.LEFT = "left"), r),
-    x = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
-class O extends o.PureComponent {
+var v = (((i = {}).CENTER = "center"), (i.LEFT = "left"), i),
+    O = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
+class x extends o.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
-        f.default.track(m.rMx.SHOW_TUTORIAL, { tutorial: e });
+        h.default.track(m.rMx.SHOW_TUTORIAL, { tutorial: e });
     }
     componentWillUnmount() {
-        f.default.track(m.rMx.CLOSE_TUTORIAL, {
+        h.default.track(m.rMx.CLOSE_TUTORIAL, {
             tutorial: this.props.uniqueId,
             acknowledged: this.state.confirmed,
         });
@@ -84,40 +84,40 @@ class O extends o.PureComponent {
                 renderMedia: e,
                 textAlign: t,
                 isLongText: n,
-                title: i,
-                body: r,
+                title: r,
+                body: i,
                 className: l,
                 forceTheme: o,
                 onClickSkipAll: s,
             } = this.props,
-            f = "left" === t || n,
-            m = "center" === t || !f;
+            h = "left" === t || n,
+            m = "center" === t || !h;
         return (0, a.jsxs)(p.VqE, {
             className: c()(b.popoutRoot, l),
             children: [
                 null != e &&
-                    (0, a.jsx)(h.Z, {
+                    (0, a.jsx)(f.Z, {
                         className: b.mediaContainer,
-                        justify: f ? h.Z.Justify.START : h.Z.Justify.CENTER,
+                        justify: h ? f.Z.Justify.START : f.Z.Justify.CENTER,
                         children: e(),
                     }),
                 (0, a.jsx)(p.H, {
                     className: c()({
                         [b.titleCenter]: m,
-                        [b.titleLeft]: f,
-                    }),
-                    children: i,
-                }),
-                (0, a.jsx)("string" == typeof r ? "p" : "div", {
-                    className: c()({
-                        [b.bodyCenter]: m,
-                        [b.bodyLeft]: f,
+                        [b.titleLeft]: h,
                     }),
                     children: r,
                 }),
-                (0, a.jsxs)(h.Z, {
+                (0, a.jsx)("string" == typeof i ? "p" : "div", {
+                    className: c()({
+                        [b.bodyCenter]: m,
+                        [b.bodyLeft]: h,
+                    }),
+                    children: i,
+                }),
+                (0, a.jsxs)(f.Z, {
                     className: b.buttonContainer,
-                    justify: f ? h.Z.Justify.BETWEEN : h.Z.Justify.CENTER,
+                    justify: h ? f.Z.Justify.BETWEEN : f.Z.Justify.CENTER,
                     children: [
                         (0, a.jsx)(p.Button, {
                             variant: "primary",
@@ -130,7 +130,7 @@ class O extends o.PureComponent {
                             look: d.zx.Looks.BLANK,
                             onClick: s,
                             color: (0, u.ap)(o) ? d.zx.Colors.PRIMARY : d.zx.Colors.WHITE,
-                            className: f ? b.buttonSkipLeftAlign : b.buttonSkipCenterAlign,
+                            className: h ? b.buttonSkipLeftAlign : b.buttonSkipCenterAlign,
                             children: g.intl.string(g.t["33wtxt"]),
                         }),
                     ],
@@ -140,49 +140,49 @@ class O extends o.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            C(this, "state", { confirmed: !1 }),
-            C(this, "handleDismiss", () => {
+            _(this, "state", { confirmed: !1 }),
+            _(this, "handleDismiss", () => {
                 let { onClickComplete: e } = this.props;
                 this.setState({ confirmed: !0 }, () => (null == e ? void 0 : e()));
             });
     }
 }
-class j extends (i = o.PureComponent) {
+class E extends (r = o.PureComponent) {
     render() {
         let e = this.props,
             {
                 renderMedia: t,
                 textAlign: n,
-                onComplete: i,
-                onSkipAll: r,
+                onComplete: r,
+                onSkipAll: i,
                 isLongText: l,
                 title: o,
                 body: s,
                 children: c,
                 spacing: u,
                 forceTheme: d,
-                innerRef: h,
+                innerRef: f,
             } = e,
-            f = (function (e, t) {
+            h = (function (e, t) {
                 if (null == e) return {};
                 var n,
-                    i,
-                    r = (function (e, t) {
+                    r,
+                    i = (function (e, t) {
                         if (null == e) return {};
                         var n,
-                            i,
-                            r = {},
+                            r,
+                            i = {},
                             l = Object.keys(e);
-                        for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                        return r;
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < l.length; i++)
-                        (n = l[i]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    for (r = 0; r < l.length; r++)
+                        (n = l[r]),
+                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
-                return r;
+                return i;
             })(e, [
                 "renderMedia",
                 "textAlign",
@@ -196,10 +196,10 @@ class j extends (i = o.PureComponent) {
                 "forceTheme",
                 "innerRef",
             ]),
-            m = "top" === f.position || "bottom" === f.position ? "center" : "top";
+            m = "top" === h.position || "bottom" === h.position ? "center" : "top";
         return (0, a.jsx)(
             p.yRy,
-            _(y({ targetElementRef: h }, f), {
+            C(y({ targetElementRef: f }, h), {
                 align: m,
                 spacing: null != u ? u : 0,
                 renderPopout: this.renderPopoutContent,
@@ -210,36 +210,36 @@ class j extends (i = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            C(this, "onClickComplete", (e) => {
+            _(this, "onClickComplete", (e) => {
                 e(), this.props.onComplete();
             }),
-            C(this, "onClickSkipAll", (e) => {
+            _(this, "onClickSkipAll", (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
-                e(), t(), f.default.track(m.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
+                e(), t(), h.default.track(m.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
             }),
-            C(this, "renderPopoutContent", (e) => {
+            _(this, "renderPopoutContent", (e) => {
                 let { closePopout: t, position: n } = e,
-                    { forceTheme: i, isLongText: r, arrowAlignment: l, renderMedia: o } = this.props,
+                    { forceTheme: r, isLongText: i, arrowAlignment: l, renderMedia: o } = this.props,
                     s = null != o;
                 return (0, a.jsx)(p.f6W, {
-                    theme: i,
+                    theme: r,
                     children: (e) =>
                         (0, a.jsx)(
-                            O,
-                            _(y({}, this.props), {
+                            x,
+                            C(y({}, this.props), {
                                 className: c()(
                                     {
                                         [b.bottom]: "bottom" === n,
-                                        [b.contentNarrowNoMedia]: !r && !s,
-                                        [b.contentNarrowWithMedia]: !r && s,
-                                        [b.contentWideNoMedia]: r && !s,
-                                        [b.contentWideWithMedia]: r && s,
+                                        [b.contentNarrowNoMedia]: !i && !s,
+                                        [b.contentNarrowWithMedia]: !i && s,
+                                        [b.contentWideNoMedia]: i && !s,
+                                        [b.contentWideWithMedia]: i && s,
                                         [b.right]: "right" === n,
                                         [b.top]: "top" === n,
                                         [b.left]: "left" === n,
                                         [b.arrowAlignmentTop]: "top" === l,
                                         [b.arrowAlignmentMiddle]: "middle" === l,
-                                        "force-theme": null != i,
+                                        "force-theme": null != r,
                                     },
                                     e,
                                 ),
@@ -251,4 +251,4 @@ class j extends (i = o.PureComponent) {
             });
     }
 }
-C(j, "TextAlignments", v), C(j, "defaultProps", { textAlign: "left" });
+_(E, "TextAlignments", v), _(E, "defaultProps", { textAlign: "left" });

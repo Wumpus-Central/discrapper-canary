@@ -1,6 +1,6 @@
 n.d(t, {
-    CR: () => j,
-    DD: () => x,
+    CR: () => k,
+    DD: () => L,
 }),
     n(953529);
 var r = n(647438),
@@ -396,7 +396,7 @@ function D(e) {
               collectibleRewardDuration: p,
           });
 }
-function L(e) {
+function x(e) {
     var t;
     return D(
         y(E({}, e), {
@@ -407,7 +407,7 @@ function L(e) {
         }),
     );
 }
-function x(e) {
+function L(e) {
     let { quest: t, questContent: n, sourceQuestContent: r } = e,
         o = (0, c.uA)({
             quest: t,
@@ -416,7 +416,7 @@ function x(e) {
         }),
         s = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         l = (0, c.Jf)(t);
-    return L(
+    return x(
         y(E({}, e), {
             connectedConsoleLinkOnClick: o,
             currentUser: s,
@@ -428,12 +428,12 @@ function x(e) {
 function M(e) {
     return (0, l.$J)(e) || (0, l.pO)(e) ? 0 : (0, l.Dr)({ quest: e }) ? 1 : (0, l.q8)(e) ? 2 : 3 * !!(0, l.Vl)(e);
 }
-function k(e) {
+function j(e) {
     return r.useMemo(() => M(e), [e]);
 }
-function j(e) {
+function k(e) {
     let { quest: t, shortText: n = !1 } = e;
-    switch (k(t)) {
+    switch (j(t)) {
         case 0:
             if (t.config.features.includes(_.S7.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymD"]);
             if (t.config.features.includes(_.S7.START_QUEST_CTA)) return m.intl.string(n ? m.t.E4kW5O : m.t["Ie9++s"]);

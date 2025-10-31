@@ -67,39 +67,39 @@ let h = () =>
             [C, N] = (0, i.useState)(!1),
             [R, P] = (0, i.useState)(!1),
             [w, D] = (0, i.useState)(0.9 * l.D2),
-            L = null === a;
+            x = null === a;
         (0, i.useEffect)(() => {
-            L &&
+            x &&
                 !C &&
                 (N(!0),
                 setTimeout(() => {
                     P(!0);
                 }, 500));
-        }, [L, N, C]),
+        }, [x, N, C]),
             (0, i.useEffect)(() => {
-                R && !L && N(!1);
-            }, [L, R]);
-        let x = L || C,
+                R && !x && N(!1);
+            }, [x, R]);
+        let L = x || C,
             M = C ? null : a,
-            [k, j] = (0, i.useState)(null),
+            [j, k] = (0, i.useState)(null),
             U = (0, i.useRef)(null),
             G = (0, i.useCallback)(() => {
-                (U.current = null), j(null);
+                (U.current = null), k(null);
             }, []),
             B = (0, i.useCallback)(
                 (e) => {
-                    let t = k === U.current;
-                    e > 0 && ("earn" !== k || !t) && j("earn");
+                    let t = j === U.current;
+                    e > 0 && ("earn" !== j || !t) && k("earn");
                 },
-                [j, k],
+                [k, j],
             ),
             Z = {
-                currentAnimationType: k,
+                currentAnimationType: j,
                 animationTypeRef: U,
                 onSetAnimationDurationMS: D,
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: x ? void 0 : b,
+            onClick: L ? void 0 : b,
             className: o()(f.clickable, { [f.disabled]: O }),
             id: null != n ? n : m,
             children: (0, r.jsxs)("span", {
@@ -108,13 +108,13 @@ let h = () =>
                 onMouseLeave: O ? void 0 : () => S(!1),
                 ref: t,
                 className: o()(f.container, A, I, {
-                    [f.containerLoading]: x,
+                    [f.containerLoading]: L,
                     [f.inModalOverlay]: v,
                     [f.disabled]: O,
                 }),
                 children: [
                     (0, r.jsx)("div", {
-                        className: o()(f.orbsLottieContainer, x ? f.orbIconloading : void 0),
+                        className: o()(f.orbsLottieContainer, L ? f.orbIconloading : void 0),
                         children: (0, r.jsx)(d.ZP, p({}, Z)),
                     }),
                     (0, r.jsx)(u.Z, {
@@ -122,7 +122,7 @@ let h = () =>
                         onValueChange: B,
                         onValueReached: G,
                         targetTotalCounterTime: w,
-                        className: x ? f.counterLoading : void 0,
+                        className: L ? f.counterLoading : void 0,
                     }),
                     E && (0, r.jsx)(h, {}),
                 ],

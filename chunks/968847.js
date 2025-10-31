@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => G,
-    x: () => x,
+    x: () => C,
 }),
     n(388685);
 var r,
@@ -13,43 +13,43 @@ var r,
     u = n(220444),
     d = n(565799),
     p = n(501655),
-    f = n(569471),
-    h = n(592125),
+    h = n(569471),
+    f = n(592125),
     g = n(430824),
     m = n(306680),
     b = n(914010),
     _ = n(9156),
-    O = n(938475),
-    y = n(823379),
-    j = n(734307),
-    v = n(981631),
-    x =
+    y = n(938475),
+    O = n(823379),
+    v = n(734307),
+    j = n(981631),
+    C =
         (((i = {}).HIDDEN = "hidden"),
         (i.UNREAD = "unread"),
         (i.MENTIONS = "mentions"),
         (i.VOICE_CHANNELS = "voice-channels"),
         i);
-let C = {
+let x = {
         mode: "hidden",
         mentionCount: 0,
         targetChannelId: null,
     },
     E = {
-        topBar: C,
-        bottomBar: C,
+        topBar: x,
+        bottomBar: x,
     },
     S = {},
     I = {};
 function P(e) {
-    let t = h.Z.getChannel(e);
+    let t = f.Z.getChannel(e);
     return (
         !(null == t || null == t.getGuildId() || t.isGuildVocal()) &&
-        !(t.isThread() ? f.Z.isMuted(t.id) : _.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
+        !(t.isThread() ? h.Z.isMuted(t.id) : _.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
         (0, u.d)(t)
     );
 }
 function N(e) {
-    let t = h.Z.getChannel(e);
+    let t = f.Z.getChannel(e);
     if (null == t) return !1;
     let n = t.getGuildId();
     if (null == n) return !1;
@@ -62,12 +62,12 @@ function Z(e) {
         !_.ZP.isChannelMuted(e.guild_id, e.id) &&
         (e.isGuildStageVoice()
             ? d.Z.getMutableParticipants(e.id, p.pV.SPEAKER).length > 0
-            : O.ZP.getVoiceStatesForChannel(e).length > 0)
+            : y.ZP.getVoiceStatesForChannel(e).length > 0)
     );
 }
-function T(e) {
+function w(e) {
     var t, n, r;
-    let { guildChannels: i } = j.Z.getGuildWithoutChangingGuildActionRows(e),
+    let { guildChannels: i } = v.Z.getGuildWithoutChangingGuildActionRows(e),
         l = i.getChannels(null != (t = I[e]) ? t : []);
     if (null == l || 0 === l.length) return !1;
     let o = null,
@@ -76,122 +76,122 @@ function T(e) {
         u = null,
         d = !0,
         p = !0,
-        f = !1,
-        h = i.getCategoryFromSection(i.voiceChannelsSectionNumber),
-        g = null != (n = null == h ? void 0 : h.getShownChannelIds()) ? n : [],
-        [b, _, O] = i.getSlicedChannels(l);
+        h = !1,
+        f = i.getCategoryFromSection(i.voiceChannelsSectionNumber),
+        g = null != (n = null == f ? void 0 : f.getShownChannelIds()) ? n : [],
+        [b, _, y] = i.getSlicedChannels(l);
     for (let e = 0; e < _.length; e++) {
         let t = _[e];
         if (
             ((P(t.id) || a().some(t.threadIds, P)) && (p = !1),
             (N(t.id) || a().some(t.threadIds, N)) && (d = !1),
-            g.includes(t.id) && (f = !0),
-            !p && !d && f)
+            g.includes(t.id) && (h = !0),
+            !p && !d && h)
         )
             break;
     }
-    let y = 0,
-        v = !1,
-        x = 0,
+    let O = 0,
+        j = !1,
+        C = 0,
         E = !1;
     if (p || d)
         for (let e = b.length - 1; e >= 0; e--) {
             let t = b[e];
-            (P(t.id) || a().some(t.threadIds, P)) && (null == s && (s = t.id), (v = !0)),
+            (P(t.id) || a().some(t.threadIds, P)) && (null == s && (s = t.id), (j = !0)),
                 (N(t.id) || a().some(t.threadIds, N)) &&
                     (null == o && (o = t.id),
-                    (y += m.ZP.getMentionCount(t.id)),
-                    (y += a().sumBy(t.threadIds, m.ZP.getMentionCount)));
+                    (O += m.ZP.getMentionCount(t.id)),
+                    (O += a().sumBy(t.threadIds, m.ZP.getMentionCount)));
         }
     if (p || d)
-        for (let e = 0; e < O.length; e++) {
-            let t = O[e];
+        for (let e = 0; e < y.length; e++) {
+            let t = y[e];
             if (!p && !d) break;
             (P(t.id) || a().some(t.threadIds, P)) && (null == u && (u = t.id), (E = !0)),
                 (N(t.id) || a().some(t.threadIds, N)) &&
                     (null == c && (c = t.id),
-                    (x += m.ZP.getMentionCount(t.id)),
-                    (x += a().sumBy(t.threadIds, m.ZP.getMentionCount)));
+                    (C += m.ZP.getMentionCount(t.id)),
+                    (C += a().sumBy(t.threadIds, m.ZP.getMentionCount)));
         }
-    let T = null,
-        w = null,
-        A = null != (r = null == h ? void 0 : h.getChannelRecords()) ? r : [];
-    d && x > 0
-        ? (T = {
+    let w = null,
+        T = null,
+        A = null != (r = null == f ? void 0 : f.getChannelRecords()) ? r : [];
+    d && C > 0
+        ? (w = {
               mode: "mentions",
-              mentionCount: x,
+              mentionCount: C,
               targetChannelId: c,
           })
-        : !f && a().some(A, Z)
-          ? (T = {
+        : !h && a().some(A, Z)
+          ? (w = {
                 mode: "voice-channels",
                 mentionCount: 0,
                 targetChannelId: null,
             })
           : p &&
             E &&
-            (T = {
+            (w = {
                 mode: "unread",
                 mentionCount: 0,
                 targetChannelId: u,
             }),
-        d && y > 0
-            ? (w = {
+        d && O > 0
+            ? (T = {
                   mode: "mentions",
-                  mentionCount: y,
+                  mentionCount: O,
                   targetChannelId: o,
               })
             : p &&
-              v &&
-              (w = {
+              j &&
+              (T = {
                   mode: "unread",
                   mentionCount: 0,
                   targetChannelId: s,
               });
-    let R = null != w && (null == T || ("mentions" !== T.mode && "mentions" === w.mode)),
-        D = null != T && ("mentions" === T.mode || !R);
+    let R = null != T && (null == w || ("mentions" !== w.mode && "mentions" === T.mode)),
+        D = null != w && ("mentions" === w.mode || !R);
     return (
         (S[e] = {
-            topBar: R && null != w ? w : C,
-            bottomBar: D && null != T ? T : C,
+            topBar: R && null != T ? T : x,
+            bottomBar: D && null != w ? w : x,
         }),
         !0
     );
 }
-let w = a().throttle(T, 200);
+let T = a().throttle(w, 200);
 function A(e) {
     let { guildId: t } = e,
         n = g.Z.getGuild(t);
-    return null != n && !!n.features.has(v.GuildFeatures.COMMUNITY) && w(t);
+    return null != n && !!n.features.has(j.GuildFeatures.COMMUNITY) && T(t);
 }
 function R(e) {
     let { id: t } = e,
-        n = h.Z.getChannel(t);
+        n = f.Z.getChannel(t);
     if (null == n) return !1;
     let r = g.Z.getGuild(n.guild_id);
-    return null != r && !!r.features.has(v.GuildFeatures.COMMUNITY) && w(n.guild_id);
+    return null != r && !!r.features.has(j.GuildFeatures.COMMUNITY) && T(n.guild_id);
 }
 function D(e) {
     let { channel: t } = e,
-        n = h.Z.getChannel(t.id);
+        n = f.Z.getChannel(t.id);
     if (null == n) return !1;
     let r = g.Z.getGuild(t.guild_id);
-    return null != r && !!r.features.has(v.GuildFeatures.COMMUNITY) && w(n.guild_id);
+    return null != r && !!r.features.has(j.GuildFeatures.COMMUNITY) && T(n.guild_id);
 }
 function L(e) {
     let { channelId: t } = e,
-        n = h.Z.getChannel(t);
+        n = f.Z.getChannel(t);
     if (null == n) return !1;
     let r = g.Z.getGuild(n.guild_id);
-    return null != r && !!r.features.has(v.GuildFeatures.COMMUNITY) && b.Z.getGuildId() === n.guild_id && w(n.guild_id);
+    return null != r && !!r.features.has(j.GuildFeatures.COMMUNITY) && b.Z.getGuildId() === n.guild_id && T(n.guild_id);
 }
 function M(e) {
     let { guildId: t } = e;
-    return null != t && w(t);
+    return null != t && T(t);
 }
 class k extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(j.Z, h.Z, g.Z, f.Z, m.ZP, b.Z, O.ZP, d.Z, _.ZP);
+        this.waitFor(v.Z, f.Z, g.Z, h.Z, m.ZP, b.Z, y.ZP, d.Z, _.ZP);
     }
     getUnreadStateForGuildId(e) {
         var t;
@@ -212,10 +212,10 @@ let G = new k(c.Z, {
             r = g.Z.getGuild(t);
         return (
             null != r &&
-            !!r.features.has(v.GuildFeatures.COMMUNITY) &&
+            !!r.features.has(j.GuildFeatures.COMMUNITY) &&
             null != n &&
             !a().isEqual(I[t], n) &&
-            ((I[t] = n), T(t))
+            ((I[t] = n), w(t))
         );
     },
     BULK_ACK: function (e) {
@@ -226,13 +226,13 @@ let G = new k(c.Z, {
                 .map((e) => {
                     var t;
                     let { channelId: n } = e;
-                    return null == (t = h.Z.getChannel(n)) ? void 0 : t.guild_id;
+                    return null == (t = f.Z.getChannel(n)) ? void 0 : t.guild_id;
                 })
-                .filter(y.lm)
+                .filter(O.lm)
                 .uniq()
                 .forEach((e) => {
                     let t = g.Z.getGuild(e);
-                    null != t && t.features.has(v.GuildFeatures.COMMUNITY) && w(e) && (n = !0);
+                    null != t && t.features.has(j.GuildFeatures.COMMUNITY) && T(e) && (n = !0);
                 }),
             n
         );
@@ -246,7 +246,7 @@ let G = new k(c.Z, {
     MESSAGE_DELETE: L,
     PASSIVE_UPDATE_V2: function (e) {
         let t = g.Z.getGuild(e.guildId);
-        return !!(e.channels.length > 0 && null != t && t.features.has(v.GuildFeatures.COMMUNITY)) && w(e.guildId);
+        return !!(e.channels.length > 0 && null != t && t.features.has(j.GuildFeatures.COMMUNITY)) && T(e.guildId);
     },
     RESORT_THREADS: L,
     THREAD_CREATE: D,
@@ -263,13 +263,13 @@ let G = new k(c.Z, {
             n = b.Z.getGuildId();
         if (null == n || !new Set(t.map((e) => e.guildId)).has(n)) return !1;
         let r = S[n];
-        return null != r && "voice-channels" === r.bottomBar.mode && w(n);
+        return null != r && "voice-channels" === r.bottomBar.mode && T(n);
     },
     USER_GUILD_SETTINGS_CHANNEL_UPDATE: M,
     USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: M,
     USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
         let { userGuildSettings: t } = e;
-        for (let e of t) null != e.guild_id && w(e.guild_id);
+        for (let e of t) null != e.guild_id && T(e.guild_id);
     },
     USER_GUILD_SETTINGS_GUILD_UPDATE: M,
     USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: M,

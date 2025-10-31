@@ -10,8 +10,8 @@ var r = n(209739),
     d = n(131951),
     p = n(496675),
     f = n(944486),
-    h = n(449224),
-    m = n(358085),
+    m = n(449224),
+    h = n(358085),
     g = n(102172),
     _ = n(74299),
     b = n(299570),
@@ -27,11 +27,11 @@ function I() {
     let I = r.getGuildId();
     if (!(0, g.JL)(r, u.Z, p.Z, !1)) return !1;
     if (d.Z.getUseSystemScreensharePicker())
-        (0, m.isMac)() && i().satisfies(null === a.Z || void 0 === a.Z ? void 0 : a.Z.os.release, O.jR)
+        (0, h.isMac)() && i().satisfies(null === a.Z || void 0 === a.Z ? void 0 : a.Z.os.release, O.jR)
             ? (0, b.T)()
             : (0, b.T)("window");
     else {
-        let n = (0, E.Z)(s.ZP, h.Z);
+        let n = (0, E.Z)(s.ZP, m.Z);
         if (null == n || (n.isLauncher && !e)) return !1;
         (0, l.WH)(I, r.id, {
             pid: n.pid,

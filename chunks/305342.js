@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => G,
-    c: () => j,
+    c: () => k,
 }),
     n(388685);
 var r = n(951288),
@@ -33,14 +33,14 @@ var r = n(951288),
     P = n(981631),
     w = n(388032),
     D = n(126683);
-let L = 24,
-    x = 5,
+let x = 24,
+    L = 5,
     M = (e) => {
         let { benefits: t, header: n, guildId: a } = e,
             [o, s] = i.useState(!1),
-            l = o ? t : t.slice(0, x),
-            u = t.length > x,
-            f = t.length - x,
+            l = o ? t : t.slice(0, L),
+            u = t.length > L,
+            f = t.length - L,
             _ = w.intl.formatToPlainString(w.t.XSdy72, { numTruncated: f }),
             p = () => s((e) => !e),
             m = (0, d.Dt)();
@@ -86,7 +86,7 @@ let L = 24,
                   ],
               });
     },
-    k = (e) => {
+    j = (e) => {
         let { guildId: t, listingId: n } = e,
             i = (0, y.Z)(t),
             [a] = g.XZ(n, t),
@@ -95,7 +95,7 @@ let L = 24,
             return p.ZP.getEmojiURL({
                 id: e.id,
                 animated: e.animated,
-                size: L,
+                size: x,
             });
         }
         return 0 === o.length
@@ -122,8 +122,8 @@ let L = 24,
                                       children: (0, r.jsx)("img", {
                                           className: D.emojiListEmoji,
                                           src: s(e),
-                                          width: L,
-                                          height: L,
+                                          width: x,
+                                          height: x,
                                           alt: e.name,
                                       }),
                                   },
@@ -134,7 +134,7 @@ let L = 24,
                   ],
               });
     },
-    j = (e) => {
+    k = (e) => {
         let { listingId: t, guildId: n, className: i } = e,
             a = (0, O.Z)(n, t),
             [s] = g.UE(t),
@@ -174,7 +174,7 @@ let L = 24,
                           benefits: u,
                           guildId: n,
                       }),
-                      (0, r.jsx)(k, {
+                      (0, r.jsx)(j, {
                           guildId: n,
                           listingId: t,
                       }),
@@ -201,9 +201,9 @@ let L = 24,
                 isCheckingTrialEligibility: I,
             } = (0, N.Z)(p, n, a, d),
             S = (0, s.e7)([_.Z], () => _.Z.isSyncing),
-            { activeSubscription: L, activeSubscriptionListing: x } = (0, E.Z)(a),
-            M = (null == x ? void 0 : x.id) === t,
-            k = (null == L ? void 0 : L.status) === P.O0b.CANCELED,
+            { activeSubscription: x, activeSubscriptionListing: L } = (0, E.Z)(a),
+            M = (null == L ? void 0 : L.id) === t,
+            j = (null == x ? void 0 : x.status) === P.O0b.CANCELED,
             [G, B] = i.useState(!1),
             [Z, F] = i.useState(!1),
             V = i.useCallback((e) => {
@@ -215,7 +215,7 @@ let L = 24,
             [W] = g.TT(t),
             [K] = g.F2(t),
             z = (0, b.Z)(n, t),
-            q = null != W && null == L && z,
+            q = null != W && null == x && z,
             X = () => B((e) => !e),
             Q = (0, u.Z)(R.iP),
             [J, $] = i.useState(!1),
@@ -278,8 +278,8 @@ let L = 24,
                                                       ? (0, r.jsx)(c.Button, {
                                                             disabled: !0,
                                                             fullWidth: !0,
-                                                            variant: k ? "secondary" : "primary",
-                                                            text: k
+                                                            variant: j ? "secondary" : "primary",
+                                                            text: j
                                                                 ? w.intl.string(w.t.iKHmu0)
                                                                 : w.intl.string(w.t.XvAuMo),
                                                         })
@@ -330,7 +330,7 @@ let L = 24,
                               }),
                               ee &&
                                   (0, r.jsx)(c.y5t, {
-                                      children: (0, r.jsx)(j, {
+                                      children: (0, r.jsx)(k, {
                                           listingId: t,
                                           guildId: n,
                                       }),

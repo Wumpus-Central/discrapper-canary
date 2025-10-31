@@ -1,43 +1,43 @@
-n.d(t, { default: () => C }), n(388685);
-var i = n(951288);
-n(647438);
-var l = n(481060),
-    r = n(239091),
-    u = n(883385),
-    a = n(108843),
-    d = n(100527),
-    o = n(299206),
-    c = n(882188),
-    _ = n(819403),
-    s = n(286694),
-    E = n(314897),
-    f = n(238296),
-    A = n(933409),
-    g = n(981631),
-    v = n(388032);
+t.d(n, { default: () => C }), t(388685);
+var i = t(951288);
+t(647438);
+var l = t(481060),
+    r = t(239091),
+    u = t(883385),
+    a = t(108843),
+    d = t(100527),
+    o = t(299206),
+    c = t(882188),
+    _ = t(819403),
+    s = t(286694),
+    E = t(314897),
+    f = t(238296),
+    A = t(933409),
+    g = t(981631),
+    v = t(388032);
 let C = (0, a.Z)(
     (0, u.Z)(
         function (e) {
-            let { user: t, channel: n, guildId: u, onSelect: a, onInteraction: d, context: g } = e,
-                C = n.id,
-                M = t.isNonUserBot(),
-                O = t.id === E.default.getId(),
-                S = (0, _.Z)(t),
-                b = (0, s.Z)(t, u, C),
+            let { user: n, channel: t, guildId: u, onSelect: a, onInteraction: d, context: g } = e,
+                C = t.id,
+                M = n.isNonUserBot(),
+                O = n.id === E.default.getId(),
+                S = (0, _.Z)(n),
+                b = (0, s.Z)(n, u, C),
                 I = (0, f.Y)({
                     isOwnSettings: O,
-                    userId: t.id,
+                    userId: n.id,
                     channelId: C,
                     guildId: u,
                     context: g,
                 }),
-                [Z, T] = (0, f.E)(t, C, u),
-                h = (0, A.Z)(t, u, C),
+                [Z, T] = (0, f.E)(n, C, u),
+                h = (0, A.Z)(n, u, C),
                 N = (0, o.Z)({
-                    id: t.id,
+                    id: n.id,
                     label: v.intl.string(v.t["/AXYnE"]),
                 }),
-                p = (0, c.Z)(t.id, n);
+                p = (0, c.Z)(n.id, t);
             return (0, i.jsx)(l.v2r, {
                 navId: "user-context",
                 onClose: r.Zy,

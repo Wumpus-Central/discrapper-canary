@@ -4,7 +4,7 @@ n.d(t, {
     GW: () => l,
     Go: () => I,
     I4: () => g,
-    JB: () => L,
+    JB: () => x,
     KX: () => R,
     NM: () => s,
     Qq: () => b,
@@ -125,7 +125,7 @@ function D(e) {
               left: e,
           };
 }
-function L(e) {
+function x(e) {
     let { x: t, y: n, width: r, height: i } = e;
     return {
         width: r,

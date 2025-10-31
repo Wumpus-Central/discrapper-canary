@@ -275,13 +275,13 @@ let P = {
     x = (0, _.Z)([C, P]),
     L = l._p(D),
     M = l._p(x),
-    k = {
+    j = {
         max: 1 / 0,
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0,
     },
-    j = new (o())(k),
-    U = new (o())(k);
+    k = new (o())(j),
+    U = new (o())(j);
 function G(e, t, n) {
     let r = [],
         i = {
@@ -293,7 +293,7 @@ function G(e, t, n) {
             allowTimeMentionInput: !0,
         },
         a = n ? M : L,
-        o = n ? U : j,
+        o = n ? U : k,
         s = o.get(e);
     if (null != s) return s;
     let l =

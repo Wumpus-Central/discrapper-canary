@@ -92,9 +92,9 @@ function R(e) {
         [A, C] = i.useState(I.intl.string(I.t["I/sJtJ"])),
         [N, R] = i.useState(!1),
         [P, w] = i.useState(y),
-        [D, L] = i.useState(""),
-        [x, M] = i.useState(null),
-        k = async () => {
+        [D, x] = i.useState(""),
+        [L, M] = i.useState(null),
+        j = async () => {
             let e;
             w(O.x.REGISTER);
             let t =
@@ -107,7 +107,7 @@ function R(e) {
                 g.Z.captureException(e), M(I.intl.string(I.t.xSCvBf)), w(O.x.INIT);
                 return;
             }
-            L(e), w(O.x.NAME);
+            x(e), w(O.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
@@ -153,11 +153,11 @@ function R(e) {
                                     }),
                                     (0, r.jsx)("div", {
                                         children:
-                                            null != x &&
+                                            null != L &&
                                             (0, r.jsx)(l.Text, {
                                                 variant: "text-md/normal",
                                                 color: "status-danger",
-                                                children: x,
+                                                children: L,
                                             }),
                                     }),
                                     (0, r.jsx)("div", {
@@ -172,7 +172,7 @@ function R(e) {
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     text: I.intl.string(I.t.oibaQa),
-                                    onClick: k,
+                                    onClick: j,
                                 }),
                             }),
                         ],

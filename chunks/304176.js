@@ -2,10 +2,10 @@ n.d(t, { Z: () => N });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(481060),
-    o = n(493773),
-    s = n(367907),
-    l = n(111028),
+    a = n(194983),
+    o = n(481060),
+    s = n(493773),
+    l = n(367907),
     c = n(829883),
     u = n(623624),
     d = n(973542),
@@ -76,7 +76,7 @@ let C = 40,
     N = (e) => {
         let { roleIcon: t, guild: n } = e,
             { name: I } = t;
-        (0, o.ZP)(() => {
+        (0, s.ZP)(() => {
             g.default.track(
                 b.rMx.OPEN_POPOUT,
                 T(
@@ -84,7 +84,7 @@ let C = 40,
                         type: "Role Icon Popout",
                         guild_id: n.id,
                     },
-                    (0, s.v_)(p.Z.getChannel(m.Z.getChannelId(n.id))),
+                    (0, l.v_)(p.Z.getChannel(m.Z.getChannelId(n.id))),
                 ),
             );
         });
@@ -106,8 +106,8 @@ let C = 40,
             D = () => {
                 (0, _.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
             },
-            L = N ? D : w;
-        return (0, r.jsx)(a.VqE, {
+            x = N ? D : w;
+        return (0, r.jsx)(o.VqE, {
             children: (0, r.jsx)(E.W_, {
                 children: (0, r.jsxs)("div", {
                     className: v.popoutContainer,
@@ -129,12 +129,12 @@ let C = 40,
                                 (0, r.jsxs)("div", {
                                     className: v.truncatingText,
                                     children: [
-                                        (0, r.jsx)(a.Heading, {
+                                        (0, r.jsx)(o.Heading, {
                                             variant: "heading-md/semibold",
                                             className: v.roleName,
-                                            children: (0, r.jsx)(l.Z, { children: I }),
+                                            children: (0, r.jsx)(a.Z, { children: I }),
                                         }),
-                                        (0, r.jsx)(a.Text, {
+                                        (0, r.jsx)(o.Text, {
                                             variant: "text-sm/normal",
                                             children: R,
                                         }),
@@ -142,12 +142,12 @@ let C = 40,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(a.Button, {
+                        (0, r.jsx)(o.Button, {
                             size: "sm",
                             variant: "secondary",
                             text: O.intl.string(O.t["H930+H"]),
-                            onClick: L,
-                            icon: a.Ucv,
+                            onClick: x,
+                            icon: o.Ucv,
                             fullWidth: !0,
                             autoFocus: !0,
                         }),

@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -83,7 +83,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -91,7 +91,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -100,13 +100,13 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = 10;
+let k = 10;
 function U(e) {
     let { payments: t, locale: n, compactMode: r, numPages: o } = e,
         l = a.useRef(null),
         [c, d] = a.useState(0),
         [_, h] = a.useState(null),
-        m = t.slice(c * j, (c + 1) * j);
+        m = t.slice(c * k, (c + 1) * k);
     a.useEffect(() => {
         var e;
         null == (e = l.current) || e.scrollTo({ to: 0 });
@@ -115,7 +115,7 @@ function U(e) {
             (e) => {
                 d(e);
                 let n = t[t.length - 1].id;
-                e >= o - 2 && _ !== n && ((0, p.cQ)(j, n), h(n));
+                e >= o - 2 && _ !== n && ((0, p.cQ)(k, n), h(n));
             },
             [t, o, _],
         ),
@@ -128,7 +128,7 @@ function U(e) {
                     a = M(e, ["ref"]);
                 return (0, i.jsx)(
                     b.Z,
-                    x(
+                    L(
                         D(
                             {
                                 className: R.verticalFit,
@@ -166,11 +166,11 @@ function U(e) {
 }
 class G extends (r = a.PureComponent) {
     get numPages() {
-        return Math.max(Math.ceil(this.props.payments.length / j), 1);
+        return Math.max(Math.ceil(this.props.payments.length / k), 1);
     }
     componentDidMount() {
         _.Z.wait(() => {
-            (0, h.N)(), (0, p.cQ)(3 * j);
+            (0, h.N)(), (0, p.cQ)(3 * k);
         });
     }
     renderPremiumExternalSubscription(e) {
@@ -286,7 +286,7 @@ function Z(e) {
         }, [l, o]),
         (0, i.jsx)(
             G,
-            x(D({}, e), {
+            L(D({}, e), {
                 payments: c,
                 subscription: n,
             }),

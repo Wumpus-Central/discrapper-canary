@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => es }), n(35282), n(388685), n(539854), n(361932), n(187205);
+n.d(t, { ZP: () => el }), n(35282), n(388685), n(539854), n(361932), n(187205);
 var r = n(392711),
     i = n.n(r),
     a = n(159635),
@@ -29,8 +29,8 @@ var r = n(392711),
     P = n(5192),
     w = n(51144),
     D = n(981631),
-    L = n(185923),
-    x = n(388032);
+    x = n(185923),
+    L = n(388032);
 function M(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -162,7 +162,8 @@ let V = f.Z.RULES,
     z = /^<#(\d+)>/,
     q = /^<a?:(\w+):(\d+)>/,
     X = /(@everyone|@here|@Clyde)\b/,
-    Q = {
+    Q = /^[^\s]+@[^\s]+\.[^\s.]+/,
+    J = {
         link: Z(o().defaultRules.link),
         autolink: Z(o().defaultRules.autolink),
         url: Z(o().defaultRules.url),
@@ -175,14 +176,14 @@ let V = f.Z.RULES,
         mention: {
             match(e, t, n) {
                 let r = n.split(" ").pop() + e;
-                if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
+                if (Q.test(r)) return null;
                 let i = G("@", e, t.users, "mention");
                 if (i || (i = G("@", e, t.mentionableRoles, "roleMention"))) return i;
                 if (
                     !(i = G(
                         "@",
                         e,
-                        t.users.map((e) => U(k({}, e), { text: e.text.split("#")[0] })),
+                        t.users.map((e) => U(j({}, e), { text: e.text.split("#")[0] })),
                         "mention",
                     ))
                 )
@@ -276,7 +277,7 @@ let V = f.Z.RULES,
                       };
             },
         },
-        text: U(k({}, H), {
+        text: U(j({}, H), {
             match: (e, t) =>
                 "string" == typeof t.textExclusions && "" !== t.textExclusions
                     ? (0, _.T9)(t.textExclusions).exec(e)
@@ -285,7 +286,7 @@ let V = f.Z.RULES,
                       : null,
         }),
     },
-    J = {
+    $ = {
         inlineCode: Z(V.inlineCode),
         codeBlock: Z(V.codeBlock),
         mention: {
@@ -341,7 +342,7 @@ let V = f.Z.RULES,
                     let t = b.Z.getDetectableGame(e[1]);
                     return null != t
                         ? { content: "@".concat(t.name) }
-                        : { content: "@".concat(x.intl.string(x.t["11pdXZ"])) };
+                        : { content: "@".concat(L.intl.string(L.t["11pdXZ"])) };
                 }
                 return { content: e[0] };
             },
@@ -375,33 +376,33 @@ let V = f.Z.RULES,
         },
         spoiler: {
             match: o().anyScopeRegex(D.$92),
-            parse: () => ({ content: "<".concat(x.intl.string(x.t["F+x38C"]).toLowerCase(), ">") }),
+            parse: () => ({ content: "<".concat(L.intl.string(L.t["F+x38C"]).toLowerCase(), ">") }),
         },
         staticRouteLink: {
             match: o().anyScopeRegex(D.PEY),
             parse: (e) => ({ content: "<id:".concat(e[1], ">") }),
         },
-        timestamp: U(k({}, V.timestamp), {
+        timestamp: U(j({}, V.timestamp), {
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                 let r = V.timestamp.parse(...t);
                 return "text" === r.type ? { content: r.content } : { content: r.formatted };
             },
         }),
-        text: k({}, H),
+        text: j({}, H),
     };
-[Q, J].forEach((e) => {
+[J, $].forEach((e) => {
     Object.keys(e).forEach((t, n) => {
         e[t].order = n;
     });
 });
-let $ = o().parserFor(Q),
-    ee = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
-function et(e, t, n) {
+let ee = o().parserFor(J),
+    et = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
+function en(e, t, n) {
     if (null != n && ("customEmoticon" === t.type && n(t.emoji, !1), "emoticon" === t.type || "text" === t.type)) {
         let r,
             i = u.ZP.translateSurrogatesToInlineEmoji(t.content);
-        for (; null !== (r = ee.exec(i)); ) {
+        for (; null !== (r = et.exec(i)); ) {
             let i;
             null != r[1] && "" !== r[1]
                 ? e.emojiContext && (i = e.emojiContext.getById(r[1]))
@@ -410,12 +411,12 @@ function et(e, t, n) {
         }
     }
 }
-function en(e, t, n, r) {
+function er(e, t, n, r) {
     let i = "",
         a = [];
     return (
         e.forEach((e) => {
-            if ((et(t, e, r), "string" == typeof e.content))
+            if ((en(t, e, r), "string" == typeof e.content))
                 switch (e.type) {
                     case "emoji":
                         a.push({
@@ -436,7 +437,7 @@ function en(e, t, n, r) {
                         i += n(e.content);
                 }
             else if (e.content.constructor === Array) {
-                let { content: o, emoji: s } = en(e.content, t, n, r);
+                let { content: o, emoji: s } = er(e.content, t, n, r);
                 for (let e of s)
                     a.push({
                         position: i.length + e.position,
@@ -452,10 +453,10 @@ function en(e, t, n, r) {
         }
     );
 }
-function er(e, t, n) {
-    return en($(e, t), t, u.ZP.translateInlineEmojiToSurrogates, n).content;
+function ei(e, t, n) {
+    return er(ee(e, t), t, u.ZP.translateInlineEmojiToSurrogates, n).content;
 }
-function ei(e) {
+function ea(e) {
     let t,
         n = null == e ? void 0 : e.getGuildId(),
         r = null != n ? I.Z.getGuild(n) : null,
@@ -541,15 +542,15 @@ function ei(e) {
         isNotification: !1,
     };
 }
-function ea(e) {
+function eo(e) {
     return e;
 }
-function eo(e, t, n) {
+function es(e, t, n) {
     let r = E.Z.getChannel(t),
         a = null != r ? r.getGuildId() : null,
         s = null != a ? I.Z.getGuild(a) : null,
-        l = n ? J : i().omit(J, ["spoiler", "timestamp"]),
-        c = n ? ea : u.ZP.translateSurrogatesToInlineEmoji,
+        l = n ? $ : i().omit($, ["spoiler", "timestamp"]),
+        c = n ? eo : u.ZP.translateSurrogatesToInlineEmoji,
         d = o().parserFor(l),
         f = {
             inline: !0,
@@ -557,12 +558,12 @@ function eo(e, t, n) {
             channelId: t,
             isNotification: n,
         };
-    return en(d(e, f), f, c);
+    return er(d(e, f), f, c);
 }
-let es = {
+let el = {
     parse(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-            r = null != n ? n : ei(e),
+            r = null != n ? n : ea(e),
             i = {
                 content: t,
                 tts: !1,
@@ -570,11 +571,11 @@ let es = {
                 validNonShortcutEmojis: [],
             };
         return (
-            (i.content = er(i.content, r, (t, n) => {
+            (i.content = ei(i.content, r, (t, n) => {
                 R.ZP.isEmojiPremiumLocked({
                     emoji: t,
                     channel: e,
-                    intention: L.Hz.CHAT,
+                    intention: x.Hz.CHAT,
                 })
                     ? i.invalidEmojis.push(t)
                     : n || i.validNonShortcutEmojis.push(t);
@@ -582,7 +583,7 @@ let es = {
             i
         );
     },
-    parsePreprocessor: (e, t) => $(t, ei(e)),
-    unparse: (e, t, n) => eo(e, t, n).content,
-    unparseWithMeta: eo,
+    parsePreprocessor: (e, t) => ee(t, ea(e)),
+    unparse: (e, t, n) => es(e, t, n).content,
+    unparseWithMeta: es,
 };

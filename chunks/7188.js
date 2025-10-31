@@ -121,13 +121,13 @@ function w(e) {
         N = (0, a.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), y.PremiumTypes.TIER_1)),
         w = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         D = i.useMemo(() => (null != n ? [n] : []), [n]),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             null != w && (0, f.Z)(w.getGuildId(), w.id, I);
         }, [w, I]);
     if (null == n || null == w) return null;
-    let x = R;
+    let L = R;
     return (
-        t || N || (x = P),
+        t || N || (L = P),
         (0, r.jsx)(o.yRy, {
             targetElementRef: v,
             position: "top",
@@ -140,7 +140,7 @@ function w(e) {
                         activeStreams: D,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: L,
+                        handleGoLive: x,
                         onInteraction: (0, c.u)("ManageStreamsButton", null != S ? S : u, {
                             entrypoint: b.A5.OTHER_BUTTON,
                         }),
@@ -155,7 +155,7 @@ function w(e) {
                         A(T({}, e), {
                             buttonRef: v,
                             label: O.intl.string(O.t.tmiYpF),
-                            iconComponent: x,
+                            iconComponent: L,
                             onClick: (t) => {
                                 (null != S || null != u) && (0, l.v)(null != S ? S : u, l.d.STREAM_SETTINGS),
                                     null == e || e.onClick(t);

@@ -61,14 +61,14 @@ function P(e) {
             channelId: P,
             messageId: w,
             roleId: D,
-            openedAt: L,
-            closePopout: x,
+            openedAt: x,
+            closePopout: L,
             setPopoutRef: M,
-            disableUserProfileLink: k = __OVERLAY__,
-            newAnalyticsLocations: j = [],
+            disableUserProfileLink: j = __OVERLAY__,
+            newAnalyticsLocations: k = [],
             disableAutoFocus: U = !1,
         } = e,
-        { analyticsLocations: G } = (0, l.ZP)([...j, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: "POPOUT",
             userId: t.id,
@@ -85,7 +85,7 @@ function P(e) {
         null == M || M(null == V ? void 0 : V.current);
     }, [V, M]);
     let Y = (e) => {
-            null == x || x(),
+            null == L || L(),
                 (0, m.openUserProfileModal)(
                     R(
                         {
@@ -98,7 +98,7 @@ function P(e) {
                 );
         },
         W = () =>
-            k
+            j
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "view-profile",
@@ -123,7 +123,7 @@ function P(e) {
         value: G,
         children: (0, r.jsx)(_.Mt, {
             value: B,
-            openedAt: L,
+            openedAt: x,
             fetchStartedAt: null == Z ? void 0 : Z.fetchStartedAt,
             fetchEndedAt: null == Z ? void 0 : Z.fetchEndedAt,
             isLoaded: null == Z ? void 0 : Z.isLoaded,
@@ -147,7 +147,7 @@ function P(e) {
                                     user: t,
                                     guildId: N,
                                     viewProfileItem: W(),
-                                    onCloseProfile: x,
+                                    onCloseProfile: L,
                                 }),
                             }),
                             (0, r.jsxs)("div", {
@@ -165,12 +165,12 @@ function P(e) {
                                         guildId: N,
                                         channelId: P,
                                         themeType: S.l.POPOUT,
-                                        onOpenProfile: k ? void 0 : Y,
+                                        onOpenProfile: j ? void 0 : Y,
                                     }),
                                     (0, r.jsx)(v.Z, {
                                         user: t,
                                         themeType: S.l.POPOUT,
-                                        onCloseProfile: x,
+                                        onCloseProfile: L,
                                         disableToolbar: !0,
                                     }),
                                 ],
@@ -181,15 +181,15 @@ function P(e) {
                                 displayProfile: Z,
                                 guild: F,
                                 isHoveringOrFocusing: H,
-                                onOpenProfile: k ? void 0 : Y,
+                                onOpenProfile: j ? void 0 : Y,
                                 channelId: P,
-                                onClose: x,
+                                onClose: L,
                             }),
                             (0, r.jsx)(T.Z, {
                                 user: t,
                                 guildId: N,
                                 channelId: P,
-                                onClose: x,
+                                onClose: L,
                                 disableAutoFocus: U,
                             }),
                         ],

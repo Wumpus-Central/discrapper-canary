@@ -121,16 +121,16 @@ function w(e) {
         { reducedMotion: S } = i.useContext(f.S),
         w = i.useRef(null),
         D = i.useRef(null),
-        L = null != T ? T : D,
-        x = (0, l.l)({
+        x = null != T ? T : D,
+        L = (0, l.l)({
             isSelected: t,
             onChange: E,
             isDisabled: n,
         }),
         {
             inputProps: M,
-            labelProps: k,
-            isPressed: j,
+            labelProps: j,
+            isPressed: k,
         } = (0, a.h)(
             {
                 id: m,
@@ -138,8 +138,8 @@ function w(e) {
                 "aria-describedby": v,
                 "aria-labelledby": I,
             },
-            x,
             L,
+            x,
         ),
         { hoverProps: U, isHovered: G } = (0, o.X)({ isDisabled: n }),
         B = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
@@ -160,7 +160,7 @@ function w(e) {
             {
                 config: { duration: S.enabled ? 200 : 300 },
                 opacity: n ? 0.5 : 1,
-                state: j ? (t ? R[R.length - 2] : N[1]) : +!!t,
+                state: k ? (t ? R[R.length - 2] : N[1]) : +!!t,
             },
             "animate-always",
         ),
@@ -180,12 +180,12 @@ function w(e) {
         _.tE,
         b(g({}, y), {
             ringTarget: w,
-            focusTarget: L,
+            focusTarget: x,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(
                 "label",
-                b(g({}, k), {
+                b(g({}, j), {
                     className: h.container,
                     children: [
                         (0, r.jsx)(
@@ -244,7 +244,7 @@ function w(e) {
                                 }),
                             }),
                         ),
-                        (0, r.jsx)(p.n, { children: (0, r.jsx)("input", b(g({}, M), { ref: L })) }),
+                        (0, r.jsx)(p.n, { children: (0, r.jsx)("input", b(g({}, M), { ref: x })) }),
                     ],
                 }),
             ),

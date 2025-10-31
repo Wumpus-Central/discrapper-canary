@@ -1,8 +1,8 @@
 n.d(t, {
-    Me: () => k,
+    Me: () => j,
     RR: () => B,
     X5: () => U,
-    cv: () => j,
+    cv: () => k,
     dp: () => Z,
     oo: () => F,
     uY: () => G,
@@ -334,7 +334,7 @@ let w = async function (e) {
 function D(e) {
     return "rtl" === (0, a.Dx)(e).direction;
 }
-let L = {
+let x = {
     convertOffsetParentRelativeRectToViewportRelativeRect: h,
     getDocumentElement: a.tF,
     getClippingRect: S,
@@ -346,7 +346,7 @@ let L = {
     isElement: a.kK,
     isRTL: D,
 };
-function x(e, t) {
+function L(e, t) {
     return e.x === t.x && e.y === t.y && e.width === t.width && e.height === t.height;
 }
 function M(e, t) {
@@ -380,7 +380,7 @@ function M(e, t) {
                           l(!1, 1e-7);
                       }, 1000));
             }
-            1 !== r || x(u, e.getBoundingClientRect()) || l(), (E = !1);
+            1 !== r || L(u, e.getBoundingClientRect()) || l(), (E = !1);
         }
         try {
             i = new IntersectionObserver(b, {
@@ -394,7 +394,7 @@ function M(e, t) {
     }
     return l(!0), s;
 }
-function k(e, t, n, r) {
+function j(e, t, n, r) {
     let i;
     void 0 === r && (r = {});
     let {
@@ -431,7 +431,7 @@ function k(e, t, n, r) {
     let E = d ? f(e) : null;
     function b() {
         let t = f(e);
-        E && !x(E, t) && n(), (E = t), (i = requestAnimationFrame(b));
+        E && !L(E, t) && n(), (E = t), (i = requestAnimationFrame(b));
     }
     return (
         d && b(),
@@ -448,7 +448,7 @@ function k(e, t, n, r) {
         }
     );
 }
-let j = i.cv,
+let k = i.cv,
     U = i.X5,
     G = i.uY,
     B = i.RR,
@@ -456,7 +456,7 @@ let j = i.cv,
     F = (e, t, n) => {
         let r = new Map(),
             a = {
-                platform: L,
+                platform: x,
                 ...n,
             },
             o = {

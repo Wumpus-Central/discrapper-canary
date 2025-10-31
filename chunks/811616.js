@@ -37,16 +37,16 @@ function I(e) {
         { isGift: P, giftRecipient: w } = (0, u.wD)(),
         D = P && (0, _.pO)(w);
     s()(null != R, "Missing subscriptionPlan");
-    let L = null != t && t.planId === n,
-        x =
-            L ||
+    let x = null != t && t.planId === n,
+        L =
+            x ||
             (n === y.Xh.PREMIUM_MONTH_TIER_2 &&
                 null != t &&
                 [y.Xh.PREMIUM_YEAR_TIER_0, y.Xh.PREMIUM_YEAR_TIER_1].includes(t.planId)),
         M = y.nH[n],
-        { enabled: k } = E.Z.getCurrentConfig({ location: "PremiumSwitchPlanSelectOption" }, { autoTrackExposure: !1 });
-    k && (M = (0, h.UV)(R, P, I));
-    let j = (0, h.aS)(n, !1, P, I),
+        { enabled: j } = E.Z.getCurrentConfig({ location: "PremiumSwitchPlanSelectOption" }, { autoTrackExposure: !1 });
+    j && (M = (0, h.UV)(R, P, I));
+    let k = (0, h.aS)(n, !1, P, I),
         U = (0, h.Ap)(I.paymentSourceId),
         G = null != M && !T,
         B = (0, b.Ng)(),
@@ -75,13 +75,13 @@ function I(e) {
         Y = () =>
             Z
                 ? V()
-                : (R.interval === y.rV.YEAR && null != t) || (G && !L)
+                : (R.interval === y.rV.YEAR && null != t) || (G && !x)
                   ? R.interval === y.rV.YEAR && null != t
                       ? (0, r.jsxs)("span", {
                             className: v.planOptionMonthsFree,
                             children: ["(", O.intl.string(O.t["122kWB"]), ")"],
                         })
-                      : G && !L
+                      : G && !x
                         ? H()
                         : void 0
                   : null,
@@ -98,30 +98,30 @@ function I(e) {
                     D &&
                         (0, r.jsx)("div", {
                             className: v.planOneTimeCost,
-                            children: O.intl.format(O.t.ori2Jm, { currencyAmount: (0, m.T4)(j.amount, j.currency) }),
+                            children: O.intl.format(O.t.ori2Jm, { currencyAmount: (0, m.T4)(k.amount, k.currency) }),
                         }),
                 ],
             }),
         K = () =>
             S && null != A && R.interval === y.rV.MONTH
-                ? (0, m.T4)(j.amount - A, j.currency)
+                ? (0, m.T4)(k.amount - A, k.currency)
                 : C
-                  ? (0, m.T4)(0, j.currency, {
+                  ? (0, m.T4)(0, k.currency, {
                         minimumFractionDigits: 0,
                         maximumFractionDigits: 0,
                     })
-                  : (0, m.T4)(j.amount, j.currency),
+                  : (0, m.T4)(k.amount, k.currency),
         z = () => {
             if (S && null != A && R.interval === y.rV.MONTH) {
                 var e;
                 return O.intl.format(O.t["VeE/4E"], {
                     numMonths: null != (e = null == B ? void 0 : B.discount.user_usage_limit) ? e : y.rt,
-                    discountedPrice: (0, m.T4)(j.amount - A, j.currency),
-                    regularPrice: (0, m.T4)(j.amount, j.currency),
+                    discountedPrice: (0, m.T4)(k.amount - A, k.currency),
+                    regularPrice: (0, m.T4)(k.amount, k.currency),
                 });
             }
             return C
-                ? O.intl.format(F, { price: (0, m.T4)(j.amount, j.currency) })
+                ? O.intl.format(F, { price: (0, m.T4)(k.amount, k.currency) })
                 : R.interval === y.rV.YEAR
                   ? O.intl.formatToPlainString(O.t.rtLTJP, { percent: M })
                   : null;
@@ -138,14 +138,14 @@ function I(e) {
                 bottom: 0,
             },
         },
-        onClick: x ? void 0 : () => i(n),
+        onClick: L ? void 0 : () => i(n),
         className: a()(v.planOptionClickableContainer, {
             [v.selectedPlan]: D && o,
             [v.selectionBox]: D,
         }),
         children: [
             (0, r.jsxs)("div", {
-                className: a()(v.planOption, { [v.planOptionDisabled]: x }),
+                className: a()(v.planOption, { [v.planOptionDisabled]: L }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: v.planOptionClickable,
@@ -161,7 +161,7 @@ function I(e) {
                                     }),
                                 }),
                             W(),
-                            L &&
+                            x &&
                                 (0, r.jsxs)("span", {
                                     className: v.planOptionCurrentPlan,
                                     children: ["(", O.intl.string(O.t.ymSxhy), ")"],
@@ -176,7 +176,7 @@ function I(e) {
                           })
                         : (0, r.jsx)("div", {
                               className: a()({ [v.optionSelected]: o || D }),
-                              children: (0, m.T4)(j.amount, j.currency),
+                              children: (0, m.T4)(k.amount, k.currency),
                           }),
                 ],
             }),

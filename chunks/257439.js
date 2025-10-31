@@ -1,50 +1,50 @@
-e.d(n, { Y: () => u });
-var r = e(521548),
-    o = e(476098),
-    i = e(156755);
-function a(t, n, e) {
+n.d(t, { Y: () => c });
+var a = n(521548),
+    o = n(476098),
+    r = n(156755);
+function i(e, t, n) {
     return (
-        n in t
-            ? Object.defineProperty(t, n, {
-                  value: e,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[n] = e),
-        t
+            : (e[t] = n),
+        e
     );
 }
-var u = (function () {
-    var t;
-    function n(t) {
-        var e = this;
-        if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
-        a(
+var c = (function () {
+    var e;
+    function t(e) {
+        var n = this;
+        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        i(
             this,
             "hooks",
             (0, o.p)({
-                dropTarget: function (t, n) {
-                    e.clearDropTarget(),
-                        (e.dropTargetOptions = n),
-                        (0, i.d)(t) ? (e.dropTargetRef = t) : (e.dropTargetNode = t),
-                        e.reconnect();
+                dropTarget: function (e, t) {
+                    n.clearDropTarget(),
+                        (n.dropTargetOptions = t),
+                        (0, r.d)(e) ? (n.dropTargetRef = e) : (n.dropTargetNode = e),
+                        n.reconnect();
                 },
             }),
         ),
-            a(this, "handlerId", null),
-            a(this, "dropTargetRef", null),
-            a(this, "dropTargetNode", void 0),
-            a(this, "dropTargetOptionsInternal", null),
-            a(this, "unsubscribeDropTarget", void 0),
-            a(this, "lastConnectedHandlerId", null),
-            a(this, "lastConnectedDropTarget", null),
-            a(this, "lastConnectedDropTargetOptions", null),
-            a(this, "backend", void 0),
-            (this.backend = t);
+            i(this, "handlerId", null),
+            i(this, "dropTargetRef", null),
+            i(this, "dropTargetNode", void 0),
+            i(this, "dropTargetOptionsInternal", null),
+            i(this, "unsubscribeDropTarget", void 0),
+            i(this, "lastConnectedHandlerId", null),
+            i(this, "lastConnectedDropTarget", null),
+            i(this, "lastConnectedDropTargetOptions", null),
+            i(this, "backend", void 0),
+            (this.backend = e);
     }
     return (
-        (t = [
+        (e = [
             {
                 key: "connectTarget",
                 get: function () {
@@ -54,21 +54,21 @@ var u = (function () {
             {
                 key: "reconnect",
                 value: function () {
-                    var t = this.didHandlerIdChange() || this.didDropTargetChange() || this.didOptionsChange();
-                    t && this.disconnectDropTarget();
-                    var n = this.dropTarget;
+                    var e = this.didHandlerIdChange() || this.didDropTargetChange() || this.didOptionsChange();
+                    e && this.disconnectDropTarget();
+                    var t = this.dropTarget;
                     if (this.handlerId) {
-                        if (!n) {
-                            this.lastConnectedDropTarget = n;
+                        if (!t) {
+                            this.lastConnectedDropTarget = t;
                             return;
                         }
-                        t &&
+                        e &&
                             ((this.lastConnectedHandlerId = this.handlerId),
-                            (this.lastConnectedDropTarget = n),
+                            (this.lastConnectedDropTarget = t),
                             (this.lastConnectedDropTargetOptions = this.dropTargetOptions),
                             (this.unsubscribeDropTarget = this.backend.connectDropTarget(
                                 this.handlerId,
-                                n,
+                                t,
                                 this.dropTargetOptions,
                             )));
                     }
@@ -76,8 +76,8 @@ var u = (function () {
             },
             {
                 key: "receiveHandlerId",
-                value: function (t) {
-                    t !== this.handlerId && ((this.handlerId = t), this.reconnect());
+                value: function (e) {
+                    e !== this.handlerId && ((this.handlerId = e), this.reconnect());
                 },
             },
             {
@@ -85,8 +85,8 @@ var u = (function () {
                 get: function () {
                     return this.dropTargetOptionsInternal;
                 },
-                set: function (t) {
-                    this.dropTargetOptionsInternal = t;
+                set: function (e) {
+                    this.dropTargetOptionsInternal = e;
                 },
             },
             {
@@ -104,7 +104,7 @@ var u = (function () {
             {
                 key: "didOptionsChange",
                 value: function () {
-                    return !(0, r.w)(this.lastConnectedDropTargetOptions, this.dropTargetOptions);
+                    return !(0, a.w)(this.lastConnectedDropTargetOptions, this.dropTargetOptions);
                 },
             },
             {
@@ -126,15 +126,15 @@ var u = (function () {
                 },
             },
         ]),
-        (function (t, n) {
-            for (var e = 0; e < n.length; e++) {
-                var r = n[e];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(t, r.key, r);
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var a = t[n];
+                (a.enumerable = a.enumerable || !1),
+                    (a.configurable = !0),
+                    "value" in a && (a.writable = !0),
+                    Object.defineProperty(e, a.key, a);
             }
-        })(n.prototype, t),
-        n
+        })(t.prototype, e),
+        t
     );
 })();

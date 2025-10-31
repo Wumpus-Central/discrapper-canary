@@ -13,7 +13,7 @@ function i(e) {
 }
 async function a(e, t) {
     let n = document.createElement("video");
-    (n.muted = !0), (n.src = e), (n.currentTime = t), await n.play(), n.pause();
+    (n.volume = 0), (n.src = e), (n.currentTime = t), await n.play(), n.pause();
     let i = Math.min(r.f_ / n.videoWidth, r.wD / n.videoHeight),
         a = n.videoWidth * i,
         o = n.videoHeight * i,

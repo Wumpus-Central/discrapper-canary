@@ -1,6 +1,6 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
-var i,
-    r,
+n.d(t, { Z: () => _ }), n(388685), n(539854);
+var r,
+    i,
     l = n(442837),
     a = n(846519),
     o = n(570140),
@@ -11,20 +11,20 @@ function d(e, t) {
     return "".concat(e, ":").concat(t);
 }
 let p = {},
-    h = {},
-    f = new a.sW(3000, function () {
+    f = {},
+    h = new a.sW(3000, function () {
         let e = [];
-        for (let [t, n] of Object.entries(h)) e.push(n), (p[t] = n), delete h[t];
+        for (let [t, n] of Object.entries(f)) e.push(n), (p[t] = n), delete f[t];
         0 !== e.length && s.Z.subscribeActivities(e);
     });
 function m(e) {
     let t = d(e.applicationId, e.partyId);
-    return t in p || t in h;
+    return t in p || t in f;
 }
 function g() {
-    (p = {}), (h = {});
+    (p = {}), (f = {});
 }
-class b extends (i = l.ZP.Store) {
+class b extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -32,44 +32,44 @@ class b extends (i = l.ZP.Store) {
         return m(e);
     }
 }
-(r = "displayName") in b
-    ? Object.defineProperty(b, r, {
+(i = "displayName") in b
+    ? Object.defineProperty(b, i, {
           value: "PresenceSubscriptionsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (b[r] = "PresenceSubscriptionsStore");
-let C = new b(o.Z, {
+    : (b[i] = "PresenceSubscriptionsStore");
+let _ = new b(o.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {
                 let e = !1,
                     t = Date.now();
-                for (let [n, i] of Object.entries(p)) i.expiresAt < t && (delete p[n], (e = !0));
-                for (let [n, i] of Object.entries(h)) i.expiresAt < t && (delete h[n], (e = !0));
+                for (let [n, r] of Object.entries(p)) r.expiresAt < t && (delete p[n], (e = !0));
+                for (let [n, r] of Object.entries(f)) r.expiresAt < t && (delete f[n], (e = !0));
                 return e;
             })(),
-            { userId: i, applicationId: r, partyId: l, messageId: a, channelId: o, inviteTime: s } = t;
+            { userId: r, applicationId: i, partyId: l, messageId: a, channelId: o, inviteTime: s } = t;
         if (m(t) || s + u.$y < Date.now()) return n;
-        let c = d(r, l),
+        let c = d(i, l),
             g = u.$y + Date.now();
         return (
-            (h[c] = {
-                userId: i,
-                applicationId: r,
+            (f[c] = {
+                userId: r,
+                applicationId: i,
                 partyId: l,
                 messageId: a,
                 channelId: o,
                 expiresAt: g,
             }),
-            f.delay(),
+            h.delay(),
             !0
         );
     },
     CONNECTION_OPEN: g,
     CONNECTION_RESUMED: g,
     LOGOUT: function () {
-        (p = {}), (h = {});
+        (p = {}), (f = {});
     },
 });

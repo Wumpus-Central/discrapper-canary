@@ -45,10 +45,10 @@ let S = (e, t, n, r) => {
             R = n.extra.artist.name,
             P = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
             { primaryColor: w, secondaryColor: D } = (0, m.Z)(N),
-            L = (0, _.Nq)(n),
-            x = i.useCallback(() => {
-                if (null == t || null == P || !(0, d.Hi)(L, g.y9)) return;
-                let e = S(n, t, P, L);
+            x = (0, _.Nq)(n),
+            L = i.useCallback(() => {
+                if (null == t || null == P || !(0, d.Hi)(x, g.y9)) return;
+                let e = S(n, t, P, x);
                 return (0, p.CR)({
                     user: P,
                     channel: t,
@@ -58,17 +58,17 @@ let S = (e, t, n, r) => {
                     colors: [w, D],
                     badges: (0, p.UU)(n),
                 });
-            }, [N, R, t, n, w, L, D, P]),
+            }, [N, R, t, n, w, x, D, P]),
             M = (0, h.Z)(O.ABu.SPOTIFY);
-        if (null == P || !(0, d.Hi)(L, g.y9)) return null;
-        let k = () => {
+        if (null == P || !(0, d.Hi)(x, g.y9)) return null;
+        let j = () => {
                 let e = v.Hw.ALBUM,
                     t = l.Z.isProtocolRegistered()
                         ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id)
                         : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
                 window.open(t);
             },
-            j = () => {
+            k = () => {
                 let e = v.Hw.ARTIST,
                     t = l.Z.isProtocolRegistered()
                         ? v.C7.PLAYER_OPEN(e, n.extra.artist.external_id)
@@ -78,9 +78,9 @@ let S = (e, t, n, r) => {
         return (0, r.jsxs)(b.yR, {
             children: [
                 (0, r.jsx)(b.wG, {
-                    onClickTitle: k,
-                    onClickSubtitle: j,
-                    onClickThumbnail: k,
+                    onClickTitle: j,
+                    onClickSubtitle: k,
+                    onClickThumbnail: j,
                     channel: t,
                     entry: n,
                     headerIcons:
@@ -105,7 +105,7 @@ let S = (e, t, n, r) => {
                         onVoiceChannelPreview: f,
                         user: P,
                         channel: t,
-                        generateReactionImage: x,
+                        generateReactionImage: L,
                         reactionImageAltText: A(n, P),
                         entry: n,
                     }),

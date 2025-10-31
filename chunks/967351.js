@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(415506), n(49124);
+n.d(t, { Z: () => v }), n(388685), n(415506), n(49124);
 var r = n(413135),
     i = n(836560),
     l = n(392711),
@@ -22,8 +22,8 @@ function f(e, t, n) {
         e
     );
 }
-let h = o.ZP.requireModule("discord_rpc").RPCIPC,
-    m = new s.Z("RPCServer:IPC"),
+let m = o.ZP.requireModule("discord_rpc").RPCIPC,
+    h = new s.Z("RPCServer:IPC"),
     g = {
         HANDSHAKE: 0,
         FRAME: 1,
@@ -39,7 +39,7 @@ function b(e) {
 }
 function E(e) {
     return new Promise((t, n) => {
-        "string" == typeof e && (e = h.net.createConnection(e));
+        "string" == typeof e && (e = m.net.createConnection(e));
         let r = new I(e, "json");
         e.on("data", (t) => {
             try {
@@ -101,7 +101,7 @@ class I extends u.Z {
         return e.copy(i, 0, t, n), i;
     }
     send(e) {
-        m.info("Socket Emit: ".concat(this.id), (0, c.Z)(e)), this.socket.write(O(g.FRAME, e));
+        h.info("Socket Emit: ".concat(this.id), (0, c.Z)(e)), this.socket.write(O(g.FRAME, e));
     }
     close(e, t) {
         this.socket.end(
@@ -187,7 +187,7 @@ class I extends u.Z {
             _(e, !1);
     }
 }
-class v extends i.EventEmitter {
+class y extends i.EventEmitter {
     handleConnection(e) {
         let t = new I(e, "json");
         e.on("readable", () => {
@@ -198,7 +198,7 @@ class v extends i.EventEmitter {
                 try {
                     t.read(r.Buffer.from(n));
                 } catch (t) {
-                    m.error("Socket Error: ".concat(t.message)),
+                    h.error("Socket Error: ".concat(t.message)),
                         e.end(
                             O(g.CLOSE, {
                                 code: p.$VG.CLOSE_UNSUPPORTED,
@@ -210,15 +210,15 @@ class v extends i.EventEmitter {
             }),
             e.once("handshake", () => {
                 let n = t.clientId;
-                m.info("Socket Opened: ".concat(t.id)),
-                    e.on("error", (e) => m.error("Socket Error: ".concat(e.message))),
+                h.info("Socket Opened: ".concat(t.id)),
+                    e.on("error", (e) => h.error("Socket Error: ".concat(e.message))),
                     e.on("close", () => {
-                        m.info("Socket Close: ".concat(t.id)), this.emit("disconnect", t);
+                        h.info("Socket Close: ".concat(t.id)), this.emit("disconnect", t);
                     }),
                     (0, d.em)(t, null, n)
                         .then(() => {
                             e.on("request", (e) => {
-                                m.info("Socket Message: ".concat(t.id), (0, c.Z)(e)), this.emit("request", t, e);
+                                h.info("Socket Message: ".concat(t.id), (0, c.Z)(e)), this.emit("request", t, e);
                             }),
                                 this.emit("connect", t);
                         })
@@ -230,14 +230,14 @@ class v extends i.EventEmitter {
     }
     constructor() {
         super();
-        let e = h.net.createServer((e) => this.handleConnection(e));
-        e.on("error", (e) => m.error("Error: ".concat(e.message))),
-            h.getAvailableSocket(E).then((t) => {
+        let e = m.net.createServer((e) => this.handleConnection(e));
+        e.on("error", (e) => h.error("Error: ".concat(e.message))),
+            m.getAvailableSocket(E).then((t) => {
                 e.listen(t, () => {
                     ("function" == typeof e.listening ? e.listening() : e.listening) &&
-                        m.info("Starting on ".concat(e.address()));
+                        h.info("Starting on ".concat(e.address()));
                 });
             });
     }
 }
-let y = new v();
+let v = new y();

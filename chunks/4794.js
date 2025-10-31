@@ -1,16 +1,16 @@
 n.d(t, { Z: () => s }), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(59662),
+    l = n(647438),
+    o = n(59662),
     i = n(36361),
     a = n(530171),
     c = n(445642);
-let s = o.memo(function (e) {
+let s = l.memo(function (e) {
     let { node: t } = e,
         { useTitle: n, layout: s, useSubtitle: u } = t,
-        [d, f] = o.useState(!1),
-        { navTransition: b } = (0, l.t)();
-    o.useEffect(() => {
+        [d, f] = l.useState(!1),
+        { navTransition: b } = (0, o.t)();
+    l.useEffect(() => {
         (null == b ? void 0 : b.targetAccordionKey) === t.key && f(!0);
     }, [null == b ? void 0 : b.targetAccordionKey, t.key]);
     let p = null == n ? void 0 : n(d),

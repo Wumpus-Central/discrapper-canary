@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d }), n(388685);
 var i = n(951288),
     r = n(647438),
-    s = n(13245),
+    l = n(13245),
     o = n(593481),
-    l = n(981631);
+    s = n(981631);
 function a(e, t, n) {
     return (
         t in e
@@ -24,19 +24,19 @@ class c extends r.Component {
             n,
             i,
             {
-                props: { position: r, zIndex: s },
+                props: { position: r, zIndex: l },
             } = this;
         switch (r) {
-            case l._vf.TOP_LEFT:
-            case l._vf.BOTTOM_LEFT:
+            case s._vf.TOP_LEFT:
+            case s._vf.BOTTOM_LEFT:
                 e = 0;
                 break;
             default:
                 t = 0;
         }
         switch (r) {
-            case l._vf.BOTTOM_LEFT:
-            case l._vf.BOTTOM_RIGHT:
+            case s._vf.BOTTOM_LEFT:
+            case s._vf.BOTTOM_RIGHT:
                 n = 0;
                 break;
             default:
@@ -47,7 +47,7 @@ class c extends r.Component {
             right: t,
             bottom: n,
             top: i,
-            zIndex: s,
+            zIndex: l,
         };
     }
     render() {
@@ -58,8 +58,8 @@ class c extends r.Component {
                     notification: {
                         props: {
                             renderFooter: r,
-                            onNotificationShow: s,
-                            onDismissClick: l,
+                            onNotificationShow: l,
+                            onDismissClick: s,
                             onNotificationClick: c,
                             onConfirmClick: d,
                             onCancelClick: u,
@@ -67,7 +67,7 @@ class c extends r.Component {
                     },
                 },
             } = this,
-            p = (function (e, t) {
+            h = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     i,
@@ -76,14 +76,14 @@ class c extends r.Component {
                         var n,
                             i,
                             r = {},
-                            s = Object.keys(e);
-                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            l = Object.keys(e);
+                        for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < s.length; i++)
-                        (n = s[i]),
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < l.length; i++)
+                        (n = l[i]),
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
@@ -112,12 +112,12 @@ class c extends r.Component {
                         });
                 }
                 return e;
-            })({}, p)),
+            })({}, h)),
             (t = t =
                 {
                     locked: n,
                     onNotificationShow: this.handleNotificationShow,
-                    onDismissClick: null != l ? this.handleDismissClick : void 0,
+                    onDismissClick: null != s ? this.handleDismissClick : void 0,
                     onNotificationClick: null != c ? this.handleNotificationClick : null,
                     onConfirmClick: null != d ? this.handleConfirmClick : null,
                     onCancelClick: null != u ? this.handleCancelClick : null,
@@ -153,7 +153,7 @@ class c extends r.Component {
                     id: t,
                     props: { onDismissClick: n },
                 } = this.props.notification;
-                s.Z.updateNotificationStatus(t), null == n || n(e, t);
+                l.Z.updateNotificationStatus(t), null == n || n(e, t);
             }),
             a(this, "handleNotificationClick", (e) => {
                 let {

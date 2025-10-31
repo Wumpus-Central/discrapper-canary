@@ -13,8 +13,8 @@ var i = n(951288),
     f = n(413097);
 function h(e) {
     var t;
-    let { command: n, application: h, onClick: v, query: y, searchResultsPosition: x } = e,
-        g = l.useCallback(
+    let { command: n, application: h, onClick: v, query: y, searchResultsPosition: g } = e,
+        x = l.useCallback(
             (e) => {
                 if ((0, s.BQ)(h)) {
                     let t = h instanceof o.ZP ? h : o.ZP.createFromServer(h);
@@ -62,7 +62,7 @@ function h(e) {
             applicationId: h.id,
             commandId: null == n ? void 0 : n.id,
             query: y,
-            searchResultsPosition: x,
+            searchResultsPosition: g,
         });
     return (0, i.jsx)(r.P3F, {
         className: m.clickable,
@@ -70,7 +70,7 @@ function h(e) {
             E.current = e;
         },
         onClick: v,
-        onContextMenu: g,
+        onContextMenu: x,
         children: (0, i.jsxs)(r.Rny, {
             className: m.focusBlock,
             children: [

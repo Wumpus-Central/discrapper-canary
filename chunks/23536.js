@@ -8,53 +8,53 @@ var r = n(951288),
     c = n(493773),
     d = n(198620),
     u = n(819514),
-    p = n(210887),
-    h = n(624453),
-    f = n(306680),
-    g = n(494404),
+    p = n(598999),
+    h = n(210887),
+    f = n(624453),
+    g = n(306680),
     m = n(388032);
 let b = [];
 function _(e) {
     let { channel: t, onJump: _ } = e,
-        { items: y, state: x } = (0, l.cj)([h.Z], () => {
+        { items: y, state: x } = (0, l.cj)([f.Z], () => {
             var e, n;
-            let r = h.Z.getPins(t.id);
+            let r = f.Z.getPins(t.id);
             return {
                 items: null != (e = null == r ? void 0 : r.items) ? e : b,
-                state: null != (n = null == r ? void 0 : r.state) ? n : h.M.LOADING,
+                state: null != (n = null == r ? void 0 : r.state) ? n : f.M.LOADING,
             };
         }),
-        v = i.useMemo(() => y.map((e) => e.message), [y]),
-        j = (0, l.e7)([f.ZP], () => f.ZP.hasUnreadPins(t.id));
+        O = i.useMemo(() => y.map((e) => e.message), [y]),
+        j = (0, l.e7)([g.ZP], () => g.ZP.hasUnreadPins(t.id));
     i.useEffect(() => {
         j && o.Z.ackPins(t.id);
     }, [j, t.id]),
         (0, c.ZP)(() => {
-            v.some(d.k5) && o.Z.fetchPins(t.id, { reset: !0 });
+            O.some(d.k5) && o.Z.fetchPins(t.id, { reset: !0 });
         });
-    let O = i.useCallback(() => {
+    let v = i.useCallback(() => {
             o.Z.fetchPins(t.id);
         }, [t.id]),
         C = i.useCallback(() => {
             var e;
             o.Z.fetchPins(t.id, { before: null == (e = y.at(-1)) ? void 0 : e.pinnedAt });
         }, [t.id, y]),
-        I = (0, l.e7)([p.Z], () => (0, a.ap)(p.Z.theme));
+        I = (0, l.e7)([h.Z], () => (0, a.ap)(h.Z.theme));
     return (0, r.jsx)(s.VqE, {
         "aria-label": m.intl.string(m.t["mp1N/2"]),
-        children: (0, r.jsx)(g.ZP, {
+        children: (0, r.jsx)(p.ZP, {
             channel: t,
-            onFetch: O,
-            messages: v,
-            loading: x === h.M.LOADING,
-            hasMore: x === h.M.LOADED_HAS_MORE,
+            onFetch: v,
+            messages: O,
+            loading: x === f.M.LOADING,
+            hasMore: x === f.M.LOADED_HAS_MORE,
             analyticsName: "Channel Pins",
             renderEmptyState: function () {
                 if (y.length > 0) return;
                 let e = m.intl.string(t.isPrivate() ? m.t.rhqcbJ : m.t.fmyaWJ),
                     i = I ? n(306059) : n(281485);
                 return (0, r.jsx)(
-                    g.nH,
+                    p.nH,
                     {
                         msg: e,
                         image: i,
@@ -63,7 +63,7 @@ function _(e) {
                 );
             },
             renderHeader: () =>
-                (0, r.jsx)(g.h4, {
+                (0, r.jsx)(p.h4, {
                     icon: s.qQX,
                     title: m.intl.string(m.t["mp1N/2"]),
                 }),

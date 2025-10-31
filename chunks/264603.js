@@ -1,10 +1,10 @@
 n.d(t, { Z: () => S }), n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(442837),
-    s = n(524437),
+    r = n.n(l),
+    s = n(442837),
+    o = n(524437),
     c = n(481060),
     d = n(384275),
     u = n(758677),
@@ -12,9 +12,9 @@ var a = n(951288),
     p = n(812206),
     h = n(835473),
     x = n(594190),
-    f = n(989941),
-    b = n(695346),
-    g = n(881998),
+    g = n(989941),
+    f = n(695346),
+    b = n(881998),
     v = n(449224),
     j = n(246992),
     _ = n(451429),
@@ -22,28 +22,28 @@ var a = n(951288),
 let C = [
     {
         label: "Unset",
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
+        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
     },
     {
         label: "All",
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
+        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
     },
     {
         label: "Users With Game",
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
+        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
     },
     {
         label: "None",
-        value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
+        value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
     },
 ];
 function S() {
-    let e = r.useRef(null),
-        t = b.JG.useSetting(),
-        [n, l] = r.useState(""),
-        s = (0, o.e7)([x.ZP, v.Z], () => (0, f.Z)(x.ZP, v.Z)),
+    let e = i.useRef(null),
+        t = f.JG.useSetting(),
+        [n, l] = i.useState(""),
+        o = (0, s.e7)([x.ZP, v.Z], () => (0, g.Z)(x.ZP, v.Z)),
         S = (0, h.q)(n),
-        E = (0, o.Wu)([p.Z], () => {
+        E = (0, s.Wu)([p.Z], () => {
             var e, t;
             return null !=
                 (t =
@@ -53,12 +53,12 @@ function S() {
                 ? t
                 : [];
         }),
-        O = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
-        T = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
-        N = (0, m.F)(S),
-        { canDeauthorize: P, deauthorize: I } = (function (e) {
-            let t = (0, o.e7)([g.Z], () => g.Z.getNewestTokenForApplication(e)),
-                n = r.useCallback(() => {
+        T = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
+        N = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
+        O = (0, m.F)(S),
+        { canDeauthorize: P, deauthorize: w } = (function (e) {
+            let t = (0, s.e7)([b.Z], () => b.Z.getNewestTokenForApplication(e)),
+                n = i.useCallback(() => {
                     null != t && d.Z.delete(t.id);
                 }, [t]);
             return {
@@ -68,7 +68,7 @@ function S() {
         })(null == S ? void 0 : S.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(_.panel, y.panel),
+        className: r()(_.panel, y.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: y.container,
@@ -81,7 +81,7 @@ function S() {
                         label: "Receive DMs In Game",
                         options: C,
                         isSelected: (e) => e === t,
-                        select: b.JG.updateSetting,
+                        select: f.JG.updateSetting,
                         popoutLayerContext: j.O$,
                         serialize: (e) => e.toString(),
                     }),
@@ -99,11 +99,11 @@ function S() {
                         value: n,
                         onChange: l,
                     }),
-                    null != s && null != s.id
+                    null != o && null != o.id
                         ? (0, a.jsx)(c.Button, {
-                              onClick: () => l(s.id),
+                              onClick: () => l(o.id),
                               variant: "primary",
-                              text: "Use detected game: ".concat(s.name, " (").concat(s.id, ")"),
+                              text: "Use detected game: ".concat(o.name, " (").concat(o.id, ")"),
                           })
                         : null,
                     (0, a.jsxs)(c.Text, {
@@ -135,8 +135,8 @@ function S() {
                         children: "Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !N.canStartAuthorization,
-                        onClick: N.startAuthorization,
+                        disabled: !O.canStartAuthorization,
+                        onClick: O.startAuthorization,
                         variant: "primary",
                         text: "Start Authorization",
                     }),
@@ -147,20 +147,20 @@ function S() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !O.canStartAuthorization,
-                        onClick: O.startAuthorization,
+                        disabled: !T.canStartAuthorization,
+                        onClick: T.startAuthorization,
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !T.canStartAuthorization,
-                        onClick: T.startAuthorization,
+                        disabled: !N.canStartAuthorization,
+                        onClick: N.startAuthorization,
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !P,
-                        onClick: I,
+                        onClick: w,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

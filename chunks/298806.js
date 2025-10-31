@@ -1,18 +1,18 @@
-t.d(a, { a: () => o });
-var u = t(594886),
-    n = t(45728),
-    r = t(872),
-    i = t(647438);
-function o(e) {
-    e = (0, r.v)(null != e ? e : {}, l);
-    let { locale: a } = (0, u.j)();
-    return (0, i.useMemo)(() => new (0, n.C)(a, e), [a, e]);
+n.d(t, { a: () => s });
+var r = n(594886),
+    i = n(45728),
+    a = n(872),
+    o = n(647438);
+function s(e) {
+    e = (0, a.v)(null != e ? e : {}, l);
+    let { locale: t } = (0, r.j)();
+    return (0, o.useMemo)(() => new (0, i.C)(t, e), [t, e]);
 }
-function l(e, a) {
-    if (e === a) return !0;
-    let t = Object.keys(e),
-        u = Object.keys(a);
-    if (t.length !== u.length) return !1;
-    for (let u of t) if (a[u] !== e[u]) return !1;
+function l(e, t) {
+    if (e === t) return !0;
+    let n = Object.keys(e),
+        r = Object.keys(t);
+    if (n.length !== r.length) return !1;
+    for (let r of n) if (t[r] !== e[r]) return !1;
     return !0;
 }

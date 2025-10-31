@@ -10,16 +10,16 @@ var r,
     d = n(633289),
     p = n(5254),
     f = n(91896),
-    h = n(441623),
-    m = n(199902),
+    m = n(441623),
+    h = n(199902),
     g = n(271383),
     _ = n(430824),
     b = n(158776),
     E = n(699516),
     O = n(594174),
     I = n(981631),
-    v = n(474936);
-function y(e, t, n) {
+    y = n(474936);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -78,7 +78,7 @@ function N(e) {
         status: b.Z.getStatus(e),
         isMobile: b.Z.isMobileOnline(e),
         activities: b.Z.getActivities(e),
-        applicationStream: m.Z.getAnyStreamForUser(e),
+        applicationStream: h.Z.getAnyStreamForUser(e),
     };
 }
 function j(e) {
@@ -116,23 +116,23 @@ class P extends c.Z {
     constructor(e) {
         var t;
         super(),
-            y(this, "key", void 0),
-            y(this, "userId", void 0),
-            y(this, "type", void 0),
-            y(this, "status", void 0),
-            y(this, "isMobile", void 0),
-            y(this, "activities", void 0),
-            y(this, "applicationStream", void 0),
-            y(this, "user", void 0),
-            y(this, "usernameLower", void 0),
-            y(this, "mutualGuildsLength", void 0),
-            y(this, "mutualGuilds", void 0),
-            y(this, "nickname", void 0),
-            y(this, "spam", void 0),
-            y(this, "giftIntentType", void 0),
-            y(this, "ignoredUser", void 0),
-            y(this, "applicationId", void 0),
-            y(this, "isGameRelationship", void 0),
+            v(this, "key", void 0),
+            v(this, "userId", void 0),
+            v(this, "type", void 0),
+            v(this, "status", void 0),
+            v(this, "isMobile", void 0),
+            v(this, "activities", void 0),
+            v(this, "applicationStream", void 0),
+            v(this, "user", void 0),
+            v(this, "usernameLower", void 0),
+            v(this, "mutualGuildsLength", void 0),
+            v(this, "mutualGuilds", void 0),
+            v(this, "nickname", void 0),
+            v(this, "spam", void 0),
+            v(this, "giftIntentType", void 0),
+            v(this, "ignoredUser", void 0),
+            v(this, "applicationId", void 0),
+            v(this, "isGameRelationship", void 0),
             (this.key = e.key),
             (this.userId = e.userId),
             (this.type = e.type),
@@ -176,8 +176,8 @@ class x {
                                 spam: E.Z.isSpam(n),
                                 ignoredUser: E.Z.isIgnored(n),
                                 giftIntentType:
-                                    r === I.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n })
-                                        ? v.hX.FRIEND_ANNIVERSARY
+                                    r === I.OGo.FRIEND && m.Z.isTopAffinityFriendAnniversary({ userId: n })
+                                        ? y.hX.FRIEND_ANNIVERSARY
                                         : void 0,
                                 applicationId: E.Z.getOriginApplicationId(n),
                             },
@@ -299,7 +299,7 @@ class x {
         );
     }
     constructor(e = []) {
-        y(this, "_rows", void 0), (this._rows = e);
+        v(this, "_rows", void 0), (this._rows = e);
     }
 }
 let A = !0,
@@ -327,13 +327,13 @@ function G(e) {
 }
 class B extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, m.Z, u.Z, p.Z, f.Z, g.ZP, _.Z, h.Z, b.Z, E.Z, O.default),
+        this.waitFor(d.Z, h.Z, u.Z, p.Z, f.Z, g.ZP, _.Z, m.Z, b.Z, E.Z, O.default),
             this.syncWith([E.Z], U),
             this.syncWith([f.Z], U),
             this.syncWith([p.Z], U),
-            this.syncWith([h.Z], U),
+            this.syncWith([m.Z], U),
             this.syncWith([O.default], G(T)),
-            this.syncWith([b.Z, m.Z], G(N)),
+            this.syncWith([b.Z, h.Z], G(N)),
             k();
     }
     getState() {
@@ -344,7 +344,7 @@ class B extends (r = a.ZP.Store) {
         };
     }
 }
-y(B, "displayName", "FriendsStore");
+v(B, "displayName", "FriendsStore");
 let H = new B(s.Z, {
     CONNECTION_OPEN: function () {
         k();

@@ -106,11 +106,11 @@ let T = {
             P = (0, c.Z)(),
             w = p.oCV[A],
             D = w - N,
-            L = A <= C || b,
-            x = L && A <= i.premiumTier,
-            M = L && A < i.premiumTier,
-            k = L && A === i.premiumTier,
-            j = i.premiumTier < A && N >= w,
+            x = A <= C || b,
+            L = x && A <= i.premiumTier,
+            M = x && A < i.premiumTier,
+            j = x && A === i.premiumTier,
+            k = i.premiumTier < A && N >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: C >= A || (b && C + 1 === A) || (b && -1 === C && A === p.Eu4.NONE) ? 1 : 0 },
@@ -126,7 +126,7 @@ let T = {
                         style: { transform: U.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")) },
                     }),
                     A !== p.Eu4.NONE
-                        ? j
+                        ? k
                             ? (0, r.jsx)(s.zkc, {
                                   className: a()(E.boostedTierIcon, E.disabledIndicator),
                                   size: "xxs",
@@ -141,8 +141,8 @@ let T = {
                 ],
             });
         function B() {
-            L &&
-                (j ||
+            x &&
+                (k ||
                     (0, f.u)({
                         analyticsLocations: R,
                         analyticsLocation: {
@@ -155,14 +155,14 @@ let T = {
                         guild: i,
                     }));
         }
-        let Z = !x && P.fractionalState === h.a$.NONE,
+        let Z = !L && P.fractionalState === h.a$.NONE,
             F = Z ? s.P3F : "div",
             V = Z ? { onClick: B } : {};
         return (0, r.jsx)(s.aML, {
             tooltipClassName: E.tooltip,
-            text: x
+            text: L
                 ? m.intl.formatToPlainString(m.t["1o48ki"], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
-                : j
+                : k
                   ? m.intl.formatToPlainString(g.default["9CtPjt"], { perk: (0, d.nW)(A, { useLevels: !1 }) })
                   : m.intl.formatToPlainString(m.t.r6NN6Q, {
                         numBoostsRequired: D,
@@ -176,10 +176,10 @@ let T = {
                         y(
                             {
                                 className: a()(E.progressBarMarker, {
-                                    [E.progressBarMarkerUnlocked]: x,
+                                    [E.progressBarMarkerUnlocked]: L,
                                     [E.progressBarMarkerLocked]: Z,
                                     [E.progressBarMarkerLower]: M,
-                                    [E.progressBarMarkerCurrent]: k,
+                                    [E.progressBarMarkerCurrent]: j,
                                 }),
                                 style: { left: "".concat(100 * T[A], "%") },
                             },
@@ -188,8 +188,8 @@ let T = {
                         ),
                         {
                             children: [
-                                !x && (0, r.jsx)("div", { className: E.boostedTierIconBackground }),
-                                x && A === p.Eu4.TIER_3
+                                !L && (0, r.jsx)("div", { className: E.boostedTierIconBackground }),
+                                L && A === p.Eu4.TIER_3
                                     ? (0, r.jsx)(_.m, {
                                           confettiTriggerRef: n,
                                           setConfettiCount: O,
@@ -201,7 +201,7 @@ let T = {
                                     className: E.progressBarMarkerLabel,
                                     variant: "text-md/normal",
                                     children: [
-                                        x &&
+                                        L &&
                                             A !== p.Eu4.NONE &&
                                             (0, r.jsx)(s.dz2, {
                                                 size: "md",

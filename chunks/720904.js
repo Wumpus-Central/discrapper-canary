@@ -13,10 +13,10 @@ var i = n(120356),
     g = n(695346),
     b = n(496675),
     p = n(768581),
-    O = n(176354),
-    y = n(981631),
-    m = n(185923),
-    h = n(388032),
+    y = n(176354),
+    O = n(981631),
+    h = n(185923),
+    m = n(388032),
     v = n(561782);
 let j = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 function E(e) {
@@ -29,14 +29,14 @@ function E(e) {
                   animated: !!i,
                   size: 20,
               }))
-            : null == a && (a = O.ZP.getURL(s)),
+            : null == a && (a = y.ZP.getURL(s)),
         (0, r.jsx)(o.u, {
-            text: (0, O.nY)(t),
+            text: (0, y.nY)(t),
             hideOnClick: !0,
             spacing: 16,
             forceOpen: n,
             children: (0, r.jsx)("div", {
-                "aria-label": h.intl.formatToPlainString(h.t["/iYSo6"], { emojiName: t.name }),
+                "aria-label": m.intl.formatToPlainString(m.t["/iYSo6"], { emojiName: t.name }),
                 className: l()(v.button, { [v.focused]: n }),
                 children:
                     null == a || "" === a.trim()
@@ -58,17 +58,17 @@ function S(e, t) {
         var n;
         return (
             !(e.useSpriteSheet && j.indexOf(null != (n = e.uniqueName) ? n : "") >= 0) &&
-            !O.ZP.isEmojiPremiumLocked({
+            !y.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: m.Hz.REACTION,
+                intention: h.Hz.REACTION,
             })
         );
     });
     n.length > 4 && (n.length = 4);
     let i = g.nc.useSetting(),
         l = (0, f.$R)(t);
-    return (0, a.e7)([b.Z], () => i && l && (t.isPrivate() || b.Z.can(y.Plq.ADD_REACTIONS, t)), [t, l, i]) &&
+    return (0, a.e7)([b.Z], () => i && l && (t.isPrivate() || b.Z.can(O.Plq.ADD_REACTIONS, t)), [t, l, i]) &&
         n.length > 0
         ? (0, r.jsx)(s.kSQ, {
               className: v.wrapper,

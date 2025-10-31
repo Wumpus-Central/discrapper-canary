@@ -1,58 +1,58 @@
 n.d(t, { n: () => c });
 var a = n(951288);
 n(647438);
-var r = n(481060),
+var i = n(481060),
     l = n(688465),
-    i = n(921944),
-    o = n(388032),
-    s = n(29114);
+    r = n(921944),
+    s = n(388032),
+    o = n(29114);
 function c(e) {
     let { markAsDismissed: t, onCTA: c } = e;
     return (0, a.jsxs)("div", {
-        className: s.popup,
+        className: o.popup,
         children: [
             (0, a.jsxs)("div", {
-                className: s.background,
+                className: o.background,
                 children: [
-                    (0, a.jsx)("div", { className: s.blur0 }),
-                    (0, a.jsx)("div", { className: s.blur1 }),
-                    (0, a.jsx)("div", { className: s.blur2 }),
+                    (0, a.jsx)("div", { className: o.blur0 }),
+                    (0, a.jsx)("div", { className: o.blur1 }),
+                    (0, a.jsx)("div", { className: o.blur2 }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: s.content,
+                className: o.content,
                 children: [
-                    (0, a.jsx)(r.P3F, {
-                        className: s.closeIcon,
-                        onClick: () => t(i.L.USER_DISMISS),
-                        children: (0, a.jsx)(r.Dio, {}),
+                    (0, a.jsx)(i.P3F, {
+                        className: o.closeIcon,
+                        onClick: () => t(r.L.USER_DISMISS),
+                        children: (0, a.jsx)(i.Dio, {}),
                     }),
                     (0, a.jsx)("img", {
                         src: n(414190),
-                        className: s.art,
+                        className: o.art,
                         alt: "",
                     }),
                     (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsxs)(r.Heading, {
+                            (0, a.jsxs)(i.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                className: s.heading,
-                                children: [o.intl.string(o.t.MLt8H4), (0, a.jsx)(l.Z, { className: s.betaTag })],
+                                className: o.heading,
+                                children: [s.intl.string(s.t.MLt8H4), (0, a.jsx)(l.Z, { className: o.betaTag })],
                             }),
-                            (0, a.jsx)(r.Text, {
+                            (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: o.intl.string(o.t["l+lSLp"]),
+                                children: s.intl.string(s.t["l+lSLp"]),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(r.Button, {
+                    (0, a.jsx)(i.Button, {
                         variant: "primary",
-                        text: o.intl.string(o.t["9WdoB+"]),
+                        text: s.intl.string(s.t["9WdoB+"]),
                         fullWidth: !0,
                         onClick: () => {
-                            t(i.L.TAKE_ACTION), c();
+                            t(r.L.TAKE_ACTION), c();
                         },
                     }),
                 ],

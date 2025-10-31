@@ -1,15 +1,15 @@
-n.d(t, { q: () => r }), n(388685), n(539854);
+n.d(t, { q: () => i }), n(388685), n(539854);
 var a = n(991346);
-function r() {
+function i() {
     let e = (0, a.Pt)(),
         t = new Map();
     return (
         t.set("root", []),
         Object.entries(e).forEach((e) => {
             var n;
-            let [a, r] = e;
-            if (null != r.predicate && !r.predicate()) return;
-            let l = null != (n = r.parent) ? n : "root";
+            let [a, i] = e;
+            if (null != i.predicate && !i.predicate()) return;
+            let l = null != (n = i.parent) ? n : "root";
             t.set(a, []), t.has(l) || t.set(l, []), t.get(l).push(a);
         }),
         { legacySettingDirectory: t }

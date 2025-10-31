@@ -41,7 +41,7 @@ function u(e) {
             [e.defaultFocusedValue, A, C, I, g, E],
         ),
         [P, w] = (0, l.z)(N, R, e.onFocusChange),
-        [D, L] = (0, c.useState)(() => {
+        [D, x] = (0, c.useState)(() => {
             switch (b) {
                 case "start":
                     return (0, r.Yn)(P, m, p, g, E);
@@ -51,15 +51,15 @@ function u(e) {
                     return (0, r.A8)(P, m, p, g, E);
             }
         }),
-        [x, M] = (0, c.useState)(e.autoFocus || !1),
-        k = (0, c.useMemo)(() => {
+        [L, M] = (0, c.useState)(e.autoFocus || !1),
+        j = (0, c.useMemo)(() => {
             let e = { ...m };
             return e.days ? e.days-- : (e.days = -1), D.add(e);
         }, [D, m]),
-        [j, U] = (0, c.useState)(I);
-    if (!(0, o.jv)(I, j)) {
+        [k, U] = (0, c.useState)(I);
+    if (!(0, o.jv)(I, k)) {
         let e = (0, a.Mw)(P, I);
-        L((0, r.A8)(e, m, p, g, E)), w(e), U(I);
+        x((0, r.A8)(e, m, p, g, E)), w(e), U(I);
     }
     function G(e) {
         w((e = (0, r.Me)(e, g, E)));
@@ -77,8 +77,8 @@ function u(e) {
     (0, r.wp)(P, g, E)
         ? w((0, r.Me)(P, g, E))
         : 0 > P.compare(D)
-          ? L((0, r.N2)(P, m, p, g, E))
-          : P.compare(k) > 0 && L((0, r.Yn)(P, m, p, g, E));
+          ? x((0, r.N2)(P, m, p, g, E))
+          : P.compare(j) > 0 && x((0, r.Yn)(P, m, p, g, E));
     let Z = (0, c.useMemo)(() => !!A && (!!(y && y(A)) || (0, r.wp)(A, g, E)), [A, y, g, E]),
         F = e.isInvalid || "invalid" === e.validationState || Z,
         V = F ? "invalid" : null,
@@ -90,7 +90,7 @@ function u(e) {
         setValue: B,
         visibleRange: {
             start: D,
-            end: k,
+            end: j,
         },
         minValue: g,
         maxValue: E,
@@ -115,17 +115,17 @@ function u(e) {
         },
         focusNextPage() {
             let e = D.add(H);
-            w((0, r.Me)(P.add(H), g, E)), L((0, r.Yn)((0, r.PJ)(P, e, H, p, g, E), H, p));
+            w((0, r.Me)(P.add(H), g, E)), x((0, r.Yn)((0, r.PJ)(P, e, H, p, g, E), H, p));
         },
         focusPreviousPage() {
             let e = D.subtract(H);
-            w((0, r.Me)(P.subtract(H), g, E)), L((0, r.Yn)((0, r.PJ)(P, e, H, p, g, E), H, p));
+            w((0, r.Me)(P.subtract(H), g, E)), x((0, r.Yn)((0, r.PJ)(P, e, H, p, g, E), H, p));
         },
         focusSectionStart() {
             m.days ? G(D) : m.weeks ? G((0, o.zJ)(P, p)) : (m.months || m.years) && G((0, o.Nm)(P));
         },
         focusSectionEnd() {
-            m.days ? G(k) : m.weeks ? G((0, o.vV)(P, p)) : (m.months || m.years) && G((0, o.Vf)(P));
+            m.days ? G(j) : m.weeks ? G((0, o.vV)(P, p)) : (m.months || m.years) && G((0, o.Vf)(P));
         },
         focusNextSection(e) {
             if (!e && !m.days) return void G(P.add(d(m)));
@@ -149,15 +149,15 @@ function u(e) {
         selectDate(e) {
             B(e);
         },
-        isFocused: x,
+        isFocused: L,
         setFocused: M,
         isInvalid: (e) => (0, r.wp)(e, g, E),
         isSelected(e) {
             return null != A && (0, o.KC)(e, A) && !this.isCellDisabled(e) && !this.isCellUnavailable(e);
         },
-        isCellFocused: (e) => x && P && (0, o.KC)(e, P),
+        isCellFocused: (e) => L && P && (0, o.KC)(e, P),
         isCellDisabled(t) {
-            return e.isDisabled || 0 > t.compare(D) || t.compare(k) > 0 || this.isInvalid(t);
+            return e.isDisabled || 0 > t.compare(D) || t.compare(j) > 0 || this.isInvalid(t);
         },
         isCellUnavailable: (t) => !!e.isDateUnavailable && e.isDateUnavailable(t),
         isPreviousVisibleRangeInvalid() {
@@ -165,8 +165,8 @@ function u(e) {
             return (0, o.KC)(e, D) || this.isInvalid(e);
         },
         isNextVisibleRangeInvalid() {
-            let e = k.add({ days: 1 });
-            return (0, o.KC)(e, k) || this.isInvalid(e);
+            let e = j.add({ days: 1 });
+            return (0, o.KC)(e, j) || this.isInvalid(e);
         },
         getDatesInWeek(e, t = D) {
             let n = t.add({ weeks: e }),

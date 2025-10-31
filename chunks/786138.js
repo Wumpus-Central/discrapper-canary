@@ -39,11 +39,11 @@ function y(e) {
         P = f.Z.supports(E.AN.DESKTOP_CAPTURE_APPLICATIONS),
         w = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
         D = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
-        L = (0, h.Z)(O, A),
-        x = (0, p.Z)(O, A, g.Vq),
+        x = (0, h.Z)(O, A),
+        L = (0, p.Z)(O, A, g.Vq),
         M = null != C && w && (!C.startsWith("screen") || D),
-        k = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, _.isLinux)()),
-        j = i.useCallback(() => {
+        j = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, _.isLinux)()),
+        k = i.useCallback(() => {
             (null == C ? void 0 : C.startsWith("prepicked:"))
                 ? f.Z.getMediaEngine().eachConnection((e) => {
                       e.context === E.Yn.STREAM && e.presentDesktopSourcePicker("window");
@@ -102,7 +102,7 @@ function y(e) {
             ? (0, r.jsx)(o.sNh, {
                   id: "stream-settings",
                   label: b.intl.string(b.t.ytAD9d),
-                  children: L,
+                  children: x,
               })
             : null,
         H = M
@@ -114,13 +114,13 @@ function y(e) {
               })
             : null,
         Y =
-            !P || T || k
+            !P || T || j
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "change-windows",
                       label: Z,
                       icon: o.hGI,
-                      action: j,
+                      action: k,
                   }),
         W = (0, r.jsx)(o.sNh, {
             id: "stop-streaming",
@@ -134,6 +134,6 @@ function y(e) {
               children: [W, Y, V, H],
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [V, I ? x : null, H, Y, W],
+              children: [V, I ? L : null, H, Y, W],
           });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -11,15 +11,15 @@ var i = n(120356),
     d = n(981631),
     p = n(921944),
     f = n(388032),
-    h = n(466653);
-function m(e) {
+    m = n(466653);
+function h(e) {
     let { className: t, markAsDismissed: n } = e;
     return (0, r.jsxs)(o.Z, {
-        className: l()(h.card, t),
+        className: l()(m.card, t),
         children: [
             (0, r.jsx)(a.Heading, {
                 variant: "heading-md/semibold",
-                className: h.header,
+                className: m.header,
                 children: f.intl.string(f.t.HcbnMM),
             }),
             (0, r.jsx)(a.Text, {
@@ -31,7 +31,7 @@ function m(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: h.buttonContainer,
+                className: m.buttonContainer,
                 children: [
                     (0, r.jsx)(a.Button, {
                         variant: "primary",

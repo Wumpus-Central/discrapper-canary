@@ -2,9 +2,9 @@ n.d(t, { Z: () => _ }), n(539854);
 var r = n(951288);
 n(647438);
 var i = n(793030),
-    a = n(952265),
-    o = n(755721),
-    s = n(468026),
+    a = n(273352),
+    o = n(952265),
+    s = n(755721),
     l = n(388032);
 function c(e, t, n) {
     return (
@@ -76,7 +76,7 @@ let _ = {
             titleClassName: O,
             contextKey: v,
         } = e;
-        (0, a.h7)(
+        (0, o.h7)(
             (e) => {
                 if (null == E) {
                     let a = [];
@@ -109,11 +109,11 @@ let _ = {
                     );
                 }
                 return (0, r.jsx)(
-                    s.default,
+                    a.default,
                     f(u({}, e), {
                         title: t,
                         body: n,
-                        confirmColor: "critical-primary" === _ ? o.Tt.RED : o.Tt.BRAND,
+                        confirmColor: "critical-primary" === _ ? s.Tt.RED : s.Tt.BRAND,
                         confirmText: d,
                         cancelText: p,
                         onConfirm: h,

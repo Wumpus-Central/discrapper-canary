@@ -189,8 +189,8 @@ function w(e) {
             isLargeSize: x,
             pulseItemKey: L,
             allowAnimatedEmoji: M,
-            setPulseItemKey: k,
-            messageId: j,
+            setPulseItemKey: j,
+            messageId: k,
             isBurstReaction: U,
             rowPosition: G,
             inNitroLockedSection: B,
@@ -203,7 +203,7 @@ function w(e) {
         X = (e) => {
             if ((e.stopPropagation(), y.current || v.current)) return;
             let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && k(a),
+            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && j(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
                 E(t, {
                     isFinalSelection: !e.shiftKey,
@@ -251,7 +251,7 @@ function w(e) {
                             if (
                                 null != Y.current &&
                                 null != G &&
-                                null != j &&
+                                null != k &&
                                 !e.shiftKey &&
                                 null != W.name &&
                                 U &&
@@ -260,7 +260,7 @@ function w(e) {
                             ) {
                                 let e = null == W.id ? _.ZP.convertNameToSurrogate(W.name) : W.name,
                                     t = Y.current.getBoundingClientRect();
-                                (t.x = G.x + (q + 1) * K), F(R(q, f)), (0, m.U)(j, e, W.id, t);
+                                (t.x = G.x + (q + 1) * K), F(R(q, f)), (0, m.U)(k, e, W.id, t);
                             }
                             X(e);
                         },

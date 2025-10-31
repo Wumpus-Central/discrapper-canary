@@ -1,23 +1,23 @@
 n.d(t, { Z: () => u });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(793030),
-    i = n(704215),
-    o = n(481060),
-    s = n(605236),
+    r = n(704215),
+    s = n(481060),
+    o = n(605236),
     c = n(675478),
     d = n(715639);
 function u() {
-    return (0, a.jsx)(o.Ttm, {
+    return (0, a.jsx)(s.Ttm, {
         className: d.container,
         children: (0, a.jsx)(m, {}),
     });
 }
 function m() {
-    let e = r.useCallback(() => {
-            (0, c.Z1)(i.z.NITRO_TENURE_BADGE_LEVEL_UP);
+    let e = i.useCallback(() => {
+            (0, c.Z1)(r.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedAtMs: t } = (0, s.Fo)(i.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        { lastDismissedAtMs: t } = (0, o.Fo)(r.z.NITRO_TENURE_BADGE_LEVEL_UP),
         n = null != t ? new Date(t) : null;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -38,7 +38,7 @@ function m() {
             }),
             (0, a.jsx)("div", {
                 className: d.tenureBadgeControls,
-                children: (0, a.jsx)(o.Button, {
+                children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     text: "Reset Level Up DC",
                     onClick: e,

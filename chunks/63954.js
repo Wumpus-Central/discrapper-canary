@@ -32,8 +32,8 @@ var r = n(951288),
     w = n(37303),
     P = n(134483),
     N = n(683650),
-    A = n(70956),
-    R = n(188764);
+    R = n(70956),
+    A = n(188764);
 function B(e, t, n) {
     return (
         t in e
@@ -328,21 +328,21 @@ function W() {
     }
     let ec = s.useMemo(() => {
             for (let [e, t] of Object.entries(W.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
-            return 10 * A.Z.Seconds.MINUTE;
+            return 10 * R.Z.Seconds.MINUTE;
         }, [W.config.taskConfigV2.tasks]),
         ed = s.useMemo(() => l.X.WATCH_VIDEO in W.config.taskConfigV2.tasks, [W.config.taskConfigV2.tasks]);
     o()(!1 !== W.preview && null != W.preview, "Preview config must have property preview: true");
     let eu = W.config.taskConfigV2.tasks[l.X.WATCH_VIDEO];
     return (0, r.jsxs)(p.zJl, {
-        className: R.container,
+        className: A.container,
         children: [
             (0, r.jsx)(p.Heading, {
                 variant: "heading-lg/bold",
-                className: R.heading,
+                className: A.heading,
                 children: "Quest Preview Tool",
             }),
             (0, r.jsx)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: (0, r.jsx)(C.Z, {
                     onSelect: function (e) {
                         $(e),
@@ -373,11 +373,11 @@ function W() {
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Task Config",
             }),
             (0, r.jsx)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: (0, r.jsx)(y.Z, {
                     taskDuration: ec,
                     taskConfigV2: W.config.taskConfigV2,
@@ -388,11 +388,11 @@ function W() {
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Messages",
             }),
             (0, r.jsxs)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: [
                     (0, r.jsx)(v.Z, {
                         title: "Quest Name",
@@ -439,11 +439,11 @@ function W() {
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Assets",
             }),
             (0, r.jsxs)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: [
                     (0, r.jsx)(j.Z, {
                         title: "Hero",
@@ -538,11 +538,11 @@ function W() {
                         children: [
                             (0, r.jsxs)(p.Heading, {
                                 variant: "heading-md/semibold",
-                                className: R.subheading,
+                                className: A.subheading,
                                 children: ["Reward #", t + 1],
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.fields,
+                                className: A.fields,
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         title: "Name",
@@ -620,14 +620,14 @@ function W() {
             ),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Colors & Quest States",
             }),
             (0, r.jsxs)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: R.fields,
+                        className: A.fields,
                         style: { marginBottom: 0 },
                         children: [
                             (0, r.jsx)(_.Z, {
@@ -645,7 +645,7 @@ function W() {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: R.fields,
+                        className: A.fields,
                         children: (0, r.jsx)(E.Z, {}),
                     }),
                     (0, r.jsx)(O.Z, {
@@ -717,11 +717,11 @@ function W() {
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-lg/bold",
-                className: R.heading,
+                className: A.heading,
                 children: "Component Previews",
             }),
             (0, r.jsxs)("div", {
-                className: R.componentPreviews,
+                className: A.componentPreviews,
                 children: [
                     (0, r.jsxs)(b.Z, {
                         withBorder: !0,
@@ -731,7 +731,7 @@ function W() {
                                 children: "Quest Bar",
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.questBarPreviewWrapper,
+                                className: A.questBarPreviewWrapper,
                                 children: [
                                     (null == (d = W.userStatus) ? void 0 : d.claimedAt) != null &&
                                         (0, r.jsx)(p.Text, {
@@ -740,7 +740,7 @@ function W() {
                                             children: "The Quest Bar is hidden when the user has claimed the reward.",
                                         }),
                                     (0, r.jsx)("div", {
-                                        className: R.questBarPreview,
+                                        className: A.questBarPreview,
                                         children: (0, r.jsx)(T.p, {
                                             isPreview: !0,
                                             source: "preview",
@@ -765,7 +765,7 @@ function W() {
                                 questId: "0",
                                 children: (0, r.jsx)(x.Z, {
                                     quest: W,
-                                    className: R.questTile,
+                                    className: A.questTile,
                                     questContent: g.jn.QUEST_HOME_DESKTOP,
                                     contentPosition: 0,
                                     rowIndex: 0,
@@ -789,13 +789,13 @@ function W() {
                                         "The Quest Channel Call Header is hidden when the user has claimed the reward.",
                                 }),
                             (0, r.jsx)("div", {
-                                className: R.questBarPreviewWrapper,
+                                className: A.questBarPreviewWrapper,
                                 children: (0, r.jsx)(T.p, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
                                     children: (0, r.jsx)("div", {
-                                        className: R.questChannelCallHeaderPreview,
+                                        className: A.questChannelCallHeaderPreview,
                                         children: (0, r.jsx)(P.Z, {
                                             channelId: "123",
                                             previewQuest: W,
@@ -807,7 +807,7 @@ function W() {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: R.toggleSwitch,
+                        className: A.toggleSwitch,
                         children: (0, r.jsx)(p.rsf, {
                             label: "Is Participating:",
                             checked: K,
@@ -837,7 +837,7 @@ function W() {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: R.toggleSwitch,
+                        className: A.toggleSwitch,
                         children: (0, r.jsx)(p.rsf, {
                             label: "Invalid Quests Embed:",
                             checked: X,
@@ -861,7 +861,7 @@ function W() {
                                             let { default: e } = await Promise.all([
                                                 n.e("13193"),
                                                 n.e("32249"),
-                                                n.e("58396"),
+                                                n.e("73155"),
                                             ]).then(n.bind(n, 536687));
                                             return (t) => {
                                                 var n;
@@ -895,9 +895,9 @@ class H extends s.Component {
         let { error: e, renderKey: t } = this.state;
         return null != e
             ? (0, r.jsxs)("div", {
-                  className: R.errorBoundary,
+                  className: A.errorBoundary,
                   children: [
-                      (0, r.jsx)(p.Mgn, { className: R.errorBoundaryIcon }),
+                      (0, r.jsx)(p.Mgn, { className: A.errorBoundaryIcon }),
                       (0, r.jsx)(p.Heading, {
                           variant: "heading-lg/semibold",
                           children: "Something broke in the Quest preview tool :(",
@@ -909,9 +909,9 @@ class H extends s.Component {
                       }),
                       null != e.message &&
                           (0, r.jsx)(p.Zbd, {
-                              className: R.errorMessageWrapper,
+                              className: A.errorMessageWrapper,
                               children: (0, r.jsx)("code", {
-                                  className: R.errorMessage,
+                                  className: A.errorMessage,
                                   children: e.message,
                               }),
                           }),

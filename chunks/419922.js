@@ -232,7 +232,7 @@ let P = (e) => {
                   }),
               });
     },
-    L = (e) => {
+    x = (e) => {
         let {
                 disableAnimation: t,
                 enlargeScaleFactor: n,
@@ -286,7 +286,7 @@ let P = (e) => {
                                     (0, r.jsx)(c.animated.div, {
                                         className: O.overlayStickerWrapper,
                                         style: e,
-                                        children: (0, r.jsx)(x, {
+                                        children: (0, r.jsx)(L, {
                                             className: O.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -313,7 +313,7 @@ let P = (e) => {
             )
         );
     },
-    x = (e) => {
+    L = (e) => {
         let {
                 isInteracting: t = !1,
                 disableAnimation: n = !1,
@@ -352,7 +352,7 @@ let P = (e) => {
                         onError: h,
                     }),
                     a &&
-                        (0, r.jsx)(L, {
+                        (0, r.jsx)(x, {
                             disableAnimation: n,
                             enlargeScaleFactor: s,
                             enlargeWithName: o,
@@ -366,4 +366,4 @@ let P = (e) => {
             "".concat(u.id, ",").concat(c),
         );
     },
-    M = x;
+    M = L;

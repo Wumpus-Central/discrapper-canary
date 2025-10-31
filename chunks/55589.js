@@ -95,7 +95,7 @@ function D() {
     let e = _.Z.getMutablePrivateChannels();
     for (let t in e) v.set(t, S(e[t]));
 }
-let L = (() => {
+let x = (() => {
     let e = [],
         t = [],
         n = [];
@@ -119,12 +119,12 @@ let L = (() => {
         );
     };
 })();
-class x extends (r = o.ZP.Store) {
+class L extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, p.Z, u.Z, h.ZP, d.Z, m.ZP, g.default), this.syncWith([m.ZP, u.Z], A);
     }
     getPrivateChannelIds() {
-        return L();
+        return x();
     }
     getSortedChannels() {
         return [v.values("FAVORITE"), v.values("DEFAULT")];
@@ -140,8 +140,8 @@ class x extends (r = o.ZP.Store) {
         );
     }
 }
-b(x, "displayName", "PrivateChannelSortStore");
-let M = new x(l.Z, {
+b(L, "displayName", "PrivateChannelSortStore");
+let M = new L(l.Z, {
     CONNECTION_OPEN: A,
     CONNECTION_OPEN_SUPPLEMENTAL: A,
     OVERLAY_INITIALIZE: A,

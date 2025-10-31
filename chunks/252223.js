@@ -80,12 +80,12 @@ function M(e, t) {
         e
     );
 }
-function k(e) {
+function j(e) {
     let t = (0, d.R)("formatActivityString"),
         n = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
     return null != n ? (t ? n : P.intl.formatToPlainString(P.t["0wJXSh"], { name: n })) : P.intl.string(P.t.eXan7B);
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
             ? P.intl.string(P.t["9FaEzi"])
@@ -102,12 +102,12 @@ function U(e) {
         s = (0, p.ZP)(r),
         l = a || o;
     return (
-        null != t && i.push(k(t)),
+        null != t && i.push(j(t)),
         n.forEach((e) => {
             let { tooltip: t } = (0, v.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(j(r, s)),
+        null == t && null != r && i.push(k(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
@@ -145,8 +145,8 @@ function Z(e) {
     } = e;
     (0, _.Z)(null == t ? void 0 : t.id);
     let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        k = (0, m.Cf)(L),
-        j = (0, E.E)("ActivityStatus", l),
+        j = (0, m.Cf)(L),
+        k = (0, E.E)("ActivityStatus", l),
         Z = i.useMemo(() => {
             var e, t;
             let r =
@@ -162,7 +162,7 @@ function Z(e) {
         }, [n]),
         F = (0, c.e7)([b.default], () => b.default.getId() === (null == t ? void 0 : t.id)),
         V = (0, c.e7)([g.Z], () =>
-            j
+            k
                 ? F
                     ? g.Z.getHangStatusActivity()
                     : null != n
@@ -182,7 +182,7 @@ function Z(e) {
                                   return (
                                       t !== R.IIU.CUSTOM_STATUS &&
                                       t !== R.IIU.HANG_STATUS &&
-                                      n !== (null == k ? void 0 : k.name)
+                                      n !== (null == j ? void 0 : j.name)
                                   );
                               }))
                     ? e
@@ -191,8 +191,8 @@ function Z(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == k ? void 0 : k.name]),
-        Y = null == n ? void 0 : n.find((e) => e.name === (null == k ? void 0 : k.name)),
+        }, [n, null == j ? void 0 : j.name]),
+        Y = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
         W = (null == t ? void 0 : t.bot) === !0,
         K = (0, c.e7)([y.Z], () => y.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (null == Z ? void 0 : Z.state) != null,

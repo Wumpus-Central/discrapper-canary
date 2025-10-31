@@ -190,11 +190,11 @@ function v(e, t, n, a) {
                 sidebarHeight: P,
                 listHeaderHeight: w = 0,
                 renderSection: D,
-                renderRow: L,
-                renderFooter: x,
+                renderRow: x,
+                renderFooter: L,
                 renderSidebar: M,
-                renderListHeader: k,
-                stickyListHeader: j,
+                renderListHeader: j,
+                stickyListHeader: k,
                 wrapSection: U,
                 getAnchorId: G,
                 paddingTop: B,
@@ -342,7 +342,7 @@ function v(e, t, n, a) {
         return (
             i.useLayoutEffect(() => {
                 2 !== ea.current.dirty && (ea.current.dirty = 2);
-            }, [ec, D, L, x, U, el, es, ea]),
+            }, [ec, D, x, L, U, el, es, ea]),
             (0, u.rS)({
                 scrollerRef: ei,
                 anchor: e_,
@@ -385,17 +385,17 @@ function v(e, t, n, a) {
                                             containerRef: et,
                                             children: y({
                                                 items: ec,
-                                                renderListHeader: k,
-                                                stickyListHeader: j,
+                                                renderListHeader: j,
+                                                stickyListHeader: k,
                                                 renderSection: D,
-                                                renderRow: L,
-                                                renderFooter: x,
+                                                renderRow: x,
+                                                renderFooter: L,
                                                 wrapSection: U,
                                                 spacerTop: es,
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, k, j, D, L, x, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, j, k, D, x, L, U, es],
                             ),
                             i.useMemo(
                                 () =>

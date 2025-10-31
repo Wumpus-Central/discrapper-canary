@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(239091),
     p = n(443589),
     f = n(703656),
-    h = n(592125),
-    m = n(131951),
+    m = n(592125),
+    h = n(131951),
     g = n(699516),
     _ = n(51144),
     b = n(298213),
     E = n(321488),
     O = n(417183),
     I = n(825682),
-    v = n(170245),
-    y = n(981631),
+    y = n(170245),
+    v = n(981631),
     C = n(65154),
     S = n(388032),
     T = n(934422);
@@ -51,7 +51,7 @@ function j(e) {
                 joinCallVideo: !0,
             });
         }, [t.id]),
-        h = i.useCallback(() => {
+        m = i.useCallback(() => {
             b.Z.removeFriend({
                 userId: t.id,
                 applicationId: l ? n : null,
@@ -66,10 +66,10 @@ function j(e) {
                 confirmText: e,
                 confirmVariant: "critical-primary",
                 cancelText: S.intl.string(S.t["ETE/oC"]),
-                onConfirm: h,
+                onConfirm: m,
             });
-        }, [h, l, t]),
-        E = (0, s.e7)([m.Z], () => m.Z.supports(C.AN.VIDEO)),
+        }, [m, l, t]),
+        E = (0, s.e7)([h.Z], () => h.Z.supports(C.AN.VIDEO)),
         O = t.isProvisional,
         I = l ? S.intl.string(S.t.RLcE6x) : S.intl.string(S.t.cvSt1J);
     return (0, r.jsxs)(o.v2r, {
@@ -130,7 +130,7 @@ class P extends i.PureComponent {
                 (0, r.jsxs)("div", {
                     className: T.listItemContents,
                     children: [
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(y.Z, {
                             user: e,
                             status: l,
                             isMobile: a,
@@ -152,7 +152,7 @@ class P extends i.PureComponent {
                                     (0, r.jsx)(p.Z, {
                                         recipientUser: e,
                                         giftIntentType: c,
-                                        analyticsPage: y.ZY5.FRIENDS_LIST,
+                                        analyticsPage: v.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t,
                                     }),
                                 (0, r.jsx)(E.Z, {
@@ -181,10 +181,10 @@ class P extends i.PureComponent {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(
-                    h.Z.getMutablePrivateChannels(),
-                    (e) => e.type === y.d4z.DM && e.getRecipientId() === t.id,
+                    m.Z.getMutablePrivateChannels(),
+                    (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id,
                 );
-                null != n ? (0, f.uL)(y.Z5c.CHANNEL(y.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
+                null != n ? (0, f.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
             }),
             N(this, "handleOpenActionsMenu", (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;

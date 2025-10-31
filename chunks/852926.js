@@ -2,8 +2,8 @@ n.d(t, {
     GC: () => _,
     _X: () => g,
     br: () => f,
-    em: () => m,
-    jU: () => h,
+    em: () => h,
+    jU: () => m,
 });
 var r = n(13245),
     i = n(371651),
@@ -18,7 +18,7 @@ let p = ["207646673902501888"];
 function f(e) {
     return null != e && !!i.default.isOverlayOOPEnabledForPid(e) && l.Z.isReady(e);
 }
-function h(e) {
+function m(e) {
     return null == e
         ? {
               lock: d.VqG,
@@ -40,7 +40,7 @@ function h(e) {
                 context: d.IlC.APP,
             });
 }
-let m = async (e, t, n) => {
+let h = async (e, t, n) => {
         if (((0, c.YK)(e, t), (null == n || "" === n) && (0, c.s9)(t)))
             return (e.authorization.scopes = [u.cE, u.CN]), Promise.resolve();
         if (null == n || "" === n)

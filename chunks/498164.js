@@ -11,16 +11,16 @@ var i = n(772848),
     d = n(457330),
     p = n(533307),
     f = n(317381),
-    h = n(122613),
-    m = n(649256),
+    m = n(122613),
+    h = n(649256),
     g = n(100527),
     _ = n(728345),
     b = n(962220),
     E = n(69580),
     O = n(53144),
     I = n(113434),
-    v = n(36243),
-    y = n(703656),
+    y = n(36243),
+    v = n(703656),
     C = n(553795),
     S = n(594174),
     T = n(626135),
@@ -160,7 +160,7 @@ let M = {
             switch ((P.ZP.focus(), t)) {
                 case Z.jE.USER_SETTINGS:
                     null != n &&
-                        ((0, y.dL)({
+                        ((0, v.dL)({
                             pathname: w.Z5c.SETTINGS(n.section, n.subsection),
                             search: n.search,
                         }),
@@ -168,23 +168,23 @@ let M = {
                     break;
                 case Z.jE.CHANGELOG:
                     null != n &&
-                        ((0, y.dL)(j.Z.formatPathWithQuery(w.Z5c.CHANGELOGS(n.date), n.query)),
+                        ((0, v.dL)(j.Z.formatPathWithQuery(w.Z5c.CHANGELOGS(n.date), n.query)),
                         D(n.fingerprint, (0, Z.O)(t)));
                     break;
                 case Z.jE.LIBRARY:
-                    (0, y.dL)(w.Z5c.APPLICATION_LIBRARY), null != n && D(n.fingerprint, (0, Z.O)(t));
+                    (0, v.dL)(w.Z5c.APPLICATION_LIBRARY), null != n && D(n.fingerprint, (0, Z.O)(t));
                     break;
                 case Z.jE.STORE_HOME:
-                    (0, y.dL)(w.Z5c.APPLICATION_STORE), null != n && D(n.fingerprint, (0, Z.O)(t));
+                    (0, v.dL)(w.Z5c.APPLICATION_STORE), null != n && D(n.fingerprint, (0, Z.O)(t));
                     break;
                 case Z.jE.STORE_LISTING:
                     null != n &&
-                        ((0, y.dL)(w.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)),
+                        ((0, v.dL)(w.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)),
                         D(n.fingerprint, (0, Z.O)(t)));
                     break;
                 case Z.jE.PICK_GUILD_SETTINGS:
                     null != n &&
-                        ((0, y.dL)({
+                        ((0, v.dL)({
                             pathname: w.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search,
                         }),
@@ -192,7 +192,7 @@ let M = {
                     break;
                 case Z.jE.CHANNEL:
                     null != n &&
-                        ((0, y.dL)({
+                        ((0, v.dL)({
                             pathname: w.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search,
                         }),
@@ -200,19 +200,19 @@ let M = {
                     break;
                 case Z.jE.QUEST_HOME:
                     null != n
-                        ? ((0, y.dL)({
+                        ? ((0, v.dL)({
                               pathname: w.Z5c.QUEST_HOME_V2,
                               hash: n.questId,
                           }),
                           D(n.fingerprint, (0, Z.O)(t)))
-                        : (0, y.dL)(w.Z5c.QUEST_HOME_V2);
+                        : (0, v.dL)(w.Z5c.QUEST_HOME_V2);
                     break;
                 case Z.jE.QUEST_PREVIEW_TOOL:
-                    if ((0, v.T)({ location: L.dr.QUEST_PREVIEW_TOOL_2 }) && null != n) {
+                    if ((0, y.T)({ location: L.dr.QUEST_PREVIEW_TOOL_2 }) && null != n) {
                         let e = new URLSearchParams();
                         e.set(I.tR.TAB, I.e5.PREVIEW_TOOL),
                             null != n.questId && e.set(I.tR.QUEST_ID, n.questId),
-                            (0, y.dL)({
+                            (0, v.dL)({
                                 pathname: w.Z5c.QUEST_HOME_V2,
                                 search: "?".concat(e.toString()),
                             }),
@@ -221,7 +221,7 @@ let M = {
                     break;
                 case Z.jE.DISCOVERY_GAME_RESULTS:
                     null != n &&
-                        ((0, y.dL)({
+                        ((0, v.dL)({
                             pathname: w.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: "?game=".concat(n.gameId),
                         }),
@@ -238,7 +238,7 @@ let M = {
                     return !1;
                 case Z.jE.SHOP:
                     null != n &&
-                        ((0, y.dL)({
+                        ((0, v.dL)({
                             pathname: w.Z5c.COLLECTIBLES_SHOP,
                             search: n.search,
                         }),
@@ -246,7 +246,7 @@ let M = {
                     break;
                 case Z.jE.FEATURES:
                     (null == n ? void 0 : n.path) != null &&
-                        ((0, y.dL)({ pathname: n.path }), D(n.fingerprint, (0, Z.O)(t)));
+                        ((0, v.dL)({ pathname: n.path }), D(n.fingerprint, (0, Z.O)(t)));
                     break;
                 case Z.jE.ACTIVITIES:
                     if (null != n) {
@@ -275,12 +275,12 @@ let M = {
                                     let o = await u.Z.openPrivateChannel({ recipientIds: s }),
                                         c = new URL(t),
                                         d = null != (i = c.searchParams.get("referrer_id")) ? i : void 0,
-                                        { customId: p } = await (0, m.ur)(
+                                        { customId: p } = await (0, h.ur)(
                                             e,
                                             c.searchParams.get("link_id"),
                                             c.searchParams.get("custom_id"),
                                         );
-                                    await (0, h.Z)({
+                                    await (0, m.Z)({
                                         targetApplicationId: e,
                                         channelId: o,
                                         analyticsLocations: [g.Z.DEEPLINK],

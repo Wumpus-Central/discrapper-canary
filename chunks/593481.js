@@ -1,14 +1,14 @@
 n.d(t, {
-    QR: () => _,
-    Yj: () => y,
+    QR: () => y,
+    Yj: () => O,
     ZP: () => v,
 });
 var i,
     r = n(951288),
-    o = n(647438),
-    l = n(120356),
-    a = n.n(l),
-    s = n(481060),
+    l = n(647438),
+    o = n(120356),
+    s = n.n(o),
+    a = n(481060),
     c = n(294033),
     d = n(388032),
     u = n(866497),
@@ -35,7 +35,7 @@ let f = (e) => e.stopPropagation(),
             onMouseOver: f,
         }),
     m = () => (0, r.jsx)("div", { className: u.divider }),
-    _ = (e, t, n) =>
+    y = (e, t, n) =>
         (0, r.jsx)("div", {
             className: u.keybindMessage,
             children: d.intl.format(n, {
@@ -51,12 +51,12 @@ let f = (e) => e.stopPropagation(),
                     ),
             }),
         }),
-    y = (e, t) =>
+    O = (e, t) =>
         (0, r.jsx)("div", {
             className: u.hintSubtleText,
             children: t,
         });
-class O extends (i = o.PureComponent) {
+class _ extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -73,11 +73,11 @@ class O extends (i = o.PureComponent) {
     renderCloseButton() {
         return "function" == typeof this.props.title
             ? null
-            : (0, r.jsx)(s.P3F, {
+            : (0, r.jsx)(a.P3F, {
                   onClick: this.handleDismiss,
                   className: u.dismissButton,
                   "aria-label": d.intl.string(d.t.LnEgqX),
-                  children: (0, r.jsx)(s.Dio, {
+                  children: (0, r.jsx)(a.Dio, {
                       size: "xs",
                       color: "currentColor",
                       className: u.dismissIcon,
@@ -94,7 +94,7 @@ class O extends (i = o.PureComponent) {
             let i = e(n, t);
             return null != i
                 ? (0, r.jsxs)(
-                      o.Fragment,
+                      l.Fragment,
                       {
                           children: [(0, r.jsx)(m, {}), i],
                       },
@@ -103,7 +103,7 @@ class O extends (i = o.PureComponent) {
                 : null;
         }
         return (0, r.jsxs)(
-            o.Fragment,
+            l.Fragment,
             {
                 children: [
                     (0, r.jsx)(m, {}),
@@ -122,15 +122,15 @@ class O extends (i = o.PureComponent) {
     }
     renderFooter() {
         let {
-            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: l },
-            state: { expanded: a },
+            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: o },
+            state: { expanded: s },
         } = this;
-        if (!a) return null != l ? this.renderHint() : null;
+        if (!s) return null != o ? this.renderHint() : null;
         if (null != this.props.renderFooter) {
-            let e = this.props.renderFooter(a);
+            let e = this.props.renderFooter(s);
             return null != e
                 ? (0, r.jsxs)(
-                      o.Fragment,
+                      l.Fragment,
                       {
                           children: [(0, r.jsx)(m, {}), e],
                       },
@@ -140,15 +140,15 @@ class O extends (i = o.PureComponent) {
         }
         return null != n || null != i
             ? (0, r.jsxs)(
-                  o.Fragment,
+                  l.Fragment,
                   {
                       children: [
                           (0, r.jsx)(m, {}),
-                          (0, r.jsxs)(s.ButtonGroup, {
+                          (0, r.jsxs)(a.ButtonGroup, {
                               fullWidth: !0,
                               children: [
                                   null != n
-                                      ? (0, r.jsx)(s.Button, {
+                                      ? (0, r.jsx)(a.Button, {
                                             variant: "active",
                                             size: "sm",
                                             text: null != t ? t : d.intl.string(d.t.BddRzS),
@@ -156,7 +156,7 @@ class O extends (i = o.PureComponent) {
                                         })
                                       : null,
                                   null != i
-                                      ? (0, r.jsx)(s.Button, {
+                                      ? (0, r.jsx)(a.Button, {
                                             variant: "secondary",
                                             size: "sm",
                                             text: null != e ? e : d.intl.string(d.t["ETE/oC"]),
@@ -176,9 +176,9 @@ class O extends (i = o.PureComponent) {
         return null == e
             ? null
             : "string" == typeof e
-              ? (0, r.jsx)(s.qEK, {
+              ? (0, r.jsx)(a.qEK, {
                     src: e,
-                    size: s.EFr.SIZE_40,
+                    size: a.EFr.SIZE_40,
                     className: u.avatar,
                     "aria-hidden": !0,
                 })
@@ -202,7 +202,7 @@ class O extends (i = o.PureComponent) {
                         }),
                         null != e
                             ? (0, r.jsx)("div", {
-                                  className: a()(u.body, h.marginTop4),
+                                  className: s()(u.body, h.marginTop4),
                                   style: {
                                       WebkitLineClamp: n,
                                       lineClamp: n,
@@ -220,12 +220,12 @@ class O extends (i = o.PureComponent) {
                 props: { onNotificationClick: e, disabled: t },
                 state: { expanded: n },
             } = this,
-            i = null != e ? s.P3F : "div";
+            i = null != e ? a.P3F : "div";
         return (0, r.jsxs)(i, {
             onMouseOver: n ? void 0 : this.handleMouseEnter,
             onFocus: n ? void 0 : this.handleMouseEnter,
             onClick: null != e ? e : void 0,
-            className: a()(u.container, {
+            className: s()(u.container, {
                 [u.themePrimary]: !0,
                 [u.clickable]: null != e && !t,
             }),
@@ -261,9 +261,9 @@ class O extends (i = o.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(O, "defaultProps", {
+p(_, "defaultProps", {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1,
 });
-let v = O;
+let v = _;

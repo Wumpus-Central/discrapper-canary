@@ -41,7 +41,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,19 +74,19 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let k = "???",
-    j = (e) => {
+let j = "???",
+    k = (e) => {
         let { analyticsLocations: t, startingScreen: i } = e;
         g.default.track(N.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 656139));
-                return (t) => (0, r.jsx)(e, M(L({}, t), { startingScreen: i }));
+                return (t) => (0, r.jsx)(e, M(x({}, t), { startingScreen: i }));
             });
     };
 class U extends i.Component {
@@ -102,9 +102,9 @@ class U extends i.Component {
     }
     getTitleText() {
         let e = h.default.getUser(this.trialOffer.user_id),
-            t = null != e ? e.username : k,
+            t = null != e ? e.username : j,
             n = h.default.getUser(this.trialOffer.referrer_id),
-            r = null != n ? n.username : k;
+            r = null != n ? n.username : j;
         return this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at
             ? R.intl.formatToPlainString(R.t["Mptau/"], { username: t })
             : this.offerExpired
@@ -173,9 +173,9 @@ class U extends i.Component {
     render() {
         let e = () => {
                 let e = h.default.getUser(this.trialOffer.user_id),
-                    t = null != e ? e.username : k,
+                    t = null != e ? e.username : j,
                     n = h.default.getUser(this.trialOffer.referrer_id),
-                    r = null != n ? n.username : k;
+                    r = null != n ? n.username : j;
                 if (this.isSender)
                     if (this.recipientHasNitro && void 0 === this.trialOffer.redeemed_at)
                         return {
@@ -219,7 +219,7 @@ class U extends i.Component {
                 disabled: !1,
                 size: "md",
                 onClick: () =>
-                    j({
+                    k({
                         analyticsLocations: [],
                         startingScreen:
                             this.referralsSent.size === I.Q

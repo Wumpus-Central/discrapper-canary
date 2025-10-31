@@ -42,9 +42,9 @@ let g = (e, t, n, r) => {
                 basePrice: P,
                 currentSubscription: w,
                 skuId: D,
-                applicationName: L,
+                applicationName: x,
             } = e,
-            x = (0, i.e7)([o.Z], () => o.Z.inReverseTrial());
+            L = (0, i.e7)([o.Z], () => o.Z.inReverseTrial());
         if (A) return null;
         let M = null == e.planGroup ? [] : e.planGroup;
         if (null != T) {
@@ -54,7 +54,7 @@ let g = (e, t, n, r) => {
                 (s = (0, u.og)((0, u.T4)(T.total, T.currency), t, n)),
                 (E = (0, u.og)((0, u.T4)(T.subtotal, T.currency), t, n));
         } else null != b && ((t = b.interval), (n = b.intervalCount));
-        let k = (0, a.K)({
+        let j = (0, a.K)({
                 purchaseType: C || f.GZQ.SUBSCRIPTION,
                 plan: b,
                 premiumSubscription: null == w ? null : w,
@@ -63,12 +63,12 @@ let g = (e, t, n, r) => {
                 planGroup: M,
                 isPrepaidPaymentSource: !1,
             }),
-            j = h.intl.format(h.t.Y2Rkqc, {
-                primaryText: k,
+            k = h.intl.format(h.t.Y2Rkqc, {
+                primaryText: j,
                 paidURL: f.EYA.PAID_TERMS,
             }),
             U = h.intl.format(h.t.H2uH5b, {
-                primaryText: k,
+                primaryText: j,
                 paidURL: f.EYA.PAID_TERMS,
             }),
             G = "",
@@ -109,22 +109,22 @@ let g = (e, t, n, r) => {
         else if (C === f.GZQ.ONE_TIME)
             switch (N) {
                 case f.POd.COLLECTIBLES:
-                    (B = j),
+                    (B = k),
                         (G = y
                             ? h.intl.format(h.t.Amdf8X, { paidURL: f.EYA.PAID_TERMS })
                             : h.intl.format(h.t["40vM4o"], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.GUILD_PRODUCT:
-                    (B = j), (G = h.intl.format(h.t["GEAQ+u"], { paidURL: f.EYA.PAID_TERMS }));
+                    (B = k), (G = h.intl.format(h.t["GEAQ+u"], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.SOCIAL_LAYER_GAME_ITEM:
-                    (B = j), (G = h.intl.format(h.t.CVITgq, { applicationName: null != L ? L : "game's" }));
+                    (B = k), (G = h.intl.format(h.t.CVITgq, { applicationName: null != x ? x : "game's" }));
                     break;
                 default:
                     (B = U), (G = h.intl.string(h.t["9/siSQ"]));
             }
         else if (null == b || y)
-            switch ((y && (B = j), t)) {
+            switch ((y && (B = k), t)) {
                 case p.rV.MONTH:
                     (G = y ? h.intl.string(h.t.IjNapk) : h.intl.string(h.t["/sGXPr"])),
                         (G = y
@@ -170,7 +170,7 @@ let g = (e, t, n, r) => {
                             contactLink: f.EYA.CONTACT,
                             helpdeskArticle: l.Z.getArticleURL(f.BhN.BILLING),
                         })
-                      : x && N === f.POd.BOOST && null != P
+                      : L && N === f.POd.BOOST && null != P
                         ? h.intl.format(h.t["2nKy/0"], {
                               price: (0, u.T4)(P.amount, P.currency),
                               paidServiceTermsArticle: f.EYA.PAID_TERMS,

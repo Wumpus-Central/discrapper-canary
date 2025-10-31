@@ -11,8 +11,8 @@ var i = n(990547),
     d = n(594174),
     p = n(981631),
     f = n(921944),
-    h = n(388032),
-    m = n(217110);
+    m = n(388032),
+    h = n(217110);
 function g(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: g } = e,
         _ = (0, l.e7)([u.Z, d.default], () => {
@@ -31,15 +31,15 @@ function g(e) {
         }),
         (0, r.jsx)(a.J2, {
             targetElementRef: g,
-            title: h.intl.string(h.t.C0m4rQ),
-            body: h.intl.string(h.t.zOHfEX),
+            title: m.intl.string(m.t.C0m4rQ),
+            body: m.intl.string(m.t.zOHfEX),
             graphic: {
                 type: "image",
-                src: m,
+                src: h,
             },
             actions: [
                 {
-                    text: h.intl.string(h.t.OgQQbG),
+                    text: m.intl.string(m.t.OgQQbG),
                     variant: "primary",
                     onClick: () => {
                         o.Z.open(t, p.pNK.ROLE_SUBSCRIPTIONS);

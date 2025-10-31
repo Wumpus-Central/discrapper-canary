@@ -72,7 +72,7 @@ function b(e) {
             }
         );
     }, []);
-    let v = (e) => {
+    let O = (e) => {
             e.shiftKey
                 ? s.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, d.UE.muted(!b))
                 : x((e) => !e);
@@ -102,7 +102,7 @@ function b(e) {
                 u.ZP.Icon,
                 m(g({}, e), {
                     ref: n,
-                    onClick: v,
+                    onClick: O,
                     tooltip: i ? null : j,
                     icon: b || _ !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
                     "aria-label": j,

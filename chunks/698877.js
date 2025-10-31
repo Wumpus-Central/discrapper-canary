@@ -1,6 +1,6 @@
 n.d(t, { O: () => s });
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(864094),
     a = n(871499),
     o = n(388032);
@@ -12,30 +12,30 @@ function s(e) {
             isSelfStream: u,
             centerButton: d,
             onMouseEnter: p,
-            onMouseLeave: h,
-            renderNUXHighlight: f,
+            onMouseLeave: f,
+            renderNUXHighlight: h,
             buttonRef: m,
         } = e,
         g = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
-                r = (function (e, t) {
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        i,
-                        r = {},
+                        r,
+                        i = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++)
-                    (n = l[i]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, [
             "hasPermission",
             "streamActive",
@@ -54,32 +54,32 @@ function s(e) {
         : s
           ? o.intl.string(o.t.fjBNo1)
           : o.intl.string(o.t.uQn9B8);
-    let { Component: C, events: y, play: _ } = (0, l.P)(c ? "disable" : "enable");
+    let { Component: _, events: y, play: C } = (0, l.P)(c ? "disable" : "enable");
     return (
-        r.useEffect(() => () => _(), [c, _]),
-        (0, i.jsx)(
+        i.useEffect(() => () => C(), [c, C]),
+        (0, r.jsx)(
             b,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
+                        r = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
+                        (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: i,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = i);
+                                    : (e[t] = r);
                         });
                 }
                 return e;
@@ -89,14 +89,14 @@ function s(e) {
                     isTrayButton: !0,
                     label: t,
                     disabled: !s,
-                    iconComponent: C,
+                    iconComponent: _,
                     isActive: c,
-                    color: (f ? (n = "premiumGradient") : c && (n = "green"), n),
+                    color: (h ? (n = "premiumGradient") : c && (n = "green"), n),
                     onMouseEnter: (e) => {
                         null == p || p(e), y.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == h || h(e), y.onMouseLeave();
+                        null == f || f(e), y.onMouseLeave();
                     },
                 },
                 g,

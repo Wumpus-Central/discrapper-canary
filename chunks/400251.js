@@ -22,9 +22,9 @@ var r = n(951288),
     _ = n(430824),
     y = n(768581),
     x = n(411198),
-    v = n(683818),
+    O = n(683818),
     j = n(16853),
-    O = n(981631),
+    v = n(981631),
     C = n(388032),
     I = n(706800),
     S = n(883760);
@@ -94,7 +94,7 @@ function T(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         d = i.useRef(null),
-        { canEdit: u } = (0, v.Z)(t);
+        { canEdit: u } = (0, O.Z)(t);
     return (0, r.jsx)("div", {
         className: a()(I.actionButtonsContainer, { [I.forceButtonsShow]: l }),
         children: (0, r.jsxs)(h.ZP, {
@@ -178,10 +178,10 @@ let N = (e) => {
     let { entry: l } = e,
         [a, o] = i.useState(!1),
         h = null != (0, s.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
-        v = async () => {
+        O = async () => {
             o(!0);
             try {
-                h ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: O.vtS.DIRECTORY_ENTRY });
+                h ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
                 o(!1);
             }
@@ -307,7 +307,7 @@ let N = (e) => {
                             children: (0, r.jsx)(c.Button, {
                                 loading: a,
                                 variant: h ? "secondary" : "active",
-                                onClick: v,
+                                onClick: O,
                                 text: P,
                                 fullWidth: !0,
                             }),

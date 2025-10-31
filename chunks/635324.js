@@ -1,9 +1,9 @@
 n(388685);
 var i = n(951288),
     r = n(149765),
-    s = n(481060),
+    l = n(481060),
     o = n(570140),
-    l = n(700785);
+    s = n(700785);
 __OVERLAY__ &&
     o.Z.subscribe("OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN", function (e) {
         var {
@@ -19,20 +19,20 @@ __OVERLAY__ &&
                         var n,
                             i,
                             r = {},
-                            s = Object.keys(e);
-                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            l = Object.keys(e);
+                        for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < s.length; i++)
-                        (n = s[i]),
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < l.length; i++)
+                        (n = l[i]),
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
             })(e.authorizeProps, ["authorizations", "permissions"]);
         let u = "OAuth2Authorize_".concat(t, "_").concat(d.guildId, "_").concat(d.channelId);
-        function p(e) {
+        function h(e) {
             let { location: n } = e;
             o.Z.dispatch({
                 type: "OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE",
@@ -40,11 +40,11 @@ __OVERLAY__ &&
                 location: n,
             });
         }
-        let h = l.Hn;
+        let p = s.Hn;
         try {
-            h = r.vB(null != c ? c : 0);
+            p = r.vB(null != c ? c : 0);
         } catch (e) {}
-        (0, s.ZDy)(
+        (0, l.ZDy)(
             async () => {
                 let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
                 return (t) => {
@@ -79,8 +79,8 @@ __OVERLAY__ &&
                         (r = r =
                             {
                                 authorizations: new Map(a),
-                                permissions: h,
-                                callback: p,
+                                permissions: p,
+                                callback: h,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -101,7 +101,7 @@ __OVERLAY__ &&
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, s.Mr3)(u), p({});
+                    (0, l.Mr3)(u), h({});
                 },
             },
         );

@@ -78,13 +78,13 @@ let R = i.memo((e) => {
         y = null == e ? void 0 : e.onCtaClick,
         S = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         [C, w] = i.useState(!1),
-        [D, L] = i.useState(!1),
-        x =
+        [D, x] = i.useState(!1),
+        L =
             b === E.gM.CARD_CAROUSEL_FIRST_ROW ||
             b === E.gM.CARD_CAROUSEL_SECOND_ROW ||
             b === E.gM.CARD_CAROUSEL_THIRD_ROW,
         M = (0, g.Z)(),
-        [k, j] = (0, _.cv)(null != a && n ? [a] : []),
+        [j, k] = (0, _.cv)(null != a && n ? [a] : []),
         { easterEggLevel: U, isEasterEggTriggered: G, onHover: B, onUnhover: Z } = (0, m.Z)(5),
         F = (0, s.debounce)(() => {
             p.default.track(O.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, s.snakeCase)(t) });
@@ -100,22 +100,22 @@ let R = i.memo((e) => {
             null == y || y(), V();
         };
     e = N(A({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
-    let Y = k !== a || null == a || D,
+    let Y = j !== a || null == a || D,
         W = (e) => {
             C &&
                 "transform" === e.propertyName &&
                 e.target.classList.contains(T.flipCard) &&
-                (L(!0),
+                (x(!0),
                 p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
-                null != a && j(v.L.TAKE_ACTION));
+                null != a && k(v.L.TAKE_ACTION));
         };
     return (i.useEffect(() => {
         S &&
             C &&
-            (L(!0),
+            (x(!0),
             p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
-            null != a && j(v.L.TAKE_ACTION));
-    }, [S, C, a, t, j]),
+            null != a && k(v.L.TAKE_ACTION));
+    }, [S, C, a, t, k]),
     (0, f.Z)({
         type: l.ImpressionTypes.VIEW,
         name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD,
@@ -156,8 +156,8 @@ let R = i.memo((e) => {
                     className: T.hoverWrapper,
                     children: (0, r.jsx)("div", {
                         className: o()({
-                            [T.noFlipCardContainer]: !x,
-                            [T.noFlipCardContainerCarousel]: x,
+                            [T.noFlipCardContainer]: !L,
+                            [T.noFlipCardContainerCarousel]: L,
                             [T.forceShadow]: h,
                             [T.reducedMotion]: S,
                         }),

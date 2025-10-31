@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(647438),
     i = n(115434),
     l = n(264181),
@@ -10,11 +10,11 @@ var r = n(647438),
     d = n(794324),
     p = n(302800),
     f = n(921944);
-let h = () => {
+let m = () => {
     var e;
     let t = (0, a.e7)([u.Z], () => u.Z.getMarketingBySurface(i.K.DESKTOP_SHOP_BUTTON)),
         n = !(0, o.$sL)(),
-        [h, m] = (0, c.XR)(
+        [m, h] = (0, c.XR)(
             n ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null,
             null != (e = null == t ? void 0 : t.version) ? e : 0,
             void 0,
@@ -22,7 +22,7 @@ let h = () => {
         ),
         g = (0, d.mB)(t),
         _ =
-            null != h
+            null != m
                 ? ((e, t) => {
                       var n, r, i, a, s, o, c, u;
                       if ((null == t ? void 0 : t.type) === l.Z.COACHTIP || e.hasPreviewAssets) {
@@ -111,8 +111,8 @@ let h = () => {
                   })(g, t)
                 : null,
         b = r.useCallback(() => {
-            null != _ && m(f.L.AUTO);
-        }, [_, m]);
+            null != _ && h(f.L.AUTO);
+        }, [_, h]);
     return {
         shopButtonDisplayOptions: _,
         dismissShopButtonDC: b,

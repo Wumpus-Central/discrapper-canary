@@ -124,7 +124,7 @@ function S(e, t) {
         );
     if (null == e) return null;
     let D = n === g.ApplicationStreamPresets.PRESET_DOCUMENTS ? g.ApplicationStreamFPS.FPS_30 : v,
-        L = g.af.map((e) => {
+        x = g.af.map((e) => {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, y, t, C, N, P);
             return (0, r.jsx)(
@@ -139,7 +139,7 @@ function S(e, t) {
                 "stream-settings-fps-".concat(t),
             );
         }),
-        x = g.km.map((e) => {
+        L = g.km.map((e) => {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, t, D, C, N, P);
             return (0, r.jsx)(
@@ -158,11 +158,11 @@ function S(e, t) {
         children: [
             (0, r.jsx)(o.kSQ, {
                 label: b.intl.string(b.t.SkkeIt),
-                children: L,
+                children: x,
             }),
             (0, r.jsx)(o.kSQ, {
                 label: b.intl.string(b.t.rHyPXg),
-                children: x,
+                children: L,
             }),
         ],
     });

@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var a = n(356659);
-function r(e, t) {
-    let n = e / a.ji;
-    return t && (n /= a.i$), n;
+n.d(t, { Z: () => a });
+var l = n(356659);
+function a(e, t) {
+    let n = e / l.ji;
+    return t && (n /= l.i$), n;
 }

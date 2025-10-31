@@ -32,7 +32,7 @@ let a = {
                 label: "Enables xDM search on desktop",
                 config: {
                     isXDMSearchEnabled: !0,
-                    isGlobalSettingSupported: !1,
+                    isGlobalSettingSupported: !0,
                     inExperiment: !0,
                 },
             },

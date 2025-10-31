@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(670188),
     y = n(271383),
     x = n(496675),
-    v = n(158776),
+    O = n(158776),
     j = n(471253),
-    O = n(431328),
+    v = n(431328),
     C = n(145834),
     I = n(590415),
     S = n(614173),
@@ -94,17 +94,17 @@ let w = i.memo(function (e) {
         var t;
         let { channel: l, participant: a, tempDisableOnInit: s = !1 } = e,
             m = i.useRef(null),
-            [x, O] = i.useState(s);
+            [x, v] = i.useState(s);
         (0, f.ZP)(() => {
             if (!x) return;
-            let e = setTimeout(() => O(!1), 1000);
+            let e = setTimeout(() => v(!1), 1000);
             return () => clearTimeout(e);
         });
         let S = l.getGuildId();
         o()(null != S, "Channel cannot be guildless");
-        let { isMobile: E, status: Z } = (0, c.cj)([v.Z], () => ({
-                isMobile: v.Z.isMobileOnline(a.user.id),
-                status: v.Z.getStatus(a.user.id, S),
+        let { isMobile: E, status: Z } = (0, c.cj)([O.Z], () => ({
+                isMobile: O.Z.isMobileOnline(a.user.id),
+                status: O.Z.getStatus(a.user.id, S),
             })),
             w = (0, c.e7)([y.ZP], () => y.ZP.getMember(S, a.user.id)),
             A = (0, b.X7)(
@@ -256,7 +256,7 @@ let w = i.memo(function (e) {
     });
 function M(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        l = (0, O.Fd)(t.id),
+        l = (0, v.Fd)(t.id),
         s = [
             +!!(0, c.e7)([x.Z], () => x.Z.can(Z.Pl.MANAGE_CHANNELS, t) || x.Z.can(Z.Pl.MANAGE_ROLES, t)),
             Math.max(1, l.length),

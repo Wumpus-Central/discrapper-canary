@@ -85,7 +85,7 @@ function I(e, t) {
     let c = (0, u.kG)(t).filter((e) => e.type !== i.ZP.NON_TOKEN_TYPE);
     (o = s.lv(c, o, _.ZP)), (o = s.iK(0 + t.length, o)), p.Z.updateSearchEditorState(e, o);
 }
-function S(e, t) {
+function T(e, t) {
     let n = v(e);
     if (null == n) return;
     let r = n.endsWith(" ") ? n + t : n + " " + t;
@@ -96,7 +96,7 @@ function S(e, t) {
             offset: 0,
         });
 }
-function T(e, t, n) {
+function S(e, t, n) {
     let r = (0, u.Tm)(e),
         i = h.Z.getEditorState(r);
     if (null == i) return;
@@ -121,7 +121,7 @@ let C = {
     cleanUpSearchState: b,
     fetchMessages: O,
     setSearchInputText: I,
-    appendToSearchInputText: S,
+    appendToSearchInputText: T,
     getSearchInputText: v,
     ensureSearchInputDecorators: function (e) {
         let t,
@@ -150,6 +150,6 @@ let C = {
             replace: r,
         });
     },
-    transitionQueryStateToSearchContext: T,
+    transitionQueryStateToSearchContext: S,
     cleanUpPrivateChannelSearchState: A,
 };

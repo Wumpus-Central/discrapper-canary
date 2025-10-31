@@ -97,7 +97,7 @@ function x(e) {
         { onShareClick: Z } = (0, p.Z)(t),
         D = (0, i.e7)([d.Z], () => d.Z.getExportingClipIds().length > 0),
         L = (0, y.f)((e) => e.selectedGameId),
-        H = r.useMemo(() => {
+        T = r.useMemo(() => {
             var e;
             return null == L || "favorites" === L
                 ? null
@@ -105,18 +105,18 @@ function x(e) {
                   ? e
                   : null;
         }, [L, S]),
-        A = r.useMemo(() => {
+        H = r.useMemo(() => {
             var e;
-            return "favorites" === L ? N : null != (e = null == H ? void 0 : H.filteredClips) ? e : E;
-        }, [L, H, E, N]),
-        T = r.useMemo(() => {
+            return "favorites" === L ? N : null != (e = null == T ? void 0 : T.filteredClips) ? e : E;
+        }, [L, T, E, N]),
+        A = r.useMemo(() => {
             var e;
             return "favorites" === L
                 ? v.intl.string(v.t["9rlCk1"])
-                : null != (e = null == H ? void 0 : H.name)
+                : null != (e = null == T ? void 0 : T.name)
                   ? e
                   : v.intl.string(v.t.dPVrEv);
-        }, [L, H]),
+        }, [L, T]),
         R = r.useCallback((e) => {
             I((t) => {
                 let n = new Set(t);
@@ -184,7 +184,7 @@ function x(e) {
                                             (0, l.jsx)(c.Heading, {
                                                 variant: "heading-md/medium",
                                                 color: "header-secondary",
-                                                children: T,
+                                                children: A,
                                             }),
                                             (0, l.jsxs)("div", {
                                                 className: h.headerActions,
@@ -228,7 +228,7 @@ function x(e) {
                                     }),
                                     (0, l.jsx)(m.Z, {
                                         channelId: t,
-                                        filteredClips: A,
+                                        filteredClips: H,
                                         totalClipCount: M.length,
                                         onClipClick: C,
                                     }),

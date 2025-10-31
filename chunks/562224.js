@@ -93,27 +93,27 @@ async function C(e, t) {
         P = f.Z.getVoiceChannelId(),
         w = c.Z.getChannel(P),
         D = null == w ? void 0 : w.getGuildId(),
-        L = null == (n = u.Z.getGuild(D)) ? void 0 : n.premiumTier;
+        x = null == (n = u.Z.getGuild(D)) ? void 0 : n.premiumTier;
     if (null == R || null == w || null == P) return [!1, "no user or channel"];
-    let x = null;
-    if (null == (x = "number" == typeof e ? a.ZP.getGameForPID(e) : e)) return [!1, "no source"];
+    let L = null;
+    if (null == (L = "number" == typeof e ? a.ZP.getGameForPID(e) : e)) return [!1, "no source"];
     if (
         !d.Z.getUseSystemScreensharePicker() &&
         !(await o.Z.hasPermission(y.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))
     )
         return [!1, "no permission"];
-    let { preset: M, resolution: k, fps: j, soundshareEnabled: U } = l.Z.getState(),
+    let { preset: M, resolution: j, fps: k, soundshareEnabled: U } = l.Z.getState(),
         G = null != (E = null == t ? void 0 : t.preset) ? E : M,
         { allowAutoQuality: B } = (0, h.IK)({ location: "startStreamWithSource" });
     G !== b.ApplicationStreamPresets.PRESET_AUTO || B || (G = b.ApplicationStreamPresets.PRESET_VIDEO);
     let Z = G === b.ApplicationStreamPresets.PRESET_AUTO ? b.ApplicationStreamPresets.PRESET_VIDEO : G,
-        [F, V] = null != (O = (0, g.Z)(Z, R, L)) ? O : [],
-        H = null != (I = null != F ? F : null == t ? void 0 : t.resolution) ? I : k,
-        Y = null != (S = null != V ? V : null == t ? void 0 : t.fps) ? S : j,
+        [F, V] = null != (O = (0, g.Z)(Z, R, x)) ? O : [],
+        H = null != (I = null != F ? F : null == t ? void 0 : t.resolution) ? I : j,
+        Y = null != (S = null != V ? V : null == t ? void 0 : t.fps) ? S : k,
         W = null != (C = null == t ? void 0 : t.previewDisabled) ? C : s.I0.getSetting(),
         K = null != (N = null == t ? void 0 : t.soundshareEnabled) ? N : U;
     return (
-        (0, m.Z)(Z, H, Y, R, L, w) ||
+        (0, m.Z)(Z, H, Y, R, x, w) ||
             ((G = b.ApplicationStreamPresets.PRESET_VIDEO),
             (H = b.ApplicationStreamResolutions.RESOLUTION_720),
             (Y = b.ApplicationStreamFPS.FPS_30)),
@@ -126,8 +126,8 @@ async function C(e, t) {
         (0, i.WH)(
             D,
             P,
-            T(v({}, A(x)), {
-                audioSourceId: (null == (p = x.id) ? void 0 : p.startsWith(r.vA.CAMERA))
+            T(v({}, A(L)), {
+                audioSourceId: (null == (p = L.id) ? void 0 : p.startsWith(r.vA.CAMERA))
                     ? null == t
                         ? void 0
                         : t.audioSourceId

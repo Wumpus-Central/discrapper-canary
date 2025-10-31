@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s }), n(388685), n(35282), n(781311);
+n.d(t, { Z: () => o }), n(388685), n(35282), n(781311);
 var r = n(647438),
     i = n(211266),
     l = n(212819);
-function s(e) {
+function o(e) {
     let { searchOptions: t } = e,
-        [n, s] = r.useState({
+        [n, o] = r.useState({
             results: [],
             query: "",
         }),
-        o = (0, i.Z)(() => {
+        s = (0, i.Z)(() => {
             let e = new l.ZP((e, t) => {
-                s({
+                o({
                     results: e,
                     query: t,
                 });
@@ -18,10 +18,10 @@ function s(e) {
             return e.setLimit(20), e.search(""), e;
         });
     return (
-        r.useEffect(() => () => o.destroy(), [o]),
+        r.useEffect(() => () => s.destroy(), [s]),
         r.useEffect(() => {
-            null != t && t !== o.options && o.setOptions(t);
-        }, [o, t]),
+            null != t && t !== s.options && s.setOptions(t);
+        }, [s, t]),
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -52,12 +52,12 @@ function s(e) {
                     (e) => {
                         var t;
                         let { query: n, resultTypes: r } = e;
-                        (null != o.resultTypes &&
-                            ((t = o.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) ||
-                            (o.setResultTypes(r), o.setLimit(1 === r.length ? 50 : 20)),
-                            o.search("" === n.trim() ? "" : n);
+                        (null != s.resultTypes &&
+                            ((t = s.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) ||
+                            (s.setResultTypes(r), s.setLimit(1 === r.length ? 50 : 20)),
+                            s.search("" === n.trim() ? "" : n);
                     },
-                    [o],
+                    [s],
                 ),
             },
             n,

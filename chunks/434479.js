@@ -1,4 +1,4 @@
-n.d(t, { m: () => h });
+n.d(t, { m: () => f });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,21 +52,21 @@ function f(e, t) {
         e
     );
 }
-function h(e) {
+function f(e) {
     var t,
         {
             id: n,
             className: i,
-            innerClassName: h,
+            innerClassName: f,
             renderIcon: g,
             text: m,
             selected: b,
             trailing: _,
-            background: O,
-            showUnread: y = !1,
-            ref: j,
+            background: y,
+            showUnread: O = !1,
+            ref: v,
         } = e,
-        v = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -98,19 +98,19 @@ function h(e) {
             "showUnread",
             "ref",
         ]);
-    let x = (0, o.JA)(n),
-        C = null != (t = (0, a.q)(m)) ? t : "";
+    let C = (0, o.JA)(n),
+        x = null != (t = (0, a.q)(m)) ? t : "";
     return (0, r.jsx)("li", {
-        ref: j,
+        ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            f(p({}, v), {
-                buttonProps: f(p({}, x), {
+            h(p({}, j), {
+                buttonProps: h(p({}, C), {
                     id: n,
                     role: "button",
                 }),
                 tag: "div",
-                "aria-label": C,
+                "aria-label": x,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -119,17 +119,17 @@ function h(e) {
                     },
                 },
                 onContextMenu:
-                    null != v.onContextMenu
-                        ? v.onContextMenu
+                    null != j.onContextMenu
+                        ? j.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    O,
-                    y ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
+                    y,
+                    O ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
-                        className: l()([d.link, d.basicChannelRowLink, h]),
+                        className: l()([d.link, d.basicChannelRowLink, f]),
                         children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [

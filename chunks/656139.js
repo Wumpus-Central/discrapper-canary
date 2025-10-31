@@ -44,8 +44,8 @@ let A = (e) => {
                 selectedUsers: _,
             }),
             [w, D] = i.useState(!1),
-            L = A.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
-            x = () =>
+            x = A.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
+            L = () =>
                 (0, r.jsx)(d.Z, {
                     className: S.searchbar,
                     size: d.Z.Sizes.MEDIUM,
@@ -89,7 +89,7 @@ let A = (e) => {
                     })
                 );
             },
-            k = (e) => {
+            j = (e) => {
                 let { eligibleRecipients: t } = e;
                 return (0, r.jsx)(y.Z, {
                     users: t,
@@ -144,10 +144,10 @@ let A = (e) => {
                       title: T.intl.string(T.t["2dVCLl"]),
                       subtitle: T.intl.string(T.t.DXgoi2),
                       onClose: t,
-                      input: x(),
+                      input: L(),
                       actions: [],
-                      actionBarInput: M({ eligibleRecipients: L }),
-                      children: k({ eligibleRecipients: L }),
+                      actionBarInput: M({ eligibleRecipients: x }),
+                      children: j({ eligibleRecipients: x }),
                   });
     },
     C = (e) => {

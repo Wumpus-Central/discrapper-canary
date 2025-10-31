@@ -4,33 +4,33 @@ n.d(t, {
     yD: () => p,
 });
 var a = n(213919),
-    r = n(544891),
+    i = n(544891),
     l = n(570140),
-    i = n(893776),
-    o = n(710845),
-    s = n(314897),
+    r = n(893776),
+    s = n(710845),
+    o = n(314897),
     c = n(726745),
     d = n(981631);
-let u = new o.Z("MultiAccountActionCreators");
+let u = new s.Z("MultiAccountActionCreators");
 function m() {
-    let e = s.default.getId();
+    let e = o.default.getId();
     c.Z.getUsers().forEach(async (t) => {
         let n,
-            { id: i } = t,
-            o = a.getToken(i);
-        if (null == o || "" === o)
+            { id: r } = t,
+            s = a.getToken(r);
+        if (null == s || "" === s)
             return void l.Z.dispatch({
                 type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
-                userId: i,
+                userId: r,
             });
         l.Z.dispatch({
             type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST",
-            userId: i,
+            userId: r,
         });
         try {
-            n = await r.tn.get({
+            n = await i.tn.get({
                 url: d.ANM.ME,
-                headers: { authorization: o },
+                headers: { authorization: s },
                 retries: 3,
                 rejectWithError: !1,
             });
@@ -38,17 +38,17 @@ function m() {
             let e = (null == t ? void 0 : t.status) === 401 || (null == t ? void 0 : t.status) === 403;
             l.Z.dispatch({
                 type: e ? "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE" : "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-                userId: i,
+                userId: r,
             });
             return;
         }
         l.Z.dispatch({
-            type: e === i ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
+            type: e === r ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
             user: n.body,
         }),
             l.Z.dispatch({
                 type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-                userId: i,
+                userId: r,
             });
     });
 }
@@ -62,7 +62,7 @@ function p(e, t) {
               userId: e,
           }),
           Promise.resolve())
-        : i.Z.switchAccountToken(n, t);
+        : r.Z.switchAccountToken(n, t);
 }
 function h(e) {
     l.Z.dispatch({

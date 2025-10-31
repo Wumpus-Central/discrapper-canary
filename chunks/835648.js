@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => k });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -110,7 +110,7 @@ function D(e) {
         }),
     );
 }
-function L(e, t, n, i, a, o) {
+function x(e, t, n, i, a, o) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return (0, r.jsx)(
@@ -174,7 +174,7 @@ function L(e, t, n, i, a, o) {
             return null;
     }
 }
-function x(e) {
+function L(e) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return v.intl.string(v.t.k8fFjp);
@@ -205,17 +205,17 @@ function M(e) {
             return v.intl.string(v.t.Rtvk9X);
     }
 }
-function k(e) {
+function j(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
     return (0, r.jsx)(c.aML, {
-        text: x(t),
+        text: L(t),
         "aria-label": M(t),
         position: "right",
-        children: (e) => L(t, i, a, e, l, o),
+        children: (e) => x(t, i, a, e, l, o),
     });
 }
-function j(e) {
+function k(e) {
     let {
             soundboardListRef: t,
             categories: n,
@@ -241,7 +241,7 @@ function j(e) {
                         }),
                             n();
                     };
-                return (0, r.jsx)(k, {
+                return (0, r.jsx)(j, {
                     category: e,
                     categoryIndex: t,
                     onClick: l,

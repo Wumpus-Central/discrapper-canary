@@ -57,11 +57,11 @@ var i,
     P = n(48481),
     w = n(314897),
     D = n(77498),
-    L = n(355863),
-    x = n(626135),
+    x = n(355863),
+    L = n(626135),
     M = n(866119),
-    k = n(671999),
-    j = n(998502),
+    j = n(671999),
+    k = n(998502),
     U = n(145597),
     G = n(372679),
     B = n(981631),
@@ -384,7 +384,7 @@ let e_ = "none",
                     success: !1,
                 }),
             ),
-                x.default.track(B.rMx.OVERLAY_HOOK_RESULT, eu((0, U.getPID)()));
+                L.default.track(B.rMx.OVERLAY_HOOK_RESULT, eu((0, U.getPID)()));
         },
         timeoutMs: 180000,
     });
@@ -405,7 +405,7 @@ function em() {
                     var t, n, r, i, a, o, s;
                     if (null == l) continue;
                     let e = null != l.processName ? D.Z.getGameByExecutable(l.processName) : null;
-                    x.default.track(B.rMx.OVERLAY_HOOK_CRASHED, {
+                    L.default.track(B.rMx.OVERLAY_HOOK_CRASHED, {
                         process_name: null == l ? void 0 : l.processName,
                         game_name: null != (t = null == e ? void 0 : e.name) ? t : null,
                         game_id: null != (n = null == e ? void 0 : e.id) ? n : null,
@@ -439,7 +439,7 @@ function eg(e, t) {
 }
 async function eE(e) {
     try {
-        if (j.ZP.supportsFeature(B.eRX.CREATE_HOST_ON_ATTACH))
+        if (k.ZP.supportsFeature(B.eRX.CREATE_HOST_ON_ATTACH))
             if (q.size > 0) {
                 e_ = "reconcile.getOverlayURL";
                 let t = await eT();
@@ -617,12 +617,12 @@ function eC(e, t, n) {
             n,
         );
     ed(e, V({}, o)),
-        (0, d.te)(U.OVERLAY_LAYOUT_ID, L.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv, {
+        (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv, {
             width: n.graphics_width,
             height: n.graphics_height,
         });
     let s = eu(e);
-    x.default.track(B.rMx.OVERLAY_HOOK_RESULT, s),
+    L.default.track(B.rMx.OVERLAY_HOOK_RESULT, s),
         el.info("Overlay connection to ".concat(e, " ").concat(t ? "succeeded" : "failed"), s),
         t
             ? (f.Z.updateOverlayState(e, I.mM.OVERLAY_RENDERING), eg(e, "CONNECTED", "CONNECTING"))
@@ -653,7 +653,7 @@ function eP(e) {
         case B.BmY.CONNECT:
             let t = w.default.getToken();
             if (null == t) break;
-            (0, d.te)(U.OVERLAY_LAYOUT_ID, L.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv),
+            (0, d.te)(U.OVERLAY_LAYOUT_ID, x.Z.getDefaultLayout(U.OVERLAY_LAYOUT_ID), Z.bv),
                 Promise.all([(0, T.Z)(t, e.pid), o.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
@@ -709,16 +709,16 @@ async function ew(e, t) {
 function eD(e, t) {
     e ? setTimeout(() => ew(e, t), 200) : ew(e, t);
 }
-let eL = null;
-function ex(e) {
+let ex = null;
+function eL(e) {
     let { locked: t, pid: n } = e,
         r = q.get(n);
     if ((ee.has(n) && ev(void 0), null != r && null != K[n]) && (t || "READY" === r || "CRASHED" === r)) {
-        if ((t ? en.delete(n) : en.add(n), eo.clear(), null != eL && (clearTimeout(eL), (eL = null), t))) return;
+        if ((t ? en.delete(n) : en.add(n), eo.clear(), null != ex && (clearTimeout(ex), (ex = null), t))) return;
         t
             ? eD(t, n)
-            : (eL = setTimeout(() => {
-                  eD(t, n), (eL = null);
+            : (ex = setTimeout(() => {
+                  eD(t, n), (ex = null);
               }, 100));
     }
 }
@@ -726,14 +726,14 @@ function eM(e) {
     let { region: t } = e;
     eo.add(t), eD(!1, $);
 }
-function ek() {
+function ej() {
     eo.clear(), eD(!0, $);
 }
-function ej(e) {
+function ek(e) {
     let { port: t } = e;
     et = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "b53dbffcd98a507871aab1fc76728f27f70763df"),
+    n.append("build_id", "dcb3ff805646482955644e9393961f693b39ac62"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", et),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -793,8 +793,8 @@ function eW(e) {
     setTimeout(() => {
         let e = Math.ceil(t * window.innerWidth),
             r = Math.ceil(n * window.innerHeight),
-            i = (0, k.B)("click", e, r);
-        (0, k.J)(i, e, r);
+            i = (0, j.B)("click", e, r);
+        (0, j.J)(i, e, r);
     }, 50);
 }
 function eK(e) {
@@ -844,7 +844,7 @@ class e$ extends (i = o.ZP.Store) {
     initialize() {
         !(0, U.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(w.default, E.Z, D.Z, L.Z, S.default, N.Z, R.Z, C.Z, b.ZP),
+            (this.waitFor(w.default, E.Z, D.Z, x.Z, S.default, N.Z, R.Z, C.Z, b.ZP),
             this.syncWith([E.Z], eX),
             m.sr(eP, eR),
             w.default.addChangeListener(eN),
@@ -909,10 +909,10 @@ let e0 = new e$(
                   RUNNING_GAMES_CHANGE: eK,
                   OVERLAY_SET_ENABLED: eH,
                   OVERLAY_FOCUSED: eG,
-                  OVERLAY_SET_INPUT_LOCKED: ex,
+                  OVERLAY_SET_INPUT_LOCKED: eL,
                   OVERLAY_ACTIVATE_REGION: eM,
-                  OVERLAY_DEACTIVATE_ALL_REGIONS: ek,
-                  RPC_SERVER_READY: ej,
+                  OVERLAY_DEACTIVATE_ALL_REGIONS: ej,
+                  RPC_SERVER_READY: ek,
                   OVERLAY_CALL_PRIVATE_CHANNEL: eU,
                   OVERLAY_JOIN_GAME: eY,
                   OVERLAY_CRASHED: eB,

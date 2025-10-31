@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(111028),
+    o = n(194983),
+    s = n(481060),
     l = n(652853),
     c = n(671955),
     u = n(704543);
@@ -21,13 +21,13 @@ function d(e) {
           : (0, r.jsxs)("div", {
                 className: u.header,
                 children: [
-                    (0, r.jsxs)(o.Text, {
+                    (0, r.jsxs)(s.Text, {
                         className: u.headerText,
                         variant: _ === c.l.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
                         color: "header-primary",
                         id: n,
                         children: [
-                            (0, r.jsx)(s.Z, { children: t }),
+                            (0, r.jsx)(o.Z, { children: t }),
                             null != d &&
                                 (0, r.jsx)("div", {
                                     className: u.platformIcon,

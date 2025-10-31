@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(913527),
@@ -9,13 +9,13 @@ var r = n(951288),
     u = n(481060),
     d = n(782568),
     p = n(104505),
-    f = n(317632),
-    h = n(174767),
+    h = n(317632),
+    f = n(174767),
     g = n(594174),
     m = n(55935),
     b = n(388032),
     _ = n(313227);
-function O(e) {
+function y(e) {
     let { invite: t, expired: n } = e,
         l = (0, a.e7)([g.default], () => {
             var e, n;
@@ -26,7 +26,7 @@ function O(e) {
         { isHoveringOrFocusing: d } = (0, p.Z)(c);
     return (
         i.useEffect(() => {
-            n || (0, h.Br)(t);
+            n || (0, f.Br)(t);
         }, [t, n]),
         (0, r.jsxs)("div", {
             className: _.container,
@@ -49,7 +49,7 @@ function O(e) {
                         (0, r.jsxs)("div", {
                             className: _.buttonContainer,
                             children: [
-                                (0, r.jsx)(y, {
+                                (0, r.jsx)(O, {
                                     expired: n,
                                     invite: t,
                                     isHoveringInvite: d,
@@ -60,7 +60,7 @@ function O(e) {
                                     color: u.YX$.SECONDARY,
                                     icon: (0, r.jsx)(u.XHJ, { size: "xs" }),
                                     onClick: () => {
-                                        (0, h.UF)(t);
+                                        (0, f.UF)(t);
                                     },
                                 }),
                             ],
@@ -93,22 +93,22 @@ function O(e) {
         })
     );
 }
-function y(e) {
+function O(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
-        o = (0, a.e7)([f.Z], () => f.Z.isInviteGameInstalled(n)),
-        p = (0, a.e7)([f.Z], () => f.Z.isInviteJoinable(n)),
+        o = (0, a.e7)([h.Z], () => h.Z.isInviteGameInstalled(n)),
+        p = (0, a.e7)([h.Z], () => h.Z.isInviteJoinable(n)),
         [g, m] = i.useState(!1),
-        O = i.useCallback(async () => {
-            m(!0);
-            try {
-                await (0, h.MH)(n);
-            } catch (e) {}
-            m(!1);
-        }, [n]),
         y = i.useCallback(async () => {
             m(!0);
             try {
-                await (0, h.Ol)(n);
+                await (0, f.MH)(n);
+            } catch (e) {}
+            m(!1);
+        }, [n]),
+        O = i.useCallback(async () => {
+            m(!0);
+            try {
+                await (0, f.Ol)(n);
             } catch (e) {}
             m(!1);
         }, [n]);
@@ -119,7 +119,7 @@ function y(e) {
                 color: c.Tt.TRANSPARENT,
                 disabled: g,
                 size: c.Ph.SMALL,
-                onClick: O,
+                onClick: y,
                 children: b.intl.string(b.t["s+J8Dl"]),
             });
         else return null;
@@ -129,7 +129,7 @@ function y(e) {
               color: c.Tt.GREEN,
               disabled: g,
               size: c.Ph.SMALL,
-              onClick: y,
+              onClick: O,
               children: b.intl.string(b.t["/loN98"]),
           })
         : null != n.fallback_url

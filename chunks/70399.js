@@ -1,5 +1,5 @@
 n.d(t, {
-    T: () => h,
+    T: () => m,
     Z: () => f,
 });
 var r = n(951288),
@@ -50,7 +50,7 @@ function f(e) {
         ],
     });
 }
-function h(e) {
+function m(e) {
     let { applicationId: t, size: n = "default" } = e,
         i = (0, c.q)(t),
         { hasAlreadyLinked: l, canStartAuthorization: s, startAuthorization: u, fetched: f } = (0, o.F)(i);

@@ -1,39 +1,39 @@
 r.d(t, { Z: () => u });
 var n = r(951288);
 r(647438);
-var o = r(481060),
-    c = r(198952),
-    i = r(329242),
+var i = r(481060),
+    o = r(198952),
+    a = r(329242),
     l = r(602698),
-    a = r(388032),
+    c = r(388032),
     s = r(167154);
 let d = (e) => {
     var t,
         r,
-        { children: c, className: i } = e,
+        { children: o, className: a } = e,
         l = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
+                        i = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++)
-                    (r = c[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return o;
+            return i;
         })(e, ["children", "className"]);
     return (0, n.jsx)(
-        o.Y0X,
+        i.Y0X,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -61,14 +61,14 @@ let d = (e) => {
         })(
             {
                 "data-migration-pending": !0,
-                className: i,
+                className: a,
             },
             l,
         )),
         (r = r =
             {
                 parentComponent: "FamilyCenterCommonModal",
-                children: c,
+                children: o,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -93,11 +93,11 @@ let d = (e) => {
     });
 }),
     (d.Header = (e) => {
-        let { icon: t, currentUser: r, otherUser: l, header: a } = e;
+        let { icon: t, currentUser: r, otherUser: l, header: c } = e;
         return (0, n.jsxs)("div", {
             className: s.header,
             children: [
-                (0, n.jsx)(c.Z, {
+                (0, n.jsx)(o.Z, {
                     currentUser: r,
                     otherUser: l,
                     children: t,
@@ -105,11 +105,11 @@ let d = (e) => {
                 (0, n.jsxs)("div", {
                     className: s.heading,
                     children: [
-                        (0, n.jsx)(o.Heading, {
+                        (0, n.jsx)(i.Heading, {
                             variant: "text-lg/bold",
-                            children: a,
+                            children: c,
                         }),
-                        (0, n.jsx)(i.Z, { user: l }),
+                        (0, n.jsx)(a.Z, { user: l }),
                     ],
                 }),
             ],
@@ -127,12 +127,12 @@ let d = (e) => {
         return (0, n.jsxs)("div", {
             className: s.notice,
             children: [
-                (0, n.jsx)(o.Text, {
+                (0, n.jsx)(i.Text, {
                     variant: "eyebrow",
                     color: "header-primary",
-                    children: a.intl.string(l.default.cXgKMD),
+                    children: c.intl.string(l.default.cXgKMD),
                 }),
-                (0, n.jsx)(o.Text, {
+                (0, n.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: t,

@@ -21,13 +21,13 @@ n.d(t, {
     bE: () => em,
     c$: () => ti,
     dp: () => tn,
-    f9: () => x,
+    f9: () => L,
     hg: () => T,
     l1: () => S,
     n9: () => A,
     nI: () => d,
     o8: () => D,
-    os: () => k,
+    os: () => j,
     p5: () => H,
     sf: () => ep,
     tA: () => eE,
@@ -287,10 +287,10 @@ class w extends o.C {
                     a.versions = c.L.internalBinaryRead(e, e.uint32(), n, a.versions);
                     break;
                 case 2:
-                    a.inbox = x.internalBinaryRead(e, e.uint32(), n, a.inbox);
+                    a.inbox = L.internalBinaryRead(e, e.uint32(), n, a.inbox);
                     break;
                 case 3:
-                    a.guilds = k.internalBinaryRead(e, e.uint32(), n, a.guilds);
+                    a.guilds = j.internalBinaryRead(e, e.uint32(), n, a.guilds);
                     break;
                 case 4:
                     a.userContent = X.internalBinaryRead(e, e.uint32(), n, a.userContent);
@@ -323,7 +323,7 @@ class w extends o.C {
                     a.appearance = eP.internalBinaryRead(e, e.uint32(), n, a.appearance);
                     break;
                 case 14:
-                    a.guildFolders = ek.internalBinaryRead(e, e.uint32(), n, a.guildFolders);
+                    a.guildFolders = ej.internalBinaryRead(e, e.uint32(), n, a.guildFolders);
                     break;
                 case 15:
                     a.favorites = eB.internalBinaryRead(e, e.uint32(), n, a.favorites);
@@ -338,7 +338,7 @@ class w extends o.C {
                     a.broadcast = e0.internalBinaryRead(e, e.uint32(), n, a.broadcast);
                     break;
                 case 19:
-                    a.clips = e2.internalBinaryRead(e, e.uint32(), n, a.clips);
+                    a.clips = e3.internalBinaryRead(e, e.uint32(), n, a.clips);
                     break;
                 case 20:
                     a.forLater = e5.internalBinaryRead(e, e.uint32(), n, a.forLater);
@@ -372,8 +372,8 @@ class w extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
-            e.inbox && x.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
-            e.guilds && k.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
+            e.inbox && L.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
+            e.guilds && j.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
             e.userContent && X.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.voiceAndVideo && en.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.textAndImages && ef.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
@@ -384,13 +384,13 @@ class w extends o.C {
             e.status && ev.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
             e.localization && eA.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.appearance && eP.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(),
-            e.guildFolders && ek.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
+            e.guildFolders && ej.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
             e.favorites && eB.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(),
             e.audioContextSettings &&
                 eW.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(),
             e.communities && ez.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(),
             e.broadcast && e0.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
-            e.clips && e2.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
+            e.clips && e3.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
             e.forLater && e5.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(),
             e.safetySettings &&
                 e4.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(),
@@ -415,13 +415,13 @@ class w extends o.C {
                 no: 2,
                 name: "inbox",
                 kind: "message",
-                T: () => x,
+                T: () => L,
             },
             {
                 no: 3,
                 name: "guilds",
                 kind: "message",
-                T: () => k,
+                T: () => j,
             },
             {
                 no: 4,
@@ -487,7 +487,7 @@ class w extends o.C {
                 no: 14,
                 name: "guild_folders",
                 kind: "message",
-                T: () => ek,
+                T: () => ej,
             },
             {
                 no: 15,
@@ -517,7 +517,7 @@ class w extends o.C {
                 no: 19,
                 name: "clips",
                 kind: "message",
-                T: () => e2,
+                T: () => e3,
             },
             {
                 no: 20,
@@ -559,7 +559,7 @@ class w extends o.C {
     }
 }
 let D = new w();
-class L extends o.C {
+class x extends o.C {
     create(e) {
         let t = {
             currentTab: 0,
@@ -621,7 +621,7 @@ class L extends o.C {
         ]);
     }
 }
-let x = new L();
+let L = new x();
 class M extends o.C {
     create(e) {
         let t = { guilds: {} };
@@ -698,8 +698,8 @@ class M extends o.C {
         ]);
     }
 }
-let k = new M();
-class j extends o.C {
+let j = new M();
+class k extends o.C {
     create(e) {
         let t = {
             dismissed: !1,
@@ -794,7 +794,7 @@ class j extends o.C {
         ]);
     }
 }
-let U = new j();
+let U = new k();
 class G extends o.C {
     create(e) {
         let t = {
@@ -3683,7 +3683,7 @@ class eR extends o.C {
                     a.developerMode = e.bool();
                     break;
                 case 3:
-                    a.clientThemeSettings = ex.internalBinaryRead(e, e.uint32(), n, a.clientThemeSettings);
+                    a.clientThemeSettings = eL.internalBinaryRead(e, e.uint32(), n, a.clientThemeSettings);
                     break;
                 case 4:
                     a.mobileRedesignDisabled = e.bool();
@@ -3738,7 +3738,7 @@ class eR extends o.C {
         0 !== e.theme && t.tag(1, r.TD.Varint).int32(e.theme),
             !1 !== e.developerMode && t.tag(2, r.TD.Varint).bool(e.developerMode),
             e.clientThemeSettings &&
-                ex.internalBinaryWrite(e.clientThemeSettings, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
+                eL.internalBinaryWrite(e.clientThemeSettings, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
             !1 !== e.mobileRedesignDisabled && t.tag(4, r.TD.Varint).bool(e.mobileRedesignDisabled),
             e.channelListLayout &&
                 s.Gm.internalBinaryWrite(e.channelListLayout, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
@@ -3777,7 +3777,7 @@ class eR extends o.C {
                 no: 3,
                 name: "client_theme_settings",
                 kind: "message",
-                T: () => ex,
+                T: () => eL,
             },
             {
                 no: 4,
@@ -3930,7 +3930,7 @@ class ew extends o.C {
     }
 }
 let eD = new ew();
-class eL extends o.C {
+class ex extends o.C {
     create(e) {
         let t = {};
         return (
@@ -3996,7 +3996,7 @@ class eL extends o.C {
         ]);
     }
 }
-let ex = new eL();
+let eL = new ex();
 class eM extends o.C {
     create(e) {
         let t = {
@@ -4068,8 +4068,8 @@ class eM extends o.C {
         ]);
     }
 }
-let ek = new eM();
-class ej extends o.C {
+let ej = new eM();
+class ek extends o.C {
     create(e) {
         let t = { guildIds: [] };
         return (
@@ -4155,7 +4155,7 @@ class ej extends o.C {
         ]);
     }
 }
-let eU = new ej();
+let eU = new ek();
 class eG extends o.C {
     create(e) {
         let t = {
@@ -4847,8 +4847,8 @@ class e1 extends o.C {
         ]);
     }
 }
-let e2 = new e1();
-class e3 extends o.C {
+let e3 = new e1();
+class e2 extends o.C {
     create(e) {
         let t = {
             safetySettingsPreset: 0,
@@ -4910,7 +4910,7 @@ class e3 extends o.C {
         ]);
     }
 }
-let e4 = new e3();
+let e4 = new e2();
 class e8 extends o.C {
     create(e) {
         let t = { currentTab: 0 };

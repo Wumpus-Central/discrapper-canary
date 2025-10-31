@@ -35,7 +35,7 @@ var r = n(951288),
     P = n(388032),
     w = n(393919),
     D = n(99713);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
@@ -76,7 +76,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ function k(e, t) {
         e
     );
 }
-let j = 190,
+let k = 190,
     U = 178,
     G = "MESSAGE_CONFETTI_POTION_MODAL_KEY",
     B = (e) => {
@@ -101,7 +101,7 @@ let j = 190,
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            k(x({}, t), {
+                            j(L({}, t), {
                                 channel: d,
                                 message: i,
                                 onRedeem: a,
@@ -165,8 +165,8 @@ function F(e) {
                 variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS,
             });
         }, [w, A]),
-        L = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
-        x = (0, i.useMemo)(() => {
+        x = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
+        L = (0, i.useMemo)(() => {
             if (null != E) {
                 if ("apply" === s) return 3;
                 if (E.type === N.qc2.DEVELOPER_GIFT) return 1;
@@ -174,13 +174,13 @@ function F(e) {
             }
             return 0;
         }, [E, R, s]),
-        M = (0, i.useMemo)(() => (0 === x ? 1 : c ? 2 : 3 * (null == d)), [c, d, x]);
+        M = (0, i.useMemo)(() => (0 === L ? 1 : c ? 2 : 3 * (null == d)), [c, d, L]);
     return (0, r.jsx)(V, {
         channel: t,
-        buttonPurchaseState: x,
+        buttonPurchaseState: L,
         buttonDisabledState: M,
         price: p,
-        onActionClick: L,
+        onActionClick: x,
         loading: P,
         selectedEmoji: null != d ? d : void 0,
         isReaction: l,
@@ -461,7 +461,7 @@ let V = (e) => {
                     (0, r.jsx)(u.Eep, {
                         src: D,
                         width: U,
-                        height: j,
+                        height: k,
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-md/normal",

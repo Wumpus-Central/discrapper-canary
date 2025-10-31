@@ -83,11 +83,11 @@ function D(e, t) {
         e
     );
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -95,7 +95,7 @@ function L(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -105,8 +105,8 @@ function x(e, t) {
     return i;
 }
 let M = 43,
-    k = 25,
-    j = 40,
+    j = 25,
+    k = 40,
     U = 250;
 function G(e) {
     e.stopPropagation();
@@ -220,7 +220,7 @@ function H(e) {
             listName: R,
         } = e,
         w = i.useRef(null),
-        x = (0, p.Z)(R, w),
+        L = (0, p.Z)(R, w),
         B = (0, u.e7)([y.ZP], () => y.ZP.hasNotice()),
         Z = (0, u.e7)([O.Z], () => O.Z.windowSize());
     i.useEffect(() => {
@@ -311,8 +311,8 @@ function H(e) {
                       }),
                   })
                 : null,
-        z = { maxHeight: Z.height - M - k - 48 };
-    B && (z.maxHeight -= j);
+        z = { maxHeight: Z.height - M - j - 48 };
+    B && (z.maxHeight -= k);
     let q = null != _ && a;
     return (0, r.jsx)("div", {
         className: o()(S, N.messagesPopoutWrap),
@@ -329,11 +329,11 @@ function H(e) {
                     ref: w,
                     children: [
                         (0, r.jsx)(c.bG, {
-                            navigator: x,
+                            navigator: L,
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var { ref: t } = e,
-                                        n = L(e, ["ref"]);
+                                        n = x(e, ["ref"]);
                                     return (0, r.jsx)("div", D(P({ ref: t }, n), { children: V }));
                                 },
                             }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(35282), n(388685);
+n.d(t, { Z: () => S }), n(35282), n(388685);
 var r = n(46973),
     i = n(570140),
     a = n(147913),
@@ -20,7 +20,7 @@ var r = n(46973),
     O = n(356659),
     v = n(981631),
     I = n(70722);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-class T extends a.Z {
+class S extends a.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
         if (!(0, g.ln)() || n !== v.hes.RTC_CONNECTED) return;
@@ -206,7 +206,7 @@ class T extends a.Z {
     handleRemoteClipTrigger(e) {}
     constructor(...e) {
         super(...e),
-            S(this, "actions", {
+            T(this, "actions", {
                 POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
                 RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
                 RTC_CONNECTION_USERS_MERGED: (e) => this.handleRTCUsersUpdate(e),

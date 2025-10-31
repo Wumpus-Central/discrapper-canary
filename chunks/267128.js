@@ -46,7 +46,7 @@ function D(e) {
         }),
     });
 }
-function L(e) {
+function x(e) {
     let { width: t = 18, height: n = 18, className: i, foreground: a } = e;
     return (0, r.jsx)("svg", {
         className: i,
@@ -60,7 +60,7 @@ function L(e) {
         }),
     });
 }
-function x(e, t, n, i, a, s) {
+function L(e, t, n, i, a, s) {
     return (0, r.jsx)("img", {
         alt: "",
         src:
@@ -110,7 +110,7 @@ function M(e, t, n) {
         a.message.type === N.uaV.GUILD_DEADCHAT_REVIVE_PROMPT ||
         a.message.type === N.uaV.GUILD_GAMING_STATS_PROMPT
     )
-        return (0, r.jsx)(L, { className: P.userJoinSystemMessageIcon });
+        return (0, r.jsx)(x, { className: P.userJoinSystemMessageIcon });
     if (a.message.type === N.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
         return (0, r.jsx)(c.Prq, {
             size: "md",
@@ -124,7 +124,7 @@ function M(e, t, n) {
             height: C.WW,
             size: "custom",
         });
-    let y = () => x(a.message.author, f, o.guild_id, p, h, b);
+    let y = () => L(a.message.author, f, o.guild_id, p, h, b);
     return null != t && null != _
         ? (0, r.jsx)(d.Gt, {
               value: E,
@@ -142,7 +142,7 @@ function M(e, t, n) {
               children: y(),
           });
 }
-function k(e, t) {
+function j(e, t) {
     let {
             baseMessage: n,
             channel: i,
@@ -174,7 +174,7 @@ function k(e, t) {
               isRepliedMessage: !0,
           });
 }
-function j(e, t, n) {
+function k(e, t, n) {
     let { content: i, referencedMessage: a, isReplyAuthorBlocked: s, isReplyAuthorIgnored: l, onClickReply: u } = e,
         d = a.state !== g.Y.DELETED ? u : void 0;
     switch (a.state) {
@@ -246,7 +246,7 @@ function U(e, t, n, i, a, s) {
         A = null != E.interaction,
         C = E.hasFlag(N.iLy.IS_VOICE_MESSAGE),
         D = E.isPoll(),
-        L = E.type === N.uaV.POLL_RESULT;
+        x = E.type === N.uaV.POLL_RESULT;
     if (
         ((0, _.Z)(e) &&
             (g = (0, r.jsx)(h.Z, {
@@ -267,13 +267,13 @@ function U(e, t, n, i, a, s) {
         });
     else if (I)
         if (D) {
-            var x, M;
+            var L, M;
             u = (0, r.jsx)("div", {
                 className: o()(P.repliedTextContent, w.markup),
-                children: null == E || null == (M = E.poll) || null == (x = M.question) ? void 0 : x.text,
+                children: null == E || null == (M = E.poll) || null == (L = M.question) ? void 0 : L.text,
             });
         } else
-            L
+            x
                 ? (l = (0, m.N4)(E))
                 : S
                   ? (l = R.intl.string(R.t.kHdYCW))
@@ -324,7 +324,7 @@ function U(e, t, n, i, a, s) {
                       height: v,
                   }))
                 : (E.attachments.length > 0 || E.embeds.length > 0) &&
-                  !L &&
+                  !x &&
                   (d = (0, r.jsx)(c.XBm, {
                       size: "custom",
                       color: "currentColor",
@@ -355,8 +355,8 @@ function G(e) {
         m = i.useMemo(() => (null != d && u.state === g.Y.LOADED ? (e) => d(e, u.message) : void 0), [u, d]),
         E = i.useCallback(() => h((e) => !e), []),
         b = M(e, m, s.type),
-        y = k(e, m),
-        v = j(e, p, E),
+        y = j(e, m),
+        v = k(e, p, E),
         T = i.useMemo(() => (e.compact ? (0, A.Z)((0, O.vc)(l()(), "LT")) : null), [e.compact]);
     null != n &&
         null != a &&

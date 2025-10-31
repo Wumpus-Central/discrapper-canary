@@ -10,13 +10,13 @@ var r,
     d = n(672598);
 let p = !1,
     f = !0,
-    h = !1;
-class m extends (i = l.ZP.Store) {
+    m = !1;
+class h extends (i = l.ZP.Store) {
     initialize() {
         !s.isPlatformEmbedded ||
             __OVERLAY__ ||
             o.ZP.getGPUDriverVersions().then((e) => {
-                (p = (0, d.Z)(e)), (f = (0, c.Z)(e)), (h = (0, u.Z)(e)), this.emitChange();
+                (p = (0, d.Z)(e)), (f = (0, c.Z)(e)), (m = (0, u.Z)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {
@@ -26,25 +26,25 @@ class m extends (i = l.ZP.Store) {
         return f;
     }
     get problematicGPUDriver() {
-        return h;
+        return m;
     }
     getState() {
         return {
             GPUDriversOutdated: p,
             canUseHardwareAcceleration: f,
-            problematicGPUDriver: h,
+            problematicGPUDriver: m,
         };
     }
 }
-(r = "displayName") in m
-    ? Object.defineProperty(m, r, {
+(r = "displayName") in h
+    ? Object.defineProperty(h, r, {
           value: "StreamingCapabilitiesStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (m[r] = "StreamingCapabilitiesStore");
-let g = new m(a.Z, {
+    : (h[r] = "StreamingCapabilitiesStore");
+let g = new h(a.Z, {
     OVERLAY_INITIALIZE: function (e) {
         let { streamingCapabilitiesStoreState: t } = e;
         (p = t.GPUDriversOutdated), (f = t.canUseHardwareAcceleration);

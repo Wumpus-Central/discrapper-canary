@@ -3,9 +3,9 @@ n.d(t, {
     Lk: () => Z,
     Xg: () => F,
     ZP: () => M,
-    c7: () => k,
+    c7: () => j,
     j3: () => V,
-    jO: () => j,
+    jO: () => k,
     ks: () => B,
 }),
     n(358797),
@@ -89,11 +89,11 @@ function D(e, t) {
         e
     );
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = x(e, t);
+        i = L(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -101,7 +101,7 @@ function L(e, t) {
     }
     return i;
 }
-function x(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -137,12 +137,12 @@ function M(e) {
         })
     );
 }
-function k(e) {
+function j(e) {
     return (0, r.jsx)(M, D(P({}, e), { headerClassName: N.headerSuccess }));
 }
-function j(e) {
+function k(e) {
     var { guild: t, application: n } = e,
-        a = L(e, ["guild", "application"]);
+        a = x(e, ["guild", "application"]);
     let { onClose: o } = a,
         s = i.useCallback(() => {
             (null == t ? void 0 : t.id) != null &&
@@ -218,7 +218,7 @@ function j(e) {
 }
 function U(e) {
     var { guild: t, application: n } = e,
-        a = L(e, ["guild", "application"]);
+        a = x(e, ["guild", "application"]);
     let o = C.intl.string(C.t.se5gLj);
     i.useEffect(() => {
         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
@@ -241,7 +241,7 @@ function U(e) {
             children: s,
         });
     return (0, r.jsx)(
-        k,
+        j,
         P(
             {
                 message: o,
@@ -253,7 +253,7 @@ function U(e) {
 }
 function G(e) {
     var { application: t } = e,
-        n = L(e, ["application"]);
+        n = x(e, ["application"]);
     let { onClose: a } = n;
     i.useEffect(() => {
         O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: t.id });

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => L }), n(804061), n(704826), n(35282);
+n.d(t, { ZP: () => x }), n(804061), n(704826), n(35282);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -54,13 +54,13 @@ let P = (e, t) =>
             })
             .replaceAll("*", "");
     },
-    L = (e) => {
-        let { channel: t, entry: n, onReaction: b, onVoiceChannelPreview: L, disableActivityProfileLinks: x } = e,
+    x = (e) => {
+        let { channel: t, entry: n, onReaction: b, onVoiceChannelPreview: x, disableActivityProfileLinks: L } = e,
             { largeImage: M } = (0, y.rv)({
                 entry: n,
                 showCoverImage: !1,
             }),
-            { user: k, details: j, activity: U, embeddedActivity: G } = (0, C.n)(n),
+            { user: j, details: k, activity: U, embeddedActivity: G } = (0, C.n)(n),
             { primaryColor: B, secondaryColor: Z } = (0, T.Z)(null == M ? void 0 : M.src),
             F = (0, a.e7)([g.default], () => g.default.locale),
             { displayParticipants: V, participant1: H, participant2: Y, numOtherParticipants: W } = (0, O.Z)(n, 3),
@@ -69,7 +69,7 @@ let P = (e, t) =>
             },
             z = i.useCallback(
                 (e) => {
-                    if ((null == M ? void 0 : M.src) == null || null == t || null == k) return;
+                    if ((null == M ? void 0 : M.src) == null || null == t || null == j) return;
                     let r =
                         W > 0
                             ? D({
@@ -78,7 +78,7 @@ let P = (e, t) =>
                                   users: [H, Y],
                                   countOthers: W,
                               })
-                            : w(n, t, k);
+                            : w(n, t, j);
                     return (0, I.C4)({
                         entry: n,
                         applicationImageSrc: null == M ? void 0 : M.src,
@@ -89,7 +89,7 @@ let P = (e, t) =>
                         channelId: e,
                     });
                 },
-                [null == M ? void 0 : M.src, t, V, n, F, W, H, Y, B, Z, k],
+                [null == M ? void 0 : M.src, t, V, n, F, W, H, Y, B, Z, j],
             ),
             { data: q } = (0, h.IX)(n.extra.application_id),
             X = (0, u.Z)({
@@ -100,7 +100,7 @@ let P = (e, t) =>
                 { location: "MemberListAcitivtyContentPopout" },
                 { autoTrackExposure: !0 },
             );
-        if (null == k) return null;
+        if (null == j) return null;
         let J = (0, r.jsx)(S.PZ, {
                 location: S.Gt.POPOUT,
                 entry: n,
@@ -109,20 +109,20 @@ let P = (e, t) =>
                 channel: t,
                 userDescription: (0, v.kr)(n) ? R.t.vPg1JT : R.t.rPqqts,
                 title: n.extra.activity_name,
-                subtitle: j,
+                subtitle: k,
                 badges: J,
                 entry: n,
                 showCoverImage: !1,
-                onClickTitle: x ? void 0 : K,
-                onClickSubtitle: x ? void 0 : K,
-                onClickThumbnail: x ? void 0 : K,
+                onClickTitle: L ? void 0 : K,
+                onClickSubtitle: L ? void 0 : K,
+                onClickThumbnail: L ? void 0 : K,
             }),
             ee = (0, l.Z)(U, N.xjy.JOIN) || (0, c.Z)(U),
             et = ee
                 ? (0, r.jsx)(d.Z, {
                       embeddedActivity: G,
                       activity: U,
-                      user: k,
+                      user: j,
                       variant: "primary",
                       size: "md",
                       icon: o.YVR,
@@ -141,7 +141,7 @@ let P = (e, t) =>
                       }),
             er = Q ? o.iWm : o.jje,
             ei =
-                null != en || x
+                null != en || L
                     ? null
                     : (0, r.jsx)(o.Button, {
                           variant: "primary",
@@ -151,18 +151,18 @@ let P = (e, t) =>
                           text: R.intl.string(R.t.GDWYR8),
                           icon: er,
                       }),
-            ea = [en, ee && !x ? et : ei].filter(E.lm);
+            ea = [en, ee && !L ? et : ei].filter(E.lm);
         return (0, r.jsxs)(A.yR, {
             children: [
                 $,
                 (0, r.jsx)(A.St, {
                     children: (0, r.jsx)(A.WT, {
                         onReaction: b,
-                        onVoiceChannelPreview: L,
-                        user: k,
+                        onVoiceChannelPreview: x,
+                        user: j,
                         channel: t,
                         generateReactionImage: z,
-                        reactionImageAltText: P(n, k),
+                        reactionImageAltText: P(n, j),
                         entry: n,
                         buttons: ea,
                     }),

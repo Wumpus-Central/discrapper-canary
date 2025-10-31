@@ -19,15 +19,15 @@ function b(e) {
         _ = i.useContext(p.AnalyticsContext),
         y = (0, c.Aq)(),
         x = g.intl.string(m.default["Beo/7v"]),
-        { firstMessage: v } = (0, a.cl)(b),
-        j = null == v || null == (t = v.messageSnapshots) ? void 0 : t[0],
-        O = null == j || null == (n = j.moderatorReport) ? void 0 : n.reported_user_id;
-    return b.isModeratorReportChannel() && null != O
+        { firstMessage: O } = (0, a.cl)(b),
+        j = null == O || null == (t = O.messageSnapshots) ? void 0 : t[0],
+        v = null == j || null == (n = j.moderatorReport) ? void 0 : n.reported_user_id;
+    return b.isModeratorReportChannel() && null != v
         ? (0, r.jsx)(o.ZP.Icon, {
               onClick: () => {
                   (0, u.Kh)(b.id),
                       (0, d.i)(),
-                      (0, s.r)(b.guild_id, O, b.id, {
+                      (0, s.r)(b.guild_id, v, b.id, {
                           modViewPanel: f.k.INFO,
                           sourceLocation: null != location ? location : _.location,
                       }),

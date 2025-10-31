@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(539854);
-var a = n(951288);
+var l = n(951288);
 n(647438);
-var i = n(442837),
-    l = n(481060),
+var a = n(442837),
+    i = n(481060),
     r = n(179658),
     o = n(482215),
     s = n(906467),
@@ -16,24 +16,24 @@ var i = n(442837),
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
+            l = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            a.forEach(function (t) {
-                var a;
-                (a = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: a,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = a);
+                        : (e[t] = l);
             });
     }
     return e;
@@ -46,8 +46,8 @@ function y(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -69,11 +69,11 @@ function f() {
             isForcedCanary: j,
             isSourceMapsEnabled: A,
             isIdleStatusIndicatorEnabled: N,
-            isAxeEnabled: _,
-            preventPopoutClose: w,
+            isAxeEnabled: w,
+            preventPopoutClose: _,
             onlyShowPreviewAppCollections: D,
             disableAppCollectionsCache: x,
-        } = (0, i.cj)([c.default, u.default, s.Z], () => {
+        } = (0, a.cj)([c.default, u.default, s.Z], () => {
             var e;
             return {
                 layoutDebuggingEnabled: c.default.layoutDebuggingEnabled,
@@ -93,16 +93,16 @@ function f() {
                 disableAppCollectionsCache: c.default.disableAppCollectionsCache,
             };
         }),
-        { horizontalSpacing: I, verticalSpacing: T, maxHorizontalSpacing: R, maxVerticalSpacing: C } = (0, o.i)(),
-        { setHorizontalSpacing: L, setVerticalSpacing: m } = o.i.getState(),
+        { horizontalSpacing: I, verticalSpacing: T, maxHorizontalSpacing: C, maxVerticalSpacing: m } = (0, o.i)(),
+        { setHorizontalSpacing: L, setVerticalSpacing: R } = o.i.getState(),
         Z = d.zY.useSetting(),
         k = [];
     return (
         t &&
             n &&
             (k.push(
-                (0, a.jsx)(
-                    l.sNh,
+                (0, l.jsx)(
+                    i.sNh,
                     {
                         id: "overrides",
                         label: "Overrides",
@@ -117,8 +117,8 @@ function f() {
                 ),
             ),
             k.push(
-                (0, a.jsx)(
-                    l.sNh,
+                (0, l.jsx)(
+                    i.sNh,
                     {
                         id: "manual-triggers",
                         label: "Manual Triggers",
@@ -133,8 +133,8 @@ function f() {
                 ),
             ),
             k.push(
-                (0, a.jsxs)(
-                    l.sNh,
+                (0, l.jsxs)(
+                    i.sNh,
                     {
                         id: "developer-flags",
                         label: "Developer Flags",
@@ -145,8 +145,8 @@ function f() {
                             });
                         },
                         children: [
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "tracing-requests",
                                     label: "Tracing Requests",
@@ -157,8 +157,8 @@ function f() {
                                 },
                                 "tracing-requests",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "forced-canary",
                                     label: "Forced Canary",
@@ -169,8 +169,8 @@ function f() {
                                 },
                                 "forced-canary",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "always-deliver",
                                     label: "Ads auto-targeting",
@@ -181,8 +181,8 @@ function f() {
                                 },
                                 "always-deliver",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "source-maps",
                                     label: "Source Maps",
@@ -193,8 +193,8 @@ function f() {
                                 },
                                 "source-maps",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "idle-status",
                                     label: "Idle Status Indicator",
@@ -205,32 +205,32 @@ function f() {
                                 },
                                 "idle-status",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "accessibility-auditing",
                                     label: "Accessibility Auditing",
-                                    checked: _,
+                                    checked: w,
                                     action: () => {
-                                        (0, r.y)({ axeEnabled: !_ });
+                                        (0, r.y)({ axeEnabled: !w });
                                     },
                                 },
                                 "accessibility-auditing",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "prevent-popout-close",
                                     label: "Prevent Popouts From Closing",
-                                    checked: w,
+                                    checked: _,
                                     action: () => {
-                                        (0, r.y)({ preventPopoutClose: !w });
+                                        (0, r.y)({ preventPopoutClose: !_ });
                                     },
                                 },
                                 "prevent-popout-close",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "preview-collections",
                                     label: "Preview Unpublished Collections",
@@ -241,8 +241,8 @@ function f() {
                                 },
                                 "preview-collections",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "disable-collections-cache",
                                     label: "Disable Collections Cache",
@@ -259,8 +259,8 @@ function f() {
                 ),
             ),
             k.push(
-                (0, a.jsxs)(
-                    l.sNh,
+                (0, l.jsxs)(
+                    i.sNh,
                     {
                         id: "logging",
                         label: "Logging",
@@ -271,8 +271,8 @@ function f() {
                             });
                         },
                         children: [
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "gateway-events",
                                     label: "Gateway Events",
@@ -283,8 +283,8 @@ function f() {
                                 },
                                 "gateway-events",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "overlay-events",
                                     label: "Overlay RPC Events",
@@ -295,8 +295,8 @@ function f() {
                                 },
                                 "overlay-events",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "analytics-events",
                                     label: "Analytics Events",
@@ -307,8 +307,8 @@ function f() {
                                 },
                                 "analytics-events",
                             ),
-                            (0, a.jsx)(
-                                l.S89,
+                            (0, l.jsx)(
+                                i.S89,
                                 {
                                     id: "analytics-debugger",
                                     label: "Analytics Debugger",
@@ -325,8 +325,8 @@ function f() {
                 ),
             ),
             k.push(
-                (0, a.jsx)(
-                    l.sNh,
+                (0, l.jsx)(
+                    i.sNh,
                     {
                         id: "design-tools",
                         label: "Design Tools",
@@ -336,8 +336,8 @@ function f() {
                                 subsection: p.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
                             });
                         },
-                        children: (0, a.jsx)(
-                            l.S89,
+                        children: (0, l.jsx)(
+                            i.S89,
                             {
                                 id: "layout-debugging",
                                 label: "Enable Layout Debugging",
@@ -354,19 +354,19 @@ function f() {
             ),
             e &&
                 (k.push(
-                    (0, a.jsx)(
-                        l.II_,
+                    (0, l.jsx)(
+                        i.II_,
                         {
                             id: "horizontal-spacing",
                             label: "Horizontal Spacing",
                             control: (e, t) =>
-                                (0, a.jsx)(
-                                    l._wy,
+                                (0, l.jsx)(
+                                    i._wy,
                                     y(E({}, e), {
                                         ref: t,
                                         value: I,
                                         minValue: 0,
-                                        maxValue: R,
+                                        maxValue: C,
                                         onChange: (e) => L(e),
                                         renderValue: (e) => "".concat(Math.round(e), "px"),
                                         "aria-label": "Horizontal Spacing",
@@ -377,20 +377,20 @@ function f() {
                     ),
                 ),
                 k.push(
-                    (0, a.jsx)(
-                        l.II_,
+                    (0, l.jsx)(
+                        i.II_,
                         {
                             id: "vertical-spacing",
                             label: "Vertical Spacing",
                             control: (e, t) =>
-                                (0, a.jsx)(
-                                    l._wy,
+                                (0, l.jsx)(
+                                    i._wy,
                                     y(E({}, e), {
                                         ref: t,
                                         value: T,
                                         minValue: 0,
-                                        maxValue: C,
-                                        onChange: (e) => m(e),
+                                        maxValue: m,
+                                        onChange: (e) => R(e),
                                         "aria-label": "Horizontal Spacing",
                                         renderValue: (e) => "".concat(Math.round(e), "px"),
                                     }),

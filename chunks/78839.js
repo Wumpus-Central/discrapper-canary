@@ -144,21 +144,21 @@ function D(e) {
         O = s.Q.createFromServer(t);
     }
 }
-function L() {
+function x() {
     I = !0;
 }
-function x() {
+function L() {
     S = !0;
 }
 function M(e) {
     let { eligible: t } = e;
     (T = t), (I = !1);
 }
-function k(e) {
+function j(e) {
     let {} = e;
     (T = !1), (I = !1);
 }
-function j() {
+function k() {
     (h = null),
         (m = null),
         (g = null),
@@ -258,13 +258,13 @@ d(B, "displayName", "SubscriptionStore");
 let Z = new B(a.Z, {
     BILLING_SUBSCRIPTION_FETCH_SUCCESS: C,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: R,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: x,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: L,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: P,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: w,
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: D,
-    BILLING_SUBSCRIPTION_RESET: j,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: L,
+    BILLING_SUBSCRIPTION_RESET: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: x,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: k,
-    LOGOUT: j,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: j,
+    LOGOUT: k,
 });

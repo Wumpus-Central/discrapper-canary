@@ -1,5 +1,5 @@
 let r, i;
-n.r(t), n.d(t, { default: () => eL }), n(539854), n(358797), n(415506);
+n.r(t), n.d(t, { default: () => ex }), n(539854), n(358797), n(415506);
 var a,
     o = n(213919),
     s = n(756647),
@@ -40,11 +40,11 @@ let N = new g.Z("AuthenticationStore"),
     P = "user_id_cache",
     w = null,
     D = null,
-    L = null,
     x = null,
+    L = null,
     M = null,
-    k = null,
     j = null,
+    k = null,
     U = S.u34.NONE,
     G = !1,
     B = [],
@@ -111,13 +111,13 @@ function $(e) {
             ));
 }
 function ee() {
-    (k = M), (M = null), u.K.remove(R);
+    (j = M), (M = null), u.K.remove(R);
 }
 function et(e, t) {
     Q("setAuthToken called."), (null == t || t !== w) && o.removeAnalyticsToken(), o.setToken(e, t);
 }
 function en(e) {
-    (j = e), o.setAnalyticsToken(e);
+    (k = e), o.setAnalyticsToken(e);
 }
 function er() {
     return Q("removeAuthToken called."), o.removeAnalyticsToken(), o.removeToken();
@@ -198,11 +198,11 @@ function eE(e) {
     null == M
         ? null != t
             ? (y.default.track(S.rMx.USER_FINGERPRINT_CHANGED, {
-                  old_fingerprint: null != k ? (0, s.s)(k) : null,
+                  old_fingerprint: null != j ? (0, s.s)(j) : null,
                   new_fingerprint: (0, s.s)(t),
               }),
               (M = t),
-              (k = t),
+              (j = t),
               u.K.set(R, M))
             : J()
         : null != t &&
@@ -222,8 +222,8 @@ function ey(e) {
     Q("handleConnectionOpen called"),
         v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, b.Z)(n)),
         (D = r),
-        (L = i),
-        (x = s),
+        (x = i),
+        (L = s),
         en(a),
         (w = n.id),
         void 0 !== o && (B = o.authenticator_types),
@@ -234,7 +234,7 @@ function eO(e) {
     let { user: n, sessionId: r, analyticsToken: i, token: a } = e;
     v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, b.Z)(n)),
         (D = r),
-        (j = i),
+        (k = i),
         et(a, n.id),
         null != i && en(i),
         ee(),
@@ -258,7 +258,7 @@ function eI(e) {
 }
 function eT(e) {
     let { authSessionIdHash: t } = e;
-    null != t && (L = t);
+    null != t && (x = t);
 }
 function eS() {
     (G = !0),
@@ -333,10 +333,10 @@ class eD extends (a = l.ZP.Store) {
         return D;
     }
     getAuthSessionIdHash() {
-        return L;
+        return x;
     }
     getStaticAuthSessionId() {
-        return x;
+        return L;
     }
     getToken() {
         return (0, O.LP)();
@@ -348,7 +348,7 @@ class eD extends (a = l.ZP.Store) {
         return M;
     }
     getAnalyticsToken() {
-        return null != j ? j : o.getAnalyticsToken();
+        return null != k ? k : o.getAnalyticsToken();
     }
     getMFATicket() {
         return Z;
@@ -380,7 +380,7 @@ class eD extends (a = l.ZP.Store) {
     }
 }
 C(eD, "displayName", "AuthenticationStore");
-let eL = new eD(
+let ex = new eD(
     d.Z,
     {
         CONNECTION_OPEN: ey,

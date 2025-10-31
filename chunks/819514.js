@@ -9,18 +9,18 @@ var r = n(951288),
     u = n(332148),
     d = n(904245),
     p = n(933557),
-    f = n(576855),
-    h = n(372900),
+    h = n(576855),
+    f = n(372900),
     g = n(726521),
     m = n(501517),
     b = n(699516),
     _ = n(594174),
-    O = n(630388),
-    y = n(970257),
-    j = n(294218),
-    v = n(981631),
-    x = n(388032),
-    C = n(43617),
+    y = n(630388),
+    O = n(970257),
+    v = n(294218),
+    j = n(981631),
+    C = n(388032),
+    x = n(43617),
     E = n(625221);
 function S(e, t, n) {
     return (
@@ -97,27 +97,27 @@ class N extends i.PureComponent {
                 }
                 return i;
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
-            g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, O.yE)(s.flags, v.iLy.CROSSPOSTED);
+            g = o.type === j.d4z.GUILD_ANNOUNCEMENT && (0, y.yE)(s.flags, j.iLy.CROSSPOSTED);
         u &&
-            (e = (0, r.jsx)(f.Z, {
+            (e = (0, r.jsx)(h.Z, {
                 className: E.spacingTop,
-                children: x.intl.format(x.t.IxY7E6, {}),
+                children: C.intl.format(C.t.IxY7E6, {}),
             })),
-            (0, y.vc)(s) &&
+            (0, O.vc)(s) &&
                 (t = (0, r.jsx)("div", {
                     className: E.spacingTop,
                     children: (0, r.jsx)(c.rsf, {
-                        label: x.intl.string(x.t.x0jzo9),
+                        label: C.intl.string(C.t.x0jzo9),
                         checked: n,
                         onChange: this.handleToggleReport,
                     }),
                 }));
-        let m = g ? x.intl.string(x.t["2kHABX"]) : x.intl.string(x.t.AMvpS4),
+        let m = g ? C.intl.string(C.t["2kHABX"]) : C.intl.string(C.t.AMvpS4),
             b = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
                         className: E.message,
-                        children: (0, r.jsx)(j.Z, {
+                        children: (0, r.jsx)(v.Z, {
                             channel: o,
                             message: s,
                             disableInteraction: !0,
@@ -129,7 +129,7 @@ class N extends i.PureComponent {
             });
         if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
             let { isFlagResolved: e } = d;
-            return (0, r.jsx)(h.Z.Provider, {
+            return (0, r.jsx)(f.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
@@ -147,7 +147,7 @@ class N extends i.PureComponent {
                                         }),
                                         (0, r.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
-                                            children: x.intl.string(x.t.MWMcg7),
+                                            children: C.intl.string(C.t.MWMcg7),
                                         }),
                                     ],
                                 }),
@@ -167,14 +167,14 @@ class N extends i.PureComponent {
                                     (0, r.jsx)(c.Button, {
                                         variant: "critical-primary",
                                         size: "sm",
-                                        text: x.intl.string(x.t.oyYWHE),
+                                        text: C.intl.string(C.t.oyYWHE),
                                         type: "submit",
                                         onClick: this.handleDelete,
                                     }),
                                     !e &&
                                         (0, r.jsx)(c.Checkbox, {
                                             checked: i,
-                                            label: x.intl.string(C.default["8yIKem"]),
+                                            label: C.intl.string(x.default["8yIKem"]),
                                             onChange: (e) => this.handleToggleResolveFlag(e),
                                         }),
                                 ],
@@ -184,19 +184,19 @@ class N extends i.PureComponent {
                 ),
             });
         }
-        return (0, r.jsx)(h.Z.Provider, {
+        return (0, r.jsx)(f.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
-                title: g ? x.intl.string(x.t.aIz1oV) : x.intl.string(x.t.MWMcg7),
+                title: g ? C.intl.string(C.t.aIz1oV) : C.intl.string(C.t.MWMcg7),
                 subtitle: m,
                 actions: [
                     {
-                        text: x.intl.string(x.t["ETE/oC"]),
+                        text: C.intl.string(C.t["ETE/oC"]),
                         onClick: p.onClose,
                         variant: "secondary",
                     },
                     {
-                        text: x.intl.string(x.t.oyYWHE),
+                        text: C.intl.string(C.t.oyYWHE),
                         onClick: this.handleDeleteMana,
                         variant: "critical-primary",
                     },
@@ -252,18 +252,18 @@ let Z = {
                 l = (0, p.F6)(e, _.default, b.Z);
             return (
                 (i = e.isPrivate()
-                    ? x.intl.string(x.t.hMRngA)
-                    : x.intl.formatToPlainString(x.t["3IRluI"], { channelName: l })),
-                (0, r.jsx)(h.Z.Provider, {
+                    ? C.intl.string(C.t.hMRngA)
+                    : C.intl.formatToPlainString(C.t["3IRluI"], { channelName: l })),
+                (0, r.jsx)(f.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsxs)(
                         c.ConfirmModal,
                         P(
                             I(
                                 {
-                                    header: x.intl.string(x.t.bKMaZX),
-                                    confirmText: x.intl.string(x.t.rOQ5BX),
-                                    cancelText: x.intl.string(x.t["ETE/oC"]),
+                                    header: C.intl.string(C.t.bKMaZX),
+                                    confirmText: C.intl.string(C.t.rOQ5BX),
+                                    cancelText: C.intl.string(C.t["ETE/oC"]),
                                     confirmButtonColor: s.zx.Colors.BRAND,
                                     onConfirm: () => u.Z.pinMessage(e, t.id),
                                 },
@@ -278,7 +278,7 @@ let Z = {
                                     }),
                                     (0, r.jsx)("div", {
                                         className: E.message,
-                                        children: (0, r.jsx)(j.Z, {
+                                        children: (0, r.jsx)(v.Z, {
                                             channel: e,
                                             message: t,
                                             animateAvatar: !1,
@@ -295,16 +295,16 @@ let Z = {
     },
     confirmUnpin: function (e, t) {
         (0, c.h7j)((n) =>
-            (0, r.jsx)(h.Z.Provider, {
+            (0, r.jsx)(f.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     c.ConfirmModal,
                     P(
                         I(
                             {
-                                header: x.intl.string(x.t.CFF2vL),
-                                confirmText: x.intl.string(x.t.lAU5jB),
-                                cancelText: x.intl.string(x.t["ETE/oC"]),
+                                header: C.intl.string(C.t.CFF2vL),
+                                confirmText: C.intl.string(C.t.lAU5jB),
+                                cancelText: C.intl.string(C.t["ETE/oC"]),
                                 onConfirm: () => u.Z.unpinMessage(e, t.id),
                             },
                             n,
@@ -314,17 +314,17 @@ let Z = {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
                                     className: E.spacing,
-                                    children: x.intl.string(x.t.NjEPp7),
+                                    children: C.intl.string(C.t.NjEPp7),
                                 }),
                                 (0, r.jsx)("div", {
                                     className: o()(E.message, E.spacing),
-                                    children: (0, r.jsx)(j.Z, {
+                                    children: (0, r.jsx)(v.Z, {
                                         channel: e,
                                         message: t,
                                         disableInteraction: !0,
                                     }),
                                 }),
-                                (0, r.jsx)(f.Z, { children: x.intl.format(x.t.oCVB3Y, {}) }),
+                                (0, r.jsx)(h.Z, { children: C.intl.format(C.t.oCVB3Y, {}) }),
                             ],
                         },
                     ),
@@ -357,9 +357,9 @@ let Z = {
                 P(
                     I(
                         {
-                            header: x.intl.string(x.t.aIz1oV),
-                            confirmText: x.intl.string(x.t["cY+Oob"]),
-                            cancelText: x.intl.string(x.t["ETE/oC"]),
+                            header: C.intl.string(C.t.aIz1oV),
+                            confirmText: C.intl.string(C.t["cY+Oob"]),
+                            cancelText: C.intl.string(C.t["ETE/oC"]),
                             confirmButtonColor: s.zx.Colors.BRAND,
                             onConfirm: () => d.Z.editMessage(e, t, n),
                         },
@@ -369,7 +369,7 @@ let Z = {
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-md/normal",
                             className: E.spacing,
-                            children: x.intl.string(x.t.grBcM8),
+                            children: C.intl.string(C.t.grBcM8),
                         }),
                     },
                 ),

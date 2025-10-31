@@ -2,7 +2,7 @@ n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(204623),
+    a = n(936079),
     o = n(155221);
 let s = {
     App: () => (0, r.jsx)(i.Sle, { children: (0, r.jsx)(o.Z, {}) }),

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => k,
-    xX: () => x,
+    ZP: () => j,
+    xX: () => L,
 }),
     n(388685);
 var r = n(951288);
@@ -72,7 +72,7 @@ function D(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function L(e, t) {
         e
     );
 }
-function x(e) {
+function L(e) {
     return e.map((e, t) =>
         (0, r.jsxs)(r.Fragment, {
             children: [M(e, t.toString()), (0, r.jsx)(o.nn4, { children: "," })],
@@ -93,7 +93,7 @@ function x(e) {
 function M(e, t) {
     switch (e.type) {
         case s.re.ACTION_ROW:
-            return (0, r.jsx)(S.Z, L(w({}, e), { renderComponents: x }), t);
+            return (0, r.jsx)(S.Z, x(w({}, e), { renderComponents: L }), t);
         case s.re.BUTTON:
             return (0, r.jsx)(d.Z, w({}, e), t);
         case s.re.STRING_SELECT:
@@ -107,7 +107,7 @@ function M(e, t) {
         case s.re.TEXT_INPUT:
             return (0, r.jsx)(m.Z, w({}, e), t);
         case s.re.SECTION:
-            return (0, r.jsx)(N.Z, L(w({}, e), { renderComponents: x }), t);
+            return (0, r.jsx)(N.Z, x(w({}, e), { renderComponents: L }), t);
         case s.re.TEXT_DISPLAY:
             return (0, r.jsx)(O.Z, w({}, e), t);
         case s.re.MEDIA_GALLERY:
@@ -121,9 +121,9 @@ function M(e, t) {
         case s.re.CONTENT_INVENTORY_ENTRY:
             return (0, r.jsx)(T.Z, w({}, e), t);
         case s.re.CONTAINER:
-            return (0, r.jsx)(A.Z, L(w({}, e), { renderComponents: x }), t);
+            return (0, r.jsx)(A.Z, x(w({}, e), { renderComponents: L }), t);
         case s.re.LABEL:
-            return (0, r.jsx)(C.Z, L(w({}, e), { renderComponent: M }), t);
+            return (0, r.jsx)(C.Z, x(w({}, e), { renderComponent: M }), t);
         case s.re.FILE_UPLOAD:
             return (0, r.jsx)(_.Z, w({}, e), t);
         case s.re.CHECKPOINT_CARD:
@@ -132,7 +132,7 @@ function M(e, t) {
             return (0, r.jsx)(I.Z, {}, t);
     }
 }
-function k(e) {
+function j(e) {
     let { message: t, shouldDisableInteractiveComponents: n } = e,
         { components: i } = t,
         [o, s] = (0, u.e4)();
@@ -151,7 +151,7 @@ function k(e) {
                               (0, r.jsx)("div", {
                                   ref: e,
                                   className: a()([R.container, { [R.isComponentsV2]: (0, l.hv)(t) }]),
-                                  children: x(i),
+                                  children: L(i),
                               }),
                       }),
                   }),

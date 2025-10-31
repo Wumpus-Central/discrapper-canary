@@ -145,18 +145,18 @@ let A = (e) => {
                 size: w,
                 enablePremiumBrandRefreshDesign: D,
             } = e,
-            L = (0, h.rO)(),
-            x = i.useRef(null),
+            x = (0, h.rO)(),
+            L = i.useRef(null),
             M = i.useRef(0),
-            k = S(n),
-            j = (0, s.debounce)(() => {
+            j = S(n),
+            k = (0, s.debounce)(() => {
                 p.default.track(g.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
             }, 800),
             U = () => {
-                null == x.current || N || ((x.current.currentTime = M.current), x.current.play());
+                null == L.current || N || ((L.current.currentTime = M.current), L.current.play());
             },
             G = () => {
-                null == x.current || N || ((M.current = x.current.currentTime), x.current.pause());
+                null == L.current || N || ((M.current = L.current.currentTime), L.current.pause());
             },
             B = D ? y : b;
         t = D
@@ -200,7 +200,7 @@ let A = (e) => {
                             (0, r.jsx)(A, {
                                 descriptionCta: c,
                                 onClick: R,
-                                debouncedOnClickAnalytics: j,
+                                debouncedOnClickAnalytics: k,
                                 enablePremiumBrandRefreshDesign: D,
                             }),
                     ],
@@ -217,10 +217,10 @@ let A = (e) => {
                             poster: u,
                             loop: !0,
                             className: o()(B.boxVideo, { [C]: null != C }),
-                            ref: x,
+                            ref: L,
                             children: (0, r.jsx)("source", {
                                 src: f,
-                                type: L ? E.m.MP4 : E.m.WEBM,
+                                type: x ? E.m.MP4 : E.m.WEBM,
                             }),
                         },
                         f,
@@ -236,7 +236,7 @@ let A = (e) => {
                           children: [(0, r.jsx)(F, {}), (0, r.jsx)(Z, {})],
                       }),
             Y = {
-                className: o()(D ? y.backgroundColor : k, B.boxContainer, B["".concat(w)], D && y.gradientBackground),
+                className: o()(D ? y.backgroundColor : j, B.boxContainer, B["".concat(w)], D && y.gradientBackground),
                 onMouseEnter: U,
                 onFocus: U,
                 onBlur: G,

@@ -1,7 +1,7 @@
 n.d(t, { T: () => f }), n(415506);
 var r = n(951288),
-    o = n(647438),
-    l = n(442837),
+    l = n(647438),
+    o = n(442837),
     i = n(215569),
     a = n(481060),
     c = n(924052),
@@ -11,9 +11,9 @@ function d(e) {
     let { notice: t, children: n } = e,
         { showNotice: s, handleStoreUpdate: d } = (0, c.Cu)(),
         f = null == t ? void 0 : t.stores;
-    o.useEffect(() => {
+    l.useEffect(() => {
         if (null != f) {
-            let e = new l.Fh(f, () => {
+            let e = new o.Fh(f, () => {
                 d(f);
             });
             return (
@@ -25,7 +25,7 @@ function d(e) {
             );
         }
     }, [f, d]);
-    let b = o.useMemo(() => {
+    let b = l.useMemo(() => {
         if (null == t || !s) return null;
         let { element: e } = t;
         return (0, r.jsx)(a.oXn, {
@@ -45,7 +45,7 @@ function d(e) {
 }
 function f(e) {
     let { node: t } = e,
-        n = o.useRef(null);
+        n = l.useRef(null);
     if (1 !== t.layout.length) throw Error("Panels do not currently support multiple panes");
     return (0, r.jsx)(d, {
         notice: t.notice,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -42,18 +42,18 @@ u(p, "displayName", "GuildPowerupsNotificationStore"),
             e
         ),
     ]);
-let f = new p(l.Z, {
+let h = new p(l.Z, {
     GUILD_POWERUPS_ACK_NOTIFICATION: function (e) {
-        var t, n, r, i, l, p, f, h;
+        var t, n, r, i, l, p, h, f;
         let { guildId: g } = e,
             m = null != (r = null == (t = o.Z.getGuild(g)) ? void 0 : t.premiumSubscriberCount) ? r : 0,
             b = s.Z.getStateForGuild(g),
             _ = a.Z.getStateForGuild(g),
-            O = (0, c.h)([
+            y = (0, c.h)([
                 ...Object.values(null != (i = null == b ? void 0 : b.unlockedPowerups) ? i : {}),
                 ...Object.values(null != (l = null == _ ? void 0 : _.entitlements) ? l : {}),
             ]);
-        (f = (function (e) {
+        (h = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
@@ -69,17 +69,17 @@ let f = new p(l.Z, {
             }
             return e;
         })({}, d)),
-            (h = h =
+            (f = f =
                 {
                     [g]: {
                         lastSeenWarningNotification: new Date(
-                            null != (p = null == (n = O[O.length - 1]) ? void 0 : n.ends_at) ? p : Date.now(),
+                            null != (p = null == (n = y[y.length - 1]) ? void 0 : n.ends_at) ? p : Date.now(),
                         ).getTime(),
                         lastBoostCount: m,
                     },
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(f, Object.getOwnPropertyDescriptors(h))
+                ? Object.defineProperties(h, Object.getOwnPropertyDescriptors(f))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -87,10 +87,10 @@ let f = new p(l.Z, {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(h)).forEach(function (e) {
-                      Object.defineProperty(f, e, Object.getOwnPropertyDescriptor(h, e));
+                  })(Object(f)).forEach(function (e) {
+                      Object.defineProperty(h, e, Object.getOwnPropertyDescriptor(f, e));
                   }),
-            (d = f);
+            (d = h);
     },
     GUILD_POWERUPS_RESET_NOTIFICATIONS: function () {
         d = {};

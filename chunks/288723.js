@@ -56,23 +56,23 @@ let d = {
                     P = new Map(),
                     w = !0,
                     D = C[0],
-                    L = 0;
-                L < C.length;
-                L++
+                    x = 0;
+                x < C.length;
+                x++
             ) {
-                var x = C[L],
-                    M = (0, i.Z)(x),
-                    k = (0, c.Z)(x) === l.BL,
-                    j = [l.we, l.I].indexOf(M) >= 0,
-                    U = j ? "width" : "height",
+                var L = C[x],
+                    M = (0, i.Z)(L),
+                    j = (0, c.Z)(L) === l.BL,
+                    k = [l.we, l.I].indexOf(M) >= 0,
+                    U = k ? "width" : "height",
                     G = (0, o.Z)(t, {
-                        placement: x,
+                        placement: L,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: b,
                         padding: m,
                     }),
-                    B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
+                    B = k ? (j ? l.F2 : l.t$) : j ? l.I : l.we;
                 N[U] > R[U] && (B = (0, r.Z)(B));
                 var Z = (0, r.Z)(B),
                     F = [];
@@ -83,10 +83,10 @@ let d = {
                         return e;
                     }))
                 ) {
-                    (D = x), (w = !1);
+                    (D = L), (w = !1);
                     break;
                 }
-                P.set(x, F);
+                P.set(L, F);
             }
             if (w)
                 for (

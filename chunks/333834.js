@@ -9,28 +9,28 @@ var r = n(951288),
     u = n(442837),
     d = n(755721),
     p = n(481060),
-    f = n(724757),
-    h = n(100527),
+    h = n(724757),
+    f = n(100527),
     g = n(906732),
     m = n(306680),
     b = n(585483),
     _ = n(709054),
-    O = n(821020),
-    y = n(804932),
-    j = n(389160),
-    v = n(787879),
-    x = n(370774),
-    C = n(334426),
+    y = n(821020),
+    O = n(804932),
+    v = n(389160),
+    j = n(787879),
+    C = n(370774),
+    x = n(334426),
     E = n(862149),
     S = n(982183),
     I = n(981631),
     P = n(400705),
     N = n(388032),
     Z = n(809946);
-function T(e) {
+function w(e) {
     e.stopPropagation();
 }
-function w(e) {
+function T(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(p.P3F, {
         "aria-expanded": n,
@@ -57,7 +57,7 @@ function w(e) {
 }
 let A = [S.KZ.UNREAD, S.KZ.TODAY, S.KZ.YESTERDAY, S.KZ.OLDER];
 function R() {
-    let { analyticsLocations: e } = (0, g.ZP)(h.Z.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, g.ZP)(f.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)("div", {
         className: Z.emptyStateContainer,
         children: (0, r.jsxs)(p.Kqy, {
@@ -83,7 +83,7 @@ function R() {
                     ],
                 }),
                 (0, r.jsx)(d.zx, {
-                    onClick: () => (0, x.j4)(e),
+                    onClick: () => (0, C.j4)(e),
                     color: d.zx.Colors.PRIMARY,
                     style: { fontWeight: 600 },
                     children: N.intl.string(P.default.klSpfs),
@@ -99,33 +99,33 @@ function D(e) {
             loadMore: l,
             renderLoadingState: a,
             renderMessageGroup: d,
-            scrollerClassName: h,
+            scrollerClassName: f,
             className: g,
             listName: P,
             ignoreGrouping: N = !1,
         } = e,
-        D = (0, y.fJ)(),
+        D = (0, O.fJ)(),
         L = i.useRef(null),
-        M = (0, f.Z)(P, L),
-        { entrypoint: k, notificationCenterVariant: G } = (0, O.pN)({ location: "NotificationsInboxSidebarList" }),
+        M = (0, h.Z)(P, L),
+        { entrypoint: k, notificationCenterVariant: G } = (0, y.pN)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: U,
             isLoadingComplete: B,
             hasLoadedEver: F,
-        } = (0, u.cj)([v.Z], () => ({
-            isLoading: v.Z.isLoading,
-            isLoadingComplete: v.Z.isLoadingComplete,
-            hasLoadedEver: v.Z.hasLoadedEver,
+        } = (0, u.cj)([j.Z], () => ({
+            isLoading: j.Z.isLoading,
+            isLoadingComplete: j.Z.isLoadingComplete,
+            hasLoadedEver: j.Z.hasLoadedEver,
         })),
         V = !F && U,
-        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, j.Z)(),
+        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, v.Z)(),
         W = (function () {
-            let e = (0, u.Wu)([v.Z], () => {
+            let e = (0, u.Wu)([j.Z], () => {
                 var e;
-                return null != (e = v.Z.getNotifyingChannelIds()) ? e : [];
+                return null != (e = j.Z.getNotifyingChannelIds()) ? e : [];
             });
-            return (0, u.e7)([v.Z, m.ZP], () => {
-                let t = v.Z.getChannelInfoMap();
+            return (0, u.e7)([j.Z, m.ZP], () => {
+                let t = j.Z.getChannelInfoMap();
                 for (let r of e) {
                     var n;
                     let e = t[r];
@@ -187,7 +187,7 @@ function D(e) {
                               : (i[S.KZ.UNREAD][e.channelId] = [e]);
                     }),
                     s().each(t, (e) => {
-                        let t = (0, x.bl)(e);
+                        let t = (0, C.bl)(e);
                         e.kind === S.fL.MENTION
                             ? r[t].push(e)
                             : e.channelId in i[t]
@@ -219,14 +219,14 @@ function D(e) {
                               0 !== Y[t].length &&
                                   (e.push(
                                       (0, r.jsx)(
-                                          w,
+                                          T,
                                           {
                                               group: t,
                                               isOpen: H[t],
                                               toggleOpenedState: () => {
                                                   let e = H[t];
                                                   z(t),
-                                                      (0, y.RZ)({
+                                                      (0, O.RZ)({
                                                           section: t,
                                                           enabled: !e,
                                                           viewId: D,
@@ -242,8 +242,8 @@ function D(e) {
             );
         }, [t, n, a, H, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
-        $ = i.isValidElement(J) && J.type === w,
-        ee = (0, C.d)((e) => e.setInboxReadState);
+        $ = i.isValidElement(J) && J.type === T,
+        ee = (0, x.d)((e) => e.setInboxReadState);
     i.useEffect(() => {
         X || ee(0 === Y.UNREAD.length);
     }, [Y, X, ee]);
@@ -252,7 +252,7 @@ function D(e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             r = i.useRef(!1),
             l = n.UNREAD.length > 0,
-            { setOpenStateFromUnreads: o } = (0, j.Z)();
+            { setOpenStateFromUnreads: o } = (0, v.Z)();
         i.useEffect(() => {
             t || r.current || (o(l), (r.current = !0));
         }, [o, l, t]);
@@ -277,7 +277,7 @@ function D(e) {
         });
     }, [en]);
     return (
-        (0, y.vU)({
+        (0, O.vU)({
             notificationCenterVariant: G,
             entrypoint: k,
             messages: t,
@@ -287,8 +287,8 @@ function D(e) {
         }),
         (0, r.jsx)("div", {
             className: o()(g, Z.messagesPopoutWrap),
-            onClick: T,
-            onDoubleClick: T,
+            onClick: w,
+            onDoubleClick: w,
             "aria-label": e["aria-label"],
             children: (0, r.jsx)(c.bG, {
                 navigator: M,
@@ -354,7 +354,7 @@ function D(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: o()(Z.messagesPopout, h),
+                                    className: o()(Z.messagesPopout, f),
                                     onScroll: K,
                                     fade: !0,
                                 },

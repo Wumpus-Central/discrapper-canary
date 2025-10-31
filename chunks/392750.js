@@ -1,11 +1,11 @@
 n.d(t, { Z: () => m });
 var a = n(951288);
 n(647438);
-var r = n(442837),
+var i = n(442837),
     l = n(481060),
-    i = n(752048),
-    o = n(594174),
-    s = n(681619),
+    r = n(752048),
+    s = n(594174),
+    o = n(681619),
     c = n(996279),
     d = n(451429);
 let u = [
@@ -46,11 +46,11 @@ let u = [
     },
 ];
 function m() {
-    let e = (0, r.Wu)([i.Z, o.default], () =>
-        i.Z.getUserAffinities().map((e) => {
+    let e = (0, i.Wu)([r.Z, s.default], () =>
+        r.Z.getUserAffinities().map((e) => {
             let { otherUserId: t, communicationProbability: n, vcProbability: a } = e;
             return {
-                user: o.default.getUser(t),
+                user: s.default.getUser(t),
                 affinity: n,
                 vcProbability: a,
                 key: t,
@@ -59,7 +59,7 @@ function m() {
     );
     return 0 === e.length
         ? null
-        : (0, a.jsx)(s.Z, {
+        : (0, a.jsx)(o.Z, {
               className: d.panel,
               columns: u,
               rowClassName: c.row,

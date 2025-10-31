@@ -30,8 +30,8 @@ var i = n(512722),
     P = n(25990),
     w = n(594174),
     D = n(74538),
-    L = n(388032),
-    x = n(436360);
+    x = n(388032),
+    L = n(436360);
 function M(e, t, n) {
     return (
         t in e
@@ -45,7 +45,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -78,14 +78,14 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function G() {
-    var e, t, n, i, M, j, G, B, Z;
+    var e, t, n, i, M, k, G, B, Z;
     let F = (0, o.e7)([w.default], () => {
             let e = w.default.getCurrentUser();
             return a()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
@@ -105,7 +105,7 @@ function G() {
         } = (0, o.cj)([P.Z], () => {
             let e = P.Z.getAllPending(),
                 t = P.Z.getErrors();
-            return U(k({}, e), { errors: t });
+            return U(j({}, e), { errors: t });
         }),
         ee = (0, T.SD)({
             userId: F.id,
@@ -124,7 +124,7 @@ function G() {
                   ? M
                   : [],
         el =
-            (null != (j = null == (t = $.bio) ? void 0 : t.length) ? j : 0) > 0
+            (null != (k = null == (t = $.bio) ? void 0 : t.length) ? k : 0) > 0
                 ? $.bio
                 : null != (G = null == et ? void 0 : et.bio)
                   ? G
@@ -167,7 +167,7 @@ function G() {
                       "color",
                   );
     return (0, r.jsxs)("div", {
-        className: x.sectionsContainer,
+        className: L.sectionsContainer,
         children: [
             (0, r.jsx)(h.Z, {
                 placeholder: F.username,
@@ -180,7 +180,7 @@ function G() {
             (0, r.jsx)(
                 I.Z,
                 {
-                    sectionTitle: L.intl.string(L.t["+T3RI/"]),
+                    sectionTitle: x.intl.string(x.t["+T3RI/"]),
                     errors: $.pronouns,
                     onPronounsChange: S.ID,
                     pendingPronouns: z,
@@ -195,7 +195,7 @@ function G() {
                     onAvatarChange: s.I5,
                     showRemoveAvatarButton: er,
                     errors: $.avatar,
-                    sectionTitle: L.intl.string(L.t.lqaIxI),
+                    sectionTitle: x.intl.string(x.t.lqaIxI),
                     forcedDivider: !0,
                 },
                 "avatar",
@@ -204,7 +204,7 @@ function G() {
                 _.Z,
                 {
                     user: F,
-                    sectionTitle: L.intl.string(L.t["7v0T9P"]),
+                    sectionTitle: x.intl.string(x.t["7v0T9P"]),
                 },
                 "decoration",
             ),
@@ -213,7 +213,7 @@ function G() {
                 y.Z,
                 {
                     user: F,
-                    sectionTitle: L.intl.string(L.t.wR5wOo),
+                    sectionTitle: x.intl.string(x.t.wR5wOo),
                 },
                 "effect",
             ),
@@ -221,7 +221,7 @@ function G() {
             (0, r.jsx)(
                 f.Z,
                 {
-                    sectionTitle: L.intl.string(L.t.NepzEw),
+                    sectionTitle: x.intl.string(x.t.NepzEw),
                     errors: el,
                     onBioChange: (e) => (0, d.xQ)(e, null == V ? void 0 : V.bio),
                     pendingBio: K,

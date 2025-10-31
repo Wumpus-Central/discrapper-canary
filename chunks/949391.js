@@ -1,46 +1,46 @@
-r.d(t, { default: () => f });
-var n = r(951288),
-    l = r(647438),
-    a = r(442837),
-    o = r(481060),
-    c = r(668274),
-    i = r(600164),
-    s = r(241209),
-    u = r(807693),
-    d = r(388032),
-    p = r(608981);
-function f(e) {
-    var t;
-    let { eulaId: r, transitionState: f, onClose: h } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.getEULA(r));
-    l.useEffect(() => {
-        (0, c.N)(r);
-    }, [r]);
-    let b = null != (t = null == g ? void 0 : g.name) ? t : d.intl.string(d.t.ZTNur7),
-        m =
-            null != g
-                ? (0, n.jsx)(s.Z, {
-                      children: g.content,
-                      className: p.markdown,
+t.d(n, { default: () => p });
+var r = t(951288),
+    i = t(647438),
+    a = t(442837),
+    s = t(481060),
+    l = t(668274),
+    o = t(600164),
+    c = t(241209),
+    d = t(807693),
+    u = t(388032),
+    E = t(608981);
+function p(e) {
+    var n;
+    let { eulaId: t, transitionState: p, onClose: f } = e,
+        h = (0, a.e7)([d.Z], () => d.Z.getEULA(t));
+    i.useEffect(() => {
+        (0, l.N)(t);
+    }, [t]);
+    let S = null != (n = null == h ? void 0 : h.name) ? n : u.intl.string(u.t.ZTNur7),
+        j =
+            null != h
+                ? (0, r.jsx)(c.Z, {
+                      children: h.content,
+                      className: E.markdown,
                   })
-                : (0, n.jsx)(o.$jN, { className: p.spinner });
-    return (0, n.jsxs)(o.Y0X, {
-        transitionState: f,
-        size: o.CgR.SMALL,
-        "aria-label": b,
+                : (0, r.jsx)(s.$jN, { className: E.spinner });
+    return (0, r.jsxs)(s.Y0X, {
+        transitionState: p,
+        size: s.CgR.SMALL,
+        "aria-label": S,
         parentComponent: "EULA",
         children: [
-            (0, n.jsxs)(o.xBx, {
-                justify: i.Z.Justify.BETWEEN,
+            (0, r.jsxs)(s.xBx, {
+                justify: o.Z.Justify.BETWEEN,
                 children: [
-                    (0, n.jsx)(o.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-lg/semibold",
-                        children: b,
+                        children: S,
                     }),
-                    (0, n.jsx)(o.olH, { onClick: h }),
+                    (0, r.jsx)(s.olH, { onClick: f }),
                 ],
             }),
-            (0, n.jsx)(o.hzk, { children: m }),
+            (0, r.jsx)(s.hzk, { children: j }),
         ],
     });
 }

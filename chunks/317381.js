@@ -88,11 +88,11 @@ let N = {
     P = [],
     w = "0",
     D = new Map(),
-    L = new Map(),
     x = new Map(),
+    L = new Map(),
     M = new Map(),
-    k = new Map();
-function j(e, t) {
+    j = new Map();
+function k(e, t) {
     return "".concat(t, ":").concat(e);
 }
 let U = new Map(),
@@ -117,9 +117,9 @@ function J(e) {
         b = (0, m.ZP)(d);
     if (null == b) return;
     let y = (0, E.p)(u),
-        O = null != y && null != (n = x.get(y)) ? n : R,
+        O = null != y && null != (n = L.get(y)) ? n : R,
         v = null != O && 0 === O.length,
-        I = null != (r = k.get(u.id)) ? r : R,
+        I = null != (r = j.get(u.id)) ? r : R,
         T = I.find((e) => e.applicationId === d),
         A = p.map((e) => e.userId),
         N = c.default.getId(),
@@ -127,7 +127,7 @@ function J(e) {
         w = null == (t = p.find((e) => e.userId === N)) ? void 0 : t.sessionId,
         M = p.some((e) => (0, g.J)(e)),
         G = D.get(d),
-        B = U.get(j(null != y ? y : null, d)),
+        B = U.get(k(null != y ? y : null, d)),
         Z = null == B ? void 0 : B.launchParams,
         F = {
             applicationId: d,
@@ -171,11 +171,11 @@ function J(e) {
               applicationId: d,
           }));
     let H = I.filter((e) => e.applicationId !== d);
-    if ((A.length > 0 && H.push(F), k.set(u.id, H), null != y)) {
-        let e = (null != (s = x.get(y)) ? s : []).filter((e) => e.applicationId !== d),
+    if ((A.length > 0 && H.push(F), j.set(u.id, H), null != y)) {
+        let e = (null != (s = L.get(y)) ? s : []).filter((e) => e.applicationId !== d),
             t = Q((0, E.j)(u)),
-            n = (null != (l = L.get(t)) ? l : []).filter((e) => e.applicationId !== d || e.location.id !== u.id);
-        A.length > 0 && (e.push(F), n.push(F)), x.set(y, e), L.set(t, n);
+            n = (null != (l = x.get(t)) ? l : []).filter((e) => e.applicationId !== d || e.location.id !== u.id);
+        A.length > 0 && (e.push(F), n.push(F)), L.set(y, e), x.set(t, n);
     }
 }
 function $(e) {
@@ -201,7 +201,7 @@ function ee(e) {
 }
 function et(e) {
     let { guilds: t } = e;
-    x.clear(), L.clear(), k.clear(), M.clear(), t.forEach((e) => $(e));
+    L.clear(), x.clear(), j.clear(), M.clear(), t.forEach((e) => $(e));
     let n = c.default.getId();
     for (let e of Array.from(D.values()))
         eP
@@ -215,20 +215,20 @@ function en(e) {
 function er(e) {
     var t, n;
     let { channel: r } = e,
-        i = null != (t = x.get(r.id)) ? t : [];
-    x.set(r.id, []);
+        i = null != (t = L.get(r.id)) ? t : [];
+    L.set(r.id, []);
     let a = Q(r.guild_id),
-        o = (null != (n = L.get(a)) ? n : []).filter((e) => (0, E.p)(e.location) !== r.id);
-    L.set(a, o),
+        o = (null != (n = x.get(a)) ? n : []).filter((e) => (0, E.p)(e.location) !== r.id);
+    x.set(a, o),
         i.forEach((e) => {
-            k.delete(e.location.id);
+            j.delete(e.location.id);
         }),
         M.set(r.id, []);
 }
 function ei(e) {
     let { applicationId: t, launchId: n, compositeInstanceId: r, location: i, participants: a } = e,
         o = (0, E.p)(i),
-        s = U.get(j(null != o ? o : null, t));
+        s = U.get(k(null != o ? o : null, t));
     J({
         location: i,
         applicationId: t,
@@ -266,7 +266,7 @@ function ea(e) {
     if (null == f.default.getCurrentUser() || (null == w && !(null != (n = null == P ? void 0 : P.isPrivate()) && n)))
         return !1;
     r = l;
-    let L = {
+    let x = {
         applicationId: i,
         url: C,
         userIds: new Set(p.map((e) => e.userId)),
@@ -279,14 +279,14 @@ function ea(e) {
         customId: T,
         proxyTicket: A,
     };
-    D.set(i, L),
+    D.set(i, x),
         _.S.dispatch(I.CkL.OPEN_EMBEDDED_ACTIVITY, {
             location: l,
             applicationId: i,
             isFirstActivityInChannel: g,
             isStart: b,
             participants: p,
-            embeddedActivity: L,
+            embeddedActivity: x,
             inviterUserId: S,
         }),
         (0, h.R)()
@@ -380,7 +380,7 @@ function e_(e) {
 }
 function ep(e) {
     let { applicationId: t, componentId: n, commandOrigin: r, launchParams: i, channelId: a, inviterUserId: o } = e;
-    U.set(j(a, t), {
+    U.set(k(a, t), {
         isLaunching: !0,
         componentId: n,
         inviterUserId: o,
@@ -390,7 +390,7 @@ function ep(e) {
 }
 function eh(e) {
     let { applicationId: t, channelId: n, proxyTicket: r } = e,
-        i = j(n, t),
+        i = k(n, t),
         a = U.get(i);
     null != a && U.set(i, C(S({}, a), { proxyTicket: r }));
 }
@@ -426,7 +426,7 @@ function ey(e) {
 }
 function eO(e) {
     let { applicationId: t, channelId: n } = e;
-    U.delete(j(n, t));
+    U.delete(k(n, t));
 }
 function ev(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: r, gridLockState: i } = e;
@@ -486,22 +486,22 @@ class eR extends (i = a.ZP.PersistedStore) {
     }
     getEmbeddedActivitiesForGuild(e) {
         var t;
-        return null != (t = L.get(e)) ? t : R;
+        return null != (t = x.get(e)) ? t : R;
     }
     getEmbeddedActivitiesForChannel(e) {
         var t;
-        return null != (t = x.get(e)) ? t : R;
+        return null != (t = L.get(e)) ? t : R;
     }
     getEmbeddedActivitiesForLocation(e) {
         var t;
-        return null != (t = k.get(e.id)) ? t : R;
+        return null != (t = j.get(e.id)) ? t : R;
     }
     getEmbeddedActivitiesForStartingChannel(e) {
         var t;
         return null != (t = M.get(e)) ? t : R;
     }
     getEmbeddedActivitiesByChannel() {
-        return x;
+        return L;
     }
     getEmbeddedActivityDurationMs(e, t) {
         let n = K.get(eC(e, t));
@@ -563,7 +563,7 @@ class eR extends (i = a.ZP.PersistedStore) {
     getEmbeddedActivityForUserId(e, t) {
         let n;
         if (void 0 !== t) {
-            l: for (let [r, i] of k)
+            l: for (let [r, i] of j)
                 for (let r of i)
                     if (r.applicationId === t && r.userIds.has(e)) {
                         n = r;
@@ -576,7 +576,7 @@ class eR extends (i = a.ZP.PersistedStore) {
         return N.everLaunchedActivities.has(e);
     }
     getLaunchState(e, t) {
-        if (null != e) return U.get(j(null != t ? t : null, e));
+        if (null != e) return U.get(k(null != t ? t : null, e));
     }
     getLaunchStates() {
         return U;

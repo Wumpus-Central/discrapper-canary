@@ -118,8 +118,8 @@ function O(e) {
         ]);
     let w = (0, _.c)(N),
         D = i.useId(),
-        L = null != h && ("string" != typeof h || "" !== h),
-        x = i.useMemo(
+        x = null != h && ("string" != typeof h || "" !== h),
+        L = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
                     className: p.richTooltipContent,
@@ -132,28 +132,28 @@ function O(e) {
                         (0, r.jsxs)("div", {
                             className: p.textContent,
                             children: [
-                                L &&
+                                x &&
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/bold",
                                         children: h,
                                     }),
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/medium",
-                                    color: L ? "text-secondary" : "text-primary",
+                                    color: x ? "text-secondary" : "text-primary",
                                     children: g,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [y, h, g, L],
+            [y, h, g, x],
         ),
-        { isVisible: M, triggerProps: k } = (0, d.l)(m({ targetElementRef: w.targetElementRef }, P)),
-        j = null != R ? R : "".concat((0, u.Sw)(null != h ? h : ""), "|").concat((0, u.Sw)(g)),
+        { isVisible: M, triggerProps: j } = (0, d.l)(m({ targetElementRef: w.targetElementRef }, P)),
+        k = null != R ? R : "".concat((0, u.Sw)(null != h ? h : ""), "|").concat((0, u.Sw)(g)),
         U = (0, f.Q)({ shouldShow: M });
     if (O) {
-        let e = E(m({}, k), {
-            onFocus: (0, u.tS)(k.onFocus, (e) => {
+        let e = E(m({}, j), {
+            onFocus: (0, u.tS)(j.onFocus, (e) => {
                 let t = e.target;
                 if (null != t) {
                     var n;
@@ -161,7 +161,7 @@ function O(e) {
                     t.setAttribute("aria-describedby", e);
                 }
             }),
-            onBlur: (0, u.tS)(k.onBlur, (e) => {
+            onBlur: (0, u.tS)(j.onBlur, (e) => {
                 let t = e.target;
                 if (null != t) {
                     let e = t.getAttribute("aria-describedby");
@@ -182,7 +182,7 @@ function O(e) {
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, u.C9)(n, k, D, w.triggerRef);
+        t = (0, u.C9)(n, j, D, w.triggerRef);
     }
     let G = U((e, t) =>
         t
@@ -193,14 +193,14 @@ function O(e) {
                       isRendered: !0,
                       targetElementRef: w.targetElementRef,
                       id: D,
-                      content: x,
+                      content: L,
                       position: I,
                       align: T,
                       spacing: S,
                       caretConfig: A,
                       layerContext: null != C ? C : s.nz,
                       animationStyle: e,
-                      positionKey: j,
+                      positionKey: k,
                       "data-mana-component": "rich-tooltip",
                   }),
               })
@@ -209,10 +209,10 @@ function O(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            null != x
+            null != L
                 ? (0, r.jsx)(a.n, {
                       id: D,
-                      children: x,
+                      children: L,
                   })
                 : null,
             G,

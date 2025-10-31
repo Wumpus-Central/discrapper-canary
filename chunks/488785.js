@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
@@ -9,19 +9,19 @@ var i = n(951288),
     u = n(570140),
     d = n(596454),
     p = n(607070),
-    h = n(604729);
-let f = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
-    m = r.memo(function (e) {
+    f = n(604729);
+let h = [f.emoji1, f.emoji2, f.emoji3, f.emoji4],
+    m = i.memo(function (e) {
         var t;
         let { emoji: n, onAnimationEnd: l } = e,
-            s = (0, o.sample)(f),
-            c = r.useCallback(() => {
+            s = (0, o.sample)(h),
+            c = i.useCallback(() => {
                 l(n.key);
             }, [n.key, l]);
-        return (0, i.jsx)("div", {
-            className: a()(h.emoji, s),
+        return (0, r.jsx)("div", {
+            className: a()(f.emoji, s),
             onAnimationEnd: c,
-            children: (0, i.jsx)(d.Z, {
+            children: (0, r.jsx)(d.Z, {
                 emojiId: n.id,
                 emojiName: n.name,
                 animated: null != (t = n.animated) && t,
@@ -31,40 +31,40 @@ let f = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
 function g(e) {
     let { channelId: t, callHeight: n } = e,
         l = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        [a, o] = r.useState([]);
-    r.useEffect(() => {
+        [a, o] = i.useState([]);
+    i.useEffect(() => {
         function e(e) {
-            let { channelId: n, emoji: i } = e;
+            let { channelId: n, emoji: r } = e;
             n !== t ||
                 l ||
-                null == i ||
+                null == r ||
                 o((e) => [
                     ...e,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                i = Object.keys(n);
+                                r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (i = i.concat(
+                                (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                i.forEach(function (t) {
-                                    var i;
-                                    (i = n[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: i,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = i);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
-                    })({ key: (0, s.Z)() }, i),
+                    })({ key: (0, s.Z)() }, r),
                 ]);
         }
         return (
@@ -74,20 +74,20 @@ function g(e) {
             }
         );
     }, [t, l]);
-    let d = r.useCallback((e) => {
+    let d = i.useCallback((e) => {
         o((t) => t.filter((t) => t.key !== e));
     }, []);
     return l
         ? null
-        : (0, i.jsx)("div", {
-              className: h.container,
+        : (0, r.jsx)("div", {
+              className: f.container,
               style: {
                   top: n - 50,
                   left: "52%",
               },
               "aria-hidden": !0,
               children: a.map((e) =>
-                  (0, i.jsx)(
+                  (0, r.jsx)(
                       m,
                       {
                           emoji: e,

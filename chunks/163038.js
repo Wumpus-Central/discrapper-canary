@@ -29,19 +29,19 @@ var r = n(951288),
     P = n(430824),
     w = n(496675),
     D = n(699516),
-    L = n(944486),
-    x = n(594174),
+    x = n(944486),
+    L = n(594174),
     M = n(626135),
-    k = n(22665),
-    j = n(981631),
+    j = n(22665),
+    k = n(981631),
     U = n(959517),
     G = n(953278);
 function B(e) {
     let { message: t, snapshot: n, index: u } = e,
         f = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
         p = (0, o.e7)(
-            [N.Z, x.default, D.Z, w.Z, P.Z, _.Z],
-            () => f.getForwardInfo(N.Z, x.default, D.Z, w.Z, P.Z, _.Z).footerInfo,
+            [N.Z, L.default, D.Z, w.Z, P.Z, _.Z],
+            () => f.getForwardInfo(N.Z, L.default, D.Z, w.Z, P.Z, _.Z).footerInfo,
             [f],
             s.Z,
         ),
@@ -50,7 +50,7 @@ function B(e) {
             let r = N.Z.getChannel(t.channel_id),
                 i = P.Z.getGuild(null == r ? void 0 : r.guild_id),
                 a = null == (e = t.messageReference) ? void 0 : e.channel_id,
-                o = L.Z.getCurrentlySelectedChannelId(),
+                o = x.Z.getCurrentlySelectedChannelId(),
                 s = C.ZP.getCurrentSidebarChannelId(null == (n = t.messageReference) ? void 0 : n.channel_id),
                 l = o === a && s === (null == r ? void 0 : r.id);
             null == r ||
@@ -63,7 +63,7 @@ function B(e) {
                     guildId: r.guild_id,
                 }),
                 (0, T.Kh)(a),
-                M.default.track(j.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
+                M.default.track(k.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: a,
                     destination_message_id: t.id,
@@ -126,7 +126,7 @@ function F(e) {
             showAvatarPopout: f,
         } = Z(t, i);
     return (0, r.jsx)(m.Z, {
-        childrenExecutedCommand: (0, r.jsx)(k.Z, {
+        childrenExecutedCommand: (0, r.jsx)(j.Z, {
             reportingUserId: a,
             guildId: i.guild_id,
             channel: i,

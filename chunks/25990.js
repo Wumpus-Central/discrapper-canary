@@ -27,10 +27,10 @@ function w() {
 function D() {
     (R = C.QZA.CLOSED), (P = {});
 }
-function L() {
+function x() {
     (R = C.QZA.SUBMITTING), (P = {});
 }
-function x(e) {
+function L(e) {
     var t;
     if (R !== C.QZA.SUBMITTING) return !1;
     (R = C.QZA.OPEN), (P = null != (t = e.errors) ? t : {});
@@ -39,11 +39,11 @@ function M(e) {
     let { section: t } = e;
     return t === C.oAB.ACCOUNT && w();
 }
-function k(e) {
+function j(e) {
     let { avatar: t } = e;
     (r = t), (g = void 0);
 }
-function j(e) {
+function k(e) {
     let { globalName: t } = e;
     i = t;
 }
@@ -260,10 +260,10 @@ let e_ = new ef(T.Z, {
     USER_SETTINGS_MODAL_SET_SECTION: M,
     USER_SETTINGS_ACCOUNT_CLOSE: D,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: ed,
-    USER_SETTINGS_ACCOUNT_SUBMIT: L,
-    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: x,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: k,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: j,
+    USER_SETTINGS_ACCOUNT_SUBMIT: x,
+    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: L,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: j,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: k,
     USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: U,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE: B,

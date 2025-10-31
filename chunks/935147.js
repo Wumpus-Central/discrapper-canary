@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(532432),
     w = n(235433),
     D = n(504983),
-    L = n(134795),
-    x = n(513901),
+    x = n(134795),
+    L = n(513901),
     M = n(451392),
-    k = n(490220),
-    j = n(981631),
+    j = n(490220),
+    k = n(981631),
     U = n(474936),
     G = n(526761),
     B = n(388032),
@@ -124,14 +124,14 @@ function W(e) {
                         ? (0, u.fK)(e.skuId).then(() => (0, s.cV)(ee))
                         : null != f.Z.getPurchase(ee.skuId) && (0, s.cV)(ee);
                 }
-                A.default.track(j.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: en });
+                A.default.track(k.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: en });
             }
         };
     i.useEffect(() => {
         H &&
-            A.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
+            A.default.track(k.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: U.cd.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: { page: j.ZY5.USER_SETTINGS },
+                location: { page: k.ZY5.USER_SETTINGS },
                 location_stack: es,
             });
     }, [es, F, H]);
@@ -172,7 +172,7 @@ function W(e) {
                                       preset: en,
                                       onShuffle: er,
                                   }),
-                                  (0, r.jsx)(k.Z, { user: F }),
+                                  (0, r.jsx)(j.Z, { user: F }),
                               ],
                           }),
                           children: (0, r.jsxs)("div", {
@@ -203,7 +203,7 @@ function W(e) {
                                       showPremiumIcon: !1,
                                       preventDisabled: !0,
                                   }),
-                                  (0, r.jsx)(L.Z, {
+                                  (0, r.jsx)(x.Z, {
                                       className: Z.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != J,
@@ -233,7 +233,7 @@ function W(e) {
                                       className: Z.customizationSection,
                                   }),
                                   (0, r.jsx)(
-                                      x.Z,
+                                      L.Z,
                                       {
                                           className: Z.customizationSection,
                                           isTryItOutFlow: !0,

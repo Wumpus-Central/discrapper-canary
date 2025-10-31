@@ -32,14 +32,14 @@ var r = n(951288),
     P = n(602698),
     w = n(388032),
     D = n(166387);
-let L = {
+let x = {
         [N.dG.REQUESTS]: S.Z,
         [N.dG.ACTIVITY]: T.Z,
         [N.dG.SETTINGS]: A.Z,
         [N.dG.CONTENT_AND_SOCIAL]: v.Z,
         [N.dG.DATA_AND_PRIVACY]: I.Z,
     },
-    x = {
+    L = {
         [N.dG.REQUESTS]: S.Z,
         [N.dG.ACTIVITY]: T.Z,
         [N.dG.CONTENT_AND_SOCIAL]: v.Z,
@@ -53,7 +53,7 @@ function M() {
         children: (0, r.jsx)(c.$jN, {}),
     });
 }
-function k(e) {
+function j(e) {
     let { section: t, handleItemSelect: n } = e,
         i = (0, O.gU)(),
         a = (0, y.Z)();
@@ -96,7 +96,7 @@ function k(e) {
               ],
           });
 }
-function j(e) {
+function k(e) {
     let { theme: t, section: n, handleItemSelect: i } = e,
         a = (0, p.Dt)(),
         l = (0, O.gU)();
@@ -167,13 +167,13 @@ function U() {
             i(e);
         };
     if (a) return null;
-    let s = L[n];
+    let s = x[n];
     return (0, r.jsxs)("main", {
         className: D.container,
         "aria-label": w.intl.string(P.default.RZqaJn),
         children: [
             (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJn) }),
-            (0, r.jsx)(k, {
+            (0, r.jsx)(j, {
                 section: n,
                 handleItemSelect: o,
             }),
@@ -212,7 +212,7 @@ function G() {
     };
     if (I) return null;
     let S = O !== N.dG.SETTINGS ? O : N.dG.ACTIVITY,
-        A = x[S];
+        A = L[S];
     return (0, r.jsx)(f.Gt, {
         value: e,
         children: (0, r.jsxs)("main", {
@@ -220,7 +220,7 @@ function G() {
             "aria-label": w.intl.string(P.default.RZqaJn),
             children: [
                 (0, r.jsx)(_.yY, { location: w.intl.string(P.default.RZqaJn) }),
-                (0, r.jsx)(j, {
+                (0, r.jsx)(k, {
                     theme: a,
                     section: S,
                     handleItemSelect: T,

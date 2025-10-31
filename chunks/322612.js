@@ -28,17 +28,17 @@ function O(e, t, n) {
             month: "long",
             timeZone: w.timeZone,
         }),
-        L = (0, E.a)({
+        x = (0, E.a)({
             hour: "numeric",
             hour12: w.hour12,
             timeZone: w.timeZone,
         });
-    if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (P = L.format(t.dateValue));
+    if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (P = x.format(t.dateValue));
     else {
         let e = D.format(t.dateValue);
         P = e !== P ? `${P} \u{2013} ${e}` : e;
     }
-    let { spinButtonProps: x } = (0, y.G)({
+    let { spinButtonProps: L } = (0, y.G)({
             value: e.value,
             textValue: P,
             minValue: e.minValue,
@@ -66,7 +66,7 @@ function O(e, t, n) {
             },
         }),
         M = (0, m.useMemo)(() => new (0, h.d)(I, { maximumFractionDigits: 0 }), [I]),
-        k = () => {
+        j = () => {
             if (
                 (e.text === e.placeholder && R.focusPrevious(),
                 !M.isValidPartialNumber(e.text) || t.isReadOnly || e.isPlaceholder)
@@ -79,7 +79,7 @@ function O(e, t, n) {
                     (O.current = n);
             }
         },
-        j = (e) => {
+        k = (e) => {
             if (
                 ("a" === e.key && ((0, s.V5)() ? e.metaKey : e.ctrlKey) && e.preventDefault(),
                 !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey)
@@ -87,7 +87,7 @@ function O(e, t, n) {
                 switch (e.key) {
                     case "Backspace":
                     case "Delete":
-                        e.preventDefault(), e.stopPropagation(), k();
+                        e.preventDefault(), e.stopPropagation(), j();
                 }
         },
         { startsWith: U } = (0, b.L)({ sensitivity: "base" }),
@@ -192,7 +192,7 @@ function O(e, t, n) {
             switch ((r.preventDefault(), r.inputType)) {
                 case "deleteContentBackward":
                 case "deleteContentForward":
-                    M.isValidPartialNumber(e.text) && !t.isReadOnly && k();
+                    M.isValidPartialNumber(e.text) && !t.isReadOnly && j();
                     break;
                 case "insertCompositionText":
                     (K.current = n.current.textContent), (n.current.textContent = n.current.textContent);
@@ -238,7 +238,7 @@ function O(e, t, n) {
         ("numeric" === t || "2-digit" === t) && ($.direction = "ltr");
     }
     return {
-        segmentProps: (0, p.d)(x, J, {
+        segmentProps: (0, p.d)(L, J, {
             id: q,
             ...z,
             "aria-invalid": t.isInvalid ? "true" : void 0,
@@ -252,7 +252,7 @@ function O(e, t, n) {
             [parseInt(m.version, 10) >= 17 ? "enterKeyHint" : "enterkeyhint"]: X ? "next" : void 0,
             inputMode: t.isDisabled || "dayPeriod" === e.type || "era" === e.type || !X ? void 0 : "numeric",
             tabIndex: t.isDisabled ? void 0 : 0,
-            onKeyDown: j,
+            onKeyDown: k,
             onFocus: Y,
             style: $,
             onPointerDown(e) {

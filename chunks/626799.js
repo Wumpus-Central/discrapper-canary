@@ -1,5 +1,5 @@
 n.d(t, {
-    $: () => k,
+    $: () => j,
     Z: () => M,
 }),
     n(388685),
@@ -225,7 +225,7 @@ class w extends (r = a.Component) {
 }
 C(w, "defaultProps", { renderFallback: T.dG4 });
 let D = [O.Z, y.Z, b.Z, v.Z];
-function L(e) {
+function x(e) {
     let { skuId: t } = e,
         n = O.Z.get(t),
         r = null != n ? g.Z.getApplication(n.applicationId) : null;
@@ -238,6 +238,6 @@ function L(e) {
         libraryApplication: null != n ? b.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
     };
 }
-let x = (0, m.Z)((0, h.Z)(w)),
-    M = s.ZP.connectStores(D, L)(x),
-    k = (0, h.Z)(s.ZP.connectStores(D, L)(w));
+let L = (0, m.Z)((0, h.Z)(w)),
+    M = s.ZP.connectStores(D, x)(L),
+    j = (0, h.Z)(s.ZP.connectStores(D, x)(w));

@@ -80,12 +80,12 @@ let N = i.memo(function (e) {
             onPlay: P,
             onPause: w,
             onError: D,
-            playbackCacheKey: L,
+            playbackCacheKey: x,
         } = e,
-        x = i.useRef(null),
-        M = i.useMemo(() => (null != L ? d.ZP.getPlaybackPosition(L) : 0), [L]),
-        k = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
-        [j, U] = i.useState(M > 0),
+        L = i.useRef(null),
+        M = i.useMemo(() => (null != x ? d.ZP.getPlaybackPosition(x) : 0), [x]),
+        j = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
+        [k, U] = i.useState(M > 0),
         [G, B] = i.useState(M),
         [Z, F] = i.useState(y),
         [V, H] = i.useState(!1),
@@ -107,9 +107,9 @@ let N = i.memo(function (e) {
         }, []),
         ea = i.useCallback(
             (e) => {
-                null != y && null != L && (0, u.U)(L, e, y);
+                null != y && null != x && (0, u.U)(x, e, y);
             },
-            [L, y],
+            [x, y],
         ),
         eo = i.useCallback(() => {
             W(!1),
@@ -122,11 +122,11 @@ let N = i.memo(function (e) {
             K || (ea(0), eo());
         }, [eo, K, ea]),
         el = i.useCallback((e) => {
-            let t = x.current;
+            let t = L.current;
             null != t && (B(e), (t.currentTime = e), U(!0));
         }, []),
         ec = i.useCallback(() => {
-            let e = x.current;
+            let e = L.current;
             if (null == e) return;
             let t = e.error;
             null == D || D(t);
@@ -149,14 +149,14 @@ let N = i.memo(function (e) {
         }, [G, Z, eo, ea]),
         ep = i.useCallback(
             (e) => {
-                let t = x.current;
+                let t = L.current;
                 null != Z && null != t && (el(e * Z), clearTimeout(et.current), (et.current = void 0));
             },
             [Z, el],
         );
     i.useEffect(() => {
-        !j && Y && U(!0);
-    }, [Y, j]);
+        !k && Y && U(!0);
+    }, [Y, k]);
     let eh = i.useRef(null),
         em = {
             played: q,
@@ -178,7 +178,7 @@ let N = i.memo(function (e) {
                     !K &&
                     (e = setInterval(() => {
                         var e, t;
-                        ea(null != (t = null == (e = x.current) ? void 0 : e.currentTime) ? t : 0);
+                        ea(null != (t = null == (e = L.current) ? void 0 : e.currentTime) ? t : 0);
                     }, m.Z.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
@@ -195,7 +195,7 @@ let N = i.memo(function (e) {
                             r(
                                 !1,
                                 t,
-                                (null != (a = null == (i = x.current) ? void 0 : i.duration) ? a : 0) *
+                                (null != (a = null == (i = L.current) ? void 0 : i.duration) ? a : 0) *
                                     m.Z.Millis.SECOND,
                             );
                 } else {
@@ -205,17 +205,17 @@ let N = i.memo(function (e) {
                     null == n || n(t, i), ea(t), (eh.current = null);
                 }
         }, [Y, n, Z, ea]),
-        A(x, Y, B),
+        A(L, Y, B),
         C(n, Y, W);
     let eE = Y ? l.fpf : l.o1U,
         eb = Y ? O.intl.string(O.t.ZcgDJX) : O.intl.string(O.t.RscU7I),
-        ey = O.intl.formatToPlainString(O.t.LgCPMt, { playbackRate: k }),
-        eO = "".concat(k.toString().replace(/^0/, ""), "X");
+        ey = O.intl.formatToPlainString(O.t.LgCPMt, { playbackRate: j }),
+        eO = "".concat(j.toString().replace(/^0/, ""), "X");
     t =
         "Safari" === platform.name
             ? (0, r.jsx)(i.Suspense, {
                   children: (0, r.jsx)(I, {
-                      ref: x,
+                      ref: L,
                       className: v.audioElement,
                       src: n,
                       preload: Q,
@@ -225,11 +225,11 @@ let N = i.memo(function (e) {
                       onError: ec,
                       muted: V,
                       volume: $,
-                      playbackRate: k,
+                      playbackRate: j,
                   }),
               })
             : (0, r.jsx)(f.Z, {
-                  ref: x,
+                  ref: L,
                   className: v.audioElement,
                   controls: !1,
                   preload: Q,
@@ -238,7 +238,7 @@ let N = i.memo(function (e) {
                   onError: ec,
                   muted: V,
                   volume: $,
-                  playbackRate: k,
+                  playbackRate: j,
                   playing: Y && !K,
                   children: (0, r.jsx)("source", { src: n }),
               });
@@ -267,19 +267,19 @@ let N = i.memo(function (e) {
                 currentTime: G,
                 duration: null != Z ? Z : 1,
                 playing: Y,
-                played: j,
+                played: k,
                 onDrag: ep,
                 onDragStart: ef,
                 onDragEnd: e_,
             }),
             (0, r.jsx)(S, {
-                played: j,
+                played: k,
                 currentTime: G,
                 duration: Z,
             }),
             (0, r.jsx)(l.P3F, {
                 className: v.playbackRateContainer,
-                onClick: () => T(k),
+                onClick: () => T(j),
                 "aria-label": ey,
                 children: (0, r.jsx)(l.Text, {
                     variant: "text-xs/semibold",

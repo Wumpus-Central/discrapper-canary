@@ -47,11 +47,11 @@ let S = function (e) {
             location: w,
         } = e,
         D = (0, _.O5)(),
-        L = (0, l.e7)([f.Z], () => f.Z.isFocused()),
-        x = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        x = (0, l.e7)([f.Z], () => f.Z.isFocused()),
+        L = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         M = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
-        k = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
-        j = i.useCallback(
+        j = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
+        k = i.useCallback(
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -76,7 +76,7 @@ let S = function (e) {
     return (
         i.useEffect(() => {
             if (null != U.current) {
-                if (!M.isAnimated || x) {
+                if (!M.isAnimated || L) {
                     (U.current.currentTime = 0), U.current.pause();
                     return;
                 }
@@ -85,7 +85,7 @@ let S = function (e) {
                     : !h && G.current && ((U.current.currentTime = 0), U.current.pause()),
                     (G.current = h);
             }
-        }, [h, M, x]),
+        }, [h, M, L]),
         (t = B
             ? (0, r.jsx)(O.Fl, {
                   id: "QuestRewardTile_rewardTileNitro",
@@ -99,9 +99,9 @@ let S = function (e) {
               ? (0, r.jsx)(E.K, {
                     showVideo: h,
                     imageAsset:
-                        null != k
+                        null != j
                             ? {
-                                  asset: k,
+                                  asset: j,
                                   assetId: "QuestRewardTile_rewardTileStatic",
                                   className: I.imageVideoOverlay,
                                   alt: v.intl.string(v.t.UMclVN),
@@ -123,7 +123,7 @@ let S = function (e) {
                               ref: (e) => {
                                   (t.current = e), (U.current = e);
                               },
-                              autoPlay: !x && h,
+                              autoPlay: !L && h,
                               loop: !0,
                               muted: !0,
                               playsInline: !0,
@@ -156,14 +156,14 @@ let S = function (e) {
               })
             : (0, r.jsxs)(c.P3F, {
                   className: o()(I.questRewardTileInteractive, I.questRewardTile, I.rewardHighlight, n),
-                  onClick: j,
+                  onClick: k,
                   style: R,
                   children: [
                       t,
                       P &&
-                          !x &&
+                          !L &&
                           (0, r.jsx)(T, {
-                              appFocused: L,
+                              appFocused: x,
                               location: w,
                           }),
                       "text" === S &&

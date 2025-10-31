@@ -38,8 +38,8 @@ var r = n(951288),
     x = n(526761),
     L = n(231338),
     M = n(388032),
-    k = n(227674);
-function j(e, t, n) {
+    j = n(227674);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -153,15 +153,15 @@ let H = Object.freeze({
                 )
                 .otherwise(() => M.intl.string(M.t.hjV0fZ));
         return (0, r.jsxs)("div", {
-            className: k.title,
+            className: j.title,
             children: [
                 (0, r.jsx)(c.Heading, {
                     "aria-label": o,
-                    className: k.titleText,
+                    className: j.titleText,
                     variant: "text-md/medium",
                     children: o,
                 }),
-                (0, r.jsx)(b.Z, { className: k.premiumIcon }),
+                (0, r.jsx)(b.Z, { className: j.premiumIcon }),
             ],
         });
     },
@@ -200,7 +200,7 @@ let H = Object.freeze({
             .otherwise(() => M.intl.string(M.t["np0X/u"]));
         return (0, r.jsx)(c.Heading, {
             variant: "text-sm/normal",
-            className: k.subtext,
+            className: j.subtext,
             children: l,
         });
     },
@@ -217,10 +217,10 @@ let H = Object.freeze({
                   children: M.intl.format(M.t.G8yQXi, { onPremiumClick: () => m.z }),
               })
             : (0, r.jsxs)("div", {
-                  className: k.header,
+                  className: j.header,
                   children: [
                       (0, r.jsxs)("div", {
-                          className: k.headings,
+                          className: j.headings,
                           children: [
                               (0, r.jsx)(K, {
                                   type: l,
@@ -297,7 +297,7 @@ let H = Object.freeze({
                     return e;
                 }
                 return (0, r.jsxs)("div", {
-                    className: k.easterEggSelection,
+                    className: j.easterEggSelection,
                     children: [
                         (0, r.jsx)(N.DR, {
                             preset: e,
@@ -307,7 +307,7 @@ let H = Object.freeze({
                         (0, r.jsx)(c.Fmz, {
                             importData: t,
                             shouldAnimate: !v,
-                            className: k.sparkles,
+                            className: j.sparkles,
                         }),
                     ],
                 });
@@ -434,7 +434,7 @@ let H = Object.freeze({
                 t &&
                     a &&
                     (0, r.jsx)(c.Heading, {
-                        className: k.upsellText,
+                        className: j.upsellText,
                         variant: "heading-sm/semibold",
                         children: M.intl.string(M.t.POSLGY),
                     }),
@@ -470,7 +470,7 @@ let H = Object.freeze({
             children: (0, r.jsx)(
                 "div",
                 B(U({ ref: s }, c), {
-                    className: k.__invalid_container,
+                    className: j.__invalid_container,
                     children: n,
                 }),
             ),

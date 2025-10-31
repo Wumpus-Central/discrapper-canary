@@ -1,31 +1,31 @@
-n.d(t, { v: () => s }), n(953529);
+n.d(t, { v: () => o }), n(953529);
 var a = n(951288);
 n(647438);
-var r = n(481060),
+var i = n(481060),
     l = n(921944),
-    i = n(388032),
-    o = n(820762);
-function s(e) {
+    r = n(388032),
+    s = n(820762);
+function o(e) {
     let { markAsDismissed: t, onCTA: n } = e;
     return (0, a.jsx)("div", {
-        className: o.popup,
+        className: s.popup,
         children: (0, a.jsxs)("div", {
-            className: o.content,
+            className: s.content,
             children: [
-                (0, a.jsx)(r.P3F, {
-                    className: o.closeIcon,
+                (0, a.jsx)(i.P3F, {
+                    className: s.closeIcon,
                     onClick: () => t(l.L.USER_DISMISS),
-                    children: (0, a.jsx)(r.Dio, { size: "xs" }),
+                    children: (0, a.jsx)(i.Dio, { size: "xs" }),
                 }),
-                (0, a.jsx)(r.Text, {
-                    className: o.description,
+                (0, a.jsx)(i.Text, {
+                    className: s.description,
                     variant: "text-md/normal",
-                    children: i.intl.string(i.t["Ny/0ui"]),
+                    children: r.intl.string(r.t["Ny/0ui"]),
                 }),
-                (0, a.jsx)(r.Button, {
+                (0, a.jsx)(i.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: i.intl.string(i.t.TYo738),
+                    text: r.intl.string(r.t.TYo738),
                     fullWidth: !0,
                     onClick: () => {
                         t(l.L.TAKE_ACTION), n();

@@ -1,50 +1,50 @@
 n.d(t, { i: () => o });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    l = n.n(r),
+var i = n(120356),
+    l = n.n(i),
     a = n(458926);
 function o(e) {
     let {
         bannerIcon: t,
         bannerHeader: n,
-        bannerSubtext: r,
+        bannerSubtext: i,
         textStyles: o,
         headerStyles: s,
         containerStyles: c,
         children: u,
     } = e;
-    return (0, i.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: l()(a.spamBanner, c),
         children: [
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: l()(a.bannerTextContainer, o),
                 children: [
                     null != t &&
                         ("string" == typeof t
-                            ? (0, i.jsx)("img", {
+                            ? (0, r.jsx)("img", {
                                   src: t,
                                   alt: "",
                                   className: a.bannerIcon,
                               })
                             : t),
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         className: a.bannerText,
                         children: [
-                            (0, i.jsx)("div", {
+                            (0, r.jsx)("div", {
                                 className: l()(a.bannerHeader, s),
                                 children: n,
                             }),
-                            null != r &&
-                                (0, i.jsx)("div", {
+                            null != i &&
+                                (0, r.jsx)("div", {
                                     className: a.bannerSubtext,
-                                    children: r,
+                                    children: i,
                                 }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: a.actionButtons,
                 children: u,
             }),

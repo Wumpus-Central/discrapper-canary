@@ -69,7 +69,7 @@ function H(e) {
             [t, i],
         ),
         S = l.useMemo(() => u()(w, 300), [w]),
-        N = l.useCallback(
+        Z = l.useCallback(
             (e) => {
                 let t;
                 d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t);
@@ -80,7 +80,7 @@ function H(e) {
         className: v.rolePopout,
         placeholder: x.intl.string(x.t.ZveC7e),
         value: c,
-        onChange: N,
+        onChange: Z,
         onClose: () => {
             n();
         },

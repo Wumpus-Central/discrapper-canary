@@ -1,20 +1,20 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(481060),
-    i = n(570140),
-    o = n(750180),
-    s = n(358820),
+    r = n(570140),
+    s = n(750180),
+    o = n(358820),
     c = n(585483),
     d = n(981631),
     u = n(451429),
     m = n(877600);
 function p() {
-    let [e, t] = r.useState(30),
-        n = r.useCallback(() => {
-            i.Z.dispatch({
+    let [e, t] = i.useState(30),
+        n = i.useCallback(() => {
+            r.Z.dispatch({
                 type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE",
-                state: o.O.LOADING,
+                state: s.O.LOADING,
             });
         }, []);
     return (0, a.jsx)(l.zJl, {
@@ -45,7 +45,7 @@ function p() {
                             size: "sm",
                             text: "Set",
                             onClick: () =>
-                                void i.Z.dispatch({
+                                void r.Z.dispatch({
                                     type: "VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME",
                                     timeInSeconds: e,
                                 }),
@@ -64,7 +64,7 @@ function p() {
                             size: "sm",
                             text: "Reset",
                             onClick: () => {
-                                (0, s.wV)();
+                                (0, o.wV)();
                             },
                         }),
                     ],

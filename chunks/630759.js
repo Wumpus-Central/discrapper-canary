@@ -3,12 +3,12 @@ n.d(t, {
     LO: () => D,
     TQ: () => w,
     UB: () => H,
-    ZU: () => L,
-    Zn: () => x,
+    ZU: () => x,
+    Zn: () => L,
     aZ: () => R,
     bo: () => M,
     fz: () => W,
-    kK: () => k,
+    kK: () => j,
     lg: () => Y,
     om: () => F,
     pL: () => P,
@@ -76,7 +76,7 @@ function D(e, t, n) {
         O.Z.deleteSecureFramesVerifiedKey(e, n);
     } else O.Z.deleteSecureFramesTransientKey(e);
 }
-function L(e, t) {
+function x(e, t) {
     I.Z.openSecureFramesUpdateConfirmation({
         title: C.intl.string(C.t.hdL152),
         subtitle: C.intl.string(C.t["8VGYKg"]),
@@ -85,7 +85,7 @@ function L(e, t) {
         },
     });
 }
-function x(e) {
+function L(e) {
     let t = h.default.getUser(e),
         n = y.ZP.getName(t);
     I.Z.openSecureFramesUpdateConfirmation({
@@ -124,7 +124,7 @@ function M(e) {
         return C.intl.formatToPlainString(C.t.ws6rWq, { count: e });
     }
 }
-function k(e) {
+function j(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
         ? C.intl.format(C.t["FJN+kh"], { helpArticle: N() })
@@ -137,7 +137,7 @@ function k(e) {
             ? C.intl.format(C.t.qT5z87, { helpArticle: N() })
             : C.intl.format(C.t["6JLy+i"], { helpArticle: N() });
 }
-async function j(e) {
+async function k(e) {
     let t = d.default.getStaticAuthSessionId();
     return a()(null != t, "[getCurrentUserPublicKey] session id should not be null"), await f.Z.getMLSSigningKey(t, e);
 }
@@ -162,7 +162,7 @@ async function G(e, t, n) {
     }
 }
 async function B(e) {
-    let { key: t, signature: n } = await j(e);
+    let { key: t, signature: n } = await k(e);
     try {
         await l.tn.put({
             url: A.ANM.VOICE_PUBLIC_KEYS(),
@@ -187,7 +187,7 @@ async function F(e) {
 async function V(e) {
     if (!Z(e)) return await B(e), !0;
     let t = d.default.getId(),
-        { key: n } = await j(e),
+        { key: n } = await k(e),
         r = await G(t, n, e);
     return r || (0, T.KA)(e), r;
 }

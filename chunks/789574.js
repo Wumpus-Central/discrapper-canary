@@ -6,9 +6,9 @@ var r = n(951288);
 n(647438);
 var i = n(13107),
     l = n(442837),
-    a = n(481060),
-    s = n(139387),
-    o = n(852860),
+    a = n(796027),
+    s = n(481060),
+    o = n(139387),
     c = n(490655),
     d = n(496675),
     u = n(434404),
@@ -69,27 +69,27 @@ function j() {
         c ||
             (null == (e = m.default.editedIntegration) ? void 0 : e.expire_behavior) !== i.l.KICK ||
             ((x = !0),
-            (j = (0, r.jsx)(a.Text, {
+            (j = (0, r.jsx)(s.Text, {
                 color: "text-danger",
                 variant: "text-md/normal",
                 children: b.intl.string(b.t["mrO/ZQ"]),
             }))),
-        (0, r.jsx)(o.Z, {
+        (0, r.jsx)(a.Z, {
             submitting: n,
             disabled: x,
             errorMessage: j,
             onReset: () => {
-                s.Z.init(), p.Ui(), null != t && u.Z.init(t.id);
+                o.Z.init(), p.Ui(), null != t && u.Z.init(t.id);
             },
             onSave: () => {
                 if (null != t) {
-                    if (null != m.default.editedIntegration) s.Z.saveIntegration(t.id, m.default.editedIntegration);
-                    else if (null != m.default.editedWebhook) s.Z.saveWebhook(t.id, m.default.editedWebhook);
+                    if (null != m.default.editedIntegration) o.Z.saveIntegration(t.id, m.default.editedIntegration);
+                    else if (null != m.default.editedWebhook) o.Z.saveWebhook(t.id, m.default.editedWebhook);
                     else if (null != m.default.editedCommandId) {
                         let e = m.default.getSectionId(),
                             n = f.Z.getEditedApplication();
                         if (null == e || null == n) return;
-                        s.Z.saveApplicationPermissions(e, t.id, Object.values(n));
+                        o.Z.saveApplicationPermissions(e, t.id, Object.values(n));
                     }
                     g.Z.hasChanges() && u.Z.saveGuild(t.id, { features: t.features });
                 }

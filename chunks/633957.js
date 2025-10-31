@@ -29,17 +29,17 @@ var r = n(951288),
     P = n(768581),
     w = n(70956),
     D = n(823379),
-    L = n(506071),
-    x = n(226378),
+    x = n(506071),
+    L = n(226378),
     M = n(981631),
-    k = n(701488),
-    j = n(967249),
+    j = n(701488),
+    k = n(967249),
     U = n(388032),
     G = n(853392);
 function B(e) {
     var t, n, a;
     let l,
-        { application: d, channelId: I, guildId: w, message: L } = e,
+        { application: d, channelId: I, guildId: w, message: x } = e,
         { analyticsLocations: B } = (0, g.ZP)(m.Z.ACTIVITY_INSTANCE_EMBED),
         F = (0, u.O)(),
         V = (0, s.e7)([A.Z], () => A.Z.getChannel(I), [I]),
@@ -80,7 +80,7 @@ function B(e) {
         J = null == Q ? void 0 : Q.details,
         $ = i.useMemo(() => {
             let e = new T.ZP(d);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = j.wT), e;
         }, [d]),
         ee = (0, h.s5)({
             userId: Y,
@@ -88,7 +88,7 @@ function B(e) {
             application: $,
         }),
         et = null == W,
-        en = (0, x.NL)({
+        en = (0, L.NL)({
             embeddedActivity: W,
             joinability: ee,
             currentEmbeddedActivity: K,
@@ -225,17 +225,17 @@ function B(e) {
         onClickContent: es,
         trackingConfig: {
             id: d.id,
-            linkType: j.U.ACTIVITY_INSTANCE,
+            linkType: k.U.ACTIVITY_INSTANCE,
             guildId: w,
             channelId: I,
-            messageId: L.id,
+            messageId: x.id,
         },
     });
 }
 let Z = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
-        a = (0, L.n)(),
+        a = (0, x.n)(),
         o = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         c = !1 === a || o;
     return (

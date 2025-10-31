@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -183,7 +183,7 @@ u(D, "displayName", "PromotionsStore"),
             return e;
         },
     ]);
-let L = new D(a.Z, {
+let x = new D(a.Z, {
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: T,
     ACTIVE_PROMOTIONS_FETCH: S,
     ACTIVE_PROMOTIONS_FETCH_FAIL: A,

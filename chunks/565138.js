@@ -185,10 +185,10 @@ class R extends a.PureComponent {
                 "iconSize",
             ]),
             D = N[c],
-            L = null != m ? d.P3F : "div",
-            x = (0, h.gM)(r);
+            x = null != m ? d.P3F : "div",
+            L = (0, h.gM)(r);
         return (0, i.jsxs)(
-            L,
+            x,
             I(
                 O(
                     {
@@ -200,7 +200,7 @@ class R extends a.PureComponent {
                         "aria-hidden": C,
                         style:
                             null == r.icon
-                                ? O({ fontSize: (null != (t = D[x.length]) ? t : D[D.length - 1]) * f }, u)
+                                ? O({ fontSize: (null != (t = D[L.length]) ? t : D[D.length - 1]) * f }, u)
                                 : u,
                         onClick: null != g || null == m ? void 0 : m,
                         tabIndex: S,

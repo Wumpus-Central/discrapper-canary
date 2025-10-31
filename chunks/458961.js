@@ -8,9 +8,9 @@ var n = A(951288),
     s = A(831209),
     d = A(399606),
     u = A(215569),
-    c = A(481060),
-    g = A(749210),
-    f = A(852860),
+    c = A(796027),
+    g = A(481060),
+    f = A(749210),
     p = A(725803),
     m = A(313201),
     h = A(76535),
@@ -93,7 +93,7 @@ function Y(e) {
         className: i()(L.benefitToggleContainer, { [L.disabled]: a }),
         htmlFor: o,
         children: [
-            (0, n.jsx)(c.Text, {
+            (0, n.jsx)(g.Text, {
                 variant: "text-sm/medium",
                 color: s,
                 children: t,
@@ -101,14 +101,14 @@ function Y(e) {
             null != l &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(c.LZC, {
+                        (0, n.jsx)(g.LZC, {
                             size: 4,
                             horizontal: !0,
                         }),
                         l,
                     ],
                 }),
-            (0, n.jsx)(c.rsf, {
+            (0, n.jsx)(g.rsf, {
                 onChange: A,
                 checked: r,
                 disabled: a,
@@ -134,7 +134,7 @@ function M(e) {
                 })),
             [o, A],
         );
-    return (0, n.jsx)(c.VcW, {
+    return (0, n.jsx)(g.VcW, {
         label: i,
         errorMessage: l,
         value: A,
@@ -233,18 +233,18 @@ function J(e) {
             () =>
                 e$ || null == eM || "publish" === eM || null != ew
                     ? null
-                    : (0, n.jsx)(c.oXn, {
+                    : (0, n.jsx)(g.oXn, {
                           className: L.successNotice,
-                          children: (0, n.jsx)(f.Z, {
+                          children: (0, n.jsx)(c.Z, {
                               message: (0, n.jsxs)("div", {
                                   className: L.successNoticeMessage,
                                   children: [
-                                      (0, n.jsx)(c.owK, {
+                                      (0, n.jsx)(g.owK, {
                                           size: "md",
                                           color: s.Z.BUTTON_POSITIVE_BACKGROUND,
                                           secondaryColor: s.Z.WHITE,
                                       }),
-                                      (0, n.jsx)(c.Text, {
+                                      (0, n.jsx)(g.Text, {
                                           variant: "text-md/medium",
                                           children:
                                               "draft" === eM
@@ -275,7 +275,7 @@ function J(e) {
                 : ea();
         }, [ea, e$]);
     r.useEffect(() => {
-        (0, c.oav)(
+        (0, g.oav)(
             S.Yz,
             (e) =>
                 (0, n.jsx)(
@@ -298,7 +298,7 @@ function J(e) {
         if ((eF(!1), null != A)) {
             if ((null != e.name && ev(A.name), null != e.description && eb(A.description), null != eR)) {
                 let e = A.role_id;
-                o()(null != e, "Cannot update role without role ID"), await g.Z.updateRole(eA, e, eR);
+                o()(null != e, "Cannot update role without role ID"), await f.Z.updateRole(eA, e, eR);
             }
             ek(void 0), el(A.id), "published" in e && !0 === e.published && ea();
         }
@@ -314,15 +314,15 @@ function J(e) {
         }, [e$]);
     let e7 = r.useRef(null),
         e2 = !e3 || (!ed && es >= S.dD);
-    return (0, n.jsxs)(c.Y0X, {
+    return (0, n.jsxs)(g.Y0X, {
         transitionState: er,
-        size: c.CgR.DYNAMIC,
+        size: g.CgR.DYNAMIC,
         className: L.modalRoot,
         "aria-labelledby": k,
         parentComponent: "GuildProductEditModal",
         "data-migration-pending": !0,
         children: [
-            (0, n.jsxs)(c.xBx, {
+            (0, n.jsxs)(g.xBx, {
                 className: L.modalHeader,
                 separator: !1,
                 "data-migration-pending": !0,
@@ -330,37 +330,37 @@ function J(e) {
                     (0, n.jsxs)("div", {
                         className: L.headerText,
                         children: [
-                            (0, n.jsx)(c.Heading, {
+                            (0, n.jsx)(g.Heading, {
                                 id: k,
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: B.intl.string(B.t.DnNl1T),
                             }),
-                            (0, n.jsx)(c.Text, {
+                            (0, n.jsx)(g.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: B.intl.string(B.t["Tu7f+f"]),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(c.olH, {
+                    (0, n.jsx)(g.olH, {
                         onClick: e6,
                         className: L.__invalid_modalCloseButton,
                         "data-migration-pending": !0,
                     }),
                 ],
             }),
-            (0, n.jsxs)(c.hzk, {
+            (0, n.jsxs)(g.hzk, {
                 className: L.modalContent,
                 scrollbarType: "none",
                 "data-migration-pending": !0,
                 children: [
-                    (0, n.jsx)(c.zJl, {
+                    (0, n.jsx)(g.zJl, {
                         children: (0, n.jsxs)("div", {
                             className: L.productFieldsSection,
                             ref: e7,
                             children: [
-                                (0, n.jsx)(c.oil, {
+                                (0, n.jsx)(g.oil, {
                                     label: B.intl.string(B.t.Hsk7xT),
                                     error: null == ew ? void 0 : ew.getFirstFieldErrorMessage("name"),
                                     value: eh,
@@ -396,7 +396,7 @@ function J(e) {
                                     selectedPriceTier: eC,
                                     setPriceTier: eU,
                                 }),
-                                (0, n.jsx)(c.gNt, {
+                                (0, n.jsx)(g.gNt, {
                                     label: B.intl.string(B.t.sqXj60),
                                     errorMessage:
                                         null != ($ = null == ew ? void 0 : ew.getFirstFieldErrorMessage("image"))
@@ -427,7 +427,7 @@ function J(e) {
                                     }),
                                 }),
                                 eK
-                                    ? (0, n.jsx)(c.gNt, {
+                                    ? (0, n.jsx)(g.gNt, {
                                           label: B.intl.string(B.t.zLrtkN),
                                           errorMessage:
                                               null !=
@@ -463,7 +463,7 @@ function J(e) {
                         }),
                     }),
                     (0, n.jsx)("div", { className: L.horizontalSeparator }),
-                    (0, n.jsx)(c.zJl, {
+                    (0, n.jsx)(g.zJl, {
                         children: (0, n.jsxs)("div", {
                             className: L.productPreview,
                             children: [
@@ -483,19 +483,19 @@ function J(e) {
                                     submitting: eB,
                                 }),
                                 (0, n.jsx)("div", { className: L.verticalSeparator }),
-                                (0, n.jsx)(c.Heading, {
+                                (0, n.jsx)(g.Heading, {
                                     variant: "text-xs/bold",
                                     color: "header-secondary",
                                     className: L.previewHeading,
                                     children: B.intl.string(B.t["6I7nQT"]),
                                 }),
-                                (0, n.jsx)(c.LZC, { size: 4 }),
-                                (0, n.jsx)(c.Text, {
+                                (0, n.jsx)(g.LZC, { size: 4 }),
+                                (0, n.jsx)(g.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: B.intl.string(B.t.Oq4dfU),
                                 }),
-                                (0, n.jsx)(c.LZC, { size: 16 }),
+                                (0, n.jsx)(g.LZC, { size: 16 }),
                                 (0, n.jsx)(I.Z, {
                                     imageUrl: ej,
                                     name: "" === eh ? B.intl.string(B.t.EmqIwl) : eh,
@@ -503,7 +503,7 @@ function J(e) {
                                     formattedPrice: eN,
                                     role: eG,
                                     productType: eY,
-                                    ctaComponent: (0, n.jsx)(c.Button, { text: B.intl.string(B.t.xUi3BL) }),
+                                    ctaComponent: (0, n.jsx)(g.Button, { text: B.intl.string(B.t.xUi3BL) }),
                                     cardWidth: 340,
                                     thumbnailHeight: 190,
                                 }),
@@ -512,7 +512,7 @@ function J(e) {
                     }),
                 ],
             }),
-            (0, n.jsx)(c.mzw, {
+            (0, n.jsx)(g.mzw, {
                 "data-migration-pending": !0,
                 children: (0, n.jsxs)("div", {
                     className: L.footerActionButtons,
@@ -536,7 +536,7 @@ function J(e) {
                                         e
                                             ? eT(!0)
                                             : eQ
-                                              ? (0, c.ZDy)(async () => {
+                                              ? (0, g.ZDy)(async () => {
                                                     let { ConfirmModal: e } = await Promise.resolve().then(
                                                         A.bind(A, 481060),
                                                     );
@@ -548,7 +548,7 @@ function J(e) {
                                                                 confirmText: B.intl.string(B.t.N86XcP),
                                                                 cancelText: B.intl.string(B.t["ETE/oC"]),
                                                                 onConfirm: eH,
-                                                                children: (0, n.jsx)(c.Text, {
+                                                                children: (0, n.jsx)(g.Text, {
                                                                     variant: "text-md/normal",
                                                                     children: B.intl.string(B.t.ixRBLh),
                                                                 }),
@@ -564,7 +564,7 @@ function J(e) {
                         (0, n.jsx)("div", {
                             className: L.footerActionRightButtons,
                             children: ed
-                                ? (0, n.jsx)(c.Button, {
+                                ? (0, n.jsx)(g.Button, {
                                       variant: "secondary",
                                       text: B.intl.string(B.t.XYBEaV),
                                       disabled: !e1,
@@ -578,7 +578,7 @@ function J(e) {
                                               e8(e_);
                                       },
                                   })
-                                : (0, n.jsx)(c.Button, {
+                                : (0, n.jsx)(g.Button, {
                                       variant: "secondary",
                                       text: B.intl.string(B.t.ZCjwob),
                                       disabled: !e0,

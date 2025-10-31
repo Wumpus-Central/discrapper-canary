@@ -61,15 +61,15 @@ function P(e) {
             channelId: P,
             messageId: w,
             roleId: D,
-            openedAt: L,
-            setPopoutRef: x,
+            openedAt: x,
+            setPopoutRef: L,
             closePopout: M,
-            disableUserProfileLink: k = __OVERLAY__,
-            newAnalyticsLocations: j = [],
+            disableUserProfileLink: j = __OVERLAY__,
+            newAnalyticsLocations: k = [],
             disableAutoFocus: U = !1,
         } = e,
         G = (0, h.ZP)(n.id, N),
-        { analyticsLocations: B } = (0, s.ZP)([...j, o.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: B } = (0, s.ZP)([...k, o.Z.USER_PROFILE_POPOUT]),
         Z = (0, _.ZB)({
             layout: "POPOUT",
             userId: n.id,
@@ -81,8 +81,8 @@ function P(e) {
         F = i.useRef(null),
         V = (0, u.X)(F);
     i.useEffect(() => {
-        null == x || x(null == F ? void 0 : F.current);
-    }, [F, x]);
+        null == L || L(null == F ? void 0 : F.current);
+    }, [F, L]);
     let H = () => {
             null == M || M(),
                 (0, m.openUserProfileModal)(
@@ -95,7 +95,7 @@ function P(e) {
                     ),
                 );
         },
-        Y = !k && (0, l.Z)(n.id),
+        Y = !j && (0, l.Z)(n.id),
         W = () =>
             Y
                 ? (0, r.jsx)(a.sNh, {
@@ -122,7 +122,7 @@ function P(e) {
         value: B,
         children: (0, r.jsx)(_.Mt, {
             value: Z,
-            openedAt: L,
+            openedAt: x,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
             fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
             isLoaded: null == G ? void 0 : G.isLoaded,

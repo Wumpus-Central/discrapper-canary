@@ -32,7 +32,7 @@ function c(e) {
             return i;
         })(e, ["channel", "category"]);
     let p = (0, o.ZP)(c, !0),
-        f = (0, o.ZP)(u);
+        h = (0, o.ZP)(u);
     return (0, r.jsx)(
         l.ConfirmModal,
         ((t = (function (e) {
@@ -76,7 +76,7 @@ function c(e) {
                     selectable: !1,
                     children: a.intl.format(a.t["iKW+jY"], {
                         channelName: p,
-                        categoryName: f,
+                        categoryName: h,
                     }),
                 }),
             }),

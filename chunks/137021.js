@@ -1,4 +1,4 @@
-n.d(t, { default: () => P }), n(388685);
+n.d(t, { default: () => Z }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(793030),
@@ -18,14 +18,14 @@ var r = n(951288),
     x = n(207003),
     v = n(959517),
     S = n(388032),
-    j = n(834505),
-    E = n(621054);
-function P(e) {
+    E = n(834505),
+    j = n(621054);
+function Z(e) {
     let {
             applicationId: t,
             customId: n,
-            linkId: P,
-            message: Z,
+            linkId: Z,
+            message: P,
             onClose: _,
             onCopyLink: O,
             onShare: C,
@@ -42,10 +42,10 @@ function P(e) {
                 applicationId: t,
                 referrerId: null == N ? void 0 : N.id,
                 customId: n,
-                linkId: P,
+                linkId: Z,
             }),
         );
-    }, [t, N, n, P, A]);
+    }, [t, N, n, Z, A]);
     let I = l.useRef(0),
         [U, F] = l.useState([]),
         H = U.length,
@@ -70,7 +70,7 @@ function P(e) {
             },
             [D, W],
         ),
-        J = l.useCallback(
+        X = l.useCallback(
             (e) => {
                 F((t) => {
                     let n = t.findIndex((t) => {
@@ -84,10 +84,10 @@ function P(e) {
             },
             [q],
         ),
-        X = l.useCallback(
+        J = l.useCallback(
             async (e) => {
                 if (null == T) return;
-                let t = (0, y.P)(Z, T, M);
+                let t = (0, y.P)(P, T, M);
                 R(!0),
                     (await Promise.all(e.map(f.qx))).filter(g.lm).forEach(async (e) => {
                         let n = h.Z.getChannel(e);
@@ -103,7 +103,7 @@ function P(e) {
                     C(!0),
                     _();
             },
-            [Z, M, _, C, T],
+            [P, M, _, C, T],
         ),
         Y = l.useCallback(() => {
             (0, m.JG)(M, () => {
@@ -116,16 +116,16 @@ function P(e) {
                       paddingBottom: 8,
                       paddingTop: 8,
                       rowData: V,
-                      handleToggleDestination: J,
+                      handleToggleDestination: X,
                       selectedDestinations: U,
                       disableSelection: q,
                   })
                 : (0, r.jsxs)("div", {
-                      className: j.noResults,
+                      className: E.noResults,
                       children: [
                           (0, r.jsx)("img", {
-                              className: j.noResultsImg,
-                              src: E,
+                              className: E.noResultsImg,
+                              src: j,
                               alt: "",
                           }),
                           (0, r.jsx)(s.Text, {
@@ -139,7 +139,7 @@ function P(e) {
         transitionState: L,
         onClose: _,
         title: S.intl.string(S.t.r9qKow),
-        subtitle: Z,
+        subtitle: P,
         size: "md",
         input: (0, r.jsx)(s.E1j, {
             ref: z,
@@ -159,7 +159,7 @@ function P(e) {
             {
                 text: S.intl.string(S.t.TXNS7S),
                 variant: "primary",
-                onClick: () => X(U),
+                onClick: () => J(U),
                 loading: w,
                 disabled: !(H > 0),
             },

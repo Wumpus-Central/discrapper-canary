@@ -1,6 +1,6 @@
-n.d(t, { default: () => O }), n(388685), n(953529), n(539854);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { default: () => x }), n(388685), n(953529), n(539854);
+var r = n(951288),
+    i = n(647438),
     l = n(793030),
     a = n(442837),
     o = n(481060),
@@ -9,71 +9,71 @@ var i = n(951288),
     u = n(131704),
     d = n(592125),
     p = n(430824),
-    h = n(626135),
-    f = n(934415),
+    f = n(626135),
+    h = n(934415),
     m = n(974339),
     g = n(215157),
     b = n(71080),
-    C = n(981631),
+    _ = n(981631),
     y = n(388032),
-    _ = n(257803);
+    C = n(257803);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function x(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
-        i,
-        r = (function (e, t) {
+        r,
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
-                r = {},
+                r,
+                i = {},
                 l = Object.keys(e);
-            for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-            return r;
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var l = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < l.length; i++)
-            (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-    return r;
+    return i;
 }
-function O(e) {
+function x(e) {
     var { channelId: t } = e,
-        n = x(e, ["channelId"]);
+        n = O(e, ["channelId"]);
     let l = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]),
         o = (0, a.e7)([p.Z], () => p.Z.getGuild(null == l ? void 0 : l.getGuildId()));
-    return (r.useEffect(() => {
-        h.default.track(C.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
+    return (i.useEffect(() => {
+        f.default.track(_.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
     null == l || null == o)
         ? null
-        : (0, i.jsx)(
-              j,
+        : (0, r.jsx)(
+              E,
               v(
                   {
                       guild: o,
@@ -83,40 +83,40 @@ function O(e) {
               ),
           );
 }
-function j(e) {
+function E(e) {
     var t,
         n,
-        { guild: a, channel: d, onClose: p, newChannel: h, inSettings: C } = e,
-        O = x(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
-    let [j, E] = r.useState(""),
-        [S, P] = r.useState({}),
-        [I, Z] = r.useState(!1),
-        [T, N] = r.useState(null),
-        A = r.useRef(null),
-        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, j),
-        L = m.Z.useSections({
+        { guild: a, channel: d, onClose: p, newChannel: f, inSettings: _ } = e,
+        x = O(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
+    let [E, j] = i.useState(""),
+        [S, P] = i.useState({}),
+        [I, Z] = i.useState(!1),
+        [T, N] = i.useState(null),
+        A = i.useRef(null),
+        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, E),
+        D = m.Z.useSections({
             roles: w,
             members: M,
         }),
-        D = h && 0 === Object.keys(S).length;
+        L = f && 0 === Object.keys(S).length;
     async function k() {
         if (null == d || 0 === Object.keys(S).length) return void p();
         Z(!0);
         try {
             await (function (e, t, n) {
-                let i = [];
+                let r = [];
                 return (
                     Object.values(t).forEach((t) => {
                         let { row: n } = t;
                         null != n.id &&
                             "" !== n.id &&
                             (n.rowType === b.aC.ROLE
-                                ? i.push((0, f.rX)(n.id, e.type))
-                                : n.rowType === b.aC.MEMBER && i.push((0, f.jZ)(n.id, e.type)));
+                                ? r.push((0, h.rX)(n.id, e.type))
+                                : n.rowType === b.aC.MEMBER && r.push((0, h.jZ)(n.id, e.type)));
                     }),
-                    (0, s.hw)(e.id, i, n)
+                    (0, s.hw)(e.id, r, n)
                 );
-            })(d, S, C),
+            })(d, S, _),
                 p(),
                 Z(!1);
         } catch (t) {
@@ -125,31 +125,31 @@ function j(e) {
         }
     }
     let U = (0, u.zi)(d.type) ? o.W4G : o.gjC;
-    return (0, i.jsx)(m.Z.Provider, {
+    return (0, r.jsx)(m.Z.Provider, {
         listRef: A,
-        query: j,
-        setQuery: E,
+        query: E,
+        setQuery: j,
         pendingAdditions: S,
         setPendingAdditions: P,
         roles: w,
         members: M,
         getRichTag: R,
-        children: (0, i.jsx)(
+        children: (0, r.jsx)(
             l.Modal,
-            ((t = v({}, O)),
+            ((t = v({}, x)),
             (n = n =
                 {
                     title: y.intl.string(y.t.dMJ3Y6),
                     onClose: p,
-                    input: (0, i.jsxs)("div", {
+                    input: (0, r.jsxs)("div", {
                         children: [
-                            (0, i.jsxs)(o.Text, {
-                                className: _.channelName,
+                            (0, r.jsxs)(o.Text, {
+                                className: C.channelName,
                                 variant: "text-lg/normal",
                                 color: "header-secondary",
                                 children: [
-                                    (0, i.jsx)(U, {
-                                        className: _.channelIcon,
+                                    (0, r.jsx)(U, {
+                                        className: C.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -157,21 +157,21 @@ function j(e) {
                                 ],
                             }),
                             d.isGuildStageVoice() &&
-                                (0, i.jsx)(o.Text, {
+                                (0, r.jsx)(o.Text, {
                                     color: "header-secondary",
-                                    className: _.description,
+                                    className: C.description,
                                     variant: "text-sm/normal",
                                     children: y.intl.string(y.t.f7VbhF),
                                 }),
-                            (0, i.jsx)(m.Z.SearchBox, { placeholderText: y.intl.string(y.t.iezLLn) }),
-                            (0, i.jsx)(o.Text, {
-                                className: _.subtext,
+                            (0, r.jsx)(m.Z.SearchBox, { placeholderText: y.intl.string(y.t.iezLLn) }),
+                            (0, r.jsx)(o.Text, {
+                                className: C.subtext,
                                 variant: "text-xs/normal",
                                 children: y.intl.string(y.t.rwFx85),
                             }),
                             null != T
-                                ? (0, i.jsx)(o.Text, {
-                                      className: _.subtext,
+                                ? (0, r.jsx)(o.Text, {
+                                      className: C.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-danger",
                                       children: T.getAnyErrorMessage(),
@@ -185,9 +185,9 @@ function j(e) {
                         renderSection: m.Z.renderSection,
                         rowHeight: m.Z.ROW_HEIGHT,
                         renderRow: m.Z.renderRow,
-                        sections: L,
+                        sections: D,
                     },
-                    actions: D
+                    actions: L
                         ? [
                               {
                                   variant: "secondary",
@@ -214,8 +214,8 @@ function j(e) {
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var i = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, i);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
                       return n;
                   })(Object(n)).forEach(function (e) {

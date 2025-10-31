@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i,
     l = n(442837),
@@ -30,7 +30,7 @@ class f extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (f[i] = "HubLinkNoticeStore");
-let h = new f(a.Z, {
+let m = new f(a.Z, {
     CONNECTION_OPEN: function (e) {
         for (let t of e.guilds) if (d(t.id)) return !0;
         return !1;

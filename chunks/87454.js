@@ -1,20 +1,20 @@
 n.d(t, { Z: () => d }), n(388685), n(539854);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(704215),
-    i = n(481060),
-    o = n(581883),
-    s = n(428967),
+    r = n(481060),
+    s = n(581883),
+    o = n(428967),
     c = n(972118);
-let d = r.memo(function (e) {
+let d = i.memo(function (e) {
     let { className: t, content: n, onChange: d } = e,
         u = l.z[n],
         { isDismissed: m, handleToggleDismissState: p } = (0, c.Z)(u),
-        [h, x] = r.useState(!1),
-        f = r.useCallback(() => {
+        [h, x] = i.useState(!1),
+        g = i.useCallback(() => {
             null == d || d(n), p();
         }, [d, p, n]),
-        b = r.useCallback(
+        f = i.useCallback(
             (e) => {
                 e.preventDefault(), x(!0), navigator.clipboard.writeText(n.toLowerCase());
             },
@@ -22,51 +22,51 @@ let d = r.memo(function (e) {
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)(i.Kqy, {
+            (0, a.jsxs)(r.Kqy, {
                 className: t,
                 direction: "horizontal",
                 align: "center",
                 children: [
-                    (0, a.jsx)(i.hU, {
+                    (0, a.jsx)(r.hU, {
                         size: "sm",
                         variant: "icon-only",
-                        icon: h ? i.C2q : i.zTD,
-                        onClick: b,
+                        icon: h ? r.C2q : r.zTD,
+                        onClick: f,
                         "aria-label": h ? "Copied" : "Copy",
                     }),
-                    (0, a.jsx)(i.rsf, {
+                    (0, a.jsx)(r.rsf, {
                         label: "".concat(n.toLowerCase(), " (").concat(l.z[n], ")"),
-                        description: (0, s.qh)(u)
+                        description: (0, o.qh)(u)
                             ? (function (e) {
                                   var t, n;
                                   let a =
-                                      null == (n = o.Z.settings.userContent) ||
+                                      null == (n = s.Z.settings.userContent) ||
                                       null == (t = n.recurringDismissibleContentStates)
                                           ? void 0
                                           : t[e];
                                   if (null == a) return null;
-                                  let r = [],
-                                      { lastDismissedVersion: l, lastDismissedAtMs: i, lastDismissedObjectId: s } = a;
+                                  let i = [],
+                                      { lastDismissedVersion: l, lastDismissedAtMs: r, lastDismissedObjectId: o } = a;
                                   if (
-                                      (void 0 !== l && 0 !== l && r.push("last_dismissed_version: ".concat(l)),
-                                      void 0 !== i)
+                                      (void 0 !== l && 0 !== l && i.push("last_dismissed_version: ".concat(l)),
+                                      void 0 !== r)
                                   ) {
-                                      let e = Number(i),
+                                      let e = Number(r),
                                           t = Number.isNaN(e) ? "n/a" : new Date(e).toLocaleString();
-                                      r.push("last_dismissed_at: ".concat(t));
+                                      i.push("last_dismissed_at: ".concat(t));
                                   }
-                                  return (void 0 !== s && "0" !== s && r.push("last_dismissed_object_id: ".concat(s)),
-                                  0 === r.length)
+                                  return (void 0 !== o && "0" !== o && i.push("last_dismissed_object_id: ".concat(o)),
+                                  0 === i.length)
                                       ? null
-                                      : r.join(", ");
+                                      : i.join(", ");
                               })(u)
                             : null,
                         checked: m,
-                        onChange: f,
+                        onChange: g,
                     }),
                 ],
             }),
-            (0, a.jsx)(i.izJ, {}),
+            (0, a.jsx)(r.izJ, {}),
         ],
     });
 });

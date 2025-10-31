@@ -157,14 +157,14 @@ function m(e) {
             },
             [T],
         ),
-        L = r.useCallback(() => {
+        x = r.useCallback(() => {
             O({
                 type: i.B.SET_FOCUS_PATH,
                 path: [],
             }),
                 S(!1);
         }, []),
-        x = r.useCallback((e) => e.every((e, t) => I[t] === e), [I]),
+        L = r.useCallback((e) => e.every((e, t) => I[t] === e), [I]),
         M = r.useCallback(
             () => ({
                 role: "menu",
@@ -173,25 +173,25 @@ function m(e) {
                 onKeyDown: P,
                 onFocus: w,
                 onBlur: D,
-                onMouseLeave: L,
+                onMouseLeave: x,
                 "aria-activedescendant": I.length > 0 ? (0, o.qR)(t, I.join(d)) : void 0,
             }),
-            [t, P, w, D, L, I],
+            [t, P, w, D, x, I],
         ),
-        k = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
                     role: "menu",
                     tabIndex: -1,
-                    "aria-activedescendant": x(n) ? (0, o.qR)(t, I.join(d)) : void 0,
+                    "aria-activedescendant": L(n) ? (0, o.qR)(t, I.join(d)) : void 0,
                     focusIndex: y.focusIndex,
                     isUsingKeyboardNavigation: A,
                 };
             },
-            [t, I, x, y.focusIndex, A],
+            [t, I, L, y.focusIndex, A],
         ),
-        j = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = "menuitem" } = e,
                     s = n.join(d);
@@ -200,7 +200,7 @@ function m(e) {
                         {},
                         r
                             ? {
-                                  "aria-expanded": x(n),
+                                  "aria-expanded": L(n),
                                   "aria-haspopup": !0,
                               }
                             : {},
@@ -214,17 +214,17 @@ function m(e) {
                     },
                 );
             },
-            [t, x, N, R],
+            [t, L, N, R],
         );
     return r.useMemo(
         () => ({
             dispatch: v,
             getContainerProps: M,
-            getSubmenuProps: k,
-            getItemProps: j,
-            isFocused: x,
+            getSubmenuProps: j,
+            getItemProps: k,
+            isFocused: L,
             isUsingKeyboardNavigation: A,
         }),
-        [v, M, k, j, x, A],
+        [v, M, j, k, L, A],
     );
 }

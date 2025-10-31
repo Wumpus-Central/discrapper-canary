@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(4434),
     b = n(981631),
     y = n(388032),
-    O = n(396849);
+    O = n(252633);
 let v = (e) => {
     let { guildBoostSlots: t, selectedGuild: n, locationSection: a, transitionState: v, onClose: I } = e,
         T = (0, h.vx)(_.Z.boostSlots);
@@ -37,7 +37,7 @@ let v = (e) => {
         [P, w] = i.useState(!1),
         [D, x] = i.useState(n),
         [L, M] = i.useState(null != t ? t : T.slice(0, 1)),
-        k = i.useMemo(
+        j = i.useMemo(
             () =>
                 null == L
                     ? []
@@ -47,7 +47,7 @@ let v = (e) => {
                       }).filter((e) => null != e),
             [L],
         ),
-        j = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e;
             return (null == L || null == (e = L[0]) ? void 0 : e.premiumGuildSubscription) != null;
         }, [L]),
@@ -114,14 +114,14 @@ let v = (e) => {
                         x(e), R("CONFIRM");
                     },
                     transitionState: v,
-                    isTransfer: j,
-                    selectedSlotGuilds: k,
+                    isTransfer: k,
+                    selectedSlotGuilds: j,
                 }),
             CONFIRM() {
                 if (null == D) return null;
                 let e = L.filter((e) => (0, h.tl)(e)).length,
                     t = L.length,
-                    n = k.length,
+                    n = j.length,
                     i = "CONFIRM" === S[0] ? U : () => R(S[S.indexOf(N) - 1]),
                     a = async () => {
                         if ((w(!1), null != D && (null == L ? void 0 : L.length) !== 0)) {
@@ -149,7 +149,7 @@ let v = (e) => {
                             }
                         }
                     },
-                    l = j ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
+                    l = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
                     transitionState: v,
                     onClose: U,
@@ -163,7 +163,7 @@ let v = (e) => {
                         },
                         {
                             variant: "primary",
-                            text: j
+                            text: k
                                 ? y.intl.formatToPlainString(y.t.Oh6mxU, { slotCount: t })
                                 : y.intl.formatToPlainString(y.t.ZU5x5w, { slotCount: t }),
                             onClick: a,
@@ -171,9 +171,9 @@ let v = (e) => {
                             disabled: A,
                         },
                     ],
-                    children: j
+                    children: k
                         ? (0, r.jsx)(m.Z.TransferBody, {
-                              fromGuilds: k,
+                              fromGuilds: j,
                               toGuild: D,
                               blurb: y.intl.formatToPlainString(y.t.SSA2lu, {
                                   slotCount: t,
@@ -199,7 +199,7 @@ let v = (e) => {
                 });
             },
             SUCCESS() {
-                let e = j ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
+                let e = k ? y.intl.string(y.t["PR0n//"]) : y.intl.string(y.t["7KP/fI"]);
                 return (0, r.jsx)(s.Modal, {
                     transitionState: v,
                     onClose: U,
@@ -208,7 +208,7 @@ let v = (e) => {
                     actions: [],
                     children: (0, r.jsx)(E.R7, {
                         guild: D,
-                        isTransfer: j,
+                        isTransfer: k,
                         guildBoostQuantity: L.length,
                         onClose: U,
                         didPurchaseOnFractionalPremium: !1,

@@ -39,8 +39,8 @@ let m = new Map(),
     P = new Map(),
     w = new Map(),
     D = {},
-    L = 0,
-    x = (e) => {
+    x = 0,
+    L = (e) => {
         let { skuId: t } = e;
         (R = new Set(R)).add(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
@@ -48,11 +48,11 @@ let m = new Map(),
         let { skuId: t, error: n } = e;
         (R = new Set(R)).delete(t), (P = new Map(P)).set(t, n), (w = new Map(w)).set(t, Date.now());
     },
-    k = (e) => {
+    j = (e) => {
         let { skuId: t, product: n } = e;
         v.set(t, n), (R = new Set(R)).delete(t), (P = new Map(P)).delete(t), (w = new Map(w)).delete(t);
     },
-    j = (e) => {
+    k = (e) => {
         (N = !0), (r = void 0), (a = void 0), (D = e.options);
     },
     U = (e) => {
@@ -112,7 +112,7 @@ let m = new Map(),
             (r = void 0),
             (a = void 0),
             (D = {}),
-            (L = 0);
+            (x = 0);
     },
     Y = () => {
         if (!u.Z.hasLoadedExperiments) return;
@@ -123,7 +123,7 @@ let m = new Map(),
         e !== C && (i = void 0), (C = e);
     },
     W = (e) => {
-        L = e.skipNumCategories;
+        x = e.skipNumCategories;
     };
 class K extends (o = l.ZP.Store) {
     initialize() {
@@ -160,7 +160,7 @@ class K extends (o = l.ZP.Store) {
         return A;
     }
     get skipNumCategories() {
-        return L;
+        return x;
     }
     getCategory(e) {
         return null != e ? O.get(e) : void 0;
@@ -190,12 +190,12 @@ class K extends (o = l.ZP.Store) {
 }
 h(K, "displayName", "CollectiblesCategoryStore");
 let z = new K(c.Z, {
-    COLLECTIBLES_CATEGORIES_FETCH: j,
+    COLLECTIBLES_CATEGORIES_FETCH: k,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
     COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: B,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: U,
-    COLLECTIBLES_PRODUCT_FETCH: x,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: k,
+    COLLECTIBLES_PRODUCT_FETCH: L,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: j,
     COLLECTIBLES_PRODUCT_FETCH_FAILURE: M,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: F,
     COLLECTIBLES_SKIP_NUM_CATEGORIES: W,

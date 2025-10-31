@@ -41,8 +41,8 @@ let N = {
                 showStatus: x,
                 showPlaceholderUser: L,
                 pendingGlobalName: M,
-                pendingNickname: k,
-                pendingAvatarDecoration: j,
+                pendingNickname: j,
+                pendingAvatarDecoration: k,
                 pendingDisplayNameStyles: U,
                 nameplatePreviewSize: G = "default",
                 isPurchased: B = !1,
@@ -58,14 +58,14 @@ let N = {
             q =
                 null != t
                     ? (0, E.Ly)({
-                          pendingNickname: k,
+                          pendingNickname: j,
                           pendingGlobalName: M,
                           user: t,
                           guildMember: z,
                       })
                     : void 0,
             X = (0, g.Ys)({
-                pendingValue: j,
+                pendingValue: k,
                 userValue: null == t ? void 0 : t.avatarDecoration,
                 guildValue: null == z ? void 0 : z.avatarDecoration,
                 guildId: n,

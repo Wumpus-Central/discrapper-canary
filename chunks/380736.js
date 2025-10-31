@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => N,
-    Z: () => L,
+    Z: () => x,
 }),
     n(388685);
 var r = n(951288),
@@ -116,11 +116,11 @@ let N = i.memo(function (e) {
             contentOpacity: P,
             status: w,
             containerRef: D,
-            className: L,
-            wrapperClassName: x,
+            className: x,
+            wrapperClassName: L,
         } = e,
-        [M, k] = i.useState(!1),
-        j = n || M || w === E._1z.FOCUSED,
+        [M, j] = i.useState(!1),
+        k = n || M || w === E._1z.FOCUSED,
         U = (0, l.e7)([m.Z, h.Z], () => {
             var e;
             return m.Z.isInputLocked(null != (e = h.Z.getFocusedPID()) ? e : (0, f.getPID)());
@@ -147,10 +147,10 @@ let N = i.memo(function (e) {
             [g],
         ),
         F = i.useCallback(() => {
-            k(!0);
+            j(!0);
         }, []),
         V = i.useCallback(() => {
-            k(!1);
+            j(!1);
         }, []);
     function H() {
         return (0, r.jsx)(_.Z, {
@@ -160,7 +160,7 @@ let N = i.memo(function (e) {
         });
     }
     function Y() {
-        let e = "function" == typeof v ? v(j, U) : v;
+        let e = "function" == typeof v ? v(k, U) : v;
         return null != v
             ? (0, r.jsx)(u.Text, {
                   className: y.hint,
@@ -214,7 +214,7 @@ let N = i.memo(function (e) {
                 });
     }
     function z() {
-        let e = null == R ? void 0 : R(j, U);
+        let e = null == R ? void 0 : R(k, U);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
@@ -235,7 +235,7 @@ let N = i.memo(function (e) {
                                     ? (0, r.jsx)(u.Text, {
                                           color: "interactive-normal",
                                           variant: "text-sm/normal",
-                                          lineClamp: null != t ? t * (j ? 2 : 1) : void 0,
+                                          lineClamp: null != t ? t * (k ? 2 : 1) : void 0,
                                           children: A,
                                       })
                                     : null,
@@ -258,7 +258,7 @@ let N = i.memo(function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(y.overflowWrapper, x),
+                className: o()(y.overflowWrapper, L),
                 onScroll: C,
                 children: (0, r.jsx)(u.P3F, {
                     innerRef: D,
@@ -266,7 +266,7 @@ let N = i.memo(function (e) {
                     onMouseOver: F,
                     onMouseLeave: V,
                     onClick: O,
-                    className: o()(y.container, { [y.clickable]: null != O }, L),
+                    className: o()(y.container, { [y.clickable]: null != O }, x),
                     children: z(),
                 }),
             }),
@@ -331,7 +331,7 @@ function D() {
         }, []),
     };
 }
-function L(e) {
+function x(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
@@ -373,13 +373,13 @@ function L(e) {
             },
             [h, c],
         ),
-        L = i.useCallback((e, t) => (null == m ? void 0 : m(e, c, t)), [m, c]),
+        x = i.useCallback((e, t) => (null == m ? void 0 : m(e, c, t)), [m, c]),
         {
             props: {
-                onNotificationShow: x,
+                onNotificationShow: L,
                 onDismissClick: M,
-                renderFooter: k,
-                onNotificationClick: j,
+                renderFooter: j,
+                onNotificationClick: k,
                 onConfirmClick: U,
                 onCancelClick: G,
                 disableClickableRegions: B = !1,
@@ -418,7 +418,7 @@ function L(e) {
                     onNotificationClick: A,
                     onConfirmClick: null != p ? C : void 0,
                     onCancelClick: null != h ? w : void 0,
-                    renderFooter: L,
+                    renderFooter: x,
                     expand: !1,
                     index: n,
                     locked: a,

@@ -8,8 +8,8 @@ var r = n(951288),
     c = n(410030),
     d = n(100527),
     u = n(906732),
-    h = n(104505),
-    p = n(680295),
+    p = n(104505),
+    h = n(680295),
     f = n(602733),
     g = n(785717),
     m = n(221292),
@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(787309),
     y = n(687158),
     x = n(612600),
-    j = n(510659),
-    v = n(892001),
-    O = n(899007),
+    O = n(510659),
+    j = n(892001),
+    v = n(899007),
     C = n(867176),
     I = n(451834),
     S = n(502762),
@@ -75,14 +75,14 @@ function H(e) {
             channelId: k.id,
         }),
         q = i.useRef(null),
-        { isHoveringOrFocusing: K, isHovering: Q } = (0, h.Z)(q),
-        X = (0, j.$m)(),
+        { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
+        X = (0, O.$m)(),
         J = (0, o.q_F)({
             opacity: +(null != X.interactionType),
             config: { duration: 150 },
         }),
         $ = (e) => {
-            (0, v.openUserProfileModal)(
+            (0, j.openUserProfileModal)(
                 G(
                     {
                         sourceAnalyticsLocations: W,
@@ -107,7 +107,7 @@ function H(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsx)(j.NJ, {
+            children: (0, r.jsx)(O.NJ, {
                 value: X,
                 children: (0, r.jsxs)(S.Z, {
                     ref: q,
@@ -146,7 +146,7 @@ function H(e) {
                                             userId: n.id,
                                             className: U.toast,
                                         }),
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             user: n,
                                             displayProfile: B,
                                             channelId: k.id,
@@ -204,7 +204,7 @@ function H(e) {
                                 context: Y,
                             }),
                         (null == B ? void 0 : B.profileEffect) != null &&
-                            (0, r.jsx)(p.Z, {
+                            (0, r.jsx)(h.Z, {
                                 skuId: null == B || null == (t = B.profileEffect) ? void 0 : t.skuId,
                                 isHovering: Q,
                                 urlQueryString: "dmView",

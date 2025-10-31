@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(541716),
     y = n(752305),
     x = n(893718),
-    v = n(303628),
+    O = n(303628),
     j = n(313201),
-    O = n(967128),
+    v = n(967128),
     C = n(665149),
     I = n(294218),
     S = n(913663),
@@ -213,7 +213,7 @@ function X(e) {
         })(t, f),
         x = (0, k.vH)(t),
         {
-            isGeneratingAI: v,
+            isGeneratingAI: O,
             enableAIFeatures: j,
             getThreadNameInputAccessory: C,
         } = (0, H.U)({
@@ -350,7 +350,7 @@ function X(e) {
                         children: (0, r.jsxs)("div", {
                             className: z.scrollerInner,
                             children: [
-                                (0, r.jsxs)(O.ZP, {
+                                (0, r.jsxs)(v.ZP, {
                                     channelId: "create-thread-null",
                                     children: [
                                         (0, r.jsx)("div", {
@@ -366,7 +366,7 @@ function X(e) {
                                                     updateThreadSettings: m,
                                                     error: I,
                                                     disabled: N,
-                                                    isGeneratingAI: v,
+                                                    isGeneratingAI: O,
                                                     enableAIFeatures: j,
                                                     getThreadNameInputAccessory: C,
                                                 }),
@@ -505,7 +505,7 @@ function ee(e) {
         j = (0, M.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(O.Z, {
                 channelId: t.id,
                 type: q,
                 canAttachFiles: y,

@@ -54,11 +54,11 @@ function D(e) {
     }),
         (T = 2);
 }
-function L(e) {
+function x(e) {
     let { guild: t } = e;
     b.delete(t.id);
 }
-function x(e) {
+function L(e) {
     let { sound: t } = e,
         n = b.get(t.guildId),
         r = null == n ? void 0 : n.findIndex((e) => e.soundId === t.soundId);
@@ -70,13 +70,13 @@ function M(e) {
     let { guildId: t, soundboardSounds: n } = e;
     b.set(t, n);
 }
-function k(e) {
+function j(e) {
     let { soundId: t, guildId: n } = e,
         r = b.get(n),
         i = null == r ? void 0 : r.findIndex((e) => e.soundId === t);
     null == r || null == i || i < 0 || (r.splice(i, 1), b.set(n, [...r]));
 }
-function j() {
+function k() {
     I = 1;
 }
 function U(e) {
@@ -220,21 +220,21 @@ E(q, "displayName", "SoundboardStore");
 let X = new q(s.Z, {
     LOGOUT: R,
     GUILD_SOUNDBOARD_FETCH: w,
-    GUILD_SOUNDBOARD_SOUND_CREATE: x,
-    GUILD_SOUNDBOARD_SOUND_UPDATE: x,
-    GUILD_SOUNDBOARD_SOUND_DELETE: k,
+    GUILD_SOUNDBOARD_SOUND_CREATE: L,
+    GUILD_SOUNDBOARD_SOUND_UPDATE: L,
+    GUILD_SOUNDBOARD_SOUND_DELETE: j,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: Z,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: F,
     GUILD_SOUNDBOARD_SOUNDS_UPDATE: M,
     USER_SOUNDBOARD_SET_VOLUME: H,
     VOICE_CHANNEL_SELECT: P,
     USER_SETTINGS_PROTO_UPDATE: W,
-    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: j,
+    SOUNDBOARD_FETCH_DEFAULT_SOUNDS: k,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: U,
     SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FETCH: G,
     SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_SUCCESS: B,
     SOUNDBOARD_SOUNDS_RECEIVED: D,
-    GUILD_DELETE: L,
+    GUILD_DELETE: x,
     AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: K,
     OVERLAY_INITIALIZE: z,
 });

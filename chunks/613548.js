@@ -1,6 +1,6 @@
 n.d(t, { Z: () => R }), n(539854);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
@@ -9,19 +9,19 @@ var i = n(951288),
     u = n(28664),
     d = n(481060),
     p = n(475179),
-    h = n(100527),
-    f = n(906732),
+    f = n(100527),
+    h = n(906732),
     m = n(194082),
     g = n(236091),
     b = n(517525),
-    C = n(2818),
+    _ = n(2818),
     y = n(954551),
-    _ = n(44136),
+    C = n(44136),
     v = n(651183),
-    x = n(853476),
-    O = n(390322),
-    j = n(616286),
-    E = n(975146),
+    O = n(853476),
+    x = n(390322),
+    E = n(616286),
+    j = n(975146),
     S = n(597998),
     P = n(606304),
     I = n(358221),
@@ -32,26 +32,26 @@ var i = n(951288),
     w = n(956235);
 function M(e) {
     let { channelId: t, guildId: n } = e,
-        r = (0, c.Wu)([P.Z, I.Z], () => {
+        i = (0, c.Wu)([P.Z, I.Z], () => {
             let e = Date.now();
             return s()(P.Z.getSpeakers())
                 .map((e) => I.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, _.ZP)(e))
+                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, C.ZP)(e))
                 .sortBy((t) => -P.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
         });
-    return 0 === r.length
+    return 0 === i.length
         ? null
-        : (0, i.jsx)("div", {
+        : (0, r.jsx)("div", {
               className: w.speakers,
-              children: r.map((e) =>
-                  (0, i.jsx)(
+              children: i.map((e) =>
+                  (0, r.jsx)(
                       u.u,
                       {
                           position: "bottom",
                           text: A.intl.formatToPlainString(A.t.JjdizN, { username: e.user.username }),
-                          children: (0, i.jsx)(S.ZP, {
+                          children: (0, r.jsx)(S.ZP, {
                               user: e.user,
                               speaking: !0,
                               collapsed: !0,
@@ -65,12 +65,12 @@ function M(e) {
 }
 function R(e) {
     let { channel: t, isChatOpen: n } = e,
-        l = r.useRef(null),
-        { analyticsLocations: o } = (0, f.ZP)(h.Z.VOICE_CHANNEL_HEADER),
+        l = i.useRef(null),
+        { analyticsLocations: o } = (0, h.ZP)(f.Z.VOICE_CHANNEL_HEADER),
         s = t.id,
         {
             voiceParticipantsHidden: u,
-            selectedParticipant: _,
+            selectedParticipant: C,
             userParticipantCount: S,
             participantsListOpen: P,
         } = (0, c.cj)(
@@ -85,13 +85,13 @@ function R(e) {
         ),
         A = t.isGuildVoiceOrThread() && !n,
         { hasParticipantsPanel: R } = (0, T.Z)({ location: "ChannelCallHeaderToolbar" }),
-        L = !P && R && (t.isGuildVoiceOrThread() || t.isGroupDM()),
-        { enabled: D, inInbox: k } = C.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
+        D = !P && R && (t.isGuildVoiceOrThread() || t.isGroupDM()),
+        { enabled: L, inInbox: k } = _.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
         U = [];
     return (
         u &&
             U.push(
-                (0, i.jsx)(
+                (0, r.jsx)(
                     M,
                     {
                         channelId: s,
@@ -101,7 +101,7 @@ function R(e) {
                 ),
             ),
         U.push(
-            (0, i.jsx)(
+            (0, r.jsx)(
                 g.Z,
                 {
                     className: w.button,
@@ -110,37 +110,37 @@ function R(e) {
                 "clips-enabled-indicator",
             ),
         ),
-        (null == _ ? void 0 : _.type) === N.fO.STREAM &&
+        (null == C ? void 0 : C.type) === N.fO.STREAM &&
             (U.push(
-                (0, i.jsx)(
+                (0, r.jsx)(
                     v.Z,
                     {
                         className: w.button,
-                        participant: _,
+                        participant: C,
                     },
                     "warning",
                 ),
             ),
             U.push(
-                (0, i.jsx)(
+                (0, r.jsx)(
                     b.Z,
                     {
                         size: m.ZP.Sizes.LARGE,
                         className: w.button,
-                        participant: _,
+                        participant: C,
                         showQuality: !0,
                         premiumIndicator: !1,
                     },
                     "live-indicator",
                 ),
             )),
-        (null == _ ? void 0 : _.type) === N.fO.USER &&
+        (null == C ? void 0 : C.type) === N.fO.USER &&
             U.push(
-                (0, i.jsx)(
-                    x.Z,
+                (0, r.jsx)(
+                    O.Z,
                     {
                         className: w.button,
-                        userId: _.id,
+                        userId: C.id,
                     },
                     "video-warning",
                 ),
@@ -148,43 +148,43 @@ function R(e) {
         u &&
             !R &&
             U.push(
-                (0, i.jsx)(
+                (0, r.jsx)(
                     d.yRy,
                     {
                         targetElementRef: l,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(O.Z, { children: (0, i.jsx)(Z.Z, { channel: t }) }),
+                        renderPopout: () => (0, r.jsx)(x.Z, { children: (0, r.jsx)(Z.Z, { channel: t }) }),
                         children: (e, t) => {
-                            var n, i;
+                            var n, r;
                             let { isShown: a } = t;
-                            return (0, r.createElement)(
-                                E.Z,
+                            return (0, i.createElement)(
+                                j.Z,
                                 ((n = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            i = Object.keys(n);
+                                            r = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (i = i.concat(
+                                            (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            i.forEach(function (t) {
-                                                var i;
-                                                (i = n[t]),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: i,
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[t] = i);
+                                                        : (e[t] = r);
                                             });
                                     }
                                     return e;
                                 })({}, e)),
-                                (i = i =
+                                (r = r =
                                     {
                                         buttonRef: l,
                                         isActive: a,
@@ -193,16 +193,16 @@ function R(e) {
                                         className: w.button,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var i = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, i);
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(i)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                      })(Object(r)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                       }),
                                 n),
                             );
@@ -211,11 +211,11 @@ function R(e) {
                     "call-members-popout",
                 ),
             ),
-        D && !k && U.push((0, i.jsx)(y.Z, { className: w.button }, "for-later")),
-        L &&
+        L && !k && U.push((0, r.jsx)(y.Z, { className: w.button }, "for-later")),
+        D &&
             U.push(
-                (0, i.jsx)(
-                    E.Z,
+                (0, r.jsx)(
+                    j.Z,
                     {
                         className: a()(w.button, { [w.lastButton]: n }),
                         onClick: () => p.Z.toggleParticipantsList(t.id, !P),
@@ -225,8 +225,8 @@ function R(e) {
             ),
         A &&
             U.push(
-                (0, i.jsx)(
-                    j.T,
+                (0, r.jsx)(
+                    E.T,
                     {
                         channelId: t.id,
                         className: a()(w.button, { [w.lastButton]: P }),
@@ -235,7 +235,7 @@ function R(e) {
                     "chat-spacer",
                 ),
             ),
-        (0, i.jsx)(f.Gt, {
+        (0, r.jsx)(h.Gt, {
             value: o,
             children: U,
         })

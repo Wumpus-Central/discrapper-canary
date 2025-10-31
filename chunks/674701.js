@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => L,
-    Z: () => x,
+    U: () => x,
+    Z: () => L,
 });
 var r = n(951288),
     i = n(647438),
@@ -32,19 +32,19 @@ var r = n(951288),
     P = n(268685),
     w = n(388032),
     D = n(553517),
-    L = (function (e) {
+    x = (function (e) {
         return (e.SYSTEM_MESSAGE = "system_message"), (e.COACHMARK = "coachmark"), e;
     })({});
-function x(e) {
+function L(e) {
     let {
             giftIntentType: t,
             premiumGiftIntentCardType: n,
             recipientUser: a,
-            onMouseEnter: L,
-            onMouseLeave: x,
+            onMouseEnter: x,
+            onMouseLeave: L,
             popoutPosition: M,
-            analyticsPage: k,
-            analyticsSection: j,
+            analyticsPage: j,
+            analyticsSection: k,
             glow: U,
             giftIntentSecondaryAction: G,
         } = e,
@@ -92,8 +92,8 @@ function x(e) {
                 analyticsLocation: "system_message" === n ? r.chat : r.actionButtonCoachmark,
                 analyticsLocations: Z,
                 analyticsObject: {
-                    page: k,
-                    section: j,
+                    page: j,
+                    section: k,
                     object: N.qAy.BUTTON_CTA,
                     objectType: N.AnalyticsObjectTypes.GIFT,
                 },
@@ -135,8 +135,8 @@ function x(e) {
             [D.outerGlow]: U,
             [D.contentCoachmark]: q,
         }),
-        onMouseEnter: L,
-        onMouseLeave: x,
+        onMouseEnter: x,
+        onMouseLeave: L,
         children: (0, r.jsxs)("div", {
             className: o()(X, { [D.innerGlow]: U }),
             children: [

@@ -1,29 +1,29 @@
 n.d(t, { Z: () => L }), n(388685), n(358797);
 var i = n(951288),
     r = n(647438),
-    s = n(120356),
-    o = n.n(s),
-    l = n(392711),
-    a = n.n(l),
+    l = n(120356),
+    o = n.n(l),
+    s = n(392711),
+    a = n.n(s),
     c = n(818405),
     d = n(587158),
     u = n(286379),
-    p = n(579092),
-    h = n(481060),
+    h = n(579092),
+    p = n(481060),
     f = n(13245),
     g = n(490029),
     m = n(797614),
     y = n(593481),
-    _ = n(703656),
-    O = n(254761),
-    b = n(70956),
-    v = n(145597),
+    O = n(703656),
+    _ = n(254761),
+    v = n(70956),
+    b = n(145597),
     E = n(41534),
-    x = n(837268),
-    S = n(692546),
+    S = n(837268),
+    x = n(692546),
     Z = n(518084),
-    C = n(987650),
-    j = n(981631),
+    j = n(987650),
+    C = n(981631),
     I = n(388032),
     P = n(975290);
 function w(e, t, n) {
@@ -39,13 +39,13 @@ function w(e, t, n) {
         e
     );
 }
-let T = 10 * b.Z.Millis.SECOND,
-    N = new p.Yd("LegacyOverlayErrorBoundary");
+let N = 10 * v.Z.Millis.SECOND,
+    T = new h.Yd("LegacyOverlayErrorBoundary");
 function D() {
-    let e = (0, v.getPID)(),
-        t = (0, v.getRPCAuthToken)();
+    let e = (0, b.getPID)(),
+        t = (0, b.getRPCAuthToken)();
     (0, g.lW)({
-        type: j.BmY.DISPATCH,
+        type: C.BmY.DISPATCH,
         pid: e,
         token: t,
         payloads: [
@@ -59,8 +59,8 @@ function D() {
 }
 class k extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, T)),
-            f.Z.track(j.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, N)),
+            f.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: j.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -72,20 +72,20 @@ class k extends r.PureComponent {
             { notificationTimer: r } = this;
         return null == r
             ? null
-            : (0, i.jsx)(S.Z, {
+            : (0, i.jsx)(x.Z, {
                   contentDomRef: this.contentDomRef,
                   observe: !1,
-                  children: (0, i.jsx)(h.f6W, {
-                      theme: j.BRd.DARK,
+                  children: (0, i.jsx)(p.f6W, {
+                      theme: C.BRd.DARK,
                       children: (r) =>
-                          (0, i.jsxs)(h.P3F, {
+                          (0, i.jsxs)(p.P3F, {
                               innerRef: this.contentDomRef,
                               className: o()(r, P.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
                                   (0, i.jsx)(y.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(O.Z, {
+                                      icon: (0, i.jsx)(_.Z, {
                                           width: 40,
                                           height: 40,
                                           className: P.notificationIcon,
@@ -134,9 +134,9 @@ class k extends r.PureComponent {
                 this.setState({ busy: !0 }),
                     D(),
                     f.Z.track(
-                        j.rMx.NOTIFICATION_CLICKED,
+                        C.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: C.n0.OverlayCrashed,
+                            notif_type: j.n0.OverlayCrashed,
                             action_type: "reload",
                         },
                         !0,
@@ -166,20 +166,20 @@ let R = a().throttle(
 );
 class A extends r.PureComponent {
     componentDidCatch(e, t) {
-        let n = (0, _.s1)().location;
+        let n = (0, O.s1)().location;
         this.setState({
             error: e,
             info: t,
         }),
-            N.error("ErrorBoundary caught error: ".concat(e.message), {
+            T.error("ErrorBoundary caught error: ".concat(e.message), {
                 error: e,
                 info: t,
             });
-        let i = (0, v.getPID)(),
-            r = (0, v.getRPCAuthToken)();
+        let i = (0, b.getPID)(),
+            r = (0, b.getRPCAuthToken)();
         (0, g.lW)({
-            type: j.BmY.DISPATCH,
-            pid: (0, v.getPID)(),
+            type: C.BmY.DISPATCH,
+            pid: (0, b.getPID)(),
             token: r,
             payloads: [
                 {
@@ -195,13 +195,13 @@ class A extends r.PureComponent {
             ],
         }),
             setImmediate(() => window.addEventListener("click", D));
-        let s = (0, E.V6)(e, x.gl.Hook, { extra: t });
-        f.Z.track(j.rMx.APP_CRASHED, {
+        let l = (0, E.V6)(e, S.gl.Hook, { extra: t });
+        f.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: s,
+            sentry_issue_id: l,
             error_level: "fatal",
         }),
             R();

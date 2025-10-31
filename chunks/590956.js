@@ -231,7 +231,7 @@ let I = (e) => {
                     ),
                 );
         if (!u) return D();
-        let L = (e) =>
+        let x = (e) =>
             (0, r.jsx)(
                 _.vk,
                 v(y({}, e), {
@@ -249,7 +249,7 @@ let I = (e) => {
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: "right",
-            renderPopout: L,
+            renderPopout: x,
             positionKey: O,
             targetElementRef: R,
             children: D,

@@ -160,30 +160,30 @@ function R(e) {
         D = null != w ? p.Z.getFirstWishlistId(w.id) : null,
         x = (0, m.ny)(D, t),
         L = i.useRef(null),
-        [M, k] = i.useState(null);
+        [M, j] = i.useState(null);
     i.useEffect(() => {
-        k(null);
+        j(null);
     }, [t]);
-    let j = null !== M ? M : x,
+    let k = null !== M ? M : x,
         U = (0, f.X)(L),
-        G = j ? u.h_8 : u.Pzh,
-        B = j || U ? I.wishlistedOrHoveredIconColor : I.normalIconColor,
+        G = k ? u.h_8 : u.Pzh,
+        B = k || U ? I.wishlistedOrHoveredIconColor : I.normalIconColor,
         Z = i.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), j && null != D)) {
-                    k(!1);
+                if ((e.stopPropagation(), k && null != D)) {
+                    j(!1);
                     try {
-                        await h.Z.removeSkuFromWishlist(D, t, P), k(null);
+                        await h.Z.removeSkuFromWishlist(D, t, P), j(null);
                     } catch (e) {
-                        k(null),
+                        j(null),
                             (0, u.showToast)((0, u.createToast)(v.intl.string(v.t.F8FvUy), u.ToastType.FAILURE)),
                             u.uvj.announce(v.intl.string(v.t.F8FvUy));
                     }
                 } else {
-                    k(!0);
+                    j(!0);
                     try {
                         await h.Z.addSkuToWishlist(t, P),
-                            k(null),
+                            j(null),
                             R &&
                                 null != T &&
                                 ((0, u.ZDy)(async () => {
@@ -192,16 +192,16 @@ function R(e) {
                                 }),
                                 N(O.L.USER_DISMISS));
                     } catch (e) {
-                        k(null),
+                        j(null),
                             (0, u.showToast)((0, u.createToast)(v.intl.string(v.t.F8FvUy), u.ToastType.FAILURE)),
                             u.uvj.announce(v.intl.string(v.t.F8FvUy));
                     }
                 }
             },
-            [j, D, t, P, R, T, N],
+            [k, D, t, P, R, T, N],
         ),
-        F = j ? v.intl.string(v.t.yr9TTf) : v.intl.string(v.t["8DkMEQ"]);
-    return (b || j) && null != w
+        F = k ? v.intl.string(v.t.yr9TTf) : v.intl.string(v.t["8DkMEQ"]);
+    return (b || k) && null != w
         ? E
             ? (0, r.jsx)(c.u, {
                   text: null != y ? y : F,

@@ -31,7 +31,7 @@ function C(e) {
         P = (0, l.LN)(),
         w = h.mX.useSetting(),
         D = h.zA.useSetting().includes(n),
-        L = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 let r = (0, f.gl)();
                 e ? r.delete(n) : r.add(n),
@@ -44,7 +44,7 @@ function C(e) {
             },
             [t, n],
         );
-    function x(e, t) {
+    function L(e, t) {
         u.default.track(T.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t,
@@ -53,14 +53,14 @@ function C(e) {
     function M(e, t) {
         if (!e && (0, _.S)())
             return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.MESSAGE_REQUESTS_SETTINGS });
-        t ? L(e) : k(!e);
+        t ? x(e) : j(!e);
     }
-    function k(e) {
+    function j(e) {
         let t = () => {
-                h.mX.updateSetting(e), h.zA.updateSetting(e ? c.Z.getGuildIds() : []), x(e, !0);
+                h.mX.updateSetting(e), h.zA.updateSetting(e ? c.Z.getGuildIds() : []), L(e, !0);
             },
             n = () => {
-                h.mX.updateSetting(e), x(e, !1);
+                h.mX.updateSetting(e), L(e, !1);
             };
         (0, b.V)({
             header: S.intl.string(S.t.yAfu1p),

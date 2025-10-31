@@ -155,7 +155,7 @@ let G = i.forwardRef((e, t) => {
                                       return (t) => (0, r.jsx)(e, L(A({}, t), { channel: i }));
                                   });
                               return (0, g.jW)(e, async () => {
-                                  let { default: e } = await n.e("5396").then(n.bind(n, 731646));
+                                  let { default: e } = await n.e("5396").then(n.bind(n, 999588));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,

@@ -1,7 +1,7 @@
 n.d(t, {
     $b: () => G,
-    Bu: () => k,
-    ES: () => j,
+    Bu: () => j,
+    ES: () => k,
     Eq: () => U,
     Gv: () => T,
     Hy: () => y,
@@ -10,14 +10,14 @@ n.d(t, {
     X6: () => B,
     kQ: () => F,
     mR: () => b,
-    n$: () => x,
+    n$: () => L,
     np: () => C,
     ou: () => Y,
     qH: () => D,
     tk: () => Z,
     vI: () => v,
     ww: () => O,
-    y8: () => L,
+    y8: () => x,
 }),
     n(388685),
     n(642613);
@@ -150,11 +150,11 @@ function D(e, t) {
         r = R();
     null == r.find((t) => t.type === e) && (n ? c.Z.setPendingWidgets([t, ...r]) : c.Z.setPendingWidgets([...r, t]));
 }
-function L(e) {
+function x(e) {
     let t = R().filter((t) => t.type !== e);
     c.Z.setPendingWidgets(t);
 }
-function x(e, t, n) {
+function L(e, t, n) {
     let r = Object.values(i._).length;
     if (n.length > r) return;
     let a = P(e);
@@ -172,9 +172,9 @@ function M(e, t, n) {
     let i = r.games.find((e) => e.applicationId === t);
     if (null == i || null == i.tags || 0 === i.tags.length) return;
     let a = i.tags.filter((e) => e !== n);
-    x(r.type, t, a.length > 0 ? a : []);
+    L(r.type, t, a.length > 0 ? a : []);
 }
-function k(e, t, n) {
+function j(e, t, n) {
     let r = P(e);
     if (null == r) return;
     let i = r.games.find((e) => e.applicationId === t);
@@ -184,7 +184,7 @@ function k(e, t, n) {
         l = w(new s.zy(E(m({}, r), { games: o })));
     c.Z.setPendingWidgets(l);
 }
-function j(e, t) {
+function k(e, t) {
     var n, r, i, o;
     let l,
         u = P(e),

@@ -1,19 +1,19 @@
 n.d(t, {
-    DF: () => g,
-    ZP: () => y,
+    DF: () => m,
+    ZP: () => j,
 });
 var r,
     i,
     l = n(951288);
 n(647438);
 var o = n(120356),
-    a = n.n(o),
-    s = n(755721),
+    s = n.n(o),
+    a = n(755721),
     c = n(481060),
-    u = n(493773),
-    d = n(921944),
-    p = n(164208);
-function f(e) {
+    d = n(493773),
+    u = n(921944),
+    f = n(164208);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function h(e, t) {
         e
     );
 }
-var g =
+var m =
         (((r = {}).TOP_CENTER = "caretTopCenter"),
         (r.TOP_RIGHT = "caretTopRight"),
         (r.TOP_LEFT = "caretTopLeft"),
@@ -68,93 +68,93 @@ var g =
         (r.RIGHT_CENTER = "caretRightCenter"),
         (r.RIGHT_TOP = "caretRightTop"),
         r),
-    m = (((i = {})[(i.ADJACENT = 0)] = "ADJACENT"), (i[(i.STACKED = 1)] = "STACKED"), i);
-let b = Object.freeze({
-        brand: p.colorBrand,
-        primary: p.colorPrimary,
+    _ = (((i = {})[(i.ADJACENT = 0)] = "ADJACENT"), (i[(i.STACKED = 1)] = "STACKED"), i);
+let g = Object.freeze({
+        brand: f.colorBrand,
+        primary: f.colorPrimary,
     }),
-    _ = Object.freeze({
+    x = Object.freeze({
         brand: "always-white",
         primary: "header-primary",
     }),
-    O = Object.freeze({
+    v = Object.freeze({
         brand: "always-white",
         primary: "text-default",
     });
-function y(e) {
+function j(e) {
     let {
         color: t = "brand",
         className: n,
         header: r,
         headerClassName: i,
         content: o,
-        contentClassName: g,
-        buttonCTA: m,
-        secondaryButtonCTA: y,
-        onClick: v,
-        onSecondaryClick: j,
-        buttonProps: C = {
-            color: s.zx.Colors.BRAND,
-            look: s.zx.Looks.FILLED,
+        contentClassName: m,
+        buttonCTA: _,
+        secondaryButtonCTA: j,
+        onClick: b,
+        onSecondaryClick: S,
+        buttonProps: y = {
+            color: a.zx.Colors.BRAND,
+            look: a.zx.Looks.FILLED,
         },
-        secondaryButtonProps: E = { color: s.zx.Colors.BRAND_INVERTED },
-        onComponentMount: x,
-        asset: S,
-        markAsDismissed: I,
-        caretPosition: P = "caretTopCenter",
-        buttonLayout: N = 0,
+        secondaryButtonProps: C = { color: a.zx.Colors.BRAND_INVERTED },
+        onComponentMount: O,
+        asset: w,
+        markAsDismissed: P,
+        caretPosition: T = "caretTopCenter",
+        buttonLayout: Z = 0,
     } = e;
-    (0, u.ZP)(() => {
-        null == x || x();
+    (0, d.ZP)(() => {
+        null == O || O();
     });
-    let Z = null != y;
+    let I = null != j;
     return (0, l.jsxs)("div", {
-        className: a()(n, b[t], p.upsellTooltipWrapper, p[P]),
+        className: s()(n, g[t], f.upsellTooltipWrapper, f[T]),
         children: [
-            S,
+            w,
             null == r
                 ? null
                 : (0, l.jsx)(c.Heading, {
-                      color: _[t],
-                      className: a()(i, p.upsellTooltipHeader),
+                      color: x[t],
+                      className: s()(i, f.upsellTooltipHeader),
                       variant: "heading-md/semibold",
                       children: r,
                   }),
             (0, l.jsx)(c.Text, {
-                color: O[t],
-                className: a()(g, p.content),
+                color: v[t],
+                className: s()(m, f.content),
                 variant: "text-sm/normal",
                 children: o,
             }),
-            null != m || Z
+            null != _ || I
                 ? (0, l.jsxs)("div", {
-                      className: a()(p.upsellButtonsContainer, {
-                          [p.upsellButtonsAdjacent]: 0 === N,
-                          [p.upsellButtonsStacked]: 1 === N,
+                      className: s()(f.upsellButtonsContainer, {
+                          [f.upsellButtonsAdjacent]: 0 === Z,
+                          [f.upsellButtonsStacked]: 1 === Z,
                       }),
                       children: [
-                          Z
+                          I
                               ? (0, l.jsx)(
-                                    s.zx,
-                                    h(f({}, E), {
-                                        fullWidth: 1 === N,
+                                    a.zx,
+                                    h(p({}, C), {
+                                        fullWidth: 1 === Z,
                                         onClick: () => {
-                                            null == j || j(), null == I || I(d.L.SECONDARY);
+                                            null == S || S(), null == P || P(u.L.SECONDARY);
                                         },
-                                        children: y,
+                                        children: j,
                                     }),
                                 )
                               : null,
-                          null == m
+                          null == _
                               ? null
                               : (0, l.jsx)(
-                                    s.zx,
-                                    h(f({}, C), {
-                                        fullWidth: !Z || 1 === N,
+                                    a.zx,
+                                    h(p({}, y), {
+                                        fullWidth: !I || 1 === Z,
                                         onClick: (e) => {
-                                            v(e), null == I || I(d.L.PRIMARY);
+                                            b(e), null == P || P(u.L.PRIMARY);
                                         },
-                                        children: m,
+                                        children: _,
                                     }),
                                 ),
                       ],
@@ -163,4 +163,4 @@ function y(e) {
         ],
     });
 }
-(y.CaretPosition = g), (y.ButtonLayout = m);
+(j.CaretPosition = m), (j.ButtonLayout = _);

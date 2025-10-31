@@ -158,11 +158,11 @@ class I extends (r = a.PureComponent) {
                 onValueRender: P,
                 renderMarker: w,
                 getAriaValueText: D,
-                barClassName: L,
-                grabberClassName: x,
+                barClassName: x,
+                grabberClassName: L,
                 grabberStyles: M = {},
-                markerPosition: k = 0,
-                "aria-hidden": j,
+                markerPosition: j = 0,
+                "aria-hidden": k,
                 "aria-label": U,
                 "aria-labelledby": G,
                 "aria-describedby": B,
@@ -182,8 +182,8 @@ class I extends (r = a.PureComponent) {
                               {
                                   className: s()(h.mark, {
                                       [h.defaultValue]: r,
-                                      [h.markAbove]: 0 === k,
-                                      [h.markBelow]: 1 === k,
+                                      [h.markAbove]: 0 === j,
+                                      [h.markBelow]: 1 === j,
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
@@ -232,7 +232,7 @@ class I extends (r = a.PureComponent) {
                                     "aria-valuenow": t,
                                     "aria-disabled": E,
                                     "aria-orientation": R,
-                                    "aria-hidden": j,
+                                    "aria-hidden": k,
                                     "aria-label": U,
                                     "aria-labelledby": G,
                                     "aria-describedby": null != B ? B : e.describedById,
@@ -258,7 +258,7 @@ class I extends (r = a.PureComponent) {
                                             children: H,
                                         }),
                                         (0, i.jsx)("div", {
-                                            className: s()(h.bar, L),
+                                            className: s()(h.bar, x),
                                             style: I,
                                             children: (0, i.jsx)("div", {
                                                 className: h.barFill,
@@ -278,7 +278,7 @@ class I extends (r = a.PureComponent) {
                                                     (0, i.jsx)(
                                                         "div",
                                                         b(g({}, e), {
-                                                            className: s()(h.grabber, x),
+                                                            className: s()(h.grabber, L),
                                                             style: b(g({}, M), { left: V }),
                                                             onMouseDown: this.handleMouseDown,
                                                             ref: this.grabberRef,

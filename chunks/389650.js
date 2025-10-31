@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(295907),
     L = n(388032),
     M = n(894462),
-    k = n(620842),
-    j = n(197571);
+    j = n(620842),
+    k = n(197571);
 function U(e, t, n) {
     return (
         t in e
@@ -121,7 +121,7 @@ class H extends i.PureComponent {
     render() {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, r.jsxs)("div", {
-            className: o()(M.keybindGroup, { [k.card]: !this.props.isUserSettingsRedesignEnabled }),
+            className: o()(M.keybindGroup, { [j.card]: !this.props.isUserSettingsRedesignEnabled }),
             children: [
                 !e &&
                     !this.props.isUserSettingsRedesignEnabled &&
@@ -460,7 +460,7 @@ class Y extends i.PureComponent {
                               children: L.intl.format(L.t.mPi3F3, { downloadLink: D.EYA.DOWNLOAD }),
                           }),
                 }),
-                (0, r.jsx)(d.izJ, { className: j.marginBottom60 }),
+                (0, r.jsx)(d.izJ, { className: k.marginBottom60 }),
                 (0, r.jsxs)(d.Kqy, {
                     gap: 48,
                     children: [

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    o: () => h,
+    o: () => m,
 }),
     n(388685);
 var r = n(951288),
@@ -38,7 +38,7 @@ function f(e) {
     }
     return e;
 }
-function h(e) {
+function m(e) {
     let { imageSrc: t, gameName: n } = e,
         [l, a] = i.useState(!1),
         s = null != n ? n : d.intl.string(d.t.GIWFlF);
@@ -62,8 +62,8 @@ function h(e) {
               onLoad: () => a(!1),
           });
 }
-function m(e) {
-    let { imageSrc: t, gameName: n, applicationId: i, userId: l, className: f, hideTooltip: m = !1, coverRef: g } = e,
+function h(e) {
+    let { imageSrc: t, gameName: n, applicationId: i, userId: l, className: f, hideTooltip: h = !1, coverRef: g } = e,
         _ = (0, u.Z)({
             location: "GameCover",
             applicationId: i,
@@ -74,7 +74,7 @@ function m(e) {
         b = null != n ? n : d.intl.string(d.t.GIWFlF),
         E = d.intl.formatToPlainString(d.t["8QLQB+"], { gameName: b }),
         O = (e) =>
-            m
+            h
                 ? e
                 : (0, r.jsx)(s.u, {
                       text: b,
@@ -87,7 +87,7 @@ function m(e) {
                       ref: g,
                       className: f,
                       tabIndex: -1,
-                      children: (0, r.jsx)(h, {
+                      children: (0, r.jsx)(m, {
                           imageSrc: t,
                           gameName: n,
                       }),
@@ -98,7 +98,7 @@ function m(e) {
                   onClick: _,
                   "aria-label": E,
                   className: a()(p.clickable, f),
-                  children: (0, r.jsx)(h, {
+                  children: (0, r.jsx)(m, {
                       imageSrc: t,
                       gameName: n,
                   }),
@@ -135,11 +135,11 @@ function g(e) {
                   ref: c,
                   className: d,
                   tabIndex: -1,
-                  children: (0, r.jsx)(h, f({}, u)),
+                  children: (0, r.jsx)(m, f({}, u)),
               }),
           })
         : (0, r.jsx)(
-              m,
+              h,
               f(
                   {
                       className: d,

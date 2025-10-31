@@ -18,8 +18,8 @@ var r,
     E = n(585483),
     O = n(981631),
     I = n(388032),
-    v = n(506945),
-    y = n(256076);
+    y = n(506945),
+    v = n(256076);
 function C(e, t, n) {
     return (
         t in e
@@ -229,16 +229,16 @@ class k extends (r = l.PureComponent) {
                                           case O.S9g.COMPONENT_PLAYGROUND:
                                               return "Component Playground";
                                           case O.S9g.CHECKPOINT:
-                                              return I.intl.string(v.default["CdU/PF"]);
+                                              return I.intl.string(y.default["CdU/PF"]);
                                           default:
                                               return "";
                                       }
                                   })(n)
                                 : void 0,
                             role: f ? "dialog" : void 0,
-                            className: s()(y.layer, {
-                                [y.baseLayer]: a,
-                                [y.animating]: e,
+                            className: s()(v.layer, {
+                                [v.baseLayer]: a,
+                                [v.animating]: e,
                                 "stop-animations": r === R,
                             }),
                             style: p,
@@ -323,7 +323,7 @@ class U extends l.PureComponent {
     renderArtisanalHack() {
         return (0, i.jsx)(d.f6W, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, i.jsx)("div", { className: s()(y.bg, e) }),
+            children: (e) => (0, i.jsx)("div", { className: s()(v.bg, e) }),
         });
     }
     render() {
@@ -332,7 +332,7 @@ class U extends l.PureComponent {
                 this.renderArtisanalHack(),
                 (0, i.jsx)(u.W, {
                     component: "div",
-                    className: s()(y.layers, this.props.className),
+                    className: s()(v.layers, this.props.className),
                     children: this.renderLayers(),
                 }),
             ],

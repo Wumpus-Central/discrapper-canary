@@ -1,5 +1,5 @@
-t.d(l, { O: () => a });
-let a = [
+n.d(t, { O: () => r });
+let r = [
     "heading-sm/normal",
     "heading-sm/medium",
     "heading-sm/semibold",

@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => j,
+    C: () => k,
     Z: () => M,
 }),
     n(388685);
@@ -49,7 +49,7 @@ var M = (function (e) {
         e
     );
 })({});
-function k(e) {
+function j(e) {
     let { sku: t, isCardHovered: n } = e;
     return (0, r.jsx)("div", {
         className: w.wishlistButtonContainer,
@@ -59,8 +59,8 @@ function k(e) {
         }),
     });
 }
-function j(e) {
-    var t, n, a, s, c, m, M, j, U, G, B, Z, F, V, H, Y;
+function k(e) {
+    var t, n, a, s, c, m, M, k, U, G, B, Z, F, V, H, Y;
     let { applicationId: W, skuId: K, variant: z = 0, guildId: q, onClick: X } = e,
         Q = i.useRef(null),
         J = (0, f.e7)([y.Z], () => y.Z.get(K)),
@@ -142,7 +142,7 @@ function j(e) {
                         disableColor: !0,
                         className: w.badge,
                     }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(j, {
                     sku: J,
                     isCardHovered: et,
                 }),
@@ -206,7 +206,7 @@ function j(e) {
                                                   lineClamp: 1,
                                                   children: (0, O.T4)(
                                                       null != (F = null == (M = J.price) ? void 0 : M.amount) ? F : 0,
-                                                      null != (V = null == (j = J.price) ? void 0 : j.currency)
+                                                      null != (V = null == (k = J.price) ? void 0 : k.currency)
                                                           ? V
                                                           : R.pK.USD,
                                                   ),

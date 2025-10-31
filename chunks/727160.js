@@ -8,7 +8,7 @@ let r = (0, n(427164).le)({
         1: { use_ad_session_id: !1 },
         2: { use_ad_session_id: !0 },
         3: { use_ad_session_id: !0 },
-        4: { use_ad_session_id: !1 },
-        5: { use_ad_session_id: !1 },
+        4: { use_ad_session_id: !0 },
+        5: { use_ad_session_id: !0 },
     },
 });

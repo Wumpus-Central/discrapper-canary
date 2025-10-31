@@ -37,7 +37,7 @@ var i = n(120356),
     x = n(895601),
     L = n(381126),
     M = n(234286);
-function k(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -165,15 +165,15 @@ function Z(e) {
             isApplicationHome: T = !1,
         } = e,
         S = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
-        k = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        j = (0, I.N)(),
-        U = null == j || null == (t = j.subscription_trial) ? void 0 : t.sku_id,
-        G = (null == S ? void 0 : S.hasActiveTrial) ? (null == k ? void 0 : k.premiumType) : null,
+        j = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        k = (0, I.N)(),
+        U = null == k || null == (t = k.subscription_trial) ? void 0 : t.sku_id,
+        G = (null == S ? void 0 : S.hasActiveTrial) ? (null == j ? void 0 : j.premiumType) : null,
         B = (0, v.Ng)(),
         Z = (0, b.t7)(),
         F = null != U || null != G ? P.C.PREMIUM_TRIAL : null != B || Z ? P.C.PREMIUM_DISCOUNT : null,
         V = (0, c.ap)((0, d.ZP)()),
-        H = (0, C.A1)(Z, G, B, j, U),
+        H = (0, C.A1)(Z, G, B, k, U),
         Y = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -247,7 +247,7 @@ let F = (e) => {
             children: (0, r.jsx)(
                 l.zxk,
                 G(
-                    j(
+                    k(
                         {
                             size: "md",
                             fullWidth: !0,
@@ -262,7 +262,7 @@ let F = (e) => {
             className: a()({ [D.premiumCardHover]: !n }),
             children: (0, r.jsx)(
                 c,
-                j(
+                k(
                     {
                         className: D.applicationHomeCard,
                         ctaButton: p,

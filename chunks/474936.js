@@ -1,12 +1,12 @@
 n.d(t, {
-    $7: () => j,
-    $8: () => ex,
+    $7: () => k,
+    $8: () => eL,
     $X: () => eb,
     $e: () => f,
     $n: () => eQ,
     A5: () => B,
     AU: () => X,
-    Bo: () => e3,
+    Bo: () => e2,
     C: () => s,
     C2: () => J,
     CL: () => _,
@@ -20,10 +20,10 @@ n.d(t, {
     F$: () => T,
     F_: () => c,
     GP: () => R,
-    HO: () => ek,
+    HO: () => ej,
     IW: () => S,
     Lw: () => eC,
-    M_: () => e2,
+    M_: () => e3,
     NV: () => Y,
     Nl: () => eh,
     OT: () => el,
@@ -34,7 +34,7 @@ n.d(t, {
     Qh: () => e8,
     RU: () => eu,
     Rg: () => W,
-    Rr: () => x,
+    Rr: () => L,
     Rt: () => er,
     Se: () => e7,
     Si: () => p,
@@ -42,7 +42,7 @@ n.d(t, {
     TD: () => eY,
     TL: () => Q,
     Tp: () => ez,
-    UA: () => k,
+    UA: () => j,
     UD: () => O,
     Ue: () => U,
     Uq: () => eR,
@@ -51,7 +51,7 @@ n.d(t, {
     X2: () => e$,
     XB: () => eO,
     Xh: () => b,
-    Y1: () => ej,
+    Y1: () => ek,
     YQ: () => m,
     Z1: () => v,
     Zh: () => u,
@@ -86,7 +86,7 @@ n.d(t, {
     nH: () => eB,
     nS: () => h,
     o4: () => I,
-    pH: () => eL,
+    pH: () => ex,
     pj: () => P,
     rB: () => e_,
     rV: () => C,
@@ -374,11 +374,11 @@ let R = Object.freeze({
     P = new Set(["511651880837840896"]),
     w = 16,
     D = 8,
-    L = 5,
-    x = 30,
+    x = 5,
+    L = 30,
     M = 2,
-    k = 3,
-    j = 28,
+    j = 3,
+    k = 28,
     U = 30,
     G = 30,
     B = 7,
@@ -584,17 +584,17 @@ let eA = Object.freeze({
     eP = 52428800,
     ew = 104857600,
     eD = 5,
-    eL = {
+    ex = {
         [i.Eu4.NONE]: eD,
         [i.Eu4.TIER_1]: 10,
         [i.Eu4.TIER_2]: 15,
         [i.Eu4.TIER_3]: 30,
     },
-    ex = {
-        [i.Eu4.NONE]: eL[i.Eu4.NONE],
-        [i.Eu4.TIER_1]: eL[i.Eu4.NONE] + eL[i.Eu4.TIER_1],
-        [i.Eu4.TIER_2]: eL[i.Eu4.NONE] + eL[i.Eu4.TIER_1] + eL[i.Eu4.TIER_2],
-        [i.Eu4.TIER_3]: eL[i.Eu4.NONE] + eL[i.Eu4.TIER_1] + eL[i.Eu4.TIER_2] + eL[i.Eu4.TIER_3],
+    eL = {
+        [i.Eu4.NONE]: ex[i.Eu4.NONE],
+        [i.Eu4.TIER_1]: ex[i.Eu4.NONE] + ex[i.Eu4.TIER_1],
+        [i.Eu4.TIER_2]: ex[i.Eu4.NONE] + ex[i.Eu4.TIER_1] + ex[i.Eu4.TIER_2],
+        [i.Eu4.TIER_3]: ex[i.Eu4.NONE] + ex[i.Eu4.TIER_1] + ex[i.Eu4.TIER_2] + ex[i.Eu4.TIER_3],
     },
     eM = {
         [i.Eu4.NONE]: eO,
@@ -602,7 +602,7 @@ let eA = Object.freeze({
         [i.Eu4.TIER_2]: 36,
         [i.Eu4.TIER_3]: 48,
     },
-    ek = Object.freeze({
+    ej = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
@@ -612,7 +612,7 @@ let eA = Object.freeze({
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: "720p",
                 soundboardSounds: eM[i.Eu4.NONE],
-                stickers: ex[i.Eu4.NONE],
+                stickers: eL[i.Eu4.NONE],
                 stageVideoUsers: i.B9o,
             },
         },
@@ -625,7 +625,7 @@ let eA = Object.freeze({
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "720p",
                 soundboardSounds: eM[i.Eu4.TIER_1],
-                stickers: ex[i.Eu4.TIER_1],
+                stickers: eL[i.Eu4.TIER_1],
                 stageVideoUsers: i.B9o,
             },
         },
@@ -643,7 +643,7 @@ let eA = Object.freeze({
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
                 soundboardSounds: eM[i.Eu4.TIER_2],
-                stickers: ex[i.Eu4.TIER_2],
+                stickers: eL[i.Eu4.TIER_2],
                 stageVideoUsers: i.eez,
             },
         },
@@ -663,12 +663,12 @@ let eA = Object.freeze({
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
                 soundboardSounds: eM[i.Eu4.TIER_3],
-                stickers: ex[i.Eu4.TIER_3],
+                stickers: eL[i.Eu4.TIER_3],
                 stageVideoUsers: i.RcX,
             },
         },
     }),
-    ej = [
+    ek = [
         "978380692553465866",
         "1024422698568122368",
         "511651871736201216",
@@ -700,7 +700,7 @@ let eB = {
     "511651876987469824": w,
     "511651885459963904": w,
     "944037208325619722": D,
-    "642251038925127690": L,
+    "642251038925127690": x,
 };
 var eZ = (function (e) {
     return (
@@ -767,8 +767,8 @@ var eJ = (function (e) {
         );
     })({});
 let e1 = 3,
-    e2 = 30,
-    e3 = 20;
+    e3 = 30,
+    e2 = 20;
 var e4 = (function (e) {
     return (
         (e.PREMIUM_TENURE_1_MONTH = "premium_tenure_1_month_v2"),

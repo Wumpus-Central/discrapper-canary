@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m });
-var i,
-    r = n(951288),
+var r,
+    i = n(951288),
     l = n(647438),
     a = n(374470),
     o = n(442837),
@@ -21,23 +21,23 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
+            r.forEach(function (t) {
                 p(e, t, n[t]);
             });
     }
     return e;
 }
-class f extends (i = l.Component) {
+class h extends (r = l.Component) {
     componentDidMount() {
         let { visible: e, inlineSpecs: t } = this.props;
         null == t && this.show(e);
@@ -47,13 +47,13 @@ class f extends (i = l.Component) {
         null == e && this.show(!1);
     }
     componentDidUpdate(e) {
-        let { position: t, offsetX: n, offsetY: i, tutorialId: r, visible: l, windowSize: a } = e;
-        r !== this.props.tutorialId
-            ? s.Z.hide(r)
+        let { position: t, offsetX: n, offsetY: r, tutorialId: i, visible: l, windowSize: a } = e;
+        i !== this.props.tutorialId
+            ? s.Z.hide(i)
             : (l !== this.props.visible ||
                   t !== this.props.position ||
                   n !== this.props.offsetX ||
-                  i !== this.props.offsetY ||
+                  r !== this.props.offsetY ||
                   a !== this.props.windowSize) &&
               this.show(this.props.visible);
     }
@@ -61,8 +61,8 @@ class f extends (i = l.Component) {
         let {
             childRef: t,
             tutorialId: n,
-            position: i,
-            offsetX: r,
+            position: r,
+            offsetX: i,
             offsetY: l,
             visible: o,
             inlineSpecs: c,
@@ -73,7 +73,7 @@ class f extends (i = l.Component) {
             if (!(0, a.kK)(e)) return;
             let { top: o, left: c, right: d, bottom: p } = e.getBoundingClientRect();
             s.Z.show(n, {
-                position: i,
+                position: r,
                 targetWidth: d - c,
                 targetHeight: p - o,
                 autoInvert: u,
@@ -82,7 +82,7 @@ class f extends (i = l.Component) {
                     y: o,
                 },
                 offset: {
-                    x: r,
+                    x: i,
                     y: l,
                 },
             });
@@ -93,20 +93,20 @@ class f extends (i = l.Component) {
                 inlineSpecs: e,
                 tutorialId: t,
                 children: n,
-                visible: i,
+                visible: r,
                 windowFocused: a,
                 position: o,
                 autoInvert: s,
             } = this.props,
             c = d.Z.getData()[t];
         return null != e && null != c
-            ? (0, r.jsxs)(r.Fragment, {
+            ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       n,
-                      i &&
-                          (0, r.jsx)(
+                      r &&
+                          (0, i.jsx)(
                               u.V,
-                              h(
+                              f(
                                   {
                                       autoInvert: s,
                                       position: o,
@@ -124,13 +124,13 @@ class f extends (i = l.Component) {
 }
 function m(e) {
     var t, n;
-    let { tutorialId: i } = e,
-        l = (0, o.e7)([d.Z], () => d.Z.shouldShow(i), [i]),
+    let { tutorialId: r } = e,
+        l = (0, o.e7)([d.Z], () => d.Z.shouldShow(r), [r]),
         a = (0, o.e7)([c.Z], () => c.Z.isFocused()),
         s = (0, o.e7)([c.Z], () => c.Z.windowSize(), []);
-    return (0, r.jsx)(
-        f,
-        ((t = h({}, e)),
+    return (0, i.jsx)(
+        h,
+        ((t = f({}, e)),
         (n = n =
             {
                 visible: l,
@@ -142,8 +142,8 @@ function m(e) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(n)).forEach(function (e) {
@@ -152,7 +152,7 @@ function m(e) {
         t),
     );
 }
-p(f, "defaultProps", {
+p(h, "defaultProps", {
     position: "top",
     offsetX: 0,
     offsetY: 0,

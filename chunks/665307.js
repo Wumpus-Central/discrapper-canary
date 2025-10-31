@@ -10,16 +10,16 @@ var r,
     d = n(28664),
     p = n(477690),
     f = n(755721),
-    h = n(481060),
-    m = n(570140),
+    m = n(481060),
+    h = n(570140),
     g = n(239091),
     _ = n(287259),
     b = n(785547),
     E = n(600164),
     O = n(167533),
     I = n(925329),
-    v = n(707409),
-    y = n(490983),
+    y = n(707409),
+    v = n(490983),
     C = n(799777),
     S = n(626135),
     T = n(780570),
@@ -118,7 +118,7 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                           text: x.intl.string(x.t.tG2SzG),
                                           children: [
                                               "(",
-                                              (0, i.jsx)(h.SrA, {
+                                              (0, i.jsx)(m.SrA, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: A.nitroIcon,
@@ -160,9 +160,9 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         : e.isNew
                           ? x.intl.string(x.t["+F0Tho"])
                           : 0 !== e.lastPlayed
-                            ? (0, i.jsx)(v.ZP, {
+                            ? (0, i.jsx)(y.ZP, {
                                   end: e.lastPlayed,
-                                  location: v.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
+                                  location: y.ZP.Locations.GAME_LIBRARY_LAST_PLAYED,
                               })
                             : x.intl.string(x.t.EoWLru)),
                     (0, i.jsx)(E.Z, {
@@ -189,13 +189,13 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.PRIVATE,
                                     item: e,
-                                    icon: h.kZF,
+                                    icon: m.kZF,
                                     tooltip: x.intl.string(x.t.NozAop),
                                 }),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.OVERLAY_DISABLED,
                                     item: e,
-                                    icon: h.o8v,
+                                    icon: m.o8v,
                                     tooltip: x.intl.string(x.t.Az9eqn),
                                 }),
                                 (0, i.jsx)(j.Z, {
@@ -296,7 +296,7 @@ class B extends (r = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (m.Z.wait(g.Zy), this.props.scrollToRow(e, R));
+            null != e && (h.Z.wait(g.Zy), this.props.scrollToRow(e, R));
         }
     }
     handleHighlightedApplicationKey() {
@@ -482,10 +482,10 @@ function H(e) {
             applicationViewItems: r,
             filterQuery: a,
             fetched: s,
-        } = (0, c.cj)([y.Z], () => ({
-            applicationViewItems: y.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: y.Z.applicationFilterQuery,
-            fetched: y.Z.hasFetchedApplications,
+        } = (0, c.cj)([v.Z], () => ({
+            applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: v.Z.applicationFilterQuery,
+            fetched: v.Z.hasFetchedApplications,
         })),
         {
             sortKey: u,

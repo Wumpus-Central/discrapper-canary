@@ -122,7 +122,7 @@ function O(e) {
             "scrollBehavior",
         ]);
     let [w, D] = i.useState(null != C ? C : "top"),
-        [L, x] = i.useState({
+        [x, L] = i.useState({
             position: (0, _.z)(w),
             align: null != (t = null == N ? void 0 : N.align) ? t : "center",
             customOffset: null == N ? void 0 : N.customOffset,
@@ -133,11 +133,11 @@ function O(e) {
             },
             [S],
         ),
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             null == S || S("user:explicit");
         }, [S]),
-        j = i.useCallback((e) => {
-            D(e), x((t) => E(m({}, t), { position: (0, _.z)(e) }));
+        k = i.useCallback((e) => {
+            D(e), L((t) => E(m({}, t), { position: (0, _.z)(e) }));
         }, []);
     return (0, r.jsx)(
         l.m,
@@ -145,14 +145,14 @@ function O(e) {
             position: w,
             onRequestClose: M,
             gradientColor: T,
-            onPositionChange: j,
+            onPositionChange: k,
             scrollBehavior: R,
             children: (0, r.jsxs)("div", {
                 ref: A,
                 "data-mana-component": "popover",
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: k,
+                        onClick: j,
                         variant: null != T ? "color-mix" : void 0,
                     }),
                     null != y &&
@@ -172,7 +172,7 @@ function O(e) {
                         textLink: I,
                     }),
                     null != v && v.length > 0 ? (0, r.jsx)(c.k, { actions: v }) : null,
-                    (0, r.jsx)(u.$, { caretConfig: L }),
+                    (0, r.jsx)(u.$, { caretConfig: x }),
                 ],
             }),
         }),

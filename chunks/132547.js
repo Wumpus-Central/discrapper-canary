@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(981631),
     w = n(388032),
     D = n(677599),
-    L = n(865215);
-let x = (e) => {
+    x = n(865215);
+let L = (e) => {
     let { userId: t } = e;
     i.useEffect(() => {
         u.Z.wait(async () => {
@@ -38,19 +38,19 @@ let x = (e) => {
         });
     }, [t]),
         i.useEffect(() => {
-            k(!0);
+            j(!0);
         }, []),
         (0, p.z)(_.X);
     let n = i.useRef(null),
         a = i.useRef(null),
-        x = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
-        [M, k] = i.useState(!1),
-        j = (0, y.$)(),
+        L = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
+        [M, j] = i.useState(!1),
+        k = (0, y.$)(),
         U = i.useRef(null),
         [G, B] = i.useState(!1),
         [Z, F] = i.useState(!1),
-        V = null != j && null != x && x.status === P.O0b.CANCELED,
-        H = (0, O.W7)(R.Xh.PREMIUM_MONTH_TIER_2, j, x),
+        V = null != k && null != L && L.status === P.O0b.CANCELED,
+        H = (0, O.W7)(R.Xh.PREMIUM_MONTH_TIER_2, k, L),
         Y = !Z && V,
         { analyticsLocations: W } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [K, z] = i.useState(!1),
@@ -82,7 +82,7 @@ let x = (e) => {
                                               buttonVisibilityRef: U,
                                               className: D.heroHeading,
                                               enablePremiumBrandRefresh: X,
-                                              userDiscountOffer: j,
+                                              userDiscountOffer: k,
                                               discountedPrice: H,
                                           }),
                                       }),
@@ -127,7 +127,7 @@ let x = (e) => {
                                           }),
                                       }),
                                       (0, r.jsx)("img", {
-                                          src: L,
+                                          src: x,
                                           className: D.bottomIllustration,
                                           width: 112,
                                           height: 85,
@@ -140,8 +140,8 @@ let x = (e) => {
                               null != H &&
                               (0, r.jsx)(v.Z, {
                                   isVisible: Y && M,
-                                  premiumSubscription: x,
-                                  churnDiscountOffer: j,
+                                  premiumSubscription: L,
+                                  churnDiscountOffer: k,
                                   discountedPrice: H,
                               }),
                       ],

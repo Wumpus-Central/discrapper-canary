@@ -14,7 +14,7 @@ let _ = {
     stores: [u.ZP],
     matches(e, t, n, r, i) {
         var o;
-        let { enabled: u } = (0, s.kB)("MentionSuggestionAutocompletes", { autoTrackExposure: !1 });
+        let { enabled: u } = (0, s.kB)("MentionSuggestionAutocompletes", { autoTrackExposure: !0 });
         return (
             !(!u || e.isDM()) &&
             !!c.HV.getSetting() &&

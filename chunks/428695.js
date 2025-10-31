@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(626135),
     p = n(981631),
     f = n(388032),
-    h = n(454703);
-let m = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
+    m = n(454703);
+let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
     g = function (e) {
         let {
             guild: t,
@@ -24,15 +24,15 @@ let m = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
             imageMarginTop: E,
             trackingSource: O,
             undismissable: I,
-            onDismissed: v,
-            onClick: y,
+            onDismissed: y,
+            onClick: v,
             cta: C,
             ctaColor: S,
             centerText: T,
             className: N,
         } = e;
         i.useEffect(() => {
-            m(p.rMx.CHANNEL_NOTICE_VIEWED, {
+            h(p.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: g,
                 guild_id: t.id,
             });
@@ -42,7 +42,7 @@ let m = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
             ? (j = C())
             : null != C &&
               (j = (0, r.jsx)(o.zx, {
-                  className: h.button,
+                  className: m.button,
                   size: o.zx.Sizes.SMALL,
                   onClick: () => {
                       null != g &&
@@ -51,7 +51,7 @@ let m = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
                               guild_id: t.id,
                               notice_type: g,
                           }),
-                          null == y || y();
+                          null == v || v();
                   },
                   fullWidth: !0,
                   color: S,
@@ -64,7 +64,7 @@ let m = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
               (P = (0, r.jsx)(c.Text, {
                   variant: "text-md/medium",
                   color: "header-primary",
-                  className: a()(h.title, { [h.noImageTitle]: null == s }, { [h.center]: T }),
+                  className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: T }),
                   children: n,
               }));
         let x = null;
@@ -72,46 +72,46 @@ let m = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
             ? (x = l())
             : null != l &&
               (x = (0, r.jsx)(c.Text, {
-                  className: a()({ [h.center]: T }),
+                  className: a()({ [m.center]: T }),
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: l,
               }));
         let A = null != b ? "".concat(b, "px") : "16px";
         return (0, r.jsxs)("div", {
-            className: a()(h.container, N),
+            className: a()(m.container, N),
             children: [
                 !0 === I
                     ? null
                     : (0, r.jsx)(c.P3F, {
                           onClick: () => {
-                              u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == v || v();
+                              u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == y || y();
                           },
-                          className: h.close,
+                          className: m.close,
                           "aria-label": f.intl.string(f.t.WAI6xu),
                           children: (0, r.jsx)(c.Dio, {
                               size: "md",
                               color: "currentColor",
-                              className: h.closeIcon,
+                              className: m.closeIcon,
                           }),
                       }),
                 null != s &&
                     (0, r.jsx)("div", {
-                        className: h.imageContainer,
+                        className: m.imageContainer,
                         style: {
                             marginTop: "".concat(E, "px"),
                             marginLeft: A,
                             marginRight: A,
                         },
                         children: (0, r.jsx)("img", {
-                            className: h.image,
+                            className: m.image,
                             style: _,
                             src: s,
                             alt: "",
                         }),
                     }),
                 (0, r.jsxs)("div", {
-                    className: h.message,
+                    className: m.message,
                     children: [P, x, j],
                 }),
             ],

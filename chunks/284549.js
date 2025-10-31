@@ -1,62 +1,62 @@
-i.d(t, { default: () => C }), i(388685);
+i.d(e, { default: () => C }), i(388685);
 var n = i(951288),
     s = i(647438),
     a = i(442837),
     l = i(481060),
-    o = i(893776),
-    r = i(809206),
+    r = i(893776),
+    o = i(809206),
     h = i(704903),
     d = i(155433),
-    c = i(23434),
-    u = i(25990),
+    u = i(23434),
+    c = i(25990),
     m = i(594174),
-    g = i(1964),
-    p = i(981631),
+    p = i(1964),
+    g = i(981631),
     f = i(388032);
-let C = (e) => {
-    let { transitionState: t, onClose: i } = e,
-        C = (0, a.e7)([u.Z], () => u.Z.getErrors()),
-        v = (0, a.e7)([u.Z], () => u.Z.getFormState()),
+let C = (t) => {
+    let { transitionState: e, onClose: i } = t,
+        C = (0, a.e7)([c.Z], () => c.Z.getErrors()),
+        v = (0, a.e7)([c.Z], () => c.Z.getFormState()),
         y = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
-        x = (0, a.e7)([c.Z], () => c.Z.getAction()),
-        R = !g.Z.isEmailReverification(x),
-        [_, b] = s.useState(!0),
-        I = v === p.QZA.SUBMITTING;
-    function E(e) {
-        var t, i;
-        return null != (i = null == C || null == (t = C[e]) ? void 0 : t[0]) ? i : "";
+        _ = (0, a.e7)([u.Z], () => u.Z.getAction()),
+        x = !p.Z.isEmailReverification(_),
+        [b, j] = s.useState(!0),
+        R = v === g.QZA.SUBMITTING;
+    function E(t) {
+        var e, i;
+        return null != (i = null == C || null == (e = C[t]) ? void 0 : e[0]) ? i : "";
     }
-    let j = E("email"),
+    let I = E("email"),
         P = E("password");
     return (0, n.jsx)(h.Z, {
-        transitionState: t,
+        transitionState: e,
         email: null == y ? void 0 : y.email,
-        emailError: j,
+        emailError: I,
         passwordError: P,
-        submitting: I,
-        canResend: _ && !I && (null == y ? void 0 : y.email) != null && 0 === j.length && 0 === P.length,
-        canChange: R,
+        submitting: R,
+        canResend: b && !R && (null == y ? void 0 : y.email) != null && 0 === I.length && 0 === P.length,
+        canChange: x,
         onChangeEmailClick: function () {
-            b(!1);
+            j(!1);
         },
-        onVerify: function (e, t) {
-            (0, r.Mn)({
-                email: e,
-                password: t,
-            }).then((e) => {
-                if (!(null == e ? void 0 : e.ok)) {
-                    var t;
-                    (null == e || null == (t = e.body) ? void 0 : t.username) != null
+        onVerify: function (t, e) {
+            (0, o.Mn)({
+                email: t,
+                password: e,
+            }).then((t) => {
+                if (!(null == t ? void 0 : t.ok)) {
+                    var e;
+                    (null == t || null == (e = t.body) ? void 0 : e.username) != null
                         ? (0, d.P)()
                         : 0 === P.length &&
-                          0 === j.length &&
+                          0 === I.length &&
                           (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.R0RpRX), l.ToastType.FAILURE));
                 }
             }),
-                b(!0);
+                j(!0);
         },
         onResend: function () {
-            o.Z.verifyResend();
+            r.Z.verifyResend();
         },
         onClose: i,
     });

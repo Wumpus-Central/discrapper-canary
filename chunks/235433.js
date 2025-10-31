@@ -32,8 +32,8 @@ function v(e) {
         P = [];
     I && P.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
     let [w, D] = (0, c.US)(P),
-        L = w === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
-        x = (0, i.useCallback)(() => {
+        x = w === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+        L = (0, i.useCallback)(() => {
             D(E.L.TAKE_ACTION),
                 _.default.track(g.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
                 (0, d.I)({
@@ -44,15 +44,15 @@ function v(e) {
         M = (0, i.useCallback)(() => {
             (0, s.NI)(null), _.default.track(g.rMx.DISPLAY_NAME_STYLES_REMOVED);
         }, []),
-        k = (0, i.useCallback)(() => {
+        j = (0, i.useCallback)(() => {
             (0, f.N_)(null);
         }, []),
-        j = void 0 !== N || (null != n ? null != C : null != A);
-    if (!I && !j) return null;
+        k = void 0 !== N || (null != n ? null != C : null != A);
+    if (!I && !k) return null;
     let U = void 0 !== N ? N : C;
     return (0, r.jsx)(m.Z, {
         title: b.intl.string(y.default["86GtGH"]),
-        titleIcon: L
+        titleIcon: x
             ? (0, r.jsx)(o.IGR, {
                   text: b.intl.string(b.t.y2b7CA),
                   className: O.newBadge,
@@ -69,10 +69,10 @@ function v(e) {
                         variant: "primary",
                         size: "sm",
                         text: b.intl.string(y.default.vJqrIg),
-                        onClick: x,
+                        onClick: L,
                     }),
                 null == n &&
-                    j &&
+                    k &&
                     (0, r.jsx)(o.Button, {
                         variant: "secondary",
                         size: "sm",
@@ -85,7 +85,7 @@ function v(e) {
                         variant: "secondary",
                         size: "sm",
                         text: b.intl.string(y.default["j/KRxc"]),
-                        onClick: k,
+                        onClick: j,
                     }),
             ],
         }),

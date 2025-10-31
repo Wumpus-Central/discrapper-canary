@@ -10,11 +10,11 @@ var r = n(72924),
     d = n(186901),
     p = n(981631),
     f = n(474936);
-let h = [i.Z.RPC];
-function m(e, t) {
+let m = [i.Z.RPC];
+function h(e, t) {
     let n = {
         subscriptionTier: f.Si.TIER_2,
-        analyticsLocations: h,
+        analyticsLocations: m,
         analyticsObject: t,
     };
     switch (e) {
@@ -52,8 +52,8 @@ let g = {
                     let e = await (0, r.S)({
                         applicationId: l,
                         skuId: n,
-                        openPremiumPaymentModal: () => m(f, g),
-                        analyticsLocations: h,
+                        openPremiumPaymentModal: () => h(f, g),
+                        analyticsLocations: m,
                         analyticsLocationObject: g,
                         context: f,
                     });
@@ -87,7 +87,7 @@ let g = {
             if (((0, c.f)(t.transport), null == t.application.id))
                 throw new a.Z({ errorCode: p.lTL.INVALID_COMMAND }, "No application.");
             let { lock: r, context: i } = (0, u.jU)(t.transport !== d.He.POST_MESSAGE ? n : null);
-            return m(i, { page: p.ZY5.IN_APP }).then(
+            return h(i, { page: p.ZY5.IN_APP }).then(
                 () => {
                     r();
                 },

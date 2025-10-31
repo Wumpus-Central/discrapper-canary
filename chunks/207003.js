@@ -18,10 +18,10 @@ var r = n(951288),
     x = n(987509),
     v = n(131704),
     S = n(592125),
-    j = n(430824),
-    E = n(496675),
-    P = n(158776),
-    Z = n(306680),
+    E = n(430824),
+    j = n(496675),
+    Z = n(158776),
+    P = n(306680),
     _ = n(699516),
     O = n(594174),
     C = n(55935),
@@ -167,7 +167,7 @@ function U(e) {
     let a = T.ZP.useName(t),
         i = T.ZP.useUserTag(t, { decoration: "never" }),
         s = (0, c.e7)([_.Z], () => _.Z.getNickname(t.id)),
-        u = (0, c.e7)([P.Z], () => P.Z.getStatus(t.id));
+        u = (0, c.e7)([Z.Z], () => Z.Z.getStatus(t.id));
     return (0, r.jsx)(
         I,
         M(D({}, l), {
@@ -204,13 +204,13 @@ function F(e) {
 function H(e) {
     var { channel: t, subLabel: n } = e,
         l = A(e, ["channel", "subLabel"]);
-    let a = (0, c.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
+    let a = (0, c.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guild_id)),
         i = (0, p.ZP)(t),
         s = (0, c.e7)([S.Z, O.default, _.Z], () => {
             let e = S.Z.getChannel(t.parent_id);
             return null == e ? null : (0, p.F6)(e, O.default, _.Z, !1);
         }),
-        o = (0, c.e7)([Z.ZP], () => Z.ZP.lastMessageTimestamp(t.id, w.W.CHANNEL)),
+        o = (0, c.e7)([P.ZP], () => P.ZP.lastMessageTimestamp(t.id, w.W.CHANNEL)),
         f = null == a ? void 0 : a.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
@@ -292,7 +292,7 @@ function q(e) {
                             (0, v.Km)(e.type) &&
                             null != e.rateLimitPerUser &&
                             e.rateLimitPerUser > 0 &&
-                            !(E.Z.can(N.Plq.MANAGE_CHANNELS, e) || E.Z.can(N.Plq.MANAGE_MESSAGES, e))
+                            !(j.Z.can(N.Plq.MANAGE_CHANNELS, e) || j.Z.can(N.Plq.MANAGE_MESSAGES, e))
                         )
                             return { label: R.intl.string(R.t.Icu3bf) };
                     })(u),

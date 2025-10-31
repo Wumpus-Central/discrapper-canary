@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(592125),
     d = n(984933),
     p = n(496675),
-    f = n(98597),
-    h = n(473403),
+    h = n(98597),
+    f = n(473403),
     g = n(981631),
     m = n(490897),
     b = n(55940);
@@ -20,12 +20,12 @@ let _ = (0, c.B)(function (e) {
             selectedChannelId: l,
             position: c,
             disableManageChannels: _,
-            sorting: O,
-            sortingType: y,
-            sortingPosition: j,
-            connectChannelDragSource: v,
-            connectChannelDropTarget: x,
-            tabIndex: C,
+            sorting: y,
+            sortingType: O,
+            sortingPosition: v,
+            connectChannelDragSource: j,
+            connectChannelDropTarget: C,
+            tabIndex: x,
         } = e,
         E = (0, a.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
@@ -91,15 +91,15 @@ let _ = (0, c.B)(function (e) {
             [E],
         );
     if (null == E) return null;
-    let Z = (0, f.jo)(c, j),
-        T = (0, f.CN)(E, O, y),
-        w = (0, r.jsx)("div", {
+    let Z = (0, h.jo)(c, v),
+        w = (0, h.CN)(E, y, O),
+        T = (0, r.jsx)("div", {
             className: o()(Z, {
-                [b.disabled]: T,
+                [b.disabled]: w,
                 [b.selected]: I,
             }),
             "data-dnd-name": E.name,
-            children: (0, r.jsxs)(h.ZP, {
+            children: (0, r.jsxs)(f.ZP, {
                 className: b.iconVisibility,
                 channel: E,
                 guild: t,
@@ -108,17 +108,17 @@ let _ = (0, c.B)(function (e) {
                 forceInteractable: !0,
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
                 children: [
-                    (0, r.jsx)(f.eP, {
+                    (0, r.jsx)(h.eP, {
                         channel: E,
-                        tabIndex: C,
+                        tabIndex: x,
                     }),
-                    (0, r.jsx)(f.hR, {
+                    (0, r.jsx)(h.hR, {
                         channel: E,
                         disableManageChannels: _,
-                        tabIndex: C,
+                        tabIndex: x,
                     }),
                 ],
             }),
         });
-    return P && (w = x(v(w))), w;
+    return P && (T = C(j(T))), T;
 });

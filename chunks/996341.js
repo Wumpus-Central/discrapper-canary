@@ -1,27 +1,27 @@
-t.d(l, { n: () => i });
-var a = t(951288),
-    n = t(793030),
-    o = t(525605);
-let i = {
+n.d(t, { n: () => o });
+var r = n(951288),
+    i = n(793030),
+    a = n(525605);
+let o = {
     title: "HelpMessage",
     stories: [
         {
             name: "HelpMessage",
             id: "help-message",
             component: function (e) {
-                let { text: l } = e;
-                return (0, a.jsx)(n.Kqy, {
+                let { text: t } = e;
+                return (0, r.jsx)(i.Kqy, {
                     gap: 16,
-                    children: Object.values(o.Q).map((e) =>
-                        (0, a.jsx)(
-                            n.gNt,
+                    children: Object.values(a.Q).map((e) =>
+                        (0, r.jsx)(
+                            i.gNt,
                             {
                                 label: e,
-                                children: (0, a.jsx)(
-                                    o.W,
+                                children: (0, r.jsx)(
+                                    a.W,
                                     {
                                         messageType: e,
-                                        children: l,
+                                        children: t,
                                     },
                                     e,
                                 ),

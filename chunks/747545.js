@@ -77,7 +77,7 @@ function D(e) {
         { analyticsLocations: N } = (0, f.ZP)(),
         { id: w } = (0, p.p6)(I.h7.VIDEO_INPUT),
         D = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
-        L = m.qF.useSetting();
+        x = m.qF.useSetting();
     return (0, r.jsxs)(c.Kqy, {
         gap: 20,
         children: [
@@ -95,7 +95,7 @@ function D(e) {
                 : (0, r.jsx)(c.rsf, {
                       label: T.intl.string(T.t["3Ppr1h"]),
                       description: T.intl.string(T.t.WNbX4O),
-                      checked: L,
+                      checked: x,
                       onChange: (e) => {
                           m.qF.updateSetting(e),
                               b.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });

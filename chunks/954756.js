@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(809206),
-    s = n(852860),
+    o = n(796027),
+    s = n(809206),
     l = n(321114),
     c = n(164946),
     u = n(350327),
@@ -32,21 +32,21 @@ function g() {
             var e, t, n, r, i;
             g(!0);
             let a = f.Z.getAllPending(),
-                s = (0, c.ED)(a),
+                o = (0, c.ED)(a),
                 m = (0, c.g9)(a),
                 E = (0, c.jE)(a),
                 b = !0;
-            if (Object.keys(s).length > 0) {
-                let r = await (0, o.Mn)(s);
+            if (Object.keys(o).length > 0) {
+                let r = await (0, s.Mn)(o);
                 if (((b = b && null != (t = null == r ? void 0 : r.ok) && t), null == r ? void 0 : r.ok)) {
                     let e = r.body;
                     void 0 !== a.pendingAvatar &&
                         (0, d.Z)({
                             avatarHash: e.avatar,
-                            avatarId: s.avatarId,
+                            avatarId: o.avatarId,
                             avatarAssetOrigin: null == (n = a.pendingAvatar) ? void 0 : n.assetOrigin,
                         }),
-                        (0, o.si)();
+                        (0, s.si)();
                 } else (null == r || null == (e = r.body) ? void 0 : e.username) != null && (0, h.P)();
             }
             if (Object.keys(m).length > 0) {
@@ -56,7 +56,7 @@ function g() {
             }
             if (void 0 !== a.pendingLegacyUsernameDisabled)
                 try {
-                    await _.R_.updateSetting(a.pendingLegacyUsernameDisabled), (0, o.iR)();
+                    await _.R_.updateSetting(a.pendingLegacyUsernameDisabled), (0, s.iR)();
                 } catch (e) {
                     (0, p.r)(), (b = !1);
                 }
@@ -65,15 +65,15 @@ function g() {
                 if (void 0 !== e) {
                     let t = await (0, l.c)(e, null !== e);
                     (b = b && null != (i = null == t ? void 0 : t.ok) && i),
-                        (null == t ? void 0 : t.ok) ? (0, o.OU)() : (0, p.r)();
+                        (null == t ? void 0 : t.ok) ? (0, s.OU)() : (0, p.r)();
                 }
             }
-            b && (0, o.b9)(), g(!1);
+            b && (0, s.b9)(), g(!1);
         }, []),
         y = i.useCallback(() => {
-            (0, o.W3)();
+            (0, s.W3)();
         }, []);
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(o.Z, {
         submitting: n,
         onSave: b,
         onReset: y,

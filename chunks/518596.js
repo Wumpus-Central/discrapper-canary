@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         USER_SETTINGS_MODAL_KEY: () => b,
-        getUserSettingsSectionsByWebUserSettings: () => S,
+        getUserSettingsSectionsByWebUserSettings: () => T,
         getWebUserSettingsByUserSettingsSections: () => I,
         openUserSettings: () => y,
-        openUserSettingsFromParsedUrl: () => T,
+        openUserSettingsFromParsedUrl: () => S,
     }),
     n(388685),
     n(35282);
@@ -111,7 +111,7 @@ async function y(e) {
                 ? l.Z.setState({ targetKey: e })
                 : await (0, i.ZDy)(
                       async () => {
-                          let { default: t } = await Promise.all([n.e("9452"), n.e("75685")]).then(n.bind(n, 245286));
+                          let { default: t } = await Promise.all([n.e("9452"), n.e("81014")]).then(n.bind(n, 245286));
                           return (n) => (0, r.jsx)(t, m(p({}, n), { target: e }));
                       },
                       {
@@ -175,13 +175,13 @@ function I() {
         [f.oAB.DEVELOPER_OPTIONS, u.n.DEVELOPER_OPTIONS_PANEL],
     ]);
 }
-function S() {
+function T() {
     let e = I(),
         t = new Map();
     for (let [n, r] of e.entries()) t.set(r, n);
     return t;
 }
-function T(e) {
+function S(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
     O({
         section: t.section,

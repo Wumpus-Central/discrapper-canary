@@ -22,8 +22,8 @@ var r = n(951288),
     y = n(153867),
     C = n(410575),
     v = n(393238),
-    x = n(110924),
-    O = n(636449),
+    O = n(110924),
+    x = n(636449),
     E = n(115130),
     j = n(566620),
     S = n(317381),
@@ -76,8 +76,8 @@ var r = n(951288),
     ey = n(998502),
     eC = n(228488),
     ev = n(358221),
-    ex = n(414910),
-    eO = n(887012),
+    eO = n(414910),
+    ex = n(887012),
     eE = n(909820),
     ej = n(493010),
     eS = n(742603),
@@ -272,7 +272,7 @@ class ez extends i.PureComponent {
             y = h === eL.AEg.MINIMUM,
             C = y || h === eL.AEg.NORMAL,
             v = l && o === eL.WtW.VIDEO,
-            x = (null != (t = null == b ? void 0 : b.length) ? t : 0) > 0 && p.isPrivate();
+            O = (null != (t = null == b ? void 0 : b.length) ? t : 0) > 0 && p.isPrivate();
         return (
             (this._lastIdleProps = e),
             (0, r.jsx)(
@@ -311,7 +311,7 @@ class ez extends i.PureComponent {
                                       mode: o,
                                       onSelectParticipant: this.handleSelectParticipant,
                                       onContextMenuParticipant: this.handleContextMenu,
-                                      showParticipants: s && (!C || x),
+                                      showParticipants: s && (!C || O),
                                       popoutType: n,
                                       awaitingRemoteSessionInfo: g,
                                       callContainerDimensions: _,
@@ -648,7 +648,7 @@ class ez extends i.PureComponent {
                         let n = e.getGuildId();
                         null != n && (0, V.uL)((0, eg.LY)(n)), B.hP(e);
                     };
-                null == t || (0, O.R)() ? n() : (0, I.Z)({ onConfirm: n });
+                null == t || (0, x.R)() ? n() : (0, I.Z)({ onConfirm: n });
             }),
             eB(this, "handleStayOnTop", (e) => {
                 (0, ew.v)(Z.Z.VOICE_CONTROL_TRAY, ew.d.STAY_ON_TOP, e), B.hY(eL.KJ3.CHANNEL_CALL_POPOUT, e);
@@ -792,7 +792,7 @@ class ez extends i.PureComponent {
                     children: [
                         null != i && i.type !== eD.fO.ACTIVITY && i.user.id !== n
                             ? (0, r.jsx)(er.Z, {
-                                  context: (0, ex.Z)(i.type),
+                                  context: (0, eO.Z)(i.type),
                                   userId: i.user.id,
                                   currentWindow: this.inPopout ? (null != e ? e : void 0) : window,
                                   sliderClassName: eU.volumeSlider,
@@ -901,10 +901,10 @@ let eq = function (e) {
         { width: h = 0, height: m = 0, ref: g } = (0, v.ZP)(),
         { ref: b } = (0, v.ZP)(),
         _ = (0, U.bp)(),
-        O = (0, D.Z)(),
+        x = (0, D.Z)(),
         j = (0, u.e7)([ep.Z], () => {
             var e;
-            return (null != (e = null == O ? void 0 : O.channelId) ? e : ep.Z.getVoiceChannelId()) === n.id;
+            return (null != (e = null == x ? void 0 : x.channelId) ? e : ep.Z.getVoiceChannelId()) === n.id;
         }),
         {
             participants: I,
@@ -960,7 +960,7 @@ let eq = function (e) {
         ei = null != (t = null == q ? void 0 : q.id) ? t : null,
         ef = (0, P.Z)(ei, n.id),
         eh = (0, u.e7)([E.Z], () => E.Z.getFetchState(), []),
-        em = (0, x.Z)(eh);
+        em = (0, O.Z)(eh);
     i.useEffect(() => {
         eh === E.O.ERROR &&
             em !== E.O.ERROR &&
@@ -981,15 +981,15 @@ let eq = function (e) {
             }
         );
     }, [j, w]);
-    let eb = (0, eO.Z)(n, !0),
+    let eb = (0, ex.Z)(n, !0),
         { hasParticipantsPanel: e_ } = (0, eZ.Z)({ location: "ChannelCall" }),
         eC = (0, M.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
-        { analyticsLocations: ex } = (0, N.ZP)(Z.Z.CHANNEL_CALL),
+        { analyticsLocations: eO } = (0, N.ZP)(Z.Z.CHANNEL_CALL),
         ej = c - eD.oo,
         eS = S.ZP.getEmbeddedActivitiesForChannel(n.id),
         { theme: eP } = (0, f.TCT)();
     return (0, r.jsx)(N.Gt, {
-        value: ex,
+        value: eO,
         children: (0, r.jsx)(C.Z, {
             page: eL.ZY5.CHANNEL_CALL,
             children: (0, r.jsx)(eE.B2, {

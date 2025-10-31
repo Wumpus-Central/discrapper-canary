@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(415506);
+n.d(t, { Z: () => L }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     a = n(913527),
@@ -114,7 +114,7 @@ class D extends i.PureComponent {
             });
     }
 }
-class L extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidMount() {
         this._loadedAt = Date.now();
     }
@@ -275,7 +275,7 @@ class L extends i.PureComponent {
             });
     }
 }
-let x = s.ZP.connectStores([O.Z, b.Z, E.Z, _.Z, y.Z, g.default], (e) => {
+let L = s.ZP.connectStores([O.Z, b.Z, E.Z, _.Z, y.Z, g.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: r } = e,
         i = O.Z.get(t);
     if (null == i) throw Error("SKU was unavailable while rendering gift.");
@@ -291,4 +291,4 @@ let x = s.ZP.connectStores([O.Z, b.Z, E.Z, _.Z, y.Z, g.default], (e) => {
         subscriptionPlan: null != n ? (0, S.oE)(n) : null,
         giftCodes: a,
     };
-})(L);
+})(x);

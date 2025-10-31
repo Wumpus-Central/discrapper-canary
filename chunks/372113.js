@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -87,7 +87,7 @@ let M = (e, t, n) =>
           : "sm" === t
             ? "text-sm/medium"
             : "text-xs/medium";
-function k(e) {
+function j(e) {
     let { containerSize: t, onClick: n, text: i, tabIndex: a } = e;
     return "xs" === t
         ? (0, r.jsx)(u.P3F, {
@@ -109,7 +109,7 @@ function k(e) {
               text: i,
           });
 }
-function j(e) {
+function k(e) {
     var t, n, r, i, a;
     let {
             quest: o,
@@ -206,7 +206,7 @@ function U(e) {
                       })
                     : (0, r.jsx)(
                           u.Button,
-                          x(D({}, e), {
+                          L(D({}, e), {
                               fullWidth: !0,
                               variant: "primary",
                               disabled: null == b.onClick,
@@ -231,7 +231,7 @@ function G(e) {
               className: o()({ [P.fullWidthShinyCtaButtonWrapper]: d }),
               children: (0, r.jsx)(
                   u.gtL,
-                  x(D({}, a), {
+                  L(D({}, a), {
                       "data-migration-pending": !0,
                       fullWidth: !0,
                       wrapperClassName: P.ctaButtonWrapper,
@@ -244,7 +244,7 @@ function G(e) {
           })
         : (0, r.jsx)(
               u.Button,
-              x(D({}, a), {
+              L(D({}, a), {
                   fullWidth: !0,
                   variant: "primary",
                   disabled: null == i.onClick,
@@ -273,8 +273,8 @@ let B = (e) => {
             day: "numeric",
         }),
         D = N >= g.OH.ACCEPTED,
-        L = N >= g.OH.COMPLETED,
-        x = (0, m.Xv)(n.config),
+        x = N >= g.OH.COMPLETED,
+        L = (0, m.Xv)(n.config),
         G = p || y,
         B = (0, g.t5)(n, C.dr.QUESTS_CARD, a, A),
         Z = (0, h.O5)(),
@@ -302,7 +302,7 @@ let B = (e) => {
                 });
         },
         K = (0, s.e7)([f.default], () => f.default.locale),
-        z = _ && !L;
+        z = _ && !x;
     return (0, r.jsx)("div", {
         className: P.root,
         children: (0, r.jsxs)("div", {
@@ -354,7 +354,7 @@ let B = (e) => {
                         (0, r.jsx)(u.Text, {
                             variant: "lg" === c ? "text-sm/medium" : "text-xs/medium",
                             color: "text-muted",
-                            children: j({
+                            children: k({
                                 quest: n,
                                 locale: K,
                                 isQuestExpired: _,
@@ -389,7 +389,7 @@ let B = (e) => {
                           justify: "end",
                           fullWidth: "lg" !== c,
                           children: [
-                              (0, r.jsx)(k, {
+                              (0, r.jsx)(j, {
                                   containerSize: c,
                                   onClick: W,
                                   text: R.intl.string(R.t.LLLLPD),
@@ -398,7 +398,7 @@ let B = (e) => {
                                   (0, r.jsx)(U, {
                                       quest: n,
                                       progressState: N,
-                                      isCollectibleQuest: x,
+                                      isCollectibleQuest: L,
                                       questContent: a,
                                       sourceQuestContent: A,
                                   }),

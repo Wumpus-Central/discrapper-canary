@@ -1,10 +1,10 @@
 n.d(t, { Z: () => h });
 var a = n(951288),
-    r = n(442837),
+    i = n(442837),
     l = n(907862),
-    i = n(607070),
-    o = n(100527),
-    s = n(314897),
+    r = n(607070),
+    s = n(100527),
+    o = n(314897),
     c = n(172416),
     d = n(892001),
     u = n(228168),
@@ -12,15 +12,15 @@ var a = n(951288),
     p = n(388032);
 function h(e) {
     let { targetElementRef: t, markAsDismissed: n, children: h } = e,
-        x = (0, r.e7)([s.default], () => s.default.getId()),
-        f = (0, r.e7)([i.Z], () => i.Z.useReducedMotion),
-        b = (0, c.bg)({ location: "GameWidgetsPopover" });
+        x = (0, i.e7)([o.default], () => o.default.getId()),
+        g = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
+        f = (0, c.bg)({ location: "GameWidgetsPopover" });
     return (0, a.jsxs)(a.Fragment, {
         children: [
             h,
             (0, a.jsx)(l.J2, {
                 targetElementRef: t,
-                badge: b
+                badge: f
                     ? {
                           type: "early_access",
                           variant: "expressive",
@@ -31,7 +31,7 @@ function h(e) {
                 caretConfig: { align: "start" },
                 graphic: {
                     type: "image",
-                    src: f
+                    src: g
                         ? "https://cdn.discordapp.com/assets/content/1b55390a202dcca3843b6c9205af0379cfa072f34d8b9217bce04aba4d373e5b.png"
                         : "https://cdn.discordapp.com/assets/content/fdb6d4e8a2f01f917d2025a8ca58ebd55e4eada92df1d5386f73d91d6acad1f9.png",
                 },
@@ -50,7 +50,7 @@ function h(e) {
                             n(m.L.TAKE_ACTION),
                                 (0, d.openUserProfileModal)({
                                     userId: x,
-                                    sourceAnalyticsLocations: [o.Z.ACCOUNT],
+                                    sourceAnalyticsLocations: [s.Z.ACCOUNT],
                                     hideRestrictedProfile: !0,
                                     section: u.oh.WIDGETS,
                                 });

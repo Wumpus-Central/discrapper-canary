@@ -25,19 +25,19 @@ var r,
     v = n(906732),
     I = n(168551),
     T = n(260035),
-    S = n(628123),
-    A = n(686546),
-    C = n(950796),
-    N = n(587061),
+    S = n(686546),
+    A = n(950796),
+    C = n(587061),
+    N = n(248687),
     R = n(280049),
     P = n(314910),
     w = n(728285),
     D = n(22205),
-    L = n(746106),
-    x = n(892071),
+    x = n(746106),
+    L = n(892071),
     M = n(358085),
-    k = n(62883),
-    j = n(998502),
+    j = n(62883),
+    k = n(998502),
     U = n(473159),
     G = n(928518),
     B = n(981631),
@@ -109,8 +109,8 @@ class z extends (r = a.Component) {
             (0, U.O)(e),
             e.addEventListener("blur", this.handleBlur),
             M.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", k.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", k.contextMenuCallbackWeb, !1),
+                ? t.addEventListener("contextmenu", j.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", j.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds();
     }
@@ -124,8 +124,8 @@ class z extends (r = a.Component) {
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
             M.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", k.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", k.contextMenuCallbackWeb),
+                ? t.removeEventListener("contextmenu", j.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", j.contextMenuCallbackWeb),
             (0, d.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
@@ -179,10 +179,10 @@ class z extends (r = a.Component) {
                 withTitleBar: a,
                 isFullScreen: r,
             }),
-            E = n === Z.$J ? D.Z : S.Z;
+            E = n === Z.$J ? D.Z : N.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
-                L.w,
+                x.w,
                 {
                     windowKey: n,
                     themeOverride: d,
@@ -195,7 +195,7 @@ class z extends (r = a.Component) {
                                     className: l,
                                     children: (0, i.jsxs)(E, {
                                         children: [
-                                            (0, i.jsx)(A.Co, {}),
+                                            (0, i.jsx)(S.Co, {}),
                                             (0, i.jsx)(w.Wu, {
                                                 appContext: null != m ? m : B.IlC.POPOUT,
                                                 renderWindow: o,
@@ -205,7 +205,7 @@ class z extends (r = a.Component) {
                                                             (0, i.jsxs)("div", {
                                                                 className: F.popout,
                                                                 children: [
-                                                                    g && (0, i.jsx)(C.TF, { windowKey: n }),
+                                                                    g && (0, i.jsx)(A.TF, { windowKey: n }),
                                                                     (0, i.jsx)("div", {
                                                                         className: s()(F.content, c),
                                                                         children: t,
@@ -240,7 +240,7 @@ class z extends (r = a.Component) {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
                         G.Z.unmountWindow(this.props.windowKey),
-                            M.isPlatformEmbedded && j.ZP.close(this.props.windowKey);
+                            M.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
                     };
                 null != t
                     ? t({
@@ -258,7 +258,7 @@ class z extends (r = a.Component) {
 V(z, "defaultProps", { withTitleBar: !0 });
 let q = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: o } = e,
-            { lang: l, style: u, className: d } = (0, x.vP)();
+            { lang: l, style: u, className: d } = (0, L.vP)();
         return (
             a.useEffect(() => {
                 let e = n.document.documentElement;
@@ -286,7 +286,7 @@ let q = a.forwardRef(function (e, t) {
             forcedColors: E.Z.useForcedColors ? "yes" : "no",
             connectedEmbeddedActivity: y.ZP.getCurrentEmbeddedActivity(),
         }));
-        (0, N.Z)(n, !1);
+        (0, C.Z)(n, !1);
         let { analyticsLocations: s } = (0, v.ZP)(O.Z.POPOUT_WINDOW),
             { clientThemesClassName: l, clientThemesCSS: u } = (0, I.ZP)();
         return null == n

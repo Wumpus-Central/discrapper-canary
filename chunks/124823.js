@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(899007),
     y = n(648052),
     x = n(867176),
-    v = n(280885),
+    O = n(280885),
     j = n(900927),
-    O = n(678738),
+    v = n(678738),
     C = n(502762),
     I = n(530),
     S = n(679332),
@@ -133,17 +133,17 @@ function w(e) {
                                     (0, r.jsxs)(C.Z.Overlay, {
                                         className: N.overlay,
                                         children: [
-                                            (0, r.jsx)(O.Z, {
+                                            (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(v.Z, {
+                                                children: (0, r.jsx)(O.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
                                                     userId: n.id,
                                                     animateOnHoverOrFocusOnly: !0,
                                                     isHoveringOrFocusing: H,
                                                 }),
                                             }),
-                                            (0, r.jsx)(O.Z, {
+                                            (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["A//N4k"]),
                                                 headingColor: "header-primary",
                                                 children: (0, r.jsx)(j.Z, { userId: n.id }),

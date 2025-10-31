@@ -1,4 +1,4 @@
-r.d(n, { Z: () => b });
+r.d(n, { Z: () => h });
 var t = r(951288);
 r(647438);
 var i = r(442837),
@@ -10,7 +10,7 @@ var i = r(442837),
     c = r(594174),
     u = r(388032),
     m = r(452438);
-function h(e) {
+function p(e) {
     let { color: n, className: r } = e;
     return (0, t.jsx)("svg", {
         className: r,
@@ -43,7 +43,7 @@ function h(e) {
         }),
     });
 }
-function b(e, n) {
+function h(e, n) {
     let r = (0, i.e7)([c.default], () => c.default.getCurrentUser());
     return null == r || n.ownerId !== r.id || e.id === r.id
         ? null
@@ -53,7 +53,7 @@ function b(e, n) {
               label: u.intl.string(u.t["6t3CyN"]),
               action: () => {
                   (0, o.h7j)((i) => {
-                      var c, b;
+                      var c, h;
                       return (0, t.jsxs)(
                           o.ConfirmModal,
                           ((c = (function (e) {
@@ -90,10 +90,10 @@ function b(e, n) {
                               },
                               i,
                           )),
-                          (b = b =
+                          (h = h =
                               {
                                   children: [
-                                      (0, t.jsx)(h, { color: s.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, t.jsx)(p, { color: s.Z.unsafe_rawColors.PRIMARY_300.css }),
                                       (0, t.jsxs)("div", {
                                           className: m.fromToWrapper,
                                           children: [
@@ -138,7 +138,7 @@ function b(e, n) {
                                   ],
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(b))
+                              ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(h))
                               : (function (e, n) {
                                     var r = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -146,8 +146,8 @@ function b(e, n) {
                                         r.push.apply(r, t);
                                     }
                                     return r;
-                                })(Object(b)).forEach(function (e) {
-                                    Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(b, e));
+                                })(Object(h)).forEach(function (e) {
+                                    Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(h, e));
                                 }),
                           c),
                       );

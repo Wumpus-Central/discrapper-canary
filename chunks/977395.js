@@ -2,11 +2,11 @@ n.d(t, { f: () => c });
 var r = n(870289),
     l = n(587792),
     i = n(483942),
-    o = n(91641),
-    s = n(166350),
-    a = n(987338);
-let c = new o.E(
-    [s.NR, s.ZI, s.Ob, s.uc, s.m1, i.Jg, i.zk, i.xs, i.d3, i.nS, i.OP, l.g, r.KS],
-    a.$P.COLLECTIBLES_SHOP_OPEN,
+    s = n(91641),
+    a = n(166350),
+    o = n(987338);
+let c = new s.E(
+    [a.NR, a.ZI, a.Ob, a.uc, a.m1, i.Jg, i.zk, i.xs, i.d3, i.nS, i.OP, l.g, r.KS],
+    o.$P.COLLECTIBLES_SHOP_OPEN,
     { location: "collectibles shop open" },
 );

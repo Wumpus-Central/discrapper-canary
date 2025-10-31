@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -214,7 +214,7 @@ class D extends (r = i.ZP.Store) {
     }
 }
 d(D, "displayName", "SearchMessageStore");
-let L = new D(a.Z, {
+let x = new D(a.Z, {
     SEARCH_MESSAGES_START: O,
     SEARCH_MESSAGES_SUCCESS: v,
     SEARCH_MESSAGES_INDEXING: N,

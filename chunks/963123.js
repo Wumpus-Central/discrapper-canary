@@ -41,7 +41,7 @@ var r = n(951288),
     U = n(981631),
     q = n(217702),
     H = n(388032),
-    Y = n(946232);
+    Y = n(430799);
 let Q = new Set([U.IyS.FIVE_G, U.IyS.FOUR_G, U.IyS.UNKNOWN]),
     G = {
         tension: 250,
@@ -182,13 +182,13 @@ function X(e) {
         e2 = (0, d.e7)([v.Z], () => v.Z.useReducedMotion),
         e8 = (0, o.useRef)(null),
         e4 = (0, o.useRef)(null),
-        e6 = o.useRef(!0),
-        e7 = (null == (t = J.userStatus) ? void 0 : t.completedAt) != null,
+        e7 = o.useRef(!0),
+        e6 = (null == (t = J.userStatus) ? void 0 : t.completedAt) != null,
         [e9, e3] = o.useState(null),
         [e5, te] = o.useState(!1),
         [tt, tn] = o.useState(!1),
         [tr, to] = o.useState(null),
-        tl = e7
+        tl = e6
             ? null != (w = null == (n = e8.current) ? void 0 : n.duration)
                 ? w
                 : 0
@@ -218,16 +218,16 @@ function X(e) {
                         : H.intl.string(H.t.mxaHfx),
             };
         })(J),
-        tc = e7
+        tc = e6
             ? eJ.timestampSec >= eJ.duration
                 ? 0
                 : eJ.timestampSec
             : Math.max(eJ.timestampSec, ej.progressSeconds);
     (0, f.Ng)(() => {
-        e6.current &&
-            ((e6.current = !1),
+        e7.current &&
+            ((e7.current = !1),
             eV(b.Z.getEffectiveConnectionSpeed()),
-            e7 && eJ.timestampSec >= eJ.duration && e$(J.id, 0, eJ.duration));
+            e6 && eJ.timestampSec >= eJ.duration && e$(J.id, 0, eJ.duration));
     });
     let {
             videoVariant: tu,
@@ -384,19 +384,19 @@ function X(e) {
     let tM = o.useCallback(
         (e) => {
             var t;
-            e7 ||
+            e6 ||
                 (null == (t = J.userStatus) ? void 0 : t.enrolledAt) == null ||
                 (ti.info("[QV] sendServerProgressUpdate: ".concat(e)), (0, y.FI)(J, e)),
                 tE();
         },
-        [e7, J, ti, tE],
+        [e6, J, ti, tE],
     );
     o.useEffect(() => {
         (er !== p.Dvm.HIDDEN &&
             er !== p.Dvm.EXITING &&
             er !== p.Dvm.EXITED &&
-            (null == er || !eg || eE || e7) &&
-            (!ev || ef || e7)) ||
+            (null == er || !eg || eE || e6) &&
+            (!ev || ef || e6)) ||
             null == e8.current ||
             eb !== A.rq.PLAYING ||
             (ti.info(
@@ -405,11 +405,11 @@ function X(e) {
                     .concat(er, ", visible: ")
                     .concat(eE, ", focused: ")
                     .concat(ef, ", isQuestCompleted: ")
-                    .concat(e7),
+                    .concat(e6),
             ),
             tA(A.rq.PAUSED),
-            e7 || e3(j.yE.LOST_FOCUS));
-    }, [er, ef, ev, eE, eg, eb, e7, tA, tM, ti]);
+            e6 || e3(j.yE.LOST_FOCUS));
+    }, [er, ef, ev, eE, eg, eb, e6, tA, tM, ti]);
     let [tV, tZ] = o.useState(!1),
         tB = o.useRef(null),
         tF = o.useRef(performance.now()),
@@ -570,14 +570,14 @@ function X(e) {
             },
         })),
         t8 = (0, o.useRef)(null),
-        [{ captionHeightSpring: t4 }, t6] = (0, p.q_F)(() => ({
+        [{ captionHeightSpring: t4 }, t7] = (0, p.q_F)(() => ({
             from: { captionHeightSpring: 0 },
             config: G,
         }));
     o.useEffect(() => {
         var e, t;
         return (
-            t6({
+            t7({
                 captionHeightSpring:
                     eu && null != tr && null != (t = null == (e = t8.current) ? void 0 : e.clientHeight) ? t : 0,
                 immediate: e2,
@@ -586,7 +586,7 @@ function X(e) {
                 t4.stop();
             }
         );
-    }, [eu, t6, e2, tr, t4]),
+    }, [eu, t7, e2, tr, t4]),
         o.useEffect(
             () => (
                 t2({
@@ -599,7 +599,7 @@ function X(e) {
             ),
             [tH, t2, e2, eq, t1],
         );
-    let t7 = eb === A.rq.ENDED,
+    let t6 = eb === A.rq.ENDED,
         t9 = o.useCallback(
             async (e) => {
                 if (em) {
@@ -623,7 +623,7 @@ function X(e) {
         ),
         t3 = o.useMemo(() => (0, R.z0)(J, u.X.WATCH_VIDEO, R.n1.VIDEO, R.O.THUMBNAIL), [J]),
         t5 = o.useMemo(() => (0, R.z0)(J, u.X.WATCH_VIDEO, R.n1.VIDEO, R.O.CAPTION), [J]),
-        ne = e7 || eJ.maxTimestampSec >= (null != (V = null == (m = e8.current) ? void 0 : m.currentTime) ? V : 0) + 1,
+        ne = e6 || eJ.maxTimestampSec >= (null != (V = null == (m = e8.current) ? void 0 : m.currentTime) ? V : 0) + 1,
         nt = o.useMemo(() => null === (0, R.z0)(J, u.X.WATCH_VIDEO, R.n1.VIDEO, R.O.TRANSCRIPT), [J]);
     return (0, r.jsx)(p.P3F, {
         className: Y.videoCont,
@@ -643,12 +643,12 @@ function X(e) {
                 [Y.videoContInnerRelativeLandscape]: "landscape" === ea,
             }),
             children: [
-                t7 &&
+                t6 &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(z, {
                                 quest: J,
-                                shouldShow: t7,
+                                shouldShow: t6,
                                 sourceQuestContent: ei,
                             }),
                             (0, r.jsx)("div", { className: Y.videoContOverlay }),
@@ -669,7 +669,7 @@ function X(e) {
                     playsInline: !0,
                     mediaLayoutType: em ? q.hV.STATIC : q.hV.RESPONSIVE,
                     className: i()({
-                        [Y.hidden]: t7,
+                        [Y.hidden]: t6,
                         [Y.videoInner]: !0,
                     }),
                     controls: !1,
@@ -894,8 +894,8 @@ function X(e) {
                     children: [
                         (0, r.jsx)(k.Z, {
                             percent: null != eG ? eG : ex,
-                            animate: !0 !== e6.current && !eP,
-                            interactionEnabled: e7 && eY,
+                            animate: !0 !== e7.current && !eP,
+                            interactionEnabled: e6 && eY,
                             backgroundColor: tH ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: tH ? eL : void 0,
                             duration: null != (X = null == (g = e8.current) ? void 0 : g.duration) ? X : 1,

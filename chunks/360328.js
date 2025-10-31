@@ -1,6 +1,6 @@
 n.d(t, { s: () => p }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(287734),
@@ -8,16 +8,16 @@ var i = n(951288),
     c = n(693546),
     u = n(246364),
     d = n(388032);
-function p(e, t, p, h) {
-    let [f, m] = r.useState(!1),
-        g = (0, l.e7)([s.Z], () => s.Z.getChannel(h)),
-        b = r.useCallback(() => {
+function p(e, t, p, f) {
+    let [h, m] = i.useState(!1),
+        g = (0, l.e7)([s.Z], () => s.Z.getChannel(f)),
+        b = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(d.intl.string(d.t.R0RpRX), a.ToastType.FAILURE));
         }, []),
-        C = r.useCallback(async () => {
-            if (!f && null != e && null != t && null != p) {
+        _ = i.useCallback(async () => {
+            if (!h && null != e && null != t && null != p) {
                 if (null != g) return void o.default.selectPrivateChannel(g.id);
-                if (!f) {
+                if (!h) {
                     m(!0);
                     try {
                         await c.Z.createOrEnterJoinRequestInterview(p);
@@ -28,10 +28,10 @@ function p(e, t, p, h) {
                     }
                 }
             }
-        }, [e, p, g, b, f, t]);
+        }, [e, p, g, b, h, t]);
     return {
         approveRequest: async () => {
-            if (!f && null != e && null != t && null != p) {
+            if (!h && null != e && null != t && null != p) {
                 m(!0);
                 try {
                     await c.Z.updateGuildJoinRequest(e, t, p, u.wB.APPROVED);
@@ -47,9 +47,9 @@ function p(e, t, p, h) {
                 null != t &&
                 null != p &&
                 (0, a.ZDy)(async () => {
-                    let { default: r } = await n.e("56496").then(n.bind(n, 113886));
+                    let { default: i } = await n.e("56496").then(n.bind(n, 113886));
                     return (n) =>
-                        (0, i.jsx)(r, {
+                        (0, r.jsx)(i, {
                             modalProps: n,
                             guildId: e,
                             userId: t,
@@ -58,7 +58,7 @@ function p(e, t, p, h) {
                         });
                 });
         },
-        submitting: f,
-        handleOpenInterview: C,
+        submitting: h,
+        handleOpenInterview: _,
     };
 }

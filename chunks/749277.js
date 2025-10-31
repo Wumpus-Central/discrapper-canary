@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => x });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -78,10 +78,10 @@ function D(e, t) {
         e
     );
 }
-let L = (e) => {
+let x = (e) => {
     let { dismissibleContent: t, noticeType: R } = e,
         w = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
-        L = (0, i.e7)([E.Z], () => E.Z.getGuildId());
+        x = (0, i.e7)([E.Z], () => E.Z.getGuildId());
     return (0, r.jsx)(v.ZP, {
         contentTypes: [t],
         groupName: I.R.NOTICE_BAR,
@@ -356,7 +356,7 @@ let L = (e) => {
                                     window.open(
                                         "https://discord.sjc1.qualtrics.com/jfe/form/SV_9zz09xNJ3Qvyb78?user_id="
                                             .concat(null == w ? void 0 : w.id, "&guild_id=")
-                                            .concat(L),
+                                            .concat(x),
                                         "_blank",
                                     ),
                                         i(I.L.TAKE_ACTION);

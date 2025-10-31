@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(981631),
     I = n(37113),
     T = n(388032),
-    S = n(298291);
+    S = n(556865);
 function A(e, t, n) {
     return (
         t in e
@@ -88,8 +88,8 @@ function P() {
         D = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(v.kg4.SAVE_SCREENSHOT, !0)),
         [x, L] = i.useState(N.join(", ")),
         M = g.Z.isDecoupledGameClippingEnabled(),
-        k = (0, b.Z)(p.Z),
-        { showClipsHeaderEntrypoint: j, enableAdvancedSignals: U } = m.NV.useExperiment(
+        j = (0, b.Z)(p.Z),
+        { showClipsHeaderEntrypoint: k, enableAdvancedSignals: U } = m.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
         ),
@@ -213,7 +213,7 @@ function P() {
             }),
             (0, r.jsx)(_.Z, { children: T.intl.string(T.t["Z+MfqT"]) }),
             M &&
-                k &&
+                j &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(c.izJ, {}),
@@ -229,7 +229,7 @@ function P() {
                         }),
                     ],
                 }),
-            j &&
+            k &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(c.izJ, {}),

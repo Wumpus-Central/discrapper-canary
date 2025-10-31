@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -101,8 +101,8 @@ function G(e) {
         S = n !== C.A3.INACTIVE,
         R = (0, I.Z)(t),
         [L, M] = i.useState(!1),
-        [j, G] = i.useState(!1),
-        B = j,
+        [k, G] = i.useState(!1),
+        B = k,
         Z = i.useCallback(() => {
             let e = m.Z.getGuild(t);
             null != e &&
@@ -167,7 +167,7 @@ function G(e) {
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: U(k({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
+                style: U(j({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
                 className: o()(x.contentContainer, D.contentContainer),
                 children: [
                     (0, r.jsx)(h.xm, {

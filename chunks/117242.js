@@ -1,6 +1,6 @@
 n.d(t, { Z: () => i }), n(388685);
 var r = n(647438);
-function l(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function l(e) {
     }
     return e;
 }
-function o(e, t) {
+function l(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,10 +54,10 @@ function i(e) {
             minSegmentDurationMs: u,
         } = e,
         [d, m] = r.useState(null),
-        f = (0, r.useRef)(null),
-        p = (0, r.useRef)(Date.now()),
+        p = (0, r.useRef)(null),
+        f = (0, r.useRef)(Date.now()),
         v = (0, r.useRef)(!1),
-        g = (0, r.useCallback)(
+        E = (0, r.useCallback)(
             (e) => {
                 e.segmentEndSec < e.segmentStartSec ||
                     s({
@@ -71,7 +71,7 @@ function i(e) {
             },
             [s],
         ),
-        E = (0, r.useCallback)(() => {
+        g = (0, r.useCallback)(() => {
             let e = t();
             if (null != e && i && a) {
                 let t = Date.now();
@@ -84,14 +84,14 @@ function i(e) {
                     (v.current = !0);
             }
         }, [t, i, a]),
-        b = (0, r.useCallback)(() => {
+        O = (0, r.useCallback)(() => {
             let e = t();
             if (null == e || null == d) return;
             let n = Date.now();
-            !(n - p.current < c) &&
+            !(n - f.current < c) &&
                 (e - d.segmentStartSec < u / 1000 ||
-                    (g(
-                        o(l({}, d), {
+                    (E(
+                        l(o({}, d), {
                             endTime: n,
                             segmentEndSec: e,
                         }),
@@ -102,44 +102,44 @@ function i(e) {
                         segmentStartSec: e,
                         segmentEndSec: e,
                     }),
-                    (p.current = n)));
-        }, [d, g, c, u, t]);
+                    (f.current = n)));
+        }, [d, E, c, u, t]);
     return (
         (0, r.useEffect)(() => {
             (i && a) || (m(null), (v.current = !1));
         }, [i, a]),
         (0, r.useEffect)(() => {
             if (n && i && a)
-                v.current || E(),
-                    (f.current = window.setInterval(() => {
-                        b();
+                v.current || g(),
+                    (p.current = window.setInterval(() => {
+                        O();
                     }, 200));
             else {
                 let e = t();
                 if (null != d && null != e) {
                     let t = Date.now();
                     e - d.segmentStartSec > 0.2 &&
-                        g(
-                            o(l({}, d), {
+                        E(
+                            l(o({}, d), {
                                 endTime: t,
                                 segmentEndSec: e,
                             }),
                         );
                 }
-                m(null), (v.current = !1), null != f.current && (clearInterval(f.current), (f.current = null));
+                m(null), (v.current = !1), null != p.current && (clearInterval(p.current), (p.current = null));
             }
             return () => {
-                null != f.current && (clearInterval(f.current), (f.current = null));
+                null != p.current && (clearInterval(p.current), (p.current = null));
             };
-        }, [n, i, a, d, b, g, E, t]),
+        }, [n, i, a, d, O, E, g, t]),
         {
             forceSendCurrentSegment: (0, r.useCallback)(() => {
                 let e = t();
                 if (null != d && null != e) {
                     let t = Date.now();
                     e - d.segmentStartSec > 0.2 &&
-                        g(
-                            o(l({}, d), {
+                        E(
+                            l(o({}, d), {
                                 endTime: t,
                                 segmentEndSec: e,
                             }),
@@ -147,7 +147,7 @@ function i(e) {
                         m(null),
                         (v.current = !1);
                 }
-            }, [d, g, t]),
+            }, [d, E, t]),
             isInitialized: v.current,
         }
     );

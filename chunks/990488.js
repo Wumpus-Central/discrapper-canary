@@ -16,8 +16,8 @@ var r = n(951288),
     f = n(276486),
     h = n(196345),
     x = n(707592),
-    p = n(981631);
-function g(e) {
+    g = n(981631);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,7 +68,7 @@ function b(e) {
         }),
         c = (e, t) => {
             let r = n[e];
-            l([...n.slice(0, e), v(g({}, r), { response: t }), ...n.slice(e + 1)]);
+            l([...n.slice(0, e), v(p({}, r), { response: t }), ...n.slice(e + 1)]);
         };
     return (0, r.jsx)(r.Fragment, {
         children: n.map((e, t) =>
@@ -83,7 +83,7 @@ function b(e) {
                                 onChange: (e) =>
                                     ((e, t) => {
                                         let r = n[e];
-                                        l([...n.slice(0, e), v(g({}, r), { response: t }), ...n.slice(e + 1)]);
+                                        l([...n.slice(0, e), v(p({}, r), { response: t }), ...n.slice(e + 1)]);
                                     })(t, e),
                             },
                             t,
@@ -117,7 +117,7 @@ function b(e) {
                                     ((e, t) => {
                                         let { value: r } = t,
                                             i = n[e];
-                                        l([...n.slice(0, e), v(g({}, i), { response: r }), ...n.slice(e + 1)]);
+                                        l([...n.slice(0, e), v(p({}, i), { response: r }), ...n.slice(e + 1)]);
                                     })(t, e),
                             },
                             t,
@@ -132,7 +132,7 @@ function j(e) {
         { guildId: n, formFields: l, updateFormFields: s, disableVerification: o } = e,
         d = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         m = (0, c.i)({ guildId: n });
-    return ((t = m === p.sFg.NONE ? null : m === p.sFg.VERY_HIGH ? f.l : u.b), null == d)
+    return ((t = m === g.sFg.NONE ? null : m === g.sFg.VERY_HIGH ? f.l : u.b), null == d)
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -151,13 +151,13 @@ function C(e) {
         m = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         h = (0, c.i)({ guildId: n }),
         x = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
-        g = (null == m ? void 0 : m.verified) || x,
+        p = (null == m ? void 0 : m.verified) || x,
         v = !1;
-    h === p.sFg.NONE
+    h === g.sFg.NONE
         ? ((v = !0), (t = null))
-        : h === p.sFg.VERY_HIGH
+        : h === g.sFg.VERY_HIGH
           ? ((v = null != x && x), (t = f.v))
-          : ((v = null != g && g), (t = u.B));
+          : ((v = null != p && p), (t = u.B));
     let j = l.useRef(v);
     return null == m
         ? null

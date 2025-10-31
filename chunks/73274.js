@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d });
-var i = n(647438),
-    r = n(924826),
+var r = n(647438),
+    i = n(924826),
     l = n(448986),
     a = n(459273),
     o = n(585483),
@@ -12,23 +12,23 @@ function d(e) {
         n = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
-                r = (function (e, t) {
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        i,
-                        r = {},
+                        r,
+                        i = {},
                         l = Object.keys(e);
-                    for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < l.length; i++)
-                    (n = l[i]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ["scrollerRef"]);
     let d = (0, l.Z)(() => {
             let e = t.current;
@@ -46,11 +46,11 @@ function d(e) {
                       e.scrollToTop({ callback: () => requestAnimationFrame(t) });
                   });
         }),
-        h = i.useCallback(
+        f = r.useCallback(
             (e) => {
-                var i, r, l;
+                var r, i, l;
                 if (!n.keyboardModeEnabled) return;
-                let a = null == (r = t.current) || null == (i = r.getScrollerNode()) ? void 0 : i.ownerDocument,
+                let a = null == (i = t.current) || null == (r = i.getScrollerNode()) ? void 0 : r.ownerDocument,
                     o = null == a ? void 0 : a.querySelector(e);
                 null != o &&
                     (null == (l = t.current) ||
@@ -62,19 +62,19 @@ function d(e) {
             },
             [n.keyboardModeEnabled, t],
         ),
-        f = i.useCallback(() => {
+        h = r.useCallback(() => {
             n.hasMoreAfter || o.S.dispatchToLastSubscribed(u.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
-        m = (0, r.ZP)({
+        m = (0, i.ZP)({
             id: s.W,
             preserveFocusPosition: !1,
-            setFocus: h,
+            setFocus: f,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
             scrollToStart: p,
             scrollToEnd: d,
-            onNavigateNextAtEnd: f,
+            onNavigateNextAtEnd: h,
         }),
-        g = i.useCallback(
+        g = r.useCallback(
             (e) => {
                 let { atEnd: t = !1 } = e;
                 t ? m.focusLastVisibleItem() : m.focusFirstVisibleItem();

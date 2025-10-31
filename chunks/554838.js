@@ -2,8 +2,8 @@ n.d(t, {
     J: () => d,
     Z: () => p,
 });
-var i = n(111810),
-    r = n(55935),
+var r = n(111810),
+    i = n(55935),
     l = n(70956),
     a = n(709054),
     o = n(463396),
@@ -27,8 +27,8 @@ function p(e, t, n) {
         t.hasFlag(c.iLy.EPHEMERAL) !== n.hasFlag(c.iLy.EPHEMERAL) ||
         (null != n.webhookId && t.author.username !== n.author.username) ||
         ((null == e ? void 0 : e.isForumPost()) && t.id === a.default.castChannelIdAsMessageId(e.id)) ||
-        !(0, r.KC)(t.timestamp, n.timestamp) ||
-        !(0, r._w)(t.timestamp, n.timestamp, u) ||
+        !(0, i.KC)(t.timestamp, n.timestamp) ||
+        !(0, i._w)(t.timestamp, n.timestamp, u) ||
         (n.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS) && !t.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS)) ||
         (t.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS) &&
             !n.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS) &&
@@ -36,6 +36,6 @@ function p(e, t, n) {
         (0, o.f)(n)
     )
         return !0;
-    let l = i.HZ.getCurrentConfig({ location: "isNewMessageGroup" }, { autoTrackExposure: !1 }).canSeeConfetti;
+    let l = r.HZ.getCurrentConfig({ location: "isNewMessageGroup" }, { autoTrackExposure: !1 }).canSeeConfetti;
     return (!!n.hasPotions() && !!l) || n.applicationId !== t.applicationId;
 }

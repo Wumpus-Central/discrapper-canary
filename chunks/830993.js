@@ -9,24 +9,24 @@ var r = n(951288),
     u = n(619915),
     d = n(620662),
     p = n(841784),
-    f = n(471445),
-    h = n(430824),
+    h = n(471445),
+    f = n(430824),
     g = n(496675),
     m = n(158776),
     b = n(979651),
     _ = n(823379),
-    O = n(355363),
-    y = n(449932),
+    y = n(355363),
+    O = n(449932),
     v = n(561788),
     j = n(876548),
     C = n(543432),
-    E = n(981631),
-    x = n(388032),
+    x = n(981631),
+    E = n(388032),
     S = n(413409),
     I = n(21265);
 function P(e) {
     var t, l;
-    let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: O } = e,
+    let { channel: o, guild: h, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
         v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
@@ -55,10 +55,10 @@ function P(e) {
                         let n = m.Z.findActivity(
                             t.user.id,
                             (e) =>
-                                ([E.IIU.PLAYING, E.IIU.WATCHING].includes(e.type) &&
+                                ([x.IIU.PLAYING, x.IIU.WATCHING].includes(e.type) &&
                                     (null != e.assets || null != e.state || null != e.details || null != e.party) &&
                                     (null == e.session_id || e.session_id === t.voiceState.sessionId)) ||
-                                e.type === E.IIU.LISTENING,
+                                e.type === x.IIU.LISTENING,
                         );
                         if (null != n && !(0, p.Z)(n)) {
                             var r, i, l, o;
@@ -72,7 +72,7 @@ function P(e) {
                                               members: [],
                                               activity: n,
                                           };
-                            s.members.push(t), (0, d.Z)(s.activity, E.xjy.JOIN) || (s.activity = n), (e[a] = s);
+                            s.members.push(t), (0, d.Z)(s.activity, x.xjy.JOIN) || (s.activity = n), (e[a] = s);
                         }
                     }),
                     Object.values(e)
@@ -95,12 +95,12 @@ function P(e) {
                   C.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
-                          y.Z,
+                          O.Z,
                           {
                               embeddedApp: e,
                               presenceActivity: null != (n = e.presenceActivity) ? n : void 0,
                               channel: o,
-                              onAction: h,
+                              onAction: f,
                           },
                           t,
                       );
@@ -108,17 +108,17 @@ function P(e) {
                   P.map((e, t) => {
                       let { members: n, activity: i } = e;
                       return (0, r.jsx)(
-                          y.Z,
+                          O.Z,
                           {
                               presenceActivity: i,
                               channel: o,
                               members: n,
-                              onAction: h,
+                              onAction: f,
                           },
                           t,
                       );
                   }),
-                  O &&
+                  y &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)("div", { className: S.headerDivider }),
@@ -127,7 +127,7 @@ function P(e) {
                                   children: (0, r.jsx)(s.Text, {
                                       variant: "text-xs/normal",
                                       tag: "span",
-                                      children: x.intl.format(x.t.ePyoY2, {
+                                      children: E.intl.format(E.t.ePyoY2, {
                                           onClick: () => {
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e("59500").then(n.bind(n, 241420));
@@ -165,7 +165,7 @@ function P(e) {
                                                               }
                                                               return e;
                                                           })({}, t)),
-                                                          (i = i = { guild: f }),
+                                                          (i = i = { guild: h }),
                                                           Object.getOwnPropertyDescriptors
                                                               ? Object.defineProperties(
                                                                     n,
@@ -200,16 +200,16 @@ function P(e) {
 }
 function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
-        l = (0, a.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, t)),
+        l = (0, a.e7)([g.Z], () => !g.Z.can(x.Plq.CONNECT, t)),
         s = (0, a.e7)([b.Z], () => b.Z.hasVideo(t.id)),
-        c = (0, O.ZP)({
+        c = (0, y.ZP)({
             channel: t,
             locked: l,
             video: s,
             selected: n,
         }),
-        u = (0, a.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
-    return null == (0, f.KS)(t, u)
+        u = (0, a.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
+    return null == (0, h.KS)(t, u)
         ? null
         : (0, r.jsxs)("div", {
               className: o()(S.popoutHeaderContainer, I.popoutHeaderContainer),

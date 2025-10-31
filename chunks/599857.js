@@ -4,29 +4,29 @@ n.d(t, {
 }),
     n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(240666),
-    i = n(780384),
-    o = n(481060),
-    s = n(626135),
+    r = n(780384),
+    s = n(481060),
+    o = n(626135),
     c = n(756148),
     d = n(981631);
 function u(e) {
     let { sitekey: t, action: n, onVerify: l } = e,
-        [i, u] = r.useState("uninitialized"),
-        m = r.useCallback((e) => {
-            s.default.track(d.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
+        [r, u] = i.useState("uninitialized"),
+        m = i.useCallback((e) => {
+            o.default.track(d.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
-        p = r.useCallback(
+        p = i.useCallback(
             (e) => {
                 m("handle-verify"), l(e);
             },
             [l, m],
         ),
-        h = r.useCallback(() => {
-            var e, a, r;
-            null == (r = window) ||
-                null == (a = r.grecaptcha) ||
+        h = i.useCallback(() => {
+            var e, a, i;
+            null == (i = window) ||
+                null == (a = i.grecaptcha) ||
                 null == (e = a.enterprise) ||
                 e.ready(async () => {
                     var e;
@@ -40,14 +40,14 @@ function u(e) {
                         u("loaded");
                 });
         }, [t, n, p, m]),
-        x = r.useCallback(() => {
+        x = i.useCallback(() => {
             u("running"), m("recaptcha-loading"), c.I.loadRecaptchaScript(t, h, m);
         }, [t, h, m]);
     return (
-        r.useEffect(() => {
-            "uninitialized" === i && x();
-        }, [x, i]),
-        r.useEffect(
+        i.useEffect(() => {
+            "uninitialized" === r && x();
+        }, [x, r]),
+        i.useEffect(
             () => () => {
                 m("recaptcha-unloading"),
                     document
@@ -60,35 +60,35 @@ function u(e) {
             },
             [m],
         ),
-        (0, a.jsx)(o.$jN, {})
+        (0, a.jsx)(s.$jN, {})
     );
 }
 let m = (e) => {
     var t,
         n,
-        { theme: r } = e,
-        o = (function (e, t) {
+        { theme: i } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
-                r = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         a,
-                        r = {},
+                        i = {},
                         l = Object.keys(e);
-                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
                 for (a = 0; a < l.length; a++)
                     (n = l[a]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ["theme"]);
-    let s = (0, i.wj)(r) ? "dark" : "light";
+    let o = (0, r.wj)(i) ? "dark" : "light";
     return (0, a.jsx)(
         l.Z,
         ((t = (function (e) {
@@ -115,8 +115,8 @@ let m = (e) => {
                     });
             }
             return e;
-        })({ sitekey: d.OL7 }, o)),
-        (n = n = { theme: s }),
+        })({ sitekey: d.OL7 }, s)),
+        (n = n = { theme: o }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {

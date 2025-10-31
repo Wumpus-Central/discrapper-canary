@@ -35,13 +35,13 @@ function y(e) {
             () => null != i && !1 !== w && g.Z.getEntitlementsForGuild(i, !0).some((e) => e.skuId === O),
             [w, O, i],
         ),
-        L = null == T ? void 0 : T.applicationId,
-        x = (null == S ? void 0 : S.published) === !0 && (null == T ? void 0 : T.isAvailable()) === !0,
-        { app: M } = (0, d.Rt)(L),
-        { analyticsLocations: k } = (0, c.ZP)(),
-        j = (0, m.Ev)(C, null != i ? i : void 0),
-        U = null == j ? void 0 : j.subscription,
-        G = null == j ? void 0 : j.subscriptionPlan,
+        x = null == T ? void 0 : T.applicationId,
+        L = (null == S ? void 0 : S.published) === !0 && (null == T ? void 0 : T.isAvailable()) === !0,
+        { app: M } = (0, d.Rt)(x),
+        { analyticsLocations: j } = (0, c.ZP)(),
+        k = (0, m.Ev)(C, null != i ? i : void 0),
+        U = null == k ? void 0 : k.subscription,
+        G = null == k ? void 0 : k.subscriptionPlan,
         B = (0, m.cr)(C, null != i ? i : void 0),
         Z = null == B ? void 0 : B.subscriptionPlan,
         { entitlementsLoaded: F } = (0, m.LM)({ guildId: i });
@@ -50,16 +50,16 @@ function y(e) {
         H = null != U && (0, E.Jf)(U, T),
         Y = r.useMemo(() => {
             if (!F || null == M || null == O) return u.rf.LOADING;
-            if (!x) return u.rf.UNAVAILABLE;
+            if (!L) return u.rf.UNAVAILABLE;
             if (!w) {
                 if ((null == G ? void 0 : G.skuId) === O) return u.rf.SUBSCRIBED;
                 if ((null == Z ? void 0 : Z.skuId) === O && !1 === H) return u.rf.UPCOMING_PLAN;
             }
             return u.rf.AVAILABLE;
-        }, [null == G ? void 0 : G.skuId, x, M, F, H, w, null == Z ? void 0 : Z.skuId, O]);
+        }, [null == G ? void 0 : G.skuId, L, M, F, H, w, null == Z ? void 0 : Z.skuId, O]);
     return (
         r.useEffect(() => {
-            x &&
+            L &&
                 null != O &&
                 V &&
                 (_.Z.isFetchingForSKU(O) ||
@@ -67,24 +67,24 @@ function y(e) {
                     s.Z.wait(() => {
                         (0, l.GZ)(O);
                     }));
-        }, [x, O, V]),
+        }, [L, O, V]),
         {
             openModal: r.useCallback(() => {
                 a()(null != M, "No application"),
                     a()(null != O, "No SKU ID"),
-                    a()(x, "Cannot purchase this unpublished plan"),
+                    a()(L, "Cannot purchase this unpublished plan"),
                     (0, b.H)({
                         subscriptionPlanId: A,
                         sku: T,
                         subscriptionGroupPlanIds: P,
                         initialSubscribeForGuild: i,
                         disableGuildSelector: I,
-                        analyticsLocations: k,
+                        analyticsLocations: j,
                         analyticsLocation: y,
                     }).then(() => {
                         null == v || v();
                     });
-            }, [M, O, x, A, T, P, i, I, k, y, v]),
+            }, [M, O, L, A, T, P, i, I, j, y, v]),
             subscriptionPurchaseButtonState: Y,
             isGuildSubscribed: D,
         }

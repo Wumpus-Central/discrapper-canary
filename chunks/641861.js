@@ -1,8 +1,8 @@
-n.d(t, { Z: () => x });
-var i = n(951288);
+n.d(t, { Z: () => O });
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    l = n.n(r),
+var i = n(120356),
+    l = n.n(i),
     a = n(990547),
     o = n(442837),
     s = n(159691),
@@ -10,19 +10,19 @@ var r = n(120356),
     u = n(26151),
     d = n(213609),
     p = n(358221),
-    h = n(985588),
-    f = n(686546),
+    f = n(985588),
+    h = n(686546),
     m = n(359110),
     g = n(601964),
     b = n(430824),
-    C = n(933557),
+    _ = n(933557),
     y = n(354459),
-    _ = n(388032),
+    C = n(388032),
     v = n(115858);
-function x(e) {
+function O(e) {
     let { recipientUser: t, voiceChannel: n } = e,
-        r = (0, C.ZP)(n),
-        s = (0, h.s)(t, "RingToVoiceBanner", n.id),
+        i = (0, _.ZP)(n),
+        s = (0, f.s)(t, "RingToVoiceBanner", n.id),
         { userIsInCall: u, isUserRinging: m } = (0, o.cj)([p.Z], () => {
             let e = null;
             return (
@@ -33,9 +33,9 @@ function x(e) {
                 }
             );
         }),
-        x = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        j = null != x ? (0, g.EB)(x, 32, !0) : null,
-        E = !s || (u && !m);
+        O = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
+        E = null != O ? (0, g.EB)(O, 32, !0) : null,
+        j = !s || (u && !m);
     return ((0, d.Z)(
         {
             type: a.ImpressionTypes.PAGE,
@@ -45,49 +45,49 @@ function x(e) {
                 voice_guild_id: null == n ? void 0 : n.guild_id,
             },
         },
-        { disableTrack: E },
+        { disableTrack: j },
         [t.id],
     ),
-    E)
+    j)
         ? null
-        : (0, i.jsxs)("div", {
+        : (0, r.jsxs)("div", {
               className: l()(v.themed, v.chatHeaderBar),
               children: [
-                  (0, i.jsxs)("div", {
+                  (0, r.jsxs)("div", {
                       className: v.chatHeaderBarInfo,
                       children: [
-                          (0, i.jsx)(f.ZP, {
+                          (0, r.jsx)(h.ZP, {
                               className: v.mask,
-                              mask: f.QS.SQUIRCLE,
+                              mask: h.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
-                                  null == j
-                                      ? (0, i.jsx)("div", {
+                                  null == E
+                                      ? (0, r.jsx)("div", {
                                             className: l()(v.guildIcon, v.guildIconWithoutImage),
-                                            children: (0, i.jsx)("div", {
+                                            children: (0, r.jsx)("div", {
                                                 className: v.guildAcronym,
-                                                children: null != x ? (0, g.gM)(x) : null,
+                                                children: null != O ? (0, g.gM)(O) : null,
                                             }),
                                         })
-                                      : (0, i.jsx)("img", {
-                                            alt: null == x ? void 0 : x.name,
-                                            src: j,
+                                      : (0, r.jsx)("img", {
+                                            alt: null == O ? void 0 : O.name,
+                                            src: E,
                                             className: v.guildIcon,
                                         }),
                           }),
-                          (0, i.jsx)(c.Text, {
+                          (0, r.jsx)(c.Text, {
                               className: v.chatHeaderBarText,
                               variant: "text-md/medium",
                               color: "header-secondary",
-                              children: _.intl.format(_.t.f2tNxH, {
+                              children: C.intl.format(C.t.f2tNxH, {
                                   username: null == t ? void 0 : t.globalName,
-                                  channelName: (0, i.jsx)(
+                                  channelName: (0, r.jsx)(
                                       c.Text,
                                       {
                                           variant: "text-md/semibold",
                                           color: "header-primary",
-                                          children: r,
+                                          children: i,
                                       },
                                       n.id,
                                   ),
@@ -95,7 +95,7 @@ function x(e) {
                           }),
                       ],
                   }),
-                  (0, i.jsx)(O, {
+                  (0, r.jsx)(x, {
                       channelId: n.id,
                       recipientUserId: t.id,
                       isUserRinging: m,
@@ -103,16 +103,16 @@ function x(e) {
               ],
           });
 }
-function O(e) {
-    let { channelId: t, recipientUserId: n, isUserRinging: r } = e,
-        l = r ? _.intl.string(_.t.ygslb0) : _.intl.string(_.t["3Hv9qQ"]),
-        a = r
+function x(e) {
+    let { channelId: t, recipientUserId: n, isUserRinging: i } = e,
+        l = i ? C.intl.string(C.t.ygslb0) : C.intl.string(C.t["3Hv9qQ"]),
+        a = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {
                   u.Z.ring(t, [n], "dm_banner"), (0, m.Kh)(t);
               };
-    return (0, i.jsx)(s.zxk, {
-        variant: r ? "critical-secondary" : "secondary",
+    return (0, r.jsx)(s.zxk, {
+        variant: i ? "critical-secondary" : "secondary",
         size: "sm",
         text: l,
         iconPosition: "start",

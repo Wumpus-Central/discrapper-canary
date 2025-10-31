@@ -10,19 +10,19 @@ var i = n(442837),
     u = n(456269),
     d = n(921711),
     p = n(368442),
-    f = n(601070),
-    h = n(430824),
+    h = n(601070),
+    f = n(430824),
     g = n(496675),
     m = n(306680),
     b = n(979651),
     _ = n(968358),
-    O = n(790901),
-    y = n(714794),
+    y = n(790901),
+    O = n(714794),
     v = n(355363),
     j = n(259404),
     C = n(876548),
-    E = n(25601),
-    x = n(981631),
+    x = n(25601),
+    E = n(981631),
     S = n(490897),
     I = n(388032),
     P = n(885525);
@@ -32,8 +32,8 @@ function N(e) {
             channel: n,
             isChannelSelected: N,
             isChannelCollapsed: Z,
-            voiceStates: T,
-            enableConnectedUserLimit: w,
+            voiceStates: w,
+            enableConnectedUserLimit: T,
             enableActivities: A,
             isSubscriptionGated: R,
             needSubscriptionToAccess: D,
@@ -44,7 +44,7 @@ function N(e) {
         G = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         U = (0, i.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, a.ZP)(n),
-        F = (0, i.e7)([g.Z], () => !g.Z.can(x.Plq.CONNECT, n)),
+        F = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
         V = (0, s.P)(n),
         H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
         z = (0, p.PK)(n.id) && n.isGuildStageVoice(),
@@ -54,18 +54,18 @@ function N(e) {
             video: (H || z) && null == V,
             selected: N,
         }),
-        K = (0, i.e7)([f.Z], () => f.Z.getNewThreadCount(n.guild_id, n.id)),
+        K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
         Y = (0, u.n2)(n.guild_id, n.id),
-        q = (0, i.e7)([h.Z], () => {
+        q = (0, i.e7)([f.Z], () => {
             var e, t;
             return (
                 null !=
-                    (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(x.GuildFeatures.COMMUNITY)) &&
+                    (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
                 t
             );
         });
-    if ((0, y.Z)(G))
-        return (0, r.jsx)(E.Z, {
+    if ((0, O.Z)(G))
+        return (0, r.jsx)(x.Z, {
             mentionsCount: G,
             isMentionLowImportance: U,
         });
@@ -88,14 +88,14 @@ function N(e) {
             color: "text-muted",
             children: (0, o.NGo)(Y),
         });
-    let X = null != (t = null == T ? void 0 : T.length) ? t : 0;
-    return null != w && w && W
+    let X = null != (t = null == w ? void 0 : w.length) ? t : 0;
+    return null != T && T && W
         ? (0, r.jsx)(C.Z, {
               userCount: X,
               video: H || z,
               channel: n,
           })
-        : Z && (0, _.a)(T) && q
+        : Z && (0, _.a)(w) && q
           ? (0, r.jsx)(o.IGR, {
                 text: I.intl.string(I.t.dI3q4h),
                 color: l.Z.unsafe_rawColors.RED_400.css,
@@ -105,7 +105,7 @@ function N(e) {
                   textColor: "text-feedback-positive",
                   entry: { start: V },
               })
-            : null != A && A && (0, O.u)(B)
+            : null != A && A && (0, y.u)(B)
               ? (0, r.jsx)(j.Z, {
                     embeddedApps: B,
                     muted: M,

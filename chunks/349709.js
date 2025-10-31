@@ -1,10 +1,10 @@
-t.d(n, { Z: () => v });
-var a = t(951288),
-    l = t(647438),
-    r = t(442837),
-    i = t(481060),
-    o = t(596454),
-    s = t(225433),
+t.d(n, { Z: () => y });
+var l = t(951288),
+    a = t(647438),
+    i = t(442837),
+    r = t(481060),
+    s = t(596454),
+    o = t(225433),
     u = t(104505),
     c = t(318766),
     d = t(907040),
@@ -12,33 +12,33 @@ var a = t(951288),
     m = t(903749),
     g = t(185923),
     h = t(388032),
-    p = t(239336);
-function b(e) {
+    v = t(239336);
+function p(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            a = Object.keys(t);
+            l = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            a.forEach(function (n) {
-                var a;
-                (a = t[n]),
+            l.forEach(function (n) {
+                var l;
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: a,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = a);
+                        : (e[n] = l);
             });
     }
     return e;
 }
-function y(e, n) {
+function b(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -46,8 +46,8 @@ function y(e, n) {
             : (function (e, n) {
                   var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, a);
+                      var l = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, l);
                   }
                   return t;
               })(Object(n)).forEach(function (t) {
@@ -56,100 +56,100 @@ function y(e, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     let {
             className: n,
             guildId: t,
-            error: v,
-            emojiId: x,
-            emojiName: j,
-            isRequiredField: w = !0,
-            shouldUpdateBothEmojiFields: _ = !1,
+            error: y,
+            emojiId: j,
+            emojiName: x,
+            isRequiredField: N = !0,
+            shouldUpdateBothEmojiFields: w = !1,
             setEmojiId: C,
-            setEmojiName: N,
+            setEmojiName: S,
         } = e,
-        S = (0, m.Z)({
-            emojiId: x,
-            emojiName: j,
+        O = (0, m.Z)({
+            emojiId: j,
+            emojiName: x,
         }),
-        O = (0, r.e7)([f.ZP], () => (null != t ? f.ZP.getDefaultChannel(t) : null)),
-        P = l.useRef(null),
-        { isHoveringOrFocusing: E } = (0, u.Z)(P),
-        I = () => {
-            N(void 0), C(void 0);
+        Z = (0, i.e7)([f.ZP], () => (null != t ? f.ZP.getDefaultChannel(t) : null)),
+        P = a.useRef(null),
+        { isHoveringOrFocusing: M } = (0, u.Z)(P),
+        E = () => {
+            S(void 0), C(void 0);
         },
-        M = (e) => {
-            e.stopPropagation(), I();
+        k = (e) => {
+            e.stopPropagation(), E();
         },
-        Z = l.useMemo(() => {
-            let e = null != x && "" !== x,
-                n = null != j && "" !== j,
-                t = null != S && "" !== S,
-                a = n && !Number.isNaN(parseInt(j)) && !t && !e;
+        I = a.useMemo(() => {
+            let e = null != j && "" !== j,
+                n = null != x && "" !== x,
+                t = null != O && "" !== O,
+                l = n && !Number.isNaN(parseInt(x)) && !t && !e;
             return {
                 hasEmojiId: e,
                 hasEmojiName: n,
                 hasEmojiDisplayName: t,
-                isDeletedCustomEmoji: a,
+                isDeletedCustomEmoji: l,
             };
-        }, [x, j, S]),
-        k = !Z.isDeletedCustomEmoji && Z.hasEmojiDisplayName;
-    return (0, a.jsx)("div", {
+        }, [j, x, O]),
+        T = !I.isDeletedCustomEmoji && I.hasEmojiDisplayName;
+    return (0, l.jsx)("div", {
         className: n,
-        children: (0, a.jsx)(i.gNt, {
-            required: w,
+        children: (0, l.jsx)(r.gNt, {
+            required: N,
             label: h.intl.string(h.t["3BQmiC"]),
-            errorMessage: null != v ? v : void 0,
-            children: (0, a.jsx)(i.yRy, {
+            errorMessage: null != y ? y : void 0,
+            children: (0, l.jsx)(r.yRy, {
                 targetElementRef: P,
-                animation: i.yRy.Animation.NONE,
+                animation: r.yRy.Animation.NONE,
                 position: "top",
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, a.jsx)(d.Z, {
+                    return (0, l.jsx)(d.Z, {
                         closePopout: n,
                         pickerIntention: g.Hz.SOUNDBOARD,
                         onNavigateAway: n,
                         onSelectEmoji: (e) => {
-                            let { emoji: t, willClose: a } = e,
-                                l = (null == t ? void 0 : t.id) == null;
-                            I(),
-                                l
-                                    ? N(null == t ? void 0 : t.optionallyDiverseSequence)
-                                    : (_ && N(null == t ? void 0 : t.name), C(null == t ? void 0 : t.id)),
-                                a && n();
+                            let { emoji: t, willClose: l } = e,
+                                a = (null == t ? void 0 : t.id) == null;
+                            E(),
+                                a
+                                    ? S(null == t ? void 0 : t.optionallyDiverseSequence)
+                                    : (w && S(null == t ? void 0 : t.name), C(null == t ? void 0 : t.id)),
+                                l && n();
                         },
                         guildId: t,
-                        channel: O,
+                        channel: Z,
                     });
                 },
                 children: (e, n) => {
                     let { isShown: t } = n;
-                    return (0, a.jsxs)(
-                        i.UPk,
-                        y(b({}, e), {
-                            className: p.emojiInput,
+                    return (0, l.jsxs)(
+                        r.UPk,
+                        b(p({}, e), {
+                            className: v.emojiInput,
                             ref: P,
                             children: [
-                                (0, a.jsx)(c.Z, {
+                                (0, l.jsx)(c.Z, {
                                     active: t,
                                     tabIndex: 0,
                                     renderButtonContents:
-                                        !Z.isDeletedCustomEmoji && (Z.hasEmojiId || Z.hasEmojiName)
+                                        !I.isDeletedCustomEmoji && (I.hasEmojiId || I.hasEmojiName)
                                             ? () =>
-                                                  (0, a.jsx)(o.Z, {
-                                                      emojiName: j,
-                                                      emojiId: x,
+                                                  (0, l.jsx)(s.Z, {
+                                                      emojiName: x,
+                                                      emojiId: j,
                                                   })
                                             : null,
                                 }),
-                                (0, a.jsx)(i.Text, {
+                                (0, l.jsx)(r.Text, {
                                     variant: "text-md/normal",
                                     lineClamp: 1,
-                                    color: k ? "text-default" : "text-muted",
-                                    children: k ? ":".concat(S, ":") : h.intl.string(h.t.QTK0TJ),
+                                    color: T ? "text-default" : "text-muted",
+                                    children: T ? ":".concat(O, ":") : h.intl.string(h.t.QTK0TJ),
                                 }),
-                                k && E && (0, a.jsx)(s.Z, y(b({}, e), { onClick: M })),
+                                T && M && (0, l.jsx)(o.Z, b(p({}, e), { onClick: k })),
                             ],
                         }),
                     );

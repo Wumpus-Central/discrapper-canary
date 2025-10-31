@@ -14,7 +14,7 @@ var r,
     d = n(358085),
     p = n(533583),
     f = n(65154);
-function h(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +27,8 @@ function h(e, t, n) {
         e
     );
 }
-let m = { ignoredDevices: {} },
-    g = m,
+let h = { ignoredDevices: {} },
+    g = h,
     _ = !1,
     b = {},
     E = {},
@@ -37,14 +37,14 @@ let m = { ignoredDevices: {} },
         id: null,
         justChanged: !1,
     },
-    v = {
+    y = {
         id: null,
         justChanged: !1,
     },
-    y = /\(([^)]+)\)/;
+    v = /\(([^)]+)\)/;
 function C(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(y);
+        let t = e.name.match(v);
         if (null != t) return t[1];
     }
     return e.name;
@@ -64,7 +64,7 @@ function S(e, t, n) {
 }
 class T extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(u.Z, c.Z), (g = null != e ? e : m);
+        this.waitFor(u.Z, c.Z), (g = null != e ? e : h);
     }
     getUserAgnosticState() {
         return g;
@@ -85,12 +85,12 @@ class T extends (r = a.ZP.DeviceSettingsStore) {
         return E;
     }
     get lastOutputSystemDevice() {
-        return v;
+        return y;
     }
 }
-h(T, "displayName", "ConnectedDeviceStore"),
-    h(T, "persistKey", "ConnectedDeviceStore"),
-    h(T, "migrations", [
+m(T, "displayName", "ConnectedDeviceStore"),
+    m(T, "persistKey", "ConnectedDeviceStore"),
+    m(T, "migrations", [
         (e) => {
             if (null == e.ignoredDevices) {
                 var t, n;
@@ -106,7 +106,7 @@ h(T, "displayName", "ConnectedDeviceStore"),
                                     }),
                                 )),
                                 r.forEach(function (t) {
-                                    h(e, t, n[t]);
+                                    m(e, t, n[t]);
                                 });
                         }
                         return e;
@@ -144,12 +144,12 @@ let N = new T(s.Z, {
             });
         let i = {};
         if (
-            ((v.justChanged = !1),
+            ((y.justChanged = !1),
             n.forEach((e) => {
                 if (((i[C(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== v.id && (v.justChanged = !0), (v.id = n);
+                    n !== y.id && (y.justChanged = !0), (y.id = n);
                 }
             }),
             !_)

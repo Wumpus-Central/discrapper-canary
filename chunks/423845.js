@@ -28,11 +28,11 @@ var r = n(620014),
     P = "[object Boolean]",
     w = "[object Date]",
     D = "[object Error]",
-    L = "[object Function]",
-    x = "[object GeneratorFunction]",
+    x = "[object Function]",
+    L = "[object GeneratorFunction]",
     M = "[object Map]",
-    k = "[object Number]",
-    j = "[object Object]",
+    j = "[object Number]",
+    k = "[object Object]",
     U = "[object RegExp]",
     G = "[object Set]",
     B = "[object String]",
@@ -53,7 +53,7 @@ var r = n(620014),
 function et(e, t, n, R, P, w) {
     var D,
         M = t & S,
-        k = t & A,
+        j = t & A,
         U = t & C;
     if ((n && (D = P ? n(e, R, P, w) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
@@ -62,10 +62,10 @@ function et(e, t, n, R, P, w) {
         if (((D = h(e)), !M)) return c(e, D);
     } else {
         var B = p(e),
-            Z = B == L || B == x;
+            Z = B == x || B == L;
         if (b(e)) return l(e, M);
-        if (B == j || B == N || (Z && !P)) {
-            if (((D = k || Z ? {} : g(e)), !M)) return k ? d(e, s(D, e)) : u(e, o(D, e));
+        if (B == k || B == N || (Z && !P)) {
+            if (((D = j || Z ? {} : g(e)), !M)) return j ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
             if (!ee[B]) return P ? e : {};
             D = m(e, B, M);
@@ -83,7 +83,7 @@ function et(e, t, n, R, P, w) {
               e.forEach(function (r, i) {
                   D.set(i, et(r, t, n, i, e, w));
               });
-    var V = U ? (k ? _ : f) : k ? T : I,
+    var V = U ? (j ? _ : f) : j ? T : I,
         H = G ? void 0 : V(e);
     return (
         i(H || e, function (r, i) {
@@ -104,8 +104,8 @@ function et(e, t, n, R, P, w) {
     ee[z] =
     ee[q] =
     ee[M] =
-    ee[k] =
     ee[j] =
+    ee[k] =
     ee[U] =
     ee[G] =
     ee[B] =
@@ -115,5 +115,5 @@ function et(e, t, n, R, P, w) {
     ee[J] =
     ee[$] =
         !0),
-    (ee[D] = ee[L] = ee[F] = !1),
+    (ee[D] = ee[x] = ee[F] = !1),
     (e.exports = et);

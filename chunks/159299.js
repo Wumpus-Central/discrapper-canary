@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => j }), n(388685), n(642613), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -243,13 +243,13 @@ function D(e) {
     if (!(t.id in y)) return !1;
     delete y[t.id];
 }
-function L(e) {
+function x(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in y) y[e].guildId === t && (y[e].rebuild(), (n = !0));
     return n;
 }
-function x(e) {
+function L(e) {
     let { channels: t } = e,
         n = new Set(t.map((e) => e.id)),
         r = !1;
@@ -287,12 +287,12 @@ class M extends (r = o.ZP.Store) {
     }
 }
 b(M, "displayName", "ThreadMemberListStore");
-let k = new M(s.Z, {
+let j = new M(s.Z, {
     CONNECTION_OPEN: v,
     THREAD_MEMBERS_UPDATE: I,
     THREAD_UPDATE: w,
     THREAD_DELETE: D,
-    CHANNEL_UPDATES: x,
+    CHANNEL_UPDATES: L,
     THREAD_MEMBER_LIST_UPDATE: T,
     USER_UPDATE: S,
     PRESENCE_UPDATES: A,
@@ -301,7 +301,7 @@ let k = new M(s.Z, {
     GUILD_MEMBER_REMOVE: S,
     PRESENCES_REPLACE: R,
     GUILD_MEMBERS_CHUNK_BATCH: P,
-    GUILD_ROLE_UPDATE: L,
-    GUILD_ROLE_DELETE: L,
+    GUILD_ROLE_UPDATE: x,
+    GUILD_ROLE_DELETE: x,
     PASSIVE_UPDATE_V2: C,
 });

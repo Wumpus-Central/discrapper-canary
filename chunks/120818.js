@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(846121),
     d = n(703656),
     p = n(259580),
-    f = n(981631),
-    h = n(176505),
+    h = n(981631),
+    f = n(176505),
     g = n(388032),
     m = n(46674);
 function b(e, t) {
@@ -27,19 +27,19 @@ function b(e, t) {
 let _ = i.memo(function (e) {
     var t, n;
     let { guild: _ } = e,
-        O = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(_.id), [_.id]),
-        y = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(_.id)),
+        y = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(_.id), [_.id]),
+        O = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(_.id)),
         v = i.useMemo(() => {
-            if (null == O || null == y) return 0;
+            if (null == y || null == O) return 0;
             let e = 0;
             return (
-                O.forEach((t) => {
-                    null != y[t.channelId] && e++;
+                y.forEach((t) => {
+                    null != O[t.channelId] && e++;
                 }),
                 e
             );
-        }, [y, O]),
-        j = null == O ? 0 : O.length,
+        }, [O, y]),
+        j = null == y ? 0 : y.length,
         C = (0, l.JA)("progress-bar-".concat(_.id));
     return (0, r.jsxs)("li", {
         children: [
@@ -76,7 +76,7 @@ let _ = i.memo(function (e) {
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(f.Z5c.CHANNEL(_.id, h.oC.GUILD_HOME));
+                            (0, d.uL)(h.Z5c.CHANNEL(_.id, f.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)("div", {
@@ -111,7 +111,7 @@ let _ = i.memo(function (e) {
                             }),
                             (0, r.jsx)(a.Exd, {
                                 className: m.progressBar,
-                                foregroundGradientColor: [(0, s.Lq)(f.Ilk.GREEN_300), (0, s.Lq)(f.Ilk.GREEN_230)],
+                                foregroundGradientColor: [(0, s.Lq)(h.Ilk.GREEN_300), (0, s.Lq)(h.Ilk.GREEN_230)],
                                 percent: (v / j) * 100 + 3,
                                 animate: !0,
                             }),

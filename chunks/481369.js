@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p });
-var i = n(399606),
-    r = n(317381),
+var r = n(399606),
+    i = n(317381),
     l = n(16609),
     a = n(917107),
     o = n(592125),
@@ -16,8 +16,8 @@ let u = "no_text_activity",
         [c.Ez.ACTIVITY_POPOUT_WINDOW]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
     };
 function p() {
-    let e = (0, i.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity()),
-        t = (0, i.e7)([r.ZP], () => r.ZP.getActivityPanelMode()),
+    let e = (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity()),
+        t = (0, r.e7)([i.ZP], () => i.ZP.getActivityPanelMode()),
         n = (0, l.p)(null == e ? void 0 : e.location);
     return void 0 === e || (0, a.Z)(n, o.Z) ? d[u] : d[t];
 }

@@ -7,12 +7,12 @@ n.d(t, {
     JQ: () => A,
     Jw: () => R,
     Mr: () => I,
-    VX: () => x,
+    VX: () => L,
     Vn: () => b,
     ZD: () => O,
     f9: () => N,
     h7: () => v,
-    nf: () => L,
+    nf: () => x,
     o: () => S,
     pT: () => P,
     s9: () => y,
@@ -134,7 +134,7 @@ async function O(e) {
         l = await e();
     return (
         clearTimeout(s),
-        o ? L(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n),
+        o ? x(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n),
         a
     );
 }
@@ -314,9 +314,9 @@ function D(e, t) {
         r = e[n];
     return null != r && r.some((e) => e.key === t);
 }
-function L(e, t) {
+function x(e, t) {
     return D(y.getState(), e, t);
 }
-function x(e, t) {
+function L(e, t) {
     return D(y(), e, t);
 }

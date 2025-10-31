@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(781311);
+n.d(t, { Z: () => v }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -17,10 +17,10 @@ var r = n(951288),
     _ = n(408310),
     y = n(75666),
     x = n(981631),
-    v = n(295907),
+    O = n(295907),
     j = n(806328);
-let O = (e) => {
-    let { channel: t, guild: O } = e,
+let v = (e) => {
+    let { channel: t, guild: v } = e,
         {
             currentCategoryId: C,
             directoryEntries: I,
@@ -85,10 +85,10 @@ let O = (e) => {
         i.useEffect(() => {
             d.default.track(x.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: t.id,
-                directory_guild_id: O.id,
+                directory_guild_id: v.id,
                 primary_category_id: C,
             });
-        }, [t.id, O.id, C]);
+        }, [t.id, v.id, C]);
     let k = (0, f.G)(t)
             ? () => {
                   (0, a.ZDy)(async () => {
@@ -124,8 +124,8 @@ let O = (e) => {
                               })({}, n)),
                               (l = l =
                                   {
-                                      directoryGuildName: O.name,
-                                      directoryGuildId: O.id,
+                                      directoryGuildName: v.name,
+                                      directoryGuildId: v.id,
                                       directoryChannelId: t.id,
                                       currentCategoryId: C === y.AR.ALL ? null : C,
                                   }),
@@ -149,11 +149,11 @@ let O = (e) => {
             : void 0,
         U = (e) => {
             0 !== w.trim().length &&
-                e.key === v.vn.ENTER &&
+                e.key === O.vn.ENTER &&
                 (u.Rq(t.id, w),
                 d.default.track(x.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: t.id,
-                    directory_guild_id: O.id,
+                    directory_guild_id: v.id,
                 }));
         },
         G = () => {
@@ -179,7 +179,7 @@ let O = (e) => {
             ? (0, r.jsx)("div", {
                   className: j.pageContainer,
                   children: (0, r.jsx)(g.Z, {
-                      guild: O,
+                      guild: v,
                       onAddGuild: k,
                   }),
               })

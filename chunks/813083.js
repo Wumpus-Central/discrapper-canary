@@ -1,20 +1,20 @@
-n.d(t, { Z: () => u });
-var r = n(951288);
-n(647438);
-var l = n(120356),
-    i = n.n(l),
-    a = n(481060),
-    o = n(884697),
-    s = n(388032),
-    c = n(478422);
-let u = (e) => {
-    let { category: t, daysRemainingText: n = s.t.Io7ozn, className: l } = e;
-    if (null == t.unpublishedAt) return null;
-    let u = (0, o.OT)(t.unpublishedAt),
-        d = u > 1 ? s.intl.formatToPlainString(n, { days: u }) : s.intl.string(s.t.Bc13HF);
+t.d(n, { Z: () => c });
+var r = t(951288);
+t(647438);
+var l = t(120356),
+    i = t.n(l),
+    a = t(481060),
+    o = t(884697),
+    s = t(388032),
+    u = t(478422);
+let c = (e) => {
+    let { category: n, daysRemainingText: t = s.t.Io7ozn, className: l } = e;
+    if (null == n.unpublishedAt) return null;
+    let c = (0, o.OT)(n.unpublishedAt),
+        d = c > 1 ? s.intl.formatToPlainString(t, { days: c }) : s.intl.string(s.t.Bc13HF);
     return (0, r.jsx)(a.IGR, {
         disableColor: !0,
         text: d,
-        className: i()(c.badge, l),
+        className: i()(u.badge, l),
     });
 };

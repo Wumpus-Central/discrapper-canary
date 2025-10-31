@@ -13,8 +13,8 @@ var r = n(951288),
     f = n(215023),
     h = n(981631),
     C = n(388032),
-    _ = n(182668),
-    m = n(219588);
+    m = n(182668),
+    _ = n(219588);
 let b = () => {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, p.S)(),
         i = (0, d.sp)(),
@@ -92,14 +92,14 @@ let b = () => {
         ),
         y = x(e);
     return (0, r.jsx)("div", {
-        className: s()(_.container, { [m.customCursors]: b }),
+        className: s()(m.container, { [_.customCursors]: b }),
         children: (0, r.jsx)(c.PhF, {
             options: E.map(x),
             select: S,
             isSelected: (e) => e === y.value,
             serialize: (e) => e,
             popoutWidth: 224,
-            popoutClassName: s()({ [m.customCursors]: b }),
+            popoutClassName: s()({ [_.customCursors]: b }),
         }),
     });
 };

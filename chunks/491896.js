@@ -1,6 +1,6 @@
-t.d(a, { Z: () => u });
-var u = {};
-u = {
+n.d(t, { Z: () => r });
+var r = {};
+r = {
     calendar: `Napt\xe1r`,
     day: "nap",
     dayPeriod: "napszak",

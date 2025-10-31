@@ -1,46 +1,46 @@
-n.d(t, { Z: () => d });
-var r = n(951288),
-    i = n(831209),
-    l = n(442837),
-    o = n(481060),
-    s = n(597688),
-    c = n(884697),
-    a = n(388032),
-    u = n(71414);
+r.d(t, { Z: () => d });
+var n = r(951288),
+    i = r(831209),
+    l = r(442837),
+    s = r(481060),
+    a = r(597688),
+    o = r(884697),
+    c = r(388032),
+    u = r(71414);
 let d = (e) => {
-    let { isPurchaseSection: t, isPremiumSection: n, canUsePremiumCollectibles: d, skuId: f } = e,
-        p = (0, c.Yq)(f),
-        m = (0, l.e7)([s.Z], () => {
-            let e = s.Z.getProduct(f);
-            return (0, c.G1)(e);
+    let { isPurchaseSection: t, isPremiumSection: r, canUsePremiumCollectibles: d, skuId: m } = e,
+        p = (0, o.Yq)(m),
+        h = (0, l.e7)([a.Z], () => {
+            let e = a.Z.getProduct(m);
+            return (0, o.G1)(e);
         });
-    return t || (n && d)
+    return t || (r && d)
         ? null
         : p
-          ? (0, r.jsx)(o.lBU, {
+          ? (0, n.jsx)(s.lBU, {
                 className: u.newBadge,
-                text: (0, r.jsxs)("div", {
+                text: (0, n.jsxs)("div", {
                     className: u.newBadgeText,
                     children: [
-                        (0, r.jsx)(o.mBM, {
+                        (0, n.jsx)(s.mBM, {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        a.intl.string(a.t.y2b7CA),
+                        c.intl.string(c.t.y2b7CA),
                     ],
                 }),
             })
-          : (0, r.jsx)(o.G2e, {
-                icon: m
+          : (0, n.jsx)(s.G2e, {
+                icon: h
                     ? () =>
-                          (0, r.jsx)(o.SrA, {
+                          (0, n.jsx)(s.SrA, {
                               size: "custom",
                               color: "currentColor",
                               width: 14,
                               height: 14,
                           })
                     : () =>
-                          (0, r.jsx)(o.mBM, {
+                          (0, n.jsx)(s.mBM, {
                               size: "xxs",
                               color: "currentColor",
                           }),

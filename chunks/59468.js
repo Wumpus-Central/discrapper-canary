@@ -20,8 +20,8 @@ n.d(t, { t: () => d }),
 var r = n(788900),
     i = n(268146),
     l = n(141038),
-    s = n(131951),
-    o = n(830461),
+    o = n(131951),
+    s = n(830461),
     a = n(388032);
 let c = [
     "GQgGHISKZ5aYqYeYhX9isDUHGw",
@@ -38,12 +38,12 @@ let c = [
 ];
 async function d(e) {
     let { width: t, height: n, types: d = [i.vA.CAMERA, i.vA.SCREEN, i.vA.WINDOW] } = e,
-        u = s.Z.getVideoDevices(),
-        f = (0, l.Z)(s.Z.getMediaEngine(), d, {
+        u = o.Z.getVideoDevices(),
+        f = (0, l.Z)(o.Z.getMediaEngine(), d, {
             width: t,
             height: n,
         }),
-        p = (0, o._)(),
+        p = (0, s._)(),
         h = await p,
         m = await f,
         _ = m
@@ -123,12 +123,12 @@ async function d(e) {
                 .map((e, t) => {
                     let [n, i] = e,
                         l = c[t % c.length],
-                        s = Uint8Array.from(atob(l), (e) => e.charCodeAt(0)),
-                        o = (0, r.xS)(s);
+                        o = Uint8Array.from(atob(l), (e) => e.charCodeAt(0)),
+                        s = (0, r.xS)(o);
                     return {
                         id: "camera:" + i.id,
                         name: i.name,
-                        url: o,
+                        url: s,
                     };
                 })),
         {

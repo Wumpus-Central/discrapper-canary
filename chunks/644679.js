@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(481060),
     l = n(570140),
@@ -48,10 +48,10 @@ class f extends a.Z {
                 let l = o.default.getCurrentUser(),
                     a = s.Z.getState(),
                     f = null == l || null == (e = l.avatarDecoration) ? void 0 : e.skuId,
-                    h = null == l || null == (t = l.avatarDecoration) ? void 0 : t.expiresAt;
+                    m = null == l || null == (t = l.avatarDecoration) ? void 0 : t.expiresAt;
                 return (
                     null != l &&
-                    !!(null != h && 1000 * h < Date.now()) &&
+                    !!(null != m && 1000 * m < Date.now()) &&
                     a !== u.hes.RTC_CONNECTED &&
                     ((0, i.Mr3)(p),
                     (0, i.ZDy)(
@@ -110,4 +110,4 @@ class f extends a.Z {
             });
     }
 }
-let h = new f();
+let m = new f();

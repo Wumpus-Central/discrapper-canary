@@ -67,8 +67,8 @@ function g(e, t) {
                 : (0, u.m)(g),
         w = !(0, _.Z)("lottie_hover_multiple_loop"),
         D = i.useContext(c.Sfi).reducedMotion.enabled,
-        { enabled: L } = d.Z.useExperiment({ location: "LottieIcon web entry point" }),
-        x = D || !L,
+        { enabled: x } = d.Z.useExperiment({ location: "LottieIcon web entry point" }),
+        L = D || !x,
         M = i.useRef(O);
     return (
         (0, f.zq)(() => {
@@ -81,7 +81,7 @@ function g(e, t) {
                 play: (e) => {
                     if (null == R.current) return;
                     let t = null == N.current;
-                    if (((N.current = e), x)) {
+                    if (((N.current = e), L)) {
                         let t = I[e];
                         R.current.resetSegments(!0),
                             R.current.setSegment(t.start + t.duration, t.start + t.duration),
@@ -93,11 +93,11 @@ function g(e, t) {
                     }
                 },
                 stop: () => {
-                    if (null == R.current || x) return;
+                    if (null == R.current || L) return;
                 },
                 stopIfPlaying: (e) => {
                     null == R.current ||
-                        x ||
+                        L ||
                         (N.current === e &&
                             (R.current.resetSegments(!0),
                             R.current.setSegment(I[e].start, I[e].start),
@@ -106,7 +106,7 @@ function g(e, t) {
                 getDuration: (e) => (null == R.current ? null : R.current.getDuration(e)),
                 getCurrentFrame: () => (null == R.current ? null : R.current.currentFrame),
             }),
-            [x, w, I, v],
+            [L, w, I, v],
         ),
         i.useEffect(() => {
             null == S && h().then((e) => A(e.default));
@@ -123,7 +123,7 @@ function g(e, t) {
                             o = null != (n = null != (t = N.current) ? t : M.current) ? n : a;
                         if (null != o && null != I[o]) {
                             let e = I[o];
-                            r = [x ? e.start : null != v ? v : e.start, e.start + e.duration];
+                            r = [L ? e.start : null != v ? v : e.start, e.start + e.duration];
                         }
                         null != C.current &&
                             (R.current = i.loadAnimation({
@@ -140,7 +140,7 @@ function g(e, t) {
                     null == (e = R.current) || e.destroy();
                 }
             ),
-            [S, I, v, x],
+            [S, I, v, L],
         ),
         (0, r.jsx)("div", {
             style: m(

@@ -11,7 +11,7 @@ n.d(t, {
     ho: () => v,
     pG: () => O,
     rf: () => w,
-    uV: () => x,
+    uV: () => L,
     x3: () => D,
     z5: () => C,
 });
@@ -193,7 +193,7 @@ function w(e) {
 function D(e) {
     a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(h.QP.PRESET);
 }
-async function L() {
+async function x() {
     if (null == _.Z.applicationWidgetApplicationConfigs || !(_.Z.applicationWidgetApplicationConfigs.length > 0)) {
         a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_START" });
         try {
@@ -214,8 +214,8 @@ async function L() {
         }
     }
 }
-let x = (0, r.Kb)(_.Z, {
+let L = (0, r.Kb)(_.Z, {
     getQueryId: p.McO.APPLICATION_WIDGET_APPLICATION_CONFIGS,
     get: () => _.Z.applicationWidgetApplicationConfigs,
-    load: () => L(),
+    load: () => x(),
 });

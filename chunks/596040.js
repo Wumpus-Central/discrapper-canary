@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o });
-var i = n(647438),
-    r = n(566620),
+n.d(t, { Z: () => a });
+var r = n(647438),
+    i = n(566620),
     l = n(790920),
-    a = n(451576);
-function o(e, t) {
+    o = n(451576);
+function a(e, t) {
     let n = (0, l.z)(),
-        o = (0, a.Z)(t),
-        s = (null != e && "" !== e) || o;
+        a = (0, o.Z)(t),
+        s = (null != e && "" !== e) || a;
     return (
-        i.useEffect(() => {
-            s && n && (0, r.w1)({ guildId: e });
+        r.useEffect(() => {
+            s && n && (0, i.w1)({ guildId: e });
         }, [e, n, s]),
         s && n
     );

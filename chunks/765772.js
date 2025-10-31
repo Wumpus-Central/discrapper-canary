@@ -1,12 +1,12 @@
-t.d(a, { Bq: () => i });
-var u = t(647438);
-t(603113);
-var n = t(782013);
-let r = u.createContext(null);
-function i() {
-    let e = (0, u.useContext)(r),
-        a = null == e ? void 0 : e.setContain;
-    (0, n.b)(() => {
-        null == a || a(!0);
-    }, [a]);
+n.d(t, { Bq: () => o });
+var r = n(647438);
+n(603113);
+var i = n(782013);
+let a = r.createContext(null);
+function o() {
+    let e = (0, r.useContext)(a),
+        t = null == e ? void 0 : e.setContain;
+    (0, i.b)(() => {
+        null == t || t(!0);
+    }, [t]);
 }

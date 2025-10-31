@@ -34,8 +34,8 @@ function R() {
         R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         { subsection: P, setSubsection: w } = (0, v.Z)(),
         D = g.R.useField("hasSearchResults"),
-        L = g.R.useField("searchResults");
-    function x(t) {
+        x = g.R.useField("searchResults");
+    function L(t) {
         if (P !== t) {
             if (n) {
                 y.S.dispatch(I.CkL.SHAKE_APP, {
@@ -54,13 +54,13 @@ function R() {
             (0, p.Z)(R.id, R.getAvatarURL(null == a ? void 0 : a.id, 80), { guildId: null == a ? void 0 : a.id });
     }, [null == a ? void 0 : a.id, R]);
     let M = !0,
-        k = !0;
+        j = !0;
     return (
         D &&
-            1 === L.length &&
-            (L.includes(A.s6.PROFILE_SERVER_PROFILES)
-                ? (x(S.NB.GUILD), (k = !1))
-                : L.includes(A.s6.PROFILE_USER_PROFILE) && (x(S.NB.USER_PROFILE), (M = !1))),
+            1 === x.length &&
+            (x.includes(A.s6.PROFILE_SERVER_PROFILES)
+                ? (L(S.NB.GUILD), (j = !1))
+                : x.includes(A.s6.PROFILE_USER_PROFILE) && (L(S.NB.USER_PROFILE), (M = !1))),
         (0, r.jsxs)(h.N, {
             header: C.intl.string(C.t["vi7f+q"]),
             children: [
@@ -69,9 +69,9 @@ function R() {
                     type: "top",
                     look: "brand",
                     selectedItem: P,
-                    onItemSelect: x,
+                    onItemSelect: L,
                     children: [
-                        k
+                        j
                             ? (0, r.jsx)(
                                   l.njP.Item,
                                   {

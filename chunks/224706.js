@@ -29,10 +29,10 @@ var r = n(664751),
     P = n(981631),
     w = n(701488),
     D = n(388032);
-let L = 3,
-    x = 20,
+let x = 3,
+    L = 20,
     M = new f.Z("GamesActionCreators");
-function k(e) {
+function j(e) {
     let {
         applicationId: t,
         secret: n,
@@ -93,7 +93,7 @@ function k(e) {
             }),
         );
 }
-function j(e, t) {
+function k(e, t) {
     return null == e || "" === e
         ? null
         : {
@@ -308,7 +308,7 @@ let B = {
                 });
             }
         };
-        for (; n.length > 0; ) r(n.splice(0, x));
+        for (; n.length > 0; ) r(n.splice(0, L));
     },
     getDetectableGames() {
         if (!b.Z.canFetchDetectableGames()) return;
@@ -376,10 +376,10 @@ let B = {
                             name: t,
                             os: (0, S.getPlatformName)(),
                             icon: n,
-                            distributor_application: j(i, a),
+                            distributor_application: k(i, a),
                             executable: c,
                             publisher: r,
-                            report_version: L,
+                            report_version: x,
                         },
                         retries: 1,
                         oldFormErrors: !0,
@@ -453,7 +453,7 @@ let B = {
                 l = await C.Z.getJoinSecret(t, n, r, i, a);
             return (
                 null == f &&
-                    k({
+                    j({
                         applicationId: r,
                         secret: l,
                         channelId: i,
@@ -476,5 +476,5 @@ let B = {
             );
         }
     },
-    joinWithSecret: k,
+    joinWithSecret: j,
 };

@@ -10,10 +10,10 @@ function s(e) {
     if (null == d) return void u(!1, !1);
     let p = null != (0, a.jA)({ applicationId: d.id }) ? i.u1M : i.z1l,
         f = !1;
-    function h(e) {
+    function m(e) {
         u(e, f);
     }
-    function m() {
+    function h() {
         f = !0;
     }
     (0, i.ZDy)(
@@ -52,8 +52,8 @@ function s(e) {
                             customId: s,
                             linkId: o,
                             message: c,
-                            onCopyLink: m,
-                            onShare: h,
+                            onCopyLink: h,
+                            onShare: m,
                         },
                         n,
                     ),

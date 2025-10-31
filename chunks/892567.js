@@ -13,10 +13,10 @@ var r = n(951288),
     p = n(607070),
     h = n(302221),
     m = n(594928),
-    g = n(181430),
-    E = n(821795),
-    b = n(760692),
-    y = n(203872),
+    g = n(489511),
+    E = n(181430),
+    b = n(821795),
+    y = n(760692),
     O = n(7284),
     v = n(492333);
 let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
@@ -25,7 +25,7 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
         let {
                 userName: n,
                 displayNameStyles: a,
-                effectDisplayType: s = E.F.STATIC,
+                effectDisplayType: s = b.F.STATIC,
                 inProfile: T = !1,
                 textClassName: A,
                 loop: C = !1,
@@ -37,41 +37,41 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                 displayNameStyles: a,
                 inProfile: T,
             }),
-            { useReducedMotion: D, saturation: L } = (0, d.cj)([p.Z], () => ({
+            { useReducedMotion: D, saturation: x } = (0, d.cj)([p.Z], () => ({
                 useReducedMotion: p.Z.useReducedMotion,
                 saturation: p.Z.desaturateUserColors ? p.Z.saturation : 1,
             })),
-            { includeNonProfile: x } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
-            M = (0, g.Y)({ location: "UserNameWithEffects" }),
-            k = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-            j = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
-            U = (0, y.R)(j),
+            { includeNonProfile: L } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
+            M = (0, E.Y)({ location: "UserNameWithEffects" }),
+            j = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            k = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
+            U = (0, g.R)(k),
             G = (0, _.qgQ)(n),
-            B = (0, f.EJ)(G, j === c.m.TOON ? v.emoji : void 0),
+            B = (0, f.EJ)(G, k === c.m.TOON ? v.emoji : void 0),
             Z = i.useMemo(
                 () =>
                     null != a && M
                         ? a.colors.map((e) =>
                               (0, h.wh)({
                                   foreground: o()(e),
-                                  background: j === c.m.TOON ? o()("#333") : o()(k),
+                                  background: k === c.m.TOON ? o()("#333") : o()(j),
                                   ratio: U.minContrastRatio,
-                                  saturationFactor: L,
+                                  saturationFactor: x,
                               }).hex(),
                           )
                         : [],
-                [a, M, j, U.minContrastRatio, L, k],
+                [a, M, k, U.minContrastRatio, x, j],
             );
-        if (!M || (!T && !x) || null == a) return n;
-        let F = (0, b.K)(j, Z, {
+        if (!M || (!T && !L) || null == a) return n;
+        let F = (0, y.K)(k, Z, {
                 shouldWrap: N,
                 fontOpacity: I.includes(a.fontId) ? R : 1,
             }),
-            V = S(j);
+            V = S(k);
         return (0, r.jsxs)("div", {
             className: l()(v.container, w, A, {
-                [v.showEffect]: s !== E.F.PLAIN,
-                [v.animated]: s === E.F.ANIMATED && !D,
+                [v.showEffect]: s !== b.F.PLAIN,
+                [v.animated]: s === b.F.ANIMATED && !D,
                 [v.loop]: C,
                 [v.inProfile]: T,
             }),

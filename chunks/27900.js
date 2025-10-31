@@ -1,4 +1,4 @@
-n.d(t, { default: () => C });
+n.d(t, { default: () => M });
 var l = n(951288);
 n(647438);
 var r = n(481060),
@@ -13,11 +13,11 @@ var r = n(481060),
     b = n(858488),
     g = n(933409),
     O = n(389052),
-    y = n(24311),
-    Z = n(158508),
+    Z = n(24311),
+    E = n(158508),
     m = n(710631),
-    v = n(494439),
-    E = n(991307),
+    y = n(494439),
+    v = n(991307),
     j = n(700994),
     p = n(332031),
     S = n(981631),
@@ -65,7 +65,7 @@ function P(e, t) {
         e
     );
 }
-function I(e) {
+function A(e) {
     let {
             user: t,
             guildId: n,
@@ -76,33 +76,33 @@ function I(e) {
             onWatchStream: _,
             appContext: P,
         } = e,
-        I = (0, v.Z)({
+        A = (0, y.Z)({
             onAction: () => {
                 null == S || S();
             },
         }),
-        A = (0, y.Z)({
+        I = (0, Z.Z)({
             user: t,
             context: P,
         }),
-        C = (0, b.Z)({
+        M = (0, b.Z)({
             user: t,
             appContext: P,
         }),
-        M = (0, p.Z)(t.id, _),
+        C = (0, p.Z)(t.id, _),
         x = (0, j.Z)(t.id),
-        D = (0, E.Z)(t.id, a),
-        w = (0, m.Z)({ user: t }),
-        T = (0, u.Z)(null, t),
-        N = (0, f.Z)({
+        D = (0, v.Z)(t.id, a),
+        T = (0, m.Z)({ user: t }),
+        N = (0, u.Z)(null, t),
+        k = (0, f.Z)({
             user: t,
             appContext: P,
         }),
-        k = (0, O.Z)({
+        w = (0, O.Z)({
             user: t,
             appContext: P,
         }),
-        U = (0, Z.Z)({
+        U = (0, E.Z)({
             user: t,
             appContext: P,
         }),
@@ -124,12 +124,12 @@ function I(e) {
                     children: [
                         (0, l.jsx)(r.kSQ, { children: R }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [I, A, C, M],
+                            children: [A, I, M, C],
                         }),
                         (0, l.jsx)(r.kSQ, { children: x }),
-                        (0, l.jsx)(r.kSQ, { children: T }),
+                        (0, l.jsx)(r.kSQ, { children: N }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [D, w, N, U, k],
+                            children: [D, T, k, U, w],
                         }),
                         (0, l.jsx)(r.kSQ, { children: B }),
                     ],
@@ -138,14 +138,14 @@ function I(e) {
         ],
     });
 }
-function A(e) {
+function I(e) {
     let { user: t, mediaEngineContext: n, onSelect: o, onShowProfile: a, onWatchStream: c, appContext: g } = e,
-        S = (0, v.Z)({
+        S = (0, y.Z)({
             onAction: () => {
                 null == a || a();
             },
         }),
-        _ = (0, y.Z)({
+        _ = (0, Z.Z)({
             user: t,
             context: g,
         }),
@@ -153,28 +153,28 @@ function A(e) {
             user: t,
             appContext: g,
         }),
-        I = (0, p.Z)(t.id, c),
-        A = (0, j.Z)(t.id),
-        C = (0, E.Z)(t.id, n),
-        M = (0, m.Z)({ user: t }),
+        A = (0, p.Z)(t.id, c),
+        I = (0, j.Z)(t.id),
+        M = (0, v.Z)(t.id, n),
+        C = (0, m.Z)({ user: t }),
         x = (0, u.Z)(null, t),
         D = (0, f.Z)({
             user: t,
             appContext: g,
         }),
-        w = (0, O.Z)({
+        T = (0, O.Z)({
             user: t,
             appContext: g,
         }),
-        T = (0, Z.Z)({
+        N = (0, E.Z)({
             user: t,
             appContext: g,
         }),
-        N = (0, s.Z)({
+        k = (0, s.Z)({
             id: t.id,
             label: h.intl.string(h.t["/AXYnE"]),
         }),
-        k = (0, d.Z)(t),
+        w = (0, d.Z)(t),
         U = t.isNonUserBot();
     return (0, l.jsxs)(r.v2r, {
         navId: "user-context",
@@ -185,22 +185,22 @@ function A(e) {
             !U &&
                 (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(r.kSQ, { children: k }),
+                        (0, l.jsx)(r.kSQ, { children: w }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [S, _, P, I],
+                            children: [S, _, P, A],
                         }),
-                        (0, l.jsx)(r.kSQ, { children: A }),
+                        (0, l.jsx)(r.kSQ, { children: I }),
                         (0, l.jsx)(r.kSQ, { children: x }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [C, M, D, T, w],
+                            children: [M, C, D, N, T],
                         }),
                     ],
                 }),
-            (0, l.jsx)(r.kSQ, { children: N }),
+            (0, l.jsx)(r.kSQ, { children: k }),
         ],
     });
 }
-let C = (0, a.Z)(
+let M = (0, a.Z)(
     (0, o.Z)(
         function (e) {
             var { guildId: t, channelId: n } = e,
@@ -229,14 +229,14 @@ let C = (0, a.Z)(
                 })(e, ["guildId", "channelId"]);
             return null != t && null != n
                 ? (0, l.jsx)(
-                      I,
+                      A,
                       P(_({}, r), {
                           guildId: t,
                           channelId: n,
                       }),
                   )
                 : (0, l.jsx)(
-                      A,
+                      I,
                       P(_({}, r), {
                           guildId: t,
                           channelId: n,

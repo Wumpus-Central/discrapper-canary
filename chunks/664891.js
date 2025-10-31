@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(374649),
     w = n(642530),
     D = n(811334),
-    L = n(585602),
-    x = n(314182),
+    x = n(585602),
+    L = n(314182),
     M = n(396955),
-    k = n(314404),
-    j = n(42818),
+    j = n(314404),
+    k = n(42818),
     U = n(474936),
     G = n(981631),
     B = n(388032),
@@ -100,8 +100,8 @@ function K(e) {
             onPaymentSourceChange: m,
             onPaymentSourceAdd: g,
             planId: P,
-            setHasAcceptedTerms: L,
-            legalTermsNodeRef: j,
+            setHasAcceptedTerms: x,
+            legalTermsNodeRef: k,
             hasLegalTermsFlash: U,
             onInvoiceError: Z,
             planGroup: V,
@@ -201,7 +201,7 @@ function K(e) {
                             negativeMarginTop: !0,
                         }),
                         (0, r.jsx)(w.Z, {}),
-                        (0, r.jsx)(k.O, {
+                        (0, r.jsx)(j.O, {
                             planOptions: em,
                             eligibleForMultiMonthPlans: !1,
                             selectedPlanId: P,
@@ -241,9 +241,9 @@ function K(e) {
                     disabled: e_,
                 }),
             }),
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(L.Z, {
                 isActive: U,
-                ref: j,
+                ref: k,
                 children:
                     null != n && (0, R.R4)(n, P, V)
                         ? (0, r.jsx)(X, {
@@ -256,10 +256,10 @@ function K(e) {
                               disabled: e_,
                               isEEA: ef,
                               paymentSources: a,
-                              setHasAcceptedTerms: L,
+                              setHasAcceptedTerms: x,
                           })
                         : (0, r.jsx)(h.Z, {
-                              onChange: L,
+                              onChange: x,
                               finePrint: (0, r.jsx)(_.Z, {
                                   subscriptionPlan: ec,
                                   paymentSourceType: el,
@@ -297,11 +297,11 @@ function z(e) {
         ? (0, r.jsxs)(D.aO, {
               className: Z.__invalid_invoice,
               children: [
-                  (0, r.jsx)(j.By, {
+                  (0, r.jsx)(k.By, {
                       invoice: l,
                       isPrepaidPaymentSource: u,
                   }),
-                  (0, r.jsx)(j.nd, {
+                  (0, r.jsx)(k.nd, {
                       premiumSubscription: t,
                       renewalInvoice: l,
                       isUpdate: !0,
@@ -369,10 +369,10 @@ function q(e) {
         null == T || null == A || w)
     )
         return (0, r.jsx)(d.$jN, { className: F.__invalid_spinner });
-    let L = (0, N.Ap)(c.paymentSourceId);
+    let x = (0, N.Ap)(c.paymentSourceId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(j.hG, {
+            (0, r.jsx)(k.hG, {
                 proratedInvoice: T,
                 renewalInvoice: A,
                 overrideRenewalDate: t,
@@ -381,18 +381,18 @@ function q(e) {
                 className: o()(F.invoice, m),
                 children: [
                     (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Co"]) }),
-                    (0, r.jsx)(j.Lu, {
+                    (0, r.jsx)(k.Lu, {
                         invoice: T,
                         newPlan: a,
-                        isPrepaidPaymentSource: L,
+                        isPrepaidPaymentSource: x,
                     }),
-                    (0, r.jsx)(j.nd, {
+                    (0, r.jsx)(k.nd, {
                         premiumSubscription: n,
                         proratedInvoice: T,
                         renewalInvoice: A,
                         overrideRenewalDate: t,
                         isUpdate: !0,
-                        isPrepaidPaymentSource: L,
+                        isPrepaidPaymentSource: x,
                     }),
                 ],
             }),
@@ -514,11 +514,11 @@ function Q(e) {
                 className: o()(F.invoice, c),
                 children: [
                     (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Co"]) }),
-                    (0, r.jsx)(j.By, {
+                    (0, r.jsx)(k.By, {
                         invoice: f,
                         isPrepaidPaymentSource: b,
                     }),
-                    (0, r.jsx)(j.nd, {
+                    (0, r.jsx)(k.nd, {
                         premiumSubscription: t,
                         renewalInvoice: p,
                         isUpdate: !0,
@@ -583,9 +583,9 @@ function J(e) {
                             label: t,
                             value: (0, N.PK)(a, c, !0),
                         }),
-                        (0, r.jsx)(L.Z, { invoice: h }),
+                        (0, r.jsx)(x.Z, { invoice: h }),
                         (0, r.jsx)(D.UN, {}),
-                        (0, r.jsx)(j.nd, {
+                        (0, r.jsx)(k.nd, {
                             premiumSubscription: n,
                             renewalInvoice: h,
                             isUpdate: !0,

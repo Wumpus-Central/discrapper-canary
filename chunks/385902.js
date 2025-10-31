@@ -1,5 +1,5 @@
 n.d(t, {
-    K: () => O,
+    K: () => y,
     _: () => _,
 });
 var r = n(647438),
@@ -12,8 +12,8 @@ var r = n(647438),
     u = n(639777),
     d = n(973772),
     p = n(834209),
-    f = n(279604),
-    h = n(535396),
+    h = n(279604),
+    f = n(535396),
     g = n(981631),
     m = n(459196),
     b = n(388032);
@@ -25,28 +25,28 @@ function _(e, t) {
         }),
         a = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         u = null == a ? void 0 : a.allPowerups[i.A$],
-        f = (0, d.ZP)(e, u),
+        h = (0, d.ZP)(e, u),
         _ = (0, c.q8)(e, t),
-        O = null == u ? void 0 : u.storeRemovalDate,
-        y = null != (n = null == r ? void 0 : r.has(g.GuildFeatures.PARTNERED)) && n,
-        j = _ && null != O && !y && f.type === h.A3.POWERUP_ACTIVATED,
-        v = j
+        y = null == u ? void 0 : u.storeRemovalDate,
+        O = null != (n = null == r ? void 0 : r.has(g.GuildFeatures.PARTNERED)) && n,
+        v = _ && null != y && !O && h.type === f.A3.POWERUP_ACTIVATED,
+        j = v
             ? {
                   title: b.intl.formatToPlainString(m.default.mgoPkU, { perkName: null == u ? void 0 : u.title }),
-                  description: b.intl.formatToPlainString(m.default.UT9pkI, { dateString: (0, p.Z)(O) }),
+                  description: b.intl.formatToPlainString(m.default.UT9pkI, { dateString: (0, p.Z)(y) }),
               }
             : null;
     return {
-        shouldShow: j,
-        notificationConfig: v,
+        shouldShow: v,
+        notificationConfig: j,
     };
 }
-function O(e, t) {
-    var n, _, O, y;
-    let j = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
-        v = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
-        x = null != (O = (0, u.Z)(e)) && O,
-        C = (0, c.q8)(e, t),
+function y(e, t) {
+    var n, _, y, O;
+    let v = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
+        j = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
+        C = null != (y = (0, u.Z)(e)) && y,
+        x = (0, c.q8)(e, t),
         E = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
         S = null == E || null == (n = E.allPowerups) ? void 0 : n[i.A$],
         I = (0, d.ZP)(e, S),
@@ -56,23 +56,23 @@ function O(e, t) {
             var t;
             return null == (t = o.Z.getGuild(e)) ? void 0 : t.features;
         }),
-        T = null != (y = null == Z ? void 0 : Z.has(g.GuildFeatures.PARTNERED)) && y,
-        { onActivate: w } = (0, f._C)(e, N),
-        A = !v && x && C && null != S && !T && I.type === h.A3.POWERUP_ACTIVATED && null != P && null != N && null != j,
+        w = null != (O = null == Z ? void 0 : Z.has(g.GuildFeatures.PARTNERED)) && O,
+        { onActivate: T } = (0, h._C)(e, N),
+        A = !j && C && x && null != S && !w && I.type === f.A3.POWERUP_ACTIVATED && null != P && null != N && null != v,
         R = r.useCallback(
             (e) => {
-                w(e);
+                T(e);
             },
-            [w],
+            [T],
         ),
         D = r.useMemo(() => {
             if (!A) return null;
             let e = (0, p.Z)(P),
-                t = j.premiumTier === g.Eu4.TIER_2 ? b.intl.string(m.default["0uo/LD"]) : void 0;
+                t = v.premiumTier === g.Eu4.TIER_2 ? b.intl.string(m.default["0uo/LD"]) : void 0;
             return {
                 firstHeader: S.title,
                 secondHeader: b.intl.formatToPlainString(m.default["8imxAq"], { dateString: e }),
-                firstBody: b.intl.formatToPlainString(m.default["/bW9tW"], { serverName: j.name }),
+                firstBody: b.intl.formatToPlainString(m.default["/bW9tW"], { serverName: v.name }),
                 secondBody: b.intl.formatToPlainString(m.default.D09fdi, {
                     dateString: e,
                     boostCount: S.cost,
@@ -81,7 +81,7 @@ function O(e, t) {
                 primaryButtonText: t,
                 onPrimaryClick: null != t ? R : void 0,
             };
-        }, [A, S, P, j, R]);
+        }, [A, S, P, v, R]);
     return {
         shouldShow: A,
         modalConfig: D,

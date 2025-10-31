@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(442837),
     i = n(592125),
     l = n(430824),
-    s = n(944486);
-function o() {
-    let e = (0, r.e7)([s.Z, i.Z], () => i.Z.getChannel(s.Z.getVoiceChannelId())),
+    o = n(944486);
+function s() {
+    let e = (0, r.e7)([o.Z, i.Z], () => i.Z.getChannel(o.Z.getVoiceChannelId())),
         t = null == e ? void 0 : e.getGuildId();
     return (0, r.e7)([l.Z], () => {
         var e;

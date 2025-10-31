@@ -175,7 +175,7 @@ async function A(e, t, n, r, s) {
                 {
                     sku_id: e,
                     quantity: 1,
-                    purchase_type: 0,
+                    purchase_type: 1,
                 },
             ],
             billing_facet: { payment_source_id: t },

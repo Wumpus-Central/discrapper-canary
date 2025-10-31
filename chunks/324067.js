@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854), n(388685);
+n.d(t, { Z: () => j }), n(539854), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -124,23 +124,23 @@ function D(e) {
     if (((p = null != t ? t : null), null == t || null != h[t])) return !1;
     y(t);
 }
-function L() {
+function x() {
     y(f.I_8);
 }
-function x(e) {
+function L(e) {
     let t = h[e];
     return null != t ? t : y(e);
 }
 class M extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L);
+        this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], x);
     }
     getCategories(e) {
-        return null != e ? x(e) : E;
+        return null != e ? L(e) : E;
     }
 }
 _(M, "displayName", "GuildCategoryStore");
-let k = new M(a.Z, {
+let j = new M(a.Z, {
     CHANNEL_SELECT: D,
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: O,

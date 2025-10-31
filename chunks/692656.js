@@ -14,8 +14,8 @@ var i = n(951288),
     h = n(911969),
     v = n(115130),
     y = n(566620),
-    x = n(127255),
-    g = n(880308),
+    g = n(127255),
+    x = n(880308),
     b = n(427996),
     N = n(367907),
     j = n(10718),
@@ -71,11 +71,11 @@ function et(e) {
         d = (0, M.Yn)(n),
         p = !(0, M.Yn)(n),
         h = n === R._b.TEXT,
-        [x, g] = ec(!0),
+        [g, x] = ec(!0),
         [b, N] = ec(u),
         [j, C] = ec(d),
         [E, P] = ec(p),
-        A = x && b && j && E,
+        A = g && b && j && E,
         _ = (d || u) && !A,
         O = p && c;
     l.useEffect(() => {
@@ -115,7 +115,7 @@ function et(e) {
                               (0, i.jsx)(el, {
                                   context: t,
                                   entrypoint: n,
-                                  onEmptyState: g,
+                                  onEmptyState: x,
                               }),
                               u &&
                                   "channel" === t.type &&
@@ -333,8 +333,8 @@ function el(e) {
 function er(e) {
     var t;
     let { context: n, onEmptyState: r } = e;
-    (0, g.g)();
-    let a = (0, x.Z)({ guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0 }),
+    (0, x.g)();
+    let a = (0, g.Z)({ guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0 }),
         o = D.U4.LARGE_BANNER,
         { trackSectionImpressionRef: s } = (0, B.Z)({
             sectionName: R.L3.ACTIVITIES,
@@ -497,8 +497,8 @@ function eo(e) {
         p = (function (e) {
             var t;
             let { context: n, recommendationsSections: i } = e;
-            (0, g.g)();
-            let r = (0, x.Z)({
+            (0, x.g)();
+            let r = (0, g.Z)({
                 guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0,
             });
             return l.useMemo(() => {
@@ -611,7 +611,7 @@ function es(e) {
         default:
             n = 4;
     }
-    let { items: y, handleViewMore: x } = eu({
+    let { items: y, handleViewMore: g } = eu({
             title: f,
             look: t,
             items: h,
@@ -619,7 +619,7 @@ function es(e) {
             sectionName: v,
             sectionOverallPosition: u,
         }),
-        { trackSectionImpressionRef: g } = (0, B.Z)({
+        { trackSectionImpressionRef: x } = (0, B.Z)({
             sectionName: v,
             numItems: h.length,
             numVisibleItems: y.length,
@@ -629,12 +629,12 @@ function es(e) {
         children: [
             (0, i.jsx)("div", {
                 ref: (e) => {
-                    g.current = e;
+                    x.current = e;
                 },
                 children: (0, i.jsx)(W.Z, {
                     title: r.title,
                     buttonType: W.Z.buttonTypes.VIEW_MORE,
-                    onClickViewButton: x,
+                    onClickViewButton: g,
                 }),
             }),
             (0, i.jsx)("div", {

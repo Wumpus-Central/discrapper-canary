@@ -85,7 +85,7 @@ function f(e) {
             },
             [t, h, w],
         ),
-        L = r.useCallback(
+        x = r.useCallback(
             function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     [n, r] = null != m ? m(f, _) : [f, _];
@@ -104,17 +104,17 @@ function f(e) {
             },
             [g, f, _, m, t, w],
         ),
-        [x, M] = r.useState(!1);
+        [L, M] = r.useState(!1);
     r.useEffect(() => {
-        if (!x || !T) return;
+        if (!L || !T) return;
         M(!1);
         let e = u(c(t, f, _));
         if (null != e) return void w(e);
         S(!1);
         let n = u(c(t));
         null != n && w(n);
-    }, [t, x, T, w, f, _]);
-    let k = r.useCallback((e) => {
+    }, [t, L, T, w, f, _]);
+    let j = r.useCallback((e) => {
         v.current && null == e && M(!0);
     }, []);
     r.useEffect(() => {
@@ -123,7 +123,7 @@ function f(e) {
         r.useEffect(() => {
             T && (N || D(f, _), R(!1));
         }, [f, _]);
-    let j = r.useCallback(
+    let k = r.useCallback(
             (e) => {
                 if (!v.current) return;
                 if (
@@ -132,7 +132,7 @@ function f(e) {
                     !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                     e.currentTarget === e.target
                 ) {
-                    e.preventDefault(), e.stopPropagation(), L();
+                    e.preventDefault(), e.stopPropagation(), x();
                     return;
                 }
                 let t = l(e);
@@ -158,16 +158,16 @@ function f(e) {
                             null != p ? p(f, _, e) : null != I && I.click();
                 }
             },
-            [L, g, y, I, p, f, _],
+            [x, g, y, I, p, f, _],
         ),
         U = r.useCallback(
             (e) =>
                 e.currentTarget !== e.target
                     ? (T || (S(!0), R(!0)), !1)
                     : T
-                      ? (L(!1), !1)
-                      : void (E && null != I ? D(f, _) : L(!0)),
-            [T, E, I, L, D, f, _],
+                      ? (x(!1), !1)
+                      : void (E && null != I ? D(f, _) : x(!0)),
+            [T, E, I, x, D, f, _],
         ),
         G = r.useCallback((e) => {
             if (e.target !== e.currentTarget) {
@@ -183,11 +183,11 @@ function f(e) {
                 "aria-colcount": B,
                 tabIndex: T && E ? -1 : 0,
                 "data-ref-id": t,
-                onKeyDown: j,
+                onKeyDown: k,
                 onFocus: U,
                 onBlur: G,
             }),
-            [n.length, B, T, E, t, j, U, G],
+            [n.length, B, T, E, t, k, U, G],
         ),
         F = r.useCallback(
             (e, n) => {
@@ -199,9 +199,9 @@ function f(e) {
                     tabIndex: E && e === f && n === _ ? 0 : -1,
                     onFocus: P.get("".concat(e, ",").concat(n)),
                 };
-                return e === f && n === _ && (r.ref = k), r;
+                return e === f && n === _ && (r.ref = j), r;
             },
-            [t, E, f, _, P, k],
+            [t, E, f, _, P, j],
         ),
         V = r.useCallback(
             (e) => ({

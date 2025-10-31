@@ -1,59 +1,59 @@
-n.d(t, { $: () => u }), n(388685);
-var a = n(951288),
-    l = n(647438),
-    r = n(793030),
-    i = n(393238),
-    o = n(840724),
-    d = n(533785),
-    c = n(174260),
-    s = n(329353);
+l.d(n, { $: () => u }), l(388685);
+var t = l(951288),
+    i = l(647438),
+    a = l(793030),
+    r = l(393238),
+    d = l(840724),
+    o = l(533785),
+    s = l(822458),
+    c = l(329353);
 function u(e) {
-    var t;
-    let { applicationId: n, guildId: u, page: g } = e,
-        { ref: p, width: f } = (0, i.ZP)(),
-        [m, b] = l.useMemo(
+    var n;
+    let { applicationId: l, guildId: u, page: p } = e,
+        { ref: g, width: I } = (0, r.ZP)(),
+        [v, x] = i.useMemo(
             () =>
-                (null == g ? void 0 : g.skuIds) == null || (null == g ? void 0 : g.skuIds.length) === 0
+                (null == p ? void 0 : p.skuIds) == null || (null == p ? void 0 : p.skuIds.length) === 0
                     ? [[], []]
-                    : (null == g ? void 0 : g.leaderboard) == null || null == f || f <= 516
-                      ? [[], null == g ? void 0 : g.skuIds]
-                      : f < 1104
-                        ? [null == g ? void 0 : g.skuIds.slice(0, 1), null == g ? void 0 : g.skuIds.slice(1)]
-                        : [null == g ? void 0 : g.skuIds.slice(0, 2), null == g ? void 0 : g.skuIds.slice(2)],
-            [g, f],
+                    : (null == p ? void 0 : p.leaderboard) == null || null == I || I <= 516
+                      ? [[], null == p ? void 0 : p.skuIds]
+                      : I < 1104
+                        ? [null == p ? void 0 : p.skuIds.slice(0, 1), null == p ? void 0 : p.skuIds.slice(1)]
+                        : [null == p ? void 0 : p.skuIds.slice(0, 2), null == p ? void 0 : p.skuIds.slice(2)],
+            [p, I],
         );
-    return null == g
+    return null == p
         ? null
-        : (0, a.jsx)(r.zJl, {
-              children: (0, a.jsxs)("section", {
-                  ref: p,
-                  className: s.container,
+        : (0, t.jsx)(a.zJl, {
+              children: (0, t.jsxs)("section", {
+                  ref: g,
+                  className: c.container,
                   children: [
-                      (0, a.jsx)(d.t, { leaderboard: g.leaderboard }),
-                      (0, a.jsx)(c.Z, {
-                          applicationId: n,
+                      (0, t.jsx)(o.t, { leaderboard: p.leaderboard }),
+                      (0, t.jsx)(s.Z, {
+                          applicationId: l,
                           guildId: u,
-                          skuIds: m,
-                          variant: o.Z.MEDIUM,
+                          skuIds: v,
+                          variant: d.Z.MEDIUM,
                       }),
-                      (0, a.jsx)(c.Z, {
-                          applicationId: n,
+                      (0, t.jsx)(s.Z, {
+                          applicationId: l,
                           guildId: u,
-                          skuIds: b,
+                          skuIds: x,
                       }),
-                      null == (t = g.sections)
+                      null == (n = p.sections)
                           ? void 0
-                          : t.map((e, t) => {
-                                var l;
-                                return (0, a.jsx)(
-                                    c.Z,
+                          : n.map((e, n) => {
+                                var i;
+                                return (0, t.jsx)(
+                                    s.Z,
                                     {
                                         guildId: u,
-                                        applicationId: n,
-                                        sectionTitle: null != (l = e.title) ? l : void 0,
+                                        applicationId: l,
+                                        sectionTitle: null != (i = e.title) ? i : void 0,
                                         skuIds: e.skuIds,
                                     },
-                                    "".concat(e.title, "-").concat(t),
+                                    "".concat(e.title, "-").concat(n),
                                 );
                             }),
                   ],

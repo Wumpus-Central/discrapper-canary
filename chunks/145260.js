@@ -85,7 +85,7 @@ let D = s().debounce(() => {
         (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1),
         A || X.emitChange());
 }, 500);
-function L(e) {
+function x(e) {
     let { settings: t } = e;
     if (null == y) return !1;
     (y = m({}, y)),
@@ -100,7 +100,7 @@ function L(e) {
             ((y.expire_grace_period = t.expireGracePeriod), (A = !0)),
         A && D();
 }
-function x(e) {
+function L(e) {
     let { settings: t } = e;
     if (null == O) return !1;
     (O = m({}, O)),
@@ -112,12 +112,12 @@ function x(e) {
 function M() {
     (T = p.QZA.SUBMITTING), (S = {});
 }
-function k(e) {
+function j(e) {
     var t;
     if (T !== p.QZA.SUBMITTING) return !1;
     (T = p.QZA.OPEN), (S = null != (t = e.errors) ? t : {});
 }
-function j(e) {
+function k(e) {
     let { guildId: t, integrations: n } = e;
     if (null == r || t !== r.id || T === p.QZA.SUBMITTING) return !1;
     for (let e of ((I = !1), n))
@@ -291,15 +291,15 @@ let X = new q(
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: B,
                   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: Z,
                   INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: F,
-                  INTEGRATION_SETTINGS_UPDATE_INTEGRATION: L,
-                  INTEGRATION_SETTINGS_UPDATE_WEBHOOK: x,
+                  INTEGRATION_SETTINGS_UPDATE_INTEGRATION: x,
+                  INTEGRATION_SETTINGS_UPDATE_WEBHOOK: L,
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: V,
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: H,
                   GUILD_SETTINGS_CLOSE: w,
-                  GUILD_SETTINGS_LOADED_INTEGRATIONS: j,
+                  GUILD_SETTINGS_LOADED_INTEGRATIONS: k,
                   WEBHOOKS_UPDATE: U,
                   INTEGRATION_SETTINGS_SUBMITTING: M,
-                  INTEGRATION_SETTINGS_SAVE_FAILURE: k,
+                  INTEGRATION_SETTINGS_SAVE_FAILURE: j,
               },
     ),
     Q = X;

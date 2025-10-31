@@ -8,13 +8,13 @@ var r = n(951288),
     c = n(626135),
     u = n(381585),
     d = n(870289),
-    g = n(501431),
-    p = n(888302),
+    p = n(501431),
+    g = n(888302),
     f = n(193227),
     h = n(426171),
     C = n(845796),
-    _ = n(841875),
-    m = n(312030),
+    m = n(841875),
+    _ = n(312030),
     b = n(795343),
     v = n(763891),
     E = n(215023),
@@ -23,12 +23,12 @@ var r = n(951288),
     S = n(452785);
 function y(e) {
     let { tab: t, sortedCategories: n, initialCategoryId: i, showFilterInitially: c = !0, onUnmount: u } = e;
-    (0, g.A)();
-    let p = (0, d.FF)("CollectiblesBrowse"),
+    (0, p.A)();
+    let g = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
         { handleScroll: C } = (0, o.z)(f, t),
-        { setCategoryRef: m, handleScrollToCategory: b } = (0, h.xV)(f.current),
-        [v, E] = l.useState(p && c),
+        { setCategoryRef: _, handleScrollToCategory: b } = (0, h.xV)(f.current),
+        [v, E] = l.useState(g && c),
         [x, O] = l.useState(!1);
     return (
         l.useEffect(() => {
@@ -47,12 +47,12 @@ function y(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         l.useEffect(() => {
-            p || E(!1);
-        }, [p, E]),
+            g || E(!1);
+        }, [g, E]),
         (0, r.jsx)("div", {
-            className: s()(S.pageWrapper, { [S.pageWrapperFilter]: p }),
+            className: s()(S.pageWrapper, { [S.pageWrapperFilter]: g }),
             children: (0, r.jsxs)("main", {
-                className: s()(S.page, { [S.pageFilter]: p }),
+                className: s()(S.page, { [S.pageFilter]: g }),
                 children: [
                     (0, r.jsx)(a.yWw, {
                         className: S.shopScroll,
@@ -65,7 +65,7 @@ function y(e) {
                             tab: t,
                             scrollerRef: f,
                             sortedCategories: n,
-                            setCategoryRef: m,
+                            setCategoryRef: _,
                         }),
                     }),
                     v && !x && (0, r.jsx)("div", { className: S.divider }),
@@ -73,7 +73,7 @@ function y(e) {
                         !x &&
                         (0, r.jsx)(a.Ttm, {
                             className: S.filterBar,
-                            children: (0, r.jsx)(_.Z, {}),
+                            children: (0, r.jsx)(m.Z, {}),
                         }),
                 ],
             }),
@@ -91,10 +91,10 @@ let j = (e) => {
             setCategoryRef: j,
         } = e,
         k = (0, d.FF)("CollectiblesBrowse"),
-        T = l.useRef(null),
-        I = (0, g.S)((e) => e.hasDefaultFilters()),
+        I = l.useRef(null),
+        T = (0, p.S)((e) => e.hasDefaultFilters()),
         L = (0, u.sp)(),
-        { handlePageChange: B, currentPage: P } = (0, m.h)(h),
+        { handlePageChange: B, currentPage: P } = (0, _.h)(h),
         A = l.useCallback(
             (e) => {
                 c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -116,9 +116,9 @@ let j = (e) => {
             if (!t || !n) return;
             let e = (e) => {
                 let t = e.target;
-                null === T.current ||
+                null === I.current ||
                     null === N.current ||
-                    T.current.contains(t) ||
+                    I.current.contains(t) ||
                     N.current.contains(t) ||
                     (c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
@@ -144,7 +144,7 @@ let j = (e) => {
                             children: [
                                 (0, r.jsx)("div", {
                                     className: S.controlsLeftSide,
-                                    children: (0, r.jsx)(p.Z, {}),
+                                    children: (0, r.jsx)(g.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
                                     className: s()(S.controlsRightSide, { [S.controlsRightSideResponsive]: t }),
@@ -187,15 +187,15 @@ let j = (e) => {
                                     t &&
                                     (0, r.jsx)("div", {
                                         className: S.filterOverlay,
-                                        ref: T,
+                                        ref: I,
                                         children: (0, r.jsx)(a.Den, {
                                             className: S.filterOverlayContent,
-                                            children: (0, r.jsx)(_.Z, {}),
+                                            children: (0, r.jsx)(m.Z, {}),
                                         }),
                                     }),
                             ],
                         }),
-                    k && !I
+                    k && !T
                         ? (0, r.jsx)(
                               b.Z,
                               {

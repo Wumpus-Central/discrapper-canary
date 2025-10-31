@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => b,
-    j: () => h,
+    j: () => m,
 }),
     n(415506),
     n(388685);
@@ -27,8 +27,8 @@ function f(e, t, n) {
         e
     );
 }
-var h = (((r = {}).SECTION_NO_RESULTS = "SECTION_NO_RESULTS"), r);
-let m = Object.freeze({
+var m = (((r = {}).SECTION_NO_RESULTS = "SECTION_NO_RESULTS"), r);
+let h = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
             darkSrc: n(67764),
@@ -115,15 +115,15 @@ class _ extends l.PureComponent {
                 switch (e) {
                     case u.pJs.ADD_FRIEND:
                     case u.pJs.ALL:
-                        return m.SECTION_ALL;
+                        return h.SECTION_ALL;
                     case u.pJs.ONLINE:
-                        return m.SECTION_ONLINE;
+                        return h.SECTION_ONLINE;
                     case u.pJs.PENDING:
-                        return m.SECTION_PENDING;
+                        return h.SECTION_PENDING;
                     case u.pJs.SUGGESTIONS:
-                        return m.SECTION_SUGGESTIONS;
+                        return h.SECTION_SUGGESTIONS;
                     case "SECTION_NO_RESULTS":
-                        return m.SECTION_NO_RESULTS;
+                        return h.SECTION_NO_RESULTS;
                     default:
                         throw Error("FriendsEmptyState: Invalid empty state");
                 }

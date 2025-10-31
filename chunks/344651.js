@@ -30,7 +30,7 @@ var a = n(442837),
     P = n(868158),
     w = n(483012),
     D = n(955132);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
@@ -71,7 +71,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function k(e, t) {
         e
     );
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -121,7 +121,7 @@ let G = new d.Z("ConnectionStore"),
                     null == i
                         ? void 0
                         : i.merge(
-                              k(x({}, r), {
+                              j(L({}, r), {
                                   recipients: i.recipients,
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate,
                               }),
@@ -742,7 +742,7 @@ W(
         (e) => v.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
-                r = j(e, ["newly_created"]);
+                r = k(e, ["newly_created"]);
             q({
                 type: t,
                 isNewlyCreated: n,
@@ -1075,7 +1075,7 @@ W(
         });
     }),
     Y(["USER_NOTE_UPDATE"], (e) => {
-        q(x({ type: "USER_NOTE_UPDATE" }, e));
+        q(L({ type: "USER_NOTE_UPDATE" }, e));
     }),
     Y(["RELATIONSHIP_ADD"], (e) => {
         q({
@@ -1311,7 +1311,7 @@ W(
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.votes.map((e) =>
-                k(x({}, e), {
+                j(L({}, e), {
                     emoji: {
                         id: e.answer_id,
                         name: "",
@@ -1873,7 +1873,7 @@ W(
         });
     }),
     Y(["DELETED_ENTITY_IDS"], (e) => {
-        q(x({ type: "DELETED_ENTITY_IDS" }, e));
+        q(L({ type: "DELETED_ENTITY_IDS" }, e));
     }),
     W(
         ["CHANNEL_SYNC"],
@@ -1996,7 +1996,7 @@ W(
         });
     }),
     Y(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
-        q(x({ type: "CONVERSATION_SUMMARY_UPDATE" }, e));
+        q(L({ type: "CONVERSATION_SUMMARY_UPDATE" }, e));
     }),
     Y(["PREMIUM_MARKETING_PREVIEW"], (e) => {
         q({

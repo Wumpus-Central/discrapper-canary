@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(306066),
     w = n(349803),
     D = n(8231),
-    L = n(864879),
-    x = n(238649),
+    x = n(864879),
+    L = n(238649),
     M = n(47840),
-    k = n(975978),
-    j = n(836332),
+    j = n(975978),
+    k = n(836332),
     U = n(903250),
     G = n(954003),
     B = n(664134),
@@ -86,8 +86,8 @@ let z = () => {
             eN.trial_id !== F.a7,
         ew = E.Z.getAlmostExpiringDiscountOffers([F.Si.TIER_2]).length > 0 && null != eR && null != eR.expires_at,
         eD = eP ? eN.expires_at : ew ? eR.expires_at : null,
-        eL = eC === v.tE.HERO_COUNTDOWN && (eP || ew) && null != eD,
-        ex = (0, r.jsxs)("div", {
+        ex = eC === v.tE.HERO_COUNTDOWN && (eP || ew) && null != eD,
+        eL = (0, r.jsxs)("div", {
             className: o()(eA.container, eA.responsiveContainer, {
                 [eA.containerBackground]: em || J,
                 [Y.fadeInFromTop]: !X && em,
@@ -98,7 +98,7 @@ let z = () => {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(P.Z, {
-                                className: o()(Y.topOfPageGradient, { [Y.topOfPageGradientWithCountdown]: eL }),
+                                className: o()(Y.topOfPageGradient, { [Y.topOfPageGradientWithCountdown]: ex }),
                             }),
                             (0, r.jsx)(Z.Z, {
                                 navBarSections: eb,
@@ -129,11 +129,11 @@ let z = () => {
                                 threshold: 0,
                                 active: !0,
                                 children: em
-                                    ? (0, r.jsx)(x.Z, {
+                                    ? (0, r.jsx)(L.Z, {
                                           ref: a,
                                           subscriptionTier: ef,
                                           isEligibleForBogoPromotion: e_,
-                                          offerExpiresAt: eL ? eD : null,
+                                          offerExpiresAt: ex ? eD : null,
                                       })
                                     : (0, r.jsx)(U.Z, {
                                           ref: a,
@@ -186,7 +186,7 @@ let z = () => {
                         (0, r.jsx)("div", {
                             className: eA.planComparisonTableContainer,
                             ref: eS.ref,
-                            children: em ? (0, r.jsx)(k.Z, {}) : (0, r.jsx)(D.Z, {}),
+                            children: em ? (0, r.jsx)(j.Z, {}) : (0, r.jsx)(D.Z, {}),
                         }),
                     ],
                 }),
@@ -216,8 +216,8 @@ let z = () => {
                         en(e);
                     },
                     children: em
-                        ? (0, r.jsx)(L.Z, { ref: q })
-                        : (0, r.jsx)(j.Z, {
+                        ? (0, r.jsx)(x.Z, { ref: q })
+                        : (0, r.jsx)(k.Z, {
                               ref: q,
                               isFooterVisible: et,
                               isDarkMode: J,
@@ -244,7 +244,7 @@ let z = () => {
             (0, r.jsx)(u.yWw, {
                 className: o()(eA.scroller, t),
                 ref: e,
-                children: ex,
+                children: eL,
             }),
     });
 };

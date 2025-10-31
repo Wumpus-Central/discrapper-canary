@@ -30,7 +30,7 @@ var i = n(120356),
     P = n(681642),
     w = n(388032),
     D = n(517793);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
@@ -71,7 +71,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function k(e, t) {
         e
     );
 }
-let j = (e) => {
+let k = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === m.l.ORB_PROFILE_BADGE
         ? (0, r.jsx)(g.Z, { showSubtext: !i && !t.isPreviewMode })
@@ -100,7 +100,7 @@ function U(e) {
             className: i,
             badgeClassName: d,
             displayProfile: g,
-            onClose: L,
+            onClose: x,
             shouldOpenBadgeTooltip: M,
             shouldGlowTenureBadge: U,
         } = e,
@@ -123,7 +123,7 @@ function U(e) {
                     if (
                         (Z({ action: "PRESS_BADGE" }),
                         (0, I.NE)(
-                            x(
+                            L(
                                 {
                                     badge: e.id,
                                     analyticsLocations: G,
@@ -154,34 +154,34 @@ function U(e) {
                                       analyticsLocations: G,
                                       displayProfile: g,
                                   }),
-                                null == L || L();
+                                null == x || x();
                             return;
                         }
                         if ((null == g ? void 0 : g.userId) === (null == F ? void 0 : F.id)) {
                             let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: G }) : null;
                             if (null == n) return;
-                            return null == L || L(), n(t);
+                            return null == x || x(), n(t);
                         }
                         return (
                             (0, f.k)({
                                 analyticsLocations: G,
                                 displayProfile: g,
                             }),
-                            void (null == L || L())
+                            void (null == x || x())
                         );
                     }
                     let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: G }) : null;
-                    if (null != n) return null == L || L(), n(t);
+                    if (null != n) return null == x || x(), n(t);
                 },
                 v = () => {
                     e.id === T.i &&
                         b.default.track(
                             C.rMx.QUEST_CONTENT_VIEWED,
-                            k(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
+                            j(L({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
                         Z({ action: "HOVER_BADGE" }),
                         (0, I.Qf)(
-                            x(
+                            L(
                                 {
                                     badge: e.id,
                                     analyticsLocations: G,
@@ -190,7 +190,7 @@ function U(e) {
                             ),
                         );
                 },
-                S = j({
+                S = k({
                     badge: e,
                     tieredTenureBadge: E && e.id !== P.a ? c : void 0,
                     currentUserOwnsOrbBadge: Y,

@@ -95,10 +95,10 @@ function w(e) {
 function D() {
     0 !== y.length && ((O = [...y]), (y = []), A([], "store_click_zones"));
 }
-function L() {
+function x() {
     y.length > 0 || A((y = [...O]), "refresh_click_zones");
 }
-function x(e, t, n, r) {
+function L(e, t, n, r) {
     let i = c.Z.getWindow(h.$J);
     if (null == i) return;
     let a = Math.ceil(n * i.innerWidth),
@@ -117,22 +117,22 @@ function x(e, t, n, r) {
 function M(e) {
     return w("crashed"), !0;
 }
-function k(e) {
+function j(e) {
     let { zones: t } = e;
     return P(t, "set_click_zones"), !0;
 }
-function j() {
+function k() {
     return w("refresh_host_window"), !0;
 }
 function U() {
-    return null == (b = f.Z.getNativeModule()) || !!I || ((I = !0), b.setCaptureZoneCallback(x), !0);
+    return null == (b = f.Z.getNativeModule()) || !!I || ((I = !0), b.setCaptureZoneCallback(L), !0);
 }
 function G() {
     return (b = null), !0;
 }
 function B(e) {
     let { pid: t } = e;
-    return 0 === t ? D() : L(), !0;
+    return 0 === t ? D() : x(), !0;
 }
 class Z extends (r = o.ZP.Store) {
     initialize() {
@@ -153,9 +153,9 @@ let F = new Z(
         : {
               OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: U,
               OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: G,
-              OVERLAY_SET_CLICK_ZONES: k,
+              OVERLAY_SET_CLICK_ZONES: j,
               OVERLAY_FOCUSED: B,
-              OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: j,
+              OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: k,
               OVERLAY_CRASHED: M,
           },
 );

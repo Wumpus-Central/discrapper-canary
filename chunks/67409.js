@@ -1,11 +1,11 @@
-n.d(t, { S: () => l });
-var r = n(979554);
+t.d(n, { S: () => l });
+var r = t(979554);
 let l = (e) => {
-    var t, n, l;
-    let { product: a, selectedVariantIndex: i } = e;
-    return a.type === r.Z.VARIANTS_GROUP &&
-        null != i &&
-        null != (l = null == (n = a.variants) || null == (t = n[i]) ? void 0 : t.skuId)
+    var n, t, l;
+    let { product: i, selectedVariantIndex: a } = e;
+    return i.type === r.Z.VARIANTS_GROUP &&
+        null != a &&
+        null != (l = null == (t = i.variants) || null == (n = t[a]) ? void 0 : n.skuId)
         ? l
-        : a.skuId;
+        : i.skuId;
 };

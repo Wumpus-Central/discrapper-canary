@@ -23,8 +23,8 @@ var i,
     h = n(115130),
     v = n(317381),
     y = n(723163),
-    x = n(361213),
-    g = n(542094),
+    g = n(361213),
+    x = n(542094),
     b = n(778569),
     N = n(182906),
     j = n(556505),
@@ -168,8 +168,8 @@ function Q(e) {
             },
             [t],
         ),
-        { name: y, description: x } = r.useMemo(() => (0, R.sl)(t, { fakeAppIconURL: W }), [t]),
-        { trackItemImpressionRef: g } = (0, k.Z)({
+        { name: y, description: g } = r.useMemo(() => (0, R.sl)(t, { fakeAppIconURL: W }), [t]),
+        { trackItemImpressionRef: x } = (0, k.Z)({
             applicationId: t.id,
             applicationFlags: (0, R.BQ)(t) ? t.flags : void 0,
             sectionName: a,
@@ -191,18 +191,18 @@ function Q(e) {
         }, [f, m, h]);
     return m
         ? (0, l.jsx)("div", {
-              ref: p ? g : void 0,
+              ref: p ? x : void 0,
               className: b,
               children: i,
           })
         : (0, l.jsx)(u.P3F, {
-              innerRef: p ? g : void 0,
+              innerRef: p ? x : void 0,
               className: b,
               onClick: n,
               onContextMenu: v,
               "aria-label": B.intl.formatToPlainString(B.t["zLhr9+"], {
                   applicationName: y,
-                  applicationDescription: x,
+                  applicationDescription: g,
               }),
               children: (0, l.jsx)(u.Rny, { children: i }),
           });
@@ -237,8 +237,8 @@ function J(e) {
             overrideImageUrl: m,
             showsPromoted: f,
         } = e,
-        { iconURL: v, name: y, description: x } = r.useMemo(() => (0, R.sl)(t, { fakeAppIconURL: W }), [t]),
-        g = r.useMemo(() => (null == x ? null : (0, w.ae)(x)), [x]),
+        { iconURL: v, name: y, description: g } = r.useMemo(() => (0, R.sl)(t, { fakeAppIconURL: W }), [t]),
+        x = r.useMemo(() => (null == g ? null : (0, w.ae)(g)), [g]),
         b = (0, E.ZP)(v, ""),
         [N, C] = r.useState(!1),
         P = r.useCallback(() => {
@@ -337,7 +337,7 @@ function J(e) {
                                 variant: "text-sm/normal",
                                 color: "text-secondary",
                                 lineClamp: 1,
-                                children: g,
+                                children: x,
                             }),
                         ],
                     }),
@@ -362,7 +362,7 @@ function $(e) {
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return null;
     let i = (0, R.yJ)(t);
     if (null == i || !(0, R.BQ)(t)) return null;
-    let r = (0, g.fD)(t, i);
+    let r = (0, x.fD)(t, i);
     return null == r
         ? null
         : (0, l.jsx)(c.u, {
@@ -411,7 +411,7 @@ function et(e) {
         s = r.useMemo(() => {
             let e = (0, R.yJ)(t);
             return null != e && null != e.activity_preview_video_asset_id
-                ? (0, x.Z)(t.id, e.activity_preview_video_asset_id)
+                ? (0, g.Z)(t.id, e.activity_preview_video_asset_id)
                 : null;
         }, [t]),
         [c, u] = r.useState(n);
@@ -538,7 +538,7 @@ function ea(e) {
         ]),
         y = (null != f && f.isLaunching && f.componentId === p) || h,
         {
-            onActivityItemSelected: x,
+            onActivityItemSelected: g,
             activityAction: b,
             buttonVariant: N,
             buttonText: j,
@@ -550,14 +550,14 @@ function ea(e) {
             launchingComponentId: p,
             fetchesApplication: c,
         });
-    return b === g.JS.START || b === g.JS.JOIN
+    return b === x.JS.START || b === x.JS.JOIN
         ? o
             ? (0, l.jsx)(
                   q,
                   Y(G({}, d), {
                       sectionName: a,
                       application: n,
-                      onClick: x,
+                      onClick: g,
                       disabled: m || h,
                       enableVideoBanner: !y,
                       children: y
@@ -595,7 +595,7 @@ function ea(e) {
                           size: "md",
                           variant: N,
                           disabled: m || h,
-                          onClick: x,
+                          onClick: g,
                           "aria-label": B.intl.formatToPlainString(B.t["XjP/R+"], {
                               buttonText: j,
                               applicationName: n.name,

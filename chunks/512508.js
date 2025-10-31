@@ -237,8 +237,8 @@ function k(e) {
         [R, M] = l.useState(!1),
         [E, k] = l.useState(!1),
         [A, U] = l.useState(!1),
-        B = l.useRef(null),
-        { sections: F, sectionCounts: q } = l.useMemo(() => {
+        F = l.useRef(null),
+        { sections: B, sectionCounts: q } = l.useMemo(() => {
             let e = "" !== y ? i.filter((e) => s()(y, e.display.toLocaleLowerCase())) : i,
                 t = "" !== y ? n.filter((e) => s()(y, e.display.toLocaleLowerCase())) : n,
                 r = [],
@@ -296,7 +296,7 @@ function k(e) {
                     z(),
                     setTimeout(() => {
                         var e;
-                        let t = null == (e = B.current) ? void 0 : e.containerRef.current,
+                        let t = null == (e = F.current) ? void 0 : e.containerRef.current,
                             n = null == t ? void 0 : t.firstChild;
                         null != n &&
                             n.scrollTo({
@@ -310,7 +310,7 @@ function k(e) {
         W = l.useCallback(
             (e) => {
                 let { section: n, row: l } = e,
-                    i = F[n][l];
+                    i = B[n][l];
                 return (0, r.jsx)(
                     u.P3F,
                     {
@@ -326,7 +326,7 @@ function k(e) {
                     i.id,
                 );
             },
-            [t, Q, F],
+            [t, Q, B],
         ),
         K = l.useMemo(
             () =>
@@ -347,7 +347,7 @@ function k(e) {
                         maxHeight: 98,
                         size: d.Z.Sizes.MEDIUM,
                         query: y,
-                        ref: B,
+                        ref: F,
                         onRemoveTag: (e) => {
                             let t = v[e],
                                 { [t]: n } = g;

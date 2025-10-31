@@ -29,11 +29,11 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     P = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
     w = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     D = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    L = [C, C, C, C],
-    x = (N + R) * 2 + C,
+    x = [C, C, C, C],
+    L = (N + R) * 2 + C,
     M = w + 2 * D,
-    k = 7,
-    j = (e) => {
+    j = 7,
+    k = (e) => {
         let {
                 activeIndex: t,
                 stickerPickerCategories: n,
@@ -108,28 +108,28 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                             },
                             "recent",
                         );
-                    let L = t === a,
-                        x = n[a],
+                    let x = t === a,
+                        L = n[a],
                         M = n[a + 1],
-                        k = null != M && x.type === y.Ih.GUILD && M.type !== y.Ih.GUILD,
-                        j = x.type === y.Ih.PACK,
+                        j = null != M && L.type === y.Ih.GUILD && M.type !== y.Ih.GUILD,
+                        k = L.type === y.Ih.PACK,
                         U = "",
                         G = null;
-                    if (x.type === y.Ih.GUILD || x.type === y.Ih.EMPTY_GUILD_UPSELL) {
-                        let e = h.Z.getGuild(x.id);
+                    if (L.type === y.Ih.GUILD || L.type === y.Ih.EMPTY_GUILD_UPSELL) {
+                        let e = h.Z.getGuild(L.id);
                         null != e &&
                             ((_ = e.id),
                             (U = e.name),
                             (G = (0, r.jsx)(d.Z, {
                                 guild: e,
-                                isSelected: L,
+                                isSelected: x,
                             })));
-                    } else if (j) {
-                        let e = b.Z.getStickerPack(x.id);
+                    } else if (k) {
+                        let e = b.Z.getStickerPack(L.id);
                         null != e &&
                             ((U = e.name),
                             (G = (0, r.jsx)(v.Z, {
-                                disableAnimation: !L || g,
+                                disableAnimation: !x || g,
                                 size: N,
                                 sticker: (0, O.Zt)(e),
                             })));
@@ -148,15 +148,15 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         children: (0, r.jsx)(c.P3F, {
                                             "aria-label": U,
                                             className: o()(A.stickerCategory, {
-                                                [A.firstPartyCategory]: j,
-                                                [A.firstPartyCategorySelected]: !g && L && j,
+                                                [A.firstPartyCategory]: k,
+                                                [A.firstPartyCategorySelected]: !g && x && k,
                                             }),
                                             onClick: () => {
-                                                x.type === y.Ih.PACK &&
+                                                L.type === y.Ih.PACK &&
                                                     m.default.track(I.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                                                         location: null == p ? void 0 : p.location,
                                                         tab: T.X1.STICKER,
-                                                        sticker_pack_id: x.id,
+                                                        sticker_pack_id: L.id,
                                                         guild_id: _,
                                                     }),
                                                     l();
@@ -165,15 +165,15 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         }),
                                     }),
                                 }),
-                                k ? (0, r.jsx)("hr", { className: A.guildCategorySeparator }, "separator") : null,
+                                j ? (0, r.jsx)("hr", { className: A.guildCategorySeparator }, "separator") : null,
                             ],
                         },
-                        x.id,
+                        L.id,
                     );
                 },
                 [t, p, g, n],
             ),
-            C = i.useCallback((e, t) => (t ? x : 0), []);
+            C = i.useCallback((e, t) => (t ? L : 0), []);
         return {
             getScrollOffsetForIndex: C,
             renderCategoryListItem: E,
@@ -222,13 +222,13 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 };
             }, [d]);
         i.useLayoutEffect(() => {
-            l(m >= k);
+            l(m >= j);
         }, [m]);
         let {
                 renderCategoryListItem: b,
                 rowHeight: O,
                 onScroll: v,
-            } = j({
+            } = k({
                 activeIndex: u,
                 stickerPickerCategories: d,
                 categoryListRef: a,
@@ -247,7 +247,7 @@ let C = (0, g.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             categoryListRef: a,
             expressionsListRef: t,
             store: f.ZN,
-            listPadding: L,
+            listPadding: x,
             onScroll: v,
             renderCategoryListItem: b,
             rowCount: d.length,

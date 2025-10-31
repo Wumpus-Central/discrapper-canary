@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => i,
-    y: () => o,
+    y: () => s,
 }),
     n(388685);
 var r,
@@ -13,7 +13,7 @@ var r,
         (r.SHUFFLE_IN = "shuffle-in"),
         (r.FINISHED = "finished"),
         r);
-let o = () => {
+let s = () => {
     let [e, t] = l.useState("mounted"),
         [n, r] = l.useState(!1),
         i = l.useRef(null);
@@ -24,8 +24,8 @@ let o = () => {
         {
             animationPhase: e,
             startAnimation: l.useCallback((e) => {
-                let { isShuffling: n, onOutroComplete: l, returnRef: o } = e;
-                (null == o ? void 0 : o.current) != null && ((i.current = o.current), r(!0)),
+                let { isShuffling: n, onOutroComplete: l, returnRef: s } = e;
+                (null == s ? void 0 : s.current) != null && ((i.current = s.current), r(!0)),
                     t(n ? "shuffle-out" : "sort-out"),
                     setTimeout(
                         () => {

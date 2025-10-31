@@ -167,22 +167,22 @@ function D(e) {
     let t = T(e);
     return null != t ? C(t) : null;
 }
-let L = new Map();
-function x(e) {
-    let t = L.get(e);
+let x = new Map();
+function L(e) {
+    let t = x.get(e);
     if (null == t) {
         let n = b[e];
-        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(C)), L.set(e, t);
+        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(C)), x.set(e, t);
     }
     return t;
 }
 function M(e) {
     return m.test(e);
 }
-function k(e) {
+function j(e) {
     return e.replace(_, (e, t) => H(t, e));
 }
-function j(e) {
+function k(e) {
     var t;
     let n = null == (t = S(e)) ? void 0 : t.names[0];
     return null != n
@@ -218,12 +218,12 @@ function Z(e, t) {
             else if (B.test(t)) {
                 r += t;
                 continue;
-            } else i.push(j(r)), (r = "");
+            } else i.push(k(r)), (r = "");
         else if (t === G) {
             r = t;
             continue;
         }
-        let n = j(t);
+        let n = k(t);
         if (i.length > 0) {
             let e = i[i.length - 1];
             if ("text" === n.type && "text" === e.type) {
@@ -233,7 +233,7 @@ function Z(e, t) {
         }
         i.push(n);
     }
-    return null != r && "" !== r && i.push(j(r)), i;
+    return null != r && "" !== r && i.push(k(r)), i;
 }
 function F(e) {
     return Z(e)
@@ -272,9 +272,9 @@ let K = {
     setDefaultDiversitySurrogate: R,
     getCategories: w,
     getByName: D,
-    getByCategory: x,
+    getByCategory: L,
     contentHasUnicodeOrEmoji: M,
-    translateInlineEmojiToSurrogates: k,
+    translateInlineEmojiToSurrogates: j,
     maybeTranslateSurrogatesToInlineEmoji: V,
     findInlineEmojisFromSurrogates: Z,
     translateSurrogatesToInlineEmoji: F,

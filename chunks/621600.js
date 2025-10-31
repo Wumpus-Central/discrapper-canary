@@ -239,8 +239,8 @@ function I(e) {
         P = O(N, R, "RETURN_PREVIOUS_WHEN_CHANGED"),
         w = a.Z.getChannel(g),
         D = null != (n = P("channel_flags")) ? n : 0,
-        L = (null != (s = R.channel_flags) ? s : 0) ^ D,
-        x = 0 === (0, l.M1)(L, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
+        x = (null != (s = R.channel_flags) ? s : 0) ^ D,
+        L = 0 === (0, l.M1)(x, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
         M = null != (d = null == (t = o.Z.getLastMessage(g)) ? void 0 : t.type) ? d : null;
     r.ZP.trackWithMetadata(
         c.rMx.NOTIFICATION_SETTINGS_UPDATED,
@@ -256,7 +256,7 @@ function I(e) {
             channel_muted_until_old: P("channel_muted_until"),
             channel_is_overridden_old: P("channel_is_overridden"),
             channel_message_notification_settings_old: P("channel_message_notification_settings"),
-            is_opt_in_only_change: x,
+            is_opt_in_only_change: L,
             last_message_type: M,
             application_id: E,
         }),

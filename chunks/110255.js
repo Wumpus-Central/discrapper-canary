@@ -15,7 +15,7 @@ function h(e) {
         _ = (0, s.c)(t),
         y = (0, o.EQ)(t),
         x = (0, i.e7)([p.Z], () => p.Z.getGuild(t.guild_id)),
-        v = (0, c.Z)(x),
+        O = (0, c.Z)(x),
         j = (0, d.Mn)("ChannelNotificationSettingsPopoutMenu") && u.$N.has(t.type);
     return (0, r.jsxs)(l.v2r, {
         navId: f,
@@ -24,7 +24,7 @@ function h(e) {
         onSelect: h,
         children: [
             (0, r.jsx)(l.kSQ, { children: (0, a.ZP)(t, m) }),
-            b ? (0, r.jsx)(l.kSQ, { children: v }) : null,
+            b ? (0, r.jsx)(l.kSQ, { children: O }) : null,
             j ? y : (0, r.jsx)(l.kSQ, { children: _ }),
         ],
     });

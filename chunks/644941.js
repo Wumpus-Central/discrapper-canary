@@ -31,8 +31,8 @@ var r = n(951288),
     k = n(998058),
     G = n(839392),
     Z = n(567409),
-    _ = n(774073),
-    L = n(426482),
+    L = n(774073),
+    _ = n(426482),
     M = n(715318),
     D = n(38516),
     R = n(891949),
@@ -40,8 +40,8 @@ var r = n(951288),
     F = n(484527),
     H = n(131033),
     U = n(296768),
-    W = n(978313),
-    Y = n(206583),
+    Y = n(978313),
+    W = n(206583),
     B = n(388032),
     K = n(226788);
 let X = () =>
@@ -75,7 +75,7 @@ function J(e) {
         }, [n]),
         m = null == l ? void 0 : l.getIconURL(160, S.$k ? "webp" : "png"),
         p = T.default.extractTimestamp(l.id),
-        g = o()().diff(o()(p), "days") <= Y.G,
+        g = o()().diff(o()(p), "days") <= W.G,
         x = s.some((e) => (0, b.ig)(e) === d.o.GLOBAL),
         h = null != (t = n.name) ? t : null == l ? void 0 : l.name;
     return (0, r.jsxs)(r.Fragment, {
@@ -92,11 +92,11 @@ function J(e) {
                         children: [
                             (0, r.jsx)("div", {
                                 className: K.logoWrapper,
-                                children: (0, r.jsx)(L.C, {
+                                children: (0, r.jsx)(_.C, {
                                     game: n,
                                     application: l,
                                     className: K.logo,
-                                    size: L.Z.LARGE,
+                                    size: _.Z.LARGE,
                                 }),
                             }),
                             (0, r.jsx)(M.Z, {
@@ -259,7 +259,7 @@ function $(e) {
             (0, r.jsxs)("div", {
                 className: K.sections,
                 children: [
-                    (0, r.jsx)(W.Z, {
+                    (0, r.jsx)(Y.Z, {
                         detectedGame: t,
                         trackAction: l,
                     }),
@@ -276,7 +276,7 @@ function $(e) {
                     (0, r.jsx)(H.Z, { detectedGame: t }),
                     (0, r.jsx)(f.Text, {
                         variant: "text-xxs/normal",
-                        children: B.intl.format(B.t.pch2Jw, { igdbLink: Y.$f }),
+                        children: B.intl.format(B.t.pch2Jw, { igdbLink: W.$f }),
                     }),
                 ],
             }),
@@ -304,9 +304,9 @@ let Q = (e) => {
         [N, P] = i.useState(null),
         S = (0, Z.N)(n),
         [C, T] = i.useState(null),
-        L = (0, O.q)(n),
+        _ = (0, O.q)(n),
         M = (0, u.e7)([E.Z], () => E.Z.getGame(n)),
-        D = null != (t = null == M ? void 0 : M.name) ? t : null == L ? void 0 : L.name,
+        D = null != (t = null == M ? void 0 : M.name) ? t : null == _ ? void 0 : _.name,
         R = (e, t) => {
             var r;
             (0, A.UE)({
@@ -364,11 +364,11 @@ let Q = (e) => {
             gameName: null != D ? D : "",
             playedFriendIds: S.map((e) => e.author_id),
             playedFriendsData: r,
-            similarGames: v.filter(_.z6).slice(0, 5),
+            similarGames: v.filter(L.z6).slice(0, 5),
             officialGuildId: null == C || null == (e = C.guild) ? void 0 : e.id,
         });
     }),
-    null == M || null == L)
+    null == M || null == _)
         ? null
         : (0, r.jsx)(f.Y0X, {
               transitionState: o,
@@ -380,7 +380,7 @@ let Q = (e) => {
                   children: [
                       (0, r.jsx)(J, {
                           detectedGame: M,
-                          application: L,
+                          application: _,
                           entries: S,
                           trackAction: R,
                       }),
@@ -390,7 +390,7 @@ let Q = (e) => {
                               children: [
                                   (0, r.jsx)(V, {
                                       detectedGame: M,
-                                      application: L,
+                                      application: _,
                                       entries: S,
                                       officialGuildInvite: C,
                                       similarGames: v,

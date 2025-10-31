@@ -9,19 +9,19 @@ e(539854),
                 var o;
                 let i,
                     { fineTuning: a, fineTuningResolution: s, duration: u } = e,
-                    c = Math.floor(r / n.waveformBlockWidth);
+                    f = Math.floor(r / n.waveformBlockWidth);
                 if (a >= 0) {
                     let r = Math.floor((t.length * (a - (s * a) / u)) / u),
                         e = Math.floor((t.length * (a + (s * (u - a)) / u)) / u);
                     i = t.slice(r, e);
                 } else i = t;
-                let f = Math.floor(i.length / c),
+                let c = Math.floor(i.length / f),
                     l = [];
-                for (let t = 0; t < c; t++) {
-                    let r = f * t,
+                for (let t = 0; t < f; t++) {
+                    let r = c * t,
                         e = 0;
-                    for (let t = 0; t < f; t++) e += Math.abs(i[r + t]);
-                    l.push(e / f);
+                    for (let t = 0; t < c; t++) e += Math.abs(i[r + t]);
+                    l.push(e / c);
                 }
                 let p = Math.pow(Math.max(...l), -1),
                     v = l.map((t) => t * p),

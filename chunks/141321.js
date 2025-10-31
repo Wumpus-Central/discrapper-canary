@@ -10,22 +10,22 @@ var r = n(951288),
     d = n(686546),
     p = n(719961),
     f = n(388035),
-    h = n(306680),
-    m = n(594174),
+    m = n(306680),
+    h = n(594174),
     g = n(178088),
     _ = n(490897),
     b = n(388032),
     E = n(741047);
 function O(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
-        O = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        O = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         I = i.useRef(null),
-        v = (0, s.e7)(
-            [h.ZP],
-            () => (null == O ? void 0 : O.id) != null && h.ZP.getMentionCount(O.id, _.W.NOTIFICATION_CENTER) > 0,
+        y = (0, s.e7)(
+            [m.ZP],
+            () => (null == O ? void 0 : O.id) != null && m.ZP.getMentionCount(O.id, _.W.NOTIFICATION_CENTER) > 0,
         ),
-        { titlebarIconSize: y, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
-        S = "sm" === y ? "refresh_sm" : "md",
+        { titlebarIconSize: v, titlebarHoverHighlight: C } = (0, p.T)({ location: "RecentsButton" }),
+        S = "sm" === v ? "refresh_sm" : "md",
         T = i.useMemo(
             () =>
                 (0, r.jsx)(u.xx7, {
@@ -38,7 +38,7 @@ function O(e) {
         targetElementRef: I,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: v },
+        badgeState: { badgeForYou: y },
         popoutPosition: "bottom",
         popoutAlign: "right",
         children: (e, t, n, i) => {
@@ -85,7 +85,7 @@ function O(e) {
                                     "aria-label": b.intl.string(b.t.GSmTKJ),
                                     className: a()(E.clickable, { [E.withHighlight]: C }),
                                     children:
-                                        v || i
+                                        y || i
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
                                                       (0, r.jsx)(d.ZP, {

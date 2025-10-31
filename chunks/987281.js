@@ -68,7 +68,7 @@ function F(e) {
                       id: "clip-stream",
                       disabled: !o || !(a || d) || u,
                       label: M.intl.string(M.t.U4URzP),
-                      action: () => (a ? (0, I.C1)() : (0, I.C1)((0, A.V9)(e))),
+                      action: () => (a ? (0, I.br)() : (0, I.C1)((0, A.V9)(e))),
                   })
                 : null;
         })(t),

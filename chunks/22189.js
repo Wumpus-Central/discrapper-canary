@@ -35,8 +35,8 @@ var r = n(951288),
     x = n(75077),
     L = n(474936),
     M = n(981631),
-    k = n(921944),
-    j = n(228168),
+    j = n(921944),
+    k = n(228168),
     U = n(526761),
     G = n(332325),
     B = n(388032),
@@ -153,24 +153,24 @@ let ey = () => {
         eM = () => {
             (0, y.Z)(G.Z.CLIPS, { analyticsLocations: e });
         },
-        ek = () => {
+        ej = () => {
             (0, O.openUserSettings)(b.n.APPEARANCE_PANEL, {
                 section: M.oAB.APPEARANCE,
                 scrollPosition: U.h1.CUSTOM_APP_ICONS,
             });
         },
-        ej = () => {
+        ek = () => {
             window.open(A.Z.getArticleURL(M.BhN.CLIPS), "_blank");
         },
         eU = () => {
-            eN || (0, _.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), eP();
+            eN || (0, _.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: j.L.TAKE_ACTION }), eP();
         },
         eG = () => {
             (0, E.openUserProfileModal)({
                 userId: ev.id,
                 sourceAnalyticsLocations: e,
                 hideRestrictedProfile: !0,
-                section: j.oh.WIDGETS,
+                section: k.oh.WIDGETS,
             });
         },
         eB = i.useCallback(() => {
@@ -204,7 +204,7 @@ let ey = () => {
                       description: B.intl.string(B.t.Z6v86b),
                       descriptionCta: eS ? B.intl.string(B.t.jVcuVY) : B.intl.string(B.t.hvVgAZ),
                       pillText: B.intl.string(B.t.EYxi0o),
-                      onCtaClick: eS ? eM : ej,
+                      onCtaClick: eS ? eM : ek,
                       perkImage: X,
                   }
                 : {
@@ -390,7 +390,7 @@ let ey = () => {
                 perkImage: Q,
                 description: B.intl.string(B.t.e7FKCi),
                 descriptionCta: B.intl.string(B.t.jVcuVY),
-                onCtaClick: ek,
+                onCtaClick: ej,
             },
             moreEmojiPower: {
                 name: "moreEmojiPower",
@@ -434,7 +434,7 @@ let ey = () => {
                 description: B.intl.string(B.t.ee7wQ7),
                 descriptionCta: eI || eT ? B.intl.string(B.t.y9TxXV) : B.intl.string(B.t.d8o6lc),
                 isPremiumGetCta: !(eI || eT),
-                onCtaClick: eI || eT ? ek : void 0,
+                onCtaClick: eI || eT ? ej : void 0,
                 perkImage: ei,
             },
             referralProgram: {

@@ -1,11 +1,11 @@
 n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
-    a = n(159691),
-    o = n(481060),
-    s = n(906732),
-    l = n(975298),
-    c = n(125529),
+    a = n(589358),
+    o = n(159691),
+    s = n(481060),
+    l = n(906732),
+    c = n(975298),
     u = n(879892),
     d = n(267642),
     f = n(981631),
@@ -65,10 +65,10 @@ function E(e, t) {
 }
 let b = function () {
     let e = i.useRef(null),
-        { analyticsLocations: t } = (0, s.ZP)(),
-        { fractionalState: h } = (0, l.Z)();
+        { analyticsLocations: t } = (0, l.ZP)(),
+        { fractionalState: h } = (0, c.Z)();
     function g(n) {
-        null != e.current && (0, o.Mr3)(e.current),
+        null != e.current && (0, s.Mr3)(e.current),
             (0, u.u)({
                 analyticsLocation: {
                     page: f.ZY5.GUILD_BOOSTING_USER_SETTINGS,
@@ -81,14 +81,14 @@ let b = function () {
             });
     }
     async function b() {
-        e.current = await (0, o.ZDy)(
+        e.current = await (0, s.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
                 return (t) => (0, r.jsx)(e, E(m({}, t), { onSelectGuild: g }));
             },
             {
                 onCloseRequest: () => {
-                    null != e.current && (0, o.Mr3)(e.current);
+                    null != e.current && (0, s.Mr3)(e.current);
                 },
             },
         );
@@ -97,22 +97,22 @@ let b = function () {
     return (0, r.jsxs)("div", {
         className: p.wrapper,
         children: [
-            (0, r.jsx)(o.Ucv, {
-                color: o.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+            (0, r.jsx)(s.Ucv, {
+                color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                 className: p.boostIcon,
             }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 className: p.copy,
                 color: "header-secondary",
                 variant: "text-sm/medium",
                 children: _.intl.format(_.t.kqC5vq, {
                     boostAnyGuildHook: (e, t) => {
                         let n = null != y,
-                            i = (0, o.qgQ)(e),
-                            s = (0, r.jsx)("div", {
+                            i = (0, s.qgQ)(e),
+                            l = (0, r.jsx)("div", {
                                 className: p.cta,
                                 children: (0, r.jsx)(
-                                    a.Avr,
+                                    o.Avr,
                                     {
                                         variant: "primary",
                                         onClick: n ? void 0 : b,
@@ -124,15 +124,15 @@ let b = function () {
                             });
                         return n
                             ? (0, r.jsx)(
-                                  c.Z,
+                                  a.Z,
                                   {
                                       text: y,
                                       "aria-label": y.toString(),
-                                      children: (e) => (0, r.jsx)("span", E(m({}, e), { children: s })),
+                                      children: (e) => (0, r.jsx)("span", E(m({}, e), { children: l })),
                                   },
                                   t,
                               )
-                            : s;
+                            : l;
                     },
                 }),
             }),

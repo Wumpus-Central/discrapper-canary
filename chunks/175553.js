@@ -1,16 +1,16 @@
 n.d(t, { Z: () => c });
 var i = n(593481),
     r = n(768581),
-    s = n(312839),
+    l = n(312839),
     o = n(981631),
-    l = n(987650),
+    s = n(987650),
     a = n(388032);
 function c(e, t) {
     let n = e.username,
         c = a.intl.format(a.t["Yk+uYG"], { username: "" }),
         d = (0, r.ov)(e),
-        { trackView: u, trackClick: p } = (0, s.R)(l.n0.ActivityUserJoin, {
-            notif_type: l.n0.ActivityUserJoin,
+        { trackView: u, trackClick: h } = (0, l.R)(s.n0.ActivityUserJoin, {
+            notif_type: s.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: o.mFx.JOIN,
             activity_name: t.name,
@@ -24,7 +24,7 @@ function c(e, t) {
             u();
         },
         onDismissClick: () => {
-            p("dismiss");
+            h("dismiss");
         },
     };
 }

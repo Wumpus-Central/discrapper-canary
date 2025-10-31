@@ -1,10 +1,10 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(481060),
-    s = n(259580),
+    r = n.n(l),
+    s = n(481060),
+    o = n(259580),
     c = n(422665);
 function d(e) {
     let {
@@ -19,20 +19,20 @@ function d(e) {
             onOpen: x,
             maxHeight: g,
         } = e,
-        [f, b] = r.useState(h),
+        [f, b] = i.useState(h),
         v = void 0 !== m,
         j = v ? m : f,
-        _ = r.useCallback(() => {
+        _ = i.useCallback(() => {
             let e = !j;
             v || b(e), null == p || p(e), e && null != x && x();
         }, [j, v, p, x]),
-        y = r.useMemo(() => {
+        y = i.useMemo(() => {
             if (null != g && j) return { maxHeight: "number" == typeof g ? "".concat(g, "px") : g };
         }, [g, j]);
     return (0, a.jsxs)("div", {
-        className: i()(c.accordionContainer, u, { [c.opened]: j }),
+        className: r()(c.accordionContainer, u, { [c.opened]: j }),
         children: [
-            (0, a.jsxs)(o.P3F, {
+            (0, a.jsxs)(s.P3F, {
                 className: c.header,
                 onClick: _,
                 children: [
@@ -44,14 +44,14 @@ function d(e) {
                     (0, a.jsxs)("div", {
                         className: c.title,
                         children: [
-                            (0, a.jsx)(o.Text, {
+                            (0, a.jsx)(s.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
                                 children: n,
                             }),
                             null != l &&
                                 "" !== l &&
-                                (0, a.jsx)(o.Text, {
+                                (0, a.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "interactive-normal",
                                     children: l,
@@ -59,17 +59,17 @@ function d(e) {
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: i()(c.caret, { [c.opened]: j }),
-                        children: (0, a.jsx)(s.Z, {
+                        className: r()(c.caret, { [c.opened]: j }),
+                        children: (0, a.jsx)(o.Z, {
                             width: 18,
                             height: 18,
-                            direction: s.Z.Directions.DOWN,
+                            direction: o.Z.Directions.DOWN,
                         }),
                     }),
                 ],
             }),
             (0, a.jsx)("div", {
-                className: i()(c.content, { [c.opened]: j }),
+                className: r()(c.content, { [c.opened]: j }),
                 style: y,
                 children: d,
             }),

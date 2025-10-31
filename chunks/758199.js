@@ -93,16 +93,16 @@ function O(e) {
             },
             void 0,
         ),
-        L = null != h,
-        x = null != E && !1 === P,
-        M = L || x,
-        k = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
-        j = i.useRef(null),
+        x = null != h,
+        L = null != E && !1 === P,
+        M = x || L,
+        j = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
+        k = i.useRef(null),
         U = i.useCallback(() => {
-            let e = j.current;
+            let e = k.current;
             null != e && ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        G = i.useMemo(() => !!x && new URL(E).pathname.endsWith(".gif"), [x, E]),
+        G = i.useMemo(() => !!L && new URL(E).pathname.endsWith(".gif"), [L, E]),
         B = i.useMemo(() => {
             if (null != S)
                 return (e) => {
@@ -122,23 +122,23 @@ function O(e) {
             M &&
                 (0, r.jsxs)(y, {
                     onClick: Z,
-                    className: o()(g.bannerWrapper, k, { [g.showVideoOnFocus]: x }),
+                    className: o()(g.bannerWrapper, j, { [g.showVideoOnFocus]: L }),
                     children: [
-                        x &&
+                        L &&
                             (G
                                 ? (0, r.jsx)("div", {
                                       className: g.videoBanner,
                                       style: { backgroundImage: "url(".concat(E, ")") },
                                   })
                                 : (0, r.jsx)(s.Z, {
-                                      ref: j,
+                                      ref: k,
                                       src: E,
                                       mediaLayoutType: m.hV.MOSAIC,
                                       loop: !0,
                                       muted: !0,
                                       className: g.videoBanner,
                                   })),
-                        L &&
+                        x &&
                             (0, r.jsx)("div", {
                                 className: g.staticBanner,
                                 style: { backgroundImage: "url(".concat(h, ")") },

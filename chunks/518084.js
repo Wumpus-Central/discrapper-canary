@@ -1,19 +1,19 @@
 n.d(t, {
     ZP: () => Z,
-    wB: () => _,
+    wB: () => O,
 }),
     n(415506);
 var i,
     r = n(951288),
-    s = n(647438),
+    l = n(647438),
     o = n(120356),
-    l = n.n(o),
+    s = n.n(o),
     a = n(877921),
     c = n.n(a),
     d = n(28664),
     u = n(755721),
-    p = n(481060),
-    h = n(981631),
+    h = n(481060),
+    p = n(981631),
     f = n(881266),
     g = n(149715);
 function m(e, t, n) {
@@ -29,14 +29,14 @@ function m(e, t, n) {
         e
     );
 }
-let y = h.t_t.DEFAULT,
-    _ = 1,
-    O = s.createContext({
+let y = p.t_t.DEFAULT,
+    O = 1,
+    _ = l.createContext({
         type: y,
-        opacity: _,
+        opacity: O,
     }),
-    b = s.createContext(void 0),
-    v = (e) => {
+    v = l.createContext(void 0),
+    b = (e) => {
         var { children: t, className: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -47,22 +47,22 @@ let y = h.t_t.DEFAULT,
                         var n,
                             i,
                             r = {},
-                            s = Object.keys(e);
-                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            l = Object.keys(e);
+                        for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < s.length; i++)
-                        (n = s[i]),
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < l.length; i++)
+                        (n = l[i]),
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
             })(e, ["children", "className"]);
-        return (0, r.jsx)(O.Consumer, {
+        return (0, r.jsx)(_.Consumer, {
             children: (e) => {
-                let { type: s } = e;
-                return (0, r.jsx)(b.Consumer, {
+                let { type: l } = e;
+                return (0, r.jsx)(v.Consumer, {
                     children: (e) => {
                         var o, a;
                         return (0, r.jsx)(
@@ -84,7 +84,7 @@ let y = h.t_t.DEFAULT,
                                 return e;
                             })(
                                 {
-                                    className: l()(f.bar, f[c()(s)], n),
+                                    className: s()(f.bar, f[c()(l)], n),
                                     style: e,
                                 },
                                 i,
@@ -109,21 +109,21 @@ let y = h.t_t.DEFAULT,
             },
         });
     };
-class E extends (i = s.PureComponent) {
+class E extends (i = l.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, r.jsx)(b.Consumer, {
+        return (0, r.jsx)(v.Consumer, {
             children: (i) =>
-                (0, r.jsx)(O.Consumer, {
-                    children: (s) => {
-                        let o = l()(f.body, f[c()(s.type)], n);
+                (0, r.jsx)(_.Consumer, {
+                    children: (l) => {
+                        let o = s()(f.body, f[c()(l.type)], n);
                         return e
                             ? (0, r.jsx)("div", {
                                   className: o,
                                   style: i,
                                   children: t,
                               })
-                            : (0, r.jsx)(p.Ttm, {
+                            : (0, r.jsx)(h.Ttm, {
                                   fade: !0,
                                   className: o,
                                   children: t,
@@ -134,48 +134,48 @@ class E extends (i = s.PureComponent) {
     }
 }
 m(E, "defaultProps", { disableScroll: !1 });
-let x = (e) => {
-        let { type: t = y, width: n, height: i, children: s, className: o, opacity: a = _, onClick: d } = e;
-        return (0, r.jsx)(O.Provider, {
+let S = (e) => {
+        let { type: t = y, width: n, height: i, children: l, className: o, opacity: a = O, onClick: d } = e;
+        return (0, r.jsx)(_.Provider, {
             value: {
                 type: t,
                 opacity: a,
             },
             children: (0, r.jsx)("div", {
-                className: l()(f.widget, f[c()(t)], o),
+                className: s()(f.widget, f[c()(t)], o),
                 style: {
                     width: n,
                     height: i,
                 },
                 onClick: d,
-                children: s,
+                children: l,
             }),
         });
     },
-    S = (e) => {
+    x = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, r.jsx)(b.Consumer, {
+        return (0, r.jsx)(v.Consumer, {
             children: (e) =>
                 (0, r.jsx)("div", {
-                    className: l()(f.content, { [f.staticSize]: !i }, n),
+                    className: s()(f.content, { [f.staticSize]: !i }, n),
                     style: e,
                     children: t,
                 }),
         });
     };
-(x.Background = (e) => {
+(S.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [v, E, S];
-    return (0, r.jsx)(O.Consumer, {
+    let i = [b, E, x];
+    return (0, r.jsx)(_.Consumer, {
         children: (e) => {
             let { opacity: o } = e,
-                l = { backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : o), ")") };
-            if ("string" == typeof t.type) return s.cloneElement(t, { style: l });
+                s = { backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : o), ")") };
+            if ("string" == typeof t.type) return l.cloneElement(t, { style: s });
             {
                 if (i.includes(t.type))
-                    return (0, r.jsx)(b.Provider, {
-                        value: l,
+                    return (0, r.jsx)(v.Provider, {
+                        value: s,
                         children: t,
                     });
                 let e = t.type.displayName;
@@ -188,21 +188,21 @@ let x = (e) => {
         },
     });
 }),
-    (x.Body = E),
-    (x.Content = S),
-    (x.Icon = (e) => {
+    (S.Body = E),
+    (S.Content = x),
+    (S.Icon = (e) => {
         let {
             ref: t,
             icon: n,
             label: i,
-            onClick: s,
+            onClick: l,
             isActive: o,
             tooltipPosition: a = "top",
             size: c = 20,
-            isTutorial: p = !1,
+            isTutorial: h = !1,
         } = e;
         return (0, r.jsx)(d.u, {
-            __unsupportedReactNodeAsText: p
+            __unsupportedReactNodeAsText: h
                 ? (0, r.jsx)("div", {
                       className: f.tutorialTip,
                       children: i,
@@ -210,13 +210,13 @@ let x = (e) => {
                 : i,
             "aria-label": i,
             position: a,
-            forceOpen: p,
+            forceOpen: h,
             children: (0, r.jsx)(u.zx, {
                 buttonRef: t,
                 look: u.zx.Looks.BLANK,
                 size: u.zx.Sizes.NONE,
-                onClick: s,
-                className: l()(f.icon, { [f.toggledIconOn]: o }),
+                onClick: l,
+                className: s()(f.icon, { [f.toggledIconOn]: o }),
                 innerClassName: g.flexCenter,
                 "aria-label": i,
                 children: (0, r.jsx)(n, {
@@ -229,5 +229,5 @@ let x = (e) => {
             }),
         });
     }),
-    (x.Bar = v);
-let Z = x;
+    (S.Bar = b);
+let Z = S;

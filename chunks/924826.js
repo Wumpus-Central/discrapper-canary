@@ -77,10 +77,10 @@ function u(e) {
                 }),
             [t, d, f],
         ),
-        [D, L] = r.useState(!1),
-        x = r.useRef(D);
+        [D, x] = r.useState(!1),
+        L = r.useRef(D);
     r.useLayoutEffect(() => {
-        x.current = D;
+        L.current = D;
     }, [D]),
         r.useLayoutEffect(() => {
             let e = T.current;
@@ -98,11 +98,11 @@ function u(e) {
                     }
                 );
             function n() {
-                L(!0);
+                x(!0);
             }
             function r(e) {
                 e.currentTarget.contains(e.relatedTarget) ||
-                    (L(!1),
+                    (x(!1),
                     requestAnimationFrame(() => {
                         let e = v.current;
                         null !== e && null == A((0, l.P1)(e)) && R((0, l.P1)(t, l.kn));
@@ -110,7 +110,7 @@ function u(e) {
             }
             async function i() {
                 let e = T.current;
-                if (x.current || null == e) return;
+                if (L.current || null == e) return;
                 let n = v.current;
                 if (g && null !== n) {
                     let t = (0, l.P1)(n),
@@ -142,27 +142,27 @@ function u(e) {
             }),
             [E, b],
         ),
-        k = r.useCallback(async () => {
+        j = r.useCallback(async () => {
             let e = await w.getNextFocusableElement(M),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? P(t) : null == e && null != p && p();
         }, [w, M, p, P]),
-        j = r.useCallback(async () => {
+        k = r.useCallback(async () => {
             let e = await w.getPreviousFocusableElement(M),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? P(t) : null == e && null != _ && _();
         }, [w, M, _, P]),
         U = r.useCallback(
             (e) => {
-                if (!S.current || (!E && !x.current)) return;
+                if (!S.current || (!E && !L.current)) return;
                 let n = y === s.hy.HORIZONTAL ? s.R8.RIGHT : s.R8.DOWN,
                     r = y === s.hy.HORIZONTAL ? s.R8.LEFT : s.R8.UP;
                 switch (e.key) {
                     case n:
-                        e.stopPropagation(), e.preventDefault(), k();
+                        e.stopPropagation(), e.preventDefault(), j();
                         return;
                     case r:
-                        e.stopPropagation(), e.preventDefault(), j();
+                        e.stopPropagation(), e.preventDefault(), k();
                         return;
                     case s.R8.HOME:
                         e.stopPropagation(),
@@ -197,7 +197,7 @@ function u(e) {
                     }
                 }
             },
-            [k, j, t, y, f, d, P, E],
+            [j, k, t, y, f, d, P, E],
         ),
         G = r.useCallback(
             (e) => {
@@ -225,13 +225,13 @@ function u(e) {
                 let n = await (0, o.KG)(null != (e = T.current) ? e : document.body, c(t, T));
                 null !== n && P(n);
             },
-            focusPreviousItem: j,
-            focusNextItem: k,
+            focusPreviousItem: k,
+            focusNextItem: j,
             focusedItemId() {
                 let e = v.current;
                 return e ? (0, l.x3)(e) : null;
             },
         }),
-        [t, U, y, D, g, G, j, k, P],
+        [t, U, y, D, g, G, k, j, P],
     );
 }

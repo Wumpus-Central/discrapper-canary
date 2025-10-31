@@ -23,13 +23,13 @@ function g(e) {
             () => !!(o.Z.getThreadIds(t.id, b, _, y).length > 0) || !!(p.Z.getThreads(t.id, b, _, y).length > 0),
             [t.id, b, _, y],
         ),
-        v = t.isMediaChannel();
-    if (!n || m || (v && x)) return null;
+        O = t.isMediaChannel();
+    if (!n || m || (O && x)) return null;
     let j = g
-        ? v
+        ? O
             ? f.intl.string(f.t["WP/IE1"])
             : f.intl.string(f.t.zfq9V4)
-        : v
+        : O
           ? f.intl.string(f.t.p60yF1)
           : f.intl.string(f.t.SNOqYC);
     return (0, r.jsx)(h.JO, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i,
     l = n(442837),
@@ -9,11 +9,11 @@ var r,
     u = n(306680),
     d = n(944486),
     p = n(55589);
-let f = [],
-    h = new Set();
+let h = [],
+    f = new Set();
 function g() {
     let e = p.Z.getPrivateChannelIds().filter((e) => u.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, s.EF)(e, f) && ((f = e), (h = new Set(e)), !0);
+    return e.length > 20 && (e.length = 20), !(0, s.EF)(e, h) && ((h = e), (f = new Set(e)), !0);
 }
 function m() {
     return g();
@@ -28,7 +28,7 @@ class _ extends (r = l.ZP.Store) {
         this.waitFor(p.Z, c.Z, d.Z, u.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return f;
+        return h;
     }
 }
 (i = "displayName") in _
@@ -39,7 +39,7 @@ class _ extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (_[i] = "PrivateChannelReadStateStore");
-let O = new _(o.Z, {
+let y = new _(o.Z, {
     CONNECTION_OPEN: m,
     OVERLAY_INITIALIZE: m,
     MESSAGE_CREATE: b,
@@ -53,7 +53,7 @@ let O = new _(o.Z, {
         let {
             channel: { id: t },
         } = e;
-        return !!h.has(t) && g();
+        return !!f.has(t) && g();
     },
     WINDOW_FOCUS: function () {
         let e = c.Z.getChannel(d.Z.getChannelId());

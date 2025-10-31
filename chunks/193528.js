@@ -105,13 +105,13 @@ function I(e) {
         P = (0, l.Rf)(a),
         w = P === C ? N : P,
         D = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
-        L = (0, d.Z)(I),
-        x = (0, d.Z)(T),
-        [M, k] = i.useState((0, s.Z)());
+        x = (0, d.Z)(I),
+        L = (0, d.Z)(T),
+        [M, j] = i.useState((0, s.Z)());
     return (
         i.useEffect(() => {
-            (L !== I || x !== T) && k((0, s.Z)());
-        }, [T, I, x, L]),
+            (x !== I || L !== T) && j((0, s.Z)());
+        }, [T, I, L, x]),
         (0, r.jsx)(u.yRy, {
             targetElementRef: A,
             positionKey: M,

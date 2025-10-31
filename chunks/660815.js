@@ -1,6 +1,6 @@
-n.d(t, { V: () => r });
+n.d(t, { V: () => i });
 var a,
-    r =
+    i =
         (((a = {}).STARTING = "starting"),
         (a.STARTUP_FAILED = "startup_failed"),
         (a.MISSING_STOCK = "missing_stock"),

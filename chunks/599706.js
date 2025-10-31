@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(539854);
+n.d(t, { Z: () => m }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(392711),
@@ -83,11 +83,11 @@ let f = (e) => {
                     }),
                 });
     },
-    h = (e) => {
+    m = (e) => {
         let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: l = 2, guildId: s } = e,
             { unknownSize: o, totalSize: c, knownSize: u } = t;
         if (c < i) return null;
-        let h = a()(n)
+        let m = a()(n)
             .filter(d.lm)
             .take(l)
             .map((e) =>
@@ -101,10 +101,10 @@ let f = (e) => {
                 ),
             )
             .value();
-        for (let e = 0; e < o && h.length < l; e++) h.push((0, r.jsx)(f, { guildId: s }, "unknown-member-".concat(e)));
-        let m = c - u - o;
-        for (let e = 0; e < m && h.length < l; e++)
-            h.push(
+        for (let e = 0; e < o && m.length < l; e++) m.push((0, r.jsx)(f, { guildId: s }, "unknown-member-".concat(e)));
+        let h = c - u - o;
+        for (let e = 0; e < h && m.length < l; e++)
+            m.push(
                 (0, r.jsx)(
                     f,
                     {
@@ -114,10 +114,10 @@ let f = (e) => {
                     "empty-member-".concat(e),
                 ),
             );
-        let g = Math.max(Math.min(c - h.length, 99), 0);
+        let g = Math.max(Math.min(c - m.length, 99), 0);
         if (1 === g) {
             let e = n[l];
-            h.push(
+            m.push(
                 (0, r.jsx)(
                     f,
                     {
@@ -133,7 +133,7 @@ let f = (e) => {
             children: (0, r.jsxs)("div", {
                 className: p.partyMembers,
                 children: [
-                    h,
+                    m,
                     g > 1
                         ? (0, r.jsxs)("div", {
                               className: p.partyMemberOverflow,

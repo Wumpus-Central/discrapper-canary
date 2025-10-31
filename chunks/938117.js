@@ -85,22 +85,22 @@ function T(e) {
         (0, u.XV)();
     }, []);
     let D = (0, a.cj)([d.Z], () => (w ? d.Z.videoFilterAssets : {})),
-        L = i.useMemo(() => Object.values(D).filter((e) => e.type === m.xV.BACKGROUND), [D]),
-        x = (0, s.O)(),
+        x = i.useMemo(() => Object.values(D).filter((e) => e.type === m.xV.BACKGROUND), [D]),
+        L = (0, s.O)(),
         M = {
             isVideoBackgroundSupported: P,
             onSelectBackgroundOption: v,
             selectedBackgroundOption: y,
         },
-        k = i.useRef(M);
+        j = i.useRef(M);
     i.useEffect(() => {
-        k.current = M;
+        j.current = M;
     }),
         i.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = k.current;
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = j.current;
             e ? (0, _.FU)(n, T, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [T]);
-    let j = function (e, t) {
+    let k = function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return new Promise(async (r) => {
                 try {
@@ -114,10 +114,10 @@ function T(e) {
         },
         U = (e) => {
             v(e),
-                (0, _.FU)(e, T, { location: x.location })
+                (0, _.FU)(e, T, { location: L.location })
                     .then(() => R(null))
                     .catch(() => {
-                        R(b.intl.string(b.t.ejrSLe)), (0, _.FU)(null, T, { location: x.location });
+                        R(b.intl.string(b.t.ejrSLe)), (0, _.FU)(null, T, { location: L.location });
                     });
         },
         G = () => {
@@ -128,7 +128,7 @@ function T(e) {
                         e,
                         I(O({}, n), {
                             onLearnMore: t,
-                            analyticsSource: I(O({}, x.location), { object: g.qAy.BUTTON_CTA }),
+                            analyticsSource: I(O({}, L.location), { object: g.qAy.BUTTON_CTA }),
                         }),
                     );
             });
@@ -141,11 +141,11 @@ function T(e) {
                   errorMessage: N,
                   children: (0, r.jsx)(h.Z, {
                       canUseCustomBackgrounds: w,
-                      customBackgroundOptions: L,
+                      customBackgroundOptions: x,
                       selectedOption: y,
                       onSelectOption: U,
                       onUpsellClick: G,
-                      onAddBackgroundImage: j,
+                      onAddBackgroundImage: k,
                       smallerOptions: S,
                   }),
               }),

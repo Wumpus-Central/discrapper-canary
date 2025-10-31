@@ -103,7 +103,7 @@ let C = {
             description: O.intl.string(O.t.fiHV7u),
         },
     ],
-    L = () => [
+    x = () => [
         {
             location: y.oZ.CHAT_INPUT,
             title: O.intl.string(O.t.vUcvPP),
@@ -120,7 +120,7 @@ let C = {
             description: O.intl.string(O.t["mqfw/H"]),
         },
     ];
-function x(e) {
+function L(e) {
     let { disabled: t, locations: n, settingsLocations: i, onChange: a } = e,
         o = n.map((e) =>
             (0, r.jsx)(
@@ -149,7 +149,7 @@ function M(e) {
         children: t,
     });
 }
-function k(e) {
+function j(e) {
     let {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i,
@@ -197,7 +197,7 @@ function k(e) {
         onChange: s,
     });
 }
-function j(e) {
+function k(e) {
     let {
             settings: {
                 enabled: t,
@@ -261,7 +261,7 @@ function j(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(L, {
                 disabled: c,
                 locations: D(),
                 settingsLocations: o,
@@ -361,9 +361,9 @@ function G(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(L, {
                 disabled: d,
-                locations: L(),
+                locations: x(),
                 settingsLocations: a,
                 onChange: (e) => s({ screenshakeEnabledLocations: e }, 1),
             }),
@@ -501,7 +501,7 @@ function V(e) {
                     variant: "heading-lg/semibold",
                     children: O.intl.string(O.t.AtCukI),
                 }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(j, {
                     settings: a,
                     updateSettings: h,
                 }),
@@ -514,7 +514,7 @@ function V(e) {
                     settings: a,
                     updateSettings: h,
                 }),
-                (0, r.jsx)(j, {
+                (0, r.jsx)(k, {
                     settings: a,
                     updateSettings: h,
                 }),

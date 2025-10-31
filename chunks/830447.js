@@ -428,8 +428,8 @@ function S(e) {
     }, [w.isUsingKeyboardNavigation]);
     let D = i.useRef(null);
     (0, u.Tbt)(D);
-    let L = s ? u.u2D : u.zJl,
-        x = i.useMemo(
+    let x = s ? u.u2D : u.zJl,
+        L = i.useMemo(
             () => ({
                 onSelect: O,
                 onInteraction: S,
@@ -437,13 +437,13 @@ function S(e) {
             [O, S],
         );
     return (0, r.jsx)(p.p.Provider, {
-        value: x,
+        value: L,
         children: (0, r.jsx)(
             "div",
             y(E({ className: o()(m.menu, m[a], _) }, w.getContainerProps()), {
                 ref: D,
                 "aria-label": e["aria-label"],
-                children: (0, r.jsxs)(L, {
+                children: (0, r.jsxs)(x, {
                     className: m.scroller,
                     children: [
                         0 === A.length &&

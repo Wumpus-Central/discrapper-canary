@@ -1,10 +1,10 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(400497),
-    i = n(913527),
-    o = n.n(i),
-    s = n(330711),
+    r = n(913527),
+    s = n.n(r),
+    o = n(330711),
     c = n(442837),
     d = n(481060),
     u = n(665149),
@@ -12,11 +12,11 @@ var a = n(951288),
     p = n(428530),
     h = n(257785),
     x = n(388032);
-function f() {
+function g() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
-        [t, n] = r.useState(),
-        i = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
-        f = r.useMemo(() => x.t[i], [i]);
+        [t, n] = i.useState(),
+        r = (0, l.runtimeHashMessageKey)(null != t ? t : ""),
+        g = i.useMemo(() => x.t[r], [r]);
     return (0, a.jsxs)("div", {
         children: [
             (0, a.jsxs)(u.ZP, {
@@ -48,11 +48,11 @@ function f() {
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "common i18n",
-                        children: s.Z.getLocale(),
+                        children: o.Z.getLocale(),
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "Moment",
-                        children: o().locale(),
+                        children: s().locale(),
                     }),
                 ],
             }),
@@ -85,15 +85,15 @@ function f() {
                 children: [
                     (0, a.jsx)(h.Z9, {
                         name: "Hashed key",
-                        children: i,
+                        children: r,
                     }),
                     (0, a.jsx)(h.Z9, {
                         name: "Exists?",
-                        children: null != f ? "yes" : "no",
+                        children: null != g ? "yes" : "no",
                     }),
                 ],
             }),
-            (0, a.jsx)(p.Z, { data: null == f ? void 0 : f(e) }),
+            (0, a.jsx)(p.Z, { data: null == g ? void 0 : g(e) }),
         ],
     });
 }

@@ -21,9 +21,9 @@ var r = n(951288),
     _ = n(909820),
     y = n(493010),
     x = n(71127),
-    v = n(185935),
+    O = n(185935),
     j = n(522651),
-    O = n(728285),
+    v = n(728285),
     C = n(788983),
     I = n(928518),
     S = n(703656),
@@ -108,14 +108,14 @@ function es(e) {
             var e;
             return null != (e = null == a ? void 0 : a.window) ? e : window;
         }, [a]),
-        v = (0, J.Z)({
+        O = (0, J.Z)({
             channel: t,
             appContext: n,
             popoutOpen: l,
             popoutWindow: a,
             currentWindow: x,
         }),
-        O = n === ee.IlC.POPOUT && U.isPlatformEmbedded && G.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS);
+        v = n === ee.IlC.POPOUT && U.isPlatformEmbedded && G.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             y
@@ -127,7 +127,7 @@ function es(e) {
                       location: d,
                   })
                 : null,
-            O
+            v
                 ? (0, r.jsx)(R.Z, {
                       popoutWindowAlwaysOnTop: s,
                       onToggleStayOnTop: ea,
@@ -148,13 +148,13 @@ function es(e) {
                       },
                   })
                 : null,
-            v,
+            O,
         ],
     });
 }
 function eo(e) {
     let { channel: t } = e,
-        n = (0, O.bp)(),
+        n = (0, v.bp)(),
         i = (0, o.e7)([M.Z], () => M.Z.can(ee.Plq.CREATE_INSTANT_INVITE, t)),
         l = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id)),
         a = (0, o.e7)([V.Z], () => V.Z.getStageInstanceByChannel(t.id)),
@@ -180,10 +180,10 @@ function ec(e) {
             popoutOpen: b,
             popoutType: y,
             chatOpen: x,
-            idleProps: v,
+            idleProps: O,
         } = e,
         { analyticsLocations: j } = (0, g.ZP)(f.Z.VOICE_CONTROL_TRAY),
-        C = (0, O.bp)(),
+        C = (0, v.bp)(),
         I = (0, o.e7)([k.Z], () => k.Z.getVoiceChannelId() === c.id, [c.id]),
         S = (0, o.e7)([M.Z], () => M.Z.can(ee.Plq.CONNECT, c)),
         E = (0, F.w8)(c.id, B.pV.SPEAKER),
@@ -267,7 +267,7 @@ function ec(e) {
                               }),
                     screenMessage: N ? { mainText: en.intl.string(en.t.J5bXZU) } : null,
                 },
-                v,
+                O,
             )),
             (n = n = { children: !N && l }),
             Object.getOwnPropertyDescriptors
@@ -298,7 +298,7 @@ function ed(e) {
         })),
         S = null != j && !j.closed,
         { analyticsLocations: E } = (0, g.ZP)(f.Z.STAGE_CHANNEL_CALL),
-        P = (0, O.bp)(),
+        P = (0, v.bp)(),
         { chatOpen: T, participantsListOpen: N } = (0, o.cj)(
             [m.Z],
             () => ({
@@ -308,7 +308,7 @@ function ed(e) {
             [t.id],
         ),
         R = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]),
-        { hasParticipantsPanel: w } = (0, v.Z)({ location: "StageChannelCall" });
+        { hasParticipantsPanel: w } = (0, O.Z)({ location: "StageChannelCall" });
     (0, h.ZP)(() => {
         null == c.K.get(el) &&
             ((0, d.ZDy)(async () => {

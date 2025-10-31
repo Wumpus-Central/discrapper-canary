@@ -1,11 +1,11 @@
 n.d(t, { Z: () => _ });
 var a = n(951288);
 n(647438);
-var r = n(120356),
-    l = n.n(r),
-    i = n(668757),
-    o = n(481060),
-    s = n(168107),
+var i = n(120356),
+    l = n.n(i),
+    r = n(668757),
+    s = n(481060),
+    o = n(168107),
     c = n(480916),
     d = n(963886),
     u = n(110478),
@@ -47,7 +47,7 @@ function _() {
     let e = f.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         n = x.Rt.useSetting();
-    return (0, a.jsxs)(o.Ttm, {
+    return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
                 className: l()(b.buttonsContainer, v.marginBottom20),
@@ -55,7 +55,7 @@ function _() {
             }),
             (0, a.jsx)("div", {
                 className: l()(b.buttonsContainer, v.marginBottom8),
-                children: (0, a.jsx)(o.Button, {
+                children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch MFA",
@@ -64,7 +64,7 @@ function _() {
             }),
             (0, a.jsx)("div", {
                 className: l()(b.buttonsContainer, v.marginBottom8),
-                children: (0, a.jsx)(o.Button, {
+                children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch Vibing Wumpus",
@@ -76,7 +76,7 @@ function _() {
                     children: [
                         (0, a.jsx)("div", {
                             className: l()(b.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Clicker Game",
@@ -85,7 +85,7 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: l()(b.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Captcha Test Tool",
@@ -94,7 +94,7 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: l()(b.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Age Verification Test Tool",
@@ -103,19 +103,19 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: l()(b.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Age Verification Modal",
                                 onClick: () =>
-                                    s.Z.showAgeVerificationGetStartedModal({
+                                    o.Z.showAgeVerificationGetStartedModal({
                                         entryPoint: c.cU.DEV_TOOLS_QUICK_ACTIONS,
                                     }),
                             }),
                         }),
                         (0, a.jsx)("div", {
                             className: l()(b.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset Hang Status State",
@@ -124,16 +124,16 @@ function _() {
                         }),
                         (0, a.jsx)("div", {
                             className: l()(b.buttonsContainer, v.marginBottom8),
-                            children: (0, a.jsx)(o.Button, {
+                            children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Force libdiscore Crash",
-                                onClick: i.$R,
+                                onClick: r.$R,
                             }),
                         }),
                         (0, a.jsx)("div", {
                             className: l()(b.buttonsContainer, v.marginBottom20),
-                            children: (0, a.jsx)(o.rsf, {
+                            children: (0, a.jsx)(s.rsf, {
                                 label: "Ignore profile speedbump disabled",
                                 checked: n,
                                 onChange: (e) => x.Rt.updateSetting(e),

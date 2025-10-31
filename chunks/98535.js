@@ -8,14 +8,14 @@ var r = n(951288),
     c = n(597688),
     u = n(1870),
     d = n(870289),
-    g = n(149705),
-    p = n(929255),
+    p = n(149705),
+    g = n(929255),
     f = n(752053),
     h = n(81136),
     C = n(566564),
-    _ = n(795477),
-    m = n(215023);
-let b = [m.AW.HOME, m.AW.ORBS];
+    m = n(795477),
+    _ = n(215023);
+let b = [_.AW.HOME, _.AW.ORBS];
 function v(e) {
     let {
             tab: t,
@@ -41,15 +41,15 @@ function v(e) {
                 } = e;
                 c(t, n);
                 let s = r && !v,
-                    o = i ? m.AW.ORBS : m.AW.CATALOG;
+                    o = i ? _.AW.ORBS : _.AW.CATALOG;
                 S(n), j(!l), a(o, s);
             },
             [v, a, c],
         ),
-        T = (0, d.FF)("CollectiblesContent"),
-        { searchError: I } = (0, g.a)();
-    return T && null != I
-        ? (0, r.jsx)(_.Z, {})
+        I = (0, d.FF)("CollectiblesContent"),
+        { searchError: T } = (0, p.a)();
+    return I && null != T
+        ? (0, r.jsx)(m.Z, {})
         : null != h
           ? (0, r.jsx)(f.Z, {
                 onRetry: u,
@@ -62,7 +62,7 @@ function v(e) {
                   tab: t,
                   transitionState: o,
               })
-            : (0, r.jsx)(p.Z, {
+            : (0, r.jsx)(g.Z, {
                   tab: t,
                   sortedCategories: n,
                   initialCategoryId: O,

@@ -32,11 +32,11 @@ var r = n(951288),
     P = n(418632),
     w = n(10298),
     D = n(526156),
-    L = n(730820),
-    x = n(888256),
+    x = n(730820),
+    L = n(888256),
     M = n(2719),
-    k = n(194530),
-    j = n(726985),
+    j = n(194530),
+    k = n(726985),
     U = n(981631),
     G = n(801461),
     B = n(388032),
@@ -189,17 +189,17 @@ class K extends i.PureComponent {
                       })
                     : null,
                 (0, r.jsx)(E.F, {
-                    setting: j.s6.ACCOUNT_CHANGE_PASSWORD,
+                    setting: k.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         size: "sm",
                         text: B.intl.string(B.t["FRep5/"]),
-                        onClick: () => (0, c.h7j)((e) => (0, r.jsx)(k.default, Y(V({}, e), { onSuccess: e.onClose }))),
+                        onClick: () => (0, c.h7j)((e) => (0, r.jsx)(j.default, Y(V({}, e), { onSuccess: e.onClose }))),
                     }),
                 }),
                 (0, r.jsx)(E.F, {
-                    setting: j.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                    children: (0, r.jsx)(L.Z, { backupCodes: e }),
+                    setting: k.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+                    children: (0, r.jsx)(x.Z, { backupCodes: e }),
                 }),
             ],
         });
@@ -283,7 +283,7 @@ class K extends i.PureComponent {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.izJ, {}),
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(L.Z, {
                     currentUser: e,
                     disabled: t,
                     handleDisableAccount: () => this.handleDisableAccount(!1),
@@ -297,15 +297,15 @@ class K extends i.PureComponent {
             children: [
                 this.renderConfirmModals(),
                 (0, r.jsx)(E.F, {
-                    setting: j.s6.ACCOUNT_PROFILE,
+                    setting: k.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(),
                 }),
                 (0, r.jsx)(E.F, {
-                    setting: j.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+                    setting: k.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings(),
                 }),
                 (0, r.jsx)(E.F, {
-                    setting: j.s6.ACCOUNT_REMOVAL,
+                    setting: k.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings(),
                 }),
             ],
@@ -316,12 +316,12 @@ class K extends i.PureComponent {
         return (0, r.jsx)(w.N, {
             header: B.intl.string(B.t["JAIM/m"]),
             children: (0, r.jsx)(D.Z, {
-                parentSetting: j.s6.ACCOUNT,
+                parentSetting: k.s6.ACCOUNT,
                 settingsSection: U.oAB.ACCOUNT,
                 panelClassName: Z.tabPanel,
                 onTabChange: (e) => {
                     C.default.track(U.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
-                        target_tab_name: e === j.s6.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
+                        target_tab_name: e === k.s6.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
                     });
                 },
                 defaultTabIndex: "ACCOUNT_STANDING" === e ? 1 : void 0,
@@ -329,12 +329,12 @@ class K extends i.PureComponent {
                     {
                         title: B.intl.string(B.t.Am9YHi),
                         component: () => this.renderSecuritySettingsRedesign(),
-                        setting: j.s6.ACCOUNT_SECURITY_TAB,
+                        setting: k.s6.ACCOUNT_SECURITY_TAB,
                     },
                     {
                         title: B.intl.string(B.t["Vov/9o"]),
                         component: g.Z,
-                        setting: j.s6.PRIVACY_AND_SAFETY_STANDING,
+                        setting: k.s6.PRIVACY_AND_SAFETY_STANDING,
                     },
                 ],
             }),

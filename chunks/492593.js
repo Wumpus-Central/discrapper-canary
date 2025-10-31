@@ -109,11 +109,11 @@ let O = function (e) {
             hasThread: P,
             isSystemMessage: w,
             hasReply: D,
-            author: L,
-            onMouseEnter: x,
+            author: x,
+            onMouseEnter: L,
             onMouseLeave: M,
         } = e,
-        k = b(e, [
+        j = b(e, [
             "className",
             "compact",
             "contentOnly",
@@ -136,18 +136,18 @@ let O = function (e) {
             "onMouseEnter",
             "onMouseLeave",
         ]);
-    let j = (0, s.e7)([_.Z], () =>
-            (null == L ? void 0 : L.guildId) == null || (null == L ? void 0 : L.colorRoleId) == null
+    let k = (0, s.e7)([_.Z], () =>
+            (null == x ? void 0 : x.guildId) == null || (null == x ? void 0 : x.colorRoleId) == null
                 ? null
-                : _.Z.getRole(L.guildId, L.colorRoleId),
+                : _.Z.getRole(x.guildId, x.colorRoleId),
         ),
-        U = (0, f.yH)(null == L ? void 0 : L.guildId, j) && (0, d.S2)(L),
+        U = (0, f.yH)(null == x ? void 0 : x.guildId, k) && (0, d.S2)(x),
         [G, B] = i.useState(!1),
         Z = i.useCallback(
             (e) => {
-                B(!0), null == x || x(e);
+                B(!0), null == L || L(e);
             },
-            [x],
+            [L],
         ),
         F = i.useCallback(
             (e) => {
@@ -173,8 +173,8 @@ let O = function (e) {
                                         [p.gradient]: U,
                                         [p.withDisplayNameStyles]:
                                             V &&
-                                            (null == L ? void 0 : L.displayNameStyles) != null &&
-                                            (null == L ? void 0 : L.guildId) == null,
+                                            (null == x ? void 0 : x.displayNameStyles) != null &&
+                                            (null == x ? void 0 : x.guildId) == null,
                                         [p.wrapper]: !0,
                                         [p.contentOnly]: a,
                                         [p.compact]: n,
@@ -187,7 +187,7 @@ let O = function (e) {
                                     }),
                                     ref: N,
                                 },
-                                k,
+                                j,
                             ),
                             {
                                 role: "article",

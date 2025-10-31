@@ -28,12 +28,12 @@ var r = n(127849),
     P = "prototype",
     w = "Wrong length",
     D = "Wrong index",
-    L = S.getterFor(N),
-    x = S.getterFor(R),
+    x = S.getterFor(N),
+    L = S.getterFor(R),
     M = S.set,
-    k = r[N],
-    j = k,
-    U = j && j[P],
+    j = r[N],
+    k = j,
+    U = k && k[P],
     G = r[R],
     B = G && G[P],
     Z = Object.prototype,
@@ -70,7 +70,7 @@ var r = n(127849),
         });
     },
     et = function (e, t, n, r) {
-        var i = x(e),
+        var i = L(e),
             a = h(n),
             o = !!r;
         if (a + t > i.byteLength) throw new V(D);
@@ -80,7 +80,7 @@ var r = n(127849),
         return o ? c : Y(c);
     },
     en = function (e, t, n, r, i, a) {
-        var o = x(e),
+        var o = L(e),
             s = h(n),
             l = r(+i),
             c = !!a;
@@ -88,24 +88,24 @@ var r = n(127849),
         for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (o) {
-    var er = A && k.name !== N;
+    var er = A && j.name !== N;
     !d(function () {
-        k(1);
+        j(1);
     }) ||
     !d(function () {
-        new k(-1);
+        new j(-1);
     }) ||
     d(function () {
-        return new k(), new k(1.5), new k(NaN), 1 !== k.length || (er && !C);
+        return new j(), new j(1.5), new j(NaN), 1 !== j.length || (er && !C);
     })
-        ? (((j = function (e) {
-              return f(this, U), v(new k(h(e)), this, j);
+        ? (((k = function (e) {
+              return f(this, U), v(new j(h(e)), this, k);
           })[P] = U),
-          (U.constructor = j),
-          I(j, k))
-        : er && C && l(k, "name", N),
+          (U.constructor = k),
+          I(k, j))
+        : er && C && l(j, "name", N),
         b && E(B) !== Z && b(B, Z);
-    var ei = new G(new j(2)),
+    var ei = new G(new k(2)),
         ea = i(B.setInt8);
     ei.setInt8(0, 2147483648),
         ei.setInt8(1, 2147483649),
@@ -123,7 +123,7 @@ if (o) {
                 { unsafe: !0 },
             );
 } else
-    (U = (j = function (e) {
+    (U = (k = function (e) {
         f(this, U);
         var t = h(e);
         M(this, {
@@ -135,7 +135,7 @@ if (o) {
     })[P]),
         (B = (G = function (e, t, n) {
             f(this, B), f(e, U);
-            var r = L(e),
+            var r = x(e),
                 i = r.byteLength,
                 o = _(t);
             if (o < 0 || o > i) throw new V("Wrong offset");
@@ -149,7 +149,7 @@ if (o) {
             }),
                 a || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = o));
         })[P]),
-        a && (ee(j, "byteLength", L), ee(G, "buffer", x), ee(G, "byteLength", x), ee(G, "byteOffset", x)),
+        a && (ee(k, "byteLength", x), ee(G, "buffer", L), ee(G, "byteLength", L), ee(G, "byteOffset", L)),
         u(B, {
             getInt8: function (e) {
                 return (et(this, 1, e)[0] << 24) >> 24;
@@ -202,9 +202,9 @@ if (o) {
                 en(this, 8, e, $, t, arguments.length > 2 && arguments[2]);
             },
         });
-T(j, N),
+T(k, N),
     T(G, R),
     (e.exports = {
-        ArrayBuffer: j,
+        ArrayBuffer: k,
         DataView: G,
     });

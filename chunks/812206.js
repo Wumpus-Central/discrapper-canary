@@ -144,7 +144,7 @@ function P(e) {
     let { applications: t } = e;
     for (let e of t) b(o.ZP.createFromServer(e));
 }
-function D(e) {
+function w(e) {
     let { userProfile: t } = e,
         { user: n, application: r } = t;
     n.bot &&
@@ -154,12 +154,12 @@ function D(e) {
             applicationId: r.id,
         });
 }
-function w(e) {
+function D(e) {
     let { botUserId: t } = e,
         n = g.botUserIdToAppUsage[t];
     null != n && (g.botUserIdToAppUsage[t] = u(l({}, n), { lastUsedMs: Date.now() }));
 }
-function L(e) {
+function x(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
@@ -168,7 +168,7 @@ function L(e) {
     }
     return n;
 }
-function x(e) {
+function L(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t)
@@ -181,7 +181,7 @@ function M(e) {
     for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
     _.set(t, r);
 }
-function k(e) {
+function j(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -191,7 +191,7 @@ function k(e) {
     }
     return n.size > 0;
 }
-function j(e) {
+function k(e) {
     var t;
     let { payment: n } = e;
     if ((null == (t = n.sku) ? void 0 : t.application) == null) return !1;
@@ -310,21 +310,21 @@ let K = new W(a.Z, {
     APPLICATION_FETCH_FAIL: C,
     APPLICATIONS_FETCH: N,
     APPLICATIONS_FETCH_SUCCESS: P,
-    APPLICATIONS_FETCH_FAIL: L,
+    APPLICATIONS_FETCH_FAIL: x,
     APPLICATION_UPDATE: I,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: x,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: x,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: x,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: L,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: L,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: L,
     GUILD_APPLICATIONS_FETCH_SUCCESS: M,
-    BILLING_PAYMENTS_FETCH_SUCCESS: k,
-    PAYMENT_UPDATE: j,
+    BILLING_PAYMENTS_FETCH_SUCCESS: j,
+    PAYMENT_UPDATE: k,
     INVITE_RESOLVE_SUCCESS: G,
     GIFT_CODE_RESOLVE_SUCCESS: U,
     LIBRARY_FETCH_SUCCESS: R,
     STORE_LISTING_FETCH_SUCCESS: B,
     LOAD_MESSAGES_SUCCESS: Z,
-    USER_PROFILE_FETCH_SUCCESS: D,
-    APP_DM_OPEN: w,
+    USER_PROFILE_FETCH_SUCCESS: w,
+    APP_DM_OPEN: D,
     USER_AUTHORIZED_APPS_UPDATE: H,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Y,
     OAUTH2_TOKEN_CREATE: V,

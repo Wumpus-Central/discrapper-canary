@@ -44,7 +44,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,17 +77,17 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = j(e, t);
+        i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -95,7 +95,7 @@ function k(e, t) {
     }
     return i;
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -122,8 +122,8 @@ function B(e) {
             message: a,
             channel: h,
             userOverride: D,
-            compact: x = !1,
-            withMentionPrefix: j = !1,
+            compact: L = !1,
+            withMentionPrefix: k = !1,
             showPopout: U = !1,
             hideGuildTag: B = !1,
             hideSystemTag: Z = !1,
@@ -141,7 +141,7 @@ function B(e) {
         J = i.useContext(b.Z),
         $ = null != (t = null == h ? void 0 : h.guild_id) ? t : J,
         { analyticsLocations: ee } = (0, p.ZP)(_.Z.USERNAME),
-        et = j ? "@" : "",
+        et = k ? "@" : "",
         { nick: en, colorString: er, colorStrings: ei, colorRoleName: ea, displayNameStyles: eo } = n,
         es = (0, l.e7)([f.Z], () => f.Z.roleStyle),
         el = "username" === es,
@@ -173,7 +173,7 @@ function B(e) {
             if (el) {
                 if (eE && null != ei) {
                     var e;
-                    return M(L({}, ey), {
+                    return M(x({}, ey), {
                         textDecorationColor: null != (e = null == ei ? void 0 : ei.primaryColor) ? e : void 0,
                     });
                 }
@@ -202,7 +202,7 @@ function B(e) {
         },
         eS = i.useMemo(
             () =>
-                x && !B
+                L && !B
                     ? (0, r.jsx)(y.ZP, {
                           primaryGuild: n.primaryGuild,
                           userId: a.author.id,
@@ -211,7 +211,7 @@ function B(e) {
                           badgeSize: P.Gg.SIZE_12,
                       })
                     : null,
-            [x, n.primaryGuild, $, a.author.id, B],
+            [L, n.primaryGuild, $, a.author.id, B],
         ),
         eA = null != D ? D : a.author,
         eC =
@@ -236,13 +236,13 @@ function B(e) {
                       clickTrap: U,
                       children: (e) => {
                           var { onClick: t } = e,
-                              n = k(e, ["onClick"]);
+                              n = j(e, ["onClick"]);
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(
                                       d.P3F,
                                       M(
-                                          L(
+                                          x(
                                               {
                                                   tag: "span",
                                                   innerRef: Q,
@@ -259,14 +259,14 @@ function B(e) {
                       },
                   })
                 : (0, r.jsxs)(r.Fragment, {
-                      children: [(0, r.jsx)(d.P3F, M(L({}, eT), { className: o()(eT.className, F) })), eS],
+                      children: [(0, r.jsx)(d.P3F, M(x({}, eT), { className: o()(eT.className, F) })), eS],
                   }),
         eN = null != z ? z[0] : null,
         eR = null != z ? z[1] : null;
     return (0, r.jsxs)(p.Gt, {
         value: ee,
         children: [
-            null != eN && !Z && x
+            null != eN && !Z && L
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [" ", eN, " "],
                   })
@@ -281,7 +281,7 @@ function B(e) {
                   })
                 : null,
             eC,
-            !x &&
+            !L &&
                 !B &&
                 (0, r.jsx)(y.ZP, {
                     primaryGuild: n.primaryGuild,
@@ -290,7 +290,7 @@ function B(e) {
                     className: w.clanTagChiplet,
                 }),
             null != eR ? eR : null,
-            null == eN || Z || x ? null : eN,
+            null == eN || Z || L ? null : eN,
             null != a && (0, C.f)(a) && eu && K ? (0, r.jsx)(G, {}) : null,
         ],
     });

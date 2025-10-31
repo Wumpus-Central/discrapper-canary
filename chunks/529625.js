@@ -1,15 +1,15 @@
 n.d(t, { Z: () => h });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(481060),
-    i = n(881052),
-    o = n(972959),
-    s = n(729345),
+    r = n(881052),
+    s = n(972959),
+    o = n(729345),
     c = n(823385),
     d = n(620481),
     u = n(608934),
     m = n(981631);
-let p = (0, o.H)(() => ({
+let p = (0, s.H)(() => ({
     isRecording: !1,
     isUploading: !1,
     isSuccess: !1,
@@ -19,17 +19,17 @@ function h() {
     let e = p.useField("isRecording"),
         t = p.useField("isUploading"),
         n = p.useField("isSuccess"),
-        o = p.useField("errorMessage"),
-        h = r.useRef([]),
-        x = r.useRef(""),
-        f = r.useCallback(() => {
+        s = p.useField("errorMessage"),
+        h = i.useRef([]),
+        x = i.useRef(""),
+        g = i.useCallback(() => {
             let { results: e, query: t } = c.Z.getProps();
             (h.current !== e || x.current !== t) && ((h.current = e), (x.current = t), (0, d.OC)());
         }, []);
-    r.useEffect(() => {
-        if (e) return c.Z.addChangeListener(f), () => c.Z.removeChangeListener(f);
-    }, [f, e]);
-    let b = r.useCallback(async () => {
+    i.useEffect(() => {
+        if (e) return c.Z.addChangeListener(g), () => c.Z.removeChangeListener(g);
+    }, [g, e]);
+    let f = i.useCallback(async () => {
         let { isUploading: e } = p.getState();
         if (!e)
             try {
@@ -39,13 +39,13 @@ function h() {
                     errorMessage: null,
                     isSuccess: !1,
                 }),
-                    await (0, s.E)(m.GU0.WEB_APP),
+                    await (0, o.E)(m.GU0.WEB_APP),
                     p.setState({
                         isSuccess: !0,
                         errorMessage: null,
                     });
             } catch (t) {
-                let e = new i.Hx(t);
+                let e = new r.Hx(t);
                 p.setState({ errorMessage: e.getAnyErrorMessage() });
             } finally {
                 p.setState({ isUploading: !1 });
@@ -70,8 +70,8 @@ function h() {
                     (0, a.jsx)(u.a, {
                         isUploading: t,
                         isSuccess: n,
-                        errorMessage: o,
-                        onClick: b,
+                        errorMessage: s,
+                        onClick: f,
                         title: "Upload Session Logs",
                     }),
                 ],

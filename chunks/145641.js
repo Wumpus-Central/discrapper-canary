@@ -10,14 +10,14 @@ var r = n(951288),
     d = n(983703);
 let p = function (e) {
     let { rows: t, renderRow: n, renderSection: p, footer: f } = e,
-        h = (e) => {
+        m = (e) => {
             let { section: r, row: i } = e,
                 l = t[r];
             if (null == l || null == i) return null;
             let a = l[i];
             return null == a ? null : n(a);
         },
-        m = i.useCallback(
+        h = i.useCallback(
             (e) => {
                 let { section: t } = e;
                 return p(t);
@@ -62,7 +62,7 @@ let p = function (e) {
             scrollToEnd: E,
             setFocus: O,
         }),
-        v = i.useMemo(() => t.map((e) => e.length), [t]);
+        y = i.useMemo(() => t.map((e) => e.length), [t]);
     return (0, r.jsx)(a.bG, {
         navigator: I,
         children: (0, r.jsx)(a.SJ, {
@@ -127,11 +127,11 @@ let p = function (e) {
                                             (t.current =
                                                 null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                     },
-                                    renderRow: h,
+                                    renderRow: m,
                                     rowHeight: u.NV,
-                                    renderSection: m,
+                                    renderSection: h,
                                     sectionHeight: u.aS,
-                                    sections: v,
+                                    sections: y,
                                     className: d.peopleList,
                                 },
                                 n,

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(660815),
-    i = n(442837),
-    o = n(481060),
-    s = n(570140),
+    r = n(442837),
+    s = n(481060),
+    o = n(570140),
     c = n(905551),
     d = n(60482),
     u = n(430824),
@@ -53,67 +53,67 @@ function x(e, t) {
         e
     );
 }
-function f() {
-    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
-        t = (0, i.e7)([u.Z], () => {
+function g() {
+    let e = (0, r.e7)([m.Z], () => m.Z.getGuildId()),
+        t = (0, r.e7)([u.Z], () => {
             var t;
             return null == (t = u.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, i.e7)([d.Z], () => {
+        n = (0, r.e7)([d.Z], () => {
             var t;
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
-        f = r.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
-        b = r.useCallback(
+        g = i.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
+        f = i.useCallback(
             (t) => {
-                null != f &&
+                null != g &&
                     null != e &&
-                    s.Z.dispatch({
+                    o.Z.dispatch({
                         type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                         guildId: e,
-                        instance: x(h({}, f), { status: t }),
+                        instance: x(h({}, g), { status: t }),
                     });
             },
-            [f, e],
+            [g, e],
         ),
-        g = r.useMemo(
+        b = i.useMemo(
             () =>
                 Object.values(l.V).map((e) =>
                     (0, a.jsx)(
-                        o.Button,
+                        s.Button,
                         {
                             variant: "primary",
                             text: e,
                             onClick: () => {
-                                b(e);
+                                f(e);
                             },
                         },
                         e,
                     ),
                 ),
-            [b],
+            [f],
         ),
-        v = r.useCallback(() => {
-            null != f &&
+        v = i.useCallback(() => {
+            null != g &&
                 null != e &&
-                s.Z.dispatch({
+                o.Z.dispatch({
                     type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                     guildId: e,
-                    instance: x(h({}, f), {
+                    instance: x(h({}, g), {
                         serverIP: void 0,
                         port: void 0,
                         gameServerPanelUrl: void 0,
                     }),
                 });
-        }, [f, e]);
+        }, [g, e]);
     return null == e
         ? null
-        : (0, a.jsxs)(o.zJl, {
+        : (0, a.jsxs)(s.zJl, {
               className: p.container,
               children: [
                   (0, a.jsx)("div", {
                       className: p.section,
-                      children: (0, a.jsx)(o.Heading, {
+                      children: (0, a.jsx)(s.Heading, {
                           variant: "heading-md/normal",
                           children: "Current guild: ".concat(t),
                       }),
@@ -121,31 +121,31 @@ function f() {
                   (0, a.jsxs)("div", {
                       className: p.section,
                       children: [
-                          (0, a.jsx)(o.Text, {
+                          (0, a.jsx)(s.Text, {
                               variant: "eyebrow",
-                              children: "Set server state for first server: ".concat(null == f ? void 0 : f.name),
+                              children: "Set server state for first server: ".concat(null == g ? void 0 : g.name),
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,
-                              children: g,
+                              children: b,
                           }),
-                          (0, a.jsx)(o.Text, {
+                          (0, a.jsx)(s.Text, {
                               variant: "eyebrow",
                               children: "Remove Server Info",
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,
-                              children: (0, a.jsx)(o.Button, {
+                              children: (0, a.jsx)(s.Button, {
                                   variant: "primary",
                                   text: "Remove IP Address & Game Server Panel URL",
                                   onClick: v,
                               }),
                           }),
-                          (0, a.jsx)(o.Text, {
+                          (0, a.jsx)(s.Text, {
                               variant: "eyebrow",
                               children: "Reset server",
                           }),
-                          (0, a.jsx)(o.Button, {
+                          (0, a.jsx)(s.Button, {
                               variant: "primary",
                               text: "Reset",
                               onClick: () => {

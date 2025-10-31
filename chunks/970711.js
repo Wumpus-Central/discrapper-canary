@@ -9,9 +9,9 @@ n.d(t, {
     B: () => ey,
     B8: () => I,
     BQ: () => eN,
-    C2: () => ej,
+    C2: () => ek,
     Cn: () => ea,
-    D7: () => eL,
+    D7: () => ex,
     DZ: () => ev,
     F8: () => em,
     G0: () => ts,
@@ -24,7 +24,7 @@ n.d(t, {
     KJ: () => ta,
     Mc: () => ed,
     OU: () => eK,
-    On: () => ek,
+    On: () => ej,
     Or: () => tg,
     R7: () => e$,
     RC: () => eo,
@@ -33,17 +33,17 @@ n.d(t, {
     S: () => ei,
     S6: () => J,
     Tc: () => e1,
-    UE: () => ex,
+    UE: () => eL,
     Ub: () => v,
     Uj: () => eC,
-    V3: () => e3,
+    V3: () => e2,
     Vr: () => eO,
     Wl: () => tf,
     Wt: () => ez,
     XP: () => t_,
     YA: () => eG,
     Yc: () => e0,
-    Z5: () => e2,
+    Z5: () => e3,
     Zk: () => K,
     Zs: () => X,
     a9: () => eS,
@@ -90,7 +90,7 @@ n.d(t, {
     uX: () => ec,
     up: () => eH,
     vH: () => $,
-    vz: () => j,
+    vz: () => k,
     w7: () => eX,
     xB: () => Z,
     xH: () => eF,
@@ -310,8 +310,8 @@ function P(e, t, n, i) {
 }
 let w = ["bytes"],
     D = ["omit", "same-origin", "include"],
-    L = ["same-origin", "no-cors", "cors", "navigate"],
-    x =
+    x = ["same-origin", "no-cors", "cors", "navigate"],
+    L =
         "undefined" == typeof FinalizationRegistry
             ? {
                   register: () => {},
@@ -321,7 +321,7 @@ let w = ["bytes"],
 class M {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), x.unregister(this), e;
+        return (this.__wbg_ptr = 0), L.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -340,17 +340,17 @@ class M {
         r.blockeddomainsstore_startFetchingBlockedDomains(t, n);
     }
 }
-let k =
+let j =
     "undefined" == typeof FinalizationRegistry
         ? {
               register: () => {},
               unregister: () => {},
           }
         : new FinalizationRegistry((e) => r.__wbg_experimentcacher_free(e >>> 0, 1));
-class j {
+class k {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), k.unregister(this), e;
+        return (this.__wbg_ptr = 0), j.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -670,12 +670,12 @@ function eD() {
         return new Request(l(e, t), n);
     }, arguments);
 }
-function eL() {
+function ex() {
     return u(function (e) {
         return new Blob(e);
     }, arguments);
 }
-function ex(e) {
+function eL(e) {
     return e.next;
 }
 function eM() {
@@ -683,10 +683,10 @@ function eM() {
         return e.next();
     }, arguments);
 }
-function ek(e, t, n) {
+function ej(e, t, n) {
     return e.open(l(t, n));
 }
-function ej(e, t) {
+function ek(e, t) {
     return e.push(t);
 }
 function eU(e, t, n) {
@@ -738,7 +738,7 @@ function eQ(e, t, n) {
     e.method = l(t, n);
 }
 function eJ(e, t) {
-    e.mode = L[t];
+    e.mode = x[t];
 }
 function e$(e, t) {
     e.signal = t;
@@ -749,11 +749,11 @@ function e0(e, t) {
 function e1(e) {
     return e.signal;
 }
-function e2() {
+function e3() {
     let e = "undefined" == typeof global ? null : global;
     return d(e) ? 0 : c(e);
 }
-function e3() {
+function e2() {
     let e = "undefined" == typeof globalThis ? null : globalThis;
     return d(e) ? 0 : c(e);
 }

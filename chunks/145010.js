@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m });
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(399606),
     a = n(481060),
     o = n(125268),
@@ -9,13 +9,13 @@ var i = n(951288),
     u = n(390322),
     d = n(871499),
     p = n(12168),
-    h = n(304388),
-    f = n(388032);
+    f = n(304388),
+    h = n(388032);
 function m(e) {
     let { channel: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getDrawMode()),
         m = (null == n ? void 0 : n.type) === c.W.EMOJI_HOSE,
-        g = r.useRef(null),
+        g = i.useRef(null),
         b = (e, t) => {
             null != e
                 ? (0, o.Bo)({
@@ -26,15 +26,15 @@ function m(e) {
                 : m && (0, o.Bo)(null),
                 null == t || t();
         };
-    return (0, i.jsx)(h.Z, {
+    return (0, r.jsx)(f.Z, {
         renderPopout: (e) => {
-            let { closePopout: n, onFocus: r } = e;
-            return (0, i.jsx)(u.Z, {
-                children: (0, i.jsx)(p.Z, {
-                    title: f.intl.string(f.t.XYLOyF),
+            let { closePopout: n, onFocus: i } = e;
+            return (0, r.jsx)(u.Z, {
+                children: (0, r.jsx)(p.Z, {
+                    title: h.intl.string(h.t.XYLOyF),
                     channel: t,
                     closePopout: n,
-                    onFocus: r,
+                    onFocus: i,
                     onSelectEmoji: (e) => b(e, n),
                 }),
             });
@@ -42,29 +42,29 @@ function m(e) {
         popoutTargetRef: g,
         children: (e) => {
             var t, n;
-            return (0, i.jsx)(
+            return (0, r.jsx)(
                 d.Z,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
+                            (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: i,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = i);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
@@ -83,8 +83,8 @@ function m(e) {
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
                           return n;
                       })(Object(n)).forEach(function (e) {

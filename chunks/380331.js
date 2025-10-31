@@ -67,7 +67,7 @@ function D(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,18 +78,18 @@ function L(e, t) {
         e
     );
 }
-let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
+let L = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
-    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
+    j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     Z = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    F = k + M + 2 * U,
-    V = x + M,
+    F = j + M + 2 * U,
+    V = L + M,
     H = V + (B + 2 * Z),
-    Y = k + j + 2 * U,
+    Y = j + k + 2 * U,
     W = 7;
 function K(e) {
     let {
@@ -108,7 +108,7 @@ function K(e) {
         E = l.type === S.En.GUILD ? l.guild : null,
         y = (0, r.jsxs)(
             f.P3F,
-            L(w({}, p), {
+            x(w({}, p), {
                 "aria-label": (0, O.Nf)(l, E),
                 className: o()({
                     [R.categoryItemGuildCategory]: null != E,
@@ -138,8 +138,8 @@ function K(e) {
                         ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
-                              height: k,
-                              width: k,
+                              height: j,
+                              width: j,
                               size: "custom",
                           })
                         : null,
@@ -204,8 +204,8 @@ let z = (e) => {
                 }),
             [b, v, A, y, P, w],
         ),
-        L = i.useMemo(() => [8, 8, 0, 8], []),
-        x = i.useCallback(
+        x = i.useMemo(() => [8, 8, 0, 8], []),
+        L = i.useCallback(
             (e, t) => {
                 let n = A[t];
                 if (n.type === S.En.RECENT) return F;
@@ -266,7 +266,7 @@ let z = (e) => {
                 let n = A[e];
                 if (null == n) return 0;
                 let r = Q ? G : 0;
-                if (n.type === S.En.RECENT) return t ? 0 : j;
+                if (n.type === S.En.RECENT) return t ? 0 : k;
                 if (n.type === S.En.GUILD) {
                     let n = A[e + 1];
                     return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * Z + M + r : M) : t ? r : M;
@@ -289,12 +289,12 @@ let z = (e) => {
         className: t,
         store: h.kJ,
         categories: A,
-        listPadding: L,
+        listPadding: x,
         onScroll: $,
         renderCategoryListItem: D,
         renderSection: en,
         rowCount: A.length,
-        categoryHeight: x,
+        categoryHeight: L,
         getScrollOffsetForIndex: et,
         rowCountBySection: X,
         children: (e) =>
@@ -310,8 +310,8 @@ let z = (e) => {
                     children: (0, r.jsx)(f.EO4, {
                         size: "custom",
                         color: "currentColor",
-                        height: k,
-                        width: k,
+                        height: j,
+                        width: j,
                     }),
                 },
                 er,

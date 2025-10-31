@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -9,30 +9,30 @@ var r = n(951288),
     u = n(481060),
     d = n(239091),
     p = n(100527),
-    f = n(667815),
-    h = n(531572),
+    h = n(667815),
+    f = n(531572),
     g = n(259580),
     m = n(639777),
     b = n(495804),
     _ = n(441536),
-    O = n(459196),
-    y = n(388032),
-    j = n(931942);
-function v(e) {
+    y = n(459196),
+    O = n(388032),
+    v = n(931942);
+function j(e) {
     let { guild: t, withMargin: l } = e,
-        v = (0, b.Z)(t),
-        x = (0, m.Z)(t.id),
-        C = i.useCallback(() => {
+        j = (0, b.Z)(t),
+        C = (0, m.Z)(t.id),
+        x = i.useCallback(() => {
             (0, _.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        E = (0, c.e7)([h.Z], () => {
+        E = (0, c.e7)([f.Z], () => {
             var e;
-            return null != (e = h.Z.getCountForGuild(t.id)) ? e : 0;
+            return null != (e = f.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        E !== t.premiumSubscriberCount && (0, f.v)(t.id, t.premiumSubscriberCount);
+        E !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
     }, [t.id, E, t.premiumSubscriberCount]);
-    let S = Math.min((E / v) * 100, 100),
+    let S = Math.min((E / j) * 100, 100),
         [I, P] = (0, u.q_F)(
             () => ({
                 width: E === t.premiumSubscriberCount ? "calc(".concat(S, "% - 4px)") : "0%",
@@ -48,7 +48,7 @@ function v(e) {
     i.useEffect(() => {
         P({ width: "calc(".concat(S, "% - 4px)") });
     }, [S, P]);
-    let N = E >= v;
+    let N = E >= j;
     return (0, r.jsx)(u.P3F, {
         "aria-label": void 0,
         role: "button",
@@ -59,11 +59,11 @@ function v(e) {
             },
         },
         onClick: () => {
-            C();
+            x();
         },
-        className: o()(j.container, { [j.containerWithMargin]: l }),
+        className: o()(v.container, { [v.containerWithMargin]: l }),
         onContextMenu: (e) => {
-            x &&
+            C &&
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e("8570").then(n.bind(n, 651138));
                     return (n) => {
@@ -114,50 +114,50 @@ function v(e) {
                 });
         },
         children: (0, r.jsxs)("div", {
-            className: j.contentContainer,
+            className: v.contentContainer,
             children: [
-                (0, r.jsx)("div", { className: j.progressContainer }),
+                (0, r.jsx)("div", { className: v.progressContainer }),
                 (0, r.jsx)(a.animated.div, {
-                    className: o()(j.progress, { [j.progressLow]: S <= 5 }),
+                    className: o()(v.progress, { [v.progressLow]: S <= 5 }),
                     style: I,
                 }),
                 (0, r.jsxs)("div", {
-                    className: j.textContainer,
+                    className: v.textContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: j.textContentContainer,
+                            className: v.textContentContainer,
                             children: [
                                 (0, r.jsx)(s.xvT, {
-                                    className: j.text,
+                                    className: v.text,
                                     variant: "text-xs/semibold",
-                                    children: y.intl.string(O.default.NI6Ihe),
+                                    children: O.intl.string(y.default.NI6Ihe),
                                 }),
-                                t.premiumSubscriberCount >= v &&
+                                t.premiumSubscriberCount >= j &&
                                     (0, r.jsx)(s.xvT, {
-                                        className: j.text,
+                                        className: v.text,
                                         variant: "text-xs/semibold",
                                         children: "\uD83C\uDF89",
                                     }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: j.textContentContainer,
+                            className: v.textContentContainer,
                             children: [
                                 (0, r.jsx)(s.xvT, {
-                                    className: o()(j.text, j.boostCountText),
+                                    className: o()(v.text, v.boostCountText),
                                     variant: "text-xs/semibold",
                                     children: N
-                                        ? y.intl.formatToPlainString(O.default["Ehpq+7"], { appliedBoostCount: E })
-                                        : y.intl.formatToPlainString(O.default["/rbPDs"], {
+                                        ? O.intl.formatToPlainString(y.default["Ehpq+7"], { appliedBoostCount: E })
+                                        : O.intl.formatToPlainString(y.default["/rbPDs"], {
                                               appliedBoostCount: E,
-                                              maxBoostCount: v,
+                                              maxBoostCount: j,
                                           }),
                                 }),
                                 (0, r.jsx)(g.Z, {
                                     width: 12,
                                     height: 12,
                                     direction: g.Z.Directions.RIGHT,
-                                    className: o()(j.text, j.boostCountText),
+                                    className: o()(v.text, v.boostCountText),
                                 }),
                             ],
                         }),
@@ -167,9 +167,9 @@ function v(e) {
         }),
     });
 }
-function x(e) {
+function C(e) {
     let { guild: t, withMargin: n } = e;
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(j, {
         guild: t,
         withMargin: n,
     });

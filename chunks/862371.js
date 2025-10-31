@@ -2,7 +2,7 @@ n.d(t, {
     Ah: () => y,
     MU: () => D,
     TK: () => A,
-    VX: () => L,
+    VX: () => x,
     f: () => T,
     mc: () => P,
     pg: () => N,
@@ -221,7 +221,7 @@ function w(e, t) {
     );
 }
 let D = (0, b.forwardRef)(w),
-    L = (0, b.forwardRef)(function ({ date: e, ...t }, n) {
+    x = (0, b.forwardRef)(function ({ date: e, ...t }, n) {
         var r;
         let a = (0, b.useContext)(v),
             o = (0, b.useContext)(I),
@@ -283,7 +283,7 @@ let D = (0, b.forwardRef)(w),
                 "data-invalid": O.isInvalid || void 0,
                 "data-today": d || void 0,
             },
-            L = (0, E.z)(t, { global: !0 });
+            x = (0, E.z)(t, { global: !0 });
         return b.createElement(
             "td",
             {
@@ -291,7 +291,7 @@ let D = (0, b.forwardRef)(w),
                 ref: n,
             },
             b.createElement("div", {
-                ...(0, c.d)(L, y, C, T, D, w),
+                ...(0, c.d)(x, y, C, T, D, w),
                 ref: h,
             }),
         );

@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(715702),
     O = n(773244),
     I = n(711237),
-    v = n(532835),
-    y = n(347469),
+    y = n(532835),
+    v = n(347469),
     C = n(169382),
     S = n(290297),
     T = n(244317),
@@ -72,8 +72,8 @@ var r = n(951288),
     eE = n(984802),
     eO = n(592125),
     eI = n(896797),
-    ev = n(271383),
-    ey = n(430824),
+    ey = n(271383),
+    ev = n(430824),
     eC = n(944486),
     eS = n(55589),
     eT = n(933429),
@@ -189,8 +189,8 @@ let ek = (0, u.Un)({
             { guildId: l, channelId: a, messageId: s, threadId: c } = t.params,
             u = null != a ? a : void 0;
         null == u && null != t.params.gameShopPageIndex && (u = eZ.oC.GAME_SHOP);
-        let d = (0, p.e7)([ey.Z], () => ey.Z.getGuild(l)),
-            f = (0, p.e7)([ev.ZP], () => (null == l ? null : ev.ZP.getSelfMember(l))),
+        let d = (0, p.e7)([ev.Z], () => ev.Z.getGuild(l)),
+            f = (0, p.e7)([ey.ZP], () => (null == l ? null : ey.ZP.getSelfMember(l))),
             m = (0, p.e7)([K.Z], () => {
                 if (null == l) return;
                 let e = K.Z.getData(l);
@@ -403,7 +403,7 @@ function ti(e) {
 }
 function tl(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: l, hideChannelList: s, isSidebarOpen: o } = e;
-    (0, v.t)(!0);
+    (0, y.t)(!0);
     let c = "app view user trigger debugging";
     I.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), I.R6.trackExposure({ location: c });
     let u = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
@@ -468,14 +468,14 @@ function tl(e) {
                 f.K.set(_.nT, e),
                 eN.default.track(eA.rMx.CHANNEL_SIDEBAR_RESIZED, { width: e });
         }, []),
-        S = (0, y.Z)({
+        S = (0, v.Z)({
             minDimension: _.li,
             maxDimension: _.zx,
             resizableDomNodeRef: b,
             onElementResize: E,
             onElementResizeStart: O,
             onElementResizeEnd: C,
-            orientation: y.y.HORIZONTAL_RIGHT,
+            orientation: v.y.HORIZONTAL_RIGHT,
             throttleDuration: 0,
         }),
         T = i.useCallback(() => {
@@ -599,7 +599,7 @@ function ta() {
         E = (0, R.T)("AppView"),
         O = (0, Z.useAppSidebarState)((e) => !e.isOpen),
         I = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
-        v = (0, p.e7)([D.Z], () => D.Z.isFrameActive());
+        y = (0, p.e7)([D.Z], () => D.Z.isFrameActive());
     return (0, r.jsx)("div", {
         className: eD.container,
         children: (0, r.jsx)(G.Z.Provider, {
@@ -810,7 +810,7 @@ function ta() {
                                                 }),
                                             ],
                                         }),
-                                        v && (0, r.jsx)(M.Z, {}),
+                                        y && (0, r.jsx)(M.Z, {}),
                                     ],
                                 }),
                             }),

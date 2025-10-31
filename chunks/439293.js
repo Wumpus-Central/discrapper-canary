@@ -2,34 +2,34 @@ n.d(t, { Z: () => c }), n(314940);
 var i = n(951288);
 n(647438);
 var r = n(278074),
-    l = n(481060),
-    a = n(409813),
-    o = n(388032),
-    s = n(525214);
+    a = n(481060),
+    l = n(409813),
+    s = n(388032),
+    o = n(525214);
 function c(e) {
     let { step: t, onClose: n, isGift: c } = e,
         d = (0, r.EQ)(t)
-            .with(a.h8.REVIEW, () => (c ? o.intl.string(o.t.wKaVLC) : o.intl.string(o.t.Whxhpm)))
-            .with(a.h8.ADD_PAYMENT_STEPS, () => o.intl.string(o.t.QiGOak))
-            .with(a.h8.GIFT_CUSTOMIZATION, () => o.intl.string(o.t["JCFN/y"]))
-            .with(a.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => o.intl.string(o.t.lDbi6H))
-            .with(a.h8.CONFIRM, () => "")
+            .with(l.h8.REVIEW, () => (c ? s.intl.string(s.t.wKaVLC) : s.intl.string(s.t.Whxhpm)))
+            .with(l.h8.ADD_PAYMENT_STEPS, () => s.intl.string(s.t.QiGOak))
+            .with(l.h8.GIFT_CUSTOMIZATION, () => s.intl.string(s.t["JCFN/y"]))
+            .with(l.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => s.intl.string(s.t.lDbi6H))
+            .with(l.h8.CONFIRM, () => "")
             .otherwise(() => null);
     return null == d
         ? null
-        : (0, i.jsxs)(l.xBx, {
+        : (0, i.jsxs)(a.xBx, {
               "data-migration-pending": !0,
-              className: s.headerContainerGift,
-              separator: t !== a.h8.CONFIRM,
+              className: o.headerContainerGift,
+              separator: t !== l.h8.CONFIRM,
               children: [
-                  (0, i.jsx)(l.Heading, {
+                  (0, i.jsx)(a.Heading, {
                       variant: "heading-lg/semibold",
                       children: d,
                   }),
-                  (0, i.jsx)(l.olH, {
+                  (0, i.jsx)(a.olH, {
                       "data-migration-pending": !0,
                       onClick: n,
-                      className: s.closeButtonGift,
+                      className: o.closeButtonGift,
                   }),
               ],
           });

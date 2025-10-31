@@ -73,7 +73,7 @@ function g(e) {
                 let i = null == E || null == (t = E.rootCommand) ? void 0 : t.id;
                 if (null == i) return void e.preventDefault();
                 (0, s.jW)(e, async () => {
-                    let { default: e } = await n.e("5396").then(n.bind(n, 731646));
+                    let { default: e } = await n.e("5396").then(n.bind(n, 999588));
                     return (t) =>
                         (0, r.jsx)(
                             e,

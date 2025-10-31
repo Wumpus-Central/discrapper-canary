@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(607802),
     w = n(532428),
     D = n(991896),
-    L = n(611004),
-    x = n(579612),
+    x = n(611004),
+    L = n(579612),
     M = n(817190),
-    k = n(315322),
-    j = n(723642),
+    j = n(315322),
+    k = n(723642),
     U = n(981631),
     G = n(388032),
     B = n(495824);
@@ -176,12 +176,12 @@ let X = (e, t, n) => {
             : (0, r.jsxs)("div", {
                   className: B.resultChannel,
                   children: [
-                      (0, r.jsx)(x.MC, {
+                      (0, r.jsx)(L.MC, {
                           channel: i,
                           className: B.searchResultChannelIcon,
                       }),
-                      (0, r.jsx)(x.GQ, { channel: i }),
-                      (0, r.jsx)(x.P, { channel: i }),
+                      (0, r.jsx)(L.GQ, { channel: i }),
+                      (0, r.jsx)(L.P, { channel: i }),
                   ],
               });
     },
@@ -438,7 +438,7 @@ class ei extends i.PureComponent {
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
             channel: o,
             onSelectSearchInSelectedChannel: () =>
-                this.handleSearchInChannel({ searchAutocompleteSelectAction: j.ZW.CLICK }),
+                this.handleSearchInChannel({ searchAutocompleteSelectAction: k.ZW.CLICK }),
             showDMQueryText: a.type === U.aib.DMS && (0, P.R6)(a),
         });
     }
@@ -464,17 +464,17 @@ class ei extends i.PureComponent {
             }),
             Z(this, "handleDateChange", (e) => {
                 let t = (0, P.Tm)(this.props.searchContext);
-                (0, k.bh)({
+                (0, j.bh)({
                     searchContext: this.props.searchContext,
                     searchQuery: M.Z.getSearchResultsQuery(t),
-                    searchQueryString: L.Z.getSearchInputText(this.props.searchContext),
+                    searchQueryString: x.Z.getSearchInputText(this.props.searchContext),
                     searchTokenType: this.props.resultsState.mode.filter,
                     searchAutocompleteGroup: U.rtL.DATES,
                     searchAutocompleteMode: this.props.resultsState.mode,
                     isSearchFilterPrefix: !1,
                     isSearchFilterAnswer: !0,
                     isSearchFilterComplete: !1,
-                    searchAutocompleteSelectAction: j.ZW.CLICK,
+                    searchAutocompleteSelectAction: k.ZW.CLICK,
                 }),
                     this.setSearchQuery(e.format(U.b2L) + " ", !0);
             }),
@@ -530,7 +530,7 @@ class ei extends i.PureComponent {
                     let e = i.find((e) => (null == e ? void 0 : e.group) === U.rtL.HISTORY);
                     if (null != e) {
                         let t = r - (l - e.results.length);
-                        (0, k.$z)({
+                        (0, j.$z)({
                             searchContext: this.props.searchContext,
                             searchHistoryIndex: t,
                             searchHistoryTotalResults: e.results.length,
@@ -546,10 +546,10 @@ class ei extends i.PureComponent {
                         f = s.result.channel,
                         _ = d === U.dCx.FILTER_IN && null != f && f.id === I.Z.getChannelId(),
                         p = (0, P.Tm)(this.props.searchContext);
-                    (0, k.bh)({
+                    (0, j.bh)({
                         searchContext: this.props.searchContext,
                         searchQuery: M.Z.getSearchResultsQuery(p),
-                        searchQueryString: L.Z.getSearchInputText(this.props.searchContext),
+                        searchQueryString: x.Z.getSearchInputText(this.props.searchContext),
                         searchTokenType: d,
                         searchAutocompleteGroup: null != (u = s.group) ? u : a,
                         searchAutocompleteMode: this.props.resultsState.mode,
@@ -598,7 +598,7 @@ class ei extends i.PureComponent {
                 let { searchAutocompleteSelectAction: n } = e,
                     { channel: r, searchContext: i } = this.props;
                 if (!this.shouldShowSearchInSelectedChannel() || null == r) return !1;
-                (0, k.tA)({
+                (0, j.tA)({
                     searchContext: i,
                     searchAutocompleteSelectAction: n,
                 });
@@ -686,7 +686,7 @@ class ei extends i.PureComponent {
                                                 showFilter: g,
                                                 onSelect: this.selectOption.bind(null, {
                                                     selectedIndex: o,
-                                                    searchAutocompleteSelectAction: j.ZW.CLICK,
+                                                    searchAutocompleteSelectAction: k.ZW.CLICK,
                                                 }),
                                                 onFocus: this.focusOption.bind(null, o),
                                             },

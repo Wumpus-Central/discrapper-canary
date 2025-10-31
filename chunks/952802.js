@@ -2,8 +2,8 @@ r.d(t, { Z: () => f }), r(388685);
 var n = r(951288),
     s = r(647438),
     i = r(120356),
-    o = r.n(i),
-    a = r(755721),
+    a = r.n(i),
+    o = r(755721),
     l = r(481060),
     c = r(313201),
     u = r(742458),
@@ -19,13 +19,13 @@ function f(e) {
             error: m,
             className: g,
             required: y,
-            value: C,
-            setRef: O,
+            value: O,
+            setRef: C,
             placeholder: b,
             autoFocus: j,
             maxLength: w,
-            spellCheck: S,
-            autoComplete: v,
+            spellCheck: v,
+            autoComplete: S,
             autoCapitalize: x,
             autoCorrect: P,
             onChange: E,
@@ -33,7 +33,7 @@ function f(e) {
         } = e,
         k = (0, c.Dt)(),
         [Z, A] = s.useState(!1),
-        T = (0, u.o9)(i, C);
+        T = (0, u.o9)(i, O);
     return (0, n.jsx)("div", {
         className: null != g ? g : void 0,
         children: (0, n.jsx)(l.gNt, {
@@ -42,7 +42,7 @@ function f(e) {
             required: y,
             id: k,
             children: (0, n.jsxs)("div", {
-                className: o()(p.input, h.input, N, {
+                className: a()(p.input, h.input, N, {
                     [p.error]: null != m,
                     [p.focused]: Z,
                 }),
@@ -52,12 +52,12 @@ function f(e) {
                         alpha2: t,
                         countryCode: r,
                     }),
-                    (0, n.jsx)(a.Is, {
+                    (0, n.jsx)(o.Is, {
                         id: k,
                         name: "email",
                         type: i === u.Nz.EMAIL ? "email" : "text",
-                        value: C,
-                        inputRef: O,
+                        value: O,
+                        inputRef: C,
                         placeholder: b,
                         "aria-label": f,
                         required: y,
@@ -65,12 +65,12 @@ function f(e) {
                             let t = (0, u.o9)(i, e) ? r : "";
                             E(e, t);
                         },
-                        autoComplete: v,
+                        autoComplete: S,
                         autoCapitalize: x,
                         autoCorrect: P,
                         autoFocus: j,
                         maxLength: w,
-                        spellCheck: S,
+                        spellCheck: v,
                         className: h.inputWrapper,
                         inputClassName: h.inputField,
                         onFocus: () => A(!0),

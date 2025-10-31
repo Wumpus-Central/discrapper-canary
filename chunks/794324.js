@@ -2,10 +2,10 @@ n.d(t, {
     Oi: () => p,
     UI: () => g,
     YG: () => d,
-    _M: () => m,
+    _M: () => h,
     hr: () => u,
     kc: () => f,
-    mB: () => h,
+    mB: () => m,
 });
 var r = n(647438),
     i = n(264181),
@@ -86,7 +86,7 @@ let u = (e) => {
                   format: "jpg",
               });
     },
-    h = (e) => {
+    m = (e) => {
         let t = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER),
             n = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER_DARK),
             l = (0, s.zL)(o.jE.SHOP_BUTTON_BG_HOVER_LIGHT),
@@ -96,13 +96,13 @@ let u = (e) => {
             d = (0, s.zL)(o.jE.COACHTIP_AVATAR);
         return r.useMemo(() => {
             var r, s, o, p, f;
-            let h = [t, n, l, a, c, u, d].some((e) => null != e);
+            let m = [t, n, l, a, c, u, d].some((e) => null != e);
             if ((null == e ? void 0 : e.type) === i.Z.COACHMARK) return { hasPreviewAssets: !1 };
-            let m = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
-                g = null == m ? void 0 : m.resting,
-                _ = null == m ? void 0 : m.hovered;
+            let h = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
+                g = null == h ? void 0 : h.resting,
+                _ = null == h ? void 0 : h.hovered;
             return {
-                hasPreviewAssets: h,
+                hasPreviewAssets: m,
                 buttonBGHoverDark: null != (s = null != n ? n : t) ? s : null == _ ? void 0 : _.dark,
                 buttonBGHoverLight: null != (o = null != l ? l : t) ? o : null == _ ? void 0 : _.light,
                 buttonBGRestingDark: null != (p = null != c ? c : a) ? p : null == g ? void 0 : g.dark,
@@ -111,7 +111,7 @@ let u = (e) => {
             };
         }, [t, n, l, a, c, u, d, e]);
     },
-    m = (e) => {
+    h = (e) => {
         var t, n;
         return (0, a.Y)("ImmersiveBanner")
             ? {

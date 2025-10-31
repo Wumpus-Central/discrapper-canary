@@ -8,16 +8,16 @@
             i,
             a,
             s,
-            h,
             l,
-            f,
+            h,
             c,
-            d,
+            f,
             u,
+            d,
             y,
-            w,
+            p,
             g,
-            p = {
+            w = {
                 bgColor: "#d00",
                 textColor: "#fff",
                 fontFamily: "sans-serif",
@@ -29,36 +29,36 @@
                 dataUrl: !1,
                 win: window,
             };
-        ((u = {}).ff = "undefined" != typeof InstallTrigger),
-            (u.chrome = !!window.chrome),
-            (u.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
-            (u.ie = !1),
-            (u.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
-            (u.supported = u.chrome || u.ff || u.opera);
+        ((d = {}).ff = "undefined" != typeof InstallTrigger),
+            (d.chrome = !!window.chrome),
+            (d.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
+            (d.ie = !1),
+            (d.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
+            (d.supported = d.chrome || d.ff || d.opera);
         var x = [];
-        (c = function () {}), (h = d = !1);
+        (f = function () {}), (l = u = !1);
         var m = {};
         (m.ready = function () {
-            (h = !0), m.reset(), c();
+            (l = !0), m.reset(), f();
         }),
             (m.reset = function () {
-                h &&
+                l &&
                     ((x = []),
-                    (l = !1),
-                    (f = !1),
+                    (h = !1),
+                    (c = !1),
                     a.clearRect(0, 0, r, n),
                     a.drawImage(s, 0, 0, r, n),
                     E.setIcon(i),
                     window.clearTimeout(y),
-                    window.clearTimeout(w));
+                    window.clearTimeout(p));
             }),
             (m.start = function () {
-                if (h && !f) {
+                if (l && !c) {
                     var t = function () {
-                        (l = x[0]), (f = !1), x.length > 0 && (x.shift(), m.start());
+                        (h = x[0]), (c = !1), x.length > 0 && (x.shift(), m.start());
                     };
                     if (x.length > 0) {
-                        f = !0;
+                        c = !0;
                         var o = function () {
                             ["type", "animation", "bgColor", "textColor", "fontFamily", "fontStyle"].forEach(
                                 function (t) {
@@ -73,9 +73,9 @@
                                     !1,
                                 );
                         };
-                        l
+                        h
                             ? I.run(
-                                  l.options,
+                                  h.options,
                                   function () {
                                       o();
                                   },
@@ -98,11 +98,11 @@
                 );
             };
         function C(t) {
-            if (t.paused || t.ended || d) return !1;
+            if (t.paused || t.ended || u) return !1;
             try {
                 a.clearRect(0, 0, r, n), a.drawImage(t, 0, 0, r, n);
             } catch (t) {}
-            (w = setTimeout(function () {
+            (p = setTimeout(function () {
                 C(t);
             }, I.duration)),
                 E.setIcon(i);
@@ -168,7 +168,7 @@
                     a.closePath();
             });
         var E = {};
-        function M(t) {
+        function A(t) {
             t = t.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (t, e, o, n) {
                 return e + e + o + o + n + n;
             });
@@ -181,7 +181,7 @@
                 }
             );
         }
-        function A(t, e) {
+        function M(t, e) {
             var o,
                 n = {};
             for (o in t) n[o] = t[o];
@@ -220,10 +220,10 @@
                 else if (e.elementId) {
                     var r = g.getElementById(e.elementId);
                     r.setAttribute("href", n), r.setAttribute("src", n);
-                } else if (u.ff || u.opera) {
+                } else if (d.ff || d.opera) {
                     var i = o;
                     (o = g.createElement("link")),
-                        u.opera && o.setAttribute("rel", "icon"),
+                        d.opera && o.setAttribute("rel", "icon"),
                         o.setAttribute("rel", "icon"),
                         o.setAttribute("type", "image/png"),
                         g.getElementsByTagName("head")[0].appendChild(o),
@@ -490,28 +490,28 @@
                     !(r < a.length) || !(r >= 0))
                 )
                     return void o();
-                b[e.type](A(t, a[r])),
+                b[e.type](M(t, a[r])),
                     (y = setTimeout(function () {
                         n ? (r -= 1) : (r += 1), I.run(t, o, n, r);
                     }, I.duration)),
                     E.setIcon(i);
             }),
-            ((e = A(p, t)).bgColor = M(e.bgColor)),
-            (e.textColor = M(e.textColor)),
+            ((e = M(w, t)).bgColor = A(e.bgColor)),
+            (e.textColor = A(e.textColor)),
             (e.position = e.position.toLowerCase()),
-            (e.animation = I.types["" + e.animation] ? e.animation : p.animation),
+            (e.animation = I.types["" + e.animation] ? e.animation : w.animation),
             (g = e.win.document);
         var T = e.position.indexOf("up") > -1,
             U = e.position.indexOf("left") > -1;
         if (T || U)
             for (var R = 0; R < I.types["" + e.animation].length; R++) {
-                var L = I.types["" + e.animation][R];
-                T && (L.y < 0.6 ? (L.y = L.y - 0.4) : (L.y = L.y - 2 * L.y + (1 - L.w))),
-                    U && (L.x < 0.6 ? (L.x = L.x - 0.4) : (L.x = L.x - 2 * L.x + (1 - L.h))),
-                    (I.types["" + e.animation][R] = L);
+                var S = I.types["" + e.animation][R];
+                T && (S.y < 0.6 ? (S.y = S.y - 0.4) : (S.y = S.y - 2 * S.y + (1 - S.w))),
+                    U && (S.x < 0.6 ? (S.x = S.x - 0.4) : (S.x = S.x - 2 * S.x + (1 - S.h))),
+                    (I.types["" + e.animation][R] = S);
             }
         return (
-            (e.type = b["" + e.type] ? e.type : p.type),
+            (e.type = b["" + e.type] ? e.type : w.type),
             (o = E.getIcon()),
             (i = document.createElement("canvas")),
             (s = document.createElement("img")),
@@ -540,7 +540,7 @@
             {
                 badge: function (t, e) {
                     (e = ("string" == typeof e ? { animation: e } : e) || {}),
-                        (c = function () {
+                        (f = function () {
                             try {
                                 if ("number" == typeof t ? t > 0 : "" !== t) {
                                     var o = {
@@ -553,7 +553,7 @@
                                             (o.options.animation = "" + e.animation),
                                         "type" in e && b["" + e.type] && (o.options.type = "" + e.type),
                                         ["bgColor", "textColor"].forEach(function (t) {
-                                            t in e && (o.options[t] = M(e[t]));
+                                            t in e && (o.options[t] = A(e[t]));
                                         }),
                                         ["fontStyle", "fontFamily"].forEach(function (t) {
                                             t in e && (o.options[t] = e[t]);
@@ -568,13 +568,13 @@
                                 throw Error("Error setting badge. Message: " + t.message);
                             }
                         }),
-                        h && c();
+                        l && f();
                 },
                 video: function (t) {
-                    (c = function () {
+                    (f = function () {
                         try {
                             if ("stop" === t) {
-                                (d = !0), m.reset(), (d = !1);
+                                (u = !0), m.reset(), (u = !1);
                                 return;
                             }
                             t.addEventListener(
@@ -588,27 +588,27 @@
                             throw Error("Error setting video. Message: " + t.message);
                         }
                     }),
-                        h && c();
+                        l && f();
                 },
                 image: function (t) {
-                    (c = function () {
+                    (f = function () {
                         try {
                             var e = t.width,
                                 o = t.height,
                                 s = document.createElement("img"),
-                                h = e / r < o / n ? e / r : o / n;
+                                l = e / r < o / n ? e / r : o / n;
                             s.setAttribute("crossOrigin", "anonymous"),
                                 (s.onload = function () {
                                     a.clearRect(0, 0, r, n), a.drawImage(s, 0, 0, r, n), E.setIcon(i);
                                 }),
                                 s.setAttribute("src", t.getAttribute("src")),
-                                (s.height = o / h),
-                                (s.width = e / h);
+                                (s.height = o / l),
+                                (s.width = e / l);
                         } catch (t) {
                             throw Error("Error setting image. Message: " + t.message);
                         }
                     }),
-                        h && c();
+                        l && f();
                 },
                 webcam: function (t) {
                     if (
@@ -617,7 +617,7 @@
                             (window.URL.createObjectURL = function (t) {
                                 return t;
                             })),
-                        u.supported)
+                        d.supported)
                     ) {
                         var e = !1;
                         (navigator.getUserMedia =
@@ -626,10 +626,10 @@
                             navigator.msGetUserMedia ||
                             navigator.mozGetUserMedia ||
                             navigator.webkitGetUserMedia),
-                            (c = function () {
+                            (f = function () {
                                 try {
                                     if ("stop" === t) {
-                                        (d = !0), m.reset(), (d = !1);
+                                        (u = !0), m.reset(), (u = !1);
                                         return;
                                     }
                                     ((e = document.createElement("video")).width = r),
@@ -648,11 +648,11 @@
                                     throw Error("Error setting webcam. Message: " + t.message);
                                 }
                             }),
-                            h && c();
+                            l && f();
                     }
                 },
                 reset: m.reset,
-                browser: { supported: u.supported },
+                browser: { supported: d.supported },
             }
         );
     };

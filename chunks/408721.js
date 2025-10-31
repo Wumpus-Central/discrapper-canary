@@ -54,8 +54,8 @@ function u(e, t) {
 let d = null,
     p = [],
     f = 0,
-    h = new Map();
-class m {
+    m = new Map();
+class h {
     get sessionId() {
         return this._sessionId;
     }
@@ -133,7 +133,7 @@ class m {
                     itemScore: s.itemScore,
                     isInitiallyVisible: s.isInitiallyVisible,
                     itemChannelType: s.itemChannelType,
-                    itemCardHeight: null != (i = null != (r = h.get(s.itemId)) ? r : s.itemCardHeight) ? i : null,
+                    itemCardHeight: null != (i = null != (r = m.get(s.itemId)) ? r : s.itemCardHeight) ? i : null,
                     isDwelling: null != e,
                     interactionActionTypes: s.interactionActionTypes,
                     interactionCount: s.interactionCount,
@@ -188,7 +188,7 @@ class m {
             clearTimeout(this._timeout),
             f++,
             (d = null),
-            h.clear(),
+            m.clear(),
             this
         );
     }
@@ -220,7 +220,7 @@ class m {
             itemScore: e.itemScore,
             isInitiallyVisible: e.isInitiallyVisible,
             itemChannelType: e.itemChannelType,
-            itemCardHeight: null != (t = h.get(e.itemId)) ? t : null,
+            itemCardHeight: null != (t = m.get(e.itemId)) ? t : null,
             uxVariation: s.cM.getConfig({ location: "ICYMISessionStore._constructImpressionFromInput" }).uxVariation,
             interactionActionTypes: [],
             interactionCount: 0,
@@ -249,7 +249,7 @@ class m {
                     itemScore: n.itemScore,
                     isInitiallyVisible: n.isInitiallyVisible,
                     itemChannelType: n.itemChannelType,
-                    itemCardHeight: null != (l = null != (i = h.get(n.itemId)) ? i : n.itemCardHeight) ? l : null,
+                    itemCardHeight: null != (l = null != (i = m.get(n.itemId)) ? i : n.itemCardHeight) ? l : null,
                     uxVariation: n.uxVariation,
                     interactionActionTypes: n.interactionActionTypes,
                     interactionCount: n.interactionCount,
@@ -325,7 +325,7 @@ function b() {
 }
 function E(e) {
     let t = _();
-    return p.length > 0 && ((d = new m(p, "focus")), (t = !0)), t;
+    return p.length > 0 && ((d = new h(p, "focus")), (t = !0)), t;
 }
 let O = new g(l.Z, {
     ICYMI_TAB_OPENED: E,
@@ -349,10 +349,10 @@ let O = new g(l.Z, {
         return E();
     },
     ICYMI_ITEMS_DWELL_START: function (e) {
-        return null == d ? (d = new m(e.items, "list")) : d.startItemsDwell(e.items), !0;
+        return null == d ? (d = new h(e.items, "list")) : d.startItemsDwell(e.items), !0;
     },
     ICYMI_ITEMS_LONG_IMPRESSION: function (e) {
-        return null == d && (d = new m(e.items, "list")), d.trackItemsLongImpression(e.items), !0;
+        return null == d && (d = new h(e.items, "list")), d.trackItemsLongImpression(e.items), !0;
     },
     RELOAD_ICYMI: function (e) {
         return null != d && (d.incrementReloadCount(), !0);
@@ -367,9 +367,9 @@ let O = new g(l.Z, {
         return null != d && !e.isInitialSetup && !e.preserveDrawerState && b();
     },
     ICYMI_SET_CARD_HEIGHT: function (e) {
-        return h.set(e.itemId, e.height), !0;
+        return m.set(e.itemId, e.height), !0;
     },
     ICYMI_ITEM_INTERACTED: function (e) {
-        return null == d && (d = new m(p, "focus")), d.trackItemInteraction(e.itemId, e.itemType, e.actionType), !0;
+        return null == d && (d = new h(p, "focus")), d.trackItemInteraction(e.itemId, e.itemType, e.actionType), !0;
     },
 });

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => u }), n(388685);
-var i = n(647438);
-let r = new Map(),
-    l = new Map(),
-    a = new Map();
-function o(e) {
-    return r.has(e) || r.set(e, !1), r.get(e);
+var r = n(647438);
+let i = new Map(),
+    o = new Map(),
+    l = new Map();
+function a(e) {
+    return i.has(e) || i.set(e, !1), i.get(e);
 }
 function s(e) {
     return (
-        l.has(e) ||
-            (l.set(e, new Set()),
-            a.set(
+        o.has(e) ||
+            (o.set(e, new Set()),
+            l.set(
                 e,
                 (function (e) {
                     let t = (t) => {
@@ -19,37 +19,37 @@ function s(e) {
                         n = (t) => {
                             c(t.shiftKey, e);
                         },
-                        i = (t) => {
+                        r = (t) => {
                             c(t.shiftKey, e);
                         },
-                        r = () => {
+                        i = () => {
                             c(!1, e);
                         };
                     return (
                         e.addEventListener("keydown", t),
                         e.addEventListener("keyup", n),
-                        e.addEventListener("mousemove", i),
-                        e.addEventListener("blur", r),
+                        e.addEventListener("mousemove", r),
+                        e.addEventListener("blur", i),
                         () => {
                             e.removeEventListener("keydown", t),
                                 e.removeEventListener("keyup", n),
-                                e.removeEventListener("mousemove", i),
-                                e.removeEventListener("blur", r);
+                                e.removeEventListener("mousemove", r),
+                                e.removeEventListener("blur", i);
                         }
                     );
                 })(e),
             )),
-        l.get(e)
+        o.get(e)
     );
 }
 function c(e, t) {
-    e !== o(t) && (r.set(t, e), s(t).forEach((t) => t(e)));
+    e !== a(t) && (i.set(t, e), s(t).forEach((t) => t(e)));
 }
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
-        [t, n] = i.useState(o(e));
+        [t, n] = r.useState(a(e));
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             let t = (e) => {
                 n(e);
             };
@@ -58,7 +58,7 @@ function u() {
                 () => {
                     var n;
                     s(e).delete(t),
-                        0 === s(e).size && (null == (n = a.get(e)) || n(), a.delete(e), l.delete(e), r.delete(e));
+                        0 === s(e).size && (null == (n = l.get(e)) || n(), l.delete(e), o.delete(e), i.delete(e));
                 }
             );
         }, [e]),

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m });
-var i = n(951288),
-    r = n(442837),
+var r = n(951288),
+    i = n(442837),
     l = n(755721),
     a = n(481060),
     o = n(946273),
@@ -9,38 +9,38 @@ var i = n(951288),
     u = n(375954),
     d = n(496675),
     p = n(796263),
-    h = n(43617),
-    f = n(388032);
+    f = n(43617),
+    h = n(388032);
 function m(e) {
     let { message: t, user: n, guild: m, channel: g } = e,
-        b = (0, r.e7)([d.Z], () => null != n && null != m && (0, o.CX)(n, m, [d.Z])),
-        { messageReference: C } = t,
-        y = (0, r.e7)([u.Z], () => (null != C ? u.Z.getMessage(C.channel_id, C.message_id) : null)),
-        _ = (0, r.e7)([c.Z], () => (null != y ? c.Z.getChannel(y.channel_id) : null)),
-        v = (0, r.e7)([c.Z], () => {
+        b = (0, i.e7)([d.Z], () => null != n && null != m && (0, o.CX)(n, m, [d.Z])),
+        { messageReference: _ } = t,
+        y = (0, i.e7)([u.Z], () => (null != _ ? u.Z.getMessage(_.channel_id, _.message_id) : null)),
+        C = (0, i.e7)([c.Z], () => (null != y ? c.Z.getChannel(y.channel_id) : null)),
+        v = (0, i.e7)([c.Z], () => {
             var e, t;
             return null != (t = null == (e = c.Z.getChannel(g.id)) ? void 0 : e.isArchivedThread()) && t;
         });
     if (!b) return null;
-    let x = null == y ? f.intl.string(h.default["0IZbwC"]) : f.intl.string(h.default.Uj6oD4),
-        O = null == y,
-        j = "delete-message-".concat(t.id);
-    return (0, i.jsx)(
+    let O = null == y ? h.intl.string(f.default["0IZbwC"]) : h.intl.string(f.default.Uj6oD4),
+        x = null == y,
+        E = "delete-message-".concat(t.id);
+    return (0, r.jsx)(
         p.Z,
         {
-            text: x,
+            text: O,
             icon: a.XHJ,
             onClick: () => {
-                null != _ &&
+                null != C &&
                     null != y &&
-                    s.Z.confirmDelete(_, y, !1, {
+                    s.Z.confirmDelete(C, y, !1, {
                         isFlagResolved: v,
                         moderatorReportChannelId: g.id,
                     });
             },
-            disabled: O,
+            disabled: x,
             color: l.zx.Colors.RED,
         },
-        j,
+        E,
     );
 }

@@ -1,3 +1,3 @@
-t.d(a, { Z: () => u });
-var u = {};
-u = { Empty: "Prazen" };
+n.d(t, { Z: () => r });
+var r = {};
+r = { Empty: "Prazen" };

@@ -31,8 +31,8 @@ var r = n(951288),
     P = n(619899),
     A = n(190157),
     N = n(811847),
-    Z = n(859788),
-    R = n(215023),
+    R = n(859788),
+    Z = n(215023),
     w = n(981631),
     H = n(388032),
     D = n(310582);
@@ -131,16 +131,16 @@ let M = (0, v.IC)(90),
                     ),
                     totalCards: e ? t : void 0,
                 };
-            })(U !== R.AW.ORBS),
+            })(U !== Z.AW.ORBS),
             eg = (0, O.a)()(ec),
             ef = (0, S.l)(eg).slice(0, ep),
             eh = (0, P.St)(ef),
-            eC = U === R.AW.ORBS ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T),
+            eC = U === Z.AW.ORBS ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T),
             em = (0, x.FF)("CollectiblesContent"),
             e_ = null != W && W.isOrbsExclusive,
             eb = E.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
             ev = () => {
-                U === R.AW.ORBS
+                U === Z.AW.ORBS
                     ? ((0, h.Y)({
                           pageType: w.ZY5.SHOP_ORBS_TAB,
                           sectionType: w.jXE.ORBS_SHOP_HERO_BLOCK,
@@ -179,7 +179,7 @@ let M = (0, v.IC)(90),
                           style: null != es ? { background: es } : void 0,
                           children:
                               null != en &&
-                              (0, r.jsx)(Z.Z, {
+                              (0, r.jsx)(R.Z, {
                                   bannerStatic: en,
                                   bannerAnimated: er,
                                   bannerRive: el,
@@ -268,8 +268,8 @@ let M = (0, v.IC)(90),
                                     }),
                               (0, r.jsx)("div", {
                                   className: s()({
-                                      [D.row]: U === R.AW.HOME,
-                                      [D.feed]: U === R.AW.ORBS,
+                                      [D.row]: U === Z.AW.HOME,
+                                      [D.feed]: U === Z.AW.ORBS,
                                   }),
                                   ref: ed,
                                   children:
@@ -299,7 +299,7 @@ let M = (0, v.IC)(90),
                                                                                 {
                                                                                     skuId: null == e ? void 0 : e.skuId,
                                                                                     prioritizedCurrency:
-                                                                                        U === R.AW.ORBS
+                                                                                        U === Z.AW.ORBS
                                                                                             ? I.tA.ORBS
                                                                                             : void 0,
                                                                                     onClickAnalytics: (0, I.wO)(

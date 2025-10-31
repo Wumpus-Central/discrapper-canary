@@ -36,25 +36,25 @@ function p(e) {
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { priorityMembers: n, partiedMembers: f } = e,
-        h = i.useContext(c.AnalyticsContext),
-        m = n.map((e) => {
+        m = i.useContext(c.AnalyticsContext),
+        h = n.map((e) => {
             let { user: t } = e;
             return t.id;
         }),
         g = 1 === f.length && 1 === n.length,
         _ = n.length - f.length > 0;
-    return (g || t) && !_ && 0 !== m.length
+    return (g || t) && !_ && 0 !== h.length
         ? (0, r.jsx)(l.sNh, {
               id: "message",
               action: function () {
-                  a.Z.openPrivateChannel({ recipientIds: m }).then((t) => {
+                  a.Z.openPrivateChannel({ recipientIds: h }).then((t) => {
                       var n, r;
                       return s.ZP.trackWithMetadata(
                           u.rMx.ACTIVITY_FEED_DM_VISITED,
                           p(
                               {
                                   source:
-                                      ((n = p({}, h.location)),
+                                      ((n = p({}, m.location)),
                                       (r = r = { object: u.qAy.LIST_ITEM }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -70,7 +70,7 @@ function f(e) {
                                             }),
                                       n),
                                   channel_id: t,
-                                  recipient_id: "string" == typeof m ? m : m[0],
+                                  recipient_id: "string" == typeof h ? h : h[0],
                                   af_recently_played: !1,
                               },
                               (0, o.y)(e),

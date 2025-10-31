@@ -11,16 +11,16 @@ var i = n(873546),
     d = n(594174),
     p = n(431),
     f = n(74538),
-    h = n(374023),
-    m = n(367074),
+    m = n(374023),
+    h = n(367074),
     g = n(775412),
     _ = n(695349),
     b = n(312973),
     E = n(434878),
     O = n(104494),
     I = n(29920),
-    v = n(346497),
-    y = n(727310),
+    y = n(346497),
+    v = n(727310),
     C = n(318199),
     S = n(474936);
 function T(e, t, n) {
@@ -68,7 +68,7 @@ class j extends c.Z {
                     return (
                         (!1 !== t ||
                             (null == i ? void 0 : i.contentIdentifier) !== "summer_bogo_content" ||
-                            !!(await (0, v.k)())) &&
+                            !!(await (0, y.k)())) &&
                         ((0, s.Mr3)(N),
                         (0, s.ZDy)(
                             async () => {
@@ -101,7 +101,7 @@ class j extends c.Z {
                 return null != n ? { userTrialOffer: n } : {};
             }),
             T(this, "mayShowAnnouncementModal", async () => {
-                if ((await (0, m.l2)(), h.s.isDisallowPopupsSet())) return;
+                if ((await (0, h.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = E.Z.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
                     n = (0, b.$)({ location: "mayShowAnnouncementModal" }),
@@ -113,7 +113,7 @@ class j extends c.Z {
                         (0, s.$sL)() ||
                         (0, f.I5)(l) ||
                         ((await (0, _.G)(e.userTrialOffer)) &&
-                            (0, y.Z)({ upsellType: S.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
+                            (0, v.Z)({ upsellType: S.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
                     (null == l || l.verified) && !(0, s.$sL)() && !i.tq && !n)
                 ) {
                     for (let t of await (0, I.He)(e))

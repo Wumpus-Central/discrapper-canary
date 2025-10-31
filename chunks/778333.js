@@ -66,8 +66,8 @@ function y(e) {
         ? ((P = E.intl.string(E.t.xhxnPn)), (w = "secondary"))
         : I && ((P = E.intl.string(E.t.ib7Ng1)), (w = "secondary"));
     let D = I ? E.intl.string(E.t.eQyu1F) : E.intl.string(E.t.PYJHW6),
-        L = null != n.inviter ? "".concat(n.inviter.username) : "",
-        x = null != n.inviter ? m.ZP.getUserTag(n.inviter) : "";
+        x = null != n.inviter ? "".concat(n.inviter.username) : "",
+        L = null != n.inviter ? m.ZP.getUserTag(n.inviter) : "";
     return (0, r.jsxs)(d.Z, {
         children: [
             (0, r.jsx)(d.Z.Header, { text: D }),
@@ -81,9 +81,9 @@ function y(e) {
                                 onClick: A ? R : void 0,
                             }),
                             (0, r.jsx)(d.Z.Info, {
-                                title: L,
+                                title: x,
                                 onClick: A ? R : void 0,
-                                children: x,
+                                children: L,
                             }),
                         ],
                     }),

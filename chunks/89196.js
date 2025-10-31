@@ -1,8 +1,8 @@
 r.d(t, { Z: () => u }), r(388685);
 var n,
     i = r(442837),
-    s = r(570140);
-function l(e, t, r) {
+    l = r(570140);
+function s(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,8 +41,8 @@ class c extends (n = i.ZP.PersistedStore) {
         for (let [t, r] of Object.entries(a.sentGifts)) new Date(r.expiresAt) < e && delete a.sentGifts[t];
     }
 }
-l(c, "displayName", "SentGiftsStore"), l(c, "persistKey", "SentGiftsStore");
-let u = new c(s.Z, {
+s(c, "displayName", "SentGiftsStore"), s(c, "persistKey", "SentGiftsStore");
+let u = new c(l.Z, {
     WISHLIST_GIFT_SENT: function (e) {
         let t = o(e.skuId, e.recipientId),
             r = new Date(),

@@ -146,8 +146,8 @@ function y(e) {
                 label: b.intl.string(b.t.EPuP0s),
             },
         ],
-        [S, N] = i.useState(!1),
-        Z =
+        [S, Z] = i.useState(!1),
+        N =
             7 !== s
                 ? null
                 : null != t && null != n
@@ -158,7 +158,7 @@ function y(e) {
                       ? b.intl.formatToPlainString(b.t.YvNhsd, { date: n })
                       : null,
         D = i.useCallback(() => {
-            N(!0), O();
+            Z(!0), O();
         }, [O]),
         R = i.useCallback(
             (e) => {
@@ -172,8 +172,8 @@ function y(e) {
             },
             [_],
         ),
-        I = i.useCallback(() => {
-            null == o && null == r && y(0, null), N(!1);
+        P = i.useCallback(() => {
+            null == o && null == r && y(0, null), Z(!1);
         }, [r, o, y]);
     return (0, l.jsx)(d.v2r, {
         navId: "member-safety-guild-member-".concat(g, "-menu"),
@@ -186,7 +186,7 @@ function y(e) {
                       children: [
                           (0, l.jsx)(d.sNh, {
                               id: "back",
-                              action: I,
+                              action: P,
                               render: (e) =>
                                   (0, l.jsxs)(
                                       "span",
@@ -282,14 +282,14 @@ function y(e) {
                                                       variant: "text-sm/medium",
                                                       children: b.intl.string(b.t.BTfN6g),
                                                   }),
-                                                  null != Z &&
+                                                  null != N &&
                                                       (0, l.jsx)(d.Text, {
                                                           className: a()(p.otherDateLabel, {
                                                               [p.focused]: e.isFocused,
                                                           }),
                                                           color: "text-muted",
                                                           variant: "text-xxs/medium",
-                                                          children: Z,
+                                                          children: N,
                                                       }),
                                               ],
                                           }),

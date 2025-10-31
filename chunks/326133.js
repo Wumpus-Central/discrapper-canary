@@ -96,10 +96,10 @@ function R(e, t) {
 let P = 490,
     w = 490,
     D = 245,
-    L = 200,
-    x = 120,
+    x = 200,
+    L = 120,
     M = i.forwardRef(function (e, t) {
-        var n, a, T, A, R, M, k, j, U;
+        var n, a, T, A, R, M, j, k, U;
         let { channel: G, type: B, editorHeight: Z, onVisibilityChange: F, editorScrollerRef: V, barsHeight: H } = e,
             Y = (0, h.Dt)(),
             W = (0, l.e7)([E.Z], () => {
@@ -169,13 +169,13 @@ let P = 490,
             ei = P;
         null != $ &&
             (ei = (null == (M = B.autocomplete) ? void 0 : M.small)
-                ? L
-                : (null == (k = z.query) ? void 0 : k.type) === b.eq.EMOJIS_AND_STICKERS
+                ? x
+                : (null == (j = z.query) ? void 0 : j.type) === b.eq.EMOJIS_AND_STICKERS
                   ? w
                   : D);
-        let ea = Math.max(Z, null != (j = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? j : 0),
+        let ea = Math.max(Z, null != (k = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? k : 0),
             eo = Math.min(0.5 * window.innerHeight, ea);
-        ei = Math.min(window.innerHeight - x - eo - (null != H ? H : 0), ei);
+        ei = Math.min(window.innerHeight - L - eo - (null != H ? H : 0), ei);
         let es = (0, r.jsx)(_.ZP, {
             id: Y,
             className: o()(I.autocomplete, er),

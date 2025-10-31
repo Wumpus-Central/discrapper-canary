@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(164991),
     p = n(444324),
     f = n(726115),
-    h = n(859921),
-    m = n(750910),
+    m = n(859921),
+    h = n(750910),
     g = n(28494),
     _ = n(29086),
     b = n(590771),
     E = n(273596),
     O = n(128449),
     I = n(49898),
-    v = n(388032),
-    y = n(301578);
+    y = n(388032),
+    v = n(301578);
 function C() {
     let e = i.useRef((0, f.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: C } = (0, a.M)(),
@@ -33,7 +33,7 @@ function C() {
             onSearchSubmit: w,
             isSearchVisible: L,
         } = (0, g.H)({ loadId: e.current }),
-        R = h.Z.useField("searchBarState"),
+        R = m.Z.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: D,
             onCollapsedSearchBarClick: M,
@@ -43,7 +43,7 @@ function C() {
             isSearchBarVisible: P,
             isSearchBarEmpty: "" === x.trim(),
             searchBarState: R,
-            setSearchBarState: (e) => h.Z.setState({ searchBarState: e }),
+            setSearchBarState: (e) => m.Z.setState({ searchBarState: e }),
         }),
         G = d.Z.useField("fetchedQuery"),
         B = i.useCallback(
@@ -63,7 +63,7 @@ function C() {
             [S, L],
         ),
         V = i.useRef(new p.Z(j)),
-        { onGuildCardSeen: F, onGuildCardClick: z } = (0, m.H)({
+        { onGuildCardSeen: F, onGuildCardClick: z } = (0, h.H)({
             guildDiscoveryCardSeenManager: V.current,
             loadId: e.current,
         });
@@ -78,7 +78,7 @@ function C() {
             L || d.Z.setState({ scrollPosition: null });
         }, [L]),
         (0, r.jsxs)("div", {
-            className: y.container,
+            className: v.container,
             children: [
                 (0, r.jsxs)(o.ZP, {
                     variant: L ? o._6.RELATIVE : o._6.OVERLAY,
@@ -102,13 +102,13 @@ function C() {
                             (0, r.jsx)(l.Heading, {
                                 variant: "heading-lg/semibold",
                                 color: "header-primary",
-                                className: y.searchResultsHeader,
-                                children: v.intl.format(v.t.zHdzqW, { query: G }),
+                                className: v.searchResultsHeader,
+                                children: y.intl.format(y.t.zHdzqW, { query: G }),
                             }),
                         P &&
                             (0, r.jsx)(u.Z, {
                                 query: x,
-                                placeholder: v.intl.string(v.t["5h0QOP"]),
+                                placeholder: y.intl.string(y.t["5h0QOP"]),
                                 onTextChange: A,
                                 onClear: Z,
                                 onSubmit: w,

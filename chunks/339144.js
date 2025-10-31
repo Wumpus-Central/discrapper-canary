@@ -13,18 +13,18 @@ var r = n(951288),
     u = n(24124),
     d = n(636449),
     p = n(620662),
-    f = n(513202),
-    h = n(906732),
+    h = n(513202),
+    f = n(906732),
     g = n(535139),
     m = n(522651),
     b = n(311352),
     _ = n(48131),
-    O = n(668519),
-    y = n(803647),
-    j = n(131704),
-    v = n(944486),
-    x = n(626135),
-    C = n(381096),
+    y = n(668519),
+    O = n(803647),
+    v = n(131704),
+    j = n(944486),
+    C = n(626135),
+    x = n(381096),
     E = n(870569),
     S = n(981631),
     I = n(388032),
@@ -50,7 +50,7 @@ let Z = i.memo(function (e) {
             p,
             Z,
             {
-                stream: w,
+                stream: T,
                 canGoLive: A,
                 guildId: R,
                 isStreaming: D,
@@ -65,22 +65,22 @@ let Z = i.memo(function (e) {
                 inviteButtonRef: H,
                 accountLinkButtonRef: z,
             } = e,
-            { showRefreshedGoLiveModal: W } = (0, O.a)({
+            { showRefreshedGoLiveModal: W } = (0, y.a)({
                 location: "Activity Panel",
                 autoTrackExposure: !1,
             }),
-            { parentAnalyticsLocation: K } = (0, h.ZP)(),
+            { parentAnalyticsLocation: K } = (0, f.ZP)(),
             Y = N(F, B, G),
             q = i.useCallback(() => {
                 var e;
                 o()(null != B, "Received null activity"),
-                    x.default.track(S.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
+                    C.default.track(S.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
                         action_type: "invite_to_game",
                         game_id: null != (e = null == k ? void 0 : k.id) ? e : null,
                         application_id: B.application_id,
                     }),
                     (0, m.v)(K, m.d.INVITE),
-                    x.default.track(S.rMx.OPEN_MODAL, {
+                    C.default.track(S.rMx.OPEN_MODAL, {
                         type: "Send Join Invite",
                         application_id: B.application_id,
                         location: V.location,
@@ -90,7 +90,7 @@ let Z = i.memo(function (e) {
             X = i.useCallback(
                 (e, t) => () => {
                     (0, m.v)(K, m.d.LEAVE_ACTIVITY),
-                        f.Z.leaveActivity({
+                        h.Z.leaveActivity({
                             location: t,
                             applicationId: e,
                             showFeedback: !0,
@@ -105,10 +105,10 @@ let Z = i.memo(function (e) {
                 [K],
             ),
             J = i.useCallback(() => {
-                (0, y.Z)(w);
-            }, [w]),
+                (0, O.Z)(T);
+            }, [T]),
             $ = i.useCallback(() => {
-                let e = null != L && (0, j.vd)(L.type) ? L : null,
+                let e = null != L && (0, v.vd)(L.type) ? L : null,
                     t = null != e ? e.getGuildId() : R;
                 (0, c.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("4093"), n.e("47863"), n.e("33641")]).then(
@@ -146,7 +146,7 @@ let Z = i.memo(function (e) {
                             (l = l =
                                 {
                                     sourcePID: null == k ? void 0 : k.pid,
-                                    selectSource: !!W && null != v.Z.getVoiceChannelId(),
+                                    selectSource: !!W && null != j.Z.getVoiceChannelId(),
                                     guildId: t,
                                     analyticsLocation: S.Sbl.ACTIVITY_PANEL,
                                 }),
@@ -175,7 +175,7 @@ let Z = i.memo(function (e) {
             } = (0, g.F)(F, {
                 allowedFlows: [g.r.RPC, g.r.WEB],
             }),
-            ei = C.Z.useConfig({ location: "ActivityActions" }).enabled,
+            ei = x.Z.useConfig({ location: "ActivityActions" }).enabled,
             el = i.useRef(null),
             [eo, ea] = i.useState(!1);
         i.useEffect(
@@ -210,7 +210,7 @@ let Z = i.memo(function (e) {
                               (a = null),
                               (p = c.hGI),
                               (Z =
-                                  null != L && (0, j.vd)(L.type)
+                                  null != L && (0, v.vd)(L.type)
                                       ? I.intl.string(I.t.uQn9B8)
                                       : null != R
                                         ? I.intl.string(I.t.fBXEoJ)
@@ -250,10 +250,10 @@ let Z = i.memo(function (e) {
                           onClick: Q(U.applicationId),
                           icon: c.PBZ,
                       }),
-            ep = null == w ? null : (0, r.jsx)(b.Z, {}),
-            ef =
+            ep = null == T ? null : (0, r.jsx)(b.Z, {}),
+            eh =
                 ei && ee && !en
-                    ? (0, r.jsx)(T, {
+                    ? (0, r.jsx)(w, {
                           runningGame: k,
                           startAuthorization: () => {
                               ea(!0),
@@ -267,7 +267,7 @@ let Z = i.memo(function (e) {
                           ref: z,
                       })
                     : null,
-            eh =
+            ef =
                 ei && ee && !en
                     ? (0, r.jsx)(s.J2, {
                           title: I.intl.string(I.t.ULvRFd),
@@ -282,20 +282,20 @@ let Z = i.memo(function (e) {
                           },
                       })
                     : null;
-        return null == es && null == ec && null == eu && null == ed && null == ef
+        return null == es && null == ec && null == eu && null == ed && null == eh
             ? null
             : (0, r.jsxs)("div", {
                   className: P.actions,
-                  children: [null != ef ? ef : ec, es, null != (t = null != eu ? eu : ed) ? t : ep, eh],
+                  children: [null != eh ? eh : ec, es, null != (t = null != eu ? eu : ed) ? t : ep, ef],
               });
     }),
-    T = i.forwardRef(function (e, t) {
+    w = i.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: i, connectionApp: l } = e;
         return (0, r.jsx)(E.Z, {
             ref: t,
             onClick: () => {
                 var e, t;
-                x.default.track(S.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
+                C.default.track(S.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
                     action_type: "link_account",
                     game_id: null != (e = null == n ? void 0 : n.id) ? e : null,
                     application_id: null != (t = null == l ? void 0 : l.id) ? t : null,

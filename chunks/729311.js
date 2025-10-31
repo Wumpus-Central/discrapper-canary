@@ -6,9 +6,9 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(852860),
-    o = n(111028),
+    a = n(796027),
+    s = n(194983),
+    o = n(481060),
     c = n(977258),
     d = n(45966),
     u = n(473403),
@@ -33,21 +33,21 @@ var r = n(951288),
     P = n(430864);
 function w(e) {
     let { guild: t } = e,
-        s = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
+        a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         h = (0, O.Z)(t),
         b = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
         x = h.filter((e) => !b.has(e.id)),
         [_, C] = i.useState(!1);
     return (i.useEffect(() => {
-        f || s || (0, m.S)(t.id);
-    }, [t.id, f, s]),
+        f || a || (0, m.S)(t.id);
+    }, [t.id, f, a]),
     _ || 0 === x.length)
         ? null
         : (0, r.jsxs)("div", {
               className: T.recommendations,
               children: [
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: "text-md/medium",
                       color: "header-primary",
                       children: S.intl.string(S.t.NN7rD3),
@@ -55,21 +55,21 @@ function w(e) {
                   (0, r.jsxs)("div", {
                       className: T.recsSubheader,
                       children: [
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               children: S.intl.string(S.t["3Uuql+"]),
                           }),
-                          (0, r.jsxs)(a.P3F, {
+                          (0, r.jsxs)(o.P3F, {
                               className: T.dismissAll,
                               onClick: () => C(!0),
                               children: [
-                                  (0, r.jsx)(a.dz2, {
+                                  (0, r.jsx)(o.dz2, {
                                       size: "xxs",
                                       color: "currentColor",
                                       className: T.checkmark,
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       className: T.dismissAllText,
                                       variant: "text-xs/medium",
                                       color: "text-brand",
@@ -97,9 +97,9 @@ function w(e) {
                                                               channel: e,
                                                               guild: t,
                                                           }),
-                                                          (0, r.jsx)(o.Z, {
+                                                          (0, r.jsx)(s.Z, {
                                                               className: T.__invalid_name,
-                                                              children: (0, r.jsx)(a.Text, {
+                                                              children: (0, r.jsx)(o.Text, {
                                                                   className: T.__invalid_channelText,
                                                                   variant: "text-md/medium",
                                                                   lineClamp: 1,
@@ -111,10 +111,10 @@ function w(e) {
                                                   }),
                                                   null != e.topic && e.topic.length > 0
                                                       ? (0, r.jsx)(
-                                                            o.Z,
+                                                            s.Z,
                                                             {
                                                                 className: P.markup,
-                                                                children: (0, r.jsx)(a.Text, {
+                                                                children: (0, r.jsx)(o.Text, {
                                                                     className: T.topic,
                                                                     variant: "text-xs/normal",
                                                                     children: g.Z.parseTopic(e.topic, !0, {
@@ -128,23 +128,23 @@ function w(e) {
                                               ],
                                           }),
                                           (0, c.s)(t.id, e.id)
-                                              ? (0, r.jsx)(a.Button, {
+                                              ? (0, r.jsx)(o.Button, {
                                                     size: "sm",
                                                     variant: "primary",
                                                     text: S.intl.string(S.t.OYkgVk),
                                                     onClick: () => (0, j.pt)(e.id),
                                                 })
-                                              : (0, r.jsx)(a.Button, {
+                                              : (0, r.jsx)(o.Button, {
                                                     size: "sm",
                                                     variant: "secondary",
                                                     text: S.intl.string(S.t.zA9d1J),
-                                                    icon: a.mBM,
+                                                    icon: o.mBM,
                                                     iconPosition: "start",
                                                     onClick: () => {
                                                         var i;
                                                         return (
                                                             (i = e.id),
-                                                            void (0, a.ZDy)(async () => {
+                                                            void (0, o.ZDy)(async () => {
                                                                 let { default: e } = await n
                                                                     .e("35641")
                                                                     .then(n.bind(n, 89216));
@@ -243,8 +243,8 @@ function w(e) {
 function Z(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.e7)([x.Z], () => x.Z.getGuild()),
-        s = (0, l.e7)([d.Z], () => d.Z.isLoading()),
-        o = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
+        a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
+        s = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
         c = (0, l.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
         u = (0, l.e7)([C.Z], () => C.Z.advancedMode),
         g = i.useRef(null),
@@ -268,15 +268,15 @@ function Z(e) {
     }, [t, u]),
     null == n)
         ? null
-        : s
-          ? (0, r.jsx)(a.$jN, {})
+        : a
+          ? (0, r.jsx)(o.$jN, {})
           : (0, r.jsxs)("div", {
                 className: T.columns,
                 children: [
                     (0, r.jsxs)("div", {
                         className: T.channelBrowser,
                         children: [
-                            (0, r.jsx)(a.P3F, {
+                            (0, r.jsx)(o.P3F, {
                                 className: T.collapseButton,
                                 onClick: () => p((e) => !e),
                                 children: (0, r.jsx)(b.Z, {
@@ -285,12 +285,12 @@ function Z(e) {
                                     width: 16,
                                 }),
                             }),
-                            (0, r.jsx)(a.Heading, {
+                            (0, r.jsx)(o.Heading, {
                                 className: T.header,
                                 variant: "heading-lg/extrabold",
                                 children: S.intl.string(S.t["4GSygh"]),
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: S.intl.string(S.t.Kq7FAS),
@@ -308,7 +308,7 @@ function Z(e) {
                                               className: T.channelBrowserOuter,
                                               guild: n,
                                               categories: c,
-                                              channels: o,
+                                              channels: s,
                                               hasSidebar: !1,
                                           }),
                                       ],
@@ -317,12 +317,12 @@ function Z(e) {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)("div", { className: T.largeSeparator }),
-                                        (0, r.jsx)(a.Heading, {
+                                        (0, r.jsx)(o.Heading, {
                                             className: T.prejoinHeader,
                                             variant: "heading-lg/extrabold",
                                             children: S.intl.string(S.t.g2RnpV),
                                         }),
-                                        (0, r.jsx)(a.Text, {
+                                        (0, r.jsx)(o.Text, {
                                             className: T.prejoinSubHeader,
                                             variant: "text-sm/normal",
                                             color: "header-secondary",
@@ -357,7 +357,7 @@ function R() {
         n = (0, l.e7)([C.Z], () => C.Z.advancedMode);
     return null == e
         ? null
-        : (0, r.jsx)(s.Z, {
+        : (0, r.jsx)(a.Z, {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {

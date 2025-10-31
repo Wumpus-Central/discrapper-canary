@@ -1,10 +1,10 @@
-t.d(n, { Z: () => p }), t(388685);
-var a = t(951288),
-    l = t(647438),
-    r = t(120356),
-    i = t.n(r),
-    o = t(481060),
-    s = t(70956),
+t.d(n, { Z: () => v }), t(388685);
+var l = t(951288),
+    a = t(647438),
+    i = t(120356),
+    r = t.n(i),
+    s = t(481060),
+    o = t(70956),
     u = t(747071),
     c = t(586826),
     d = t(622594),
@@ -13,108 +13,108 @@ var a = t(951288),
     g = t(400029);
 let h = {
         startPositionMs: 0,
-        endPositionMs: 2 * (10 * s.Z.Millis.SECOND),
+        endPositionMs: 2 * (10 * o.Z.Millis.SECOND),
         playheadPositionMs: 0,
     },
-    p = l.memo(function (e) {
-        let { className: n, volume: t, disabled: r = !1, onChange: p } = e,
-            { audio: b } = (0, c.p)(),
-            [y, v] = l.useState(!1),
-            [x, j] = l.useState(h),
-            { playheadPositionMs: w, endPositionMs: _, startPositionMs: C } = x,
-            N = null != b,
-            S = _ - C,
-            O = S > m.YW * s.Z.Millis.SECOND;
-        l.useEffect(() => {
-            if (null != b)
+    v = a.memo(function (e) {
+        let { className: n, volume: t, disabled: i = !1, onChange: v } = e,
+            { audio: p } = (0, c.p)(),
+            [b, y] = a.useState(!1),
+            [j, x] = a.useState(h),
+            { playheadPositionMs: N, endPositionMs: w, startPositionMs: C } = j,
+            S = null != p,
+            O = w - C,
+            Z = O > m.YW * o.Z.Millis.SECOND;
+        a.useEffect(() => {
+            if (null != p)
                 return (
-                    j({
+                    x({
                         playheadPositionMs: 0,
-                        endPositionMs: b.duration * s.Z.Millis.SECOND,
+                        endPositionMs: p.duration * o.Z.Millis.SECOND,
                         startPositionMs: 0,
                     }),
                     () => {
-                        b.pause(), v(!1);
+                        p.pause(), y(!1);
                     }
                 );
-        }, [b]);
-        let P = l.useCallback(
+        }, [p]);
+        let P = a.useCallback(
                 (e) => {
-                    null != b && (b.pause(), null != e && (b.currentTime = e), v(!1));
+                    null != p && (p.pause(), null != e && (p.currentTime = e), y(!1));
                 },
-                [b],
+                [p],
             ),
-            E = l.useCallback(() => {
-                if (null != b) {
-                    if (y) return void P();
-                    w >= _ ? (b.currentTime = (0, f.my)(C)) : (b.currentTime = (0, f.my)(w)),
-                        (b.volume = (0, u.Z)(t)),
-                        b.play(),
-                        v(!0);
+            M = a.useCallback(() => {
+                if (null != p) {
+                    if (b) return void P();
+                    N >= w ? (p.currentTime = (0, f.my)(C)) : (p.currentTime = (0, f.my)(N)),
+                        (p.volume = (0, u.Z)(t)),
+                        p.play(),
+                        y(!0);
                 }
-            }, [b, _, P, w, y, C, t]),
-            I = l.useCallback(
+            }, [p, w, P, N, b, C, t]),
+            E = a.useCallback(
                 (e) => {
-                    j(e),
-                        null == p ||
-                            p({
+                    x(e),
+                        null == v ||
+                            v({
                                 startMs: e.startPositionMs,
                                 endMs: e.endPositionMs,
                             });
                 },
-                [p],
+                [v],
             ),
-            M = l.useCallback(
+            k = a.useCallback(
                 (e) => {
-                    null != b && (b.currentTime = e);
+                    null != p && (p.currentTime = e);
                 },
-                [b],
+                [p],
             );
-        return (0, a.jsxs)("div", {
-            className: i()(
+        return (0, l.jsxs)("div", {
+            className: r()(
                 g.container,
                 {
-                    [g.initialized]: N,
-                    [g.disabled]: !N || r,
+                    [g.initialized]: S,
+                    [g.disabled]: !S || i,
                 },
                 n,
             ),
             children: [
-                (0, a.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: g.playButtonContainer,
                     children: [
-                        (0, a.jsx)(o.P3F, {
+                        (0, l.jsx)(s.P3F, {
                             className: g.playButton,
-                            onClick: N ? E : void 0,
-                            children: y
-                                ? (0, a.jsx)(o.wNq, {
+                            onClick: S ? M : void 0,
+                            children: b
+                                ? (0, l.jsx)(s.wNq, {
                                       size: "xs",
                                       color: "currentColor",
                                       className: g.playButtonIcon,
                                   })
-                                : (0, a.jsx)(o.o1U, {
+                                : (0, l.jsx)(s.o1U, {
                                       size: "xs",
                                       color: "currentColor",
                                       className: g.playButtonIcon,
                                   }),
                         }),
-                        (0, a.jsx)("div", {
+                        (0, l.jsx)("div", {
                             className: g.durationContainer,
-                            children: (0, a.jsx)(o.Text, {
+                            children: (0, l.jsx)(s.Text, {
                                 className: g.__invalid_duration,
                                 variant: "text-xs/normal",
-                                color: O ? "text-feedback-warning" : "text-feedback-positive",
-                                children: "".concat((0, f.my)(S).toFixed(2), "s"),
+                                color: Z ? "text-feedback-warning" : "text-feedback-positive",
+                                children: "".concat((0, f.my)(O).toFixed(2), "s"),
                             }),
                         }),
                     ],
                 }),
-                (0, a.jsx)(d.Z, {
-                    playing: y,
-                    onPlaybackChange: M,
+                (0, l.jsx)(d.Z, {
+                    playing: b,
+                    onPlaybackChange: k,
                     onPausePlayback: P,
-                    onChangePosition: I,
-                    disabled: r,
+                    onChangePosition: E,
+                    disabled: i,
                 }),
             ],
         });

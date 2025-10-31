@@ -13,8 +13,8 @@ var r,
     d = n(270144),
     p = n(400271),
     f = n(192513),
-    h = n(255791),
-    m = n(981631),
+    m = n(255791),
+    h = n(981631),
     g =
         (((r = {})[(r.ENABLE_PUBLIC_GUILD = 0)] = "ENABLE_PUBLIC_GUILD"),
         (r[(r.MAX_MEMBER_COUNT = 1)] = "MAX_MEMBER_COUNT"),
@@ -27,16 +27,16 @@ var r,
         r);
 function _(e) {
     var t;
-    let n = null != (t = null == e ? void 0 : e.id) ? t : m.lds,
+    let n = null != (t = null == e ? void 0 : e.id) ? t : h.lds,
         r = (0, l.e7)([p.Z], () => p.Z.isVisible(e)),
-        g = (0, l.e7)([h.Z], () => h.Z.isVisible(e)),
+        g = (0, l.e7)([m.Z], () => m.Z.isVisible(e)),
         _ = (0, s.m)(n),
         b = (0, l.e7)([f.Z], () => f.Z.isVisible(e)),
         E = u.Z.useShouldShowChannelNotice(n),
         O = (0, d.h6)(e),
         { enableStudyGroup: I } = (0, c.s)(e),
-        v = O.length > 0,
-        y = I && !(null == e ? void 0 : e.features.has(m.GuildFeatures.HUB)),
+        y = O.length > 0,
+        v = I && !(null == e ? void 0 : e.features.has(h.GuildFeatures.HUB)),
         C = (0, o.Vm)(n);
     if (
         (i.useEffect(() => {
@@ -49,7 +49,7 @@ function _(e) {
     if (_ || null != C) return 2;
     if (b) return 3;
     if (E) return 4;
-    else if (v) return 5;
-    else if (y) return 6;
+    else if (y) return 5;
+    else if (v) return 6;
     return null;
 }

@@ -118,18 +118,18 @@ let A = () => {
         },
         w = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
         D = null,
-        L = null,
         x = null,
+        L = null,
         M = [y.notice, O.notice];
     switch (w) {
         case p.wB.SUBMITTED:
-            (D = b.intl.string(b.t["5iLvSx"])), (L = b.intl.string(b.t.mqtdmQ)), (x = R);
+            (D = b.intl.string(b.t["5iLvSx"])), (x = b.intl.string(b.t.mqtdmQ)), (L = R);
             break;
         case p.wB.REJECTED:
-            (D = b.intl.string(b.t.lk30cY)), (L = b.intl.string(b.t["8RrsHr"])), (x = P), M.push(y.error);
+            (D = b.intl.string(b.t.lk30cY)), (x = b.intl.string(b.t["8RrsHr"])), (L = P), M.push(y.error);
             break;
         default:
-            (D = b.intl.string(b.t.G5YKXP)), (L = b.intl.string(b.t["r8/DT+"])), (x = N);
+            (D = b.intl.string(b.t.G5YKXP)), (x = b.intl.string(b.t["r8/DT+"])), (L = N);
     }
     return (0, r.jsxs)("div", {
         className: a()(...M),
@@ -142,8 +142,8 @@ let A = () => {
             (0, r.jsx)(c.Button, {
                 variant: "overlay-primary",
                 size: "sm",
-                onClick: x,
-                text: L,
+                onClick: L,
+                text: x,
             }),
         ],
     });

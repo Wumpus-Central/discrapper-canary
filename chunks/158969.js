@@ -1,6 +1,6 @@
-n.d(t, { Z: () => E });
-var i = n(951288),
-    r = n(647438),
+n.d(t, { Z: () => j });
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(653603),
@@ -9,35 +9,35 @@ var i = n(951288),
     u = n(481060),
     d = n(904245),
     p = n(232961),
-    h = n(223606),
-    f = n(63063),
+    f = n(223606),
+    h = n(63063),
     m = n(530472),
     g = n(453687),
     b = n(930282),
-    C = n(318713),
+    _ = n(318713),
     y = n(981631),
-    _ = n(388032),
+    C = n(388032),
     v = n(177119),
-    x = n(724913),
-    O = n(430864);
-let j = r.memo(function (e) {
-        let { message: t, notice: n, compact: r = !1, onDismiss: l } = e;
-        return (0, i.jsxs)(i.Fragment, {
+    O = n(724913),
+    x = n(430864);
+let E = i.memo(function (e) {
+        let { message: t, notice: n, compact: i = !1, onDismiss: l } = e;
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsxs)("div", {
-                    className: a()(v.blockedNoticeContainer, { [v.compact]: r }),
+                (0, r.jsxs)("div", {
+                    className: a()(v.blockedNoticeContainer, { [v.compact]: i }),
                     children: [
-                        (0, i.jsx)("div", {
+                        (0, r.jsx)("div", {
                             className: v.blockedNoticeIcon,
-                            children: (0, i.jsx)(u.b7C, {
+                            children: (0, r.jsx)(u.b7C, {
                                 size: "xs",
                                 color: "currentColor",
                                 className: v.shieldIcon,
                             }),
                         }),
-                        (0, i.jsx)("div", {
+                        (0, r.jsx)("div", {
                             className: v.blockedNotice,
-                            children: (0, i.jsx)(u.Text, {
+                            children: (0, r.jsx)(u.Text, {
                                 variant: "text-sm/normal",
                                 color: "interactive-normal",
                                 children: n,
@@ -45,18 +45,18 @@ let j = r.memo(function (e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)("div", {
-                    className: a()(v.ephemeralAccessories, { [v.compact]: r }),
-                    children: (0, i.jsx)(m.Z, {
+                (0, r.jsx)("div", {
+                    className: a()(v.ephemeralAccessories, { [v.compact]: i }),
+                    children: (0, r.jsx)(m.Z, {
                         message: t,
                         onDeleteMessage: l,
-                        children: (0, i.jsx)(u.Text, {
+                        children: (0, r.jsx)(u.Text, {
                             variant: "text-xs/normal",
                             color: "interactive-normal",
                             tag: "span",
                             className: v.learnMore,
-                            children: _.intl.format(_.t["Nd3Gh+"], {
-                                helpUrl: f.Z.getArticleURL(y.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                            children: C.intl.format(C.t["Nd3Gh+"], {
+                                helpUrl: h.Z.getArticleURL(y.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
                         }),
                     }),
@@ -64,47 +64,47 @@ let j = r.memo(function (e) {
             ],
         });
     }),
-    E = r.memo(function (e) {
+    j = i.memo(function (e) {
         var t, n;
-        let { className: l, compact: o, message: u, children: f, content: m, onUpdate: y } = e,
-            E = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
-            S = r.useRef(!1),
-            P = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
-            I = r.useCallback(() => {
+        let { className: l, compact: o, message: u, children: h, content: m, onUpdate: y } = e,
+            j = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
+            S = i.useRef(!1),
+            P = (0, c.e7)([f.Z], () => f.Z.getMessage(u.id), [u.id]),
+            I = i.useCallback(() => {
                 (null == P ? void 0 : P.isBlockedEdit) ? (0, p.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
             }, [u, P]);
         return (
-            r.useLayoutEffect(() => {
+            i.useLayoutEffect(() => {
                 S.current ? null != y && y() : (S.current = !0);
-            }, [y, u.content, m, E, f]),
-            (0, i.jsxs)("div", {
+            }, [y, u.content, m, j, h]),
+            (0, r.jsxs)("div", {
                 id: (0, g.ut)(u),
-                className: a()(l, O.markup, {
-                    [x.messageContent]: !0,
-                    [x.markupRtl]: "rtl" === s()(u.content),
+                className: a()(l, x.markup, {
+                    [O.messageContent]: !0,
+                    [O.markupRtl]: "rtl" === s()(u.content),
                     [v.blockedEdit]: null == P ? void 0 : P.isBlockedEdit,
                     [v.blockedSend]: !(null == P ? void 0 : P.isBlockedEdit),
                 }),
                 children: [
-                    null != f ? f : (0, b.L5)(u, m),
+                    null != h ? h : (0, b.L5)(u, m),
                     (null == P ? void 0 : P.isBlockedEdit) &&
                         null != u.timestamp &&
-                        (0, i.jsxs)(i.Fragment, {
+                        (0, r.jsxs)(r.Fragment, {
                             children: [
                                 " ",
-                                (0, i.jsx)(C.Z, {
+                                (0, r.jsx)(_.Z, {
                                     timestamp: u.timestamp,
                                     isEdited: !0,
                                     isInline: !1,
-                                    children: (0, i.jsxs)("span", {
-                                        className: x.edited,
-                                        children: ["(", _.intl.string(_.t.Z7eEx9), ")"],
+                                    children: (0, r.jsxs)("span", {
+                                        className: O.edited,
+                                        children: ["(", C.intl.string(C.t.Z7eEx9), ")"],
                                     }),
                                 }),
                             ],
                         }),
-                    (0, i.jsx)(j, {
-                        notice: null != (n = null == P ? void 0 : P.errorMessage) ? n : _.intl.string(_.t.zQ69pv),
+                    (0, r.jsx)(E, {
+                        notice: null != (n = null == P ? void 0 : P.errorMessage) ? n : C.intl.string(C.t.zQ69pv),
                         message: u,
                         compact: o,
                         onDismiss: I,

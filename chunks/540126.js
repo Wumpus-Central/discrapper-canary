@@ -48,11 +48,11 @@ var r = n(512722),
     P = n(944486),
     w = n(9156),
     D = n(979651),
-    L = n(938475),
-    x = n(823379),
+    x = n(938475),
+    L = n(823379),
     M = n(709054),
-    k = n(968358),
-    j = n(203818),
+    j = n(968358),
+    k = n(203818),
     U = n(295454),
     G = n(443063),
     B = n(981631),
@@ -686,7 +686,7 @@ class es extends ei {
         if ((super(e), !e.optInEnabled && !ev())) return;
         this.channels = o()(null != (n = w.ZP.getGuildFavorites(e.id)) ? n : [])
             .map((e) => S.Z.getChannel(e))
-            .filter(x.lm)
+            .filter(L.lm)
             .map((e) => new em(this, e, t))
             .keyBy((e) => e.id)
             .value();
@@ -909,7 +909,7 @@ class ed extends ei {
             !e.optInEnabled)
         )
             return;
-        (this.isCollapsed = j.Z.isVoiceCategoryCollapsed(e.id)),
+        (this.isCollapsed = k.Z.isVoiceCategoryCollapsed(e.id)),
             (this.isMuted = !1),
             (this.categoriesById = n),
             (this.channels = o()(t)
@@ -1174,8 +1174,8 @@ function ey(e, t, n) {
                     type: "event",
                     name: r.name,
                 };
-            let i = L.ZP.getVoiceStatesForChannel(e);
-            if (n && t && (0, k.a)(i)) return { type: "go-live" };
+            let i = x.ZP.getVoiceStatesForChannel(e);
+            if (n && t && (0, j.a)(i)) return { type: "go-live" };
             let a = c.Z.getChannelStatus(e);
             if (null != a && a.length > 0)
                 return {
@@ -1187,7 +1187,7 @@ function ey(e, t, n) {
                     var t;
                     return null == (t = l.Z.getApplication(e.applicationId)) ? void 0 : t.name;
                 })
-                .filter(x.lm);
+                .filter(L.lm);
             if (o.length > 0)
                 return {
                     type: "embedded-activities",
@@ -1254,7 +1254,7 @@ function eS(e, t, n) {
         return !1;
     if (t.isGuildVocal()) {
         if (!(0, U.K)("should_show_in_recents")) return !1;
-        let n = j.Z.isVoiceCategoryCollapsed(e.id);
+        let n = k.Z.isVoiceCategoryCollapsed(e.id);
         if (!n) return !1;
         let r = o().some(D.Z.getVoiceStatesForChannel(t.id));
         if (n && r) return !1;

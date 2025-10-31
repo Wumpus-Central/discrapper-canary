@@ -9,26 +9,26 @@ var r = n(951288),
     u = n(864682),
     d = n(975298),
     p = n(550385),
-    f = n(899740),
-    h = n(365113),
+    h = n(899740),
+    f = n(365113),
     g = n(849862),
     m = n(460181),
     b = n(155409),
     _ = n(944486),
-    O = n(594174),
-    y = n(431),
-    j = n(774343),
-    v = n(417363),
-    x = n(941128),
-    C = n(780570),
+    y = n(594174),
+    O = n(431),
+    v = n(774343),
+    j = n(417363),
+    C = n(941128),
+    x = n(780570),
     E = n(278464),
     S = n(276952),
     I = n(682662),
     P = n(662146),
     N = n(674552),
     Z = n(981631),
-    T = n(474936),
-    w = n(871465),
+    w = n(474936),
+    T = n(871465),
     A = n(388032),
     R = n(815141);
 let D = {
@@ -45,20 +45,20 @@ let D = {
 };
 function L(e) {
     var t, n;
-    let { selected: o, user: d, badge: f, link: g, showProgressBadge: _ } = e,
-        [O, y] = i.useState(!1),
-        [j, v] = i.useState(!1),
-        [x, C] = i.useState(null),
-        [E, T] = i.useState(0),
+    let { selected: o, user: d, badge: h, link: g, showProgressBadge: _ } = e,
+        [y, O] = i.useState(!1),
+        [v, j] = i.useState(!1),
+        [C, x] = i.useState(null),
+        [E, w] = i.useState(0),
         L = (0, l.Ie)("home"),
         M = (0, p.oq)().activePanel === p.wh.APP_ICON,
         k = () => {
-            C(null), T(0), clearTimeout(x);
+            x(null), w(0), clearTimeout(C);
         },
-        G = h.o.useConfig({ location: "home button" }).dmsTab;
+        G = f.o.useConfig({ location: "home button" }).dmsTab;
     if (null == d) return null;
     let U = G ? A.intl.string(A.t.Ym2Ri6) : A.intl.string(A.t.YUU0RF);
-    j && (U = a.K.get(Z.wli) ? A.intl.string(A.t["nkq1l+"]) : A.intl.string(A.t.Be8Q5E));
+    v && (U = a.K.get(Z.wli) ? A.intl.string(A.t["nkq1l+"]) : A.intl.string(A.t.Be8Q5E));
     let B = null;
     !o &&
         _ &&
@@ -66,12 +66,12 @@ function L(e) {
             className: R.downloadProgress,
             determineOwnVisibility: !1,
         }));
-    let F = o || O || M,
+    let F = o || y || M,
         V = (0, r.jsx)(s.aRk, {
             selected: !0,
-            lowerBadge: f > 0 ? (0, N.Ne)(f) : null,
+            lowerBadge: h > 0 ? (0, N.Ne)(h) : null,
             upperBadge: B,
-            lowerBadgeSize: { width: (0, s.OVM)(f) },
+            lowerBadgeSize: { width: (0, s.OVM)(h) },
             children: (0, r.jsx)(
                 s.LYs,
                 ((t = (function (e) {
@@ -100,21 +100,21 @@ function L(e) {
                     return e;
                 })(
                     {
-                        onMouseEnter: () => y(!0),
-                        onMouseLeave: () => y(!1),
+                        onMouseEnter: () => O(!0),
+                        onMouseLeave: () => O(!1),
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
-                                (null != x && clearTimeout(x), C(setTimeout(k, 500)), T(E + 1), 15 === E)
+                                (null != C && clearTimeout(C), x(setTimeout(k, 500)), w(E + 1), 15 === E)
                             ) {
                                 k();
                                 let e = !a.K.get(Z.wli);
                                 a.K.set(Z.wli, e),
-                                    e && a.K.set(w.O, !0),
+                                    e && a.K.set(T.O, !0),
                                     e ? (0, m.GN)("discodo") : (0, m.GN)("user_leave"),
-                                    v(!0),
+                                    j(!0),
                                     setTimeout(() => {
-                                        v(!1);
+                                        j(!1);
                                     }, 1000);
                             }
                         },
@@ -164,7 +164,7 @@ function L(e) {
                 children: [
                     (0, r.jsx)(S.Z, {
                         selected: o,
-                        hovered: O,
+                        hovered: y,
                         className: R.pill,
                     }),
                     (0, r.jsx)(P.Z, {
@@ -181,25 +181,25 @@ function L(e) {
 }
 function M() {
     let e = (0, E.n)(),
-        t = (0, o.e7)([x.Z, v.Z], () => {
-            let e = (0, c.E)(x.Z.activeItems, v.Z),
-                { total: t, progress: n } = C.lK(e),
-                r = C.xI(n, t);
+        t = (0, o.e7)([C.Z, j.Z], () => {
+            let e = (0, c.E)(C.Z.activeItems, j.Z),
+                { total: t, progress: n } = x.lK(e),
+                r = x.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, g.If)(),
-        i = Object.keys(T.nG),
+        i = Object.keys(w.nG),
         l = (0, d.Z)(),
-        { unviewedTrialCount: a, unviewedDiscountCount: s } = (0, o.cj)([y.Z], () => ({
-            unviewedTrialCount: y.Z.getUnacknowledgedOffers(i).length,
-            unviewedDiscountCount: y.Z.getUnacknowledgedDiscountOffers().length,
+        { unviewedTrialCount: a, unviewedDiscountCount: s } = (0, o.cj)([O.Z], () => ({
+            unviewedTrialCount: O.Z.getUnacknowledgedOffers(i).length,
+            unviewedDiscountCount: O.Z.getUnacknowledgedDiscountOffers().length,
         })),
-        u = l.fractionalState === T.a$.NONE ? a + s : 0,
-        p = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
-        h = (0, f.q)(),
-        m = n + u + h,
-        b = m === u && u > 0 && n + h === 0,
-        S = j.Z.getHomeLink();
+        u = l.fractionalState === w.a$.NONE ? a + s : 0,
+        p = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
+        f = (0, h.q)(),
+        m = n + u + f,
+        b = m === u && u > 0 && n + f === 0,
+        S = v.Z.getHomeLink();
     return (
         b && (S = Z.Z5c.APPLICATION_STORE),
         (0, r.jsx)(L, {

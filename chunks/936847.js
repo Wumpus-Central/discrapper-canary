@@ -4,8 +4,8 @@ var r = n(951288),
     l = n(576125),
     a = n(465858),
     o = n(112843),
-    c = n(524484);
-function s(e) {
+    s = n(524484);
+function c(e) {
     let { callTileRef: t, isFiring: n } = e,
         r = (0, o.Z)(),
         l = (0, a.Z)(t);
@@ -21,9 +21,9 @@ function s(e) {
 }
 function u(e) {
     return (0, r.jsx)(l.Z, {
-        confettiLocation: c.Hn.CALL_TILE,
+        confettiLocation: s.Hn.CALL_TILE,
         children: (0, r.jsx)(
-            s,
+            c,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

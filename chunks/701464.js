@@ -1,44 +1,44 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(973007),
-    a = n(170731),
-    l = n(474936),
-    o = n(391763);
-let s = function (e) {
+    l = n(170731),
+    a = n(474936),
+    s = n(391763);
+let o = function (e) {
     let {
         onSelectSku: t,
         isGift: n,
-        priceOptions: s,
+        priceOptions: o,
         showPromotionalGiftBanner: d,
-        giftRecipient: C,
-        onWishlistItemClick: c,
+        giftRecipient: c,
+        onWishlistItemClick: C,
     } = e;
     return (0, r.jsxs)("div", {
-        className: o.giftOptionContainer,
+        className: s.giftOptionContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: o.cardsRow,
+                className: s.cardsRow,
                 children: [
                     (0, r.jsx)(i.jB, {
-                        onClick: () => t(l.Si.TIER_2),
+                        onClick: () => t(a.Si.TIER_2),
                         isGift: n,
-                        priceOptions: s,
+                        priceOptions: o,
                         showPromotionalGiftBanner: d,
                         enablePremiumBrandRefresh: !0,
                     }),
                     (0, r.jsx)(i.j8, {
-                        onClick: () => t(l.Si.TIER_0),
+                        onClick: () => t(a.Si.TIER_0),
                         isGift: n,
-                        priceOptions: s,
+                        priceOptions: o,
                         enablePremiumBrandRefresh: !0,
                         removeTopMargin: !0,
                     }),
                 ],
             }),
-            (0, r.jsx)(a.Z, {
-                giftRecipient: C,
-                onWishlistItemClick: c,
+            (0, r.jsx)(l.Z, {
+                giftRecipient: c,
+                onWishlistItemClick: C,
             }),
         ],
     });

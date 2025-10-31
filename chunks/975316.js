@@ -5,8 +5,8 @@ n.d(t, {
 var i = n(951288);
 n(647438);
 var l = n(442837),
-    r = n(139387),
-    s = n(852860),
+    r = n(796027),
+    s = n(139387),
     a = n(490655),
     o = n(533947),
     c = n(388610),
@@ -42,13 +42,13 @@ function h() {
     let { channel: e, submitting: t } = (0, l.cj)([c.Z], () => c.Z.getProps()),
         n = (0, l.e7)([o.Z], () => o.Z.editedWebhook),
         a = (0, l.e7)([d.Z], () => (null != e ? d.Z.getGuild(e.getGuildId()) : null), [e]);
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(r.Z, {
         submitting: t,
         onReset: () => {
-            r.Z.init();
+            s.Z.init();
         },
         onSave: () => {
-            null != a && null != n && r.Z.saveWebhook(a.id, n);
+            null != a && null != n && s.Z.saveWebhook(a.id, n);
         },
     });
 }

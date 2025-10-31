@@ -96,9 +96,9 @@ function P(e) {
             messageId: S,
             parentOptionKey: w,
             commandOptionSpec: D,
-            sourceAnalyticsLocations: L,
+            sourceAnalyticsLocations: x,
         } = e,
-        x = null != w ? w + " " + g.name : g.name;
+        L = null != w ? w + " " + g.name : g.name;
     if (g.type === c.jw.SUB_COMMAND || g.type === c.jw.SUB_COMMAND_GROUP) {
         let e = [
                 (0, r.jsxs)(
@@ -114,7 +114,7 @@ function P(e) {
                             ),
                         ],
                     },
-                    x,
+                    L,
                 ),
             ],
             s = Object.fromEntries(
@@ -129,9 +129,9 @@ function P(e) {
                     channel: v,
                     guild: I,
                     messageId: S,
-                    parentOptionKey: x,
+                    parentOptionKey: L,
                     commandOptionSpec: s[t.name],
-                    sourceAnalyticsLocations: L,
+                    sourceAnalyticsLocations: x,
                 }),
             );
         return e;
@@ -153,7 +153,7 @@ function P(e) {
                                     guildId: v.guild_id,
                                     channelId: v.id,
                                     messageId: S,
-                                    sourceAnalyticsLocations: L,
+                                    sourceAnalyticsLocations: x,
                                 }),
                             children: [y.ME, e.nick],
                         }),
@@ -203,7 +203,7 @@ function P(e) {
                                     (0, p.openUserProfileModal)({
                                         userId: t.id,
                                         guildId: v.guild_id,
-                                        sourceAnalyticsLocations: L,
+                                        sourceAnalyticsLocations: x,
                                     }),
                                 children: [y.ME, e.nick],
                             }),
@@ -236,7 +236,7 @@ function P(e) {
                         f,
                     ],
                 },
-                x,
+                L,
             ),
         ]
     );

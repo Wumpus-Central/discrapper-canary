@@ -15,7 +15,7 @@ let u = {
     d = function (e) {
         let { animate: t, state: n, cleanUp: d, children: p } = e,
             f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-            h = i.useMemo(
+            m = i.useMemo(
                 () =>
                     !1 === t || f
                         ? { opacity: 1 }
@@ -35,9 +35,9 @@ let u = {
                             },
                 [t, d, f, n],
             ),
-            m = (0, s.q_F)(h);
+            h = (0, s.q_F)(m);
         return (0, r.jsx)(l.animated.div, {
-            style: m,
+            style: h,
             className: c.transitionItem,
             children: p,
         });

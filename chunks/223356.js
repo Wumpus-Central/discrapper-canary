@@ -8,8 +8,8 @@ n.d(t, {
     n(539854);
 var i = n(990547),
     r = n(544891),
-    a = n(729345),
-    l = n(210887);
+    l = n(729345),
+    a = n(210887);
 n(358085);
 var o = n(573261),
     s = n(981631),
@@ -71,7 +71,7 @@ async function p(e, t, n) {
         },
         {
             name: "theme",
-            value: l.Z.theme,
+            value: a.Z.theme,
         },
     ];
     "" !== e.description &&
@@ -137,7 +137,7 @@ async function p(e, t, n) {
                 name: "locale",
                 value: t.locale,
             })),
-        (0, a.E)(s.GU0.WEB_APP);
+        (0, l.E)(s.GU0.WEB_APP);
     try {
         return await o.Z.post({
             url: s.ANM.BUG_REPORTS,

@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(998502),
     p = n(996106),
     f = n(703912),
-    h = n(852926),
-    m = n(981631),
+    m = n(852926),
+    h = n(981631),
     g = n(388032);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -68,8 +68,8 @@ let E = (0, f.Z)(
                 responseType: E,
                 redirectUri: O,
                 codeChallenge: I,
-                codeChallengeMethod: v,
-                state: y,
+                codeChallengeMethod: y,
+                state: v,
                 guildId: C,
                 channelId: S,
                 prompt: T,
@@ -83,7 +83,7 @@ let E = (0, f.Z)(
             w = null != P ? (null == u ? void 0 : u.get(P)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
-            let a = (0, h.jU)(x),
+            let a = (0, m.jU)(x),
                 w = i.z1l;
             null != L &&
             null !=
@@ -92,13 +92,13 @@ let E = (0, f.Z)(
                     channelId: S,
                 })
                 ? (w = i.u1M)
-                : a.context === m.IlC.POPOUT && (w = i.u1M);
+                : a.context === h.IlC.POPOUT && (w = i.u1M);
             let R = !1,
                 D = (l) => {
                     let { clientId: s, location: o } = l;
                     if (null == s || s === n) {
                         if (((R = !0), null == o)) {
-                            t(new p.Z({ errorCode: m.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
+                            t(new p.Z({ errorCode: h.lTL.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
                                 a.lock();
                             return;
                         }
@@ -165,8 +165,8 @@ let E = (0, f.Z)(
                             responseType: E,
                             redirectUri: O,
                             codeChallenge: I,
-                            codeChallengeMethod: v,
-                            state: y,
+                            codeChallengeMethod: y,
+                            state: v,
                             permissions: f,
                             guildId: C,
                             channelId: S,
@@ -181,7 +181,7 @@ let E = (0, f.Z)(
                     onCloseCallback: () => {
                         M(),
                             R ||
-                                (t(new p.Z({ errorCode: m.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
+                                (t(new p.Z({ errorCode: h.lTL.OAUTH2_ERROR }, "User cancelled authorization")),
                                 a.lock());
                     },
                 },
@@ -190,7 +190,7 @@ let E = (0, f.Z)(
         });
     },
     function (e, t, n) {
-        if ((0, h.br)(n) || !u.isPlatformEmbedded) return;
+        if ((0, m.br)(n) || !u.isPlatformEmbedded) return;
         let r = (0, l.ZP)({
             application: e,
             channelId: t,

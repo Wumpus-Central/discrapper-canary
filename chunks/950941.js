@@ -1,7 +1,7 @@
 n.d(t, { W: () => f });
 var r = n(951288),
-    o = n(481060),
-    l = n(28682),
+    l = n(481060),
+    o = n(28682),
     i = n(388032);
 function a(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -49,13 +49,13 @@ function c(e, t) {
 function s(e) {
     let { useCount: t } = e,
         n = t();
-    return 0 === n ? null : (0, r.jsx)(o.mAB, { count: n });
+    return 0 === n ? null : (0, r.jsx)(l.mAB, { count: n });
 }
 function u(e) {
-    let { getDismissibleContentTypes: t, badgeComponent: n, visibleContent: l, isSelected: a } = e,
+    let { getDismissibleContentTypes: t, badgeComponent: n, visibleContent: o, isSelected: a } = e,
         c = null == t ? void 0 : t(),
-        s = null != l && c.includes(l) && !a,
-        u = null != n ? (0, r.jsx)(n, {}) : (0, r.jsx)(o.IGR, { text: i.intl.string(i.t.y2b7CA) });
+        s = null != o && c.includes(o) && !a,
+        u = null != n ? (0, r.jsx)(n, {}) : (0, r.jsx)(l.IGR, { text: i.intl.string(i.t.y2b7CA) });
     return s ? u : null;
 }
 function d(e) {
@@ -63,25 +63,25 @@ function d(e) {
     return t(n, r);
 }
 function f(e) {
-    let { trailing: t, visibleContent: n, isSelected: o } = e;
+    let { trailing: t, visibleContent: n, isSelected: l } = e;
     if (null == t) return null;
     switch (t.type) {
-        case l.PU.BADGE_COUNT:
+        case o.PU.BADGE_COUNT:
             return (0, r.jsx)(s, a({}, t));
-        case l.PU.BADGE_NEW:
+        case o.PU.BADGE_NEW:
             return (0, r.jsx)(
                 u,
                 c(a({}, t), {
                     visibleContent: n,
-                    isSelected: o,
+                    isSelected: l,
                 }),
             );
-        case l.PU.STRONGLY_DISCOURAGED_CUSTOM:
+        case o.PU.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(
                 d,
                 c(a({}, t), {
                     visibleContent: n,
-                    isSelected: o,
+                    isSelected: l,
                 }),
             );
     }

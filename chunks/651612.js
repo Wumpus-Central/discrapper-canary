@@ -39,12 +39,12 @@ function y(e) {
             return i;
         })(e, ["channelId", "className"]);
     let x = i.useRef(null),
-        v = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
+        O = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === g.MI.RESIZABLE),
         j = i.useCallback(() => {
-            let e = v ? g.MI.NO_CHAT : g.MI.RESIZABLE;
+            let e = O ? g.MI.NO_CHAT : g.MI.RESIZABLE;
             (0, h.gC)(e);
-        }, [v]),
-        { unreadCount: O, mentionCount: C } = (function (e) {
+        }, [O]),
+        { unreadCount: v, mentionCount: C } = (function (e) {
             let t = (0, a.e7)([u.Z], () => !(0, l.isEmpty)(u.Z.getTypingUsers(e)), [e]),
                 { unreadCount: n, mentionCount: r } = (0, a.cj)(
                     [d.ZP],
@@ -68,12 +68,12 @@ function y(e) {
         event: m.CkL.FOCUS_CHAT_BUTTON,
         handler: I,
     });
-    let S = v ? b.intl.string(b.t["5MstTl"]) : b.intl.string(b.t.kkKapG),
+    let S = O ? b.intl.string(b.t["5MstTl"]) : b.intl.string(b.t.kkKapG),
         E = [S];
     C > 0 && E.push(b.intl.formatToPlainString(b.t["3l1GOx"], { mentionCount: C })),
-        O > 0 && E.push(b.intl.string(b.t.x5zAGZ));
+        v > 0 && E.push(b.intl.string(b.t.x5zAGZ));
     let Z = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
-        P = C > 0 ? C : O,
+        P = C > 0 ? C : v,
         T = P > 0;
     return (0, r.jsxs)("div", {
         className: _.wrapper,

@@ -1,27 +1,27 @@
-n.d(e, { Z: () => a });
+n.d(e, { Z: () => o });
 var i = n(524437),
     l = n(995774),
-    u = n(509613),
-    r = n(695346),
+    r = n(509613),
+    u = n(695346),
     s = n(313789),
-    o = n(388032);
-let a = (0, u.Em)(s.n.REACTION_NOTIFICATIONS, {
-    useTitle: () => o.intl.string(o.t.Rq0NFs),
-    useSubtitle: () => o.intl.string(o.t.oWF6eQ),
+    a = n(388032);
+let o = (0, r.Em)(s.n.REACTION_NOTIFICATIONS, {
+    useTitle: () => a.intl.string(a.t.Rq0NFs),
+    useSubtitle: () => a.intl.string(a.t.oWF6eQ),
     useOptions: () => [
         {
-            label: o.intl.string(o.t["9x/RtT"]),
+            label: a.intl.string(a.t["9x/RtT"]),
             value: i.Ns.NOTIFICATIONS_ENABLED,
         },
         {
-            label: o.intl.string(o.t.fJAbQd),
+            label: a.intl.string(a.t.fJAbQd),
             value: i.Ns.ONLY_DMS,
         },
         {
-            label: o.intl.string(o.t["xu+UDU"]),
+            label: a.intl.string(a.t["xu+UDU"]),
             value: i.Ns.NOTIFICATIONS_DISABLED,
         },
     ],
-    useValue: r.fz.useSetting,
-    setValue: (t) => (0, l.MR)(t, r.fz.getSetting()),
+    useValue: u.fz.useSetting,
+    setValue: (t) => (0, l.MR)(t, u.fz.getSetting()),
 });

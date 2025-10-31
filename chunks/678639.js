@@ -1,10 +1,10 @@
 n.d(t, { Z: () => _ }), n(388685), n(642613);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    r = n.n(l),
+    s = n(442837),
+    o = n(481060),
     c = n(665149),
     d = n(428530),
     u = n(484036),
@@ -12,15 +12,15 @@ var a = n(951288),
     p = n(621060),
     h = n(451429),
     x = n(104444);
-function f(e, t) {
+function g(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function b(e) {
+function f(e) {
     let { store: t, dataGetter: n } = e,
-        [l, i] = r.useState(n(t));
+        [l, r] = i.useState(n(t));
     return (
-        r.useEffect(() => {
-            let e = () => i(n(t));
+        i.useEffect(() => {
+            let e = () => r(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -29,13 +29,13 @@ function b(e) {
                 }
             );
         }, [t, n]),
-        (0, a.jsx)(s.zJl, {
+        (0, a.jsx)(o.zJl, {
             className: x.inspectorContainer,
             children: (0, a.jsx)(d.Z, { data: l }),
         })
     );
 }
-let g = [
+let b = [
         {
             key: "name",
             cellClassName: x.__invalid_eventColumn,
@@ -61,7 +61,7 @@ let g = [
                               " method.",
                           ],
                       })
-                    : (0, a.jsx)(b, {
+                    : (0, a.jsx)(f, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars(),
                       });
@@ -73,7 +73,7 @@ let g = [
             group: p.v0.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, a.jsx)(b, {
+                return (0, a.jsx)(f, {
                     store: t,
                     dataGetter: (e) => e,
                 });
@@ -82,18 +82,18 @@ let g = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, p.ZP)({ tabs: v }, []);
+        { TabBar: i, renderSelectedTab: l } = (0, p.ZP)({ tabs: v }, []);
     return (0, a.jsxs)(u.Z, {
         className: x.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
-            (0, a.jsx)(r, {}),
+            (0, a.jsx)(i, {}),
             (0, a.jsxs)(c.ZP, {
-                className: i()(h.headerBar, x.subPanelHeaderBar),
+                className: r()(h.headerBar, x.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
-                        icon: s.lO_,
+                        icon: o.lO_,
                         tooltip: t.getName(),
                     }),
                     (0, a.jsx)(c.ZP.Title, { children: t.getName() }),
@@ -104,10 +104,10 @@ function j(e) {
     });
 }
 function _() {
-    let e = r.useRef(null),
-        [t, n] = r.useState(""),
-        l = o.yh.getAll(),
-        c = r
+    let e = i.useRef(null),
+        [t, n] = i.useState(""),
+        l = s.yh.getAll(),
+        c = i
             .useMemo(
                 () =>
                     l
@@ -115,7 +115,7 @@ function _() {
                             key: e._dispatchToken,
                             store: e,
                         }))
-                        .sort(f),
+                        .sort(g),
                 [l],
             )
             .filter((e) =>
@@ -124,15 +124,15 @@ function _() {
                     return n.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t),
             ),
-        [d, u] = r.useState(),
+        [d, u] = i.useState(),
         p = l.find((e) => e._dispatchToken === d);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(h.panel, x.panel),
+        className: r()(h.panel, x.panel),
         children: [
             (0, a.jsx)("div", {
                 className: x.toolbar,
-                children: (0, a.jsx)(s.E1j, {
+                children: (0, a.jsx)(o.E1j, {
                     size: "sm",
                     query: t,
                     onChange: n,
@@ -142,7 +142,7 @@ function _() {
                 }),
             }),
             (0, a.jsx)(m.Z, {
-                columns: g,
+                columns: b,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key),

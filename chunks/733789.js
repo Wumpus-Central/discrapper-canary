@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(670188),
     p = n(237583),
     f = n(51144),
-    h = n(981631),
-    m = n(388032),
+    m = n(981631),
+    h = n(388032),
     g = n(157684);
 function _(e, t, n) {
     return (
@@ -43,50 +43,50 @@ function b(e) {
     return e;
 }
 let E = {
-    [h.AzA.NOW_PLAYING]: {
+    [m.AzA.NOW_PLAYING]: {
         single: (e, t) =>
-            m.intl.format(m.t.NEckza, {
+            h.intl.format(h.t.NEckza, {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            m.intl.format(m.t["6uWulc"], {
+            h.intl.format(h.t["6uWulc"], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => m.intl.format(m.t["8fMgRU"], { count: e }),
+        other: (e) => h.intl.format(h.t["8fMgRU"], { count: e }),
     },
-    [h.AzA.RECENTLY_PLAYED]: {
+    [m.AzA.RECENTLY_PLAYED]: {
         single: (e, t) =>
-            m.intl.format(m.t["nB/JNB"], {
+            h.intl.format(h.t["nB/JNB"], {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            m.intl.format(m.t.AZCcHU, {
+            h.intl.format(h.t.AZCcHU, {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => m.intl.format(m.t.yNuaTU, { count: e }),
+        other: (e) => h.intl.format(h.t.yNuaTU, { count: e }),
     },
-    [h.AzA.EVER_PLAYED]: {
+    [m.AzA.EVER_PLAYED]: {
         single: (e, t) =>
-            m.intl.format(m.t.Fecf3N, {
+            h.intl.format(h.t.Fecf3N, {
                 user1: e.username,
                 user1Hook: () => t(e),
             }),
         double: (e, t, n) =>
-            m.intl.format(m.t["0LiGbJ"], {
+            h.intl.format(h.t["0LiGbJ"], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t),
             }),
-        other: (e) => m.intl.format(m.t.Yx1rjU, { count: e }),
+        other: (e) => h.intl.format(h.t.Yx1rjU, { count: e }),
     },
 };
 class O extends i.PureComponent {

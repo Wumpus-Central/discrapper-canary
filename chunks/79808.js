@@ -61,8 +61,8 @@ function y(e) {
             defaultTarget: v,
             onClose: g,
             sidebarHeader: h,
-            sidebarFooter: O,
-            onPanelChange: x,
+            sidebarFooter: x,
+            onPanelChange: O,
             emptyState: P,
         } = e,
         S = null != m && (null == (t = j.entry(m)) ? void 0 : t.targetPanelKey) != null ? m : v;
@@ -108,10 +108,10 @@ function y(e) {
                     showNavigationMobile: !1,
                 }),
                     Z(p(b({}, t), { animateScroll: !1 })),
-                    null == x || x(n);
+                    null == O || O(n);
             });
         } else Z(p(b({}, t), { animateScroll: !0 })), d.Z.setState({ targetKey: void 0 });
-    }, [C, _, k, j, D, x]);
+    }, [C, _, k, j, D, O]);
     let I = l.useMemo(() => ({ navTransition: T }), [T]),
         A = () => D(g),
         R = null != C ? j.get(C) : void 0;
@@ -123,7 +123,7 @@ function y(e) {
                 (0, r.jsx)(c.P, {
                     root: y,
                     header: h,
-                    footer: O,
+                    footer: x,
                     onClose: A,
                     emptyState: P,
                 }),

@@ -2,24 +2,24 @@ n.d(t, { Z: () => g });
 var i = n(951288);
 n(647438);
 var r = n(704215),
-    s = n(13245),
+    l = n(13245),
     o = n(266454),
-    l = n(593481),
+    s = n(593481),
     a = n(371651),
     c = n(237997),
     d = n(145597),
     u = n(312839),
-    p = n(987650),
-    h = n(388032);
-let f = (e) => (0, l.QR)(e, (0, u.P)(), h.t["z8/sgJ"]);
+    h = n(987650),
+    p = n(388032);
+let f = (e) => (0, s.QR)(e, (0, u.P)(), p.t["z8/sgJ"]);
 function g(e) {
     let { isFirstTimeNux: t } = e,
         {
-            icon: l,
+            icon: s,
             title: g,
             body: m,
             hint: y,
-            notifType: _,
+            notifType: O,
         } = (function (e, t) {
             if (t.isFirstTimeNux) {
                 var n, i;
@@ -51,8 +51,8 @@ function g(e) {
                     })({}, e)),
                     (i = i =
                         {
-                            title: h.intl.string(h.t.xxADho),
-                            body: h.intl.string(h.t.GtUrGD),
+                            title: p.intl.string(p.t.xxADho),
+                            body: p.intl.string(p.t.GtUrGD),
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -73,16 +73,16 @@ function g(e) {
         })(
             {
                 icon: n(639525),
-                title: h.intl.string(h.t.r0ObgV),
-                body: h.intl.string(h.t.hc6XF7),
+                title: p.intl.string(p.t.r0ObgV),
+                body: p.intl.string(p.t.hc6XF7),
                 hint: f,
-                notifType: p.n0.OopWelcomeNudge,
+                notifType: h.n0.OopWelcomeNudge,
             },
             e,
         ),
-        { trackView: O, trackClick: b } = (0, u.R)(_, { notif_type: _ });
+        { trackView: _, trackClick: v } = (0, u.R)(O, { notif_type: O });
     return {
-        icon: l,
+        icon: s,
         title: g,
         body: m,
         hint: y,
@@ -92,25 +92,25 @@ function g(e) {
                     textAlign: "center",
                     padding: 2,
                 },
-                children: h.intl.string(h.t["9MyuT0"]),
+                children: p.intl.string(p.t["9MyuT0"]),
             }),
-        confirmText: t ? h.intl.string(h.t.TxyTbk) : void 0,
+        confirmText: t ? p.intl.string(p.t.TxyTbk) : void 0,
         onConfirmClick: t
             ? () => {
-                  b("unlock"), s.Z.setInputLocked(!1, (0, d.getPID)());
+                  v("unlock"), l.Z.setInputLocked(!1, (0, d.getPID)());
               }
             : void 0,
         onNotificationShow: () => {
-            O(), t && (0, o.Q3)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
+            _(), t && (0, o.Q3)(r.z.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX);
         },
         onNotificationClick: (e, t) => {
-            b("unlock"),
+            v("unlock"),
                 a.default.isOverlayOOPEnabledForPid((0, d.getPID)())
-                    ? s.Z.setInputLocked(!1, (0, d.getPID)())
-                    : c.default.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+                    ? l.Z.setInputLocked(!1, (0, d.getPID)())
+                    : c.default.isInstanceLocked() && l.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            b("dismiss");
+            v("dismiss");
         },
     };
 }

@@ -1,17 +1,17 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => s });
 var r = n(647438),
-    l = n(442837),
+    i = n(442837),
     a = n(751648),
-    i = n(479766);
-function o() {
+    o = n(479766);
+function s() {
     let {
         balance: e,
         isFetching: t,
         error: n,
-    } = (0, l.cj)([i.Z], () => ({
-        balance: i.Z.balance,
-        isFetching: i.Z.isFetchingBalance,
-        error: i.Z.fetchBalanceError,
+    } = (0, i.cj)([o.Z], () => ({
+        balance: o.Z.balance,
+        isFetching: o.Z.isFetchingBalance,
+        error: o.Z.fetchBalanceError,
     }));
     return (
         (0, r.useEffect)(() => {

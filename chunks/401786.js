@@ -1,4 +1,4 @@
-n.d(t, { default: () => j }), n(415506), n(388685);
+n.d(t, { default: () => k }), n(415506), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(392711),
@@ -73,7 +73,7 @@ function D(e) {
         }),
     });
 }
-function L() {
+function x() {
     let e = Object.values(O.Z.boostSlots),
         t = o().sortBy(
             e.filter((e) => !(0, T.tl)(e)),
@@ -81,8 +81,8 @@ function L() {
         )[0];
     return null != t ? t.id : null;
 }
-async function x(e, t, n, r) {
-    let i = null != r ? r : L();
+async function L(e, t, n, r) {
+    let i = null != r ? r : x();
     if (null == i) throw Error("No slot to cancel");
     let a = (0, S.MY)(e, t);
     await (0, d.pD)(i),
@@ -102,21 +102,21 @@ function M(e) {
     let { premiumSubscription: o, guildBoostSlotId: s, fractionalPremiumInfo: u, onBack: d, onNext: p, onClose: O } = e,
         [I, T] = i.useState(!1),
         [R, D] = i.useState(null),
-        [L, M] = i.useMemo(() => {
+        [x, M] = i.useMemo(() => {
             try {
                 return [(0, g.g)(o, -1), !1];
             } catch (e) {
                 return [[], !0];
             }
         }, [o]),
-        k = i.useRef(O);
+        j = i.useRef(O);
     i.useEffect(() => {
-        k.current = O;
+        j.current = O;
     }),
         i.useEffect(() => {
-            M && k.current();
+            M && j.current();
         }, [M]);
-    let { premiumSubscriptionPlan: j, premiumGuildPlan: U } = (0, l.cj)([v.Z], () => {
+    let { premiumSubscriptionPlan: k, premiumGuildPlan: U } = (0, l.cj)([v.Z], () => {
             let e = v.Z.get(o.planId);
             return {
                 premiumSubscriptionPlan: e,
@@ -133,7 +133,7 @@ function M(e) {
             analyticsLocations: G,
             analyticsLocation: f.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
         }),
-        Z = null != U ? (0, S.Zx)(o, null != (a = null == (t = L[0]) ? void 0 : t.quantity) ? a : 0, U.id) : null,
+        Z = null != U ? (0, S.Zx)(o, null != (a = null == (t = x[0]) ? void 0 : t.quantity) ? a : 0, U.id) : null,
         [F] = (0, m.ED)({
             subscriptionId: o.id,
             items: Z,
@@ -141,7 +141,7 @@ function M(e) {
             analyticsLocations: G,
             analyticsLocation: f.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
         });
-    if (null == F || null == j || null == U || null == B) return (0, r.jsx)(c.$jN, {});
+    if (null == F || null == k || null == U || null == B) return (0, r.jsx)(c.$jN, {});
     let V =
             (o.items.some((e) => {
                 let { planId: t } = e;
@@ -154,12 +154,12 @@ function M(e) {
                       let { planId: t } = e;
                       return !N.Z1.has(t);
                   })) != null,
-        H = L.some((e) => {
+        H = x.some((e) => {
             let { planId: t } = e;
             return N.Z1.has(t);
         }),
         Y = V || H ? F.total - B.total : -B.total,
-        { interval: W, intervalCount: K } = j,
+        { interval: W, intervalCount: K } = k,
         z = P.intl.format(P.t["0W23cu"], { endDate: F.subscriptionPeriodStart });
     return (
         o.isPausedForFractionalPremium &&
@@ -220,7 +220,7 @@ function M(e) {
                             disabled: I,
                             onClick: async () => {
                                 try {
-                                    T(!0), D(null), await x(o, L, G, s), p();
+                                    T(!0), D(null), await L(o, x, G, s), p();
                                 } catch (e) {
                                     D(P.intl.string(P.t["5mlOCW"])), T(!1);
                                 }
@@ -233,7 +233,7 @@ function M(e) {
         })
     );
 }
-function k(e) {
+function j(e) {
     let { premiumSubscription: t, fractionalPremiumInfo: n, onClose: i, transitionState: a } = e,
         o = t.currentPeriodEnd;
     t.isPausedForFractionalPremium && (o = n.endsAt.toDate());
@@ -259,7 +259,7 @@ function k(e) {
         }),
     });
 }
-function j(e) {
+function k(e) {
     let t,
         { guildBoostSlot: n, transitionState: a, onClose: o } = e;
     i.useEffect(() => {
@@ -302,7 +302,7 @@ function j(e) {
                 });
                 break;
             case 3:
-                t = (0, r.jsx)(k, {
+                t = (0, r.jsx)(j, {
                     premiumSubscription: s,
                     fractionalPremiumInfo: d,
                     onClose: o,

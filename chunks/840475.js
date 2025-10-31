@@ -28,11 +28,11 @@ var r,
     P = A && E(A),
     w = Object.prototype,
     D = l.TypeError,
-    L = y("toStringTag"),
-    x = O("TYPED_ARRAY_TAG"),
+    x = y("toStringTag"),
+    L = O("TYPED_ARRAY_TAG"),
     M = "TypedArrayConstructor",
-    k = o && !!b && "Opera" !== f(l.opera),
-    j = !1,
+    j = o && !!b && "Opera" !== f(l.opera),
+    k = !1,
     U = {
         Int8Array: 1,
         Uint8Array: 1,
@@ -87,7 +87,7 @@ var r,
                             } catch (e) {}
                         }
                 }
-            (!P[e] || n) && h(P, e, n ? t : (k && A[e]) || t, r);
+            (!P[e] || n) && h(P, e, n ? t : (j && A[e]) || t, r);
         }
     },
     W = function (e, t, n) {
@@ -103,36 +103,36 @@ var r,
                 }
                 if (R[e] && !n) return;
                 try {
-                    return h(R, e, n ? t : (k && R[e]) || t);
+                    return h(R, e, n ? t : (j && R[e]) || t);
                 } catch (e) {}
             }
             for (r in U) (i = l[r]) && (!i[e] || n) && h(i, e, t);
         }
     };
-for (r in U) (a = (i = l[r]) && i.prototype) ? (I(a)[M] = i) : (k = !1);
+for (r in U) (a = (i = l[r]) && i.prototype) ? (I(a)[M] = i) : (j = !1);
 for (r in G) (a = (i = l[r]) && i.prototype) && (I(a)[M] = i);
 if (
-    (!k || !c(R) || R === Function.prototype) &&
+    (!j || !c(R) || R === Function.prototype) &&
     ((R = function () {
         throw new D("Incorrect invocation");
     }),
-    k)
+    j)
 )
     for (r in U) l[r] && b(l[r], R);
-if ((!k || !P || P === w) && ((P = R.prototype), k)) for (r in U) l[r] && b(l[r].prototype, P);
-if ((k && E(N) !== P && b(N, P), s && !d(P, L)))
-    for (r in ((j = !0),
-    m(P, L, {
+if ((!j || !P || P === w) && ((P = R.prototype), j)) for (r in U) l[r] && b(l[r].prototype, P);
+if ((j && E(N) !== P && b(N, P), s && !d(P, x)))
+    for (r in ((k = !0),
+    m(P, x, {
         configurable: !0,
         get: function () {
-            return u(this) ? this[x] : void 0;
+            return u(this) ? this[L] : void 0;
         },
     }),
     U))
-        l[r] && p(l[r], x, r);
+        l[r] && p(l[r], L, r);
 e.exports = {
-    NATIVE_ARRAY_BUFFER_VIEWS: k,
-    TYPED_ARRAY_TAG: j && x,
+    NATIVE_ARRAY_BUFFER_VIEWS: j,
+    TYPED_ARRAY_TAG: k && L,
     aTypedArray: V,
     aTypedArrayConstructor: H,
     exportTypedArrayMethod: Y,

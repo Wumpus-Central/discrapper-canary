@@ -9,9 +9,9 @@ n.r(t),
         analyticsTrackingStoreMaker: () => b.l,
         encodeProperties: () => E.Z,
         extendSuperProperties: () => z,
-        getCampaignParams: () => L,
+        getCampaignParams: () => x,
         getDevice: () => U,
-        getOS: () => j,
+        getOS: () => k,
         getSuperProperties: () => X,
         getSuperPropertiesBase64: () => Q,
         isThrottled: () => K,
@@ -153,7 +153,7 @@ function D(e, t) {
     let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function L(e) {
+function x(e) {
     let t = {};
     return (
         w.forEach((n) => {
@@ -163,7 +163,7 @@ function L(e) {
         t
     );
 }
-function x() {
+function L() {
     let e = document.referrer;
     return 0 === e.search("https?://(.*)google.([^/?]*)")
         ? "google"
@@ -178,7 +178,7 @@ function x() {
 function M() {
     let e = {},
         t = document.referrer,
-        n = x(),
+        n = L(),
         r = "yahoo" !== n ? "q" : "p";
     if (null != n) {
         e.search_engine = n;
@@ -187,7 +187,7 @@ function M() {
     }
     return e;
 }
-function k() {
+function j() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window;
     if (n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
@@ -207,7 +207,7 @@ function k() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
-function j() {
+function k() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -234,8 +234,8 @@ function G() {
 function B() {
     let e = {};
     return (
-        (e.os = j()),
-        (e.browser = k()),
+        (e.os = k()),
+        (e.browser = j()),
         (e.device = U()),
         (e.system_locale = (0, _.qf)()),
         (e.has_client_mods = (0, f.e)()),
@@ -260,7 +260,7 @@ function Z() {
 }
 function F() {
     let e = {};
-    return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), M()));
+    return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, x(window.location.href), M()));
 }
 function V(e, t) {
     let n = {};
@@ -285,7 +285,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("462481", 10);
+    let i = parseInt("464151", 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (

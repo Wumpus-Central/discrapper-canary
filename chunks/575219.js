@@ -1,36 +1,36 @@
-t.d(l, { v: () => u }), t(35282);
-var a = t(951288);
-t(647438);
-var n = t(442837),
-    o = t(594174),
-    i = t(974674),
-    r = t(231338),
-    s = t(268685);
-let u = {
+n.d(t, { v: () => c }), n(35282);
+var r = n(951288);
+n(647438);
+var i = n(442837),
+    a = n(594174),
+    o = n(974674),
+    s = n(231338),
+    l = n(268685);
+let c = {
     title: "Avatar",
     stories: [
         {
             id: "avatar",
             name: "Avatar",
             component: function (e) {
-                let { size: l = s.EF.SIZE_48, status: t } = e,
-                    { user: r } = (0, n.cj)([o.default], () => ({ user: o.default.getCurrentUser() })),
-                    u = Number(l.split("_")[1]);
-                return (0, a.jsx)(i.qE, {
-                    src: null == r ? void 0 : r.getAvatarURL(void 0, u),
-                    size: l,
+                let { size: t = l.EF.SIZE_48, status: n } = e,
+                    { user: s } = (0, i.cj)([a.default], () => ({ user: a.default.getCurrentUser() })),
+                    c = Number(t.split("_")[1]);
+                return (0, r.jsx)(o.qE, {
+                    src: null == s ? void 0 : s.getAvatarURL(void 0, c),
+                    size: t,
                     "aria-label": "Sample User",
-                    status: t,
+                    status: n,
                 });
             },
             controls: {
                 size: {
                     type: "select",
                     label: "Size",
-                    defaultValue: s.EF.SIZE_48,
-                    options: Object.keys(s.EF).map((e) => ({
+                    defaultValue: l.EF.SIZE_48,
+                    options: Object.keys(l.EF).map((e) => ({
                         label: e,
-                        value: s.EF[e],
+                        value: l.EF[e],
                     })),
                 },
                 status: {
@@ -43,9 +43,9 @@ let u = {
                             value: null,
                         },
                     ].concat(
-                        Object.keys(r.Sk).map((e) => ({
+                        Object.keys(s.Sk).map((e) => ({
                             label: e,
-                            value: r.Sk[e],
+                            value: s.Sk[e],
                         })),
                     ),
                 },

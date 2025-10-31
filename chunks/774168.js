@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(772848),
@@ -9,33 +9,33 @@ var i = n(951288),
     u = n(753797);
 function d(e) {
     let { width: t = 24, height: n = 24, isBadged: l = !1, isTyping: a = !1 } = e,
-        [c] = r.useState(() => (0, o.Z)());
-    return (0, i.jsxs)("svg", {
+        [c] = i.useState(() => (0, o.Z)());
+    return (0, r.jsxs)("svg", {
         width: t,
         height: n,
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("defs", {
-                children: (0, i.jsxs)("mask", {
+            (0, r.jsx)("defs", {
+                children: (0, r.jsxs)("mask", {
                     id: c,
                     children: [
-                        (0, i.jsx)("rect", {
+                        (0, r.jsx)("rect", {
                             fill: "white",
                             width: "100%",
                             height: "100%",
                         }),
                         a &&
-                            (0, i.jsx)("g", {
+                            (0, r.jsx)("g", {
                                 fill: "black",
                                 transform: "translate(5.5, ".concat(10.5, ") scale(").concat(11 / 24, ")"),
-                                children: (0, i.jsx)(s.IJ0, {
+                                children: (0, r.jsx)(s.IJ0, {
                                     dotRadius: 3.5,
                                     spacing: 3,
                                     fill: "black",
                                 }),
                             }),
                         l &&
-                            (0, i.jsx)("circle", {
+                            (0, r.jsx)("circle", {
                                 cx: "20",
                                 cy: "19",
                                 r: "10",
@@ -44,9 +44,9 @@ function d(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)("g", {
+            (0, r.jsx)("g", {
                 mask: "url(#".concat(c, ")"),
-                children: (0, i.jsx)(s.kBi, {
+                children: (0, r.jsx)(s.kBi, {
                     size: "custom",
                     width: t,
                     height: n,
@@ -58,21 +58,21 @@ function d(e) {
 }
 function p(e) {
     var t;
-    let { className: n, unreadCount: r, mentionCount: l, isTyping: o, canBadge: s } = e,
+    let { className: n, unreadCount: i, mentionCount: l, isTyping: o, canBadge: s } = e,
         p = null != l && l > 0,
-        h = null != (t = p ? l : r) ? t : 0,
-        f = s && null != r && r > 0;
-    return (0, i.jsxs)("div", {
+        f = null != (t = p ? l : i) ? t : 0,
+        h = s && null != i && i > 0;
+    return (0, r.jsxs)("div", {
         className: a()(u.chatIcon, n),
         children: [
-            (0, i.jsx)(d, {
-                isBadged: f,
+            (0, r.jsx)(d, {
+                isBadged: h,
                 isTyping: o,
             }),
-            f &&
-                (0, i.jsx)(c.Z, {
+            h &&
+                (0, r.jsx)(c.Z, {
                     hasMentions: p,
-                    truncatedCount: h > 99 ? "99+" : h,
+                    truncatedCount: f > 99 ? "99+" : f,
                     className: u.badge,
                 }),
         ],

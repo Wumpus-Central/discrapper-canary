@@ -4,11 +4,11 @@ n.d(t, {
 }),
     n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(442837),
-    i = n(704215),
-    o = n(907862),
-    s = n(243778),
+    r = n(704215),
+    s = n(907862),
+    o = n(243778),
     c = n(246133),
     d = n(695346),
     u = n(819640),
@@ -16,35 +16,35 @@ var a = n(951288),
     p = n(70956),
     h = n(809930),
     x = n(921944),
-    f = n(231338),
-    b = n(388032),
-    g = n(668073);
+    g = n(231338),
+    f = n(388032),
+    b = n(668073);
 let v = p.Z.Millis.HOUR,
     j = p.Z.Millis.DAY,
     _ = 4 * p.Z.Millis.DAY;
 function y() {
-    let [e, t] = r.useState(Date.now()),
+    let [e, t] = i.useState(Date.now()),
         n = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
         a = (0, l.e7)([m.Z], () => m.Z.getStatus()),
-        o = d.P4.useSetting(),
-        c = (null == o ? void 0 : o.value) != null ? Number(o.value) : null,
+        s = d.P4.useSetting(),
+        c = (null == s ? void 0 : s.value) != null ? Number(s.value) : null,
         p = d.Cr.useSetting(),
-        b = a === f.Sk.DND && null != c && e - c > j && "0" === p,
-        { enabled: g } = (0, h.a)({
+        f = a === g.Sk.DND && null != c && e - c > j && "0" === p,
+        { enabled: b } = (0, h.a)({
             location: "useDoNotDisturbReminderPopoverDismissibleContent",
-            autoTrackExposure: b,
-            disable: !b,
+            autoTrackExposure: f,
+            disable: !f,
         });
     return (
-        r.useEffect(() => {
-            if (a === f.Sk.DND) {
+        i.useEffect(() => {
+            if (a === g.Sk.DND) {
                 t(Date.now());
                 let e = setInterval(() => t(Date.now()), v);
                 return () => clearInterval(e);
             }
         }, [a]),
-        (0, s.bf)(
-            g && !n ? i.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
+        (0, o.bf)(
+            b && !n ? r.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
             {
                 cooldownDurationMs: _,
                 numTimesToRecur: 2,
@@ -55,11 +55,11 @@ function y() {
     );
 }
 function C(e) {
-    let { targetElementRef: t, onDismiss: n, children: r } = e,
+    let { targetElementRef: t, onDismiss: n, children: i } = e,
         {
             enabled: l,
-            titleText: i,
-            bodyText: s,
+            titleText: r,
+            bodyText: o,
         } = (0, h.a)({
             location: "popover",
             autoTrackExposure: !1,
@@ -67,28 +67,28 @@ function C(e) {
     return null != t.current && l
         ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  r,
-                  (0, a.jsx)(o.J2, {
+                  i,
+                  (0, a.jsx)(s.J2, {
                       targetElementRef: t,
-                      title: b.intl.string(i),
-                      body: b.intl.string(s),
+                      title: f.intl.string(r),
+                      body: f.intl.string(o),
                       caretConfig: { align: "start" },
                       gradientColor: "purple",
                       actions: [
                           {
-                              text: b.intl.string(b.t.fwPurU),
+                              text: f.intl.string(f.t.fwPurU),
                               onClick: () => {
-                                  (0, c.Z)({ nextStatus: f.Sk.ONLINE }), null == n || n(x.L.PRIMARY);
+                                  (0, c.Z)({ nextStatus: g.Sk.ONLINE }), null == n || n(x.L.PRIMARY);
                               },
                           },
                       ],
                       graphic: {
                           type: "image",
-                          src: g,
+                          src: b,
                       },
                       onRequestClose: () => (null == n ? void 0 : n(x.L.DISMISS)),
                   }),
               ],
           })
-        : r;
+        : i;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(953529);
+n.d(t, { Z: () => m }), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -42,7 +42,7 @@ let p = (e) => {
             ],
         });
     };
-class h extends i.Component {
+class m extends i.Component {
     render() {
         let { reason: e, className: t } = this.props;
         if (e.type === c.AzA.RECENT_RELEASE_DATE)

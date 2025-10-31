@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -151,11 +151,11 @@ function M(e) {
         R = null != N ? b.default.age(N.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         M = null != n.firstTimeNotice && !s && C && R >= L,
-        [k, j] = (0, f.XR)(
+        [j, k] = (0, f.XR)(
             M ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        U = null != k,
+        U = null != j,
         G = v || U,
         B = (0, y.Ft)(l),
         Z = (0, p.IH)();
@@ -175,7 +175,7 @@ function M(e) {
             });
         },
         V = () => {
-            S(!1), j(T.L.TAKE_ACTION), F();
+            S(!1), k(T.L.TAKE_ACTION), F();
         },
         H =
             void 0 !== P
@@ -207,11 +207,11 @@ function M(e) {
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => S(!1),
                       onCheckItOutClick: F,
-                      markAsDismissed: j,
+                      markAsDismissed: k,
                       config: n.firstTimeNotice,
                       children: H,
                   })
                 : H,
     });
 }
-let k = i.memo(M);
+let j = i.memo(M);

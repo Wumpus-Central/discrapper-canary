@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(481060),
+var i = n(481060),
     l = n(607187),
     a = n(112560),
     o = n(981631),
@@ -9,44 +9,44 @@ var r = n(481060),
     c = n(105740),
     u = n(800350);
 function d(e) {
-    let { channel: t, guild: d, width: p, inPopout: h } = e;
-    return (0, i.jsx)(l.Z, {
+    let { channel: t, guild: d, width: p, inPopout: f } = e;
+    return (0, r.jsx)(l.Z, {
         className: c.root,
-        children: (0, i.jsx)(a.Z, {
+        children: (0, r.jsx)(a.Z, {
             artURL: u,
             size: (0, a.L)(p),
             header: s.intl.string(s.t.O4FiWi),
             onCTAClick: () =>
-                (0, r.ZDy)(
+                (0, i.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
                             n.bind(n, 560114),
                         );
                         return (n) => {
-                            var r, l;
-                            return (0, i.jsx)(
+                            var i, l;
+                            return (0, r.jsx)(
                                 e,
-                                ((r = (function (e) {
+                                ((i = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            i = Object.keys(n);
+                                            r = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (i = i.concat(
+                                            (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            i.forEach(function (t) {
-                                                var i;
-                                                (i = n[t]),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: i,
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[t] = i);
+                                                        : (e[t] = r);
                                             });
                                     }
                                     return e;
@@ -58,22 +58,22 @@ function d(e) {
                                         source: o.t4x.CHANNEL_CALL,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var i = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, i);
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
                                           }
                                           return n;
                                       })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
-                                r),
+                                i),
                             );
                         };
                     },
-                    { contextKey: h ? r.u1M : r.z1l },
+                    { contextKey: f ? i.u1M : i.z1l },
                 ),
             callToAction: s.intl.string(s.t.VINpSK),
         }),

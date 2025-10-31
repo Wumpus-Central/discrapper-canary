@@ -209,7 +209,7 @@ class _ extends o.C {
                 case 9:
                     a.filter = {
                         oneofKind: "clientIp",
-                        clientIp: k.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
+                        clientIp: j.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
                     };
                     break;
                 case 10:
@@ -306,7 +306,7 @@ class _ extends o.C {
             "clientLocation" === e.filter.oneofKind &&
                 N.internalBinaryWrite(e.filter.clientLocation, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             "clientIp" === e.filter.oneofKind &&
-                k.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
+                j.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             "userLocale" === e.filter.oneofKind &&
                 v.internalBinaryWrite(e.filter.userLocale, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             "bot" === e.filter.oneofKind &&
@@ -388,7 +388,7 @@ class _ extends o.C {
                 name: "client_ip",
                 kind: "message",
                 oneof: "filter",
-                T: () => k,
+                T: () => j,
             },
             {
                 no: 10,
@@ -805,7 +805,7 @@ class C extends o.C {
             o = e.pos + t;
         for (; e.pos < o; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.locations.push(x.internalBinaryRead(e, e.uint32(), n));
+            if (1 === t) a.locations.push(L.internalBinaryRead(e, e.uint32(), n));
             else {
                 let o = n.readUnknownField;
                 if ("throw" === o)
@@ -820,7 +820,7 @@ class C extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.locations.length; i++)
-            x.internalBinaryWrite(e.locations[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+            L.internalBinaryWrite(e.locations[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -831,7 +831,7 @@ class C extends o.C {
                 name: "locations",
                 kind: "message",
                 repeat: 1,
-                T: () => x,
+                T: () => L,
             },
         ]);
     }
@@ -974,7 +974,7 @@ class w extends o.C {
     }
 }
 let D = new w();
-class L extends o.C {
+class x extends o.C {
     create(e) {
         let t = { location: { oneofKind: void 0 } };
         return (
@@ -1057,7 +1057,7 @@ class L extends o.C {
         ]);
     }
 }
-let x = new L();
+let L = new x();
 class M extends o.C {
     create(e) {
         let t = { blocks: [] };
@@ -1105,8 +1105,8 @@ class M extends o.C {
         ]);
     }
 }
-let k = new M();
-class j extends o.C {
+let j = new M();
+class k extends o.C {
     create(e) {
         let t = {};
         return (
@@ -1218,7 +1218,7 @@ class j extends o.C {
         ]);
     }
 }
-let U = new j();
+let U = new k();
 class G extends o.C {
     create(e) {
         let t = {

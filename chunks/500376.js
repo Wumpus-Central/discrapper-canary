@@ -84,7 +84,7 @@ function u(e) {
         w = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: D, removeAllGlobalListeners: L } = (0, s.x)();
+        { addGlobalListener: D, removeAllGlobalListeners: x } = (0, s.x)();
     return {
         spinButtonProps: {
             role: "spinbutton",
@@ -104,7 +104,7 @@ function u(e) {
                 R(400), D(window, "contextmenu", w);
             },
             onPressEnd: () => {
-                I(), L();
+                I(), x();
             },
             onFocus: A,
             onBlur: C,
@@ -114,7 +114,7 @@ function u(e) {
                 P(400), D(window, "contextmenu", w);
             },
             onPressEnd: () => {
-                I(), L();
+                I(), x();
             },
             onFocus: A,
             onBlur: C,

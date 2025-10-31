@@ -263,7 +263,7 @@ function x(e) {
                     S >= x - 1 ? P(0) : P(S + 1);
             }
     }
-    let k = (() => {
+    let j = (() => {
         if (null != v) {
             var e;
             return null == (e = v[S]) ? void 0 : e.id;
@@ -289,7 +289,7 @@ function x(e) {
                         role: "combobox",
                         "aria-controls": s,
                         "aria-expanded": x > 0,
-                        "aria-activedescendant": x > 0 && null != k ? k : void 0,
+                        "aria-activedescendant": x > 0 && null != j ? j : void 0,
                         "aria-autocomplete": "list",
                         spellCheck: !1,
                     }),

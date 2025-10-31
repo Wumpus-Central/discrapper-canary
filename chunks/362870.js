@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(515753),
     p = n(393903),
     f = n(266454),
-    h = n(426032),
-    m = n(626135),
+    m = n(426032),
+    h = n(626135),
     g = n(937797),
     _ = n(150560),
     b = n(551913),
     E = n(46140),
     O = n(981631),
     I = n(921944),
-    v = n(388032),
-    y = n(228624);
+    y = n(388032),
+    v = n(228624);
 let C = Math.ceil(Math.sqrt(115200)),
     S = (C - 240) / 2,
     T = function (e) {
@@ -33,7 +33,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                 dismissContent: x,
             } = (function () {
                 let { enabled: e } = g.GE.useConfig({ location: E.dr.PRIVATE_CHANNELS_LIST }),
-                    [t, n] = (0, h.US)(e ? [c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [], I.R.PRIVATE_CHANNELS_LIST, !0),
+                    [t, n] = (0, m.US)(e ? [c.z.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [], I.R.PRIVATE_CHANNELS_LIST, !0),
                     r = i.useCallback(() => {
                         e && n(I.L.TAKE_ACTION);
                     }, [n, e]);
@@ -90,7 +90,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                         glowSpring: 1,
                         delay: 700,
                     }),
-                    m.default.track(O.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+                    h.default.track(O.rMx.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
             }, [R, w]),
             [U, G] = i.useState(-1),
             B = i.useCallback((e) => {
@@ -100,7 +100,7 @@ let C = Math.ceil(Math.sqrt(115200)),
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: y.wrapper,
+                    className: v.wrapper,
                     onMouseEnter: D,
                     onMouseLeave: M,
                     onFocus: D,
@@ -138,13 +138,13 @@ let C = Math.ceil(Math.sqrt(115200)),
                             return e;
                         })(
                             {
-                                className: a()({ [y.withGradientAndBadge]: P }),
+                                className: a()({ [v.withGradientAndBadge]: P }),
                                 icon: u.qDn,
                                 listItemRef: N,
                                 onClick: A,
                                 route: O.Z5c.QUEST_HOME_V2,
                                 selected: l,
-                                text: v.intl.string(v.t.JALI2K),
+                                text: y.intl.string(y.t.JALI2K),
                             },
                             T,
                         )),
@@ -155,7 +155,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(s.animated.div, {
-                                                className: y.shine,
+                                                className: v.shine,
                                                 style: {
                                                     transform: L.to((e) =>
                                                         "translateX(calc("
@@ -165,7 +165,7 @@ let C = Math.ceil(Math.sqrt(115200)),
                                                 },
                                             }),
                                             (0, r.jsx)(s.animated.div, {
-                                                className: y.glow,
+                                                className: v.glow,
                                                 style: {
                                                     opacity: Z.to({
                                                         range: [0, 1],
@@ -174,8 +174,8 @@ let C = Math.ceil(Math.sqrt(115200)),
                                                 },
                                             }),
                                             (0, r.jsx)(u.IGR, {
-                                                className: y.badge,
-                                                text: v.intl.string(v.t.y2b7CA),
+                                                className: v.badge,
+                                                text: y.intl.string(y.t.y2b7CA),
                                                 color: u.TVs.colors.BG_BRAND.css,
                                             }),
                                         ],

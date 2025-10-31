@@ -37,11 +37,11 @@ var c = n(442837),
     P = n(871118),
     w = n(565138),
     D = n(66999),
-    L = n(359110),
-    x = n(12168),
+    x = n(359110),
+    L = n(12168),
     M = n(237583),
-    k = n(131704),
-    j = n(592125),
+    j = n(131704),
+    k = n(592125),
     U = n(430824),
     G = n(496675),
     B = n(699516),
@@ -191,10 +191,10 @@ function ey(e) {
         }),
         { embeddedActivity: w } = (0, $.Z)(o),
         D = eA(w),
-        L = null != P && 0 === s.length ? [P] : s,
-        x = L.length > 0,
-        M = L.length >= 2,
-        [k, U] = i.useState(!x),
+        x = null != P && 0 === s.length ? [P] : s,
+        L = x.length > 0,
+        M = x.length >= 2,
+        [j, U] = i.useState(!L),
         B = K.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         Z =
             null != t && g
@@ -220,7 +220,7 @@ function ey(e) {
                 else {
                     var o;
                     let e = await h.Z.getOrEnsurePrivateChannel(n.id);
-                    r = null != (o = j.Z.getChannel(e)) ? o : null;
+                    r = null != (o = k.Z.getChannel(e)) ? o : null;
                 }
                 return (
                     l()(null != r, "Send channel must be defined"),
@@ -245,7 +245,7 @@ function ey(e) {
                 l()(null != t, "shareToChannelMode should only be true if a valid channel is passed"), (r = t);
             else {
                 let e = await h.Z.openPrivateChannel({ recipientIds: n.id }),
-                    t = j.Z.getChannel(e);
+                    t = k.Z.getChannel(e);
                 l()(null != t, "DM channel must be defined"), (r = t);
             }
             let i = r.type === es.d4z.DM ? eo.xP.DM_REACTION_MESSAGE_SENT : eo.xP.CHANNEL_REACTION_MESSAGE_SENT;
@@ -272,7 +272,7 @@ function ey(e) {
         },
         z = null != f ? f : null != R ? R : null != D ? D : void 0,
         q = () => {
-            E((e) => !e), k && (null == b || b.focus());
+            E((e) => !e), j && (null == b || b.focus());
         },
         X = (e) => {
             U(e), e && (null == b || b.focus());
@@ -304,7 +304,7 @@ function ey(e) {
                               }),
                           }),
                     (0, r.jsxs)("div", {
-                        className: k ? eu.inputContainerShareToChannel : eu.hiddenButRenderedInputField,
+                        className: j ? eu.inputContainerShareToChannel : eu.hiddenButRenderedInputField,
                         children: [
                             (0, r.jsx)(O.A7, {
                                 placeholder: Z,
@@ -336,7 +336,7 @@ function ey(e) {
                                           })
                                     : void 0,
                             }),
-                            x &&
+                            L &&
                                 (0, r.jsx)(p.P3F, {
                                     onClick: () => X(!1),
                                     className: eu.primaryActionPopoutMessageCloseIcon,
@@ -349,7 +349,7 @@ function ey(e) {
                                 }),
                         ],
                     }),
-                    !1 === k &&
+                    !1 === j &&
                         (0, r.jsxs)("div", {
                             className: eu.primaryActionPopoutActionButtons,
                             children: [
@@ -365,7 +365,7 @@ function ey(e) {
                                         },
                                         "toggleMessageMode",
                                     ),
-                                L,
+                                x,
                             ],
                         }),
                 ],
@@ -410,7 +410,7 @@ let eO = (e) => {
                               position: "top",
                               "aria-label": ec.intl.formatToPlainString(ec.t.kilW3l, { emojiName: t.name }),
                               shouldShow: !s && void 0,
-                              children: (0, r.jsx)(x.u, {
+                              children: (0, r.jsx)(L.u, {
                                   emoji: t,
                                   isDisabled: !a,
                                   onClick: () => n({ emoji: t }),
@@ -651,7 +651,7 @@ function eS(e) {
             "onUserPopoutClosed",
             "trackRankingItemInteraction",
         ]);
-    let m = (0, c.e7)([j.Z], () => j.Z.getChannel(null == s ? void 0 : s.channelId)),
+    let m = (0, c.e7)([k.Z], () => k.Z.getChannel(null == s ? void 0 : s.channelId)),
         [b] = i.useMemo(() => (0, R.p9)(m, V.Z, U.Z, G.Z, A.default), [m]),
         { entry: y } = h,
         O = (0, q.dX)(y),
@@ -668,7 +668,7 @@ function eS(e) {
         ),
         T = O ? I : void 0,
         { activity: S, activityApplication: w, fallbackApplication: D } = (0, $.Z)(y),
-        { largeImage: L, smallImage: x } = (0, z.YC)(S, null != w ? w : D),
+        { largeImage: x, smallImage: L } = (0, z.YC)(S, null != w ? w : D),
         { largeImage: M } = (0, z.rv)({ entry: y });
     return (0, r.jsxs)("div", {
         className: eu.popoutContentWrapper,
@@ -706,12 +706,12 @@ function eS(e) {
                     (0, r.jsxs)("div", {
                         className: eu.streamingPopoutHeader,
                         children: [
-                            null != L &&
+                            null != x &&
                                 (0, r.jsx)("div", {
                                     className: eu.popoutThumbnailContainer,
                                     children: (0, r.jsx)(Q.E, {
-                                        image: L,
-                                        smallImage: x,
+                                        image: x,
+                                        smallImage: L,
                                         onClick: null != l ? l : T,
                                         size: Q.J.SIZE_72,
                                     }),
@@ -751,7 +751,7 @@ function eS(e) {
 }
 function eA(e) {
     let t = (0, c.e7)([U.Z], () => U.Z.getGuild((0, y.j)(null == e ? void 0 : e.location))),
-        n = (0, c.e7)([j.Z], () => j.Z.getChannel((0, y.p)(null == e ? void 0 : e.location))),
+        n = (0, c.e7)([k.Z], () => k.Z.getChannel((0, y.p)(null == e ? void 0 : e.location))),
         i = (0, c.Wu)([F.default], () => {
             var t, n;
             return null !=
@@ -759,7 +759,7 @@ function eA(e) {
                 ? n
                 : [];
         });
-    return null != e && null != t && null != n && k.sR.has(n.type)
+    return null != e && null != t && null != n && j.sR.has(n.type)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
@@ -767,7 +767,7 @@ function eA(e) {
                       children: [
                           (0, r.jsxs)(p.P3F, {
                               "aria-label": ec.intl.string(ec.t["W/A4Qp"]),
-                              onClick: () => (0, L.Kh)(n.id),
+                              onClick: () => (0, x.Kh)(n.id),
                               className: eu.voiceChannelPopoutReactorChannel,
                               children: [
                                   (0, r.jsx)(w.Z, {
@@ -829,7 +829,7 @@ function eC(e) {
         h = (0, c.e7)([V.Z], () => V.Z.isInChannel(null == s ? void 0 : s.id)),
         g = i.useMemo(() => {
             for (let e of f) {
-                let t = j.Z.getDMFromUserId(e.user.id),
+                let t = k.Z.getDMFromUserId(e.user.id),
                     n = null != t && Z.ZP.isChannelMuted(null, t),
                     r = B.Z.isBlockedOrIgnored(e.user.id);
                 if (n || r) return !0;
@@ -843,7 +843,7 @@ function eC(e) {
         };
     let E = null != o,
         b = () => {
-            m.Z.updateChatOpen(s.id, !0), (0, L.Kh)(s.id), null == a || a(s);
+            m.Z.updateChatOpen(s.id, !0), (0, x.Kh)(s.id), null == a || a(s);
         },
         y = () => {
             v.Z.handleVoiceConnect({

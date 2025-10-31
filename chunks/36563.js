@@ -105,21 +105,21 @@ function I(e) {
             onClickOverflow: P,
             onFocusOverflow: w,
             onUserClick: D,
-            onUserPopoutRequestClose: L,
-            "aria-label": x,
+            onUserPopoutRequestClose: x,
+            "aria-label": L,
             "aria-labelledby": M,
-            "aria-hidden": k,
+            "aria-hidden": j,
         } = e,
-        [j, U] = i.useState(!1),
+        [k, U] = i.useState(!1),
         G = O(I),
         B = i.useRef(null),
         Z = t.length - a,
         F = Z + 1,
-        V = Z > 0 && !C && !k,
+        V = Z > 0 && !C && !j,
         H = () =>
             (0, r.jsx)(u.VqE, {
                 className: m.popoutWrapper,
-                "aria-label": x,
+                "aria-label": L,
                 "aria-labelledby": M,
                 children: (0, r.jsx)(u.Ttm, {
                     className: m.scroller,
@@ -134,7 +134,7 @@ function I(e) {
                                 disablePopout: "function" == typeof R ? R(e.id) : R,
                                 onClick: D,
                                 onPopoutRequestClose: () => {
-                                    U(!1), null == L || L();
+                                    U(!1), null == x || x();
                                 },
                                 onContextMenu: (t) =>
                                     (0, d.jW)(
@@ -213,7 +213,7 @@ function I(e) {
                 {
                     targetElementRef: B,
                     renderPopout: H,
-                    shouldShow: j,
+                    shouldShow: k,
                     position: "bottom",
                     onRequestClose: () => U(!1),
                     children: (t) =>
@@ -242,10 +242,10 @@ function I(e) {
         ? null
         : (0, r.jsxs)("div", {
               role: "group",
-              "aria-label": x,
+              "aria-label": L,
               "aria-labelledby": M,
               className: o()(b, m.avatars),
-              "aria-hidden": k,
+              "aria-hidden": j,
               children: [Y(), W()],
           });
 }

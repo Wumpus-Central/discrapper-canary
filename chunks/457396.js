@@ -23,8 +23,8 @@ var r = n(951288),
     E = n(594174),
     O = n(78839),
     I = n(431),
-    v = n(626135),
-    y = n(74538),
+    y = n(626135),
+    v = n(74538),
     C = n(502087),
     S = n(367074),
     T = n(695349),
@@ -60,7 +60,7 @@ let J = (e) => {
             l = (0, A.Ng)(),
             a = (0, S.Vi)(),
             o = (0, F.V)(),
-            c = (0, y.Qo)(n, r),
+            c = (0, v.Qo)(n, r),
             u = (0, s.e7)([C.Z], () => C.Z.getCreatedAtOverride()),
             d = t || null != i || null != l || a || null != o || c,
             p = null != u ? u : null == n ? void 0 : n.createdAt;
@@ -96,8 +96,8 @@ let J = (e) => {
         let ea = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
             es = (0, s.e7)([O.Z], () => O.Z.getPremiumTypeSubscription()),
             { variant: eo, hasNitroTabBadgeOfferReminder: ec } = (0, N.ZP)("PremiumDiscountEndingNotice"),
-            eu = (0, y.Qo)(ea, es),
-            ed = (0, y.M5)(ea, W.PremiumTypes.TIER_2),
+            eu = (0, v.Qo)(ea, es),
+            ed = (0, v.M5)(ea, W.PremiumTypes.TIER_2),
             ep = (0, l.JA)("nitro"),
             ef = (0, Z.N)(),
             em = (0, A.Ng)(),
@@ -108,9 +108,9 @@ let J = (e) => {
             eE = (0, F.V)(),
             eO = (0, M.eW)(),
             eI = (0, D._h)(),
-            ev = (0, z.Kn)(),
-            ey = I.Z.getAlmostExpiringTrialOffers([W.Si.TIER_2]),
-            eC = ec && ey.length > 0 && null != ef && null != ef.expires_at,
+            ey = (0, z.Kn)(),
+            ev = I.Z.getAlmostExpiringTrialOffers([W.Si.TIER_2]),
+            eC = ec && ev.length > 0 && null != ef && null != ef.expires_at,
             eS = I.Z.getAlmostExpiringDiscountOffers([W.Si.TIER_2]),
             eT = ec && eS.length > 0 && null != em && null != em.expires_at,
             eN = null != eh && null != es && es.status === q.O0b.CANCELED,
@@ -156,7 +156,7 @@ let J = (e) => {
             return null;
         let eY = () => {
             eA === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eZ(K.L.TAKE_ACTION),
-                v.default.track(q.rMx.NITRO_TAB_VISITED, {
+                y.default.track(q.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: C,
                     has_premium: eu,
                 }),
@@ -200,7 +200,7 @@ let J = (e) => {
                   })),
                   (C = 4),
                   (eY = () => {
-                      v.default.track(q.rMx.NITRO_TAB_VISITED, {
+                      y.default.track(q.rMx.NITRO_TAB_VISITED, {
                           badge_decorator: C,
                           has_premium: eu,
                       }),
@@ -235,7 +235,7 @@ let J = (e) => {
                                     })),
                           (C = 3))
                         : null == ef || eL
-                          ? ev
+                          ? ey
                               ? ((n = (0, r.jsx)(H.l, {
                                     isSelected: et,
                                     onSelect: () =>
@@ -267,7 +267,7 @@ let J = (e) => {
             })),
             (C = 4),
             (eY = () => {
-                v.default.track(q.rMx.NITRO_TAB_VISITED, {
+                y.default.track(q.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: C,
                     has_premium: eu,
                 }),
@@ -331,7 +331,7 @@ let J = (e) => {
                   }),
             X),
         );
-        return ev
+        return ey
             ? (0, r.jsx)(H.C, { children: eW })
             : eN && eB === o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === C
               ? (0, r.jsx)(k.Z, {

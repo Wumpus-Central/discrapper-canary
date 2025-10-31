@@ -14,8 +14,8 @@ var i = n(951288),
     h = n(499254),
     v = n(541099),
     y = n(827498),
-    x = n(392370),
-    g = n(98880),
+    g = n(392370),
+    x = n(98880),
     b = n(804307),
     N = n(520315),
     j = n(532309),
@@ -70,7 +70,7 @@ function k(e) {
             commandResults: f,
             hasCommandResults: h,
             applicationResults: v,
-        } = (0, x.pe)({
+        } = (0, g.pe)({
             context: t,
             query: n,
             searchesActivities: !0,
@@ -78,10 +78,10 @@ function k(e) {
             searchesBots: u,
         }),
         {
-            fetchState: g,
+            fetchState: x,
             applicationResults: b,
             fetchNextPage: N,
-        } = (0, x.Q2)({
+        } = (0, g.Q2)({
             query: n,
             context: t,
             fetches: !0,
@@ -89,9 +89,9 @@ function k(e) {
             entrypoint: r,
         });
     l.useEffect(() => {
-        s && g === m.M.FETCHED && N();
-    }, [N, g, s]);
-    let j = null == g || g === m.M.FETCHING,
+        s && x === m.M.FETCHED && N();
+    }, [N, x, s]);
+    let j = null == x || x === m.M.FETCHING,
         E = l.useMemo(() => {
             let e = v.map((e) => ({
                     application: e,
@@ -150,12 +150,12 @@ function M(e) {
     var t, n;
     let { context: r, commandResults: a, query: o } = e,
         m = a.length > 4,
-        x = l.useMemo(() => (m ? a.slice(0, 4) : a), [a, m]),
-        [g, b] = l.useState(!1),
-        j = null != (t = (0, s.Z)(g)) ? t : g,
+        g = l.useMemo(() => (m ? a.slice(0, 4) : a), [a, m]),
+        [x, b] = l.useState(!1),
+        j = null != (t = (0, s.Z)(x)) ? t : x,
         C = l.useCallback(() => b((e) => !e), []),
         A = (null != (n = (0, s.Z)(o)) ? n : o)[0] !== o[0],
-        T = g && !A;
+        T = x && !A;
     l.useLayoutEffect(() => b(!1), [A]);
     let {
         ref: L,
@@ -169,16 +169,16 @@ function M(e) {
     });
     l.useEffect(() => {
         !j &&
-            g &&
+            x &&
             (0, c.yw)(O.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: y.L3.SEARCH,
                 source: v.Z.entrypoint(),
                 num: a.length,
             });
-    }, [a.length, j, g]);
+    }, [a.length, j, x]);
     let w = T || R,
         k = T ? E.Z.buttonTypes.VIEW_LESS : E.Z.buttonTypes.VIEW_MORE,
-        M = w ? a : x;
+        M = w ? a : g;
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(E.Z, {
@@ -243,7 +243,7 @@ function U(e) {
             l.current = e;
         },
         children: (0, i.jsx)(
-            g.kA,
+            x.kA,
             ((t = T({}, e)),
             (n = n =
                 {
@@ -309,7 +309,7 @@ function D(e) {
                                   {
                                       context: t,
                                       application: l,
-                                      look: g.U4.LARGE_BANNER,
+                                      look: x.U4.LARGE_BANNER,
                                       location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                       sectionName: y.L3.SEARCH,
                                       resultsPosition: n,
@@ -319,14 +319,14 @@ function D(e) {
                                   l.id,
                               );
                           }),
-                          l && Z.map((e) => (0, i.jsx)(b.Z, { look: g.U4.LARGE_BANNER }, e)),
+                          l && Z.map((e) => (0, i.jsx)(b.Z, { look: x.U4.LARGE_BANNER }, e)),
                       ],
                   }),
               ],
           });
 }
 function H(e) {
-    let { onClickAppCard: t } = (0, g.cG)(e);
+    let { onClickAppCard: t } = (0, x.cG)(e);
     return (0, i.jsx)(P.Z, {
         application: e.application,
         onClick: t,

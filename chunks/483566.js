@@ -131,22 +131,22 @@ function g(e) {
         S = h(e),
         { labelId: A, controlId: C, errorMessageId: N, describedById: R, helperTextId: P, descriptionId: w } = S,
         D = "group" === b || "radiogroup" === b,
-        L = D ? "span" : "label",
-        x = D ? "fieldset" : "div",
+        x = D ? "span" : "label",
+        L = D ? "fieldset" : "div",
         M = D
             ? (0, r.jsx)("legend", {
                   id: A,
                   children: (0, r.jsx)(s.n, { children: t }),
               })
             : null,
-        k = null != t && "" !== t,
-        j = null != l && "" !== l,
-        U = k
+        j = null != t && "" !== t,
+        k = null != l && "" !== l,
+        U = j
             ? (0, r.jsxs)(u.x, {
                   "aria-hidden": D,
                   "data-interactive": I,
                   id: A,
-                  tag: L,
+                  tag: x,
                   variant: "text-md/medium",
                   color: "text-primary",
                   htmlFor: C,
@@ -179,7 +179,7 @@ function g(e) {
             : null;
     return (0, r.jsx)(d.z.Provider, {
         value: S,
-        children: (0, r.jsxs)(x, {
+        children: (0, r.jsxs)(L, {
             role: b,
             ref: T,
             className: f.container,
@@ -189,12 +189,12 @@ function g(e) {
             disabled: D ? a : void 0,
             children: [
                 M,
-                k || j
+                j || k
                     ? (0, r.jsxs)("div", {
                           className: f.labelContainer,
                           children: [
                               n ? (0, r.jsx)(s.n, { children: U }) : U,
-                              j &&
+                              k &&
                                   (0, r.jsx)(u.x, {
                                       variant: "text-sm/normal",
                                       color: "text-secondary",

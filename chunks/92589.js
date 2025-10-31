@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var l = n(907331),
@@ -33,29 +33,29 @@ function d(e) {
     }
     return e;
 }
-let g = (e) => {
+let p = (e) => {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
-        g = (0, l.O)(
+        p = (0, l.O)(
             (e) => {
                 null == n || n(e);
             },
             0.33,
             null != n,
         ),
-        { bannerUrl: p, bannerAnimatedUrl: f } = (0, a._M)(t),
+        { bannerUrl: g, bannerAnimatedUrl: f } = (0, a._M)(t),
         h = null != t.textColor ? { color: t.textColor } : void 0,
         C = null != t.body && "" !== t.body,
-        _ = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        m = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
-        ref: g,
+        ref: p,
         className: u.immersiveBannerBlock,
         children: [
             (0, r.jsx)("div", {
                 className: u.banner,
                 children:
-                    null != p &&
+                    null != g &&
                     (0, r.jsx)(o.Z, {
-                        bannerStatic: p,
+                        bannerStatic: g,
                         bannerAnimated: f,
                     }),
             }),
@@ -77,14 +77,14 @@ let g = (e) => {
                             style: d({}, h),
                             children: t.title,
                         }),
-                        C || _
+                        C || m
                             ? (0, r.jsxs)(i.Text, {
                                   variant: "text-md/medium",
                                   style: d({}, h),
                                   children: [
                                       C && t.body,
-                                      C && _ && " ",
-                                      _ &&
+                                      C && m && " ",
+                                      m &&
                                           (0, r.jsx)(i.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,

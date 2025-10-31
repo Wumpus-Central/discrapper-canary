@@ -46,7 +46,7 @@ var r = n(951288),
     Q = n(388032),
     Y = n(43617),
     J = n(520310);
-function q(e) {
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,7 +71,7 @@ function q(e) {
     }
     return e;
 }
-let K = ["user_urf", "message_urf", "guild_urf"];
+let q = ["user_urf", "message_urf", "guild_urf"];
 function X(e, t) {
     let { elements: n } = e;
     return n.find((e) => {
@@ -130,7 +130,7 @@ let ee = (e) => {
         eC = i.useMemo(() => (0, m.VP)(eu, em, eo, eO, ej), [eu, em, eo, eO, ej]),
         eN = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                r = q({}, eO);
+                r = K({}, eO);
             (r[e] = {
                 value: t,
                 isValid: n,
@@ -167,7 +167,7 @@ let ee = (e) => {
                                               }),
                                         e
                                     );
-                                })(q({}, e), { [t]: n }),
+                                })(K({}, e), { [t]: n }),
                             );
             }
         }, [eo]),
@@ -317,12 +317,12 @@ let ee = (e) => {
                         (0, r.jsx)(w.Z, {
                             element: eo,
                             onChange: (e, t) => {
-                                let n = q({}, ej);
+                                let n = K({}, ej);
                                 e in ej ? delete n[e] : (n[e] = t), ey(n);
                             },
                             state: ej,
                         }),
-                    K.includes(n.name) &&
+                    q.includes(n.name) &&
                         null != em &&
                         em.length > 0 &&
                         (0, r.jsx)(v.Z, {
@@ -330,7 +330,7 @@ let ee = (e) => {
                             onChange: eN,
                             state: eO,
                         }),
-                    K.includes(n.name) &&
+                    q.includes(n.name) &&
                         null != eu &&
                         eu.length > 0 &&
                         (0, r.jsx)(O.Z, {

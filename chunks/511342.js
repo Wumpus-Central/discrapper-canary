@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(437329);
 function f(e) {
     let { guild: t, markAsDismissed: n, renderTargetElement: f } = e,
-        h = i.useRef(null),
-        m = {
+        m = i.useRef(null),
+        h = {
             text: d.intl.string(u.default.Xnghqy),
             onClick: () => {
                 s.Z.open(t.id, o.pNK.BOOST_PERKS, { section: a.Z.GUILD_BOOSTING_PROGRESS_BAR }), n(c.L.TAKE_ACTION);
@@ -21,11 +21,11 @@ function f(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                ref: h,
+                ref: m,
                 children: f(),
             }),
             (0, r.jsx)(l.Mb, {
-                targetElementRef: h,
+                targetElementRef: m,
                 title: d.intl.string(u.default.UuwXRZ),
                 body: d.intl.string(u.default.MIwlcR),
                 caretConfig: {
@@ -33,7 +33,7 @@ function f(e) {
                     align: "center",
                 },
                 assetUrl: p.Z,
-                action: m,
+                action: h,
                 onRequestClose: () => n(c.L.USER_DISMISS),
             }),
         ],

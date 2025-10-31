@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -41,7 +41,7 @@ function b(e, t) {
     E(e), e ? _.delete(t) : _.add(t), (_ = new Set(_));
 }
 function y(e, t) {
-    return !!g(e) && null != h && (b(e, t), h.setInteractionEnabled(!e), L.emitChange(), !0);
+    return !!g(e) && null != h && (b(e, t), h.setInteractionEnabled(!e), x.emitChange(), !0);
 }
 function O(e, t) {
     return (
@@ -99,7 +99,7 @@ class D extends (r = i.ZP.Store) {
     }
 }
 f(D, "displayName", "Overlay-v3-Native-Input-Lock-Store");
-let L = new D(
+let x = new D(
         a.Z,
         __OVERLAY__ || !u.iP
             ? {}
@@ -114,4 +114,4 @@ let L = new D(
                   OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: P,
               },
     ),
-    x = L;
+    L = x;

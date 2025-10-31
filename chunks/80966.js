@@ -106,11 +106,11 @@ class m extends i.Component {
                 onPause: P,
                 onEnded: w,
                 onControlsShow: D,
-                onControlsHide: L,
-                onVolumeChange: x,
+                onControlsHide: x,
+                onVolumeChange: L,
                 onMute: M,
-                disableArrowKeySeek: k,
-                alt: j = c.intl.string(c.t.FlNoSV),
+                disableArrowKeySeek: j,
+                alt: k = c.intl.string(c.t.FlNoSV),
             } = e,
             U = p(e, [
                 "src",
@@ -147,7 +147,7 @@ class m extends i.Component {
             _(
                 d(
                     {
-                        alt: j,
+                        alt: k,
                         className: i,
                         src: f,
                     },
@@ -167,7 +167,7 @@ class m extends i.Component {
                             } = e,
                             d = !((m <= l.N_j && g <= l.XKF) || (m <= l.XKF && g <= l.N_j));
                         return (0, r.jsx)(s.ZP, {
-                            alt: j,
+                            alt: k,
                             className: u,
                             forceExternal: d,
                             src: t,
@@ -190,13 +190,13 @@ class m extends i.Component {
                             onPlay: R,
                             onPause: P,
                             onEnded: w,
-                            onVolumeChange: x,
+                            onVolumeChange: L,
                             onMute: M,
                             onControlsShow: D,
-                            onControlsHide: L,
+                            onControlsHide: x,
                             mimeType: S,
                             downloadable: b,
-                            disableArrowKeySeek: k,
+                            disableArrowKeySeek: j,
                         });
                     },
                 },

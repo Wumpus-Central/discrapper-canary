@@ -114,11 +114,11 @@ function w(e) {
 function D(e) {
     O = e.afk;
 }
-function L(e) {
+function x(e) {
     let { userId: t, speakingFlags: n } = e;
     return n !== g.Dg.NONE && t === h.default.getId() && M({}), !1;
 }
-function x(e) {
+function L(e) {
     let { state: t } = e;
     return (T = t === m.$7l.BACKGROUND), (r = null), (b = Date.now()), N(), !1;
 }
@@ -138,11 +138,11 @@ function M(e) {
         !1)
     );
 }
-function k() {
+function j() {
     if (!d.Z.getConfig({ location: "handleSettingsProtoUpdate" }).settings_updates) return !1;
     M({});
 }
-class j extends (i = s.ZP.Store) {
+class k extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(h.default);
     }
@@ -162,17 +162,17 @@ class j extends (i = s.ZP.Store) {
         return I;
     }
 }
-E(j, "displayName", "IdleStore");
-let U = new j(l.Z, {
+E(k, "displayName", "IdleStore");
+let U = new k(l.Z, {
     IDLE: w,
     AFK: D,
-    SPEAKING: L,
-    APP_STATE_UPDATE: x,
+    SPEAKING: x,
+    APP_STATE_UPDATE: L,
     OVERLAY_SET_NOT_IDLE: M,
     CHANNEL_SELECT: M,
     VOICE_CHANNEL_SELECT: M,
     WINDOW_FOCUS: M,
     OVERLAY_INITIALIZE: M,
     OVERLAY_SET_INPUT_LOCKED: M,
-    USER_SETTINGS_PROTO_UPDATE: k,
+    USER_SETTINGS_PROTO_UPDATE: j,
 });

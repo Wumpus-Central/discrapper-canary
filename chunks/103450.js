@@ -29,11 +29,11 @@ var r = n(647438),
     P = n(594174),
     w = n(979651),
     D = n(181106),
-    L = n(417363),
-    x = n(358085),
+    x = n(417363),
+    L = n(358085),
     M = n(804739),
-    k = n(981631),
-    j = n(701488),
+    j = n(981631),
+    k = n(701488),
     U = n(388032);
 function G(e) {
     var t, n;
@@ -59,14 +59,14 @@ function G(e) {
             activity: B,
         }),
         et = (0, i.e7)(
-            [A.Z, O.Z, L.Z, I.Z],
+            [A.Z, O.Z, x.Z, I.Z],
             () =>
                 Q ||
                 (null != X &&
                     (0, M.t)({
                         LibraryApplicationStore: A.Z,
                         LaunchableGameStore: O.Z,
-                        DispatchApplicationStore: L.Z,
+                        DispatchApplicationStore: x.Z,
                         ConnectedAppsStore: I.Z,
                         applicationId: X,
                     })),
@@ -82,7 +82,7 @@ function G(e) {
         ),
         er = (0, i.e7)(
             [D.Z],
-            () => null != B && null != B.application_id && D.Z.getState(B.application_id, k.mFx.JOIN) === k.OcF.LOADING,
+            () => null != B && null != B.application_id && D.Z.getState(B.application_id, j.mFx.JOIN) === j.OcF.LOADING,
         ),
         ei = (0, b.q)(X),
         ea = (0, y.A)(ei),
@@ -124,9 +124,9 @@ function G(e) {
             return null != e && e.applicationId === (null == B ? void 0 : B.application_id);
         }),
         ec = (0, l.O)();
-    if (Q && null == Z && (null == B || !(0, h.Z)(B, k.xjy.CONTEXTLESS))) return null;
-    let eu = !x.isPlatformEmbedded;
-    if (!((0, h.Z)(B, k.xjy.JOIN) || Q) || null == X) return null;
+    if (Q && null == Z && (null == B || !(0, h.Z)(B, j.xjy.CONTEXTLESS))) return null;
+    let eu = !L.isPlatformEmbedded;
+    if (!((0, h.Z)(B, j.xjy.JOIN) || Q) || null == X) return null;
     let ed = !$ || (Q && !el),
         ef = ed && (eu || et) && !z && !en;
     ed
@@ -135,7 +135,7 @@ function G(e) {
     let e_ = null != (n = null == Z ? void 0 : Z.launchId) ? n : null == B ? void 0 : B.session_id,
         ep = async (e, t) => {
             if (null == e_ || null == X) return;
-            let n = (0, h.Z)(t, k.xjy.EMBEDDED),
+            let n = (0, h.Z)(t, j.xjy.EMBEDDED),
                 r = R.Z.getVoiceChannelId(),
                 i = v.Z.getChannel(r);
             if (
@@ -145,7 +145,7 @@ function G(e) {
                     applicationId: X,
                     channelId: r,
                     messageId: null,
-                    intent: j.Ws.PLAY,
+                    intent: k.Ws.PLAY,
                     embedded: n,
                     locationObject: ec.location,
                     analyticsLocations: K,
@@ -154,7 +154,7 @@ function G(e) {
             ) {
                 var a;
                 (0, g.Z)({
-                    type: k.q5t.JOIN,
+                    type: j.q5t.JOIN,
                     userId: e.id,
                     guildId: null == i ? void 0 : i.guild_id,
                     channelId: r,
@@ -173,10 +173,10 @@ function G(e) {
                 q(!0),
                     null != B &&
                         (e = await a.Z.sendActivityInviteUser({
-                            type: k.mFx.JOIN_REQUEST,
+                            type: j.mFx.JOIN_REQUEST,
                             userId: F.id,
                             activity: B,
-                            location: k.Sbl.USER_ACTIVITY_ACTIONS,
+                            location: j.Sbl.USER_ACTIVITY_ACTIONS,
                         })),
                     null != e && s.default.selectPrivateChannel(e.id);
             }

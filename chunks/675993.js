@@ -14,8 +14,8 @@ var i = n(951288),
     h = n(835473),
     v = n(70097),
     y = n(240991),
-    x = n(973616),
-    g = n(626135),
+    g = n(973616),
+    x = n(626135),
     b = n(783097),
     N = n(695676),
     j = n(520315),
@@ -33,17 +33,17 @@ function I(e) {
         }, [n]),
         f = (0, o.e7)([c.Z], () => c.Z.inDevModeForApplication(n.id)),
         { isSlideReady: h } = (0, N.hH)(),
-        [y, x] = l.useState(!1);
+        [y, g] = l.useState(!1);
     l.useEffect(() => {
-        h && x(!0);
+        h && g(!0);
     }, [h]);
-    let g = null != r;
+    let x = null != r;
     return (0, i.jsxs)("div", {
         className: _.container,
         children: [
             (0, i.jsxs)("div", {
                 children: [
-                    g
+                    x
                         ? (0, i.jsxs)("div", {
                               className: _.videoContainer,
                               children: [
@@ -66,7 +66,7 @@ function I(e) {
                           })
                         : null,
                     (0, i.jsxs)("div", {
-                        className: g ? _.overviewContainerWithVideo : _.overviewContainerNoVideo,
+                        className: x ? _.overviewContainerWithVideo : _.overviewContainerNoVideo,
                         children: [
                             (0, i.jsx)(T, { application: n }),
                             (0, i.jsx)(L, { application: n }),
@@ -198,7 +198,7 @@ function R(e) {
     var t;
     let { application: n } = e;
     if (!(0, b.ye)(n)) return null;
-    let l = null != (t = (0, b.BQ)(n) ? (n instanceof x.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
+    let l = null != (t = (0, b.BQ)(n) ? (n instanceof g.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
     return (0, i.jsxs)("div", {
         className: _.tagContainer,
         children: [
@@ -225,12 +225,12 @@ function Z(e) {
             application: r,
             botUserId: v,
         }),
-        { analyticsLocations: x } = (0, p.ZP)();
+        { analyticsLocations: g } = (0, p.ZP)();
     return (l.useEffect(() => {
         if (!(0, b.BQ)(r) || !(0, b.ye)(r)) return;
         let e = setTimeout(() => {
             (null == u || null == v) &&
-                g.default.track(P.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
+                x.default.track(P.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
                     application_id: r.id,
                     is_primary_entry_point_command_non_null: null != u,
                     is_bot_user_id_non_null: null != v,
@@ -254,7 +254,7 @@ function Z(e) {
                           ? (0, i.jsx)(E.Z, {
                                 botUserId: v,
                                 applicationId: r.id,
-                                analyticsLocations: x,
+                                analyticsLocations: g,
                             })
                           : null,
                   ],

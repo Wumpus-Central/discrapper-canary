@@ -70,7 +70,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
         e
     );
 }
-function j(e) {
+function k(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -209,7 +209,7 @@ class U extends i.PureComponent {
                     text: P.intl.string(P.t.qZZUy6),
                 }),
             });
-            let i = (e) => e.map((e) => (0, r.jsx)(j, { code: e }, e.code));
+            let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
             e = (0, r.jsxs)(c.Kqy, {
                 gap: 16,
                 children: [
@@ -351,7 +351,7 @@ class U extends i.PureComponent {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         g.Z,
-                        k(L({}, e), {
+                        j(L({}, e), {
                             handleSubmit: (e) =>
                                 u.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                     this.viewBackupCodes(e);
@@ -367,7 +367,7 @@ class U extends i.PureComponent {
                     (t) =>
                         (0, r.jsx)(
                             p.Z,
-                            k(L({}, t), {
+                            j(L({}, t), {
                                 handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                                 maxLength: 8,
                                 title: P.intl.string(P.t["mGppp/"]),
@@ -407,7 +407,7 @@ class U extends i.PureComponent {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         g.Z,
-                        k(L({}, e), {
+                        j(L({}, e), {
                             handleSubmit: u.Z.disableSMS,
                             title: P.intl.string(P.t.KLWnit),
                             children: P.intl.string(P.t["W0/Duf"]),

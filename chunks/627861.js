@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(314897),
     w = n(831506),
     D = n(293273),
-    L = n(158776),
-    x = n(885110),
+    x = n(158776),
+    L = n(885110),
     M = n(594174),
-    k = n(181106),
-    j = n(768581),
+    j = n(181106),
+    k = n(768581),
     U = n(823379),
     G = n(358085),
     B = n(758371),
@@ -326,12 +326,12 @@ function ep(e) {
             message: P,
             onView: w,
             partyStatusElement: D,
-            presenceActivity: L,
+            presenceActivity: x,
         } = e,
-        x = (0, O.A)(S),
+        L = (0, O.A)(S),
         M = (0, p.ye)(S),
         { bot: U } = S,
-        G = j.ZP.getApplicationIconURL({
+        G = k.ZP.getApplicationIconURL({
             id: S.id,
             icon: S.icon,
             bot: U,
@@ -340,13 +340,13 @@ function ep(e) {
             null !=
             (g = (0, $.v)({
                 messageId: P.id,
-                presenceActivity: L,
+                presenceActivity: x,
                 application: S,
             }))
                 ? g
                 : void 0,
         W = h.u.ACTIVITY,
-        K = !(0, q.Z)(L, P, S.id),
+        K = !(0, q.Z)(x, P, S.id),
         Q = (0, H.H)(P),
         { openGameProfileModal: ee, launchableAppId: et } = ef(S.id, P.author.id),
         ei = !!et,
@@ -367,22 +367,22 @@ function ep(e) {
             [es],
         ),
         { canJoin: ec, remoteJoinPlatform: ed } = (0, Z.h)({
-            presenceActivity: L,
+            presenceActivity: x,
             currentUserPresenceActivity: N,
             currentUserId: C,
             message: P,
             application: S,
             isEmbeddedApplication: M,
-            isFrameApplication: x,
+            isFrameApplication: L,
             isGameLaunchable: ei,
         }),
-        ep = eu(L, N, P, S),
-        eh = (0, Y.g)(N, L),
-        em = (0, F.L)(L, P, S, C),
+        ep = eu(x, N, P, S),
+        eh = (0, Y.g)(N, x),
+        em = (0, F.L)(x, P, S, C),
         eg = (0, l.e7)(
-            [k.Z],
+            [j.Z],
             () =>
-                null != L && null != L.application_id && k.Z.getState(L.application_id, en.mFx.JOIN) === en.OcF.LOADING,
+                null != x && null != x.application_id && j.Z.getState(x.application_id, en.mFx.JOIN) === en.OcF.LOADING,
         ),
         eE = i.useMemo(
             () =>
@@ -395,14 +395,14 @@ function ep(e) {
                               var e, t;
                               d.Z.join({
                                   userId: P.author.id,
-                                  sessionId: L.session_id,
-                                  applicationId: L.application_id,
+                                  sessionId: x.session_id,
+                                  applicationId: x.application_id,
                                   channelId: A.id,
                                   messageId: P.id,
                                   source: en.Sbl.MESSAGE_EMBED,
                                   analyticsLocations: T,
-                                  embedded: (0, z.Z)(L, en.xjy.EMBEDDED),
-                                  remotePartyId: null != ed ? (null == (e = L.party) ? void 0 : e.id) : void 0,
+                                  embedded: (0, z.Z)(x, en.xjy.EMBEDDED),
+                                  remotePartyId: null != ed ? (null == (e = x.party) ? void 0 : e.id) : void 0,
                               }),
                                   (0, X.Z)({
                                       type: en.q5t.JOIN,
@@ -410,8 +410,8 @@ function ep(e) {
                                       userId: P.author.id,
                                       guildId: A.guild_id,
                                       channelId: A.id,
-                                      applicationId: L.application_id,
-                                      partyId: null == (t = L.party) ? void 0 : t.id,
+                                      applicationId: x.application_id,
+                                      partyId: null == (t = x.party) ? void 0 : t.id,
                                       messageId: P.id,
                                       analyticsLocations: T,
                                       remoteJoinPlatform: ed,
@@ -423,7 +423,7 @@ function ep(e) {
                             label: ea.intl.string(ea.t.VJlc0S),
                             trackingArea: m.j_.SYNC,
                             onClick: () => {
-                                null != L && f.Z_(L, P.author.id);
+                                null != x && f.Z_(x, P.author.id);
                             },
                         }
                       : em
@@ -431,11 +431,11 @@ function ep(e) {
                               label: ea.intl.string(ea.t["hC/Zey"]),
                               trackingArea: m.j_.INVITE,
                               onClick: () => {
-                                  null != L &&
+                                  null != x &&
                                       u.Z.sendActivityInvite({
                                           type: en.mFx.JOIN,
                                           channelId: A.id,
-                                          activity: L,
+                                          activity: x,
                                           location: en.Sbl.MESSAGE_EMBED,
                                       });
                               },
@@ -452,7 +452,7 @@ function ep(e) {
                           : null != el
                             ? el
                             : void 0,
-            [ec, ep, em, eh, el, P.author.id, P.id, L, A.id, A.guild_id, T, ed, C, eg],
+            [ec, ep, em, eh, el, P.author.id, P.id, x, A.id, A.guild_id, T, ed, C, eg],
         ),
         eb = i.useMemo(
             () =>
@@ -502,7 +502,7 @@ function ep(e) {
         eA = eh
             ? null
             : (0, r.jsx)(e_, {
-                  presenceActivity: L,
+                  presenceActivity: x,
                   remoteJoinPlatform: ed,
               });
     if (K) {
@@ -536,11 +536,11 @@ function ep(e) {
         });
     }
     let eC =
-            null != (v = null == L || null == (n = L.timestamps) ? void 0 : n.start)
+            null != (v = null == x || null == (n = x.timestamps) ? void 0 : n.start)
                 ? v
-                : null == L
+                : null == x
                   ? void 0
-                  : L.created_at,
+                  : x.created_at,
         eN =
             null != eC
                 ? (0, r.jsxs)("div", {
@@ -553,7 +553,7 @@ function ep(e) {
                           (0, r.jsx)(b.x3, {
                               entry: {
                                   start: eC,
-                                  end: null == L || null == (s = L.timestamps) ? void 0 : s.end,
+                                  end: null == x || null == (s = x.timestamps) ? void 0 : s.end,
                               },
                               textColor: "currentColor",
                               textTabularNumbers: !1,
@@ -600,19 +600,19 @@ function eh(e) {
     let { analyticsLocations: a, app: o, channel: s, message: c, hideParty: u, onView: d } = e,
         f = (0, g.O)(o),
         _ = (0, l.e7)([P.default], () => P.default.getId()),
-        p = (0, l.e7)([L.Z], () => {
-            if (null == c.application) return L.Z.findActivity(c.author.id, (e) => e.type === en.IIU.LISTENING);
+        p = (0, l.e7)([x.Z], () => {
+            if (null == c.application) return x.Z.findActivity(c.author.id, (e) => e.type === en.IIU.LISTENING);
             {
                 let e = c.author.id;
                 return (
                     (0, H.H)(c) && (e = e === _ && s.isPrivate() ? s.getRecipientId() : _),
-                    L.Z.getApplicationActivity(e, c.application.id)
+                    x.Z.getApplicationActivity(e, c.application.id)
                 );
             }
         }, [c, s, _]),
-        h = (0, l.e7)([D.Z, x.Z], () => {
+        h = (0, l.e7)([D.Z, L.Z], () => {
             var e;
-            return null != (e = D.Z.getApplicationActivity(f.id)) ? e : x.Z.getApplicationActivity(f.id, !0);
+            return null != (e = D.Z.getApplicationActivity(f.id)) ? e : L.Z.getApplicationActivity(f.id, !0);
         }, [f.id]),
         m = (0, l.Wu)([w.Z], () => {
             var e;

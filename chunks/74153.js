@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(703656),
     p = n(55563),
     f = n(981631),
-    h = n(883307);
-function m(e, t, n) {
+    m = n(883307);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ class g extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            m(this, "handleClick", (e) => {
+            h(this, "handleClick", (e) => {
                 let { sku: t } = this.props;
                 (0, d.uL)(e.id, {
                     state: {
@@ -67,9 +67,9 @@ class g extends i.PureComponent {
                     },
                 });
             }),
-            m(this, "renderCustomBreadcrumb", (e, t) =>
+            h(this, "renderCustomBreadcrumb", (e, t) =>
                 (0, r.jsx)(u.Z.Title, {
-                    className: t ? null : h.breadcrumb,
+                    className: t ? null : m.breadcrumb,
                     muted: !t,
                     children: e.label,
                 }),

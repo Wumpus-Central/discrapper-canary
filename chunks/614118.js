@@ -45,7 +45,7 @@ function O(e) {
         M = i.useCallback(() => {
             null != P && (0, h.P)(P, { isGift: !1 });
         }, [P]),
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             null != P && (0, h.P)(P, { isGift: !0 });
         }, [P]);
     return R && null == P
@@ -123,7 +123,7 @@ function O(e) {
                                         }),
                                         fullWidth: !0,
                                     }),
-                                    (0, r.jsx)(m.Z, { onGift: k }),
+                                    (0, r.jsx)(m.Z, { onGift: j }),
                                 ],
                             }),
                         ],

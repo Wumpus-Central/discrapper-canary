@@ -18,8 +18,8 @@ var r = n(951288),
     E = n(905423),
     O = n(981631),
     I = n(388032),
-    v = n(822338);
-function y(e) {
+    y = n(822338);
+function v(e) {
     var t, n;
     let { analyticsLocations: i } = (0, p.ZP)(d.Z.ACTIVITY_PANEL),
         l = (0, E.Z)((e) => {
@@ -85,7 +85,7 @@ let C = i.memo(function () {
     let { isSorting: t } = (0, f.Z)();
     return (0, r.jsx)("section", {
         ref: e,
-        className: a()(v.panels, { [v.disablePointersWhileSorting]: t }),
+        className: a()(y.panels, { [y.disablePointersWhileSorting]: t }),
         "aria-label": I.intl.string(I.t.StREWK),
         children: (0, r.jsxs)(s.JcV, {
             containerRef: e,
@@ -95,7 +95,7 @@ let C = i.memo(function () {
                 (0, r.jsx)(g.Z, {}),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.ACTIVITY_PANEL,
-                    children: (0, r.jsx)(y, { className: v.activityPanel }),
+                    children: (0, r.jsx)(v, { className: y.activityPanel }),
                 }),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.RTC_CONNECTION_PANEL,

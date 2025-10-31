@@ -113,11 +113,11 @@ function c() {
         );
     }, [c]);
     let f = [],
-        h = [],
-        m = 0;
-    for (let t = 0; t < n.length && !(m >= u); t++) {
+        m = [],
+        h = 0;
+    for (let t = 0; t < n.length && !(h >= u); t++) {
         let r = n[t];
-        if ((m++, p[r.id])) continue;
+        if ((h++, p[r.id])) continue;
         let i = d[r.id];
         if (
             (null == i &&
@@ -130,9 +130,9 @@ function c() {
             null != e && f.push(e);
         }
     }
-    for (let e = 0; e < c.length && !(m >= u); e++) {
+    for (let e = 0; e < c.length && !(h >= u); e++) {
         let n = c[e];
-        if ((m++, p[n.id])) continue;
+        if ((h++, p[n.id])) continue;
         let r = d[n.id];
         if (
             (null == r &&
@@ -142,12 +142,12 @@ function c() {
             null != r)
         ) {
             let e = o(n, r, !1);
-            null != e && h.push(e);
+            null != e && m.push(e);
         }
     }
     return {
         unreadItems: f,
-        readItems: h,
+        readItems: m,
         allUnreadItemsHydrated: u >= n.length,
     };
 }

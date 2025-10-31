@@ -1,9 +1,9 @@
 r.d(t, { Z: () => p });
-var e = r(951288),
-    n = r(647438),
+var n = r(951288),
+    e = r(647438),
     a = r(793030),
-    l = r(442837),
-    s = r(565138),
+    s = r(442837),
+    l = r(565138),
     d = r(430824),
     c = r(5888),
     o = r(198358),
@@ -12,8 +12,8 @@ var e = r(951288),
 function p() {
     let {
             guilds: { guilds: i, numGuildsJoined: t },
-        } = (0, l.e7)([c.Z], () => c.Z.getCheckpointData()),
-        r = (0, n.useMemo)(
+        } = (0, s.e7)([c.Z], () => c.Z.getCheckpointData()),
+        r = (0, e.useMemo)(
             () =>
                 i
                     .map((i) => {
@@ -23,9 +23,9 @@ function p() {
                     .filter((i) => null != i),
             [i],
         );
-    return (0, e.jsxs)(o.Z, {
+    return (0, n.jsxs)(o.Z, {
         children: [
-            (0, e.jsx)(a.xvT, {
+            (0, n.jsx)(a.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
                 children: u.intl.format(x.default.mAroeJ, {
@@ -34,38 +34,38 @@ function p() {
                 }),
             }),
             r.map((t, r) =>
-                (0, e.jsxs)(
+                (0, n.jsxs)(
                     "div",
                     {
                         children: [
-                            (0, e.jsx)(s.Z, {
+                            (0, n.jsx)(l.Z, {
                                 guild: t,
-                                size: s.Z.Sizes.XLARGE,
+                                size: l.Z.Sizes.XLARGE,
                             }),
-                            (0, e.jsx)(a.xvT, {
+                            (0, n.jsx)(a.xvT, {
                                 variant: "display-md",
                                 color: "text-primary",
                                 children: t.name,
                             }),
                             0 === r &&
-                                (0, e.jsxs)("div", {
+                                (0, n.jsxs)("div", {
                                     children: [
-                                        (0, e.jsx)(a.xvT, {
+                                        (0, n.jsx)(a.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
                                             children: i[0].numMessagesSent,
                                         }),
-                                        (0, e.jsx)(a.xvT, {
+                                        (0, n.jsx)(a.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
                                             children: u.intl.string(x.default.wWKySP),
                                         }),
-                                        (0, e.jsx)(a.xvT, {
+                                        (0, n.jsx)(a.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
                                             children: i[0].numVoiceMinutes,
                                         }),
-                                        (0, e.jsx)(a.xvT, {
+                                        (0, n.jsx)(a.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
                                             children: u.intl.string(x.default.lXT6ns),

@@ -321,7 +321,7 @@ let P = function (e) {
             ],
         });
     }
-    function L() {
+    function x() {
         return null == t
             ? null
             : (0, i.jsx)(f.f6W, {
@@ -355,7 +355,7 @@ let P = function (e) {
             (0, i.jsxs)(l.animated.div, {
                 style: e,
                 className: m.standardSidebarView,
-                children: [!t && L(), D()],
+                children: [!t && x(), D()],
             }),
         ),
     });

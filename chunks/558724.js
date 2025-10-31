@@ -100,11 +100,11 @@ let w = new Set(Object.values(P));
 function D() {
     return null == v.lastFetched || Date.now() - v.lastFetched >= N;
 }
-function L() {
+function x() {
     !C && (D() || null != v.surveyOverride) && ((C = !0), (0, u.wk)(v.surveyOverride, !0));
 }
-function x(e) {
-    return k(e) && M(e);
+function L(e) {
+    return j(e) && M(e);
 }
 function M(e) {
     let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
@@ -149,10 +149,10 @@ function M(e) {
     }
     return !!i && !!a;
 }
-function k(e) {
+function j(e) {
     return !0;
 }
-function j(e) {
+function k(e) {
     let t = l.K.get(m.z7k);
     return null == t || a()().diff(t, "day") < e;
 }
@@ -161,8 +161,8 @@ function U(e) {
     (C = !1), (v.lastFetched = Date.now()), null == v.hiddenSurveys && (v.hiddenSurveys = {});
     let n = null != t,
         r = n && null == v.hiddenSurveys[t.key],
-        i = n && x(t);
-    j(R);
+        i = n && L(t);
+    k(R);
     let a = !1;
     A = r && i && !a ? t : null;
 }
@@ -184,11 +184,11 @@ function V() {
     v.hiddenSurveys = {};
 }
 function H(e) {
-    return !!x(e) || ((A = null), !1);
+    return !!L(e) || ((A = null), !1);
 }
 function Y() {
     let e = Object.values((S = null != S ? S : {}))[0];
-    return null != e && x(e)
+    return null != e && L(e)
         ? void U({
               type: "SURVEY_FETCHED",
               survey: e,
@@ -243,8 +243,8 @@ g(z, "displayName", "SurveyStore"),
         },
     ]);
 let q = new z(c.Z, {
-    CONNECTION_OPEN: L,
-    CONNECTION_RESUMED: L,
+    CONNECTION_OPEN: x,
+    CONNECTION_RESUMED: x,
     SURVEY_FETCHED: U,
     SURVEY_HIDE: F,
     SURVEY_OVERRIDE: G,

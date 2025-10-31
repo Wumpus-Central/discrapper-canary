@@ -10,10 +10,10 @@ var r = n(544891),
     d = n(914946),
     p = n(452426),
     f = n(561205),
-    h = n(186901),
-    m = n(981631);
+    m = n(186901),
+    h = n(981631);
 let g = {
-    [m.Etm.SEND_ANALYTICS_EVENT]: {
+    [h.Etm.SEND_ANALYTICS_EVENT]: {
         validation: (e) =>
             (0, p.Z)(e)
                 .required()
@@ -30,15 +30,15 @@ let g = {
             (0, d.bu)(n.transport), (0, d._f)(n.application);
             let s = n.application.id,
                 p = (0, f.Z)(),
-                h = null == p ? void 0 : p.getGuildId(),
+                m = null == p ? void 0 : p.getGuildId(),
                 g = a.Z.getApplication(s);
-            if (!(0, c.yE)(null != (t = null == g ? void 0 : g.flags) ? t : 0, m.udG.EMBEDDED_FIRST_PARTY))
-                throw new u.Z({ errorCode: m.lTL.INVALID_COMMAND }, "This application cannot access this API");
+            if (!(0, c.yE)(null != (t = null == g ? void 0 : g.flags) ? t : 0, h.udG.EMBEDDED_FIRST_PARTY))
+                throw new u.Z({ errorCode: h.lTL.INVALID_COMMAND }, "This application cannot access this API");
             let _ = (0, l.U)(s),
                 b = {
                     activity_application_id: s,
                     activity_channel_type: null == p ? void 0 : p.type,
-                    activity_guild_id: h,
+                    activity_guild_id: m,
                     activity_user_session_id: null == _ ? void 0 : _.activityUserSessionId,
                 };
             o.default.track(
@@ -71,15 +71,15 @@ let g = {
             );
         },
     },
-    [m.Etm.GET_APPLICATION_TICKET]: {
-        scope: h.lH,
+    [h.Etm.GET_APPLICATION_TICKET]: {
+        scope: m.lH,
         handler(e) {
             let { socket: t } = e,
                 n = t.application.id;
-            if (null == n) throw new u.Z({ errorCode: m.lTL.INVALID_COMMAND }, "No application.");
+            if (null == n) throw new u.Z({ errorCode: h.lTL.INVALID_COMMAND }, "No application.");
             return r.tn
                 .post({
-                    url: m.ANM.APPLICATION_TICKET(n),
+                    url: h.ANM.APPLICATION_TICKET(n),
                     body: { test_mode: s.Z.inTestModeForApplication(n) || i.Z.inDevModeForApplication(n) },
                     retries: 3,
                     oldFormErrors: !0,

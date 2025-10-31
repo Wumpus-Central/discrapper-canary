@@ -80,7 +80,7 @@ function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function D(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +97,7 @@ function L(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class x extends i.PureComponent {
+class L extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
         y.default.track(S.rMx.OPEN_POPOUT, {
@@ -197,7 +197,7 @@ function M(e) {
     return (
         (0, u.$)(T, "StreamPreviewPopout"),
         (0, r.jsx)(
-            x,
+            L,
             w(R({}, a), {
                 canWatch: o,
                 unavailableReason: l,

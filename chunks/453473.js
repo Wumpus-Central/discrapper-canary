@@ -16,11 +16,11 @@ var r = n(951288),
     _ = n(442837),
     p = n(481060),
     h = n(239091),
-    m = n(494404),
-    g = n(724757),
-    E = n(213609),
-    b = n(294218),
-    y = n(373662),
+    m = n(724757),
+    g = n(213609),
+    E = n(294218),
+    b = n(373662),
+    y = n(598999),
     O = n(695346),
     v = n(496675),
     I = n(626135),
@@ -33,11 +33,11 @@ var r = n(951288),
     P = n(664559),
     w = n(767893),
     D = n(206697),
-    L = n(74551),
-    x = n(981631),
+    x = n(74551),
+    L = n(981631),
     M = n(388032),
-    k = n(125919);
-function j(e, t, n) {
+    j = n(125919);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,7 +61,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -121,9 +121,9 @@ function H(e) {
     return (0, r.jsx)(p.VqE, {
         "aria-label": M.intl.string(M.t["2pAkDA"]),
         children: (0, r.jsxs)("div", {
-            className: k.popoutContainer,
+            className: j.popoutContainer,
             children: [
-                (0, r.jsx)(m.h4, {
+                (0, r.jsx)(y.h4, {
                     icon: p.plf,
                     title: M.intl.string(M.t["2pAkDA"]),
                 }),
@@ -135,7 +135,7 @@ function H(e) {
 function Y(e) {
     let { closePopout: t } = e,
         n = (0, P.Z)();
-    return ((0, E.Z)(
+    return ((0, g.Z)(
         {
             type: d.ImpressionTypes.POPOUT,
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
@@ -165,7 +165,7 @@ function W(e) {
             c(!l), l ? null == n || n() : null == t || t();
         }, [n, t, l]);
     i.useEffect(
-        () => (T.S.subscribe(x.CkL.TOGGLE_FOR_LATER, f), () => void T.S.unsubscribe(x.CkL.TOGGLE_FOR_LATER, f)),
+        () => (T.S.subscribe(L.CkL.TOGGLE_FOR_LATER, f), () => void T.S.unsubscribe(L.CkL.TOGGLE_FOR_LATER, f)),
         [f],
     );
     let h = (0, _.e7)([N.Z], () => N.Z.hasOverdueReminder(), []);
@@ -191,7 +191,7 @@ function W(e) {
 function K(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         a = i.useRef(null),
-        o = (0, g.Z)("for-later", a),
+        o = (0, m.Z)("for-later", a),
         [s, l] = i.useState(new Date());
     return (
         i.useEffect(() => {
@@ -217,7 +217,7 @@ function K(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: k.messagesScroller,
+                                    className: j.messagesScroller,
                                 },
                                 o,
                             ),
@@ -249,7 +249,7 @@ function z(e) {
                 var r;
                 await (0, C.fC)(t, s),
                     e.shiftKey || n(),
-                    I.default.track(x.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    I.default.track(L.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (r = t.message) ? void 0 : r.author.id,
@@ -262,31 +262,31 @@ function z(e) {
         c = (0, _.e7)(
             [v.Z],
             () =>
-                !!((null == s ? void 0 : s.type) === x.d4z.UNKNOWN || (null == s ? void 0 : s.isPrivate())) ||
-                v.Z.can(x.Plq.VIEW_CHANNEL, s),
+                !!((null == s ? void 0 : s.type) === L.d4z.UNKNOWN || (null == s ? void 0 : s.isPrivate())) ||
+                v.Z.can(L.Plq.VIEW_CHANNEL, s),
         );
     return null != s && null != t.message && c
         ? (0, r.jsxs)("div", {
-              className: k.messageContainer,
+              className: j.messageContainer,
               children: [
                   (0, r.jsx)(p.P3F, {
-                      className: k.clickableMessageBackground,
+                      className: j.clickableMessageBackground,
                       onClick: l,
                       "aria-label": M.intl.string(M.t["+TSRGD"]),
                   }),
                   null != t.saveData.dueAt
-                      ? (0, r.jsx)(L.Z, {
+                      ? (0, r.jsx)(x.Z, {
                             reminder: t,
                             throttledNow: a,
                         })
                       : null,
                   (0, r.jsx)(w.Z, { channel: s }),
                   (0, r.jsx)(
-                      b.Z,
+                      E.Z,
                       {
                           message: t.message,
                           channel: s,
-                          className: k.message,
+                          className: j.message,
                           compact: O.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: V,
@@ -294,8 +294,8 @@ function z(e) {
                       },
                       t.message.id,
                   ),
-                  (0, r.jsx)(y.ZP, {
-                      className: k.hoverBar,
+                  (0, r.jsx)(b.ZP, {
+                      className: j.hoverBar,
                       children: (0, r.jsx)(X, {
                           savedMessage: t,
                           jumpToMessage: l,
@@ -304,10 +304,10 @@ function z(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: o()(k.messageContainer, k.deletedMessage),
+              className: o()(j.messageContainer, j.deletedMessage),
               children: [
                   (0, r.jsx)("div", {
-                      className: k.deleteIcon,
+                      className: j.deleteIcon,
                       children: (0, r.jsx)(p.Mgn, {
                           size: "xxs",
                           color: p.TVs.colors.INTERACTIVE_ACTIVE,
@@ -318,10 +318,10 @@ function z(e) {
                       color: "header-secondary",
                       children: null != t.saveData.dueAt ? M.intl.string(M.t["wuQm+j"]) : M.intl.string(M.t.o572Fe),
                   }),
-                  (0, r.jsx)(y.ZP, {
-                      className: k.hoverBar,
+                  (0, r.jsx)(b.ZP, {
+                      className: j.hoverBar,
                       children: (0, r.jsx)(
-                          y.sF,
+                          b.sF,
                           {
                               label: M.intl.string(M.t.SvXS1Z),
                               icon: p.XHJ,
@@ -352,7 +352,7 @@ function X(e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      y.sF,
+                      b.sF,
                       {
                           label: M.intl.string(M.t.yjGtdJ),
                           icon: p.dz2,
@@ -366,7 +366,7 @@ function X(e) {
                       "mark-complete",
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      b.sF,
                       {
                           label: M.intl.string(M.t.vrbqs1),
                           icon: p.vdY,
@@ -385,9 +385,9 @@ function X(e) {
                       },
                       "edit-reminder",
                   ),
-                  (0, r.jsx)(y.fO, {}),
+                  (0, r.jsx)(b.fO, {}),
                   (0, r.jsx)(
-                      y.sF,
+                      b.sF,
                       {
                           label: M.intl.string(M.t["+TSRGD"]),
                           icon: p.acy,
@@ -396,7 +396,7 @@ function X(e) {
                       "jump-to-message",
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      b.sF,
                       {
                           label: M.intl.string(M.t.SvXS1Z),
                           icon: p.plf,
@@ -409,7 +409,7 @@ function X(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      y.sF,
+                      b.sF,
                       {
                           label: M.intl.string(M.t.mJ3P0N),
                           icon: p.T39,
@@ -429,7 +429,7 @@ function X(e) {
                       "create-reminder",
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      b.sF,
                       {
                           label: M.intl.string(M.t["+TSRGD"]),
                           icon: p.acy,
@@ -438,7 +438,7 @@ function X(e) {
                       "jump-to-message",
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      b.sF,
                       {
                           label: M.intl.string(M.t.SvXS1Z),
                           icon: p.plf,

@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => m,
+    F: () => h,
     a: () => g,
 }),
     n(388685);
@@ -32,10 +32,10 @@ let p = (e) => {
             children: [(0, r.jsx)(p, { digit: i }), (0, r.jsx)(p, { digit: l })],
         });
     },
-    h = (e) => {
+    m = (e) => {
         let { expiresAt: t, tooltipText: n } = e,
-            { days: c, hours: p, minutes: h, seconds: m } = (0, s.Z)(Date.parse(t), 1000),
-            g = c > 0 ? [c, p, h] : p > 0 ? [p, h, m] : [h, m],
+            { days: c, hours: p, minutes: m, seconds: h } = (0, s.Z)(Date.parse(t), 1000),
+            g = c > 0 ? [c, p, m] : p > 0 ? [p, m, h] : [m, h],
             _ = (0, o.zu)(i.z.NITRO_TAB_BADGE_OFFER_REMINDER);
         return (0, r.jsx)(l.u, {
             text: n,
@@ -69,10 +69,10 @@ let p = (e) => {
             }),
         });
     },
-    m = (e) => {
+    h = (e) => {
         let { trialOffer: t } = e,
             n = (0, c.YF)(t);
-        return (0, r.jsx)(h, {
+        return (0, r.jsx)(m, {
             expiresAt: t.expires_at,
             tooltipText: n,
         });
@@ -80,7 +80,7 @@ let p = (e) => {
     g = (e) => {
         let { discountOffer: t } = e,
             n = (0, c.h$)(t);
-        return (0, r.jsx)(h, {
+        return (0, r.jsx)(m, {
             expiresAt: t.expires_at,
             tooltipText: n,
         });

@@ -1,10 +1,10 @@
 n.d(t, { Z: () => l });
-var i = n(399606),
-    r = n(541099);
+var r = n(399606),
+    i = n(541099);
 function l(e) {
     let { type: t } = e;
-    return (0, i.e7)([r.Z], () => {
-        let e = r.Z.activeViewType();
-        return null != e && e === t && r.Z.shouldShowPopup();
+    return (0, r.e7)([i.Z], () => {
+        let e = i.Z.activeViewType();
+        return null != e && e === t && i.Z.shouldShowPopup();
     }, [t]);
 }

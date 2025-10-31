@@ -37,21 +37,21 @@ function f(e, t) {
             strategy: "absolute",
             placement: _,
         }),
-        L = (0, s.Z)(Object.assign({}, N, D)),
-        x = O === l.k5 ? L : w,
+        x = (0, s.Z)(Object.assign({}, N, D)),
+        L = O === l.k5 ? x : w,
         M = {
-            top: P.top - x.top + A.top,
-            bottom: x.bottom - P.bottom + A.bottom,
-            left: P.left - x.left + A.left,
-            right: x.right - P.right + A.right,
+            top: P.top - L.top + A.top,
+            bottom: L.bottom - P.bottom + A.bottom,
+            left: P.left - L.left + A.left,
+            right: L.right - P.right + A.right,
         },
-        k = e.modifiersData.offset;
-    if (O === l.k5 && k) {
-        var j = k[_];
+        j = e.modifiersData.offset;
+    if (O === l.k5 && j) {
+        var k = j[_];
         Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? "y" : "x";
-            M[e] += j[n] * t;
+            M[e] += k[n] * t;
         });
     }
     return M;

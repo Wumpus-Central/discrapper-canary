@@ -1,5 +1,5 @@
 n.d(t, {
-    KJ: () => g,
+    KJ: () => p,
     N0: () => b,
     k3: () => j,
     lk: () => C,
@@ -22,8 +22,8 @@ var r,
     f = n(246364),
     h = n(983736),
     x = n(266395),
-    p = n(388032),
-    g =
+    g = n(388032),
+    p =
         (((r = {})[(r.CLAIM_ACCOUNT = 0)] = "CLAIM_ACCOUNT"),
         (r[(r.EMAIL_CONFIRMATION = 1)] = "EMAIL_CONFIRMATION"),
         (r[(r.VERIFICATION_FORM = 2)] = "VERIFICATION_FORM"),
@@ -46,7 +46,7 @@ function v(e, t, n) {
             r = [
                 {
                     field_type: f.QJ.TERMS,
-                    label: p.intl.string(p.t["9suSIA"]),
+                    label: g.intl.string(g.t["9suSIA"]),
                     values: e,
                     required: !0,
                 },

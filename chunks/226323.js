@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(586902),
     p = n(393903),
     f = n(448986),
-    h = n(100527),
-    m = n(906732),
+    m = n(100527),
+    h = n(906732),
     g = n(522651),
     _ = n(795318),
     b = n(512384),
     E = n(670188),
     O = n(314897),
     I = n(131951),
-    v = n(51144),
-    y = n(524484),
+    y = n(51144),
+    v = n(524484),
     C = n(388032),
     S = n(720711);
 function T(e) {
@@ -96,7 +96,7 @@ let j = { offset: 2 },
 function x(e) {
     var t, l;
     let p = i.useRef(null),
-        { parentAnalyticsLocation: f } = (0, m.ZP)(),
+        { parentAnalyticsLocation: f } = (0, h.ZP)(),
         { channel: O, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
         D = (0, s.e7)([I.Z], () => I.Z.isLocalMute(x.id)),
         M = (0, d.Z)({
@@ -105,7 +105,7 @@ function x(e) {
         }),
         k = null != (t = O.getGuildId()) ? t : void 0,
         U = x.getAvatarURL(O.guild_id, 24),
-        G = null != A ? A : v.ZP.getName(x),
+        G = null != A ? A : y.ZP.getName(x),
         {
             icon: B,
             colorize: H,
@@ -152,7 +152,7 @@ function x(e) {
                               guildId: k,
                               channel: O,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", h.Z.RTC_PANEL, {
+                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", m.Z.RTC_PANEL, {
                                   targetUserId: x.id,
                               }),
                           }),
@@ -166,7 +166,7 @@ function x(e) {
                           N(T({}, t), {
                               user: x,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("UserGenericContextMenu", h.Z.RTC_PANEL, { targetUserId: x.id }),
+                              onInteraction: (0, _.u)("UserGenericContextMenu", m.Z.RTC_PANEL, { targetUserId: x.id }),
                           }),
                       );
               });
@@ -190,7 +190,7 @@ function x(e) {
                     onContextMenu: z,
                     focusProps: j,
                     children: (0, r.jsx)(b.Z, {
-                        shakeLocation: y.oZ.VOICE_USER,
+                        shakeLocation: v.oZ.VOICE_USER,
                         isShaking: M,
                         children: (0, r.jsx)("div", {
                             className: a()(S.avatar, { [S.speaking]: M }),
@@ -213,7 +213,7 @@ function A(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [o, u] = i.useState(!1),
         d = (0, s.e7)([O.default], () => O.default.getId()),
-        { containerRef: h, maxVisibleAvatars: m } = (function (e) {
+        { containerRef: m, maxVisibleAvatars: h } = (function (e) {
             let [t, n] = i.useState(7),
                 r = (0, f.Z)(() => {
                     let t = null == l ? void 0 : l.current;
@@ -238,7 +238,7 @@ function A(e) {
                     r.push(i);
                 }
             return [r, !1];
-        })(t, d, m),
+        })(t, d, h),
         b = o ? c.V_R : c.qJs,
         E = (0, r.jsx)(c.M0o, {
             onClick: () => u(!o),
@@ -258,7 +258,7 @@ function A(e) {
               className: a()(S.scroller, l),
               fade: !0,
               children: (0, r.jsxs)("div", {
-                  ref: h,
+                  ref: m,
                   className: a()(S.voiceUsers, !o && S.collapsed),
                   role: "group",
                   "aria-label": C.intl.string(C.t["/ZgaVU"]),

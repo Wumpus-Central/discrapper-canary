@@ -10,8 +10,8 @@ var i = n(399606),
     u = n(699516),
     d = n(594174),
     p = n(51144),
-    f = n(984370),
-    h = n(388032),
+    h = n(984370),
+    f = n(388032),
     g = n(97009);
 function m(e) {
     let t = e.channel.getRecipientId(),
@@ -19,13 +19,13 @@ function m(e) {
         m = (0, i.e7)([d.default], () => d.default.getUser(t)),
         b = (0, i.e7)([c.Z], () => c.Z.getStatus(t)),
         _ = (0, i.e7)([c.Z], () => c.Z.isMobileOnline(t)),
-        O = (0, i.e7)([u.Z], () => u.Z.getNickname(t)),
-        y = p.ZP.useUserTag(m),
+        y = (0, i.e7)([u.Z], () => u.Z.getNickname(t)),
+        O = p.ZP.useUserTag(m),
         v = (0, a.j)({ displayNameStyles: null == m ? void 0 : m.displayNameStyles }),
         j = (0, s.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.EJRzg7) }),
+            (0, r.jsx)(o.nn4, { children: f.intl.string(f.t.EJRzg7) }),
             null != m &&
                 !n &&
                 (0, r.jsx)("div", {
@@ -38,7 +38,7 @@ function m(e) {
                         src: m.getAvatarURL(void 0, 20),
                     }),
                 }),
-            (0, r.jsx)(f.Z.Title, {
+            (0, r.jsx)(h.Z.Title, {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
@@ -46,17 +46,17 @@ function m(e) {
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(o.jSM, {
-                            text: y,
+                            text: O,
                             position: "bottom",
                             className: v,
-                            children: null != O ? O : p.ZP.getName(m),
+                            children: null != y ? y : p.ZP.getName(m),
                         }),
                         j &&
                             (0, r.jsx)(l.u, {
-                                text: h.intl.string(h.t.QyZ4Td),
+                                text: f.intl.string(f.t.QyZ4Td),
                                 children: (0, r.jsx)(o.tQf, {
                                     size: "xs",
-                                    "aria-label": h.intl.string(h.t.VHXh8a),
+                                    "aria-label": f.intl.string(f.t.VHXh8a),
                                     color: o.TVs.colors.INTERACTIVE_NORMAL,
                                     className: g.secureFramesIcon,
                                 }),

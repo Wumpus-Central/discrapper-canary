@@ -1,31 +1,31 @@
-t.d(n, {
-    JO: () => a,
-    KK: () => c,
-    Vp: () => d,
-    hW: () => o,
+e.d(n, {
+    JO: () => o,
+    KK: () => u,
+    Vp: () => l,
+    hW: () => c,
     zu: () => s,
 });
-var i = t(544891),
-    r = t(570140),
-    l = t(981631);
-function a() {
-    r.Z.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
+var i = e(544891),
+    a = e(570140),
+    r = e(981631);
+function o() {
+    a.Z.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
 }
 function s() {
-    r.Z.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
+    a.Z.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
 }
-function o() {
-    r.Z.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
+function c() {
+    a.Z.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
 }
-function d(e) {
+function l(t) {
     return i.tn.del({
-        url: l.ANM.DELETE_SAFETY_WARNINGS(e),
+        url: r.ANM.DELETE_SAFETY_WARNINGS(t),
         rejectWithError: !1,
     });
 }
-function c(e, n) {
+function u(t, n) {
     return i.tn.post({
-        url: l.ANM.ADD_SAFETY_WARNING(e),
+        url: r.ANM.ADD_SAFETY_WARNING(t),
         body: { safety_warning_type: n },
         rejectWithError: !1,
     });

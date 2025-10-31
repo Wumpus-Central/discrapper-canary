@@ -67,10 +67,10 @@ let N = 100,
     P = 1,
     w = 0.5,
     D = new Set();
-function L(e, t) {
+function x(e, t) {
     return "".concat(e, "_").concat(t);
 }
-class x {
+class L {
     getId() {
         return this.id;
     }
@@ -193,7 +193,7 @@ class x {
                     let t = !1,
                         n = (0, y.Zp)(this.questContent);
                     if (null != n) {
-                        let r = L(e.id, n);
+                        let r = x(e.id, n);
                         (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
                     }
                     let r = (0, y.jY)(this.questContent);
@@ -265,7 +265,7 @@ class x {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
-                    new x({
+                    new L({
                         questContent: this.questContent,
                         questOrQuests: this.quests,
                         questContentRowIndex: this.questContentRowIndex,
@@ -344,14 +344,14 @@ let M = (e, t) => {
             : e.id;
         return "".concat(n, "_").concat(t);
     },
-    k = (e) => {
+    j = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
     },
-    j = i.createContext(void 0);
+    k = i.createContext(void 0);
 function U() {
-    let e = i.useContext(j);
+    let e = i.useContext(k);
     return null == e ? void 0 : e.current;
 }
 function G() {
@@ -360,7 +360,7 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
-        d = k(e.questOrQuests),
+        d = j(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
@@ -373,7 +373,7 @@ function B(e) {
                 o = ((n || c) && !r) || d;
             (i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((f.current = new x({
+                    ((f.current = new L({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -400,7 +400,7 @@ function B(e) {
             _,
             u,
         ]),
-        (0, r.jsx)(j.Provider, {
+        (0, r.jsx)(k.Provider, {
             value: f,
             children: e.children(o, f),
         })

@@ -75,8 +75,8 @@ function O(e) {
             questContent: w,
             onReceiveErrorHints: P,
             contentPosition: N,
-            rowIndex: A,
-            sourceQuestContent: R,
+            rowIndex: R,
+            sourceQuestContent: A,
         } = e,
         B = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         k = (0, _.g2)({ useReducedMotion: B }),
@@ -123,11 +123,11 @@ function O(e) {
             questContent: w,
             isCollectibleQuest: K,
             questContentPosition: N,
-            questContentRowIndex: A,
+            questContentRowIndex: R,
             inGiftInventory: !0,
             isVideoQuest: G,
             inGameQuest: Y,
-            sourceQuestContent: R,
+            sourceQuestContent: A,
         }),
         { startingConsoleQuest: el, startConsoleQuest: ec } = (0, m.GI)({
             questId: T.id,
@@ -138,8 +138,8 @@ function O(e) {
                         questContent: w,
                         questContentCTA: u.jZ.DEFIBRILLATOR,
                         questContentPosition: N,
-                        questContentRowIndex: A,
-                        sourceQuestContent: R,
+                        questContentRowIndex: R,
+                        sourceQuestContent: A,
                     });
             },
             afterRequest: (e) => {
@@ -179,7 +179,7 @@ function O(e) {
                                   (0, x.openVideoQuestModal)({
                                       quest: T,
                                       questContent: w,
-                                      sourceQuestContent: R,
+                                      sourceQuestContent: A,
                                       sourceQuestContentCTA: u.jZ.WATCH_VIDEO,
                                       skipEnrollmentCheck: !0,
                                   });
@@ -342,7 +342,7 @@ function O(e) {
                                     }),
                                     (0, r.jsx)(o.zxk, {
                                         variant: "primary",
-                                        onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(T, w, R),
+                                        onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(T, w, A),
                                         text: j.intl.string(j.t.vY9GgG),
                                     }),
                                 ],

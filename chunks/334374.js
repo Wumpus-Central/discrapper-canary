@@ -1,27 +1,27 @@
-n.d(t, { Z: () => c }), n(388685), n(35282), n(784620), n(973216);
+n.d(t, { Z: () => s }), n(388685), n(35282), n(784620), n(973216);
 var r = n(951288),
     i = n(647438),
     l = n(414910),
     a = n(226961),
     o = n(447661);
-function c(e) {
+function s(e) {
     let { currentUserId: t, participant: n } = e,
-        c = (0, l.Z)(n.type),
-        [s, u] = i.useState(),
-        [d, f] = i.useState(),
-        [p, _] = i.useState(),
+        s = (0, l.Z)(n.type),
+        [c, u] = i.useState(),
+        [d, p] = i.useState(),
+        [f, h] = i.useState(),
         m = n.id.split(":").at(-1),
         g = t === m,
-        v = i.useCallback((e, t, n) => {
+        b = i.useCallback((e, t, n) => {
             var r, i, l;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
             u(null != (r = null == o ? void 0 : o.codec) ? r : "unknown"),
-                f(
+                p(
                     void 0 === (i = null == o ? void 0 : o.resolution) || (0 === i.width && 0 === i.height)
                         ? "unknown"
                         : i.width + " x " + i.height,
                 ),
-                _(
+                h(
                     (null == o ? void 0 : o.bitrateEstimate) !== void 0
                         ? ((l = o.bitrateEstimate), "".concat((l / 1000).toFixed(2), " Kbps"))
                         : "unknown",
@@ -29,11 +29,11 @@ function c(e) {
         }, []);
     return (
         i.useEffect(() => {
-            let e = () => v(m, c, g);
+            let e = () => b(m, s, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [g, m, c, v]),
+        }, [g, m, s, b]),
         (0, r.jsxs)("div", {
             className: o.streamInfoContainer,
             children: [
@@ -42,7 +42,7 @@ function c(e) {
                     className: o.infoRow,
                     children: [
                         (0, r.jsx)("span", { children: "Video Codec: " }),
-                        (0, r.jsx)("strong", { children: s }),
+                        (0, r.jsx)("strong", { children: c }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
@@ -54,7 +54,7 @@ function c(e) {
                         className: o.infoRow,
                         children: [
                             (0, r.jsx)("span", { children: "Bitrate Estimate: " }),
-                            (0, r.jsx)("strong", { children: p }),
+                            (0, r.jsx)("strong", { children: f }),
                         ],
                     }),
             ],

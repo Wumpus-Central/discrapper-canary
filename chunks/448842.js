@@ -87,7 +87,7 @@ function A(e) {
             let { searchEverywhere: t } = e;
             s.S.dispatch(b.CkL.PERFORM_SEARCH, { searchEverywhere: t });
         },
-        L = (e) => {
+        x = (e) => {
             var t;
             let {
                     autocompleteCount: n,
@@ -120,7 +120,7 @@ function A(e) {
                 searchAutocompleteSelectAction: i,
             });
         },
-        x = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 let t = e ? y.intl.string(y.t.diOL4i) : y.intl.string(y.t["M1tf+7"]),
                     i = () => {
@@ -189,7 +189,7 @@ function A(e) {
                         });
                     e.push(i);
                 }
-                let t = x(C);
+                let t = L(C);
                 if (C) {
                     let n = [...w, t];
                     e.push(
@@ -309,7 +309,7 @@ function A(e) {
                                         : void 0,
                                 h = (e) => {
                                     let { selectedIndex: t, searchAutocompleteSelectAction: r } = e;
-                                    L({
+                                    x({
                                         selectedIndex: t,
                                         searchAutocompleteSelectAction: r,
                                         selectedAutocomplete: i,
@@ -341,7 +341,7 @@ function A(e) {
                         },
                     }),
                     o = C && 0 === n,
-                    s = x(o);
+                    s = L(o);
                 if (o) {
                     let t = [...w, s];
                     e.push(
@@ -367,7 +367,7 @@ function A(e) {
                             { label: s, ariaLabel: l } = (0, d.V4)(n),
                             c = (t) => {
                                 let { selectedIndex: r, searchAutocompleteSelectAction: o } = t;
-                                L({
+                                x({
                                     selectedIndex: r,
                                     searchAutocompleteSelectAction: o,
                                     selectedAutocomplete: n,
@@ -400,7 +400,7 @@ function A(e) {
                 return { items: [...t] };
             },
         }[R.type])(),
-        k = i.useMemo(() => {
+        j = i.useMemo(() => {
             let e = [];
             return (
                 M.forEach((t) => {
@@ -417,6 +417,6 @@ function A(e) {
         }, [M]);
     return {
         items: M,
-        itemsData: k,
+        itemsData: j,
     };
 }

@@ -35,25 +35,25 @@ function O(e) {
             purchaseErrorBlockRef: P,
             planError: w,
             onScroll: D,
-            scrollerClassName: L,
-            hasCurrencies: x = !1,
+            scrollerClassName: x,
+            hasCurrencies: L = !1,
         } = e,
         M = null;
     null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
-    let k = null != M ? M.message : "";
+    let j = null != M ? M.message : "";
     null != M &&
         M instanceof d.HF &&
-        (M.code === f.SM.CARD_DECLINED && x && (k += " ".concat(E.intl.string(E.t.iWvwQS))),
-        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd8)),
-        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWE)));
-    let { stripe: j } = (0, _.JL)();
-    N = N || null == j;
+        (M.code === f.SM.CARD_DECLINED && L && (j += " ".concat(E.intl.string(E.t.iWvwQS))),
+        M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = E.intl.string(E.t.ypuSd8)),
+        M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = E.intl.string(E.t.mXMmWE)));
+    let { stripe: k } = (0, _.JL)();
+    N = N || null == k;
     let U = i.useRef(new l.V7());
     i.useEffect(() => {
         let e = U.current;
         return (
-            null != j || e.isStarted()
-                ? null != j && e.stop()
+            null != k || e.isStarted()
+                ? null != k && e.stop()
                 : e.start(10 * m.Z.Millis.SECOND, () => {
                       let e = Error("Stripe took too long to load");
                       (0, h.q2)(e);
@@ -62,11 +62,11 @@ function O(e) {
                 e.stop();
             }
         );
-    }, [j]);
+    }, [k]);
     let G = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(a.Elements, {
         options: g.OBo,
-        stripe: j,
+        stripe: k,
         children: [
             I,
             (0, r.jsxs)("div", {
@@ -105,7 +105,7 @@ function O(e) {
                                       ref: P,
                                       children: (0, r.jsx)(c.M14, {
                                           type: "critical",
-                                          children: k,
+                                          children: j,
                                       }),
                                   }),
                             N
@@ -121,7 +121,7 @@ function O(e) {
                                       sideMargin: 20,
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: D,
-                                          className: s()(b.scroller, L),
+                                          className: s()(b.scroller, x),
                                           children: o,
                                       }),
                                   }),

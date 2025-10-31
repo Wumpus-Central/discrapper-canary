@@ -511,7 +511,7 @@ let i = {
     },
     UserSettingsManager: {
         actions: ["POST_CONNECTION_OPEN", "OVERLAY_INITIALIZE", "USER_SETTINGS_PROTO_UPDATE"],
-        inlineRequire: () => n(151742).Z,
+        inlineRequire: () => n(894247).Z,
     },
     VoiceChannelSettingsManager: {
         actions: ["CHANNEL_UPDATES", "VOICE_STATE_UPDATES"],

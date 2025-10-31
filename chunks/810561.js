@@ -16,9 +16,9 @@ function _(e) {
             guildEventId: r,
             onRecurrenceClick: _,
             hideScroller: p = !1,
-            activeRecurrenceId: v,
+            activeRecurrenceId: f,
         } = e,
-        { recurrenceStartTimes: m, canViewMoreRecurrences: f, updateRecurrenceStartTimes: g } = (0, c.Z)(r, n, t),
+        { recurrenceStartTimes: m, canViewMoreRecurrences: v, updateRecurrenceStartTimes: g } = (0, c.Z)(r, n, t),
         h = p ? "div" : l.Ttm;
     return (0, i.jsxs)("div", {
         className: u.recurrences,
@@ -40,12 +40,12 @@ function _(e) {
                                 originalScheduledStartTime: e,
                                 guildEventId: r,
                                 onClick: _,
-                                isActive: n === v,
+                                isActive: n === f,
                             },
                             n,
                         );
                     }),
-                    f &&
+                    v &&
                         (0, i.jsx)("div", {
                             className: u.buttonContainer,
                             children: (0, i.jsx)(l.Avr, {

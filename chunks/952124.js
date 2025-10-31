@@ -96,7 +96,7 @@ function v(e) {
                     analyticsLocations: S,
                 }),
         }),
-        L = (0, d.Z)({
+        x = (0, d.Z)({
             applicationId: null == R ? void 0 : R.id,
             user: t,
             guildId: n,
@@ -107,7 +107,7 @@ function v(e) {
                 }),
             color: "danger",
         }),
-        x = (0, f.Z)({
+        L = (0, f.Z)({
             id: null == R ? void 0 : R.id,
             label: b.intl.string(b.t["+NP/b2"]),
             onSuccess: () =>
@@ -119,7 +119,7 @@ function v(e) {
         M = [
             [y],
             C ? [P] : [],
-            [D, w, L],
+            [D, w, x],
             [
                 (0, u.Z)({
                     application: R,
@@ -130,7 +130,7 @@ function v(e) {
                             analyticsLocations: S,
                         }),
                 }),
-                x,
+                L,
             ],
         ];
     return M.every((e) => e.every((e) => null == e))

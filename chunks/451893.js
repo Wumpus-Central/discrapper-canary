@@ -61,17 +61,17 @@ function a(e) {
         u = l.useRef(null),
         [d, m] = l.useState(0),
         [f, h] = l.useState(0),
-        [x, p] = l.useState(0),
-        g = l.useCallback(() => {
+        [x, g] = l.useState(0),
+        p = l.useCallback(() => {
             null != u.current &&
                 (m(u.current.getDistanceFromTop()),
                 h(u.current.getDistanceFromBottom()),
-                p(u.current.getScrollerState().offsetHeight));
+                g(u.current.getScrollerState().offsetHeight));
         }, []);
     l.useEffect(() => {
-        if ((g(), null == a.current)) return;
+        if ((p(), null == a.current)) return;
         let e = new ResizeObserver(() => {
-            g();
+            p();
         });
         return (
             e.observe(a.current),
@@ -79,7 +79,7 @@ function a(e) {
                 e.disconnect();
             }
         );
-    }, [u, a, g]);
+    }, [u, a, p]);
     let v = l.useMemo(() => {
         if (0 === d && 0 === f) return {};
         let e = [];
@@ -106,7 +106,7 @@ function a(e) {
         ref: u,
         style: v,
         className: t,
-        onScroll: g,
+        onScroll: p,
         children: n,
     });
 }

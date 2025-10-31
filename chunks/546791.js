@@ -1,6 +1,6 @@
 n.d(t, {
     E2: () => A,
-    Kp: () => L,
+    Kp: () => x,
     LI: () => b,
     MH: () => D,
     Qr: () => E,
@@ -110,7 +110,7 @@ let f = 60,
             n = (0, l.vE)("settings-controls");
         return (null == e ? void 0 : e.nsfwAllowed) === !1 && t && n;
     },
-    L = (e, t) =>
+    x = (e, t) =>
         t > 0 && 0 === e
             ? d.intl.formatToPlainString(u.default["L/Cj7S"], { callCount: t })
             : e > 0 && 0 === t

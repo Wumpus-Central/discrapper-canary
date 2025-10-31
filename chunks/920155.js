@@ -104,10 +104,10 @@ function S(e) {
         } = e,
         [R, P] = i.useState(p),
         [w, D] = i.useState(E),
-        L = i.useRef(E),
-        x = (0, c.e7)([d.Z], () => d.Z.getLayers()),
-        M = null != (t = x[x.length - 1]) ? t : "base",
-        k = i.useMemo(() => {
+        x = i.useRef(E),
+        L = (0, c.e7)([d.Z], () => d.Z.getLayers()),
+        M = null != (t = L[L.length - 1]) ? t : "base",
+        j = i.useMemo(() => {
             var e, t;
             return (
                 null == a.current ||
@@ -117,21 +117,21 @@ function S(e) {
             );
         }, [a, M]);
     i.useEffect(() => {
-        k && p ? P(!0) : k || P(!1);
-    }, [k, p]);
-    let j = () => {
+        j && p ? P(!0) : j || P(!1);
+    }, [j, p]);
+    let k = () => {
             P(!1);
         },
         U = (0, _.i)({
             shouldShow: p,
             caretPosition: (0, f.z)(w),
-            onExitComplete: j,
+            onExitComplete: k,
         }),
         G = (e) => {
             var { setPopoutRef: t, position: i } = e,
                 a = y(e, ["setPopoutRef", "position"]);
             return (
-                null != i && i !== L.current && ((L.current = i), D(i), null == C || C(i)),
+                null != i && i !== x.current && ((x.current = i), D(i), null == C || C(i)),
                 U((e, i) => {
                     if (!i) return null;
                     let c = (0, r.jsx)(

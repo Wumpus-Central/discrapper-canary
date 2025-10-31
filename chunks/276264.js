@@ -33,10 +33,10 @@ var r = n(951288),
     P = n(51144),
     w = n(981631),
     D = n(674563),
-    L = n(524484),
-    x = n(388032),
+    x = n(524484),
+    L = n(388032),
     M = n(894723);
-function k(e, t, n) {
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
@@ -115,7 +115,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;
         return null != t && t && null == n
             ? (0, r.jsx)(s.u, {
-                  __unsupportedReactNodeAsText: null != i ? i : x.intl.string(x.t.pclUFJ),
+                  __unsupportedReactNodeAsText: null != i ? i : L.intl.string(L.t.pclUFJ),
                   children: (0, r.jsx)(c.CEn, {
                       size: "md",
                       color: "currentColor",
@@ -129,7 +129,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return null == t
             ? null
             : (0, r.jsx)(s.u, {
-                  text: x.intl.formatToPlainString(x.t.IWkAq7, { date: t }),
+                  text: L.intl.formatToPlainString(L.t.IWkAq7, { date: t }),
                   asContainer: !0,
                   children: (0, r.jsx)(c.P3F, {
                       onClick: n,
@@ -245,7 +245,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 children: [
                     (0, r.jsx)(
                         g,
-                        G(j({}, o), {
+                        G(k({}, o), {
                             size: c.EFr.SIZE_32,
                             src: s,
                             isMobile: l,
@@ -260,7 +260,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     (0, r.jsx)(T.Z, {
                         confettiSpawnRef: p,
                         shouldFire: d && null != h && t.id !== h.id,
-                        confettiLocation: L.Hn.MEMBER_USER,
+                        confettiLocation: x.Hn.MEMBER_USER,
                     }),
                 ],
             })
@@ -337,9 +337,9 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 shouldAnimateStatus: T = !1,
                 isMobile: R,
                 premiumSince: D,
-                channel: L,
-                guildId: x,
-                className: k,
+                channel: x,
+                guildId: L,
+                className: j,
                 nameplate: U,
                 hideClanTag: Z = !1,
                 hideSubtext: F = !1,
@@ -367,7 +367,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             [em, eg] = i.useState(null),
             { voiceChannel: eE } = (0, _.Z)({
                 userId: el,
-                guildId: x,
+                guildId: L,
             }),
             { voiceActivityStatusEnabled: eb } = (0, d.U)({ location: "MemberListItem" }),
             ey = eb ? eE : void 0,
@@ -379,12 +379,12 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 userId: el,
                 size: c.EFr.SIZE_32,
                 animateOnHover: !(t || ef),
-                guildId: x,
+                guildId: L,
             }),
             eT = null != eo ? eo : {},
             { onFocus: eS } = eT,
             eA = B(eT, ["onFocus"]),
-            eC = (0, S.X7)(x, el, null != a ? a : null),
+            eC = (0, S.X7)(L, el, null != a ? a : null),
             [eN, eR] = i.useState(!1);
         i.useEffect(() => {
             t && eR(!1);
@@ -394,26 +394,26 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             eD = i.useCallback(() => {
                 e_(!0);
             }, []),
-            eL = i.useCallback(() => {
+            ex = i.useCallback(() => {
                 e_(!1);
             }, []),
-            ex = i.useCallback(() => {
+            eL = i.useCallback(() => {
                 eh(!0), null == eS || eS();
             }, [eS]),
             eM = i.useCallback(() => {
                 eh(!1);
             }, []),
-            ek = i.useCallback((e) => {
+            ej = i.useCallback((e) => {
                 eg(e);
             }, []),
-            ej = i.useCallback(
+            ek = i.useCallback(
                 (e) =>
                     null == eP
                         ? null
                         : (0, r.jsx)(
                               C.Z,
                               G(
-                                  j(
+                                  k(
                                       {
                                           name: null != E ? E : ec,
                                           quest: eP,
@@ -434,7 +434,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
               })
             : (0, r.jsx)(c.yRy, {
                   targetElementRef: ed,
-                  renderPopout: ej,
+                  renderPopout: ek,
                   position: "bottom",
                   shouldShow: ew,
                   nudgeAlignIntoViewport: !1,
@@ -444,11 +444,11 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   children: () =>
                       (0, r.jsx)(
                           g.Z,
-                          j(
+                          k(
                               {
                                   ref: ed,
                                   selected: t,
-                                  className: o()(M.member, k, {
+                                  className: o()(M.member, j, {
                                       [M.offline]: I === w.Skl.OFFLINE && !t,
                                       [M.flatBottom]: ew,
                                   }),
@@ -458,7 +458,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   onMouseDown: Y,
                                   onContextMenu: J,
                                   onMouseEnter: eD,
-                                  onMouseLeave: eL,
+                                  onMouseLeave: ex,
                                   onBlur: eM,
                                   hovered: ef,
                                   name:
@@ -472,7 +472,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                     colorStrings: eC,
                                                     hideClanTag: Z,
                                                     user: b,
-                                                    guildId: x,
+                                                    guildId: L,
                                                     isHovering: ef,
                                                 }),
                                             })
@@ -487,7 +487,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                         colorStrings: eC,
                                                         hideClanTag: Z,
                                                         user: b,
-                                                        guildId: x,
+                                                        guildId: L,
                                                         isHovering: ef,
                                                     }),
                                                 }),
@@ -502,7 +502,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       isMobile: R,
                                       isTyping: h,
                                       avatarDecorationSrc: eO,
-                                      handleSetTypingRef: ek,
+                                      handleSetTypingRef: ej,
                                       typingRef: em,
                                       currentUser: y,
                                   }),
@@ -514,7 +514,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       applicationStream: v,
                                       voiceStatusChannel: ey,
                                       user: b,
-                                      channel: L,
+                                      channel: x,
                                       isHoveringOrFocusing: ef || ep,
                                       quest: eP,
                                       hideTooltip: H,
@@ -533,7 +533,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   "aria-posinset": en,
                                   id: ei,
                                   tabIndex: ea,
-                                  onFocus: ex,
+                                  onFocus: eL,
                                   focusProps: {
                                       offset: {
                                           top: 4,

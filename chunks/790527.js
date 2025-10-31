@@ -67,11 +67,11 @@ function w(e) {
             title: R,
             type: w,
             guildBoostProps: D,
-            analyticsSource: L,
-            analyticsLocation: x,
+            analyticsSource: x,
+            analyticsLocation: L,
             body: M,
-            context: k,
-            glowUp: j,
+            context: j,
+            glowUp: k,
             modalClassName: U,
             modalContentClassName: G,
             artContainerClassName: B,
@@ -152,9 +152,9 @@ function w(e) {
             !eh,
         { analyticsLocations: eb } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
         ey = {
-            analyticsLocation: x,
+            analyticsLocation: L,
             analyticsLocations: eb,
-            analyticsSource: L,
+            analyticsSource: x,
             guildBoostProps: D,
             type: w,
         },
@@ -196,7 +196,7 @@ function w(e) {
     let eS = () => {
             if (eh)
                 return (0, r.jsx)(p.Z, {
-                    analyticsLocation: x,
+                    analyticsLocation: L,
                     guild: D.guild,
                     onClose: Y,
                 });
@@ -212,7 +212,7 @@ function w(e) {
             return (0, r.jsx)(y.Z, {
                 className: es,
                 showGradient: ea || eo,
-                premiumModalAnalyticsLocation: x,
+                premiumModalAnalyticsLocation: L,
                 subscriptionTier: et,
                 size: l.zx.Sizes.SMALL,
                 color: ea || eo ? l.zx.Colors.CUSTOM : l.zx.Colors.GREEN,
@@ -269,11 +269,11 @@ function w(e) {
                                         ? a
                                         : I.Si.TIER_2,
                                 headingText: R,
-                                context: k,
-                                analyticsLocationObject: x,
+                                context: j,
+                                analyticsLocationObject: L,
                                 discountOffer: eg,
                                 trialOffer: em,
-                                children: j,
+                                children: k,
                             })
                           : (0, r.jsxs)("div", {
                                 className: A.contentContainer,

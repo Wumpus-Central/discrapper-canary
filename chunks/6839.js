@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(496675),
     L = n(699516),
     M = n(594174),
-    k = n(768581),
-    j = n(176354),
+    j = n(768581),
+    k = n(176354),
     U = n(5192),
     G = n(709054),
     B = n(91047),
@@ -105,8 +105,8 @@ function et(e) {
 function en(e, t, n, i) {
     let a =
         null == e.id
-            ? j.ZP.getURL(e.name)
-            : k.ZP.getEmojiURL({
+            ? k.ZP.getURL(e.name)
+            : j.ZP.getEmojiURL({
                   id: e.id,
                   animated: e.animated,
                   size: t,
@@ -145,7 +145,7 @@ let er = (e) => {
                 return (
                     l(!0),
                     !(async function () {
-                        let n = await (0, j.B6)(t);
+                        let n = await (0, k.B6)(t);
                         Array.isArray(n) && n.length > 0 && !e && u(n);
                     })(),
                     () => {

@@ -1,6 +1,6 @@
 n.d(t, { g: () => v }), n(388685), n(35282);
 var a = n(647438),
-    r = n(281598);
+    i = n(281598);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -26,7 +26,7 @@ function l(e) {
     }
     return e;
 }
-function i(e, t) {
+function r(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -44,15 +44,15 @@ function i(e, t) {
         e
     );
 }
-let o = new Set([
-        r.jE.HERO_BANNER_STATIC,
-        r.jE.HERO_LOGO,
-        r.jE.PDP_BACKGROUND,
-        r.jE.LOGO,
-        r.jE.MOBILE_BANNER,
-        r.jE.MOBILE_BACKGROUND,
+let s = new Set([
+        i.jE.HERO_BANNER_STATIC,
+        i.jE.HERO_LOGO,
+        i.jE.PDP_BACKGROUND,
+        i.jE.LOGO,
+        i.jE.MOBILE_BANNER,
+        i.jE.MOBILE_BACKGROUND,
     ]),
-    s = ["intro", "idle", "reduced_motion", "static", "thumbnail"],
+    o = ["intro", "idle", "reduced_motion", "static", "thumbnail"],
     c = {
         max: 5000000,
         warn: 2000000,
@@ -74,54 +74,54 @@ let o = new Set([
         warn: 50000,
     },
     h = {
-        [r.aB.PROFILE_EFFECT]: c,
-        [r.aB.AVATAR_DECORATION]: d,
-        [r.jE.HERO_BANNER_ANIMATED]: c,
-        [r.jE.SHOP_BUTTON_BG_HOVER]: d,
-        [r.jE.SHOP_BUTTON_BG_HOVER_DARK]: d,
-        [r.jE.SHOP_BUTTON_BG_HOVER_LIGHT]: d,
-        [r.jE.SHOP_BUTTON_BG_RESTING]: d,
-        [r.jE.SHOP_BUTTON_BG_RESTING_DARK]: d,
-        [r.jE.SHOP_BUTTON_BG_RESTING_LIGHT]: d,
-        [r.jE.HERO_BANNER_STATIC]: u,
-        [r.jE.UPSELL_BANNER]: m,
-        [r.jE.UPSELL_BANNER_POPOUT]: p,
-        [r.jE.MOBILE_BANNER]: m,
-        [r.jE.MOBILE_BACKGROUND]: p,
-        [r.jE.PDP_BACKGROUND]: p,
-        [r.jE.LOGO]: p,
-        [r.jE.COACHTIP_AVATAR]: p,
+        [i.aB.PROFILE_EFFECT]: c,
+        [i.aB.AVATAR_DECORATION]: d,
+        [i.jE.HERO_BANNER_ANIMATED]: c,
+        [i.jE.SHOP_BUTTON_BG_HOVER]: d,
+        [i.jE.SHOP_BUTTON_BG_HOVER_DARK]: d,
+        [i.jE.SHOP_BUTTON_BG_HOVER_LIGHT]: d,
+        [i.jE.SHOP_BUTTON_BG_RESTING]: d,
+        [i.jE.SHOP_BUTTON_BG_RESTING_DARK]: d,
+        [i.jE.SHOP_BUTTON_BG_RESTING_LIGHT]: d,
+        [i.jE.HERO_BANNER_STATIC]: u,
+        [i.jE.UPSELL_BANNER]: m,
+        [i.jE.UPSELL_BANNER_POPOUT]: p,
+        [i.jE.MOBILE_BANNER]: m,
+        [i.jE.MOBILE_BACKGROUND]: p,
+        [i.jE.PDP_BACKGROUND]: p,
+        [i.jE.LOGO]: p,
+        [i.jE.COACHTIP_AVATAR]: p,
     },
     x = async (e) => {
-        let t = Object.values(r.CM),
+        let t = Object.values(i.CM),
             n = new Set(),
             a = e.createReader();
         for (let e of await new Promise((e) => a.readEntries(e))) e.isDirectory && t.includes(e.name) && n.add(e.name);
         return t.filter((e) => !n.has(e));
     },
-    f = (e) => {
+    g = (e) => {
         let { names: t, addError: n } = e,
             a = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
-            r = t.filter((e) => !a.test(e));
-        r.length > 0 && n("File names must be in lowercase snake case", r);
+            i = t.filter((e) => !a.test(e));
+        i.length > 0 && n("File names must be in lowercase snake case", i);
     },
-    b = (e, t, n, a) => {
-        let r = t.size,
-            l = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
-            i = "".concat(t.name, " - ").concat(l);
-        if (r > e.max) {
+    f = (e, t, n, a) => {
+        let i = t.size,
+            l = i > 1000000 ? "".concat((i / 1000000).toFixed(2), "MB") : "".concat((i / 1000).toFixed(2), "KB"),
+            r = "".concat(t.name, " - ").concat(l);
+        if (i > e.max) {
             let t =
                 e.max > 1000000
                     ? "".concat(Math.round(e.max / 1000000), "MB")
                     : "".concat(Math.round(e.max / 1000), "KB");
             n("Files exceed the recommended size limit - make sure they are optimized!", [
-                "".concat(i, " (max: ").concat(t, ")"),
+                "".concat(r, " (max: ").concat(t, ")"),
             ]);
-        } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
+        } else i > e.warn && a("Files are a tad chonky - are you sure they're optimized?", ["".concat(r)]);
     },
-    g = (e, t, n, a) => {
-        let r = h[e];
-        if (null != r) for (let e of t) e.name.endsWith(".txt") || b(r, e, n, a);
+    b = (e, t, n, a) => {
+        let i = h[e];
+        if (null != i) for (let e of t) e.name.endsWith(".txt") || f(i, e, n, a);
     },
     v = () => {
         let [e, t] = a.useState(!1),
@@ -131,9 +131,9 @@ let o = new Set([
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 u((n) => {
                     var a;
-                    let r = null != (a = n[e]) ? a : [];
-                    return i(l({}, n), {
-                        [e]: [...r, ...t],
+                    let i = null != (a = n[e]) ? a : [];
+                    return r(l({}, n), {
+                        [e]: [...i, ...t],
                     });
                 });
             }, []),
@@ -141,9 +141,9 @@ let o = new Set([
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 c((n) => {
                     var a;
-                    let r = null != (a = n[e]) ? a : [];
-                    return i(l({}, n), {
-                        [e]: [...r, ...t],
+                    let i = null != (a = n[e]) ? a : [];
+                    return r(l({}, n), {
+                        [e]: [...i, ...t],
                     });
                 });
             }, []),
@@ -164,25 +164,25 @@ let o = new Set([
                         if (!t.isDirectory) return void m("Uploaded a file. Expected a directory.");
                         let a = await x(t);
                         if (a.length > 0) return void m("Missing required directories", a);
-                        (n = await (0, r.LY)([t])),
+                        (n = await (0, i.LY)([t])),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
                                 for (let e of t.collectionFiles) {
-                                    let t = (0, r.BU)(e),
+                                    let t = (0, i.BU)(e),
                                         l = null != t ? h[t] : null;
-                                    null != l && b(l, e, n, a);
+                                    null != l && f(l, e, n, a);
                                 }
-                                f({
+                                g({
                                     names: t.collectionFiles.map((e) => e.name),
                                     addError: n,
                                 });
                                 let l = new Set(t.collectionFiles.map((e) => e.name)),
-                                    i = Array.from(o).filter((e) => !l.has(e));
-                                i.length > 0 && n("Missing required files", i);
-                                let s = Object.values(r.jE)
-                                    .filter((e) => !o.has(e))
+                                    r = Array.from(s).filter((e) => !l.has(e));
+                                r.length > 0 && n("Missing required files", r);
+                                let o = Object.values(i.jE)
+                                    .filter((e) => !s.has(e))
                                     .filter((e) => !l.has(e));
-                                s.length > 0 && a("Missing optional assets", s);
+                                o.length > 0 && a("Missing optional assets", o);
                             })({
                                 files: n,
                                 addError: m,
@@ -190,32 +190,32 @@ let o = new Set([
                             }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                f({
+                                g({
                                     names: Object.keys(t.profileEffectFilesMap),
                                     addError: n,
                                 }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
                                         let [t, l] = e,
-                                            i = l.map((e) => e.name);
-                                        f({
-                                            names: i.map((e) => {
+                                            r = l.map((e) => e.name);
+                                        g({
+                                            names: r.map((e) => {
                                                 let t = e.indexOf("-");
                                                 return e.substring(0, t > 0 ? t : e.length);
                                             }),
                                             addError: n,
                                         }),
-                                            g(r.aB.PROFILE_EFFECT, l, n, a);
-                                        let o = s
-                                            .filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith(".png")))
+                                            b(i.aB.PROFILE_EFFECT, l, n, a);
+                                        let s = o
+                                            .filter((e) => !r.some((t) => t.startsWith(e) && t.endsWith(".png")))
                                             .map((e) => "".concat(t, "/").concat(e));
-                                        o.length > 0 && n("Missing required PFX files with prefix", o),
-                                            i.some((e) => e.endsWith(".txt")) ||
+                                        s.length > 0 && n("Missing required PFX files with prefix", s),
+                                            r.some((e) => e.endsWith(".txt")) ||
                                                 n(
                                                     "PFX configs required - please include both exports! (exception: duplicate variant configs are optional)",
                                                     [t],
                                                 );
-                                        let c = i
-                                            .filter((e) => !s.some((t) => e.startsWith(t)) && !e.endsWith(".txt"))
+                                        let c = r
+                                            .filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith(".txt"))
                                             .map((e) => "".concat(t, "/").concat(e));
                                         c.length > 0 && a("Contains unrecognized files", c);
                                     });
@@ -226,11 +226,11 @@ let o = new Set([
                             }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                f({
+                                g({
                                     names: t.avatarDecorationFiles.map((e) => e.name),
                                     addError: n,
                                 }),
-                                    g(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
+                                    b(i.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
                             })({
                                 files: n,
                                 addError: m,

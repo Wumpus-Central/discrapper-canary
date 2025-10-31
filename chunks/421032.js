@@ -11,9 +11,9 @@ var r = t(120356),
     u = t(430824),
     _ = t(924301),
     p = t(894017),
-    v = t(954313),
+    f = t(954313),
     m = t(390966),
-    f = t(765305),
+    v = t(765305),
     g = t(388032),
     h = t(709380);
 function b(e) {
@@ -21,19 +21,19 @@ function b(e) {
         I = (0, l.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(b)),
         j = (0, p.Z)(n, null == I ? void 0 : I.id),
         k = (0, l.e7)([u.Z], () => u.Z.getGuild(null == I ? void 0 : I.guild_id)),
-        w = (0, l.e7)([d.Z], () => d.Z.getChannel(null == I ? void 0 : I.channel_id));
+        y = (0, l.e7)([d.Z], () => d.Z.getChannel(null == I ? void 0 : I.channel_id));
     if (null == I) return null;
-    let { is_canceled: y = !1 } = null != j ? j : {},
-        N =
+    let { is_canceled: N = !1 } = null != j ? j : {},
+        w =
             (null == j ? void 0 : j.scheduled_start_time) != null
                 ? new Date(null == j ? void 0 : j.scheduled_start_time)
                 : r,
-        Z = (0, v.DK)(I),
-        E = y ? f.p1.CANCELED : f.p1.SCHEDULED;
+        Z = (0, f.DK)(I),
+        E = N ? v.p1.CANCELED : v.p1.SCHEDULED;
     Z === n && (E = I.status);
     let P =
             (null == I ? void 0 : I.scheduled_start_time) != null
-                ? (0, v.lh)(j, N, new Date(null == I ? void 0 : I.scheduled_start_time))
+                ? (0, f.lh)(j, w, new Date(null == I ? void 0 : I.scheduled_start_time))
                 : null,
         S = (e) => {
             e.stopPropagation(),
@@ -71,7 +71,7 @@ function b(e) {
                                     {
                                         guildEventId: I.id,
                                         recurrenceId: n,
-                                        channel: w,
+                                        channel: y,
                                         guild: k,
                                         isRecurrenceItem: !0,
                                     },
@@ -82,25 +82,25 @@ function b(e) {
         };
     return (0, i.jsxs)(c.kL8, {
         className: a()(h.container, {
-            [h.canceled]: y,
+            [h.canceled]: N,
             [h.clickable]: null != x,
             [h.active]: C,
         }),
         onClick: (e) => {
-            e.stopPropagation(), y || null == x || x(n);
+            e.stopPropagation(), N || null == x || x(n);
         },
         onContextMenu: S,
         "aria-label": "",
         children: [
             (0, i.jsx)(m.z, {
-                startTime: N.toISOString(),
+                startTime: w.toISOString(),
                 status: null != P ? P : E,
                 eventType: I.entity_type,
                 guildEventId: I.id,
                 recurrenceId: n,
                 className: h.timeStatus,
             }),
-            y &&
+            N &&
                 (0, i.jsx)(c.Text, {
                     variant: "text-sm/semibold",
                     color: "text-danger",

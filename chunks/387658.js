@@ -14,8 +14,8 @@ var i = n(951288),
     h = n(10718),
     v = n(895924),
     y = n(104919),
-    x = n(583027),
-    g = n(585483),
+    g = n(583027),
+    x = n(585483),
     b = n(499254),
     N = n(541099),
     j = n(827498),
@@ -38,7 +38,7 @@ function k(e) {
         d = l.useCallback(() => {
             let e = N.Z.entrypoint();
             b.yT(j.ti.COMMAND),
-                (0, x.Mo)({
+                (0, g.Mo)({
                     command: a,
                     location: v.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c,
@@ -53,7 +53,7 @@ function k(e) {
                         source: e,
                         commandOrigin: v.bB.APPLICATION_LAUNCHER,
                     }),
-                    g.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.channel.id }));
+                    x.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: r.channel.id }));
         }, [r, a, s, c]),
         p = (null != (n = null == (t = a.options) ? void 0 : t.length) ? n : 0) > 0,
         f = l.useMemo(() => (0, _.ae)(a.displayDescription, void 0), [a.displayDescription]),
@@ -256,8 +256,8 @@ function H(e) {
         {
             sortOrder: v,
             setSortOrder: y,
-            commands: x,
-            canSort: g,
+            commands: g,
+            canSort: x,
         } = (0, P.Z)({
             sectionId: r.id,
             commandsByActiveSection: u,
@@ -267,13 +267,13 @@ function H(e) {
     }, [r.id, c]);
     let b = (0, E.Z)({
         context: n,
-        commands: x,
+        commands: g,
         limit: 5,
     });
     return (l.useEffect(() => {
-        s(x.length > 0);
-    }, [s, x]),
-    m || 0 !== x.length)
+        s(g.length > 0);
+    }, [s, g]),
+    m || 0 !== g.length)
         ? (0, i.jsxs)("ul", {
               className: R.contentContainer,
               children: [
@@ -287,11 +287,11 @@ function H(e) {
                   (0, i.jsx)(D, {
                       context: n,
                       section: f,
-                      commands: m ? w : x,
+                      commands: m ? w : g,
                       headerName: T.intl.string(T.t.DUU9L3),
                       sectionName: a,
                       children:
-                          g &&
+                          x &&
                           (0, i.jsx)(O.Z, {
                               sortOrder: v,
                               onSortOptionClick: y,

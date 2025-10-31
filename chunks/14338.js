@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -60,9 +60,9 @@ function y(e, t) {
 function x(e) {
     let { channel: t, speaker: l, className: g } = e,
         x = i.useRef(null),
-        { newestAnalyticsLocation: v } = (0, u.ZP)(),
+        { newestAnalyticsLocation: O } = (0, u.ZP)(),
         j = (0, h.bp)(),
-        { reducedMotion: O } = i.useContext(o.Sfi),
+        { reducedMotion: v } = i.useContext(o.Sfi),
         C = (0, d.Z)({ userId: l.id }),
         I = null != l.member ? (0, m.CA)(l.member) : null,
         S = (e) => {
@@ -86,7 +86,7 @@ function x(e) {
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)("GuildChannelUserContextMenu", v),
+                                onInteraction: (0, p.u)("GuildChannelUserContextMenu", O),
                             }),
                         );
                 },
@@ -117,14 +117,14 @@ function x(e) {
                             size: o.EFr.SIZE_24,
                             className: a()(b.avatar, g),
                             "aria-label": l.userNick,
-                            isSpeaking: C && !O.enabled,
+                            isSpeaking: C && !v.enabled,
                         }),
                     }),
                 ),
             }),
     });
 }
-function v(e) {
+function O(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(g.Z, {
         className: b.summary,

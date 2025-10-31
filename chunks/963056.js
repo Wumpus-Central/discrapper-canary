@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var a = n(951288);
 n(647438);
-var r = n(13941),
+var i = n(13941),
     l = n(481060),
-    i = n(572797);
-function o(e) {
+    r = n(572797);
+function s(e) {
     let { text: t } = e,
         n = (0, l.Yzy)(t, {
             from: {
@@ -21,10 +21,10 @@ function o(e) {
             },
         });
     return (0, a.jsx)("div", {
-        className: i.container,
+        className: r.container,
         children: n((e, t) =>
-            (0, a.jsx)(r.animated.div, {
-                className: i.animatedText,
+            (0, a.jsx)(i.animated.div, {
+                className: r.animatedText,
                 style: e,
                 children: t,
             }),

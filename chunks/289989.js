@@ -1,10 +1,10 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(209739),
-    o = n.n(s),
+    o = n(209739),
+    s = n.n(o),
     a = n(793030),
     c = n(481060),
     d = n(579806),
@@ -18,13 +18,13 @@ var i = n(120356),
     x = n(388032),
     v = n(341338);
 function j(e) {
-    let { id: t, text: n, icon: i, selected: s, onClick: o } = e;
+    let { id: t, text: n, icon: i, selected: o, onClick: s } = e;
     return (0, r.jsx)(c.P3F, {
         role: "radio",
-        "aria-checked": s,
-        onClick: () => o(t),
+        "aria-checked": o,
+        onClick: () => s(t),
         tabIndex: 0,
-        className: l()(v.nativeSourceTypeButton, v.nativePickerRadioItem, { [v.selected]: s }),
+        className: l()(v.nativeSourceTypeButton, v.nativePickerRadioItem, { [v.selected]: o }),
         children: (0, r.jsxs)("div", {
             className: v.nativeSourceTypeButtonInner,
             children: [
@@ -38,11 +38,11 @@ function j(e) {
         }),
     });
 }
-function S(e) {
+function b(e) {
     let { onSourceSelect: t } = e;
     (0, f.UB)(), (0, p.Z)(t, g.Vq);
     let [{ nativeSourceType: n }, i] = (0, m.E_)(),
-        l = (0, u.isMac)() && o().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, _.jR);
+        l = (0, u.isMac)() && s().satisfies(null === d.Z || void 0 === d.Z ? void 0 : d.Z.os.release, _.jR);
     return (0, r.jsxs)("div", {
         className: v.root,
         children: [

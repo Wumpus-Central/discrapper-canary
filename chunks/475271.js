@@ -2,10 +2,10 @@ n.r(t), n.d(t, { default: () => c }), n(415506);
 var r = n(951288);
 n(647438);
 var a = n(481060),
-    o = n(429142),
-    l = n(353250),
+    i = n(429142),
+    o = n(353250),
     s = n(234888);
-function i(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,39 +32,39 @@ function i(e) {
 }
 let c = {
     showCaptcha: function (e, t) {
-        let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            { sitekey: c, captchaService: d, options: u } = e;
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            { sitekey: c, captchaService: u, options: d } = e;
         (0, a.ZDy)(
             async () => {
                 let { default: e } = await n.e("12192").then(n.bind(n, 718742));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        i(
+                        l(
                             {
                                 onCaptchaVerify: (e, n) =>
                                     t({
                                         captcha_key: e,
                                         captcha_rqtoken: n,
                                     }),
-                                captchaService: d,
+                                captchaService: u,
                                 sitekey: c,
                             },
-                            l,
-                            u,
+                            o,
+                            d,
                             n,
                         ),
                     );
             },
             {
-                Layer: o.ZP,
+                Layer: i.ZP,
                 modalKey: s.A,
             },
         );
     },
     showCaptchaAsync: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: c, captchaService: d, captchaSessionId: u, options: p } = e;
+            { sitekey: c, captchaService: u, captchaSessionId: d, options: p } = e;
         return new Promise((e, m) => {
             (0, a.ZDy)(
                 async () => {
@@ -72,19 +72,19 @@ let c = {
                     return (n) =>
                         (0, r.jsx)(
                             a,
-                            i(
+                            l(
                                 {
                                     onCaptchaVerify: (t, n) =>
                                         e({
                                             captcha_key: t,
                                             captcha_rqtoken: n,
-                                            captcha_session_id: u,
+                                            captcha_session_id: d,
                                         }),
-                                    captchaService: d,
+                                    captchaService: u,
                                     sitekey: c,
                                     onReject: (e) => {
-                                        e === l.CaptchaError.CANCEL
-                                            ? m(new l.CaptchaCancelError())
+                                        e === o.CaptchaError.CANCEL
+                                            ? m(new o.CaptchaCancelError())
                                             : m(Error("cancel captcha"));
                                     },
                                 },
@@ -95,7 +95,7 @@ let c = {
                         );
                 },
                 {
-                    Layer: o.ZP,
+                    Layer: i.ZP,
                     modalKey: s.A,
                 },
             );

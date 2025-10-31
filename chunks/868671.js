@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => j,
-    T: () => v,
+    T: () => O,
 }),
     n(388685);
 var r = n(647438),
@@ -21,24 +21,24 @@ var r = n(647438),
     _ = n(809017),
     y = n(981631),
     x = n(388032);
-let v = 0;
+let O = 0;
 function j(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: v },
+            memberStoreProps: { groups: t, rows: n, version: O },
             channelId: j,
-            guildId: O,
+            guildId: v,
         } = e,
         [C, I] = r.useState(!1),
         { requestId: S, entries: E, impressionCappedEntryIds: Z } = (0, g.Z)(j),
         P = (0, i.e7)([p.Z], () => p.Z.hidden),
         T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
         N = (0, i.e7)([s.Z], () => s.Z.getChannel(j)),
-        R = (0, i.e7)([o.Z], () => o.Z.getGuild(O), [O]),
+        R = (0, i.e7)([o.Z], () => o.Z.getGuild(v), [v]),
         w = (0, h.E)(R),
         A = null != w && w && (null == N ? void 0 : N.isForumChannel()) === !1,
         [D, L, M, k] = r.useMemo(() => {
             let e;
-            if (null == E || 0 === E.length || null == S || !A) return [t, n, v];
+            if (null == E || 0 === E.length || null == S || !A) return [t, n, O];
             let r = C ? E.length : 3,
                 i = E.slice(0, r);
             e = P
@@ -61,7 +61,7 @@ function j(e) {
                         return (
                             d.default.track(y.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: j,
-                                guild_id: O,
+                                guild_id: v,
                                 expanded: t,
                             }),
                             t
@@ -73,7 +73,7 @@ function j(e) {
                 feedHeight: e.map(m.iZ).reduce((e, t) => e + t, 0),
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [j, E, C, t, O, S, n, v, P, A]),
+        }, [j, E, C, t, v, S, n, O, P, A]),
         U = r.useRef(0),
         G = r.useRef(E),
         H = r.useRef(void 0),
@@ -112,7 +112,7 @@ function j(e) {
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
                             channel_id: j,
-                            guild_id: O,
+                            guild_id: v,
                             all_item_ids: n,
                             impression_capped_item_ids: [...F.current.impressionCappedEntryIds],
                         }),
@@ -123,7 +123,7 @@ function j(e) {
                             }));
                 }
             ),
-            [S, j, O, P, T, A],
+            [S, j, v, P, T, A],
         ),
         {
             groups: D,

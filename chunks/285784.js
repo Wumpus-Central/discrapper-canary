@@ -20,16 +20,16 @@ function u(e) {
             canInvite: u,
             isChannelPublic: _ = !0,
             entityType: p,
-            onJoinClick: v,
+            onJoinClick: f,
             onRsvpClick: m,
-            onStartClick: f,
+            onStartClick: v,
             onInviteClick: g,
             onEndClick: h,
             onJoinGuildClick: b,
             isJoined: x = !1,
             channel: C,
         } = e,
-        I = void 0 !== v,
+        I = void 0 !== f,
         j = (function (e) {
             let { onInviteClick: n, canInvite: t, isChannelPublic: i, channel: s } = e,
                 u = new a.V7(),
@@ -71,7 +71,7 @@ function u(e) {
             k.push({
                 variant: "active",
                 size: "sm",
-                onClick: v,
+                onClick: f,
                 text: (function (e) {
                     let { isJoined: n, canJoin: t, isVoiceChannel: i } = e;
                     return t
@@ -110,11 +110,11 @@ function u(e) {
     }
     return (
         n ||
-            null == f ||
+            null == v ||
             k.push({
                 variant: "primary",
                 size: "sm",
-                onClick: f,
+                onClick: v,
                 text: d.intl.string(d.t.I0v0Qv),
             }),
         n &&

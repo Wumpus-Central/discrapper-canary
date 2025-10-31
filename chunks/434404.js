@@ -289,8 +289,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                     profile: w,
                     moderatorReportingEnabled: D,
                 } = t,
-                L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                x = A(
+                x = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                L = A(
                     T(
                         {
                             name: n,
@@ -326,8 +326,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 i.tn
                     .patch({
                         url: O.ANM.GUILD(e),
-                        query: { for_discovery: L.isForDiscovery },
-                        body: x,
+                        query: { for_discovery: x.isForDiscovery },
+                        body: L,
                         oldFormErrors: !0,
                         rejectWithError: !1,
                     })
@@ -346,7 +346,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                                     errors: e.body,
                                 }),
                                 R.error("Failed to save guild settings", { errors: e.body }),
-                                L.throwErr)
+                                x.throwErr)
                             )
                                 throw e.body;
                         },

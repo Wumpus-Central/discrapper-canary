@@ -113,8 +113,8 @@ function I(e) {
         "aria-label": P,
         look: w,
         buttonText: D,
-        size: L,
-        color: x,
+        size: x,
+        color: L,
     } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.aML, {
@@ -133,8 +133,8 @@ function I(e) {
                         E(
                             {
                                 look: null != w ? w : l.zx.Looks.BLANK,
-                                size: null != L ? L : l.zx.Sizes.NONE,
-                                color: x,
+                                size: null != x ? x : l.zx.Sizes.NONE,
+                                color: L,
                                 onKeyDown: (e) => {
                                     null == i || i(e);
                                 },
@@ -243,33 +243,33 @@ function A(e) {
         ]);
     let w = (0, p.Z)(a, l),
         D = null != s ? s : w,
-        L = (0, u.Z)("(max-width: 456px)"),
-        x = i.useRef(null),
+        x = (0, u.Z)("(max-width: 456px)"),
+        L = i.useRef(null),
         M = i.useContext(f.h9);
     i.useEffect(() => {
-        null != x.current && (M ? x.current.pause() : x.current.play());
+        null != L.current && (M ? L.current.pause() : L.current.play());
     }, [M]);
-    let k = null != (t = P.onContextMenu) ? t : v,
-        j = null == v && !N,
+    let j = null != (t = P.onContextMenu) ? t : v,
+        k = null == v && !N,
         U = null != v && !N,
         G = N && null != v,
         B = (0, r.jsx)(
             I,
             y(E({}, P), {
                 grow: !1,
-                onContextMenu: k,
-                iconClassName: o()(b, m.centerIcon, j && m.fullRegionIcon),
+                onContextMenu: j,
+                iconClassName: o()(b, m.centerIcon, k && m.fullRegionIcon),
                 className: o()(
-                    L || R ? g : null,
+                    x || R ? g : null,
                     l && m.active,
                     m.centerButton,
                     S[w],
-                    j && m.fullRegionButton,
+                    k && m.fullRegionButton,
                     G && m.attachedButton,
                 ),
             }),
         );
-    return L
+    return x
         ? B
         : (0, r.jsxs)("div", {
               ref: n,

@@ -285,10 +285,10 @@ function w(e) {
             },
             [n, a],
         ),
-        k = (e) => {
+        j = (e) => {
             a((0, c._i)(e));
         },
-        j = (0, r.jsxs)(r.Fragment, {
+        k = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
@@ -296,7 +296,7 @@ function w(e) {
                         onChange: M,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
-                            return k(t);
+                            return j(t);
                         },
                         color: w.pending.hsl,
                     }),
@@ -340,7 +340,7 @@ function w(e) {
     return (0, r.jsx)(U, {
         "aria-label": m.intl.string(m.t.WTqQ5e),
         className: o()(g.customColorPicker, v),
-        children: j,
+        children: k,
     });
 }
 let D = i.memo(w);

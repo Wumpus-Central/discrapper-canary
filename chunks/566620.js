@@ -3,12 +3,12 @@ n.d(t, {
     G6: () => el,
     Gj: () => eI,
     W5: () => ey,
-    a_: () => eS,
+    a_: () => eT,
     cG: () => es,
     gC: () => ev,
     kv: () => ep,
     mW: () => ef,
-    nJ: () => eT,
+    nJ: () => eS,
     pu: () => eE,
     sN: () => eg,
     tg: () => eO,
@@ -39,8 +39,8 @@ var r = n(990547),
     O = n(358221),
     v = n(605236),
     I = n(233764),
-    S = n(375824),
-    T = n(48131),
+    T = n(375824),
+    S = n(48131),
     A = n(591472),
     C = n(957730),
     N = n(48854),
@@ -48,11 +48,11 @@ var r = n(990547),
     P = n(788983),
     w = n(835873),
     D = n(973616),
-    L = n(314897),
-    x = n(592125),
+    x = n(314897),
+    L = n(592125),
     M = n(430824),
-    k = n(496675),
-    j = n(594174),
+    j = n(496675),
+    k = n(594174),
     U = n(979651),
     G = n(626135),
     B = n(630388),
@@ -131,14 +131,14 @@ async function el(e) {
             inviterUserId: b,
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
-        O = x.Z.getChannel(r),
+        O = L.Z.getChannel(r),
         v = null != (t = null == O ? void 0 : O.getGuildId()) ? t : void 0;
     if (null == v && !(null != (n = null == O ? void 0 : O.isPrivate()) && n)) return !1;
     let C = (0, N.r)();
     try {
         R.Z.getWindowOpen(ee.KJ3.ACTIVITY_POPOUT) && (0, P.xv)(ee.KJ3.ACTIVITY_POPOUT);
         let e = A.Z.getConnectedFrame();
-        null != e && T.Z.stopFrame({ applicationId: e.applicationId }),
+        null != e && S.Z.stopFrame({ applicationId: e.applicationId }),
             s.Z.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_START",
                 nonce: C,
@@ -154,14 +154,14 @@ async function el(e) {
                     referrerId: g,
                 },
             });
-        let t = await eS(a, null != r ? r : void 0);
+        let t = await eT(a, null != r ? r : void 0);
         s.Z.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: a,
             channelId: null != r ? r : null,
             proxyTicket: t,
         });
-        let n = j.default.getCurrentUser();
+        let n = k.default.getCurrentUser();
         if (
             (null != n &&
                 (0, Q.Z)({
@@ -231,7 +231,7 @@ async function el(e) {
                 channelId: null != r ? r : null,
                 guildId: null != v ? v : null,
                 isStart: o,
-                error: t instanceof I.Z || t instanceof _.Z || t instanceof S.Z ? t : new _.Z(t),
+                error: t instanceof I.Z || t instanceof _.Z || t instanceof T.Z ? t : new _.Z(t),
                 locationKind: e,
             }),
             !1
@@ -278,7 +278,7 @@ async function eu(e) {
                 channelId: r,
             })),
             await (0, h.FN)({ type: "user" });
-        let e = x.Z.getChannel(r),
+        let e = L.Z.getChannel(r),
             { isAuthorized: n } = await (0, b.L)({
                 applicationId: t,
                 channel: e,
@@ -290,7 +290,7 @@ async function eu(e) {
                 reason: 2,
             };
     }
-    let y = x.Z.getChannel(r),
+    let y = L.Z.getChannel(r),
         O = null != i ? M.Z.getGuild(i) : null;
     if (null == y)
         return {
@@ -303,7 +303,7 @@ async function eu(e) {
             r = H.ZP.getCurrentEmbeddedActivity();
         (null == r ? void 0 : r.applicationId) != null &&
             (e = E.Z.getApplication(null == r ? void 0 : r.applicationId));
-        let i = j.default.getCurrentUser();
+        let i = k.default.getCurrentUser();
         if (
             null != i &&
             !(await (0, Y.p)({
@@ -362,9 +362,9 @@ async function eu(e) {
                                           },
                                       }),
                                   )
-                                : null != o && o in S.Z.ReasonCodes
-                                  ? c(new S.Z(o))
-                                  : c(new S.Z(S.Z.ReasonCodes.UNKNOWN));
+                                : null != o && o in T.Z.ReasonCodes
+                                  ? c(new T.Z(o))
+                                  : c(new T.Z(T.Z.ReasonCodes.UNKNOWN));
                     },
                 }),
             });
@@ -375,8 +375,8 @@ async function eu(e) {
 async function ed(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: s } = e,
-        c = L.default.getSessionId(),
-        u = j.default.getCurrentUser(),
+        c = x.default.getSessionId(),
+        u = k.default.getCurrentUser(),
         d = n;
     if (null == d)
         return {
@@ -394,7 +394,7 @@ async function ed(e) {
             result: "failure",
             reason: 3,
         };
-    let _ = x.Z.getChannel(i);
+    let _ = L.Z.getChannel(i);
     if (null == _)
         return {
             result: "failure",
@@ -402,9 +402,9 @@ async function ed(e) {
         };
     let p = (0, z.e4)({
         channelId: i,
-        ChannelStore: x.Z,
+        ChannelStore: L.Z,
         GuildStore: M.Z,
-        PermissionStore: k.Z,
+        PermissionStore: j.Z,
         VoiceStateStore: U.Z,
     });
     if (p !== z.jy.CAN_LAUNCH) {
@@ -512,7 +512,7 @@ function ef(e) {
     if (null != a) {
         var o;
         let e = O.Z.getSelectedParticipantId(a),
-            t = null == (o = j.default.getCurrentUser()) ? void 0 : o.id,
+            t = null == (o = k.default.getCurrentUser()) ? void 0 : o.id,
             r = H.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
         if (null == r || null == t || "" === t) return;
         e ===
@@ -661,7 +661,7 @@ async function eg(e) {
             },
             i,
         );
-    null != x.Z.getChannel(n) && f.Z.sendInvite(n, o.code, i, a);
+    null != L.Z.getChannel(n) && f.Z.sendInvite(n, o.code, i, a);
 }
 async function eE(e) {
     let { channelId: t, applicationId: n, userId: r, location: i, inviteAnalyticsMetadata: a, prefixedContent: o } = e,
@@ -675,7 +675,7 @@ async function eE(e) {
         );
     await c.Z.ensurePrivateChannel(r).then((e) => {
         let t,
-            n = x.Z.getChannel(e);
+            n = L.Z.getChannel(e);
         if (null == n) throw Error("Private channel not found");
         null != o && (t = C.ZP.parse(n, o).content), f.Z.sendInvite(e, s.code, i, a, t);
     });
@@ -714,7 +714,7 @@ function ev(e) {
 function eI() {
     eO($.Ez.ACTIVITY_POPOUT_WINDOW), s.Z.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
 }
-async function eS(e, t) {
+async function eT(e, t) {
     let n = {};
     return (
         null != t && (n.channel_id = t),
@@ -727,14 +727,14 @@ async function eS(e, t) {
         ).body.ticket
     );
 }
-async function eT(e, t) {
+async function eS(e, t) {
     s.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING",
         applicationId: e,
         refreshing: !0,
     });
     try {
-        let n = await eS(e, null != t ? t : void 0);
+        let n = await eT(e, null != t ? t : void 0);
         s.Z.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: e,
@@ -748,7 +748,7 @@ async function eT(e, t) {
             });
     } catch (l) {
         var n;
-        let r = x.Z.getChannel(t),
+        let r = L.Z.getChannel(t),
             a = null != (n = null == r ? void 0 : r.guild_id) ? n : null,
             o = null != a ? i.E.GUILD_CHANNEL : i.E.PRIVATE_CHANNEL;
         return (
@@ -759,7 +759,7 @@ async function eT(e, t) {
                 channelId: t,
                 guildId: a,
                 locationKind: o,
-                error: l instanceof I.Z || l instanceof _.Z || l instanceof S.Z ? l : new _.Z(l),
+                error: l instanceof I.Z || l instanceof _.Z || l instanceof T.Z ? l : new _.Z(l),
             }),
             !1
         );

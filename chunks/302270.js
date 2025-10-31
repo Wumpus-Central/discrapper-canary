@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(623624),
     y = n(665149),
     x = n(984370),
-    v = n(616286),
+    O = n(616286),
     j = n(975146),
-    O = n(430824),
+    v = n(430824),
     C = n(496675),
     I = n(626135),
     S = n(431328),
@@ -47,7 +47,7 @@ function M(e) {
         _ = (0, Z.B)(t.id),
         y = (0, S.Rk)(t.id, E.pV.REQUESTED_TO_SPEAK_ONLY),
         { hasParticipantsPanel: x } = (0, f.Z)({ location: "StageChannelCallHeader" }),
-        O = x && m;
+        v = x && m;
     return (0, r.jsxs)(p.Gt, {
         value: l,
         children: [
@@ -81,8 +81,8 @@ function M(e) {
                 ),
             !c &&
                 (0, r.jsx)("div", {
-                    className: a()(L.button, { [L.sidebarOpen]: O || i }),
-                    children: (0, r.jsx)(v.T, {
+                    className: a()(L.button, { [L.sidebarOpen]: v || i }),
+                    children: (0, r.jsx)(O.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
@@ -99,12 +99,12 @@ function k(e) {
         h = (0, s.e7)([T.Z], () => T.Z.getStageInstanceByChannel(n.id)),
         f = (0, S.Io)(n.id),
         g = (0, S.Rk)(n.id, E.pV.AUDIENCE),
-        b = (0, s.e7)([O.Z], () => O.Z.getGuild(n.guild_id), [n.guild_id]),
-        v = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
+        O = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
         j =
             null != b && b.features.has(w.GuildFeatures.COMMUNITY)
-                ? v < w.TU7
-                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && v <= w.eez,
+                ? O < w.TU7
+                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && O <= w.eez,
         Z = (0, R.Z)(n),
         N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
         k = () => {

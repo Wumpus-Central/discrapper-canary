@@ -1,6 +1,6 @@
 n.d(t, { Z: () => b });
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(728285),
@@ -9,41 +9,41 @@ var i = n(951288),
     u = n(88479),
     d = n(592125),
     p = n(15274),
-    h = n(482241),
-    f = n(389303),
+    f = n(482241),
+    h = n(389303),
     m = n(554747),
     g = n(388032);
 function b(e) {
     let { channelId: t, onClick: n } = e,
         b = (0, o.bp)(),
-        C = (0, m.qY)(t),
+        _ = (0, m.qY)(t),
         y = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: _ } = (0, s.XJ)(y),
-        v = _(C),
-        x = r.useRef(null);
-    if (null == C) return null;
-    let O = () => {
-            if (null != y && (0, f.Z)(y)) return void (0, p.lC)(y, b);
+        { canManageGuildEvent: C } = (0, s.XJ)(y),
+        v = C(_),
+        O = i.useRef(null);
+    if (null == _) return null;
+    let x = () => {
+            if (null != y && (0, h.Z)(y)) return void (0, p.lC)(y, b);
             n();
         },
-        j = () => {
-            h.Z.endEvent(C.id, C.guild_id);
+        E = () => {
+            f.Z.endEvent(_.id, _.guild_id);
         };
     return v
-        ? (0, i.jsx)(a.yRy, {
-              targetElementRef: x,
+        ? (0, r.jsx)(a.yRy, {
+              targetElementRef: O,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(c.Z, {
-                      children: (0, i.jsx)(a.v2r, {
+                  return (0, r.jsx)(c.Z, {
+                      children: (0, r.jsx)(a.v2r, {
                           navId: "exit-options",
                           onSelect: () => {},
                           "aria-label": g.intl.string(g.t["K6/mk3"]),
                           onClose: t,
-                          children: (0, i.jsx)(a.sNh, {
+                          children: (0, r.jsx)(a.sNh, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: j,
+                              action: E,
                               label: g.intl.string(g.t.qaYzPA),
                               icon: a.k$p,
                           }),
@@ -55,15 +55,15 @@ function b(e) {
               animation: a.yRy.Animation.FADE,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, i.jsx)(u.Z, {
-                      buttonRef: x,
+                  return (0, r.jsx)(u.Z, {
+                      buttonRef: O,
                       label: g.intl.string(g.t["6vrfgt"]),
-                      onClick: O,
+                      onClick: x,
                       onPopoutClick: t,
                   });
               },
           })
-        : (0, i.jsx)(u.Z, {
+        : (0, r.jsx)(u.Z, {
               label: g.intl.string(g.t["6vrfgt"]),
               onClick: n,
           });

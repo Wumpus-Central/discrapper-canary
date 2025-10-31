@@ -8,22 +8,22 @@ var r = n(951288),
     c = n(594174),
     u = n(381585),
     d = n(597688),
-    g = n(128922),
-    p = n(937510),
+    p = n(128922),
+    g = n(937510),
     f = n(709999),
     h = n(653126),
     C = n(786040),
-    _ = n(215023),
-    m = n(388032),
+    m = n(215023),
+    _ = n(388032),
     b = n(310582);
 let v = (e) => {
     let { shelf: t, handleTransition: n, tab: i } = e,
         v = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         E = (0, a.e7)([d.Z], () => d.Z.getCategory(t.categorySkuId)),
-        x = g.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
+        x = p.Z.useConfig({ location: "ShelfBlock" }).showCardsV2,
         O = (0, u.sp)(),
         S = l.useMemo(() => t.rankedSkuIds.map((e) => d.Z.getProduct(e)).filter((e) => null != e), [t.rankedSkuIds]),
-        y = (0, p.l)(S).slice(0, 4);
+        y = (0, g.l)(S).slice(0, 4);
     return null == v
         ? null
         : (0, r.jsxs)("div", {
@@ -38,7 +38,7 @@ let v = (e) => {
                           }),
                           (0, r.jsx)(o.Button, {
                               variant: "secondary",
-                              text: m.intl.formatToPlainString(m.t.bc9RBE, { category_name: t.name }),
+                              text: _.intl.formatToPlainString(_.t.bc9RBE, { category_name: t.name }),
                               onClick: () => {
                                   n({
                                       sourceButton: "shelf block see all",
@@ -70,7 +70,7 @@ let v = (e) => {
                                                 h.Z,
                                                 {
                                                     skuId: s,
-                                                    prioritizedCurrency: i === _.AW.ORBS ? C.tA.ORBS : void 0,
+                                                    prioritizedCurrency: i === m.AW.ORBS ? C.tA.ORBS : void 0,
                                                     onClickAnalytics: (0, C.wO)(e, i, O),
                                                 },
                                                 s,

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(442837),
+    l = n(647438),
+    o = n(442837),
     i = n(352065),
     a = n(481060),
     c = n(607070),
@@ -22,26 +22,26 @@ function b(e) {
             sidebarFooter: g,
             emptyState: h,
         } = e,
-        O = (function (e, t) {
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return o;
+            return l;
         })(e, [
             "root",
             "directory",
@@ -52,13 +52,13 @@ function b(e) {
             "sidebarFooter",
             "emptyState",
         ]);
-    let [x, P] = o.useState(!1),
-        [S, C] = o.useState(1.4),
-        _ = o.useRef(null),
-        w = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        E = (0, l.e7)([s.Z], () => s.Z.isFocused());
+    let [O, P] = l.useState(!1),
+        [S, C] = l.useState(1.4),
+        _ = l.useRef(null),
+        w = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        E = (0, o.e7)([s.Z], () => s.Z.isFocused());
     return (
-        o.useEffect(() => {
+        l.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
                 !w &&
@@ -76,7 +76,7 @@ function b(e) {
             );
         }, [w, E]),
         (0, r.jsx)(a.UkV, {
-            isShaking: x,
+            isShaking: O,
             intensity: S,
             children: (0, r.jsx)(
                 i.A,
@@ -104,11 +104,11 @@ function b(e) {
                             });
                     }
                     return e;
-                })({}, O)),
+                })({}, x)),
                 (n = n =
                     {
                         children: (0, r.jsx)(d.Z, {
-                            onClose: O.onClose,
+                            onClose: x.onClose,
                             root: b,
                             directory: p,
                             target: y,

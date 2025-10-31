@@ -66,10 +66,10 @@ function A(e) {
             let e = null == P ? [] : g.default.keys(P);
             return null != x && e.push(x.id), e;
         }),
-        k = i.useRef(T);
+        j = i.useRef(T);
     i.useEffect(() => {
         let e = {},
-            t = k.current;
+            t = j.current;
         if (null != t && null != R) {
             for (let t of L) {
                 let n = A[t];
@@ -81,7 +81,7 @@ function A(e) {
             });
         }
     }, [L, R, A]);
-    let j = null != T && null != n && null != D ? N.find((e) => D.roles.includes(e.id)) : void 0,
+    let k = null != T && null != n && null != D ? N.find((e) => D.roles.includes(e.id)) : void 0,
         U = i.useMemo(
             () =>
                 null != T && null != n
@@ -90,9 +90,9 @@ function A(e) {
                               var t;
                               return !w || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == j ? void 0 : j.id) === e.id || m.r6(T, n.id, j, e))
+                          .filter((e) => (null == k ? void 0 : k.id) === e.id || m.r6(T, n.id, k, e))
                     : [],
-            [T, n, w, j, N],
+            [T, n, w, k, N],
         ),
         G = i.useMemo(() => {
             let e = Array.from(U).map((e) => ({

@@ -17,10 +17,10 @@ let a = {
             o = i.useCallback(() => {
                 null != e.current && e.current.play("all");
             }, []),
-            c = i.useCallback(() => {
+            s = i.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying("all");
             }, []),
-            s = i.useCallback((t) => {
+            c = i.useCallback((t) => {
                 var i, o;
                 return (0, r.jsx)(
                     l.L,
@@ -74,7 +74,7 @@ let a = {
             events: {
                 onClick: t,
                 onMouseEnter: o,
-                onMouseLeave: c,
+                onMouseLeave: s,
             },
             play: t,
             getDuration: i.useCallback(() => {
@@ -85,6 +85,6 @@ let a = {
                 var t, n;
                 return null != (n = null == (t = e.current) ? void 0 : t.getCurrentFrame()) ? n : null;
             }, []),
-            Component: s,
+            Component: c,
         };
     };

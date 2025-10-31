@@ -1,5 +1,5 @@
-t.d(a, { G: () => n });
-var u = t(671593);
-function n(e, a) {
-    return (0, u.z)(e, a);
+n.d(t, { G: () => i });
+var r = n(671593);
+function i(e, t) {
+    return (0, r.z)(e, t);
 }

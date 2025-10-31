@@ -1,16 +1,16 @@
 n.d(t, { Z: () => d });
 var a,
-    r,
+    i,
     l = n(442837),
-    i = n(570140);
-let o = null,
-    s = !1;
-class c extends (r = l.ZP.Store) {
+    r = n(570140);
+let s = null,
+    o = !1;
+class c extends (i = l.ZP.Store) {
     get loading() {
-        return s;
+        return o;
     }
     get methods() {
-        return o;
+        return s;
     }
 }
 (a = "displayName") in c
@@ -21,15 +21,15 @@ class c extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (c[a] = "AgeVerificationStore");
-let d = new c(i.Z, {
+let d = new c(r.Z, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
-        s = !0;
+        o = !0;
     },
     AGE_VERIFICATION_METHODS_LOAD_SUCCESS: function (e) {
         let { methods: t } = e;
-        (o = t), (s = !1);
+        (s = t), (o = !1);
     },
     AGE_VERIFICATION_METHODS_LOAD_FAILURE: function () {
-        s = !1;
+        o = !1;
     },
 });

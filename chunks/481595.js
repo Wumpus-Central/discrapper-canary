@@ -27,23 +27,23 @@ var r = n(951288),
     N = n(987209),
     R = n(563132),
     P = n(45572),
-    D = n(435020),
-    w = n(119226),
-    L = n(982204),
-    x = n(981631),
+    w = n(435020),
+    D = n(119226),
+    x = n(982204),
+    L = n(981631),
     M = n(388032),
-    k = n(416439);
-function j(e) {
+    j = n(416439);
+function k(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
         ? null
         : (0, r.jsxs)("div", {
-              className: k.skuHeading,
+              className: j.skuHeading,
               children: [
                   (0, r.jsx)(m.Z, { game: t }),
                   (0, r.jsx)(c.Heading, {
                       variant: "heading-lg/bold",
-                      className: k.skuHeadingText,
+                      className: j.skuHeadingText,
                       children: n.name,
                   }),
               ],
@@ -86,7 +86,7 @@ function U(e) {
         ec = (0, l.e7)([y.Z], () => y.Z.enabled),
         eu = s.M.EEA_COUNTRIES.has(O.Z.ipCountryCodeWithFallback),
         ed = G === P.A.PURCHASING || G === P.A.COMPLETED,
-        ef = (0, D.m)(B, Z),
+        ef = (0, w.m)(B, Z),
         e_ = null != ef ? ef.type : null;
     i.useEffect(() => {
         en &&
@@ -102,10 +102,10 @@ function U(e) {
                 });
     }, [et, en, Z, er.applicationId, er.id, es, X, J]);
     let ep = null != ei && ei.length > 0 && (Z === I.c || null === e_) && Q ? E.w.SELECT_PAYMENT_METHOD : void 0,
-        eh = er.productLine === x.POd.SOCIAL_LAYER_GAME_ITEM,
+        eh = er.productLine === L.POd.SOCIAL_LAYER_GAME_ITEM,
         em = ee && !eh;
     return (0, r.jsxs)("div", {
-        className: k.stepBody,
+        className: j.stepBody,
         children: [
             (0, r.jsx)(E.Y, { paymentRestrictionBannerType: ep }),
             el
@@ -115,37 +115,37 @@ function U(e) {
                           icon: (0, c.GSL)(S.Z),
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.WARNING,
-                          className: k.errorBlock,
+                          className: j.errorBlock,
                           children: M.intl.string(M.t.OvMyMd),
                       },
                       "TEST_MODE",
                   )
                 : null,
-            (0, A.yE)(U.flags, x.udG.EMBEDDED) && q === h.O.ERROR
+            (0, A.yE)(U.flags, L.udG.EMBEDDED) && q === h.O.ERROR
                 ? (0, r.jsx)(
                       f.Z,
                       {
                           icon: (0, c.GSL)(S.Z),
                           iconSize: f.Z.Sizes.SMALL,
                           color: f.Z.Colors.ERROR,
-                          className: k.errorBlock,
+                          className: j.errorBlock,
                           children: M.intl.string(M.t.tAmECt),
                       },
                       "DEV_SHELF_ERROR",
                   )
                 : null,
-            (0, r.jsx)(j, {
+            (0, r.jsx)(k, {
                 application: U,
                 sku: er,
                 isEmbeddedIAP: W,
             }),
-            em && (0, r.jsx)(w.Z, { sku: er }),
+            em && (0, r.jsx)(D.Z, { sku: er }),
             null != $ ? (0, r.jsx)(b.s, { giftRecipient: $ }) : null,
             (0, r.jsx)(c.gNt, {
                 label: J ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),
                 children:
                     null != es
-                        ? (0, r.jsx)(L.B, {
+                        ? (0, r.jsx)(x.B, {
                               sku: er,
                               skuPricePreview: es,
                               application: U,
@@ -153,9 +153,9 @@ function U(e) {
                         : null == z
                           ? (0, r.jsx)(c.$jN, {
                                 type: c.$jN.Type.WANDERING_CUBES,
-                                className: k.invoiceSpinner,
+                                className: j.invoiceSpinner,
                             })
-                          : (0, r.jsx)(L.E, {
+                          : (0, r.jsx)(x.E, {
                                 sku: er,
                                 value: "",
                             }),
@@ -179,12 +179,12 @@ function U(e) {
                         showWithdrawalWaiver: eu,
                         disabled: ed,
                         subscriptionPlan: null,
-                        finePrintClassname: k.fineprint,
+                        finePrintClassname: j.fineprint,
                         purchaseType: K,
                         isGift: J,
                         checkboxLabel:
-                            er.productLine === x.POd.COLLECTIBLES
-                                ? M.intl.format(M.t["1EdAld"], { paidURL: x.EYA.PAID_TERMS })
+                            er.productLine === L.POd.COLLECTIBLES
+                                ? M.intl.format(M.t["1EdAld"], { paidURL: L.EYA.PAID_TERMS })
                                 : void 0,
                         finePrint: (0, r.jsx)(d.Z, {
                             paymentSourceType: e_,
@@ -197,7 +197,7 @@ function U(e) {
                     }),
                     eh &&
                         (0, r.jsx)("div", {
-                            className: k.socialLayerGameItemDisclaimer,
+                            className: j.socialLayerGameItemDisclaimer,
                             children: (0, r.jsx)(c.M14, {
                                 type: "warning",
                                 children: M.intl.string(M.t["6fBC//"]),

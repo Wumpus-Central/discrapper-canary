@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b }), n(388685), n(781311);
+n.d(t, { Z: () => f }), n(388685), n(781311);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(399606),
-    i = n(481060),
-    o = n(100527),
-    s = n(594174),
+    r = n(481060),
+    s = n(100527),
+    o = n(594174),
     c = n(597688),
     d = n(1870),
     u = n(223143),
@@ -12,10 +12,10 @@ var a = n(951288),
     p = n(832149),
     h = n(215023),
     x = n(277790);
-let f = (e) => {
-        let [t, n] = r.useState(0);
+let g = (e) => {
+        let [t, n] = i.useState(0);
         return (
-            r.useLayoutEffect(() => {
+            i.useLayoutEffect(() => {
                 let e = d.Z.getPurchase;
                 return (
                     (d.Z.getPurchase = (e) => void 0),
@@ -57,38 +57,38 @@ let f = (e) => {
             )
         );
     },
-    b = () => {
-        let e = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
+    f = () => {
+        let e = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
             t = (0, l.e7)([c.Z], () => c.Z.categories),
             n = (0, l.e7)([d.Z], () => d.Z.purchases),
             m = (0, l.e7)([c.Z], () => c.Z.lastSuccessfulFetch),
-            b = t.size > 0 && n.size > 0 && null != m,
-            { isFetching: g, categories: v } = (0, u.ZP)({
+            f = t.size > 0 && n.size > 0 && null != m,
+            { isFetching: b, categories: v } = (0, u.ZP)({
                 logPerf: !1,
                 stalePurchasesOK: !0,
-                noOp: b,
+                noOp: f,
             }),
-            j = b ? t : v,
-            _ = b || (!g && j.size > 0),
-            [y, C] = r.useState(""),
-            [S, E] = r.useState(null),
-            [O, T] = r.useState(null);
-        return (r.useEffect(() => {
+            j = f ? t : v,
+            _ = f || (!b && j.size > 0),
+            [y, C] = i.useState(""),
+            [S, E] = i.useState(null),
+            [T, N] = i.useState(null);
+        return (i.useEffect(() => {
             if ("" === y.trim() || !_) {
-                E(null), T(null);
+                E(null), N(null);
                 return;
             }
             let e = c.Z.getProduct(y),
                 t = c.Z.getCategoryForProduct(y);
-            null != e && null != t ? (E(e), T(t)) : (E(null), T(null));
+            null != e && null != t ? (E(e), N(t)) : (E(null), N(null));
         }, [y, _]),
-        g)
-            ? (0, a.jsx)(i.Text, {
+        b)
+            ? (0, a.jsx)(r.Text, {
                   variant: "text-md/normal",
                   children: "Loading categories and collectibles...",
               })
             : null == e
-              ? (0, a.jsx)(i.Text, {
+              ? (0, a.jsx)(r.Text, {
                     variant: "text-md/normal",
                     children: "No user found",
                 })
@@ -98,26 +98,26 @@ let f = (e) => {
                         (0, a.jsxs)("div", {
                             className: x.section,
                             children: [
-                                (0, a.jsx)(i.Heading, {
+                                (0, a.jsx)(r.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Configuration",
                                 }),
                                 (0, a.jsxs)("div", {
                                     className: x.inputSection,
                                     children: [
-                                        (0, a.jsx)(i.Text, {
+                                        (0, a.jsx)(r.Text, {
                                             variant: "text-md/semibold",
                                             className: x.inputLabel,
                                             children: "Primary Product SKU ID",
                                         }),
-                                        (0, a.jsx)(i.oil, {
+                                        (0, a.jsx)(r.oil, {
                                             value: y,
                                             onChange: C,
                                             placeholder: "Enter product SKU ID",
                                         }),
                                         !_ &&
                                             "" !== y.trim() &&
-                                            (0, a.jsx)(i.Text, {
+                                            (0, a.jsx)(r.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.loadingText,
                                                 children: "Loading products...",
@@ -125,13 +125,13 @@ let f = (e) => {
                                         _ &&
                                             "" !== y.trim() &&
                                             null == S &&
-                                            (0, a.jsx)(i.Text, {
+                                            (0, a.jsx)(r.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.errorText,
                                                 children: "Product not found",
                                             }),
                                         null != S &&
-                                            (0, a.jsxs)(i.Text, {
+                                            (0, a.jsxs)(r.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.successText,
                                                 children: ["Found: ", S.name],
@@ -143,28 +143,28 @@ let f = (e) => {
                         (0, a.jsxs)("div", {
                             className: x.section,
                             children: [
-                                (0, a.jsx)(i.Heading, {
+                                (0, a.jsx)(r.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: "Product Preview",
                                 }),
-                                null != S && null != O
+                                null != S && null != T
                                     ? (0, a.jsxs)("div", {
                                           className: x.previewContainer,
                                           children: [
-                                              (0, a.jsx)(f, {
+                                              (0, a.jsx)(g, {
                                                   product: S,
                                                   user: e,
-                                                  category: O,
+                                                  category: T,
                                                   tab: h.AW.HOME,
                                               }),
-                                              (0, a.jsx)(i.Button, {
+                                              (0, a.jsx)(r.Button, {
                                                   variant: "primary",
                                                   onClick: () => {
                                                       null != S &&
                                                           null != e &&
                                                           (0, p.Z)({
                                                               product: S,
-                                                              analyticsLocations: [o.Z.COLLECTIBLES_SHOP_CARD],
+                                                              analyticsLocations: [s.Z.COLLECTIBLES_SHOP_CARD],
                                                           });
                                                   },
                                                   text: "Show Collectibles Collected Modal",
@@ -173,7 +173,7 @@ let f = (e) => {
                                       })
                                     : (0, a.jsx)("div", {
                                           className: x.placeholder,
-                                          children: (0, a.jsx)(i.Text, {
+                                          children: (0, a.jsx)(r.Text, {
                                               variant: "text-md/normal",
                                               className: x.mutedText,
                                               children: "Enter a valid product SKU ID to see the preview",

@@ -127,24 +127,24 @@ function T(e) {
         } = e,
         {
             application: D,
-            selectedPlan: L,
-            hasAcceptedTerms: x,
+            selectedPlan: x,
+            hasAcceptedTerms: L,
             purchaseType: M,
-            paymentSourceId: k,
-            activeSubscription: j,
+            paymentSourceId: j,
+            activeSubscription: k,
             devShelfFetchState: U,
             hasPaymentSources: G,
         } = (0, c.JL)(),
         { enabled: B } = _.Z.useConfig({ location: "SubscriptionReviewButton" }),
         Z = v({
             purchaseType: M,
-            plan: L,
+            plan: x,
             premiumSubscription: E,
             isGift: y,
             planGroup: T,
             isPrepaidPaymentSource: S,
             inReverseTrial: R,
-            paymentSourceId: k,
+            paymentSourceId: j,
             hasPaymentSources: G,
         }),
         { analyticsLocations: F } = (0, l.ZP)();
@@ -228,14 +228,14 @@ function T(e) {
     if (A)
         return (0, r.jsx)(o.Button, {
             variant: "expressive",
-            "data-testid": x ? "purchase" : "submitButton",
+            "data-testid": L ? "purchase" : "submitButton",
             text: Z,
-            onClick: x ? C : () => I(n, f),
+            onClick: L ? C : () => I(n, f),
             loading: m,
             iconPosition: "start",
             icon: () => (0, r.jsx)(o.SrA, { color: "currentColor" }),
         });
-    else if (!x)
+    else if (!L)
         return (0, r.jsx)(o.aML, {
             "data-migration-pending": !0,
             text: g.intl.string(g.t.XdvBLS),
@@ -258,12 +258,12 @@ function T(e) {
                     ),
                 ),
         });
-    else if (R && null != j && null != k)
+    else if (R && null != k && null != j)
         return (0, r.jsx)(p.Z, {
-            activeSubscription: j,
+            activeSubscription: k,
             onNext: P,
             isSubmitting: m,
-            paymentSourceId: k,
+            paymentSourceId: j,
             buttonLabel: Z,
             analyticsLocations: F,
         });

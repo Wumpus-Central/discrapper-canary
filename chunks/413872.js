@@ -1,26 +1,26 @@
-t.d(l, { t: () => o });
-var a = t(951288);
-t(647438);
-var n = t(225779);
-let o = {
+n.d(t, { t: () => a });
+var r = n(951288);
+n(647438);
+var i = n(225779);
+let a = {
     title: "Notice",
     stories: [
         {
             id: "notice",
             name: "Notice",
             component: function (e) {
-                let { color: l, message: t } = e,
-                    o = {
-                        BRAND: n.DM.BRAND,
-                        INFO: n.DM.INFO,
-                        WARNING: n.DM.WARNING,
-                        DANGER: n.DM.DANGER,
-                        DEFAULT: n.DM.DEFAULT,
-                        NEUTRAL: n.DM.NEUTRAL,
+                let { color: t, message: n } = e,
+                    a = {
+                        BRAND: i.DM.BRAND,
+                        INFO: i.DM.INFO,
+                        WARNING: i.DM.WARNING,
+                        DANGER: i.DM.DANGER,
+                        DEFAULT: i.DM.DEFAULT,
+                        NEUTRAL: i.DM.NEUTRAL,
                     };
-                return (0, a.jsx)(n.qX, {
-                    color: o[l],
-                    children: t,
+                return (0, r.jsx)(i.qX, {
+                    color: a[t],
+                    children: n,
                 });
             },
             controls: {

@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(423000),
     p = n(200876),
     f = n(674180),
-    h = n(38618),
-    m = n(984370),
+    m = n(38618),
+    h = n(984370),
     g = n(430824),
     _ = n(351402),
     b = n(730647),
     E = n(772021),
     O = n(396828),
     I = n(293423),
-    v = n(20967),
-    y = n(504762),
+    y = n(20967),
+    v = n(504762),
     C = n(807152),
     S = n(176505),
     T = n(388032),
@@ -27,7 +27,7 @@ var r = n(951288),
 function j(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([g.Z], () => g.Z.getGuild(t), [t]),
-        j = (0, a.e7)([h.Z], () => h.Z.isConnected()),
+        j = (0, a.e7)([m.Z], () => m.Z.isConnected()),
         P = (0, p.Z)(t),
         x = (0, E.Z)(t),
         A = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
@@ -49,21 +49,21 @@ function j(e) {
         }, [t, D]),
         l.tq && D)
     ) {
-        let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
-        return (0, r.jsx)(v.z, { errorType: e });
+        let e = null == n ? y.J.NOT_GUILD_MEMBER : y.J.GUILD_NOT_ELIGIBLE;
+        return (0, r.jsx)(y.z, { errorType: e });
     }
     return (0, r.jsxs)("div", {
         className: N.container,
         children: [
-            (0, r.jsxs)(m.Z, {
+            (0, r.jsxs)(h.Z, {
                 toolbar: (0, r.jsx)(i.Fragment, {}),
                 className: N.headerBar,
                 children: [
-                    (0, r.jsx)(m.Z.Icon, {
+                    (0, r.jsx)(h.Z.Icon, {
                         icon: (0, s.GSL)(O.Z),
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(m.Z.Title, { children: T.intl.string(T.t["KzCF/6"]) }),
+                    (0, r.jsx)(h.Z.Title, { children: T.intl.string(T.t["KzCF/6"]) }),
                 ],
             }),
             (0, r.jsx)("div", { id: C.v }),
@@ -77,7 +77,7 @@ function j(e) {
                               children: R ? (0, r.jsx)(s.$jN, {}) : (0, r.jsx)(I.Z, { guild: n }),
                           }),
                       })
-                    : (0, r.jsx)(y.Z, {}),
+                    : (0, r.jsx)(v.Z, {}),
             }),
         ],
     });

@@ -1,4 +1,4 @@
-n.d(t, { t: () => j }), n(388685), n(35282), n(413496), n(433524);
+n.d(t, { t: () => k }), n(388685), n(35282), n(413496), n(433524);
 var r = n(951288),
     i = n(647438),
     a = n(238651),
@@ -86,7 +86,7 @@ function D(e) {
     for (let t of P) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
     return null;
 }
-let L = {
+let x = {
     enter: {
         BEG: 0,
         END: 22,
@@ -100,7 +100,7 @@ let L = {
         END: 200,
     },
 };
-function x() {
+function L() {
     return n
         .e("77843")
         .then(n.t.bind(n, 931152, 19))
@@ -120,7 +120,7 @@ function M(e) {
             return "enter";
     }
 }
-let k = i.forwardRef(function (e, t) {
+let j = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [o, l] = i.useState(null),
         { confettiCanvas: c } = i.useContext(s.h),
@@ -175,7 +175,7 @@ let k = i.forwardRef(function (e, t) {
         })
     );
 });
-function j(e) {
+function k(e) {
     let { children: t } = e,
         n = i.useRef({}),
         [a, s] = i.useState(null),
@@ -228,7 +228,7 @@ function j(e) {
                   Object.keys(w).map((e) => {
                       let t = w[e];
                       return (0, r.jsx)(
-                          k,
+                          j,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -246,10 +246,10 @@ function j(e) {
                                     animationRef: I,
                                     className: p.lottieAnimation,
                                     nextScene: l,
-                                    sceneSegments: L,
+                                    sceneSegments: x,
                                     onScenePlay: O,
                                     onSceneComplete: v,
-                                    importData: x,
+                                    importData: L,
                                     pauseWhileUnfocused: !1,
                                 }),
                             }),

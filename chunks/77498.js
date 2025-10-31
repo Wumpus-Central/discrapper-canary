@@ -80,18 +80,18 @@ function P(e) {
     let { detectableApplications: t } = e;
     for (let e of (O.clear(), (v = {}), (I = {}), t)) R(e);
 }
-function D() {
+function w() {
     r = !0;
 }
-function w() {
+function D() {
     r = !1;
 }
-function L(e) {
+function x(e) {
     let { games: t, etag: n } = e;
     for (let e of (null != n && S !== n && (O.clear(), (v = {}), (I = {}), (S = n)), t)) R(C(e));
     (r = void 0), (A = Date.now());
 }
-class x extends (a = o.ZP.PersistedStore) {
+class L extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e &&
@@ -180,9 +180,9 @@ class x extends (a = o.ZP.PersistedStore) {
         (T[e] = !0), s.K.set(E, T);
     }
 }
-g(x, "displayName", "GameStore"),
-    g(x, "persistKey", "GameStore"),
-    g(x, "migrations", [
+g(L, "displayName", "GameStore"),
+    g(L, "persistKey", "GameStore"),
+    g(L, "migrations", [
         (e) => {
             var t, n;
             return null == e
@@ -210,9 +210,9 @@ g(x, "displayName", "GameStore"),
             detectableGames: [],
         }),
     ]);
-let M = new x(l.Z, {
+let M = new L(l.Z, {
     OVERLAY_INITIALIZE: P,
-    GAMES_DATABASE_FETCH: D,
-    GAMES_DATABASE_FETCH_FAIL: w,
-    GAMES_DATABASE_UPDATE: L,
+    GAMES_DATABASE_FETCH: w,
+    GAMES_DATABASE_FETCH_FAIL: D,
+    GAMES_DATABASE_UPDATE: x,
 });

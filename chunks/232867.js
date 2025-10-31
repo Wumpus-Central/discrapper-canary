@@ -1,13 +1,13 @@
 n.d(t, { m: () => m }), n(388685);
 var a = n(647438),
-    r = n(544891),
+    i = n(544891),
     l = n(959546),
-    i = n(981631),
-    o = n(474936);
-let s = async () =>
+    r = n(981631),
+    s = n(474936);
+let o = async () =>
         (
-            await r.tn.get({
-                url: i.ANM.ENTITLEMENTS_FOR_APPLICATION(o.CL),
+            await i.tn.get({
+                url: r.ANM.ENTITLEMENTS_FOR_APPLICATION(s.CL),
                 oldFormErrors: !0,
                 query: {
                     exclude_consumed: !0,
@@ -17,7 +17,7 @@ let s = async () =>
             })
         ).body.map((e) => l.Z.createFromServer(e)),
     c = async (e) => {
-        await r.tn.post({
+        await i.tn.post({
             url: "/debug/entitlements/fractional-premium",
             body: {
                 count: 1,
@@ -29,37 +29,37 @@ let s = async () =>
     d = async (e) => {
         let t = "/debug/entitlements/fractional-premium";
         null != e && (t = "".concat(t, "/").concat(e)),
-            await r.tn.del({
+            await i.tn.del({
                 url: t,
                 rejectWithError: !0,
             });
     },
     u = async () => {
-        await r.tn.post({
+        await i.tn.post({
             url: "/debug/entitlements/fulfillment",
             rejectWithError: !1,
         });
     },
     m = () => {
         let [e, t] = a.useState([]),
-            [n, r] = a.useState(!1),
+            [n, i] = a.useState(!1),
             l = (0, a.useCallback)(async () => {
                 try {
-                    r(!0);
-                    let e = await s();
+                    i(!0);
+                    let e = await o();
                     t(e);
                 } finally {
-                    r(!1);
+                    i(!1);
                 }
             }, []),
-            i = (0, a.useCallback)(
+            r = (0, a.useCallback)(
                 async (e) => {
                     await c(e), await l();
                 },
                 [l],
             );
         return {
-            grantFractionalPremium: i,
+            grantFractionalPremium: r,
             deleteFractionalPremium: (0, a.useCallback)(
                 async (e) => {
                     await d(e), await l();

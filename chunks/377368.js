@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(556296),
     p = n(131468),
     f = n(208049),
-    h = n(763296),
-    m = n(641015),
+    m = n(763296),
+    h = n(641015),
     g = n(22382),
     _ = n(747071),
     b = n(49230),
@@ -31,7 +31,7 @@ function I(e, t, n) {
         e
     );
 }
-class v extends p.Z {
+class y extends p.Z {
     _initialize() {
         super._initialize(),
             __OVERLAY__ ||
@@ -68,7 +68,7 @@ class v extends p.Z {
                     r = arguments.length > 2 ? arguments[2] : void 0,
                     i = arguments.length > 3 ? arguments[3] : void 0,
                     l = null != i && u.Z.getVoiceChannelId() === i;
-                if ((null == i || l) && !c.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(r))
+                if ((null == i || l) && !c.Z.isDeaf() && !m.Z.isLocalSoundboardMuted(r))
                     try {
                         let i = {
                             soundKey: "".concat(r, "-").concat(e),
@@ -89,7 +89,7 @@ class v extends p.Z {
                 let l = o.Z.getChannel(t),
                     c = d.ZP.getKeybindForAction(E.kg4.SOUNDBOARD_HOLD);
                 null != l &&
-                    (0, m.Z)(l) &&
+                    (0, h.Z)(l) &&
                     null != c &&
                     s.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, i.ZDy)(async () => {
@@ -142,4 +142,4 @@ class v extends p.Z {
             });
     }
 }
-let y = new v();
+let v = new y();

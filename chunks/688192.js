@@ -30,10 +30,10 @@ function y(e) {
             surface: a = "profile_modal",
             cardRef: _,
             renderItemPreview: y,
-            accessibleLabel: v,
-            onCardClick: j,
-            buttonCTALabel: x,
-            buttonIcon: O,
+            accessibleLabel: x,
+            onCardClick: O,
+            buttonCTALabel: j,
+            buttonIcon: v,
             isOwned: C = !1,
             renderSourceIcon: I,
         } = e,
@@ -69,8 +69,8 @@ function y(e) {
                 focusProps: { ringTarget: Z },
                 variant: "primary",
                 size: "sm",
-                text: x,
-                icon: O,
+                text: j,
+                icon: v,
                 onClick: (e) => {
                     e.stopPropagation(), M();
                 },
@@ -85,7 +85,7 @@ function y(e) {
                     skuId: t.skuId,
                     analyticsLocations: P,
                 }),
-                j();
+                O();
         },
         k = (0, i.jsxs)("div", {
             ref: S,
@@ -100,7 +100,7 @@ function y(e) {
                     }),
                     onClick: M,
                     children: [
-                        (0, i.jsx)(c.nn4, { children: (0, i.jsx)(c.H, { children: v }) }),
+                        (0, i.jsx)(c.nn4, { children: (0, i.jsx)(c.H, { children: x }) }),
                         (0, i.jsx)("div", {
                             className: b.cardPreview,
                             children: y(),
@@ -109,7 +109,7 @@ function y(e) {
                         "profile_modal" === a
                             ? L
                             : (0, i.jsx)(c.P3F, {
-                                  "aria-label": x,
+                                  "aria-label": j,
                                   focusProps: { ringTarget: Z },
                                   onClick: (e) => {
                                       e.stopPropagation(), M();

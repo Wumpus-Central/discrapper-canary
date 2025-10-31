@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => x,
-    P: () => L,
+    F: () => L,
+    P: () => x,
 }),
     n(388685),
     n(997841),
@@ -82,7 +82,7 @@ function D(e, t) {
         subscriptionPlan: o,
     };
 }
-function L(e) {
+function x(e) {
     let { appId: t, message: a } = e,
         o = (0, T.R)(t),
         { data: u } = (0, d.IX)(t),
@@ -139,7 +139,7 @@ function L(e) {
                     area: "open_store_button",
                 });
         },
-        L = () => {
+        x = () => {
             (0, I.X)(t, I.B.STORE_EMBED);
         };
     return (0, r.jsx)(M, {
@@ -150,7 +150,7 @@ function L(e) {
             .concat(location.protocol, "//")
             .concat(location.host)
             .concat(A.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, C.GlobalDiscoveryAppsSections.STORE)),
-        onLinkCopy: L,
+        onLinkCopy: x,
         iconSrc: E,
         onIconClick: w,
         children: (0, r.jsx)("div", {
@@ -162,7 +162,7 @@ function L(e) {
         }),
     });
 }
-function x(e) {
+function L(e) {
     var t, a;
     let { appId: o, skuId: c, message: u } = e,
         { parentSku: f, sku: m, subscriptionPlan: g, storeListing: E } = D(c, o),
@@ -173,13 +173,13 @@ function x(e) {
         }, [u]),
         P = i.useMemo(() => (null != b ? (0, v.y)(b, 45) : void 0), [b]),
         w = (0, T.R)(null != (a = null == b ? void 0 : b.id) ? a : ""),
-        { openModal: L, subscriptionPurchaseButtonState: x } = (0, p.Z)({
+        { openModal: x, subscriptionPurchaseButtonState: L } = (0, p.Z)({
             skuId: c,
             initialSubscribeForGuild: O,
         });
     if (!w || null == b || null == m) return null;
-    let k = m.type === A.epS.SUBSCRIPTION,
-        j = !!k && (0, _.KW)(m.flags),
+    let j = m.type === A.epS.SUBSCRIPTION,
+        k = !!j && (0, _.KW)(m.flags),
         U = () => {
             (0, l.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
@@ -194,8 +194,8 @@ function x(e) {
         },
         G = () => {
             (0, l.ZDy)(async () => {
-                let e = k ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
-                    t = k ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
+                let e = j ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
+                    t = j ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                 return (n) => {
                     let i = () => {
                         n.onClose(), U();
@@ -206,7 +206,7 @@ function x(e) {
                               appId: b.id,
                               skuId: m.id,
                               guildId: O,
-                              subscriptionType: j ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               onClose: n.onClose,
                               onHeaderTitleClick: i,
                           })
@@ -223,8 +223,8 @@ function x(e) {
             });
         },
         B = 12,
-        Z = k
-            ? j
+        Z = j
+            ? k
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.tBG, {
@@ -296,17 +296,17 @@ function x(e) {
                     onClick: V,
                     text: N.intl.string(N.t.DXYfjO),
                 }),
-                k
+                j
                     ? null != g
                         ? (0, r.jsx)(S.pV, {
-                              onClick: L,
+                              onClick: x,
                               appId: b.id,
-                              subscriptionType: j ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               skuId: m.id,
                               icon: l.EOn,
                               onHasClicked: H,
                               subscriptionPlan: g,
-                              state: x,
+                              state: L,
                           })
                         : (0, r.jsx)(l.Button, {
                               variant: "primary",

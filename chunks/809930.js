@@ -1,8 +1,8 @@
-n.d(t, { a: () => o });
+n.d(t, { a: () => s });
 var a = n(818083),
-    r = n(141537),
+    i = n(141537),
     l = n(715009);
-let i = (0, a.B)({
+let r = (0, a.B)({
         kind: "user",
         id: "2025-08_do_not_disturb_reminder",
         label: "Do Not Disturb Reminder",
@@ -41,4 +41,4 @@ let i = (0, a.B)({
             },
         ],
     }),
-    o = (e) => (0, r.sM)(i, e);
+    s = (e) => (0, i.sM)(r, e);

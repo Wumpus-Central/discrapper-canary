@@ -118,15 +118,15 @@ let P = function (e) {
             ref: P,
         } = e,
         [w, D] = i.useState(!1),
-        [L, x] = i.useState(50),
+        [x, L] = i.useState(50),
         M = w || y,
-        k = (0, h.l)(b, "emojiButton", M ? "Hovered" : "Normal"),
-        j = R(L),
+        j = (0, h.l)(b, "emojiButton", M ? "Hovered" : "Normal"),
+        k = R(x),
         U = i.useCallback(() => {
             if (M) return;
             let e = Math.floor(Math.random() * A);
-            D(!0), x(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
-        }, [M, D, x]),
+            D(!0), L(e), (0, _.x)(g.qR.EmojiButtonMouseEntered);
+        }, [M, D, L]),
         G = i.useCallback(() => {
             D(!1);
         }, [D]),
@@ -151,7 +151,7 @@ let P = function (e) {
             (0, r.jsx)(u.P3F, {
                 innerRef: z,
                 tabIndex: t,
-                className: o()(k, n),
+                className: o()(j, n),
                 onMouseEnter: () => {
                     var t;
                     U(), null == (t = e.onMouseEnter) || t.call(e);
@@ -182,7 +182,7 @@ let P = function (e) {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(s.animated.div, {
                                       className: b.spriteContainer,
-                                      style: I(O({}, j), {
+                                      style: I(O({}, k), {
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
                                       }),
                                       children: [

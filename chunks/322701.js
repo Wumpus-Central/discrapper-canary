@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(981631),
     p = n(983703);
 let f = function (e) {
-    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: h, sectionFilter: m, footer: g } = e,
+    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: m, sectionFilter: h, footer: g } = e,
         _ = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
         b = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         E = (0, l.ZP)({
@@ -19,9 +19,9 @@ let f = function (e) {
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
-        O = m !== d.pJs.ONLINE && m !== d.pJs.ALL,
-        I = b || h || O,
-        v = i.useMemo(
+        O = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
+        I = b || m || O,
+        y = i.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
@@ -111,7 +111,7 @@ let f = function (e) {
                     )),
                     (n = n =
                         {
-                            children: [v, g],
+                            children: [y, g],
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

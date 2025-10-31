@@ -86,7 +86,7 @@ let D = (0, m.H)(() => ({
     selectedCollection: null,
     selectedStory: null,
 }));
-function L() {
+function x() {
     let e = (0, b.Z)(),
         t = (0, E.Z)(),
         n = (0, y.Z)();
@@ -114,11 +114,11 @@ function L() {
         ],
     });
 }
-function x() {
+function L() {
     let e = i.useRef(null);
     return (0, r.jsx)(f.y, {
         targetElementRef: e,
-        renderPopout: () => (0, r.jsx)(L, {}),
+        renderPopout: () => (0, r.jsx)(x, {}),
         position: "bottom",
         align: "center",
         animation: f.y.Animation.SCALE,
@@ -253,7 +253,7 @@ function M(e) {
                                 : null,
                             (0, r.jsx)("div", {
                                 className: C.headerRight,
-                                children: (0, r.jsx)(x, {}),
+                                children: (0, r.jsx)(L, {}),
                             }),
                         ],
                     }),

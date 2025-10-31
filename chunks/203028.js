@@ -11,16 +11,16 @@ var i = n(512722),
     d = n(707409),
     p = n(51144),
     f = n(761282),
-    h = n(358924),
-    m = n(817915),
+    m = n(358924),
+    h = n(817915),
     g = n(981631),
     _ = n(388032);
 function b(e) {
     var t, i;
     let { party: b, onUserContextMenu: E } = e,
         { priorityMembers: O, guildContext: I } = b,
-        v = O[0],
-        y = (function (e) {
+        y = O[0],
+        v = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 r = new Set(
                     t.map((e) => {
@@ -54,14 +54,14 @@ function b(e) {
                 E = c.length - b,
                 O = p[0],
                 I = null == O ? void 0 : O.activity,
-                v = null == O ? void 0 : O.startedPlayingTime,
-                y = { name: null != (t = null == I ? void 0 : I.name) ? t : "" };
+                y = null == O ? void 0 : O.startedPlayingTime,
+                v = { name: null != (t = null == I ? void 0 : I.name) ? t : "" };
             if ((0, a.Z)(I) && null != I)
                 return {
                     subtitle: (0, r.jsx)(d.ZP, {
-                        start: v,
+                        start: y,
                         location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: y,
+                        messageProps: v,
                     }),
                     icon: null,
                 };
@@ -79,18 +79,18 @@ function b(e) {
                         if ((0, o.Z)(I))
                             return {
                                 subtitle: _.intl.string(_.t.tO8wOx),
-                                icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.XBOX }),
+                                icon: (0, r.jsx)(m.Z.Header.Icon, { src: m.Z.Header.Icon.Src.XBOX }),
                             };
                         return {
                             subtitle: (0, r.jsx)(d.ZP, {
-                                start: v,
+                                start: y,
                                 location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: y,
+                                messageProps: v,
                             }),
                             icon:
                                 null != e
-                                    ? (0, r.jsx)(h.Z.Header.Icon, {
-                                          src: null != e.getIconURL(m.Z) ? e.getIconURL(m.Z) : n(211827),
+                                    ? (0, r.jsx)(m.Z.Header.Icon, {
+                                          src: null != e.getIconURL(h.Z) ? e.getIconURL(h.Z) : n(211827),
                                       })
                                     : null,
                         };
@@ -98,18 +98,18 @@ function b(e) {
                         return {
                             subtitle: _.intl.string(_.t.HyGHj7),
                             icon:
-                                null != e && null != e.getIconURL(m.Z)
-                                    ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(m.Z) })
+                                null != e && null != e.getIconURL(h.Z)
+                                    ? (0, r.jsx)(m.Z.Header.Icon, { src: e.getIconURL(h.Z) })
                                     : null,
                         };
                     case g.IIU.LISTENING:
                         let i;
                         return (
                             (i = (0, s.Z)(I)
-                                ? (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.SPOTIFY })
-                                : null != e.getIconURL(m.Z)
-                                  ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(m.Z) })
-                                  : (0, r.jsx)(h.Z.Header.Icon, { src: n(211827) })),
+                                ? (0, r.jsx)(m.Z.Header.Icon, { src: m.Z.Header.Icon.Src.SPOTIFY })
+                                : null != e.getIconURL(h.Z)
+                                  ? (0, r.jsx)(m.Z.Header.Icon, { src: e.getIconURL(h.Z) })
+                                  : (0, r.jsx)(m.Z.Header.Icon, { src: n(211827) })),
                             {
                                 subtitle: _.intl.formatToPlainString(_.t.NF5xop, { name: I.name }),
                                 icon: i,
@@ -119,8 +119,8 @@ function b(e) {
                         return {
                             subtitle: _.intl.formatToPlainString(_.t.pW3Ip3, { name: I.name }),
                             icon:
-                                null != e && null != e.getIconURL(m.Z)
-                                    ? (0, r.jsx)(h.Z.Header.Icon, { src: e.getIconURL(m.Z) })
+                                null != e && null != e.getIconURL(h.Z)
+                                    ? (0, r.jsx)(m.Z.Header.Icon, { src: e.getIconURL(h.Z) })
                                     : null,
                         };
                     default:
@@ -146,7 +146,7 @@ function b(e) {
                     if (null != t && t.type === g.IIU.LISTENING)
                         return {
                             subtitle: _.intl.string(_.t.rmnkz4),
-                            icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.SPOTIFY }),
+                            icon: (0, r.jsx)(m.Z.Header.Icon, { src: m.Z.Header.Icon.Src.SPOTIFY }),
                         };
                 }
             } else if (1 === p.length) {
@@ -163,18 +163,18 @@ function b(e) {
                         subtitle: (0, r.jsx)(d.ZP, {
                             start: i,
                             location: d.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: y,
+                            messageProps: v,
                         }),
                         icon:
-                            null != n && null != n.getIconURL(m.Z)
-                                ? (0, r.jsx)(h.Z.Header.Icon, { src: n.getIconURL(m.Z) })
+                            null != n && null != n.getIconURL(h.Z)
+                                ? (0, r.jsx)(m.Z.Header.Icon, { src: n.getIconURL(h.Z) })
                                 : null,
                     }
                 );
             }
             return {
                 subtitle: _.intl.string(_.t.sau5tt),
-                icon: (0, r.jsx)(h.Z.Header.Icon, { src: h.Z.Header.Icon.Src.MULTIPLE }),
+                icon: (0, r.jsx)(m.Z.Header.Icon, { src: m.Z.Header.Icon.Src.MULTIPLE }),
             };
         })(b),
         T = (0, u.Z)({
@@ -182,14 +182,14 @@ function b(e) {
             location: "FriendsActivityFeed",
             source: c.m1.FriendsActivityFeed,
         });
-    return (0, r.jsx)(h.Z.Header, {
-        priorityUser: v,
+    return (0, r.jsx)(m.Z.Header, {
+        priorityUser: y,
         guildId: null == I ? void 0 : I.id,
-        title: y,
+        title: v,
         subtitle: C,
         icon: S,
         onSubtitleClick: T,
         onIconClick: T,
-        onContextMenu: (e) => E(e, v.user),
+        onContextMenu: (e) => E(e, y.user),
     });
 }

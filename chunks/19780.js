@@ -234,7 +234,7 @@ function D(e) {
         return !0;
     }, !1);
 }
-function L(e) {
+function x(e) {
     if (
         null == r ||
         (null != e.guildId && e.guildId !== r.guildId) ||
@@ -243,18 +243,18 @@ function L(e) {
         return !1;
     r.connect(e.endpoint, e.token);
 }
-function x() {
+function L() {
     b = null;
 }
 function M() {
     y = null;
 }
-function k(e) {
+function j(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
     R();
 }
-function j(e) {
+function k(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
     R();
@@ -420,14 +420,14 @@ let q = new z(
               VOICE_STATE_UPDATES: D,
               VOICE_CHANNEL_SELECT: G,
               AUDIO_SET_NOISE_CANCELLATION: F,
-              VOICE_SERVER_UPDATE: L,
-              CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: x,
-              REMOTE_SESSION_CONNECT: x,
+              VOICE_SERVER_UPDATE: x,
+              CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: L,
+              REMOTE_SESSION_CONNECT: L,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: M,
-              GUILD_DELETE: k,
+              GUILD_DELETE: j,
               CHANNEL_DELETE: U,
               THREAD_DELETE: U,
-              CALL_DELETE: j,
+              CALL_DELETE: k,
               APP_STATE_UPDATE: B,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: W,
           },

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => a });
 var r = n(951288);
 n(647438);
-var l = n(120356),
-    o = n.n(l),
+var o = n(120356),
+    l = n.n(o),
     i = n(430799);
 function a(e) {
     let { className: t, color: n } = e;
@@ -12,7 +12,7 @@ function a(e) {
         height: "40",
         viewBox: "0 0 2 40",
         fill: "none",
-        className: o()(i.verticalDivider, t),
+        className: l()(i.verticalDivider, t),
         children: (0, r.jsx)("path", {
             d: "M1 0V40",
             stroke: n,

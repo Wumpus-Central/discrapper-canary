@@ -1,7 +1,7 @@
 n.d(t, { default: () => D }), n(388685), n(290780), n(539854), n(704826), n(35282);
-var a = n(951288),
-    i = n(647438),
-    l = n(481060),
+var l = n(951288),
+    a = n(647438),
+    i = n(481060),
     r = n(239091),
     o = n(493544),
     s = n(108843),
@@ -22,85 +22,85 @@ var a = n(951288),
     j = n(594791),
     A = n(393431),
     N = n(69021),
-    _ = n(981631),
-    w = n(388032);
+    w = n(981631),
+    _ = n(388032);
 let D = (0, s.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n, onInteraction: s } = e,
-            [c, D] = i.useState(!1),
+            [c, D] = a.useState(!1),
             x = (0, v.Z)(),
             I = (0, h.Z)(),
             T = (0, f.Z)(),
-            R = (0, y.Z)(),
-            C = (0, A.Z)(),
+            C = (0, y.Z)(),
+            m = (0, A.Z)(),
             L = (0, j.Z)(),
-            m = (0, S.Z)(),
+            R = (0, S.Z)(),
             Z = (0, N.Z)(),
             k = (0, P.Z)(),
             { analyticsLocations: V } = (0, u.ZP)(),
-            M = i.useMemo(() => (0, g.j)(), []);
-        async function U() {
+            M = a.useMemo(() => (0, g.j)(), []);
+        async function B() {
             try {
                 D(!0), await (0, d.bF)(), window.location.reload(!0);
             } catch (e) {
                 D(!1);
             }
         }
-        let B = (0, p.wy)("UserSettingsCogContextMenu"),
+        let U = (0, p.wy)("UserSettingsCogContextMenu"),
             G = (0, E.getWebUserSettingsByUserSettingsSections)(),
-            Y = (0, O.VO)(),
-            z = i.useMemo(() => {
+            z = (0, O.VO)(),
+            F = a.useMemo(() => {
                 let e = [];
                 return (
-                    Y.forEach((t) => {
-                        let { section: n, predicate: a } = t;
+                    z.forEach((t) => {
+                        let { section: n, predicate: l } = t;
                         n !== o.ID.HEADER &&
                             n !== o.ID.CUSTOM &&
                             n !== o.ID.DIVIDER &&
                             "logout" !== n &&
-                            (null == a || a()) &&
-                            ((B && null == G.get(n)) ||
-                                (B && n === _.oAB.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t)));
+                            (null == l || l()) &&
+                            ((U && null == G.get(n)) ||
+                                (U && n === w.oAB.PROFILE_CUSTOMIZATION ? e.unshift(t) : e.push(t)));
                     }),
                     e
                 );
-            }, [Y, B, G]);
-        return (0, a.jsx)(u.Gt, {
+            }, [z, U, G]);
+        return (0, l.jsx)(u.Gt, {
             value: V,
-            children: (0, a.jsxs)(l.v2r, {
+            children: (0, l.jsxs)(i.v2r, {
                 navId: "user-settings-cog",
                 onClose: r.Zy,
-                "aria-label": w.intl.string(w.t.opYYHn),
+                "aria-label": _.intl.string(_.t.opYYHn),
                 onSelect: n,
                 onInteraction: s,
                 children: [
-                    z.map((e) => {
+                    F.map((e) => {
                         var t, n;
-                        let { section: i, label: r, onClick: o } = e,
-                            s = i.replace(/\W/gi, "_");
-                        return (0, a.jsx)(
-                            l.sNh,
+                        let { section: a, label: r, onClick: o } = e,
+                            s = a.replace(/\W/gi, "_");
+                        return (0, l.jsx)(
+                            i.sNh,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
-                                        a = Object.keys(n);
+                                        l = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (a = a.concat(
+                                        (l = l.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        a.forEach(function (t) {
-                                            var a;
-                                            (a = n[t]),
+                                        l.forEach(function (t) {
+                                            var l;
+                                            (l = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: a,
+                                                          value: l,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = a);
+                                                    : (e[t] = l);
                                         });
                                 }
                                 return e;
@@ -113,13 +113,13 @@ let D = (0, s.Z)(
                                         return null != o
                                             ? o()
                                             : (function (e, t, n) {
-                                                  let a = Object.values(_.oAB).filter((e) => e === t)[0];
-                                                  null != a &&
+                                                  let l = Object.values(w.oAB).filter((e) => e === t)[0];
+                                                  null != l &&
                                                       (0, E.openUserSettings)(e, {
-                                                          section: a,
+                                                          section: l,
                                                           analyticsLocations: n,
                                                       });
-                                              })(null != (e = G.get(i)) ? e : b.n.ACCOUNT_PANEL, i, V);
+                                              })(null != (e = G.get(a)) ? e : b.n.ACCOUNT_PANEL, a, V);
                                     },
                                 },
                             )),
@@ -127,34 +127,34 @@ let D = (0, s.Z)(
                                 {
                                     children: ((e) => {
                                         switch (e) {
-                                            case _.oAB.GAMES:
+                                            case w.oAB.GAMES:
                                                 return x;
-                                            case _.oAB.STREAMER_MODE:
+                                            case w.oAB.STREAMER_MODE:
                                                 return I;
-                                            case _.oAB.APPEARANCE:
+                                            case w.oAB.APPEARANCE:
                                                 return T;
-                                            case _.oAB.ACCESSIBILITY:
-                                                return R;
-                                            case _.oAB.VOICE:
+                                            case w.oAB.ACCESSIBILITY:
                                                 return C;
-                                            case _.oAB.TEXT:
-                                                return L;
-                                            case _.oAB.EXPERIMENTS:
+                                            case w.oAB.VOICE:
                                                 return m;
-                                            case _.oAB.DEVELOPER_OPTIONS:
+                                            case w.oAB.TEXT:
+                                                return L;
+                                            case w.oAB.EXPERIMENTS:
+                                                return R;
+                                            case w.oAB.DEVELOPER_OPTIONS:
                                                 return Z;
                                             default:
                                                 return null;
                                         }
-                                    })(i),
+                                    })(a),
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var a = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, a);
+                                          var l = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, l);
                                       }
                                       return n;
                                   })(Object(n)).forEach(function (e) {
@@ -166,13 +166,13 @@ let D = (0, s.Z)(
                     }),
                     e.user.isStaff() && k,
                     e.user.isStaff() && M.length > 0
-                        ? (0, a.jsx)(l.sNh, {
+                        ? (0, l.jsx)(i.sNh, {
                               label: "Build Overrides",
                               id: "build_overrides",
-                              children: (0, a.jsx)(l.kSQ, {
+                              children: (0, l.jsx)(i.kSQ, {
                                   children: M.map((e) =>
-                                      (0, a.jsx)(
-                                          l.k5B,
+                                      (0, l.jsx)(
+                                          i.k5B,
                                           {
                                               id: "input-".concat(e.payload),
                                               group: "build_overrides",
@@ -191,12 +191,12 @@ let D = (0, s.Z)(
                           })
                         : null,
                     null != t
-                        ? (0, a.jsx)(l.kSQ, {
-                              children: (0, a.jsx)(l.sNh, {
+                        ? (0, l.jsx)(i.kSQ, {
+                              children: (0, l.jsx)(i.sNh, {
                                   id: "clear-build-override",
                                   disabled: c,
-                                  label: w.intl.string(w.t["/Nz9rY"]),
-                                  action: U,
+                                  label: _.intl.string(_.t["/Nz9rY"]),
+                                  action: B,
                                   color: "danger",
                               }),
                           })

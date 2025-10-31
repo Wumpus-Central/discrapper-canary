@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => w });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -10,18 +10,18 @@ var i = n(120356),
     u = n(239091),
     d = n(607070),
     p = n(367907),
-    f = n(357352),
-    h = n(652515),
+    h = n(357352),
+    f = n(652515),
     g = n(550951),
     m = n(886176),
     b = n(266454),
     _ = n(703656),
-    O = n(984933),
-    y = n(430824),
-    j = n(626135),
-    v = n(434479),
-    x = n(981631),
-    C = n(176505),
+    y = n(984933),
+    O = n(430824),
+    v = n(626135),
+    j = n(434479),
+    C = n(981631),
+    x = n(176505),
     E = n(629481),
     S = n(388032),
     I = n(296553);
@@ -70,12 +70,12 @@ function N(e, t) {
 }
 function Z(e) {
     let { guildId: t, selected: n, handleClick: i } = e,
-        u = (0, h.RF)(t, "guild_shop_channel_row"),
-        g = (0, o.e7)([y.Z], () => y.Z.getGuild(t)),
-        C = (null == g ? void 0 : g.features.has(x.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        u = (0, f.RF)(t, "guild_shop_channel_row"),
+        g = (0, o.e7)([O.Z], () => O.Z.getGuild(t)),
+        x = (null == g ? void 0 : g.features.has(C.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         Z = "false" === s.K.get(E.tM, "false"),
-        T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, r.jsx)(v.m, {
+        w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
+    return (0, r.jsx)(j.m, {
         id: "shop-".concat(t),
         className: l()(I.previewChannelRow, {
             [I.selected]: n,
@@ -94,14 +94,14 @@ function Z(e) {
         trailing: (0, r.jsxs)("div", {
             className: I.gifSection,
             children: [
-                T
+                w
                     ? (0, r.jsx)(c.IGR, {
                           color: c.TVs.unsafe_rawColors.BRAND_260.css,
                           text: S.intl.string(S.t.y2b7CA),
                           className: I.newBadge,
                       })
                     : (0, r.jsx)("img", {
-                          src: (0, f.b)("server_products/storefront/money.gif"),
+                          src: (0, h.b)("server_products/storefront/money.gif"),
                           className: I.money,
                           alt: "",
                       }),
@@ -112,14 +112,14 @@ function Z(e) {
                             if (
                                 (e.stopPropagation(),
                                 (0, b.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW),
-                                j.default.track(
-                                    x.rMx.GUILD_SHOP_PREVIEW_CLICK,
+                                v.default.track(
+                                    C.rMx.GUILD_SHOP_PREVIEW_CLICK,
                                     N(P({}, (0, p.hH)(t)), { action_taken: E.mz.DISMISS_CHANNEL_ROW }),
                                 ),
-                                !u || !C)
+                                !u || !x)
                             ) {
                                 var n;
-                                (0, _.dL)(x.Z5c.CHANNEL(t, null == (n = O.ZP.getDefaultChannel(t)) ? void 0 : n.id));
+                                (0, _.dL)(C.Z5c.CHANNEL(t, null == (n = y.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }
                         },
                         "aria-label": S.intl.string(S.t.cpT0Cq),
@@ -132,11 +132,11 @@ function Z(e) {
         }),
     });
 }
-function T(e) {
+function w(e) {
     let { guild: t, selected: i } = e,
         l = (0, g.g)(t, "guild_shop_channel_row"),
         o = () => {
-            s.K.set(E.tM, "true"), (0, _.uL)(x.Z5c.CHANNEL(t.id, C.oC.GUILD_SHOP));
+            s.K.set(E.tM, "true"), (0, _.uL)(C.Z5c.CHANNEL(t.id, x.oC.GUILD_SHOP));
         };
     return l
         ? (0, r.jsx)(Z, {
@@ -144,7 +144,7 @@ function T(e) {
               selected: i,
               handleClick: o,
           })
-        : (0, r.jsx)(v.m, {
+        : (0, r.jsx)(j.m, {
               id: "shop-".concat(t.id),
               renderIcon: (e) =>
                   (0, r.jsx)(m.Z, {

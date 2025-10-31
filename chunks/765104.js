@@ -74,19 +74,19 @@ function R(e, t) {
 let P = {},
     w = {},
     D = {},
-    L = [],
-    x = {},
+    x = [],
+    L = {},
     M = {
         status: "ok",
         lastRequest: null,
         lastResponse: null,
     },
-    k = [],
     j = [],
+    k = [],
     U = 75,
     G = 25;
 function B() {
-    k = h.Z.getProps()
+    j = h.Z.getProps()
         .results.filter((e) => e.type === _.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -115,7 +115,7 @@ class Z extends (s = u.ZP.PersistedStore) {
     }
     summaries(e) {
         var t;
-        return null != (t = P[e]) ? t : j;
+        return null != (t = P[e]) ? t : k;
     }
     shouldShowTopicsBar() {
         return r;
@@ -155,10 +155,10 @@ class Z extends (s = u.ZP.PersistedStore) {
         return !(null == i ? void 0 : i.fetching) && 0 === o;
     }
     channelAffinities() {
-        return L;
+        return x;
     }
     channelAffinitiesById() {
-        return x;
+        return L;
     }
     channelAffinitiesStatus() {
         return M;
@@ -173,8 +173,8 @@ class Z extends (s = u.ZP.PersistedStore) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: r, numChannels: i = G } = e,
             a = [];
         return (
-            t && (a = a.concat(k)),
-            n && (a = a.concat(L.map((e) => e.channel_id))),
+            t && (a = a.concat(j)),
+            n && (a = a.concat(x.map((e) => e.channel_id))),
             r &&
                 (a = a.filter((e) => {
                     let t = m.Z.getChannel(e);
@@ -313,16 +313,16 @@ let V = new Z(d.Z, {
         var t;
         let { affinities: n, error: r } = e;
         if (null != r) {
-            (L = []),
-                (x = {}),
+            (x = []),
+                (L = {}),
                 (M = R(C({}, M), {
                     status: "error",
                     lastResponse: Date.now(),
                 }));
             return;
         }
-        (L = null != n ? n : []),
-            (x =
+        (x = null != n ? n : []),
+            (L =
                 null != (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}))
                     ? t
                     : {}),

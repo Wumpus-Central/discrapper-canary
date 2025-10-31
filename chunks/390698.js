@@ -1,28 +1,28 @@
-n.d(t, { U: () => u });
-var r = n(951288);
-n(647438);
-var l = n(120356),
-    a = n.n(l),
-    i = n(28664),
-    o = n(481060),
-    s = n(388032),
-    c = n(863577);
-let u = (e) => {
-    let { className: t, isPartiallyPurchased: n } = e;
-    return n
-        ? (0, r.jsx)(i.u, {
+t.d(n, { U: () => c });
+var r = t(951288);
+t(647438);
+var l = t(120356),
+    i = t.n(l),
+    a = t(28664),
+    o = t(481060),
+    s = t(388032),
+    u = t(863577);
+let c = (e) => {
+    let { className: n, isPartiallyPurchased: t } = e;
+    return t
+        ? (0, r.jsx)(a.u, {
               position: "top",
               align: "left",
               text: s.intl.string(s.t.y1VWkZ),
               children: (0, r.jsxs)("div", {
-                  className: a()(c.partialOwnStateContainer, t),
+                  className: i()(u.partialOwnStateContainer, n),
                   children: [
                       (0, r.jsx)("span", {
-                          className: c.iconWrapper,
+                          className: u.iconWrapper,
                           children: (0, r.jsx)(o.d3s, {
                               size: "md",
                               color: "currentColor",
-                              className: c.infoIcon,
+                              className: u.infoIcon,
                           }),
                       }),
                       (0, r.jsx)(o.Text, {
@@ -34,7 +34,7 @@ let u = (e) => {
           })
         : (0, r.jsx)(o.Text, {
               variant: "text-md/semibold",
-              className: t,
+              className: n,
               children: s.intl.string(s.t["6cfuDj"]),
           });
 };

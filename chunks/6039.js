@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(703656),
     p = n(430824),
     f = n(768581),
-    h = n(302221),
-    m = n(693546),
+    m = n(302221),
+    h = n(693546),
     g = n(305325),
     _ = n(246364),
     b = n(937111),
     E = n(381416),
     O = n(523924),
     I = n(390500),
-    v = n(981631),
-    y = n(898625),
+    y = n(981631),
+    v = n(898625),
     C = n(388032),
     S = n(555562);
 function T(e) {
@@ -51,8 +51,8 @@ function T(e) {
                           className: S.splashGradient,
                           style: {
                               background: "linear-gradient(180deg, "
-                                  .concat((0, h.aD)(s, 0.16), " 0%, ")
-                                  .concat((0, h.aD)(s, 1), " 100%)"),
+                                  .concat((0, m.aD)(s, 0.16), " 0%, ")
+                                  .concat((0, m.aD)(s, 1), " 100%)"),
                           },
                       }),
                   (0, r.jsx)("div", { className: S.splashGradient }),
@@ -62,7 +62,7 @@ function T(e) {
 let N = (e) => {
     let { guildId: t } = e,
         { ref: n, width: c, height: u } = (0, o.ZP)(),
-        [f, h] = i.useState(y.hO.INITIAL),
+        [f, m] = i.useState(v.hO.INITIAL),
         N = (0, l.e7)([b.Z], () => b.Z.getRequest(t)),
         j = (0, l.e7)([p.Z], () => p.Z.getGuild(t)),
         { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: x } = (0, l.cj)([b.Z], () => ({
@@ -70,13 +70,13 @@ let N = (e) => {
             guildPreviewDisabled: b.Z.getJoinRequestGuild(t),
         }));
     i.useEffect(() => {
-        null != j && (0, d.uL)(v.Z5c.CHANNEL(t));
+        null != j && (0, d.uL)(y.Z5c.CHANNEL(t));
     }, [j, t]),
         i.useEffect(() => {
-            P || m.Z.fetchRequestToJoinGuilds();
+            P || h.Z.fetchRequestToJoinGuilds();
         }, [P]);
     let A = i.useCallback(() => {
-            h(Math.max(f, y.hO.FILLING)), m.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
+            m(Math.max(f, v.hO.FILLING)), h.Z.removeGuildJoinRequest(t), (0, d.uL)(y.Z5c.ME);
         }, [t, f]),
         Z = (e, t) => () => {
             (0, s.h7j)((n) => {
@@ -142,7 +142,7 @@ let N = (e) => {
             });
         },
         w = async () => {
-            await m.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
+            await h.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
         },
         L = Z(C.intl.format(C.t["9ZezpN"], { name: null == x ? void 0 : x.name }), A),
         R = Z(C.intl.format(C.t.fJwWVt, { name: null == x ? void 0 : x.name }), A);

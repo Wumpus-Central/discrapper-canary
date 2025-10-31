@@ -82,11 +82,11 @@ function D(e, t, n, i) {
                   i,
               );
 }
-function L(e, t) {
+function x(e, t) {
     var n, r;
     return e > 0 ? "" : null != (r = null == (n = R[t]) ? void 0 : n.id) ? r : "";
 }
-function x(e) {
+function L(e) {
     return e === u.EO.VIDEO;
 }
 function M(e) {
@@ -95,12 +95,12 @@ function M(e) {
         (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))
     );
 }
-function k(e) {
+function j(e) {
     return ((0, g._M)(e) || (0, g.MO)(e)) && e.pathname.toLowerCase().endsWith(".gif");
 }
-function j(e) {
+function k(e) {
     let t = b.Z.toURLSafe(e),
-        n = null != t && k(t);
+        n = null != t && j(t);
     return null != t && (M(t) || n)
         ? (n && t.searchParams.set("format", "webp"), t.searchParams.set("animated", "true"), t.toString())
         : e;
@@ -145,7 +145,7 @@ class U extends i.PureComponent {
             { loaded: i } = this.state;
         return i
             ? (0, r.jsx)("img", {
-                  src: j(e),
+                  src: k(e),
                   width: t,
                   height: n,
                   className: I.gif,
@@ -165,7 +165,7 @@ class U extends i.PureComponent {
             "data-focused": a,
             onClick: this.handleClick,
             style: S({ backgroundColor: s ? void 0 : o }, i),
-            children: [x(n) ? null : this.renderGIF(), null != t ? t(e) : null],
+            children: [L(n) ? null : this.renderGIF(), null != t ? t(e) : null],
         });
     }
     constructor(e) {
@@ -186,7 +186,7 @@ class U extends i.PureComponent {
             color: null == n ? l().sample(A) : n,
             loaded: !1,
         }),
-            x(t) ||
+            L(t) ||
                 ((this._image = r.getElement()),
                 (this._image.onload = () => this.setState({ loaded: !0 })),
                 (this._image.src = e.src));
@@ -404,7 +404,7 @@ class G extends i.PureComponent {
                               sections: [R.length],
                               columns: e,
                               itemGutter: 12,
-                              getItemKey: L,
+                              getItemKey: x,
                               getItemHeight: w,
                               renderItem: D,
                               chunkSize: 128,

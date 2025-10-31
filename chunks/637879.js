@@ -192,7 +192,7 @@ function D(e) {
         }),
     });
 }
-function L(e) {
+function x(e) {
     let { title: t, showDivider: n, children: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -210,7 +210,7 @@ function L(e) {
         ],
     });
 }
-function x(e) {
+function L(e) {
     let { headerId: t, titleText: n, trailingIcon: i } = e;
     return (0, r.jsxs)("div", {
         id: t,
@@ -229,11 +229,11 @@ function M(e) {
     let { navId: t, item: n, startingIndex: i, selectedIndex: a } = e,
         o = i,
         { rows: s, title: l, trailingIcon: c } = n.data;
-    return (0, r.jsxs)(L, {
+    return (0, r.jsxs)(x, {
         title: l,
         showDivider: i > 0,
         children: [
-            (0, r.jsx)(x, {
+            (0, r.jsx)(L, {
                 headerId: l,
                 titleText: l,
                 trailingIcon: c,
@@ -262,7 +262,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { size: t, user: n, className: i } = e,
         a = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
         s = (0, O.px)(t);
@@ -273,7 +273,7 @@ function k(e) {
         className: i,
     });
 }
-function j(e) {
+function k(e) {
     let { user: t } = e,
         { selectedGuildId: n, selectedChannelId: i } = (0, o.cj)([d.Z, u.Z], () => {
             let e = d.Z.getGuildId(),
@@ -356,7 +356,7 @@ function B(e) {
         : (0, r.jsxs)("div", {
               className: I.answerPill,
               children: [
-                  (0, r.jsx)(k, {
+                  (0, r.jsx)(j, {
                       size: l.EFr.SIZE_16,
                       user: a,
                   }),
@@ -448,11 +448,11 @@ function V(e) {
               label: (0, r.jsxs)("div", {
                   className: I.labelWithElements,
                   children: [
-                      (0, r.jsx)(k, {
+                      (0, r.jsx)(j, {
                           size: l.EFr.SIZE_16,
                           user: n,
                       }),
-                      (0, r.jsx)(j, { user: n }),
+                      (0, r.jsx)(k, { user: n }),
                   ],
               }),
               ariaLabel: n.username,
@@ -470,7 +470,7 @@ function H(e) {
               className: I.itemIcon,
           })
         : null != n
-          ? (0, r.jsx)(k, {
+          ? (0, r.jsx)(j, {
                 size: l.EFr.SIZE_20,
                 user: n,
                 className: I.itemIcon,
@@ -495,7 +495,7 @@ function Y(e) {
               label: (0, r.jsxs)("div", {
                   className: I.labelWithElements,
                   children: [
-                      (0, r.jsx)(j, { user: n }),
+                      (0, r.jsx)(k, { user: n }),
                       (0, r.jsx)(l.Text, {
                           variant: "text-sm/medium",
                           color: "text-secondary",

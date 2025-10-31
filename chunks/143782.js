@@ -1,8 +1,8 @@
 t.d(n, { default: () => s });
 var r = t(951288);
 t(647438);
-var o = t(153867),
-    i = t(468026),
+var o = t(273352),
+    i = t(153867),
     l = t(493773),
     c = t(933557),
     a = t(626135),
@@ -41,7 +41,7 @@ let s = (e) => {
     null == b)
         ? null
         : (0, r.jsx)(
-              i.default,
+              o.default,
               (function (e) {
                   for (var n = 1; n < arguments.length; n++) {
                       var t = null != arguments[n] ? arguments[n] : {},
@@ -74,7 +74,7 @@ let s = (e) => {
                       cancelText: f.intl.string(f.t["ETE/oC"]),
                       onConfirm: n,
                       onConfirmSecondary: () => {
-                          o.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !0 });
+                          i.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !0 });
                       },
                       body: f.intl.format(f.t["vA+uEs"], { channel: b }),
                   },

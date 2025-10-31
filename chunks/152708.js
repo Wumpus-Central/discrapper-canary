@@ -2,9 +2,9 @@ n.d(t, { Z: () => h });
 var r,
     i,
     l = n(951288),
-    s = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    o = n(647438),
+    s = n(120356),
+    a = n.n(s),
     c = n(600164),
     d = n(152573);
 function u(e, t, n) {
@@ -21,7 +21,7 @@ function u(e, t, n) {
     );
 }
 var f = (((r = f || {}).WRAP = "wrap"), (r.STACK = "stack"), r);
-class p extends (i = s.PureComponent) {
+class p extends (i = o.PureComponent) {
     renderChildren() {
         let e,
             { children: t, layout: n, columns: r } = this.props;

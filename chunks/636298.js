@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(951288),
-    o = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    l = n(647438),
+    o = n(120356),
+    i = n.n(o),
     a = n(873546),
     c = n(159691),
     s = n(481060),
@@ -12,9 +12,9 @@ var r = n(951288),
     b = n(388032),
     p = n(214779);
 function y(e) {
-    let { icon: t, label: n, onClick: o } = e;
+    let { icon: t, label: n, onClick: l } = e;
     return (0, r.jsx)(c.hU, {
-        onClick: o,
+        onClick: l,
         icon: t,
         size: "sm",
         variant: "icon-only",
@@ -22,10 +22,10 @@ function y(e) {
     });
 }
 function j(e) {
-    let { title: t, badge: n, onClose: o } = e,
-        l = (0, u.Ll)();
+    let { title: t, badge: n, onClose: l } = e,
+        o = (0, u.Ll)();
     return (0, r.jsx)(s.f6W, {
-        theme: l,
+        theme: o,
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: i()(p.contentHeader, e),
@@ -49,18 +49,18 @@ function j(e) {
                     }),
                     (0, r.jsx)(y, {
                         icon: s.Uz9,
-                        onClick: o,
+                        onClick: l,
                         label: b.intl.string(b.t.cpT0Cq),
                     }),
                 ],
             }),
     });
 }
-let m = o.memo(function (e) {
+let m = l.memo(function (e) {
     var t, n;
-    let { onClose: o, setting: l } = e,
-        c = null != (n = null == l ? void 0 : l.useTitle()) ? n : "",
-        s = null == l || null == (t = l.useBadge) ? void 0 : t.call(l),
+    let { onClose: l, setting: o } = e,
+        c = null != (n = null == o ? void 0 : o.useTitle()) ? n : "",
+        s = null == o || null == (t = o.useBadge) ? void 0 : t.call(o),
         u = d.Z.useField("showNavigationMobile");
     return (0, r.jsxs)("div", {
         className: i()(p.content, {
@@ -71,11 +71,11 @@ let m = o.memo(function (e) {
             (0, r.jsx)(j, {
                 title: c,
                 badge: s,
-                onClose: o,
+                onClose: l,
             }),
             (0, r.jsx)("div", {
                 className: p.contentBody,
-                children: null != l && (0, r.jsx)(f.Z, { node: l }),
+                children: null != o && (0, r.jsx)(f.Z, { node: o }),
             }),
         ],
     });

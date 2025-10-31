@@ -1,18 +1,18 @@
-t.d(a, { X: () => i });
-var u = t(386843),
-    n = t(922387),
-    r = t(647438);
-let i = (0, r.forwardRef)(function (e, a) {
-    [e, a] = (0, n.pE)(e, a, u.ni);
-    let { children: t, level: i = 3, className: o, ...l } = e,
-        s = `h${i}`;
-    return r.createElement(
-        s,
+n.d(t, { X: () => o });
+var r = n(386843),
+    i = n(922387),
+    a = n(647438);
+let o = (0, a.forwardRef)(function (e, t) {
+    [e, t] = (0, i.pE)(e, t, r.ni);
+    let { children: n, level: o = 3, className: s, ...l } = e,
+        c = `h${o}`;
+    return a.createElement(
+        c,
         {
             ...l,
-            ref: a,
-            className: null != o ? o : "react-aria-Heading",
+            ref: t,
+            className: null != s ? s : "react-aria-Heading",
         },
-        t,
+        n,
     );
 });

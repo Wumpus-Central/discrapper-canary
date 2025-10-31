@@ -117,22 +117,22 @@ e.exports = (function (e) {
                     P = N.getType(),
                     w = n(N),
                     D = void 0,
-                    L = void 0,
-                    x = void 0;
-                w && ((D = w.component), (L = w.props), (x = w.editable));
+                    x = void 0,
+                    L = void 0;
+                w && ((D = w.component), (x = w.props), (L = w.editable));
                 var M = g || v.get(R),
-                    k = c.encode(R, 0, 0),
-                    j = {
+                    j = c.encode(R, 0, 0),
+                    k = {
                         contentState: E,
                         block: N,
-                        blockProps: L,
+                        blockProps: x,
                         blockStyleFn: r,
                         customStyleMap: o,
                         customStyleFn: s,
                         decorator: O,
                         direction: M,
                         forceSelection: y,
-                        offsetKey: k,
+                        offsetKey: j,
                         preventScroll: m,
                         selection: b,
                         tree: d.getBlockTree(R),
@@ -151,20 +151,20 @@ e.exports = (function (e) {
                         className: F,
                         "data-block": !0,
                         "data-editor": h,
-                        "data-offset-key": k,
+                        "data-offset-key": j,
                         key: R,
                     };
-                void 0 !== x &&
+                void 0 !== L &&
                     (Y = a({}, Y, {
-                        contentEditable: x,
+                        contentEditable: L,
                         suppressContentEditableWarning: !0,
                     }));
-                var W = u.createElement(B, Y, u.createElement(H, i({}, j, { key: R })));
+                var W = u.createElement(B, Y, u.createElement(H, i({}, k, { key: R })));
                 T.push({
                     block: W,
                     wrapperTemplate: G,
                     key: R,
-                    offsetKey: k,
+                    offsetKey: j,
                 }),
                     (S = G ? N.getDepth() : null),
                     (A = G);

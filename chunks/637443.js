@@ -2,19 +2,19 @@ n.d(t, {
     ShopAssetsPreviewInstructionModal: () => d,
     ShopPFXPreviewInstructionModal: () => u,
     c: () => c,
-    g: () => s,
+    g: () => o,
 });
 var a = n(951288);
 n(647438);
-var r = n(793030),
+var i = n(793030),
     l = n(481060),
-    i = n(281598),
-    o = n(117910);
-let s = "shop-assets-preview-instructions-modal",
+    r = n(281598),
+    s = n(117910);
+let o = "shop-assets-preview-instructions-modal",
     c = "shop-pfx-preview-instructions-modal",
     d = (e) => {
         let { transitionState: t, onClose: n } = e;
-        return (0, a.jsx)(r.Modal, {
+        return (0, a.jsx)(i.Modal, {
             transitionState: t,
             title: "Upload Instructions",
             actions: [
@@ -26,7 +26,7 @@ let s = "shop-assets-preview-instructions-modal",
             ],
             onClose: n,
             children: (0, a.jsxs)("div", {
-                className: o.modalContent,
+                className: s.modalContent,
                 children: [
                     (0, a.jsx)(l.Text, {
                         variant: "text-md/bold",
@@ -45,7 +45,7 @@ let s = "shop-assets-preview-instructions-modal",
                         children: "Valid Upload Types",
                     }),
                     (0, a.jsxs)("ul", {
-                        className: o.instructionsList,
+                        className: s.instructionsList,
                         children: [
                             (0, a.jsx)("li", { children: "One or more image or video files (jpg, png, webm)" }),
                             (0, a.jsx)("li", { children: "A folder containing image or video files" }),
@@ -56,8 +56,8 @@ let s = "shop-assets-preview-instructions-modal",
                         children: "Valid File Names",
                     }),
                     (0, a.jsx)("ul", {
-                        className: o.instructionsList,
-                        children: Object.keys(i.Kj).map((e) => (0, a.jsx)("li", { children: e }, e)),
+                        className: s.instructionsList,
+                        children: Object.keys(r.Kj).map((e) => (0, a.jsx)("li", { children: e }, e)),
                     }),
                 ],
             }),
@@ -65,7 +65,7 @@ let s = "shop-assets-preview-instructions-modal",
     },
     u = (e) => {
         let { transitionState: t, onClose: n } = e;
-        return (0, a.jsx)(r.Modal, {
+        return (0, a.jsx)(i.Modal, {
             transitionState: t,
             title: "PFX Preview Instructions",
             actions: [
@@ -77,7 +77,7 @@ let s = "shop-assets-preview-instructions-modal",
             ],
             onClose: n,
             children: (0, a.jsxs)("div", {
-                className: o.modalContent,
+                className: s.modalContent,
                 children: [
                     (0, a.jsx)(l.Text, {
                         variant: "text-md/normal",

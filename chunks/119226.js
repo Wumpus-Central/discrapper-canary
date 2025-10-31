@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(314940);
+n.d(t, { Z: () => w }), n(314940);
 var r = n(951288);
 n(647438);
 var i = n(278074),
@@ -156,7 +156,7 @@ let P = (e) => {
           })
         : l;
 };
-function D(e) {
+function w(e) {
     let { sku: t } = e;
     return t.productLine === E.POd.COLLECTIBLES ? (0, r.jsx)(P, { sku: t }) : null;
 }

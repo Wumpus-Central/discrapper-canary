@@ -1,7 +1,7 @@
 n.d(t, { c: () => c });
 var r = n(841992),
-    l = n(579092),
-    o = n(82328),
+    o = n(579092),
+    l = n(82328),
     i = n(869950);
 function a(e, t, n) {
     return (
@@ -16,7 +16,7 @@ function a(e, t, n) {
         e
     );
 }
-let s = new l.Yd("SimpleMuxWrapper");
+let s = new o.Yd("SimpleMuxWrapper");
 class c {
     initialize() {
         var e;
@@ -24,7 +24,7 @@ class c {
             debug: null != (e = this.config.debug) && e,
             disableCookies: !0,
             respectDoNotTrack: !0,
-            data: o.v.mapDiscordToMuxMetadata(this.config, this.sessionId),
+            data: l.v.mapDiscordToMuxMetadata(this.config, this.sessionId),
         };
         null != this.hlsInstance && ((t.hlsjs = this.hlsInstance), (t.Hls = this.hlsInstance.constructor));
         try {

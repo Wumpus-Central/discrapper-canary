@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(91192),
@@ -10,11 +10,11 @@ var i = n(91192),
     u = n(662146),
     d = n(231338),
     p = n(388032),
-    f = n(419619);
-function h() {
+    h = n(419619);
+function f() {
     var e, t;
     let n = (0, l.e7)([a.Z, s.Z], () => a.Z.unavailableGuilds.filter((e) => null == s.Z.getGuild(e)).length),
-        h = (0, i.Ie)("unavailable-guilds-button");
+        f = (0, i.Ie)("unavailable-guilds-button");
     return n <= 0
         ? null
         : (0, r.jsx)(c.H, {
@@ -51,10 +51,10 @@ function h() {
                           {
                               href: d.yX.STATUS,
                               target: "_blank",
-                              className: f.guildsError,
+                              className: h.guildsError,
                               "aria-label": p.intl.formatToPlainString(p.t["MEpX+2"], { count: n }),
                           },
-                          h,
+                          f,
                       )),
                       (t = t =
                           {

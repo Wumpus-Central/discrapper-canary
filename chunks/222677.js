@@ -1,9 +1,9 @@
 n.d(t, {
-    $E: () => L,
+    $E: () => x,
     T6: () => w,
     TW: () => T,
     U0: () => R,
-    WO: () => x,
+    WO: () => L,
     rU: () => P,
     wX: () => D,
 });
@@ -180,7 +180,7 @@ async function P(e, t, n) {
         u = arguments.length > 4 ? arguments[4] : void 0,
         f = null != u && !!u.burst,
         p = null != u && !!u.isRetry;
-    if (!p && k(e, t, n, f))
+    if (!p && j(e, t, n, f))
         return void o.Z.show({
             title: b.intl.string(b.t["uaUU/g"]),
             body: b.intl.string(b.t.psMorl),
@@ -276,7 +276,7 @@ async function D(e, t, n) {
                 S(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
             });
 }
-async function L(e, t, n, i) {
+async function x(e, t, n, i) {
     let a = null != i && !!i.isRetry;
     await c.Z.unarchiveThreadIfNecessary(e);
     let o = null === n.id ? n.name : "".concat(n.name, ":").concat(n.id);
@@ -287,10 +287,10 @@ async function L(e, t, n, i) {
             rejectWithError: !1,
         })
         .catch((r) => {
-            S(r, () => L(e, t, n, { isRetry: !0 }), { isRetry: a });
+            S(r, () => x(e, t, n, { isRetry: !0 }), { isRetry: a });
         });
 }
-async function x(e) {
+async function L(e) {
     let { channelId: t, messageId: n, emoji: a, location: o = "Message", userId: s, options: u } = e,
         d = null != u && !!u.burst,
         f = null != u && !!u.isRetry;
@@ -326,7 +326,7 @@ async function x(e) {
                     S(
                         e,
                         () =>
-                            x({
+                            L({
                                 channelId: t,
                                 messageId: n,
                                 emoji: a,
@@ -360,7 +360,7 @@ async function M(e, t) {
         } catch (e) {}
     return n;
 }
-function k(e, t, n, r) {
+function j(e, t, n, r) {
     let i = f.Z.getMessage(e, t);
     return null != i && i.userHasReactedWithEmoji(n, r);
 }

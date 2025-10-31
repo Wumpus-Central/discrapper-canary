@@ -129,15 +129,15 @@ function S(e) {
             onQueryChange: P,
         } = e,
         [w, D] = i.useState(""),
-        L = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 D(e), null == P || P(e);
             },
             [P],
         ),
-        [x] = i.useState(!0),
-        [M, k] = i.useState(null),
-        j = i.useId(),
+        [L] = i.useState(!0),
+        [M, j] = i.useState(null),
+        k = i.useId(),
         U = i.useRef(null);
     i.useLayoutEffect(() => {
         let e = document.querySelector("[".concat(b, '="').concat(M, '"]')),
@@ -172,7 +172,7 @@ function S(e) {
             [],
         ),
         Y = i.useCallback((e, t) => {
-            k(t);
+            j(t);
             let n = document.querySelector(e),
                 r = U.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
@@ -195,9 +195,9 @@ function S(e) {
                     ref: n,
                     role: "combobox",
                     "aria-label": O,
-                    "aria-expanded": x,
-                    "aria-controls": x ? j : void 0,
-                    "aria-owns": j,
+                    "aria-expanded": L,
+                    "aria-controls": L ? k : void 0,
+                    "aria-owns": k,
                     "aria-haspopup": "listbox",
                     className: o()(f.combobox, h),
                     children: [
@@ -208,10 +208,10 @@ function S(e) {
                                 autoFocus: S,
                                 placeholder: t,
                                 query: w,
-                                onChange: L,
+                                onChange: x,
                                 onKeyDown: i,
-                                onBlur: () => k(null),
-                                onClear: () => L(""),
+                                onBlur: () => j(null),
+                                onClear: () => x(""),
                                 inputProps: {
                                     "aria-multiline": !1,
                                     "aria-activedescendant": null != M ? M : void 0,
@@ -220,7 +220,7 @@ function S(e) {
                         }),
                         (0, r.jsx)("div", {
                             children:
-                                x &&
+                                L &&
                                 (B
                                     ? (0, r.jsxs)("div", {
                                           className: f.empty,
@@ -248,7 +248,7 @@ function S(e) {
                                               m(p({}, s), {
                                                   style: { maxHeight: A * (y + 6) },
                                                   "aria-multiselectable": v,
-                                                  id: j,
+                                                  id: k,
                                                   ref: U,
                                                   className: o()(f.list, f.scroller, E),
                                                   sections: [G.length],

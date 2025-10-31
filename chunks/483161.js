@@ -1,73 +1,73 @@
-n.d(e, { z: () => b });
+n.d(e, { z: () => _ });
 var i = n(951288),
     l = n(657707),
-    u = n(442837),
-    r = n(481060),
+    r = n(442837),
+    u = n(481060),
     s = n(778825),
-    o = n(398140),
-    a = n(564344),
+    a = n(398140),
+    o = n(564344),
     c = n(509613),
-    E = n(28682),
-    d = n(518950),
-    T = n(25990),
-    I = n(594174),
-    O = n(313789),
-    y = n(620163),
-    S = n(726985),
-    A = n(388032),
-    g = n(88651);
-let _ = (0, c.x1)(O.n.PROFILE_PANE, {
+    d = n(28682),
+    E = n(518950),
+    O = n(25990),
+    T = n(594174),
+    S = n(313789),
+    g = n(620163),
+    I = n(726985),
+    y = n(388032),
+    b = n(88651);
+let A = (0, c.x1)(S.n.PROFILE_PANE, {
         buildLayout: () => [],
-        render: a.Z,
+        render: o.Z,
     }),
-    L = (0, c.wf)(O.n.PROFILE_PANEL, {
-        useTitle: () => A.intl.string(A.t["vi7f+q"]),
-        buildLayout: () => [_],
+    f = (0, c.wf)(S.n.PROFILE_PANEL, {
+        useTitle: () => y.intl.string(y.t["vi7f+q"]),
+        buildLayout: () => [A],
         notice: {
-            stores: [s.Z, T.Z],
-            element: o.Z,
+            stores: [s.Z, O.Z],
+            element: a.Z,
         },
     }),
-    b = (0, c.m7)(O.n.PROFILE_SIDEBAR_ITEM, {
+    _ = (0, c.m7)(S.n.PROFILE_SIDEBAR_ITEM, {
         icon: l.tBG,
-        useTitle: () => A.intl.string(A.t["vi7f+q"]),
-        legacySearchKey: S.s6.PROFILE_CUSTOMIZATION,
-        buildLayout: () => [L],
+        useTitle: () => y.intl.string(y.t["vi7f+q"]),
+        legacySearchKey: I.s6.PROFILE_CUSTOMIZATION,
+        buildLayout: () => [f],
         stronglyDiscouragedCustomComponent: () => {
             var t;
-            let e = (0, u.e7)([I.default], () => I.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: s } = (0, d.Z)({
+            let e = (0, r.e7)([T.default], () => T.default.getCurrentUser()),
+                { avatarSrc: n, avatarDecorationSrc: s } = (0, E.Z)({
                     userId: null == e ? void 0 : e.id,
-                    size: r.EFr.SIZE_48,
+                    size: u.EFr.SIZE_48,
                 });
             return null == e
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: g.profileCustomizationTab,
+                      className: b.profileCustomizationTab,
                       children: [
-                          (0, i.jsx)(r.qEK, {
+                          (0, i.jsx)(u.qEK, {
                               src: n,
                               avatarDecoration: s,
-                              size: r.EFr.SIZE_48,
-                              "aria-label": A.intl.string(A.t.lqaIxI),
+                              size: u.EFr.SIZE_48,
+                              "aria-label": y.intl.string(y.t.lqaIxI),
                           }),
                           (0, i.jsxs)("div", {
-                              className: g.textContainer,
+                              className: b.textContainer,
                               children: [
-                                  (0, i.jsx)(r.Text, {
+                                  (0, i.jsx)(u.Text, {
                                       color: "header-primary",
                                       variant: "text-md/medium",
                                       lineClamp: 1,
                                       children: null != (t = e.globalName) ? t : e.username,
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: g.editProfilesRow,
+                                      className: b.editProfilesRow,
                                       children: [
-                                          (0, i.jsx)(r.Text, {
+                                          (0, i.jsx)(u.Text, {
                                               variant: "text-sm/normal",
                                               color: "currentColor",
                                               lineClamp: 1,
-                                              children: A.intl.string(A.t.Ip9nBS),
+                                              children: y.intl.string(y.t.Ip9nBS),
                                           }),
                                           (0, i.jsx)(l.vdY, {
                                               size: "xxs",
@@ -81,8 +81,8 @@ let _ = (0, c.x1)(O.n.PROFILE_PANE, {
                   });
         },
         trailing: {
-            type: E.PU.BADGE_NEW,
-            getDismissibleContentTypes: y.OF,
-            badgeComponent: y.W8,
+            type: d.PU.BADGE_NEW,
+            getDismissibleContentTypes: g.OF,
+            badgeComponent: g.W8,
         },
     });

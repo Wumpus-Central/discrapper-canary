@@ -1,13 +1,13 @@
 n.d(t, { Z: () => c });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(481060),
-    s = n(451429);
+    r = n.n(l),
+    s = n(481060),
+    o = n(451429);
 function c(e) {
     let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
-        p = r.useMemo(
+        p = i.useMemo(
             () =>
                 t.map((e) =>
                     (function (e) {
@@ -37,7 +37,7 @@ function c(e) {
                     })(
                         {
                             renderHeader: () =>
-                                (0, a.jsx)(o.Text, {
+                                (0, a.jsx)(s.Text, {
                                     variant: "text-sm/semibold",
                                     children: e.key,
                                 }),
@@ -49,23 +49,23 @@ function c(e) {
         ),
         h = 0 === n.length ? [1] : [n.length];
     return (0, a.jsx)("div", {
-        className: s.tableContainer,
-        children: (0, a.jsx)(o.Tvr, {
+        className: o.tableContainer,
+        children: (0, a.jsx)(s.Tvr, {
             className: l,
-            innerClassName: s.table,
+            innerClassName: o.table,
             sections: h,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
-                    r = s.tableHeader;
+                    i = o.tableHeader;
                 return (0, a.jsx)(
                     "div",
                     {
-                        className: r,
+                        className: i,
                         children: p.map((e) => {
-                            var r, l;
-                            let i = e.cellClassName,
-                                o = {
+                            var i, l;
+                            let r = e.cellClassName,
+                                s = {
                                     width: "calc("
                                         .concat(null != (l = e.cellWidth) ? l : "1fr", " - ")
                                         .concat(16, "px)"),
@@ -73,9 +73,9 @@ function c(e) {
                             return (0, a.jsx)(
                                 "div",
                                 {
-                                    className: i,
-                                    style: o,
-                                    children: null == (r = e.renderHeader) ? void 0 : r.call(e, e, n),
+                                    className: r,
+                                    style: s,
+                                    children: null == (i = e.renderHeader) ? void 0 : i.call(e, e, n),
                                 },
                                 "dev-tools-th-".concat(t, "-").concat(e.key),
                             );
@@ -87,22 +87,22 @@ function c(e) {
             rowHeight: m,
             renderRow: (e) => {
                 let { rowIndex: t } = e,
-                    r = n[t];
-                if (null == r) return null;
-                let l = r.key,
-                    h = i()(s.tableRow, {
-                        [s.selectedTableRow]: l === u,
+                    i = n[t];
+                if (null == i) return null;
+                let l = i.key,
+                    h = r()(o.tableRow, {
+                        [o.selectedTableRow]: l === u,
                         rowClassName: c,
                     });
                 return (0, a.jsx)(
-                    o.P3F,
+                    s.P3F,
                     {
                         className: h,
-                        onClick: () => (null == d ? void 0 : d(r)),
+                        onClick: () => (null == d ? void 0 : d(i)),
                         children: p.map((e) => {
                             var n, l;
-                            let i = e.cellClassName,
-                                o = {
+                            let r = e.cellClassName,
+                                s = {
                                     width: "calc("
                                         .concat(null != (l = e.cellWidth) ? l : "1fr", " - ")
                                         .concat(16, "px)"),
@@ -111,9 +111,9 @@ function c(e) {
                             return (0, a.jsx)(
                                 "div",
                                 {
-                                    className: i,
-                                    style: o,
-                                    children: null == (n = e.render) ? void 0 : n.call(e, r, void 0, t),
+                                    className: r,
+                                    style: s,
+                                    children: null == (n = e.render) ? void 0 : n.call(e, i, void 0, t),
                                 },
                                 "dev-tools-td-".concat(t, "-").concat(e.key),
                             );

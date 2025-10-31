@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g });
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(481060),
@@ -9,28 +9,28 @@ var i = n(951288),
     u = n(152376),
     d = n(981631),
     p = n(388032),
-    h = n(245995);
-function f(e) {
+    f = n(245995);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
@@ -43,8 +43,8 @@ function m(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -56,28 +56,28 @@ function m(e, t) {
 function g(e) {
     let { channel: t, narrow: n } = e;
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             c.default.track(
                 d.rMx.CHANNEL_BANNER_VIEWED,
-                m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: "channel_opt_in" }),
+                m(h({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), { banner_type: "channel_opt_in" }),
             );
         }, [t]),
-        (0, i.jsxs)("div", {
-            className: a()(h.chatHeaderBar, { [h.narrow]: n }),
+        (0, r.jsxs)("div", {
+            className: a()(f.chatHeaderBar, { [f.narrow]: n }),
             children: [
-                (0, i.jsx)(o.Text, {
-                    className: h.chatHeaderBarText,
+                (0, r.jsx)(o.Text, {
+                    className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: p.intl.string(p.t.iOWmmB),
                 }),
-                (0, i.jsx)(o.Button, {
+                (0, r.jsx)(o.Button, {
                     size: "sm",
                     variant: "primary",
                     onClick: () => {
                         c.default.track(
                             d.rMx.CHANNEL_BANNER_CTA_CLICKED,
-                            m(f({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
+                            m(h({}, (0, s.hH)(t.getGuildId()), (0, s.v_)(t)), {
                                 banner_type: "channel_opt_in",
                                 cta_type: "add channel",
                             }),

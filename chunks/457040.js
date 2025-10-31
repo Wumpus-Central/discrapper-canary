@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(422195),
     w = n(657795),
     D = n(489762),
-    L = n(31543),
-    x = n(15350),
+    x = n(31543),
+    L = n(15350),
     M = n(151189),
-    k = n(611480),
-    j = n(981631),
+    j = n(611480),
+    k = n(981631),
     U = n(349778);
 function G(e, t, n) {
     return (
@@ -113,7 +113,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ei = (0, I.Q)((e) => e.showPremiumUpsell),
             [ea, eo] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], s.X),
             es = i.useRef("");
-        i.useImperativeHandle(t, () => ({ onPickerOpen: ex }));
+        i.useImperativeHandle(t, () => ({ onPickerOpen: eL }));
         let el = (0, A.Sd)(c),
             ec = 0 === el.filter((e) => e.type !== N.Ih.EMPTY_GUILD_UPSELL).length,
             eu = (0, m.ep)({
@@ -126,7 +126,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ed = b._O.useSetting(),
             ef = i.useMemo(() => new Set(ed), [ed]),
             e_ = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
-            ep = i.useMemo(() => (0, x.S)(ea, e_, c), [ea, e_, c]),
+            ep = i.useMemo(() => (0, L.S)(ea, e_, c), [ea, e_, c]),
             eh = (0, A.RJ)(),
             em = (0, A.LZ)(),
             eg = (0, l.cj)([C.Z], () => C.Z.getAllGuildStickers()),
@@ -159,8 +159,8 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { location: i } = t;
                     switch (e.type) {
                         case N.al.CREATE_STICKER:
-                            O.default.track(j.rMx.OPEN_MODAL, {
-                                type: j.jXE.CREATE_STICKER_MODAL,
+                            O.default.track(k.rMx.OPEN_MODAL, {
+                                type: k.jXE.CREATE_STICKER_MODAL,
                                 location: Z,
                             }),
                                 (0, u.ZDy)(async () => {
@@ -181,7 +181,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 getRowProps: eP,
                 gridContainerProps: ew,
                 handleGridContainerKeyDown: eD,
-                isUsingKeyboardNavigation: eL,
+                isUsingKeyboardNavigation: ex,
             } = (0, R.t)({
                 columnCounts: eC,
                 stickersListRef: ee,
@@ -189,10 +189,10 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 onGridItemSelect: eN,
                 store: p.ZN,
                 setInspectedStickerPosition: p.ZN.setInspectedExpressionPosition,
-                gridNavigatorId: k.Vr,
+                gridNavigatorId: j.Vr,
             });
         i.useEffect(() => p.ZN.resetStoreState, []);
-        let ex = () => {
+        let eL = () => {
             let e = c.getGuildId(),
                 t = [];
             if (null !== e) {
@@ -224,7 +224,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }, []);
         let eM = i.useCallback(() => {
             G(),
-                O.default.track(j.rMx.PREMIUM_PROMOTION_OPENED, { location_section: j.jXE.STICKER_PICKER_UPSELL }),
+                O.default.track(k.rMx.PREMIUM_PROMOTION_OPENED, { location_section: k.jXE.STICKER_PICKER_UPSELL }),
                 (0, g.z)();
         }, [G]);
         return (0, r.jsxs)(_.Gt, {
@@ -233,7 +233,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 !(q && ec) &&
                     (0, r.jsx)("div", {
                         className: U.header,
-                        children: (0, r.jsx)(L.Z, {
+                        children: (0, r.jsx)(x.Z, {
                             ref: er,
                             onKeyDown: eD,
                             stickersListRef: ee,
@@ -254,7 +254,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                           {
                                               ref: X,
                                               className: U.listWrapper,
-                                              id: k.Vr,
+                                              id: j.Vr,
                                           },
                                           ew,
                                       ),
@@ -269,7 +269,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                         getStickerRowProps: eP,
                                                         gridWidth: eu,
                                                         gutterWidth: eA,
-                                                        isUsingKeyboardNavigation: eL,
+                                                        isUsingKeyboardNavigation: ex,
                                                         onSelectSticker: eO,
                                                         rowCount: eI,
                                                         rowCountBySection: eT,
@@ -295,8 +295,8 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         (0, A.fP)(),
         (0, r.jsx)("div", {
             className: U.wrapper,
-            id: k.nZ,
-            "aria-labelledby": k.ED,
+            id: j.nZ,
+            "aria-labelledby": j.ED,
             role: "tabpanel",
             children: e.isLoading
                 ? (0, r.jsx)(u.$jN, { className: U.loadingIndicator })

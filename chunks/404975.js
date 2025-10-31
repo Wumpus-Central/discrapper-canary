@@ -1,8 +1,8 @@
 n.d(t, { P: () => v }), n(539854), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    l = n(647438),
+    o = n(120356),
+    i = n.n(o),
     a = n(91192),
     c = n(873546),
     s = n(481060),
@@ -15,10 +15,10 @@ var r = n(951288),
     j = n(388032),
     m = n(845435);
 function v(e) {
-    let { root: t, header: n, footer: l, onClose: y, emptyState: v } = e,
+    let { root: t, header: n, footer: o, onClose: y, emptyState: v } = e,
         h = p.Z.useField("showNavigationMobile"),
-        O = o.useRef(null),
-        x = o.useMemo(() => {
+        x = l.useRef(null),
+        O = l.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -28,9 +28,9 @@ function v(e) {
                             switch (t.trailing.type) {
                                 case b.PU.BADGE_NEW:
                                 case b.PU.STRONGLY_DISCOURAGED_CUSTOM:
-                                    var n, r, o;
-                                    null == (r = (o = t.trailing).getDismissibleContentTypes) ||
-                                        null == (n = r.call(o)) ||
+                                    var n, r, l;
+                                    null == (r = (l = t.trailing).getDismissibleContentTypes) ||
+                                        null == (n = r.call(l)) ||
                                         n.forEach((t) => {
                                             e.push(t);
                                         });
@@ -40,7 +40,7 @@ function v(e) {
                 e
             );
         }, [t.layout]),
-        [P, S] = o.useMemo(() => {
+        [P, S] = l.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -51,14 +51,14 @@ function v(e) {
             );
         }, [t.layout]),
         C = (0, f.Ll)(),
-        _ = (0, u.Z)("settings-sidebar", O);
+        _ = (0, u.Z)("settings-sidebar", x);
     return (0, r.jsx)(s.f6W, {
         theme: C,
         children: (e) =>
             (0, r.jsx)(d.ZP, {
-                contentTypes: x,
+                contentTypes: O,
                 children: (t) => {
-                    let { visibleContent: o } = t;
+                    let { visibleContent: l } = t;
                     return (0, r.jsxs)("div", {
                         className: i()(m.sidebar, e, {
                             [m.mobile]: c.tq,
@@ -85,7 +85,7 @@ function v(e) {
                                                 g,
                                                 {
                                                     section: e,
-                                                    visibleContent: o,
+                                                    visibleContent: l,
                                                     hoisted: !0,
                                                 },
                                                 e.key,
@@ -107,25 +107,25 @@ function v(e) {
                                                 if (null == e) return {};
                                                 var n,
                                                     r,
-                                                    o = (function (e, t) {
+                                                    l = (function (e, t) {
                                                         if (null == e) return {};
                                                         var n,
                                                             r,
-                                                            o = {},
-                                                            l = Object.keys(e);
-                                                        for (r = 0; r < l.length; r++)
-                                                            (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                                                        return o;
+                                                            l = {},
+                                                            o = Object.keys(e);
+                                                        for (r = 0; r < o.length; r++)
+                                                            (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                                        return l;
                                                     })(e, t);
                                                 if (Object.getOwnPropertySymbols) {
-                                                    var l = Object.getOwnPropertySymbols(e);
-                                                    for (r = 0; r < l.length; r++)
-                                                        (n = l[r]),
+                                                    var o = Object.getOwnPropertySymbols(e);
+                                                    for (r = 0; r < o.length; r++)
+                                                        (n = o[r]),
                                                             !(t.indexOf(n) >= 0) &&
                                                                 Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                                (o[n] = e[n]);
+                                                                (l[n] = e[n]);
                                                 }
-                                                return o;
+                                                return l;
                                             })(e, ["ref"]);
                                         return (0, r.jsxs)(
                                             s.h21,
@@ -157,7 +157,7 @@ function v(e) {
                                                 {
                                                     ref: (e) => {
                                                         var t;
-                                                        (O.current = e),
+                                                        (x.current = e),
                                                             (i.current =
                                                                 null != (t = null == e ? void 0 : e.getScrollerNode())
                                                                     ? t
@@ -178,13 +178,13 @@ function v(e) {
                                                                     g,
                                                                     {
                                                                         section: e,
-                                                                        visibleContent: o,
+                                                                        visibleContent: l,
                                                                     },
                                                                     e.key,
                                                                 ),
                                                             ),
                                                         }),
-                                                        null != l && (0, r.jsx)(l, {}),
+                                                        null != o && (0, r.jsx)(o, {}),
                                                     ],
                                                 }),
                                             Object.getOwnPropertyDescriptors
@@ -216,7 +216,7 @@ function v(e) {
 }
 function g(e) {
     var t;
-    let { section: n, visibleContent: o, hoisted: l = !1 } = e,
+    let { section: n, visibleContent: l, hoisted: o = !1 } = e,
         i = null == (t = n.useLabel) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
         className: m.section,
@@ -237,8 +237,8 @@ function g(e) {
                     y.y,
                     {
                         node: e,
-                        visibleContent: o,
-                        hoisted: l,
+                        visibleContent: l,
+                        hoisted: o,
                     },
                     e.key,
                 ),

@@ -1,5 +1,5 @@
 n.d(t, {
-    F3: () => L,
+    F3: () => x,
     J0: () => O,
     NW: () => d,
     OV: () => l,
@@ -380,6 +380,6 @@ function D(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return P.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function L() {
+function x() {
     T("OVERLAY_INITIALIZED"), C("OVERLAY_INITIALIZED"), D("OVERLAY_INITIALIZED");
 }

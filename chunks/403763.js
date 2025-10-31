@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(392711),
@@ -17,17 +17,17 @@ function f() {
         i = o.Z.getOutputDeviceId();
     if (c.Z.getState().neverShowModal || l().isEmpty(c.Z.lastDeviceConnected)) return;
     let f = (0, c.X)(o.Z.getInputDevices()[t]),
-        h = (0, c.X)(o.Z.getOutputDevices()[i]);
-    if (l().some(c.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === f || e.displayName === h))
+        m = (0, c.X)(o.Z.getOutputDevices()[i]);
+    if (l().some(c.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === f || e.displayName === m))
         return;
-    let m = l().some(
+    let h = l().some(
         c.Z.lastDeviceConnected,
         (e) => s.Z.isCertified(c.Z.inputDevices[e.displayName]) || s.Z.isCertified(c.Z.outputDevices[e.displayName]),
     );
     if (
         ((t === u.w5 && c.Z.lastInputSystemDevice.justChanged) ||
             (i === u.w5 && c.Z.lastOutputSystemDevice.justChanged)) &&
-        !m
+        !h
     )
         return;
     let g = l().first(Object.keys(c.Z.lastDeviceConnected)),
@@ -55,7 +55,7 @@ function f() {
                 { modalKey: p },
             )));
 }
-let h = {
+let m = {
     init() {
         c.Z.addChangeListener(f);
     },

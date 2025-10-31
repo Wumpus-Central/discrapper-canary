@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(215569),
-    l = n(481060),
-    a = n(852860),
+    l = n(796027),
+    a = n(481060),
     s = n(236413),
     o = n(727072),
     c = n(65912),
@@ -41,7 +41,7 @@ function g(e) {
         y = !p && j ? d.intl.formatToPlainString(d.t.nula34, { ruleName: null == f ? void 0 : f.name }) : void 0;
     return (
         null != h &&
-            (y = (0, r.jsx)(l.Text, {
+            (y = (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "text-danger",
                 className: u.message,
@@ -52,8 +52,8 @@ function g(e) {
             className: u.saveNoticeContainer,
             children:
                 _ &&
-                (0, r.jsx)(l.oXn, {
-                    children: (0, r.jsx)(a.Z, {
+                (0, r.jsx)(a.oXn, {
+                    children: (0, r.jsx)(l.Z, {
                         submitting: m,
                         disabled: m,
                         onSave: C,

@@ -116,10 +116,10 @@ function O(e) {
             var e;
             null == P || null == (e = P.onCta) || e.call(P), w ? null == T || T() : R((e) => e + 1);
         }, [P, w, T]),
-        L = i.useCallback(() => {
+        x = i.useCallback(() => {
             null == T || T();
         }, [T]),
-        x = i.useCallback(() => {
+        L = i.useCallback(() => {
             null == T || T();
         }, [T]);
     if (!A || null == P) return null;
@@ -140,13 +140,13 @@ function O(e) {
         c.m,
         E(m({}, C), {
             shouldShow: A,
-            onRequestClose: L,
+            onRequestClose: x,
             gradientColor: P.gradientColor,
             children: (0, r.jsxs)("div", {
                 ref: S,
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: x,
+                        onClick: L,
                         variant: null != P.gradientColor ? "color-mix" : void 0,
                     }),
                     null != P.graphic &&

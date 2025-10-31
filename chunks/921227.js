@@ -138,13 +138,13 @@ function b(e) {
         ]);
     let [P, w] = i.useState(N),
         D = E(T, S),
-        L = (e) => {
+        x = (e) => {
             var t, n;
             null == (t = R.onChange) || t.call(R, e.currentTarget.value, y),
                 w(!0),
                 null == (n = D.setHasValue) || n.call(D, "" !== e.currentTarget.value);
         },
-        x = (e) => {
+        L = (e) => {
             var t, n;
             null == (t = R.onFocus) || t.call(R, e, y), null == (n = D.setIsFocused) || n.call(D, !0);
         },
@@ -152,7 +152,7 @@ function b(e) {
             var t, n;
             null == (t = R.onBlur) || t.call(R, e, y), null == (n = D.setIsFocused) || n.call(D, !1);
         },
-        k = i.useMemo(() => {
+        j = i.useMemo(() => {
             var e, t;
             return null === C || "" === C
                 ? null
@@ -166,7 +166,7 @@ function b(e) {
                           : null
                     : null;
         }, [C, P, A, I, null == T ? void 0 : T.length]),
-        j = (null != C && "" !== C) || null != k;
+        k = (null != C && "" !== C) || null != j;
     return (0, r.jsxs)("div", {
         className: o()(d.inputWrapper, n),
         children: [
@@ -181,7 +181,7 @@ function b(e) {
                                 {
                                     name: y,
                                     className: o()(d.input, a, {
-                                        [d.error]: j,
+                                        [d.error]: k,
                                         [d.disabled]: l,
                                         [d.editable]: f,
                                     }),
@@ -198,16 +198,16 @@ function b(e) {
                             ),
                             {
                                 "aria-labelledby": null != (t = R["aria-labelledby"]) ? t : D.titleId,
-                                onChange: L,
+                                onChange: x,
                                 onBlur: M,
-                                onFocus: x,
+                                onFocus: L,
                                 ref: p,
                             },
                         ),
                     ),
                 }),
             ),
-            (0, r.jsx)(c.V, { error: k }),
+            (0, r.jsx)(c.V, { error: j }),
         ],
     });
 }

@@ -32,11 +32,11 @@ let a = {
     P = 65506,
     w = 65517,
     D = 65519,
-    L = 65534,
-    x = 65535,
+    x = 65534,
+    L = 65535,
     M = "JFIF",
-    k = "Exif",
-    j = "http://ns.adobe.com/xap/1.0/\0",
+    j = "Exif",
+    k = "http://ns.adobe.com/xap/1.0/\0",
     U = "http://ns.adobe.com/xmp/extension/\0",
     G = "Photoshop 3.0";
 function B(e) {
@@ -112,15 +112,15 @@ function W(e, t) {
     return e.getUint16(t) === N && (0, r.oH)(e, t + c, n) === M && 0 === e.getUint8(t + c + n);
 }
 function K(e, t) {
-    let n = k.length;
-    return e.getUint16(t) === R && (0, r.oH)(e, t + c, n) === k && 0 === e.getUint8(t + c + n);
+    let n = j.length;
+    return e.getUint16(t) === R && (0, r.oH)(e, t + c, n) === j && 0 === e.getUint8(t + c + n);
 }
 function z(e, t) {
     return e.getUint16(t) === R && q(e, t);
 }
 function q(e, t) {
-    let n = j.length;
-    return (0, r.oH)(e, t + c, n) === j;
+    let n = k.length;
+    return (0, r.oH)(e, t + c, n) === k;
 }
 function X(e, t) {
     return e.getUint16(t) === R && Q(e, t);
@@ -147,8 +147,8 @@ function ee(e, t) {
 }
 function et(e, t) {
     let n = e.getUint16(t);
-    return (n >= N && n <= D) || n === L || n === v || n === I || n === T || n === S || n === A || n === C;
+    return (n >= N && n <= D) || n === x || n === v || n === I || n === T || n === S || n === A || n === C;
 }
 function en(e, t) {
-    return e.getUint16(t) === x;
+    return e.getUint16(t) === L;
 }

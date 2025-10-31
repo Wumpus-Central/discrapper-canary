@@ -40,21 +40,21 @@ async function O(e) {
         D = o.default.getCurrentUser();
     if (null == D) return !1;
     if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
-    let L = u.ZP.getCurrentEmbeddedActivity();
+    let x = u.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == L ? void 0 : L.applicationId) != null &&
-            (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)),
+        ((null == x ? void 0 : x.applicationId) != null &&
+            (t = r.Z.getApplication(null == x ? void 0 : x.applicationId)),
         a.Z.getVoiceChannelId() === l &&
-            null != L &&
-            L.applicationId === n &&
-            (0, _.p)(L.location) === a.Z.getVoiceChannelId())
+            null != x &&
+            x.applicationId === n &&
+            (0, _.p)(x.location) === a.Z.getVoiceChannelId())
     )
-        return (0, E.Z)(P, L.location), Promise.resolve(!0);
-    let x = await (0, p.Z)(n, l);
+        return (0, E.Z)(P, x.location), Promise.resolve(!0);
+    let L = await (0, p.Z)(n, l);
     if (
         !(await (0, f.p)({
             applicationId: n,
-            application: x,
+            application: L,
             channel: R,
             currentEmbeddedApplication: t,
             embeddedActivitiesManager: N,
@@ -77,7 +77,7 @@ async function O(e) {
     } else if (null == R) return !1;
     return (
         null != l && (0, d.Z)(l),
-        null != L && (0, c.cG)(L.location),
+        null != x && (0, c.cG)(x.location),
         await (0, c.G6)({
             channelId: l,
             applicationId: n,

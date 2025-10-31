@@ -1,5 +1,5 @@
-t.d(a, { p: () => n });
-let u = new (0, t(919118).J)(
+n.d(t, { p: () => i });
+let r = new (0, n(919118).J)(
     {
         ach: {
             year: "mwaka",
@@ -384,10 +384,10 @@ let u = new (0, t(919118).J)(
     },
     "en",
 );
-function n(e, a, t) {
+function i(e, t, n) {
     return "era" === e || "dayPeriod" === e
-        ? a
+        ? t
         : "year" === e || "month" === e || "day" === e
-          ? u.getStringForLocale(e, t)
+          ? r.getStringForLocale(e, n)
           : "\u2013\u2013";
 }

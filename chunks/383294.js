@@ -1,49 +1,49 @@
-n.d(t, { default: () => T }), n(388685);
+n.d(t, { default: () => Z }), n(388685);
 var r = n(951288),
     c = n(647438),
-    o = n(120356),
-    a = n.n(o),
-    i = n(13941),
-    s = n(442837),
+    s = n(120356),
+    a = n.n(s),
+    o = n(13941),
+    i = n(442837),
     l = n(481060),
     d = n(110924),
     u = n(410030),
     f = n(607070),
-    p = n(100527),
-    b = n(335131),
-    m = n(70097),
-    y = n(507808),
-    h = n(43747),
-    O = n(82856),
-    j = n(960919),
-    g = n(22095),
-    _ = n(497505),
-    v = n(46140),
+    b = n(100527),
+    m = n(335131),
+    p = n(70097),
+    h = n(507808),
+    j = n(43747),
+    y = n(82856),
+    O = n(960919),
+    x = n(22095),
+    v = n(497505),
+    g = n(46140),
     C = n(981631),
-    E = n(215023),
-    R = n(388032),
-    x = n(898694),
-    S = n(557256),
-    A = n(582425),
-    N = n(345554),
-    P = n(88490),
-    w = n(466674);
-function Z() {
-    let e = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
+    _ = n(215023),
+    S = n(388032),
+    N = n(378658),
+    P = n(557256),
+    w = n(582425),
+    A = n(345554),
+    B = n(88490),
+    E = n(466674);
+function R() {
+    let e = (0, i.e7)([f.Z], () => f.Z.useReducedMotion),
         [t, n] = c.useState(!e),
-        [o, d] = c.useState(!1),
-        p = c.useRef(null),
-        b = (0, u.ZP)(),
-        y = (0, l.apv)(b),
-        h = y ? N.Z : A.Z,
-        O = y ? w.Z : P.Z;
+        [s, d] = c.useState(!1),
+        b = c.useRef(null),
+        m = (0, u.ZP)(),
+        h = (0, l.apv)(m),
+        j = h ? A.Z : w.Z,
+        y = h ? E.Z : B.Z;
     c.useEffect(() => {
         if (!t && !e) {
             var n;
-            null == (n = p.current) || n.play();
+            null == (n = b.current) || n.play();
         }
     }, [t, e]);
-    let j = (0, l.q_F)({
+    let O = (0, l.q_F)({
         from: { y: 50 },
         to: { y: 0 },
         config: {
@@ -51,79 +51,79 @@ function Z() {
             friction: 26,
         },
     });
-    return (0, r.jsxs)(i.animated.div, {
-        className: x.videoLayers,
-        style: j,
+    return (0, r.jsxs)(o.animated.div, {
+        className: N.videoLayers,
+        style: O,
         children: [
-            !o && (0, r.jsx)("div", { className: x.videoPlaceholder }),
-            (0, r.jsx)(m.Z, {
-                ref: p,
+            !s && (0, r.jsx)("div", { className: N.videoPlaceholder }),
+            (0, r.jsx)(p.Z, {
+                ref: b,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
-                className: a()(x.videoAsset, { [x.hidden]: t }),
+                className: a()(N.videoAsset, { [N.hidden]: t }),
                 controls: !1,
                 children: (0, r.jsx)("source", {
-                    src: O,
+                    src: y,
                     type: "video/webm",
                 }),
             }),
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(p.Z, {
                 autoPlay: !0,
                 muted: !0,
                 playsInline: !0,
-                className: a()(x.videoAsset, { [x.hidden]: !t }),
+                className: a()(N.videoAsset, { [N.hidden]: !t }),
                 controls: !1,
                 onLoadedData: () => d(!0),
                 onEnded: () => {
                     n(!1);
                 },
                 children: (0, r.jsx)("source", {
-                    src: h,
+                    src: j,
                     type: "video/webm",
                 }),
             }),
         ],
     });
 }
-function I(e) {
-    let { transitionState: t, balance: n, onSubmit: c, onClose: o, state: a } = e;
+function T(e) {
+    let { transitionState: t, balance: n, onSubmit: c, onClose: s, state: a } = e;
     return (0, r.jsxs)(l.Y0X, {
         "data-migration-pending": !0,
         transitionState: t,
         size: l.CgR.DYNAMIC,
-        className: x.modal,
+        className: N.modal,
         parentComponent: "QuestsOrbsRewardModal",
         children: [
             (0, r.jsx)("div", {
-                className: x.header,
+                className: N.header,
                 children: (0, r.jsx)(l.olH, {
                     "data-migration-pending": !0,
-                    className: x.closeBtn,
-                    onClick: o,
+                    className: N.closeBtn,
+                    onClick: s,
                 }),
             }),
             "loading" === a
                 ? (0, r.jsx)("div", {
-                      className: x.spinnerContainer,
+                      className: N.spinnerContainer,
                       children: (0, r.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }),
                   })
                 : "success" === a
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(Z, {}),
+                            (0, r.jsx)(R, {}),
                             (0, r.jsx)(l.Heading, {
                                 variant: "heading-lg/medium",
-                                className: x.title,
-                                children: R.intl.format(R.t["8l9H0s"], {
+                                className: N.title,
+                                children: S.intl.format(S.t["8l9H0s"], {
                                     balanceHook: () =>
                                         (0, r.jsxs)("span", {
-                                            className: x.orbsBalance,
+                                            className: N.orbsBalance,
                                             children: [
-                                                (0, r.jsx)(j.Z, {
+                                                (0, r.jsx)(O.Z, {
                                                     shouldUseThemeColor: !0,
-                                                    className: x.orbsBalanceIcon,
+                                                    className: N.orbsBalanceIcon,
                                                 }),
                                                 n,
                                             ],
@@ -132,11 +132,11 @@ function I(e) {
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                className: x.subtext,
-                                children: R.intl.string(R.t.EDUOIH),
+                                className: N.subtext,
+                                children: S.intl.string(S.t.EDUOIH),
                             }),
                             (0, r.jsxs)(l.ButtonGroup, {
-                                className: x.buttonContainer,
+                                className: N.buttonContainer,
                                 fullWidthContainer: !0,
                                 fullWidth: !0,
                                 direction: "vertical",
@@ -144,13 +144,13 @@ function I(e) {
                                     (0, r.jsx)(l.Button, {
                                         variant: "primary",
                                         fullWidth: !0,
-                                        text: R.intl.string(R.t.WYchde),
+                                        text: S.intl.string(S.t.WYchde),
                                         onClick: c,
                                     }),
                                     (0, r.jsx)(l.Button, {
                                         variant: "secondary",
                                         fullWidth: !0,
-                                        text: R.intl.string(R.t["7kTAgJ"]),
+                                        text: S.intl.string(S.t["7kTAgJ"]),
                                         onClick: () => window.open(C.EYA.PAID_TERMS_ORBS),
                                     }),
                                 ],
@@ -158,35 +158,35 @@ function I(e) {
                         ],
                     })
                   : (0, r.jsxs)("div", {
-                        className: x.errorContainer,
+                        className: N.errorContainer,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                className: x.errorImage,
-                                src: S,
+                                className: N.errorImage,
+                                src: P,
                             }),
                             (0, r.jsxs)("div", {
-                                className: x.errorContentContainer,
+                                className: N.errorContentContainer,
                                 children: [
                                     (0, r.jsx)(l.Heading, {
                                         variant: "heading-xl/medium",
-                                        className: x.errorHeader,
-                                        children: R.intl.string(R.t["tWYWJ+"]),
+                                        className: N.errorHeader,
+                                        children: S.intl.string(S.t["tWYWJ+"]),
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: R.intl.string(R.t.JNQRU4),
+                                        children: S.intl.string(S.t.JNQRU4),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: x.buttonContainer,
+                                className: N.buttonContainer,
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     fullWidth: !0,
-                                    text: R.intl.string(R.t.cpT0Cq),
-                                    onClick: o,
+                                    text: S.intl.string(S.t.cpT0Cq),
+                                    onClick: s,
                                 }),
                             }),
                         ],
@@ -194,11 +194,11 @@ function I(e) {
         ],
     });
 }
-function T(e) {
+function Z(e) {
     var t,
         n,
-        { quest: o, onClose: a } = e,
-        i = (function (e, t) {
+        { quest: s, onClose: a } = e,
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -207,24 +207,24 @@ function T(e) {
                     var n,
                         r,
                         c = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (c[n] = e[n]);
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (c[n] = e[n]);
                     return c;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++)
+                    (n = s[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
             }
             return c;
         })(e, ["quest", "onClose"]);
-    let { balance: s } = (0, h.A)(),
+    let { balance: i } = (0, j.A)(),
         l = (function (e, t, n) {
-            let [r, o] = c.useState("loading"),
-                [a, i] = c.useState(!1),
-                { balance: s } = (0, h.A)(),
-                l = (0, d.Z)(s),
+            let [r, s] = c.useState("loading"),
+                [a, o] = c.useState(!1),
+                { balance: i } = (0, j.A)(),
+                l = (0, d.Z)(i),
                 [u, f] = c.useState(!1);
             return (c.useEffect(() => {
                 let e = null;
@@ -240,16 +240,16 @@ function T(e) {
                 );
             }, [r, t]),
             c.useEffect(() => {
-                !a && null != s && null != l && s > l && i(!0);
-            }, [s, l, a]),
+                !a && null != i && null != l && i > l && o(!0);
+            }, [i, l, a]),
             c.useEffect(() => {
-                (0, g.QB)(e, _.y$.CROSS_PLATFORM, n)
+                (0, x.QB)(e, v.y$.CROSS_PLATFORM, n)
                     .then((e) => {
-                        if ((null == e ? void 0 : e.claimedAt) != null) return void o("success");
-                        o("error");
+                        if ((null == e ? void 0 : e.claimedAt) != null) return void s("success");
+                        s("error");
                     })
                     .catch(() => {
-                        o("error");
+                        s("error");
                     });
             }, [e, n]),
             "error" === r)
@@ -257,25 +257,25 @@ function T(e) {
                 : "success" === r && (a || u)
                   ? "success"
                   : "loading";
-        })(o.id, o.preview, i.location),
+        })(s.id, s.preview, o.location),
         u = c.useCallback(() => {
             a(),
-                (0, y.Y)({
+                (0, h.Y)({
                     pageType: C.ZY5.GLOBAL_DISCOVERY_QUESTS,
                     sectionType: C.jXE.ORBS_REWARD_MODAL,
                     ctaObject: C.qAy.CTA_TO_ORBS_SHOP,
                 }),
-                (0, b.mK)({
-                    tab: E.AW.ORBS,
+                (0, m.mK)({
+                    tab: _.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: o.id === v.V6 ? p.Z.INTRO_TO_ORBS_QUEST : p.Z.QUEST_HOME_PAGE,
+                    analyticsSource: s.id === g.V6 ? b.Z.INTRO_TO_ORBS_QUEST : b.Z.QUEST_HOME_PAGE,
                 });
-        }, [a, o.id]);
+        }, [a, s.id]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(O.o, {}),
+            (0, r.jsx)(y.o, {}),
             (0, r.jsx)(
-                I,
+                T,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -300,10 +300,10 @@ function T(e) {
                             });
                     }
                     return e;
-                })({}, i)),
+                })({}, o)),
                 (n = n =
                     {
-                        balance: s,
+                        balance: i,
                         onClose: a,
                         onSubmit: u,
                         state: l,

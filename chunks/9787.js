@@ -74,27 +74,27 @@ let w = {
 function D(e) {
     return "inert" === e ? w.inert : "aria-hidden" === e ? w["aria-hidden"] : w.none;
 }
-let L = new WeakSet(),
-    x = null,
+let x = new WeakSet(),
+    L = null,
     M = 0,
-    k = (e) => e && (e.host || k(e.parentNode)),
-    j = (e, t) =>
+    j = (e) => e && (e.host || j(e.parentNode)),
+    k = (e, t) =>
         t
             .map((t) => {
                 if (e.contains(t)) return t;
-                let n = k(t);
+                let n = j(t);
                 return e.contains(n) ? n : null;
             })
             .filter((e) => null != e);
 function U(e, t, n, r) {
     let i = "data-floating-ui-inert",
         a = r ? "inert" : n ? "aria-hidden" : null,
-        o = j(t, e),
+        o = k(t, e),
         s = new Set(),
         l = new Set(o),
         c = [];
-    x[i] || (x[i] = new WeakMap());
-    let u = x[i];
+    L[i] || (L[i] = new WeakMap());
+    let u = L[i];
     function d(e) {
         !(!e || s.has(e)) && (s.add(e), e.parentNode && d(e.parentNode));
     }
@@ -113,7 +113,7 @@ function U(e, t, n, r) {
                         r.set(e, o),
                             u.set(e, s),
                             c.push(e),
-                            1 === o && n && L.add(e),
+                            1 === o && n && x.add(e),
                             1 === s && e.setAttribute(i, ""),
                             !n && a && e.setAttribute(a, "inert" === a ? "" : "true");
                     }
@@ -131,15 +131,15 @@ function U(e, t, n, r) {
                     r = (u.get(e) || 0) - 1;
                 t.set(e, n),
                     u.set(e, r),
-                    n || (!L.has(e) && a && e.removeAttribute(a), L.delete(e)),
+                    n || (!x.has(e) && a && e.removeAttribute(a), x.delete(e)),
                     r || e.removeAttribute(i);
             }),
                 --M ||
                     ((w.inert = new WeakMap()),
                     (w["aria-hidden"] = new WeakMap()),
                     (w.none = new WeakMap()),
-                    (L = new WeakSet()),
-                    (x = {}));
+                    (x = new WeakSet()),
+                    (L = {}));
         }
     );
 }
@@ -241,7 +241,7 @@ function z(e, t) {
                 Array.from(d).every((e) => !(0, a.r3)(_, e))
             )
                 return;
-            if ((0, o.Re)(c) && x) {
+            if ((0, o.Re)(c) && L) {
                 let t = (0, o.Py)(c),
                     n = (0, o.Dx)(c),
                     r = /auto|scroll/,
@@ -342,7 +342,7 @@ function z(e, t) {
         i.useEffect(() => {
             l.current.insideReactTree = !1;
         }, [l, y, f]);
-    let L = i.useMemo(
+    let x = i.useMemo(
             () => ({
                 onKeyDown: R,
                 ...(_ && {
@@ -358,7 +358,7 @@ function z(e, t) {
             }),
             [R, r, _, p],
         ),
-        x = i.useMemo(
+        L = i.useMemo(
             () => ({
                 onKeyDown: R,
                 onMouseDown() {
@@ -377,11 +377,11 @@ function z(e, t) {
         () =>
             c
                 ? {
-                      reference: L,
-                      floating: x,
+                      reference: x,
+                      floating: L,
                   }
                 : {},
-        [c, L, x],
+        [c, x, L],
     );
 }
 function q(e) {

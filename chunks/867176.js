@@ -116,15 +116,15 @@ function N(e) {
             pendingAccentColor: w,
             animateOnHoverOrFocusOnly: D = !1,
         } = e,
-        L = (0, _.Dt)(),
-        [x, M] = i.useState(!1),
-        k = (0, l.e7)([m.Z], () => m.Z.isFocused()),
-        j = h.QK.getSetting(),
+        x = (0, _.Dt)(),
+        [L, M] = i.useState(!1),
+        j = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        k = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
             pendingBanner: O,
             size: N,
-            canAnimate: D || !j ? x : k,
+            canAnimate: D || !k ? L : j,
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(b, (0, u.pxk)(T)),
@@ -142,7 +142,7 @@ function N(e) {
         },
         children: [
             (0, r.jsxs)("mask", {
-                id: L,
+                id: x,
                 children: [
                     (0, r.jsx)("rect", {
                         fill: "white",
@@ -165,7 +165,7 @@ function N(e) {
                 width: "100%",
                 height: "100%",
                 overflow: "visible",
-                mask: "url(#".concat(L, ")"),
+                mask: "url(#".concat(x, ")"),
                 children: [
                     v,
                     (0, r.jsx)("div", {
@@ -178,7 +178,7 @@ function N(e) {
                             backgroundImage: null != U ? "url(".concat(U, ")") : void 0,
                             backgroundColor: "COMPLETE" !== G ? c.Z.unsafe_rawColors.PRIMARY_800.css : V,
                         },
-                        children: !j && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }),
+                        children: !k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: y.gifTag }),
                     }),
                 ],
             }),

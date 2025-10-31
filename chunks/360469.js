@@ -1,23 +1,23 @@
 r.d(t, { Z: () => o });
-var e = r(951288),
-    n = r(793030),
+var n = r(951288),
+    e = r(793030),
     a = r(442837),
-    l = r(5888),
-    s = r(198358),
+    s = r(5888),
+    l = r(198358),
     d = r(506945),
     c = r(388032);
 function o() {
     let {
         messages: { numMessagesSent: i, numMessagesSentPercentile: t },
-    } = (0, a.e7)([l.Z], () => l.Z.getCheckpointData());
-    return (0, e.jsxs)(s.Z, {
+    } = (0, a.e7)([s.Z], () => s.Z.getCheckpointData());
+    return (0, n.jsxs)(l.Z, {
         children: [
-            (0, e.jsx)(n.xvT, {
+            (0, n.jsx)(e.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
                 children: c.intl.format(d.default.nPTMHj, { numMessages: i }),
             }),
-            (0, e.jsx)(n.xvT, {
+            (0, n.jsx)(e.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
                 children: c.intl.format(d.default.ixvOza, { percent: 100 - t }),

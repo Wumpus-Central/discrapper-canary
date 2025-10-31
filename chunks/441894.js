@@ -1,22 +1,22 @@
-n.d(t, { J: () => c }), n(388685);
-var a = n(442837),
-    o = n(592125),
-    r = n(19780),
-    i = n(760373);
+r.d(t, { J: () => c }), r(388685);
+var n = r(442837),
+    l = r(592125),
+    u = r(19780),
+    i = r(760373);
 function c(e) {
     let { channelId: t } = e;
-    return (0, a.e7)(
-        [r.Z, o.Z],
+    return (0, n.e7)(
+        [u.Z, l.Z],
         () =>
             (function (e) {
                 var t;
-                let [n, a] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.Z, o.Z];
-                if (null == e || n.getChannelId() !== e) return !1;
-                let c = a.getChannel(e);
+                let [r, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.Z, l.Z];
+                if (null == e || r.getChannelId() !== e) return !1;
+                let c = n.getChannel(e);
                 if (null == c || c.isGuildStageVoice()) return !1;
-                let _ = null == (t = n.getSecureFramesState()) ? void 0 : t.version;
-                return null != _ && _ !== i.Eg;
-            })(t, [r.Z, o.Z]),
+                let a = null == (t = r.getSecureFramesState()) ? void 0 : t.version;
+                return null != a && a !== i.Eg;
+            })(t, [u.Z, l.Z]),
         [t],
     );
 }

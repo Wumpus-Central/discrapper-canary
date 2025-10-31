@@ -2,7 +2,7 @@ n.d(t, {
     $I: () => eJ,
     B4: () => eB,
     B6: () => em,
-    Bd: () => ek,
+    Bd: () => ej,
     GI: () => eP,
     Gd: () => eH,
     I: () => eM,
@@ -80,8 +80,8 @@ var p = n(703656),
     x = n(36243),
     L = n(977156),
     M = n(373370),
-    k = n(475595),
-    j = n(566078),
+    j = n(475595),
+    k = n(566078),
     U = n(46140),
     G = n(981631),
     B = n(474936),
@@ -290,7 +290,7 @@ function es(e) {
                     ? i
                         ? F
                         : V
-                    : ea(j.r.build(e.config).rewardsExpireAt, j.r.build(t.config).rewardsExpireAt, 0);
+                    : ea(k.r.build(e.config).rewardsExpireAt, k.r.build(t.config).rewardsExpireAt, 0);
             })
             .map((e) => e.id);
         return (n.current = e), e;
@@ -469,7 +469,7 @@ function eS(e, t, n, r) {
         return Z.intl.format(Z.t["l4S+cQ"], {
             minutes: i,
             onClick: o,
-            gameTitle: j.r.build(e.config).application.name,
+            gameTitle: k.r.build(e.config).application.name,
         });
     if ((0, N.$J)(e))
         return s
@@ -480,11 +480,11 @@ function eS(e, t, n, r) {
             : Z.intl.format(Z.t.Ajlcd7, {
                   minutes: i,
                   onClick: o,
-                  gameTitle: j.r.build(e.config).application.name,
+                  gameTitle: k.r.build(e.config).application.name,
               });
     if (s) return Z.intl.format(Z.t.Hu8SKW, { targetMinutes: i });
     if ((0, N.q8)(e)) {
-        let t = j.r.build(e.config).defaultWatchVideoTask,
+        let t = k.r.build(e.config).defaultWatchVideoTask,
             n = null == t ? void 0 : t.messages.videoTitle;
         return null == n ? Z.intl.string(Z.t["o+e9yh"]) : Z.intl.formatToPlainString(Z.t["9m9Mna"], { videoTitle: n });
     }
@@ -664,7 +664,7 @@ function eM(e) {
         completedRatioDisplay: o,
     };
 }
-function ek(e, t, n) {
+function ej(e, t, n) {
     var r, i;
     let a = ev(e),
         o = (0, N.b7)(e),
@@ -686,11 +686,11 @@ function ek(e, t, n) {
             ? s
             : null;
 }
-function ej(e) {
+function ek(e) {
     return [(0, c.e7)([R.Z], () => R.Z.selectedTaskPlatform(e)), r.useCallback((t) => (0, S.OR)(e, t), [e])];
 }
 function eU(e, t) {
-    let [n, i] = ej(e.id),
+    let [n, i] = ek(e.id),
         s = r.useMemo(() => (0, N.yH)(e), [e]),
         l = s.includes(U.cd.DESKTOP),
         c = s.includes(U.cd.CONSOLE),
@@ -848,7 +848,7 @@ function eV(e) {
             onGameSheetOpened: c,
             onGameSheetClosed: u,
         } = e,
-        d = em(r.useMemo(() => j.r.build(i.config).rewardsExpireAt, [i.config])),
+        d = em(r.useMemo(() => k.r.build(i.config).rewardsExpireAt, [i.config])),
         f = ev(i),
         _ = eI(i),
         p = (null == (t = i.userStatus) ? void 0 : t.completedAt) != null,
@@ -871,7 +871,7 @@ function eV(e) {
         if (s === P.LI.SELECT) return Z.intl.string(Z.t.sWUpN8);
         else {
             if (!(0, N.Pb)(i) || !h || m) return E;
-            let e = j.r.build(i.config).defaultRewardNameWithArticle;
+            let e = k.r.build(i.config).defaultRewardNameWithArticle;
             return Z.intl.format(Z.t["1votF6"], {
                 rewardNameWithArticle: e,
                 targetMinutes: f.targetMinutes,
@@ -894,11 +894,11 @@ function eH(e, t) {
     return r.useMemo(() => {
         if (null == n) return null;
         let e = null != t ? t : (0, l.wj)(i) ? G.BRd.DARK : G.BRd.LIGHT;
-        return (0, k.fh)(n, k.eC.COSPONSOR_LOGO_TYPE, e);
+        return (0, j.fh)(n, j.eC.COSPONSOR_LOGO_TYPE, e);
     }, [i, t, n]);
 }
 function eY(e) {
-    let t = j.r.build(e).defaultRewardName,
+    let t = k.r.build(e).defaultRewardName,
         n = (0, N.Kr)(e),
         r = (0, N.FX)(e),
         i = (0, N._p)(e),

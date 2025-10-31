@@ -1,19 +1,19 @@
 n.d(t, { Z: () => m });
 var i = n(951288),
     r = n(647438),
-    s = n(442837),
+    l = n(442837),
     o = n(831218),
-    l = n(840780),
+    s = n(840780),
     a = n(51596),
     c = n(905423),
     d = n(237997),
     u = n(145597),
-    p = n(981631),
-    h = n(388032),
+    h = n(981631),
+    p = n(388032),
     f = n(537074);
 let g = () => (0, a.$Z)("DM_SEARCH"),
     m = r.memo(function () {
-        let e = (0, s.e7)([d.default], () => (d.default.isLocked((0, u.getPID)()) ? "true" : "false")),
+        let e = (0, l.e7)([d.default], () => (d.default.isLocked((0, u.getPID)()) ? "true" : "false")),
             t = (0, c.Z)((e) => {
                 let { channelId: t } = e;
                 return t;
@@ -27,19 +27,19 @@ let g = () => (0, a.$Z)("DM_SEARCH"),
                         type: "button",
                         className: f.searchBarComponent,
                         onClick: g,
-                        children: h.intl.string(h.t.LzcpeZ),
+                        children: p.intl.string(p.t.LzcpeZ),
                     }),
                 }),
                 (0, i.jsx)(o.Z, {
                     padding: 8,
-                    theme: p.BRd.DARK,
+                    theme: h.BRd.DARK,
                     version: e,
                     selectedChannelId: t,
                 }),
                 (0, i.jsx)("section", {
                     className: f.panels,
-                    "aria-label": h.intl.string(h.t.StREWK),
-                    children: (0, i.jsx)(l.Z, { guildId: null }),
+                    "aria-label": p.intl.string(p.t.StREWK),
+                    children: (0, i.jsx)(s.Z, { guildId: null }),
                 }),
             ],
         });

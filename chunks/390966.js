@@ -149,7 +149,7 @@ function T(e) {
         w = (0, d.dQu)(c.Z.colors.TEXT_DANGER).hex();
     null == p && (p = a === h.WX.EXTERNAL ? m.intl.string(m.t.IyZxjH) : m.intl.string(m.t["X2K3/4"]));
     let D = (0, f.Z)(N, C),
-        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: M, upcomingEvent: k, diffMinutes: j }, U] =
+        [{ startDateTimeString: x, endDateTimeString: L, currentOrPastEvent: M, upcomingEvent: j, diffMinutes: k }, U] =
             i.useState((0, _.ub)(t, u));
     i.useEffect(() => {
         U((0, _.ub)(t, u));
@@ -158,12 +158,12 @@ function T(e) {
             clearInterval(e);
         };
     }, [t, u]);
-    let G = L;
-    null != x &&
-        "" !== x &&
+    let G = x;
+    null != L &&
+        "" !== L &&
         (G = m.intl.formatToPlainString(m.t.tXbu7I, {
-            start: L,
-            end: x,
+            start: x,
+            end: L,
         }));
     let B = i.useMemo(
             () =>
@@ -175,10 +175,10 @@ function T(e) {
                         ? 4
                         : M
                           ? 2
-                          : +!!k,
-            [n, null == D ? void 0 : D.is_canceled, M, k],
+                          : +!!j,
+            [n, null == D ? void 0 : D.is_canceled, M, j],
         ),
-        Z = y(B, G, p, x, j),
+        Z = y(B, G, p, L, k),
         {
             Icon: F,
             iconColor: V,
@@ -191,10 +191,10 @@ function T(e) {
                     textBrand: R,
                     textPositive: P,
                     textDanger: w,
-                    endDateTimeString: x,
-                    startDateTimeString: L,
+                    endDateTimeString: L,
+                    startDateTimeString: x,
                 }),
-            [B, R, P, w, x, L],
+            [B, R, P, w, L, x],
         ),
         W = null;
     if (null != A) {

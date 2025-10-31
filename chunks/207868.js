@@ -21,24 +21,24 @@ let y = i.memo(function (e) {
         l = (0, s.e7)([f.Z], () => f.Z.isInChannel(t.id)),
         y = (0, s.e7)([f.Z], () => !a().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
         x = (0, s.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
-        { needSubscriptionToAccess: v } = (0, u.Z)(t.id),
+        { needSubscriptionToAccess: O } = (0, u.Z)(t.id),
         j = (0, p.$R)(t),
-        O = i.useCallback(() => {
+        v = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
                 connected: l,
-                needSubscriptionToAccess: v,
+                needSubscriptionToAccess: O,
                 locked: !1,
             });
-        }, [t, l, v]);
+        }, [t, l, O]);
     return (i.useEffect(
         () => (
-            g.S.subscribe(b.CkL.CALL_START, O),
+            g.S.subscribe(b.CkL.CALL_START, v),
             () => {
-                g.S.unsubscribe(b.CkL.CALL_START, O);
+                g.S.unsubscribe(b.CkL.CALL_START, v);
             }
         ),
-        [O],
+        [v],
     ),
     p.tM.useExperiment(
         {
@@ -54,7 +54,7 @@ let y = i.memo(function (e) {
         t.isVocalThread())
         ? (0, r.jsx)(m.ZP.Icon, {
               icon: o.Csw,
-              onClick: O,
+              onClick: v,
               tooltip: y ? _.intl.string(_.t.fdEeb5) : _.intl.string(_.t.focH1t),
           })
         : null;

@@ -1,9 +1,9 @@
 n.d(t, {
-    Hu: () => J,
+    Hu: () => X,
     jx: () => H,
     oA: () => W,
     ov: () => F,
-    se: () => X,
+    se: () => J,
 }),
     n(35282),
     n(388685),
@@ -12,9 +12,9 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    s = n.n(l),
-    o = n(209739),
-    a = n.n(o),
+    o = n.n(l),
+    s = n(209739),
+    a = n.n(s),
     c = n(268146),
     d = n(442837),
     u = n(846519),
@@ -27,25 +27,25 @@ var r = n(951288),
     x = n(509212),
     v = n(569984),
     j = n(977156),
-    S = n(28798),
-    b = n(131951),
+    b = n(28798),
+    S = n(131951),
     y = n(449224),
     C = n(358085),
     O = n(463727),
     w = n(855403),
     P = n(299570),
-    Z = n(960861),
-    I = n(59468),
-    E = n(989941),
-    T = n(39540),
+    T = n(960861),
+    Z = n(59468),
+    I = n(989941),
+    E = n(39540),
     N = n(958707),
-    A = n(152165),
-    R = n(133179),
+    R = n(152165),
+    A = n(133179),
     M = n(70722),
     k = n(761274),
     D = n(46140),
-    L = n(65154),
-    B = n(388032),
+    B = n(65154),
+    L = n(388032),
     G = n(336606);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -73,15 +73,15 @@ function U(e) {
     return e;
 }
 function F(e, t, n, r) {
-    let i = (0, C.isWindows)() ? (0, E.Z)(_.ZP, y.Z) : null,
+    let i = (0, C.isWindows)() ? (0, I.Z)(_.ZP, y.Z) : null,
         l = _.ZP.getRunningGames(),
-        s = null == n ? void 0 : n.split(":")[1],
-        o = e.id.split(":")[1];
-    if (null != s && s === o) return 0;
+        o = null == n ? void 0 : n.split(":")[1],
+        s = e.id.split(":")[1];
+    if (null != o && o === s) return 0;
     if (null != t && t === e.id) return 5;
     if (null != i && (0, w.Z)(e.id, i.windowHandle)) return 4;
     if (null != l.find((t) => (0, w.Z)(e.id, t.windowHandle))) return 3;
-    let a = null == r ? void 0 : r[o];
+    let a = null == r ? void 0 : r[s];
     return null != a && M.Mm.has(a) ? 2 : 1;
 }
 function H(e, t, n) {
@@ -92,15 +92,15 @@ function H(e, t, n) {
             var i, l;
             let n = t.find((e) => (0, w.Z)(r.id, e.windowHandle));
             if ((null == n ? void 0 : n.id) == null) continue;
-            let s = (0, x.lQ)(e, n.id);
+            let o = (0, x.lQ)(e, n.id);
             if (
-                null != s &&
-                (null == (i = s.userStatus) ? void 0 : i.enrolledAt) != null &&
-                (null == (l = s.userStatus) ? void 0 : l.completedAt) == null
+                null != o &&
+                (null == (i = o.userStatus) ? void 0 : i.enrolledAt) != null &&
+                (null == (l = o.userStatus) ? void 0 : l.completedAt) == null
             )
                 return {
                     source: r,
-                    quest: s,
+                    quest: o,
                 };
         }
         return null;
@@ -109,14 +109,14 @@ function H(e, t, n) {
 function W(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
-        o = b.Z.supports(L.AN.GO_LIVE_HARDWARE),
+        s = S.Z.supports(B.AN.GO_LIVE_HARDWARE),
         [a, p] = i.useState(null),
         [x, j] = i.useState(null),
         [y, C] = i.useState(null),
         w = null != y && y.length > 0,
-        [P, Z] = i.useState(c.vA.WINDOW),
-        [E, T] = i.useState(!1),
-        A = i.useRef(null),
+        [P, T] = i.useState(c.vA.WINDOW),
+        [I, E] = i.useState(!1),
+        R = i.useRef(null),
         M = i.useRef(new u.Xp()),
         D = (0, d.e7)([_.ZP], () => _.ZP.getRunningGames()),
         U = H(
@@ -136,7 +136,7 @@ function W(e) {
     i.useEffect(() => {
         let e = M.current;
         return (
-            (0, I.t)({
+            (0, Z.t)({
                 width: 176,
                 height: 99,
             }).then((e) => {
@@ -148,7 +148,7 @@ function W(e) {
                     screenSources: e,
                     windowSources: t,
                     cameraSources: n,
-                } = await (0, I.t)({
+                } = await (0, Z.t)({
                     width: 176,
                     height: 99,
                 });
@@ -160,13 +160,13 @@ function W(e) {
         );
     }, []);
     let z = i.useCallback((e) => {
-            null !== e && ((A.current = e), T(!e.isScrolledToTop()));
+            null !== e && ((R.current = e), E(!e.isScrolledToTop()));
         }, []),
-        [V, X] = i.useState(void 0);
+        [V, J] = i.useState(void 0);
     i.useEffect(() => {
-        g.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(X);
+        g.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
     }, []);
-    let J = (function (e) {
+    let X = (function (e) {
         switch (e) {
             case c.vA.WINDOW:
                 return W;
@@ -176,13 +176,13 @@ function W(e) {
                 return y;
         }
     })(P);
-    if (null == J)
+    if (null == X)
         return !1 === V
             ? (0, r.jsxs)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: [B.intl.string(B.t["kW5h/W"]), (0, r.jsx)("br", {}), B.intl.string(B.t["5Jvu1R"])],
+                  children: [L.intl.string(L.t["kW5h/W"]), (0, r.jsx)("br", {}), L.intl.string(L.t["5Jvu1R"])],
               })
             : (0, r.jsx)(h.Z, {
                   className: G.spinner,
@@ -190,16 +190,16 @@ function W(e) {
                   align: h.Z.Align.CENTER,
                   children: (0, r.jsx)(f.$jN, {}),
               });
-    let K = J.map((e) => {
+    let K = X.map((e) => {
         let { id: i } = e,
             l = (null == t ? void 0 : t.id) === i;
         return (0, r.jsx)(
             f.P3F,
             {
-                className: s()(G.tile, { [G.selected]: l }),
+                className: o()(G.tile, { [G.selected]: l }),
                 onClick: () => n(e, null),
                 children: (0, r.jsx)(
-                    R.Z,
+                    A.Z,
                     {
                         source: e,
                         selectedSource: t,
@@ -215,25 +215,25 @@ function W(e) {
             (0, r.jsxs)("div", {
                 className: G.segmentContainer,
                 children: [
-                    (0, r.jsx)(N.Z, { separator: E }),
+                    (0, r.jsx)(N.Z, { separator: I }),
                     (0, r.jsx)(f.sY7, {
                         options: (function () {
                             let e = [
                                 {
-                                    name: B.intl.string(B.t.tHoi7u),
+                                    name: L.intl.string(L.t.tHoi7u),
                                     value: c.vA.WINDOW,
                                 },
                                 {
-                                    name: B.intl.string(B.t["/iX8uz"]),
+                                    name: L.intl.string(L.t["/iX8uz"]),
                                     value: c.vA.SCREEN,
                                 },
                             ];
                             return (
                                 l &&
-                                    o &&
+                                    s &&
                                     w &&
                                     e.push({
-                                        name: B.intl.string(B.t.cWt5Up),
+                                        name: L.intl.string(L.t.cWt5Up),
                                         value: c.vA.CAMERA,
                                     }),
                                 e
@@ -242,7 +242,7 @@ function W(e) {
                         value: P,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return Z(t);
+                            return T(t);
                         },
                         className: G.segmentControl,
                         optionClassName: G.segmentControlOption,
@@ -253,11 +253,11 @@ function W(e) {
                 ref: z,
                 className: G.sourceScroller,
                 onScroll: function () {
-                    let e = A.current;
-                    null != e && T(!e.isScrolledToTop());
+                    let e = R.current;
+                    null != e && E(!e.isScrolledToTop());
                 },
                 children: [
-                    P === c.vA.WINDOW && null != U && (0, r.jsx)(S.Z, { quest: U.quest }),
+                    P === c.vA.WINDOW && null != U && (0, r.jsx)(b.Z, { quest: U.quest }),
                     (0, r.jsx)(m.Z, {
                         layout: m.Z.Layout.WRAP,
                         columns: 2,
@@ -274,7 +274,7 @@ function z(e) {
         n = i.useCallback(() => {
             t({
                 id: "prepicked:",
-                name: B.intl.string(B.t.KKcy95),
+                name: L.intl.string(L.t.KKcy95),
                 url: "",
             });
         }, [t]);
@@ -283,22 +283,22 @@ function z(e) {
         "aria-checked": !1,
         onClick: n,
         tabIndex: 0,
-        className: s()(G.nativeSourceSingleTypeButton, G.nativePickerRadioItem),
+        className: o()(G.nativeSourceSingleTypeButton, G.nativePickerRadioItem),
         children: (0, r.jsxs)("div", {
             className: G.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, r.jsx)(A.Z, { className: G.nativeSourceSingleTypeImage }),
+                (0, r.jsx)(R.Z, { className: G.nativeSourceSingleTypeImage }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-md/medium",
                     color: "none",
-                    children: B.intl.string(B.t.Yp6h5W),
+                    children: L.intl.string(L.t.Yp6h5W),
                 }),
             ],
         }),
     });
 }
 function V(e) {
-    let { id: t, name: n, text: l, icon: o, onSelect: a } = e,
+    let { id: t, name: n, text: l, icon: s, onSelect: a } = e,
         c = i.useCallback(() => {
             a({
                 id: "prepicked:" + t,
@@ -311,11 +311,11 @@ function V(e) {
         "aria-checked": !1,
         onClick: c,
         tabIndex: 0,
-        className: s()(G.nativeSourceTypeButton, G.nativePickerRadioItem),
+        className: o()(G.nativeSourceTypeButton, G.nativePickerRadioItem),
         children: (0, r.jsxs)("div", {
             className: G.nativeSourceTypeButtonInner,
             children: [
-                (0, r.jsx)(o, { size: "lg" }),
+                (0, r.jsx)(s, { size: "lg" }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-sm/medium",
                     color: "none",
@@ -325,19 +325,19 @@ function V(e) {
         }),
     });
 }
-function X(e) {
+function J(e) {
     let { onSourceSelect: t, selectedSource: n } = e,
-        [l, o] = i.useState([]),
+        [l, s] = i.useState([]),
         [c, d] = i.useState({}),
         h = i.useRef(new u.Xp());
     i.useEffect(() => {
         let e = h.current,
             t = () => {
-                let e = Object.entries(b.Z.getVideoDevices()).filter((e) => {
+                let e = Object.entries(S.Z.getVideoDevices()).filter((e) => {
                     let [t, n] = e;
                     return !n.disabled;
                 });
-                o(e),
+                s(e),
                     d(
                         U(
                             {},
@@ -390,7 +390,7 @@ function X(e) {
         j = i.useCallback(() => {
             v(!x);
         }, [x]),
-        S = _
+        b = _
             ? (0, r.jsx)(z, { onSelect: t })
             : (0, r.jsxs)("div", {
                   className: G.nativePickerTypes,
@@ -398,23 +398,23 @@ function X(e) {
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "screen",
-                          name: B.intl.string(B.t.R4wpLN),
-                          text: B.intl.string(B.t.cVUFXY),
+                          name: L.intl.string(L.t.R4wpLN),
+                          text: L.intl.string(L.t.cVUFXY),
                           icon: f.pzj,
                       }),
                       (0, r.jsx)(V, {
                           onSelect: t,
                           id: "window",
-                          name: B.intl.string(B.t["+SLJCh"]),
-                          text: B.intl.string(B.t.dG2A1E),
+                          name: L.intl.string(L.t["+SLJCh"]),
+                          text: L.intl.string(L.t.dG2A1E),
                           icon: f.GON,
                       }),
                       g
                           ? (0, r.jsx)(V, {
                                 onSelect: t,
                                 id: "app",
-                                name: B.intl.string(B.t.ct7AKQ),
-                                text: B.intl.string(B.t["8lQwf8"]),
+                                name: L.intl.string(L.t.ct7AKQ),
+                                text: L.intl.string(L.t["8lQwf8"]),
                                 icon: f.gw7,
                             })
                           : null,
@@ -427,13 +427,13 @@ function X(e) {
                 className: G.nativePickerLabel,
                 variant: "text-md/semibold",
                 color: "interactive-normal",
-                children: B.intl.string(B.t.XyYoFc),
+                children: L.intl.string(L.t.XyYoFc),
             }),
-            S,
+            b,
             0 === l.length
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: s()(G.nativePickerCaptureSection, x ? null : G.nativePickerCollapsed),
+                      className: o()(G.nativePickerCaptureSection, x ? null : G.nativePickerCollapsed),
                       children: [
                           (0, r.jsxs)(f.P3F, {
                               onClick: j,
@@ -443,7 +443,7 @@ function X(e) {
                                       className: G.nativeCaptureDevicesText,
                                       variant: "text-md/semibold",
                                       color: "interactive-normal",
-                                      children: B.intl.string(B.t.rO0Vix),
+                                      children: L.intl.string(L.t.rO0Vix),
                                   }),
                                   (0, r.jsx)(f.CJ0, {
                                       size: "sm",
@@ -472,9 +472,9 @@ function X(e) {
         ],
     });
 }
-function J(e) {
+function X(e) {
     let { onSourceSelect: t, onCancel: n, pickerType: l } = e,
-        { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
+        { lastPickerAction: o, lastPickerError: s } = (0, E.Z)(t, n);
     return (
         i.useEffect(() => {
             (0, C.isLinux)() ||
@@ -482,14 +482,14 @@ function J(e) {
                 ? (0, P.T)(l)
                 : (0, P.t)();
         }, [l]),
-        s === Z.Uc.Error
+        o === T.Uc.Error
             ? (0, r.jsx)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
                   color: "text-danger",
-                  children: null != o && o.length > 0 ? o : B.intl.string(B.t.CKsXk3),
+                  children: null != s && s.length > 0 ? s : L.intl.string(L.t.CKsXk3),
               })
-            : (0, r.jsx)(A.Z, {
+            : (0, r.jsx)(R.Z, {
                   animated: !0,
                   className: G.nativePickerGuide,
               })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685);
+n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -84,7 +84,7 @@ function A(e) {
 function C(e) {
     var t;
     let { soundId: n, userId: r } = e;
-    if (!x()) return;
+    if (!L()) return;
     let i = n.toString();
     r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && P(i) && N(i);
 }
@@ -112,14 +112,14 @@ function D() {
     let t = null == (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
     S.overwriteHistory(w(null != t ? t : {}), I);
 }
-function L(e) {
+function x(e) {
     let {
         settings: { type: t },
         wasSaved: n,
     } = e;
     M() && t === E.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (I = []);
 }
-function x() {
+function L() {
     return (0, _.v)({
         location: "soundboard_event_store",
         autoTrackExposure: !1,
@@ -128,7 +128,7 @@ function x() {
 function M() {
     return (0, m.Lq)("soundboard_event_store");
 }
-class k extends (r = l.ZP.PersistedStore) {
+class j extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(p.Z, d.Z, f.default),
             (null == e ? void 0 : e.recentlyHeardCache) != null && T.load(e.recentlyHeardCache),
@@ -154,9 +154,9 @@ class k extends (r = l.ZP.PersistedStore) {
         return S.frequently;
     }
 }
-b(k, "displayName", "SoundboardEventStore"), b(k, "persistKey", "SoundboardEventStore");
-let j = new k(c.Z, {
+b(j, "displayName", "SoundboardEventStore"), b(j, "persistKey", "SoundboardEventStore");
+let k = new j(c.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: A,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: C,
-    USER_SETTINGS_PROTO_UPDATE: L,
+    USER_SETTINGS_PROTO_UPDATE: x,
 });

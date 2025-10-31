@@ -111,19 +111,19 @@ let w = Object.freeze({
         customInviteMessage: void 0,
     }),
     D = null,
-    L = {},
-    x = null,
+    x = {},
+    L = null,
     M = new Set(),
-    k = !1,
-    j = null,
+    j = !1,
+    k = null,
     U = !1,
     G = !1,
     B = new Set(),
     Z = !1,
     F = new c.Z("OverlayStore");
 function V(e) {
-    let t = L[e];
-    return null == t && (t = L[e] = A({}, w)), t;
+    let t = x[e];
+    return null == t && (t = x[e] = A({}, w)), t;
 }
 __OVERLAY__ && (0, d.m)((0, y.getRPCAuthToken)());
 let H = A({}, w),
@@ -293,10 +293,10 @@ function z(e) {
     }
 }
 function q(e) {
-    e.isSwitchingAccount || (L = {});
+    e.isSwitchingAccount || (x = {});
 }
 function X(e) {
-    e.userId in L && delete L[e.userId];
+    e.userId in x && delete x[e.userId];
 }
 function Q() {
     M.clear();
@@ -359,10 +359,10 @@ function eo(e) {
 }
 function es(e) {
     let { callId: t } = e;
-    x = t;
+    L = t;
 }
 function el() {
-    x = null;
+    L = null;
 }
 function ec() {
     if (__OVERLAY__) {
@@ -416,7 +416,7 @@ function ey() {
     H.disableExternalLinkAlert = !0;
 }
 function eO() {
-    k = !0;
+    j = !0;
 }
 function ev() {
     o.Z.addInterceptor((e) => {
@@ -504,12 +504,12 @@ class eR extends (r = i.ZP.PersistedStore) {
         ) {
             if (b.isPlatformEmbedded) {
                 let e = (0, O.M)();
-                null == e && F.error("Overlay module failed loaded"), (j = e);
+                null == e && F.error("Overlay module failed loaded"), (k = e);
             }
             M.delete((0, y.getPID)());
         }
         if (null != e) {
-            L = e;
+            x = e;
             let t = p.default.getId();
             null != t &&
                 (null == (H = V(t)).textChatNotifications && (H.textChatNotifications = w.textChatNotifications),
@@ -518,7 +518,7 @@ class eR extends (r = i.ZP.PersistedStore) {
         }
     }
     getState() {
-        return L;
+        return x;
     }
     isLocked(e) {
         return !M.has(e);
@@ -550,7 +550,7 @@ class eR extends (r = i.ZP.PersistedStore) {
         return H.selectedChannelId;
     }
     getSelectedCallId() {
-        return x;
+        return L;
     }
     getDisplayUserMode() {
         return H.displayUserMode;
@@ -586,7 +586,7 @@ class eR extends (r = i.ZP.PersistedStore) {
         return G;
     }
     get incompatibleApp() {
-        return k;
+        return j;
     }
     getActiveRegions() {
         return B;

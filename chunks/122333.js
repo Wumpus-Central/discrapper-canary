@@ -11,16 +11,16 @@ var l = n(481060),
     d = n(983736),
     p = n(341298),
     f = n(390885),
-    h = n(524329),
-    m = n(995532),
+    m = n(524329),
+    h = n(995532),
     g = n(486472),
     _ = n(430824),
     b = n(914010),
     E = n(594174),
     O = n(823379),
     I = n(358085),
-    v = n(929809),
-    y = n(179645),
+    y = n(929809),
+    v = n(179645),
     C = n(701476),
     S = n(785997),
     T = n(981631),
@@ -82,7 +82,7 @@ class Z extends s.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = y.Z.getType();
+            a = v.Z.getType();
         if (null == a) return;
         switch (a) {
             case C.M5.INVITE_UNCLAIMED:
@@ -98,7 +98,7 @@ class Z extends s.Z {
             A = b.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
             let e = _.Z.getGuild(A);
-            null != e && (0, d.Dc)(e) && ((s = !0), (0, h.RM)(e.id));
+            null != e && (0, d.Dc)(e) && ((s = !0), (0, m.RM)(e.id));
         }
         let Z = () => 0 === g.Z.totalGuilds && !I.isPlatformEmbedded,
             w = o.bN();
@@ -188,11 +188,11 @@ class Z extends s.Z {
                         },
                         { onCloseCallback: e },
                     ),
-                predicate: () => null != A && null != m.Z.get(A) && m.Z.get(A) !== m.a,
+                predicate: () => null != A && null != h.Z.get(A) && h.Z.get(A) !== h.a,
             },
         ]),
             (t = () => {
-                v.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
+                y.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

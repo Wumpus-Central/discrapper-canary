@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(526665),
     L = n(349728),
     M = n(494620),
-    k = n(273313),
-    j = n(205266),
+    j = n(273313),
+    k = n(205266),
     U = n(216153),
     G = n(981631),
     B = n(856651),
@@ -176,7 +176,7 @@ function q(e) {
         [S, C] = i.useState(n.showActivity),
         [N, R] = i.useState(null),
         [P, D] = i.useState(null),
-        [k, Z] = i.useState(!1),
+        [j, Z] = i.useState(!1),
         [H, W] = i.useState([]),
         q = (0, y.rR)(n.type),
         X = b.Z.get(q);
@@ -272,7 +272,7 @@ function q(e) {
               : e.type === G.ABu.PLAYSTATION
                 ? (0, r.jsx)("div", {
                       className: V.upsellWrapper,
-                      children: (0, r.jsx)(j.t, {}),
+                      children: (0, r.jsx)(k.t, {}),
                   })
                 : null;
     }
@@ -355,7 +355,7 @@ function q(e) {
                             text: s,
                             variant: "secondary",
                             size: "sm",
-                            loading: k,
+                            loading: j,
                             disabled: o,
                             "aria-label": F.intl.string(F.t.sCkLYH),
                             onClick: o
@@ -640,7 +640,7 @@ let ee = () => {
     }, []),
     e)
         ? (0, r.jsx)(m.Z, {})
-        : (0, r.jsxs)(k.Z, {
+        : (0, r.jsxs)(j.Z, {
               title: F.intl.string(F.t["3fe7U5"]),
               children: [
                   (0, r.jsx)(X, {}),

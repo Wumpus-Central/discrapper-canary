@@ -43,22 +43,22 @@ function b(e) {
         ),
         { clipId: O, remoteTriggerClipId: v } = i.useMemo(() => (null != y ? E(y.content) : {}), [y]),
         I = (0, a.e7)([l.Z], () => l.Z.getMatchingGroupClip(O, v)),
-        S = (0, a.e7)([l.Z], () => null != I && null != b && l.Z.wasClipSharedInChannel(I.id, b)),
-        { onShareClick: T } = (0, u.Z)(b),
+        T = (0, a.e7)([l.Z], () => null != I && null != b && l.Z.wasClipSharedInChannel(I.id, b)),
+        { onShareClick: S } = (0, u.Z)(b),
         A = i.useCallback(() => {
             var e;
             null != I &&
                 null != b &&
                 (null == (e = t.messageReference) ? void 0 : e.message_id) != null &&
-                T({
+                S({
                     clips: [I],
                     messageReference: {
                         channel_id: b,
                         message_id: t.messageReference.message_id,
                     },
                 });
-        }, [I, b, t.messageReference, T]);
-    if (null == y || (null == O && null == v) || null == I || S) return null;
+        }, [I, b, t.messageReference, S]);
+    if (null == y || (null == O && null == v) || null == I || T) return null;
     let C = y.attachments.find((e) => {
             var t;
             return (0, f.yE)(null != (t = e.flags) ? t : 0, h.J0y.IS_CLIP);

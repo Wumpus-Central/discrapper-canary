@@ -1,22 +1,22 @@
-n.d(e, { x: () => E });
+n.d(e, { x: () => d });
 var i = n(657707),
     l = n(509613),
-    u = n(313789),
-    r = n(736752),
+    r = n(313789),
+    u = n(736752),
     s = n(726985),
-    o = n(388032);
-let a = (0, l.x1)(u.n.ACCOUNT_PANE, {
-        useTitle: () => o.intl.string(o.t["JAIM/m"]),
+    a = n(388032);
+let o = (0, l.x1)(r.n.ACCOUNT_PANE, {
+        useTitle: () => a.intl.string(a.t["JAIM/m"]),
         buildLayout: () => [],
-        render: r.Z,
+        render: u.Z,
     }),
-    c = (0, l.wf)(u.n.ACCOUNT_PANEL, {
-        useTitle: () => o.intl.string(o.t["JAIM/m"]),
-        buildLayout: () => [a],
+    c = (0, l.wf)(r.n.ACCOUNT_PANEL, {
+        useTitle: () => a.intl.string(a.t["JAIM/m"]),
+        buildLayout: () => [o],
     }),
-    E = (0, l.m7)(u.n.ACCOUNT_SIDEBAR_ITEM, {
+    d = (0, l.m7)(r.n.ACCOUNT_SIDEBAR_ITEM, {
         icon: i.tBG,
-        useTitle: () => o.intl.string(o.t["JAIM/m"]),
+        useTitle: () => a.intl.string(a.t["JAIM/m"]),
         legacySearchKey: s.s6.ACCOUNT,
         buildLayout: () => [c],
     });

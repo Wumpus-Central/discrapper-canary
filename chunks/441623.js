@@ -72,7 +72,7 @@ function P(e) {
 }
 function w() {
     if (null != N) return void K(N);
-    if ((x(), !f.Z.hasConsented(h.pjP.PERSONALIZATION))) return;
+    if ((L(), !f.Z.hasConsented(h.pjP.PERSONALIZATION))) return;
     let { enabled: e } = p.w.getCurrentConfig(
         { location: "PremiumGiftingIntentStore updateFriendAnniversaries" },
         { autoTrackExposure: !1 },
@@ -99,19 +99,19 @@ function w() {
 function D(e) {
     return Math.round(s()().diff(e, "years", !0));
 }
-function L() {
+function x() {
     return Array.from(A).some((e) => !T.lastShownFriendsListGiftIntents.includes(e));
 }
-function x() {
+function L() {
     (S.length = 0), A.clear(), (C = {});
 }
 function M() {
-    x();
-}
-function k() {
-    (T = I()), x();
+    L();
 }
 function j() {
+    (T = I()), L();
+}
+function k() {
     T.lastShownFriendsListGiftIntents = Array.from(A);
 }
 function U(e) {
@@ -152,7 +152,7 @@ function W(e) {
     K(t);
 }
 function K(e) {
-    x();
+    L();
     let { enabled: t } = p.w.getCurrentConfig(
         { location: "PremiumGiftingIntentStore generateFriendAnniversaries" },
         { autoTrackExposure: !1 },
@@ -198,7 +198,7 @@ class z extends (r = l.ZP.PersistedStore) {
     canShowFriendsTabBadge() {
         var e;
         let t = null != (e = T.friendsTabBadgeLastDismissedTime) ? e : 0;
-        return !(Date.now() - t <= O) && L();
+        return !(Date.now() - t <= O) && x();
     }
     getFriendAnniversaryYears(e) {
         let t = C[e];
@@ -227,9 +227,9 @@ m(z, "displayName", "PremiumGiftingIntentStore"),
     ]);
 let q = new z(c.Z, {
     CONNECTION_OPEN: M,
-    LOGOUT: k,
+    LOGOUT: j,
     MESSAGE_GIFT_INTENT_SHOWN: U,
-    FRIENDS_LIST_GIFT_INTENTS_SHOWN: j,
+    FRIENDS_LIST_GIFT_INTENTS_SHOWN: k,
     FRIENDS_TAB_BADGE_DISMISS: G,
     GIFT_INTENT_FLOW_PURCHASED_GIFT: B,
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: V,

@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(732393),
     y = n(137591),
     x = n(299206),
-    v = n(665149),
+    O = n(665149),
     j = n(695346),
-    O = n(979651),
+    v = n(979651),
     C = n(488131),
     I = n(388032);
 function S(e) {
@@ -87,7 +87,7 @@ function Z(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                v.ZP.Icon,
+                O.ZP.Icon,
                 E(S({}, e), {
                     ref: a,
                     onClick: s,
@@ -103,7 +103,7 @@ function Z(e) {
 function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        v = (0, f.Z)(t),
+        O = (0, f.Z)(t),
         S = (0, _.Z)(t.id),
         E = (0, b.Z)(t),
         Z = (0, x.Z)({
@@ -118,7 +118,7 @@ function P(e) {
         A = (0, y.Z)(t),
         D = (0, m.Z)(t),
         L = j.vF.useSetting(),
-        M = (0, s.e7)([O.Z], () => !a().isEmpty(O.Z.getVoiceStatesForChannel(t.id)));
+        M = (0, s.e7)([v.Z], () => !a().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(o.v2r, {
         navId: "thread-context",
         onClose: n,
@@ -146,7 +146,7 @@ function P(e) {
                 ],
             }),
             (0, r.jsxs)(o.kSQ, {
-                children: [A, l, v, T],
+                children: [A, l, O, T],
             }),
             (0, r.jsxs)(o.kSQ, {
                 children: [P, Z],

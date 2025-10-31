@@ -35,8 +35,8 @@ var r = n(771356),
     x = n(58587),
     L = n(912609),
     M = n(565792),
-    k = n(583498),
-    j = n(442866),
+    j = n(583498),
+    k = n(442866),
     U = n(263984),
     G = n(591501),
     B = n(595867),
@@ -96,7 +96,7 @@ function Y(e, t) {
 let W = {
         skye: {
             name: A.default.tzvUK3,
-            iconURL: j.Z,
+            iconURL: k.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(242, 96, 195, 0.50) 0%, rgba(242, 96, 195, 0.00) 100%)",
             baseColor: "#380527",
@@ -123,7 +123,7 @@ let W = {
         },
         sebastien: {
             name: A.default["NmbfH+"],
-            iconURL: k.Z,
+            iconURL: j.Z,
             splashGradient:
                 "radial-gradient(9% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(92, 119, 31, 0.50) 0%, rgba(92, 119, 31, 0.00) 100%)",
             baseColor: "#25300D",

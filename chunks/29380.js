@@ -14,8 +14,8 @@ var i = n(951288),
     h = n(783097),
     v = n(826405),
     y = n(176412),
-    x = n(981631),
-    g = n(388032);
+    g = n(981631),
+    x = n(388032);
 function b(e) {
     let { context: t, application: n, sectionName: b, primaryEntryPointCommand: N } = e,
         j = l.useId(),
@@ -69,12 +69,12 @@ function b(e) {
             onClick: () => {
                 O(!0),
                     T(),
-                    u.default.track(x.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                    u.default.track(g.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                         application_id: n.id,
                         button_action: m._y.USE_APP_COMMAND,
                     });
             },
-            "aria-label": g.intl.formatToPlainString(g.t["XjP/R+"], {
+            "aria-label": x.intl.formatToPlainString(x.t["XjP/R+"], {
                 buttonText: R,
                 applicationName: n.name,
             }),

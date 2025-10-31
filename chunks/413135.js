@@ -148,7 +148,7 @@ function O(e, t, n) {
     for (e || (e = "utf8"); ; )
         switch (e) {
             case "hex":
-                return j(this, t, n);
+                return k(this, t, n);
             case "utf8":
             case "utf-8":
                 return D(this, t, n);
@@ -156,7 +156,7 @@ function O(e, t, n) {
                 return M(this, t, n);
             case "latin1":
             case "binary":
-                return k(this, t, n);
+                return j(this, t, n);
             case "base64":
                 return w(this, t, n);
             case "ucs2":
@@ -306,7 +306,7 @@ function D(e, t, n) {
             r.push(u),
             (i += d);
     }
-    return x(r);
+    return L(r);
 }
 (r = 2147483647),
     (c.TYPED_ARRAY_SUPPORT = (function e() {
@@ -521,11 +521,11 @@ function D(e, t, n) {
             data: Array.prototype.slice.call(this._arr || this, 0),
         };
     });
-var L = 4096;
-function x(e) {
+var x = 4096;
+function L(e) {
     var t = e.length;
-    if (t <= L) return String.fromCharCode.apply(String, e);
-    for (var n = "", r = 0; r < t; ) n += String.fromCharCode.apply(String, e.slice(r, (r += L)));
+    if (t <= x) return String.fromCharCode.apply(String, e);
+    for (var n = "", r = 0; r < t; ) n += String.fromCharCode.apply(String, e.slice(r, (r += x)));
     return n;
 }
 function M(e, t, n) {
@@ -534,13 +534,13 @@ function M(e, t, n) {
     for (var i = t; i < n; ++i) r += String.fromCharCode(127 & e[i]);
     return r;
 }
-function k(e, t, n) {
+function j(e, t, n) {
     var r = "";
     n = Math.min(e.length, n);
     for (var i = t; i < n; ++i) r += String.fromCharCode(e[i]);
     return r;
 }
-function j(e, t, n) {
+function k(e, t, n) {
     var r = e.length;
     (!t || t < 0) && (t = 0), (!n || n < 0 || n > r) && (n = r);
     for (var i = "", a = t; a < n; ++a) i += $[e[a]];

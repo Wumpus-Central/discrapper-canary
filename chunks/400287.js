@@ -37,7 +37,7 @@ function b() {
             t ? u.Z.cleanUpPrivateChannelSearchState() : u.Z.cleanUpSearchState({ type: m.aib.DMS }),
                 _.rR.updateSetting(t);
         }, []),
-        L = () =>
+        x = () =>
             (0, r.jsx)(a.FXm, {
                 label: E.intl.string(E.t.QgwmVz),
                 description: E.intl.string(E.t.TYnRkS),
@@ -272,7 +272,7 @@ function b() {
                 }),
                 (0, r.jsxs)(d.F, {
                     setting: h.s6.CHAT_SPOILERS,
-                    children: [(0, r.jsx)(a.izJ, {}), L()],
+                    children: [(0, r.jsx)(a.izJ, {}), x()],
                 }),
             ],
         }),

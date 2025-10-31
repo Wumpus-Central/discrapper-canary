@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(457542);
+n.d(t, { Z: () => m }), n(388685), n(457542);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -10,32 +10,32 @@ var r = n(951288),
     d = n(589694),
     p = n(62001),
     f = n(869886);
-let h = function (e) {
+let m = function (e) {
     let { scrollContainerRef: t } = e,
         n = (0, l.e7)([a.Z], () => a.Z.notificationItem(), []),
-        { showDot: h } = (0, c.Z)(),
-        m = i.useRef(null),
+        { showDot: m } = (0, c.Z)(),
+        h = i.useRef(null),
         [g, _] = i.useState(!1),
         {
             data: b,
             loading: E,
             isRefreshing: O,
             handleOnRefresh: I,
-            viewabilityConfigCallbackPairs: v,
+            viewabilityConfigCallbackPairs: y,
         } = (0, u.a)({
-            showDot: h,
+            showDot: m,
             notificationItem: n,
         }),
-        y = (0, o.G)();
+        v = (0, o.G)();
     i.useEffect(
         () => () => {
-            y();
+            v();
         },
-        [y],
+        [v],
     );
     let C = (0, l.e7)([a.Z], () => a.Z.hasNewContent(), []),
         S = (0, l.e7)([a.Z], () => a.Z.isHydrating(), []),
-        T = i.useMemo(() => v[0].onViewableItemsChanged, [v]),
+        T = i.useMemo(() => y[0].onViewableItemsChanged, [y]),
         { registerItemRef: N } = (0, p.m)(b, T, t),
         j = i.useMemo(() => b.some((e) => "end" === e.data.kind), [b]),
         P = i.useCallback(() => {
@@ -162,7 +162,7 @@ let h = function (e) {
                           }),
                       }),
                   (0, r.jsxs)("div", {
-                      ref: m,
+                      ref: h,
                       className: f.scrollContainer,
                       children: [
                           b.map((e) => Z(e)),

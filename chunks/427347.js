@@ -1,11 +1,11 @@
 n.d(t, { Z: () => j });
 var a = n(951288);
 n(647438);
-var r = n(481060),
+var i = n(481060),
     l = n(100527),
-    i = n(906732),
-    o = n(266454),
-    s = n(314910),
+    r = n(906732),
+    s = n(266454),
+    o = n(314910),
     c = n(313789),
     d = n(526665),
     u = n(518596),
@@ -13,16 +13,16 @@ var r = n(481060),
     p = n(197344),
     h = n(226625),
     x = n(981631),
-    f = n(921944),
-    b = n(388032),
-    g = n(972663);
+    g = n(921944),
+    f = n(388032),
+    b = n(972663);
 function v(e) {
     let { dismissibleContent: t } = e,
         n = p.Z.useIsEligible(),
-        m = (0, o.Nj)(t),
-        { analyticsLocations: v } = (0, i.ZP)(l.Z.HOLIDAY_COACHMARK),
+        m = (0, s.Nj)(t),
+        { analyticsLocations: v } = (0, r.ZP)(l.Z.HOLIDAY_COACHMARK),
         j = (e) => {
-            (0, o.Q3)(t, { dismissAction: e });
+            (0, s.Q3)(t, { dismissAction: e });
         },
         _ = () => {
             let e = (0, d.KV)("HolidayCoachmark");
@@ -30,45 +30,45 @@ function v(e) {
                 section: x.oAB.NOTIFICATIONS,
                 analyticsLocations: v,
             }),
-                j(f.L.TAKE_ACTION);
+                j(g.L.TAKE_ACTION);
         };
     return n && !m
-        ? (0, a.jsx)(s.ZP, {
+        ? (0, a.jsx)(o.ZP, {
               children: (0, a.jsxs)("div", {
-                  className: g.wrapper,
+                  className: b.wrapper,
                   children: [
                       (0, a.jsxs)("div", {
-                          className: g.backgroundWrapper,
+                          className: b.backgroundWrapper,
                           children: [
                               (0, a.jsx)(h.Z, {
-                                  className: g.backgroundImage,
+                                  className: b.backgroundImage,
                                   pageMultiplier: 5,
                               }),
-                              (0, a.jsx)("div", { className: g.backgroundOverlay }),
+                              (0, a.jsx)("div", { className: b.backgroundOverlay }),
                           ],
                       }),
-                      (0, a.jsx)("div", { className: g.heroImage }),
+                      (0, a.jsx)("div", { className: b.heroImage }),
                       (0, a.jsxs)("div", {
-                          className: g.content,
+                          className: b.content,
                           children: [
                               (0, a.jsxs)("div", {
                                   children: [
-                                      (0, a.jsx)(r.Heading, {
+                                      (0, a.jsx)(i.Heading, {
                                           variant: "heading-md/bold",
                                           color: void 0,
-                                          className: g.specialText,
-                                          children: b.intl.string(b.t.zUhr3D),
+                                          className: b.specialText,
+                                          children: f.intl.string(f.t.zUhr3D),
                                       }),
-                                      (0, a.jsx)(r.Text, {
+                                      (0, a.jsx)(i.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
-                                          children: b.intl.format(b.t.Xw2XUT, {
+                                          children: f.intl.format(f.t.Xw2XUT, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
-                                                      r.P3F,
+                                                      i.P3F,
                                                       {
                                                           tag: "span",
-                                                          className: g.specialTextLink,
+                                                          className: b.specialTextLink,
                                                           onClick: _,
                                                           children: e,
                                                       },
@@ -78,10 +78,10 @@ function v(e) {
                                       }),
                                   ],
                               }),
-                              (0, a.jsx)(r.P3F, {
-                                  className: g.closeClickable,
-                                  onClick: () => j(f.L.USER_DISMISS),
-                                  children: (0, a.jsx)(r.Dio, {
+                              (0, a.jsx)(i.P3F, {
+                                  className: b.closeClickable,
+                                  onClick: () => j(g.L.USER_DISMISS),
+                                  children: (0, a.jsx)(i.Dio, {
                                       color: "currentColor",
                                       size: "xs",
                                   }),

@@ -12,8 +12,8 @@ let d = (e) => {
     let { user: d } = e,
         m = s.ZP.canUsePremiumProfileCustomization(d),
         p = (0, i.cj)([o.Z], () => o.Z.getAllPending()),
-        { pendingAvatar: v } = p,
-        f = (function (e, t) {
+        { pendingAvatar: f } = p,
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -36,7 +36,7 @@ let d = (e) => {
         })(p, ["pendingAvatar"]),
         h = (0, l.SD)({
             userId: d.id,
-            image: v,
+            image: f,
         });
     return (0, r.jsx)("div", {
         className: u.container,
@@ -66,7 +66,7 @@ let d = (e) => {
                         });
                 }
                 return e;
-            })({}, f)),
+            })({}, v)),
             (n = n =
                 {
                     pendingAvatar: h,

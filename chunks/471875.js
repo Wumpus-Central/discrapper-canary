@@ -268,7 +268,7 @@ function c(e) {
             keywords: E,
             contains: w,
         },
-        L = {
+        x = {
             variants: [
                 {
                     match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, c.concat(d, "(", c.concat(/\./, d), ")*")],
@@ -288,7 +288,7 @@ function c(e) {
                 },
             ],
         },
-        x = {
+        L = {
             relevance: 0,
             match: c.either(
                 /\bJSON/,
@@ -307,7 +307,7 @@ function c(e) {
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/,
         },
-        k = {
+        j = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/],
@@ -324,7 +324,7 @@ function c(e) {
             contains: [D],
             illegal: /%/,
         },
-        j = {
+        k = {
             relevance: 0,
             match: /\b[A-Z][A-Z_0-9]+\b/,
             className: "variable.constant",
@@ -369,7 +369,7 @@ function c(e) {
         keywords: E,
         exports: {
             PARAMS_CONTAINS: w,
-            CLASS_REFERENCE: x,
+            CLASS_REFERENCE: L,
         },
         illegal: /#(?![$_A-z])/,
         contains: [
@@ -388,7 +388,7 @@ function c(e) {
             N,
             { match: /\$\d+/ },
             v,
-            x,
+            L,
             {
                 scope: "attr",
                 match: d + c.lookahead(":"),
@@ -465,7 +465,7 @@ function c(e) {
                     },
                 ],
             },
-            k,
+            j,
             { beginKeywords: "while if switch catch for" },
             {
                 begin:
@@ -497,8 +497,8 @@ function c(e) {
                 contains: [D],
             },
             G,
-            j,
-            L,
+            k,
+            x,
             Z,
             { match: /\$[(.]/ },
         ],

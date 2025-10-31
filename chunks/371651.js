@@ -96,11 +96,11 @@ function w(e, t) {
     return i;
 }
 let D = new u.Z("OverlayRenderStore"),
-    L = b.R5.UNSET,
-    x = !1,
+    x = b.R5.UNSET,
+    L = !1,
     M = !1,
-    k = !1,
-    j = (0, h.isWindows)() && h.isPlatformEmbedded && !__OVERLAY__,
+    j = !1,
+    k = (0, h.isWindows)() && h.isPlatformEmbedded && !__OVERLAY__,
     U = null,
     G = {},
     B = null,
@@ -120,7 +120,7 @@ function W(e, t, n) {
     });
 }
 function K() {
-    return x;
+    return L;
 }
 function z() {
     return M;
@@ -202,7 +202,7 @@ async function ei(e) {
 }
 function ea(e, t) {
     var n, r;
-    switch (L) {
+    switch (x) {
         case b.R5.UNSET:
             break;
         case b.R5.IN_PROCESS_V2:
@@ -435,8 +435,8 @@ async function ef(e) {
         ((U === m.UNSET_PID || null === U) && n.state === b.mM.OVERLAY_RENDERING)
     )
         return t;
-    let a = L === b.R5.OUT_OF_PROCESS_V3 || L === b.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-        o = L === b.R5.IN_PROCESS_V2,
+    let a = x === b.R5.OUT_OF_PROCESS_V3 || x === b.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+        o = x === b.R5.IN_PROCESS_V2,
         s = (0, v.PD)(r, z()),
         l = (0, v.DH)(n, r, z());
     D.verbose("Overlay method different for pid ".concat(e), {
@@ -513,13 +513,13 @@ async function eg(e, t) {
         newLegacyEnabled: e,
         newOopEnabled: t,
     });
-    let n = e !== x,
+    let n = e !== L,
         r = t !== M;
     if (
-        ((x = e),
+        ((L = e),
         (M = t),
         E.v.update({
-            legacyEnabled: x,
+            legacyEnabled: L,
             oopEnabled: M,
         }),
         D.info("setOverlayEnabled", {
@@ -527,13 +527,13 @@ async function eg(e, t) {
             newLegacyEnabled: e,
         }),
         M && r && (0, m.setOutOfProcessSupport)(!0),
-        x || M)
+        L || M)
     )
         n && D.info("Legacy change"), r && D.info("OOP change"), eI();
     else for (let e of Q()) await es(e), await (0, a._v)(16);
 }
 function eE() {
-    ed(), (k = !1), (Z = null), ex();
+    ed(), (j = !1), (Z = null), eL();
 }
 function eb(e) {
     let { legacyEnabled: t, oopEnabled: n } = e;
@@ -614,7 +614,7 @@ function eA(e) {
     );
 }
 function eC(e) {
-    return (L = e.mode), eI(), !0;
+    return (x = e.mode), eI(), !0;
 }
 function eN(e) {
     if (null != X(e.pid))
@@ -644,34 +644,34 @@ function eD(e) {
     }
     return !(0, m.isValidGamePID)(e.pid) || ((0, m.setPID)(e.pid), !0);
 }
-function eL(e) {
+function ex(e) {
     s.Z.updateOverlayState(e.pid, b.mM.OVERLAY_RENDERING),
         ee(e.pid) && et(e.pid, "successfullyShown", !0),
         W(e.pid, "overlay_successfully_shown", { pid: e.pid });
     let t = X(e.pid);
     null != t && s.Z.updateTrackedGame(e.pid, t);
 }
-function ex() {
-    d.Z.hasLoadedExperiments && !k && ((k = !0), eg(E.v.legacyEnabled, E.v.oopEnabled));
+function eL() {
+    d.Z.hasLoadedExperiments && !j && ((j = !0), eg(E.v.legacyEnabled, E.v.oopEnabled));
 }
 function eM() {
-    (k = !1), (Z = null);
+    (j = !1), (Z = null);
 }
-function ek() {
-    (k = !1), (Z = null), eT();
+function ej() {
+    (j = !1), (Z = null), eT();
 }
-class ej extends (r = i.ZP.Store) {
+class ek extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(_.default, d.Z, p.Z, I.Z, f.ZP), this.syncWith([d.Z], ex);
+        this.waitFor(_.default, d.Z, p.Z, I.Z, f.ZP), this.syncWith([d.Z], eL);
     }
     getDevToolsFocusedPidsWithTimestamp() {
         return Y;
     }
     getHasLoadedExperiments() {
-        return k;
+        return j;
     }
     getForcedRenderMode() {
-        return L;
+        return x;
     }
     isAnyOverlayRendering() {
         return this.getOverlayRenderingTrackedGames().length > 0;
@@ -747,15 +747,15 @@ class ej extends (r = i.ZP.Store) {
         return Object.values(G).filter((e) => e.overlayMethod !== b.gl.Disabled && e.state === b.mM.OVERLAY_RENDERING);
     }
 }
-A(ej, "displayName", "OverlayRenderStore");
-let eU = new ej(
+A(ek, "displayName", "OverlayRenderStore");
+let eU = new ek(
         o.Z,
-        !j
+        !k
             ? {}
             : {
                   CONNECTION_OPEN: eE,
                   LOGIN: eM,
-                  LOGOUT: ek,
+                  LOGOUT: ej,
                   EXPERIMENT_OVERRIDE_BUCKET: eE,
                   OVERLAY_SET_ENABLED: eb,
                   GAME_LAUNCH_SUCCESS: ey,
@@ -767,7 +767,7 @@ let eU = new ej(
                   OVERLAY_CRASHED: eA,
                   OVERLAY_RELOAD: eS,
                   OVERLAY_FOCUSED: eD,
-                  OVERLAY_SUCCESSFULLY_SHOWN: eL,
+                  OVERLAY_SUCCESSFULLY_SHOWN: ex,
                   OVERLAY_RENDER_DEBUG_MODE: eP,
                   OVERLAY_RENDER_DEBUG_CLEAR_TRACKED_PIDS: ew,
               },

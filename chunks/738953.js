@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(664794),
     w = n(4517),
     D = n(978395),
-    L = n(161572),
-    x = n(671955),
+    x = n(161572),
+    L = n(671955),
     M = n(388032),
-    k = n(116649);
-function j(e, t, n) {
+    j = n(116649);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -89,7 +89,7 @@ function Z(e) {
     var t;
     let {
             user: n,
-            currentUser: j,
+            currentUser: k,
             guildId: G,
             channelId: Z,
             messageId: F,
@@ -126,7 +126,7 @@ function Z(e) {
         null == W || W(null == et ? void 0 : et.current);
     }, [et, W]);
     let es = i.useRef(null),
-        el = n.id === j.id,
+        el = n.id === k.id,
         ec = (0, _.p)({ location: "UserProfilePopout" }),
         eu = i.useMemo(() => (0, p.Z)(), []),
         ed = (e) => {
@@ -191,12 +191,12 @@ function Z(e) {
                         (0, r.jsxs)(A.Z, {
                             user: n,
                             displayProfile: en,
-                            themeType: x.l.POPOUT,
+                            themeType: L.l.POPOUT,
                             children: [
                                 null != ea.interactionType &&
                                     (0, r.jsx)(a.animated.div, {
                                         style: eo,
-                                        className: k.backdrop,
+                                        className: j.backdrop,
                                     }),
                                 (0, r.jsxs)(C.Z, {
                                     children: [
@@ -209,7 +209,7 @@ function Z(e) {
                                             appContext: q,
                                         }),
                                         (0, r.jsx)(N.Z, {
-                                            themeType: x.l.POPOUT,
+                                            themeType: L.l.POPOUT,
                                             user: n,
                                         }),
                                         !el &&
@@ -222,17 +222,17 @@ function Z(e) {
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: k.header,
+                                    className: j.header,
                                     children: [
                                         (0, r.jsx)(T.Z, {
                                             user: n,
                                             displayProfile: en,
                                             guildId: G,
-                                            themeType: x.l.POPOUT,
+                                            themeType: L.l.POPOUT,
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             userId: n.id,
-                                            className: k.toast,
+                                            className: j.toast,
                                             onClose: Y,
                                         }),
                                         (0, r.jsx)(I.Z, {
@@ -240,7 +240,7 @@ function Z(e) {
                                             displayProfile: en,
                                             guildId: G,
                                             channelId: Z,
-                                            themeType: x.l.POPOUT,
+                                            themeType: L.l.POPOUT,
                                             onOpenProfile: K ? void 0 : ed,
                                         }),
                                         (0, r.jsx)(w.Z, {
@@ -248,7 +248,7 @@ function Z(e) {
                                             user: n,
                                             guildId: G,
                                             channelId: Z,
-                                            themeType: x.l.POPOUT,
+                                            themeType: L.l.POPOUT,
                                             onCloseProfile: Y,
                                             prompt: ec ? eu : null,
                                         }),
@@ -256,7 +256,7 @@ function Z(e) {
                                 }),
                                 (0, r.jsx)(D.Z, {
                                     user: n,
-                                    currentUser: j,
+                                    currentUser: k,
                                     displayProfile: en,
                                     guild: $,
                                     isHoveringOrFocusing: null == ea.interactionType && er,
@@ -264,7 +264,7 @@ function Z(e) {
                                     channelId: Z,
                                     onClose: Y,
                                 }),
-                                (0, r.jsx)(L.Z, {
+                                (0, r.jsx)(x.Z, {
                                     user: n,
                                     guildId: G,
                                     channelId: Z,

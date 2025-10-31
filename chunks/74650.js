@@ -1,11 +1,11 @@
 n.d(t, { U: () => x });
 var a = n(951288);
 n(647438);
-var r = n(442837),
+var i = n(442837),
     l = n(755721),
-    i = n(481060),
-    o = n(767714),
-    s = n(594174),
+    r = n(481060),
+    s = n(767714),
+    o = n(594174),
     c = n(74538),
     d = n(921944),
     u = n(474936),
@@ -14,17 +14,17 @@ var r = n(442837),
     h = n(217379);
 function x(e) {
     let { markAsDismissed: t, onCTA: n } = e,
-        x = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        f = (0, c.M5)(x, u.PremiumTypes.TIER_2);
+        x = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        g = (0, c.M5)(x, u.PremiumTypes.TIER_2);
     return (0, a.jsx)("div", {
         className: p.popup,
         children: (0, a.jsxs)("div", {
             className: p.content,
             children: [
-                (0, a.jsx)(i.P3F, {
+                (0, a.jsx)(r.P3F, {
                     className: p.closeIcon,
                     onClick: () => t(d.L.USER_DISMISS),
-                    children: (0, a.jsx)(i.Dio, { size: "xs" }),
+                    children: (0, a.jsx)(r.Dio, { size: "xs" }),
                 }),
                 (0, a.jsx)("img", {
                     src: h,
@@ -33,28 +33,28 @@ function x(e) {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-primary",
                             className: p.title,
                             children: m.intl.string(m.t.PRXV49),
                         }),
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(r.Text, {
                             variant: "text-sm/medium",
                             color: "text-secondary",
                             children: m.intl.string(m.t["RSHtF+"]),
                         }),
                     ],
                 }),
-                f
-                    ? (0, a.jsx)(i.Button, {
+                g
+                    ? (0, a.jsx)(r.Button, {
                           text: m.intl.string(m.t.LhcHi5),
                           fullWidth: !0,
                           onClick: () => {
                               t(d.L.TAKE_ACTION), n();
                           },
                       })
-                    : (0, a.jsx)(o.Z, {
+                    : (0, a.jsx)(s.Z, {
                           onClick: () => {
                               t(d.L.TAKE_ACTION);
                           },

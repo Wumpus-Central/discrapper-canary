@@ -32,8 +32,8 @@ function T(e) {
         C = (0, o.e7)([h.Z], () => h.Z.getMediaSessionId()),
         [N, R] = i.useState(null != A ? A : ""),
         [P, w] = i.useState(!1),
-        [D, L] = i.useState(null),
-        x = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        [D, x] = i.useState(null),
+        L = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         M = N.length > I;
     i.useEffect(() => {
         g.default.track(E.rMx.OPEN_MODAL, {
@@ -42,23 +42,23 @@ function T(e) {
             location_stack: T,
         });
     }, [t.guild_id, T]);
-    let k = (e) => {
-            L(new s.Hx(e, e.status).getAnyErrorMessage());
+    let j = (e) => {
+            x(new s.Hx(e, e.status).getAnyErrorMessage());
         },
-        j = (e) => {
+        k = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
-                let { errorMessage: e } = c.Z.validateMessage(n, x, t.id);
-                return L(e), w(!1), { hasErrors: !0 };
+                let { errorMessage: e } = c.Z.validateMessage(n, L, t.id);
+                return x(e), w(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         U = async (e) => {
-            N === A && S(), null == e || e.preventDefault(), L(null), w(!0);
+            N === A && S(), null == e || e.preventDefault(), x(null), w(!0);
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = p.ZP.parse(t, N),
-                { hasErrors: a } = j(i);
+                { hasErrors: a } = k(i);
             if (!a) {
                 try {
                     let e = await l.ZP.updateVoiceChannelStatus(t.id, i.content);
@@ -72,9 +72,9 @@ function T(e) {
                               location_stack: T,
                           }),
                           S())
-                        : k(e);
+                        : j(e);
                 } catch (e) {
-                    k(e);
+                    j(e);
                 }
                 w(!1);
             }

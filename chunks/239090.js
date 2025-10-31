@@ -1,8 +1,8 @@
-t.d(l, { R: () => i }), t(953529), t(388685);
-var a = t(951288),
-    n = t(647438),
-    o = t(793030);
-let i = {
+n.d(t, { R: () => o }), n(953529), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(793030);
+let o = {
     title: "Switch",
     stories: [
         {
@@ -10,25 +10,25 @@ let i = {
             name: "BaseSwitch",
             component: function (e) {
                 let {
-                        disabled: l,
-                        hasIcon: t,
-                        label: i,
-                        description: r,
-                        helperText: s,
-                        required: u,
-                        errorMessage: d,
+                        disabled: t,
+                        hasIcon: n,
+                        label: o,
+                        description: s,
+                        helperText: l,
+                        required: c,
+                        errorMessage: u,
                     } = e,
-                    [c, b] = n.useState(!1);
-                return (0, a.jsx)(o.kcT, {
-                    label: i,
-                    description: r,
-                    helperText: s,
-                    required: u,
-                    errorMessage: d,
-                    hasIcon: t,
-                    onChange: b,
-                    disabled: l,
-                    checked: c,
+                    [d, f] = i.useState(!1);
+                return (0, r.jsx)(a.kcT, {
+                    label: o,
+                    description: s,
+                    helperText: l,
+                    required: c,
+                    errorMessage: u,
+                    hasIcon: n,
+                    onChange: f,
+                    disabled: t,
+                    checked: d,
                 });
             },
             controls: {

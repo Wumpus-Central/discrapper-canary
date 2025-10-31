@@ -1,15 +1,15 @@
 n.d(t, {
     NQ: () => b,
-    U1: () => y,
+    U1: () => O,
     XW: () => d,
     _J: () => m,
-    aP: () => h,
+    aP: () => f,
     e7: () => g,
     h6: () => _,
-    oE: () => f,
+    oE: () => h,
     pB: () => p,
-    y: () => O,
-    yr: () => j,
+    y: () => y,
+    yr: () => v,
 }),
     n(781311);
 var r = n(191336),
@@ -134,10 +134,10 @@ let d = (0, r.U)((e) => ({
     p = (e, t, n) => {
         d.getState().initialize(e, t, n);
     },
-    f = () => {
+    h = () => {
         d.getState().reset();
     },
-    h = () => {
+    f = () => {
         let e = d.getState();
         return e.nickname !== c.nickname || e.dmsAllowed !== c.dmsAllowed || e.showActivity !== u(e.guildSize);
     },
@@ -145,9 +145,9 @@ let d = (0, r.U)((e) => ({
     m = () => d.getState().guildId,
     b = () => d.getState().touched,
     _ = () => d.getState().dmsAllowed,
-    O = () => d.getState().nickname,
-    y = () => d.getState().showActivity,
-    j = () => {
+    y = () => d.getState().nickname,
+    O = () => d.getState().showActivity,
+    v = () => {
         var e, t;
         let { nickname: n } = d();
         if (null != n && "" !== n.trim()) return n;

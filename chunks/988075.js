@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(936141),
     u = n(546432),
     d = n(388032),
-    f = n(956306);
+    f = n(382985);
 function _(e) {
     let { file: t, name: n, size: a, spoiler: _ } = e,
         p = i.useMemo(

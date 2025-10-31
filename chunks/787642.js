@@ -10,33 +10,33 @@ var r = n(951288),
     d = n(125631),
     p = n(981631),
     f = n(388032),
-    h = n(184904);
-function m(e, t, n) {
+    m = n(184904);
+function h(e, t, n) {
     return (0, r.jsxs)(
         "button",
         {
-            className: h.container,
+            className: m.container,
             onClick: n,
             children: [
                 "function" == typeof e
                     ? (0, r.jsx)("div", {
-                          className: h.icon,
+                          className: m.icon,
                           children: (0, r.jsx)(e, {
-                              className: h.__invalid_iconInner,
+                              className: m.__invalid_iconInner,
                               color: l.TVs.colors.WHITE.css,
                           }),
                       })
                     : (0, r.jsx)("img", {
-                          className: h.icon,
+                          className: m.icon,
                           alt: "",
                           src: e,
                       }),
                 (0, r.jsx)(l.Text, {
-                    className: h.text,
+                    className: m.text,
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(d.Z, { className: h.arrow }),
+                (0, r.jsx)(d.Z, { className: m.arrow }),
             ],
         },
         t,
@@ -47,7 +47,7 @@ function g() {
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)("header", {
-                className: h.header,
+                className: m.header,
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
@@ -62,10 +62,10 @@ function g() {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: h.grid,
+                className: m.grid,
                 children: [
                     e.map((e) =>
-                        m(
+                        h(
                             u.ZP.getGuildIconURL({
                                 id: e.id,
                                 icon: e.icon,
@@ -80,7 +80,7 @@ function g() {
                             },
                         ),
                     ),
-                    m(l.Jmo, f.intl.string(f.t.AhKnz4), () => {
+                    h(l.Jmo, f.intl.string(f.t.AhKnz4), () => {
                         c.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
                             (0, a.uL)(p.Z5c.GUILD_DISCOVERY);
                     }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -9,16 +9,16 @@ var r = n(951288),
     u = n(451603),
     d = n(885714),
     p = n(155409),
-    f = n(601964),
-    h = n(430824),
+    h = n(601964),
+    f = n(430824),
     g = n(594174),
     m = n(40153),
     b = n(603592),
     _ = n(981631),
-    O = n(675999),
-    y = n(388032),
-    j = n(816827);
-let v = {
+    y = n(675999),
+    O = n(388032),
+    v = n(816827);
+let j = {
     origin: {
         x: -16,
         y: 0,
@@ -30,7 +30,7 @@ let v = {
         y: 0,
     },
 };
-function x(e) {
+function C(e) {
     (0, a.jW)(e, async () => {
         let { default: e } = await n.e("9606").then(n.bind(n, 987578));
         return (t) =>
@@ -64,12 +64,12 @@ function x(e) {
             );
     });
 }
-function C(e) {
+function x(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        a = (0, l.Wu)([h.Z], () => h.Z.getGuildsArray()),
-        C = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        E = i.useMemo(() => a.some((e) => (0, f.eM)(e, C)), [a, C]),
-        S = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
+        a = (0, l.Wu)([f.Z], () => f.Z.getGuildsArray()),
+        x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        E = i.useMemo(() => a.some((e) => (0, h.eM)(e, x)), [a, x]),
+        S = (0, o.s9z)((e) => (0, o.DEQ)(e, y.PU)),
         { analyticsLocations: I } = (0, s.ZP)(),
         P = (0, r.jsx)(b.Z, {
             showPill: !1,
@@ -87,23 +87,23 @@ function C(e) {
                     : c.Z.openCreateGuildModal({ location: "Guild List" });
             },
             selected: S,
-            onContextMenu: x,
-            tooltip: y.intl.string(y.t.l5WIbf),
+            onContextMenu: C,
+            tooltip: O.intl.string(O.t.l5WIbf),
             icon: o.oFk,
         });
     return t
         ? P
         : (0, r.jsx)("div", {
-              className: j.tutorialContainer,
+              className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
                   tutorialId: E ? "create-more-servers" : "create-first-server",
-                  inlineSpecs: v,
+                  inlineSpecs: j,
                   position: "right",
                   children: [
                       P,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
-                              name: y.intl.string(y.t["45xjM5"]),
+                              name: O.intl.string(O.t["45xjM5"]),
                               targetNode: n,
                               below: !0,
                               noCombine: !0,

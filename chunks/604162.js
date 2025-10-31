@@ -1,13 +1,13 @@
 n.d(t, {
     G6: () => m,
     JC: () => u,
-    PW: () => p,
+    PW: () => f,
     yv: () => d,
 }),
     n(388685);
 var r = n(647438),
-    l = n(447543),
-    o = n(960904),
+    o = n(447543),
+    l = n(960904),
     i = n(830121),
     a = n(701190),
     s = n(771845),
@@ -20,7 +20,7 @@ function d(e) {
 }
 function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
-        [l, o] = (0, r.useState)(e),
+        [o, l] = (0, r.useState)(e),
         i = (0, r.useRef)(null);
     return (
         (0, r.useEffect)(
@@ -30,25 +30,25 @@ function m(e, t) {
             [e],
         ),
         [
-            l,
+            o,
             () => {
-                o(t),
+                l(t),
                     null != i.current && clearTimeout(i.current),
                     (i.current = setTimeout(() => {
-                        o(e);
+                        l(e);
                     }, n));
             },
         ]
     );
 }
-async function f(e) {
+async function p(e) {
     try {
         var t;
         let n = (0, i.zO)(e);
-        if (null == n || n.type !== o.g.INVITE) return !1;
+        if (null == n || n.type !== l.g.INVITE) return !1;
         let r = a.Z.getInvite(n.code);
         if (null == r) {
-            let { invite: e } = await l.ZP.resolveInvite(n.code, "Markdown Link");
+            let { invite: e } = await o.ZP.resolveInvite(n.code, "Markdown Link");
             r = e;
         }
         if (null == r) return !1;
@@ -59,10 +59,10 @@ async function f(e) {
         return !1;
     }
 }
-async function p(e) {
+async function f(e) {
     try {
         if (c.Z.isDiscordUrl(e)) return !0;
-        return await f(e);
+        return await p(e);
     } catch (e) {
         return !1;
     }

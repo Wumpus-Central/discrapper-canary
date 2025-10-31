@@ -20,9 +20,9 @@ function y(e) {
 }
 let x = (0, a.Z)((e) => {
     var t, n;
-    let { channel: a, width: x, onScroll: v, popoutType: j } = e,
+    let { channel: a, width: x, onScroll: O, popoutType: j } = e,
         {
-            selectedParticipantId: O,
+            selectedParticipantId: v,
             largeStream: C,
             chatOpen: I,
         } = (0, l.cj)(
@@ -36,7 +36,7 @@ let x = (0, a.Z)((e) => {
         ),
         S = (0, c.Io)(a.id),
         E = (0, c.Rk)(a.id, d.pV.AUDIENCE),
-        Z = (0, l.e7)([o.Z], () => (null != O ? o.Z.getParticipant(a.id, O) : null)),
+        Z = (0, l.e7)([o.Z], () => (null != v ? o.Z.getParticipant(a.id, v) : null)),
         P = (0, c.w8)(a.id, d.pV.SPEAKER),
         T = P.filter(y),
         N = null != P.find((e) => e.type === d.Ui.STREAM),
@@ -159,6 +159,6 @@ let x = (0, a.Z)((e) => {
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!F(e)),
         className: _.scroller,
         chunkSize: 60,
-        onScroll: v,
+        onScroll: O,
     });
 });

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => x,
-    r: () => L,
+    Z: () => L,
+    r: () => x,
 }),
     n(539854),
     n(388685);
@@ -307,7 +307,7 @@ function D(e) {
         ],
     });
 }
-function L(e) {
+function x(e) {
     let { appliedGuildBoosts: t, premiumSubscription: n } = e,
         a = i.useMemo(() => {
             let e = {};
@@ -342,7 +342,7 @@ function L(e) {
               ],
           });
 }
-function x(e) {
+function L(e) {
     let { guildBoostSlots: t, premiumSubscription: n } = e,
         [a, o] = i.useState(!1);
     i.useEffect(() => {

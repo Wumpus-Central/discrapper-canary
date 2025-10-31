@@ -384,11 +384,11 @@ let N = { replay: null },
     },
     w = 10,
     D = !1,
-    L = "",
-    x = !1,
+    x = "",
+    L = !1,
     M = !1,
-    k = [],
-    j = (e) =>
+    j = [],
+    k = (e) =>
         e._config && e._config.installationMethod
             ? e._config.installationMethod
             : e._gtm
@@ -403,14 +403,14 @@ let N = { replay: null },
             ((M = !0), console.warn(`[Sprig] ${e.blockedURI} is blocked by Content-Security-Policy`));
     },
     G = (e = "") => {
-        (D = !0), (L = e);
+        (D = !0), (x = e);
     };
 function B(e = {}) {
     let t = {
         "Content-Type": "application/json",
         "userleap-platform": "web",
         "x-ul-sdk-version": "2.34.0",
-        "x-ul-installation-method": j(e),
+        "x-ul-installation-method": k(e),
         "sprig-modules": P(),
     };
     return (
@@ -429,7 +429,7 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
         if (e) return { status: 429 };
         {
             let e = new C(t);
-            return k.push(e), e.promise;
+            return j.push(e), e.promise;
         }
     },
     F = async (e, t) => {
@@ -440,17 +440,17 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
                 retries: n,
                 shouldDropOnRateLimit: r,
             };
-        if (x && !i) return Z(o);
+        if (L && !i) return Z(o);
         let s = {
             ok: !1,
             reportError: !1,
         };
-        if (D) return console.info(`UserLeap - ${L}`), s;
+        if (D) return console.info(`UserLeap - ${x}`), s;
         try {
             let t = await fetch(e, a);
             if (429 === t.status) {
-                if ((!x && !r) || i) {
-                    x = !0;
+                if ((!L && !r) || i) {
+                    L = !0;
                     let n = t.headers.has("ratelimit-reset") ? Number(t.headers.get("ratelimit-reset")) : w;
                     return (
                         await v(1000 * n),
@@ -464,9 +464,9 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
                 return Z(o);
             }
             if (
-                ((x = !1),
-                k.length &&
-                    (k.map((e) => {
+                ((L = !1),
+                j.length &&
+                    (j.map((e) => {
                         let t = e.payload;
                         F(t.url, {
                             ...t.options,
@@ -476,7 +476,7 @@ let Z = async ({ shouldDropOnRateLimit: e, ...t }) => {
                             e.resolveRequest(t);
                         });
                     }),
-                    (k = [])),
+                    (j = [])),
                 t.ok)
             ) {
                 if (249 === t.status) return G(), s;

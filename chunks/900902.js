@@ -1,6 +1,6 @@
-n.d(t, { Z: () => f });
-var i = n(951288),
-    r = n(647438),
+n.d(t, { Z: () => h });
+var r = n(951288),
+    i = n(647438),
     l = n(901461),
     a = n(453687),
     o = n(464891),
@@ -8,7 +8,7 @@ var i = n(951288),
     c = n(507418),
     u = n(348238),
     d = n(981631);
-let p = r.memo(function (e) {
+let p = i.memo(function (e) {
         let {
                 message: t,
                 channel: n,
@@ -16,23 +16,23 @@ let p = r.memo(function (e) {
                 groupId: a,
                 isGroupStart: s,
                 usernameProfile: p,
-                avatarProfile: h,
-                setPopout: f,
+                avatarProfile: f,
+                setPopout: h,
                 author: m,
                 repliedMessage: g,
                 roleIcon: b,
             } = e,
-            C = (0, u.wq)(t.author.id, n.id),
-            y = (0, u.XO)(t, n, p, f),
-            _ = (0, u.R9)(h, f),
-            v = r.useCallback(() => {
-                f({
+            _ = (0, u.wq)(t.author.id, n.id),
+            y = (0, u.XO)(t, n, p, h),
+            C = (0, u.R9)(f, h),
+            v = i.useCallback(() => {
+                h({
                     usernameProfile: !1,
                     avatarProfile: !1,
                     referencedUsernameProfile: !1,
                 });
-            }, [f]);
-        return (0, i.jsx)(o.ZP, {
+            }, [h]);
+        return (0, r.jsx)(o.ZP, {
             guildId: n.guild_id,
             message: t,
             channel: n,
@@ -42,46 +42,46 @@ let p = r.memo(function (e) {
             subscribeToGroupId: a,
             showTimestampOnHover: !s && l && t.type !== d.uaV.REPLY,
             renderPopout: c.Z,
-            showAvatarPopout: h,
+            showAvatarPopout: f,
             showUsernamePopout: p,
-            onClickAvatar: _,
+            onClickAvatar: C,
             onClickUsername: y,
-            onContextMenu: C,
+            onContextMenu: _,
             onPopoutRequestClose: v,
             roleIcon: b,
         });
     }),
-    h = r.memo(s.Z);
-function f(e) {
+    f = i.memo(s.Z);
+function h(e) {
     let {
             messageProps: t,
             setPopout: n,
-            messagePopouts: r,
+            messagePopouts: i,
             replyReference: o,
             author: s,
             repliedMessage: c,
             roleIcon: u,
         } = e,
-        { message: d, compact: f, channel: m, groupId: g } = t,
-        { usernameProfile: b, avatarProfile: C } = r;
+        { message: d, compact: h, channel: m, groupId: g } = t,
+        { usernameProfile: b, avatarProfile: _ } = i;
     if ((0, l.Z)(d)) return null;
     let y = d.id === g;
-    return y || f || null != o
-        ? (0, i.jsx)(p, {
+    return y || h || null != o
+        ? (0, r.jsx)(p, {
               message: d,
               channel: m,
-              compact: f,
+              compact: h,
               subscribeToGroupId: g,
               isGroupStart: y,
               groupId: g,
               setPopout: n,
               usernameProfile: b,
-              avatarProfile: C,
+              avatarProfile: _,
               author: s,
               repliedMessage: c,
               roleIcon: u,
           })
-        : (0, i.jsx)(h, {
+        : (0, r.jsx)(f, {
               compact: !0,
               timestamp: d.timestamp,
               isInline: !1,

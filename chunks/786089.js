@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(481060),
     p = n(393238),
     f = n(410030),
-    h = n(204418),
-    m = n(70097),
+    m = n(204418),
+    h = n(70097),
     g = n(594174),
     _ = n(626135),
     b = n(617136),
     E = n(113434),
     O = n(497505),
     I = n(475595),
-    v = n(352084),
-    y = n(125011),
+    y = n(352084),
+    v = n(125011),
     C = n(685613),
     S = n(981631),
     T = n(388032),
@@ -141,18 +141,18 @@ let j = (0, i.memo)(function (e) {
                               ref: G,
                               className: N.decoWrapper,
                               style: { top: L },
-                              children: (0, r.jsx)(h.Z, {
+                              children: (0, r.jsx)(m.Z, {
                                   avatarDecorationOverride: X,
                                   user: B,
                                   guildId: null,
                               }),
                           }),
                       q
-                          ? (0, r.jsx)(v.Z, { className: N.image })
+                          ? (0, r.jsx)(y.Z, { className: N.image })
                           : Q
-                            ? (0, r.jsx)(y.Z, { className: N.image })
+                            ? (0, r.jsx)(v.Z, { className: N.image })
                             : et.isAnimated
-                              ? (0, r.jsx)(m.Z, {
+                              ? (0, r.jsx)(h.Z, {
                                     className: N.assetBlurred,
                                     autoPlay: !1,
                                     children: (0, r.jsx)("source", {

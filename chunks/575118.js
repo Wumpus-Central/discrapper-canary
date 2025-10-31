@@ -177,8 +177,8 @@ function T(e) {
             color: "text-primary",
             children: a,
         }),
-        D = null != n ? R : P,
-        w = (0, r.jsx)("header", {
+        w = null != n ? R : P,
+        D = (0, r.jsx)("header", {
             className: o()(g.section, g.header, { [g.headerCentered]: c }),
             children: (0, r.jsxs)(p.K, {
                 gap: 8,
@@ -191,7 +191,7 @@ function T(e) {
                             hasGradient: T,
                             children: (0, r.jsx)("div", {
                                 className: g.headerMain,
-                                children: D,
+                                children: w,
                             }),
                         }),
                     }),
@@ -205,9 +205,9 @@ function T(e) {
         ? (0, r.jsx)(u.$, {
               color: t,
               className: g.headerGradient,
-              children: w,
+              children: D,
           })
-        : w;
+        : D;
 }
 function S(e) {
     let { badge: t } = e;

@@ -7,7 +7,7 @@ var r = n(951288),
     o = n(388032),
     c = n(818923),
     u = n(805832),
-    d = n(981028);
+    d = n(822338);
 let p = function (e) {
     let { quest: t } = e;
     return (0, r.jsx)("div", {

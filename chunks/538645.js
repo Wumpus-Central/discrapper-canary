@@ -1,10 +1,10 @@
 n.d(t, { Z: () => v }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(772848),
-    s = n(442837),
+    r = n.n(l),
+    s = n(772848),
+    o = n(442837),
     c = n(481060),
     d = n(53281),
     u = n(281598),
@@ -12,29 +12,29 @@ var a = n(951288),
     p = n(25251),
     h = n(373071),
     x = n(782691),
-    f = n(558270);
-let b = "Make sure you're only uploading text files!",
-    g = (e) => {
-        var t, n, r;
-        let { effect: l, onClick: i } = e,
-            { deleteConfig: o } = (0, h.n6)();
+    g = n(558270);
+let f = "Make sure you're only uploading text files!",
+    b = (e) => {
+        var t, n, i;
+        let { effect: l, onClick: r } = e,
+            { deleteConfig: s } = (0, h.n6)();
         return (0, a.jsxs)(c.P3F, {
-            className: f.previewCard,
+            className: g.previewCard,
             onClick: () => {
-                i(l);
+                r(l);
             },
             children: [
                 (0, a.jsx)("div", {
-                    className: f.previewCardImage,
+                    className: g.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
-                            null == (r = l.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64,
+                            null == (i = l.config) || null == (n = i.effects) || null == (t = n[0]) ? void 0 : t.base64,
                             ")",
                         ),
                     },
                 }),
                 (0, a.jsxs)("div", {
-                    className: f.previewCardFooter,
+                    className: g.previewCardFooter,
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
@@ -44,7 +44,7 @@ let b = "Make sure you're only uploading text files!",
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), o(l.skuId);
+                                e.preventDefault(), e.stopPropagation(), s(l.skuId);
                             },
                         }),
                     ],
@@ -54,37 +54,37 @@ let b = "Make sure you're only uploading text files!",
     };
 function v() {
     let { profileEffects: e, upsertConfig: t } = (0, h.n6)(),
-        [n, l] = r.useState(),
-        v = r.useRef(null),
-        j = (0, s.Wu)([p.Z], () => p.Z.getAllProfileEffects()),
-        [_, y] = r.useState("");
-    r.useEffect(() => {
+        [n, l] = i.useState(),
+        v = i.useRef(null),
+        j = (0, o.Wu)([p.Z], () => p.Z.getAllProfileEffects()),
+        [_, y] = i.useState("");
+    i.useEffect(() => {
         (0, m.t)(!0);
     }, []);
-    let C = r.useMemo(
+    let C = i.useMemo(
             () =>
                 "" === _
                     ? j
                     : j.filter((e) => {
-                          var t, n, a, r;
+                          var t, n, a, i;
                           let l = _.toLowerCase(),
-                              i = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
-                              o = null != (r = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? r : "";
-                          return i.includes(l) || o.includes(l);
+                              r = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
+                              s = null != (i = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? i : "";
+                          return r.includes(l) || s.includes(l);
                       }),
             [_, j],
         ),
-        S = r.useCallback(
+        S = i.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, u.Eo)(b);
-                let [a, r] = n.split(",");
-                if (!a.includes("text/plain")) return (0, u.Eo)(b);
-                let l = JSON.parse(atob(r));
-                (l.skuId = (0, o.Z)()), t(l), (0, u.XA)("Profile Effect (maybe??) imported!");
+                if (null == n || !e.type.startsWith("text/")) return (0, u.Eo)(f);
+                let [a, i] = n.split(",");
+                if (!a.includes("text/plain")) return (0, u.Eo)(f);
+                let l = JSON.parse(atob(i));
+                (l.skuId = (0, s.Z)()), t(l), (0, u.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
-        E = r.useCallback(
+        E = i.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
@@ -94,26 +94,26 @@ function v() {
             [S],
         );
     return (0, a.jsxs)("div", {
-        className: f.root,
+        className: g.root,
         children: [
             null == n &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
-                            className: f.col,
+                            className: g.col,
                             children: [
                                 (0, a.jsx)("div", {
-                                    className: f.section,
+                                    className: g.section,
                                     children: (0, a.jsx)(c.Heading, {
                                         variant: "heading-xl/bold",
                                         children: "Custom Profile Effects",
                                     }),
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.customEffectsGrid,
+                                    className: g.customEffectsGrid,
                                     children: Object.values(e).map((e) =>
                                         (0, a.jsx)(
-                                            g,
+                                            b,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
@@ -127,10 +127,10 @@ function v() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: i()(f.row, f.end, f.section),
+                            className: r()(g.row, g.end, g.section),
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: f.uploadButton,
+                                    className: g.uploadButton,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: "text-md/normal",
@@ -149,7 +149,7 @@ function v() {
                                     text: "Create New Effect",
                                     onClick: () => {
                                         t({
-                                            skuId: (0, o.Z)(),
+                                            skuId: (0, s.Z)(),
                                             name: "New Profile Effect",
                                             config: { effects: [] },
                                         });
@@ -159,7 +159,7 @@ function v() {
                         }),
                         (0, a.jsx)("hr", {}),
                         (0, a.jsxs)("div", {
-                            className: f.section,
+                            className: g.section,
                             children: [
                                 (0, a.jsx)(c.Heading, {
                                     variant: "heading-xl/bold",
@@ -172,12 +172,12 @@ function v() {
                                     },
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.pfxGrid,
+                                    className: g.pfxGrid,
                                     children: C.map((e) =>
                                         (0, a.jsx)(
                                             c.P3F,
                                             {
-                                                className: f.pfxListItem,
+                                                className: g.pfxListItem,
                                                 style: {
                                                     backgroundImage: "url(".concat(e.config.thumbnailPreviewSrc, ")"),
                                                 },
@@ -190,7 +190,7 @@ function v() {
                                                     });
                                                 },
                                                 children: (0, a.jsx)("div", {
-                                                    className: f.pfxListItemFooter,
+                                                    className: g.pfxListItemFooter,
                                                     children: (0, a.jsx)(c.Text, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",

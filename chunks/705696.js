@@ -33,12 +33,12 @@ function v(e) {
             disallowTypeAhead: P = !1,
             shouldUseVirtualFocus: w,
             allowsTabNavigation: D = !1,
-            isVirtualized: L,
-            scrollRef: x = I,
+            isVirtualized: x,
+            scrollRef: L = I,
             linkBehavior: M = "action",
         } = e,
-        { direction: k } = (0, O.j)(),
-        j = (0, a.tv)(),
+        { direction: j } = (0, O.j)(),
+        k = (0, a.tv)(),
         U = (e) => {
             var t, i, a, l, c, u, d, f, _, p, m, E, b;
             if (
@@ -54,7 +54,7 @@ function v(e) {
                         });
                         let a = (0, r.D0)(I, t),
                             o = n.getItemProps(t);
-                        a && j.open(a, e, o.href, o.routerOptions);
+                        a && k.open(a, e, o.href, o.routerOptions);
                         return;
                     }
                     n.setFocusedKey(t, i),
@@ -104,14 +104,14 @@ function v(e) {
                         null == t &&
                             S &&
                             (t =
-                                "rtl" === k
+                                "rtl" === j
                                     ? null == (_ = v.getFirstKey)
                                         ? void 0
                                         : _.call(v, n.focusedKey)
                                     : null == (p = v.getLastKey)
                                       ? void 0
                                       : p.call(v, n.focusedKey)),
-                            null != t && (e.preventDefault(), y(t, "rtl" === k ? "first" : "last"));
+                            null != t && (e.preventDefault(), y(t, "rtl" === j ? "first" : "last"));
                     }
                     break;
                 case "ArrowRight":
@@ -125,14 +125,14 @@ function v(e) {
                         null == t &&
                             S &&
                             (t =
-                                "rtl" === k
+                                "rtl" === j
                                     ? null == (E = v.getLastKey)
                                         ? void 0
                                         : E.call(v, n.focusedKey)
                                     : null == (b = v.getFirstKey)
                                       ? void 0
                                       : b.call(v, n.focusedKey)),
-                            null != t && (e.preventDefault(), y(t, "rtl" === k ? "last" : "first"));
+                            null != t && (e.preventDefault(), y(t, "rtl" === j ? "last" : "first"));
                     }
                     break;
                 case "Home":
@@ -198,15 +198,15 @@ function v(e) {
             left: 0,
         });
     (0, l.z)(
-        x,
+        L,
         "scroll",
-        L
+        x
             ? void 0
             : () => {
                   var e, t, n, r;
                   G.current = {
-                      top: null != (n = null == (e = x.current) ? void 0 : e.scrollTop) ? n : 0,
-                      left: null != (r = null == (t = x.current) ? void 0 : t.scrollLeft) ? r : 0,
+                      top: null != (n = null == (e = L.current) ? void 0 : e.scrollTop) ? n : 0,
+                      left: null != (r = null == (t = L.current) ? void 0 : t.scrollLeft) ? r : 0,
                   };
               },
     );
@@ -226,8 +226,8 @@ function v(e) {
                         ? r(null != (a = n.lastSelectedKey) ? a : null == (t = v.getLastKey) ? void 0 : t.call(v))
                         : r(null != (o = n.firstSelectedKey) ? o : null == (i = v.getFirstKey) ? void 0 : i.call(v));
                 } else
-                    !L && x.current && ((x.current.scrollTop = G.current.top), (x.current.scrollLeft = G.current.left));
-                if (null != n.focusedKey && x.current) {
+                    !x && L.current && ((L.current.scrollTop = G.current.top), (L.current.scrollLeft = G.current.left));
+                if (null != n.focusedKey && L.current) {
                     let e = (0, r.D0)(I, n.focusedKey);
                     e instanceof HTMLElement &&
                         (e.contains(document.activeElement) || w || (0, s.A)(e),
@@ -309,7 +309,7 @@ function v(e) {
             n.isFocused &&
             null != n.focusedKey &&
             (n.focusedKey !== K.current || W.current) &&
-            x.current &&
+            L.current &&
             I.current
         ) {
             let e = (0, b.Jz)(),
@@ -318,8 +318,8 @@ function v(e) {
             ("keyboard" === e || W.current) &&
                 (z.current && cancelAnimationFrame(z.current),
                 (z.current = requestAnimationFrame(() => {
-                    x.current &&
-                        ((0, c.z)(x.current, t), "virtual" !== e && (0, c.G)(t, { containingElement: I.current }));
+                    L.current &&
+                        ((0, c.z)(L.current, t), "virtual" !== e && (0, c.G)(t, { containingElement: I.current }));
                 })));
         }
         !w && n.isFocused && null == n.focusedKey && null != K.current && I.current && (0, y.e)(I.current),
@@ -340,7 +340,7 @@ function v(e) {
             onFocus: B,
             onBlur: Z,
             onMouseDown(e) {
-                x.current === e.target && e.preventDefault();
+                L.current === e.target && e.preventDefault();
             },
         },
         { typeSelectProps: X } = (0, i.i)({

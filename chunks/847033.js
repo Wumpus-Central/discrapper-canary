@@ -69,31 +69,31 @@ function N(e) {
         P = (null == T ? void 0 : T.features.has(I.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         w = (0, f.mY)(null == T ? void 0 : T.id),
         D = w && R,
-        L = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
-        x = [],
+        x = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
+        L = [],
         M = y.y.GUILD_SHOP_FULL_PREVIEW;
     C || (P && w)
-        ? (x.push(L === O.a3.PRODUCTS_FIRST ? y.y.GUILD_PRODUCTS : y.y.GUILD_ROLE_SUBSCRIPTIONS),
-          x.push(L === O.a3.PRODUCTS_FIRST ? y.y.GUILD_ROLE_SUBSCRIPTIONS : y.y.GUILD_PRODUCTS),
-          (M = x[0]))
+        ? (L.push(x === O.a3.PRODUCTS_FIRST ? y.y.GUILD_PRODUCTS : y.y.GUILD_ROLE_SUBSCRIPTIONS),
+          L.push(x === O.a3.PRODUCTS_FIRST ? y.y.GUILD_ROLE_SUBSCRIPTIONS : y.y.GUILD_PRODUCTS),
+          (M = L[0]))
         : P && !w
-          ? (x.push(y.y.GUILD_PRODUCTS), (M = y.y.GUILD_PRODUCTS))
+          ? (L.push(y.y.GUILD_PRODUCTS), (M = y.y.GUILD_PRODUCTS))
           : !P &&
             w &&
-            (x.push(y.y.GUILD_ROLE_SUBSCRIPTIONS),
+            (L.push(y.y.GUILD_ROLE_SUBSCRIPTIONS),
             (M = y.y.GUILD_ROLE_SUBSCRIPTIONS),
-            N && x.push(y.y.GUILD_PRODUCTS_PREVIEW)),
+            N && L.push(y.y.GUILD_PRODUCTS_PREVIEW)),
         (a = null != a ? a : M);
-    let [k, j] = i.useState(a),
-        U = (N && !D) || k === y.y.GUILD_PRODUCTS_PREVIEW;
+    let [j, k] = i.useState(a),
+        U = (N && !D) || j === y.y.GUILD_PRODUCTS_PREVIEW;
     i.useEffect(() => {
-        j(a);
+        k(a);
     }, [a]);
     let G = (e) => {
         (0, u.Q3)(l.z.SERVER_SHOP_PHANTOM_PREVIEW);
         let t = S({}, (0, c.hH)(o));
-        if (k === y.y.GUILD_PRODUCTS_PREVIEW)
-            e.stopPropagation(), j(y.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = v.mz.DISMISS_TAB_PREVIEW);
+        if (j === y.y.GUILD_PRODUCTS_PREVIEW)
+            e.stopPropagation(), k(y.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = v.mz.DISMISS_TAB_PREVIEW);
         else {
             var n;
             (0, p.dL)(I.Z5c.CHANNEL(o, null == (n = h.ZP.getDefaultChannel(o)) ? void 0 : n.id)),
@@ -103,9 +103,9 @@ function N(e) {
     };
     return (0, r.jsx)(A.Provider, {
         value: {
-            selectedTab: k,
-            setSelectedTab: j,
-            categoryTabs: x,
+            selectedTab: j,
+            setSelectedTab: k,
+            categoryTabs: L,
             isPhantomPreview: U,
             handlePreviewDismiss: G,
         },

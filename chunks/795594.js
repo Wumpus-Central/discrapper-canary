@@ -41,8 +41,8 @@ var r = n(951288),
     x = n(881998),
     L = n(592125),
     M = n(944486),
-    k = n(246946),
-    j = n(9156),
+    j = n(246946),
+    k = n(9156),
     U = n(768581),
     G = n(630388),
     B = n(49012),
@@ -304,15 +304,15 @@ let ef = (e) => {
             C = S.w.useExperiment({ location: "oauth2_authorize" }),
             x = a.bot,
             M = (0, p.e7)([L.Z], () => L.Z.getDMFromUserId(null == x ? void 0 : x.id)),
-            { appDMChannelMuteConfig: k, dmChannelMuted: B } = (0, p.cj)([j.ZP], () =>
+            { appDMChannelMuteConfig: j, dmChannelMuted: B } = (0, p.cj)([k.ZP], () =>
                 null == M
                     ? {
                           appDMChannelMuteConfig: null,
                           dmChannelMuted: !1,
                       }
                     : {
-                          appDMChannelMuteConfig: j.ZP.getChannelMuteConfig(null, M),
-                          dmChannelMuted: j.ZP.isChannelMuted(null, M),
+                          appDMChannelMuteConfig: k.ZP.getChannelMuteConfig(null, M),
+                          dmChannelMuted: k.ZP.isChannelMuted(null, M),
                       },
             ),
             [V, H] = i.useState(!1),
@@ -561,9 +561,9 @@ let ef = (e) => {
                                           ? (0, r.jsx)(g.rsf, {
                                                 label: en.intl.string(en.t.NkwaBs),
                                                 description:
-                                                    (null == k ? void 0 : k.end_time) != null
+                                                    (null == j ? void 0 : j.end_time) != null
                                                         ? en.intl.format(en.t.j7h4AJ, {
-                                                              endTime: new Date(k.end_time).toLocaleString(
+                                                              endTime: new Date(j.end_time).toLocaleString(
                                                                   en.intl.currentLocale,
                                                                   {
                                                                       month: "numeric",
@@ -640,7 +640,7 @@ let ef = (e) => {
     },
     em = (0, d.U)(() => ({ searchQuery: "" })),
     eg = () => {
-        let e = (0, p.e7)([k.Z], () => k.Z.hidePersonalInformation),
+        let e = (0, p.e7)([j.Z], () => j.Z.hidePersonalInformation),
             { fetchState: t, appAuthTokens: n } = (0, p.cj)([x.Z], () => ({
                 fetchState: x.Z.getFetchState(),
                 appAuthTokens: x.Z.getNewestTokensForNonChildrenApplications(),

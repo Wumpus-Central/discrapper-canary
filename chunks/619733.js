@@ -1,22 +1,22 @@
 n.d(t, {
     AK: () => c,
-    EK: () => i,
-    IX: () => o,
+    EK: () => r,
+    IX: () => s,
     SW: () => h,
     SY: () => d,
     Sg: () => m,
-    TG: () => s,
+    TG: () => o,
     YX: () => u,
-    Z4: () => b,
-    nd: () => f,
+    Z4: () => f,
+    nd: () => g,
     tq: () => p,
     uz: () => x,
 });
 var a,
-    r = n(763600),
+    i = n(763600),
     l = n(48541),
-    i = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
-let o = {
+    r = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
+let s = {
         steps: {
             "select-game": {
                 onBack: { type: "close" },
@@ -34,9 +34,9 @@ let o = {
             },
         },
     },
-    s = 24,
+    o = 24,
     c = 680,
-    d = 12633 == n.j ? c - 2 * s : null,
+    d = 12633 == n.j ? c - 2 * o : null,
     u = 10,
     m = 32,
     p = 1000,
@@ -47,11 +47,11 @@ let o = {
               ? "1415044199572832256"
               : "1415025086791942144",
     x = {
-        [r.Z.SHOCKBYTE]:
+        [i.Z.SHOCKBYTE]:
             window.GLOBAL_ENV.RELEASE_CHANNEL === l.C.STAGING
                 ? "https://purple-prod.shockbyte.dev/support"
                 : "https://discord.shockbyte.com/support",
     },
-    f = { [r.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    b = (e, t) =>
+    g = { [i.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    f = (e, t) =>
         "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=".concat(e, "&guild_id=").concat(t);

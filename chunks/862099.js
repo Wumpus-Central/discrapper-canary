@@ -16,16 +16,16 @@ var r,
     d = n(471445),
     p = n(986332),
     f = n(662842),
-    h = n(703656),
-    m = n(922482),
+    m = n(703656),
+    h = n(922482),
     g = n(565799),
     _ = n(501655),
     b = n(192079),
     E = n(427679),
     O = n(448206),
     I = n(496675),
-    v = n(938475),
-    y = n(626135),
+    y = n(938475),
+    v = n(626135),
     C = n(823379),
     S = n(15274),
     T = n(924301),
@@ -123,9 +123,9 @@ let B = l.memo(function (e) {
 function H(e) {
     let { guildEvent: t, channel: n } = e,
         r = (0, o.Wu)(
-            [v.ZP],
+            [y.ZP],
             () =>
-                v.ZP.getVoiceStatesForChannel(n).map((e) => {
+                y.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
@@ -162,7 +162,7 @@ function V(e) {
         (0, i.jsx)(c.Button, {
             onClick: function () {
                 (0, D.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, N.L_)(t.id), 1000)),
-                    y.default.track(k.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                    v.default.track(k.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n,
                     });
@@ -182,20 +182,20 @@ function F(e) {
         o = null != a ? (0, x.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
-        { startTime: f, endTime: h } = (0, Z.ZP)(n),
+        { startTime: f, endTime: m } = (0, Z.ZP)(n),
         {
-            startDateTimeString: m,
+            startDateTimeString: h,
             upcomingEvent: g,
             diffMinutes: _,
-        } = (0, R.ub)(f.toISOString(), null == h ? void 0 : h.toISOString()),
+        } = (0, R.ub)(f.toISOString(), null == m ? void 0 : m.toISOString()),
         b = g
             ? _ > 0
                 ? U.intl.formatToPlainString(U.t.PQlCWk, { minutes: _ })
                 : U.intl.string(U.t.WINqKV)
-            : U.intl.formatToPlainString(U.t.DC6h3G, { date: m });
+            : U.intl.formatToPlainString(U.t.DC6h3G, { date: h });
     return (
         l.useEffect(() => {
-            y.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
+            v.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: r,
                 guild_id: n.guild_id,
             });
@@ -218,7 +218,7 @@ function F(e) {
                         }),
                         (0, i.jsx)(c.P3F, {
                             onClick: () => {
-                                y.default.track(k.rMx.CHANNEL_NOTICE_CLOSED, {
+                                v.default.track(k.rMx.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: r,
                                     guild_id: n.guild_id,
                                 }),
@@ -331,7 +331,7 @@ function W(e) {
             text: n,
             fullWidth: !0,
             onClick: () => {
-                null != t && null != t.getGuildId() && ((0, m.Cq)(t), (0, h.XU)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, h.Cq)(t), (0, m.XU)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -377,19 +377,19 @@ function Q(e) {
         d = l.useMemo(() => n.slice(0, 3), [n]),
         p = (0, o.e7)([I.Z], () => I.Z.can(k.Plq.CONNECT, t)),
         f = (0, O.Z)(t.id),
-        h = U.intl.string(U.t.VJlc0S);
+        m = U.intl.string(U.t.VJlc0S);
     switch (r) {
         case 1:
-            h = U.intl.string(U.t.VJlc0S);
+            m = U.intl.string(U.t.VJlc0S);
             break;
         case 2:
-            (h = U.intl.string(U.t.ZYO5OK)),
+            (m = U.intl.string(U.t.ZYO5OK)),
                 (null == f ? void 0 : f.speaker)
-                    ? (h = U.intl.string(U.t["/cnSFc"]))
-                    : null != f && (h = U.intl.string(U.t.btSGOj));
+                    ? (m = U.intl.string(U.t["/cnSFc"]))
+                    : null != f && (m = U.intl.string(U.t.btSGOj));
             break;
         case 3:
-            h = U.intl.string(U.t.wBoE6L);
+            m = U.intl.string(U.t.wBoE6L);
             break;
         default:
             (0, C.vE)(r);
@@ -421,7 +421,7 @@ function Q(e) {
                       null == f &&
                       (0, i.jsx)(W, {
                           channel: t,
-                          label: h,
+                          label: m,
                       }),
               ],
           });
@@ -442,15 +442,15 @@ let J = l.memo(function (e) {
             [s, l],
         ),
         d = null,
-        h = null != s && null != r && !c;
+        m = null != s && null != r && !c;
     if (n) return (0, i.jsx)(f.Z, { guild: t });
     null == l || u
-        ? h &&
+        ? m &&
           (d = (0, i.jsx)(q, {
               stageInstance: s,
               channel: r,
           }))
-        : l.entity_type === M.WX.STAGE_INSTANCE && h
+        : l.entity_type === M.WX.STAGE_INSTANCE && m
           ? (d = (0, i.jsx)(q, {
                 stageInstance: s,
                 channel: r,
@@ -463,8 +463,8 @@ let J = l.memo(function (e) {
                   guildEvent: l,
                   channel: r,
               }));
-    let m = t.features.has(k.GuildFeatures.COMMUNITY);
-    if (null == d && null != a && !m) {
+    let h = t.features.has(k.GuildFeatures.COMMUNITY);
+    if (null == d && null != a && !h) {
         let { upcomingEvent: e, noticeType: t } = a;
         d = (0, i.jsx)(F, {
             guildEvent: e,

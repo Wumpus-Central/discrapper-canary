@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(921944),
     p = n(388032),
     f = n(589148);
-function h(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-class m extends i.PureComponent {
+class h extends i.PureComponent {
     getInviteText() {
         return (0, s.LK)({ location: "invite_notice" }).isGuildEntrypointEnabled
             ? p.intl.string(p.t.Sd8Ixw)
@@ -46,7 +46,7 @@ class m extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            h(this, "handleInvite", () => {
+            m(this, "handleInvite", () => {
                 let { guild: e } = this.props;
                 (0, l.ZDy)(async () => {
                     let { default: t } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
@@ -82,7 +82,7 @@ class m extends i.PureComponent {
                                                 }),
                                             )),
                                             r.forEach(function (t) {
-                                                h(e, t, n[t]);
+                                                m(e, t, n[t]);
                                             });
                                     }
                                     return e;
@@ -95,11 +95,11 @@ class m extends i.PureComponent {
                         );
                 });
             }),
-            h(this, "handleClose", () => {
+            m(this, "handleClose", () => {
                 let e = o.Z.getChannelId(),
                     t = p.intl.formatToPlainString(p.t.DEn7nu, { invitePeople: this.getInviteText() });
                 this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, t);
             });
     }
 }
-let g = m;
+let g = h;

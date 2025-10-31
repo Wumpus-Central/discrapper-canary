@@ -70,8 +70,8 @@ function h(e, t, n) {
             selectionManager: S,
             hasItemActions: !!(O || v),
         }),
-        L = (0, l.z)(e, { labelable: !0 }),
-        x = (0, u.useCallback)(
+        x = (0, l.z)(e, { labelable: !0 }),
+        L = (0, u.useCallback)(
             (e) => {
                 if (S.isFocused) {
                     e.currentTarget.contains(e.target) || S.setFocused(!1);
@@ -84,25 +84,25 @@ function h(e, t, n) {
         M = (0, u.useMemo)(
             () => ({
                 onBlur: P.onBlur,
-                onFocus: x,
+                onFocus: L,
             }),
-            [x, P.onBlur],
+            [L, P.onBlur],
         ),
-        k = (0, _.p)(n, { isDisabled: 0 !== t.collection.size }),
-        j = (0, c.d)(
-            L,
+        j = (0, _.p)(n, { isDisabled: 0 !== t.collection.size }),
+        k = (0, c.d)(
+            x,
             {
                 role: "grid",
                 id: w,
                 "aria-multiselectable": "multiple" === S.selectionMode ? "true" : void 0,
             },
             t.isKeyboardNavigationDisabled ? M : P,
-            (0 === t.collection.size && { tabIndex: k ? -1 : 0 }) || void 0,
+            (0 === t.collection.size && { tabIndex: j ? -1 : 0 }) || void 0,
             D,
         );
     return (
-        h && ((j["aria-rowcount"] = t.collection.size), (j["aria-colcount"] = t.collection.columnCount)),
+        h && ((k["aria-rowcount"] = t.collection.size), (k["aria-colcount"] = t.collection.columnCount)),
         (0, a.B)({ getRowText: y }, t),
-        { gridProps: j }
+        { gridProps: k }
     );
 }

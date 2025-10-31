@@ -67,7 +67,7 @@ function D(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,9 +78,9 @@ function L(e, t) {
         e
     );
 }
-let x = 25,
+let L = 25,
     M = 720;
-function k() {
+function j() {
     return [
         {
             name: N.intl.string(N.t["Sp2NF+"]),
@@ -88,7 +88,7 @@ function k() {
         },
     ];
 }
-function j(e) {
+function k(e) {
     let {
         icon: t,
         onClick: n,
@@ -210,7 +210,7 @@ function G(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        L(w({}, n), {
+                        x(w({}, n), {
                             backgroundOption: t,
                             optionIsInUse: a,
                         }),
@@ -268,7 +268,7 @@ function Z(e) {
         text: l,
         className: R.newBackgroundTooltipContainer,
         children: [
-            (0, r.jsxs)(j, {
+            (0, r.jsxs)(k, {
                 className: R.__invalid_backgroundOptionBlurred,
                 disabled: i,
                 icon: c.FmF,
@@ -323,8 +323,8 @@ function F(e) {
 function V(e) {
     let { onAddBackgroundImage: t, disabled: i } = e,
         a = (0, c.vRw)(),
-        o = i ? N.intl.formatToPlainString(N.t.ykGFeD, { maxCustomBackgrounds: x }) : N.intl.string(N.t.Qx0tFc),
-        s = k();
+        o = i ? N.intl.formatToPlainString(N.t.ykGFeD, { maxCustomBackgrounds: L }) : N.intl.string(N.t.Qx0tFc),
+        s = j();
     function l() {
         (0, c.ZDy)(
             async () => {
@@ -380,7 +380,7 @@ function H(e) {
                 ),
             [n],
         ),
-        h = f.length >= x,
+        h = f.length >= L,
         { analyticsLocations: m } = (0, p.ZP)(_.Z.VIDEO_BACKGROUND_OPTIONS),
         g = Object.values((0, v.Z)()).sort((e, t) => I.E1[e.id] - I.E1[t.id]);
     return (0, r.jsx)(p.Gt, {
@@ -388,13 +388,13 @@ function H(e) {
         children: (0, r.jsxs)("div", {
             className: d ? R.backgroundOptionsSmall : R.backgroundOptionsLarge,
             children: [
-                (0, r.jsx)(j, {
+                (0, r.jsx)(k, {
                     selected: null == a,
                     icon: c.t6m,
                     onClick: () => o(null),
                     text: N.intl.string(N.t.fUdMeO),
                 }),
-                (0, r.jsx)(j, {
+                (0, r.jsx)(k, {
                     selected: a === I.f7,
                     icon: c.yMH,
                     onClick: () => o(I.f7),

@@ -83,11 +83,11 @@ function p(e) {
             sectionHeaderHeight: P,
             sectionFooterHeight: w,
             itemNodeWidth: D,
-            listPaddingRight: L,
-            itemNodeMargin: x,
+            listPaddingRight: x,
+            itemNodeMargin: L,
             listPadding: M,
-            gridNavigatorId: k,
-            gridNotice: j,
+            gridNavigatorId: j,
+            gridNotice: k,
             renderHeader: U,
             renderUpsell: G,
         } = e,
@@ -112,9 +112,9 @@ function p(e) {
             categories: t,
             collapsedCategories: n,
             gridWidth: W,
-            listPaddingRight: L,
+            listPaddingRight: x,
             itemNodeWidth: D,
-            itemNodeMargin: x,
+            itemNodeMargin: L,
         }),
         {
             getItemProps: J,
@@ -128,7 +128,7 @@ function p(e) {
             expressionsGrid: K,
             onSelectItem: p,
             store: f,
-            gridNavigatorId: k,
+            gridNavigatorId: j,
         }),
         er = i.useCallback(
             (e, t) =>
@@ -175,7 +175,7 @@ function p(e) {
                 hasSendableExpressions: !0,
                 onKeyDown: et,
                 expressionsListRef: Z,
-                gridNavigatorId: k,
+                gridNavigatorId: j,
                 defaultSearchPlaceholder: E,
                 emptySearchPlaceholder: b,
             }),
@@ -195,10 +195,10 @@ function p(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           C(Z),
-                          null != j &&
+                          null != k &&
                               (0, r.jsx)("div", {
                                   className: c.gridNoticeWrapper,
-                                  children: j,
+                                  children: k,
                               }),
                           (0, r.jsx)(
                               "div",
@@ -207,7 +207,7 @@ function p(e) {
                                       {
                                           ref: B,
                                           className: c.listWrapper,
-                                          id: k,
+                                          id: j,
                                       },
                                       ee,
                                   ),

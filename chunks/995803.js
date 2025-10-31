@@ -311,10 +311,10 @@ function b(e) {
         P = d.customDevicePixelRatio,
         w = m(a, N),
         D = u(P),
-        L = null != c ? c : {},
-        x = L.maxX,
-        M = L.maxY,
-        k = r.useCallback(
+        x = null != c ? c : {},
+        L = x.maxX,
+        M = x.maxY,
+        j = r.useCallback(
             function () {
                 var e,
                     t,
@@ -332,12 +332,12 @@ function b(e) {
                           height: o,
                       };
             },
-            [a, C, x, M],
+            [a, C, L, M],
         );
     r.useEffect(
         function () {
             if (N && a.current && n) {
-                var e = k(),
+                var e = j(),
                     t = e.width,
                     r = e.height,
                     o = !1;
@@ -377,7 +377,7 @@ function b(e) {
                 l && (S || o) && l && l(), S && A(!1);
             }
         },
-        [i, a, w, D, k, S, A, O, v, p, h, l, N, C, R, n],
+        [i, a, w, D, j, S, A, O, v, p, h, l, N, C, R, n],
     ),
         r.useEffect(
             function () {

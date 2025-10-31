@@ -144,18 +144,18 @@ let y = new _(l.Z, {
             y = (0, a.MQ)(_),
             x = null == (t = h[b]) ? void 0 : t[y.guildId];
         h[b] = d(c({}, h[b]), { [y.guildId]: c({}, x, y) });
-        let v = null != (i = null == x ? void 0 : x.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
+        let O = null != (i = null == x ? void 0 : x.primaryCategoryId) ? i : s.AR.UNCATEGORIZED,
             j = null != (l = y.primaryCategoryId) ? l : s.AR.UNCATEGORIZED,
-            O = Object.assign({}, null == (n = g[b]) ? void 0 : n[v]);
-        null != x && v !== j && delete O[y.guildId],
+            v = Object.assign({}, null == (n = g[b]) ? void 0 : n[O]);
+        null != x && O !== j && delete v[y.guildId],
             (g[b] = d(c({}, g[b]), {
-                [v]: O,
+                [O]: v,
                 [j]: d(c({}, null == (r = g[b]) ? void 0 : r[j]), { [y.guildId]: c({}, x, y) }),
             })),
-            j !== v &&
+            j !== O &&
                 null != m[b] &&
                 (m[b] = d(c({}, m[b]), {
-                    [v]: (null == (o = m[b]) ? void 0 : o[v]) > 0 ? (null == (u = m[b]) ? void 0 : u[v]) - 1 : 0,
+                    [O]: (null == (o = m[b]) ? void 0 : o[O]) > 0 ? (null == (u = m[b]) ? void 0 : u[O]) - 1 : 0,
                     [j]: (null != (f = null == (p = m[b]) ? void 0 : p[j]) ? f : 0) + 1,
                 }));
     },

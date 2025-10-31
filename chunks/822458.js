@@ -1,30 +1,30 @@
-n.d(t, { Z: () => d });
-var a = n(951288);
-n(647438);
-var l = n(481060),
-    r = n(840724),
-    i = n(727366),
-    o = n(693965);
-function d(e) {
-    let { applicationId: t, guildId: n, sectionTitle: d, skuIds: c, variant: s = r.Z.SMALL } = e;
-    return null == c || 0 === c.length
+l.d(n, { Z: () => o });
+var t = l(951288);
+l(647438);
+var i = l(481060),
+    a = l(840724),
+    r = l(727366),
+    d = l(693965);
+function o(e) {
+    let { applicationId: n, guildId: l, sectionTitle: o, skuIds: s, variant: c = a.Z.SMALL } = e;
+    return null == s || 0 === s.length
         ? null
-        : (0, a.jsxs)("div", {
-              className: o.sectionContainer,
+        : (0, t.jsxs)("div", {
+              className: d.sectionContainer,
               children: [
-                  null != d &&
-                      (0, a.jsx)(l.Heading, {
+                  null != o &&
+                      (0, t.jsx)(i.Heading, {
                           variant: "heading-lg/semibold",
                           color: "header-primary",
                           lineClamp: 1,
-                          className: o.sectionTitle,
-                          children: d,
+                          className: d.sectionTitle,
+                          children: o,
                       }),
-                  (0, a.jsx)(i.t, {
-                      applicationId: t,
-                      skuIds: c,
-                      variant: s,
-                      guildId: n,
+                  (0, t.jsx)(r.t, {
+                      applicationId: n,
+                      skuIds: s,
+                      variant: c,
+                      guildId: l,
                   }),
               ],
           });

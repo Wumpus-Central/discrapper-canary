@@ -78,7 +78,7 @@ let P = 3,
     w = !1,
     D = new c.Z("OverlayUsageStatsManager");
 w || (D.verbose = () => {});
-class L {
+class x {
     increment(e) {
         ++this.actions[e];
     }
@@ -101,7 +101,7 @@ class L {
         });
     }
 }
-class x {
+class L {
     static makeEmptyGroupAnalytics() {
         return {
             [S.Vk.Nudge]: 0,
@@ -115,7 +115,7 @@ class x {
     static makeCounters() {
         let e = {},
             t = Object.values(S.n0);
-        for (let n of t) e[n] = new L();
+        for (let n of t) e[n] = new x();
         if (Object.keys(e).length !== t.length) throw Error("NotificationAnalytics: Failed to make counters");
         return e;
     }
@@ -163,10 +163,10 @@ class x {
             [S.bv.Clicked]: 0,
         }),
             A(this, "groupCounters", {
-                [S.bv.Viewed]: x.makeEmptyGroupAnalytics(),
-                [S.bv.Clicked]: x.makeEmptyGroupAnalytics(),
+                [S.bv.Viewed]: L.makeEmptyGroupAnalytics(),
+                [S.bv.Clicked]: L.makeEmptyGroupAnalytics(),
             }),
-            A(this, "counters", x.makeCounters());
+            A(this, "counters", L.makeCounters());
     }
 }
 class M {
@@ -210,7 +210,7 @@ class M {
         });
     }
 }
-class k {
+class j {
     update() {
         let e = this.game,
             t = b.ZP.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
@@ -291,7 +291,7 @@ class k {
             (this.updateScreenInterval = setInterval(() => this.update(), 10000));
     }
 }
-function j() {
+function k() {
     try {
         return crypto.randomUUID();
     } catch (e) {
@@ -541,10 +541,10 @@ class U {
             A(this, "muteToggledCount", void 0),
             A(this, "_successfullyShown", void 0),
             (this.game = e),
-            (this.uuid = j()),
+            (this.uuid = k()),
             (this.overlayMethod = null),
             (this.overlayMethodStats = null),
-            (this.notificationAnalytics = new x()),
+            (this.notificationAnalytics = new L()),
             (this.widgetAnalytics = new M()),
             (this.uiUnlockedCount = 0),
             (this.uiLockedCount = 0),
@@ -565,7 +565,7 @@ class U {
             (this.soundboardKeepOpenCount = 0),
             (this.muteToggledCount = 0),
             (this._successfullyShown = !1),
-            (this.screenAnalytics = new k(e)),
+            (this.screenAnalytics = new j(e)),
             (this.overlayStatus = (0, d.b6)(e)),
             (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null),
             (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)),

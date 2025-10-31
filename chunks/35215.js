@@ -77,11 +77,11 @@ function D(e, t) {
         e
     );
 }
-let L = 10,
-    x = 20,
+let x = 10,
+    L = 20,
     M = 15,
-    k = 4,
-    j = 5,
+    j = 4,
+    k = 5,
     U = 8,
     G = 10;
 function B(e) {
@@ -276,11 +276,11 @@ function H(e) {
                 .map((e) => p.Z.getGame(e))
                 .filter((e) => null != e)
                 .filter((e) => (0, m.z6)(e.applicationId))
-                .slice(0, L),
+                .slice(0, x),
         ),
         O = i.useMemo(() => {
             let e = y.length;
-            return e <= k ? k - e : e === j ? 0 : e <= U ? U - e : G - e;
+            return e <= j ? j - e : e === k ? 0 : e <= U ? U - e : G - e;
         }, [y.length]);
     if (
         (i.useEffect(() => {
@@ -297,7 +297,7 @@ function H(e) {
         }, [E, t.id, s]),
         g && !E)
     ) {
-        let e = Math.min(o.length, L);
+        let e = Math.min(o.length, x);
         return (0, r.jsxs)("div", {
             className: N.container,
             children: [
@@ -402,7 +402,7 @@ function Y(e) {
         onRequestClose: I,
         position: b,
         align: O,
-        spacing: x,
+        spacing: L,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
         children: (e) => a(e, m),

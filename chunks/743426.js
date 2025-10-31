@@ -836,10 +836,10 @@ class I extends a.Z {
             null == (p = E.setLoopbackPlaybackGainMultiplier) || p.call(E, h.Jk),
             null == (m = E.setVoiceFiltersFailedCallback) || m.call(E, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
             (0, l.Z)(this),
-            S(this);
+            T(this);
     }
 }
-function S(e) {
+function T(e) {
     let t = 900000,
         n = !1;
     e.on(s.aB.Destroy, () => (n = !0));

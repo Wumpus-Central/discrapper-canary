@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => O,
-    Z: () => y,
+    R: () => y,
+    Z: () => O,
 });
 var r,
     i = n(951288);
@@ -13,8 +13,8 @@ var l = n(442837),
     u = n(313201),
     d = n(144114),
     p = n(607744),
-    f = n(594174),
-    h = n(981631),
+    h = n(594174),
+    f = n(981631),
     g = n(815660),
     m = n(388032),
     b = n(36973);
@@ -43,16 +43,16 @@ function _(e) {
     }
     return e;
 }
-var O = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
-let y = (e) => {
-    let { type: t, guildId: r, closePopout: O } = e,
-        y = (0, u.Dt)(),
+var y = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
+let O = (e) => {
+    let { type: t, guildId: r, closePopout: y } = e,
+        O = (0, u.Dt)(),
         {
             notClaimed: v,
             notEmailVerified: j,
             notPhoneVerified: C,
-            newAccount: E,
-            newMember: x,
+            newAccount: x,
+            newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BI"]) : null,
         I = null,
@@ -64,17 +64,17 @@ let y = (e) => {
               ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOv"])))
               : j
                 ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
-                : x
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: h.YeM.MEMBER_AGE })),
+                : E
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: f.YeM.MEMBER_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))
-                  : E &&
-                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: h.YeM.ACCOUNT_AGE })),
+                  : x &&
+                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: f.YeM.ACCOUNT_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
         ? null
         : (0, i.jsxs)(a.VqE, {
               className: b.container,
-              "aria-labelledby": y,
+              "aria-labelledby": O,
               children: [
                   (0, i.jsx)("img", {
                       alt: "",
@@ -86,7 +86,7 @@ let y = (e) => {
                       children: [
                           (0, i.jsx)(a.Heading, {
                               variant: "heading-md/semibold",
-                              id: y,
+                              id: O,
                               children: S,
                           }),
                           (0, i.jsx)(a.Text, {
@@ -142,7 +142,7 @@ let y = (e) => {
                                                                                 children: m.intl.format(m.t.azKEPy, {
                                                                                     email:
                                                                                         null ==
-                                                                                        (t = f.default.getCurrentUser())
+                                                                                        (t = h.default.getCurrentUser())
                                                                                             ? void 0
                                                                                             : t.email,
                                                                                 }),
@@ -171,14 +171,14 @@ let y = (e) => {
                                                                     n),
                                                                 );
                                                             })),
-                                                        O();
+                                                        y();
                                                 },
                                             }),
                                         })
                                       : null,
                                   v || C || j
                                       ? (0, i.jsx)(a.Avr, {
-                                            onClick: O,
+                                            onClick: y,
                                             text: m.intl.string(m.t.oEAioF),
                                             variant: "secondary",
                                         })

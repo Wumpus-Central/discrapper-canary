@@ -1,16 +1,16 @@
 n.d(t, { Z: () => c });
 var a = n(951288),
-    r = n(442837),
+    i = n(442837),
     l = n(696826),
-    i = n(720734),
-    o = n(594174),
-    s = n(51144);
+    r = n(720734),
+    s = n(594174),
+    o = n(51144);
 function c(e) {
     var t;
     let { nameplate: n } = e,
-        c = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        d = null != (t = s.ZP.useName(c)) ? t : "";
-    return (0, a.jsx)(i.m, {
+        c = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        d = null != (t = o.ZP.useName(c)) ? t : "";
+    return (0, a.jsx)(r.m, {
         username: d,
         selfMute: !1,
         selfDeaf: !1,

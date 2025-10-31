@@ -131,7 +131,7 @@ function g(e) {
                 )
             );
         }),
-        L = (0, r.jsx)(a.sNh, {
+        x = (0, r.jsx)(a.sNh, {
             id: "SHOW_MORE",
             label: d.intl.string(d.t.E99UMh),
             dontCloseOnAction: !0,
@@ -146,7 +146,7 @@ function g(e) {
                     });
             },
         }),
-        x = !I && (null == C ? void 0 : C.length) > 0;
+        L = !I && (null == C ? void 0 : C.length) > 0;
     return o
         ? (0, r.jsxs)(
               a.sNh,
@@ -160,14 +160,14 @@ function g(e) {
                       E,
                   ),
                   {
-                      children: [D, x && L],
+                      children: [D, L && x],
                   },
               ),
           )
         : (0, r.jsxs)(
               a.kSQ,
               h(_({ label: O() }, g), {
-                  children: [D, x && L],
+                  children: [D, L && x],
               }),
           );
 }

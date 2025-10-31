@@ -50,10 +50,10 @@ let v = (0, i.animated)(g.ZP),
                     sourceQuestContent: p.jn.QUEST_BAR_V2,
                 });
             }, [S, t]),
-            A = E && O,
-            R = (0, r.jsx)(l.P3F, {
+            R = E && O,
+            A = (0, r.jsx)(l.P3F, {
                 onClick: N,
-                className: o()(j.clickable, { [j.logo]: A }),
+                className: o()(j.clickable, { [j.logo]: R }),
                 children: (0, r.jsx)(v, {
                     quest: t,
                     withGameTile: !1,
@@ -74,7 +74,7 @@ let v = (0, i.animated)(g.ZP),
                 }),
             });
         return (0, r.jsxs)(i.animated.div, {
-            className: o()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: A }),
+            className: o()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: R }),
             style: {
                 transform: (0, i.to)(
                     [
@@ -99,8 +99,8 @@ let v = (0, i.animated)(g.ZP),
                 (0, r.jsx)(x.Z, {
                     quest: t,
                     expansionSpring: n,
-                    isFullyExpanded: A,
-                    partnerBranding: R,
+                    isFullyExpanded: R,
+                    partnerBranding: A,
                     useReducedMotion: y,
                 }),
                 (0, r.jsxs)(i.animated.div, {

@@ -141,7 +141,7 @@ function D(e) {
             lastUpdated: Date.now(),
         });
 }
-async function L(e) {
+async function x(e) {
     await (0, l._v)(200),
         null != N(e) &&
             C(e, {
@@ -150,7 +150,7 @@ async function L(e) {
                 lastUpdated: Date.now(),
             });
 }
-function x(e) {
+function L(e) {
     C(e, {
         requestState: 4,
         abortController: null,
@@ -160,14 +160,14 @@ function x(e) {
 function M(e) {
     P(T(e));
 }
-function k(e) {
+function j(e) {
     return null != e && e.length > 1;
 }
-function j(e) {
+function k(e) {
     let t = {},
         n = {},
         { query: r } = e;
-    if (k(r)) {
+    if (j(r)) {
         let [e, n] = (0, p.C)(r);
         e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
     }
@@ -302,7 +302,7 @@ async function H(e) {
         s = T(e),
         l = R(s),
         [c, u] = F(e, l, o),
-        d = U(j(i), u),
+        d = U(k(i), u),
         f = null != (t = i.selectedSort) ? t : h.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (V(s, d) && (0, a.isEqual)(c, l.cursor)) return;
     let _ = w(s, d, c, o, f);
@@ -323,7 +323,7 @@ async function H(e) {
         D(s);
         return;
     }
-    await L(s);
+    await x(s);
 }
 function Y(e) {
     return A((t) => {
@@ -356,11 +356,11 @@ class K extends c.Z {
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return L(T(t));
+        return x(T(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
-        return x(T(t));
+        return L(T(t));
     }
     handleNewMemberTimestampRefresh(e) {
         let { guildId: t } = e;

@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(848780),
     y = n(907179),
     x = n(671955),
-    v = n(388032),
+    O = n(388032),
     j = n(491010),
-    O = n(268293);
+    v = n(268293);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,7 +76,7 @@ function I(e) {
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: O,
+                                src: v,
                                 className: j.preview,
                                 "aria-hidden": !0,
                             }),
@@ -89,11 +89,11 @@ function I(e) {
                                             (0, r.jsx)(m.Z, { user: t }),
                                             (0, r.jsx)(s.Heading, {
                                                 variant: "heading-lg/bold",
-                                                children: v.intl.string(v.t.b33pLD),
+                                                children: O.intl.string(O.t.b33pLD),
                                             }),
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: v.intl.format(Z ? v.t["8F+WNz"] : v.t["/cZp5s"], {
+                                                children: O.intl.format(Z ? O.t["8F+WNz"] : O.t["/cZp5s"], {
                                                     username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),

@@ -3,7 +3,7 @@ n.d(t, {
     H_: () => a,
     ZP: () => s,
 });
-let { Layer: i, LayerContainer: r, LayerProvider: l } = (0, n(481060).Xvx)("ChannelCallChat"),
-    a = r,
+let { Layer: r, LayerContainer: i, LayerProvider: l } = (0, n(481060).Xvx)("ChannelCallChat"),
+    a = i,
     o = l,
-    s = i;
+    s = r;

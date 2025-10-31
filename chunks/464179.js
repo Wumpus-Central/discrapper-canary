@@ -169,8 +169,8 @@ let O = "US",
     P = (0, u.hQ)(),
     w = (0, u.hQ)(),
     D = (0, u.hQ)(),
-    L = (0, u.hQ)();
-var x = (function (e) {
+    x = (0, u.hQ)();
+var L = (function (e) {
         return (
             (e.MODAL_US = "modalUS"),
             (e.MODAL_INTL = "modalInternational"),
@@ -184,15 +184,15 @@ var x = (function (e) {
             (e.SETTINGS_INTL_NO_NAME_MOBILE = "settingsInternationalWithoutNameMobile"),
             e
         );
-    })(x || {}),
+    })(L || {}),
     M = (function (e) {
         return (e.EDIT = "edit"), (e.CREATE = "create"), e;
     })(M || {});
-let k = {
+let j = {
         [O]: l.G,
         [v]: o.X,
     },
-    j = {
+    k = {
         [O]: l.T,
         [v]: o.j,
     },
@@ -369,7 +369,7 @@ let k = {
         }
         return {
             name: "state",
-            id: L,
+            id: x,
             title: () => t,
             autoComplete: "address-level1",
             getClassNameForLayout: (e) => {
@@ -390,7 +390,7 @@ let k = {
                 }
             },
             renderInput(t, n, r) {
-                let a = k[e],
+                let a = j[e],
                     o =
                         null == t.value ||
                         "" === t.value ||
@@ -402,7 +402,7 @@ let k = {
                                 })),
                     { onChange: s } = t,
                     l = b(t, ["onChange"]),
-                    u = j[e];
+                    u = k[e];
                 return [O, v].includes(e) && o
                     ? (0, i.jsx)(
                           c.VcW,
@@ -535,7 +535,7 @@ class W extends (r = a.PureComponent) {
             });
     }
 }
-h(W, "Layouts", x),
+h(W, "Layouts", L),
     h(W, "Modes", M),
     h(W, "defaultProps", {
         name: "",

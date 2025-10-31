@@ -1,10 +1,10 @@
-n.d(t, { W: () => i });
-var l = n(592125),
-    a = n(496675),
-    r = n(981631);
-function i(e) {
-    let t = l.Z.getChannel(e),
+n.d(t, { W: () => o });
+var r = n(592125),
+    i = n(496675),
+    a = n(981631);
+function o(e) {
+    let t = r.Z.getChannel(e),
         n = null == t ? void 0 : t.isPrivate(),
-        i = null == t ? void 0 : t.isForumChannel();
-    return n || (a.Z.can(r.Plq.ATTACH_FILES, t) && a.Z.can(r.Plq.SEND_MESSAGES, t) && !i);
+        o = null == t ? void 0 : t.isForumChannel();
+    return n || (i.Z.can(a.Plq.ATTACH_FILES, t) && i.Z.can(a.Plq.SEND_MESSAGES, t) && !o);
 }

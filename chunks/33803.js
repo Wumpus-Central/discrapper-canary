@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(779125),
     w = n(890410),
     D = n(464891),
-    L = n(507418),
-    x = n(348238),
+    x = n(507418),
+    L = n(348238),
     M = n(38267),
-    k = n(83561),
-    j = n(834129),
+    j = n(83561),
+    k = n(834129),
     U = n(959517),
     G = n(981631),
     B = n(674563),
@@ -116,15 +116,15 @@ function q(e, t) {
 function X(e, t) {
     let { popouts: n, selected: r, setPopout: a } = (0, M.Z)(e.id, U.d$),
         { usernameProfile: o, avatarProfile: s } = n,
-        l = (0, x.wq)(e.author.id, t.id),
-        c = (0, x.RN)(e.author.id, t.id, e.id),
-        u = (0, x.XO)(e, t, o, a);
+        l = (0, L.wq)(e.author.id, t.id),
+        c = (0, L.RN)(e.author.id, t.id, e.id),
+        u = (0, L.XO)(e, t, o, a);
     return {
         selected: r,
         onContextMenu: l,
         onContextMenuModerateUser: c,
         onClickUsername: u,
-        onClickAvatar: (0, x.R9)(s, a),
+        onClickAvatar: (0, L.R9)(s, a),
         onPopoutRequestClose: i.useCallback(
             () =>
                 a({
@@ -134,7 +134,7 @@ function X(e, t) {
                 }),
             [a],
         ),
-        renderPopout: L.Z,
+        renderPopout: x.Z,
         showAvatarPopout: s,
         showUsernamePopout: o,
     };
@@ -316,11 +316,11 @@ function ea(e) {
         {
             avatarSrc: f,
             eventHandlers: { onMouseEnter: I, onMouseLeave: S },
-        } = (0, k.m)(!0),
+        } = (0, j.m)(!0),
         A = (0, c.JA)(null != n ? n : ""),
         { onFocus: C } = A,
         R = z(A, ["onFocus"]),
-        { isFocused: P, handleFocus: L, handleBlur: M } = (0, x.bb)(C),
+        { isFocused: P, handleFocus: x, handleBlur: M } = (0, L.bb)(C),
         U = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         H = (0, d.e7)([T.Z], () => T.Z.can(G.Plq.MANAGE_MESSAGES, l), [l]),
         {
@@ -387,9 +387,9 @@ function ea(e) {
     return (0, r.jsx)("div", {
         onMouseEnter: I,
         onMouseLeave: S,
-        children: (0, r.jsx)(j.Z, {
+        children: (0, r.jsx)(k.Z, {
             className: o()(V.mainContainer, { [V.compact]: a }),
-            iconNode: a ? null : (0, r.jsx)(k.S, { src: f }),
+            iconNode: a ? null : (0, r.jsx)(j.S, { src: f }),
             iconContainerClassName: V.iconContainer,
             compact: a,
             children: (0, r.jsxs)("div", {
@@ -511,7 +511,7 @@ function ea(e) {
                                 }),
                                 popoutProps: ep,
                                 zalgo: !0,
-                                onFocus: L,
+                                onFocus: x,
                                 onBlur: M,
                                 onClick: eE,
                             }),

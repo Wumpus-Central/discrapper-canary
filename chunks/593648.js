@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(626135),
     w = n(912101),
     D = n(709054),
-    L = n(45640),
-    x = n(695346),
+    x = n(45640),
+    L = n(695346),
     M = n(675478),
-    k = n(273313),
-    j = n(33656),
+    j = n(273313),
+    k = n(33656),
     U = n(726985),
     G = n(981631),
     B = n(468788),
@@ -368,7 +368,7 @@ class Q extends i.PureComponent {
                 notifyMessagesInSelectedChannel: l,
                 focusMode: c,
             } = this.props,
-            d = L.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
+            d = x.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
             f = o()
                 .range(d, 11)
                 .map((e) => ({
@@ -376,7 +376,7 @@ class Q extends i.PureComponent {
                     label:
                         0 === e ? F.intl.string(F.t["0QN7cZ"]) : F.intl.formatToPlainString(F.t.iXLF9W, { minutes: e }),
                 }));
-        return (0, r.jsx)(k.Z, {
+        return (0, r.jsx)(j.Z, {
             title: F.intl.string(F.t.HcoRu0),
             children: (0, r.jsxs)(u.Kqy, {
                 gap: 16,
@@ -423,7 +423,7 @@ class Q extends i.PureComponent {
                                 label: F.intl.string(F.t.TTvjd9),
                                 description: F.intl.string(F.t.Xytv9C),
                                 value: t,
-                                onChange: x.CM.updateSetting,
+                                onChange: L.CM.updateSetting,
                                 options: f,
                             }),
                             (0, r.jsx)(u.izJ, { gap: 16 }),
@@ -437,7 +437,7 @@ class Q extends i.PureComponent {
                         disableAllSounds: s,
                         notifyMessagesInSelectedChannel: l,
                     }),
-                    (0, r.jsx)(j.Z, {}),
+                    (0, r.jsx)(k.Z, {}),
                 ],
             }),
         });
@@ -562,10 +562,10 @@ function ei() {
         ttsType: C.Z.getTTSType(),
         notifyMessagesInSelectedChannel: C.Z.getNotifyMessagesInSelectedChannel(),
     }));
-    return (0, r.jsx)(er, W(H({}, e), { afkTimeout: x.CM.useSetting() }));
+    return (0, r.jsx)(er, W(H({}, e), { afkTimeout: L.CM.useSetting() }));
 }
 function ea() {
-    let e = x.fz.useSetting(),
+    let e = L.fz.useSetting(),
         t = [
             {
                 name: F.intl.string(F.t["9x/RtT"]),
@@ -600,8 +600,8 @@ function ea() {
         : null;
 }
 function eo() {
-    let e = x.d8.useSetting(),
-        t = x.JN.useSetting();
+    let e = L.d8.useSetting(),
+        t = L.JN.useSetting();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(I.F, {
@@ -620,14 +620,14 @@ function eo() {
                     label: F.intl.string(F.t.pW4TMp),
                     description: F.intl.string(F.t["H+WYqZ"]),
                     checked: t,
-                    onChange: x.JN.updateSetting,
+                    onChange: L.JN.updateSetting,
                 }),
             }),
         ],
     });
 }
 function es() {
-    let e = x.JY.useSetting();
+    let e = L.JY.useSetting();
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_FRIEND_ONLINE,
         children: (0, r.jsx)(u.rsf, {
@@ -639,7 +639,7 @@ function es() {
     });
 }
 function el() {
-    let e = x.V6.useSetting();
+    let e = L.V6.useSetting();
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_USER_RESURRECTION,
         children: (0, r.jsx)(u.rsf, {

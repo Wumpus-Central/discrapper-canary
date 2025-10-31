@@ -9,26 +9,26 @@ var r = n(951288),
     u = n(28664),
     d = n(481060),
     p = n(493683),
-    f = n(239091),
-    h = n(99690),
+    h = n(239091),
+    f = n(99690),
     g = n(471445),
     m = n(569471),
     b = n(488131),
     _ = n(592125),
-    O = n(306680),
-    y = n(594174),
+    y = n(306680),
+    O = n(594174),
     v = n(979651),
     j = n(938475),
     C = n(990734),
-    E = n(714794),
-    x = n(876548),
+    x = n(714794),
+    E = n(876548),
     S = n(25601),
     I = n(207055),
     P = n(981631),
     N = n(124368),
     Z = n(388032),
-    T = n(55940),
-    w = n(509612),
+    w = n(55940),
+    T = n(509612),
     A = n(113914);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -160,9 +160,9 @@ function M(e) {
         children: (0, r.jsx)("div", {
             role: "img",
             "aria-label": "".concat(l, " icon"),
-            className: w.iconContainer,
+            className: T.iconContainer,
             children: (0, r.jsx)(n, {
-                className: w.icon,
+                className: T.icon,
                 color: "currentColor",
             }),
         }),
@@ -176,14 +176,14 @@ let k = i.memo(function (e) {
             unread: U,
             mentionCount: B,
             isMentionLowImportance: F,
-        } = (0, s.cj)([O.ZP], () => ({
-            unread: O.ZP.hasUnread(t.id),
-            mentionCount: O.ZP.getMentionCount(t.id),
-            isMentionLowImportance: O.ZP.getIsMentionLowImportance(t.id),
+        } = (0, s.cj)([y.ZP], () => ({
+            unread: y.ZP.hasUnread(t.id),
+            mentionCount: y.ZP.getMentionCount(t.id),
+            isMentionLowImportance: y.ZP.getIsMentionLowImportance(t.id),
         })),
         V = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
         H = (0, C.p)({ location: "GuildSidebarThreadListEntry" }),
-        z = (0, s.e7)([y.default], () => y.default.getUser(t.ownerId)),
+        z = (0, s.e7)([O.default], () => O.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {
                 (0, b.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
@@ -197,7 +197,7 @@ let k = i.memo(function (e) {
             (e) => {
                 let i = _.Z.getChannel(t.id);
                 null != i &&
-                    (0, f.jW)(e, async () => {
+                    (0, h.jW)(e, async () => {
                         let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                         return (t) => (0, r.jsx)(e, D(R({}, t), { channel: i }));
                     });
@@ -240,7 +240,7 @@ let k = i.memo(function (e) {
                   : Z.intl.formatToPlainString(Z.t["0nZpiF"], { channelName: t.name });
     return (0, r.jsxs)("li", {
         role: Q,
-        className: o()(T.containerDefault, { [T.selected]: l }),
+        className: o()(w.containerDefault, { [w.selected]: l }),
         children: [
             (0, r.jsx)(L, { withGuildIcon: A }),
             g
@@ -259,38 +259,38 @@ let k = i.memo(function (e) {
                     right: 4,
                 },
                 children: (0, r.jsxs)("div", {
-                    className: o()(T.iconVisibility, w.wrapper, w.typeThread, {
-                        [w.modeSelected]: l,
-                        [w.modeMuted]: !l && V,
-                        [w.modeUnreadImportant]: !V && !l && U,
-                        [w.withGuildIcon]: A,
-                        [w.threadsInChannelListQoLExperiment]: H.enabled,
-                        [w.withThreadAvatar]: "icon-with-avatar" === H.variant,
-                        [w.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
+                    className: o()(w.iconVisibility, T.wrapper, T.typeThread, {
+                        [T.modeSelected]: l,
+                        [T.modeMuted]: !l && V,
+                        [T.modeUnreadImportant]: !V && !l && U,
+                        [T.withGuildIcon]: A,
+                        [T.threadsInChannelListQoLExperiment]: H.enabled,
+                        [T.withThreadAvatar]: "icon-with-avatar" === H.variant,
+                        [T.withThreadIconInBubble]: "icon-in-bubble" === H.variant,
                     }),
                     onMouseDown: K,
                     onContextMenu: Y,
                     children: [
-                        !U || V || l ? null : (0, r.jsx)("div", { className: o()(w.unread, w.unreadImportant) }),
+                        !U || V || l ? null : (0, r.jsx)("div", { className: o()(T.unread, T.unreadImportant) }),
                         (0, r.jsx)(
                             d.P3F,
                             D(R({}, J), {
                                 innerRef: $,
-                                className: w.link,
+                                className: T.link,
                                 onClick: W,
                                 "aria-label": ee,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)("div", {
-                                    className: o()(w.linkTop, w.__invalid_threadMainContent),
+                                    className: o()(T.linkTop, T.__invalid_threadMainContent),
                                     children: [
                                         "icon-with-avatar" === H.variant
                                             ? (0, r.jsxs)("div", {
-                                                  className: w.threadIconWithAvatar,
+                                                  className: T.threadIconWithAvatar,
                                                   children: [
                                                       (0, r.jsx)(M, { thread: t }),
                                                       null == z
                                                           ? null
-                                                          : (0, r.jsx)(h.Z, {
+                                                          : (0, r.jsx)(f.Z, {
                                                                 user: z,
                                                                 size: d.EFr.SIZE_16,
                                                             }),
@@ -299,21 +299,21 @@ let k = i.memo(function (e) {
                                             : null,
                                         "icon-in-bubble" === H.variant ? (0, r.jsx)(M, { thread: t }) : null,
                                         (0, r.jsx)(c.Z, {
-                                            className: w.name,
+                                            className: T.name,
                                             "aria-hidden": !0,
                                             children: t.name,
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: w.children,
+                                            className: T.children,
                                             children: [
                                                 q > 0 && t.userLimit > 0
-                                                    ? (0, r.jsx)(x.Z, {
+                                                    ? (0, r.jsx)(E.Z, {
                                                           userCount: q,
                                                           video: G,
                                                           channel: t,
                                                       })
                                                     : null,
-                                                (0, E.Z)(B)
+                                                (0, x.Z)(B)
                                                     ? (0, r.jsx)(S.Z, {
                                                           mentionsCount: B,
                                                           isMentionLowImportance: F,

@@ -1,4 +1,4 @@
-n.d(t, { C: () => h });
+n.d(t, { C: () => m });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -10,9 +10,9 @@ var r = n(951288),
     d = n(376191),
     p = n(388032),
     f = n(513245);
-function h(e) {
-    let { active: t, user: n, channel: h } = e,
-        m = (0, c.K)(),
+function m(e) {
+    let { active: t, user: n, channel: m } = e,
+        h = (0, c.K)(),
         g = i.useCallback(() => {
             (0, l.showToast)((0, l.createToast)(p.intl.string(p.t["EDYbS+"]), l.ToastType.FAILURE));
         }, []),
@@ -20,14 +20,14 @@ function h(e) {
             s.Z.closeChannelSidebar(o.uZ);
         }, []),
         b = i.useCallback(() => {
-            s.Z.closeChannelSidebar(o.uZ), m && (0, a.Kh)(h.id);
-        }, [h.id, m]),
+            s.Z.closeChannelSidebar(o.uZ), h && (0, a.Kh)(m.id);
+        }, [m.id, h]),
         {
             acceptMessageRequest: E,
             rejectMessageRequest: O,
             isAcceptLoading: I,
-            isRejectLoading: v,
-            isUserProfileLoading: y,
+            isRejectLoading: y,
+            isUserProfileLoading: v,
             isOptimisticAccepted: C,
             isOptimisticRejected: S,
         } = (0, u.m)({
@@ -36,12 +36,12 @@ function h(e) {
             onRejectSuccess: _,
             onError: g,
         }),
-        T = I || v || y || C || S;
+        T = I || y || v || C || S;
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
             (0, r.jsx)(d.Z, {
-                channel: h,
+                channel: m,
                 otherUser: n,
                 active: t,
             }),
@@ -56,10 +56,10 @@ function h(e) {
                             size: "sm",
                             text: p.intl.string(p.t.B2nygW),
                             onClick: (e) => {
-                                e.stopPropagation(), O(h.id);
+                                e.stopPropagation(), O(m.id);
                             },
                             disabled: T,
-                            loading: v || S,
+                            loading: y || S,
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -70,10 +70,10 @@ function h(e) {
                             size: "sm",
                             text: p.intl.string(p.t.Kz8Pwr),
                             onClick: (e) => {
-                                e.stopPropagation(), E(h.id);
+                                e.stopPropagation(), E(m.id);
                             },
                             disabled: T,
-                            loading: I || y || C,
+                            loading: I || v || C,
                         }),
                     }),
                 ],

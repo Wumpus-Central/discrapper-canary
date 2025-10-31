@@ -1,66 +1,66 @@
-i.d(t, { E: () => p });
-var l = i(647438),
-    n = i(442837),
-    r = i(626135),
-    a = i(74538),
-    s = i(381585),
-    o = i(597688),
-    d = i(884697),
-    u = i(82892),
-    c = i(981631);
-function p(e, t) {
-    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
-        p = (0, s.sp)(),
-        g = (0, n.e7)([o.Z], () => o.Z.getProduct(e)),
-        h = (0, u.x)(),
-        m = a.ZP.canUseCollectibles(h),
-        v = l.useRef(null),
-        x = l.useCallback(() => {
-            let l = null != g ? (0, d.Vw)(g, m, !1) : null,
-                n = null != g ? (0, d.eu)(g, m, !1) : void 0;
-            r.default.track(c.rMx.COLLECTIBLES_TILE_IMPRESSION, {
-                collectibles_shop_session_id: null == p ? void 0 : p.sessionId,
+n.d(t, { E: () => m });
+var a = n(647438),
+    i = n(442837),
+    l = n(626135),
+    r = n(74538),
+    s = n(381585),
+    o = n(597688),
+    c = n(884697),
+    d = n(82892),
+    u = n(981631);
+function m(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
+        m = (0, s.sp)(),
+        p = (0, i.e7)([o.Z], () => o.Z.getProduct(e)),
+        h = (0, d.x)(),
+        x = r.ZP.canUseCollectibles(h),
+        g = a.useRef(null),
+        f = a.useCallback(() => {
+            let a = null != p ? (0, c.Vw)(p, x, !1) : null,
+                i = null != p ? (0, c.eu)(p, x, !1) : void 0;
+            l.default.track(u.rMx.COLLECTIBLES_TILE_IMPRESSION, {
+                collectibles_shop_session_id: null == m ? void 0 : m.sessionId,
                 sku_id: e,
-                display_price: null == l ? void 0 : l.amount,
-                display_price_currency: null == l ? void 0 : l.currency.toString(),
-                display_price_strikethrough: n,
-                position: null == p ? void 0 : p.tilePosition,
+                display_price: null == a ? void 0 : a.amount,
+                display_price_currency: null == a ? void 0 : a.currency.toString(),
+                display_price_strikethrough: i,
+                position: null == m ? void 0 : m.tilePosition,
                 page_type: t,
-                page_category: null == p ? void 0 : p.pageCategory,
-                page_section: null == p ? void 0 : p.pageSection,
-                type: i,
-                category_position: null == p ? void 0 : p.categoryPosition,
+                page_category: null == m ? void 0 : m.pageCategory,
+                page_section: null == m ? void 0 : m.pageSection,
+                type: n,
+                category_position: null == m ? void 0 : m.categoryPosition,
             });
         }, [
-            null == p ? void 0 : p.sessionId,
-            null == p ? void 0 : p.categoryPosition,
-            null == p ? void 0 : p.pageCategory,
-            null == p ? void 0 : p.pageSection,
-            null == p ? void 0 : p.tilePosition,
-            m,
+            null == m ? void 0 : m.sessionId,
+            null == m ? void 0 : m.categoryPosition,
+            null == m ? void 0 : m.pageCategory,
+            null == m ? void 0 : m.pageSection,
+            null == m ? void 0 : m.tilePosition,
+            x,
             t,
-            g,
+            p,
             e,
-            i,
+            n,
         ]),
-        C = l.useCallback(
+        b = a.useCallback(
             (e) => {
                 e
-                    ? null === v.current &&
-                      (v.current = setTimeout(() => {
-                          x(), (v.current = null);
+                    ? null === g.current &&
+                      (g.current = setTimeout(() => {
+                          f(), (g.current = null);
                       }, 1000))
-                    : null !== v.current && (clearTimeout(v.current), (v.current = null));
+                    : null !== g.current && (clearTimeout(g.current), (g.current = null));
             },
-            [x],
+            [f],
         );
     return (
-        l.useEffect(
+        a.useEffect(
             () => () => {
-                null !== v.current && (clearTimeout(v.current), (v.current = null));
+                null !== g.current && (clearTimeout(g.current), (g.current = null));
             },
             [],
         ),
-        { handleCardVisibilityChange: C }
+        { handleCardVisibilityChange: b }
     );
 }

@@ -172,11 +172,11 @@ function v(e) {
         P = i.useId(),
         w = "".concat(P, "-upper_badge_masks"),
         D = "".concat(P, "-lower_badge_masks"),
-        L = "".concat(P, "-blob_mask"),
-        x = "".concat(P, "-stroke_mask"),
+        x = "".concat(P, "-blob_mask"),
+        L = "".concat(P, "-stroke_mask"),
         M = "".concat(P, "-highlight_mask"),
-        k = (null == f ? void 0 : f.width) != null ? f.width : g,
-        j = (null == f ? void 0 : f.height) != null ? f.height : g,
+        j = (null == f ? void 0 : f.width) != null ? f.width : g,
+        k = (null == f ? void 0 : f.height) != null ? f.height : g,
         U = {
             width: d ? n : n + 8,
             height: d ? n : n + 8,
@@ -216,7 +216,7 @@ function v(e) {
                                         }),
                                     (0, r.jsx)("path", {
                                         d: B,
-                                        id: L,
+                                        id: x,
                                     }),
                                     null != m
                                         ? (0, r.jsx)("rect", {
@@ -232,10 +232,10 @@ function v(e) {
                                     null != O
                                         ? (0, r.jsx)("rect", {
                                               id: D,
-                                              x: n - (k + 2 * p) + p,
-                                              y: n - (j + 2 * p) + p,
-                                              width: k + 2 * p,
-                                              height: j + 2 * p,
+                                              x: n - (j + 2 * p) + p,
+                                              y: n - (k + 2 * p) + p,
+                                              width: j + 2 * p,
+                                              height: k + 2 * p,
                                               rx: h / 2,
                                               ry: h / 2,
                                           })
@@ -256,7 +256,7 @@ function v(e) {
                                             fill: "black",
                                         }),
                                     (0, r.jsx)("use", {
-                                        href: "#".concat(L),
+                                        href: "#".concat(x),
                                         fill: "white",
                                         className: o()({ [u.isHighlighted]: _ }),
                                     }),
@@ -276,7 +276,7 @@ function v(e) {
                             }),
                             N || R
                                 ? (0, r.jsxs)("mask", {
-                                      id: x,
+                                      id: L,
                                       children: [
                                           (0, r.jsx)("rect", {
                                               width: "150%",
@@ -305,8 +305,8 @@ function v(e) {
                                       children: [
                                           (0, r.jsx)("g", {
                                               className: u.focusStroke,
-                                              mask: "url(#".concat(x, ")"),
-                                              children: (0, r.jsx)("use", { href: "#".concat(L) }),
+                                              mask: "url(#".concat(L, ")"),
+                                              children: (0, r.jsx)("use", { href: "#".concat(x) }),
                                           }),
                                           (0, r.jsxs)("g", {
                                               className: u.focusFill,
@@ -324,7 +324,7 @@ function v(e) {
                                     stroke: s.Z.BRAND_500,
                                     strokeWidth: E,
                                     className: u.highlight,
-                                    mask: "url(#".concat(x, ")"),
+                                    mask: "url(#".concat(L, ")"),
                                 }),
                             (0, r.jsx)(
                                 "foreignObject",

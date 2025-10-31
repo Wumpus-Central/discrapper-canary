@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -10,15 +10,15 @@ var i = n(120356),
     u = n(503438),
     d = n(850827),
     p = n(952164),
-    f = n(237583),
-    h = n(131704),
+    h = n(237583),
+    f = n(131704),
     g = n(314897),
     m = n(594174),
     b = n(768581),
     _ = n(51144),
-    O = n(754231),
-    y = n(342273);
-function j(e) {
+    y = n(754231),
+    O = n(342273);
+function v(e) {
     var t;
     let { guildId: n, member: i, className: o } = e,
         c = null != i.member ? (0, b.CA)(i.member) : null;
@@ -28,21 +28,21 @@ function j(e) {
         children: (0, r.jsx)(s.qEK, {
             src: null != c ? c : i.user.getAvatarURL(n, 16),
             size: s.EFr.SIZE_16,
-            className: l()(o, y.partyAvatar),
+            className: l()(o, O.partyAvatar),
             "aria-label": null != (t = i.nick) ? t : _.ZP.getName(i.user),
         }),
     });
 }
-function v(e) {
+function j(e) {
     let { members: t, guildId: n } = e;
-    return (0, r.jsx)(f.Z, {
-        className: y.partyMembers,
+    return (0, r.jsx)(h.Z, {
+        className: O.partyMembers,
         guildId: n,
         users: t,
         max: 6,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                j,
+                v,
                 {
                     guildId: n,
                     member: e,
@@ -54,19 +54,19 @@ function v(e) {
             (0, r.jsx)(
                 "div",
                 {
-                    className: l()(y.morePartyMembers, t),
+                    className: l()(O.morePartyMembers, t),
                     children: e,
                 },
                 n,
             ),
     });
 }
-let x = (e) => {
+let C = (e) => {
     let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: a } = e,
         s = null != l,
-        f = s ? Array.from(l.embeddedActivity.userIds) : [],
+        h = s ? Array.from(l.embeddedActivity.userIds) : [],
         b = (0, o.e7)([m.default, g.default], () => {
-            if (s) return m.default.getUser(f[0]);
+            if (s) return m.default.getUser(h[0]);
             if (null != i) {
                 var e, t;
                 return i.length <= 0
@@ -78,22 +78,22 @@ let x = (e) => {
         });
     if (null == b) return null;
     let _ = s || (0, u.Z)(n),
-        j = (0, h.vd)(t.type);
+        v = (0, f.vd)(t.type);
     return (0, r.jsxs)("div", {
-        className: y.activity,
+        className: O.activity,
         children: [
             (0, r.jsx)("div", {
-                className: y.channelActivityContainer,
+                className: O.channelActivityContainer,
                 children: _
-                    ? (0, r.jsx)(O.Z, {
+                    ? (0, r.jsx)(y.Z, {
                           activity: n,
                           embeddedApp: l,
                           user: b,
                           channel: t,
                           sortedVoiceStates: i,
-                          onOpenSpotifyTrack: j ? p.aG : void 0,
-                          onOpenSpotifyArtist: j ? p.d$ : void 0,
-                          onOpenSpotifyAlbum: j ? p.Z5 : void 0,
+                          onOpenSpotifyTrack: v ? p.aG : void 0,
+                          onOpenSpotifyArtist: v ? p.d$ : void 0,
+                          onOpenSpotifyAlbum: v ? p.Z5 : void 0,
                       })
                     : (0, r.jsx)(c.Z, {
                           type: c.P.VOICE_CHANNEL,
@@ -104,7 +104,7 @@ let x = (e) => {
                           renderHeaderAccessory:
                               null != i
                                   ? () =>
-                                        (0, r.jsx)(v, {
+                                        (0, r.jsx)(j, {
                                             guildId: t.guild_id,
                                             members: i,
                                         })
@@ -112,7 +112,7 @@ let x = (e) => {
                       }),
             }),
             (0, r.jsx)("div", {
-                className: y.activityActionsContainer,
+                className: O.activityActionsContainer,
                 children: (0, r.jsx)(d.Z, {
                     type: c.P.VOICE_CHANNEL,
                     activity: n,

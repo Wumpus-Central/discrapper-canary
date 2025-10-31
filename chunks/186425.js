@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     header: "header__3847f",
     closeButton: "closeButton__3847f",
     modalContent: "modalContent__3847f",

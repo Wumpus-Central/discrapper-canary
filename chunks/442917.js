@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(266910),
     w = n(788983),
     D = n(703656),
-    L = n(937995),
-    x = n(618158),
+    x = n(937995),
+    L = n(618158),
     M = n(922745),
-    k = n(197016),
-    j = n(800965),
+    j = n(197016),
+    k = n(800965),
     U = n(445062),
     G = n(7188),
     B = n(199902),
@@ -232,7 +232,7 @@ class ef extends i.PureComponent {
                               "aria-label": null == n ? void 0 : n.user.username,
                           }),
                       }))),
-            (0, r.jsx)(L.ZP, {
+            (0, r.jsx)(x.ZP, {
                 timeout: 1800,
                 children: (e) => {
                     var t;
@@ -248,7 +248,7 @@ class ef extends i.PureComponent {
                                     onHide: this.handleHidePIP,
                                     renderBottomLeftControls: this.renderBottomLeftControls,
                                     renderBottomRightControls: this.renderBottomRightControls,
-                                    preventIdleComponent: x.Z,
+                                    preventIdleComponent: L.Z,
                                     width: a,
                                     className: es.elevationHigh,
                                     videoControlsClassName:
@@ -320,7 +320,7 @@ class ef extends i.PureComponent {
                 });
             }),
             el(this, "renderDisconnectButton", () =>
-                (0, r.jsx)(k.Z, {
+                (0, r.jsx)(j.Z, {
                     className: eo.rightTrayIcon,
                     onClick: () => (0, v.v)(g.Z.VIDEO_PIP, v.d.DISCONNECT),
                 }),
@@ -340,7 +340,7 @@ class ef extends i.PureComponent {
                         (0, ea._5)(e) || (null == e ? void 0 : e.type) === ea.fO.ACTIVITY,
                         "Cannot render participants for participant type ".concat(null == e ? void 0 : e.type),
                     ),
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(L.Z, {
                         children: (0, r.jsx)(O.Z, {
                             channelId: t.id,
                             guildId: t.getGuildId(),
@@ -352,7 +352,7 @@ class ef extends i.PureComponent {
                 );
             }),
             el(this, "renderPopoutIcon", () =>
-                (0, r.jsx)(j.Z, {
+                (0, r.jsx)(k.Z, {
                     className: eo.rightTrayIcon,
                     popoutOpen: !1,
                     onOpenPopout: this.handleOpenPopout,

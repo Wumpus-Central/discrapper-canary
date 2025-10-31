@@ -127,11 +127,11 @@ function D(e) {
         }),
         w();
 }
-function L(e) {
+function x(e) {
     for (let [t, n] of (p.clear(), N.clear(), e.relationships)) R(t, n);
     w();
 }
-function x(e) {
+function L(e) {
     let t = p.get(e.relationship.id);
     R(e.relationship.id, e.relationship.type),
         null != e.relationship.nickname && (h = f(u({}, h), { [e.relationship.id]: e.relationship.nickname })),
@@ -163,7 +163,7 @@ function M(e) {
         g.delete(e.relationship.id),
         w();
 }
-function k(e) {
+function j(e) {
     let { relationship: t } = e;
     R(t.id, t.type),
         null == t.since ? delete m[t.id] : (m[t.id] = t.since),
@@ -176,7 +176,7 @@ function k(e) {
             : (E.delete(t.id), b.delete(t.id)),
         w();
 }
-function j(e) {
+function k(e) {
     for (let e of p.keys()) p.get(e) === l.OGo.PENDING_INCOMING && (P(e), g.delete(e), b.delete(e), delete v[e]);
     w();
 }
@@ -304,10 +304,10 @@ class G extends (r = i.ZP.Store) {
 c(G, "displayName", "RelationshipStore");
 let B = new G(a.Z, {
     CONNECTION_OPEN: D,
-    OVERLAY_INITIALIZE: L,
-    RELATIONSHIP_ADD: x,
+    OVERLAY_INITIALIZE: x,
+    RELATIONSHIP_ADD: L,
     RELATIONSHIP_REMOVE: M,
-    RELATIONSHIP_UPDATE: k,
-    RELATIONSHIP_PENDING_INCOMING_REMOVED: j,
+    RELATIONSHIP_UPDATE: j,
+    RELATIONSHIP_PENDING_INCOMING_REMOVED: k,
     UPDATE_STRANGER_STATUS: U,
 });

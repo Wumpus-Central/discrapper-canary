@@ -60,11 +60,11 @@ let b = function (e) {
         [b, _] = i.useState(!1),
         y = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         x = (0, c.Aq)(),
-        v = i.useRef(null),
+        O = i.useRef(null),
         j = i.useCallback(() => {
             n || _((e) => !e);
         }, [n]);
-    function O(e) {
+    function v(e) {
         (null == e ? void 0 : e.shiftKey) || x.dispatch(h.CkL.POPOUT_CLOSE);
     }
     return (
@@ -78,7 +78,7 @@ let b = function (e) {
             [j],
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: v,
+            targetElementRef: O,
             shouldShow: b,
             animation: a.yRy.Animation.NONE,
             position: "bottom",
@@ -90,7 +90,7 @@ let b = function (e) {
                 return (0, r.jsx)(
                     s.Z,
                     m(g({}, e), {
-                        onJump: O,
+                        onJump: v,
                         channel: t,
                     }),
                 );
@@ -101,7 +101,7 @@ let b = function (e) {
                 return (0, r.jsx)(
                     p.JO,
                     m(g({}, e), {
-                        ref: v,
+                        ref: O,
                         onClick: j,
                         tooltip: i ? null : f.intl.string(f.t["mp1N/2"]),
                         icon: a.qQX,

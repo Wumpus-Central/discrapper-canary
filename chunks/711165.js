@@ -1,4 +1,4 @@
-n.d(t, { _: () => T }), n(642613), n(388685);
+n.d(t, { _: () => w }), n(642613), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -9,19 +9,19 @@ var r = n(951288),
     u = n(793030),
     d = n(442837),
     p = n(481060),
-    f = n(724757),
-    h = n(294218),
+    h = n(724757),
+    f = n(294218),
     g = n(703656),
     m = n(45251),
     b = n(156012),
     _ = n(74365),
-    O = n(618857),
-    y = n(695346),
+    y = n(618857),
+    O = n(695346),
     v = n(23750),
     j = n(592125),
     C = n(594174),
-    E = n(823379),
-    x = n(324081),
+    x = n(823379),
+    E = n(324081),
     S = n(240126),
     I = n(981631),
     P = n(388032),
@@ -32,15 +32,15 @@ let Z = {
         right: -12,
     },
 };
-function T() {
+function w() {
     return (
         i.useEffect(() => {
             (0, m.kg)();
         }, []),
-        (0, r.jsx)(w, {})
+        (0, r.jsx)(T, {})
     );
 }
-function w() {
+function T() {
     let e = (0, d.e7)([b.Z], () => b.Z.getScheduledMessagesForInbox(), []),
         t = i.useMemo(
             () => Object.values(e).sort((e, t) => (new Date(e.sendAtTimestamp) > new Date(t.sendAtTimestamp) ? -1 : 1)),
@@ -48,7 +48,7 @@ function w() {
         ),
         n = (0, d.e7)([b.Z], () => b.Z.loading, []),
         l = i.useRef(null),
-        o = (0, f.Z)("scheduled-messages", l);
+        o = (0, h.Z)("scheduled-messages", l);
     return n
         ? (0, r.jsx)(p.$jN, { className: N.loadingPlaceholder })
         : 0 === t.length
@@ -173,7 +173,7 @@ function A(e) {
                 {
                     className: N.channelRow,
                     children: [
-                        (0, r.jsx)(x.Z, {
+                        (0, r.jsx)(E.Z, {
                             channel: n,
                             gotoChannel: () => (0, g.uL)(I.Z5c.CHANNEL(n.getGuildId(), n.id)),
                             children: null,
@@ -239,20 +239,20 @@ let R = i.memo(function (e) {
                         stateMessage: P.intl.string(P.t.j8uIfG),
                     };
                 default:
-                    (0, E.vE)(e);
+                    (0, x.vE)(e);
             }
         })(t.state),
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             (0, m.gD)(t.scheduledMessageId)
                 .then(() => {
-                    (0, O.C$)();
+                    (0, y.C$)();
                 })
                 .catch((e) => {
-                    (0, O.wW)(e.message);
+                    (0, y.wW)(e.message);
                 });
         }, [t.scheduledMessageId]),
         g = i.useCallback(() => {
-            (0, O.uW)({ scheduledMessage: t });
+            (0, y.uW)({ scheduledMessage: t });
         }, [t]);
     return (0, r.jsx)(
         "div",
@@ -275,12 +275,12 @@ let R = i.memo(function (e) {
                               className: N.channelMessageAndButtons,
                               children: [
                                   (0, r.jsx)(
-                                      h.Z,
+                                      f.Z,
                                       {
                                           message: a,
                                           channel: n,
                                           className: N.message,
-                                          compact: y.jU.getSetting(),
+                                          compact: O.jU.getSetting(),
                                           animateAvatar: !1,
                                           focusProps: Z,
                                       },
@@ -297,7 +297,7 @@ let R = i.memo(function (e) {
                                           }),
                                           (0, r.jsx)(u.hU, {
                                               icon: p.k$p,
-                                              onClick: f,
+                                              onClick: h,
                                               "aria-label": P.intl.string(P.t.O3sL8F),
                                               variant: "icon-only",
                                           }),

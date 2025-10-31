@@ -1,23 +1,23 @@
-n.d(e, { m: () => d });
+n.d(e, { m: () => E });
 var i = n(657707),
     l = n(509613),
-    u = n(313789),
-    r = n(526665),
+    r = n(313789),
+    u = n(526665),
     s = n(593648),
-    o = n(726985),
-    a = n(388032);
-let c = (0, l.x1)(u.n.LEGACY_NOTIFICATIONS_PANE, {
+    a = n(726985),
+    o = n(388032);
+let c = (0, l.x1)(r.n.LEGACY_NOTIFICATIONS_PANE, {
         buildLayout: () => [],
         render: s.Z,
     }),
-    E = (0, l.wf)(u.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL, {
-        useTitle: () => a.intl.string(a.t.HcoRu0),
+    d = (0, l.wf)(r.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL, {
+        useTitle: () => o.intl.string(o.t.HcoRu0),
         buildLayout: () => [c],
     }),
-    d = (0, l.m7)(u.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
+    E = (0, l.m7)(r.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
         icon: i.Dkj,
-        useTitle: () => a.intl.string(a.t.HcoRu0),
-        legacySearchKey: o.s6.NOTIFICATIONS,
-        usePredicate: () => !(0, r.gj)("LegacyNotificationsPanel"),
-        buildLayout: () => [E],
+        useTitle: () => o.intl.string(o.t.HcoRu0),
+        legacySearchKey: a.s6.NOTIFICATIONS,
+        usePredicate: () => !(0, u.gj)("LegacyNotificationsPanel"),
+        buildLayout: () => [d],
     });

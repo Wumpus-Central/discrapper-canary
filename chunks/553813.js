@@ -206,7 +206,7 @@ function O(e, t, n, r) {
     }
 }
 function v(e, t) {
-    if (j(e, t)) return null;
+    if (k(e, t)) return null;
     var n = g(e),
         r = g(t),
         i = "";
@@ -352,12 +352,12 @@ function w(e, t, n) {
 function D(e, t, n) {
     return R(t, e, n);
 }
-function L(e, n) {
+function x(e, n) {
     return e.sort(function (e, r) {
         return t.compareBuild(e, r, n);
     });
 }
-function x(e, n) {
+function L(e, n) {
     return e.sort(function (e, r) {
         return t.compareBuild(r, e, n);
     });
@@ -365,10 +365,10 @@ function x(e, n) {
 function M(e, t, n) {
     return R(e, t, n) > 0;
 }
-function k(e, t, n) {
+function j(e, t, n) {
     return 0 > R(e, t, n);
 }
-function j(e, t, n) {
+function k(e, t, n) {
     return 0 === R(e, t, n);
 }
 function U(e, t, n) {
@@ -389,7 +389,7 @@ function Z(e, t, n, r) {
         case "":
         case "=":
         case "==":
-            return j(e, n, r);
+            return k(e, n, r);
         case "!=":
             return U(e, n, r);
         case ">":
@@ -397,7 +397,7 @@ function Z(e, t, n, r) {
         case ">=":
             return G(e, n, r);
         case "<":
-            return k(e, n, r);
+            return j(e, n, r);
         case "<=":
             return B(e, n, r);
         default:
@@ -431,11 +431,11 @@ function F(e, t) {
     (t.compareLoose = P),
     (t.compareBuild = w),
     (t.rcompare = D),
-    (t.sort = L),
-    (t.rsort = x),
+    (t.sort = x),
+    (t.rsort = L),
     (t.gt = M),
-    (t.lt = k),
-    (t.eq = j),
+    (t.lt = j),
+    (t.eq = k),
     (t.neq = U),
     (t.gte = G),
     (t.lte = B),
@@ -728,10 +728,10 @@ function eu(e, t, n) {
 function ed(e, t, n, r) {
     switch (((e = new y(e, r)), (t = new H(t, r)), n)) {
         case ">":
-            (i = M), (a = B), (o = k), (s = ">"), (l = ">=");
+            (i = M), (a = B), (o = j), (s = ">"), (l = ">=");
             break;
         case "<":
-            (i = k), (a = G), (o = M), (s = "<"), (l = "<=");
+            (i = j), (a = G), (o = M), (s = "<"), (l = "<=");
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');

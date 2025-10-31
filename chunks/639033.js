@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -23,7 +23,7 @@ function p(e, t, n) {
     );
 }
 let f = "STAGE_INVITED_TO_SPEAK_MODAL";
-class h extends a.Z {
+class m extends a.Z {
     _initialize() {
         l.Z.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
@@ -36,17 +36,17 @@ class h extends a.Z {
                 var t;
                 let { voiceStates: l } = e,
                     a = s.default.getId(),
-                    h = null == (t = c.Z.getSession()) ? void 0 : t.sessionId,
-                    m = l.find((e) => e.userId === a && e.sessionId === h);
-                if (null == m) return;
-                let g = m.channelId;
+                    m = null == (t = c.Z.getSession()) ? void 0 : t.sessionId,
+                    h = l.find((e) => e.userId === a && e.sessionId === m);
+                if (null == h) return;
+                let g = h.channelId;
                 if (null == g) {
                     (0, i.nfh)(f) && (0, i.Mr3)(f);
                     return;
                 }
                 let _ = o.Z.getChannel(g);
                 if (!(null == _ ? void 0 : _.isGuildStageVoice())) return;
-                let b = (0, u.gf)(m) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+                let b = (0, u.gf)(h) === u.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
                 if (null != _ && b) {
                     if ((0, i.nfh)(f)) return;
                     (0, i.ZDy)(
@@ -106,4 +106,4 @@ class h extends a.Z {
             });
     }
 }
-let m = new h();
+let h = new m();

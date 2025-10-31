@@ -37,17 +37,17 @@ let D = (0, u.Z)((e) => {
             applicationStream: o,
             className: u,
             guildId: D,
-            channelId: L,
-            source: x,
+            channelId: x,
+            source: L,
             buttonVariant: M,
-            type: k,
-            onAction: j,
+            type: j,
+            onAction: k,
         } = e,
         U = (0, l.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, "UserActivityActions: currentUser cannot be undefined"), e;
         }),
-        G = k === b.Y.STREAM_PREVIEW || null != o,
+        G = j === b.Y.STREAM_PREVIEW || null != o,
         B = (0, g.Z)(t),
         Z = B || G ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL,
         F = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
@@ -60,14 +60,14 @@ let D = (0, u.Z)((e) => {
                 return (0, r.jsx)(y.Z, {
                     platform: d.Z.get(P.ABu.XBOX),
                     variant: M,
-                    onAction: j,
+                    onAction: k,
                     icon: c.Mko,
                 });
             if ((null == t ? void 0 : t.platform) === P.M7m.PS4 || (null == t ? void 0 : t.platform) === P.M7m.PS5)
                 return (0, r.jsx)(y.Z, {
                     variant: M,
                     platform: d.Z.get(P.ABu.PLAYSTATION),
-                    onAction: j,
+                    onAction: k,
                     icon: c.Tsp,
                 });
             if (B) {
@@ -75,15 +75,15 @@ let D = (0, u.Z)((e) => {
                         activity: t,
                         user: i,
                         guildId: D,
-                        channelId: L,
-                        source: x,
-                        onAction: j,
+                        channelId: x,
+                        source: L,
+                        onAction: k,
                     }),
                     n = (0, r.jsx)(A.Z, {
                         activity: t,
                         user: i,
-                        source: x,
-                        onAction: j,
+                        source: L,
+                        onAction: k,
                     });
                 return (0, r.jsxs)(c.ButtonGroup, {
                     size: "sm",
@@ -99,47 +99,47 @@ let D = (0, u.Z)((e) => {
                           guildId: e.guildId,
                           channelId: e.channelId,
                           variant: M,
-                          onAction: j,
+                          onAction: k,
                       });
             }
             return G
                 ? (0, r.jsx)(R.Z, {
                       isCurrentUser: U.id === i.id,
                       applicationStream: o,
-                      onAction: j,
+                      onAction: k,
                   })
                 : F && null != V
                   ? (0, r.jsx)(I.Z, {
                         userId: i.id,
                         variant: M,
                         hangStatusChannel: V,
-                        onAction: j,
+                        onAction: k,
                     })
                   : (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(N.Z, {
                                 activity: t,
                                 variant: M,
-                                onAction: j,
+                                onAction: k,
                             }),
                             (0, r.jsx)(v.Z, {
                                 activity: t,
                                 embeddedActivity: n,
                                 user: i,
                                 variant: M,
-                                onAction: j,
+                                onAction: k,
                             }),
                             (0, r.jsx)(S.Z, {
                                 activity: t,
                                 user: i,
                                 variant: M,
-                                onAction: j,
+                                onAction: k,
                             }),
                             (0, r.jsx)(O.Z, {
                                 user: i,
                                 activity: t,
                                 variant: M,
-                                onAction: j,
+                                onAction: k,
                             }),
                         ],
                     });

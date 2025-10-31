@@ -1,29 +1,29 @@
-n.d(t, { t: () => d });
-var a = n(951288);
-n(647438);
-var l = n(120356),
-    r = n.n(l),
-    i = n(840724),
-    o = n(180165);
-function d(e) {
-    let { applicationId: t, skuIds: n, variant: l = i.Z.SMALL, guildId: d } = e;
-    return null == n || 0 === n.length
+l.d(n, { t: () => o });
+var t = l(951288);
+l(647438);
+var i = l(120356),
+    a = l.n(i),
+    r = l(840724),
+    d = l(180165);
+function o(e) {
+    let { applicationId: n, skuIds: l, variant: i = r.Z.SMALL, guildId: o } = e;
+    return null == l || 0 === l.length
         ? null
-        : (0, a.jsx)("div", {
-              className: r()(o.container, o.cardGrid, {
-                  [o.mediumCardGrid]: l === i.Z.MEDIUM,
-                  [o.largeCardGrid]: l === i.Z.LARGE,
+        : (0, t.jsx)("div", {
+              className: a()(d.container, d.cardGrid, {
+                  [d.mediumCardGrid]: i === r.Z.MEDIUM,
+                  [d.largeCardGrid]: i === r.Z.LARGE,
               }),
-              children: n.map((e, n) =>
-                  (0, a.jsx)(
-                      i.C,
+              children: l.map((e, l) =>
+                  (0, t.jsx)(
+                      r.C,
                       {
-                          applicationId: t,
+                          applicationId: n,
                           skuId: e,
-                          variant: l,
-                          guildId: d,
+                          variant: i,
+                          guildId: o,
                       },
-                      "".concat(e, "-").concat(n),
+                      "".concat(e, "-").concat(l),
                   ),
               ),
           });

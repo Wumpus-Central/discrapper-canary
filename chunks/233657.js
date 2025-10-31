@@ -10,8 +10,8 @@ var i = n(442837),
     u = n(306680),
     d = n(9156),
     p = n(434479),
-    f = n(490897),
-    h = n(388032),
+    h = n(490897),
+    f = n(388032),
     g = n(509612);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -58,11 +58,11 @@ function b(e, t) {
 }
 function _(e) {
     let { guild: t, selected: _ } = e,
-        { hasUnread: O, mentionCount: y } = (0, i.cj)(
+        { hasUnread: y, mentionCount: O } = (0, i.cj)(
             [u.ZP],
             () => ({
-                hasUnread: u.ZP.hasUnread(t.id, f.W.GUILD_EVENT),
-                mentionCount: u.ZP.getMentionCount(t.id, f.W.GUILD_EVENT),
+                hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
+                mentionCount: u.ZP.getMentionCount(t.id, h.W.GUILD_EVENT),
             }),
             [t.id],
         ),
@@ -75,7 +75,7 @@ function _(e) {
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
     let C = (0, c.ZP)(t.id),
-        E = C.length > 0 ? h.intl.formatToPlainString(h.t.IBdqSu, { number: C.length }) : h.intl.string(h.t.tlopTM);
+        x = C.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSu, { number: C.length }) : f.intl.string(f.t.tlopTM);
     return (0, r.jsx)(p.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>
@@ -84,7 +84,7 @@ function _(e) {
                 color: "currentColor",
                 className: e,
             }),
-        text: E,
+        text: x,
         selected: _,
         onClick: j,
         onContextMenu: (e) => {
@@ -93,13 +93,13 @@ function _(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: O && !v,
+        showUnread: y && !v,
         trailing:
-            !v && y > 0
+            !v && O > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: y,
+                      count: O,
                   })
                 : null,
     });

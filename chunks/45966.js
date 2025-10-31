@@ -178,18 +178,18 @@ function D(e) {
         onboardingResponsesSeen: i,
     });
 }
-function L(e) {
+function x(e) {
     let { guildId: t, channelIds: n } = e;
     b[t] = E(m({}, b[t]), { defaultChannelIds: n });
 }
-function x(e) {
+function L(e) {
     let { guildId: t, mode: n } = e,
         r = b[t];
     null != r && (r.mode = n);
 }
 let M = [],
-    k = [],
-    j = [];
+    j = [],
+    k = [];
 class U extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, _.ZP, l.Z);
@@ -205,10 +205,10 @@ class U extends (r = o.ZP.Store) {
     getOnboardingResponses(e) {
         var t, n, r;
         return l.Z.isFullServerPreview(e)
-            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : k)
+            ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : j)
             : null != (r = null == (t = b[e]) ? void 0 : t.responses)
               ? r
-              : k;
+              : j;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -219,10 +219,10 @@ class U extends (r = o.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = b[e];
-        if (null == n) return k;
+        if (null == n) return j;
         let r = n.prompts.find((e) => e.id === t);
         return null == r
-            ? k
+            ? j
             : a().intersection(
                   r.options.map((e) => e.id),
                   this.getOnboardingResponses(e),
@@ -241,7 +241,7 @@ class U extends (r = o.ZP.Store) {
     }
     getDefaultChannelIds(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : j;
+        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : k;
     }
     getEnabled(e) {
         var t, n;
@@ -296,6 +296,6 @@ let G = new U(s.Z, {
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: D,
     GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: R,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: R,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: L,
-    GUILD_SETTINGS_ONBOARDING_SET_MODE: x,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: x,
+    GUILD_SETTINGS_ONBOARDING_SET_MODE: L,
 });

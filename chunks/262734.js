@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(350810),
     p = n(988980),
     f = n(835473),
-    h = n(358221),
-    m = n(740492),
+    m = n(358221),
+    h = n(740492),
     g = n(871499),
     _ = n(786915),
     b = n(944486),
     E = n(48131),
     O = n(214143),
     I = n(610278),
-    v = n(408491),
-    y = n(981631),
+    y = n(408491),
+    v = n(981631),
     C = n(918559),
     S = n(388032),
     T = n(909357);
@@ -35,8 +35,8 @@ function j(e) {
             selectedChannelId: b.Z.getChannelId(),
             selectedVoiceChannelId: b.Z.getVoiceChannelId(),
         })),
-        x = (0, s.e7)([h.Z], () => null != P && j === P && h.Z.getChatOpen(P), [j, P]),
-        A = (0, s.e7)([m.ZP], () => m.ZP.callChatSidebarWidth),
+        x = (0, s.e7)([m.Z], () => null != P && j === P && m.Z.getChatOpen(P), [j, P]),
+        A = (0, s.e7)([h.ZP], () => h.ZP.callChatSidebarWidth),
         Z = (0, u.dQu)(o.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         w = i.useRef(null),
         L = i.useRef(null),
@@ -47,7 +47,7 @@ function j(e) {
         M = i.useCallback(() => {
             E.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
-                layoutMode: v.U.PIP,
+                layoutMode: y.U.PIP,
             });
         }, [t.applicationId]),
         k = i.useCallback(() => {
@@ -71,7 +71,7 @@ function j(e) {
                     l ||
                     E.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
-                        layoutMode: v.U.PIP,
+                        layoutMode: y.U.PIP,
                     });
             };
             return (
@@ -94,10 +94,10 @@ function j(e) {
     }
     let V = C.MI.NO_CHAT;
     if (null == n) return null;
-    let F = (null != A ? A : y.$Y6) + Z,
+    let F = (null != A ? A : v.$Y6) + Z,
         z = (0, I.ro)(t);
     return (0, r.jsx)(u.f6W, {
-        theme: y.BRd.DARK,
+        theme: v.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: a()(T.wrapper, N[V], e),
@@ -125,7 +125,7 @@ function j(e) {
                         className: T.footer,
                         children: [
                             (0, r.jsx)(_.Z, {
-                                appContext: y.IlC.APP,
+                                appContext: v.IlC.APP,
                                 applicationId: n.id,
                                 shouldPrioritizeGroupPlusIcon: !0,
                                 isRichPresenceInvite: !0,

@@ -3,7 +3,7 @@ n.d(t, {
     Ks: () => Z,
     Ws: () => H,
     g2: () => U,
-    hf: () => j,
+    hf: () => k,
     k3: () => G,
     qN: () => V,
 }),
@@ -80,7 +80,7 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -91,7 +91,7 @@ function k(e, t) {
         e
     );
 }
-function j(e) {
+function k(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: a, sourceQuestContent: s } = e,
         l = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         c = null == l ? void 0 : l.hasVerifiedEmailOrPhone(),
@@ -217,7 +217,7 @@ function Z(e) {
             inGameQuest: y,
             sourceQuestContent: O,
         } = e,
-        v = j({
+        v = k({
             quest: n,
             questContent: o,
             questContentPosition: s,
@@ -399,8 +399,8 @@ function Z(e) {
                         onClick: v,
                         text: (0, g.wj)(n.config) ? D.intl.string(D.t.bAGFz3) : D.intl.string(D.t.vTgCWx),
                     };
-                if (a) return k(L({}, i), { text: D.intl.string(D.t.MAS7uK) });
-                if ((0, g.vQ)(n.config)) return k(L({}, i), { text: D.intl.string(D.t.vTgCWx) });
+                if (a) return j(L({}, i), { text: D.intl.string(D.t.MAS7uK) });
+                if ((0, g.vQ)(n.config)) return j(L({}, i), { text: D.intl.string(D.t.vTgCWx) });
                 if ((0, g.Bg)(n.config))
                     return {
                         tooltipText: null,
@@ -413,7 +413,7 @@ function Z(e) {
                         text: D.intl.string(D.t.WYchde),
                         onClick: x,
                     };
-                return k(L({}, i), { text: D.intl.string(D.t.bAGFz3) });
+                return j(L({}, i), { text: D.intl.string(D.t.bAGFz3) });
         }
     }, [r, b, I, _, v, a, n, o, s, f, M, A, N, x, y, U, O, Z, G]);
 }

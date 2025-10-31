@@ -1,14 +1,14 @@
 n.d(t, { Z: () => p });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(481060),
-    i = n(881052),
-    o = n(972959),
-    s = n(729345),
+    r = n(881052),
+    s = n(972959),
+    o = n(729345),
     c = n(620481),
     d = n(608934),
     u = n(981631);
-let m = (0, o.H)(() => ({
+let m = (0, s.H)(() => ({
     includeFrecency: !0,
     includeFriends: !0,
     includeGDMs: !0,
@@ -23,23 +23,23 @@ function p() {
     let e = m.useField("includeFrecency"),
         t = m.useField("includeFriends"),
         n = m.useField("includeDMs"),
-        o = m.useField("includeGDMs"),
+        s = m.useField("includeGDMs"),
         p = m.useField("includeQuickSwitcherState"),
         h = m.useField("includeUserSearchWorkerState"),
         x = m.useField("isUploading"),
-        f = m.useField("isSuccess"),
-        b = m.useField("errorMessage"),
-        g = r.useCallback(async () => {
+        g = m.useField("isSuccess"),
+        f = m.useField("errorMessage"),
+        b = i.useCallback(async () => {
             let {
                 includeFrecency: e,
                 includeFriends: t,
                 includeGDMs: n,
                 includeDMs: a,
-                includeQuickSwitcherState: r,
+                includeQuickSwitcherState: i,
                 includeUserSearchWorkerState: l,
-                isUploading: o,
+                isUploading: s,
             } = m.getState();
-            if (!o)
+            if (!s)
                 try {
                     m.setState({
                         isUploading: !0,
@@ -50,15 +50,15 @@ function p() {
                         n && (0, c.mo)(),
                         a && (0, c.FB)(),
                         e && (0, c.Sr)(),
-                        r && (0, c.OC)(),
+                        i && (0, c.OC)(),
                         l && (0, c.Jt)(),
-                        await (0, s.E)(u.GU0.WEB_APP),
+                        await (0, o.E)(u.GU0.WEB_APP),
                         m.setState({
                             isSuccess: !0,
                             errorMessage: null,
                         });
                 } catch (t) {
-                    let e = new i.Hx(t);
+                    let e = new r.Hx(t);
                     m.setState({ errorMessage: e.getAnyErrorMessage() });
                 } finally {
                     m.setState({ isUploading: !1 });
@@ -93,8 +93,8 @@ function p() {
                 label: "Group DMs",
                 description:
                     "Includes recipient user ids, usernames, global names, nicknames, and custom channel names for all Group DMs. Does NOT include any message data.",
-                checked: o,
-                onChange: () => m.setState({ includeGDMs: !o }),
+                checked: s,
+                onChange: () => m.setState({ includeGDMs: !s }),
             }),
             (0, a.jsx)(l.rsf, {
                 label: "Quick Switcher Results",
@@ -112,9 +112,9 @@ function p() {
             }),
             (0, a.jsx)(d.a, {
                 isUploading: x,
-                isSuccess: f,
-                errorMessage: b,
-                onClick: g,
+                isSuccess: g,
+                errorMessage: f,
+                onClick: b,
                 title: "Upload Snapshot Logs",
             }),
         ],

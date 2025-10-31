@@ -1,6 +1,6 @@
 n.d(t, { Z: () => y });
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(906732),
@@ -9,54 +9,54 @@ var i = n(951288),
     u = n(441167),
     d = n(871499),
     p = n(199902),
-    h = n(314897),
-    f = n(358221),
+    f = n(314897),
+    h = n(358221),
     m = n(522651),
     g = n(354459),
     b = n(388032),
-    C = n(591868);
+    _ = n(591868);
 function y(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, o.ZP)(),
-        y = (0, l.e7)([f.Z], () => f.Z.getSelectedParticipant(t.id)),
-        _ = (null == y ? void 0 : y.type) === g.fO.STREAM,
-        v = (0, l.e7)([p.Z], () => (_ ? p.Z.getActiveStreamForStreamKey(y.id) : null)),
-        { ignoreSenderPreference: x } = u.Z.useExperiment(
+        y = (0, l.e7)([h.Z], () => h.Z.getSelectedParticipant(t.id)),
+        C = (null == y ? void 0 : y.type) === g.fO.STREAM,
+        v = (0, l.e7)([p.Z], () => (C ? p.Z.getActiveStreamForStreamKey(y.id) : null)),
+        { ignoreSenderPreference: O } = u.Z.useExperiment(
             { location: "ActionBarClipsButton" },
             { autoTrackExposure: !1 },
         ),
-        { viewerClippingAllowed: O, isAtMaxSavingClipOperations: j } = (0, l.cj)([s.Z], () => ({
-            viewerClippingAllowed: null != v && (s.Z.isViewerClippingAllowedForUser(v.ownerId) || x),
+        { viewerClippingAllowed: x, isAtMaxSavingClipOperations: E } = (0, l.cj)([s.Z], () => ({
+            viewerClippingAllowed: null != v && (s.Z.isViewerClippingAllowedForUser(v.ownerId) || O),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations(),
         })),
-        E = s.Z.getSettings().clipsEnabled,
-        S = (null == v ? void 0 : v.ownerId) === h.default.getId(),
-        P = !E || !(S || O) || j || null == y,
-        I = r.useCallback((e) => {
+        j = s.Z.getSettings().clipsEnabled,
+        S = (null == v ? void 0 : v.ownerId) === f.default.getId(),
+        P = !j || !(S || x) || E || null == y,
+        I = i.useCallback((e) => {
             var t, n;
-            return (0, i.jsx)(
+            return (0, r.jsx)(
                 a.xmR,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
+                            (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: i,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = i);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
@@ -67,8 +67,8 @@ function y(e) {
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, i);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
                           return n;
                       })(Object(n)).forEach(function (e) {
@@ -77,19 +77,19 @@ function y(e) {
                 t),
             );
         }, []);
-    return (0, i.jsx)(d.Z, {
-        className: C.actionBarButton,
+    return (0, r.jsx)(d.Z, {
+        className: _.actionBarButton,
         onClick: () => {
-            P || ((0, m.v)(n, m.d.CLIP), S ? (0, c.C1)() : (0, c.C1)(y.id));
+            P || ((0, m.v)(n, m.d.CLIP), S ? (0, c.br)() : (0, c.C1)(y.id));
         },
         disabled: P,
         iconComponent: I,
         label:
             null == v
                 ? b.intl.string(b.t.eg5qtV)
-                : S || O
-                  ? E
-                      ? j
+                : S || x
+                  ? j
+                      ? E
                           ? void 0
                           : b.intl.string(b.t.U4URzP)
                       : b.intl.string(b.t.wSS1yN)

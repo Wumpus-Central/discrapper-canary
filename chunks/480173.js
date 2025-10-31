@@ -1,41 +1,41 @@
 n.d(t, { Z: () => p });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(442837),
-    i = n(481060),
-    o = n(607070),
-    s = n(7093),
+    r = n(481060),
+    s = n(607070),
+    o = n(7093),
     c = n(817466),
     d = n(388032),
     u = n(119290);
-let m = r.lazy(() => n.e("77898").then(n.bind(n, 739859)));
+let m = i.lazy(() => n.e("77898").then(n.bind(n, 739859)));
 function p() {
-    let e = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-        t = (0, s.Z)((e) => e.shouldRenderTenureLevelUp),
+    let e = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        t = (0, o.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, c.Z)();
     return e || !t || null == n ? null : (0, a.jsx)(h, { levelUpData: n });
 }
 function h(e) {
     let { levelUpData: t } = e,
-        n = r.useRef(null),
-        l = r.useCallback(() => {
-            s.Z.setState({ shouldRenderTenureLevelUp: !1 });
+        n = i.useRef(null),
+        l = i.useCallback(() => {
+            o.Z.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
-        r.useEffect(() => l, [l]),
-        (0, a.jsx)(i.EqS, {
+        i.useEffect(() => l, [l]),
+        (0, a.jsx)(r.EqS, {
             containerRef: n,
             children: (0, a.jsxs)("div", {
                 className: u.wrapper,
                 children: [
                     (0, a.jsx)("div", {
                         className: u.closeButton,
-                        children: (0, a.jsx)(i.aML, {
+                        children: (0, a.jsx)(r.aML, {
                             text: d.intl.string(d.t.cpT0Cq),
                             children: (e) => {
                                 var t, n;
                                 return (0, a.jsx)(
-                                    i.hU,
+                                    r.hU,
                                     ((t = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ function h(e) {
                                     })({}, e)),
                                     (n = n =
                                         {
-                                            icon: i.Dio,
+                                            icon: r.Dio,
                                             variant: "secondary",
                                             size: "sm",
                                             onClick: l,
@@ -86,7 +86,7 @@ function h(e) {
                             },
                         }),
                     }),
-                    (0, a.jsx)(r.Suspense, {
+                    (0, a.jsx)(i.Suspense, {
                         fallback: null,
                         children: (0, a.jsx)(m, { levelUpData: t }),
                     }),

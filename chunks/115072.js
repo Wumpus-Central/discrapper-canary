@@ -1,8 +1,8 @@
 n.d(t, { default: () => E }), n(953529), n(642613), n(388685), n(784620), n(973216);
 var i = n(951288),
     r = n(647438),
-    a = n(772848),
-    l = n(442837),
+    l = n(772848),
+    a = n(442837),
     o = n(544891),
     s = n(159691),
     u = n(481060),
@@ -10,8 +10,8 @@ var i = n(951288),
     d = n(476326),
     m = n(304761),
     p = n(273031),
-    f = n(859235),
-    v = n(898463),
+    v = n(859235),
+    f = n(898463),
     h = n(951394),
     g = n(667344),
     x = n(493075),
@@ -80,12 +80,12 @@ function E(e) {
             })((0, _.getOS)()),
         ),
         [en, ei] = r.useState(""),
-        [er, ea] = r.useState(""),
-        [el, eo] = r.useState(""),
+        [er, el] = r.useState(""),
+        [ea, eo] = r.useState(""),
         [es, eu] = r.useState(""),
         [ec, ed] = r.useState(!1),
         [em, ep] = r.useState(!1),
-        [ef, ev] = r.useState(!1),
+        [ev, ef] = r.useState(!1),
         [eh, eg] = r.useState(null);
     r.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
@@ -100,19 +100,19 @@ function E(e) {
                 rejectWithError: !0,
             })
             .then((e) => {
-                if (null != e.body && "b53dbffcd98a507871aab1fc76728f27f70763df" !== e.body.hash) {
-                    let e = new Date("1761675202022"),
+                if (null != e.body && "dcb3ff805646482955644e9393961f693b39ac62" !== e.body.hash) {
+                    let e = new Date("1761949144318"),
                         t = new Date(),
                         n = (0, j.TD)(t, e);
                     n.hours > 6 && eg(n.hours);
                 }
             });
     }, []);
-    let ex = (0, l.e7)([b.default], () => {
+    let ex = (0, a.e7)([b.default], () => {
             let e = b.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        eb = (0, l.e7)([m.C], () => {
+        eb = (0, a.e7)([m.C], () => {
             var e;
             return null == (e = m.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
         }),
@@ -127,16 +127,16 @@ function E(e) {
         });
     async function eO() {
         var e, t;
-        if ((ev(!1), "" === M || "" === W || null == V)) return void ed(!0);
+        if ((ef(!1), "" === M || "" === W || null == V)) return void ed(!0);
         let r = null == U || null == (e = U.features) ? void 0 : e.find((e) => (0, O.pD)(e) === X);
         ep(!0), ed(!1);
-        let a = (0, S.D)(
+        let l = (0, S.D)(
                 z.map((e) => {
                     let { item: t } = e;
                     return t;
                 }),
             ),
-            l = await (0, O.ZD)(
+            a = await (0, O.ZD)(
                 {
                     name: M,
                     description: W,
@@ -153,15 +153,15 @@ function E(e) {
                           operatingSystem: ee,
                           operatingSystemVersion: en,
                           clientVersion: er,
-                          clientBuildNumber: el,
+                          clientBuildNumber: ea,
                           locale: es,
                       }
                     : { overridePlatformInformation: K },
-                a,
-            ).catch(() => ev(!0));
+                l,
+            ).catch(() => ef(!0));
         ep(!1),
-            null != l && l.ok
-                ? (ex && window.open(l.body.permalink_url, "_blank"),
+            null != a && a.ok
+                ? (ex && window.open(a.body.permalink_url, "_blank"),
                   L(),
                   (0, u.ZDy)(async () => {
                       let { default: e } = await n.e("64648").then(n.bind(n, 81155));
@@ -170,7 +170,7 @@ function E(e) {
                           return (0, i.jsx)(
                               e,
                               ((n = C({}, t)),
-                              (r = r = { asanaTask: l.body }),
+                              (r = r = { asanaTask: a.body }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                   : (function (e, t) {
@@ -187,7 +187,7 @@ function E(e) {
                           );
                       };
                   }))
-                : ev(!0);
+                : ef(!0);
     }
     r.useEffect(() => {
         async function e() {
@@ -218,7 +218,7 @@ function E(e) {
                 G([
                     ...z,
                     new d.ZP({
-                        id: (0, a.Z)(),
+                        id: (0, l.Z)(),
                         file: t,
                         platform: d.ow.WEB,
                         origin: "clipboard",
@@ -450,12 +450,12 @@ function E(e) {
                                           label: w.intl.string(w.t["wy1M/t"]),
                                           placeholder: "Client Version",
                                           value: er,
-                                          onChange: (e) => ea(e),
+                                          onChange: (e) => el(e),
                                       }),
                                       (0, i.jsx)(u.oil, {
                                           label: w.intl.string(w.t.f7kbVu),
                                           placeholder: "Client Build Number",
-                                          value: el,
+                                          value: ea,
                                           onChange: (e) => eo(e),
                                       }),
                                       (0, i.jsx)(u.oil, {
@@ -488,7 +488,7 @@ function E(e) {
                                             ...Array.from(e.currentTarget.files).map(
                                                 (e) =>
                                                     new d.ZP({
-                                                        id: (0, a.Z)(),
+                                                        id: (0, l.Z)(),
                                                         file: e,
                                                         platform: d.ow.WEB,
                                                         origin: "file_picker",
@@ -515,8 +515,8 @@ function E(e) {
                                                       children: [
                                                           (0, i.jsxs)("div", {
                                                               children: [
-                                                                  (0, i.jsx)(v.r, {
-                                                                      size: f.q.SMALL,
+                                                                  (0, i.jsx)(f.r, {
+                                                                      size: v.q.SMALL,
                                                                       upload: e,
                                                                   }),
                                                                   (0, i.jsx)("div", {
@@ -556,7 +556,7 @@ function E(e) {
                                   }),
                               })
                             : null,
-                        ef
+                        ev
                             ? (0, i.jsx)(u.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/normal",

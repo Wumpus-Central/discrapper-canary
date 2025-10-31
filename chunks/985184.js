@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(936141),
     c = n(197653),
     u = n(979372),
-    d = n(954717);
+    d = n(821618);
 function f(e) {
     let { components: t, accentColor: n, spoiler: a, renderComponents: f } = e,
         [_, p] = i.useState(a),

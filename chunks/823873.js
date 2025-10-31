@@ -7,30 +7,30 @@ var r = n(951288),
     o = n(924301),
     c = n(725436),
     u = n(79874),
-    d = n(315416),
+    d = n(376108),
     p = n(230900),
     f = n(954313),
-    h = n(592125),
-    m = n(430824),
+    m = n(592125),
+    h = n(430824),
     g = n(388032),
     _ = n(372539);
 function b(e) {
     var t, n;
     let { eventId: b } = e,
         E = (0, l.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(b), [b]),
-        O = (0, l.e7)([m.Z], () => m.Z.getGuild(null == E ? void 0 : E.guild_id), [E]),
-        I = (0, l.e7)([h.Z], () => h.Z.getChannel(null == E ? void 0 : E.channel_id), [E]),
-        v = (0, u.zI)(b, null),
-        y = null != E && (0, o.xt)(E),
+        O = (0, l.e7)([h.Z], () => h.Z.getGuild(null == E ? void 0 : E.guild_id), [E]),
+        I = (0, l.e7)([m.Z], () => m.Z.getChannel(null == E ? void 0 : E.channel_id), [E]),
+        y = (0, u.zI)(b, null),
+        v = null != E && (0, o.xt)(E),
         C = null != E ? (0, f.DK)(E) : null,
         S = (0, d.Z)(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, C),
-        T = null == v ? void 0 : v.startTime.toISOString(),
+        T = null == y ? void 0 : y.startTime.toISOString(),
         { startDateTimeString: N } = i.useMemo(
             () =>
-                y
+                v
                     ? { startDateTimeString: g.intl.string(g.t.TxqPQR) }
                     : (0, f.ub)(null != T ? T : new Date().toISOString()),
-            [T, y],
+            [T, v],
         ),
         j = null != E ? (0, p.cS)(E) : void 0,
         P = null != (t = null == I ? void 0 : I.name) ? t : j,
@@ -44,7 +44,7 @@ function b(e) {
                 className: _.eventTimeAndUser,
                 children: (0, r.jsx)(a.Text, {
                     variant: "text-sm/semibold",
-                    color: y ? "status-positive" : "text-brand",
+                    color: v ? "status-positive" : "text-brand",
                     children: N,
                 }),
             }),

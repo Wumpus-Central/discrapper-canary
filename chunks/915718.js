@@ -17,9 +17,9 @@ var r = n(951288),
     _ = n(560688),
     y = n(173507),
     x = n(523746),
-    v = n(819640),
+    O = n(819640),
     j = n(131951),
-    O = n(699516),
+    v = n(699516),
     C = n(594174),
     I = n(979651),
     S = n(585483),
@@ -197,15 +197,15 @@ function D(e) {
             callUnavailable: x.Z.isCallUnavailable(n.id),
         })),
         g = n.getRecipientId(),
-        { notFriend: _, isBlocked: y } = (0, l.cj)([O.Z], () => ({
-            notFriend: n.type === Z.d4z.DM && null != g && !O.Z.isFriend(g),
-            isBlocked: n.type === Z.d4z.DM && null != g && O.Z.isBlocked(g),
+        { notFriend: _, isBlocked: y } = (0, l.cj)([v.Z], () => ({
+            notFriend: n.type === Z.d4z.DM && null != g && !v.Z.isFriend(g),
+            isBlocked: n.type === Z.d4z.DM && null != g && v.Z.isBlocked(g),
         })),
         j = (0, l.e7)([C.default], () => C.default.getUser(g)),
         S = (0, b.bp)(),
         E = [],
         P = (0, p.Z)(n.id),
-        T = (0, l.e7)([v.Z], () => v.Z.hasLayers());
+        T = (0, l.e7)([O.Z], () => O.Z.hasLayers());
     return (P && !T && E.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP), i || (null == j ? void 0 : j.bot))
         ? null
         : (0, r.jsx)(A, {

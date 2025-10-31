@@ -9,8 +9,8 @@ var r,
     u = n(481060),
     d = n(585483),
     p = n(981631),
-    f = n(388032),
-    h = n(418956);
+    h = n(388032),
+    f = n(418956);
 function g(e, t, n) {
     return (
         t in e
@@ -64,31 +64,31 @@ class b extends (r = l.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)("div", {
-            className: a()(h.arrowGroup, e),
+            className: a()(f.arrowGroup, e),
             children: [
                 (0, i.jsx)(s.Z.div, {
-                    className: a()(h.arrowContainer, h.horizontal),
+                    className: a()(f.arrowContainer, f.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)("img", {
                         alt: "",
                         src: n(403756),
-                        className: h.arrowIcon,
+                        className: f.arrowIcon,
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: a()(h.arrowContainer, h.diag1),
+                    className: a()(f.arrowContainer, f.diag1),
                     children: (0, i.jsx)("img", {
                         alt: "",
                         src: n(536404),
-                        className: h.arrowIcon,
+                        className: f.arrowIcon,
                     }),
                 }),
                 (0, i.jsx)("div", {
-                    className: a()(h.arrowContainer, h.diag2),
+                    className: a()(f.arrowContainer, f.diag2),
                     children: (0, i.jsx)("img", {
                         alt: "",
                         src: n(569347),
-                        className: h.arrowIcon,
+                        className: f.arrowIcon,
                     }),
                 }),
             ],
@@ -96,15 +96,15 @@ class b extends (r = l.PureComponent) {
     }
     renderContent() {
         return (0, i.jsxs)("div", {
-            className: h.tutorialMessages,
+            className: f.tutorialMessages,
             children: [
                 (0, i.jsx)("div", {
-                    className: h.searchMessage,
-                    children: f.intl.string(f.t.Mp0IGK),
+                    className: f.searchMessage,
+                    children: h.intl.string(h.t.Mp0IGK),
                 }),
                 (0, i.jsx)("div", {
-                    className: h.selectMessage,
-                    children: f.intl.string(f.t["3CbpwH"]),
+                    className: f.selectMessage,
+                    children: h.intl.string(h.t["3CbpwH"]),
                 }),
             ],
         });
@@ -114,11 +114,11 @@ class b extends (r = l.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)("div", {
             ref: this.rootRef,
-            className: a()(h.tutorial, {
-                [h.shown]: t,
-                [h.hasQuery]: e,
+            className: a()(f.tutorial, {
+                [f.shown]: t,
+                [f.hasQuery]: e,
             }),
-            children: [this.renderContent(), this.renderArrowGroup(h.__invalid_left), this.renderArrowGroup(h.right)],
+            children: [this.renderContent(), this.renderArrowGroup(f.__invalid_left), this.renderArrowGroup(f.right)],
         });
     }
     getStyle() {

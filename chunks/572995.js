@@ -36,8 +36,8 @@ var r = n(647438),
     x = n(631572),
     L = n(999675),
     M = n(238027),
-    k = n(997585),
-    j = n(138431),
+    j = n(997585),
+    k = n(138431),
     U = n(305516),
     G = n(980984),
     B = n(952842),
@@ -132,7 +132,7 @@ let ef = (e, t) =>
                 ? {
                       referralProgram: {
                           thumbnail: U.Z,
-                          assetUrl: e ? j.Z : G.Z,
+                          assetUrl: e ? k.Z : G.Z,
                       },
                       showYourStyle: {
                           thumbnail: Z.Z,
@@ -148,7 +148,7 @@ let ef = (e, t) =>
                       },
                       noLimits: {
                           thumbnail: M.Z,
-                          assetUrl: e ? L.Z : k.Z,
+                          assetUrl: e ? L.Z : j.Z,
                       },
                   }
                 : {
@@ -271,14 +271,14 @@ let ef = (e, t) =>
                 onClick: S,
                 videoUrl: N.yourSpace.assetUrl,
             },
-            k = {
+            j = {
                 name: "emojis",
                 title: b.intl.string(b.t.zY5PPb),
                 description: b.intl.string(b.t.R5Xag2),
                 previewImage: N.emojis.thumbnail,
                 videoUrl: N.emojis.assetUrl,
             },
-            j = {
+            k = {
                 name: "noLimits",
                 title: b.intl.string(b.t["6b3ydG"]),
                 description: b.intl.string(b.t["Y+IJyg"]),
@@ -287,6 +287,6 @@ let ef = (e, t) =>
             };
         return {
             whatsNewBoxes: v ? [[D], [w, P]] : I.enabled ? [[x], [R, P]] : [[w], [R, P]],
-            bestOfBoxes: [[L], [M], [k, j]],
+            bestOfBoxes: [[L], [M], [j, k]],
         };
     };

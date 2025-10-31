@@ -5,14 +5,14 @@ function l(e, t) {
     var n, l;
     let a = null,
         o = null,
-        c = null,
-        s = !1,
+        s = null,
+        c = !1,
         u = !1;
     switch (e.type) {
         case i.fO.ACTIVITY:
             break;
         case i.fO.USER:
-            (a = e.streamId), (c = e.voiceState), (s = e.speaking), (u = e.ringing);
+            (a = e.streamId), (s = e.voiceState), (c = e.speaking), (u = e.ringing);
             break;
         case i.fO.STREAM:
             (a = e.streamId), (o = e.stream);
@@ -20,10 +20,10 @@ function l(e, t) {
     return {
         streamId: a,
         stream: o,
-        speaking: s,
+        speaking: c,
         ringing: u,
-        muted: null != (n = null == c ? void 0 : c.isVoiceMuted()) && n,
-        deafen: null != (l = null == c ? void 0 : c.isVoiceDeafened()) && l,
+        muted: null != (n = null == s ? void 0 : s.isVoiceMuted()) && n,
+        deafen: null != (l = null == s ? void 0 : s.isVoiceDeafened()) && l,
         mirror: e.type === i.fO.USER && e.user.id === t,
         hasVideo: (0, r.ZP)(e),
     };

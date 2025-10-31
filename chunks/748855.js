@@ -1,6 +1,6 @@
-n.d(t, { L: () => f }), n(388685);
-var i = n(951288),
-    r = n(647438),
+n.d(t, { L: () => h }), n(388685);
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -9,19 +9,19 @@ var i = n(951288),
     u = n(106301),
     d = n(388032),
     p = n(948790),
-    h = n(334405);
-function f(e) {
-    let { label: t, icon: n, setStatus: l, isFavorited: f, onFavoriteClick: m } = e,
-        [g, b] = r.useState(!1),
-        C = (0, o.e7)([u.Z], () => u.Z.getFavoritedStatuses().length >= u.o),
-        y = r.useCallback(
+    f = n(334405);
+function h(e) {
+    let { label: t, icon: n, setStatus: l, isFavorited: h, onFavoriteClick: m } = e,
+        [g, b] = i.useState(!1),
+        _ = (0, o.e7)([u.Z], () => u.Z.getFavoritedStatuses().length >= u.o),
+        y = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == m || m();
             },
             [m],
         ),
-        _ = f ? c.r7p : c.vxU;
-    return (0, i.jsxs)(c.P3F, {
+        C = h ? c.r7p : c.vxU;
+    return (0, r.jsxs)(c.P3F, {
         onClick: l,
         onMouseEnter: () => {
             b(!0);
@@ -29,44 +29,44 @@ function f(e) {
         onMouseLeave: () => {
             b(!1);
         },
-        className: a()(h.item, h.labelContainer, p.container),
+        className: a()(f.item, f.labelContainer, p.container),
         children: [
             n,
-            (0, i.jsx)(c.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
                 className: p.itemText,
                 children: t,
             }),
             g &&
                 null != m &&
-                (0, i.jsx)(c.aML, {
+                (0, r.jsx)(c.aML, {
                     "data-migration-pending": !0,
-                    text: C && !f ? d.intl.string(d.t.YSDH9n) : void 0,
+                    text: _ && !h ? d.intl.string(d.t.YSDH9n) : void 0,
                     children: (e) => {
                         var t, n;
-                        return (0, i.jsx)(
+                        return (0, r.jsx)(
                             c.P3F,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
-                                        i = Object.keys(n);
+                                        r = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (i = i.concat(
+                                        (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        i.forEach(function (t) {
-                                            var i;
-                                            (i = n[t]),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: i,
+                                                          value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = i);
+                                                    : (e[t] = r);
                                         });
                                 }
                                 return e;
@@ -75,9 +75,9 @@ function f(e) {
                                 {
                                     className: a()(p.centerAlign, p.favoriteIcon),
                                     onClick: y,
-                                    children: (0, i.jsx)(_, {
+                                    children: (0, r.jsx)(C, {
                                         className: p.closeIcon,
-                                        color: f ? s.Z.colors.ICON_FEEDBACK_WARNING : "currentColor",
+                                        color: h ? s.Z.colors.ICON_FEEDBACK_WARNING : "currentColor",
                                     }),
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -85,8 +85,8 @@ function f(e) {
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var i = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, i);
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
                                       }
                                       return n;
                                   })(Object(n)).forEach(function (e) {

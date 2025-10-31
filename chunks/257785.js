@@ -5,29 +5,29 @@ n.d(t, {
 }),
     n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(481060),
-    s = n(572004),
+    r = n.n(l),
+    s = n(481060),
+    o = n(572004),
     c = n(451429);
 function d(e) {
     let { className: t, children: n } = e;
     return (0, a.jsx)("dl", {
-        className: i()(c.properties, t),
+        className: r()(c.properties, t),
         children: n,
     });
 }
 let u = (e) => {
     let { name: t, children: n, copyValue: l } = e,
-        [i, d] = r.useState(!1);
+        [r, d] = i.useState(!1);
     return (
-        r.useEffect(() => {
-            if (i) {
+        i.useEffect(() => {
+            if (r) {
                 let e = setTimeout(() => d(!1), 1000);
                 return () => clearTimeout(e);
             }
-        }, [i]),
+        }, [r]),
         (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)("dt", {
@@ -39,16 +39,16 @@ let u = (e) => {
                     children: [
                         n,
                         null != l
-                            ? (0, a.jsx)(o.P3F, {
+                            ? (0, a.jsx)(s.P3F, {
                                   tag: "span",
                                   className: c.copyPropertyButton,
-                                  onClick: () => (0, s.JG)(l, () => d(!0)),
-                                  children: i
-                                      ? (0, a.jsx)(o.kmB, {
+                                  onClick: () => (0, o.JG)(l, () => d(!0)),
+                                  children: r
+                                      ? (0, a.jsx)(s.kmB, {
                                             color: "currentColor",
                                             size: "sm",
                                         })
-                                      : (0, a.jsx)(o.TIy, {
+                                      : (0, a.jsx)(s.TIy, {
                                             color: "currentColor",
                                             size: "sm",
                                         }),
@@ -62,5 +62,5 @@ let u = (e) => {
 };
 function m(e) {
     let { value: t } = e;
-    return (0, a.jsx)(o.FZ5, { checked: t });
+    return (0, a.jsx)(s.FZ5, { checked: t });
 }

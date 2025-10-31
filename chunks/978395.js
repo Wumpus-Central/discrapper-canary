@@ -29,20 +29,20 @@ var r = n(951288),
     P = n(228168),
     w = n(981631),
     D = n(671955),
-    L = n(388032),
-    x = n(116649);
+    x = n(388032),
+    L = n(116649);
 function M(e) {
     let {
             user: t,
             currentUser: n,
             displayProfile: M,
-            guild: k,
-            isHoveringOrFocusing: j,
+            guild: j,
+            isHoveringOrFocusing: k,
             onOpenProfile: U,
             channelId: G,
             onClose: B,
         } = e,
-        Z = u.ZP.useName(null == k ? void 0 : k.id, G, t),
+        Z = u.ZP.useName(null == j ? void 0 : j.id, G, t),
         { relationshipType: F, originApplicationId: V } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id),
@@ -57,15 +57,15 @@ function M(e) {
         Q = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
         fade: !0,
-        className: x.body,
+        className: L.body,
         children: [
             (0, r.jsx)(I.Z, {
                 user: t,
-                guildId: null == k ? void 0 : k.id,
+                guildId: null == j ? void 0 : j.id,
                 onOpenProfile: U,
                 onClose: B,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == k ? void 0 : k.id) &&
+                    t.hasAvatarForGuild(null == j ? void 0 : j.id) &&
                     (0, r.jsx)(C.Z, {
                         user: t,
                         nickname: Z,
@@ -83,7 +83,7 @@ function M(e) {
                         !Y &&
                             (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isVisible: j,
+                                isVisible: k,
                                 onOpenProfile: U,
                             }),
                     ],
@@ -93,7 +93,7 @@ function M(e) {
                 (0, r.jsx)(v.Z.Overlay, {
                     children: (0, r.jsx)(E.Z, {
                         user: t,
-                        guildId: null == k ? void 0 : k.id,
+                        guildId: null == j ? void 0 : j.id,
                         channelId: G,
                         applicationId: V,
                     }),
@@ -120,9 +120,9 @@ function M(e) {
                 }),
             t.isProvisional
                 ? (0, r.jsx)(v.Z.Overlay, {
-                      className: x.card,
+                      className: L.card,
                       children: (0, r.jsx)(y.Z, {
-                          heading: L.intl.string(L.t.Iyka0U),
+                          heading: x.intl.string(x.t.Iyka0U),
                           headingIcon: (0, r.jsx)(a.Mgn, {
                               size: "xxs",
                               color: a.TVs.colors.HEADER_PRIMARY,
@@ -153,21 +153,21 @@ function M(e) {
                 ? (0, r.jsx)(O.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == k ? void 0 : k.id,
+                      guildId: null == j ? void 0 : j.id,
                       onOpenUserProfileModal: U,
                       onClose: B,
                   })
                 : (0, r.jsx)(m.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == k ? void 0 : k.id,
+                      guildId: null == j ? void 0 : j.id,
                       onClose: B,
                   }),
-            null != k &&
+            null != j &&
                 (0, r.jsx)(N.Z, {
                     user: t,
                     currentUser: n,
-                    guild: k,
+                    guild: j,
                 }),
         ],
     });

@@ -1,13 +1,13 @@
-t.d(l, { u: () => b }), t(388685);
-var a = t(951288),
-    n = t(647438),
-    o = t(67979),
-    i = t(921349),
-    r = t(619307),
-    s = t(463208),
-    u = t(397943),
-    d = t(481060);
-let c = [
+n.d(t, { u: () => f }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(67979),
+    o = n(921349),
+    s = n(619307),
+    l = n(463208),
+    c = n(397943),
+    u = n(481060);
+let d = [
         {
             value: "red",
             label: "Red",
@@ -41,47 +41,47 @@ let c = [
             label: "Brown",
         },
     ],
-    b = {
+    f = {
         title: "VoidInputs",
         stories: [
             {
                 name: "VoidInputs",
                 id: "void-inputs",
                 component: function (e) {
-                    let { disabled: l, placeholder: t } = e,
-                        [b, p] = n.useState(void 0),
-                        [y, m] = n.useState(void 0),
-                        [f, v] = n.useState(void 0);
-                    return (0, a.jsxs)(d.Kqy, {
+                    let { disabled: t, placeholder: n } = e,
+                        [f, _] = i.useState(void 0),
+                        [p, h] = i.useState(void 0),
+                        [m, g] = i.useState(void 0);
+                    return (0, r.jsxs)(u.Kqy, {
                         gap: 8,
                         children: [
-                            (0, a.jsx)(r.q4, {
-                                value: b,
-                                onChange: p,
-                                options: c,
-                                placeholder: t,
-                                isDisabled: l,
-                            }),
-                            (0, a.jsx)(s.o, {
-                                placeholder: t,
-                                disabled: l,
-                            }),
-                            (0, a.jsx)(i.V, {
-                                value: b,
-                                onChange: p,
-                                options: c,
-                                placeholder: t,
-                                isDisabled: l,
-                            }),
-                            (0, a.jsx)(o.W, {
-                                onSelect: m,
-                                value: y,
-                                disabled: l,
-                            }),
-                            (0, a.jsx)(u.M, {
-                                onChange: v,
+                            (0, r.jsx)(s.q4, {
                                 value: f,
-                                disabled: l,
+                                onChange: _,
+                                options: d,
+                                placeholder: n,
+                                isDisabled: t,
+                            }),
+                            (0, r.jsx)(l.o, {
+                                placeholder: n,
+                                disabled: t,
+                            }),
+                            (0, r.jsx)(o.V, {
+                                value: f,
+                                onChange: _,
+                                options: d,
+                                placeholder: n,
+                                isDisabled: t,
+                            }),
+                            (0, r.jsx)(a.W, {
+                                onSelect: h,
+                                value: p,
+                                disabled: t,
+                            }),
+                            (0, r.jsx)(c.M, {
+                                onChange: g,
+                                value: m,
+                                disabled: t,
                             }),
                         ],
                     });

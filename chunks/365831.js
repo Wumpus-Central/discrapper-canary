@@ -1,4 +1,4 @@
-n.d(t, { y: () => w }), n(388685), n(953529);
+n.d(t, { y: () => _ }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     o = n(120356),
@@ -12,8 +12,8 @@ var r = n(951288),
     m = n(131951),
     f = n(743498),
     b = n(56848),
-    g = n(378441),
-    v = n(388032),
+    v = n(378441),
+    g = n(388032),
     y = n(395760);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,7 +65,7 @@ let h = (e) => 1 - Math.pow(1 - e, 4),
         tension: 1000,
         clamp: !0,
     },
-    _ = {
+    E = {
         mass: 1,
         friction: 64,
         tension: 1000,
@@ -75,14 +75,14 @@ let h = (e) => 1 - Math.pow(1 - e, 4),
         friction: 35,
         tension: 1000,
     };
-function w(e) {
+function _(e) {
     var t;
     let {} = e,
-        { activeVoice: n } = (0, g.o)(),
+        { activeVoice: n } = (0, v.o)(),
         o = (0, d.Z)(n),
-        w = (0, b.z)(n),
-        { toggleLoopback: C, isLoopbackEnabled: E } = (function () {
-            let { activeVoice: e } = (0, g.o)(),
+        _ = (0, b.z)(n),
+        { toggleLoopback: w, isLoopbackEnabled: C } = (function () {
+            let { activeVoice: e } = (0, v.o)(),
                 t = (0, s.e7)([m.Z], () => m.Z.getVoiceFilterPlaybackEnabled()),
                 n = i.useCallback(() => {
                     (0, p.GN)(t ? "voice_filter_loopback_off" : "voice_filter_loopback_on"), (0, f._j)(!t);
@@ -103,25 +103,25 @@ function w(e) {
                 }
             );
         })(),
-        I = E ? c.Iy5 : c.X_q,
-        T = i.useCallback(() => (0, f.v6)(null), []),
-        S = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
-        N = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
-        Z = i.useRef(0),
-        D = n !== o ? Z.current + 1 : Z.current;
+        S = C ? c.Iy5 : c.X_q,
+        I = i.useCallback(() => (0, f.v6)(null), []),
+        N = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
+        T = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
+        D = i.useRef(0),
+        Z = n !== o ? D.current + 1 : D.current;
     i.useEffect(() => {
-        Z.current = D;
-    }, [D]);
+        D.current = Z;
+    }, [Z]);
     let k = null != n,
         M = !k,
         A = k && null != o,
-        R = null == n && null != o,
-        L = (0, c.q_F)(
+        L = null == n && null != o,
+        R = (0, c.q_F)(
             {
                 opacity: +!!k,
                 height: 72 * !!k,
                 pointerEvents: k ? "auto" : "none",
-                backgroundColor: null != (t = null == w ? void 0 : w.baseColor) ? t : S,
+                backgroundColor: null != (t = null == _ ? void 0 : _.baseColor) ? t : N,
                 config: (e) =>
                     "backgroundColor" === e
                         ? {
@@ -134,12 +134,12 @@ function w(e) {
             "respect-motion-settings",
         ),
         V = (0, c.Yzy)(
-            null == w ? void 0 : w.id,
+            null == _ ? void 0 : _.id,
             {
-                key: D,
+                key: Z,
                 from: {
                     opacity: 0,
-                    background: null == w ? void 0 : w.splashGradient,
+                    background: null == _ ? void 0 : _.splashGradient,
                 },
                 enter: {
                     opacity: 1,
@@ -186,16 +186,16 @@ function w(e) {
                               easing: h,
                               duration: 200,
                           }
-                        : _,
-                delay: R ? 50 - 50 * e : 200 + 50 * e,
+                        : E,
+                delay: L ? 50 - 50 * e : 200 + 50 * e,
             }),
             "respect-motion-settings",
             [n],
         ),
         U = (0, c.Yzy)(
-            null == w ? void 0 : w.iconURL,
+            null == _ ? void 0 : _.iconURL,
             {
-                key: D,
+                key: Z,
                 from: {
                     opacity: 0,
                     scale: 80 / 88,
@@ -226,9 +226,9 @@ function w(e) {
             "respect-motion-settings",
         ),
         Y = (0, c.Yzy)(
-            null == w ? void 0 : w.name,
+            null == _ ? void 0 : _.name,
             {
-                key: D,
+                key: Z,
                 from: {
                     opacity: 0,
                     scale: A ? 0.9 : 1,
@@ -248,13 +248,13 @@ function w(e) {
                               }
                             : A
                               ? x
-                              : _,
+                              : E,
                 },
                 leave: {
                     opacity: 0,
                     translateX: 24 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: R ? 100 : 50,
+                    delay: L ? 100 : 50,
                     config: (e) =>
                         "opacity" === e
                             ? {
@@ -263,16 +263,16 @@ function w(e) {
                               }
                             : A
                               ? x
-                              : _,
+                              : E,
                 },
             },
             "respect-motion-settings",
         ),
-        H = v.intl.string(E ? v.t.esVyo6 : v.t.UQqFCF);
+        H = g.intl.string(C ? g.t.esVyo6 : g.t.UQqFCF);
     return (0, r.jsxs)(a.animated.div, {
         className: y.voiceFilterHero,
         "aria-hidden": M,
-        style: L,
+        style: R,
         children: [
             (0, r.jsx)("div", {
                 className: l()([y.bgGradient, y.bgGradientHighlight]),
@@ -309,12 +309,12 @@ function w(e) {
                                 variant: "text-xs/normal",
                                 color: "always-white",
                                 className: y.offWhiteText,
-                                children: v.intl.string(v.t.WW5DAC),
+                                children: g.intl.string(g.t.WW5DAC),
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/medium",
                                 color: "always-white",
-                                children: null != t ? v.intl.string(t) : "",
+                                children: null != t ? g.intl.string(t) : "",
                             }),
                         ],
                     }),
@@ -340,7 +340,7 @@ function w(e) {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-xs/normal",
                                     color: "header-muted",
-                                    children: v.intl.string(E ? v.t.Sg6cfm : v.t.ZKhtw0),
+                                    children: g.intl.string(C ? g.t.Sg6cfm : g.t.ZKhtw0),
                                 }),
                             ],
                         }),
@@ -353,7 +353,7 @@ function w(e) {
                                     O(
                                         j(
                                             {
-                                                className: l()(y.button, { [y.loopbackEnabled]: E }),
+                                                className: l()(y.button, { [y.loopbackEnabled]: C }),
                                                 "aria-hidden": M,
                                                 focusProps: { enabled: k },
                                                 tabIndex: k ? 0 : -1,
@@ -361,12 +361,12 @@ function w(e) {
                                             e,
                                         ),
                                         {
-                                            onClick: () => C(),
-                                            children: (0, r.jsx)(I, {
+                                            onClick: () => w(),
+                                            children: (0, r.jsx)(S, {
                                                 size: "custom",
                                                 width: 20,
                                                 height: 20,
-                                                color: N,
+                                                color: T,
                                             }),
                                         },
                                     ),
@@ -376,7 +376,7 @@ function w(e) {
                     (0, r.jsx)(c.aML, {
                         "data-migration-pending": !0,
                         shouldShow: k,
-                        text: v.intl.string(v.t.UvMx7F),
+                        text: g.intl.string(g.t.UvMx7F),
                         children: (e) =>
                             (0, r.jsx)(a.animated.div, {
                                 className: y.buttonWrapper,
@@ -394,12 +394,12 @@ function w(e) {
                                             e,
                                         ),
                                         {
-                                            onClick: T,
+                                            onClick: I,
                                             children: (0, r.jsx)(c.k$p, {
                                                 size: "custom",
                                                 width: 20,
                                                 height: 20,
-                                                color: N,
+                                                color: T,
                                             }),
                                         },
                                     ),

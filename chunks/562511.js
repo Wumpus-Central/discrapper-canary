@@ -1,6 +1,6 @@
 n.d(t, {
-    A2: () => m,
-    S3: () => h,
+    A2: () => h,
+    S3: () => m,
 });
 var r = n(647438),
     i = n(442837),
@@ -13,7 +13,7 @@ var r = n(647438),
     d = n(731722),
     p = n(864133),
     f = n(981631);
-function h(e) {
+function m(e) {
     let t = (function (e) {
         let t = (0, s.FT)(l.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : f.lds);
         return (
@@ -60,15 +60,15 @@ function h(e) {
             null == d || ((null == o ? void 0 : o.identityGuildId) === e && (null == o ? void 0 : o.tag) === d))
         )
             return !1;
-        let h = (null == o ? void 0 : o.identityGuildId) === e && (null == o ? void 0 : o.tag) === null,
-            m = null === n || (null == n ? void 0 : n.tag) === d;
-        return h && !m && t;
+        let m = (null == o ? void 0 : o.identityGuildId) === e && (null == o ? void 0 : o.tag) === null,
+            h = null === n || (null == n ? void 0 : n.tag) === d;
+        return m && !h && t;
     })(e)
         ? t
             ? "available"
             : null
         : "changed";
 }
-function m(e) {
-    return null !== h(e);
+function h(e) {
+    return null !== m(e);
 }

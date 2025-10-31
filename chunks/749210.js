@@ -62,7 +62,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,12 +74,12 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,7 +89,7 @@ function M(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = j(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -97,7 +97,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -106,7 +106,7 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = (e) => {
+let k = (e) => {
         C.Z.show({
             title: P.intl.string(P.t.cTaRxF),
             body: P.intl.formatToPlainString(P.t["VSd+Aj"], { quantity: e }),
@@ -209,7 +209,7 @@ let F = {
                 (null == (s = t.body) ? void 0 : s.code) === N.evJ.TOO_MANY_USER_GUILDS)
             ) {
                 let e = v.default.getCurrentUser();
-                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? j(N.tHP) : j(N.DZw);
+                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? k(N.tHP) : k(N.DZw);
             }
             throw (
                 ((null == (u = t.body) ? void 0 : u.code) === N.evJ.GUILD_AT_CAPACITY && G(),
@@ -224,7 +224,7 @@ let F = {
             a = t;
         (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) &&
             null == t.welcomeModalChannelId &&
-            (a = x(D({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
+            (a = L(D({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
             (0, d.Z)(N.Z5c.CHANNEL(e, i, r), a),
             await new Promise(setImmediate);
     },
@@ -388,7 +388,7 @@ let F = {
             s = null === r || (null == r ? void 0 : r.startsWith("data:")) ? r : void 0,
             l = await a.tn.patch({
                 url: N.ANM.GUILD_ROLE(e, t),
-                body: x(D({}, o), {
+                body: L(D({}, o), {
                     icon: s,
                     unicode_emoji: i,
                 }),

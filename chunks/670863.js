@@ -117,11 +117,11 @@ function R(e) {
             "hideDeviceTypeIcon",
             "label",
         ]);
-    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: L, getLocation: x } = N(t),
+    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: x, getLocation: L } = N(t),
         { analyticsLocations: M } = (0, d.ZP)(),
-        k = (0, s.e7)([f.Z], () => f.Z.theme),
-        [j, U] = i.useState(u),
-        G = x(a),
+        j = (0, s.e7)([f.Z], () => f.Z.theme),
+        [k, U] = i.useState(u),
+        G = L(a),
         [B, Z] = (0, E.Ls)(t, { location: G }),
         { id: F } = (0, E.p6)(t),
         V = null != _ ? _ : F,
@@ -129,7 +129,7 @@ function R(e) {
         { showDeviceSelectionImprovements: Y } = (0, g.V)({ location: "".concat(G, "/SingleSelectDevices") }),
         W = (0, r.jsx)(c.Wn, {
             messageType: c.QYI.WARNING,
-            children: L(),
+            children: x(),
         }),
         K = i.useCallback(
             (e) => {
@@ -166,7 +166,7 @@ function R(e) {
             (t = f.subName));
         let _ = p.Z.getCertifiedDeviceName(s, d);
         if (p.Z.isCertified(s)) {
-            let e = (0, l.ap)(k) ? n(561259) : n(887695);
+            let e = (0, l.ap)(j) ? n(561259) : n(887695);
             i = (0, r.jsx)("img", {
                 src: e,
                 alt: O.intl.string(O.t.smSKsj),
@@ -220,7 +220,7 @@ function R(e) {
                 };
             },
             t = B.map(e);
-        if (j || 0 === Z.length) {
+        if (k || 0 === Z.length) {
             let n = Z.map(e);
             return t.concat(n);
         }

@@ -104,8 +104,8 @@ function I(e) {
         P = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         w = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         { analyticsLocations: D } = (0, o.ZP)(),
-        L = (0, p.N)(),
-        x = !N && null != L && null != g && h.nG[L.trial_id].skus.includes(g);
+        x = (0, p.N)(),
+        L = !N && null != x && null != g && h.nG[x.trial_id].skus.includes(g);
     return R({
         onClick: (e) => {
             var i;
@@ -135,7 +135,7 @@ function I(e) {
                         return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            let o = x ? (null == (i = L.subscription_trial) ? void 0 : i.id) : null,
+            let o = L ? (null == (i = x.subscription_trial) ? void 0 : i.id) : null,
                 f = m.AnalyticsObjectTypes.BUY;
             null != o ? (f = m.AnalyticsObjectTypes.TRIAL) : N && (f = m.AnalyticsObjectTypes.GIFT),
                 (0, l.Z)({

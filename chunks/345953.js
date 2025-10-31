@@ -154,19 +154,19 @@ function w(e, t, n, r) {
 function D() {
     P();
 }
-let L = i().debounce(() => {
+let x = i().debounce(() => {
     U();
 }, T);
-function x(e, t, n) {
-    (0, h.RF)(e, t, { volume: n }), L();
+function L(e, t, n) {
+    (0, h.RF)(e, t, { volume: n }), x();
 }
 function M(e, t, n) {
-    (0, h.RF)(e, t, { muted: n }), L.cancel(), U();
+    (0, h.RF)(e, t, { muted: n }), x.cancel(), U();
 }
-function k(e, t, n) {
-    (0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U();
+function j(e, t, n) {
+    (0, h.RF)(e, t, { soundboardMuted: n }), x.cancel(), U();
 }
-let j = i().debounce(c.On, 500, { maxWait: 500 });
+let k = i().debounce(c.On, 500, { maxWait: 500 });
 function U() {
     g.hW.updateAsync(
         "audioContextSettings",
@@ -190,11 +190,11 @@ function G(e) {
     if (n === f.default.getId()) return;
     let i = u.default.getRemoteSessionId();
     null != i &&
-        j(i, n, t, {
+        k(i, n, t, {
             muted: _.Z.isLocalMute(n, t),
             volume: r,
         }),
-        x(t, n, r);
+        L(t, n, r);
 }
 function B(e) {
     let { context: t, userId: n } = e;
@@ -202,7 +202,7 @@ function B(e) {
 }
 function Z(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && k(t, n, d.Z.isLocalSoundboardMuted(n));
+    n !== f.default.getId() && j(t, n, d.Z.isLocalSoundboardMuted(n));
 }
 function F(e) {
     let {} = e;

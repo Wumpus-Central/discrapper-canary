@@ -17,16 +17,16 @@ var r = n(951288),
     d = n(239091),
     p = n(749210),
     f = n(410030),
-    h = n(726542),
-    m = n(884338),
+    m = n(726542),
+    h = n(884338),
     g = n(367907),
     _ = n(598077),
     b = n(314897),
     E = n(271383),
     O = n(485386),
     I = n(626135),
-    v = n(63063),
-    y = n(225104),
+    y = n(63063),
+    v = n(225104),
     C = n(981631),
     S = n(388032),
     T = n(375563),
@@ -106,7 +106,7 @@ let x = function (e) {
         transitionState: l,
         title: S.intl.string(S.t.ghtnss),
         onClose: x,
-        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: v.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
+        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: y.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, r.jsx)(u.Kqy, {
             children: M.map((e) => {
@@ -132,7 +132,7 @@ let x = function (e) {
                                           })
                                         : null;
                             } else {
-                                let t = h.Z.get(e.connection_type);
+                                let t = m.Z.get(e.connection_type);
                                 s = (0, r.jsx)("img", {
                                     src: (0, c.ap)(D) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
@@ -198,7 +198,7 @@ let x = function (e) {
                                       }),
                                   })
                                 : null,
-                            (0, r.jsx)(y.Z, {
+                            (0, r.jsx)(v.Z, {
                                 guildId: t,
                                 role: e,
                                 size: 24,
@@ -222,7 +222,7 @@ let x = function (e) {
                                         : null,
                                 ],
                             }),
-                            (0, r.jsx)(m.ZP, {
+                            (0, r.jsx)(h.ZP, {
                                 showUserPopout: !1,
                                 guildId: t,
                                 users: s.map(() => null),

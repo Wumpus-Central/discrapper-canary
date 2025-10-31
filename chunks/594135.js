@@ -1,15 +1,15 @@
-n.d(e, {
-    CancellationContext: () => l,
+n.d(t, {
+    CancellationContext: () => o,
     a: () => s,
 });
-var i = n(647438),
-    r = n(793030),
+var r = n(647438),
+    i = n(793030),
     a = n(474936);
-let l = i.createContext({
+let o = r.createContext({
         setStep: () => {},
         premiumType: a.PremiumTypes.TIER_0,
         onClose: () => {},
-        transitionState: r.Dvm.ENTERING,
+        transitionState: i.Dvm.ENTERING,
         premiumSubscription: {},
         analyticsLocations: [],
         analyticsLocation: void 0,
@@ -24,4 +24,4 @@ let l = i.createContext({
         pauseDuration: null,
         setPauseDuration: () => {},
     }),
-    s = () => i.useContext(l);
+    s = () => r.useContext(o);

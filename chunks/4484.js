@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -32,12 +32,12 @@ var r = n(951288),
     x = n(645174),
     L = n(120481),
     M = n(981631),
-    k = n(520093);
-let j = i.forwardRef(function (e, t) {
+    j = n(867641);
+let k = i.forwardRef(function (e, t) {
     let {
             value: n,
             type: a,
-            channel: j,
+            channel: k,
             className: U,
             id: G,
             disabled: B,
@@ -91,11 +91,11 @@ let j = i.forwardRef(function (e, t) {
                 if (void 0 !== i && i !== o) {
                     if (((e.children = i), "parent" === t && !e.previewMarkdown && e.chatInputType === _.Ie.EDIT)) {
                         try {
-                            (e.previewMarkdown = !0), (0, P.KH)(e, j.guild_id, j.id);
+                            (e.previewMarkdown = !0), (0, P.KH)(e, k.guild_id, k.id);
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, P.KH)(e, j.guild_id, j.id), (a = void 0);
+                        (0, P.KH)(e, k.guild_id, k.id), (a = void 0);
                     }
                     "undo" !== t && void 0 !== i && i !== o && h.T.insertEntry(e, "other", !1, o, s), (l = !0);
                 }
@@ -115,9 +115,9 @@ let j = i.forwardRef(function (e, t) {
                 let d = p.cr(e);
                 if (
                     (null != d &&
-                        d[0].command.id !== (null == (r = c.Z.getActiveCommand(j.id)) ? void 0 : r.id) &&
+                        d[0].command.id !== (null == (r = c.Z.getActiveCommand(k.id)) ? void 0 : r.id) &&
                         h.T.withMergedEntry(e, () => {
-                            (0, R.L)(e, j.id, null, !0);
+                            (0, R.L)(e, k.id, null, !0);
                         }),
                     l)
                 )
@@ -129,7 +129,7 @@ let j = i.forwardRef(function (e, t) {
                         }
                     else e.onChange();
             },
-            [j.id, j.guild_id, es],
+            [k.id, k.guild_id, es],
         ),
         eC = i.useCallback(() => {
             eI.current = !1;
@@ -138,7 +138,7 @@ let j = i.forwardRef(function (e, t) {
             eI.current = !0;
         }, []),
         eR = (0, T.Z)({
-            channel: j,
+            channel: k,
             chatInputType: a,
             canUseCommands: ea,
             canOnlyUseTextCommands: eo,
@@ -148,20 +148,20 @@ let j = i.forwardRef(function (e, t) {
         }),
         eP = i.useCallback(
             (e, t) => {
-                let n = p.tM(eR, e, j.id),
-                    r = p.lk(e, j.guild_id, j.id, n, t);
+                let n = p.tM(eR, e, k.id),
+                    r = p.lk(e, k.guild_id, k.id, n, t);
                 return {
                     values: n,
                     results: r,
                 };
             },
-            [j.guild_id, j.id, eR],
+            [k.guild_id, k.id, eR],
         ),
         ew = i.useCallback(() => {
             let e,
                 t = b.bN.getNodesOfType(eR, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
-                r = ea ? c.Z.getActiveCommand(j.id) : null,
+                r = ea ? c.Z.getActiveCommand(k.id) : null,
                 i = !1;
             if (null != r && null != r.options) {
                 let t = eP(r, !1);
@@ -203,11 +203,11 @@ let j = i.forwardRef(function (e, t) {
                     r,
                     e,
                 );
-        }, [j.id, eR, ee, eP, ea]);
-    (0, S.Z)(t, eR, j, ew), (0, N.Z)(eR, eO, K);
+        }, [k.id, eR, ee, eP, ea]);
+    (0, S.Z)(t, eR, k, ew), (0, N.Z)(eR, eO, K);
     let { handleKeyDown: eD, handleKeyUp: ex } = (0, A.Z)({
             editor: eR,
-            channel: j,
+            channel: k,
             disableEnterToSubmit: el,
             onKeyDown: X,
             onKeyUp: Q,
@@ -219,13 +219,13 @@ let j = i.forwardRef(function (e, t) {
             moveSelection: er,
         }),
         { handlePaste: eL, handleGlobalPaste: eM } = (0, C.Z)(eR, eS, W),
-        ek = i.useCallback(
+        ej = i.useCallback(
             (e) => {
                 null == et || et();
             },
             [et],
         ),
-        ej = i.useCallback(
+        ek = i.useCallback(
             (e) => {
                 e !== ev.current
                     ? eT.current && (null == Y || Y(null, (0, g.sk)(e, { mode: "raw" }), e))
@@ -239,29 +239,29 @@ let j = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             let e = () => {
                 var e;
-                let t = null != (e = c.Z.getActiveCommand(j.id)) ? e : null;
+                let t = null != (e = c.Z.getActiveCommand(k.id)) ? e : null;
                 null !== t && null != t.options && eP(t, !0);
             };
             return u.Z.addChangeListener(e), () => u.Z.removeChangeListener(e);
-        }, [j, eR, eP]);
+        }, [k, eR, eP]);
     let eU = i.useCallback(
             (e) => [
-                ...(0, v.Z)(eR, e, j.guild_id),
+                ...(0, v.Z)(eR, e, k.guild_id),
                 ...(0, y.Z)(eR, e),
                 ...(0, O.Z)(eR, e),
-                ...(0, I.Z)(eR, e, j, {
+                ...(0, I.Z)(eR, e, k, {
                     isIdle: eu,
                     currentAutocompleteType: ed,
                 }),
             ],
-            [eR, j, eu, ed],
+            [eR, k, eu, ed],
         ),
         eG = i.useCallback(
             (e) => {
-                let t = (0, w.Z)(eR, e, j.id);
+                let t = (0, w.Z)(eR, e, k.id);
                 return null == t && (t = (0, x.Z)(eR, e)), null == t && (t = (0, L.Z)(eR, e)), t;
             },
-            [j.id, eR],
+            [k.id, eR],
         ),
         eB = i.useCallback((e) => (0, D.Z)(e), []);
     return (0, r.jsxs)(r.Fragment, {
@@ -272,22 +272,22 @@ let j = i.forwardRef(function (e, t) {
             }),
             (0, r.jsx)("div", {
                 ref: eO,
-                className: o()(U, k.slateContainer),
+                className: o()(U, j.slateContainer),
                 children: (0, r.jsx)(m.Z, {
                     id: G,
                     editor: eR,
-                    channelId: j.id,
-                    guildId: j.guild_id,
-                    className: o()(k.slateTextArea, H),
+                    channelId: k.id,
+                    guildId: k.guild_id,
+                    className: o()(j.slateTextArea, H),
                     placeholder: F,
                     readOnly: eS,
                     spellCheck: ei,
                     autoFocus: !es,
                     canFocus: !B,
-                    onChange: ej,
+                    onChange: ek,
                     onFocus: z,
                     onBlur: q,
-                    onClick: ek,
+                    onClick: ej,
                     onPaste: eL,
                     onKeyDown: eD,
                     onKeyUp: ex,

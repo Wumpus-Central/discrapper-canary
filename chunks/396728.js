@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(956748),
-    i = n(566697),
-    o = n(346284);
-let s = r.memo(function (e) {
-    let { user: t, nameplate: n, isHighlighted: r, isPurchased: s } = e;
+    r = n(566697),
+    s = n(346284);
+let o = i.memo(function (e) {
+    let { user: t, nameplate: n, isHighlighted: i, isPurchased: o } = e;
     return (0, a.jsx)("div", {
-        className: o.nameplatePreviewContainer,
+        className: s.nameplatePreviewContainer,
         children: (0, a.jsxs)("div", {
-            className: o.nameplatePreviewList,
+            className: s.nameplatePreviewList,
             children: [
                 (0, a.jsx)(l.G, {
                     showStatus: !0,
@@ -21,14 +21,14 @@ let s = r.memo(function (e) {
                     width: 110,
                     opacity: 0.85,
                 }),
-                (0, a.jsx)(i.Z, {
+                (0, a.jsx)(r.Z, {
                     user: t,
                     nameplate: n,
-                    className: o.nameplatePreviewSampleItem,
-                    isHighlighted: r,
-                    showPlaceholderUser: !r,
+                    className: s.nameplatePreviewSampleItem,
+                    isHighlighted: i,
+                    showPlaceholderUser: !i,
                     showStatus: !0,
-                    isPurchased: s,
+                    isPurchased: o,
                 }),
                 (0, a.jsx)(l.G, {
                     showStatus: !0,

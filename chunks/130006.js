@@ -30,7 +30,7 @@ e.exports = function (e, t, n, o, p, m, A) {
         R,
         P = function (e) {
             if (e === p && M) return M;
-            if (!y && e && e in L) return L[e];
+            if (!y && e && e in x) return x[e];
             switch (e) {
                 case v:
                 case I:
@@ -45,24 +45,24 @@ e.exports = function (e, t, n, o, p, m, A) {
         },
         w = t + " Iterator",
         D = !1,
-        L = e.prototype,
-        x = L[O] || L["@@iterator"] || (p && L[p]),
-        M = (!y && x) || P(p),
-        k = ("Array" === t && L.entries) || x;
+        x = e.prototype,
+        L = x[O] || x["@@iterator"] || (p && x[p]),
+        M = (!y && L) || P(p),
+        j = ("Array" === t && x.entries) || L;
     if (
-        (k &&
-            (C = c(k.call(new e()))) !== Object.prototype &&
+        (j &&
+            (C = c(j.call(new e()))) !== Object.prototype &&
             C.next &&
             (!a && c(C) !== b && (u ? u(C, b) : s(C[O]) || _(C, O, S)), d(C, w, !0, !0), a && (h[w] = S)),
         g &&
             p === I &&
-            x &&
-            x.name !== I &&
+            L &&
+            L.name !== I &&
             (!a && E
-                ? f(L, "name", I)
+                ? f(x, "name", I)
                 : ((D = !0),
                   (M = function () {
-                      return i(x, this);
+                      return i(L, this);
                   }))),
         p)
     )
@@ -74,7 +74,7 @@ e.exports = function (e, t, n, o, p, m, A) {
             }),
             A)
         )
-            for (R in N) (!y && !D && R in L) || _(L, R, N[R]);
+            for (R in N) (!y && !D && R in x) || _(x, R, N[R]);
         else
             r(
                 {
@@ -84,5 +84,5 @@ e.exports = function (e, t, n, o, p, m, A) {
                 },
                 N,
             );
-    return (!a || A) && L[O] !== M && _(L, O, M, { name: p }), (h[t] = M), N;
+    return (!a || A) && x[O] !== M && _(x, O, M, { name: p }), (h[t] = M), N;
 };

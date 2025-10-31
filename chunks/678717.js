@@ -1,15 +1,15 @@
 n.r(t),
     n.d(t, {
-        default: () => I,
+        default: () => w,
         openDevToolsPopout: () => T,
     }),
     n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(120356),
-    i = n.n(l),
-    o = n(990547),
-    s = n(442837),
+    r = n.n(l),
+    s = n(990547),
+    o = n(442837),
     c = n(481060),
     d = n(347469),
     u = n(213609),
@@ -27,12 +27,12 @@ var a = n(951288),
     C = n(552883),
     S = n(451429);
 function E(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
+    let { resizableNode: t, onResize: n, onResizeEnd: i } = e,
         l = (0, d.Z)({
             minDimension: f.h,
             resizableDomNodeRef: t,
             onElementResize: n,
-            onElementResizeEnd: r,
+            onElementResizeEnd: i,
             orientation: d.y.HORIZONTAL_LEFT,
         });
     return (0, a.jsx)("div", {
@@ -48,7 +48,7 @@ function T() {
                 windowKey: _.KJ3.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(w, {
                     mobile: !1,
                     isPopout: !0,
                 }),
@@ -59,29 +59,29 @@ function T() {
         },
     );
 }
-function O(e) {
+function N(e) {
     var t;
     let { isPopout: n = !1 } = e,
-        r = (0, v.F)(),
+        i = (0, v.F)(),
         {
             TabBar: l,
-            renderSelectedTab: i,
-            selectedTabId: s,
+            renderSelectedTab: r,
+            selectedTabId: o,
         } = (0, j.ZP)(
             {
-                tabs: r,
+                tabs: i,
                 initialSelectedTabId: null != (t = f.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
                     (0, g.Qh)({ lastOpenTabId: e });
                 },
             },
-            [r],
+            [i],
         );
     return (
         (0, u.Z)({
-            type: o.ImpressionTypes.PANE,
-            name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
-            properties: { panel: s },
+            type: s.ImpressionTypes.PANE,
+            name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
+            properties: { panel: o },
         }),
         (0, a.jsxs)(b.Gk, {
             children: [
@@ -112,18 +112,18 @@ function O(e) {
                     ],
                 }),
                 (0, a.jsx)(l, {}),
-                i(),
+                r(),
                 (0, a.jsx)(b.Br, { className: C.layerContainer }),
             ],
         })
     );
 }
-function N() {
-    let e = r.useRef(null),
-        t = (0, s.e7)([f.Z], () => f.Z.sidebarWidth),
-        [n, l] = r.useState(null),
-        i = r.useCallback((e) => (0, g.Qh)({ sidebarWidth: e }), []);
-    return (r.useEffect(() => {
+function O() {
+    let e = i.useRef(null),
+        t = (0, o.e7)([f.Z], () => f.Z.sidebarWidth),
+        [n, l] = i.useState(null),
+        r = i.useCallback((e) => (0, g.Qh)({ sidebarWidth: e }), []);
+    return (i.useEffect(() => {
         null === n && null !== t && l(t);
     }, [t, n]),
     null === n)
@@ -140,22 +140,22 @@ function N() {
                   (0, a.jsx)(E, {
                       resizableNode: e,
                       onResize: l,
-                      onResizeEnd: i,
+                      onResizeEnd: r,
                   }),
                   (0, a.jsx)("div", {
                       className: C.sidebarContent,
-                      children: (0, a.jsx)(O, {}),
+                      children: (0, a.jsx)(N, {}),
                   }),
               ],
           });
 }
 function P() {
-    return (0, s.e7)([f.Z], () => f.Z.displayTools)
+    return (0, o.e7)([f.Z], () => f.Z.displayTools)
         ? (0, a.jsx)("div", {
-              className: i()(C.container, C.mobileContainerExpanded),
+              className: r()(C.container, C.mobileContainerExpanded),
               children: (0, a.jsx)("div", {
                   className: C.sidebarContent,
-                  children: (0, a.jsx)(O, {}),
+                  children: (0, a.jsx)(N, {}),
               }),
           })
         : (0, a.jsx)("div", {
@@ -163,7 +163,7 @@ function P() {
               children: (0, a.jsx)(c.P3F, {
                   onClick: g.SO,
                   children: (0, a.jsxs)(m.ZP, {
-                      className: i()(S.headerBar, C.mobileHeaderCollapsed),
+                      className: r()(S.headerBar, C.mobileHeaderCollapsed),
                       toolbar: (0, a.jsx)(x.Z, { direction: x.Z.Directions.UP }),
                       children: [
                           (0, a.jsx)(m.ZP.Icon, {
@@ -176,14 +176,14 @@ function P() {
               }),
           });
 }
-function I(e) {
+function w(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
         ? (0, a.jsx)(P, {})
         : n
           ? (0, a.jsx)("div", {
                 className: C.popoutContainer,
-                children: (0, a.jsx)(O, { isPopout: !0 }),
+                children: (0, a.jsx)(N, { isPopout: !0 }),
             })
-          : (0, a.jsx)(N, {});
+          : (0, a.jsx)(O, {});
 }

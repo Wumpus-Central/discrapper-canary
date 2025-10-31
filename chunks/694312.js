@@ -28,7 +28,7 @@ function p(e) {
                     : [],
             [v, p],
         ),
-        x = i.useMemo(
+        g = i.useMemo(
             () =>
                 n
                     .map((e) => {
@@ -45,7 +45,7 @@ function p(e) {
         );
     return i.useMemo(
         () =>
-            [...y, ...x]
+            [...y, ...g]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -59,6 +59,6 @@ function p(e) {
                         (null == t ? void 0 : t.nsfwAllowed) == null
                     );
                 }),
-        [null == t ? void 0 : t.nsfwAllowed, x, y],
+        [null == t ? void 0 : t.nsfwAllowed, g, y],
     );
 }

@@ -1,8 +1,8 @@
-t.d(l, { W: () => o });
-var a = t(951288);
-t(647438);
-var n = t(561779);
-let o = {
+n.d(t, { W: () => a });
+var r = n(951288);
+n(647438);
+var i = n(561779);
+let a = {
     title: "Slider",
     stories: [
         {
@@ -10,27 +10,27 @@ let o = {
             name: "Slider",
             component: function (e) {
                 let {
-                        minValue: l,
-                        maxValue: t,
-                        initialValue: o,
-                        markerCount: i,
-                        stickToMarkers: r,
-                        disabled: s,
-                        equidistant: u,
+                        minValue: t,
+                        maxValue: n,
+                        initialValue: a,
+                        markerCount: o,
+                        stickToMarkers: s,
+                        disabled: l,
+                        equidistant: c,
                     } = e,
-                    d = i > 0 ? Array.from({ length: i }, (e, a) => Math.floor(l + (a / (i - 1)) * (t - l))) : void 0;
-                return (0, a.jsx)(
-                    n.i,
+                    u = o > 0 ? Array.from({ length: o }, (e, r) => Math.floor(t + (r / (o - 1)) * (n - t))) : void 0;
+                return (0, r.jsx)(
+                    i.i,
                     {
-                        minValue: l,
-                        maxValue: t,
-                        initialValue: o,
-                        markers: d,
-                        stickToMarkers: r,
-                        disabled: s,
-                        equidistant: u,
+                        minValue: t,
+                        maxValue: n,
+                        initialValue: a,
+                        markers: u,
+                        stickToMarkers: s,
+                        disabled: l,
+                        equidistant: c,
                     },
-                    i,
+                    o,
                 );
             },
             controls: {

@@ -1,5 +1,5 @@
 n.d(t, {
-    default: () => h,
+    default: () => m,
     r: () => f,
 }),
     n(388685);
@@ -14,9 +14,9 @@ var r = n(951288),
     d = n(981631),
     p = n(388032);
 let f = "Activity Encourages Hardware Acceleration";
-function h(e) {
+function m(e) {
     var t;
-    let { applicationId: n, transitionState: h, onClose: m } = e,
+    let { applicationId: n, transitionState: m, onClose: h } = e,
         [g, _] = i.useState(!1),
         [b] = (0, o.Z)([n]),
         E = null != (t = null == b ? void 0 : b.name) ? t : "This Activity";
@@ -30,7 +30,7 @@ function h(e) {
                     type: f,
                     dismiss_type: e,
                 }),
-                await m();
+                await h();
         },
         I = async () => {
             c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }),
@@ -39,7 +39,7 @@ function h(e) {
         };
     return (0, r.jsx)(l.Modal, {
         size: "md",
-        transitionState: h,
+        transitionState: m,
         onClose: O,
         "aria-label": p.intl.string(p.t.NQkK4l),
         title: p.intl.string(p.t.NQkK4l),

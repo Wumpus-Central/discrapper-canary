@@ -47,7 +47,7 @@ function g(e, t) {
 function E(e, t, n, r) {
     let { isIdle: u, currentAutocompleteType: h } = r;
     if (0 === t.length) return d;
-    let { onlyExactMatch: m, eagerRecentSenders: E } = (0, l.kB)("getMentionSuggestions", { autoTrackExposure: !0 }),
+    let { onlyExactMatch: m, eagerRecentSenders: E } = (0, l.kB)("getMentionSuggestions", { autoTrackExposure: !1 }),
         b = g(t, n),
         { query: y } = b;
     if (y.length < f || c.Z.getMaxWordCount() < p || c.Z.isFrequentlyUsedWord(y)) return d;

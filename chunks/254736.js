@@ -70,14 +70,14 @@ var c = n(901607),
     P = n(467159),
     w = v.isBrowser("IE"),
     D = !w,
-    L = {
+    x = {
         edit: p,
         composite: d,
         drag: _,
         cut: null,
         render: null,
     },
-    x = !1,
+    L = !1,
     M = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
@@ -101,7 +101,7 @@ var c = n(901607),
             t
         );
     })(b.Component),
-    k = (function (e) {
+    j = (function (e) {
         function t(t) {
             var n;
             return (
@@ -175,11 +175,11 @@ var c = n(901607),
                         r = t.onPaste,
                         i = t.onCut,
                         o = t.onCopy,
-                        s = a({}, L.edit);
+                        s = a({}, x.edit);
                     r && (s.onPaste = r),
                         i && (s.onCut = i),
                         o && (s.onCopy = o),
-                        (n._handler = a({}, L, { edit: s })[e]);
+                        (n._handler = a({}, x, { edit: s })[e]);
                 }),
                 s(o(n), "exitCurrentMode", function () {
                     n.setMode("edit");
@@ -382,7 +382,7 @@ var c = n(901607),
             }),
             (r.componentDidMount = function () {
                 (this._blockSelectEvents = !1),
-                    !x && C("draft_ods_enabled") && ((x = !0), g.initODS()),
+                    !L && C("draft_ods_enabled") && ((L = !0), g.initODS()),
                     this.setMode("edit"),
                     w &&
                         (this.editor
@@ -397,7 +397,7 @@ var c = n(901607),
             t
         );
     })(b.Component);
-s(k, "defaultProps", {
+s(j, "defaultProps", {
     blockRenderMap: c,
     blockRendererFn: function () {
         return null;
@@ -410,4 +410,4 @@ s(k, "defaultProps", {
     spellCheck: !1,
     stripPastedStyles: !1,
 }),
-    (e.exports = k);
+    (e.exports = j);

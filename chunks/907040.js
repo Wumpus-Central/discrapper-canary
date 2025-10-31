@@ -34,11 +34,11 @@ var r = n(951288),
     P = n(536442),
     w = n(609218),
     D = n(695346),
-    L = n(984933),
-    x = n(594174),
+    x = n(984933),
+    L = n(594174),
     M = n(626135),
-    k = n(111361),
-    j = n(624138),
+    j = n(111361),
+    k = n(624138),
     U = n(543241),
     G = n(253696),
     B = n(199257),
@@ -108,8 +108,8 @@ function ei(e, t) {
         e
     );
 }
-let ea = (0, j.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
-    eo = (0, j.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+let ea = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
+    eo = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
     es = 8,
     el = (e) => e.stopPropagation();
 var ec = (function (e) {
@@ -265,7 +265,7 @@ let eu = (e, t) => {
                 closePopout: p,
                 emojiSize: A = X.Su.MEDIUM,
                 hasTabWrapper: R = !1,
-                containerContext: j = 0,
+                containerContext: k = 0,
                 includeCreateEmojiButton: et,
                 onSelectEmoji: er,
                 onSelectSoundmoji: ec,
@@ -286,25 +286,25 @@ let eu = (e, t) => {
                 showOnlyUnicode: eP = !1,
                 showAddEmojiButton: ew = !1,
             } = e,
-            { onFocus: eD, onKeyDown: eL, autoFocus: ex = !0, accessory: eM } = ev,
-            ek = (0, u.e7)([L.ZP], () => (null != f ? L.ZP.getDefaultChannel(f) : null), [f]),
-            [ej, eU] = i.useState(null),
+            { onFocus: eD, onKeyDown: ex, autoFocus: eL = !0, accessory: eM } = ev,
+            ej = (0, u.e7)([x.ZP], () => (null != f ? x.ZP.getDefaultChannel(f) : null), [f]),
+            [ek, eU] = i.useState(null),
             eG = i.useRef(""),
             eB = (0, S.Iu)((e) => e.searchQuery),
             eZ = i.useRef(null),
             eF = i.useRef(null),
             eV = i.useRef(null);
-        null == c && null != ek && (c = ek);
+        null == c && null != ej && (c = ej);
         let eH = null != (a = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? a : null,
             [eY, eW] = i.useState(!1),
-            eK = x.default.getCurrentUser(),
-            ez = (0, k.I5)(eK);
+            eK = L.default.getCurrentUser(),
+            ez = (0, j.I5)(eK);
         i.useImperativeHandle(t, () => ({ onPickerOpen: ta }));
         let { location: eq } = (0, m.O)(),
             { page: eX, section: eQ, object: eJ, openPopoutType: e$, popoutLocation: e0 } = eO,
             e1 = i.useMemo(() => ei(en({}, eq), { section: null != eQ ? eQ : Q.jXE.EMOJI_PICKER_POPOUT }), [eq, eQ]),
-            { analyticsLocations: e2 } = (0, b.ZP)(g.Z.EMOJI_PICKER),
-            { diversitySurrogate: e3 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
+            { analyticsLocations: e3 } = (0, b.ZP)(g.Z.EMOJI_PICKER),
+            { diversitySurrogate: e2 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
             e4 = (0, U.DV)(eB, c, l, eP),
             e8 = null == e4 ? 0 : e4.locked.length + e4.unlocked.length,
             e5 = D.d4.useSetting(),
@@ -406,7 +406,7 @@ let eu = (e, t) => {
                 isBurstReaction: eY,
             });
         ef(eu, eF),
-            e_(eu, e3, eV, ex),
+            e_(eu, e2, eV, eL),
             i.useEffect(() => {
                 eE || (0, S.ql)("");
             }, [eE]),
@@ -443,12 +443,12 @@ let eu = (e, t) => {
             }, [eB, e1, e8, e4, l]);
         let t_ = null != eI ? eI : R ? "div" : _.VqE,
             tp = null != e9;
-        if ((null == ej ? void 0 : ej.type) === Y.Bg.PREMIUM) {
+        if ((null == ek ? void 0 : ek.type) === Y.Bg.PREMIUM) {
             let e = w.p.NONE;
-            2 === j ? (e = w.p.PARENT_CONTAINER) : 1 === j && (e = w.p.TAB_PARENT_CONTAINER),
+            2 === k ? (e = w.p.PARENT_CONTAINER) : 1 === k && (e = w.p.TAB_PARENT_CONTAINER),
                 (s = (0, r.jsx)(q.Z, {
                     onLearnMore: ts,
-                    emojiDescriptor: ej.emojiDescriptor,
+                    emojiDescriptor: ek.emojiDescriptor,
                     pickerIntention: l,
                     analyticsLocation: e1,
                     onClose: () => eU(null),
@@ -456,11 +456,11 @@ let eu = (e, t) => {
                     containerContext: e,
                 }));
         } else
-            (null == ej ? void 0 : ej.type) === Y.Bg.ROLE_SUBSCRIPTION
+            (null == ek ? void 0 : ek.type) === Y.Bg.ROLE_SUBSCRIPTION
                 ? (s = (0, r.jsx)(N.Z, {
                       onClose: () => eU(null),
-                      guildId: ej.guildId,
-                      emojiId: ej.emojiId,
+                      guildId: ek.guildId,
+                      emojiId: ek.emojiId,
                   }))
                 : eY && !ez && (s = (0, r.jsx)(Z.Z, { onDismiss: () => eW(!1) }));
         let th = (e, t) => {
@@ -475,14 +475,14 @@ let eu = (e, t) => {
                 pickerIntention: l,
                 emojiListRef: eF,
                 onKeyDown: (e) => {
-                    null == td || td(e), null == eL || eL(e);
+                    null == td || td(e), null == ex || ex(e);
                 },
                 searchBarRef: eV,
                 onFocus: eD,
-                autoFocus: ex,
+                autoFocus: eL,
                 accessory: eM,
                 headerClassName: ey,
-                diversitySurrogate: e3,
+                diversitySurrogate: e2,
                 isBurstReaction: eY,
                 onBurstReactionToggle: tm,
                 renderHeader: eA,
@@ -541,7 +541,7 @@ let eu = (e, t) => {
                                                           children: tp
                                                               ? (0, r.jsx)(K.Z, {
                                                                     collapsedSections: e6,
-                                                                    diversitySurrogate: e3,
+                                                                    diversitySurrogate: e2,
                                                                     emojiGrid: tn,
                                                                     emojiListRef: eF,
                                                                     emojiSize: A,
@@ -594,7 +594,7 @@ let eu = (e, t) => {
             }),
         );
         return (0, r.jsx)(b.Gt, {
-            value: e2,
+            value: e3,
             children: tb,
         });
     },

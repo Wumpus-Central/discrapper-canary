@@ -1,6 +1,6 @@
 n.d(t, { I: () => S }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(399606),
@@ -9,43 +9,43 @@ var i = n(951288),
     u = n(496675),
     d = n(944486),
     p = n(626135),
-    h = n(906605),
-    f = n(833858),
+    f = n(906605),
+    h = n(833858),
     m = n(866071),
     g = n(699263),
     b = n(797156),
-    C = n(223135),
+    _ = n(223135),
     y = n(505905),
-    _ = n(981631),
+    C = n(981631),
     v = n(388032),
-    x = n(10359),
-    O = n(254477);
-function j(e) {
+    O = n(10359),
+    x = n(254477);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function E(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,8 +53,8 @@ function E(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -65,17 +65,17 @@ function E(e, t) {
 }
 function S(e) {
     let { hangStatusActivity: t, channel: n, userId: l, setPopoutRef: S } = e,
-        P = r.useRef(null),
+        P = i.useRef(null),
         I = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId() === n.id),
-        Z = (0, o.e7)([u.Z], () => u.Z.can(_.Plq.CONNECT, n)),
+        Z = (0, o.e7)([u.Z], () => u.Z.can(C.Plq.CONNECT, n)),
         T = (null == t ? void 0 : t.emoji) == null || (0, m.K)(t.emoji, n);
-    r.useEffect(() => {
+    i.useEffect(() => {
         null == S || S(null == P ? void 0 : P.current);
     }, [P, S]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             p.default.track(
-                _.rMx.VIEW_HANG_STATUS,
-                j(
+                C.rMx.VIEW_HANG_STATUS,
+                E(
                     {
                         source: "HangStatusPopout",
                         other_user_id: l,
@@ -84,59 +84,59 @@ function S(e) {
                 ),
             );
         }, [n.guild_id, n.id, l]);
-    let N = r.useCallback(() => {
+    let N = i.useCallback(() => {
             !I &&
                 Z &&
                 (c.default.selectVoiceChannel(n.id),
                 p.default.track(
-                    _.rMx.HANG_STATUS_CTA_CLICKED,
-                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    C.rMx.HANG_STATUS_CTA_CLICKED,
+                    j(E({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "join",
                     }),
                 ));
         }, [I, Z, n.id, l]),
-        A = r.useCallback(() => {
+        A = i.useCallback(() => {
             if (!I || !T || null == t.state) return;
             let [e] = (0, b.F)(l, t.state);
             if (null != e) {
                 if (e === y.tN.CUSTOM) {
                     if (null == t.details || null == t.emoji) return;
-                    (0, h._s)(t.details, t.emoji, !0);
-                } else (0, h.Zx)(e, !0);
+                    (0, f._s)(t.details, t.emoji, !0);
+                } else (0, f.Zx)(e, !0);
                 p.default.track(
-                    _.rMx.HANG_STATUS_CTA_CLICKED,
-                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    C.rMx.HANG_STATUS_CTA_CLICKED,
+                    j(E({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "swipe",
                     }),
                 );
             }
         }, [I, T, t, n.id, l]);
-    return (0, i.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         ref: P,
-        className: a()(O.popover, x.container),
+        className: a()(x.popover, O.container),
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, r.jsx)(_.Z, {
                 userId: l,
                 size: 32,
-                className: x.icon,
+                className: O.icon,
                 hangStatusActivity: t,
             }),
-            (0, i.jsx)(s.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
-                className: x.statusText,
-                children: (0, f.O8)(l, t),
+                className: O.statusText,
+                children: (0, h.O8)(l, t),
             }),
             I
-                ? (0, i.jsx)(s.aML, {
+                ? (0, r.jsx)(s.aML, {
                       "data-migration-pending": !0,
                       text: T ? void 0 : v.intl.string(v.t["0LMpW+"]),
                       children: (e) =>
-                          (0, i.jsx)(
+                          (0, r.jsx)(
                               "div",
-                              E(j({}, e), {
-                                  children: (0, i.jsx)(s.Button, {
+                              j(E({}, e), {
+                                  children: (0, r.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "secondary",
                                       text: v.intl.string(v.t["0eHzpm"]),
@@ -147,7 +147,7 @@ function S(e) {
                           ),
                   })
                 : Z &&
-                  (0, i.jsx)(s.Button, {
+                  (0, r.jsx)(s.Button, {
                       size: "sm",
                       variant: "secondary",
                       text: v.intl.string(v.t["B/dHXL"]),

@@ -36,8 +36,8 @@ let j = l.memo(function (e) {
                 onClickCard: P,
                 onClickPrimaryCTA: A,
                 onClickSecondaryCTA: N,
-                onMouseEnter: Z,
-                onMouseLeave: R,
+                onMouseEnter: R,
+                onMouseLeave: Z,
                 onFocus: w,
                 onBlur: H,
                 primaryCTAText: D,
@@ -70,8 +70,8 @@ let j = l.memo(function (e) {
                 className: s()(V, y.productCardContainer, { [y.hovered]: J }),
                 onFocus: () => (null == w ? void 0 : w(t.skuId)),
                 onBlur: () => (null == H ? void 0 : H(t.skuId)),
-                onMouseEnter: () => (null == Z ? void 0 : Z(t.skuId)),
-                onMouseLeave: () => (null == R ? void 0 : R(t.skuId)),
+                onMouseEnter: () => (null == R ? void 0 : R(t.skuId)),
+                onMouseLeave: () => (null == Z ? void 0 : Z(t.skuId)),
                 children: (0, r.jsxs)("div", {
                     className: y.productCardContentContainer,
                     children: [

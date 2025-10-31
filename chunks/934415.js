@@ -1,9 +1,9 @@
 n.d(t, {
     EO: () => G,
-    LY: () => k,
+    LY: () => j,
     Nj: () => a.Z,
-    a5: () => x,
-    c4: () => L,
+    a5: () => L,
+    c4: () => x,
     g7: () => w,
     jZ: () => C,
     mE: () => B,
@@ -11,7 +11,7 @@ n.d(t, {
     rX: () => N,
     rY: () => P,
     rt: () => R,
-    wR: () => j,
+    wR: () => k,
     wl: () => M,
 }),
     n(415506),
@@ -136,7 +136,7 @@ function D(e) {
         a
     );
 }
-function L(e) {
+function x(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e;
     return D({
         channels: t,
@@ -145,7 +145,7 @@ function L(e) {
         voiceStates: i,
     }).map((e) => e.user);
 }
-function x(e) {
+function L(e) {
     let { type: t } = e;
     switch (t) {
         case g.d4z.DM:
@@ -182,7 +182,7 @@ function M(e) {
     if (e.type === g.d4z.GUILD_MEDIA) return "media";
     else if (c.sR.has(e.type)) return "text";
 }
-function k(e) {
+function j(e) {
     let t,
         n = u.Z.getChannel(_.Z.getLastSelectedChannelId());
     if (null != n && n.getGuildId() === e && n.type === g.d4z.GUILD_TEXT) t = n.id;
@@ -192,7 +192,7 @@ function k(e) {
     }
     return g.Z5c.CHANNEL(e, t);
 }
-function j(e, t, n, r) {
+function k(e, t, n, r) {
     let i = null == r ? "" : "?summaryId=".concat(r);
     return ""
         .concat(location.protocol, "//")
@@ -202,7 +202,7 @@ function j(e, t, n, r) {
 }
 function U(e, t, n, r) {
     return null == e || null == t || null == n
-        ? j(e, t, r)
+        ? k(e, t, r)
         : ""
               .concat(location.protocol, "//")
               .concat(location.host)
@@ -212,7 +212,7 @@ function G(e, t, n, r) {
     let i,
         a = e.getGuildId(),
         o = (0, s.BC)(a, t);
-    return null != t && o ? U(a, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : j(a, e.id, n);
+    return null != t && o ? U(a, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : k(a, e.id, n);
 }
 function B(e) {
     if (null == e) return null;

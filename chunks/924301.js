@@ -135,7 +135,7 @@ function P(e) {
         s = (null == (n = T[e.guild_scheduled_event_id]) || null == (t = n[o]) ? void 0 : t[e.user_id]) != null,
         l = e.user_id === c.default.getId();
     (s || !l) &&
-        (null == (i = T[e.guild_scheduled_event_id]) || null == (r = i[o]) || delete r[e.user_id], L(e), a && (O += 1));
+        (null == (i = T[e.guild_scheduled_event_id]) || null == (r = i[o]) || delete r[e.user_id], x(e), a && (O += 1));
 }
 function w(e, t, n) {
     let r = N(t);
@@ -152,7 +152,7 @@ function D(e) {
                 : -1);
     w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
-function L(e) {
+function x(e) {
     var t, n;
     let r = N(e.guild_scheduled_event_exception_id),
         i =
@@ -163,7 +163,7 @@ function L(e) {
                 : 1);
     w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
-function x(e) {
+function L(e) {
     let { guilds: t } = e;
     return (
         y.clear(),
@@ -179,7 +179,7 @@ function M(e) {
     let { guildScheduledEvent: t } = e;
     A(t);
 }
-function k(e) {
+function j(e) {
     let { guildId: t, guildScheduledEvents: n } = e,
         r = y.values(g.GUILD_EVENT(t), !0).map((e) => e.id),
         i = n.map((e) => e.id);
@@ -192,7 +192,7 @@ function k(e) {
         A(e);
     return !0;
 }
-function j(e) {
+function k(e) {
     let { guild: t } = e;
     return G(t.id, !1), t.guild_scheduled_events.forEach((e) => A(e)), !0;
 }
@@ -354,11 +354,11 @@ class en extends (r = o.ZP.Store) {
 }
 _(en, "displayName", "GuildScheduledEventStore");
 let er = new en(l.Z, {
-    CONNECTION_OPEN: x,
-    GUILD_CREATE: j,
+    CONNECTION_OPEN: L,
+    GUILD_CREATE: k,
     GUILD_DELETE: U,
     FETCH_GUILD_EVENT: M,
-    FETCH_GUILD_EVENTS_FOR_GUILD: k,
+    FETCH_GUILD_EVENTS_FOR_GUILD: j,
     GUILD_SCHEDULED_EVENT_CREATE: B,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
     GUILD_SCHEDULED_EVENT_DELETE: Z,

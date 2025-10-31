@@ -25,7 +25,7 @@ let _ = ["#51BC9D"],
             w = s.useRef(null),
             P = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
             N = (0, u.Z)(P),
-            [A, R] = s.useState(null),
+            [R, A] = s.useState(null),
             [B, k] = s.useState(null),
             I = s.useRef(
                 new i.qA({
@@ -33,7 +33,7 @@ let _ = ["#51BC9D"],
                     wind: 0,
                 }),
             ),
-            D = (0, i.uR)(A, B),
+            D = (0, i.uR)(R, B),
             q = s.useCallback(() => {
                 if (T) return;
                 let e = j.current,
@@ -173,7 +173,7 @@ let _ = ["#51BC9D"],
                           },
                           children: [
                               (0, r.jsx)(i.O_, {
-                                  ref: R,
+                                  ref: A,
                                   className: h.confetti,
                                   environment: I.current,
                               }),

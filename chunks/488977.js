@@ -14,8 +14,8 @@ var i = n(951288),
     h = n(726521),
     v = n(973616),
     y = n(914010),
-    x = n(594174),
-    g = n(626135),
+    g = n(594174),
+    x = n(626135),
     b = n(572004),
     N = n(630388),
     j = n(135431),
@@ -87,7 +87,7 @@ function L(e) {
             section_name: Z,
             source: C.Z.lastShownEntrypoint(),
         },
-        V = x.default.getCurrentUser(),
+        V = g.default.getCurrentUser(),
         W = (0, f.Z)({
             id: r.id,
             label: O.intl.string(O.t["+NP/b2"]),
@@ -109,7 +109,7 @@ function L(e) {
                     (0, b.JG)(e, () =>
                         (0, s.showToast)((0, s.createToast)(O.intl.string(O.t["L/PwZf"]), s.ToastType.SUCCESS)),
                     ),
-                        g.default.track(_.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        x.default.track(_.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: r.id,
                             source: k,
                         });

@@ -20,16 +20,16 @@ var r = n(951288),
     d = n(150063),
     p = n(529103),
     f = n(252618),
-    h = n(313201),
-    m = n(5254),
+    m = n(313201),
+    h = n(5254),
     g = n(984370),
     _ = n(518311),
     b = n(199104),
     E = n(108427),
     O = n(210887),
     I = n(974042),
-    v = n(365113),
-    y = n(849862),
+    y = n(365113),
+    v = n(849862),
     C = n(666286),
     S = n(596957),
     T = n(981631),
@@ -62,9 +62,9 @@ let A = function (e) {
             d.Y(T.Z5c.FRIENDS), (0, E.e)("friends");
         }, []);
     let _ = (0, o.e7)([O.Z], () => O.Z.theme),
-        A = (0, y.If)(),
+        A = (0, v.If)(),
         { section: Z, rows: w } = (0, o.cj)([I.ZP], () => I.ZP.getState()),
-        L = (0, o.e7)([m.Z], () => m.Z.getSuggestionCount()),
+        L = (0, o.e7)([h.Z], () => h.Z.getSuggestionCount()),
         R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
         null != t && p.Z.setInitialSection(t),
@@ -77,8 +77,8 @@ let A = function (e) {
     let D = (e) => {
             p.Z.transitionToSection(e, { explicit: !0 });
         },
-        M = (0, h.Dt)(),
-        k = (0, h.Dt)(),
+        M = (0, m.Dt)(),
+        k = (0, m.Dt)(),
         U = [
             {
                 id: T.pJs.ONLINE,
@@ -131,7 +131,7 @@ let A = function (e) {
                 className: a()(P.item, P.addFriend),
             },
         ],
-        G = v.o.useConfig({ location: "people page" }).friendsTab,
+        G = y.o.useConfig({ location: "people page" }).friendsTab,
         B = null,
         H = G
             ? null

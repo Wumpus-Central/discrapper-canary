@@ -33,9 +33,9 @@ let O = function (e) {
     if (((0, u.HA)(I, C), n)) return null;
     let w = T === g.wh.CLIENT_THEMES || R,
         D = T === g.wh.APP_ICON,
-        L = T === g.wh.CUSTOM_THEME || P;
-    if (!(w || D || L)) return null;
-    let x = () =>
+        x = T === g.wh.CUSTOM_THEME || P;
+    if (!(w || D || x)) return null;
+    let L = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
                 w &&
@@ -55,7 +55,7 @@ let O = function (e) {
                         isCoachmark: !1,
                         markAsDismissed: N,
                     }),
-                L &&
+                x &&
                     (0, r.jsx)(d.Z, {
                         metadata: null != S ? S : {},
                         markAsDismissed: N,
@@ -67,7 +67,7 @@ let O = function (e) {
     return t
         ? (0, r.jsx)("div", {
               className: y.mobileContainer,
-              children: x(),
+              children: L(),
           })
-        : x();
+        : L();
 };

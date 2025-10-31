@@ -113,18 +113,18 @@ function T(e) {
         { disabled: R, errorMessage: P, required: w = !1 } = N,
         D = { hasError: null != P && "" !== P },
         {
-            refs: L,
-            floatingStyles: x,
+            refs: x,
+            floatingStyles: L,
             isOpen: M,
-            setIsOpen: k,
-            context: j,
+            setIsOpen: j,
+            context: k,
             getFloatingProps: U,
             getReferenceProps: G,
         } = (0, d.O)({
             matchReferenceWidth: !1,
             placement: "bottom-start",
         }),
-        { isMounted: B, styles: Z } = (0, d.Y)(j, {
+        { isMounted: B, styles: Z } = (0, d.Y)(k, {
             common: (e) => {
                 let { side: t } = e;
                 return { transformOrigin: "".concat("top" === t ? "bottom" : "top", " center") };
@@ -136,7 +136,7 @@ function T(e) {
             duration: 100,
         }),
         F = (e) => {
-            null == n || n(e), k(!1);
+            null == n || n(e), j(!1);
         };
     return (0, r.jsx)(
         _.g,
@@ -149,7 +149,7 @@ function T(e) {
                             {
                                 className: g.inputField,
                                 validation: D,
-                                ref: L.setReference,
+                                ref: x.setReference,
                             },
                             G(),
                         ),
@@ -185,7 +185,7 @@ function T(e) {
                                             }),
                                             (0, r.jsx)(c.z, {
                                                 className: g.calendarButton,
-                                                onClick: () => k(!M),
+                                                onClick: () => j(!M),
                                                 "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
                                                 children: (0, r.jsx)(p.Que, {
                                                     size: "sm",
@@ -199,8 +199,8 @@ function T(e) {
                                         (0, r.jsx)(
                                             "div",
                                             O(b({}, U()), {
-                                                ref: L.setFloating,
-                                                style: x,
+                                                ref: x.setFloating,
+                                                style: L,
                                                 className: g.popover,
                                                 children: (0, r.jsx)(u.Vq, {
                                                     style: Z,

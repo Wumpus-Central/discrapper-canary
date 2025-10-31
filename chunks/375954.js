@@ -29,7 +29,7 @@ var r,
     P = n(914010),
     w = n(594174),
     D = n(981631);
-function L(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,10 +42,10 @@ function L(e, t, n) {
         e
     );
 }
-let x = new Set(),
+let L = new Set(),
     M = new d.Z("MessageStore"),
-    k = !1;
-function j() {
+    j = !1;
+function k() {
     c.Z.forEach((e) => {
         c.Z.commit(
             e.mutate({
@@ -54,7 +54,7 @@ function j() {
             }),
         );
     }),
-        x.clear();
+        L.clear();
 }
 function U(e) {
     let { changesByChannelId: t } = e;
@@ -84,7 +84,7 @@ function B(e) {
 }
 function Z(e) {
     let { channelId: t } = e;
-    M.log("Clearing messages for ".concat(t)), c.Z.clear(t), x.clear();
+    M.log("Clearing messages for ".concat(t)), c.Z.clear(t), L.clear();
 }
 function F(e) {
     let { channelId: t, jump: n, focus: r, before: i, after: a, limit: o, truncate: s } = e,
@@ -139,15 +139,15 @@ function H(e) {
 }
 function Y(e) {
     let { message: t } = e;
-    (null == t ? void 0 : t.nonce) != null && x.add(t.nonce);
+    (null == t ? void 0 : t.nonce) != null && L.add(t.nonce);
 }
 function W(e) {
     let { channelId: t, messageId: n } = e;
-    if (null == n || !x.has(n)) return !1;
+    if (null == n || !L.has(n)) return !1;
     let r = c.Z.getOrCreate(t),
         i = r.get(n);
     if (null == i) return !1;
-    (r = (r = r.remove(n)).merge([i])), x.delete(n), c.Z.commit(r);
+    (r = (r = r.remove(n)).merge([i])), L.delete(n), c.Z.commit(r);
 }
 function K(e) {
     let { channelId: t, message: n, isPushNotification: r } = e,
@@ -158,7 +158,7 @@ function K(e) {
         return;
     }
     if (!i.ready) return !1;
-    null != n.nonce && n.state !== D.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)),
+    null != n.nonce && n.state !== D.yb.SENDING && L.has(n.nonce) && ((i = i.remove(n.nonce)), L.delete(n.nonce)),
         (i = i.receiveMessage(n, !0 === I.Z.isAtBottom(t))),
         c.Z.commit(i);
 }
@@ -192,7 +192,7 @@ function q(e) {
         let e = r.getAfter(t);
         r = null != e && e.blocked ? r.mutate({ revealedMessageId: e.id }) : r.mutate({ revealedMessageId: null });
     }
-    (r = r.remove(t)), c.Z.commit(r), x.delete(t);
+    (r = r.remove(t)), c.Z.commit(r), L.delete(t);
 }
 function X(e) {
     let { ids: t, channelId: n } = e,
@@ -206,7 +206,7 @@ function X(e) {
     }
     c.Z.commit(i),
         t.forEach((e) => {
-            x.delete(e);
+            L.delete(e);
         });
 }
 function Q(e) {
@@ -326,7 +326,7 @@ function ed() {
     c.Z.forEach((e) => {
         c.Z.clear(e.channelId);
     }),
-        x.clear();
+        L.clear();
 }
 function ef(e) {
     for (let [t, n] of y.default.entries(e.messages)) {
@@ -341,7 +341,7 @@ function e_(e) {
 function ep(e) {
     let { message: t } = e,
         n = w.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
+    null != t && null != t.author && null != n && t.author.id === n.id && (j = !0);
 }
 class eh extends (r = o.ZP.Store) {
     initialize() {
@@ -416,14 +416,14 @@ class eh extends (r = o.ZP.Store) {
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return k;
+        return j;
     }
 }
-L(eh, "displayName", "MessageStore");
+x(eh, "displayName", "MessageStore");
 let em = new eh(s.Z, {
     BACKGROUND_SYNC_CHANNEL_MESSAGES: U,
-    CONNECTION_OPEN: j,
-    OVERLAY_INITIALIZE: j,
+    CONNECTION_OPEN: k,
+    OVERLAY_INITIALIZE: k,
     CACHE_LOADED: ef,
     LOAD_MESSAGES: G,
     LOAD_MESSAGES_SUCCESS: V,

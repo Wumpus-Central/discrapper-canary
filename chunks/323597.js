@@ -1,56 +1,56 @@
-e.d(n, { Z: () => Z });
-var i = e(951288);
-e(647438);
-var a = e(442837),
-    l = e(481060),
-    r = e(787014),
-    s = e(904245),
-    o = e(787263),
-    d = e(660189),
-    u = e(216572),
-    c = e(144140),
-    h = e(314897),
-    f = e(496675),
-    g = e(709054),
-    v = e(981631),
-    m = e(388032);
-function Z(t) {
-    let n = t.isForumPost(),
-        e = (0, a.e7)([h.default], () => t.isOwner(h.default.getId()), [t]),
-        Z = (0, u.HL)(t),
-        { canManageChannel: b, canAccessChannel: p } = (0, a.cj)(
-            [f.Z],
+n.d(t, { Z: () => h });
+var i = n(951288);
+n(647438);
+var l = n(442837),
+    a = n(481060),
+    r = n(787014),
+    o = n(904245),
+    s = n(787263),
+    u = n(660189),
+    c = n(216572),
+    d = n(144140),
+    f = n(314897),
+    g = n(496675),
+    O = n(709054),
+    v = n(981631),
+    p = n(388032);
+function h(e) {
+    let t = e.isForumPost(),
+        n = (0, l.e7)([f.default], () => e.isOwner(f.default.getId()), [e]),
+        h = (0, c.HL)(e),
+        { canManageChannel: _, canAccessChannel: E } = (0, l.cj)(
+            [g.Z],
             () => ({
-                canAccessChannel: f.Z.can(t.accessPermissions, t),
-                canManageChannel: f.Z.can(t.isThread() ? v.Plq.MANAGE_THREADS : v.Plq.MANAGE_CHANNELS, t),
+                canAccessChannel: g.Z.can(e.accessPermissions, e),
+                canManageChannel: g.Z.can(e.isThread() ? v.Plq.MANAGE_THREADS : v.Plq.MANAGE_CHANNELS, e),
             }),
-            [t],
+            [e],
         ),
-        C = (0, a.e7)([c.Z], () => {
-            var n;
-            return null != (n = c.Z.getCount(t.id)) ? n : 0;
-        }, [t.id]),
-        { firstMessage: _ } = (0, a.e7)([d.Z], () => d.Z.getMessage(t.id), [t.id]),
-        O = Z && b && null == _,
-        N = n && (b || (e && C < 1) || O),
-        j = n && e && !b && C > 0 && null != _;
-    return p && (!Z || O) && (b || N || j)
-        ? (0, i.jsx)(l.sNh, {
+        b = (0, l.e7)([d.Z], () => {
+            var t;
+            return null != (t = d.Z.getCount(e.id)) ? t : 0;
+        }, [e.id]),
+        { firstMessage: C } = (0, l.e7)([u.Z], () => u.Z.getMessage(e.id), [e.id]),
+        y = h && _ && null == C,
+        N = t && (_ || (n && b < 1) || y),
+        A = t && n && !_ && b > 0 && null != C;
+    return E && (!h || y) && (_ || N || A)
+        ? (0, i.jsx)(a.sNh, {
               id: "delete-channel",
               label:
-                  t.type === v.d4z.GUILD_CATEGORY
-                      ? m.intl.string(m.t.ifbXnL)
-                      : t.isForumPost()
+                  e.type === v.d4z.GUILD_CATEGORY
+                      ? p.intl.string(p.t.ifbXnL)
+                      : e.isForumPost()
                         ? N
-                            ? m.intl.string(m.t.nEOg1N)
-                            : m.intl.string(m.t.xwMqD7)
-                        : t.isThread()
-                          ? m.intl.string(m.t.H7vTe2)
-                          : m.intl.string(m.t["8D8Rsb"]),
+                            ? p.intl.string(p.t.nEOg1N)
+                            : p.intl.string(p.t.xwMqD7)
+                        : e.isThread()
+                          ? p.intl.string(p.t.H7vTe2)
+                          : p.intl.string(p.t["8D8Rsb"]),
               color: "danger",
               action: () => {
-                  (0, o.w)(t, function () {
-                      j ? s.Z.deleteMessage(t.id, g.default.castChannelIdAsMessageId(t.id)) : r.ZP.deleteChannel(t.id);
+                  (0, s.w)(e, function () {
+                      A ? o.Z.deleteMessage(e.id, O.default.castChannelIdAsMessageId(e.id)) : r.ZP.deleteChannel(e.id);
                   });
               },
           })

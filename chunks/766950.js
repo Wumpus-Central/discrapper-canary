@@ -22,12 +22,12 @@ var l = n(951288),
     v = n(51144),
     P = n(364747),
     N = n(131016),
-    y = n(579346),
-    k = n(438759),
-    O = n(512070),
-    T = n(299939),
-    E = n(305813),
-    D = n(203872),
+    y = n(489511),
+    k = n(579346),
+    O = n(438759),
+    T = n(512070),
+    E = n(299939),
+    D = n(305813),
     R = n(981631),
     A = n(352609),
     I = n(388032),
@@ -52,8 +52,8 @@ function w(e) {
         V = void 0 !== X ? X : null != K ? K : q,
         [W, $] = o.useState(null != (n = null == V ? void 0 : V.fontId) ? n : a.C.DEFAULT),
         [J, Q] = o.useState(null != (w = null == V ? void 0 : V.effectId) ? w : i.m.SOLID),
-        ee = (0, D.R)(J),
-        et = (0, D.R)(i.m.GRADIENT),
+        ee = (0, y.R)(J),
+        et = (0, y.R)(i.m.GRADIENT),
         en = null != (B = null == V ? void 0 : V.colors) ? B : [],
         [el, eo] = o.useState(en.length > 0 && J !== i.m.GRADIENT ? en[0] : ee.defaultColors[0]),
         [er, ei] = o.useState(en.length > 0 && J === i.m.GRADIENT ? en : et.defaultColors);
@@ -138,18 +138,18 @@ function w(e) {
                                                   children: I.intl.string(A.default.ZPMAlX),
                                               }),
                                           }),
-                                          (0, l.jsx)(O.Z, {
+                                          (0, l.jsx)(T.Z, {
                                               selectedFontId: W,
                                               setSelectedFontId: $,
                                               displayName: z,
                                               className: L.selectionSubSection,
                                           }),
-                                          (0, l.jsx)(k.Z, {
+                                          (0, l.jsx)(O.Z, {
                                               selectedEffectId: J,
                                               setSelectedEffectId: ep,
                                               className: L.selectionSubSection,
                                           }),
-                                          (0, l.jsx)(y.Z, {
+                                          (0, l.jsx)(k.Z, {
                                               selectedColors: es,
                                               setSelectedColors: em,
                                               selectedEffectId: J,
@@ -158,7 +158,7 @@ function w(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(E.Z, {
+                                  (0, l.jsx)(D.Z, {
                                       user: H,
                                       guild: U,
                                       displayName: z,
@@ -169,7 +169,7 @@ function w(e) {
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(T.B, {
+                          (0, l.jsx)(E.B, {
                               onApply: ed,
                               onSurpriseMe: eu,
                               onClose: Y,

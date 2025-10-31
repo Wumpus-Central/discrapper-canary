@@ -1,28 +1,28 @@
-n.d(t, { a: () => i });
+n.d(t, { a: () => r });
 var a = n(951288);
 n(647438);
-var r = n(481060),
+var i = n(481060),
     l = n(530146);
-function i(e) {
-    let { isUploading: t, isSuccess: n, errorMessage: i, onClick: o, title: s } = e;
+function r(e) {
+    let { isUploading: t, isSuccess: n, errorMessage: r, onClick: s, title: o } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(r.Button, {
+            (0, a.jsx)(i.Button, {
                 variant: "primary",
-                onClick: o,
+                onClick: s,
                 loading: t,
                 disabled: t,
-                text: t ? "Uploading\u2026" : s,
+                text: t ? "Uploading\u2026" : o,
             }),
-            null != i &&
-                (0, a.jsx)(r.Text, {
+            null != r &&
+                (0, a.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-feedback-critical",
                     className: l.statusText,
-                    children: i,
+                    children: r,
                 }),
             n &&
-                (0, a.jsx)(r.Text, {
+                (0, a.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-feedback-positive",
                     className: l.statusText,

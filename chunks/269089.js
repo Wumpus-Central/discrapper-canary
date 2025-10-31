@@ -23,12 +23,12 @@ function f(e, t, n) {
     );
 }
 n(966117);
-let h = (0, o.Un)({
+let m = (0, o.Un)({
         createPromise: () => n.e("80960").then(n.bind(n, 223455)),
         webpackId: 223455,
         name: "PopoutWindowChannelCall",
     }),
-    m = (0, o.Un)({
+    h = (0, o.Un)({
         createPromise: () => n.e("31688").then(n.bind(n, 205557)),
         webpackId: 205557,
         name: "PopoutWindowCallTile",
@@ -73,7 +73,7 @@ class E extends a.Z {
                           windowKey: e,
                           channelId: t.id,
                       })
-                    : (0, r.jsx)(h, {
+                    : (0, r.jsx)(m, {
                           windowKey: e,
                           channelId: t.id,
                       }),
@@ -122,7 +122,7 @@ class E extends a.Z {
                 u.bA(
                     i,
                     (e) =>
-                        (0, r.jsx)(m, {
+                        (0, r.jsx)(h, {
                             windowKey: e,
                             channelId: t,
                             participantId: n,

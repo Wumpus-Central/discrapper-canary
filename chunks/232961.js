@@ -1,7 +1,7 @@
-n.d(t, { I: () => r });
-var i = n(570140);
-function r(e) {
-    i.Z.dispatch({
+n.d(t, { I: () => i });
+var r = n(570140);
+function i(e) {
+    r.Z.dispatch({
         type: "REMOVE_AUTOMOD_MESSAGE_NOTICE",
         messageId: e,
     });

@@ -5,13 +5,13 @@ var r = n(647438),
 let a = () => {};
 function o(e, t, n) {
     let o = r.useRef((0, i.Z)()),
-        c = r.useRef(Date.now()),
-        s = r.useCallback(
+        s = r.useRef(Date.now()),
+        c = r.useCallback(
             (r, i) => {
                 let a = {
                     x: r,
                     y: i,
-                    deltaTime: Date.now() - c.current,
+                    deltaTime: Date.now() - s.current,
                 };
                 (0, l.oW)(t, o.current, e, n, a), (0, l.cV)(o.current, e, n, [a]);
             },
@@ -19,19 +19,19 @@ function o(e, t, n) {
         ),
         u = r.useCallback(
             (e, t, n) => {
-                (o.current = (0, i.Z)()), (c.current = Date.now()), s(t, n);
+                (o.current = (0, i.Z)()), (s.current = Date.now()), c(t, n);
             },
-            [s],
+            [c],
         ),
-        d = r.useCallback((e, t, n) => s(t, n), [s]),
-        f = r.useCallback((e, t, n) => u(e, t, n), [u]);
+        d = r.useCallback((e, t, n) => c(t, n), [c]),
+        p = r.useCallback((e, t, n) => u(e, t, n), [u]);
     return r.useMemo(
         () => ({
             handleMouseDown: u,
             handleMouseMove: d,
             handleMouseUp: a,
-            handleMouseEnter: f,
+            handleMouseEnter: p,
         }),
-        [u, f, d],
+        [u, p, d],
     );
 }

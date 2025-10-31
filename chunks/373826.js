@@ -5,8 +5,8 @@ n.d(t, {
     n(781311);
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(111028),
+var i = n(194983),
+    a = n(481060),
     o = n(652853),
     s = n(671955),
     l = n(704543);
@@ -92,9 +92,9 @@ function h(e) {
     let m = () =>
         p === s.l.MODAL || p === s.l.MODAL_V2
             ? (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: h }))
-            : (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: (0, r.jsx)(a.Z, { children: h }) }));
+            : (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: (0, r.jsx)(i.Z, { children: h }) }));
     return null != n
-        ? (0, r.jsx)(i.P3F, {
+        ? (0, r.jsx)(a.P3F, {
               onClick: (e) => {
                   e.stopPropagation(), n(e);
               },
@@ -104,8 +104,8 @@ function h(e) {
         : m();
 }
 function m(e) {
-    return (0, r.jsx)(h, u({ component: i.Heading }, e));
+    return (0, r.jsx)(h, u({ component: a.Heading }, e));
 }
 function g(e) {
-    return (0, r.jsx)(h, u({ component: i.Text }, e));
+    return (0, r.jsx)(h, u({ component: a.Text }, e));
 }

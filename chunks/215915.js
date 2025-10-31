@@ -2,11 +2,11 @@ n.d(t, { E: () => u });
 var r,
     i,
     l = n(442837),
-    s = n(722733),
-    o = n(633289),
+    o = n(722733),
+    s = n(633289),
     a = n(751823);
 let c = { smarterSourceOrdering: !1 },
-    d = (0, s.Z)({
+    d = (0, o.Z)({
         name: "2025-08-go-live-source-ordering",
         kind: "user",
         defaultConfig: c,
@@ -55,7 +55,7 @@ let c = { smarterSourceOrdering: !1 },
     });
 function u(e) {
     let { location: t } = e;
-    return (0, l.e7)([o.Z], () =>
+    return (0, l.e7)([s.Z], () =>
         (function (e) {
             let { location: t } = e,
                 { isInHoldout: n } = a.L.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });

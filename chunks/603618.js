@@ -49,8 +49,8 @@ var i = n(951288),
     G = n(444295),
     F = n(388627),
     H = n(981631),
-    Y = n(959517),
-    B = n(388032),
+    B = n(959517),
+    Y = n(388032),
     Q = n(847121);
 function K(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -128,18 +128,18 @@ function J(e) {
                             !0 === t.extra.fake_inventory_item
                                 ? await (0, j.k)({
                                       channel: n,
-                                      content: B.intl.formatToPlainString(B.t.UVBA9g, { gameName: t.extra.game_name }),
+                                      content: Y.intl.formatToPlainString(Y.t.UVBA9g, { gameName: t.extra.game_name }),
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
-                                      location: Y.dy.OVERLAY,
+                                      location: B.dy.OVERLAY,
                                   })
                                 : await (0, j.p)({
                                       channel: n,
-                                      content: B.intl.string(B.t.DwAcMz),
+                                      content: Y.intl.string(Y.t.DwAcMz),
                                       entry: t,
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
-                                      location: Y.dy.OVERLAY,
+                                      location: B.dy.OVERLAY,
                                   });
                     }
                     y.Z.track(H.rMx.OVERLAY_GAME_INVITE_SENT, {
@@ -172,7 +172,7 @@ function J(e) {
                     userId: a.id,
                 });
         },
-        x = E ? B.intl.string(B.t["3fRySx"]) : B.intl.string(B.t.XHxDIV),
+        x = E ? Y.intl.string(Y.t["3fRySx"]) : Y.intl.string(Y.t.XHxDIV),
         I = E
             ? (0, i.jsx)(h.ejJ, {
                   color: "currentColor",
@@ -240,7 +240,7 @@ function q(e) {
                 }
             }
         },
-        y = B.intl.string(B.t.OKsSCR);
+        y = Y.intl.string(Y.t.OKsSCR);
     return (0, i.jsx)(d.u, {
         text: y,
         "aria-label": y,
@@ -379,7 +379,7 @@ function et(e) {
                               variant: "text-xs/medium",
                               color: "header-secondary",
                               tag: "div",
-                              children: B.intl.string(B.t.y9eo7a),
+                              children: Y.intl.string(Y.t.y9eo7a),
                           }),
                       }),
                   t.map((e, t) =>
@@ -518,7 +518,7 @@ function er(e) {
                             },
                             size: p.Ph.SMALL,
                             color: p.Tt.PRIMARY,
-                            children: B.intl.string(B.t["6Qgrev"]),
+                            children: Y.intl.string(Y.t["6Qgrev"]),
                         })
                       : null,
               ],

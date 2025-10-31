@@ -1,13 +1,13 @@
-n.d(t, { I: () => l });
+n.d(t, { I: () => a });
 var i = n(951288),
     r = n(481060);
-let l = (e) => {
-    let { sku: t, application: l } = e;
+let a = (e) => {
+    let { sku: t, application: a } = e;
     (0, r.ZDy)(
         async () => {
             let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await n.e("21021").then(n.bind(n, 519193));
             return (n) => {
-                var r, a;
+                var r, l;
                 return (0, i.jsx)(
                     e,
                     ((r = (function (e) {
@@ -35,13 +35,13 @@ let l = (e) => {
                         }
                         return e;
                     })({}, n)),
-                    (a = a =
+                    (l = l =
                         {
                             sku: t,
-                            application: l,
+                            application: a,
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -49,8 +49,8 @@ let l = (e) => {
                                   n.push.apply(n, i);
                               }
                               return n;
-                          })(Object(a)).forEach(function (e) {
-                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
                     r),
                 );

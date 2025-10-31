@@ -45,7 +45,7 @@ async function f(e, t) {
         i
     );
 }
-async function h(e) {
+async function m(e) {
     let { socket: t } = e;
     (0, u.f)(t.transport);
     let n = t.application.id;
@@ -67,7 +67,7 @@ async function h(e) {
         )),
     ];
 }
-function m(e) {
+function h(e) {
     let { socket: t } = e;
     (0, u.f)(t.transport);
     let n = t.application.id;
@@ -77,18 +77,18 @@ function m(e) {
 let g = {
     [p.Etm.GET_SKUS]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: h,
+        handler: m,
     },
     [p.Etm.GET_ENTITLEMENTS]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: m,
+        handler: h,
     },
     [p.Etm.GET_SKUS_EMBEDDED]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: async (e) => ({ skus: await h(e) }),
+        handler: async (e) => ({ skus: await m(e) }),
     },
     [p.Etm.GET_ENTITLEMENTS_EMBEDDED]: {
         [d.Gp.ANY]: [d.wE, d.lH],
-        handler: async (e) => ({ entitlements: await m(e) }),
+        handler: async (e) => ({ entitlements: await h(e) }),
     },
 };

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => y }), n(388685);
-var i = n(951288),
-    r = n(647438),
+var r = n(951288),
+    i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -9,79 +9,79 @@ var i = n(951288),
     u = n(598006),
     d = n(241915),
     p = n(366050),
-    h = n(27457),
-    f = n(981631),
+    f = n(27457),
+    h = n(981631),
     m = n(354459),
     g = n(330831),
     b = n(315091);
-let C = "CameraPreviewPosition";
+let _ = "CameraPreviewPosition";
 function y(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: _, onSelectParticipant: v } = e,
-        [x, O] = (function () {
-            let [e, t] = r.useState(() => s.K.get(C, f.VD2.BOTTOM_RIGHT));
+    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: C, onSelectParticipant: v } = e,
+        [O, x] = (function () {
+            let [e, t] = i.useState(() => s.K.get(_, h.VD2.BOTTOM_RIGHT));
             return [
                 e,
-                r.useCallback((e) => {
-                    s.K.set(C, e), t(e);
+                i.useCallback((e) => {
+                    s.K.set(_, e), t(e);
                 }, []),
             ];
         })(),
-        j = r.useRef(null),
-        E = null == y.getGuildId() ? 70 : 50,
+        E = i.useRef(null),
+        j = null == y.getGuildId() ? 70 : 50,
         S = (0, o.e7)([p.Z], () => p.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
-        P = _.length,
+        P = C.length,
         I = S * P + 8 * (P - 1),
-        Z = r.useMemo(
+        Z = i.useMemo(
             () => ({
                 minWidth: m.Rv[m.cL.CAMERA_PREVIEW] * P + 8 * (P - 1),
                 maxWidth: m.$i[m.cL.CAMERA_PREVIEW] * P + 8 * (P - 1),
             }),
             [P],
         );
-    r.useLayoutEffect(() => {
+    i.useLayoutEffect(() => {
         var e;
-        null == (e = j.current) || e.ensureIsInPosition();
-    }, [_.length]);
-    let T = r.useCallback(
+        null == (e = E.current) || e.ensureIsInPosition();
+    }, [C.length]);
+    let T = i.useCallback(
             (e) => {
                 let t = 0 === P ? e : (e - 8 * (P - 1)) / P;
                 c.d7(t, m.cL.CAMERA_PREVIEW);
             },
             [P],
         ),
-        N = r.useCallback(
+        N = i.useCallback(
             (e, t) => {
-                O(t);
+                x(t);
             },
-            [O],
+            [x],
         );
-    return (0, i.jsx)("div", {
+    return (0, r.jsx)("div", {
         className: g.container,
-        children: (0, i.jsx)(d._, {
-            position: x,
+        children: (0, r.jsx)(d._, {
+            position: O,
             id: 0,
             width: I,
-            ref: j,
+            ref: E,
             onMove: N,
             onResize: T,
             maxX: t,
             maxY: l,
-            edgeOffsetTop: E,
+            edgeOffsetTop: j,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
             resizeConfig: Z,
-            children: (0, i.jsx)("div", {
+            children: (0, r.jsx)("div", {
                 className: g.tileContainer,
-                children: _.map((e) =>
-                    (0, i.jsx)(
-                        h.ZP,
+                children: C.map((e) =>
+                    (0, r.jsx)(
+                        f.ZP,
                         {
                             participant: e,
                             channel: y,
                             onContextMenu: n,
                             className: a()(g.tile, b.elevationHigh),
-                            fit: h.BP.COVER,
+                            fit: f.BP.COVER,
                             inCall: !0,
                             popoutType: u.P.NO_POPOUT,
                             width: 160,

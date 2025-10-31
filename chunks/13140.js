@@ -2,9 +2,9 @@ n.d(t, {
     BB: () => U,
     C$: () => C,
     H9: () => A,
-    Kd: () => j,
+    Kd: () => k,
     UR: () => v,
-    d2: () => k,
+    d2: () => j,
     dU: () => T,
 }),
     n(388685),
@@ -222,14 +222,14 @@ let P = [
         for (let [t, n] of P) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    L = /shift|meta|ctrl|alt$/;
-function x(e) {
+    x = /shift|meta|ctrl|alt$/;
+function L(e) {
     return "meta" === e || "shift" === e || "alt" === e || "ctrl" === e;
 }
 function M(e) {
     return e + "Key";
 }
-function k(e) {
+function j(e) {
     let t = {
         keyCode: 0,
         key: "",
@@ -245,14 +245,14 @@ function k(e) {
               let r = A(n),
                   i = _({}, t);
               if (null == r) return e.push(h(_({}, i), { combo: n })), e;
-              if (L.test(r) && x(r)) return (t[M(r)] = !0), e.map((e) => ((e[M(r)] = !0), e));
+              if (x.test(r) && L(r)) return (t[M(r)] = !0), e.map((e) => ((e[M(r)] = !0), e));
               {
                   let t = C(r, d.Cg.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
               }
           }, []);
 }
-function j(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Mo.KEYBOARD_KEY;
     return e

@@ -21,7 +21,7 @@ let y = i.memo(function (e) {
     var t,
         n,
         { enableZoom: l = !1, initialZoomLevel: y = 1, minZoom: C = 1, maxZoom: v = 5 } = e,
-        x = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -42,7 +42,7 @@ let y = i.memo(function (e) {
             }
             return i;
         })(e, ["enableZoom", "initialZoomLevel", "minZoom", "maxZoom"]);
-    let { streamId: O, onResize: E, wrapperClassName: j, videoComponent: S, mirror: P, paused: I } = x,
+    let { streamId: x, onResize: E, wrapperClassName: j, videoComponent: S, mirror: P, paused: I } = O,
         [Z, T] = i.useState(!1),
         [N, A] = i.useState(null),
         [w, M] = i.useState(null),
@@ -193,7 +193,7 @@ let y = i.memo(function (e) {
             },
             [ed],
         ),
-        ex = i.useCallback((e) => {
+        eO = i.useCallback((e) => {
             e.preventDefault(),
                 e.stopPropagation(),
                 z(1),
@@ -202,7 +202,7 @@ let y = i.memo(function (e) {
                     y: 0,
                 });
         }, []),
-        eO = i.useCallback(() => {
+        ex = i.useCallback(() => {
             ep();
         }, [ep]),
         eE = i.useCallback(() => {
@@ -283,8 +283,8 @@ let y = i.memo(function (e) {
             et.current.stop(), en.current.stop(), er.current.stop();
         }),
         i.useEffect(() => {
-            null != O && (0, f.N)(O, l && eo ? W : 1);
-        }, [l, eo, O, W]);
+            null != x && (0, f.N)(x, l && eo ? W : 1);
+        }, [l, eo, x, W]);
     let eN = i.useMemo(() => {
             let e = eu(L.x, L.y);
             return {
@@ -333,7 +333,7 @@ let y = i.memo(function (e) {
         children: (0, r.jsxs)(c.P3F, {
             onClick: eb,
             children: [
-                null != O &&
+                null != x &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)("div", {
@@ -365,7 +365,7 @@ let y = i.memo(function (e) {
                                                 });
                                         }
                                         return e;
-                                    })({}, x)),
+                                    })({}, O)),
                                     (n = n =
                                         {
                                             onResize: es,
@@ -389,7 +389,7 @@ let y = i.memo(function (e) {
                             l &&
                                 (0, r.jsx)(c.P3F, {
                                     onClick: eT,
-                                    onMouseEnter: eO,
+                                    onMouseEnter: ex,
                                     onMouseLeave: eE,
                                     children: (0, r.jsxs)("div", {
                                         ref: el,
@@ -401,7 +401,7 @@ let y = i.memo(function (e) {
                                         children: [
                                             (0, r.jsx)(S, {
                                                 className: a()(b.minimapVideo, { [g.mirror]: P }),
-                                                streamId: O,
+                                                streamId: x,
                                                 paused: I,
                                                 reportContainerResized: !1,
                                             }),
@@ -417,7 +417,7 @@ let y = i.memo(function (e) {
                 l &&
                     (0, r.jsxs)("div", {
                         className: a()(b.zoomControls, { [b.fadeOut]: !J }),
-                        onMouseEnter: eO,
+                        onMouseEnter: ex,
                         onMouseLeave: eE,
                         onClick: ej,
                         children: [
@@ -455,7 +455,7 @@ let y = i.memo(function (e) {
                                 position: "top",
                                 children: (0, r.jsx)(c.hU, {
                                     icon: c.DuK,
-                                    onClick: ex,
+                                    onClick: eO,
                                     disabled: 1 === W,
                                     variant: "secondary",
                                     size: "sm",

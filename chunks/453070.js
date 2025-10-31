@@ -1,10 +1,10 @@
 n.d(t, {
     Go: () => R,
-    LZ: () => w,
+    LZ: () => D,
     Pq: () => v,
     RJ: () => P,
     Sd: () => M,
-    XW: () => x,
+    XW: () => L,
     el: () => T,
     fP: () => A,
     fQ: () => S,
@@ -195,7 +195,7 @@ function P() {
         [e],
     );
 }
-function D() {
+function w() {
     var e, t;
     let n = (0, s.D)(),
         r = N;
@@ -205,11 +205,11 @@ function D() {
         r
     );
 }
-function w() {
-    let e = D();
+function D() {
+    let e = w();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
-let L = (e) => {
+let x = (e) => {
         let t = P(),
             { packs: n, frequentlyUsedStickers: a } = (0, i.cj)(
                 [g.Z, m.Z],
@@ -263,7 +263,7 @@ let L = (e) => {
             ];
         }, [n, t, a, s, o, e]);
     },
-    x = function (e) {
+    L = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = (0, i.e7)([g.Z], () => g.Z.getStickerById(e.id)),
             [a, o] = r.useState(!0),
@@ -303,6 +303,6 @@ let L = (e) => {
             : [null != n ? n : null, s];
     },
     M = (e) => {
-        let t = L(e);
+        let t = x(e);
         return r.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

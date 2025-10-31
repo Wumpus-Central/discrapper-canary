@@ -78,7 +78,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -90,12 +90,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -122,7 +122,7 @@ function B(e) {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    j(M({}, n), {
+                    k(M({}, n), {
                         quest: t,
                         preview: o,
                         sourceQuestContent: c,
@@ -136,7 +136,7 @@ function B(e) {
         return (e) =>
             (0, r.jsx)(
                 u,
-                j(M({}, e), {
+                k(M({}, e), {
                     questId: t.id,
                     questContentPosition: a,
                     questContent: i,
@@ -155,7 +155,7 @@ function Z(e, t) {
               return (n) =>
                   (0, r.jsx)(
                       i,
-                      j(M({}, n), {
+                      k(M({}, n), {
                           quest: e,
                           location: t,
                       }),
@@ -170,7 +170,7 @@ function F(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    j(M({}, n), {
+                    k(M({}, n), {
                         quest: e,
                         location: t,
                         sourceQuestContent: i,
@@ -181,7 +181,7 @@ function F(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                j(M({}, n), {
+                k(M({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -196,7 +196,7 @@ function V(e, t, i) {
             return (n) =>
                 (0, r.jsx)(
                     a,
-                    j(M({}, n), {
+                    k(M({}, n), {
                         quest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -207,7 +207,7 @@ function V(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                j(M({}, n), {
+                k(M({}, n), {
                     quest: e,
                     location: t,
                 }),
@@ -221,7 +221,7 @@ function H(e, t, i, a) {
             return (n) =>
                 (0, r.jsx)(
                     o,
-                    j(M({}, n), {
+                    k(M({}, n), {
                         quest: e,
                         sourceQuestContent: i,
                         location: t,
@@ -233,7 +233,7 @@ function H(e, t, i, a) {
         return (n) =>
             (0, r.jsx)(
                 o,
-                j(M({}, n), {
+                k(M({}, n), {
                     quest: e,
                     location: t,
                     preview: a,
@@ -247,7 +247,7 @@ function Y(e, t, i) {
         return (n) =>
             (0, r.jsx)(
                 a,
-                j(M({}, n), {
+                k(M({}, n), {
                     quest: e,
                     location: t,
                     sourceQuestContent: i,
@@ -269,7 +269,7 @@ function W(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    j(M({}, n), {
+                    k(M({}, n), {
                         questContent: t.content,
                         quest: e,
                     }),
@@ -349,7 +349,7 @@ function Q(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    j(M({}, t), {
+                    k(M({}, t), {
                         openStartClockTime: performance.now(),
                         questId: n.id,
                         autoplay: c,
@@ -445,7 +445,7 @@ function en(e) {
         return (n) =>
             (0, r.jsx)(
                 t,
-                j(M({}, n), {
+                k(M({}, n), {
                     questId: e.id,
                     questName: e.config.messages.questName,
                 }),

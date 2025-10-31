@@ -58,9 +58,9 @@ function p(e) {
             guildId: p,
             sourceAnalyticsLocations: f,
         } = e,
-        h = [];
+        m = [];
     for (let { user: e, status: n } of t)
-        h.push(
+        m.push(
             (0, r.jsx)(l.sNh, {
                 id: e.id,
                 keepItemStyles: !0,
@@ -82,7 +82,7 @@ function p(e) {
             }),
         );
     for (let e of n)
-        h.push(
+        m.push(
             (0, r.jsx)(l.sNh, {
                 id: e.id,
                 keepItemStyles: !0,
@@ -102,20 +102,20 @@ function p(e) {
                     }),
             }),
         );
-    let m = i - h.length;
+    let h = i - m.length;
     return (
-        m > 0 &&
-            h.push(
+        h > 0 &&
+            m.push(
                 (0, r.jsx)(l.sNh, {
                     id: "unknown-members-".concat(null == a ? void 0 : a.session_id),
                     render: (e) =>
                         (0, r.jsx)(
                             o.Y,
-                            d(u({}, e), { label: c.intl.formatToPlainString(c.t["6Kqn9M"], { count: m }) }),
+                            d(u({}, e), { label: c.intl.formatToPlainString(c.t["6Kqn9M"], { count: h }) }),
                         ),
                 }),
             ),
-        h
+        m
     );
 }
 function f(e) {
@@ -128,7 +128,7 @@ function f(e) {
         ),
         d = n.filter((e) => !u.has(e.id)),
         { analyticsLocations: f } = (0, a.ZP)(),
-        h = i.useMemo(() => {
+        m = i.useMemo(() => {
             let e = s
                 .flatMap((e) => {
                     let { playingMembers: t } = e;
@@ -137,15 +137,15 @@ function f(e) {
                 .map((e) => e.id);
             return n.filter((t) => !e.includes(t.id));
         }, [n, s]);
-    if (s.length <= 1 && 0 === h.length) {
-        var m, g;
+    if (s.length <= 1 && 0 === m.length) {
+        var h, g;
         return (0, r.jsx)(l.kSQ, {
             label: n.length > 1 ? c.intl.formatToPlainString(c.t.C4WXvc, { memberCount: n.length }) : void 0,
             children: p({
                 priorityMembers: t,
                 otherMembers: d,
                 totalMembers: n.length,
-                activity: null != (g = null == (m = s[0]) ? void 0 : m.activity) ? g : void 0,
+                activity: null != (g = null == (h = s[0]) ? void 0 : h.activity) ? g : void 0,
                 guildId: null == o ? void 0 : o.id,
                 sourceAnalyticsLocations: f,
             }),
@@ -173,18 +173,18 @@ function f(e) {
                 n,
             );
         }),
-        b = h.map((e) => e.id);
+        b = m.map((e) => e.id);
     return [
         ..._,
         (0, r.jsx)(l.kSQ, {
-            label: "".concat(c.intl.string(c.t["mIx+gG"]), " - ").concat(h.length),
+            label: "".concat(c.intl.string(c.t["mIx+gG"]), " - ").concat(m.length),
             children: p({
                 priorityMembers: t.filter((e) => {
                     let { user: t } = e;
                     return b.includes(t.id);
                 }),
-                otherMembers: h.filter((e) => !u.has(e.id)),
-                totalMembers: h.length,
+                otherMembers: m.filter((e) => !u.has(e.id)),
+                totalMembers: m.length,
                 guildId: null == o ? void 0 : o.id,
                 sourceAnalyticsLocations: f,
             }),

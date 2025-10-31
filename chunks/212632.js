@@ -1,59 +1,59 @@
 n.d(t, { Z: () => m }), n(388685);
 var i = n(951288),
     r = n(647438),
-    o = n(120356),
-    l = n.n(o),
-    a = n(481060),
-    s = n(981631),
+    l = n(120356),
+    o = n.n(l),
+    s = n(481060),
+    a = n(981631),
     c = n(388032),
     d = n(379249),
     u = n(197571);
 let h = 0,
     p = (e) => {
         switch (e) {
-            case s._vf.TOP_LEFT:
+            case a._vf.TOP_LEFT:
                 return c.intl.string(c.t.xlchpU);
-            case s._vf.TOP_RIGHT:
+            case a._vf.TOP_RIGHT:
                 return c.intl.string(c.t["4uHRHH"]);
-            case s._vf.BOTTOM_LEFT:
+            case a._vf.BOTTOM_LEFT:
                 return c.intl.string(c.t.ovWFnD);
-            case s._vf.BOTTOM_RIGHT:
+            case a._vf.BOTTOM_RIGHT:
                 return c.intl.string(c.t["M/9V75"]);
             default:
                 return c.intl.string(c.t.AlY4Za);
         }
     },
-    f = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
+    f = [a._vf.DISABLED, a._vf.TOP_LEFT, a._vf.TOP_RIGHT, a._vf.BOTTOM_LEFT, a._vf.BOTTOM_RIGHT];
 function g(e) {
     let { position: t, onChange: n } = e,
-        [o] = r.useState(() => "notification-position-selector-".concat(h++)),
+        [l] = r.useState(() => "notification-position-selector-".concat(h++)),
         g =
-            t === s._vf.DISABLED
+            t === a._vf.DISABLED
                 ? c.intl.string(c.t.R6LxVf)
                 : c.intl.formatToPlainString(c.t["XXHDM/"], { position: p(t) });
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(a.tEY, {
+            (0, i.jsx)(s.tEY, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)("div", {
-                    className: l()(d.wrapper, { [d.disabledSelected]: t === s._vf.DISABLED }),
+                    className: o()(d.wrapper, { [d.disabledSelected]: t === a._vf.DISABLED }),
                     children: f.map((e) =>
                         (0, i.jsxs)(
                             "label",
                             {
-                                className: l()({
+                                className: o()({
                                     [d.selected]: e === t,
-                                    [d.disabled]: e === s._vf.DISABLED,
-                                    [d.topRight]: e === s._vf.TOP_RIGHT,
-                                    [d.topLeft]: e === s._vf.TOP_LEFT,
-                                    [d.bottomRight]: e === s._vf.BOTTOM_RIGHT,
-                                    [d.bottomLeft]: e === s._vf.BOTTOM_LEFT,
+                                    [d.disabled]: e === a._vf.DISABLED,
+                                    [d.topRight]: e === a._vf.TOP_RIGHT,
+                                    [d.topLeft]: e === a._vf.TOP_LEFT,
+                                    [d.bottomRight]: e === a._vf.BOTTOM_RIGHT,
+                                    [d.bottomLeft]: e === a._vf.BOTTOM_LEFT,
                                 }),
                                 children: [
                                     p(e),
-                                    e === s._vf.DISABLED
-                                        ? (0, i.jsx)(a.t6m, {
+                                    e === a._vf.DISABLED
+                                        ? (0, i.jsx)(s.t6m, {
                                               size: "md",
                                               color: "currentColor",
                                               className: d.disabledIcon,
@@ -61,7 +61,7 @@ function g(e) {
                                         : null,
                                     (0, i.jsx)("input", {
                                         type: "radio",
-                                        name: o,
+                                        name: l,
                                         value: e,
                                         onChange: (t) => n(t, e),
                                         className: d.hiddenInput,
@@ -73,7 +73,7 @@ function g(e) {
                     ),
                 }),
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 className: u.marginTop8,
                 children: g,
@@ -81,5 +81,5 @@ function g(e) {
         ],
     });
 }
-g.Positions = s._vf;
+g.Positions = a._vf;
 let m = g;

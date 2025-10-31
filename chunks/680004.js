@@ -1,10 +1,10 @@
 n.d(t, { Z: () => f }), n(388685), n(49124), n(539854), n(35282), n(781311);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(442837),
-    i = n(481060),
-    o = n(333291),
-    s = n(460779),
+    r = n(481060),
+    s = n(333291),
+    o = n(460779),
     c = n(435064),
     d = n(894694),
     u = n(269278),
@@ -69,8 +69,8 @@ function f() {
             mlPipelinesEnabled: c.Z.getSettings().mlPipelinesEnabled,
         })),
         v = t.filter((e) => !0 === e.isTemporary),
-        [j, _] = r.useState(() => {
-            let e = s.Z.read();
+        [j, _] = i.useState(() => {
+            let e = o.Z.read();
             return {
                 clippingPressure: e.pressure,
                 currentThreshold: e.currentThreshold,
@@ -78,9 +78,9 @@ function f() {
                 timeline: e.signals,
             };
         }),
-        [y, C] = r.useState([]),
-        [S, E] = r.useState([]),
-        [T, O] = r.useState(
+        [y, C] = i.useState([]),
+        [S, E] = i.useState([]),
+        [T, N] = i.useState(
             () => (
                 void 0 === window.__CLIPS_DEBUG__ &&
                     (window.__CLIPS_DEBUG__ = {
@@ -97,15 +97,15 @@ function f() {
                 }
             ),
         ),
-        [N, P] = r.useState(d.x0.KILL),
-        [I, w] = r.useState(1),
-        [k, R] = r.useState(""),
-        [A, D] = r.useState(""),
-        [Z, L] = r.useState(""),
-        [M, U] = r.useState(!1);
-    r.useEffect(() => {
+        [O, P] = i.useState(d.x0.KILL),
+        [w, I] = i.useState(1),
+        [k, A] = i.useState(""),
+        [R, Z] = i.useState(""),
+        [D, L] = i.useState(""),
+        [M, U] = i.useState(!1);
+    i.useEffect(() => {
         let e = setInterval(() => {
-            let e = s.Z.read();
+            let e = o.Z.read();
             if (
                 (_({
                     clippingPressure: e.pressure,
@@ -121,7 +121,7 @@ function f() {
         }, 100);
         return () => clearInterval(e);
     }, [T.yell]);
-    let B = r.useCallback(function (e) {
+    let F = i.useCallback(function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "signal";
             C((n) =>
                 [
@@ -134,12 +134,12 @@ function f() {
                 ].slice(0, 50),
             );
         }, []),
-        F = r.useCallback(
+        B = i.useCallback(
             async (e) => {
                 try {
-                    let n = await s.Z.process(e);
+                    let n = await o.Z.process(e);
                     if (
-                        (B(
+                        (F(
                             "Signal sent: "
                                 .concat(e.type)
                                 .concat(
@@ -169,8 +169,8 @@ function f() {
                                     ...e,
                                 ].slice(0, 50),
                             );
-                        } else B("\u274C No clip: ".concat(n.reason), "signal");
-                    let a = s.Z.read();
+                        } else F("\u274C No clip: ".concat(n.reason), "signal");
+                    let a = o.Z.read();
                     _({
                         clippingPressure: a.pressure,
                         currentThreshold: a.currentThreshold,
@@ -178,12 +178,12 @@ function f() {
                         timeline: a.signals,
                     });
                 } catch (e) {
-                    B("\u274C Error: ".concat(e.message), "signal");
+                    F("\u274C Error: ".concat(e.message), "signal");
                 }
             },
-            [B],
+            [F],
         ),
-        G = r.useCallback(
+        G = i.useCallback(
             (e) => {
                 let t = !T[e];
                 void 0 === window.__CLIPS_DEBUG__ &&
@@ -194,48 +194,48 @@ function f() {
                         whisper: !1,
                     }),
                     (window.__CLIPS_DEBUG__[e] = t),
-                    O((n) => g(x({}, n), { [e]: t }));
+                    N((n) => g(x({}, n), { [e]: t }));
             },
             [T],
         ),
-        H = Math.max(j.clippingPressure, j.currentThreshold, 1),
-        z = (j.clippingPressure / H) * 100,
-        V = (j.currentThreshold / H) * 100,
+        z = Math.max(j.clippingPressure, j.currentThreshold, 1),
+        H = (j.clippingPressure / z) * 100,
+        V = (j.currentThreshold / z) * 100,
         W = 0,
         K = 0;
     if (null != j.lastClipTime) {
         let e = (Date.now() - j.lastClipTime) / 1000;
-        e < 60 && (K = ((W = +(1 - e / 60)) / H) * 100);
+        e < 60 && (K = ((W = +(1 - e / 60)) / z) * 100);
     }
     let q = "Never";
     if (null != j.lastClipTime) {
         let e = Math.floor((Date.now() - j.lastClipTime) / 1000);
         q = "".concat(e, "s ago");
     }
-    return (0, a.jsx)(i.Ttm, {
-        children: (0, a.jsxs)(i.Kqy, {
+    return (0, a.jsx)(r.Ttm, {
+        children: (0, a.jsxs)(r.Kqy, {
             gap: 16,
             style: { padding: "16px" },
             children: [
-                (0, a.jsx)(i.Heading, {
+                (0, a.jsx)(r.Heading, {
                     variant: "heading-lg/semibold",
                     children: "Clips Dev Tools",
                 }),
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(r.Kqy, {
                     gap: 12,
                     children: [
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 12,
                             children: [
-                                (0, a.jsx)(i.Heading, {
+                                (0, a.jsx)(r.Heading, {
                                     variant: "heading-md/semibold",
                                     children: "Clip Statistics",
                                 }),
-                                (0, a.jsxs)(i.Text, {
+                                (0, a.jsxs)(r.Text, {
                                     variant: "text-md/normal",
                                     children: [(0, a.jsx)("strong", { children: "Total Clips:" }), " ", t.length],
                                 }),
-                                (0, a.jsxs)(i.Text, {
+                                (0, a.jsxs)(r.Text, {
                                     variant: "text-md/normal",
                                     children: [
                                         (0, a.jsx)("strong", { children: "Temporary Clips:" }),
@@ -246,7 +246,7 @@ function f() {
                                         " max",
                                     ],
                                 }),
-                                (0, a.jsxs)(i.Text, {
+                                (0, a.jsxs)(r.Text, {
                                     variant: "text-md/normal",
                                     children: [
                                         (0, a.jsx)("strong", { children: "Permanent Clips:" }),
@@ -256,32 +256,32 @@ function f() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: "ML Debug Logging (window.__CLIPS_DEBUG__)",
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 12,
                             children: [
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Wake Word Debug",
                                     description: "Log wake word detection events to console",
                                     checked: T.wakeWord,
                                     onChange: () => G("wakeWord"),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Emotion Debug",
                                     description: "Log emotion classification events to console",
                                     checked: T.emotion,
                                     onChange: () => G("emotion"),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Yell Debug",
                                     description: "Show yell classification events histogram",
                                     checked: T.yell,
                                     onChange: () => G("yell"),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Whisper Debug",
                                     description: "Log whisper transcription events to console",
                                     checked: T.whisper,
@@ -290,14 +290,14 @@ function f() {
                             ],
                         }),
                         T.yell &&
-                            (0, a.jsxs)(i.Kqy, {
+                            (0, a.jsxs)(r.Kqy, {
                                 gap: 8,
                                 children: [
-                                    (0, a.jsx)(i.Heading, {
+                                    (0, a.jsx)(r.Heading, {
                                         variant: "heading-md/semibold",
                                         children: "Yelling Detection Analysis",
                                     }),
-                                    (0, a.jsx)(i.Text, {
+                                    (0, a.jsx)(r.Text, {
                                         variant: "text-sm/normal",
                                         style: { color: "#b9bbbe" },
                                         children: "Yell Confidence and Detection Over Time",
@@ -352,9 +352,9 @@ function f() {
                                                                       });
                                                                   let t = e.map((e) => e.debug.dbQuantized),
                                                                       n = e.map((e) => e.debug.thresholdP),
-                                                                      r = Math.min(...t, ...n),
+                                                                      i = Math.min(...t, ...n),
                                                                       l = Math.max(...t, ...n),
-                                                                      i = l === r ? 1 : l - r;
+                                                                      r = l === i ? 1 : l - i;
                                                                   return [0, 0.25, 0.5, 0.75, 1].map((e, t) => {
                                                                       let n = 40 + (1 - e) * 280;
                                                                       return (0, a.jsxs)(
@@ -375,7 +375,7 @@ function f() {
                                                                                       fill: "#999",
                                                                                       fontSize: "14",
                                                                                       fontFamily: "monospace",
-                                                                                      children: (r + e * i).toFixed(0),
+                                                                                      children: (i + e * r).toFixed(0),
                                                                                   }),
                                                                               ],
                                                                           },
@@ -415,19 +415,19 @@ function f() {
                                                                   if (0 === e.length) return null;
                                                                   let t = e.map((e) => e.debug.dbQuantized),
                                                                       n = e.map((e) => e.debug.thresholdP),
-                                                                      r = Math.min(...t, ...n),
+                                                                      i = Math.min(...t, ...n),
                                                                       l = Math.max(...t, ...n),
-                                                                      i = l === r ? 1 : l - r,
-                                                                      o = (e) => 40 + (1 - (e - r) / i) * 280,
-                                                                      s = [];
+                                                                      r = l === i ? 1 : l - i,
+                                                                      s = (e) => 40 + (1 - (e - i) / r) * 280,
+                                                                      o = [];
                                                                   e.forEach((t, n) => {
                                                                       let a =
                                                                               60 +
                                                                               (n / Math.max(e.length - 1, 1)) * 720,
-                                                                          r = o(t.debug.dbQuantized);
-                                                                      s.push({
+                                                                          i = s(t.debug.dbQuantized);
+                                                                      o.push({
                                                                           x: a,
-                                                                          y: r,
+                                                                          y: i,
                                                                           db: t.debug.dbQuantized,
                                                                           threshold: t.debug.thresholdP,
                                                                           isYelling:
@@ -435,9 +435,9 @@ function f() {
                                                                       });
                                                                   });
                                                                   let c =
-                                                                          s.length > 0
+                                                                          o.length > 0
                                                                               ? "M ".concat(
-                                                                                    s
+                                                                                    o
                                                                                         .map((e) =>
                                                                                             ""
                                                                                                 .concat(e.x, ",")
@@ -446,9 +446,9 @@ function f() {
                                                                                         .join(" L "),
                                                                                 )
                                                                               : "",
-                                                                      d = s.map((e) => ({
+                                                                      d = o.map((e) => ({
                                                                           x: e.x,
-                                                                          y: o(e.threshold),
+                                                                          y: s(e.threshold),
                                                                       })),
                                                                       u =
                                                                           d.length > 0
@@ -479,7 +479,7 @@ function f() {
                                                                               strokeWidth: "2",
                                                                               strokeLinejoin: "round",
                                                                           }),
-                                                                          s
+                                                                          o
                                                                               .filter((e) => e.isYelling)
                                                                               .map((e, t) =>
                                                                                   (0, a.jsx)(
@@ -522,7 +522,7 @@ function f() {
                                                                           backgroundColor: "#5B8DEF",
                                                                       },
                                                                   }),
-                                                                  (0, a.jsx)(i.Text, {
+                                                                  (0, a.jsx)(r.Text, {
                                                                       variant: "text-sm/normal",
                                                                       style: { color: "#b9bbbe" },
                                                                       children: "Speech Volume (dB)",
@@ -549,7 +549,7 @@ function f() {
                                                                           strokeDasharray: "4,2",
                                                                       }),
                                                                   }),
-                                                                  (0, a.jsx)(i.Text, {
+                                                                  (0, a.jsx)(r.Text, {
                                                                       variant: "text-sm/normal",
                                                                       style: { color: "#b9bbbe" },
                                                                       children: "P95 Threshold (\xD71.1)",
@@ -572,7 +572,7 @@ function f() {
                                                                           opacity: 0.8,
                                                                       },
                                                                   }),
-                                                                  (0, a.jsx)(i.Text, {
+                                                                  (0, a.jsx)(r.Text, {
                                                                       variant: "text-sm/normal",
                                                                       style: { color: "#b9bbbe" },
                                                                       children: "Yelling Detected",
@@ -583,7 +583,7 @@ function f() {
                                                   }),
                                               ],
                                           })
-                                        : (0, a.jsx)(i.Text, {
+                                        : (0, a.jsx)(r.Text, {
                                               variant: "text-sm/normal",
                                               style: { color: "#888" },
                                               children:
@@ -591,65 +591,65 @@ function f() {
                                           }),
                                 ],
                             }),
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: "Auto Clips",
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 12,
                             align: "start",
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-md/semibold",
                                     children: "Max Auto Clips",
                                 }),
-                                (0, a.jsx)(i.FiK, {
+                                (0, a.jsx)(r.FiK, {
                                     value: e,
                                     minValue: h.qb,
                                     maxValue: h.b0,
                                     onChange: m.W6,
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Enable Manual Signals",
                                     checked: n.enableManualSignals,
                                     onChange: (e) => m.Rr(g(x({}, n), { enableManualSignals: e })),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Enable Distributed Signals",
                                     checked: n.enableDistributedSignals,
                                     onChange: (e) => m.Rr(g(x({}, n), { enableDistributedSignals: e })),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Enable Phrase Signals",
                                     checked: n.enablePhraseSignals,
                                     onChange: (e) => m.Rr(g(x({}, n), { enablePhraseSignals: e })),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Enable Yelling Signals",
                                     checked: n.enableYellingSignals,
                                     onChange: (e) => m.Rr(g(x({}, n), { enableYellingSignals: e })),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Enable Game Signals",
                                     checked: n.enableGameSignals,
                                     onChange: (e) => m.Rr(g(x({}, n), { enableGameSignals: e })),
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: "Auto Clip Trigger Phrases",
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-sm/normal",
                                     style: { color: "#b9bbbe" },
                                     children:
                                         "One phrase per line. Used for both wake word and whisper transcription detection.",
                                 }),
-                                (0, a.jsx)(i.oil, {
+                                (0, a.jsx)(r.oil, {
                                     defaultValue: f.join(","),
                                     onBlur: (e) => {
                                         let t = e.target.value
@@ -660,7 +660,7 @@ function f() {
                                     },
                                     placeholder: "Enter phrases (comma separated)",
                                 }),
-                                (0, a.jsxs)(i.Text, {
+                                (0, a.jsxs)(r.Text, {
                                     variant: "text-xs/normal",
                                     style: { color: "#888" },
                                     children: ["Current phrases: ", f.length],
@@ -669,10 +669,10 @@ function f() {
                         }),
                     ],
                 }),
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(r.Kqy, {
                     gap: 12,
                     children: [
-                        (0, a.jsxs)(i.Heading, {
+                        (0, a.jsxs)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: [
                                 "Clip Decision Engine",
@@ -687,10 +687,10 @@ function f() {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-md/semibold",
                                     children: "Current State",
                                 }),
@@ -703,12 +703,12 @@ function f() {
                                     children: [
                                         (0, a.jsxs)("div", {
                                             children: [
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(r.Text, {
                                                     variant: "text-sm/normal",
                                                     style: { color: "#b9bbbe" },
                                                     children: "Clipping Pressure",
                                                 }),
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(r.Text, {
                                                     variant: "text-lg/bold",
                                                     children: j.clippingPressure.toFixed(3),
                                                 }),
@@ -716,12 +716,12 @@ function f() {
                                         }),
                                         (0, a.jsxs)("div", {
                                             children: [
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(r.Text, {
                                                     variant: "text-sm/normal",
                                                     style: { color: "#b9bbbe" },
                                                     children: "Current Threshold",
                                                 }),
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(r.Text, {
                                                     variant: "text-lg/bold",
                                                     children: j.currentThreshold.toFixed(3),
                                                 }),
@@ -729,12 +729,12 @@ function f() {
                                         }),
                                         (0, a.jsxs)("div", {
                                             children: [
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(r.Text, {
                                                     variant: "text-sm/normal",
                                                     style: { color: "#b9bbbe" },
                                                     children: "Last Clip",
                                                 }),
-                                                (0, a.jsx)(i.Text, {
+                                                (0, a.jsx)(r.Text, {
                                                     variant: "text-lg/bold",
                                                     children: q,
                                                 }),
@@ -744,10 +744,10 @@ function f() {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 4,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-sm/semibold",
                                     children: "Pressure vs Threshold",
                                 }),
@@ -783,7 +783,7 @@ function f() {
                                                 left: 0,
                                                 top: 0,
                                                 height: "100%",
-                                                width: "".concat(z, "%"),
+                                                width: "".concat(H, "%"),
                                                 backgroundColor: "#667eea",
                                                 transition: "width 0.1s ease-out",
                                             },
@@ -820,10 +820,10 @@ function f() {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 4,
                             children: [
-                                (0, a.jsxs)(i.Text, {
+                                (0, a.jsxs)(r.Text, {
                                     variant: "text-sm/semibold",
                                     children: ["Active Signals (", j.timeline.length, ")"],
                                 }),
@@ -839,7 +839,7 @@ function f() {
                                     },
                                     children:
                                         0 === j.timeline.length
-                                            ? (0, a.jsx)(i.Text, {
+                                            ? (0, a.jsx)(r.Text, {
                                                   variant: "text-sm/normal",
                                                   style: { color: "#888" },
                                                   children: "No active signals",
@@ -849,9 +849,9 @@ function f() {
                                                       t = 0,
                                                       n = null;
                                                   for (let a = 0; a < j.timeline.length; a++) {
-                                                      let r = j.timeline[a];
-                                                      r.signal.type === d.Bs.SPEAKING
-                                                          ? (0 === t && (n = r), t++)
+                                                      let i = j.timeline[a];
+                                                      i.signal.type === d.Bs.SPEAKING
+                                                          ? (0 === t && (n = i), t++)
                                                           : (t > 0 &&
                                                                 (1 === t
                                                                     ? e.push({
@@ -867,7 +867,7 @@ function f() {
                                                                 (n = null)),
                                                             e.push({
                                                                 type: "single",
-                                                                event: r,
+                                                                event: i,
                                                             }));
                                                   }
                                                   t > 0 &&
@@ -881,17 +881,17 @@ function f() {
                                                                 count: t,
                                                                 firstEvent: n,
                                                             }));
-                                                  let r = (e, t) => {
-                                                      let n = s.Z.getInternalState(),
-                                                          a = s.Z.getConfig(),
-                                                          r = 0;
+                                                  let i = (e, t) => {
+                                                      let n = o.Z.getInternalState(),
+                                                          a = o.Z.getConfig(),
+                                                          i = 0;
                                                       switch (e.signal.type) {
                                                           case d.Bs.MANUAL:
                                                           case d.Bs.DISTRIBUTED:
                                                           case d.Bs.YELLING:
                                                           case d.Bs.SPEAKING:
                                                           case d.Bs.SOUNDBOARD:
-                                                              r = a.signals[e.signal.type].importance;
+                                                              i = a.signals[e.signal.type].importance;
                                                               break;
                                                           case d.Bs.PHRASE:
                                                               if ("text" in e.signal) {
@@ -905,10 +905,10 @@ function f() {
                                                                               n.includes(e.toLowerCase()),
                                                                           )
                                                                       ) {
-                                                                          (r = e.importance), (l = !0);
+                                                                          (i = e.importance), (l = !0);
                                                                           break;
                                                                       }
-                                                                  l || (r = t.defaultPhrase.importance);
+                                                                  l || (i = t.defaultPhrase.importance);
                                                               }
                                                               break;
                                                           case d.Bs.GAME_EVENT:
@@ -918,15 +918,15 @@ function f() {
                                                                       a.signals[d.Bs.GAME_EVENT].eventTypes[
                                                                           e.signal.eventType
                                                                       ];
-                                                                  r =
+                                                                  i =
                                                                       null != (l = null == t ? void 0 : t.importance)
                                                                           ? l
                                                                           : a.signals[d.Bs.GAME_EVENT].defaultEventType
                                                                                 .importance;
                                                               }
                                                       }
-                                                      let i = r,
-                                                          o = [];
+                                                      let r = i,
+                                                          s = [];
                                                       for (let n of t) {
                                                           let t;
                                                           if (n !== e) {
@@ -941,12 +941,12 @@ function f() {
                                                                   case d.Bs.PHRASE:
                                                                       if ("text" in n.signal) {
                                                                           let e = a.signals[d.Bs.PHRASE],
-                                                                              r = n.signal.text.toLowerCase().trim();
+                                                                              i = n.signal.text.toLowerCase().trim();
                                                                           for (let n of e.phrases)
                                                                               if (
                                                                                   n.enabled &&
                                                                                   n.patterns.some((e) =>
-                                                                                      r.includes(e.toLowerCase()),
+                                                                                      i.includes(e.toLowerCase()),
                                                                                   )
                                                                               ) {
                                                                                   t = n.amplifiers;
@@ -970,27 +970,27 @@ function f() {
                                                                       let t = (n.timestamp - e.timestamp) / 1000;
                                                                       t < 0 ||
                                                                           t > a.timeWindowSeconds ||
-                                                                          ((i *= a.multiplier),
-                                                                          o.push({
+                                                                          ((r *= a.multiplier),
+                                                                          s.push({
                                                                               from: n.signal.type,
                                                                               multiplier: a.multiplier,
                                                                           }));
                                                                   }
                                                           }
                                                       }
-                                                      let c = i * n.fatigue;
+                                                      let c = r * n.fatigue;
                                                       return {
-                                                          baseImportance: r,
-                                                          amplifiedImportance: i,
+                                                          baseImportance: i,
+                                                          amplifiedImportance: r,
                                                           effectiveImportance: c,
                                                           fatigue: n.fatigue,
-                                                          amplifications: o,
+                                                          amplifications: s,
                                                       };
                                                   };
                                                   return e.map((t, n) => {
                                                       if ("group" === t.type) {
-                                                          let l = r(t.firstEvent, j.timeline),
-                                                              i = l.effectiveImportance * t.count;
+                                                          let l = i(t.firstEvent, j.timeline),
+                                                              r = l.effectiveImportance * t.count;
                                                           return (0, a.jsxs)(
                                                               "div",
                                                               {
@@ -1019,7 +1019,7 @@ function f() {
                                                                                   },
                                                                                   children: [
                                                                                       "pressure: ",
-                                                                                      i.toFixed(4),
+                                                                                      r.toFixed(4),
                                                                                       " (base: ",
                                                                                       l.baseImportance.toFixed(3),
                                                                                       " \xD7",
@@ -1059,14 +1059,14 @@ function f() {
                                                       }
                                                       {
                                                           let l = t.event,
-                                                              i = r(l, j.timeline),
-                                                              o = l.signal.type;
+                                                              r = i(l, j.timeline),
+                                                              s = l.signal.type;
                                                           return (
                                                               l.signal.type === d.Bs.PHRASE && "text" in l.signal
-                                                                  ? (o = 'PHRASE: "'.concat(l.signal.text, '"'))
+                                                                  ? (s = 'PHRASE: "'.concat(l.signal.text, '"'))
                                                                   : l.signal.type === d.Bs.GAME_EVENT &&
                                                                     "eventType" in l.signal &&
-                                                                    (o = "GAME_EVENT: ".concat(l.signal.eventType)),
+                                                                    (s = "GAME_EVENT: ".concat(l.signal.eventType)),
                                                               (0, a.jsxs)(
                                                                   "div",
                                                                   {
@@ -1090,7 +1090,7 @@ function f() {
                                                                                                   : "#7289da",
                                                                                           fontWeight: "bold",
                                                                                       },
-                                                                                      children: o,
+                                                                                      children: s,
                                                                                   }),
                                                                                   (0, a.jsxs)("span", {
                                                                                       style: {
@@ -1099,26 +1099,26 @@ function f() {
                                                                                       },
                                                                                       children: [
                                                                                           "pressure: ",
-                                                                                          i.effectiveImportance.toFixed(
+                                                                                          r.effectiveImportance.toFixed(
                                                                                               4,
                                                                                           ),
                                                                                           " (base:",
                                                                                           " ",
-                                                                                          i.baseImportance.toFixed(3),
-                                                                                          i.amplifications.length > 0 &&
+                                                                                          r.baseImportance.toFixed(3),
+                                                                                          r.amplifications.length > 0 &&
                                                                                               " \u2192 amp: ".concat(
-                                                                                                  i.amplifiedImportance.toFixed(
+                                                                                                  r.amplifiedImportance.toFixed(
                                                                                                       3,
                                                                                                   ),
                                                                                               ),
                                                                                           ", fatigue: \xD7",
-                                                                                          i.fatigue.toFixed(3),
+                                                                                          r.fatigue.toFixed(3),
                                                                                           ")",
                                                                                       ],
                                                                                   }),
                                                                               ],
                                                                           }),
-                                                                          i.amplifications.length > 0 &&
+                                                                          r.amplifications.length > 0 &&
                                                                               (0, a.jsxs)("div", {
                                                                                   style: {
                                                                                       marginLeft: "16px",
@@ -1128,7 +1128,7 @@ function f() {
                                                                                   children: [
                                                                                       "\u2191 amplified by:",
                                                                                       " ",
-                                                                                      i.amplifications
+                                                                                      r.amplifications
                                                                                           .map((e) =>
                                                                                               ""
                                                                                                   .concat(
@@ -1154,10 +1154,10 @@ function f() {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-sm/semibold",
                                     children: "Send Test Signals",
                                 }),
@@ -1168,58 +1168,58 @@ function f() {
                                         gap: "8px",
                                     },
                                     children: [
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Manual",
-                                            onClick: () => F({ type: d.Bs.MANUAL }),
+                                            onClick: () => B({ type: d.Bs.MANUAL }),
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Distributed",
                                             onClick: () =>
-                                                F({
+                                                B({
                                                     type: d.Bs.DISTRIBUTED,
                                                     remoteTriggerUserId: "123",
                                                     remoteTriggerClipId: "456",
                                                 }),
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Phrase: Alexa",
                                             onClick: () =>
-                                                F({
+                                                B({
                                                     type: d.Bs.PHRASE,
                                                     text: "alexa",
                                                 }),
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Phrase: Klip",
                                             onClick: () =>
-                                                F({
+                                                B({
                                                     type: d.Bs.PHRASE,
                                                     text: "klip",
                                                 }),
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Phrase: Clip",
                                             onClick: () =>
-                                                F({
+                                                B({
                                                     type: d.Bs.PHRASE,
                                                     text: "clip",
                                                 }),
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Phrase: Burr",
                                             onClick: () =>
-                                                F({
+                                                B({
                                                     type: d.Bs.PHRASE,
                                                     text: "burr",
                                                 }),
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Yelling",
-                                            onClick: () => F({ type: d.Bs.YELLING }),
+                                            onClick: () => B({ type: d.Bs.YELLING }),
                                         }),
                                     ],
                                 }),
-                                (0, a.jsxs)(i.Kqy, {
+                                (0, a.jsxs)(r.Kqy, {
                                     gap: 8,
                                     children: [
                                         (0, a.jsxs)("div", {
@@ -1228,9 +1228,9 @@ function f() {
                                                 gap: "8px",
                                             },
                                             children: [
-                                                (0, a.jsx)(i.q4e, {
+                                                (0, a.jsx)(r.q4e, {
                                                     label: "Event Type",
-                                                    value: N,
+                                                    value: O,
                                                     onChange: (e) => P(e),
                                                     options: [
                                                         {
@@ -1275,10 +1275,10 @@ function f() {
                                                         },
                                                     ],
                                                 }),
-                                                (0, a.jsx)(i.q4e, {
+                                                (0, a.jsx)(r.q4e, {
                                                     label: "Importance",
-                                                    value: I,
-                                                    onChange: w,
+                                                    value: w,
+                                                    onChange: I,
                                                     options: [
                                                         {
                                                             label: "Low",
@@ -1296,7 +1296,7 @@ function f() {
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsxs)(i.Kqy, {
+                                        (0, a.jsxs)(r.Kqy, {
                                             gap: 8,
                                             children: [
                                                 (0, a.jsxs)("div", {
@@ -1306,14 +1306,14 @@ function f() {
                                                         gap: "4px",
                                                     },
                                                     children: [
-                                                        (0, a.jsx)(i.Text, {
+                                                        (0, a.jsx)(r.Text, {
                                                             variant: "text-sm/semibold",
                                                             children: "Title (optional)",
                                                         }),
                                                         (0, a.jsx)("input", {
                                                             type: "text",
                                                             value: k,
-                                                            onChange: (e) => R(e.target.value),
+                                                            onChange: (e) => A(e.target.value),
                                                             placeholder: "e.g., First Blood",
                                                             style: {
                                                                 padding: "8px",
@@ -1333,14 +1333,14 @@ function f() {
                                                         gap: "4px",
                                                     },
                                                     children: [
-                                                        (0, a.jsx)(i.Text, {
+                                                        (0, a.jsx)(r.Text, {
                                                             variant: "text-sm/semibold",
                                                             children: "Description (optional)",
                                                         }),
                                                         (0, a.jsx)("input", {
                                                             type: "text",
-                                                            value: A,
-                                                            onChange: (e) => D(e.target.value),
+                                                            value: R,
+                                                            onChange: (e) => Z(e.target.value),
                                                             placeholder: "e.g., Killed enemy ADC in bot lane",
                                                             style: {
                                                                 padding: "8px",
@@ -1355,20 +1355,20 @@ function f() {
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Create Game Event",
                                             onClick: () => {
                                                 m.XK({
                                                     type: d.Bs.GAME_EVENT,
-                                                    eventType: N,
-                                                    importance: I,
+                                                    eventType: O,
+                                                    importance: w,
                                                     title: k,
-                                                    description: A,
+                                                    description: R,
                                                 }),
-                                                    B(
+                                                    F(
                                                         "Created "
-                                                            .concat(N.toUpperCase(), " event (")
-                                                            .concat(I, ")")
+                                                            .concat(O.toUpperCase(), " event (")
+                                                            .concat(w, ")")
                                                             .concat(k),
                                                         "info",
                                                     );
@@ -1378,10 +1378,10 @@ function f() {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 4,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-sm/semibold",
                                     children: "Event Log",
                                 }),
@@ -1395,7 +1395,7 @@ function f() {
                                     },
                                     children:
                                         0 === y.length
-                                            ? (0, a.jsx)(i.Text, {
+                                            ? (0, a.jsx)(r.Text, {
                                                   variant: "text-sm/normal",
                                                   style: { color: "#888" },
                                                   children: "No events yet",
@@ -1454,39 +1454,39 @@ function f() {
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 4,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-sm/semibold",
                                     children: "ML Pipelines Enabled",
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Emotion Classifier",
                                     checked: b.emotionClassifier,
                                     onChange: (e) => m.So(g(x({}, b), { emotionClassifier: e })),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Wake Word Detector",
                                     checked: b.wakeWordDetector,
                                     onChange: (e) => m.So(g(x({}, b), { wakeWordDetector: e })),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Yell Detector",
                                     checked: b.yellDetector,
                                     onChange: (e) => m.So(g(x({}, b), { yellDetector: e })),
                                 }),
-                                (0, a.jsx)(i.rsf, {
+                                (0, a.jsx)(r.rsf, {
                                     label: "Whisper Transcription",
                                     checked: b.whisperTranscription,
                                     onChange: (e) => m.So(g(x({}, b), { whisperTranscription: e })),
                                 }),
                             ],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, a.jsxs)(r.Kqy, {
                             gap: 8,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(r.Text, {
                                     variant: "text-sm/semibold",
                                     children: "Decision Engine Config",
                                 }),
@@ -1497,35 +1497,35 @@ function f() {
                                         gap: "8px",
                                     },
                                     children: [
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Export Config",
                                             onClick: () => {
                                                 try {
-                                                    let e = s.Z.getConfig(),
-                                                        t = (0, o.yM)(e);
-                                                    L(t), U(!0), B("\u2705 Config exported to textarea below", "info");
+                                                    let e = o.Z.getConfig(),
+                                                        t = (0, s.yM)(e);
+                                                    L(t), U(!0), F("\u2705 Config exported to textarea below", "info");
                                                 } catch (e) {
-                                                    B("\u274C Failed to export config: ".concat(e.message), "info");
+                                                    F("\u274C Failed to export config: ".concat(e.message), "info");
                                                 }
                                             },
                                         }),
-                                        (0, a.jsx)(i.Button, {
+                                        (0, a.jsx)(r.Button, {
                                             text: "Import Config",
                                             onClick: () => {
                                                 try {
-                                                    if ("" === Z.trim())
-                                                        return void B("\u274C Config textarea is empty", "info");
-                                                    let e = (0, o.o$)(Z);
-                                                    m.O0(e), B("\u2705 Config imported successfully", "info");
+                                                    if ("" === D.trim())
+                                                        return void F("\u274C Config textarea is empty", "info");
+                                                    let e = (0, s.o$)(D);
+                                                    m.O0(e), F("\u2705 Config imported successfully", "info");
                                                 } catch (e) {
-                                                    B("\u274C Failed to import config: ".concat(e.message), "info");
+                                                    F("\u274C Failed to import config: ".concat(e.message), "info");
                                                 }
                                             },
                                         }),
                                     ],
                                 }),
                                 M &&
-                                    (0, a.jsxs)(i.Kqy, {
+                                    (0, a.jsxs)(r.Kqy, {
                                         gap: 4,
                                         children: [
                                             (0, a.jsxs)("div", {
@@ -1535,12 +1535,12 @@ function f() {
                                                     alignItems: "center",
                                                 },
                                                 children: [
-                                                    (0, a.jsx)(i.Text, {
+                                                    (0, a.jsx)(r.Text, {
                                                         variant: "text-sm/normal",
                                                         style: { color: "#b9bbbe" },
                                                         children: "Copy from or paste into this textarea",
                                                     }),
-                                                    (0, a.jsx)(i.Button, {
+                                                    (0, a.jsx)(r.Button, {
                                                         text: "Close",
                                                         onClick: () => {
                                                             U(!1), L("");
@@ -1549,7 +1549,7 @@ function f() {
                                                 ],
                                             }),
                                             (0, a.jsx)("textarea", {
-                                                value: Z,
+                                                value: D,
                                                 onChange: (e) => L(e.target.value),
                                                 placeholder: "Paste config JSON here...",
                                                 style: {

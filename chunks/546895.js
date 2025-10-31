@@ -21,11 +21,11 @@ n.d(t, { Z: () => d }),
     n(97749),
     n(35282);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(108514),
-    i = n(793030),
-    o = n(481060);
-let s = {
+    r = n(793030),
+    s = n(481060);
+let o = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
         () => n.e("49190").then(n.t.bind(n, 871413, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
@@ -320,8 +320,8 @@ function c(e) {
                     let a = new Uint8Array(e);
                     l.Ri(a, (e, a) => {
                         null != e && n(e);
-                        let r = Object.keys(a).reduce((e, t) => {
-                                var n, r;
+                        let i = Object.keys(a).reduce((e, t) => {
+                                var n, i;
                                 return (
                                     (n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
@@ -348,9 +348,9 @@ function c(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (r = r = { [t]: JSON.parse(l.T8(a[t])) }),
+                                    (i = i = { [t]: JSON.parse(l.T8(a[t])) }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -358,67 +358,67 @@ function c(e) {
                                                   n.push.apply(n, a);
                                               }
                                               return n;
-                                          })(Object(r)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                          })(Object(i)).forEach(function (e) {
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                                           }),
                                     n
                                 );
                             }, {}),
-                            i = r["manifest.json"];
-                        t(r["animations/".concat(i.animations[0].id, ".json")]);
+                            r = i["manifest.json"];
+                        t(i["animations/".concat(r.animations[0].id, ".json")]);
                     });
                 }),
         );
 }
 function d() {
-    let [e, t] = r.useState(void 0),
-        [n, l] = r.useState(400),
-        [d, u] = r.useState(400);
+    let [e, t] = i.useState(void 0),
+        [n, l] = i.useState(400),
+        [d, u] = i.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
-        children: (0, a.jsxs)(i.Kqy, {
+        children: (0, a.jsxs)(r.Kqy, {
             gap: 24,
             children: [
-                (0, a.jsx)(o.VcW, {
-                    options: Object.keys(s).map((e) => ({
+                (0, a.jsx)(s.VcW, {
+                    options: Object.keys(o).map((e) => ({
                         label: e,
                         value: e,
                     })),
                     value: e,
                     onChange: t,
                 }),
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(r.Kqy, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
-                        (0, a.jsx)(o.oil, {
+                        (0, a.jsx)(s.oil, {
                             value: n.toString(),
                             onChange: (e) => l(Number(e)),
                             label: "Width",
                         }),
-                        (0, a.jsx)(o.oil, {
+                        (0, a.jsx)(s.oil, {
                             value: d.toString(),
                             onChange: (e) => u(Number(e)),
                             label: "Height",
                         }),
                     ],
                 }),
-                (0, a.jsx)(o.Button, {
+                (0, a.jsx)(s.Button, {
                     size: "sm",
                     disabled: null == e,
                     onClick: async () => {
                         if (null == e) return;
-                        let t = s[e],
+                        let t = o[e],
                             n = new Blob([JSON.stringify(e.endsWith(".lottie") ? await t().then(c) : await t())], {
                                 type: "application/json",
                             }),
                             a = URL.createObjectURL(n),
-                            r = document.createElement("a");
-                        (r.href = a),
-                            (r.download = "".concat(e.split("/").pop(), ".json")),
-                            document.body.appendChild(r),
-                            r.click(),
-                            document.body.removeChild(r),
+                            i = document.createElement("a");
+                        (i.href = a),
+                            (i.download = "".concat(e.split("/").pop(), ".json")),
+                            document.body.appendChild(i),
+                            i.click(),
+                            document.body.removeChild(i),
                             URL.revokeObjectURL(a);
                     },
                     text: "Download",
@@ -430,10 +430,10 @@ function d() {
                             height: d,
                         },
                         children: (0, a.jsx)(
-                            o.Fmz,
+                            s.Fmz,
                             {
                                 importData: () => {
-                                    let t = s[e];
+                                    let t = o[e];
                                     return e.endsWith(".lottie") ? t().then(c) : t();
                                 },
                             },

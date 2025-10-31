@@ -32,7 +32,7 @@ var r = n(951288),
     w = n(262317),
     M = n(981631),
     R = n(524484),
-    D = n(106252);
+    D = n(968080);
 let L = i.memo((e) => {
     var t, n, i, l;
     let { mute: a, deaf: s, user: O, channel: P, sessionId: I, nick: D } = e,

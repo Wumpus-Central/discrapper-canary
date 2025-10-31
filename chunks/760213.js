@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => y,
-    Z: () => S,
+    W: () => O,
+    Z: () => N,
 }),
     n(457542);
 var r,
@@ -24,13 +24,13 @@ var r,
     b = n(251423),
     j = n(981631),
     I = n(388032),
-    N = n(878709),
-    y =
+    y = n(878709),
+    O =
         (((r = {})[(r.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
         (r[(r.SWITCHED = 1)] = "SWITCHED"),
         (r[(r.REMOVED = 2)] = "REMOVED"),
         r);
-function O(e) {
+function S(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: s,
@@ -41,48 +41,48 @@ function O(e) {
             hidePrivateData: m.Z.hidePersonalInformation,
             isAuthenticated: p.default.isAuthenticated(),
         })),
-        y = new g.Z(n),
-        O = b && (null == s ? void 0 : s.id) === y.id,
-        S = n.tokenStatus === v.q.INVALID,
-        C = l || y.hasUniqueUsername() ? null : "#".concat(y.discriminator),
+        O = new g.Z(n),
+        S = b && (null == s ? void 0 : s.id) === O.id,
+        N = n.tokenStatus === v.q.INVALID,
+        C = l || O.hasUniqueUsername() ? null : "#".concat(O.discriminator),
         A = null;
     return (
         h.Z.useConfig({ location: "Account card load" }),
-        O
+        S
             ? (A = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
-                  className: N.hintText,
+                  className: y.hintText,
                   color: "text-feedback-positive",
                   children: I.intl.string(I.t.seV8yt),
               }))
-            : S &&
+            : N &&
               (A = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
-                  className: N.hintText,
+                  className: y.hintText,
                   color: "text-danger",
                   children: I.intl.string(I.t.tYX2ps),
               })),
         (0, i.jsx)("div", {
-            className: N.accountCard,
+            className: y.accountCard,
             children: (0, i.jsxs)("div", {
-                className: N.userDetails,
+                className: y.userDetails,
                 children: [
                     (0, i.jsx)(c.qEK, {
-                        src: y.getAvatarURL(void 0, 40),
+                        src: O.getAvatarURL(void 0, 40),
                         size: c.EFr.SIZE_40,
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: a()(N.usernameSection, { [N.hasActionMaxWidth]: !O }),
+                        className: a()(y.usernameSection, { [y.hasActionMaxWidth]: !S }),
                         children: [
                             (0, i.jsxs)("div", {
-                                className: N.username,
+                                className: y.username,
                                 children: [
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-md/semibold",
                                         color: "header-primary",
                                         lineClamp: 1,
-                                        children: x.ZP.getUserTag(y, {
+                                        children: x.ZP.getUserTag(O, {
                                             mode: "username",
                                             identifiable: l ? "never" : "always",
                                         }),
@@ -98,14 +98,14 @@ function O(e) {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: N.userActions,
+                        className: y.userActions,
                         children: [
-                            !O &&
+                            !S &&
                                 (0, i.jsx)(c.Button, {
                                     variant: "secondary",
-                                    text: S ? I.intl.string(I.t["DSN+hw"]) : t,
+                                    text: N ? I.intl.string(I.t["DSN+hw"]) : t,
                                     onClick: function () {
-                                        if (S) return void r(0, n.id);
+                                        if (N) return void r(0, n.id);
                                         _.default.track(j.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                                             location: { section: j.jXE.MANAGE_ACCOUNTS_MODAL },
                                         }),
@@ -155,20 +155,20 @@ function O(e) {
         })
     );
 }
-function S(e) {
+function N(e) {
     let { actionText: t, onAction: n } = e,
         { isLoading: r, multiAccountUsers: l } = (0, b.L)();
     return (0, i.jsx)("div", {
-        className: N.list,
+        className: y.list,
         children: r
-            ? (0, i.jsx)(c.$jN, { className: N.spinner })
+            ? (0, i.jsx)(c.$jN, { className: y.spinner })
             : l.map((e, r) =>
                   (0, i.jsxs)(
                       s.Fragment,
                       {
                           children: [
                               (0, i.jsx)(
-                                  O,
+                                  S,
                                   {
                                       user: e,
                                       actionText: t,
@@ -179,7 +179,7 @@ function S(e) {
                               l.length - 1 !== r &&
                                   (0, i.jsx)("div", {
                                       role: "separator",
-                                      className: N.separator,
+                                      className: y.separator,
                                   }),
                           ],
                       },

@@ -1,14 +1,14 @@
 n.d(t, { r: () => o });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(120356),
-    l = n.n(r),
+var i = n(120356),
+    l = n.n(i),
     a = n(969183);
 let o = (e) => {
     let {
         left: t,
         top: n = 0,
-        right: r = 0,
+        right: i = 0,
         bottom: o,
         size: s = 8,
         alert: c = !1,
@@ -16,7 +16,7 @@ let o = (e) => {
         maskColor: d = 2,
         additionalStyles: p,
     } = e;
-    return (0, i.jsx)("span", {
+    return (0, r.jsx)("span", {
         className: l()(a.dot, {
             [a.alert]: c,
             [a.blurpleTreatment]: u,
@@ -31,7 +31,7 @@ let o = (e) => {
             width: s,
             left: t,
             top: n,
-            right: r,
+            right: i,
             bottom: o,
         },
     });

@@ -11,13 +11,13 @@ var r = n(951288),
 let p = (e) => {
     let { targetElementRef: t, onRequestClose: n, onClick: p } = e,
         { analyticsLocations: f } = (0, s.ZP)(a.Z.HOME_PAGE_SHOP_TAB),
-        h = i.useRef(n);
+        m = i.useRef(n);
     return (
-        (h.current = n),
+        (m.current = n),
         i.useEffect(
             () => () => {
                 var e;
-                null == (e = h.current) || e.call(h);
+                null == (e = m.current) || e.call(m);
             },
             [],
         ),

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: () => I,
-        default: () => ej,
+        default: () => ek,
         mergeUser: () => R,
         transformUser: () => C,
         users: () => O,
@@ -111,7 +111,7 @@ function R(e) {
         r = O[e.id],
         i = void 0 !== e.id && e.id === m.default.getId();
     if (null == r)
-        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = D((0, f.QI)(r), r.premiumType));
+        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = w((0, f.QI)(r), r.premiumType));
     else if (n) {
         var a;
         let n = C(e);
@@ -126,23 +126,23 @@ function R(e) {
 function P(e) {
     var t;
     let n = null != (t = e.premium_type) ? t : e.premiumType,
-        r = D((0, f.VR)(e), n);
+        r = w((0, f.VR)(e), n);
     return void 0 !== e.premiumType ? (e.premiumType = r) : void 0 !== e.premium_type && (e.premium_type = r), e;
 }
-function D(e, t) {
+function w(e, t) {
     if (!e) return t;
     let n = u.Z.getPremiumTypeOverride(),
         r = u.Z.getPremiumTypeActual();
     return n === b.F_ ? r : n;
 }
-function w(e, t) {
+function D(e, t) {
     if ((null == e ? void 0 : e.users) == null) return !1;
     for (let n in e.users) {
         let r = e.users[n];
         N(r) && R(r, t);
     }
 }
-function L(e, t) {
+function x(e, t) {
     var n, r, i, a, o;
     null != e.author && "SENDING" !== e.state && N(e.author) && R(e.author, t),
         null == (n = e.mentions) ||
@@ -160,7 +160,7 @@ function L(e, t) {
                         N(e) && R(e, t);
                     });
             }),
-        w(e.resolved, t),
+        D(e.resolved, t),
         (null == (o = e.interaction_metadata) ? void 0 : o.user) != null &&
             N(e.interaction_metadata.user) &&
             R(e.interaction_metadata.user, t),
@@ -178,7 +178,7 @@ function L(e, t) {
                     });
             });
 }
-function x(e) {
+function L(e) {
     let { user: t, users: n, guilds: r } = e;
     delete t.premium,
         delete t.banner_color,
@@ -216,11 +216,11 @@ function M(e) {
                     });
             });
 }
-function k(e) {
+function j(e) {
     return !("incomplete" in e);
 }
-function j(e) {
-    if (null != e.users) for (let t of e.users) (t.id in O && k(t)) || (O[t.id] = new _.Z(t));
+function k(e) {
+    if (null != e.users) for (let t of e.users) (t.id in O && j(t)) || (O[t.id] = new _.Z(t));
 }
 function U(e) {
     let { user: t } = e;
@@ -242,21 +242,21 @@ function Z(e) {
 }
 function F(e) {
     let { messages: t } = e;
-    return t.forEach((e) => L(e, !0)), !1;
+    return t.forEach((e) => x(e, !0)), !1;
 }
 function V(e) {
     let { pins: t } = e;
     return (
         t.forEach((e) => {
             let { message: t } = e;
-            return L(t, !0);
+            return x(t, !0);
         }),
         !1
     );
 }
 function H(e) {
     let { mostRecentMessages: t } = e;
-    return null == t || t.forEach((e) => L(e, !1)), !1;
+    return null == t || t.forEach((e) => x(e, !1)), !1;
 }
 function Y(e) {
     let { data: t } = e;
@@ -265,7 +265,7 @@ function Y(e) {
             let { messages: t, channels: n } = e;
             t.forEach((e) => {
                 e.forEach((e) => {
-                    L(e, !0);
+                    x(e, !0);
                 });
             }),
                 n.forEach((e) => {
@@ -280,20 +280,20 @@ function Y(e) {
 }
 function W(e) {
     let { firstMessages: t, owners: n } = e;
-    null != t && t.forEach((e) => L(e, !0)), null != n && n.forEach((e) => R(e.user, !0));
+    null != t && t.forEach((e) => x(e, !0)), null != n && n.forEach((e) => R(e.user, !0));
 }
 function K(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
-        null != t && L(t, !0), null != n && L(n, !0), null != r && null != r.user && R(r.user, !0);
+        null != t && x(t, !0), null != n && x(n, !0), null != r && null != r.user && R(r.user, !0);
     });
 }
 function z(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
-        null != t && L(t, !0);
+        null != t && x(t, !0);
     });
 }
 function q(e) {
@@ -318,7 +318,7 @@ function Q(e) {
 }
 function J(e) {
     let { message: t } = e;
-    if ((L(t, !0), null != t.flags && p.yE(t.flags, E.iLy.URGENT))) {
+    if ((x(t, !0), null != t.flags && p.yE(t.flags, E.iLy.URGENT))) {
         let e = O[m.default.getId()];
         return (
             null != e &&
@@ -518,19 +518,19 @@ function eR(e) {
 function eP(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
-        null != e.message && L(e.message, !0);
+        null != e.message && x(e.message, !0);
     }, !1);
 }
-function eD(e) {
+function ew(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, a.Z)(t) && R(t.member.user)) || e, !1);
 }
-function ew(e) {
+function eD(e) {
     let {} = e,
         t = O[m.default.getId()];
     return null != t && ((O[m.default.getId()] = t.set("ageVerificationStatus", i.F$.CLIENT_ONLY_PENDING)), !0);
 }
-function eL(e) {
+function ex(e) {
     let { status: t } = e,
         n = O[m.default.getId()];
     return (
@@ -539,29 +539,29 @@ function eL(e) {
         ((O[m.default.getId()] = n.set("ageVerificationStatus", t)), !0)
     );
 }
-function ex(e) {
+function eL(e) {
     let { resolved: t } = e;
-    return w(t, !0);
+    return D(t, !0);
 }
 function eM(e) {
     let { stickers: t } = e;
     return t.reduce((e, t) => (null != t.user && R(t.user)) || e, !1);
 }
-class ek extends g.Z {
+class ej extends g.Z {
     initialize() {
         this.waitFor(m.default, u.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: ek.LATEST_SNAPSHOT_VERSION,
+            version: ej.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(h.lm) },
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(ek.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(ej.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) O[e.id] = new _.Z(e);
-        if (null != e.users) for (let t of e.users) (t.id in O && k(t)) || (O[t.id] = new _.Z(t));
+        if (null != e.users) for (let t of e.users) (t.id in O && j(t)) || (O[t.id] = new _.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) {
                 var n;
@@ -604,10 +604,10 @@ class ek extends g.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: x,
+            CONNECTION_OPEN: L,
             CONNECTION_OPEN_SUPPLEMENTAL: M,
             UPDATE_CLIENT_PREMIUM_TYPE: Z,
-            OVERLAY_INITIALIZE: j,
+            OVERLAY_INITIALIZE: k,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
             USER_UPDATE: U,
             USER_PROFILE_FETCH_SUCCESS: G,
@@ -665,12 +665,12 @@ class ek extends g.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eA,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eR,
             LOAD_ICYMI_HYDRATED: eP,
-            EMBEDDED_ACTIVITY_UPDATE_V2: eD,
-            INITIATE_AGE_VERIFICATION: ew,
-            CLOSE_AGE_VERIFICATION_MODAL: eL,
-            INTERACTION_MODAL_CREATE: ex,
+            EMBEDDED_ACTIVITY_UPDATE_V2: ew,
+            INITIATE_AGE_VERIFICATION: eD,
+            CLOSE_AGE_VERIFICATION_MODAL: ex,
+            INTERACTION_MODAL_CREATE: eL,
         });
     }
 }
-y(ek, "displayName", "UserStore"), y(ek, "LATEST_SNAPSHOT_VERSION", 1);
-let ej = new ek();
+y(ej, "displayName", "UserStore"), y(ej, "LATEST_SNAPSHOT_VERSION", 1);
+let ek = new ej();

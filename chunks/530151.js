@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(28664),
     p = n(780384),
     f = n(755721),
-    h = n(481060),
-    m = n(570140),
+    m = n(481060),
+    h = n(570140),
     g = n(239091),
     _ = n(51025),
     b = n(785547),
     E = n(730749),
     O = n(112724),
     I = n(812206),
-    v = n(44315),
-    y = n(600164),
+    y = n(44315),
+    v = n(600164),
     C = n(167533),
     S = n(925329),
     T = n(707409),
@@ -237,14 +237,14 @@ class W extends i.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: i, message: l } = e;
-        return (0, r.jsxs)(y.Z, {
-            direction: y.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(h.Exd, {
+                (0, r.jsx)(m.Exd, {
                     percent: t,
-                    size: h.Exd.Sizes.SMALL,
-                    foregroundColor: (0, v.Lq)(n),
-                    foregroundGradientColor: null != i ? [(0, v.Lq)(i[0]), (0, v.Lq)(i[1])] : void 0,
+                    size: m.Exd.Sizes.SMALL,
+                    foregroundColor: (0, y.Lq)(n),
+                    foregroundGradientColor: null != i ? [(0, y.Lq)(i[0]), (0, y.Lq)(i[1])] : void 0,
                     animate: this.isFocused,
                 }),
                 (0, r.jsx)("div", {
@@ -256,12 +256,12 @@ class W extends i.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, r.jsxs)(y.Z, {
-            direction: y.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)(h.yGy, {
+                (0, r.jsx)(m.yGy, {
                     percents: t,
-                    size: h.yGy.Sizes.SMALL,
+                    size: m.yGy.Sizes.SMALL,
                     foregroundColors: B,
                     animate: this.isFocused,
                 }),
@@ -416,20 +416,20 @@ class W extends i.PureComponent {
 }
 let q = () =>
         (0, r.jsx)(H, {
-            icon: h.o1U,
+            icon: m.o1U,
             tooltip: M.intl.string(M.t.YGm6SZ),
             onClick: () => _.v4(),
         }),
     K = () =>
         (0, r.jsx)(H, {
-            icon: h.fpf,
+            icon: m.fpf,
             tooltip: M.intl.string(M.t.TVAd5J),
             onClick: () => _.wO(),
         }),
     Q = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(H, {
-            icon: h.wj7,
+            icon: m.wj7,
             tooltip: M.intl.string(M.t["Eqb+LN"]),
             onClick: () => _.A1(t.applicationId, t.branchId),
         });
@@ -437,7 +437,7 @@ let q = () =>
     J = (e) => {
         let { item: t } = e;
         return (0, r.jsx)(H, {
-            icon: h.Dio,
+            icon: m.Dio,
             tooltip: M.intl.string(M.t["0lFmC9"]),
             onClick: () => _.al(t.applicationId, t.branchId),
         });
@@ -447,8 +447,8 @@ let q = () =>
             key: "name",
             cellClassName: k.nameCell,
             render: (e) =>
-                (0, r.jsxs)(y.Z, {
-                    align: y.Z.Align.CENTER,
+                (0, r.jsxs)(v.Z, {
+                    align: v.Z.Align.CENTER,
                     children: [
                         (0, r.jsx)(S.Z, {
                             game: e.application,
@@ -499,8 +499,8 @@ let q = () =>
                                       : (0, r.jsx)(K, { item: e })),
                             (i = (0, r.jsx)(J, { item: e })))
                           : (i = (0, r.jsx)(J, { item: e })),
-                    (0, r.jsxs)(y.Z, {
-                        justify: y.Z.Justify.END,
+                    (0, r.jsxs)(v.Z, {
+                        justify: v.Z.Justify.END,
                         children: [n, i],
                     })
                 );
@@ -518,7 +518,7 @@ class $ extends i.PureComponent {
         let { applications: e } = this.props;
         e.forEach((e) => {
             e.finished &&
-                m.Z.wait(() => {
+                h.Z.wait(() => {
                     _.wi(e.applicationId, e.branchId);
                 });
         }),

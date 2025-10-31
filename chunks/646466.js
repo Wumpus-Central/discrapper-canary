@@ -1,10 +1,10 @@
 n.d(t, { O: () => E }), n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(481060),
-    i = n(373071),
-    o = n(637443),
-    s = n(619899),
+    r = n(373071),
+    s = n(637443),
+    o = n(619899),
     c = n(18868),
     d = n(281598),
     u = n(206878),
@@ -48,42 +48,42 @@ let h = [
         label: "[none selected]",
         value: null,
     },
-    f = {
+    g = {
         label: "[preview all]",
         value: null,
     },
-    b = () => {
-        (0, l.nfh)(o.g)
-            ? (0, l.Mr3)(o.g)
+    f = () => {
+        (0, l.nfh)(s.g)
+            ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
                   async () => {
                       let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
-                      modalKey: o.g,
-                      onCloseRequest: () => (0, l.Mr3)(o.g),
+                      modalKey: s.g,
+                      onCloseRequest: () => (0, l.Mr3)(s.g),
                   },
               );
     },
-    g = () => {
-        (0, l.nfh)(o.c)
-            ? (0, l.Mr3)(o.c)
+    b = () => {
+        (0, l.nfh)(s.c)
+            ? (0, l.Mr3)(s.c)
             : (0, l.ZDy)(
                   async () => {
                       let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
-                      modalKey: o.c,
-                      onCloseRequest: () => (0, l.Mr3)(o.c),
+                      modalKey: s.c,
+                      onCloseRequest: () => (0, l.Mr3)(s.c),
                   },
               );
     },
     v = () => {
-        let e = (0, i.lb)(),
-            { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: n } = (0, s.N9)(),
-            o = r.useMemo(
+        let e = (0, r.lb)(),
+            { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: n } = (0, o.N9)(),
+            s = i.useMemo(
                 () => [
                     x,
                     ...e.map((e) => ({
@@ -107,14 +107,14 @@ let h = [
                         (0, a.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: g,
+                            onClick: b,
                             icon: l.idN,
                             "aria-label": "Open PFX preview instructions",
                         }),
                     ],
                 }),
                 (0, a.jsx)(l.q4e, {
-                    options: o,
+                    options: s,
                     value: t,
                     maxVisibleItems: 30,
                     onChange: (e) => n(e),
@@ -123,11 +123,11 @@ let h = [
         });
     },
     j = () => {
-        let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, s.N9)(),
-            { avatarDecorationAssets: n } = (0, s.xq)(),
-            i = r.useMemo(
+        let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, o.N9)(),
+            { avatarDecorationAssets: n } = (0, o.xq)(),
+            r = i.useMemo(
                 () => [
-                    f,
+                    g,
                     ...n.map((e) => ({
                         label: e.name,
                         value: e.name,
@@ -146,7 +146,7 @@ let h = [
                           children: "Preview Avatar Decorations",
                       }),
                       (0, a.jsx)(l.q4e, {
-                          options: i,
+                          options: r,
                           value: e,
                           maxVisibleItems: 30,
                           onChange: (e) => t(e),
@@ -156,18 +156,18 @@ let h = [
     },
     _ = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
-            { collectionAssets: i } = (0, s.xq)(),
-            { deleteCollectionAsset: o, clearAssets: c } = (0, s.N9)(),
-            d = r.useMemo(
+            { collectionAssets: r } = (0, o.xq)(),
+            { deleteCollectionAsset: s, clearAssets: c } = (0, o.N9)(),
+            d = i.useMemo(
                 () =>
-                    Object.values(i).map((e) => ({
+                    Object.values(r).map((e) => ({
                         label: e.name,
                         value: e.type,
                     })),
-                [i],
+                [r],
             ),
-            u = r.useCallback((e) => o(e), [o]),
-            p = r.useCallback(() => {
+            u = i.useCallback((e) => s(e), [s]),
+            p = i.useCallback(() => {
                 c(), t(), n();
             }, [c, t, n]);
         return 0 === d.length
@@ -258,12 +258,12 @@ let h = [
               });
     },
     C = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: o } = (0, u.g)(),
-            s = Object.entries(o),
-            d = Object.entries(i),
-            p = s.length > 0,
+        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: r, errors: s } = (0, u.g)(),
+            o = Object.entries(s),
+            d = Object.entries(r),
+            p = o.length > 0,
             h = d.length > 0,
-            x = r.useCallback(
+            x = i.useCallback(
                 (n) => {
                     t(), e(n);
                 },
@@ -279,7 +279,7 @@ let h = [
                               (0, a.jsx)(l.Text, {
                                   variant: "text-md/normal",
                                   color: p ? "text-danger" : "text-default",
-                                  children: "".concat(s.length, " errors"),
+                                  children: "".concat(o.length, " errors"),
                               }),
                               (0, a.jsx)(l.Text, {
                                   variant: "text-md/normal",
@@ -309,8 +309,8 @@ let h = [
                             (0, a.jsx)(l.LZC, { size: 8 }),
                             (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
-                                children: s.map((e, t) => {
-                                    let [n, r] = e;
+                                children: o.map((e, t) => {
+                                    let [n, i] = e;
                                     return (0, a.jsxs)(
                                         "li",
                                         {
@@ -320,10 +320,10 @@ let h = [
                                                     color: "text-danger",
                                                     children: n,
                                                 }),
-                                                r.length > 0 &&
+                                                i.length > 0 &&
                                                     (0, a.jsx)("ul", {
                                                         className: m.validationIssuesList,
-                                                        children: r.map((e, t) =>
+                                                        children: i.map((e, t) =>
                                                             (0, a.jsx)(
                                                                 "li",
                                                                 {
@@ -355,8 +355,8 @@ let h = [
                             (0, a.jsx)(l.LZC, { size: 8 }),
                             (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
-                                children: Object.entries(i).map((e, t) => {
-                                    let [n, r] = e;
+                                children: Object.entries(r).map((e, t) => {
+                                    let [n, i] = e;
                                     return (0, a.jsxs)(
                                         "li",
                                         {
@@ -366,10 +366,10 @@ let h = [
                                                     color: "text-feedback-warning",
                                                     children: n,
                                                 }),
-                                                r.length > 0 &&
+                                                i.length > 0 &&
                                                     (0, a.jsx)("ul", {
                                                         className: m.validationIssuesList,
-                                                        children: r.map((e, t) =>
+                                                        children: i.map((e, t) =>
                                                             (0, a.jsx)(
                                                                 "li",
                                                                 {
@@ -395,9 +395,9 @@ let h = [
         });
     },
     S = () => {
-        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, s.N9)(),
-            { ignoredFilenames: i, clearAssets: o, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
-            h = r.useCallback(
+        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
+            { ignoredFilenames: r, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
+            h = i.useCallback(
                 (e) => {
                     n(), p(e);
                 },
@@ -424,7 +424,7 @@ let h = [
                         (0, a.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: b,
+                            onClick: f,
                             icon: l.idN,
                             "aria-label": "Open preview instructions",
                         }),
@@ -433,18 +433,18 @@ let h = [
                 (0, a.jsx)(v, {}),
                 (0, a.jsx)(j, {}),
                 (0, a.jsx)(_, {
-                    clearAssets: o,
+                    clearAssets: s,
                     clearIgnoredFiles: u,
                 }),
                 (0, a.jsx)(y, {
-                    ignoredFiles: i,
+                    ignoredFiles: r,
                     handleClearIgnoredFiles: u,
                 }),
             ],
         });
     },
     E = () => {
-        let [e, t] = r.useState("preview");
+        let [e, t] = i.useState("preview");
         return (0, a.jsxs)("div", {
             className: m.container,
             children: [

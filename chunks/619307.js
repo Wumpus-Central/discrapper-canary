@@ -1,5 +1,5 @@
 n.d(t, {
-    Ph: () => k,
+    Ph: () => j,
     UN: () => R,
     cY: () => A,
     gz: () => C,
@@ -179,10 +179,10 @@ function D(e) {
             popoutClassName: N,
             popoutPosition: R = "bottom",
             popoutLayerContext: D,
-            optionClassName: x,
+            optionClassName: L,
             closeOnSelect: M,
-            select: k,
-            isSelected: j,
+            select: j,
+            isSelected: k,
             serialize: U,
             clear: G,
             hideIcon: B = !1,
@@ -216,12 +216,12 @@ function D(e) {
         er = (0, c.O)(en),
         ei = i.useCallback(
             (e) => {
-                if ((k(e), M)) {
+                if ((j(e), M)) {
                     var t;
                     null == (t = J.current) || t.focus();
                 }
             },
-            [k, M, J],
+            [j, M, J],
         ),
         ea = i.useCallback(
             (e) => {
@@ -229,7 +229,7 @@ function D(e) {
             },
             [G],
         ),
-        eo = t.filter((e) => j(e.value));
+        eo = t.filter((e) => k(e.value));
     return (
         i.useLayoutEffect(() => {
             if (f) {
@@ -250,19 +250,19 @@ function D(e) {
             },
             renderPopout: (e) => {
                 let { closePopout: n, position: i, updatePosition: a } = e;
-                return (0, r.jsx)(L, {
+                return (0, r.jsx)(x, {
                     className: N,
                     closeOnSelect: M,
                     maxVisibleItems: l,
                     width: "auto" === h ? void 0 : null != h ? h : $,
-                    isSelected: j,
+                    isSelected: k,
                     closePopout: n,
                     buttonHeight: null != ee ? ee : 0,
                     onSelect: ei,
                     options: t,
                     serialize: U,
                     renderOptionLabel: A,
-                    optionClassName: x,
+                    optionClassName: L,
                     updatePosition: a,
                     popoutPosition: i,
                 });
@@ -375,7 +375,7 @@ function D(e) {
         })
     );
 }
-function L(e) {
+function x(e) {
     let {
             className: t,
             onSelect: n,
@@ -426,12 +426,12 @@ function L(e) {
             },
             [a, n, c],
         ),
-        L = i.useMemo(
+        x = i.useMemo(
             () =>
                 f.map((e, t) => {
                     var n;
                     return (0, r.jsx)(
-                        x,
+                        L,
                         {
                             isSelected: d(e.value),
                             value: e.value,
@@ -476,7 +476,7 @@ function L(e) {
                                 ),
                                 {
                                     role: "listbox",
-                                    children: L,
+                                    children: x,
                                 },
                             ),
                         ),
@@ -484,7 +484,7 @@ function L(e) {
                             "aria-hidden": !0,
                             ref: N,
                             className: E.measurement,
-                            children: L.slice(0, p),
+                            children: x.slice(0, p),
                         }),
                     ],
                 });
@@ -492,7 +492,7 @@ function L(e) {
         }),
     });
 }
-function x(e) {
+function L(e) {
     let {
             className: t,
             value: n,
@@ -612,7 +612,7 @@ function M(e) {
     }
     return (0, r.jsx)(D, v(y({}, o, l), { renderOptionLabel: null != N ? N : w() }));
 }
-function k(e) {
+function j(e) {
     var t,
         n,
         { renderLeading: i, renderTrailing: a } = e,
@@ -687,7 +687,7 @@ function k(e) {
             ),
         );
     }
-    function L() {
+    function x() {
         if (null != i || null != a)
             return (e) =>
                 (0, r.jsxs)("div", {
@@ -695,5 +695,5 @@ function k(e) {
                     children: [null == i ? void 0 : i(e), e.label, null == a ? void 0 : a(e)],
                 });
     }
-    return (0, r.jsx)(D, v(y({}, o), { renderOptionLabel: null != R ? R : L() }));
+    return (0, r.jsx)(D, v(y({}, o), { renderOptionLabel: null != R ? R : x() }));
 }

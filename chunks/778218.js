@@ -1,70 +1,70 @@
-t.d(l, { _: () => u }), t(953529), t(388685);
-var a = t(951288),
-    n = t(647438),
-    o = t(657707),
-    i = t(793030),
-    r = t(159691),
-    s = t(481060);
-let u = {
+n.d(t, { _: () => c }), n(953529), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(657707),
+    o = n(793030),
+    s = n(159691),
+    l = n(481060);
+let c = {
     title: "Checkbox",
     stories: [
         {
             id: "checkbox",
             name: "Checkbox",
             component: function (e) {
-                let { label: l, description: t, disabled: u, labelType: d, showIcons: c } = e,
-                    [b, p] = n.useState(!1),
-                    y = n.useCallback(() => {
-                        p(!0);
+                let { label: t, description: n, disabled: c, labelType: u, showIcons: d } = e,
+                    [f, _] = i.useState(!1),
+                    p = i.useCallback(() => {
+                        _(!0);
                     }, []),
-                    m = n.useCallback(() => {
-                        p(!1);
+                    h = i.useCallback(() => {
+                        _(!1);
                     }, []),
-                    f = n.useCallback(() => {
-                        p((e) => !e);
+                    m = i.useCallback(() => {
+                        _((e) => !e);
                     }, []);
-                return (0, a.jsxs)(i.Kqy, {
+                return (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: "md",
                     children: [
-                        (0, a.jsx)(s.Checkbox, {
-                            checked: b,
-                            onChange: (e) => p(e),
-                            disabled: u,
-                            label: l,
-                            description: null != t || "" === t ? t : void 0,
+                        (0, r.jsx)(l.Checkbox, {
+                            checked: f,
+                            onChange: (e) => _(e),
+                            disabled: c,
+                            label: t,
+                            description: null != n || "" === n ? n : void 0,
                             value: "checkbox-value",
-                            labelType: d,
-                            leadingIcon: c ? o.d3s : void 0,
+                            labelType: u,
+                            leadingIcon: d ? a.d3s : void 0,
                         }),
-                        (0, a.jsxs)(i.xvT, {
+                        (0, r.jsxs)(o.xvT, {
                             variant: "text-sm/normal",
-                            children: ["Current state: ", b ? "Checked" : "Unchecked"],
+                            children: ["Current state: ", f ? "Checked" : "Unchecked"],
                         }),
-                        (0, a.jsxs)(i.Kqy, {
+                        (0, r.jsxs)(o.Kqy, {
                             direction: "horizontal",
                             gap: "sm",
                             children: [
-                                (0, a.jsx)(r.zxk, {
+                                (0, r.jsx)(s.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
-                                    onClick: y,
-                                    disabled: u,
+                                    onClick: p,
+                                    disabled: c,
                                 }),
-                                (0, a.jsx)(r.zxk, {
+                                (0, r.jsx)(s.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
-                                    onClick: m,
-                                    disabled: u,
+                                    onClick: h,
+                                    disabled: c,
                                 }),
-                                (0, a.jsx)(r.zxk, {
+                                (0, r.jsx)(s.zxk, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
-                                    onClick: f,
-                                    disabled: u,
+                                    onClick: m,
+                                    disabled: c,
                                 }),
                             ],
                         }),

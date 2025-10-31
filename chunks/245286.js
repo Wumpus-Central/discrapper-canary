@@ -1,7 +1,7 @@
 n.d(t, { default: () => S }), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(442837),
+    l = n(647438),
+    o = n(442837),
     i = n(704215),
     a = n(481060),
     c = n(493773),
@@ -17,8 +17,8 @@ var r = n(951288),
     v = n(914578),
     g = n(920952),
     h = n(518596),
-    O = n(388032),
-    x = n(942408);
+    x = n(388032),
+    O = n(942408);
 function P(e) {
     let { destinationPanel: t, originPanel: n } = e;
     (0, y.QB)({
@@ -35,27 +35,27 @@ function S(e) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (n = o[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return o;
+            return l;
         })(e, ["target"]);
     let i = j.Z.useField("query"),
         { node: a, directory: s } = (0, f.Z)(g.Z, i),
         u = null != t && null != s.entry(t) ? t : void 0,
-        y = o.useRef(null);
+        y = l.useRef(null);
     return ((0, c.ZP)(() => {
         let e = b.Z.getSection();
         null != e &&
@@ -65,7 +65,7 @@ function S(e) {
             }),
             (y.current = e));
     }),
-    (0, l.e7)([p.default], () => null != p.default.getCurrentUser()))
+    (0, o.e7)([p.default], () => null != p.default.getCurrentUser()))
         ? (0, r.jsx)(
               d.Z,
               (function (e) {
@@ -118,12 +118,12 @@ function S(e) {
 }
 function C() {
     let e = j.Z.useField("query"),
-        t = o.useRef(null),
-        [n, l] = (0, s.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
-        c = o.useMemo(
+        t = l.useRef(null),
+        [n, o] = (0, s.US)([i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        c = l.useMemo(
             () => ({
-                title: O.intl.string(O.t.Kv519a),
-                body: O.intl.string(O.t.cTGJBZ),
+                title: x.intl.string(x.t.Kv519a),
+                body: x.intl.string(x.t.cTGJBZ),
                 badge: "new",
                 position: "right",
                 align: "center",
@@ -131,15 +131,15 @@ function C() {
             }),
             [],
         ),
-        d = o.useCallback((e) => {
+        d = l.useCallback((e) => {
             j.Z.setState({ query: e });
         }, []),
-        f = o.useCallback(() => {
+        f = l.useCallback(() => {
             j.Z.setState({ query: "" });
         }, []);
     return (0, r.jsx)("div", {
         children: (0, r.jsxs)("div", {
-            className: x.searchBarContainer,
+            className: O.searchBarContainer,
             children: [
                 (0, r.jsx)(a.E1j, {
                     size: "md",
@@ -148,14 +148,14 @@ function C() {
                     onClear: f,
                 }),
                 (0, r.jsx)("div", {
-                    className: x.popoverAnchor,
+                    className: O.popoverAnchor,
                     ref: t,
                 }),
                 (0, r.jsx)(u.Z, {
                     dismissibleContentType: i.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
                     targetElementRef: t,
                     visibleContent: n,
-                    markAsDismissed: l,
+                    markAsDismissed: o,
                     props: c,
                 }),
             ],
@@ -164,17 +164,17 @@ function C() {
 }
 function _() {
     return (0, r.jsxs)("div", {
-        className: x.emptySearchResultsContainer,
+        className: O.emptySearchResultsContainer,
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: O.intl.string(O.t.zihbmv),
+                children: x.intl.string(x.t.zihbmv),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: O.intl.string(O.t.XclvsB),
+                children: x.intl.string(x.t.XclvsB),
             }),
         ],
     });

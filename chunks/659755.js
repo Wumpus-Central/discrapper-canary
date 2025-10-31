@@ -8,20 +8,20 @@ var r = n(951288),
     c = n(481060),
     u = n(876917),
     d = n(594174),
-    g = n(429368),
-    p = n(724994),
+    p = n(429368),
+    g = n(724994),
     f = n(786040),
     h = n(508925),
     C = n(616066),
-    _ = n(684263),
-    m = n(396728),
+    m = n(684263),
+    _ = n(396728),
     b = n(58201),
     v = n(201964),
     E = n(1327);
 let x = (e) => {
         let { product: t, isCardHovered: n } = e,
             l = (0, f.rC)(t),
-            { isPurchased: a, isPartiallyOwnedBundle: o } = (0, p.L)(t),
+            { isPurchased: a, isPartiallyOwnedBundle: o } = (0, g.L)(t),
             c = l === s.Z.PROFILE_EFFECT;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -61,14 +61,14 @@ let x = (e) => {
                     avatarSize: c.EFr.SIZE_120,
                 });
             case s.Z.NAMEPLATE:
-                return (0, r.jsx)(m.Z, {
+                return (0, r.jsx)(_.Z, {
                     nameplate: a,
                     user: l,
                     isHighlighted: n,
                     isPurchased: !1,
                 });
             case s.Z.BUNDLE:
-                return (0, r.jsx)(_.U, {
+                return (0, r.jsx)(m.U, {
                     product: t,
                     user: l,
                     isHighlighted: n,
@@ -96,7 +96,7 @@ let x = (e) => {
     y = (e) => {
         let { skuId: t, isCardHovered: n } = e,
             l = (0, f.LJ)(t),
-            i = (0, g.o)(l);
+            i = (0, p.o)(l);
         if (null == l) return null;
         let s = (0, b.W)(l, i);
         return (0, r.jsx)(x, {

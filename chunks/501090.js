@@ -1,17 +1,17 @@
-n.d(e, { q: () => u }), n(388685);
+n.d(e, { q: () => s }), n(388685);
 var a = n(647438),
     r = n(626135),
     i = n(323321),
     l = n(45474),
-    s = n(981631);
-let u = (t, e, n) => {
-    let [u, o] = a.useState(t),
-        [c, d] = a.useState(Date.now()),
-        [m] = a.useState(Date.now()),
-        O = a.useCallback(
+    o = n(981631);
+let s = (t, e, n) => {
+    let [s, c] = a.useState(t),
+        [u, d] = a.useState(Date.now()),
+        [_] = a.useState(Date.now()),
+        m = a.useCallback(
             (t) => {
                 r.default.track(
-                    s.rMx.CANCELLATION_FLOW_STEP,
+                    o.rMx.CANCELLATION_FLOW_STEP,
                     (function (t) {
                         for (var e = 1; e < arguments.length; e++) {
                             var n = null != arguments[e] ? arguments[e] : {},
@@ -38,19 +38,19 @@ let u = (t, e, n) => {
                         return t;
                     })(
                         {
-                            from_step: l.O[u],
+                            from_step: l.O[s],
                             to_step: l.O[t],
-                            step_duration_ms: Date.now() - c,
-                            flow_duration_ms: Date.now() - m,
+                            step_duration_ms: Date.now() - u,
+                            flow_duration_ms: Date.now() - _,
                             location_stack: n,
                         },
                         (0, i.v)(e),
                     ),
                 ),
-                    o(t),
+                    c(t),
                     d(Date.now());
             },
-            [n, m, c, u, e],
+            [n, _, u, s, e],
         );
-    return [u, O, c, m];
+    return [s, m, u, _];
 };

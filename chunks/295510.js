@@ -1,91 +1,91 @@
-r.d(t, { Z: () => u }), r(388685);
-var n = r(951288),
-    o = r(647438),
-    i = r(159691),
-    l = r(153867),
-    c = r(394059),
-    a = r(388032);
-function u(e) {
-    var { type: t, onConfirm: r, onClose: u } = e,
-        s = (function (e, t) {
+n.d(t, { Z: () => s }), n(388685);
+var r = n(951288),
+    l = n(647438),
+    i = n(159691),
+    o = n(153867),
+    a = n(394059),
+    c = n(388032);
+function s(e) {
+    var { type: t, onConfirm: n, onClose: s } = e,
+        u = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
-                o = (function (e, t) {
+            var n,
+                r,
+                l = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
-                        o = {},
+                    var n,
+                        r,
+                        l = {},
                         i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return o;
+            return l;
         })(e, ["type", "onConfirm", "onClose"]);
-    let [f, b] = o.useState(!1),
-        p = o.useCallback(() => {
-            f && l.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), r(), u();
-        }, [r, f, u]),
-        y = t === c.K.STREAM ? a.intl.string(a.t["/lFMWr"]) : a.intl.string(a.t.xzxhZS),
-        O = t === c.K.STREAM ? a.intl.string(a.t.xaOX7d) : a.intl.string(a.t.oU1p9O);
-    return (0, n.jsx)(
+    let [d, p] = l.useState(!1),
+        f = l.useCallback(() => {
+            d && o.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n(), s();
+        }, [n, d, s]),
+        b = t === a.K.STREAM ? c.intl.string(c.t["/lFMWr"]) : c.intl.string(c.t.xzxhZS),
+        h = t === a.K.STREAM ? c.intl.string(c.t.xaOX7d) : c.intl.string(c.t.oU1p9O);
+    return (0, r.jsx)(
         i.u_l,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         }),
                     )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: n,
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = n);
+                                : (e[t] = r);
                     });
             }
             return e;
         })(
             {
                 size: "md",
-                actionBarInput: (0, n.jsx)(i.XZJ, {
-                    checked: f,
-                    onChange: (e) => b(e),
-                    label: a.intl.string(a.t["JdIQ/Y"]),
+                actionBarInput: (0, r.jsx)(i.XZJ, {
+                    checked: d,
+                    onChange: (e) => p(e),
+                    label: c.intl.string(c.t["JdIQ/Y"]),
                     labelType: "secondary",
                 }),
                 actions: [
                     {
                         variant: "secondary",
-                        text: a.intl.string(a.t["ETE/oC"]),
-                        onClick: u,
+                        text: c.intl.string(c.t["ETE/oC"]),
+                        onClick: s,
                     },
                     {
                         variant: "primary",
-                        text: a.intl.string(a.t.BddRzS),
-                        onClick: p,
+                        text: c.intl.string(c.t.BddRzS),
+                        onClick: f,
                     },
                 ],
-                title: y,
-                subtitle: O,
-                onClose: u,
+                title: b,
+                subtitle: h,
+                onClose: s,
             },
-            s,
+            u,
         ),
     );
 }

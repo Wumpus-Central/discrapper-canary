@@ -80,8 +80,8 @@ function v(e, t) {
     );
 }
 let I = window.DiscordNative,
-    S = new Set(["jpg", "jpeg", "png"]),
-    T = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
+    T = new Set(["jpg", "jpeg", "png"]),
+    S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
     A = (e) => e.startsWith("image/"),
     C = 5,
     N = null,
@@ -103,11 +103,11 @@ let D = new Set([
         "discord_utils",
         "discord_voice",
     ]),
-    L = !1,
-    x = "lastImageSaveDirectory",
+    x = !1,
+    L = "lastImageSaveDirectory",
     M = /[<>:"/\\|?*@]/g,
-    k = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    j = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    j = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    k = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
 var B = (function (e) {
@@ -116,10 +116,10 @@ var B = (function (e) {
 function Z(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(k, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
+        return (t = (t = t.replace(j, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
     } catch (t) {
         return e
-            .replace(j, "$1")
+            .replace(k, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
             .replace(M, "_");
     }
@@ -310,16 +310,16 @@ let q = {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
             let e = this.requireModule("discord_voice");
             return (
-                L ||
+                x ||
                     (0, d.Bl)((t, n, r) => {
                         e.consoleLog(n, "[".concat(t, "] ").concat(r));
                     }),
-                (L = !0),
+                (x = !0),
                 e
             );
         },
         getDiscordUtils() {
-            if (!L)
+            if (!x)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -406,7 +406,7 @@ let q = {
                 l()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
             let n = await V(e),
                 r = K(e, t),
-                i = null != r && S.has(r) ? "image.".concat(r) : e;
+                i = null != r && T.has(r) ? "image.".concat(r) : e;
             I.clipboard.copyImage(E.from(n), i);
         },
         async copyImageBlob(e, t) {
@@ -416,7 +416,7 @@ let q = {
         canSaveImage(e, t) {
             if (null == e || !h.isPlatformEmbedded) return !1;
             let n = K(e, t);
-            return null == n || T.has(n);
+            return null == n || S.has(n);
         },
         async saveImage(e, t, n) {
             var r, i, a;
@@ -439,7 +439,7 @@ let q = {
             }
             let _ = await V(e),
                 p = E.from(_),
-                g = f.K.get(x);
+                g = f.K.get(L);
             if (("string" != typeof g && (g = void 0), "function" == typeof I.fileManager.saveWithDialog2)) {
                 if (null == (o = await I.fileManager.saveWithDialog2(p, u, null != g ? g : void 0))) return "errored";
                 if (o.canceledByUser) return "canceled";
@@ -450,7 +450,7 @@ let q = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == s || "" === s ? "errored" : (f.K.set(x, s), "saved");
+            return null == s || "" === s ? "errored" : (f.K.set(L, s), "saved");
         },
         async saveFile(e, t) {
             var n;
@@ -497,7 +497,7 @@ let q = {
             if (!h.isPlatformEmbedded || "function" != typeof I.clipboard.copyImage) return !1;
             if (null != e) {
                 let t = K(e, void 0);
-                if (null != t && !S.has(t)) return !1;
+                if (null != t && !T.has(t)) return !1;
             }
             return !0;
         },

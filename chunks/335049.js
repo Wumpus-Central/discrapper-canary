@@ -73,7 +73,7 @@ function P(e) {
     let u = r.useCallback(
         (e) => {
             (0, p.jW)(e, async () => {
-                let { default: e } = await n.e("5396").then(n.bind(n, 731646));
+                let { default: e } = await n.e("5396").then(n.bind(n, 999588));
                 return (t) =>
                     (0, i.jsx)(
                         e,

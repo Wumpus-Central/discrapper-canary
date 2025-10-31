@@ -11,7 +11,7 @@ function a(e, n, t) {
         e
     );
 }
-t.d(n, { Z: () => r }),
+t.d(n, { Z: () => o }),
     t(410992),
     t(227481),
     t(730884),
@@ -28,7 +28,7 @@ t.d(n, { Z: () => r }),
     t(388685),
     t(259475),
     t(539854);
-class l {
+class r {
     appendBytes(e) {
         if (this._offset + e.length > this._buffer.length) {
             let n = this._offset + e.length,
@@ -49,16 +49,16 @@ class l {
             t = 27 + e.segments.length + n;
         if (t > 65307) throw Error("Page too large (size ".concat(t, " exceeds ").concat(65307, ")"));
         let a = this._offset,
-            l = 0;
+            r = 0;
         switch (e.pageType) {
             case 1:
-                l = 1;
+                r = 1;
                 break;
             case 2:
-                l = 2;
+                r = 2;
                 break;
             case 4:
-                l = 4;
+                r = 4;
         }
         this.appendBytes([
             79,
@@ -66,7 +66,7 @@ class l {
             103,
             83,
             0,
-            l,
+            r,
             255 & e.granulePosition,
             (e.granulePosition >> 8) & 255,
             (e.granulePosition >> 16) & 255,
@@ -84,13 +84,13 @@ class l {
             (this._pageSequenceNumber >> 16) & 255,
             (this._pageSequenceNumber >> 24) & 255,
         ]);
-        let r = this._offset;
+        let o = this._offset;
         for (let n of (this.appendBytes([0, 0, 0, 0, e.segments.length]),
         this.appendBytes(e.segments.map((e) => e.length)),
         e.segments))
             this.appendBytes(n);
-        let o = this._buffer.subarray(a, this._offset).reduce((e, n) => ((e << 8) >>> 0) ^ i[(e >>> 24) ^ n], 0) >>> 0;
-        this._buffer.set([255 & o, (o >> 8) & 255, (o >> 16) & 255, (o >> 24) & 255], r), this._pageSequenceNumber++;
+        let l = this._buffer.subarray(a, this._offset).reduce((e, n) => ((e << 8) >>> 0) ^ i[(e >>> 24) ^ n], 0) >>> 0;
+        this._buffer.set([255 & l, (l >> 8) & 255, (l >> 16) & 255, (l >> 24) & 255], o), this._pageSequenceNumber++;
     }
     finalize(e) {
         this.addPage({
@@ -108,7 +108,7 @@ class l {
         a(this, "_buffer", new Uint8Array(4096)), a(this, "_pageSequenceNumber", 0), a(this, "_offset", 0);
     }
 }
-function r(e, n) {
+function o(e, n) {
     let t = new Uint8Array([
             79,
             112,
@@ -131,14 +131,14 @@ function r(e, n) {
             n.channelMappingFamily,
         ]),
         a = new Uint8Array([79, 112, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0]),
-        r = new l();
-    r.addPage({
+        o = new r();
+    o.addPage({
         pageType: 2,
         granulePosition: 0,
         segments: [t],
     });
     let i = 0;
-    for (let n of (r.addPage({
+    for (let n of (o.addPage({
         pageType: 0,
         granulePosition: i,
         segments: [a],
@@ -148,20 +148,20 @@ function r(e, n) {
             let n = Math.floor(e.length / 255),
                 t = [];
             for (let a = 0; a <= n; a++) {
-                let l = 0 === a ? 0 : 255 * a,
-                    r = a === n ? e.length : (a + 1) * 255;
-                t.push(e.slice(l, r));
+                let r = 0 === a ? 0 : 255 * a,
+                    o = a === n ? e.length : (a + 1) * 255;
+                t.push(e.slice(r, o));
             }
             return t;
         })(n.buffer);
         (i += n.numSamples),
-            r.addPage({
+            o.addPage({
                 pageType: 0,
                 granulePosition: i,
                 segments: e,
             });
     }
-    return r.finalize(i);
+    return o.finalize(i);
 }
 let i = (function () {
     let e = new Uint32Array(256);

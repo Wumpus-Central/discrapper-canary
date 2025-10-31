@@ -1,8 +1,8 @@
 n.d(t, {
-    GB: () => O,
-    JI: () => N,
+    GB: () => S,
+    JI: () => y,
     UM: () => A,
-    V6: () => S,
+    V6: () => N,
     WT: () => b,
     X7: () => j,
     jq: () => C,
@@ -40,12 +40,12 @@ let x = 100,
     },
     j = (e) => null == e.channel && null == e.guild && null != e.inviter,
     I = (e) => e.state === p.r2o.ACCEPTED,
-    N = (e) => {
+    y = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
-    y = (e) =>
-        !N(e) &&
+    O = (e) =>
+        !y(e) &&
         (!!j(e) ||
             (null != e.inviter &&
                 !I(e) &&
@@ -54,7 +54,7 @@ let x = 100,
                     let n = E(e);
                     return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > x;
                 })(e))),
-    O = (e) => {
+    S = (e) => {
         let { guild: t, user: n, application: i } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
@@ -77,11 +77,11 @@ let x = 100,
                   })
                 : null;
     };
-function S(e) {
+function N(e) {
     var t;
     let { invite: n, textClassName: i, className: s } = e,
         a = E(n);
-    return null == a || y(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
+    return null == a || O(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
         ? null
         : (0, r.jsx)(o.EJ, {
               className: l()(_.activityCount, s),
@@ -99,7 +99,7 @@ function C(e) {
                     ? null
                     : v(t) && null != t.target_user
                       ? d.ZP.getUserAvatarURL(t.target_user)
-                      : y(t) && null != t.inviter
+                      : O(t) && null != t.inviter
                         ? d.ZP.getUserAvatarURL(t.inviter)
                         : null,
             [t, n],
@@ -117,7 +117,7 @@ function C(e) {
             ? (l = f.intl.formatToPlainString(f.t.x2L32Q, { username: t.target_user.username }))
             : I(t)
               ? (l = f.intl.string(f.t["FDsl+J"]))
-              : y(t) &&
+              : O(t) &&
                 null != t.inviter &&
                 (l = f.intl.format(f.t.spU2mI, { username: h.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)("div", {

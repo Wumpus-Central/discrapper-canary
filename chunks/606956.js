@@ -1,22 +1,22 @@
 n.d(t, { Z: () => c });
-var i,
-    r,
+var r,
+    i,
     l = n(442837),
     a = n(570140);
 let o = {};
-class s extends (r = l.ZP.Store) {
+class s extends (i = l.ZP.Store) {
     getFollowerStatsForChannel(e) {
         return o[e];
     }
 }
-(i = "displayName") in s
-    ? Object.defineProperty(s, i, {
+(r = "displayName") in s
+    ? Object.defineProperty(s, r, {
           value: "ChannelFollowerStatsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (s[i] = "ChannelFollowerStatsStore");
+    : (s[r] = "ChannelFollowerStatsStore");
 let c = new s(a.Z, {
     CONNECTION_OPEN: function () {
         o = {};

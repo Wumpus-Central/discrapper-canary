@@ -22,8 +22,8 @@ var i = n(647438),
     h = n(822245),
     v = n(471518),
     y = n(177653),
-    x = n(631827),
-    g = n(827498),
+    g = n(631827),
+    x = n(827498),
     b = n(783097),
     N = n(689079),
     j = n(761652);
@@ -53,7 +53,7 @@ function A(e) {
     let {
             commands: v,
             commandSectionMap: y,
-            loading: g,
+            loading: x,
         } = (function (e) {
             var t, n;
             let { context: l, includeBuiltIn: r = !0, allowFetch: a = !0 } = e,
@@ -148,7 +148,7 @@ function A(e) {
         O = i.useMemo(() => {
             var e, i, r, a, s, u;
             if (!o) return [];
-            return (0, x.N)(v, {
+            return (0, g.N)(v, {
                 limit: l,
                 filterPredicates: [
                     (function (e) {
@@ -300,7 +300,7 @@ function A(e) {
                         }),
                     );
             } else s && (u = A);
-            return (0, x.N)(u, {
+            return (0, g.N)(u, {
                 limit: a,
                 filterPredicates: [
                     (function (e) {
@@ -368,18 +368,18 @@ function A(e) {
         applicationResults: S,
         hasApplicationResults: L,
         isEmptyState: !T && !L,
-        loading: g && o,
+        loading: x && o,
     };
 }
 function _(e) {
     let { context: t, query: n, fetches: l = !0, pageLimit: r = 1 / 0, entrypoint: c } = e;
     n.startsWith("".concat(j.GI)) && (n = n.substring(1));
-    let u = c === g._b.VOICE,
+    let u = c === x._b.VOICE,
         d = "channel" === t.type ? t.channel.guild_id : void 0,
         [p, m] = i.useState(1),
         f = i.useRef(p);
     f.current = p;
-    let { fetchState: h, totalPages: x } = (0, s.cj)([y.Z], () => {
+    let { fetchState: h, totalPages: g } = (0, s.cj)([y.Z], () => {
             var e, t;
             return {
                 fetchState: y.Z.getFetchState({
@@ -444,11 +444,11 @@ function _(e) {
             h === y.M.FETCHED &&
                 e === f.current &&
                 e > 0 &&
-                e < x &&
+                e < g &&
                 e < r &&
                 b[e - 1].length > 0 &&
                 (f.current++, m((e) => e + 1));
-        }, [h, r, b, x]),
+        }, [h, r, b, g]),
         C = i.useCallback(
             (e) => {
                 let { query: t, page: n, guildId: i } = e;

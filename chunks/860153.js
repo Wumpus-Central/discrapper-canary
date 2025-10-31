@@ -1,43 +1,43 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => b });
 var i = n(951288),
-    r = n(647438),
-    l = n(120356),
-    a = n.n(l),
+    l = n(647438),
+    r = n(120356),
+    a = n.n(r),
     o = n(442837),
     s = n(481060),
-    c = n(700582),
-    u = n(372900),
+    u = n(700582),
+    c = n(372900),
     d = n(318713),
-    f = n(123145),
-    p = n(592125),
-    m = n(73249),
-    y = n(369171),
-    O = n(545093),
-    b = n(388032),
-    E = n(774846);
-let g = r.memo(function (e) {
+    p = n(123145),
+    m = n(592125),
+    y = n(73249),
+    f = n(369171),
+    E = n(545093),
+    O = n(388032),
+    h = n(774846);
+let S = l.memo(function (e) {
     let { message: t } = e,
-        n = (0, o.e7)([p.Z], () => p.Z.getChannel(t.channel_id));
+        n = (0, o.e7)([m.Z], () => m.Z.getChannel(t.channel_id));
     return null == n
         ? null
-        : (0, i.jsx)(y.ZP, {
+        : (0, i.jsx)(f.ZP, {
               children: (e) =>
-                  (0, i.jsxs)(u.Z.Provider, {
+                  (0, i.jsxs)(c.Z.Provider, {
                       value: n.guild_id,
                       children: [
-                          (0, i.jsx)(c.Z, {
+                          (0, i.jsx)(u.Z, {
                               user: t.author,
                               size: s.EFr.SIZE_40,
-                              className: a()(E.authorAvatar, e),
+                              className: a()(h.authorAvatar, e),
                           }),
                           (0, i.jsxs)("div", {
-                              className: a()(E.author, e),
+                              className: a()(h.author, e),
                               children: [
                                   (0, i.jsx)(s.Rny, {
                                       children: (0, i.jsx)("div", {
-                                          className: E.authorNameWrapper,
-                                          children: (0, i.jsx)(f.Z, {
-                                              className: E.authorName,
+                                          className: h.authorNameWrapper,
+                                          children: (0, i.jsx)(p.Z, {
+                                              className: h.authorName,
                                               message: t,
                                               channel: n,
                                           }),
@@ -45,7 +45,7 @@ let g = r.memo(function (e) {
                                   }),
                                   (0, i.jsx)(d.Z, {
                                       timestamp: t.timestamp,
-                                      className: E.timestamp,
+                                      className: h.timestamp,
                                       tooltipPosition: "bottom",
                                   }),
                               ],
@@ -54,26 +54,26 @@ let g = r.memo(function (e) {
                   }),
           });
 });
-function h(e) {
+function b(e) {
     var t;
-    let { item: n, hideMediaOptions: r, onClose: l } = e,
+    let { item: n, hideMediaOptions: l, onClose: r } = e,
         o = null == (t = n.sourceMetadata) ? void 0 : t.message;
     return (0, i.jsxs)("div", {
-        className: E.topBar,
+        className: h.topBar,
         children: [
-            null != o && (0, i.jsx)(g, { message: o }),
-            (0, i.jsx)(m.Z, {
+            null != o && (0, i.jsx)(S, { message: o }),
+            (0, i.jsx)(y.Z, {
                 item: n,
-                hideMediaOptions: r,
+                hideMediaOptions: l,
             }),
-            (0, i.jsx)(y.ZP, {
-                mode: y.lx.PINNED,
+            (0, i.jsx)(f.ZP, {
+                mode: f.lx.PINNED,
                 children: (e) =>
-                    (0, i.jsx)(O.Z, {
-                        onClick: l,
+                    (0, i.jsx)(E.Z, {
+                        onClick: r,
                         icon: s.Dio,
-                        tooltip: b.intl.string(b.t.cpT0Cq),
-                        className: a()(E.closeButton, e),
+                        tooltip: O.intl.string(O.t.cpT0Cq),
+                        className: a()(h.closeButton, e),
                     }),
             }),
         ],

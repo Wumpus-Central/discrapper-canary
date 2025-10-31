@@ -16,16 +16,16 @@ var r = n(951288),
     d = n(666743),
     p = n(112724),
     f = n(447269),
-    h = n(612226),
-    m = n(714338),
+    m = n(612226),
+    h = n(714338),
     g = n(663993),
-    _ = n(628123),
+    _ = n(248687),
     b = n(703656),
     E = n(108427),
     O = n(911314),
     I = n(429899),
-    v = n(843445),
-    y = n(981631),
+    y = n(843445),
+    v = n(981631),
     C = n(388032),
     S = n(430355);
 function T(e, t, n) {
@@ -46,26 +46,26 @@ let N = (0, g.Un)({
     webpackId: 496691,
 });
 function j(e) {
-    return e < v.x ? v.b.SMALL : v.b.LARGE;
+    return e < y.x ? y.b.SMALL : y.b.LARGE;
 }
 s.ZP.initialize();
 class P extends i.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
             (this.stopListeningToHistory = (0, b.s1)().listen((e) => {
-                e.pathname.startsWith(y.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
+                e.pathname.startsWith(v.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
-            m.Z.disable(),
-            m.Z.setLayout(f.r),
-            m.Z.enable(),
+            h.Z.disable(),
+            h.Z.setLayout(f.r),
+            h.Z.enable(),
             (0, E.e)("application_store");
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(),
-            m.Z.disable(),
-            m.Z.setLayout(h.oT),
-            m.Z.enable();
+            h.Z.disable(),
+            h.Z.setLayout(m.oT),
+            h.Z.enable();
     }
     renderCustomErrorMessage() {
         return (0, r.jsxs)("div", {
@@ -105,7 +105,7 @@ class P extends i.PureComponent {
                     { width: s } = this.props,
                     o = (0, l.parse)(a.search);
                 return (0, r.jsx)(u.Z, {
-                    page: y.ZY5.STORE_LISTING,
+                    page: v.ZY5.STORE_LISTING,
                     root: !0,
                     children: (0, r.jsx)(I.Z, {
                         skuId: t,
@@ -121,32 +121,32 @@ class P extends i.PureComponent {
                 (0, r.jsxs)(a.rs, {
                     children: [
                         (0, r.jsx)(a.AW, {
-                            path: y.Z5c.APPLICATION_STORE,
+                            path: v.Z5c.APPLICATION_STORE,
                             exact: !0,
                             render: () =>
                                 (0, r.jsx)(u.Z, {
-                                    page: y.ZY5.STORE_DIRECTORY_HOME,
+                                    page: v.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
                                     children: (0, r.jsx)(O.Z, {}),
                                 }),
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: y.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
+                            path: v.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
                             render: this.renderStoreListing,
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: y.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
+                            path: v.Z5c.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
                             render: this.renderStoreListing,
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: y.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+                            path: v.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
                             render: this.renderStoreListing,
                         }),
                         (0, r.jsx)(a.AW, {
-                            path: y.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId"),
+                            path: v.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId"),
                             render: this.renderStoreListing,
                         }),
-                        (0, r.jsx)(a.l_, { to: y.Z5c.APP }),
+                        (0, r.jsx)(a.l_, { to: v.Z5c.APP }),
                     ],
                 }),
             );

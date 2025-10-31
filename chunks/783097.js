@@ -6,19 +6,19 @@ n.d(t, {
     L1: () => z,
     Ow: () => K,
     PZ: () => q,
-    WA: () => j,
+    WA: () => k,
     Wx: () => P,
     XZ: () => Y,
     Y$: () => B,
     Yn: () => H,
     dF: () => U,
-    jD: () => L,
-    lf: () => k,
+    jD: () => x,
+    lf: () => j,
     pF: () => W,
     sl: () => Z,
     vJ: () => M,
     yJ: () => G,
-    ye: () => x,
+    ye: () => L,
 }),
     n(953529),
     n(997841),
@@ -128,10 +128,10 @@ function w(e) {
 function D(e) {
     return w(e) ? e.name : I.intl.string(I.t.UB2gG2);
 }
-function L(e) {
+function x(e) {
     return w(e) ? e.description : I.intl.string(I.t.X9fusn);
 }
-function x(e) {
+function L(e) {
     var t;
     return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
 }
@@ -139,11 +139,11 @@ function M(e) {
     var t;
     return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
-function k(e) {
+function j(e) {
     var t;
     return w(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
-function j(e) {
+function k(e) {
     let t = G(e),
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())],
         r = Date.now();
@@ -159,7 +159,7 @@ function j(e) {
     return o.ww.NONE;
 }
 function U(e) {
-    switch (j(e)) {
+    switch (k(e)) {
         case o.ww.NEW:
             return "New";
         case o.ww.UPDATED:
@@ -169,7 +169,7 @@ function U(e) {
     }
 }
 function G(e) {
-    return w(e) && x(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return w(e) && L(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function B(e) {
     let {
@@ -251,7 +251,7 @@ function Y(e) {
 function W(e) {
     let t = [];
     for (let n of e) {
-        let e = n.application_directory_collection_items.filter((e) => e.type === r.C.APPLICATION && x(e.application));
+        let e = n.application_directory_collection_items.filter((e) => e.type === r.C.APPLICATION && L(e.application));
         0 !== e.length && t.push(C(S({}, n), { application_directory_collection_items: e }));
     }
     return t;

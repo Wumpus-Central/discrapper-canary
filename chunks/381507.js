@@ -1,37 +1,37 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(780384),
-    a = n(481060),
-    l = n(410030),
-    o = n(518950),
-    s = n(51144),
+    l = n(481060),
+    a = n(410030),
+    s = n(518950),
+    o = n(51144),
     d = n(105759),
-    C = n(898969),
-    c = n(703614),
+    c = n(898969),
+    C = n(703614),
     u = n(268685),
     p = n(388032),
-    _ = n(908780);
-let h = () => {
+    h = n(908780);
+let m = () => {
     let e = (0, d.Z)(),
-        { avatarSrc: t, eventHandlers: n } = (0, o.Z)({
+        { avatarSrc: t, eventHandlers: n } = (0, s.Z)({
             userId: null == e ? void 0 : e.id,
             size: u.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        h = (0, l.Fg)(),
-        m = (0, i.ap)(h),
-        f = s.ZP.getName(e),
-        x = m ? C.Z : c.Z;
+        m = (0, a.Fg)(),
+        _ = (0, i.ap)(m),
+        f = o.ZP.getName(e),
+        x = _ ? c.Z : C.Z;
     return null == e
         ? null
         : (0, r.jsxs)("div", {
-              className: _.attributionBannerContainer,
+              className: h.attributionBannerContainer,
               children: [
                   (0, r.jsx)("div", {
-                      className: _.avatarContainer,
+                      className: h.avatarContainer,
                       children: (0, r.jsx)(
-                          a.qEK,
+                          l.qEK,
                           (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -66,12 +66,12 @@ let h = () => {
                           ),
                       ),
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(l.Text, {
                       variant: "text-xs/bold",
-                      className: _.bannerHeader,
+                      className: h.bannerHeader,
                       children: p.intl.format(p.t.oxhCOl, { userName: f }),
                   }),
-                  (0, r.jsx)(x, { className: _.bannerIcon }),
+                  (0, r.jsx)(x, { className: h.bannerIcon }),
               ],
           });
 };

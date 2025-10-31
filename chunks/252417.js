@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -9,27 +9,27 @@ var r = n(951288),
     u = n(956221),
     d = n(747017),
     p = n(140701),
-    f = n(545957),
-    h = n(158776),
+    h = n(545957),
+    f = n(158776),
     g = n(652853),
     m = n(981631),
     b = n(671955),
     _ = n(777267);
-let O = o.EFr.SIZE_40,
-    y = (0, o.pxk)(O);
-function j(e) {
-    let { user: t, status: j, guildId: v, channelId: x, onSelect: C } = e,
+let y = o.EFr.SIZE_40,
+    O = (0, o.pxk)(y);
+function v(e) {
+    let { user: t, status: v, guildId: j, channelId: C, onSelect: x } = e,
         { theme: E, themeType: S } = (0, g.z)(),
-        I = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, x), [t, x]),
-        { activities: P, isMobileOnline: N } = (0, l.cj)([h.Z], () => ({
-            activities: h.Z.getActivities(t.id),
-            isMobileOnline: h.Z.isMobileOnline(t.id),
+        I = i.useMemo(() => t.isNonUserBot() || (0, p.W)(t, C), [t, C]),
+        { activities: P, isMobileOnline: N } = (0, l.cj)([f.Z], () => ({
+            activities: f.Z.getActivities(t.id),
+            isMobileOnline: f.Z.isMobileOnline(t.id),
         })),
-        Z = (0, f.Z)(t.id),
-        { voiceActivityStatusEnabled: T } = (0, c.a)({ location: "UserProfileMutualFriendRow" }),
-        { voiceChannel: w } = (0, u.Z)({
-            userId: T ? t.id : void 0,
-            guildId: v,
+        Z = (0, h.Z)(t.id),
+        { voiceActivityStatusEnabled: w } = (0, c.a)({ location: "UserProfileMutualFriendRow" }),
+        { voiceChannel: T } = (0, u.Z)({
+            userId: w ? t.id : void 0,
+            guildId: j,
         });
     return (0, r.jsxs)(o.P3F, {
         focusProps:
@@ -43,7 +43,7 @@ function j(e) {
                   }
                 : { offset: { right: 8 } },
         className: _.row,
-        onClick: C,
+        onClick: x,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(n.bind(n, 881351));
@@ -96,10 +96,10 @@ function j(e) {
         },
         children: [
             (0, r.jsx)(o.qEK, {
-                src: t.getAvatarURL(v, y),
+                src: t.getAvatarURL(j, O),
                 "aria-label": t.username,
-                size: O,
-                status: I ? m.Skl.UNKNOWN : j,
+                size: y,
+                status: I ? m.Skl.UNKNOWN : v,
                 statusBackdropColor: I ? void 0 : (0, o.QFD)(E),
                 isMobile: N,
                 className: _.avatar,
@@ -116,7 +116,7 @@ function j(e) {
                         user: t,
                         activities: P,
                         applicationStream: Z,
-                        voiceChannel: w,
+                        voiceChannel: T,
                     }),
                 ],
             }),

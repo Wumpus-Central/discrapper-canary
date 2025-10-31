@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,10 +85,10 @@ function M(e) {
             onClose: n,
             onComplete: a,
             onStepChange: w,
-            transitionState: L,
+            transitionState: x,
             loadId: M,
-            skuId: k,
-            isGift: j = !1,
+            skuId: j,
+            isGift: k = !1,
             giftRecipient: U,
             giftMessage: G,
             giftingOrigin: B,
@@ -103,14 +103,14 @@ function M(e) {
             () =>
                 (0, C.UY)({
                     purchaseType: N.o8.FIAT,
-                    skuId: k,
+                    skuId: j,
                 }),
-            [k],
+            [j],
         ),
         X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
-        Q = null != k ? [k] : X,
+        Q = null != j ? [j] : X,
         J = null != (t = Q[0]) ? t : null,
-        $ = null != k && p.Rm.has(k),
+        $ = null != j && p.Rm.has(j),
         ee = i.useCallback(() => {
             z(!0), null == a || a();
         }, [a]),
@@ -126,7 +126,7 @@ function M(e) {
             [n],
         ),
         en = (e, t, n) =>
-            j
+            k
                 ? (0, r.jsx)(O.Z, {
                       step: n,
                       onClose: () => t(!1),
@@ -139,7 +139,7 @@ function M(e) {
         er = i.useMemo(
             () => [
                 y.WA,
-                ...(j ? [T.Dd] : []),
+                ...(k ? [T.Dd] : []),
                 v.n,
                 ...y.yp,
                 y.wo,
@@ -148,7 +148,7 @@ function M(e) {
                     renderStep: (e) =>
                         (0, r.jsx)(
                             I.x,
-                            x(D({}, e), {
+                            L(D({}, e), {
                                 confettiCanvas: Y,
                                 analyticsLocations: V,
                                 hideConfetti: null != q,
@@ -160,7 +160,7 @@ function M(e) {
                     },
                 },
             ],
-            [V, Y, q, j],
+            [V, Y, q, k],
         );
     return (0, r.jsxs)(d.Gt, {
         value: V,
@@ -179,13 +179,13 @@ function M(e) {
                 stepConfigs: er,
                 applicationId: A.XAJ,
                 skuIDs: Q,
-                isGift: j,
+                isGift: k,
                 activeSubscription: null,
                 purchaseType: R.GZ.ONE_TIME,
                 excludeSubscriptionPlansBySKU: !0,
                 children: (0, r.jsx)(E.c1, {
                     children: (0, r.jsx)(h.KB, {
-                        isGift: j,
+                        isGift: k,
                         giftRecipient: U,
                         giftMessage: G,
                         giftingOrigin: B,
@@ -196,7 +196,7 @@ function M(e) {
                             skuId: J,
                             initialPlanId: null,
                             analyticsLocations: V,
-                            transitionState: L,
+                            transitionState: x,
                             renderHeader: en,
                             returnRef: F,
                             onStepChange: w,

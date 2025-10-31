@@ -12,7 +12,7 @@ var r = n(951288),
     f = n(6809),
     m = n(231338),
     h = n(388032),
-    g = n(747277);
+    g = n(982538);
 let _ = function (e) {
     var t, n, _;
     let { questId: b, setQuestId: E, quest: O, refreshQuest: I } = e,

@@ -138,7 +138,7 @@ function I(e) {
         M = i.useCallback(() => {
             null !== w.current && w.current.pause(), null == N || N();
         }, [N]),
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             null !== w.current && w.current.pause();
             let e = x();
             (0, l.K)({
@@ -150,7 +150,7 @@ function I(e) {
                 null == N || N(),
                 null == C || C();
         }, [x, C, N]),
-        j = D
+        k = D
             ? (0, r.jsx)(a.zsu, {
                   type: "image",
                   src: b,
@@ -176,7 +176,7 @@ function I(e) {
                                   playing: !1,
                                   size: "sm",
                                   "aria-label": h.intl.string(p.default.YpT3kk),
-                                  onClick: k,
+                                  onClick: j,
                               }),
                           }),
                   ],
@@ -193,7 +193,7 @@ function I(e) {
                     (0, r.jsx)(d.$, { caretConfig: T }),
                     (0, r.jsx)("div", {
                         className: m.assetContainer,
-                        children: j,
+                        children: k,
                     }),
                     (0, r.jsx)(f.Y, {
                         title: t,

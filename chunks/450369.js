@@ -20,9 +20,9 @@ var r = n(951288),
     _ = n(258609),
     y = n(569545),
     x = n(102172),
-    v = n(728285),
+    O = n(728285),
     j = n(352978),
-    O = n(880395),
+    v = n(880395),
     C = n(670188),
     I = n(199902),
     S = n(314897),
@@ -146,8 +146,8 @@ let k = 16 / 9,
                 popoutType: h,
             } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
-            { id: g, blocked: b, ignored: v } = t,
-            O = (0, o.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
+            { id: g, blocked: b, ignored: O } = t,
+            v = (0, o.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
             { selectedParticipant: C, largeStream: S } = (0, o.cj)([m.Z], () => ({
                 selectedParticipant: null != l ? m.Z.getSelectedParticipant(l.id) : null,
                 largeStream: null != l && m.Z.getStageStreamSize(l.id),
@@ -156,7 +156,7 @@ let k = 16 / 9,
                 (e, t) => {
                     if (
                         e.type === A.fO.STREAM &&
-                        0 === O.filter((t) => (0, y.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
+                        0 === v.filter((t) => (0, y.V9)(t) === e.id && t.state !== w.jm8.ENDED).length
                     ) {
                         if (!(0, x.p9)(l, P.Z, E.Z, Z.Z, _.default)[0]) return;
                         (0, p.rn)((0, y.my)(e.id), { forceMultiple: t.shiftKey });
@@ -167,7 +167,7 @@ let k = 16 / 9,
                             : d.Z.updateStageStreamSize(l.id, !0)
                         : (d.Z.updateStageStreamSize(l.id, !1), d.Z.selectParticipant(l.id, e.id));
                 },
-                [O, l, C, S],
+                [v, l, C, S],
             );
         return (0, r.jsx)(
             N.Z,
@@ -176,7 +176,7 @@ let k = 16 / 9,
                 aspectRatio: k,
                 fit: n.type === A.fO.USER ? j.L.COVER : void 0,
                 blocked: b,
-                ignored: v,
+                ignored: O,
                 channel: l,
                 className: D.tile,
                 inCall: !0,
@@ -194,7 +194,7 @@ let k = 16 / 9,
         var t;
         let { participant: i, channel: l, width: c, popoutType: d } = e,
             { newestAnalyticsLocation: p } = (0, f.ZP)(h.Z.STAGE_TILE),
-            _ = (0, v.bp)(),
+            _ = (0, O.bp)(),
             y = l.getGuildId(),
             x = S.default.getId();
         a()(null != y, "Channel cannot be guildless");
@@ -243,7 +243,7 @@ let k = 16 / 9,
                     case A.fO.USER:
                     default:
                         if ((E(A.TH.USER), i))
-                            return (0, O.D)(t, j, l, { context: _ }, (e, t) =>
+                            return (0, v.D)(t, j, l, { context: _ }, (e, t) =>
                                 (0, b.o)({
                                     menuName: e,
                                     menuItemProps: t,

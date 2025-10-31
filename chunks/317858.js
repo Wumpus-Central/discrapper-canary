@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(647438),
     i = n(166516),
     l = n.n(i),
@@ -10,15 +10,15 @@ var r = n(647438),
     d = n(888369),
     p = n(292959),
     f = n(699516),
-    h = n(340895),
-    m = n(358085),
+    m = n(340895),
+    h = n(358085),
     g = n(998502),
     _ = n(252618),
     b = n(981631),
     E = n(388032);
 let O = new Set(["Blink", "Gecko", "WebKit"]),
     I = b.dG4;
-if (m.isPlatformEmbedded) I = (e) => g.ZP.setBadge(e);
+if (h.isPlatformEmbedded) I = (e) => g.ZP.setBadge(e);
 else if (O.has(s().layout)) {
     let e = new (l())({ animation: "none" });
     I = (t) => {
@@ -27,8 +27,8 @@ else if (O.has(s().layout)) {
         } catch (e) {}
     };
 }
-function v() {
-    let e = (0, o.e7)([h.Z], () => h.Z.hasIncomingCalls()),
+function y() {
+    let e = (0, o.e7)([m.Z], () => m.Z.hasIncomingCalls()),
         t = (0, o.e7)([d.default, f.Z, p.Z, c.Z], () => {
             let e = d.default.getTotalMentionCount(),
                 t = (0, u.m$)([f.Z, c.Z]),

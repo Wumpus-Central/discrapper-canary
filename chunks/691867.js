@@ -1,30 +1,30 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(442837),
-    i = n(481060),
-    o = n(581612),
-    s = n(91311),
+    r = n(481060),
+    s = n(581612),
+    o = n(91311),
     c = n(685960);
 function d() {
-    let e = (0, l.e7)([s.Z], () => s.Z.allWithDescriptions(), [], l.pF),
-        t = r.useMemo(
+    let e = (0, l.e7)([o.Z], () => o.Z.allWithDescriptions(), [], l.pF),
+        t = i.useMemo(
             () =>
                 e.map((e) => {
-                    let [t, n, r] = e;
+                    let [t, n, i] = e;
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(
-                                i.rsf,
+                                r.rsf,
                                 {
-                                    label: r,
+                                    label: i,
                                     description: t,
                                     checked: n,
-                                    onChange: (e) => (0, o.Z)(t, e),
+                                    onChange: (e) => (0, s.Z)(t, e),
                                 },
                                 t,
                             ),
-                            (0, a.jsx)(i.izJ, { gap: 16 }),
+                            (0, a.jsx)(r.izJ, { gap: 16 }),
                         ],
                     });
                 }),
@@ -36,10 +36,10 @@ function d() {
             (0, a.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: c.button,
-                children: (0, a.jsx)(i.Button, {
+                children: (0, a.jsx)(r.Button, {
                     variant: "primary",
                     text: "Clear all",
-                    onClick: o.q,
+                    onClick: s.q,
                     fullWidth: !0,
                 }),
             }),

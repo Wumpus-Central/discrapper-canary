@@ -1,4 +1,4 @@
-n.d(t, { U: () => m });
+n.d(t, { U: () => _ });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -8,19 +8,19 @@ var r = n(951288),
     c = n(410030),
     u = n(566697),
     d = n(876917),
-    g = n(328456),
-    p = n(619899),
+    p = n(328456),
+    g = n(619899),
     f = n(616066),
     h = n(689157),
     C = n(63243),
-    _ = n(244488);
-let m = l.memo(function (e) {
+    m = n(244488);
+let _ = l.memo(function (e) {
     let { product: t, isPurchased: n, isHighlighted: l, user: i } = e,
-        { firstProfileEffect: m, firstAvatarDecoration: b, firstNameplate: v } = (0, g.Rj)(t),
-        E = (0, p.O1)(b),
+        { firstProfileEffect: _, firstAvatarDecoration: b, firstNameplate: v } = (0, p.Rj)(t),
+        E = (0, g.O1)(b),
         x = (0, c.ZP)(),
         O = (0, a.ap)(x),
-        S = null != v && null != b && null != m,
+        S = null != v && null != b && null != _,
         y = S ? o.EFr.SIZE_80 : o.EFr.SIZE_96;
     return (0, r.jsxs)("div", {
         className: s()(h.container, {
@@ -28,12 +28,12 @@ let m = l.memo(function (e) {
             [h.threeItemBundle]: S,
         }),
         children: [
-            null != m &&
+            null != _ &&
                 (0, r.jsx)("div", {
                     className: h.profileEffectShopPreview,
                     children: (0, r.jsx)(d.Z, {
                         isHighlighted: l,
-                        skuId: m.skuId,
+                        skuId: _.skuId,
                         isPurchased: n,
                         removeSetHeight: !0,
                     }),
@@ -47,7 +47,7 @@ let m = l.memo(function (e) {
                         avatarSize: y,
                         isPurchased: n,
                         isHighlighted: l,
-                        avatarPlaceholderSrc: O ? _ : C,
+                        avatarPlaceholderSrc: O ? m : C,
                         className: h.avatar,
                     }),
                 }),

@@ -10,25 +10,25 @@ var r = n(951288),
     d = n(79712),
     p = n(892001),
     f = n(594174),
-    h = n(51144),
-    m = n(743056),
+    m = n(51144),
+    h = n(743056),
     g = n(321488),
     _ = n(417183),
     b = n(170245),
     E = n(981631),
     O = n(388032),
     I = n(507694);
-function v(e) {
+function y(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
         u = (null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
-        { acceptFriendRequest: d, cancelFriendRequest: p } = (0, m.u)({
+        { acceptFriendRequest: d, cancelFriendRequest: p } = (0, h.u)({
             userId: n.id,
             applicationId: l,
             isGameRelationship: o,
             location: "Friends",
         }),
-        h = i.useCallback(
+        m = i.useCallback(
             (e) => {
                 e.stopPropagation(), d();
             },
@@ -54,7 +54,7 @@ function v(e) {
                 icon: s.dz2,
                 actionType: g.Z.ActionTypes.ACCEPT,
                 tooltip: O.intl.string(O.t.Zcibdf),
-                onClick: h,
+                onClick: m,
                 shouldHighlight: c,
             }),
             (0, r.jsx)(g.Z, {
@@ -67,9 +67,9 @@ function v(e) {
         ],
     });
 }
-function y(e) {
+function v(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
-        { cancelFriendRequest: o } = (0, m.u)({
+        { cancelFriendRequest: o } = (0, h.u)({
             userId: t,
             applicationId: n,
             isGameRelationship: l,
@@ -126,7 +126,7 @@ function C(e) {
 }
 function S(e) {
     let { user: t, hovered: n, status: i, isGameRelationship: l, applicationId: a } = e,
-        s = h.ZP.useUserTag(t);
+        s = m.ZP.useUserTag(t);
     return (0, r.jsx)(b.Z, {
         user: t,
         hovered: n,
@@ -171,13 +171,13 @@ function T(e) {
                         className: I.actions,
                         children:
                             n === E.OGo.PENDING_INCOMING
-                                ? (0, r.jsx)(v, {
+                                ? (0, r.jsx)(y, {
                                       user: t,
                                       applicationId: s,
                                       isGameRelationship: c,
                                       active: e,
                                   })
-                                : (0, r.jsx)(y, {
+                                : (0, r.jsx)(v, {
                                       userId: t.id,
                                       applicationId: s,
                                       isGameRelationship: c,

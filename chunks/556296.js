@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     Ek: () => D,
-    I1: () => j,
+    I1: () => k,
     ZP: () => ev,
 }),
     n(388685),
@@ -28,8 +28,8 @@ var i,
     O = n(808506),
     v = n(981631),
     I = n(356659),
-    S = n(710111),
-    T = n(295907),
+    T = n(710111),
+    S = n(295907),
     A = n(444675);
 function C(e, t, n) {
     return (
@@ -92,17 +92,17 @@ let w = new f.Z("KeybindsStore"),
         managed: !0,
         params: {},
     };
-function L() {
+function x() {
     var e;
     let t = null != (e = (0, b.pz)(!1).get("Backquote")) ? e : "`";
     return "+" === t ? (t = "plus") : 0 === t.length && (t = "`"), "shift+".concat(t);
 }
-let x = "1001",
+let L = "1001",
     M = 10,
-    k = function (e) {
+    j = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return {
-            id: x,
+            id: L,
             action: v.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
             shortcut: e,
             enabled: t,
@@ -110,7 +110,7 @@ let x = "1001",
             params: {},
         };
     },
-    j = (e) => {
+    k = (e) => {
         let t = (0, y.UR)("shift");
         return null != t && (1 !== e.length || e[0][1] !== t);
     },
@@ -130,7 +130,7 @@ let x = "1001",
                     keyCombo: t,
                     combo: n,
                     layoutMapBacktick: o,
-                    env: T.Cg[(0, y.dU)()],
+                    env: S.Cg[(0, y.dU)()],
                     backtickEventShape: (0, b.T_)("`"),
                     backquoteKeyShape: (0, b.T_)(null != o ? o : "`"),
                     nativeBackquoteKeyShape: (0, b.T_)(null != s ? s : "`"),
@@ -144,19 +144,19 @@ function G(e) {
     let n = (0, y.Kd)(e),
         r = (0, b.T_)("`"),
         i = null != (t = null == r ? void 0 : r.keyCode) ? t : (0, y.UR)("`");
-    return j(n)
+    return k(n)
         ? n
         : null == i
           ? (U("Unable to get backtick code for overlay default keybind", e, n, { rawBacktickShape: r }), null)
           : (U("Default overlay keybind is unsupported", e, n, { rawBacktickCode: i }),
-            [...n, [T.Mo.KEYBOARD_KEY, i, (0, y.dU)()]]);
+            [...n, [S.Mo.KEYBOARD_KEY, i, (0, y.dU)()]]);
 }
 let B = () => {
-        let e = L();
+        let e = x();
         "shift" === e && (U("Default overlay keybind is only shift", e, null), (e = "shift+`"));
         let t = G(e);
-        if (null == t) return k([], !1);
-        if (j(t)) return k(t, !0);
+        if (null == t) return j([], !1);
+        if (k(t)) return j(t, !0);
         let n = (0, y.UR)("shift"),
             r = (0, b.T_)("`");
         return (
@@ -165,7 +165,7 @@ let B = () => {
                 : null == n
                   ? U("Unable to get shift code", e, t, { shiftCode: n })
                   : null == r && U("Unable to get backtick code", e, t),
-            k(t, !1)
+            j(t, !1)
         );
     },
     Z = {},
@@ -475,14 +475,14 @@ let eg = [
         );
     },
     function () {
-        return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, L());
+        return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, x());
     },
     function () {
         return !!O.default.getAnyGlobalEnabledOverlay() && eh(v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`");
     },
     function () {
         let e = em(v.kg4.SOUNDBOARD_HOLD);
-        return eh(v.kg4.SOUNDBOARD_HOLD, S.D_, !1) || e;
+        return eh(v.kg4.SOUNDBOARD_HOLD, T.D_, !1) || e;
     },
     function () {
         return eh(v.kg4.SAVE_CLIP, I.Fv);

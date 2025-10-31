@@ -36,14 +36,14 @@ function N(e) {
             user: t,
             analyticsLocations: w,
         }),
-        L = (0, m.Z)({
+        x = (0, m.Z)({
             userId: t.id,
             onAction: D,
         }),
-        x = (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild_id)),
+        L = (0, o.e7)([f.Z], () => f.Z.getGuild(i.guild_id)),
         M = (0, p.Z)(i),
-        k = (0, d.ZP)(i),
-        { channelStatusEnabled: j } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
+        j = (0, d.ZP)(i),
+        { channelStatusEnabled: k } = (0, _.D)({ location: "UserProfileVoiceActivityCard" }),
         U = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbX"]) : A.intl.string(A.t.xOVEjc);
@@ -70,11 +70,11 @@ function N(e) {
     return (0, r.jsx)(u.Gt, {
         value: w,
         children: (0, r.jsxs)(E.Z, {
-            ref: L,
+            ref: x,
             className: a()(C.card, N),
             onAction: D,
             onClose: R,
-            "aria-label": "".concat(B, ", ").concat(k),
+            "aria-label": "".concat(B, ", ").concat(j),
             children: [
                 (0, r.jsx)(b.Z, {
                     text: B,
@@ -99,11 +99,11 @@ function N(e) {
                                 children: [
                                     (0, r.jsx)(y.Z, {
                                         channel: i,
-                                        guild: x,
+                                        guild: L,
                                         onAction: D,
                                         onClose: R,
                                     }),
-                                    j &&
+                                    k &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(v.Z, {
                                             voiceChannel: i,

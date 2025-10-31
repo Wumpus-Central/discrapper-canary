@@ -12,9 +12,9 @@ var n = r(951288),
     m = r(51144),
     p = r(594914),
     O = r(848118),
-    b = r(981631),
-    g = r(388032),
-    h = r(63602);
+    g = r(981631),
+    h = r(388032),
+    b = r(63602);
 function I(e) {
     var t,
         r,
@@ -40,37 +40,37 @@ function I(e) {
             }
             return i;
         })(e, ["profileOwner", "showIcons"]);
-    let { item: v, isOwner: y } = P,
-        w = v.sku,
-        S = w.applicationId,
+    let { item: v, isOwner: w } = P,
+        y = v.sku,
+        S = y.applicationId,
         x = (0, o.q)(S),
         k = i.useRef(null),
         [E] = (0, l.Wu)([f.Z], () => [f.Z.hasSentGift(v.skuId, I.id)], [v.skuId, I.id]),
         N = v.skuName,
-        C = y ? g.intl.string(g.t.FdGl5A) : g.intl.string(g.t.ilhtIa),
-        T = y ? void 0 : a.OgN,
+        C = w ? h.intl.string(h.t.FdGl5A) : h.intl.string(h.t.ilhtIa),
+        T = w ? void 0 : a.OgN,
         L = i.useCallback(() => {
-            if (y && (null == x ? void 0 : x.guildId) != null)
-                (0, u.closeUserProfileModal)(), (0, c.uL)(b.Z5c.CHANNELS_GAME_SHOP(x.guildId, 0, v.skuId, w.slug));
+            if (w && (null == x ? void 0 : x.guildId) != null)
+                (0, u.closeUserProfileModal)(), (0, c.uL)(g.Z5c.CHANNELS_GAME_SHOP(x.guildId, 0, v.skuId, y.slug));
             else {
                 if (E) return;
-                (0, p.P)(w, { isGift: !0 });
+                (0, p.P)(y, { isGift: !0 });
             }
-        }, [y, null == x ? void 0 : x.guildId, v.skuId, w, E]),
+        }, [w, null == x ? void 0 : x.guildId, v.skuId, y, E]),
         Z = i.useCallback(
             () =>
                 j
                     ? (0, n.jsx)("div", {
-                          className: h.itemIcon,
+                          className: b.itemIcon,
                           children: (0, n.jsx)(s.u, {
-                              text: g.intl.formatToPlainString(g.t.p3RmJF, { username: m.ZP.getName(I) }),
+                              text: h.intl.formatToPlainString(h.t.p3RmJF, { username: m.ZP.getName(I) }),
                               position: "top",
                               children: (0, n.jsx)(a.h_8, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  colorClass: h.itemIconHeart,
+                                  colorClass: b.itemIconHeart,
                               }),
                           }),
                       })
@@ -81,12 +81,12 @@ function I(e) {
             () =>
                 (0, n.jsx)(O.A, {
                     shape: "custom",
-                    containerClassName: h.card,
-                    backgroundImageClassName: h.cardBackgroundImage,
-                    foregroundImageClassName: h.cardImage,
-                    sku: w,
+                    containerClassName: b.card,
+                    backgroundImageClassName: b.cardBackgroundImage,
+                    foregroundImageClassName: b.cardImage,
+                    sku: y,
                 }),
-            [w],
+            [y],
         );
     return (0, n.jsx)(
         d.Z,

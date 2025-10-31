@@ -127,12 +127,12 @@ function R(e) {
             role: P,
             hideSearch: w,
             showDivider: D,
-            disableDoubleClick: L,
+            disableDoubleClick: x,
         } = e,
-        x = null == s || (0, y.AB)(s) ? null : s,
-        M = (0, a.e7)([h.Z], () => h.Z.isInChannel(x) || !1),
-        k = (0, a.e7)([c.Z], () => null != x && c.Z.getParticipantsListOpen(x)),
-        { enabled: j, inInbox: U } = d.Z.useExperiment({ location: "HeaderBar" }),
+        L = null == s || (0, y.AB)(s) ? null : s,
+        M = (0, a.e7)([h.Z], () => h.Z.isInChannel(L) || !1),
+        j = (0, a.e7)([c.Z], () => null != L && c.Z.getParticipantsListOpen(L)),
+        { enabled: k, inInbox: U } = d.Z.useExperiment({ location: "HeaderBar" }),
         { hasParticipantsPanel: G } = (0, u.Z)({ location: "HeaderBar" });
     function B() {
         if (null == T) return null;
@@ -154,17 +154,17 @@ function R(e) {
                             )
                           : null,
                       D && (0, r.jsx)(E.ZP.Divider, {}),
-                      j && !U ? (0, r.jsx)(f.Z, {}) : null,
+                      k && !U ? (0, r.jsx)(f.Z, {}) : null,
                       G &&
                           M &&
-                          null != x &&
-                          !k &&
+                          null != L &&
+                          !j &&
                           l === b.d4z.GROUP_DM &&
                           (0, r.jsxs)("div", {
                               className: O.controlButtonWrapper,
                               children: [
                                   (0, r.jsx)(E.ZP.Divider, {}),
-                                  (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(x, !k) }),
+                                  (0, r.jsx)(p.Z, { onClick: () => o.Z.toggleParticipantsList(L, !j) }),
                               ],
                           }),
                   ],
@@ -176,7 +176,7 @@ function R(e) {
         toolbar: B(),
         transparent: v,
         hidden: I,
-        onDoubleClick: () => N(L),
+        onDoubleClick: () => N(x),
         "aria-label": A,
         "aria-labelledby": C,
         role: P,

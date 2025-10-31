@@ -6,8 +6,8 @@ n.d(t, {
     Dd: () => N,
     Ft: () => D,
     TK: () => B,
-    X0: () => k,
-    XA: () => j,
+    X0: () => j,
+    XA: () => k,
     Z8: () => v,
     bD: () => P,
     nG: () => A,
@@ -348,7 +348,7 @@ function M(e) {
         else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
         else return p.ub.APP;
 }
-function k(e, t) {
+function j(e, t) {
     var n, r;
     return {
         type: p.Qi.APPLICATION,
@@ -359,7 +359,7 @@ function k(e, t) {
         isUserApp: null != t && t,
     };
 }
-function j(e) {
+function k(e) {
     let t = e.id,
         n = e.options,
         r = null == n ? void 0 : n.find((e) => e.type === u.jw.SUB_COMMAND_GROUP);

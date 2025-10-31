@@ -45,24 +45,24 @@ function w(e, t, n) {
     );
 }
 let D = 3000,
-    L = 800,
-    x = {};
+    x = 800,
+    L = {};
 function M(e) {
     return "".concat(e.channel_id, ":").concat(e.id);
 }
-function k() {
-    Object.values(x).forEach((e) => {
+function j() {
+    Object.values(L).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (x = {});
+        (L = {});
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = M(e);
-    if (null != x[n]) {
-        let { timeout: r, setAt: i } = x[n];
-        return U(e, t, i), clearTimeout(r), delete x[n], !0;
+    if (null != L[n]) {
+        let { timeout: r, setAt: i } = L[n];
+        return U(e, t, i), clearTimeout(r), delete L[n], !0;
     }
     return !1;
 }
@@ -95,7 +95,7 @@ function U(e, t, n) {
     (0, I.OP)(n, t);
 }
 function G(e) {
-    if (j(e, I.Pq.TIMEOUT)) {
+    if (k(e, I.Pq.TIMEOUT)) {
         let t = m.Z.getMessage(e.channel_id, e.id);
         if (null != t) {
             let { attachmentIds: n, embedIds: r } = (0, A.DQ)(t);
@@ -123,16 +123,16 @@ let B = (e, t) => {
     }
 };
 function Z(e) {
-    return null == x[M(e)];
+    return null == L[M(e)];
 }
 function F(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
         i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, A.MD)(e)).filter(Z) : e.filter(Z);
     i.forEach((e) => {
         let t = M(e);
-        null == x[t] &&
+        null == L[t] &&
             (d.Z.increment({ name: s.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
-            (x[t] = {
+            (L[t] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     G(e);
@@ -143,10 +143,10 @@ function F(e, t) {
     r
         ? setTimeout(() => {
               B(
-                  i.filter((e) => null != x[M(e)]),
+                  i.filter((e) => null != L[M(e)]),
                   a,
               );
-          }, Math.random() * L)
+          }, Math.random() * x)
         : B(i, a);
 }
 function V(e) {
@@ -414,7 +414,7 @@ function z(e) {
                 : null == (i = f.Z.getMessage(s.channel_id, s.id))
                   ? void 0
                   : i.message;
-        null == e || (0, A.MD)((0, u.wi)(e, s)) || j(e, I.Pq.UPDATE);
+        null == e || (0, A.MD)((0, u.wi)(e, s)) || k(e, I.Pq.UPDATE);
     }
     let l = g.Z.getChannelId(),
         c = p.ZP.getCurrentSidebarChannelId(l);
@@ -504,7 +504,7 @@ class eo extends c.Z {
                 SIDEBAR_VIEW_CHANNEL: et,
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
-                LOGOUT: k,
+                LOGOUT: j,
                 SEARCH_MESSAGES_SUCCESS: Q,
                 MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Q,
                 CHANNEL_SELECT: en,

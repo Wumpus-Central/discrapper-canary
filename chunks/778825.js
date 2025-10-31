@@ -59,11 +59,11 @@ function D(e) {
     let { bio: t } = e;
     l = t;
 }
-function L(e) {
+function x(e) {
     let { pronouns: t } = e;
     c = t;
 }
-function x(e) {
+function L(e) {
     let { nickname: t } = e;
     u = t;
 }
@@ -71,11 +71,11 @@ function M(e) {
     let { themeColors: t } = e;
     d = t;
 }
-function k(e) {
+function j(e) {
     let { nameplate: t } = e;
     a = t;
 }
-function j(e) {
+function k(e) {
     let { displayNameStyles: t } = e;
     f = t;
 }
@@ -182,13 +182,13 @@ let H = new V(g.Z, {
     USER_PROFILE_UPDATE_FAILURE: C,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: N,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: R,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: j,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: k,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: k,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: j,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT: P,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: w,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: D,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: L,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: x,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: x,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: M,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: G,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: B,

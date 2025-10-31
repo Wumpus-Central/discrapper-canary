@@ -1,10 +1,10 @@
 n.d(t, { Z: () => p });
 var a = n(951288),
-    r = n(647438),
+    i = n(647438),
     l = n(371286),
-    i = n(785717),
-    o = n(836197),
-    s = n(299560),
+    r = n(785717),
+    s = n(836197),
+    o = n(299560),
     c = n(247397),
     d = n(921944),
     u = n(388032),
@@ -17,26 +17,26 @@ function p(e) {
             if (null == e) return {};
             var n,
                 a,
-                r = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         a,
-                        r = {},
+                        i = {},
                         l = Object.keys(e);
-                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
                 for (a = 0; a < l.length; a++)
                     (n = l[a]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
-    let { trackUserProfileEditAction: g } = (0, i.KZ)(),
-        f = c.rR.filter((e) => o.Ki.includes(e)),
-        b = r.useCallback(() => {
+    let { trackUserProfileEditAction: g } = (0, r.KZ)(),
+        f = c.rR.filter((e) => s.Ki.includes(e)),
+        b = i.useCallback(() => {
             h(d.L.TAKE_ACTION), g({ action: "PRESS_ADD_WIDGET" }), p();
         }, [p, h, g]);
     return (0, a.jsx)(
@@ -80,7 +80,7 @@ function p(e) {
                     className: m.options,
                     children: f.map((e) =>
                         (0, a.jsx)(
-                            s.Z,
+                            o.Z,
                             {
                                 widgetType: e,
                                 size: "medium",

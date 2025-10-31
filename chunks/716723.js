@@ -37,11 +37,11 @@ function E(e, t, n) {
         P = A["aria-labelledby"] || A.id,
         { locale: w } = (0, h.j)(),
         D = t.formatValue(w, { month: "long" }),
-        L = D ? O.format("selectedDateDescription", { date: D }) : "",
-        x = (0, l.P)(L),
-        M = [x["aria-describedby"], A["aria-describedby"]].filter(Boolean).join(" ") || void 0,
-        k = (0, c.z)(e),
-        j = (0, m.useMemo)(() => (0, o.E7)(n), [n]),
+        x = D ? O.format("selectedDateDescription", { date: D }) : "",
+        L = (0, l.P)(x),
+        M = [L["aria-describedby"], A["aria-describedby"]].filter(Boolean).join(" ") || void 0,
+        j = (0, c.z)(e),
+        k = (0, m.useMemo)(() => (0, o.E7)(n), [n]),
         U = (0, m.useRef)(!1),
         { focusWithinProps: G } = (0, _.L)({
             ...e,
@@ -65,7 +65,7 @@ function E(e, t, n) {
             },
         });
     return {
-        groupProps: (0, u.d)(k, R, A, x, G, {
+        groupProps: (0, u.d)(j, R, A, L, G, {
             role: "group",
             "aria-disabled": e.isDisabled || null,
             "aria-labelledby": P,
@@ -80,7 +80,7 @@ function E(e, t, n) {
         labelProps: {
             ...S,
             onClick: () => {
-                j.focusFirst();
+                k.focusFirst();
             },
         },
         fieldProps: {
@@ -108,7 +108,7 @@ function E(e, t, n) {
         descriptionProps: C,
         errorMessageProps: N,
         buttonProps: {
-            ...x,
+            ...L,
             id: E,
             "aria-haspopup": "dialog",
             "aria-label": O.format("calendar"),

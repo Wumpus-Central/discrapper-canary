@@ -110,16 +110,16 @@ let v = i.memo(function (e) {
         P = (0, d.v)(N && null != O ? O : []),
         w = i ? h : p,
         D = N ? y : g,
-        L = (0, u.y)(D, _.aO),
-        x = {};
+        x = (0, u.y)(D, _.aO),
+        L = {};
     if (N && null != P) {
         var M;
         let { accentColor: e, backgroundColor: r, opacity: i } = P,
             a = null != (M = (0, l.wK)(null != r ? r : "", i)) ? M : "";
-        R && (x.borderColor = r), (x.background = a), (t = e), (n = e);
+        R && (L.borderColor = r), (L.background = a), (t = e), (n = e);
     }
-    let k = {
-        minWidth: L,
+    let j = {
+        minWidth: x,
         color: t,
         borderColor: n,
     };
@@ -128,7 +128,7 @@ let v = i.memo(function (e) {
             [w.reactionMe]: R,
             [w.reactionReadOnly]: v && !I && !S && !T,
         }),
-        style: x,
+        style: L,
         children: [
             (0, r.jsx)(c.Z, {
                 className: o()({ [w.hideEmoji]: a }),
@@ -139,7 +139,7 @@ let v = i.memo(function (e) {
             }),
             (0, r.jsx)("div", {
                 className: w.reactionCount,
-                style: k,
+                style: j,
                 children: D,
             }),
         ],

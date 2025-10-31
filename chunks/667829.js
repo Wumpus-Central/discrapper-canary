@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(137058),
     v = n(541716),
     I = n(752305),
-    S = n(30465),
-    T = n(330122),
+    T = n(30465),
+    S = n(330122),
     A = n(140963),
     C = n(4484),
     N = n(925994),
@@ -41,7 +41,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,17 +74,17 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 new g.Z("ChannelEditor.tsx");
-let k = function () {
+let j = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    j = 1000;
+    k = 1000;
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -106,7 +106,7 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
@@ -244,14 +244,14 @@ class U extends i.Component {
                 useSlate: E,
                 spellcheckEnabled: y,
                 useNewSlashCommands: O,
-                canOnlyUseTextCommands: S,
-                className: T,
+                canOnlyUseTextCommands: T,
+                className: S,
                 id: N,
                 required: P,
                 maxCharacterCount: D,
-                allowNewLines: x,
-                isEditorIdle: k,
-                currentAutocompleteType: j,
+                allowNewLines: L,
+                isEditorIdle: j,
+                currentAutocompleteType: k,
                 "aria-describedby": U,
                 "aria-labelledby": G,
                 accessibilityLabel: B,
@@ -260,7 +260,7 @@ class U extends i.Component {
             { submitting: F, popup: V } = this.state,
             H = {
                 channel: m,
-                className: o()(T, w.textArea, {
+                className: o()(S, w.textArea, {
                     [w.textAreaSlate]: E,
                     [w.textAreaDisabled]: d || F,
                 }),
@@ -279,7 +279,7 @@ class U extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: x,
+                allowNewLines: L,
                 onChange: f,
                 onResize: p,
                 onKeyDown: _,
@@ -292,8 +292,8 @@ class U extends i.Component {
                 }),
                 spellcheckEnabled: y,
                 useNewSlashCommands: O,
-                isEditorIdle: k,
-                currentAutocompleteType: j,
+                isEditorIdle: j,
+                currentAutocompleteType: k,
                 disableAutoFocus: u.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 "aria-controls": null != (a = V.id) ? a : void 0,
@@ -308,14 +308,14 @@ class U extends i.Component {
             Y = E
                 ? (0, r.jsx)(
                       C.Z,
-                      M(L({ ref: this.ref }, H), {
+                      M(x({ ref: this.ref }, H), {
                           type: g,
                           value: d && !Z ? (0, I.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
-                          canOnlyUseTextCommands: S,
+                          canOnlyUseTextCommands: T,
                       }),
                   )
-                : (0, r.jsx)(A.Z, M(L({ ref: this.ref }, H), { value: d && !Z ? "" : l }));
+                : (0, r.jsx)(A.Z, M(x({ ref: this.ref }, H), { value: d && !Z ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(b.d9, {
@@ -416,10 +416,10 @@ class U extends i.Component {
                         maxCharacterCount: c,
                         type: u,
                     } = this.props,
-                    d = null != i ? (0, T.im)(i) : null,
-                    g = (0, T.Mo)(),
+                    d = null != i ? (0, S.im)(i) : null,
+                    g = (0, S.Mo)(),
                     b = null != (r = null != d ? d : g) ? r : a,
-                    y = (0, T._K)(i, this._getEditorWindow()) ? a : b;
+                    y = (0, S._K)(i, this._getEditorWindow()) ? a : b;
                 if (null == l || (!y.isPrivate() && !o) || (y.isPrivate() && y.isManaged())) return !1;
                 let O = (e, t) => {
                         var n, r;
@@ -455,8 +455,8 @@ class U extends i.Component {
                             });
                     },
                     v = null != s ? s : c,
-                    { files: I, errors: S } = G(e.clipboardData, u.uploadLongMessages ? v : null);
-                return (k(
+                    { files: I, errors: T } = G(e.clipboardData, u.uploadLongMessages ? v : null);
+                return (j(
                     "onPaste",
                     [...e.clipboardData.items].map((e) => {
                         if ("file" !== e.kind)
@@ -476,9 +476,9 @@ class U extends i.Component {
                     }),
                 ),
                 0 === I.length)
-                    ? ((null == S
+                    ? ((null == T
                           ? void 0
-                          : S.some((e) => {
+                          : T.some((e) => {
                                 let { error: t } = e;
                                 return "is_directory" === t;
                             })) &&
@@ -489,7 +489,7 @@ class U extends i.Component {
                       !1)
                     : (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), O(I), this.focus(), !0);
             }),
-            (this._unsubscribe = S.p8.subscribe((e) => {
+            (this._unsubscribe = T.p8.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
@@ -497,7 +497,7 @@ class U extends i.Component {
             (this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: S.p8.getState(),
+                popup: T.p8.getState(),
             });
     }
 }

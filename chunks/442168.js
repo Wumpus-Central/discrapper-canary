@@ -1,16 +1,16 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(13941),
     a = n(442837),
     o = n(780384),
-    c = n(481060),
-    s = n(598006),
+    s = n(481060),
+    c = n(598006),
     u = n(435064),
     d = n(39604),
-    f = n(175470),
-    p = n(569545),
-    _ = n(314910),
+    p = n(175470),
+    f = n(569545),
+    h = n(314910),
     m = n(565063);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -37,37 +37,37 @@ function g(e) {
     }
     return e;
 }
-let v = { visibility: "hidden" },
-    b = {
+let b = { visibility: "hidden" },
+    _ = {
         precision: 0.0001,
         duration: 300,
     },
-    E = {
+    y = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
         bounce: 0,
     },
-    h = { duration: 1000 };
-function S(e) {
+    C = { duration: 1000 };
+function v(e) {
     let { stream: t, popoutType: n } = e,
-        { reducedMotion: S } = i.useContext(o.Sf),
-        y = (0, i.useRef)(null),
-        O = f.n.getState().clipsButtonRef,
-        I = (0, p.V9)(t),
-        C = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
-        w = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(I)),
+        { reducedMotion: v } = i.useContext(o.Sf),
+        O = (0, i.useRef)(null),
+        x = p.n.getState().clipsButtonRef,
+        E = (0, f.V9)(t),
+        j = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
+        S = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(E)),
         P = (0, i.useRef)(void 0);
     i.useEffect(
         () => () => {
-            (0, d.Gh)(I);
+            (0, d.Gh)(E);
         },
-        [I],
+        [E],
     );
-    let Z = (e) => {
-            if (n !== s.P.NO_POPOUT) return v;
-            let t = null == O ? void 0 : O.getBoundingClientRect();
-            if (((P.current = t), e.timestamp !== C || null == t)) return v;
+    let I = (e) => {
+            if (n !== c.P.NO_POPOUT) return b;
+            let t = null == x ? void 0 : x.getBoundingClientRect();
+            if (((P.current = t), e.timestamp !== j || null == t)) return b;
             let { top: r, left: i } = t;
             return {
                 top: r + 36,
@@ -76,23 +76,23 @@ function S(e) {
                 width: 268,
             };
         },
-        j = (0, i.useRef)(null),
-        T = (0, c.Yzy)(
-            w,
+        Z = (0, i.useRef)(null),
+        T = (0, s.Yzy)(
+            S,
             {
                 keys: (e) => e.timestamp,
-                ref: j,
+                ref: Z,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: b,
+                config: _,
             },
             "animate-always",
         ),
-        A = (0, i.useRef)(null),
-        R = (0, c.Yzy)(
-            w,
+        N = (0, i.useRef)(null),
+        A = (0, s.Yzy)(
+            S,
             {
-                ref: A,
+                ref: N,
                 keys: (e) => e.timestamp,
                 from: (e) =>
                     g(
@@ -101,14 +101,14 @@ function S(e) {
                             visibility: "hidden",
                             opacity: 1,
                         },
-                        S.enabled
-                            ? Z(e)
+                        v.enabled
+                            ? I(e)
                             : (() => {
                                   var e;
-                                  if (n !== s.P.NO_POPOUT) return v;
-                                  let t = null == (e = y.current) ? void 0 : e.getBoundingClientRect();
+                                  if (n !== c.P.NO_POPOUT) return b;
+                                  let t = null == (e = O.current) ? void 0 : e.getBoundingClientRect();
                                   return null == t
-                                      ? v
+                                      ? b
                                       : {
                                             width: t.width,
                                             height: t.height,
@@ -123,12 +123,12 @@ function S(e) {
                             opacity: 1,
                             visibility: "visible",
                         },
-                        Z(e),
+                        I(e),
                     ),
                 ],
                 leave: g(
                     { opacity: 0 },
-                    !S.enabled &&
+                    !v.enabled &&
                         g(
                             {
                                 height: 0,
@@ -143,22 +143,22 @@ function S(e) {
                             })(),
                         ),
                 ),
-                config: S.enabled ? h : E,
+                config: v.enabled ? C : y,
                 onRest: (e, t) => {
                     null != t.item &&
-                        null != w.find((e) => e.timestamp === t.item.timestamp) &&
-                        (0, d.Gh)(I, t.item.timestamp);
+                        null != S.find((e) => e.timestamp === t.item.timestamp) &&
+                        (0, d.Gh)(E, t.item.timestamp);
                 },
             },
             "animate-always",
         );
     return (
-        (0, l.useChain)([j, A], [0, 0.1], 3000),
+        (0, l.useChain)([Z, N], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
                     className: m.hidden,
-                    ref: y,
+                    ref: O,
                 }),
                 T(
                     (e, t) =>
@@ -168,10 +168,10 @@ function S(e) {
                             style: e,
                         }),
                 ),
-                (0, r.jsx)(_.ZP, {
+                (0, r.jsx)(h.ZP, {
                     children: (0, r.jsx)("div", {
                         className: m.hidden,
-                        children: R(
+                        children: A(
                             (e, t, n, i) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(l.animated.img, {

@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => M,
-    i: () => L,
+    i: () => x,
 });
 var r = n(951288),
     i = n(647438),
@@ -39,7 +39,7 @@ let D = () => {
             (0, m.XO)(m.wh.CLIENT_THEMES),
             (0, A.default)();
     },
-    L = () => {
+    x = () => {
         var e, t;
         let { analyticsLocations: n } = (0, f.ZP)(d.Z.USER_SETTINGS),
             o = (0, a.e7)([_.Z], () => _.Z.isPreview),
@@ -124,7 +124,7 @@ let D = () => {
                     type: h.yH.SETTINGS,
                     children: [
                         (0, r.jsx)(h.ZP.Basic, { className: w.basicThemeSelectors }),
-                        (0, r.jsx)(x, {}),
+                        (0, r.jsx)(L, {}),
                         (0, r.jsx)(p.Z, {}),
                         v,
                     ],
@@ -133,7 +133,7 @@ let D = () => {
             ],
         });
     };
-function x() {
+function L() {
     let e = (0, v.A6)(),
         {
             theme: t,

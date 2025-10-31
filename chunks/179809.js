@@ -9,18 +9,18 @@ var r = n(951288),
     u = n(866442),
     d = n(477690),
     p = n(481060),
-    f = n(153867),
-    h = n(591146),
+    h = n(153867),
+    f = n(591146),
     g = n(771845),
     m = n(624138),
     b = n(727258),
     _ = n(276952),
-    O = n(199540),
-    y = n(40153),
-    j = n(252686),
-    v = n(682662),
-    x = n(662146),
-    C = n(981631),
+    y = n(199540),
+    O = n(40153),
+    v = n(252686),
+    j = n(682662),
+    C = n(662146),
+    x = n(981631),
     E = n(388032),
     S = n(106663),
     I = n(534175);
@@ -35,8 +35,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 mediaState: d,
                 mentionCount: m = 0,
                 isMentionLowImportance: Z,
-                unread: T = !1,
-                defaultFolderName: w,
+                unread: w = !1,
+                defaultFolderName: T,
                 draggable: A = !1,
                 sorting: R = !1,
                 onDragStart: D,
@@ -53,7 +53,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
             Q = K || q,
-            J = (0, h.Ml)("FolderItem");
+            J = (0, f.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
@@ -67,7 +67,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == L || L(), (0, f.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -80,7 +80,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [M, s],
             ),
-            er = null != z && "" !== z ? z : null != w && "" !== w ? w : E.intl.string(E.t.xV9hVh),
+            er = null != z && "" !== z ? z : null != T && "" !== T ? T : E.intl.string(E.t.xV9hVh),
             ei = (0, c.Ie)("".concat(H)),
             el = "folder-items-".concat(H),
             eo = (function (e) {
@@ -96,16 +96,16 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 config: { duration: P },
             }),
             es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
-            ec = (0, r.jsxs)(v.H, {
+            ec = (0, r.jsxs)(j.H, {
                 children: [
                     (0, r.jsx)(_.Z, {
                         disabled: $ || s,
                         hovered: K,
                         selected: l,
-                        unread: T,
+                        unread: w,
                         className: I.pill,
                     }),
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(C.Z, {
                         text: er,
                         disabled: R,
                         selected: l,
@@ -122,8 +122,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             }),
                             "data-dnd-name": er,
                             children: $
-                                ? (0, r.jsx)(j.Z, { isFolder: !0 })
-                                : (0, r.jsx)(O.Z, {
+                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
+                                : (0, r.jsx)(y.Z, {
                                       folderNode: t,
                                       expanded: s,
                                       sorting: R,
@@ -144,7 +144,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         }),
                     }),
                     A
-                        ? (0, r.jsx)(y.ZP, {
+                        ? (0, r.jsx)(O.ZP, {
                               name: er,
                               targetNode: t,
                               onDragOverChanged: et,
@@ -152,8 +152,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         : null,
                 ],
             }),
-            eu = null != t.color ? t.color : C.Wyy,
-            ed = eu === C.Wyy ? void 0 : (0, u.Rf)(eu);
+            eu = null != t.color ? t.color : x.Wyy,
+            ed = eu === x.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)("div", {
             ref: es,
             className: o()(S.folderGroup, {
@@ -186,7 +186,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     );
                 }),
                 A && s
-                    ? (0, r.jsx)(y.Zu, {
+                    ? (0, r.jsx)(O.Zu, {
                           name: er,
                           targetNode: t,
                       })

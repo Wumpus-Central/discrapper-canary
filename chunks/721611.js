@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
-    o = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    l = n(647438),
+    o = n(120356),
+    i = n.n(o),
     a = n(13941),
     c = n(91192),
     s = n(481060),
@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(910557);
 function f(e) {
     var t;
-    let { category: n, onClick: o, active: l } = e,
+    let { category: n, onClick: l, active: o } = e,
         { useTitle: a, useNavigationTitle: u, key: f } = n,
         b = null == a ? void 0 : a(),
         p = null != (t = null == u ? void 0 : u()) ? t : b;
@@ -48,9 +48,9 @@ function f(e) {
                           return e;
                       })(
                           {
-                              onClick: o,
+                              onClick: l,
                               tag: "li",
-                              className: i()({ [d.active]: l }),
+                              className: i()({ [d.active]: o }),
                           },
                           e,
                       )),
@@ -75,7 +75,7 @@ function f(e) {
 }
 function b(e) {
     let { categories: t } = e,
-        [n, l] = o.useState(t[0].key),
+        [n, o] = l.useState(t[0].key),
         [i, c] = (0, s.q_F)(() => ({
             y: 0,
             config: {
@@ -85,7 +85,7 @@ function b(e) {
             },
         }));
     return (
-        o.useEffect(() => {
+        l.useEffect(() => {
             c({
                 y:
                     36 *
@@ -112,7 +112,7 @@ function b(e) {
                             {
                                 onClick: () => {
                                     var t;
-                                    l((t = e.key)),
+                                    o((t = e.key)),
                                         u.Z.setState({
                                             targetKey: t,
                                             showNavigationMobile: !1,

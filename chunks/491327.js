@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(392711),
     i = n.n(r),
     l = n(243814),
@@ -10,15 +10,15 @@ var r = n(392711),
     d = n(430824),
     p = n(496675),
     f = n(944486),
-    h = n(979651),
-    m = n(934415),
+    m = n(979651),
+    h = n(934415),
     g = n(996106),
     _ = n(914946),
     b = n(452426),
     E = n(561205),
     O = n(186901),
     I = n(981631);
-let v = {
+let y = {
     [I.Etm.GET_CHANNEL]: {
         scope: {
             [O.Gp.ANY]: [l.x.RPC, l.x.GUILDS, l.x.GUILDS_CHANNELS_READ],
@@ -122,7 +122,7 @@ let v = {
                 .then((e) => {
                     let [t, n] = e;
                     if (n.guild_id) {
-                        if ((0, m.rY)(t, h.Z, d.Z))
+                        if ((0, h.rY)(t, m.Z, d.Z))
                             throw new g.Z({ errorCode: I.lTL.INVALID_CHANNEL }, "Channel is full");
                         if (!p.Z.can(I.Plq.CONNECT, t))
                             throw new g.Z(

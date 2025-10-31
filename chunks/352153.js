@@ -1,4 +1,4 @@
-n.d(t, { a: () => m }), n(388685), n(539854);
+n.d(t, { a: () => h }), n(388685), n(539854);
 var r = n(647438),
     i = n(442837),
     l = n(699682),
@@ -10,17 +10,17 @@ var r = n(647438),
     d = n(613928),
     p = n(769102),
     f = n(390536),
-    h = n(11543);
-function m(e) {
-    let { showDot: t, notificationItem: n, setScrollState: m } = e,
+    m = n(11543);
+function h(e) {
+    let { showDot: t, notificationItem: n, setScrollState: h } = e,
         [g, _] = r.useState(!1),
         { unreadItems: b, readItems: E, allUnreadItemsHydrated: O } = (0, p.Z)(),
         I = (0, i.e7)([c.Z], () => c.Z.getVersion(), []),
-        v = (0, i.e7)([c.Z], () => !(c.Z.isFirstPageHydrated() && I > 0));
+        y = (0, i.e7)([c.Z], () => !(c.Z.isFirstPageHydrated() && I > 0));
     r.useEffect(() => {
         null != c.Z.getLoadId() && s.m.trackFeedShown({ homeSessionId: "gravity" });
     }, [I]);
-    let y = (0, i.e7)([c.Z], () => c.Z.isRefreshing(), []),
+    let v = (0, i.e7)([c.Z], () => c.Z.isRefreshing(), []),
         C = (0, i.e7)([c.Z], () => c.Z.isHydrating(), []),
         [S, T] = r.useState([]),
         { loadId: N, lastScrollEventTimestamp: j } = (0, i.cj)([c.Z], () => ({
@@ -38,17 +38,17 @@ function m(e) {
             .pop(),
         x = (0, l.Z)(P);
     r.useEffect(() => {
-        if (y || v || null == x || null == P || P === x) return;
+        if (v || y || null == x || null == P || P === x) return;
         let e = Date.now();
-        e - j > h.C && (a.Z.gravityScrollEvent(e), s.m.trackFeedFirstScrollStarted());
-    }, [y, j, x, P, N, v]);
+        e - j > m.C && (a.Z.gravityScrollEvent(e), s.m.trackFeedFirstScrollStarted());
+    }, [v, j, x, P, N, y]);
     let A = r.useCallback(
             (e) => {
                 var t, n;
                 let { viewableItems: r } = e;
                 if ((r.some((e) => "end" === e.item.data.kind) && _(!0), 0 === r.length)) return;
                 T(r),
-                    (null != (n = null == (t = r[r.length - 1]) ? void 0 : t.index) ? n : 0) > 10 && (null == m || m());
+                    (null != (n = null == (t = r[r.length - 1]) ? void 0 : t.index) ? n : 0) > 10 && (null == h || h());
                 let i = [];
                 r.forEach((e) => {
                     let { item: t } = e;
@@ -80,7 +80,7 @@ function m(e) {
                         I,
                     );
             },
-            [I, _, m],
+            [I, _, h],
         ),
         Z = r.useCallback(
             (e) => {
@@ -177,7 +177,7 @@ function m(e) {
         { data: D, stickyHeaderIndices: M } = r.useMemo(() => {
             let e = [];
             return (
-                v &&
+                y &&
                     null != n &&
                     n.type === u.Ni.CUSTOM_STATUS &&
                     e.push({
@@ -190,7 +190,7 @@ function m(e) {
                         score: n.score,
                         unread: !0,
                     }),
-                v
+                y
                     ? e.push({
                           id: "loading",
                           timestamp: 0,
@@ -223,14 +223,14 @@ function m(e) {
                     stickyHeaderIndices: [],
                 }
             );
-        }, [v, n, b, O, E, C]);
+        }, [y, n, b, O, E, C]);
     return {
         data: D,
-        loading: v,
+        loading: y,
         version: I,
         visibleItemIds: S,
         endVisible: g,
-        isRefreshing: y,
+        isRefreshing: v,
         handleOnRefresh: R,
         stickyHeaderIndices: M,
         viewabilityConfigCallbackPairs: L,

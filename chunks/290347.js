@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(446411),
     p = n(468846),
     f = n(313201),
-    h = n(70097),
-    m = n(266454),
+    m = n(70097),
+    h = n(266454),
     g = n(605236),
     _ = n(524444),
     b = n(626135),
     E = n(960048),
     O = n(981631),
     I = n(921944),
-    v = n(388032),
-    y = n(188784);
+    y = n(388032),
+    v = n(188784);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,32 +67,32 @@ let T = [],
     N = (e) => {
         let { tagText: t, className: n } = e;
         return (0, r.jsx)(c.IGR, {
-            className: a()(y.tag, n),
+            className: a()(v.tag, n),
             text: t,
         });
     },
     j = (e) => {
         let { header: t, subHeader: n, imageSrc: i, tagText: l, wideStyle: s } = e;
         return (0, r.jsxs)("div", {
-            className: a()(y.featureCard, { [y.wideStyle]: s }),
+            className: a()(v.featureCard, { [v.wideStyle]: s }),
             children: [
                 null != l
                     ? (0, r.jsx)(N, {
                           tagText: l,
-                          className: y.featureCardTag,
+                          className: v.featureCardTag,
                       })
                     : null,
                 (0, r.jsx)("img", {
                     alt: "",
-                    className: a()(y.featureCardImg, { [y.wideStyle]: s }),
+                    className: a()(v.featureCardImg, { [v.wideStyle]: s }),
                     src: i,
                 }),
                 (0, r.jsxs)("div", {
-                    className: y.featureCardTextGroup,
+                    className: v.featureCardTextGroup,
                     children: [
                         (0, r.jsx)(c.Heading, {
                             variant: "heading-md/bold",
-                            className: y.featureCardTextHeader,
+                            className: v.featureCardTextHeader,
                             children: t,
                         }),
                         (0, r.jsx)(c.Text, {
@@ -207,13 +207,13 @@ function P(e) {
                         change_log_id: D,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
-                        null != P && (0, m.Q3)(P, { dismissAction: I.L.DISMISS });
+                        null != P && (0, h.Q3)(P, { dismissAction: I.L.DISMISS });
                 }
             );
         }, [P, D]),
         (0, r.jsx)(c.Y0X, {
             "data-migration-pending": !0,
-            className: a()(y.root, y.largeBorderRadius, t),
+            className: a()(v.root, v.largeBorderRadius, t),
             transitionState: G,
             "aria-labelledby": B,
             parentComponent: "PremiumAnnouncementModalVariant1",
@@ -221,7 +221,7 @@ function P(e) {
                 color: "nitro-pink",
                 children: [
                     (0, r.jsx)("div", {
-                        className: y.closeButtonContainer,
+                        className: v.closeButtonContainer,
                         children: (0, r.jsx)(o.PZ7, {
                             "data-migration-pending": !0,
                             onClick: async () => await U(),
@@ -230,11 +230,11 @@ function P(e) {
                     null == x ? void 0 : x(),
                     (0, r.jsxs)(c.hzk, {
                         "data-migration-pending": !0,
-                        className: y.content,
+                        className: v.content,
                         children: [
                             "video" === l.type
-                                ? (0, r.jsx)(h.Z, {
-                                      className: a()(y.video, N),
+                                ? (0, r.jsx)(m.Z, {
+                                      className: a()(v.video, N),
                                       autoPlay: !V,
                                       loop: !0,
                                       muted: !0,
@@ -262,7 +262,7 @@ function P(e) {
                                           null == el
                                               ? void 0
                                               : el.map((e) => {
-                                                    let t = (0, v.getLanguages)().find((t) => t.code === e.locale);
+                                                    let t = (0, y.getLanguages)().find((t) => t.code === e.locale);
                                                     return null == t
                                                         ? null
                                                         : (0, r.jsx)(
@@ -280,7 +280,7 @@ function P(e) {
                                   })
                                 : "embed" === l.type
                                   ? (0, r.jsx)(d.BC, {
-                                        className: a()(y.video, N),
+                                        className: a()(v.video, N),
                                         allowFullScreen: !1,
                                         href: l.href,
                                         thumbnail: l.thumbnail,
@@ -298,31 +298,31 @@ function P(e) {
                                   : "image" === l.type
                                     ? (0, r.jsx)("img", {
                                           alt: "",
-                                          className: a()(y.video, N),
+                                          className: a()(v.video, N),
                                           src: l.src,
                                       })
                                     : null,
                             (0, r.jsx)(c.Heading, {
                                 variant: "display-md",
-                                className: a()(y.headerText, Z),
+                                className: a()(v.headerText, Z),
                                 children: A,
                             }),
                             (0, r.jsxs)(c.Text, {
                                 variant: "text-md/normal",
                                 color: "text-secondary",
-                                className: y.subHeader,
+                                className: v.subHeader,
                                 children: [w, null == L ? void 0 : L()],
                             }),
                             null != k &&
                                 "" !== k &&
                                 (0, r.jsx)(c.Heading, {
                                     variant: "heading-lg/semibold",
-                                    className: y.bodyText,
+                                    className: v.bodyText,
                                     children: k,
                                 }),
                             R.length > 0 &&
                                 (0, r.jsx)("div", {
-                                    className: a()(y.featureCardGroup, { [y.wideStyle]: H }),
+                                    className: a()(v.featureCardGroup, { [v.wideStyle]: H }),
                                     children: R.map((e, t) =>
                                         (0, r.jsx)(
                                             j,
@@ -332,7 +332,7 @@ function P(e) {
                                     ),
                                 }),
                             (0, r.jsx)("div", {
-                                className: y.buttonContainer,
+                                className: v.buttonContainer,
                                 children: M(),
                             }),
                         ],

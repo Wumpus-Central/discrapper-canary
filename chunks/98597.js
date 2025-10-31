@@ -1,8 +1,8 @@
 n.d(t, {
     CN: () => N,
     ZP: () => D,
-    eP: () => w,
-    hR: () => T,
+    eP: () => T,
+    hR: () => w,
     jo: () => Z,
 });
 var r,
@@ -15,18 +15,18 @@ var r,
     u = n(481060),
     d = n(787014),
     p = n(924301),
-    f = n(340541),
-    h = n(159300),
+    h = n(340541),
+    f = n(159300),
     g = n(152376),
     m = n(427679),
     b = n(155409),
     _ = n(131704),
-    O = n(199902),
-    y = n(430824),
-    j = n(496675),
-    v = n(914010),
-    x = n(281029),
-    C = n(981631),
+    y = n(199902),
+    O = n(430824),
+    v = n(496675),
+    j = n(914010),
+    C = n(281029),
+    x = n(981631),
     E = n(388032),
     S = n(55940);
 function I(e, t, n) {
@@ -59,23 +59,23 @@ function P(e) {
     return e;
 }
 function N(e, t, n) {
-    return null != t && !!t && !(0, x.ig)(n, e.type);
+    return null != t && !!t && !(0, C.ig)(n, e.type);
 }
 function Z(e, t) {
     return null == t ? S.containerDefault : e > t ? S.containerDragAfter : S.containerDragBefore;
 }
-function T(e) {
+function w(e) {
     let { channel: t, disableManageChannels: n, tabIndex: r, forceShowButtons: l, hasChannelInfo: o = !1 } = e;
     return (0, s.e7)(
-        [j.Z, v.Z],
+        [v.Z, j.Z],
         () =>
             n ||
-            v.Z.getGuildId() === C.I_8 ||
-            (!j.Z.can(C.Plq.MANAGE_CHANNELS, t) &&
-                !j.Z.can(C.Plq.MANAGE_ROLES, t) &&
-                !j.Z.can(C.Plq.MANAGE_WEBHOOKS, t)) ||
-            ((0, _.r8)(t.type) && !j.Z.can(C.Plq.VIEW_CHANNEL, t)) ||
-            (t.isGuildVocal() && !j.Z.can(C.Plq.CONNECT, t)) ||
+            j.Z.getGuildId() === x.I_8 ||
+            (!v.Z.can(x.Plq.MANAGE_CHANNELS, t) &&
+                !v.Z.can(x.Plq.MANAGE_ROLES, t) &&
+                !v.Z.can(x.Plq.MANAGE_WEBHOOKS, t)) ||
+            ((0, _.r8)(t.type) && !v.Z.can(x.Plq.VIEW_CHANNEL, t)) ||
+            (t.isGuildVocal() && !v.Z.can(x.Plq.CONNECT, t)) ||
             !_.dF.has(t.type) ||
             t.isModeratorReportChannel(),
     )
@@ -102,7 +102,7 @@ function T(e) {
               }),
           });
 }
-function w(e) {
+function T(e) {
     let {
             channel: t,
             isDefaultChannel: r = !1,
@@ -111,23 +111,23 @@ function w(e) {
             forceShowButtons: g,
             hasChannelInfo: _ = !1,
         } = e,
-        v = (0, f._k)({ location: "channel_base" }),
-        x = (0, s.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
+        j = (0, h._k)({ location: "channel_base" }),
+        C = (0, s.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
         I = (0, s.e7)([m.Z], () => m.Z.getStageInstanceByChannel(t.id), [t.id]),
         N = (0, s.e7)([p.ZP], () => p.ZP.getActiveEventByChannel(t.id), [t.id]),
-        Z = (0, s.e7)([j.Z], () => (0, h.b)(j.Z, x, t, I)),
-        T = (0, s.e7)([j.Z], () =>
-            (null == t ? void 0 : t.type) === C.d4z.GUILD_VOICE && v.isVoiceChannelEntrypointEnabled
+        Z = (0, s.e7)([v.Z], () => (0, f.b)(v.Z, C, t, I)),
+        w = (0, s.e7)([v.Z], () =>
+            (null == t ? void 0 : t.type) === x.d4z.GUILD_VOICE && j.isVoiceChannelEntrypointEnabled
                 ? E.intl.string(E.t["EE+P0H"])
-                : v.isTextChannelEntrypointEnabled
+                : j.isTextChannelEntrypointEnabled
                   ? E.intl.string(E.t["0jeAXt"])
-                  : j.Z.can(C.Plq.CREATE_INSTANT_INVITE, t)
+                  : v.Z.can(x.Plq.CREATE_INSTANT_INVITE, t)
                     ? E.intl.string(E.t.zJrgTG)
                     : E.intl.string(E.t.Sd8Ixw),
         ),
-        w = l.useRef(null);
+        T = l.useRef(null);
     if (o || !Z || t.isModeratorReportChannel()) return null;
-    let A = [v.isVoiceChannelEntrypointEnabled, v.isTextChannelEntrypointEnabled].some(Boolean) ? u.oLu : u.ejJ,
+    let A = [j.isVoiceChannelEntrypointEnabled, j.isTextChannelEntrypointEnabled].some(Boolean) ? u.oLu : u.ejJ,
         R = (0, i.jsx)(A, {
             size: "xs",
             className: S.actionIcon,
@@ -137,23 +137,23 @@ function w(e) {
     return (
         r &&
             (R = (0, i.jsx)(b.Z, {
-                childRef: w,
+                childRef: T,
                 tutorialId: "instant-invite",
                 position: "left",
                 children: (0, i.jsx)("div", {
-                    ref: w,
+                    ref: T,
                     children: R,
                 }),
             })),
         (0, i.jsx)(c.u, {
             asContainer: !0,
-            text: T,
+            text: w,
             children: (0, i.jsx)(u.P3F, {
                 className: a()(S.iconItem, g ? S.alwaysShown : void 0, _ ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: function () {
-                    if (null != x) {
-                        let e = O.Z.getAllActiveStreams().filter(
-                            (e) => e.state !== C.jm8.ENDED && e.channelId === t.id,
+                    if (null != C) {
+                        let e = y.Z.getAllActiveStreams().filter(
+                            (e) => e.state !== x.jm8.ENDED && e.channelId === t.id,
                         );
                         (0, u.ZDy)(async () => {
                             let { default: r } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
@@ -164,10 +164,10 @@ function w(e) {
                                     ((l = P({}, n)),
                                     (o = o =
                                         {
-                                            guild: x,
+                                            guild: C,
                                             channel: t,
                                             streamUserId: 1 === e.length ? e[0].ownerId : null,
-                                            source: C.t4x.GUILD_CHANNELS,
+                                            source: x.t4x.GUILD_CHANNELS,
                                             guildScheduledEvent: N,
                                         }),
                                     Object.getOwnPropertyDescriptors
@@ -189,7 +189,7 @@ function w(e) {
                     }
                 },
                 tabIndex: d,
-                "aria-label": T,
+                "aria-label": w,
                 children: R,
             }),
         })
@@ -222,7 +222,7 @@ function R(e) {
         children: (0, i.jsx)(u.P3F, {
             className: S.iconItem,
             onClick: () => {
-                (0, g.dM)(t.guild_id, t.id, !0, { section: C.jXE.CHANNEL_LIST });
+                (0, g.dM)(t.guild_id, t.id, !0, { section: x.jXE.CHANNEL_LIST });
             },
             "aria-label": E.intl.string(E.t["N2c/Un"]),
             children: (0, i.jsx)(u.dz2, {
@@ -235,10 +235,10 @@ function R(e) {
 }
 class D extends (r = l.PureComponent) {
     renderEditButton() {
-        return (0, i.jsx)(T, P({}, this.props));
+        return (0, i.jsx)(w, P({}, this.props));
     }
     renderInviteButton() {
-        return (0, i.jsx)(w, P({}, this.props));
+        return (0, i.jsx)(T, P({}, this.props));
     }
     renderRemoveSuggestionButton() {
         return (0, i.jsx)(A, P({}, this.props));

@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    Jc: () => k,
+    Jc: () => j,
     dx: () => M,
     tE: () => G,
 });
@@ -388,28 +388,28 @@ var R = function (e, t, n, r) {
 let P = !1,
     w,
     D = {};
-function L() {
+function x() {
     if (!P) return;
     let e = null == r ? void 0 : r.getStyle();
     null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()),
-        (w = requestAnimationFrame(L));
+        (w = requestAnimationFrame(x));
 }
-let x = !1,
+let L = !1,
     M = {
         get ringsEnabled() {
-            return x;
+            return L;
         },
         setRingsEnabled(e) {
-            (x = e), null == r || r.invalidate();
+            (L = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (P = !0), (w = requestAnimationFrame(L));
+            (P = !0), (w = requestAnimationFrame(x));
         },
         disableAnimationTracking() {
             (P = !1), null != w && cancelAnimationFrame(w);
         },
     };
-function k(e) {
+function j(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = a.useRef(new A());
     return (
@@ -418,11 +418,11 @@ function k(e) {
         }, [t.current]),
         (0, o.jsxs)(N.Provider, {
             value: i.current,
-            children: [n, (0, o.jsx)(j, {})],
+            children: [n, (0, o.jsx)(k, {})],
         })
     );
 }
-function j() {
+function k() {
     let e = a.useContext(N),
         [, t] = a.useState({});
     return (

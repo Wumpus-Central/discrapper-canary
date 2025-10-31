@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => M }), n(388685);
+n.r(t), n.d(t, { default: () => F }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -13,8 +13,8 @@ var r = n(951288),
     f = n(977395),
     h = n(214852),
     C = n(621853),
-    _ = n(484459),
-    m = n(602733),
+    m = n(484459),
+    _ = n(602733),
     b = n(594174),
     v = n(381585),
     E = n(597688),
@@ -36,7 +36,7 @@ var r = n(951288),
     w = n(295907),
     H = n(887353),
     D = n(219588);
-let F = (e) => {
+let M = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             i = (0, c.f9)();
         return (
@@ -50,7 +50,7 @@ let F = (e) => {
             t
         );
     },
-    M = function (e) {
+    F = function (e) {
         let { tab: t = R.AW.HOME } = e;
         (0, h.z)(f.f), (0, j.f)();
         let n = (0, p.Z)((0, a.Z)()),
@@ -64,10 +64,10 @@ let F = (e) => {
                 [i],
             );
         l.useEffect(() => {
-            null != i && null == c && (0, _.Z)(i.id, i.getAvatarURL(null, 80));
+            null != i && null == c && (0, m.Z)(i.id, i.getAvatarURL(null, 80));
         }, [i, c]),
-            (0, m.kZ)(w, null == i ? void 0 : i.id);
-        let M = (0, N.B)("CollectiblesShop"),
+            (0, _.kZ)(w, null == i ? void 0 : i.id);
+        let F = (0, N.B)("CollectiblesShop"),
             { onClose: W } = (0, P.Db)(),
             { currentTab: V, hasFilters: U } = (0, I.S)(),
             z = l.useMemo(() => (t === R.AW.HOME && V && U() ? V : t), [t, V, U]),
@@ -116,11 +116,11 @@ let F = (e) => {
                 },
                 children: (0, r.jsx)(x.ni, {
                     tab: et,
-                    children: (0, r.jsx)(F, {
+                    children: (0, r.jsx)(M, {
                         onClose: W,
                         shouldAddEventListener: !1,
                         children: (0, r.jsxs)("div", {
-                            className: s()(H.shop, { [D.customCursors]: M }),
+                            className: s()(H.shop, { [D.customCursors]: F }),
                             ref: es,
                             tabIndex: -1,
                             children: [

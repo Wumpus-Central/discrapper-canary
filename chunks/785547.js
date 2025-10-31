@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(415506), n(388685);
+n.d(t, { Z: () => k }), n(415506), n(388685);
 var r,
     i = n(951288),
     a = n(647438),
@@ -93,7 +93,7 @@ var D = (function (e) {
         e
     );
 })(D || {});
-let L = Object.freeze({
+let x = Object.freeze({
         [S.apO.PLAY]: "play",
         [S.apO.INSTALL]: "install",
         [S.apO.UPDATE]: "update",
@@ -101,7 +101,7 @@ let L = Object.freeze({
         [S.apO.MOVE_UP]: "queued",
         [S.apO.RESUME]: "paused",
     }),
-    x = () => [
+    L = () => [
         A.intl.string(A.t.r9wmKn),
         A.intl.string(A.t["6CpimS"]),
         A.intl.string(A.t.ysbNDc),
@@ -117,7 +117,7 @@ function M(e) {
     let t = v.en(e.sku);
     return null != t ? A.intl.formatToPlainString(A.t.Aqe2ZC, { date: t }) : null;
 }
-class k extends (r = a.Component) {
+class j extends (r = a.Component) {
     get analyticsLocation() {
         return w(R({}, this.props.analyticsContext.location), { object: S.qAy.BUTTON_CTA });
     }
@@ -133,7 +133,7 @@ class k extends (r = a.Component) {
             case "locate":
                 return A.intl.string(A.t["nIj+a0"]);
             case "uninstalling":
-                let t = x();
+                let t = L();
                 return (
                     null == this._uninstallStringIndex &&
                         (this._uninstallStringIndex = Math.floor(Math.random() * t.length)),
@@ -155,7 +155,7 @@ class k extends (r = a.Component) {
         let { libraryApplication: e, dispatchState: t, actionState: n } = this.props;
         if (e.isHidden()) return "add_to_library";
         if (e.isPreorder()) return "preorder_wait";
-        let r = null != n ? L[n] : null;
+        let r = null != n ? x[n] : null;
         return null != r
             ? r
             : null != t && t.type === S.vxO.UNINSTALLING
@@ -282,14 +282,14 @@ class k extends (r = a.Component) {
             });
     }
 }
-function j(e) {
+function k(e) {
     let { libraryApplication: t } = e,
         n = (0, f.O)(),
         [r, a] = (0, o.Wu)([E.Z, b.Z], () => [(0, m.i)(t, E.Z, b.Z), E.Z.getState(t.id, t.branchId)], [t]),
         s = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
         l = (0, o.e7)([h.Z], () => h.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, i.jsx)(
-        k,
+        j,
         w(R({}, e), {
             analyticsContext: n,
             actionState: r,
@@ -299,11 +299,11 @@ function j(e) {
         }),
     );
 }
-N(k, "defaultProps", {
+N(j, "defaultProps", {
     fullWidth: !1,
     size: c.zx.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: "top",
 }),
-    N(k, "ButtonStates", D);
+    N(j, "ButtonStates", D);

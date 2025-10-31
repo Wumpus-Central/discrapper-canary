@@ -1,40 +1,40 @@
-n.d(t, { Z: () => g }), n(539854);
+n.d(t, { Z: () => E }), n(539854);
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    o = n(524437),
-    l = n(481060),
+    a = n(524437),
+    o = n(481060),
     s = n(153867),
-    c = n(857595),
-    a = n(607070),
+    l = n(857595),
+    c = n(607070),
     u = n(906732),
     d = n(705262),
-    p = n(210887),
-    b = n(740492),
-    h = n(695346),
-    j = n(874893),
-    y = n(981631),
-    m = n(388032);
-function g() {
-    let e = h.jU.useSetting(),
+    f = n(210887),
+    _ = n(740492),
+    p = n(695346),
+    h = n(874893),
+    m = n(981631),
+    g = n(388032);
+function E() {
+    let e = p.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
             theme: n,
-            useSystemTheme: g,
-            useForcedColors: f,
-        } = (0, i.cj)([p.Z, b.ZP, a.Z], () => ({
-            theme: p.Z.theme,
-            useSystemTheme: b.ZP.useSystemTheme,
-            useForcedColors: a.Z.useForcedColors,
+            useSystemTheme: E,
+            useForcedColors: b,
+        } = (0, i.cj)([f.Z, _.ZP, c.Z], () => ({
+            theme: f.Z.theme,
+            useSystemTheme: _.ZP.useSystemTheme,
+            useForcedColors: c.Z.useForcedColors,
         })),
-        O = h.YC.useSetting(),
-        x = (e, i) =>
-            (0, r.jsx)(l.k5B, {
+        y = p.YC.useSetting(),
+        O = (e, i) =>
+            (0, r.jsx)(o.k5B, {
                 id: e,
                 group: "input-modes",
                 label: i,
-                disabled: f,
-                checked: g === j.KW.ON ? "system" === e : e === n,
+                disabled: b,
+                checked: E === h.KW.ON ? "system" === e : e === n,
                 action: () => {
                     (0, d.Yk)({
                         isPersisted: !0,
@@ -44,53 +44,53 @@ function g() {
                         (0, s.ZI)({ theme: e });
                 },
             }),
-        S = [
+        v = [
             (0, r.jsxs)(
-                l.kSQ,
+                o.kSQ,
                 {
                     children: [
-                        x(y.BRd.LIGHT, m.intl.string(m.t.K2sFfo)),
-                        x(y.BRd.DARK, m.intl.string(m.t.SMPT1k)),
-                        x(y.BRd.DARKER, m.intl.string(m.t.b8Cei3)),
-                        x(y.BRd.MIDNIGHT, m.intl.string(m.t.Do4ZJx)),
-                        x("system", m.intl.string(m.t["7rOU6j"])),
+                        O(m.BRd.LIGHT, g.intl.string(g.t.K2sFfo)),
+                        O(m.BRd.DARK, g.intl.string(g.t.SMPT1k)),
+                        O(m.BRd.DARKER, g.intl.string(g.t.b8Cei3)),
+                        O(m.BRd.MIDNIGHT, g.intl.string(g.t.Do4ZJx)),
+                        O("system", g.intl.string(g.t["7rOU6j"])),
                     ],
                 },
                 "theme-items",
             ),
         ];
     return (
-        S.push(
+        v.push(
             (0, r.jsxs)(
-                l.kSQ,
+                o.kSQ,
                 {
                     label: "UI Density",
                     children: [
-                        (0, r.jsx)(l.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "compact-ui",
                             group: "list-density",
-                            label: m.intl.string(m.t["7iegX4"]),
-                            checked: O === o.Pi.COMPACT,
+                            label: g.intl.string(g.t["7iegX4"]),
+                            checked: y === a.Pi.COMPACT,
                             action: () => {
-                                h.YC.updateSetting(o.Pi.COMPACT);
+                                p.YC.updateSetting(a.Pi.COMPACT);
                             },
                         }),
-                        (0, r.jsx)(l.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "default-ui",
                             group: "list-density",
-                            label: m.intl.string(m.t.bBvAEH),
-                            checked: O === o.Pi.DEFAULT,
+                            label: g.intl.string(g.t.bBvAEH),
+                            checked: y === a.Pi.DEFAULT,
                             action: () => {
-                                h.YC.updateSetting(o.Pi.DEFAULT);
+                                p.YC.updateSetting(a.Pi.DEFAULT);
                             },
                         }),
-                        (0, r.jsx)(l.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "cozy-ui",
                             group: "list-density",
-                            label: m.intl.string(m.t["4cuYHx"]),
-                            checked: O === o.Pi.COZY,
+                            label: g.intl.string(g.t["4cuYHx"]),
+                            checked: y === a.Pi.COZY,
                             action: () => {
-                                h.YC.updateSetting(o.Pi.COZY);
+                                p.YC.updateSetting(a.Pi.COZY);
                             },
                         }),
                     ],
@@ -98,28 +98,28 @@ function g() {
                 "list-density",
             ),
         ),
-        S.push(
+        v.push(
             (0, r.jsxs)(
-                l.kSQ,
+                o.kSQ,
                 {
                     label: "Message Display",
                     children: [
-                        (0, r.jsx)(l.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "cozy-chat",
                             group: "chat-density",
-                            label: m.intl.string(m.t.Jqj4cZ),
+                            label: g.intl.string(g.t.Jqj4cZ),
                             checked: !e,
                             action: () => {
-                                h.jU.updateSetting(!1), (0, c.ZZ)();
+                                p.jU.updateSetting(!1), (0, l.ZZ)();
                             },
                         }),
-                        (0, r.jsx)(l.k5B, {
+                        (0, r.jsx)(o.k5B, {
                             id: "compact-chat",
                             group: "chat-density",
-                            label: m.intl.string(m.t["1JNcPS"]),
+                            label: g.intl.string(g.t["1JNcPS"]),
                             checked: e,
                             action: () => {
-                                h.jU.updateSetting(!0), (0, c.ZZ)();
+                                p.jU.updateSetting(!0), (0, l.ZZ)();
                             },
                         }),
                     ],
@@ -127,6 +127,6 @@ function g() {
                 "chat-density",
             ),
         ),
-        S
+        v
     );
 }

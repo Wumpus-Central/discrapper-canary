@@ -5,11 +5,11 @@ n.d(t, {
     n(953529);
 var a = n(951288);
 n(647438);
-var r = n(722770),
+var i = n(722770),
     l = n(481060),
-    i = n(734934),
-    o = n(158238),
-    s = n(695346),
+    r = n(734934),
+    s = n(158238),
+    o = n(695346),
     c = n(70956),
     d = n(51144),
     u = n(246133),
@@ -47,25 +47,25 @@ function f(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
 function b(e) {
-    let { status: t, currentStatus: n, description: r } = e,
-        i = t !== m.Skl.ONLINE,
-        o = (0, a.jsx)(a.Fragment, {
+    let { status: t, currentStatus: n, description: i } = e,
+        r = t !== m.Skl.ONLINE,
+        s = (0, a.jsx)(a.Fragment, {
             children: x.map((e) => {
-                let { duration: r, label: i } = e;
+                let { duration: i, label: r } = e;
                 return (0, a.jsx)(
                     l.sNh,
                     {
-                        id: "".concat(t, "-").concat(r),
-                        label: i(),
+                        id: "".concat(t, "-").concat(i),
+                        label: r(),
                         action: () =>
                             (0, u.Z)({
                                 nextStatus: t,
                                 prevStatus: n,
-                                durationMillis: r,
+                                durationMillis: i,
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : g,
+                    null != i ? i : g,
                 );
             }),
         });
@@ -73,7 +73,7 @@ function b(e) {
         id: t,
         className: h.expiringStatusMenuItem,
         keepItemStyles: !0,
-        hasSubmenu: i,
+        hasSubmenu: r,
         label: (e) => {
             let { isFocused: n } = e;
             return (0, a.jsxs)("div", {
@@ -89,10 +89,10 @@ function b(e) {
                         className: h.status,
                         children: (0, d.u5)(t),
                     }),
-                    null != r &&
+                    null != i &&
                         (0, a.jsx)("div", {
                             className: h.description,
-                            children: r,
+                            children: i,
                         }),
                 ],
             });
@@ -104,7 +104,7 @@ function b(e) {
             });
         },
         dontCloseOnAction: !0,
-        children: i ? o : void 0,
+        children: r ? s : void 0,
     });
 }
 function v(e) {
@@ -113,21 +113,21 @@ function v(e) {
         n = f(t, new Date()),
         a = new Date();
     a.setDate(a.getDate() + 1);
-    let r = f(t, a);
+    let i = f(t, a);
     return n
         ? p.intl.formatToPlainString(p.t.ZxxHIO, { timeString: p.intl.data.formatTime(t, { format: "short" }) })
         : p.intl.formatToPlainString(p.t["9OFjSe"], {
-              dateString: r
+              dateString: i
                   ? p.intl.data.formatRelativeTime(1, "day", { numeric: "auto" })
                   : p.intl.data.formatDate(t, { dateStyle: "short" }),
               timeString: p.intl.data.formatTime(t, { format: "short" }),
           });
 }
 function j(e) {
-    let t = s.Cr.useSetting(),
-        n = (0, i.p)(),
-        c = o.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
-        d = s.fv.useSetting(),
+    let t = o.Cr.useSetting(),
+        n = (0, r.p)(),
+        c = s.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
+        d = o.fv.useSetting(),
         u = e === m.Skl.DND,
         f = (n) => {
             let a = v(t);
@@ -143,14 +143,14 @@ function j(e) {
         },
         j = (0, a.jsx)(a.Fragment, {
             children: x.map((t) => {
-                let { duration: n, label: r } = t;
+                let { duration: n, label: i } = t;
                 return (0, a.jsx)(
                     l.sNh,
                     {
                         id: "".concat(e, "-").concat(n),
-                        label: r(),
+                        label: i(),
                         action: () => {
-                            (0, i.oW)(!0, n);
+                            (0, r.oW)(!0, n);
                         },
                         dontCloseOnAction: !0,
                     },
@@ -214,7 +214,7 @@ function j(e) {
                                                               : u
                                                                 ? p.intl.string(p.t.gH3Frd)
                                                                 : p.intl.string(p.t["64pl82"]),
-                                                          color: n ? r.Z.BRAND_500 : u ? r.Z.RED_400 : r.Z.PRIMARY_500,
+                                                          color: n ? i.Z.BRAND_500 : u ? i.Z.RED_400 : i.Z.PRIMARY_500,
                                                       }),
                                                   ],
                                               }),
@@ -238,7 +238,7 @@ function j(e) {
                                           ],
                                       }),
                                   action: () => {
-                                      (0, i.oW)(!n);
+                                      (0, r.oW)(!n);
                                   },
                                   dontCloseOnAction: !0,
                                   children: j,

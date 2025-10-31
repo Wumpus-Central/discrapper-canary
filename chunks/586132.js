@@ -3,7 +3,7 @@ var r = n(427164),
     i = n(480218);
 let a = (0, r.le)({
     kind: "user",
-    name: "2025_10_force_sdr_emojis_stickers",
+    name: "2025-10-force-sdr-emojis-stickers",
     defaultConfig: { enabled: !1 },
     variations: {
         0: { enabled: !1 },

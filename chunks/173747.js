@@ -43,10 +43,10 @@ let v = new Set(),
 function D(e) {
     w.start(e + Math.random() * N, c.o);
 }
-function L() {
-    return !_.bm.getSetting() && (D(R), x());
-}
 function x() {
+    return !_.bm.getSetting() && (D(R), L());
+}
+function L() {
     if (!(0, y.Q)() || _.bm.getSetting()) return !1;
     let e = h.Z.entitledBranchIds,
         t = [];
@@ -58,10 +58,10 @@ function M() {
     if (!(0, y.Q)()) return !1;
     for (let e of A) {
         let { applicationId: t, branchId: n } = (0, b.CP)(e);
-        null != f.Z.getApplication(t) && (A.delete(e), k(t, n));
+        null != f.Z.getApplication(t) && (A.delete(e), j(t, n));
     }
 }
-function k(e, t) {
+function j(e, t) {
     if (null != I[t] && g.Z.shouldBeInstalled(e, t)) {
         let n = I[t],
             r = n.manifestIds,
@@ -75,7 +75,7 @@ function k(e, t) {
             });
     }
 }
-function j(e) {
+function k(e) {
     let { branchId: t } = e;
     v.add(t);
 }
@@ -95,7 +95,7 @@ function U(e) {
             locale: r,
             manifestIds: a,
         }),
-        k(t, n);
+        j(t, n);
 }
 function G(e) {
     let { branchId: t } = e;
@@ -148,7 +148,7 @@ function W(e) {
 }
 class K extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([h.Z], x), this.waitFor(f.Z, m.Z, g.Z, h.Z, p.Z);
+        this.syncWith([h.Z], L), this.waitFor(f.Z, m.Z, g.Z, h.Z, p.Z);
     }
     getTargetBuildId(e, t) {
         return null == I[t] ? null : I[t].id;
@@ -171,9 +171,9 @@ class K extends (r = o.ZP.Store) {
 }
 O(K, "displayName", "ApplicationBuildStore");
 let z = new K(l.Z, {
-    CONNECTION_OPEN: L,
+    CONNECTION_OPEN: x,
     GAMES_DATABASE_UPDATE: M,
-    APPLICATION_BUILD_FETCH_START: j,
+    APPLICATION_BUILD_FETCH_START: k,
     APPLICATION_BUILD_FETCH_SUCCESS: U,
     APPLICATION_BUILD_NOT_FOUND: G,
     APPLICATION_BUILD_SIZE_FETCH_START: B,

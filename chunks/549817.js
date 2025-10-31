@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(472816), n(794429), n(415506), n(388685), n(997841);
+n.d(t, { Z: () => x }), n(472816), n(794429), n(415506), n(388685), n(997841);
 var r = n(392711),
     i = n.n(r),
     a = n(544891),
@@ -149,7 +149,7 @@ function D(e, t, n) {
             removedRoleIds: n,
         });
 }
-let L = {
+let x = {
     selectOption(e, t, n, r) {
         let a = O.Z.getOnboardingPrompt(t);
         if (null == a) return;
@@ -199,8 +199,8 @@ let L = {
             (0, u.zS)(e, b, []), (0, u.aq)(e, { optInEnabled: !0 }), (0, u.og)(e, Array.from(i));
             let t = h.default.getCurrentUser();
             if (null != t) {
-                var L, x;
-                let n = null != (x = null == (L = p.ZP.getMember(e, t.id)) ? void 0 : L.flags) ? x : 0;
+                var x, L;
+                let n = null != (L = null == (x = p.ZP.getMember(e, t.id)) ? void 0 : x.flags) ? L : 0;
                 (0, u.aq)(e, { memberOptions: { flags: (0, g.mB)(n, S.q.COMPLETED_ONBOARDING, !0) } });
             }
         }

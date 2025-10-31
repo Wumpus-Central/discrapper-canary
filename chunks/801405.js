@@ -17,8 +17,8 @@ var r = n(951288),
     _ = n(228488),
     y = n(981631);
 function x(e) {
-    let { channel: t, appContext: n, popoutOpen: x, popoutWindow: v, currentWindow: j } = e,
-        { parentAnalyticsLocation: O } = (0, c.ZP)(),
+    let { channel: t, appContext: n, popoutOpen: x, popoutWindow: O, currentWindow: j } = e,
+        { parentAnalyticsLocation: v } = (0, c.ZP)(),
         C = n === y.IlC.POPOUT,
         I = i.useRef(null),
         { currentLayout: S, mode: E } = (0, l.cj)([d.Z], () => {
@@ -40,14 +40,14 @@ function x(e) {
     });
     let P = i.useRef(S),
         { currentDocument: T, rootNode: N } = i.useMemo(() => {
-            let e = null != v && C ? v.document : document,
+            let e = null != O && C ? O.document : document,
                 t = j.document.getElementById("app-mount");
             return {
                 currentWindow: j,
                 currentDocument: e,
                 rootNode: t,
             };
-        }, [v, C, j]),
+        }, [O, C, j]),
         R = x && !C,
         w = E === y.WtW.VIDEO && Z && !R,
         A = i.useCallback(
@@ -72,10 +72,10 @@ function x(e) {
         L = i.useCallback(
             (e) => () => {
                 null != N &&
-                    ((0, u.v)(O, u.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN),
+                    ((0, u.v)(v, u.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN),
                     e !== y.AEg.FULL_SCREEN ? ((P.current = e), A(e, y.AEg.FULL_SCREEN), (0, _.Dj)(N)) : D(e));
             },
-            [A, D, N, O],
+            [A, D, N, v],
         );
     i.useEffect(() => {
         let e = () => {
@@ -142,7 +142,7 @@ function x(e) {
         ? (0, r.jsx)(h.Z, {
               themeable: !1,
               node: N,
-              guestWindow: v,
+              guestWindow: O,
               onClick: L(S),
           })
         : null;

@@ -1,26 +1,26 @@
-t.d(l, { E: () => u }), t(388685);
-var a = t(951288),
-    n = t(647438),
-    o = t(793030),
-    i = t(442837),
-    r = t(481060),
-    s = t(594174);
-let u = {
+n.d(t, { E: () => c }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(793030),
+    o = n(442837),
+    s = n(481060),
+    l = n(594174);
+let c = {
     title: "TagGroup",
     stories: [
         {
             name: "TagGroup",
             id: "tag-group",
             component: function (e) {
-                let { selectionMode: l, removeable: t, layout: u } = e,
-                    d = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-                    c = n.useMemo(() => {
+                let { selectionMode: t, removeable: n, layout: c } = e,
+                    u = (0, o.e7)([l.default], () => l.default.getCurrentUser()),
+                    d = i.useMemo(() => {
                         var e;
                         return [
                             {
                                 id: "strength",
                                 label: "Strength",
-                                icon: r.z0B,
+                                icon: s.z0B,
                             },
                             {
                                 id: "dexterity",
@@ -35,7 +35,7 @@ let u = {
                                 label: "Wisdom",
                                 icon: {
                                     type: "avatar",
-                                    src: null != (e = null == d ? void 0 : d.getAvatarURL(void 0, 16)) ? e : "",
+                                    src: null != (e = null == u ? void 0 : u.getAvatarURL(void 0, 16)) ? e : "",
                                 },
                             },
                             {
@@ -43,48 +43,48 @@ let u = {
                                 label: "Charisma",
                             },
                         ];
-                    }, [d]),
-                    [b, p] = n.useState(c),
-                    y = n.useCallback(
+                    }, [u]),
+                    [f, _] = i.useState(d),
+                    p = i.useCallback(
                         (e) => {
-                            p(b.filter((l) => !e.has(l.id)));
+                            _(f.filter((t) => !e.has(t.id)));
                         },
-                        [b],
+                        [f],
                     ),
-                    m = n.useCallback(() => {
-                        p(c);
-                    }, [c]),
-                    f = (0, a.jsx)(o.QSK, {
+                    h = i.useCallback(() => {
+                        _(d);
+                    }, [d]),
+                    m = (0, r.jsx)(a.QSK, {
                         label: "Categories",
-                        selectionMode: l,
-                        layout: u,
-                        items: b,
-                        onRemove: t ? y : void 0,
+                        selectionMode: t,
+                        layout: c,
+                        items: f,
+                        onRemove: n ? p : void 0,
                     }),
-                    v =
-                        t &&
-                        (0, a.jsx)(r.Button, {
-                            disabled: b.length === c.length,
+                    g =
+                        n &&
+                        (0, r.jsx)(s.Button, {
+                            disabled: f.length === d.length,
                             text: "Reset",
-                            onClick: m,
+                            onClick: h,
                         });
-                return "inline" === u
-                    ? (0, a.jsxs)(r.Kqy, {
+                return "inline" === c
+                    ? (0, r.jsxs)(s.Kqy, {
                           gap: 24,
                           children: [
-                              (0, a.jsx)("div", {
+                              (0, r.jsx)("div", {
                                   style: {
                                       display: "flex",
                                       gap: 4,
                                   },
-                                  children: f,
+                                  children: m,
                               }),
-                              v,
+                              g,
                           ],
                       })
-                    : (0, a.jsxs)(r.Kqy, {
+                    : (0, r.jsxs)(s.Kqy, {
                           gap: 24,
-                          children: [f, v],
+                          children: [m, g],
                       });
             },
             controls: {

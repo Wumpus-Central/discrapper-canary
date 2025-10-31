@@ -56,7 +56,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,20 +68,20 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 let M = [],
-    k = {};
-function j() {
+    j = {};
+function k() {
     var e, t;
     let n = [],
         r = O.Ok.getSetting();
@@ -93,7 +93,7 @@ function j() {
     let o = A.Z.getStream();
     null != o && n.push(D({ type: P.IIU.STREAMING }, o));
     let l = new Set();
-    s().forEach(k, (e) => {
+    s().forEach(j, (e) => {
         let [, t] = e;
         null != t.application_id && (l.add(t.name), n.push(t));
     });
@@ -136,25 +136,25 @@ function j() {
     a()(M, n) || (M = n);
 }
 function U() {
-    (k = {}), j();
+    (j = {}), k();
 }
 function G(e) {
     let { socketId: t, pid: n, activity: r, partyPrivacy: i } = e;
-    if (a()(k[t], [n, r, i])) return !1;
-    null != r ? (k[t] = [n, r, i]) : delete k[t], j();
+    if (a()(j[t], [n, r, i])) return !1;
+    null != r ? (j[t] = [n, r, i]) : delete j[t], k();
 }
 function B(e) {
     let { socketId: t } = e;
-    delete k[t], j();
+    delete j[t], k();
 }
 function Z(e) {
     let { localActivities: t } = e;
-    (k = D({}, t)), j();
+    (j = D({}, t)), k();
 }
 function F() {
     let e = {},
         t = !1;
-    for (let [i, [a, o, s]] of Object.entries(k)) {
+    for (let [i, [a, o, s]] of Object.entries(j)) {
         var n, r;
         let l = null != (n = o.flags) ? n : 0,
             c = (0, d.S)(
@@ -164,17 +164,17 @@ function F() {
                 (0, d.D)(o),
                 s,
             );
-        c !== l ? ((e[i] = [a, x(D({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
+        c !== l ? ((e[i] = [a, L(D({}, o), { flags: c }), s]), (t = !0)) : (e[i] = [a, o, s]);
     }
-    return t ? ((k = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
+    return t ? ((j = e), "APPLICATION_ACTIVITIES_CHANGED") : "NO_CHANGES";
 }
 function V() {
-    F(), j();
+    F(), k();
 }
 class H extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, T.Z, S.Z, u.ZP, A.Z, g.Z, C.Z, m.Z, p.ZP, N.Z, R.Z, y.Z, v.Z),
-            this.syncWith([g.Z, m.Z], () => j());
+            this.syncWith([g.Z, m.Z], () => k());
     }
     getActivities() {
         return M;
@@ -192,31 +192,31 @@ class H extends (r = l.ZP.Store) {
         return M.find(e);
     }
     getApplicationActivities() {
-        return k;
+        return j;
     }
     getActivityForPID(e) {
-        for (let [t, n] of Object.values(k)) if (t === e) return n;
+        for (let [t, n] of Object.values(j)) if (t === e) return n;
         return null;
     }
 }
 w(H, "displayName", "LocalActivityStore");
 let Y = new H(c.Z, {
-    ROBLOX_SUBGAME_UPDATE: j,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: j,
+    ROBLOX_SUBGAME_UPDATE: k,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: k,
     OVERLAY_INITIALIZE: Z,
     START_SESSION: U,
     LOCAL_ACTIVITY_UPDATE: G,
     RPC_APP_DISCONNECTED: B,
-    RUNNING_GAMES_CHANGE: j,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: j,
-    SPOTIFY_PLAYER_STATE: j,
-    SPOTIFY_PLAYER_PLAY: j,
-    STREAMING_UPDATE: j,
-    USER_CONNECTIONS_UPDATE: j,
-    STREAM_START: j,
-    STREAM_STOP: j,
+    RUNNING_GAMES_CHANGE: k,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: k,
+    SPOTIFY_PLAYER_STATE: k,
+    SPOTIFY_PLAYER_PLAY: k,
+    STREAMING_UPDATE: k,
+    USER_CONNECTIONS_UPDATE: k,
+    STREAM_START: k,
+    STREAM_STOP: k,
     USER_SETTINGS_PROTO_UPDATE: V,
-    EMBEDDED_ACTIVITY_CLOSE: j,
-    UPDATE_HANG_STATUS: j,
-    RUNNING_GAME_TOGGLE_DETECTION: j,
+    EMBEDDED_ACTIVITY_CLOSE: k,
+    UPDATE_HANG_STATUS: k,
+    RUNNING_GAME_TOGGLE_DETECTION: k,
 });

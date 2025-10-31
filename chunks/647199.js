@@ -78,11 +78,11 @@ function C(e) {
             isPressed: v,
             preventFocusOnPress: C,
             shouldCancelOnPointerExit: w,
-            allowTextSelectionOnPress: L,
-            ref: x,
+            allowTextSelectionOnPress: x,
+            ref: L,
             ...M
         } = O(e),
-        [k, j] = (0, y.useState)(!1),
+        [j, k] = (0, y.useState)(!1),
         U = (0, y.useRef)({
             isPressed: !1,
             ignoreEmulatedMouseEvents: !1,
@@ -103,7 +103,7 @@ function C(e) {
                 let n = new I("pressstart", t, e);
                 a(n), (i = n.shouldStopPropagation);
             }
-            return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), j(!0), i;
+            return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), k(!0), i;
         }),
         F = (0, f.i)((e, r, i = !0) => {
             let a = U.current;
@@ -114,7 +114,7 @@ function C(e) {
                 let t = new I("pressend", r, e);
                 o(t), (s = t.shouldStopPropagation);
             }
-            if ((n && n(!1), j(!1), t && i && !u)) {
+            if ((n && n(!1), k(!1), t && i && !u)) {
                 let n = new I("press", r, e);
                 t(n), s && (s = n.shouldStopPropagation);
             }
@@ -139,7 +139,7 @@ function C(e) {
                 (t.activePointerId = null),
                 (t.pointerType = null),
                 B(),
-                L || (0, i.A)(t.target),
+                x || (0, i.A)(t.target),
                 t.disposables))
                     n();
                 t.disposables = [];
@@ -251,7 +251,7 @@ function C(e) {
                             (e.isOverTarget = !0),
                             (e.activePointerId = t.pointerId),
                             (e.target = t.currentTarget),
-                            L || (0, i.l)(e.target),
+                            x || (0, i.l)(e.target),
                             (r = Z(t, e.pointerType));
                         let o = (0, _.NI)(t.nativeEvent);
                         "releasePointerCapture" in o && o.releasePointerCapture(t.pointerId),
@@ -311,11 +311,11 @@ function C(e) {
                 };
             }
             return t;
-        }, [G, u, C, B, L, H, Y, F, Z, V, W, K]);
+        }, [G, u, C, B, x, H, Y, F, Z, V, W, K]);
     return (
         (0, y.useEffect)(() => {
-            if (!x) return;
-            let e = (0, p.r3)(x.current);
+            if (!L) return;
+            let e = (0, p.r3)(L.current);
             if (!e || !e.head || e.getElementById(S)) return;
             let t = e.createElement("style");
             (t.id = S),
@@ -327,17 +327,17 @@ function C(e) {
 }
     `.trim()),
                 e.head.prepend(t);
-        }, [x]),
+        }, [L]),
         (0, y.useEffect)(() => {
             let e = U.current;
             return () => {
                 var t;
-                for (let n of (L || (0, i.A)(null != (t = e.target) ? t : void 0), e.disposables)) n();
+                for (let n of (x || (0, i.A)(null != (t = e.target) ? t : void 0), e.disposables)) n();
                 e.disposables = [];
             };
-        }, [L]),
+        }, [x]),
         {
-            isPressed: v || k,
+            isPressed: v || j,
             pressProps: (0, c.d)(M, z, { [A]: !0 }),
         }
     );
@@ -352,7 +352,7 @@ function R(e, t) {
     return (
         ("Enter" === n || " " === n || "Spacebar" === n || "Space" === r) &&
         !(
-            (i instanceof (0, p.kR)(i).HTMLInputElement && !x(i, n)) ||
+            (i instanceof (0, p.kR)(i).HTMLInputElement && !L(i, n)) ||
             i instanceof (0, p.kR)(i).HTMLTextAreaElement ||
             i.isContentEditable
         ) &&
@@ -379,9 +379,9 @@ function w(e) {
     );
 }
 function D(e, t) {
-    return e instanceof HTMLInputElement ? !x(e, t) : w(e);
+    return e instanceof HTMLInputElement ? !L(e, t) : w(e);
 }
-let L = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
-function x(e, t) {
-    return "checkbox" === e.type || "radio" === e.type ? " " === t : L.has(e.type);
+let x = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
+function L(e, t) {
+    return "checkbox" === e.type || "radio" === e.type ? " " === t : x.has(e.type);
 }

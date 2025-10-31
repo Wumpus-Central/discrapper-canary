@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -128,7 +128,7 @@ class D extends (r = i.ZP.Store) {
     }
 }
 b(D, "displayName", "NewChannelsStore");
-let L = new D(a.Z, {
+let x = new D(a.Z, {
     BULK_CLEAR_RECENTS: S,
     CHANNEL_ACK: () => !0,
     CHANNEL_SELECT: A,

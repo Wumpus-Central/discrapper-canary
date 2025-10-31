@@ -9,26 +9,26 @@ var r,
     u = n(28664),
     d = n(481060),
     p = n(239091),
-    f = n(134616),
-    h = n(714338),
+    h = n(134616),
+    f = n(714338),
     g = n(212819),
     m = n(815372),
     b = n(14429),
     _ = n(576855),
-    O = n(313201),
-    y = n(991346),
+    y = n(313201),
+    O = n(991346),
     v = n(592125),
     j = n(888369),
     C = n(430824),
-    E = n(158776),
-    x = n(306680),
+    x = n(158776),
+    E = n(306680),
     S = n(944486),
     I = n(938475),
     P = n(483360),
     N = n(459273),
     Z = n(585483),
-    T = n(63063),
-    w = n(51596),
+    w = n(63063),
+    T = n(51596),
     A = n(823385),
     R = n(415795),
     D = n(670512),
@@ -94,7 +94,7 @@ let V = () =>
             (0, i.jsx)("div", {
                 className: G.emptyStateCTA,
                 children: (0, i.jsx)(d.Anchor, {
-                    href: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+                    href: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: k.intl.string(k.t["4iPfEO"]),
                 }),
             }),
@@ -115,12 +115,12 @@ class H extends (r = l.Component) {
     }
 }
 U(H, "defaultProps", { unread: !1 });
-let z = c.ZP.connectStores([x.ZP, v.Z], (e) => {
+let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
         let { channel: t } = e;
         return {
-            unread: x.ZP.hasUnread(t.id),
-            mentions: x.ZP.getMentionCount(t.id),
-            isMentionLowImportance: x.ZP.getIsMentionLowImportance(t.id),
+            unread: E.ZP.hasUnread(t.id),
+            mentions: E.ZP.getMentionCount(t.id),
+            isMentionLowImportance: E.ZP.getIsMentionLowImportance(t.id),
             category: v.Z.getChannel(t.parent_id),
         };
     })(H),
@@ -134,26 +134,26 @@ let z = c.ZP.connectStores([x.ZP, v.Z], (e) => {
         let { guild: t } = e;
         return { unread: j.default.hasUnread(t.id) };
     })(R.ic),
-    Y = c.ZP.connectStores([x.ZP, E.Z], (e) => {
+    Y = c.ZP.connectStores([E.ZP, x.Z], (e) => {
         var t;
         let { channel: n } = e,
             r = null,
-            i = E.Z.getState().statuses;
+            i = x.Z.getState().statuses;
         return (
             (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === M.Skl.ONLINE)) && (r = M.Skl.ONLINE),
             {
-                mentions: x.ZP.getMentionCount(n.id),
+                mentions: E.ZP.getMentionCount(n.id),
                 status: r,
             }
         );
     })(R.PZ),
-    q = c.ZP.connectStores([v.Z, x.ZP, E.Z], (e) => {
+    q = c.ZP.connectStores([v.Z, E.ZP, x.Z], (e) => {
         let { user: t } = e,
             n = v.Z.getDMFromUserId(t.id);
         return {
-            mentions: null != n ? x.ZP.getMentionCount(n) : 0,
-            status: E.Z.getStatus(t.id),
-            isMobile: E.Z.isMobileOnline(t.id),
+            mentions: null != n ? E.ZP.getMentionCount(n) : 0,
+            status: x.Z.getStatus(t.id),
+            isMobile: x.Z.isMobileOnline(t.id),
         };
     })(R.n5);
 function X(e, t, n) {
@@ -171,10 +171,10 @@ function X(e, t, n) {
 }
 class Q extends l.PureComponent {
     componentDidMount() {
-        h.Z.disable(), h.Z.enableTemp(f.u);
+        f.Z.disable(), f.Z.enableTemp(h.u);
     }
     componentWillUnmount() {
-        h.Z.disableTemp(), h.Z.enable();
+        f.Z.disableTemp(), f.Z.enable();
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: r } = this.state,
@@ -192,10 +192,10 @@ class Q extends l.PureComponent {
                   }));
     }
     close() {
-        (0, w.Cp)();
+        (0, T.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, w.yC)(e);
+        this.setState({ query: e }), (0, T.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -274,7 +274,7 @@ class Q extends l.PureComponent {
                 textChannelSymbolHook: (e, t) => X(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
                 voiceChannelSymbolHook: (e, t) => X(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJp"])),
                 guildSymbolHook: (e, t) => X(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWi)),
-                helpdeskArticle: T.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+                helpdeskArticle: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -300,7 +300,7 @@ class Q extends l.PureComponent {
         super(...e),
             U(this, "scrollerRef", l.createRef()),
             U(this, "inputRef", l.createRef()),
-            U(this, "_listId", (0, O.hQ)()),
+            U(this, "_listId", (0, y.hQ)()),
             U(this, "state", {
                 query: this.props.query,
                 mouseFocusDisabled: !0,
@@ -314,10 +314,10 @@ class Q extends l.PureComponent {
                 !1 !== e && this.setState({ mouseFocusDisabled: !1 });
             }),
             U(this, "focusResult", (e) => {
-                this.state.mouseFocusDisabled || (0, w.tF)(this.props.results.indexOf(e));
+                this.state.mouseFocusDisabled || (0, T.tF)(this.props.results.indexOf(e));
             }),
             U(this, "selectResult", (e) => {
-                (0, w.Se)(e, this.props.queryMode === g.h8.TEXT_CHANNEL);
+                (0, T.Se)(e, this.props.queryMode === g.h8.TEXT_CHANNEL);
             }),
             U(this, "handleContextMenu", (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -348,7 +348,7 @@ class Q extends l.PureComponent {
                                     e,
                                     F(B({}, n), {
                                         guild: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: T.Cp,
                                         hideSettings: !0,
                                     }),
                                 );
@@ -375,7 +375,7 @@ class Q extends l.PureComponent {
                                             F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -394,7 +394,7 @@ class Q extends l.PureComponent {
                                             F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -408,7 +408,7 @@ class Q extends l.PureComponent {
                                             e,
                                             F(B({}, t), {
                                                 channel: r,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -421,7 +421,7 @@ class Q extends l.PureComponent {
                                             F(B({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: T.Cp,
                                             }),
                                         );
                                 });
@@ -443,7 +443,7 @@ class Q extends l.PureComponent {
                                     F(B({}, n), {
                                         channel: t.record,
                                         selected: S.Z.getChannelId() === t.record.id,
-                                        onSelect: w.Cp,
+                                        onSelect: T.Cp,
                                     }),
                                 );
                         });
@@ -457,7 +457,7 @@ class Q extends l.PureComponent {
                                     e,
                                     F(B({}, n), {
                                         user: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: T.Cp,
                                     }),
                                 );
                         });
@@ -471,11 +471,11 @@ class Q extends l.PureComponent {
                     { selectedIndex: l } = this.props;
                 switch (i) {
                     case "escape":
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, w.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, T.Cp)();
                         return;
                     case "k":
                         (!0 === e.ctrlKey || !0 === e.metaKey) &&
-                            (e.preventDefault(), e.stopPropagation(), (0, w.Cp)());
+                            (e.preventDefault(), e.stopPropagation(), (0, T.Cp)());
                         return;
                     case "enter": {
                         if (-1 === l) return;
@@ -501,7 +501,7 @@ class Q extends l.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, w.tF)(l);
+                e.preventDefault(), (0, T.tF)(l);
             }),
             U(this, "handleGlobalPaste", (e) => {
                 var t, n;
@@ -658,7 +658,7 @@ class Q extends l.PureComponent {
 }
 function J(e) {
     let t = (0, c.cj)([A.Z], () => A.Z.getProps()),
-        n = (0, y.Pt)(),
+        n = (0, O.Pt)(),
         r = L.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
         o = l.useMemo(
             () =>

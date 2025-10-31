@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+n.d(t, { Z: () => O }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -9,39 +9,39 @@ var r = n(951288),
     u = n(937111),
     d = n(914010),
     p = n(289090),
-    f = n(727258),
-    h = n(234383),
+    h = n(727258),
+    f = n(234383),
     g = n(179809),
     m = n(588275),
     b = n(388032),
     _ = n(264096);
-function O(e) {
+function y(e) {
     let { onActivate: t, children: n } = e,
         s = i.useRef(null),
         d = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
         p = i.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        f = (0, a.Z)(d),
-        h = i.useRef(null);
+        h = (0, a.Z)(d),
+        f = i.useRef(null);
     return (
         i.useEffect(() => {
-            if (d && d !== f) {
+            if (d && d !== h) {
                 var e, n, r, i, l;
                 t(),
-                    null == (l = h.current) ||
+                    null == (l = f.current) ||
                         null == (i = l.ref) ||
                         null == (r = i.current) ||
                         null == (n = r.layerRef) ||
                         null == (e = n.current) ||
                         e.updatePosition();
             }
-        }, [h, d, f, t]),
+        }, [f, d, h, t]),
         (0, r.jsxs)("div", {
             className: _.container,
             children: [
                 (0, r.jsx)(o.yRy, {
-                    ref: h,
+                    ref: f,
                     targetElementRef: s,
                     shouldShow: d,
                     renderPopout: () =>
@@ -136,33 +136,33 @@ function O(e) {
         })
     );
 }
-function y(e) {
+function O(e) {
     let { onActivate: t } = e,
-        [n, y] = i.useState(!1),
-        j = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        v = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        x = (0, h.Z)(),
-        C = (0, a.Z)(j),
+        [n, O] = i.useState(!1),
+        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        j = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        C = (0, f.Z)(),
+        x = (0, a.Z)(v),
         E = i.useMemo(() => {
-            let e = (0, f.qQ)({
+            let e = (0, h.qQ)({
                 folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: b.intl.string(b.t["scsU+l"]),
                 expanded: n,
                 guildIds: [],
             });
-            for (let t of x) e.children.push((0, f.Mg)(t, e.id));
+            for (let t of C) e.children.push((0, h.Mg)(t, e.id));
             return e;
-        }, [x, n]);
+        }, [C, n]);
     i.useEffect(() => {
-        n && !v && s.Z.fetchRequestToJoinGuilds();
-    }, [n, v]);
-    let S = null != j && x.includes(j);
+        n && !j && s.Z.fetchRequestToJoinGuilds();
+    }, [n, j]);
+    let S = null != v && C.includes(v);
     return (i.useEffect(() => {
-        !n && S && C !== j && y(!0);
-    }, [n, S, C, j]),
-    0 === x.length)
+        !n && S && x !== v && O(!0);
+    }, [n, S, x, v]),
+    0 === C.length)
         ? null
-        : (0, r.jsx)(O, {
+        : (0, r.jsx)(y, {
               onActivate: t,
               children: (0, r.jsx)(g.Z, {
                   folderNode: E,
@@ -171,7 +171,7 @@ function y(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      y(!n), c.ZP.clearCoachmark();
+                      O(!n), c.ZP.clearCoachmark();
                   },
                   folderButtonSize: "icon",
                   folderButtonContent: (0, r.jsx)("div", {
@@ -182,7 +182,7 @@ function y(e) {
                       }),
                   }),
                   renderChildNode: function (e, t, n) {
-                      return e.type !== f.eD.GUILD
+                      return e.type !== h.eD.GUILD
                           ? null
                           : (0, r.jsx)(
                                 m.Z,

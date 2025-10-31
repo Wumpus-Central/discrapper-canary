@@ -34,11 +34,11 @@ var r = n(951288),
     P = n(145597),
     w = n(444295),
     D = n(804570),
-    L = n(388627),
-    x = n(532658),
+    x = n(388627),
+    L = n(532658),
     M = n(501787),
-    k = n(981631),
-    j = n(65154),
+    j = n(981631),
+    k = n(65154),
     U = n(388032),
     G = n(213285);
 function B(e, t, n) {
@@ -100,7 +100,7 @@ let H = (e) => {
 function Y(e) {
     var t, n;
     let { hiddenVoiceStates: i, voiceStateMap: a, size: c, locked: u, flipped: f } = e,
-        _ = (0, x.e5)(c),
+        _ = (0, L.e5)(c),
         p = (0, s.Wu)(
             [I.default, y.Z],
             () =>
@@ -146,7 +146,7 @@ function W(e) {
 let K = i.memo(function (e) {
     let {
             id: t,
-            context: n = j.Yn.DEFAULT,
+            context: n = k.Yn.DEFAULT,
             channel: a,
             overlayVoiceStates: o,
             displayNameMode: c,
@@ -175,7 +175,7 @@ let K = i.memo(function (e) {
         );
     i.useEffect(() => {
         T &&
-            (0, w.zi)(k.Odu.VOICE_V3, {
+            (0, w.zi)(j.Odu.VOICE_V3, {
                 locked: A.default.isInstanceLocked(),
                 shownUserIds: Array.from(O),
                 liveUserIds: S,
@@ -191,8 +191,8 @@ let K = i.memo(function (e) {
                   }),
         R = y !== M.Og ? I.slice(0, y) : I,
         P = y !== M.Og ? I.slice(y) : [],
-        L = v.get(P[0]),
-        B = u === k.OYC.ALWAYS && y !== M.Og;
+        x = v.get(P[0]),
+        B = u === j.OYC.ALWAYS && y !== M.Og;
     return T
         ? (0, r.jsxs)("div", {
               className: G.voiceUserContainer,
@@ -202,7 +202,7 @@ let K = i.memo(function (e) {
                       return null == i
                           ? null
                           : (0, r.jsx)(
-                                x.ZP,
+                                L.ZP,
                                 {
                                     sortedVoiceState: i,
                                     channel: a,
@@ -221,11 +221,11 @@ let K = i.memo(function (e) {
                   }),
                   B &&
                       1 === P.length &&
-                      null != L &&
+                      null != x &&
                       (0, r.jsx)(
-                          x.ZP,
+                          L.ZP,
                           {
-                              sortedVoiceState: L,
+                              sortedVoiceState: x,
                               channel: a,
                               widgetId: t,
                               flipped: !g,
@@ -244,7 +244,7 @@ let K = i.memo(function (e) {
                       (0, r.jsx)(Y, {
                           hiddenVoiceStates: P,
                           voiceStateMap: v,
-                          size: (0, x.px)(b),
+                          size: (0, L.px)(b),
                           locked: d,
                           flipped: !g,
                       }),
@@ -323,9 +323,9 @@ function q(e) {
     let { isSettingsPreview: n } = e,
         i = (0, s.e7)([O.Z, y.Z], () => y.Z.getChannel(O.Z.getVoiceChannelId())),
         a = (0, f.ZP)(i),
-        o = z(j.Yn.DEFAULT, e.maxDisplayedVoiceStates),
+        o = z(k.Yn.DEFAULT, e.maxDisplayedVoiceStates),
         l = (0, s.e7)([E.Z], () => E.Z.getStreamerActiveStreamMetadata()),
-        c = (0, L.II)(),
+        c = (0, x.II)(),
         d = (0, u.q)(null == c ? void 0 : c.id),
         p = (0, s.cj)([E.Z, A.default], () => {
             let e = E.Z.getCurrentUserActiveStream();

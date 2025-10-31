@@ -10,17 +10,17 @@ var r = n(45792),
     d = n(313789),
     p = n(626135),
     f = n(12647),
-    h = n(630388),
-    m = n(49012),
+    m = n(630388),
+    h = n(49012),
     g = n(358085),
     _ = n(996106),
     b = n(914946),
     E = n(452426),
     O = n(186901),
     I = n(981631),
-    v = n(701488),
-    y = n(674563);
-let C = new Set([v.Fu, v.JT]),
+    y = n(701488),
+    v = n(674563);
+let C = new Set([y.Fu, y.JT]),
     S = new Set(["www.nytimes.com", "apps.apple.com", "play.google.com"]),
     T = new Set([
         "p-ty8do4dje6.exmggames.com",
@@ -33,28 +33,28 @@ let C = new Set([v.Fu, v.JT]),
     ]),
     N = new Map([
         [
-            y.Vt,
+            v.Vt,
             {
                 trustedHosts: S,
                 trustedUntilEpochMs: new Date("2027-01-15T00:00:00").valueOf(),
             },
         ],
         [
-            y.fd,
+            v.fd,
             {
                 trustedHosts: S,
                 trustedUntilEpochMs: new Date("2027-01-15T00:00:00").valueOf(),
             },
         ],
         [
-            y.He,
+            v.He,
             {
                 trustedHosts: S,
                 trustedUntilEpochMs: new Date("2027-01-15T00:00:00").valueOf(),
             },
         ],
         [
-            y.Zs,
+            v.Zs,
             {
                 trustedHosts: T,
                 trustedUntilEpochMs: new Date("2026-01-01T00:00:00").valueOf(),
@@ -82,9 +82,9 @@ let C = new Set([v.Fu, v.JT]),
                         let e = (0, l.R)() ? I.KJ3.ACTIVITY_POPOUT : null;
                         f.Z.focus(e, !0);
                     }
-                    let h = u.Z.getApplication(null == (o = t.application) ? void 0 : o.id),
+                    let m = u.Z.getApplication(null == (o = t.application) ? void 0 : o.id),
                         _ = (0, c.p)(null == r ? void 0 : r.location),
-                        b = (null == h ? void 0 : h.id) !== void 0 ? N.get(h.id) : void 0;
+                        b = (null == m ? void 0 : m.id) !== void 0 ? N.get(m.id) : void 0;
                     if (void 0 !== b && b.trustedUntilEpochMs >= Date.now() && b.trustedHosts.has(e.host))
                         return (
                             (0, i.Z)(a),
@@ -96,7 +96,7 @@ let C = new Set([v.Fu, v.JT]),
                             Promise.resolve({ opened: !0 })
                         );
                     return new Promise((e) =>
-                        (0, m.q)(
+                        (0, h.q)(
                             {
                                 href: a,
                                 shouldConfirm: !0,
@@ -123,7 +123,7 @@ let C = new Set([v.Fu, v.JT]),
                             void 0,
                             void 0,
                             (0, s.z)({
-                                application: h,
+                                application: m,
                                 channelId: _,
                             }),
                         ),
@@ -162,7 +162,7 @@ let C = new Set([v.Fu, v.JT]),
                 (0, b.bu)(n.transport);
                 let a = (0, b._f)(n.application);
                 if (null == a) throw new _.Z({ errorCode: I.lTL.INVALID_COMMAND }, "No application.");
-                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, I.udG.EMBEDDED))
+                if (!(0, m.yE)(null != (t = n.application.flags) ? t : 0, I.udG.EMBEDDED))
                     throw new _.Z({ errorCode: I.lTL.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
                     (0, o._)({

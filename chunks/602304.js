@@ -1,22 +1,22 @@
-n.d(e, { a: () => d });
+n.d(e, { a: () => E });
 var i = n(951288),
     l = n(657707),
-    u = n(509613),
-    r = n(313789),
+    r = n(509613),
+    u = n(313789),
     s = n(649157),
-    o = n(726985),
-    a = n(388032);
-let c = (0, u.x1)(r.n.LOCALE_PANE, {
+    a = n(726985),
+    o = n(388032);
+let c = (0, r.x1)(u.n.LOCALE_PANE, {
         buildLayout: () => [],
         render: () => (0, i.jsx)(s.Z, {}),
     }),
-    E = (0, u.wf)(r.n.LOCALE_PANEL, {
-        useTitle: () => a.intl.string(a.t.IHMsPn),
+    d = (0, r.wf)(u.n.LOCALE_PANEL, {
+        useTitle: () => o.intl.string(o.t.IHMsPn),
         buildLayout: () => [c],
     }),
-    d = (0, u.m7)(r.n.LOCALE_SIDEBAR_ITEM, {
+    E = (0, r.m7)(u.n.LOCALE_SIDEBAR_ITEM, {
         icon: l.os0,
-        useTitle: () => a.intl.string(a.t.IHMsPn),
-        legacySearchKey: o.s6.LANGUAGE,
-        buildLayout: () => [E],
+        useTitle: () => o.intl.string(o.t.IHMsPn),
+        legacySearchKey: a.s6.LANGUAGE,
+        buildLayout: () => [d],
     });

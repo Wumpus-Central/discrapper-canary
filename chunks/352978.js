@@ -1,6 +1,6 @@
 n.d(t, {
-    L: () => p,
-    Z: () => _,
+    L: () => f,
+    Z: () => h,
 }),
     n(388685);
 var r,
@@ -8,77 +8,77 @@ var r,
     l = n(647438),
     a = n(120356),
     o = n.n(a),
-    c = n(481060),
-    s = n(885524),
+    s = n(481060),
+    c = n(885524),
     u = n(38755),
     d = n(153066),
-    f = n(412418),
-    p = (((r = {}).CONTAIN = "contain"), (r.COVER = "cover"), r);
-let _ = l.memo(function (e) {
+    p = n(412418),
+    f = (((r = {}).CONTAIN = "contain"), (r.COVER = "cover"), r);
+let h = l.memo(function (e) {
     let {
             streamId: t,
             onResize: n,
             wrapperClassName: r,
             videoComponent: a,
-            className: p,
-            fit: _ = "contain",
+            className: f,
+            fit: h = "contain",
             mirror: m = !1,
             paused: g = !1,
-            streamPreviewURL: v,
-            videoSpinnerContext: b,
-            userId: E,
-            streamKey: h,
+            streamPreviewURL: b,
+            videoSpinnerContext: _,
+            userId: y,
+            streamKey: C,
         } = e,
-        [S, y] = l.useState(!0);
+        [v, O] = l.useState(!0);
     (0, u.Z)({
         location: "VideoStream",
-        videoSpinnerContext: b,
-        userId: E,
+        videoSpinnerContext: _,
+        userId: y,
         streamId: t,
-        loading: S,
+        loading: v,
         paused: g,
     });
-    let { onReady: O } = (0, s.Z)({
+    let { onReady: x } = (0, c.Z)({
             streamId: t,
-            userId: E,
-            loading: S,
-            videoSpinnerContext: b,
-            streamKey: h,
+            userId: y,
+            loading: v,
+            videoSpinnerContext: _,
+            streamKey: C,
             paused: g,
         }),
-        I = l.useCallback(() => {
-            y(!1), O();
-        }, [O]);
+        E = l.useCallback(() => {
+            O(!1), x();
+        }, [x]);
     return (0, i.jsxs)("div", {
-        className: o()(f.wrapper, r),
+        className: o()(p.wrapper, r),
         children: [
             null != t &&
                 (0, i.jsx)(a, {
-                    className: o()(f.video, (0, d.l)(f, "video", _), { [f.mirror]: m }, p),
+                    className: o()(p.video, (0, d.l)(p, "video", h), { [p.mirror]: m }, f),
                     streamId: t,
                     onResize: n,
-                    onReady: I,
+                    onReady: E,
                     paused: g,
                 }),
             g
                 ? null
                 : (0, i.jsx)("div", {
-                      className: o()(f.previewWrapper, { [f.loading]: S }),
+                      className: o()(p.previewWrapper, { [p.loading]: v }),
                       children:
-                          S &&
+                          v &&
                           (0, i.jsxs)(l.Fragment, {
                               children: [
-                                  null != v
+                                  null != b
                                       ? (0, i.jsx)("img", {
-                                            src: v,
+                                            src: b,
                                             alt: "",
-                                            className: f.previewImage,
+                                            className: p.previewImage,
                                         })
                                       : (0, i.jsx)("div", {
-                                            className: f.emptyPreviewWrapper,
-                                            children: (0, i.jsx)("div", { className: f.emptyPreview }),
+                                            className: p.emptyPreviewWrapper,
+                                            children: (0, i.jsx)("div", { className: p.emptyPreview }),
                                         }),
-                                  (0, i.jsx)(c.$jN, { className: f.spinner }),
+                                  (0, i.jsx)(s.$jN, { className: p.spinner }),
                               ],
                           }),
                   }),

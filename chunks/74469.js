@@ -107,24 +107,24 @@ let v = (0, l.hQ)(),
                 },
                 [R],
             ),
-            L = i.useCallback(
+            x = i.useCallback(
                 (e) => {
                     T(g.L.TAKE_ACTION), null == l || l(e);
                 },
                 [T, l],
             ),
-            x = i.useCallback((e) => e === C, [C]),
+            L = i.useCallback((e) => e === C, [C]),
             M = i.useCallback((e) => e, []),
-            k = i.useCallback(() => {
+            j = i.useCallback(() => {
                 T(g.L.TAKE_ACTION), null == l || l(null);
             }, [T, l]),
-            j = i.useRef(null);
+            k = i.useRef(null);
         return (
-            (0, p.Z)(j, b.Y_.GUILD_TAG),
+            (0, p.Z)(k, b.Y_.GUILD_TAG),
             (0, r.jsxs)(_.Z, {
                 title: y.intl.string(y.t.Pdd1nd),
                 titleId: v,
-                ref: j,
+                ref: k,
                 titleIcon:
                     I === o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&
                     (0, r.jsx)(s.IGR, {
@@ -140,14 +140,14 @@ let v = (0, l.hQ)(),
                     (0, r.jsx)(s.PhF, {
                         className: O.select,
                         optionClassName: O.selectPopout,
-                        isSelected: x,
+                        isSelected: L,
                         options: N,
-                        select: L,
+                        select: x,
                         renderLeading: P,
                         renderTrailing: w,
                         renderOptionValue: D,
                         serialize: M,
-                        clear: k,
+                        clear: j,
                         clearable: null != C,
                         maxVisibleItems: 8,
                     }),

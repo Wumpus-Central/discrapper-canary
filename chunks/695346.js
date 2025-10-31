@@ -1,8 +1,8 @@
 n.d(t, {
-    A2: () => e2,
+    A2: () => e3,
     AY: () => ei,
     CM: () => el,
-    CW: () => ek,
+    CW: () => ej,
     Cr: () => eE,
     DC: () => ec,
     Eo: () => ez,
@@ -10,7 +10,7 @@ n.d(t, {
     Fg: () => ee,
     G6: () => eh,
     H1: () => M,
-    HV: () => e3,
+    HV: () => e2,
     I0: () => U,
     JG: () => eV,
     JN: () => ea,
@@ -32,16 +32,16 @@ n.d(t, {
     SE: () => eM,
     Sb: () => eR,
     Sh: () => eK,
-    T4: () => x,
+    T4: () => L,
     UP: () => e_,
     V6: () => N,
-    Wp: () => eL,
+    Wp: () => ex,
     Xc: () => F,
-    Xk: () => k,
+    Xk: () => j,
     Xr: () => ep,
     YC: () => e1,
     Yk: () => eD,
-    _O: () => L,
+    _O: () => x,
     _j: () => eF,
     bh: () => eo,
     bm: () => ed,
@@ -74,7 +74,7 @@ n.d(t, {
     nc: () => eS,
     nh: () => eW,
     no: () => eG,
-    qF: () => j,
+    qF: () => k,
     rN: () => eA,
     rR: () => e4,
     tU: () => eO,
@@ -228,13 +228,13 @@ let A = (0, f.Zc)(
         (e) => (null != e ? e : w),
         (e) => e,
     ),
-    L = (0, f.Zc)(
+    x = (0, f.Zc)(
         "textAndImages",
         "stickerPickerCollapsedSections",
         (e) => (null != e ? e : w),
         (e) => e,
     ),
-    x = (0, f.Zc)(
+    L = (0, f.Zc)(
         "textAndImages",
         "soundboardPickerCollapsedSections",
         (e) => (null != e ? e : w),
@@ -249,7 +249,7 @@ let A = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    k = (0, f.Zc)(
+    j = (0, f.Zc)(
         "textAndImages",
         "showCommandSuggestions",
         (e) => {
@@ -258,7 +258,7 @@ let A = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    j = (0, f.Zc)(
+    k = (0, f.Zc)(
         "voiceAndVideo",
         "alwaysPreviewVideo",
         (e) => {
@@ -805,7 +805,7 @@ let eR = (0, f.KM)(
                 return null == (e = _.Z.getOverride("animateEmoji")) ? void 0 : e.value;
             }),
     ),
-    eL = (0, f.R2)(
+    ex = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",
@@ -830,25 +830,25 @@ let eR = (0, f.KM)(
                 return null == (e = _.Z.getOverride("animateStickers")) ? void 0 : e.value;
             }),
     ),
-    ex = [],
+    eL = [],
     eM = (0, f.Zc)(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => (null != e ? e : ex),
+        (e) => (null != e ? e : eL),
         (e) => e,
     ),
-    ek = (0, f.Zc)(
+    ej = (0, f.Zc)(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => (null != e ? e : ex),
+        (e) => (null != e ? e : eL),
         (e) => e,
         { delay: h.fy.FREQUENT_USER_ACTION },
     ),
-    ej = [],
+    ek = [],
     eU = (0, f.Zc)(
         "privacy",
         "activityJoiningRestrictedGuildIds",
-        (e) => (null != e ? e : ej),
+        (e) => (null != e ? e : ek),
         (e) => e,
     );
 (0, f.TG)({
@@ -1023,7 +1023,7 @@ let e$ = (0, f.Zc)(
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e,
     ),
-    e2 = (0, f.Zc)(
+    e3 = (0, f.Zc)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>
@@ -1036,7 +1036,7 @@ let e$ = (0, f.Zc)(
             ),
         { delay: h.fy.AUTOMATED },
     ),
-    e3 = (0, f.Zc)(
+    e2 = (0, f.Zc)(
         "textAndImages",
         "showMentionSuggestions",
         (e) => {

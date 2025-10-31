@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(951288),
     i = n(647438),
     l = n(399606),
@@ -9,16 +9,16 @@ var r = n(951288),
     u = n(522651),
     d = n(765585),
     p = n(870569),
-    f = n(819640),
-    h = n(556296),
+    h = n(819640),
+    f = n(556296),
     g = n(13140),
     m = n(924557),
     b = n(435064),
     _ = n(39604),
-    O = n(981631),
-    y = n(388032),
-    j = n(611372);
-function v(e) {
+    y = n(981631),
+    O = n(388032),
+    v = n(611372);
+function j(e) {
     (0, s.jW)(e, async () => {
         let { default: e } = await n.e("21960").then(n.bind(n, 999466));
         return (t) =>
@@ -52,7 +52,7 @@ function v(e) {
             );
     });
 }
-let x = (e) => {
+let C = (e) => {
         let { keybindString: t, children: n, targetElementRef: i } = e;
         return (0, r.jsx)(a.yRy, {
             targetElementRef: i,
@@ -65,31 +65,31 @@ let x = (e) => {
                     dismissibleContent: o.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
                     shouldUseHorizontalButtons: !0,
                     inlineArt: !0,
-                    artClassName: j.clipsEducationArt,
+                    artClassName: v.clipsEducationArt,
                     position: "top",
                     header: (0, r.jsx)("div", {
-                        className: j.header,
-                        children: y.intl.format(y.t["o+srEw"], {
+                        className: v.header,
+                        children: O.intl.format(O.t["o+srEw"], {
                             keybind: t,
                             keybindHook: () =>
                                 (0, r.jsx)("span", {
-                                    className: j.keybindHintKeys,
+                                    className: v.keybindHintKeys,
                                     children: (0, r.jsx)(a.M2$, {
-                                        className: j.keybindShortcut,
+                                        className: v.keybindShortcut,
                                         shortcut: t,
                                     }),
                                 }),
                         }),
                     }),
-                    headerClassName: j.clipsEducationHeader,
+                    headerClassName: v.clipsEducationHeader,
                     body: (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "always-white",
-                        className: j.bodyText,
-                        children: y.intl.format(y.t.DWeRm1, {
+                        className: v.bodyText,
+                        children: O.intl.format(O.t.DWeRm1, {
                             keybindHook: () =>
                                 (0, r.jsx)("div", {
-                                    className: j.keyCombo,
+                                    className: v.keyCombo,
                                     children: t,
                                 }),
                             keybind: t,
@@ -103,32 +103,32 @@ let x = (e) => {
             children: () => n,
         });
     },
-    C = () => {
+    x = () => {
         let e = i.useRef(null),
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
-            n = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
+            n = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
             o = (0, m.Go)(),
             { clipsEnabled: s, isAtMaxSavingClipsOperations: d } = (0, l.cj)([b.Z], () => ({
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations(),
             })),
-            j = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(O.kg4.SAVE_CLIP));
-        if (!(o && s) || null == j || n) return null;
-        let C = g.BB(j.shortcut, !0);
-        return (0, r.jsx)(x, {
-            keybindString: C,
+            v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
+        if (!(o && s) || null == v || n) return null;
+        let x = g.BB(v.shortcut, !0);
+        return (0, r.jsx)(C, {
+            keybindString: x,
             targetElementRef: e,
             children: (0, r.jsx)(p.Z, {
                 ref: e,
                 disabled: d,
                 tooltipText:
-                    null != j
-                        ? y.intl.formatToPlainString(y.t.HIMcv1, { hotkey: g.BB(null == j ? void 0 : j.shortcut, !0) })
-                        : y.intl.string(y.t.s52pju),
+                    null != v
+                        ? O.intl.formatToPlainString(O.t.HIMcv1, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) })
+                        : O.intl.string(O.t.s52pju),
                 onClick: () => {
-                    (0, _.C1)(), (0, u.v)(t, u.d.CLIP);
+                    (0, _.br)(), (0, u.v)(t, u.d.CLIP);
                 },
-                onContextMenu: v,
+                onContextMenu: j,
                 icon: a.AlX,
             }),
         });

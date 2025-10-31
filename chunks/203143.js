@@ -49,7 +49,7 @@ function D(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function L(e) {
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -82,17 +82,17 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function k(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = j(e, t);
+        i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -100,7 +100,7 @@ function k(e, t) {
     }
     return i;
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -256,7 +256,7 @@ async function Y(e) {
             n,
             (e) => (
                 i()(null != e, "Must not be able to vote without existing state!"),
-                M(L({}, e), {
+                M(x({}, e), {
                     submitting: !0,
                     editing: !1,
                 })
@@ -290,7 +290,7 @@ async function Y(e) {
             }),
             (0, N.eu)(t, n, (e) => {
                 if (null != e)
-                    return M(L({}, e), {
+                    return M(x({}, e), {
                         submitting: !1,
                         editing: !1,
                     });
@@ -395,7 +395,7 @@ let q = {
         var t,
             n,
             { answerId: r } = e;
-        let { channelId: i, messageId: a, message: o } = U(k(e, ["answerId"])),
+        let { channelId: i, messageId: a, message: o } = U(j(e, ["answerId"])),
             { tapShouldOpenVotersModal: s } = null != (n = (0, R.Tk)(o)) ? n : {};
         if (!0 === s)
             return void Z({
@@ -430,7 +430,7 @@ let q = {
                     }
                 );
             }
-            let s = L({}, e),
+            let s = x({}, e),
                 c = new Set(s.selectedAnswerIds);
             if (((s.selectedAnswerIds = c), c.has(r))) c.delete(r);
             else {
@@ -500,7 +500,7 @@ let q = {
                 null == l || l();
         } catch (e) {
             if ("poll" === (e instanceof p.Hx ? e : new p.Hx(e)).getAnyErrorMessage() && null != e.text)
-                throw M(L({}, e), { body: JSON.parse(e.text) });
+                throw M(x({}, e), { body: JSON.parse(e.text) });
             throw e;
         }
     },

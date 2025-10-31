@@ -1,8 +1,8 @@
 n.d(t, {
     EK: () => G,
-    Io: () => k,
+    Io: () => j,
     N1: () => B,
-    NY: () => j,
+    NY: () => k,
     Ox: () => x,
     Vq: () => M,
     Wf: () => U,
@@ -38,8 +38,8 @@ var b = n(592125),
     A = n(5192),
     C = n(51144),
     N = n(388032),
-    R = n(498398),
-    P = n(602009);
+    R = n(399289),
+    P = n(430864);
 function w(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(s.u, {
@@ -139,7 +139,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function j(e) {
     let { id: t } = e,
         n = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
         i = N.intl.string(N.t.zLZPmk).toLowerCase(),
@@ -158,7 +158,7 @@ function k(e) {
           })
         : (0, r.jsx)("span", { children: "#" + i });
 }
-function j(e) {
+function k(e) {
     let { id: t, itemId: n, guildId: i } = e,
         a = (0, p.l)(t),
         o = (0, p.W)(t, n, i);

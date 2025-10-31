@@ -1,52 +1,52 @@
-n.d(t, { Z: () => u });
-var a = n(951288),
-    l = n(120356),
-    r = n.n(l),
-    i = n(481060),
-    o = n(703656),
-    d = n(73346),
-    c = n(981631),
-    s = n(260999);
+l.d(n, { Z: () => u });
+var t = l(951288),
+    i = l(120356),
+    a = l.n(i),
+    r = l(481060),
+    d = l(703656),
+    o = l(73346),
+    s = l(981631),
+    c = l(260999);
 function u(e) {
-    let { guildId: t, storefront: n, selectedPageIndex: l } = e;
-    if (null == n) return null;
-    let u = null != n.logoAssetId ? (0, d._W)(n.applicationId, n.logoAssetId, 75) : null;
-    return (0, a.jsxs)("div", {
-        className: s.headerContainer,
+    let { guildId: n, storefront: l, selectedPageIndex: i } = e;
+    if (null == l) return null;
+    let u = null != l.logoAssetId ? (0, o._W)(l.applicationId, l.logoAssetId, 75) : null;
+    return (0, t.jsxs)("div", {
+        className: c.headerContainer,
         children: [
-            (0, a.jsxs)("div", {
-                className: s.titleContainer,
+            (0, t.jsxs)("div", {
+                className: c.titleContainer,
                 children: [
                     null != u &&
-                        (0, a.jsx)("img", {
-                            className: s.logo,
+                        (0, t.jsx)("img", {
+                            className: c.logo,
                             src: u,
-                            alt: n.title,
+                            alt: l.title,
                         }),
-                    (0, a.jsx)(i.Text, {
+                    (0, t.jsx)(r.Text, {
                         variant: "text-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: n.title,
+                        children: l.title,
                     }),
                 ],
             }),
-            n.pages.map((e, n) =>
-                (0, a.jsx)(
-                    i.P3F,
+            l.pages.map((e, l) =>
+                (0, t.jsx)(
+                    r.P3F,
                     {
                         onClick: () => {
-                            (0, o.uL)(c.Z5c.CHANNELS_GAME_SHOP(t, n));
+                            (0, d.uL)(s.Z5c.CHANNELS_GAME_SHOP(n, l));
                         },
-                        className: r()(s.pageTitleContainer, { [s.selectedPageIndicator]: l === n }),
-                        children: (0, a.jsx)(i.Heading, {
+                        className: a()(c.pageTitleContainer, { [c.selectedPageIndicator]: i === l }),
+                        children: (0, t.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             lineClamp: 1,
                             children: e.title,
                         }),
                     },
-                    "".concat(e.title, "-").concat(n),
+                    "".concat(e.title, "-").concat(l),
                 ),
             ),
         ],

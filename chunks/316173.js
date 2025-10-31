@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(865427),
     p = n(820254),
     f = n(388032),
-    h = n(36398);
-let m = "isHideDevBanner",
+    m = n(36398);
+let h = "isHideDevBanner",
     g = () => {
         var e;
-        let [t, n] = (0, i.useState)((null == (e = o.K.get(m, "false")) ? void 0 : e.toString()) === "true"),
+        let [t, n] = (0, i.useState)((null == (e = o.K.get(h, "false")) ? void 0 : e.toString()) === "true"),
             l = (0, s.e7)([u.C], () => {
                 var e;
                 return (0, d.fD)()
@@ -25,30 +25,30 @@ let m = "isHideDevBanner",
             });
         if (t) return null;
         let g = () => {
-                o.K.set(m, !0), n(!0);
+                o.K.set(h, !0), n(!0);
             },
             _ = () =>
                 (0, r.jsx)(c.P3F, {
                     onClick: g,
-                    className: h.closeButton,
+                    className: m.closeButton,
                     "aria-label": f.intl.string(f.t.WAI6xu),
                     children: (0, r.jsx)(c.Dio, {
                         size: "md",
                         color: "currentColor",
-                        className: h.closeIcon,
+                        className: m.closeIcon,
                     }),
                 });
         return null != l
             ? (0, r.jsxs)("div", {
-                  className: a()(h.devBanner, h.buildOverride),
-                  children: [(0, r.jsx)(p.Z, { className: h.icon }), f.intl.string(f.t.Wj3LW4), (0, r.jsx)(_, {})],
+                  className: a()(m.devBanner, m.buildOverride),
+                  children: [(0, r.jsx)(p.Z, { className: m.icon }), f.intl.string(f.t.Wj3LW4), (0, r.jsx)(_, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)("div", {
-                    className: a()(h.devBanner, h.staging),
+                    className: a()(m.devBanner, m.staging),
                     children: [
-                        (0, r.jsx)(p.Z, { className: h.icon }),
-                        f.intl.format(f.t.uyrfYF, { buildNumber: "462481" }),
+                        (0, r.jsx)(p.Z, { className: m.icon }),
+                        f.intl.format(f.t.uyrfYF, { buildNumber: "464151" }),
                         (0, r.jsx)(_, {}),
                     ],
                 })

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d }), n(388685);
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(442837),
+var i = n(442837),
     l = n(481060),
     a = n(740492),
     o = n(984014),
@@ -10,39 +10,39 @@ var r = n(442837),
     u = n(388032);
 function d(e, t) {
     let [n, d, p] = (0, o.Z)(e, t),
-        h = (0, r.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+        f = (0, i.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
-        ? (0, i.jsx)(l.S89, {
+        ? (0, r.jsx)(l.S89, {
               id: "self-stream-hide",
               label: u.intl.string(u.t.aol7iW),
               checked: !d,
               action: () => {
-                  if (h || d) return p(!d);
+                  if (f || d) return p(!d);
                   (0, l.h7j)((e) => {
                       var t, n;
-                      return (0, i.jsx)(
+                      return (0, r.jsx)(
                           s.Z,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
-                                      i = Object.keys(n);
+                                      r = Object.keys(n);
                                   "function" == typeof Object.getOwnPropertySymbols &&
-                                      (i = i.concat(
+                                      (r = r.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                           }),
                                       )),
-                                      i.forEach(function (t) {
-                                          var i;
-                                          (i = n[t]),
+                                      r.forEach(function (t) {
+                                          var r;
+                                          (r = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
-                                                        value: i,
+                                                        value: r,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0,
                                                     })
-                                                  : (e[t] = i);
+                                                  : (e[t] = r);
                                       });
                               }
                               return e;
@@ -57,8 +57,8 @@ function d(e, t) {
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
-                                        var i = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, i);
+                                        var r = Object.getOwnPropertySymbols(e);
+                                        n.push.apply(n, r);
                                     }
                                     return n;
                                 })(Object(n)).forEach(function (e) {

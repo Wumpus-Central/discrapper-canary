@@ -36,8 +36,8 @@ let N = (e) => {
             isLoading: n,
             title: i,
             sortedSkuIds: N,
-            numVisibleItems: Z,
-            prioritizeUserDiscounts: R,
+            numVisibleItems: R,
+            prioritizeUserDiscounts: Z,
             tab: w,
             buttonContainerClassName: H,
             orbsSupportedOnly: D,
@@ -55,7 +55,7 @@ let N = (e) => {
         } = (0, j.Z)({
             sortedSkuIds: N,
             isPremiumUser: F,
-            prioritizeUserDiscounts: R,
+            prioritizeUserDiscounts: Z,
             orbsSupportedOnly: D,
         }),
         q = (0, k.St)(z),
@@ -158,7 +158,7 @@ let N = (e) => {
                                     ei ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(v.K, {}, t + 1),
                                 ),
                             })
-                          : q.slice(0, Z).map((e, t) => {
+                          : q.slice(0, R).map((e, t) => {
                                 let n,
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;

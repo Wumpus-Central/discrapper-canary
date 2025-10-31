@@ -1,9 +1,9 @@
 n.d(t, {
-    $p: () => T,
-    FQ: () => S,
+    $p: () => S,
+    FQ: () => T,
     Il: () => A,
     Jf: () => P,
-    SA: () => x,
+    SA: () => L,
     SV: () => C,
     Um: () => N,
     eu: () => w,
@@ -83,7 +83,7 @@ function I(e, t) {
         e
     );
 }
-let S = async (e, t) => {
+let T = async (e, t) => {
         let { body: n } = await (0, p.Kb)({
             url: g.ANM.STICKER_PACK(e),
             rejectWithError: !1,
@@ -98,7 +98,7 @@ let S = async (e, t) => {
             n
         );
     },
-    T = async function () {
+    S = async function () {
         let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
         o.Z.wait(() => {
@@ -228,14 +228,14 @@ function D(e, t) {
         draftType: t,
     });
 }
-function L(e) {
+function x(e) {
     return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
-function x(e) {
+function L(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) =>
-            ((t.stickerIds = L(t.stickerIds)), i().size(t.stickerIds) >= E.oX)
+            ((t.stickerIds = x(t.stickerIds)), i().size(t.stickerIds) >= E.oX)
                 ? (s.Z.show({
                       title: b.intl.string(b.t["+XYXtZ"]),
                       body: b.intl.formatToPlainString(b.t.JaIyFi, { count: E.oX }),
@@ -249,7 +249,7 @@ function M(e) {
     u.DZ.updateAsync(
         "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = L(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = x(t.stickerIds));
         },
         E.fy.INFREQUENT_USER_ACTION,
     );

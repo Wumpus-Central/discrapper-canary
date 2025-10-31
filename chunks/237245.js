@@ -2,8 +2,8 @@ n.d(t, { w: () => I }), n(388685), n(781311), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(852860),
+    a = n(796027),
+    s = n(481060),
     o = n(881052),
     c = n(456268),
     d = n(863249),
@@ -200,7 +200,7 @@ function N(e) {
                 return void R(O.intl.string(O.t.HGVrI3));
             ((e) => {
                 if (D && A > 0 && l.joinType !== j.A.APPLY)
-                    return (0, a.ZDy)(async () => {
+                    return (0, s.ZDy)(async () => {
                         let { default: t } = await n.e("55009").then(n.bind(n, 826390));
                         return (n) =>
                             (0, r.jsx)(
@@ -216,7 +216,7 @@ function N(e) {
             })((e) =>
                 ((e) => {
                     if (l.joinType === j.A.DISCOVERABLE && l.settingsView === v.U.ELIGIBLE_DISABLED)
-                        return void (0, a.ZDy)(async () => {
+                        return void (0, s.ZDy)(async () => {
                             let { default: t } = await n.e("67376").then(n.bind(n, 207252));
                             return (n) =>
                                 (0, r.jsx)(
@@ -233,7 +233,7 @@ function N(e) {
         }, [D, B, l, T, A]),
         H = l.joinType === j.A.DISCOVERABLE && l.settingsView === v.U.ELIGIBLE_DISABLED,
         W = null != N.description && I.primaryCategoryId !== C.o3 && I.keywords.length > 0;
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         message: H ? O.intl.string(O.t.V2G2Yr) : void 0,
         onSaveText: H ? O.intl.string(O.t["qjtt/p"]) : void 0,
         submitting: P,
@@ -251,7 +251,7 @@ function I() {
         {
             settingsGuild: n,
             settingsMetadata: i,
-            originalGuild: a,
+            originalGuild: s,
             guildProfile: o,
         } = (0, l.cj)([h.Z], () => {
             let { guild: e, guildMetadata: t, originalGuild: n, profile: r } = h.Z.getProps();
@@ -265,14 +265,14 @@ function I() {
     return null == e || null == n
         ? null
         : e.joinType === j.A.DISCOVERABLE && e.settingsView === v.U.INELIGIBLE
-          ? (0, r.jsx)(s.Z, {
+          ? (0, r.jsx)(a.Z, {
                 message: O.intl.string(O.t.TEXwRt),
                 onReset: () => f.Z.init(n.id, _.pNK.ACCESS),
             })
           : (0, r.jsx)(N, {
                 pendingState: e,
                 dirtyState: t,
-                originalGuild: a,
+                originalGuild: s,
                 settingsGuild: n,
                 settingsMetadata: i,
                 settingsProfile: o,

@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(428967),
     d = n(266454),
     p = n(605236),
-    f = n(279745),
-    h = n(921944),
+    h = n(279745),
+    f = n(921944),
     g = n(388032),
     m = n(882482);
 let b = i.forwardRef(function (e, t) {
@@ -19,20 +19,20 @@ let b = i.forwardRef(function (e, t) {
             header: l,
             artClassName: b,
             headerClassName: _,
-            contentClassName: O,
-            tryItText: y,
-            dismissText: j,
-            onTryFeature: v,
-            onClose: x,
-            className: C,
+            contentClassName: y,
+            tryItText: O,
+            dismissText: v,
+            onTryFeature: j,
+            onClose: C,
+            className: x,
             inlineArt: E = !1,
             isPremiumFeature: S = !1,
             shouldUseHorizontalButtons: I = !1,
             showGIFTag: P = !1,
             dismissibleContent: N,
             position: Z = "top",
-            align: T = "center",
-            art: w,
+            align: w = "center",
+            art: T,
             isPremiumEarlyAccess: A = !1,
             maxWidth: R = 280,
             hideDismissButton: D = !1,
@@ -59,10 +59,10 @@ let b = i.forwardRef(function (e, t) {
             (0, p.kk)(N);
         }, [N]),
         (0, r.jsx)("div", {
-            className: C,
+            className: x,
             ref: t,
             children: (0, r.jsxs)("div", {
-                className: o()(m.content, O, {
+                className: o()(m.content, y, {
                     [m.contentNoArt]: null == b || E,
                     [m.contentPremium]: S || A,
                 }),
@@ -75,7 +75,7 @@ let b = i.forwardRef(function (e, t) {
                         }),
                     (0, r.jsxs)("div", {
                         className: o()(b, E ? m.artInline : m.artAbsolute),
-                        children: [P && (0, r.jsx)(f.Z, { className: m.gifTag }), w],
+                        children: [P && (0, r.jsx)(h.Z, { className: m.gifTag }), T],
                     }),
                     (0, r.jsxs)("div", {
                         className: m.body,
@@ -128,14 +128,14 @@ let b = i.forwardRef(function (e, t) {
                         ref: H,
                         className: F || !I ? m.buttonContainerVertical : m.buttonContainerHorizontal,
                         children:
-                            null != v
+                            null != j
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(a.zx, {
                                               className: m.button,
                                               size: B,
                                               onClick: (e) => {
-                                                  null == x || x(e), v(e), W(h.L.PRIMARY);
+                                                  null == C || C(e), j(e), W(f.L.PRIMARY);
                                               },
                                               color:
                                                   null != U
@@ -143,18 +143,18 @@ let b = i.forwardRef(function (e, t) {
                                                       : S || A
                                                         ? a.zx.Colors.BRAND_INVERTED
                                                         : a.zx.Colors.WHITE,
-                                              children: null != y ? y : g.intl.string(g.t.IHf1RN),
+                                              children: null != O ? O : g.intl.string(g.t.IHf1RN),
                                           }),
                                           !D &&
                                               (0, r.jsx)(a.zx, {
                                                   className: m.button,
                                                   size: B,
                                                   onClick: (e) => {
-                                                      null == x || x(e), W(h.L.DISMISS);
+                                                      null == C || C(e), W(f.L.DISMISS);
                                                   },
                                                   color: S || A ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
                                                   look: S || A ? a.zx.Looks.LINK : a.zx.Looks.FILLED,
-                                                  children: null != j ? j : g.intl.string(g.t.om7Ovn),
+                                                  children: null != v ? v : g.intl.string(g.t.om7Ovn),
                                               }),
                                       ],
                                   })
@@ -162,7 +162,7 @@ let b = i.forwardRef(function (e, t) {
                                       className: m.button,
                                       size: a.zx.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == x || x(e), W(h.L.PRIMARY);
+                                          null == C || C(e), W(f.L.PRIMARY);
                                       },
                                       color: a.zx.Colors.WHITE,
                                       children: g.intl.string(g.t.HU2IR5),
@@ -171,9 +171,9 @@ let b = i.forwardRef(function (e, t) {
                     (0, r.jsx)("div", {
                         className: o()(m.pointer, L, {
                             [m.bottomPointer]: "top" === Z,
-                            [m.centerLeftPointer]: "right" === Z && "center" === T,
-                            [m.topLeftPointer]: "right" === Z && "top" === T,
-                            [m.bottomLeftPointer]: "right" === Z && "bottom" === T,
+                            [m.centerLeftPointer]: "right" === Z && "center" === w,
+                            [m.topLeftPointer]: "right" === Z && "top" === w,
+                            [m.bottomLeftPointer]: "right" === Z && "bottom" === w,
                         }),
                     }),
                 ],

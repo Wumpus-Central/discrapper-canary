@@ -117,11 +117,11 @@ let C = { location: {} },
     P = 10000,
     w = 60000,
     D = 120000,
-    L = 300000,
-    x = 900000,
+    x = 300000,
+    L = 900000,
     M = 3600000,
-    k = 86400000,
-    j = 0.001,
+    j = 86400000,
+    k = 0.001,
     U = performance.now(),
     G = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null;
 a.extendSuperProperties({ launch_signature: G });
@@ -131,7 +131,7 @@ function Z(e) {
 }
 let F = {
     [g.rMx.APP_OPENED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: () => [],
     },
     [g.rMx.APP_BACKGROUND]: {
@@ -142,31 +142,31 @@ let F = {
         e.location_object_type === g.AnalyticsObjectTypes.ACK_MANUAL
             ? void 0
             : {
-                  throttlePeriod: x,
+                  throttlePeriod: L,
                   throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section],
               },
     [g.rMx.GUILD_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id, e.is_pending],
     },
     [g.rMx.FRIENDS_LIST_CLICKED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab_opened],
     },
     [g.rMx.FRIENDS_LIST_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab_opened],
     },
     [g.rMx.NOW_PLAYING_CARD_HOVERED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab_opened],
     },
     [g.rMx.START_SPEAKING]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.server],
     },
     [g.rMx.START_LISTENING]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.server],
     },
     [g.rMx.ACTIVITY_UPDATED]: {
@@ -175,7 +175,7 @@ let F = {
         deduplicate: !0,
     },
     [g.rMx.CHANNEL_OPENED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) =>
             null != e.channel_static_route
                 ? [e.guild_id, e.channel_static_route, e.channel_view]
@@ -184,23 +184,23 @@ let F = {
                   : [e.channel_id, e.channel_view],
     },
     [g.rMx.TEXT_IN_VOICE_OPENED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.NOTIFICATION_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.notif_type],
     },
     [g.rMx.MEMBER_LIST_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.DM_LIST_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.NAV_DRAWER_OPENED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: () => [],
     },
     [g.rMx.KEYBOARD_SHORTCUT_USED]: {
@@ -215,7 +215,7 @@ let F = {
         throttleKeys: () => [],
     },
     [g.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.type],
     },
     [g.rMx.ROLE_PAGE_VIEWED]: {
@@ -223,41 +223,41 @@ let F = {
         throttleKeys: (e) => [e.role_id, e.tab_opened],
     },
     [g.rMx.VIDEO_INPUT_INITIALIZED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: () => [],
     },
     [g.rMx.AUDIO_INPUT_INITIALIZED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: () => [],
     },
     [g.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: () => [],
     },
     [g.rMx.HUB_STUDENT_PROMPT_CLICKED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: () => [],
     },
     [g.rMx.RPC_SERVER_ERROR_CAUGHT]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: () => [],
     },
     [g.rMx.RPC_COMMAND_SENT]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id, e.command],
-        throttlePercent: j,
+        throttlePercent: k,
     },
     [g.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id, e.event],
-        throttlePercent: j,
+        throttlePercent: k,
     },
     [g.rMx.ACTIVITY_HANDSHAKE]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id],
     },
     [g.rMx.CHANNEL_BANNER_VIEWED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.banner_type, e.channel_id],
     },
     [g.rMx.PREMIUM_UPSELL_VIEWED]: {
@@ -269,7 +269,7 @@ let F = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.FORUM_CHANNEL_SCROLLED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
@@ -281,27 +281,27 @@ let F = {
         throttleKeys: () => [],
     },
     [g.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.ACTIVITY_CARDS_VIEWED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.context, e.guild_id],
     },
     [g.rMx.GUILD_TOOLTIP_SHOWN]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.ACK_COMMUNITY_MESSAGES]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.REDESIGN_NAV_BAR_CLICKED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.tab],
     },
     [g.rMx.CHANNEL_LIST_END_REACHED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
@@ -313,28 +313,28 @@ let F = {
         throttleKeys: () => [],
     },
     [g.rMx.KEYWORD_FILTER_MATCH]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.message_id],
     },
     [g.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: (e) => [e.location_stack],
     },
     [g.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: (e) => [e.location_stack],
     },
     [g.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: (e) => [e.activity_user_id, e.surface],
         deduplicate: !0,
     },
     [g.rMx.PARTY_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: L,
+        throttlePeriod: x,
         throttleKeys: (e) => [e.voice_channel_id],
         deduplicate: !0,
     },
@@ -343,7 +343,7 @@ let F = {
         throttleKeys: (e) => [e.channel_id],
     },
     [g.rMx.REDACTABLE_MESSAGE_LOADED]: {
-        throttlePeriod: x,
+        throttlePeriod: L,
         throttleKeys: (e) => [e.channel_id, e.message_id],
     },
     [g.rMx.OPEN_MODAL]: (e) =>
@@ -371,11 +371,11 @@ let F = {
         throttleKeys: (e) => [e.search_type],
     },
     [g.rMx.AD_IDENTIFIER_FETCHED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: () => [],
     },
     [g.rMx.ACTIVITY_PANEL_SDK_LINK_VIEWED]: {
-        throttlePeriod: k,
+        throttlePeriod: j,
         throttleKeys: (e) => [e.application_id],
     },
     [g.rMx.LIBDISCORE_SLOW_TIMERS]: {

@@ -9,26 +9,26 @@ var r = n(951288),
     u = n(628238),
     d = n(976853),
     p = n(977683),
-    f = n(869765),
-    h = n(695346),
+    h = n(869765),
+    f = n(695346),
     g = n(592125),
     m = n(699516),
     b = n(709054),
     _ = n(594173),
-    O = n(786761),
-    y = n(493892),
+    y = n(786761),
+    O = n(493892),
     v = n(901461),
     j = n(739566),
     C = n(443877),
-    E = n(492593),
-    x = n(453687),
+    x = n(492593),
+    E = n(453687),
     S = n(938353),
     I = n(25015),
     P = n(689674),
     N = n(963550),
     Z = n(845080),
-    T = n(295790),
-    w = n(145807),
+    w = n(295790),
+    T = n(145807),
     A = n(56744),
     R = n(834129),
     D = n(981631),
@@ -93,16 +93,16 @@ let B = i.memo(function e(t) {
             treatSpam: W,
         } = t,
         K = D.OBS.has(s.type) ? s.messageReference : void 0,
-        Y = (0, a.e7)([f.Z], () => f.Z.getMessageByReference(K)),
+        Y = (0, a.e7)([h.Z], () => h.Z.getMessageByReference(K)),
         q = (0, a.e7)([g.Z], () =>
-            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED
+            s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED
                 ? g.Z.getChannel(Y.message.channel_id)
                 : null,
         ),
-        X = h.x4.useSetting(),
-        Q = h.RS.useSetting(),
-        J = h.NA.useSetting(),
-        $ = h.QK.useSetting(),
+        X = f.x4.useSetting(),
+        Q = f.RS.useSetting(),
+        J = f.NA.useSetting(),
+        $ = f.QK.useSetting(),
         ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: en } = (0, C.Z)(l),
@@ -118,7 +118,7 @@ let B = i.memo(function e(t) {
             [g.Z],
             () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id)),
         ),
-        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED && null != q,
+        ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === h.Y.LOADED && null != q,
         es = !ea && void 0 === i,
         ec = (0, P.Z)({
             message: s,
@@ -128,7 +128,7 @@ let B = i.memo(function e(t) {
         eu = (0, c.v)(s),
         ed = (0, _.ro)(s.id, s.channel_id),
         ep = (0, p.Z)(s),
-        ef = (0, x.iG)(s);
+        eh = (0, E.iG)(s);
     return ea
         ? (0, r.jsx)(
               e,
@@ -142,7 +142,7 @@ let B = i.memo(function e(t) {
                 ? (i = L.t["+FcYM/"])
                 : m.Z.isIgnoredForMessage(s)
                   ? (i = L.t["VFWjc+"])
-                  : (0, y.DQ)(s) && W && (i = L.t.xfkfTK),
+                  : (0, O.DQ)(s) && W && (i = L.t.xfkfTK),
             void 0 !== i)
           ? (0, r.jsx)(F, {
                 className: M,
@@ -150,10 +150,10 @@ let B = i.memo(function e(t) {
                 count: 1,
                 collapsedReason: i,
             })
-          : (0, r.jsx)(E.Z, {
+          : (0, r.jsx)(x.Z, {
                 compact: R,
                 className: o()(M, {
-                    [k.ephemeral]: (0, O.Pv)(s),
+                    [k.ephemeral]: (0, y.Pv)(s),
                     [k.disableInteraction]: H,
                     [k.groupStart]: t.isGroupStart,
                 }),
@@ -187,9 +187,9 @@ let B = i.memo(function e(t) {
                     enabledContentHarmTypeFlags: eu,
                     ctaButtonType: ed,
                 }),
-                childrenExecutedCommand: (0, w.Z)(s, l, R),
+                childrenExecutedCommand: (0, T.Z)(s, l, R),
                 childrenMessageContent: (0, N.Z)(t, er),
-                childrenSystemMessage: (0, T.Z)(t),
+                childrenSystemMessage: (0, w.Z)(t),
                 onContextMenu: B,
                 onClick: V,
                 hasThread: !1 !== z && null != eo && s.hasFlag(D.iLy.HAS_THREAD),
@@ -197,13 +197,13 @@ let B = i.memo(function e(t) {
                 isSystemMessage: (0, v.Z)(s),
                 messageRef: ec,
                 author: el,
-                "aria-labelledby": ef,
+                "aria-labelledby": eh,
                 "aria-roledescription": L.intl.string(L.t.BAB0yK),
             });
 });
 function F(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
-    return (0, r.jsx)(E.Z, {
+    return (0, r.jsx)(x.Z, {
         className: t,
         compact: i,
         role: "group",

@@ -21,7 +21,7 @@ n.d(t, {
     pf: () => B,
     qm: () => q,
     w: () => Q,
-    wF: () => j,
+    wF: () => k,
     xw: () => L,
 }),
     n(415506);
@@ -232,7 +232,7 @@ async function M(e) {
         });
     }
 }
-function k(e) {
+function j(e) {
     var t, n;
     return (
         e instanceof c.CaptchaCancelError ||
@@ -244,7 +244,7 @@ function k(e) {
                 !1))
     );
 }
-var j = (function (e) {
+var k = (function (e) {
     return (
         (e.SUCCESS = "success"),
         (e.CAPTCHA_FAILED = "captcha_failed"),
@@ -294,7 +294,7 @@ async function U(e, t) {
                 type: "QUESTS_ENROLL_FAILURE",
                 questId: e,
             }),
-            k(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
+            j(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
         );
     }
 }

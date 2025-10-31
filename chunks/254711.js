@@ -1,6 +1,6 @@
 n.d(t, {
     Kh: () => B,
-    Tm: () => k,
+    Tm: () => j,
 }),
     n(388685),
     n(781311),
@@ -73,7 +73,7 @@ function D(e, t) {
     }
     return n;
 }
-function L(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -84,12 +84,12 @@ function L(e, t) {
         e
     );
 }
-let x = n(227419).Z,
+let L = n(227419).Z,
     M = (e, t) => {
         var n;
         return null == (n = e.find((e) => e.name === t)) ? void 0 : n.value;
     },
-    k = {
+    j = {
         [S.bi.BUILT_IN]: {
             id: S.bi.BUILT_IN,
             type: T.Qi.BUILT_IN,
@@ -105,8 +105,8 @@ let x = n(227419).Z,
             },
         },
     },
-    j = [
-        ...x,
+    k = [
+        ...L,
         {
             id: "-1",
             untranslatedName: "shrug",
@@ -622,7 +622,7 @@ let x = n(227419).Z,
                     required: !0,
                     get choices() {
                         return (0, C.tr)().map((e) =>
-                            L(w({}, e), {
+                            x(w({}, e), {
                                 name: e.label,
                                 displayName: e.label,
                             }),
@@ -737,11 +737,11 @@ let x = n(227419).Z,
             },
         },
     ],
-    G = j.filter((e) =>
+    G = k.filter((e) =>
         ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.untranslatedName),
     ),
     B = (e, t, n) => {
-        let r = t ? j : G;
+        let r = t ? k : G;
         return r.filter(
             (t) =>
                 e.includes(t.type) &&

@@ -56,11 +56,11 @@ let A = (0, r.debounce)(o.xc, 1000),
     P = 5 * b.Z.Millis.SECOND,
     w = 12 * b.Z.Millis.SECOND,
     D = null;
-function L(e) {
+function x(e) {
     var t;
     null == (t = C[e]) || t.stop(), delete C[e];
 }
-function x(e) {
+function L(e) {
     var t;
     null == (t = N[e]) || t.stop(), delete N[e];
 }
@@ -74,11 +74,11 @@ function M(e, t) {
     let i = (0, O.V9)(r);
     return i !== D && ((D = i), (0, o.rn)(r, { noFocus: !0 }), !0);
 }
-function k(e, t) {
+function j(e, t) {
     let n = null != t ? t : h.Z.getPreferredRegion();
     null != n && n !== h.Z.getRegion(g.Z.getHostname(e)) && (0, o.dV)(e, n);
 }
-function j(e, t) {
+function k(e, t) {
     var n;
     if (g.Z.getAllActiveStreamKeys().includes(e)) return;
     let r = null != (n = N[e]) ? n : new i.V7();
@@ -97,8 +97,8 @@ class U extends s.Z {
                 let { streamKey: t, allowMultiple: n } = e,
                     { channelId: r } = (0, O.my)(t),
                     i = _.Z.getChannel(r);
-                j(t, null == i ? void 0 : i.isGuildStageVoice()),
-                    L(t),
+                k(t, null == i ? void 0 : i.isGuildStageVoice()),
+                    x(t),
                     n ||
                         d.Z.getAllActiveStreams().forEach((e) => {
                             let n = (0, O.V9)(e);
@@ -108,7 +108,7 @@ class U extends s.Z {
             T(this, "handleStreamStart", (e) => {
                 let { channelId: t, streamType: n, guildId: r } = e,
                     i = _.Z.getChannel(t);
-                j(
+                k(
                     (0, O.V9)({
                         streamType: n,
                         guildId: r,
@@ -122,7 +122,7 @@ class U extends s.Z {
             T(this, "handleStreamCreate", (e) => {
                 var t;
                 let { streamKey: n } = e;
-                x(n);
+                L(n);
                 let { ownerId: r, guildId: i } = (0, O.my)(n);
                 if (
                     null == i ||
@@ -139,11 +139,11 @@ class U extends s.Z {
             }),
             T(this, "handleStreamUpdate", (e) => {
                 let { streamKey: t } = e;
-                x(t);
+                L(t);
             }),
             T(this, "handleStreamDelete", (e) => {
                 let { reason: t, streamKey: n } = e;
-                x(n),
+                L(n),
                     t === I.si2.STREAM_FULL &&
                         ((0, l.kr)(S({ type: l.u.STREAM_FULL }, (0, c.rT)(n))),
                         (0, o.aP)(n, !1),
@@ -151,7 +151,7 @@ class U extends s.Z {
             }),
             T(this, "handleStreamClose", (e) => {
                 let { streamKey: t } = e;
-                L(t), x(t);
+                x(t), L(t);
             }),
             T(this, "handleVoiceChannelSelect", (e) => {
                 let { channelId: t } = e;
@@ -178,7 +178,7 @@ class U extends s.Z {
                                 n.start(R, () => (0, o.aP)(t, !1)), (C[t] = n);
                             }
                             if (a && e.state === I.jm8.ENDED) {
-                                L((0, O.V9)(e));
+                                x((0, O.V9)(e));
                                 let n = d.Z.getStreamForUser(t, r);
                                 if (null == n) return;
                                 (0, o.rn)(n);
@@ -190,12 +190,12 @@ class U extends s.Z {
             T(this, "handleCallUpdate", (e) => {
                 let { channelId: t, region: n } = e,
                     r = d.Z.getCurrentUserActiveStream();
-                (null == r ? void 0 : r.channelId) === t && k((0, O.V9)(r), n);
+                (null == r ? void 0 : r.channelId) === t && j((0, O.V9)(r), n);
             }),
             T(this, "handleChannelUpdates", (e) => {
                 let { channels: t } = e,
                     n = d.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && k((0, O.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && j((0, O.V9)(n), e.rtcRegion);
             }),
             T(this, "actions", {
                 STREAM_WATCH: this.handleStreamWatch,

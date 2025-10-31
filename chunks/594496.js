@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => j });
 var r = n(951288);
 n(647438);
 var i = n(512722),
@@ -30,17 +30,17 @@ var i = n(512722),
     P = n(52597),
     w = n(430131),
     D = n(291334),
-    L = n(474936),
-    x = n(388032),
+    x = n(474936),
+    L = n(388032),
     M = n(737788);
-function k(e) {
-    var t, n, i, k;
-    let { guild: j, nameplateEnabled: U } = e,
+function j(e) {
+    var t, n, i, j;
+    let { guild: k, nameplateEnabled: U } = e,
         G = (0, o.e7)([S.default], () => {
             let e = S.default.getCurrentUser();
             return a()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        B = (0, d.m)(L.PremiumTypes.TIER_2),
+        B = (0, d.m)(x.PremiumTypes.TIER_2),
         {
             pendingAvatar: Z,
             pendingNickname: F,
@@ -74,7 +74,7 @@ function k(e) {
             userId: G.id,
             image: Z,
         }),
-        X = null != j ? j : z;
+        X = null != k ? k : z;
     a()(null != X, "guild should not be null");
     let Q = (0, u.gS)(X.id),
         J = (0, o.e7)([T.ZP], () => (null == X.id ? null : T.ZP.getMember(X.id, G.id))),
@@ -110,7 +110,7 @@ function k(e) {
             (0, r.jsx)(
                 O.Z,
                 {
-                    sectionTitle: x.intl.string(x.t["+T3RI/"]),
+                    sectionTitle: L.intl.string(L.t["+T3RI/"]),
                     errors: null == K ? void 0 : K.pronouns,
                     onPronounsChange: (e) => {
                         (0, P.xs)(e, eo);
@@ -129,9 +129,9 @@ function k(e) {
                         {
                             sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    x.intl.string(x.t.lqaIxI),
+                                    L.intl.string(L.t.lqaIxI),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuK"]),
+                                        text: L.intl.string(L.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",
@@ -153,9 +153,9 @@ function k(e) {
                         {
                             sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    x.intl.string(x.t["7v0T9P"]),
+                                    L.intl.string(L.t["7v0T9P"]),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuK"]),
+                                        text: L.intl.string(L.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",
@@ -182,7 +182,7 @@ function k(e) {
                                 user: G,
                                 guild: X,
                                 titleIcon: (0, r.jsx)(s.u, {
-                                    text: x.intl.string(x.t["5AFxuK"]),
+                                    text: L.intl.string(L.t["5AFxuK"]),
                                     children: (0, r.jsx)(l.SrA, {
                                         size: "md",
                                         color: "currentColor",
@@ -197,9 +197,9 @@ function k(e) {
                         {
                             sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    x.intl.string(x.t.wR5wOo),
+                                    L.intl.string(L.t.wR5wOo),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuK"]),
+                                        text: L.intl.string(L.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",
@@ -237,12 +237,12 @@ function k(e) {
                     (0, r.jsx)(
                         _.Z,
                         {
-                            placeholder: x.intl.string(x.t["/7NKgv"]),
+                            placeholder: L.intl.string(L.t["/7NKgv"]),
                             sectionTitle: (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    x.intl.string(x.t.jGoPJT),
+                                    L.intl.string(L.t.jGoPJT),
                                     (0, r.jsx)(s.u, {
-                                        text: x.intl.string(x.t["5AFxuK"]),
+                                        text: L.intl.string(L.t["5AFxuK"]),
                                         children: (0, r.jsx)(l.SrA, {
                                             size: "md",
                                             color: "currentColor",
@@ -252,7 +252,7 @@ function k(e) {
                                 ],
                             }),
                             onBioChange: (e) => (0, P.qN)(e, ea),
-                            errors: null != (k = null == K ? void 0 : K.bio) ? k : null == Q ? void 0 : Q.bio,
+                            errors: null != (j = null == K ? void 0 : K.bio) ? j : null == Q ? void 0 : Q.bio,
                             pendingBio: H,
                             currentBio: ea,
                             disabled: !et,

@@ -1,28 +1,28 @@
 n.d(t, { C: () => u });
 var a = n(951288);
 n(647438);
-var r = n(481060),
+var i = n(481060),
     l = n(646466),
-    i = n(484486),
-    o = n(812381),
-    s = n(11075),
+    r = n(484486),
+    s = n(812381),
+    o = n(11075),
     c = n(511010),
     d = n(809863);
 let u = () =>
     (0, a.jsxs)("div", {
         className: d.previewPanel,
         children: [
-            (0, a.jsx)(s.a, { className: d.previewSection }),
+            (0, a.jsx)(o.a, { className: d.previewSection }),
             (0, a.jsxs)("div", {
                 className: d.previewSection,
                 children: [
-                    (0, a.jsx)(r.Heading, {
+                    (0, a.jsx)(i.Heading, {
                         variant: "heading-md/semibold",
                         children: "Shop Overrides",
                     }),
-                    (0, a.jsx)(o.a, {}),
+                    (0, a.jsx)(s.a, {}),
                     (0, a.jsx)(c.Z, { className: d.divider }),
-                    (0, a.jsx)(i.Z, {}),
+                    (0, a.jsx)(r.Z, {}),
                     (0, a.jsx)(c.Z, { className: d.divider }),
                     (0, a.jsx)(l.O, {}),
                 ],

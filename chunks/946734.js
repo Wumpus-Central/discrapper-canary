@@ -9,16 +9,16 @@ var r = n(951288),
     u = n(481060),
     d = n(884338),
     p = n(100527),
-    f = n(906732),
-    h = n(150039),
+    h = n(906732),
+    f = n(150039),
     g = n(892001),
     m = n(271383),
     b = n(430824),
     _ = n(594174),
-    O = n(251625),
-    y = n(823379),
-    j = n(665149),
-    v = n(228168),
+    y = n(251625),
+    O = n(823379),
+    v = n(665149),
+    j = n(228168),
     C = n(388032),
     x = n(130370);
 function E(e, t, n) {
@@ -79,7 +79,7 @@ class S {
             E(
                 this,
                 "generateNicknameGuildPairs",
-                (0, O.oH)((e) => {
+                (0, y.oH)((e) => {
                     var t;
                     return o()(m.ZP.getNicknameGuildsMapping(null != (t = null == e ? void 0 : e.id) ? t : this.userId))
                         .toPairs()
@@ -92,7 +92,7 @@ class S {
                                         var t;
                                         return null == (t = b.Z.getGuild(e)) ? void 0 : t.name;
                                     })
-                                    .filter(y.lm),
+                                    .filter(O.lm),
                             ];
                         })
                         .filter((t) => {
@@ -128,7 +128,7 @@ class S {
                     userId: this.userId,
                     channelId: this.channelId,
                     sourceAnalyticsLocations: this.analyticsLocations,
-                    section: v.oh.MUTUAL_GUILDS,
+                    section: j.oh.MUTUAL_GUILDS,
                 });
             }),
             (this.userId = e),
@@ -140,9 +140,9 @@ class S {
 function I(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
-        l = (0, h.gc)(n),
+        l = (0, f.gc)(n),
         o = Array(l.length).fill(null),
-        { analyticsLocations: g } = (0, f.ZP)(p.Z.AKA),
+        { analyticsLocations: g } = (0, h.ZP)(p.Z.AKA),
         m = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: r } = e,
                 l = (0, a.e7)([_.default], () => _.default.getUser(t), [t]),
@@ -169,19 +169,19 @@ function I(e) {
             analyticsLocations: g,
             channelId: t.id,
         }),
-        [O, y] = i.useState(!1),
-        v = i.useCallback(() => {
-            y(!0);
-        }, [y]),
+        [y, O] = i.useState(!1),
+        j = i.useCallback(() => {
+            O(!0);
+        }, [O]),
         E = i.useCallback(() => {
-            y(!1);
-        }, [y]);
+            O(!1);
+        }, [O]);
     return 0 === m.getNicknameGuildPairs().length && 0 === l.length
         ? (0, r.jsx)("div", { className: x.spacer })
-        : (0, r.jsxs)(f.Gt, {
+        : (0, r.jsxs)(h.Gt, {
               value: g,
               children: [
-                  (0, r.jsx)(j.iz, { className: x.divider }),
+                  (0, r.jsx)(v.iz, { className: x.divider }),
                   (0, r.jsx)(u.IGR, {
                       text: C.intl.string(C.t.l1QVfj),
                       disableColor: !0,
@@ -226,9 +226,9 @@ function I(e) {
                             position: "bottom",
                             className: x.nicknames,
                             delay: 0,
-                            onTooltipShow: v,
+                            onTooltipShow: j,
                             onTooltipHide: E,
-                            children: m.renderNicknamePairs(!O),
+                            children: m.renderNicknamePairs(!y),
                         })
                       : null,
               ],

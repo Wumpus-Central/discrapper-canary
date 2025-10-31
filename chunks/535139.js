@@ -17,10 +17,10 @@ function d(e) {
         u = t.includes("rpc") && r,
         d = t.includes("web") && (null == n ? void 0 : n.connectionEntrypointUrl) != null,
         p = u || d,
-        { token: f, fetched: h } = (0, s.o)(null == n ? void 0 : n.id);
+        { token: h, fetched: f } = (0, s.o)(null == n ? void 0 : n.id);
     return {
-        fetched: h,
-        hasAlreadyLinked: h && null != f,
+        fetched: f,
+        hasAlreadyLinked: f && null != h,
         canStartAuthorization: p,
         startAuthorization: i.useCallback(
             () =>

@@ -2,8 +2,8 @@ n.d(t, {
     ZP: () => tr,
     m9: () => eM,
     nA: () => eU,
-    o: () => ek,
-    zD: () => ej,
+    o: () => ej,
+    zD: () => ek,
 }),
     n(388685),
     n(35282);
@@ -37,11 +37,11 @@ var r,
     P = n(332473),
     w = n(30684),
     D = n(616106),
-    L = n(107756),
-    x = n(518638),
+    x = n(107756),
+    L = n(518638),
     M = n(1844),
-    k = n(621615),
-    j = n(417626),
+    j = n(621615),
+    k = n(417626),
     U = n(569984),
     G = n(338247),
     B = n(523255),
@@ -118,7 +118,7 @@ function eD(e) {
     }
     return e;
 }
-function eL(e, t) {
+function ex(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -130,12 +130,12 @@ function eL(e, t) {
     }
     return n;
 }
-function ex(e, t) {
+function eL(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : eL(Object(t)).forEach(function (n) {
+            : ex(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -155,8 +155,8 @@ let eM = {
         [eS.kVF.CHECKOUT_RECOVERY_NAGBAR]: l.z.CHECKOUT_RECOVERY_NAGBAR,
         [eS.kVF.REPORT_TO_MOD_EXIT_SURVEY]: l.z.REPORT_TO_MOD_EXIT_SURVEY_NOTICE,
     },
-    ek = { [eS.kVF.GIFTING_PROMOTION_REMINDER]: l.z.GIFTING_PROMOTION_REMINDER },
-    ej = {
+    ej = { [eS.kVF.GIFTING_PROMOTION_REMINDER]: l.z.GIFTING_PROMOTION_REMINDER },
+    ek = {
         [eS.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: l.z.NAGBAR_NOTICE_OFFER_EXPIRING,
         [eS.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING]: l.z.NAGBAR_NOTICE_OFFER_EXPIRING,
     },
@@ -218,8 +218,8 @@ function eq(e, t, n) {
     null == r || t || c.K.set(r, !0), eB.has(e) && (eZ[e] = !0), null != n && null != r ? eK(e, n) : ez(e);
 }
 function eX(e) {
-    if (null == e || null != ej[e]) return !1;
-    let t = ek[e];
+    if (null == e || null != ek[e]) return !1;
+    let t = ej[e];
     if (null != t) return (0, g.H4)(t).isDismissed;
     let n = eM[e];
     if (null != n) return (0, m.zu)(n);
@@ -311,8 +311,8 @@ let eQ = [
     e$ = {
         [eS.kVF.GIFTING_PROMOTION_REMINDER]: {
             predicate: () => {
-                let { enabled: e } = L.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
-                    { enabled: t } = L.ZP.getConfig({ location: "NoticeStore" });
+                let { enabled: e } = x.Ys.getCurrentConfig({ location: "NoticeStore" }, { autoTrackExposure: !1 }),
+                    { enabled: t } = x.ZP.getConfig({ location: "NoticeStore" });
                 return (
                     e &&
                     t &&
@@ -393,8 +393,8 @@ let eQ = [
         [eS.kVF.BLOCKED_BY_PROXY]: {
             predicate: () =>
                 !eX(eS.kVF.BLOCKED_BY_PROXY) &&
-                j.Z.blockedByProxy &&
-                k.Z.getCurrentConfig({ location: "notice_store" }).eligibleForNotice,
+                k.Z.blockedByProxy &&
+                j.Z.getCurrentConfig({ location: "notice_store" }).eligibleForNotice,
         },
         [eS.kVF.UNCLAIMED_ACCOUNT]: {
             predicate: (e) => {
@@ -418,7 +418,7 @@ let eQ = [
                 );
             },
         },
-        [eS.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, x.tq)() },
+        [eS.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, L.tq)() },
         [eS.kVF.CORRUPT_INSTALLATION]: {
             predicate: () => ey.isPlatformEmbedded && (!s.Z.supported() || eT.Z.isCorruptInstallation()),
         },
@@ -811,7 +811,7 @@ function e0() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eH = ex(eD({}, eV), {
+            eH = eL(eD({}, eV), {
                 type: n,
                 metadata: o,
             });
@@ -836,10 +836,10 @@ function e1(e) {
         e0()
     );
 }
-function e2(e) {
+function e3(e) {
     eH = e.notice;
 }
-function e3(e) {
+function e2(e) {
     return null != eH && (null == e.id || e.id === eH.id) && (eq(eH.type, e.isTemporary, e.untilAtLeast), e0());
 }
 function e4(e) {
@@ -900,7 +900,7 @@ class tn extends (r = o.ZP.Store) {
                 ei.Z,
                 ea.Z,
                 M.Z,
-                j.Z,
+                k.Z,
                 U.Z,
                 eo.Z,
                 O.ZP,
@@ -979,8 +979,8 @@ let tr = new tn(u.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: e6,
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: e7,
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: e9,
-    NOTICE_SHOW: e2,
-    NOTICE_DISMISS: e3,
+    NOTICE_SHOW: e3,
+    NOTICE_DISMISS: e2,
     NOTICE_DISABLE: e4,
     LOGOUT: tt,
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: e0,

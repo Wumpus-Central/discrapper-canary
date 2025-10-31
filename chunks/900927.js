@@ -18,7 +18,7 @@ function g(e) {
         _ = (0, i.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
         y = (0, i.e7)([d.ZP], () => (null != n ? d.ZP.getMember(n, t) : null)),
         x = (0, s.FI)(p.default.extractTimestamp(t), b),
-        v = (0, s.FI)(null == y ? void 0 : y.joinedAt, b);
+        O = (0, s.FI)(null == y ? void 0 : y.joinedAt, b);
     return null == _ || null == y
         ? (0, r.jsx)(a.Text, {
               variant: "text-sm/normal",
@@ -65,7 +65,7 @@ function g(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               className: g,
-                              children: v,
+                              children: O,
                           }),
                       ],
                   }),

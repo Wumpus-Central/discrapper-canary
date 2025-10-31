@@ -29,8 +29,8 @@ var r = n(951288),
     P = n(594174),
     w = n(51144),
     D = n(388032),
-    L = n(430864),
-    x = n(329072);
+    x = n(430864),
+    L = n(329072);
 function M(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function k(e) {
     }
     return e;
 }
-function j(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,7 +77,7 @@ function U(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -121,7 +121,7 @@ function B(e) {
                       let { isShown: o } = i;
                       return (0, r.jsx)(
                           f.Z,
-                          k(
+                          j(
                               {
                                   ref: c,
                                   selected: o,
@@ -142,12 +142,12 @@ function B(e) {
                                               n.e("6915"),
                                               n.e("8982"),
                                               n.e("7717"),
-                                              n.e("26624"),
+                                              n.e("20037"),
                                           ]).then(n.bind(n, 757387));
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  U(k({}, t), {
+                                                  U(j({}, t), {
                                                       user: _,
                                                       guildId: a,
                                                       channel: p,
@@ -229,19 +229,19 @@ function Z(e) {
         children: (0, r.jsx)(
             "div",
             U(
-                k(
+                j(
                     {
-                        className: L.rolePopout,
+                        className: x.rolePopout,
                         ref: d,
                     },
                     t,
                 ),
                 {
                     children: (0, r.jsxs)(u.Ttm, {
-                        className: L.roleScroller,
+                        className: x.roleScroller,
                         children: [
                             (0, r.jsx)(g.Z, {
-                                className: L.roleHeader,
+                                className: x.roleHeader,
                                 "aria-label": D.intl.formatToPlainString(D.t.Uaqbke, {
                                     title: m.name,
                                     count: y.length,
@@ -255,7 +255,7 @@ function Z(e) {
                             null == E || E <= y.length
                                 ? null
                                 : (0, r.jsx)(g.Z, {
-                                      className: L.roleHeader,
+                                      className: x.roleHeader,
                                       children: D.intl.formatToPlainString(D.t["9oMmZC"], { count: E - y.length }),
                                   }),
                         ],
@@ -280,10 +280,10 @@ function F(e) {
             (0, r.jsxs)(
                 O.Z,
                 U(
-                    k(
+                    j(
                         {
                             ref: C,
-                            className: L.roleMention,
+                            className: x.roleMention,
                             color: S ? g.color : null,
                             roleColors: S ? A : null,
                         },
@@ -296,7 +296,7 @@ function F(e) {
                                 (0, r.jsx)(u.FhE, {
                                     color: (0, s.Rf)(g.color),
                                     colors: A,
-                                    className: x.roleDot,
+                                    className: L.roleDot,
                                     background: !1,
                                     tooltip: !1,
                                 }),

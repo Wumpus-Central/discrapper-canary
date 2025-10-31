@@ -218,10 +218,10 @@ function D(e, t) {
             n = Object.getPrototypeOf(n);
         }
 }
-function L(e) {
-    e.P || ((e.P = !0), e.l && L(e.l));
-}
 function x(e) {
+    e.P || ((e.P = !0), e.l && x(e.l));
+}
+function L(e) {
     e.o || (e.o = h(e.t));
 }
 function M(e, t, n) {
@@ -256,7 +256,7 @@ function M(e, t, n) {
             : b("ES5").J(t, n);
     return (n ? n.A : O()).p.push(r), r;
 }
-function k(e) {
+function j(e) {
     return (
         i(e) || r(22, e),
         (function e(t) {
@@ -266,8 +266,8 @@ function k(e) {
                 i = s(t);
             if (r) {
                 if (!r.P && (r.i < 4 || !b("ES5").K(r))) return r.t;
-                (r.I = !0), (n = j(t, i)), (r.I = !1);
-            } else n = j(t, i);
+                (r.I = !0), (n = k(t, i)), (r.I = !1);
+            } else n = k(t, i);
             return (
                 o(n, function (t, i) {
                     (r && c(r.t, t) === i) || u(n, t, e(i));
@@ -277,7 +277,7 @@ function k(e) {
         })(e)
     );
 }
-function j(e, t) {
+function k(e, t) {
     switch (t) {
         case 2:
             return new Map(e);
@@ -334,7 +334,7 @@ var U,
                     return i ? ("value" in i ? i.value : null == (r = i.get) ? void 0 : r.call(e.k)) : void 0;
                 })(e, n, t);
             var r = n[t];
-            return e.I || !a(r) ? r : r === w(e.t, t) ? (x(e), (e.o[t] = M(e.A.h, r, e))) : r;
+            return e.I || !a(r) ? r : r === w(e.t, t) ? (L(e), (e.o[t] = M(e.A.h, r, e))) : r;
         },
         has: function (e, t) {
             return t in p(e);
@@ -350,7 +350,7 @@ var U,
                     a = null == i ? void 0 : i[W];
                 if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, i) && (void 0 !== n || l(e.t, t))) return !0;
-                x(e), L(e);
+                L(e), x(e);
             }
             return (
                 (e.o[t] === n && (void 0 !== n || t in e.o)) ||
@@ -361,7 +361,7 @@ var U,
         },
         deleteProperty: function (e, t) {
             return (
-                void 0 !== w(e.t, t) || t in e.t ? ((e.R[t] = !1), x(e), L(e)) : delete e.R[t], e.o && delete e.o[t], !0
+                void 0 !== w(e.t, t) || t in e.t ? ((e.R[t] = !1), L(e), x(e)) : delete e.R[t], e.o && delete e.o[t], !0
             );
         },
         getOwnPropertyDescriptor: function (e, t) {
@@ -476,7 +476,7 @@ var ee = new ((function () {
         var t = e.prototype;
         return (
             (t.createDraft = function (e) {
-                a(e) || r(8), i(e) && (e = k(e));
+                a(e) || r(8), i(e) && (e = j(e));
                 var t = S(this),
                     n = M(this, e, void 0);
                 return (n[W].C = !0), T(t), n;

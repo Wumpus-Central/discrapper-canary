@@ -30,8 +30,8 @@ function O(e) {
     let { quest: n, errorHints: a, transitionState: j, onClose: O, sourceQuestContent: T } = e,
         [w, P] = (0, s.useState)(a),
         N = (0, x.KX)(),
-        A = (0, g.O5)(),
-        R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        R = (0, g.O5)(),
+        A = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
         B = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
         k = (0, v.g2)({
             useReducedMotion: B,
@@ -45,7 +45,7 @@ function O(e) {
             questId: n.id,
             beforeRequest: () => {
                 k.startAnimation(),
-                    A({
+                    R({
                         questId: n.id,
                         questContent: _.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
@@ -71,7 +71,7 @@ function O(e) {
                         {
                             content: _.jn.CONNECTIONS_MODAL,
                             ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: R,
+                            impressionId: A,
                             sourceQuestContent: T,
                         },
                     )),

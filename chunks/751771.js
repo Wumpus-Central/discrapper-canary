@@ -1,5 +1,5 @@
 let i, l, s, r, a, o;
-n.d(t, { Z: () => M }), n(388685), n(642613);
+n.d(t, { Z: () => Z }), n(388685), n(642613);
 var u,
     d,
     c = n(442837),
@@ -9,15 +9,15 @@ var u,
     p = n(752048),
     I = n(823379),
     m = n(971130),
-    x = n(592125),
-    S = n(496675),
+    S = n(592125),
+    x = n(496675),
     f = n(699516),
     E = n(981631),
     y = n(245335);
 let C = new Set(),
     _ = [],
-    T = new Map(),
-    b = {
+    b = new Map(),
+    T = {
         numFriends: 0,
         numDms: 0,
         numGroupDms: 0,
@@ -40,10 +40,10 @@ function N(e) {
     return (
         o === y.Iq.EMBEDDED_APPLICATION &&
             v.Z.getChannelHistory()
-                .map((e) => x.Z.getChannel(e))
+                .map((e) => S.Z.getChannel(e))
                 .filter(I.lm)
                 .filter((e) => e.type === E.d4z.GUILD_TEXT)
-                .filter((e) => S.Z.can(E.Plq.SEND_MESSAGES, e))
+                .filter((e) => x.Z.can(E.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
                 .forEach((e) => u.add(e.id)),
         (0, m.an)({
@@ -59,14 +59,14 @@ function N(e) {
 }
 function A(e) {
     (_ = e),
-        (T = new Map()),
+        (b = new Map()),
         e.forEach((e, t) => {
-            T.set(e, { index: t });
+            b.set(e, { index: t });
         });
 }
-class Z extends (u = c.ZP.Store) {
+class P extends (u = c.ZP.Store) {
     initialize() {
-        this.waitFor(x.Z, S.Z, v.Z, f.Z, p.Z);
+        this.waitFor(S.Z, x.Z, v.Z, f.Z, p.Z);
     }
     getInviteSuggestionRows() {
         return _;
@@ -75,10 +75,10 @@ class Z extends (u = c.ZP.Store) {
         return i;
     }
     getInitialCounts() {
-        return b;
+        return T;
     }
     getSelectedInviteMetadata(e) {
-        let t = T.get(e),
+        let t = b.get(e),
             n = p.Z.getUserAffinities().map((e) => e.otherUserId);
         if (null != t)
             return {
@@ -90,15 +90,15 @@ class Z extends (u = c.ZP.Store) {
             };
     }
 }
-(d = "displayName") in Z
-    ? Object.defineProperty(Z, d, {
+(d = "displayName") in P
+    ? Object.defineProperty(P, d, {
           value: "InviteSuggestionsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (Z[d] = "InviteSuggestionsStore");
-let M = new Z(g.Z, {
+    : (P[d] = "InviteSuggestionsStore");
+let Z = new P(g.Z, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: u, applicationId: d, inviteTargetType: c } = e;
         (s = null != u ? n : null),
@@ -116,7 +116,7 @@ let M = new Z(g.Z, {
             ])),
             (l = !1);
         let { rows: g, counts: h } = N("");
-        A(g), (b = h), (i = _.length);
+        A(g), (T = h), (i = _.length);
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;

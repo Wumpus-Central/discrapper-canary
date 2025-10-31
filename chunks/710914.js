@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(415104),
     p = n(388032),
     f = n(334525);
-function h(e) {
-    let { quests: t, isFetching: n, hasFetched: l, hasFiltersApplied: h = !1, onClearFilters: m } = e,
+function m(e) {
+    let { quests: t, isFetching: n, hasFetched: l, hasFiltersApplied: m = !1, onClearFilters: h } = e,
         g = i.useRef(!1),
         _ = (0, o.TH)(),
         b = i.useMemo(() => {
@@ -47,7 +47,7 @@ function h(e) {
             }
         );
     }, []);
-    let v = O >= 1610 ? 3 : O >= 1340 ? 2 : 1;
+    let y = O >= 1610 ? 3 : O >= 1340 ? 2 : 1;
     return n && 0 === t.length
         ? (0, r.jsx)(c.$jN, { className: f.spinner })
         : 0 === t.length
@@ -56,12 +56,12 @@ function h(e) {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-xl/semibold",
-                        children: p.intl.string(h ? p.t.PBfFnx : p.t.NqFP6z),
+                        children: p.intl.string(m ? p.t.PBfFnx : p.t.NqFP6z),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        children: h ? p.intl.format(p.t.LdYS1H, { onClick: m }) : p.intl.string(p.t.LhD4yH),
+                        children: m ? p.intl.format(p.t.LdYS1H, { onClick: h }) : p.intl.string(p.t.LhD4yH),
                     }),
                 ],
             })
@@ -70,7 +70,7 @@ function h(e) {
                 {
                     className: f.container,
                     children: t.map((e, t) => {
-                        let n = Math.floor(t / v);
+                        let n = Math.floor(t / y);
                         return (0, r.jsx)(
                             d.Z,
                             {

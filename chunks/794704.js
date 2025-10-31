@@ -29,11 +29,11 @@ var r = n(951288),
     P = n(297700),
     w = n(444295),
     D = n(486016),
-    L = n(837268),
-    x = n(32300),
+    x = n(837268),
+    L = n(32300),
     M = n(809357),
-    k = n(371651),
-    j = n(829907),
+    j = n(371651),
+    k = n(829907),
     U = n(624864),
     G = n(610394),
     B = n(957148),
@@ -239,7 +239,7 @@ function eD(e) {
         ],
     });
 }
-function eL(e) {
+function ex(e) {
     var { children: t, className: n, onExpand: a } = e,
         s = ev(e, ["children", "className", "onExpand"]);
     let [l, c] = i.useState(!1),
@@ -285,26 +285,26 @@ function eL(e) {
         },
     });
 }
-let ex = new Set([
-        L.mM.INITIALIZING,
-        L.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION,
-        L.mM.WAITING_FOR_MODULE_TRACKING,
-        L.mM.WAITING_FOR_OVERLAY_OPEN,
-        L.mM.WAITING_FOR_POPOUT_OPEN,
-        L.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE,
-        L.mM.WAITING_FOR_REACT_INITIALIZATION,
-        L.mM.WAITING_FOR_PID_FOCUS,
+let eL = new Set([
+        x.mM.INITIALIZING,
+        x.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION,
+        x.mM.WAITING_FOR_MODULE_TRACKING,
+        x.mM.WAITING_FOR_OVERLAY_OPEN,
+        x.mM.WAITING_FOR_POPOUT_OPEN,
+        x.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE,
+        x.mM.WAITING_FOR_REACT_INITIALIZATION,
+        x.mM.WAITING_FOR_PID_FOCUS,
     ]),
     eM = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
-function ek(e) {
+function ej(e) {
     var t, n, a;
     let { runningGame: o, runningGameApplication: s } = e,
         c = null == o ? void 0 : o.pid,
         u = (0, _.e7)(
-            [k.default],
-            () => (null == o || null == c ? null : k.default.getTrackedGameByPid(c)),
+            [j.default],
+            () => (null == o || null == c ? null : j.default.getTrackedGameByPid(c)),
             [o, c],
             l(),
         ),
@@ -332,7 +332,7 @@ function ek(e) {
     }, [f, d]);
     let C = !(0, el.supportsLegacy)(),
         N = !(0, el.supportsOutOfProcess)(),
-        { legacyEnabled: D, oopEnabled: x } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
+        { legacyEnabled: D, oopEnabled: L } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         M = (e, t) => {
             var n, r, i;
             if (null == o) return;
@@ -346,7 +346,7 @@ function ek(e) {
                     E(e), m.Z.toggleOverlay(o, y, e), (s = !e && g);
                     break;
                 case w.OverlayToggledClientSettingType.LEGACY:
-                    b.Z.setEnabled(e, x),
+                    b.Z.setEnabled(e, L),
                         (0, w.ou)(e, w.OverlayToggledClientSettingType.LEGACY, null != (n = o.id) ? n : null);
                     break;
                 case w.OverlayToggledClientSettingType.OOP:
@@ -359,11 +359,11 @@ function ek(e) {
                     null != (i = o.id) ? i : null,
                 );
         },
-        j = (e, t) => {
+        k = (e, t) => {
             let n = !t && e,
-                r = !x && g,
+                r = !L && g,
                 i = !D && y,
-                a = !g && x,
+                a = !g && L,
                 o = !y && D;
             switch (!0) {
                 case n && (r || i) && (a || o):
@@ -383,7 +383,7 @@ function ek(e) {
                     m.Z.toggleOverlay(o, e, e), I(e), E(e), (n = !e && y), (r = !e && g);
                     break;
                 case "global":
-                    b.Z.setEnabled(e, e), (n = !e && D), (r = !e && x);
+                    b.Z.setEnabled(e, e), (n = !e && D), (r = !e && L);
                     break;
                 case "both":
                     b.Z.setEnabled(e, e),
@@ -391,7 +391,7 @@ function ek(e) {
                         I(e),
                         E(e),
                         (n = (!e && D) || (!e && y)),
-                        (r = (!e && x) || (!e && g));
+                        (r = (!e && L) || (!e && g));
             }
             let i = null;
             if (
@@ -412,18 +412,18 @@ function ek(e) {
             }
         },
         G = C && N,
-        Z = !D && !x,
+        Z = !D && !L,
         F = !g && !D && y && !C,
-        V = !y && !x && g && !N,
-        H = (null == u ? void 0 : u.overlayMethod) === L.gl.Disabled,
-        Y = (null == u ? void 0 : u.state) === L.mM.OVERLAY_RENDERING && !H,
-        W = (null == u ? void 0 : u.state) != null && ex.has(u.state) && !H,
-        z = (null == u ? void 0 : u.overlayMethod) === L.gl.OutOfProcess,
-        q = (null == u ? void 0 : u.overlayMethod) === L.gl.OutOfProcessLimitedInteraction,
-        X = (null == u ? void 0 : u.overlayMethod) === L.gl.Hook,
+        V = !y && !L && g && !N,
+        H = (null == u ? void 0 : u.overlayMethod) === x.gl.Disabled,
+        Y = (null == u ? void 0 : u.state) === x.mM.OVERLAY_RENDERING && !H,
+        W = (null == u ? void 0 : u.state) != null && eL.has(u.state) && !H,
+        z = (null == u ? void 0 : u.overlayMethod) === x.gl.OutOfProcess,
+        q = (null == u ? void 0 : u.overlayMethod) === x.gl.OutOfProcessLimitedInteraction,
+        X = (null == u ? void 0 : u.overlayMethod) === x.gl.Hook,
         J =
-            (null == u ? void 0 : u.state) === L.mM.OVERLAY_CRASHED ||
-            (null == u ? void 0 : u.state) === L.mM.OVERLAY_CRASHED_DISABLED,
+            (null == u ? void 0 : u.state) === x.mM.OVERLAY_CRASHED ||
+            (null == u ? void 0 : u.state) === x.mM.OVERLAY_CRASHED_DISABLED,
         ee = !g && !y,
         [et, en] = (() => {
             switch (!0) {
@@ -477,7 +477,7 @@ function ek(e) {
                                 return ep.intl.string(ep.t.C7bLTQ);
                             case !(null != (e = null == u ? void 0 : u.oopEnabled) && e):
                                 return ep.intl.string(ep.t.WiY24u);
-                            case !x:
+                            case !L:
                                 return ep.intl.string(ep.t.cAFVsL);
                             case !(null != (t = null == u ? void 0 : u.supportsOutOfProcess) && t):
                                 return ep.intl.string(ep.t.XcGEcs);
@@ -551,7 +551,7 @@ function ek(e) {
     );
     return null == o
         ? null
-        : (0, r.jsxs)(eL, {
+        : (0, r.jsxs)(ex, {
               onExpand: S,
               className: T ? eh.expandedContainer : void 0,
               title: (0, r.jsxs)(r.Fragment, {
@@ -620,10 +620,10 @@ function ek(e) {
               action: (0, r.jsx)(h.P3F, {
                   onClick: (e) => eM(e),
                   children: (0, r.jsx)(h.rsf, {
-                      checked: (g && x) || (y && D),
+                      checked: (g && L) || (y && D),
                       disabled: G,
                       onChange: (e) => {
-                          U(e, j(e, (g && x) || (y && D)));
+                          U(e, k(e, (g && L) || (y && D)));
                       },
                   }),
               }),
@@ -635,15 +635,15 @@ function ek(e) {
                   (0, r.jsx)(eD, {
                       title: ep.intl.string(ep.t["7BlVIs"]),
                       description: ep.intl.string(ep.t.ndgADE),
-                      hint: x ? void 0 : ep.intl.string(ep.t.cAFVsL),
+                      hint: L ? void 0 : ep.intl.string(ep.t.cAFVsL),
                       "aria-label": ep.intl.string(ep.t["7BlVIs"]),
                       action: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(h.rsf, {
-                                  checked: g && x,
+                                  checked: g && L,
                                   disabled: N,
                                   onChange: (e) => {
-                                      e && !x
+                                      e && !L
                                           ? M(e, w.OverlayToggledClientSettingType.OOP)
                                           : M(e, w.OverlayToggledClientSettingType.OOP_GAME);
                                   },
@@ -675,7 +675,7 @@ function ek(e) {
               ],
           });
 }
-function ej(e) {
+function ek(e) {
     let { game: t, gameApplication: n } = e,
         a = i.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
         o = (0, _.e7)([I.Z], () => (null != n ? n : I.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
@@ -711,7 +711,7 @@ function eU(e) {
     };
     return (0, r.jsx)(eD, {
         title: t.name,
-        icon: (0, r.jsx)(ej, {
+        icon: (0, r.jsx)(ek, {
             game: u,
             gameApplication: n,
         }),
@@ -730,7 +730,7 @@ function eU(e) {
 }
 function eG() {
     let [e, t] = i.useState(!1),
-        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
+        { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
         s = (0, T.Z)(o.map((e) => e.id)),
         l = !(0, el.supportsLegacy)(),
@@ -771,7 +771,7 @@ function eG() {
                   ],
               }),
           })
-        : (0, r.jsxs)(eL, {
+        : (0, r.jsxs)(ex, {
               onExpand: t,
               className: e ? eh.expandedContainer : void 0,
               title: ep.intl.string(ep.t.BfFpW1),
@@ -820,7 +820,7 @@ function eG() {
 }
 function eB() {
     let [e, t] = i.useState(!1),
-        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
+        { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([j.default], () => j.default.getGlobalEnabledStatus()),
         o = !(0, el.supportsOutOfProcess)(),
         s = (0, _.Wu)([A.ZP], () => A.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
         l = (0, T.Z)(s.map((e) => e.id)),
@@ -858,7 +858,7 @@ function eB() {
                   ],
               }),
           })
-        : (0, r.jsxs)(eL, {
+        : (0, r.jsxs)(ex, {
               onExpand: t,
               className: e ? eh.expandedContainer : void 0,
               title: ep.intl.string(ep.t["7BlVIs"]),
@@ -994,8 +994,8 @@ let eF = (e, t, n) =>
         .filter((e) => !1 !== e)
         .filter(Boolean);
 function eV() {
-    let { allowActivityWidget: e, allowNowPlaying: t } = (0, x.o4)("user_settings"),
-        { enabled: n } = (0, x.aq)("OverlayV3StreamWatchNudge"),
+    let { allowActivityWidget: e, allowNowPlaying: t } = (0, L.o4)("user_settings"),
+        { enabled: n } = (0, L.aq)("OverlayV3StreamWatchNudge"),
         i = eF(e, t, n),
         a = (e) => (t) => {
             b.Z.setNotificationDisabledSetting(e, !t);
@@ -1308,7 +1308,7 @@ function eq(e) {
     let { runningGame: t, runningGameApplication: n } = e,
         a = null == n ? void 0 : n.id,
         o = (0, _.e7)([U.Z], () => U.Z.isLimitedInteractionOverrideEnabled(a), [a]),
-        s = i.useMemo(() => null != t && (0, j.H8)(t.pid), [t]),
+        s = i.useMemo(() => null != t && (0, k.H8)(t.pid), [t]),
         l = (0, M.Z)({ location: "overlay_user_settings" }),
         { disableClickableRegions: c, shouldShowKeybindIndicators: u } = (0, _.cj)([er.default], () => ({
             disableClickableRegions: er.default.disableClickableRegions,
@@ -1384,7 +1384,7 @@ function eq(e) {
 function eX(e) {
     let { className: t, showHeader: n } = e,
         { runningGame: i, runningGameApplication: a } = (0, C.Z)(),
-        o = (0, x.o4)("user_settings").overlayV3UI,
+        o = (0, L.o4)("user_settings").overlayV3UI,
         s = (0, _.e7)([ee.default], () => ee.default.getCurrentUser());
     return ((0, v.ZP)(() => {
         if (eo.isPlatformEmbedded) return (0, N.Ky)(), N.P7;
@@ -1401,7 +1401,7 @@ function eX(e) {
                           (0, r.jsxs)("div", {
                               className: eh.overlayEnabledSettingsContainer,
                               children: [
-                                  (0, r.jsx)(ek, {
+                                  (0, r.jsx)(ej, {
                                       runningGame: i,
                                       runningGameApplication: a,
                                   }),

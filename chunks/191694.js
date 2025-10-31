@@ -1,24 +1,24 @@
-n.d(e, { q: () => T });
+n.d(e, { q: () => O });
 var i = n(951288),
     l = n(657707),
-    u = n(509613),
-    r = n(313789),
+    r = n(509613),
+    u = n(313789),
     s = n(293389),
-    o = n(168308),
-    a = n(726985),
+    a = n(168308),
+    o = n(726985),
     c = n(388032);
-let E = (0, u.x1)(r.n.REGISTERED_GAMES_PANE, {
+let d = (0, r.x1)(u.n.REGISTERED_GAMES_PANE, {
         buildLayout: () => [],
         render: () => (0, i.jsx)(s.Z, {}),
     }),
-    d = (0, u.wf)(r.n.REGISTERED_GAMES_PANEL, {
+    E = (0, r.wf)(u.n.REGISTERED_GAMES_PANEL, {
         useTitle: () => c.intl.string(c.t.AVDyEj),
-        buildLayout: () => [E],
+        buildLayout: () => [d],
     }),
-    T = (0, u.m7)(r.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
+    O = (0, r.m7)(u.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
         icon: l.iWm,
         useTitle: () => c.intl.string(c.t.AVDyEj),
-        legacySearchKey: a.s6.REGISTERED_GAMES,
-        usePredicate: o.Jw,
-        buildLayout: () => [d],
+        legacySearchKey: o.s6.REGISTERED_GAMES,
+        usePredicate: a.Jw,
+        buildLayout: () => [E],
     });

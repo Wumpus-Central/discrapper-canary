@@ -1,24 +1,24 @@
-n.d(t, { G: () => o });
+n.d(t, { G: () => s });
 var a = n(951288),
-    r = n(481060),
+    i = n(481060),
     l = n(981631),
-    i = n(492938);
-let o = (e) => {
-    let { showStatus: t, width: n, opacity: o } = e;
+    r = n(492938);
+let s = (e) => {
+    let { showStatus: t, width: n, opacity: s } = e;
     return (0, a.jsxs)("div", {
-        className: i.nameplatePlaceholderUserRow,
-        style: { opacity: o },
+        className: r.nameplatePlaceholderUserRow,
+        style: { opacity: s },
         children: [
-            (0, a.jsx)(r.qEK, {
+            (0, a.jsx)(i.qEK, {
                 src: null,
-                size: r.EFr.SIZE_32,
+                size: i.EFr.SIZE_32,
                 status: t ? l.Skl.ONLINE : void 0,
                 statusColor: "var(--border-subtle)",
                 "aria-hidden": !0,
-                imageClassName: i.nameplatePlaceholderAvatar,
+                imageClassName: r.nameplatePlaceholderAvatar,
             }),
             (0, a.jsx)("div", {
-                className: i.nameplatePlaceholderBar,
+                className: r.nameplatePlaceholderBar,
                 style: { maxWidth: null != n ? n : "100px" },
             }),
         ],

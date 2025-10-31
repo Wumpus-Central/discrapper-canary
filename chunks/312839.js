@@ -1,13 +1,13 @@
 n.d(t, {
-    P: () => p,
+    P: () => h,
     R: () => u,
 }),
     n(35282);
 var i = n(13245),
     r = n(556296),
-    s = n(237997),
+    l = n(237997),
     o = n(13140),
-    l = n(981631),
+    s = n(981631),
     a = n(987650);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -55,13 +55,13 @@ function d(e, t) {
 function u(e, t) {
     return {
         trackView() {
-            let n = s.default.isInstanceLocked() ? l.Sbl.LOCKED_OVERLAY : l.Sbl.UNLOCKED_OVERLAY;
-            i.Z.track(l.rMx.NOTIFICATION_VIEWED, d(c({}, t), { location: n })), i.Z.notificationEvent(e, a.bv.Viewed);
+            let n = l.default.isInstanceLocked() ? s.Sbl.LOCKED_OVERLAY : s.Sbl.UNLOCKED_OVERLAY;
+            i.Z.track(s.rMx.NOTIFICATION_VIEWED, d(c({}, t), { location: n })), i.Z.notificationEvent(e, a.bv.Viewed);
         },
         trackClick(n) {
-            let r = s.default.isInstanceLocked() ? l.Sbl.LOCKED_OVERLAY : l.Sbl.UNLOCKED_OVERLAY;
+            let r = l.default.isInstanceLocked() ? s.Sbl.LOCKED_OVERLAY : s.Sbl.UNLOCKED_OVERLAY;
             i.Z.track(
-                l.rMx.NOTIFICATION_CLICKED,
+                s.rMx.NOTIFICATION_CLICKED,
                 d(c({}, t), {
                     location: r,
                     action_type: n,
@@ -71,7 +71,7 @@ function u(e, t) {
         },
     };
 }
-function p() {
+function h() {
     let e = r.ZP.getOverlayKeybind();
     return null != e ? (0, o.BB)(e.shortcut, !0).split(" + ") : ["???"];
 }

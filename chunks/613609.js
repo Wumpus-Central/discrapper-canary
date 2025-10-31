@@ -10,11 +10,11 @@ var r = n(951288),
     d = n(449934),
     p = n(650233),
     f = n(981631),
-    h = n(898625),
-    m = n(242517);
+    m = n(898625),
+    h = n(242517);
 let g = (e) => {
     let { guildId: t, inviteCode: n } = e,
-        [g, _] = i.useState(h.hO.INITIAL),
+        [g, _] = i.useState(m.hO.INITIAL),
         [b, E] = i.useState(null != n);
     i.useEffect(() => {
         null != n && a.ZP.resolveInvite(n, "Hub").finally(() => E(!1));
@@ -24,22 +24,22 @@ let g = (e) => {
     i.useEffect(() => {
         null != I && (0, o.uL)(f.Z5c.CHANNEL(t));
     }, [I, t]);
-    let v = i.useCallback((e) => {
+    let y = i.useCallback((e) => {
             _((t) => Math.max(t, e));
         }, []),
-        y = (0, d.gK)();
+        v = (0, d.gK)();
     return (0, r.jsx)("div", {
-        className: m.page,
+        className: h.page,
         children: (0, r.jsxs)(s.Z, {
             embedded: !0,
-            splash: y,
+            splash: v,
             waveState: g,
             showLogo: !1,
-            updateWaveState: v,
+            updateWaveState: y,
             children: [
-                (0, r.jsx)("div", { className: m.dragRegion }),
+                (0, r.jsx)("div", { className: h.dragRegion }),
                 (0, r.jsx)("div", {
-                    className: m.contentWrapper,
+                    className: h.contentWrapper,
                     children: !b && (0, r.jsx)(p.H, { invite: O }),
                 }),
             ],

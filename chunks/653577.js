@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(362721),
     d = n(12498),
     p = n(454585),
-    f = n(626135),
-    h = n(981631),
+    h = n(626135),
+    f = n(981631),
     g = n(388032),
     m = n(158871),
     b = n(430864);
@@ -20,19 +20,19 @@ function _(e) {
             connected: n,
             hovered: l,
             subtitle: _,
-            onClick: O,
-            enableHangStatus: y,
-            showEmptyChannelTopic: j,
+            onClick: y,
+            enableHangStatus: O,
+            showEmptyChannelTopic: v,
         } = e,
-        v = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
-        C = null != v && v.length > 0,
+        j = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
+        C = null != j && j.length > 0,
         x = (0, u.ZP)(t, !0),
-        E = (!y || !!j) && x,
+        E = (!O || !!v) && x,
         S = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
             C &&
-                f.default.track(h.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+                h.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id,
                 });
@@ -44,17 +44,17 @@ function _(e) {
     return C
         ? (0, r.jsx)(c.P3F, {
               className: I,
-              onClick: E ? O : void 0,
+              onClick: E ? y : void 0,
               children: (0, r.jsx)(c.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(s.Z, { children: p.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) }),
+                  children: (0, r.jsx)(s.Z, { children: p.Z.parseVoiceChannelStatus(j, !0, { channelId: t.id }) }),
               }),
           })
         : n && E && (!S || l)
           ? (0, r.jsxs)(c.P3F, {
                 className: I,
-                onClick: O,
+                onClick: y,
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: "text-xs/medium",
