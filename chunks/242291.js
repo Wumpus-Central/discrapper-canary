@@ -1,13 +1,13 @@
 n.d(t, {
     C0: () => R,
     GN: () => P,
-    M2: () => L,
+    M2: () => x,
     Nq: () => N,
     SZ: () => k,
     aC: () => M,
     lF: () => G,
     pI: () => A,
-    sR: () => x,
+    sR: () => L,
     tt: () => U,
 }),
     n(539854);
@@ -59,8 +59,8 @@ function R(e) {
     let { mute: t, suppress: n } = (0, u.b)({ channel: e });
     return !t && !n;
 }
-function P(e, t, n) {
-    (0, E.XE)(t, e, y.YQ.SOUNDBOARD), (0, d.kq)(t, e, __OVERLAY__, n);
+function P(e, t, n, r) {
+    (0, E.XE)(t, e, y.YQ.SOUNDBOARD), (0, d.kq)(t, e, __OVERLAY__, n, r);
 }
 function w(e, t) {
     (0, E.XE)(t, e, y.YQ.JOINED_VOICE_CHANNEL), (0, d.vy)(t, e, __OVERLAY__);
@@ -71,7 +71,7 @@ function D() {
         (e) => null != e.joinSound,
     );
 }
-async function L(e) {
+async function x(e) {
     let t = p.default.getCurrentUser(),
         n = (0, o.Z)(),
         r = (0, v.k9)(e);
@@ -84,7 +84,7 @@ async function L(e) {
         w(a, n.id);
     }
 }
-function x(e) {
+function L(e) {
     let { isSoundboardButtonDisabled: t = !1 } = e,
         n = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
         a = [];

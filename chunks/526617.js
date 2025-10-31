@@ -279,13 +279,13 @@ function eu(e) {
             [eY],
         ),
         eq = i.useCallback(
-            (e, t, n) => {
+            (e, t, n, r) => {
                 if (null != I && !P) return I(e, n);
-                let r = (0, k.Nq)(eI, e, a, !1);
-                if (null != I && P && r) I(e, n);
-                else if (!X && r && (0, k.C0)(a)) {
-                    var i;
-                    (0, k.GN)(e, null != (i = null == a ? void 0 : a.id) ? i : Y.lds, t),
+                let i = (0, k.Nq)(eI, e, a, !1);
+                if (null != I && P && i) I(e, n);
+                else if (!X && i && (0, k.C0)(a)) {
+                    var o;
+                    (0, k.GN)(e, null != (o = null == a ? void 0 : a.id) ? o : Y.lds, t, r),
                         eN &&
                             w.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
@@ -305,8 +305,14 @@ function eu(e) {
                 switch (e.item.type) {
                     case M.vB.SOUND:
                         var n;
-                        let r = null != (n = eo[null == e ? void 0 : e.category]) ? n : null;
-                        return eq(e.item.sound, null == r ? eg : [...eg, r], (null == t ? void 0 : t.shiftKey) !== !0);
+                        let r = null != (n = eo[null == e ? void 0 : e.category]) ? n : null,
+                            i = null == e ? void 0 : e.item.index;
+                        return eq(
+                            e.item.sound,
+                            null == r ? eg : [...eg, r],
+                            (null == t ? void 0 : t.shiftKey) !== !0,
+                            i,
+                        );
                     case M.vB.ADD_SOUND:
                         return g(), (0, H.Z)(e.item.guild.id);
                 }
