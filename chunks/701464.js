@@ -6,7 +6,14 @@ var i = n(973007),
     l = n(474936),
     o = n(391763);
 let s = function (e) {
-    let { onSelectSku: t, isGift: n, priceOptions: s, showPromotionalGiftBanner: d, giftRecipient: C } = e;
+    let {
+        onSelectSku: t,
+        isGift: n,
+        priceOptions: s,
+        showPromotionalGiftBanner: d,
+        giftRecipient: C,
+        onWishlistItemClick: c,
+    } = e;
     return (0, r.jsxs)("div", {
         className: o.giftOptionContainer,
         children: [
@@ -29,7 +36,10 @@ let s = function (e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(a.Z, { giftRecipient: C }),
+            (0, r.jsx)(a.Z, {
+                giftRecipient: C,
+                onWishlistItemClick: c,
+            }),
         ],
     });
 };
