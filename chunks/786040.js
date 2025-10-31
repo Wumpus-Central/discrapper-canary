@@ -25,7 +25,6 @@ var r = n(647438),
             (e.NONE = "none"),
             (e.NEW = "new"),
             (e.ORBS_EXCLUSIVE = "orbs_exclusive"),
-            (e.NEW_COLOR_VARIANT = "new_color_variant"),
             (e.LIMITED_TIME = "limited_time"),
             e
         );

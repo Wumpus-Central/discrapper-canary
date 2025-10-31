@@ -105,8 +105,8 @@ let es = (e) => {
         });
     },
     em = r.memo(function (e) {
-        var { tab: t, product: n, onMount: l, shopBlockType: i } = e,
-            o = (function (e, t) {
+        var { tab: t, product: n, onMount: l } = e,
+            i = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     a,
@@ -126,20 +126,20 @@ let es = (e) => {
                             !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
-            })(e, ["tab", "product", "onMount", "shopBlockType"]);
-        let s = (0, I.o)(n),
-            c = (0, Y.W)(n, s),
-            d = r.useRef(null),
-            { previewingVariantIndex: u, handleEntering: m, handleLeaving: p } = (0, $.f)(n),
-            h = (0, Q.o)(n, u);
+            })(e, ["tab", "product", "onMount"]);
+        let o = (0, I.o)(n),
+            s = (0, Y.W)(n, o),
+            c = r.useRef(null),
+            { previewingVariantIndex: d, handleEntering: u, handleLeaving: m } = (0, $.f)(n),
+            p = (0, Q.o)(n, d);
         return (
             r.useEffect(() => {
-                null == l || l(d, n);
+                null == l || l(c, n);
             }, [l, n]),
             (0, a.jsx)(eu, {
                 tab: t,
-                selectedProduct: c,
-                cardRef: d,
+                selectedProduct: s,
+                cardRef: c,
                 children: (0, a.jsx)(
                     eh,
                     (function (e) {
@@ -170,16 +170,15 @@ let es = (e) => {
                         {
                             tab: t,
                             product: n,
-                            selectedVariantIndex: s,
-                            selectedProduct: c,
-                            cardRef: d,
-                            previewingVariantIndex: u,
-                            handleEntering: m,
-                            handleLeaving: p,
-                            firstCollectibleItem: h,
-                            shopBlockType: i,
+                            selectedVariantIndex: o,
+                            selectedProduct: s,
+                            cardRef: c,
+                            previewingVariantIndex: d,
+                            handleEntering: u,
+                            handleLeaving: m,
+                            firstCollectibleItem: p,
                         },
-                        o,
+                        i,
                     ),
                 ),
             })
@@ -484,7 +483,7 @@ let eh = r.memo(function (e) {
                 handleLeaving: S,
                 previewingVariantIndex: O,
                 className: P,
-                shopBlockType: I,
+                skipLimitedTimeCheck: I,
             } = e,
             { analyticsLocations: k } = (0, g.ZP)([x.Z.COLLECTIBLES_SHOP_CARD]),
             D = (0, N.sp)(),
@@ -591,12 +590,11 @@ let eh = r.memo(function (e) {
                                 }),
                             }),
                         }),
-                    (0, a.jsx)(L.Z, {
-                        category: l,
-                        className: i()(eo.limitedTimeBadge, { [eo.badgeLeftAligned]: Z }),
-                        display: L.k.CARD,
-                        shopBlockType: I,
-                    }),
+                    !I &&
+                        (0, a.jsx)(L.Z, {
+                            category: l,
+                            className: i()(eo.limitedTimeBadge, { [eo.badgeLeftAligned]: Z }),
+                        }),
                     Z &&
                         (0, a.jsx)(H.a, {
                             product: t,

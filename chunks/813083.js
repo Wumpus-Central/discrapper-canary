@@ -1,47 +1,20 @@
-n.d(t, {
-    Z: () => f,
-    k: () => p,
-}),
-    n(314940);
-var r,
-    l = n(951288);
+n.d(t, { Z: () => u });
+var r = n(951288);
 n(647438);
-var a = n(278074),
-    i = n(685816),
-    o = n(780384),
-    s = n(481060),
-    c = n(410030),
-    u = n(884697),
-    d = n(388032),
-    p = (((r = {}).BANNER = "banner"), (r.MODAL = "modal"), (r.CARD = "card"), r);
-let f = (e) => {
-    let { category: t, display: n, className: r, shopBlockType: p } = e,
-        f = (0, c.ZP)();
+var l = n(120356),
+    i = n.n(l),
+    a = n(481060),
+    o = n(884697),
+    s = n(388032),
+    c = n(478422);
+let u = (e) => {
+    let { category: t, daysRemainingText: n = s.t.Io7ozn, className: l } = e;
     if (null == t.unpublishedAt) return null;
-    let b = (0, u.OT)(t.unpublishedAt);
-    function y(e) {
-        return (0, l.jsx)(s.IGR, {
-            disableColor: !0,
-            text: e,
-            className: r,
-            style: (0, o.wj)(f)
-                ? {
-                      color: "var(--black-500)",
-                      backgroundColor: "var(--white-500)",
-                  }
-                : {
-                      color: "var(--white-500)",
-                      backgroundColor: "var(--black-500)",
-                  },
-        });
-    }
-    return (0, a.EQ)([n, b > 1])
-        .with(["card", !0], () =>
-            null != p && (p === i.z.HERO || p === i.z.FEED)
-                ? y(d.intl.formatToPlainString(d.t.Io7ozn, { days: b }))
-                : null,
-        )
-        .with(["banner", !0], () => y(d.intl.formatToPlainString(d.t["8gsP5M"], { days: b })))
-        .with(["modal", !0], () => y(d.intl.formatToPlainString(d.t.Io7ozn, { days: b })))
-        .otherwise(() => y(d.intl.string(d.t.Bc13HF)));
+    let u = (0, o.OT)(t.unpublishedAt),
+        d = u > 1 ? s.intl.formatToPlainString(n, { days: u }) : s.intl.string(s.t.Bc13HF);
+    return (0, r.jsx)(a.IGR, {
+        disableColor: !0,
+        text: d,
+        className: i()(c.badge, l),
+    });
 };

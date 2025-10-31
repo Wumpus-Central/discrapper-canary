@@ -13,8 +13,8 @@ var r = n(951288),
     f = n(110560),
     h = n(507808),
     C = n(594174),
-    _ = n(626135),
-    m = n(381585),
+    m = n(626135),
+    _ = n(381585),
     b = n(597688),
     v = n(884697),
     E = n(128922),
@@ -31,13 +31,13 @@ var r = n(951288),
     P = n(619899),
     A = n(190157),
     N = n(811847),
-    R = n(859788),
-    Z = n(215023),
+    Z = n(859788),
+    R = n(215023),
     w = n(981631),
     H = n(388032),
     D = n(310582);
-let F = (0, v.IC)(90),
-    M = {
+let M = (0, v.IC)(90),
+    F = {
         rankedSkuIds: [],
         name: "",
         unpublishedAt: void 0,
@@ -62,18 +62,18 @@ let F = (0, v.IC)(90),
             Y = (0, N.B)("HeroBlock"),
             q = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
             J = (0, B.Z)(),
-            Q = (0, m.sp)(),
+            Q = (0, _.sp)(),
             X = l.useMemo(() => {
                 var e, t;
                 return null != V
                     ? V
                     : null == W
-                      ? M
+                      ? F
                       : {
                             rankedSkuIds: null != (e = W.heroRanking) ? e : [],
                             name: W.name,
                             unpublishedAt: W.unpublishedAt,
-                            logoUrl: (0, v.uV)(null != (t = W.heroLogo) ? t : W.logo, { size: F }),
+                            logoUrl: (0, v.uV)(null != (t = W.heroLogo) ? t : W.logo, { size: M }),
                             categorySkuId: W.skuId,
                             bannerAsset: W.heroBannerAsset,
                             summary: W.summary,
@@ -131,16 +131,16 @@ let F = (0, v.IC)(90),
                     ),
                     totalCards: e ? t : void 0,
                 };
-            })(U !== Z.AW.ORBS),
+            })(U !== R.AW.ORBS),
             eg = (0, O.a)()(ec),
             ef = (0, S.l)(eg).slice(0, ep),
             eh = (0, P.St)(ef),
-            eC = U === Z.AW.ORBS ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T),
-            e_ = (0, x.FF)("CollectiblesContent"),
-            em = null != W && W.isOrbsExclusive,
+            eC = U === R.AW.ORBS ? H.intl.string(H.t["1CdL8d"]) : H.intl.string(H.t.xYKa1T),
+            em = (0, x.FF)("CollectiblesContent"),
+            e_ = null != W && W.isOrbsExclusive,
             eb = E.Z.useConfig({ location: "HeroBlock" }).showCardsV2,
             ev = () => {
-                U === Z.AW.ORBS
+                U === R.AW.ORBS
                     ? ((0, h.Y)({
                           pageType: w.ZY5.SHOP_ORBS_TAB,
                           sectionType: w.jXE.ORBS_SHOP_HERO_BLOCK,
@@ -149,11 +149,11 @@ let F = (0, v.IC)(90),
                       (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
                     : (i({
                           sourceButton: "shop latest category hero",
-                          categorySkuId: !e_ || em ? X.categorySkuId : void 0,
+                          categorySkuId: !em || e_ ? X.categorySkuId : void 0,
                           isInternalShopDeeplink: !0,
-                          isOrbsExclusive: em,
+                          isOrbsExclusive: e_,
                       }),
-                      _.default.track(w.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                      m.default.track(w.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == Q ? void 0 : Q.sessionId,
                           sku_id: X.categorySkuId,
                           page_type: U,
@@ -162,7 +162,7 @@ let F = (0, v.IC)(90),
                           cta_name: "shop latest category hero button",
                       }));
             };
-        return null != q && (n || X !== M)
+        return null != q && (n || X !== F)
             ? (0, r.jsxs)("div", {
                   ref: G,
                   className: D.heroBlock,
@@ -179,7 +179,7 @@ let F = (0, v.IC)(90),
                           style: null != es ? { background: es } : void 0,
                           children:
                               null != en &&
-                              (0, r.jsx)(R.Z, {
+                              (0, r.jsx)(Z.Z, {
                                   bannerStatic: en,
                                   bannerAnimated: er,
                                   bannerRive: el,
@@ -239,10 +239,10 @@ let F = (0, v.IC)(90),
                                                                       }),
                                                                   "" !== X.summary &&
                                                                       (0, r.jsx)(d.Text, {
-                                                                          variant: em
+                                                                          variant: e_
                                                                               ? "text-lg/medium"
                                                                               : "text-md/normal",
-                                                                          className: em
+                                                                          className: e_
                                                                               ? D.orbsSubHeaderText
                                                                               : D.subHeaderText,
                                                                           style:
@@ -268,8 +268,8 @@ let F = (0, v.IC)(90),
                                     }),
                               (0, r.jsx)("div", {
                                   className: s()({
-                                      [D.row]: U === Z.AW.HOME,
-                                      [D.feed]: U === Z.AW.ORBS,
+                                      [D.row]: U === R.AW.HOME,
+                                      [D.feed]: U === R.AW.ORBS,
                                   }),
                                   ref: ed,
                                   children:
@@ -285,7 +285,7 @@ let F = (0, v.IC)(90),
                                                     return null == e || null == n
                                                         ? null
                                                         : (0, r.jsx)(
-                                                              m.k0,
+                                                              _.k0,
                                                               {
                                                                   newValue: {
                                                                       tilePosition: t,
@@ -299,7 +299,7 @@ let F = (0, v.IC)(90),
                                                                                 {
                                                                                     skuId: null == e ? void 0 : e.skuId,
                                                                                     prioritizedCurrency:
-                                                                                        U === Z.AW.ORBS
+                                                                                        U === R.AW.ORBS
                                                                                             ? I.tA.ORBS
                                                                                             : void 0,
                                                                                     onClickAnalytics: (0, I.wO)(
@@ -317,7 +317,6 @@ let F = (0, v.IC)(90),
                                                                                     category: n,
                                                                                     user: q,
                                                                                     tab: U,
-                                                                                    shopBlockType: c.z.HERO,
                                                                                 },
                                                                                 e.skuId,
                                                                             ),

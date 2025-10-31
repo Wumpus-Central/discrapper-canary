@@ -309,10 +309,7 @@ let eB = (e) => {
             children: [
                 (0, r.jsx)("div", {
                     className: eN.titleContainer,
-                    children: (0, r.jsx)(el.Z, {
-                        category: a,
-                        display: el.k.MODAL,
-                    }),
+                    children: (0, r.jsx)(el.Z, { category: a }),
                 }),
                 (0, r.jsx)(eZ, {
                     product: null != y ? y : T,
