@@ -1,24 +1,24 @@
-n.d(r, { Z: () => l }), n(953529);
-var t = n(951288);
+n.d(t, { Z: () => a }), n(953529);
+var i = n(951288);
 n(647438);
-var o = n(120356),
-    i = n.n(o),
-    c = n(189651);
-function l(e) {
-    let { icon: r, iconClassName: n, description: o, color: l } = e;
-    return (0, t.jsxs)("div", {
-        className: c.perkRow,
+var l = n(120356),
+    r = n.n(l),
+    s = n(56589);
+function a(e) {
+    let { icon: t, iconClassName: n, description: l, color: a } = e;
+    return (0, i.jsxs)("div", {
+        className: s.perkRow,
         children: [
-            (0, t.jsx)("div", {
-                className: c.perkIconContainer,
-                children: (0, t.jsx)(r, {
-                    color: null != l ? l : "currentColor",
-                    className: i()(c.perkIcon, n),
+            (0, i.jsx)("div", {
+                className: s.perkIconContainer,
+                children: (0, i.jsx)(t, {
+                    color: null != a ? a : "currentColor",
+                    className: r()(s.perkIcon, n),
                 }),
             }),
-            (0, t.jsx)("div", {
-                className: c.perkDescription,
-                children: o,
+            (0, i.jsx)("div", {
+                className: s.perkDescription,
+                children: l,
             }),
         ],
     });

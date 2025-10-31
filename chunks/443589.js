@@ -21,8 +21,8 @@ var r = n(951288),
     y = n(474936),
     v = n(981631),
     C = n(388032),
-    S = n(3254),
-    T = n(952602);
+    S = n(427954),
+    T = n(286389);
 function N(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: N } = e,
         { analyticsLocations: j } = (0, d.ZP)(),

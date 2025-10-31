@@ -22,8 +22,8 @@ var r = n(951288),
     C = n(543432),
     E = n(981631),
     x = n(388032),
-    S = n(333972),
-    I = n(934882);
+    S = n(413409),
+    I = n(21265);
 function P(e) {
     var t, l;
     let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: O } = e,

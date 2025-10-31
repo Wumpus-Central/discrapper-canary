@@ -8,7 +8,7 @@ var l = n(399606),
     o = n(884697),
     c = n(813083),
     u = n(794324),
-    d = n(55783);
+    d = n(638758);
 function g(e) {
     let { category: t } = e,
         n = (0, l.e7)([i.Z], () => i.Z.useReducedMotion),

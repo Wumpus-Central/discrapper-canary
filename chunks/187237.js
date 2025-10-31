@@ -6,7 +6,7 @@ var r = n(951288),
     o = n(481060),
     s = n(140106),
     c = n(388032),
-    u = n(827723);
+    u = n(79556);
 function d(e) {
     let { channel: t, children: n, className: i, editable: d, location: p } = e;
     return d

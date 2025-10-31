@@ -12,7 +12,7 @@ var r = n(951288),
     f = n(223135),
     h = n(981631),
     m = n(185923),
-    g = n(34101);
+    g = n(787267);
 function b(e) {
     let {
             customStatusEmoji: t,

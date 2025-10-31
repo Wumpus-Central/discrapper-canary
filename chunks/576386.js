@@ -11,7 +11,7 @@ var l = n(951288),
     p = n(539530),
     m = n(566697),
     x = n(388032),
-    h = n(801707);
+    h = n(24391);
 let g = (e) => {
         var t;
         let { currentUser: n, nameplate: r, section: o, canUsePremiumCollectibles: u, isSelected: g, onClick: v } = e,

@@ -5,9 +5,9 @@ var r = n(951288),
     a = n(906732),
     s = n(541699),
     o = n(502762),
-    c = n(179505),
+    c = n(5337),
     d = n(388032),
-    u = n(373863);
+    u = n(815743);
 function p(e) {
     let { wishlistItems: t = [], profileOwner: n, onClick: p } = e,
         { analyticsLocations: h } = (0, a.ZP)(),

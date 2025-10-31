@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var r = n(951288),
     l = n(481060),
     i = n(388032),
-    s = n(89050);
+    s = n(831901);
 let a = () =>
     (0, r.jsxs)("div", {
         className: s.error,

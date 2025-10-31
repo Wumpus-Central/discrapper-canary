@@ -116,7 +116,7 @@ function B(e) {
         let e = (0, S.i)("openQuestsRewardCodeModal"),
             s = C.r.build(t.config).rewardPlatforms.length > 1;
         if (e && !s) {
-            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("49959"), n.e("36481")]).then(
+            let { default: e } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("62006")]).then(
                 n.bind(n, 188209),
             );
             return (n) =>
@@ -130,7 +130,7 @@ function B(e) {
                     }),
                 );
         }
-        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("49959"), n.e("7175")]).then(
+        let { default: u } = await Promise.all([n.e("64838"), n.e("52407"), n.e("34297"), n.e("6006")]).then(
             n.bind(n, 985866),
         );
         return (e) =>
@@ -229,7 +229,7 @@ function H(e, t, i, a) {
                     }),
                 );
         }
-        let { default: o } = await Promise.all([n.e("79589"), n.e("70154")]).then(n.bind(n, 920916));
+        let { default: o } = await Promise.all([n.e("79589"), n.e("83175")]).then(n.bind(n, 920916));
         return (n) =>
             (0, r.jsx)(
                 o,
@@ -306,7 +306,7 @@ function q(e) {
         });
 }
 function X() {
-    return Promise.all([n.e("13193"), n.e("52407"), n.e("32249"), n.e("2501")]).then(n.bind(n, 536687));
+    return Promise.all([n.e("13193"), n.e("52407"), n.e("32249"), n.e("57290")]).then(n.bind(n, 536687));
 }
 function Q(e) {
     var t;

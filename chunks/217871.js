@@ -18,7 +18,7 @@ var r = n(951288),
     y = n(641033),
     C = n(989830),
     v = n(388032),
-    O = n(436083);
+    O = n(23586);
 let x = i.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),

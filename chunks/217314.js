@@ -12,7 +12,7 @@ var i = n(399606),
     p = n(51144),
     f = n(984370),
     h = n(388032),
-    g = n(161655);
+    g = n(97009);
 function m(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),

@@ -11,7 +11,7 @@ var i = n(574583),
     d = n(430824),
     p = n(594174),
     f = n(768581),
-    h = n(20372);
+    h = n(870515);
 function m() {
     let { guildId: e, channelId: t } = (0, c.Z)((e) => {
             let { guildId: t, channelId: n } = e;

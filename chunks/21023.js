@@ -9,7 +9,7 @@ var i = n(481060),
     c = n(474936),
     u = n(981631),
     d = n(388032),
-    f = n(213599);
+    f = n(17355);
 let _ = (e) => {
         let { text: t, badge: n, variant: a } = e;
         return (0, r.jsxs)(i.Text, {

@@ -17,7 +17,7 @@ var r = n(951288),
     m = n(396728),
     b = n(58201),
     v = n(201964),
-    E = n(922687);
+    E = n(1327);
 let x = (e) => {
         let { product: t, isCardHovered: n } = e,
             l = (0, f.rC)(t),

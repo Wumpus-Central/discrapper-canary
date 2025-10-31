@@ -4,7 +4,7 @@ n(647438);
 var i = n(120356),
     l = n.n(i),
     o = n(481060),
-    a = n(934882);
+    a = n(21265);
 function s(e) {
     let { total: t, users: n, videoLimit: i } = e;
     return (0, r.jsxs)("div", {

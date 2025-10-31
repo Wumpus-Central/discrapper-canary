@@ -7,7 +7,7 @@ var i = n(951288),
     s = n(518084),
     c = n(981631),
     d = n(388032),
-    u = n(924957);
+    u = n(71264);
 let h = function (e) {
     let t,
         { title: n, header: o, children: h, renderSettings: p, onDragStart: f } = e,

@@ -11,7 +11,7 @@ var a = n(951288),
     m = n(538645),
     p = n(383036),
     h = n(981631),
-    x = n(6051);
+    x = n(511130);
 let g = (e) => {
         let { setTab: t } = e,
             n = (0, s.e7)([u.Z], () => u.Z.getWindowOpen(h.KJ3.DEVTOOLS_POPOUT));
