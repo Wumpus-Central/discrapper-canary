@@ -86,8 +86,8 @@ class j extends c.Z {
                 return !1;
             }),
             T(this, "handlePreview", (e) => {
-                let { properties: t } = e;
-                this.maybeOpenServerDriveAnnouncementModal(t, !0);
+                let { data: t } = e;
+                this.maybeOpenServerDriveAnnouncementModal(t.properties, !0);
             }),
             T(this, "getOfferFromStore", () => {
                 let e = d.default.getCurrentUser();

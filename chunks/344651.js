@@ -2001,7 +2001,7 @@ W(
     Y(["PREMIUM_MARKETING_PREVIEW"], (e) => {
         q({
             type: "PREMIUM_MARKETING_PREVIEW",
-            properties: e.properties,
+            data: e,
         });
     }),
     Y(["USER_APPLICATION_UPDATE"], (e) => {

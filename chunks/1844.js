@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -102,7 +102,12 @@ function R() {
     let e = C();
     null != e && ((b = e), (f.lastSeenOutboundPromotionStartDate = e));
 }
-function P() {
+function P(e) {
+    let { data: t } = e,
+        n = l.Z.createFromServer(t);
+    y.set(n.componentType, n);
+}
+function w() {
     (f = d()),
         (m = !1),
         (g = null),
@@ -117,7 +122,7 @@ function P() {
         (_ = null),
         y.clear();
 }
-function w() {
+function D() {
     var e, t, n;
     b =
         null !=
@@ -128,9 +133,9 @@ function w() {
             ? n
             : null;
 }
-class D extends (r = i.ZP.PersistedStore) {
+class x extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (f = e), this.waitFor(o.Z), this.syncWith([o.Z], w);
+        null != e && (f = e), this.waitFor(o.Z), this.syncWith([o.Z], D);
     }
     get outboundPromotions() {
         return Object.values(E[c.$.THIRD_PARTY_OUTBOUND]);
@@ -173,9 +178,9 @@ class D extends (r = i.ZP.PersistedStore) {
         return null != (t = y.get(e)) ? t : null;
     }
 }
-u(D, "displayName", "PromotionsStore"),
-    u(D, "persistKey", "PromotionsPersistedStore"),
-    u(D, "migrations", [
+u(x, "displayName", "PromotionsStore"),
+    u(x, "persistKey", "PromotionsPersistedStore"),
+    u(x, "migrations", [
         (e) => {
             try {
                 delete e.bogoPromotion;
@@ -183,7 +188,7 @@ u(D, "displayName", "PromotionsStore"),
             return e;
         },
     ]);
-let x = new D(a.Z, {
+let L = new x(a.Z, {
     ACTIVE_PROMOTIONS_FETCH_SUCCESS: T,
     ACTIVE_PROMOTIONS_FETCH: S,
     ACTIVE_PROMOTIONS_FETCH_FAIL: A,
@@ -192,5 +197,6 @@ let x = new D(a.Z, {
     ACTIVE_BOGO_PROMOTION_FETCH_FAIL: v,
     OUTBOUND_PROMOTION_NOTICE_DISMISS: N,
     OUTBOUND_PROMOTIONS_SEEN: R,
-    LOGOUT: P,
+    LOGOUT: w,
+    PREMIUM_MARKETING_PREVIEW: P,
 });
