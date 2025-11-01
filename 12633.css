@@ -41782,9 +41782,14 @@ body .headerAnimation_b54a5b {
 }
 
 .giftRecipient_cd2ff7 {
-    align-items: center;
     display: flex;
+    gap: var(--space-8);
     width: 100%
+}
+
+.giftRecipientButton_cd2ff7 {
+    align-self: flex-end;
+    margin-bottom: 2px
 }
 
 .giftRecipientInputWrapper_cd2ff7 {

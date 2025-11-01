@@ -272,20 +272,23 @@ let k = (e) => {
                             label: "".concat(R.ZP.getUserTag(e)),
                         })),
                     }),
-                    (0, r.jsx)(u.zxk, {
-                        disabled: null == a,
-                        loading: m,
-                        onClick: () => {
-                            E(!0),
-                                (0, g.YD)(a, t)
-                                    .then(() => {
-                                        n(), (0, _.Ou)();
-                                    })
-                                    .catch(() => {
-                                        d(!0), E(!1);
-                                    });
-                        },
-                        text: x.intl.string(x.t["+EgwQn"]),
+                    (0, r.jsx)("div", {
+                        className: L.giftRecipientButton,
+                        children: (0, r.jsx)(u.zxk, {
+                            disabled: null == a,
+                            loading: m,
+                            onClick: () => {
+                                E(!0),
+                                    (0, g.YD)(a, t)
+                                        .then(() => {
+                                            n(), (0, _.Ou)();
+                                        })
+                                        .catch(() => {
+                                            d(!0), E(!1);
+                                        });
+                            },
+                            text: x.intl.string(x.t["+EgwQn"]),
+                        }),
                     }),
                 ],
             }),

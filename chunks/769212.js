@@ -11,6 +11,7 @@ e.exports = {
     headerCustomGifting: "headerCustomGifting_cd2ff7",
     giftRecipientSection: "giftRecipientSection_cd2ff7",
     giftRecipient: "giftRecipient_cd2ff7",
+    giftRecipientButton: "giftRecipientButton_cd2ff7",
     giftRecipientInputWrapper: "giftRecipientInputWrapper_cd2ff7",
     giftRecipientInputError: "giftRecipientInputError_cd2ff7",
     confirmation: "confirmation_cd2ff7",
