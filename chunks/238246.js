@@ -1,6 +1,6 @@
 n.d(t, {
-    Y: () => K,
-    Z: () => X,
+    Y: () => z,
+    Z: () => Q,
 }),
     n(388685);
 var r,
@@ -33,17 +33,18 @@ var r,
     P = n(314910),
     w = n(728285),
     D = n(22205),
-    x = n(746106),
-    L = n(892071),
-    M = n(358085),
-    j = n(62883),
-    k = n(998502),
-    U = n(473159),
-    G = n(928518),
-    B = n(981631),
-    Z = n(501787),
-    F = n(413943);
-function V(e, t, n) {
+    x = n(984802),
+    L = n(746106),
+    M = n(892071),
+    j = n(358085),
+    k = n(62883),
+    U = n(998502),
+    G = n(473159),
+    B = n(928518),
+    Z = n(981631),
+    F = n(501787),
+    V = n(413943);
+function H(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +57,7 @@ function V(e, t, n) {
         e
     );
 }
-function H(e) {
+function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,12 +68,12 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                H(e, t, n[t]);
             });
     }
     return e;
 }
-function Y(e, t) {
+function W(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -84,33 +85,33 @@ function Y(e, t) {
     }
     return n;
 }
-function W(e, t) {
+function K(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Y(Object(t)).forEach(function (n) {
+            : W(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function K(e) {
+function z(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && M.isPlatformEmbedded && !n;
+    return t && j.isPlatformEmbedded && !n;
 }
-class z extends (r = a.Component) {
+class q extends (r = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
         null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
             this.updateTitle(),
             this.updateClientTheme(),
-            (0, U.O)(e),
+            (0, G.O)(e),
             e.addEventListener("blur", this.handleBlur),
-            M.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", j.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", j.contextMenuCallbackWeb, !1),
+            j.isPlatformEmbedded
+                ? t.addEventListener("contextmenu", k.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", k.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds();
     }
@@ -123,10 +124,10 @@ class z extends (r = a.Component) {
             t = e.document;
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
-            M.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", j.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", j.contextMenuCallbackWeb),
-            (0, d.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))),
+            j.isPlatformEmbedded
+                ? t.removeEventListener("contextmenu", k.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", k.contextMenuCallbackWeb),
+            (0, d.j)(() => p.s9z.setState((e) => K(Y({}, e), { [p.u1M]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
     updateTitle() {
@@ -172,17 +173,18 @@ class z extends (r = a.Component) {
                 clientThemesClassName: l,
                 contentClassName: c,
                 themeOverride: d,
-                hideModals: _ = !1,
-                appContext: m,
+                titleBarTheme: _,
+                hideModals: m = !1,
+                appContext: g,
             } = this.props,
-            g = K({
+            E = z({
                 withTitleBar: a,
                 isFullScreen: r,
             }),
-            E = n === Z.$J ? D.Z : N.Z;
+            y = n === F.$J ? D.Z : N.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
-                x.w,
+                L.w,
                 {
                     windowKey: n,
                     themeOverride: d,
@@ -190,29 +192,37 @@ class z extends (r = a.Component) {
                         children: (0, i.jsxs)(p.JcV, {
                             containerRef: this.rootRef,
                             children: [
-                                (0, i.jsx)(q, {
+                                (0, i.jsx)(X, {
                                     guestWindow: o,
                                     className: l,
-                                    children: (0, i.jsxs)(E, {
+                                    children: (0, i.jsxs)(y, {
                                         children: [
                                             (0, i.jsx)(S.Co, {}),
                                             (0, i.jsx)(w.Wu, {
-                                                appContext: null != m ? m : B.IlC.POPOUT,
+                                                appContext: null != g ? g : Z.IlC.POPOUT,
                                                 renderWindow: o,
                                                 children: (0, i.jsx)(T.m, {
                                                     children: (0, i.jsxs)(P.yP, {
                                                         children: [
                                                             (0, i.jsxs)("div", {
-                                                                className: F.popout,
+                                                                className: V.popout,
                                                                 children: [
-                                                                    g && (0, i.jsx)(A.TF, { windowKey: n }),
+                                                                    E &&
+                                                                        (0, i.jsx)(f.f6W, {
+                                                                            theme: _,
+                                                                            children: (e) =>
+                                                                                (0, i.jsx)(A.TF, {
+                                                                                    windowKey: n,
+                                                                                    className: s()(e, V.titleBar),
+                                                                                }),
+                                                                        }),
                                                                     (0, i.jsx)("div", {
-                                                                        className: s()(F.content, c),
+                                                                        className: s()(V.content, c),
                                                                         children: t,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            !_ && (0, i.jsx)(p.nKe, {}),
+                                                            !m && (0, i.jsx)(p.nKe, {}),
                                                             (0, i.jsx)(h.Z, {}),
                                                             (0, i.jsx)(P.Un, {}),
                                                         ],
@@ -233,14 +243,14 @@ class z extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            V(this, "rootRef", a.createRef()),
-            V(this, "_cleanupWindowActionCreators", void 0),
-            V(this, "_combokeys", null),
-            V(this, "beforeUnload", (e) => {
+            H(this, "rootRef", a.createRef()),
+            H(this, "_cleanupWindowActionCreators", void 0),
+            H(this, "_combokeys", null),
+            H(this, "beforeUnload", (e) => {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
-                        G.Z.unmountWindow(this.props.windowKey),
-                            M.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
+                        B.Z.unmountWindow(this.props.windowKey),
+                            j.isPlatformEmbedded && U.ZP.close(this.props.windowKey);
                     };
                 null != t
                     ? t({
@@ -249,16 +259,16 @@ class z extends (r = a.Component) {
                       })
                     : n();
             }),
-            V(this, "handleBlur", () => {
+            H(this, "handleBlur", () => {
                 var e, t;
                 null == (e = (t = this.props).onBlur) || e.call(t);
             });
     }
 }
-V(z, "defaultProps", { withTitleBar: !0 });
-let q = a.forwardRef(function (e, t) {
+H(q, "defaultProps", { withTitleBar: !0 });
+let X = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: o } = e,
-            { lang: l, style: u, className: d } = (0, L.vP)();
+            { lang: l, style: u, className: d } = (0, M.vP)();
         return (
             a.useEffect(() => {
                 let e = n.document.documentElement;
@@ -276,33 +286,37 @@ let q = a.forwardRef(function (e, t) {
             })
         );
     }),
-    X = a.forwardRef(function (e, t) {
-        let { guestWindow: n, isFullScreen: r } = (0, _.cj)([G.Z], () => ({
-            guestWindow: G.Z.getWindow(e.windowKey),
-            isFullScreen: G.Z.isWindowFullScreen(e.windowKey),
+    Q = a.forwardRef(function (e, t) {
+        var n;
+        let { guestWindow: r, isFullScreen: a } = (0, _.cj)([B.Z], () => ({
+            guestWindow: B.Z.getWindow(e.windowKey),
+            isFullScreen: B.Z.isWindowFullScreen(e.windowKey),
         }));
-        c()(null != n, "Missing guestWindow reference");
-        let { forcedColors: a, connectedEmbeddedActivity: o } = (0, _.cj)([E.Z, y.ZP], () => ({
+        c()(null != r, "Missing guestWindow reference");
+        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, _.cj)([E.Z, y.ZP], () => ({
             forcedColors: E.Z.useForcedColors ? "yes" : "no",
             connectedEmbeddedActivity: y.ZP.getCurrentEmbeddedActivity(),
         }));
-        (0, C.Z)(n, !1);
-        let { analyticsLocations: s } = (0, v.ZP)(O.Z.POPOUT_WINDOW),
-            { clientThemesClassName: l, clientThemesCSS: u } = (0, I.ZP)();
-        return null == n
+        (0, C.Z)(r, !1);
+        let { analyticsLocations: l } = (0, v.ZP)(O.Z.POPOUT_WINDOW),
+            { clientThemesClassName: u, clientThemesCSS: d } = (0, I.ZP)(),
+            f = (0, x.Ll)(),
+            h = null != (n = e.themeOverride) ? n : f;
+        return null == r
             ? null
             : (0, i.jsx)(p.Sle, {
                   children: (0, i.jsx)(v.Gt, {
-                      value: s,
+                      value: l,
                       children: (0, i.jsx)(
-                          z,
-                          W(H({ ref: t }, e), {
-                              guestWindow: n,
-                              isFullScreen: r,
-                              forcedColors: a,
-                              connectedEmbeddedActivity: o,
-                              clientThemesClassName: l,
-                              clientThemesCSS: u,
+                          q,
+                          K(Y({ ref: t }, e), {
+                              titleBarTheme: h,
+                              guestWindow: r,
+                              isFullScreen: a,
+                              forcedColors: o,
+                              connectedEmbeddedActivity: s,
+                              clientThemesClassName: u,
+                              clientThemesCSS: d,
                           }),
                       ),
                   }),

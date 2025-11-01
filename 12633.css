@@ -87746,6 +87746,10 @@ html .invoiceCancelRow__968a4 {
     --custom-chat-input-margin-bottom: var(--space-xs)
 }
 
+.titleBar__0bd4a {
+    background: var(--background-gradient-app-frame, var(--background-base-lowest))
+}
+
 @keyframes pulse__7135b {
     0% {
         border-color: hsla(0, 0%, 100%, 0)
