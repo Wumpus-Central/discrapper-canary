@@ -286,7 +286,6 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
             h = (0, N.K)({
                 user: l,
                 guildId: i.guild_id,
-                location: "ChannelMembers",
             });
         return (0, r.jsx)(
             et,

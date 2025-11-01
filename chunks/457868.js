@@ -155,7 +155,6 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             q = (0, j.K)({
                 user: b,
                 guildId: t.guild_id,
-                location: "ThreadMembers",
             }),
             [K, Q] = i.useState(!1);
         if (null == b) return null;

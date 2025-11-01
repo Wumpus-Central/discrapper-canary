@@ -35,21 +35,21 @@ var i = n(512722),
     M = n(737788);
 function j(e) {
     var t, n, i, j;
-    let { guild: k, nameplateEnabled: U } = e,
-        G = (0, o.e7)([S.default], () => {
+    let { guild: k } = e,
+        U = (0, o.e7)([S.default], () => {
             let e = S.default.getCurrentUser();
             return a()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        B = (0, d.m)(x.PremiumTypes.TIER_2),
+        G = (0, d.m)(x.PremiumTypes.TIER_2),
         {
-            pendingAvatar: Z,
-            pendingNickname: F,
-            pendingBanner: V,
-            pendingBio: H,
-            pendingPronouns: Y,
-            pendingThemeColors: W,
-            errors: K,
-            guild: z,
+            pendingAvatar: B,
+            pendingNickname: Z,
+            pendingBanner: F,
+            pendingBio: V,
+            pendingPronouns: H,
+            pendingThemeColors: Y,
+            errors: W,
+            guild: K,
         } = (0, o.cj)([R.Z], () => {
             let {
                 pendingAvatar: e,
@@ -70,40 +70,40 @@ function j(e) {
                 guild: R.Z.getGuild(),
             };
         }),
-        q = (0, v.SD)({
-            userId: G.id,
-            image: Z,
+        z = (0, v.SD)({
+            userId: U.id,
+            image: B,
         }),
-        X = null != k ? k : z;
-    a()(null != X, "guild should not be null");
-    let Q = (0, u.gS)(X.id),
-        J = (0, o.e7)([T.ZP], () => (null == X.id ? null : T.ZP.getMember(X.id, G.id))),
-        $ = (0, o.e7)([I.Z], () => I.Z.getGuildMemberProfile(G.id, X.id)),
-        ee = (0, c.cL)({ location: "GuildIdentityCustomizationSections" }),
-        et = A.ZP.canUsePremiumProfileCustomization(G),
-        en = (0, f.gd)(Z, null == J ? void 0 : J.avatar),
-        er = (0, f.f$)(V, null == $ ? void 0 : $.banner),
-        ei = (0, P.p)(W, null == $ ? void 0 : $.themeColors),
-        ea = null != (t = null == $ ? void 0 : $.bio) ? t : "",
-        eo = null != (n = null == $ ? void 0 : $.pronouns) ? n : "",
-        es = (e, t, n) => {
+        q = null != k ? k : K;
+    a()(null != q, "guild should not be null");
+    let X = (0, u.gS)(q.id),
+        Q = (0, o.e7)([T.ZP], () => (null == q.id ? null : T.ZP.getMember(q.id, U.id))),
+        J = (0, o.e7)([I.Z], () => I.Z.getGuildMemberProfile(U.id, q.id)),
+        $ = (0, c.cL)({ location: "GuildIdentityCustomizationSections" }),
+        ee = A.ZP.canUsePremiumProfileCustomization(U),
+        et = (0, f.gd)(B, null == Q ? void 0 : Q.avatar),
+        en = (0, f.f$)(F, null == J ? void 0 : J.banner),
+        er = (0, P.p)(Y, null == J ? void 0 : J.themeColors),
+        ei = null != (t = null == J ? void 0 : J.bio) ? t : "",
+        ea = null != (n = null == J ? void 0 : J.pronouns) ? n : "",
+        eo = (e, t, n) => {
             let r = null != t ? null : void 0;
             n(null != e ? e : r);
         },
-        el = (e) => es(e, null == $ ? void 0 : $.banner, N.g_),
-        ec = (e) => es(e, null == J ? void 0 : J.avatar, N.I5);
+        es = (e) => eo(e, null == J ? void 0 : J.banner, N.g_),
+        el = (e) => eo(e, null == Q ? void 0 : Q.avatar, N.I5);
     return (0, r.jsxs)("div", {
         className: M.sectionsContainer,
         children: [
             (0, r.jsx)(
                 w.Z,
                 {
-                    errors: null != (i = null == K ? void 0 : K.nick) ? i : null == Q ? void 0 : Q.nick,
-                    username: C.ZP.getName(G),
-                    pendingNick: F,
-                    currentNick: null == J ? void 0 : J.nick,
-                    user: G,
-                    guild: X,
+                    errors: null != (i = null == W ? void 0 : W.nick) ? i : null == X ? void 0 : X.nick,
+                    username: C.ZP.getName(U),
+                    pendingNick: Z,
+                    currentNick: null == Q ? void 0 : Q.nick,
+                    user: U,
+                    guild: q,
                 },
                 "nick",
             ),
@@ -111,18 +111,18 @@ function j(e) {
                 O.Z,
                 {
                     sectionTitle: L.intl.string(L.t["+T3RI/"]),
-                    errors: null == K ? void 0 : K.pronouns,
+                    errors: null == W ? void 0 : W.pronouns,
                     onPronounsChange: (e) => {
-                        (0, P.xs)(e, eo);
+                        (0, P.xs)(e, ea);
                     },
-                    pendingPronouns: Y,
-                    currentPronouns: eo,
+                    pendingPronouns: H,
+                    currentPronouns: ea,
                 },
                 "pronouns",
             ),
             (0, r.jsxs)(D.Z, {
-                user: G,
-                showOverlay: !et,
+                user: U,
+                showOverlay: !ee,
                 children: [
                     (0, r.jsx)(
                         h.Z,
@@ -140,11 +140,11 @@ function j(e) {
                                     }),
                                 ],
                             }),
-                            showRemoveAvatarButton: en,
-                            onAvatarChange: ec,
-                            errors: null == K ? void 0 : K.avatar,
-                            guildId: X.id,
-                            disabled: !et,
+                            showRemoveAvatarButton: et,
+                            onAvatarChange: el,
+                            errors: null == W ? void 0 : W.avatar,
+                            guildId: q.id,
+                            disabled: !ee,
                         },
                         "avatar",
                     ),
@@ -164,34 +164,33 @@ function j(e) {
                                     }),
                                 ],
                             }),
-                            user: G,
-                            guild: X,
+                            user: U,
+                            guild: q,
                         },
                         "decoration",
                     ),
-                    ee &&
-                        !B &&
+                    $ &&
+                        !G &&
                         (0, r.jsx)(m.Z, {
-                            user: G,
-                            guildId: X.id,
+                            user: U,
+                            guildId: q.id,
                         }),
-                    U &&
-                        (0, r.jsx)(
-                            g.Z,
-                            {
-                                user: G,
-                                guild: X,
-                                titleIcon: (0, r.jsx)(s.u, {
-                                    text: L.intl.string(L.t["5AFxuK"]),
-                                    children: (0, r.jsx)(l.SrA, {
-                                        size: "md",
-                                        color: "currentColor",
-                                        className: M.nitroWheel,
-                                    }),
+                    (0, r.jsx)(
+                        g.Z,
+                        {
+                            user: U,
+                            guild: q,
+                            titleIcon: (0, r.jsx)(s.u, {
+                                text: L.intl.string(L.t["5AFxuK"]),
+                                children: (0, r.jsx)(l.SrA, {
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: M.nitroWheel,
                                 }),
-                            },
-                            "nameplate",
-                        ),
+                            }),
+                        },
+                        "nameplate",
+                    ),
                     (0, r.jsx)(
                         b.Z,
                         {
@@ -208,31 +207,31 @@ function j(e) {
                                     }),
                                 ],
                             }),
-                            user: G,
-                            guild: X,
+                            user: U,
+                            guild: q,
                         },
                         "effect",
                     ),
                     (0, r.jsx)(
                         E.Z,
                         {
-                            showRemoveBannerButton: er,
-                            errors: null == K ? void 0 : K.banner,
-                            onBannerChange: el,
-                            guildId: null == X ? void 0 : X.id,
-                            disabled: !et,
+                            showRemoveBannerButton: en,
+                            errors: null == W ? void 0 : W.banner,
+                            onBannerChange: es,
+                            guildId: null == q ? void 0 : q.id,
+                            disabled: !ee,
                         },
                         "banner",
                     ),
                     (0, r.jsx)(y.Z, {
-                        user: G,
-                        pendingAvatarSrc: q,
-                        pendingColors: W,
+                        user: U,
+                        pendingAvatarSrc: z,
+                        pendingColors: Y,
                         onThemeColorsChange: (e) => {
-                            (0, P.ce)(e, null == $ ? void 0 : $.themeColors);
+                            (0, P.ce)(e, null == J ? void 0 : J.themeColors);
                         },
-                        guildId: null == X ? void 0 : X.id,
-                        showResetThemeButton: ei,
+                        guildId: null == q ? void 0 : q.id,
+                        showResetThemeButton: er,
                     }),
                     (0, r.jsx)(
                         _.Z,
@@ -251,11 +250,11 @@ function j(e) {
                                     }),
                                 ],
                             }),
-                            onBioChange: (e) => (0, P.qN)(e, ea),
-                            errors: null != (j = null == K ? void 0 : K.bio) ? j : null == Q ? void 0 : Q.bio,
-                            pendingBio: H,
-                            currentBio: ea,
-                            disabled: !et,
+                            onBioChange: (e) => (0, P.qN)(e, ei),
+                            errors: null != (j = null == W ? void 0 : W.bio) ? j : null == X ? void 0 : X.bio,
+                            pendingBio: V,
+                            currentBio: ei,
+                            disabled: !ee,
                         },
                         "about",
                     ),
