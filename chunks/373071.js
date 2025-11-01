@@ -80,7 +80,7 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
             console.error(e),
                 (0, c.showToast)(
                     (0, c.createToast)(
-                        "Failed to save changes. This can happen when you run out of memory in localStorage. Please try deleting some configs and try again.",
+                        "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
                         c.ToastType.FAILURE,
                     ),
                 );
@@ -101,6 +101,10 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                         let n = f({}, e);
                         return delete n.profileEffects[t], g(n), n;
                     });
+                }),
+            clearAll: () =>
+                (0, s.j)(() => {
+                    e(() => (l.K.remove(h), { profileEffects: {} }));
                 }),
         }),
     ),
