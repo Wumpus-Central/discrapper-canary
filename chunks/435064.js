@@ -103,7 +103,7 @@ let O = "default",
             yellDetector: !0,
             whisperTranscription: !0,
         },
-        autoClipPhrases: ["clip", "flip that", "flip it"],
+        autoClipPhrases: ["clip that", "clip it", "clip clip"],
     },
     M = {
         clipsSettings: L,

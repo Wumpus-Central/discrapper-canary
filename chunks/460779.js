@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(46973),
     i = n(147913),
     a = n(714424),
@@ -21,7 +21,9 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends i.Z {
+let _ = 10000,
+    p = 10000;
+class h extends i.Z {
     handleClipsSignalCreated(e, t) {
         this.isSignalEnabled(e.type) && this.process(e, t);
     }
@@ -88,34 +90,50 @@ class _ extends i.Z {
             }),
             e.type)
         ) {
-            case u.Bs.GAME_EVENT:
-                1 === e.importance && this.scheduleClip(e, 0.4 * l.Z.getSettings().clipsLength);
-                break;
             case u.Bs.MANUAL:
-            case u.Bs.PHRASE:
             case u.Bs.DISTRIBUTED:
+                this.scheduleClip(e);
+                break;
+            case u.Bs.GAME_EVENT:
+                1 === e.importance && this.scheduleClip(e, _);
+                break;
+            case u.Bs.PHRASE:
+                var n;
+                if (
+                    (null == (n = this.scheduledClipSignal) ? void 0 : n.type) === u.Bs.GAME_EVENT ||
+                    performance.now() - this.lastClipTimestamp < p
+                )
+                    return;
                 this.scheduleClip(e);
         }
     }
     read() {
-        return { timeline: this.timeline.read() };
+        return {
+            timeline: this.timeline.read(),
+            scheduledClipSignal: this.scheduledClipSignal,
+            phraseCooldown: Math.max(0, p - (performance.now() - this.lastClipTimestamp)),
+        };
     }
     clear() {
-        this.unscheduleClip(), this.timeline.clear();
+        this.unscheduleClip(), (this.lastClipTimestamp = 0), this.timeline.clear();
     }
     unscheduleClip() {
         null != this.scheduledClipTimeout &&
-            (clearTimeout(this.scheduledClipTimeout), (this.scheduledClipTimeout = null));
+            (clearTimeout(this.scheduledClipTimeout), (this.scheduledClipTimeout = null)),
+            (this.scheduledClipSignal = null);
     }
     scheduleClip(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         this.unscheduleClip(),
+            (this.scheduledClipSignal = e),
+            (this.lastClipTimestamp = performance.now() + t),
             (this.scheduledClipTimeout = setTimeout(() => {
-                (0, d.C1)(void 0, e.type === u.Bs.MANUAL ? "manual" : "auto", [...this.timeline.read()], {
-                    signal: e,
-                    timestamp: Date.now(),
-                    emotionHistory: [],
-                });
+                (this.scheduledClipSignal = null),
+                    (0, d.C1)(void 0, e.type === u.Bs.MANUAL ? "manual" : "auto", [...this.timeline.read()], {
+                        signal: e,
+                        timestamp: Date.now(),
+                        emotionHistory: [],
+                    });
             }, t));
     }
     handleSettingsUpdate() {
@@ -125,6 +143,8 @@ class _ extends i.Z {
         super(),
             f(this, "timeline", void 0),
             f(this, "scheduledClipTimeout", null),
+            f(this, "scheduledClipSignal", null),
+            f(this, "lastClipTimestamp", 0),
             f(this, "actions", {
                 CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
                 SPEAKING: (e) => this.handleSpeaking(e),
@@ -136,4 +156,4 @@ class _ extends i.Z {
             (this.timeline = new c.m(l.Z.getSettings().clipsLength));
     }
 }
-let p = new _();
+let m = new h();
