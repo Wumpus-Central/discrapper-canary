@@ -24,10 +24,7 @@ function g() {
         E = () => {
             switch (n) {
                 case _.Z.CLIPS:
-                    return (0, r.jsx)(s.Z, {
-                        className: m.body,
-                        showHeader: !1,
-                    });
+                    return (0, r.jsx)(s.Z, {});
                 case _.Z.OVERLAY:
                     return (0, r.jsx)(d.Z, {
                         className: m.body,

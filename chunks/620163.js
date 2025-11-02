@@ -708,6 +708,21 @@ let eB = () => {
                 predicate: () => !eU,
                 url: eP.Z5c.SETTINGS("clips"),
             },
+            [eN.s6.CLIPS_RECORDING_TAB]: {
+                section: eP.oAB.CLIPS,
+                searchableTitles: [eD.intl.string(eD.t.iIwmV5)],
+                parent: eN.s6.CLIPS,
+            },
+            [eN.s6.CLIPS_AUTOMATIC_TAB]: {
+                section: eP.oAB.CLIPS,
+                searchableTitles: [eD.intl.string(eD.t.sA0WKL)],
+                parent: eN.s6.CLIPS,
+            },
+            [eN.s6.CLIPS_PRIVACY_TAB]: {
+                section: eP.oAB.CLIPS,
+                searchableTitles: [eD.intl.string(eD.t.GcIeET)],
+                parent: eN.s6.CLIPS,
+            },
             [eN.s6.RESTRICTED_USERS]: {
                 section: eP.oAB.CONTENT_AND_SOCIAL,
                 parent: eN.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,

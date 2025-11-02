@@ -10,7 +10,7 @@ var i = n(951288),
     d = n(388032);
 let E = (0, s.x1)(a.n.CLIPS_PANE, {
         buildLayout: () => [],
-        render: () => (0, i.jsx)(u.Z, { showHeader: !1 }),
+        render: () => (0, i.jsx)(u.Z, {}),
     }),
     O = (0, s.wf)(a.n.CLIPS_PANEL, {
         useTitle: () => d.intl.string(d.t.z2jK6X),

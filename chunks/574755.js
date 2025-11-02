@@ -1,85 +1,62 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
     o = n(704215),
-    s = n(481060),
-    l = n(906732),
-    c = n(266454),
-    u = n(441167),
-    d = n(695346),
-    f = n(131951),
-    _ = n(924557),
-    p = n(435064),
-    h = n(779618),
-    m = n(39604),
-    g = n(703288),
-    E = n(491758),
-    b = n(233685),
-    y = n(388032);
-function O(e) {
-    let { className: t, showHeader: n = !0 } = e,
-        O = d.tU.useSetting(),
-        { enableViewerClipping: v } = u.Z.useExperiment({ location: "Clips Settings" }, { autoTrackExposure: !1 }),
-        { analyticsLocations: I } = (0, l.ZP)(),
-        T = (0, _.Go)(),
-        { viewerClipsEnabled: S } = (0, a.cj)([p.Z], () => p.Z.getSettings()),
-        A = (0, h.Z)(f.Z);
-    return (
-        i.useEffect(() => {
-            (0, c.Q3)(o.z.CLIPS_SETTINGS_BETA_TAG);
-        }),
-        (0, r.jsx)(l.Gt, {
-            value: I,
-            children: (0, r.jsxs)(s.Kqy, {
-                gap: 20,
-                children: [
-                    (T || n) &&
-                        (0, r.jsxs)("div", {
-                            className: t,
-                            children: [
-                                n
-                                    ? (0, r.jsxs)(s.Heading, {
-                                          variant: "heading-lg/semibold",
-                                          children: [y.intl.string(y.t.z2jK6X), " ", (0, r.jsx)(g.Z, {})],
-                                      })
-                                    : null,
-                                T &&
-                                    (0, r.jsx)("form", {
-                                        onSubmit: (e) => e.preventDefault(),
-                                        children: (0, r.jsxs)(s.Kqy, {
-                                            gap: 24,
-                                            children: [(0, r.jsx)(E.Z, {}), (0, r.jsx)(b.Z, {})],
-                                        }),
-                                    }),
-                            ],
-                        }),
-                    T && (0, r.jsx)(s.izJ, {}),
-                    (0, r.jsxs)(s.Kqy, {
-                        gap: 16,
-                        children: [
-                            (0, r.jsx)(s.rsf, {
-                                label: y.intl.string(y.t.AGDDkH),
-                                description: y.intl.string(y.t["wW9/zQ"]),
-                                checked: O,
-                                onChange: (e) => m.yg({ allowVoiceRecording: e }),
-                            }),
-                            v &&
-                                A &&
-                                (0, r.jsx)(s.rsf, {
-                                    label: y.intl.string(y.t.NWw7kY),
-                                    description: y.intl.string(y.t["0vjy8N"]),
-                                    checked: S,
-                                    onChange: (e) =>
-                                        m.yl({
-                                            enabled: e,
-                                            trackAnalytics: !0,
-                                        }),
-                                }),
-                        ],
-                    }),
-                ],
+    s = n(906732),
+    l = n(266454),
+    c = n(10298),
+    u = n(526156),
+    d = n(663389),
+    f = n(924557),
+    _ = n(361244),
+    p = n(902451),
+    h = n(320091),
+    m = n(981631),
+    g = n(526761),
+    E = n(726985),
+    b = n(388032);
+function y() {
+    let { analyticsLocations: e } = (0, s.ZP)(),
+        t = (0, f.Go)(),
+        n = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
+        { enableAdvancedSignals: y } = f.NV.useExperiment({ location: "clips_settings" }, { autoTrackExposure: !1 });
+    i.useEffect(() => {
+        (0, l.Q3)(o.z.CLIPS_SETTINGS_BETA_TAG);
+    });
+    let O = [
+            {
+                title: b.intl.string(b.t.iIwmV5),
+                component: h.Z,
+                setting: E.s6.CLIPS_RECORDING_TAB,
+                subsection: g.M6,
+                predicate: () => t,
+            },
+            {
+                title: b.intl.string(b.t.sA0WKL),
+                component: _.Z,
+                setting: E.s6.CLIPS_AUTOMATIC_TAB,
+                subsection: g.d5,
+                predicate: () => t && y,
+            },
+            {
+                title: b.intl.string(b.t.GcIeET),
+                component: p.Z,
+                setting: E.s6.CLIPS_PRIVACY_TAB,
+                subsection: g.Sr,
+            },
+        ],
+        v = O.findIndex((e) => null != e.subsection && e.subsection === n);
+    return (0, r.jsx)(s.Gt, {
+        value: e,
+        children: (0, r.jsx)(c.N, {
+            header: b.intl.string(b.t.z2jK6X),
+            children: (0, r.jsx)(u.Z, {
+                parentSetting: E.s6.CLIPS,
+                settingsSection: m.oAB.CLIPS,
+                tabs: O,
+                defaultTabIndex: v > -1 ? v : void 0,
             }),
-        })
-    );
+        }),
+    });
 }
