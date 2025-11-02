@@ -1,70 +1,42 @@
-n.d(t, { default: () => a }), n(49124);
-var i = n(951288);
-n(647438);
-var l = n(793030),
-    o = n(481060),
-    r = n(794877);
-function a(e) {
-    var t;
-    let { clip: n, onClose: a, transitionState: s } = e;
-    return (0, i.jsx)(l.Modal, {
-        transitionState: s,
-        onClose: a,
+i.d(n, { default: () => o }), i(49124);
+var t = i(951288);
+i(647438);
+var l = i(793030),
+    a = i(481060);
+function o(e) {
+    let { clip: n, onClose: i, transitionState: o } = e;
+    return (0, t.jsx)(l.Modal, {
+        transitionState: o,
+        onClose: i,
         title: "Clip Debug",
         size: "md",
         actions: [
             {
                 text: "Close",
                 variant: "secondary",
-                onClick: a,
+                onClick: i,
             },
         ],
-        children: (0, i.jsxs)(o.C3N, {
+        children: (0, t.jsxs)(a.C3N, {
             label: "Decision",
             children: [
                 null != n.decision &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, t.jsxs)(t.Fragment, {
                         children: [
-                            (0, i.jsx)(o.gNt, {
-                                label: "Reason",
-                                children: (0, i.jsx)(o.Text, {
-                                    variant: "text-sm/normal",
-                                    color: "text-secondary",
-                                    children: n.decision.reason,
-                                }),
-                            }),
-                            (0, i.jsx)(o.gNt, {
-                                label: "Clipping Pressure",
-                                layout: "horizontal",
-                                children: (0, i.jsx)(o.Text, {
-                                    variant: "text-sm/normal",
-                                    color: "text-secondary",
-                                    children: n.decision.clippingPressure.toFixed(3),
-                                }),
-                            }),
-                            (0, i.jsx)(o.gNt, {
-                                label: "Current Threshold",
-                                layout: "horizontal",
-                                children: (0, i.jsx)(o.Text, {
-                                    variant: "text-sm/normal",
-                                    color: "text-secondary",
-                                    children: n.decision.currentThreshold.toFixed(3),
-                                }),
-                            }),
-                            null != n.decision.effectivePressure &&
-                                (0, i.jsx)(o.gNt, {
-                                    label: "Effective Pressure",
-                                    layout: "horizontal",
-                                    children: (0, i.jsx)(o.Text, {
-                                        variant: "text-sm/normal",
-                                        color: "text-secondary",
-                                        children: n.decision.effectivePressure.toFixed(3),
-                                    }),
-                                }),
-                            (0, i.jsx)(o.gNt, {
+                            null != n.decision.reason
+                                ? (0, t.jsx)(a.gNt, {
+                                      label: "Reason",
+                                      children: (0, t.jsx)(a.Text, {
+                                          variant: "text-sm/normal",
+                                          color: "text-secondary",
+                                          children: n.decision.reason,
+                                      }),
+                                  })
+                                : null,
+                            (0, t.jsx)(a.gNt, {
                                 label: "Timestamp",
                                 layout: "horizontal",
-                                children: (0, i.jsx)(o.Text, {
+                                children: (0, t.jsx)(a.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-secondary",
                                     children: new Date(n.decision.timestamp).toLocaleString(),
@@ -73,34 +45,19 @@ function a(e) {
                         ],
                     }),
                 n.timeline.length > 0 &&
-                    (0, i.jsx)(o.C3N, {
+                    (0, t.jsx)(a.C3N, {
                         label: "Timeline",
-                        children: (0, i.jsx)("pre", {
-                            children: (0, i.jsx)(o.Text, {
+                        children: (0, t.jsx)("pre", {
+                            children: (0, t.jsx)(a.Text, {
                                 variant: "code",
                                 color: "text-secondary",
                                 children: JSON.stringify(n.timeline, null, 2),
                             }),
                         }),
                     }),
-                (null == (t = n.decision) ? void 0 : t.emotionHistory) != null &&
-                    n.decision.emotionHistory.length > 0 &&
-                    (0, i.jsxs)(o.C3N, {
-                        label: "Emotion History",
-                        children: [
-                            (0, i.jsx)(r.Z, { emotionHistory: n.decision.emotionHistory }),
-                            (0, i.jsx)("pre", {
-                                children: (0, i.jsx)(o.Text, {
-                                    variant: "code",
-                                    color: "text-secondary",
-                                    children: JSON.stringify(n.decision.emotionHistory, null, 2),
-                                }),
-                            }),
-                        ],
-                    }),
                 null == n.decision &&
                     0 === n.timeline.length &&
-                    (0, i.jsx)(o.Text, {
+                    (0, t.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         children: "No debug information available for this clip.",

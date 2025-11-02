@@ -581,7 +581,7 @@ let i = {
     ClipDecisionEngineManager: {
         actions: [
             "CLIPS_SIGNAL_CREATED",
-            "CLIPS_ENGINE_CONFIG_UPDATE",
+            "CLIPS_SETTINGS_UPDATE",
             "SPEAKING",
             "GUILD_SOUNDBOARD_SOUND_PLAY_START",
             "GUILD_SOUNDBOARD_SOUND_PLAY_END",

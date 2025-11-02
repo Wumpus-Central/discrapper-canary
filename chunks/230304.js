@@ -69,7 +69,14 @@ class d {
                 debug: n,
             }),
             this.yellHistory.length > 50 && this.yellHistory.shift()),
-            i && this.emitSignal({ type: l.Bs.YELLING }, s);
+            i &&
+                this.emitSignal(
+                    {
+                        type: l.Bs.YELLING,
+                        userId: a,
+                    },
+                    s,
+                );
     }
     handleWakeWord(e) {
         var t;

@@ -16,6 +16,9 @@ class i {
     clear() {
         this.timeline.length = 0;
     }
+    updateLength(e) {
+        (this.timelineLength = e), this.cull();
+    }
     add(e) {
         if (0 === this.timeline.length || this.timeline[this.timeline.length - 1].timestamp <= e.timestamp) {
             this.timeline.push(e), this.cull();
@@ -35,12 +38,10 @@ class i {
         return this.cull(), this.timeline;
     }
     cull() {
-        let e = Date.now() - 1000 * this.timelineLengthSeconds;
-        this.timeline = this.timeline.filter((t) => t.timestamp >= e);
+        let e = Date.now() - this.timelineLength;
+        for (; this.timeline.length > 0 && this.timeline[0].timestamp < e; ) this.timeline.shift();
     }
-    constructor(e) {
-        r(this, "timeline", []),
-            r(this, "timelineLengthSeconds", void 0),
-            (this.timelineLengthSeconds = null != e ? e : 300);
+    constructor(e = 300000) {
+        r(this, "timeline", []), r(this, "timelineLength", void 0), (this.timelineLength = e);
     }
 }
