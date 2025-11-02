@@ -1,21 +1,20 @@
 n.d(t, {
-    Go: () => d,
-    NS: () => m,
-    NV: () => l,
-    PP: () => p,
-    Zq: () => f,
-    iL: () => _,
-    ln: () => u,
-    n7: () => h,
+    Go: () => u,
+    NS: () => h,
+    NV: () => s,
+    PP: () => _,
+    Zq: () => d,
+    iL: () => f,
+    ln: () => c,
+    n7: () => p,
 });
 var r = n(818083),
     i = n(441167),
     a = n(131951);
 n(74538);
-var o = n(435064),
-    s = n(779618);
+var o = n(779618);
 n(474936);
-let l = (0, r.B)({
+let s = (0, r.B)({
         kind: "user",
         id: "2022-11_clips_experiment",
         label: "Clips Experiment",
@@ -66,7 +65,7 @@ let l = (0, r.B)({
             },
         ],
     }),
-    c = (0, r.B)({
+    l = (0, r.B)({
         kind: "user",
         id: "2023-09_clips_nitro_early_access",
         label: "Clips (Nitro EA)",
@@ -105,54 +104,52 @@ let l = (0, r.B)({
             },
         ],
     });
+function c() {
+    if (!(0, o.Z)(a.Z)) return !1;
+    let { enableClips: e } = l.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
+        { enableClips: t } = s.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
+        { enableViewerClipping: n } = i.Z.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 });
+    return e || t || n;
+}
 function u() {
-    if (!(0, s.Z)(a.Z)) return !1;
-    let { enableClips: e } = c.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        { enableClips: t } = l.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        n = o.Z.isDecoupledGameClippingEnabled(),
-        { enableViewerClipping: r } = i.Z.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 });
-    return e || t || n || r;
+    let e = (0, o.Z)(a.Z),
+        { enableClips: t } = l.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
+        { enableClips: n } = s.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
+        { enableViewerClipping: r } = i.Z.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
+    return (n || t || r) && e;
 }
-function d() {
-    let e = (0, s.Z)(a.Z),
-        { enableClips: t } = c.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        { enableClips: n } = l.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        r = o.Z.isDecoupledGameClippingEnabled(),
-        { enableViewerClipping: u } = i.Z.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
-    return (n || t || r || u) && e;
-}
-let f = (e) => {
+let d = (e) => {
     let { autoTrackExposure: t } = e,
-        n = (0, s.Z)(a.Z),
-        { enablePremiumEarlyAccessGoLiveRoadblock: r } = c.useExperiment(
+        n = (0, o.Z)(a.Z),
+        { enablePremiumEarlyAccessGoLiveRoadblock: r } = l.useExperiment(
             { location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock" },
             { autoTrackExposure: t && n },
         );
     return !!n && r;
 };
-function _() {
-    let { enableScreenshotKeybind: e } = l.getCurrentConfig(
+function f() {
+    let { enableScreenshotKeybind: e } = s.getCurrentConfig(
         { location: "isScreenshotKeybindEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function p() {
-    let { enableScreenshotKeybind: e } = l.useExperiment(
+function _() {
+    let { enableScreenshotKeybind: e } = s.useExperiment(
         { location: "useScreenshotKeybindEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function h() {
-    let { enableVoiceOnlyClips: e } = l.getCurrentConfig(
+function p() {
+    let { enableVoiceOnlyClips: e } = s.getCurrentConfig(
         { location: "areVoiceOnlyClipsEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function m() {
-    let { enableAdvancedSignals: e } = l.getCurrentConfig(
+function h() {
+    let { enableAdvancedSignals: e } = s.getCurrentConfig(
         { location: "areAdvancedSignalsEnabled" },
         { autoTrackExposure: !1 },
     );
