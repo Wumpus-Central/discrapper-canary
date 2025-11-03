@@ -30,6 +30,7 @@ let b = (e) => {
                 (0, r.jsx)(o.Button, {
                     onClick: s,
                     text: i,
+                    fullWidth: !0,
                 }),
             ],
         }),
