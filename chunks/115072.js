@@ -1,8 +1,8 @@
 n.d(t, { default: () => E }), n(953529), n(642613), n(388685), n(784620), n(973216);
 var i = n(951288),
     r = n(647438),
-    l = n(772848),
-    a = n(442837),
+    a = n(772848),
+    l = n(442837),
     o = n(544891),
     s = n(159691),
     u = n(481060),
@@ -80,8 +80,8 @@ function E(e) {
             })((0, _.getOS)()),
         ),
         [en, ei] = r.useState(""),
-        [er, el] = r.useState(""),
-        [ea, eo] = r.useState(""),
+        [er, ea] = r.useState(""),
+        [el, eo] = r.useState(""),
         [es, eu] = r.useState(""),
         [ec, ed] = r.useState(!1),
         [em, ep] = r.useState(!1),
@@ -100,24 +100,24 @@ function E(e) {
                 rejectWithError: !0,
             })
             .then((e) => {
-                if (null != e.body && "dcb3ff805646482955644e9393961f693b39ac62" !== e.body.hash) {
-                    let e = new Date("1761949144318"),
+                if (null != e.body && "78fbd9560dad395c27ae193ca101291f4f527ce8" !== e.body.hash) {
+                    let e = new Date("1762181554734"),
                         t = new Date(),
                         n = (0, j.TD)(t, e);
                     n.hours > 6 && eg(n.hours);
                 }
             });
     }, []);
-    let ex = (0, a.e7)([b.default], () => {
+    let ex = (0, l.e7)([b.default], () => {
             let e = b.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        eb = (0, a.e7)([m.C], () => {
+        eb = (0, l.e7)([m.C], () => {
             var e;
             return null == (e = m.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
         }),
-        { overridesInfo: ey } = (0, x.s)(),
-        { overridesInfo: ej } = (0, g.Q)(),
+        { overridesInfo: ey } = (0, x.sI)(),
+        { overridesInfo: ej } = (0, g.Qb)(),
         e_ = Object.entries(C({}, ey, ej)).map((e) => {
             let [t, { variantId: n }] = e;
             return {
@@ -130,13 +130,13 @@ function E(e) {
         if ((ef(!1), "" === M || "" === W || null == V)) return void ed(!0);
         let r = null == U || null == (e = U.features) ? void 0 : e.find((e) => (0, O.pD)(e) === X);
         ep(!0), ed(!1);
-        let l = (0, S.D)(
+        let a = (0, S.D)(
                 z.map((e) => {
                     let { item: t } = e;
                     return t;
                 }),
             ),
-            a = await (0, O.ZD)(
+            l = await (0, O.ZD)(
                 {
                     name: M,
                     description: W,
@@ -153,15 +153,15 @@ function E(e) {
                           operatingSystem: ee,
                           operatingSystemVersion: en,
                           clientVersion: er,
-                          clientBuildNumber: ea,
+                          clientBuildNumber: el,
                           locale: es,
                       }
                     : { overridePlatformInformation: K },
-                l,
+                a,
             ).catch(() => ef(!0));
         ep(!1),
-            null != a && a.ok
-                ? (ex && window.open(a.body.permalink_url, "_blank"),
+            null != l && l.ok
+                ? (ex && window.open(l.body.permalink_url, "_blank"),
                   L(),
                   (0, u.ZDy)(async () => {
                       let { default: e } = await n.e("64648").then(n.bind(n, 81155));
@@ -170,7 +170,7 @@ function E(e) {
                           return (0, i.jsx)(
                               e,
                               ((n = C({}, t)),
-                              (r = r = { asanaTask: a.body }),
+                              (r = r = { asanaTask: l.body }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                   : (function (e, t) {
@@ -218,7 +218,7 @@ function E(e) {
                 G([
                     ...z,
                     new d.ZP({
-                        id: (0, l.Z)(),
+                        id: (0, a.Z)(),
                         file: t,
                         platform: d.ow.WEB,
                         origin: "clipboard",
@@ -450,12 +450,12 @@ function E(e) {
                                           label: w.intl.string(w.t["wy1M/t"]),
                                           placeholder: "Client Version",
                                           value: er,
-                                          onChange: (e) => el(e),
+                                          onChange: (e) => ea(e),
                                       }),
                                       (0, i.jsx)(u.oil, {
                                           label: w.intl.string(w.t.f7kbVu),
                                           placeholder: "Client Build Number",
-                                          value: ea,
+                                          value: el,
                                           onChange: (e) => eo(e),
                                       }),
                                       (0, i.jsx)(u.oil, {
@@ -488,7 +488,7 @@ function E(e) {
                                             ...Array.from(e.currentTarget.files).map(
                                                 (e) =>
                                                     new d.ZP({
-                                                        id: (0, l.Z)(),
+                                                        id: (0, a.Z)(),
                                                         file: e,
                                                         platform: d.ow.WEB,
                                                         origin: "file_picker",

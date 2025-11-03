@@ -1,21 +1,22 @@
-n.d(t, { Z: () => f }), n(413496), n(433524), n(35282), n(997841);
+n.d(t, { Z: () => _ }), n(413496), n(433524), n(35282), n(997841);
 var r = n(951288),
     i = n(647438),
     a = n(865427),
     o = n(853425),
     s = n(830121),
-    l = n(887580),
-    c = n(811364);
-let u = i.lazy(() =>
+    l = n(922699),
+    c = n(887580),
+    u = n(811364);
+let d = i.lazy(() =>
         n
             .e("61061")
             .then(n.bind(n, 982661))
             .then((e) => ({ default: e.PlaygroundEmbed })),
     ),
-    d = RegExp("^" + s.oO.source, s.oO.flags);
-function f(e) {
+    f = RegExp("^" + s.oO.source, s.oO.flags);
+function _(e) {
     return {
-        match: (e, t) => (t.allowLinks && t.allowDevLinks ? d.exec(e) : null),
+        match: (e, t) => (t.allowLinks && t.allowDevLinks ? f.exec(e) : null),
         parse: (e, t) => ({
             target: e,
             type: "devLink",
@@ -34,17 +35,17 @@ function f(e) {
                   ? (0, r.jsxs)(
                         i.Fragment,
                         {
-                            children: [(0, r.jsx)("span", { children: s }), (0, r.jsx)(l.vF, { url: s })],
+                            children: [(0, r.jsx)("span", { children: s }), (0, r.jsx)(c.v, { url: s })],
                         },
                         n.key,
                     )
-                  : (0, c.Y)(s)
+                  : (0, u.Y)(s)
                     ? (0, r.jsx)(
                           i.Fragment,
                           {
                               children: (0, r.jsxs)(i.Suspense, {
                                   fallback: null,
-                                  children: [(0, r.jsx)("span", { children: s }), (0, r.jsx)(u, { url: s })],
+                                  children: [(0, r.jsx)("span", { children: s }), (0, r.jsx)(d, { url: s })],
                               }),
                           },
                           n.key,

@@ -375,6 +375,7 @@ class tn extends (r = a.Component) {
                           r,
                       );
                   else if (n === S.g.COLLECTIBLES_SHOP) return null;
+                  else if (n === S.g.EXPERIMENT) return null;
                   else throw Error("Unknown coded link type: ".concat(n));
               });
     }

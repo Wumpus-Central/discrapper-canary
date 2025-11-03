@@ -5,6 +5,7 @@ var r = (function (e) {
         (e.TEMPLATE = "TEMPLATE"),
         (e.BUILD_OVERRIDE = "BUILD_OVERRIDE"),
         (e.MANUAL_BUILD_OVERRIDE = "MANUAL_BUILD_OVERRIDE"),
+        (e.EXPERIMENT = "EXPERIMENT"),
         (e.EVENT = "EVENT"),
         (e.CHANNEL_LINK = "CHANNEL_LINK"),
         (e.APP_DIRECTORY_PROFILE = "APP_DIRECTORY_PROFILE"),

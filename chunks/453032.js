@@ -1,7 +1,8 @@
 n.d(t, {
-    a: () => l,
-    q: () => s,
-});
+    aN: () => c,
+    qD: () => s,
+}),
+    n(388685);
 var r = n(442837),
     i = n(492435),
     a = n(353926),
@@ -19,11 +20,14 @@ function s(e, t) {
     });
 }
 function l(e, t) {
-    return (0, r.e7)([a.Z, o.Z], () =>
-        null == e
-            ? null
-            : e.system === i.I.LEGACY
-              ? a.Z.getLoadedUserExperiment(e.name)
-              : o.Z.getServerAssignment(e.kind, t, e.name),
-    );
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.Z, o.Z],
+        [r, s] = n;
+    return null == e
+        ? null
+        : e.system === i.I.LEGACY
+          ? r.getLoadedUserExperiment(e.name)
+          : s.getServerAssignment(e.kind, t, e.name);
+}
+function c(e, t) {
+    return (0, r.e7)([a.Z, o.Z], () => l(e, t, [a.Z, o.Z]));
 }

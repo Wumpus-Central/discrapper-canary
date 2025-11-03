@@ -177,6 +177,7 @@ function eU(e) {
                 guild_template_guild_id: e.sourceGuildId,
             });
         } else if (t === O.g.BUILD_OVERRIDE);
+        else if (t === O.g.EXPERIMENT);
         else if (t === O.g.MANUAL_BUILD_OVERRIDE);
         else if (t === O.g.EVENT);
         else if (t === O.g.CHANNEL_LINK);
