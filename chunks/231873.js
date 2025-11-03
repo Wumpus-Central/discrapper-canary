@@ -6,16 +6,15 @@ n.d(t, {
 var r,
     i,
     l,
-    a =
-        12633 == n.j
-            ? (((r = {}).INVITE = "member_joined"),
-              (r.CHANNEL = "create_channel"),
-              (r.AVATAR = "avatar"),
-              (r.MESSAGE = "send_message"),
-              (r.COMPLETED = "completed"),
-              (r.DISMISSED = "dismissed"),
-              r)
-            : null,
+    a = /^(12633|84770)$/.test(n.j)
+        ? (((r = {}).INVITE = "member_joined"),
+          (r.CHANNEL = "create_channel"),
+          (r.AVATAR = "avatar"),
+          (r.MESSAGE = "send_message"),
+          (r.COMPLETED = "completed"),
+          (r.DISMISSED = "dismissed"),
+          r)
+        : null,
     o =
         (((i = {}).PERSONALIZE_SERVER = "Personalize Server"),
         (i.INVITE = "Invite Friends"),
