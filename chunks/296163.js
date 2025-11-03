@@ -1,8 +1,8 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(159691),
+    o = n(273352),
     s = n(481060),
     l = n(846027),
     c = n(923928),
@@ -38,45 +38,38 @@ function p(e) {
     }
     return e;
 }
-function h(e) {
-    return (0, r.jsx)(
-        o.u_l,
-        p(
-            {
-                size: "md",
-                title: f.intl.string(f.t.NYklhr),
-                subtitle: f.intl.string(f.t.EJ26Oh),
-                actions: [
-                    {
-                        text: f.intl.string(f.t.UYW0dz),
-                        onClick: () => {
-                            e.onClose(), c.Z.clearVADWarning();
-                        },
-                        variant: "secondary",
-                    },
-                    {
-                        text: f.intl.string(f.t.E3Y7NH),
-                        onClick: () => {
-                            l.Z.setMode(d.pM4.PUSH_TO_TALK), e.onClose(), c.Z.clearVADWarning();
-                        },
-                        variant: "primary",
-                    },
-                ],
-            },
-            e,
-        ),
-    );
-}
-function m() {
+function h() {
     let e = (0, a.e7)([u.Z], () => u.Z.shouldShowWarning(), []),
         t = i.useRef(null);
     function n() {
         null !== t.current && ((0, s.Mr3)(t.current), (t.current = null));
     }
+    function _() {
+        c.Z.clearVADWarning();
+    }
     return (
         i.useEffect(
             () => (
-                e ? (t.current = (0, s.h7j)((e) => (0, r.jsx)(h, p({}, e)))) : n(),
+                e
+                    ? (t.current = (0, s.h7j)((e) =>
+                          (0, r.jsx)(
+                              o.default,
+                              p(
+                                  {
+                                      title: f.intl.string(f.t.NYklhr),
+                                      body: f.intl.string(f.t.EJ26Oh),
+                                      onCancel: _,
+                                      cancelText: f.intl.string(f.t.UYW0dz),
+                                      confirmText: f.intl.string(f.t.E3Y7NH),
+                                      onConfirm: () => {
+                                          l.Z.setMode(d.pM4.PUSH_TO_TALK), _();
+                                      },
+                                  },
+                                  e,
+                              ),
+                          ),
+                      ))
+                    : n(),
                 () => {
                     n();
                 }
