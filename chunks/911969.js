@@ -107,6 +107,7 @@ var r = (function (e) {
     })({}),
     m = (function (e) {
         return (
+            (e[(e.UNKNOWN = -1)] = "UNKNOWN"),
             (e[(e.ACTION_ROW = 1)] = "ACTION_ROW"),
             (e[(e.BUTTON = 2)] = "BUTTON"),
             (e[(e.STRING_SELECT = 3)] = "STRING_SELECT"),
