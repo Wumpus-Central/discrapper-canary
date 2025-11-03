@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: () => I,
-        default: () => eU,
+        default: () => ek,
         mergeUser: () => R,
         transformUser: () => C,
         users: () => O,
@@ -545,32 +545,21 @@ function eL(e) {
 }
 function eM(e) {
     let { stickers: t } = e;
-    return t.reduce((e, t) => (null != t.user && R(ej(t.user))) || e, !1);
+    return t.reduce((e, t) => (null != t.user && R(t.user)) || e, !1);
 }
-function ej(e) {
-    let { id: t, username: n, avatar: r, discriminator: i, bot: a, globalName: o } = e;
-    return {
-        id: t,
-        username: n,
-        avatar: r,
-        discriminator: i,
-        bot: a,
-        global_name: o,
-    };
-}
-class ek extends g.Z {
+class ej extends g.Z {
     initialize() {
         this.waitFor(m.default, u.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: ek.LATEST_SNAPSHOT_VERSION,
+            version: ej.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(h.lm) },
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(ek.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(ej.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) O[e.id] = new _.Z(e);
         if (null != e.users) for (let t of e.users) (t.id in O && j(t)) || (O[t.id] = new _.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
@@ -683,5 +672,5 @@ class ek extends g.Z {
         });
     }
 }
-y(ek, "displayName", "UserStore"), y(ek, "LATEST_SNAPSHOT_VERSION", 1);
-let eU = new ek();
+y(ej, "displayName", "UserStore"), y(ej, "LATEST_SNAPSHOT_VERSION", 1);
+let ek = new ej();
