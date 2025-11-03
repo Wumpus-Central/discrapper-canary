@@ -474,7 +474,7 @@ function K(e) {
     let y = i.useCallback(
             (e) => {
                 let { queryString: n, query: r, searchEverywhere: i } = e;
-                R.ZP.refreshSearchQueryAnalyticsId(t),
+                R.Z.refreshSearchQueryAnalyticsId(t),
                     (0, k.tI)({
                         searchContext: t,
                         query: r,
