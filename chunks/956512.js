@@ -142,6 +142,7 @@ function N(e) {
                 channelId: N.id,
                 messageId: T.id,
                 onView: P,
+                isDeadEnd: U,
             },
         })
     );

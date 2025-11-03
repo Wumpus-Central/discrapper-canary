@@ -22,13 +22,15 @@ var r = n(626135),
             e
         );
     })({});
-function o(e, t, n, a, o) {
+function o(e) {
+    let { applicationId: t, linkType: n, area: a, referrerId: o, customId: s, isDeadEnd: l } = e;
     r.default.track(i.rMx.APP_EMBED_CLICKED, {
-        application_id: e,
-        link_type: t,
-        area: n,
-        referrer_id: a,
-        custom_id: o,
+        application_id: t,
+        link_type: n,
+        area: a,
+        referrer_id: o,
+        custom_id: s,
+        is_dead_end: l,
     });
 }
 function s(e) {

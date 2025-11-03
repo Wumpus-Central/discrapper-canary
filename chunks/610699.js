@@ -359,6 +359,7 @@ function V(e) {
                     guildId: s.id,
                     channelId: null == o ? void 0 : o.id,
                     messageId: l.id,
+                    isDeadEnd: !d,
                 },
             },
         ),

@@ -160,6 +160,7 @@ function ed(e) {
                 guildId: E,
                 channelId: f.channel_id,
                 messageId: f.id,
+                isDeadEnd: !0,
             },
         });
     }
@@ -460,6 +461,7 @@ function ep(e) {
                     ? {
                           label: ea.intl.string(ea.t.RscU7I),
                           trackingArea: m.j_.PLAY,
+                          isDeadEnd: !0,
                           onClick: () => {
                               d.Z.launch({
                                   applicationId: et,
@@ -532,6 +534,7 @@ function ep(e) {
                 guildId: A.guild_id,
                 channelId: P.channel_id,
                 messageId: P.id,
+                isDeadEnd: !0,
             },
         });
     }

@@ -28,7 +28,7 @@ var r = n(951288),
         return (e[(e.BOT = 0)] = "BOT"), (e[(e.ACTIVITY = 1)] = "ACTIVITY"), e;
     })({});
 function b(e) {
-    var t, n, r;
+    var t, n, r, i;
     return {
         id: null != (t = null == e ? void 0 : e.id) ? t : "0",
         linkType: null != (n = null == e ? void 0 : e.linkType) ? n : h.U.UNKNOWN,
@@ -39,6 +39,7 @@ function b(e) {
         guildId: null == e ? void 0 : e.guildId,
         channelId: null == e ? void 0 : e.channelId,
         messageId: null == e ? void 0 : e.messageId,
+        isDeadEnd: null != (i = null == e ? void 0 : e.isDeadEnd) && i,
     };
 }
 function y(e) {
@@ -106,13 +107,29 @@ function O(e) {
         B = i.useMemo(() => {
             if (null != S)
                 return (e) => {
-                    S(e), (0, p.KX)(T.id, T.linkType, p.j_.CONTENT, T.referrerId, T.activityCustomId);
+                    S(e),
+                        (0, p.KX)({
+                            applicationId: T.id,
+                            linkType: T.linkType,
+                            area: p.j_.CONTENT,
+                            referrerId: T.referrerId,
+                            customId: T.activityCustomId,
+                            isDeadEnd: T.isDeadEnd,
+                        });
                 };
         }, [S, T]),
         Z = i.useMemo(() => {
             if (null != A)
                 return (e) => {
-                    A(e), (0, p.KX)(T.id, T.linkType, p.j_.BANNER, T.referrerId, T.activityCustomId);
+                    A(e),
+                        (0, p.KX)({
+                            applicationId: T.id,
+                            linkType: T.linkType,
+                            area: p.j_.BANNER,
+                            referrerId: T.referrerId,
+                            customId: T.activityCustomId,
+                            isDeadEnd: T.isDeadEnd,
+                        });
                 };
         }, [A, T]);
     return (0, r.jsxs)("div", {
@@ -198,28 +215,30 @@ function O(e) {
                                                 disabledReason: s,
                                                 submitting: l,
                                                 trackingArea: u,
+                                                isDeadEnd: d,
                                             } = e,
-                                            d = 0 === t;
+                                            f = 0 === t;
                                         return (0, r.jsxs)(
                                             "div",
                                             {
                                                 className: g.buttonWithPossibleDisabledTextWrapper,
                                                 children: [
                                                     (0, r.jsx)(c.zxk, {
-                                                        variant: d ? "overlay-primary" : "overlay-secondary",
+                                                        variant: f ? "overlay-primary" : "overlay-secondary",
                                                         disabled: o || null != s,
                                                         loading: l,
                                                         icon: i,
                                                         text: n,
                                                         onClick: (e) => {
                                                             a(e),
-                                                                (0, p.KX)(
-                                                                    T.id,
-                                                                    T.linkType,
-                                                                    u,
-                                                                    T.referrerId,
-                                                                    T.activityCustomId,
-                                                                );
+                                                                (0, p.KX)({
+                                                                    applicationId: T.id,
+                                                                    linkType: T.linkType,
+                                                                    area: u,
+                                                                    referrerId: T.referrerId,
+                                                                    customId: T.activityCustomId,
+                                                                    isDeadEnd: d,
+                                                                });
                                                         },
                                                         fullWidth: !0,
                                                     }),

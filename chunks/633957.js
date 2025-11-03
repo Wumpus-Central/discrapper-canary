@@ -229,6 +229,7 @@ function B(e) {
             guildId: w,
             channelId: I,
             messageId: x.id,
+            isDeadEnd: et,
         },
     });
 }
