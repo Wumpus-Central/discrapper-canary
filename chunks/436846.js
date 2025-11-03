@@ -1,35 +1,30 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    l = n(442837),
-    o = n(481060),
-    c = n(706454),
-    s = n(86419),
-    u = n(881410),
-    d = n(388032),
-    f = n(959183);
-function g(e) {
+    l = n(481060),
+    o = n(86419),
+    c = n(881410),
+    s = n(388032),
+    u = n(959183);
+function d(e) {
     let { widget: t } = e,
-        n = (0, s.Gv)(t.type),
+        n = (0, o.Gv)(t.type),
         i = 1 === n,
-        g =
-            (0, l.e7)([c.default], () => ["en-US", "en-GB"].includes(c.default.locale)) && i
-                ? d.intl.string(d.t["3FdPBT"])
-                : d.intl.format(d.t.W8K2GH, { maxGames: n });
+        d = i ? s.intl.string(s.t["3FdPBT"]) : s.intl.format(s.t.W8K2GH, { maxGames: n });
     return (0, r.jsxs)("div", {
-        className: a()(f.container, i && f.singleGameWidget),
+        className: a()(u.container, i && u.singleGameWidget),
         children: [
             i &&
-                (0, r.jsx)(u.wl, {
+                (0, r.jsx)(c.wl, {
                     widget: t,
                     widgetType: t.type,
                 }),
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: "text-xs/normal",
                 color: "text-secondary",
-                children: g,
+                children: d,
             }),
         ],
     });
