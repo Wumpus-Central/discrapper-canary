@@ -574,7 +574,8 @@ class k extends I.ZP {
             "Completed compression and conversion. Output size="
                 .concat(s, " bytes; filename=")
                 .concat(i, "; uri=")
-                .concat(r, "; mimeType=")
+                .concat(r, "; originalMimeType=")
+                .concat(this.mimeType, "; mimeType=")
                 .concat(o, " for ")
                 .concat(this.id),
         );
