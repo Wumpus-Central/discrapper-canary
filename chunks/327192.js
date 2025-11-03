@@ -265,15 +265,9 @@ function q(e) {
         return e.twoWayLink
             ? null
             : e.type === G.ABu.XBOX
-              ? (0, r.jsx)("div", {
-                    className: V.upsellWrapper,
-                    children: (0, r.jsx)(U.Y, {}),
-                })
+              ? (0, r.jsx)(U.Y, {})
               : e.type === G.ABu.PLAYSTATION
-                ? (0, r.jsx)("div", {
-                      className: V.upsellWrapper,
-                      children: (0, r.jsx)(k.t, {}),
-                  })
+                ? (0, r.jsx)(k.t, {})
                 : null;
     }
     function et(e) {
@@ -431,8 +425,7 @@ function q(e) {
               : void 0;
     }
     function ei() {
-        if (n.revoked || n.integrations.length > 0)
-            return (0, r.jsx)(_.izJ, { className: V.connectedAccountSeparator });
+        if (n.revoked || n.integrations.length > 0) return (0, r.jsx)(_.izJ, {});
     }
     function ea() {
         (0, v.Z)({
