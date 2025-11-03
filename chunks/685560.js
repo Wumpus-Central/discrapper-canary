@@ -1,8 +1,8 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var a = n(951288),
-    i = n(913527),
-    l = n.n(i),
-    r = n(442837),
+    r = n(913527),
+    i = n.n(r),
+    l = n(442837),
     s = n(544891),
     o = n(704215),
     c = n(481060),
@@ -56,15 +56,14 @@ function N(e) {
     }
 }
 async function O(e, t, n) {
-    await Promise.all(
-        t.map((e) =>
-            s.tn.patch({
-                url: _.ANM.APPLIED_BOOST_MODIFY_END_DATE(e.id),
-                body: n ? {} : { ends_at: l()().add(1, "day") },
-                rejectWithError: !0,
-            }),
-        ),
-    ),
+    await s.tn.patch({
+        url: _.ANM.APPLIED_BOOST_MODIFY_END_DATE,
+        body: {
+            applied_boost_ids: t.map((e) => e.id),
+            ends_at: n ? null : i()().add(1, "day"),
+        },
+        rejectWithError: !0,
+    }),
         (0, d.C0)(e),
         (0, x.BN)(e, !0);
 }
@@ -74,14 +73,14 @@ async function P(e) {
         rejectWithError: !0,
     });
 }
-function w() {
-    let e = (0, r.e7)([j.Z], () => j.Z.getGuildId()),
-        t = (0, r.e7)([v.Z], () => {
+function I() {
+    let e = (0, l.e7)([j.Z], () => j.Z.getGuildId()),
+        t = (0, l.e7)([v.Z], () => {
             var t;
             return null == (t = v.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, r.Wu)([f.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
-        i = (0, r.Wu)([b.Z], () => {
+        n = (0, l.Wu)([f.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
+        r = (0, l.Wu)([b.Z], () => {
             var t;
             return null != e && null != (t = b.Z.getAppliedGuildBoostsForGuild(e)) ? t : [];
         });
@@ -141,14 +140,14 @@ function w() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        O(e, i.slice(Math.floor(i.length / 2)), !1);
+                                        O(e, r.slice(Math.floor(r.length / 2)), !1);
                                     },
                                 }),
                                 (0, a.jsx)(c.Button, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        O(e, i, !0);
+                                        O(e, r, !0);
                                     },
                                 }),
                             ],
