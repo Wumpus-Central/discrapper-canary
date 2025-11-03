@@ -58,12 +58,12 @@ function f(e, t) {
     return i;
 }
 function _(e) {
-    let { leading: t, actions: n = [], actionsFullWidth: i = !1 } = e;
+    let { leading: t, actions: n = [], actionsFullWidth: i = !1, leadingLayout: c = "default" } = e;
     if (null == t && n.length < 1) return null;
-    let c = ["primary", "critical-primary", "expressive"],
-        d = n.findLastIndex((e) => null != e.variant && c.includes(e.variant));
+    let d = ["primary", "critical-primary", "expressive"],
+        f = n.findLastIndex((e) => null != e.variant && d.includes(e.variant));
     return (0, r.jsxs)("footer", {
-        className: a()(l.actionBar, l.section),
+        className: a()(l.actionBar, l.section, { [l.actionBarLayoutChatInput]: "chat-input" === c }),
         children: [
             null != t &&
                 (0, r.jsx)("div", {
@@ -81,7 +81,7 @@ function _(e) {
                                   var n;
                                   return (0, r.jsx)(
                                       o.z,
-                                      u({ autoFocus: null != (n = e.autoFocus) ? n : d === t }, e),
+                                      u({ autoFocus: null != (n = e.autoFocus) ? n : f === t }, e),
                                       t,
                                   );
                               }),

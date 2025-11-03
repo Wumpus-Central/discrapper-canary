@@ -88,10 +88,11 @@ function h(e) {
             preview: p,
             actions: h,
             actionBarInput: m,
-            listProps: g,
-            children: E,
+            actionBarInputLayout: g = "default",
+            listProps: E,
+            children: b,
         } = e,
-        b = _(e, [
+        y = _(e, [
             "size",
             "title",
             "subtitle",
@@ -99,14 +100,15 @@ function h(e) {
             "preview",
             "actions",
             "actionBarInput",
+            "actionBarInputLayout",
             "listProps",
             "children",
         ]);
-    let y = null != t ? t : null != d || null != E || null != g ? "md" : "sm";
+    let O = null != t ? t : null != d || null != b || null != E ? "md" : "sm";
     return (0, r.jsxs)(
         i.I,
-        f(u({}, b), {
-            size: y,
+        f(u({}, y), {
+            size: O,
             children: [
                 (0, r.jsx)(l.x, {
                     title: n,
@@ -114,12 +116,13 @@ function h(e) {
                 }),
                 (0, r.jsx)(o.f, {
                     controls: d,
-                    listProps: g,
-                    children: E,
+                    listProps: E,
+                    children: b,
                 }),
                 (0, r.jsx)(s.m, { children: p }),
                 (0, r.jsx)(a.G, {
                     leading: m,
+                    leadingLayout: g,
                     actions: h,
                     actionsFullWidth: null == m,
                 }),

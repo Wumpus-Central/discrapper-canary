@@ -44,5 +44,6 @@ var r = {
     actionBarTrailing: "actionBarTrailing__8a031",
     actionButtonWrapper: "actionButtonWrapper__8a031",
     actionBarTrailingFullWidth: "actionBarTrailingFullWidth__8a031",
+    actionBarLayoutChatInput: "actionBarLayoutChatInput__8a031",
 };
 n.r((e.exports = r));

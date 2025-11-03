@@ -1,6 +1,6 @@
 n.d(t, {
-    BT: () => h,
-    JL: () => j,
+    BT: () => y,
+    JL: () => h,
 }),
     n(388685),
     n(457542);
@@ -19,53 +19,55 @@ var l = n(951288),
     f = n(578756),
     p = n(60482),
     b = n(627045),
-    _ = n(619733);
-let [x, j] = (0, c.Z)();
-function E(e) {
+    _ = n(619733),
+    x = n(269794),
+    j = n(388032);
+let [E, h] = (0, c.Z)();
+function S(e) {
     var t;
     return null == e || null == (t = e.plans[Math.floor(((null == e ? void 0 : e.plans.length) - 1) / 2)])
         ? void 0
         : t.id;
 }
-function h(e) {
-    var t, n, c, j, h, S;
+function y(e) {
+    var t, n, c, h, y, O;
     let {
-        guildId: y,
-        initialGameServerInstance: O,
-        initialGameServerGame: I,
-        stepConfig: k = _.IX,
-        children: C,
-        onClose: P,
-        analyticsLocation: N,
+        guildId: I,
+        initialGameServerInstance: k,
+        initialGameServerGame: C,
+        stepConfig: P = _.IX,
+        children: N,
+        onClose: Z,
+        analyticsLocation: w,
     } = e;
     i.useEffect(() => {
-        (0, g.ce)(y), (0, m.BN)(y, !0), null == O && (0, g.mF)(y);
-    }, [y, O]);
-    let Z = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(y)),
-        w = (0, a.e7)([o.Z], () => o.Z.getGuild(y)),
-        { analyticsLocations: M } = (0, r.ZP)(N),
-        [T, G] = i.useState(null != (t = k.initialStep) ? t : Object.keys(k.steps)[0]),
-        L = (0, v.Td)(y, void 0),
-        R = k.steps[T],
-        [A, D] = i.useState(null == I ? void 0 : I.id);
+        (0, g.ce)(I), (0, m.BN)(I, !0), null == k && (0, g.mF)(I);
+    }, [I, k]);
+    let M = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(I)),
+        T = (0, a.e7)([o.Z], () => o.Z.getGuild(I)),
+        { analyticsLocations: G } = (0, r.ZP)(w),
+        [L, R] = i.useState(null != (t = P.initialStep) ? t : Object.keys(P.steps)[0]),
+        A = (0, v.Td)(I, void 0),
+        D = P.steps[L],
+        [B, V] = i.useState(null == C ? void 0 : C.id);
     i.useEffect(() => {
         var e, t, n;
-        if (null != A || (null == O ? void 0 : O.entitlementId) == null) return;
+        if (null != B || (null == k ? void 0 : k.entitlementId) == null) return;
         let l =
-            null == Z || null == (n = Z.entitlements) || null == (t = n[O.entitlementId]) || null == (e = t.sku)
+            null == M || null == (n = M.entitlements) || null == (t = n[k.entitlementId]) || null == (e = t.sku)
                 ? void 0
                 : e.product_id;
-        null != l && D(l);
-    }, [null == Z ? void 0 : Z.entitlements, null == O ? void 0 : O.entitlementId, A]);
-    let [B, V] = i.useState(void 0),
-        z = i.useMemo(() => {
+        null != l && V(l);
+    }, [null == M ? void 0 : M.entitlements, null == k ? void 0 : k.entitlementId, B]);
+    let [z, K] = i.useState(void 0),
+        U = i.useMemo(() => {
             var e;
-            if (null != A)
-                return Object.values(null != (e = null == Z ? void 0 : Z.catalog) ? e : {}).find((e) => e.id === A);
-        }, [null == Z ? void 0 : Z.catalog, A]),
-        [K, U] = i.useState(O),
-        [F, J] = i.useState(null != (n = E(I)) ? n : null == O ? void 0 : O.planId),
-        H = (function (e, t, n, l) {
+            if (null != B)
+                return Object.values(null != (e = null == M ? void 0 : M.catalog) ? e : {}).find((e) => e.id === B);
+        }, [null == M ? void 0 : M.catalog, B]),
+        [F, J] = i.useState(k),
+        [H, W] = i.useState(null != (n = S(C)) ? n : null == k ? void 0 : k.planId),
+        X = (function (e, t, n, l) {
             var i, r, s, u, o, c, d, m;
             let v = (0, a.e7)([p.Z], () => {
                     var t;
@@ -87,80 +89,85 @@ function h(e) {
                               : r.boost_price)
                           ? m
                           : 0);
-        })(y, z, F, K),
-        X = i.useCallback(
+        })(I, U, H, F),
+        Y = i.useCallback(
             (e) => {
                 var t, n, l, i, a, r;
-                U(e);
+                J(e);
                 let s =
-                    null == Z ||
-                    null == (l = Z.entitlements) ||
+                    null == M ||
+                    null == (l = M.entitlements) ||
                     null == (n = l[null != (i = null == e ? void 0 : e.entitlementId) ? i : ""]) ||
                     null == (t = n.sku)
                         ? void 0
                         : t.product_id;
-                null != s && D(s),
-                    J(null == e ? void 0 : e.planId),
-                    Q(null != (a = null == e ? void 0 : e.name) ? a : ""),
-                    et(null != (r = null == e ? void 0 : e.regionId) ? r : "");
+                null != s && V(s),
+                    W(null == e ? void 0 : e.planId),
+                    et(null != (a = null == e ? void 0 : e.name) ? a : ""),
+                    el(null != (r = null == e ? void 0 : e.regionId) ? r : "");
             },
-            [null == Z ? void 0 : Z.entitlements],
+            [null == M ? void 0 : M.entitlements],
         ),
-        Y = i.useCallback(
+        q = i.useCallback(
             (e, t) => {
-                X(void 0), D(null == e ? void 0 : e.id), J(null != t ? t : E(e));
+                Y(void 0), V(null == e ? void 0 : e.id), W(null != t ? t : S(e));
             },
-            [X],
+            [Y],
         ),
-        [q, W] = i.useState(),
-        [$, Q] = i.useState(null != (c = null == O ? void 0 : O.name) ? c : ""),
-        [ee, et] = i.useState(null != (j = null == O ? void 0 : O.regionId) ? j : ""),
-        [en, el] = i.useState(!1),
-        ei = i.useRef(!1),
-        ea = i.useCallback(() => {
+        [$, Q] = i.useState(),
+        [ee, et] = i.useState(null != (c = null == k ? void 0 : k.name) ? c : ""),
+        [en, el] = i.useState(null != (h = null == k ? void 0 : k.regionId) ? h : ""),
+        [ei, ea] = i.useState(!1),
+        er = i.useRef(!1),
+        es = i.useCallback(() => {
             var e, t, n;
-            if ((V(void 0), null == w || null == z || "" === $ || "" === ee || null == F)) return;
-            let l = z.plans.find((e) => e.id === F);
+            if ((K(void 0), null == T || null == U || "" === ee || "" === en || null == H)) return;
+            let l = U.plans.find((e) => e.id === H);
             (0, f.g$)({
-                guildId: w.id,
-                productId: z.id,
-                productName: z.name,
-                skuId: F,
+                guildId: T.id,
+                productId: U.id,
+                productName: U.name,
+                skuId: H,
                 planName: null != (e = null == l ? void 0 : l.name) ? e : "",
                 planCost: null != (t = null == l ? void 0 : l.cost) ? t : 0,
-                previousPlanCost: null == K ? 0 : (null != (n = null == l ? void 0 : l.cost) ? n : 0) + H,
-                region: ee,
-                type: null == K ? "create" : "edit",
+                previousPlanCost: null == F ? 0 : (null != (n = null == l ? void 0 : l.cost) ? n : 0) + X,
+                region: en,
+                type: null == F ? "create" : "edit",
             });
             let i = () => {
-                if (ei.current) return;
-                (ei.current = !0), el(!0);
+                if (er.current) return;
+                (er.current = !0), ea(!0);
                 let e = new Promise((e) => {
                     setTimeout(() => e(void 0), _.tq);
                 });
-                Promise.all([null != K ? (0, g.EY)(w.id, K.entitlementId, F, $) : (0, g.NE)(w.id, F, $, ee), e])
+                Promise.all([null != F ? (0, g.EY)(T.id, F.entitlementId, H, ee) : (0, g.NE)(T.id, H, ee, en), e])
                     .then(() => {
-                        P(),
-                            (null == K ? void 0 : K.planId) !== F &&
-                                (0, b.Z)(w.id, z, null == K ? "created" : "updated");
+                        Z(),
+                            (null == F ? void 0 : F.planId) !== H &&
+                                (0, b.Z)(T.id, U, null == F ? "created" : "updated");
                     })
                     .catch((e) => {
                         var t, n;
-                        V(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message), (ei.current = !1);
+                        K(
+                            null != (n = null == (t = e.body) ? void 0 : t.message)
+                                ? n
+                                : j.intl.string(x.default.gvNWWr),
+                        ),
+                            (er.current = !1);
                     })
                     .finally(() => {
-                        el(!1);
+                        ea(!1);
                     });
             };
-            L < H
+            A < X
                 ? (0, s.u)({
-                      analyticsLocation: N,
-                      numberOfBoostsToAdd: H - L,
-                      analyticsLocations: M,
-                      guild: w,
+                      analyticsLocation: w,
+                      numberOfBoostsToAdd: X - A,
+                      analyticsLocations: G,
+                      guild: T,
                       intent: u.P.PERK,
                       onLoading: (e) => {
-                          el(e);
+                          ea(e);
                       },
                       onSubscribeComplete: () => {
                           i();
@@ -170,63 +177,63 @@ function h(e) {
                       },
                   })
                 : i();
-        }, [M, w, L, F, N, z, $, ee, P, H, K]),
-        er = i.useCallback(
+        }, [G, T, A, H, w, U, ee, en, Z, X, F]),
+        eu = i.useCallback(
             (e) => {
                 switch (e.type) {
                     case "close":
-                        P();
+                        Z();
                         break;
                     case "go-to-step":
-                        G(e.step);
+                        R(e.step);
                         break;
                     case "save":
-                        ea();
+                        es();
                 }
             },
-            [P, ea],
+            [Z, es],
         ),
-        es = i.useCallback(() => {
-            null != R && er(R.onBack);
-        }, [R, er]),
-        eu = i.useCallback(() => {
-            null != R && er(R.onNext);
-        }, [R, er]),
-        eo = i.useMemo(() => {
+        eo = i.useCallback(() => {
+            null != D && eu(D.onBack);
+        }, [D, eu]),
+        ec = i.useCallback(() => {
+            null != D && eu(D.onNext);
+        }, [D, eu]),
+        ed = i.useMemo(() => {
             var e;
             return new Set(
-                Object.values(null != (e = null == Z ? void 0 : Z.catalog) ? e : {})
+                Object.values(null != (e = null == M ? void 0 : M.catalog) ? e : {})
                     .map((e) => e.provider)
                     .filter(d.lm),
             );
-        }, [null == Z ? void 0 : Z.catalog]);
-    return (0, l.jsx)(x.Provider, {
+        }, [null == M ? void 0 : M.catalog]);
+    return (0, l.jsx)(E.Provider, {
         value: {
-            guildId: y,
-            step: T,
-            stepAction: R,
-            stepLoading: en,
-            onBack: es,
-            onNext: eu,
-            gameServerGames: null != (h = null == Z ? void 0 : Z.catalog) ? h : {},
-            instances: Object.values(null != (S = null == Z ? void 0 : Z.instances) ? S : {}),
-            currentGame: z,
-            setCurrentGame: Y,
-            gameServerInstance: K,
-            setGameServerInstance: X,
-            name: $,
-            setName: Q,
-            regionId: ee,
-            setRegionId: et,
-            planCost: H,
-            planId: F,
-            setPlanId: J,
-            footerNode: q,
-            setFooterNode: W,
-            availableBoostCount: L,
-            error: B,
-            gameProvider: eo.size > 0 ? Array.from(eo)[0] : null,
+            guildId: I,
+            step: L,
+            stepAction: D,
+            stepLoading: ei,
+            onBack: eo,
+            onNext: ec,
+            gameServerGames: null != (y = null == M ? void 0 : M.catalog) ? y : {},
+            instances: Object.values(null != (O = null == M ? void 0 : M.instances) ? O : {}),
+            currentGame: U,
+            setCurrentGame: q,
+            gameServerInstance: F,
+            setGameServerInstance: Y,
+            name: ee,
+            setName: et,
+            regionId: en,
+            setRegionId: el,
+            planCost: X,
+            planId: H,
+            setPlanId: W,
+            footerNode: $,
+            setFooterNode: Q,
+            availableBoostCount: A,
+            error: z,
+            gameProvider: ed.size > 0 ? Array.from(ed)[0] : null,
         },
-        children: C,
+        children: N,
     });
 }

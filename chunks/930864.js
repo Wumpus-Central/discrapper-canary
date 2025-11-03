@@ -93,7 +93,7 @@ function I(e) {
             customSendHandler: G,
             customValidateDestination: V,
         } = e,
-        K = (function (e, t) {
+        B = (function (e, t) {
             if (null == e) return {};
             var n,
                 l,
@@ -125,15 +125,15 @@ function I(e) {
             "customSendHandler",
             "customValidateDestination",
         ]);
-    let W = null == t ? void 0 : t.channel_id,
-        B = null == t ? void 0 : t.id,
-        Y = a.useMemo(() => (null != W ? (0, g.dL)(W) : void 0), [W]),
+    let K = null == t ? void 0 : t.channel_id,
+        W = null == t ? void 0 : t.id,
+        Y = a.useMemo(() => (null != K ? (0, g.dL)(K) : void 0), [K]),
         [H, X] = a.useState(!1),
         z = (0, s.e7)([w.Z], () => {
             var e;
             return null != t ? (null != (e = w.Z.getMessage(t.channel_id, t.id)) ? e : t) : void 0;
         }, [t]),
-        Q = (0, s.e7)([p.Z], () => (null != W ? p.Z.getChannel(W) : void 0), [W]),
+        Q = (0, s.e7)([p.Z], () => (null != K ? p.Z.getChannel(K) : void 0), [K]),
         q = (0, C.ZF)(),
         J = (0, C.mh)(),
         $ = a.useRef(0),
@@ -160,24 +160,24 @@ function I(e) {
         ),
         ep = a.useCallback(
             (e) => {
-                ef(e), (ee.current += 1), "" !== e && null != W && null != B && J(W, B);
+                ef(e), (ee.current += 1), "" !== e && null != K && null != W && J(K, W);
             },
-            [W, B, J, ef],
+            [K, W, J, ef],
         ),
         ev = a.useCallback(() => {
             ef("");
         }, [ef]),
         ew = a.useCallback(async () => {
-            null != W &&
-                null != B &&
+            null != K &&
+                null != W &&
                 (0, C.sF)({
-                    channelId: W,
-                    messageId: B,
+                    channelId: K,
+                    messageId: W,
                     numDestinationChanges: $.current,
                     numQueryChanges: ee.current,
                 }),
                 await N();
-        }, [W, B, N]),
+        }, [K, W, N]),
         eb = a.useRef(null);
     a.useEffect(() => {
         if ("" === ed) {
@@ -201,7 +201,7 @@ function I(e) {
         ),
         ey = a.useCallback(
             (e) => {
-                null != W && null != B && q(W, B, "" !== ed),
+                null != K && null != W && q(K, W, "" !== ed),
                     en((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
@@ -212,7 +212,7 @@ function I(e) {
                         return l.splice(n, 1), ($.current += 1), l;
                     });
             },
-            [W, ea, B, ed, ef, q],
+            [K, ea, W, ed, ef, q],
         ),
         eC = a.useCallback(
             async function (e) {
@@ -232,9 +232,9 @@ function I(e) {
                         },
                         X,
                     ));
-                if (null == W || null == B)
+                if (null == K || null == W)
                     return void (0, o.showToast)((0, o.createToast)(P.intl.string(P.t.R0RpRX), o.ToastType.FAILURE));
-                let u = null != (a = w.Z.getMessage(W, B)) ? a : t;
+                let u = null != (a = w.Z.getMessage(K, W)) ? a : t;
                 if (null == u)
                     return void (0, o.showToast)((0, o.createToast)(P.intl.string(P.t.R0RpRX), o.ToastType.FAILURE));
                 X(!0);
@@ -273,8 +273,8 @@ function I(e) {
                     })
                 ) {
                     (0, C.gP)({
-                        channelId: W,
-                        messageId: B,
+                        channelId: K,
+                        messageId: W,
                         hasError: !1,
                         hasContextMessage: null != r && "" !== r,
                         numDestinations: c.length,
@@ -286,8 +286,8 @@ function I(e) {
                     return;
                 }
                 (0, C.gP)({
-                    channelId: W,
-                    messageId: B,
+                    channelId: K,
+                    messageId: W,
                     hasError: !0,
                     hasContextMessage: null != r && "" !== r,
                     numDestinations: c.length,
@@ -302,7 +302,7 @@ function I(e) {
                     forwardOptions: Z,
                 });
             },
-            [W, Z, B, t, F, ex, G],
+            [K, Z, W, t, F, ex, G],
         ),
         eO = a.useCallback(
             (e) => {
@@ -341,7 +341,7 @@ function I(e) {
         eT = el <= 1 ? P.intl.string(P.t.TXNS7S) : P.intl.formatToPlainString(P.t.jWtYUm, { count: el });
     return (0, l.jsx)(
         i.Modal,
-        R(M({}, K), {
+        R(M({}, B), {
             onClose: ew,
             title: null != k ? k : P.intl.string(P.t["+SkRRj"]),
             subtitle:
@@ -403,6 +403,7 @@ function I(e) {
                     iconPosition: "end",
                 },
             ],
+            actionBarInputLayout: "chat-input",
             listProps: eS,
         }),
     );
