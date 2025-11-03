@@ -27,18 +27,19 @@ function h(e) {
         : (n && (r.properties.announcementModalVariant1.dismissKey = ""), r);
 }
 function g(e) {
-    let { renderModalProps: t, properties: n } = e,
-        { location: i } = (0, s.O)(),
-        { analyticsLocations: l } = (0, u.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
-        d = (0, o.ZP)(),
-        h = (0, a.apv)(d);
-    if ("announcementModalVariant1" === n.properties.oneofKind) {
+    let { componentId: t, renderModalProps: n, properties: i } = e,
+        { location: l } = (0, s.O)(),
+        { analyticsLocations: d } = (0, u.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        h = (0, o.ZP)(),
+        g = (0, a.apv)(h);
+    if ("announcementModalVariant1" === i.properties.oneofKind) {
         let e = (0, f.N)({
-            content: n.properties.announcementModalVariant1,
-            renderModalProps: t,
-            analyticsLocations: l,
-            analyticsLocation: i,
-            isLightTheme: h,
+            componentId: t,
+            content: i.properties.announcementModalVariant1,
+            renderModalProps: n,
+            analyticsLocations: d,
+            analyticsLocation: l,
+            isLightTheme: g,
         });
         return (0, r.jsx)(
             m.Z,
@@ -71,7 +72,7 @@ function g(e) {
     }
     return (
         p.Z.captureMessage(
-            "Property type ".concat(n.properties.oneofKind, " is not supported to render ServerDriveAnnouncementModal"),
+            "Property type ".concat(i.properties.oneofKind, " is not supported to render ServerDriveAnnouncementModal"),
         ),
         null
     );

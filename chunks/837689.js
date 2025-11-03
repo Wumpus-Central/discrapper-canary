@@ -56,27 +56,28 @@ class j extends c.Z {
                     if (null != e.marketing_components) {
                         for (let t of e.marketing_components)
                             if (t.component_type === l.I.ANNOUNCEMENT_MODAL)
-                                return void this.maybeOpenServerDriveAnnouncementModal(t.properties, !1);
+                                return void this.maybeOpenServerDriveAnnouncementModal(t.id, t.properties, !1);
                     }
             }),
-            T(this, "maybeOpenServerDriveAnnouncementModal", async (e, t) => {
-                let i = (0, C.r)({
-                    content: e,
-                    isPreview: t,
+            T(this, "maybeOpenServerDriveAnnouncementModal", async (e, t, i) => {
+                let l = (0, C.r)({
+                    content: t,
+                    isPreview: i,
                 });
-                if (null != i)
+                if (null != l)
                     return (
-                        (!1 !== t ||
-                            (null == i ? void 0 : i.contentIdentifier) !== "summer_bogo_content" ||
+                        (!1 !== i ||
+                            (null == l ? void 0 : l.contentIdentifier) !== "summer_bogo_content" ||
                             !!(await (0, y.k)())) &&
                         ((0, s.Mr3)(N),
                         (0, s.ZDy)(
                             async () => {
-                                let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
-                                return (t) =>
-                                    (0, r.jsx)(e, {
-                                        renderModalProps: t,
-                                        properties: i,
+                                let { default: t } = await Promise.resolve().then(n.bind(n, 318199));
+                                return (n) =>
+                                    (0, r.jsx)(t, {
+                                        renderModalProps: n,
+                                        componentId: e,
+                                        properties: l,
                                     });
                             },
                             { modalKey: N },
@@ -87,7 +88,7 @@ class j extends c.Z {
             }),
             T(this, "handlePreview", (e) => {
                 let { data: t } = e;
-                this.maybeOpenServerDriveAnnouncementModal(t.properties, !0);
+                this.maybeOpenServerDriveAnnouncementModal(t.id, t.properties, !0);
             }),
             T(this, "getOfferFromStore", () => {
                 let e = d.default.getCurrentUser();
@@ -117,7 +118,7 @@ class j extends c.Z {
                     (null == l || l.verified) && !(0, s.$sL)() && !i.tq && !n)
                 ) {
                     for (let t of await (0, I.He)(e))
-                        if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                        if (await this.maybeOpenServerDriveAnnouncementModal("", t, !1)) break;
                 }
             });
     }

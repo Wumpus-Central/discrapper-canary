@@ -61,31 +61,38 @@ function E(e, t) {
 function O(e) {
     var t, n, O, I;
     let y,
-        { content: v, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
-        j = "AnnouncementModalVariant1_".concat(l.z[Number(v.dismissKey)]),
-        { onClose: P } = C,
-        x = null != (I = null == (t = v.button) ? void 0 : t.copy) ? I : g.intl.string(g.t.YScQSF),
-        A =
-            (null == (n = v.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
+        {
+            componentId: v,
+            content: C,
+            renderModalProps: S,
+            analyticsLocations: T,
+            analyticsLocation: N,
+            isLightTheme: j,
+        } = e,
+        P = "AnnouncementModalVariant1_".concat(l.z[Number(C.dismissKey)]),
+        { onClose: x } = S,
+        A = null != (I = null == (t = C.button) ? void 0 : t.copy) ? I : g.intl.string(g.t.YScQSF),
+        Z =
+            (null == (n = C.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? "jump_to_mkt_button"
                 : "get_nitro_button";
-    switch (null == (O = v.button) ? void 0 : O.buttonAction) {
+    switch (null == (O = C.button) ? void 0 : O.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
             y = () => {
-                (0, u.uL)(h.Z5c.APPLICATION_STORE), P();
+                (0, u.uL)(h.Z5c.APPLICATION_STORE), x();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
             y = () =>
                 (0, c.Z)({
                     subscriptionTier: m.Si.TIER_1,
-                    analyticsLocations: S,
-                    analyticsObject: E(b({}, T), {
+                    analyticsLocations: T,
+                    analyticsObject: E(b({}, N), {
                         object: h.qAy.BUTTON_CTA,
                         objectType: h.AnalyticsObjectTypes.TIER_1,
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && x();
                     },
                 });
             break;
@@ -95,68 +102,69 @@ function O(e) {
             y = () =>
                 (0, c.Z)({
                     subscriptionTier: m.Si.TIER_2,
-                    analyticsLocations: S,
-                    analyticsObject: E(b({}, T), {
+                    analyticsLocations: T,
+                    analyticsObject: E(b({}, N), {
                         object: h.qAy.BUTTON_CTA,
                         objectType: h.AnalyticsObjectTypes.TIER_2,
                     }),
                     onClose: (e) => {
-                        e && P();
+                        e && x();
                     },
                 });
     }
-    let Z =
-            "" !== v.helpArticleId
+    let w =
+            "" !== C.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               "\xA0",
                               (0, r.jsx)(o.Anchor, {
                                   className: _.termsApplyAnchor,
-                                  href: p.Z.getArticleURL(v.helpArticleId),
+                                  href: p.Z.getArticleURL(C.helpArticleId),
                                   children: g.intl.string(g.t["sBp+u0"]),
                               }),
                           ],
                       })
                 : void 0,
-        w = {
+        L = {
             type: "video",
-            src: N ? v.heroArtVideoLinkLightTheme : v.videoLink,
+            src: j ? C.heroArtVideoLinkLightTheme : C.videoLink,
         };
-    null != v.heroArtVideoSubtitles &&
-        (w.subtitles = v.heroArtVideoSubtitles.map((e) => ({
+    null != C.heroArtVideoSubtitles &&
+        (L.subtitles = C.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1,
         }))),
-        ("" !== v.heroArtImageLinkDarkTheme || "" !== v.heroArtImageLinkLightTheme) &&
-            (w = {
+        ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) &&
+            (L = {
                 type: "image",
-                src: N ? v.heroArtImageLinkLightTheme : v.heroArtImageLinkDarkTheme,
+                src: j ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme,
             });
-    let L =
-        "" !== v.modalTopPill
+    let R =
+        "" !== C.modalTopPill
             ? () =>
                   (0, r.jsx)(f.mn, {
-                      text: v.modalTopPill,
+                      text: C.modalTopPill,
                       className: _.modalTopPill,
                   })
             : void 0;
     return {
-        renderModalProps: C,
-        header: v.header,
-        modalTopExtra: L,
-        subHeader: v.subheader,
-        subHeaderExtra: Z,
-        body: v.body,
-        heroArt: w,
-        featureCards: v.featureCards.map((e) => ({
+        componentId: v,
+        renderModalProps: S,
+        header: C.header,
+        modalTopExtra: R,
+        subHeader: C.subheader,
+        subHeaderExtra: w,
+        body: C.body,
+        heroArt: L,
+        featureCards: C.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: j ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
-        changeLogId: j,
+        changeLogId: P,
         button: () => {
             let e = Date.now();
             return (0, r.jsx)(s.zxk, {
@@ -164,17 +172,17 @@ function O(e) {
                 size: "md",
                 onClick: () => {
                     d.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: j,
-                        cta_type: A,
+                        change_log_id: P,
+                        cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: j,
+                        target: P,
                     }),
                         y();
                 },
-                text: x,
+                text: A,
                 icon: i.SrA,
             });
         },
-        modalDismissibleContent: "" !== v.dismissKey ? Number(v.dismissKey) : void 0,
+        modalDismissibleContent: "" !== C.dismissKey ? Number(C.dismissKey) : void 0,
     };
 }
