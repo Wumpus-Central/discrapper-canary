@@ -87,20 +87,21 @@ let N = new s.Z("OverlayV3Store"),
     B = !1,
     Z = (0, y.r4)();
 function F() {
-    (Z = (0, y.r4)()), ev.emitChange();
+    Z = (0, y.r4)();
 }
 function V(e, t) {
-    try {
-        if (null == w || (null != t && (G[e] = t), R.has(e))) return;
-        w.trackGame(e),
-            R.add(e),
-            (0, _.PY)(e, "maybeTrackGame", { newOverlayMethod: null != t ? f.gl[t] : null }),
-            o.Z.updateOverlayState(e, f.mM.WAITING_FOR_POPOUT_OPEN);
-    } catch (t) {
-        N.error("Error tracking game:", t), (0, _.PV)(e, t, { crashType: "renderer" });
-    }
+    if (null != w && (null != t && (G[e] = t), !R.has(e)))
+        try {
+            w.trackGame(e),
+                R.add(e),
+                (0, _.PY)(e, "maybeTrackGame", { newOverlayMethod: null != t ? f.gl[t] : null }),
+                o.Z.updateOverlayState(e, f.mM.WAITING_FOR_POPOUT_OPEN);
+        } catch (t) {
+            N.error("Error tracking game:", t), (0, _.PV)(e, t, { crashType: "renderer" });
+        }
 }
 function H(e) {
+    if (!R.has(e)) return;
     let t = G[e],
         n = U[e];
     (0, _.PY)(e, "removeTrackedGame", {
