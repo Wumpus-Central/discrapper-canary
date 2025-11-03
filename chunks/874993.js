@@ -1,65 +1,63 @@
-n.d(t, { Z: () => y }), n(388685), n(472816), n(794429), n(953529);
+n.d(t, { Z: () => C }), n(388685), n(472816), n(794429), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(692547),
-    s = n(481060),
-    o = n(999382),
-    c = n(450377),
-    d = n(823379),
-    u = n(63063),
-    g = n(426563),
-    m = n(727072),
-    p = n(85960),
-    f = n(577330),
-    h = n(65912),
-    b = n(51248),
-    x = n(546513),
-    j = n(572456),
-    v = n(273504),
-    _ = n(981631),
-    C = n(388032),
-    O = n(894780);
-function y(e) {
+    a = n(481060),
+    s = n(999382),
+    o = n(450377),
+    c = n(823379),
+    d = n(63063),
+    u = n(727072),
+    g = n(85960),
+    m = n(577330),
+    p = n(65912),
+    f = n(51248),
+    h = n(546513),
+    b = n(572456),
+    x = n(273504),
+    j = n(981631),
+    v = n(388032),
+    _ = n(894780);
+function C(e) {
     var t, n;
-    let { guildId: y, setPreventNavigation: E = () => {} } = e,
-        { editingRule: N, setEditingRule: I } = (0, h.V)(),
-        { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : y) ? n : _.lds,
-        w = null != N,
-        [Z] = (0, m.RD)(P),
-        { rulesByTriggerType: R } = (0, m.pH)(P),
-        D = {
-            [p.vh.MEMBERS]: C.intl.string(C.t.sx4E5v),
-            [p.vh.CONTENT]: C.intl.string(C.t.fphZb0),
+    let { guildId: C, setPreventNavigation: O = () => {} } = e,
+        { editingRule: y, setEditingRule: E } = (0, p.V)(),
+        { guild: N, subsection: I } = (0, l.cj)([s.Z], () => s.Z.getProps()),
+        S = null != (n = null != (t = null == N ? void 0 : N.id) ? t : C) ? n : j.lds,
+        T = null != y,
+        [P] = (0, u.RD)(S),
+        { rulesByTriggerType: w } = (0, u.pH)(S),
+        Z = {
+            [g.vh.MEMBERS]: v.intl.string(v.t.sx4E5v),
+            [g.vh.CONTENT]: v.intl.string(v.t.fphZb0),
         },
-        A = i.useMemo(
+        R = i.useMemo(
             () =>
-                Object.values(null != R ? R : {})
+                Object.values(null != w ? w : {})
                     .flat()
-                    .filter(d.lm),
-            [R],
+                    .filter(c.lm),
+            [w],
         ),
-        L = {
-            isInEditMode: w,
-            setEditingRule: I,
+        D = {
+            isInEditMode: T,
+            setEditingRule: E,
         },
-        k = i.useRef(L);
+        A = i.useRef(D);
     i.useEffect(() => {
-        k.current = L;
+        A.current = D;
     }),
         i.useEffect(() => {
-            let { isInEditMode: e, setEditingRule: t } = k.current;
+            let { isInEditMode: e, setEditingRule: t } = A.current;
             e && t(null);
-        }, [P]);
-    let G = i.useCallback(
+        }, [S]);
+    let L = i.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, r;
                     return null !=
                         (r =
                             null ==
-                            (n = A.find((t) => {
+                            (n = R.find((t) => {
                                 let { id: n } = t;
                                 return n === e;
                             }))
@@ -68,112 +66,81 @@ function y(e) {
                         ? r
                         : null;
                 }
-                return null != t ? p.I6[t].getDefaultRuleName() : null;
+                return null != t ? g.I6[t].getDefaultRuleName() : null;
             },
-            [A],
+            [R],
         ),
-        M = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e, t;
-            return G(
-                null != (e = null == N ? void 0 : N.id) ? e : null,
-                null != (t = null == N ? void 0 : N.triggerType) ? t : null,
+            return L(
+                null != (e = null == y ? void 0 : y.id) ? e : null,
+                null != (t = null == y ? void 0 : y.triggerType) ? t : null,
             );
-        }, [G, N]);
+        }, [L, y]);
     i.useEffect(() => {
-        E(w, (0, j.af)(M));
-    }, [E, w, M]);
-    let U = (0, p.Z6)(P);
+        O(T, (0, b.af)(k));
+    }, [O, T, k]);
+    let G = (0, g.Z6)(S);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: C.intl.string(C.t.uRelgx),
+                children: v.intl.string(v.t.uRelgx),
             }),
-            (0, r.jsxs)("div", {
-                className: O.descriptionContainer,
-                children: [
-                    (0, r.jsxs)("div", {
-                        className: O.description,
-                        children: [
-                            (0, r.jsx)(s.Text, {
-                                variant: "text-sm/normal",
-                                color: "header-secondary",
-                                children: C.intl.string(C.t.EwuSCR),
+            (0, r.jsx)("div", {
+                className: _.descriptionContainer,
+                children: (0, r.jsxs)("div", {
+                    className: _.description,
+                    children: [
+                        (0, r.jsx)(a.Text, {
+                            variant: "text-sm/normal",
+                            color: "header-secondary",
+                            children: v.intl.string(v.t.EwuSCR),
+                        }),
+                        (0, r.jsx)(a.Text, {
+                            variant: "text-sm/medium",
+                            className: _.helpUrl,
+                            children: v.intl.format(v.t["B+sgGt"], {
+                                helpUrl: d.Z.getArticleURL(j.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
-                            (0, r.jsx)(s.Text, {
-                                variant: "text-sm/medium",
-                                className: O.helpUrl,
-                                children: C.intl.format(C.t["B+sgGt"], {
-                                    helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
-                                }),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: O.descriptionAvatarContainer,
-                        children: [
-                            (0, r.jsx)(s.qEK, {
-                                src: (0, g.j)(),
-                                size: s.EFr.SIZE_80,
-                                "aria-label": C.intl.string(C.t.hG1StD),
-                            }),
-                            (0, r.jsx)(s.IGR, {
-                                text: (0, r.jsxs)("div", {
-                                    className: O.automodBadgeText,
-                                    children: [
-                                        (0, r.jsx)(s.sV5, {
-                                            size: "xxs",
-                                            color: "currentColor",
-                                            className: O.checkmarkIcon,
-                                        }),
-                                        (0, r.jsx)(s.Text, {
-                                            variant: "text-xs/bold",
-                                            className: O.automodText,
-                                            children: C.intl.string(C.t.hG1StD),
-                                        }),
-                                    ],
-                                }),
-                                color: a.Z.unsafe_rawColors.BRAND_500.css,
-                                className: O.textBadge,
-                            }),
-                        ],
-                    }),
-                ],
+                        }),
+                    ],
+                }),
             }),
-            Z
-                ? (0, r.jsx)(f.Z, {})
-                : Object.entries(U).map((e) => {
+            P
+                ? (0, r.jsx)(m.Z, {})
+                : Object.entries(G).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);
                       let l =
-                          null != D[t]
+                          null != Z[t]
                               ? (0, r.jsx)("div", {
-                                    className: O.categoryHeader,
-                                    children: (0, r.jsx)(s.Text, {
+                                    className: _.categoryHeader,
+                                    children: (0, r.jsx)(a.Text, {
                                         variant: "text-lg/normal",
                                         color: "header-primary",
-                                        children: D[t],
+                                        children: Z[t],
                                     }),
                                 })
                               : null;
                       return (0, r.jsxs)(
                           "div",
                           {
-                              className: O.categoryContainer,
+                              className: _.categoryContainer,
                               children: [
                                   l,
                                   (0, r.jsx)(r.Fragment, {
                                       children: n.map((e) => {
                                           var t;
                                           return (0, r.jsx)(
-                                              x.Z,
+                                              h.Z,
                                               {
-                                                  guildId: P,
+                                                  guildId: S,
                                                   triggerType: e,
-                                                  rules: null != (t = R[e]) ? t : [],
+                                                  rules: null != (t = w[e]) ? t : [],
                                                   initWithEdit:
-                                                      T === _.KsC.AUTOMOD_MENTION_SPAM && e === v.fX.MENTION_SPAM,
+                                                      I === j.KsC.AUTOMOD_MENTION_SPAM && e === x.fX.MENTION_SPAM,
                                               },
                                               e,
                                           );
@@ -184,17 +151,17 @@ function y(e) {
                           t,
                       );
                   }),
-            null != S &&
-                (0, r.jsx)(c.k0, {
-                    guild: S,
+            null != N &&
+                (0, r.jsx)(o.k0, {
+                    guild: N,
                     withDivider: !1,
-                    className: O.explicitContentFilterSection,
+                    className: _.explicitContentFilterSection,
                 }),
-            (0, r.jsx)(b.Z, {
-                guildId: P,
-                existingRules: A,
+            (0, r.jsx)(f.Z, {
+                guildId: S,
+                existingRules: R,
             }),
-            w && (0, r.jsx)("div", { className: O.endSpacer }),
+            T && (0, r.jsx)("div", { className: _.endSpacer }),
         ],
     });
 }
