@@ -1,87 +1,66 @@
-n.d(a, { default: () => k });
-var l = n(951288),
-    o = n(120356),
-    c = n.n(o),
-    i = n(481060),
-    t = n(835473),
-    r = n(933557),
-    d = n(471445),
-    s = n(454585),
-    p = n(63063),
-    h = n(981631),
-    m = n(388032),
-    b = n(648468),
-    x = n(430864);
-function k(e) {
-    var a;
-    let { channel: n, onClose: o, guild: k, transitionState: N } = e,
-        u = (0, d.KS)(n, k),
-        j = (0, r.ZP)(n, !1),
-        y = (0, t.q)(null == (a = n.linkedLobby) ? void 0 : a.application_id);
-    return (0, l.jsxs)(i.Y0X, {
-        transitionState: N,
-        "aria-label": m.intl.string(m.t.X8jMDh),
-        className: b.modal,
-        parentComponent: "ChannelTopicModal",
+t.d(i, { default: () => h });
+var n = t(951288),
+    a = t(775086),
+    o = t(481060),
+    l = t(835473),
+    c = t(933557),
+    r = t(471445),
+    s = t(454585),
+    d = t(63063),
+    p = t(981631),
+    b = t(388032),
+    u = t(648468),
+    k = t(430864);
+function h(e) {
+    var i, t;
+    let { channel: h, guild: L, onClose: N, transitionState: m } = e,
+        x = null != (t = (0, r.KS)(h, L)) ? t : void 0,
+        y = (0, c.ZP)(h, !1),
+        v = (0, l.q)(null == (i = h.linkedLobby) ? void 0 : i.application_id);
+    return (0, n.jsxs)(a.u, {
+        title: b.intl.string(b.t.X8jMDh),
+        subtitle:
+            null != y
+                ? {
+                      text: y,
+                      leadingIcon: x,
+                  }
+                : void 0,
+        actions: void 0,
+        transitionState: m,
+        onClose: N,
         children: [
-            (0, l.jsxs)(i.xBx, {
-                className: b.modalHeader,
-                separator: !1,
-                children: [
-                    (0, l.jsxs)("div", {
-                        className: b.header,
-                        children: [
-                            null != u &&
-                                (0, l.jsx)(u, {
-                                    size: "md",
-                                    color: "currentColor",
-                                    className: b.channelIcon,
-                                }),
-                            (0, l.jsx)(i.Text, {
-                                variant: "text-md/semibold",
-                                color: "header-primary",
-                                children: j,
-                            }),
-                        ],
-                    }),
-                    (0, l.jsx)(i.olH, { onClick: o }),
-                ],
+            (0, n.jsx)(o.Text, {
+                selectable: !0,
+                variant: "text-md/normal",
+                className: k.markup,
+                children: s.Z.parseTopic(h.topic, !0, { channelId: h.id }),
             }),
-            (0, l.jsxs)(i.hzk, {
-                children: [
-                    (0, l.jsx)(i.Text, {
-                        selectable: !0,
-                        variant: "text-md/normal",
-                        className: c()(b.content, x.markup),
-                        children: s.Z.parseTopic(n.topic, !0, { channelId: n.id }),
-                    }),
-                    null != y
-                        ? (0, l.jsxs)("div", {
-                              className: b.linkedLobbyNotice,
-                              children: [
-                                  (0, l.jsx)(i.DuK, { className: b.linkedLobbyApplicationIcon }),
-                                  (0, l.jsx)(i.Text, {
-                                      variant: "text-sm/normal",
-                                      color: "header-secondary",
-                                      children: m.intl.format(m.t.Ud5ryv, {
-                                          applicationName: y.name,
-                                          helpdeskArticle: p.Z.getArticleURL(h.BhN.LINKED_LOBBIES),
-                                          separatorHook: (e, a) =>
-                                              (0, l.jsx)(
-                                                  "span",
-                                                  {
-                                                      className: b.linkedLobbyNoticeSeparator,
-                                                      children: e,
-                                                  },
-                                                  a,
-                                              ),
-                                      }),
-                                  }),
-                              ],
-                          })
-                        : null,
-                ],
-            }),
+            null != v
+                ? (0, n.jsxs)("div", {
+                      className: u.linkedLobbyNotice,
+                      children: [
+                          (0, n.jsx)(o.DuK, { className: u.linkedLobbyApplicationIcon }),
+                          (0, n.jsx)(o.Text, {
+                              variant: "text-sm/normal",
+                              color: "header-secondary",
+                              children: b.intl.format(b.t.Ud5ryv, {
+                                  applicationName: v.name,
+                                  helpdeskArticle: d.Z.getArticleURL(p.BhN.LINKED_LOBBIES),
+                                  separatorHook: (e, i) =>
+                                      (0, n.jsx)(
+                                          "span",
+                                          {
+                                              className: u.linkedLobbyNoticeSeparator,
+                                              children: e,
+                                          },
+                                          i,
+                                      ),
+                              }),
+                          }),
+                      ],
+                  })
+                : null,
         ],
     });
 }
